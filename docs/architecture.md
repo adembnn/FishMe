@@ -36,7 +36,7 @@ store/                         textes de fiche, notes pour le relecteur, pages w
 ## Ce que `Core` expose (contrats en mots, gelés jeudi 10 h, ajouts seulement ensuite)
 - `departement(de: Coordonnee)` donne le code du département ou « inconnu » (point dans un polygone sur `departements.geojson`).
 - `verdict(espece, tailleCm, date, departement)` donne `garde`, `relache` ou `verifie`, avec la phrase et la source. Hors des départements saisis, jamais `garde` (voir `donnees.md`).
-- `rarete(espece, departement)` donne le palier, le nombre de pêches et l'année du dernier relevé.
+- `rarete(espece, departement)` donne le niveau (commun, peu commun, rare, légendaire), le nombre de pêches et l'année du dernier relevé.
 - `especesProches(coordonnee)` donne les espèces relevées près d'un coin, avec N et l'année.
 - `finLegale(date, coordonnee)` donne l'heure de fin légale (coucher + 30 min, avec 1 min de marge).
 - `phaseLune(date)` donne la phase de lune de la carte bredouille (E9).

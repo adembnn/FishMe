@@ -27,7 +27,7 @@ Version du 12 oct., 17h. Chaque ligne a sa preuve. Les lignes marquées (Q3) dé
 - [ ] D1 : socle national, 75 et 94 saisis, chaque règle avec sa source ; le PDF du 94 lu à la main. Preuve : relecture par A ou B contre l'arrêté.
 - [ ] D1 : relire les saisies de A (92, 93) et de B (77). Preuve : une ligne « relu par » dans chaque fichier.
 - [ ] `cas-verdicts.json` : les 5 cas de `donnees.md`, réponses confirmées contre les textes.
-- [ ] D2, option a de Q3 : export tableur Hub'Eau des 5 départements (stations, pêches, espèces), sans script. Options b et c : script lancé sur le 94, de bout en bout. Preuve : raretés du 94 égales au tableau de `reports/donnees.md` §3.
+- [ ] D2, option a de Q3 : export tableur Hub'Eau des 5 départements (stations, pêches, espèces), sans script. Options b et c : script lancé sur le 94, de bout en bout. Preuve : les niveaux du 94 égaux à la liste « Attendu dans le 94 » de `donnees.md`.
 - [ ] Textes S1 : fiche, page de confidentialité, page d'assistance, notes pour le relecteur en anglais.
 - [ ] Session Claude Code dans le cloud qui lance l'image Docker `swift:6.4`. Preuve : `docker run --rm swift:6.4 swift --version` affiche 6.4.
 

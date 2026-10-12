@@ -25,6 +25,7 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 - Xcode 27.0, iOS 27.0, iPhone seulement ; un paquet `Core` + un dossier par lot ; fusion par script local (`architecture.md`).
 - Hors des 5 départements saisis, l'app ne dit jamais « tu peux la garder » (`donnees.md`).
 - Rareté sur 10 ans ; sous 20 pêches dans le département, rareté calculée sur la région, et l'écran le dit.
+- Tes 4 niveaux de rareté : commun (50 % des pêches OFB et plus), peu commun (20 à 50 %), rare (moins de 20 %), légendaire (jamais relevé dans le département). Dans le 94, ça donne 3 légendaires : les deux truites et l'ombre (`donnees.md`).
 - La carte s'ouvre sur l'Île-de-France sans demander la position ; « Autour de moi » la demande.
 - Essai affiché « 1 mois » : App Store Connect ne propose pas « 30 jours ».
 - Les fichiers fabriqués par le script restent hors de git (ta règle) : publiés en pièce jointe d'une release privée.

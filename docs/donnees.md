@@ -22,8 +22,9 @@ Tous dans `Packages/Core/Sources/Core/Resources/`. « Saisi » = commité ; « f
 
 ## Règles d'affichage (pour ne jamais présenter une donnée mince comme solide)
 - Chaque espèce d'un coin et chaque rareté affichent « N pêches OFB, dernier relevé AAAA ». Paris n'a que 36 pêches, la dernière en 2011.
-- Rareté sur 10 ans. Si le département a moins de 20 pêches sur 10 ans, la rareté se calcule sur la région et l'écran le dit (« rareté en Île-de-France »). Paliers : commune 50 % et plus, peu commune 20 à 50 %, rare 5 à 20 %, très rare moins de 5 %, « non relevée ».
-- La rareté s'appelle « rareté dans les relevés OFB » : la pêche électrique sous-compte les gros poissons (la carpe sort « très rare »).
+- Rareté sur 10 ans. Si le département a moins de 20 pêches sur 10 ans, la rareté se calcule sur la région et l'écran le dit (« rareté en Île-de-France »). Quatre niveaux (Adem, 12 oct. 18 h 55) : **commun** 50 % des pêches et plus, **peu commun** 20 à 50 %, **rare** moins de 20 %, **légendaire** jamais relevé dans le département sur la fenêtre. Seuils choisis par défaut, à changer d'un mot : légendaire veut dire « 0 pêche sur N », une phrase vraie, et la carpe ou le black-bass, que l'OFB sous-compte, ne deviennent pas légendaires.
+- Attendu dans le 94 (29 pêches depuis 2016, `reports/donnees.md` §3) : commun perche, gardon, chevesne ; peu commun brochet, silure, barbeau ; rare sandre, brème, tanche, black-bass, carpe ; légendaire truite fario, truite arc-en-ciel, ombre. C'est le test de L1 et de D2.
+- La rareté s'appelle « rareté dans les relevés OFB » : la pêche électrique sous-compte les gros poissons (la carpe sort « rare » dans le 94, 1 pêche sur 29).
 - Le script range chaque station dans un seul département, d'après ses coordonnées et `departements.geojson`, pas d'après le champ de l'API (le point 03082000 est rangé tantôt dans le 93, tantôt dans le 92 : `reports/eval-mwm.md` §1).
 - Sans relevé à moins de 30 km : « aucun relevé OFB à proximité », jamais une estimation.
 
