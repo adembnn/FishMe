@@ -9,7 +9,7 @@ Puis il appelle les hooks de Claude Code comme Claude Code le fait (la commande 
 lancée par sh -c, avec le JSON sur l'entrée standard), et les crochets de git pour de vrai.
 
 Bibliothèque standard seulement. Aucun appel à un modèle d'IA. Moins de 2 minutes sous Linux.
-Usage : python3 outils/atelier/essai.py          (ESSAI_GARDER=1 garde le dossier temporaire pour regarder)
+Usage : python3 outils/atelier/essai.py [--detail]   (--detail : une ligne par vérification ; ESSAI_GARDER=1 garde le dossier temporaire)
 Sortie : « atelier : N/N vérifications passent » et code 0 ; sinon la liste des échecs et code 1.
 """
 import json
@@ -36,14 +36,29 @@ import lots as atelier  # noqa: E402
 
 
 class Bilan:
-    def __init__(self):
+    """Compte les vérifications par section. Les échecs s'impriment tout de suite, avec leur détail.
+    Par défaut, les réussites sont résumées par section ; avec --detail (ou ESSAI_DETAIL=1), chacune a sa ligne."""
+
+    def __init__(self, detail=False):
+        self.detail = detail
         self.total = 0
         self.echecs = []
+        self.sections = []  # [nom, réussies, total]
+
+    def section(self, nom):
+        self.sections.append([nom, 0, 0])
+        if self.detail:
+            print(f"\n== {nom}")
 
     def verifier(self, nom, condition, detail=""):
         self.total += 1
+        if not self.sections:
+            self.section("général")
+        self.sections[-1][2] += 1
         if condition:
-            print(f"✓ {nom}")
+            self.sections[-1][1] += 1
+            if self.detail:
+                print(f"✓ {nom}")
         else:
             self.echecs.append(nom)
             print(f"✗ {nom}")
@@ -54,8 +69,13 @@ class Bilan:
     def saute(self, nom, raison):
         print(f"· sauté : {nom} ({raison})")
 
+    def resume(self):
+        for nom, bons, total in self.sections:
+            if total:
+                print(f"{'✓' if bons == total else '✗'} {nom} : {bons}/{total}")
 
-bilan = Bilan()
+
+bilan = Bilan(detail="--detail" in sys.argv[1:] or os.environ.get("ESSAI_DETAIL") == "1")
 
 # ---------------------------------------------------------------------------
 # Fausses commandes
@@ -211,6 +231,7 @@ def ecrire(dossier, chemin, texte="import Foundation\n"):
 
 
 def verifications_statiques():
+    bilan.section("fichiers : syntaxe, JSON, réglages, permissions, workflow")
     scripts = sorted(RACINE.glob("scripts/*.sh")) + sorted(p for p in (RACINE / ".githooks").glob("*") if p.is_file()) \
         + sorted((RACINE / ".claude" / "hooks").glob("*.sh"))
     for s in scripts:
@@ -374,6 +395,7 @@ def pousser_tiers(m, fichier, texte):
 
 
 def essai_lot_sh(m):
+    bilan.section("scripts/lot.sh")
     app = m.app
     p = lancer(["bash", "scripts/lot.sh", "l3"], app, m.env)
     m.l3 = app.parent / "app-l3"
@@ -408,6 +430,7 @@ def essai_lot_sh(m):
 
 
 def essai_garde(m):
+    bilan.section("hook PreToolUse : garde de dossier")
     l3, app, env = m.l3, m.app, m.env
     r = ecriture(l3, l3 / "App/Prise/Vue.swift", env)
     bilan.verifier("garde : écrire dans son dossier (App/Prise/) est permis", r.returncode == 0, sortie(r))
@@ -463,6 +486,7 @@ def essai_garde(m):
 
 
 def essai_contexte(m):
+    bilan.section("hook SessionStart : contexte du lot")
     l3, app, env = m.l3, m.app, m.env
     fiche = (l3 / "docs/fiches/L3.md").read_text(encoding="utf-8")
     titre = fiche.splitlines()[0]
@@ -509,6 +533,7 @@ def essai_contexte(m):
 
 
 def essai_formate(m):
+    bilan.section("hook PostToolUse : formatage Swift")
     l3 = m.l3
     f = ecrire(l3, "App/Prise/Vue.swift")
     vider_appels(m)
@@ -529,6 +554,7 @@ def essai_formate(m):
 
 
 def essai_preuve(m):
+    bilan.section("hook Stop : preuve avant l'arrêt")
     c0, env = m.c0, m.env_avec
     entree = lambda active, session="s1": {"session_id": session, "stop_hook_active": active}  # noqa: E731
     r = appeler(c0, "Stop", entree(False), "", env)
@@ -567,6 +593,7 @@ def essai_preuve(m):
 
 
 def essai_verif(m):
+    bilan.section("scripts/verif.sh")
     c0, env = m.c0, m.env_avec
     etat_de(m, "swift-resultat", "vert")
     p = lancer(["bash", "scripts/verif.sh"], c0, env)
@@ -642,6 +669,7 @@ def essai_verif(m):
 
 
 def essai_cloud_pret(m):
+    bilan.section("scripts/cloud-pret.sh")
     if platform.system() != "Linux" or m.swift_reel:
         bilan.saute("cloud-pret.sh", "il ne sert que sous Linux sans swift")
         return
@@ -665,6 +693,7 @@ def essai_cloud_pret(m):
 
 
 def essai_donnees_gitignore(m):
+    bilan.section("scripts/donnees.sh et .gitignore")
     app = m.app
     etat_de(m, "gh-mode", "sans-release")
     p = lancer(["bash", "scripts/donnees.sh"], app, m.env_sans)
@@ -698,6 +727,7 @@ def commit(dossier, env, message="essai"):
 
 
 def essai_crochets_git(m):
+    bilan.section("crochets de git (pre-commit, pre-merge-commit, pre-push)")
     l3, app, s1, d1, env = m.l3, m.app, m.s1, m.d1, m.env
     # hors dossier
     ecrire(l3, "App/Carte/Hors.swift")
@@ -789,6 +819,7 @@ def essai_crochets_git(m):
 
 
 def essai_fusionner(m):
+    bilan.section("scripts/fusionner.sh")
     app, l3, c0, d1, env = m.app, m.l3, m.c0, m.d1, m.env_avec
     p = lancer(["bash", "scripts/fusionner.sh"], app, env)
     bilan.verifier("fusionner.sh : refuse de tourner hors d'une branche de lot (main)", p.returncode != 0 and "d'aucun lot" in p.stderr, sortie(p))
@@ -875,6 +906,8 @@ def main():
         else:
             shutil.rmtree(tmp, ignore_errors=True)
     reussis = bilan.total - len(bilan.echecs)
+    print()
+    bilan.resume()
     print()
     if bilan.echecs:
         print("Échecs :")

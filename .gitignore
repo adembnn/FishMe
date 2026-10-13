@@ -1,5 +1,9 @@
 # Secrets : les clés restent sur l'ordinateur de la personne, jamais dans git.
 .env*
+# Clés et certificats Apple (fastlane, App Store Connect)
+*.p8
+*.p12
+*.mobileprovision
 
 # Données fabriquées par script : `scripts/donnees.sh` les télécharge, on ne les commite jamais.
 stations-especes.json
