@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import sys
 
+sys.dont_write_bytecode = True  # pas de __pycache__ dans le dépôt
 RACINE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.insert(0, os.path.join(RACINE, "outils", "atelier"))
 import lots as atelier  # noqa: E402
@@ -34,7 +35,8 @@ def lancer_cloud_pret():
     if platform.system() != "Linux" or shutil.which("swift") or not os.path.isfile(script):
         return
     try:
-        journal = open("/tmp/atelier-cloud-pret.log", "ab")
+        os.makedirs(os.path.join(RACINE, ".atelier"), exist_ok=True)
+        journal = open(os.path.join(RACINE, ".atelier", "cloud-pret.log"), "ab")
         subprocess.Popen(["bash", script], cwd=RACINE, stdin=subprocess.DEVNULL, stdout=journal,
                          stderr=journal, start_new_session=True)
     except OSError:

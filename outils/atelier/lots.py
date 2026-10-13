@@ -265,7 +265,8 @@ def controler_commit(racine=RACINE):
                  or _git(["rev-parse", "-q", "--verify", "MERGE_HEAD"], racine)[0] == 0)
     if branche in BRANCHES_PRINCIPALES:
         problemes.append(f"Commit direct sur `{branche}` refusé : `{branche}` ne reçoit que ce que `scripts/fusionner.sh` y envoie.\n"
-                         "À faire : `scripts/lot.sh <code>` pour travailler dans la copie de ton lot.")
+                         "À faire : `scripts/lot.sh <code>` pour travailler dans la copie de ton lot."
+                         + (" Pour annuler cette fusion : `git merge --abort`." if en_fusion else ""))
     code, sortie = _git(["diff", "--cached", "--name-only", "--no-renames", "-z"], racine)
     fichiers = [f for f in sortie.split("\0") if f] if code == 0 else []
     lot = lot_de_branche(branche, lots)
@@ -338,7 +339,11 @@ def main(args):
             print(f"{chemin}\t{proprio or 'personne'}")
         return 1 if refuses else 0
     if args[0] == "precommit":
-        problemes = controler_commit()
+        try:
+            problemes = controler_commit()
+        except Exception as erreur:  # un crochet en panne ne doit pas empêcher de corriger docs/lots.md
+            print(f"· crochet pre-commit inactif : {erreur}", file=sys.stderr)
+            return 0
         for p in problemes:
             print(p, file=sys.stderr)
             print(file=sys.stderr)

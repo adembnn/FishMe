@@ -3,7 +3,7 @@
 #   - pas de commit direct sur main ;
 #   - seuls les fichiers du lot de la branche (et les dossiers communs) passent, selon docs/lots.md ;
 #   - jamais de fichier .env ni de données fabriquées par script ;
-#   - jamais « Poké… » dans App/ ni store/ (marque de Nintendo).
+#   - jamais « Poké… » dans le code de l'app ni dans la fiche App Store (marque de Nintendo ; dossiers listés dans lots.py).
 # Branché par scripts/lot.sh (git config core.hooksPath .githooks).
 # Cas d'urgence seulement : git commit --no-verify.
 

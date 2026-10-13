@@ -1,0 +1,29 @@
+# Vérification automatique à chaque envoi et chaque pull request.
+# Elle lance scripts/verif.sh dans un conteneur Linux avec Swift 6.4 (les parties Mac s'y déclarent sautées).
+# Aucun appel à un modèle d'IA : rien à payer.
+name: Vérification
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verif:
+    runs-on: ubuntu-latest
+    container: swift:6.4
+    steps:
+      # git et python3 servent à scripts/verif.sh (le conteneur Swift ne les a pas toujours).
+      - name: Outils de base
+        run: apt-get update && apt-get install -y --no-install-recommends git python3 ca-certificates
+
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Vérification complète
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config --global user.email "ci@atelier.invalid"
+          git config --global user.name "Atelier CI"
+          bash scripts/verif.sh

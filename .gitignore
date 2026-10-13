@@ -26,3 +26,7 @@ fastlane/screenshots/
 # État local des hooks de l'atelier, et réglages personnels de Claude Code
 .atelier/
 .claude/settings.local.json
+
+# Python (les hooks et outils de l'atelier)
+__pycache__/
+*.pyc

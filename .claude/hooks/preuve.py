@@ -16,6 +16,7 @@ import subprocess
 import sys
 import time
 
+sys.dont_write_bytecode = True  # pas de __pycache__ dans le dépôt
 RACINE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.insert(0, os.path.join(RACINE, "outils", "atelier"))
 import lots as atelier  # noqa: E402
