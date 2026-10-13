@@ -252,7 +252,7 @@ def verifications_statiques():
 
     perm = settings.get("permissions", {})
     deny, allow = "\n".join(perm.get("deny", [])), "\n".join(perm.get("allow", []))
-    for motif in ("Read(.env", "Bash(cat .env", "Bash(grep", "Bash(less", "Bash(head", "git push --force", "Bash(git push origin main"):
+    for motif in ("Read(.env", "Bash(cat .env", "Bash(grep", "Bash(less", "Bash(head", "git push --force", "Bash(git push origin main", "Bash(git commit --no-verify"):
         bilan.verifier(f"permissions : refus de « {motif} »", motif in deny)
     for motif in ("Bash(scripts/*)", "Bash(python3 outils/atelier/*)", "git status", "git diff", "git log", "git add", "git commit",
                   "git fetch", "git merge", "git worktree", "swift test", "swift build", "xcodebuild", "xcrun simctl", "docker run"):
@@ -880,9 +880,8 @@ def main():
         print("Échecs :")
         for nom in bilan.echecs:
             print(f"  - {nom}")
-    print(f"atelier : {reussis}/{bilan.total} vérifications passent")
-    if not bilan.echecs:
-        print(f"({time.time() - debut:.0f} s)", file=sys.stderr)
+    print(f"(durée de l'essai : {time.time() - debut:.0f} s)")
+    print(f"atelier : {reussis}/{bilan.total} vérifications passent", flush=True)
     return 0 if not bilan.echecs else 1
 
 
