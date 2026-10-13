@@ -4,7 +4,7 @@
 #
 #   fastlane preparer_captures    une fois : copie SnapshotHelper.swift et rappelle les 6 étapes dans Xcode
 #   fastlane captures             prend les captures en français sur les simulateurs iPhone 6,9" et 6,3"
-#   fastlane captures seul_6_9:true   idem, mais seulement le 6,9" (celui que le plan exige)
+#   fastlane captures seul_6_9:true   idem, mais seulement le 6,9" (celui que le plan cite)
 #   fastlane verifier_captures    contrôle la taille des PNG déjà produits (marche aussi sous Linux)
 #
 # Sources : https://docs.fastlane.tools/getting-started/ios/screenshots/
@@ -28,8 +28,10 @@ LANGUE           = "fr-FR".freeze
 DOSSIER_CAPTURES = "fastlane/screenshots".freeze  # à la racine du dépôt, déjà ignoré par .gitignore
 
 # Tailles acceptées par App Store Connect, en pixels (largeur, hauteur), portrait.
-TAILLES_6_9 = [[1320, 2868], [1290, 2796], [1260, 2736]].freeze  # iPhone Pro Max : exigé
-TAILLES_6_3 = [[1206, 2622], [1179, 2556]].freeze                # iPhone Pro : facultatif
+# La page d'Apple (écrans « large » 6,9" et « medium » 6,3") et le plan (docs/app-store.md, ligne 4)
+# ne désignent pas la même taille comme exigée : par prudence, la voie « captures » produit et contrôle les deux.
+TAILLES_6_9 = [[1320, 2868], [1290, 2796], [1260, 2736]].freeze  # iPhone Pro Max
+TAILLES_6_3 = [[1206, 2622], [1179, 2556]].freeze                # iPhone Pro
 
 require "json"
 require "fileutils"
@@ -71,7 +73,8 @@ def taille_png(chemin)
 end
 
 # Contrôle la taille des PNG « <appareil>-<nom>.png » d'un dossier. Renvoie la liste des problèmes.
-def problemes_tailles(dossier)
+# Il faut au moins une capture valide 6,9" et, sauf si exiger_6_3 est faux, au moins une valide 6,3".
+def problemes_tailles(dossier, exiger_6_3 = true)
   pngs = Dir.glob(File.join(dossier, "**", "*.png")).sort
   return ["aucun PNG trouvé dans #{dossier}"] if pngs.empty?
   problemes = []
@@ -97,6 +100,7 @@ def problemes_tailles(dossier)
     end
   end
   problemes << "aucune capture 6,9\" (iPhone Pro Max) valide" if vus[:pro_max].zero?
+  problemes << "aucune capture 6,3\" (iPhone Pro) valide" if exiger_6_3 && vus[:pro].zero?
   problemes
 end
 
@@ -162,13 +166,13 @@ platform :ios do
     reglages[:only_testing] = [CIBLE_TESTS_UI] unless CIBLE_TESTS_UI.empty?
     capture_screenshots(reglages)
 
-    verifier_captures
+    verifier_captures(seul_6_9: options[:seul_6_9].to_s == "true")
   end
 
-  desc "Contrôle la taille des captures déjà produites (fastlane/screenshots par défaut)"
+  desc "Contrôle la taille des captures déjà produites (fastlane/screenshots par défaut) ; seul_6_9:true n'exige pas le 6,3\""
   lane :verifier_captures do |options|
     dossier = File.expand_path(options[:dossier] || DOSSIER_CAPTURES, racine_depot)
-    problemes = problemes_tailles(dossier)
+    problemes = problemes_tailles(dossier, options[:seul_6_9].to_s != "true")
     if problemes.empty?
       UI.success("Captures contrôlées dans #{dossier} : toutes ont une taille acceptée par App Store Connect.")
     else
