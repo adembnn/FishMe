@@ -26,7 +26,8 @@
 #
 # Écrit pour bash 3.2, le bash livré avec macOS.
 
-# À REMPLIR JEUDI PAR A : le nom du schéma Xcode de l'app (Product > Scheme dans Xcode).
+# Le nom du schéma Xcode de l'app (Product > Scheme dans Xcode). Laisse vide : à défaut, le script
+# reprend celui que A écrit jeudi dans la ligne SCHEMA= en tête de scripts/verif.sh (une seule saisie).
 SCHEMA="${SCHEMA:-}"
 
 PROJET="Projet.xcodeproj"
@@ -36,6 +37,10 @@ ORIGINE_BUILD=1790812800   # 1er octobre 2026, 00:00 UTC, en secondes Unix
 set -u
 set -o pipefail
 cd "$(dirname "$0")/.." || exit 2
+
+if [ -z "$SCHEMA" ] && [ -f scripts/verif.sh ]; then
+  SCHEMA=$(bash -c "$(grep -m1 '^SCHEMA=' scripts/verif.sh)"$'\n''printf %s "$SCHEMA"' 2>/dev/null) || SCHEMA=""
+fi
 
 echec() { printf '✗ %s\n' "$1" >&2; exit 1; }
 etape() { printf '\n==> %s\n' "$1"; }
@@ -64,7 +69,7 @@ fi
 
 etape "Contrôles"
 
-[ -n "$SCHEMA" ] || echec "SCHEMA est vide. Lance : SCHEMA=NomDuSchema scripts/envoi.sh   (A écrit le nom une fois pour toutes en tête de ce fichier)."
+[ -n "$SCHEMA" ] || echec "SCHEMA est vide. Lance : SCHEMA=NomDuSchema scripts/envoi.sh   (ou A écrit le nom dans la ligne SCHEMA= en tête de scripts/verif.sh, jeudi)."
 [ -d "$PROJET" ] || echec "$PROJET est introuvable. Il est créé par A au lot L0 : fais d'abord git pull sur main."
 
 XCODE_V=$(xcodebuild -version 2>/dev/null | sed -n '1s/^Xcode //p')

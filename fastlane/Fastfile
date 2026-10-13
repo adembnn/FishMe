@@ -25,7 +25,7 @@ CIBLE_TESTS_UI  = ENV.fetch("CIBLE_TESTS_UI", "")   # cible des tests d'interfac
 
 PROJET           = "Projet.xcodeproj".freeze  # à la racine du dépôt (créé par A au lot L0)
 LANGUE           = "fr-FR".freeze
-DOSSIER_CAPTURES = "fastlane/captures".freeze  # à la racine du dépôt, ignoré par git
+DOSSIER_CAPTURES = "fastlane/screenshots".freeze  # à la racine du dépôt, déjà ignoré par .gitignore
 
 # Tailles acceptées par App Store Connect, en pixels (largeur, hauteur), portrait.
 TAILLES_6_9 = [[1320, 2868], [1290, 2796], [1260, 2736]].freeze  # iPhone Pro Max : exigé
@@ -165,7 +165,7 @@ platform :ios do
     verifier_captures
   end
 
-  desc "Contrôle la taille des captures déjà produites (fastlane/captures par défaut)"
+  desc "Contrôle la taille des captures déjà produites (fastlane/screenshots par défaut)"
   lane :verifier_captures do |options|
     dossier = File.expand_path(options[:dossier] || DOSSIER_CAPTURES, racine_depot)
     problemes = problemes_tailles(dossier)
