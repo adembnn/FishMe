@@ -4,6 +4,9 @@
 - Rien n'a changé dans le dépôt (par rapport à la base commune avec origin/main, plus le non commité) : on laisse passer.
 - Sinon on lance `scripts/verif.sh --rapide`. Vert : on laisse passer. Rouge : on empêche l'arrêt et on renvoie
   les lignes ✗ et les 40 dernières lignes de la sortie.
+- Le dernier message de l'agent (`last_assistant_message`) pose une question sans dire que c'est fini, ou commence par
+  « ROUGE » : on laisse passer sans lancer les tests. L'agent a le droit de demander ou d'avouer un rouge ; il n'a pas
+  le droit de s'arrêter en silence ni de dire « fini » sur un rouge.
 - Au bout de 3 refus dans la même session, on laisse s'arrêter, mais l'agent doit écrire « ROUGE » à la personne,
   et la personne voit un avertissement. Le compteur repart à zéro dès que la vérification est verte.
 
@@ -77,12 +80,25 @@ def lancer_verif():
     return code, texte
 
 
+FINI = re.compile(r"\b(fini|termin[ée]e?s?|ça marche|ca marche|test[ée]e?s?|prête?s?|fusionn[ée]e?s?|done)\b", re.I)
+
+
+def pause_honnete(message):
+    """Vrai si l'agent s'arrête pour poser une question sans annoncer la fin, ou pour annoncer un rouge."""
+    texte = (message or "").strip()
+    if texte.upper().startswith("ROUGE"):
+        return True
+    return texte.endswith("?") and not FINI.search(texte)
+
+
 def main():
     try:
         entree = json.load(sys.stdin)
     except ValueError:
         entree = {}
     session = entree.get("session_id") or ""
+    if pause_honnete(entree.get("last_assistant_message")):
+        return 0
     if not atelier.fichiers_changes(RACINE):
         return 0
     code, fin = lancer_verif()

@@ -583,6 +583,19 @@ def essai_preuve(m):
     r = appeler(c0, "Stop", entree(True, "s2"), "", env)
     bilan.verifier("preuve : test vert -> l'agent peut s'arrêter", r.returncode == 0 and (json_ou_none(r.stdout) or {}).get("decision") != "block" and r.stdout.strip() == "", sortie(r))
 
+    # L'agent peut poser une question ou avouer un rouge ; il ne peut pas dire « fini » sur un rouge.
+    etat_de(m, "swift-resultat", "rouge")
+    question = {"session_id": "s4", "stop_hook_active": False, "last_assistant_message": "Je garde la grille ou l'IA d'abord ?"}
+    r = appeler(c0, "Stop", question, "", env)
+    bilan.verifier("preuve : rouge, mais l'agent pose une question -> il peut s'arrêter", r.returncode == 0 and r.stdout.strip() == "", sortie(r))
+    aveu = {"session_id": "s4", "stop_hook_active": False, "last_assistant_message": "ROUGE : le test du verdict 3 échoue."}
+    r = appeler(c0, "Stop", aveu, "", env)
+    bilan.verifier("preuve : rouge annoncé « ROUGE : » -> il peut s'arrêter", r.returncode == 0 and r.stdout.strip() == "", sortie(r))
+    faux = {"session_id": "s5", "stop_hook_active": False, "last_assistant_message": "C'est fini, tu veux tester ?"}
+    r = appeler(c0, "Stop", faux, "", env)
+    bilan.verifier("preuve : rouge, et l'agent dit « fini » -> refusé même avec une question", (json_ou_none(r.stdout) or {}).get("decision") == "block", sortie(r))
+    etat_de(m, "swift-resultat", "vert")
+
     # Un 2e type de rouge : docs/lots.md incohérent (deux lots se partagent un dossier).
     lots_md = c0 / "docs/lots.md"
     lots_md.write_text(lots_md.read_text(encoding="utf-8").replace("`App/Prise/`", "`App/Carte/`", 1), encoding="utf-8")

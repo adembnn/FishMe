@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Fusionne le lot courant dans main : le seul chemin vers main.
-# Usage : scripts/fusionner.sh      (depuis la copie de travail d'un lot, créée par scripts/lot.sh)
+# Usage : scripts/fusionner.sh [lot/<nom>]   (depuis la copie de travail d'un lot, créée par scripts/lot.sh ;
+#         la branche en argument est facultative et doit être la branche courante)
 # Étapes : arbre propre, origin/main fusionné dans ta branche (merge, jamais rebase), contrôle des dossiers,
 # scripts/verif.sh complet, puis envoi vers main et vers la branche du lot.
 
@@ -12,6 +13,9 @@ echec() { echo "✗ $*" >&2; exit 1; }
 
 branche=$(git symbolic-ref --short -q HEAD)
 code=$(python3 "$outil" lot "$branche" 2>/dev/null)
+if [ -n "${1:-}" ] && [ "$1" != "$branche" ]; then
+  echec "Tu demandes de fusionner $1, mais ce dossier est sur « ${branche:-une tête détachée} ». À faire : va dans la copie de travail de $1 (scripts/lot.sh <code> l'affiche), puis relance."
+fi
 [ -n "$code" ] || echec "Tu es sur « ${branche:-une tête détachée} », qui n'est la branche d'aucun lot. À faire : scripts/lot.sh <code>, puis lance fusionner.sh depuis le dossier qu'il affiche."
 
 # 1. Arbre propre
@@ -24,7 +28,7 @@ fi
 # 2. origin/main dans la branche (merge)
 git fetch origin || echec "git fetch a échoué : pas de réseau, ou pas d'origin. À faire : vérifie ta connexion, puis relance."
 git rev-parse -q --verify refs/remotes/origin/main >/dev/null \
-  || echec "origin/main n'existe pas encore (A la crée au lot L0). Rien à fusionner pour l'instant."
+  || echec "origin/main n'existe pas encore. À faire, une seule fois (A) : ATELIER_FUSION=1 git push origin claude/project-thread-78e20q:main, puis relance."
 if ! git merge --no-edit origin/main; then
   echo "✗ Conflit en fusionnant origin/main dans $branche. Fichiers en conflit :" >&2
   git diff --name-only --diff-filter=U | sed 's/^/    /' >&2
