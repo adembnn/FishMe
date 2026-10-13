@@ -10,7 +10,7 @@ allowed-tools: Read Grep Glob Bash(git branch*) Bash(git status*) Bash(git fetch
 Système : !`uname -s`
 Branche courante : !`git branch --show-current`
 
-Tu parles à une personne débutante. Phrases courtes, un terme technique expliqué entre parenthèses la première fois. TestFlight est l'outil d'Apple pour essayer une version avant publication. Envoyer sur TestFlight n'est pas soumettre à la relecture d'Apple.
+Tu parles à une personne débutante. Phrases courtes, un terme technique expliqué entre parenthèses la première fois. TestFlight est l'outil d'Apple pour essayer une version avant publication. Envoyer sur TestFlight garde le build chez nous : la soumission à la relecture d'Apple est une étape à part.
 
 ## Ce que tu ne fais jamais
 Tu ne soumets rien à la relecture d'Apple. Ni bouton, ni `fastlane deliver` avec soumission, ni appel à l'API d'App Store Connect pour « ajouter pour examen ». C'est un humain qui clique dans App Store Connect. Tu ne contournes aucun garde-fou (`ATELIER_LIBRE`, `--no-verify`).

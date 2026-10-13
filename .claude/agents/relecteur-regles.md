@@ -26,7 +26,7 @@ Tu relis ce qui décide si une personne peut garder un poisson, et ce que l'app 
 - Dans les 5 départements, la règle du département remplace la règle nationale de même `espece`, `type` et `categorie` (elle ne s'ajoute pas). Une règle au `statut` « incertain » interdit « tu peux la garder ».
 - L'IA propose, la personne confirme, la table décide. Suis le chemin de l'espèce depuis `IdentifieEspece` (l'IA) jusqu'à `verdict(espece, tailleCm, date, departement)` : il passe forcément par un geste de confirmation. La sortie de l'IA n'entre jamais directement dans `verdict`. L'IA ne reçoit jamais la question « peut-on la garder ? », et son texte n'est jamais montré comme une règle. Elle choisit dans la liste fermée des 14 espèces, plus « pas un poisson ». Aucun pourcentage de confiance affiché.
 - Le verdict est calculé dans `Core`. Un seuil de taille ou de date écrit en dur dans `App/` (par exemple `if taille < 50`) est bloquant : l'écran appelle `verdict`.
-- « Garder » n'est pas « manger » : les règles de type `consommation` (vente et consommation interdites en Seine, Marne, Yerres, canaux) s'affichent avec le verdict. Le cas 2 de `cas-verdicts.json` le prouve.
+- Garder un poisson et le manger relèvent de deux règles : les règles de type `consommation` (vente et consommation interdites en Seine, Marne, Yerres, canaux) s'affichent avec le verdict. Le cas 2 de `cas-verdicts.json` le prouve.
 - Chaque verdict porte la phrase de la règle, sa source, la date de lecture, et « Information indicative : l'arrêté préfectoral fait foi. En cas de doute, relâche. »
 
 ### 2. Les 5 cas de `cas-verdicts.json` (bloquant si l'un est faux)
