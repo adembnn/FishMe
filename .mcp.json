@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "XcodeBuildMCP": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mobilebuildmcp@2.7.1", "mcp"],
+      "env": {
+        "MOBILEBUILDMCP_ENABLED_WORKFLOWS": "simulator,ui-automation,device,xcode-ide",
+        "MOBILEBUILDMCP_SENTRY_DISABLED": "true",
+        "MOBILEBUILDMCP_PROJECT_PATH": "Projet.xcodeproj"
+      }
+    }
+  }
+}
