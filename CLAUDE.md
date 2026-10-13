@@ -16,6 +16,13 @@ Les documents que le plan cite sans chemin (`lots.md`, `fiches/L3.md`, `reports/
 - Collections visibles par les amis invités seulement, jamais en public (Adem, 12 oct. 14h43).
 - Essai gratuit « 1 mois » puis abonnement, paywall après la première carte. Prix pas fixé.
 
+## L'atelier (harness, décidé le 13 oct.)
+- Adem veut un atelier qui fait construire vite et juste, pas un plan à lire. Il a le droit d'être préparé avant jeudi (Adem, 13 oct. 13h28) ; c'est le lot H0.
+- Claude Code : utilisé par Adem et Titouan ; Sullyvan code sans Claude, donc chaque règle existe aussi en crochet de git (`.githooks/`).
+- Outils gratuits autorisés sans redemander (Adem, 13 oct.) : XcodeBuildMCP, fastlane, et d'autres outils gratuits utiles. Un outil payant, une API ou un modèle se demandent toujours.
+- `docs/lots.md` est la seule source des règles de l'atelier (branche et dossiers de chaque lot) : on corrige le tableau, jamais un script.
+- Dans le cloud, Swift passe par Docker : `sudo dockerd &` puis l'image `swift:6.4` (vérifié le 13 oct. : Swift 6.4, Swift Testing et `swift format` tournent).
+
 ## La construction
 - Critère commun : `docs/parcours-demo.md` (étapes E1 à E9). Lots et calendrier : `docs/lots.md`.
 - Aucune ligne de code de l'app avant le jeudi 15 oct. 2026. Build jeudi et vendredi matin.
