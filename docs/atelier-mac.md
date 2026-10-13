@@ -152,9 +152,9 @@ Message typique : « No signing certificate » ou « Cloud signing permission er
 2. Range le `.p8` hors du projet, par exemple dans `~/.appstoreconnect/`.
 3. Dans le projet, crée le fichier des secrets avec des noms vides, puis ouvre-le dans un éditeur :
    ```
-   printf 'ASC_KEY_ID=\nASC_ISSUER_ID=\nASC_KEY_PATH=\n' >> .env
-   open -e .env
+   scripts/env.sh
    ```
+   Il recopie les noms de `env.exemple` dans `.env`, valeurs vides, et ouvre `.env`. Claude peut le lancer pour toi : il ne lit jamais le fichier.
    Remplis les trois valeurs toi-même (`ASC_KEY_PATH` = chemin complet du `.p8`). Ne les colle jamais dans un chat ni dans Claude Code. `.env` et `*.p8` sont déjà dans `.gitignore`.
 4. Relance `scripts/envoi.sh`. Quand les trois valeurs sont remplies, il les utilise ; sinon il garde le compte Xcode.
 

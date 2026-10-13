@@ -13,7 +13,9 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 | `app-store.md` | la check-list de soumission et les refus probables, avec le lot qui les corrige | A, C, MWM |
 | `avant-jeudi.md` | ce qui doit être fait avant jeudi 9 h, avec la preuve de chaque ligne | toute l'équipe |
 | `message-mwm.md` | le message à envoyer à MWM aujourd'hui | Adem |
-| `reports/` | les 4 recherches et les 4 évaluations, avec leurs sources | pour vérifier un chiffre |
+| `atelier.md` | l'atelier (harness) : démarrer un lot, ce que les garde-fous font seuls, les commandes et les relecteurs | Adem et Titouan (Claude Code), Sullyvan (sans Claude) |
+| `atelier-mac.md` | la mise en route d'un Mac, une fois avant jeudi | chaque Mac |
+| `reports/` | les recherches et les évaluations, avec leurs sources | pour vérifier un chiffre |
 
 ## Ce que les évaluations ont changé
 - Le premier découpage demandait environ deux fois le temps disponible avant le gel de 14 h. D'où un périmètre réduit pour la version soumise jeudi (question 1).

@@ -10,7 +10,7 @@ Délai d'Apple : au moins 50 % des relectures en moins de 24 h, 90 % en moins de
 | 1 | Xcode 27.0, cible iPhone seulement | A | mercredi |
 | 2 | Textes de fiche : nom (30 car.), sous-titre, mots-clés, description qui nomme les 5 départements, liens conditions et confidentialité dans la description | C | avant jeudi, dès que le nom existe |
 | 3 | Pages web : confidentialité (MWM nommé pour le SDK) et assistance avec un vrai contact | C, validé par MWM | avant jeudi |
-| 4 | Captures 6,9 pouces (1320 x 2868), prises sur le build TestFlight, sans fonction absente | B | jeudi 15 h 30 |
+| 4 | Captures 6,9 pouces (1320 x 2868), et 6,3 pouces (1206 x 2622) si App Store Connect les exige (lecture ambiguë de la page Apple le 13 oct. [?]), prises sur le build TestFlight par `fastlane captures`, sans fonction absente | B | jeudi 15 h 30 |
 | 5 | Questionnaire d'âge : contenu d'utilisateurs non (E8 hors build), rien qui vise les enfants | C (rôle App Manager, sur le web) | jeudi 15 h 30 |
 | 6 | Étiquettes « App Privacy » avec la liste de collecte de Spark Flash | C + MWM | jeudi 15 h 30 |
 | 7 | Manifeste `PrivacyInfo.xcprivacy` (app et SDK) | A | jeudi, à T5 |

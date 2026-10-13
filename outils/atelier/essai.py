@@ -888,6 +888,29 @@ def essai_fusionner(m):
                    "origin/main" in sujet and "lot/donnees" in sujet, sujet)
 
 
+def essai_env(m):
+    bilan.section("scripts/env.sh : le .env aux noms vides")
+    d = Path(tempfile.mkdtemp(prefix="atelier-env-"))
+    try:
+        (d / "scripts").mkdir()
+        shutil.copy(RACINE / "scripts" / "env.sh", d / "scripts" / "env.sh")
+        shutil.copy(RACINE / "env.exemple", d / "env.exemple")
+        env = dict(os.environ, ATELIER_SANS_EDITEUR="1")
+        p = lancer(["bash", "scripts/env.sh"], d, env)
+        noms = [l.split("=")[0] for l in (RACINE / "env.exemple").read_text(encoding="utf-8").splitlines() if l and not l.startswith("#")]
+        contenu = (d / ".env").read_text(encoding="utf-8") if (d / ".env").exists() else ""
+        bilan.verifier("env.sh : crée .env avec chaque nom de env.exemple, valeur vide", p.returncode == 0 and all(f"{n}=\n" in contenu for n in noms), sortie(p))
+        bilan.verifier("env.sh : .env n'est lisible que par son propriétaire (600)", oct((d / ".env").stat().st_mode & 0o777) == "0o600")
+        (d / ".env").write_text(contenu.replace(f"{noms[0]}=\n", f"{noms[0]}=valeur-secrete\n"), encoding="utf-8")
+        p = lancer(["bash", "scripts/env.sh"], d, env)
+        apres = (d / ".env").read_text(encoding="utf-8")
+        bilan.verifier("env.sh : relancé, il garde les valeurs remplies et n'ajoute aucun doublon",
+                       f"{noms[0]}=valeur-secrete" in apres and apres.count(f"{noms[0]}=") == 1, apres.replace("valeur-secrete", "***"))
+        bilan.verifier("env.sh : n'affiche jamais une valeur", "valeur-secrete" not in p.stdout + p.stderr)
+    finally:
+        shutil.rmtree(d, ignore_errors=True)
+
+
 # ---------------------------------------------------------------------------
 # Programme
 # ---------------------------------------------------------------------------
@@ -910,6 +933,7 @@ def main():
         essai_verif(m)
         essai_cloud_pret(m)
         essai_fusionner(m)
+        essai_env(m)
     except Exception as erreur:  # noqa: BLE001 - un plantage de l'essai est un échec de l'essai
         import traceback
         bilan.verifier("l'essai lui-même ne plante pas", False, traceback.format_exc())

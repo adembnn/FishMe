@@ -19,7 +19,21 @@
       "Bash(swift format *)",
       "Bash(xcodebuild *)",
       "Bash(xcrun simctl *)",
-      "Bash(docker run *)"
+      "Bash(docker run *)",
+      "Bash(git show *)",
+      "Bash(git ls-files *)",
+      "Bash(git branch *)",
+      "Bash(git rev-parse *)",
+      "Bash(ls *)",
+      "Bash(wc *)",
+      "Bash(uname *)",
+      "Bash(python3 docs/verifier.py *)",
+      "Bash(mkdir -p reports/ecrans/*)",
+      "Bash(cp * reports/ecrans/*)",
+      "Bash(fastlane captures *)",
+      "Bash(fastlane verifier_captures *)",
+      "Bash(fastlane preparer_captures *)",
+      "mcp__XcodeBuildMCP"
     ],
     "deny": [
       "Read(.env*)",
@@ -66,8 +80,16 @@
       "Bash(git commit * -n)",
       "Bash(git push --no-verify*)",
       "Bash(git push * --no-verify*)"
+    ],
+    "ask": [
+      "Bash(scripts/envoi.sh *)",
+      "Bash(./scripts/envoi.sh *)",
+      "Bash(bash scripts/envoi.sh *)"
     ]
   },
+  "enabledMcpjsonServers": [
+    "XcodeBuildMCP"
+  ],
   "hooks": {
     "SessionStart": [
       {
