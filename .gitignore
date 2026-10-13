@@ -1,0 +1,28 @@
+# Secrets : les clés restent sur l'ordinateur de la personne, jamais dans git.
+.env*
+
+# Données fabriquées par script : `scripts/donnees.sh` les télécharge, on ne les commite jamais.
+stations-especes.json
+rarete-departements.json
+
+# Captures d'écran de travail
+reports/ecrans/
+
+# Xcode et Swift
+build/
+.build/
+.swiftpm/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# fastlane
+fastlane/report.xml
+fastlane/screenshots/
+
+# macOS
+.DS_Store
+
+# État local des hooks de l'atelier, et réglages personnels de Claude Code
+.atelier/
+.claude/settings.local.json
