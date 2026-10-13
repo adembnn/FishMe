@@ -1,0 +1,183 @@
+# fastlane/Fastfile : les « voies » (lanes) de fastlane, c'est-à-dire des commandes nommées.
+# fastlane est l'outil gratuit qui automatise les captures d'écran de la fiche App Store.
+# À lancer depuis la racine du dépôt :
+#
+#   fastlane preparer_captures    une fois : copie SnapshotHelper.swift et rappelle les 6 étapes dans Xcode
+#   fastlane captures             prend les captures en français sur les simulateurs iPhone 6,9" et 6,3"
+#   fastlane captures seul_6_9:true   idem, mais seulement le 6,9" (celui que le plan cite)
+#   fastlane verifier_captures    contrôle la taille des PNG déjà produits (marche aussi sous Linux)
+#
+# Sources : https://docs.fastlane.tools/getting-started/ios/screenshots/
+#           https://docs.fastlane.tools/actions/snapshot/
+#           https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/
+
+fastlane_version "2.236.0"   # 2.236.0 corrige la recherche du simulateur sous iOS 26.4 et plus
+default_platform(:ios)
+opt_out_usage                # pas de statistiques envoyées à fastlane
+skip_docs                    # pas de fastlane/README.md généré
+
+# ---------------------------------------------------------------------------------------------
+# À REMPLIR JEUDI PAR A, après avoir créé la cible de tests d'interface dans Xcode.
+# On peut aussi les donner sans modifier le fichier : SCHEMA_TESTS_UI=... CIBLE_TESTS_UI=... fastlane captures
+SCHEMA_TESTS_UI = ENV.fetch("SCHEMA_TESTS_UI", "")  # schéma partagé qui lance les tests d'interface
+CIBLE_TESTS_UI  = ENV.fetch("CIBLE_TESTS_UI", "")   # cible des tests d'interface (vide : tout le schéma)
+# ---------------------------------------------------------------------------------------------
+
+PROJET           = "Projet.xcodeproj".freeze  # à la racine du dépôt (créé par A au lot L0)
+LANGUE           = "fr-FR".freeze
+DOSSIER_CAPTURES = "fastlane/screenshots".freeze  # à la racine du dépôt, déjà ignoré par .gitignore
+
+# Tailles acceptées par App Store Connect, en pixels (largeur, hauteur), portrait.
+# La page d'Apple (écrans « large » 6,9" et « medium » 6,3") et le plan (docs/app-store.md, ligne 4)
+# ne désignent pas la même taille comme exigée : par prudence, la voie « captures » produit et contrôle les deux.
+TAILLES_6_9 = [[1320, 2868], [1290, 2796], [1260, 2736]].freeze  # iPhone Pro Max
+TAILLES_6_3 = [[1206, 2622], [1179, 2556]].freeze                # iPhone Pro
+
+require "json"
+require "fileutils"
+
+# fastlane exécute chaque voie DEPUIS le dossier fastlane/ : tous les chemins sont donc calculés
+# à partir de la racine du dépôt, jamais en relatif.
+def racine_depot
+  dir = Dir.pwd
+  File.basename(dir) == "fastlane" ? File.dirname(dir) : dir
+end
+
+# Choisit, dans la sortie JSON de « xcrun simctl list devices available -j », les iPhone du
+# runtime iOS 27 le plus récent : le plus récent « Pro Max » (6,9") et le plus récent « Pro » (6,3").
+# Renvoie { version: "27.0", pro_max: "iPhone 18 Pro Max", pro: "iPhone 18 Pro" }, ou nil sans iOS 27.
+def choisir_simulateurs(json_texte, majeure = "27")
+  devices = JSON.parse(json_texte).fetch("devices", {})
+  candidats = []
+  devices.each do |runtime, liste|
+    m = runtime.match(/\.iOS-(\d+)-(\d+)\z/)
+    next unless m && m[1] == majeure
+    noms = liste.select { |d| d["isAvailable"] != false }.map { |d| d["name"].to_s }.select { |n| n.start_with?("iPhone") }
+    candidats << [m[2].to_i, "#{m[1]}.#{m[2]}", noms] unless noms.empty?  # un runtime sans iPhone ne compte pas
+  end
+  return nil if candidats.empty?
+  _mineure, version, noms = candidats.max_by { |c| c[0] }
+  plus_recent = lambda do |motif|
+    noms.map { |n| (r = n.match(motif)) && [r[1].to_i, n] }.compact.max_by(&:first)&.last
+  end
+  { version: version,
+    pro_max: plus_recent.call(/\AiPhone (\d+) Pro Max\z/),
+    pro: plus_recent.call(/\AiPhone (\d+) Pro\z/) }
+end
+
+# Largeur et hauteur d'un PNG, lues dans son en-tête (aucune bibliothèque nécessaire).
+def taille_png(chemin)
+  tete = File.binread(chemin, 24)
+  return nil unless tete && tete.bytesize == 24 && tete.byteslice(0, 8) == "\x89PNG\r\n\x1a\n".b
+  tete.byteslice(16, 8).unpack("NN")
+end
+
+# Contrôle la taille des PNG « <appareil>-<nom>.png » d'un dossier. Renvoie la liste des problèmes.
+# Il faut au moins une capture valide 6,9" et, sauf si exiger_6_3 est faux, au moins une valide 6,3".
+def problemes_tailles(dossier, exiger_6_3 = true)
+  pngs = Dir.glob(File.join(dossier, "**", "*.png")).sort
+  return ["aucun PNG trouvé dans #{dossier}"] if pngs.empty?
+  problemes = []
+  vus = { pro_max: 0, pro: 0 }
+  pngs.each do |f|
+    appareil = File.basename(f).split("-", 2).first.to_s
+    attendu =
+      if appareil =~ /Pro Max\z/ then :pro_max
+      elsif appareil =~ /Pro\z/ then :pro
+      end
+    if attendu.nil?
+      problemes << "#{f} : appareil « #{appareil} » ni Pro Max ni Pro, taille non contrôlée"
+      next
+    end
+    tailles = attendu == :pro_max ? TAILLES_6_9 : TAILLES_6_3
+    t = taille_png(f)
+    if t.nil?
+      problemes << "#{f} : ce n'est pas un PNG lisible"
+    elsif !tailles.include?(t)
+      problemes << "#{f} : #{t[0]}x#{t[1]}, attendu #{tailles.map { |w, h| "#{w}x#{h}" }.join(" ou ")}"
+    else
+      vus[attendu] += 1
+    end
+  end
+  problemes << "aucune capture 6,9\" (iPhone Pro Max) valide" if vus[:pro_max].zero?
+  problemes << "aucune capture 6,3\" (iPhone Pro) valide" if exiger_6_3 && vus[:pro].zero?
+  problemes
+end
+
+platform :ios do
+  desc "Une fois : copie SnapshotHelper.swift dans fastlane/ et rappelle les étapes à faire dans Xcode"
+  lane :preparer_captures do
+    require "snapshot"
+    source = File.join(Snapshot::ROOT, "lib", "assets", "SnapshotHelper.swift")
+    cible = File.join(racine_depot, "fastlane", "SnapshotHelper.swift")
+    if File.exist?(cible)
+      UI.message("fastlane/SnapshotHelper.swift existe déjà : rien à copier.")
+    else
+      FileUtils.cp(source, cible)
+      UI.success("Copié : fastlane/SnapshotHelper.swift")
+    end
+    UI.important(<<~ETAPES)
+      À faire dans Xcode (une seule personne, A) :
+      1) Ajoute une cible « UI Testing Bundle » au projet (File > New > Target), par exemple AppUITests.
+      2) Ajoute fastlane/SnapshotHelper.swift à cette cible (tu peux le déplacer où tu veux).
+      3) Dans le test, avant de lancer l'app :  let app = XCUIApplication() ; setupSnapshot(app) ; app.launch()
+      4) Aux écrans à photographier, ajoute :  snapshot("01Accueil")  (puis 02..., 03...)
+      5) Crée un schéma pour cette cible et coche « Shared » (Product > Scheme > Manage Schemes).
+      6) Écris le nom du schéma et de la cible en haut de fastlane/Fastfile (SCHEMA_TESTS_UI, CIBLE_TESTS_UI).
+    ETAPES
+  end
+
+  desc "Captures d'écran en français sur les simulateurs iPhone 6,9\" (1320x2868) et 6,3\" (1206x2622)"
+  lane :captures do |options|
+    UI.user_error!("Les captures se font sur un Mac (Xcode et simulateurs).") unless FastlaneCore::Helper.mac?
+    if SCHEMA_TESTS_UI.empty?
+      UI.user_error!("SCHEMA_TESTS_UI est vide : A écrit le nom du schéma de tests d'interface en haut de fastlane/Fastfile (voir : fastlane preparer_captures).")
+    end
+
+    json = `xcrun simctl list devices available -j`
+    UI.user_error!("xcrun simctl a échoué : Xcode 27 est-il sélectionné ? Lance scripts/docteur.sh.") unless $?.success?
+
+    choix = choisir_simulateurs(json)
+    if choix.nil?
+      UI.user_error!("Aucun simulateur iOS 27. Répare avec : xcodebuild -downloadPlatform iOS")
+    end
+    if choix[:pro_max].nil?
+      UI.user_error!("Aucun iPhone « Pro Max » (6,9\") dans le simulateur iOS #{choix[:version]}. Ouvre Xcode > Window > Devices and Simulators et ajoute-en un.")
+    end
+
+    appareils = [choix[:pro_max]]
+    if options[:seul_6_9].to_s == "true"
+      UI.message("Seulement le 6,9\" : #{choix[:pro_max]}")
+    elsif choix[:pro]
+      appareils << choix[:pro]
+    else
+      UI.important("Aucun iPhone « Pro » (6,3\") dans iOS #{choix[:version]} : seul le 6,9\" est pris.")
+    end
+    UI.message("iOS #{choix[:version]}, appareils : #{appareils.join(", ")}")
+
+    reglages = {
+      project: File.join(racine_depot, PROJET),
+      scheme: SCHEMA_TESTS_UI,
+      devices: appareils,
+      ios_version: choix[:version],
+      languages: [LANGUE],
+      output_directory: File.join(racine_depot, DOSSIER_CAPTURES)
+    }
+    reglages[:only_testing] = [CIBLE_TESTS_UI] unless CIBLE_TESTS_UI.empty?
+    capture_screenshots(reglages)
+
+    verifier_captures(seul_6_9: options[:seul_6_9].to_s == "true")
+  end
+
+  desc "Contrôle la taille des captures déjà produites (fastlane/screenshots par défaut) ; seul_6_9:true n'exige pas le 6,3\""
+  lane :verifier_captures do |options|
+    dossier = File.expand_path(options[:dossier] || DOSSIER_CAPTURES, racine_depot)
+    problemes = problemes_tailles(dossier, options[:seul_6_9].to_s != "true")
+    if problemes.empty?
+      UI.success("Captures contrôlées dans #{dossier} : toutes ont une taille acceptée par App Store Connect.")
+    else
+      problemes.each { |p| UI.error(p) }
+      UI.user_error!("#{problemes.size} problème(s) de taille dans #{dossier}.")
+    end
+  end
+end

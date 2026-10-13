@@ -1,0 +1,20 @@
+# fastlane/Snapfile : réglages de « fastlane snapshot », l'outil qui prend les captures d'écran
+# de la fiche App Store en lançant les tests d'interface (« UI tests ») sur des simulateurs.
+#
+# Pas d'appareil ici, exprès : les noms des simulateurs changent à chaque Xcode. La voie
+# « captures » du Fastfile choisit elle-même l'iPhone 6,9" (le plus récent « Pro Max ») et
+# l'iPhone 6,3" (le plus récent « Pro ») installés avec iOS 27. Le nom du schéma, de la cible de
+# tests et le dossier de sortie (fastlane/screenshots, ignoré par git) sont aussi donnés par le Fastfile,
+# qui l'emporte sur ce fichier.
+#
+# Lancer : fastlane captures        Sources : https://docs.fastlane.tools/actions/snapshot/
+
+languages(["fr-FR"])                    # captures en français
+clear_previous_screenshots(true)        # on repart d'un dossier vide à chaque série
+override_status_bar(true)               # barre d'état propre : 9:41, batterie pleine, réseau plein
+localize_simulator(true)                # le simulateur démarre lui-même en français
+skip_open_summary(true)                 # n'ouvre pas la page HTML récapitulative à la fin
+number_of_retries(1)                    # un nouvel essai si un test d'interface échoue
+stop_after_first_error(true)            # on s'arrête au premier échec, pas de fausse série
+concurrent_simulators(false)            # un simulateur à la fois : plus lent, mais plus fiable
+configuration("Release")                # même code que le build TestFlight : aucun faux service (#if DEBUG)
