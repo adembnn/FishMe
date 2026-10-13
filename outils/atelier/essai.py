@@ -70,6 +70,7 @@ case "$1" in
   test)
     if [ -f "$etat/avant-test.sh" ]; then bash "$etat/avant-test.sh"; rm -f "$etat/avant-test.sh"; fi
     if [ "$(cat "$etat/swift-resultat" 2>/dev/null)" = rouge ]; then
+      for i in $(seq 1 60); do echo "[$i/60] compilation du test $i"; done
       echo "Test failed : testVerdict() à la ligne 12"; echo "✘ Test run with 1 test failed"; exit 1
     fi
     echo "✔ Test run with 3 tests passed after 0.001 seconds."; exit 0 ;;
@@ -320,7 +321,8 @@ def construire_monde(tmp):
     code = subprocess.run(["git", "-C", str(RACINE), "ls-files", "-co", "--exclude-standard", "-z"], capture_output=True)
     fichiers = [f for f in code.stdout.decode("utf-8").split("\0") if f] if code.returncode == 0 else []
     if not fichiers:
-        fichiers = [str(p.relative_to(RACINE)) for p in RACINE.rglob("*") if p.is_file() and ".git" not in p.parts]
+        ignores = {".git", ".atelier", "__pycache__", ".build"}
+        fichiers = [str(p.relative_to(RACINE)) for p in RACINE.rglob("*") if p.is_file() and not ignores & set(p.parts)]
     for f in fichiers:
         src = RACINE / f
         if src.is_file():
@@ -450,11 +452,14 @@ def essai_garde(m):
                    r.returncode == 2 and "scripts/lot.sh" in r.stderr, sortie(r))
     r = ecriture(app, app / "docs/note.md", env)
     bilan.verifier("garde : sur main, les dossiers communs restent permis", r.returncode == 0, sortie(r))
-    r = appeler(l3, "PreToolUse", {"tool_name": "Write", "tool_input": {"file_path": str(l3 / "App/Carte/Vue.swift")}}, "Write", env)
-    ok = r.returncode == 2
-    (l3 / "docs/lots.md").write_text((l3 / "docs/lots.md").read_text(encoding="utf-8") + "\n", encoding="utf-8")
+    # La règle vient de docs/lots.md : si on y déplace le dossier du lot, le garde suit sans qu'on touche à un script.
+    lots_md = l3 / "docs/lots.md"
+    lots_md.write_text(lots_md.read_text(encoding="utf-8").replace("`App/Prise/`", "`App/Peche/`", 1), encoding="utf-8")
+    ancien = ecriture(l3, l3 / "App/Prise/Vue.swift", env)
+    nouveau = ecriture(l3, l3 / "App/Peche/Vue.swift", env)
     git(["checkout", "--", "docs/lots.md"], l3, env)
-    bilan.verifier("garde : la règle est relue dans docs/lots.md (le refus tient après un nouvel appel)", ok)
+    bilan.verifier("garde : la règle est relue dans docs/lots.md (dossier du lot déplacé -> l'ancien est refusé, le nouveau permis)",
+                   ancien.returncode == 2 and nouveau.returncode == 0, sortie(ancien) + sortie(nouveau))
 
 
 def essai_contexte(m):
@@ -712,11 +717,11 @@ def essai_crochets_git(m):
     git(["add", "-A"], l3, env)
     p = commit(l3, env)
     bilan.verifier("pre-commit : « Pokémon » dans App/ est refusé (marque de Nintendo)", p.returncode != 0 and "Nintendo" in sortie(p) and "Pescedex" in sortie(p), sortie(p))
-    for variante in ('let a = "POKEDEX"\n', "let a = \"Poké\"\n"):
-        ecrire(l3, "App/Prise/Textes.swift", variante)
+    for mot in ("POKEDEX", "Poke\u0301mon"):  # majuscules ; « e » suivi d'un accent combiné
+        ecrire(l3, "App/Prise/Textes.swift", 'let a = "' + mot + '"\n')
         git(["add", "-A"], l3, env)
         p = commit(l3, env)
-        bilan.verifier(f"pre-commit : la variante {variante.split('\"')[1]!r} est refusée aussi", p.returncode != 0 and "Nintendo" in sortie(p), sortie(p))
+        bilan.verifier(f"pre-commit : la variante {mot!r} est refusée aussi", p.returncode != 0 and "Nintendo" in sortie(p), sortie(p))
     ecrire(l3, "App/Prise/Textes.swift", 'let titre = "Ma collection Pescedex"\n')
     git(["add", "-A"], l3, env)
     p = commit(l3, env, "Prise : textes")
@@ -820,8 +825,6 @@ def essai_fusionner(m):
     fin = [l for l in p.stdout.strip().splitlines() if l.strip()][-3:]
     bilan.verifier("fusionner.sh : se termine par un point de 3 lignes (fusionné, vérification, suite)",
                    len(fin) == 3 and fin[0].startswith("Fusionné") and fin[1].startswith("Vérification : verif : VERT") and fin[2].startswith("Suite"), "\n".join(fin))
-    bilan.verifier("fusionner.sh : la fusion de main dans la branche est un merge, pas un rebase",
-                   len(git(["log", "--merges", "--oneline", "-1"], c0, env).stdout.strip()) >= 0 and git(["rev-list", "--count", "--merges", "origin/main..HEAD"], c0, env).returncode == 0)
 
     # quelqu'un fusionne entre-temps
     ecrire(d1, "Packages/Core/Sources/Core/Resources/regles.json", "{}\n")
@@ -836,6 +839,9 @@ def essai_fusionner(m):
     p = lancer(["bash", "scripts/fusionner.sh"], d1, env)
     bilan.verifier("fusionner.sh : relancé, il reprend la dernière version de main et fusionne",
                    p.returncode == 0 and sha_distant(m) == git(["rev-parse", "HEAD"], d1, env).stdout.strip(), sortie(p))
+    sujet = git(["log", "--merges", "--format=%s", "-1"], d1, env).stdout
+    bilan.verifier("fusionner.sh : main est repris par un merge (commit de fusion « origin/main into lot/donnees »), jamais par un rebase",
+                   "origin/main" in sujet and "lot/donnees" in sujet, sujet)
 
 
 # ---------------------------------------------------------------------------

@@ -3,11 +3,13 @@
 
 - Rien n'a changé dans le dépôt (par rapport à la base commune avec origin/main, plus le non commité) : on laisse passer.
 - Sinon on lance `scripts/verif.sh --rapide`. Vert : on laisse passer. Rouge : on empêche l'arrêt et on renvoie
-  les 40 dernières lignes de la sortie.
+  les lignes ✗ et les 40 dernières lignes de la sortie.
 - Au bout de 3 refus dans la même session, on laisse s'arrêter, mais l'agent doit écrire « ROUGE » à la personne,
   et la personne voit un avertissement. Le compteur repart à zéro dès que la vérification est verte.
 
-Format : https://code.claude.com/docs/en/hooks (Stop : champ stop_hook_active, sortie {"decision": "block", "reason": "..."}).
+Format : https://code.claude.com/docs/en/hooks (Stop : entrée session_id et stop_hook_active, sortie {"decision": "block", "reason": "..."}).
+Le compteur de refus est à nous (fichier dans .atelier/), pas celui de Claude Code : stop_hook_active ne sert qu'à le recouper
+et Claude Code coupe de toute façon après 8 refus de suite.
 """
 import json
 import os
@@ -56,7 +58,7 @@ def ecrire_compteur(session, refus):
 
 
 def lancer_verif():
-    """Lance scripts/verif.sh --rapide. Rend (code, 40 dernières lignes)."""
+    """Lance scripts/verif.sh --rapide. Rend (code de sortie, texte pour l'agent : lignes ✗ + 40 dernières lignes)."""
     script = os.path.join(RACINE, "scripts", "verif.sh")
     if not os.path.isfile(script):
         return 0, ""
@@ -66,8 +68,13 @@ def lancer_verif():
         code, sortie = p.returncode, p.stdout.decode("utf-8", "replace")
     except subprocess.TimeoutExpired:
         code, sortie = 1, f"✗ verif.sh a dépassé {DUREE_MAX} s et a été arrêté. Lance `scripts/verif.sh --rapide` à la main."
-    lignes = [l[:300] for l in sortie.splitlines()][-40:]
-    return code, "\n".join(lignes)
+    toutes = [l[:300] for l in sortie.splitlines()]
+    # Les lignes ✗ d'abord : elles disent quoi réparer, même si la fin de la sortie est longue.
+    cles = [l for l in toutes if l.startswith(("✗", "verif :")) or l.lstrip().startswith("→ À faire")]
+    texte = "\n".join(toutes[-40:])
+    if cles:
+        texte = "Parties rouges :\n" + "\n".join(cles) + "\n\n40 dernières lignes de la sortie :\n" + texte
+    return code, texte
 
 
 def main():

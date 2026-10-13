@@ -35,7 +35,7 @@ ko() {
   [ -n "${3:-}" ] && printf '    → À faire : %s\n' "$3"
   nb_ko=$((nb_ko + 1)); rouges="${rouges:+$rouges, }$1"
 }
-fin() { [ -s "$sortie" ] && tail -n 40 "$sortie" | sed 's/^/    /'; }
+fin() { [ -s "$sortie" ] && tail -n 25 "$sortie" | sed 's/^/    /'; }
 
 # Quelles parties les fichiers changés touchent-ils ? (en cas de doute, toutes)
 parties=$(python3 outils/atelier/lots.py changes 2>/dev/null | python3 outils/atelier/lots.py parties 2>/dev/null) \
