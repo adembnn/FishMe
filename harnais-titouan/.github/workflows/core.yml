@@ -1,0 +1,36 @@
+# Tests de PecheCore (Swift pur) sur Linux et Windows. NON TESTÉ : jamais exécuté (écrit sous Windows, sans runner).
+name: core
+on:
+  push:
+    paths: ["PecheCore/**", ".github/workflows/core.yml"]
+  pull_request:
+    paths: ["PecheCore/**", ".github/workflows/core.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: core-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    container: swift:6.0          # ⚠ vérifier que l'image 6.0 existe ; sinon prendre le dernier 6.x
+    steps:
+      - uses: actions/checkout@v4
+      - name: swift test (PecheCore)
+        working-directory: PecheCore
+        run: swift test
+
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      # ⚠ l'action et l'installation Swift sous Windows sont à confirmer au premier run.
+      - uses: SwiftyLab/setup-swift@latest
+        with:
+          swift-version: "6.0"
+      - name: swift test (PecheCore)
+        working-directory: PecheCore
+        run: swift test

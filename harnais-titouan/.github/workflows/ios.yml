@@ -1,0 +1,36 @@
+# Compilation de l'app pour le simulateur, SANS signature. NON TESTÉ : jamais exécuté (écrit sous Windows).
+# Uniquement sur la branche principale (+ lancement manuel) : les minutes macOS comptent x10 en dépôt privé.
+name: ios
+on:
+  push:
+    branches: [main, 'lot/**']
+  workflow_dispatch:
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Versions de Xcode installées (journal)
+        run: ls /Applications | grep -i xcode || true; xcodebuild -version
+      - name: Installer XcodeGen
+        run: brew install xcodegen
+      - name: Générer le projet
+        run: xcodegen generate
+      - name: Compiler pour le simulateur (sans signature)
+        run: |
+          set -o pipefail
+          xcodebuild -project Bredouille.xcodeproj -scheme Bredouille \
+            -destination 'generic/platform=iOS Simulator' -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO build | tee build.log
+      - name: Journal en cas d'échec
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build.log

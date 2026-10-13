@@ -1,0 +1,19 @@
+  [retry 1/5] HTTPError: HTTP Error 503: Service Unavailable
+  [retry 1/5] HTTPError: HTTP Error 503: Service Unavailable
+  [retry 1/5] HTTPError: HTTP Error 503: Service Unavailable
+  [retry 2/5] HTTPError: HTTP Error 503: Service Unavailable
+  [retry 1/5] HTTPError: HTTP Error 503: Service Unavailable
+  [retry 1/5] RemoteDisconnected: Remote end closed connection without response
+  [retry 2/5] URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+  [retry 3/5] URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+  [retry 1/5] HTTPError: HTTP Error 503: Service Unavailable
+  [retry 1/5] HTTPError: HTTP Error 503: Service Unavailable
+  [retry 1/5] HTTPError: HTTP Error 503: Service Unavailable
+  [retry 1/5] IncompleteRead: IncompleteRead(3525367 bytes read)
+  [retry 2/5] URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+  [retry 3/5] IncompleteRead: IncompleteRead(1486989 bytes read)
+  [retry 4/5] URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+  [retry 5/5] IncompleteRead: IncompleteRead(2878000 bytes read)
+[29] ECHEC: echec apres 5 essais: https://hubeau.eaufrance.fr/api/v1/etat_piscicole/observations?code_departement=29&date_operation_min=2021-01-01&date_operation_max=2021-12-31&size=20000&fields=code_operation,date_operation,code_station,code_departement,code_alternatif_taxon,code_taxon,nom_commun_taxon,nom_latin_taxon,effectif_lot,code_type_lot,taille_individu (IncompleteRead(2878000 bytes read))
+  [retry 1/5] HTTPError: HTTP Error 503: Service Unavailable
+  [retry 2/5] URLError: <urlopen error [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant>

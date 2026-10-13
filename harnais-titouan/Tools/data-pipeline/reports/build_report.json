@@ -1,0 +1,114 @@
+{
+ "profil": "B",
+ "date": "2026-10-13 15:07",
+ "departements": [
+  {
+   "dep": "95",
+   "lots": 7429,
+   "lots_annonces": 7429,
+   "complet": true,
+   "ops_brutes": 51,
+   "ops": 51,
+   "sta": 9,
+   "fiab": "faible",
+   "obs_ignorees": 3,
+   "inconnus": {
+    "PFL": 3,
+    "GTN": 6,
+    "GDL": 3,
+    "BRX": 5,
+    "LOR": 12,
+    "LPX": 1,
+    "PIM": 1,
+    "CYP": 1
+   },
+   "n_especes": 35,
+   "distribution": {
+    "1": 8,
+    "2": 11,
+    "3": 0,
+    "4": 3,
+    "5": 0
+   },
+   "octets": 2513
+  },
+  {
+   "dep": "75",
+   "lots": 214,
+   "lots_annonces": 214,
+   "complet": true,
+   "ops_brutes": 2,
+   "ops": 2,
+   "sta": 1,
+   "fiab": "faible",
+   "obs_ignorees": 1,
+   "inconnus": {
+    "CYP": 1
+   },
+   "n_especes": 13,
+   "distribution": {
+    "1": 8,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   },
+   "octets": 1052
+  },
+  {
+   "dep": "78",
+   "lots": 19517,
+   "lots_annonces": 19517,
+   "complet": true,
+   "ops_brutes": 87,
+   "ops": 87,
+   "sta": 12,
+   "fiab": "ok",
+   "obs_ignorees": 2,
+   "inconnus": {
+    "GTN": 11,
+    "GDL": 9,
+    "BRX": 9,
+    "LPX": 2,
+    "CYP": 4,
+    "ABH": 3,
+    "CAD": 1
+   },
+   "n_especes": 36,
+   "distribution": {
+    "1": 6,
+    "2": 13,
+    "3": 3,
+    "4": 1,
+    "5": 0
+   },
+   "octets": 2550
+  },
+  {
+   "dep": "92",
+   "lots": 1222,
+   "lots_annonces": 1222,
+   "complet": true,
+   "ops_brutes": 7,
+   "ops": 7,
+   "sta": 1,
+   "fiab": "faible",
+   "obs_ignorees": 0,
+   "inconnus": {
+    "GTN": 4,
+    "GDL": 2,
+    "BRX": 2,
+    "CYP": 1
+   },
+   "n_especes": 21,
+   "distribution": {
+    "1": 6,
+    "2": 6,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   },
+   "octets": 1611
+  }
+ ]
+}

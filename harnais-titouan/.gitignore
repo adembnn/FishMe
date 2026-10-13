@@ -1,0 +1,68 @@
+# Bredouille : .gitignore (NON COMPILÉ : rien n'a été compilé sur cette machine)
+
+# --- Xcode / XcodeGen (project.yml est la SEULE source du projet) ---
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+*.xcresult
+*.ipa
+*.dSYM.zip
+*.dSYM
+App/Config/Info.plist
+
+# --- SwiftPM ---
+.build/
+.swiftpm/
+Package.resolved
+*.o
+*.swiftmodule
+
+# --- macOS / Windows / éditeurs ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# --- Données volumineuses / régénérables ---
+Tools/data-pipeline/cache/
+Tools/data-pipeline/.cache/
+Tools/data-pipeline/out/
+*.parquet
+*.sqlite
+*.sqlite3
+
+# --- Images d'entraînement et jeux d'évaluation (partagés hors Git, seul le manifeste est versionné) ---
+Data-images/
+Tools/eval/images/
+*.mlmodel.zip
+*.mlpackage/
+build-ml/
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.pem
+*.key
+*.mobileprovision
+*.cer
+secrets/
+Secrets.xcconfig
+AuthKey_*.p8

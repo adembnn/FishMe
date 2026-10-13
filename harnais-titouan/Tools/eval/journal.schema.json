@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bredouille/eval-journal.schema.json",
+  "title": "Journal d'identification exporte par l'app de test (results.json)",
+  "description": "Un fichier = une passe sur les 40 photos de eval_manifest.csv. Aucun score de confiance : les moteurs ne fournissent pas de probabilite calibree et l'app n'affiche jamais de pourcentage.",
+  "type": "object",
+  "required": ["schema_version", "run_id", "engine", "device", "results"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string", "description": "ex. 2026-10-14T18:30-fm-cold-1"},
+    "exported_at": {"type": "string", "format": "date-time"},
+    "engine": {"enum": ["foundation_models", "coreml", "manual_assisted", "fusion"]},
+    "device": {"type": "string", "description": "ex. iPhone 16 Pro"},
+    "os_version": {"type": "string"},
+    "app_build": {"type": "string"},
+    "condition": {"enum": ["cold", "warm", "airplane", "hot"], "description": "cold = 1er appel modele non charge ; warm = apres prewarm ; hot = apres 20 appels"},
+    "department": {"type": "string", "description": "departement simule pour la liste candidate, ex. 95"},
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["image_id", "proposals", "latency_ms"],
+        "properties": {
+          "image_id": {"type": "string", "description": "= image_id de eval_manifest.csv"},
+          "proposals": {"type": "array", "maxItems": 3, "items": {"type": "string"}, "description": "ids d'especes (slug du catalogue), ordonnes, 3 maximum"},
+          "latency_ms": {"type": ["integer", "null"], "minimum": 0, "description": "duree de l'appel d'identification, hors capture"},
+          "error": {"type": ["string", "null"], "description": "ex. guardrailViolation, contextOverflow, timeout, modelUnavailable ; null si OK"},
+          "out_of_list": {"type": "integer", "minimum": 0, "description": "nb de propositions brutes absentes de la liste candidate (doit etre 0)"},
+          "candidates_count": {"type": "integer", "minimum": 1},
+          "token_count": {"type": ["integer", "null"]},
+          "attempt": {"type": "integer", "minimum": 1}
+        }
+      }
+    }
+  },
+  "examples": [{
+    "schema_version": 1, "run_id": "2026-10-14T18:30-fm-cold-1", "engine": "foundation_models",
+    "device": "iPhone 16 Pro", "os_version": "iOS 27.0", "app_build": "1", "condition": "cold", "department": "95",
+    "results": [
+      {"image_id": "brochet_01", "proposals": ["brochet", "sandre", "perche"], "latency_ms": 3120, "error": null,
+       "out_of_list": 0, "candidates_count": 30, "token_count": 640, "attempt": 1},
+      {"image_id": "gardon_03", "proposals": [], "latency_ms": 900, "error": "guardrailViolation",
+       "out_of_list": 0, "candidates_count": 30, "token_count": 640, "attempt": 1}
+    ]
+  }]
+}

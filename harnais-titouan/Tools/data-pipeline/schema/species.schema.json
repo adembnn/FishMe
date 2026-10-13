@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bredouille/species.schema.json",
+  "title": "Catalogue d'especes Bredouille",
+  "description": "Genere depuis species_source.csv par validate_species.py --build. null = non source (jamais invente).",
+  "type": "object",
+  "required": ["version", "source", "species"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"type": "integer", "minimum": 1},
+    "source": {"type": "string"},
+    "species": {"type": "array", "minItems": 45, "maxItems": 55, "items": {"$ref": "#/$defs/species"}}
+  },
+  "$defs": {
+    "trait": {
+      "type": "object",
+      "required": ["key", "value"],
+      "additionalProperties": false,
+      "properties": {
+        "key": {"type": "string", "minLength": 1},
+        "value": {"type": "string", "minLength": 1}
+      }
+    },
+    "species": {
+      "type": "object",
+      "required": ["id", "codeAspe", "codeSandre", "nomFr", "nomLatin", "famille", "categorie", "milieu",
+                   "origine", "frayeres1988", "statut", "consigne", "traits", "tailleCommuneCm",
+                   "tailleMaxCm", "description", "anecdote", "imageAsset", "sources", "aValider"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z]+(-[a-z]+)*$"},
+        "codeAspe": {"type": "string", "pattern": "^[A-Z]{3}$"},
+        "codeSandre": {"type": "integer", "minimum": 1},
+        "nomFr": {"type": "string", "minLength": 2},
+        "nomLatin": {"type": "string", "pattern": "^[A-Z][a-z]+ [a-z]+$"},
+        "famille": {"type": "string", "pattern": "^[A-Z][a-z]+idae$"},
+        "categorie": {"enum": ["carnassiers", "salmonides", "carpes", "poissons_blancs", "petits_poissons",
+                               "exotiques", "amphihalins", "lamproies"]},
+        "milieu": {"enum": ["courant", "calme", "mixte", "migrateur"]},
+        "origine": {"enum": ["indigene", "introduite"]},
+        "frayeres1988": {"type": "boolean"},
+        "statut": {"enum": [null, "aucun", "protege", "menace", "envahissante"]},
+        "consigne": {"enum": [null, "relacher", "verifier", "ne_pas_deplacer"]},
+        "traits": {"type": "array", "minItems": 5, "maxItems": 6, "items": {"$ref": "#/$defs/trait"}},
+        "tailleCommuneCm": {"type": ["integer", "null"], "minimum": 1, "maximum": 300},
+        "tailleMaxCm": {"type": ["integer", "null"], "minimum": 1, "maximum": 500},
+        "description": {"type": "string", "minLength": 40},
+        "anecdote": {"type": ["string", "null"]},
+        "imageAsset": {"type": ["string", "null"]},
+        "sources": {
+          "type": "object",
+          "required": ["taxonomie", "statut", "biologie"],
+          "additionalProperties": false,
+          "properties": {
+            "taxonomie": {"type": "string", "minLength": 1},
+            "statut": {"type": ["string", "null"]},
+            "biologie": {"type": "string", "minLength": 1}
+          }
+        },
+        "aValider": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "since": 2010,
+ "reussis": [
+  {
+   "dep": "95",
+   "requetes_api": 1,
+   "requetes_cache": 1,
+   "operations": 51,
+   "observations_lots": 7429,
+   "observations_annoncees": 7429,
+   "secondes": 27.2
+  }
+ ],
+ "echecs": [],
+ "requetes_api_total": 1,
+ "secondes_api": 26.5,
+ "date": "2026-10-13 15:04"
+}

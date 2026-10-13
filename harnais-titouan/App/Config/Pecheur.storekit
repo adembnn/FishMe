@@ -1,0 +1,77 @@
+{
+  "identifier" : "A1B2C3D4",
+  "nonRenewingSubscriptions" : [],
+  "products" : [],
+  "settings" : {
+    "_applicationInternalID" : "6740000001",
+    "_askToBuyEnabled" : false,
+    "_billingGracePeriodEnabled" : false,
+    "_failTransactionsEnabled" : false,
+    "_locale" : "fr_FR",
+    "_renewalBillingIssuesEnabled" : false,
+    "_storefront" : "FRA",
+    "_storeKitErrors" : [],
+    "_timeRate" : 0
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21000001",
+      "localizations" : [],
+      "name" : "Pêcheur+",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "24.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6740000011",
+          "introductoryOffer" : {
+            "internalID" : "6740000012",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Cartes illimitées, albums par bassin, finitions et cadres.",
+              "displayName" : "Pêcheur+ annuel",
+              "locale" : "fr"
+            }
+          ],
+          "productID" : "fr.REMPLACER.bredouille.pro.annual",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pêcheur+ annuel",
+          "subscriptionGroupID" : "21000001",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : []
+        },
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "3.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6740000021",
+          "localizations" : [
+            {
+              "description" : "Cartes illimitées, albums par bassin, finitions et cadres.",
+              "displayName" : "Pêcheur+ mensuel",
+              "locale" : "fr"
+            }
+          ],
+          "productID" : "fr.REMPLACER.bredouille.pro.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pêcheur+ mensuel",
+          "subscriptionGroupID" : "21000001",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : []
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

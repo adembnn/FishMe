@@ -1,0 +1,2575 @@
+{
+  "version": 1,
+  "source": "Tools/data-pipeline/species_source.csv",
+  "species": [
+    {
+      "id": "brochet",
+      "codeAspe": "BRO",
+      "codeSandre": 2151,
+      "nomFr": "Brochet",
+      "nomLatin": "Esox lucius",
+      "famille": "Esocidae",
+      "categorie": "carnassiers",
+      "milieu": "mixte",
+      "origine": "indigene",
+      "frayeres1988": true,
+      "statut": null,
+      "consigne": "verifier",
+      "traits": [
+        {
+          "key": "corps",
+          "value": "allongé"
+        },
+        {
+          "key": "bouche",
+          "value": "en bec de canard"
+        },
+        {
+          "key": "couleur",
+          "value": "vert-olive"
+        },
+        {
+          "key": "motif",
+          "value": "barres claires irrégulières"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 60,
+      "tailleMaxCm": null,
+      "description": "Long prédateur à la tête aplatie en bec de canard et à la robe vert olive barrée de motifs clairs. Il chasse à l'affût dans les herbiers et près des obstacles.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F]",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut_app",
+        "taille"
+      ]
+    },
+    {
+      "id": "perche",
+      "codeAspe": "PER",
+      "codeSandre": 2193,
+      "nomFr": "Perche",
+      "nomLatin": "Perca fluviatilis",
+      "famille": "Percidae",
+      "categorie": "carnassiers",
+      "milieu": "mixte",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "haut"
+        },
+        {
+          "key": "couleur",
+          "value": "vert-doré"
+        },
+        {
+          "key": "motif",
+          "value": "bandes verticales sombres"
+        },
+        {
+          "key": "nageoires",
+          "value": "pelviennes et anale rouge-orangé"
+        },
+        {
+          "key": "dorsale",
+          "value": "deux dorsales dont une épineuse"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 25,
+      "tailleMaxCm": null,
+      "description": "Poisson au dos bossu rayé de bandes verticales sombres avec des nageoires orangées. Sa première dorsale épineuse est piquante.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "sandre",
+      "codeAspe": "SAN",
+      "codeSandre": 2195,
+      "nomFr": "Sandre",
+      "nomLatin": "Sander lucioperca",
+      "famille": "Percidae",
+      "categorie": "carnassiers",
+      "milieu": "calme",
+      "origine": "introduite",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": "verifier",
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fuselé"
+        },
+        {
+          "key": "couleur",
+          "value": "gris-vert"
+        },
+        {
+          "key": "motif",
+          "value": "taches sombres diffuses sur le dos"
+        },
+        {
+          "key": "oeil",
+          "value": "grand et clair"
+        },
+        {
+          "key": "bouche",
+          "value": "grande avec fortes dents"
+        },
+        {
+          "key": "dorsale",
+          "value": "deux dorsales"
+        }
+      ],
+      "tailleCommuneCm": 55,
+      "tailleMaxCm": null,
+      "description": "Prédateur fuselé à l'oeil grand et clair et à la gueule garnie de dents. Il fréquente surtout les eaux calmes et un peu troubles.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] verifier",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "taille"
+      ]
+    },
+    {
+      "id": "black-bass",
+      "codeAspe": "BBG",
+      "codeSandre": 2053,
+      "nomFr": "Black-bass à grande bouche",
+      "nomLatin": "Micropterus salmoides",
+      "famille": "Centrarchidae",
+      "categorie": "carnassiers",
+      "milieu": "calme",
+      "origine": "introduite",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": "verifier",
+      "traits": [
+        {
+          "key": "corps",
+          "value": "trapu"
+        },
+        {
+          "key": "bouche",
+          "value": "très grande dépassant l'oeil"
+        },
+        {
+          "key": "couleur",
+          "value": "vert-olive"
+        },
+        {
+          "key": "motif",
+          "value": "bande latérale sombre"
+        },
+        {
+          "key": "dorsale",
+          "value": "deux dorsales soudées"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 30,
+      "tailleMaxCm": null,
+      "description": "Poisson vert olive marqué d'une bande sombre sur le flanc, avec une très grande bouche qui dépasse l'oeil. Il vit dans les eaux calmes et végétalisées.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] verifier",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "taille"
+      ]
+    },
+    {
+      "id": "silure",
+      "codeAspe": "SIL",
+      "codeSandre": 2238,
+      "nomFr": "Silure glane",
+      "nomLatin": "Silurus glanis",
+      "famille": "Siluridae",
+      "categorie": "carnassiers",
+      "milieu": "mixte",
+      "origine": "introduite",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "allongé et sans écailles"
+        },
+        {
+          "key": "barbillons",
+          "value": "oui (six)"
+        },
+        {
+          "key": "couleur",
+          "value": "sombre marbré"
+        },
+        {
+          "key": "bouche",
+          "value": "très large"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        },
+        {
+          "key": "nageoire anale",
+          "value": "très longue"
+        }
+      ],
+      "tailleCommuneCm": 120,
+      "tailleMaxCm": null,
+      "description": "Grand poisson-chat sans écailles reconnaissable à ses barbillons et à sa bouche très large. Sa nageoire anale est très longue.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "taille"
+      ]
+    },
+    {
+      "id": "aspe",
+      "codeAspe": "ASP",
+      "codeSandre": 68136,
+      "nomFr": "Aspe",
+      "nomLatin": "Leuciscus aspius",
+      "famille": "Cyprinidae",
+      "categorie": "carnassiers",
+      "milieu": "courant",
+      "origine": "introduite",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fuselé"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "bouche",
+          "value": "oblique avec mâchoire inférieure proéminente"
+        },
+        {
+          "key": "nageoires",
+          "value": "pelviennes et anale rougeâtres"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 50,
+      "tailleMaxCm": null,
+      "description": "Cyprinidé argenté et prédateur à la bouche oblique. Sa mâchoire inférieure avance légèrement.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "taille"
+      ]
+    },
+    {
+      "id": "lote",
+      "codeAspe": "LOT",
+      "codeSandre": 2156,
+      "nomFr": "Lote de rivière",
+      "nomLatin": "Lota lota",
+      "famille": "Lotidae",
+      "categorie": "carnassiers",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "allongé"
+        },
+        {
+          "key": "barbillons",
+          "value": "oui (un au menton)"
+        },
+        {
+          "key": "couleur",
+          "value": "brun marbré"
+        },
+        {
+          "key": "dorsales",
+          "value": "deux dorsales dont une très longue"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 35,
+      "tailleMaxCm": null,
+      "description": "Poisson allongé au corps marbré de brun, avec un barbillon au menton et une seconde dorsale très longue. C'est le seul gadidé d'eau douce de la liste.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille",
+        "statut"
+      ]
+    },
+    {
+      "id": "anguille",
+      "codeAspe": "ANG",
+      "codeSandre": 2038,
+      "nomFr": "Anguille européenne",
+      "nomLatin": "Anguilla anguilla",
+      "famille": "Anguillidae",
+      "categorie": "amphihalins",
+      "milieu": "mixte",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": "menace",
+      "consigne": "verifier",
+      "traits": [
+        {
+          "key": "corps",
+          "value": "serpentiforme"
+        },
+        {
+          "key": "couleur",
+          "value": "brun-vert sur le dos et jaune dessous"
+        },
+        {
+          "key": "nageoires",
+          "value": "dorsale et anale continues avec la queue"
+        },
+        {
+          "key": "écailles",
+          "value": "minuscules"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 60,
+      "tailleMaxCm": null,
+      "description": "Poisson en forme de serpent dont la dorsale, la queue et l'anale forment une seule nageoire continue. Sa peau est recouverte d'un mucus épais.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] interdit si argentée, reste variable",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "consigne",
+        "taille"
+      ]
+    },
+    {
+      "id": "truite-fario",
+      "codeAspe": "TRF",
+      "codeSandre": 2221,
+      "nomFr": "Truite fario",
+      "nomLatin": "Salmo trutta",
+      "famille": "Salmonidae",
+      "categorie": "salmonides",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": true,
+      "statut": null,
+      "consigne": "verifier",
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fuselé"
+        },
+        {
+          "key": "adipeuse",
+          "value": "oui"
+        },
+        {
+          "key": "couleur",
+          "value": "brun-doré"
+        },
+        {
+          "key": "motif",
+          "value": "points noirs et rouges cerclés de clair"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "bouche",
+          "value": "grande"
+        }
+      ],
+      "tailleCommuneCm": 30,
+      "tailleMaxCm": null,
+      "description": "Poisson fuselé à nageoire adipeuse dont les flancs sont parsemés de points noirs et rouges cerclés de clair. Elle vit dans les eaux fraîches et bien oxygénées.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F]",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille",
+        "regroupement des formes TRM/TRL"
+      ]
+    },
+    {
+      "id": "truite-arc-en-ciel",
+      "codeAspe": "TAC",
+      "codeSandre": 2216,
+      "nomFr": "Truite arc-en-ciel",
+      "nomLatin": "Oncorhynchus mykiss",
+      "famille": "Salmonidae",
+      "categorie": "salmonides",
+      "milieu": "mixte",
+      "origine": "introduite",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fuselé"
+        },
+        {
+          "key": "adipeuse",
+          "value": "oui"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "motif",
+          "value": "bande rose-rouge sur le flanc et points noirs sur le dos et la queue"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "bouche",
+          "value": "grande"
+        }
+      ],
+      "tailleCommuneCm": 35,
+      "tailleMaxCm": null,
+      "description": "Truite argentée portant une large bande rosée le long du flanc et de nombreux petits points noirs, y compris sur la queue. Elle est issue d'empoissonnements.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "taille"
+      ]
+    },
+    {
+      "id": "saumon-atlantique",
+      "codeAspe": "SAT",
+      "codeSandre": 2220,
+      "nomFr": "Saumon atlantique",
+      "nomLatin": "Salmo salar",
+      "famille": "Salmonidae",
+      "categorie": "salmonides",
+      "milieu": "migrateur",
+      "origine": "indigene",
+      "frayeres1988": true,
+      "statut": "protege",
+      "consigne": "relacher",
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fuselé"
+        },
+        {
+          "key": "adipeuse",
+          "value": "oui"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "motif",
+          "value": "petits points noirs en croix"
+        },
+        {
+          "key": "pédoncule caudal",
+          "value": "fin"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 70,
+      "tailleMaxCm": null,
+      "description": "Grand salmonidé argenté migrateur qui porte de petits points noirs en forme de croix et une nageoire adipeuse. Son pédoncule caudal est mince.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] pêche fermée, texte à sourcer",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "texte",
+        "taille"
+      ]
+    },
+    {
+      "id": "ombre",
+      "codeAspe": "OBR",
+      "codeSandre": 2247,
+      "nomFr": "Ombre commun",
+      "nomLatin": "Thymallus thymallus",
+      "famille": "Salmonidae",
+      "categorie": "salmonides",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": true,
+      "statut": null,
+      "consigne": "verifier",
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fuselé"
+        },
+        {
+          "key": "adipeuse",
+          "value": "oui"
+        },
+        {
+          "key": "dorsale",
+          "value": "très grande en voile"
+        },
+        {
+          "key": "couleur",
+          "value": "gris-argenté"
+        },
+        {
+          "key": "bouche",
+          "value": "petite"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 35,
+      "tailleMaxCm": null,
+      "description": "Salmonidé dont la grande nageoire dorsale en forme de voile est son signe le plus net. Il aime les rivières claires et rapides.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F]",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "carpe-commune",
+      "codeAspe": "CCO",
+      "codeSandre": 2110,
+      "nomFr": "Carpe commune",
+      "nomLatin": "Cyprinus carpio",
+      "famille": "Cyprinidae",
+      "categorie": "carpes",
+      "milieu": "calme",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "haut"
+        },
+        {
+          "key": "barbillons",
+          "value": "oui (quatre)"
+        },
+        {
+          "key": "couleur",
+          "value": "brun-doré"
+        },
+        {
+          "key": "écailles",
+          "value": "complètes et régulières"
+        },
+        {
+          "key": "bouche",
+          "value": "protractile"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 60,
+      "tailleMaxCm": null,
+      "description": "Cyprinidé robuste au dos arrondi avec quatre barbillons autour de la bouche et des écailles complètes. Sa bouche peut se projeter vers l'avant.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "taille"
+      ]
+    },
+    {
+      "id": "carpe-miroir",
+      "codeAspe": "CMI",
+      "codeSandre": 2109,
+      "nomFr": "Carpe miroir",
+      "nomLatin": "Cyprinus carpio",
+      "famille": "Cyprinidae",
+      "categorie": "carpes",
+      "milieu": "calme",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "haut"
+        },
+        {
+          "key": "barbillons",
+          "value": "oui (quatre)"
+        },
+        {
+          "key": "couleur",
+          "value": "brun-doré"
+        },
+        {
+          "key": "écailles",
+          "value": "quelques grandes écailles éparses"
+        },
+        {
+          "key": "bouche",
+          "value": "protractile"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 60,
+      "tailleMaxCm": null,
+      "description": "Variété de carpe qui n'a que quelques grandes écailles brillantes réparties sur le corps. Elle a quatre barbillons.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "taille"
+      ]
+    },
+    {
+      "id": "carpe-cuir",
+      "codeAspe": "CCU",
+      "codeSandre": 2111,
+      "nomFr": "Carpe cuir",
+      "nomLatin": "Cyprinus carpio",
+      "famille": "Cyprinidae",
+      "categorie": "carpes",
+      "milieu": "calme",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "haut"
+        },
+        {
+          "key": "barbillons",
+          "value": "oui (quatre)"
+        },
+        {
+          "key": "couleur",
+          "value": "brun-doré"
+        },
+        {
+          "key": "écailles",
+          "value": "presque absentes"
+        },
+        {
+          "key": "peau",
+          "value": "lisse"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 60,
+      "tailleMaxCm": null,
+      "description": "Variété de carpe presque sans écailles dont la peau paraît lisse comme du cuir. Elle a quatre barbillons.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "taille"
+      ]
+    },
+    {
+      "id": "carpe-argentee",
+      "codeAspe": "CAR",
+      "codeSandre": 2115,
+      "nomFr": "Carpe argentée",
+      "nomLatin": "Hypophthalmichthys molitrix",
+      "famille": "Cyprinidae",
+      "categorie": "exotiques",
+      "milieu": "calme",
+      "origine": "introduite",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "haut et comprimé"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "oeil",
+          "value": "très bas sur la tête"
+        },
+        {
+          "key": "bouche",
+          "value": "orientée vers le haut"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 60,
+      "tailleMaxCm": null,
+      "description": "Cyprinidé argenté dont les yeux sont placés très bas sur la tête et la bouche tournée vers le haut. Sa présence est rare dans les relevés.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "taille"
+      ]
+    },
+    {
+      "id": "carassin-commun",
+      "codeAspe": "CAS",
+      "codeSandre": 2102,
+      "nomFr": "Carassin commun",
+      "nomLatin": "Carassius carassius",
+      "famille": "Cyprinidae",
+      "categorie": "carpes",
+      "milieu": "calme",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "haut et trapu"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "couleur",
+          "value": "brun-doré"
+        },
+        {
+          "key": "dorsale",
+          "value": "convexe"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        },
+        {
+          "key": "bouche",
+          "value": "terminale petite"
+        }
+      ],
+      "tailleCommuneCm": 20,
+      "tailleMaxCm": null,
+      "description": "Petit cyprinidé trapu et doré sans barbillons, à la dorsale arrondie. Il est facile à confondre avec le carassin argenté.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "taille",
+        "distinction"
+      ]
+    },
+    {
+      "id": "carassin-argente",
+      "codeAspe": "CAG",
+      "codeSandre": 20550,
+      "nomFr": "Carassin argenté",
+      "nomLatin": "Carassius gibelio",
+      "famille": "Cyprinidae",
+      "categorie": "carpes",
+      "milieu": "calme",
+      "origine": "introduite",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "haut"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté-gris"
+        },
+        {
+          "key": "dorsale",
+          "value": "concave"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        },
+        {
+          "key": "bouche",
+          "value": "terminale"
+        }
+      ],
+      "tailleCommuneCm": 25,
+      "tailleMaxCm": null,
+      "description": "Cyprinidé argenté-gris sans barbillons, à la dorsale légèrement creuse. Il ressemble à une petite carpe sans moustaches.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "carassin-dore",
+      "codeAspe": "CAA",
+      "codeSandre": 20597,
+      "nomFr": "Carassin doré",
+      "nomLatin": "Carassius auratus",
+      "famille": "Cyprinidae",
+      "categorie": "carpes",
+      "milieu": "calme",
+      "origine": "introduite",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "trapu"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "couleur",
+          "value": "orange-doré"
+        },
+        {
+          "key": "dorsale",
+          "value": "longue"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        },
+        {
+          "key": "bouche",
+          "value": "terminale"
+        }
+      ],
+      "tailleCommuneCm": 20,
+      "tailleMaxCm": null,
+      "description": "Poisson rouge d'aquarium rencontré parfois en milieu naturel, avec une couleur orange ou dorée. Il n'a pas de barbillons.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "gardon",
+      "codeAspe": "GAR",
+      "codeSandre": 2133,
+      "nomFr": "Gardon",
+      "nomLatin": "Rutilus rutilus",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "mixte",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "comprimé"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "oeil",
+          "value": "iris rouge-orangé"
+        },
+        {
+          "key": "nageoires",
+          "value": "pelviennes et anale rouges"
+        },
+        {
+          "key": "dorsale",
+          "value": "en face des pelviennes"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 18,
+      "tailleMaxCm": null,
+      "description": "Poisson argenté à l'iris rouge orangé et aux nageoires rougeâtres. Sa dorsale est insérée au-dessus des pelviennes.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "rotengle",
+      "codeAspe": "ROT",
+      "codeSandre": 2135,
+      "nomFr": "Rotengle",
+      "nomLatin": "Scardinius erythrophthalmus",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "calme",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "haut"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté-doré"
+        },
+        {
+          "key": "nageoires",
+          "value": "rouge vif"
+        },
+        {
+          "key": "dorsale",
+          "value": "en retrait des pelviennes"
+        },
+        {
+          "key": "bouche",
+          "value": "oblique"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 20,
+      "tailleMaxCm": null,
+      "description": "Cyprinidé aux nageoires rouge vif et au ventre caréné, qui vit près de la surface dans les eaux calmes. Sa dorsale est reculée par rapport aux pelviennes.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "tanche",
+      "codeAspe": "TAN",
+      "codeSandre": 2137,
+      "nomFr": "Tanche",
+      "nomLatin": "Tinca tinca",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "calme",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "trapu"
+        },
+        {
+          "key": "couleur",
+          "value": "vert-olive sombre"
+        },
+        {
+          "key": "écailles",
+          "value": "très petites"
+        },
+        {
+          "key": "peau",
+          "value": "visqueuse"
+        },
+        {
+          "key": "barbillons",
+          "value": "oui (deux petits)"
+        },
+        {
+          "key": "oeil",
+          "value": "petit rouge-orangé"
+        }
+      ],
+      "tailleCommuneCm": 30,
+      "tailleMaxCm": null,
+      "description": "Cyprinidé trapu, vert olive, aux écailles minuscules et à la peau visqueuse. Il porte deux petits barbillons aux coins de la bouche.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "breme-commune",
+      "codeAspe": "BRE",
+      "codeSandre": 2086,
+      "nomFr": "Brème commune",
+      "nomLatin": "Abramis brama",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "mixte",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "très haut et comprimé"
+        },
+        {
+          "key": "couleur",
+          "value": "gris-bronze"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "bouche",
+          "value": "protractile vers le bas"
+        },
+        {
+          "key": "anale",
+          "value": "longue"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 35,
+      "tailleMaxCm": null,
+      "description": "Cyprinidé très haut et plat latéralement, de teinte bronze à argent. Sa nageoire anale est longue et sa bouche s'avance vers le bas.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "breme-bordeliere",
+      "codeAspe": "BRB",
+      "codeSandre": 2099,
+      "nomFr": "Brème bordelière",
+      "nomLatin": "Blicca bjoerkna",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "mixte",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "haut et comprimé"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "oeil",
+          "value": "grand"
+        },
+        {
+          "key": "nageoires",
+          "value": "pelviennes à base rougeâtre"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 15,
+      "tailleMaxCm": null,
+      "description": "Petite brème argentée à grand oeil, plus petite et plus brillante que la brème commune. Ses nageoires pelviennes sont rougeâtres à la base.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "chevaine",
+      "codeAspe": "CHE",
+      "codeSandre": 31041,
+      "nomFr": "Chevaine",
+      "nomLatin": "Squalius cephalus",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "allongé et cylindrique"
+        },
+        {
+          "key": "tête",
+          "value": "large"
+        },
+        {
+          "key": "bouche",
+          "value": "grande"
+        },
+        {
+          "key": "écailles",
+          "value": "grandes cerclées de sombre"
+        },
+        {
+          "key": "nageoire anale",
+          "value": "convexe"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 35,
+      "tailleMaxCm": null,
+      "description": "Cyprinidé allongé à la grosse tête et aux grandes écailles cerclées de sombre. Il se tient dans les rivières comme dans les eaux plus calmes.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "nom_latin (Hub'Eau: Leuciscus cephalus)",
+        "taille"
+      ]
+    },
+    {
+      "id": "barbeau-fluviatile",
+      "codeAspe": "BAF",
+      "codeSandre": 2096,
+      "nomFr": "Barbeau fluviatile",
+      "nomLatin": "Barbus barbus",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "allongé"
+        },
+        {
+          "key": "barbillons",
+          "value": "oui (quatre)"
+        },
+        {
+          "key": "bouche",
+          "value": "inférieure en forme de boudin"
+        },
+        {
+          "key": "couleur",
+          "value": "brun-vert"
+        },
+        {
+          "key": "dorsale",
+          "value": "rayon épineux dentelé"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 45,
+      "tailleMaxCm": null,
+      "description": "Poisson de fond allongé à la bouche tournée vers le bas et ornée de quatre barbillons. Il vit dans les eaux courantes.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "barbeau-meridional",
+      "codeAspe": "BAM",
+      "codeSandre": 2097,
+      "nomFr": "Barbeau méridional",
+      "nomLatin": "Barbus meridionalis",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": true,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "allongé"
+        },
+        {
+          "key": "barbillons",
+          "value": "oui (quatre)"
+        },
+        {
+          "key": "bouche",
+          "value": "inférieure"
+        },
+        {
+          "key": "couleur",
+          "value": "brun avec petites taches sombres"
+        },
+        {
+          "key": "taille",
+          "value": "petite"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 20,
+      "tailleMaxCm": null,
+      "description": "Petit barbeau des rivières du sud, tacheté de sombre et pourvu de barbillons. Ses reproducteurs bénéficient d'une protection.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] 1988",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "vandoise",
+      "codeAspe": "VAN",
+      "codeSandre": 2122,
+      "nomFr": "Vandoise",
+      "nomLatin": "Leuciscus leuciscus",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": true,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fuselé"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "oeil",
+          "value": "iris jaune"
+        },
+        {
+          "key": "nageoires",
+          "value": "teintées de jaune pâle"
+        },
+        {
+          "key": "anale",
+          "value": "concave"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 20,
+      "tailleMaxCm": null,
+      "description": "Cyprinidé fuselé et argenté des rivières courantes, à l'anale concave. Il est proche du chevaine mais plus fin.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] 1988",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "vandoise-rostree",
+      "codeAspe": "VAR",
+      "codeSandre": 2123,
+      "nomFr": "Vandoise rostrée",
+      "nomLatin": "Leuciscus burdigalensis",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fuselé"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "museau",
+          "value": "pointu"
+        },
+        {
+          "key": "nageoires",
+          "value": "incolores à jaunâtres"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 20,
+      "tailleMaxCm": null,
+      "description": "Vandoise du sud-ouest au museau un peu plus pointu. Elle se rencontre dans les cours d'eau de l'Atlantique.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "hotu",
+      "codeAspe": "HOT",
+      "codeSandre": 2104,
+      "nomFr": "Hotu",
+      "nomLatin": "Chondrostoma nasus",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "allongé"
+        },
+        {
+          "key": "bouche",
+          "value": "inférieure en fente droite"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté-gris"
+        },
+        {
+          "key": "museau",
+          "value": "en saillie"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 30,
+      "tailleMaxCm": null,
+      "description": "Cyprinidé argenté dont la bouche en fente droite est située sous un museau avancé. Il racle les algues sur les fonds.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "toxostome",
+      "codeAspe": "TOX",
+      "codeSandre": 31135,
+      "nomFr": "Toxostome",
+      "nomLatin": "Parachondrostoma toxostoma",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "allongé"
+        },
+        {
+          "key": "bouche",
+          "value": "inférieure arquée"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté-gris"
+        },
+        {
+          "key": "bande",
+          "value": "sombre le long du flanc"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 18,
+      "tailleMaxCm": null,
+      "description": "Petit cyprinidé du sud-est à la bouche arquée sous le museau et à la bande sombre sur le flanc. Il vit dans les eaux courantes.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "ablette",
+      "codeAspe": "ABL",
+      "codeSandre": 2090,
+      "nomFr": "Ablette",
+      "nomLatin": "Alburnus alburnus",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "mixte",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fin et allongé"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté brillant"
+        },
+        {
+          "key": "bouche",
+          "value": "oblique vers le haut"
+        },
+        {
+          "key": "anale",
+          "value": "longue"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 12,
+      "tailleMaxCm": null,
+      "description": "Petit poisson très argenté, mince, qui nage en bancs près de la surface. Sa bouche est tournée vers le haut.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "ide-melanote",
+      "codeAspe": "IDE",
+      "codeSandre": 2121,
+      "nomFr": "Ide mélanote",
+      "nomLatin": "Leuciscus idus",
+      "famille": "Cyprinidae",
+      "categorie": "poissons_blancs",
+      "milieu": "mixte",
+      "origine": "introduite",
+      "frayeres1988": true,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "trapu"
+        },
+        {
+          "key": "couleur",
+          "value": "gris-argenté"
+        },
+        {
+          "key": "nageoires",
+          "value": "pelviennes et anale rougeâtres"
+        },
+        {
+          "key": "bouche",
+          "value": "terminale"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 35,
+      "tailleMaxCm": null,
+      "description": "Cyprinidé trapu argenté aux nageoires teintées de rouge. Il ressemble au chevaine mais il est plus haut.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] 1988",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "goujon",
+      "codeAspe": "GOU",
+      "codeSandre": 2113,
+      "nomFr": "Goujon",
+      "nomLatin": "Gobio gobio",
+      "famille": "Cyprinidae",
+      "categorie": "petits_poissons",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "allongé et cylindrique"
+        },
+        {
+          "key": "barbillons",
+          "value": "oui (deux)"
+        },
+        {
+          "key": "bouche",
+          "value": "inférieure"
+        },
+        {
+          "key": "couleur",
+          "value": "brun avec taches sombres sur le flanc"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 12,
+      "tailleMaxCm": null,
+      "description": "Petit poisson de fond cylindrique qui possède un barbillon à chaque coin de la bouche. Son flanc est parsemé de taches sombres.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "spirlin",
+      "codeAspe": "SPI",
+      "codeSandre": 2088,
+      "nomFr": "Spirlin",
+      "nomLatin": "Alburnoides bipunctatus",
+      "famille": "Cyprinidae",
+      "categorie": "petits_poissons",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fin"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "ligne latérale",
+          "value": "soulignée de deux traits sombres"
+        },
+        {
+          "key": "bouche",
+          "value": "oblique"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 10,
+      "tailleMaxCm": null,
+      "description": "Petit cyprinidé argenté dont la ligne latérale est bordée de pigments sombres. Il vit en eau claire et courante.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "blageon",
+      "codeAspe": "BLN",
+      "codeSandre": 25609,
+      "nomFr": "Blageon",
+      "nomLatin": "Telestes souffia",
+      "famille": "Cyprinidae",
+      "categorie": "petits_poissons",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fusiforme"
+        },
+        {
+          "key": "couleur",
+          "value": "gris-argenté"
+        },
+        {
+          "key": "bande",
+          "value": "sombre le long du flanc"
+        },
+        {
+          "key": "bouche",
+          "value": "terminale"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 12,
+      "tailleMaxCm": null,
+      "description": "Petit cyprinidé à la bande sombre sur le flanc, qui vit en eau courante et fraîche. Il forme des petits groupes.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "gremille",
+      "codeAspe": "GRE",
+      "codeSandre": 2191,
+      "nomFr": "Grémille",
+      "nomLatin": "Gymnocephalus cernua",
+      "famille": "Percidae",
+      "categorie": "petits_poissons",
+      "milieu": "mixte",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "trapu"
+        },
+        {
+          "key": "couleur",
+          "value": "brun-olive tacheté"
+        },
+        {
+          "key": "dorsale",
+          "value": "unique et épineuse"
+        },
+        {
+          "key": "oeil",
+          "value": "grand"
+        },
+        {
+          "key": "bouche",
+          "value": "petite inférieure"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 12,
+      "tailleMaxCm": null,
+      "description": "Petite perche brun olive tachetée, dont la dorsale est d'un seul tenant et épineuse. Elle vit près du fond.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "bouviere",
+      "codeAspe": "BOU",
+      "codeSandre": 2131,
+      "nomFr": "Bouvière",
+      "nomLatin": "Rhodeus amarus",
+      "famille": "Cyprinidae",
+      "categorie": "petits_poissons",
+      "milieu": "calme",
+      "origine": "indigene",
+      "frayeres1988": true,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "haut et petit"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "ligne",
+          "value": "bleu-vert le long du pédoncule caudal"
+        },
+        {
+          "key": "bouche",
+          "value": "petite"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 6,
+      "tailleMaxCm": null,
+      "description": "Minuscule cyprinidé haut portant une ligne bleu vert sur l'arrière du corps. Il pond dans des moules d'eau douce.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] 1988",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "vairon",
+      "codeAspe": "VAI",
+      "codeSandre": 2125,
+      "nomFr": "Vairon",
+      "nomLatin": "Phoxinus phoxinus",
+      "famille": "Cyprinidae",
+      "categorie": "petits_poissons",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fuselé et petit"
+        },
+        {
+          "key": "couleur",
+          "value": "brun-vert"
+        },
+        {
+          "key": "motif",
+          "value": "bandes sombres irrégulières sur le flanc"
+        },
+        {
+          "key": "ventre",
+          "value": "clair (rouge chez les mâles en période de reproduction)"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 8,
+      "tailleMaxCm": null,
+      "description": "Petit poisson fuselé des eaux vives au dos brun vert et au flanc marqué de bandes sombres. Il nage en bancs serrés.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "loche-franche",
+      "codeAspe": "LOF",
+      "codeSandre": 2071,
+      "nomFr": "Loche franche",
+      "nomLatin": "Barbatula barbatula",
+      "famille": "Nemacheilidae",
+      "categorie": "petits_poissons",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "allongé et cylindrique"
+        },
+        {
+          "key": "barbillons",
+          "value": "oui (six)"
+        },
+        {
+          "key": "bouche",
+          "value": "inférieure"
+        },
+        {
+          "key": "couleur",
+          "value": "brun marbré"
+        },
+        {
+          "key": "écailles",
+          "value": "très petites"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 10,
+      "tailleMaxCm": null,
+      "description": "Petit poisson de fond allongé et marbré de brun avec six barbillons autour de la bouche. Elle se cache sous les pierres.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille",
+        "famille"
+      ]
+    },
+    {
+      "id": "chabot",
+      "codeAspe": "CHA",
+      "codeSandre": 2080,
+      "nomFr": "Chabot",
+      "nomLatin": "Cottus gobio",
+      "famille": "Cottidae",
+      "categorie": "petits_poissons",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "aplati sur le dessus"
+        },
+        {
+          "key": "tête",
+          "value": "large"
+        },
+        {
+          "key": "couleur",
+          "value": "brun marbré"
+        },
+        {
+          "key": "écailles",
+          "value": "absentes"
+        },
+        {
+          "key": "nageoires",
+          "value": "pectorales larges"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 10,
+      "tailleMaxCm": null,
+      "description": "Petit poisson de fond à la grosse tête aplatie et au corps sans écailles, marbré de brun. Il se cache sous les pierres des rivières fraîches.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "epinoche",
+      "codeAspe": "EPI",
+      "codeSandre": 2165,
+      "nomFr": "Épinoche",
+      "nomLatin": "Gasterosteus aculeatus",
+      "famille": "Gasterosteidae",
+      "categorie": "petits_poissons",
+      "milieu": "mixte",
+      "origine": "indigene",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "petit et fuselé"
+        },
+        {
+          "key": "épines",
+          "value": "trois épines sur le dos"
+        },
+        {
+          "key": "écailles",
+          "value": "plaques osseuses sur les flancs"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté-vert"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 6,
+      "tailleMaxCm": null,
+      "description": "Minuscule poisson portant trois épines dorsales et des plaques osseuses sur les flancs. Le mâle construit un nid.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "taille"
+      ]
+    },
+    {
+      "id": "perche-soleil",
+      "codeAspe": "PES",
+      "codeSandre": 2050,
+      "nomFr": "Perche soleil",
+      "nomLatin": "Lepomis gibbosus",
+      "famille": "Centrarchidae",
+      "categorie": "exotiques",
+      "milieu": "calme",
+      "origine": "introduite",
+      "frayeres1988": false,
+      "statut": "envahissante",
+      "consigne": "ne_pas_deplacer",
+      "traits": [
+        {
+          "key": "corps",
+          "value": "haut et rond"
+        },
+        {
+          "key": "couleur",
+          "value": "orange-bleu-vert très vive"
+        },
+        {
+          "key": "tache",
+          "value": "rouge sur l'opercule"
+        },
+        {
+          "key": "bouche",
+          "value": "petite"
+        },
+        {
+          "key": "dorsale",
+          "value": "épineuse"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 12,
+      "tailleMaxCm": null,
+      "description": "Petit poisson rond très coloré, orange, vert et bleu, avec une tache rouge sur l'opercule. C'est une espèce introduite.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] R432-5",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "consigne",
+        "taille"
+      ]
+    },
+    {
+      "id": "poisson-chat",
+      "codeAspe": "PCH",
+      "codeSandre": 2177,
+      "nomFr": "Poisson-chat",
+      "nomLatin": "Ameiurus melas",
+      "famille": "Ictaluridae",
+      "categorie": "exotiques",
+      "milieu": "calme",
+      "origine": "introduite",
+      "frayeres1988": false,
+      "statut": "envahissante",
+      "consigne": "ne_pas_deplacer",
+      "traits": [
+        {
+          "key": "corps",
+          "value": "trapu"
+        },
+        {
+          "key": "barbillons",
+          "value": "oui (huit)"
+        },
+        {
+          "key": "couleur",
+          "value": "brun-noir"
+        },
+        {
+          "key": "peau",
+          "value": "sans écailles"
+        },
+        {
+          "key": "épines",
+          "value": "une épine à chaque pectorale"
+        },
+        {
+          "key": "adipeuse",
+          "value": "oui"
+        }
+      ],
+      "tailleCommuneCm": 25,
+      "tailleMaxCm": null,
+      "description": "Petit poisson-chat sans écailles, brun foncé, pourvu de barbillons et d'épines aux nageoires pectorales. Il supporte des eaux pauvres en oxygène.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] R432-5",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "nom_latin (Ictalurus melas)",
+        "taille"
+      ]
+    },
+    {
+      "id": "pseudorasbora",
+      "codeAspe": "PSR",
+      "codeSandre": 2129,
+      "nomFr": "Pseudorasbora",
+      "nomLatin": "Pseudorasbora parva",
+      "famille": "Cyprinidae",
+      "categorie": "exotiques",
+      "milieu": "calme",
+      "origine": "introduite",
+      "frayeres1988": false,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "fin et petit"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté-gris"
+        },
+        {
+          "key": "bande",
+          "value": "sombre le long du flanc"
+        },
+        {
+          "key": "bouche",
+          "value": "supère petite"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        },
+        {
+          "key": "adipeuse",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 8,
+      "tailleMaxCm": null,
+      "description": "Petit cyprinidé d'origine asiatique, gris argenté, à la bouche tournée vers le haut. Il est souvent trouvé en grand nombre.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": null,
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "origine",
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "alose-grande",
+      "codeAspe": "ALA",
+      "codeSandre": 2056,
+      "nomFr": "Grande alose",
+      "nomLatin": "Alosa alosa",
+      "famille": "Clupeidae",
+      "categorie": "amphihalins",
+      "milieu": "migrateur",
+      "origine": "indigene",
+      "frayeres1988": true,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "comprimé"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "écailles",
+          "value": "grandes et caduques"
+        },
+        {
+          "key": "bouche",
+          "value": "grande"
+        },
+        {
+          "key": "ventre",
+          "value": "caréné"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 55,
+      "tailleMaxCm": null,
+      "description": "Grand poisson argenté migrateur dont le ventre est caréné et les écailles se détachent facilement. Il vit en mer et remonte pondre en rivière.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] 1988",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "alose-feinte",
+      "codeAspe": "ALF",
+      "codeSandre": 2057,
+      "nomFr": "Alose feinte",
+      "nomLatin": "Alosa fallax",
+      "famille": "Clupeidae",
+      "categorie": "amphihalins",
+      "milieu": "migrateur",
+      "origine": "indigene",
+      "frayeres1988": true,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "comprimé"
+        },
+        {
+          "key": "couleur",
+          "value": "argenté"
+        },
+        {
+          "key": "écailles",
+          "value": "grandes et caduques"
+        },
+        {
+          "key": "bouche",
+          "value": "grande"
+        },
+        {
+          "key": "ventre",
+          "value": "caréné"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 40,
+      "tailleMaxCm": null,
+      "description": "Poisson argenté migrateur proche de la grande alose mais plus petit. Il se reconnaît à ses écailles qui se détachent facilement.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] 1988",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "taille"
+      ]
+    },
+    {
+      "id": "lamproie-planer",
+      "codeAspe": "LPP",
+      "codeSandre": 2012,
+      "nomFr": "Lamproie de Planer",
+      "nomLatin": "Lampetra planeri",
+      "famille": "Petromyzontidae",
+      "categorie": "lamproies",
+      "milieu": "courant",
+      "origine": "indigene",
+      "frayeres1988": true,
+      "statut": null,
+      "consigne": null,
+      "traits": [
+        {
+          "key": "corps",
+          "value": "serpentiforme"
+        },
+        {
+          "key": "bouche",
+          "value": "disque buccal sans mâchoires"
+        },
+        {
+          "key": "couleur",
+          "value": "brun-gris"
+        },
+        {
+          "key": "nageoires",
+          "value": "sans nageoires paires"
+        },
+        {
+          "key": "yeux",
+          "value": "petits"
+        },
+        {
+          "key": "barbillons",
+          "value": "non"
+        }
+      ],
+      "tailleCommuneCm": 12,
+      "tailleMaxCm": null,
+      "description": "Petit animal en forme d'anguille sans mâchoires, doté d'un disque buccal et de petits yeux. Elle vit enfouie dans le sable des ruisseaux.",
+      "anecdote": null,
+      "imageAsset": null,
+      "sources": {
+        "taxonomie": "hubeau",
+        "statut": "peche/03 §2.2 [F] 1988",
+        "biologie": "redaction-non-verifiee"
+      },
+      "aValider": [
+        "statut",
+        "taille"
+      ]
+    }
+  ]
+}

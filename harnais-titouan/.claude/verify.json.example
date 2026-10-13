@@ -1,0 +1,14 @@
+{
+  "_comment": "Copier en .claude/verify.json une fois Tools/check/check_all.py écrit (lot de Titouan). Sans verify.json, le hook fin-de-tour ne vérifie rien et ne bloque jamais. Python 3 requis, sans dépendance externe, fonctionne sous Windows et Mac, objectif moins de 30 secondes. Si 'python' n'existe pas sur le Mac d'Adem, utiliser 'python3'.",
+  "command": "python Tools/check/check_all.py",
+  "_ce_que_le_script_verifie": [
+    "1. Mots et expressions interdits dans les chaînes affichées (App/, PecheCore/Sources, Resources, docs/store, docs/business) : verdict légal, Pokémon/Pokédex, probabilité de capture, pourcentage d'identification, chiffres de marché de la liste noire. Exclut .claude/, docs internes et peche/.",
+    "2. Aucun emoji dans les chaînes affichées, les JSON et les fiches espèces.",
+    "3. Libellé de rareté : toute occurrence du mot rareté affichée suit le gabarit 'Présent sur X % des stations scientifiques de l'OFB' et la mention permanente est présente.",
+    "4. JSON de données : syntaxe valide, 0 <= fréquence <= 1, stations_présentes <= stations_total, classes cohérentes avec les seuils du fichier de config, chaque espèce a code, nom, statut, aucun NaN, taille totale sous 6 Mo.",
+    "5. Manifeste d'images : licence présente pour chaque image et limitée à CC0 ou CC-BY, attribution renseignée.",
+    "6. Fichiers Swift de Titouan : présence d'un #Preview, aucun import de module réservé à Adem, API Apple non vérifiée marquée avec le symbole d'avertissement.",
+    "7. Fichiers interdits absents : .env, *.p8, *.p12, *.cer, *.mobileprovision, project.pbxproj.",
+    "Le script affiche une ligne par contrôle (OK ou échec avec fichier:ligne) et sort avec un code non nul au moindre échec. Il ne remplace ni la compilation (Mac) ni le jugement des agents de revue."
+  ]
+}

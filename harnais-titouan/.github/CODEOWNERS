@@ -1,0 +1,36 @@
+# Un fichier = un propriétaire (voir CLAUDE.md). Remplacer les identifiants GitHub ci-dessous (REMPLACER).
+# Adem : Mac, iPhone, soumission.   Titouan : PC Windows, jamais de compilation de l'app.
+# Le dernier motif qui correspond l'emporte.
+
+* @TITOUAN-REMPLACER
+
+# --- Adem ---
+/project.yml                       @ADEM-REMPLACER
+/PecheApple/                       @ADEM-REMPLACER
+/ci_scripts/                       @ADEM-REMPLACER
+/.github/workflows/                @ADEM-REMPLACER
+/.github/CODEOWNERS                @ADEM-REMPLACER
+/README.md                         @ADEM-REMPLACER
+/App/BredouilleApp.swift           @ADEM-REMPLACER
+/App/Config/                       @ADEM-REMPLACER
+/App/Features/Shell/               @ADEM-REMPLACER
+/App/Features/Capture/             @ADEM-REMPLACER
+/App/Features/Map/                 @ADEM-REMPLACER
+/App/Features/Paywall/             @ADEM-REMPLACER
+/App/Features/Onboarding/          @ADEM-REMPLACER
+
+# --- Titouan ---
+/PecheCore/                        @TITOUAN-REMPLACER
+/Tools/                            @TITOUAN-REMPLACER
+/docs/                             @TITOUAN-REMPLACER
+/App/Design/                       @TITOUAN-REMPLACER
+/App/Resources/                    @TITOUAN-REMPLACER
+/App/Features/Collection/          @TITOUAN-REMPLACER
+/App/Features/Bestiary/            @TITOUAN-REMPLACER
+/App/Features/Achievements/        @TITOUAN-REMPLACER
+/App/Features/Card/                @TITOUAN-REMPLACER
+/App/Features/Identify/            @TITOUAN-REMPLACER
+/App/Features/Trip/                @TITOUAN-REMPLACER
+/App/Features/Prepare/             @TITOUAN-REMPLACER
+/App/Features/Legal/               @TITOUAN-REMPLACER
+/App/Features/Profile/             @TITOUAN-REMPLACER

@@ -1,0 +1,24 @@
+# Vérifications Python : lint de formulations, JSON, imports du Core. Jamais exécuté sur GitHub (testé en local seulement).
+name: python
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: python-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Vérifications du dépôt (sans swift test, couvert par core.yml)
+        run: python Tools/check/check_all.py --skip-swift
+      - name: Scripts Python compilables
+        run: python -m compileall -q Tools

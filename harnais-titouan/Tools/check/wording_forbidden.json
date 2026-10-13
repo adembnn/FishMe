@@ -1,0 +1,45 @@
+{
+  "_doc": "Formulations interdites dans le code et les textes affichés (règles A1 à A4 de CLAUDE.md). Utilisé par check_all.py. Pour autoriser une ligne précise (ex. un commentaire qui cite le mot interdit), ajouter le marqueur wording-ok sur la même ligne.",
+  "allow_marker": "wording-ok",
+  "scan_extensions": [".swift", ".json", ".geojson", ".storekit", ".plist", ".strings", ".stringsdict", ".yml", ".yaml", ".py", ".sh", ".txt", ".xcstrings", ".html", ".css", ".js", ".csv"],
+  "exclude_dirs": [".git", ".claude", "docs", "plan", "cache", "reports", "node_modules", ".build", "build", "DerivedData", "__pycache__", "check", "xcuserdata"],
+  "exclude_files": ["wording_forbidden.json"],
+  "_exclude_doc": "Les fichiers .md sont exclus d'office (docs de recherche, règles, README). Le dossier check (ce lint) est exclu car il contient les mots interdits par définition.",
+  "rules": [
+    {
+      "id": "A2-pokedex",
+      "pattern": "pok[eé]dex",
+      "message": "Mot interdit (règle 5.2.1 / A2) : ne jamais écrire « Pokédex »."
+    },
+    {
+      "id": "A2-pokemon",
+      "pattern": "pok[eé]mon",
+      "message": "Mot interdit (règle 5.2.1 / A2) : ne jamais écrire « Pokémon »."
+    },
+    {
+      "id": "A3-probabilite-capture",
+      "pattern": "probabilit[eé]s?\\s+de\\s+capture",
+      "message": "Interdit (A3) : la rareté est une présence dans les relevés OFB, pas une probabilité de capture."
+    },
+    {
+      "id": "A1-droit-de-garder",
+      "pattern": "tu\\s+as\\s+le\\s+droit\\s+de\\s+garder",
+      "message": "Interdit (A1) : jamais de verdict légal sur la conservation d'une prise."
+    },
+    {
+      "id": "A4-reconnu-a",
+      "pattern": "reconnu\\s+[àa]\\b",
+      "message": "Interdit (A4) : pas de pourcentage d'identification (« reconnu à 94 % »)."
+    },
+    {
+      "id": "A3-meilleures-chances",
+      "pattern": "meilleures?\\s+chances?",
+      "message": "Interdit (A3) : aucune promesse ni incitation de prise."
+    },
+    {
+      "id": "A3-chiffre-373891",
+      "pattern": "373[\\s\\u00a0\\u202f.,]?891",
+      "message": "Chiffre interdit (373 891) : non vérifié, ne pas l'utiliser."
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-13T13:07:49+00:00",
+  "species": {
+    "brochet": {
+      "taxon": "Esox lucius",
+      "total_monde_cc0_ccby": 1422,
+      "total_france_cc0_ccby": 47,
+      "candidats_examines": 5,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 0
+      },
+      "telechargees": 5
+    },
+    "perche": {
+      "taxon": "Perca fluviatilis",
+      "total_monde_cc0_ccby": 1097,
+      "total_france_cc0_ccby": 61,
+      "candidats_examines": 6,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 1
+      },
+      "telechargees": 5
+    },
+    "sandre": {
+      "taxon": "Sander lucioperca",
+      "total_monde_cc0_ccby": 101,
+      "total_france_cc0_ccby": 9,
+      "candidats_examines": 5,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 0
+      },
+      "telechargees": 5
+    },
+    "carpe-commune": {
+      "taxon": "Cyprinus carpio",
+      "total_monde_cc0_ccby": 3152,
+      "total_france_cc0_ccby": 120,
+      "candidats_examines": 5,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 0
+      },
+      "telechargees": 5
+    },
+    "gardon": {
+      "taxon": "Rutilus rutilus",
+      "total_monde_cc0_ccby": 3170,
+      "total_france_cc0_ccby": 59,
+      "candidats_examines": 5,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 0
+      },
+      "telechargees": 5
+    },
+    "truite-fario": {
+      "taxon": "Salmo trutta",
+      "total_monde_cc0_ccby": 1510,
+      "total_france_cc0_ccby": 56,
+      "candidats_examines": 5,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 0
+      },
+      "telechargees": 5
+    },
+    "black-bass": {
+      "taxon": "Micropterus salmoides",
+      "total_monde_cc0_ccby": 376,
+      "total_france_cc0_ccby": 0,
+      "candidats_examines": 5,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 0
+      },
+      "telechargees": 5
+    },
+    "silure": {
+      "taxon": "Silurus glanis",
+      "total_monde_cc0_ccby": 98,
+      "total_france_cc0_ccby": 21,
+      "candidats_examines": 5,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 0
+      },
+      "telechargees": 5
+    },
+    "chevaine": {
+      "taxon": "Squalius cephalus",
+      "total_monde_cc0_ccby": 874,
+      "total_france_cc0_ccby": 157,
+      "candidats_examines": 5,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 0
+      },
+      "telechargees": 5
+    },
+    "breme-commune": {
+      "taxon": "Abramis brama",
+      "total_monde_cc0_ccby": 309,
+      "total_france_cc0_ccby": 22,
+      "candidats_examines": 5,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 0
+      },
+      "telechargees": 5
+    },
+    "rotengle": {
+      "taxon": "Scardinius erythrophthalmus",
+      "total_monde_cc0_ccby": 557,
+      "total_france_cc0_ccby": 35,
+      "candidats_examines": 5,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 0
+      },
+      "telechargees": 5
+    },
+    "tanche": {
+      "taxon": "Tinca tinca",
+      "total_monde_cc0_ccby": 854,
+      "total_france_cc0_ccby": 223,
+      "candidats_examines": 5,
+      "rejetes": {
+        "licence_photo": 0,
+        "doublon": 0,
+        "image": 0,
+        "trop_petite": 0
+      },
+      "telechargees": 5
+    }
+  },
+  "requetes_api": 24
+}

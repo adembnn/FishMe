@@ -1,0 +1,12 @@
+* text=auto
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.swift text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.storekit text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mlmodel binary

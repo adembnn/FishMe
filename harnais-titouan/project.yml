@@ -1,0 +1,88 @@
+# Bredouille : projet XcodeGen. SEULE source du projet Xcode (*.xcodeproj est ignoré par Git).
+# NON COMPILÉ / NON TESTÉ : écrit sous Windows sans xcodegen ni Xcode. Générer avec : xcodegen generate
+# Propriétaire : Adem. Valeurs à remplacer marquées REMPLACER.
+name: Bredouille
+options:
+  bundleIdPrefix: fr.REMPLACER
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+
+configs:
+  Debug: debug
+  Release: release
+  # Variantes optionnelles pour le SDK iOS 27 (Foundation Models avec image) : condition IOS27_SDK.
+  Debug27: debug
+  Release27: release
+
+settings:
+  base:
+    # Mode Swift tolérant (⚠ à resserrer plus tard) : Swift 5, concurrence minimale.
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    IPHONEOS_DEPLOYMENT_TARGET: "26.0"
+    TARGETED_DEVICE_FAMILY: "1"          # iPhone seulement
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: REMPLACER          # identifiant d'équipe Apple (ne jamais commiter de profil)
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+  configs:
+    Debug27:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) DEBUG IOS27_SDK"
+    Release27:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) IOS27_SDK"
+    Debug:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) DEBUG"
+
+packages:
+  PecheCore:
+    path: PecheCore
+  PecheApple:
+    path: PecheApple
+
+targets:
+  Bredouille:
+    type: application
+    platform: iOS
+    sources:
+      - path: App
+        excludes:
+          - "Config/Info.plist"
+          - "Config/Pecheur.storekit"
+    dependencies:
+      - package: PecheCore
+      - package: PecheApple
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: fr.REMPLACER.bredouille
+        PRODUCT_NAME: Bredouille
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        GENERATE_INFOPLIST_FILE: NO
+    info:
+      path: App/Config/Info.plist     # généré par XcodeGen (ignoré par Git)
+      properties:
+        CFBundleDisplayName: Bredouille
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        ITSAppUsesNonExemptEncryption: false
+        NSCameraUsageDescription: "Pour photographier ta prise. Rien n'est envoyé hors de ton iPhone."
+        NSLocationWhenInUseUsageDescription: "Pour trouver ton département. Facultatif, tu peux le choisir à la main."
+        NSPhotoLibraryAddUsageDescription: "Pour enregistrer ta carte dans tes photos."
+
+schemes:
+  Bredouille:
+    build:
+      targets:
+        Bredouille: all
+    run:
+      config: Debug
+      # Fichier StoreKit pour tester l'abonnement dans le simulateur (⚠ clé storeKitConfiguration à vérifier avec xcodegen).
+      storeKitConfiguration: App/Config/Pecheur.storekit
+    profile:
+      config: Release
+    archive:
+      config: Release
