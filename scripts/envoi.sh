@@ -15,7 +15,7 @@
 #   2. calcul du numéro de build (voir plus bas) ;
 #   3. xcodebuild archive : fabrique l'archive de l'app, signée automatiquement ;
 #   4. xcodebuild -exportArchive avec destination=upload : envoie l'archive à App Store Connect.
-# Il utilise le compte Apple connecté dans Xcode (Réglages > Comptes). Une clé d'API App Store
+# Il utilise le compte Apple connecté dans Xcode (Xcode > Settings > Apple Accounts). Une clé d'API App Store
 # Connect n'est utilisée que si ASC_KEY_ID, ASC_ISSUER_ID et ASC_KEY_PATH sont tous les trois remplis
 # (dans l'environnement ou dans .env, voir docs/atelier-mac.md).
 #
@@ -104,7 +104,7 @@ if [ "$NB_CLES" = "3" ]; then
 elif [ "$NB_CLES" != "0" ]; then
   echec "Clé d'API incomplète : ASC_KEY_ID, ASC_ISSUER_ID et ASC_KEY_PATH doivent être remplis tous les trois, ou aucun."
 else
-  bien "connexion à Apple par le compte connecté dans Xcode (Réglages > Comptes)"
+  bien "connexion à Apple par le compte connecté dans Xcode (Xcode > Settings > Apple Accounts)"
 fi
 
 if [ "$A_BLANC" = "1" ]; then
@@ -164,7 +164,7 @@ montrer_fin() {  # montrer_fin FICHIER : les dernières lignes utiles d'un journ
 conseils() {  # conseils FICHIER : explique les erreurs de compte et de signature les plus courantes
   local j="$1"
   if grep -q -i -E "Unable to log in|session has expired|authentication failed|No Accounts|No account for team" "$j"; then
-    echo "→ Xcode n'est plus connecté à Apple. Ouvre Xcode > Réglages > Comptes, reconnecte le compte de l'équipe MWM, puis relance." >&2
+    echo "→ Xcode n'est plus connecté à Apple. Ouvre Xcode > Settings > Apple Accounts, reconnecte le compte de l'équipe MWM, puis relance." >&2
   fi
   if grep -q -i -E "No signing certificate|no certificate|Cloud signing permission|doesn't include the .* capability|requires a provisioning profile|No profiles for" "$j"; then
     echo "→ Le compte n'a pas pu créer le certificat ou le profil de signature. Demande à un admin MWM de t'ajouter à l'équipe avec le rôle Admin ou App Manager, ou de créer une clé d'API (voir docs/atelier-mac.md)." >&2
