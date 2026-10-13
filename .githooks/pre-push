@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Crochet de git, avant un envoi : main ne reçoit que ce que scripts/fusionner.sh y envoie.
+# fusionner.sh pose ATELIER_FUSION=1 ; tout autre envoi vers main est refusé.
+# Cas d'urgence seulement : git push --no-verify.
+
+while read -r _ref_locale _sha_locale ref_distante _sha_distante; do
+  case "$ref_distante" in
+    refs/heads/main|refs/heads/master)
+      if [ "${ATELIER_FUSION:-}" != "1" ]; then
+        echo "Envoi vers main refusé : main ne reçoit que ce que scripts/fusionner.sh y envoie." >&2
+        echo "À faire : travaille sur la branche de ton lot (scripts/lot.sh <code>), puis lance scripts/fusionner.sh." >&2
+        exit 1
+      fi
+      ;;
+  esac
+done
+exit 0

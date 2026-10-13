@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Crochet de git, avant un commit de fusion : mêmes règles que pre-commit (surtout : pas de fusion directe dans main).
+# La variable dit à pre-commit que l'index contient le travail des autres lots : leurs dossiers ne sont pas contrôlés ici,
+# scripts/fusionner.sh le fait sur le diff avec origin/main.
+ATELIER_COMMIT_DE_FUSION=1 exec "$(dirname "$0")/pre-commit"

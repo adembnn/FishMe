@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Crochet de git, avant chaque commit. Il protège la personne qui code sans Claude, avec les mêmes règles :
+#   - pas de commit direct sur main ;
+#   - seuls les fichiers du lot de la branche (et les dossiers communs) passent, selon docs/lots.md ;
+#   - jamais de fichier .env ni de données fabriquées par script ;
+#   - jamais « Poké… » dans le code de l'app ni dans la fiche App Store (marque de Nintendo ; dossiers listés dans lots.py).
+# Branché par scripts/lot.sh (git config core.hooksPath .githooks).
+# Cas d'urgence seulement : git commit --no-verify.
+
+racine=$(git rev-parse --show-toplevel) || exit 0
+outil="$racine/outils/atelier/lots.py"
+if [ ! -f "$outil" ]; then
+  echo "· crochet pre-commit inactif : outils/atelier/lots.py est absent." >&2
+  exit 0
+fi
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "Commit refusé : python3 est introuvable, le crochet ne peut pas contrôler les fichiers." >&2
+  exit 1
+fi
+cd "$racine" && exec python3 "$outil" precommit
