@@ -1,0 +1,404 @@
+{
+ "version": "2026-10-15.1",
+ "departement": "93",
+ "niveau": "partiel",
+ "textes": [
+  {
+   "id": "t1",
+   "titre": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Classement des eaux",
+   "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+  },
+  {
+   "id": "t2",
+   "titre": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Tailles minimales",
+   "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+  },
+  {
+   "id": "t3",
+   "titre": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Réserves de pêche",
+   "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+  },
+  {
+   "id": "t4",
+   "titre": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Consommation",
+   "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "arrêté n° 2010-555 (date de signature inconnue), non lu ; page de la fédération non datée"
+  },
+  {
+   "id": "t5",
+   "titre": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Espèces protégées",
+   "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+  },
+  {
+   "id": "t6",
+   "titre": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Anguille",
+   "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+  },
+  {
+   "id": "t7",
+   "titre": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Ouvertures spécifiques",
+   "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+  },
+  {
+   "id": "t8",
+   "titre": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Brochet",
+   "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+  }
+ ],
+ "eaux": [
+  {
+   "cle": "darse du millenaire",
+   "nom": "Darse du Millénaire",
+   "code": null
+  },
+  {
+   "cle": "ecluse de neuilly sur marne",
+   "nom": "Écluse de Neuilly-sur-Marne",
+   "code": null
+  },
+  {
+   "cle": "l ourcq",
+   "nom": "Canal de l'Ourcq",
+   "code": null
+  },
+  {
+   "cle": "marne",
+   "nom": "Marne",
+   "code": null
+  },
+  {
+   "cle": "port d epinay",
+   "nom": "Port d'Épinay",
+   "code": null
+  },
+  {
+   "cle": "port de gournay sur marne",
+   "nom": "Port de Gournay-sur-Marne",
+   "code": null
+  },
+  {
+   "cle": "port de plaisance de neuilly sur marne",
+   "nom": "Port de plaisance de Neuilly-sur-Marne",
+   "code": null
+  },
+  {
+   "cle": "port de saint ouen",
+   "nom": "Port de Saint-Ouen",
+   "code": null
+  },
+  {
+   "cle": "saint denis",
+   "nom": "Canal Saint-Denis",
+   "code": null
+  },
+  {
+   "cle": "seine",
+   "nom": "Seine",
+   "code": null
+  },
+  {
+   "cle": "semoulerie",
+   "nom": "Semoulerie",
+   "code": null
+  }
+ ],
+ "regles": [],
+ "a_verifier": [
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t1"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t2"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t2"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t2"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "ecluse de neuilly sur marne",
+   "textes": [
+    "t3"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "darse du millenaire",
+   "textes": [
+    "t3"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "port de saint ouen",
+   "textes": [
+    "t3"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "semoulerie",
+   "textes": [
+    "t3"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "port d epinay",
+   "textes": [
+    "t3"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "port de plaisance de neuilly sur marne",
+   "textes": [
+    "t3"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "port de gournay sur marne",
+   "textes": [
+    "t3"
+   ]
+  },
+  {
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "seine",
+   "textes": [
+    "t4"
+   ]
+  },
+  {
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "marne",
+   "textes": [
+    "t4"
+   ]
+  },
+  {
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "l ourcq",
+   "textes": [
+    "t4"
+   ]
+  },
+  {
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "saint denis",
+   "textes": [
+    "t4"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t6"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t6"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t6"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t7"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t6"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t8"
+   ]
+  }
+ ]
+}
