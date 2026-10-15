@@ -33,7 +33,13 @@ struct AchatsStoreKitTests {
         let apres = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
         #expect(apres.donneAcces)
         try session.expireSubscription(productIdentifier: IdentifiantsProduits.annuelFondateur)
-        #expect(!(await achats.etat().donneAcces))
+        // StoreKit propage l'expiration de façon asynchrone : on sonde jusqu'à 10 s au lieu de lire une seule fois.
+        var acces = await achats.etat().donneAcces
+        for _ in 0..<40 where acces {
+            try await Task.sleep(for: .milliseconds(250))
+            acces = await achats.etat().donneAcces
+        }
+        #expect(!acces)
     }
 
     @Test func delaiDeGraceGardeLAcces() async throws {

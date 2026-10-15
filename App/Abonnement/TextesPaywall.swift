@@ -74,7 +74,7 @@ nonisolated enum TextesPaywall {
     static func proEnTete(_ declencheur: DeclencheurPaywall) -> [Ligne] {
         let rang: Int
         switch declencheur {
-        case .finPremiereSession: return pro
+        case .finPremiereSession, .widget: return pro
         case .autreSpot: rang = 0
         case .fonction(let fonction):
             switch fonction {
@@ -110,7 +110,7 @@ nonisolated extension DeclencheurPaywall {
         switch self {
         case .finPremiereSession: return "Continuer gratuitement sur mon spot"
         case .autreSpot: return "Retour à la carte"
-        case .fonction: return "Pas maintenant"
+        case .fonction, .widget: return "Pas maintenant"
         }
     }
 }
