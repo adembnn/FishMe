@@ -13,7 +13,7 @@ Ce qui est contrôlé :
   - chaque script `scripts/*.sh` cité est dans la liste du contrat ;
   - les relecteurs et le testeur n'ont pas Write ni Edit (lecture seule) ;
   - chaque nom d'agent cité existe ;
-  - les cinq agents et les cinq commandes attendus sont là ;
+  - les agents et les commandes attendus sont là (dont le banc d'essai) ;
   - aucune ligne ne contient « Poké » sans le mot « marque », ni de tiret cadratin.
 
 Usage : python3 outils/atelier/verifier_claude.py [--racine DOSSIER]
@@ -28,8 +28,9 @@ RACINE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 # Scripts que les agents et les commandes ont le droit de citer (contrat de l'atelier).
 SCRIPTS_DU_CONTRAT = {"verif.sh", "fusionner.sh", "lot.sh", "envoi.sh"}
 
-AGENTS_ATTENDUS = {"relecteur-apple", "relecteur-code", "relecteur-regles", "testeur-ecran", "revue-finale"}
-COMMANDES_ATTENDUES = {"lot", "fusion", "ecran", "envoi", "point"}
+AGENTS_ATTENDUS = {"relecteur-apple", "relecteur-code", "relecteur-regles", "testeur-ecran", "revue-finale",
+                   "banc-utilisateur", "banc-avocat"}
+COMMANDES_ATTENDUES = {"lot", "fusion", "ecran", "envoi", "point", "banc"}
 
 MODELES = {"sonnet", "opus", "haiku"}
 
@@ -51,7 +52,7 @@ OUTILS_INTERDITS_EN_LECTURE = {"Write", "Edit", "MultiEdit", "NotebookEdit"}
 TIRET_CADRATIN = "—"
 NOM_VALIDE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 SCRIPT_CITE = re.compile(r"scripts/([A-Za-z0-9_.\-]+\.sh)")
-AGENT_CITE = re.compile(r"\b(relecteur-[a-z]+|testeur-ecran|revue-finale)\b")
+AGENT_CITE = re.compile(r"\b(relecteur-[a-z]+|testeur-ecran|revue-finale|banc-[a-z]+)\b")
 MARQUE_NINTENDO = re.compile(r"\bpok[eé]", re.IGNORECASE)
 
 
@@ -158,7 +159,7 @@ def verifier_agent(chemin, noms_agents):
         problemes.append("tools manquant ou vide (liste des outils permis)")
     for doublon in sorted({o for o in outils if outils.count(o) > 1}):
         problemes.append(f"tools : {doublon} écrit deux fois")
-    if nom_fichier.startswith(("relecteur-", "testeur-", "revue-")):
+    if nom_fichier.startswith(("relecteur-", "testeur-", "revue-", "banc-")):
         for interdit in sorted(set(outils) & OUTILS_INTERDITS_EN_LECTURE):
             problemes.append(f"tools : {interdit} interdit (cet agent est en lecture seule)")
     modele = sans_guillemets(champs.get("model", ""))

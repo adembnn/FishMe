@@ -13,7 +13,7 @@ LIVRABLES = ["README.md", "parcours-demo.md", "lots.md", "architecture.md",
 TITRES_FICHE = ["## But", "## Avant de commencer", "## Dossiers", "## Contrat",
                 "## Consigne à coller dans Claude Code", "## Test « fini »",
                 "## Pièges", "## Si ça coince"]
-QUI = {"A", "B", "C"}
+QUI = {"A", "B", "S"}  # plus de « C » depuis le 15 oct. 14h26 (Adem)
 trous = []
 
 
@@ -62,7 +62,7 @@ for lot in lots:
         if not lot.get(col):
             trous.append(f"{code} : colonne « {col} » vide")
     if lot.get("Qui") not in QUI:
-        trous.append(f"{code} : « Qui » doit valoir A, B ou C, pas « {lot.get('Qui')} »")
+        trous.append(f"{code} : « Qui » doit valoir A, B ou S, pas « {lot.get('Qui')} »")
     etapes = lot.get("Étapes", "")
     etapes_couvertes |= set(re.findall(r"E\d", etapes))
     if "toutes" in etapes:

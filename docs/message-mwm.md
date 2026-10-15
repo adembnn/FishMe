@@ -13,3 +13,8 @@ Pour que notre jeudi commence par le code et pas par les réglages, pourriez-vou
 
 Merci beaucoup,
 Adem
+
+## Complément à envoyer le 15 oct. après-midi (WeatherKit)
+Le kit est arrivé avec l'identifiant `ai.mwm.build.challenge.team.01` ; le point 2 se précise ainsi (ligne 21 de `app-store.md`) :
+
+Pourriez-vous activer le service WeatherKit sur l'identifiant `ai.mwm.build.challenge.team.01` (Certificates, Identifiers & Profiles, onglets App Services et Capabilities), ou donner à Adem l'accès pour le faire ? Et nous dire par écrit si le quota de WeatherKit (500 000 appels par mois inclus par compte développeur) est partagé avec les autres apps de MWM ?
