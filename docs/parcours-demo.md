@@ -1,7 +1,7 @@
 # Parcours de démo (le critère commun de tous les lots)
 
 Statut : version du 15 oct., refaite pour la vision d'Adem du 15 oct. (3 volets façon Clash Royale, `vision.md`), le kit MWM et l'atelier de Titouan. Remplace la version du 12 oct. (git la garde).
-Nom de l'app : à trouver (ni « Frétille » ni « Bredouille »). « Pescedex » est le nom de la collection dans l'app, jamais celui de l'app. « Poké » (marque de Nintendo) n'apparaît nulle part dans l'app ni sur l'App Store.
+Nom de l'app : FishMe (Adem, 15 oct. 12h36). « Pescedex » est le nom de la collection dans l'app, jamais celui de l'app. « Poké » (marque de Nintendo) n'apparaît nulle part dans l'app ni sur l'App Store.
 Ce qui est marqué « par défaut » attend une réponse d'Adem (`README.md`) ; le changer ne touche que la ligne concernée.
 
 Chaque lot sert une ou plusieurs étapes ci-dessous. Une étape est finie quand son test passe sur l'iPhone de test, pas dans le simulateur. Le banc d'essai (`/banc`, profils de `banc/personas.md`) joue ses missions sur ces étapes ; il signale, il ne valide jamais.

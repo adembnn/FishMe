@@ -6,7 +6,7 @@ Les documents que le plan cite sans chemin (`lots.md`, `fiches/L3.md`, `reports/
 
 ## Le produit
 - App iPhone de pêche en eau douce : la carte montre où pêcher et quels poissons y vivent (relevés OFB), chaque prise photographiée devient une carte à collectionner dont la rareté dépend du département.
-- Nom de l'app : pas encore choisi. « Pescedex » est le nom de la collection dans l'app, jamais celui de l'app.
+- Nom de l'app : FishMe (Adem, 15 oct. 12h36). « Pescedex » est le nom de la collection dans l'app, jamais celui de l'app.
 - Ne jamais écrire « Poké », « Pokémon » ou « Pokédex » dans l'app, ses textes ou sa fiche App Store (marques de Nintendo).
 - Règles : socle national partout, plus 75, 92, 93, 94, 77 saisis à la main, chaque règle avec sa source. Hors de ces départements, jamais « tu peux la garder ».
 - L'app vise toute la France (Adem, 15 oct. 11h13) : les règles doivent couvrir tous les départements et toutes les espèces, au tronçon. Méthode testée sur 3 départements pilotes (01, 87, 44) ; outils et consigne dans `outils/regles/`. La lecture des arrêtés tourne sur un ordinateur d'Adem, pas dans le cloud (Adem, 15 oct. 12h01 : « tu fais tout en local »).

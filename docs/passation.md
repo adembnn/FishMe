@@ -36,7 +36,7 @@ Ce qui bloque dans le cloud : sites de l'État et des fédérations refusés (40
 4. Taille et poids : défaut a (curseur, poids estimé par la formule longueur-poids ; à 2 cm ou moins de la taille légale, mesurer au mètre), réalité augmentée dans la mise à jour.
 5. Forme du spot : tranché le 15 oct. 12h26, cercle de 1 km vendredi, tronçon ou lac entier dans la mise à jour (`reports/spot.md`).
 6. Pack de lots reconnaissance R0 à R4 (examen, photos, entraînement, IA d'Apple au même examen, taille et poids) : plan en 4 lignes envoyé, ok d'Adem attendu ; il faut aussi savoir qui a un iPhone 15 Pro ou plus et qui rassemble les photos de vraies prises.
-7. Toujours ouverts : nom de l'app, prix mensuel retenu, prix en euros (colonne France d'App Store Connect), compteur du Pescedex par zone (fil Maquettes).
+7. Toujours ouverts : prix mensuel retenu, prix en euros (colonne France d'App Store Connect), compteur du Pescedex par zone (fil Maquettes).
 Règle d'Adem : jamais plus de 3 questions à la fois. Poser 3, 5 et 6 en premier.
 
 ## Ce qui tourne encore
