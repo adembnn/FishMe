@@ -1,0 +1,2724 @@
+{
+ "version": 2,
+ "departement": "91",
+ "genere_le": "2026-10-15",
+ "textes": [
+  {
+   "titre": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne",
+   "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+   "signe_le": "2024-04-26",
+   "lu": "entier"
+  },
+  {
+   "titre": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne",
+   "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+   "signe_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "Arrêté préfectoral n° 2024-DDT-SE-98 du 11 mars 2024 fixant le classement des cours d'eau du département de l'Essonne en deux catégories piscicoles",
+   "url": null,
+   "signe_le": "2024-03-11",
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Arrêté préfectoral n° 2016-DDT-SE-1002 du 2 décembre 2016 portant interdiction de la pêche professionnelle, du transport du poisson vivant ou mort et de la consommation de tous poissons pêchés dans la rivière Orge",
+   "url": null,
+   "signe_le": "2016-12-02",
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Arrêté préfectoral n° 2010-DDT-SE-567 du 7 juillet 2010 (interdictions de consommation, article 3), cité par le guide de la fédération",
+   "url": null,
+   "signe_le": "2010-07-07",
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Arrêté préfectoral n° 2012-DDT-SE-5 du 3 janvier 2012 (pêche de la carpe de nuit), cité par le guide de la fédération",
+   "url": null,
+   "signe_le": "2012-01-03",
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012)",
+   "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+   "signe_le": null,
+   "lu": "partie"
+  }
+ ],
+ "regles": [
+  {
+   "id": "91-omble-fontaine-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre"
+   },
+   "phrase": "Omble ou saumon de fontaine : pêche ouverte du 14 mars au 20 septembre 2026, y compris en 2e catégorie.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend les articles 2 et 3 de l'arrêté permanent 2024-DDT-SE-169"
+   },
+   "citation": "Truite fario, Omble ou Saumon de fontaine, Omble chevalier, Cristivomer du 14 mars au 20 septembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-omble-chevalier-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre"
+   },
+   "phrase": "Omble chevalier : pêche ouverte du 14 mars au 20 septembre 2026, y compris en 2e catégorie.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend les articles 2 et 3 de l'arrêté permanent 2024-DDT-SE-169"
+   },
+   "citation": "Truite fario, Omble ou Saumon de fontaine, Omble chevalier, Cristivomer du 14 mars au 20 septembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-cristivomer-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre"
+   },
+   "phrase": "Cristivomer : pêche ouverte du 14 mars au 20 septembre 2026, y compris en 2e catégorie.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend les articles 2 et 3 de l'arrêté permanent 2024-DDT-SE-169"
+   },
+   "citation": "Truite fario, Omble ou Saumon de fontaine, Omble chevalier, Cristivomer du 14 mars au 20 septembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-black-bass-janv-avr-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-04-26",
+   "valeur": {
+    "formule": "du 1er janvier au dernier dimanche d'avril et du 1er samedi de juillet au 31 décembre"
+   },
+   "phrase": "Black-bass en 2e catégorie : pêche ouverte du 1er janvier au 26 avril 2026 (no-kill).",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 3 de l'arrêté permanent 2024-DDT-SE-169"
+   },
+   "citation": "Black-bass du 14 mars au 20 septembre. du 1 er janvier au 26 avril et du 4 juillet au 31 décembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": "nat-2e-ouv-generale"
+  },
+  {
+   "id": "91-black-bass-juil-dec-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": "2026-07-04",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au dernier dimanche d'avril et du 1er samedi de juillet au 31 décembre"
+   },
+   "phrase": "Black-bass en 2e catégorie : pêche ouverte du 4 juillet au 31 décembre 2026 (no-kill) ; fermée du 27 avril au 3 juillet.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 3 de l'arrêté permanent 2024-DDT-SE-169"
+   },
+   "citation": "Black-bass du 14 mars au 20 septembre. du 1 er janvier au 26 avril et du 4 juillet au 31 décembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": "nat-2e-ouv-generale"
+  },
+  {
+   "id": "91-anguille-jaune-1re-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-07-15",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 15 juillet"
+   },
+   "phrase": "Anguille jaune en 1re catégorie : pêche ouverte du 14 mars au 15 juillet 2026, avec carnet de capture.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques », ligne Anguille jaune",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; colonne 1re catégorie ; reprend l'article 2 de l'arrêté permanent"
+   },
+   "citation": "du 14 mars au 15 juillet du 15 février au 15 juillet",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-anguille-jaune-2e-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": "2026-02-15",
+   "au": "2026-07-15",
+   "valeur": {
+    "formule": "du 15 février au 15 juillet"
+   },
+   "phrase": "Anguille jaune en 2e catégorie : pêche ouverte du 15 février au 15 juillet 2026, avec carnet de capture.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques », ligne Anguille jaune",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; colonne 2e catégorie ; reprend l'article 3 de l'arrêté permanent"
+   },
+   "citation": "du 14 mars au 15 juillet du 15 février au 15 juillet",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-grenouille-verte-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": "2026-07-04",
+   "au": "2026-09-27",
+   "valeur": {
+    "formule": "du 1er samedi de juillet au dernier dimanche de septembre"
+   },
+   "phrase": "Grenouille verte : pêche ouverte du 4 juillet au 27 septembre 2026 ; les autres grenouilles sont interdites.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques », ligne Grenouilles",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend les articles 2 et 3 de l'arrêté permanent"
+   },
+   "citation": "Grenouille verte ou dite commune et grenouille rousse du 4 juillet au 27 septembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-grenouille-rousse-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": "2026-07-04",
+   "au": "2026-09-27",
+   "valeur": {
+    "formule": "du 1er samedi de juillet au dernier dimanche de septembre"
+   },
+   "phrase": "Grenouille rousse : pêche ouverte du 4 juillet au 27 septembre 2026 ; les autres grenouilles sont interdites.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques », ligne Grenouilles",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend les articles 2 et 3 de l'arrêté permanent"
+   },
+   "citation": "Grenouille verte ou dite commune et grenouille rousse du 4 juillet au 27 septembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-2151-remise_eau",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Brochet en 1re catégorie : remise à l'eau immédiate du 14 mars au 24 avril 2026."
+   },
+   "phrase": "Brochet en 1re catégorie : pêche ouverte dès le 14 mars, mais il faut le remettre à l'eau tout de suite jusqu'au 24 avril 2026.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques », ligne Brochet",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 2 de l'arrêté permanent"
+   },
+   "citation": "du 14 mars au 20 septembre, avec remise à l'eau immédiate du 14 mars au 24 avril",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-saumon-atlantique-interdit",
+   "type": "interdit",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Saumon atlantique : pêche interdite toute l'année, de jour comme de nuit."
+   },
+   "phrase": "Saumon atlantique : pêche interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 4",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "La pêche du saumon atlantique et de la truite de mer, de la civelle et de l'anguille d'avalaison […] dite anguille argentée, […] est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-truite-de-mer-interdit",
+   "type": "interdit",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Truite de mer : pêche interdite toute l'année, de jour comme de nuit."
+   },
+   "phrase": "Truite de mer : pêche interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 4",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "La pêche du saumon atlantique et de la truite de mer, de la civelle et de l'anguille d'avalaison […] dite anguille argentée, […] est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-anguille-civelle-interdit",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Civelle : pêche interdite toute l'année, de jour comme de nuit."
+   },
+   "phrase": "Civelle : pêche interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 4",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "La pêche du saumon atlantique et de la truite de mer, de la civelle et de l'anguille d'avalaison […] dite anguille argentée, […] est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-anguille-argentee-interdit",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Anguille argentée (anguille d'avalaison) : pêche interdite toute l'année, de jour comme de nuit."
+   },
+   "phrase": "Anguille argentée (anguille d'avalaison) : pêche interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 4",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "La pêche du saumon atlantique et de la truite de mer, de la civelle et de l'anguille d'avalaison […] dite anguille argentée, […] est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-lamproie-fluviatile-interdit",
+   "type": "interdit",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Lamproie fluviatile : pêche interdite toute l'année, de jour comme de nuit."
+   },
+   "phrase": "Lamproie fluviatile : pêche interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 4",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "de la lamproie fluviatile, ainsi que des aloses (alose feinte et grande alose) est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-alose-feinte-interdit",
+   "type": "interdit",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Alose feinte : pêche interdite toute l'année, de jour comme de nuit."
+   },
+   "phrase": "Alose feinte : pêche interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 4",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "de la lamproie fluviatile, ainsi que des aloses (alose feinte et grande alose) est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-grande-alose-interdit",
+   "type": "interdit",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Grande alose : pêche interdite toute l'année, de jour comme de nuit."
+   },
+   "phrase": "Grande alose : pêche interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 4",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "de la lamproie fluviatile, ainsi que des aloses (alose feinte et grande alose) est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-ecrevisse-pattes-rouges-interdit",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse à pattes rouges : pêche interdite toute l'année."
+   },
+   "phrase": "Écrevisse à pattes rouges : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 4 de l'arrêté permanent"
+   },
+   "citation": "Écrevisses à pattes rouges, des torrents, à pattes blanches et à pattes grêles Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-ecrevisse-torrents-interdit",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse des torrents : pêche interdite toute l'année."
+   },
+   "phrase": "Écrevisse des torrents : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 4 de l'arrêté permanent"
+   },
+   "citation": "Écrevisses à pattes rouges, des torrents, à pattes blanches et à pattes grêles Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-ecrevisse-pattes-blanches-interdit",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse à pattes blanches : pêche interdite toute l'année."
+   },
+   "phrase": "Écrevisse à pattes blanches : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 4 de l'arrêté permanent"
+   },
+   "citation": "Écrevisses à pattes rouges, des torrents, à pattes blanches et à pattes grêles Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-ecrevisse-pattes-greles-interdit",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse à pattes grêles : pêche interdite toute l'année."
+   },
+   "phrase": "Écrevisse à pattes grêles : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Ouvertures spécifiques »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 4 de l'arrêté permanent"
+   },
+   "citation": "Écrevisses à pattes rouges, des torrents, à pattes blanches et à pattes grêles Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-grenouilles-autres-interdit",
+   "type": "interdit",
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seules les grenouilles vertes et rousses se pêchent ; les autres espèces de grenouilles sont interdites."
+   },
+   "phrase": "Grenouilles : seules la verte et la rousse se pêchent, toutes les autres espèces sont interdites.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, ligne Grenouilles",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 4 de l'arrêté permanent"
+   },
+   "citation": "La pêche des autres espèces que les grenouilles vertes ou rousses est interdite.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-fermeture-brochet-leurres-interdit",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Pendant la fermeture du brochet en 2e catégorie : interdits le vif, le poisson mort ou artificiel, la cuillère, le ver manié et les autres leurres ; seule la mouche artificielle reste permise."
+   },
+   "phrase": "En 2e catégorie, pendant la fermeture du brochet (26 janvier au 24 avril 2026), tu ne peux pêcher qu'à la mouche artificielle : ni vif, ni poisson mort ou artificiel, ni cuillère, ni ver manié, ni autre leurre.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, « Dans les eaux de 2ème catégorie, interdictions spécifiques pendant la fermeture du brochet »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 12 de l'arrêté permanent ; dates de fermeture déduites des ouvertures du brochet du même avis (ouvert 1er au 25 janvier et 25 avril au 31 décembre)"
+   },
+   "citation": "pendant la période d'interdiction de la pêche du brochet, la pêche au vif, au poisson mort ou artificiel, à la cuillère, au ver manié et autres leurres, à l'exception de la mouche artificielle.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-tous-orge-consommation",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "91",
+    "lieu": "Orge (Essonne) : la rivière et ses annexes hydrauliques, dans le département"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation des poissons pêchés dans l'Orge et ses annexes hydrauliques interdite."
+   },
+   "phrase": "Orge : il est interdit de manger les poissons pêchés dans la rivière et ses annexes hydrauliques.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 4 de l'arrêté permanent et l'arrêté préfectoral 2016-DDT-SE-1002 du 2 décembre 2016"
+   },
+   "citation": "Le transport du poisson vivant ou mort ainsi que la consommation des poissons pêchés dans les rivières Orge et ses annexes hydrauliques sont interdits.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-tous-orge-transport-interdit",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "91",
+    "lieu": "Orge (Essonne) : la rivière et ses annexes hydrauliques, dans le département"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Transport interdit du poisson vivant ou mort pêché dans l'Orge et ses annexes hydrauliques."
+   },
+   "phrase": "Orge : il est interdit de transporter, vivant ou mort, le poisson pêché dans la rivière et ses annexes hydrauliques.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 4 de l'arrêté permanent et l'arrêté préfectoral 2016-DDT-SE-1002 du 2 décembre 2016"
+   },
+   "citation": "Le transport du poisson vivant ou mort ainsi que la consommation des poissons pêchés dans les rivières Orge et ses annexes hydrauliques sont interdits.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-tous-orge-peche-pro-interdit",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "91",
+    "lieu": "Orge (Essonne) : la rivière et ses annexes hydrauliques, dans le département"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche professionnelle destinée à la vente (consommation humaine et animale) interdite sur l'Orge."
+   },
+   "phrase": "Orge : la pêche professionnelle pour vendre le poisson est interdite en Essonne.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 4 de l'arrêté permanent"
+   },
+   "citation": "La pêche professionnelle en vue de la commercialisation destinée à la consommation humaine et animale de tous poissons pêchés dans la rivière Orge est interdite en Essonne.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-brochet-taille_min",
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 60
+   },
+   "phrase": "Brochet : 60 cm minimum.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 7",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : 0,60 m pour le brochet",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-bro-taille"
+  },
+  {
+   "id": "91-sandre-taille_min",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50
+   },
+   "phrase": "Sandre : 50 cm minimum en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 7",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : 0,50 m pour le sandre dans les eaux de 2ème catégorie",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-san-taille"
+  },
+  {
+   "id": "91-ombre-taille_min",
+   "type": "taille_min",
+   "especes": [
+    "2247"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 35
+   },
+   "phrase": "Ombre commun : 35 cm minimum.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 7",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : 0,35 m pour l'ombre commun",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-omb-taille"
+  },
+  {
+   "id": "91-cristivomer-taille_min",
+   "type": "taille_min",
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 35
+   },
+   "phrase": "Cristivomer : 35 cm minimum.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 7",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : 0,35 m pour le cristivomer",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-anguille-jaune-taille_min",
+   "type": "taille_min",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 12
+   },
+   "phrase": "Anguille jaune : 12 cm minimum.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Taille minimale de certaines espèces »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; l'article 7 de l'arrêté permanent est illisible à cet endroit (lecture optique : « 02 m »), la valeur vient de l'avis"
+   },
+   "citation": "0.12 m pour l'anguille jaune",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-grenouille-verte-taille_min",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8
+   },
+   "phrase": "Grenouille verte : 8 cm minimum, mesurée du museau au cloaque.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Taille minimale de certaines espèces »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 7 de l'arrêté permanent"
+   },
+   "citation": "0,08 m pour les grenouilles vertes ou rousses",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-grenouille-rousse-taille_min",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8
+   },
+   "phrase": "Grenouille rousse : 8 cm minimum, mesurée du museau au cloaque.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Taille minimale de certaines espèces »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 7 de l'arrêté permanent"
+   },
+   "citation": "0,08 m pour les grenouilles vertes ou rousses",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-black-bass-no_kill",
+   "type": "no_kill",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Black-bass pêché en 2e catégorie : remise à l'eau immédiate (no-kill)."
+   },
+   "phrase": "Black-bass en 2e catégorie : no-kill, tu dois le remettre à l'eau tout de suite (il n'y a pas de taille à atteindre pour le garder).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 7",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "Le black-bass pêché dans les eaux de la 2ème catégorie doit être remis à l'eau immédiatement après sa capture (pratique du NO-KILL).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-bla-taille"
+  },
+  {
+   "id": "91-salmonides-quota_jour",
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Salmonidés (hors saumon et truite de mer) : 5 par jour et par pêcheur.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 8",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "Le nombre de captures de salmonidés, autres que le saumon et la truite de mer, autorisé par pêcheur et par jour, est fixé à cinq.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-sal-quota"
+  },
+  {
+   "id": "91-carnassiers-2e-quota_jour",
+   "type": "quota_jour",
+   "especes": [
+    "2195",
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3,
+    "texte": "Sandre et brochet ensemble, dont 2 brochets au plus. La pêche en no-kill n'est pas concernée par cette limite."
+   },
+   "phrase": "En 2e catégorie : 3 carnassiers (sandres et brochets) par jour au total.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 8",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "Le nombre de captures de carnassiers (sandres, brochets) autorisé par pêcheur et par jour, dans les eaux de 2ème catégorie, est limité à trois (dont deux brochets maximum).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-car-quota"
+  },
+  {
+   "id": "91-2151-2e-quota_jour",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "En 2e catégorie : 2 brochets par jour au plus, dans le total de 3 carnassiers.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 8",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "Le nombre de captures de carnassiers (sandres, brochets) autorisé par pêcheur et par jour, dans les eaux de 2ème catégorie, est limité à trois (dont deux brochets maximum).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-car-quota"
+  },
+  {
+   "id": "91-2151-1re-quota_jour",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "En 1re catégorie : 2 brochets par jour au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 8",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "Le nombre de capture de brochet autorisé par pêcheur et par jour dans les eaux de 1ère catégorie est limité à deux.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-goujon-amour-transport_vivant",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:goujon de l'amour"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Goujon de l'amour : transport à l'état vivant interdit ; remise à l'eau et introduction dans le milieu naturel de spécimens vivants interdites."
+   },
+   "phrase": "Goujon de l'amour : espèce envahissante, interdit de la transporter vivante, de la remettre à l'eau ou de l'introduire dans le milieu.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 5 de l'arrêté permanent"
+   },
+   "citation": "Le transport à l'état vivant est interdit dans le département de l'Essonne pour […] le goujon asiatique, le goujon de l'amour et la grenouille taureau",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-goujon-asiatique-transport_vivant",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:goujon asiatique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Goujon asiatique : transport à l'état vivant interdit ; remise à l'eau et introduction dans le milieu naturel de spécimens vivants interdites."
+   },
+   "phrase": "Goujon asiatique : espèce envahissante, interdit de la transporter vivante, de la remettre à l'eau ou de l'introduire dans le milieu.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 5 de l'arrêté permanent"
+   },
+   "citation": "Le transport à l'état vivant est interdit dans le département de l'Essonne pour […] le goujon asiatique, le goujon de l'amour et la grenouille taureau",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-perche-soleil-transport_vivant",
+   "type": "transport_vivant",
+   "especes": [
+    "perche-soleil"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Perche soleil : transport à l'état vivant interdit ; remise à l'eau et introduction dans le milieu naturel de spécimens vivants interdites."
+   },
+   "phrase": "Perche soleil : espèce envahissante, interdit de la transporter vivante, de la remettre à l'eau ou de l'introduire dans le milieu.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 5 de l'arrêté permanent"
+   },
+   "citation": "Le transport à l'état vivant est interdit dans le département de l'Essonne pour […] la perche soleil, le poisson-chat",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-poisson-chat-transport_vivant",
+   "type": "transport_vivant",
+   "especes": [
+    "poisson-chat"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Poisson-chat : transport à l'état vivant interdit ; remise à l'eau et introduction dans le milieu naturel de spécimens vivants interdites."
+   },
+   "phrase": "Poisson-chat : espèce envahissante, interdit de la transporter vivante, de la remettre à l'eau ou de l'introduire dans le milieu.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 5 de l'arrêté permanent"
+   },
+   "citation": "Le transport à l'état vivant est interdit dans le département de l'Essonne pour […] la perche soleil, le poisson-chat",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-crabe-chinois-transport_vivant",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:crabe chinois"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Crabe chinois : transport à l'état vivant interdit ; remise à l'eau et introduction dans le milieu naturel de spécimens vivants interdites."
+   },
+   "phrase": "Crabe chinois : espèce envahissante, interdit de la transporter vivante, de la remettre à l'eau ou de l'introduire dans le milieu.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 5 de l'arrêté permanent"
+   },
+   "citation": "Le transport à l'état vivant est interdit dans le département de l'Essonne pour […] le crabe chinois",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-ecrevisse-americaine-transport_vivant",
+   "type": "transport_vivant",
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse américaine : transport à l'état vivant interdit ; remise à l'eau et introduction dans le milieu naturel de spécimens vivants interdites."
+   },
+   "phrase": "Écrevisse américaine : espèce envahissante, interdit de la transporter vivante, de la remettre à l'eau ou de l'introduire dans le milieu.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 5 de l'arrêté permanent"
+   },
+   "citation": "Le transport à l'état vivant est interdit dans le département de l'Essonne pour […] l'écrevisse de Louisiane, américaine, américaine virile, de Californie ou signal, l'écrevisse marbrée",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-ecrevisse-americaine-virile-transport_vivant",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:écrevisse américaine virile"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse américaine virile : transport à l'état vivant interdit ; remise à l'eau et introduction dans le milieu naturel de spécimens vivants interdites."
+   },
+   "phrase": "Écrevisse américaine virile : espèce envahissante, interdit de la transporter vivante, de la remettre à l'eau ou de l'introduire dans le milieu.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 5 de l'arrêté permanent"
+   },
+   "citation": "Le transport à l'état vivant est interdit dans le département de l'Essonne pour […] l'écrevisse de Louisiane, américaine, américaine virile, de Californie ou signal, l'écrevisse marbrée",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-ecrevisse-californie-transport_vivant",
+   "type": "transport_vivant",
+   "especes": [
+    "ecrevisse-californie"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse de Californie ou signal : transport à l'état vivant interdit ; remise à l'eau et introduction dans le milieu naturel de spécimens vivants interdites."
+   },
+   "phrase": "Écrevisse de Californie ou signal : espèce envahissante, interdit de la transporter vivante, de la remettre à l'eau ou de l'introduire dans le milieu.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 5 de l'arrêté permanent"
+   },
+   "citation": "Le transport à l'état vivant est interdit dans le département de l'Essonne pour […] l'écrevisse de Louisiane, américaine, américaine virile, de Californie ou signal, l'écrevisse marbrée",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-ecrevisse-louisiane-transport_vivant",
+   "type": "transport_vivant",
+   "especes": [
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse de Louisiane : transport à l'état vivant interdit ; remise à l'eau et introduction dans le milieu naturel de spécimens vivants interdites."
+   },
+   "phrase": "Écrevisse de Louisiane : espèce envahissante, interdit de la transporter vivante, de la remettre à l'eau ou de l'introduire dans le milieu.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 5 de l'arrêté permanent"
+   },
+   "citation": "Le transport à l'état vivant est interdit dans le département de l'Essonne pour […] l'écrevisse de Louisiane, américaine, américaine virile, de Californie ou signal, l'écrevisse marbrée",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-ecrevisse-marbree-transport_vivant",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:écrevisse marbrée"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse marbrée : transport à l'état vivant interdit ; remise à l'eau et introduction dans le milieu naturel de spécimens vivants interdites."
+   },
+   "phrase": "Écrevisse marbrée : espèce envahissante, interdit de la transporter vivante, de la remettre à l'eau ou de l'introduire dans le milieu.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 5 de l'arrêté permanent"
+   },
+   "citation": "Le transport à l'état vivant est interdit dans le département de l'Essonne pour […] l'écrevisse de Louisiane, américaine, américaine virile, de Californie ou signal, l'écrevisse marbrée",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-grenouille-taureau-transport_vivant",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:grenouille taureau"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Grenouille taureau : transport à l'état vivant interdit ; remise à l'eau et introduction dans le milieu naturel de spécimens vivants interdites."
+   },
+   "phrase": "Grenouille taureau : espèce envahissante, interdit de la transporter vivante, de la remettre à l'eau ou de l'introduire dans le milieu.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, paragraphe « Interdiction »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 5 de l'arrêté permanent"
+   },
+   "citation": "Le transport à l'état vivant est interdit dans le département de l'Essonne pour […] le goujon asiatique, le goujon de l'amour et la grenouille taureau",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-juine-amont-categorie",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "91",
+    "lieu": "Juine (Morigny-Champigny) : en amont des ponts de Morigny, avec ses affluents et sous-affluents"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Juine en amont des ponts de Morigny, avec ses affluents et sous-affluents (sauf la Tortue) : 1re catégorie.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Classement des cours d'eau et canaux »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 1 de l'arrêté permanent ; classement fixé par l'arrêté 2024-DDT-SE-98 du 11 mars 2024, non lu"
+   },
+   "citation": "La Juine, en amont des ponts de Morigny, ses affluents et sous-affluents à l'exception de la Tortue ;",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-ecole-categorie",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "91",
+    "lieu": "École"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "École : 1re catégorie.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Classement des cours d'eau et canaux »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 1 de l'arrêté permanent ; classement fixé par l'arrêté 2024-DDT-SE-98 du 11 mars 2024, non lu"
+   },
+   "citation": "la section aval du Juineteau à partir de l'entrée du plan d'eau de la base de plein air et de loisirs d'Etampes ; l'École.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-juineteau-aval-2e-categorie",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Juineteau (Étampes) : section aval, à partir de l'entrée du plan d'eau de la base de plein air et de loisirs d'Étampes"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2",
+    "texte": "Lecture A : cette section est une exception à la 1re catégorie, donc classée en 2e."
+   },
+   "phrase": "Juineteau, section aval à partir du plan d'eau de la base de loisirs d'Étampes : 2e catégorie si le texte la range avec la Tortue parmi les exceptions ; lecture ambiguë, vérifie l'arrêté.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 1, 1) (lecture A : sous-puce de l'exception, comme la Tortue)",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "la section aval du Juineteau à partir de l'entrée du plan d'eau de la base de plein air et de loisirs d'Etampes ;",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-juineteau-aval-1re-categorie",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Juineteau (Étampes) : section aval, à partir de l'entrée du plan d'eau de la base de plein air et de loisirs d'Étampes"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1",
+    "texte": "Lecture B : cette section est un élément propre de la liste des cours d'eau de 1re catégorie."
+   },
+   "phrase": "Juineteau, section aval à partir du plan d'eau de la base de loisirs d'Étampes : 1re catégorie si le texte la range à côté de la Juine et de l'École ; lecture ambiguë, vérifie l'arrêté.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Classement des cours d'eau et canaux » (lecture B : élément de la liste de la 1re catégorie)",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; classement fixé par l'arrêté 2024-DDT-SE-98 du 11 mars 2024, non lu"
+   },
+   "citation": "la section aval du Juineteau à partir de l'entrée du plan d'eau de la base de plein air et de loisirs d'Etampes ;",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-tortue-categorie",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "91",
+    "lieu": "Tortue"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "Tortue (affluent de la Juine) : 2e catégorie, car elle est exclue de la 1re.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Classement des cours d'eau et canaux »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; exception à la 1re catégorie, le reste du département étant en 2e"
+   },
+   "citation": "ses affluents et sous-affluents à l'exception de la Tortue",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-seine-categorie",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "91",
+    "lieu": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "Seine : 2e catégorie.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Classement des cours d'eau et canaux »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 1 de l'arrêté permanent"
+   },
+   "citation": "Tous les autres cours d'eau, canaux, et partie de cours d'eau du département (dont le fleuve SEINE).",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-defaut-2e-categorie",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "Essonne : tous les autres cours d'eau et canaux du département sont en 2e catégorie.",
+   "source": {
+    "texte": "Avis annuel : Période d'ouverture de la pêche en 2026 dans le département de l'Essonne, tableau « Classement des cours d'eau et canaux »",
+    "url": "https://www.villebon-sur-yvette.fr/app/uploads/2025/11/47-Prefet-de-lEssonne-Periode-douverture-de-la-peche-en-2026-dans-lEssonne.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel 2026, sans date de signature dans le texte lu, mis en ligne en novembre 2025 ; reprend l'article 1 de l'arrêté permanent"
+   },
+   "citation": "Tous les autres cours d'eau, canaux, et partie de cours d'eau du département (dont le fleuve SEINE).",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "91-plans-eau-classement-autre",
+   "type": "autre",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Sauf disposition contraire, un plan d'eau est classé dans la même catégorie que les eaux avec lesquelles il communique."
+   },
+   "phrase": "Un plan d'eau prend la catégorie du cours d'eau avec lequel il communique, sauf texte contraire.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 1, 3)",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "les plans d'eau […] sont classés dans la même catégorie que les eaux avec lesquelles ils communiquent.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-anguille-carnet-autre",
+   "type": "autre",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Carnet de capture obligatoire pour toute anguille pêchée (Cerfa n° 14358*01)."
+   },
+   "phrase": "Anguille : tu dois noter chaque prise dans un carnet de pêche (Cerfa 14358*01).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 4",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "Tout pêcheur en eau douce, professionnel ou de loisir, doit enregistrer ses captures d'anguilles dans un carnet de pêche conformément à l'arrêté du 22 octobre 2010 susvisé.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-nasses-mode_peche",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "91",
+    "lieu": "Yerres, Bièvre, Essonne, Orge, Yvette, Remarde, Juine (en aval du pont de Morigny-Champigny) et plans d'eau en communication avec ces cours d'eau et avec la Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Membres d'une AAPPMA : six nasses de type anguillère à écrevisse au plus, maille de 10 mm, orifice de la dernière chambre de capture de 40 mm au plus."
+   },
+   "phrase": "Sur la Yerres, la Bièvre, l'Essonne, l'Orge, l'Yvette, la Remarde, la Juine en aval de Morigny-Champigny et les plans d'eau reliés, un membre d'AAPPMA peut poser six nasses anguillères à écrevisses (maille 10 mm, orifice 40 mm au plus).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 10",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "à l'aide de six nasses de type anguillère à écrevisse, à maille de 10 mm, dont le diamètre de l'orifice de la dernière chambre de capture n'excède pas 40 millimètres",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-acces-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche de la carpe de nuit se pratique seulement sur les cours d'eau et plans d'eau de 2e catégorie désignés par arrêté préfectoral, après paiement de la cotisation pêche et milieux aquatiques."
+   },
+   "phrase": "Carpe de nuit : permise seulement sur les secteurs de 2e catégorie désignés par arrêté préfectoral, cotisation pêche et milieux aquatiques payée.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 6",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "La pêche à la carpe de nuit peut être autorisée dans les cours d'eau ou plans d'eau de 2ème catégorie par arrêté préfectoral, après acquittement de la cotisation pêche et milieux aquatiques",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-appats-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pendant la pêche de nuit de la carpe : vifs et leurres interdits, esches végétales seulement."
+   },
+   "phrase": "Carpe de nuit : ni vif ni leurre, seulement des esches végétales.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 6",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "Durant ces périodes, l'utilisation de vifs et leurres est strictement interdite, seules les esches végétales devront être utilisées.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-poissons-pris-remise_eau",
+   "type": "remise_eau",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : les poissons pris sont remis à l'eau vivants sur place ; transport vivant interdit."
+   },
+   "phrase": "Carpe de nuit : tout poisson pris est remis à l'eau vivant, sur place, sans transport.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 6",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "Les poissons pris devront être remis à l'eau vivants, directement sur les lieux de capture (transport vivant interdit).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-car-nuit-captivite"
+  },
+  {
+   "id": "91-reserve-coudray-rg-reserve",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Seine (barrage du Coudray-Montceaux, lots 1 et 2, rive gauche) : de 285 m en amont à 170 m en aval du barrage"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve du barrage du Coudray-Montceaux, rive gauche : pêche interdite de 285 m en amont à 170 m en aval du barrage."
+   },
+   "phrase": "Réserve du barrage du Coudray-Montceaux, rive gauche : pêche interdite de 285 m en amont à 170 m en aval du barrage.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 13",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "la Réserve du barrage du Coudray-Montceaux : depuis 285 mètres en amont du barrage jusqu'à 170 mètres en aval du barrage pour la rive gauche",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-reserve-coudray-rd-reserve",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Seine (barrage du Coudray-Montceaux, lots 1 et 2, rive droite) : jusqu'à 500 m en aval du barrage"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve du barrage du Coudray-Montceaux, rive droite : pêche interdite jusqu'à 500 m en aval du barrage (le texte ne répète pas la limite amont pour cette rive)."
+   },
+   "phrase": "Réserve du barrage du Coudray-Montceaux, rive droite : pêche interdite jusqu'à 500 m en aval du barrage (le texte ne répète pas la limite amont pour cette rive).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 13",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "et 500 mètres en aval pour la rive droite - lots n°1 et 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-reserve-evry-rd-reserve",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Seine (barrage d'Évry, lot 3, rive droite) : de 220 m en amont à 170 m en aval du barrage"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve du barrage d'Évry, rive droite : pêche interdite de 220 m en amont à 170 m en aval du barrage."
+   },
+   "phrase": "Réserve du barrage d'Évry, rive droite : pêche interdite de 220 m en amont à 170 m en aval du barrage.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 13",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "la Réserve du barrage d'Évry : depuis 220 mètres en amont du barrage jusqu'à 170 mètres en aval du barrage pour la rive droite",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-reserve-evry-rg-reserve",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Seine (barrage d'Évry, lot 3, rive gauche) : de 440 m en amont à 170 m en aval du barrage"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve du barrage d'Évry, rive gauche : pêche interdite de 440 m en amont à 170 m en aval du barrage."
+   },
+   "phrase": "Réserve du barrage d'Évry, rive gauche : pêche interdite de 440 m en amont à 170 m en aval du barrage.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 13",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "et depuis 440 mètres en amont du barrage jusqu'à 170 mètres en aval du barrage pour la rive gauche - lot n°3",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-reserve-ablon-rd-reserve",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Seine (barrage d'Ablon-Vigneux, lot 5, rive droite) : de 460 m en amont à 380 m en aval du barrage"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve du barrage d'Ablon-Vigneux, rive droite : pêche interdite de 460 m en amont à 380 m en aval du barrage."
+   },
+   "phrase": "Réserve du barrage d'Ablon-Vigneux, rive droite : pêche interdite de 460 m en amont à 380 m en aval du barrage.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2024-DDT-SE-169 du 26 avril 2024 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département de l'Essonne, article 13",
+    "url": "https://www.fontenay-les-briis.fr/wp-content/uploads/Arrete-permanent-2024-DDT-SE-169.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 2024-04-26 (Marine de Talhoquet, par subdélégation) ; lu sur scan avec lecture optique, citation corrigée des erreurs d'accents"
+   },
+   "citation": "la Réserve du barrage d'Ablon-Vigneux : depuis 460 mètres en amont du barrage jusqu'à 380 mètres en aval du barrage pour la rive droite - lot n°5",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-seine-coudray-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "91",
+    "lieu": "Seine (Le Coudray-Montceaux) : cantonnement n°1, 2e section, dont l'AAPPMA du Coudray-Montceaux est bailleur"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : Seine au Coudray-Montceaux, cantonnement n°1 (2e section)."
+   },
+   "phrase": "Carpe de nuit permise : Seine au Coudray-Montceaux, cantonnement n°1 (2e section) (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-seine-val-de-seine-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Seine (Ris-Orangis, Évry) : rive droite, du pont de Ris-Orangis à la limite aval du barrage d'Évry"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : Seine, rive droite, du pont de Ris-Orangis au barrage d'Évry (AAPPMA du Val de Seine)."
+   },
+   "phrase": "Carpe de nuit permise : Seine, rive droite, du pont de Ris-Orangis au barrage d'Évry (AAPPMA du Val de Seine) (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-seine-corbeil-rg-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Seine (Corbeil-Essonnes) : rive gauche, lots 2 et 3, de l'écluse du Coudray à l'amont du port d'Évry, hors sites d'accostage des péniches"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : Seine à Corbeil-Essonnes, rive gauche, lots 2 et 3."
+   },
+   "phrase": "Carpe de nuit permise : Seine à Corbeil-Essonnes, rive gauche, lots 2 et 3 (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-seine-corbeil-rd-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Seine (Corbeil-Essonnes) : rive droite, lot 3, du pont de Corbeil au ru de la Fontaine aux Souliers"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : Seine à Corbeil-Essonnes, rive droite, lot 3."
+   },
+   "phrase": "Carpe de nuit permise : Seine à Corbeil-Essonnes, rive droite, lot 3 (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-essonne-corbeil-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Essonne (Corbeil-Essonnes) : du moulin Galant 1 aux Grands Moulins"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : rivière Essonne à Corbeil-Essonnes, du moulin Galant aux Grands Moulins."
+   },
+   "phrase": "Carpe de nuit permise : rivière Essonne à Corbeil-Essonnes, du moulin Galant aux Grands Moulins (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-trevoix-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": "Bassin de retenue de Trévoix (Arpajon) : emplacement matérialisé"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : bassin de retenue de Trévoix à Arpajon."
+   },
+   "phrase": "Carpe de nuit permise : bassin de retenue de Trévoix à Arpajon (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-carrouges-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": "Bassin des Carrouges (Brétigny-sur-Orge)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : bassin des Carrouges à Brétigny."
+   },
+   "phrase": "Carpe de nuit permise : bassin des Carrouges à Brétigny (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-petit-paris-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": "Étang du Petit Paris (Brétigny-sur-Orge)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : étang du Petit Paris à Brétigny."
+   },
+   "phrase": "Carpe de nuit permise : étang du Petit Paris à Brétigny (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-seine-draveil-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Seine (Draveil, Vigneux) : entre le pont de Ris et l'écluse d'Ablon, rives à préciser dans l'arrêté"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : Seine entre le pont de Ris et l'écluse d'Ablon (Draveil, Vigneux ; la rive exacte n'est pas sûre)."
+   },
+   "phrase": "Carpe de nuit permise : Seine entre le pont de Ris et l'écluse d'Ablon (Draveil, Vigneux ; la rive exacte n'est pas sûre) (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-fosses-montalbot-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": "Fosses Montalbot (Draveil)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : fosses Montalbot à Draveil."
+   },
+   "phrase": "Carpe de nuit permise : fosses Montalbot à Draveil (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-laveyssiere-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": "Étangs Laveyssière (Draveil) : seulement lors d'un enduro organisé par l'AAPPMA"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : étangs Laveyssière à Draveil, seulement lors d'un enduro de l'AAPPMA."
+   },
+   "phrase": "Carpe de nuit permise : étangs Laveyssière à Draveil, seulement lors d'un enduro de l'AAPPMA (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-seine-evry-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Seine (Évry) : lot 3 entier sauf le quai en rive gauche, et la pointe amont des îles aux Paveurs jusqu'au barrage d'Évry"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : Seine à Évry, lot 3 (sauf le quai rive gauche) et pointe amont des îles aux Paveurs."
+   },
+   "phrase": "Carpe de nuit permise : Seine à Évry, lot 3 (sauf le quai rive gauche) et pointe amont des îles aux Paveurs (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-yerres-gord-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Yerres (Boussy-Saint-Antoine) : secteur du Gord"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : Yerres à Boussy-Saint-Antoine, secteur du Gord."
+   },
+   "phrase": "Carpe de nuit permise : Yerres à Boussy-Saint-Antoine, secteur du Gord (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-canal-montgeron-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Canal de Montgeron (Montgeron) : du pont de Montgeron à la rue Suzanne"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : canal de Montgeron, du pont de Montgeron à la rue Suzanne."
+   },
+   "phrase": "Carpe de nuit permise : canal de Montgeron, du pont de Montgeron à la rue Suzanne (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-etampes-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": "Plan d'eau de la base de loisirs (Étampes) : le grand plan d'eau en entier"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : grand plan d'eau de la base de loisirs d'Étampes."
+   },
+   "phrase": "Carpe de nuit permise : grand plan d'eau de la base de loisirs d'Étampes (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-orme-des-mazieres-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": "Plan d'eau de l'Orme des Mazières : postes 1 à 9"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : plan d'eau de l'Orme des Mazières, postes 1 à 9."
+   },
+   "phrase": "Carpe de nuit permise : plan d'eau de l'Orme des Mazières, postes 1 à 9 (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-marcoussis-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": "Étang du Gué dit le petit étang (Marcoussis)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : étang du Gué (le petit étang) à Marcoussis."
+   },
+   "phrase": "Carpe de nuit permise : étang du Gué (le petit étang) à Marcoussis (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-damoiseaux-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": "Étang fédéral des Damoiseaux (Bièvres)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : étang fédéral des Damoiseaux à Bièvres."
+   },
+   "phrase": "Carpe de nuit permise : étang fédéral des Damoiseaux à Bièvres (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-tigery-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": "Étang fédéral de Tigery (Tigery)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : étang fédéral de Tigery."
+   },
+   "phrase": "Carpe de nuit permise : étang fédéral de Tigery (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-nuit-saulx-carpe_nuit",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "91",
+    "lieu": "Étang fédéral (Saulx-les-Chartreux)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe : étang fédéral de Saulx-les-Chartreux."
+   },
+   "phrase": "Carpe de nuit permise : étang fédéral de Saulx-les-Chartreux (d'après le guide de la fédération, non daté ; vérifie l'arrêté carpe de nuit en vigueur).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), liste des secteurs « carpe de nuit »",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-juine-mereville-mouche-mode_peche",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Juine (Méréville) : parcours de 5 500 m jusqu'à la limite du Loiret"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche à la mouche fouettée uniquement (parcours de l'AAPPMA de Méréville)."
+   },
+   "phrase": "Juine à Méréville, parcours de 5 500 m : pêche à la mouche fouettée seulement (d'après le guide de la fédération, non daté ; vérifie).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), parcours de Méréville",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-truite-mereville-remise-remise_eau",
+   "type": "remise_eau",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "91",
+    "lieu": "Juine (Méréville) : parcours de 5 500 m jusqu'à la limite du Loiret"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Remise à l'eau obligatoire des truites sur le parcours de Méréville."
+   },
+   "phrase": "Juine à Méréville, parcours de 5 500 m : les truites se remettent à l'eau (d'après le guide de la fédération, non daté ; vérifie).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), parcours de Méréville",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-anguille-consommation",
+   "type": "consommation",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation interdite de l'anguille pêché dans le département, d'après l'arrêté 2010-DDT-SE-567 du 7 juillet 2010 (article 3) cité par le guide de la fédération."
+   },
+   "phrase": "Essonne : manger l'anguille pêché dans le département serait interdit (arrêté de 2010 cité par le guide de la fédération, non retrouvé ; vérifie).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), rubrique « interdictions de consommation », arrêté 2010-DDT-SE-567 du 7 juillet 2010, article 3",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-barbeau-consommation",
+   "type": "consommation",
+   "especes": [
+    "2096"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation interdite de le barbeau pêché dans le département, d'après l'arrêté 2010-DDT-SE-567 du 7 juillet 2010 (article 3) cité par le guide de la fédération."
+   },
+   "phrase": "Essonne : manger le barbeau pêché dans le département serait interdit (arrêté de 2010 cité par le guide de la fédération, non retrouvé ; vérifie).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), rubrique « interdictions de consommation », arrêté 2010-DDT-SE-567 du 7 juillet 2010, article 3",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-carpe-consommation",
+   "type": "consommation",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation interdite de la carpe pêché dans le département, d'après l'arrêté 2010-DDT-SE-567 du 7 juillet 2010 (article 3) cité par le guide de la fédération."
+   },
+   "phrase": "Essonne : manger la carpe pêché dans le département serait interdit (arrêté de 2010 cité par le guide de la fédération, non retrouvé ; vérifie).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), rubrique « interdictions de consommation », arrêté 2010-DDT-SE-567 du 7 juillet 2010, article 3",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-silure-consommation",
+   "type": "consommation",
+   "especes": [
+    "2238"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation interdite de le silure pêché dans le département, d'après l'arrêté 2010-DDT-SE-567 du 7 juillet 2010 (article 3) cité par le guide de la fédération."
+   },
+   "phrase": "Essonne : manger le silure pêché dans le département serait interdit (arrêté de 2010 cité par le guide de la fédération, non retrouvé ; vérifie).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), rubrique « interdictions de consommation », arrêté 2010-DDT-SE-567 du 7 juillet 2010, article 3",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-breme-consommation",
+   "type": "consommation",
+   "especes": [
+    "2086"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "91",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation interdite de la brème pêché dans le département, d'après l'arrêté 2010-DDT-SE-567 du 7 juillet 2010 (article 3) cité par le guide de la fédération."
+   },
+   "phrase": "Essonne : manger la brème pêché dans le département serait interdit (arrêté de 2010 cité par le guide de la fédération, non retrouvé ; vérifie).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), rubrique « interdictions de consommation », arrêté 2010-DDT-SE-567 du 7 juillet 2010, article 3",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "91-tous-essonne-riviere-consommation",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "91",
+    "lieu": "Essonne (Baulne, Corbeil-Essonnes) : de l'aval du moulin du Gué (Baulne) à la confluence avec la Seine, avec ses annexes hydrauliques"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation interdite des poissons pêchés dans l'Essonne et ses annexes hydrauliques, d'après l'arrêté 2010-DDT-SE-567 du 7 juillet 2010 (article 3) cité par le guide de la fédération."
+   },
+   "phrase": "Rivière Essonne en aval du moulin du Gué (Baulne) : manger les poissons pêchés serait interdit (arrêté de 2010 cité par le guide de la fédération, non retrouvé ; vérifie).",
+   "source": {
+    "texte": "Guide de pêche de la Fédération de l'Essonne pour la pêche et la protection du milieu aquatique (non daté, postérieur à décembre 2012), rubrique « interdictions de consommation », arrêté 2010-DDT-SE-567 du 7 juillet 2010, article 3",
+    "url": "https://www.fontenaylevicomte.fr/mod_turbolead/upload/file/guide_peche91.pdf",
+    "lu_le": "2026-10-15",
+    "version": "guide de fédération non daté ; lu par extraits résumés, sans citation exacte"
+   },
+   "citation": null,
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  }
+ ]
+}

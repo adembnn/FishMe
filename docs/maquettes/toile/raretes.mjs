@@ -1,0 +1,10 @@
+import { chromium } from 'playwright-core';
+import path from 'node:path';
+const [,, file, out, wait='1500'] = process.argv;
+const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+const p = await b.newPage({ viewport: { width: 1600, height: 900 }, deviceScaleFactor: 1 });
+const errs=[]; p.on('pageerror', e=>errs.push(e.message)); p.on('console', m=>{ if(m.type()==='error') errs.push(m.text()) });
+await p.goto('file://' + path.resolve(file)); await p.waitForTimeout(+wait);
+await p.screenshot({ path: out });
+console.log(errs.length ? 'ERRORS:\n'+errs.join('\n') : 'no console errors');
+await b.close();

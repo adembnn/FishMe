@@ -1,0 +1,802 @@
+{
+ "version": 2,
+ "departement": "93",
+ "genere_le": "2026-10-15",
+ "textes": [
+  {
+   "titre": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025, arrêté permanent de pêche en eau douce de la Seine-Saint-Denis (intitulé exact non lu, titre tiré du nom du fichier et de la page DRIEAT « Encadrement réglementaire de la pêche en eau douce »). PDF scanné sans texte lisible, non lu",
+   "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+   "signe_le": "2025-03-03",
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Avis annuel 2025 de la Seine-Saint-Denis (DRIEAT). Date de signature inconnue. Illisible par tous les outils, non lu. L'avis annuel 2026 de la Seine-Saint-Denis n'a pas été trouvé",
+   "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/avis_annuel_2025_93.pdf",
+   "signe_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Arrêté préfectoral n° 2010-555 interdisant la commercialisation et la consommation des poissons de la Seine, de la Marne, de l'Yerres et des canaux (Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne). Cité par la fédération, texte non trouvé, date de signature inconnue",
+   "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+   "signe_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Consultation du public du 10/02 au 03/03/2026 sur les projets d'arrêtés de pêche en eau douce de Paris et de la proche couronne (DRIEAT). Page refusée à tous les outils : on ne sait pas si un arrêté permanent révisé 2026 est signé pour le 93",
+   "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/consultation-du-public-projets-d-arretes-sur-la-a13422.html",
+   "signe_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation (guide de la fédération, non daté, pas un texte réglementaire)",
+   "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+   "signe_le": null,
+   "lu": "partie"
+  }
+ ],
+ "regles": [
+  {
+   "id": "93-toutes-categorie-departement",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2",
+    "texte": "Cours d'eau, plans d'eau et canaux de Paris, des Hauts-de-Seine, de la Seine-Saint-Denis et du Val-de-Marne, tous classés en 2e catégorie selon la fédération"
+   },
+   "phrase": "Toutes les eaux de la Seine-Saint-Denis sont en 2e catégorie piscicole, d'après la fédération (l'arrêté de classement n'a pas été lu).",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Classement des eaux",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Tous les cours d’eau, plans d’eau et canaux des départements de Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne sont classés en 2nde catégorie piscicole.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-bro-taille-departement",
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 60,
+    "texte": "60 cm selon la fédération seule ; arrêté permanent n° 2025-0988 non lu ; le Code (R436-18) donne 50 cm"
+   },
+   "phrase": "Brochet : la fédération indique 60 cm minimum, mais l'arrêté du 93 n'a pas pu être lu et le Code donne 50 cm : vérifie l'arrêté.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Tailles minimales",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Brochet : […] 60 cm ;",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": "nat-bro-taille"
+  },
+  {
+   "id": "93-san-taille-departement",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50,
+    "texte": "50 cm selon la fédération seule ; arrêté permanent n° 2025-0988 non lu ; le Code (R436-18) donne 40 cm"
+   },
+   "phrase": "Sandre : la fédération indique 50 cm minimum, mais l'arrêté du 93 n'a pas pu être lu et le Code donne 40 cm : vérifie l'arrêté.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Tailles minimales",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Sandre : […] 50 cm ;",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": "nat-san-taille"
+  },
+  {
+   "id": "93-bla-taille-departement",
+   "type": "taille_min",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40,
+    "texte": "40 cm selon la fédération seule ; arrêté permanent n° 2025-0988 non lu ; le Code (R436-18) donne 30 cm"
+   },
+   "phrase": "Black-bass : la fédération indique 40 cm minimum, mais l'arrêté du 93 n'a pas pu être lu et le Code donne 30 cm : vérifie l'arrêté.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Tailles minimales",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Black-bass : […] 40 cm ;",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": "nat-bla-taille"
+  },
+  {
+   "id": "93-toutes-reserve-ecluse-neuilly-marne",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "93",
+    "lieu": "Écluse de Neuilly-sur-Marne (Neuilly-sur-Marne) : rives droite et gauche sur 150 m, ouvrage et 50 m en aval"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve de pêche, rives droite et gauche, 150 m (totalité de l'ouvrage et 50 m en aval de l'écluse)"
+   },
+   "phrase": "Réserve de pêche à l'écluse de Neuilly-sur-Marne, sur les deux rives, sur 150 m (l'ouvrage et 50 m en aval).",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Réserves de pêche",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Ecluse de Neuilly-sur-Marne : rives droite et gauche sur 150 m (totalité de l’ouvrage + 50 m en aval de l’écluse).",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-toutes-reserve-darse-millenaire",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "93",
+    "lieu": "Darse du Millénaire"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve de pêche citée par la fédération ; limites exactes non données"
+   },
+   "phrase": "Réserve de pêche à la Darse du Millénaire, limites non données par la fédération : vérifie l'arrêté.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Réserves de pêche",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Darse du Millénaire",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-toutes-reserve-port-saint-ouen",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "93",
+    "lieu": "Port de Saint-Ouen (Saint-Ouen-sur-Seine) : rive droite"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve de pêche citée par la fédération, rive droite ; limites exactes non données"
+   },
+   "phrase": "Réserve de pêche au Port de Saint-Ouen, rive droite, limites non données par la fédération : vérifie l'arrêté.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Réserves de pêche",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Port de Saint-Ouen, rive droite,",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-toutes-reserve-semoulerie-gennevilliers",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "93",
+    "lieu": "Semoulerie (Gennevilliers) : rive gauche"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve de pêche citée par la fédération sous la Seine-Saint-Denis, rive gauche ; Gennevilliers est dans le 92, classement possiblement erroné ; limites exactes non données"
+   },
+   "phrase": "Réserve de pêche à la Semoulerie de Gennevilliers, rive gauche, listée par la fédération sous la Seine-Saint-Denis alors que Gennevilliers est dans les Hauts-de-Seine : vérifie l'arrêté.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Réserves de pêche",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Semoulerie à Gennevilliers, rive gauche,",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-toutes-reserve-port-epinay",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "93",
+    "lieu": "Port d'Épinay (Épinay-sur-Seine) : rive droite"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve de pêche citée par la fédération, rive droite ; limites exactes non données"
+   },
+   "phrase": "Réserve de pêche au Port d'Épinay, rive droite, limites non données par la fédération : vérifie l'arrêté.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Réserves de pêche",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Port d'Epinay, rive droite,",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-toutes-reserve-port-plaisance-neuilly-marne",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "93",
+    "lieu": "Port de plaisance de Neuilly-sur-Marne (Neuilly-sur-Marne) : rive droite"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve de pêche citée par la fédération, rive droite ; limites exactes non données"
+   },
+   "phrase": "Réserve de pêche au port de plaisance de Neuilly-sur-Marne, rive droite, limites non données par la fédération : vérifie l'arrêté.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Réserves de pêche",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Port de plaisance de Neuilly-sur-Marne, rive droite,",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-toutes-reserve-port-gournay-marne",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "93",
+    "lieu": "Port de Gournay-sur-Marne (Gournay-sur-Marne) : rive droite, canal de Chelles"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve de pêche citée par la fédération, rive droite, canal de Chelles ; limites exactes non données"
+   },
+   "phrase": "Réserve de pêche au port de Gournay-sur-Marne, rive droite (canal de Chelles), limites non données par la fédération : vérifie l'arrêté.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Réserves de pêche",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Port de Gournay-sur-Marne, rive droite (canal de Chelles).",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-toutes-consommation-seine",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "93",
+    "lieu": "Seine (Seine-Saint-Denis)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdiction de commercialiser et de consommer (humain ou animal) tous les poissons prélevés dans la Seine, la Marne, l'Yerres et les canaux (Ourcq, Saint-Denis, Saint-Martin), arrêté n° 2010-555 selon la fédération"
+   },
+   "phrase": "Les poissons pêchés dans la Seine ne se vendent pas et ne se mangent pas (personnes ou animaux) : arrêté 2010-555 cité par la fédération, texte non lu.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Consommation",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "arrêté n° 2010-555 (date de signature inconnue), non lu ; page de la fédération non datée"
+   },
+   "citation": "ont interdit la commercialisation et la consommation humaine ou animale de tous les poissons prélevés dans la Seine, la Marne, l’Yerres et les canaux (Ourcq, Saint-Denis, Saint-Martin).",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-toutes-consommation-marne",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "93",
+    "lieu": "Marne (Seine-Saint-Denis)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdiction de commercialiser et de consommer (humain ou animal) tous les poissons prélevés dans la Seine, la Marne, l'Yerres et les canaux (Ourcq, Saint-Denis, Saint-Martin), arrêté n° 2010-555 selon la fédération"
+   },
+   "phrase": "Les poissons pêchés dans la Marne ne se vendent pas et ne se mangent pas (personnes ou animaux) : arrêté 2010-555 cité par la fédération, texte non lu.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Consommation",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "arrêté n° 2010-555 (date de signature inconnue), non lu ; page de la fédération non datée"
+   },
+   "citation": "ont interdit la commercialisation et la consommation humaine ou animale de tous les poissons prélevés dans la Seine, la Marne, l’Yerres et les canaux (Ourcq, Saint-Denis, Saint-Martin).",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-toutes-consommation-ourcq",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "93",
+    "lieu": "Canal de l'Ourcq (Seine-Saint-Denis)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdiction de commercialiser et de consommer (humain ou animal) tous les poissons prélevés dans la Seine, la Marne, l'Yerres et les canaux (Ourcq, Saint-Denis, Saint-Martin), arrêté n° 2010-555 selon la fédération"
+   },
+   "phrase": "Les poissons pêchés dans le canal de l'Ourcq ne se vendent pas et ne se mangent pas (personnes ou animaux) : arrêté 2010-555 cité par la fédération, texte non lu.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Consommation",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "arrêté n° 2010-555 (date de signature inconnue), non lu ; page de la fédération non datée"
+   },
+   "citation": "ont interdit la commercialisation et la consommation humaine ou animale de tous les poissons prélevés dans la Seine, la Marne, l’Yerres et les canaux (Ourcq, Saint-Denis, Saint-Martin).",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-toutes-consommation-canal-saint-denis",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "93",
+    "lieu": "Canal Saint-Denis (Seine-Saint-Denis)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdiction de commercialiser et de consommer (humain ou animal) tous les poissons prélevés dans la Seine, la Marne, l'Yerres et les canaux (Ourcq, Saint-Denis, Saint-Martin), arrêté n° 2010-555 selon la fédération"
+   },
+   "phrase": "Les poissons pêchés dans le canal Saint-Denis ne se vendent pas et ne se mangent pas (personnes ou animaux) : arrêté 2010-555 cité par la fédération, texte non lu.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Consommation",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "arrêté n° 2010-555 (date de signature inconnue), non lu ; page de la fédération non datée"
+   },
+   "citation": "ont interdit la commercialisation et la consommation humaine ou animale de tous les poissons prélevés dans la Seine, la Marne, l’Yerres et les canaux (Ourcq, Saint-Denis, Saint-Martin).",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-saumon-atlantique-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année (saumon et truite de mer), selon la fédération seule"
+   },
+   "phrase": "Pêche du saumon interdite toute l'année, d'après la fédération.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Espèces protégées",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Saumon et truite de mer : pêche interdite toute l’année.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-truite-de-mer-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année (saumon et truite de mer), selon la fédération seule"
+   },
+   "phrase": "Pêche du truite de mer interdite toute l'année, d'après la fédération.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Espèces protégées",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Saumon et truite de mer : pêche interdite toute l’année.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-ecrevisse-pattes-blanches-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année, selon la fédération seule"
+   },
+   "phrase": "Pêche de l'écrevisse à pattes blanches interdite toute l'année, d'après la fédération.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Espèces protégées",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Ecrevisses (à pattes blanches, à pattes rouges, des torrents, à pattes grêles) : pêche interdite toute l’année.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-ecrevisse-pattes-rouges-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année, selon la fédération seule"
+   },
+   "phrase": "Pêche de l'écrevisse à pattes rouges interdite toute l'année, d'après la fédération.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Espèces protégées",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Ecrevisses (à pattes blanches, à pattes rouges, des torrents, à pattes grêles) : pêche interdite toute l’année.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-ecrevisse-torrents-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année, selon la fédération seule"
+   },
+   "phrase": "Pêche de l'écrevisse des torrents interdite toute l'année, d'après la fédération.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Espèces protégées",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Ecrevisses (à pattes blanches, à pattes rouges, des torrents, à pattes grêles) : pêche interdite toute l’année.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-ecrevisse-pattes-greles-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année, selon la fédération seule"
+   },
+   "phrase": "Pêche de l'écrevisse à pattes grêles interdite toute l'année, d'après la fédération.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Espèces protégées",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Ecrevisses (à pattes blanches, à pattes rouges, des torrents, à pattes grêles) : pêche interdite toute l’année.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-anguille-civelle-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année, selon la fédération seule"
+   },
+   "phrase": "Pêche de la civelle interdite toute l'année, d'après la fédération.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Anguille",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Civelle et Anguille argentée ou anguille d’avalaison : pêche interdite toute l'année.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-anguille-argentee-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année, selon la fédération seule"
+   },
+   "phrase": "Pêche de l'anguille argentée interdite toute l'année, d'après la fédération.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Anguille",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Civelle et Anguille argentée ou anguille d’avalaison : pêche interdite toute l'année.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-anguille-interdit-nuit",
+   "type": "interdit",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de l'anguille à tous les stades interdite de nuit, selon la fédération seule"
+   },
+   "phrase": "Pêche de l'anguille interdite de nuit, à tous les stades, d'après la fédération.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Anguille",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "La pêche de l’anguille à tous les stades de son développement en tout temps est interdite de nuit.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-anguille-jaune-ouverture-2026",
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": "2026-02-15",
+   "au": "2026-07-15",
+   "valeur": {
+    "formule": "du 15 février au 15 juillet"
+   },
+   "phrase": "Anguille jaune : pêche ouverte du 15 février au 15 juillet 2026, d'après la fédération (dates fixées par arrêté ministériel non lu).",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "Anguille jaune : du 15 février au 15 juillet (selon arrêté ministériel).",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "93-anguille-carnet-captures",
+   "type": "autre",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "enregistrement des captures d'anguilles dans un carnet de pêche, selon la fédération seule"
+   },
+   "phrase": "Le pêcheur d'anguille note ses captures dans un carnet, d'après la fédération.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Anguille",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "doit enregistrer ses captures d'anguilles dans un carnet",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "93-bro-interdit-appats-fermeture",
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "pendant la fermeture du brochet : pêche au vif, au poisson mort ou artificiel, aux leurres susceptibles de capturer le brochet interdite ; ver manié autorisé, selon la fédération seule ; texte de l'arrêté non lu"
+   },
+   "phrase": "Pendant la fermeture du brochet, pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de prendre du brochet interdite (ver manié autorisé), d'après la fédération.",
+   "source": {
+    "texte": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation, rubrique Brochet",
+    "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+    "lu_le": "2026-10-15",
+    "version": "page non datée, lue le 2026-10-15 par un outil de résumé ; aucun texte signé n'est cité pour cette règle"
+   },
+   "citation": "la pêche au vif, au poisson mort ou artificiel, aux leurres susceptibles",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  }
+ ]
+}
