@@ -29,3 +29,6 @@ Nouvelle liste : `pêche,fishing,brochet,carpe,truite,sandre,perche,rivière,ét
 ## Reste à faire
 - Adem : relier App Store Connect dans la console MWM (lien ci-dessus), puis l'app `ai.mwm.build.challenge.team.01` doit apparaître dans l'organisation.
 - Ensuite, dans l'ordre de `appels-mwm.md` : questionnaire de confidentialité, brouillon, publication (oui d'Adem), captures (après les écrans de B), icône (après le logo), envoi de la fiche et soumission (oui d'Adem à chaque fois).
+
+## Icône (15 oct. 18h56)
+Fichier final du fil « Logo de FishMe » (logo F1) : `/mnt/project-files/maquettes/logo/final/fishme-icone-1024.png`, vérifié 1024 × 1024 px, RGB sans transparence, conforme à Apple. Aucune génération MWM. A le pose dans `App/Assets.xcassets/` (dossier de A, pas de S1).
