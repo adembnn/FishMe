@@ -8,6 +8,7 @@ Ce qui a changé depuis midi (décisions d'Adem, détail dans `CLAUDE.md`, `READ
 - Quatre lots de plus : D4 Conseils par espèce (S), L12 Conditions (A), L13 Conseils et premier lancement (B), L14 Aquarium (A, mise à jour), soit 23 lots.
 - Plus de C (14h26) : A = Adem, B = Titouan avec Claude Code, S = Sullyvan sans Claude ni Mac ; `Packages/Core` à B, sauf `Conseils/` (S). Les règles confirmées sur le PC d'Adem vont sur la branche `regles/local`, jamais fusionnée dans `main` (14h30).
 - Spot gratuit : un cercle de 1 km proposé par l'app, sessions illimitées dessus, un 2e spot ouvre le paywall qui bloque (12h26 à 12h32). Carte à collectionner : la vraie photo au verso, le poisson qui nage, un reflet sur les rares et légendaires (13h24, 13h52).
+- Tout en parallèle (14h42) : une session Claude Code par lot, toutes en même temps, un agent `codeur` (Sonnet) par morceau et `petites-mains` (Haiku) pour le mécanique ; portes à L0 + 1, 3 et 4 h, envoi visé à L0 + 4 à 5 h au lieu de L0 + 10 à 11 h. Plus aucun ordre de coupe : si un lot traîne, on ajoute des codeurs ou une session (`lots.md`, « Si un lot prend du retard »). D4 : une session cloud rédige les conseils, S les relit (par défaut, à confirmer par Adem). D3 lit aussi les 10 départements que les préfectures refusaient (`fiches/D3.md`).
 
 ## Où sont les choses
 - **Le plan** : cette branche, `claude/project-thread-78e20q` (devient `main` à L0). `python3 docs/verifier.py` doit afficher « 0 trou : 23 lots ».
@@ -40,7 +41,7 @@ Ce qui bloque dans le cloud : sites de l'État et des fédérations refusés (40
 1. Forme de la règle pour une prise (`docs/README.md`, question 1) : défaut b, liste de contrôle sourcée.
 2. Ce que bloque le paywall : tranché, ce n'est plus une question (`docs/README.md`, « Tranché »). Le 15 oct. 12h26 : le gratuit garde UN spot, avec des sessions illimitées. 12h28 : fin de la 1re session = paywall qui se ferme, 2e spot = paywall qui bloque. 12h32 : l'app propose le spot le plus proche, le pêcheur peut changer avant sa 1re session, puis il est fixé.
 3. Rôle de l'IA d'Apple dans la reconnaissance : défaut a (notre modèle Create ML partout, l'IA d'Apple sur 15 Pro et plus pour la légende, et pour l'espèce seulement si elle passe le même examen).
-4. Taille et poids : défaut a (curseur, poids estimé par la formule longueur-poids ; à 2 cm ou moins de la taille légale, mesurer au mètre), réalité augmentée dans la mise à jour.
+4. Taille et poids : défaut a (curseur, poids estimé par la formule longueur-poids ; à 2 cm ou moins de la taille légale, mesurer au mètre) ; la réalité augmentée est faite aussi dans la version soumise, rien n'étant coupé (14h42).
 5. Forme du spot : tranché le 15 oct. 12h26, cercle de 1 km vendredi, tronçon ou lac entier dans la mise à jour (`reports/spot.md`).
 6. Pack de lots reconnaissance R0 à R4 (examen, photos, entraînement, IA d'Apple au même examen, taille et poids) : plan en 4 lignes envoyé, ok d'Adem attendu ; il faut aussi savoir qui a un iPhone 15 Pro ou plus et qui rassemble les photos de vraies prises.
 7. Toujours ouverts : prix mensuel retenu, prix en euros (colonne France d'App Store Connect), compteur du Pescedex par zone (fil Maquettes).
