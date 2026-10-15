@@ -3,6 +3,7 @@ import Core
 @testable import BuildChallenge
 
 #if DEBUG
+@MainActor
 final class ReglesAJourTests: XCTestCase {
     func testAdresseVideOuNonHttpsEstIgnoree() {
         XCTAssertNil(ReglesAJour.adresse(info: [:]))
