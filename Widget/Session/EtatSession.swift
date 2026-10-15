@@ -8,7 +8,7 @@ import ActivityKit
 // elle n'est jamais recalculée ici. Aucune coordonnée, aucun nom de coin : l'écran verrouillé est vu par d'autres.
 
 /// Ce que montre l'activité. Rien d'autre que des heures et un nombre.
-public struct EtatSession: Codable, Hashable, Sendable {
+nonisolated public struct EtatSession: Codable, Hashable, Sendable {
     public var debut: Date
     /// `nil` si `Core` n'a pas pu la calculer : on ne l'invente pas.
     public var finLegale: Date?
@@ -22,7 +22,7 @@ public struct EtatSession: Codable, Hashable, Sendable {
     }
 
     /// Ce qui s'affiche à un instant donné.
-    public enum Affichage: Equatable, Sendable {
+    nonisolated public enum Affichage: Equatable, Sendable {
         /// Le système fait tourner le compte à rebours sans réveiller l'app.
         case compteARebours(jusqua: Date)
         /// Texte fixe « fin légale 19:33 » (le jour d'octobre dure plus longtemps que les 8 h de l'activité).
@@ -49,7 +49,7 @@ public struct EtatSession: Codable, Hashable, Sendable {
 }
 
 #if canImport(ActivityKit) && os(iOS)
-public struct SessionActivityAttributes: ActivityAttributes {
+nonisolated public struct SessionActivityAttributes: ActivityAttributes {
     public typealias ContentState = EtatSession
     public init() {}
 }
