@@ -78,3 +78,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #0b57d0;outline-offset:3p
 .acc b{font-weight:600;font-variant-numeric:tabular-nums;color:var(--green)}
 .acc .ch{margin-left:auto;color:var(--ink2)}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important}}
+
+/* pas de barres de défilement visibles (Adem, 15 oct.) */
+*{scrollbar-width:none}
+*::-webkit-scrollbar{display:none;width:0;height:0}

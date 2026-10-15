@@ -1,0 +1,4262 @@
+{
+ "version": 0,
+ "genere_le": "2026-10-15",
+ "date_de_reference": "2026-10-15",
+ "note": "BROUILLON pour relecture humaine, jamais fusionné. Légifrance et la plupart des sites de l'État sont illisibles depuis ce conteneur : le texte du Code n'a pas été relu à la source. Chaque règle est recoupée par au moins une source secondaire lue (fédérations, service-public.gouv.fr, décrets 2016-417 et 2019-352) ; « [?] » marque ce qui n'est pas lu dans un texte. Une citation « du brouillon » vient de regles/brouillon-75-94.json (lue sur Légifrance par son auteur) et n'a pas été relue ici. Dates de réouverture calculées pour 2027 (2e samedi de mars 2027 = 13 mars).",
+ "statuts": {
+  "ouverte": "pêche permise aujourd'hui au regard du seul socle national",
+  "fermee": "fermée aujourd'hui, la date de réouverture est donnée si elle est connue",
+  "interdite_toute_annee": "jamais permise",
+  "selon_arrete_local": "le Code ne fixe rien : arrêté du préfet, du ministre ou du bassin"
+ },
+ "regles_par_defaut": {
+  "espece_non_citee_2e_categorie": "Ouverte toute l'année (R436-7 alinéa 1), de 30 minutes avant le lever à 30 minutes après le coucher du soleil (R436-13), sans taille ni quota nationaux. Le préfet peut fermer, relever une taille ou réduire un quota (R436-8, R436-19, R436-21).",
+  "espece_non_citee_1re_categorie": "PAS toute l'année : seulement du 2e samedi de mars au 3e dimanche de septembre (R436-6), soit du 14 mars au 20 septembre 2026, fermée aujourd'hui, réouverture le 13 mars 2027.",
+  "exceptions_a_verifier": [
+   "R436-9 (version ancienne) : ces périodes ne s'appliquent pas à certains plans d'eau [?]",
+   "Haute montagne : prolongation de 1 à 3 semaines (R436-6 II selon le brouillon) [?]",
+   "Lac Léman : truites, ombles, corégones pêchés pendant 89 jours entre la mi-octobre et la mi-janvier (décret 98-155, état 1998) [?]"
+  ]
+ },
+ "textes": {
+  "R436-6": {
+   "texte": "Code de l'environnement, R436-6 (1re catégorie : temps d'interdiction)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083",
+   "lu": "Légifrance illisible depuis ce conteneur. Période (2e samedi de mars au 3e dimanche de septembre) lue dans service-public.gouv.fr F2117 (fiche du 19/06/2026), generationpeche.fr/176, federation-peche-allier.fr/reglementation (2026), fede-peche31.com. Phrase exacte : celle du brouillon [?]."
+  },
+  "R436-7": {
+   "texte": "Code de l'environnement, R436-7 (2e catégorie : temps d'interdiction)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162",
+   "lu": "Alinéa 1 lu mot pour mot (tableau comparatif du projet de décret 2018 et miroir carnavenir.com). Les 1°, 2°, 3° : phrases du brouillon, dates recoupées par fede-peche31.com, federation-peche-paris.fr/808-reglementation.htm et le décret 2019-352 (art. 4) [?]."
+  },
+  "R436-8": {
+   "texte": "Code de l'environnement, R436-8 (interdictions temporaires par le préfet ; interdiction d'une espèce par le ministre)",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/",
+   "lu": "Version ancienne lue sur carnavenir.com (préfet, par arrêté motivé, interdit temporairement la pêche de certaines espèces) et alinéa ministre ajouté par le décret 2016-417 lu sur faolex.fao.org/docs/pdf/fra155648.pdf. Version 2026 non lue [?]."
+  },
+  "R436-9": {
+   "texte": "Code de l'environnement, R436-9 (plans d'eau)",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/",
+   "lu": "Version ancienne seulement (carnavenir.com) : R436-6 et R436-7 1° à 3° « ne s'appliquent pas aux plans d'eau » visés par un article L431-x. Version 2026 non lue [?]."
+  },
+  "R436-10": {
+   "texte": "Code de l'environnement, R436-10 (écrevisses à pattes rouges, des torrents, à pattes blanches, à pattes grêles)",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/",
+   "lu": "Lu mot pour mot dans une copie du Code datée d'environ 2018 (data.over-blog-kiwi.com, ob_c4859f_code-de-l-environnement.pdf). Version 2026 non relue [?]."
+  },
+  "R436-11": {
+   "texte": "Code de l'environnement, R436-11 (grenouilles verte et rousse)",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/",
+   "lu": "Période maximale de dix mois fixée par le préfet : lue dans le tableau comparatif du projet de décret 2018 et carnavenir.com ; noms latins ajoutés par le décret 2019-352 (art. 5) [?] pour la version 2026."
+  },
+  "R436-13": {
+   "texte": "Code de l'environnement, R436-13 (heures)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266",
+   "lu": "Demi-heure avant le lever et après le coucher : service-public.gouv.fr F2117 (2026) et generationpeche.fr/176. Phrase exacte : brouillon [?]."
+  },
+  "R436-14": {
+   "texte": "Code de l'environnement, R436-14 (dérogations aux heures : carpe, truite de mer, alose, lamproies, mulet...)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850261",
+   "lu": "Dérogations par arrêté préfectoral lues dans service-public.gouv.fr F2117 (traduction automatique) ; 5° (carpe) cité par l'arrêté de la Charente. Texte exact : brouillon [?]."
+  },
+  "R436-18": {
+   "texte": "Code de l'environnement, R436-18 (tailles minimales)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171",
+   "lu": "Liste lue sur carnavenir.com (état d'environ 2007), peche-assistant.fr (état du 15/08/2026, site non officiel) et modifications de 2019 lues dans le décret 2019-352 (faolex.fao.org/docs/pdf/Fra185742.pdf, art. 7) ; Légifrance illisible [?]."
+  },
+  "R436-19": {
+   "texte": "Code de l'environnement, R436-19 (tailles relevables par le préfet)",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006188898/",
+   "lu": "Décret 2019-352 art. 8 (faolex) : le préfet peut porter le sandre à 0,50 m, le black-bass à 0,40 m (2e catégorie), le brochet à 0,60 m (1re et 2e) ; fede-peche31.com : ombre à 0,35 m, truites de 0,18 à 0,30 m. Texte exact non lu [?]."
+  },
+  "R436-21": {
+   "texte": "Code de l'environnement, R436-21 (quotas)",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184",
+   "lu": "Salmonidés 10 par jour : carnavenir.com. 2e catégorie sandre/brochet/black-bass 3 dont 2 brochets : décret 2016-417 (faolex fra155648) et generationpeche.fr/176. Brochet 2 par jour en 1re catégorie : décret 2019-352 art. 9 (faolex). Texte consolidé non lu [?]."
+  },
+  "R436-23": {
+   "texte": "Code de l'environnement, R436-23 (lignes)",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006188900",
+   "lu": "federation-peche-allier.fr/reglementation (2026) : 2e catégorie 4 lignes, 2 hameçons ou 3 mouches [?]."
+  },
+  "L436-16": {
+   "texte": "Code de l'environnement, L436-16 II (carpe de plus de 60 cm)",
+   "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006176589",
+   "lu": "federation-peche-paris.fr/808-reglementation.htm et federation-peche-allier.fr/reglementation : transport vivant interdit pour les carpes de plus de 60 cm, 22 500 euros. Phrase exacte : brouillon [?]."
+  },
+  "R432-5": {
+   "texte": "Code de l'environnement, R432-5 et L432-10 (espèces susceptibles de provoquer des déséquilibres biologiques)",
+   "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf",
+   "lu": "État ancien lu dans un document de la préfecture de l'Ain (poisson-chat, perche soleil, crabe chinois, toutes écrevisses sauf 4 indigènes, grenouilles du genre Rana sauf indigènes). Art. 6 des arrêtés 75 et 94 (brouillon) en reprend la liste. Version 2026 non lue [?]."
+  },
+  "AM-1988": {
+   "texte": "Arrêté du 8 décembre 1988 fixant la liste des espèces de poissons protégées sur l'ensemble du territoire national",
+   "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national",
+   "lu": "Lu en entier sur aida.ineris.fr et sur occitanie.developpement-durable.gouv.fr : interdit en tout temps la destruction ou l'enlèvement des oeufs et la destruction du milieu de reproduction (pas la capture de l'adulte). Aucune modification mentionnée."
+  },
+  "AM-1999": {
+   "texte": "Arrêté du 9 juillet 1999 fixant la liste des espèces de vertébrés protégées menacées d'extinction en France (poissons : apron, esturgeon)",
+   "url": "https://aida.ineris.fr/node/33240",
+   "lu": "Liste lue sur aida.ineris.fr (modifié par l'arrêté du 27 mai 2009). Contenu des interdictions non lu : renvoi à L411-1 [?]."
+  },
+  "AM-EEE-2018": {
+   "texte": "Arrêté du 14 février 2018 relatif à la prévention de l'introduction et de la propagation des espèces animales exotiques envahissantes (annexes I, II)",
+   "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf",
+   "lu": "Lu : art. 3 I interdit sur tout le territoire métropolitain et en tout temps l'introduction, la détention, le transport, la vente et l'achat des espèces de l'annexe II ; pas de mot « remise à l'eau »."
+  },
+  "AM-EEE-2023": {
+   "texte": "Arrêté du 2 mars 2023 portant mise à jour de la liste des espèces animales et végétales exotiques envahissantes (JORF du 6/04/2023)",
+   "url": "https://aida.ineris.fr/reglementation/arrete-020323-portant-mise-a-jour-liste-especes-animales-vegetales-exotiques",
+   "lu": "Lu sur aida.ineris.fr : ajoute à l'annexe II-4 Ameiurus melas, Channa argus, Fundulus heteroclitus, Gambusia holbrooki, Gambusia affinis, Morone americana, Faxonius rusticus. Régime exact de l'annexe II-4 non lu [?]. Mises à jour postérieures à 2023 non cherchées [?]."
+  },
+  "D-2026-464": {
+   "texte": "Décret n° 2026-464 du 8 juin 2026 inscrivant le silure glane sur la liste des espèces susceptibles de provoquer des déséquilibres biologiques",
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054223579",
+   "lu": "Texte du décret non lu (Légifrance illisible). Contenu lu dans federation-peche-allier.fr, federationpechedordogne.fr, fedepeche49.fr et federationpeche44.fr : bassins Adour-Garonne et Loire-Bretagne, en vigueur le 11/06/2026, L432-10, remise à l'eau immédiate permise [?]."
+  },
+  "ANGUILLE-2026": {
+   "texte": "Arrêté ministériel du 12/06/2026 (fermeture anticipée de la pêche de loisir de l'anguille jaune, saison 2025-2026) ; arrêtés du 5/02/2016 et du 14/03/2024",
+   "url": "https://www.consultations-publiques.developpement-durable.gouv.fr/IMG/pdf/tecl2611426a_projet_am_anguilles_2026.pdf",
+   "lu": "Projet d'arrêté lu (date générale 31 juillet 2026, sauf date antérieure de l'arrêté du 5/02/2016). Arrêté signé non lu. Seine-Normandie et Artois-Picardie : 15 juillet (generationpeche.fr/7132, federationpeche44.fr, service-public.gouv.fr F2117) [?]."
+  },
+  "D-2019-352": {
+   "texte": "Décret n° 2019-352 du 23 avril 2019 modifiant diverses dispositions relatives à la pêche en eau douce",
+   "url": "https://faolex.fao.org/docs/pdf/Fra185742.pdf",
+   "lu": "Lu : R436-6 (brochet remis à l'eau du 2e samedi de mars au dernier vendredi d'avril), R436-7 1° (dernier samedi d'avril à la place du 1er mai), R436-11, R436-18 (grenouilles 8 cm, esturgeon retiré), R436-19, R436-21 (brochet 2 par jour en 1re catégorie)."
+  },
+  "D-2016-417": {
+   "texte": "Décret n° 2016-417 du 7 avril 2016 modifiant diverses dispositions relatives à la pêche en eau douce",
+   "url": "https://faolex.fao.org/docs/pdf/fra155648.pdf",
+   "lu": "Lu : R436-8 (alinéa ministre), R436-19, R436-21 (sandre, brochet, black-bass : 3 par jour en 2e catégorie)."
+  },
+  "FED-75-94": {
+   "texte": "Fédération de pêche 75/92/93/94, page Réglementation",
+   "url": "https://www.federation-peche-paris.fr/808-reglementation.htm",
+   "lu": "Lu le 15/10/2026, page sans date. Source secondaire : ce n'est pas un texte réglementaire."
+  },
+  "ALLIER-2026": {
+   "texte": "Fédération de pêche de l'Allier, Réglementation 2026",
+   "url": "https://www.federation-peche-allier.fr/reglementation/",
+   "lu": "Lu le 15/10/2026. Source secondaire, réglementation locale."
+  },
+  "FNPF": {
+   "texte": "Génération Pêche (Fédération nationale), Règles à connaître",
+   "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm",
+   "lu": "Lu le 15/10/2026, sans date de mise à jour. Source secondaire."
+  },
+  "SERVICE-PUBLIC": {
+   "texte": "service-public.gouv.fr, fiche F2117 Pêche de loisir à la ligne en eau douce",
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2117",
+   "lu": "Lue en version anglaise (traduction automatique) ; fiche vérifiée le 19/06/2026."
+  },
+  "FED-31": {
+   "texte": "Fédération de pêche de la Haute-Garonne, tailles légales et périodes d'ouverture",
+   "url": "https://www.fede-peche31.com/5973-tailles-legales-de-capture-et-periode-ouverture.htm",
+   "lu": "Lu le 15/10/2026. Source secondaire."
+  },
+  "PECHE-ASSISTANT": {
+   "texte": "peche-assistant.fr, tailles légales (non officiel)",
+   "url": "https://peche-assistant.fr/blog/taille-legale-poissons",
+   "lu": "Lu le 15/10/2026, état annoncé au 15/08/2026. Site privé, sert seulement à recouper."
+  },
+  "PECHE67-ECREVISSES": {
+   "texte": "Fédération du Bas-Rhin, Les écrevisses et la réglementation",
+   "url": "https://www.peche67.fr/cms_viewFile.php?idtf=34505&path=regles-ecrevisses.pdf",
+   "lu": "Lu le 15/10/2026. Source secondaire : R436-10, R436-18 (9 cm), arrêté du 21/07/1983, EEE."
+  },
+  "ARP-16": {
+   "texte": "Charente, arrêté réglementaire permanent 2025 (projet signé, art. 3 à 8)",
+   "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf",
+   "lu": "Lu le 15/10/2026 : exemple de réglementation locale (art. 5 liste les espèces interdites sur le fondement de R436-8)."
+  },
+  "LEMAN": {
+   "texte": "Décret n° 98-155 du 4 mars 1998 (lac Léman)",
+   "url": "https://faolex.fao.org/docs/pdf/Fra12463.pdf",
+   "lu": "Lu : truites, ombles chevaliers et corégones pêchés pendant au moins 89 jours consécutifs entre la mi-octobre et la mi-janvier ; texte de 1998 sous l'ancien article R*236-100 du code rural, état 2026 non lu [?]."
+  },
+  "TABLEAU-2018": {
+   "texte": "Projet de décret pêche 2018, tableau comparatif (consultations-publiques.developpement-durable.gouv.fr)",
+   "url": "https://www.consultations-publiques.developpement-durable.gouv.fr/IMG/pdf/tableau_comparatif_decret_peche_v_post_cne.pdf",
+   "lu": "Lu : texte actuel (2018) de R436-6, R436-7, R436-11 en regard des modifications proposées."
+  },
+  "CARNAVENIR": {
+   "texte": "Copie du Code de l'environnement, partie réglementaire (état d'environ 2007)",
+   "url": "https://www.carnavenir.com/reglementation/code_environnement_reglementaire.htm",
+   "lu": "Lu le 15/10/2026 : R436-6 à R436-23 dans leur état ancien. Sert de base de lecture, à comparer aux décrets de 2016 et 2019."
+  },
+  "MDM-SANDRE": {
+   "texte": "Sandre, fiches taxon (mdm.sandre.eaufrance.fr/id/taxon/<code>/html)",
+   "url": "https://mdm.sandre.eaufrance.fr/id/taxon/2193/html",
+   "lu": "Chaque code Sandre marqué « lu » a été vérifié sur sa fiche le 15/10/2026."
+  }
+ },
+ "lecture_des_sources": "Chaque entrée cite ses sources par id ; le titre, l'URL et ce qui a été lu (ou non) de chaque texte sont dans « textes ».",
+ "nombre_especes": 77,
+ "especes": [
+  {
+   "id": "truite-fario",
+   "nom": "Truite fario",
+   "latin": "Salmo trutta fario",
+   "code_sandre": "2221",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "fermee",
+    "regle": "R436-7 3° (temps d'ouverture de la 1re catégorie)",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": "Avis annuel 2026 de Paris et du Val-de-Marne : début le 21 mars (lecture OCR) contre le 14 mars du Code, sans effet en octobre [?]."
+   },
+   "taille_min_cm": 23,
+   "taille_min_note": "R436-18 : 0,23 m pour les truites autres que la truite de mer, l'omble ou saumon de fontaine et l'omble chevalier. Le préfet peut la fixer de 18 à 30 cm selon les cours d'eau (R436-19) [?].",
+   "quota": {
+    "par_jour": 10,
+    "regle": "R436-21 alinéa 1",
+    "note": "Salmonidés autres que le saumon et la truite de mer ; le préfet peut réduire (Allier 6, Charente 6)."
+   },
+   "statut_protection": "Frayères et oeufs protégés (arrêté du 8/12/1988, Salmo trutta ssp.). La pêche de l'adulte n'est pas interdite.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "R436-19",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006188898/"
+    },
+    {
+     "id": "R436-21",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    }
+   ],
+   "citation": "3° La pêche de la truite fario, de l'omble ou saumon de fontaine, de l'omble chevalier et du cristivomer, [...] qui sont autorisées durant le temps d'ouverture de la pêche dans les eaux de la 1re catégorie.",
+   "lu": "citation du brouillon [?], dates recoupées par FED-75-94, FED-31, FNPF",
+   "incertitudes": [
+    "Prolongation d'une à trois semaines en haute montagne (R436-6 II selon le brouillon) : non lue, ferait finir la saison au plus tard le 11 octobre 2026 [?].",
+    "Lac Léman : période d'automne propre (décret 98-155, état 1998), la fario y est pêchable à la mi-octobre [?]."
+   ]
+  },
+  {
+   "id": "truite-arc-en-ciel",
+   "nom": "Truite arc-en-ciel",
+   "latin": "Oncorhynchus mykiss",
+   "code_sandre": "2216",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 3° (arc-en-ciel visée seulement en cours d'eau classés à saumon ou truite de mer)",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": "Dans un cours d'eau ou une partie de cours d'eau classé à saumon ou à truite de mer : mêmes dates que la fario, donc fermée aujourd'hui (réouverture 2027-03-13). Seine, Marne, Paris, Val-de-Marne : non classés d'après les avis annuels 75 et 94 [?]."
+   },
+   "taille_min_cm": 23,
+   "taille_min_note": "R436-18 (truites). En 2e catégorie le préfet peut lever l'interdiction de garder une arc-en-ciel sous la taille (R436-19, lecture carnavenir.com 2007 et fede-peche31.com) [?].",
+   "quota": {
+    "par_jour": 10,
+    "regle": "R436-21 alinéa 1",
+    "note": "Salmonidés autres que le saumon et la truite de mer ; le préfet peut réduire (Allier 6, Charente 6)."
+   },
+   "statut_protection": "Aucune (espèce introduite).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "R436-19",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006188898/"
+    },
+    {
+     "id": "R436-21",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "FED-31",
+     "url": "https://www.fede-peche31.com/5973-tailles-legales-de-capture-et-periode-ouverture.htm"
+    }
+   ],
+   "citation": "ainsi que la pêche de la truite arc-en-ciel dans les cours d'eau ou les parties de cours d'eau classés à saumon ou à truite de mer, qui sont autorisées durant le temps d'ouverture de la pêche dans les eaux de la 1re catégorie.",
+   "lu": "citation du brouillon [?], sens recoupé par FED-31 (« arc-en-ciel en cours d'eau classés ») et FED-75-94 (« Truite hors truite de mer et arc-en-ciel »)",
+   "incertitudes": [
+    "Ni R436-7 3° ni l'arrêté de classement des cours d'eau à saumon ou truite de mer n'ont été relus : la liste des cours d'eau classés est inconnue [?]."
+   ]
+  },
+  {
+   "id": "truite-de-mer",
+   "nom": "Truite de mer",
+   "latin": "Salmo trutta trutta",
+   "code_sandre": "2224",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : « Saumon atlantique, truite de mer Pêche interdite toute l'année » (avis annuels 2026, lecture du brouillon)."
+   },
+   "categorie_2": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : interdite toute l'année. Charente : interdite en tout temps (art. 5). Ailleurs : seulement là où un arrêté l'ouvre [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Exclue de la taille de 23 cm de R436-18 (« autres que la truite de mer »). Aucune autre taille nationale lue.",
+   "quota": {
+    "par_jour": null,
+    "note": "Exclue du quota de 10 de R436-21 (« autres que le saumon et, le cas échéant, la truite de mer »). Quota par arrêté local [?]."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988, Salmo trutta ssp.). Supplément de redevance de 20 euros pour le saumon et la truite de mer (service-public.gouv.fr).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-8",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "SERVICE-PUBLIC",
+     "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2117"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    }
+   ],
+   "citation": "Saumon atlantique, truite de mer Pêche interdite toute l'année",
+   "lu": "citation de l'avis annuel 2026 de Paris, lue par le brouillon, non relue [?]",
+   "incertitudes": [
+    "Régime national des migrateurs (R436-44 et suivants, plans de gestion par bassin) non lu [?]."
+   ]
+  },
+  {
+   "id": "saumon-atlantique",
+   "nom": "Saumon atlantique",
+   "latin": "Salmo salar",
+   "code_sandre": "2220",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : pêche interdite toute l'année. Charente : interdit en tout temps."
+   },
+   "categorie_2": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : interdite toute l'année. Ailleurs : seulement sur les cours d'eau où un arrêté l'ouvre [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille nationale lue (R436-18 ne cite pas le saumon).",
+   "quota": {
+    "par_jour": null,
+    "note": "Exclu du quota de 10 de R436-21. Quota ou marquage par arrêté de bassin [?]."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988, Salmo salar). Supplément de redevance de 20 euros pour le saumon (service-public.gouv.fr).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-8",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "SERVICE-PUBLIC",
+     "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2117"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    }
+   ],
+   "citation": "Saumon atlantique, truite de mer Pêche interdite toute l'année",
+   "lu": "citation de l'avis annuel 2026 de Paris, lue par le brouillon, non relue [?]",
+   "incertitudes": [
+    "Régime national des migrateurs non lu [?]."
+   ]
+  },
+  {
+   "id": "omble-de-fontaine",
+   "nom": "Omble de fontaine (saumon de fontaine)",
+   "latin": "Salvelinus fontinalis",
+   "code_sandre": "2227",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "fermee",
+    "regle": "R436-7 3° (temps d'ouverture de la 1re catégorie)",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": "Avis annuel 2026 de Paris et du Val-de-Marne : début le 21 mars (lecture OCR) contre le 14 mars du Code, sans effet en octobre [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "R436-18 exclut « l'omble ou saumon de fontaine » de la taille de 23 cm : aucune taille nationale. Le préfet peut en fixer une (R436-19) ; Allier : 23 cm [?].",
+   "quota": {
+    "par_jour": 10,
+    "regle": "R436-21 alinéa 1",
+    "note": "Salmonidés autres que le saumon et la truite de mer ; le préfet peut réduire (Allier 6, Charente 6)."
+   },
+   "statut_protection": "Aucune protection nationale lue (espèce introduite).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "R436-19",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006188898/"
+    },
+    {
+     "id": "R436-21",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184"
+    },
+    {
+     "id": "ALLIER-2026",
+     "url": "https://www.federation-peche-allier.fr/reglementation/"
+    }
+   ],
+   "citation": "3° La pêche de la truite fario, de l'omble ou saumon de fontaine, de l'omble chevalier et du cristivomer, [...] qui sont autorisées durant le temps d'ouverture de la pêche dans les eaux de la 1re catégorie.",
+   "lu": "citation du brouillon [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "omble-chevalier",
+   "nom": "Omble chevalier",
+   "latin": "Salvelinus alpinus",
+   "code_sandre": "2226",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "fermee",
+    "regle": "R436-7 3° (temps d'ouverture de la 1re catégorie)",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": "Avis annuel 2026 de Paris et du Val-de-Marne : début le 21 mars (lecture OCR) contre le 14 mars du Code, sans effet en octobre [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "R436-18 exclut « l'omble chevalier » de la taille de 23 cm : aucune taille nationale. Préfet : R436-19 [?].",
+   "quota": {
+    "par_jour": 10,
+    "regle": "R436-21 alinéa 1",
+    "note": "Salmonidés autres que le saumon et la truite de mer ; le préfet peut réduire (Allier 6, Charente 6)."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988, Salvelinus alpinus).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "R436-19",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006188898/"
+    },
+    {
+     "id": "R436-21",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    }
+   ],
+   "citation": "3° La pêche de la truite fario, de l'omble ou saumon de fontaine, de l'omble chevalier et du cristivomer, [...] qui sont autorisées durant le temps d'ouverture de la pêche dans les eaux de la 1re catégorie.",
+   "lu": "citation du brouillon [?]",
+   "incertitudes": [
+    "Lacs alpins : périodes propres par arrêté (Léman, décret 98-155) [?]."
+   ]
+  },
+  {
+   "id": "cristivomer",
+   "nom": "Cristivomer (truite de lac américaine)",
+   "latin": "Salvelinus namaycush",
+   "code_sandre": "2228",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "fermee",
+    "regle": "R436-7 3° (temps d'ouverture de la 1re catégorie)",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": "Avis annuel 2026 de Paris et du Val-de-Marne : début le 21 mars (lecture OCR) contre le 14 mars du Code, sans effet en octobre [?]."
+   },
+   "taille_min_cm": 35,
+   "taille_min_note": "R436-18 : 0,35 m pour le cristivomer (carnavenir.com, peche-assistant.fr).",
+   "quota": {
+    "par_jour": 10,
+    "regle": "R436-21 alinéa 1",
+    "note": "Salmonidés autres que le saumon et la truite de mer ; le préfet peut réduire (Allier 6, Charente 6)."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "R436-21",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184"
+    },
+    {
+     "id": "PECHE-ASSISTANT",
+     "url": "https://peche-assistant.fr/blog/taille-legale-poissons"
+    }
+   ],
+   "citation": "3° La pêche de la truite fario, de l'omble ou saumon de fontaine, de l'omble chevalier et du cristivomer, [...] qui sont autorisées durant le temps d'ouverture de la pêche dans les eaux de la 1re catégorie.",
+   "lu": "citation du brouillon [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "ombre-commun",
+   "nom": "Ombre commun",
+   "latin": "Thymallus thymallus",
+   "code_sandre": "2247",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 3e samedi de mai au 3e dimanche de septembre (16 mai au 20 septembre 2026)",
+    "reouverture": "2027-05-15",
+    "note": "Lu dans FED-31, service-public.gouv.fr et FNPF."
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 2°",
+    "periode_nationale": "du 3e samedi de mai au 31 décembre (16 mai au 31 décembre 2026)",
+    "reouverture": null,
+    "prochaine_fermeture": "2027-01-01",
+    "reouverture_suivante": "2027-05-15",
+    "note": "Fermée du 1er janvier au 14 mai 2027."
+   },
+   "taille_min_cm": 30,
+   "taille_min_note": "R436-18 : 0,30 m pour l'ombre commun et le corégone. Le préfet peut la porter à 0,35 m (R436-19, FED-31) [?].",
+   "quota": {
+    "par_jour": 10,
+    "regle": "R436-21 alinéa 1",
+    "note": "Seulement si l'ombre compte comme « salmonidé » au sens de R436-21 : le brouillon l'y range, le Code ne le dit pas [?]. Beaucoup d'arrêtés locaux imposent le no-kill (Allier)."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988, Thymallus thymallus).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "R436-19",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006188898/"
+    },
+    {
+     "id": "R436-21",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    },
+    {
+     "id": "FED-31",
+     "url": "https://www.fede-peche31.com/5973-tailles-legales-de-capture-et-periode-ouverture.htm"
+    },
+    {
+     "id": "SERVICE-PUBLIC",
+     "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2117"
+    }
+   ],
+   "citation": "2° La pêche de l'ombre commun, qui est autorisée du troisième samedi de mai au 31 décembre, inclus ;",
+   "lu": "citation du brouillon [?], dates recoupées par TABLEAU-2018, FED-31, FED-75-94",
+   "incertitudes": []
+  },
+  {
+   "id": "huchon",
+   "nom": "Huchon (huchen)",
+   "latin": "Hucho hucho",
+   "code_sandre": "2214",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": 70,
+   "taille_min_note": "R436-18 : 0,70 m pour le huchon (carnavenir.com, peche-assistant.fr : « pas établi en France »).",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "PECHE-ASSISTANT",
+     "url": "https://peche-assistant.fr/blog/taille-legale-poissons"
+    },
+    {
+     "id": "CARNAVENIR",
+     "url": "https://www.carnavenir.com/reglementation/code_environnement_reglementaire.htm"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "taille lue, présence en France non établie [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "coregones",
+   "nom": "Corégones (lavaret, féra, palée)",
+   "latin": "Coregonus spp.",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": 30,
+   "taille_min_note": "R436-18 : 0,30 m pour l'ombre commun et le corégone.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988, Coregonus ssp.).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    },
+    {
+     "id": "LEMAN",
+     "url": "https://faolex.fao.org/docs/pdf/Fra12463.pdf"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "taille lue dans carnavenir.com et peche-assistant.fr [?]",
+   "incertitudes": [
+    "Pêche dans les grands lacs alpins : périodes propres (Léman, décret 98-155) [?]."
+   ]
+  },
+  {
+   "id": "brochet",
+   "nom": "Brochet",
+   "latin": "Esox lucius",
+   "code_sandre": "2151",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du dernier samedi d'avril au 3e dimanche de septembre (25 avril au 20 septembre 2026) ; tout brochet capturé du 2e samedi de mars au dernier vendredi d'avril est remis à l'eau tout de suite",
+    "reouverture": "2027-04-24",
+    "note": "Règle ajoutée par le décret 2019-352 art. 3."
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 1°",
+    "periode_nationale": "du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre (2026 : fermée du 26 janvier au 24 avril)",
+    "reouverture": null,
+    "prochaine_fermeture": "2027-02-01",
+    "reouverture_suivante": "2027-04-24",
+    "note": "Fermée du 1er février au 23 avril 2027. Pendant la fermeture, pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer le brochet interdite (arrêtés 75 et 94 ; FNPF la présente comme nationale) [?]."
+   },
+   "taille_min_cm": 50,
+   "taille_min_note": "R436-18 : 0,50 m, toutes catégories depuis 2019. Le préfet peut la porter à 0,60 m en 1re et 2e catégorie (R436-19 ; Charente et Allier : 60 cm) [?].",
+   "quota": {
+    "par_jour": 3,
+    "regle": "R436-21",
+    "note": "2e catégorie : 3 sandres, brochets et black-bass ensemble dont 2 brochets au plus. 1re catégorie : 2 brochets par jour (décret 2019-352 art. 9)."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988, Esox lucius). Introduction en 1re catégorie interdite (L432-10, 9 000 euros) [?].",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "R436-19",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006188898/"
+    },
+    {
+     "id": "R436-21",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184"
+    },
+    {
+     "id": "D-2019-352",
+     "url": "https://faolex.fao.org/docs/pdf/Fra185742.pdf"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    }
+   ],
+   "citation": "1° La pêche du brochet, qui est autorisée du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre, inclus ;",
+   "lu": "citation du brouillon [?], dates recoupées par FED-75-94, FED-31, FNPF, D-2019-352",
+   "incertitudes": [
+    "Le brouillon n'a pas de règle 1re catégorie ni de quota de 2 brochets en 1re catégorie."
+   ]
+  },
+  {
+   "id": "sandre",
+   "nom": "Sandre",
+   "latin": "Sander lucioperca",
+   "code_sandre": "2195",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": "Certains préfets ferment le sandre avec le brochet (Charente) ; pas à Paris ni dans le Val-de-Marne (ouverture générale du 1er janvier au 31 décembre 2026)."
+   },
+   "taille_min_cm": 40,
+   "taille_min_note": "R436-18 : 0,40 m dans les eaux de la 2e catégorie seulement ; aucune taille nationale en 1re catégorie. Le préfet peut la porter à 0,50 m (R436-19) [?].",
+   "quota": {
+    "par_jour": 3,
+    "regle": "R436-21 (décret 2016-417)",
+    "note": "2e catégorie : sandres, brochets et black-bass ensemble, dont 2 brochets au plus."
+   },
+   "statut_protection": "Aucune. Introduction en 1re catégorie interdite (L432-10, 9 000 euros) [?].",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "R436-19",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006188898/"
+    },
+    {
+     "id": "R436-21",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    }
+   ],
+   "citation": "0,40 mètre pour le sandre dans les eaux de la 2e catégorie ;",
+   "lu": "taille 40 lue dans R436-18 (carnavenir.com, peche-assistant.fr), citation de l'alinéa 1 de R436-7",
+   "incertitudes": []
+  },
+  {
+   "id": "perche-commune",
+   "nom": "Perche commune",
+   "latin": "Perca fluviatilis",
+   "code_sandre": "2193",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026 (code Perche)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune. Introduction en 1re catégorie interdite (L432-10, 9 000 euros) [?].",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "R436-21",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "gremille",
+   "nom": "Grémille",
+   "latin": "Gymnocephalus cernua",
+   "code_sandre": "2191",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "black-bass",
+   "nom": "Black-bass à grande bouche",
+   "latin": "Micropterus salmoides",
+   "code_sandre": "2053",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": 30,
+   "taille_min_note": "R436-18 : 0,30 m dans les eaux de la 2e catégorie ; aucune taille nationale en 1re. Le préfet peut la porter à 0,40 m (R436-19) [?]. Le black-bass à petite bouche (Micropterus dolomieu, Sandre 2052, code gelé) n'a pas de règle distincte lue [?].",
+   "quota": {
+    "par_jour": 3,
+    "regle": "R436-21 (décret 2016-417)",
+    "note": "2e catégorie : sandres, brochets et black-bass ensemble, dont 2 brochets au plus."
+   },
+   "statut_protection": "Aucune. Introduction en 1re catégorie interdite (L432-10, 9 000 euros) [?].",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "R436-19",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006188898/"
+    },
+    {
+     "id": "R436-21",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184"
+    },
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    }
+   ],
+   "citation": "0,30 mètre pour le black - bass dans les eaux de la 2e catégorie ;",
+   "lu": "citation du brouillon, sens recoupé par FNPF et peche-assistant.fr [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "perche-soleil",
+   "nom": "Perche soleil",
+   "latin": "Lepomis gibbosus",
+   "code_sandre": "2050",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante (arrêté du 14/02/2018, annexe II-3) et espèce susceptible de provoquer des déséquilibres biologiques (R432-5).",
+   "transport_vivant_remise_a_l_eau": "Détention, transport, vente et introduction interdits (art. 3 I). Remise à l'eau interdite selon FNPF et fédération de l'Allier ; l'arrêté lui-même n'écrit pas « remise à l'eau » [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "AM-EEE-2018",
+     "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    },
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    },
+    {
+     "id": "ALLIER-2026",
+     "url": "https://www.federation-peche-allier.fr/reglementation/"
+    }
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l’introduction sur le territoire",
+   "lu": "début de l'art. 3 I lu (extrait court) ; la suite n'a pas été relue mot pour mot [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "silure-glane",
+   "nom": "Silure glane",
+   "latin": "Silurus glanis",
+   "code_sandre": "2238",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection. Depuis le 11 juin 2026, espèce susceptible de provoquer des déséquilibres biologiques (L432-10) dans les bassins Adour-Garonne et Loire-Bretagne seulement (décret 2026-464). Pas dans Seine-Normandie ni Rhône-Méditerranée d'après les pages lues [?].",
+   "transport_vivant_remise_a_l_eau": "Adour-Garonne et Loire-Bretagne : introduction, transfert, alevinage interdits (9 000 euros) ; garde vivante interdite ; remise à l'eau permise si elle est immédiate et à l'endroit de la capture. Ailleurs : rien lu.",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "D-2026-464",
+     "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054223579"
+    },
+    {
+     "id": "ALLIER-2026",
+     "url": "https://www.federation-peche-allier.fr/reglementation/"
+    }
+   ],
+   "citation": "Silure glane classé ESPDB dans les bassins Adour-Garonne et Loire-Bretagne par le décret n° 2026-464 du 8 juin 2026 (en vigueur le 11 juin 2026)",
+   "lu": "décret non lu : contenu lu dans 4 pages de fédérations [?]; phrase = résumé, pas citation",
+   "incertitudes": [
+    "Le brouillon (nat-aut-*) ne connaît pas ce décret."
+   ]
+  },
+  {
+   "id": "poisson-chat",
+   "nom": "Poisson-chat (Ameiurus melas ; Ameiurus nebulosus [?])",
+   "latin": "Ameiurus melas",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce susceptible de provoquer des déséquilibres biologiques (R432-5, lu sous le nom Ictalurus melas) ; espèce exotique envahissante depuis l'arrêté du 2 mars 2023 (annexe II-4, Ameiurus melas) [?].",
+   "transport_vivant_remise_a_l_eau": "Introduction interdite (R432-5, art. 6 des arrêtés 75 et 94). Remise à l'eau, détention, transport et vente vivants interdits selon FNPF et fédération de l'Allier ; régime exact de l'annexe II-4 non lu [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    },
+    {
+     "id": "AM-EEE-2023",
+     "url": "https://aida.ineris.fr/reglementation/arrete-020323-portant-mise-a-jour-liste-especes-animales-vegetales-exotiques"
+    },
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    },
+    {
+     "id": "ALLIER-2026",
+     "url": "https://www.federation-peche-allier.fr/reglementation/"
+    }
+   ],
+   "citation": "L'introduction des espèces de poissons, de crustacés et de grenouilles susceptibles de provoquer des déséquilibres biologiques dans les eaux et listées ci-dessous est interdite : Poissons : - le poisson-chat : Ameiurusmelas ;",
+   "lu": "citation de l'arrêté de Val-de-Marne art. 6, reprise du brouillon [?]",
+   "incertitudes": [
+    "Ameiurus nebulosus (poisson-chat commun) : ni R432-5 ni l'annexe II-4 lus ne le citent [?]."
+   ]
+  },
+  {
+   "id": "carpe-commune",
+   "nom": "Carpe commune (miroir, cuir)",
+   "latin": "Cyprinus carpio",
+   "code_sandre": "2110",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune. Carpe de plus de 60 cm : transport vivant interdit au pêcheur amateur, 22 500 euros (L436-16 II). Pêche de nuit seulement sur les parcours fixés par arrêté préfectoral ; de nuit, aucune carpe maintenue en captivité ni transportée (R436-14 5°).",
+   "transport_vivant_remise_a_l_eau": "Carpe > 60 cm : transport vivant interdit, jour et nuit. Remise à l'eau obligatoire des carpes > 60 cm : règle locale (Allier), pas nationale [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "R436-14",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850261"
+    },
+    {
+     "id": "L436-16",
+     "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006176589"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "ALLIER-2026",
+     "url": "https://www.federation-peche-allier.fr/reglementation/"
+    }
+   ],
+   "citation": "Sont punis d'une amende de 22 500 €, lorsque l'espèce concernée est la carpe commune (cyprinus carpio) et que la longueur du poisson est supérieure à soixante centimètres, les faits prévus aux 1° à 4° du I ainsi que le fait, pour un pêcheur amateur, de transporter vivant un tel poisson.",
+   "lu": "citation du brouillon [?], sens recoupé par FED-75-94 et ALLIER-2026",
+   "incertitudes": []
+  },
+  {
+   "id": "carpe-amour",
+   "nom": "Carpe amour",
+   "latin": "Ctenopharyngodon idella",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": [
+    "Absente de R432-5 et de l'arrêté EEE de 2018 tels que lus ; le Code interdit l'introduction de poissons non représentés sans autorisation (L432-10 2°) [?]."
+   ]
+  },
+  {
+   "id": "carpe-argentee",
+   "nom": "Carpe argentée",
+   "latin": "Hypophthalmichthys molitrix",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": [
+    "Même remarque que la carpe amour [?]."
+   ]
+  },
+  {
+   "id": "carpe-grosse-tete",
+   "nom": "Carpe à grosse tête",
+   "latin": "Hypophthalmichthys nobilis (syn. Aristichthys nobilis)",
+   "code_sandre": "2092",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026 (code gelé)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "MDM-SANDRE",
+     "url": "https://mdm.sandre.eaufrance.fr/id/taxon/2193/html"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": [
+    "Code Sandre 2092 = Aristichthys nobilis, gelé."
+   ]
+  },
+  {
+   "id": "gardon",
+   "nom": "Gardon",
+   "latin": "Rutilus rutilus",
+   "code_sandre": "2133",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "rotengle",
+   "nom": "Rotengle",
+   "latin": "Scardinius erythrophthalmus",
+   "code_sandre": "2135",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "breme-commune",
+   "nom": "Brème commune",
+   "latin": "Abramis brama",
+   "code_sandre": "2086",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "breme-bordeliere",
+   "nom": "Brème bordelière",
+   "latin": "Blicca bjoerkna",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": [
+    "Code Sandre : genre Blicca = 2098, espèce non lue."
+   ]
+  },
+  {
+   "id": "chevesne",
+   "nom": "Chevesne (chevaine)",
+   "latin": "Squalius cephalus",
+   "code_sandre": "31041",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "tanche",
+   "nom": "Tanche",
+   "latin": "Tinca tinca",
+   "code_sandre": "2137",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "barbeau-fluviatile",
+   "nom": "Barbeau fluviatile",
+   "latin": "Barbus barbus",
+   "code_sandre": "2096",
+   "code_sandre_source": "code du brouillon (regles/brouillon-75-94.json)",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "vandoise",
+   "nom": "Vandoise",
+   "latin": "Leuciscus leuciscus",
+   "code_sandre": "2122",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988). La pêche de l'adulte n'est pas interdite.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "ide-melanote",
+   "nom": "Ide mélanote",
+   "latin": "Leuciscus idus",
+   "code_sandre": "2121",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988). La pêche de l'adulte n'est pas interdite.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "hotu",
+   "nom": "Hotu",
+   "latin": "Chondrostoma nasus",
+   "code_sandre": "2104",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "ablette",
+   "nom": "Ablette",
+   "latin": "Alburnus alburnus",
+   "code_sandre": "2090",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "goujon",
+   "nom": "Goujon",
+   "latin": "Gobio gobio",
+   "code_sandre": "2113",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "spirlin",
+   "nom": "Spirlin",
+   "latin": "Alburnoides bipunctatus",
+   "code_sandre": "2088",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "able-de-heckel",
+   "nom": "Able de Heckel (verdon)",
+   "latin": "Leucaspius delineatus",
+   "code_sandre": "2117",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "bouviere",
+   "nom": "Bouvière",
+   "latin": "Rhodeus amarus",
+   "code_sandre": "2131",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988, Rhodeus sericeus).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "carassin-commun",
+   "nom": "Carassin commun",
+   "latin": "Carassius carassius",
+   "code_sandre": "2102",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "carassin-argente",
+   "nom": "Carassin argenté / poisson rouge",
+   "latin": "Carassius gibelio / Carassius auratus",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": [
+    "Absent de l'arrêté EEE de 2018 tel que lu (poissons : seulement Perccottus glenii, Pseudorasbora parva, Lepomis gibbosus, Plotosus lineatus) [?]."
+   ]
+  },
+  {
+   "id": "aspe",
+   "nom": "Aspe",
+   "latin": "Leuciscus aspius (Aspius aspius)",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": [
+    "Absent de l'arrêté EEE de 2018 tel que lu ; code Sandre non lu (genre Aspius non trouvé)."
+   ]
+  },
+  {
+   "id": "pseudorasbora",
+   "nom": "Pseudorasbora (goujon asiatique)",
+   "latin": "Pseudorasbora parva",
+   "code_sandre": "2129",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante (arrêté du 14/02/2018, annexe II-1).",
+   "transport_vivant_remise_a_l_eau": "Détention, transport, vente et introduction interdits (art. 3 I) ; remise à l'eau interdite selon FNPF et Allier [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "AM-EEE-2018",
+     "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
+    },
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    },
+    {
+     "id": "ALLIER-2026",
+     "url": "https://www.federation-peche-allier.fr/reglementation/"
+    }
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l’introduction sur le territoire",
+   "lu": "début de l'art. 3 I lu (extrait court) [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "goujon-de-l-amour",
+   "nom": "Goujon de l'Amour",
+   "latin": "Perccottus glenii",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante (arrêté du 14/02/2018, annexe II-1).",
+   "transport_vivant_remise_a_l_eau": "Détention, transport, vente et introduction interdits (art. 3 I) [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "AM-EEE-2018",
+     "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
+    }
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l’introduction sur le territoire",
+   "lu": "début de l'art. 3 I lu [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "vairon",
+   "nom": "Vairon",
+   "latin": "Phoxinus phoxinus",
+   "code_sandre": "2125",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": [
+    "Interdictions locales (Ain : vairon interdit sur quelques rivières) ; l'usage comme appât obéit à d'autres articles non lus [?]."
+   ]
+  },
+  {
+   "id": "gambusie",
+   "nom": "Gambusie",
+   "latin": "Gambusia affinis / Gambusia holbrooki",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante depuis l'arrêté du 2 mars 2023 (annexe II-4).",
+   "transport_vivant_remise_a_l_eau": "Régime de l'annexe II-4 non lu [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "AM-EEE-2023",
+     "url": "https://aida.ineris.fr/reglementation/arrete-020323-portant-mise-a-jour-liste-especes-animales-vegetales-exotiques"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "liste lue sur aida.ineris.fr [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "loche-franche",
+   "nom": "Loche franche",
+   "latin": "Barbatula barbatula",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "loche-de-riviere",
+   "nom": "Loche de rivière",
+   "latin": "Cobitis taenia",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "loche-d-etang",
+   "nom": "Loche d'étang",
+   "latin": "Misgurnus fossilis",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "chabot",
+   "nom": "Chabot",
+   "latin": "Cottus gobio",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "lotte",
+   "nom": "Lotte de rivière",
+   "latin": "Lota lota",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "epinoche",
+   "nom": "Épinoche",
+   "latin": "Gasterosteus aculeatus",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "flet",
+   "nom": "Flet",
+   "latin": "Platichthys flesus",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "R436-14",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850261"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": [
+    "Pêche de nuit possible par arrêté préfectoral (service-public.gouv.fr, traduction automatique) [?]."
+   ]
+  },
+  {
+   "id": "mulet",
+   "nom": "Mulets (muges)",
+   "latin": "Mugilidae (Chelon, Liza)",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": 20,
+   "taille_min_note": "R436-18 : 0,20 m pour le mulet (carnavenir.com, peche-assistant.fr).",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "R436-14",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850261"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": [
+    "Pêche de nuit possible par arrêté préfectoral (R436-14) [?]."
+   ]
+  },
+  {
+   "id": "anguille-jaune",
+   "nom": "Anguille européenne, stade jaune",
+   "latin": "Anguilla anguilla",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "arrêtés ministériels (R436-8 alinéa ministre)",
+    "periode_nationale": "fixée par arrêté ministériel, par bassin",
+    "reouverture": null,
+    "note": "Fermeture anticipée de la saison 2025-2026 au 31 juillet 2026, au 15 juillet en Seine-Normandie et Artois-Picardie ; interdite en Rhône-Méditerranée et Corse (arrêté du 14/03/2024). Dates 2026-2027 : non trouvées, un moratoire de la pêche de loisir était en projet (décembre 2025 et janvier 2026) [?]."
+   },
+   "categorie_2": {
+    "statut": "fermee",
+    "regle": "arrêtés ministériels (R436-8 alinéa ministre)",
+    "periode_nationale": "fixée par arrêté ministériel, par bassin",
+    "reouverture": null,
+    "note": "Fermeture anticipée de la saison 2025-2026 au 31 juillet 2026, au 15 juillet en Seine-Normandie et Artois-Picardie ; interdite en Rhône-Méditerranée et Corse (arrêté du 14/03/2024). Dates 2026-2027 : non trouvées, un moratoire de la pêche de loisir était en projet (décembre 2025 et janvier 2026) [?]. Paris et Val-de-Marne (Seine-Normandie) : fermée depuis le 15 juillet 2026. La fédération écrit « du 15 février au 15 juillet » : le 15 février n'est pas lu dans un texte [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Civelle (moins de 12 cm) interdite aux pêcheurs de loisir. Carnet de pêche obligatoire ; déclaration des captures sous 24 heures du 14 juin au 31 juillet 2026 hors Rhône-Méditerranée-Corse.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national lu."
+   },
+   "statut_protection": "Pêche de nuit interdite à tous les stades dans les arrêtés 75 et 94 (art. 5.3, brouillon). Statut UICN et règlement européen : non lus [?].",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "ANGUILLE-2026",
+     "url": "https://www.consultations-publiques.developpement-durable.gouv.fr/IMG/pdf/tecl2611426a_projet_am_anguilles_2026.pdf"
+    },
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    },
+    {
+     "id": "SERVICE-PUBLIC",
+     "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2117"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "R436-8",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    }
+   ],
+   "citation": "Anguille jaune : du 15 février au 15 juillet, selon arrêté ministériel.",
+   "lu": "phrase de la page de la fédération 75/92/93/94, source secondaire ; fermeture au 15 juillet 2026 lue dans 3 pages [?]",
+   "incertitudes": [
+    "Arrêté signé du 12/06/2026 et arrêté du 5/02/2016 non lus [?]."
+   ]
+  },
+  {
+   "id": "anguille-argentee",
+   "nom": "Anguille européenne, stade argenté (d'avalaison)",
+   "latin": "Anguilla anguilla",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "interdite_toute_annee",
+    "regle": "arrêtés préfectoraux et ministériels",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "note": "Pêche de loisir interdite (FNPF, arrêtés 75 et 94, Charente)."
+   },
+   "categorie_2": {
+    "statut": "interdite_toute_annee",
+    "regle": "arrêtés préfectoraux et ministériels",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "note": "Pêche de loisir interdite (FNPF, arrêtés 75 et 94, Charente)."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Voir anguille jaune.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    }
+   ],
+   "citation": "La pêche de l'anguille argentée ou anguille d'avalaison, caractérisée par la présence d'une ligne latérale différenciée, une livrée dorsale sombre, une livrée ventrale blanchâtre et une hypertrophie oculaire, est interdite toute l'année.",
+   "lu": "citation de l'arrêté de Paris art. 5.3, reprise du brouillon [?]",
+   "incertitudes": [
+    "Article national de base (R436-65-x) non lu [?]."
+   ]
+  },
+  {
+   "id": "civelle",
+   "nom": "Civelle (anguille de moins de 12 cm)",
+   "latin": "Anguilla anguilla",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "interdite_toute_annee",
+    "regle": "arrêtés ministériels",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "note": "Pêche interdite aux pêcheurs de loisir (FNPF)."
+   },
+   "categorie_2": {
+    "statut": "interdite_toute_annee",
+    "regle": "arrêtés ministériels",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "note": "Pêche interdite aux pêcheurs de loisir (FNPF)."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Voir anguille jaune.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    }
+   ],
+   "citation": "Civelle et anguille argentée : interdites toute l'année.",
+   "lu": "phrase de la page de la fédération 75/92/93/94, source secondaire [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "grande-alose",
+   "nom": "Grande alose",
+   "latin": "Alosa alosa",
+   "code_sandre": "2056",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : interdite toute l'année. Charente : interdite en tout temps."
+   },
+   "categorie_2": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : interdite toute l'année. Charente : interdite en tout temps. Ailleurs : seulement là où un arrêté l'ouvre [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988, Alosa alosa).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-8",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    }
+   ],
+   "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année",
+   "lu": "citation de l'avis annuel 2026 de Paris, reprise du brouillon [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "alose-feinte",
+   "nom": "Alose feinte",
+   "latin": "Alosa fallax",
+   "code_sandre": "2057",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : interdite toute l'année. Charente : ouverte du 1er février au 30 juin, 30 cm (arrêté local)."
+   },
+   "categorie_2": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : interdite toute l'année. Charente : ouverte du 1er février au 30 juin, 30 cm (arrêté local). Aujourd'hui, fermée là où ces dates s'appliquent."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988, Alosa fallax).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-8",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    }
+   ],
+   "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année",
+   "lu": "citation de l'avis annuel 2026 de Paris, reprise du brouillon [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "lamproie-marine",
+   "nom": "Lamproie marine",
+   "latin": "Petromyzon marinus",
+   "code_sandre": "2014",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : interdite toute l'année. Bretagne 2026 : interdite (projet d'arrêté de 2026)."
+   },
+   "categorie_2": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : interdite toute l'année. Ailleurs : seulement là où un arrêté l'ouvre [?]."
+   },
+   "taille_min_cm": 40,
+   "taille_min_note": "R436-18 : 0,40 m pour la lamproie marine.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-8",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    }
+   ],
+   "citation": "Lamproie marine et lamproie fluviatile Pêche interdite toute l'année",
+   "lu": "citation de l'avis annuel 2026 de Paris, reprise du brouillon [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "lamproie-fluviatile",
+   "nom": "Lamproie fluviatile (de rivière)",
+   "latin": "Lampetra fluviatilis",
+   "code_sandre": "2011",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : interdite toute l'année. Charente : ouverte du 1er janvier au 15 avril (arrêté local)."
+   },
+   "categorie_2": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-8, R436-44 et suivants",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Seine-Normandie (75, 94) : interdite toute l'année. Charente : ouverte du 1er janvier au 15 avril (arrêté local). Fermée aujourd'hui là où ces dates s'appliquent."
+   },
+   "taille_min_cm": 20,
+   "taille_min_note": "R436-18 : 0,20 m pour la lamproie fluviatile.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-8",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    }
+   ],
+   "citation": "Lamproie marine et lamproie fluviatile Pêche interdite toute l'année",
+   "lu": "citation de l'avis annuel 2026 de Paris, reprise du brouillon [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "lamproie-de-planer",
+   "nom": "Lamproie de Planer",
+   "latin": "Lampetra planeri",
+   "code_sandre": "2012",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Frayères protégés (arrêté du 8/12/1988). Aucune règle de pêche lue [?].",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    },
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "citation lue mot pour mot (alinéa 1 de R436-7) ; absence de règle propre déduite d'une liste fermée [?]",
+   "incertitudes": [
+    "Espèce non pêchée ; aucune interdiction de capture lue [?]."
+   ]
+  },
+  {
+   "id": "esturgeon-europeen",
+   "nom": "Esturgeon européen",
+   "latin": "Acipenser sturio",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "interdite_toute_annee",
+    "regle": "arrêté du 9/07/1999 (L411-1) ; R436-8",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "note": "Espèce strictement protégée. Charente : pêche interdite en tout temps."
+   },
+   "categorie_2": {
+    "statut": "interdite_toute_annee",
+    "regle": "arrêté du 9/07/1999 (L411-1) ; R436-8",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "note": "Espèce strictement protégée. Charente : pêche interdite en tout temps."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "La taille de 1,80 m de R436-18 a été retirée par le décret 2019-352 (espèce strictement protégée).",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Strictement protégé (arrêté du 9 juillet 1999, annexe poissons : apron, esturgeon). Contenu des interdictions non lu [?].",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "AM-1999",
+     "url": "https://aida.ineris.fr/node/33240"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    },
+    {
+     "id": "D-2019-352",
+     "url": "https://faolex.fao.org/docs/pdf/Fra185742.pdf"
+    }
+   ],
+   "citation": "Esturgeon (Acipenser sturio)",
+   "lu": "liste lue dans AM-1999 et ARP-16 [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "apron-du-rhone",
+   "nom": "Apron du Rhône",
+   "latin": "Zingel asper",
+   "code_sandre": "2197",
+   "code_sandre_source": "lu sur mdm.sandre.eaufrance.fr le 15/10/2026",
+   "categorie_1": {
+    "statut": "interdite_toute_annee",
+    "regle": "arrêté du 9/07/1999 (L411-1)",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "note": "Espèce strictement protégée."
+   },
+   "categorie_2": {
+    "statut": "interdite_toute_annee",
+    "regle": "arrêté du 9/07/1999 (L411-1)",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "note": "Espèce strictement protégée."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Strictement protégé (arrêté du 9 juillet 1999) et frayères protégés (arrêté du 8/12/1988).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "AM-1999",
+     "url": "https://aida.ineris.fr/node/33240"
+    },
+    {
+     "id": "AM-1988",
+     "url": "https://aida.ineris.fr/reglementation/arrete-081288-fixant-liste-especes-poissons-protegees-lensemble-territoire-national"
+    }
+   ],
+   "citation": "Percidae : Zingel asper (apron)",
+   "lu": "liste lue dans AM-1988 et AM-1999 [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "ecrevisse-pattes-blanches",
+   "nom": "Écrevisse à pattes blanches",
+   "latin": "Austropotamobius pallipes",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-10",
+    "periode_nationale": "10 jours consécutifs à partir du 4e samedi de juillet (25 juillet au 3 août 2026)",
+    "reouverture": "2027-07-24",
+    "note": "Paris et Val-de-Marne : pêche interdite toute l'année (avis 2026, brouillon). Réouverture nationale 2027-07-24 seulement si le préfet n'interdit pas."
+   },
+   "categorie_2": {
+    "statut": "fermee",
+    "regle": "R436-10",
+    "periode_nationale": "10 jours consécutifs à partir du 4e samedi de juillet (25 juillet au 3 août 2026)",
+    "reouverture": "2027-07-24",
+    "note": "Paris et Val-de-Marne : pêche interdite toute l'année (avis 2026, brouillon). Réouverture nationale 2027-07-24 seulement si le préfet n'interdit pas."
+   },
+   "taille_min_cm": 9,
+   "taille_min_note": "R436-18 : 0,09 m pour les écrevisses des espèces de R436-10 (carnavenir.com, peche67.fr).",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Habitat protégé (arrêté du 21/07/1983, lu dans peche67.fr) ; non classée parmi les espèces à déséquilibre (R432-5, 4 espèces indigènes exceptées).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-10",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "PECHE67-ECREVISSES",
+     "url": "https://www.peche67.fr/cms_viewFile.php?idtf=34505&path=regles-ecrevisses.pdf"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    }
+   ],
+   "citation": "La pêche des écrevisses à pattes rouges (Astacus astacus), des torrents (Astacus torrentium), à pattes blanches (Austropotamobius pallipes) et à pattes grêles (Astacus leptodactylus) est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet.",
+   "lu": "citation d'une copie du Code d'environ 2018 [?] ; texte 2026 non relu",
+   "incertitudes": []
+  },
+  {
+   "id": "ecrevisse-pattes-rouges",
+   "nom": "Écrevisse à pattes rouges",
+   "latin": "Astacus astacus",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-10",
+    "periode_nationale": "10 jours consécutifs à partir du 4e samedi de juillet (25 juillet au 3 août 2026)",
+    "reouverture": "2027-07-24",
+    "note": "Paris et Val-de-Marne : pêche interdite toute l'année (avis 2026, brouillon). Réouverture nationale 2027-07-24 seulement si le préfet n'interdit pas."
+   },
+   "categorie_2": {
+    "statut": "fermee",
+    "regle": "R436-10",
+    "periode_nationale": "10 jours consécutifs à partir du 4e samedi de juillet (25 juillet au 3 août 2026)",
+    "reouverture": "2027-07-24",
+    "note": "Paris et Val-de-Marne : pêche interdite toute l'année (avis 2026, brouillon). Réouverture nationale 2027-07-24 seulement si le préfet n'interdit pas."
+   },
+   "taille_min_cm": 9,
+   "taille_min_note": "R436-18 : 0,09 m pour les écrevisses des espèces de R436-10 (carnavenir.com, peche67.fr).",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Habitat protégé (arrêté du 21/07/1983, lu dans peche67.fr) ; non classée parmi les espèces à déséquilibre (R432-5, 4 espèces indigènes exceptées).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-10",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "PECHE67-ECREVISSES",
+     "url": "https://www.peche67.fr/cms_viewFile.php?idtf=34505&path=regles-ecrevisses.pdf"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    }
+   ],
+   "citation": "La pêche des écrevisses à pattes rouges (Astacus astacus), des torrents (Astacus torrentium), à pattes blanches (Austropotamobius pallipes) et à pattes grêles (Astacus leptodactylus) est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet.",
+   "lu": "citation d'une copie du Code d'environ 2018 [?] ; texte 2026 non relu",
+   "incertitudes": []
+  },
+  {
+   "id": "ecrevisse-des-torrents",
+   "nom": "Écrevisse des torrents",
+   "latin": "Austropotamobius torrentium (Astacus torrentium dans le Code)",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-10",
+    "periode_nationale": "10 jours consécutifs à partir du 4e samedi de juillet (25 juillet au 3 août 2026)",
+    "reouverture": "2027-07-24",
+    "note": "Paris et Val-de-Marne : pêche interdite toute l'année (avis 2026, brouillon). Réouverture nationale 2027-07-24 seulement si le préfet n'interdit pas."
+   },
+   "categorie_2": {
+    "statut": "fermee",
+    "regle": "R436-10",
+    "periode_nationale": "10 jours consécutifs à partir du 4e samedi de juillet (25 juillet au 3 août 2026)",
+    "reouverture": "2027-07-24",
+    "note": "Paris et Val-de-Marne : pêche interdite toute l'année (avis 2026, brouillon). Réouverture nationale 2027-07-24 seulement si le préfet n'interdit pas."
+   },
+   "taille_min_cm": 9,
+   "taille_min_note": "R436-18 : 0,09 m pour les écrevisses des espèces de R436-10 (carnavenir.com, peche67.fr).",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Habitat protégé (arrêté du 21/07/1983, lu dans peche67.fr) ; non classée parmi les espèces à déséquilibre (R432-5, 4 espèces indigènes exceptées).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-10",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "PECHE67-ECREVISSES",
+     "url": "https://www.peche67.fr/cms_viewFile.php?idtf=34505&path=regles-ecrevisses.pdf"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    }
+   ],
+   "citation": "La pêche des écrevisses à pattes rouges (Astacus astacus), des torrents (Astacus torrentium), à pattes blanches (Austropotamobius pallipes) et à pattes grêles (Astacus leptodactylus) est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet.",
+   "lu": "citation d'une copie du Code d'environ 2018 [?] ; texte 2026 non relu",
+   "incertitudes": []
+  },
+  {
+   "id": "ecrevisse-pattes-greles",
+   "nom": "Écrevisse à pattes grêles",
+   "latin": "Astacus leptodactylus",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-10",
+    "periode_nationale": "10 jours consécutifs à partir du 4e samedi de juillet (25 juillet au 3 août 2026)",
+    "reouverture": "2027-07-24",
+    "note": "Paris et Val-de-Marne : pêche interdite toute l'année (avis 2026, brouillon). Réouverture nationale 2027-07-24 seulement si le préfet n'interdit pas. Le brouillon ne cite que trois espèces dans l'interdiction 75/94 ; la page de la fédération y ajoute les pattes grêles [?]."
+   },
+   "categorie_2": {
+    "statut": "fermee",
+    "regle": "R436-10",
+    "periode_nationale": "10 jours consécutifs à partir du 4e samedi de juillet (25 juillet au 3 août 2026)",
+    "reouverture": "2027-07-24",
+    "note": "Paris et Val-de-Marne : pêche interdite toute l'année (avis 2026, brouillon). Réouverture nationale 2027-07-24 seulement si le préfet n'interdit pas. Le brouillon ne cite que trois espèces dans l'interdiction 75/94 ; la page de la fédération y ajoute les pattes grêles [?]."
+   },
+   "taille_min_cm": 9,
+   "taille_min_note": "R436-18 : 0,09 m pour les écrevisses des espèces de R436-10 (carnavenir.com, peche67.fr).",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Habitat protégé (arrêté du 21/07/1983, lu dans peche67.fr) ; non classée parmi les espèces à déséquilibre (R432-5, 4 espèces indigènes exceptées).",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-10",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "PECHE67-ECREVISSES",
+     "url": "https://www.peche67.fr/cms_viewFile.php?idtf=34505&path=regles-ecrevisses.pdf"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    }
+   ],
+   "citation": "La pêche des écrevisses à pattes rouges (Astacus astacus), des torrents (Astacus torrentium), à pattes blanches (Austropotamobius pallipes) et à pattes grêles (Astacus leptodactylus) est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet.",
+   "lu": "citation d'une copie du Code d'environ 2018 [?] ; texte 2026 non relu",
+   "incertitudes": []
+  },
+  {
+   "id": "ecrevisse-americaine",
+   "nom": "Écrevisse américaine",
+   "latin": "Faxonius limosus (Orconectes limosus)",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille nationale : les 9 cm de R436-18 visent les espèces de R436-10.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante (arrêté du 14/02/2018, annexe II-1) et à déséquilibre (R432-5).",
+   "transport_vivant_remise_a_l_eau": "Détention, transport, vente et introduction interdits (art. 3 I). Remise à l'eau interdite selon FNPF et Allier. Certains arrêtés imposent de la tuer sur place [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-10",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "AM-EEE-2018",
+     "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    },
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    },
+    {
+     "id": "ALLIER-2026",
+     "url": "https://www.federation-peche-allier.fr/reglementation/"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    }
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l’introduction sur le territoire",
+   "lu": "début de l'art. 3 I lu ; période par lecture du régime général [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "ecrevisse-de-louisiane",
+   "nom": "Écrevisse de Louisiane",
+   "latin": "Procambarus clarkii",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille nationale : les 9 cm de R436-18 visent les espèces de R436-10.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante (arrêté du 14/02/2018, annexe II-1) et à déséquilibre (R432-5).",
+   "transport_vivant_remise_a_l_eau": "Détention, transport, vente et introduction interdits (art. 3 I). Remise à l'eau interdite selon FNPF et Allier. Certains arrêtés imposent de la tuer sur place [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-10",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "AM-EEE-2018",
+     "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    },
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    },
+    {
+     "id": "ALLIER-2026",
+     "url": "https://www.federation-peche-allier.fr/reglementation/"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    }
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l’introduction sur le territoire",
+   "lu": "début de l'art. 3 I lu ; période par lecture du régime général [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "ecrevisse-signal",
+   "nom": "Écrevisse signal (de Californie)",
+   "latin": "Pacifastacus leniusculus",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille nationale : les 9 cm de R436-18 visent les espèces de R436-10.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante (arrêté du 14/02/2018, annexe II-1) et à déséquilibre (R432-5).",
+   "transport_vivant_remise_a_l_eau": "Détention, transport, vente et introduction interdits (art. 3 I). Remise à l'eau interdite selon FNPF et Allier. Certains arrêtés imposent de la tuer sur place [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-10",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "AM-EEE-2018",
+     "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    },
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    },
+    {
+     "id": "ALLIER-2026",
+     "url": "https://www.federation-peche-allier.fr/reglementation/"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    }
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l’introduction sur le territoire",
+   "lu": "début de l'art. 3 I lu ; période par lecture du régime général [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "ecrevisse-virile",
+   "nom": "Écrevisse virile",
+   "latin": "Faxonius virilis",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille nationale : les 9 cm de R436-18 visent les espèces de R436-10.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante (arrêté du 14/02/2018, annexe II-1) et à déséquilibre (R432-5).",
+   "transport_vivant_remise_a_l_eau": "Détention, transport, vente et introduction interdits (art. 3 I). Remise à l'eau interdite selon FNPF et Allier. Certains arrêtés imposent de la tuer sur place [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-10",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "AM-EEE-2018",
+     "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    },
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    },
+    {
+     "id": "ALLIER-2026",
+     "url": "https://www.federation-peche-allier.fr/reglementation/"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    }
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l’introduction sur le territoire",
+   "lu": "début de l'art. 3 I lu ; période par lecture du régime général [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "ecrevisse-marbree",
+   "nom": "Écrevisse marbrée",
+   "latin": "Procambarus virginalis",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille nationale : les 9 cm de R436-18 visent les espèces de R436-10.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante (arrêté du 14/02/2018, annexe II-1) et à déséquilibre (R432-5).",
+   "transport_vivant_remise_a_l_eau": "Détention, transport, vente et introduction interdits (art. 3 I). Remise à l'eau interdite selon FNPF et Allier. Certains arrêtés imposent de la tuer sur place [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-10",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "AM-EEE-2018",
+     "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    },
+    {
+     "id": "FNPF",
+     "url": "https://www.generationpeche.fr/176-regles-a-connaitre.htm"
+    },
+    {
+     "id": "ALLIER-2026",
+     "url": "https://www.federation-peche-allier.fr/reglementation/"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    }
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l’introduction sur le territoire",
+   "lu": "début de l'art. 3 I lu ; période par lecture du régime général [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "ecrevisse-a-taches-rouges",
+   "nom": "Écrevisse à taches rouges",
+   "latin": "Faxonius rusticus",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": "Le Code ne fixe pas de période propre : régime général R436-6 / R436-7 (lecture) ; arrêtés locaux variables (Charente : 8 mars au 15 septembre en 1re catégorie, toute l'année en 2e) [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante depuis l'arrêté du 2 mars 2023 (annexe II-4).",
+   "transport_vivant_remise_a_l_eau": "Régime de l'annexe II-4 non lu [?].",
+   "sources": [
+    {
+     "id": "AM-EEE-2023",
+     "url": "https://aida.ineris.fr/reglementation/arrete-020323-portant-mise-a-jour-liste-especes-animales-vegetales-exotiques"
+    },
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "liste lue sur aida.ineris.fr [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "crabe-chinois",
+   "nom": "Crabe chinois",
+   "latin": "Eriocheir sinensis",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante (arrêté du 14/02/2018, annexe II-1) et à déséquilibre (R432-5).",
+   "transport_vivant_remise_a_l_eau": "Détention, transport, vente et introduction interdits (art. 3 I) [?].",
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "AM-EEE-2018",
+     "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
+    },
+    {
+     "id": "R432-5",
+     "url": "https://www.ain.gouv.fr/contenu/telechargement/6051/65661/file/Reference_Reglementaire.pdf"
+    }
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l’introduction sur le territoire",
+   "lu": "début de l'art. 3 I lu [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "grenouille-verte",
+   "nom": "Grenouille verte (dite commune)",
+   "latin": "Pelophylax kl. esculentus",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-11",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Le Code (R436-11) laisse au préfet une période d'au plus dix mois par an. Paris et Val-de-Marne : ouverte du 1er janvier au 2e dimanche de mars puis du 3e samedi de mai au 31 décembre (page de la fédération, pas lue dans l'arrêté ni l'avis) [?]."
+   },
+   "categorie_2": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-11",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Le Code (R436-11) laisse au préfet une période d'au plus dix mois par an. Paris et Val-de-Marne : ouverte du 1er janvier au 2e dimanche de mars puis du 3e samedi de mai au 31 décembre (page de la fédération, pas lue dans l'arrêté ni l'avis) [?]."
+   },
+   "taille_min_cm": 8,
+   "taille_min_note": "R436-18 (décret 2019-352 art. 7) : 8 cm du bout du museau au cloaque.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Mutilation, naturalisation, colportage, vente et achat interdits (cité par l'arrêté de la Charente, art. 5) [?].",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-11",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "D-2019-352",
+     "url": "https://faolex.fao.org/docs/pdf/Fra185742.pdf"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    }
+   ],
+   "citation": "La pêche de la grenouille verte ou dite commune (Pelophylax kl. esculentus)",
+   "lu": "extrait court du projet de décret 2018 et du décret 2019-352 ; période 75/94 : fédération seule [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "grenouille-rousse",
+   "nom": "Grenouille rousse",
+   "latin": "Rana temporaria",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-11",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Le Code (R436-11) laisse au préfet une période d'au plus dix mois par an. Paris et Val-de-Marne : ouverte du 1er janvier au 2e dimanche de mars puis du 3e samedi de mai au 31 décembre (page de la fédération, pas lue dans l'arrêté ni l'avis) [?]."
+   },
+   "categorie_2": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-11",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Le Code (R436-11) laisse au préfet une période d'au plus dix mois par an. Paris et Val-de-Marne : ouverte du 1er janvier au 2e dimanche de mars puis du 3e samedi de mai au 31 décembre (page de la fédération, pas lue dans l'arrêté ni l'avis) [?]."
+   },
+   "taille_min_cm": 8,
+   "taille_min_note": "R436-18 (décret 2019-352 art. 7) : 8 cm du bout du museau au cloaque.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Mutilation, naturalisation, colportage, vente et achat interdits (cité par l'arrêté de la Charente, art. 5) [?].",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-11",
+     "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195437/"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    },
+    {
+     "id": "D-2019-352",
+     "url": "https://faolex.fao.org/docs/pdf/Fra185742.pdf"
+    },
+    {
+     "id": "FED-75-94",
+     "url": "https://www.federation-peche-paris.fr/808-reglementation.htm"
+    },
+    {
+     "id": "ARP-16",
+     "url": "https://www.garat.fr/wp-content/uploads/2025/01/ARP_2025_signe.pdf"
+    }
+   ],
+   "citation": "La pêche de la grenouille verte ou dite commune (Pelophylax kl. esculentus)",
+   "lu": "extrait court du projet de décret 2018 et du décret 2019-352 ; période 75/94 : fédération seule [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "grenouille-taureau",
+   "nom": "Grenouille-taureau",
+   "latin": "Lithobates catesbeianus",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-11",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Régime des grenouilles du Code non applicable à une espèce exotique envahissante [?]."
+   },
+   "categorie_2": {
+    "statut": "selon_arrete_local",
+    "regle": "R436-11",
+    "periode_nationale": "non fixée par le Code : arrêté du préfet ou du ministre",
+    "reouverture": null,
+    "note": "Idem [?]."
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Aucune taille minimale nationale : R436-18 ne cite pas l'espèce.",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Espèce exotique envahissante (arrêté du 14/02/2018, annexe II-1).",
+   "transport_vivant_remise_a_l_eau": "Détention, transport, vente et introduction interdits (art. 3 I) [?].",
+   "sources": [
+    {
+     "id": "AM-EEE-2018",
+     "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
+    }
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l’introduction sur le territoire",
+   "lu": "liste lue dans AM-EEE-2018 [?]",
+   "incertitudes": []
+  },
+  {
+   "id": "hybrides",
+   "nom": "Hybrides de poissons (« sandre hybride », hybride brème x gardon...)",
+   "latin": "hybrides interspécifiques",
+   "code_sandre": null,
+   "code_sandre_source": null,
+   "categorie_1": {
+    "statut": "fermee",
+    "regle": "R436-6",
+    "periode_nationale": "du 2e samedi de mars au 3e dimanche de septembre (14 mars au 20 septembre 2026)",
+    "reouverture": "2027-03-13",
+    "note": ""
+   },
+   "categorie_2": {
+    "statut": "ouverte",
+    "regle": "R436-7 alinéa 1",
+    "periode_nationale": "toute l'année",
+    "reouverture": null,
+    "prochaine_fermeture": null,
+    "note": ""
+   },
+   "taille_min_cm": null,
+   "taille_min_note": "Le Code ne cite pas les hybrides : aucune règle propre lue. Par prudence, appliquer au « sandre hybride » la taille et le quota du sandre [?].",
+   "quota": {
+    "par_jour": null,
+    "note": "Aucun quota national : R436-21 ne vise que les salmonidés, le brochet, le sandre et le black-bass."
+   },
+   "statut_protection": "Aucune protection nationale lue.",
+   "transport_vivant_remise_a_l_eau": null,
+   "sources": [
+    {
+     "id": "R436-7",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162"
+    },
+    {
+     "id": "R436-6",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083"
+    },
+    {
+     "id": "R436-13",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266"
+    },
+    {
+     "id": "R436-18",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171"
+    }
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "lu": "absence de règle déduite d'une liste fermée [?]",
+   "incertitudes": [
+    "Aucun texte lu ne traite des hybrides ; ne jamais afficher « tu peux la garder » sans confirmation de l'espèce."
+   ]
+  }
+ ]
+}

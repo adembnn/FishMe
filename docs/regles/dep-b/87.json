@@ -1,0 +1,3770 @@
+{
+ "version": 0,
+ "departement": "87",
+ "note": "BROUILLON du 2026-10-15 pour relecture (lecture B, indépendante). Citations obtenues par extraction de texte en fragments de 125 caractères, non comparées au PDF. Statut brouillon = lu dans le texte cité ; incertain = deux textes qui se contredisent ou seulement la fédération. Aucun verifie_par. Les règles nationales identiques ne sont pas répétées (voir brouillon-75-94.json).",
+ "genere_le": "2026-10-15",
+ "textes": [
+  {
+   "titre": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 relatif à l'exercice de la pêche en eau douce dans le département de la Haute-Vienne (recueil 87-2025-212 du 26/11/2025 ; lu via la copie texte https://politique.pappers.fr/commune/document/2d96a37a9f996c995ee943deb362dcb2, la copie PDF de la commune de Cussac est une image sans texte)",
+   "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+   "signe_le": "2025-11-20",
+   "lu": "partie",
+   "ocr": true
+  },
+  {
+   "titre": "Arrêté préfectoral n° PC/2025/E 1229 du 20/11/2025 fixant les périodes d'ouverture de la pêche en 2026 dans le département de la Haute-Vienne (même recueil ; tableau de l'art. 5 mal extrait)",
+   "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+   "signe_le": "2025-11-20",
+   "lu": "partie",
+   "ocr": true
+  },
+  {
+   "titre": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 sur des parcours de loisir et des plans d'eau (même recueil)",
+   "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+   "signe_le": "2025-11-20",
+   "lu": "entier",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêté préfectoral n° PC/2025/E 1231 du 20/11/2025 portant renouvellement d'une réserve temporaire de pêche sur La Vienne, commune de Saint-Junien (même recueil)",
+   "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+   "signe_le": "2025-11-20",
+   "lu": "entier",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêté préfectoral n° PC/2025/E 1232 du 20/11/2025 portant renouvellement d'une réserve temporaire de pêche sur La Colle, commune de Saint-Mathieu (même recueil)",
+   "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+   "signe_le": "2025-11-20",
+   "lu": "entier",
+   "ocr": false
+  },
+  {
+   "titre": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (extraits des arrêtés ci-dessus et de plusieurs arrêtés spécifiques ; copies lues : https://www.mairie-panazol.fr/wp-content/uploads/documents/actes-admin/arretes/2026/Avis%20Annuel%20du%2020-02-2026%20-%20P%C3%A9riodes%20d'ouverture%20de%20la%20p%C3%AAche%20en%202026.pdf et PanneauPocket)",
+   "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+   "signe_le": "2025-11-20",
+   "lu": "partie",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêté réglementaire permanent n° E1411 du 01/12/2023 (ancien texte, non utilisé pour les règles : l'arrêté E 1228 abroge l'E 1448 du 04/12/2024, qui remplaçait lui-même la série précédente, chaîne d'abrogation non vérifiée)",
+   "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/42950/371376/file/1_ARP2024.pdf",
+   "signe_le": "2023-12-01",
+   "lu": "partie",
+   "ocr": false
+  },
+  {
+   "titre": "Fédération de la Haute-Vienne, page Quotas et mailles (réglementation 2026) : pas un texte réglementaire",
+   "url": "https://www.federation-peche87.com/5135-quotas-et-mailles.htm",
+   "signe_le": null,
+   "lu": "partie",
+   "ocr": false
+  },
+  {
+   "titre": "Fédération de la Haute-Vienne, Pêche en Haute-Vienne 2025, actualités réglementaires : pas un texte réglementaire, 2025",
+   "url": "https://www.federation-peche87.com/cms_viewFile.php?idtf=46167&path=Reglementation-peche-Haute-Vienne-2025.pdf",
+   "signe_le": null,
+   "lu": "partie",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêtés de réserve temporaire n° 1339 (Brignac), n° 1340 (Mas Maury) et n° 1343 (Prézinat) : connu seulement par la liste de l'avis annuel 2026",
+   "url": null,
+   "signe_le": "2022-11-28",
+   "lu": "titre seul",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêtés de graciation n° 1341 (Vienne, Eymoutiers) et n° 1342 (Vienne, Bujaleuf et Neuvic-Entier) : connu seulement par la liste de l'avis annuel 2026",
+   "url": null,
+   "signe_le": "2022-11-28",
+   "lu": "titre seul",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêté de graciation n° 2838 (Vienne, Limoges) : connu seulement par la liste de l'avis annuel 2026",
+   "url": null,
+   "signe_le": "2019-11-14",
+   "lu": "titre seul",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêté de graciation n° 3335 (La Colle, Saint-Mathieu) : connu seulement par la liste de l'avis annuel 2026",
+   "url": null,
+   "signe_le": "2018-12-14",
+   "lu": "titre seul",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêté de graciation n° 01564 (Le Vincou, Bellac) : connu seulement par la liste de l'avis annuel 2026",
+   "url": null,
+   "signe_le": null,
+   "lu": "titre seul",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêté n° PC/2024/E 1451 (pêche de la carpe de nuit) : connu seulement par la liste de l'avis annuel 2026",
+   "url": null,
+   "signe_le": "2024-12-04",
+   "lu": "titre seul",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêté n° E 1412 (tableau annexé des parcours de carpe de nuit) : connu seulement par la liste de l'avis annuel 2026",
+   "url": null,
+   "signe_le": "2023-12-01",
+   "lu": "titre seul",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêtés n° 2591 et n° 2016/4227 (remise à l'eau du black-bass, Fleix et Bujaleuf) : connu seulement par la liste de l'avis annuel 2026",
+   "url": null,
+   "signe_le": "2016-12-21",
+   "lu": "titre seul",
+   "ocr": false
+  },
+  {
+   "titre": "Arrêté n° 1308 (classement piscicole des cours d'eau, canaux et plans d'eau) : connu seulement par la liste de l'avis annuel 2026",
+   "url": null,
+   "signe_le": "2022-11-28",
+   "lu": "titre seul",
+   "ocr": false
+  }
+ ],
+ "regles": [
+  {
+   "id": "87-cat-1re-defaut",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "1",
+    "vise": "tous les cours d'eau, canaux et plans d'eau non classés en 2e catégorie"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : tout ce qui n'est pas listé en 2e catégorie est en 1re catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "tous ceux non classés en 2ᵉ catégorie.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-la-vienne-en-aval-de-son-confluent-avec-la-maulde",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Vienne en aval de son confluent avec la Maulde"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : la Vienne en aval de son confluent avec la Maulde est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Vienne en aval de son confluent avec la Maulde ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-la-maulde-en-aval-du-pont-de-grelenty-jusqua-la-confluence-a",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Maulde en aval du pont de Grelenty jusqu’à la confluence avec la Vienne"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : la Maulde en aval du pont de Grelenty jusqu’à la confluence avec la Vienne est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Maulde en aval du pont de Grelenty jusqu’à la confluence avec la Vienne ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-lac-de-vassiviere-limite-courbe-de-niveau-a-650-m",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Lac de Vassivière (limite courbe de niveau à 650 m)"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : lac de Vassivière (limite courbe de niveau à 650 m) est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Lac de Vassivière (limite courbe de niveau à 650 m) ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-le-taurion",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "87",
+    "lieu": "Le Taurion"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : le Taurion est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Le Taurion ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-la-briance-en-aval-de-son-confluent-avec-la-roselle",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Briance en aval de son confluent avec la Roselle"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : la Briance en aval de son confluent avec la Roselle est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Briance en aval de son confluent avec la Roselle ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-la-gartempe-en-aval-du-pont-des-bonshommes-commune-de-bessin",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Gartempe en aval du Pont des Bonshommes (commune de Bessines-sur-Gartempe), RD 203"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : la Gartempe en aval du Pont des Bonshommes (commune de Bessines-sur-Gartempe), RD 203 est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Gartempe en aval du Pont des Bonshommes (commune de Bessines-sur-Gartempe), RD 203 ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-le-vincou-en-aval-du-pont-de-la-sncf-de-la-roche-corbiere-su",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "Le Vincou en aval du pont de la SNCF de la Roche Corbière sur la commune de Bellac"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : le Vincou en aval du pont de la SNCF de la Roche Corbière sur la commune de Bellac est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Le Vincou en aval du pont de la SNCF de la Roche Corbière sur la commune de Bellac ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-la-brame-en-aval-du-pont-de-beaubeyrot-rd-942",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Brame en aval du pont de Beaubeyrot, RD 942"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : la Brame en aval du pont de Beaubeyrot, RD 942 est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Brame en aval du pont de Beaubeyrot, RD 942 ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-la-chaume",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "87",
+    "lieu": "La Chaume"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : la Chaume est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Chaume ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-la-benaize",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "87",
+    "lieu": "La Benaize"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : la Benaize est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Benaize ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-lasse",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "87",
+    "lieu": "L’Asse"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : l’Asse est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "L’Asse ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-la-glane-en-aval-du-pont-du-derot-rd-32a1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Glane en aval du pont du Dérot, RD 32a1"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : la Glane en aval du pont du Dérot, RD 32a1 est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Glane en aval du pont du Dérot, RD 32a1 ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-le-lac-de-saint-pardoux-et-de-la-roche-au-diable-communes-de",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Le lac de Saint Pardoux et de la Roche au Diable (communes de Saint-Pardoux-Le-Lac, Compreignac et Razès)"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : le lac de Saint Pardoux et de la Roche au Diable (communes de Saint-Pardoux-Le-Lac, Compreignac et Razès) est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Le lac de Saint Pardoux et de la Roche au Diable (communes de Saint-Pardoux-Le-Lac, Compreignac et Razès) ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-le-plan-deau-de-la-pouge-a-saint-auvent",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Le plan d’eau de « La Pouge » à Saint-Auvent"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : le plan d’eau de « La Pouge » à Saint-Auvent est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Le plan d’eau de « La Pouge » à Saint-Auvent ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-le-plan-deau-de-pont-a-lage-commune-de-folles-et-lauriere",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Le plan d’eau de « Pont-à-l’âge », commune de Folles et Laurière"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : le plan d’eau de « Pont-à-l’âge », commune de Folles et Laurière est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Le plan d’eau de « Pont-à-l’âge », commune de Folles et Laurière ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-le-plan-deau-d-arfeuille-commune-de-saint-yrieix-la-perche",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Le plan d’eau d’« Arfeuille », commune de Saint-Yrieix-La-Perche"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : le plan d’eau d’« Arfeuille », commune de Saint-Yrieix-La-Perche est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Le plan d’eau d’« Arfeuille », commune de Saint-Yrieix-La-Perche ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-cat-2e-le-plan-deau-de-la-commune-de-saint-mathieu",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Le plan d’eau de la commune de Saint-Mathieu"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "categorie": "2",
+    "liste": "classement des eaux de 2e catégorie, art. 2 de l'arrêté permanent"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Haute-Vienne : le plan d’eau de la commune de Saint-Mathieu est en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 2, eaux de 2e catégorie",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Le plan d’eau de la commune de Saint-Mathieu.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-bro-ouv-1re",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "eaux de première catégorie"
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "candidats": [
+     {
+      "periode": {
+       "du": "2026-04-25",
+       "au": "2026-09-20"
+      },
+      "source": "arrêté permanent PC/2025/E 1228, art. 3 b (ouverture spécifique pour le brochet)",
+      "citation": "du dernier samedi d’avril inclus au troisième dimanche de septembre."
+     },
+     {
+      "periode": {
+       "du": "2026-03-14",
+       "au": "2026-09-20"
+      },
+      "remise_a_l_eau_obligatoire_jusqu_au": "2026-04-24",
+      "source": "arrêté annuel PC/2025/E 1229, art. 2 (1re catégorie ouverte du 14 mars, brochet remis à l'eau jusqu'au 24 avril)",
+      "citation": "Dans ces eaux, tout brochet capturé du 14 mars au 24 avril inclus doit être remis à l’eau immédiatement."
+     }
+    ],
+    "point_commun": "dans les deux lectures, on ne peut garder un brochet en 1re catégorie qu'à partir du 25 avril 2026",
+    "raison_incertain": "l'arrêté permanent parle d'ouverture au 25 avril, l'arrêté annuel ouvre toute la 1re catégorie au 14 mars avec remise à l'eau du brochet ; le tableau de l'art. 5 de l'arrêté annuel est mal extrait"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Brochet en 1re catégorie : on peut le garder à partir du 25 avril 2026 ; avant, au mieux remise à l'eau. À confirmer.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 b",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "ouverture spécifique pour le brochet : du dernier samedi d’avril inclus au troisième dimanche de septembre.",
+   "statut": "incertain",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-bro-remise-eau-1re",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "eaux de la 1re catégorie"
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "type": "remise_eau",
+   "valeur": {
+    "obligatoire": true,
+    "periode_regle": "du deuxième samedi de mars au dernier vendredi d'avril inclus"
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "remplace": null,
+   "phrase": "En 1re catégorie, tout brochet capturé du 14 mars au 24 avril 2026 est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 5",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Dans les eaux classées en 1 catégorie, tout brochet capturé du deuxième samedi de mars au dernier vendredi d’avril inclus, doit être immédiatement remis à l’eau.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-omb-ouv-1re",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "eaux de première catégorie"
+   },
+   "especes": [
+    "2247"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "periodes": [
+     {
+      "du": "2026-05-16",
+      "au": "2026-09-20"
+     }
+    ],
+    "regle": "du troisième samedi de mai au troisième dimanche de septembre inclus"
+   },
+   "du": "2026-05-16",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Ombre commun en 1re catégorie : ouvert du 16 mai au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 b",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "du troisième samedi de mai inclus au troisième dimanche de septembre, inclus.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-san-ouv-2e",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "eaux de la deuxième catégorie"
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "periodes": [
+     {
+      "du": "2026-01-01",
+      "au": "2026-03-15"
+     },
+     {
+      "du": "2026-06-13",
+      "au": "2026-12-31"
+     }
+    ],
+    "regle": "du 1er janvier au dimanche suivant l'ouverture de la 1re catégorie, puis du deuxième samedi de juin au 31 décembre",
+    "dates_calculees_pour_2026": true,
+    "confirme_par": "tableau art. 5 de l'arrêté annuel E 1229 et avis annuel 2026 (« du 1er janvier au 15 mars et du 13 juin au 31 décembre »), colonnes mal alignées à l'extraction"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": "nat-2e-ouv-generale",
+   "phrase": "Sandre en 2e catégorie : ouvert du 1er janvier au 15 mars et du 13 juin au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 c",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Sandre : ouverture du 1er janvier au dimanche suivant l'ouverture de la pêche en 1ere catégorie inclus et du deuxième samedi de juin au 31 décembre inclus compte tenu de la pression de pêche sur les zones de reproduction en période de fraie ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-san-ferme-2026",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "eaux de la deuxième catégorie"
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "raison": "fermeture",
+    "derive_de": "87-san-ouv-2e"
+   },
+   "du": "2026-03-16",
+   "au": "2026-06-12",
+   "remplace": null,
+   "phrase": "Sandre en 2e catégorie : pêche fermée du 16 mars au 12 juin 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 c",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Sandre : ouverture du 1er janvier au dimanche suivant l'ouverture de la pêche en 1ere catégorie inclus et du deuxième samedi de juin au 31 décembre inclus compte tenu de la pression de pêche sur les zones de reproduction en période de fraie ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-bla-ouv-2e",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "eaux de la deuxième catégorie"
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "periodes": [
+     {
+      "du": "2026-01-01",
+      "au": "2026-03-15"
+     },
+     {
+      "du": "2026-07-04",
+      "au": "2026-12-31"
+     }
+    ],
+    "regle": "du 1er janvier au dimanche suivant l'ouverture de la 1re catégorie, puis du premier samedi de juillet au 31 décembre",
+    "dates_calculees_pour_2026": true,
+    "confirme_par": "tableau art. 5 de l'arrêté annuel E 1229 et avis annuel 2026 (« du 1er janvier au 15 mars et du 04 juillet au 31 décembre »), colonnes mal alignées à l'extraction"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": "nat-2e-ouv-generale",
+   "phrase": "Black-bass en 2e catégorie : ouvert du 1er janvier au 15 mars et du 4 juillet au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 c",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Black-bass : ouverture du 1er janvier au dimanche suivant l'ouverture de la pêche en 1ere catégorie inclus et du premier samedi de juillet au 31 décembre inclus compte tenu de la pression de pêche sur les zones de reproduction en période de fraie ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-bla-ferme-2026",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "eaux de la deuxième catégorie"
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "raison": "fermeture",
+    "derive_de": "87-bla-ouv-2e"
+   },
+   "du": "2026-03-16",
+   "au": "2026-07-03",
+   "remplace": null,
+   "phrase": "Black-bass en 2e catégorie : pêche fermée du 16 mars au 3 juillet 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 c",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Black-bass : ouverture du 1er janvier au dimanche suivant l'ouverture de la pêche en 1ere catégorie inclus et du premier samedi de juillet au 31 décembre inclus compte tenu de la pression de pêche sur les zones de reproduction en période de fraie ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-arc-ouv-2e",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "eaux de la deuxième catégorie"
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "periodes": [
+     {
+      "du": "2026-01-01",
+      "au": "2026-01-25"
+     },
+     {
+      "du": "2026-03-14",
+      "au": "2026-12-31"
+     }
+    ],
+    "regle": "du 1er janvier au dernier dimanche de janvier et du 2e samedi de mars au 31 décembre",
+    "confirme_par": "avis annuel 2026 : « Du 1er janvier au 25 janvier et du 14 mars au 31 décembre »"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": "nat-arc-pas-fermeture-2e",
+   "phrase": "Truite arc-en-ciel en 2e catégorie : ouverte du 1er au 25 janvier et du 14 mars au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 c",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Truite arc-en-ciel : ouverture du 1er janvier au dernier dimanche de janvier et du 2ème samedi de mars au 31 décembre inclus.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-arc-ferme-2026",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "eaux de la deuxième catégorie"
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "raison": "fermeture",
+    "derive_de": "87-arc-ouv-2e"
+   },
+   "du": "2026-01-26",
+   "au": "2026-03-13",
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel en 2e catégorie : pêche fermée du 26 janvier au 13 mars 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 c",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Truite arc-en-ciel : ouverture du 1er janvier au dernier dimanche de janvier et du 2ème samedi de mars au 31 décembre inclus.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-anguille-jaune-ouv-loire",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "Bassin de la Loire"
+   },
+   "especes": [
+    "Anguille jaune"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "periodes": [
+     {
+      "du": "2026-04-01",
+      "au": "2026-08-31"
+     }
+    ],
+    "bassin": "Loire"
+   },
+   "du": "2026-04-01",
+   "au": "2026-08-31",
+   "remplace": null,
+   "phrase": "Anguille jaune, bassin de la Loire : ouverte du 1er avril au 31 août 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1229 du 20/11/2025 fixant les périodes d'ouverture de la pêche en 2026 (Haute-Vienne), art. 5, tableau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Anguille jaune Bassin de la Loire du 1er avril au 31 août",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-anguille-jaune-ouv-garonne-charente",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "Bassin de la Garonne et de la Charente"
+   },
+   "especes": [
+    "Anguille jaune"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "periodes": [
+     {
+      "du": "2026-05-01",
+      "au": "2026-09-20"
+     }
+    ],
+    "bassin": "Garonne et Charente",
+    "note": "pas de 2e catégorie sur ce bassin"
+   },
+   "du": "2026-05-01",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Anguille jaune, bassins de la Garonne et de la Charente : ouverte du 1er mai au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1229 du 20/11/2025 fixant les périodes d'ouverture de la pêche en 2026 (Haute-Vienne), art. 5, tableau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Anguille jaune Bassin de la Garonne et de la Charente du 1er mai au 20 septembre",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-grenouilles-ouv",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "Grenouille verte",
+    "Grenouille rousse"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "periodes": [
+     {
+      "du": "2026-08-01",
+      "au": "2026-09-20"
+     }
+    ],
+    "regle": "du 1er août au troisième dimanche de septembre inclus"
+   },
+   "du": "2026-08-01",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Grenouilles vertes et rousses : pêche ouverte du 1er août au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 a",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "grenouilles vertes et rousses : ouverture du 1er août au 3ème dimanche de septembre inclus ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-grenouilles-vente",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "Grenouille verte",
+    "Grenouille rousse"
+   ],
+   "categorie": "toutes",
+   "type": "autre",
+   "valeur": {
+    "interdit": "colportage, vente, mise en vente et achat, vivantes ou mortes, en toute période"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grenouilles vertes et rousses : interdit de les vendre ou de les acheter, vivantes ou mortes.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (note 2 du tableau)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Le colportage, la vente, la mise en vente ou l'achat de la grenouille verte et de la grenouille rousse, qu'il s'agisse de spécimens vivants ou morts, sont interdits en toute période.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-ecrevisses-us-ouv",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "Écrevisse de Californie (Pacifastacus leniusculus)",
+    "Écrevisse américaine (Faxonius limosus)",
+    "Écrevisse de Louisiane (Procambarus clarkii)"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "1re_categorie": {
+     "du": "2026-03-14",
+     "au": "2026-09-20"
+    },
+    "2e_categorie": {
+     "du": "2026-01-01",
+     "au": "2026-12-31"
+    }
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Écrevisses d'origine américaine : 1re catégorie du 14 mars au 20 septembre, 2e catégorie toute l'année 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1229 du 20/11/2025 fixant les périodes d'ouverture de la pêche en 2026 (Haute-Vienne), art. 5, tableau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Écrevisses d’origine américaine 1 du 14 mars au 20 septembre du 1er janvier au 31 décembre",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-ecrevisses-us-transport",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "Écrevisse de Californie (Pacifastacus leniusculus)",
+    "Écrevisse américaine (Faxonius limosus)",
+    "Écrevisse de Louisiane (Procambarus clarkii)"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "interdit": true
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisses d'origine américaine : interdit de les transporter vivantes.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1229 du 20/11/2025 fixant les périodes d'ouverture de la pêche en 2026 (Haute-Vienne), art. 8",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Le transport des écrevisses d’origine américaine vivantes (Pacifastacus leniusculus, Faxonius limosus, Procambarus clarkii) est interdit.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-int-saumon-aloses-anguille-argentee",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "Saumon atlantique",
+    "Grande alose",
+    "Alose feinte",
+    "Anguille argentée",
+    "Truite de mer"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "raison": "espèces protégées",
+    "toute_l_annee": true
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Saumon atlantique, grande alose, alose feinte, anguille argentée et truite de mer : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1229 du 20/11/2025 fixant les périodes d'ouverture de la pêche en 2026 (Haute-Vienne), art. 4",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "la capture du Saumon atlantique (Salmo salar), la Grande alose, l’Alose feinte, l’Anguille argentée et la Truite de mer est interdite.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-ecrevisses-indigenes",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "Écrevisse à pattes rouges (Astacus astacus)",
+    "Écrevisse des torrents (Astacus torrentium)",
+    "Écrevisse à pattes blanches (Austropotamobius pallipes)",
+    "Écrevisse à pattes grêles (Astacus leptodactylus)"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "raison": "fragilité des populations",
+    "toute_l_annee": true
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisses à pattes rouges, des torrents, à pattes blanches et à pattes grêles : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 a",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "écrevisses, à pattes rouges (Astacus astacus), des torrents (Astacus torrentium), à pattes blanches (Austropotamobius pallipes), à pattes grêles (Astacus leptodactylus) : pêche interdite (au regard de la fragilité des populations encore présentes dans les cours d'eau de Haute-Vienne) ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-bro-taille-60-80",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 60,
+    "max_cm": 80,
+    "hors": "barrage de Videix",
+    "experimentation": "cinq ans, suivi par la fédération départementale",
+    "note": "à remettre à l'eau si moins de 60 cm ou plus de 80 cm ; seul le brochet de 60 à 80 cm se garde"
+   },
+   "du": null,
+   "au": null,
+   "remplace": "nat-bro-taille",
+   "phrase": "Brochet : on ne garde que les poissons de 60 à 80 cm (sauf au barrage de Videix, où la règle nationale de 50 cm s'applique).",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1229 du 20/11/2025 fixant les périodes d'ouverture de la pêche en 2026 (Haute-Vienne), art. 6",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Les brochets doivent être remis à l’eau immédiatement après leur capture si leur longueur est inférieure à 0,60 mètre ou supérieure à 0,80 mètre (expérimentation sur une période de cinq ans avec mise en place d’un suivi par la Fédération départementale pour la Pêche et la Protection de Milieu Aquatique).",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-san-taille",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 50
+   },
+   "du": null,
+   "au": null,
+   "remplace": "nat-san-taille",
+   "phrase": "Sandre : 50 cm minimum en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1229 du 20/11/2025 fixant les périodes d'ouverture de la pêche en 2026 (Haute-Vienne), art. 6",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "0,50 mètre pour le sandre dans les eaux de 2 catégorie ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-bla-taille",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 40
+   },
+   "du": null,
+   "au": null,
+   "remplace": "nat-bla-taille",
+   "phrase": "Black-bass : 40 cm minimum en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 6",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "0,40 mètre pour le black-bass dans les eaux de 2",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-arc-taille",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": null,
+    "aucune_taille_minimale": true,
+    "note": "la truite fario garde 23 cm ; la page de la fédération écrit à la fois 23 cm et « plus de taille minimale » pour l'arc-en-ciel"
+   },
+   "du": null,
+   "au": null,
+   "remplace": "nat-tru-taille",
+   "phrase": "Truite arc-en-ciel : aucune taille minimale (la fario reste à 23 cm).",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1229 du 20/11/2025 fixant les périodes d'ouverture de la pêche en 2026 (Haute-Vienne), art. 6",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Truite arc-en-ciel : pas de taille minimale de capture.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-sal-quota",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "2221",
+    "2216",
+    "2247"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "total": 6,
+    "dont_ombre_max": 2
+   },
+   "du": null,
+   "au": null,
+   "remplace": "nat-sal-quota",
+   "phrase": "Salmonidés (truites, ombre) : 6 par jour dont 2 ombres au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 5",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Dans tous les cours d’eau et plans d’eau du département, le nombre de captures de salmonidés autres que la truite de mer et le saumon atlantique autorisé par pêcheur de loisir et par jour est fixé à 6 dont 2 ombres communs au maximum pour la conservation des espèces.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-bro-quota-1re",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "type": "quota_jour",
+   "valeur": {
+    "brochet_par_jour": 2
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Brochet en 1re catégorie : 2 par jour au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 5",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Dans les eaux classées en 1 catégorie, le nombre de captures de brochets autorisé par pêcheur de loisir est fixé à 2 poissons.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-mode-1re-ligne",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 1,
+    "hamecons_max": 2,
+    "mouches_artificielles_max": 3,
+    "sur_canne": true,
+    "visee": "membres d'une AAPPMA"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie : une seule ligne sur canne, 2 hameçons ou 3 mouches artificielles au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 8 a",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "d’une seule ligne montée sur canne et munie, de deux hameçons au plus, ou de trois mouches artificielles au plus.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-mode-1re-2lignes-fede",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "plans d'eau où le droit de pêche est concédé à la fédération de la Haute-Vienne"
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "ligne_a_proximite_du_pecheur": true
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Sur les plans d'eau dont la pêche est confiée à la fédération, 2 lignes au plus, tenues à proximité du pêcheur.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 8 a",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Sur les plans d’eau où le droit de pêche est concédé à la fédération de la Haute-Vienne pour la pêche et la protection du milieu aquatique (FDPPMA), l’emploi de deux lignes au plus,",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-mode-1re-asticot",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "plans d'eau : Ambazac ; Bussière-Galant ; Châteauneuf-la-Forêt ; Ladignac-le-Long ; Lussac-les-Eglises ; Saint-Germain-les-Belles ; Nantiat « Les Haches » ; cours d'eau : l’Aixette (en aval du pont de la R. D. 46) ; l’Aurence (en aval d’Uzurat) ; la Brame (en aval du pont de la R. D. 220) ; la Cane (en aval du pont de la R. D. 39) ; la Gartempe (en amont du pont des Bonshommes, R. D. 203) ; la Glane (en aval du pont de la voie ferrée à Nieul) ; la Gorre (en aval du pont du C. D. 21A ter dit “pont des Gentes”) ; la Graine (en aval du pont de la R. N. 675 à Rochechouart) ; l’Isle (en aval du pont de la R. D. 59) ; l’Issoire (en aval du pont de la R. D. 4) ; la Loue (en aval du pont de la R. D.704) ; la Mazelle (en aval du pont de la R. D. 39) ; le Ruisseau du Palais (en aval de son confluent avec la Cane et la Mazelle) ; la Semme (en aval du pont de la R. D. 220) ; la Tardoire (en aval du pont de la R. N. 699) ; la Vayres (en aval du pont de la R. D. 675 allant de Vayres à Rochechouart) ; le Vincou (en aval du pont de Montsigout sur la R. D. 711)"
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "asticot_comme_appat": "autorisé",
+    "amorcage_a_l_asticot": "interdit",
+    "rattachement_de_la_liste": "la liste de lieux suit la phrase dans le texte extrait ; rattachement à vérifier"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie, l'asticot est permis comme appât seulement sur les lieux listés, sans amorçage à l'asticot.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 8 a",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "l’emploi de l’asticot comme appât est autorisé mais sans amorçage à l’asticot",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-mode-marche-1re",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "Gartempe en première catégorie piscicole et Semme, Couze en aval du lac de Saint-Pardoux, et Ardour en aval du lac de Pont-à-l'Age"
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "interdit": "pêche en marchant dans l'eau",
+    "periode_regle": "du 2e samedi de mars au 3e vendredi d'avril inclus",
+    "raison": "protéger le frai de la truite fario et du saumon atlantique",
+    "ambiguite": "le texte dit « la Gartempe et ses affluents, la Semme, la Couze... » : liste exacte des affluents non précisée"
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Interdit de pêcher en marchant dans l'eau du 14 mars au 17 avril 2026 sur la Gartempe (1re catégorie), la Semme, la Couze (aval du lac de Saint-Pardoux) et l'Ardour (aval du lac de Pont-à-l'Âge).",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 e",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Gartempe en première catégorie piscicole et Semme, Couze en aval du lac de Saint-Pardoux, et Ardour en aval du lac de Pont-à-l'Age : du 2 samedi de mars au 3 vendredi d'avril inclus.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-mode-marche-gartempe-2e",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "Gartempe en 2 catégorie piscicole (en aval du Pont des Bonshommes, RD 203)"
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "2",
+   "type": "mode_peche",
+   "valeur": {
+    "interdit": "pêche en marchant dans l'eau",
+    "periodes": [
+     {
+      "du": "2026-01-01",
+      "au": "2026-04-17"
+     },
+     {
+      "du": "2026-11-01",
+      "au": "2026-12-31"
+     }
+    ],
+    "raison": "protéger le frai de la truite fario et du saumon atlantique"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Interdit de pêcher en marchant dans l'eau sur la Gartempe en aval du pont des Bonshommes du 1er janvier au 17 avril et du 1er novembre au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 e",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Gartempe en 2 catégorie piscicole (en aval du Pont des Bonshommes, RD 203) : du 1er janvier au 3 vendredi d'avril inclus et du 1er novembre au 31 décembre inclus ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-mode-vif-lacs-barrage",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "lacs de barrage de Vassivière, Saint-Pardoux, Le-Palais-sur-Vienne, Chauvan, Saint-Marc, Artige, Villejoubert, Langleret, Bujaleuf, Fleix, Martineix et Mont-Larron"
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "mode_peche",
+   "valeur": {
+    "autorise": "pêche au vif, au poisson mort ou artificiel et aux leurres",
+    "jusqu_au": "2026-03-09",
+    "contexte": "pendant la fermeture du brochet en 2e catégorie (l'arrêté permanent art. 8 b autorise jusqu'au dimanche suivant l'ouverture de la 1re catégorie, soit le 15 mars 2026, sur les eaux désignées par l'arrêté annuel)",
+    "fin_si_arrete_permanent_seul": "2026-03-15"
+   },
+   "du": null,
+   "au": "2026-03-09",
+   "remplace": null,
+   "phrase": "Pendant la fermeture du brochet, pêche au vif, au poisson mort ou artificiel et aux leurres permise seulement jusqu'au 9 mars 2026, sur les lacs de barrage listés.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1229 du 20/11/2025 fixant les périodes d'ouverture de la pêche en 2026 (Haute-Vienne), art. 7",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La pêche au vif, au poisson mort ou artificiel et aux leurres est autorisée jusqu’au 9 mars inclus, uniquement sur les lacs de barrage de Vassivière, Saint-Pardoux, Le-Palais-sur-Vienne, Chauvan, Saint-Marc, Artige, Villejoubert, Langleret, Bujaleuf, Fleix, Martineix et Mont-Larron.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-res-ouvrages",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "interdit": "toute pêche dans les dispositifs de circulation des poissons, les ouvrages du lit, les pertuis, vannages et passages d'eau dans les bâtiments, près des barrages et écluses et 50 m en aval, sauf à une seule ligne",
+    "distance_m": 50,
+    "ajoute_au_national": "dispositifs de franchissement, pertuis, vannages, ouvrages de restitution des eaux turbinées ; dispositions spécifiques pour les barrages EDF"
+   },
+   "du": null,
+   "au": null,
+   "remplace": "nat-res-ouvrages",
+   "phrase": "Pêche interdite dans les passes à poissons, pertuis et vannages, et près des barrages et écluses jusqu'à 50 m en aval (sauf à une seule ligne).",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 3 d",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "dans les zones situées à proximité des barrages et des écluses ainsi que sur une distance de 50 mètres en aval de l’extrémité de ceux-ci (à l’exception de la pêche à l’aide d’une seule ligne) et des ouvrages de restitution des eaux turbinées, sauf dispositions spécifiques pour les barrages d'EDF.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-mitoyen-moins-restrictif",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "cours d'eau et plans d'eau limitrophes d'autres départements"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "autre",
+   "valeur": {
+    "regle": "à défaut d'accord entre préfets, on applique les dispositions les moins restrictives des départements concernés",
+    "article_code": "R436-37"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Sur les eaux partagées avec un autre département (Vassivière, par exemple), c'est la règle la moins stricte des deux qui s'applique.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 9",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Quand un cours d’eau ou un plan d’eau est mitoyen entre plusieurs départements, il est fait application, à défaut d’accord entre les préfets, des dispositions les moins restrictives dans les",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-car-nuit-esches",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "eaux de la deuxième catégorie"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "esches_vegetales_seulement": true,
+    "tout_poisson_remis_a_l_eau": true
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit en 2e catégorie : esches végétales seulement, et tout poisson capturé est remis à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral réglementaire permanent n° PC/2025/E 1228 du 20/11/2025 (Haute-Vienne), art. 8 b",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Pour la pêche de la carpe de nuit, seul l’emploi des esches végétales est autorisé et tout poisson, quelle que soit l’espèce capturée, doit être remis à l’eau.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-car-nuit-conditions-avis",
+   "portee": {
+    "niveau": "departement",
+    "code": "87",
+    "lieu": "secteurs listés dans l'avis annuel 2026"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "autorise": true,
+    "depuis_la_rive_seulement": true,
+    "esches_vegetales_seulement": true,
+    "signalisation": "présence des pêcheurs signalée par des sources lumineuses",
+    "captivite_et_transport": "interdits de 30 min après le coucher à 30 min avant le lever",
+    "arretes_cites": "PC/2024/E 1451 du 04/12/2024 ; tableau annexé à l'arrêté E 1412 du 01/12/2023 (non lus)",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": "nat-car-nuit-captivite",
+   "phrase": "Carpe de nuit : depuis la rive, esches végétales, lumière sur le poste, et seulement sur les secteurs listés.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La pêche de la carpe de nuit est autorisée, uniquement depuis la rive et exclusivement à l’aide d’esches végétales",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-plan-d-eau-de-st-helene-a-bujaleuf-4-secteurs-ou-sur-toute-l-etendue-d",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Plan d'eau de St Hélène à Bujaleuf – 4 secteurs, ou sur toute l'étendue du barrage uniquement lors de \"l'Enduro Carpe\" annuel."
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : Plan d'eau de St Hélène à Bujaleuf, 4 secteurs, ou sur toute l'étendue du barrage uniquement lors de \"l'Enduro Carpe\" annuel.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Plan d'eau de St Hélène à Bujaleuf – 4 secteurs, ou sur toute l'étendue du barrage uniquement lors de \"l'Enduro Carpe\" annuel.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-la-vienne-sur-la-commune-d-isle-1-secteur-lieu-dit-le-pre-de-l-etoile",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Vienne sur la commune d'Isle – 1 secteur, Lieu-dit « Le pré de l'Etoile »"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : La Vienne sur la commune d'Isle, 1 secteur, Lieu-dit « Le pré de l'Etoile »",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La Vienne sur la commune d'Isle – 1 secteur, Lieu-dit « Le pré de l'Etoile »",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-la-vienne-sur-la-commune-de-st-brice-2-secteurs-lieux-dits-le-bourg-et",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Vienne sur la commune de St Brice – 2 secteurs, Lieux-dits « Le Bourg » et « L'usine du Bouchet »"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : La Vienne sur la commune de St Brice, 2 secteurs, Lieux-dits « Le Bourg » et « L'usine du Bouchet »",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La Vienne sur la commune de St Brice – 2 secteurs, Lieux-dits « Le Bourg » et « L'usine du Bouchet »",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-retenue-du-barrage-du-mont-larron-5-secteurs",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Retenue du barrage du Mont Larron – 5 secteurs,"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : Retenue du barrage du Mont Larron, 5 secteurs",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Retenue du barrage du Mont Larron – 5 secteurs,",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-retenue-du-barrage-de-fleix-3-secteurs",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Retenue du barrage de Fleix – 3 secteurs,"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : Retenue du barrage de Fleix, 3 secteurs",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Retenue du barrage de Fleix – 3 secteurs,",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-retenue-du-barrage-de-vassiviere-6-secteurs",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Retenue du barrage de Vassivière – 6 secteurs,"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : Retenue du barrage de Vassivière, 6 secteurs",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Retenue du barrage de Vassivière – 6 secteurs,",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-la-vienne-sur-la-commune-d-aixe-sur-vienne-1-secteur-lieu-dit-panguet",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Vienne sur la commune d'Aixe-sur-Vienne – 1 secteur, Lieu-dit « Panguet »"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : La Vienne sur la commune d'Aixe-sur-Vienne, 1 secteur, Lieu-dit « Panguet »",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La Vienne sur la commune d'Aixe-sur-Vienne – 1 secteur, Lieu-dit « Panguet »",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-la-vienne-sur-la-commune-de-saint-junien-3-secteurs-lieux-dits-le-pre",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Vienne sur la commune de Saint-Junien – 3 secteurs, Lieux-dits « Le Pré de la Colle », « Le Belvédère » et « L'Île de Chaillac »"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : La Vienne sur la commune de Saint-Junien, 3 secteurs, Lieux-dits « Le Pré de la Colle », « Le Belvédère » et « L'Île de Chaillac »",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La Vienne sur la commune de Saint-Junien – 3 secteurs, Lieux-dits « Le Pré de la Colle », « Le Belvédère » et « L'Île de Chaillac »",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-retenue-du-barrage-de-st-marc-maureix-3-secteurs",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Retenue du barrage de St Marc –Maureix – 3 secteurs,"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : Retenue du barrage de St Marc,Maureix, 3 secteurs",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Retenue du barrage de St Marc –Maureix – 3 secteurs,",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-retenue-du-barrage-de-chauvan-2-secteurs",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Retenue du barrage de Chauvan – 2 secteurs,"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : Retenue du barrage de Chauvan, 2 secteurs",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Retenue du barrage de Chauvan – 2 secteurs,",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-retenue-du-barrage-de-l-artige-2-secteurs",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Retenue du barrage de L'Artige – 2 secteurs,"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : Retenue du barrage de L'Artige, 2 secteurs",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Retenue du barrage de L'Artige – 2 secteurs,",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-la-vienne-sur-la-commune-de-verneuil-sur-vienne-1-secteur-lieu-dit-les",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Vienne sur la commune de Verneuil-sur-Vienne – 1 secteur, Lieu-dit « Les Essarts »"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : La Vienne sur la commune de Verneuil-sur-Vienne, 1 secteur, Lieu-dit « Les Essarts »",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La Vienne sur la commune de Verneuil-sur-Vienne – 1 secteur, Lieu-dit « Les Essarts »",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-la-vienne-sur-la-commune-de-royeres-1-secteur-lieu-dit-brignac",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Vienne sur la commune de Royères – 1 secteur, Lieu-dit « Brignac »"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : La Vienne sur la commune de Royères, 1 secteur, Lieu-dit « Brignac »",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La Vienne sur la commune de Royères – 1 secteur, Lieu-dit « Brignac »",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-la-vienne-sur-la-commune-de-saint-leonard-de-noblat-1-secteur-lieu-dit",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Vienne sur la commune de Saint Léonard de Noblat – 1 secteur, Lieu-dit « Beaufort »"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : La Vienne sur la commune de Saint Léonard de Noblat, 1 secteur, Lieu-dit « Beaufort »",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La Vienne sur la commune de Saint Léonard de Noblat – 1 secteur, Lieu-dit « Beaufort »",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-la-gartempe-sur-les-communes-de-peyrat-de-bellac-1-secteur-lieu-dit-le",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Gartempe sur les communes de Peyrat-de-Bellac – 1 secteur, Lieu-dit « Le Pont de Lanneau »"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : La Gartempe sur les communes de Peyrat-de-Bellac, 1 secteur, Lieu-dit « Le Pont de Lanneau »",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La Gartempe sur les communes de Peyrat-de-Bellac – 1 secteur, Lieu-dit « Le Pont de Lanneau »",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-car-nuit-la-gartempe-sur-la-commune-de-saint-ouen-sur-gartempe-1-secteur-lieu-d",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Gartempe sur la commune de Saint-Ouen-sur-Gartempe – 1 secteur, Lieu-dit « Le Pont de Beissat »"
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "secteur_autorise_de_nuit": true,
+    "precision_des_postes": "tableau annexé à E 1412 non lu",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit autorisée sur : La Gartempe sur la commune de Saint-Ouen-sur-Gartempe, 1 secteur, Lieu-dit « Le Pont de Beissat »",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (carpe de nuit, secteurs)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La Gartempe sur la commune de Saint-Ouen-sur-Gartempe – 1 secteur, Lieu-dit « Le Pont de Beissat »",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-no-kill-vienne-eymoutiers",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "la Vienne, commune d'Eymoutiers, du pont de la R.D.14 à la confluence du ruisseau de Fraissengeas"
+   },
+   "especes": [
+    "2221",
+    "2247"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "remise_a_l_eau_immediate": true,
+    "hamecon": "simple sans ardillon ou ardillon écrasé",
+    "arrete_source": "n° 1341 du 28/11/2022 (non lu)",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vienne à Eymoutiers (pont de la RD14 au ruisseau de Fraissengeas) : truite fario et ombre remis à l'eau, hameçon sans ardillon.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (graciation)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La remise à l'eau immédiatement après capture de la Truite fario (Salmo trutta fario) et de l'Ombre commun (Thymallus thymallus) est obligatoire sur la Vienne, commune d'Eymoutiers, du pont de la R.D.14 à la confluence du ruisseau de Fraissengeas",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-no-kill-vienne-bujaleuf-neuvic",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "la Vienne, communes de Bujaleuf et Neuvic-Entier sur 1,5 km en amont du pont du Chalard (R.D.16)"
+   },
+   "especes": [
+    "2221",
+    "2247"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "remise_a_l_eau_immediate": true,
+    "hamecon": "simple sans ardillon ou ardillon écrasé",
+    "arrete_source": "n° 1342 du 28/11/2022 (non lu)",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vienne à Bujaleuf et Neuvic-Entier (1,5 km en amont du pont du Chalard) : truite fario et ombre remis à l'eau, hameçon sans ardillon.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (graciation)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "sur la Vienne, communes de Bujaleuf et Neuvic-Entier sur 1,5 km en amont du pont du Chalard (R.D.16).",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-no-kill-vienne-limoges",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "la vienne, du pont St Etienne au pont St Martial"
+   },
+   "especes": [
+    "2151",
+    "2193",
+    "2195",
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "remise_a_l_eau_immediate": true,
+    "hamecon": "simple sans ardillon ou ardillon écrasé",
+    "arrete_source": "n° 2838 du 14/11/2019 (non lu ; le rattachement du tronçon à cet arrêté est déduit de la liste de l'avis)",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vienne à Limoges (pont Saint-Étienne au pont Saint-Martial) : brochet, perche, sandre et truite fario remis à l'eau, hameçon sans ardillon.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (graciation)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La remise à l'eau immédiate après capture des poissons carnassiers (brochets, perches et sandres) et de la Truite fario (Salmo trutta fario) est obligatoire sur la vienne, du pont St Etienne au pont St Martial.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-no-kill-vincou-bellac",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "le Vincou, commune de Bellac sur le parcours découverte de la pêche"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "lignes_max": 1,
+    "hamecon": "simple sans ardillon ou ardillon écrasé",
+    "remise_a_l_eau_immediate": true,
+    "arrete_source": "n° 01564 (date non indiquée, non lu)",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vincou à Bellac (parcours découverte) : une seule ligne, hameçon sans ardillon, tout poisson remis à l'eau.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (parcours découverte)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Sur le Vincou, commune de Bellac sur le parcours découverte de la pêche, la pêche est autorisée avec une seule ligne et seuls les hameçons simples et sans ardillon ou avec ardillon écrasé sont autorisés. La remise à l'eau immédiate après capture est obligatoire.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-bla-remise-eau-fleix",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "barrage et plan d'eau de Fleix"
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "obligatoire": true,
+    "arretes_cites": "n° 2591 du 15/12/2009 et n° 2016/4227 du 21/12/2016 (Fleix et Bujaleuf seulement, non lus)",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Black-bass pêché au barrage de Fleix : remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (black-bass)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Les black-bass capturés dans les barrages et plans d'eau de Fleix, Bujaleuf, et Videix seront immédiatement remis à l'eau.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-bla-remise-eau-bujaleuf",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "barrage et plan d'eau de Bujaleuf"
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "obligatoire": true,
+    "arretes_cites": "n° 2591 du 15/12/2009 et n° 2016/4227 du 21/12/2016 (Fleix et Bujaleuf seulement, non lus)",
+    "arrete_source_lu": false
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Black-bass pêché au barrage de Bujaleuf : remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (black-bass)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Les black-bass capturés dans les barrages et plans d'eau de Fleix, Bujaleuf, et Videix seront immédiatement remis à l'eau.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-bla-remise-eau-videix",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "barrage et plan d'eau de Videix"
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "obligatoire": true,
+    "arretes_cites": "n° 2591 du 15/12/2009 et n° 2016/4227 du 21/12/2016 (Fleix et Bujaleuf seulement, non lus)",
+    "arrete_source_lu": false,
+    "raison_incertain": "l'avis nomme Videix dans la phrase mais ne cite aucun arrêté pour ce barrage"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Black-bass pêché au barrage de Videix : remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (black-bass)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "Les black-bass capturés dans les barrages et plans d'eau de Fleix, Bujaleuf, et Videix seront immédiatement remis à l'eau.",
+   "statut": "incertain",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-res-vienne-saint-junien",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "sur la rivière « La Vienne », commune de Saint-Junien, parcelle cadastrée n° BP 0158, sur la frayère à brochet"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "interdit": "toute pêche",
+    "duree": "cinq ans à compter de la signature",
+    "depuis": "2025-11-20",
+    "fin_calculee": "2030-11-20",
+    "renouvelle": "réserve instituée par l'arrêté du 22/12/2017"
+   },
+   "du": "2025-11-20",
+   "au": null,
+   "remplace": null,
+   "phrase": "Vienne à Saint-Junien (frayère à brochet, parcelle BP 0158) : toute pêche interdite pendant cinq ans à partir du 20 novembre 2025.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1231 du 20/11/2025, réserve temporaire de pêche, La Vienne, Saint-Junien, art. 1 et 2",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La réserve de pêche sur la rivière « La Vienne » instituée par l’arrêté préfectoral du 22 décembre 2017 susvisé, commune de Saint-Junien, parcelle cadastrée n° BP 0158, sur la frayère à brochet réalisée par la fédération départementale pour la pêche et la protection du milieu aquatique de la Haute-Vienne est reconduite pour une durée de cinq ans à compter de la signature du présent arrêté.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-res-colle-saint-mathieu",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "limite amont : digue du plan d'eau de Cautarial, limite aval : pont de Chez Rouchaud (RD 87)"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "interdit": "toute pêche",
+    "duree": "cinq ans à compter de la signature",
+    "depuis": "2025-11-20",
+    "fin_calculee": "2030-11-20",
+    "cours_eau": "La Colle, commune de Saint-Mathieu",
+    "renouvelle": "réserve instituée par l'arrêté du 14/11/2019"
+   },
+   "du": "2025-11-20",
+   "au": null,
+   "remplace": null,
+   "phrase": "La Colle à Saint-Mathieu (de la digue du plan d'eau de Cautarial au pont de Chez Rouchaud, RD 87) : toute pêche interdite pendant cinq ans à partir du 20 novembre 2025.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1232 du 20/11/2025, réserve temporaire de pêche, La Colle, Saint-Mathieu, art. 1 et 2",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Les limites de la réserve restent inchangées et sont matérialisées par un panneau : limite amont : digue du plan d’eau de Cautarial, limite aval : pont de Chez Rouchaud (RD 87). Durant cette période de cinq ans, toute pêche est interdite.",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-res-vienne-royeres-brignac",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "la Vienne à Royères au lieu-dit \"Brignac dans la frayère aménagée"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "interdit": "toute pêche",
+    "arrete_source": "n° 1339 du 28/11/2022 (non lu)",
+    "arrete_source_lu": false,
+    "duree": "non précisée dans l'avis"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vienne à Royères, lieu-dit Brignac (frayère aménagée) : réserve, toute pêche interdite.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (réserves temporaires)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "la Vienne à Royères au lieu-dit \"Brignac dans la frayère aménagée ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-res-vienne-panazol-prezinat",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Vienne au lieu-dit « Le Grenouillet » commune de Panazol, sur la frayère « Prézinat » aménagée ainsi que 50 m en amont et 50 m en aval de son entrée"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "interdit": "toute pêche",
+    "arrete_source": "n° 1343 du 28/11/2022 (non lu)",
+    "arrete_source_lu": false,
+    "duree": "non précisée dans l'avis",
+    "marges_m": 50
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vienne à Panazol, frayère Prézinat (lieu-dit Le Grenouillet) et 50 m en amont et en aval de son entrée : réserve, toute pêche interdite.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (réserves temporaires)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "La Vienne au lieu-dit « Le Grenouillet » commune de Panazol, sur la frayère « Prézinat » aménagée ainsi que 50 m en amont et 50 m en aval de son entrée ;",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-res-mas-maury-rempnat",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "87",
+    "lieu": "les ruisseaux du Mas Maury à Rempnat"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "interdit": "toute pêche",
+    "arrete_source": "n° 1340 du 28/11/2022 (non lu)",
+    "arrete_source_lu": false,
+    "duree": "non précisée dans l'avis",
+    "limites": "matérialisées par des panneaux, non décrites dans l'avis"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Ruisseau du Mas Maury à Rempnat : réserve, toute pêche interdite.",
+   "source": {
+    "texte": "Avis annuel 2026, périodes d'ouverture de la pêche en Haute-Vienne (réserves temporaires)",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/48829/412029/file/1_affiche%20A3%20double-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis annuel signé à Limoges le 20/11/2025 ; copie lue (mairie de Panazol, PanneauPocket)"
+   },
+   "citation": "les ruisseaux du Mas Maury à Rempnat",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-int-temp-parcours-le-vincou-1ere-roussac-pont-de-la-creche-pont-de-montsigou-3",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "Le Vincou 1ère Roussac Pont de la Creche Pont de Montsigou 3,2"
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : Le Vincou 1ère Roussac Pont de la Creche Pont de Montsigou 3,2",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Le Vincou 1ère Roussac Pont de la Creche Pont de Montsigou 3,2",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-laixette-1ere-aixe-sur-vienne-confluence-vienne-150-m-amont",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "L’Aixette 1ère Aixe sur Vienne Confluence Vienne 150 m amont RD32 1,2"
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : L’Aixette 1ère Aixe sur Vienne Confluence Vienne 150 m amont RD32 1,2",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "L’Aixette 1ère Aixe sur Vienne Confluence Vienne 150 m amont RD32 1,2",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-la-gorre-1ere-saint-laurent-sur-gorre-ancien-seuil-limont-se",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Gorre 1ère Saint Laurent sur Gorre Ancien seuil Limont Seuil Litaud 1,7"
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : La Gorre 1ère Saint Laurent sur Gorre Ancien seuil Limont Seuil Litaud 1,7",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Gorre 1ère Saint Laurent sur Gorre Ancien seuil Limont Seuil Litaud 1,7",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-la-tardoire-1ere-oradour-sur-vayres-seuil-des-ages-rd699-1-9",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Tardoire 1ère Oradour sur Vayres Seuil des Ages RD699 1,9"
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : La Tardoire 1ère Oradour sur Vayres Seuil des Ages RD699 1,9",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Tardoire 1ère Oradour sur Vayres Seuil des Ages RD699 1,9",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-le-bandiat-1ere-marval-seuil-epinassie-etang-epinassie-0-4",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "Le Bandiat 1ère Marval Seuil Epinassie Etang Epinassie 0,4"
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : Le Bandiat 1ère Marval Seuil Epinassie Etang Epinassie 0,4",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Le Bandiat 1ère Marval Seuil Epinassie Etang Epinassie 0,4",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-la-briance-1ere-ligoure-briance-seuil-de-richebourg-confluen",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Briance 1ère Ligoure Briance Seuil de Richebourg Confluence ruisseau de Chez Barbotte (aval station d’épuration) 1"
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : La Briance 1ère Ligoure Briance Seuil de Richebourg Confluence ruisseau de Chez Barbotte (aval station d’épuration) 1",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Briance 1ère Ligoure Briance Seuil de Richebourg Confluence ruisseau de Chez Barbotte (aval station d’épuration) 1",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-la-glane-1ere-oradour-sur-glane-seuil-des-carderies-pont-de",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Glane 1ère Oradour sur Glane Seuil des Carderies Pont de la RD 3 1,5"
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : La Glane 1ère Oradour sur Glane Seuil des Carderies Pont de la RD 3 1,5",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Glane 1ère Oradour sur Glane Seuil des Carderies Pont de la RD 3 1,5",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-la-glane-2eme-saint-junien-seuil-du-moulin-brice-pont-de-la",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Glane 2ème Saint Junien Seuil du Moulin Brice Pont de la RN141 2,6"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : La Glane 2ème Saint Junien Seuil du Moulin Brice Pont de la RN141 2,6",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Glane 2ème Saint Junien Seuil du Moulin Brice Pont de la RN141 2,6",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-la-benaize-2eme-saint-sulpice-les-feuilles-pont-rd2-pont-rd4",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Benaize 2ème Saint Sulpice les Feuilles Pont RD2 Pont RD44 1,7"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : La Benaize 2ème Saint Sulpice les Feuilles Pont RD2 Pont RD44 1,7",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Benaize 2ème Saint Sulpice les Feuilles Pont RD2 Pont RD44 1,7",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-la-brame-2eme-thiat-le-dorat-pont-rd91-pont-rd4-3-3",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Brame 2ème Thiat – Le Dorat Pont RD91 Pont RD4 3,3"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : La Brame 2ème Thiat Le Dorat Pont RD91 Pont RD4 3,3",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Brame 2ème Thiat – Le Dorat Pont RD91 Pont RD4 3,3",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-la-gartempe-2eme-bellac-vieux-pont-de-blanzac-moulin-de-puy",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Gartempe 2ème Bellac Vieux pont de Blanzac Moulin de Puy Martin 0,9"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : La Gartempe 2ème Bellac Vieux pont de Blanzac Moulin de Puy Martin 0,9",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Gartempe 2ème Bellac Vieux pont de Blanzac Moulin de Puy Martin 0,9",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-la-gartempe-2eme-chateauponsac-barrage-detrangleloup-aval-mo",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Gartempe 2ème Chateauponsac Barrage d’Etrangleloup Aval moulin Theillaud 1,8"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : La Gartempe 2ème Chateauponsac Barrage d’Etrangleloup Aval moulin Theillaud 1,8",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Gartempe 2ème Chateauponsac Barrage d’Etrangleloup Aval moulin Theillaud 1,8",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-parcours-la-briance-2eme-vienne-briance-pont-de-chambont-pont-rompu-2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "87",
+    "lieu": "La Briance 2ème Vienne Briance Pont de Chambont Pont Rompu 2"
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-16",
+      "au": "2026-04-17"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-18"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 16 et 17 avril 2026, ouverture le 18 avril 2026.",
+    "colonnes_annexe": "cours d'eau, catégorie, AAPPMA, limite aval, limite amont, longueur en km"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-17",
+   "remplace": null,
+   "phrase": "Parcours de loisir fermé à la pêche du 9 au 13 mars et les 16 et 17 avril 2026 : La Briance 2ème Vienne Briance Pont de Chambont Pont Rompu 2",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, parcours de loisir",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "La Briance 2ème Vienne Briance Pont de Chambont Pont Rompu 2",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-plan-eau-ambazac",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Ambazac"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-02",
+      "au": "2026-04-03"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-04"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 2 et 3 avril 2026, ouverture le samedi 4 avril 2026.",
+    "visee": "plans d'eau dont le droit de pêche est concédé à la FDAAPPMA"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-03",
+   "remplace": null,
+   "phrase": "Plan d'eau de Ambazac fermé à la pêche du 9 au 13 mars et les 2 et 3 avril 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, plans d'eau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Ambazac",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-plan-eau-bussiere-galant",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Bussière-Galant"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-02",
+      "au": "2026-04-03"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-04"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 2 et 3 avril 2026, ouverture le samedi 4 avril 2026.",
+    "visee": "plans d'eau dont le droit de pêche est concédé à la FDAAPPMA"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-03",
+   "remplace": null,
+   "phrase": "Plan d'eau de Bussière-Galant fermé à la pêche du 9 au 13 mars et les 2 et 3 avril 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, plans d'eau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Bussière-Galant",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-plan-eau-chateauneuf-la-foret",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Chateauneuf-La-Forêt"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-02",
+      "au": "2026-04-03"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-04"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 2 et 3 avril 2026, ouverture le samedi 4 avril 2026.",
+    "visee": "plans d'eau dont le droit de pêche est concédé à la FDAAPPMA"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-03",
+   "remplace": null,
+   "phrase": "Plan d'eau de Chateauneuf-La-Forêt fermé à la pêche du 9 au 13 mars et les 2 et 3 avril 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, plans d'eau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Chateauneuf-La-Forêt",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-plan-eau-folles-et-lauriere-pont-a-l-age",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Folles et Laurière - « Pont-à-l'Âge »"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-02",
+      "au": "2026-04-03"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-04"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 2 et 3 avril 2026, ouverture le samedi 4 avril 2026.",
+    "visee": "plans d'eau dont le droit de pêche est concédé à la FDAAPPMA"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-03",
+   "remplace": null,
+   "phrase": "Plan d'eau de Folles et Laurière - « Pont-à-l'Âge » fermé à la pêche du 9 au 13 mars et les 2 et 3 avril 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, plans d'eau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Folles et Laurière - « Pont-à-l'Âge »",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-plan-eau-ladignac-le-long",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Ladignac-Le-Long"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-02",
+      "au": "2026-04-03"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-04"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 2 et 3 avril 2026, ouverture le samedi 4 avril 2026.",
+    "visee": "plans d'eau dont le droit de pêche est concédé à la FDAAPPMA"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-03",
+   "remplace": null,
+   "phrase": "Plan d'eau de Ladignac-Le-Long fermé à la pêche du 9 au 13 mars et les 2 et 3 avril 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, plans d'eau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Ladignac-Le-Long",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-plan-eau-lussac-les-eglises",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Lussac-les-Eglises"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-02",
+      "au": "2026-04-03"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-04"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 2 et 3 avril 2026, ouverture le samedi 4 avril 2026.",
+    "visee": "plans d'eau dont le droit de pêche est concédé à la FDAAPPMA"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-03",
+   "remplace": null,
+   "phrase": "Plan d'eau de Lussac-les-Eglises fermé à la pêche du 9 au 13 mars et les 2 et 3 avril 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, plans d'eau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Lussac-les-Eglises",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-plan-eau-saint-germain-les-belles",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Saint-Germain-les-Belles"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-02",
+      "au": "2026-04-03"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-04"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 2 et 3 avril 2026, ouverture le samedi 4 avril 2026.",
+    "visee": "plans d'eau dont le droit de pêche est concédé à la FDAAPPMA"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-03",
+   "remplace": null,
+   "phrase": "Plan d'eau de Saint-Germain-les-Belles fermé à la pêche du 9 au 13 mars et les 2 et 3 avril 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, plans d'eau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Saint-Germain-les-Belles",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-plan-eau-saint-mathieu",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Saint-Mathieu"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-02",
+      "au": "2026-04-03"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-04"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 2 et 3 avril 2026, ouverture le samedi 4 avril 2026.",
+    "visee": "plans d'eau dont le droit de pêche est concédé à la FDAAPPMA"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-03",
+   "remplace": null,
+   "phrase": "Plan d'eau de Saint-Mathieu fermé à la pêche du 9 au 13 mars et les 2 et 3 avril 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, plans d'eau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Saint-Mathieu",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-int-temp-plan-eau-saint-yrieix-la-perche",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Saint-Yrieix-La-Perche"
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "raison": "adaptation des poissons déversés",
+    "periodes": [
+     {
+      "du": "2026-03-09",
+      "au": "2026-03-13"
+     },
+     {
+      "du": "2026-04-02",
+      "au": "2026-04-03"
+     }
+    ],
+    "reouverture": [
+     "2026-03-14",
+     "2026-04-04"
+    ],
+    "dates_citees": "du 9 au 13 mars 2026, ouverture le samedi 14 mars 2026 ; les 2 et 3 avril 2026, ouverture le samedi 4 avril 2026.",
+    "visee": "plans d'eau dont le droit de pêche est concédé à la FDAAPPMA"
+   },
+   "du": "2026-03-09",
+   "au": "2026-04-03",
+   "remplace": null,
+   "phrase": "Plan d'eau de Saint-Yrieix-La-Perche fermé à la pêche du 9 au 13 mars et les 2 et 3 avril 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° PC/2025/E 1230 du 20/11/2025 portant interdiction temporaire de pêcher en 2026 (Haute-Vienne), art. 1 et annexe, plans d'eau",
+    "url": "https://www.haute-vienne.gouv.fr/contenu/telechargement/49186/414562/file/recueil%20n%C2%B0%2087-2025-212%20du%2026%20novembre%202025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Limoges le 20/11/2025, publié au recueil 87-2025-212 du 26/11/2025 ; lu en texte extrait (fragments de 125 caractères)"
+   },
+   "citation": "Saint-Yrieix-La-Perche",
+   "statut": "brouillon",
+   "verifie_par": null,
+   "expire_le": "2026-12-31"
+  },
+  {
+   "id": "87-per-quota-fede",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Lac de Saint-Pardoux, barrage du Chauvan, barrages de la Maulde (Artige, Villejoubert, Langleret, Bujaleuf, Fleix, Martineix, Larron), tous les plans d'eau gérés par la Fédération, et la Vienne à Limoges (du barrage du Palais-sur-Vienne au pont Saint-Etienne et du pont Saint-Martial au moulin de la Garde)"
+   },
+   "especes": [
+    "2193"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "par_jour": 10,
+    "perches_de_moins_de_cm": 30,
+    "ou_de_plus_de_cm": 40,
+    "source_juridique": "« règlement intérieur de la Haute-Vienne » de la fédération, aucun arrêté cité",
+    "exclus": "lac de Vassivière et barrage de Saint-Marc (limitrophes)",
+    "raison_incertain": "règle de la fédération seulement, aucun texte préfectoral trouvé"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Perche sur les lacs et plans d'eau listés : 10 par jour pour les perches hors de 30 à 40 cm. Règle de la fédération, à confirmer.",
+   "source": {
+    "texte": "Fédération de la Haute-Vienne, page Quotas et mailles (réglementation 2026)",
+    "url": "https://www.federation-peche87.com/5135-quotas-et-mailles.htm",
+    "lu_le": "2026-10-15",
+    "version": "page lue le 15/10/2026, sans date ni arrêté cité"
+   },
+   "citation": "Un quota de prélèvement est fixé à 10 prises par jour et par pêcheur pour des perches dont la taille est inférieure à 30 cm",
+   "statut": "incertain",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-per-remise-fede",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Lac de Saint-Pardoux, barrage du Chauvan, barrages de la Maulde (Artige, Villejoubert, Langleret, Bujaleuf, Fleix, Martineix, Larron), tous les plans d'eau gérés par la Fédération, et la Vienne à Limoges (du barrage du Palais-sur-Vienne au pont Saint-Etienne et du pont Saint-Martial au moulin de la Garde)"
+   },
+   "especes": [
+    "2193"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "obligatoire": true,
+    "taille_cm_de": 30,
+    "taille_cm_a": 40,
+    "source_juridique": "« règlement intérieur de la Haute-Vienne » de la fédération, aucun arrêté cité",
+    "exclus": "lac de Vassivière et barrage de Saint-Marc (limitrophes)",
+    "raison_incertain": "règle de la fédération seulement, aucun texte préfectoral trouvé"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Perche de 30 à 40 cm sur les lacs et plans d'eau listés : remise à l'eau obligatoire. Règle de la fédération, à confirmer.",
+   "source": {
+    "texte": "Fédération de la Haute-Vienne, page Quotas et mailles (réglementation 2026)",
+    "url": "https://www.federation-peche87.com/5135-quotas-et-mailles.htm",
+    "lu_le": "2026-10-15",
+    "version": "page lue le 15/10/2026, sans date ni arrêté cité"
+   },
+   "citation": "Remise à l’eau obligatoire et immédiate des perches mesurant entre 30 et 40 cm",
+   "statut": "incertain",
+   "verifie_par": null,
+   "expire_le": null
+  },
+  {
+   "id": "87-fede-quota-plans-eau",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "87",
+    "lieu": "Ambazac, Bessines-Sagnat, Bussière-Galant, Châteauneuf-la-Forêt, Pont-à-l'Âge (Folles-Laurière), Ladignac-le-Long, La Croisille-sur-Briance, La Jonchère, Lussac-les-Eglises, La Pouge, Peyrat-le-Château, Saint-Germain-les-Belles, Saint-Mathieu, Saint-Sornin-Leulac, Saint-Paul, Saint-Yrieix-la-Perche, Uzurat (Limoges), Mortemare (Bonnac-la-Côte)"
+   },
+   "especes": [
+    "2110",
+    "Tanche",
+    "Gardon",
+    "Goujon"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "par_jour_et_par_pecheur": {
+     "fritures_kg": 2,
+     "carpe_de_moins_de_4_kg": 1,
+     "tanches": 2
+    },
+    "carpe_plus_de_60_cm": "remise à l'eau impérative",
+    "note": "Rochechouart : voir le règlement affiché sur place ou auprès de l'AAPPMA",
+    "raison_incertain": "règle de la fédération seulement, aucun arrêté cité"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plans d'eau gérés par la fédération : 2 kg de petits poissons, 1 carpe de moins de 4 kg et 2 tanches par jour. Règle de la fédération, à confirmer.",
+   "source": {
+    "texte": "Fédération de la Haute-Vienne, page Quotas et mailles (réglementation 2026)",
+    "url": "https://www.federation-peche87.com/5135-quotas-et-mailles.htm",
+    "lu_le": "2026-10-15",
+    "version": "page lue le 15/10/2026, sans date ni arrêté cité"
+   },
+   "citation": "– 2 kg de fritures (gardons, goujons, etc.) – 1 carpe de moins de 4 kg – 2 tanches",
+   "statut": "incertain",
+   "verifie_par": null,
+   "expire_le": null
+  }
+ ]
+}

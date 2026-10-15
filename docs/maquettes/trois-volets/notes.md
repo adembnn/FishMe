@@ -1,0 +1,11 @@
+# Trois volets : volet central, 3 pistes
+- A natif iOS : barre d'onglets Liquid Glass à 3 icônes (Pescedex / Carte / Club), feuille basse blanche avec les deux actions sur Coin B (2,4 km, 3 espèces).
+- A risque HIG : la feuille masque le bas de la carte et le glissement horizontal entre onglets n'existe pas en natif (TabView paginé = style .page, sans barre système).
+- A référence : Apple Plans (feuille basse sur carte) + TabView de iOS 26.
+- B Clash Royale : barre pleine largeur à 3 segments, Carte surélevée et plus large en teal plein ; coin d'une pile de cartes à gauche, avatars Léa, Malo, Inès à droite, 44 pt visibles.
+- B risque HIG : barre personnalisée hors TabView (VoiceOver, Dynamic Type, retour par balayage depuis le bord à gérer) ; les pastilles de bord entrent en conflit avec le geste de retour système à gauche.
+- B référence : barre de navigation de Clash Royale (onglet Bataille surélevé, volets voisins qui dépassent).
+- C carte plein écran : carte bord à bord, sélecteur Pescedex · Carte · Club en pastille de verre en haut, deux gros boutons flottants en bas (68 et 58 pt).
+- C risque HIG : un sélecteur en haut est loin du pouce et ressemble à un filtre ; boutons flottants sur carte sans fond, lisibles surtout grâce à l'ombre.
+- C référence : Snapchat Snap Map / Citymapper pour la carte pleine page ; sélecteur segmenté de Apple Plans (Explorer / Guides).
+- Non vérifié : contraste AA mesuré seulement à l'œil ; pins A à E dessinés à la main ; le glissement n'est pas animé.
