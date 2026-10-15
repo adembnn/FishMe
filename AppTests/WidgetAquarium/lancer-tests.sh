@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Lance les tests de la logique du widget aquarium : Docker (swift:6.4) sous Linux, `swift test` sur Mac.
-set -euo pipefail
+set -eu
 ICI="$(cd "$(dirname "$0")" && pwd)"
 RACINE="$(cd "$ICI/../.." && pwd)"
 TRAVAIL="$(mktemp -d)"
