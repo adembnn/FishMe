@@ -9,12 +9,15 @@ Les documents que le plan cite sans chemin (`lots.md`, `fiches/L3.md`, `reports/
 - Nom de l'app : pas encore choisi. « Pescedex » est le nom de la collection dans l'app, jamais celui de l'app.
 - Ne jamais écrire « Poké », « Pokémon » ou « Pokédex » dans l'app, ses textes ou sa fiche App Store (marques de Nintendo).
 - Règles : socle national partout, plus 75, 92, 93, 94, 77 saisis à la main, chaque règle avec sa source. Hors de ces départements, jamais « tu peux la garder ».
+- L'app vise toute la France (Adem, 15 oct. 11h13) : les règles doivent couvrir tous les départements et toutes les espèces, au tronçon. Méthode en essai sur 3 départements pilotes (01, 87, 44) : `/mnt/project-files/build/regles/consigne-departement.md`.
+- Deux textes qui se contredisent sur une taille : on affiche la plus stricte avec les deux sources (Adem, 15 oct. 11h13), en attendant de savoir quel texte fait foi (recherche en cours, `reports/qui-est-maitre.md`). Cas en cours : brochet, sandre, black-bass dans 75, 92, 93, 94 (arrêtés 2025 : 50/40/30 cm ; avis 2026 : 60/50/40 cm).
 - L'IA ne décide jamais si un poisson peut être gardé : elle propose l'espèce, l'utilisateur confirme, la table sourcée donne le verdict.
 - Aucun coin de pêche exact ne quitte l'iPhone. Les photos enregistrées n'ont pas de GPS.
 - Aucune fausse donnée : chaque chiffre OFB affiche son nombre de pêches et l'année du dernier relevé.
 - Rareté en 4 niveaux (Adem, 12 oct. 18h55) : commun, peu commun, rare, légendaire. Seuils par défaut : commun 50 % des pêches OFB et plus, peu commun 20 à 50 %, rare moins de 20 %, légendaire jamais relevé dans le département (`docs/donnees.md`).
 - Collections visibles par les amis invités seulement, jamais en public (Adem, 12 oct. 14h43).
-- Essai gratuit « 1 mois » puis abonnement, paywall après la première carte. Prix pas fixé. Le kit MWM (15 oct.) n'offre que 1 semaine d'essai sur les mensuels (4,99 / 6,99 / 9,99 $) et aucun sur les annuels (34,99 / 49,99 / 69,99 $) : choix à refaire avec Adem.
+- Prix (Adem, 15 oct. 11h13) : « tarif fondateur ». L'annuel à 34,99 est annoncé comme prix de lancement jusqu'au 31 décembre 2026, puis 49,99 pour les nouveaux abonnés ; les premiers gardent leur prix. Le kit MWM a déjà les deux produits annuels (34,99 et 49,99), et les mensuels 4,99 / 6,99 / 9,99 avec 1 semaine d'essai ; les annuels n'ont pas d'essai. L'« essai 1 mois » du 12 oct. tombe. Prix en euros à lire dans la colonne France d'App Store Connect avant d'écrire le paywall.
+- Ce que le paywall bloque : pas encore tranché. Défaut proposé le 15 oct. : première session gratuite et complète, paywall à la fin de cette session ; la carte, les règles et le Pescedex en lecture restent gratuits pour toujours.
 
 ## L'atelier (harness, décidé le 13 oct.)
 - Adem veut un atelier qui fait construire vite et juste, pas un plan à lire. Il a le droit d'être préparé avant jeudi (Adem, 13 oct. 13h28) ; c'est le lot H0.
