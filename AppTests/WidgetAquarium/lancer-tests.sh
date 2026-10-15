@@ -8,7 +8,7 @@ trap 'rm -rf "$TRAVAIL"' EXIT
 
 mkdir -p "$TRAVAIL/Sources/WidgetAquariumLogique" "$TRAVAIL/Tests/WidgetAquariumLogiqueTests"
 cp "$RACINE/WidgetAquarium/InstantaneAquarium.swift" "$RACINE/WidgetAquarium/NageWidget.swift" "$TRAVAIL/Sources/WidgetAquariumLogique/"
-cp "$ICI/Package.swift" "$TRAVAIL/Package.swift"
+cp "$ICI/Package.swift.modele" "$TRAVAIL/Package.swift"
 cp "$ICI"/*Tests.swift "$TRAVAIL/Tests/WidgetAquariumLogiqueTests/"
 
 if [ "$(uname)" = "Darwin" ]; then
