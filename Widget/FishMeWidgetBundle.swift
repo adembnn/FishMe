@@ -6,5 +6,6 @@ import WidgetKit
 struct FishMeWidgetBundle: WidgetBundle {
     var body: some Widget {
         SessionLiveActivity()
+        AquariumWidget()
     }
 }
