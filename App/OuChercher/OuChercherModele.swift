@@ -1,11 +1,12 @@
 import Core
 import Foundation
+import Observation
 
 // Logique de « Choisir un autre spot » (E3, lot L7). Tout vient de Core : ici on ne calcule ni distance de saison,
 // ni rareté, ni consigne. On met seulement en phrases ce que Core rend.
 
 /// Un coin prêt à être affiché : des textes déjà composés, rien d'autre.
-struct CoinAffiche: Identifiable, Equatable {
+nonisolated struct CoinAffiche: Identifiable, Equatable {
     let id: String
     /// Nom de l'eau relevée par l'OFB, ou « Station OFB » sans nom d'eau.
     let titre: String
@@ -19,7 +20,7 @@ struct CoinAffiche: Identifiable, Equatable {
     let phraseVoixOff: String
 }
 
-enum OuChercherTextes {
+nonisolated enum OuChercherTextes {
     static let sansRelevePres = "Aucun relevé OFB à proximité"
     static let explicationOrdre = "Du plus proche au plus loin. Relevée à proximité : la station OFB est un point de mesure, pas toujours un accès public."
     static let creditOSM = "© contributeurs OpenStreetMap"
@@ -28,7 +29,7 @@ enum OuChercherTextes {
 }
 
 /// Composition des phrases d'un coin. Pure, testable sans écran.
-struct CompositeurCoins {
+nonisolated struct CompositeurCoins {
     var locale = Locale(identifier: "fr_FR")
     var fuseau = TimeZone(identifier: "Europe/Paris") ?? .current
 
@@ -82,7 +83,7 @@ struct CompositeurCoins {
 }
 
 /// Une espèce de la grille d'images.
-struct EspeceChoix: Identifiable, Equatable {
+nonisolated struct EspeceChoix: Identifiable, Equatable {
     let id: String
     let espece: Espece
     let nom: String
@@ -91,7 +92,7 @@ struct EspeceChoix: Identifiable, Equatable {
     let pres: Bool
 }
 
-enum EtatListe: Equatable {
+nonisolated enum EtatListe: Equatable {
     case choixEspece
     case resultats(espece: EspeceChoix, coins: [CoinAffiche])
     /// Aucun coin : « Aucun relevé OFB à proximité ».
