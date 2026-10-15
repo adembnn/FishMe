@@ -4,7 +4,7 @@ Usage : python -I outils/regles/corpus.py <code>
 Lit corpus/<code>/sources.json, une liste d'objets :
   {"fichier": "ap-2026-002.pdf", "titre": "...", "url": "https://...", "signe_le": "AAAA-MM-JJ ou null", "etat": "en vigueur, permanent"}
 Pour chaque source : télécharge le fichier s'il manque (curl), extrait le texte à côté (.txt) par la couche texte du PDF,
-sinon par l'OCR français de Tesseract (PC ou Mac, un seul à la fois), à défaut celui de Windows (ocr.ps1), et écrit corpus/<code>/manifeste.json (titre, URL, signature,
+sinon par l'OCR français de Tesseract (PC ou Mac, deux à la fois au plus), à défaut celui de Windows (ocr.ps1), et écrit corpus/<code>/manifeste.json (titre, URL, signature,
 téléchargement, SHA-256). Relançable : ce qui est déjà téléchargé ou extrait n'est pas refait.
 """
 import datetime
@@ -53,16 +53,23 @@ def tesseract_dispo():
 
 
 class UnSeulOcr:
-    """Verrou entre processus : un seul OCR à la fois sur la machine (Mac de 8 Go partagé). Sans effet sous Windows."""
+    """Verrou entre processus : au plus OCR_MAX OCR à la fois sur la machine (Mac de 8 Go partagé). Sans effet sous Windows."""
     def __enter__(self):
         try:
             import fcntl
         except ImportError:
             self.f = None
             return self
-        self.f = open(os.path.join(tempfile.gettempdir(), "regles-ocr.lock"), "w")
-        fcntl.flock(self.f, fcntl.LOCK_EX)
-        return self
+        import time
+        while True:  # OCR_MAX places (2 par défaut) : on prend la première libre
+            for n in range(int(os.environ.get("OCR_MAX", "2"))):
+                self.f = open(os.path.join(tempfile.gettempdir(), f"regles-ocr-{n}.lock"), "w")
+                try:
+                    fcntl.flock(self.f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                    return self
+                except OSError:
+                    self.f.close()
+            time.sleep(2)
 
     def __exit__(self, *_):
         if self.f:
