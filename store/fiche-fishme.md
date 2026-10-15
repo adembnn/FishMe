@@ -1,8 +1,10 @@
-# Fiche App Store de FishMe (S1, brouillon avancé par Sullyvan, 15 oct. 2026)
+# Fiche App Store de FishMe (S1)
+
+Brouillon avancé par Sullyvan (15 oct. 2026), repris sur `lot/store` par A (Claude) le 15 oct. en fin d'après-midi : description alignée sur `parcours-demo.md` (E1 à E9), sur les décisions d'Adem de 16h et 17h (premier lancement à glisser, 3 propositions plus « Autre », toise et poids estimé) et sur les listes Gratuit / Pro du paywall de L6 (`TextesPaywall.gratuit` et `.pro`, branche `lot/abonnement`).
 
 Écrite en avance sur le lot S1 (tenu par Adem), à partir de `CLAUDE.md`, `docs/fiches/S1.md`, `docs/app-store.md` et de la relecture de Sullyvan (`origin/sullyvan/relecture-s1`), qui remplace la fiche « Bredouille » de Titouan. Longueurs comptées par Python (`len()` en caractères, `len(.encode("utf-8"))` en octets), espaces compris.
 
-Légende : **[?]** = non confirmé, à lire dans le build ou à demander. **À TRANCHER** = décision de Sullyvan, voir `a-trancher.md`. Les crochets `[...]` du texte sont à remplir avant l'envoi ; aucun n'est inventé.
+Légende : **[?]** = non confirmé, à lire dans le build ou à demander. **À TRANCHER** : voir `a-trancher.md`, où chaque point porte maintenant le choix par défaut de A, à confirmer par Adem. Les crochets `[...]` du texte sont à remplir avant l'envoi ; aucun n'est inventé.
 
 Ce qui n'a pas pu être fait ici : `review_store_text`, `get_store_text_rules`, `search_market_apps` et `analyze_market_keywords` sont des outils du serveur MCP de MWM, non branché dans cette session. Les comptes ci-dessous sont donc faits à la main (Python) et les mots-clés ne sont **pas** tirés des chiffres de la boutique française : à refaire avec ces outils avant l'envoi [?].
 
@@ -15,8 +17,8 @@ Ce qui n'a pas pu être fait ici : `review_store_text`, `get_store_text_rules`, 
 | Catégorie principale | Sports (secondaire : Mode de vie) | par défaut de `fiches/S1.md`, à confirmer par Adem [?] |
 | Mots-clés | `pêche,brochet,carpe,truite,sandre,perche,rivière,étang,lac,spot,carnet,réglementation,taille` | 92 car., 96 octets (limite 100 octets) |
 | Texte promo | voir ci-dessous | 165 car., 167 octets (limite 170 car.) |
-| Nouveautés | voir ci-dessous | 152 car., 157 octets (limite 4000 car.) |
-| Description | voir ci-dessous | 2701 car., 2778 octets (limite 4000 car.) |
+| Nouveautés | voir ci-dessous | 174 car., 181 octets (limite 4000 car.) |
+| Description | voir ci-dessous | 3231 car., 3324 octets (limite 4000 car.) |
 | Copyright | `© 2026 [ÉDITEUR, à demander à MWM]` | aucun nom inventé |
 | URL d'assistance | `[URL_ASSISTANCE, donnée par Adem]` | jamais inventée |
 | URL marketing | page web de l'app (`draft_landing_page`), après l'envoi de la fiche | |
@@ -38,38 +40,43 @@ Ce qui n'a pas pu être fait ici : `review_store_text`, `get_store_text_rules`, 
 Photographie ta prise : l'app propose l'espèce, tu confirmes, et ta carte rejoint le Pescedex. La carte, les règles et ta collection restent gratuites pour toujours.
 ```
 
-### Nouveautés (152 car.)
+### Nouveautés (174 car.)
 ```
-Première version de FishMe : la carte des poissons relevés par l'OFB, les règles sourcées, la session de pêche et tes prises en cartes dans le Pescedex.
+Première version de FishMe : la carte des poissons relevés par l'OFB, les règles sourcées, la session de pêche, la météo de ton spot et tes prises en cartes dans le Pescedex.
 ```
 
-## Description (2701 car., 2778 octets, sous 4000)
+## Description (3231 car., 3324 octets, sous 4000)
 
-Chaque ligne doit correspondre à un écran vu sur l'iPhone dans le build TestFlight (test 2 de `fiches/S1.md`) : sinon on la retire (refus R7). Les trois blocs entre crochets dépendent de la porte 3 ou d'une décision : ils sont marqués dans le texte.
+Chaque ligne doit correspondre à un écran vu sur l'iPhone dans le build TestFlight (test 2 de `fiches/S1.md`) : sinon on la retire (refus R7). Il reste un seul trou dans le texte, `[COUVERTURE]` (départements lus dans le build), plus les deux URL. La phrase « l'app reconnaît N espèces » n'est pas écrite : elle ne s'ajoute que si N est lu dans le modèle livré par R1 (77 visées, repli sur 6).
 
 ```
 FishMe est l'app de pêche en eau douce qui te montre où pêcher, quels poissons y vivent et quelles règles s'y appliquent, puis transforme chacune de tes prises en carte à collectionner.
 
 LA CARTE
 - Autour de toi, les poissons relevés par l'Office français de la biodiversité (OFB), en images, avec le nombre de pêches et l'année du dernier relevé.
-- Touche un coin : ses espèces, leur rareté dans le département et les règles du jour en lignes courtes (taille, quota, ouverture). La source et la citation de chaque règle s'ouvrent d'un toucher.
-- Règles couvertes : le socle national partout, et les règles locales de [COUVERTURE : liste des départements lue dans le build]. Ailleurs, l'app le dit et donne le lien de la préfecture.
+- Touche un coin : ses espèces et leur rareté dans le département, les conditions du moment (vent, pluie, pression, aube, crépuscule) et la jauge de la rivière.
+- Les règles du jour en lignes courtes : taille, quota, ouverture. La source et la citation de chaque règle s'ouvrent d'un toucher.
+- Règles couvertes : le socle national partout, et les règles locales de [COUVERTURE]. Ailleurs, l'app le dit et donne le lien de la préfecture.
+- Une vigilance orage ou crue s'affiche en haut de la carte.
 
 LA SESSION
-- Lance une session : chrono, heure de fin légale, tes prises du jour.
-- Photographie ta prise : l'app propose des espèces, sans aucun pourcentage, et c'est toi qui confirmes. « Pas un poisson » et « Autre » sont toujours là. [N : « L'app reconnaît N espèces » seulement si N est lu dans le modèle livré.]
+- Lance une session : chrono, heure de fin légale, tes prises du jour, et une carte « à essayer » (appât, hameçon, technique) pour les espèces ouvertes.
+- Photographie ta prise : l'app propose 3 espèces en images, sans aucun pourcentage, et c'est toi qui choisis. « Autre » ouvre toutes les espèces de France en images ; « Pas un poisson » est toujours là.
+- Pose ton poisson sur ta toise : l'app lit la graduation et tu confirmes la taille. Le poids est estimé à partir de la longueur, et marqué comme tel.
 
 LE PESCEDEX
-- Chaque prise confirmée devient une carte : au recto le poisson et sa rareté (commune, peu commune, rare, légendaire), au dos ta vraie photo.
+- Chaque prise confirmée devient une carte : au recto le poisson, sa rareté (commune, peu commune, rare, légendaire) et sa taille ; au dos ta vraie photo et les conditions du moment.
+- Les cartes rares et légendaires ont un reflet qui suit l'inclinaison de ton iPhone.
+- Toutes les espèces pêchables en France, en images, avec ton compteur pour ta zone.
+- Au premier lancement, glisse les espèces que tu as déjà pêchées : elles entrent au Pescedex comme cartes déclarées, à part de tes vraies prises.
 - Rentré bredouille ? Tu reçois quand même ta carte de sortie.
 - Partage une image de ta carte : jamais ton coin exact.
 
 GRATUIT POUR TOUJOURS
-La carte, les règles et ton Pescedex en lecture. Tu choisis aussi un spot gratuit (un cercle de 1 km) où tes sessions sont illimitées. L'alerte orage et crue reste gratuite.
+La carte, les règles et ton Pescedex. Un spot gratuit (un cercle de 1 km) avec des sessions illimitées, et sur ce spot la météo du jour et le niveau de l'eau. Le premier conseil de chaque espèce. Les alertes orage et crue, partout.
 
 FISHME PRO
-[À TRANCHER : liste des fonctions Pro, voir a-trancher.md, point 3. Proposition, chaque fonction seulement si elle est à l'écran dans le build de la porte 3 :] d'autres spots, la météo du jour et sur 7 jours, le niveau de la rivière, « préviens-moi », l'historique des conditions de tes sorties et des conseils de pêche pour chaque espèce.
-[À TRANCHER : ligne de prix, voir a-trancher.md, point 2.]
+Des sessions sur d'autres spots, la météo sur 7 jours heure par heure, la courbe de la rivière sur 48 h, « Préviens-moi », tous les conseils de chaque espèce et « Tes conditions » après 10 sorties.
 L'abonnement se renouvelle automatiquement, sauf résiliation au moins 24 heures avant la fin de la période, dans les réglages de ton compte Apple. Tu peux restaurer tes achats dans l'app.
 
 RESPECTUEUX
@@ -84,26 +91,32 @@ Conditions d'utilisation : [URL_CONDITIONS]
 Confidentialité : [URL_CONFIDENTIALITE]
 ```
 
-### Qui prouve quoi (lecture de chaque ligne contre les documents du dépôt, pas contre le build)
+### Qui prouve quoi (chaque phrase contre le plan ; à revoir sur le build TestFlight de la porte 3)
+
+Une phrase dont la fonction n'est pas à l'écran à la porte 3 sort de la description, des notes et des captures (R7). Rien n'est écrit au futur.
 
 | Phrase de la description | Source dans le plan | État |
 |---|---|---|
-| Poissons relevés par l'OFB, « N pêches, dernier relevé AAAA » | `parcours-demo.md` E1, `CLAUDE.md` | à voir à l'écran [?] |
-| Règles du jour avec source et citation d'un toucher | E2, `CLAUDE.md` | à voir à l'écran [?] |
-| Règles locales de tels départements | `CLAUDE.md` : socle national + 75, 92, 93, 94, 77 saisis ; D3 vise toute la France ; pilotes 01, 87, 44 | **couverture réelle du build inconnue** : lire `departementsCouverts()` / les fichiers chargés par D1 [?] |
-| Session : chrono, fin légale, prises | E4 | à voir [?] |
-| Photo : propose des espèces sans pourcentage, « Pas un poisson », « Autre » | E5, `CLAUDE.md` (3 meilleures + « Autre ») | à voir [?] |
-| « Reconnaît N espèces » | modèle R1 : visé 77 espèces, repli 6 (`CLAUDE.md`, 15 oct. 17h) | N inconnu, ligne retirée tant que N n'est pas lu [?] |
-| Carte : recto poisson + rareté à 4 niveaux, dos = vraie photo | `CLAUDE.md` (13h24) | à voir [?] |
+| Poissons relevés par l'OFB, « N pêches, dernier relevé AAAA » | E1, `CLAUDE.md` | à voir à l'écran [?] |
+| Conditions du moment et jauge de la rivière dans la fiche d'un coin | E2, L12 | à voir [?] ; gratuit sur son spot seulement |
+| Règles du jour, source et citation d'un toucher | E2 | à voir [?] |
+| Règles locales de `[COUVERTURE]` | `departementsCouverts()` de `Core` ; IDF (75, 92, 93, 94, 77) par D1, le reste par D3 | **liste à lire dans le build**, jamais « toute la France » si le build ne la couvre pas [?] |
+| Vigilance orage ou crue en haut de la carte | E1, L12 | à voir [?] |
+| Session : chrono, fin légale, prises, carte « à essayer » | E4, D4 | à voir [?] |
+| 3 espèces en images, « Autre » sur les espèces de France, « Pas un poisson », sans pourcentage | E5, `CLAUDE.md` (17h) | à voir [?] ; marche aussi avec la seule grille si le modèle ne passe pas l'examen |
+| Toise lue, taille confirmée, poids estimé marqué comme tel | E5, `CLAUDE.md` (17h) | à voir [?] |
+| Carte : recto poisson, rareté à 4 niveaux, taille ; dos photo et conditions | E6 | à voir [?] |
+| Reflet sur les cartes rares et légendaires seulement | `CLAUDE.md` (13h52), L4 | à voir [?] |
+| Toutes les espèces pêchables en images, compteur par zone | E6, `CLAUDE.md` | à voir [?] ; « zone » reste vague tant que sa forme n'est pas tranchée |
+| Cartes déclarées au premier lancement | `CLAUDE.md` (tunnel de 16h), L13 | **ajout du 15 oct. 16h, pas encore dans `parcours-demo.md`** : à voir [?] |
 | Carte de sortie quand on rentre bredouille | E9 | à voir [?] |
 | Partage d'une image sans le coin exact | E8 | à voir [?] |
-| Gratuit : carte, règles, Pescedex en lecture, 1 spot (1 km) à sessions illimitées | `CLAUDE.md` (12h26) ; textes de paywall présents sur `origin/lot/abonnement` (non fusionné, non vu sur iPhone) | [?] |
-| Alerte orage et crue gratuite | `parcours-demo.md` « règles qui ne bougent pas » | à voir [?] |
-| Pro : autres spots, météo 7 jours, niveau de rivière, « préviens-moi », historique, conseils | `CLAUDE.md` (13h21, « tout d'un coup ») | **À confirmer après la porte 3** ; voir `a-trancher.md` point 3 |
-| Renouvellement automatique, restauration des achats | règle 3.1.2, `TextesPaywall.renouvellement` | à voir sur le paywall [?] |
-| Aucun compte, aucune publicité | E1 (pas de compte) ; Spark Flash mesure des interactions : on ne dit pas « sans mesure » | exact |
-| Coins exacts jamais hors de l'iPhone, photos sans GPS | `CLAUDE.md` | exact selon le plan ; à vérifier dans le build [?] |
-| Météo : Apple Weather | obligation WeatherKit | seulement si la météo est dans le build |
+| Gratuit et Pro | listes `TextesPaywall.gratuit` et `.pro` de `lot/abonnement` (même découpage), E2, E7 | identiques au paywall écrit ; à voir sur l'iPhone [?] |
+| Renouvellement automatique, restauration | `TextesPaywall.renouvellement`, règle 3.1.2 | à voir [?] |
+| Aucun compte, aucune publicité ; coins exacts et GPS des photos | E1, `CLAUDE.md` | exact selon le plan ; on n'écrit pas « sans mesure » (Spark Flash) |
+| Météo : Apple Weather | obligation de WeatherKit (R6) | seulement si la météo est dans le build |
+
+Ce qui n'est pas écrit, exprès : aucun prix (option B de `a-trancher.md`, point 2), aucun nombre d'espèces reconnues, ni amis, ni aquarium, ni écran verrouillé, ni coins publics, ni tronçons (mise à jour).
 
 ## Mots à ne pas écrire
 La liste est dans `docs/banc/mots-interdits.md` (non recopiée ici pour que les `grep` du test 5 de `fiches/S1.md` restent vides sur `store/`). Rappels : aucune marque de Nintendo, aucun verdict « tu peux la garder », aucun pourcentage de l'IA, aucune promesse de prise ni de « bon spot », aucune note chiffrée de la pêche ni heure miracle, pas de nombre d'espèces figé, pas de « toute la France » tant que le build ne la couvre pas, pas d'essai d'un mois ; ni amis, ni aquarium, ni écran verrouillé, ni coins publics (hors du build soumis) ; rien qui vise les enfants.
