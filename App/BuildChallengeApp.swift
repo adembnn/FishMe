@@ -9,7 +9,10 @@ import SwiftUI
 @main
 struct BuildChallengeApp: App {
 
-    init() {
+    /// L'unique appel à `Spark.configure` du projet. `RootView` le passe à `PasserelleSpark` ; `CoucheMesure` ne l'appelle
+    /// qu'après l'accord du pêcheur (docs/lots.md, L6 : aucun événement avant le consentement).
+    @MainActor
+    static func configurerSpark() {
 #if DEBUG
         let sparkApiKey = "pk_sbox_ee38865ee4418ead61c9a667377e2417"
 #else
@@ -22,7 +25,7 @@ struct BuildChallengeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RootView()
+            RootView(configurerMesure: Self.configurerSpark)
         }
     }
 }

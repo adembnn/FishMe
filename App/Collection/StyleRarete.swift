@@ -2,7 +2,7 @@ import Core
 import SwiftUI
 
 /// Un polygone dessiné dans le carré unité (forme du badge de rareté).
-struct Polygone: Shape {
+nonisolated struct Polygone: Shape {
     let points: [CGPoint]
 
     func path(in rect: CGRect) -> Path {

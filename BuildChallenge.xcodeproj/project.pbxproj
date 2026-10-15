@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DBC0AD0E307678BC00FA6B3C /* Spark in Frameworks */ = {isa = PBXBuildFile; productRef = DBC0AD0D307678BC00FA6B3C /* Spark */; };
+		FE0C0C0130A0000000000003 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = FE0C0C0130A0000000000002 /* Core */; };
+		FE0C0C0130A0000000000005 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = FE0C0C0130A0000000000004 /* Core */; };
+		FE0C0C0130A0000000000006 /* TestConfig.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 146BEF5E7F88B2C4934CB00E /* TestConfig.storekit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +60,13 @@
 			isa = PBXFrameworksBuildPhase;
 			files = (
 				DBC0AD0E307678BC00FA6B3C /* Spark in Frameworks */,
+				FE0C0C0130A0000000000003 /* Core in Frameworks */,
 			);
 		};
 		DBE31DCD30753927004DC02F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				FE0C0C0130A0000000000005 /* Core in Frameworks */,
 			);
 		};
 		DBE31DD730753927004DC02F /* Frameworks */ = {
@@ -112,6 +117,7 @@
 			name = BuildChallenge;
 			packageProductDependencies = (
 				DBC0AD0D307678BC00FA6B3C /* Spark */,
+				FE0C0C0130A0000000000002 /* Core */,
 			);
 			productName = BuildChallenge;
 			productReference = DBE31DC330753926004DC02F /* BuildChallenge.app */;
@@ -134,6 +140,9 @@
 				DBE31DD330753927004DC02F /* BuildChallengeTests */,
 			);
 			name = BuildChallengeTests;
+			packageProductDependencies = (
+				FE0C0C0130A0000000000004 /* Core */,
+			);
 			productName = BuildChallengeTests;
 			productReference = DBE31DD030753927004DC02F /* BuildChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -193,6 +202,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				DBC0AD0C307678BC00FA6B3C /* XCLocalSwiftPackageReference "mwm-spark-flash-sdk/local-spm-repo" */,
+				FE0C0C0130A0000000000001 /* XCLocalSwiftPackageReference "Packages/Core" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DBE31DC430753926004DC02F /* Products */;
@@ -215,6 +225,7 @@
 		DBE31DCE30753927004DC02F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				FE0C0C0130A0000000000006 /* TestConfig.storekit in Resources */,
 			);
 		};
 		DBE31DD830753927004DC02F /* Resources */ = {
@@ -402,7 +413,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -434,7 +445,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -454,7 +465,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BuildChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BuildChallenge";
 			};
@@ -475,7 +486,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BuildChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BuildChallenge";
 			};
@@ -494,7 +505,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = BuildChallenge;
 			};
@@ -513,7 +524,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = BuildChallenge;
 			};
@@ -561,12 +572,26 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "mwm-spark-flash-sdk/local-spm-repo";
 		};
+		FE0C0C0130A0000000000001 /* XCLocalSwiftPackageReference "Packages/Core" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Core;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		DBC0AD0D307678BC00FA6B3C /* Spark */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Spark;
+		};
+		FE0C0C0130A0000000000002 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE0C0C0130A0000000000001 /* XCLocalSwiftPackageReference "Packages/Core" */;
+			productName = Core;
+		};
+		FE0C0C0130A0000000000004 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE0C0C0130A0000000000001 /* XCLocalSwiftPackageReference "Packages/Core" */;
+			productName = Core;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

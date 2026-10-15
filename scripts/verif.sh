@@ -143,7 +143,7 @@ if [ "$systeme" = "Darwin" ]; then
       ko App "App : aucun simulateur iPhone n'est disponible" "ouvre Xcode > Settings > Components et installe un simulateur iOS."
     else
       cible=$(printf '%s' "$ligne" | sed -E 's/^ +//; s/ \([0-9A-Fa-f-]{36}\).*//')
-      if xcodebuild test -project "$projet" -scheme "$schema" -destination "platform=iOS Simulator,id=$udid" >"$sortie" 2>&1; then
+      if xcodebuild test -project "$projet" -scheme "$schema" -destination "platform=iOS Simulator,id=$udid" -parallel-testing-enabled NO >"$sortie" 2>&1; then
         ok "App : xcodebuild test vert (schéma $schema, simulateur $cible)"
       else
         ko App "App : xcodebuild test est rouge (schéma $schema, simulateur $cible)" "corrige le test ou le code marqué ci-dessous, puis relance."
