@@ -1,5 +1,7 @@
 # Ta vision du 15 oct., challengée
 
+Là où ce texte et `CLAUDE.md` diffèrent, `CLAUDE.md` l'emporte : il porte les décisions prises après ce texte.
+
 Ta demande du 15 oct. (3 volets façon Clash Royale, IA entraînée, réglementation, mers et océans, carte, rareté, écrans) et ta capture « une version plus profonde, pas plus grosse ». Ce qui en sort pour la construction est dans `lots.md` et `parcours-demo.md` ; les recherches sont dans `reports/reconnaissance.md`, `reports/mer.md` et `reports/navigation-communaute.md`. « Estimation » veut dire calcul de Claude, pas mesure.
 
 ## 1. Ta capture, appliquée à ta demande
@@ -106,7 +108,7 @@ Ce qu'on peut vous reprocher, du plus grave au moins grave :
 Ce que le plan fait déjà : l'IA propose, le pêcheur confirme, la table décide ; chaque verdict porte sa source, sa date de lecture et « l'arrêté préfectoral fait foi, en cas de doute, relâche » ; hors des départements saisis, jamais « tu peux la garder ».
 
 Ce que j'ajoute :
-- Le verdict « tu peux la garder » n'existe que dans les départements dont toutes les règles ont été relues par une deuxième personne. La liste vient des données : si le 77 n'est pas relu ce soir, l'app dit « vérifie l'arrêté » dans le 77, sans une ligne de code de plus.
+- L'app n'accorde jamais la permission de garder, même dans un département relu : une liste de contrôle sourcée, puis « relâche-la », « vérifie l'arrêté » ou « aucune règle saisie ne l'interdit ; l'arrêté fait foi » (`CLAUDE.md`). La liste des départements couverts vient des données : si le 77 n'est pas chargé ce soir, l'app dit « vérifie l'arrêté » dans le 77, sans une ligne de code de plus.
 - La session compte les poissons gardés : au troisième carnassier du jour, « quota du jour atteint ».
 - Une validation hors de l'équipe : on envoie nos cas de verdict à la fédération du 94 aujourd'hui, et on dit au jury qui les a confirmés.
 - Aujourd'hui, les règles ne sont qu'un brouillon (6 tailles nationales et 3 règles du 94, rien de relu) : leur saisie et leur relecture passent en tête de journée.
@@ -148,7 +150,7 @@ Titouan a écrit le 13 oct. un atelier complet dans `harnais-titouan/` (branche 
 | Espèces | 48 au catalogue | 14 jouables | 14 ce soir ; son catalogue sert la mise à jour |
 | Verdict | aucun : texte fixe et lien vers la fédération (sa règle A1) | garde, relâche, vérifie, sur table relue | question 2 |
 | Communauté | aucune, partage d'image (son L38) | amis par lien (version suivante) | « Mon club » et partage d'image |
-| Paywall | à la 16e carte, essai 1 semaine, 3,99 € et 24,99 € | à la 2e carte, essai 1 mois | question d'une prochaine série |
+| Paywall | à la 16e carte, essai 1 semaine, 3,99 € et 24,99 € | à la 2e carte, essai 1 mois (12 oct., tombé) | tranché le 15 oct. (`CLAUDE.md`) : un spot gratuit ; paywall qui se ferme à la fin de la 1re session, qui bloque au choix d'un 2e spot ; mensuel avec 1 semaine d'essai, annuels sans essai |
 | Nom | « Bredouille » | pas choisi | question d'une prochaine série |
 | Données OFB | script Hub'Eau déjà lancé (75, 78, 92, 95), fichiers commités | script, jamais commité (ta règle) | son script devient le lot D2, ses fichiers sortent de git |
 | Photos d'essai | 60 photos iNaturalist | aucune | iNaturalist interdit l'entraînement commercial : aucune ne sert à entraîner, nos photos servent au test |
@@ -200,5 +202,5 @@ Par défaut : a, sans changement. Le c et le f sont les plus originaux et coûte
 | 4 | Révélation de la carte | la carte se retourne, puis rejoint le Pescedex |
 | 5 | Volet gauche : le Pescedex | les 14 espèces (silhouettes pour celles pas encore prises), « 4 sur les 11 relevées dans le 94 », une carte s'ouvre au toucher (recto et verso) |
 | 6 | Volet droit : Mon club | ma fédération et mon association (liens), « j'ai ma carte de pêche 2026 », Sources, confidentialité et contact |
-| 7 | Paywall | après la première carte, essai « 1 mois », « Restaurer », conditions et confidentialité |
+| 7 | Paywall | à la fin de la 1re session, après la carte (il se ferme), et au choix d'un 2e spot (il bloque) ; mensuel avec 1 semaine d'essai, annuels sans essai ; « Restaurer », conditions et confidentialité |
 Pas d'écran d'accueil : la position est demandée au premier lancement et la carte s'y adapte (Adem, 15 oct. 12h51), et la phrase légale vit sous chaque verdict. La page Sources (crédits OFB, OpenStreetMap, IGN, photos d'entraînement) s'ouvre depuis le volet droit.
