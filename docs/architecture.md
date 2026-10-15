@@ -45,7 +45,8 @@ store/                         textes de fiche, notes pour le relecteur, pages w
 - `finLegale(date, coordonnee)` donne l'heure de fin légale (coucher + 30 min, avec 1 min de marge) ; `phaseLune(date)` la phase de lune.
 - Le type `Prise` (espèce confirmée, taille, date, lieu flou, chemin de la photo sans GPS, `gardee` déclarée par le pêcheur, `exemple`) : L3 la fabrique ; après la liste de contrôle, le pêcheur touche « je la relâche » ou « je la garde » (sa déclaration, jamais une permission de l'app ; défaut à valider par Adem), ce qui compte pour le quota.
 - Le type `Sortie` (début, fin facultative, prises, poissons gardés par espèce) et `quota(sortie, departement)` : L5 remplit la sortie et tient le nombre de sessions terminées ; L4 fait la carte d'une `Prise` et la carte bredouille d'une `Sortie` sans prise.
-- Le contrat `Collection` (lire les cartes enregistrées) : L4 le remplit, L8 le lit dans la mise à jour, sans importer `App/Collection/`.
+- Le contrat `Collection` (lire les cartes enregistrées, et l'image PNG de chaque carte, sans métadonnée GPS, prête à partager) : L4 le remplit ; L9 s'en sert pour le partage en image et L8 pour les amis, sans importer `App/Collection/`.
+- `departementsCouverts()` donne la liste des départements dont les règles locales sont chargées (bandeau de L2) ; `credits()` lit `credits.json` (page Sources de L9) ; `liensFederation(departement)` donne le site officiel de la fédération départementale et la page de cartedepeche.fr (`liens-federations.json`, données de D1).
 - Les critères qui séparent les paires proches (gardon, brème, chevesne ; fario, arc-en-ciel) sont des données de D1 (`especes.json`, champ `critere_distinctif`), lues par L3.
 - `acces(sessionsTerminees, abonne)` donne ce qui est ouvert : par défaut, la 1re session gratuite, puis les sessions sur abonnement ; la carte, les règles et le Pescedex en lecture toujours ouverts.
 - `offreAffichee(date)` donne le produit annuel à montrer : 34,99 jusqu'au 31 décembre 2026, 49,99 ensuite (tarif fondateur).
@@ -54,7 +55,7 @@ store/                         textes de fiche, notes pour le relecteur, pages w
 ## Qui assemble les volets
 `App/RootView.swift` (A seul) est le seul endroit qui connaît plusieurs dossiers de l'app. Il pose la barre des 3 volets ; sur le volet Carte (L2), il superpose le bandeau de session (L5) quand une session tourne, et il ouvre la prise (L3), la révélation de la carte (L4) puis, à la fin de la 1re session, le paywall (L6). Il passe les valeurs de `Core` (`Prise`, `Sortie`, nombre de sessions terminées) d'un écran à l'autre. Le bouton « Commencer une session » vit dans `App/Carte/` et appelle une action que RootView fournit. Si la pêche est fermée à l'heure du départ, la session démarre quand même avec le message de fermeture : le relecteur d'Apple, qui teste peut-être de nuit, doit pouvoir aller jusqu'à la fin de session et au paywall.
 
-## Le cas réel de jeudi 9 h (avant tout lot en parallèle)
+## Le cas réel du démarrage (avant tout lot de `App/` en parallèle ; C avance sans attendre le Mac)
 | # | Qui | Test | Réussi si |
 |---|---|---|---|
 | T1 | A | projet signé avec l'équipe MWM et l'identifiant définitif, installé sur l'iPhone de test | l'app s'ouvre, aucune alerte de profil |
