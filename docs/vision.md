@@ -163,7 +163,7 @@ Le recto porte 6 éléments, pas un de plus :
 3. la rareté : la couleur du cadre et le mot (commun, peu commun, rare, légendaire) ;
 4. la taille en centimètres ;
 5. le lieu flouté : le cours d'eau et le département (« La Marne · 94 »), jamais le point exact ;
-6. la date et le numéro dans le Pescedex (« 3 sur 14 »).
+6. la date et son rang dans la zone (compteur par zone voulu par Adem le 15 oct., forme en discussion dans le fil Maquettes).
 
 Le verso explique la carte :
 - « Rareté dans les relevés OFB du 94 : relevée dans 9 pêches sur 29, dernier relevé 2023 » ; pour un légendaire, « aucune pêche OFB ne l'a relevée dans le 94 depuis 2016 » ;

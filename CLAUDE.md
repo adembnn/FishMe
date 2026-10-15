@@ -18,6 +18,8 @@ Les documents que le plan cite sans chemin (`lots.md`, `fiches/L3.md`, `reports/
 - Rareté en 4 niveaux (Adem, 12 oct. 18h55) : commun, peu commun, rare, légendaire. Seuils par défaut : commun 50 % des pêches OFB et plus, peu commun 20 à 50 %, rare moins de 20 %, légendaire jamais relevé dans le département (`docs/donnees.md`).
 - Collections visibles par les amis invités seulement, jamais en public (Adem, 12 oct. 14h43).
 - Prix (Adem, 15 oct. 11h13) : « tarif fondateur ». L'annuel à 34,99 est annoncé comme prix de lancement jusqu'au 31 décembre 2026, puis 49,99 pour les nouveaux abonnés ; les premiers gardent leur prix. Le kit MWM a déjà les deux produits annuels (34,99 et 49,99), et les mensuels 4,99 / 6,99 / 9,99 avec 1 semaine d'essai ; les annuels n'ont pas d'essai. L'« essai 1 mois » du 12 oct. tombe. Prix en euros à lire dans la colonne France d'App Store Connect avant d'écrire le paywall.
+- Navigation (Adem, 15 oct. 11h43, fil Maquettes) : « iOS natif », piste A, la barre d'onglets standard d'Apple pour les 3 volets. Aucune barre de défilement visible, ni à droite ni en bas (`.scrollIndicators(.hidden)`).
+- Compteur du Pescedex : Adem n'aime pas « 3 sur 14 » ; il veut un compteur par zone (« tu en as trouvé 2 sur N espèces de la zone »). Zone (département, cours d'eau, rayon) en discussion dans le fil Maquettes.
 - Ce que le paywall bloque : pas encore tranché. Défaut proposé le 15 oct. : première session gratuite et complète, paywall à la fin de cette session ; la carte, les règles et le Pescedex en lecture restent gratuits pour toujours.
 
 ## L'atelier (harness, décidé le 13 oct.)
