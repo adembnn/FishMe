@@ -116,7 +116,8 @@ enum CalculRarete {
     static let partPeuCommunSurDix = 2
 
     static func calculer(code: String?, suiviOFB: Bool, departement: Departement, donnees: DonneesRarete) -> ResultatRarete {
-        guard suiviOFB else {
+        // Sans code Sandre, l'espèce ne peut pas être cherchée dans les relevés : « non mesurée », jamais « légendaire » par défaut.
+        guard suiviOFB, code != nil else {
             return ResultatRarete(niveau: .nonMesuree, nPeches: 0, nTotal: 0, anneeDernierReleve: nil, echelle: .departement)
         }
         guard let dep = donnees.departements[departement.code] else {

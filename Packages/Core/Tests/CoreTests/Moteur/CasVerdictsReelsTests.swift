@@ -64,7 +64,7 @@ struct CasVerdictsReelsTests {
     @Test("Les vrais fichiers se chargent") func chargement() {
         #expect(Self.moteur.regles.departementsCouverts().contains { $0.departement.code == "94" })
         #expect(Self.moteur.regles.departementsCouverts().contains { $0.departement.code == "75" })
-        #expect(Self.moteur.especes.especesPechables().count == 77)
+        #expect(Self.moteur.especes.especesPechables().count == 99)
         #expect(Self.moteur.especes.poidsEstime(espece: Espece(id: "gardon", codeSandre: nil), longueurCm: 20) != nil)
     }
 
