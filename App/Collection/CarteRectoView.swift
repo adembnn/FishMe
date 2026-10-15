@@ -1,5 +1,6 @@
 import Core
 import SwiftUI
+import UIKit
 
 /// Cadre commun : recto et verso, comme toutes les cartes, ont exactement la même taille.
 struct CarteCadre<Contenu: View>: View {
@@ -41,6 +42,8 @@ struct CarteRectoView: View {
     var anime = false
     var inclinaison: CGSize = .zero
     var refletFixe = false
+    /// Image déjà décodée (rendu du partage) : évite le fournisseur d'images asynchrone d'`ImageRenderer`, qui peut expirer.
+    var imageDecodee: UIImage? = nil
 
     var body: some View {
         CarteCadre(style: infos.style, declaree: infos.prise.estDeclaree) {
@@ -69,7 +72,7 @@ struct CarteRectoView: View {
             if anime {
                 NageView(nomImage: infos.espece.image)
             } else {
-                Image(infos.espece.image)
+                (imageDecodee.map { Image(uiImage: $0) } ?? Image(infos.espece.image))
                     .resizable()
                     .scaledToFit()
                     .padding(10)

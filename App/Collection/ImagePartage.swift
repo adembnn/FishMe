@@ -13,12 +13,14 @@ enum ImagePartage {
         let detail = CarteDetaillee(prise: prise, conditions: nil, dureeSecondes: nil)
         let infos = InfosCarte.construire(detail: detail, espece: espece, zone: dept, toutesLesCartes: [prise],
                                           especesDeLaZone: [], services: services)
-        let vue = CarteRectoView(infos: infos, anime: false, inclinaison: .zero, refletFixe: true)
+        let vue = CarteRectoView(infos: infos, anime: false, inclinaison: .zero, refletFixe: true,
+                                imageDecodee: UIImage(named: infos.espece.image))
             .frame(width: largeur, height: largeur / Jeton.rapportCarte)
             .padding(16)
             .background(Jeton.fondPage)
         let rendu = ImageRenderer(content: vue)
         rendu.scale = 3
-        return rendu.uiImage?.pngData()
+        // Un premier rendu peut échouer le temps que le moteur graphique chauffe (simulateur) : un seul nouvel essai.
+        return (rendu.uiImage ?? rendu.uiImage)?.pngData()
     }
 }
