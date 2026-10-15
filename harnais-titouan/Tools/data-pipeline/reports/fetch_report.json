@@ -2,17 +2,94 @@
  "since": 2010,
  "reussis": [
   {
-   "dep": "95",
-   "requetes_api": 1,
-   "requetes_cache": 1,
-   "operations": 51,
-   "observations_lots": 7429,
-   "observations_annoncees": 7429,
-   "secondes": 27.2
+   "dep": "75",
+   "requetes_api": 2,
+   "requetes_cache": 0,
+   "operations": 2,
+   "observations_lots": 214,
+   "observations_annoncees": 214,
+   "secondes": 2.7
+  },
+  {
+   "dep": "78",
+   "requetes_api": 2,
+   "requetes_cache": 0,
+   "operations": 87,
+   "observations_lots": 19517,
+   "observations_annoncees": 19517,
+   "secondes": 82.9
+  },
+  {
+   "dep": "92",
+   "requetes_api": 2,
+   "requetes_cache": 0,
+   "operations": 7,
+   "observations_lots": 1222,
+   "observations_annoncees": 1222,
+   "secondes": 7.1
+  },
+  {
+   "dep": "71",
+   "requetes_api": 18,
+   "requetes_cache": 0,
+   "operations": 347,
+   "observations_lots": 139202,
+   "observations_annoncees": 139202,
+   "secondes": 1443.6
+  },
+  {
+   "dep": "69",
+   "requetes_api": 18,
+   "requetes_cache": 0,
+   "operations": 264,
+   "observations_lots": 74490,
+   "observations_annoncees": 74490,
+   "secondes": 7379.6
+  },
+  {
+   "dep": "33",
+   "requetes_api": 18,
+   "requetes_cache": 0,
+   "operations": 245,
+   "observations_lots": 45976,
+   "observations_annoncees": 45976,
+   "secondes": 291.8
+  },
+  {
+   "dep": "31",
+   "requetes_api": 18,
+   "requetes_cache": 0,
+   "operations": 275,
+   "observations_lots": 87921,
+   "observations_annoncees": 87921,
+   "secondes": 317.6
+  },
+  {
+   "dep": "13",
+   "requetes_api": 18,
+   "requetes_cache": 0,
+   "operations": 110,
+   "observations_lots": 38798,
+   "observations_annoncees": 38798,
+   "secondes": 272.1
+  },
+  {
+   "dep": "74",
+   "requetes_api": 18,
+   "requetes_cache": 0,
+   "operations": 209,
+   "observations_lots": 32105,
+   "observations_annoncees": 32105,
+   "secondes": 432.6
   }
  ],
- "echecs": [],
- "requetes_api_total": 1,
- "secondes_api": 26.5,
- "date": "2026-10-13 15:04"
+ "echecs": [
+  {
+   "dep": "29",
+   "erreur": "echec apres 5 essais: https://hubeau.eaufrance.fr/api/v1/etat_piscicole/observations?code_departement=29&date_operation_min=2021-01-01&date_operation_max=2021-12-31&size=20000&fields=code_operation,date_operation,code_station,code_departement,code_alternatif_taxon,code_taxon,nom_commun_taxon,nom_latin_taxon,effectif_lot,code_type_lot,taille_individu (IncompleteRead(2878000 bytes read))"
+  }
+ ],
+ "requetes_api_total": 155,
+ "secondes_api": 2482.1,
+ "date": "2026-10-13 19:54"
 }

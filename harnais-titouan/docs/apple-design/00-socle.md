@@ -1,6 +1,6 @@
 # Socle Apple de Bredouille
 
-Une page. Tout agent de design, de construction, de test ou d'évaluation la lit avant de travailler. Détail et sources : `01-foundations.md`, `02-patterns.md`, `03-components.md`, `04-principes-et-videos.md` (même dossier), et `../modalites-build-apple.md`, `../preflight-appstore.md`.
+Une page. Tout agent de design, de construction, de test ou d'évaluation la lit avant de travailler. Détail et sources : `01-foundations.md`, `02-patterns.md`, `03-components.md`, `04-principes-et-videos.md`, `05-prototypage-apple.md` (même dossier), et `../modalites-build-apple.md`, `../preflight-appstore.md`.
 Légende : **[F]** lu à la source Apple. **[I]** déduction ou décision d'équipe. **⚠** non vérifié : jamais présenté comme un fait.
 Limite : les pages HIG ont été lues via leur JSON public (même contenu), les vidéos via des résumés, pas des transcriptions.
 

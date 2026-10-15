@@ -17,6 +17,7 @@ model: opus
 6. Mode avion du début à la fin.
 7. Seizième carte : paywall, un bouton proéminent, Restaurer, fermeture sans perdre ses cartes.
 8. Appareil sans modèle d'Apple : repli sans IA.
+9. Impasses : suivre tous les chemins possibles (méthode Apple, `docs/apple-design/05-prototypage-apple.md`) ; chaque écran a une sortie.
 
 ## Sortie (25 lignes maximum)
 

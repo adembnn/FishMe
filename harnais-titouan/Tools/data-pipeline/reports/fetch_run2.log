@@ -17,3 +17,14 @@
 [29] ECHEC: echec apres 5 essais: https://hubeau.eaufrance.fr/api/v1/etat_piscicole/observations?code_departement=29&date_operation_min=2021-01-01&date_operation_max=2021-12-31&size=20000&fields=code_operation,date_operation,code_station,code_departement,code_alternatif_taxon,code_taxon,nom_commun_taxon,nom_latin_taxon,effectif_lot,code_type_lot,taille_individu (IncompleteRead(2878000 bytes read))
   [retry 1/5] HTTPError: HTTP Error 503: Service Unavailable
   [retry 2/5] URLError: <urlopen error [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant>
+  [retry 1/5] HTTPError: HTTP Error 503: Service Unavailable
+[75] 2 operations, 214 lots (annonces 214), 2 appels API, 0 en cache, 2.7 s
+[78] 87 operations, 19517 lots (annonces 19517), 2 appels API, 0 en cache, 82.9 s
+[92] 7 operations, 1222 lots (annonces 1222), 2 appels API, 0 en cache, 7.1 s
+[71] 347 operations, 139202 lots (annonces 139202), 18 appels API, 0 en cache, 1443.6 s
+[69] 264 operations, 74490 lots (annonces 74490), 18 appels API, 0 en cache, 7379.6 s
+[33] 245 operations, 45976 lots (annonces 45976), 18 appels API, 0 en cache, 291.8 s
+[31] 275 operations, 87921 lots (annonces 87921), 18 appels API, 0 en cache, 317.6 s
+[13] 110 operations, 38798 lots (annonces 38798), 18 appels API, 0 en cache, 272.1 s
+[74] 209 operations, 32105 lots (annonces 32105), 18 appels API, 0 en cache, 432.6 s
+Termine : 9 departements OK, 1 echecs, 155 requetes API.
