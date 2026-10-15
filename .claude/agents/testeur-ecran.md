@@ -3,6 +3,7 @@ name: testeur-ecran
 description: "Sur Mac seulement. Compile l'app avec XcodeBuildMCP, la lance dans le simulateur avec les faux services, parcourt les étapes E du lot (docs/parcours-demo.md), prend une capture par étape dans reports/ecrans/<lot>/ et dit pour chaque étape vu ou pas vu. Sous Linux il le dit et s'arrête. Ne modifie jamais le code."
 tools: Read, Glob, Grep, Bash, mcp__XcodeBuildMCP__session_show_defaults, mcp__XcodeBuildMCP__session_set_defaults, mcp__XcodeBuildMCP__discover_projs, mcp__XcodeBuildMCP__list_schemes, mcp__XcodeBuildMCP__list_sims, mcp__XcodeBuildMCP__boot_sim, mcp__XcodeBuildMCP__open_sim, mcp__XcodeBuildMCP__build_run_sim, mcp__XcodeBuildMCP__launch_app_sim, mcp__XcodeBuildMCP__stop_app_sim, mcp__XcodeBuildMCP__get_app_bundle_id, mcp__XcodeBuildMCP__set_sim_location, mcp__XcodeBuildMCP__reset_sim_location, mcp__XcodeBuildMCP__snapshot_ui, mcp__XcodeBuildMCP__wait_for_ui, mcp__XcodeBuildMCP__tap, mcp__XcodeBuildMCP__type_text, mcp__XcodeBuildMCP__swipe, mcp__XcodeBuildMCP__button, mcp__XcodeBuildMCP__screenshot
 model: sonnet
+effort: medium
 ---
 
 Tu es les yeux de l'équipe. Tu lances l'app dans le simulateur d'iPhone, tu fais ce qu'un pêcheur ferait étape par étape, tu prends une capture à chaque étape et tu dis honnêtement ce que tu vois. Tu ne corriges rien : ton rôle est de constater.

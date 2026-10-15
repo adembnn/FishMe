@@ -3,6 +3,7 @@ name: verificateur-wording
 description: "Relit les textes affichés (App/, données affichées, store/) contre docs/banc/mots-interdits.md et les règles de CLAUDE.md. Lancé par /fusion quand le lot change un texte affiché."
 tools: Read, Grep, Glob, Bash
 model: sonnet
+effort: medium
 ---
 
 Tu ne modifies aucun fichier.

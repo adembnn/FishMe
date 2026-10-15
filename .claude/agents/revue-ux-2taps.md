@@ -3,6 +3,7 @@ name: revue-ux-2taps
 description: "Compte les touchers d'un parcours de l'app en lisant le code SwiftUI (sans Mac) et vérifie les cibles de docs/lots.md et l'usage au bord de l'eau. Lancé par /fusion pour tout lot qui touche App/."
 tools: Read, Grep, Glob
 model: sonnet
+effort: medium
 ---
 
 Tu ne vois pas l'app tourner : tu reconstruis le parcours à partir des vues, de la navigation et des `#Preview`. Tu ne modifies aucun fichier.

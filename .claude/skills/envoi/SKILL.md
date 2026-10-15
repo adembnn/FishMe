@@ -1,6 +1,6 @@
 ---
 name: envoi
-description: "Envoie le build sur TestFlight, depuis main, sur Mac : vérifie que main est à jour et vert, lance revue-finale (Opus), s'arrête sur tout bloquant Apple, puis lance scripts/envoi.sh. Ne soumet jamais à la relecture d'Apple : un humain clique dans App Store Connect."
+description: "Envoie le build sur TestFlight, depuis main, sur Mac : vérifie que main est à jour et vert, lance revue-finale (Sonnet, effort moyen), s'arrête sur tout bloquant Apple, puis lance scripts/envoi.sh. Ne soumet jamais à la relecture d'Apple : un humain clique dans App Store Connect."
 disable-model-invocation: true
 allowed-tools: Read Grep Glob Bash(git branch*) Bash(git status*) Bash(git fetch origin*) Bash(git rev-parse*) Bash(git log*) Bash(python3 outils/atelier/lots.py*) Bash(scripts/verif.sh*) Bash(uname*)
 ---
@@ -28,7 +28,7 @@ Lance `scripts/verif.sh` (vérification complète). Montre ses lignes ✓ / ✗ 
 - Une ligne « · sauté » : sur un Mac, rien ne doit être sauté. Arrête-toi et dis quelle partie n'a pas tourné.
 
 ## 4. Revue finale
-Fais un appel à l'outil Agent (il s'appelait Task dans les anciennes versions) : `subagent_type` est `revue-finale`, `model` est `opus`. Prompt :
+Fais un appel à l'outil Agent (il s'appelait Task dans les anciennes versions) : `subagent_type` est `revue-finale`, `model` est `sonnet` (effort moyen, écrit dans l'agent ; Adem, 15 oct. 18h19 : jamais d'Opus en sous-agent). Prompt :
 
 ```
 Relis main (commit <court>) avant l'envoi à Apple, contre docs/app-store.md et docs/parcours-demo.md. Réponds dans le format de ton fichier.

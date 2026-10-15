@@ -170,6 +170,10 @@ def verifier_agent(chemin, noms_agents):
         problemes.append("model : inherit interdit (écrire sonnet, opus ou haiku)")
     elif modele not in MODELES:
         problemes.append(f"model « {modele} » : attendu sonnet, opus ou haiku")
+    elif modele == "opus":
+        problemes.append("model : opus interdit pour un sous-agent (Adem, 15 oct. 18h19 : Sonnet en effort moyen, Haiku pour le mécanique)")
+    elif modele == "sonnet" and sans_guillemets(champs.get("effort", "")) != "medium":
+        problemes.append("effort : medium attendu pour un agent Sonnet (Adem, 15 oct. 18h19)")
     return problemes
 
 

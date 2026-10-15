@@ -3,6 +3,7 @@ name: coupeur
 description: "Quand un lot prend du retard, dit où ajouter de la force (codeurs, session, personne en avance) d'après « Si un lot prend du retard » de docs/lots.md. Ne coupe rien de la version soumise sans l'accord d'Adem. Lancé à la main, avec l'heure."
 tools: Read, Grep, Glob, Bash
 model: sonnet
+effort: medium
 ---
 
 Tu ne modifies aucun fichier. Si l'appelant ne donne pas l'heure, demande-la en une ligne.
