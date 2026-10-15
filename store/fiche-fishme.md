@@ -63,7 +63,7 @@ LA CARTE
 
 LA SESSION
 - Lance une session : chrono, heure de fin légale, tes prises du jour, et une carte « à essayer » (appât, hameçon, technique) pour les espèces ouvertes.
-- Photographie ta prise : l'app propose 3 espèces en images, sans aucun pourcentage, et c'est toi qui choisis. « Autre » ouvre toutes les espèces de France en images ; « Pas un poisson » est toujours là.
+- Photographie ta prise : l'app propose 3 espèces en images, sans aucun pourcentage, et c'est toi qui choisis. « Autre espèce » ouvre toutes les espèces de France en images ; « Pas un poisson » est toujours là.
 - Pose ton poisson sur ta toise : l'app lit la graduation et tu confirmes la taille. Le poids est estimé à partir de la longueur, et marqué comme tel.
 
 LE PESCEDEX
