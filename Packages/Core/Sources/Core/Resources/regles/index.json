@@ -1,1 +1,24 @@
-{"version":"vide","departements":{}}
+{
+ "version": "2026-10-15.1",
+ "date": "2026-10-15",
+ "departements": {
+  "75": {
+   "niveau": "partiel",
+   "confirmees": 31,
+   "a_verifier": 0,
+   "sha256": "1a5a3cb56d532b8b6c633b793e1cb2ea5cd61f37ffd4091bd7cda755a3f9af11",
+   "expire_min": "2026-12-31"
+  },
+  "94": {
+   "niveau": "partiel",
+   "confirmees": 45,
+   "a_verifier": 0,
+   "sha256": "cf217729d424feb894269217ebaeba5f50b4c32c01815f3c30bef947fc876bec",
+   "expire_min": "2026-12-31"
+  }
+ },
+ "national": {
+  "sha256": "3e409df0d66b2a62f0424f9e0ac18f91a0d1b7d2daa06516feadf5ad22cac473",
+  "expire_min": "2026-12-31"
+ }
+}
