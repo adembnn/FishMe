@@ -33,7 +33,7 @@ nonisolated protocol SourceMarque: Sendable {
 
 nonisolated enum ErreurConditions: Error { case indisponible }
 
-nonisolated enum LiensOfficiels {
+nonisolated enum LiensVigilance {
     static var vigilanceMeteoFrance: URL { URL(string: "https://vigilance.meteofrance.fr")! }
     static var vigicrues: URL { URL(string: "https://www.vigicrues.gouv.fr")! }
 }

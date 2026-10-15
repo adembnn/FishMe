@@ -42,7 +42,7 @@ struct BandeauVigilanceView: View {
         alerte.type == .orage ? "Vigilance orage : range la canne en carbone" : "Vigilance crue : reste loin de l'eau"
     }
 
-    private var lien: URL { alerte.type == .orage ? LiensOfficiels.vigilanceMeteoFrance : LiensOfficiels.vigicrues }
+    private var lien: URL { alerte.type == .orage ? LiensVigilance.vigilanceMeteoFrance : LiensVigilance.vigicrues }
 }
 
 /// Une ligne courte pour le bandeau de session (L5), seulement s'il y a la place.

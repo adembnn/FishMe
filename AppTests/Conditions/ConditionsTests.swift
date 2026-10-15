@@ -46,7 +46,7 @@ final class ConditionsTests: XCTestCase {
 
     func testInstantaneRefuseUneLectureDePlusDe60Minutes() async {
         let journal = EnregistreurRequetes()
-        let horloge = Horloge(debut)
+        let horloge = HorlogeTestConditions(debut)
         let m = modele(journal: journal, now: { horloge.valeur })
         _ = await m.lire(spot: spotExact)
         XCTAssertNotNil(m.instantane(spot: spotExact))
@@ -88,7 +88,7 @@ final class ConditionsTests: XCTestCase {
 }
 
 /// `@unchecked Sendable` : la date n'est lue et écrite sous `NSLock` uniquement ; `nonisolated` pour que l'horloge serve dans une fermeture `@Sendable`.
-nonisolated final class Horloge: @unchecked Sendable {
+nonisolated final class HorlogeTestConditions: @unchecked Sendable {
     private let verrou = NSLock()
     private var v: Date
     init(_ d: Date) { v = d }
