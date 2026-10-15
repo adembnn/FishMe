@@ -9,12 +9,12 @@
 | # | Profil (nom exact à passer à l'agent) | Missions | Étapes traversées |
 |---|---|---|---|
 | 1 | Designer exigeant | DES-M1, DES-M2, DES-M3 | E1, E5, E6, E7 |
-| 2 | Streeteur | STR-M1, STR-M2 | E1, E2, étape à créer (session) |
-| 3 | Carpiste de nuit | CAR-M1, CAR-M2 | E1, E2, E6, E8 (amis), étape à créer (session) |
-| 4 | Pêcheur au coup et compétiteur | COU-M1, COU-M2 | E5, E6, E7, étape à créer (volet droit) |
+| 2 | Streeteur | STR-M1, STR-M2 | E1, E2, E3, E4 |
+| 3 | Carpiste de nuit | CAR-M1, CAR-M2 | E1, E2, E4, E6, E8 |
+| 4 | Pêcheur au coup et compétiteur | COU-M1, COU-M2 | E5, E6, E7, E8 |
 | 5 | Truitiste et moucheur de 1re catégorie | TRU-M1, TRU-M2 | E2, E5 |
 | 6 | Parent débutant avec un enfant | PAR-M1, PAR-M2, PAR-M3 | E2, E5, E6, E7 |
-| 7 | Bénévole d'association (AAPPMA) | BEN-M1, BEN-M2 | E2, étape à créer (volet droit) |
+| 7 | Bénévole d'association (AAPPMA) | BEN-M1, BEN-M2 | E2, E8 |
 | 8 | Garde-pêche | GAR-M1, GAR-M2, GAR-M3 | E2, E5 |
 | 9 | Juré MWM | JUR-M1, JUR-M2, JUR-M3 | E1, E2, E5, E6, E7, E9 (E4 et E8 : une phrase) |
 
@@ -25,7 +25,7 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 - **seuil posé par nous** : cible fixée par l'équipe, sans source de terrain. Le seuil de chaque mission est une cible, pas une mesure. L'agent relève le chiffre réel même au-dessus du seuil, pour que l'avocat chiffre la correction.
 - **selon la décision d'Adem** : question encore ouverte. La mission mesure sans figer la réponse. Trois sujets sont ouverts à ce jour : la forme du verdict (question du 15 oct., `docs/banc/mots-interdits.md` ; le brouillon de `docs/parcours-demo.md` propose une liste de contrôle par défaut), ce que bloque le paywall et son prix (`CLAUDE.md`, 15 oct.), le contenu de « Mon club » (`docs/vision.md` §2, option d).
 - **verdict** : la réponse de l'app sur une prise, quelle que soit sa forme finale (« relâche-la », « vérifie l'arrêté », ligne de liste de contrôle). Hors des départements saisis, il ne doit jamais accorder le droit de garder (« tu peux la garder » ou équivalent), règle de `CLAUDE.md`.
-- **étape à créer (volet droit)** : `docs/parcours-demo.md` committé n'a pas encore d'étape pour Mon club ni pour la session (bouton « Commencer une session » et son bandeau, que E4 ne couvre que par la Live Activity). Aucun numéro E n'est inventé ici. Le brouillon du 15 oct. de `docs/parcours-demo.md` (non committé au moment d'écrire) range la session en E4, « Où chercher ? » en E3 et Mon club en E8, et déplace les amis à la mise à jour : renuméroter dès qu'il est committé. « Où chercher ? » est traité dans E1 et E2 en attendant.
+- **Étapes** : celles de `docs/parcours-demo.md` du 15 oct. « Où chercher ? » est E3 (filtre d'espèce sur la carte), la session est E4 (bandeau dans l'app ; l'écran verrouillé vient dans la mise à jour), Mon club est E8 (liens, partage d'une carte en image, sources, contact ; les amis invités viennent dans la mise à jour).
 - **Départements saisis** : 75, 92, 93, 94, 77, plus les pilotes 01, 87 et 44 en cours de saisie (`CLAUDE.md`, 15 oct. 11h13). L'agent lit la liste réelle dans le build testé (`regles.json`, quand il existe). Un département non saisi se joue comme « hors liste ».
 
 ## Conditions de jeu communes
@@ -93,12 +93,12 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 
 **Missions**
 
-**STR-M1 · Trouver le poste et lire le relevé** (E1, E2)
+**STR-M1 · Trouver le poste et lire le relevé** (E1, E2, E3)
 - Départ : à pied, Paris 15e, quai de Seine près du parc André-Citroën (48,842 N, 2,275 E [?]), 15 oct. 2026, app neuve ; il touche « Autour de moi » et accorde la position.
 - Il fait : cherche où l'OFB relève perche et sandre autour de lui, ouvre la fiche du coin.
 - Réussi si : au moins un coin avec ses espèces en 10 s ou moins après le lancement à froid (`docs/parcours-demo.md` E1) ; fiche ouverte en 3 touchers ou moins et 15 s ou moins depuis le lancement (seuils posés par nous) ; il lit « N pêches, dernier relevé AAAA » pour perche et sandre, 2 sur 2 ; pour Paris l'écran dit la vérité sur la minceur des relevés (36 pêches, dernier relevé 2011, `docs/donnees.md`) ; si la rareté vient de la région, l'écran le dit (« rareté en Île-de-France », `docs/donnees.md`).
 
-**STR-M2 · Dire l'heure de fin légale** (étape à créer (session), avec la Live Activity de E4)
+**STR-M2 · Dire l'heure de fin légale** (E4 ; l'écran verrouillé vient dans la mise à jour)
 - Départ : quai de Marne à Charenton-le-Pont (94, 48,812 N, 2,416 E [?]), 15 oct. 2026, 18 h 30 visées (voir conditions de jeu).
 - Il fait : touche « Commencer une session », regarde le bandeau (et l'écran verrouillé si la Live Activity existe), dit l'heure de fin légale.
 - Réussi si : il la dit en 5 s ou moins, 0 erreur de lecture (seuils posés par nous) ; l'heure affichée vaut coucher du soleil plus 30 minutes (R436-13), à 2 minutes près (`docs/lots.md` L1) ; à Paris le 15 oct. 2026 elle ne dépasse pas 19:33 (`docs/reports/donnees.md` §6 : « Afficher « fin légale » avec une minute de marge en moins ») ; le compte à rebours plus l'heure du Mac redonnent l'heure de fin à 1 minute près (seuil posé par nous) ; session lancée hors fenêtre légale : état « pêche fermée », pas de plantage (`docs/reports/eval-apple.md` R3).
@@ -124,13 +124,13 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 
 **Missions**
 
-**CAR-M1 · Lire la règle de nuit avant de s'installer** (E1, E2, étape à créer (session))
+**CAR-M1 · Lire la règle de nuit avant de s'installer** (E1, E2, E4)
 - Départ : bord du lac de Créteil (94, 48,770 N, 2,458 E [?]), plan d'eau dont le règlement n'est pas lu (règle `incertain`, rapport `regles-75-94.md`), 15 oct. 2026, 22 h visées.
 - Il fait : ouvre la fiche du coin, cherche si la nuit est permise, essaie de commencer une session.
 - Réussi si : la règle de nuit est atteinte en 2 touchers ou moins (seuil posé par nous) ; 0 indication qui laisse croire la nuit permise : l'app écrit « nuit interdite hors parcours désigné » avec sa source, ou « vérifie l'arrêté » avec le lien ; source et date de lecture visibles (`docs/banc/mots-interdits.md`) ; aucune carpe présentée comme gardable de nuit ; la session n'échoue pas par un plantage.
 
-**CAR-M2 · Partager une carte sans trahir le plan d'eau** (E6, E8 amis)
-- Départ : une carte de carpe miroir de 62 cm créée de nuit au lac de Créteil, un ami invité, 15 oct. 2026. E8 est dans la mise à jour : si elle est absente du build testé, la mission s'arrête à l'image de partage de E6 et le dit.
+**CAR-M2 · Partager une carte sans trahir le plan d'eau** (E6, E8)
+- Départ : une carte de carpe miroir de 62 cm créée de nuit au lac de Créteil, un ami invité, 15 oct. 2026. Le partage d'une carte en image est dans E8 ; les amis invités viennent dans la mise à jour (L8) : s'ils sont absents du build testé, la mission s'arrête à l'image partagée et le dit.
 - Il fait : partage la carte à l'ami, puis liste tout ce qui permet de retrouver le plan d'eau : texte, image, métadonnées, géographie.
 - Réussi si : 0 coordonnée, 0 nom de plan d'eau, 0 clé GPS dans le fichier (`docs/parcours-demo.md` E6 et E8, `CLAUDE.md`) ; la liste des recoupements restants est rendue, une ligne chacun (espèce, département, date, heure, météo, lune) : elle n'a pas de seuil, c'est le résultat ; le nom du cours d'eau sur la carte (« La Marne · 94 », `docs/vision.md` §3) : selon la décision d'Adem.
 
@@ -160,7 +160,7 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 - Il fait : enregistre dix gardons de suite, de 12 à 18 cm (même photo d'exemple, espèce par la grille).
 - Réussi si : après le premier, chaque prise coûte 2 touchers ou moins et 8 s ou moins, sans écran à fermer (seuils posés par nous, volontairement exigeants). Si le paywall bloque une prise (selon la décision d'Adem sur ce qu'il bloque), l'agent note l'écran, le ferme sans acheter s'il le permet, et marque les prises suivantes « non constatables ». Le traitement du doublon (« x7 », record de taille, `docs/reports/eval-mwm.md` §2) : selon la décision d'Adem.
 
-**COU-M2 · Trouver le règlement de son association** (étape à créer (volet droit), selon la décision d'Adem : contenu de « Mon club »)
+**COU-M2 · Trouver le règlement de son association** (E8, selon la décision d'Adem : contenu de « Mon club »)
 - Départ : « Mon club » réglé sur une association et une fédération de test (à fournir avec l'étape), 15 oct. 2026.
 - Il fait : cherche le règlement de son association (celui du concours et de l'AAPPMA, pas celui de la fédération).
 - Réussi si : 3 touchers ou moins (seuil posé par nous) ; il nomme l'association et la fédération sans les confondre, 2 sur 2 (seuil posé par nous). Si « Mon club » ne contient pas de règlement, le résultat est « absent », pas un défaut tant qu'Adem n'a pas décidé du contenu.
@@ -252,12 +252,12 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 
 **Missions**
 
-**BEN-M1 · Trouver son club et sa fédération** (étape à créer (volet droit), selon la décision d'Adem : contenu de « Mon club »)
+**BEN-M1 · Trouver son club et sa fédération** (E8, selon la décision d'Adem : contenu de « Mon club »)
 - Départ : « Mon club » ouvert sur un parcours de test (à fournir avec l'étape), 15 oct. 2026.
 - Il fait : cherche l'association du parcours et la fédération qui la fédère.
 - Réussi si : 3 touchers ou moins (seuil posé par nous) ; les deux noms donnés sans confusion, 2 sur 2 (seuil posé par nous). Aucun annuaire d'associations copié : le renvoi se fait par lien (`docs/vision.md` §2, annuaire de cartedepeche.fr).
 
-**BEN-M2 · Signaler une règle fausse** (E2, lien « Signaler une erreur » sous la source, `docs/maquettes/niveau-1/notes.md` ; ou étape à créer (volet droit) si le signalement y vit)
+**BEN-M2 · Signaler une règle fausse** (E2, lien « Signaler une erreur » sous la source, `docs/maquettes/niveau-1/notes.md` ; ou E8, « signaler une erreur de règle »)
 - Départ : fiche du brochet à la Marne, Charenton-le-Pont (94, 48,812 N, 2,416 E [?]), 15 oct. 2026. Il juge fausse la taille affichée pour son parcours.
 - Il fait : signale l'erreur.
 - Réussi si : le signalement tient en 4 touchers ou moins et un accusé est visible (seuils posés par nous) ; sinon le résultat est noté « absent » (pas un défaut avant la décision d'Adem sur le contenu du volet) ; le signalement n'envoie aucune position exacte (`CLAUDE.md`) ; l'écran affiche la règle la plus stricte avec ses deux sources quand deux textes se contredisent (Adem, 15 oct. 11h13, `CLAUDE.md`).
@@ -344,5 +344,5 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 - Recherche du 15 oct. 2026 : `docs/reports/personas-sources.md` (§1 avis App Store et Play, §2 chiffres FNPF et BIPE, §3 habitudes par famille, §4 ce qui fait fuir un expert).
 - Décisions et règles d'Adem : `CLAUDE.md`, `docs/donnees.md`, `docs/vision.md`, `docs/parcours-demo.md`, `docs/banc/mots-interdits.md`.
 - Critères des organisateurs : `docs/kickoff/0-cadrage.md`, `docs/kickoff/dossier-organisateurs.md`, `docs/reports/eval-mwm.md`, `docs/reports/eval-apple.md`.
-- Règles de pêche : `docs/reports/donnees.md` §4 et §6, rapport `regles-75-94.md` (hors git, voir plus haut).
+- Règles de pêche : `docs/reports/donnees.md` §4 et §6, rapport `docs/reports/regles-75-94.md`.
 - Apple : Human Interface Guidelines, Accessibility (https://developer.apple.com/design/human-interface-guidelines/accessibility), lu le 15 oct. 2026.
