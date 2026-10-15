@@ -2,8 +2,15 @@
 
 Pour la session qui reprend. Adem n'avait plus de crédit : tout a été arrêté proprement et poussé. Lire d'abord `CLAUDE.md`, puis `docs/README.md`, puis ce fichier.
 
+## Reprise du 15 oct. après-midi
+Ce qui a changé depuis midi (décisions d'Adem, détail dans `CLAUDE.md`, `README.md` et `lots.md`) :
+- Toutes les espèces pêchables, en images (101 entrées), au lieu de 14 ; la version soumise prend aussi la météo (WeatherKit), le niveau de la rivière, la vigilance orage et crue, « préviens-moi », les conseils par espèce et la question du niveau (13h21).
+- Quatre lots de plus : D4 Conseils par espèce (S), L12 Conditions (A), L13 Conseils et premier lancement (B), L14 Aquarium (A, mise à jour), soit 23 lots.
+- Plus de C (14h26) : A = Adem, B = Titouan avec Claude Code, S = Sullyvan sans Claude ni Mac ; `Packages/Core` à B, sauf `Conseils/` (S). Les règles confirmées sur le PC d'Adem vont sur la branche `regles/local`, jamais fusionnée dans `main` (14h30).
+- Spot gratuit : un cercle de 1 km proposé par l'app, sessions illimitées dessus, un 2e spot ouvre le paywall qui bloque (12h26 à 12h32). Carte à collectionner : la vraie photo au verso, le poisson qui nage, un reflet sur les rares et légendaires (13h24, 13h52).
+
 ## Où sont les choses
-- **Le plan** : cette branche, `claude/project-thread-78e20q` (devient `main` à L0). `python3 docs/verifier.py` doit afficher « 0 trou : 19 lots ».
+- **Le plan** : cette branche, `claude/project-thread-78e20q` (devient `main` à L0). `python3 docs/verifier.py` doit afficher « 0 trou : 23 lots ».
 - **Les outils de lecture des règles** : `outils/regles/` (consigne v2, `valider.py`, `consensus.py`). `REGLES_DIR=<dossier>` dit où sont `dep/`, `dep-b/`, `consensus/`.
 - **Les lectures et les rapports (données, jamais sur cette branche)** : dossier partagé du projet `/mnt/project-files/build/regles/` et `/mnt/project-files/build/reports/`, copiés sur GitHub par la copie automatique, branche `claude/push-docs-projet-t0aglk`, sous `docs/regles/` et `docs/reports/`. Pour les récupérer ailleurs : `git fetch origin claude/push-docs-projet-t0aglk && git archive origin/claude/push-docs-projet-t0aglk docs/regles | tar -x`.
 - **Recherches du fil Maquettes sur le spot** : `/mnt/project-files/maquettes/reports/spot-reglementation.md`, `spot-technique.md`, `pescedex-par-zone.md` (aussi sur la branche de copie, `docs/maquettes/reports/`).
@@ -31,12 +38,12 @@ Ce qui bloque dans le cloud : sites de l'État et des fédérations refusés (40
 
 ## Questions qui attendent Adem (chacune a un défaut, le travail avance dessus)
 1. Forme de la règle pour une prise (`docs/README.md`, question 1) : défaut b, liste de contrôle sourcée.
-2. Ce que bloque le paywall (`docs/README.md`, question 2) : défaut b. Idée d'Adem du 15 oct. (fil Maquettes) : le gratuit propose UN spot ; tranché le 15 oct. 12h26 : sessions illimitées sur ce spot. Puis le 15 oct. 12h28 : fin de la 1re session = paywall qui se ferme, 2e spot = paywall qui bloque. Spot gratuit (12h32) : l'app propose le plus proche, le pêcheur peut changer avant sa 1re session, puis il est fixé.
+2. Ce que bloque le paywall : tranché, ce n'est plus une question (`docs/README.md`, « Tranché »). Le 15 oct. 12h26 : le gratuit garde UN spot, avec des sessions illimitées. 12h28 : fin de la 1re session = paywall qui se ferme, 2e spot = paywall qui bloque. 12h32 : l'app propose le spot le plus proche, le pêcheur peut changer avant sa 1re session, puis il est fixé.
 3. Rôle de l'IA d'Apple dans la reconnaissance : défaut a (notre modèle Create ML partout, l'IA d'Apple sur 15 Pro et plus pour la légende, et pour l'espèce seulement si elle passe le même examen).
 4. Taille et poids : défaut a (curseur, poids estimé par la formule longueur-poids ; à 2 cm ou moins de la taille légale, mesurer au mètre), réalité augmentée dans la mise à jour.
 5. Forme du spot : tranché le 15 oct. 12h26, cercle de 1 km vendredi, tronçon ou lac entier dans la mise à jour (`reports/spot.md`).
 6. Pack de lots reconnaissance R0 à R4 (examen, photos, entraînement, IA d'Apple au même examen, taille et poids) : plan en 4 lignes envoyé, ok d'Adem attendu ; il faut aussi savoir qui a un iPhone 15 Pro ou plus et qui rassemble les photos de vraies prises.
-7. Toujours ouverts : nom de l'app, prix mensuel retenu, prix en euros (colonne France d'App Store Connect), compteur du Pescedex par zone (fil Maquettes).
+7. Toujours ouverts : prix mensuel retenu, prix en euros (colonne France d'App Store Connect), compteur du Pescedex par zone (fil Maquettes).
 Règle d'Adem : jamais plus de 3 questions à la fois. Poser 3, 5 et 6 en premier.
 
 ## Ce qui tourne encore
@@ -45,7 +52,7 @@ Règle d'Adem : jamais plus de 3 questions à la fois. Poser 3, 5 et 6 en premie
 ## Pour reprendre
 ```bash
 git fetch origin claude/project-thread-78e20q && git checkout claude/project-thread-78e20q
-python3 docs/verifier.py                      # 0 trou : 19 lots
+python3 docs/verifier.py                      # 0 trou : 23 lots
 python3 outils/atelier/essai.py               # 180/180
 REGLES_DIR=/mnt/project-files/build/regles python3 -I outils/regles/consensus.py --tous
 ```
