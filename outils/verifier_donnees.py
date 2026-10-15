@@ -4,15 +4,25 @@
   python3 outils/verifier_donnees.py              vérifie la structure ; liste les MANQUES de contenu ; sort 1 s'il y a une ERREUR
   python3 outils/verifier_donnees.py --porte-fusion   sort aussi 1 s'il reste un MANQUE (relecture de S, cas d'or, espèces, images...)
   python3 outils/verifier_donnees.py --index      réécrit regles/index.json (sha256, expire_min, nombres) d'après les fichiers présents
-
-Pas encore écrit : --charger <code> (chargement des fichiers confirmés de D3 : aucun n'est arrivé).
+  python3 outils/verifier_donnees.py --charger <code> [--depuis DIR]
+      fusion prudente (docs/fiches/D1.md) : lit DIR/consensus/<code>.json (sortie de `consensus.py <code> --json`) et les lectures
+      DIR/dep/<code>.json et DIR/dep-b/<code>.json, écrit regles/<code>.json puis relance --index.
+      Règles confirmées par les deux lectures -> regles[] ; vues par une seule lecture -> a_verifier[] (sans valeur ni citation) ;
+      deux tailles confirmées différentes -> une règle valeur.candidats_cm, statut incertain.
+  python3 outils/verifier_donnees.py --une-lecture <code> --lecture dep|dep-b [--depuis DIR]
+      département qui n'a qu'une lecture : tout part en a_verifier[], regles[] vide, niveau partiel.
+  DIR par défaut : /mnt/project-files/build/regles/cloud (ou la variable REGLES_DIR).
+  Refus : valeur en forme v1, fichier existant relu par une personne (statut verifie ou verifie_par), 75 et 94 (relus, gagnent toujours),
+  id en double, fichier de plus de 400 Ko.
 """
 import datetime
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
+import unicodedata
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RES = os.path.join(RACINE, "Packages", "Core", "Sources", "Core", "Resources")
@@ -107,6 +117,10 @@ def verifier_regles(fichiers):
         for a in d.get("a_verifier", []):
             if "valeur" in a or "citation" in a:
                 err(f"{code} : a_verifier avec valeur ou citation ({a.get('type')})")
+            if any(t not in textes for t in a.get("textes", [])):
+                err(f"{code} : a_verifier ({a.get('type')}) cite un texte absent de textes")
+            if a.get("eau") and a["eau"] not in eaux:
+                err(f"{code} : a_verifier ({a.get('type')}) eau {a['eau']} absente de eaux")
         if code in IDF:
             n = sum(1 for r in d["regles"] if r["statut"] == "brouillon")
             if n:
@@ -252,10 +266,324 @@ def verifier_git():
             err(f"fichier fabriqué commité : {l}")
 
 
+# ---------------------------------------------------------------------------------------------------------------------
+# Chargeur : fusion prudente des lectures de D3 (docs/fiches/D1.md, « Contrat »)
+# ---------------------------------------------------------------------------------------------------------------------
+DEPUIS = os.environ.get("REGLES_DIR") or "/mnt/project-files/build/regles/cloud"
+V1_CHARGEUR = V1 | {"regle", "note", "hors"}
+PROTEGES = ("75", "94")  # relus par une personne : le chargeur n'y touche jamais
+NIVEAUX = {"national", "departement", "cours_eau", "troncon", "plan_eau"}
+TAILLE_MAX = 400 * 1024
+SEUIL_SANS_RESERVE = 0.6
+
+
+class Refus(Exception):
+    """Le chargement s'arrête, rien n'est écrit."""
+
+
+def norm(texte):
+    texte = unicodedata.normalize("NFKD", texte or "").encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", " ", texte).strip()
+
+
+def nom_eau_brut(lieu):
+    """Ce qui précède la première parenthèse, virgule, point-virgule ou deux-points (comme nom_eau de outils/regles/consensus.py)."""
+    return re.split(r"[(,:;]", lieu or "", maxsplit=1)[0].strip()
+
+
+def cle_eau(lieu):
+    return norm(re.sub(r"^(lac|plan d'eau|etang|étang|canal|riviere|rivière)\s+(de |du |des |d')?", "", nom_eau_brut(lieu), flags=re.I))
+
+
+def refuser_v1(code, regles, lecture):
+    for r in regles:
+        v = r.get("valeur")
+        if v is not None and not isinstance(v, dict):
+            raise Refus(f"{code} ({lecture}) : la règle {r.get('id')} a une valeur qui n'est pas un objet : forme v1, à relire en v2 avant chargement.")
+        trouves = V1_CHARGEUR & set(v or {})
+        if trouves:
+            raise Refus(f"{code} ({lecture}) : la règle {r.get('id')} a une valeur en forme v1 (clés {sorted(trouves)}) : "
+                        "à relire en v2 (consigne de D3) avant chargement.")
+
+
+class Textes:
+    """Range chaque source une fois (titre, url, lu_le, version) et rend son id."""
+
+    def __init__(self, entetes):
+        self.liste, self.index, self.signatures = [], {}, {}
+        for t in entetes:
+            if t.get("url") and t.get("signe_le"):
+                self.signatures.setdefault(t["url"], set()).add(t["signe_le"])
+
+    def id(self, source):
+        if not source or not source.get("texte") or not source.get("url") or not source.get("lu_le"):
+            return None
+        cle = (source["texte"], source["url"])
+        if cle not in self.index:
+            sig = self.signatures.get(source["url"], set())
+            self.index[cle] = f"t{len(self.liste) + 1}"
+            self.liste.append({"id": self.index[cle], "titre": source["texte"], "url": source["url"],
+                               "signe_le": next(iter(sig)) if len(sig) == 1 else None,
+                               "lu_le": source["lu_le"], "version": source.get("version")})
+        return self.index[cle]
+
+    def garder_utilises(self, utilises):
+        self.liste = [t for t in self.liste if t["id"] in utilises]
+
+
+def couper(citation, n=300):
+    c = " ".join((citation or "").split())
+    return c if len(c) <= n else c[:n - 6].rstrip() + " [...]"
+
+
+def eau_de(r, eaux):
+    portee = r.get("portee") or {}
+    niveau = portee.get("niveau")
+    if niveau not in NIVEAUX:
+        raise Refus(f"règle {r.get('id')} : portee.niveau inconnu ({niveau}).")
+    cle = cle_eau(portee.get("lieu")) if niveau in ("cours_eau", "troncon", "plan_eau") else ""
+    if not cle:
+        return None
+    eaux.setdefault(cle, {"cle": cle, "nom": nom_eau_brut(portee.get("lieu")), "code": None})
+    return cle
+
+
+def cm_de(r):
+    v = r.get("valeur") or {}
+    c = v.get("cm")
+    return c if isinstance(c, (int, float)) and not isinstance(c, bool) else None
+
+
+def construire_regle(r, textes, eaux, ids_nat):
+    """Une règle confirmée au schéma de 94.json, ou None si elle n'a pas de source complète ou de citation."""
+    source = r.get("source")
+    tid = textes.id(source)
+    if tid is None and isinstance(r.get("lecture_b"), dict):
+        tid = textes.id(r["lecture_b"].get("source"))
+    citation = couper(r.get("citation"))
+    if tid is None or not citation:
+        return None
+    portee = r.get("portee") or {}
+    remplace = r.get("remplace")
+    return {"id": r["id"],
+            "portee": {"niveau": portee.get("niveau"), "code": portee.get("code"), "eau": eau_de(r, eaux),
+                       "lieu": portee.get("lieu") or None, "geometrie": None},
+            "especes": list(r.get("especes") or []), "categorie": r.get("categorie"), "type": r.get("type"),
+            "valeur": dict(r.get("valeur") or {}), "du": r.get("du"), "au": r.get("au"),
+            "remplace": remplace if remplace in ids_nat else None,
+            "phrase": r.get("phrase"), "textes": [tid], "citation": citation,
+            "expire_le": r.get("expire_le"), "statut": r.get("statut") if r.get("statut") in ("brouillon", "incertain") else "incertain",
+            "verifie_par": None}
+
+
+def fusionner_tailles(regles, avertissements):
+    """Deux tailles confirmées différentes pour (espèces, catégorie, eau, dates) : une règle, valeur.candidats_cm, deux textes, incertain."""
+    groupes = {}
+    for r in regles:
+        if r["type"] == "taille_min" and cm_de(r) is not None and "candidats_cm" not in r["valeur"]:
+            cle = (tuple(sorted(r["especes"])), r["categorie"], r["portee"]["eau"], r["du"], r["au"])
+            groupes.setdefault(cle, []).append(r)
+    sortie, fusionnes = [], set()
+    for rs in groupes.values():
+        if len({cm_de(r) for r in rs}) < 2:
+            continue
+        rs = sorted(rs, key=lambda r: (cm_de(r), r["id"]))
+        base = rs[0]
+        cands = sorted({cm_de(r) for r in rs})
+        tids = []
+        for r in rs:
+            for t in r["textes"]:
+                if t not in tids:
+                    tids.append(t)
+        cits = [r["citation"] for r in rs]
+        citation = " | ".join(cits) if sum(map(len, cits)) + 3 * (len(cits) - 1) <= 300 else " | ".join(couper(c, 300 // len(cits) - 3) for c in cits)
+        fusion = dict(base, valeur={"cm": None, "candidats_cm": cands}, textes=tids, citation=citation, statut="incertain",
+                      phrase="Deux tailles lues dans les textes : " + " et ".join(f"{c:g} cm" for c in cands) + " ; la plus stricte s'applique.")
+        if len(tids) < 2:
+            avertissements.append(f"{base['id']} : deux tailles {cands} mais un seul texte cité")
+        sortie.append(fusion)
+        fusionnes.update(r["id"] for r in rs)
+        avertissements.append(f"{base['id']} : tailles {cands} cm confirmées avec deux valeurs, fusion en candidats_cm ({', '.join(r['id'] for r in rs)})")
+    return [r for r in regles if r["id"] not in fusionnes] + sortie
+
+
+def entree_a_verifier(r, textes, eaux):
+    tid = textes.id(r.get("source"))
+    return {"type": r.get("type"), "especes": list(r.get("especes") or []), "categorie": r.get("categorie"),
+            "eau": eau_de(r, eaux), "textes": [tid] if tid else []}
+
+
+def dedoublonner(liste):
+    vus, sortie = set(), []
+    for a in liste:
+        cle = json.dumps(a, sort_keys=True, ensure_ascii=False)
+        if cle not in vus:
+            vus.add(cle)
+            sortie.append(a)
+    return sortie
+
+
+def verifier_prudence(regles, a_verifier, non_confirmees):
+    """Aucune règle confirmée n'est plus souple qu'une lecture non confirmée sans qu'une entrée a_verifier la double."""
+    for u in non_confirmees:
+        cm_u = cm_de(u)
+        if cm_u is None:
+            continue
+        for c in regles:
+            cms = c["valeur"].get("candidats_cm") or ([c["valeur"]["cm"]] if c["valeur"].get("cm") is not None else [])
+            if c["type"] == u.get("type") and set(c["especes"]) & set(u.get("especes") or []) and cms and min(cms) < cm_u:
+                if not any(a["type"] == u.get("type") and set(a["especes"]) & set(u.get("especes") or []) for a in a_verifier):
+                    raise Refus(f"prudence : {c['id']} ({min(cms):g} cm) est plus souple que la lecture non confirmée {u.get('id')} ({cm_u:g} cm) sans entrée a_verifier.")
+
+
+def niveau_de(lectures, regles):
+    """complet = deux lectures v2, tous les textes lus en entier, 60 % au moins de règles confirmées sans réserve ; sinon partiel."""
+    if len(lectures) < 2 or not regles:
+        return "partiel"
+    for lec in lectures:
+        if lec.get("version") != 2 or any(t.get("lu") != "entier" for t in lec.get("textes", [])):
+            return "partiel"
+    sures = sum(1 for r in regles if r["statut"] == "brouillon")
+    return "complet" if sures / len(regles) >= SEUIL_SANS_RESERVE else "partiel"
+
+
+def refuser_ecrasement(code, chemin):
+    if code in PROTEGES:
+        raise Refus(f"{code} est relu par une personne : le chargeur n'y touche jamais.")
+    if os.path.exists(chemin):
+        with open(chemin, encoding="utf-8") as f:
+            actuel = json.load(f)
+        for r in actuel.get("regles", []):
+            if r.get("statut") == "verifie" or r.get("verifie_par"):
+                raise Refus(f"{code} : le fichier existant a une règle relue par une personne ({r.get('id')}) ; il gagne, rien n'est écrasé.")
+
+
+def ids_deja_pris(code):
+    pris = {}
+    for c, d in fichiers_regles().items():
+        if c != code:
+            for r in d.get("regles", []):
+                pris[r["id"]] = c
+    return pris
+
+
+def assembler(code, cons, lectures, ids_pris, ids_nat, version):
+    """Fusion prudente pure (sans fichier) : rend (fichier, avertissements). `cons` est la sortie de consensus.py --json."""
+    avert = []
+    for lec in lectures:
+        refuser_v1(code, lec.get("regles", []), "lecture")
+    refuser_v1(code, cons.get("regles", []), "consensus")
+    textes = Textes([t for lec in lectures for t in lec.get("textes", [])])
+    eaux = {}
+    regles, non_confirmees = [], []
+    for r in cons.get("regles", []):
+        if not r.get("id") or r["id"] in ids_pris or r["id"] in ids_nat:
+            raise Refus(f"{code} : id {r.get('id')} en double avec {ids_pris.get(r.get('id'), 'national.json')}.")
+        c = construire_regle(r, textes, eaux, ids_nat)
+        if c is None:
+            non_confirmees.append(r)
+            avert.append(f"{r['id']} : confirmée mais sans source complète ou sans citation, passée en a_verifier")
+        else:
+            regles.append(c)
+    ids = [r["id"] for r in regles]
+    if len(ids) != len(set(ids)):
+        raise Refus(f"{code} : ids en double dans le consensus.")
+    desaccords = cons.get("desaccords") or {}
+    non_confirmees += list(desaccords.get("seulement_a", [])) + list(desaccords.get("seulement_b", []))
+    regles = fusionner_tailles(regles, avert)
+    a_verifier = dedoublonner([entree_a_verifier(r, textes, eaux) for r in non_confirmees])
+    verifier_prudence(regles, a_verifier, non_confirmees)
+    utilises = {t for r in regles for t in r["textes"]} | {t for a in a_verifier for t in a["textes"]}
+    textes.garder_utilises(utilises)
+    employees = {r["portee"]["eau"] for r in regles} | {a["eau"] for a in a_verifier}
+    fichier = {"version": version, "departement": code, "niveau": niveau_de(lectures, regles), "textes": textes.liste,
+               "eaux": sorted((e for e in eaux.values() if e["cle"] in employees), key=lambda e: e["cle"]), "regles": regles, "a_verifier": a_verifier}
+    return fichier, avert
+
+
+def assembler_une_lecture(code, lecture, ids_nat, version):
+    """Département à une seule lecture : tout en a_verifier[], aucune règle, niveau partiel."""
+    refuser_v1(code, lecture.get("regles", []), "lecture")
+    textes, eaux = Textes(lecture.get("textes", [])), {}
+    a_verifier = dedoublonner([entree_a_verifier(r, textes, eaux) for r in lecture.get("regles", [])])
+    textes.garder_utilises({t for a in a_verifier for t in a["textes"]})
+    return {"version": version, "departement": code, "niveau": "partiel", "textes": textes.liste,
+            "eaux": sorted((e for e in eaux.values() if e["cle"] in {a["eau"] for a in a_verifier}), key=lambda e: e["cle"]), "regles": [], "a_verifier": a_verifier}, []
+
+
+def lire_json(chemin, aide):
+    if not os.path.exists(chemin):
+        raise Refus(f"{chemin} introuvable. {aide}")
+    with open(chemin, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def ecrire_departement(code, fichier):
+    texte = json.dumps(fichier, ensure_ascii=False, indent=1) + "\n"
+    if len(texte.encode("utf-8")) > TAILLE_MAX:
+        raise Refus(f"{code}.json ferait {len(texte.encode('utf-8')) // 1024} Ko (limite 400 Ko).")
+    os.makedirs(REGLES, exist_ok=True)
+    with open(os.path.join(REGLES, code + ".json"), "w", encoding="utf-8", newline="\n") as f:
+        f.write(texte)
+
+
+def version_courante():
+    idx = os.path.join(REGLES, "index.json")
+    if os.path.exists(idx):
+        with open(idx, encoding="utf-8") as f:
+            return json.load(f).get("version", "2026-10-15.1")
+    return "2026-10-15.1"
+
+
+def option(nom, defaut=None):
+    if nom in sys.argv:
+        i = sys.argv.index(nom)
+        if i + 1 < len(sys.argv) and not sys.argv[i + 1].startswith("--"):
+            return sys.argv[i + 1]
+        raise Refus(f"{nom} attend une valeur.")
+    return defaut
+
+
+def charger(code, depuis, une_lecture=None):
+    chemin = os.path.join(REGLES, code + ".json")
+    refuser_ecrasement(code, chemin)
+    nat = os.path.join(REGLES, "national.json")
+    ids_nat = {r["id"] for r in json.load(open(nat, encoding="utf-8")).get("regles", [])} if os.path.exists(nat) else set()
+    if une_lecture:
+        if une_lecture not in ("dep", "dep-b"):
+            raise Refus("--lecture vaut dep ou dep-b.")
+        lecture = lire_json(os.path.join(depuis, une_lecture, code + ".json"), "Aucune lecture pour ce département.")
+        fichier, avert = assembler_une_lecture(code, lecture, ids_nat, version_courante())
+    else:
+        aide = f"Lance d'abord : REGLES_DIR={depuis} python3 <consensus.py de lot/regles-france> {code} --json"
+        cons = lire_json(os.path.join(depuis, "consensus", code + ".json"), aide)
+        lectures = [lire_json(os.path.join(depuis, d, code + ".json"), "Il faut les deux lectures (sinon --une-lecture).") for d in ("dep", "dep-b")]
+        fichier, avert = assembler(code, cons, lectures, ids_deja_pris(code), ids_nat, version_courante())
+    ecrire_departement(code, fichier)
+    for a in avert:
+        print("  note :", a)
+    cands = sum(1 for r in fichier["regles"] if "candidats_cm" in r["valeur"])
+    print(f"{code} : niveau {fichier['niveau']}, {len(fichier['regles'])} règles confirmées, {len(fichier['a_verifier'])} a_verifier, "
+          f"{cands} avec candidats_cm, {len(fichier['textes'])} textes, {len(fichier['eaux'])} eaux, "
+          f"{os.path.getsize(chemin) // 1024} Ko")
+    reecrire_index()
+
+
 def main():
-    if "--charger" in sys.argv:
-        print("--charger n'est pas encore écrit : aucun fichier confirmé de D3 n'est arrivé (reports/d1-manques.md).")
-        return 2
+    if "--charger" in sys.argv or "--une-lecture" in sys.argv:
+        try:
+            depuis = option("--depuis", DEPUIS)
+            if "--charger" in sys.argv:
+                charger(option("--charger"), depuis)
+            else:
+                lecture = option("--lecture")
+                if lecture is None:
+                    raise Refus("--une-lecture demande --lecture dep ou --lecture dep-b.")
+                charger(option("--une-lecture"), depuis, lecture)
+        except Refus as e:
+            print("REFUS ", e)
+            return 1
+        return 0
     if "--index" in sys.argv:
         reecrire_index()
         return 0

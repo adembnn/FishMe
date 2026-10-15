@@ -1,0 +1,1343 @@
+{
+ "version": "2026-10-15.1",
+ "departement": "78",
+ "niveau": "partiel",
+ "textes": [
+  {
+   "id": "t1",
+   "titre": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Classement des cours d’eau »",
+   "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+  },
+  {
+   "id": "t2",
+   "titre": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+   "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+  },
+  {
+   "id": "t3",
+   "titre": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), tableau des espèces « Pêche interdite »",
+   "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+  },
+  {
+   "id": "t4",
+   "titre": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+   "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+  },
+  {
+   "id": "t5",
+   "titre": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Limitation du nombre de captures autorisées »",
+   "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+  },
+  {
+   "id": "t6",
+   "titre": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Dispositions particulières », interdiction de la pêche en vue de la consommation",
+   "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+  },
+  {
+   "id": "t7",
+   "titre": "Avis annuel : périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines pour l'année 2026, note (1) et (2) sous le tableau des périodes d'ouverture",
+   "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "avis 2026 (date de signature vide sur la copie publiée)"
+  }
+ ],
+ "eaux": [
+  {
+   "cle": "affluents et sous affluents de la montcient",
+   "nom": "Affluents et sous-affluents de la Montcient",
+   "code": null
+  },
+  {
+   "cle": "mauldre",
+   "nom": "Mauldre",
+   "code": null
+  },
+  {
+   "cle": "montcient",
+   "nom": "Montcient",
+   "code": null
+  },
+  {
+   "cle": "oise",
+   "nom": "Oise",
+   "code": null
+  },
+  {
+   "cle": "orge",
+   "nom": "Orge",
+   "code": null
+  },
+  {
+   "cle": "seine",
+   "nom": "Seine",
+   "code": null
+  },
+  {
+   "cle": "vaucouleurs",
+   "nom": "Vaucouleurs",
+   "code": null
+  }
+ ],
+ "regles": [
+  {
+   "id": "78-categorie-montcient",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "eau": "montcient",
+    "lieu": "Montcient : en amont du pont-route de la RD28",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Montcient, en amont du pont-route de la RD28, est classée en 1re catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "La Montcient, en amont du pont-route de la RD28",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-categorie-mauldre",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "eau": "mauldre",
+    "lieu": "Mauldre (Mareil-sur-Mauldre) : en amont du pont-route de Mareil-sur-Mauldre",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Mauldre, en amont du pont-route de Mareil-sur-Mauldre, est classée en 1re catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "La Mauldre, en amont du pont-route de Mareil-sur-Mauldre",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-categorie-vaucouleurs",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "eau": "vaucouleurs",
+    "lieu": "Vaucouleurs (Mantes-la-Jolie) : en amont du pont-route de la RN 13 à Mantes-la-Jolie",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Vaucouleurs, en amont du pont-route de la RN 13 à Mantes-la-Jolie, est classée en 1re catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "La Vaucouleurs, en amont du pont-route de la RN 13 à Mantes-la-Jolie",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-categorie-reste-2e",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2",
+    "texte": "Tous les cours d'eau ou portions de cours d'eau non classés en 1re catégorie."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Tout cours d'eau des Yvelines non classé en 1re catégorie est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "Eaux de deuxième catégorie • Tous les cours d’eau ou portions de cours d’eau non classés en première catégorie, notamment la Seine et l’Oise.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-categorie-seine-2e",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "eau": "seine",
+    "lieu": "Seine",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Seine est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "notamment la Seine et l’Oise.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-categorie-oise-2e",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "eau": "oise",
+    "lieu": "Oise",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "L'Oise est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "notamment la Seine et l’Oise.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-ouverture-generale-1re",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 1re catégorie, la pêche est ouverte du 14 mars au 20 septembre 2026 inclus.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "EAUX DE PREMIÈRE CATÉGORIE (1) : du samedi 14 mars au dimanche 20 septembre 2026 inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-ombre-ouverture-1re",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2247"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du samedi 16 mai au dimanche 20 septembre 2026 inclus"
+   },
+   "du": "2026-05-16",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Ombre commun en 1re catégorie : ouvert du 16 mai au 20 septembre 2026 inclus.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "OMBRE COMMUN Du samedi 16 mai au dimanche 20 septembre 2026 inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-brochet-ouverture-1re",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Brochet en 1re catégorie : ouvert du 14 mars au 20 septembre 2026 inclus (remise à l'eau obligatoire jusqu'au 24 avril).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "BROCHET Du samedi 14 mars au dimanche 20 septembre 2026 inclus.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-brochet-remise-eau-1re",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Tout brochet capturé du samedi 14 mars au vendredi 24 avril 2026 inclus doit être immédiatement remis à l'eau."
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "remplace": null,
+   "phrase": "En 1re catégorie, tout brochet pêché du 14 mars au 24 avril 2026 doit être remis à l'eau tout de suite.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Tout brochet capturé du samedi 14 mars au vendredi 24 avril 2026 inclus doit être immédiatement remis à l’eau",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-omble-fontaine-ouverture",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Omble de fontaine (saumon de fontaine) : ouvert du 14 mars au 20 septembre 2026 inclus.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "TRUITE FARIO OMBLE, OMBLE CHEVALIER SAUMON DE FONTAINE CRISTIVOMER Du samedi 14 mars au dimanche 20 septembre 2026 inclus",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "78-omble-chevalier-ouverture",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Omble chevalier : ouvert du 14 mars au 20 septembre 2026 inclus.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "TRUITE FARIO OMBLE, OMBLE CHEVALIER SAUMON DE FONTAINE CRISTIVOMER Du samedi 14 mars au dimanche 20 septembre 2026 inclus",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "78-cristivomer-ouverture",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Cristivomer : ouvert du 14 mars au 20 septembre 2026 inclus.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "TRUITE FARIO OMBLE, OMBLE CHEVALIER SAUMON DE FONTAINE CRISTIVOMER Du samedi 14 mars au dimanche 20 septembre 2026 inclus",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "78-grenouille-verte-ouverture",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du samedi 4 juillet au dimanche 20 septembre 2026 inclus"
+   },
+   "du": "2026-07-04",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Grenouille verte : pêche ouverte du 4 juillet au 20 septembre 2026 inclus.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "GRENOUILLE VERTE GRENOUILLE ROUSSE Du samedi 4 juillet au dimanche 20 septembre 2026 inclus",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "78-grenouille-rousse-ouverture",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du samedi 4 juillet au dimanche 20 septembre 2026 inclus"
+   },
+   "du": "2026-07-04",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Grenouille rousse : pêche ouverte du 4 juillet au 20 septembre 2026 inclus.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "GRENOUILLE VERTE GRENOUILLE ROUSSE Du samedi 4 juillet au dimanche 20 septembre 2026 inclus",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "78-ecrevisse-pattes-greles-ouverture",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du samedi 25 juillet au lundi 3 août 2026 inclus"
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "remplace": null,
+   "phrase": "Écrevisse à pattes grêles : pêche ouverte du 25 juillet au 3 août 2026 inclus seulement.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "ÉCREVISSES À PATTES GRÊLES Du samedi 25 juillet au lundi 3 août 2026 inclus",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "78-anguille-jaune-ouverture-1re",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du samedi 14 mars au mercredi 15 juillet 2026 inclus"
+   },
+   "du": "2026-03-14",
+   "au": "2026-07-15",
+   "remplace": null,
+   "phrase": "Anguille jaune en 1re catégorie : pêche ouverte du 14 mars au 15 juillet 2026 inclus.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "ANGUILLE EUROPÉENNE AU STADE D’ANGUILLE JAUNE Du samedi 14 mars au mercredi 15 juillet 2026 inclus Du dimanche 15 février au mercredi 15 juillet 2026 inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-anguille-jaune-ouverture-2e",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du dimanche 15 février au mercredi 15 juillet 2026 inclus"
+   },
+   "du": "2026-02-15",
+   "au": "2026-07-15",
+   "remplace": null,
+   "phrase": "Anguille jaune en 2e catégorie : pêche ouverte du 15 février au 15 juillet 2026 inclus.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "ANGUILLE EUROPÉENNE AU STADE D’ANGUILLE JAUNE Du samedi 14 mars au mercredi 15 juillet 2026 inclus Du dimanche 15 février au mercredi 15 juillet 2026 inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-ecrevisse-pattes-rouges-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de l'écrevisse à pattes rouges est interdite.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "ÉCREVISSES À PATTES ROUGES ÉCREVISSES DES TORRENTS ÉCREVISSES À PATTES BLANCHES Pêche interdite",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-ecrevisse-torrents-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de l'écrevisse des torrents est interdite.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "ÉCREVISSES À PATTES ROUGES ÉCREVISSES DES TORRENTS ÉCREVISSES À PATTES BLANCHES Pêche interdite",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-ecrevisse-pattes-blanches-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de l'écrevisse à pattes blanches est interdite.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "ÉCREVISSES À PATTES ROUGES ÉCREVISSES DES TORRENTS ÉCREVISSES À PATTES BLANCHES Pêche interdite",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-saumon-atlantique-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de le saumon atlantique est interdite.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "SAUMON ATLANTIQUE TRUITE DE MER ANGUILLE EUROPÉENNE < 12 cm (CIVELLE) ANGUILLE EUROPÉENNE ANGUILLE ARGENTÉE Pêche interdite",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-truite-de-mer-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de la truite de mer est interdite.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "SAUMON ATLANTIQUE TRUITE DE MER ANGUILLE EUROPÉENNE < 12 cm (CIVELLE) ANGUILLE EUROPÉENNE ANGUILLE ARGENTÉE Pêche interdite",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-anguille-civelle-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de la civelle (anguille de moins de 12 cm) est interdite.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "SAUMON ATLANTIQUE TRUITE DE MER ANGUILLE EUROPÉENNE < 12 cm (CIVELLE) ANGUILLE EUROPÉENNE ANGUILLE ARGENTÉE Pêche interdite",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-anguille-argentee-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de l'anguille argentée est interdite.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "SAUMON ATLANTIQUE TRUITE DE MER ANGUILLE EUROPÉENNE < 12 cm (CIVELLE) ANGUILLE EUROPÉENNE ANGUILLE ARGENTÉE Pêche interdite",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-huchon-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "huchon"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 70
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Huchon : taille minimale 70 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "HUCHON 0,70 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-cristivomer-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 35
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Cristivomer : taille minimale 35 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "CRISTIVOMER 0,35 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-coregone-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Corégone : taille minimale 30 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "OMBRE COMMUN et CORÉGONE 0,30 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-mulet-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "mulet"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Mulet : taille minimale 20 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "MULET 0,20 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-omble-fontaine-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 23
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Omble de fontaine (saumon de fontaine) : taille minimale 23 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "TRUITES autres que la truite de mer, OMBLE ou SAUMON DE FONTAINE, OMBLE CHEVALIER 0,23 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-omble-chevalier-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 23
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Omble chevalier : taille minimale 23 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "TRUITES autres que la truite de mer, OMBLE ou SAUMON DE FONTAINE, OMBLE CHEVALIER 0,23 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-ecrevisse-pattes-greles-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 9
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisse à pattes grêles : taille minimale 9 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "ÉCREVISSES À PATTES GRÊLES 0,09 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-grenouille-verte-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 8
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grenouille verte : taille minimale 8 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "GRENOUILLE VERTE et GRENOUILLE ROUSSE 0,08 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-grenouille-rousse-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 8
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grenouille rousse : taille minimale 8 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "GRENOUILLE VERTE et GRENOUILLE ROUSSE 0,08 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-anguille-jaune-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 12
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Anguille jaune : taille minimale 12 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "ANGUILLES au stade d’anguille jaune 0,12 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-grande-alose-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grande alose : taille minimale 30 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "ALOSES 0,30 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-alose-feinte-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Alose feinte : taille minimale 30 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "ALOSES 0,30 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-lamproie-marine-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 40
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lamproie marine : taille minimale 40 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "LAMPROIE MARINE 0,40 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-lamproie-fluviatile-taille-min",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lamproie fluviatile : taille minimale 20 cm (le poisson doit dépasser cette taille).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "LAMPROIE FLUVIATILE 0,20 m",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-brochet-quota-jour-1re",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 2
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie, 2 brochets par pêcheur et par jour au maximum.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Dans les eaux classées en 1re catégorie, le nombre de captures de brochets autorisé par pêcheur de loisir et par jour est fixé à 2.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-conso-seine",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "eau": "seine",
+    "lieu": "Seine",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "consommation",
+   "valeur": {
+    "texte": "Pêche de poissons interdite en vue de leur consommation, de leur commercialisation ou de leur cession gratuite. L'avis renvoie à l'arrêté préfectoral n°SV 10-0087 du 21 juin 2010, modifié par l'arrêté n°2011210-0005 du 29 juillet 2011, lui-même modifié par l'arrêté n°2017143-0002 du 23 mai 2017 (non lus : espèces et tronçons exacts inconnus)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Dans la Seine, il est interdit de pêcher du poisson pour le manger, le vendre ou le donner.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "L’interdiction de la pêche, dans le fleuve Seine et la rivière Orge, des poissons en vue de leur consommation, de leur commercialisation ou de la cession gratuite est fixée par arrêté préfectoral",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "78-conso-orge",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "eau": "orge",
+    "lieu": "Orge",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "consommation",
+   "valeur": {
+    "texte": "Pêche de poissons interdite en vue de leur consommation, de leur commercialisation ou de leur cession gratuite. L'avis renvoie à l'arrêté préfectoral n°SV 10-0087 du 21 juin 2010, modifié par l'arrêté n°2011210-0005 du 29 juillet 2011, lui-même modifié par l'arrêté n°2017143-0002 du 23 mai 2017 (non lus : espèces et tronçons exacts inconnus)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Dans la Orge, il est interdit de pêcher du poisson pour le manger, le vendre ou le donner.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "L’interdiction de la pêche, dans le fleuve Seine et la rivière Orge, des poissons en vue de leur consommation, de leur commercialisation ou de la cession gratuite est fixée par arrêté préfectoral",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  }
+ ],
+ "a_verifier": [
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "affluents et sous affluents de la montcient",
+   "textes": [
+    "t1"
+   ]
+  },
+  {
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "mauldre",
+   "textes": [
+    "t7"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "vaucouleurs",
+   "textes": [
+    "t7"
+   ]
+  }
+ ]
+}
