@@ -10,10 +10,10 @@
 |---|---|---|---|
 | 1 | Designer exigeant | DES-M1, DES-M2, DES-M3 | E1, E5, E6, E7 |
 | 2 | Streeteur | STR-M1, STR-M2 | E1, E2, E3, E4 |
-| 3 | Carpiste de nuit | CAR-M1, CAR-M2 | E1, E2, E4, E6, E8 |
+| 3 | Carpiste de nuit | CAR-M1, CAR-M2, CAR-M3 | E1, E2, E4, E6, E7, E8 |
 | 4 | Pêcheur au coup et compétiteur | COU-M1, COU-M2 | E5, E6, E7, E8 |
 | 5 | Truitiste et moucheur de 1re catégorie | TRU-M1, TRU-M2 | E2, E5 |
-| 6 | Parent débutant avec un enfant | PAR-M1, PAR-M2, PAR-M3 | E2, E5, E6, E7 |
+| 6 | Parent débutant avec un enfant | PAR-M1, PAR-M2, PAR-M3, PAR-M4 | E1, E2, E4, E5, E6, E7 |
 | 7 | Bénévole d'association (AAPPMA) | BEN-M1, BEN-M2 | E2, E8 |
 | 8 | Garde-pêche | GAR-M1, GAR-M2, GAR-M3 | E2, E5 |
 | 9 | Juré MWM | JUR-M1, JUR-M2, JUR-M3 | E1, E2, E5, E6, E7, E9 (E4 et E8 : une phrase) |
@@ -23,7 +23,7 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 ## Mots de ce fichier
 - **[?]** : habitude ou valeur déduite, non confirmée par une source. Les coordonnées GPS des positions de départ sont toutes approximatives [?] : elles sont écrites de mémoire, pas relevées. À remplacer par celles de `coins-maison.json` quand il existe.
 - **seuil posé par nous** : cible fixée par l'équipe, sans source de terrain. Le seuil de chaque mission est une cible, pas une mesure. L'agent relève le chiffre réel même au-dessus du seuil, pour que l'avocat chiffre la correction.
-- **selon la décision d'Adem** : question encore ouverte. La mission mesure sans figer la réponse. Trois sujets sont ouverts à ce jour : la forme du verdict (question du 15 oct., `docs/banc/mots-interdits.md` ; le brouillon de `docs/parcours-demo.md` propose une liste de contrôle par défaut), ce que bloque le paywall et son prix (`CLAUDE.md`, 15 oct.), le contenu de « Mon club » (`docs/vision.md` §2, option d).
+- **selon la décision d'Adem** : question encore ouverte. La mission mesure sans figer la réponse. Trois sujets sont ouverts à ce jour : la forme du verdict (question du 15 oct., `docs/banc/mots-interdits.md` ; le brouillon de `docs/parcours-demo.md` propose une liste de contrôle par défaut), ce que bloque le paywall et son prix (`CLAUDE.md`, 15 oct.), le contenu de « Mon club » (`docs/vision.md` §2, option d). S'y ajoute le partage gratuit et Pro des conditions et des conseils (décision 3 du 15 oct., par défaut : `docs/fiches/L6.md`, « Ce que Pro contient »).
 - **verdict** : la réponse de l'app sur une prise, quelle que soit sa forme finale (« relâche-la », « vérifie l'arrêté », ligne de liste de contrôle). Hors des départements saisis, il ne doit jamais accorder le droit de garder (« tu peux la garder » ou équivalent), règle de `CLAUDE.md`.
 - **Étapes** : celles de `docs/parcours-demo.md` du 15 oct. « Choisir un autre spot » est E3 (filtre d'espèce sur la carte), la session est E4 (bandeau dans l'app ; l'écran verrouillé vient dans la mise à jour), Mon club est E8 (liens, partage d'une carte en image, sources, contact ; les amis invités viennent dans la mise à jour).
 - **Départements saisis** : 75, 92, 93, 94, 77, plus les pilotes 01, 87 et 44 en cours de saisie (`CLAUDE.md`, 15 oct. 11h13). L'agent lit la liste réelle dans le build testé (`regles.json`, quand il existe). Un département non saisi se joue comme « hors liste ».
@@ -32,7 +32,7 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 - Position : `set_sim_location` avec les coordonnées de la mission. Date et heure : l'horloge du simulateur suit celle du Mac et les outils du banc ne la changent pas [?]. L'agent note `date` au début. Ce qui dépend de la date (ouvertures, fin légale) est jugé à la date réelle du passage, ou « non constatable » si l'attendu ne vaut que pour la date de la mission.
 - Aucun achat réel : seulement le fichier StoreKit de test. Aucun appel payant.
 - Sans app vivante, les mêmes missions se jouent sur les captures et le code. Tailles, vitesse et lisibilité au soleil sont « non constatables ».
-- Pour les missions de verdict, l'espèce se choisit par la grille des 14 espèces (sans IA) avec le bouton « essayer avec une photo d'exemple » : l'IA n'est pas ce qu'on mesure ici.
+- Pour les missions de verdict, l'espèce se choisit par la grille d'images de toutes les espèces (sans IA) avec le bouton « essayer avec une photo d'exemple » : l'IA n'est pas ce qu'on mesure ici.
 - Source des règles de pêche citées plus bas : `docs/donnees.md`, `docs/reports/donnees.md` §4 et le rapport `regles-75-94.md` (15 oct. 2026, `/mnt/project-files/build/reports/regles-75-94.md`, pas encore dans git).
 
 ---
@@ -60,7 +60,7 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 **DES-M1 · Dire à quoi sert l'app en 5 secondes** (E1)
 - Départ : app neuve, aucun droit accordé, iPhone en portrait, Paris (48,8566 N, 2,3522 E), 15 oct. 2026.
 - Il fait : ouvre l'app, regarde sans toucher, dit à voix haute à quoi elle sert et quelle est la première action.
-- Réussi si : sa phrase contient les deux promesses du dossier des organisateurs (voir où pêcher et ce qu'on y attrape ; une carte par prise, `docs/kickoff/dossier-organisateurs.md`) ; dite en 5 s ou moins (seuil posé par nous) ; au plus 2 actions principales visibles, de poids différents (seuil posé par nous) ; aucune fenêtre de position avant son toucher sur « Autour de moi » (`docs/parcours-demo.md` E1) ; 0 formulation de `docs/banc/mots-interdits.md`.
+- Réussi si : sa phrase contient les deux promesses du dossier des organisateurs (voir où pêcher et ce qu'on y attrape ; une carte par prise, `docs/kickoff/dossier-organisateurs.md`) ; dite en 5 s ou moins (seuil posé par nous) ; au plus 2 actions principales visibles, de poids différents (seuil posé par nous) ; au premier lancement, la demande de position puis la question du niveau, chacune fermée en 1 toucher, jamais deux à la fois (`docs/parcours-demo.md` E1, Adem 15 oct. 12h51 et 13h21) ; 0 formulation de `docs/banc/mots-interdits.md`.
 
 **DES-M2 · Classer les quatre raretés sans lire un mot** (E6)
 - Départ : un Pescedex qui contient une carte de chaque rareté (commun, peu commun, rare, légendaire, `docs/donnees.md`) : jeu d'essai DEBUG ; sinon l'agent le dit et la mission est « non constatable ». 15 oct. 2026.
@@ -116,6 +116,8 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 - De nuit, aucune carpe ne peut être gardée en captivité ni transportée (R436-14 5°, `docs/reports/donnees.md` §4).
 - Cache son poste : « be smart with your pictures to not give away the location » (avis Fishbrain, boutique US, en anglais, https://apps.apple.com/us/app/fishbrain-fishing-app/id477967747?see-all=reviews). Rien de français lu [?]. Une carte « espèce + département + date » peut trahir le coin : on retrouve l'eau « by the species being presented, or by the profile of the angler » (https://www1.maine.gov/ifw/blogs/mdifw-blog/fishing-and-social-media-your-secret-spot-isnt-secret-anymore).
 
+- Avant de partir, regarde le vent, la pression et sa tendance, le niveau de l'eau, et se méfie d'une note d'activité : « l'activité des poissons est à revoir… pas fiable » (avis Fishing Points, 12/11/2019, https://apps.apple.com/fr/app/1203032512?see-all=reviews) ; « vigilance crue : www.vigicrues.gouv.fr Primordial en rivière » (https://peche-feeder.com/preparez-votre-sortie-de-peche-avec-internet/). Habitude des pêcheurs confirmés (`/mnt/project-files/build/reports/revue-15-oct/ce-que-veulent-les-pecheurs.md` §2), prêtée au carpiste [?].
+
 **Déteste** : tout ce qui publie son poste (sources ci-dessus) ; une indication permissive la nuit.
 
 **Vocabulaire** : session, poste, parcours carpe de nuit, cheveu, esche végétale, scion, bivouac, no-kill.
@@ -134,6 +136,11 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 - Il fait : partage la carte à l'ami, puis liste tout ce qui permet de retrouver le plan d'eau : texte, image, métadonnées, géographie.
 - Réussi si : 0 coordonnée, 0 nom de plan d'eau, 0 clé GPS dans le fichier (`docs/parcours-demo.md` E6 et E8, `CLAUDE.md`) ; la liste des recoupements restants est rendue, une ligne chacun (espèce, département, date, heure, météo, lune) : elle n'a pas de seuil, c'est le résultat ; le nom du cours d'eau sur la carte (« La Marne · 94 », `docs/vision.md` §3) : selon la décision d'Adem.
 
+
+**CAR-M3 · Partir ou pas ce soir** (E1, E2, E7)
+- Départ : bord de Marne à Charenton-le-Pont (94, 48,812 N, 2,416 E [?]), 15 oct. 2026, 17 h visées, sans abonnement, spot gratuit fixé sur ce quai.
+- Il fait : ouvre la fiche de son spot, lit le vent, la pression et sa tendance, le niveau de la Marne, puis cherche la météo de la nuit et des jours suivants.
+- Réussi si : la rangée « maintenant » et la jauge atteintes en 2 touchers ou moins (seuil posé par nous) ; chaque valeur a son heure, et la jauge nomme sa station Hub'Eau ; la marque Apple Weather et son lien légal sont visibles sous la rangée (`docs/fiches/L12.md`) ; 0 note d'activité, « meilleure heure » ou heure solunaire (`docs/banc/mots-interdits.md`) ; une vigilance orage ou crue, s'il y en a une, est visible sans abonnement ; « 7 jours » ouvre le paywall, qui nomme la fonction et se ferme (`docs/parcours-demo.md` E7). Le partage gratuit et Pro lui-même : selon la décision d'Adem, non jugé ici.
 ---
 
 ## 4. Pêcheur au coup et compétiteur
@@ -208,6 +215,7 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 - Craint l'abonnement piège : « une fois l'abonnement souscrit, impossible de l'enlever » (Fishing Points, 12/11/2019) ; « J'hésite à reprendre une année sincèrement à 30e » (04/07/2025) (https://apps.apple.com/fr/app/fishing-points-mar%C3%A9es-p%C3%AAche/id1203032512?see-all=reviews) ; « Apres inscription on de demande un abonnement bien dommage de paye pour ça » (Fishbrain FR, 11/09/2017, https://apps.apple.com/fr/app/fishbrain-fishing-app/id477967747?see-all=reviews).
 - Veut qu'on lui explique : « J'aime ... la pédagogie » (Fishing Grid, 17/08/2025, lien Fishing Grid ci-dessus), avis d'un utilisateur qui n'est pas forcément un parent [?].
 - Tient le téléphone d'une main, l'autre est pour l'enfant [?].
+- Ne sait pas quoi mettre au bout de la ligne : les novices demandent de l'aide pour le choix du matériel, et ne rien prendre fait arrêter (https://asafishing.org/wp-content/uploads/2025/08/ASA-Why-Anglers-Quit-Executive-Summary-Report-Final-2-11-25.pdf, étude américaine, portée en France non vérifiée [?]).
 
 **Déteste** : le jargon non expliqué (règle du banc : `.claude/agents/banc-utilisateur.md`, la liste de ses mots inconnus ci-dessous est déduite [?]) ; un abonnement qu'on ne sait pas résilier (avis ci-dessus).
 
@@ -224,7 +232,7 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 
 **PAR-M2 · Première prise à une main** (E5, E6)
 - Départ : même quai, 15 oct. 2026, l'enfant a un poisson au bout de la ligne, le parent tient le téléphone d'une main.
-- Il fait : photographie la première prise (une perche ou un gardon, deux des 14 espèces ; la perche-soleil n'en fait pas partie, `docs/reports/donnees.md` §3), confirme l'espèce, lit la carte.
+- Il fait : photographie la première prise (une perche ou un gardon, deux espèces communes dans le 94, `docs/reports/donnees.md` §3), confirme l'espèce, lit la carte.
 - Réussi si : 5 touchers ou moins et 30 s ou moins, chaque toucher dans la moitié basse de l'écran (cadre lu dans `snapshot_ui`) (seuils posés par nous) ; chaque mot de sa liste « il ne comprend pas » qui apparaît est expliqué à l'écran en une phrase ; une phrase de l'écran explique le niveau de rareté obtenu (par exemple « commun ») et il la répète sans aide : c'est ce qu'un agent peut jouer du test de l'enfant, le vrai test est la relecture par de vrais parents ; « N pêches, dernier relevé AAAA » visible.
 
 **PAR-M3 · Savoir ce que ça coûte** (E7, selon la décision d'Adem : modèle du paywall et prix)
@@ -232,6 +240,11 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 - Il fait : lit le paywall sans ouvrir de lien, dit à voix haute le prix et sa période, la date de fin de l'essai s'il y en a un, et comment arrêter l'abonnement.
 - Réussi si : les 3 faits sont sur l'écran, en 10 s ou moins, 0 lien ouvert (seuils posés par nous) ; un prix de lancement, s'il est annoncé, affiche sa date de fin et le prix suivant (« tarif fondateur », `CLAUDE.md`) ; la mission ne juge pas le montant, ni la durée de l'essai (1 semaine sur le mensuel du kit MWM, aucun sur l'annuel : `CLAUDE.md`).
 
+
+**PAR-M4 · Quoi mettre au bout de la ligne** (E1, E4)
+- Départ : app neuve, bord de Marne à Charenton-le-Pont (94, 48,812 N, 2,416 E [?]), 15 oct. 2026, sans abonnement.
+- Il fait : répond « débutant » à la question du niveau, commence une session, lit la carte « à essayer » et dit à voix haute ce qu'il met au bout de la ligne.
+- Réussi si : la question tient en 1 toucher, la carte visible derrière (seuil posé par nous) ; aucune question « espèce visée » ; la carte « à essayer » montre au moins une espèce du spot en image et un conseil avec sa source d'un toucher ; chaque mot de sa liste « il ne comprend pas » qui apparaît est expliqué en une phrase ; il le dit en 15 s ou moins (seuil posé par nous) ; « tout le kit » est marqué Pro et le paywall ne s'ouvre que sur son toucher ; 0 promesse de prise (« ça va mordre », `docs/banc/mots-interdits.md`).
 ---
 
 ## 7. Bénévole d'association (AAPPMA)
@@ -315,7 +328,7 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 - Juge le build publié : « Montrer une fonction absente du build publié fait demander « et dans le store ? » » (`docs/reports/eval-mwm.md` §4).
 - Côté goût Apple : Delight and Fun = « memorable, engaging, and satisfying », Interaction = « intuitive interfaces and effortless controls » (https://developer.apple.com/design/awards/ ; `docs/reports/eval-mwm.md` §5).
 
-**Déteste** (carte de rejet, `docs/kickoff/0-cadrage.md`) : monétisation non crédible, usage ponctuel, premier moment utile lent, promesse non compréhensible en une phrase, IA décorative (« si on retire l'IA, ça marche encore » : c'est vrai avec la grille des 14 espèces, `docs/reports/eval-mwm.md` §6 n° 7), risque de rejet App Store.
+**Déteste** (carte de rejet, `docs/kickoff/0-cadrage.md`) : monétisation non crédible, usage ponctuel, premier moment utile lent, promesse non compréhensible en une phrase, IA décorative (« si on retire l'IA, ça marche encore » : c'est vrai avec la grille d'images de toutes les espèces, `docs/reports/eval-mwm.md` §6 n° 7), risque de rejet App Store.
 
 **Vocabulaire** : SDK, paywall, activation, rétention, LTV (revenu par utilisateur), aha moment, onboarding, essai, valeur payée (`docs/reports/eval-mwm.md` §3).
 
