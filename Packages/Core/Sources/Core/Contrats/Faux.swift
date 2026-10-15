@@ -83,6 +83,19 @@ public struct EspecesFaux: ServiceEspeces {
               coordonnee: Coordonnee(latitude: 48.8, longitude: 2.4), distanceM: 1200, nPeches: 9, annee: 2024, ouverture: .ouverte)]
     }
 
+    public func stationsDans(_ region: RegionCarte) -> [StationOFB] {
+        let essai = [
+            StationOFB(codeStation: "STATION-ESSAI", eau: "La Marne", departement: Departement(code: "94"),
+                       coordonnee: Coordonnee(latitude: 48.8, longitude: 2.4),
+                       especes: [EspeceRelevee(espece: brochet, nPeches: 9, annee: 2024),
+                                 EspeceRelevee(espece: perche, nPeches: 14, annee: 2024)]),
+            StationOFB(codeStation: "STATION-ESSAI-2", eau: "La Loire", departement: Departement(code: "45"),
+                       coordonnee: Coordonnee(latitude: 47.9, longitude: 1.9),
+                       especes: [EspeceRelevee(espece: sandre, nPeches: 5, annee: 2023)]),
+        ]
+        return essai.filter { region.contient($0.coordonnee) }
+    }
+
     /// 6 entrées : brochet, sandre, perche, anguille jaune, écrevisse à pattes blanches, écrevisse signal.
     public func especesPechables() -> [EspecePechable] {
         [
