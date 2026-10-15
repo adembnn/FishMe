@@ -8,7 +8,7 @@ import UniformTypeIdentifiers
 @testable import BuildChallenge
 
 /// Collection factice : rend des cartes fixes et une image fixe.
-private struct CollectionFausse: CollectionCartes {
+nonisolated private struct CollectionFausse: CollectionCartes {
     var prises: [Prise]
     var png: Data?
     func cartes() async -> [Prise] { prises }
@@ -54,7 +54,7 @@ struct AmisTests {
 
     @Test func lesChampsDeLaCarteSontLesSeulsAutorises() {
         let c = carte()
-        let noms = Set(Mirror(reflecting: c).children.compactMap(\.label))
+        let noms = Set(Mirror(reflecting: c).children.compactMap { $0.label })
         #expect(noms == CartePartagee.champsAutorises)
     }
 

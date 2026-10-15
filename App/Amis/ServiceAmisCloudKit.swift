@@ -64,9 +64,10 @@ actor ServiceAmisCloudKit: ServiceAmis {
             let share = CKShare(recordZoneID: zone)
             share.publicPermission = .none
             share[CKShare.SystemFieldKey.title] = "Pescedex"
+            let identifiant = share.recordID
             let resultat = try await privee.modifyRecords(saving: [share], deleting: [], savePolicy: .ifServerRecordUnchanged,
                                                           atomically: true)
-            guard case .success(let enregistre)? = resultat.saveResults[share.recordID], let final = enregistre as? CKShare else {
+            guard case .success(let enregistre)? = resultat.saveResults[identifiant], let final = enregistre as? CKShare else {
                 throw ErreurAmis.autre
             }
             return PartagePret(share: final)

@@ -62,7 +62,8 @@ final class GestionAmis {
         await synchroniserMesCartes()
         do {
             let recues = try await service.collectionsRecues()
-            let invites = (try? await service.amisInvites()) ?? []
+            // Un ami qui n'a encore aucune carte n'est pas dans le cache : on le garde dans la liste.
+            let invites = ((try? await service.amisInvites()) ?? []) + recues.filter { $0.cartes.isEmpty }.map(\.ami)
             await cache.remplacer(par: recues)
             await afficherLeCache(invites: invites)
         } catch {

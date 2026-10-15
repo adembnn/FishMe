@@ -27,7 +27,7 @@ nonisolated struct CartePartagee: Sendable, Equatable, Hashable, Codable, Identi
 
 /// Un ami, par l'identifiant CloudKit de son compte (jamais un texte saisi). Son nom est celui de son compte Apple.
 nonisolated struct Ami: Sendable, Equatable, Hashable, Identifiable {
-    enum Sens: Sendable, Equatable, Hashable {
+    nonisolated enum Sens: Sendable, Equatable, Hashable {
         /// Je l'ai invité : il voit ma collection.
         case invite
         /// Il m'a invité : je vois la sienne.
