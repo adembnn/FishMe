@@ -75,7 +75,7 @@ nonisolated struct CompositeurCoins {
     }
 
     func stationTexte(_ c: CoinProche) -> String {
-        let eau = c.eauStation.map { ": \($0)" } ?? ""
+        let eau = c.eauStation.map { " : \($0)" } ?? ""
         return "Station OFB à proximité\(eau), à \(distanceTexte(metres: c.distanceStationM))"
     }
 
