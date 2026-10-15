@@ -1,147 +1,152 @@
-"""Client minimal et poli pour l'API Hub'Eau "etat_piscicole".
+"""Client poli pour les API Hub'Eau (etat_piscicole v1, hydrometrie v2).
 
-- pause >= 0,3 s entre deux appels (config api.pause_s)
-- reprise sur erreur (retries + backoff), timeouts longs (l'API est lente)
-- cache disque gzip : un appel deja en cache n'est JAMAIS refait (idempotence / reprise)
-- plafond de requetes par execution (config api.max_requests_par_execution)
+Repris du client de Titouan, adapte pour D2 :
+- suit le lien `next` (code HTTP 206 = suite a venir) page apres page ;
+- chaque page est mise en cache sur disque (gzip) : un lancement interrompu reprend a la page pres,
+  un appel deja en cache n'est jamais refait (tant qu'il a moins de `cache_validite_jours`) ;
+- pause minimale entre deux appels (partagee entre les threads), reprises avec attente croissante ;
+- size reduit et `fields` reduit (voir config.json) ; plafond de `size` mesure le 15 oct. 2026 : voir README.
 Bibliotheque standard uniquement.
 """
 from __future__ import annotations
 
 import gzip
+import hashlib
 import http.client
 import json
 import os
 import sys
+import threading
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
 
-OBS_FIELDS = [
-    "code_operation", "date_operation", "code_station", "code_departement",
-    "code_alternatif_taxon", "code_taxon", "nom_commun_taxon", "nom_latin_taxon",
-    "effectif_lot", "code_type_lot", "taille_individu",
-]
-OPS_FIELDS = [
-    "code_operation", "date_operation", "code_station", "code_departement",
-    "libelle_departement", "operation_sans_poisson", "protocole_peche", "code_bassin",
-]
 
-
-class QuotaError(RuntimeError):
+class HubeauError(RuntimeError):
     pass
 
 
-class HubeauClient:
-    def __init__(self, cfg: dict, cache_dir: str, log=print):
+class QuotaError(HubeauError):
+    """Plafond optionnel de requetes (--max-requetes) atteint."""
+
+
+class Client:
+    def __init__(self, cfg: dict, cache_dir: str, max_requetes: int = 0, log=None, hors_ligne: bool = False):
+        self.hors_ligne = hors_ligne
         self.api = cfg["api"]
         self.cache_dir = cache_dir
-        self.log = log
-        self.n_requests = 0
-        self.total_seconds = 0.0
-        self._last_call = 0.0
+        self.max_requetes = max_requetes
+        self.log = log or (lambda msg: print(msg, file=sys.stderr, flush=True))
+        self.n_requetes = 0
+        self.n_cache = 0
+        self.secondes_api = 0.0
+        self._lock = threading.Lock()
+        self._prochain_appel = 0.0
         os.makedirs(cache_dir, exist_ok=True)
 
     # -- cache ---------------------------------------------------------
-    def cache_path(self, endpoint: str, dep: str, tag: str) -> str:
-        return os.path.join(self.cache_dir, endpoint, dep, f"{tag}.json.gz")
+    def chemin_cache(self, url: str) -> str:
+        h = hashlib.sha1(url.encode("utf-8")).hexdigest()
+        return os.path.join(self.cache_dir, h[:2], f"{h}.json.gz")
 
-    def _read_cache(self, path: str):
-        if not os.path.exists(path):
+    def _lire_cache(self, chemin: str):
+        if not os.path.exists(chemin):
+            return None
+        validite = self.api.get("cache_validite_jours")
+        if validite and time.time() - os.path.getmtime(chemin) > validite * 86400:
             return None
         try:
-            with gzip.open(path, "rt", encoding="utf-8") as f:
+            with gzip.open(chemin, "rt", encoding="utf-8") as f:
                 return json.load(f)
-        except (OSError, ValueError):
-            os.remove(path)  # fichier corrompu : on le refera
+        except (OSError, ValueError, EOFError):
+            try:
+                os.remove(chemin)  # fichier corrompu : on le refera
+            except OSError:
+                pass
             return None
 
-    def _write_cache(self, path: str, payload: dict) -> None:
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-        tmp = path + ".tmp"
+    def _ecrire_cache(self, chemin: str, contenu: dict) -> None:
+        os.makedirs(os.path.dirname(chemin), exist_ok=True)
+        tmp = f"{chemin}.{threading.get_ident()}.tmp"
         with gzip.open(tmp, "wt", encoding="utf-8") as f:
-            json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
-        os.replace(tmp, path)
+            json.dump(contenu, f, ensure_ascii=False, separators=(",", ":"))
+        os.replace(tmp, chemin)
 
     # -- HTTP ----------------------------------------------------------
+    def _attendre_tour(self) -> None:
+        with self._lock:
+            maintenant = time.time()
+            attente = self._prochain_appel - maintenant
+            self._prochain_appel = max(maintenant, self._prochain_appel) + self.api["pause_s"]
+        if attente > 0:
+            time.sleep(attente)
+
     def _get_json(self, url: str) -> dict:
-        last = None
-        for attempt in range(self.api["retries"]):
-            wait = self.api["pause_s"] - (time.time() - self._last_call)
-            if wait > 0:
-                time.sleep(wait)
-            if self.n_requests >= self.api["max_requests_par_execution"]:
-                raise QuotaError("plafond de requetes par execution atteint")
-            self.n_requests += 1
+        derniere = None
+        for essai in range(self.api["retries"]):
+            self._attendre_tour()
+            with self._lock:
+                if self.max_requetes and self.n_requetes >= self.max_requetes:
+                    raise QuotaError(f"plafond de {self.max_requetes} requetes atteint")
+                self.n_requetes += 1
             t0 = time.time()
             try:
-                req = urllib.request.Request(url, headers={"User-Agent": self.api["user_agent"]})
+                req = urllib.request.Request(url, headers={"User-Agent": self.api["user_agent"],
+                                                           "Accept": "application/json"})
                 with urllib.request.urlopen(req, timeout=self.api["timeout_s"]) as r:
-                    data = json.load(r)
-                dt = time.time() - t0
-                self.total_seconds += dt
-                self._last_call = time.time()
-                return data
+                    donnees = json.load(r)
+                with self._lock:
+                    self.secondes_api += time.time() - t0
+                return donnees
+            except urllib.error.HTTPError as e:
+                derniere = e
+                if e.code in (400, 403, 404):  # inutile de reessayer : requete refusee
+                    corps = ""
+                    try:
+                        corps = e.read().decode("utf-8", "replace")[:300]
+                    except Exception:
+                        pass
+                    raise HubeauError(f"HTTP {e.code} sur {url} : {corps}") from e
+                self.log(f"  [reprise {essai + 1}/{self.api['retries']}] HTTP {e.code} : {url[:120]}")
             except (urllib.error.URLError, TimeoutError, ValueError, OSError, http.client.HTTPException) as e:
-                last = e
-                self._last_call = time.time()
-                self.log(f"  [retry {attempt + 1}/{self.api['retries']}] {type(e).__name__}: {e}", file=sys.stderr) \
-                    if self.log is print else self.log(f"retry {attempt + 1}: {e}")
-                time.sleep(self.api["backoff_s"] * (attempt + 1))
-        raise RuntimeError(f"echec apres {self.api['retries']} essais: {url} ({last})")
+                derniere = e
+                self.log(f"  [reprise {essai + 1}/{self.api['retries']}] {type(e).__name__} : {e} ({url[:100]}...)")
+            time.sleep(self.api["backoff_s"] * (essai + 1))
+        raise HubeauError(f"echec apres {self.api['retries']} essais : {url} ({derniere})")
 
-    def build_url(self, endpoint: str, params: dict) -> str:
-        return f"{self.api['base']}/{endpoint}?" + urllib.parse.urlencode(params, safe=",")
+    def url(self, base: str, endpoint: str, params: dict) -> str:
+        return f"{base}/{endpoint}?" + urllib.parse.urlencode(params, safe=",:")
 
     # -- acces haut niveau ---------------------------------------------
-    def fetch_range(self, endpoint: str, dep: str, d_min: str, d_max: str, fields: list[str]):
-        """Recupere toutes les lignes de [d_min, d_max] (dates ISO). Decoupe en deux si > page_size.
-        Retourne (lignes, meta) ; meta = {'requetes_cache', 'requetes_api'}.
-        """
-        tag = f"{d_min}_{d_max}"
-        path = self.cache_path(endpoint, dep, tag)
-        cached = self._read_cache(path)
-        if cached is not None:
-            return cached["data"], {"cache": 1, "api": 0}
-        size = self.api["page_size"]
-        params = {"code_departement": dep, "date_operation_min": d_min, "date_operation_max": d_max,
-                  "size": size, "fields": ",".join(fields)}
-        t0 = time.time()
-        res = self._get_json(self.build_url(endpoint, params))
-        count = res.get("count", len(res["data"]))
-        if count > size:
-            # trop gros : on decoupe l'intervalle en deux et on recommence (sous-intervalles mis en cache)
-            mid = _midpoint(d_min, d_max)
-            if mid is None:
-                raise RuntimeError(f"intervalle indivisible avec {count} lignes: {dep} {tag}")
-            self.log(f"  {dep} {tag}: {count} lignes > {size}, decoupage")
-            a, ma = self.fetch_range(endpoint, dep, d_min, mid[0], fields)
-            b, mb = self.fetch_range(endpoint, dep, mid[1], d_max, fields)
-            return a + b, {"cache": ma["cache"] + mb["cache"], "api": 1 + ma["api"] + mb["api"]}
-        data = res["data"]
-        self._write_cache(path, {"count": count, "data": data, "fetched": time.strftime("%Y-%m-%dT%H:%M:%S"),
-                                 "seconds": round(time.time() - t0, 1)})
-        return data, {"cache": 0, "api": 1}
+    def page(self, url: str) -> dict:
+        """Une page, depuis le cache si possible. Retourne la reponse complete de l'API."""
+        chemin = self.chemin_cache(url)
+        en_cache = self._lire_cache(chemin)
+        if en_cache is not None:
+            with self._lock:
+                self.n_cache += 1
+            return en_cache
+        if self.hors_ligne:
+            raise HubeauError(f"page absente du cache (mode --cache-seulement) : {url}")
+        reponse = self._get_json(url)
+        self._ecrire_cache(chemin, reponse)
+        return reponse
 
-    def count(self, endpoint: str, dep: str, d_min: str, d_max: str) -> int:
-        """Nombre total de lignes (requete size=1, mise en cache)."""
-        path = self.cache_path(endpoint, dep, f"count_{d_min}_{d_max}")
-        cached = self._read_cache(path)
-        if cached is not None:
-            return cached["count"]
-        res = self._get_json(self.build_url(endpoint, {
-            "code_departement": dep, "date_operation_min": d_min, "date_operation_max": d_max,
-            "size": 1, "fields": "code_operation"}))
-        self._write_cache(path, {"count": res.get("count", 0)})
-        return res.get("count", 0)
+    def toutes_les_lignes(self, base: str, endpoint: str, params: dict):
+        """Generateur de lignes : suit `next` jusqu'a la derniere page (HTTP 206 = suite a venir)."""
+        url = self.url(base, endpoint, params)
+        vues = set()
+        while url:
+            if url in vues:
+                raise HubeauError(f"boucle de pagination : {url}")
+            vues.add(url)
+            rep = self.page(url)
+            for ligne in rep.get("data", []):
+                yield ligne
+            url = rep.get("next")
 
-
-def _midpoint(d_min: str, d_max: str):
-    """Coupe [d_min, d_max] (YYYY-MM-DD) en deux intervalles contigus, None si un seul jour."""
-    from datetime import date, timedelta
-    a, b = date.fromisoformat(d_min), date.fromisoformat(d_max)
-    if a >= b:
-        return None
-    m = a + (b - a) // 2
-    return m.isoformat(), (m + timedelta(days=1)).isoformat()
+    def compte(self, base: str, endpoint: str, params: dict) -> int:
+        p = dict(params)
+        p["size"] = 1
+        return self.page(self.url(base, endpoint, p)).get("count", 0)

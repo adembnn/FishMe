@@ -1,41 +1,40 @@
 {
-  "_commentaire": "Configuration du pipeline de rarete Bredouille. Chemins relatifs a ce fichier.",
+  "_commentaire": "Configuration de D2. Chemins relatifs a ce fichier. Aucune valeur de rarete ici : D2 ne sort que des comptes.",
   "api": {
-    "base": "https://hubeau.eaufrance.fr/api/v1/etat_piscicole",
-    "pause_s": 0.4,
+    "pause_s": 0.3,
     "timeout_s": 240,
-    "retries": 5,
+    "retries": 6,
     "backoff_s": 5,
-    "page_size": 20000,
-    "max_requests_par_execution": 400,
-    "user_agent": "bredouille-data-pipeline/0.1 (hackathon ESSEC; donnees OFB/Hub'Eau, Licence Ouverte 2.0)"
+    "cache_validite_jours": 14,
+    "user_agent": "fishme-d2-hubeau/1.0 (donnees OFB via Hub'Eau, Licence Ouverte 2.0)"
   },
-  "since": 2010,
-  "departements_pilotes": ["95", "75", "78", "92", "71", "69", "33", "31", "13", "29", "74"],
+  "piscicole": {
+    "base": "https://hubeau.eaufrance.fr/api/v1/etat_piscicole",
+    "size_stations": 5000,
+    "size_operations": 5000,
+    "size_observations": 5000,
+    "stations_par_lot": 20
+  },
+  "hydrometrie": {
+    "base": "https://hubeau.eaufrance.fr/api/v2/hydrometrie",
+    "size_stations": 5000,
+    "size_observations_tr": 20000,
+    "fenetre_debit_heures": 3
+  },
+  "fenetre_annees": 10,
+  "tolerance_bord_km": 1.5,
+  "workers": 4,
   "cache_dir": "cache",
-  "species_path": "../../PecheCore/Sources/PecheCore/Resources/Data/species.json",
-  "output_dir": "../../PecheCore/Sources/PecheCore/Resources/Data/departments",
-  "reports_dir": "reports",
-  "classes": [
-    {"id": 1, "cle": "commune", "libelle": "Commune"},
-    {"id": 2, "cle": "peu_commune", "libelle": "Peu commune"},
-    {"id": 3, "cle": "rare", "libelle": "Rare"},
-    {"id": 4, "cle": "tres_rare", "libelle": "Tres rare"},
-    {"id": 5, "cle": "remarquable", "libelle": "Remarquable"}
-  ],
-  "seuils": {
-    "profil_actif": "B",
-    "profils": {
-      "A": [0.30, 0.10, 0.03, 0.01],
-      "B": [0.30, 0.12, 0.04, 0.01]
-    },
-    "_commentaire": "Un profil = 4 bornes basses (commune, peu commune, rare, tres rare) sur freq_ops ; en dessous de la derniere : remarquable."
-  },
-  "fiabilite": {"min_stations": 10, "min_operations": 20},
-  "plafond_milieu": {"plan_eau": 2},
-  "fusion_codes": {
-    "CCO": ["CCO", "CMI", "CCU"]
+  "sortie_dir": "sortie",
+  "rapport_dir": "cache/rapports",
+  "regions": "regions.json",
+  "especes_repli_csv": "species_source.csv",
+  "chemins_defaut": {
+    "especes": "../../Packages/Core/Sources/Core/Resources/especes.json",
+    "departements": "../../Packages/Core/Sources/Core/Resources/departements.geojson",
+    "departements_repli": "../../docs/maquettes/assets/geo/departements-simplifie.geojson"
   },
   "licence": "Licence Ouverte 2.0",
-  "source": "OFB / ASPE via Hub'Eau (API etat_piscicole)"
+  "source_piscicole": "OFB (Office français de la biodiversité) via Hub'Eau, API etat_piscicole",
+  "source_hydro": "Hub'Eau hydrométrie, référentiel des stations (Vigicrues)"
 }
