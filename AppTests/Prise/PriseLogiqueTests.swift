@@ -4,6 +4,7 @@ import Testing
 import Core
 @testable import BuildChallenge
 
+@MainActor
 struct PriseLogiqueTests {
     private func entree(_ id: String, nom: String, confusions: [Confusion] = []) -> EspecePechable {
         EspecePechable(espece: Espece(id: id), nom: nom, nomLatin: nom, image: id, confusions: confusions)
@@ -69,6 +70,7 @@ struct PriseLogiqueTests {
     }
 }
 
+@MainActor
 struct ToiseCalibrageTests {
     private func texte(_ valeur: Int, x: Double, y: Double = 100) -> TexteLu {
         TexteLu(texte: String(valeur), rect: CGRect(x: x - 10, y: y - 10, width: 20, height: 20))
