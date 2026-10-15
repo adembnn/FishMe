@@ -46,5 +46,5 @@ Mesure du fil Maquettes (`/mnt/project-files/maquettes/reports/spot-technique.md
 
 ## 4. Ce qui reste à décider (Adem)
 - La forme du spot : tranché par Adem le 15 oct. 12h26, cercle de 1 km vendredi, tronçon ou lac dans la mise à jour.
-- Ce que garde le gratuit : tranché le 15 oct. 12h26, un spot et ses sessions illimitées.
+- Ce que garde le gratuit : tranché le 15 oct. 12h26, un spot et ses sessions illimitées. Paywall (12h28) : il s'ouvre et se ferme à la fin de la 1re session, il bloque au choix d'un 2e spot.
 - Le spot proposé au gratuit : le plus proche avec des relevés OFB récents et au moins une espèce ouverte ce jour (proposition), jamais présenté comme « le meilleur ».

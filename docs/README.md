@@ -47,9 +47,10 @@ b. Une liste de contrôle sourcée : taille, période, quota, réserve possible 
 c. Aucune règle appliquée : un texte et le lien de la fédération
 Ma reco : b, l'app montre la loi au lieu d'accorder une permission. Par défaut : b.
 
-**2.** Que bloque le paywall ?
-a. Tout à partir de la 2e session, paywall au début de celle-ci
-b. Les sessions à partir de la 2e, paywall à la fin de la 1re juste après la carte ; la carte, les règles et le Pescedex en lecture restent gratuits pour toujours
-c. Une session gratuite par mois, illimité avec l'abonnement
-d. Sessions gratuites, cartes à collectionner payantes après la 1re session
-Ma reco : b, le paywall tombe à la maison, avec du réseau, et se voit dans la démo. Par défaut : b.
+**Tranché : que bloque le paywall ?** Adem, 15 oct. (12h26 et 12h28) : le gratuit garde UN spot (cercle de 1 km) avec des sessions illimitées ; la fin de la 1re session ouvre le paywall, qui se ferme ; choisir un 2e spot ouvre le paywall, qui bloque. La carte, les règles et le Pescedex en lecture restent gratuits pour toujours.
+
+**2.** Qui choisit le spot gratuit ?
+a. L'app propose le plus proche avec des relevés OFB récents et une espèce ouverte ce jour ; le pêcheur peut en prendre un autre sur la carte avant sa 1re session, puis il est fixé
+b. L'app l'impose, sans choix
+c. Le pêcheur en change librement, par exemple une fois par semaine
+Ma reco : a, le pêcheur garde la main sans vider l'abonnement de son sens. Par défaut : a.
