@@ -1,0 +1,46 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=393"><title>FishMe - Autre espèce</title>
+<link rel="stylesheet" href="natif.css">
+<style>
+body{position:relative;background:#2A3024}
+.fond{position:absolute;inset:0;background:radial-gradient(90% 40% at 50% 25%,#5E6B52,#2A3024 80%)}
+.fond::after{content:"";position:absolute;inset:0;background:rgba(8,20,36,.45)}
+.statut{color:#fff}
+.sheet{position:absolute;left:0;right:0;top:92px;bottom:0;border-radius:30px 30px 0 0;background:var(--fond);box-shadow:0 -10px 40px rgba(0,0,0,.3);overflow:hidden}
+.grab{position:absolute;left:50%;top:8px;width:38px;height:5px;margin-left:-19px;border-radius:3px;background:var(--silhouette)}
+.hd{position:absolute;left:20px;right:16px;top:26px;height:44px;display:flex;align-items:center;justify-content:space-between}
+.hd h1{font:900 22px/1 var(--police);letter-spacing:-.01em}
+.ok{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.8);backdrop-filter:blur(20px);box-shadow:0 1px 0 #fff inset,0 2px 8px rgba(8,42,76,.12)}
+.ok svg{width:18px;height:18px;fill:none;stroke:var(--encre-douce);stroke-width:3.2;stroke-linecap:round}
+.rech{position:absolute;left:16px;right:16px;top:80px;height:44px;border-radius:14px;background:rgba(118,130,145,.14);display:flex;align-items:center;gap:8px;padding:0 12px;color:var(--encre-douce);font:700 17px/1 var(--police)}
+.rech svg{width:18px;height:18px;fill:none;stroke:var(--encre-douce);stroke-width:2.8;stroke-linecap:round}
+.g{position:absolute;left:16px;right:16px;top:138px;bottom:0;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:118px;gap:10px;overflow:hidden}
+.c{position:relative;border-radius:18px;background:var(--tuile);box-shadow:0 0 0 1px var(--filet) inset}
+.c img{position:absolute;left:50%;top:22px;width:94px;margin-left:-47px;filter:drop-shadow(0 3px 4px rgba(8,42,76,.15))}
+.c b{position:absolute;left:0;right:0;bottom:10px;text-align:center;font:900 13px/1 var(--police);color:var(--nuit)}
+</style></head><body>
+<div class="fond"></div>
+<div class="statut"><span>9:41</span><span></span></div><div class="ilot"></div>
+<div class="sheet"><div class="grab"></div>
+ <div class="hd"><h1>Espèces de France</h1><button class="ok" aria-label="Fermer"><svg viewBox="0 0 18 18"><path d="M3 3l12 12M15 3L3 15"/></svg></button></div>
+ <div class="rech"><svg viewBox="0 0 18 18"><circle cx="7.5" cy="7.5" r="5.5"/><path d="M12 12l4.5 4.5"/></svg>Rechercher</div>
+ <div class="g">
+  <div class="c"><img src="img/ablette.webp" alt=""><b>Ablette</b></div>
+  <div class="c"><img src="img/aspe.webp" alt=""><b>Aspe</b></div>
+  <div class="c"><img src="img/barbeau.webp" alt=""><b>Barbeau</b></div>
+  <div class="c"><img src="img/black-bass.webp" alt=""><b>Black-bass</b></div>
+  <div class="c"><img src="img/breme-commune.webp" alt=""><b>Brème commune</b></div>
+  <div class="c"><img src="img/carassin.webp" alt=""><b>Carassin</b></div>
+  <div class="c"><img src="img/carpe-commune.webp" alt=""><b>Carpe commune</b></div>
+  <div class="c"><img src="img/chevesne.webp" alt=""><b>Chevesne</b></div>
+  <div class="c"><img src="img/gardon.webp" alt=""><b>Gardon</b></div>
+  <div class="c"><img src="img/hotu.webp" alt=""><b>Hotu</b></div>
+  <div class="c"><img src="img/lavaret.webp" alt=""><b>Lavaret</b></div>
+  <div class="c"><img src="img/lotte.webp" alt=""><b>Lotte</b></div>
+  <div class="c"><img src="img/ombre.webp" alt=""><b>Ombre</b></div>
+  <div class="c"><img src="img/rotengle.webp" alt=""><b>Rotengle</b></div>
+  <div class="c"><img src="img/silure.webp" alt=""><b>Silure</b></div>
+  <div class="c"><img src="img/tanche.webp" alt=""><b>Tanche</b></div>
+ </div>
+</div>
+<div class="accueil"></div>
+</body></html>
