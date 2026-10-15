@@ -50,5 +50,5 @@ Donc **2 départements couverts : 75 et 94**, tous deux en niveau « partiel ».
 ## Ce qui manque
 
 - Le modèle de reconnaissance (R1) : aucun `.mlmodel`, donc « Nombre d'espèces » reste vide et la photo passe par la grille seule ; `photo-exemple.jpg` manque aussi.
-- Les règles de 92, 93, 94 (écrit mais incomplet), 77 et le reste de la France : 2 départements sur les 5 promis.
+- Les règles de 92, 93, 77 et du reste de la France : 2 départements sur les 5 promis (75 et 94 présents).
 - Le câblage dans `App/RootView.swift` (A) : tant qu'il est le « Hello, world! », aucune ligne du tableau ne peut être vue ni cochée sur l'iPhone.
