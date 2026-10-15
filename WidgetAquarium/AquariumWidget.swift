@@ -2,7 +2,7 @@ import SwiftUI
 import WidgetKit
 
 // Cible widget seulement. Le widget « Mon aquarium » : les poissons du Pescedex qui nagent sur l'écran d'accueil.
-// Petit gratuit ; moyen, grand et très grand avec Pro (choix par défaut en attente de la décision d'Adem).
+// Petit gratuit ; moyen, grand et très grand avec Pro (Adem, 15 oct. 21h50 : « grand format Pro »).
 // Aucun lieu : l'écran d'accueil et l'écran verrouillé sont vus par d'autres. Aucun faux poisson : vide = état vide.
 
 /// Une image de l'aquarium à une date donnée.

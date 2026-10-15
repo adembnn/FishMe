@@ -27,3 +27,7 @@ Prérequis : la cible widget de L10 (`FishMeWidget`, voir `L10-ecran-verrouille.
    Capture de chaque format dans `reports/ecrans/L15/`.
 
 Fusion : après l'envoi (étiquette `v1.0-soumise`), comme L10 et L14.
+
+Points à vérifier à la compilation (écrits sans Mac) : `.widgetAccentedRenderingMode(.desaturated)` sur `Image` ;
+`#Preview(as:) timeline:` avec deux entrées ; `openAppWhenRun` encore valide en iOS 27 ; `nonisolated` sur l'intent
+(les retirer si le compilateur râle) ; symbole `circle.grid.2x2.fill` ; `.accessoryInline` cité pour rien dans `FondEau`.
