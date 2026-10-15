@@ -31,4 +31,6 @@ Nouvelle liste : `pêche,fishing,brochet,carpe,truite,sandre,perche,rivière,ét
 - Ensuite, dans l'ordre de `appels-mwm.md` : questionnaire de confidentialité, brouillon, publication (oui d'Adem), captures (après les écrans de B), icône (après le logo), envoi de la fiche et soumission (oui d'Adem à chaque fois).
 
 ## Icône (15 oct. 18h56)
-Fichier final du fil « Logo de FishMe » (logo F1) : `/mnt/project-files/maquettes/logo/final/fishme-icone-1024.png`, vérifié 1024 × 1024 px, RGB sans transparence, conforme à Apple. Aucune génération MWM. A le pose dans `App/Assets.xcassets/` (dossier de A, pas de S1).
+**En attente (18h58)** : Adem a refusé cette version retouchée ; le fil « Logo de FishMe » réexporte le F1 exact qu'il a validé. Ne pas poser le fichier ci-dessous.
+
+Ancien fichier du fil « Logo de FishMe » (logo F1) : `/mnt/project-files/maquettes/logo/final/fishme-icone-1024.png`, vérifié 1024 × 1024 px, RGB sans transparence, conforme à Apple. Aucune génération MWM. A le pose dans `App/Assets.xcassets/` (dossier de A, pas de S1).
