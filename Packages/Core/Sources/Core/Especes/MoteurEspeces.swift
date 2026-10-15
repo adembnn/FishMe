@@ -14,13 +14,14 @@ struct CoefficientPoids: Sendable, Equatable {
     static func decoder(_ donnees: Data) -> [CoefficientPoids] {
         guard let json = try? JSONSerialization.jsonObject(with: donnees) else { return [] }
         let liste: [[String: Any]]
-        if let l = json as? [[String: Any]] { liste = l } else if let o = json as? [String: Any], let l = (o["especes"] ?? o["coefficients"]) as? [[String: Any]] { liste = l } else { return [] }
+        if let l = json as? [[String: Any]] { liste = l } else if let o = json as? [String: Any], let l = (o["lignes"] ?? o["especes"] ?? o["coefficients"]) as? [[String: Any]] { liste = l } else { return [] }
         return liste.compactMap { e in
-            guard let id = (e["espece"] as? String) ?? (e["id"] as? String),
+            guard let id = (e["espece_id"] as? String) ?? (e["espece"] as? String) ?? (e["id"] as? String),
                   let a = (e["a"] as? NSNumber)?.doubleValue, let b = (e["b"] as? NSNumber)?.doubleValue,
-                  let mn = (e["lt_min_cm"] as? NSNumber)?.doubleValue, let mx = (e["lt_max_cm"] as? NSNumber)?.doubleValue else { return nil }
+                  let mn = ((e["longueur_min_cm"] ?? e["lt_min_cm"]) as? NSNumber)?.doubleValue, let mx = ((e["longueur_max_cm"] ?? e["lt_max_cm"]) as? NSNumber)?.doubleValue else { return nil }
             return CoefficientPoids(espece: id, a: a, b: b, ltMinCm: mn, ltMaxCm: mx, n: (e["n"] as? NSNumber)?.intValue,
-                                    region: e["region"] as? String, source: (e["source"] as? String) ?? "source non indiquée")
+                                    region: e["region"] as? String,
+                                    source: ((e["source"] as? String) ?? "source non indiquée") + ((e["confiance"] as? String) == "approximatif" ? " [approximatif]" : ""))
         }
     }
 }

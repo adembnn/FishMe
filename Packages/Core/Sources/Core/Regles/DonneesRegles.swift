@@ -135,7 +135,7 @@ struct RegleDonnee: Decodable, Sendable {
         let c = try decoder.container(keyedBy: Cle.self)
         id = try c.decode(String.self, forKey: .id)
         type = try c.decode(String.self, forKey: .type)
-        especes = ((try? c.decodeIfPresent([JSONValeur].self, forKey: .especes)) ?? []).compactMap(\.texte)
+        var especesLues = ((try? c.decodeIfPresent([JSONValeur].self, forKey: .especes)) ?? []).compactMap(\.texte)
         categorie = (try? c.decodeIfPresent(JSONValeur.self, forKey: .categorie))?.texte ?? "toutes"
         portee = try? c.decodeIfPresent(PorteeDonnee.self, forKey: .portee)
         du = try? c.decodeIfPresent(String.self, forKey: .du)
@@ -148,6 +148,32 @@ struct RegleDonnee: Decodable, Sendable {
         statut = try? c.decodeIfPresent(String.self, forKey: .statut)
         expireLe = try? c.decodeIfPresent(String.self, forKey: .expireLe)
         remplace = try? c.decodeIfPresent(String.self, forKey: .remplace)
+        // Forme réelle de D1 : une règle d'interdiction ou d'introduction qui vise des espèces sans code Sandre (écrevisses, migrateurs,
+        // anguille argentée, perche soleil...) a `especes: []` et nomme ses espèces dans `valeur.texte`. Sans cette lecture, elle
+        // s'appliquerait à toutes les espèces (un brochet serait « relâche-la » à cause de l'interdiction des écrevisses).
+        if especesLues.isEmpty, type == "interdit" || type == "remise_eau" {
+            especesLues = RegleDonnee.nomsVises(texte: valeur["texte"]?.texte ?? "", id: id).map { "nom:" + RegleDonnee.cleNom($0) }
+        }
+        especes = especesLues
+    }
+
+    /// Noms d'espèces cités dans `valeur.texte` : listes `especes noms : [...]` et `introduction interdite : [...]`, et l'anguille argentée et la civelle.
+    static func nomsVises(texte: String, id: String) -> [String] {
+        var noms: [String] = []
+        for marqueur in ["especes noms : [", "introduction interdite : ["] {
+            guard let debut = texte.range(of: marqueur), let fin = texte[debut.upperBound...].firstIndex(of: "]") else { continue }
+            let liste = texte[debut.upperBound..<fin]
+            noms += liste.split(separator: ",").map { $0.trimmingCharacters(in: CharacterSet(charactersIn: " \"")) }.filter { !$0.isEmpty }
+        }
+        if noms.isEmpty, texte.lowercased().contains("anguille argent") { noms = ["anguille argentée", "civelle"] }
+        return noms
+    }
+
+    /// Clé de comparaison d'un nom d'espèce : sans accent ni article, séparée par des espaces (« Écrevisse à pattes blanches » comme `ecrevisse-pattes-blanches`).
+    static func cleNom(_ s: String) -> String {
+        let sansAccent = s.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: "fr_FR")).lowercased()
+        let mots = sansAccent.split { !$0.isLetter && !$0.isNumber }.map(String.init)
+        return mots.filter { !["a", "de", "des", "du", "la", "le", "les", "l", "d"].contains($0) }.joined(separator: " ")
     }
 }
 

@@ -122,7 +122,10 @@ public struct MoteurRegles: ServiceRegles {
     private func vise(_ liste: [String], _ espece: Espece?) -> Bool {
         guard let espece else { return true }
         if liste.isEmpty { return true }
-        return liste.contains { $0 == espece.id || (espece.codeSandre != nil && $0 == espece.codeSandre) }
+        return liste.contains {
+            if $0.hasPrefix("nom:") { return $0 == "nom:" + RegleDonnee.cleNom(espece.id) }
+            return $0 == espece.id || (espece.codeSandre != nil && $0 == espece.codeSandre)
+        }
     }
 
     private func calculer(_ ctx: Contexte) -> Calcul {
@@ -475,7 +478,9 @@ public struct MoteurRegles: ServiceRegles {
             sources = [SourceRegle(titre: s.texte ?? "Source", url: s.url)]
             lecture = dateAAAAMMJJ(s.luLe)
         }
-        return LigneControle(type: typeLigne(r.type), etat: etat, phrase: r.phrase, sources: sources, citation: r.citation, dateLecture: lecture)
+        // Interdiction qui vise des espèces nommées (écrevisses, migrateurs, anguille argentée) : ligne « autre », comme dans cas-verdicts.json.
+        let type = r.type == "interdit" && r.especes.contains { $0.hasPrefix("nom:") } ? TypeRegle.autre : typeLigne(r.type)
+        return LigneControle(type: type, etat: etat, phrase: r.phrase, sources: sources, citation: r.citation, dateLecture: lecture)
     }
 
     private func sourceDe(id: String, fichier: FichierRegles) -> SourceRegle? {
