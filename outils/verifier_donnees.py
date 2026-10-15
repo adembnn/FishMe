@@ -389,6 +389,9 @@ def fusionner_tailles(regles, avertissements):
     for rs in groupes.values():
         if len({cm_de(r) for r in rs}) < 2:
             continue
+        # Un seul texte ne se contredit pas : deux tailles venues du même texte sont deux tronçons d'une même rivière.
+        if len({t for r in rs for t in r["textes"]}) < 2:
+            continue
         rs = sorted(rs, key=lambda r: (cm_de(r), r["id"]))
         base = rs[0]
         cands = sorted({cm_de(r) for r in rs})

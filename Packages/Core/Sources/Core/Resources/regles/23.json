@@ -1,0 +1,6219 @@
+{
+ "version": "2026-10-15.1",
+ "departement": "23",
+ "niveau": "partiel",
+ "textes": [
+  {
+   "id": "t1",
+   "titre": "Arrêté n° 2018-044 réglementaire permanent, article 1 A",
+   "url": "https://web.archive.org/web/20230403035742id_/https://www.creuse.gouv.fr/contenu/telechargement/10393/79739/file/arrete+permanent",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2018-12-21"
+  },
+  {
+   "id": "t2",
+   "titre": "Arrêté n° 2018-044 réglementaire permanent, article 1 B",
+   "url": "https://web.archive.org/web/20230403035742id_/https://www.creuse.gouv.fr/contenu/telechargement/10393/79739/file/arrete+permanent",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2018-12-21"
+  },
+  {
+   "id": "t3",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, article 1 A",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t4",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, article 1 B",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t5",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, article 2, tableau",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t6",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, article 2",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t7",
+   "titre": "Arrêté n° 2018-044 réglementaire permanent, article 2 A",
+   "url": "https://web.archive.org/web/20230403035742id_/https://www.creuse.gouv.fr/contenu/telechargement/10393/79739/file/arrete+permanent",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2018-12-21"
+  },
+  {
+   "id": "t8",
+   "titre": "Arrêté n° 2018-044 réglementaire permanent, article 2 A 1/",
+   "url": "https://web.archive.org/web/20230403035742id_/https://www.creuse.gouv.fr/contenu/telechargement/10393/79739/file/arrete+permanent",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2018-12-21"
+  },
+  {
+   "id": "t9",
+   "titre": "Arrêté n° 2018-044 réglementaire permanent, article 2 A 2/",
+   "url": "https://web.archive.org/web/20230403035742id_/https://www.creuse.gouv.fr/contenu/telechargement/10393/79739/file/arrete+permanent",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2018-12-21"
+  },
+  {
+   "id": "t10",
+   "titre": "Arrêté n° 2018-044 réglementaire permanent, article 3 A 2/",
+   "url": "https://web.archive.org/web/20230403035742id_/https://www.creuse.gouv.fr/contenu/telechargement/10393/79739/file/arrete+permanent",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2018-12-21"
+  },
+  {
+   "id": "t11",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, annexe IV",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t12",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, article 4 a",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t13",
+   "titre": "Arrêté n° 2018-044 réglementaire permanent, article 5 A",
+   "url": "https://web.archive.org/web/20230403035742id_/https://www.creuse.gouv.fr/contenu/telechargement/10393/79739/file/arrete+permanent",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2018-12-21"
+  },
+  {
+   "id": "t14",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, article 4 b",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t15",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, article 3",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t16",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, article 5 A",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t17",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, article 5 B",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t18",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, annexe III",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t19",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00002, articles 1 et 2",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22641/166656/file/ARR_251229_reserves_2026_signe.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t20",
+   "titre": "Arrêté préfectoral n° 23-2026-02-24-00001, article 1 et article 2",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22879/168020/file/ARR_260224_carpe_nuit.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026-02-24"
+  },
+  {
+   "id": "t21",
+   "titre": "Arrêté préfectoral n° 23-2026-02-24-00001, articles 2 et 3",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22879/168020/file/ARR_260224_carpe_nuit.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026-02-24"
+  },
+  {
+   "id": "t22",
+   "titre": "Arrêté n° 2018-044 réglementaire permanent, article 4",
+   "url": "https://web.archive.org/web/20230403035742id_/https://www.creuse.gouv.fr/contenu/telechargement/10393/79739/file/arrete+permanent",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2018-12-21"
+  },
+  {
+   "id": "t23",
+   "titre": "Arrêté n° 2018-044 réglementaire permanent, article 5 C",
+   "url": "https://web.archive.org/web/20230403035742id_/https://www.creuse.gouv.fr/contenu/telechargement/10393/79739/file/arrete+permanent",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2018-12-21"
+  },
+  {
+   "id": "t24",
+   "titre": "Arrêté n° 2018-044 réglementaire permanent, article 7 A",
+   "url": "https://web.archive.org/web/20230403035742id_/https://www.creuse.gouv.fr/contenu/telechargement/10393/79739/file/arrete+permanent",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2018-12-21"
+  },
+  {
+   "id": "t25",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, article 2 et annexe V",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t26",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001, article 3 et annexe III",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t27",
+   "titre": "Arrêté préfectoral n° 23-2026-07-08-00002, article 1",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/23759/173249/file/ARR_260701_interdiction-temporaire pêche_signe.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026-07-08"
+  },
+  {
+   "id": "t28",
+   "titre": "Arrêté préfectoral n° 23-2026-07-08-00002, article 2",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/23759/173249/file/ARR_260701_interdiction-temporaire pêche_signe.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026-07-08"
+  },
+  {
+   "id": "t29",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001 fixant les périodes d'ouverture spécifiques de la pêche et réglementant la pêche de certaines espèces en 2026, art. 2, tableau des espèces (truite et saumon de fontaine)",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t30",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001 fixant les périodes d'ouverture spécifiques de la pêche et réglementant la pêche de certaines espèces en 2026, art. 2, tableau (brochet)",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t31",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001 fixant les périodes d'ouverture spécifiques de la pêche et réglementant la pêche de certaines espèces en 2026, annexe IV",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t32",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001 fixant les périodes d'ouverture spécifiques de la pêche et réglementant la pêche de certaines espèces en 2026, art. 2 (après le tableau)",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t33",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001 fixant les périodes d'ouverture spécifiques de la pêche et réglementant la pêche de certaines espèces en 2026, art. 2 (après le tableau) et annexe V",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t34",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001 fixant les périodes d'ouverture spécifiques de la pêche et réglementant la pêche de certaines espèces en 2026, art. 4 a",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t35",
+   "titre": "Arrêté préfectoral n° 2018-044 réglementaire permanent relatif à l'exercice de la pêche en eau douce dans le département de la Creuse, art. 5 C",
+   "url": "https://web.archive.org/web/20230403035742id_/https://www.creuse.gouv.fr/contenu/telechargement/10393/79739/file/arrete+permanent",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2018-12-21"
+  },
+  {
+   "id": "t36",
+   "titre": "Arrêté préfectoral n° 23-2025-12-29-00001 fixant les périodes d'ouverture spécifiques de la pêche et réglementant la pêche de certaines espèces en 2026, annexe III (no kill spécial black-bass)",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22640/166651/file/ARR_251229_annuelle_2026-Vdef.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-29"
+  },
+  {
+   "id": "t37",
+   "titre": "Arrêté préfectoral n° 23-2026-02-24-00001 autorisant la pêche de la carpe de nuit en Creuse en 2026, art. 2 et 3",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22879/168020/file/ARR_260224_carpe_nuit.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026-02-24"
+  },
+  {
+   "id": "t38",
+   "titre": "Arrêté préfectoral n° 23-2026-02-24-00001 autorisant la pêche de la carpe de nuit en Creuse en 2026, art. 1er et art. 2",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/22879/168020/file/ARR_260224_carpe_nuit.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026-02-24"
+  },
+  {
+   "id": "t39",
+   "titre": "Arrêté préfectoral n° 23-2026-07-08-00002 interdisant temporairement l'exercice de la pêche en eau douce en Creuse, art. 1er et 2",
+   "url": "https://www.creuse.gouv.fr/contenu/telechargement/23759/173249/file/ARR_260701_interdiction-temporaire pêche_signe.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026-07-08"
+  }
+ ],
+ "eaux": [
+  {
+   "cle": "barrage de faux la montagne",
+   "nom": "Barrage de Faux-la-Montagne",
+   "code": null
+  },
+  {
+   "cle": "barrage de saint marc le maureix",
+   "nom": "Lac du barrage de Saint-Marc-Le-Maureix",
+   "code": null
+  },
+  {
+   "cle": "barrage de vassiviere",
+   "nom": "Lac du barrage de Vassivière",
+   "code": null
+  },
+  {
+   "cle": "beauze et ses affluents",
+   "nom": "Beauze et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "beraude et ses affluents",
+   "nom": "Béraude et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "chandouille et ses affluents",
+   "nom": "Chandouille et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "chavanon et ses affluents",
+   "nom": "Chavanon et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "cours d eau de 2e categorie",
+   "nom": "Cours d'eau de 2e catégorie",
+   "code": null
+  },
+  {
+   "cle": "courtille",
+   "nom": "Plan d'eau de Courtille",
+   "code": null
+  },
+  {
+   "cle": "creuse",
+   "nom": "Creuse",
+   "code": null
+  },
+  {
+   "cle": "creuse et ses affluents",
+   "nom": "Creuse et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "cubaynes",
+   "nom": "Cubaynes",
+   "code": null
+  },
+  {
+   "cle": "dorat et ses affluents",
+   "nom": "Canal du Dorat et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "flobourg",
+   "nom": "Plan d'eau de Flobourg",
+   "code": null
+  },
+  {
+   "cle": "gartempe",
+   "nom": "Gartempe",
+   "code": null
+  },
+  {
+   "cle": "gioune",
+   "nom": "Gioune",
+   "code": null
+  },
+  {
+   "cle": "goze et ses affluents et sous affluents",
+   "nom": "Goze et ses affluents et sous-affluents",
+   "code": null
+  },
+  {
+   "cle": "grandrieux",
+   "nom": "Grandrieux",
+   "code": null
+  },
+  {
+   "cle": "la beauze et ses affluents",
+   "nom": "La Beauze et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "la beraude et ses affluents",
+   "nom": "La Béraude et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "la chandouille et ses affluents",
+   "nom": "La Chandouille et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "la creuse",
+   "nom": "La Creuse",
+   "code": null
+  },
+  {
+   "cle": "la creuse et ses affluents",
+   "nom": "La Creuse et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "la gartempe",
+   "nom": "La Gartempe",
+   "code": null
+  },
+  {
+   "cle": "la liege et ses affluents",
+   "nom": "La Liège et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "la maulde et ses affluents",
+   "nom": "La Maulde et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "la meouzette et ses affluents",
+   "nom": "La Méouzette et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "la mourne et ses affluents",
+   "nom": "La Mourne et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "la petite creuse",
+   "nom": "La Petite Creuse",
+   "code": null
+  },
+  {
+   "cle": "la rozeille et ses affluents",
+   "nom": "La Rozeille et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "la sedelle",
+   "nom": "La Sédelle",
+   "code": null
+  },
+  {
+   "cle": "lavaud gelade",
+   "nom": "Lac de Lavaud-Gelade",
+   "code": null
+  },
+  {
+   "cle": "le canal du dorat et ses affluents",
+   "nom": "Le canal du Dorat et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "le chavanon et ses affluents",
+   "nom": "Le Chavanon et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "le ruisseau de la feuillade et ses affluents",
+   "nom": "Le ruisseau de La Feuillade et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "le thaurion",
+   "nom": "Le Thaurion",
+   "code": null
+  },
+  {
+   "cle": "le thaurion et ses affluents",
+   "nom": "Le Thaurion et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "liege et ses affluents",
+   "nom": "Liège et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "martinats",
+   "nom": "Plan d'eau des Martinats",
+   "code": null
+  },
+  {
+   "cle": "maulde et ses affluents",
+   "nom": "Maulde et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "meouzette et ses affluents",
+   "nom": "Méouzette et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "merinchal",
+   "nom": "Étang de Mérinchal",
+   "code": null
+  },
+  {
+   "cle": "moulin",
+   "nom": "Étang du Moulin",
+   "code": null
+  },
+  {
+   "cle": "mourne",
+   "nom": "Mourne",
+   "code": null
+  },
+  {
+   "cle": "mourne et ses affluents",
+   "nom": "Mourne et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "parcours loisir peche a la truite",
+   "nom": "Parcours « loisir pêche à la truite »",
+   "code": null
+  },
+  {
+   "cle": "parcours no kill",
+   "nom": "Parcours no-kill",
+   "code": null
+  },
+  {
+   "cle": "parcours no kill black bass",
+   "nom": "Parcours no-kill black-bass",
+   "code": null
+  },
+  {
+   "cle": "petite creuse",
+   "nom": "Petite Creuse",
+   "code": null
+  },
+  {
+   "cle": "pic",
+   "nom": "Pic",
+   "code": null
+  },
+  {
+   "cle": "plans d eau de 2e categorie",
+   "nom": "Plans d'eau de 2e catégorie",
+   "code": null
+  },
+  {
+   "cle": "retenue d eguzon",
+   "nom": "Retenue d'Eguzon",
+   "code": null
+  },
+  {
+   "cle": "retenue de beissat",
+   "nom": "Retenue de Beissat",
+   "code": null
+  },
+  {
+   "cle": "retenue de flobourg",
+   "nom": "Retenue de Flobourg",
+   "code": null
+  },
+  {
+   "cle": "retenue de l age",
+   "nom": "Retenue de l'Age",
+   "code": null
+  },
+  {
+   "cle": "retenue de lage",
+   "nom": "Retenue de l’Age",
+   "code": null
+  },
+  {
+   "cle": "retenue de vassiviere",
+   "nom": "Retenue de Vassivière",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage de champsanglard",
+   "nom": "Retenue du barrage de Champsanglard",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage de chantegrelle",
+   "nom": "Retenue du barrage de Chantegrelle",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage de faux la montagne",
+   "nom": "Retenue du barrage de Faux-la-Montagne",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage de l age",
+   "nom": "Retenue du barrage de l'Age",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage de l eguzon",
+   "nom": "Retenue du barrage de l'Eguzon",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage de l etroit",
+   "nom": "Retenue du barrage de l'Etroit",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage de la roche talamie",
+   "nom": "Retenue du barrage de la Roche talamie",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage de lavaud gelade",
+   "nom": "Retenue du barrage de Lavaud-Gelade",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage de rochebut",
+   "nom": "Retenue du barrage de Rochebut",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage de saint marc",
+   "nom": "Retenue du barrage de Saint Marc",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage de vassiviere",
+   "nom": "Retenue du barrage de Vassivière",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage des chezelles",
+   "nom": "Retenue du barrage des Chézelles",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage des combes",
+   "nom": "Retenue du barrage des Combes",
+   "code": null
+  },
+  {
+   "cle": "retenue du barrage du chammet",
+   "nom": "Lac de retenue du barrage du Chammet",
+   "code": null
+  },
+  {
+   "cle": "retenue du lac d eguzon",
+   "nom": "Retenue du lac d'Éguzon",
+   "code": null
+  },
+  {
+   "cle": "retenue hydroelectrique du dorat",
+   "nom": "Retenue hydroélectrique du Dorat",
+   "code": null
+  },
+  {
+   "cle": "rio buzet",
+   "nom": "Rio Buzet",
+   "code": null
+  },
+  {
+   "cle": "rozeille et ses affluents",
+   "nom": "Rozeille et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "ruisseau de barbeyrat",
+   "nom": "Ruisseau de Barbeyrat",
+   "code": null
+  },
+  {
+   "cle": "ruisseau de la feuillade et ses affluents",
+   "nom": "Ruisseau de La Feuillade et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "saint dizier leyrenne",
+   "nom": "Plan d'eau de Saint Dizier Leyrenne",
+   "code": null
+  },
+  {
+   "cle": "sedelle",
+   "nom": "Sédelle",
+   "code": null
+  },
+  {
+   "cle": "tarde et ses affluents",
+   "nom": "Tarde et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "tardes",
+   "nom": "Tardes",
+   "code": null
+  },
+  {
+   "cle": "tardes et ses affluents",
+   "nom": "Tardes et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "thaurion",
+   "nom": "Thaurion",
+   "code": null
+  },
+  {
+   "cle": "thaurion et ses affluents",
+   "nom": "Thaurion et ses affluents",
+   "code": null
+  },
+  {
+   "cle": "verger",
+   "nom": "Verger",
+   "code": null
+  },
+  {
+   "cle": "viergnes",
+   "nom": "Étang des Viergnes",
+   "code": null
+  },
+  {
+   "cle": "voueize et ses affluents",
+   "nom": "Voueize et ses affluents",
+   "code": null
+  }
+ ],
+ "regles": [
+  {
+   "id": "23-toutes-categorie-creuse",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "creuse",
+    "lieu": "Creuse : en aval de son confluent avec le ruisseau dit de la Chezades",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Creuse est en 2e catégorie en aval du ruisseau de la Chezades.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "1° La Creuse en aval de son confluent avec le ruisseau dit de la Chezades.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-des-combes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage des combes",
+    "lieu": "Retenue du barrage des Combes, sur la Creuse : entre le barrage et la passerelle de fer établie à l'extrémité amont de la retenue",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue du barrage des Combes est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "2° La retenue du barrage des Combes sur la Creuse entre le barrage et la passerelle de fer établie à l’extrémité amont de la retenue.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-thaurion",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "thaurion",
+    "lieu": "Thaurion : en aval du pont de la Chassagne (RD912)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Thaurion est en 2e catégorie en aval du pont de la Chassagne.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "3° Le Thaurion en aval du pont de la Chassagne (RD912);",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-lac-de-lavaud-gelade",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "lavaud gelade",
+    "lieu": "Lac de Lavaud-Gelade : délimité par la courbe de niveau de 675 mètres d'altitude",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le lac de Lavaud-Gelade est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "le lac de Lavaud-Gelade délimité par la courbe de niveau de 675 mètres d’altitude",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-petite-creuse",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "petite creuse",
+    "lieu": "Petite Creuse : en aval du confluent avec le Verreaux",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Petite Creuse est en 2e catégorie en aval du confluent avec le Verreaux.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "4° La Petite Creuse en aval du confluent avec le Verreaux.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-voueize",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "voueize et ses affluents",
+    "lieu": "Voueize et ses affluents : en aval du pont de la RD 55",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Voueize et ses affluents sont en 2e catégorie en aval du pont de la RD 55.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "5° La Voueize et ses affluents en aval du pont de la RD. 55.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-goze",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "goze et ses affluents et sous affluents",
+    "lieu": "Goze et ses affluents et sous-affluents",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Goze, ses affluents et sous-affluents sont en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "6° La Goze et ses affluents et sous-affluents.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-tardes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "tardes",
+    "lieu": "Tardes : en aval de son confluent avec la Méouze",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Tardes est en 2e catégorie en aval de son confluent avec la Méouze.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "7° La Tardes en aval de son confluent avec la Méouze.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-ruisseau-de-barbeyrat",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "ruisseau de barbeyrat",
+    "lieu": "Ruisseau de Barbeyrat",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le ruisseau de Barbeyrat est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "8° Le ruisseau de Barbeyrat.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-de-rochebut",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de rochebut",
+    "lieu": "Retenue du barrage de Rochebut (Evaux) : en aval du pont de Sellat (C. 20)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue du barrage de Rochebut est en 2e catégorie en aval du pont de Sellat.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "9° La retenue du barrage de Rochebut en aval du pont de Sellat (C. 20), commune d’Evaux.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-sedelle",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "sedelle",
+    "lieu": "Sédelle : en aval du pont de Crozant (chemin vicinal ordinaire n° 3)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Sédelle est en 2e catégorie en aval du pont de Crozant.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "10° La Sédelle en aval du pont de Crozant (chemin vicinal ordinaire n° 3).",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-de-vassiviere",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de vassiviere",
+    "lieu": "Retenue du barrage de Vassivière, sur la Maulde : délimitée par la courbe de niveau de 650 mètres d'altitude",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue de Vassivière est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "11° La retenue du barrage de Vassivière sur la Maulde délimitée par la courbe de niveau de 650 mètres d’altitude.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-courtille",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "courtille",
+    "lieu": "Plan d'eau de Courtille : du ruisseau de Fayolle jusqu'en aval du pont de la route de Fayolle",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le plan d'eau de Courtille est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "12° Le plan d’eau de Courtille, du ruisseau de Fayolle jusqu’en aval du pont de la route de Fayolle.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-lac-de-retenue-du-barrage-du-chamm",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage du chammet",
+    "lieu": "Lac de retenue du barrage du Chammet",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le lac de retenue du barrage du Chammet est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "13° Le lac de retenue du barrage du Chammet.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-hydroelectrique-du-dorat",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue hydroelectrique du dorat",
+    "lieu": "Retenue hydroélectrique du Dorat (Faux-la-Montagne)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue hydroélectrique du Dorat est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "14° La retenue hydroélectrique du Dorat (commune de Faux-la-Montagne).",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-de-l-age",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de l age",
+    "lieu": "Retenue du barrage de l'Age : du pont du Bourg d'Hem à la digue",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue du barrage de l'Age est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "15° La retenue du barrage de l’Age: du pont du Bourg d’Hem à la digue.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-des-chezelles",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage des chezelles",
+    "lieu": "Retenue du barrage des Chézelles : du pont d'Anzème à la digue",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue du barrage des Chézelles est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "16° La retenue du barrage des Chézelles: du pont d’Anzème à la digue.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-de-champsanglar",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de champsanglard",
+    "lieu": "Retenue du barrage de Champsanglard : de la digue jusqu'à l'aval de la digue du Moulin Noyé",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue du barrage de Champsanglard est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "17° La retenue du barrage de Champsanglard : de la digue jusqu’à l’aval de la digue du Moulin Noyé.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-de-chantegrelle",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de chantegrelle",
+    "lieu": "Retenue du barrage de Chantegrelle : de la crête du barrage au ruisseau de Chezades",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue du barrage de Chantegrelle est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "18° La retenue du barrage de Chantegrelle : de la crête du barrage au ruisseau de « Chezades ».",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-de-la-roche-tal",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de la roche talamie",
+    "lieu": "Retenue du barrage de la Roche talamie : du remous de la retenue jusqu'à la digue",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue du barrage de la Roche talamie est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "19° La retenue du barrage de la Roche talamie : du remous de la retenue jusqu’à la digue.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-de-l-etroit",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de l etroit",
+    "lieu": "Retenue du barrage de l'Etroit : de la centrale hydroélectrique jusqu'à la digue",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue du barrage de l'Etroit est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "20° La retenue du barrage de l’Etroit : de la centrale hydroélectrique jusqu’à la digue.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-de-l-eguzon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de l eguzon",
+    "lieu": "Retenue du barrage de l'Eguzon : de la passerelle de Puy-Guillon sur la Petite Creuse et du pont de Vervy sur la Grande Creuse, jusqu'à la digue",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue du barrage d'Eguzon est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "21° La retenue du barrage de l’Eguzon : passerelle de « Puy-Guillon » sur la Petite Creuse, « pont de Vervy » sur la Grande Creuse à l’amont et jusqu’à la digue.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-du-chammet",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage du chammet",
+    "lieu": "Retenue du barrage du Chammet, sur La Chandouille : du remous de la retenue jusqu'à la digue",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue du barrage du Chammet est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "22° La retenue du barrage de le Chammet :du remous de la retenue sur « La Chandouille » jusqu’à la digue.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-retenue-du-barrage-de-saint-marc",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de saint marc",
+    "lieu": "Retenue du barrage de Saint Marc : de la digue au pont Lilas jusqu'à l'usine de la Châtre",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La retenue du barrage de Saint Marc est en 2e catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "23° La retenue du barrage de Saint Marc : de la digue au pont Lilas jusqu’à l’usine de la Châtre.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-categorie-cat1-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Tous les cours d'eau et canaux qui ne sont pas classés en 2e catégorie sont en 1re catégorie.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Sont considérés comme cours d’eau de 1ère catégorie, tous les cours d’eau ou parties de cours d’eau et canaux non classés en 2ème catégorie.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-ouverture-ouverture-generale-cat1",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Pêche autorisée du 14 mars 2026 au 20 septembre 2026 inclus."
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 1re catégorie, la pêche est ouverte du 14 mars au 20 septembre 2026.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "la pêche est autorisée du 14 mars 2026 au 20 septembre 2026 inclus.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-ouverture-ouverture-generale-cat2",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Pêche autorisée du 1er janvier au 31 décembre 2026 inclus."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "En 2e catégorie, la pêche est ouverte toute l'année 2026.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "La pêche est autorisée du 1er janvier au 31 décembre 2026 inclus.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2247-ouverture-cat1",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2247"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 16 mai au 20 septembre inclus en 1re catégorie."
+   },
+   "du": "2026-05-16",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Ombre commun : pêche ouverte du 16 mai au 20 septembre 2026 en 1re catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "du 16 mai au 20 septembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2247-ouverture-cat2",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2247"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 16 mai au 31 décembre inclus en 2e catégorie."
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Ombre commun : pêche ouverte du 16 mai au 31 décembre 2026 en 2e catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "du 16 mai au 31 décembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-ouverture-cat1",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 25 avril au 20 septembre inclus en 1re catégorie."
+   },
+   "du": "2026-04-25",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Brochet : pêche ouverte du 25 avril au 20 septembre 2026 en 1re catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "du 25 avril au 20 septembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-ouverture-cat2-janvier",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 1er janvier au 25 janvier inclus en 2e catégorie."
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "remplace": null,
+   "phrase": "Brochet : pêche ouverte du 1er au 25 janvier 2026 en 2e catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "du 1er janvier au 25 janvier et du 25 avril au 31 décembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-ouverture-cat2-avril-2026",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 25 avril au 31 décembre inclus en 2e catégorie."
+   },
+   "du": "2026-04-25",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Brochet : pêche ouverte du 25 avril au 31 décembre 2026 en 2e catégorie. L'arrêté permanent de 2018 disait le 1er mai.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "du 1er janvier au 25 janvier et du 25 avril au 31 décembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2195-ouverture-cat1",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 14 mars au 20 septembre inclus en 1re catégorie."
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Sandre : pêche ouverte du 14 mars au 20 septembre 2026 en 1re catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "du 14 mars au 20 septembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2195-ouverture-cat2-debut",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 1er janvier au 15 mars inclus en 2e catégorie."
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-15",
+   "remplace": null,
+   "phrase": "Sandre : pêche ouverte du 1er janvier au 15 mars 2026 en 2e catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "du 1er janvier au 15 mars inclus et du 13 juin au 31 décembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2195-ouverture-cat2-fin",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 13 juin au 31 décembre inclus en 2e catégorie."
+   },
+   "du": "2026-06-13",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Sandre : pêche ouverte du 13 juin au 31 décembre 2026 en 2e catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "du 1er janvier au 15 mars inclus et du 13 juin au 31 décembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2053-ouverture-cat1",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 14 mars au 20 septembre inclus en 1re catégorie."
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Black-bass : pêche ouverte du 14 mars au 20 septembre 2026 en 1re catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "du 14 mars au 20 septembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2053-ouverture-cat2-debut",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 1er janvier au 15 mars inclus en 2e catégorie."
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-15",
+   "remplace": null,
+   "phrase": "Black-bass : pêche ouverte du 1er janvier au 15 mars 2026 en 2e catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "du 1er janvier au 15 mars inclus et du 4 juillet au 31 décembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2053-ouverture-cat2-fin",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 4 juillet au 31 décembre inclus en 2e catégorie."
+   },
+   "du": "2026-07-04",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Black-bass : pêche ouverte du 4 juillet au 31 décembre 2026 en 2e catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "du 1er janvier au 15 mars inclus et du 4 juillet au 31 décembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-grenouille-verte-ouverture-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 18 juillet au 20 septembre inclus."
+   },
+   "du": "2026-07-18",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Grenouille verte : pêche ouverte du 18 juillet au 20 septembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Du 18 juillet au 20 septembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-grenouille-verte-interdit-vente",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Colportage, vente, mise en vente et achat interdits en toute période, vivante ou morte."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grenouille verte : colportage, vente et achat interdits toute l'année.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "Le colportage, la vente, la mise en vente ou l’achat de grenouille verte ou rousse (qu’il s’agisse de spécimens vivants ou morts) sont strictement interdits en toute période.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-grenouille-rousse-ouverture-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Ouverture du 18 juillet au 20 septembre inclus."
+   },
+   "du": "2026-07-18",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Grenouille rousse : pêche ouverte du 18 juillet au 20 septembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Du 18 juillet au 20 septembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-grenouille-rousse-interdit-vente",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Colportage, vente, mise en vente et achat interdits en toute période, vivante ou morte."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grenouille rousse : colportage, vente et achat interdits toute l'année.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "Le colportage, la vente, la mise en vente ou l’achat de grenouille verte ou rousse (qu’il s’agisse de spécimens vivants ou morts) sont strictement interdits en toute période.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-grenouilles-autres-interdit-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Interdiction totale."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les autres espèces de grenouilles (genre Rana) : pêche interdite.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Autres espèces de grenouilles (genre Rana) Interdiction totale",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "23-anguille-argentee-interdit-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Anguille argentée : pêche interdite toute l'année.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "interdites de pêche toute l’année : Anguilles argentées, écrevisses à patte rouges, écrevisses des torrents, écrevisses à pattes blanches",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-anguille-jaune-ouverture-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Suivant arrêté ministériel."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Anguille jaune : l'arrêté préfectoral renvoie à l'arrêté ministériel pour les dates.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Suivant arrêté ministériel",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "23-anguille-jaune-autre-carnet",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "type": "autre",
+   "valeur": {
+    "texte": "Obligation de tenir sur soi un carnet de capture à jour (Cerfa n° 14358*01)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Anguille jaune : il faut avoir sur soi un carnet de capture à jour.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Obligation de tenir sur soi un carnet de capture à jour (Cerfa n°14358*01)",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-ecrevisse-pattes-rouges-interdit-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisse à pattes rouges : pêche interdite toute l'année.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "interdites de pêche toute l’année : Anguilles argentées, écrevisses à patte rouges, écrevisses des torrents, écrevisses à pattes blanches",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-ecrevisse-torrents-interdit-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisse des torrents : pêche interdite toute l'année.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "interdites de pêche toute l’année : Anguilles argentées, écrevisses à patte rouges, écrevisses des torrents, écrevisses à pattes blanches",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-ecrevisse-pattes-blanches-interdit-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisse à pattes blanches : pêche interdite toute l'année.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "interdites de pêche toute l’année : Anguilles argentées, écrevisses à patte rouges, écrevisses des torrents, écrevisses à pattes blanches",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-ecrevisse-ouverture-cat1",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "Du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Écrevisses autres que pattes rouges, des torrents, pattes blanches et pattes grêles : pêche ouverte du 14 mars au 20 septembre 2026 en 1re catégorie.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "Ecrevisses autre qu'écrevisses à pattes rouges, des torrents, à pattes blanches et à pattes grêles : Du deuxième samedi de mars au troisième dimanche de septembre inclus .",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-ecrevisse-ouverture-cat2",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Du 1er janvier au 31 décembre inclus"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Écrevisses autres que pattes rouges, des torrents, pattes blanches et pattes grêles : pêche ouverte toute l'année en 2e catégorie.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "Ecrevisses autre qu'écrevisses à pattes rouges, des torrents, à pattes blanches et à pattes grêles : Du 1” janvier au 31 décembre inclus.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-ecrevisse-transport_vivant-transport",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "Transport vivant interdit pour les écrevisses autres que pattes rouges, pattes blanches et grêles des torrents."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisses pêchables : transport vivant interdit.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Pas de taille de capture (espèces susceptibles d’occasionner des dégâts). Transport vivant interdit",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-saumon-atlantique-interdit-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite sous toutes ses formes sur tout le département."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Saumon atlantique : pêche interdite partout dans le département.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "La pêche à la truite de mer (Salmo trutta trutta) et au saumon atlantique (Salmo Salar) est interdite sous toutes ses formes sur tout le département.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-truite-de-mer-interdit-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite sous toutes ses formes sur tout le département."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite de mer : pêche interdite partout dans le département.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "La pêche à la truite de mer (Salmo trutta trutta) et au saumon atlantique (Salmo Salar) est interdite sous toutes ses formes sur tout le département.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-lamproie-marine-interdit-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lamproie marine : pêche interdite toute l'année.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "interdites de pêche toute l’année : Anguilles argentées, écrevisses à patte rouges, écrevisses des torrents, écrevisses à pattes blanches, lamproie marine, lamproie de Planer",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-autre:lamproie de Planer-interdit-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "autre:lamproie de Planer"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lamproie de Planer : pêche interdite toute l'année.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "interdites de pêche toute l’année : Anguilles argentées, écrevisses à patte rouges, écrevisses des torrents, écrevisses à pattes blanches, lamproie marine, lamproie de Planer",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 23,
+    "texte": "23 cm, sauf 20 cm sur les cours d'eau de l'annexe IV (secteur du plateau de Millevaches)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 23 cm dans le département, sauf 20 cm sur les cours d'eau de l'annexe IV.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "23 cm à l’exception du secteur du « plateau de Millevaches »",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 23,
+    "texte": "23 cm, sauf 20 cm sur les cours d'eau de l'annexe IV (secteur du plateau de Millevaches)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 23 cm dans le département, sauf 20 cm sur les cours d'eau de l'annexe IV.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "23 cm à l’exception du secteur du « plateau de Millevaches »",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-omble-fontaine-taille_min-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 23,
+    "texte": "23 cm, sauf 20 cm sur les cours d'eau de l'annexe IV (secteur du plateau de Millevaches)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Omble de fontaine : taille minimale de 23 cm dans le département, sauf 20 cm sur les cours d'eau de l'annexe IV.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "23 cm à l’exception du secteur du « plateau de Millevaches »",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2247-taille_min-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2247"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Ombre commun : taille minimale de 30 cm.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "30 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2195-taille_min-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 50,
+    "texte": "Pas de taille en 1re catégorie, sauf plans d'eau limitrophes de l'article 5."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Sandre : taille minimale de 50 cm en 2e catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "50 cm en 2ème catégorie",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2053-taille_min-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30,
+    "texte": "Pas de taille en 1re catégorie."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Black-bass : taille minimale de 30 cm en 2e catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "30 cm en 2ème catégorie",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-grande-alose-taille_min-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grande alose : taille minimale de 30 cm.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "De 0,30m pour les aloses, l’ombre commun et le corégone ;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-alose-feinte-taille_min-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Alose feinte : taille minimale de 30 cm.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "De 0,30m pour les aloses, l’ombre commun et le corégone ;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-coregone-taille_min-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Corégone : taille minimale de 30 cm.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "De 0,30m pour les aloses, l’ombre commun et le corégone ;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-cristivomer-taille_min-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 35
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Cristivomer : taille minimale de 35 cm.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "De 0,35m pour la truite de mer et le cristivomer ;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-beraude",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "beraude et ses affluents",
+    "lieu": "Béraude et ses affluents (Montboucher, Saint-Amand-Jartoudeix) : en amont du pont de la RD941 situé au lieu-dit « La Grole »",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur Béraude.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-beraude",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "beraude et ses affluents",
+    "lieu": "Béraude et ses affluents (Montboucher, Saint-Amand-Jartoudeix) : en amont du pont de la RD941 situé au lieu-dit « La Grole »",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur Béraude.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-mourne",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "mourne et ses affluents",
+    "lieu": "Mourne et ses affluents (Bourganeuf) : en amont du pont de la RD941 situé au lieu-dit « Rigour »",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur Mourne.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-mourne",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "mourne et ses affluents",
+    "lieu": "Mourne et ses affluents (Bourganeuf) : en amont du pont de la RD941 situé au lieu-dit « Rigour »",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur Mourne.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-thaurion",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "thaurion et ses affluents",
+    "lieu": "Thaurion et ses affluents (Chavanat) : en amont du pont sur la RD3 situé au lieu-dit « Parsat », sauf la retenue de Lavaud-Gelade (courbe de niveau 675 m)",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur Thaurion.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-thaurion",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "thaurion et ses affluents",
+    "lieu": "Thaurion et ses affluents (Chavanat) : en amont du pont sur la RD3 situé au lieu-dit « Parsat », sauf la retenue de Lavaud-Gelade (courbe de niveau 675 m)",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur Thaurion.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-maulde",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "maulde et ses affluents",
+    "lieu": "Maulde et ses affluents : sauf la retenue de Vassivière (courbe de niveau 650 m)",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur Maulde.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-maulde",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "maulde et ses affluents",
+    "lieu": "Maulde et ses affluents : sauf la retenue de Vassivière (courbe de niveau 650 m)",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur Maulde.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-beauze",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "beauze et ses affluents",
+    "lieu": "Beauze et ses affluents (Aubusson) : en amont du pont de la Lune",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur Beauze.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-beauze",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "beauze et ses affluents",
+    "lieu": "Beauze et ses affluents (Aubusson) : en amont du pont de la Lune",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur Beauze.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-rozeille",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "rozeille et ses affluents",
+    "lieu": "Rozeille et ses affluents (Pontcharraud) : en amont du pont sur la RD10, sauf la retenue de Beissat",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur Rozeille.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-rozeille",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "rozeille et ses affluents",
+    "lieu": "Rozeille et ses affluents (Pontcharraud) : en amont du pont sur la RD10, sauf la retenue de Beissat",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur Rozeille.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-creuse",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "creuse et ses affluents",
+    "lieu": "Creuse et ses affluents (Felletin) : en amont du pont Roby sur la RD992",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur Creuse.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-creuse",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "creuse et ses affluents",
+    "lieu": "Creuse et ses affluents (Felletin) : en amont du pont Roby sur la RD992",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur Creuse.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-ruisseau-de-la-feuillade",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "ruisseau de la feuillade et ses affluents",
+    "lieu": "Ruisseau de La Feuillade et ses affluents",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur ruisseau de La Feuillade.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-ruisseau-de-la-feuillade",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "ruisseau de la feuillade et ses affluents",
+    "lieu": "Ruisseau de La Feuillade et ses affluents",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur ruisseau de La Feuillade.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-canal-du-dorat",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "dorat et ses affluents",
+    "lieu": "Canal du Dorat et ses affluents : en amont de la RD85",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur canal du Dorat.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-canal-du-dorat",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "dorat et ses affluents",
+    "lieu": "Canal du Dorat et ses affluents : en amont de la RD85",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur canal du Dorat.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-chandouille",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "chandouille et ses affluents",
+    "lieu": "Chandouille et ses affluents",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur Chandouille.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-chandouille",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "chandouille et ses affluents",
+    "lieu": "Chandouille et ses affluents",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur Chandouille.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-liege",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "liege et ses affluents",
+    "lieu": "Liège et ses affluents",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur Liège.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-liege",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "liege et ses affluents",
+    "lieu": "Liège et ses affluents",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur Liège.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-meouzette",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "meouzette et ses affluents",
+    "lieu": "Méouzette et ses affluents",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur Méouzette.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-meouzette",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "meouzette et ses affluents",
+    "lieu": "Méouzette et ses affluents",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur Méouzette.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-taille_min-chavanon",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "chavanon et ses affluents",
+    "lieu": "Chavanon et ses affluents",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : taille minimale de 20 cm (au lieu de 23 cm) sur Chavanon.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2216-taille_min-chavanon",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "chavanon et ses affluents",
+    "lieu": "Chavanon et ses affluents",
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 20,
+    "texte": "Taille minimale ramenée à 20 cm sur ce cours d'eau (annexe IV)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : taille minimale de 20 cm (au lieu de 23 cm) sur Chavanon.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Liste des cours d'eau ou la taille minimum de capture des truites est fixée à 20 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-salmonides-quota_jour-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 6
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Salmonidés : 6 captures par jour et par pêcheur.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "6 salmonidés/jour et par pêcheur, dont 3 truites fario maximum y compris l’ombre commun.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221+2247-quota_jour-fario-ombre",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2221",
+    "2247"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 3,
+    "texte": "Quota commun truite fario et ombre commun, dans les 6 salmonidés."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario et ombre commun ensemble : 3 captures par jour au plus.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "6 salmonidés/jour et par pêcheur, dont 3 truites fario maximum y compris l’ombre commun.",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2221-quota_jour-dept",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 3,
+    "texte": "Compte l'ombre commun."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : 3 captures par jour au plus (l'ombre commun compte dedans).",
+   "textes": [
+    "t5"
+   ],
+   "citation": "6 salmonidés/jour et par pêcheur, dont 3 truites fario maximum y compris l’ombre commun.",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151+2195+2053-quota_jour-2026",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151",
+    "2195",
+    "2053"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 3,
+    "texte": "Parmi brochet, sandre et black-bass, dont 2 brochets au plus."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "3 carnassiers par jour au plus (brochet, sandre, black-bass), dont 2 brochets.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "3 captures/jour et par pêcheur parmi les espèces ci-après ( brochet - sandre - black-bass ) avec un maximum de 2 brochets",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-quota_jour-2026",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 2,
+    "texte": "Sous-quota du total de 3 carnassiers."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "2 brochets par jour au plus.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "3 captures/jour et par pêcheur parmi les espèces ci-après ( brochet - sandre - black-bass ) avec un maximum de 2 brochets",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-mode_peche-cat1-ligne",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 1,
+    "hamecons_max": 2,
+    "mouches_max": 3,
+    "texte": "Une ligne montée sur une canne, 2 hameçons ou 3 mouches artificielles au maximum."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie : une seule ligne, avec 2 hameçons ou 3 mouches artificielles au plus.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Une ligne maximum montée sur une canne et munie de 2 hameçons ou de 3 mouches artificielles au maximum",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-anguille-mode_peche-cat1-vermee",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "La vermée est autorisée pour l'anguille."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie : vermée autorisée pour l'anguille.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "La vermée pour l’anguille",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-ecrevisse-mode_peche-cat1-balances",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "6 balances à écrevisses au plus."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie : 6 balances à écrevisses au plus.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "6 balances aux plus destinées à la capture des écrevisses",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-mode_peche-2cannes-retenue-de-beissat",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue de beissat",
+    "lieu": "Retenue de Beissat, sur la Rozeille",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Deux cannes autorisées."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie, retenue de beissat : deux cannes autorisées.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "retenue de Beissat sur la Rozeille",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-mode_peche-2cannes-martinats",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "martinats",
+    "lieu": "Plan d'eau des Martinats (Boussac-Bourg)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Deux cannes autorisées."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie, plan d'eau des martinats : deux cannes autorisées.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "des Martinats à Boussac Bourg",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-mode_peche-2cannes-flobourg",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "flobourg",
+    "lieu": "Plan d'eau de Flobourg (Lussat)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Deux cannes autorisées."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie, plan d'eau de flobourg : deux cannes autorisées.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "de Flobourg à Lussat",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-mode_peche-2cannes-stdizier",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "saint dizier leyrenne",
+    "lieu": "Plan d'eau de Saint Dizier Leyrenne",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Deux lignes montées sur canne autorisées en 2018 ; ce plan d'eau n'est plus cité par l'arrêté 2026."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie, plan d'eau de Saint Dizier Leyrenne : deux cannes selon l'arrêté de 2018, mais l'arrêté 2026 ne le cite plus.",
+   "textes": [
+    "t13"
+   ],
+   "citation": "-Le plan d’eau de Saint Dizier leyrenne",
+   "expire_le": null,
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-interdit-asticots-cat1",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Asticots et autres larves de diptères (pinkies, timas, vers de vase) interdits à l'hameçon, dans l'amorce et à la fronde."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie : asticots et autres larves de diptères interdits, sauf aux endroits listés.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "L’utilisation d’asticots et autres larves de diptères (pinkies, timas, vers de vase, etc...) est interdite à l’hameçon, dans l’amorce ou pour agrainer à la fronde.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-mode_peche-cat2-lignes",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 4,
+    "hamecons_max": 2,
+    "mouches_max": 3,
+    "texte": "Lignes montées sur cannes, chacune avec 2 hameçons ou 3 mouches artificielles, 4 cannes au maximum."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 2e catégorie : 4 cannes au plus, chacune avec 2 hameçons ou 3 mouches artificielles.",
+   "textes": [
+    "t14"
+   ],
+   "citation": "de lignes montées sur cannes munies chacune de 2 hameçons ou de 3 mouches artificielles au plus avec un maximum de 4 cannes",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-anguille-mode_peche-cat2-vermee",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "2",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "La vermée est autorisée pour l'anguille."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 2e catégorie : vermée autorisée pour l'anguille.",
+   "textes": [
+    "t14"
+   ],
+   "citation": "de la vermée pour l’anguille",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-ecrevisse-mode_peche-cat2-balances",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "6 balances à écrevisses au plus."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 2e catégorie : 6 balances à écrevisses au plus.",
+   "textes": [
+    "t14"
+   ],
+   "citation": "de 6 balances à écrevisses maximum",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-mode_peche-carafe",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "Carafe ou bouteille de 2 litres au plus pour prendre des vairons et autres poissons servant de vifs sans taille réglementaire."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 2e catégorie : une carafe ou bouteille de 2 litres au plus est permise pour capturer des vairons servant de vifs.",
+   "textes": [
+    "t15"
+   ],
+   "citation": "Elle est autorisée uniquement en 2éme catégorie à l’aide d’une carafe ou d’une bouteille d’une contenance de 2 litres maximum",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-interdit-engins",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "La pêche aux engins est interdite sur tout le département."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche aux engins est interdite dans tout le département.",
+   "textes": [
+    "t15"
+   ],
+   "citation": "La pêche aux engins, la pêche aux filets ainsi que la pêche à la traîne sont interdites sur l’ensemble du territoire départemental.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-interdit-filets",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "La pêche aux filets est interdite sur tout le département."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche aux filets est interdite dans tout le département.",
+   "textes": [
+    "t15"
+   ],
+   "citation": "La pêche aux engins, la pêche aux filets ainsi que la pêche à la traîne sont interdites sur l’ensemble du territoire départemental.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-interdit-traine",
+   "portee": {
+    "niveau": "departement",
+    "code": "23",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "La pêche à la traîne est interdite sur tout le département."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche à la traîne est interdite dans tout le département.",
+   "textes": [
+    "t15"
+   ],
+   "citation": "La pêche aux engins, la pêche aux filets ainsi que la pêche à la traîne sont interdites sur l’ensemble du territoire départemental.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-interdit-cours-eau-cat2-vif",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "cours d eau de 2e categorie",
+    "lieu": "Cours d'eau de 2e catégorie",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche au vif interdite pendant la fermeture du brochet, du 26 janvier au 24 avril 2026 inclus, sur les cours d'eau de 2e catégorie."
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "remplace": null,
+   "phrase": "Cours d'eau de 2e catégorie, du 26 janvier au 24 avril 2026 : pêche au vif interdite (fermeture du brochet).",
+   "textes": [
+    "t6"
+   ],
+   "citation": "la pêche aux vifs, aux poissons morts ou artificiels et autres leurres susceptibles de capturer ce poisson de manière non accidentelle, est interdite.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-interdit-cours-eau-cat2-poisson-mort",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "cours d eau de 2e categorie",
+    "lieu": "Cours d'eau de 2e catégorie",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche au poisson mort interdite pendant la fermeture du brochet, du 26 janvier au 24 avril 2026 inclus, sur les cours d'eau de 2e catégorie."
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "remplace": null,
+   "phrase": "Cours d'eau de 2e catégorie, du 26 janvier au 24 avril 2026 : pêche au poisson mort interdite (fermeture du brochet).",
+   "textes": [
+    "t6"
+   ],
+   "citation": "la pêche aux vifs, aux poissons morts ou artificiels et autres leurres susceptibles de capturer ce poisson de manière non accidentelle, est interdite.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-interdit-cours-eau-cat2-poisson-artificiel",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "cours d eau de 2e categorie",
+    "lieu": "Cours d'eau de 2e catégorie",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche aux poissons artificiels et aux leurres interdite pendant la fermeture du brochet, du 26 janvier au 24 avril 2026 inclus, sur les cours d'eau de 2e catégorie."
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "remplace": null,
+   "phrase": "Cours d'eau de 2e catégorie, du 26 janvier au 24 avril 2026 : pêche aux poissons artificiels et aux leurres interdite (fermeture du brochet).",
+   "textes": [
+    "t6"
+   ],
+   "citation": "la pêche aux vifs, aux poissons morts ou artificiels et autres leurres susceptibles de capturer ce poisson de manière non accidentelle, est interdite.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-remise_eau-accidentelle",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "plans d eau de 2e categorie",
+    "lieu": "Plans d'eau de 2e catégorie",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "En cas de capture accidentelle du brochet, remise à l'eau obligatoire et immédiate."
+   },
+   "du": "2026-01-26",
+   "au": "2026-03-14",
+   "remplace": null,
+   "phrase": "Plans d'eau de 2e catégorie : un brochet pris par accident doit être remis tout de suite à l'eau.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "En cas de capture accidentelle du brochet, sa remise à l’eau doit être obligatoire et immédiate.",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-fenetre_capture-fenetre-vassiviere",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "barrage de vassiviere",
+    "lieu": "Lac du barrage de Vassivière, sur la Maulde (limitrophe avec la Haute-Vienne)",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "type": "fenetre_capture",
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Les brochets de moins de 60 cm ou de plus de 80 cm sont remis immédiatement à l'eau."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac du barrage de Vassivière : un brochet entre 60 et 80 cm peut être gardé, les autres sont remis à l'eau tout de suite.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les brochets dont la longueur est inférieure à 60 cm ou supérieure à 80 cm devront être remis immédiatement à l’eau après leur capture",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-fenetre_capture-fenetre-saint-marc-le-maureix",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "barrage de saint marc le maureix",
+    "lieu": "Lac du barrage de Saint-Marc-Le-Maureix, sur le Thaurion (limitrophe avec la Haute-Vienne)",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "type": "fenetre_capture",
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Les brochets de moins de 60 cm ou de plus de 80 cm sont remis immédiatement à l'eau."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac du barrage de Saint-Marc-Le-Maureix : un brochet entre 60 et 80 cm peut être gardé, les autres sont remis à l'eau tout de suite.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les brochets dont la longueur est inférieure à 60 cm ou supérieure à 80 cm devront être remis immédiatement à l’eau après leur capture",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-ouverture-eguzon-1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue d eguzon",
+    "lieu": "Retenue d'Eguzon (limitrophe avec l'Indre)",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Du 1er janvier au 25 janvier inclus."
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "remplace": null,
+   "phrase": "Eguzon : brochet ouvert du 1er au 25 janvier 2026.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Du 1er janvier au 25 janvier inclus et du 6 juin au 31 décembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2195-ouverture-eguzon-1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue d eguzon",
+    "lieu": "Retenue d'Eguzon (limitrophe avec l'Indre)",
+    "geometrie": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Du 1er janvier au 15 mars inclus."
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-15",
+   "remplace": null,
+   "phrase": "Eguzon : sandre ouvert du 1er janvier au 15 mars 2026.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Du 1er janvier au 15 mars inclus et du 6 juin au 31 décembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2053-ouverture-eguzon-1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue d eguzon",
+    "lieu": "Retenue d'Eguzon (limitrophe avec l'Indre)",
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Du 1er janvier au 15 mars inclus."
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-15",
+   "remplace": null,
+   "phrase": "Eguzon : black-bass ouvert du 1er janvier au 15 mars 2026.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Du 1er janvier au 15 mars inclus et du 4 juillet au 31 décembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2053-ouverture-eguzon-2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue d eguzon",
+    "lieu": "Retenue d'Eguzon (limitrophe avec l'Indre)",
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "texte": "Du 4 juillet au 31 décembre inclus."
+   },
+   "du": "2026-07-04",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Eguzon : black-bass ouvert du 4 juillet au 31 décembre 2026.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Du 1er janvier au 15 mars inclus et du 4 juillet au 31 décembre inclus",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-taille_min-eguzon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue d eguzon",
+    "lieu": "Retenue d'Eguzon (limitrophe avec l'Indre)",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 60
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Eguzon : brochet de 60 cm au moins.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "60 cm et 2 unités",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2151-quota_jour-eguzon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue d eguzon",
+    "lieu": "Retenue d'Eguzon (limitrophe avec l'Indre)",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 2
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Eguzon : 2 brochets par jour au plus.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "60 cm et 2 unités",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2195-taille_min-eguzon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue d eguzon",
+    "lieu": "Retenue d'Eguzon (limitrophe avec l'Indre)",
+    "geometrie": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 50
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Eguzon : sandre de 50 cm au moins.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "50 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2053-taille_min-eguzon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue d eguzon",
+    "lieu": "Retenue d'Eguzon (limitrophe avec l'Indre)",
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Eguzon : black-bass de 30 cm au moins.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "30 cm",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2053-no_kill-nokill-bb-eguzon-annexe",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du lac d eguzon",
+    "lieu": "Retenue du lac d'Éguzon, sur son ensemble",
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "No kill obligatoire pour le black-bass sur l'ensemble de la retenue."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac d'Éguzon : tout black-bass pêché est remis à l'eau (no kill).",
+   "textes": [
+    "t18"
+   ],
+   "citation": "« Retenue du lac d’Éguzon » sur son ensemble.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-verger",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "verger",
+    "lieu": "Verger (Bourganeuf) : entre le pont au lieu-dit « la Grande Eau » sur la RD51 et le pont sur la RD940",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : Verger : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "« Le Verger » sur la commune de Bourganeuf entre le pont au lieu-dit « la Grande Eau »sur la RD51 et le pont sur la RD940,",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-rio-buzet",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "rio buzet",
+    "lieu": "Rio Buzet (Clugnat, Saint-Silvain-sous-Toulx) : de sa source à la confluence avec le Verraux",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : Rio Buzet : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "« Le Rio Buzet » sur les communes de Clugnat et de Saint-Silvain-sous-Toulx, de sa source à la confluence avec le Verraux,",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-gioune",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "gioune",
+    "lieu": "Gioune (Féniers, Gioux) : entre l'aval de l'étang de Féniers et le pont de Cruchant",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : Gioune : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "« La Gioune » sur les communes de Féniers et de Gioux, entre l’aval de l’étang de Féniers et le pont de Cruchant,",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-pic",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "pic",
+    "lieu": "Pic (Saint-Pierre-Bellevue, Saint-Pardoux-Morterolles) : entre le pont de Chez Brouillard sur la RD58 et le pont d'Augerolles sur la RD58",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : Pic : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "« Le Pic » sur les communes de Saint-Pierre-Bellevue et de Saint-Pardoux-Morterolles, entre le pont de Chez Brouillard sur la RD58 et le pont d’Augerolles sur la RD58,",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-tardes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "tardes",
+    "lieu": "Tardes (Chambon-sur-Voueize) : de la confluence avec le ruisseau des « Rières » jusqu'à 800 m en aval",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : Tardes : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "« La Tardes » : sur la commune de Chambon sur Voueize, de la confluence avec le ruisseau des « Rières » jusqu’à 800m en aval,",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-creuse",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "creuse",
+    "lieu": "Creuse (Saint-Médard-la-Rochette) : de la confluence avec le ruisseau de « Tranloup » jusqu'à 1 km en aval au lieu-dit Puylivat",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : Creuse : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "« La Creuse » sur la commune de Saint-Médard-La-Rochette, de la confluence avec le ruisseau de « Tranloup » jusqu’à 1km en aval au lieu-dit Puylivat,",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-mourne",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "mourne",
+    "lieu": "Mourne (Bourganeuf) : du pont « Le pont rouge » sur la RD940 jusqu'à 500 m en aval au pont sur le chemin du « Mas Neuf »",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : Mourne : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "« La Mourne » sur la commune de Bourganeuf du pont du lieu « Le pont rouge » sur la RD940 jusqu’à 500m en aval au pont sur le chemin du « Mas Neuf »,",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-grandrieux",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "grandrieux",
+    "lieu": "Grandrieux (Saint-Dizier-Leyrenne) : du pont de « Las Vias » au pont du « Moulin de Bost de Ville »",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : Grandrieux : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "« Le Grandrieux » sur la commune de Saint Dizier Leyrenne du pont de « Las Vias » au pont du « Moulin de Bost de Ville »,",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-gartempe",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "gartempe",
+    "lieu": "Gartempe (La Chapelle-Taillefert) : de la chute de l'écluse du « Moulin Parot » au pont du camping de la Chapelle-Taillefert sur le chemin communal de Gué Lavaud",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : Gartempe : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "« La Gartempe » sur la commune de La Chapelle-Taillefert, de la chute de l’écluse du « Moulin Parot » au pont du Camping de la Chapelle Taillefert sur le chemin communal de Gué Lavaud,",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-cubaynes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "23",
+    "eau": "cubaynes",
+    "lieu": "Cubaynes (Gentioux-Pigerolles) : du pont sur la RD8 au pont sur le chemin communal du « Moulin Ruiné »",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : Cubaynes : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "« Le Cubaynes » : sur la commune de Gentioux-Pigerolles, du pont sur la RD8 au pont sur le chemin communal du « Moulin Ruiné».",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-etang-de-merinchal",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "merinchal",
+    "lieu": "Étang de Mérinchal (Mérinchal) : réserve en queue de l'étang et le long de la chaussée de l'étang par mesure de sécurité",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : étang de Mérinchal : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "étang de Mérinchal sur la commune de Mérinchal, réserve en queue de l’étang et le long de la chaussée de l’étang par mesure de sécurité",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-etang-des-viergnes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "viergnes",
+    "lieu": "Étang des Viergnes (Bétête) : réserve en queue d'étang",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : étang des Viergnes : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "étang des Viergnes sur la commune de Bétête, réserve en queue d’étang",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-etang-du-moulin",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "moulin",
+    "lieu": "Étang du Moulin (Donzeil) : réserve en queue d'étang",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : étang du Moulin : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "étang du Moulin sur la commune de Donzeil , réserve en queue d’étang",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-reserve-reserve-barrage-de-faux-la-montagn",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "barrage de faux la montagne",
+    "lieu": "Barrage de Faux-la-Montagne (Faux-la-Montagne) : réserve entre le pont sur la RD 85 et celui situé sur la RD 992",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche interdite par tous moyens, toutes espèces, du 1er janvier au 31 décembre 2026."
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Réserve temporaire : barrage de Faux-la-Montagne : toute pêche est interdite en 2026 sur ce secteur.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "barrage de Faux-la-Montagne sur la commune de Faux-la-Montagne, réserve entre le pont sur la RD 85 et celui situé sur la RD 992",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2110-carpe_nuit-carpe-nuit-combes-zone-unique",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage des combes",
+    "lieu": "Retenue du barrage des Combes (Felletin) : zone unique, rive droite le long de la route communale menant à Felletin : zone d'environ 1100 m, 10 postes numérotés de 1 à 10",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée depuis les berges, du 1er avril 2026 au 30 novembre 2026 inclus, sur la zone unique : rive droite le long de la route communale menant à Felletin : zone d'environ 1100 m, 10 postes numérotés de 1 à 10."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage des Combes : pêche de la carpe de nuit permise du 1er avril au 30 novembre 2026 sur la zone unique.",
+   "textes": [
+    "t20"
+   ],
+   "citation": "Une zone d’environ 1100 m comportant 10 postes matérialisés par des panneaux numérotés de 1 à 10.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-remise_eau-carpe-nuit-combes-remise-eau",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage des combes",
+    "lieu": "Retenue du barrage des Combes (Felletin)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Tout poisson pris la nuit doit être remis immédiatement à l'eau."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage des Combes, carpe de nuit : tout poisson pris la nuit est remis tout de suite à l'eau.",
+   "textes": [
+    "t21"
+   ],
+   "citation": "Tout poisson pris la nuit (tel que définie au premier aliéna du présent article) doit être remis immédiatement à l’eau, dans les meilleures conditions possibles, afin d’assurer sa survie.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2110-carpe_nuit-carpe-nuit-faux-la-montagne-zone-1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de faux la montagne",
+    "lieu": "Retenue du barrage de Faux-la-Montagne (Faux-la-Montagne) : zone 1, rive droite le long du GR440 : première zone d'environ 500 m, 9 postes numérotés de 1 à 9",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée depuis les berges, du 1er avril 2026 au 30 novembre 2026 inclus, sur la zone 1 : rive droite le long du GR440 : première zone d'environ 500 m, 9 postes numérotés de 1 à 9."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Faux-la-Montagne : pêche de la carpe de nuit permise du 1er avril au 30 novembre 2026 sur la zone 1.",
+   "textes": [
+    "t20"
+   ],
+   "citation": "Première zone d’environ 500 m comportant 9 postes matérialisés par des panneaux numérotés de 1 à 9.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2110-carpe_nuit-carpe-nuit-faux-la-montagne-zone-2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de faux la montagne",
+    "lieu": "Retenue du barrage de Faux-la-Montagne (Faux-la-Montagne) : zone 2, rive droite le long du GR440 : deuxième zone d'environ 450 m, 5 postes numérotés de 1 à 5",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée depuis les berges, du 1er avril 2026 au 30 novembre 2026 inclus, sur la zone 2 : rive droite le long du GR440 : deuxième zone d'environ 450 m, 5 postes numérotés de 1 à 5."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Faux-la-Montagne : pêche de la carpe de nuit permise du 1er avril au 30 novembre 2026 sur la zone 2.",
+   "textes": [
+    "t20"
+   ],
+   "citation": "Deuxième zone d’environ 450 m comportant 5 postes matérialisés par des panneaux numérotés de 1 à 5.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-remise_eau-carpe-nuit-faux-la-montagne-remise",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de faux la montagne",
+    "lieu": "Retenue du barrage de Faux-la-Montagne (Faux-la-Montagne)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Tout poisson pris la nuit doit être remis immédiatement à l'eau."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Faux-la-Montagne, carpe de nuit : tout poisson pris la nuit est remis tout de suite à l'eau.",
+   "textes": [
+    "t21"
+   ],
+   "citation": "Tout poisson pris la nuit (tel que définie au premier aliéna du présent article) doit être remis immédiatement à l’eau, dans les meilleures conditions possibles, afin d’assurer sa survie.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2110-carpe_nuit-carpe-nuit-lavaud-gelade-zone-1-la",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de lavaud gelade",
+    "lieu": "Retenue du barrage de Lavaud-Gelade (Royère-de-Vassivière, Saint-Marc-à-Loubaud) : zone 1 la Jarousse / le Périoux, rive gauche, la Jarousse / le Périoux : première zone d'environ 750 m, 8 postes numérotés de 1 à 8",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée depuis les berges, du 1er avril 2026 au 30 novembre 2026 inclus, sur la zone 1 la Jarousse / le Périoux : rive gauche, la Jarousse / le Périoux : première zone d'environ 750 m, 8 postes numérotés de 1 à 8."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Lavaud-Gelade : pêche de la carpe de nuit permise du 1er avril au 30 novembre 2026 sur la zone 1 la Jarousse / le Périoux.",
+   "textes": [
+    "t20"
+   ],
+   "citation": "Première zone « la Jarousse / le Périoux » d’environ 750 m comportant 8 postes matérialisés par des panneaux numérotés de 1 à 8.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2110-carpe_nuit-carpe-nuit-lavaud-gelade-zone-2-le",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de lavaud gelade",
+    "lieu": "Retenue du barrage de Lavaud-Gelade (Royère-de-Vassivière, Saint-Marc-à-Loubaud) : zone 2 les Pondauds, rive droite, les Pondauds : deuxième zone d'environ 450 m, 4 postes numérotés de 1 à 4",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée depuis les berges, du 1er avril 2026 au 30 novembre 2026 inclus, sur la zone 2 les Pondauds : rive droite, les Pondauds : deuxième zone d'environ 450 m, 4 postes numérotés de 1 à 4."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Lavaud-Gelade : pêche de la carpe de nuit permise du 1er avril au 30 novembre 2026 sur la zone 2 les Pondauds.",
+   "textes": [
+    "t20"
+   ],
+   "citation": "Deuxième zone « les Pondauds » d’environ 450 m comportant 4 postes matérialisés par des panneaux numérotés de 1 à 4.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2110-carpe_nuit-carpe-nuit-lavaud-gelade-zone-3-pe",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de lavaud gelade",
+    "lieu": "Retenue du barrage de Lavaud-Gelade (Royère-de-Vassivière, Saint-Marc-à-Loubaud) : zone 3 Pelletanges, rive droite, Pelletanges : troisième zone d'environ 250 m, 3 postes numérotés de 1 à 3",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée depuis les berges, du 1er avril 2026 au 30 novembre 2026 inclus, sur la zone 3 Pelletanges : rive droite, Pelletanges : troisième zone d'environ 250 m, 3 postes numérotés de 1 à 3."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Lavaud-Gelade : pêche de la carpe de nuit permise du 1er avril au 30 novembre 2026 sur la zone 3 Pelletanges.",
+   "textes": [
+    "t20"
+   ],
+   "citation": "Troisième zone « Pelletanges » d’environ 250 m comportant 3 postes matérialisés par des panneaux numérotés de 1 à 3.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-remise_eau-carpe-nuit-lavaud-gelade-remise-ea",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de lavaud gelade",
+    "lieu": "Retenue du barrage de Lavaud-Gelade (Royère-de-Vassivière, Saint-Marc-à-Loubaud)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Tout poisson pris la nuit doit être remis immédiatement à l'eau."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Lavaud-Gelade, carpe de nuit : tout poisson pris la nuit est remis tout de suite à l'eau.",
+   "textes": [
+    "t21"
+   ],
+   "citation": "Tout poisson pris la nuit (tel que définie au premier aliéna du présent article) doit être remis immédiatement à l’eau, dans les meilleures conditions possibles, afin d’assurer sa survie.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2110-carpe_nuit-carpe-nuit-vassiviere-zone-unique",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue de vassiviere",
+    "lieu": "Retenue de Vassivière (Royère-de-Vassivière) : zone unique Vauveix, lieu-dit Vauveix, rive gauche à l'ouest de la base de loisir : zone d'environ 400 m, 4 postes numérotés de 1 à 4",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée depuis les berges, du 1er avril 2026 au 30 novembre 2026 inclus, sur la zone unique Vauveix : lieu-dit Vauveix, rive gauche à l'ouest de la base de loisir : zone d'environ 400 m, 4 postes numérotés de 1 à 4."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue de Vassivière : pêche de la carpe de nuit permise du 1er avril au 30 novembre 2026 sur la zone unique Vauveix.",
+   "textes": [
+    "t20"
+   ],
+   "citation": "Une zone d’environ 400 m comportant 4 postes matérialisés par des panneaux numérotés de 1 à 4.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-remise_eau-carpe-nuit-vassiviere-remise-eau",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue de vassiviere",
+    "lieu": "Retenue de Vassivière (Royère-de-Vassivière)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Tout poisson pris la nuit doit être remis immédiatement à l'eau."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue de Vassivière, carpe de nuit : tout poisson pris la nuit est remis tout de suite à l'eau.",
+   "textes": [
+    "t21"
+   ],
+   "citation": "Tout poisson pris la nuit (tel que définie au premier aliéna du présent article) doit être remis immédiatement à l’eau, dans les meilleures conditions possibles, afin d’assurer sa survie.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2110-carpe_nuit-carpe-nuit-champsanglard-zone-1-an",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de champsanglard",
+    "lieu": "Retenue du barrage de Champsanglard (Anzème, Jouillat, Champsanglard) : zone 1 Anzème, rive gauche, Anzème, en amont de la plage de péchadoire : première zone d'environ 200 m, 5 postes numérotés de 1 à 5",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée depuis les berges, du 1er avril 2026 au 30 novembre 2026 inclus, sur la zone 1 Anzème : rive gauche, Anzème, en amont de la plage de péchadoire : première zone d'environ 200 m, 5 postes numérotés de 1 à 5."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Champsanglard : pêche de la carpe de nuit permise du 1er avril au 30 novembre 2026 sur la zone 1 Anzème.",
+   "textes": [
+    "t20"
+   ],
+   "citation": "Première zone d’environ 200 m comportant 5 postes matérialisés par des panneaux numérotés de 1 à 5.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2110-carpe_nuit-carpe-nuit-champsanglard-zone-2-an",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de champsanglard",
+    "lieu": "Retenue du barrage de Champsanglard (Anzème, Jouillat, Champsanglard) : zone 2 Anzème, rive gauche, Anzème, en amont de la plage de péchadoire : deuxième zone d'environ 120 m, 2 postes numérotés de 1 à 2",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée depuis les berges, du 1er avril 2026 au 30 novembre 2026 inclus, sur la zone 2 Anzème : rive gauche, Anzème, en amont de la plage de péchadoire : deuxième zone d'environ 120 m, 2 postes numérotés de 1 à 2."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Champsanglard : pêche de la carpe de nuit permise du 1er avril au 30 novembre 2026 sur la zone 2 Anzème.",
+   "textes": [
+    "t20"
+   ],
+   "citation": "Deuxième zone d’environ 120 m comportant 2 postes matérialisés par des panneaux numérotés de 1 à 2.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2110-carpe_nuit-carpe-nuit-champsanglard-zone-joui",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de champsanglard",
+    "lieu": "Retenue du barrage de Champsanglard (Anzème, Jouillat, Champsanglard) : zone Jouillat, rive droite, Jouillat, en amont de la plage : première zone d'environ 330 m, 5 postes numérotés de 1 à 5",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée depuis les berges, du 1er avril 2026 au 30 novembre 2026 inclus, sur la zone Jouillat : rive droite, Jouillat, en amont de la plage : première zone d'environ 330 m, 5 postes numérotés de 1 à 5."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Champsanglard : pêche de la carpe de nuit permise du 1er avril au 30 novembre 2026 sur la zone Jouillat.",
+   "textes": [
+    "t20"
+   ],
+   "citation": "Première zone d’environ 330 m comportant 5 postes matérialisés par des panneaux numérotés de 1 à 5.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-2110-carpe_nuit-carpe-nuit-champsanglard-zone-cham",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de champsanglard",
+    "lieu": "Retenue du barrage de Champsanglard (Anzème, Jouillat, Champsanglard) : zone Champsanglard, rive droite, Champsanglard, en amont de la mise à l'eau : deuxième zone d'environ 150 m, 3 postes numérotés de 1 à 3",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée depuis les berges, du 1er avril 2026 au 30 novembre 2026 inclus, sur la zone Champsanglard : rive droite, Champsanglard, en amont de la mise à l'eau : deuxième zone d'environ 150 m, 3 postes numérotés de 1 à 3."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Champsanglard : pêche de la carpe de nuit permise du 1er avril au 30 novembre 2026 sur la zone Champsanglard.",
+   "textes": [
+    "t20"
+   ],
+   "citation": "Deuxième zone d’environ 150 m comportant 3 postes matérialisés par des panneaux numérotés de 1 à 3.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "23-toutes-remise_eau-carpe-nuit-champsanglard-remise-ea",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "23",
+    "eau": "retenue du barrage de champsanglard",
+    "lieu": "Retenue du barrage de Champsanglard (Anzème, Jouillat, Champsanglard)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Tout poisson pris la nuit doit être remis immédiatement à l'eau."
+   },
+   "du": "2026-04-01",
+   "au": "2026-11-30",
+   "remplace": null,
+   "phrase": "Retenue du barrage de Champsanglard, carpe de nuit : tout poisson pris la nuit est remis tout de suite à l'eau.",
+   "textes": [
+    "t21"
+   ],
+   "citation": "Tout poisson pris la nuit (tel que définie au premier aliéna du présent article) doit être remis immédiatement à l’eau, dans les meilleures conditions possibles, afin d’assurer sa survie.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  }
+ ],
+ "a_verifier": [
+  {
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t9"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "quota_jour",
+   "especes": [
+    "2151",
+    "2195",
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t22"
+   ]
+  },
+  {
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t22"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "sedelle",
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "petite creuse",
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "creuse",
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "gartempe",
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "thaurion",
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "flobourg",
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "saint dizier leyrenne",
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "retenue de vassiviere",
+   "textes": [
+    "t24"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "eau": "parcours loisir peche a la truite",
+   "textes": [
+    "t25"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "eau": "plans d eau de 2e categorie",
+   "textes": [
+    "t6"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": "plans d eau de 2e categorie",
+   "textes": [
+    "t6"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": "retenue d eguzon",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "eau": "retenue d eguzon",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": "retenue d eguzon",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "parcours no kill",
+   "textes": [
+    "t26"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "parcours no kill",
+   "textes": [
+    "t15"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "parcours no kill",
+   "textes": [
+    "t15"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "parcours no kill",
+   "textes": [
+    "t18"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "eau": "parcours no kill black bass",
+   "textes": [
+    "t18"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue du barrage des combes",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue du barrage des combes",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "transport_vivant",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue du barrage des combes",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue du barrage de faux la montagne",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue du barrage de faux la montagne",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "transport_vivant",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue du barrage de faux la montagne",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue du barrage de lavaud gelade",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue du barrage de lavaud gelade",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "transport_vivant",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue du barrage de lavaud gelade",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue de vassiviere",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue de vassiviere",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "transport_vivant",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue de vassiviere",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue du barrage de champsanglard",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue du barrage de champsanglard",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "transport_vivant",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue du barrage de champsanglard",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue de l age",
+   "textes": [
+    "t20"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue de l age",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue de l age",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue de l age",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "transport_vivant",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue de l age",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "eau": "tarde et ses affluents",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "eau": "voueize et ses affluents",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t30"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t30"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "la beraude et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "la mourne et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "le thaurion et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "la maulde et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "la beauze et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "la rozeille et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "la creuse et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "le ruisseau de la feuillade et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "le canal du dorat et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "la chandouille et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "la liege et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "la meouzette et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": "le chavanon et ses affluents",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t32"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": "parcours loisir peche a la truite",
+   "textes": [
+    "t33"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [
+    "2195",
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t32"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "1",
+   "eau": "la sedelle",
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "1",
+   "eau": "la petite creuse",
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "1",
+   "eau": "la creuse",
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "1",
+   "eau": "la gartempe",
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "1",
+   "eau": "le thaurion",
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "1",
+   "eau": "retenue de flobourg",
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "1",
+   "eau": "saint dizier leyrenne",
+   "textes": [
+    "t35"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": "la creuse",
+   "textes": [
+    "t36"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue du barrage des combes",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue du barrage de faux la montagne",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue du barrage de lavaud gelade",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue de vassiviere",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue de vassiviere",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue du barrage de champsanglard",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue de lage",
+   "textes": [
+    "t38"
+   ]
+  },
+  {
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue de lage",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "retenue de lage",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [],
+   "categorie": "2",
+   "eau": "retenue de lage",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t39"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "eau": "tardes et ses affluents",
+   "textes": [
+    "t39"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "eau": "voueize et ses affluents",
+   "textes": [
+    "t39"
+   ]
+  }
+ ]
+}

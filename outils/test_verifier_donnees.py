@@ -52,6 +52,13 @@ class Chargeur(unittest.TestCase):
         self.assertLessEqual(len(r["citation"]), 300)
         self.assertTrue(avert)
 
+    def test_deux_tailles_du_meme_texte_restent_separees(self):
+        """Deux tronçons de la même rivière dans un seul texte : pas de candidats_cm, deux règles."""
+        cons = {"regles": [regle("a", ARRETE, cm=23, niveau="troncon", lieu="Maronne : amont"),
+                           regle("b", ARRETE, cm=30, niveau="troncon", lieu="Maronne : aval")], "desaccords": {}}
+        f, _ = vd.assembler("19", cons, [], {}, set(), "v")
+        self.assertEqual(sorted(r["valeur"]["cm"] for r in f["regles"]), [23, 30])
+
     def test_refus_forme_v1(self):
         r = regle("v1", AVIS, cm=50)
         r["valeur"] = {"periodes": [1, 2]}
