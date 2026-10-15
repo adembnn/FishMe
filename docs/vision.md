@@ -1,5 +1,7 @@
 # Ta vision du 15 oct., challengée
 
+Là où ce texte et `CLAUDE.md` diffèrent, `CLAUDE.md` l'emporte : il porte les décisions prises après ce texte.
+
 Ta demande du 15 oct. (3 volets façon Clash Royale, IA entraînée, réglementation, mers et océans, carte, rareté, écrans) et ta capture « une version plus profonde, pas plus grosse ». Ce qui en sort pour la construction est dans `lots.md` et `parcours-demo.md` ; les recherches sont dans `reports/reconnaissance.md`, `reports/mer.md` et `reports/navigation-communaute.md`. « Estimation » veut dire calcul de Claude, pas mesure.
 
 ## 1. Ta capture, appliquée à ta demande
@@ -19,8 +21,8 @@ Ta demande du 15 oct. (3 volets façon Clash Royale, IA entraînée, réglementa
 - Les gens : trois pêcheurs sur un quai de la Marne, à qui on tend l'iPhone sans rien expliquer.
 
 **Les méthodes et les outils**
-- Create ML, l'app d'Apple qui entraîne un modèle en glissant des dossiers de photos, sans code. On le note sur un jeu de test tenu à part : la bonne espèce en n°1 (top-1), parmi les 3 proposées (top-3), et le tableau des confusions (« quand c'était un gardon, il a dit brème N fois »).
-- Des photos d'entraînement CC0 ou CC-BY prises hors d'iNaturalist (sur GBIF), parce que les conditions d'iNaturalist interdisent d'entraîner une IA à usage commercial (`reports/reconnaissance.md` §2).
+- Create ML, l'app d'Apple qui entraîne un modèle en glissant des dossiers de photos, sans code, contre DINOv2-S, un « œil » libre (Apache 2.0) auquel on apprend nos poissons. Les deux passent le même examen, sur un jeu de test tenu à part : la bonne espèce en n°1 (top-1), parmi les 3 proposées (top-3), et le tableau des confusions (« quand c'était un gardon, il a dit rotengle N fois »).
+- Des photos de prises : AFFiNe (7 000 prises de pêcheurs), Flickr par son API, GBIF et Wikimedia hors iNaturalist, et les nôtres. Les photos non libres servent seulement à l'entraînement interne, jamais publiées ni vendues (Adem, 15 oct.). iNaturalist et Observation.org restent exclus tant qu'Adem n'a pas tranché : leurs conditions refusent l'IA (`reports/reconnaissance.md` §2).
 - Les règles écrites en données (un fichier où chaque ligne porte sa source et sa date de lecture), et des cas d'or : des situations dont un humain écrit la réponse d'après l'arrêté, que les tests rejouent à chaque fusion.
 - La barre d'onglets native d'iOS 27, TestFlight, et la relecture accélérée demandée par MWM.
 
@@ -62,7 +64,7 @@ Ce qui coince : le compte à rebours sur l'écran verrouillé (Live Activity) de
 
 ### « Trouver le meilleur spot »
 Ce qui coince : aucune donnée ne dit où est le « meilleur » coin. L'OFB dit où une espèce a été relevée lors d'une pêche électrique, combien de fois et quand ; ses stations sont des points de mesure, souvent sans accès public. Promettre « le meilleur » et laisser un pêcheur bredouille, c'est la critique qu'un juré pêcheur fera en premier.
-Recommandation : le bouton devient « Où chercher ? ». On choisit une espèce (ou aucune) ; l'app montre les 3 coins publics les plus proches (OpenStreetMap et la fédération) près desquels l'OFB l'a relevée, chacun avec « N pêches, dernier relevé AAAA » et « ouvert aujourd'hui » ou « fermé ». Le calcul existe déjà dans `Core` (`especesProches`).
+Recommandation : le bouton devient « Choisir un autre spot ». On choisit une espèce (ou aucune) ; l'app montre les 3 coins publics les plus proches (OpenStreetMap et la fédération) près desquels l'OFB l'a relevée, chacun avec « N pêches, dernier relevé AAAA » et « ouvert aujourd'hui » ou « fermé ». Le calcul existe déjà dans `Core` (`especesProches`).
 
 ### Le volet droit : club et communauté
 Ce qui coince :
@@ -83,19 +85,37 @@ Options (probabilité qu'un autre LLM la propose, estimation) :
 Recommandation : d + e ce soir, b dans la mise à jour. Option la plus forte écartée : c, qui donne amis et notifications gratuitement mais dépend d'une relecture à part.
 
 ### Entraîner un algorithme de reconnaissance
-Ce qui coince (`reports/reconnaissance.md`) :
-- La source de photos évidente, iNaturalist, interdit l'entraînement d'une IA commerciale. Un juré technique peut le relever.
-- Hors d'iNaturalist, il reste moins de 160 observations libres pour le sandre, le silure, le barbeau et l'ombre, et presque aucune montre un poisson tenu en main.
-- Aucun chiffre publié ne dit si une IA distingue un gardon d'une brème, ou une fario d'une arc-en-ciel, sur une photo de pêcheur. Il faut le mesurer nous-mêmes.
-- L'IA d'Apple sans entraînement (Foundation Models) ne tourne que sur iPhone 15 Pro et plus, avec Apple Intelligence activé : l'iPhone du relecteur peut ne pas l'avoir.
+Ce qui coince (`reports/reconnaissance.md`, puis les recherches du 15 oct. dans `/mnt/project-files/build/reports/revue-15-oct/` : `modele-photo.md`, `reconnaissance-photos-et-modele.md`, `photos-de-prises.md`, `ia-apple.md`) :
+- L'app couvre toutes les espèces pêchables (Adem, 15 oct.) : 101 entrées, 66 classes pour le modèle, dont « autre poisson » et « pas un poisson ». Certaines n'ont presque aucune photo dans le monde (brochet aquitain 10, apron 24).
+- La source de photos évidente, iNaturalist, interdit l'entraînement d'une IA commerciale, et Observation.org bloque les robots d'IA. Sans elles, il reste environ 13 700 photos de poissons vivants pour 59 classes. D'où les photos non libres pour l'entraînement interne (Adem, 15 oct.) : AFFiNe, Flickr, nos photos.
+- Le pêcheur pose souvent avec son poisson : le détourage d'Apple prend la personne. Il faut un détecteur qui recadre le poisson, le même à l'entraînement et dans l'app.
+- Aucun chiffre publié ne dit si une IA distingue un gardon d'un rotengle, ou une fario d'une arc-en-ciel, sur une photo de pêcheur. Il faut le mesurer nous-mêmes.
+- L'IA d'Apple (Foundation Models) ne lit une photo que sur iPhone 15 Pro et plus récent, avec Apple Intelligence activé : l'iPhone du relecteur peut ne pas l'avoir. Elle n'a pas d'émulateur, et son cloud (Private Cloud Compute) est réservé aux petits comptes, pas à celui de MWM [?].
 - Le reproche ne viendra pas d'une erreur d'espèce. Il viendra d'un verdict faux affiché comme sûr.
 
-Recommandation :
-- La grille des 14 espèces reste le chemin qui marche toujours, avec pour chaque espèce sa silhouette et son critère distinctif.
-- On entraîne un modèle Create ML sur les photos libres hors iNaturalist et sur nos propres photos. Il n'entre dans l'app que s'il passe le test fixé avant l'entraînement, sur des photos tenues à part : bonne espèce parmi les 3 proposées dans 90 % des cas au moins, en n°1 dans 70 % des cas au moins (seuils proposés). Sinon, la version de ce soir propose l'IA d'Apple sur les iPhone qui l'ont, seulement si elle passe le même test, et la grille partout ailleurs ; le modèle arrive dans la mise à jour.
-- Pour les paires proches (gardon, brème, chevesne ; fario, arc-en-ciel), l'écran de confirmation montre le critère qui les sépare, et « je ne sais pas » reste toujours visible.
+Recommandation (lot R1, tenu par le fil « Photos et modèle de reconnaissance » ; S relit) :
+- La grille d'images de toutes les espèces, groupées par famille, les espèces du coin d'abord, reste le chemin qui marche toujours. Les poissons s'y cherchent en images, jamais dans une liste de noms.
+- Le jeu de test d'abord, au moins 70 % de photos trophées, commité avant tout entraînement.
+- Un professeur (le modèle de Fishial, qui ne quitte pas nos machines) trie les photos ; un détecteur recadre le poisson ; Create ML et DINOv2-S passent le même examen, et on garde le plus léger, sauf si DINOv2 gagne 5 points. Seuils : bonne espèce parmi les 3 proposées dans 90 % des cas au moins, en n°1 dans 70 % des cas au moins (seuils proposés). Seules les classes qui passent entrent dans l'app : pour la version soumise, une vingtaine, les plus pêchées (estimation) ; les autres se choisissent dans la grille (par défaut, à confirmer par Adem). Modèle pas prêt à temps : la grille, et le modèle dans une mise à jour.
+- La présence OFB du coin sert d'a priori, avec un plancher : une espèce jamais relevée (légendaire) reste proposable.
+- L'IA d'Apple passe le même examen sur un Mac en macOS 27. Elle n'entre que si elle le passe, et jamais comme seul chemin.
+- Pour les 31 entrées dont l'erreur change le verdict (truites, carnassiers, écrevisses protégées et exotiques, anguille, esturgeons, grenouilles), l'écran montre les sosies côte à côte avec le critère qui les sépare ; le stade de l'anguille est toujours demandé ; un esturgeon est toujours relâché. « Je ne sais pas » reste visible dans la grille.
 - Tant que l'espèce n'est pas confirmée, l'app affiche le verdict le plus prudent des espèces encore possibles : « relâche-la ».
-Option la plus forte écartée : l'IA d'Apple comme aide principale. Elle reste valable si, sur le même jeu de test, elle bat notre modèle (une heure pour le mesurer, estimation).
+Coût (estimation, `modele-photo.md`) : environ 1 jour écoulé pour une vingtaine de classes ; 40 à 75 h de travail pour toutes.
+Option la plus forte écartée : l'IA d'Apple comme aide principale. Elle n'existe que sur les iPhone récents, aucune mesure ne porte sur les poissons, et Apple prévoit lui-même un classifieur à côté pour reconnaître des espèces. Elle reste valable si, sur le même examen, elle bat notre modèle (environ 1 h 30 pour le mesurer, estimation).
+
+### Mesurer la taille, estimer le poids
+Ce qui coince (`/mnt/project-files/build/reports/revue-15-oct/taille-et-poids.md`) :
+- Aucune méthode sur iPhone ne mesure un poisson à mieux que 1 à 2 cm (LiDAR des modèles Pro) ; sans repère, une seule photo se trompe de plus de 25 %. Or une prise se joue souvent au centimètre de la maille.
+- Un repère posé devant le poisson fausse la mesure de 13 % ; une carte bancaire est trop petite, et ses numéros finissent sur une photo partagée.
+- Le poids calculé depuis la longueur (poids = a × L^b) s'écarte de 10 à 20 % du vrai, plus trois fois l'erreur de longueur.
+
+Recommandation :
+- Le poisson posé sur sa toise : Vision lit les chiffres et pré-règle le curseur, le pêcheur confirme toujours.
+- La mesure en réalité augmentée en plus, en dernier, marquée « estimé » : elle ne donne jamais de verdict de taille (sinon, mise à jour).
+- À moins de 2 cm de la maille : « Trop près de la maille, mesure sur une toise », aucun verdict (par défaut, à confirmer par Adem).
+- Le poids « ≈ 1,4 kg estimé », avec sa source d'un toucher, seulement pour les 30 espèces qui ont leurs coefficients (`longueur-poids.json`) ; il n'entre jamais dans le verdict. À recalculer avant la sortie sur les données françaises ASPE de l'OFB (Licence Ouverte).
+Option la plus forte écartée : la profondeur tirée d'une seule photo (Depth Pro, Depth Anything) : jusqu'à 25 % d'erreur, et des licences fermées.
 
 ### Appliquer la réglementation sans qu'on vous le reproche
 Ce qu'on peut vous reprocher, du plus grave au moins grave :
@@ -106,7 +126,7 @@ Ce qu'on peut vous reprocher, du plus grave au moins grave :
 Ce que le plan fait déjà : l'IA propose, le pêcheur confirme, la table décide ; chaque verdict porte sa source, sa date de lecture et « l'arrêté préfectoral fait foi, en cas de doute, relâche » ; hors des départements saisis, jamais « tu peux la garder ».
 
 Ce que j'ajoute :
-- Le verdict « tu peux la garder » n'existe que dans les départements dont toutes les règles ont été relues par une deuxième personne. La liste vient des données : si le 77 n'est pas relu ce soir, l'app dit « vérifie l'arrêté » dans le 77, sans une ligne de code de plus.
+- L'app n'accorde jamais la permission de garder, même dans un département relu : une liste de contrôle sourcée, puis « relâche-la », « vérifie l'arrêté » ou « aucune règle saisie ne l'interdit ; l'arrêté fait foi » (`CLAUDE.md`). La liste des départements couverts vient des données : si le 77 n'est pas chargé ce soir, l'app dit « vérifie l'arrêté » dans le 77, sans une ligne de code de plus.
 - La session compte les poissons gardés : au troisième carnassier du jour, « quota du jour atteint ».
 - Une validation hors de l'équipe : on envoie nos cas de verdict à la fédération du 94 aujourd'hui, et on dit au jury qui les a confirmés.
 - Aujourd'hui, les règles ne sont qu'un brouillon (6 tailles nationales et 3 règles du 94, rien de relu) : leur saisie et leur relecture passent en tête de journée.
@@ -145,10 +165,10 @@ Titouan a écrit le 13 oct. un atelier complet dans `harnais-titouan/` (branche 
 | iOS minimum | 26 | 27 (12 oct.), l'IA photo l'exige | 27 |
 | Ouverture | l'appareil photo, 4 onglets | la carte au centre, 3 volets (ta vision) | 3 volets |
 | Rareté | 5 classes, seuils 30/12/4/1 % | 4 niveaux, seuils 50/20 % (12 oct.) | 4 niveaux |
-| Espèces | 48 au catalogue | 14 jouables | 14 ce soir ; son catalogue sert la mise à jour |
+| Espèces | 48 au catalogue | toutes les espèces pêchables (Adem, 15 oct.) | les 101 entrées de `especes-reconnaissance.json`, en images ; le modèle reconnaît les classes qui passent son examen, les autres se choisissent dans la grille |
 | Verdict | aucun : texte fixe et lien vers la fédération (sa règle A1) | garde, relâche, vérifie, sur table relue | question 2 |
 | Communauté | aucune, partage d'image (son L38) | amis par lien (version suivante) | « Mon club » et partage d'image |
-| Paywall | à la 16e carte, essai 1 semaine, 3,99 € et 24,99 € | à la 2e carte, essai 1 mois | question d'une prochaine série |
+| Paywall | à la 16e carte, essai 1 semaine, 3,99 € et 24,99 € | à la 2e carte, essai 1 mois (12 oct., tombé) | tranché le 15 oct. (`CLAUDE.md`) : un spot gratuit ; paywall qui se ferme à la fin de la 1re session, qui bloque au choix d'un 2e spot ; mensuel avec 1 semaine d'essai, annuels sans essai |
 | Nom | « Bredouille » | pas choisi | question d'une prochaine série |
 | Données OFB | script Hub'Eau déjà lancé (75, 78, 92, 95), fichiers commités | script, jamais commité (ta règle) | son script devient le lot D2, ses fichiers sortent de git |
 | Photos d'essai | 60 photos iNaturalist | aucune | iNaturalist interdit l'entraînement commercial : aucune ne sert à entraîner, nos photos servent au test |
@@ -158,16 +178,16 @@ Titouan a écrit le 13 oct. un atelier complet dans `harnais-titouan/` (branche 
 
 ## 3. Ce qu'on met sur une carte
 Le recto porte 6 éléments, pas un de plus :
-1. la photo du poisson, détourée si le détourage marche, sinon cadrée ;
+1. le poisson : l'illustration de l'espèce, ou le poisson détouré de la photo s'il marche ;
 2. le nom de l'espèce (le nom latin en petit) ;
 3. la rareté : la couleur du cadre et le mot (commun, peu commun, rare, légendaire) ;
 4. la taille en centimètres ;
 5. le lieu flouté : le cours d'eau et le département (« La Marne · 94 »), jamais le point exact ;
 6. la date et son rang dans la zone (compteur par zone voulu par Adem le 15 oct., forme en discussion dans le fil Maquettes).
 
-Le verso explique la carte :
+Le verso montre la vraie photo que le pêcheur a prise, souvent lui avec son poisson (Adem, 15 oct.), avec une bande courte :
 - « Rareté dans les relevés OFB du 94 : relevée dans 9 pêches sur 29, dernier relevé 2023 » ; pour un légendaire, « aucune pêche OFB ne l'a relevée dans le 94 depuis 2016 » ;
-- la consigne du moment avec sa source, et ce que le pêcheur a déclaré (gardée ou relâchée) ;
+- la consigne du moment avec sa source (une prise relâchée entre au Pescedex comme une prise gardée) ;
 - l'heure, la phase de lune et, si la prise vient d'une session, sa durée.
 
 La carte bredouille garde son dos à elle : lieu flouté, date, lune, durée de la session, et aucune rareté.
@@ -194,11 +214,11 @@ Par défaut : a, sans changement. Le c et le f sont les plus originaux et coûte
 ## 5. Les écrans, au plus court
 | # | Écran | Ce qu'il contient |
 |---|---|---|
-| 1 | Volet central : la carte | les coins, « Autour de moi », « Commencer une session », « Où chercher ? », le bandeau de session en cours |
+| 1 | Volet central : la carte | les coins, « Autour de moi », « Commencer une session », « Choisir un autre spot », le bandeau de session en cours |
 | 2 | Feuille d'un coin | espèces relevées avec « N pêches, dernier relevé AAAA », la règle du jour avec sa source, « Y aller » (ouvre Plans) |
-| 3 | Feuille de prise, en 3 temps | photo (ou photo d'exemple), puis 3 propositions ou la grille, puis la taille au curseur et le verdict |
+| 3 | Feuille de prise, en 3 temps | photo (ou photo d'exemple), puis 3 propositions en images ou la grille de toutes les espèces par famille, avec les sosies côte à côte avant de confirmer, puis la taille sur la toise, le poids (« ≈ 1,4 kg estimé ») et la liste de contrôle |
 | 4 | Révélation de la carte | la carte se retourne, puis rejoint le Pescedex |
-| 5 | Volet gauche : le Pescedex | les 14 espèces (silhouettes pour celles pas encore prises), « 4 sur les 11 relevées dans le 94 », une carte s'ouvre au toucher (recto et verso) |
+| 5 | Volet gauche : le Pescedex | toutes les espèces de la liste, en images (silhouettes pour celles pas encore prises), « 4 sur les 11 relevées dans le 94 », une carte s'ouvre au toucher (recto et verso) |
 | 6 | Volet droit : Mon club | ma fédération et mon association (liens), « j'ai ma carte de pêche 2026 », Sources, confidentialité et contact |
-| 7 | Paywall | après la première carte, essai « 1 mois », « Restaurer », conditions et confidentialité |
-Pas d'écran d'accueil : la position n'est demandée qu'au toucher de « Autour de moi », et la phrase légale vit sous chaque verdict. La page Sources (crédits OFB, OpenStreetMap, IGN, photos d'entraînement) s'ouvre depuis le volet droit.
+| 7 | Paywall | à la fin de la 1re session, après la carte (il se ferme), et au choix d'un 2e spot (il bloque) ; mensuel avec 1 semaine d'essai, annuels sans essai ; « Restaurer », conditions et confidentialité |
+Pas d'écran d'accueil : la position est demandée au premier lancement et la carte s'y adapte (Adem, 15 oct. 12h51), et la phrase légale vit sous chaque verdict. La page Sources (crédits OFB, OpenStreetMap, IGN, photos d'entraînement) s'ouvre depuis le volet droit.
