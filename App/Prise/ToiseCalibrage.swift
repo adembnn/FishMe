@@ -15,7 +15,7 @@ nonisolated struct TexteLu: Equatable, Sendable {
 
 /// Droite « centimètres = pente × pixels + origine », ajustée sur les chiffres lus. Logique pure.
 nonisolated struct ToiseCalibrage: Equatable, Sendable {
-    enum Axe: Equatable { case horizontal, vertical }
+    nonisolated enum Axe: Equatable, Sendable { case horizontal, vertical }
 
     var axe: Axe
     var pente: Double
