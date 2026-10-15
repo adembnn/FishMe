@@ -21,8 +21,9 @@ Un plan de travail commun pour tout ce qui se prépare sans écran (le paquet `C
 ## Arborescence du dépôt
 ```
 CLAUDE.md                      faits du dépôt et règles de lots
-Projet.xcodeproj               A seul
-App/App.swift, App/RootView.swift   A seul
+BuildChallenge.xcodeproj       A seul (projet fourni par MWM, importé au lot L0)
+TestConfig.storekit, mwm-spark-flash-sdk/   A seul (kit MWM)
+App/BuildChallengeApp.swift, App/RootView.swift   A seul
 App/Carte/   App/Prise/   App/Collection/   App/Abonnement/   App/Mesure/
 App/Session/ App/Mission/ App/Amis/          version suivante
 Widget/                        extension Live Activity (version suivante)

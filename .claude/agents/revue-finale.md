@@ -20,7 +20,7 @@ Tu es la dernière paire d'yeux avant que le build parte chez Apple. Les relecte
 
 ## 2. La check-list d'Apple, ligne par ligne
 Pour chaque ligne de `docs/app-store.md`, cherche la preuve dans le dépôt. Les lignes qui ne se prouvent pas dans le dépôt (0, 4, 5, 6, 10, 12, 13, 14, 15) forment un seul point « à confirmer par un humain » qui les nomme, sauf si le dépôt montre qu'elles sont fausses.
-- Ligne 1 : cible iPhone seulement (`TARGETED_DEVICE_FAMILY = 1` dans `Projet.xcodeproj/project.pbxproj`), iOS 27.0 minimum.
+- Ligne 1 : cible iPhone seulement (`TARGETED_DEVICE_FAMILY = 1` dans `BuildChallenge.xcodeproj/project.pbxproj`), iOS 27.0 minimum.
 - Ligne 2 et 3 : dans `store/`, nom de 30 caractères au plus, sous-titre, mots-clés (dans les limites d'App Store Connect), description qui nomme les 5 départements (75, 92, 93, 94, 77) et contient les liens conditions et confidentialité. Page de confidentialité qui nomme MWM pour le SDK. Page d'assistance avec un vrai contact, pas un modèle à remplir.
 - Ligne 7 : `PrivacyInfo.xcprivacy` pour l'app, et pour le SDK s'il est dans le build.
 - Ligne 8 : clés d'autorisation en français (`NSCameraUsageDescription`, `NSLocationWhenInUseUsageDescription`), aucune clé pour la photothèque, aucune position « toujours ».

@@ -30,7 +30,7 @@
 # reprend celui que A écrit jeudi dans la ligne SCHEMA= en tête de scripts/verif.sh (une seule saisie).
 SCHEMA="${SCHEMA:-}"
 
-PROJET="Projet.xcodeproj"
+PROJET="BuildChallenge.xcodeproj"
 PLISTBUDDY="${PLISTBUDDY:-/usr/libexec/PlistBuddy}"
 ORIGINE_BUILD=1790812800   # 1er octobre 2026, 00:00 UTC, en secondes Unix
 

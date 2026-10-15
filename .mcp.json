@@ -11,8 +11,12 @@
       "env": {
         "MOBILEBUILDMCP_ENABLED_WORKFLOWS": "simulator,simulator-management,ui-automation,device,xcode-ide",
         "MOBILEBUILDMCP_SENTRY_DISABLED": "true",
-        "MOBILEBUILDMCP_PROJECT_PATH": "Projet.xcodeproj"
+        "MOBILEBUILDMCP_PROJECT_PATH": "BuildChallenge.xcodeproj"
       }
+    },
+    "console-mwm-ai": {
+      "type": "http",
+      "url": "https://mcp.mwm.ai/mcp"
     }
   }
 }
