@@ -29,7 +29,8 @@ def git(*args, cwd=DEPOT, check=True):
 def preparer_copie():
     git("fetch", "origin", "--quiet", check=False)
     if os.path.isdir(os.path.join(DOSSIER_COPIE, ".git")) or os.path.exists(os.path.join(DOSSIER_COPIE, ".git")):
-        git("pull", "--ff-only", "--quiet", "origin", BRANCHE, cwd=DOSSIER_COPIE, check=False)
+        # --rebase : un push refusé (branche avancée par une autre machine) laisse un commit local ; on le rejoue par-dessus
+        git("pull", "--rebase", "--quiet", "origin", BRANCHE, cwd=DOSSIER_COPIE, check=False)
         return
     distante = git("ls-remote", "--heads", "origin", BRANCHE).stdout.strip()
     if distante:
@@ -65,10 +66,12 @@ def main():
             shutil.copy2(rap, os.path.join(dest_r, os.path.basename(rap)))
         pousses.append(code)
     git("add", "docs/regles-local", cwd=DOSSIER_COPIE)
-    if not git("status", "--porcelain", cwd=DOSSIER_COPIE).stdout.strip():
+    if git("status", "--porcelain", cwd=DOSSIER_COPIE).stdout.strip():
+        git("commit", "--quiet", "-m", f"Règles confirmées sur le PC : {', '.join(pousses)}", cwd=DOSSIER_COPIE)
+    elif not git("rev-list", f"origin/{BRANCHE}..HEAD", cwd=DOSSIER_COPIE, check=False).stdout.strip():
         print("rien de nouveau à pousser")
         return
-    git("commit", "--quiet", "-m", f"Règles confirmées sur le PC : {', '.join(pousses)}", cwd=DOSSIER_COPIE)
+    # sinon : un commit d'un push refusé reste à envoyer, rejoué par-dessus la branche distante
     git("push", "--quiet", "origin", f"HEAD:refs/heads/{BRANCHE}", cwd=DOSSIER_COPIE)
     print(f"poussé sur {BRANCHE} : {len(pousses)} département(s) : {', '.join(pousses)}")
 
