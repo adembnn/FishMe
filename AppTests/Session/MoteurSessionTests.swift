@@ -27,8 +27,8 @@ private let paris = Coordonnee(latitude: 48.85, longitude: 2.35)
 
 @MainActor
 private func moteur(fin: Date? = debut.addingTimeInterval(3600), horloge: HorlogeFausse = HorlogeFausse(debut),
-                    stockage: StockageMemoire = StockageMemoire(), coffre: CoffreMemoire = CoffreMemoire()) -> BuildChallenge.MoteurSession {
-    BuildChallenge.MoteurSession(session: SessionQuota3(), soleil: SoleilFixe(fin: fin), horloge: horloge, stockage: stockage, coffre: coffre)
+                    stockage: StockageMemoire = StockageMemoire(), coffre: CoffreMemoire = CoffreMemoire()) -> SuiviSession {
+    SuiviSession(session: SessionQuota3(), soleil: SoleilFixe(fin: fin), horloge: horloge, stockage: stockage, coffre: coffre)
 }
 
 private func carnassier(gardee: Bool) -> Prise {

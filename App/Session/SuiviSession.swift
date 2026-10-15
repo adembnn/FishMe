@@ -40,7 +40,7 @@ struct FinDeSession: Equatable {
 }
 
 @MainActor @Observable
-final class MoteurSession {
+final class SuiviSession {
     private(set) var enCours: SessionEnCours?
     private(set) var derniereFin: FinDeSession?
     private(set) var spotGratuit: Spot?
@@ -120,12 +120,12 @@ final class MoteurSession {
 
         let courant = Spot(centre: coordonnee, departement: contexte.departement)
         let decision = session.acces(sessionsTerminees: fichier.sessionsTerminees, spot: courant,
-                                     spotGratuit: spotGratuit ?? contexte.spotChoisi, abonne: contexte.abonne)
+                                     spotGratuit: spotGratuit, abonne: contexte.abonne)
         if !decision.sessionPermise || decision.paywall == .quiBloque { return .paywallQuiBloque }
 
-        // Le spot se fixe au départ de la 1re session, puis ne bouge plus.
+        // Le spot se fixe au départ de la 1re session (toujours permise), puis ne bouge plus.
         if spotGratuit == nil {
-            let fixe = decision.spotGratuit ?? contexte.spotChoisi ?? courant
+            let fixe = contexte.spotChoisi ?? decision.spotGratuit ?? courant
             coffre.ecrire(fixe)
             spotGratuit = fixe
         }
@@ -184,7 +184,7 @@ final class MoteurSession {
 
         var paywall = ModePaywall.aucun
         if let spot = spotGratuit {
-            paywall = session.acces(sessionsTerminees: ancien, spot: spot, spotGratuit: spot, abonne: abonne).paywall
+            paywall = session.acces(sessionsTerminees: ancien + 1, spot: spot, spotGratuit: spot, abonne: abonne).paywall
         }
         // Décidé par Adem le 15 oct. : la fin de la 1re session ouvre le paywall, qui se ferme.
         if paywall == .aucun && ancien == 0 && !abonne { paywall = .quiSeFerme }
