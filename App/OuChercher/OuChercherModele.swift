@@ -8,7 +8,7 @@ import Observation
 /// Un coin prêt à être affiché : des textes déjà composés, rien d'autre.
 nonisolated struct CoinAffiche: Identifiable, Equatable {
     let id: String
-    /// Nom de l'eau relevée par l'OFB, ou « Station OFB » sans nom d'eau.
+    /// Nom du coin public (OpenStreetMap), à défaut son genre : « Ponton », « Accès à l'eau », « Coin de pêche ».
     let titre: String
     let distance: String
     /// « 9 pêches, dernier relevé 2024 »
@@ -16,6 +16,10 @@ nonisolated struct CoinAffiche: Identifiable, Equatable {
     /// « Ouverte aujourd'hui » ou « Fermée jusqu'au 15 mars »
     let ouverture: String
     let estOuvert: Bool
+    /// « Accès libre », « Sur permis », « Accès payant » ; `nil` quand OpenStreetMap ne le dit pas.
+    let acces: String?
+    /// « Station OFB à proximité : La Marne, à 450 m » : d'où viennent le nombre de pêches et l'année.
+    let station: String
     /// Phrase lue par VoiceOver, d'un seul tenant.
     let phraseVoixOff: String
 }
@@ -34,18 +38,45 @@ nonisolated struct CompositeurCoins {
     var fuseau = TimeZone(identifier: "Europe/Paris") ?? .current
 
     /// Les coins à montrer : au plus 3, dans l'ordre de Core (déjà du plus proche au plus loin). Jamais complétés.
-    func afficher(_ coins: [Coin]) -> [CoinAffiche] {
+    func afficher(_ coins: [CoinProche]) -> [CoinAffiche] {
         coins.prefix(3).map(coin)
     }
 
-    func coin(_ c: Coin) -> CoinAffiche {
-        let titre = c.eau ?? "Station OFB"
+    func coin(_ c: CoinProche) -> CoinAffiche {
+        let titre = titreTexte(c)
         let distance = distanceTexte(metres: c.distanceM)
         let releve = releveTexte(n: c.nPeches, annee: c.annee)
         let (ouverture, ouvert) = ouvertureTexte(c.ouverture)
-        return CoinAffiche(
-            id: c.codeStation, titre: titre, distance: distance, releve: releve, ouverture: ouverture, estOuvert: ouvert,
-            phraseVoixOff: "\(titre), à \(distance). Relevée à proximité : \(releve). \(ouverture).")
+        let acces = accesTexte(c)
+        let station = stationTexte(c)
+        var voix = "\(titre), à \(distance). "
+        if let acces { voix += "\(acces). " }
+        voix += "Relevée à proximité : \(releve). \(station). \(ouverture)."
+        return CoinAffiche(id: c.id, titre: titre, distance: distance, releve: releve, ouverture: ouverture, estOuvert: ouvert,
+                           acces: acces, station: station, phraseVoixOff: voix)
+    }
+
+    func titreTexte(_ c: CoinProche) -> String {
+        if let nom = c.nom { return nom }
+        switch c.type {
+        case .ponton: return "Ponton"
+        case .acces: return "Accès à l'eau"
+        case .peche: return "Coin de pêche"
+        }
+    }
+
+    func accesTexte(_ c: CoinProche) -> String? {
+        if c.payant { return "Accès payant" }
+        switch c.acces {
+        case .libre: return "Accès libre"
+        case .permis: return "Sur permis"
+        case nil: return nil
+        }
+    }
+
+    func stationTexte(_ c: CoinProche) -> String {
+        let eau = c.eauStation.map { ": \($0)" } ?? ""
+        return "Station OFB à proximité\(eau), à \(distanceTexte(metres: c.distanceStationM))"
     }
 
     func releveTexte(n: Int, annee: Int) -> String {
@@ -103,14 +134,14 @@ nonisolated enum EtatListe: Equatable {
 @MainActor
 @Observable
 final class OuChercherModele {
-    private let especes: ServiceEspeces
+    private let especes: any ServiceEspeces & ServiceCoinsPublics
     private let position: Coordonnee
     private let compositeur: CompositeurCoins
 
     private(set) var grille: [EspeceChoix] = []
     private(set) var etat: EtatListe = .choixEspece
 
-    init(especes: ServiceEspeces, position: Coordonnee, compositeur: CompositeurCoins = CompositeurCoins()) {
+    init(especes: any ServiceEspeces & ServiceCoinsPublics, position: Coordonnee, compositeur: CompositeurCoins = CompositeurCoins()) {
         self.especes = especes
         self.position = position
         self.compositeur = compositeur
@@ -127,7 +158,7 @@ final class OuChercherModele {
     }
 
     func choisir(_ choix: EspeceChoix) {
-        let coins = compositeur.afficher(especes.coins(ou: choix.espece, pres: position))
+        let coins = compositeur.afficher(especes.coinsProches(ou: choix.espece, pres: position))
         etat = coins.isEmpty ? .aucunReleve(espece: choix) : .resultats(espece: choix, coins: coins)
     }
 

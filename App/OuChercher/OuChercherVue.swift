@@ -9,7 +9,7 @@ import UIKit
 struct OuChercherVue: View {
     @State private var modele: OuChercherModele
 
-    init(especes: ServiceEspeces, position: Coordonnee) {
+    init(especes: any ServiceEspeces & ServiceCoinsPublics, position: Coordonnee) {
         _modele = State(initialValue: OuChercherModele(especes: especes, position: position))
     }
 
@@ -156,7 +156,9 @@ private struct LigneCoin: View {
                 Spacer(minLength: 8)
                 Text(coin.distance).font(.subheadline.weight(.bold)).foregroundStyle(.secondary)
             }
+            if let acces = coin.acces { Text(acces).font(.footnote).foregroundStyle(.secondary) }
             Text(coin.releve).font(.subheadline)
+            Text(coin.station).font(.footnote).foregroundStyle(.secondary)
             Label(coin.ouverture, systemImage: coin.estOuvert ? "checkmark.circle" : "clock")
                 .font(.subheadline.weight(.bold))
         }
@@ -170,6 +172,6 @@ private struct LigneCoin: View {
 
 #if DEBUG
 #Preview("Choix de l'espèce") {
-    OuChercherVue(especes: EspecesFaux(), position: Coordonnee(latitude: 48.82, longitude: 2.41))
+    OuChercherVue(especes: CoinsFaux(), position: Coordonnee(latitude: 48.82, longitude: 2.41))
 }
 #endif

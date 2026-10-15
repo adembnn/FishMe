@@ -7,9 +7,23 @@ import Testing
 struct OuChercherModeleTests {
     let position = Coordonnee(latitude: 48.82, longitude: 2.41)
 
-    private func coin(_ code: String, d: Double, n: Int = 9, annee: Int = 2024, o: OuvertureDuJour = .ouverte) -> Coin {
-        Coin(codeStation: code, eau: "La Marne", departement: Departement(code: "94"),
-             coordonnee: position, distanceM: d, nPeches: n, annee: annee, ouverture: o)
+    private func coin(_ id: String, d: Double, n: Int = 9, annee: Int = 2024, o: OuvertureDuJour = .ouverte, nom: String? = "Quai de Charenton",
+                      type: TypeCoinPublic = .peche, acces: AccesCoinPublic? = .libre, payant: Bool = false) -> CoinProche {
+        CoinProche(id: id, nom: nom, type: type, acces: acces, payant: payant, departement: Departement(code: "94"), coordonnee: position,
+                   distanceM: d, codeStation: "S1", eauStation: "La Marne", distanceStationM: 430, nPeches: n, annee: annee, ouverture: o)
+    }
+
+    @Test func coinPublicTitreAccesEtStation() {
+        let c = CompositeurCoins()
+        let quai = c.coin(coin("node/1", d: 640, n: 4, annee: 2025))
+        #expect(quai.id == "node/1" && quai.titre == "Quai de Charenton" && quai.acces == "Accès libre")
+        #expect(quai.station == "Station OFB à proximité : La Marne, à 450 m")
+        #expect(quai.releve == "4 pêches, dernier relevé 2025")
+        #expect(quai.phraseVoixOff.contains("Relevée à proximité"))
+        #expect(c.coin(coin("a", d: 100, nom: nil, type: .ponton, acces: .permis)).titre == "Ponton")
+        #expect(c.coin(coin("a", d: 100, nom: nil, type: .acces, acces: nil)).acces == nil)
+        #expect(c.coin(coin("a", d: 100, nom: nil, type: .acces, acces: nil)).titre == "Accès à l'eau")
+        #expect(c.coin(coin("a", d: 100, payant: true)).acces == "Accès payant")
     }
 
     @Test func phraseDeReleveAvecNEtAnnee() {
@@ -20,9 +34,9 @@ struct OuChercherModeleTests {
 
     @Test func auPlusTroisCoinsSansRemplissage() {
         let c = CompositeurCoins()
-        let quatre = (1...4).map { coin("S\($0)", d: Double($0) * 300) }
-        #expect(c.afficher(quatre).map(\.id) == ["S1", "S2", "S3"])
-        #expect(c.afficher([coin("S1", d: 100)]).count == 1)
+        let quatre = (1...4).map { coin("node/\($0)", d: Double($0) * 300) }
+        #expect(c.afficher(quatre).map(\.id) == ["node/1", "node/2", "node/3"])
+        #expect(c.afficher([coin("node/1", d: 100)]).count == 1)
         #expect(c.afficher([]).isEmpty)
     }
 
@@ -47,21 +61,21 @@ struct OuChercherModeleTests {
     }
 
     @Test func aucunMotInterdit() {
-        let c = CompositeurCoins().coin(coin("S1", d: 500))
-        let tout = [c.titre, c.distance, c.releve, c.ouverture, c.phraseVoixOff, OuChercherTextes.explicationOrdre,
+        let c = CompositeurCoins().coin(coin("node/1", d: 500))
+        let tout = [c.titre, c.distance, c.releve, c.ouverture, c.station, c.acces ?? "", c.phraseVoixOff, OuChercherTextes.explicationOrdre,
                     OuChercherTextes.sansRelevePres, OuChercherTextes.invite].joined(separator: " ").lowercased()
         for mot in ["meilleur", "garanti", "chances", "poké"] { #expect(!tout.contains(mot)) }
     }
 
     @Test func grilleMetLesEspecesProchesEnPremier() {
-        let m = OuChercherModele(especes: EspecesFaux(), position: position)
+        let m = OuChercherModele(especes: CoinsFaux(), position: position)
         // Le faux rend brochet et perche comme espèces proches.
         #expect(Set(m.grille.prefix(2).map(\.id)) == ["brochet", "perche-commune"])
         #expect(m.grille.count == 6)
     }
 
     @Test func choisirUneEspeceDonneLesCoinsOuAucunReleve() {
-        let m = OuChercherModele(especes: EspecesFaux(), position: position)
+        let m = OuChercherModele(especes: CoinsFaux(), position: position)
         m.choisir(m.grille[0])
         if case .resultats(_, let coins) = m.etat { #expect(coins.count == 1) } else { Issue.record("résultats attendus") }
         m.changerEspece()
@@ -73,12 +87,15 @@ struct OuChercherModeleTests {
     }
 }
 
-private struct SansCoins: ServiceEspeces {
-    private let base = EspecesFaux()
+private struct SansCoins: ServiceEspeces, ServiceCoinsPublics {
+    private let base = CoinsFaux()
     func rarete(espece: Espece, departement: Departement) -> ResultatRarete { base.rarete(espece: espece, departement: departement) }
     func especesProches(_ c: Coordonnee) -> [EspeceProche] { base.especesProches(c) }
     func coins(ou espece: Espece, pres coordonnee: Coordonnee) -> [Coin] { [] }
     func especesPechables() -> [EspecePechable] { base.especesPechables() }
     func classer(scores: [String: Double], especesProches: [Espece]) -> [Proposition] { base.classer(scores: scores, especesProches: especesProches) }
     func poidsEstime(espece: Espece, longueurCm: Double) -> PoidsEstime? { base.poidsEstime(espece: espece, longueurCm: longueurCm) }
+    func coinsProches(ou espece: Espece, pres coordonnee: Coordonnee) -> [CoinProche] { [] }
+    func coinsPublicsDans(_ region: RegionCarte) -> [CoinPublic] { [] }
+    func coinsPublics(pres coordonnee: Coordonnee, rayonM: Double) -> [CoinPublic] { [] }
 }
