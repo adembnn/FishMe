@@ -87,7 +87,8 @@ final class ConditionsTests: XCTestCase {
     }
 }
 
-final class Horloge: @unchecked Sendable {
+/// `@unchecked Sendable` : la date n'est lue et écrite sous `NSLock` uniquement ; `nonisolated` pour que l'horloge serve dans une fermeture `@Sendable`.
+nonisolated final class Horloge: @unchecked Sendable {
     private let verrou = NSLock()
     private var v: Date
     init(_ d: Date) { v = d }

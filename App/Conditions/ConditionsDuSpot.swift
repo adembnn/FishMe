@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 import Core
 
 /// Garde la dernière lecture de chaque spot et rend un instantané pour une prise.
