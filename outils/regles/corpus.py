@@ -41,17 +41,25 @@ def texte_pdf(chemin, sortie):
     import pymupdf
     doc = pymupdf.open(chemin)
     pages = [p.get_text() for p in doc]
-    if sum(len(t.strip()) for t in pages) >= MIN_CARS_PAGE * len(pages) * 0.5:
-        with open(sortie, "w", encoding="utf-8") as f:
-            for i, t in enumerate(pages, 1):
-                f.write(f"===== page {i:02d}\n{t}\n")
+    # Page par page : un PDF mêle parfois pages scannées et pages à couche texte.
+    scans = [i for i, t in enumerate(pages) if len(t.strip()) < MIN_CARS_PAGE]
+    if scans:
+        with tempfile.TemporaryDirectory() as tmp:
+            for i in scans:
+                doc[i].get_pixmap(dpi=300).save(os.path.join(tmp, f"page-p{i + 1:03d}.png"))
+            ocr = os.path.join(tmp, "ocr.txt")
+            subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", os.path.join(ICI, "ocr.ps1"), tmp, ocr],
+                           check=True, capture_output=True)
+            blocs = re.split(r"^===== page \d+\r?\n", open(ocr, encoding="utf-8-sig").read(), flags=re.M)[1:]
+        for i, t in zip(scans, blocs):
+            if len(t.strip()) > len(pages[i].strip()):
+                pages[i] = t
+    with open(sortie, "w", encoding="utf-8") as f:
+        for i, t in enumerate(pages, 1):
+            f.write(f"===== page {i:02d}\n{t}\n")
+    if not scans:
         return "couche-texte"
-    with tempfile.TemporaryDirectory() as tmp:
-        for i, p in enumerate(doc, 1):
-            p.get_pixmap(dpi=300).save(os.path.join(tmp, f"page-p{i:03d}.png"))
-        subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", os.path.join(ICI, "ocr.ps1"), tmp, sortie],
-                       check=True, capture_output=True)
-    return "ocr-windows-fr"
+    return "ocr-windows-fr" if len(scans) == len(pages) else f"mixte : OCR des pages {', '.join(str(i + 1) for i in scans)}"
 
 
 def texte_html(chemin, sortie):
