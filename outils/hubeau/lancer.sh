@@ -35,8 +35,8 @@ for g in "${GROUPES[@]}"; do
   "$PY" hubeau.py --recuperer-seulement --departement $g || echo "(groupe incomplet : relancer lancer.sh pour reprendre)"
 done
 
-echo "== Fabrication des 3 fichiers (France entiere, depuis le cache)"
-"$PY" hubeau.py --cache-seulement
+echo "== Fabrication des 3 fichiers (France entiere ; les pages deja en cache ne sont pas redemandees)"
+"$PY" hubeau.py
 
 cd sortie
 ls -l stations-especes.json rarete-departements.json stations-hydro.json
