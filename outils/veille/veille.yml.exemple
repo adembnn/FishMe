@@ -1,0 +1,51 @@
+# Le robot de nuit de la veille des règles (lot L11), à copier par Adem (A) dans .github/workflows/veille.yml.
+# Gratuit (GitHub Actions). Chaque nuit : lit les textes cités par les fichiers de règles, signale ceux dont le texte
+# a changé, et ceux dont l'expire_min est à moins de 30 jours. Une alerte du dépôt (issue) est ouverte à chaque fois.
+# Une alerte n'est pas une preuve : un humain tranche (la procédure est dans le corps de l'alerte).
+#
+# À faire par A : copier ce fichier, créer l'étiquette « veille » (gh label create veille), et vérifier que « Issues »
+# est activé sur le dépôt. Aucun secret n'est nécessaire (la clé PISTE n'est pas utilisée).
+name: Veille des règles
+
+on:
+  schedule:
+    - cron: "17 2 * * *"   # chaque nuit, 02:17 UTC
+  workflow_dispatch: {}      # lancement à la main : gh workflow run "Veille des règles"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Les empreintes de la veille restent hors de git : on les garde dans le cache de GitHub.
+      - name: Empreintes de la veille précédente
+        uses: actions/cache@v4
+        with:
+          path: outils/veille/empreintes.json
+          key: veille-empreintes-${{ github.run_id }}
+          restore-keys: veille-empreintes-
+
+      - name: Veille
+        id: veille
+        run: |
+          set +e
+          python3 -I outils/veille/veille.py --sortie-alertes alertes.md
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          # 0 : rien ; 1 : au moins une alerte ; autre : erreur du script (le job échoue)
+          if [ "$code" -gt 1 ]; then exit "$code"; fi
+
+      - name: Ouvrir une alerte du dépôt
+        if: steps.veille.outputs.code == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Veille des règles : un texte a peut-être changé ($(date -u +%Y-%m-%d))" \
+            --label veille \
+            --body-file alertes.md
