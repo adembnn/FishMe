@@ -134,7 +134,7 @@ Le mécanisme, en cinq pièces :
 4. Une mise à jour à deux paires d'yeux : Claude fait le premier jet depuis le nouveau texte, un humain le relit, les cas d'or rejouent, puis on publie.
 5. Sous chaque règle, « signaler une erreur », qui arrive dans la même alerte.
 À terme, les fédérations départementales publient déjà leur guide chaque année : un accord avec elles, ou avec la fédération nationale, ferait de l'app leur canal numérique et rendrait la mise à jour contractuelle. Pour la France entière, compter environ 100 arrêtés par an, 1 à 2 h chacun avec premier jet et relecture (estimation).
-Ce soir : les pièces 1 et 2 (2 à 3 h, estimation). La veille (3) et le signalement (5) viennent dans la mise à jour. L'endroit où publier le fichier est un choix de fournisseur, donc une question pour toi.
+Ce soir : les règles en données embarquées et leur date de péremption (pièce 2), 2 à 3 h (estimation). Le téléchargement (pièce 1), la veille (3) et le signalement (5) viennent dans la mise à jour (lot L11). L'endroit où publier le fichier est un choix de fournisseur, donc une question pour toi.
 
 ## 6. La fusion avec l'atelier de Titouan
 Titouan a écrit le 13 oct. un atelier complet dans `harnais-titouan/` (branche `titouan/harnais-bredouille`), rien compilé, crochets décrits mais pas installés ; son fichier `LISEZ-MOI-FUSION.md` demande la fusion. Ce que je propose, ligne par ligne :
