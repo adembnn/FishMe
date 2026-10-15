@@ -37,6 +37,9 @@ Relis le lot <code> (branche <branche>). Le diff est : git diff origin/main...HE
 
 Attends les réponses. Montre à la personne, pour chaque relecteur, son verdict et ses points tels qu'ils sont rendus, sans les reformuler.
 
+## 4 bis. Le banc d'essai
+Si le lot change un fichier de `App/` (un écran), lance la procédure de `/banc` pour ce lot : lis `.claude/skills/banc/SKILL.md` et suis-la. Ses points BLOQUANT se traitent au point 5 comme ceux des relecteurs. Ses questions pour Adem lui sont posées telles quelles et ne bloquent pas la fusion. Ce que le banc peut bloquer reste à confirmer par Adem (question du 15 oct.) : par défaut, seulement le mesurable.
+
 ## 5. Corriger les points bloquants
 - Tous les verdicts ✓ : passe au point 6.
 - Sinon, liste les points [BLOQUANT] de tous les relecteurs, du plus grave au moins grave. Corrige-les un par un, seulement dans les dossiers permis du lot. Explique chaque correction en une phrase.
