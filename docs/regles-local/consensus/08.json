@@ -1,0 +1,2608 @@
+{
+ "departement": "08",
+ "regles": [
+  {
+   "id": "08-grenouille-verte-ouverture-departement",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "08",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 16 mai au 20 septembre"
+   },
+   "phrase": "La grenouille verte (commune) se pêche du 16 mai au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "La pêche de la grenouille verte ou dite commune (Pelophylax kl. esculentus) et de la grenouille rousse (Rana temporaria) est autorisée du 16 mai au 20 septembre.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-grenouille-verte-ouverture-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche de la grenouille verte ou dite commune (Pelophylax kl. esculentus) et de la grenouille rousse (Rana temporaria) est autorisée du 16 mai au 20 septembre."
+   }
+  },
+  {
+   "id": "08-grenouille-rousse-ouverture-departement",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "08",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 16 mai au 20 septembre"
+   },
+   "phrase": "La grenouille rousse se pêche du 16 mai au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "La pêche de la grenouille verte ou dite commune (Pelophylax kl. esculentus) et de la grenouille rousse (Rana temporaria) est autorisée du 16 mai au 20 septembre.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-grenouille-rousse-ouverture-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche de la grenouille verte ou dite commune (Pelophylax kl. esculentus) et de la grenouille rousse (Rana temporaria) est autorisée du 16 mai au 20 septembre."
+   }
+  },
+  {
+   "id": "08-sandre-taille-min-cat2",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "08",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50
+   },
+   "phrase": "Sandre : taille minimale de capture 50 cm dans les cours d'eau de 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 4",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "pour le sandre : 0,50 m dans les cours d'eau de 2ème catégorie",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2195-taille_min-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 4",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "pour le sandre : 0,50 m dans les cours d'eau de 2ème catégorie."
+   }
+  },
+  {
+   "id": "08-salmonides-quota-jour-departement",
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "08",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 4
+   },
+   "phrase": "Salmonidés : 4 captures par jour et par pêcheur sur l'ensemble des cours d'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 5",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "Sur l'ensemble des cours d'eau, le nombre de captures de salmonidés est limité à quatre (4) par jour et par pêcheur.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-salmonides-quota_jour-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 5",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "le nombre de captures de salmonidés est limité à quatre (4) par jour et par pêcheur."
+   }
+  },
+  {
+   "id": "08-no-kill-ruisseau-des-moulins",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "08",
+    "lieu": "Ruisseau des Moulins : de la source jusqu'au bassin de Whitaker inclus, ainsi que l'ensemble de ses affluents",
+    "plan_eau": null,
+    "cours_eau": "ruisseau des Moulins"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée (sous conditions d'autorisation du droit de pêche), sans consommation du poisson (précaution métaux lourds)."
+   },
+   "phrase": "Ruisseau des Moulins et ses affluents (source au bassin de Whitaker) : remise à l'eau immédiate obligatoire, pas de poisson gardé.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 6 et annexe 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker et les plans d'eau en connexion piscicole possible",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-nokill-moulins",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker"
+   }
+  },
+  {
+   "id": "08-no-kill-ruisseau-de-la-murée",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "08",
+    "lieu": "Ruisseau de la Murée, affluent du ruisseau des Moulins",
+    "plan_eau": null,
+    "cours_eau": "ruisseau de la Murée"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée (sous conditions d'autorisation du droit de pêche), sans consommation du poisson (précaution métaux lourds)."
+   },
+   "phrase": "Ruisseau de la Murée : remise à l'eau immédiate obligatoire, pas de poisson gardé.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 6 et annexe 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker et les plans d'eau en connexion piscicole possible",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-nokill-murée",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker"
+   }
+  },
+  {
+   "id": "08-no-kill-ruisseau-du-champ-fleury",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "08",
+    "lieu": "Ruisseau du Champ Fleury",
+    "plan_eau": null,
+    "cours_eau": "ruisseau du Champ Fleury"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée (sous conditions d'autorisation du droit de pêche), sans consommation du poisson (précaution métaux lourds)."
+   },
+   "phrase": "Ruisseau du Champ Fleury : remise à l'eau immédiate obligatoire, pas de poisson gardé.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 6 et annexe 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker et les plans d'eau en connexion piscicole possible",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-nokill-champ-fleury",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker"
+   }
+  },
+  {
+   "id": "08-no-kill-ruisseau-de-la-faux",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "08",
+    "lieu": "Ruisseau de la Faux : de l'aval du barrage du lac des Vieilles Forges au bassin de Whitaker, ainsi que l'ensemble de ses affluents",
+    "plan_eau": null,
+    "cours_eau": "ruisseau de la Faux"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée (sous conditions d'autorisation du droit de pêche), sans consommation du poisson (précaution métaux lourds)."
+   },
+   "phrase": "Ruisseau de la Faux (aval du barrage des Vieilles Forges au bassin de Whitaker) et ses affluents : remise à l'eau immédiate obligatoire.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 6 et annexe 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker et les plans d'eau en connexion piscicole possible",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-nokill-faux",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker"
+   }
+  },
+  {
+   "id": "08-no-kill-bassin-de-whitaker",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "08",
+    "lieu": "Bassin de Whitaker, en communication directe avec le ruisseau de la Murée et le ruisseau des Moulins",
+    "plan_eau": "bassin de Whitaker",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée (sous conditions d'autorisation du droit de pêche), sans consommation du poisson (précaution métaux lourds)."
+   },
+   "phrase": "Bassin de Whitaker : remise à l'eau immédiate obligatoire, pas de poisson gardé.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 6 et annexe 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker et les plans d'eau en connexion piscicole possible",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-nokill-bassin-whitaker",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker"
+   }
+  },
+  {
+   "id": "08-no-kill-plans-eau-communication-murée-moulins",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Plans d'eau en communication directe avec le ruisseau de la Murée et le ruisseau des Moulins",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée (sous conditions d'autorisation du droit de pêche), sans consommation du poisson (précaution métaux lourds)."
+   },
+   "phrase": "Plans d'eau en communication directe avec la Murée et le ruisseau des Moulins : remise à l'eau immédiate obligatoire.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 6 et annexe 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker et les plans d'eau en connexion piscicole possible",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-nokill-bassin-whitaker",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker"
+   }
+  },
+  {
+   "id": "08-no-kill-plans-eau-accessibles-poissons",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Plans d'eau accessibles par des poissons remontant des cours d'eau cités (Moulins, Murée, Champ Fleury, Faux)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée (sous conditions d'autorisation du droit de pêche), sans consommation du poisson (précaution métaux lourds)."
+   },
+   "phrase": "Plans d'eau accessibles aux poissons remontant ces ruisseaux : remise à l'eau immédiate obligatoire.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 6 et annexe 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker et les plans d'eau en connexion piscicole possible",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-nokill-plans-eau-remontee",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée sur les cours d'eau affluents du plan d'eau de Whitaker"
+   }
+  },
+  {
+   "id": "08-sandre-no-kill-meuse-givet",
+   "type": "no_kill",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Meuse (Givet) : depuis le pont de Givet jusqu'à la porte de garde",
+    "plan_eau": null,
+    "cours_eau": "Meuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée pour le sandre (sous conditions d'autorisation du droit de pêche)."
+   },
+   "phrase": "Meuse à Givet (du pont de Givet à la porte de garde) : sandre remis à l'eau immédiatement.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 6 et annexe 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "Sous conditions d'autorisation du droit de pêche, seule la pêche avec remise à l'eau immédiate est pratiquée pour les sandres et les perches",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2195-no_kill-meuse-givet",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée pour les sandres et les perches comme indiqué sur le plan en annexe 2 sur :"
+   }
+  },
+  {
+   "id": "08-sandre-no-kill-meuse-barrage-4-cheminees",
+   "type": "no_kill",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Barrage des 4 cheminées (Meuse)",
+    "plan_eau": null,
+    "cours_eau": "Meuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée pour le sandre (sous conditions d'autorisation du droit de pêche). Le texte est ambigu : le barrage des 4 cheminées peut être le bout de la même section."
+   },
+   "phrase": "Meuse, barrage des 4 cheminées : sandre remis à l'eau immédiatement.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 6 et annexe 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "Sous conditions d'autorisation du droit de pêche, seule la pêche avec remise à l'eau immédiate est pratiquée pour les sandres et les perches",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2195-no_kill-meuse-4cheminees",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée pour les sandres et les perches comme indiqué sur le plan en annexe 2 sur :"
+   }
+  },
+  {
+   "id": "08-perche-no-kill-meuse-givet",
+   "type": "no_kill",
+   "especes": [
+    "2193"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Meuse (Givet) : depuis le pont de Givet jusqu'à la porte de garde",
+    "plan_eau": null,
+    "cours_eau": "Meuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée pour le perche (sous conditions d'autorisation du droit de pêche)."
+   },
+   "phrase": "Meuse à Givet (du pont de Givet à la porte de garde) : perche remis à l'eau immédiatement.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 6 et annexe 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "Sous conditions d'autorisation du droit de pêche, seule la pêche avec remise à l'eau immédiate est pratiquée pour les sandres et les perches",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2193-no_kill-meuse-givet",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée pour les sandres et les perches comme indiqué sur le plan en annexe 2 sur :"
+   }
+  },
+  {
+   "id": "08-perche-no-kill-meuse-barrage-4-cheminees",
+   "type": "no_kill",
+   "especes": [
+    "2193"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Barrage des 4 cheminées (Meuse)",
+    "plan_eau": null,
+    "cours_eau": "Meuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée pour le perche (sous conditions d'autorisation du droit de pêche). Le texte est ambigu : le barrage des 4 cheminées peut être le bout de la même section."
+   },
+   "phrase": "Meuse, barrage des 4 cheminées : perche remis à l'eau immédiatement.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 6 et annexe 2",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "Sous conditions d'autorisation du droit de pêche, seule la pêche avec remise à l'eau immédiate est pratiquée pour les sandres et les perches",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2193-no_kill-meuse-4cheminees",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée pour les sandres et les perches comme indiqué sur le plan en annexe 2 sur :"
+   }
+  },
+  {
+   "id": "08-carpe-mode-peche-nuit-departement",
+   "type": "mode_peche",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "08",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pendant les heures d'interdiction légale de la pêche à la carpe (de une demi-heure après le coucher du soleil à une demi-heure avant son lever), seuls les amorces et appâts végétaux sont autorisés."
+   },
+   "phrase": "La nuit, à la carpe, seuls les amorces et appâts végétaux sont permis (pas d'appât animal).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 7",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "soit une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, seuls les amorces et appâts végétaux sont autorisés.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2110-mode_peche-carpe-nuit-appats",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 7",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seuls les amorces et appâts végétaux sont autorisés. Aucune carpe capturée ne peut être maintenue en captivité ou transportée pendant ces heures."
+   }
+  },
+  {
+   "id": "08-carpe-transport-vivant-nuit-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "08",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Aucune carpe capturée ne peut être maintenue en captivité ou transportée pendant les heures d'interdiction légale de la pêche à la carpe (de une demi-heure après le coucher du soleil à une demi-heure avant son lever)."
+   },
+   "phrase": "Pendant la nuit, aucune carpe ne peut être gardée en captivité ni transportée.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 7",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "Aucune carpe capturée ne peut être maintenue en captivité ou transportée pendant ces heures.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2110-transport_vivant-carpe-nuit",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 7",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seuls les amorces et appâts végétaux sont autorisés. Aucune carpe capturée ne peut être maintenue en captivité ou transportée pendant ces heures."
+   }
+  },
+  {
+   "id": "08-carpe-nuit-meuse-letanne-moulins",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Meuse : rive gauche, du ruisseau de Létanne au ruisseau des Moulins",
+    "plan_eau": null,
+    "cours_eau": "Meuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe autorisée toute l'année (annexe 1, bassin Meuse)."
+   },
+   "phrase": "Meuse (rive gauche, du ruisseau de Létanne au ruisseau des Moulins) : pêche de nuit de la carpe autorisée toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2110-carpe_nuit-meuse-rive-gauche",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "Le fleuve Meuse en rive gauche du ruisseau de Létanne au ruisseau des Moulins"
+   }
+  },
+  {
+   "id": "08-carpe-nuit-meuse-moulins-frontiere",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Meuse : rives droite et gauche, de la confluence du ruisseau des Moulins à Mouzon jusqu'à la frontière belge",
+    "plan_eau": null,
+    "cours_eau": "Meuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe autorisée toute l'année (annexe 1, bassin Meuse)."
+   },
+   "phrase": "Meuse (de la confluence du ruisseau des Moulins à Mouzon à la frontière belge) : pêche de nuit de la carpe autorisée toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2110-carpe_nuit-meuse-rive-gauche",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "Le fleuve Meuse en rive gauche du ruisseau de Létanne au ruisseau des Moulins"
+   }
+  },
+  {
+   "id": "08-carpe-nuit-canal-de-la-meuse",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Canal de la Meuse : rives droite et gauche, de la confluence du ruisseau des Moulins à Mouzon jusqu'à la frontière belge",
+    "plan_eau": null,
+    "cours_eau": "canal de la Meuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe autorisée toute l'année (annexe 1, bassin Meuse)."
+   },
+   "phrase": "Canal de la Meuse (de Mouzon à la frontière belge) : pêche de nuit de la carpe autorisée toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2110-carpe_nuit-meuse-rive-gauche",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "Le fleuve Meuse en rive gauche du ruisseau de Létanne au ruisseau des Moulins"
+   }
+  },
+  {
+   "id": "08-carpe-nuit-ballastiere-la-culatte",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "08",
+    "lieu": "Ballastière La Culatte (Villers-Semeuse) : chemin des pêcheurs",
+    "plan_eau": "La Culatte",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe autorisée toute l'année, uniquement aux Ateliers Pêche Nature du département (annexe 1)."
+   },
+   "phrase": "Ballastière La Culatte (Villers-Semeuse) : pêche de nuit de la carpe autorisée toute l'année, uniquement aux Ateliers Pêche Nature du département.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2110-carpe_nuit-culatte",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "la ballastière La Culatte VILLERS-SEMEUSE Chemin des pêcheurs, autorisée uniquement aux Ateliers Pêche Nature du département"
+   }
+  },
+  {
+   "id": "08-carpe-nuit-semoy",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Semoy : rives droite et gauche, de l'entrée de la Semoy en France à la confluence avec la Meuse",
+    "plan_eau": null,
+    "cours_eau": "Semoy"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe autorisée toute l'année (annexe 1, bassin Meuse)."
+   },
+   "phrase": "Semoy (de l'entrée en France à la Meuse) : pêche de nuit de la carpe autorisée toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2110-carpe_nuit-semoy",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "la rivière Semoy des rives droite et gauche de l'entrée de la Semoy en France à la confluence avec la Meuse."
+   }
+  },
+  {
+   "id": "08-carpe-nuit-aisne",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Aisne : rives droite et gauche, de la limite des Ardennes et de la Marne à la limite des Ardennes et de l'Aisne",
+    "plan_eau": null,
+    "cours_eau": "Aisne"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe autorisée toute l'année (annexe 1, bassin Aisne)."
+   },
+   "phrase": "Aisne (de la limite de la Marne à la limite du département de l'Aisne) : pêche de nuit de la carpe autorisée toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2110-carpe_nuit-aisne",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "la rivière Aisne rives droite et gauche de la limite du département des Ardennes et de la Marne à la limite du département des Ardennes et de l'Aisne."
+   }
+  },
+  {
+   "id": "08-carpe-nuit-canal-lateral-a-l-aisne",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "08",
+    "lieu": "Canal latéral à l'Aisne : rives droite et gauche, de Vouziers à la limite des Ardennes et de l'Aisne",
+    "plan_eau": null,
+    "cours_eau": "canal latéral à l'Aisne"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe autorisée toute l'année (annexe 1, bassin Aisne)."
+   },
+   "phrase": "Canal latéral à l'Aisne (de Vouziers à la limite de l'Aisne) : pêche de nuit de la carpe autorisée toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2110-carpe_nuit-aisne",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "la rivière Aisne rives droite et gauche de la limite du département des Ardennes et de la Marne à la limite du département des Ardennes et de l'Aisne."
+   }
+  },
+  {
+   "id": "08-carpe-nuit-lac-des-vieilles-forges",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "08",
+    "lieu": "Lac des Vieilles Forges (Renwez, Les Mazures) : tout le pourtour, sauf la partie longeant la RD 988 (Pont des Aulnes) et de la confluence du ruisseau des Prises Pierret au barrage de retenue (côté Les Mazures)",
+    "plan_eau": "Lac des Vieilles Forges",
+    "cours_eau": null
+   },
+   "du": "2026-02-01",
+   "au": "2026-09-30",
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe autorisée du 1er février au 30 septembre. L'annexe 1 écrit 2025 pour ces dates : coquille probable, l'article 3 ne donne pas d'année."
+   },
+   "phrase": "Lac des vieilles forges : pêche de nuit de la carpe autorisée du 1er février au 30 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "du 1er février au 30 septembre sur le lac des Vieilles Forges et sur l'étang de Bairon",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2110-carpe_nuit-vieilles-forges",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "du 1er février au 30 septembre sur le lac des Vieilles Forges et sur l'étang de Bairon."
+   }
+  },
+  {
+   "id": "08-carpe-nuit-etang-de-bairon",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "08",
+    "lieu": "Étang de Bairon : tout le pourtour, sauf la digue entre le vieil étang et le grand étang, la digue du grand étang et ses maçonneries, la plage et 100 m de part et d'autre",
+    "plan_eau": "Étang de Bairon",
+    "cours_eau": null
+   },
+   "du": "2026-02-01",
+   "au": "2026-09-30",
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe autorisée du 1er février au 30 septembre. L'annexe 1 écrit 2025 pour ces dates : coquille probable, l'article 3 ne donne pas d'année."
+   },
+   "phrase": "Étang de bairon : pêche de nuit de la carpe autorisée du 1er février au 30 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-31"
+   },
+   "citation": "du 1er février au 30 septembre sur le lac des Vieilles Forges et sur l'étang de Bairon",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-2110-carpe_nuit-bairon",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "du 1er février au 30 septembre sur le lac des Vieilles Forges et sur l'étang de Bairon."
+   }
+  },
+  {
+   "id": "08-reserve-bairon-reservoir-superieur",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "08",
+    "lieu": "Lac de Bairon, réservoir supérieur (Bairons et ses environs, Sauville) : totalité de l'étang supérieur, sauf une portion de 200 m de largeur sur toute la longueur de la digue séparant les 2 étangs et le contre fossé sud",
+    "plan_eau": "Lac de Bairon",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toute pêche est interdite (réserve de pêche du 1er janvier 2023 au 31 décembre 2027)."
+   },
+   "phrase": "Lac de Bairon, réservoir supérieur : pêche interdite (réserve), sauf la bande de 200 m le long de la digue.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), annexe 1 (article 1er) ; article 8 de l'arrêté 2025-864",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2022-12-12"
+   },
+   "citation": "Réservoir supérieur de Bairon : réserve de la totalité de l'étang supérieur, sauf une portion de 200 m de largeur sur toute la longueur de la digue séparant les 2 étangs",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-reserve-bairon-superieur",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), article 1 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2022-12-12"
+    },
+    "citation": "Réservoir supérieur de Bairon : réserve de la totalité de l'étang supérieur, sauf une portion de 200 m de largeur sur toute la longueur de la digue séparant les 2 étangs"
+   }
+  },
+  {
+   "id": "08-reserve-bairon-six-pales",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "08",
+    "lieu": "Lac de Bairon, aval de l'ouvrage des six pales (Bairons et ses environs) : largeur de 40 m, longueur de 80 m, y compris les aqueducs jusqu'aux grilles posées dans l'étang supérieur",
+    "plan_eau": "Lac de Bairon",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toute pêche est interdite (réserve de pêche du 1er janvier 2023 au 31 décembre 2027)."
+   },
+   "phrase": "Lac de Bairon, aval de l'ouvrage des six pales (40 m sur 80 m) : pêche interdite (réserve).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), annexe 1 (article 1er) ; article 8 de l'arrêté 2025-864",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2022-12-12"
+   },
+   "citation": "Réserve en aval de l'ouvrage des six pales sur une largeur de 40 m, et une longueur de 80 m, y compris les aqueducs jusqu'aux grilles posées dans l'étang supérieur",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-reserve-bairon-six-pales",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), article 1 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2022-12-12"
+    },
+    "citation": "Réserve en aval de l'ouvrage des six pales sur une largeur de 40 m, et une longueur de 80 m"
+   }
+  },
+  {
+   "id": "08-reserve-bairon-contre-fosse-sud",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "08",
+    "lieu": "Lac de Bairon, contre-fossé sud longeant l'étang inférieur (Bairons et ses environs) : sur toute sa longueur",
+    "plan_eau": "Lac de Bairon",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toute pêche est interdite (réserve de pêche du 1er janvier 2023 au 31 décembre 2027)."
+   },
+   "phrase": "Lac de Bairon, contre-fossé sud de l'étang inférieur : pêche interdite (réserve).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), annexe 1 (article 1er) ; article 8 de l'arrêté 2025-864",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2022-12-12"
+   },
+   "citation": "Réserve du contre-fossé sud longeant l'étang inférieur sur toute sa longueur",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-reserve-bairon-contre-fosse",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), article 1 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2022-12-12"
+    },
+    "citation": "Réserve du contre-fossé sud longeant l'étang inférieur sur toute sa longueur"
+   }
+  },
+  {
+   "id": "08-reserve-bairon-bras-ecoulement-rd12",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "08",
+    "lieu": "Lac de Bairon, bras d'écoulement à l'aval immédiat du barrage sud de l'étang inférieur (Bairons et ses environs) : jusqu'à la RD n° 12",
+    "plan_eau": "Lac de Bairon",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toute pêche est interdite (réserve de pêche du 1er janvier 2023 au 31 décembre 2027)."
+   },
+   "phrase": "Lac de Bairon, bras d'écoulement en aval du barrage sud jusqu'à la RD 12 : pêche interdite (réserve).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), annexe 1 (article 1er) ; article 8 de l'arrêté 2025-864",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2022-12-12"
+   },
+   "citation": "Réserve des bras d'écoulement situés à l'aval immédiat du barrage sud de l'étang inférieur jusqu'à la Route Départementale",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-reserve-bairon-bras-ecoulement",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), article 1 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2022-12-12"
+    },
+    "citation": "Réserve des bras d'écoulement situés à l'aval immédiat du barrage sud de l'étang inférieur"
+   }
+  },
+  {
+   "id": "08-reserve-faux-revin",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "08",
+    "lieu": "Faux (Revin) : de la confluence avec la Meuse jusqu'au premier pont, sur les deux rives",
+    "plan_eau": null,
+    "cours_eau": "Faux"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toute pêche est interdite (réserve de pêche du 1er janvier 2023 au 31 décembre 2027)."
+   },
+   "phrase": "Ruisseau de la Faux à Revin (de la Meuse au premier pont, deux rives) : pêche interdite (réserve).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), annexe 1 (article 1er) ; article 8 de l'arrêté 2025-864",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2022-12-12"
+   },
+   "citation": "Réserve de la Faux de la confluence avec la Meuse jusqu'au premier pont, sur les deux rives (commune de REVIN)",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-reserve-faux-revin",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), article 1 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2022-12-12"
+    },
+    "citation": "Réserve de la Faux de la confluence avec la Meuse jusqu'au premier pont, sur les deux rives"
+   }
+  },
+  {
+   "id": "08-reserve-vieilles-forges-emprise-edf",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "08",
+    "lieu": "Lac des Vieilles Forges (Renwez, Les Mazures) : toute la partie de l'emprise E.D.F. en amont du pont des Aulnes sur la Route Départementale n° 988",
+    "plan_eau": "Lac des Vieilles Forges",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toute pêche est interdite (réserve de pêche du 1er janvier 2023 au 31 décembre 2027)."
+   },
+   "phrase": "Lac des Vieilles Forges, emprise EDF en amont du pont des Aulnes (RD 988) : pêche interdite (réserve).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), annexe 1 (article 1er) ; article 8 de l'arrêté 2025-864",
+    "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2022-12-12"
+   },
+   "citation": "Toute la partie de l'emprise E.D.F. en amont du pont des Aulnes sur la Route Départementale",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "08-reserve-vieilles-forges",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2022-671 du 12 décembre 2022 (réserves de pêche 2023-2027), article 1 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=36169&path=Arrete-Prefectoral-n-2022-671-Reserves-de-peche.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2022-12-12"
+    },
+    "citation": "Toute la partie de l'emprise E.D.F. en amont du pont des Aulnes sur la Route Départementale N°988"
+   }
+  }
+ ],
+ "desaccords": {
+  "seulement_a": [
+   {
+    "id": "08-sandre-ouverture-cat1",
+    "type": "ouverture",
+    "especes": [
+     "2195"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-05-30",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "Pêche du sandre interdite du 14 mars au 29 mai inclus en 1re catégorie ; ouverte ensuite jusqu'à la fermeture générale de la 1re catégorie (3e dimanche de septembre)"
+    },
+    "phrase": "En 1re catégorie, le sandre se pêche du 30 mai au 20 septembre 2026 (interdit du 14 mars au 29 mai).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 1er",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche du sandre est interdite dans les eaux de 1re catégorie, du 14 mars au 29 mai inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-sandre-ouverture-cat2-janvier",
+    "type": "ouverture",
+    "especes": [
+     "2195"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-01-25",
+    "valeur": {
+     "formule": "Pêche du sandre interdite du 26 janvier au 29 mai inclus en 2e catégorie ; ouverte du 1er janvier au 25 janvier"
+    },
+    "phrase": "En 2e catégorie, le sandre se pêche jusqu'au 25 janvier 2026 (interdit du 26 janvier au 29 mai).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 1er",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche du sandre est interdite dans les eaux de 2ème catégorie du 26 janvier au 29 mai inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-sandre-ouverture-cat2-ete",
+    "type": "ouverture",
+    "especes": [
+     "2195"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-05-30",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "Pêche du sandre interdite du 26 janvier au 29 mai inclus en 2e catégorie ; ouverte à partir du 30 mai jusqu'au 31 décembre"
+    },
+    "phrase": "En 2e catégorie, le sandre se pêche à partir du 30 mai 2026 (interdit du 26 janvier au 29 mai).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 1er",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche du sandre est interdite dans les eaux de 2ème catégorie du 26 janvier au 29 mai inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-ecrevisses-autochtones-interdit-departement",
+    "type": "interdit",
+    "especes": [
+     "autre:écrevisses autochtones"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche des écrevisses autochtones interdite toute l'année."
+    },
+    "phrase": "La pêche des écrevisses autochtones est interdite toute l'année dans les Ardennes.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 1er",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche des écrevisses autochtones est interdite toute l'année.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-anguille-jaune-ouverture-departement",
+    "type": "ouverture",
+    "especes": [
+     "anguille-jaune"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-04-15",
+    "au": "2026-07-15",
+    "valeur": {
+     "formule": "Pêche de l'anguille jaune interdite du 1er janvier au 14 avril et du 16 juillet au 31 décembre ; ouverte du 15 avril au 15 juillet"
+    },
+    "phrase": "L'anguille jaune se pêche du 15 avril au 15 juillet 2026 seulement.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 1er",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche de l'anguille jaune est interdite du 1er janvier au 14 avril et du 16 juillet au 31 décembre.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-ombre-taille-min-departement",
+    "type": "taille_min",
+    "especes": [
+     "2247"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 35
+    },
+    "phrase": "Ombre commun : taille minimale de capture 35 cm, en 1re et 2e catégorie.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 4",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "pour l'ombre commun : 0,35 m dans les cours d'eau de 1ère catégorie et 2ème catégorie",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-brochet-taille-min-departement",
+    "type": "taille_min",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 60
+    },
+    "phrase": "Brochet : taille minimale de capture 60 cm, en 1re et 2e catégorie.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 4",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "pour le brochet : 0,60 m dans les cours d'eau de 1ère catégorie et 2ème catégorie",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-carpe-nuit-chiers",
+    "type": "carpe_nuit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Chiers : rives droite et gauche, du pont de la RD 44 à La Ferté-sur-Chiers à la confluence avec la Meuse",
+     "plan_eau": null,
+     "cours_eau": "Chiers"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe autorisée toute l'année (annexe 1, bassin Meuse)."
+    },
+    "phrase": "Chiers (du pont de la RD 44 à La Ferté-sur-Chiers à la Meuse) : pêche de nuit de la carpe autorisée toute l'année.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-carpe-nuit-canal-des-ardennes-semuy-pont-a-bar",
+    "type": "carpe_nuit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Canal des Ardennes : rives droite et gauche, de la confluence avec l'Aisne à Semuy à la confluence avec la Meuse à Pont-à-Bar",
+     "plan_eau": null,
+     "cours_eau": "canal des Ardennes"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe autorisée toute l'année (annexe 1, bassin Meuse)."
+    },
+    "phrase": "Canal des Ardennes (de Semuy à Pont-à-Bar) : pêche de nuit de la carpe autorisée toute l'année.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-carpe-nuit-canal-des-ardennes-vouziers-aisne",
+    "type": "carpe_nuit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Canal des Ardennes : rives droite et gauche, de Vouziers à la limite des Ardennes et de l'Aisne",
+     "plan_eau": null,
+     "cours_eau": "canal des Ardennes"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe autorisée toute l'année (annexe 1, bassin Aisne)."
+    },
+    "phrase": "Canal des Ardennes (de Vouziers à la limite de l'Aisne) : pêche de nuit de la carpe autorisée toute l'année.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-carpe-nuit-interdite-vieilles-forges-rd988",
+    "type": "carpe_nuit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "08",
+     "lieu": "Lac des Vieilles Forges (Renwez, Les Mazures) : partie longeant la RD 988, lieu-dit Pont des Aulnes",
+     "plan_eau": "Lac des Vieilles Forges",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe interdite sur cette partie (exclue du parcours autorisé)."
+    },
+    "phrase": "Lac des Vieilles Forges (Renwez, Les Mazures) : pêche de nuit de la carpe interdite sur cette partie (partie longeant la RD 988, lieu-dit Pont des Aulnes).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "Parcours autorisé : le Lac des Vieilles Forges sur tout le pourtour, excepté : la partie longeant la Route Départementale no 988",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-carpe-nuit-interdite-vieilles-forges-prises-pierret",
+    "type": "carpe_nuit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "08",
+     "lieu": "Lac des Vieilles Forges (Renwez, Les Mazures) : de la confluence du ruisseau des Prises Pierret au barrage de retenue (côté Les Mazures)",
+     "plan_eau": "Lac des Vieilles Forges",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe interdite sur cette partie (exclue du parcours autorisé)."
+    },
+    "phrase": "Lac des Vieilles Forges (Renwez, Les Mazures) : pêche de nuit de la carpe interdite sur cette partie (de la confluence du ruisseau des Prises Pierret au barrage de retenue (côté Les Mazures)).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "Parcours interdit à la pêche de la carpe de nuit au Lac des Vieilles Forges De la confluence du ruisseau des Prises Pierret au barrage de retenue",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-carpe-nuit-interdite-bairon-digue-vieil-grand-etang",
+    "type": "carpe_nuit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "08",
+     "lieu": "Étang de Bairon : digue entre le vieil étang et le grand étang",
+     "plan_eau": "Étang de Bairon",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe interdite sur cette partie (exclue du parcours autorisé)."
+    },
+    "phrase": "Étang de Bairon : pêche de nuit de la carpe interdite sur cette partie (digue entre le vieil étang et le grand étang).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "Parcours autorisés : l'étang de Bairon sur tout le pourtour, excepté : La digue entre le vieil étang et le grand étang",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-carpe-nuit-interdite-bairon-digue-grand-etang",
+    "type": "carpe_nuit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "08",
+     "lieu": "Étang de Bairon : digue du grand étang, y compris l'ensemble des maçonneries au droit du barrage",
+     "plan_eau": "Étang de Bairon",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe interdite sur cette partie (exclue du parcours autorisé)."
+    },
+    "phrase": "Étang de Bairon : pêche de nuit de la carpe interdite sur cette partie (digue du grand étang, y compris l'ensemble des maçonneries au droit du barrage).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La digue du grand étang y compris l'ensemble des maçonneries au droit du barrage",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-carpe-nuit-interdite-bairon-plage",
+    "type": "carpe_nuit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "08",
+     "lieu": "Étang de Bairon : la plage plus une distance de 100 m de part et d'autre",
+     "plan_eau": "Étang de Bairon",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe interdite sur cette partie (exclue du parcours autorisé)."
+    },
+    "phrase": "Étang de Bairon : pêche de nuit de la carpe interdite sur cette partie (la plage plus une distance de 100 m de part et d'autre).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (dispositions spécifiques pêche 2026), annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La plage plus une distance de 100 m de part et d'autre",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   }
+  ],
+  "seulement_b": [
+   {
+    "id": "08-2195-interdit-cat1",
+    "type": "interdit",
+    "especes": [
+     "2195"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-05-29",
+    "valeur": {
+     "texte": "Pêche du sandre interdite en 1re catégorie du 14 mars au 29 mai inclus."
+    },
+    "phrase": "Sandre : pêche interdite en 1re catégorie du 14 mars au 29 mai 2026.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche du sandre est interdite dans les eaux de 1re catégorie, du 14 mars au 29 mai inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2195-interdit-cat2",
+    "type": "interdit",
+    "especes": [
+     "2195"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-26",
+    "au": "2026-05-29",
+    "valeur": {
+     "texte": "Pêche du sandre interdite en 2e catégorie du 26 janvier au 29 mai inclus."
+    },
+    "phrase": "Sandre : pêche interdite en 2e catégorie du 26 janvier au 29 mai 2026.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "dans les eaux de 2ème catégorie du 26 janvier au 29 mai inclus.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-ecrevisse-pattes-rouges-interdit-toute-annee",
+    "type": "interdit",
+    "especes": [
+     "ecrevisse-pattes-rouges"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche des écrevisses autochtones interdite toute l'année."
+    },
+    "phrase": "Écrevisse pattes rouges : pêche interdite toute l'année.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche des écrevisses autochtones est interdite toute l'année.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-ecrevisse-torrents-interdit-toute-annee",
+    "type": "interdit",
+    "especes": [
+     "ecrevisse-torrents"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche des écrevisses autochtones interdite toute l'année."
+    },
+    "phrase": "Écrevisse des torrents : pêche interdite toute l'année.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche des écrevisses autochtones est interdite toute l'année.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-ecrevisse-pattes-blanches-interdit-toute-annee",
+    "type": "interdit",
+    "especes": [
+     "ecrevisse-pattes-blanches"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche des écrevisses autochtones interdite toute l'année."
+    },
+    "phrase": "Écrevisse pattes blanches : pêche interdite toute l'année.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche des écrevisses autochtones est interdite toute l'année.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-ecrevisse-pattes-greles-interdit-toute-annee",
+    "type": "interdit",
+    "especes": [
+     "ecrevisse-pattes-greles"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche des écrevisses autochtones interdite toute l'année."
+    },
+    "phrase": "Écrevisse pattes grêles : pêche interdite toute l'année.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche des écrevisses autochtones est interdite toute l'année.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-anguille-jaune-interdit-hiver",
+    "type": "interdit",
+    "especes": [
+     "anguille-jaune"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-04-14",
+    "valeur": {
+     "texte": "Pêche de l'anguille jaune interdite du 1er janvier au 14 avril."
+    },
+    "phrase": "Anguille jaune : pêche interdite du 1er janvier au 14 avril 2026.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche de l'anguille jaune est interdite du 1er janvier au 14 avril et du 16 juillet au 31 décembre.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-anguille-jaune-interdit-ete",
+    "type": "interdit",
+    "especes": [
+     "anguille-jaune"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-07-16",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Pêche de l'anguille jaune interdite du 16 juillet au 31 décembre."
+    },
+    "phrase": "Anguille jaune : pêche interdite du 16 juillet au 31 décembre 2026.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La pêche de l'anguille jaune est interdite du 1er janvier au 14 avril et du 16 juillet au 31 décembre.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2110-interdit-vf-rd988",
+    "type": "interdit",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Lac des Vieilles Forges (Renwez, Les Mazures) : partie longeant la RD 988, lieu-dit Pont des Aulnes",
+     "plan_eau": "Lac des Vieilles Forges",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe interdite sur la partie longeant la RD 988, lieu-dit Pont des Aulnes."
+    },
+    "phrase": "Carpe de nuit interdite : partie longeant la RD 988, lieu-dit Pont des Aulnes.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "Parcours autorisé : le Lac des Vieilles Forges sur tout le pourtour, excepté :",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2110-interdit-vf-prises-pierret",
+    "type": "interdit",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Lac des Vieilles Forges (Renwez, Les Mazures) : de la confluence du ruisseau des Prises Pierret au barrage de retenue (côté Les Mazures)",
+     "plan_eau": "Lac des Vieilles Forges",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe interdite de la confluence du ruisseau des Prises Pierret au barrage de retenue (côté Les Mazures)."
+    },
+    "phrase": "Carpe de nuit interdite : de la confluence du ruisseau des Prises Pierret au barrage de retenue (côté Les Mazures).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "de la confluence du ruisseau des Prises Pierret au barrage de retenue (côté les Mazures)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2110-interdit-bairon-digue-etangs",
+    "type": "interdit",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Étang de Bairon (Bairons et ses environs) : digue entre le vieil étang et le grand étang",
+     "plan_eau": "Étang de Bairon",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe interdite sur la digue entre le vieil étang et le grand étang."
+    },
+    "phrase": "Carpe de nuit interdite : digue entre le vieil étang et le grand étang.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La digue entre le vieil étang et le grand étang,",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2110-interdit-bairon-digue-grand-etang",
+    "type": "interdit",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Étang de Bairon (Bairons et ses environs) : digue du grand étang, y compris les maçonneries au droit du barrage",
+     "plan_eau": "Étang de Bairon",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe interdite sur la digue du grand étang y compris les maçonneries au droit du barrage."
+    },
+    "phrase": "Carpe de nuit interdite : digue du grand étang, y compris les maçonneries au droit du barrage.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La digue du grand étang y compris l'ensemble des maçonneries au droit du barrage,",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2110-interdit-bairon-plage",
+    "type": "interdit",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Étang de Bairon (Bairons et ses environs) : plage plus 100 m de part et d'autre",
+     "plan_eau": "Étang de Bairon",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe interdite sur la plage et 100 m de part et d'autre."
+    },
+    "phrase": "Carpe de nuit interdite : plage plus 100 m de part et d'autre.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 3 et annexe 1",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "La plage plus une distance de 100 m de part et d'autre.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2247-taille_min-cat1",
+    "type": "taille_min",
+    "especes": [
+     "2247"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 35
+    },
+    "phrase": "Ombre commun : taille minimale de 35 cm en 1re catégorie.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 4",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "pour l'ombre commun : 0,35 m dans les cours d'eau de 1ère catégorie et 2ème catégorie ;",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2247-taille_min-cat2",
+    "type": "taille_min",
+    "especes": [
+     "2247"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 35
+    },
+    "phrase": "Ombre commun : taille minimale de 35 cm en 2e catégorie.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 4",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "pour l'ombre commun : 0,35 m dans les cours d'eau de 1ère catégorie et 2ème catégorie ;",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2151-taille_min-cat1",
+    "type": "taille_min",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 60
+    },
+    "phrase": "Brochet : taille minimale de 60 cm en 1re catégorie.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 4",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "pour le brochet : 0,60 m dans les cours d'eau de 1ère catégorie et 2ème catégorie ;",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2151-taille_min-cat2",
+    "type": "taille_min",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 60
+    },
+    "phrase": "Brochet : taille minimale de 60 cm en 2e catégorie.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 4",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "pour le brochet : 0,60 m dans les cours d'eau de 1ère catégorie et 2ème catégorie ;",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2195-no_kill-meuse-4cheminees",
+    "type": "no_kill",
+    "especes": [
+     "2195"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Meuse (Givet) : barrage des 4 cheminées",
+     "plan_eau": null,
+     "cours_eau": "Meuse"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée pour le sandre, sous conditions d'autorisation du droit de pêche."
+    },
+    "phrase": "Sandre : remise à l'eau immédiate obligatoire, barrage des 4 cheminées.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée pour les sandres et les perches comme indiqué sur le plan en annexe 2 sur :",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2193-no_kill-meuse-4cheminees",
+    "type": "no_kill",
+    "especes": [
+     "2193"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Meuse (Givet) : barrage des 4 cheminées",
+     "plan_eau": null,
+     "cours_eau": "Meuse"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Seule la pêche avec remise à l'eau immédiate est pratiquée pour le perche, sous conditions d'autorisation du droit de pêche."
+    },
+    "phrase": "Perche : remise à l'eau immédiate obligatoire, barrage des 4 cheminées.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2025-864 du 31 décembre 2025 (pêche dans les Ardennes en 2026), article 6 et annexe 2",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52423&path=arrete-definitif-2025-864-du-31DEC2025.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-31"
+    },
+    "citation": "seule la pêche avec remise à l'eau immédiate est pratiquée pour les sandres et les perches comme indiqué sur le plan en annexe 2 sur :",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2247-ouverture-cat1-revue",
+    "type": "ouverture",
+    "especes": [
+     "2247"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-05-16",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "du 16 mai au 20 septembre"
+    },
+    "phrase": "Ombre commun : ouverture du 16 mai au 20 septembre en 1re catégorie (fédération, à confirmer).",
+    "source": {
+     "texte": "Revue Pêche 08 2026 (fédération des Ardennes), page 32 (tableau des dates)",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52179&path=Revue-Peche-08-2026.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026 (information, non signé)"
+    },
+    "citation": null,
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2247-ouverture-cat2-revue",
+    "type": "ouverture",
+    "especes": [
+     "2247"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-05-16",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "du 16 mai au 31 décembre"
+    },
+    "phrase": "Ombre commun : ouverture du 16 mai au 31 décembre en 2e catégorie (fédération, à confirmer).",
+    "source": {
+     "texte": "Revue Pêche 08 2026 (fédération des Ardennes), page 32 (tableau des dates)",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52179&path=Revue-Peche-08-2026.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026 (information, non signé)"
+    },
+    "citation": null,
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2151-quota_jour-cat2-revue",
+    "type": "quota_jour",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 2,
+     "texte": "3 carnassiers par jour et par pêcheur dont 2 brochets au maximum."
+    },
+    "phrase": "Brochet : 2 au plus par jour et par pêcheur en 2e catégorie, dans la limite de 3 carnassiers (fédération, à confirmer).",
+    "source": {
+     "texte": "Revue Pêche 08 2026 (fédération des Ardennes), page 32 (tableau des dates)",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52179&path=Revue-Peche-08-2026.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026 (information, non signé)"
+    },
+    "citation": null,
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2221-taille_min-alyse-revue",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "cours_eau",
+     "code": "08",
+     "lieu": "Alyse (ruisseau) : taille minimale de la truite",
+     "plan_eau": null,
+     "cours_eau": "ruisseau d'Alyse"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 18,
+     "texte": "Truite : 18 cm sur le ruisseau d'Alyse, 23 cm ailleurs."
+    },
+    "phrase": "Truite : taille minimale de 18 cm sur le ruisseau d'Alyse (fédération, à confirmer).",
+    "source": {
+     "texte": "Revue Pêche 08 2026 (fédération des Ardennes), page 32 (tableau des dates)",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52179&path=Revue-Peche-08-2026.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026 (information, non signé)"
+    },
+    "citation": "Générale 23 cm – Alyse 18 cm",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-mode_peche-ecluses-amont-revue",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Écluses et barrages : à l'amont des ouvrages",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 4,
+     "texte": "À l'amont des écluses et des ouvrages, quatre cannes au plus, sans distinction de distance."
+    },
+    "phrase": "À l'amont des écluses et barrages : quatre cannes au plus (fédération, à confirmer).",
+    "source": {
+     "texte": "Revue Pêche 08 2026 (fédération des Ardennes), page 27 (questions fréquentes)",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52179&path=Revue-Peche-08-2026.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026 (information, non signé)"
+    },
+    "citation": "des ouvrages et des écluses il est possible de pêcher avec un maximum de quatre cannes",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-mode_peche-ecluses-aval-revue",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "08",
+     "lieu": "Écluses et barrages : à l'aval des ouvrages, sur les 50 premiers mètres",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 1,
+     "texte": "À l'aval des écluses et des ouvrages, une seule canne sur les cinquante premiers mètres, puis quatre cannes."
+    },
+    "phrase": "À l'aval des écluses et barrages : une seule canne sur les 50 premiers mètres (fédération, à confirmer).",
+    "source": {
+     "texte": "Revue Pêche 08 2026 (fédération des Ardennes), page 27 (questions fréquentes)",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52179&path=Revue-Peche-08-2026.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026 (information, non signé)"
+    },
+    "citation": "à l'aval de ces mêmes ouvrages sur les cinquante premiers mètres, vous ne pouvez pêcher qu'à une canne",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "08-2110-carpe_nuit-domaine-public-cat2-revue",
+    "type": "carpe_nuit",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "08",
+     "lieu": "Domaine public de 2e catégorie piscicole : ensemble des parcours, hors zones interdites listées",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche de nuit de la carpe autorisée sur l'ensemble des parcours du domaine public de 2e catégorie, sauf Bairon et Vieilles Forges (interdite du 1er au 31 janvier et du 1er octobre au 31 décembre 2026) et les zones listées."
+    },
+    "phrase": "Carpe de nuit : autorisée sur le domaine public de 2e catégorie, avec exceptions (fédération, à confirmer).",
+    "source": {
+     "texte": "Revue Pêche 08 2026 (fédération des Ardennes), page 31 (affiche)",
+     "url": "https://www.peche08.fr/cms_viewFile.php?idtf=52179&path=Revue-Peche-08-2026.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026 (information, non signé)"
+    },
+    "citation": "La pêche de la carpe de nuit est autorisée, dans le département des Ardennes, sur l'ensemble des parcours de pêche du domaine public de deuxième catégorie piscicole",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   }
+  ]
+ },
+ "paires_categorie": [
+  {
+   "type": "taille_min",
+   "especes": [
+    "2247"
+   ],
+   "lieu": null,
+   "valeur": {
+    "cm": 35
+   },
+   "a": {
+    "id": "08-ombre-taille-min-departement",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "08-2247-taille_min-cat1",
+    "categorie": "1"
+   }
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2247"
+   ],
+   "lieu": null,
+   "valeur": {
+    "cm": 35
+   },
+   "a": {
+    "id": "08-ombre-taille-min-departement",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "08-2247-taille_min-cat2",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "cm": 60
+   },
+   "a": {
+    "id": "08-brochet-taille-min-departement",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "08-2151-taille_min-cat1",
+    "categorie": "1"
+   }
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "cm": 60
+   },
+   "a": {
+    "id": "08-brochet-taille-min-departement",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "08-2151-taille_min-cat2",
+    "categorie": "2"
+   }
+  }
+ ]
+}
