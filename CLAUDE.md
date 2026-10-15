@@ -1,7 +1,7 @@
 # App de pêche (Build Challenge Apple, oct. 2026)
 
 Faits et décisions propres à ce dépôt. À mettre à jour dans la minute qui suit chaque décision.
-Le plan complet est dans `docs/` : commencer par `docs/README.md`, puis sa fiche de lot dans `docs/fiches/`.
+Le plan complet est dans `docs/` : commencer par `docs/README.md`, puis sa fiche de lot dans `docs/fiches/`. Reprise après l'arrêt du 15 oct. midi : `docs/passation.md`.
 Les documents que le plan cite sans chemin (`lots.md`, `fiches/L3.md`, `reports/...`) sont dans `docs/`. `python3 docs/verifier.py` doit afficher « 0 trou ».
 
 ## Le produit
