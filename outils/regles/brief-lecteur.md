@@ -1,0 +1,15 @@
+# Brief du lecteur (A : DOSSIER=dep, AUTRE=dep-b, AUTREAB=B ; B : DOSSIER=dep-b, AUTRE=dep, AUTREAB=A)
+
+Tu es le lecteur {AB} des règles de pêche en eau douce du département {CODE} ({NOM}), saison 2026. Un autre lecteur lit les mêmes textes sans toi ; ne cherche jamais à lire son travail.
+
+Dépôt : C:\Users\Adem\Build Challenge\repo (PC Windows ; outil Bash avec des chemins /c/Users/Adem/Build Challenge/repo, ou Read/Write ; Python toujours en `python3 -I` avec `export PYTHONIOENCODING=utf-8`).
+
+1. Lis en entier la consigne outils/regles/consigne-departement.md (version 2). Elle est la loi : forme JSON, une règle par espèce, codes Sandre, dates 2026 calculées, statuts, citations au mot près de 200 caractères au plus.
+2. Les textes sont déjà téléchargés et extraits dans outils/regles/corpus/{CODE}/ : lis manifeste.json, le rapport du collecteur reports/regles-local/{CODE}-corpus.md, puis chaque fichier .txt en entier. N'utilise pas le web pour les règles. Un texte marqué « information » (guide, affiche de fédération) n'est jamais seule source d'une règle brouillon. Un texte abrogé : liste-le dans « textes » avec lu « titre seul », aucune règle tirée de lui. Un arrêté cadre de bassin adressé aux préfets : n'en tire une règle que s'il s'applique directement au pêcheur de loisir. Pour l'URL et la date de signature de chaque source, prends celles du manifeste. Le texte vient parfois d'un OCR : si un caractère est manifestement déformé, corrige seulement ce caractère dans la citation ; si une ligne de tableau est illisible, regarde l'image de la page (rends-la avec pymupdf dans un dossier temporaire hors du dépôt) ou mets la règle en incertain.
+3. Ne recopie pas le Code de l'environnement : écris seulement ce que le département précise, durcit, assouplit ou situe. Pour vérifier le Code, tu peux lire par curl la copie GitHub indiquée dans la consigne.
+4. Écris UN seul fichier : outils/regles/{DOSSIER}/{CODE}.json (genere_le et lu_le : la date du jour). expire_le null pour un arrêté permanent, 2026-12-31 pour un texte annuel 2026 ou un avis 2026, la date écrite sinon.
+5. Vérifie : cd "/c/Users/Adem/Build Challenge/repo" && python3 -I outils/regles/valider.py outils/regles/{DOSSIER}/{CODE}.json doit afficher OK. Corrige jusqu'à OK.
+6. Écris le rapport (50 lignes au plus, forme de la consigne, première ligne « Décision débloquée : … ») dans reports/regles-local/{CODE}-{AB}.md.
+
+Interdits : ne lis rien dans outils/regles/{AUTRE}/, outils/regles/consensus/, docs/regles/, ni reports/regles-local/{CODE}-{AUTREAB}.md ; n'écris nulle part ailleurs que tes deux fichiers ; tes scripts de travail vont dans un dossier temporaire hors du dépôt ; n'installe rien ; pas de git.
+Rends en fin, en 6 lignes au plus : le nombre de règles par statut, la sortie exacte de valider.py, et les 3 règles les plus risquées.

@@ -14,6 +14,7 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 | `app-store.md` | la check-list de soumission et les refus probables, avec le lot qui les corrige | A, C, MWM |
 | `banc/` | les profils de faux utilisateurs du banc d'essai et les mots interdits | l'atelier (`/banc`) |
 | `atelier.md`, `atelier-mac.md` | l'atelier (harness) et la mise en route d'un Mac | Adem et Titouan (Claude Code), Sullyvan (sans Claude) |
+| `passation.md` | où tout est rangé et ce qui attend Adem, après l'arrêt du 15 oct. à midi | la session qui reprend |
 | `avant-jeudi.md`, `message-mwm.md` | ce qui devait être prêt avant jeudi, le message envoyé à MWM | pour mémoire |
 | `reports/` | les recherches et les évaluations, avec leurs sources (règles du 75 et du 94, texte qui fait foi, prix, reconnaissance, mer, navigation) | pour vérifier un chiffre |
 
@@ -46,9 +47,6 @@ b. Une liste de contrôle sourcée : taille, période, quota, réserve possible 
 c. Aucune règle appliquée : un texte et le lien de la fédération
 Ma reco : b, l'app montre la loi au lieu d'accorder une permission. Par défaut : b.
 
-**2.** Que bloque le paywall ?
-a. Tout à partir de la 2e session, paywall au début de celle-ci
-b. Les sessions à partir de la 2e, paywall à la fin de la 1re juste après la carte ; la carte, les règles et le Pescedex en lecture restent gratuits pour toujours
-c. Une session gratuite par mois, illimité avec l'abonnement
-d. Sessions gratuites, cartes à collectionner payantes après la 1re session
-Ma reco : b, le paywall tombe à la maison, avec du réseau, et se voit dans la démo. Par défaut : b.
+**Tranché : que bloque le paywall ?** Adem, 15 oct. (12h26 et 12h28) : le gratuit garde UN spot (cercle de 1 km) avec des sessions illimitées ; la fin de la 1re session ouvre le paywall, qui se ferme ; choisir un 2e spot ouvre le paywall, qui bloque. La carte, les règles et le Pescedex en lecture restent gratuits pour toujours.
+
+**Tranché : qui choisit le spot gratuit ?** Adem, 15 oct. 12h32 : l'app propose le plus proche avec des relevés OFB récents et une espèce ouverte ce jour ; le pêcheur peut en prendre un autre sur la carte avant sa 1re session, puis il est fixé.

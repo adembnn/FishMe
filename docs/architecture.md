@@ -48,7 +48,7 @@ store/                         textes de fiche, notes pour le relecteur, pages w
 - Le contrat `Collection` (lire les cartes enregistrées, et l'image PNG de chaque carte, sans métadonnée GPS, prête à partager) : L4 le remplit ; L9 s'en sert pour le partage en image et L8 pour les amis, sans importer `App/Collection/`.
 - `departementsCouverts()` donne la liste des départements dont les règles locales sont chargées (bandeau de L2) ; `credits()` lit `credits.json` (page Sources de L9) ; `liensFederation(departement)` donne le site officiel de la fédération départementale et la page de cartedepeche.fr (`liens-federations.json`, données de D1).
 - Les critères qui séparent les paires proches (gardon, brème, chevesne ; fario, arc-en-ciel) sont des données de D1 (`especes.json`, champ `critere_distinctif`), lues par L3.
-- `acces(sessionsTerminees, abonne)` donne ce qui est ouvert : par défaut, la 1re session gratuite, puis les sessions sur abonnement ; la carte, les règles et le Pescedex en lecture toujours ouverts.
+- `acces(sessionsTerminees, spot, spotGratuit, abonne)` : sans abonnement, les sessions sont gratuites et illimitées dans le spot gratuit (cercle de 1 km fixé avant la 1re session) ; un autre spot ouvre le paywall, qui bloque ; la fin de la 1re session ouvre le paywall, qui se ferme (décidé par Adem le 15 oct. 12h28) ; carte, règles et Pescedex en lecture toujours ouverts. L5 garde le spot gratuit et le nombre de sessions terminées.
 - `offreAffichee(date)` donne le produit annuel à montrer : 34,99 jusqu'au 31 décembre 2026, 49,99 ensuite (tarif fondateur).
 - Trois contrats branchés côté app, chacun avec un faux : `IdentifieEspece` (modèle de R1, IA d'Apple ou grille), `Achats`, `Mesure`.
 
