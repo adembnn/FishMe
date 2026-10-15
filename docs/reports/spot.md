@@ -45,6 +45,6 @@ Volume : la BD TOPAGE nationale pèse plusieurs centaines de Mo [?] ; on ne gard
 Mesure du fil Maquettes (`/mnt/project-files/maquettes/reports/spot-technique.md`) : la BD TOPAGE pèse 1,3 Go, l'extrait par département n'est pas faisable avant vendredi. Donc, pour vendredi : un cercle de 1 km figé à sa création, nommé d'après l'eau la plus proche (coins OpenStreetMap déjà prévus), règles du département de son centre, espèces par étages (même eau à 5 km, puis 30 km, puis département, puis région), toujours avec N et l'année. Le tronçon ou le lac entier arrive dans la mise à jour.
 
 ## 4. Ce qui reste à décider (Adem)
-- La forme du spot (question 4 du fil Plan) : par défaut, cercle de 1 km vendredi, tronçon ou lac dans la mise à jour.
-- Ce que garde le gratuit : un spot et ses sessions illimitées, ou un spot et une seule session.
+- La forme du spot : tranché par Adem le 15 oct. 12h26, cercle de 1 km vendredi, tronçon ou lac dans la mise à jour.
+- Ce que garde le gratuit : tranché le 15 oct. 12h26, un spot et ses sessions illimitées.
 - Le spot proposé au gratuit : le plus proche avec des relevés OFB récents et au moins une espèce ouverte ce jour (proposition), jamais présenté comme « le meilleur ».

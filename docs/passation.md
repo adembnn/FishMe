@@ -31,10 +31,10 @@ Ce qui bloque dans le cloud : sites de l'État et des fédérations refusés (40
 
 ## Questions qui attendent Adem (chacune a un défaut, le travail avance dessus)
 1. Forme de la règle pour une prise (`docs/README.md`, question 1) : défaut b, liste de contrôle sourcée.
-2. Ce que bloque le paywall (`docs/README.md`, question 2) : défaut b. Idée d'Adem du 15 oct. (fil Maquettes) : le gratuit propose UN spot ; reste à dire s'il garde des sessions illimitées sur ce spot ou une seule (`reports/spot.md`, section 4).
+2. Ce que bloque le paywall (`docs/README.md`, question 2) : défaut b. Idée d'Adem du 15 oct. (fil Maquettes) : le gratuit propose UN spot ; tranché le 15 oct. 12h26 : sessions illimitées sur ce spot. Reste : ce qui déclenche le paywall, puisque « 2e session » ne tient plus.
 3. Rôle de l'IA d'Apple dans la reconnaissance : défaut a (notre modèle Create ML partout, l'IA d'Apple sur 15 Pro et plus pour la légende, et pour l'espèce seulement si elle passe le même examen).
 4. Taille et poids : défaut a (curseur, poids estimé par la formule longueur-poids ; à 2 cm ou moins de la taille légale, mesurer au mètre), réalité augmentée dans la mise à jour.
-5. Forme du spot : défaut cercle de 1 km vendredi, tronçon ou lac entier dans la mise à jour (`reports/spot.md`).
+5. Forme du spot : tranché le 15 oct. 12h26, cercle de 1 km vendredi, tronçon ou lac entier dans la mise à jour (`reports/spot.md`).
 6. Pack de lots reconnaissance R0 à R4 (examen, photos, entraînement, IA d'Apple au même examen, taille et poids) : plan en 4 lignes envoyé, ok d'Adem attendu ; il faut aussi savoir qui a un iPhone 15 Pro ou plus et qui rassemble les photos de vraies prises.
 7. Toujours ouverts : nom de l'app, prix mensuel retenu, prix en euros (colonne France d'App Store Connect), compteur du Pescedex par zone (fil Maquettes).
 Règle d'Adem : jamais plus de 3 questions à la fois. Poser 3, 5 et 6 en premier.
