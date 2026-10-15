@@ -21,7 +21,7 @@ Dossier de l'app : `Packages/Core/Sources/Core/Resources/` (D1), sauf `conseils.
 | `stations-especes.json` | E1 E2 E3 | [Hub'Eau Poissons](https://hubeau.eaufrance.fr/page/api-poisson) | [Licence Ouverte 2.0](https://www.data.gouv.fr/dataservices/hubeau-etat-piscicole-des-rivieres) : citer OFB et Hub'Eau, avec la date | fabriqué, France entière, avec le cours d'eau de chaque station | D2 |
 | `rarete-departements.json` | E2 E6 | idem | idem | fabriqué, France entière | D2 |
 | `stations-hydro.json` | E2 E4 (conditions) | [Hub'Eau hydrométrie](https://hubeau.eaufrance.fr/page/api-hydrometrie), référentiel des stations (source Vigicrues) | Licence Ouverte 2.0 : citer Hub'Eau et Vigicrues, avec la date | fabriqué, France entière, métadonnées seulement (code, nom, cours d'eau, position, département, en service) ; les niveaux sont lus en direct par l'app | D2 |
-| `conseils.json` (dans `Core/Conseils/`) | E4 E6 (conseils de L13) | écrit par S, sans Claude, depuis des études et des pages de fédérations lues, chaque conseil avec son lien ; relu par S | à nous ; aucun texte recopié (Générations Pêche et les cahiers de l'OFB l'interdisent, Wikipédia imposerait sa licence) | saisi | D4 (S), passé en JSON par B |
+| `conseils.json` (dans `Core/Conseils/`) | E4 E6 (conseils de L13) | écrit par S, avec Claude (crédit limité), depuis des études et des pages de fédérations lues, chaque conseil avec son lien ; relu par S | à nous ; aucun texte recopié (Générations Pêche et les cahiers de l'OFB l'interdisent, Wikipédia imposerait sa licence) | saisi | D4 (S), passé en JSON par B |
 
 Données lues en direct par l'app, jamais embarquées :
 | Donnée | Lue par | Source | Licence et obligation |
