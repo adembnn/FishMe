@@ -64,7 +64,7 @@ Ce qui coince : le compte à rebours sur l'écran verrouillé (Live Activity) de
 
 ### « Trouver le meilleur spot »
 Ce qui coince : aucune donnée ne dit où est le « meilleur » coin. L'OFB dit où une espèce a été relevée lors d'une pêche électrique, combien de fois et quand ; ses stations sont des points de mesure, souvent sans accès public. Promettre « le meilleur » et laisser un pêcheur bredouille, c'est la critique qu'un juré pêcheur fera en premier.
-Recommandation : le bouton devient « Où chercher ? ». On choisit une espèce (ou aucune) ; l'app montre les 3 coins publics les plus proches (OpenStreetMap et la fédération) près desquels l'OFB l'a relevée, chacun avec « N pêches, dernier relevé AAAA » et « ouvert aujourd'hui » ou « fermé ». Le calcul existe déjà dans `Core` (`especesProches`).
+Recommandation : le bouton devient « Choisir un autre spot ». On choisit une espèce (ou aucune) ; l'app montre les 3 coins publics les plus proches (OpenStreetMap et la fédération) près desquels l'OFB l'a relevée, chacun avec « N pêches, dernier relevé AAAA » et « ouvert aujourd'hui » ou « fermé ». Le calcul existe déjà dans `Core` (`especesProches`).
 
 ### Le volet droit : club et communauté
 Ce qui coince :
@@ -196,7 +196,7 @@ Par défaut : a, sans changement. Le c et le f sont les plus originaux et coûte
 ## 5. Les écrans, au plus court
 | # | Écran | Ce qu'il contient |
 |---|---|---|
-| 1 | Volet central : la carte | les coins, « Autour de moi », « Commencer une session », « Où chercher ? », le bandeau de session en cours |
+| 1 | Volet central : la carte | les coins, « Autour de moi », « Commencer une session », « Choisir un autre spot », le bandeau de session en cours |
 | 2 | Feuille d'un coin | espèces relevées avec « N pêches, dernier relevé AAAA », la règle du jour avec sa source, « Y aller » (ouvre Plans) |
 | 3 | Feuille de prise, en 3 temps | photo (ou photo d'exemple), puis 3 propositions ou la grille, puis la taille au curseur et le verdict |
 | 4 | Révélation de la carte | la carte se retourne, puis rejoint le Pescedex |

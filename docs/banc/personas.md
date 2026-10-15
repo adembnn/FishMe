@@ -25,7 +25,7 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 - **seuil posé par nous** : cible fixée par l'équipe, sans source de terrain. Le seuil de chaque mission est une cible, pas une mesure. L'agent relève le chiffre réel même au-dessus du seuil, pour que l'avocat chiffre la correction.
 - **selon la décision d'Adem** : question encore ouverte. La mission mesure sans figer la réponse. Trois sujets sont ouverts à ce jour : la forme du verdict (question du 15 oct., `docs/banc/mots-interdits.md` ; le brouillon de `docs/parcours-demo.md` propose une liste de contrôle par défaut), ce que bloque le paywall et son prix (`CLAUDE.md`, 15 oct.), le contenu de « Mon club » (`docs/vision.md` §2, option d).
 - **verdict** : la réponse de l'app sur une prise, quelle que soit sa forme finale (« relâche-la », « vérifie l'arrêté », ligne de liste de contrôle). Hors des départements saisis, il ne doit jamais accorder le droit de garder (« tu peux la garder » ou équivalent), règle de `CLAUDE.md`.
-- **Étapes** : celles de `docs/parcours-demo.md` du 15 oct. « Où chercher ? » est E3 (filtre d'espèce sur la carte), la session est E4 (bandeau dans l'app ; l'écran verrouillé vient dans la mise à jour), Mon club est E8 (liens, partage d'une carte en image, sources, contact ; les amis invités viennent dans la mise à jour).
+- **Étapes** : celles de `docs/parcours-demo.md` du 15 oct. « Choisir un autre spot » est E3 (filtre d'espèce sur la carte), la session est E4 (bandeau dans l'app ; l'écran verrouillé vient dans la mise à jour), Mon club est E8 (liens, partage d'une carte en image, sources, contact ; les amis invités viennent dans la mise à jour).
 - **Départements saisis** : 75, 92, 93, 94, 77, plus les pilotes 01, 87 et 44 en cours de saisie (`CLAUDE.md`, 15 oct. 11h13). L'agent lit la liste réelle dans le build testé (`regles.json`, quand il existe). Un département non saisi se joue comme « hors liste ».
 
 ## Conditions de jeu communes
@@ -53,7 +53,7 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 
 **Vocabulaire** : hiérarchie, contraste, zone tactile, état vide, cohérence [?].
 
-**Critère de rejet** : plusieurs actions de même poids sur un écran, ou quatre raretés qui se confondent en niveaux de gris. La carte garde deux actions voulues par Adem, « Commencer une session » et « Où chercher ? » (`docs/vision.md` §5) : elles doivent se distinguer par leur poids. La cible de style de `docs/reports/eval-mwm.md` §5 (New York, vert d'eau et crème) est une proposition non validée : choix de design réservé à Adem, jamais un critère MESURABLE.
+**Critère de rejet** : plusieurs actions de même poids sur un écran, ou quatre raretés qui se confondent en niveaux de gris. La carte garde deux actions voulues par Adem, « Commencer une session » et « Choisir un autre spot » (`docs/vision.md` §5) : elles doivent se distinguer par leur poids. La cible de style de `docs/reports/eval-mwm.md` §5 (New York, vert d'eau et crème) est une proposition non validée : choix de design réservé à Adem, jamais un critère MESURABLE.
 
 **Missions**
 

@@ -5,7 +5,7 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 ## Les fichiers
 | Fichier | Ce qu'il dit | Pour qui |
 |---|---|---|
-| `vision.md` | la vision du 15 oct. challengée point par point : volets, session, « Où chercher ? », club, reconnaissance, règles, mer, fraîcheur des règles, carte, rareté, écrans, fusion avec l'atelier de Titouan | Adem, puis toute l'équipe |
+| `vision.md` | la vision du 15 oct. challengée point par point : volets, session, « Choisir un autre spot », club, reconnaissance, règles, mer, fraîcheur des règles, carte, rareté, écrans, fusion avec l'atelier de Titouan | Adem, puis toute l'équipe |
 | `parcours-demo.md` | les étapes E1 à E9 que voit le pêcheur, chacune avec son test ; l'ordre de la démo | toute l'équipe, le critère commun |
 | `lots.md` | qui construit quoi, dans quel dossier, avec quel test, et le calendrier par portes | toute l'équipe |
 | `fiches/` | une page par lot, avec la consigne à coller dans Claude Code | la personne du lot |
