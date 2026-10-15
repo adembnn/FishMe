@@ -86,7 +86,7 @@ final class ParcoursApp {
     private var spotEnAttente: Spot?
 
     init(configurerMesure: @escaping @MainActor @Sendable () -> Void) {
-        let core = MoteurCore(donnees: .embarque(reglesTelechargees: ReglesAJour.dossierCopies))
+        let core = MoteurCore(donnees: .embarque(dossierFabriques: Bundle.main.resourceURL, reglesTelechargees: ReglesAJour.dossierCopies))
         self.core = core
         servicesCarte = ServicesCarte(geo: core.geo, regles: core.regles, especes: core.especes, session: core.session)
         // Reconnaissance : modèle DINOv2 embarqué (App/Prise/Modele), sous 0,4 de confiance la grille des espèces s'ouvre.
