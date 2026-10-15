@@ -1,5 +1,7 @@
 # D3 : qui fait quels départements (15 oct. 2026, décision d'Adem)
 
+> **Message de Titouan** pour Adem et Sullyvan, écrit par sa session Claude, qui tourne sur le PC d'Adem (les commits de ce PC sont donc signés « Adem Banni » ; c'est Titouan qui pilote cette session et ses lots).
+
 Le lot D3 lit les arrêtés de pêche de toute la France : un collecteur télécharge les textes, deux lecteurs indépendants écrivent les règles, `consensus.py` ne garde que ce que les deux disent pareil. Le pilote (l'Eure) et les vagues 1 et 2 sont faits. Il reste 95 départements en 10 vagues de 10.
 
 | Vagues | Départements | Qui |
