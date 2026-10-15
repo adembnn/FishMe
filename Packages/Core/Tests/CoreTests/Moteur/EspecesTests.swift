@@ -58,6 +58,8 @@ struct EspecesTests {
         #expect(niveau(7) == .rare)
         #expect(niveau(1) == .rare)
         #expect(niveau(0) == .legendaire)
+        // Sans code Sandre, on ne sait pas chercher l'espèce : jamais « légendaire » par défaut.
+        #expect(CalculRarete.calculer(code: nil, suiviOFB: true, departement: dep, donnees: zone(0)).niveau == .nonMesuree)
     }
 
     @Test("Une grenouille verte : rareté non mesurée par l'OFB, jamais légendaire")
