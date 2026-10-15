@@ -29,7 +29,7 @@ RACINE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SCRIPTS_DU_CONTRAT = {"verif.sh", "fusionner.sh", "lot.sh", "envoi.sh"}
 
 AGENTS_ATTENDUS = {"relecteur-apple", "relecteur-code", "relecteur-regles", "testeur-ecran", "revue-finale",
-                   "banc-utilisateur", "banc-avocat"}
+                   "banc-utilisateur", "banc-avocat", "codeur", "petites-mains"}
 COMMANDES_ATTENDUES = {"lot", "fusion", "ecran", "envoi", "point", "banc"}
 
 MODELES = {"sonnet", "opus", "haiku"}

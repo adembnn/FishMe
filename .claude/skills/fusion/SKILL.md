@@ -43,7 +43,7 @@ Si le lot change un fichier de `App/` (un écran), lance la procédure de `/banc
 ## 5. Corriger les points bloquants
 - Tous les verdicts ✓ : passe au point 6.
 - Sinon, liste les points [BLOQUANT] de tous les relecteurs, du plus grave au moins grave. Corrige-les un par un, seulement dans les dossiers permis du lot. Explique chaque correction en une phrase.
-- Tu ne corriges pas seul : un fichier hors du lot (le projet Xcode, une clé d'autorisation, `App/RootView.swift` sont à A ; `Packages/Core` est à C), ou un choix de design, de produit, de périmètre, de fournisseur ou d'argent. Dis qui doit le faire ou pose la question à la personne, avec ta recommandation et un choix par défaut.
+- Tu ne corriges pas seul : un fichier hors du lot (le projet Xcode, une clé d'autorisation, `App/RootView.swift` sont à A ; `Packages/Core` est à B, sauf `Conseils/` à S), ou un choix de design, de produit, de périmètre, de fournisseur ou d'argent. Dis qui doit le faire ou pose la question à la personne, avec ta recommandation et un choix par défaut.
 - Les points [à voir] ne bloquent pas : ne les corrige pas sans demande. Compte-les pour le point final.
 - Après les corrections : relance `scripts/verif.sh`, puis relance seulement les relecteurs qui avaient des points bloquants. Deux tours au plus. Au troisième, arrête-toi, montre ce qui reste et demande quoi faire.
 - Enregistre les corrections dans un commit (en français, sans ligne « Co-Authored-By »).
