@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1600">
+<title>Coque de poche, raretés</title>
+<link rel="stylesheet" href="shell.css">
+<style>
+html,body{background:var(--table)}
+.stage{position:relative;width:1600px;height:900px;overflow:hidden;background-color:var(--table);background-image:radial-gradient(circle,var(--table-dot) 1.6px,transparent 2px);background-size:16px 16px}
+header{position:absolute;left:60px;top:34px;right:60px}
+header h1{font:600 34px/1 var(--px);color:var(--teal-ink)}
+header p{font:500 17px/1.3 var(--sys);margin-top:9px;color:rgba(5,48,58,.9)}
+.row{position:absolute;left:60px;right:60px;top:158px;display:flex;justify-content:space-between}
+.col{position:relative;width:340px;height:640px}
+.egg{position:absolute;left:0;top:0;width:340px;height:640px}
+.bezel{position:absolute;left:31px;top:128px;width:278px;padding:12px;border-radius:26px}
+.lcd{width:250px;height:190px;border-radius:12px}
+.lcd .n{left:8px;top:7px;font-size:17px;font-weight:600}
+.lcd .pips{right:8px;top:9px;display:flex;gap:3px}
+.lcd .pips i{display:block;width:11px;height:11px;transform:rotate(45deg) scale(.78);background:var(--ink)}
+.lcd .pips i.o{background:none;box-shadow:inset 0 0 0 2.5px var(--ink)}
+.lcd .rar{left:8px;bottom:7px;font-size:14px;font-weight:600;letter-spacing:.4px}
+.plaque{position:absolute;left:28px;right:28px;top:402px;text-align:center;padding:12px 10px 13px;border-radius:22px;background:rgba(255,255,255,.7);box-shadow:inset 0 1px 0 #fff,0 2px 5px rgba(4,50,60,.25);color:var(--teal-ink)}
+.plaque h2{font:600 22px/1.1 var(--sys);letter-spacing:-.3px}
+.plaque p{font:500 15px/1.25 var(--sys);margin-top:4px}
+.egg .btns{top:572px}
+.egg .btns i{width:30px;height:30px}
+/* commun : plastique plein, mat, on ne voit rien à l'intérieur */
+.egg.opaque{background:#F2ECDC;border:3px solid #1E241A;box-shadow:inset 0 -14px 0 rgba(30,36,26,.12),0 14px 0 -2px rgba(30,36,26,.18)}
+.egg.opaque .ring{border-color:#F2ECDC;box-shadow:0 0 0 3px #1E241A,inset 0 0 0 3px #1E241A}
+/* rare : rose pailleté */
+.egg.glitter{background:linear-gradient(165deg,rgba(255,255,255,.4),rgba(255,255,255,.04) 40%),rgba(255,111,168,.62);
+  -webkit-backdrop-filter:blur(7px) saturate(1.6);backdrop-filter:blur(7px) saturate(1.6);border:2px solid rgba(255,255,255,.8);
+  box-shadow:inset 0 3px 0 rgba(255,255,255,.9),inset 0 -26px 40px rgba(150,20,80,.4),inset 0 28px 30px rgba(255,255,255,.25),0 22px 34px rgba(4,60,80,.3),0 3px 6px rgba(4,60,80,.25)}
+.sparks i{position:absolute;display:block;width:3px;height:3px;background:#fff;box-shadow:3px 0 #fff,-3px 0 #fff,0 3px #fff,0 -3px #fff}
+/* légendaire : or chromé, bandes dures */
+.egg.chrome{border:3px solid #5E4308;
+  background:
+   linear-gradient(112deg,transparent 28%,rgba(255,255,255,.75) 41%,transparent 52%),
+   linear-gradient(180deg,#FFF3B0 0,#E7B52B 10%,#6E4E08 21%,#FFE58A 31%,#C89A1E 42%,#FFF7C8 50%,#7A560A 62%,#F5CB4A 76%,#9A720F 88%,#FFE98F 100%);
+  box-shadow:inset 0 3px 0 #fff,inset 0 -8px 0 rgba(60,40,0,.35),0 22px 34px rgba(60,40,0,.35),0 3px 6px rgba(60,40,0,.3)}
+.egg.chrome .ring{border-color:#E7B52B;box-shadow:0 0 0 3px #5E4308,inset 0 0 0 3px #5E4308}
+.egg.chrome .bezel{box-shadow:inset 0 2px 0 rgba(255,255,255,.4),0 0 0 3px #5E4308}
+.egg.chrome .plaque{background:rgba(255,250,224,.92)}
+.egg.opaque .spec,.egg.chrome .spec{display:none}
+</style>
+</head>
+<body>
+<div class="stage">
+<header><h1>Coques du Pescedex</h1><p>La rareté se lit sur la coque : pleine, translucide, pailletée, chromée. Les losanges de l'écran la répètent.</p></header>
+<div class="row" id="row"></div>
+</div>
+<script src="sprites.js"></script>
+<script src="lcd.js"></script>
+<script>
+const {Lcd,rng,board}=E;
+const D=[
+ {cls:'opaque',sp:'gardon38',n:'GARDON',pips:1,rar:'COMMUN',h:'Commun',p:'24 pêches sur 29 dans le 94',ring:'#F2ECDC',inner:false},
+ {cls:'translucent',sp:'brochet40',n:'BROCHET',pips:2,rar:'PEU COMMUN',h:'Peu commun',p:'10 pêches sur 29 dans le 94',inner:true},
+ {cls:'glitter',sp:'sandre44',n:'SANDRE',pips:3,rar:'RARE',h:'Rare',p:'3 pêches sur 29 dans le 94',inner:true,sparks:true},
+ {cls:'chrome',sp:'truite44',n:'TRUITE FARIO',pips:4,rar:'LÉGENDAIRE',h:'Légendaire',p:'Jamais relevée ici',inner:false},
+];
+const row=document.getElementById('row');
+D.forEach((d,k)=>{
+  const col=document.createElement('div');col.className='col';
+  col.innerHTML=`<div class="egg ${d.cls}"><div class="ring"></div><div class="inner">${d.inner?board(340,640):''}${d.sparks?'<div class="sparks"></div>':''}</div><div class="spec"></div>
+  <div class="bezel"><div class="lcd"><canvas></canvas><span class="px n">${d.n}</span><span class="px pips">${[0,1,2,3].map(i=>`<i class="${i<d.pips?'':'o'}"></i>`).join('')}</span><span class="px rar">${d.rar}</span></div></div>
+  <div class="plaque"><h2>${d.h}</h2><p>${d.p}</p></div><div class="btns"><i></i><i></i><i></i></div></div>`;
+  row.appendChild(col);
+  if(d.cls==='translucent')col.querySelector('.egg').classList.add('translucent');
+  if(d.ring)col.querySelector('.egg').style.setProperty('--ring',d.ring);
+  if(d.cls==='glitter')col.querySelector('.egg').style.setProperty('--ring','rgba(255,111,168,.85)');
+  if(d.cls==='translucent')col.querySelector('.egg').style.setProperty('--ring','rgba(77,201,216,.85)');
+  const S=SPRITES[d.sp],W=S[0].length,H=S.length;
+  const L=new Lcd(col.querySelector('canvas'),50,38,5);
+  for(let x=0;x<50;x+=3){L.set(x,31);L.set(x+1,31)}
+  L.sprite(Math.round((50-W)/2),Math.round((38-H)/2)-1,S);
+  L.draw();
+  if(d.sparks){
+    const R=rng(5),box=col.querySelector('.sparks');
+    for(let i=0;i<90;i++){const e=document.createElement('i');e.style.left=(8+R()*324|0)+'px';e.style.top=(8+R()*620|0)+'px';if(R()<.3)e.style.background=e.style.boxShadow='#fff';
+      if(R()<.35){e.style.background='#FFE27A';e.style.boxShadow='3px 0 #FFE27A,-3px 0 #FFE27A,0 3px #FFE27A,0 -3px #FFE27A'}
+      e.style.opacity=.55+R()*.45;box.appendChild(e)}
+  }
+});
+</script>
+</body>
+</html>

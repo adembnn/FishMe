@@ -1,0 +1,55 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=393,initial-scale=1"><title>Verdict</title><style>
+@font-face{font-family:"Alfa Slab One";src:url(alfa-slab-one-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:block}
+:root{--forest:#2F5D3A;--forest-d:#20432A;--khaki:#CBB98A;--khaki-l:#E3D7B2;--cream:#F5EDD3;--mustard:#D9B64A;--brick:#B5452E;--denim:#3B5163;--denim-l:#41708A;--ink:#25301F;
+--sys:-apple-system,"SF Pro Text",system-ui,"Helvetica Neue",Arial,sans-serif;--slab:"Alfa Slab One",Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#111}
+svg text{font-family:var(--slab)}
+.sb{position:absolute;left:0;right:0;top:0;height:54px;z-index:20;font-family:var(--sys);font-weight:600;font-size:17px}
+.sb .t{position:absolute;left:0;width:132px;top:18px;text-align:center;letter-spacing:-.2px}
+.sb .isl{position:absolute;left:50%;top:11px;width:122px;height:36px;margin-left:-61px;border-radius:20px;background:#000}
+.sb .r{position:absolute;right:30px;top:21px;display:flex;gap:6px;align-items:center}
+.home{position:absolute;bottom:8px;left:50%;width:138px;height:5px;margin-left:-69px;border-radius:3px;z-index:30}.glass{position:relative;background:linear-gradient(140deg,rgba(255,250,232,.46),rgba(255,250,232,.16));-webkit-backdrop-filter:blur(20px) saturate(1.7);backdrop-filter:blur(20px) saturate(1.7);border:1px solid rgba(255,255,255,.6);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.75),inset 0 -1px 0 rgba(255,255,255,.2),0 2px 0 rgba(30,40,20,.12)}
+.glass.seam::after{content:"";position:absolute;inset:5px;border-radius:inherit;border:1.5px dashed rgba(255,250,232,.8);pointer-events:none;border-radius:calc(var(--r,24px) - 5px)}
+.glass.dark{background:linear-gradient(140deg,rgba(18,30,42,.52),rgba(18,30,42,.3));border-color:rgba(255,255,255,.28);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.4),0 2px 0 rgba(0,0,0,.25)}
+body{width:393px;height:852px;overflow:hidden;position:relative;font-family:var(--sys);color:var(--ink)}
+.ging{background:linear-gradient(rgba(245,237,211,.22) 50%,transparent 50%) 0 0/30px 30px,linear-gradient(90deg,rgba(245,237,211,.22) 50%,transparent 50%) 0 0/30px 30px,#CBB98A}
+.denim{color:var(--cream);background:repeating-linear-gradient(135deg,rgba(255,255,255,.045) 0 2px,transparent 2px 5px),radial-gradient(120% 70% at 30% 20%,#3a566b,#2f4455 60%,#27394a)}
+.felt{color:var(--cream);background:radial-gradient(120% 80% at 30% 15%,#3a7049,#2F5D3A 55%,#244a2e)}
+.x{position:absolute;left:16px;top:62px;width:42px;height:42px;border-radius:21px;display:grid;place-items:center;--r:21px;z-index:5}
+.eyebrow{font:400 13px/1 var(--slab);letter-spacing:1.4px;text-transform:uppercase}
+.btn-p{height:54px;border-radius:27px;border:1px solid rgba(255,255,255,.35);background:linear-gradient(180deg,#AE4029,#8E2F1C);color:var(--cream);font:400 17px/1 var(--slab);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.35),0 2px 0 rgba(0,0,0,.25)}
+.btn-g{height:46px;border-radius:23px;background:rgba(245,237,211,.14);border:1px solid rgba(245,237,211,.45);color:inherit;font:600 16px var(--sys)}
+.sheet .btn-p{width:100%}.small{font-size:13px;line-height:1.35;opacity:.9}
+.home{background:#14180f}.denim .home,.felt .home{background:#fff}
+.mp{display:block;width:100%;height:auto;overflow:visible}
+.tabs{position:absolute;left:14px;right:14px;bottom:24px;height:72px;border-radius:36px;display:grid;grid-template-columns:1fr 1fr 1.15fr 1fr;align-items:center;--r:36px;z-index:7;padding:0 8px;color:#3A4630}
+.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:13px;font-weight:600;position:relative;z-index:1}
+.tab.on{color:var(--forest-d)}.tab.on .ic{background:rgba(47,93,58,.18);border-radius:14px}
+.ic{width:46px;height:30px;display:grid;place-items:center}
+.sortie{position:relative;z-index:1;justify-self:center;margin-top:-34px;width:78px;height:78px;border-radius:50%;background:linear-gradient(180deg,#E3C25C,#C9A22F);border:3px solid rgba(255,250,232,.85);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.6),0 2px 0 rgba(60,50,10,.3);display:grid;place-items:center;text-align:center;font:400 14px/1 var(--slab);color:var(--ink)}
+.sortie svg{display:block;margin:0 auto 3px}
+
+.badge{position:absolute;left:20px;top:118px;width:150px}
+h1{position:absolute;left:20px;top:292px;font:400 40px/1.02 var(--slab);max-width:340px}
+.sub{position:absolute;left:20px;top:392px;font-size:16px;font-weight:600}
+.sheet{position:absolute;left:12px;right:12px;top:432px;border-radius:30px;padding:18px;--r:30px}
+.sheet>*{position:relative;z-index:1}
+.rl{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;padding:11px 0;border-bottom:2px dashed rgba(245,237,211,.3)}
+.rl:last-of-type{border:0}.rl b{display:block;font-size:17px;font-weight:700}.rl span{font-size:14px;opacity:.9}
+.rule{margin-top:6px;font-size:13px;opacity:.85;line-height:1.4}
+.go{position:absolute;left:16px;right:16px;bottom:44px}
+</style></head><body class="denim"><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><filter id="felt" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="4" result="n"/><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .6 -.2"/></filter></defs></svg><div class="sb" style="color:#fff"><span class="t">17:43</span><i class="isl"></i><span class="r">
+<svg width="19" height="12" viewBox="0 0 19 12" fill="currentColor"><rect x="0" y="8" width="3.2" height="4" rx="1"/><rect x="5" y="5.5" width="3.2" height="6.5" rx="1"/><rect x="10" y="3" width="3.2" height="9" rx="1"/><rect x="15" y="0" width="3.2" height="12" rx="1"/></svg>
+<svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M1.5 4.2a10 10 0 0 1 14 0"/><path d="M4.2 7a6.2 6.2 0 0 1 8.6 0"/><circle cx="8.5" cy="10" r="1.2" fill="currentColor" stroke="none"/></svg>
+<svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.6" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="20" height="9" rx="2.4" fill="currentColor"/><path d="M25 4.5v4c.9-.3 1.5-1.1 1.5-2s-.6-1.7-1.5-2z" fill="currentColor" opacity=".5"/></svg></span></div><div class="x glass dark" aria-label="Fermer"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#F5EDD3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l10 10M13 3L3 13"/></svg></div>
+<svg class="badge" viewBox="0 0 150 150" role="img" aria-label="Garder possible"><defs><filter id="felt2"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="4"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 -.2"/></filter></defs>
+<circle cx="75" cy="75" r="68" fill="#2F5D3A"/><circle cx="75" cy="75" r="68" fill="#000" filter="url(#felt2)" opacity=".4" clip-path="circle(68px at 75px 75px)"/><circle cx="75" cy="75" r="68" fill="none" stroke="#D9B64A" stroke-width="5"/><circle cx="75" cy="75" r="57" fill="none" stroke="#F5EDD3" stroke-width="2.4" stroke-dasharray="7 5" stroke-linecap="round"/>
+<path d="M44 78l22 22 42-52" fill="none" stroke="#F5EDD3" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 78l22 22 42-52" fill="none" stroke="#2F5D3A" stroke-width="2.4" stroke-dasharray="6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<h1>Garder possible</h1><div class="sub">Brochet · 68 cm</div>
+<section class="sheet glass dark seam">
+<div class="rl"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#D9B64A" stroke-width="2.4" stroke-linecap="round"><path d="M3 18h20M3 14v8M23 14v8M8 18v-3M13 18v-5M18 18v-3"/></svg><div><b>68 / 60 cm mini</b><span>8 cm de plus que le minimum</span></div></div>
+<div class="rl"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#D9B64A" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="20" height="18" rx="3"/><path d="M3 11h20M8 2v5M18 2v5"/></svg><div><b>Ouvert jusqu'au 25 janv.</b><span>Pêche du brochet</span></div></div>
+<div class="rl"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#D9B64A" stroke-width="2.2" stroke-linecap="round"><circle cx="13" cy="13" r="10"/><path d="M13 8v10M8 13h10"/></svg><div><b>2 brochets maximum par jour</b><span>Par pêcheur</span></div></div>
+<div class="rule">Règle nationale, indicative.</div></section>
+<button class="btn-p go">Voir ma carte</button><div class="home"></div></body></html>

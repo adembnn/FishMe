@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carte de brochet</title>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/vendor/phosphor/regular/style.css">
+<style>
+:root{--page:#FFFFFF;--ink:#14181B;--ink-2:#566067;--hair:#C9CED2;--accent:#1B6B5E;
+ --disp:'Bricolage Grotesque',system-ui,sans-serif;--sans:'Hanken Grotesk',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--page)}
+body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:#fff}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+/* ---------- la carte : une toise verticale 361 x 552 ---------- */
+.stage{position:relative;width:361px;height:552px;perspective:1100px}
+.card{position:absolute;inset:0;--px:62;--py:38;--acc:#1B6B5E;--ink:#14201D;--tick:#14201D;--tickhi:rgba(255,255,255,.75);
+  --butt:#17493F;--butt-ink:#F2F7F5;--plate:rgba(255,255,255,.38);
+  border-radius:16px;
+  box-shadow:0 1px 1px rgba(10,24,20,.28),0 14px 24px -10px rgba(10,24,20,.38),0 28px 40px -24px rgba(10,24,20,.30);
+  transform:rotateY(calc((var(--px) - 50) * .08deg)) rotateX(calc((50 - var(--py)) * .08deg));
+  transition:transform .4s var(--ease)}
+.face{position:absolute;inset:0;border-radius:16px;overflow:hidden;background:var(--face-bg);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -1px 0 rgba(10,24,20,.22)}
+.butt{position:absolute;left:0;right:0;top:0;height:84px;background:var(--butt-bg,var(--butt));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 -2px 0 rgba(0,0,0,.35),inset 0 -3px 0 rgba(255,255,255,.12)}
+.lip{position:absolute;left:0;right:0;top:84px;height:22px;background:linear-gradient(rgba(8,20,16,.30),rgba(8,20,16,0))}
+.rail{position:absolute;left:0;top:0;width:361px;height:552px;overflow:visible}
+.rail text{font-family:var(--mono);font-size:12px;fill:var(--ink);font-variant-numeric:tabular-nums}
+.plate{position:absolute;left:0;right:0;bottom:0;height:84px;background:var(--plate);box-shadow:inset 0 1px 0 rgba(10,24,20,.14),inset 0 2px 0 rgba(255,255,255,.55)}
+.nom{position:absolute;left:18px;top:13px;font:700 30px/1.05 var(--disp);letter-spacing:-.01em;color:var(--butt-ink);z-index:6}
+.lat{position:absolute;left:18px;top:50px;font:italic 400 12px/1 var(--sans);color:var(--butt-ink);opacity:.82;z-index:6}
+.taille{position:absolute;right:18px;top:13px;z-index:6;color:var(--butt-ink);display:flex;align-items:baseline;gap:4px;font:700 32px/1.05 var(--disp);font-variant-numeric:tabular-nums}
+.taille small{font:600 15px/1 var(--sans);opacity:.85}
+.info{position:absolute;left:18px;right:18px;bottom:46px;z-index:6;font:600 15px/1.2 var(--sans);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.foot{position:absolute;left:18px;right:18px;bottom:12px;height:26px;z-index:6;display:flex;align-items:center;gap:8px;font:400 12px/1 var(--sans);color:var(--ink)}
+.foot svg{width:22px;height:22px;flex:none}
+.foot .no{margin-left:auto;font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums}
+
+/* plan du poisson : ombre de contact + ombre longue, +8 % de contraste */
+.fishwrap{position:absolute;inset:0;z-index:3;pointer-events:none;
+  transform:translate(calc((var(--px) - 50) * .12px),calc((var(--py) - 50) * .05px));
+  filter:contrast(1.08) saturate(1.05) drop-shadow(0 1.5px 1.5px rgba(8,24,20,.40)) drop-shadow(9px 16px 11px rgba(8,24,20,.24))}
+.fishwrap img,.fishwrap .nacre{position:absolute;left:0;top:0;transform-origin:0 0;max-width:none}
+.fishwrap img.rim{filter:brightness(0) invert(1);opacity:.9}
+/* plan avant : le curseur de la toise */
+.cursor{position:absolute;left:0;right:0;height:0;z-index:5;pointer-events:none}
+.cursor .line{position:absolute;left:0;right:0;top:-.75px;height:1.5px;background:var(--acc);box-shadow:0 1px 0 rgba(255,255,255,.55)}
+.cursor .glint{position:absolute;left:0;right:0;top:0;height:16px;background:linear-gradient(rgba(255,255,255,.34),rgba(255,255,255,0))}
+.cursor .tab{position:absolute;left:0;top:-10px;height:20px;min-width:40px;padding:0 8px 0 10px;display:flex;align-items:center;border-radius:0 5px 5px 0;background:var(--acc);color:#fff;
+  font:600 12px/1 var(--mono);font-variant-numeric:tabular-nums;box-shadow:0 2px 4px rgba(8,24,20,.3);
+  transform:translateX(calc((var(--px) - 50) * .14px))}
+.cursor .tab b{font-weight:600}
+
+/* reflets : un seul calque par matière */
+.gloss{position:absolute;inset:0;border-radius:16px;overflow:hidden;z-index:4;pointer-events:none;display:none}
+
+/* 1. commun, plomb : papier mat, aucun reflet */
+.card[data-r=commun]{--face-bg:#E2E7E5;--butt:#34403D;--plate:rgba(255,255,255,.34);transform:none;--acc:#2D5F56}
+.card[data-r=commun] .face::after{content:"";position:absolute;inset:0;opacity:.55;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .38 0 0 0 0 .44 0 0 0 0 .42 0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.card[data-r=commun] .fishwrap{transform:none}
+.card[data-r=commun] .cursor .tab{transform:none}
+
+/* 2. peu commun, bouchon : nacre sur l'illustration seule, <= 0,35 */
+.card[data-r=peu]{--face-bg:linear-gradient(172deg,#EBF3F1 0%,#D5E3E0 100%)}
+.nacre{--k:.33;opacity:var(--k);mix-blend-mode:color-dodge;
+  background:
+   repeating-conic-gradient(from 20deg at 50% 50%,rgba(255,255,255,.95) 0 4deg,rgba(255,255,255,0) 4deg 27deg) 0 0/11px 8px,
+   linear-gradient(115deg,#8fe3ff 0%,#fff0cc 16%,#bdf7dc 33%,#ffd7ea 50%,#a9d8ff 66%,#fff0cc 83%,#8fe3ff 100%) 0 0/320% 320%;
+  background-position:0 0,calc(var(--py) * 1%) calc(var(--px) * 1%);
+  filter:saturate(.8)}
+
+/* 3. rare, cuiller : chrome miroir sur toute la carte */
+.card[data-r=rare]{--ink:#0C1317;--tick:#0C1317;--butt-bg:linear-gradient(100deg,#20282D 0 30%,#3A454C 30% 34%,#161D21 34% 70%,#313C43 70% 73%,#1A2125 73%);--butt-ink:#F4F8FA;--plate:rgba(244,248,250,.8);--acc:#0F5B8A;
+  --face-bg:
+   repeating-linear-gradient(15deg,rgba(255,255,255,.20) 0 1px,rgba(10,20,26,.06) 1px 2px),
+   linear-gradient(100deg,#A3AEB5 0 8%,#F8FAFB 8% 19%,#B3BDC3 19% 27%,#FDFEFE 27% 38%,#93A0A8 38% 47%,#E6ECEF 47% 59%,#A2ADB4 59% 71%,#F5F8F9 71% 84%,#98A4AB 84% 100%) 0 0/230% 100%}
+.card[data-r=rare] .face{background-position:0 0,calc(var(--px) * 1%) 0}
+.card[data-r=rare] .gloss,.card[data-r=legende] .gloss{display:block}
+.card[data-r=rare] .gloss::before{content:"";position:absolute;inset:0;mix-blend-mode:color-dodge;opacity:.42;
+  background:repeating-linear-gradient(105deg,rgba(255,70,130,.55) 0 1px,rgba(255,215,70,.55) 1px 2px,rgba(70,255,170,.55) 2px 3px,rgba(70,170,255,.55) 3px 4px,transparent 4px 10px);
+  background-position:calc(var(--px) * 1.2px) 0;
+  -webkit-mask-image:radial-gradient(60% 70% at calc(var(--px) * 1%) calc(var(--py) * 1%),#000,rgba(0,0,0,.08));mask-image:radial-gradient(60% 70% at calc(var(--px) * 1%) calc(var(--py) * 1%),#000,rgba(0,0,0,.08))}
+.card[data-r=rare] .gloss::after{content:"";position:absolute;inset:0;mix-blend-mode:soft-light;
+  background:linear-gradient(105deg,transparent calc(var(--px) * 1% - 14%),rgba(255,255,255,.85) calc(var(--px) * 1% - 6%),rgba(255,255,255,.1) calc(var(--px) * 1% + 6%),transparent calc(var(--px) * 1% + 16%))}
+
+/* 4. legendaire, mouche : or chaud, le poisson sort du cadre, lumiere permanente */
+.card[data-r=legende]{--ink:#241808;--tick:#241808;--butt-bg:linear-gradient(100deg,#2B1F0A 0 28%,#4A3813 28% 32%,#241A08 32% 66%,#43330F 66% 69%,#2A1E09 69%);--butt-ink:#FBE9B0;--plate:rgba(255,246,214,.74);--acc:#7A4E00;
+  --face-bg:
+   repeating-linear-gradient(15deg,rgba(255,250,220,.22) 0 1px,rgba(80,50,0,.07) 1px 2px),
+   linear-gradient(100deg,#D2A540 0 9%,#FFF1BF 9% 20%,#E3B954 20% 29%,#FFF8D6 29% 39%,#C79A33 39% 48%,#F6DD8C 48% 60%,#D9AE49 60% 72%,#FFF1BF 72% 85%,#CFA23C 85% 100%) 0 0/230% 100%}
+.card[data-r=legende] .face{background-position:0 0,calc(var(--px) * 1%) 0}
+.card[data-r=legende] .gloss::before{content:"";position:absolute;inset:0;mix-blend-mode:overlay;opacity:.9;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.95) 49%,rgba(255,236,170,.4) 54%,transparent 62%) 0 0/300% 100%;
+  animation:balaie 5.5s cubic-bezier(.45,0,.2,1) infinite}
+.card[data-r=legende] .gloss::after{content:"";position:absolute;inset:0;mix-blend-mode:color-dodge;opacity:.18;
+  background:repeating-linear-gradient(105deg,rgba(255,150,60,.6) 0 1px,rgba(255,235,120,.6) 1px 2px,transparent 2px 9px);
+  background-position:calc(var(--px) * 1px) 0}
+@keyframes balaie{0%{background-position:110% 0}60%,100%{background-position:-30% 0}}
+@media (prefers-reduced-motion:reduce){
+  .card{transition:none;transform:none}
+  .fishwrap,.cursor .tab{transform:none}
+  .card[data-r=legende] .gloss::before{animation:none;background-position:30% 0}
+}
+
+
+body{display:flex;justify-content:center}
+.screen{position:relative;width:393px;height:852px;overflow:hidden;background:var(--page)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.island{position:absolute;top:11px;left:50%;width:124px;height:36px;margin-left:-62px;background:#000;border-radius:20px;z-index:30}
+.status{position:absolute;top:0;left:0;right:0;height:54px;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:6px 34px 0 50px;font:600 17px/1 -apple-system,"SF Pro Text",var(--sans);letter-spacing:-.01em}
+.status .r{display:flex;gap:6px;align-items:center}
+.home{position:absolute;bottom:8px;left:50%;width:136px;height:5px;margin-left:-68px;border-radius:3px;background:#0B0F14;z-index:30}
+.verdict{position:absolute;left:16px;right:16px;top:58px;z-index:10}
+.vline{display:flex;align-items:center;gap:8px;height:44px;font-size:15px}
+.vline .ic{font-size:24px;color:var(--accent);flex:none}
+.vline h1{font-size:15px;font-weight:700;color:var(--accent)}
+.vline .m{margin-left:auto;font-family:var(--mono);font-size:15px}
+.info-btn{width:44px;height:44px;margin-right:-12px;display:grid;place-items:center;color:var(--ink-2);font-size:24px;border-radius:22px}
+.pop{position:absolute;left:0;right:0;top:48px;background:#fff;border-radius:6px;padding:12px 14px;font-size:12px;line-height:1.5;box-shadow:0 6px 14px rgba(20,24,27,.14);opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .25s,transform .25s var(--ease),visibility .25s;z-index:12}
+.pop.open{opacity:1;visibility:visible;transform:none}
+.pop .fine{color:var(--ink-2);margin-top:6px}
+.pop a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+.stage{position:absolute;left:16px;top:104px}
+.where{position:absolute;left:16px;right:16px;top:672px;text-align:center;font-size:12px;line-height:18px;color:var(--ink-2)}
+.release{position:absolute;left:50%;transform:translateX(-50%);top:710px;height:44px;padding:0 16px;display:flex;align-items:center;font-size:12px;color:var(--ink-2);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.bar{position:absolute;left:16px;right:16px;bottom:27px;height:62px;border-radius:31px;padding:6px;display:flex;gap:6px;z-index:15;
+  background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6);
+  border:.5px solid rgba(20,24,27,.10);box-shadow:0 6px 20px rgba(20,24,27,.10)}
+.btn{height:50px;border-radius:25px;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform .25s var(--ease),filter .25s}
+.btn i{font-size:24px}.btn:active{transform:scale(.97)}
+.main{flex:1;background:var(--accent);color:#fff}.main:hover{filter:brightness(1.08)}
+.sec{width:128px;color:var(--ink)}.sec:hover{background:rgba(20,24,27,.05)}
+@media (prefers-reduced-motion:reduce){.pop{transition:none}}
+
+</style>
+</head>
+<body>
+<main class="screen" id="screen">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+ <defs>
+  <mask id="mk-plomb" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#fff"/><path d="M19 7.2L13.6 11.4" stroke="#000" stroke-width="1.9" stroke-linecap="round"/></mask>
+  <clipPath id="cp-bouchon"><rect x="0" y="0" width="24" height="13.4"/></clipPath>
+ </defs>
+ <symbol id="plomb" viewBox="0 0 24 24"><circle cx="12" cy="12.5" r="8" fill="currentColor" mask="url(#mk-plomb)"/></symbol>
+ <symbol id="bouchon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 1.8V5.6"/><path d="M12 5.6C15.8 8.6 16.8 12.6 15.2 16C14.4 17.7 13.3 18.8 12 19.4C10.7 18.8 9.6 17.7 8.8 16C7.2 12.6 8.2 8.6 12 5.6Z"/>
+  <path d="M12 5.6C15.8 8.6 16.8 12.6 15.2 16C14.4 17.7 13.3 18.8 12 19.4C10.7 18.8 9.6 17.7 8.8 16C7.2 12.6 8.2 8.6 12 5.6Z" fill="currentColor" clip-path="url(#cp-bouchon)"/>
+  <path d="M12 19.4V22.4"/></symbol>
+ <symbol id="cuiller" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="rotate(28 12 12)"><circle cx="12" cy="3.4" r="1.7"/><path d="M12 5.1C16.6 7.2 18 12.5 16.2 17C15.2 19.4 13.7 20.6 12 21C10.3 20.6 8.8 19.4 7.8 17C6 12.5 7.4 7.2 12 5.1Z"/><ellipse cx="12" cy="14.2" rx="2" ry="4" fill="currentColor" stroke="none"/><circle cx="12" cy="8.6" r=".9" fill="currentColor" stroke="none"/></g></symbol>
+ <symbol id="mouche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="8" cy="2.9" r="1.1"/><path d="M8 14.6V16C8 20.8 15.2 20.8 15.6 15.6"/><ellipse cx="8" cy="10" rx="2.4" ry="4.3" fill="currentColor"/><path d="M9 7.4C11 3.8 15.6 2.8 20.6 4.2C19.6 9.2 14.6 11.6 10.2 10.6"/><path d="M5.4 7.6L3.2 6.2"/><path d="M5.2 10.4H2.6"/><path d="M5.4 13L3.4 14.4"/></symbol>
+</svg>
+
+  <div class="island"></div>
+  <div class="status" aria-hidden="true"><span>9:41</span><span class="r">
+   <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#0B0F14"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#0B0F14"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#0B0F14"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#0B0F14"/></svg>
+   <svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="#0B0F14" stroke-width="1.9" stroke-linecap="round"><path d="M1.2 4.3a10 10 0 0 1 14.6 0"/><path d="M3.9 7.1a6 6 0 0 1 9.2 0"/><circle cx="8.5" cy="10.2" r=".9" fill="#0B0F14"/></svg>
+   <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.8" fill="none" stroke="#0B0F14" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2.4" fill="#0B0F14"/><path d="M25 4.5v4c.8-.3 1.5-1.1 1.5-2s-.7-1.7-1.5-2z" fill="#0B0F14" opacity=".45"/></svg>
+  </span></div>
+  <section class="verdict" aria-label="Verdict">
+    <div class="vline">
+      <i class="ph ph-seal-check ic" aria-hidden="true"></i>
+      <h1>Garder possible</h1>
+      <span class="m">68 / 60 cm mini</span>
+      <button class="info-btn" id="infoBtn" aria-expanded="false" aria-controls="pop" aria-label="Détail de la règle"><i class="ph ph-info"></i></button>
+    </div>
+    <div class="pop" id="pop" role="region" aria-label="Règle applicable">
+      <p>Taille mini 60 cm, le tien : <b class="mono">68 cm</b>.</p>
+      <p>Ouvert jusqu'au 25 janv. · 2 brochets max par jour.</p>
+      <p class="fine">Règle nationale, indicative · <a href="#">Signaler une erreur</a></p>
+    </div>
+  </section>
+  <div class="stage" id="stage"></div>
+  <p class="where">12 oct. 2026, 17 h 42 · La Marne, Val-de-Marne (94)<br>4 espèces sur les 11 relevées dans le 94</p>
+  <a class="release" href="#">Je le relâche</a>
+  <div class="bar" id="bar">
+    <button class="btn main"><i class="ph ph-books"></i>Ranger dans le Pescedex</button>
+    <button class="btn sec"><i class="ph ph-export"></i>Partager</button>
+  </div>
+  <div class="home"></div>
+</main>
+<script src="../assets/vendor/gsap/gsap.min.js"></script>
+<script>
+const NS='http://www.w3.org/2000/svg';
+const CW=361,CH=552,BUTT=84,LPX=360,RAILX=16;
+/* géométrie des illustrations : cadre alpha mesuré (px) */
+const FISH={
+ brochet:{w:1400,h:417,x0:6,x1:1394,y0:6,y1:412},
+ gardon:{w:1400,h:720,x0:6,x1:1395,y0:6,y1:715},
+ sandre:{w:1400,h:582,x0:6,x1:1395,y0:6,y1:577},
+ 'truite-fario':{w:1400,h:596,x0:5,x1:1395,y0:5,y1:591}};
+function sv(n,a,p){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function h(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.innerHTML=x;return e}
+
+function makeCard(d){
+  const g=FISH[d.fish],k=LPX/d.len,M=Math.floor(384/k),s=LPX/(g.x1-g.x0),out=d.out||12;
+  const Y0=BUTT,yc=c=>Y0+c*k;
+  const card=h('article','card');card.dataset.r=d.r;
+  card.setAttribute('aria-label',`Carte : ${d.nom}, ${d.len} centimètres, ${d.rname}, numéro ${d.no.replace('/',' sur ')}`);
+  const face=h('div','face');card.appendChild(face);
+  face.appendChild(h('div','butt'));face.appendChild(h('div','lip'));
+  /* toise : graduations gravées, cran de taille mini */
+  const R=sv('svg',{class:'rail',viewBox:`0 0 ${CW} ${CH}`,'aria-hidden':'true'});face.appendChild(R);
+  const step=M>40?10:5;
+  for(let c=0;c<=M;c++){
+    const len=c%10===0?24:c%5===0?15:8,y=yc(c);
+    sv('path',{d:`M${RAILX} ${y}h${len}`,stroke:'var(--tickhi)','stroke-width':1,transform:'translate(0 1)'},R);
+    sv('path',{d:`M${RAILX} ${y}h${len}`,stroke:'var(--tick)','stroke-width':c%10===0?1.4:1,opacity:c%10===0?1:.8},R);
+    if(c%step===0&&c!==d.mini){const t=sv('text',{x:RAILX+30,y:y+4},R);t.textContent=c}
+  }
+  if(d.mini){
+    const y=yc(d.mini);
+    sv('path',{d:`M112 ${y}H190`,stroke:'var(--tick)','stroke-width':1.6},R);
+    const t=sv('text',{x:RAILX+30,y:y+4,style:'font-weight:600'},R);t.textContent=d.mini+' mini';
+    sv('path',{d:`M0 ${y-7}L9 ${y}L0 ${y+7}Z`,fill:'var(--page)'},R);
+  }
+  for(let c=10;c<=M;c+=10){sv('path',{d:`M78 ${yc(c)}H${CW}`,stroke:'var(--tick)','stroke-width':1,opacity:.13},R)}
+  face.appendChild(h('div','plate'));
+  /* le poisson : image tournée, museau à 0, queue sur la longueur */
+  const wrap=h('div','fishwrap');card.appendChild(wrap);
+  const Xt=CW+out-g.y1*s,Yt=Y0+g.x1*s,W=g.w*s,H=g.h*s;
+  const place=(el,dx=0,dy=0)=>{el.style.width=W+'px';el.style.height=H+'px';el.style.transform=`translate(${Xt+dx}px,${Yt+dy}px) rotate(-90deg)`};
+  const rim=h('img','rim');rim.src='../assets/fish/'+d.fish+'.png';rim.alt='';place(rim,-1.5,-1);wrap.appendChild(rim);
+  const img=h('img');img.src='../assets/fish/'+d.fish+'.png';img.alt=d.nom+', '+d.len+' cm';place(img);wrap.appendChild(img);
+  if(d.r==='peu'){const n=h('div','nacre');place(n);n.style.webkitMaskImage=n.style.maskImage=`url(${d.mask})`;n.style.webkitMaskSize=n.style.maskSize='100% 100%';wrap.appendChild(n)}
+  /* le curseur passe devant le poisson */
+  const cur=h('div','cursor');cur.style.top=yc(d.len)+'px';
+  cur.innerHTML='<i class="line"></i><i class="glint"></i><span class="tab"><b class="tabn">'+d.len+'</b></span>';
+  card.appendChild(cur);
+  card.insertAdjacentHTML('beforeend',
+   `<h2 class="nom">${d.nom}</h2><p class="lat">${d.latin}</p>
+    <div class="taille"><span class="num">${d.len}</span><small>cm</small></div>
+    <p class="info">${d.info}</p>
+    <div class="foot"><svg role="img" aria-label="${d.rname}"><use href="#${d.sym}"/></svg><span>${d.foot}</span><span class="no">${d.no}</span></div>
+    <div class="gloss"></div>`);
+  card._cur=cur;card._yL=yc(d.len)-Y0;
+  return card;
+}
+/* reflet piloté par le pointeur : variables CSS (méthode simeydotme, code réécrit) */
+function tilt(card,zone){
+  if(card.dataset.r==='commun'||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const set=(x,y)=>{card.style.setProperty('--px',x.toFixed(1));card.style.setProperty('--py',y.toFixed(1))};
+  zone.addEventListener('pointermove',e=>{if(card._lock)return;const r=zone.getBoundingClientRect();
+    set(Math.min(100,Math.max(0,(e.clientX-r.left)/r.width*100)),Math.min(100,Math.max(0,(e.clientY-r.top)/r.height*100)))});
+  zone.addEventListener('pointerleave',()=>{if(!card._lock)set(62,38)});
+}
+
+(function(){
+  const $=s=>document.querySelector(s);
+  const D={"r":"peu","nom":"Brochet","latin":"Esox lucius","fish":"brochet","len":68,"mini":60,"info":"Leurre souple, bordures d'herbiers","foot":"Peu commun dans le 94 · relevés OFB","no":"06/14","sym":"bouchon","rname":"Peu commun","mask":"data:image/png;base64,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"};
+  const stage=$('#stage'),card=makeCard(D);stage.appendChild(card);
+  const btn=$('#infoBtn'),pop=$('#pop');
+  btn.addEventListener('click',()=>{const o=pop.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  tilt(card,$('#screen'));
+  const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!window.gsap)return;
+  const nums=[card.querySelector('.num'),card.querySelector('.tabn')];
+  if(rm){gsap.from(['#stage','.verdict','.where','.release','#bar'],{opacity:0,duration:.6,ease:'none'});return}
+  /* la révélation : la carte monte, le curseur descend le long de la toise jusqu'à 68, le chiffre suit, le reflet balaie une fois */
+  card._lock=true;
+  const v={n:0},p={x:-20},tl=gsap.timeline({defaults:{ease:'expo.out'},onComplete:()=>{card._lock=false}});
+  const set=(x,y)=>{card.style.setProperty('--px',x.toFixed(1));card.style.setProperty('--py',y.toFixed(1))};
+  nums.forEach(n=>n.textContent='0');
+  tl.from(stage,{y:56,opacity:0,duration:.45,ease:'back.out(1.3)'},0)
+    .from('.verdict',{opacity:0,duration:.4,ease:'none'},.1)
+    .from(card._cur,{y:-card._yL,duration:.62,ease:'power2.inOut'},.28)
+    .to(v,{n:68,duration:.62,ease:'power2.inOut',onUpdate:()=>nums.forEach(n=>n.textContent=Math.round(v.n))},.28)
+    .add(()=>{nums.forEach(n=>n.textContent='68');if(navigator.userActivation&&navigator.userActivation.hasBeenActive&&navigator.vibrate)navigator.vibrate(10)},.9)
+    .fromTo(card.querySelector('.cursor .tab'),{scale:1.12,transformOrigin:'0 50%'},{scale:1,duration:.3},.9)
+    .to(p,{x:62,duration:.45,ease:'power2.inOut',onUpdate:()=>set(p.x,38)},.9)
+    .from(['.where','.release'],{opacity:0,duration:.4,ease:'none',stagger:.06},.9)
+    .from('#bar',{opacity:0,y:12,duration:.4},.95);
+  set(-20,38);
+})();
+</script>
+</body>
+</html>

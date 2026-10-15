@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393, initial-scale=1, viewport-fit=cover">
+<title>Verdict, taille insuffisante</title>
+<link rel="stylesheet" href="../../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../../assets/vendor/phosphor/regular/style.css">
+<link rel="stylesheet" href="../../assets/vendor/phosphor/fill/style.css">
+<style>
+:root{--paper:#FFFFFF;--ink:#14181B;--ink-2:#4F575D;--hair:#C9CED2;--accent:#1E7F4F;--red:#B3261E;--water:#17403F;
+  --sans:'Hanken Grotesk',system-ui,sans-serif;--disp:'Bricolage Grotesque','Hanken Grotesk',sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#E9EBEC}
+body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;display:flex;justify-content:center}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.screen{position:relative;width:393px;height:852px;overflow:hidden;background:var(--paper)}
+.island{position:absolute;top:11px;left:50%;width:124px;height:36px;margin-left:-62px;background:#000;border-radius:20px;z-index:30}
+.status{position:absolute;top:0;left:0;right:0;height:54px;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:6px 34px 0 50px;font:600 17px/1 -apple-system,"SF Pro Text",var(--sans);letter-spacing:-.01em;color:#0B0F14}
+.status .r{display:flex;gap:6px;align-items:center}
+.home{position:absolute;bottom:8px;left:50%;width:136px;height:5px;margin-left:-68px;border-radius:3px;background:#0B0F14;z-index:30}
+.bar{position:absolute;left:16px;right:16px;bottom:27px;height:62px;border-radius:31px;padding:6px;display:flex;gap:6px;z-index:15;
+  background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6);
+  border:.5px solid rgba(20,24,27,.10);box-shadow:0 6px 20px rgba(20,24,27,.10)}
+.btn{height:50px;border-radius:25px;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform .25s var(--ease),filter .25s}
+.btn i{font-size:20px}
+.btn:active{transform:scale(.97)}
+.main{flex:1;background:var(--accent);color:#fff}
+.sec{width:128px;color:var(--ink)}
+.cap{font-size:12px;line-height:16px;color:var(--ink-2)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+.panel{position:absolute;left:0;right:0;top:0;height:270px;background:#B3261E;color:#fff}
+.status{color:#fff}
+.panel .in{position:absolute;left:16px;right:16px;bottom:24px}
+.panel .ic{font-size:34px;display:block;margin-bottom:8px}
+.panel h1{font-family:var(--disp);font-weight:700;font-size:46px;line-height:48px;letter-spacing:-.03em}
+.panel p{margin-top:8px;font-size:15px;line-height:22px;color:rgba(255,255,255,.9)}
+.rg{position:absolute;left:16px;right:16px;top:318px}
+.rg .t{display:flex;justify-content:space-between;align-items:baseline;font-size:15px;font-weight:600}
+.rg .t .mono{font-weight:600}
+.rule{position:relative;height:56px;margin-top:6px}
+.rule .ln{position:absolute;left:0;right:0;top:34px;height:4px;border-radius:2px;background:#E3E6E8}
+.rule .fl{position:absolute;left:0;top:34px;height:4px;border-radius:2px;background:var(--ink);width:38.2%}
+.rule .mn{position:absolute;left:45.5%;top:22px;bottom:0;width:2px;background:#B3261E}
+.rule .mt{position:absolute;left:45.5%;top:0;transform:translateX(-50%);font-size:12px;line-height:16px;color:#B3261E;font-weight:600;white-space:nowrap}
+.rule .me{display:none}
+.ax{display:flex;justify-content:space-between;margin-top:-2px}
+.txt{position:absolute;left:16px;right:16px;top:460px}
+.txt p{font-size:17px;line-height:26px}
+.txt p+p{margin-top:8px}
+.txt .src{margin-top:24px;padding-top:14px;border-top:1px solid var(--hair);font-size:12px;line-height:18px;color:var(--ink-2)}
+.txt .src a{color:var(--accent);text-underline-offset:3px}
+.bar .main{flex:1}
+.bar .sec{width:128px}
+
+</style>
+</head>
+<body>
+<main class="screen">
+  <div class="island"></div>
+  <div class="status" aria-hidden="true">
+    <span>17:43</span>
+    <span class="r">
+      <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M1.2 4.3a10 10 0 0 1 14.6 0"/><path d="M3.9 7.1a6 6 0 0 1 9.2 0"/><circle cx="8.5" cy="10.2" r=".9" fill="currentColor"/></svg>
+      <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.8" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2.4" fill="currentColor"/><path d="M25 4.5v4c.8-.3 1.5-1.1 1.5-2s-.7-1.7-1.5-2z" fill="currentColor" opacity=".45"/></svg>
+    </span>
+  </div>
+
+  <section class="panel" aria-label="Verdict"><div class="in"><i class="ph-fill ph-x-circle ic" aria-hidden="true"></i><h1>À relâcher</h1><p>Brochet, La Marne (94)</p></div></section>
+  <section class="rg" aria-label="Taille et minimum">
+    <div class="t"><span>Ta taille</span><span class="mono">52 / 60 cm mini</span></div>
+    <div class="rule" aria-hidden="true"><span class="mt">mini 60</span><span class="mn"></span><div class="ln"></div><div class="fl"></div><span class="me"></span></div>
+    <div class="ax cap mono"><span>10 cm</span><span>120 cm</span></div>
+  </section>
+  <section class="txt"><p>Il manque <b>8 cm</b> pour pouvoir le garder.</p><p>Ouvert jusqu'au 25 janv. · 2 brochets max par jour.</p><p class="src">Source : règle nationale, Code de l'environnement. Indicative, vérifie l'arrêté du département. <a href="#">Signaler une erreur</a></p></section>
+  <div class="bar"><button class="btn main"><i class="ph ph-cards"></i>Voir ma carte</button></div>
+  <div class="home" ></div>
+</main>
+</body>
+</html>
