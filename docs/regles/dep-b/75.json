@@ -1,0 +1,1446 @@
+{
+ "version": 2,
+ "departement": "75",
+ "genere_le": "2026-10-15",
+ "textes": [
+  {
+   "titre": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris",
+   "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+   "signe_le": "2025-02-26",
+   "lu": "entier"
+  },
+  {
+   "titre": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011",
+   "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+   "signe_le": "2026-01-15",
+   "lu": "entier"
+  },
+  {
+   "titre": "Arrêté du 19 août 2022 (n° 75-2022-08-19-00008) approuvant le cahier des charges pour l'exploitation du droit de pêche de l'État pour la période du 1er janvier 2023 au 31 décembre 2027 (Paris)",
+   "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/ile-de-france/irecontenu/telechargement/97769/623835/file/recueil-75-2022-614-recueil-des-actes-administratifs-special%20du%2019.08.2022.pdf",
+   "signe_le": "2022-08-19",
+   "lu": "partie"
+  },
+  {
+   "titre": "Arrêté préfectoral n° 2010-555 du 4 juin 2010 interdisant la consommation et la commercialisation des poissons pêchés dans la Seine à Paris",
+   "url": null,
+   "signe_le": "2010-06-04",
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Consultation du public : projets d'arrêtés sur la pêche en eau douce sur Paris proche couronne 2026 (10/02 au 03/03/2026), aucun arrêté signé trouvé",
+   "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/consultation-du-public-projets-d-arretes-sur-la-a13422.html",
+   "signe_le": null,
+   "lu": "titre seul"
+  }
+ ],
+ "regles": [
+  {
+   "id": "75-toutes-categorie-departement",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "Paris : tous les cours d'eau du département sont classés en 2e catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 2 Classement des cours d'eau",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "tous les cours d'eau du département sont classés en deuxième catégorie piscicole.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-toutes-reserve-barrages-ecluses",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toute pêche interdite en tout temps à partir des barrages et écluses et sur 50 m de part et d'autre de chaque ouvrage"
+   },
+   "phrase": "À Paris, la pêche est interdite en tout temps depuis les barrages et les écluses, et sur 50 mètres de chaque côté de l'ouvrage.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 4 Zones d'interdiction totale de pêche",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "Toute pêche est interdite, en tout temps, à partir des barrages et écluses ainsi que sur les 50 mètres de part et d'autre des ouvrages.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-res-ouvrages"
+  },
+  {
+   "id": "75-toutes-carpe_nuit-seine-iles-saint-louis-cite",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "75",
+    "lieu": "Seine (Paris 1er et 4e) : rives droite et gauche de l'île Saint-Louis et de l'île de la Cité, du PK 168,5 (tête amont de l'île Saint-Louis) au PK 170,7 (tête aval de l'île de la Cité)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Lot 1/75. Quatre lignes au plus, amorces et appâts végétaux seulement, pêche depuis la rive seulement, bateaux amorceurs interdits, sous réserve des réserves de l'arrêté n° 75-2022-08-19-00008 du 18 août 2022 (annexe non lue)"
+   },
+   "phrase": "Pêche de la carpe de nuit autorisée sur les rives des îles Saint-Louis et de la Cité (Seine, Paris), à quatre lignes au plus, depuis la rive, avec des amorces végétales.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 8 Pêche de la carpe de nuit (tableau, lot 1/75)",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus [...] dans les parties de cours d'eau de 2èmecatégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-toutes-carpe_nuit-seine-ile-aux-cygnes",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "75",
+    "lieu": "Seine (Paris 15e) : rives droite et gauche de l'île aux Cygnes, du PK 5,5 (tête amont de l'île) au PK 6,8 (tête aval de l'île)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Lot 1/75. Quatre lignes au plus, amorces et appâts végétaux seulement, pêche depuis la rive seulement, bateaux amorceurs interdits, sous réserve des réserves de l'arrêté n° 75-2022-08-19-00008 du 18 août 2022 (annexe non lue)"
+   },
+   "phrase": "Pêche de la carpe de nuit autorisée sur les rives de l'île aux Cygnes (Seine, Paris), à quatre lignes au plus, depuis la rive, avec des amorces végétales.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 8 Pêche de la carpe de nuit (tableau, lot 1/75)",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus [...] dans les parties de cours d'eau de 2èmecatégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-brochet-taille_min-ap-art9",
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50
+   },
+   "phrase": "Paris, arrêté permanent 2025 : brochet 50 cm minimum (contredit par l'avis 2026 qui écrit 60 cm : vérifie l'arrêté).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 9 Taille minimale des poissons et des écrevisses (art. R436-18)",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "0,50 mètre pour le brochet ;",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-brochet-taille_min-avis-2026",
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 60
+   },
+   "phrase": "Paris, avis annuel 2026 : brochet 60 cm minimum, en rappel de dispositions (contredit l'arrêté permanent qui dit 50 cm : vérifie l'arrêté).",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, rubrique Rappel de certaines dispositions réglementaires, tailles minimales de capture",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Dans les eaux classées en 2ème catégorie, les tailles minimales de captures sont de 0,40 m pour le blackbass, 0,50 m pour le sandre et 0,60 m pour le brochet.",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": "nat-bro-taille"
+  },
+  {
+   "id": "75-sandre-taille_min-ap-art9",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "Paris, arrêté permanent 2025 : sandre 40 cm minimum (contredit par l'avis 2026 qui écrit 50 cm : vérifie l'arrêté).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 9 Taille minimale des poissons et des écrevisses (art. R436-18)",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "0,40 mètre pour le sandre dans les eaux de la 2e catégorie ;",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-sandre-taille_min-avis-2026",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50
+   },
+   "phrase": "Paris, avis annuel 2026 : sandre 50 cm minimum, en rappel de dispositions (contredit l'arrêté permanent qui dit 40 cm : vérifie l'arrêté).",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, rubrique Rappel de certaines dispositions réglementaires, tailles minimales de capture",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Dans les eaux classées en 2ème catégorie, les tailles minimales de captures sont de 0,40 m pour le blackbass, 0,50 m pour le sandre et 0,60 m pour le brochet.",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": "nat-san-taille"
+  },
+  {
+   "id": "75-black-bass-taille_min-ap-art9",
+   "type": "taille_min",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Paris, arrêté permanent 2025 : black-bass 30 cm minimum (contredit par l'avis 2026 qui écrit 40 cm : vérifie l'arrêté).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 9 Taille minimale des poissons et des écrevisses (art. R436-18)",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "0,30 mètre pour le black – bass dans les eaux de la 2e catégorie ;",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-black-bass-taille_min-avis-2026",
+   "type": "taille_min",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "Paris, avis annuel 2026 : black-bass 40 cm minimum, en rappel de dispositions (contredit l'arrêté permanent qui dit 30 cm : vérifie l'arrêté).",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, rubrique Rappel de certaines dispositions réglementaires, tailles minimales de capture",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Dans les eaux classées en 2ème catégorie, les tailles minimales de captures sont de 0,40 m pour le blackbass, 0,50 m pour le sandre et 0,60 m pour le brochet.",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": "nat-bla-taille"
+  },
+  {
+   "id": "75-truite-fario-ouverture-ap-14mars",
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Paris, arrêté permanent 2025 : truite fario ouverte du 14 mars au 20 septembre 2026 (l'avis 2026 écrit le 21 mars : vérifie l'arrêté).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "Truites fario : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-truite-fario-ouverture-avis-21mars",
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-03-21",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Paris, avis annuel 2026 : truite fario ouverte du 21 mars au 20 septembre 2026 (l'arrêté permanent donne le 14 mars : vérifie l'arrêté).",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, tableau 2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Truites fario Du 21 mars au 20 septembre 2026 inclus",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": "nat-fario-ouv"
+  },
+  {
+   "id": "75-omble-fontaine-ouverture-ap-14mars",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Paris, arrêté permanent 2025 : omble de fontaine ouverte du 14 mars au 20 septembre 2026 (l'avis 2026 écrit le 21 mars : vérifie l'arrêté).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "Omble de fontaine : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-omble-fontaine-ouverture-avis-21mars",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-03-21",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Paris, avis annuel 2026 : omble de fontaine ouverte du 21 mars au 20 septembre 2026 (l'arrêté permanent donne le 14 mars : vérifie l'arrêté).",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, tableau 2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "75-omble-chevalier-ouverture-ap-14mars",
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Paris, arrêté permanent 2025 : omble chevalier ouverte du 14 mars au 20 septembre 2026 (l'avis 2026 écrit le 21 mars : vérifie l'arrêté).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "Omble chevalier et du Cristivomer : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-omble-chevalier-ouverture-avis-21mars",
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-03-21",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Paris, avis annuel 2026 : omble chevalier ouverte du 21 mars au 20 septembre 2026 (l'arrêté permanent donne le 14 mars : vérifie l'arrêté).",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, tableau 2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "75-grenouille-verte-ouverture-ap-janv-mars",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-08",
+   "valeur": {
+    "formule": "du 1er janvier au 2ème dimanche de mars"
+   },
+   "phrase": "Paris, arrêté permanent 2025 : grenouille verte ouverte du 1er janvier au 8 mars 2026 (l'avis 2026 écrit un début au 1er juillet : vérifie l'arrêté).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-grenouille-verte-ouverture-avis-juillet-mars",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-07-01",
+   "au": "2026-03-08",
+   "valeur": {
+    "formule": "Du 1er juillet au 8 mars 2026 inclus"
+   },
+   "phrase": "Paris, avis annuel 2026 : grenouille verte ouverte « du 1er juillet au 8 mars 2026 », dates incohérentes entre elles, à vérifier (l'arrêté permanent dit du 1er janvier au 8 mars).",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, tableau 2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Grenouille verte et rousse Du 1er juillet au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "75-grenouille-verte-ouverture-ap-mai-dec",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du troisième samedi de mai au 31 décembre inclus"
+   },
+   "phrase": "Paris : grenouille verte ouverte du 16 mai au 31 décembre 2026 (arrêté permanent et avis 2026 d'accord).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-grenouille-rousse-ouverture-ap-janv-mars",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-08",
+   "valeur": {
+    "formule": "du 1er janvier au 2ème dimanche de mars"
+   },
+   "phrase": "Paris, arrêté permanent 2025 : grenouille rousse ouverte du 1er janvier au 8 mars 2026 (l'avis 2026 écrit un début au 1er juillet : vérifie l'arrêté).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-grenouille-rousse-ouverture-avis-juillet-mars",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-07-01",
+   "au": "2026-03-08",
+   "valeur": {
+    "formule": "Du 1er juillet au 8 mars 2026 inclus"
+   },
+   "phrase": "Paris, avis annuel 2026 : grenouille rousse ouverte « du 1er juillet au 8 mars 2026 », dates incohérentes entre elles, à vérifier (l'arrêté permanent dit du 1er janvier au 8 mars).",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, tableau 2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Grenouille verte et rousse Du 1er juillet au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "75-grenouille-rousse-ouverture-ap-mai-dec",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du troisième samedi de mai au 31 décembre inclus"
+   },
+   "phrase": "Paris : grenouille rousse ouverte du 16 mai au 31 décembre 2026 (arrêté permanent et avis 2026 d'accord).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-ecrevisse-pattes-greles-ouverture-10jours",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "pendant dix jours consécutifs commençant le quatrième samedi du mois de juillet"
+   },
+   "phrase": "Paris : l'écrevisse à pattes grêles se pêche dix jours seulement, du 25 juillet au 3 août 2026.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "pendant dix jours consécutifs commençant le quatrième samedi du mois de juillet.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-ecrevisse-americaine-ouverture-toute-annee",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre inclus"
+   },
+   "phrase": "Paris : l'écrevisse américaine (Orconectes limosus) se pêche toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.1 Ouverture générale",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "(Orconectes limosus) : du 1er janvier au 31 décembre inclus.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-saumon-atlantique-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre (plan de gestion des poissons migrateurs, PLAGEPOMI)"
+   },
+   "phrase": "Paris : pêche du saumon atlantique interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.3 Interdictions spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "la pêche du saumon, de la truite de mer [...] des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année [...] sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-truite-de-mer-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre (plan de gestion des poissons migrateurs, PLAGEPOMI)"
+   },
+   "phrase": "Paris : pêche du truite de mer interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.3 Interdictions spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "la pêche du saumon, de la truite de mer [...] des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année [...] sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-lamproie-marine-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre (plan de gestion des poissons migrateurs, PLAGEPOMI)"
+   },
+   "phrase": "Paris : pêche du lamproie marine interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.3 Interdictions spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "la pêche du saumon, de la truite de mer [...] des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année [...] sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-lamproie-fluviatile-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre (plan de gestion des poissons migrateurs, PLAGEPOMI)"
+   },
+   "phrase": "Paris : pêche du lamproie fluviatile interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.3 Interdictions spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "la pêche du saumon, de la truite de mer [...] des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année [...] sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-anguille-argentee-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'anguille argentée (anguille d'avalaison) interdite toute l'année"
+   },
+   "phrase": "Paris : pêche de l'anguille argentée interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.3 Interdictions spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "La pêche de l'anguille argentée ou anguille d'avalaison [...] est interdite toute l'année.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-anguille-horaire-interdit-nuit",
+   "type": "horaire",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'anguille, à tous les stades, interdite de nuit en tout temps"
+   },
+   "phrase": "Paris : on ne pêche pas l'anguille de nuit, à aucun stade de son développement.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.3 Interdictions spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "La pêche de l'anguille à tous les stades de son développement en tout temps est interdite de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-anguille-interdit-appat-anguille",
+   "type": "interdit",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdit d'appâter les hameçons ou tout autre engin avec de l'anguille, à tous les stades, ou sa chair"
+   },
+   "phrase": "Paris : interdit d'utiliser l'anguille, ou sa chair, comme appât.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 11 Procédés et modes de pêche interdits",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "Il est interdit d'appâter les hameçons ou tout autre engin avec l'anguille à tous les stades de son développement ou sa chair.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-anguille-autre-carnet-capture",
+   "type": "autre",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout pêcheur en eau douce note ses captures d'anguilles (hors argentée, interdite) dans un carnet de pêche : date, lot ou secteur, stade, poids ou nombre"
+   },
+   "phrase": "Paris : toute capture d'anguille jaune se note dans un carnet de pêche (date, secteur, stade, poids ou nombre).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 13 Obligations de déclaration des captures d'anguille (arrêté ministériel du 22 octobre 2010)",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "Tout pêcheur en eau douce enregistre ses captures d'anguilles [...] dans un carnet de pêche.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-anguille-jaune-autre-renvoi-arrete-ministeriel",
+   "type": "autre",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Aucune date dans les textes de Paris : ouverture fixée par l'arrêté annuel des ministres chargés de la pêche en eau douce et de la pêche maritime"
+   },
+   "phrase": "Paris : les dates de pêche de l'anguille jaune ne sont pas dans les textes de Paris, vérifie l'arrêté ministériel annuel.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "Anguille jaune : ouverture fixée par arrêté annuel par les ministres chargés de la pêche en eau douce et pêche maritime",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-anguille-civelle-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'anguille de moins de 12 cm (civelle) interdite toute l'année"
+   },
+   "phrase": "Paris : pêche de la civelle (anguille de moins de 12 cm) interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, tableau 2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Anguille <12 cm (civelle) Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "75-alose-feinte-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'alose feinte interdite toute l'année"
+   },
+   "phrase": "Paris : pêche de l'alose feinte interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, tableau 2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "75-grande-alose-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'grande alose interdite toute l'année"
+   },
+   "phrase": "Paris : pêche de l'grande alose interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, tableau 2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "75-ecrevisse-pattes-rouges-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'écrevisse à pattes rouges interdite toute l'année, en raison de sa situation critique sur le département de Paris"
+   },
+   "phrase": "Paris : pêche de l'écrevisse à pattes rouges interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.3 Interdictions spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "en raison de leur situation critique sur le département de Paris est interdite toute l'année.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-ecrevisse-torrents-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'écrevisse des torrents interdite toute l'année, en raison de sa situation critique sur le département de Paris"
+   },
+   "phrase": "Paris : pêche de l'écrevisse des torrents interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.3 Interdictions spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "en raison de leur situation critique sur le département de Paris est interdite toute l'année.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-ecrevisse-pattes-blanches-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'écrevisse à pattes blanches interdite toute l'année"
+   },
+   "phrase": "Paris : pêche de l'écrevisse à pattes blanches interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, tableau 2 Ouvertures spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "Ecrevisses à pattes blanches, à pattes rouges et des torrents Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "75-brochet-remise_eau-14mars-24avril",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril doit être immédiatement remis à l'eau"
+   },
+   "phrase": "Paris : tout brochet pris du 14 mars au 24 avril 2026 est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 5.3 Interdictions spécifiques",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "Tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril doit être immédiatement remis à l'eau.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-brochet-interdit-leurres-fermeture",
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Pendant la période de fermeture du brochet, pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer le brochet de manière non accidentelle interdite"
+   },
+   "phrase": "Paris : du 26 janvier au 24 avril 2026 (brochet fermé), pas de pêche au vif, au poisson mort ou artificiel, ni aux leurres qui peuvent prendre un brochet.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 11 Procédés et modes de pêche interdits",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "Pendant la période d'interdiction spécifique de la pêche du brochet, la pêche au vif, au poisson mort ou artificiel [...] et aux leurres susceptibles de capturer ce poisson de manière non accidentelle",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-toutes-interdit-procedes",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdits : pêche à la main, sous la glace, en troublant l'eau ou en fouillant sous les racines ; engins qui accrochent le poisson autrement que par la bouche (épuisette et gaffe permises pour sortir un poisson déjà ferré) ; armes à feu ; fagots (sauf anguille et écrevisses non listées à l'art. 6) ; macets et collets ; lumières ou feux (sauf civelle) ; matériel de plongée ; trimmer ; lignes de traîne hors conditions du cahier des charges du droit de pêche de l'État"
+   },
+   "phrase": "Paris : pas de pêche à la main, sous la glace, avec trimmer, armes à feu, collets, plongée ni engin qui accroche le poisson ailleurs qu'à la bouche.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 11 Procédés et modes de pêche interdits (art. R436-32, R436-33 et R436-35)",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "de pêcher à l'aide d'un trimmer ou d'un engin similaire,",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-poisson-chat-interdit-introduction",
+   "type": "interdit",
+   "especes": [
+    "poisson-chat"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite dans les eaux de le poisson-chat (Ameiurus melas)"
+   },
+   "phrase": "Paris : interdit d'introduire dans l'eau le poisson-chat (Ameiurus melas).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 6 Introductions interdites",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "le poisson-chat : Ameiurusmelas ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-perche-soleil-interdit-introduction",
+   "type": "interdit",
+   "especes": [
+    "perche-soleil"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite dans les eaux de la perche soleil (Lepomis gibbosus)"
+   },
+   "phrase": "Paris : interdit d'introduire dans l'eau la perche soleil (Lepomis gibbosus).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 6 Introductions interdites",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "la perche soleil : Lepomis gibbosus.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-crabe-chinois-interdit-introduction",
+   "type": "interdit",
+   "especes": [
+    "autre:crabe chinois"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite dans les eaux de le crabe chinois (Eriocheir sinensis)"
+   },
+   "phrase": "Paris : interdit d'introduire dans l'eau le crabe chinois (Eriocheir sinensis).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 6 Introductions interdites",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "le crabe chinois : Eriocheir sinensis.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-ecrevisse-interdit-introduction-autres",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite de toutes les écrevisses autres que : écrevisse à pattes rouges, des torrents, à pattes blanches, à pattes grêles"
+   },
+   "phrase": "Paris : interdit d'introduire dans l'eau une écrevisse, sauf pattes rouges, des torrents, pattes blanches et pattes grêles.",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 6 Introductions interdites",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "Les espèces d'écrevisses autres que : écrevisse à pattes rouges [...] à pattes blanches [...] à pattes grêles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-grenouilles-interdit-introduction-autres",
+   "type": "interdit",
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "75",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite de toutes les grenouilles (Rana sp.) autres que les douze espèces listées, dont la grenouille verte et la grenouille rousse"
+   },
+   "phrase": "Paris : interdit d'introduire dans l'eau une grenouille, sauf les douze espèces de la liste (dont verte et rousse).",
+   "source": {
+    "texte": "Arrêté n° 75-2025-02-26-00012 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans le département de Paris, art. 6 Introductions interdites",
+    "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé le 26/02/2025 à Paris, en vigueur, sans date de fin"
+   },
+   "citation": "Les espèces de grenouilles (Rana sp.) autres que : Rana arvalis : grenouille des champs [...]",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "75-toutes-consommation-seine",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "75",
+    "lieu": "Seine (Paris) : tout le linéaire dans le département de Paris"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation et commercialisation de tous les poissons pêchés dans la Seine à Paris interdites par l'arrêté préfectoral n° 2010-555 du 4 juin 2010 (texte non lu)"
+   },
+   "phrase": "Paris : on ne mange pas et on ne vend pas les poissons pêchés dans la Seine.",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, rubrique Rappel de certaines dispositions réglementaires, consommation et commercialisation (Seine et canal de l'Ourcq)",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "La consommation et la commercialisation de poissons pêchés dans la Seine et le canal de l’Ourcq dans le département de Paris est interdite par arrêté préfectoral n°2010-555 du 4 juin 2010.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "75-toutes-consommation-canal-ourcq",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "75",
+    "lieu": "Canal de l'Ourcq (Paris) : tout le linéaire dans le département de Paris"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation et commercialisation de tous les poissons pêchés dans le canal de l'Ourcq à Paris interdites par l'arrêté préfectoral n° 2010-555 du 4 juin 2010 (texte non lu)"
+   },
+   "phrase": "Paris : on ne mange pas et on ne vend pas les poissons pêchés dans le canal de l'Ourcq.",
+   "source": {
+    "texte": "Avis annuel périodes d'ouverture de la pêche en eau douce en 2026 dans le département de Paris, n° 75-2026-01-15-00011, rubrique Rappel de certaines dispositions réglementaires, consommation et commercialisation (Seine et canal de l'Ourcq)",
+    "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/irecontenu/telechargement/134691/986545/file/recueil-75-2026-039-recueil-des-actes-administratifs-special%20du%2016.01.2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis fait à Paris le 15/01/2026, publié au RAA 75-2026-039 du 16/01/2026"
+   },
+   "citation": "La consommation et la commercialisation de poissons pêchés dans la Seine et le canal de l’Ourcq dans le département de Paris est interdite par arrêté préfectoral n°2010-555 du 4 juin 2010.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  }
+ ]
+}

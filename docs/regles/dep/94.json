@@ -1,0 +1,1867 @@
+{
+ "version": 2,
+ "departement": "94",
+ "genere_le": "2026-10-15",
+ "textes": [
+  {
+   "titre": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne",
+   "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+   "signe_le": "2025-02-25",
+   "lu": "entier"
+  },
+  {
+   "titre": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne (fait à Créteil, par délégation du préfet, le sous-préfet de Nogent-sur-Marne)",
+   "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+   "signe_le": "2026-02-10",
+   "lu": "entier"
+  },
+  {
+   "titre": "Avis annuel relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne pour 2025",
+   "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/avis_annuel_peche_94_signe.pdf",
+   "signe_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Arrêté préfectoral n° 2010-5378 du 4 juin 2010 portant interdiction de la consommation et de la commercialisation de poissons pêchés dans la Seine, la Marne et l'Yerres dans le département du Val-de-Marne",
+   "url": null,
+   "signe_le": "2010-06-04",
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Arrêté préfectoral n° 2017/4688 du 28 décembre 2017 (pêche de la carpe de nuit dans le Val-de-Marne et lac de Créteil), cité par la fédération",
+   "url": null,
+   "signe_le": "2017-12-28",
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Arrêté préfectoral n° IDF-2024-02-02-00001 du 2 février 2024 précisant les dispositions d'encadrement de la pêche des poissons migrateurs du bassin Seine-Normandie pour la période 2024-2025",
+   "url": null,
+   "signe_le": "2024-02-02",
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024) (guide de la fédération, pas un texte réglementaire)",
+   "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+   "signe_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "Fédération de pêche de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne, page Réglementation",
+   "url": "http://www.federation-peche-paris.fr/808-reglementation.htm",
+   "signe_le": null,
+   "lu": "partie"
+  }
+ ],
+ "regles": [
+  {
+   "id": "94-toutes-categorie-departement",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "Tous les cours d'eau du Val-de-Marne sont classés en 2e catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 2 (classement des cours d'eau)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "En application de l’article L. 436-5 du code de l’environnement, tous les cours d’eau du département sont classés en deuxième catégorie piscicole.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-reserve-ouvrages-50m",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite en tout temps à partir des barrages et écluses et sur les 50 mètres de part et d'autre des ouvrages."
+   },
+   "phrase": "Pêche interdite en tout temps à partir des barrages et écluses et sur 50 m de part et d'autre de chaque ouvrage.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 4 (zones d'interdiction totale de pêche)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "Toute pêche est interdite, en tout temps, à partir des barrages et écluses ainsi que sur les 50 mètres de part et d’autre des ouvrages.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-res-ouvrages"
+  },
+  {
+   "id": "94-toutes-interdit-acces-ouvrages",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Accès strictement interdit au public, pêcheurs compris, aux passerelles et dépendances des ouvrages de navigation."
+   },
+   "phrase": "Il est interdit à tout le monde, pêcheurs compris, d'aller sur les passerelles et dépendances des ouvrages de navigation.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 4 (zones d'interdiction totale de pêche)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "L’accès aux passerelles et dépendances des ouvrages de navigation est strictement interdit au public y compris aux pêcheurs",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-truite-fario-ouverture-arrete",
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Truite fario : pêche ouverte du 14 mars au 20 septembre 2026 selon l'arrêté permanent (l'avis 2026 dit le 21 mars).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.2 (ouvertures spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "Truites fario : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": "nat-fario-ouv"
+  },
+  {
+   "id": "94-truite-fario-ouverture-avis",
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-03-21",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 21 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Truite fario : pêche ouverte du 21 mars au 20 septembre 2026 selon l'avis annuel (l'arrêté permanent dit le 14 mars).",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Truites fario Du 21 mars au 20 septembre 2026 inclus",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": "nat-fario-ouv"
+  },
+  {
+   "id": "94-omble-fontaine-ouverture-arrete",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Omble de fontaine : pêche ouverte du 14 mars au 20 septembre 2026 selon l'arrêté permanent (l'avis 2026 dit le 21 mars).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.2 (ouvertures spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "Omble de fontaine : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-omble-fontaine-ouverture-avis",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-03-21",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 21 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Omble de fontaine : pêche ouverte du 21 mars au 20 septembre 2026 selon l'avis annuel (l'arrêté permanent dit le 14 mars).",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-omble-chevalier-ouverture-arrete",
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Omble chevalier : pêche ouverte du 14 mars au 20 septembre 2026 selon l'arrêté permanent (l'avis 2026 dit le 21 mars).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.2 (ouvertures spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "Omble chevalier et du cristivomer : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-omble-chevalier-ouverture-avis",
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-03-21",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 21 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Omble chevalier : pêche ouverte du 21 mars au 20 septembre 2026 selon l'avis annuel (l'arrêté permanent dit le 14 mars).",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-cristivomer-ouverture-arrete",
+   "type": "ouverture",
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Cristivomer : pêche ouverte du 14 mars au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.2 (ouvertures spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "Omble chevalier et du cristivomer : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-grenouille-verte-ouverture-hiver",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-08",
+   "valeur": {
+    "formule": "du 1er janvier au 2e dimanche de mars (8 mars 2026)"
+   },
+   "phrase": "Grenouille verte : pêche ouverte du 1er janvier au 8 mars 2026.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques, grenouille verte et rousse",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Grenouille verte et rousse Du 1 janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-grenouille-verte-ouverture-ete",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 3e samedi de mai (16 mai 2026) au 31 décembre"
+   },
+   "phrase": "Grenouille verte : pêche ouverte du 16 mai au 31 décembre 2026.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques, grenouille verte et rousse",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Grenouille verte et rousse Du 1 janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-grenouille-rousse-ouverture-hiver",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-08",
+   "valeur": {
+    "formule": "du 1er janvier au 2e dimanche de mars (8 mars 2026)"
+   },
+   "phrase": "Grenouille rousse : pêche ouverte du 1er janvier au 8 mars 2026.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques, grenouille verte et rousse",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Grenouille verte et rousse Du 1 janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-grenouille-rousse-ouverture-ete",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 3e samedi de mai (16 mai 2026) au 31 décembre"
+   },
+   "phrase": "Grenouille rousse : pêche ouverte du 16 mai au 31 décembre 2026.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques, grenouille verte et rousse",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Grenouille verte et rousse Du 1 janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-ecrevisse-pattes-greles-ouverture-juillet",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "dix jours consécutifs à partir du 4e samedi de juillet (25 juillet 2026)"
+   },
+   "phrase": "Écrevisse à pattes grêles : pêche ouverte seulement du 25 juillet au 3 août 2026.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques, écrevisses à pattes grêles",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Ecrevisses à pattes grêles Du 25 juillet au 3 août 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-anguille-jaune-autre-ouverture-ministere",
+   "type": "autre",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Ouverture fixée chaque année par arrêté ministériel (pêche en eau douce et pêche maritime). Ni l'arrêté ni l'avis ne donnent de date : se reporter à l'arrêté ministériel en vigueur, non lu ici."
+   },
+   "phrase": "Anguille jaune : les dates d'ouverture viennent d'un arrêté ministériel annuel, pas de la préfecture.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.2 (ouvertures spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "Anguille jaune : ouverture fixée par arrêté annuel par les ministres chargés de la pêche en eau douce et pêche maritime",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-anguille-argentee-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'anguille argentée (anguille d'avalaison) interdite toute l'année."
+   },
+   "phrase": "Anguille argentée : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques, anguille argentée",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Anguille argentée Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-anguille-civelle-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'anguille de moins de 12 cm (civelle) interdite toute l'année."
+   },
+   "phrase": "Civelle (anguille de moins de 12 cm) : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques, anguille de moins de 12 cm",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Anguille <12 cm (civelle) Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-anguille-horaire-nuit-interdit",
+   "type": "horaire",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'anguille, à tous les stades, interdite de nuit en tout temps."
+   },
+   "phrase": "Anguille, tous stades : pêche interdite de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.3 (interdictions spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "La pêche de l’anguille à tous les stades de son développement en tout temps est interdite de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-anguille-interdit-appat",
+   "type": "interdit",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdit d'appâter les hameçons ou tout autre engin avec l'anguille, à tous les stades, ou sa chair."
+   },
+   "phrase": "Interdit d'utiliser l'anguille, ou sa chair, comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 11 (protection de l'anguille)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "Il est interdit d’appâter les hameçons ou tout autre engin avec l’anguille à tous les stades de son développement ou sa chair.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-anguille-autre-carnet-peche",
+   "type": "autre",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout pêcheur en eau douce note ses captures d'anguilles (hors argentée) dans un carnet de pêche établi pour une saison : date, lot ou secteur, stade, poids ou nombre."
+   },
+   "phrase": "Chaque anguille capturée (sauf l'argentée, interdite) doit être notée dans un carnet de pêche.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 13 (obligations de déclaration des captures d'anguille)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "Tout pêcheur en eau douce enregistre ses captures d’anguilles, hors anguille argentée dont la pêche est interdite toute l’année, à tous les stades de son développement",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-saumon-atlantique-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Saumon atlantique : pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre (plan de gestion des poissons migrateurs)."
+   },
+   "phrase": "Saumon atlantique : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.3 (interdictions spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-truite-de-mer-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Truite de mer : pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre (plan de gestion des poissons migrateurs)."
+   },
+   "phrase": "Truite de mer : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.3 (interdictions spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-lamproie-marine-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Lamproie marine : pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre (plan de gestion des poissons migrateurs)."
+   },
+   "phrase": "Lamproie marine : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.3 (interdictions spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-lamproie-fluviatile-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Lamproie fluviatile : pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre (plan de gestion des poissons migrateurs)."
+   },
+   "phrase": "Lamproie fluviatile : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.3 (interdictions spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-grande-alose-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Grande alose : pêche interdite toute l'année."
+   },
+   "phrase": "Grande alose : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques, aloses",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Aloses feintes et Grande alose Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-alose-feinte-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Alose feinte : pêche interdite toute l'année."
+   },
+   "phrase": "Alose feinte : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques, aloses",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Aloses feintes et Grande alose Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-ecrevisse-pattes-rouges-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse à pattes rouges : pêche interdite toute l'année, en raison de sa situation critique dans le département."
+   },
+   "phrase": "Écrevisse à pattes rouges : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.3 (interdictions spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "écrevisse à pattes rouges (Astacus astacus) et des torrents (Austropotamobius torrentium) en raison de leur situation critique sur le département du Val-de-Marne est interdite toute l’année.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-ecrevisse-torrents-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse des torrents : pêche interdite toute l'année, en raison de sa situation critique dans le département."
+   },
+   "phrase": "Écrevisse des torrents : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.3 (interdictions spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "écrevisse à pattes rouges (Astacus astacus) et des torrents (Austropotamobius torrentium) en raison de leur situation critique sur le département du Val-de-Marne est interdite toute l’année.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-ecrevisse-pattes-blanches-interdit-toute-annee",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Écrevisse à pattes blanches : pêche interdite toute l'année."
+   },
+   "phrase": "Écrevisse à pattes blanches : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, 2 - Ouvertures spécifiques, écrevisses",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Ecrevisses à pattes blanches, à pattes rouges et des torrents Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-poisson-chat-interdit-introduction",
+   "type": "interdit",
+   "especes": [
+    "poisson-chat"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction du poisson-chat (Ameiurus melas) interdite."
+   },
+   "phrase": "Introduction du poisson-chat (Ameiurus melas) interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 6 (introductions interdites)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "L’introduction des espèces de poissons, de crustacés et de grenouilles susceptibles de provoquer des déséquilibres biologiques dans les eaux et listées ci-dessous est interdite",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-perche-soleil-interdit-introduction",
+   "type": "interdit",
+   "especes": [
+    "perche-soleil"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction de la perche soleil (Lepomis gibbosus) interdite."
+   },
+   "phrase": "Introduction de la perche soleil (Lepomis gibbosus) interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 6 (introductions interdites)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "L’introduction des espèces de poissons, de crustacés et de grenouilles susceptibles de provoquer des déséquilibres biologiques dans les eaux et listées ci-dessous est interdite",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-crabe-chinois-interdit-introduction",
+   "type": "interdit",
+   "especes": [
+    "autre:crabe chinois"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction du crabe chinois (Eriocheir sinensis) interdite."
+   },
+   "phrase": "Introduction du crabe chinois (Eriocheir sinensis) interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 6 (introductions interdites)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "L’introduction des espèces de poissons, de crustacés et de grenouilles susceptibles de provoquer des déséquilibres biologiques dans les eaux et listées ci-dessous est interdite",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-ecrevisses-autres-interdit-introduction",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite de toute écrevisse autre que l'écrevisse à pattes rouges, des torrents, à pattes blanches et à pattes grêles."
+   },
+   "phrase": "Introduction interdite de toute écrevisse autre que l'écrevisse à pattes rouges, des torrents, à pattes blanches et à pattes grêles.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 6 (introductions interdites)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "L’introduction des espèces de poissons, de crustacés et de grenouilles susceptibles de provoquer des déséquilibres biologiques dans les eaux et listées ci-dessous est interdite",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-grenouilles-autres-interdit-introduction",
+   "type": "interdit",
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite de toute grenouille (Rana sp.) autre que celles listées à l'article 6 (grenouille des champs, agile, ibérique, d'Honnorat, verte ou commune, de Lessona, de Perez, rieuse, rousse, de Berger, des Pyrénées, de Graf)."
+   },
+   "phrase": "Introduction interdite de toute grenouille (Rana sp.) autre que celles listées à l'article 6 (grenouille des champs, agile, ibérique, d'Honnorat, verte ou commune, de Lessona, de Perez, rieuse, rousse, de Berger, des Pyrénées, de Graf).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 6 (introductions interdites)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "L’introduction des espèces de poissons, de crustacés et de grenouilles susceptibles de provoquer des déséquilibres biologiques dans les eaux et listées ci-dessous est interdite",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-carpe_nuit-cours-eau",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée la nuit, avec quatre lignes au plus, dans tous les cours d'eau de 2e catégorie."
+   },
+   "phrase": "Carpe de nuit autorisée, 4 lignes au plus, dans tous les cours d'eau du département.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 8 (pêche de la carpe de nuit)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l’aide de quatre lignes au plus dans tous les cours d’eau de deuxième catégorie piscicole.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-carpe_nuit-lac-creteil",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "94",
+    "lieu": "Lac de Créteil (Créteil) : parties du plan d'eau de la base de loisirs et de plein air de Créteil, dans les parties du plan d'eau autorisées"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée la nuit, avec quatre lignes au plus, dans les parties autorisées du plan d'eau de la base de loisirs et de plein air de Créteil. Les parties autorisées ne sont pas nommées dans l'arrêté."
+   },
+   "phrase": "Carpe de nuit autorisée au lac de Créteil (base de loisirs), 4 lignes au plus, dans les parties autorisées du plan d'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 8 (pêche de la carpe de nuit)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l’aide de quatre lignes au plus dans les parties du plan d’eau de la base de loisirs et de plein air de Créteil dans les parties du plan d’eau autorisées.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-carpe_nuit-amorces-vegetales",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pour la pêche de la carpe de nuit, seuls les amorces et appâts végétaux sont autorisés."
+   },
+   "phrase": "Carpe de nuit : seulement des amorces et appâts végétaux.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 8 (pêche de la carpe de nuit)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "Pour la pratique de la pêche de la carpe de nuit, seuls les amorces et appâts végétaux sont autorisés.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-carpe_nuit-rive-seulement",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit seulement depuis la rive ; bateaux amorceurs interdits."
+   },
+   "phrase": "Carpe de nuit : seulement depuis la rive, bateaux amorceurs interdits.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 8 (pêche de la carpe de nuit)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "La pêche ne peut s’exercer que de la rive. Les bateaux amorceurs sont interdits.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-ecrevisse-mode_peche-balances",
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pour la capture des écrevisses : vermée et 6 balances à écrevisses au plus."
+   },
+   "phrase": "Écrevisses : la vermée et 6 balances à écrevisses sont autorisées.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 10 (modes de pêche autorisés)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "Sont autorisées pour la capture des écrevisses, la vermée et 6 balances à écrevisses.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-interdit-trimmer",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdit de pêcher à l'aide d'un trimmer ou d'un engin similaire."
+   },
+   "phrase": "Le trimmer, ou un engin du même genre, est interdit.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 11 (procédés et modes de pêche interdits)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "de pêcher à l’aide d’un trimmer ou d’un engin similaire",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-interdit-lignes-traine",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdit d'utiliser des lignes de traîne, sauf conditions fixées par le cahier des charges de location du droit de pêche de l'État sur le domaine public fluvial."
+   },
+   "phrase": "Les lignes de traîne sont interdites, sauf conditions du cahier des charges de location du droit de pêche de l'État (domaine public fluvial).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 11 (procédés et modes de pêche interdits)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "d’utiliser des lignes de traîne en dehors éventuellement des conditions fixées par le cahier des charges relatif à la location du droit de pêche de l’Etat sur le domaine public fluvial",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-brochet-interdit-vif-leurres-fermeture",
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Pendant la fermeture du brochet (26 janvier au 24 avril 2026), pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer le brochet de manière non accidentelle interdite."
+   },
+   "phrase": "Du 26 janvier au 24 avril 2026 (brochet fermé) : pas de vif, de poisson mort ou artificiel ni de leurres qui peuvent prendre un brochet.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 11 (protection du brochet)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "la pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer ce poisson de manière non accidentelle est interdite.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-brochet-remise_eau-mars-avril",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Tout brochet capturé du 2e samedi de mars au dernier vendredi d'avril (14 mars au 24 avril 2026) doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Du 14 mars au 24 avril 2026, tout brochet capturé est remis immédiatement à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 5.3 (interdictions spécifiques)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "Tout brochet capturé du deuxième samedi de mars au dernier vendredi d’avril doit être immédiatement remis à l’eau.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-brochet-taille_min-arrete",
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50
+   },
+   "phrase": "Brochet : 50 cm minimum selon l'arrêté permanent (l'avis 2026 annonce 60 cm).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 9 (taille minimale des poissons et des écrevisses)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "0,50 mètre pour le brochet ;",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-brochet-taille_min-avis",
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 60
+   },
+   "phrase": "Brochet : 60 cm minimum selon l'avis annuel 2026 (l'arrêté permanent dit 50 cm).",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, Rappel de certaines dispositions réglementaires",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Dans les eaux classées en 2ème catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet.",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": "nat-bro-taille"
+  },
+  {
+   "id": "94-sandre-taille_min-arrete",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "Sandre : 40 cm minimum selon l'arrêté permanent (l'avis 2026 annonce 50 cm).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 9 (taille minimale des poissons et des écrevisses)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "0,40 mètre pour le sandre dans les eaux de la 2e catégorie ;",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-sandre-taille_min-avis",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50
+   },
+   "phrase": "Sandre : 50 cm minimum selon l'avis annuel 2026 (l'arrêté permanent dit 40 cm).",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, Rappel de certaines dispositions réglementaires",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Dans les eaux classées en 2ème catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet.",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": "nat-san-taille"
+  },
+  {
+   "id": "94-black-bass-taille_min-arrete",
+   "type": "taille_min",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Black-bass : 30 cm minimum selon l'arrêté permanent (l'avis 2026 annonce 40 cm).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025/00727 du 25 février 2025 relatif à l'exercice de la pêche en eau douce dans le département du Val-de-Marne, art. 9 (taille minimale des poissons et des écrevisses)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-25"
+   },
+   "citation": "0,30 mètre pour le black - bass dans les eaux de la 2e catégorie ;",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-black-bass-taille_min-avis",
+   "type": "taille_min",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "94",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "Black-bass : 40 cm minimum selon l'avis annuel 2026 (l'arrêté permanent dit 30 cm).",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, Rappel de certaines dispositions réglementaires",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "Dans les eaux classées en 2ème catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet.",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": "nat-bla-taille"
+  },
+  {
+   "id": "94-toutes-consommation-seine",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "94",
+    "lieu": "Seine : partie située dans le département du Val-de-Marne"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation et commercialisation interdites pour tous les poissons pêchés dans la Seine (dans le Val-de-Marne), par arrêté préfectoral n° 2010-5378 du 4 juin 2010 (arrêté non lu)."
+   },
+   "phrase": "Poissons de la Seine dans le Val-de-Marne : consommation et vente interdites.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, Rappel de certaines dispositions réglementaires",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "La consommation et la commercialisation de poissons pêchés dans la Seine, la Marne et l’Yerres dans le département du Val-de-Marne est interdite par arrêté préfectoral n° 2010-5378 du 4 juin 2010.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-consommation-marne",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "94",
+    "lieu": "Marne : partie située dans le département du Val-de-Marne"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation et commercialisation interdites pour tous les poissons pêchés dans la Marne (dans le Val-de-Marne), par arrêté préfectoral n° 2010-5378 du 4 juin 2010 (arrêté non lu)."
+   },
+   "phrase": "Poissons de la Marne dans le Val-de-Marne : consommation et vente interdites.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, Rappel de certaines dispositions réglementaires",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "La consommation et la commercialisation de poissons pêchés dans la Seine, la Marne et l’Yerres dans le département du Val-de-Marne est interdite par arrêté préfectoral n° 2010-5378 du 4 juin 2010.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-consommation-yerres",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "94",
+    "lieu": "Yerres : partie située dans le département du Val-de-Marne"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation et commercialisation interdites pour tous les poissons pêchés dans la Yerres (dans le Val-de-Marne), par arrêté préfectoral n° 2010-5378 du 4 juin 2010 (arrêté non lu)."
+   },
+   "phrase": "Poissons de la Yerres dans le Val-de-Marne : consommation et vente interdites.",
+   "source": {
+    "texte": "Avis annuel : périodes d'ouverture de la pêche en eau douce en 2026 dans le département du Val-de-Marne, Rappel de certaines dispositions réglementaires",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-02-10"
+   },
+   "citation": "La consommation et la commercialisation de poissons pêchés dans la Seine, la Marne et l’Yerres dans le département du Val-de-Marne est interdite par arrêté préfectoral n° 2010-5378 du 4 juin 2010.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-reserve-ablon",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "94",
+    "lieu": "Seine (Ablon-sur-Seine) : barrage d'Ablon-sur-Seine et les 2 écluses, rives droite et gauche sur 250 m (125 m en amont et 125 m en aval du seuil)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite depuis les rives gauche et droite et en bateau ou autre engin flottant sur 250 m (125 m en amont et 125 m en aval du seuil)."
+   },
+   "phrase": "Barrage et écluses d'Ablon-sur-Seine : pêche interdite sur 250 m (125 m en amont, 125 m en aval).",
+   "source": {
+    "texte": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024), rubrique Interdictions de pêche, Val-de-Marne",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2024-02-08"
+   },
+   "citation": "Barrage d’Ablon-sur-Seine et les 2 écluses : rives droite et gauche sur 250 m (125 m en amont et 125 m en aval du seuil)",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-reserve-port-a-l-anglais",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "94",
+    "lieu": "Seine : barrage du Port à l'Anglais et les 2 écluses, rives droite et gauche sur 250 m (125 m en amont et 125 m en aval du seuil)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite depuis les rives gauche et droite et en bateau ou autre engin flottant sur 250 m (125 m en amont et 125 m en aval du seuil)."
+   },
+   "phrase": "Barrage et écluses du Port à l'Anglais : pêche interdite sur 250 m (125 m en amont, 125 m en aval).",
+   "source": {
+    "texte": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024), rubrique Interdictions de pêche, Val-de-Marne",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2024-02-08"
+   },
+   "citation": "Barrage du Port à l’Anglais et les 2 écluses : rives droite et gauche sur 250 m (125 m en amont et 125 m en aval du seuil)",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-reserve-joinville",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "94",
+    "lieu": "Marne (Joinville-le-Pont) : barrage de Joinville, rives droite et gauche sur 175 m (125 m en amont et 50 m en aval du seuil)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite depuis les rives gauche et droite et en bateau ou autre engin flottant sur 175 m (125 m en amont et 50 m en aval du seuil)."
+   },
+   "phrase": "Barrage de Joinville : pêche interdite sur 175 m (125 m en amont, 50 m en aval).",
+   "source": {
+    "texte": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024), rubrique Interdictions de pêche, Val-de-Marne",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2024-02-08"
+   },
+   "citation": "Barrage de Joinville : rives droite et gauche sur 175 m (125 m en amont et 50 m en aval du seuil)",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-reserve-creteil",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "94",
+    "lieu": "Marne (Créteil) : barrage de Créteil et écluse, rives droite et gauche sur 250 m (125 m en amont et 125 m en aval du seuil)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite depuis les rives gauche et droite et en bateau ou autre engin flottant sur 250 m (125 m en amont et 125 m en aval du seuil)."
+   },
+   "phrase": "Barrage et écluse de Créteil : pêche interdite sur 250 m (125 m en amont, 125 m en aval).",
+   "source": {
+    "texte": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024), rubrique Interdictions de pêche, Val-de-Marne",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2024-02-08"
+   },
+   "citation": "Barrage de Créteil et écluse : rives droite et gauche sur 250 m (125 m en amont et 125 m en aval du seuil)",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-reserve-bras-chapitre",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "94",
+    "lieu": "Bras du Chapitre : au droit du clapet, rives droite et gauche sur 40 m (30 m en amont et 10 m en aval du seuil)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite depuis les rives gauche et droite et en bateau ou autre engin flottant sur 40 m (30 m en amont et 10 m en aval du seuil)."
+   },
+   "phrase": "Bras du Chapitre, au droit du clapet : pêche interdite sur 40 m (30 m en amont, 10 m en aval).",
+   "source": {
+    "texte": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024), rubrique Interdictions de pêche, Val-de-Marne",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2024-02-08"
+   },
+   "citation": "Bras du Chapitre au droit du clapet : rives droite et gauche sur 40 m (30 m en amont et 10 m en aval du seuil)",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-reserve-saint-maur",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "94",
+    "lieu": "Marne (Saint-Maur-des-Fossés) : ouvrage de Saint-Maur, de l'entrée du canal souterrain jusqu'à 50 m en aval de l'écluse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite depuis les rives gauche et droite et en bateau ou autre engin flottant, de l'entrée du canal souterrain jusqu'à 50 m en aval de l'écluse."
+   },
+   "phrase": "Ouvrage de Saint-Maur : pêche interdite de l'entrée du canal souterrain jusqu'à 50 m en aval de l'écluse.",
+   "source": {
+    "texte": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024), rubrique Interdictions de pêche, Val-de-Marne",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2024-02-08"
+   },
+   "citation": "Ouvrage de Saint-Maur : de l’entrée du canal souterrain jusqu’à 50 m en aval de l’écluse",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-reserve-saint-maurice",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "94",
+    "lieu": "Marne (Saint-Maurice) : barrage de Saint-Maurice et écluse, rives droite et gauche sur 250 m (125 m en amont et 125 m en aval du seuil), y compris les passes à poissons"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite depuis les rives gauche et droite et en bateau ou autre engin flottant sur 250 m (125 m en amont et 125 m en aval du seuil), passes à poissons comprises."
+   },
+   "phrase": "Barrage et écluse de Saint-Maurice : pêche interdite sur 250 m (125 m en amont, 125 m en aval), passes à poissons comprises.",
+   "source": {
+    "texte": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024), rubrique Interdictions de pêche, Val-de-Marne",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2024-02-08"
+   },
+   "citation": "Barrage de Saint-Maurice et écluse : rives droite et gauche sur 250 m (125 m en amont et 125 m en aval du seuil), y compris les passes à poissons.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-reserve-port-bonneuil",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "94",
+    "lieu": "Port de Bonneuil-sur-Marne (Bonneuil-sur-Marne) : ensemble des darses du port, exceptée la rive gauche de la darse sud entre le pont de la route RD 30 et le musoir des darses sud et centrale, ainsi que la rive gauche du tronc commun des darses sud et centrale"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans l'ensemble des darses du port, sauf la rive gauche de la darse sud entre le pont de la RD 30 et le musoir des darses sud et centrale, et la rive gauche du tronc commun des darses sud et centrale."
+   },
+   "phrase": "Port de Bonneuil-sur-Marne : pêche interdite dans toutes les darses, sauf deux rives gauches précisées dans la source.",
+   "source": {
+    "texte": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024), rubrique Interdictions de pêche, Val-de-Marne",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2024-02-08"
+   },
+   "citation": "Port de Bonneuil-sur-Marne : ensemble des darses du port ; exceptée la rive gauche de la darse sud entre le pont de la route RD 30 et le musoir des darses sud et centrale",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-reserve-ski-nautique",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "94",
+    "lieu": "Club de ski nautique (Villeneuve-Saint-Georges) : 200 m en rive droite"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite sur 200 m en rive droite, au droit du club de ski nautique."
+   },
+   "phrase": "Club de ski nautique de Villeneuve-Saint-Georges : pêche interdite sur 200 m en rive droite.",
+   "source": {
+    "texte": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024), rubrique Interdictions de pêche, Val-de-Marne",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2024-02-08"
+   },
+   "citation": "Club de ski nautique : commune de Villeneuve-Saint-Georges, 200 m en rive droite",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-reserve-darse-gdf",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "94",
+    "lieu": "Darse GDF (Choisy-le-Roi) : totalité de la darse et son entrée"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans la totalité de la darse GDF et à son entrée."
+   },
+   "phrase": "Darse GDF de Choisy-le-Roi : pêche interdite dans toute la darse et à son entrée.",
+   "source": {
+    "texte": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024), rubrique Interdictions de pêche, Val-de-Marne",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2024-02-08"
+   },
+   "citation": "Darse GDF : commune de Choisy-le-Roi, totalité de la darse et son entrée.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "94-toutes-carpe_nuit-lac-creteil-rive-base-loisirs",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "94",
+    "lieu": "Lac de Créteil (Créteil) : rive côté base de loisirs, entre l'île de la Rivière Sèche et l'île de la Roselière"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit autorisée dans le respect du règlement intérieur de la base de loisirs ; brolly autorisé, biwy et tentes interdits (fédération, qui cite l'arrêté préfectoral n° 2017/4688 du 28/12/2017, non lu)."
+   },
+   "phrase": "Lac de Créteil, rive côté base de loisirs : carpe de nuit autorisée, brolly autorisé, biwy et tentes interdits (fédération seule).",
+   "source": {
+    "texte": "Fédération Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne : Extrait de la réglementation de la pêche à Paris petite couronne (guide 2024), rubrique Pêche de la carpe de nuit, Val-de-Marne",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=42253&path=reglementation-2024.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2024-02-08"
+   },
+   "citation": "rive côté Base de Loisirs, entre l’île de la Rivière Sèche et l’île de la Roselière (pêche de nuit autorisée dans le respect du règlement intérieur de la Base de Loisirs)",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  }
+ ]
+}

@@ -1,0 +1,1298 @@
+{
+ "version": 2,
+ "departement": "78",
+ "genere_le": "2026-10-15",
+ "textes": [
+  {
+   "titre": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines pour l'année 2026 (DDT 78, Service de l'Environnement, signé par la cheffe du service Fanny Faure ép. Fievet ; date de signature absente de la copie lue, 'Versailles, le' en blanc)",
+   "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+   "signe_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "Arrêté préfectoral n° 78-2022-06-16-00005 portant réglementation permanente de la pêche en eau douce dans le département des Yvelines (publié au recueil des actes administratifs n° 78-2022-120 du 16 juin 2022, pages 24 à 34 ; abroge l'arrêté SE-2013-000228). PDF du recueil sans texte lisible pour cet arrêté ; copie mise à jour sur le site de la préfecture (AP_SE_REPZH_20220325_réglementation_permanente modif.pdf) refusée aux outils (robots) : non lu",
+   "url": "https://www.yvelines.gouv.fr/index.php/contenu/telechargement/27844/161888/file/recueil-78-2022-120-recueil-des-actes-administratifs-special(1).pdf",
+   "signe_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Arrêté préfectoral n° 78-2023-07-03-00001 du 3 juillet 2023 modifiant l'arrêté n° 78-2022-06-16-00005 (réglementation permanente de la pêche en eau douce, Yvelines ; recueil n° 78-2023-170, pages 8 à 12). Scan sans texte lisible : non lu",
+   "url": "https://www.yvelines.gouv.fr/contenu/telechargement/30124/193952/file/recueil-78-2023-170-recueil-des-actes-administratifs.pdf",
+   "signe_le": "2023-07-03",
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Arrêté préfectoral n° SV 10-0087 du 21 juin 2010 (interdiction de la pêche de poissons en vue de leur consommation, Seine et Orge), modifié par l'arrêté n° 2011210-0005 du 29 juillet 2011, lui-même modifié par l'arrêté n° 2017143-0002 du 23 mai 2017. Cités par l'avis annuel 2026, introuvables en ligne",
+   "url": null,
+   "signe_le": "2010-06-21",
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Document de la fédération des Yvelines sur des réserves de pêche et de navigation de la Seine (repères kilométriques PK 94,700 à PK 144,950), sans titre ni date lisibles : OCR trop dégradé, aucune règle tirée de lui",
+   "url": "https://www.federationpeche78.net/_files/ugd/9fc11c_463d55ec6c2f434e9fe3271bba444a29.pdf",
+   "signe_le": null,
+   "lu": "titre seul"
+  }
+ ],
+ "regles": [
+  {
+   "id": "78-categorie-montcient",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "lieu": "Montcient : en amont du pont-route de la RD28"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "La Montcient, en amont du pont-route de la RD28, est classée en 1re catégorie.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Classement des cours d’eau »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "La Montcient, en amont du pont-route de la RD28",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-categorie-mauldre",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "lieu": "Mauldre (Mareil-sur-Mauldre) : en amont du pont-route de Mareil-sur-Mauldre"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "La Mauldre, en amont du pont-route de Mareil-sur-Mauldre, est classée en 1re catégorie.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Classement des cours d’eau »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "La Mauldre, en amont du pont-route de Mareil-sur-Mauldre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-categorie-vaucouleurs",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "lieu": "Vaucouleurs (Mantes-la-Jolie) : en amont du pont-route de la RN 13 à Mantes-la-Jolie"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "La Vaucouleurs, en amont du pont-route de la RN 13 à Mantes-la-Jolie, est classée en 1re catégorie.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Classement des cours d’eau »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "La Vaucouleurs, en amont du pont-route de la RN 13 à Mantes-la-Jolie",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-categorie-affluents-1re",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "lieu": "Affluents et sous-affluents de la Montcient, de la Mauldre et de la Vaucouleurs : les affluents et sous-affluents des portions classées ci-avant"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1",
+    "texte": "Tous les affluents et sous-affluents des trois portions de cours d'eau classées en 1re catégorie (Montcient, Mauldre, Vaucouleurs)."
+   },
+   "phrase": "Les affluents et sous-affluents de la Montcient, de la Mauldre et de la Vaucouleurs (portions classées) sont en 1re catégorie.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Classement des cours d’eau »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "Les affluents et sous-affluents des cours d’eau ou portions de cours d’eau désignés ci-avant.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-categorie-reste-2e",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2",
+    "texte": "Tous les cours d'eau ou portions de cours d'eau non classés en 1re catégorie."
+   },
+   "phrase": "Tout cours d'eau des Yvelines non classé en 1re catégorie est en 2e catégorie.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Classement des cours d’eau »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "Eaux de deuxième catégorie • Tous les cours d’eau ou portions de cours d’eau non classés en première catégorie, notamment la Seine et l’Oise.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-categorie-seine-2e",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "lieu": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "La Seine est en 2e catégorie.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Classement des cours d’eau »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "notamment la Seine et l’Oise.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-categorie-oise-2e",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "lieu": "Oise"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "L'Oise est en 2e catégorie.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Classement des cours d’eau »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "notamment la Seine et l’Oise.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-ouverture-generale-1re",
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "En 1re catégorie, la pêche est ouverte du 14 mars au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "EAUX DE PREMIÈRE CATÉGORIE (1) : du samedi 14 mars au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-ombre-ouverture-1re",
+   "type": "ouverture",
+   "especes": [
+    "2247"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 16 mai au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Ombre commun en 1re catégorie : ouvert du 16 mai au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "OMBRE COMMUN Du samedi 16 mai au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-brochet-ouverture-1re",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Brochet en 1re catégorie : ouvert du 14 mars au 20 septembre 2026 inclus (remise à l'eau obligatoire jusqu'au 24 avril).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "BROCHET Du samedi 14 mars au dimanche 20 septembre 2026 inclus.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-brochet-remise-eau-1re",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Tout brochet capturé du samedi 14 mars au vendredi 24 avril 2026 inclus doit être immédiatement remis à l'eau."
+   },
+   "phrase": "En 1re catégorie, tout brochet pêché du 14 mars au 24 avril 2026 doit être remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "Tout brochet capturé du samedi 14 mars au vendredi 24 avril 2026 inclus doit être immédiatement remis à l’eau",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-omble-fontaine-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Omble de fontaine (saumon de fontaine) : ouvert du 14 mars au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "TRUITE FARIO OMBLE, OMBLE CHEVALIER SAUMON DE FONTAINE CRISTIVOMER Du samedi 14 mars au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-omble-chevalier-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Omble chevalier : ouvert du 14 mars au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "TRUITE FARIO OMBLE, OMBLE CHEVALIER SAUMON DE FONTAINE CRISTIVOMER Du samedi 14 mars au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-cristivomer-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Cristivomer : ouvert du 14 mars au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "TRUITE FARIO OMBLE, OMBLE CHEVALIER SAUMON DE FONTAINE CRISTIVOMER Du samedi 14 mars au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-grenouille-verte-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-07-04",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 4 juillet au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Grenouille verte : pêche ouverte du 4 juillet au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "GRENOUILLE VERTE GRENOUILLE ROUSSE Du samedi 4 juillet au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-grenouille-rousse-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-07-04",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 4 juillet au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Grenouille rousse : pêche ouverte du 4 juillet au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "GRENOUILLE VERTE GRENOUILLE ROUSSE Du samedi 4 juillet au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-ecrevisse-pattes-greles-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "du samedi 25 juillet au lundi 3 août 2026 inclus"
+   },
+   "phrase": "Écrevisse à pattes grêles : pêche ouverte du 25 juillet au 3 août 2026 inclus seulement.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "ÉCREVISSES À PATTES GRÊLES Du samedi 25 juillet au lundi 3 août 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-anguille-jaune-ouverture-1re",
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-07-15",
+   "valeur": {
+    "formule": "du samedi 14 mars au mercredi 15 juillet 2026 inclus"
+   },
+   "phrase": "Anguille jaune en 1re catégorie : pêche ouverte du 14 mars au 15 juillet 2026 inclus.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "ANGUILLE EUROPÉENNE AU STADE D’ANGUILLE JAUNE Du samedi 14 mars au mercredi 15 juillet 2026 inclus Du dimanche 15 février au mercredi 15 juillet 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-anguille-jaune-ouverture-2e",
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": "2026-02-15",
+   "au": "2026-07-15",
+   "valeur": {
+    "formule": "du dimanche 15 février au mercredi 15 juillet 2026 inclus"
+   },
+   "phrase": "Anguille jaune en 2e catégorie : pêche ouverte du 15 février au 15 juillet 2026 inclus.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Ouverture générale » et tableau des espèces à ouverture différée",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "ANGUILLE EUROPÉENNE AU STADE D’ANGUILLE JAUNE Du samedi 14 mars au mercredi 15 juillet 2026 inclus Du dimanche 15 février au mercredi 15 juillet 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-ecrevisse-pattes-rouges-interdit",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "phrase": "La pêche de l'écrevisse à pattes rouges est interdite.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), tableau des espèces « Pêche interdite »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "ÉCREVISSES À PATTES ROUGES ÉCREVISSES DES TORRENTS ÉCREVISSES À PATTES BLANCHES Pêche interdite",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-ecrevisse-torrents-interdit",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "phrase": "La pêche de l'écrevisse des torrents est interdite.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), tableau des espèces « Pêche interdite »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "ÉCREVISSES À PATTES ROUGES ÉCREVISSES DES TORRENTS ÉCREVISSES À PATTES BLANCHES Pêche interdite",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-ecrevisse-pattes-blanches-interdit",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "phrase": "La pêche de l'écrevisse à pattes blanches est interdite.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), tableau des espèces « Pêche interdite »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "ÉCREVISSES À PATTES ROUGES ÉCREVISSES DES TORRENTS ÉCREVISSES À PATTES BLANCHES Pêche interdite",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-saumon-atlantique-interdit",
+   "type": "interdit",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "phrase": "La pêche de le saumon atlantique est interdite.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), tableau des espèces « Pêche interdite »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "SAUMON ATLANTIQUE TRUITE DE MER ANGUILLE EUROPÉENNE < 12 cm (CIVELLE) ANGUILLE EUROPÉENNE ANGUILLE ARGENTÉE Pêche interdite",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-truite-de-mer-interdit",
+   "type": "interdit",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "phrase": "La pêche de la truite de mer est interdite.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), tableau des espèces « Pêche interdite »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "SAUMON ATLANTIQUE TRUITE DE MER ANGUILLE EUROPÉENNE < 12 cm (CIVELLE) ANGUILLE EUROPÉENNE ANGUILLE ARGENTÉE Pêche interdite",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-anguille-civelle-interdit",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "phrase": "La pêche de la civelle (anguille de moins de 12 cm) est interdite.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), tableau des espèces « Pêche interdite »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "SAUMON ATLANTIQUE TRUITE DE MER ANGUILLE EUROPÉENNE < 12 cm (CIVELLE) ANGUILLE EUROPÉENNE ANGUILLE ARGENTÉE Pêche interdite",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-anguille-argentee-interdit",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "phrase": "La pêche de l'anguille argentée est interdite.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), tableau des espèces « Pêche interdite »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "SAUMON ATLANTIQUE TRUITE DE MER ANGUILLE EUROPÉENNE < 12 cm (CIVELLE) ANGUILLE EUROPÉENNE ANGUILLE ARGENTÉE Pêche interdite",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-huchon-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "huchon"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 70
+   },
+   "phrase": "Huchon : taille minimale 70 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "HUCHON 0,70 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-cristivomer-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 35
+   },
+   "phrase": "Cristivomer : taille minimale 35 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "CRISTIVOMER 0,35 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-coregone-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Corégone : taille minimale 30 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "OMBRE COMMUN et CORÉGONE 0,30 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-mulet-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "mulet"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 20
+   },
+   "phrase": "Mulet : taille minimale 20 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "MULET 0,20 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-omble-fontaine-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23
+   },
+   "phrase": "Omble de fontaine (saumon de fontaine) : taille minimale 23 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "TRUITES autres que la truite de mer, OMBLE ou SAUMON DE FONTAINE, OMBLE CHEVALIER 0,23 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-omble-chevalier-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23
+   },
+   "phrase": "Omble chevalier : taille minimale 23 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "TRUITES autres que la truite de mer, OMBLE ou SAUMON DE FONTAINE, OMBLE CHEVALIER 0,23 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-ecrevisse-pattes-greles-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 9
+   },
+   "phrase": "Écrevisse à pattes grêles : taille minimale 9 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "ÉCREVISSES À PATTES GRÊLES 0,09 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-grenouille-verte-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8
+   },
+   "phrase": "Grenouille verte : taille minimale 8 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "GRENOUILLE VERTE et GRENOUILLE ROUSSE 0,08 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-grenouille-rousse-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8
+   },
+   "phrase": "Grenouille rousse : taille minimale 8 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "GRENOUILLE VERTE et GRENOUILLE ROUSSE 0,08 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-anguille-jaune-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 12
+   },
+   "phrase": "Anguille jaune : taille minimale 12 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "ANGUILLES au stade d’anguille jaune 0,12 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-grande-alose-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Grande alose : taille minimale 30 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "ALOSES 0,30 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-alose-feinte-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Alose feinte : taille minimale 30 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "ALOSES 0,30 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-lamproie-marine-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "Lamproie marine : taille minimale 40 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "LAMPROIE MARINE 0,40 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-lamproie-fluviatile-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 20
+   },
+   "phrase": "Lamproie fluviatile : taille minimale 20 cm (le poisson doit dépasser cette taille).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Taille minimale des poissons, grenouilles et des écrevisses pêchables »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "LAMPROIE FLUVIATILE 0,20 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-brochet-quota-jour-1re",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "En 1re catégorie, 2 brochets par pêcheur et par jour au maximum.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Limitation du nombre de captures autorisées »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "Dans les eaux classées en 1re catégorie, le nombre de captures de brochets autorisé par pêcheur de loisir et par jour est fixé à 2.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-salmonides-quota-jour",
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "78",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "Salmonidés autres que le saumon atlantique et la truite de mer (pêche interdite)."
+   },
+   "phrase": "10 salmonidés par pêcheur et par jour au maximum (saumon atlantique et truite de mer exclus : pêche interdite).",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Limitation du nombre de captures autorisées »",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "Le nombre de captures de salmonidés, autres que le saumon atlantique et la truite de mer (pêche interdite), autorisé par pêcheur et par jour, est fixé à 10.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-conso-seine",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "lieu": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de poissons interdite en vue de leur consommation, de leur commercialisation ou de leur cession gratuite. L'avis renvoie à l'arrêté préfectoral n°SV 10-0087 du 21 juin 2010, modifié par l'arrêté n°2011210-0005 du 29 juillet 2011, lui-même modifié par l'arrêté n°2017143-0002 du 23 mai 2017 (non lus : espèces et tronçons exacts inconnus)."
+   },
+   "phrase": "Dans la Seine, il est interdit de pêcher du poisson pour le manger, le vendre ou le donner.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Dispositions particulières », interdiction de la pêche en vue de la consommation",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "L’interdiction de la pêche, dans le fleuve Seine et la rivière Orge, des poissons en vue de leur consommation, de leur commercialisation ou de la cession gratuite est fixée par arrêté préfectoral",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "78-conso-orge",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "78",
+    "lieu": "Orge"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de poissons interdite en vue de leur consommation, de leur commercialisation ou de leur cession gratuite. L'avis renvoie à l'arrêté préfectoral n°SV 10-0087 du 21 juin 2010, modifié par l'arrêté n°2011210-0005 du 29 juillet 2011, lui-même modifié par l'arrêté n°2017143-0002 du 23 mai 2017 (non lus : espèces et tronçons exacts inconnus)."
+   },
+   "phrase": "Dans la Orge, il est interdit de pêcher du poisson pour le manger, le vendre ou le donner.",
+   "source": {
+    "texte": "Avis annuel 2026, Périodes d'ouverture de la pêche et dispositions particulières dans le département des Yvelines (DDT 78, Service de l'Environnement), rubrique « Dispositions particulières », interdiction de la pêche en vue de la consommation",
+    "url": "https://www.rey78.fr/wp-content/uploads/peche-SE_REPZH_avis_annuel_2026VersionPub.pdf",
+    "lu_le": "2026-10-15",
+    "version": "avis pour l'année 2026, signé à Versailles par la cheffe du Service Environnement (Fanny Faure ép. Fievet) ; date de signature absente de la copie lue (hébergée sur rey78.fr)"
+   },
+   "citation": "L’interdiction de la pêche, dans le fleuve Seine et la rivière Orge, des poissons en vue de leur consommation, de leur commercialisation ou de la cession gratuite est fixée par arrêté préfectoral",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  }
+ ]
+}

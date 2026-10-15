@@ -1,0 +1,2972 @@
+{
+ "version": 2,
+ "departement": "95",
+ "genere_le": "2026-10-15",
+ "textes": [
+  {
+   "titre": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise",
+   "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+   "signe_le": "2025-05-28",
+   "lu": "entier",
+   "remarque": "7 articles lus en texte brut (Parallel full_content). Date lue à l'OCR « Cergy le 28 MAL2025 », donc 28 mai 2025 très probable (consultation du public close le 7 avril 2025). Abroge l'arrêté du 18 janvier 2017. Sans date de fin. Les citations corrigent les accents du texte OCR."
+  },
+  {
+   "titre": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026",
+   "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+   "signe_le": null,
+   "lu": "entier",
+   "remarque": "4 pages lues en texte brut. Date de signature illisible à l'OCR (« Cergy, le OU] O21 2026 ») : signé en 2026, après la consultation du public du 22 décembre 2025 au 22 janvier 2026. Tableau de l'article 2 lu à plat, cellules fusionnées déduites de l'ordre des lignes."
+  },
+  {
+   "titre": "Arrêté préfectoral n°2016-13568 du 29 septembre 2016 instituant les zones d'interdiction de pêche sur les eaux du domaine public fluvial de l'État (Val-d'Oise)",
+   "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+   "signe_le": "2016-09-29",
+   "lu": "titre seul",
+   "remarque": "Cité dans les visas des deux arrêtés et à l'art. 11 du permanent, qui en recopie les 8 réserves ; texte propre introuvable. Durée maximale de 5 ans selon le permanent."
+  },
+  {
+   "titre": "Arrêté préfectoral n°2016-13567 (annexe : parcours de pêche de la carpe de nuit, Oise et Seine, Val-d'Oise)",
+   "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+   "signe_le": null,
+   "lu": "titre seul",
+   "remarque": "Cité à l'art. 5 du permanent, qui en recopie les parcours ; texte propre introuvable."
+  },
+  {
+   "titre": "Règlements 2026 des étangs fédéraux : Moulin de Vallière, 3 Sources, Val de Persan, forêt de Carnelle (fédération du Val-d'Oise)",
+   "url": "https://www.peche95.fr/6201-reglementation.htm",
+   "signe_le": null,
+   "lu": "partie",
+   "remarque": "Quatre fiches PDF lues par WebFetch (phrases en majuscules citées mot pour mot). Aucune année ni signature dans le texte. Fédération seule : toutes ces règles sont en incertain."
+  }
+ ],
+ "regles": [
+  {
+   "id": "95-cat1-viosne",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Viosne (Osny) : en amont du pont-route d'Osny"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1",
+    "texte": "Même classement dans l'arrêté annuel 2025-18518, art. 1."
+   },
+   "phrase": "La Viosne en amont du pont-route d'Osny est classée en 1re catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 1 (classement des cours d'eau)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "« la Viosne, en amont du pont-route d'OSNY »",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-cat1-montcient",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "95",
+    "lieu": "Montcient : sur tout son parcours dans le département"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1",
+    "texte": "Même classement dans l'arrêté annuel 2025-18518, art. 1."
+   },
+   "phrase": "La Montcient est classée en 1re catégorie sur tout son parcours dans le Val-d'Oise.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 1 (classement des cours d'eau)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "« la Montcient, sur tout son parcours dans le département »",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-cat1-epte",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "95",
+    "lieu": "Epte : lit principal et faux-bras, sur tout son parcours dans le département"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1",
+    "texte": "Même classement dans l'arrêté annuel 2025-18518, art. 1."
+   },
+   "phrase": "L'Epte (lit principal et faux-bras) est classée en 1re catégorie sur tout son parcours dans le Val-d'Oise.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 1 (classement des cours d'eau)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "« l'Epte (lit principal et faux-bras), sur tout son parcours dans le département »",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-cat1-affluents",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "95",
+    "lieu": "Affluents et sous-affluents du Sausseron (amont), de la Viosne (amont), de la Montcient et de l'Epte"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1",
+    "texte": "Même classement dans l'arrêté annuel 2025-18518, art. 1."
+   },
+   "phrase": "Les affluents et sous-affluents de ces quatre cours d'eau de 1re catégorie sont aussi en 1re catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 1 (classement des cours d'eau)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "« les affluents et sous-affluents des cours d'eau ou portions de cours d'eau désignés ci-avant »",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-cat1-sausseron-gc44a",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Sausseron (Valmondois) : en amont du pont-route G.C. 44a"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1",
+    "texte": "L'arrêté annuel 2025-18518 écrit « G.C. 48 » pour le même pont (règle 95-cat1-sausseron-gc48) : écart peut-être dû à la lecture OCR, à vérifier sur le PDF."
+   },
+   "phrase": "Le Sausseron en amont du pont-route G.C. 44a à Valmondois est classé en 1re catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 1 (classement des cours d'eau)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "« le Sausseron, en amont du pont-route G.C. 44a VALMONDOIS » (95)",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-cat1-sausseron-gc48",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Sausseron (Valmondois) : en amont du pont-route G.C. 48"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1",
+    "texte": "L'arrêté permanent 2024-18034 écrit « G.C. 44a » pour le même pont (règle 95-cat1-sausseron-gc44a) : écart peut-être dû à la lecture OCR, à vérifier sur le PDF."
+   },
+   "phrase": "Le Sausseron en amont du pont-route G.C. 48 à Valmondois est classé en 1re catégorie.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 1 (ouverture générale, liste des cours d'eau de 1re catégorie)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "« le Sausseron, en amont du pont-route G.C. 48 VALMONDOIS » (95)",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-cat2-autres",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2",
+    "texte": "Même classement dans l'arrêté annuel 2025-18518, art. 1."
+   },
+   "phrase": "Tous les autres cours d'eau, canaux et parties de cours d'eau du Val-d'Oise sont en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 1 (classement des cours d'eau)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Cours d'eau de 2ème catégorie : Tous les autres cours d'eau, canaux et parties de cours d'eau du département.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-plans-eau-communiquent",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Un plan d'eau est classé dans la même catégorie que les eaux avec lesquelles il communique."
+   },
+   "phrase": "Un plan d'eau prend la catégorie (1 ou 2) des eaux avec lesquelles il communique, sauf liste ci-dessous.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 5 (classement des plans d'eau)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Les plans d'eau entrant dans le cadre des eaux visées à l'article L.431-3 du code de l'environnement sont classés dans la même catégorie que les eaux avec lesquelles ils communiquent.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-cat2-pe-cergy-neuville",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Étangs de la base de loisirs de Cergy-Neuville (Cergy, Neuville-sur-Oise)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2",
+    "texte": "Classement en 2e catégorie au titre de l'article L.431-5 du code de l'environnement."
+   },
+   "phrase": "Les étangs de la base de loisirs de Cergy-Neuville sont classés en 2e catégorie jusqu'au 23 janvier 2030.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 5 (classement des plans d'eau)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "« les étangs de la base de loisirs de Cergy-Neuville jusqu'au 23 janvier 2030 »",
+   "statut": "brouillon",
+   "expire_le": "2030-01-23",
+   "remplace": null
+  },
+  {
+   "id": "95-cat2-pe-valliere",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Moulin de Vallière : étang"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2",
+    "texte": "Classement en 2e catégorie au titre de l'article L.431-5 du code de l'environnement."
+   },
+   "phrase": "L'étang du Moulin de Vallière est classé en 2e catégorie jusqu'au 13 février 2034.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 5 (classement des plans d'eau)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "« l'étang du Moulin de Vallière jusqu'au 13 février 2034 »",
+   "statut": "brouillon",
+   "expire_le": "2034-02-13",
+   "remplace": null
+  },
+  {
+   "id": "95-cat2-pe-plongee-beaumont",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Base fédérale de plongée sous-marine d'Île-de-France, ancien lac des Ciments (Beaumont-sur-Oise)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2",
+    "texte": "Classement en 2e catégorie au titre de l'article L.431-5 du code de l'environnement."
+   },
+   "phrase": "La base fédérale de plongée d'Île-de-France (ancien lac des Ciments) à Beaumont-sur-Oise est classée en 2e catégorie jusqu'au 25 avril 2034.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 5 (classement des plans d'eau)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "« la base fédérale de plongée sous-marine d'Ile-de-France (anciennement lac des ciments) de Beaumont-sur-Oise jusqu'au 25 avril 2034 »",
+   "statut": "brouillon",
+   "expire_le": "2034-04-25",
+   "remplace": null
+  },
+  {
+   "id": "95-cat2-pe-val-persan",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Val de Persan : étang"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2",
+    "texte": "Classement en 2e catégorie au titre de l'article L.431-5 du code de l'environnement. Fin « en mars 2026 » sans jour : date de fin non reprise, et déjà passée au 15 octobre 2026."
+   },
+   "phrase": "L'étang de Val de Persan était classé en 2e catégorie jusqu'en mars 2026 ; le texte ne donne pas le jour exact et la date est passée.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 5 (classement des plans d'eau)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "« l'étang de Val de Persan jusqu'en mars 2026 »",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-toutes-ouv-cat1",
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 14 mars au 20 septembre 2026 inclus",
+    "texte": "Toutes espèces sauf celles de l'article 2 (ombre commun, brochet, anguille jaune, écrevisses, grenouilles, espèces fermées). Arrêté permanent 2024-18034, art. 2 : du 2e samedi de mars au 3e dimanche de septembre inclus."
+   },
+   "phrase": "En 1re catégorie, la pêche est ouverte du 14 mars au 20 septembre 2026 (sauf les espèces à dates particulières).",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 1 (ouverture générale)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Cours d'eau de 1ère catégorie : du 14 mars au 20 septembre 2026 inclus.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-omb-ouv-cat1",
+   "type": "ouverture",
+   "especes": [
+    "2247"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 16 mai au 20 septembre 2026",
+    "texte": "Arrêté permanent 2024-18034, art. 2 : du 3e samedi de mai au 3e dimanche de septembre inclus."
+   },
+   "phrase": "Ombre commun en 1re catégorie : ouvert du 16 mai au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 2 (ouvertures spécifiques)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Ombre commun Du 16 mai au 20 septembre Du 16 mai au 31 décembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-omble-fo-ouv-cat2",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 14 mars au 20 septembre 2026",
+    "texte": "Arrêté permanent 2024-18034, art. 3 : du 2e samedi de mars au 3e dimanche de septembre inclus."
+   },
+   "phrase": "Omble de fontaine en 2e catégorie : ouvert du 14 mars au 20 septembre 2026 (fermé le reste de l'année).",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 2 (ouvertures spécifiques)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Truite fario Du 14 mars au 20 septembre Du 14 mars au 20 septembre Omble (ou saumon) de fontaine Omble chevalier",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-omble-ch-ouv-cat2",
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 14 mars au 20 septembre 2026",
+    "texte": "Arrêté permanent 2024-18034, art. 3 : du 2e samedi de mars au 3e dimanche de septembre inclus."
+   },
+   "phrase": "Omble chevalier en 2e catégorie : ouvert du 14 mars au 20 septembre 2026 (fermé le reste de l'année).",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 2 (ouvertures spécifiques)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Truite fario Du 14 mars au 20 septembre Du 14 mars au 20 septembre Omble (ou saumon) de fontaine Omble chevalier",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-ang-ouv-cat1",
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-07-15",
+   "valeur": {
+    "formule": "du 14 mars au 15 juillet 2026",
+    "texte": "Arrêté permanent 2024-18034, art. 2 : du 2e samedi de mars jusqu'au 15 juillet inclus."
+   },
+   "phrase": "Anguille jaune en 1re catégorie : ouverte du 14 mars au 15 juillet 2026.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 2 (ouvertures spécifiques)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Anguille jaune Du 14 mars au 15 juillet Du 15 février au 15 juillet",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-ang-ouv-cat2",
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-02-15",
+   "au": "2026-07-15",
+   "valeur": {
+    "formule": "du 15 février au 15 juillet 2026",
+    "texte": "Arrêté permanent 2024-18034, art. 3 : du 15 février au 15 juillet inclus."
+   },
+   "phrase": "Anguille jaune en 2e catégorie : ouverte du 15 février au 15 juillet 2026.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 2 (ouvertures spécifiques)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Anguille jaune Du 14 mars au 15 juillet Du 15 février au 15 juillet",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-ecg-ouv",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "10 jours consécutifs à partir du 25 juillet 2026",
+    "texte": "Arrêté permanent 2024-18034, art. 2 et 3 : dix jours consécutifs à partir du 4e samedi de juillet (25 juillet 2026), soit jusqu'au 3 août inclus."
+   },
+   "phrase": "Écrevisse à pattes grêles : ouverte 10 jours de suite à partir du 25 juillet 2026, soit jusqu'au 3 août.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 2 (ouvertures spécifiques)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Écrevisse à pattes grêles (Astacus leptodactylus) 10 jours consécutifs à partir du 25 juillet",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-grenver-ouv",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-07-04",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 4 juillet au 20 septembre 2026",
+    "texte": "Arrêté permanent 2024-18034, art. 2 et 3 : du 1er samedi de juillet au 3e dimanche de septembre inclus."
+   },
+   "phrase": "Grenouille verte : pêche ouverte du 4 juillet au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 2 (ouvertures spécifiques)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Grenouille verte (Pelophylax kl.esculentus), grenouille rousse (Rana temporaria). Du 04 juillet au 20 septembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-grenver-vente",
+   "type": "interdit",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Colportage, mise en vente, vente et achat interdits en toute période, grenouilles vivantes ou mortes."
+   },
+   "phrase": "Grenouille verte : vente, colportage et achat interdits toute l'année.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 3 (mesures spécifiques pour les grenouilles)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Le colportage, la mise en vente, la vente ou l'achat de la grenouille verte (Pelophylax kl. esculentus) et de la grenouille rousse (Rana temporaria) [...] sont interdits en toute période",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-grenrou-ouv",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-07-04",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 4 juillet au 20 septembre 2026",
+    "texte": "Arrêté permanent 2024-18034, art. 2 et 3 : du 1er samedi de juillet au 3e dimanche de septembre inclus."
+   },
+   "phrase": "Grenouille rousse : pêche ouverte du 4 juillet au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 2 (ouvertures spécifiques)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Grenouille verte (Pelophylax kl.esculentus), grenouille rousse (Rana temporaria). Du 04 juillet au 20 septembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-grenrou-vente",
+   "type": "interdit",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Colportage, mise en vente, vente et achat interdits en toute période, grenouilles vivantes ou mortes."
+   },
+   "phrase": "Grenouille rousse : vente, colportage et achat interdits toute l'année.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 3 (mesures spécifiques pour les grenouilles)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Le colportage, la mise en vente, la vente ou l'achat de la grenouille verte (Pelophylax kl. esculentus) et de la grenouille rousse (Rana temporaria) [...] sont interdits en toute période",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-sau-ferme",
+   "type": "interdit",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite à toute époque de l'année, de jour comme de nuit. Même fermeture dans le tableau de l'arrêté annuel 2025-18518, art. 2."
+   },
+   "phrase": "Pêche de saumon atlantique interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 4 (mesures applicables aux poissons migrateurs)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "La pêche du saumon atlantique, de la truite de mer, de l'alose, de la civelle et de l'anguille d'avalaison est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-trm-ferme",
+   "type": "interdit",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite à toute époque de l'année, de jour comme de nuit. Même fermeture dans le tableau de l'arrêté annuel 2025-18518, art. 2."
+   },
+   "phrase": "Pêche de truite de mer interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 4 (mesures applicables aux poissons migrateurs)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "La pêche du saumon atlantique, de la truite de mer, de l'alose, de la civelle et de l'anguille d'avalaison est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-alo-ferme",
+   "type": "interdit",
+   "especes": [
+    "autre:alose"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite à toute époque de l'année, de jour comme de nuit. Même fermeture dans le tableau de l'arrêté annuel 2025-18518, art. 2."
+   },
+   "phrase": "Pêche de alose interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 4 (mesures applicables aux poissons migrateurs)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "La pêche du saumon atlantique, de la truite de mer, de l'alose, de la civelle et de l'anguille d'avalaison est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-civ-ferme",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite à toute époque de l'année, de jour comme de nuit. Même fermeture dans le tableau de l'arrêté annuel 2025-18518, art. 2."
+   },
+   "phrase": "Pêche de civelle interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 4 (mesures applicables aux poissons migrateurs)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "La pêche du saumon atlantique, de la truite de mer, de l'alose, de la civelle et de l'anguille d'avalaison est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-anv-ferme",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite à toute époque de l'année, de jour comme de nuit. Même fermeture dans le tableau de l'arrêté annuel 2025-18518, art. 2."
+   },
+   "phrase": "Pêche de anguille d'avalaison interdite toute l'année, de jour comme de nuit.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 4 (mesures applicables aux poissons migrateurs)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "La pêche du saumon atlantique, de la truite de mer, de l'alose, de la civelle et de l'anguille d'avalaison est interdite à toute époque de l'année, de jour comme de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-lpf-ferme",
+   "type": "interdit",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Fermée dans le tableau de l'arrêté annuel 2026 ; l'arrêté permanent ne la cite pas dans ses fermetures (art. 4) mais fixe une taille minimale de 20 cm (art. 6)."
+   },
+   "phrase": "Lamproie fluviatile : pêche fermée en 2026.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 2 (ouvertures spécifiques, ligne « Fermée »)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Anguille d'avalaison Saumon atlantique Truite de mer Alose Civelle Lamproie fluviatile Fermée",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-ecr-ferme",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Fermeture permanente (arrêté permanent, art. 2 et 3). Aussi « Fermée » dans l'arrêté annuel 2025-18518, art. 2."
+   },
+   "phrase": "Écrevisse à pattes rouges : pêche fermée en permanence.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 2 3° et art. 3 3° (fermetures permanentes)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Fermetures permanentes : Écrevisse à pattes rouges (astacus astacus), écrevisse à pattes blanches (austropotamobius pallipes).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-ecb-ferme",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Fermeture permanente (arrêté permanent, art. 2 et 3). Aussi « Fermée » dans l'arrêté annuel 2025-18518, art. 2."
+   },
+   "phrase": "Écrevisse à pattes blanches : pêche fermée en permanence.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 2 3° et art. 3 3° (fermetures permanentes)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Fermetures permanentes : Écrevisse à pattes rouges (astacus astacus), écrevisse à pattes blanches (austropotamobius pallipes).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-bro-remise-cat1",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Brochet pris en 1re catégorie entre le 14 mars et le 24 avril 2026 : remise à l'eau obligatoire. Arrêté permanent 2024-18034, art. 2 : du 2e samedi de mars au dernier vendredi d'avril inclus."
+   },
+   "phrase": "Brochet en 1re catégorie : pêche permise du 14 mars au 20 septembre, mais il faut le remettre à l'eau du 14 mars au 24 avril 2026.",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 2 (ouvertures spécifiques)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Brochet Du 14 mars au 20 septembre avec remise à l'eau obligatoire du 14 mars au 24 avril",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-toutes-interdit-vif-fermeture-bro",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Pendant la fermeture du brochet : pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer le brochet de manière non accidentelle interdite en 2e catégorie."
+   },
+   "phrase": "En 2e catégorie, du 26 janvier au 24 avril 2026 (brochet fermé) : pas de pêche au vif, au poisson mort ou artificiel, ni aux leurres qui peuvent prendre un brochet.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 10 (procédés interdits pendant la fermeture du brochet)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "la pêche au vif, au poisson mort ou artificiel, et aux leurres susceptibles de capturer ce poisson de manière non accidentelle, est interdite dans les eaux classées en 2ème catégorie.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-toutes-interdit-engins-fermeture-bro",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Pendant la fermeture du brochet : épervier, nasses et verveux interdits en 2e catégorie, sauf bosselles à anguilles et nasses de type anguillère, à écrevisses ou à lamproie, et sauf pour la pêche d'autres espèces."
+   },
+   "phrase": "En 2e catégorie, du 26 janvier au 24 avril 2026 (brochet fermé) : épervier, nasses et verveux interdits (sauf bosselles à anguilles et nasses à anguilles, écrevisses ou lamproies).",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 10 (procédés interdits pendant la fermeture du brochet)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "l'emploi de l'épervier ainsi que des nasses et verveux, à l'exception des bosselles à anguilles [...], est interdit dans les eaux classées dans la 2ème catégorie sauf pour la pêche d'autres espèces.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-bro-taille",
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 60,
+    "texte": "Plus strict que le socle national (50 cm). Même taille dans l'arrêté annuel 2025-18518, art. 4."
+   },
+   "phrase": "Brochet : taille minimale 60 cm, en dessous on le remet à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 6 (taille minimale de certaines espèces)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "si leur longueur est inférieure à : 0,60 m pour le brochet",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-bro-taille"
+  },
+  {
+   "id": "95-omb-taille",
+   "type": "taille_min",
+   "especes": [
+    "2247"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 35,
+    "texte": "Plus strict que le socle national (30 cm). Même taille dans l'arrêté annuel 2025-18518, art. 4."
+   },
+   "phrase": "Ombre commun : taille minimale 35 cm, en dessous on le remet à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 6 (taille minimale de certaines espèces)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "si leur longueur est inférieure à : 0,35 m pour l'ombre commun",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-omb-taille"
+  },
+  {
+   "id": "95-lpm-taille",
+   "type": "taille_min",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40,
+    "texte": "Même taille dans l'arrêté annuel 2025-18518, art. 4."
+   },
+   "phrase": "Lamproie marine : taille minimale 40 cm, en dessous on le remet à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 6 (taille minimale de certaines espèces)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "si leur longueur est inférieure à : 0,40 m pour la lamproie marine",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-lpf-taille",
+   "type": "taille_min",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 20,
+    "texte": "Même taille dans l'arrêté annuel 2025-18518, art. 4. Espèce fermée en 2026 (règle 95-lpf-ferme)."
+   },
+   "phrase": "Lamproie fluviatile : taille minimale 20 cm, en dessous on le remet à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 6 (taille minimale de certaines espèces)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "si leur longueur est inférieure à : 0,20 m pour la lamproie fluviatile",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-angj-taille",
+   "type": "taille_min",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 12,
+    "texte": "Même taille dans l'arrêté annuel 2025-18518, art. 4."
+   },
+   "phrase": "Anguille jaune : taille minimale 12 cm, en dessous on le remet à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 6 (taille minimale de certaines espèces)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "si leur longueur est inférieure à : 0,12 m pour l'anguille jaune",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-ecg-taille",
+   "type": "taille_min",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 9,
+    "texte": "Mesure de la pointe de la tête, pinces et antennes non comprises, à l'extrémité de la queue déployée."
+   },
+   "phrase": "Écrevisse à pattes grêles : taille minimale 9 cm, en dessous on le remet à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 6 (taille minimale de certaines espèces)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "si leur longueur est inférieure à : 0,09 m pour l'écrevisse à pattes grêles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-grev-taille",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8,
+    "texte": "Mesure du bout du museau au cloaque."
+   },
+   "phrase": "Grenouille verte : taille minimale 8 cm, en dessous on le remet à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 6 (taille minimale de certaines espèces)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "si leur longueur est inférieure à : 0,08 m pour la grenouille verte et la grenouille rousse",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-grer-taille",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8,
+    "texte": "Mesure du bout du museau au cloaque."
+   },
+   "phrase": "Grenouille rousse : taille minimale 8 cm, en dessous on le remet à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 6 (taille minimale de certaines espèces)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "si leur longueur est inférieure à : 0,08 m pour la grenouille verte et la grenouille rousse",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-ombf-taille",
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23,
+    "texte": "Même taille dans l'arrêté annuel 2025-18518, art. 4."
+   },
+   "phrase": "Omble de fontaine (ou saumon de fontaine) : taille minimale 23 cm, en dessous on le remet à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 6 (taille minimale de certaines espèces)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "si leur longueur est inférieure à : 0,23 m pour les truites (autres que la truite de mer), pour l'omble de fontaine (ou saumon de fontaine) et pour l'omble chevalier",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-ombc-taille",
+   "type": "taille_min",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23,
+    "texte": "Même taille dans l'arrêté annuel 2025-18518, art. 4."
+   },
+   "phrase": "Omble chevalier : taille minimale 23 cm, en dessous on le remet à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 6 (taille minimale de certaines espèces)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "si leur longueur est inférieure à : 0,23 m pour les truites (autres que la truite de mer), pour l'omble de fontaine (ou saumon de fontaine) et pour l'omble chevalier",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-alo-taille",
+   "type": "taille_min",
+   "especes": [
+    "autre:alose"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30,
+    "texte": "Taille inscrite seulement dans l'arrêté annuel 2026 (« aloses »)."
+   },
+   "phrase": "Alose : taille minimale 30 cm, en dessous on la remet à l'eau tout de suite (espèce par ailleurs fermée).",
+   "source": {
+    "texte": "Arrêté n°2025-18518 fixant les périodes d'ouverture de la pêche dans le département du Val d'Oise pour l'année 2026, art. 4 (taille minimale de certaines espèces)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=53321&path=Arrete-Annuel-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy en 2026 (jour et mois illisibles à l'OCR), après la consultation du public close le 22 janvier 2026 ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "si leur longueur est inférieure à : 0,30 m pour les aloses",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null
+  },
+  {
+   "id": "95-bro-quota",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2,
+    "texte": "Le texte ne dit pas si ce quota s'ajoute à celui des sandres et black-bass ; le socle national limite à 3 carnassiers dont 2 brochets (nat-car-quota)."
+   },
+   "phrase": "Brochet : 2 par jour et par pêcheur.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 7 (nombre de captures par pêcheur et par jour)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Nombre de captures autorisées par pêcheur et par jour : Brochet : 2 Sandres ou black-bass : 3 Salmonidés (autres que le saumon et la truite de mer) : 6",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-car-quota"
+  },
+  {
+   "id": "95-sanbb-quota",
+   "type": "quota_jour",
+   "especes": [
+    "2195",
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3,
+    "texte": "Total commun sandres et black-bass. Le texte ne dit pas si ce quota s'ajoute à celui du brochet ; le socle national limite à 3 carnassiers dont 2 brochets (nat-car-quota)."
+   },
+   "phrase": "Sandres et black-bass ensemble : 3 par jour et par pêcheur.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 7 (nombre de captures par pêcheur et par jour)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Nombre de captures autorisées par pêcheur et par jour : Brochet : 2 Sandres ou black-bass : 3 Salmonidés (autres que le saumon et la truite de mer) : 6",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-car-quota"
+  },
+  {
+   "id": "95-salm-quota",
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 6,
+    "texte": "Salmonidés autres que le saumon et la truite de mer."
+   },
+   "phrase": "Salmonidés (truites, ombles, ombre) : 6 par jour et par pêcheur, au lieu de 10 au niveau national.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 7 (nombre de captures par pêcheur et par jour)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Nombre de captures autorisées par pêcheur et par jour : Brochet : 2 Sandres ou black-bass : 3 Salmonidés (autres que le saumon et la truite de mer) : 6",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": "nat-sal-quota"
+  },
+  {
+   "id": "95-toutes-lignes-cat1",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 1,
+    "hamecons_max": 2,
+    "mouches_max": 3,
+    "texte": "1 ligne par membre d'AAPPMA en 1re catégorie ; lignes montées sur cannes, au plus deux hameçons ou trois mouches artificielles, disposées à proximité du pêcheur."
+   },
+   "phrase": "En 1re catégorie : 1 seule ligne par pêcheur, avec au plus 2 hameçons ou 3 mouches artificielles.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 8 (procédés et modes de pêche autorisés)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Dans les eaux de 1ère catégorie, le nombre de lignes autorisées par membre d'association agréée de pêche et de pisciculture est limité à 1 ligne.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-ecr-balances",
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "6 balances au plus pour la capture des écrevisses."
+   },
+   "phrase": "Écrevisses : 6 balances autorisées.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 8 (procédés et modes de pêche autorisés)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "L'utilisation de la vermée pour l'anguille et de 6 balances destinées à la capture des écrevisses est autorisée.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-ang-vermee",
+   "type": "mode_peche",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Vermée autorisée pour l'anguille."
+   },
+   "phrase": "Anguille : la vermée est autorisée.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 8 (procédés et modes de pêche autorisés)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "L'utilisation de la vermée pour l'anguille et de 6 balances destinées à la capture des écrevisses est autorisée.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-toutes-carafe",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Carafe ou bouteille de 2 litres au plus autorisée pour capturer les vairons et autres poissons servant d'amorces."
+   },
+   "phrase": "Une carafe ou une bouteille de 2 litres au plus est permise pour prendre des vairons d'amorce.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 8 (procédés et modes de pêche autorisés)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "l'emploi d'une carafe ou d'une bouteille, destinée à la capture des vairons et autres poissons servant d'amorces, et dont la contenance ne peut être supérieure à 2 litres, est autorisé.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-ang-carnet",
+   "type": "autre",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout pêcheur en eau douce, professionnel ou de loisir, enregistre ses captures d'anguille dans un carnet de pêche (modèle cerfa n°14358*01)."
+   },
+   "phrase": "Anguille : chaque capture est notée dans un carnet de pêche (cerfa 14358*01).",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 4 (mesures applicables aux poissons migrateurs)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Tout pêcheur en eau douce, professionnel ou de loisir, doit enregistrer ses captures d'anguille dans un carnet de pêche dont le modèle est défini par le cerfa n°14358*01",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-toutes-interdit-asticots-cat1",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Asticots et autres larves de diptères interdits comme appât en 1re catégorie."
+   },
+   "phrase": "En 1re catégorie, les asticots et autres larves de mouches sont interdits.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 9 (procédés et modes de pêche prohibés)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Les asticots et autres larves de diptères sont interdits dans les eaux de 1ère catégorie.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-toutes-interdit-oeufs",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Œufs de poissons interdits comme appât ou amorce, dans tous les cours d'eau et plans d'eau."
+   },
+   "phrase": "Les œufs de poisson sont interdits comme appât ou amorce.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 9 (procédés et modes de pêche prohibés)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Il est interdit d'utiliser comme appât ou amorce, des œufs de poissons dans tous les cours d'eau et plans d'eau.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-toutes-interdit-trimmer",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche à l'aide d'un trimmer ou d'un engin similaire interdite."
+   },
+   "phrase": "Le trimmer (ou engin semblable) est interdit.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 9 (procédés et modes de pêche prohibés)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Il est interdit en vue de la capture : [...] 4) de pêcher à l'aide d'un trimmer ou d'un engin similaire",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-toutes-interdit-traine",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Lignes de traîne interdites en dehors des conditions du cahier des charges de location du droit de pêche de l'État sur le domaine public fluvial."
+   },
+   "phrase": "Lignes de traîne interdites, sauf dans les conditions fixées pour le domaine public fluvial de l'État.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 9 (procédés et modes de pêche prohibés)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "5) d'utiliser des lignes de traîne en dehors des conditions fixées par le cahier des charges relatif à la location du droit de pêche de l'Etat sur le domaine public fluvial",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-toutes-interdit-appat-poisson",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "95",
+    "lieu": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdit d'utiliser comme appât un poisson d'une espèce dont une taille minimale de capture est fixée (art. 6 du texte, cité « article 7 »)."
+   },
+   "phrase": "On ne peut pas utiliser comme appât un poisson d'une espèce qui a une taille minimale de capture.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 9 (procédés et modes de pêche prohibés)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "7) d'utiliser comme appât un poisson appartenant à une espèce dont la taille minimale de capture a été fixée à l'article 7.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-car-nuit-oise-l123-rd",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (lots 1, 2 et 3, rive droite) : sur l'Oise canalisée, du pont de l'Île des Aubins en amont jusqu'à la confluence de l'Esches en aval"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée toute la nuit sur ce parcours de 2e catégorie ; de 30 minutes après le coucher à 30 minutes avant le lever du soleil, aucune carpe prise ne peut être gardée en captivité ni transportée. Parcours fixés par l'annexe de l'arrêté préfectoral n°2016-13567, repris dans l'arrêté permanent."
+   },
+   "phrase": "Carpe de nuit autorisée sur l'Oise canalisée, rive droite, du pont de l'Île des Aubins à la confluence de l'Esches (lots 1 à 3).",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 5 (heures d'interdiction, parcours de pêche de la carpe de nuit)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Lots n°1, 2 et 3 * Rive droite : sur l'Oise canalisée, du pont de l'Île des Aubins en amont jusqu'à la confluence de l'Esches en aval.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-car-nuit-oise-l123-rg-ile",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (lots 1, 2 et 3, rive gauche) : sur l'Île des Aubins (Oise canalisée)"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée toute la nuit sur ce parcours de 2e catégorie ; de 30 minutes après le coucher à 30 minutes avant le lever du soleil, aucune carpe prise ne peut être gardée en captivité ni transportée. Parcours fixés par l'annexe de l'arrêté préfectoral n°2016-13567, repris dans l'arrêté permanent."
+   },
+   "phrase": "Carpe de nuit autorisée sur l'Île des Aubins (Oise canalisée), rive gauche (lots 1 à 3).",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 5 (heures d'interdiction, parcours de pêche de la carpe de nuit)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Rive gauche : sur l'Île des Aubins (Oise canalisée)",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-car-nuit-oise-l123-rg-limite",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Persan, Beaumont-sur-Oise ; lots 1, 2 et 3, rive gauche) : de la limite du département avec l'Oise jusqu'à environ 150 m en amont au niveau du pont reliant Persan et Beaumont-sur-Oise"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée toute la nuit sur ce parcours de 2e catégorie ; de 30 minutes après le coucher à 30 minutes avant le lever du soleil, aucune carpe prise ne peut être gardée en captivité ni transportée. Parcours fixés par l'annexe de l'arrêté préfectoral n°2016-13567, repris dans l'arrêté permanent."
+   },
+   "phrase": "Carpe de nuit autorisée sur l'Oise, rive gauche, de la limite avec le département de l'Oise jusqu'à environ 150 m en amont du pont Persan - Beaumont-sur-Oise.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 5 (heures d'interdiction, parcours de pêche de la carpe de nuit)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Rive gauche : [...] de la limite du département avec l'Oise jusqu'à environ 150 m en amont au niveau du pont reliant Persan et Beaumont-sur-Oise.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-car-nuit-oise-l45",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Champagne-sur-Oise, Parmain, L'Isle-Adam ; lots 4 et 5, rives droite et gauche) : du pont de la route nationale 1 en amont, au pont de Stors en aval"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée toute la nuit sur ce parcours de 2e catégorie ; de 30 minutes après le coucher à 30 minutes avant le lever du soleil, aucune carpe prise ne peut être gardée en captivité ni transportée. Parcours fixés par l'annexe de l'arrêté préfectoral n°2016-13567, repris dans l'arrêté permanent."
+   },
+   "phrase": "Carpe de nuit autorisée sur l'Oise, des deux rives, du pont de la RN 1 au pont de Stors (lots 4 et 5).",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 5 (heures d'interdiction, parcours de pêche de la carpe de nuit)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Lots n°4 et 5 * Rives droite et gauche : du pont de la route nationale 1 en amont, au pont de Stors en aval (communes de Champagne sur Oise, Parmain et l'Isle Adam).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-car-nuit-oise-l8",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Pontoise ; lot 8, rives droite et gauche) : de la pointe amont de l'île du Pothuis au barrage de Pontoise en aval"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée toute la nuit sur ce parcours de 2e catégorie ; de 30 minutes après le coucher à 30 minutes avant le lever du soleil, aucune carpe prise ne peut être gardée en captivité ni transportée. Parcours fixés par l'annexe de l'arrêté préfectoral n°2016-13567, repris dans l'arrêté permanent."
+   },
+   "phrase": "Carpe de nuit autorisée sur l'Oise, des deux rives, de la pointe amont de l'île du Pothuis au barrage de Pontoise (lot 8).",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 5 (heures d'interdiction, parcours de pêche de la carpe de nuit)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Lot n°8 * Rive droite et rive gauche : de la pointe amont de l'île du Pothuis au barrage de Pontoise en aval.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-car-nuit-oise-l1011",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Cergy, Neuville-sur-Oise ; lots 10 et 11, rive gauche) : du pont de Port-Cergy en amont jusqu'au Vieux Pont de Neuville-sur-Oise à l'aval"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée toute la nuit sur ce parcours de 2e catégorie ; de 30 minutes après le coucher à 30 minutes avant le lever du soleil, aucune carpe prise ne peut être gardée en captivité ni transportée. Parcours fixés par l'annexe de l'arrêté préfectoral n°2016-13567, repris dans l'arrêté permanent."
+   },
+   "phrase": "Carpe de nuit autorisée sur l'Oise, rive gauche, du pont de Port-Cergy au Vieux Pont de Neuville-sur-Oise (lots 10 et 11).",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 5 (heures d'interdiction, parcours de pêche de la carpe de nuit)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Lots n° 10 et 11 * Rive gauche : du pont de Port-Cergy en amont jusqu'au Vieux Pont de Neuville-sur-Oise à l'aval.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-car-nuit-seine-l1920",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Seine (lots 19 et 20, rive droite) : du PK 61,370 au PK 67,100, pointe aval de l'île Motteau"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée toute la nuit sur ce parcours de 2e catégorie ; de 30 minutes après le coucher à 30 minutes avant le lever du soleil, aucune carpe prise ne peut être gardée en captivité ni transportée. Parcours fixés par l'annexe de l'arrêté préfectoral n°2016-13567, repris dans l'arrêté permanent."
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, rive droite, du PK 61,370 au PK 67,100 (lots 19 et 20).",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 5 (heures d'interdiction, parcours de pêche de la carpe de nuit)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Rivière Seine - Lots n° 19 et 20 * Rive droite : du PK 61,370 au PK 67,100 (pointe aval de L'île Motteau).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-car-nuit-seine-l4595",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Seine (Vétheuil ; lot 45/95) : du PK 127,150 au PK 128,150, deux bras, 1000 mètres"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée toute la nuit sur ce parcours de 2e catégorie ; de 30 minutes après le coucher à 30 minutes avant le lever du soleil, aucune carpe prise ne peut être gardée en captivité ni transportée. Parcours fixés par l'annexe de l'arrêté préfectoral n°2016-13567, repris dans l'arrêté permanent."
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine à Vétheuil, du PK 127,150 au PK 128,150 (deux bras, 1000 m).",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 5 (heures d'interdiction, parcours de pêche de la carpe de nuit)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Lot n° 45/95 * Du PK 127,150 au PK 128,150 - deux bras - 1000 mètres - (commune de Vétheuil).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-res-oise-1-rd",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Bruyères-sur-Oise) : réserve n°1, rive droite, P.K. 40,990 à 41,100"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans cette réserve, fixée par l'arrêté préfectoral n°2016-13568 repris dans l'arrêté permanent (durée maximale de 5 ans selon le texte)."
+   },
+   "phrase": "Réserve de pêche sur l'Oise (réserve n°1, rive droite, P.K. 40,990 à 41,100) : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 11 (réserves de pêche)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Réserve n°1 Rive droite : P.K. 40,990 à 41,100 (commune de Bruyères-sur-Oise).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-res-oise-1-rg",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Asnières-sur-Oise) : réserve n°1, rive gauche, P.K. 41,320 à 41,480"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans cette réserve, fixée par l'arrêté préfectoral n°2016-13568 repris dans l'arrêté permanent (durée maximale de 5 ans selon le texte)."
+   },
+   "phrase": "Réserve de pêche sur l'Oise (réserve n°1, rive gauche, P.K. 41,320 à 41,480) : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 11 (réserves de pêche)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Réserve n°1 Rive gauche : P.K. 41,320 à 41,480 (commune d'Asnières-sur-Oise).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-res-oise-2-rd",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Parmain) : réserve n°2, rive droite, P.K. 28,350 à 28,535"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans cette réserve, fixée par l'arrêté préfectoral n°2016-13568 repris dans l'arrêté permanent (durée maximale de 5 ans selon le texte)."
+   },
+   "phrase": "Réserve de pêche sur l'Oise (réserve n°2, rive droite, P.K. 28,350 à 28,535) : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 11 (réserves de pêche)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Réserve n°2 Rive droite : P.K. 28,350 à 28,535 (commune de Parmain).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-res-oise-2-rg",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (L'Isle-Adam) : réserve n°2, rive gauche, P.K. 27,900 à 28,700"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans cette réserve, fixée par l'arrêté préfectoral n°2016-13568 repris dans l'arrêté permanent (durée maximale de 5 ans selon le texte)."
+   },
+   "phrase": "Réserve de pêche sur l'Oise (réserve n°2, rive gauche, P.K. 27,900 à 28,700) : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 11 (réserves de pêche)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Réserve n°2 Rive gauche : P.K. 27,900 à 28,700 (commune de l'Isle-Adam).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-res-oise-3-rg",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Saint-Ouen-l'Aumône) : réserve n°3, rive gauche, P.K. 14,600 à 14,880"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans cette réserve, fixée par l'arrêté préfectoral n°2016-13568 repris dans l'arrêté permanent (durée maximale de 5 ans selon le texte)."
+   },
+   "phrase": "Réserve de pêche sur l'Oise (réserve n°3, rive gauche, P.K. 14,600 à 14,880) : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 11 (réserves de pêche)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Réserve n°3 Rive gauche : P.K. 14,600 à 14,880 (commune de Saint-Ouen-l'Aumône).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-res-oise-4-rd",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Pontoise) : réserve n°4, rive droite, P.K. 13,900 à 14,870"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans cette réserve, fixée par l'arrêté préfectoral n°2016-13568 repris dans l'arrêté permanent (durée maximale de 5 ans selon le texte). Pour la pêche professionnelle, la rive droite de la réserve n°4 va du P.K. 13,750 à 14,870."
+   },
+   "phrase": "Réserve de pêche sur l'Oise (réserve n°4, rive droite, P.K. 13,900 à 14,870) : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 11 (réserves de pêche)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Réserve n°4 Rive droite : P.K. 13,900 à 14,870 (commune de Pontoise).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-res-oise-4-rg",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Éragny-sur-Oise, Saint-Ouen-l'Aumône) : réserve n°4, rive gauche, P.K. 13,135 à 13,785"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans cette réserve, fixée par l'arrêté préfectoral n°2016-13568 repris dans l'arrêté permanent (durée maximale de 5 ans selon le texte)."
+   },
+   "phrase": "Réserve de pêche sur l'Oise (réserve n°4, rive gauche, P.K. 13,135 à 13,785) : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 11 (réserves de pêche)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Réserve n°4 Rive gauche : P.K. 13,135 à 13,785 (communes d'Eragny-sur-Oise et de Saint-Ouen-l'Aumône).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-res-oise-5-rd",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Bruyères-sur-Oise) : réserve n°5, rive droite, P.K. 38,550 à 39,500"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans cette réserve, fixée par l'arrêté préfectoral n°2016-13568 repris dans l'arrêté permanent (durée maximale de 5 ans selon le texte)."
+   },
+   "phrase": "Réserve de pêche sur l'Oise (réserve n°5, rive droite, P.K. 38,550 à 39,500) : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 11 (réserves de pêche)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Réserve n°5 Rive droite : P.K. 38,550 à 39,500 (commune de Bruyères-sur-Oise)",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-res-oise-6-rg",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (L'Isle-Adam) : réserve n°6, rive gauche, P.K. 30,135 à 30,235"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans cette réserve, fixée par l'arrêté préfectoral n°2016-13568 repris dans l'arrêté permanent (durée maximale de 5 ans selon le texte)."
+   },
+   "phrase": "Réserve de pêche sur l'Oise (réserve n°6, rive gauche, P.K. 30,135 à 30,235) : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 11 (réserves de pêche)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Réserve n°6 Rive gauche : P.K. 30,135 à 30,235 (commune de l'Isle-Adam)",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-res-oise-7-rd",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Auvers-sur-Oise) : réserve n°7, rive droite, P.K. 18,600 à 20,250"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans cette réserve, fixée par l'arrêté préfectoral n°2016-13568 repris dans l'arrêté permanent (durée maximale de 5 ans selon le texte)."
+   },
+   "phrase": "Réserve de pêche sur l'Oise (réserve n°7, rive droite, P.K. 18,600 à 20,250) : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 11 (réserves de pêche)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Réserve n°7 Rive droite : P.K. 18,600 à 20,250 (commune d'Auvers-sur-Oise)",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-res-oise-8-rd",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "95",
+    "lieu": "Oise (Cergy) : réserve n°8, rive droite, P.K. 8,616 à 9,100"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans cette réserve, fixée par l'arrêté préfectoral n°2016-13568 repris dans l'arrêté permanent (durée maximale de 5 ans selon le texte)."
+   },
+   "phrase": "Réserve de pêche sur l'Oise (réserve n°8, rive droite, P.K. 8,616 à 9,100) : pêche interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°2024-18034 portant réglementation permanente de l'exercice de la pêche en eau douce dans le département du Val-d'Oise, art. 11 (réserves de pêche)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=49291&path=ARRETE-2024_REGLEMENTATION-PERMANENTE-de-l-exercice-de-la-peche-en-eau-douce-dans-le-95.pdf",
+    "lu_le": "2026-10-15",
+    "version": "arrêté signé à Cergy le 28 mai 2025 (date lue à l'OCR : « 28 MAL2025 »), sans date de fin ; copie hébergée par la fédération du Val-d'Oise"
+   },
+   "citation": "Réserve n°8 Rive droite : P.K. 8,616 à 9,100 (commune de Cergy)",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-val-truite-quota",
+   "type": "quota_jour",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Moulin de Vallière : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3,
+    "texte": "Quota de truites par jour."
+   },
+   "phrase": "Étang du Moulin de Vallière : 3 truites par jour.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang du Moulin de Vallière (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51381&path=REGLEMENT-VALLIERE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "QUOTAS : TRUITES = 3 - CARNASSIERS = 3 DONT 1 BROCHET",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-val-carn-quota",
+   "type": "quota_jour",
+   "especes": [
+    "2151",
+    "2195",
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Moulin de Vallière : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3,
+    "texte": "Carnassiers (brochet, sandre, black-bass) : 3 au total, dont 1 brochet au plus."
+   },
+   "phrase": "Étang du Moulin de Vallière : 3 carnassiers par jour au total, dont 1 brochet au plus.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang du Moulin de Vallière (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51381&path=REGLEMENT-VALLIERE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "QUOTAS : TRUITES = 3 - CARNASSIERS = 3 DONT 1 BROCHET",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-val-bro-quota",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Moulin de Vallière : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 1,
+    "texte": "Au plus 1 brochet par jour, compris dans les 3 carnassiers."
+   },
+   "phrase": "Étang du Moulin de Vallière : 1 brochet par jour au plus.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang du Moulin de Vallière (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51381&path=REGLEMENT-VALLIERE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "QUOTAS : TRUITES = 3 - CARNASSIERS = 3 DONT 1 BROCHET",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-val-bro-fenetre",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Moulin de Vallière : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Écrit « maille : brochet = 60 à 80 cm » sans préciser le sens : lu comme fenêtre de capture (brochet gardé seulement entre 60 et 80 cm), à vérifier auprès de la fédération."
+   },
+   "phrase": "Étang du Moulin de Vallière : brochet de 60 à 80 cm (fenêtre de capture), en dehors on le remet à l'eau.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang du Moulin de Vallière (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51381&path=REGLEMENT-VALLIERE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "MAILLE : TRUITE = 23CM - BROCHET = 60 À 80 CM",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-val-vif-nuit",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Moulin de Vallière : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche au vif et pêche de nuit interdites."
+   },
+   "phrase": "Étang du Moulin de Vallière : pêche au vif et pêche de nuit interdites.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang du Moulin de Vallière (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51381&path=REGLEMENT-VALLIERE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "PÊCHE AU VIF ET PÊCHE DE NUIT INTERDITES.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-val-cannes",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Moulin de Vallière : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 3,
+    "texte": "Trois cannes au coup, 3 balances, amorçage léger et bateau-amorçoir autorisés."
+   },
+   "phrase": "Étang du Moulin de Vallière : 3 cannes au coup, 3 balances, amorçage léger et bateau-amorçoir permis.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang du Moulin de Vallière (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51381&path=REGLEMENT-VALLIERE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "TROIS CANNES (AU COUP), 3 BALANCES, AMORÇAGE LÉGER ET BATEAU-AMORÇOIR AUTORISÉ.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-val-embarcation",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Moulin de Vallière : étang fédéral"
+   },
+   "du": "2026-08-15",
+   "au": null,
+   "valeur": {
+    "texte": "Seule embarcation autorisée : le float tube, du 15 août jusqu'à la fermeture du brochet ; 6 float tubes au plus sur l'étang (lecture par résumé pour le nombre)."
+   },
+   "phrase": "Étang du Moulin de Vallière : float tube seul permis comme embarcation, à partir du 15 août jusqu'à la fermeture du brochet.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang du Moulin de Vallière (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51381&path=REGLEMENT-VALLIERE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "UNIQUE EMBARCATION AUTORISÉE : LE FLOAT TUBE, DU 15 AOÛT JUSQU'À LA FERMETURE DU BROCHET.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-trois-carn-quota",
+   "type": "quota_jour",
+   "especes": [
+    "2151",
+    "2195",
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "3 Sources : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3,
+    "texte": "Carnassiers (brochet, sandre, black-bass) : 3 au total, dont 1 brochet au plus."
+   },
+   "phrase": "Étang des 3 Sources : 3 carnassiers par jour au total, dont 1 brochet au plus.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang des 3 Sources (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51382&path=REGLEMENT-3-SOURCES-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "QUOTAS : CARNASSIERS = 3 DONT 1 BROCHET",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-trois-bro-quota",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "3 Sources : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 1,
+    "texte": "Au plus 1 brochet par jour, compris dans les 3 carnassiers."
+   },
+   "phrase": "Étang des 3 Sources : 1 brochet par jour au plus.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang des 3 Sources (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51382&path=REGLEMENT-3-SOURCES-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "QUOTAS : CARNASSIERS = 3 DONT 1 BROCHET",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-trois-bro-fenetre",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "3 Sources : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Écrit « maille : brochet = 60 à 80 cm » sans préciser le sens : lu comme fenêtre de capture (brochet gardé seulement entre 60 et 80 cm), à vérifier auprès de la fédération."
+   },
+   "phrase": "Étang des 3 Sources : brochet de 60 à 80 cm (fenêtre de capture), en dehors on le remet à l'eau.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang des 3 Sources (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51382&path=REGLEMENT-3-SOURCES-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "MAILLE : BROCHET = 60 À 80 CM",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-trois-bb-nokill",
+   "type": "no_kill",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "3 Sources : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé est remis à l'eau dans les meilleures conditions possibles."
+   },
+   "phrase": "Étang des 3 Sources : black-bass en no-kill, tout poisson pris est remis à l'eau.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang des 3 Sources (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51382&path=REGLEMENT-3-SOURCES-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "NO KILL BLACK BASS : TOUT BLACK BASS CAPTURÉ DOIT IMPÉRATIVEMENT ÊTRE REMIS À L'EAU DANS LES MEILLEURES CONDITIONS POSSIBLES",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-trois-vif-nuit",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "3 Sources : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche au vif et pêche de nuit interdites."
+   },
+   "phrase": "Étang des 3 Sources : pêche au vif et pêche de nuit interdites.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang des 3 Sources (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51382&path=REGLEMENT-3-SOURCES-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "PÊCHE AU VIF ET PÊCHE DE NUIT INTERDITES.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-trois-cannes",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "3 Sources : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 3,
+    "texte": "Trois cannes au coup, 3 balances, amorçage léger et bateau-amorçoir autorisés."
+   },
+   "phrase": "Étang des 3 Sources : 3 cannes au coup, 3 balances, amorçage léger et bateau-amorçoir permis.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang des 3 Sources (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51382&path=REGLEMENT-3-SOURCES-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "TROIS CANNES (AU COUP), 3 BALANCES, AMORÇAGE LÉGER ET BATEAU-AMORÇOIR AUTORISÉ.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-trois-embarcation",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "3 Sources : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toute embarcation interdite."
+   },
+   "phrase": "Étang des 3 Sources : toute embarcation est interdite.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang des 3 Sources (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51382&path=REGLEMENT-3-SOURCES-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "TOUTE EMBARCATION EST INTERDITE.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-pers-nokill",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Val de Persan : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "No-kill toutes espèces : tous les poissons sont remis à l'eau au plus vite. Écrevisse américaine, poisson-chat et perche-soleil sont cités à part (espèces à détruire sur place, lecture par résumé)."
+   },
+   "phrase": "Étang du Val de Persan : no-kill sur toutes les espèces, tout poisson pris est remis à l'eau.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang du Val de Persan (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51383&path=REGLEMENT-PERSAN-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "NO KILL TOUTES ESPÈCES SUR L'ÉTANG - TOUS LES POISSONS DOIVENT ÊTRE REMIS À L'EAU AU PLUS VITE",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-pers-vif-nuit",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Val de Persan : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche au vif et pêche de nuit interdites."
+   },
+   "phrase": "Étang du Val de Persan : pêche au vif et pêche de nuit interdites.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang du Val de Persan (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51383&path=REGLEMENT-PERSAN-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "PÊCHE AU VIF ET PÊCHE DE NUIT INTERDITES.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-pers-cannes",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Val de Persan : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 3,
+    "texte": "Trois cannes au coup, 3 balances, amorçage léger et bateau-amorçoir autorisés."
+   },
+   "phrase": "Étang du Val de Persan : 3 cannes au coup, 3 balances, amorçage léger et bateau-amorçoir permis.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang du Val de Persan (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51383&path=REGLEMENT-PERSAN-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "TROIS CANNES (AU COUP), 3 BALANCES, AMORÇAGE LÉGER ET BATEAU-AMORÇOIR AUTORISÉ.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-pers-embarcation",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Val de Persan : étang fédéral"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seule embarcation autorisée : le float tube, 8 au plus sur l'étang ; accès aux îlots strictement interdit."
+   },
+   "phrase": "Étang du Val de Persan : float tube seul permis comme embarcation (8 au plus) ; accès aux îlots interdit.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étang du Val de Persan (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51383&path=REGLEMENT-PERSAN-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "UNIQUE EMBARCATION AUTORISÉE : LE FLOAT TUBE. - MAXIMUM 8 FLOATS TUBES SUR L'ÉTANG. - ACCÈS STRICTEMENT INTERDIT SUR LES ÎLOTS.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-carn-carn-quota",
+   "type": "quota_jour",
+   "especes": [
+    "2151",
+    "2195",
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Forêt de Carnelle : étangs fédéraux"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3,
+    "texte": "Carnassiers (brochet, sandre, black-bass) : 3 au total, dont 1 brochet au plus."
+   },
+   "phrase": "Étangs de la forêt de Carnelle : 3 carnassiers par jour au total, dont 1 brochet au plus.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étangs de la forêt de Carnelle (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51384&path=REGELEMENT-CARNELLE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "QUOTAS : CARNASSIERS = 3 DONT 1 BROCHET",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-carn-bro-quota",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Forêt de Carnelle : étangs fédéraux"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 1,
+    "texte": "Au plus 1 brochet par jour, compris dans les 3 carnassiers."
+   },
+   "phrase": "Étangs de la forêt de Carnelle : 1 brochet par jour au plus.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étangs de la forêt de Carnelle (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51384&path=REGELEMENT-CARNELLE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "QUOTAS : CARNASSIERS = 3 DONT 1 BROCHET",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-carn-bro-fenetre",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Forêt de Carnelle : étangs fédéraux"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Écrit « maille : brochet = 60 à 80 cm » sans préciser le sens : lu comme fenêtre de capture (brochet gardé seulement entre 60 et 80 cm), à vérifier auprès de la fédération."
+   },
+   "phrase": "Étangs de la forêt de Carnelle : brochet de 60 à 80 cm (fenêtre de capture), en dehors on le remet à l'eau.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étangs de la forêt de Carnelle (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51384&path=REGELEMENT-CARNELLE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "MAILLE : BROCHET = 60 À 80 CM - SANDRE = 50 CM",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-carn-san-taille",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Forêt de Carnelle : étangs fédéraux"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50,
+    "texte": "Plus strict que le socle national (40 cm)."
+   },
+   "phrase": "Étangs de la forêt de Carnelle : sandre 50 cm minimum.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étangs de la forêt de Carnelle (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51384&path=REGELEMENT-CARNELLE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "MAILLE : BROCHET = 60 À 80 CM - SANDRE = 50 CM",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": "nat-san-taille"
+  },
+  {
+   "id": "95-carn-vif-nuit",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Forêt de Carnelle : étangs fédéraux"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche au vif et pêche de nuit interdites."
+   },
+   "phrase": "Étangs de la forêt de Carnelle : pêche au vif et pêche de nuit interdites.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étangs de la forêt de Carnelle (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51384&path=REGELEMENT-CARNELLE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "PÊCHE AU VIF ET PÊCHE DE NUIT INTERDITES.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-carn-cannes",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Forêt de Carnelle : étangs fédéraux"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 3,
+    "texte": "Trois cannes au coup, 3 balances, amorçage léger et bateau-amorçoir autorisés."
+   },
+   "phrase": "Étangs de la forêt de Carnelle : 3 cannes au coup, 3 balances, amorçage léger et bateau-amorçoir permis.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étangs de la forêt de Carnelle (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51384&path=REGELEMENT-CARNELLE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "TROIS CANNES (AU COUP), 3 BALANCES, AMORÇAGE LÉGER ET BATEAU-AMORÇOIR AUTORISÉ.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  },
+  {
+   "id": "95-carn-embarcation",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "95",
+    "lieu": "Forêt de Carnelle : étangs fédéraux"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toute embarcation interdite."
+   },
+   "phrase": "Étangs de la forêt de Carnelle : toute embarcation est interdite.",
+   "source": {
+    "texte": "Règlement 2026 de l'étang Étangs de la forêt de Carnelle (fédération du Val-d'Oise pour la pêche et la protection du milieu aquatique)",
+    "url": "https://www.peche95.fr/cms_viewFile.php?idtf=51384&path=REGELEMENT-CARNELLE-2026.pdf",
+    "lu_le": "2026-10-15",
+    "version": "règlement d'étang publié par la fédération du Val-d'Oise, sans date ni signataire dans le texte"
+   },
+   "citation": "TOUTE EMBARCATION EST INTERDITE.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null
+  }
+ ]
+}
