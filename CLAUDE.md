@@ -14,7 +14,7 @@ Les documents que le plan cite sans chemin (`lots.md`, `fiches/L3.md`, `reports/
 - Aucune fausse donnée : chaque chiffre OFB affiche son nombre de pêches et l'année du dernier relevé.
 - Rareté en 4 niveaux (Adem, 12 oct. 18h55) : commun, peu commun, rare, légendaire. Seuils par défaut : commun 50 % des pêches OFB et plus, peu commun 20 à 50 %, rare moins de 20 %, légendaire jamais relevé dans le département (`docs/donnees.md`).
 - Collections visibles par les amis invités seulement, jamais en public (Adem, 12 oct. 14h43).
-- Essai gratuit « 1 mois » puis abonnement, paywall après la première carte. Prix pas fixé.
+- Essai gratuit « 1 mois » puis abonnement, paywall après la première carte. Prix pas fixé. Le kit MWM (15 oct.) n'offre que 1 semaine d'essai sur les mensuels (4,99 / 6,99 / 9,99 $) et aucun sur les annuels (34,99 / 49,99 / 69,99 $) : choix à refaire avec Adem.
 
 ## L'atelier (harness, décidé le 13 oct.)
 - Adem veut un atelier qui fait construire vite et juste, pas un plan à lire. Il a le droit d'être préparé avant jeudi (Adem, 13 oct. 13h28) ; c'est le lot H0.
@@ -33,4 +33,6 @@ Les documents que le plan cite sans chemin (`lots.md`, `fiches/L3.md`, `reports/
 - Les faux services sont sous `#if DEBUG` : rien de factice dans le build envoyé à Apple.
 - Les fichiers de données fabriqués par script (stations, raretés) ne sont jamais commités : `scripts/donnees.sh` les télécharge.
 - Compte App Store Connect, iPhone de test, fichier StoreKit et SDK Spark Flash fournis par MWM.
+- Kit MWM reçu le 15 oct. (`/mnt/project-files/.notes/inputs.md`) : équipe « Frétille » n°01, trois personnes (Adem, Sullyvan, Titouan). Projet `BuildChallenge.xcodeproj` déjà signé chez MWM, identifiant `ai.mwm.build.challenge.team.01` (les abonnements y sont liés, ne pas le changer), SDK Spark par chemin relatif `../mwm-spark-flash-sdk/local-spm-repo`. Le projet sort réglé iPhone + iPad et paysage : à passer en iPhone seul, portrait.
+- Le README du kit contient le mot de passe du compte MWM : jamais dans git. Le serveur MCP de MWM (`https://mcp.mwm.ai/mcp`) sait publier politique de confidentialité et conditions, générer captures et textes, et soumettre ; la soumission à Apple reste un clic humain.
 - Jeudi, `main` part de la branche `claude/project-thread-78e20q` (le plan seul, sans code) ; A la crée à L0 et la met par défaut sur GitHub.
