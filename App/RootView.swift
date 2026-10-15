@@ -81,11 +81,11 @@ final class ParcoursApp {
     private var spotEnAttente: Spot?
 
     init(configurerMesure: @escaping @MainActor @Sendable () -> Void) {
-        let core = MoteurCore(donnees: .embarque())
+        let core = MoteurCore(donnees: .embarque(reglesTelechargees: ReglesAJour.dossierCopies))
         self.core = core
         servicesCarte = ServicesCarte(geo: core.geo, regles: core.regles, especes: core.especes, session: core.session)
-        // Reconnaissance : IdentificationAbsente() tant que R1 n'a rien livré (docs/relecture-ecrans-avant-mac.md).
-        servicesPrise = PriseServices(especes: core.especes, regles: core.regles, identification: IdentificationAbsente())
+        // Reconnaissance : modèle DINOv2 embarqué (App/Prise/Modele), sous 0,4 de confiance la grille des espèces s'ouvre.
+        servicesPrise = PriseServices(especes: core.especes, regles: core.regles, identification: IdentificationDino())
         // Repli sur le faux de Core si conseils.json ne se charge pas (à vérifier sur le Mac).
         conseils = (try? ConseilsParEspece.charger(regles: core.regles)) ?? ConseilsFaux()
         conditions = ConditionsDuSpot(meteo: SourceWeatherKit(), eau: core.niveauEau, noyau: core.conditions)
@@ -124,6 +124,7 @@ final class ParcoursApp {
         moteur.reprendre()
         await rafraichirCollection()
         await marque.rafraichir()
+        Task.detached(priority: .utility) { await ReglesAJour.lancer() }
     }
 
     // MARK: Collection (L4)
@@ -428,7 +429,8 @@ struct RootView: View {
             emplacementMaintenant: { coordonnee in AnyView(ConditionsEmplacement(app: app, coordonnee: coordonnee)) },
             emplacementConseil: { espece in AnyView(ConseilEmplacement(app: app, espece: espece)) },
             onCommencerSession: { spot in app.commencer(spot) },
-            onSpotChange: { spot in app.spotChange(spot) })
+            onSpotChange: { spot in app.spotChange(spot) },
+            ouChercher: { position in AnyView(OuChercherVue(especes: app.core.coins(), position: position)) })
             .questionNiveau(declenchee: app.questionNiveauPermise)
             .task { app.carteListe() }
     }
