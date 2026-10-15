@@ -15,7 +15,7 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 | `banc/` | les profils de faux utilisateurs du banc d'essai et les mots interdits | l'atelier (`/banc`) |
 | `atelier.md`, `atelier-mac.md` | l'atelier (harness) et la mise en route d'un Mac | Adem et Titouan (Claude Code), Sullyvan (sans Claude) |
 | `avant-jeudi.md`, `message-mwm.md` | ce qui devait être prêt avant jeudi, le message envoyé à MWM | pour mémoire |
-| `reports/` | les recherches et les évaluations, avec leurs sources (règles du 75 et du 94, prix, reconnaissance, mer, navigation) | pour vérifier un chiffre |
+| `reports/` | les recherches et les évaluations, avec leurs sources (règles du 75 et du 94, texte qui fait foi, prix, reconnaissance, mer, navigation) | pour vérifier un chiffre |
 
 ## Ce qui a changé le 15 oct.
 - L'app a 3 volets (Pescedex, Carte, Mon club), avec la barre d'onglets standard d'iOS 27.
@@ -29,7 +29,7 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 - Qui : A = Adem sur son Mac, B = Titouan sur le Mac de Sullyvan avec Claude Code, C = sessions Claude Code dans le cloud, S = Sullyvan sur les règles, les photos et la fiche (`lots.md`).
 - Version soumise jeudi soir : les 9 étapes dans leur forme minimale ; mise à jour vendredi : écran verrouillé, coins publics, amis, règles téléchargées (`parcours-demo.md`).
 - Xcode 27.0, iOS 27.0, iPhone seul en portrait ; un paquet `Core` + un dossier par lot ; fusion par script local (`architecture.md`).
-- Deux textes qui se contredisent : la valeur la plus stricte, avec les deux sources (décidé par Adem le 15 oct., en attendant de savoir quel texte fait foi).
+- Deux textes qui se contredisent : la valeur la plus stricte, avec les deux sources (décidé par Adem le 15 oct.). Le texte qui fait foi est l'arrêté permanent signé (`reports/qui-est-maitre.md`) ; la valeur la plus stricte reste affichée, car relâcher n'est jamais une infraction.
 - Règles lues par l'IA (décidé par Adem le 15 oct.) : l'app montre chaque règle avec sa source et sa citation, sans étiquette « non relue ». En coulisse, deux lectures indépendantes par département ; une ligne où elles divergent devient « vérifie l'arrêté ».
 - Rareté sur 10 ans en 4 niveaux (commun, peu commun, rare, légendaire) ; sous 20 pêches dans le département, calculée sur la région, et l'écran le dit.
 - La carte s'ouvre sur l'Île-de-France sans demander la position ; « Autour de moi » la demande.
