@@ -1,0 +1,3816 @@
+{
+ "departement": "2A",
+ "regles": [
+  {
+   "id": "2A-toutes-ouverture-cat1",
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus, toutes espèces sauf celles citées à part"
+   },
+   "phrase": "En 1re catégorie, la pêche est ouverte du 14 mars au 20 septembre 2026 inclus, sauf pour les espèces citées à part.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-brochet-ouverture-cat1-a",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-13",
+   "valeur": {
+    "formule": "du 1er janvier au 13 mars 2026 inclus"
+   },
+   "phrase": "En 1re catégorie, le brochet se pêche du 1er janvier au 13 mars 2026 inclus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du mercredi 1° janvier au vendredi 13 mars 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-2151-ouverture-cat1-jan",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "au vendredi 13 mars 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-brochet-ouverture-cat1-b",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-04-25",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du samedi 25 avril au jeudi 31 décembre 2026 inclus"
+   },
+   "phrase": "En 1re catégorie, le brochet se pêche du 25 avril au 31 décembre 2026 inclus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "et du samedi 25 avril au jeudi 31 décembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-2151-ouverture-cat1-avr",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "et du samedi 25 avril au jeudi 31 décembre 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-ecrevisse-pattes-rouges-ouverture-cat1",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "du samedi 25 juillet au lundi 3 août 2026 inclus"
+   },
+   "phrase": "En 1re catégorie, l'écrevisse à pattes rouges se pêche du 25 juillet au 3 août 2026 inclus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du samedi 25 juillet 2026 au lundi 3 août 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-ecrevisse-pattes-rouges-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Du samedi 25 juillet 2026 au lundi 3 août 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-ecrevisse-torrents-ouverture-cat1",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "du samedi 25 juillet au lundi 3 août 2026 inclus"
+   },
+   "phrase": "En 1re catégorie, l'écrevisse des torrents se pêche du 25 juillet au 3 août 2026 inclus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du samedi 25 juillet 2026 au lundi 3 août 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-ecrevisse-torrents-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Du samedi 25 juillet 2026 au lundi 3 août 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-ecrevisse-pattes-greles-ouverture-cat1",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "du samedi 25 juillet au lundi 3 août 2026 inclus"
+   },
+   "phrase": "En 1re catégorie, l'écrevisse à pattes grêles se pêche du 25 juillet au 3 août 2026 inclus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du samedi 25 juillet 2026 au lundi 3 août 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-ecrevisse-pattes-greles-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Du samedi 25 juillet 2026 au lundi 3 août 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-anguille-jaune-interdit-cat1",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "L'anguille jaune ne se pêche pas en 1re catégorie, toute l'année."
+   },
+   "phrase": "L'anguille jaune ne se pêche pas en 1re catégorie, toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Anguilles jaunes Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-anguille-jaune-interdit-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Anguilles jaunes Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2A-anguille-argentee-interdit-cat1",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "L'anguille argentée ne se pêche pas en 1re catégorie, toute l'année."
+   },
+   "phrase": "L'anguille argentée ne se pêche pas en 1re catégorie, toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Anguilles argentées Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-anguille-argentee-interdit-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Anguilles argentées Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2A-anguille-civelle-interdit-cat1",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La civelle ne se pêche pas en 1re catégorie, toute l'année."
+   },
+   "phrase": "La civelle ne se pêche pas en 1re catégorie, toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Civelles Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-anguille-civelle-interdit-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Civelles Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2A-ecrevisse-pattes-blanches-interdit-cat1",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "L'écrevisse à pattes blanches ne se pêche pas en 1re catégorie, toute l'année."
+   },
+   "phrase": "L'écrevisse à pattes blanches ne se pêche pas en 1re catégorie, toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Écrevisses à pattes blanches Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-ecrevisse-pattes-blanches-interdit-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Écrevisses à pattes blanches Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2A-lamproie-interdit-cat1",
+   "type": "interdit",
+   "especes": [
+    "autre:lamproie"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La lamproie ne se pêche pas en 1re catégorie, toute l'année."
+   },
+   "phrase": "La lamproie ne se pêche pas en 1re catégorie, toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Lamproie Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-lamproie-interdit-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Lamproie Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2A-toutes-horaire-cat1",
+   "type": "horaire",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pas plus d'une demi-heure avant le lever du soleil ni plus d'une demi-heure après son coucher"
+   },
+   "phrase": "En 1re catégorie, on pêche de une demi-heure avant le lever du soleil à une demi-heure après son coucher.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe I, I",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "La pêche ne peut s'exercer plus d'une demi-heure avant le lever du soleil ni plus d'une demi-heure après son coucher.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-horaire-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I (première catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "La pêche ne peut s'exercer plus d'une demi-heure avant le lever du soleil ni plus d'une demi-heure après son coucher."
+   }
+  },
+  {
+   "id": "2A-tolla-categorie",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "Le barrage de Tolla est classé en 2e catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Dans le barrage de Tolla, classé en 2° catégorie piscicole au sens de l'article L.436-5 du Code de l'environnement",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-categorie-2-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Dans le barrage de Tolla, classé en 2ème catégorie piscicole au sens de l'article L.436-5 du Code de l'environnement"
+   }
+  },
+  {
+   "id": "2A-tolla-toutes-ouverture",
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "formule": "du jeudi 1er janvier au jeudi 31 décembre 2026, toutes espèces sauf celles citées à part"
+   },
+   "phrase": "Au barrage de Tolla, la pêche est ouverte toute l'année 2026, sauf pour les espèces citées à part.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du jeudi 1° janvier au jeudi 31 décembre 2026",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-ouverture-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Du jeudi 1er janvier au jeudi 31 décembre 2026"
+   }
+  },
+  {
+   "id": "2A-tolla-2221-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Au barrage de Tolla, la truite fario se pêche du 14 mars au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-2221-ouverture-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Truite fario, omble ou saumon de fontaine, omble chevalier, cristivomer, truite arc-en-ciel Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-tolla-omble-fontaine-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Au barrage de Tolla, l'omble ou saumon de fontaine se pêche du 14 mars au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-omble-fontaine-ouverture-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Truite fario, omble ou saumon de fontaine, omble chevalier, cristivomer, truite arc-en-ciel Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-tolla-omble-chevalier-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Au barrage de Tolla, l'omble chevalier se pêche du 14 mars au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-omble-chevalier-ouverture-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Truite fario, omble ou saumon de fontaine, omble chevalier, cristivomer, truite arc-en-ciel Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-tolla-cristivomer-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Au barrage de Tolla, le cristivomer se pêche du 14 mars au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-cristivomer-ouverture-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Truite fario, omble ou saumon de fontaine, omble chevalier, cristivomer, truite arc-en-ciel Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-tolla-2216-ouverture",
+   "type": "ouverture",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du samedi 14 mars au dimanche 20 septembre 2026 inclus"
+   },
+   "phrase": "Au barrage de Tolla, la truite arc-en-ciel se pêche du 14 mars au 20 septembre 2026 inclus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-2216-ouverture-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Truite fario, omble ou saumon de fontaine, omble chevalier, cristivomer, truite arc-en-ciel Du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-tolla-brochet-ouverture-a",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "valeur": {
+    "formule": "du jeudi 1er janvier au dimanche 25 janvier 2026"
+   },
+   "phrase": "Au barrage de Tolla, le brochet se pêche du 1er au 25 janvier 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Du jeudi 1° janvier au dimanche 25 janvier 2026",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-2151-ouverture-tolla-jan",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Du jeudi 1er janvier au dimanche 25 janvier 2026"
+   }
+  },
+  {
+   "id": "2A-tolla-brochet-ouverture-b",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": "2026-04-25",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du samedi 25 avril au jeudi 31 décembre 2026"
+   },
+   "phrase": "Au barrage de Tolla, le brochet se pêche du 25 avril au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "et du samedi 25 avril au jeudi 31 décembre 2026",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-2151-ouverture-tolla-avr",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "et du samedi 25 avril au jeudi 31 décembre 2026 inclus"
+   }
+  },
+  {
+   "id": "2A-tolla-anguille-jaune-interdit",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "L'anguille jaune ne se pêche pas au barrage de Tolla, toute l'année."
+   },
+   "phrase": "L'anguille jaune ne se pêche pas au barrage de Tolla, toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Anguilles jaunes Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-anguille-jaune-interdit-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Anguilles jaunes Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2A-tolla-anguille-argentee-interdit",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "L'anguille argentée ne se pêche pas au barrage de Tolla, toute l'année."
+   },
+   "phrase": "L'anguille argentée ne se pêche pas au barrage de Tolla, toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Anguilles argentées Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-anguille-argentee-interdit-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Anguilles argentées Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2A-tolla-anguille-civelle-interdit",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La civelle ne se pêche pas au barrage de Tolla, toute l'année."
+   },
+   "phrase": "La civelle ne se pêche pas au barrage de Tolla, toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Civelles Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-anguille-civelle-interdit-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Civelles Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2A-tolla-ecrevisse-pattes-blanches-interdit",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "L'écrevisse à pattes blanches ne se pêche pas au barrage de Tolla, toute l'année."
+   },
+   "phrase": "L'écrevisse à pattes blanches ne se pêche pas au barrage de Tolla, toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Écrevisses à pattes blanches Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-ecrevisse-pattes-blanches-interdit-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Écrevisses à pattes blanches Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2A-tolla-lamproie-interdit",
+   "type": "interdit",
+   "especes": [
+    "autre:lamproie"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La lamproie ne se pêche pas au barrage de Tolla, toute l'année."
+   },
+   "phrase": "La lamproie ne se pêche pas au barrage de Tolla, toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Lamproie Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-lamproie-interdit-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (barrage de Tolla, deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Lamproie Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2A-tolla-toutes-horaire",
+   "type": "horaire",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pas plus d'une demi-heure avant le lever du soleil ni plus d'une demi-heure après son coucher"
+   },
+   "phrase": "Au barrage de Tolla, on pêche de une demi-heure avant le lever du soleil à une demi-heure après son coucher.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II, II",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "La pêche ne peut s'exercer plus d'une demi-heure avant le lever du soleil ni plus d'une demi-heure après son coucher.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-horaire-cat2-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, II (deuxième catégorie)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "La pêche ne peut s'exercer plus d'une demi-heure avant le lever du soleil ni plus d'une demi-heure après son coucher."
+   }
+  },
+  {
+   "id": "2A-salmonides-quota-jour",
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Au plus 10 salmonidés par jour et par pêcheur.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Nombre de captures autorisées par jour et par pêcheur : Salmonidés : 10",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-salmonides-quota_jour",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Salmonidés : 10"
+   }
+  },
+  {
+   "id": "2A-brochet-quota-jour-cat1",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "En 1re catégorie, au plus 2 brochets par jour et par pêcheur.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Brochets : dans les eaux de 1ère catégorie 2",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-2151-quota_jour-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Brochets : dans les eaux de 1ère catégorie 2"
+   }
+  },
+  {
+   "id": "2A-brochet-sandre-quota-jour-cat2",
+   "type": "quota_jour",
+   "especes": [
+    "2151",
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3,
+    "texte": "3 brochets et sandres au total, dont 2 brochets maximum"
+   },
+   "phrase": "En 2e catégorie, au plus 3 brochets et sandres par jour et par pêcheur, dont 2 brochets au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Brochets et sandres : dans les eaux de 2ème catégorie 3 dont 2 brochets maximum",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-2151-2195-quota_jour-cat2",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Brochets et sandres : dans les eaux de 2ème catégorie 3 dont 2 brochets maximum"
+   }
+  },
+  {
+   "id": "2A-brochet-quota-jour-cat2",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "En 2e catégorie, au plus 2 brochets par jour et par pêcheur (dans le quota commun de 3 brochets et sandres).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "3 dont 2 brochets maximum",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-2151-quota_jour-cat2",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Brochets et sandres : dans les eaux de 2ème catégorie 3 dont 2 brochets maximum"
+   }
+  },
+  {
+   "id": "2A-omble-fontaine-taille-min-cours-eau",
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 18,
+    "texte": "dans les cours d'eau"
+   },
+   "phrase": "Dans les cours d'eau, l'omble et le saumon de fontaine se garde à partir de 18 cm.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Truite, omble et saumon de fontaine dans les cours d'eau 0,18m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-omble-fontaine-taille_min-cours_eau",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Truite, omble et saumon de fontaine dans les cours d'eau 0,18m"
+   }
+  },
+  {
+   "id": "2A-omble-fontaine-taille-min-plan-eau",
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23,
+    "texte": "dans les plans d'eau"
+   },
+   "phrase": "Dans les plans d'eau, l'omble et le saumon de fontaine se garde à partir de 23 cm.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "dans les plans d'eau 0,23m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-omble-fontaine-taille_min-plan_eau",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "dans les plans d'eau 0,23m"
+   }
+  },
+  {
+   "id": "2A-mulet-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "mulet"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 20,
+    "texte": "en amont des embouchures"
+   },
+   "phrase": "En amont des embouchures, le mulet se garde à partir de 20 cm.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Mulet en amont des embouchures 0,20m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-mulet-taille_min",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Mulet en amont des embouchures 0,20m"
+   }
+  },
+  {
+   "id": "2A-sandre-taille-min-cat2",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "En 2e catégorie, le sandre se garde à partir de 40 cm.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Sandre dans les eaux de 2ème catégorie 0,40m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-2195-taille_min-cat2",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Sandre dans les eaux de 2ème catégorie 0,40m"
+   }
+  },
+  {
+   "id": "2A-ecrevisse-taille-min-cat1",
+   "type": "taille_min",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 9,
+    "texte": "écrevisses autres que les écrevisses à pattes blanches"
+   },
+   "phrase": "En 1re catégorie, les écrevisses autres que celles à pattes blanches se gardent à partir de 9 cm.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Écrevisses autres que écrevisses à pattes blanches dans les eaux de 1ère catégorie 0,09m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-ecrevisse-taille_min-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Écrevisses autres que écrevisses à pattes blanches dans les eaux de 1ère catégorie 0,09m"
+   }
+  },
+  {
+   "id": "2A-toutes-lignes-cat1",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": "Eaux non domaniales de 1re catégorie, y compris les lacs de montagne",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 1
+   },
+   "phrase": "Dans les eaux non domaniales de 1re catégorie, y compris les lacs de montagne, une seule ligne.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "dans les eaux non domaniales de 1ère catégorie (y compris les lacs de montagne) 1",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-mode_peche-lignes-cat1",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Nombre de lignes autorisées : dans les eaux non domaniales de 1ère catégorie (y compris les lacs de montagne) 1"
+   }
+  },
+  {
+   "id": "2A-ocana-lignes",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Retenue d'Ocana",
+    "plan_eau": "retenue d'Ocana",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 2
+   },
+   "phrase": "À la retenue d'Ocana, deux lignes au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "dans les retenues des ouvrages hydroélectriques concédés et les retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese) 2",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-mode_peche-lignes-retenue-ocana",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese) 2"
+   }
+  },
+  {
+   "id": "2A-figari-lignes",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Retenue de Figari",
+    "plan_eau": "retenue de Figari",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 2
+   },
+   "phrase": "À la retenue de Figari, deux lignes au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "dans les retenues des ouvrages hydroélectriques concédés et les retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese) 2",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-mode_peche-lignes-retenue-figari",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese) 2"
+   }
+  },
+  {
+   "id": "2A-ortolo-lignes",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Retenue de l'Ortolo",
+    "plan_eau": "retenue de l'Ortolo",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 2
+   },
+   "phrase": "À la retenue de l'Ortolo, deux lignes au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "dans les retenues des ouvrages hydroélectriques concédés et les retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese) 2",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-mode_peche-lignes-retenue-ortolo",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese) 2"
+   }
+  },
+  {
+   "id": "2A-ospedale-lignes",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Retenue de l'Ospedale",
+    "plan_eau": "retenue de l'Ospedale",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 2
+   },
+   "phrase": "À la retenue de l'Ospedale, deux lignes au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "dans les retenues des ouvrages hydroélectriques concédés et les retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese) 2",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-mode_peche-lignes-retenue-ospedale",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese) 2"
+   }
+  },
+  {
+   "id": "2A-rizzanese-lignes",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Retenue du Rizzanese",
+    "plan_eau": "retenue du Rizzanese",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 2
+   },
+   "phrase": "À la retenue du Rizzanese, deux lignes au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "dans les retenues des ouvrages hydroélectriques concédés et les retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese) 2",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-mode_peche-lignes-retenue-rizzanese",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese) 2"
+   }
+  },
+  {
+   "id": "2A-tolla-lignes",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2A",
+    "lieu": "Barrage de Tolla",
+    "plan_eau": "barrage de Tolla",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 4
+   },
+   "phrase": "Au barrage de Tolla, quatre lignes au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "dans les eaux de 2ème catégorie (barrage de Tolla) 4",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-mode_peche-lignes-tolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Nombre de lignes autorisées : dans les eaux de 2ème catégorie (barrage de Tolla) 4"
+   }
+  },
+  {
+   "id": "2A-carnevale",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau de Carnevale (Bastelica, Quasquara) : de la source à la cascade de « Piscia di Carnevale »",
+    "plan_eau": null,
+    "cours_eau": "Carnevale"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau de Carnevale (Bastelica, Quasquara) : de la source à la cascade de « Piscia di Carnevale ».",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau de « Carnevale », de la source à la cascade de « Piscia di Carnevale », sur les communes de Bastelica et de Quasquara.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-carnevale",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau de « Carnevale », de la source à la cascade de « Piscia di Carnevale », sur les communes de Bastelica et de Quasquara."
+   }
+  },
+  {
+   "id": "2A-chjuvone",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau de Chjuvone et ses affluents Pozzi, Frauletu, Giavingiolu, Fessa (Aullène, Serra di Scopamène, Zicavo) : de la source jusqu'à l'affluent des bergeries de Fessa",
+    "plan_eau": null,
+    "cours_eau": "Chjuvone"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau de Chjuvone et ses affluents Pozzi, Frauletu, Giavingiolu, Fessa (Aullène, Serra di Scopamène, Zicavo) : de la source jusqu'à l'affluent des bergeries de Fessa.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau de « Chjuvone » et ses affluents (Pozzi, Frauletu, Giavingiolu, Fessa), de la source jusqu'à l'affluent des bergeries de Fessa",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-chjuvone",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau de « Chjuvone » et ses affluents (Pozzi, Frauletu, Giavingiolu, Fessa), de la source jusqu'à l'affluent des bergeries de Fessa"
+   }
+  },
+  {
+   "id": "2A-belle-e-buone",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau de Belle e Buone (Guagno) : de la source à la confluence avec le Fiume Grossu",
+    "plan_eau": null,
+    "cours_eau": "Belle e Buone"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau de Belle e Buone (Guagno) : de la source à la confluence avec le Fiume Grossu.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau de « Belle e Buone », de la source à la confluence avec le Fiume Grossu, sur la commune de Guagno.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-belle-e-buone",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau de « Belle e Buone », de la source à la confluence avec le Fiume Grossu, sur la commune de Guagno."
+   }
+  },
+  {
+   "id": "2A-annedu",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau de l'Annedu (Aullène) : du pont aux sources",
+    "plan_eau": null,
+    "cours_eau": "Annedu"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau de l'Annedu (Aullène) : du pont aux sources.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau de « l'Annedu », du pont aux sources, sur la commune d'Aullène.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-annedu",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau de « l'Annedu », du pont aux sources, sur la commune d'Aullène."
+   }
+  },
+  {
+   "id": "2A-sagone",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau le Sagone, au lieu dit Fiuminale (Marignana) : de la source à l'enclos des lièvres",
+    "plan_eau": null,
+    "cours_eau": "Sagone"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau le Sagone, au lieu dit Fiuminale (Marignana) : de la source à l'enclos des lièvres.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau le « Sagone », au lieu dit Fiuminale, de la source à « l'enclos des lièvres », sur la commune de Marignana.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-sagone",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau le « Sagone », au lieu dit Fiuminale, de la source à « l'enclos des lièvres », sur la commune de Marignana."
+   }
+  },
+  {
+   "id": "2A-sambuccu",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau du Sambuccu, affluent de Piscia in Alba (Olivese) : tout le ruisseau",
+    "plan_eau": null,
+    "cours_eau": "Sambuccu"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau du Sambuccu, affluent de Piscia in Alba (Olivese) : tout le ruisseau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau du « Sambuccu », affluent de Piscia in Alba, sur la commune d'Olivese.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-sambuccu",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau du « Sambuccu », affluent de Piscia in Alba, sur la commune d'Olivese."
+   }
+  },
+  {
+   "id": "2A-calderamolla",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau de Calderamolla (forêt indivise de Frasseto, Quasquara, Zevaco, Corrano, Guitera-les-Bains, lieu dit U Broncu) : de la source au pont de la forêt de Pineta",
+    "plan_eau": null,
+    "cours_eau": "Calderamolla"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau de Calderamolla (forêt indivise de Frasseto, Quasquara, Zevaco, Corrano, Guitera-les-Bains, lieu dit U Broncu) : de la source au pont de la forêt de Pineta.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau de « Calderamolla », de la source au pont de la forêt de Pineta",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-calderamolla",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau de « Calderamolla », de la source au pont de la forêt de Pineta"
+   }
+  },
+  {
+   "id": "2A-veraculongu",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau de Veraculongu, Coscione (Zicavo) : du passage à gué à la confluence avec le ruisseau de Teppa Ritonda",
+    "plan_eau": null,
+    "cours_eau": "Veraculongu"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau de Veraculongu, Coscione (Zicavo) : du passage à gué à la confluence avec le ruisseau de Teppa Ritonda.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau de « Veraculongu » (Coscione), du passage à gué à la confluence avec le ruisseau de Teppa Ritonda, sur la commune de Zicavo.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-veraculongu",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau de « Veraculongu » (Coscione), du passage à gué à la confluence avec le ruisseau de Teppa Ritonda, sur la commune de Zicavo."
+   }
+  },
+  {
+   "id": "2A-codi",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau de Codi (Sorbollano) : de 100 m en amont du limnimètre jusqu'à la passerelle du Mare à Mare",
+    "plan_eau": null,
+    "cours_eau": "Codi"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau de Codi (Sorbollano) : de 100 m en amont du limnimètre jusqu'à la passerelle du Mare à Mare.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau de « Codi », 100 mètres en amont du limnimètre en remontant le cours d'eau jusqu'à la passerelle du Mare à Mare",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-codi",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau de « Codi », 100 mètres en amont du limnimètre en remontant le cours d'eau jusqu'à la passerelle du Mare à Mare"
+   }
+  },
+  {
+   "id": "2A-neo",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau de Neo et ses affluents (Levie) : tout le ruisseau",
+    "plan_eau": null,
+    "cours_eau": "Neo"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau de Neo et ses affluents (Levie) : tout le ruisseau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau de « Neo » et ses affluents, sur la commune de Levie.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-neo",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau de « Neo » et ses affluents, sur la commune de Levie."
+   }
+  },
+  {
+   "id": "2A-piana-amont",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau de Piana (Bocognano, Tavera) : du point GPS X 1200022 ; Y 6127076 (Lambert 93) à la confluence avec la Gravona, soit 2 km",
+    "plan_eau": null,
+    "cours_eau": "Piana"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau de Piana (Bocognano, Tavera) : du point GPS X 1200022 ; Y 6127076 (Lambert 93) à la confluence avec la Gravona, soit 2 km.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau de Piana : du point GPS X 1200022 ; Y 6127076 (coordonnées Lambert 93) à sa confluence avec la Gravona (soit sur une distance de 2km en amont de la confluence)",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-piana-2km",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau de Piana : du point GPS X 1200022 ; Y 6127076 (coordonnées Lambert 93) à sa confluence avec la Gravona (soit sur une distance de 2km en amont de la confluence)"
+   }
+  },
+  {
+   "id": "2A-piana-aval",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau de Piana (Bocognano, Tavera) : de la confluence avec la Gravona jusqu'au pont sous la route territoriale RT20, environ 950 m",
+    "plan_eau": null,
+    "cours_eau": "Piana"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau de Piana (Bocognano, Tavera) : de la confluence avec la Gravona jusqu'au pont sous la route territoriale RT20, environ 950 m.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau de Piana : depuis la confluence avec la Gravona jusqu'au pont sous la route territoriale RT20 soit sur une distance d'environ 950 mètres linéaires",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-piana-950m",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau de Piana : depuis la confluence avec la Gravona jusqu'au pont sous la route territoriale RT20 soit sur une distance d'environ 950 mètres linéaires"
+   }
+  },
+  {
+   "id": "2A-giannulella",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Ruisseau de Giannulella (Tavera) : depuis la confluence avec la Gravona sur un kilomètre",
+    "plan_eau": null,
+    "cours_eau": "Giannulella"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Ruisseau de Giannulella (Tavera) : depuis la confluence avec la Gravona sur un kilomètre.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "ruisseau de Giannulella : depuis la confluence avec la Gravona sur un linéaire d'un kilomètre (commune de Tavera).",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-giannulella",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "ruisseau de Giannulella : depuis la confluence avec la Gravona sur un linéaire d'un kilomètre (commune de Tavera)."
+   }
+  },
+  {
+   "id": "2A-ponte-bonellu",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Rivière de Ponte Bonellu (Sarrola-Carcopino) : du ruisseau de Tempiu à la confluence avec la Gravona, 3,9 km",
+    "plan_eau": null,
+    "cours_eau": "Ponte Bonellu"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite de Corse)"
+   },
+   "phrase": "Pêche interdite toute l'année 2026 : Rivière de Ponte Bonellu (Sarrola-Carcopino) : du ruisseau de Tempiu à la confluence avec la Gravona, 3,9 km.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 2",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Rivière de Ponte Bonellu : depuis le ruisseau de Tempiu jusqu'à la confluence avec la Gravona sur un linéaire de 3,9 kilomètres",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-reserve-ponte-bonellu",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 (annexe III)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "depuis le ruisseau de Tempiu jusqu'à la confluence avec la Gravona sur un linéaire de 3,9 kilomètres (commune de Sarrola-Carcopino)."
+   }
+  },
+  {
+   "id": "2A-rtp-saint-antoine",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Saint Antoine (Palneca) : de la source à la confluence avec l'Uccialinu, réserve temporaire de pêche de Saint Antoine et d'Uccialinu",
+    "plan_eau": null,
+    "cours_eau": "Saint Antoine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "réserve temporaire de pêche de la Collectivité de Corse : toute pêche interdite"
+   },
+   "phrase": "Réserve temporaire de pêche, toute pêche interdite : Saint Antoine (Palneca) : de la source à la confluence avec l'Uccialinu, réserve temporaire de pêche de Saint Antoine et d'Uccialinu.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II (RTP fixées par arrêtés du président du Conseil exécutif de Corse, art. 2 al. final)",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "RTP de Saint Antoine et d'Uccialinu sur les cours d'eau du même nom, de même que leurs affluents, de leur source respective jusqu'à la confluence de ces cours d'eau, commune de Palneca.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-rtp-saint-antoine",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 dernier alinéa et annexe II (réserves temporaires de la Collectivité de Corse)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "RTP de Saint Antoine et d'Uccialinu sur les cours d'eau du même nom, de même que leurs affluents, de leur source respective jusqu'à la confluence de ces cours d'eau, commune de Palneca."
+   }
+  },
+  {
+   "id": "2A-rtp-uccialinu",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Uccialinu (Palneca) : de la source à la confluence avec le Saint Antoine, réserve temporaire de pêche de Saint Antoine et d'Uccialinu",
+    "plan_eau": null,
+    "cours_eau": "Uccialinu"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "réserve temporaire de pêche de la Collectivité de Corse : toute pêche interdite"
+   },
+   "phrase": "Réserve temporaire de pêche, toute pêche interdite : Uccialinu (Palneca) : de la source à la confluence avec le Saint Antoine, réserve temporaire de pêche de Saint Antoine et d'Uccialinu.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II (RTP fixées par arrêtés du président du Conseil exécutif de Corse, art. 2 al. final)",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "RTP de Saint Antoine et d'Uccialinu sur les cours d'eau du même nom, de même que leurs affluents, de leur source respective jusqu'à la confluence de ces cours d'eau, commune de Palneca.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-rtp-saint-antoine",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 dernier alinéa et annexe II (réserves temporaires de la Collectivité de Corse)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "RTP de Saint Antoine et d'Uccialinu sur les cours d'eau du même nom, de même que leurs affluents, de leur source respective jusqu'à la confluence de ces cours d'eau, commune de Palneca."
+   }
+  },
+  {
+   "id": "2A-rtp-pozzi-exutoire",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Exutoire des Pozzi et affluents (Bastelica, Palneca) : des sources à la passerelle du GR 20 sur le Marmanu, réserve temporaire de pêche des Pozzi di Marmanu",
+    "plan_eau": null,
+    "cours_eau": "exutoire des Pozzi"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "réserve temporaire de pêche de la Collectivité de Corse : toute pêche interdite"
+   },
+   "phrase": "Réserve temporaire de pêche, toute pêche interdite : Exutoire des Pozzi et affluents (Bastelica, Palneca) : des sources à la passerelle du GR 20 sur le Marmanu, réserve temporaire de pêche des Pozzi di Marmanu.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II (RTP fixées par arrêtés du président du Conseil exécutif de Corse, art. 2 al. final)",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "RTP des Pozzi di Marmanu, ruisseaux : « exutoire des Pozzi », Marmanu », Guadu alla Macchia et leurs affluents, des sources jusqu'à la passerelle du GR 20 sur le Marmanu",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-rtp-pozzi-di-marmanu-exutoire-des-pozzi",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 dernier alinéa et annexe II (réserves temporaires de la Collectivité de Corse)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "RTP des Pozzi di Marmanu, ruisseaux : « exutoire des Pozzi », Marmanu », Guadu alla Macchia et leurs affluents, des sources jusqu'à la passerelle du GR 20 sur le Marmanu"
+   }
+  },
+  {
+   "id": "2A-rtp-pozzi-marmanu",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Marmanu et affluents (Bastelica, Palneca) : des sources à la passerelle du GR 20, réserve temporaire de pêche des Pozzi di Marmanu",
+    "plan_eau": null,
+    "cours_eau": "Marmanu"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "réserve temporaire de pêche de la Collectivité de Corse : toute pêche interdite"
+   },
+   "phrase": "Réserve temporaire de pêche, toute pêche interdite : Marmanu et affluents (Bastelica, Palneca) : des sources à la passerelle du GR 20, réserve temporaire de pêche des Pozzi di Marmanu.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II (RTP fixées par arrêtés du président du Conseil exécutif de Corse, art. 2 al. final)",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "RTP des Pozzi di Marmanu, ruisseaux : « exutoire des Pozzi », Marmanu », Guadu alla Macchia et leurs affluents, des sources jusqu'à la passerelle du GR 20 sur le Marmanu",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-rtp-pozzi-di-marmanu-marmanu",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 dernier alinéa et annexe II (réserves temporaires de la Collectivité de Corse)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "RTP des Pozzi di Marmanu, ruisseaux : « exutoire des Pozzi », Marmanu », Guadu alla Macchia et leurs affluents, des sources jusqu'à la passerelle du GR 20 sur le Marmanu"
+   }
+  },
+  {
+   "id": "2A-rtp-pozzi-guadu",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Guadu alla Macchia et affluents (Bastelica, Palneca) : des sources à la passerelle du GR 20 sur le Marmanu, réserve temporaire de pêche des Pozzi di Marmanu",
+    "plan_eau": null,
+    "cours_eau": "Guadu alla Macchia"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "réserve temporaire de pêche de la Collectivité de Corse : toute pêche interdite"
+   },
+   "phrase": "Réserve temporaire de pêche, toute pêche interdite : Guadu alla Macchia et affluents (Bastelica, Palneca) : des sources à la passerelle du GR 20 sur le Marmanu, réserve temporaire de pêche des Pozzi di Marmanu.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II (RTP fixées par arrêtés du président du Conseil exécutif de Corse, art. 2 al. final)",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "RTP des Pozzi di Marmanu, ruisseaux : « exutoire des Pozzi », Marmanu », Guadu alla Macchia et leurs affluents, des sources jusqu'à la passerelle du GR 20 sur le Marmanu",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-rtp-pozzi-di-marmanu-guadu-alla-macchia",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 dernier alinéa et annexe II (réserves temporaires de la Collectivité de Corse)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "RTP des Pozzi di Marmanu, ruisseaux : « exutoire des Pozzi », Marmanu », Guadu alla Macchia et leurs affluents, des sources jusqu'à la passerelle du GR 20 sur le Marmanu"
+   }
+  },
+  {
+   "id": "2A-rtp-val-d-ese",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Val d'Ese (Bastelica, Ciamanacce) : 2,6 km de la source au pont de la forêt de Punteniellu à la station de ski, réserve temporaire de pêche du Val d'Ese",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "réserve temporaire de pêche de la Collectivité de Corse : toute pêche interdite"
+   },
+   "phrase": "Réserve temporaire de pêche, toute pêche interdite : Val d'Ese (Bastelica, Ciamanacce) : 2,6 km de la source au pont de la forêt de Punteniellu à la station de ski, réserve temporaire de pêche du Val d'Ese.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), annexe II (RTP fixées par arrêtés du président du Conseil exécutif de Corse, art. 2 al. final)",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "RTP du Val d'Ese : (2,6 km de la source au pont de la forêt de Punteniellu à la station de ski), communes de Bastelica et de Ciamanacce.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-rtp-val-d-ese",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 2 dernier alinéa et annexe II (réserves temporaires de la Collectivité de Corse)",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "RTP du Val d'Ese : (2,6 km de la source au pont de la forêt de Punteniellu à la station de ski), communes de Bastelica et de Ciamanacce."
+   }
+  },
+  {
+   "id": "2A-gravona-no-kill",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Gravona (Tavera) : de la confluence avec le ruisseau de Piana jusqu'à l'amont immédiat du pont de Vignale, 2,60 km",
+    "plan_eau": null,
+    "cours_eau": "Gravona"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "parcours de graciation : tout poisson pêché est immédiatement remis à l'eau"
+   },
+   "phrase": "Parcours no-kill sur la Gravona à Tavera : tout poisson pêché est remis à l'eau immédiatement.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 3",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "tout poisson pêché devra être immédiatement remis à l'eau.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-gravona-no_kill",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 3",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "tout poisson pêché devra être immédiatement remis à l'eau."
+   }
+  },
+  {
+   "id": "2A-gravona-canne",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Gravona (Tavera) : de la confluence avec le ruisseau de Piana jusqu'à l'amont immédiat du pont de Vignale, 2,60 km",
+    "plan_eau": null,
+    "cours_eau": "Gravona"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 1,
+    "texte": "une seule canne tenue en main"
+   },
+   "phrase": "Sur le parcours no-kill de la Gravona, une seule canne tenue en main.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 3",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "une seule canne tenue en main est autorisée",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-gravona-mode_peche-hamecon",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 3",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "avec un hameçon simple sans ardillon ou avec ardillon écrasé"
+   }
+  },
+  {
+   "id": "2A-taravo-t1-no-kill",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Taravo : de l'amont du Ponte Vecchiu à la confluence avec le torrent de Marcuggio, 1 km",
+    "plan_eau": null,
+    "cours_eau": "Taravo"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "parcours de graciation : tout poisson pêché est immédiatement remis à l'eau"
+   },
+   "phrase": "Parcours no-kill sur le Taravo : tout poisson pêché est remis à l'eau immédiatement.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 3",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "tout poisson pêché devra être immédiatement remis à l'eau.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-taravo-ponte-vecchiu-no_kill",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 3",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "tout poisson pêché devra être immédiatement remis à l'eau."
+   }
+  },
+  {
+   "id": "2A-taravo-t1-mouche",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Taravo : de l'amont du Ponte Vecchiu à la confluence avec le torrent de Marcuggio, 1 km",
+    "plan_eau": null,
+    "cours_eau": "Taravo"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "mouches_max": 2,
+    "texte": "à la mouche, hameçons sans ardillon ; procédés réservés aux membres des associations agréées de pêche"
+   },
+   "phrase": "Sur ce parcours no-kill du Taravo, pêche à la mouche permise, 2 mouches au plus, hameçons sans ardillon, pour les membres des associations agréées.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 3",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "à la mouche (2 mouches maximum) avec des hameçons sans ardillon",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-taravo-ponte-vecchiu-mode_peche-mouche",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 3",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "à la mouche (2 mouches maximum) avec des hameçons sans ardillon"
+   }
+  },
+  {
+   "id": "2A-taravo-t1-cuillere",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Taravo : de l'amont du Ponte Vecchiu à la confluence avec le torrent de Marcuggio, 1 km",
+    "plan_eau": null,
+    "cours_eau": "Taravo"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "hamecons_max": 2,
+    "texte": "à la cuillère, montage de 2 hameçons maximum sans ardillon ; procédés réservés aux membres des associations agréées"
+   },
+   "phrase": "Sur ce parcours no-kill du Taravo, pêche à la cuillère permise, 2 hameçons au plus sans ardillon, pour les membres des associations agréées.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 3",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "à la cuillère avec un montage de 2 hameçons maximum sans ardillon",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-taravo-ponte-vecchiu-mode_peche-mouche",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 3",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "à la mouche (2 mouches maximum) avec des hameçons sans ardillon"
+   }
+  },
+  {
+   "id": "2A-taravo-t2-no-kill",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Taravo : du Ponte Nove à l'aval du pont de Piconca, 1,5 km",
+    "plan_eau": null,
+    "cours_eau": "Taravo"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "parcours de graciation : tout poisson pêché est immédiatement remis à l'eau"
+   },
+   "phrase": "Parcours no-kill sur le Taravo : tout poisson pêché est remis à l'eau immédiatement.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 3",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "tout poisson pêché devra être immédiatement remis à l'eau.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-taravo-ponte-nove-no_kill",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 3",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "tout poisson pêché devra être immédiatement remis à l'eau."
+   }
+  },
+  {
+   "id": "2A-taravo-t2-mouche",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Taravo : du Ponte Nove à l'aval du pont de Piconca, 1,5 km",
+    "plan_eau": null,
+    "cours_eau": "Taravo"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "mouches_max": 2,
+    "texte": "à la mouche, hameçons sans ardillon ; procédés réservés aux membres des associations agréées de pêche"
+   },
+   "phrase": "Sur ce parcours no-kill du Taravo, pêche à la mouche permise, 2 mouches au plus, hameçons sans ardillon, pour les membres des associations agréées.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 3",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "à la mouche (2 mouches maximum) avec des hameçons sans ardillon",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-taravo-ponte-nove-mode_peche-mouche",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 3",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "à la mouche (2 mouches maximum) avec des hameçons sans ardillon"
+   }
+  },
+  {
+   "id": "2A-taravo-t2-cuillere",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2A",
+    "lieu": "Taravo : du Ponte Nove à l'aval du pont de Piconca, 1,5 km",
+    "plan_eau": null,
+    "cours_eau": "Taravo"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "hamecons_max": 2,
+    "texte": "à la cuillère, montage de 2 hameçons maximum sans ardillon ; procédés réservés aux membres des associations agréées"
+   },
+   "phrase": "Sur ce parcours no-kill du Taravo, pêche à la cuillère permise, 2 hameçons au plus sans ardillon, pour les membres des associations agréées.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 3",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "à la cuillère avec un montage de 2 hameçons maximum sans ardillon",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-taravo-ponte-nove-mode_peche-mouche",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 3",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "à la mouche (2 mouches maximum) avec des hameçons sans ardillon"
+   }
+  },
+  {
+   "id": "2A-anguille-interdit-bassin",
+   "type": "interdit",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche de loisir de l'anguille est interdite à tous ses stades, dans le bassin de Corse (eaux douces et domaine maritime en aval de la limite de salure)."
+   },
+   "phrase": "La pêche de loisir de l'anguille est interdite à tous ses stades, dans le bassin de Corse (eaux douces et domaine maritime en aval de la limite de salure).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 5",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "La pêche de loisir de l'anguille (Anguilla anguilla) est interdite, à tous ses stades de développement",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-anguille-interdit-art5",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 5",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "La pêche de loisir de l'anguille (Anguilla anguilla) est interdite, à tous ses stades de développement"
+   }
+  },
+  {
+   "id": "2A-lamproie-interdit-bassin",
+   "type": "interdit",
+   "especes": [
+    "autre:lamproie"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche de loisir de la lamproie est interdite sur le bassin de Corse."
+   },
+   "phrase": "La pêche de loisir de la lamproie est interdite sur le bassin de Corse.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 5",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "la pêche de loisir de cette espèce est également interdite",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-lamproie-interdit-art5",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 5",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "la pêche de loisir de cette espèce est également interdite."
+   }
+  },
+  {
+   "id": "2A-grenouille-bergeri-interdit",
+   "type": "interdit",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La grenouille de Berger (seule grenouille verte de Corse) ne peut être ni détenue, ni transportée, ni vendue, ni utilisée."
+   },
+   "phrase": "La grenouille de Berger (seule grenouille verte de Corse) ne peut être ni détenue, ni transportée, ni vendue, ni utilisée.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 5",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "Sont interdits, sur tout le territoire national et en tout temps, la détention, le transport, la naturalisation, le colportage, la mise en vente, la vente ou l'achat, l'utilisation",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-grenouille-verte-interdit-berger",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 5",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "grenouille de Berger (Rana bergeri), seule grenouille verte présente en Corse"
+   }
+  },
+  {
+   "id": "2A-poissons-vifs-appat-interdit",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Les appâts et amorces cités à l'article 13 de l'arrêté permanent, dont les poissons vifs, restent interdits."
+   },
+   "phrase": "Les appâts et amorces cités à l'article 13 de l'arrêté permanent, dont les poissons vifs, restent interdits.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 6",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "l'interdiction d'utiliser comme appâts ou amorces ceux cités à l'article 13 de l'arrêté réglementaire permanent visé ci-dessus, dont les poissons vifs",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-toutes-interdit-vifs-art6",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 6",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Outre l'interdiction d'utiliser comme appâts ou amorces ceux cités à l'article 13 de l'arrêté réglementaire permanent visé ci-dessus, dont les poissons vifs"
+   }
+  },
+  {
+   "id": "2A-vairon-mort-interdit",
+   "type": "interdit",
+   "especes": [
+    "autre:vairon"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche au vairon mort est interdite."
+   },
+   "phrase": "La pêche au vairon mort est interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 6",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "la pêche au vairon (Phoxinus phoxinus) mort est également interdite",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-vairon-interdit-mort-art6",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 6",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "la pêche au vairon (Phoxinus phoxinus) mort est également interdite"
+   }
+  },
+  {
+   "id": "2A-pseudorasbora-interdit",
+   "type": "interdit",
+   "especes": [
+    "autre:pseudorasbora"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche au pseudorasbora (goujon asiatique), mort ou vivant, est interdite."
+   },
+   "phrase": "La pêche au pseudorasbora (goujon asiatique), mort ou vivant, est interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 6",
+    "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-02-23"
+   },
+   "citation": "la pêche au Pseudorasbora (Pseudorasbora parva), ou goujon asiatique, qu'il soit mort ou vivant.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2A-pseudorasbora-interdit-art6",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 6",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "de même que la pêche au Pseudorasbora (Pseudorasbora parva), ou goujon asiatique, qu'il soit mort ou vivant"
+   }
+  }
+ ],
+ "desaccords": {
+  "seulement_a": [
+   {
+    "id": "2A-truite-taille-min-cours-eau",
+    "type": "taille_min",
+    "especes": [
+     "truite"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 18,
+     "texte": "dans les cours d'eau"
+    },
+    "phrase": "Dans les cours d'eau, la truite se garde à partir de 18 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Truite, omble et saumon de fontaine dans les cours d'eau 0,18m",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-truite-taille-min-plan-eau",
+    "type": "taille_min",
+    "especes": [
+     "truite"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 23,
+     "texte": "dans les plans d'eau"
+    },
+    "phrase": "Dans les plans d'eau, la truite se garde à partir de 23 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "dans les plans d'eau 0,23m",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-brochet-taille-min",
+    "type": "taille_min",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 50,
+     "texte": "dans les eaux de 1re et 2e catégories"
+    },
+    "phrase": "Le brochet se garde à partir de 50 cm, en 1re comme en 2e catégorie.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Brochet dans les eaux de 1ère et 2ème catégories 0,50m",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-ocana-categorie",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "2A",
+     "lieu": "Retenue d'Ocana",
+     "plan_eau": "retenue d'Ocana",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1",
+     "texte": "retenue classée en 1re catégorie piscicole"
+    },
+    "phrase": "La retenue d'Ocana est classée en 1re catégorie piscicole.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-figari-categorie",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "2A",
+     "lieu": "Retenue de Figari",
+     "plan_eau": "retenue de Figari",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1",
+     "texte": "retenue classée en 1re catégorie piscicole"
+    },
+    "phrase": "La retenue de Figari est classée en 1re catégorie piscicole.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-ortolo-categorie",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "2A",
+     "lieu": "Retenue de l'Ortolo",
+     "plan_eau": "retenue de l'Ortolo",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1",
+     "texte": "retenue classée en 1re catégorie piscicole"
+    },
+    "phrase": "La retenue de l'Ortolo est classée en 1re catégorie piscicole.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-ospedale-categorie",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "2A",
+     "lieu": "Retenue de l'Ospedale",
+     "plan_eau": "retenue de l'Ospedale",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1",
+     "texte": "retenue classée en 1re catégorie piscicole"
+    },
+    "phrase": "La retenue de l'Ospedale est classée en 1re catégorie piscicole.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-rizzanese-categorie",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "2A",
+     "lieu": "Retenue du Rizzanese",
+     "plan_eau": "retenue du Rizzanese",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1",
+     "texte": "retenue classée en 1re catégorie piscicole"
+    },
+    "phrase": "La retenue du Rizzanese est classée en 1re catégorie piscicole.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "retenues d'irrigation classées en 1ère catégorie piscicole (retenues d'Ocana, de Figari, de l'Ortolo, de l'Ospedale et du Rizzanese)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-gravona-mouche",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "2A",
+     "lieu": "Gravona (Tavera) : de la confluence avec le ruisseau de Piana jusqu'à l'amont immédiat du pont de Vignale, 2,60 km",
+     "plan_eau": null,
+     "cours_eau": "Gravona"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "mouches_max": 2,
+     "hamecons_max": 1,
+     "texte": "seule la pêche à la mouche est autorisée, avec un hameçon simple sans ardillon ou avec ardillon écrasé"
+    },
+    "phrase": "Sur le parcours no-kill de la Gravona, seule la pêche à la mouche est permise, 2 mouches au plus, hameçon simple sans ardillon ou à ardillon écrasé.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 3",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "seule la pêche à la mouche est autorisée (2 mouches maximum) avec un hameçon simple sans ardillon ou avec ardillon écrasé",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-crabe-bleu-ouverture",
+    "type": "ouverture",
+    "especes": [
+     "autre:crabe bleu"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": "Estuaires",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "formule": "toute l'année, sans taille minimale ni quota",
+     "texte": "crabe bleu des estuaires"
+    },
+    "phrase": "Le crabe bleu des estuaires se pêche toute l'année, sans taille minimale ni quota.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 5",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "La pêche du crabe bleu (Callinectes sapidus) présent au sein des estuaires est autorisée toute l'année sans limitation de taille minimale de capture ni quota",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-crabe-bleu-transport-vivant",
+    "type": "transport_vivant",
+    "especes": [
+     "autre:crabe bleu"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": "Estuaires",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "transport d'individus vivants interdit"
+    },
+    "phrase": "Il est interdit de transporter un crabe bleu vivant.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 5",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "seul le transport d'individus vivants est interdit",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-crabe-bleu-remise-eau",
+    "type": "remise_eau",
+    "especes": [
+     "autre:crabe bleu"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": "Estuaires",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "remise à l'eau interdite pour tous les individus, y compris femelles grainées et juvéniles"
+    },
+    "phrase": "Tout crabe bleu capturé doit être gardé : sa remise à l'eau est interdite, même pour les femelles grainées et les juvéniles.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, saison 2026), article 5",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Il est également interdit la remise à l'eau de tous les individus capturés y compris les femelles grainées et les juvéniles.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   }
+  ],
+  "seulement_b": [
+   {
+    "id": "2A-toutes-categorie-1",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": "Cours d'eau et plans d'eau de première catégorie piscicole (tout le département sauf le barrage de Tolla)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1"
+    },
+    "phrase": "Les cours d'eau et plans d'eau du département sont en première catégorie piscicole, sauf le barrage de Tolla.",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), annexe I, I",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Dans les cours d'eau et plans d'eau classés 1ère catégorie piscicole au sens de l'article L.436-5 du Code de l'environnement",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-2221-taille_min-cours_eau",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 18,
+     "texte": "dans les cours d'eau"
+    },
+    "phrase": "Taille minimale de la truite fario dans les cours d'eau : 18 cm.",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Truite, omble et saumon de fontaine dans les cours d'eau 0,18m",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-2221-taille_min-plan_eau",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 23,
+     "texte": "dans les plans d'eau"
+    },
+    "phrase": "Taille minimale de la truite fario dans les plans d'eau : 23 cm.",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "dans les plans d'eau 0,23m",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-2151-taille_min-cat1",
+    "type": "taille_min",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 50
+    },
+    "phrase": "Taille minimale du brochet en première catégorie : 50 cm.",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Brochet dans les eaux de 1ère et 2ème catégories 0,50m",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-2151-taille_min-cat2",
+    "type": "taille_min",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 50
+    },
+    "phrase": "Taille minimale du brochet en deuxième catégorie : 50 cm.",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Brochet dans les eaux de 1ère et 2ème catégories 0,50m",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-toutes-mode_peche-lignes-cat1",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 1,
+     "texte": "eaux non domaniales de première catégorie, y compris les lacs de montagne"
+    },
+    "phrase": "Dans les eaux non domaniales de première catégorie, y compris les lacs de montagne : 1 ligne.",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 4",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Nombre de lignes autorisées : dans les eaux non domaniales de 1ère catégorie (y compris les lacs de montagne) 1",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-crabe-bleu-ouverture",
+    "type": "autre",
+    "especes": [
+     "autre:crabe bleu"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche autorisée toute l'année, sans taille minimale ni quota"
+    },
+    "phrase": "Le crabe bleu des estuaires se pêche toute l'année, sans taille minimale ni quota.",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 5",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "La pêche du crabe bleu (Callinectes sapidus) présent au sein des estuaires est autorisée toute l'année sans limitation de taille minimale de capture ni quota",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-crabe-bleu-transport_vivant",
+    "type": "transport_vivant",
+    "especes": [
+     "autre:crabe bleu"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "transport d'individus vivants interdit"
+    },
+    "phrase": "Il est interdit de transporter un crabe bleu vivant.",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 5",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "seul le transport d'individus vivants est interdit",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-crabe-bleu-remise_eau",
+    "type": "remise_eau",
+    "especes": [
+     "autre:crabe bleu"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2A",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "remise à l'eau interdite, y compris femelles grainées et juvéniles"
+    },
+    "phrase": "Tout crabe bleu capturé doit être gardé : sa remise à l'eau est interdite, même pour les femelles grainées et les juvéniles.",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 5",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "Il est également interdit la remise à l'eau de tous les individus capturés y compris les femelles grainées et les juvéniles.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2A-gravona-mode_peche-mouche",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "2A",
+     "lieu": "Gravona (Tavera) : de la confluence avec le ruisseau de Piana jusqu'à l'amont immédiat du pont de Vignale, 2,60 km",
+     "plan_eau": null,
+     "cours_eau": "Gravona"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "mouches_max": 2,
+     "texte": "seule la pêche à la mouche est autorisée"
+    },
+    "phrase": "Parcours no-kill de la Gravona : pêche à la mouche seulement, 2 mouches au plus.",
+    "source": {
+     "texte": "Arrêté n° 2A-2026-02-23-00002 du 23 février 2026 (pêche de loisir en eau douce, Corse-du-Sud, saison 2026), article 3",
+     "url": "https://www.corse-du-sud.gouv.fr/contenu/telechargement/17554/112897/file/20260223_ART_P%C3%AAche.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-02-23"
+    },
+    "citation": "seule la pêche à la mouche est autorisée (2 mouches maximum)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   }
+  ]
+ },
+ "paires_categorie": [
+  {
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "cm": 50,
+    "texte": "dans les eaux de 1re et 2e catégories"
+   },
+   "a": {
+    "id": "2A-brochet-taille-min",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "2A-2151-taille_min-cat1",
+    "categorie": "1"
+   }
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "cm": 50,
+    "texte": "dans les eaux de 1re et 2e catégories"
+   },
+   "a": {
+    "id": "2A-brochet-taille-min",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "2A-2151-taille_min-cat2",
+    "categorie": "2"
+   }
+  }
+ ]
+}
