@@ -1,0 +1,9 @@
+Décision débloquée : quels textes de la Haute-Saône (70) les deux lecteurs lisent
+
+Gardés (3)
+- ap-2026-403.html : arrêté DDT/2025 n° 403 du 1er décembre 2025, exercice de la pêche en eau douce 2026 (signé à Vesoul le 01/12/2025, E. Clerc, par subdélégation). Texte qui fait foi. URL officielle : haute-saone.gouv.fr/contenu/telechargement/46374/370055/file/403-2025-12-01-Arrêté_réglementation_pêche_2026.pdf. Le PDF signé (4,05 Mo, scan) est hébergé par la fédération : peche-haute-saone.com/images/ARP_FD70.pdf. Texte lu via Parallel (OCR serveur, 10 pages), pas via le fichier : l'OCR local Tesseract n'a pas abouti (machine saturée). Les accents ont été rétablis à la main, les nombres et dates relus ; « Saône » corrigé quand l'OCR avait écrit « Sadne ».
+- reserves-2026.html : arrêté DDT/2025 n° 404 du 1er décembre 2025, réserves temporaires de pêche 2026 (PDF fédération : peche-haute-saone.com/images/404-2025-12-01-arrêté_réserves_annuelles_pêche_2026.pdf), même méthode.
+- guide-2026.pdf : guide de la fédération, information seulement (couche texte).
+Cherchés, introuvables : arrêté réglementaire permanent distinct (la Haute-Saône n'en a pas : l'arrêté annuel contient tout, y compris les annexes carpe de nuit et no-kill) ; classement des cours d'eau (arrêté ministériel du 23/11/1990, cité en visa, non obtenu) ; arrêté migrateurs ; interdictions de consommation (PCB).
+Écartés : arrêté 2025 n° 448 (remplacé par le 403).
+À savoir : brochet 60 cm, sandre 50, black-bass 40 (2e cat.), truite 25 ; ombre commun no-kill uniquement ; 3 carnassiers/jour dont 2 brochets en 2e cat. ; l'arrêté 403 rappelle que le Code ne s'applique qu'avec ces relèvements (R436-19). Parcours no-kill et fenêtres de capture (Champagney 60-80 cm brochet ; Melisey truite 25-35 cm) en annexe, certains fixés par règlement d'AAPPMA. Le site coindepeche.fr donne des chiffres faux (black-bass 30, truite 23) : à ignorer.
