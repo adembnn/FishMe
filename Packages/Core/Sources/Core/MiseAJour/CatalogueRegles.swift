@@ -24,7 +24,7 @@ public struct DepotRegles: Sendable {
 struct CopieRegles: Sendable {
     enum Origine: Sendable { case embarquee, telechargee }
     var data: Data
-    var fichier: FichierRegles
+    var fichier: FichierReglesMaj
     var origine: Origine
 }
 
@@ -75,10 +75,10 @@ public struct CatalogueRegles: Sendable {
     /// La meilleure copie valide de ce fichier : la plus récente ; à version égale, l'embarquée.
     func meilleure(_ code: String) -> CopieRegles? {
         var candidates: [CopieRegles] = []
-        if let data = lireEmbarque(code), let f = try? FichierRegles.lire(data), f.departement == code {
+        if let data = lireEmbarque(code), let f = try? FichierReglesMaj.lire(data), f.departement == code {
             candidates.append(CopieRegles(data: data, fichier: f, origine: .embarquee))
         }
-        if let data = depot.lire(code), let f = try? FichierRegles.lire(data), f.departement == code {
+        if let data = depot.lire(code), let f = try? FichierReglesMaj.lire(data), f.departement == code {
             candidates.append(CopieRegles(data: data, fichier: f, origine: .telechargee))
         }
         return candidates.max { $0.fichier.version < $1.fichier.version }

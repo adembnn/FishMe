@@ -93,7 +93,7 @@ public actor MiseAJourRegles {
     private func accepter(_ data: Data, code: String, attendu: String, copieActuelle: CopieRegles?) throws {
         guard data.count <= Self.tailleMaxFichier else { throw RaisonRefus.illisible }
         guard Sha256.hex(data) == attendu else { throw RaisonRefus.sha256Different }
-        let fichier = try FichierRegles.lire(data)
+        let fichier = try FichierReglesMaj.lire(data)
         guard fichier.departement == code else { throw RaisonRefus.autreDepartement }
         if let actuelle = copieActuelle, fichier.version <= actuelle.fichier.version { throw RaisonRefus.pasPlusRecent }
         do {

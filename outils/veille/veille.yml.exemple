@@ -3,6 +3,10 @@
 # a changé, et ceux dont l'expire_min est à moins de 30 jours. Une alerte du dépôt (issue) est ouverte à chaque fois.
 # Une alerte n'est pas une preuve : un humain tranche (la procédure est dans le corps de l'alerte).
 #
+# ATTENTION : les sites .gouv.fr sont bloqués depuis le cloud (vérifié dans les sessions Claude) ; les machines GitHub
+# peuvent l'être aussi. Si une nuit d'essai donne « injoignable » pour les préfectures, lance plutôt
+# outils/veille/veille-local.sh depuis cron sur un ordinateur d'Adem (même alerte, même procédure).
+#
 # À faire par A : copier ce fichier, créer l'étiquette « veille » (gh label create veille), et vérifier que « Issues »
 # est activé sur le dépôt. Aucun secret n'est nécessaire (la clé PISTE n'est pas utilisée).
 name: Veille des règles
