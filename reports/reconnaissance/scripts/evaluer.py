@@ -32,10 +32,10 @@ for i, L in enumerate(lignes):
     if c == "autre-poisson-unsplash":
         if fishial_classe(L["fishial"][0][0]) in NOTRES: continue   # c'est peut-être un de nos poissons
         c = "autre-poisson"
-    if ds.startswith("openverse"):   # étiquettes bruitées (mot-clé) : gardées seulement si Fishial est d'accord
+    if ds.startswith(("openverse", "public-flickr")):   # étiquettes bruitées (mot-clé) : gardées seulement si Fishial est d'accord
         if not L["poisson"] or c not in {fishial_classe(l) for l, p in L["fishial"]}: continue
     garde.append(i); y.append(c); grp.append(ph); src.append(ds)
-y = np.array(y); grp = np.array(grp); src = np.array([("affine" if s == "affine" else "unsplash" if s.startswith("unsplash") else "openverse" if s.startswith("openverse") else "peche" if s.startswith(("chytej", "fisch-hitparade")) else "public" if s.startswith("EOL") or "eol" in s.lower() else "gbif") for s in src])
+y = np.array(y); grp = np.array(grp); src = np.array([("affine" if s == "affine" else "unsplash" if s.startswith("unsplash") else "openverse" if s.startswith(("openverse", "public-flickr")) else "peche" if s.startswith(("chytej", "fisch-hitparade", "peche-")) else "public" if s.startswith(("EOL", "public-")) or "eol" in s.lower() else "gbif") for s in src])
 # TEST FIXÉ : un photographe sur 4 (empreinte de son nom), jamais vu à l'entraînement
 test = np.array([int(hashlib.sha1(g.encode()).hexdigest(), 16) % 4 == 0 and s != "openverse" for g, s in zip(grp, src)])
 # fuites : une photo de test presque identique à une photo d'entraînement est retirée du test

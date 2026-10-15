@@ -1,23 +1,23 @@
 {
- "temperature": 0.75,
+ "temperature": 0.8,
  "seuil_95": {
   "tau": 0.78,
-  "part_des_photos_au_dessus": 0.665
+  "part_des_photos_au_dessus": 0.641
  },
- "pas_un_poisson_refuses": 0.965,
+ "pas_un_poisson_refuses": 0.962,
  "poissons_pris_pour_pas_un_poisson": 0.005,
  "top20": {
-  "n": 3233,
-  "top1": 0.755,
-  "top3": 0.874
+  "n": 3370,
+  "top1": 0.75,
+  "top3": 0.863
  },
  "seuil_95_prises_affine": {
-  "tau": 0.37,
-  "part_au_dessus": 0.978
+  "tau": 0.43,
+  "part_au_dessus": 0.969
  },
  "prises_affine": {
   "n": 1842,
-  "top1": 0.934,
-  "top3": 0.981
+  "top1": 0.933,
+  "top3": 0.978
  }
 }

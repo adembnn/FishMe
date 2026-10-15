@@ -11,6 +11,15 @@ Mesures réelles, faites dans le cloud le 15 oct. sur 22 648 photos télécharg�
 - **47 classes reconnues** (45 poissons, « pas un poisson », « autre poisson »). 13 espèces restent en grille faute de photos, plus l'apron (0 photo).
 - Seuils de R1 (top-3 ≥ 90 %, top-1 ≥ 70 %, ≥ 90 % de « pas un poisson » refusés) : **atteints sur les photos de prises**, pas encore sur les photos de terrain.
 
+## Mise à jour du 15 oct., 18h30 : prises hongroises, tchèques, allemandes et photos américaines
+3 356 photos de plus (carnet de pêche hongrois haldorado, nachytano.cz, fisch-hitparade.de en partie, Flickr CC, domaine public USGS/USFWS) : 26 951 photos en tout. Mesure dans `eval4/` (et `scores.json`, `seuils.json` à la racine).
+- **Carpe argentée et hotu sortent de la grille** : carpe argentée 74 % en 1re proposition (94 % dans les 3), surtout confondue avec la carpe à grosse tête ; hotu 69 % (86 %), surtout confondu avec le barbeau. 51 classes reconnues.
+- **Black-bass** : 30 → 44 % (16 photos de test), encore faible.
+- Brochet 76 → 78 %, omble chevalier 80 → 87 %, omble de fontaine 70 → 77 %, saumon 54 % (83 % dans les 3).
+- Baisses : silure 99 → 85 % (121 photos de test au lieu de 89, confondu avec le saumon sur 5 photos), carpe à grosse tête 94 → 65 % (confondue avec l'argentée, et le carnet hongrois mêle sans doute les deux sous le nom « busa »). Les nouvelles photos de test sont plus dures ou parfois mal étiquetées : à vérifier à la main.
+- Toutes prises de pêcheurs (hors AFFiNe, 456 photos de test) : 83 % et 90 %. AFFiNe : 93,3 %. Toutes photos : 76,5 % et 88,3 %. 20 espèces les plus pêchées : 75 % et 86 %.
+- Restent en grille : aloses, cristivomer, goujon de l'Amour, huchon (28 photos d'entraînement sur 30), lamproies fluviatile et marine, loche d'étang, pseudorasbora, spirlin.
+
 ## Mise à jour du 15 oct. au soir : prises de pêcheurs tchèques
 Ajout de 926 prises de chytej.cz (photos de pêcheurs, « tous droits réservés », entraînement seulement, jamais commercialisées) et 21 photos EOL. Même jeu de test, même règle par photographe ; 53 fuites retirées. Les fichiers `scores.json`, `seuils.json`, `jeu-test.csv` et `train.csv` sont ceux de cette mesure ; le tableau par espèce plus bas est celui d'avant.
 - **Nouvelles prises de pêcheurs (228 au test) : 90 % en 1re proposition, 96,5 % dans les 3.** Ce sont des photos d'un autre pays que l'entraînement AFFiNe : le modèle tient hors des Pays-Bas.
