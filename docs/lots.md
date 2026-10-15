@@ -52,7 +52,7 @@ Le critère commun est `parcours-demo.md` (étapes E1 à E9). Un lot = un dossie
 
 ## Calendrier : tout en parallèle, envoi à L0 + 5 h (Adem, 15 oct. 14h42)
 Adem, 14h42 : « on va tout paralléliser », Opus au moins en effort moyen, Sonnet et Haiku dès que c'est possible, et rien n'est coupé : tout le tableau de la version soumise part chez Apple. La colonne « Durée » est le travail d'une session seule ; le temps écoulé visé ci-dessous vient du parallèle, à trois niveaux :
-1. **Un lot, une session.** Chaque personne fait tourner une session Claude Code par lot, toutes en même temps, chacune dans sa copie du dépôt (`scripts/lot.sh <code>`). Les lots qui n'ont pas besoin de Mac (C0, L1, D1, D4, S1) tournent dans le cloud (claude.ai/code), ce qui laisse les deux Mac aux écrans.
+1. **Un lot, une session.** Chaque personne fait tourner une session Claude Code par lot, toutes en même temps, chacune dans sa copie du dépôt (`scripts/lot.sh <code>`). Les lots qui n'ont pas besoin de Mac (C0, L1, D1, D4, S1) tournent dans le cloud (claude.ai/code). Les lots d'écrans s'écrivent aussi dans le cloud, sans compiler, et poussent leur branche ; le Mac ne sert qu'à compiler et tester, un lot après l'autre.
 2. **Un morceau, un agent.** Dans chaque session, la session principale (Opus, effort moyen au moins, `/effort high` pour C0, L1, R1 et le débogage) découpe le lot en morceaux indépendants et lance un agent `codeur` (Sonnet) par morceau, tous en même temps ; le mécanique va à `petites-mains` (Haiku). C'est réglé dans l'atelier (`.claude/settings.json`, `.claude/agents/`, `/lot`, branche `lot/atelier`).
 3. **On fusionne au fil de l'eau.** Chaque lot rejoint `main` dès qu'il est vert (`scripts/fusionner.sh`), jamais tous à la fin ; A branche chaque écran dans `RootView.swift` dans la foulée.
 
@@ -62,7 +62,7 @@ Adem, 14h42 : « on va tout paralléliser », Opus au moins en effort moyen, Son
 |---|---|---|---|
 | L0 + 0 à 1 h | L0 (3 onglets, iPhone seul en portrait, capacités dont WeatherKit, clés Info), puis `main` ; en même temps, les vues de L2, L6, L9 et L12 démarrent dans leurs copies, écrites contre les contrats d'`architecture.md` ; S1 et la rédaction de D4 dans le cloud | C0 dans le cloud, un codeur par famille de contrats ; D1 dans le cloud ; en même temps, les vues de L3, L4, L5 et L13 démarrent sur le Mac B | D2 (script de Titouan, sur son ordinateur ou dans une session cloud qui joint Hub'Eau) ; relit les conseils de D4 au fil de l'eau |
 | **porte 1** (L0 + 1 h) | L0 fusionné, `main` existe | C0 fusionné : chaque copie fusionne `main` et compile pour la première fois | D2 livré |
-| L0 + 1 à 3 h | L2, L6, L9 et L12 en même temps sur le Mac A, chacun entier : poissons qui nagent, 7 jours, courbe, « préviens-moi » et « tes conditions » compris ; branchements dans `RootView.swift` à chaque fusion | L1 dans le cloud, un codeur par dossier (règles, rareté, lieu, soleil, session, espèces, conditions) ; L3, L4, L5 et L13 en même temps sur le Mac B, chacun entier : réalité augmentée, détourage, nage et reflet compris ; R1 s'entraîne | relit D4 et les règles d'Île-de-France de D1 ; jeu de test de R1, photos douteuses |
+| L0 + 1 à 3 h | L2, L6, L9 et L12 écrits en même temps dans le cloud, compilés un par un sur le Mac A, chacun entier : poissons qui nagent, 7 jours, courbe, « préviens-moi » et « tes conditions » compris ; branchements dans `RootView.swift` à chaque fusion | L1 dans le cloud, un codeur par dossier (règles, rareté, lieu, soleil, session, espèces, conditions) ; L3, L4, L5 et L13 en même temps sur le Mac B, chacun entier : réalité augmentée, détourage, nage et reflet compris ; R1 s'entraîne | relit D4 et les règles d'Île-de-France de D1 ; jeu de test de R1, photos douteuses |
 | **porte 2** (L0 + 3 h) | L2, L6, L9 et L12 fusionnés ; achat test vert | L1, D1, L3, L4, L5 et L13 fusionnés sur le vrai `Core` | D4 relu et livré |
 | L0 + 3 à 4 h | parcours E1 à E9 de bout en bout (`/ecran`, `/banc`) et corrections ; captures par `fastlane captures` ; fiche, notes et étiquettes écrites depuis le build | modèle de R1 remis à L3 s'il passe son examen ; corrections du parcours | « première minute » sur un build TestFlight interne : position refusée, mode avion, hors Île-de-France |
 | **porte 3** (L0 + 4 h) | `main` complet et vert ; `revue-finale` sans bloquant | captures déposées dans le studio de MWM | relit la fiche |
@@ -77,13 +77,13 @@ Si L0 part jeudi vers 16 h [?], l'envoi tombe vers 21 h (estimation) : Apple a e
 ### Qui fait tourner quoi
 | Qui | Sessions en même temps | Lots de la version soumise |
 |---|---|---|
-| A | 4 à 5 sur le Mac A, 2 dans le cloud, les collecteurs de D3 sur le PC | L0, puis L2, L6, L9 et L12 ; S1 et la rédaction de D4 dans le cloud ; D3 |
-| B | 4 sur le Mac B, 2 à 3 dans le cloud | L3, L4, L5 et L13 ; C0 puis L1, et D1, dans le cloud ; R1 |
+| A | 4 à 6 dans le cloud (L2, L6, L9, L12, S1, rédaction de D4), 1 sur le Mac A qui compile en file, les collecteurs de D3 sur le PC | L0, puis L2, L6, L9 et L12 ; S1 et la rédaction de D4 ; D3 |
+| B | 2 à 4 sur le Mac B selon sa mémoire, 3 à 5 dans le cloud | L3, L4, L5 et L13 ; C0 puis L1, et D1, dans le cloud ; R1 |
 | S | sans Claude, une tâche à la fois | D2, relecture de D4 et de D1, jeu de test de R1, « première minute » |
 
 **Ce qui fait tenir les 5 h :**
 - C0 fusionné à L0 + 1 h : toutes les copies compilent contre lui. B le lance en premier, en effort élevé, avec un codeur par famille de contrats.
-- Sur chaque Mac, un seul `xcodebuild` à la fois par copie et un simulateur par copie ; les tests de `Core` tournent dans le cloud.
+- Le Mac A n'a que 8 Go de mémoire (constaté le 15 oct. : une seule installation sur le simulateur l'a saturé). Il compile un seul lot à la fois, avec une seule session Claude ouverte dessus, qui reprend chaque branche poussée depuis le cloud, compile, corrige et teste, en file. Le Mac B prend autant de builds à la fois que sa mémoire le permet (2 à partir de 16 Go [?]). Les tests de `Core` tournent dans le cloud. Plus rapide encore, si Adem le décide : Xcode Cloud, inclus dans le compte développeur (25 h de build par mois), compile et teste plusieurs lots en même temps sur les serveurs d'Apple (question ouverte).
 - Personne n'attend un agent : pendant qu'une session écrit, sa personne vérifie sur l'iPhone le lot précédent et le fusionne.
 - `scripts/fusionner.sh` passe un lot à la fois, donc on fusionne dès qu'un lot est vert.
 - D4 : une session cloud rédige chaque conseil depuis une source citée, réécrit avec nos mots, et S les relit en pêcheur (champ `relu_par`) ; S n'écrit plus seul les 99 espèces (par défaut, à confirmer par Adem).
@@ -92,7 +92,7 @@ Si L0 part jeudi vers 16 h [?], l'envoi tombe vers 21 h (estimation) : Apple a e
 On ne coupe pas (Adem, 15 oct. 14h42) : on ajoute de la force.
 - Plus de codeurs sur le lot en retard, ou un morceau confié à la personne en avance, dans sa propre session, sur la branche du lot.
 - Un lot de `Core` en retard : une deuxième session cloud sur un autre dossier du lot.
-- Un Mac saturé : ses tests de `Core` passent dans le cloud, et les captures attendent la porte 3.
+- Un Mac saturé : ses lots s'écrivent dans le cloud et il ne fait que compiler, un lot à la fois ; ses tests de `Core` passent dans le cloud, et les captures attendent la porte 3.
 - Un département que D3 n'a pas fini avant la porte 3 : il entre par la mise à jour ; d'ici là, l'app y montre le socle national et le lien de l'arrêté, comme le veut la règle « jamais tu peux la garder » hors des départements chargés (`CLAUDE.md`).
 - Le modèle de R1 sous son examen : L3 a de toute façon la grille d'images de toutes les espèces (celle d'« autre espèce ») ; le modèle entre dès qu'il passe, car la règle d'Adem ne laisse entrer qu'un modèle qui a passé l'examen fixé avant l'entraînement.
 - Apple refuse : correction et renvoi dans l'heure (S1, `app-store.md`).
