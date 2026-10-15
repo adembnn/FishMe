@@ -10,7 +10,9 @@ meta = {}
 for m in mans:
     for r in csv.reader(open(m.replace(".csv", ".telecharge.csv"))):
         classe, h, st, url, phot, lic, ds = r
-        if st in ("ok", "deja"): meta[classe + "/" + h + ".jpg"] = (phot.strip().lower() or url, ds)
+        if st in ("ok", "deja"):
+            ph = phot.strip().lower()
+            meta[classe + "/" + h + ".jpg"] = (url if ph in ("", "inconnu", "unknown") else ph, ds)  # sans auteur connu : chaque photo compte pour un
 lignes = [json.loads(l) for l in open(pre + ".jsonl")]
 n = len(lignes)
 VF = np.fromfile(pre + ".fishial.f32", np.float32).reshape(n, -1)
@@ -25,6 +27,8 @@ def fishial_classe(lbl):
         if lbl == l or lbl.startswith(l + " "): return c
     return None
 NOTRES = set(CL)
+# espèces que Fishial sait nommer : pour les autres (lamproies, aloses, huchon…), son avis ne peut pas filtrer ; ces photos restent à l'entraînement seulement
+CONNUES_FISHIAL = {fishial_classe(l) for L in lignes for l, p in L["fishial"]} - {None}
 garde, y, grp, src = [], [], [], []
 for i, L in enumerate(lignes):
     c = L["classe"]; ph, ds = meta.get(L["f"], ("?", "?"))
@@ -32,10 +36,14 @@ for i, L in enumerate(lignes):
     if c == "autre-poisson-unsplash":
         if fishial_classe(L["fishial"][0][0]) in NOTRES: continue   # c'est peut-être un de nos poissons
         c = "autre-poisson"
-    if ds.startswith(("openverse", "public-flickr")):   # étiquettes bruitées (mot-clé) : gardées seulement si Fishial est d'accord
-        if not L["poisson"] or c not in {fishial_classe(l) for l, p in L["fishial"]}: continue
+    if ds.startswith(("openverse", "public-flickr", "public-openverse")):   # étiquettes bruitées (mot-clé) : gardées seulement si Fishial est d'accord
+        if c in CONNUES_FISHIAL and (not L["poisson"] or c not in {fishial_classe(l) for l, p in L["fishial"]}): continue
+    # carnets de pêche : « busa » (HU) ou « tolstolobik » (CZ) mêlent carpe argentée et carpe à grosse tête ; Fishial tranche entre les deux
+    if c in ("carpe-argentee", "carpe-grosse-tete") and ds.startswith(("chytej", "peche-")):
+        f1 = fishial_classe(L["fishial"][0][0])
+        if f1 in ("carpe-argentee", "carpe-grosse-tete"): c = f1
     garde.append(i); y.append(c); grp.append(ph); src.append(ds)
-y = np.array(y); grp = np.array(grp); src = np.array([("affine" if s == "affine" else "unsplash" if s.startswith("unsplash") else "openverse" if s.startswith(("openverse", "public-flickr")) else "peche" if s.startswith(("chytej", "fisch-hitparade", "peche-")) else "public" if s.startswith(("EOL", "public-")) or "eol" in s.lower() else "gbif") for s in src])
+y = np.array(y); grp = np.array(grp); src = np.array([("affine" if s == "affine" else "unsplash" if s.startswith("unsplash") else "openverse" if s.startswith(("openverse", "public-flickr", "public-openverse")) else "peche" if s.startswith(("chytej", "fisch-hitparade", "peche-")) else "public" if s.startswith(("EOL", "public-")) or "eol" in s.lower() else "gbif") for s in src])
 # TEST FIXÉ : un photographe sur 4 (empreinte de son nom), jamais vu à l'entraînement
 test = np.array([int(hashlib.sha1(g.encode()).hexdigest(), 16) % 4 == 0 and s != "openverse" for g, s in zip(grp, src)])
 # fuites : une photo de test presque identique à une photo d'entraînement est retirée du test

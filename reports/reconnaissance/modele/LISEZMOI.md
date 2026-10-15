@@ -1,0 +1,64 @@
+# PoissonsDino (Core ML)
+
+Classifieur d'espèces de poissons d'eau douce, hors ligne sur iPhone (Vision, VNCoreMLRequest -> VNClassificationObservation).
+DINOv2-small (facebook/dinov2-small) + régression logistique (C=2, class_weight=balanced) entraînée sur les vecteurs L2-normalisés [pooler 384 | moyenne des patchs 384].
+
+- Entrée : image "image", RGB 224x224, valeurs 0-255 (normalisation ImageNet incluse dans le modèle). Il faut fournir le poisson recadré, carré avec bord neutre (124,116,104), comme à l'entraînement ; Vision doit être réglé en scaleFit (pas de recadrage centré).
+- Sortie : classifieur (labels + probabilités softmax), 51 classes.
+- Tailles : PoissonsDino.mlpackage 42 Mo (float16) ; PoissonsDino-int8.mlpackage 21 Mo (poids int8, non évalué sur le jeu de test).
+- Scores (jeu-test.csv, sklearn, 5657 photos) : top-1 67,7 % / top-3 84,0 % tous sources ; AFFiNe (1847 photos) : top-1 87,3 % / top-3 96,3 %.
+- Vérification : module torch tracé vs vecteurs stockés sur 20 recadrages : cosinus moyen 0,996 (min 0,983, écart dû au rééchantillonnage des vignettes) ; 19/20 mêmes top-1 que sklearn. Le .mlpackage lui-même n'a pas pu être exécuté sous Linux : à tester sur Mac.
+- Licence : DINOv2 Apache 2.0. Les photos d'entraînement ne sont pas incluses.
+- Classes : voir labels.txt.
+
+- able-heckel
+- ablette
+- anguille
+- aspe
+- autre-poisson
+- barbeau
+- black-bass
+- bouviere
+- breme-bordeliere
+- breme-commune
+- brochet
+- carassin-argente
+- carassin-commun
+- carpe-amour
+- carpe-argentee
+- carpe-commune
+- carpe-grosse-tete
+- chabot
+- chevesne
+- coregones
+- epinoche
+- esturgeon
+- flet
+- gambusie
+- gardon
+- gobie-invasif
+- goujon
+- gremille
+- hotu
+- ide
+- lamproie-planer
+- loche-franche
+- loche-riviere
+- lotte
+- mulet
+- omble-chevalier
+- omble-fontaine
+- ombre
+- pas-un-poisson
+- perche
+- perche-soleil
+- poisson-chat
+- rotengle
+- sandre
+- saumon
+- silure
+- tanche
+- truite-arc-en-ciel
+- truite-commune
+- vairon
+- vandoise
