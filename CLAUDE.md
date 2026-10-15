@@ -45,7 +45,7 @@ Les documents que le plan cite sans chemin (`lots.md`, `fiches/L3.md`, `reports/
 ## La construction
 - Critère commun : `docs/parcours-demo.md` (étapes E1 à E9). Lots et calendrier : `docs/lots.md`.
 - Aucune ligne de code de l'app avant le jeudi 15 oct. 2026. Build jeudi et vendredi matin.
-- Xcode 27.0, iOS 27.0 minimum, iPhone seulement. 2 Mac (A et B). Plus aucun lot n'est tenu par le cloud (Adem, 15 oct. 14h26) : les lots sont répartis entre A (Adem), B (Titouan) et S (Sullyvan, sans Claude), les plus gros à A et B (`docs/lots.md`). Chaque étape terminée du plan est poussée sur GitHub tout de suite, car la limite de session d'Adem peut tout arrêter.
+- Xcode 27.0, iOS 27.0 minimum, iPhone seulement. 2 Mac (A et B). Plus aucun lot n'est tenu par le cloud (Adem, 15 oct. 14h26) : les lots sont répartis entre A (Adem), B (Titouan) et S (Sullyvan, Claude en Sonnet, une session), les plus gros à A et B (`docs/lots.md`). Chaque étape terminée du plan est poussée sur GitHub tout de suite, car la limite de session d'Adem peut tout arrêter.
 - Structure : un seul paquet `Packages/Core` (Foundation seulement, testable sous Linux) + la cible app en dossiers synchronisés, un dossier par lot dans `App/`.
 - Un dossier de l'app n'importe que `Core` et lui-même. A seul touche au `.xcodeproj`, aux capacités, aux clés Info et à `App/RootView.swift`. B seul touche à `Packages/Core`, sauf `Packages/Core/Sources/Core/Conseils/` (S, lot D4).
 - Un lot = un dossier = une personne = une branche `lot/<nom>`. On rejoint `main` seulement par `scripts/fusionner.sh`, qui lance `scripts/verif.sh`.
