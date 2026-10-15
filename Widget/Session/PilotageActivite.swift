@@ -32,7 +32,9 @@ public final class PilotageActivite {
             }
             activite = premiere
             let etat = EtatSession(debut: debut, finLegale: finLegale, prises: prises)
-            await premiere.update(ActivityContent(state: etat, staleDate: etat.heurePerimee(maintenant: maintenant)))
+            // Activity n'est pas Sendable : la copie locale lève l'alerte de concurrence de Swift 6 (appel unique, sur MainActor).
+            nonisolated(unsafe) let cible = premiere
+            await cible.update(ActivityContent(state: etat, staleDate: etat.heurePerimee(maintenant: maintenant)))
         } else {
             demarrer(debut: debut, finLegale: finLegale, prises: prises, maintenant: maintenant)
         }
@@ -43,7 +45,8 @@ public final class PilotageActivite {
         guard let activite else { return }
         var etat = activite.content.state
         etat.prises = prises
-        await activite.update(ActivityContent(state: etat, staleDate: etat.heurePerimee(maintenant: maintenant)))
+        nonisolated(unsafe) let cible = activite
+        await cible.update(ActivityContent(state: etat, staleDate: etat.heurePerimee(maintenant: maintenant)))
     }
 
     /// À appeler à la fin de session (bouton, fin légale ou reprise après la fin légale).
