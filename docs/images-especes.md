@@ -1,6 +1,6 @@
 # Images des espèces (`App/Assets.xcassets/Especes/`, branche `lot/images-poissons`)
 
-96 espèces sur 99 ont une illustration détourée et une silhouette (`<id>` et `<id>-silhouette`), nommées par l'identifiant de `especes.json`. Planches anciennes de préférence, sinon photos libres détourées par rembg (isnet). Chaque image a été regardée après détourage. Les licences CC BY et CC BY-SA demandent de citer l'auteur dans la page Sources (L9).
+97 espèces sur 99 ont une illustration détourée et une silhouette (`<id>` et `<id>-silhouette`), nommées par l'identifiant de `especes.json`. Planches anciennes de préférence, sinon photos libres détourées par rembg (isnet). Chaque image a été regardée après détourage. Les licences CC BY et CC BY-SA demandent de citer l'auteur dans la page Sources (L9).
 
 | Espèce | Auteur | Licence | Page |
 |---|---|---|---|
@@ -29,6 +29,7 @@
 | carpe-argentee | GreenLipstickLesbian (derivative work Ellicrum), photo cut-out | CC BY-SA | https://commons.wikimedia.org/wiki/File:Hypophthalmichthys_molitrix.png |
 | carpe-commune | Marcus Elieser Bloch | domaine public | maquettes/assets/fish |
 | carpe-grosse-tete | Dezidor | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Aristichthys_nobilis.jpg |
+| carpe-koi | Ewout Knoester (iNaturalist) | CC BY-SA | https://www.inaturalist.org/photos/723092505 |
 | chabot | Marcus Elieser Bloch, Ichthyologie ou Histoire naturelle des poissons, planche 39 (Cottus  | Domaine public | https://commons.wikimedia.org/wiki/File:Ichthyologie;_ou,_Histoire_naturelle_des_poissons_(Plate_39)_(6918333832).jpg |
 | chevesne | Marcus Elieser Bloch | domaine public | maquettes/assets/fish |
 | civelle | Bloch, Marcus Elieser | Public domain | https://commons.wikimedia.org/wiki/File:Ichthyologie;_ou,_Histoire_naturelle_des_poissons_(Plate_73)_(7064431283).jpg |
@@ -101,8 +102,7 @@
 | vandoise | Marcus Elieser Bloch, Ichthyologie ou Histoire naturelle des poissons, pl. 97 (Cyprinus le | Public domain | https://commons.wikimedia.org/wiki/File:Ichthyologie;_ou,_Histoire_naturelle_des_poissons_(Plate_97)_(6918367588).jpg |
 | vandoise-du-bearn | Julien Renoult (iNaturalist) | CC BY | https://www.inaturalist.org/photos/553890205 |
 
-## Encore sans image (3)
-- carpe-koi (Carpe koï) : recherche en cours ; la planche Kohaku de Commons est vue de dessus et perd ses nageoires au détourage.
+## Encore sans image (2)
 - vandoise-rostree (Vandoise rostrée) : aucune image libre (iNaturalist et Openverse n'ont que du NC/ND, catégorie Commons vide).
 - hybrides (Hybrides de poissons) : entrée générique, pas d'image unique possible ; l'app montre la silhouette générique.
 
