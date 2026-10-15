@@ -4,9 +4,9 @@
  "departements": {
   "01": {
    "niveau": "partiel",
-   "confirmees": 189,
-   "a_verifier": 184,
-   "sha256": "680f9dc71e187355130f2f7320ac2b605c642e69eb4293ab730d0c5c9e34d4b9",
+   "confirmees": 320,
+   "a_verifier": 94,
+   "sha256": "cde7a9efa39464ffaab0d9618e42a024bc3470d6875c852b29160938cd9dd4b0",
    "expire_min": "2026-12-31"
   },
   "02": {
@@ -42,6 +42,34 @@
    "confirmees": 113,
    "a_verifier": 38,
    "sha256": "627b455951cb590da58dacb0a6dd3005779998d7b55c06b592c6e0ae9635b1f8",
+   "expire_min": "2026-12-31"
+  },
+  "07": {
+   "niveau": "partiel",
+   "confirmees": 295,
+   "a_verifier": 104,
+   "sha256": "511e50353951c6be89f5d4fc142994eda071027ca95c0619ebaa3ef2652677ae",
+   "expire_min": "2026-09-20"
+  },
+  "08": {
+   "niveau": "partiel",
+   "confirmees": 32,
+   "a_verifier": 31,
+   "sha256": "4c74d450e94b00a77a71cfb42be344e30345b4828b9745e6f0d7e718497bdbfc",
+   "expire_min": "2026-12-31"
+  },
+  "09": {
+   "niveau": "partiel",
+   "confirmees": 142,
+   "a_verifier": 166,
+   "sha256": "0ab24915108f3d8cf4379eebd04fbca2f28d67b2b1ae3a2fe765c4e1714fe55c",
+   "expire_min": "2026-12-31"
+  },
+  "10": {
+   "niveau": "partiel",
+   "confirmees": 174,
+   "a_verifier": 72,
+   "sha256": "88e632f7732d99be71e07d612b8709128db44f5d78476fa17544fbb9ea0822ba",
    "expire_min": "2026-12-31"
   },
   "44": {
