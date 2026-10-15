@@ -149,6 +149,13 @@
    "sha256": "ba162423bda42a10dba13787142199661a0bccbf6e17c1c9b979d16396d2809e",
    "expire_min": "2026-12-31"
   },
+  "53": {
+   "niveau": "partiel",
+   "confirmees": 212,
+   "a_verifier": 39,
+   "sha256": "f37859a73b4f93430fe3af3773d75dfec882bb92c7fecc1e948e4210a0a3b19b",
+   "expire_min": "2026-12-31"
+  },
   "60": {
    "niveau": "partiel",
    "confirmees": 0,
@@ -189,6 +196,13 @@
    "confirmees": 80,
    "a_verifier": 101,
    "sha256": "2e557343333c1c562cb016b3381a2aa675cae3ff0a5d5fc2032541613d5437fe",
+   "expire_min": "2026-12-31"
+  },
+  "92": {
+   "niveau": "partiel",
+   "confirmees": 25,
+   "a_verifier": 60,
+   "sha256": "2785010c4d5f5b3d290212ad4753e504e3f7c56e4c06b6a0e5119e0814a40790",
    "expire_min": "2026-12-31"
   },
   "93": {
