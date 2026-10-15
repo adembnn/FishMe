@@ -1,0 +1,13 @@
+# Jamais dans git : photos, jeux découpés, modèles, journaux de sortie
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.mlmodel
+*.mlpackage
+*.npy
+*.pt
+jeu-prepare/
+sortie/
+__pycache__/
+.pytest_cache/
