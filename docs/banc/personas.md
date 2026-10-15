@@ -47,7 +47,7 @@ Alias utilisés dans `.claude/agents/banc-utilisateur.md` : « débutant » = fi
 - Mesure le contraste : 4,5:1 jusqu'à 17 pt, 3:1 à 18 pt ou en gras (même page).
 - Cherche l'omission : « l'omission par design » est dans les notes d'Adem (`docs/kickoff/0-cadrage.md`). Apple a primé en 2026 Tide Guide pour « the Liquid Glass integration, aquatic theme, and sky-matching palette » et grug pour « a small but meaningful moment » (https://apple.com/newsroom/2026/06/apple-reveals-winners-of-the-2026-apple-design-awards/ ; `docs/reports/eval-mwm.md` §5).
 - Refuse les tics qu'Adem a listés : dégradé violet, hero centré, cartes identiques, dashboard, « plateforme qui aide X » (section Créativité de son CLAUDE.md partagé, dépôt claude-config ; `docs/kickoff/0-cadrage.md`, « Interdits d'office »).
-- Repère ce qui fait « projet étudiant » : cadre jaune ou holographique, marqueurs MapKit par défaut, Live Activity au gabarit par défaut, texte juridique qui mange l'écran du verdict (`docs/reports/eval-mwm.md` §5, avis d'un agent, pas une mesure) [?].
+- Repère ce qui fait « projet étudiant » : cadre jaune, reflet holographique ailleurs que sur les cartes rares et légendaires (Adem, 15 oct.), marqueurs MapKit par défaut, Live Activity au gabarit par défaut, texte juridique qui mange l'écran du verdict (`docs/reports/eval-mwm.md` §5, avis d'un agent, pas une mesure) [?].
 
 **Déteste** : badges et compteurs empilés, écrans de « plateforme » (HookPoint : « No dashboards. No social feed », rapport, recommandation n° 1), quatre raretés qu'on ne distingue pas (« cartes identiques », règle d'Adem ci-dessus).
 
