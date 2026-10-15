@@ -84,11 +84,21 @@
     "ask": [
       "Bash(scripts/envoi.sh *)",
       "Bash(./scripts/envoi.sh *)",
-      "Bash(bash scripts/envoi.sh *)"
+      "Bash(bash scripts/envoi.sh *)",
+      "mcp__console-mwm-ai__submit_store_version_for_review",
+      "mcp__console-mwm-ai__manage_store_release",
+      "mcp__console-mwm-ai__send_store_listing",
+      "mcp__console-mwm-ai__create_store_version",
+      "mcp__console-mwm-ai__publish_legal_document",
+      "mcp__console-mwm-ai__reply_to_review",
+      "mcp__console-mwm-ai__update_app_store_screenshots",
+      "mcp__console-mwm-ai__update_app_store_header",
+      "mcp__console-mwm-ai__publish_landing_page"
     ]
   },
   "enabledMcpjsonServers": [
-    "XcodeBuildMCP"
+    "XcodeBuildMCP",
+    "console-mwm-ai"
   ],
   "hooks": {
     "SessionStart": [
