@@ -14,7 +14,7 @@ Reprend les lignes de `docs/app-store.md` et les prérequis de `docs/fiches/S1.m
 | [ ] | Questionnaire d'âge et « App Privacy » : réponses préparées | **brouillon prêt** : `confidentialite-spark-flash.md` §2 et §3 ; clic dans App Store Connect (rôle App Manager) à faire | |
 | [ ] | Liste des fonctions réellement dans le build, refaite à la porte 3, validée par Adem | **liste à cocher prête** : `fonctions-du-build.md` ; liste provisoire = les 9 étapes E1 à E9 de `parcours-demo.md` avec les fonctions du 15 oct. après-midi, **non vérifiées dans un build** [?] | |
 | [ ] | Vendeur légal, contact, prix en euros (colonne France) | à faire : question n° 8 à MWM + lecture de la colonne France | |
-| [ ] | Bouton « photo d'exemple » dans TestFlight | à faire : B le confirme à l'écran | |
+| [ ] | Bouton « photo d'exemple » dans TestFlight | libellé « Essayer avec une photo d'exemple » lu dans `lot/prise` (`PriseRacineView.swift:78`) ; à confirmer à l'écran par B | |
 | [ ] | Liste écrite de MWM sur Spark Flash | à faire : questions n° 1 à 7 de `confidentialite-spark-flash.md` | message de MWM à ranger dans `store/` |
 
 ## Check-list de `docs/app-store.md`
@@ -32,7 +32,7 @@ Reprend les lignes de `docs/app-store.md` et les prérequis de `docs/fiches/S1.m
 | [ ] | 8 | Textes d'autorisation en français | hors `store/` (A, L0) ; à relire sur le build [?] | |
 | [ ] | 9 | `ITSAppUsesNonExemptEncryption` = NON | hors `store/` ; confirmation du SDK : question n° 7 à MWM | |
 | [ ] | 10 | Abonnements : seuls les produits montrés sont joints | hors `store/` ; texte de paywall vu seulement dans le code de `origin/lot/abonnement` (non fusionné, non vu sur iPhone) [?] ; mensuel retenu : pas choisi | |
-| [ ] | 11 | Notes pour le relecteur, en anglais | **brouillon prêt**, 3060 octets, premier lancement et toise ajoutés : `notes-relecteur-en.md` ; manquent : coordonnées du quai de Charenton, lien de la vidéo (B), couverture des règles, contact, vérification sur le build | |
+| [ ] | 11 | Notes pour le relecteur, en anglais | **brouillon prêt**, 3420 octets, boutons relus dans le code des lots (prise, session, abonnement, premier-pas) : `notes-relecteur-en.md` ; manquent : coordonnées du quai de Charenton, lien de la vidéo (B), couverture des règles, contact, vérification sur le build | |
 | [ ] | 12 | Disponibilité France, droits, sortie manuelle | à faire avec MWM | |
 | [ ] | 13 | TestFlight | hors `store/` (A) | |
 | [ ] | 14 | Envoi à la relecture | à faire sur le oui d'Adem ; `get_store_submission` doit ne lister ni `blockers` ni `missing` | |
@@ -48,7 +48,7 @@ Reprend les lignes de `docs/app-store.md` et les prérequis de `docs/fiches/S1.m
 
 | Test | Résultat au 15 oct. |
 |---|---|
-| 4. Notes ≤ 4000 octets | 3060 octets (Python) : OK pour le brouillon |
+| 4. Notes ≤ 4000 octets | 3420 octets (Python) : OK pour le brouillon |
 | 5. `grep` des marques, des mots interdits, de les autres mots interdits sur `store/` | zéro résultat à chaque commit ; la recherche des marqueurs provisoires de la commande du test 5 est aussi vide, mais les crochets `[...]` et `[?]` du texte restent à remplir avant l'envoi |
 | 5. Dernier `grep` sur `App/` (« viendra », « bientôt », « prochainement ») | hors `store/`, à faire à l'archive |
 | 6. Relecture par S, phrase par phrase contre les captures | à faire après le build ; son nom ira dans le message du commit |
