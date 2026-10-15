@@ -197,8 +197,9 @@ def verifier_especes():
         for c in e.get("confusions", []):
             if c.get("avec") not in ids:
                 err(f"especes.json : {e['id']} confusion avec {c.get('avec')} inconnue")
-    if len(esp) < 101:
-        manque(f"especes.json : {len(esp)} entrées sur 101 (la liste de reconnaissance de 101 entrées et 66 classes est absente)")
+    # 101 entrées de la liste de reconnaissance, moins les 2 classes du modèle (« autre poisson », « pas un poisson ») qui ne sont pas des espèces.
+    if len(esp) < 99:
+        manque(f"especes.json : {len(esp)} espèces sur 99 (liste de reconnaissance : 101 entrées dont 2 classes du modèle)")
     if esp and not any(e["confusions"] for e in esp):
         manque("especes.json : aucune confusion renseignée")
     return {e["id"] for e in esp}
