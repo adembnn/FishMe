@@ -1,0 +1,82 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=393"><title>FishMe - Taille sur toise</title>
+<link rel="stylesheet" href="natif.css">
+<style>
+body{position:relative;font-variant-numeric:tabular-nums}
+.photo{position:absolute;left:0;right:0;top:0;height:580px;overflow:hidden;
+ background:
+  radial-gradient(120% 70% at 30% 20%,rgba(255,255,255,.10),transparent 60%),
+  linear-gradient(175deg,#4B5A66,#2E3B46 70%,#27333D)}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,32,.45),transparent 22%,transparent 70%,rgba(8,20,32,.35))}
+.statut{color:#fff}
+.verre{position:absolute;display:grid;place-items:center;background:rgba(255,255,255,.2);backdrop-filter:blur(22px) saturate(1.4);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 2px 12px rgba(0,0,0,.18);color:#fff;z-index:20}
+.retour{left:16px;top:62px;width:44px;height:44px;border-radius:50%}
+.titre{left:50%;top:62px;height:44px;margin-left:-45px;width:90px;border-radius:999px;font:900 17px/1 var(--police)}
+.fish{position:absolute;left:31px;top:316px;width:322px;filter:drop-shadow(0 10px 8px rgba(0,0,0,.4));z-index:5}
+.toise{position:absolute;left:0;right:0;top:396px;height:74px;z-index:3}
+.cadre{position:absolute;left:14px;right:14px;top:298px;height:214px;z-index:6;pointer-events:none}
+.cadre i{position:absolute;width:26px;height:26px;border:3px solid rgba(255,255,255,.9)}
+.cadre .a{left:0;top:0;border-right:0;border-bottom:0;border-radius:12px 0 0 0}
+.cadre .b{right:0;top:0;border-left:0;border-bottom:0;border-radius:0 12px 0 0}
+.cadre .c{left:0;bottom:0;border-right:0;border-top:0;border-radius:0 0 0 12px}
+.cadre .d{right:0;bottom:0;border-left:0;border-top:0;border-radius:0 0 12px 0}
+.mesure{position:absolute;left:0;top:0;z-index:8}
+.lecture{position:absolute;left:0;right:0;top:138px;text-align:center;color:#fff;z-index:9;font:900 64px/1 var(--police);letter-spacing:-.02em;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+.lecture small{font-size:34px;font-weight:800;margin-left:4px;opacity:.9}
+.puce{left:50%;top:214px;height:32px;padding:0 14px 0 10px;margin-left:-72px;width:144px;border-radius:999px;font:800 14px/1 var(--police);gap:6px;display:flex;align-items:center;justify-content:center}
+.feuille{position:absolute;left:0;right:0;top:536px;bottom:0;background:var(--surface);border-radius:32px 32px 0 0;box-shadow:0 -8px 30px rgba(8,42,76,.18);z-index:30;padding:26px 24px 0}
+.poids{display:flex;align-items:center;justify-content:space-between;height:64px}
+.poids .n{font:900 44px/1 var(--police);letter-spacing:-.02em;color:var(--nuit)}
+.poids .n small{font-size:20px;font-weight:800;color:var(--encre-douce);margin-left:3px}
+.est{display:flex;align-items:center;gap:6px;height:32px;padding:0 16px;border-radius:999px;background:var(--marine-doux);color:var(--marine);font:800 14px/1 var(--police)}
+.btns{position:absolute;left:24px;right:24px;top:116px;display:flex;flex-direction:column;gap:10px}
+.btns .btn{min-height:56px;font-size:18px}
+.btn.secondaire{box-shadow:none;background:var(--tuile)}
+.accueil{background:var(--encre)}
+.statut .d{display:flex;gap:6px;align-items:center}
+</style></head><body>
+<div class="photo"></div>
+<div class="statut"><span>9:41</span><span class="d"><svg width="18" height="12" viewBox="0 0 18 12" fill="#fff"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg width="26" height="13" viewBox="0 0 26 13"><rect x=".5" y=".5" width="22" height="12" rx="3.5" fill="none" stroke="#fff" opacity=".5"/><rect x="2" y="2" width="19" height="9" rx="2.2" fill="#fff"/><rect x="24" y="4.5" width="1.6" height="4" rx=".8" fill="#fff" opacity=".6"/></svg></span></div><div class="ilot"></div>
+
+<button class="verre retour" aria-label="Retour"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2 2 10l8 8"/></svg></button>
+<div class="verre titre">Taille</div>
+
+<div class="cadre"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i></div>
+
+<div class="lecture">62<small>cm</small></div>
+<div class="verre puce"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5h12v5H2zM5 5.5v2.5M8 5.5v3M11 5.5v2.5"/></svg>lu sur la toise</div>
+
+<svg class="mesure" width="393" height="580" viewBox="0 0 393 580">
+ <!-- ligne de mesure museau (x=350) / queue (x=34) -->
+ <g stroke="#fff" stroke-width="3" stroke-linecap="round" transform="translate(0,22)">
+  <line x1="34" y1="274" x2="34" y2="352" stroke-dasharray="2 6" opacity=".8"/>
+  <line x1="350" y1="274" x2="350" y2="352" stroke-dasharray="2 6" opacity=".8"/>
+ </g>
+ <g transform="translate(0,22)" stroke="#fff" stroke-width="3.5" stroke-linecap="round" filter="drop-shadow(0 1px 3px rgba(0,0,0,.4))">
+  <line x1="34" y1="262" x2="350" y2="262"/>
+  <line x1="34" y1="252" x2="34" y2="272"/>
+  <line x1="350" y1="252" x2="350" y2="272"/>
+ </g>
+ <circle cx="192" cy="284" r="5" fill="#fff"/>
+</svg>
+
+<img class="fish" src="img/brochet.webp" alt="Brochet">
+<svg class="toise" id="toise" width="393" height="74" viewBox="0 0 393 74"></svg>
+
+<section class="feuille">
+ <div class="poids"><div class="n">≈ 1,6<small>kg</small></div>
+  <div class="est">estimé</div></div>
+ <div class="btns"><button class="btn principal">Confirmer 62 cm</button><button class="btn secondaire">Corriger</button></div>
+</section>
+<div class="accueil"></div>
+<script>
+// toise : 0 cm a x=34, 62 cm a x=350 -> 5,097 px/cm
+var s=316/62,x0=34,h='';
+h+='<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6F4EF"/><stop offset="1" stop-color="#DAD6CC"/></linearGradient></defs>';
+h+='<rect x="-4" y="6" width="401" height="64" fill="url(#g)"/><rect x="-4" y="6" width="401" height="2" fill="#fff" opacity=".8"/>';
+for(var c=0;c<=72;c++){var x=x0+c*s;if(x>393)break;
+ var L=c%10==0?30:(c%5==0?21:12);
+ h+='<line x1="'+x.toFixed(1)+'" y1="8" x2="'+x.toFixed(1)+'" y2="'+(8+L)+'" stroke="#0E1A26" stroke-width="'+(c%10==0?2:1.2)+'"/>';
+ if(c%10==0)h+='<text x="'+x.toFixed(1)+'" y="62" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="900" font-size="17" fill="#0D4A85">'+c+'</text>';}
+document.getElementById('toise').innerHTML=h;
+</script>
+</body></html>
