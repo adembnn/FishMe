@@ -158,9 +158,9 @@ Message typique : « No signing certificate » ou « Cloud signing permission er
    Remplis les trois valeurs toi-même (`ASC_KEY_PATH` = chemin complet du `.p8`). Ne les colle jamais dans un chat ni dans Claude Code. `.env` et `*.p8` sont déjà dans `.gitignore`.
 4. Relance `scripts/envoi.sh`. Quand les trois valeurs sont remplies, il les utilise ; sinon il garde le compte Xcode.
 
-## Sous Linux (la session cloud de C)
+## Sous Linux (une session cloud, de B pour `Core` ou d'A pour S1)
 
-C n'a pas de Mac et n'a rien de cette page à installer. Dans une session cloud, Claude Code charge le serveur de `.mcp.json` sans poser de question et Node le démarre, mais tous ses outils échouent (`spawn xcrun ENOENT`, `MCPBRIDGE_NOT_FOUND`) faute de Xcode. Il ne fait aucun mal, mais il ne sert à rien. Pour l'éteindre, C crée le fichier `.claude/settings.local.json` avec `{"disabledMcpjsonServers": ["XcodeBuildMCP"]}`. `scripts/docteur.sh` y contrôle autre chose : Docker, l'image `swift:6.4`, `gh` et Python ; la réparation est `scripts/cloud-pret.sh`. `scripts/envoi.sh` refuse de démarrer sous Linux, avec un message clair.
+Une session cloud n'a pas de Mac et rien de cette page à installer. Dans une session cloud, Claude Code charge le serveur de `.mcp.json` sans poser de question et Node le démarre, mais tous ses outils échouent (`spawn xcrun ENOENT`, `MCPBRIDGE_NOT_FOUND`) faute de Xcode. Il ne fait aucun mal, mais il ne sert à rien. Pour l'éteindre, la personne de la session (B ou A) crée le fichier `.claude/settings.local.json` avec `{"disabledMcpjsonServers": ["XcodeBuildMCP"]}`. `scripts/docteur.sh` y contrôle autre chose : Docker, l'image `swift:6.4`, `gh` et Python ; la réparation est `scripts/cloud-pret.sh`. `scripts/envoi.sh` refuse de démarrer sous Linux, avec un message clair.
 
 ## Si ça coince
 

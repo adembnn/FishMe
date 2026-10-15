@@ -54,7 +54,7 @@ Mon choix : option 1, avec le verdict « tu peux la garder » toujours gratuit (
 | spot_opened | E2 | origine (osm, maison, ofb) | intérêt pour la fiche |
 | capture_started | E5 | voie (ia, manuel, import) | part de l'IA face à la grille |
 | card_created | E6, E9 | rang (1 à 10+), type (prise, bredouille), voie | rang 1 = le jalon d'activation unique |
-| paywall_viewed, paywall_dismissed, purchase_started, restore_tapped | E7 | variante, offre (1 mois, 7 jours) | fuite avant l'essai (repère MWM : 5 à 15 %) |
+| paywall_viewed, paywall_dismissed, purchase_started, restore_tapped | E7 | variante, offre (produit réel : annuel du tarif fondateur, mensuel avec 1 semaine d'essai) | fuite avant l'essai (repère MWM : 5 à 15 %) |
 | trial_started, paid | E7 | variante | essai vers payant (repère MWM : 40 à 70 %, [glossaire](https://mwm.ai/glossary/paywall)) ; viennent des achats si l'option est activée [?], ne pas doubler |
 | session_started, session_ended | E4 | rang de sortie (2 à 10+), avec_prise, durée en tranches | retour à la 2e et à la 10e sortie |
 | invite_sent, invite_accepted | E8 | aucune | seulement si E8 est dans le build |
