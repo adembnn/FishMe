@@ -1,0 +1,41 @@
+{
+  "_commentaire": "Configuration du pipeline de rarete Bredouille. Chemins relatifs a ce fichier.",
+  "api": {
+    "base": "https://hubeau.eaufrance.fr/api/v1/etat_piscicole",
+    "pause_s": 0.4,
+    "timeout_s": 240,
+    "retries": 5,
+    "backoff_s": 5,
+    "page_size": 20000,
+    "max_requests_par_execution": 400,
+    "user_agent": "bredouille-data-pipeline/0.1 (hackathon ESSEC; donnees OFB/Hub'Eau, Licence Ouverte 2.0)"
+  },
+  "since": 2010,
+  "departements_pilotes": ["95", "75", "78", "92", "71", "69", "33", "31", "13", "29", "74"],
+  "cache_dir": "cache",
+  "species_path": "../../PecheCore/Sources/PecheCore/Resources/Data/species.json",
+  "output_dir": "../../PecheCore/Sources/PecheCore/Resources/Data/departments",
+  "reports_dir": "reports",
+  "classes": [
+    {"id": 1, "cle": "commune", "libelle": "Commune"},
+    {"id": 2, "cle": "peu_commune", "libelle": "Peu commune"},
+    {"id": 3, "cle": "rare", "libelle": "Rare"},
+    {"id": 4, "cle": "tres_rare", "libelle": "Tres rare"},
+    {"id": 5, "cle": "remarquable", "libelle": "Remarquable"}
+  ],
+  "seuils": {
+    "profil_actif": "B",
+    "profils": {
+      "A": [0.30, 0.10, 0.03, 0.01],
+      "B": [0.30, 0.12, 0.04, 0.01]
+    },
+    "_commentaire": "Un profil = 4 bornes basses (commune, peu commune, rare, tres rare) sur freq_ops ; en dessous de la derniere : remarquable."
+  },
+  "fiabilite": {"min_stations": 10, "min_operations": 20},
+  "plafond_milieu": {"plan_eau": 2},
+  "fusion_codes": {
+    "CCO": ["CCO", "CMI", "CCU"]
+  },
+  "licence": "Licence Ouverte 2.0",
+  "source": "OFB / ASPE via Hub'Eau (API etat_piscicole)"
+}
