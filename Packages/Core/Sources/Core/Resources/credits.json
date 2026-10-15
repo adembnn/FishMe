@@ -26,7 +26,7 @@
       "source_url": "https://github.com/gregoiredavid/france-geojson",
       "date_variable": false,
       "verifie_page": true,
-      "note": "README de france-geojson : INSEE pour les noms et codes (millesime 2018), IGN Admin Express COG pour les traces (edition 2018), renvoi aux conditions d'Admin Express (Licence ouverte). La page cartes.gouv.fr d'Admin Express n'a pas rendu sa licence : a relire."
+      "note": "README de france-geojson : INSEE pour les noms et codes (millesime 2018), IGN Admin Express COG pour les traces (edition 2018), renvoi aux conditions d'Admin Express (Licence ouverte). La page cartes.gouv.fr d'Admin Express n'a pas rendu sa licence : a relire. Fichier installe le 15 oct. 2026 : 96 departements (metropole et 2A/2B, sans l'outre-mer), coordonnees arrondies a 4 decimales."
     },
     {
       "id": "ofb-hubeau-poissons",
