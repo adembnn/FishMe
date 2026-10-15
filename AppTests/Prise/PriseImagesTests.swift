@@ -3,6 +3,7 @@ import UIKit
 import Core
 @testable import BuildChallenge
 
+@MainActor
 struct PriseImagesTests {
     /// Compte les illustrations absentes de `App/Assets.xcassets/` et les nomme. Avec les faux de C0 il en manque : le vrai `Core` (L1, D1) et les images de D1 le font passer.
     @Test func toutesLesEspecesOntUneImage() {

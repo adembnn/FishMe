@@ -2,19 +2,19 @@ import CoreGraphics
 import Foundation
 
 /// Un chiffre lu sur la toise : sa position le long de l'axe (en pixels) et sa valeur en centimètres.
-struct RepereToise: Equatable {
+nonisolated struct RepereToise: Equatable, Sendable {
     var position: Double
     var valeurCm: Double
 }
 
 /// Un texte lu par Vision et son rectangle, en pixels de l'image, origine en haut à gauche.
-struct TexteLu: Equatable {
+nonisolated struct TexteLu: Equatable, Sendable {
     var texte: String
     var rect: CGRect
 }
 
 /// Droite « centimètres = pente × pixels + origine », ajustée sur les chiffres lus. Logique pure.
-struct ToiseCalibrage: Equatable {
+nonisolated struct ToiseCalibrage: Equatable, Sendable {
     enum Axe: Equatable { case horizontal, vertical }
 
     var axe: Axe

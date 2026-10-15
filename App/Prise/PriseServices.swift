@@ -14,7 +14,7 @@ struct PriseServices {
 }
 
 /// Où et quand : donné par la session (L5) via A.
-struct PriseContexte {
+nonisolated struct PriseContexte: Sendable {
     var coordonnee: Coordonnee
     var lieu: Lieu
     var lieuFlou: String?
@@ -24,12 +24,12 @@ struct PriseContexte {
 }
 
 /// Ce que l'écran rend quand le pêcheur termine : la prise (sans chemin de photo) et la photo entière, que L4 range.
-struct PriseConfirmee {
+nonisolated struct PriseConfirmee: Sendable {
     var prise: Prise
     var photo: Data
 }
 
 /// Reconnaissance de la version soumise tant que R1 n'a pas remis de modèle examiné : aucun score, la grille s'ouvre.
-struct IdentificationAbsente: IdentifieEspece {
+nonisolated struct IdentificationAbsente: IdentifieEspece {
     func identifier(photo: Data) async -> ResultatIdentification { .grille(raison: .aucunModele) }
 }

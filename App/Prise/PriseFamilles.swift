@@ -2,7 +2,7 @@ import Core
 
 /// Les 8 familles de la grille « autre espèce » (fiche L3). `especes.json` n'a pas de champ famille :
 /// le classement se fait ici sur l'identifiant. A demander à D1 : un champ `famille` dans `especes.json`, qui remplacerait ce fichier.
-enum PriseFamille: Int, CaseIterable, Sendable {
+nonisolated enum PriseFamille: Int, CaseIterable, Sendable {
     case salmonides, carnassiers, carpes, cyprinides, petitsDeFond, migrateurs, ecrevisses, grenouilles
 
     var titre: String {
