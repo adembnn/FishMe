@@ -30,6 +30,7 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 - Version soumise jeudi soir : les 9 étapes dans leur forme minimale ; mise à jour vendredi : écran verrouillé, coins publics, amis, règles téléchargées (`parcours-demo.md`).
 - Xcode 27.0, iOS 27.0, iPhone seul en portrait ; un paquet `Core` + un dossier par lot ; fusion par script local (`architecture.md`).
 - Deux textes qui se contredisent : la valeur la plus stricte, avec les deux sources (décidé par Adem le 15 oct., en attendant de savoir quel texte fait foi).
+- Règles lues par l'IA (décidé par Adem le 15 oct.) : l'app montre chaque règle avec sa source et sa citation, sans étiquette « non relue ». En coulisse, deux lectures indépendantes par département ; une ligne où elles divergent devient « vérifie l'arrêté ».
 - Rareté sur 10 ans en 4 niveaux (commun, peu commun, rare, légendaire) ; sous 20 pêches dans le département, calculée sur la région, et l'écran le dit.
 - La carte s'ouvre sur l'Île-de-France sans demander la position ; « Autour de moi » la demande.
 - Après la liste de contrôle, le pêcheur déclare « je la relâche » ou « je la garde » (ça compte pour le quota du jour) ; quand aucune ligne ne l'interdit, l'app écrit « aucune règle saisie ne l'interdit ; l'arrêté fait foi », jamais « tu peux la garder ».
@@ -37,7 +38,7 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 - Les fichiers fabriqués par script restent hors de git : publiés en pièce jointe d'une release privée.
 
 ## Questions pour Adem
-Le jury attaquera d'abord ce que l'app affiche sur la loi et ce qu'elle fait payer. Ces trois choix changent des écrans et des tests ; chacun a un défaut, et le travail avance sur ce défaut en attendant ta réponse.
+Le jury attaquera d'abord ce que l'app affiche sur la loi et ce qu'elle fait payer. Ces deux choix changent des écrans et des tests ; chacun a un défaut, et le travail avance sur ce défaut en attendant ta réponse.
 
 **1.** Sous quelle forme l'app montre-t-elle la règle pour une prise ?
 a. Un verdict : « tu peux la garder », « relâche-la », « vérifie l'arrêté »
@@ -51,9 +52,3 @@ b. Les sessions à partir de la 2e, paywall à la fin de la 1re juste après la 
 c. Une session gratuite par mois, illimité avec l'abonnement
 d. Sessions gratuites, cartes à collectionner payantes après la 1re session
 Ma reco : b, le paywall tombe à la maison, avec du réseau, et se voit dans la démo. Par défaut : b.
-
-**3.** Que montre l'app pour une règle lue par une IA mais pas encore relue par un humain ?
-a. La ligne avec la phrase exacte de l'arrêté et son lien, marquée « lue automatiquement, pas encore relue »
-b. Rien de local : le socle national et « règles locales : voir l'arrêté » avec le lien
-c. Comme a, mais seulement si deux lectures indépendantes trouvent la même valeur ; sinon comme b pour cette ligne
-Ma reco : c, puis relecture humaine des départements les plus pêchés en premier. Par défaut : c.

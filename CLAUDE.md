@@ -10,6 +10,7 @@ Les documents que le plan cite sans chemin (`lots.md`, `fiches/L3.md`, `reports/
 - Ne jamais écrire « Poké », « Pokémon » ou « Pokédex » dans l'app, ses textes ou sa fiche App Store (marques de Nintendo).
 - Règles : socle national partout, plus 75, 92, 93, 94, 77 saisis à la main, chaque règle avec sa source. Hors de ces départements, jamais « tu peux la garder ».
 - L'app vise toute la France (Adem, 15 oct. 11h13) : les règles doivent couvrir tous les départements et toutes les espèces, au tronçon. Méthode en essai sur 3 départements pilotes (01, 87, 44) : `/mnt/project-files/build/regles/consigne-departement.md`.
+- Règles lues par l'IA (Adem, 15 oct. 11h34, « c'est pas un sujet ») : l'app montre chaque règle avec sa source et sa citation, sans étiquette « non relue ». Contrôle interne : deux lectures indépendantes par département, seules les lignes identiques sont chargées, une ligne en désaccord devient « vérifie l'arrêté ».
 - Deux textes qui se contredisent sur une taille : on affiche la plus stricte avec les deux sources (Adem, 15 oct. 11h13), en attendant de savoir quel texte fait foi (recherche en cours, `reports/qui-est-maitre.md`). Cas en cours : brochet, sandre, black-bass dans 75, 92, 93, 94 (arrêtés 2025 : 50/40/30 cm ; avis 2026 : 60/50/40 cm).
 - L'IA ne décide jamais si un poisson peut être gardé : elle propose l'espèce, l'utilisateur confirme, la table sourcée donne le verdict.
 - Aucun coin de pêche exact ne quitte l'iPhone. Les photos enregistrées n'ont pas de GPS.
