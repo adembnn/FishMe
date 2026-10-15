@@ -2,6 +2,20 @@
  "version": "2026-10-15.1",
  "date": "2026-10-15",
  "departements": {
+  "01": {
+   "niveau": "partiel",
+   "confirmees": 189,
+   "a_verifier": 184,
+   "sha256": "680f9dc71e187355130f2f7320ac2b605c642e69eb4293ab730d0c5c9e34d4b9",
+   "expire_min": "2026-12-31"
+  },
+  "44": {
+   "niveau": "partiel",
+   "confirmees": 94,
+   "a_verifier": 272,
+   "sha256": "ba162423bda42a10dba13787142199661a0bccbf6e17c1c9b979d16396d2809e",
+   "expire_min": "2026-12-31"
+  },
   "60": {
    "niveau": "partiel",
    "confirmees": 0,
@@ -21,6 +35,13 @@
    "confirmees": 42,
    "a_verifier": 4,
    "sha256": "5d952dbb9b5cc959fe73971dca9e79b4caf24292a0c4bd5feb4c564be6d73b85",
+   "expire_min": "2026-12-31"
+  },
+  "87": {
+   "niveau": "partiel",
+   "confirmees": 47,
+   "a_verifier": 89,
+   "sha256": "3f4b4fad346cc7726853a4de5b8990e5a0b5e5bf43bca71ea81d125dfcb00474",
    "expire_min": "2026-12-31"
   },
   "91": {
