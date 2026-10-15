@@ -1,7 +1,7 @@
 import Foundation
 
 /// Une station de pêche électrique de l'OFB (`stations-especes.json`, fabriqué par D2 et jamais commité).
-struct StationOFB: Sendable, Equatable {
+struct StationBrute: Sendable, Equatable {
     var id: String
     var coordonnee: Coordonnee
     var dep: String
@@ -13,7 +13,7 @@ struct StationOFB: Sendable, Equatable {
     /// Code Sandre de l'espèce vers nombre de pêches où elle est vue.
     var vues: [String: Int]
 
-    static func decoder(_ donnees: Data) -> [StationOFB] {
+    static func decoder(_ donnees: Data) -> [StationBrute] {
         guard let json = try? JSONSerialization.jsonObject(with: donnees) else { return [] }
         let liste: [[String: Any]]
         if let l = json as? [[String: Any]] { liste = l } else if let o = json as? [String: Any], let l = o["stations"] as? [[String: Any]] { liste = l } else { return [] }
@@ -22,7 +22,7 @@ struct StationOFB: Sendable, Equatable {
                   let lat = (s["lat"] as? NSNumber)?.doubleValue, let lon = (s["lon"] as? NSNumber)?.doubleValue else { return nil }
             var vues: [String: Int] = [:]
             if let v = s["vues"] as? [String: Any] { for (k, n) in v { if let n = (n as? NSNumber)?.intValue { vues[k] = n } } }
-            return StationOFB(id: id, coordonnee: Coordonnee(latitude: lat, longitude: lon), dep: (s["dep"] as? String) ?? "inconnu",
+            return StationBrute(id: id, coordonnee: Coordonnee(latitude: lat, longitude: lon), dep: (s["dep"] as? String) ?? "inconnu",
                               eau: s["eau"] as? String, codeEau: (s["code_eau"] as? String) ?? (s["code_eau"] as? NSNumber)?.stringValue,
                               peches: (s["peches"] as? NSNumber)?.intValue ?? 0, derniere: (s["derniere"] as? NSNumber)?.intValue ?? 0, vues: vues)
         }

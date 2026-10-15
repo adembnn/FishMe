@@ -23,11 +23,11 @@ public struct MoteurConditions: ServiceConditions {
     let soleil: MoteurSoleil
     let geo: MoteurGeo?
     let stationsHydro: [StationHydroDonnee]
-    let stationsOFB: [StationOFB]
+    let stationsOFB: [StationBrute]
     let position: Coordonnee?
     let horloge: @Sendable () -> Date
 
-    init(soleil: MoteurSoleil = MoteurSoleil(), geo: MoteurGeo? = nil, stationsHydro: [StationHydroDonnee] = [], stationsOFB: [StationOFB] = [],
+    init(soleil: MoteurSoleil = MoteurSoleil(), geo: MoteurGeo? = nil, stationsHydro: [StationHydroDonnee] = [], stationsOFB: [StationBrute] = [],
          position: Coordonnee? = nil, horloge: @escaping @Sendable () -> Date = { Date() }) {
         self.soleil = soleil
         self.geo = geo
@@ -140,7 +140,7 @@ public struct MoteurConditions: ServiceConditions {
     }
 
     public func pointMeteo(spot: Coordonnee) -> Coordonnee {
-        var meilleure: (StationOFB, Double)?
+        var meilleure: (StationBrute, Double)?
         for s in stationsOFB {
             let d = Geodesie.distanceM(spot, s.coordonnee)
             if d <= Self.rayonPointMeteoM, d < (meilleure?.1 ?? .infinity) { meilleure = (s, d) }
