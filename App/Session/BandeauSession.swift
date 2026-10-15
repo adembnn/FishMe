@@ -20,12 +20,12 @@ struct BoutonCommencerSession: View {
 /// Le bandeau de la session en cours. `ligneConditions` est l'emplacement de L12 (vide par défaut) : elle disparaît
 /// aux tailles de texte d'accessibilité et ne passe jamais devant le chrono, la fin légale ni « Ajouter une prise ».
 struct BandeauSession<LigneConditions: View>: View {
-    let moteur: MoteurSession
+    let moteur: SuiviSession
     let ajouterPrise: () -> Void
     let ligneConditions: LigneConditions
     @Environment(\.dynamicTypeSize) private var tailleTexte
 
-    init(moteur: MoteurSession, ajouterPrise: @escaping () -> Void,
+    init(moteur: SuiviSession, ajouterPrise: @escaping () -> Void,
          @ViewBuilder ligneConditions: () -> LigneConditions) {
         self.moteur = moteur
         self.ajouterPrise = ajouterPrise
@@ -93,7 +93,7 @@ struct BandeauSession<LigneConditions: View>: View {
 }
 
 extension BandeauSession where LigneConditions == EmptyView {
-    init(moteur: MoteurSession, ajouterPrise: @escaping () -> Void) {
+    init(moteur: SuiviSession, ajouterPrise: @escaping () -> Void) {
         self.init(moteur: moteur, ajouterPrise: ajouterPrise) { EmptyView() }
     }
 }

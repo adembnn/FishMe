@@ -40,7 +40,7 @@ struct FinDeSession: Equatable {
 }
 
 @MainActor @Observable
-final class MoteurSession {
+final class SuiviSession {
     private(set) var enCours: SessionEnCours?
     private(set) var derniereFin: FinDeSession?
     private(set) var spotGratuit: Spot?
@@ -184,7 +184,7 @@ final class MoteurSession {
 
         var paywall = ModePaywall.aucun
         if let spot = spotGratuit {
-            paywall = session.acces(sessionsTerminees: ancien, spot: spot, spotGratuit: spot, abonne: abonne).paywall
+            paywall = session.acces(sessionsTerminees: ancien + 1, spot: spot, spotGratuit: spot, abonne: abonne).paywall
         }
         // Décidé par Adem le 15 oct. : la fin de la 1re session ouvre le paywall, qui se ferme.
         if paywall == .aucun && ancien == 0 && !abonne { paywall = .quiSeFerme }
