@@ -11,6 +11,14 @@ Mesures réelles, faites dans le cloud le 15 oct. sur 22 648 photos télécharg�
 - **47 classes reconnues** (45 poissons, « pas un poisson », « autre poisson »). 13 espèces restent en grille faute de photos, plus l'apron (0 photo).
 - Seuils de R1 (top-3 ≥ 90 %, top-1 ≥ 70 %, ≥ 90 % de « pas un poisson » refusés) : **atteints sur les photos de prises**, pas encore sur les photos de terrain.
 
+## Mise à jour du 15 oct., 22h : modèle de l'app, Create ML, 36 000 photos
+- **Modèle retenu pour l'app** : DINOv2-S + notre tête, converti en Core ML (`../coreml/PoissonsDino-int8.mlpackage`, 21 Mo, Apache 2.0, sans Internet). Vérifié sur Mac avec Vision (.scaleFit) : **86,4 % en 1re proposition, 96,3 % dans les 3** sur 1 851 prises AFFiNe, 36 ms par photo. Confiance moyenne 0,68 quand il a raison, 0,35 quand il se trompe : seuil de départ 0,4.
+- **Create ML** (scenePrint v2, mêmes photos AFFiNe) : 67,9 % / 88,3 % (centerCrop ; 38,7 % en scaleFit). Gardé en comparaison seulement.
+- `eval6/` (32 000 photos, avec 6 852 prises allemandes et 1 936 black-bass texans) : toutes prises de pêcheurs hors AFFiNe 87 % (modèle cloud) et 81 % (DINOv2-S seul). 53 classes.
+- **Black-bass : attention.** Le score de 95 % de `eval6` est faux : les photos texanes ShareLunker portent toutes le même badge. Hors ShareLunker, 53 % (19 photos). Elles sont désormais exclues du test.
+- Les carnets « busa » / « tolstolobik » mêlent les deux carpes asiatiques : Fishial tranche entre les deux (`evaluer.py`).
+- Prises allemandes : le pêcheur (nom dans l'adresse du rapport) sert de photographe pour le test.
+
 ## Mise à jour du 15 oct., 18h30 : prises hongroises, tchèques, allemandes et photos américaines
 3 356 photos de plus (carnet de pêche hongrois haldorado, nachytano.cz, fisch-hitparade.de en partie, Flickr CC, domaine public USGS/USFWS) : 26 951 photos en tout. Mesure dans `eval4/` (et `scores.json`, `seuils.json` à la racine).
 - **Carpe argentée et hotu sortent de la grille** : carpe argentée 74 % en 1re proposition (94 % dans les 3), surtout confondue avec la carpe à grosse tête ; hotu 69 % (86 %), surtout confondu avec le barbeau. 51 classes reconnues.

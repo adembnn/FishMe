@@ -45,7 +45,9 @@ for i, L in enumerate(lignes):
     garde.append(i); y.append(c); grp.append(ph); src.append(ds)
 y = np.array(y); grp = np.array(grp); src = np.array([("affine" if s == "affine" else "unsplash" if s.startswith("unsplash") else "openverse" if s.startswith(("openverse", "public-flickr", "public-openverse")) else "peche" if s.startswith(("chytej", "fisch-hitparade", "peche-")) else "public" if s.startswith(("EOL", "public-")) or "eol" in s.lower() else "gbif") for s in src])
 # TEST FIXÉ : un photographe sur 4 (empreinte de son nom), jamais vu à l'entraînement
-test = np.array([int(hashlib.sha1(g.encode()).hexdigest(), 16) % 4 == 0 and s != "openverse" for g, s in zip(grp, src)])
+# ShareLunker (Texas) : toutes les photos portent le même badge, le test serait trop facile ; entraînement seulement
+brut = np.array([d for d in [meta.get(lignes[i]["f"], ("?", "?"))[1] for i in garde]])
+test = np.array([int(hashlib.sha1(g.encode()).hexdigest(), 16) % 4 == 0 and s != "openverse" and not b.startswith("public-texassharelunker") for g, s, b in zip(grp, src, brut)])
 # fuites : une photo de test presque identique à une photo d'entraînement est retirée du test
 Vg = VD[np.array(garde)]; tr_i = np.where(~test)[0]; fuites = 0
 for k in np.where(test)[0]:
