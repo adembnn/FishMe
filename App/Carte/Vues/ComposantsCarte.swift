@@ -3,7 +3,7 @@ import UIKit
 import Core
 
 /// L'illustration d'une espèce (posée dans `App/Assets.xcassets/` par A). Sans image : un poisson générique, jamais un blanc.
-struct ImageEspece: View {
+struct ImageEspeceCarte: View {
     let nom: String?
 
     var body: some View {
@@ -47,7 +47,7 @@ struct RangeeEspece: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            ImageEspece(nom: image)
+            ImageEspeceCarte(nom: image)
                 .frame(width: 56, height: 32)
             VStack(alignment: .leading, spacing: 3) {
                 Text(nom)

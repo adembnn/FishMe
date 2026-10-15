@@ -74,7 +74,7 @@ struct FiltreEspeceView: View {
                 ForEach(especes, id: \.espece.id) { e in
                     Button { choisir(e) } label: {
                         VStack(spacing: 6) {
-                            ImageEspece(nom: e.image)
+                            ImageEspeceCarte(nom: e.image)
                                 .frame(height: 44)
                             Text(e.nom)
                                 .font(PolicesCarte.legende())

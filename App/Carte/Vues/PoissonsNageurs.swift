@@ -43,7 +43,7 @@ struct PoissonsNageurs: View {
         let dx = cos(angle) * 22
         let dy = sin(angle * 1.3) * 7 + Double(indice - 1) * 9
         let versLaDroite = -sin(angle) * vitesse > 0
-        return ImageEspece(nom: image)
+        return ImageEspeceCarte(nom: image)
             .frame(width: 26, height: 14)
             .scaleEffect(x: versLaDroite ? -1 : 1, y: 1)
             .position(x: point.x + dx, y: point.y + dy - 18)

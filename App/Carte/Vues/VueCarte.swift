@@ -203,7 +203,7 @@ struct VueCarte: View {
             if let filtre = modele.filtre {
                 Button { modele.choisirFiltre(nil) } label: {
                     HStack(spacing: 8) {
-                        ImageEspece(nom: filtre.image).frame(width: 34, height: 20)
+                        ImageEspeceCarte(nom: filtre.image).frame(width: 34, height: 20)
                         Text(filtre.nom).font(PolicesCarte.detail())
                         Image(systemName: "xmark.circle.fill").accessibilityHidden(true)
                     }

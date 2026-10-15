@@ -9,12 +9,14 @@ final class GestionPosition: NSObject, CLLocationManagerDelegate {
     private(set) var statut: CLAuthorizationStatus
     private(set) var position: Coordonnee?
 
-    @ObservationIgnored private let manager = CLLocationManager()
+    @ObservationIgnored private let manager: CLLocationManager
     @ObservationIgnored private let reglages: UserDefaults
     /// Une seule redemande, au premier écran de carte (Adem, 15 oct.).
     @ObservationIgnored private static let cleRedemande = "carte.redemandeFaite"
 
     init(reglages: UserDefaults = .standard) {
+        let manager = CLLocationManager()
+        self.manager = manager
         self.reglages = reglages
         self.statut = manager.authorizationStatus
         super.init()
