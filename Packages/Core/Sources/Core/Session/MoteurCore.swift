@@ -29,7 +29,7 @@ public struct DonneesMoteur: Sendable {
     }
 
     /// Les fichiers embarqués dans le paquet. `dossierFabriques` : où `scripts/donnees.sh` a téléchargé `stations-especes.json`
-    /// et `rarete-departements.json` (jamais commités, donc absents du paquet) ; `reglesTelechargees` : la copie de L11.
+    /// `rarete-departements.json` et `stations-hydro.json` (jamais commités, donc absents du paquet) ; `reglesTelechargees` : la copie de L11.
     public static func embarque(dossierFabriques: URL? = nil, reglesTelechargees: URL? = nil) -> DonneesMoteur {
         func fabrique(_ nom: String) -> Data? {
             if let d = dossierFabriques, let donnees = try? Data(contentsOf: d.appendingPathComponent(nom)) { return donnees }
@@ -39,7 +39,7 @@ public struct DonneesMoteur: Sendable {
             departements: Ressources.donnees("departements", extension: "geojson"), lacs: Ressources.donnees("lacs", extension: "geojson"),
             especes: Ressources.donnees("especes"), longueurPoids: Ressources.donnees("longueur-poids"),
             stationsEspeces: fabrique("stations-especes.json"), rareteDepartements: fabrique("rarete-departements.json"),
-            stationsHydro: Ressources.donnees("stations-hydro"), credits: Ressources.donnees("credits"),
+            stationsHydro: fabrique("stations-hydro.json"), credits: Ressources.donnees("credits"),
             liensFederations: Ressources.donnees("liens-federations"), regles: .embarque(telechargees: reglesTelechargees))
     }
 }
