@@ -3,7 +3,7 @@ import ImageIO
 import UniformTypeIdentifiers
 
 /// Réécrit une image en PNG sans aucune métadonnée (ni GPS, ni EXIF).
-enum ImageSansGPS {
+nonisolated enum ImageSansGPS {
     enum Erreur: Error { case illisible, ecriture }
 
     static func nettoyer(_ donnees: Data) throws -> Data {

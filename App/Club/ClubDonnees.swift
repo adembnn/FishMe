@@ -20,7 +20,7 @@ struct LiensClub: Hashable {
 }
 
 /// Une carte du Pescedex déjà rendue par L4, passée par RootView.
-struct CarteAPartager: Identifiable, Transferable {
+nonisolated struct CarteAPartager: Identifiable, Transferable, Sendable {
     let id: String
     let titre: String
     let png: Data
@@ -32,14 +32,14 @@ struct CarteAPartager: Identifiable, Transferable {
     }
 }
 
-enum LiensOfficiels {
+nonisolated enum LiensOfficiels {
     static let carteDePeche = URL(string: "https://www.cartedepeche.fr")!
     static let federationNationale = URL(string: "https://www.federationpeche.fr")!
     static let vigilanceMeteoFrance = URL(string: "https://vigilance.meteofrance.fr")!
     static let vigicrues = URL(string: "https://www.vigicrues.gouv.fr")!
 }
 
-enum ContactClub {
+nonisolated enum ContactClub {
     /// Adresse réelle fournie par Adem ou MWM (écrite dans CLAUDE.md). Jamais inventée : vide, le test échoue.
     static let adresse = ""
 
