@@ -1,0 +1,1106 @@
+{
+ "version": "2026-10-15.1",
+ "departement": "national",
+ "niveau": "partiel",
+ "textes": [
+  {
+   "id": "t1",
+   "titre": "Code de l'environnement, R436-13",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850266",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "en vigueur depuis le 25/09/2010"
+  },
+  {
+   "id": "t2",
+   "titre": "Code de l'environnement, R436-14 5°",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022850261",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "en vigueur depuis le 25/09/2010"
+  },
+  {
+   "id": "t3",
+   "titre": "Code de l'environnement, L436-16 II",
+   "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006176589",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "en vigueur depuis le 25/08/2021"
+  },
+  {
+   "id": "t4",
+   "titre": "Code de l'environnement, R436-18",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416171",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "en vigueur depuis le 26/04/2019"
+  },
+  {
+   "id": "t5",
+   "titre": "Code de l'environnement, R436-21",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416184",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "en vigueur depuis le 26/04/2019"
+  },
+  {
+   "id": "t6",
+   "titre": "Code de l'environnement, R436-7",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "en vigueur depuis le 26/04/2019"
+  },
+  {
+   "id": "t7",
+   "titre": "Code de l'environnement, R436-6 et R436-7",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038416162",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "R436-6 en vigueur depuis le 01/08/2021 ; R436-7 depuis le 26/04/2019"
+  },
+  {
+   "id": "t8",
+   "titre": "Code de l'environnement, R436-23 I",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006188900",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "en vigueur depuis le 26/04/2019"
+  },
+  {
+   "id": "t9",
+   "titre": "Code de l'environnement, R436-71",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006176938",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "en vigueur depuis le 05/08/2005"
+  },
+  {
+   "id": "t10",
+   "titre": "Code de l'environnement, R436-6",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "en vigueur depuis le 01/08/2021 ; recoupé par service-public.gouv.fr F2117"
+  },
+  {
+   "id": "t11",
+   "titre": "Arrêté du 14 février 2018 relatif à la prévention de l'introduction et de la propagation des espèces animales exotiques envahissantes (art. 3 I)",
+   "url": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "art. 3 I, début lu ; suite non lue"
+  },
+  {
+   "id": "t12",
+   "titre": "Décret n° 2019-352 du 23 avril 2019 (art. 9, R436-21)",
+   "url": "https://faolex.fao.org/docs/pdf/Fra185742.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "lu par recoupement ; texte consolidé non lu"
+  }
+ ],
+ "eaux": [],
+ "regles": [
+  {
+   "id": "nat-hor-horaire",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "horaire",
+   "valeur": {
+    "avant_lever_min": 30,
+    "apres_coucher_min": 30,
+    "texte": "exception : carpe de nuit sur les parcours autorisés par arrêté préfectoral (R436-14 5°)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Pêche interdite plus d'une demi-heure avant le lever du soleil et plus d'une demi-heure après son coucher.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "La pêche ne peut s'exercer plus d'une demi-heure avant le lever du soleil, ni plus d'une demi-heure après son coucher.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-car-nuit-captivite",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "captivite et transport interdits de nuit : oui ; de : 30 min après le coucher du soleil ; a : 30 min avant son lever ; autorisation de nuit : par arrêté du préfet, parcours et période qu'il fixe"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit : seulement sur les parcours fixés par arrêté préfectoral ; de nuit, aucune carpe ne peut être gardée en captivité ni transportée.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Toutefois, depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, aucune carpe capturée par les pêcheurs amateurs aux lignes ne peut être maintenue en captivité ou transportée.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-car-transport-60",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "interdit : oui ; carpe plus de cm : 60 ; amende eur : 22500 ; visee : pêcheur amateur"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de plus de 60 cm : interdit de la transporter vivante.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "Sont punis d'une amende de 22 500 €, lorsque l'espèce concernée est la carpe commune (cyprinus carpio) et que la longueur du poisson est supérieure à soixante centimètres, les faits prévus aux 1° à 4° du I ainsi que le fait, pour un pêcheur amateur, de transporter vivant un tel poisson.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-bro-taille",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 50
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Brochet : 50 cm minimum.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : [...] 0,50 mètre pour le brochet ;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-san-taille",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 40
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Sandre : 40 cm minimum en 2e catégorie.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : [...] 0,40 mètre pour le sandre dans les eaux de la 2e catégorie ;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-bla-taille",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Black-bass : 30 cm minimum en 2e catégorie.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : [...] 0,30 mètre pour le black - bass dans les eaux de la 2e catégorie ;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-omb-taille",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2247"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Ombre commun : 30 cm minimum.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : [...] 0,30 mètre pour l'ombre commun et le corégone ;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-tru-taille",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2221",
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 23
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truites : 23 cm minimum.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : [...] 0,23 mètre pour les truites autres que la truite de mer, l'omble ou saumon de fontaine et l'omble chevalier ;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-aut-taille-absente",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2193",
+    "2238",
+    "2110",
+    "2133",
+    "2086",
+    "31041",
+    "2137",
+    "2096"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": null,
+    "texte": "aucune taille minimale ecrite : oui"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Perche, silure, carpe, gardon, brème, chevesne, tanche, barbeau : aucune taille minimale dans le code (la liste de R436-18 ne les cite pas).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "Les poissons, grenouilles et écrevisses des espèces précisées ci-après ne peuvent être pêchés et doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à :",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-sal-quota",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2221",
+    "2216",
+    "2247"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 10
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Salmonidés (truites, ombre) : 10 par jour au maximum.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Le nombre de captures de salmonidés autres que le saumon et, le cas échéant, la truite de mer, autorisé par pêcheur et par jour, est fixé à dix.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-car-quota",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151",
+    "2195",
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 3,
+    "texte": "dont brochet : 2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Sandre, brochet et black-bass : 3 par jour dont 2 brochets au maximum en 2e catégorie.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Dans les eaux classées en 2e catégorie, le nombre de captures autorisé de sandres, brochets et black-bass, par pêcheur de loisir et par jour, est fixé à trois, dont deux brochets maximum.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-aut-quota-absent",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2193",
+    "2238",
+    "2110",
+    "2133",
+    "2086",
+    "31041",
+    "2137",
+    "2096"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": null,
+    "texte": "aucune limite ecrite : oui"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Perche, silure, carpe, gardon, brème, chevesne, tanche, barbeau : aucun quota par jour dans le code (R436-21 ne vise que les salmonidés, brochet, sandre, black-bass).",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Le nombre de captures de salmonidés autres que le saumon et, le cas échéant, la truite de mer, autorisé par pêcheur et par jour, est fixé à dix.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-2e-ouv-generale",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2195",
+    "2193",
+    "2053",
+    "2238",
+    "2216",
+    "2110",
+    "2133",
+    "2086",
+    "31041",
+    "2137",
+    "2096"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "toute l'année"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 2e catégorie la pêche est ouverte toute l'année, sauf brochet, ombre et truite fario.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "Dans les eaux de 2e catégorie, la pêche est autorisée toute l'année, à l'exception de :",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-bro-ouv-2e",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre inclus"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Brochet en 2e catégorie : ouvert du 1er janvier au 25 janvier 2026 et du 25 avril au 31 décembre 2026.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "1° La pêche du brochet, qui est autorisée du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre, inclus ;",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-bro-ferme-2026",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-bro-ouv-2e"
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "remplace": null,
+   "phrase": "Brochet en 2e catégorie : fermé du 26 janvier au 24 avril 2026.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "1° La pêche du brochet, qui est autorisée du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre, inclus ;",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-omb-ouv-2e",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2247"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du troisième samedi de mai au 31 décembre inclus"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Ombre commun en 2e catégorie : ouvert du 16 mai au 31 décembre 2026.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "2° La pêche de l'ombre commun, qui est autorisée du troisième samedi de mai au 31 décembre, inclus ;",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-omb-ferme-2026",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2247"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-omb-ouv-2e"
+   },
+   "du": "2026-01-01",
+   "au": "2026-05-15",
+   "remplace": null,
+   "phrase": "Ombre commun en 2e catégorie : fermé du 1er janvier au 15 mai 2026.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "2° La pêche de l'ombre commun, qui est autorisée du troisième samedi de mai au 31 décembre, inclus ;",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-fario-ouv",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus (temps de la 1re catégorie, même en 2e catégorie)",
+    "texte": "prolongation possible : 1 à 3 semaines en haute montagne seulement (R436-6 II), soit au plus jusqu'au 11 octobre 2026"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Truite fario : ouverte du 14 mars au 20 septembre 2026 (partout, 1re comme 2e catégorie).",
+   "textes": [
+    "t7"
+   ],
+   "citation": "la pêche dans les eaux de 1re catégorie est autorisée du deuxième samedi de mars au troisième dimanche de septembre inclus.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-fario-ferme-2026-automne",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-fario-ouv ; note : même avec la prolongation maximale de haute montagne (11 octobre 2026), le 15 octobre reste fermé"
+   },
+   "du": "2026-09-21",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Truite fario : pêche fermée du 21 septembre au 31 décembre 2026, partout, même en 2e catégorie.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "3° La pêche de la truite fario, de l'omble ou saumon de fontaine, de l'omble chevalier et du cristivomer, [...] qui sont autorisées durant le temps d'ouverture de la pêche dans les eaux de la 1re catégorie.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-arc-pas-fermeture-2e",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "toute l'année",
+    "texte": "sauf : cours d'eau ou parties de cours d'eau classés à saumon ou à truite de mer ; note : en 1re catégorie la truite arc-en-ciel suit le temps de la 1re catégorie (R436-6 I)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel en 2e catégorie : pas de fermeture, sauf cours d'eau classés à saumon ou truite de mer. Corrige le squelette, qui la fermait comme la fario.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "ainsi que la pêche de la truite arc-en-ciel dans les cours d'eau ou les parties de cours d'eau classés à saumon ou à truite de mer, qui sont autorisées durant le temps d'ouverture de la pêche dans les eaux de la 1re catégorie.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-mode-lignes-2e",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 4,
+    "texte": "hamecons par ligne max : 2 ; mouches artificielles par ligne max : 3 ; visee : membres d'une association agréée de pêche (AAPPMA)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 2e catégorie : 4 lignes au plus, sur canne, 2 hameçons ou 3 mouches artificielles chacune (membres d'une AAPPMA).",
+   "textes": [
+    "t8"
+   ],
+   "citation": "Les lignes doivent être montées sur canne et munies de deux hameçons ou de trois mouches artificielles au plus.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-res-ouvrages",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": "tous : amont : ouvrage lui-même ; aval : 50 m en aval de l'extrémité de l'ouvrage",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "distance_m": 50,
+    "texte": "interdit : toute pêche à partir des barrages et écluses et sur 50 m en aval, sauf à la ligne"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Pêche interdite depuis les barrages et écluses et sur 50 m en aval (sauf à la ligne). Les arrêtés 75 et 94 sont plus stricts.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "Toute pêche est interdite à partir des barrages et des écluses ainsi que sur une distance de 50 mètres en aval de l'extrémité de ceux-ci, à l'exception de la pêche à l'aide d'une ligne.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-1re-ouv-generale",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 1re catégorie, la pêche est ouverte du 14 mars au 20 septembre 2026 (2e samedi de mars au 3e dimanche de septembre), sauf brochet et espèces à règle propre.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "la pêche dans les eaux de 1re catégorie est autorisée du deuxième samedi de mars au troisième dimanche de septembre inclus.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-eee-transport-perche-soleil",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2050"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "détention, transport, vente et introduction interdits sur tout le territoire métropolitain et en tout temps (art. 3 I) ; aucune ligne sur la remise à l'eau"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Espèce exotique envahissante : sa détention, son transport et sa vente vivante sont interdits (arrêté du 14 février 2018, art. 3 I).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l'introduction sur le territoire [...]",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-eee-transport-pseudorasbora",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2129"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "détention, transport, vente et introduction interdits sur tout le territoire métropolitain et en tout temps (art. 3 I) ; aucune ligne sur la remise à l'eau"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Espèce exotique envahissante : sa détention, son transport et sa vente vivante sont interdits (arrêté du 14 février 2018, art. 3 I).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l'introduction sur le territoire [...]",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-eee-transport-goujon-de-l-amour",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "goujon-de-l-amour"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "détention, transport, vente et introduction interdits sur tout le territoire métropolitain et en tout temps (art. 3 I) ; aucune ligne sur la remise à l'eau"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Espèce exotique envahissante : sa détention, son transport et sa vente vivante sont interdits (arrêté du 14 février 2018, art. 3 I).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l'introduction sur le territoire [...]",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-eee-transport-ecrevisse-americaine",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "détention, transport, vente et introduction interdits sur tout le territoire métropolitain et en tout temps (art. 3 I) ; aucune ligne sur la remise à l'eau"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Espèce exotique envahissante : sa détention, son transport et sa vente vivante sont interdits (arrêté du 14 février 2018, art. 3 I).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l'introduction sur le territoire [...]",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-eee-transport-ecrevisse-de-louisiane",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-de-louisiane"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "détention, transport, vente et introduction interdits sur tout le territoire métropolitain et en tout temps (art. 3 I) ; aucune ligne sur la remise à l'eau"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Espèce exotique envahissante : sa détention, son transport et sa vente vivante sont interdits (arrêté du 14 février 2018, art. 3 I).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l'introduction sur le territoire [...]",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-eee-transport-ecrevisse-signal",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-signal"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "détention, transport, vente et introduction interdits sur tout le territoire métropolitain et en tout temps (art. 3 I) ; aucune ligne sur la remise à l'eau"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Espèce exotique envahissante : sa détention, son transport et sa vente vivante sont interdits (arrêté du 14 février 2018, art. 3 I).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l'introduction sur le territoire [...]",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-eee-transport-ecrevisse-virile",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-virile"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "détention, transport, vente et introduction interdits sur tout le territoire métropolitain et en tout temps (art. 3 I) ; aucune ligne sur la remise à l'eau"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Espèce exotique envahissante : sa détention, son transport et sa vente vivante sont interdits (arrêté du 14 février 2018, art. 3 I).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l'introduction sur le territoire [...]",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-eee-transport-ecrevisse-marbree",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-marbree"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "détention, transport, vente et introduction interdits sur tout le territoire métropolitain et en tout temps (art. 3 I) ; aucune ligne sur la remise à l'eau"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Espèce exotique envahissante : sa détention, son transport et sa vente vivante sont interdits (arrêté du 14 février 2018, art. 3 I).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l'introduction sur le territoire [...]",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-eee-transport-crabe-chinois",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "crabe-chinois"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "détention, transport, vente et introduction interdits sur tout le territoire métropolitain et en tout temps (art. 3 I) ; aucune ligne sur la remise à l'eau"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Espèce exotique envahissante : sa détention, son transport et sa vente vivante sont interdits (arrêté du 14 février 2018, art. 3 I).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l'introduction sur le territoire [...]",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-eee-transport-grenouille-taureau",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-taureau"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "détention, transport, vente et introduction interdits sur tout le territoire métropolitain et en tout temps (art. 3 I) ; aucune ligne sur la remise à l'eau"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Espèce exotique envahissante : sa détention, son transport et sa vente vivante sont interdits (arrêté du 14 février 2018, art. 3 I).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Sont interdits sur tout le territoire métropolitain et en tout temps l'introduction sur le territoire [...]",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  }
+ ],
+ "a_verifier": [
+  {
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t12"
+   ]
+  }
+ ]
+}
