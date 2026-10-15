@@ -92,7 +92,7 @@ Ce qui coince (`reports/reconnaissance.md`) :
 
 Recommandation :
 - La grille des 14 espèces reste le chemin qui marche toujours, avec pour chaque espèce sa silhouette et son critère distinctif.
-- On entraîne un modèle Create ML sur les photos libres hors iNaturalist et sur nos propres photos. Il n'entre dans l'app que s'il passe le test fixé avant l'entraînement, sur des photos tenues à part : bonne espèce parmi les 3 proposées dans 90 % des cas au moins, en n°1 dans 70 % des cas au moins (seuils proposés). Sinon, la version de ce soir propose l'IA d'Apple sur les iPhone qui l'ont et la grille sur les autres, et le modèle arrive dans la mise à jour.
+- On entraîne un modèle Create ML sur les photos libres hors iNaturalist et sur nos propres photos. Il n'entre dans l'app que s'il passe le test fixé avant l'entraînement, sur des photos tenues à part : bonne espèce parmi les 3 proposées dans 90 % des cas au moins, en n°1 dans 70 % des cas au moins (seuils proposés). Sinon, la version de ce soir propose l'IA d'Apple sur les iPhone qui l'ont, seulement si elle passe le même test, et la grille partout ailleurs ; le modèle arrive dans la mise à jour.
 - Pour les paires proches (gardon, brème, chevesne ; fario, arc-en-ciel), l'écran de confirmation montre le critère qui les sépare, et « je ne sais pas » reste toujours visible.
 - Tant que l'espèce n'est pas confirmée, l'app affiche le verdict le plus prudent des espèces encore possibles : « relâche-la ».
 Option la plus forte écartée : l'IA d'Apple comme aide principale. Elle reste valable si, sur le même jeu de test, elle bat notre modèle (une heure pour le mesurer, estimation).
@@ -167,7 +167,7 @@ Le recto porte 6 éléments, pas un de plus :
 
 Le verso explique la carte :
 - « Rareté dans les relevés OFB du 94 : relevée dans 9 pêches sur 29, dernier relevé 2023 » ; pour un légendaire, « aucune pêche OFB ne l'a relevée dans le 94 depuis 2016 » ;
-- le verdict du moment, avec sa source (gardée ou relâchée) ;
+- la consigne du moment avec sa source, et ce que le pêcheur a déclaré (gardée ou relâchée) ;
 - l'heure, la phase de lune et, si la prise vient d'une session, sa durée.
 
 La carte bredouille garde son dos à elle : lieu flouté, date, lune, durée de la session, et aucune rareté.
