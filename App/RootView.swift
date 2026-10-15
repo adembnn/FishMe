@@ -56,6 +56,13 @@ final class ParcoursApp {
     @ObservationIgnored let mesure: CoucheMesure
     @ObservationIgnored let achats: AchatsStoreKit
 
+    /// L4 : le dépôt des cartes, créé une seule fois (SwiftData local, photos sans GPS dans Application Support).
+    /// `nil` seulement si SwiftData ne s'ouvre ni sur disque ni en mémoire : le volet Pescedex reste alors vide.
+    @ObservationIgnored let depot: DepotCartes?
+    let pescedex: PescedexModele?
+    /// Cartes rendues par L4 pour le partage de L9 (recto seul, sans météo).
+    var cartesAPartager: [CarteAPartager] = []
+
     let moteur: MoteurSession
     let suivi: SuiviAbonnement
 
@@ -85,6 +92,16 @@ final class ParcoursApp {
         marque = StockageMarque(source: SourceMarqueWeatherKit())
         previensMoi = PreviensMoiModele(notifieur: NotifieurSysteme())
 
+        let servicesCollection = ServicesCollection(especes: core.especes, soleil: core.soleil, regles: core.regles)
+        if let conteneur = (try? DepotCartes.creerConteneur()) ?? (try? DepotCartes.creerConteneur(enMemoire: true)) {
+            let depot = DepotCartes(conteneur: conteneur, dossierPhotos: DepotCartes.dossierParDefaut(), services: servicesCollection)
+            self.depot = depot
+            pescedex = PescedexModele(depot: depot, services: servicesCollection)
+        } else {
+            depot = nil
+            pescedex = nil
+        }
+
         let mesure = CoucheMesure(passerelle: PasserelleSpark(configuration: configurerMesure),
                                   coffre: CoffreConsentementReglages())
         self.mesure = mesure
@@ -105,7 +122,32 @@ final class ParcoursApp {
         suivi.demarrer()
         moteur.abonne = suivi.abonne
         moteur.reprendre()
+        await rafraichirCollection()
         await marque.rafraichir()
+    }
+
+    // MARK: Collection (L4)
+
+    /// Recharge le Pescedex et les cartes partageables de L9 après une écriture dans le dépôt.
+    func rafraichirCollection() async {
+        guard let depot else { return }
+        await pescedex?.charger()
+        let noms = Dictionary(core.especes.especesPechables().map { ($0.espece, $0.nom) }, uniquingKeysWith: { a, _ in a })
+        var cartes: [CarteAPartager] = []
+        for prise in await depot.cartes() {
+            guard let png = await depot.imagePNG(de: prise) else { continue }
+            cartes.append(CarteAPartager(id: prise.id.uuidString, titre: noms[prise.espece] ?? "Carte FishMe", png: png))
+        }
+        cartesAPartager = cartes
+    }
+
+    /// Écrit dans le dépôt puis recharge. Une erreur d'écriture est ignorée sans planter : la carte n'existe pas, rien n'est annoncé.
+    /// Renvoie vrai si l'écriture a réussi.
+    private func ecrire(_ operation: @escaping @Sendable (DepotCartes) async throws -> Void) async -> Bool {
+        guard let depot else { return false }
+        do { try await operation(depot) } catch { return false }
+        await rafraichirCollection()
+        return true
     }
 
     // MARK: Modales (file d'attente)
@@ -199,8 +241,12 @@ final class ParcoursApp {
 
     private func sessionFinie(_ fin: FinDeSession) {
         mesure.envoyer(.sessionFinie)
-        // L4 Collection : à brancher. `fin.sortie.prises.isEmpty` -> carte bredouille :
-        //   depot.enregistrerBredouille(sortie: fin.sortie, lieuFlou: ...) puis ouvrir la révélation de la carte avant le paywall.
+        if fin.sortie.prises.isEmpty {
+            // Session sans prise : carte bredouille (L4). La révélation avant le paywall n'est pas ouverte ici : elle se voit dans le Pescedex.
+            let sortie = fin.sortie
+            let lieuFlou = coordonneeSession.map { core.geo.lieuFlou($0) }
+            Task { _ = await ecrire { try await $0.enregistrerBredouille(sortie: sortie, lieuFlou: lieuFlou) } }
+        }
         if fin.paywall == .quiSeFerme { montrer(.paywall(.finPremiereSession)) }
         moteur.acquitterFin()
         spotSession = nil
@@ -225,9 +271,20 @@ final class ParcoursApp {
         guard let confirmee else { return }
         let instantane = coordonneeSession.flatMap { conditions.instantane(spot: $0) }
         moteur.ajouter(prise: confirmee.prise, conditions: instantane)
-        // L4 Collection : à brancher. depot.enregistrer(prise: confirmee.prise, photo: confirmee.photo, conditions: instantane,
-        //   dureeSecondes: ...) ; l'événement ci-dessous doit partir une fois la carte créée par L4.
-        mesure.envoyer(.carteCreee)
+        let prise = confirmee.prise
+        let photo = confirmee.photo
+        let duree = moteur.enCours.map { moteur.maintenant().timeIntervalSince($0.sortie.debut) }
+        Task {
+            // `.carteCreee` ne part qu'une fois la carte réellement enregistrée.
+            if await ecrire({ _ = try await $0.enregistrer(prise: prise, photo: photo, conditions: instantane, dureeSecondes: duree) }) {
+                mesure.envoyer(.carteCreee)
+            }
+        }
+    }
+
+    /// Carte déclarée du swipe du premier lancement (L4) : sans photo, ne compte pas comme une prise.
+    func declarer(_ prise: Prise) {
+        Task { _ = await ecrire { _ = try await $0.enregistrerDeclaree(espece: prise.espece, date: prise.date) } }
     }
 
     // MARK: Abonnement
@@ -318,10 +375,7 @@ struct RootView: View {
     private var onglets: some View {
         TabView(selection: $app.onglet) {
             Tab("Pescedex", systemImage: "square.grid.2x2.fill", value: Onglet.pescedex) {
-                // L4 Collection : à brancher
-                // PescedexView(modele: PescedexModele(depot: DepotCartes(conteneur: DepotCartes.creerConteneur(), dossierPhotos: ..., services: ...)),
-                //              emplacements: { espece in AnyView(CommentLaPecherView(espece: espece, contexte: ...)) })
-                PescedexAVenir()
+                pescedex
             }
             Tab("Carte", systemImage: "map.fill", value: Onglet.carte) {
                 carte
@@ -341,6 +395,22 @@ struct RootView: View {
             app.proposerSuitePremierLancement()
         }
         // `styleFishMe()` : App/Style/ n'existe pas sur cette branche, rien à poser ici.
+    }
+
+    // MARK: Volet Pescedex (L4) avec L12, L13
+
+    @ViewBuilder private var pescedex: some View {
+        if let modele = app.pescedex {
+            PescedexView(
+                modele: modele,
+                emplacements: EmplacementsExternes(
+                    commentLaPecher: { espece in AnyView(CommentLaPecherEmplacement(app: app, espece: espece)) },
+                    tesConditions: { AnyView(TesConditionsEmplacement(app: app)) },
+                    meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }))
+        } else {
+            ContentUnavailableView("Pescedex", systemImage: "square.grid.2x2.fill",
+                                   description: Text("Tes cartes ne peuvent pas s'ouvrir pour l'instant."))
+        }
     }
 
     // MARK: Volet Carte (L2) avec L5, L12, L13
@@ -378,7 +448,7 @@ struct RootView: View {
         }
         return ClubView(
             liens: liens, sources: sources,
-            cartes: [],  // L4 Collection : à brancher (CarteAPartager rendues par L4)
+            cartes: app.cartesAPartager,
             mesureUsage: Binding(get: { app.consentement == .accepte }, set: { app.reglerMesure($0) })
         ) {
             MarqueMeteoView(stockage: app.marque)
@@ -395,7 +465,7 @@ struct RootView: View {
             TunnelPremiersPasView(
                 especes: EspecesDuTunnel.choisir(pechables: app.core.especes.especesPechables(), proches: proches),
                 maintenant: { app.moteur.maintenant() },
-                declarer: { _ in /* L4 Collection : à brancher : depot.enregistrerDeclaree(espece: prise.espece, date: prise.date) */ },
+                declarer: { prise in app.declarer(prise) },
                 pecherMaintenant: {
                     app.courant = nil
                     app.onglet = .carte
@@ -536,11 +606,35 @@ private struct ConseilEmplacement: View {
     }
 }
 
-/// L4 Collection : à brancher. Remplace le volet Pescedex tant que `App/Collection/` n'est pas sur cette branche.
-private struct PescedexAVenir: View {
+/// « Comment la pêcher » (L13) au dos d'une espèce du Pescedex ; son paywall est présenté ici, pas sur la racine.
+private struct CommentLaPecherEmplacement: View {
+    let app: ParcoursApp
+    let espece: Espece
+    @State private var paywall: PaywallDemande?
+
     var body: some View {
-        ContentUnavailableView("Pescedex", systemImage: "square.grid.2x2.fill",
-                               description: Text("Tes cartes arrivent ici."))
+        CommentLaPecherView(
+            espece: espece,
+            contexte: app.contexteConseils(lieu: app.lieuDuSpot(),
+                                           toutLeKit: { paywall = PaywallDemande(declencheur: .fonction($0)) }))
+            .sheet(item: $paywall) { demande in
+                app.paywall(demande.declencheur, fermer: { paywall = nil })
+            }
+    }
+}
+
+/// « Tes conditions » (L12, Pro) ouvert depuis le Pescedex : les comptes de ses propres sorties, ou le paywall.
+private struct TesConditionsEmplacement: View {
+    let app: ParcoursApp
+    @Environment(\.dismiss) private var fermer
+
+    var body: some View {
+        if app.autorise(.analyseConditions) {
+            TesConditionsView(constats: app.core.conditions.tesConditions(sorties: app.moteur.sortiesTerminees),
+                              sortiesTerminees: app.moteur.sortiesTerminees.count, marque: app.marque)
+        } else {
+            app.paywall(.fonction(.analyseConditions), fermer: { fermer() })
+        }
     }
 }
 
