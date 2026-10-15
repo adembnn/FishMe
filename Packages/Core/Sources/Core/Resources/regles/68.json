@@ -1,0 +1,5753 @@
+{
+ "version": "2026-10-15.1",
+ "departement": "68",
+ "niveau": "partiel",
+ "textes": [
+  {
+   "id": "t1",
+   "titre": "AP n°2024-07 du 8 février 2024, art. 3",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t2",
+   "titre": "AP n°2024-07 du 8 février 2024, art. 4",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t3",
+   "titre": "AP n°2024-07 du 8 février 2024, art. 5",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t4",
+   "titre": "AP n°2024-07 du 8 février 2024, art. 6",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t5",
+   "titre": "AP n°2024-07 du 8 février 2024, art. 7",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t6",
+   "titre": "AP n°2024-07 du 8 février 2024, art. 8",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t7",
+   "titre": "AP n°2024-07 du 8 février 2024, art. 11",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t8",
+   "titre": "AP n°2024-07 du 8 février 2024, art. 8 (association des pêcheurs amateurs aux engins et aux filets, domaine public)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t9",
+   "titre": "AP n°2024-07 du 8 février 2024, art. 9",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t10",
+   "titre": "AP n°2024-07 du 8 février 2024, annexe 2 (zones de sécurité)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t11",
+   "titre": "AP n°2024-07 du 8 février 2024, annexe 3 (parcours NO-KILL)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t12",
+   "titre": "AP n°2024-07 du 8 février 2024, annexe 4 (pêche de nuit et secteurs NO-KILL de la carpe)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t13",
+   "titre": "Arrêté préfectoral n°011770 du 29 juin 2001 fixant le classement des cours d'eau en deux catégories, art. 1, I, point 16",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=33321&path=Arrete-prefectoral-Limites-premiere-et-deuxieme-categorie.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2001-06-29"
+  },
+  {
+   "id": "t14",
+   "titre": "Arrêté préfectoral n°011770 du 29 juin 2001 fixant le classement des cours d'eau en deux catégories, art. 1, II (2e catégorie)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=33321&path=Arrete-prefectoral-Limites-premiere-et-deuxieme-categorie.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2001-06-29"
+  },
+  {
+   "id": "t15",
+   "titre": "Arrêté préfectoral du 29 juin 2022 approuvant le cahier des charges du droit de pêche de l'État 2023-2027, art. 10 (plan anguille)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51909&path=Cahier-des-charges-exploitation-droit-de-peche-de-l-Etat-2027.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2022-06-29"
+  },
+  {
+   "id": "t16",
+   "titre": "Arrêté préfectoral du 29 juin 2022 approuvant le cahier des charges du droit de pêche de l'État 2023-2027, art. 7 et annexe, liste des lots (réserve de pêche)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51909&path=Cahier-des-charges-exploitation-droit-de-peche-de-l-Etat-2027.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2022-06-29"
+  },
+  {
+   "id": "t17",
+   "titre": "Arrêté préfectoral n°011770 du 29 juin 2001 fixant le classement des cours d'eau en deux catégories, art. 1, I (1re catégorie)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=33321&path=Arrete-prefectoral-Limites-premiere-et-deuxieme-categorie.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2001-06-29"
+  },
+  {
+   "id": "t18",
+   "titre": "Arrêté préfectoral du 29 juin 2022 approuvant le cahier des charges du droit de pêche de l'État 2023-2027, art. 9 (pêche de nuit de la carpe)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51909&path=Cahier-des-charges-exploitation-droit-de-peche-de-l-Etat-2027.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2022-06-29"
+  },
+  {
+   "id": "t19",
+   "titre": "Arrêté préfectoral du 29 juin 2022 approuvant le cahier des charges du droit de pêche de l'État 2023-2027, art. 8 et annexe, liste des lots (zone de sécurité)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51909&path=Cahier-des-charges-exploitation-droit-de-peche-de-l-Etat-2027.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2022-06-29"
+  },
+  {
+   "id": "t20",
+   "titre": "Infos Pratiques Haut-Rhin 2026 (fédération), page 3 (tableau des espèces)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51725&path=RI-2026.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026 (fédération, non signé)"
+  },
+  {
+   "id": "t21",
+   "titre": "Infos Pratiques Haut-Rhin 2026 (fédération), page 5 (réglementation spécifique)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51725&path=RI-2026.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026 (fédération, non signé)"
+  },
+  {
+   "id": "t22",
+   "titre": "Infos Pratiques Haut-Rhin 2026 (fédération), page 7 (carpe de nuit)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51725&path=RI-2026.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026 (fédération, non signé)"
+  },
+  {
+   "id": "t23",
+   "titre": "Arrêté préfectoral n°011770 du 29 juin 2001 (classement des cours d'eau en deux catégories), Article 1er, I",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=33321&path=Arrete-prefectoral-Limites-premiere-et-deuxieme-categorie.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2001-06-29"
+  },
+  {
+   "id": "t24",
+   "titre": "Cahier des charges de l'exploitation du droit de pêche de l'État 2023-2027 (arrêté préfectoral du 29 juin 2022), article 10",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51909&path=Cahier-des-charges-exploitation-droit-de-peche-de-l-Etat-2027.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2022-06-29"
+  },
+  {
+   "id": "t25",
+   "titre": "Arrêté préfectoral n°2024-07 du 8 février 2024 (réglementation permanente), article 4",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t26",
+   "titre": "Arrêté préfectoral n°2024-07 du 8 février 2024 (réglementation permanente), article 7",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t27",
+   "titre": "Arrêté préfectoral n°2024-07 du 8 février 2024 (réglementation permanente), article 9",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t28",
+   "titre": "Arrêté préfectoral n°2024-07 du 8 février 2024 (réglementation permanente), article 4, note (*)",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t29",
+   "titre": "Arrêté préfectoral n°2024-07 du 8 février 2024 (réglementation permanente), article 8",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t30",
+   "titre": "Arrêté préfectoral n°2024-07 du 8 février 2024 (réglementation permanente), article 10",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t31",
+   "titre": "Arrêté préfectoral n°2024-07 du 8 février 2024 (réglementation permanente), annexe, 3",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t32",
+   "titre": "Cahier des charges de l'exploitation du droit de pêche de l'État 2023-2027 (arrêté préfectoral du 29 juin 2022), article 5",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51909&path=Cahier-des-charges-exploitation-droit-de-peche-de-l-Etat-2027.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2022-06-29"
+  },
+  {
+   "id": "t33",
+   "titre": "Arrêté préfectoral n°2024-07 du 8 février 2024 (réglementation permanente), annexe, 2",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=32950&path=Arrete-Peche-68-Fevrier-2024.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2024-02-08"
+  },
+  {
+   "id": "t34",
+   "titre": "Cahier des charges de l'exploitation du droit de pêche de l'État 2023-2027 (arrêté préfectoral du 29 juin 2022), article 7 et annexe, lot 2",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51909&path=Cahier-des-charges-exploitation-droit-de-peche-de-l-Etat-2027.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2022-06-29"
+  },
+  {
+   "id": "t35",
+   "titre": "Cahier des charges de l'exploitation du droit de pêche de l'État 2023-2027 (arrêté préfectoral du 29 juin 2022), article 7 et annexe, lot 29",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51909&path=Cahier-des-charges-exploitation-droit-de-peche-de-l-Etat-2027.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2022-06-29"
+  },
+  {
+   "id": "t36",
+   "titre": "Cahier des charges de l'exploitation du droit de pêche de l'État 2023-2027 (arrêté préfectoral du 29 juin 2022), article 7 et annexe, Rhin lot 1",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51909&path=Cahier-des-charges-exploitation-droit-de-peche-de-l-Etat-2027.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2022-06-29"
+  },
+  {
+   "id": "t37",
+   "titre": "Cahier des charges de l'exploitation du droit de pêche de l'État 2023-2027 (arrêté préfectoral du 29 juin 2022), article 7 et annexe, Rhin lot 14",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51909&path=Cahier-des-charges-exploitation-droit-de-peche-de-l-Etat-2027.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2022-06-29"
+  },
+  {
+   "id": "t38",
+   "titre": "Cahier des charges de l'exploitation du droit de pêche de l'État 2023-2027 (arrêté préfectoral du 29 juin 2022), article 7 et annexe, dépendances lot B",
+   "url": "https://www.peche68.fr/cms_viewFile.php?idtf=51909&path=Cahier-des-charges-exploitation-droit-de-peche-de-l-Etat-2027.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2022-06-29"
+  }
+ ],
+ "eaux": [
+  {
+   "cle": "alfeld",
+   "nom": "Lac d'Alfeld",
+   "code": null
+  },
+  {
+   "cle": "augraben",
+   "nom": "Augraben",
+   "code": null
+  },
+  {
+   "cle": "aval des ecluses et barrages",
+   "nom": "Aval des écluses et barrages",
+   "code": null
+  },
+  {
+   "cle": "ballon",
+   "nom": "Lac du Ballon",
+   "code": null
+  },
+  {
+   "cle": "barrage agricole",
+   "nom": "Barrage agricole",
+   "code": null
+  },
+  {
+   "cle": "barrage de kembs",
+   "nom": "Barrage de Kembs",
+   "code": null
+  },
+  {
+   "cle": "barrage de l usine de marckolsheim",
+   "nom": "Barrage de l'usine de Marckolsheim",
+   "code": null
+  },
+  {
+   "cle": "bergenbach",
+   "nom": "Bergenbach",
+   "code": null
+  },
+  {
+   "cle": "bief de partage a valdieu",
+   "nom": "Bief de partage à Valdieu",
+   "code": null
+  },
+  {
+   "cle": "birsig",
+   "nom": "Birsig",
+   "code": null
+  },
+  {
+   "cle": "blanc",
+   "nom": "Lac Blanc",
+   "code": null
+  },
+  {
+   "cle": "brunnwasser",
+   "nom": "Brunnwasser",
+   "code": null
+  },
+  {
+   "cle": "colmar rive droite",
+   "nom": "Canal de Colmar rive droite",
+   "code": null
+  },
+  {
+   "cle": "courtavon",
+   "nom": "Plan d'eau de Courtavon",
+   "code": null
+  },
+  {
+   "cle": "dependances du canal du rhone au rhin",
+   "nom": "Dépendances du canal du Rhône au Rhin",
+   "code": null
+  },
+  {
+   "cle": "doller",
+   "nom": "Doller",
+   "code": null
+  },
+  {
+   "cle": "dorfbach",
+   "nom": "Dorfbach",
+   "code": null
+  },
+  {
+   "cle": "drainage du grand canal d alsace",
+   "nom": "Canal de drainage du Grand Canal d'Alsace",
+   "code": null
+  },
+  {
+   "cle": "drainage du rhin au grand canal d alsace",
+   "nom": "Canal de drainage du Rhin au Grand Canal d'Alsace",
+   "code": null
+  },
+  {
+   "cle": "eckenbach",
+   "nom": "Eckenbach",
+   "code": null
+  },
+  {
+   "cle": "elbach",
+   "nom": "Elbach",
+   "code": null
+  },
+  {
+   "cle": "embranchement de colmar",
+   "nom": "Embranchement de Colmar",
+   "code": null
+  },
+  {
+   "cle": "fecht",
+   "nom": "Fecht",
+   "code": null
+  },
+  {
+   "cle": "feldbach",
+   "nom": "Feldbach",
+   "code": null
+  },
+  {
+   "cle": "fischboedle",
+   "nom": "Lac du Fischboedle",
+   "code": null
+  },
+  {
+   "cle": "forlet",
+   "nom": "Lac du Forlet",
+   "code": null
+  },
+  {
+   "cle": "frayere a brochets rive droite",
+   "nom": "Frayère à brochets rive droite",
+   "code": null
+  },
+  {
+   "cle": "fridolinsbach",
+   "nom": "Fridolinsbach",
+   "code": null
+  },
+  {
+   "cle": "grand etang vauban",
+   "nom": "Grand étang Vauban",
+   "code": null
+  },
+  {
+   "cle": "grand neuweiher",
+   "nom": "Lac du Grand Neuweiher",
+   "code": null
+  },
+  {
+   "cle": "holderlehgraben",
+   "nom": "Holderlehgraben",
+   "code": null
+  },
+  {
+   "cle": "ill",
+   "nom": "Ill",
+   "code": null
+  },
+  {
+   "cle": "ill domaniale",
+   "nom": "Ill domaniale",
+   "code": null
+  },
+  {
+   "cle": "ill et feldbach",
+   "nom": "Ill et Feldbach",
+   "code": null
+  },
+  {
+   "cle": "ischert",
+   "nom": "Ischert",
+   "code": null
+  },
+  {
+   "cle": "kresbach",
+   "nom": "Kresbach",
+   "code": null
+  },
+  {
+   "cle": "kruth wildenstein",
+   "nom": "Lac de Kruth-Wildenstein",
+   "code": null
+  },
+  {
+   "cle": "l altenweiher",
+   "nom": "Lac de l'Altenweiher",
+   "code": null
+  },
+  {
+   "cle": "la lauch",
+   "nom": "Lac de la Lauch",
+   "code": null
+  },
+  {
+   "cle": "largue",
+   "nom": "Largue",
+   "code": null
+  },
+  {
+   "cle": "largue et elbach",
+   "nom": "Largue et Elbach",
+   "code": null
+  },
+  {
+   "cle": "lauch",
+   "nom": "Lauch",
+   "code": null
+  },
+  {
+   "cle": "lertzbach",
+   "nom": "Lertzbach",
+   "code": null
+  },
+  {
+   "cle": "liepvrette",
+   "nom": "Lièpvrette",
+   "code": null
+  },
+  {
+   "cle": "liesbach",
+   "nom": "Liesbach",
+   "code": null
+  },
+  {
+   "cle": "lots de peche de l etat",
+   "nom": "Lots de pêche de l'État",
+   "code": null
+  },
+  {
+   "cle": "lucelle",
+   "nom": "Lucelle",
+   "code": null
+  },
+  {
+   "cle": "noir",
+   "nom": "Lac Noir",
+   "code": null
+  },
+  {
+   "cle": "ohmbach",
+   "nom": "Ohmbach",
+   "code": null
+  },
+  {
+   "cle": "orch",
+   "nom": "Orch",
+   "code": null
+  },
+  {
+   "cle": "partie de l ancien canal en amont de l ancienne ecluse jusqu a la jonction avec le canal navigable",
+   "nom": "Partie de l'ancien canal en amont de l'ancienne écluse jusqu'à la jonction avec le canal navigable",
+   "code": null
+  },
+  {
+   "cle": "passerelle du deversoir",
+   "nom": "Passerelle du déversoir",
+   "code": null
+  },
+  {
+   "cle": "perches",
+   "nom": "Lac des Perches",
+   "code": null
+  },
+  {
+   "cle": "petit neuweiher",
+   "nom": "Lac du Petit Neuweiher",
+   "code": null
+  },
+  {
+   "cle": "quai rhenalu",
+   "nom": "Quai Rhénalu",
+   "code": null
+  },
+  {
+   "cle": "rhin",
+   "nom": "Rhin",
+   "code": null
+  },
+  {
+   "cle": "rhin et grand canal d alsace",
+   "nom": "Rhin et Grand Canal d'Alsace",
+   "code": null
+  },
+  {
+   "cle": "rhone au rhin",
+   "nom": "Canal du Rhône au Rhin",
+   "code": null
+  },
+  {
+   "cle": "rhone au rhin branche sud",
+   "nom": "Canal du Rhône au Rhin branche sud",
+   "code": null
+  },
+  {
+   "cle": "riedbrunnengraben",
+   "nom": "Riedbrunnengraben",
+   "code": null
+  },
+  {
+   "cle": "rimbach",
+   "nom": "Rimbach",
+   "code": null
+  },
+  {
+   "cle": "rohrbach",
+   "nom": "Rohrbach",
+   "code": null
+  },
+  {
+   "cle": "ruisseau de neuwiller",
+   "nom": "Ruisseau de Neuwiller",
+   "code": null
+  },
+  {
+   "cle": "ruisseau de wattwiller",
+   "nom": "Ruisseau de Wattwiller",
+   "code": null
+  },
+  {
+   "cle": "scheidgraben",
+   "nom": "Scheidgraben",
+   "code": null
+  },
+  {
+   "cle": "schiessrothried",
+   "nom": "Lac du Schiessrothried",
+   "code": null
+  },
+  {
+   "cle": "sewen",
+   "nom": "Lac de Sewen",
+   "code": null
+  },
+  {
+   "cle": "soultzbach",
+   "nom": "Soultzbach",
+   "code": null
+  },
+  {
+   "cle": "thalbach",
+   "nom": "Thalbach",
+   "code": null
+  },
+  {
+   "cle": "thur",
+   "nom": "Thur",
+   "code": null
+  },
+  {
+   "cle": "thur et lauch canalisee",
+   "nom": "Thur et Lauch canalisée",
+   "code": null
+  },
+  {
+   "cle": "traubach",
+   "nom": "Traubach",
+   "code": null
+  },
+  {
+   "cle": "vieux rhin",
+   "nom": "Vieux-Rhin",
+   "code": null
+  },
+  {
+   "cle": "vieux rhin a chalampe rive gauche",
+   "nom": "Vieux-Rhin à Chalampé rive gauche",
+   "code": null
+  },
+  {
+   "cle": "vieux rhin et grand canal d alsace",
+   "nom": "Vieux-Rhin et Grand Canal d'Alsace",
+   "code": null
+  },
+  {
+   "cle": "weiss",
+   "nom": "Weiss",
+   "code": null
+  },
+  {
+   "cle": "wuenheimerbach",
+   "nom": "Wuenheimerbach",
+   "code": null
+  },
+  {
+   "cle": "zone d erosion maitrisee",
+   "nom": "Zone d'érosion maîtrisée",
+   "code": null
+  },
+  {
+   "cle": "zone de demolition",
+   "nom": "Zone de démolition",
+   "code": null
+  },
+  {
+   "cle": "zone portuaire",
+   "nom": "Zone portuaire",
+   "code": null
+  }
+ ],
+ "regles": [
+  {
+   "id": "68-toutes-ouverture-c1",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Cours d'eau de 1re catégorie : pêche ouverte du 14 mars au 20 septembre 2026 (espèces sans période propre).",
+   "textes": [
+    "t1"
+   ],
+   "citation": "Cours d'eau de 1ère catégorie piscicole : du 2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-ouverture-c2",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Cours d'eau de 2e catégorie : pêche ouverte toute l'année (espèces sans période propre).",
+   "textes": [
+    "t1"
+   ],
+   "citation": "Cours d'eau de 2ème catégorie piscicole : du 1er janvier au 31 décembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-anguille-jaune-ouverture-c1-04-15",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "15 avril - 15 septembre"
+   },
+   "du": "2026-04-15",
+   "au": "2026-09-15",
+   "remplace": null,
+   "phrase": "Anguille jaune : pêche ouverte du 15/04 au 15/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "15 avril – 15 septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-anguille-jaune-ouverture-c2-04-15",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "15 avril - 15 septembre"
+   },
+   "du": "2026-04-15",
+   "au": "2026-09-15",
+   "remplace": null,
+   "phrase": "Anguille jaune : pêche ouverte du 15/04 au 15/09 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "15 avril – 15 septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-anguille-argentee-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Anguille argentée : pêche interdite toute l'année.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Anguille argentée Pêche interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-omble-fontaine-ouverture-c1-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Saumon de fontaine : pêche ouverte du 14/03 au 20/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-omble-fontaine-ouverture-c2-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Saumon de fontaine : pêche ouverte du 14/03 au 20/09 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-cristivomer-ouverture-c1-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Cristivomer : pêche ouverte du 14/03 au 20/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-cristivomer-ouverture-c2-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Cristivomer : pêche ouverte du 14/03 au 20/09 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-truite-arc-en-ciel-ouverture-c1-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-arc-en-ciel"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : pêche ouverte du 14/03 au 20/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-truite-arc-en-ciel-ouverture-c2-01-01",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-arc-en-ciel"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : pêche ouverte du 01/01 au 31/12 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "1er janvier – 31 décembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-coregone-ouverture-c1-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Corégone : pêche ouverte du 14/03 au 20/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-coregone-ouverture-c2-01-01",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Corégone : pêche ouverte du 01/01 au 31/12 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "1er janvier – 31 décembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-brochet-ouverture-c1-04-25",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "brochet"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "dernier samedi d'avril au 3e dimanche de septembre"
+   },
+   "du": "2026-04-25",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Brochet : pêche ouverte du 25/04 au 20/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "dernier samedi d'avril au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-brochet-ouverture-c2-01-01",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "brochet"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "1er janvier au dernier dimanche de janvier"
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "remplace": null,
+   "phrase": "Brochet : pêche ouverte du 01/01 au 25/01 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "1er janvier au dernier dimanche de janvier",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-brochet-ouverture-c2-04-25",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "brochet"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "dernier samedi d'avril au 31 décembre"
+   },
+   "du": "2026-04-25",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Brochet : pêche ouverte du 25/04 au 31/12 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "du dernier samedi d'avril au 31 décembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-sandre-ouverture-c1-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "sandre"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Sandre : pêche ouverte du 14/03 au 20/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-sandre-ouverture-c2-01-01",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "sandre"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "1er janvier au 2e samedi de mars"
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-14",
+   "remplace": null,
+   "phrase": "Sandre : pêche ouverte du 01/01 au 14/03 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "1er janvier au 2ème samedi de mars",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-sandre-ouverture-c2-05-30",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "sandre"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "dernier samedi de mai au 31 décembre"
+   },
+   "du": "2026-05-30",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Sandre : pêche ouverte du 30/05 au 31/12 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "du dernier samedi de mai au 31 décembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-black-bass-ouverture-c1-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "black-bass"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Black-bass : pêche ouverte du 14/03 au 20/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-black-bass-ouverture-c2-01-01",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "black-bass"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "1er janvier au dernier dimanche de janvier"
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "remplace": null,
+   "phrase": "Black-bass : pêche ouverte du 01/01 au 25/01 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "du 1er janvier au dernier dimanche de janvier",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-black-bass-ouverture-c2-06-27",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "black-bass"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "dernier samedi de juin au 31 décembre"
+   },
+   "du": "2026-06-27",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Black-bass : pêche ouverte du 27/06 au 31/12 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "du dernier samedi de juin au 31 décembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-truite-fario-ouverture-c1-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-fario"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Truite fario de rivière : pêche ouverte du 14/03 au 20/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-truite-fario-ouverture-c2-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-fario"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Truite fario de rivière : pêche ouverte du 14/03 au 20/09 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-americaine-ouverture-c1-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Écrevisse américaine : pêche ouverte du 14/03 au 20/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-americaine-ouverture-c2-01-01",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Écrevisse américaine : pêche ouverte du 01/01 au 31/12 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "1er janvier – 31 décembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-americaine-transport_vivant",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "Transport de spécimens vivants interdit."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisse américaine : transport vivant interdit.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Pour ces trois espèces, le transport de spécimens vivants et la remise à l'eau sont interdits.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-californie-ouverture-c1-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-californie"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Écrevisse de Californie (signal) : pêche ouverte du 14/03 au 20/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-californie-ouverture-c2-01-01",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-californie"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Écrevisse de Californie (signal) : pêche ouverte du 01/01 au 31/12 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "1er janvier – 31 décembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-californie-transport_vivant",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-californie"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "Transport de spécimens vivants interdit."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisse de Californie (signal) : transport vivant interdit.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Pour ces trois espèces, le transport de spécimens vivants et la remise à l'eau sont interdits.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-louisiane-ouverture-c1-03-14",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "2ème samedi de mars au 3ème dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "Écrevisse de Louisiane : pêche ouverte du 14/03 au 20/09 2026 (1re catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "2ème samedi de mars au 3ème dimanche de septembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-louisiane-ouverture-c2-01-01",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Écrevisse de Louisiane : pêche ouverte du 01/01 au 31/12 2026 (2e catégorie).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "1er janvier – 31 décembre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-louisiane-transport_vivant",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "toutes",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "Transport de spécimens vivants interdit."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisse de Louisiane : transport vivant interdit.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Pour ces trois espèces, le transport de spécimens vivants et la remise à l'eau sont interdits.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-truite-de-mer-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite de mer : pêche interdite dans tout le Haut-Rhin.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "mer Pêche interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-saumon-atlantique-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Saumon atlantique : pêche interdite dans tout le Haut-Rhin.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Salmo salar Pêche interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-grande-alose-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grande alose : pêche interdite dans tout le Haut-Rhin.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Grande alose Alosa alosa Pêche interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-alose-feinte-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Alose feinte : pêche interdite dans tout le Haut-Rhin.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Alose feinte Alosa fallax Pêche interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-lamproie-fluviatile-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lamproie de rivière : pêche interdite dans tout le Haut-Rhin.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Lampetra fluviatilis Pêche interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-pattes-rouges-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisse à pattes rouges : pêche interdite dans tout le Haut-Rhin.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Astacus astacus Pêche interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-pattes-blanches-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écrevisse à pattes blanches : pêche interdite dans tout le Haut-Rhin.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Austropotamobius pallipes Pêche interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-grenouille-verte-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grenouille verte : pêche interdite dans tout le Haut-Rhin.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Toutes espèces de grenouilles Pêche interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-grenouille-rousse-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grenouille rousse : pêche interdite dans tout le Haut-Rhin.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Toutes espèces de grenouilles Pêche interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-grenouilles-autres-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Autres grenouilles : pêche interdite dans tout le Haut-Rhin.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Toutes espèces de grenouilles Pêche interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ombre-interdit",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ombre"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite jusqu'au 31/12/2026."
+   },
+   "du": null,
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Ombre commun : pêche interdite jusqu'au 31 décembre 2026.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Ombre commun Pêche interdite jusqu'au 31/12/2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-horaire",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "horaire",
+   "valeur": {
+    "texte": "Heures légales : de une demi-heure avant le lever du soleil à une demi-heure après son coucher."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "On pêche de une demi-heure avant le lever du soleil à une demi-heure après son coucher.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "depuis une demi-heure avant le lever du soleil jusqu'à une demi-heure après son coucher",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-truite-fario-taille_min-rhin-gca",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "68",
+    "eau": "rhin et grand canal d alsace",
+    "lieu": "Rhin et Grand Canal d'Alsace",
+    "geometrie": null
+   },
+   "especes": [
+    "truite-fario"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 40
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : 40 cm minimum dans le Rhin et le Grand Canal d'Alsace.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "≥ 40 cm dans le Rhin et le Grand Canal d'Alsace",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-truite-fario-taille_min-autres",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-fario"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 23,
+    "texte": "Dans les autres cours d'eau, canaux ou plans d'eau (hors Rhin et Grand Canal d'Alsace)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : 23 cm minimum, hors Rhin et Grand Canal d'Alsace.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "≥ 23 cm dans les autres cours d'eau, canaux ou plans d'eau",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-truite-arc-en-ciel-taille_min-rhin-gca",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "68",
+    "eau": "rhin et grand canal d alsace",
+    "lieu": "Rhin et Grand Canal d'Alsace",
+    "geometrie": null
+   },
+   "especes": [
+    "truite-arc-en-ciel"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 40
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : 40 cm minimum dans le Rhin et le Grand Canal d'Alsace.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "≥ 40 cm dans le Rhin et le Grand Canal d'Alsace",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-truite-arc-en-ciel-taille_min-autres",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-arc-en-ciel"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 23,
+    "texte": "Dans les autres cours d'eau, canaux ou plans d'eau (hors Rhin et Grand Canal d'Alsace)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : 23 cm minimum, hors Rhin et Grand Canal d'Alsace.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "≥ 23 cm dans les autres cours d'eau, canaux ou plans d'eau",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-omble-fontaine-taille_min-rhin-gca",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "68",
+    "eau": "rhin et grand canal d alsace",
+    "lieu": "Rhin et Grand Canal d'Alsace",
+    "geometrie": null
+   },
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 40
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Saumon de fontaine : 40 cm minimum dans le Rhin et le Grand Canal d'Alsace.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "≥ 40 cm dans le Rhin et le Grand Canal d'Alsace",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-omble-fontaine-taille_min-autres",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 23,
+    "texte": "Dans les autres cours d'eau, canaux ou plans d'eau (hors Rhin et Grand Canal d'Alsace)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Saumon de fontaine : 23 cm minimum, hors Rhin et Grand Canal d'Alsace.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "≥ 23 cm dans les autres cours d'eau, canaux ou plans d'eau",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-omble-chevalier-taille_min",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 23
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Omble chevalier : 23 cm minimum.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "Omble chevalier ≥ 23 cm",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-coregone-taille_min",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Corégone : 30 cm minimum.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "Corégone ≥ 30 cm",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-cristivomer-taille_min",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 35
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Cristivomer : 35 cm minimum.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "Cristivomer ≥ 35 cm",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-black-bass-taille_min",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "black-bass"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 40
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Black-bass : 40 cm minimum en 2e catégorie.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "Black-Bass ≥ 40 cm (dans les eaux de 2ème catégorie piscicole)",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-sandre-taille_min",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "sandre"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 50
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Sandre : 50 cm minimum en 2e catégorie.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "Sandre ≥ 50 cm (dans les eaux de 2ème catégorie piscicole)",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-brochet-taille_min",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "brochet"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 60
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Brochet : 60 cm minimum, hors zones de fenêtre de capture.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "Brochet ≥ 60 cm (hors zones d'expérimentation de fenêtre de capture)",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-brochet-fenetre_capture-kruth",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "kruth wildenstein",
+    "lieu": "Lac de Kruth-Wildenstein",
+    "geometrie": null
+   },
+   "especes": [
+    "brochet"
+   ],
+   "categorie": "toutes",
+   "type": "fenetre_capture",
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Expérimentation : seuls les brochets de 60 à 80 cm se gardent ; les autres sont remis à l'eau."
+   },
+   "du": null,
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Brochet : seuls 60 à 80 cm se gardent sur ce site, jusqu'au 31 décembre 2026.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "classe de taille de capture ≥ 60 cm et ≤ 80 cm obligatoire pour l'espèce Brochet",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-brochet-fenetre_capture-ill",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "ill",
+    "lieu": "Ill (entre la confluence avec le Feldbach à Hirsingue et la limite départementale Haut-Rhin / Bas-Rhin)",
+    "geometrie": null
+   },
+   "especes": [
+    "brochet"
+   ],
+   "categorie": "toutes",
+   "type": "fenetre_capture",
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Expérimentation : seuls les brochets de 60 à 80 cm se gardent ; les autres sont remis à l'eau."
+   },
+   "du": null,
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Brochet : seuls 60 à 80 cm se gardent sur ce site, jusqu'au 31 décembre 2026.",
+   "textes": [
+    "t4"
+   ],
+   "citation": "classe de taille de capture ≥ 60 cm et ≤ 80 cm obligatoire pour l'espèce Brochet",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-cristivomer-quota_jour",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 4
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Cristivomer : 4 prises par jour au maximum (salmonidés).",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Salmonidés : 4 prises / jour maximum",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-omble-chevalier-quota_jour",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 4
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Omble chevalier : 4 prises par jour au maximum (salmonidés).",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Salmonidés : 4 prises / jour maximum",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-omble-fontaine-quota_jour",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 4
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Saumon de fontaine : 4 prises par jour au maximum (salmonidés).",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Salmonidés : 4 prises / jour maximum",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-truite-arc-en-ciel-quota_jour",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-arc-en-ciel"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 4
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite arc-en-ciel : 4 prises par jour au maximum (salmonidés).",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Salmonidés : 4 prises / jour maximum",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-truite-fario-quota_jour",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-fario"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 4
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Truite fario : 4 prises par jour au maximum (salmonidés).",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Salmonidés : 4 prises / jour maximum",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-coregone-quota_jour",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 4,
+    "texte": "Pêche interdite au lac de Kruth-Wildenstein ; 4 prises par jour dans le reste du département."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Corégone : 4 prises par jour (pêche interdite au lac de Kruth-Wildenstein).",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Pêche interdite au lac de Kruth-Wildenstein et 4 prises / jour maximum dans le reste du département",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-brochet-quota_jour-c1",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "brochet"
+   ],
+   "categorie": "1",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 1
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Brochet en 1re catégorie : 1 prise par jour au maximum.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Carnassier en 1ère catégorie Brochet 1 prise / jour maximum",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carnassiers-quota_jour-c2",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "brochet",
+    "sandre"
+   ],
+   "categorie": "2",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 3,
+    "texte": "Brochet et sandre : 3 prises par jour au maximum, dont 1 brochet."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Brochet et sandre en 2e catégorie : 3 prises par jour au total, dont 1 brochet au plus.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "3 prises / jour maximum dont 1 brochet maximum",
+   "expire_le": null,
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "68-brochet-quota_jour-c2",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "brochet"
+   ],
+   "categorie": "2",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 1,
+    "texte": "1 brochet au plus dans les 3 prises de carnassiers du jour."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Brochet en 2e catégorie : 1 brochet par jour au maximum.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "3 prises / jour maximum dont 1 brochet maximum",
+   "expire_le": null,
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "68-black-bass-quota_jour-c2",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "black-bass"
+   ],
+   "categorie": "2",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 3,
+    "texte": "Pêche interdite dans les zones à limitation spécifique ; 3 prises par jour dans le reste du département."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Black-bass en 2e catégorie : 3 prises par jour au maximum.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "3 prises / jour maximum dans le reste du département",
+   "expire_le": null,
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ombre-remise_eau",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ombre"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Prélèvement interdit jusqu'au 31/12/2026 ; remise à l'eau immédiate, vivant, avec les précautions d'usage."
+   },
+   "du": null,
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Ombre commun : tout poisson pris est remis à l'eau vivant, jusqu'au 31 décembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Tout prélèvement de spécimen de l'espèce Ombre commun dans le département du Haut-Rhin est interdit jusqu'au 31/12/2026.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-autre-concours-eaux-closes",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "autre",
+   "valeur": {
+    "texte": "Concours de pêche en eaux closes : les limites de nombre de captures ne s'appliquent pas."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Concours en eaux closes : pas de limite de nombre de captures.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Pour l'organisation des concours de pêche en eaux closes, les limitations de nombre de captures ne s'appliquent pas.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-c1",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 1,
+    "hamecons_max": 2,
+    "mouches_max": 3,
+    "texte": "1 ligne montée sur canne, à proximité du pêcheur, sauf lacs de l'article 11."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "1re catégorie : 1 ligne à 2 hameçons ou 3 mouches (sauf les 14 lacs listés, 2 lignes).",
+   "textes": [
+    "t6"
+   ],
+   "citation": "1 ligne montée sur canne, à l'exception des lacs listés à l'article n°11 du présent arrêté, et munie de deux hameçons ou trois mouches artificielles au plus.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-c2",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 4,
+    "hamecons_max": 2,
+    "mouches_max": 3,
+    "texte": "4 lignes montées sur canne, à proximité du pêcheur."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "2e catégorie : 4 lignes au plus, chacune à 2 hameçons ou 3 mouches.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "4 lignes montées sur canne et munies de deux hameçons ou de trois mouches artificielles au plus.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-alfeld",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "alfeld",
+    "lieu": "Lac d'Alfeld : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac d'Alfeld : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-altenweiher",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "l altenweiher",
+    "lieu": "Lac de l'Altenweiher : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac de l'Altenweiher : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-ballon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "ballon",
+    "lieu": "Lac du Ballon : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac du Ballon : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-blanc",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "blanc",
+    "lieu": "Lac Blanc : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac Blanc : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-forlet",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "forlet",
+    "lieu": "Lac du Forlet : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac du Forlet : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-fischboedle",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "fischboedle",
+    "lieu": "Lac du Fischboedle : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac du Fischboedle : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-grand-neuweiher",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "grand neuweiher",
+    "lieu": "Lac du Grand Neuweiher : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac du Grand Neuweiher : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-kruth-wildenstein",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "kruth wildenstein",
+    "lieu": "Lac de Kruth-Wildenstein : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac de Kruth-Wildenstein : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-lauch",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "la lauch",
+    "lieu": "Lac de la Lauch : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac de la Lauch : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-noir",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "noir",
+    "lieu": "Lac Noir : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac Noir : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-perches",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "perches",
+    "lieu": "Lac des Perches : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac des Perches : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-petit-neuweiher",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "petit neuweiher",
+    "lieu": "Lac du Petit Neuweiher : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac du Petit Neuweiher : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-schiessrothried",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "schiessrothried",
+    "lieu": "Lac du Schiessrothried : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac du Schiessrothried : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-2lignes-sewen",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "sewen",
+    "lieu": "Lac de Sewen : lac de 1re catégorie du Haut-Rhin",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "Pêche à deux lignes autorisée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lac de Sewen : pêche à deux lignes autorisée.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "La pêche à deux lignes est autorisée sur les lacs, listés à l'arrêté du 29 juin 2001",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-engins-carrelet",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "1 carrelet de 2,3 m x 2,3 m, mailles de 10 mm au moins."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Pêcheur aux engins du domaine public : 1 carrelet de 2,3 m x 2,3 m (mailles 10 mm au moins).",
+   "textes": [
+    "t8"
+   ],
+   "citation": "1 carrelet (2,3 m x 2,3 m, dimension minimale des mailles 10 mm);",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-mode_peche-engins-nasses",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "Maximum 3 nasses de type anguillère à écrevisses (pêcheur amateur aux engins, domaine public)."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Pêcheur aux engins du domaine public : 3 nasses à écrevisses au plus.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "Maximum 3 nasses, de type anguillère, à écrevisses.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-interdit-asticots-c1",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Asticots interdits comme appât en 1re catégorie, sauf lac de Kruth-Wildenstein."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "1re catégorie : asticots interdits comme appât.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "L'emploi d'asticots comme appât est interdit dans les cours d'eau et plans d'eau classés en 1ère catégorie piscicole",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-americaine-interdit-fagots-nasses",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Fagots, fascines et nasses à écrevisses interdits pour cette espèce exotique envahissante."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Pour l'écrevisse américaine : fagots, fascines et nasses à écrevisses interdits.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "L'emploi des fagots, fascines et nasses à écrevisses pour la pêche d'écrevisses exotiques envahissantes est interdit.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-californie-interdit-fagots-nasses",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-californie"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Fagots, fascines et nasses à écrevisses interdits pour cette espèce exotique envahissante."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Pour l'écrevisse de Californie : fagots, fascines et nasses à écrevisses interdits.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "L'emploi des fagots, fascines et nasses à écrevisses pour la pêche d'écrevisses exotiques envahissantes est interdit.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-ecrevisse-louisiane-interdit-fagots-nasses",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Fagots, fascines et nasses à écrevisses interdits pour cette espèce exotique envahissante."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Pour l'écrevisse de Louisiane : fagots, fascines et nasses à écrevisses interdits.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "L'emploi des fagots, fascines et nasses à écrevisses pour la pêche d'écrevisses exotiques envahissantes est interdit.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-interdit-appat-espece-taille",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Interdit d'employer comme appât un poisson d'une espèce dont la taille minimale est fixée à l'arrêté."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Interdit d'employer comme appât un poisson d'une espèce dont la taille minimale est fixée à l'arrêté.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "Il est interdit d'employer comme appât :",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-interdit-appat-espece-protegee",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Interdit d'employer comme appât un poisson d'une espèce protégée."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Interdit d'employer comme appât un poisson d'une espèce protégée.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "Il est interdit d'employer comme appât :",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-interdit-appat-espece-non-presente",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Interdit d'employer comme appât un poisson d'une espèce non représentée sur le territoire français."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Interdit d'employer comme appât un poisson d'une espèce non représentée sur le territoire français.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "Il est interdit d'employer comme appât :",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-interdit-appat-desequilibre",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Interdit d'employer comme appât un poisson d'une espèce susceptible de provoquer des déséquilibres biologiques."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Interdit d'employer comme appât un poisson d'une espèce susceptible de provoquer des déséquilibres biologiques.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "Il est interdit d'employer comme appât :",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-interdit-zone-securite",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Accès et stationnement interdits dans la zone de 50 m à l'aval des écluses et des barrages et dans les zones de sécurité du cahier des charges."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Zone de 50 m en aval des écluses et barrages : accès et stationnement interdits.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "L'accès et le stationnement sont interdits dans la zone de 50 m située à l'aval des écluses et des barrages",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-no_kill-vieux-rhin",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "vieux rhin",
+    "lieu": "Vieux-Rhin (Petit-Landau, Ottmarsheim) : entre le PK 189,15 (rampe militaire de Petit-Landau) et le PK 193,3 (rampe militaire d'Ottmarsheim)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau immédiate de toutes les prises ; hameçons simples sans ardillon ou ardillon écrasé."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vieux-Rhin : parcours no-kill, tous les poissons sont remis à l'eau (hameçons sans ardillon).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Le Vieux-Rhin entre le PK 18915 (rampe militaire de Petit-Landau) et le PK 193.3 (rampe militaire d'Ottmarsheim).",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-vieux-rhin",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "vieux rhin",
+    "lieu": "Vieux-Rhin (Petit-Landau, Ottmarsheim) : entre le PK 189,15 (rampe militaire de Petit-Landau) et le PK 193,3 (rampe militaire d'Ottmarsheim)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "Seule technique autorisée : pêche à la ligne aux leurres et appâts artificiels uniquement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vieux-Rhin : pêche à la ligne aux leurres et appâts artificiels uniquement.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Seules y sont autorisées les techniques de pêche à la ligne aux leurres et appâts artificiels",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-no_kill-weiss",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "weiss",
+    "lieu": "Weiss (Orbey) : entre le pont rue de la Grande Vallée et le pont de la D48",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau immédiate de toutes les prises ; hameçons simples sans ardillon ou ardillon écrasé."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Weiss : parcours no-kill, tous les poissons sont remis à l'eau (hameçons sans ardillon).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La Weiss à Orbey, entre le pont rue de la Grande Vallée et le pont de la D48.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-weiss",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "weiss",
+    "lieu": "Weiss (Orbey) : entre le pont rue de la Grande Vallée et le pont de la D48",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "Seule technique autorisée : pêche à la mouche uniquement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Weiss : pêche à la mouche uniquement.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Seule y est autorisée la pêche à la mouche.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-no_kill-thur-oderen",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "thur",
+    "lieu": "Thur (Oderen) : entre le pont de la rue du pont (en face de la chapelle) et le pont de la rue Gorth",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau immédiate de toutes les prises ; hameçons simples sans ardillon ou ardillon écrasé."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Thur : parcours no-kill, tous les poissons sont remis à l'eau (hameçons sans ardillon).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La Thur à Oderen, entre le pont de la rue du pont (en face de la chapelle) et le pont de la rue Gorth.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-thur-oderen",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "thur",
+    "lieu": "Thur (Oderen) : entre le pont de la rue du pont (en face de la chapelle) et le pont de la rue Gorth",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "Seule technique autorisée : pêche à la mouche uniquement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Thur : pêche à la mouche uniquement.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Seule y est autorisée la pêche à la mouche.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-no_kill-thur-thann",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "thur",
+    "lieu": "Thur (Thann, Vieux-Thann) : entre la confluence avec le ruisseau du Grumbach et le seuil d'alimentation du bassin Athanor",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau immédiate de toutes les prises ; hameçons simples sans ardillon ou ardillon écrasé."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Thur : parcours no-kill, tous les poissons sont remis à l'eau (hameçons sans ardillon).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La Thur à Thann, entre la confluence de la Thur avec le ruisseau du Grumbach et le seuil d'alimentation du bassin Athanor",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-mode_peche-thur-thann",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "thur",
+    "lieu": "Thur (Thann, Vieux-Thann) : entre la confluence avec le ruisseau du Grumbach et le seuil d'alimentation du bassin Athanor",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "Seule technique autorisée : pêche à la mouche uniquement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Thur : pêche à la mouche uniquement.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Seule y est autorisée la pêche à la mouche.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-no_kill-courtavon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "courtavon",
+    "lieu": "Plan d'eau de Courtavon",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau immédiate de toutes les prises ; hameçons simples sans ardillon ou ardillon écrasé."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau de Courtavon : parcours no-kill, tous les poissons sont remis à l'eau (hameçons sans ardillon).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Le plan d'eau de Courtavon;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-no_kill-vauban",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "grand etang vauban",
+    "lieu": "Grand étang Vauban (Algolsheim)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau immédiate de toutes les prises ; hameçons simples sans ardillon ou ardillon écrasé."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grand étang Vauban : parcours no-kill, tous les poissons sont remis à l'eau (hameçons sans ardillon).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "Le grand étang Vauban à Algolsheim ;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-no_kill-fecht",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "fecht",
+    "lieu": "Fecht (Wihr-au-Val) : entre le 10 N route nationale et le barrage de la centrale de Walbach",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau immédiate de toutes les prises ; hameçons simples sans ardillon ou ardillon écrasé."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Fecht : parcours no-kill, tous les poissons sont remis à l'eau (hameçons sans ardillon).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La Fecht à Wihr-au-Val entre l'adresse 10 N route nationale",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-no_kill-liepvrette",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "liepvrette",
+    "lieu": "Lièpvrette (Sainte-Croix-aux-Mines) : entre le pont de Saint Blaise et le pont de la Timbach",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau immédiate de toutes les prises ; hameçons simples sans ardillon ou ardillon écrasé."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lièpvrette : parcours no-kill, tous les poissons sont remis à l'eau (hameçons sans ardillon).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La Lièpvrette à Sainte-Croix-aux-Mines entre le pont de Saint Blaise",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-carpe_nuit-courtavon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "courtavon",
+    "lieu": "Plan d'eau de Courtavon : en totalité",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau de Courtavon : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Plan d'eau de Courtavon En totalité",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-remise_eau-nuit-courtavon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "courtavon",
+    "lieu": "Plan d'eau de Courtavon : en totalité",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De nuit, tous les poissons (sauf espèces exotiques envahissantes) sont remis immédiatement à l'eau, vivants."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau de Courtavon : la nuit, tous les poissons sont remis à l'eau vivants.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Tous les poissons, à l'exception de ceux appartenant aux espèces exotiques envahissantes, doivent être remis immédiatement à l'eau, vivants",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-remise_eau-jour-courtavon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "courtavon",
+    "lieu": "Plan d'eau de Courtavon : en totalité",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De jour, les carpes sont remises immédiatement à l'eau, vivantes."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau de Courtavon : le jour, toute carpe est remise à l'eau vivante.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Pêche de jour : les carpes doivent être remises immédiatement à l'eau, vivantes avec les précautions d'usage.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-carpe_nuit-vauban",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "grand etang vauban",
+    "lieu": "Grand étang Vauban (Algolsheim) : en totalité",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grand étang Vauban : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Le grand étang Vauban à Algolsheim En totalité",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-remise_eau-nuit-vauban",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "grand etang vauban",
+    "lieu": "Grand étang Vauban (Algolsheim) : en totalité",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De nuit, tous les poissons (sauf espèces exotiques envahissantes) sont remis immédiatement à l'eau, vivants."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grand étang Vauban : la nuit, tous les poissons sont remis à l'eau vivants.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Tous les poissons, à l'exception de ceux appartenant aux espèces exotiques envahissantes, doivent être remis immédiatement à l'eau, vivants",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-remise_eau-jour-vauban",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "68",
+    "eau": "grand etang vauban",
+    "lieu": "Grand étang Vauban (Algolsheim) : en totalité",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De jour, les carpes sont remises immédiatement à l'eau, vivantes."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grand étang Vauban : le jour, toute carpe est remise à l'eau vivante.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Pêche de jour : les carpes doivent être remises immédiatement à l'eau, vivantes avec les précautions d'usage.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-carpe_nuit-crr-grand-gabarit",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "rhone au rhin",
+    "lieu": "Canal du Rhône au Rhin (grand gabarit) : du site de l'écluse de Niffer (PK 1,580 rive gauche, passerelle cyclable de la CEA PK 1,140 rive droite) au pont SNCF de l'Île Napoléon (PK 13,350 rive gauche, PK 13,000 rive droite)",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal du Rhône au Rhin : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Site de l'écluse de Niffer Pont SNCF de l'Île Napoléon",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-remise_eau-nuit-crr-grand-gabarit",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "rhone au rhin",
+    "lieu": "Canal du Rhône au Rhin (grand gabarit) : du site de l'écluse de Niffer (PK 1,580 rive gauche, passerelle cyclable de la CEA PK 1,140 rive droite) au pont SNCF de l'Île Napoléon (PK 13,350 rive gauche, PK 13,000 rive droite)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De nuit, tous les poissons (sauf espèces exotiques envahissantes) sont remis immédiatement à l'eau, vivants."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal du Rhône au Rhin : la nuit, tous les poissons sont remis à l'eau vivants.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Tous les poissons, à l'exception de ceux appartenant aux espèces exotiques envahissantes, doivent être remis immédiatement à l'eau, vivants",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-remise_eau-jour-crr-grand-gabarit",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "rhone au rhin",
+    "lieu": "Canal du Rhône au Rhin (grand gabarit) : du site de l'écluse de Niffer (PK 1,580 rive gauche, passerelle cyclable de la CEA PK 1,140 rive droite) au pont SNCF de l'Île Napoléon (PK 13,350 rive gauche, PK 13,000 rive droite)",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De jour, les carpes sont remises immédiatement à l'eau, vivantes."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal du Rhône au Rhin : le jour, toute carpe est remise à l'eau vivante.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Pêche de jour : les carpes doivent être remises immédiatement à l'eau, vivantes avec les précautions d'usage.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-carpe_nuit-canal-colmar",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "colmar rive droite",
+    "lieu": "Canal de Colmar rive droite (dite nord), de Colmar à Artzenheim : du pont 2 (limite communale Durrenentzen / Artzenheim) à la rampe de mise à l'eau à l'aval du pont 12 (rue de la Birg à Colmar)",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal de Colmar rive droite : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Le pont 2, limite communale Durrenentzen / Artzenheim",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-remise_eau-nuit-canal-colmar",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "colmar rive droite",
+    "lieu": "Canal de Colmar rive droite (dite nord), de Colmar à Artzenheim : du pont 2 (limite communale Durrenentzen / Artzenheim) à la rampe de mise à l'eau à l'aval du pont 12 (rue de la Birg à Colmar)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De nuit, tous les poissons (sauf espèces exotiques envahissantes) sont remis immédiatement à l'eau, vivants."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal de Colmar rive droite : la nuit, tous les poissons sont remis à l'eau vivants.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Tous les poissons, à l'exception de ceux appartenant aux espèces exotiques envahissantes, doivent être remis immédiatement à l'eau, vivants",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-remise_eau-jour-canal-colmar",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "colmar rive droite",
+    "lieu": "Canal de Colmar rive droite (dite nord), de Colmar à Artzenheim : du pont 2 (limite communale Durrenentzen / Artzenheim) à la rampe de mise à l'eau à l'aval du pont 12 (rue de la Birg à Colmar)",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De jour, les carpes sont remises immédiatement à l'eau, vivantes."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal de Colmar rive droite : le jour, toute carpe est remise à l'eau vivante.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Pêche de jour : les carpes doivent être remises immédiatement à l'eau, vivantes avec les précautions d'usage.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-carpe_nuit-crr-gommersdorf-heidwiller",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "rhone au rhin",
+    "lieu": "Canal du Rhône au Rhin (branche sud), de Gommersdorf à Heidwiller : de 50 m à l'aval de l'écluse 18N à 50 m à l'amont de l'écluse 29 N (hors 50 m à l'amont et à l'aval des écluses et ouvrages)",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal du Rhône au Rhin : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Le canal du Rhône au Rhin (branche sud) de Gommersdorf à Heidwiller (*)",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-remise_eau-nuit-crr-gommersdorf-heidwiller",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "rhone au rhin",
+    "lieu": "Canal du Rhône au Rhin (branche sud), de Gommersdorf à Heidwiller : de 50 m à l'aval de l'écluse 18N à 50 m à l'amont de l'écluse 29 N (hors 50 m à l'amont et à l'aval des écluses et ouvrages)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De nuit, tous les poissons (sauf espèces exotiques envahissantes) sont remis immédiatement à l'eau, vivants."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal du Rhône au Rhin : la nuit, tous les poissons sont remis à l'eau vivants.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Tous les poissons, à l'exception de ceux appartenant aux espèces exotiques envahissantes, doivent être remis immédiatement à l'eau, vivants",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-remise_eau-jour-crr-gommersdorf-heidwiller",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "rhone au rhin",
+    "lieu": "Canal du Rhône au Rhin (branche sud), de Gommersdorf à Heidwiller : de 50 m à l'aval de l'écluse 18N à 50 m à l'amont de l'écluse 29 N (hors 50 m à l'amont et à l'aval des écluses et ouvrages)",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De jour, les carpes sont remises immédiatement à l'eau, vivantes."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal du Rhône au Rhin : le jour, toute carpe est remise à l'eau vivante.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Pêche de jour : les carpes doivent être remises immédiatement à l'eau, vivantes avec les précautions d'usage.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-carpe_nuit-crr-heidwiller-mulhouse",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "rhone au rhin",
+    "lieu": "Canal du Rhône au Rhin (branche sud), de Heidwiller à Mulhouse : de 50 m à l'aval de l'écluse 29 N (chemin Auweg) à 50 m à l'amont de l'écluse 39 N (rue Pierre de Coubertin) (hors 50 m à l'amont et à l'aval des écluses et ouvrages)",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal du Rhône au Rhin : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Le canal du Rhône au Rhin (branche sud) de Heidwiller à Mulhouse (*)",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-remise_eau-nuit-crr-heidwiller-mulhouse",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "rhone au rhin",
+    "lieu": "Canal du Rhône au Rhin (branche sud), de Heidwiller à Mulhouse : de 50 m à l'aval de l'écluse 29 N (chemin Auweg) à 50 m à l'amont de l'écluse 39 N (rue Pierre de Coubertin) (hors 50 m à l'amont et à l'aval des écluses et ouvrages)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De nuit, tous les poissons (sauf espèces exotiques envahissantes) sont remis immédiatement à l'eau, vivants."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal du Rhône au Rhin : la nuit, tous les poissons sont remis à l'eau vivants.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Tous les poissons, à l'exception de ceux appartenant aux espèces exotiques envahissantes, doivent être remis immédiatement à l'eau, vivants",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-remise_eau-jour-crr-heidwiller-mulhouse",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "rhone au rhin",
+    "lieu": "Canal du Rhône au Rhin (branche sud), de Heidwiller à Mulhouse : de 50 m à l'aval de l'écluse 29 N (chemin Auweg) à 50 m à l'amont de l'écluse 39 N (rue Pierre de Coubertin) (hors 50 m à l'amont et à l'aval des écluses et ouvrages)",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De jour, les carpes sont remises immédiatement à l'eau, vivantes."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Canal du Rhône au Rhin : le jour, toute carpe est remise à l'eau vivante.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Pêche de jour : les carpes doivent être remises immédiatement à l'eau, vivantes avec les précautions d'usage.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-carpe_nuit-ill-domaniale",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "ill domaniale",
+    "lieu": "Ill domaniale (6,5 km) : du pont du Ladhof au pont de la Maison Rouge",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Ill domaniale : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Ill domaniale (6,5 Km) Pont du Ladhof",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-remise_eau-nuit-ill-domaniale",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "ill domaniale",
+    "lieu": "Ill domaniale (6,5 km) : du pont du Ladhof au pont de la Maison Rouge",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De nuit, tous les poissons (sauf espèces exotiques envahissantes) sont remis immédiatement à l'eau, vivants."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Ill domaniale : la nuit, tous les poissons sont remis à l'eau vivants.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Tous les poissons, à l'exception de ceux appartenant aux espèces exotiques envahissantes, doivent être remis immédiatement à l'eau, vivants",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-remise_eau-jour-ill-domaniale",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "ill domaniale",
+    "lieu": "Ill domaniale (6,5 km) : du pont du Ladhof au pont de la Maison Rouge",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De jour, les carpes sont remises immédiatement à l'eau, vivantes."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Ill domaniale : le jour, toute carpe est remise à l'eau vivante.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Pêche de jour : les carpes doivent être remises immédiatement à l'eau, vivantes avec les précautions d'usage.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-carpe_nuit-vieux-rhin-gca",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "vieux rhin et grand canal d alsace",
+    "lieu": "Vieux-Rhin et Grand Canal d'Alsace (1,2 km) : en aval du pont de la D 415 (PK 225,275) à la pointe de l'Île du Rhin (PK 226,475)",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vieux-Rhin et Grand Canal d'Alsace : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "En aval du pont de la D 415 (PK 225.275)",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-remise_eau-nuit-vieux-rhin-gca",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "vieux rhin et grand canal d alsace",
+    "lieu": "Vieux-Rhin et Grand Canal d'Alsace (1,2 km) : en aval du pont de la D 415 (PK 225,275) à la pointe de l'Île du Rhin (PK 226,475)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De nuit, tous les poissons (sauf espèces exotiques envahissantes) sont remis immédiatement à l'eau, vivants."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vieux-Rhin et Grand Canal d'Alsace : la nuit, tous les poissons sont remis à l'eau vivants.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Tous les poissons, à l'exception de ceux appartenant aux espèces exotiques envahissantes, doivent être remis immédiatement à l'eau, vivants",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-remise_eau-jour-vieux-rhin-gca",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "vieux rhin et grand canal d alsace",
+    "lieu": "Vieux-Rhin et Grand Canal d'Alsace (1,2 km) : en aval du pont de la D 415 (PK 225,275) à la pointe de l'Île du Rhin (PK 226,475)",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De jour, les carpes sont remises immédiatement à l'eau, vivantes."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vieux-Rhin et Grand Canal d'Alsace : le jour, toute carpe est remise à l'eau vivante.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Pêche de jour : les carpes doivent être remises immédiatement à l'eau, vivantes avec les précautions d'usage.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-carpe_nuit-vieux-rhin-chalampe",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "vieux rhin a chalampe rive gauche",
+    "lieu": "Vieux-Rhin à Chalampé rive gauche (4 km) : de 1 rue du Bac à Chalampé à 200 m en aval du parking du golf du Rhin à Rumersheim-le-Haut",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vieux-Rhin à Chalampé rive gauche : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Vieux-Rhin à Chalampé rive gauche (4 Km)",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-remise_eau-nuit-vieux-rhin-chalampe",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "vieux rhin a chalampe rive gauche",
+    "lieu": "Vieux-Rhin à Chalampé rive gauche (4 km) : de 1 rue du Bac à Chalampé à 200 m en aval du parking du golf du Rhin à Rumersheim-le-Haut",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De nuit, tous les poissons (sauf espèces exotiques envahissantes) sont remis immédiatement à l'eau, vivants."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vieux-Rhin à Chalampé rive gauche : la nuit, tous les poissons sont remis à l'eau vivants.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Tous les poissons, à l'exception de ceux appartenant aux espèces exotiques envahissantes, doivent être remis immédiatement à l'eau, vivants",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-carpe-remise_eau-jour-vieux-rhin-chalampe",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "vieux rhin a chalampe rive gauche",
+    "lieu": "Vieux-Rhin à Chalampé rive gauche (4 km) : de 1 rue du Bac à Chalampé à 200 m en aval du parking du golf du Rhin à Rumersheim-le-Haut",
+    "geometrie": null
+   },
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "De jour, les carpes sont remises immédiatement à l'eau, vivantes."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vieux-Rhin à Chalampé rive gauche : le jour, toute carpe est remise à l'eau vivante.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Pêche de jour : les carpes doivent être remises immédiatement à l'eau, vivantes avec les précautions d'usage.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-categorie-lacs-vosges",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": "Tous les lacs naturels et artificiels du Massif Vosgien, sauf le Lac Vert",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Lacs naturels et artificiels du Massif Vosgien (sauf le Lac Vert) : 1re catégorie.",
+   "textes": [
+    "t13"
+   ],
+   "citation": "Tous les lacs naturels et aïtificiels du Massif Vosgien, à l'exception du Lac Vert",
+   "expire_le": null,
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-categorie-c2",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "categorie",
+   "valeur": {
+    "classe": "2"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Tout cours d'eau, canal ou plan d'eau non classé en 1re catégorie est en 2e catégorie.",
+   "textes": [
+    "t14"
+   ],
+   "citation": "Tous les cours d'eau, Canaux et plan d'eau non classés en 1°° catégorie",
+   "expire_le": null,
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "68-anguille-argentee-interdit-cahier",
+   "portee": {
+    "niveau": "departement",
+    "code": "68",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche interdite toute l'année sur les lots du domaine public."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Anguille argentée : pêche interdite toute l'année (domaine public fluvial).",
+   "textes": [
+    "t15"
+   ],
+   "citation": "La pêche de l'anguille argentée est interdite toute l’année",
+   "expire_le": "2027-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "68-toutes-reserve-ancien-canal-b1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "68",
+    "eau": "partie de l ancien canal en amont de l ancienne ecluse jusqu a la jonction avec le canal navigable",
+    "lieu": "Partie de l'ancien canal en amont de l'ancienne écluse jusqu'à la jonction avec le canal navigable (570 m) (dépendances non navigables, lot B1 à B3)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Réserve de pêche : pêche interdite."
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Partie de l'ancien canal en amont de l'ancienne écluse jusqu'à la jonction avec le canal navigable : réserve de pêche, pêche interdite.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "(R) Partie de l'ancien canal en amont environ de l'ancienne écluse jusqu'à la jonction avec le canal navigable (570m)",
+   "expire_le": "2027-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  }
+ ],
+ "a_verifier": [
+  {
+   "type": "ouverture",
+   "especes": [
+    "truite-de-lac"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t2"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "truite-de-lac"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t2"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t2"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [
+    "ecrevisse-californie"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t2"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t2"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "toutes",
+   "eau": "kruth wildenstein",
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t6"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t6"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t6"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t6"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "1",
+   "eau": "kruth wildenstein",
+   "textes": [
+    "t7"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t8"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t8"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "brochet"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t9"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "1",
+   "eau": "kruth wildenstein",
+   "textes": [
+    "t9"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "largue",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "elbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "traubach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "soultzbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "kresbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "ill",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "feldbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "thalbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "dorfbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "lertzbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "rohrbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "liesbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "drainage du grand canal d alsace",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "augraben",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "birsig",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "ruisseau de neuwiller",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "lucelle",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "doller",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "thur",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "wuenheimerbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "fridolinsbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "ruisseau de wattwiller",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "lauch",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "rimbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "ohmbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "thur et lauch canalisee",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "fecht",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "bergenbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "eckenbach",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "brunnwasser",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "holderlehgraben",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "scheidgraben",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "orch",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "riedbrunnengraben",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "ischert",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "drainage du rhin au grand canal d alsace",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "liepvrette",
+   "textes": [
+    "t17"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t15"
+   ]
+  },
+  {
+   "type": "carpe_nuit",
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "eau": "rhone au rhin",
+   "textes": [
+    "t18"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "barrage de kembs",
+   "textes": [
+    "t16"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "barrage de l usine de marckolsheim",
+   "textes": [
+    "t16"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "barrage agricole",
+   "textes": [
+    "t16"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "bief de partage a valdieu",
+   "textes": [
+    "t16"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "frayere a brochets rive droite",
+   "textes": [
+    "t16"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "passerelle du deversoir",
+   "textes": [
+    "t19"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "zone de demolition",
+   "textes": [
+    "t19"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "zone portuaire",
+   "textes": [
+    "t19"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "zone d erosion maitrisee",
+   "textes": [
+    "t19"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "quai rhenalu",
+   "textes": [
+    "t19"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "ombre"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t20"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "black-bass"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t20"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "toutes",
+   "eau": "kruth wildenstein",
+   "textes": [
+    "t20"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "sandre"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [
+    "carpe"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t22"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [
+    "brochet"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "largue et elbach",
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "ill et feldbach",
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "doller",
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "thur",
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "lauch",
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "fecht",
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "liepvrette",
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "lucelle",
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "birsig",
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "eau": "lots de peche de l etat",
+   "textes": [
+    "t24"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "eau": "lots de peche de l etat",
+   "textes": [
+    "t24"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-americaine",
+    "ecrevisse-californie",
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t25"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-americaine",
+    "ecrevisse-californie",
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t25"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grenouille-verte",
+    "grenouille-rousse",
+    "grenouilles-autres"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t25"
+   ]
+  },
+  {
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t26"
+   ]
+  },
+  {
+   "type": "quota_jour",
+   "especes": [
+    "2151",
+    "2195",
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t26"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "toutes",
+   "eau": "kruth wildenstein",
+   "textes": [
+    "t26"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "eau": "rhone au rhin branche sud",
+   "textes": [
+    "t26"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "kruth wildenstein",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-americaine",
+    "ecrevisse-californie",
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "transport_vivant",
+   "especes": [
+    "ecrevisse-americaine",
+    "ecrevisse-californie",
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "transport_vivant",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "eau": "grand etang vauban",
+   "textes": [
+    "t30"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "courtavon",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "grand etang vauban",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "fecht",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "liepvrette",
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "lots de peche de l etat",
+   "textes": [
+    "t32"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "aval des ecluses et barrages",
+   "textes": [
+    "t33"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "rhone au rhin",
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "embranchement de colmar",
+   "textes": [
+    "t35"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "rhin",
+   "textes": [
+    "t36"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "rhin",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "dependances du canal du rhone au rhin",
+   "textes": [
+    "t38"
+   ]
+  }
+ ]
+}

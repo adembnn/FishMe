@@ -1,0 +1,3806 @@
+{
+ "version": "2026-10-15.1",
+ "departement": "18",
+ "niveau": "partiel",
+ "textes": [
+  {
+   "id": "t1",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282, article 1er",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t2",
+   "titre": "Arrêté DDT-2025-521 (périodes d'ouverture 2026), article 2-1",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t3",
+   "titre": "Arrêté DDT-2025-521 (périodes d'ouverture 2026), article 2-2",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t4",
+   "titre": "Arrêté DDT-2025-521 (périodes d'ouverture 2026), article 4-1",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t5",
+   "titre": "Arrêté DDT-2025-521 (périodes d'ouverture 2026), article 4-2",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t6",
+   "titre": "Arrêté DDT-2025-521 (périodes d'ouverture 2026), article 3-1",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t7",
+   "titre": "Arrêté DDT-2025-521 (périodes d'ouverture 2026), article 3-2",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t8",
+   "titre": "Arrêté DDT-2025-521 (périodes d'ouverture 2026), article 5",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t9",
+   "titre": "Arrêté DDT-2026-247 (modifie l'article 5 de DDT-2025-521), article 1er",
+   "url": "https://files.appli-intramuros.com/files/news/attachments/agglo/161/2026723173135303083_arrete-ddt-2026-247-modificatif-peche-anguille.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026-07-06"
+  },
+  {
+   "id": "t10",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282, article 6",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t11",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282, article 7",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t12",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282, article 8",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t13",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282, article 9, 1°",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t14",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282, article 9, 3°",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t15",
+   "titre": "Arrêté DDT-2025-521 (périodes d'ouverture 2026), article 7",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t16",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282, article 5",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t17",
+   "titre": "Arrêté DDT-2023-088 (carpe à toute heure, Val d'Auron), article 1er",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2023/04/ARRETEDDT2023-088AUTORISANTLAPECHEDELACARPEATOUTEHEURESURLEPLANDEAUDUVALDAURON.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2023-03-09"
+  },
+  {
+   "id": "t18",
+   "titre": "Arrêté DDT-2023-088 (carpe à toute heure, Val d'Auron), article 2",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2023/04/ARRETEDDT2023-088AUTORISANTLAPECHEDELACARPEATOUTEHEURESURLEPLANDEAUDUVALDAURON.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2023-03-09"
+  },
+  {
+   "id": "t19",
+   "titre": "Arrêté DDT-2023-088 (carpe à toute heure, Val d'Auron), article 4",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2023/04/ARRETEDDT2023-088AUTORISANTLAPECHEDELACARPEATOUTEHEURESURLEPLANDEAUDUVALDAURON.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2023-03-09"
+  },
+  {
+   "id": "t20",
+   "titre": "Arrêté 2026-1052 (marais de Bourges), articles 1er, 2 et 4",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/07/20260721_AP_2026-1052_Interdiction_-marais_Bourges.odt_2.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026-07-21"
+  },
+  {
+   "id": "t21",
+   "titre": "Arrêté DDT-2025-521 (périodes d'ouverture 2026), article 3",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t22",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282, considérants et articles 2 et 3",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t23",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282, articles 2 et 3",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t24",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282, article 11",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t25",
+   "titre": "Arrêté DDT-2023-088 (carpe à toute heure, Val d'Auron), article 3",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2023/04/ARRETEDDT2023-088AUTORISANTLAPECHEDELACARPEATOUTEHEURESURLEPLANDEAUDUVALDAURON.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2023-03-09"
+  },
+  {
+   "id": "t26",
+   "titre": "Arrêté DDT-2023-087 (réserve de la Rampenne), article 1er",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2023/04/ARRETEDDT2023-087PORTANTCREATIONDUNERESERVETEMPORAIREDEPECHESURLARIVIERELARAMPENNEENAMONTDELAPASSERELLEDUVALAURON.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2023-03-08"
+  },
+  {
+   "id": "t27",
+   "titre": "Arrêté DDT-2021-101 (no-kill carnassiers, Auron), article 2",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrt-no-kill-pont-dauron.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2021-04-22"
+  },
+  {
+   "id": "t28",
+   "titre": "Arrêté DDT-2021-156 (black-bass, canal de Berry), article 2",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_2021_156_remise_eau_obligatoire_black_bass_canal_berry_bourges_31_decembre_2026.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2021-06-28"
+  },
+  {
+   "id": "t29",
+   "titre": "Arrêté DDT-2025-521 du 19/12/2025 (périodes d'ouverture 2026), art. 3",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t30",
+   "titre": "Arrêté DDT-2025-521 du 19/12/2025 (périodes d'ouverture 2026), art. 4",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t31",
+   "titre": "Arrêté DDT-2025-521 du 19/12/2025 (périodes d'ouverture 2026), art. 2",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t32",
+   "titre": "Arrêté DDT-2026-247 du 06/07/2026 modifiant l'arrêté DDT-2025-521, art. 1er",
+   "url": "https://files.appli-intramuros.com/files/news/attachments/agglo/161/2026723173135303083_arrete-ddt-2026-247-modificatif-peche-anguille.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2026-07-06"
+  },
+  {
+   "id": "t33",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282 du 12/11/2019, art. 4",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t34",
+   "titre": "Arrêté DDT-2025-521 du 19/12/2025 (périodes d'ouverture 2026), art. 6",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2026/01/ARRETEDDT2025-521SIGNE2026.odt.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2025-12-19"
+  },
+  {
+   "id": "t35",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282 du 12/11/2019, art. 1er",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t36",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282 du 12/11/2019, art. 5",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t37",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282 du 12/11/2019, art. 8",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t38",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282 du 12/11/2019, art. 9",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t39",
+   "titre": "Arrêté réglementaire permanent DDT-2019-0282 du 12/11/2019, art. 11",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_permanent_ddt_2019_0282_peche_cher.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2019-11-12"
+  },
+  {
+   "id": "t40",
+   "titre": "Arrêté DDT-2021-156 du 28/06/2021 (black-bass, canal de Berry à Bourges), art. 2",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrete_2021_156_remise_eau_obligatoire_black_bass_canal_berry_bourges_31_decembre_2026.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2021-06-28"
+  },
+  {
+   "id": "t41",
+   "titre": "Arrêté DDT-2021-101 du 22/04/2021 (carnassiers, Auron à Bourges), art. 2",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2022/08/arrt-no-kill-pont-dauron.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2021-04-22"
+  },
+  {
+   "id": "t42",
+   "titre": "Arrêté DDT-2023-087 du 08/03/2023 (réserve de la Rampenne), art. 1er",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2023/04/ARRETEDDT2023-087PORTANTCREATIONDUNERESERVETEMPORAIREDEPECHESURLARIVIERELARAMPENNEENAMONTDELAPASSERELLEDUVALAURON.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2023-03-08"
+  },
+  {
+   "id": "t43",
+   "titre": "Arrêté DDT-2023-088 du 09/03/2023 (carpe à toute heure, Val d'Auron), art. 4",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2023/04/ARRETEDDT2023-088AUTORISANTLAPECHEDELACARPEATOUTEHEURESURLEPLANDEAUDUVALDAURON.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2023-03-09"
+  },
+  {
+   "id": "t44",
+   "titre": "Arrêté DDT-2023-088 du 09/03/2023 (carpe à toute heure, Val d'Auron), art. 3",
+   "url": "https://martinpecheurduberry.com/wp-content/uploads/2023/04/ARRETEDDT2023-088AUTORISANTLAPECHEDELACARPEATOUTEHEURESURLEPLANDEAUDUVALDAURON.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": "2023-03-09"
+  },
+  {
+   "id": "t45",
+   "titre": "Guide 2026 de la fédération du Cher, réserves de pêche (information)",
+   "url": "https://federationpeche18.fr/wp-content/uploads/2025/12/Guide-2026-Web.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-15",
+   "version": null
+  }
+ ],
+ "eaux": [
+  {
+   "cle": "affluents et sous affluents des cours d eau de 1re categorie du cher",
+   "nom": "Affluents et sous-affluents des cours d'eau de 1re catégorie du Cher",
+   "code": null
+  },
+  {
+   "cle": "allier",
+   "nom": "Allier",
+   "code": null
+  },
+  {
+   "cle": "arnon",
+   "nom": "Arnon",
+   "code": null
+  },
+  {
+   "cle": "auron",
+   "nom": "Auron",
+   "code": null
+  },
+  {
+   "cle": "barangeon",
+   "nom": "Barangeon",
+   "code": null
+  },
+  {
+   "cle": "benelle ou riviere de feux",
+   "nom": "Benelle ou rivière de Feux",
+   "code": null
+  },
+  {
+   "cle": "berry",
+   "nom": "Canal de Berry",
+   "code": null
+  },
+  {
+   "cle": "cher",
+   "nom": "Cher",
+   "code": null
+  },
+  {
+   "cle": "colin",
+   "nom": "Colin",
+   "code": null
+  },
+  {
+   "cle": "cours d eau de 1ere categorie",
+   "nom": "Cours d'eau de 1ère catégorie",
+   "code": null
+  },
+  {
+   "cle": "grande sauldre",
+   "nom": "Grande Sauldre",
+   "code": null
+  },
+  {
+   "cle": "indre",
+   "nom": "Indre",
+   "code": null
+  },
+  {
+   "cle": "langis",
+   "nom": "Langis",
+   "code": null
+  },
+  {
+   "cle": "loire",
+   "nom": "Loire",
+   "code": null
+  },
+  {
+   "cle": "loire a l aval du bec d allier",
+   "nom": "Loire à l'aval du Bec d'Allier",
+   "code": null
+  },
+  {
+   "cle": "loire et allier",
+   "nom": "Loire et Allier",
+   "code": null
+  },
+  {
+   "cle": "marais de bourges",
+   "nom": "Marais de Bourges",
+   "code": null
+  },
+  {
+   "cle": "notre heure",
+   "nom": "Notre-Heure",
+   "code": null
+  },
+  {
+   "cle": "ouatier",
+   "nom": "Ouatier",
+   "code": null
+  },
+  {
+   "cle": "petite sauldre",
+   "nom": "Petite Sauldre",
+   "code": null
+  },
+  {
+   "cle": "planche godard ou boisseau",
+   "nom": "Planche-Godard ou Boisseau",
+   "code": null
+  },
+  {
+   "cle": "plans d eau de 1ere categorie",
+   "nom": "Plans d'eau de 1ère catégorie",
+   "code": null
+  },
+  {
+   "cle": "plans d eau de 1re categorie",
+   "nom": "Plans d'eau de 1re catégorie",
+   "code": null
+  },
+  {
+   "cle": "portefeuille",
+   "nom": "Portefeuille",
+   "code": null
+  },
+  {
+   "cle": "puits",
+   "nom": "Étang du Puits",
+   "code": null
+  },
+  {
+   "cle": "rampenne",
+   "nom": "Rampenne",
+   "code": null
+  },
+  {
+   "cle": "sidiailles",
+   "nom": "Sidiailles",
+   "code": null
+  },
+  {
+   "cle": "sinaise",
+   "nom": "Sinaise",
+   "code": null
+  },
+  {
+   "cle": "val d auron",
+   "nom": "Val d'Auron",
+   "code": null
+  },
+  {
+   "cle": "yevre",
+   "nom": "Yèvre",
+   "code": null
+  }
+ ],
+ "regles": [
+  {
+   "id": "18-toutes-categorie-grande-sauldre-c1-co",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "18",
+    "eau": "grande sauldre",
+    "lieu": "Grande Sauldre",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Grande Sauldre est classé en 1re catégorie piscicole (Cher).",
+   "textes": [
+    "t1"
+   ],
+   "citation": "la Grande Sauldre, la Petite Sauldre, le Barangeon, l'Ouatier",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-categorie-petite-sauldre-c1-co",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "18",
+    "eau": "petite sauldre",
+    "lieu": "Petite Sauldre",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Petite Sauldre est classé en 1re catégorie piscicole (Cher).",
+   "textes": [
+    "t1"
+   ],
+   "citation": "la Grande Sauldre, la Petite Sauldre, le Barangeon, l'Ouatier",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-categorie-barangeon-c1-co",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "18",
+    "eau": "barangeon",
+    "lieu": "Barangeon",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Barangeon est classé en 1re catégorie piscicole (Cher).",
+   "textes": [
+    "t1"
+   ],
+   "citation": "la Grande Sauldre, la Petite Sauldre, le Barangeon, l'Ouatier",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-categorie-ouatier-c1-co",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "18",
+    "eau": "ouatier",
+    "lieu": "Ouatier",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Ouatier est classé en 1re catégorie piscicole (Cher).",
+   "textes": [
+    "t1"
+   ],
+   "citation": "la Grande Sauldre, la Petite Sauldre, le Barangeon, l'Ouatier",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-categorie-arnon-c1-co",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "18",
+    "eau": "arnon",
+    "lieu": "Arnon : en amont de la confluence avec le Portefeuille",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Arnon, en amont de la confluence Arnon-Portefeuille, est classé en 1re catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "l'Arnon et le Portefeuille en amont de leur confluence ; la Sinaise",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-categorie-portefeuille-c1-co",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "18",
+    "eau": "portefeuille",
+    "lieu": "Portefeuille : en amont de la confluence avec l'Arnon",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Portefeuille, en amont de la confluence Arnon-Portefeuille, est classé en 1re catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "l'Arnon et le Portefeuille en amont de leur confluence ; la Sinaise",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-categorie-sinaise-c1-co",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "18",
+    "eau": "sinaise",
+    "lieu": "Sinaise",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Sinaise est classée en 1re catégorie piscicole.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "l'Arnon et le Portefeuille en amont de leur confluence ; la Sinaise",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-categorie-notre-heure-c1-co",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "18",
+    "eau": "notre heure",
+    "lieu": "Notre-Heure",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Notre-Heure est classée en 1re catégorie piscicole.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "la Notre-Heure",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-categorie-indre-c1-co",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "18",
+    "eau": "indre",
+    "lieu": "Indre",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "L'Indre est classée en 1re catégorie piscicole.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "l’Indre ;",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-categorie-colin-amont-c1-tr",
+   "portee": {
+    "niveau": "troncon",
+    "code": "18",
+    "eau": "colin",
+    "lieu": "Colin (Les Aix-d'Angillon) : partie amont jusqu'au pont de la RD 12",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Colin, de l'amont jusqu'au pont de la RD 12 aux Aix-d'Angillon, est classé en 1re catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "le Colin dans sa partie amont jusqu’au pont de la RD 12 sur la commune des Aix",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-categorie-affluents-c1-co",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "18",
+    "eau": "affluents et sous affluents des cours d eau de 1re categorie du cher",
+    "lieu": "Affluents et sous-affluents des cours d'eau de 1re catégorie du Cher",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "categorie",
+   "valeur": {
+    "classe": "1",
+    "texte": "affluents et sous-affluents des cours d'eau ou parties de cours d'eau classés en 1re catégorie"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les affluents et sous-affluents des cours d'eau de 1re catégorie sont aussi en 1re catégorie.",
+   "textes": [
+    "t1"
+   ],
+   "citation": "les affluents et sous-affluents des cours d’eau ou parties de cours d’eau désignés",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-ouverture-ouverture-generale-c1-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 1re catégorie, la pêche est ouverte du 14 mars au 20 septembre 2026 (sauf espèces à dates propres).",
+   "textes": [
+    "t2"
+   ],
+   "citation": "Ouverture générale : du 14 mars au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2151-ouverture-ouverture-c1-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du dernier samedi d'avril au 3e dimanche de septembre"
+   },
+   "du": "2026-04-25",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 1re catégorie, le brochet se pêche du 25 avril au 20 septembre 2026.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "Du 25 avril au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2151-remise_eau-remise-avant-ouverture-c1-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "tout brochet capturé entre le 14 mars et le 24 avril 2026 doit être immédiatement remis à l'eau"
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "remplace": null,
+   "phrase": "En 1re catégorie, un brochet pris du 14 mars au 24 avril 2026 est remis à l'eau tout de suite.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "Tout brochet capturé entre le 14 mars et le 24 avril 2026 doit être immédiatement remis à l’eau",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2247-ouverture-ouverture-c1-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2247"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 3e samedi de mai au 3e dimanche de septembre"
+   },
+   "du": "2026-05-16",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 1re catégorie, l'ombre commun se pêche du 16 mai au 20 septembre 2026.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "Ombre commun Du 16 mai au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-ecrevisse-ouverture-ouverture-c1-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre",
+    "texte": "autres écrevisses que celles de l'article R. 436-10"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 1re catégorie, les écrevisses non protégées (hors pattes blanches, rouges, grêles, torrents) se pêchent du 14 mars au 20 septembre 2026.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "Autres écrevisses que celles citées ci-dessus Pêche interdite Du 14 mars au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-grenouille-verte-ouverture-ouverture-c1-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er samedi de juillet au 3e dimanche de septembre"
+   },
+   "du": "2026-07-04",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 1re catégorie, la grenouille verte se pêche du 4 juillet au 20 septembre 2026.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "Pelophylax kl. esculentus) Du 4 juillet au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-ouverture-ouverture-generale-lignes-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "En 2e catégorie, la pêche à la ligne est ouverte toute l'année 2026 (sauf espèces à dates propres).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "Pêche aux lignes Du 1er janvier au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2151-ouverture-ouverture-janvier-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au dernier dimanche de janvier"
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "remplace": null,
+   "phrase": "En 2e catégorie, le brochet se pêche du 1er au 25 janvier 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Brochet Du 1er janvier au 25 janvier 2026 Du 25 avril au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2151-ouverture-ouverture-avril-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du dernier samedi d'avril au 31 décembre"
+   },
+   "du": "2026-04-25",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "En 2e catégorie, le brochet se pêche du 25 avril au 31 décembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Brochet Du 1er janvier au 25 janvier 2026 Du 25 avril au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2195-ouverture-ouverture-janvier-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au dernier dimanche de janvier"
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "remplace": null,
+   "phrase": "En 2e catégorie, le sandre se pêche du 1er au 25 janvier 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Sandre Du 1er janvier au 25 janvier 2026 Du 25 avril au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2195-ouverture-ouverture-avril-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du dernier samedi d'avril au 31 décembre"
+   },
+   "du": "2026-04-25",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "En 2e catégorie, le sandre se pêche du 25 avril au 31 décembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Sandre Du 1er janvier au 25 janvier 2026 Du 25 avril au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2053-ouverture-ouverture-debut-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au dernier dimanche d'avril"
+   },
+   "du": "2026-01-01",
+   "au": "2026-04-26",
+   "remplace": null,
+   "phrase": "En 2e catégorie, le black-bass se pêche du 1er janvier au 26 avril 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Black-bass Du 1er janvier au 26 avril 2026 Du 4 juillet au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2053-ouverture-ouverture-ete-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er samedi de juillet au 31 décembre"
+   },
+   "du": "2026-07-04",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "En 2e catégorie, le black-bass se pêche du 4 juillet au 31 décembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Black-bass Du 1er janvier au 26 avril 2026 Du 4 juillet au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2221-ouverture-ouverture-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 2e catégorie, la truite fario se pêche du 14 mars au 20 septembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Truite fario Omble ou saumon de fontaine Omble chevalier et cristivomer Truite arc-en-ciel sur la Loire et l’Allier Du 14 mars au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-omble-fontaine-ouverture-ouverture-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 2e catégorie, l'omble de fontaine se pêche du 14 mars au 20 septembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Truite fario Omble ou saumon de fontaine Omble chevalier et cristivomer Truite arc-en-ciel sur la Loire et l’Allier Du 14 mars au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-omble-chevalier-ouverture-ouverture-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 2e catégorie, l'omble chevalier se pêche du 14 mars au 20 septembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Truite fario Omble ou saumon de fontaine Omble chevalier et cristivomer Truite arc-en-ciel sur la Loire et l’Allier Du 14 mars au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-cristivomer-ouverture-ouverture-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 2e catégorie, le cristivomer se pêche du 14 mars au 20 septembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Truite fario Omble ou saumon de fontaine Omble chevalier et cristivomer Truite arc-en-ciel sur la Loire et l’Allier Du 14 mars au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2247-ouverture-ouverture-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2247"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 3e samedi de mai au 31 décembre"
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "En 2e catégorie, l'ombre commun se pêche du 16 mai au 31 décembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Ombre commun Du 16 mai au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-ecrevisse-ouverture-ouverture-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre",
+    "texte": "autres écrevisses que celles de l'article R. 436-10"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "En 2e catégorie, les écrevisses non protégées se pêchent toute l'année 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Autres écrevisses que celles citées ci-dessus Pêche interdite 1er janvier au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-ecrevisse-transport_vivant-transport-vivant-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "transport interdit à l'état vivant"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 2e catégorie, le transport des écrevisses vivantes est interdit.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Transport interdit à l’état vivant",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-grenouille-verte-ouverture-ouverture-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er samedi de juillet au 3e dimanche de septembre"
+   },
+   "du": "2026-07-04",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 2e catégorie, la grenouille verte se pêche du 4 juillet au 20 septembre 2026.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "Pelophylax kl. esculentus) Du 4 juillet au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-ouverture-sidiailles-generale-janvier-c1-pl",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "18",
+    "eau": "sidiailles",
+    "lieu": "Sidiailles (Sidiailles) : plan d'eau",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er au 31 janvier"
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-31",
+   "remplace": null,
+   "phrase": "Au plan d'eau de Sidiailles, la pêche est ouverte du 1er au 31 janvier 2026.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "Du 1er janvier au 31 janvier 2026 et Du 14 mars au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-ouverture-sidiailles-generale-mars-c1-pl",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "18",
+    "eau": "sidiailles",
+    "lieu": "Sidiailles (Sidiailles) : plan d'eau",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 31 décembre"
+   },
+   "du": "2026-03-14",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Au plan d'eau de Sidiailles, la pêche est ouverte du 14 mars au 31 décembre 2026.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "Du 1er janvier au 31 janvier 2026 et Du 14 mars au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2247-ouverture-sidiailles-ombre-c1-pl",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "18",
+    "eau": "sidiailles",
+    "lieu": "Sidiailles (Sidiailles) : plan d'eau",
+    "geometrie": null
+   },
+   "especes": [
+    "2247"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 3e samedi de mai au 31 décembre"
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "À Sidiailles, l'ombre commun se pêche du 16 mai au 31 décembre 2026.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "Ombre commun Du 16 mai au 31 décembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-ecrevisse-ouverture-sidiailles-ecrevisse-janvier-c1-pl",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "18",
+    "eau": "sidiailles",
+    "lieu": "Sidiailles (Sidiailles) : plan d'eau",
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er au 31 janvier",
+    "texte": "autres écrevisses que celles de l'article R. 436-10"
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-31",
+   "remplace": null,
+   "phrase": "À Sidiailles, les écrevisses non protégées se pêchent du 1er au 31 janvier 2026.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "Du 1er janvier au 31 janvier 2026 et du 14 mars au 31 décembre 2026 Transport interdit à l’état vivant",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-ecrevisse-ouverture-sidiailles-ecrevisse-mars-c1-pl",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "18",
+    "eau": "sidiailles",
+    "lieu": "Sidiailles (Sidiailles) : plan d'eau",
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 31 décembre",
+    "texte": "autres écrevisses que celles de l'article R. 436-10"
+   },
+   "du": "2026-03-14",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "À Sidiailles, les écrevisses non protégées se pêchent du 14 mars au 31 décembre 2026.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "Du 1er janvier au 31 janvier 2026 et du 14 mars au 31 décembre 2026 Transport interdit à l’état vivant",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-ecrevisse-transport_vivant-sidiailles-ecrevisse-transport-c1-pl",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "18",
+    "eau": "sidiailles",
+    "lieu": "Sidiailles (Sidiailles) : plan d'eau",
+    "geometrie": null
+   },
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "type": "transport_vivant",
+   "valeur": {
+    "texte": "transport interdit à l'état vivant"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "À Sidiailles, le transport des écrevisses vivantes est interdit.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "du 14 mars au 31 décembre 2026 Transport interdit à l’état vivant",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-grenouille-verte-ouverture-sidiailles-grenouille-verte-c1-pl",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "18",
+    "eau": "sidiailles",
+    "lieu": "Sidiailles (Sidiailles) : plan d'eau",
+    "geometrie": null
+   },
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "1",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er samedi de juillet au 3e dimanche de septembre"
+   },
+   "du": "2026-07-04",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "À Sidiailles, la grenouille verte se pêche du 4 juillet au 20 septembre 2026.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "Pelophylax kl. esculentus) Du 4 juillet au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-saumon-atlantique-interdit-interdit-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pêche interdite"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche du saumon atlantique est interdite dans le Cher.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "saumon atlantique (Salmo salar) et truite de mer (Salmo trutta, f ; trutta) : PÊCHE INTERDITE en 1ère et 2ème catégorie",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-truite-de-mer-interdit-interdit-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pêche interdite"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de la truite de mer est interdite dans le Cher.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "saumon atlantique (Salmo salar) et truite de mer (Salmo trutta, f ; trutta) : PÊCHE INTERDITE en 1ère et 2ème catégorie",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-grande-alose-interdit-interdit-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pêche interdite jusqu'au 31/12/2030"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de la grande alose est interdite dans le Cher.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "grande alose, alose feinte : PÊCHE INTERDITE jusqu’au 31/12/2030",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "18-alose-feinte-interdit-interdit-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pêche interdite jusqu'au 31/12/2030"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de l'alose feinte est interdite dans le Cher.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "grande alose, alose feinte : PÊCHE INTERDITE jusqu’au 31/12/2030",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "18-lamproie-marine-interdit-interdit-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pêche interdite jusqu'au 31/12/2030"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de la lamproie marine est interdite dans le Cher.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "lamproie marine, lamproie fluviatile : PÊCHE INTERDITE jusqu’au 31/12/2030",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "18-lamproie-fluviatile-interdit-interdit-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pêche interdite jusqu'au 31/12/2030"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de la lamproie fluviatile est interdite dans le Cher.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "lamproie marine, lamproie fluviatile : PÊCHE INTERDITE jusqu’au 31/12/2030",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "18-anguille-civelle-interdit-interdit-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pêche interdite"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de l'anguille de moins de 12 cm (civelle) est interdite dans le Cher.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "anguille de moins de 12 cm (y compris civelle, alevin d'anguille) : PÊCHE INTERDITE en 1ère et 2ème catégorie",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-anguille-argentee-interdit-interdit-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pêche interdite"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche de l'anguille argentée est interdite dans le Cher.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "anguille argentée ou anguille d’avalaison : PÊCHE INTERDITE en 1ère et 2ème catégorie",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-anguille-jaune-autre-declaration-24h-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "type": "autre",
+   "valeur": {
+    "texte": "le pêcheur amateur aux lignes déclare ses captures d'anguilles jaunes dans les 24 heures, par téléservice ou par courrier"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Toute anguille jaune prise à la ligne se déclare dans les 24 heures.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "Tout pêcheur amateur aux lignes déclare ses captures d’anguilles jaunes dans un délai de 24 heures",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2221-taille_min-taille-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 25
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Taille minimum de la truite fario : 25 cm dans tout le Cher.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "est fixée à 25 cm dans l’ensemble du département",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2216-taille_min-taille-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 25
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Taille minimum de la truite arc-en-ciel : 25 cm dans tout le Cher.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "est fixée à 25 cm dans l’ensemble du département",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-omble-chevalier-taille_min-taille-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 25
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Taille minimum de l'omble chevalier : 25 cm dans tout le Cher.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "est fixée à 25 cm dans l’ensemble du département",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-omble-fontaine-taille_min-taille-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 25
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Taille minimum de l'omble de fontaine : 25 cm dans tout le Cher.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "est fixée à 25 cm dans l’ensemble du département",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2151-taille_min-taille-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 60
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Taille minimum du brochet : 60 cm.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "0,60 mètre pour le brochet",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2195-taille_min-taille-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 50
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Taille minimum du sandre en 2e catégorie : 50 cm.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "0,50 mètre pour le sandre",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2053-taille_min-taille-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "taille_min",
+   "valeur": {
+    "cm": 30
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Taille minimum du black-bass en 2e catégorie : 30 cm.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "0,30 mètre pour le black-bass",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-salmonides-quota_jour-quota-ctoutes-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 6
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Au plus 6 salmonidés par pêcheur et par jour (hors saumon et truite de mer, interdits).",
+   "textes": [
+    "t11"
+   ],
+   "citation": "autorisées par pêcheur et par jour, est fixé à six pour les pêcheurs amateurs",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2195+2151+2053-quota_jour-quota-carnassiers-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2195",
+    "2151",
+    "2053"
+   ],
+   "categorie": "2",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 3,
+    "texte": "sandres, brochets et black-bass confondus, dont deux brochets au plus"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 2e catégorie, 3 carnassiers par jour au plus (sandre, brochet, black-bass), dont 2 brochets.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "est fixé à trois, dont deux brochets maximum",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2151-quota_jour-quota-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 2
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 2e catégorie, 2 brochets par jour au plus.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "est fixé à trois, dont deux brochets maximum",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2151-quota_jour-quota-c1-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 2
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie, 2 brochets par jour au plus.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "le nombre de captures de brochets autorisé par pêcheur de loisir et par jour est fixé à deux",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-interdit-engins-filets-c1-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "texte": "engins et filets interdits en cours d'eau de 1re catégorie"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Engins et filets interdits en cours d'eau de 1re catégorie.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Engins et filets |Interdit Interdit Interdit",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-interdit-bouteille-c1-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "texte": "bouteille ou carafe (2 litres au plus) interdite en cours d'eau de 1re catégorie"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Bouteille ou carafe à vairons interdite en cours d'eau de 1re catégorie.",
+   "textes": [
+    "t12"
+   ],
+   "citation": "Bouteille ou Interdit Interdit 1 par pêcheur pour la",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2151-interdit-fermeture-vif-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pendant la fermeture spécifique du brochet, le vif est interdit en 2e catégorie"
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "remplace": null,
+   "phrase": "En 2e catégorie, du 26 janvier au 24 avril 2026 (brochet fermé) : interdit de pêcher avec le vif.",
+   "textes": [
+    "t13"
+   ],
+   "citation": "la pêche au vif, au poisson mort ou artificiel, à la cuiller et autres leurres susceptibles de capturer ce poisson de manière non accidentelle, est interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2151-interdit-fermeture-poisson-mort-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pendant la fermeture spécifique du brochet, le poisson mort est interdit en 2e catégorie"
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "remplace": null,
+   "phrase": "En 2e catégorie, du 26 janvier au 24 avril 2026 (brochet fermé) : interdit de pêcher avec le poisson mort.",
+   "textes": [
+    "t13"
+   ],
+   "citation": "la pêche au vif, au poisson mort ou artificiel, à la cuiller et autres leurres susceptibles de capturer ce poisson de manière non accidentelle, est interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2151-interdit-fermeture-poisson-artificiel-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pendant la fermeture spécifique du brochet, le poisson artificiel est interdit en 2e catégorie"
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "remplace": null,
+   "phrase": "En 2e catégorie, du 26 janvier au 24 avril 2026 (brochet fermé) : interdit de pêcher avec le poisson artificiel.",
+   "textes": [
+    "t13"
+   ],
+   "citation": "la pêche au vif, au poisson mort ou artificiel, à la cuiller et autres leurres susceptibles de capturer ce poisson de manière non accidentelle, est interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2151-interdit-fermeture-cuiller-leurres-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pendant la fermeture spécifique du brochet, la cuiller et les autres leurres susceptibles de capturer le brochet de manière non accidentelle est interdit en 2e catégorie"
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "remplace": null,
+   "phrase": "En 2e catégorie, du 26 janvier au 24 avril 2026 (brochet fermé) : interdit de pêcher avec la cuiller et les autres leurres susceptibles de capturer le brochet de manière non accidentelle.",
+   "textes": [
+    "t13"
+   ],
+   "citation": "la pêche au vif, au poisson mort ou artificiel, à la cuiller et autres leurres susceptibles de capturer ce poisson de manière non accidentelle, est interdite",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-interdit-asticots-c1-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "interdit",
+   "valeur": {
+    "texte": "emploi comme appât ou amorce des asticots et autres larves de diptères interdit en 1re catégorie"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "En 1re catégorie, asticots et larves de diptères interdits comme appât ou amorce.",
+   "textes": [
+    "t14"
+   ],
+   "citation": "l'emploi comme appât ou amorce des asticots et autres larves de diptères est interdit",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-mode_peche-peche-en-marchant-c1-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "1",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "pêche en marchant dans l'eau autorisée seulement du 1er mai au 20 septembre 2026"
+   },
+   "du": "2026-05-01",
+   "au": "2026-09-20",
+   "remplace": null,
+   "phrase": "En 1re catégorie, la pêche en marchant dans l'eau n'est permise que du 1er mai au 20 septembre 2026.",
+   "textes": [
+    "t15"
+   ],
+   "citation": "La pêche en marchant dans l’eau de 1ère catégorie n’est autorisée que du 1er mai au 20 septembre 2026",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2110-carpe_nuit-nuit-hamecon-simple-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "la nuit, un hameçon simple par ligne (là où un arrêté particulier autorise la carpe de nuit)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit (là où elle est autorisée) : un hameçon simple par ligne.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "qu’à l’aide d’un hameçon simple par ligne",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2110-carpe_nuit-nuit-esches-vegetales-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "la nuit, esches, appâts et amorces uniquement d'origine végétale, dont les bouillettes"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit (là où elle est autorisée) : appâts d'origine végétale seulement.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "ne pourront employer que des esches, appâts ou amorces, uniquement d’origine végétale, dont les bouillettes",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2110-carpe_nuit-nuit-remise-eau-c2-de",
+   "portee": {
+    "niveau": "departement",
+    "code": "18",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "remise à l'eau immédiate des poissons capturés de nuit obligatoire"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Carpe de nuit (là où elle est autorisée) : tout poisson pris de nuit est remis à l'eau tout de suite.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "La remise à l’eau immédiate des poissons capturés de nuit est obligatoire",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2110-carpe_nuit-val-auron-carpe-toute-heure-c2-pl",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "18",
+    "eau": "val d auron",
+    "lieu": "Val d'Auron (Bourges, Plaimpied-Givaudins) : plan d'eau communal de 2e catégorie",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "pêche de la carpe à toute heure autorisée du 1er janvier au 31 décembre, depuis la berge, dans la zone permanente du plan annexé"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Au Val d'Auron, la carpe se pêche à toute heure, toute l'année, depuis la berge dans la zone prévue.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "La pêche de la carpe à toute heure est autorisée du 1° janvier au 31 décembre de chaque année",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2110-carpe_nuit-val-auron-carpe-zone-complementaire-c2-pl",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "18",
+    "eau": "val d auron",
+    "lieu": "Val d'Auron (Bourges, Plaimpied-Givaudins) : plan d'eau communal de 2e catégorie",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "zone complémentaire (en vert sur le plan) utilisable pour des manifestations déclarées 8 jours à l'avance par l'AAPPMA"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Au Val d'Auron, la zone verte du plan sert aux manifestations de l'AAPPMA, déclarées 8 jours avant.",
+   "textes": [
+    "t18"
+   ],
+   "citation": "uniquement depuis la berge dans la zone complémentaire figurant en vert sur le plan annexé",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2110-carpe_nuit-val-auron-nuit-hamecon-simple-c2-pl",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "18",
+    "eau": "val d auron",
+    "lieu": "Val d'Auron (Bourges, Plaimpied-Givaudins) : plan d'eau communal de 2e catégorie",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "la nuit, un hameçon simple par ligne"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Au Val d'Auron, la nuit : un hameçon simple par ligne.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "qu'à l'aide d'un hameçon simple par ligne, avec des esches, appâts ou amorces, uniquement d'origine végétale dont les bouillettes",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-2110-carpe_nuit-val-auron-nuit-esches-vegetales-c2-pl",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "18",
+    "eau": "val d auron",
+    "lieu": "Val d'Auron (Bourges, Plaimpied-Givaudins) : plan d'eau communal de 2e catégorie",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "la nuit, esches, appâts et amorces uniquement d'origine végétale, dont les bouillettes"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Au Val d'Auron, la nuit : appâts d'origine végétale seulement.",
+   "textes": [
+    "t19"
+   ],
+   "citation": "qu'à l'aide d'un hameçon simple par ligne, avec des esches, appâts ou amorces, uniquement d'origine végétale dont les bouillettes",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-interdit-marais-yevre-ctoutes-tr",
+   "portee": {
+    "niveau": "troncon",
+    "code": "18",
+    "eau": "yevre",
+    "lieu": "Yèvre (Bourges) : entre le passage sous la chaussée de Chappe et la confluence avec la Voiselle",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pêche interdite, tous modes de pêche et toutes espèces, jusqu'au 31 octobre 2026, prorogeable"
+   },
+   "du": "2026-07-21",
+   "au": "2026-10-31",
+   "remplace": null,
+   "phrase": "Pêche interdite sur ce tronçon de l'Yèvre à Bourges jusqu'au 31 octobre 2026 (prorogeable).",
+   "textes": [
+    "t20"
+   ],
+   "citation": "l’Yèvre entre le passage sous la chaussée de Chappe et la confluence avec la Voiselle",
+   "expire_le": "2026-10-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-interdit-marais-langis-ctoutes-tr",
+   "portee": {
+    "niveau": "troncon",
+    "code": "18",
+    "eau": "langis",
+    "lieu": "Langis (Bourges) : entre le passage sous la route de la Charité et sa confluence avec l'Yèvre",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pêche interdite, tous modes de pêche et toutes espèces, jusqu'au 31 octobre 2026, prorogeable"
+   },
+   "du": "2026-07-21",
+   "au": "2026-10-31",
+   "remplace": null,
+   "phrase": "Pêche interdite sur ce tronçon du Langis à Bourges jusqu'au 31 octobre 2026 (prorogeable).",
+   "textes": [
+    "t20"
+   ],
+   "citation": "sur le Langis entre le passage sous la route de la Charité et sa confluence avec l’Yèvre",
+   "expire_le": "2026-10-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "18-toutes-interdit-marais-ecoulements-ctoutes-tr",
+   "portee": {
+    "niveau": "troncon",
+    "code": "18",
+    "eau": "marais de bourges",
+    "lieu": "Marais de Bourges (Bourges) : ensemble des écoulements hydrauliques connectés à l'Yèvre et au Langis (zone du plan annexé)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "pêche interdite, tous modes de pêche et toutes espèces, jusqu'au 31 octobre 2026, prorogeable"
+   },
+   "du": "2026-07-21",
+   "au": "2026-10-31",
+   "remplace": null,
+   "phrase": "Pêche interdite dans les écoulements connectés aux marais de Bourges jusqu'au 31 octobre 2026 (prorogeable).",
+   "textes": [
+    "t20"
+   ],
+   "citation": "l’ensemble des écoulements hydrauliques connectés à ces cours d’eau",
+   "expire_le": "2026-10-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  }
+ ],
+ "a_verifier": [
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "planche godard ou boisseau",
+   "textes": [
+    "t1"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "benelle ou riviere de feux",
+   "textes": [
+    "t1"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t1"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "eau": "sidiailles",
+   "textes": [
+    "t21"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "2",
+   "eau": "loire",
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "2",
+   "eau": "allier",
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "2",
+   "eau": "loire",
+   "textes": [
+    "t4"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "2",
+   "eau": "allier",
+   "textes": [
+    "t4"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "1",
+   "eau": "sidiailles",
+   "textes": [
+    "t7"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t22"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t22"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t22"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t22"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t9"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t9"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t8"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "plans d eau de 1re categorie",
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "eau": "plans d eau de 1re categorie",
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "1",
+   "eau": "plans d eau de 1re categorie",
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t12"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "1",
+   "eau": "plans d eau de 1re categorie",
+   "textes": [
+    "t14"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "1",
+   "eau": "grande sauldre",
+   "textes": [
+    "t14"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t24"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [],
+   "categorie": "2",
+   "eau": "val d auron",
+   "textes": [
+    "t25"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "rampenne",
+   "textes": [
+    "t26"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2193"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2193"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "eau": "berry",
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "1",
+   "eau": "sidiailles",
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "1",
+   "eau": "sidiailles",
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "2",
+   "eau": "loire et allier",
+   "textes": [
+    "t30"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "1",
+   "eau": "sidiailles",
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "1",
+   "eau": "sidiailles",
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "1",
+   "eau": "sidiailles",
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "1",
+   "eau": "sidiailles",
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "1",
+   "eau": "sidiailles",
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "1",
+   "eau": "sidiailles",
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t30"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t30"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t30"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t30"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t30"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t30"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t32"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "eau": "loire et allier",
+   "textes": [
+    "t33"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "eau": "loire et allier",
+   "textes": [
+    "t33"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "eau": "loire a l aval du bec d allier",
+   "textes": [
+    "t33"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "eau": "loire a l aval du bec d allier",
+   "textes": [
+    "t33"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2247"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "mulet"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t35"
+   ]
+  },
+  {
+   "type": "categorie",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t35"
+   ]
+  },
+  {
+   "type": "horaire",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t36"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t36"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t36"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "cours d eau de 1ere categorie",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "eau": "cours d eau de 1ere categorie",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "1",
+   "eau": "cours d eau de 1ere categorie",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "plans d eau de 1ere categorie",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "1",
+   "eau": "plans d eau de 1ere categorie",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "1",
+   "eau": "plans d eau de 1ere categorie",
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "plans d eau de 1ere categorie",
+   "textes": [
+    "t38"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "eau": "grande sauldre",
+   "textes": [
+    "t38"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t39"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "eau": "berry",
+   "textes": [
+    "t40"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t41"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t41"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2193"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t41"
+   ]
+  },
+  {
+   "type": "no_kill",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t41"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2151",
+    "2195",
+    "2193",
+    "2053"
+   ],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t41"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "auron",
+   "textes": [
+    "t41"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "rampenne",
+   "textes": [
+    "t42"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "val d auron",
+   "textes": [
+    "t43"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": "val d auron",
+   "textes": [
+    "t44"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "cher",
+   "textes": [
+    "t45"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "allier",
+   "textes": [
+    "t45"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "loire",
+   "textes": [
+    "t45"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "puits",
+   "textes": [
+    "t45"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "berry",
+   "textes": [
+    "t45"
+   ]
+  }
+ ]
+}
