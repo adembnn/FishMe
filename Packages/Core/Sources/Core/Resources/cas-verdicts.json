@@ -359,7 +359,7 @@
   },
   {
    "id": "cas-06",
-   "titre": "Truite fario 30 cm, Lyon (69) : fermée par le socle national (R436-6 et R436-7), département sans règle locale",
+   "titre": "Truite fario 30 cm, Lyon (69) : fermée le 15 oct. par le socle national et par l'arrêté du Rhône",
    "entree": {
     "espece": {
      "id": "truite-fario",
@@ -380,20 +380,20 @@
    },
    "attendu": {
     "consigne": "relacheLa",
-    "message": "règles locales non saisies",
     "lignes": [
      {
       "type": "periode",
       "etat": "nonRespectee",
       "regles": [
        "nat-fario-ouv",
-       "nat-fario-ferme-2026-automne"
+       "nat-fario-ferme-2026-automne",
+       "69-fario-ouverture"
       ],
-      "pourquoi": "Fario ouverte du 2e samedi de mars au 3e dimanche de septembre (20/09/2026), même en 2e catégorie ; fermée du 21/09 au 31/12/2026, donc le 15 oct., même avec la prolongation maximale de haute montagne (11 oct.)."
+      "pourquoi": "Fario ouverte du 2e samedi de mars au 3e dimanche de septembre (20/09/2026), même en 2e catégorie ; fermée du 21/09 au 31/12/2026, donc le 15 oct., même avec la prolongation maximale de haute montagne (11 oct.). L'arrêté 2025-A181 du Rhône (art. 2) dit la même chose : « Truite fario et autres salmonidés du 14 mars au 20 septembre inclus »."
      }
     ]
    },
-   "pourquoi": "Le socle national ferme la fario partout ce jour-là, quelle que soit la catégorie : relâche-la, sans fichier 69.",
+   "pourquoi": "Le socle national et l'arrêté du Rhône ferment la fario ce jour-là, quelle que soit la catégorie : relâche-la.",
    "statut_regle_citee": "brouillon (expire le 2026-12-31)"
   },
   {
@@ -498,15 +498,15 @@
    },
    "attendu": {
     "consigne": "relacheLa",
-    "message": "règles locales non saisies",
     "lignes": [
      {
       "type": "periode",
       "etat": "nonRespectee",
       "regles": [
-       "nat-1re-ouv-generale"
+       "nat-1re-ouv-generale",
+       "69-toutes-ouverture-cat1"
       ],
-      "pourquoi": "En 1re catégorie la pêche est ouverte du 2e samedi de mars (14/03/2026) au 3e dimanche de septembre (20/09/2026) ; le 15 oct. est fermé."
+      "pourquoi": "En 1re catégorie la pêche est ouverte du 2e samedi de mars (14/03/2026) au 3e dimanche de septembre (20/09/2026) ; le 15 oct. est fermé. L'arrêté 2025-A181 du Rhône (art. 2) : en 1re catégorie, « TOUTES ESPÈCES, sauf dérogations ci-dessous : du 14 mars au 20 septembre inclus »."
      }
     ]
    },
@@ -520,7 +520,9 @@
      },
      "regles": [
       "nat-1re-ouv-generale",
-      "nat-2e-ouv-generale"
+      "nat-2e-ouv-generale",
+      "69-toutes-ouverture-cat1",
+      "69-toutes-ouverture-cat2"
      ],
      "pourquoi": "Catégorie inconnue au point : la ligne montre « 1re : fermée · 2e : ouverte », à vérifier sur place ; relâche seulement si la ligne n'est respectée dans aucune des deux ; jamais un choix fait à la place du pêcheur."
     }
