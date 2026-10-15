@@ -3,7 +3,7 @@
 Version du 15 oct. (3 volets, session, liste de contrôle, toute la France), complétée le 15 oct. après-midi : toutes les espèces pêchables (101 entrées), règles par département, conditions (météo, niveau de la rivière, alertes), conseils par espèce, niveau du pêcheur. Décisions d'architecture prises après `reports/archi-ios.md` et `reports/eval-ios.md` ; le projet Xcode est celui du kit MWM. Le détail des API et leurs sources sont dans ces deux rapports ; les ajouts du 15 oct. viennent de `/mnt/project-files/build/reports/revue-15-oct/` (`regles-dans-l-app.md`, `ce-que-veulent-les-pecheurs.md`, `taille-et-poids.md`) et de `/mnt/project-files/build/reconnaissance/especes-reconnaissance.md`.
 
 ## L'image simple
-Un plan de travail commun pour tout ce qui se prépare sans écran (le paquet `Core` : règles, rareté, département, soleil, espèces, conditions, conseils), et un fourneau par cuisinier (un dossier par lot dans l'app). `Core` se teste en quelques secondes, sur Mac comme sous Linux, donc C peut l'écrire sans Mac.
+Un plan de travail commun pour tout ce qui se prépare sans écran (le paquet `Core` : règles, rareté, département, soleil, espèces, conditions, conseils), et un fourneau par cuisinier (un dossier par lot dans l'app). `Core` se teste en quelques secondes, sur Mac comme sous Linux, donc B l'écrit dans le cloud sans attendre de Mac. `Packages/Core` est à B seul, sauf `Conseils/` (S, lot D4) (Adem, 15 oct. 14h26).
 
 ## Décisions
 | Sujet | Décision | Option la plus forte écartée |
@@ -30,13 +30,13 @@ App/BuildChallengeApp.swift, App/RootView.swift   A seul ; RootView porte la bar
 App/Carte/ (volet central)   App/Prise/   App/Collection/ (volet gauche)   App/Session/
 App/Prise/Modele/              classifieur, détecteur, reglages.json, classes.json, Recadrage.swift (30 Mo au plus) : les seuls fichiers de modèle commités, copiés de R1 par B
 App/Abonnement/   App/Mesure/   App/Club/ (volet droit)   App/Conditions/ (L12)   App/Conseils/ (L13)
-App/OuChercher/   App/Amis/   Widget/              mise à jour
+App/OuChercher/   App/Amis/   App/Aquarium/ (L14)   Widget/   mise à jour
 Packages/Core/Sources/Core/    Modele/ Contrats/ (C0) ; Regles/ Rarete/ Geo/ Soleil/ Session/ Especes/ Conditions/ (L1) ;
                                Conseils/ (D4, avec conseils.json) ; Resources/ (D1, dont regles/) ; MiseAJour/ (L11, mise à jour)
 Packages/Core/Tests/CoreTests/ Contrats/ (C0) Moteur/ (L1) Conseils/ (D4) MiseAJour/ (L11)
 scripts/                       verif.sh, fusionner.sh, donnees.sh, lot.sh (A)
 outils/                        hubeau/ (D2), regles/ (D3), reconnaissance/ et reconnaissance/mac/ (R1), verifier_donnees.py (D1), veille/ (mise à jour)
-store/                         textes de fiche, notes pour le relecteur, pages web (C)
+store/                         textes de fiche, notes pour le relecteur, pages web (A, S1)
 ```
 
 ## Ce que `Core` expose (contrats en mots, gelés au début de L1, ajouts seulement ensuite)
@@ -65,7 +65,7 @@ store/                         textes de fiche, notes pour le relecteur, pages w
 | Contrat | Ce qu'il rend | Dossier de `Core` | Lot qui le remplit | Faux |
 |---|---|---|---|---|
 | `especesPechables() -> [EspecePechable]` | les 101 entrées de `especes.json` : nom, nom latin, classe du modèle, image, statut (protégée, envahissante, stade à demander, toujours relâchée), confusions coûteuses, code Sandre, `suivi_ofb` | `Especes/` | L1, données de D1 | 6 entrées : brochet, sandre, perche, anguille jaune, écrevisse à pattes blanches, écrevisse signal |
-| `classer(scores: [String: Double], especesProches: [Espece]) -> [Proposition]` | les clés de `scores` sont des noms de `classe_modele`, déjà passés par la température de `reglages.json` côté app ; plancher de l'a priori OFB 0,3 par défaut (si R1 mesure une autre valeur, C la change dans `Core`) ; 3 propositions (une espèce, ou une classe dont l'espèce se choisit ensuite en images : lamproie, alose, écrevisse protégée), puis toujours « autre espèce » et « pas un poisson » ; aucun score à l'écran | `Especes/` | L1 | brochet, sandre, perche, puis les deux boutons |
+| `classer(scores: [String: Double], especesProches: [Espece]) -> [Proposition]` | les clés de `scores` sont des noms de `classe_modele`, déjà passés par la température de `reglages.json` côté app ; plancher de l'a priori OFB 0,3 par défaut (si R1 mesure une autre valeur, B la change dans `Core`) ; 3 propositions (une espèce, ou une classe dont l'espèce se choisit ensuite en images : lamproie, alose, écrevisse protégée), puis toujours « autre espèce » et « pas un poisson » ; aucun score à l'écran | `Especes/` | L1 | brochet, sandre, perche, puis les deux boutons |
 | `poidsEstime(espece, longueurCm) -> PoidsEstime?` | kilos, fourchette, source ; `nil` sans coefficient ou hors de la plage de l'étude | `Especes/` | L1, données de D1 | brochet 60 cm : ≈ 1,4 kg |
 | `verdictTaille(longueurCm, mesure, maille) -> VerdictTaille` | `.respectee`, `.sousLaMaille`, `.tropPres` (à moins de 2 cm de la maille, par défaut, à confirmer par Adem), `.sansVerdict` (mesure `.estimee`, toujours) | `Regles/` | L1 | les 4 cas |
 | `lieu(de:choix:)`, `eauxProches(_:)` | le `Lieu` d'un point ; les eaux à proposer | `Geo/` | L1, données de D1 et D2 | La Marne · 94 · 2e ; Mauldre · 78 · catégorie inconnue |
@@ -104,13 +104,16 @@ Resources/regles/<code>.json    textes[], eaux[], regles[], a_verifier[]
 
 ## Qui assemble les volets
 `App/RootView.swift` (A seul) est le seul endroit qui connaît plusieurs dossiers de l'app. Il pose la barre des 3 volets ; sur le volet Carte (L2), il superpose le bandeau de session (L5) quand une session tourne, et il ouvre la prise (L3), la révélation de la carte (L4) puis, à la fin de la 1re session, le paywall (L6). Il passe les valeurs de `Core` (`Prise`, `Sortie`, nombre de sessions terminées) d'un écran à l'autre. Comme il voit passer chaque étape, c'est lui qui envoie par `Mesure` les 6 événements de l'entonnoir (carte prête, prise commencée, carte créée, session commencée, session finie, paywall montré ; liste dans `fiches/L6.md`), en commits de A dans la copie de L0. Le bouton « Commencer une session » vit dans `App/Carte/` et appelle une action que RootView fournit. Si la pêche est fermée à l'heure du départ, la session démarre quand même avec le message de fermeture : le relecteur d'Apple, qui teste peut-être de nuit, doit pouvoir aller jusqu'à la fin de session et au paywall. Pour les ajouts du 15 oct., RootView passe aussi la rangée « maintenant » et la jauge de L12 et la carte « à essayer » de L13 aux écrans qui les montrent (une vue passée en paramètre, comme le bandeau de session), le `NiveauPecheur` gardé sur l'iPhone, et le résultat de `peutUtiliser` ; un refus ouvre le paywall de L6.
+- L4 : RootView passe avec chaque `Prise` l'instantané des `Conditions` de L12 (ou rien), que L4 affiche au dos de la carte avec son heure et la marque Apple Weather, jamais sur l'image partagée ; il place aussi « comment la pêcher » de L13 au dos de chaque espèce du Pescedex.
+- L5 : au départ d'une session, RootView ouvre la carte « à essayer » de L13 au-dessus du bandeau, place la ligne de conditions de L12 dans le bandeau s'il y a la place, et passe à L5 l'instantané des `Conditions` du départ et de chaque prise, que L5 range dans `Sortie.conditions` ; les sorties terminées repartent vers « tes conditions » de L12.
+- L9 : la page Sources lit `credits()` (dont Hub'Eau hydrométrie et les sources des conseils de D4) et reçoit de RootView la vue de L12 avec la marque Apple Weather et son lien légal.
 
-## Le cas réel du démarrage (avant tout lot de `App/` en parallèle ; C avance sans attendre le Mac)
+## Le cas réel du démarrage (avant tout lot de `App/` en parallèle ; B avance sur `Core` dans le cloud sans attendre le Mac)
 | # | Qui | Test | Réussi si |
 |---|---|---|---|
 | T1 | A | projet signé avec l'équipe MWM et l'identifiant définitif, installé sur l'iPhone de test | l'app s'ouvre, aucune alerte de profil |
 | T2 | B | sur son iPhone, mode avion : une photo de poisson donne 3 propositions (modèle de R1 s'il a passé son examen, sinon la grille de toutes les espèces en images) | 3 propositions en moins de 10 s (seuil à confirmer) |
-| T3 | A, B, C | `verif.sh` vert chez A, chez B sur une copie fraîche, et sous Linux chez C | une commande verte sur 3 machines |
+| T3 | A, B | `verif.sh` vert chez A, chez B sur une copie fraîche, et sous Linux dans la session cloud de B | une commande verte sur 3 machines |
 | T4 | A | archive et envoi TestFlight du squelette | l'archive passe la validation (icône 1024 px sans transparence, clé `UILaunchScreen`), build « prêt à tester », sans question de chiffrement |
 | T5 | A | kit MWM : SDK ajouté et initialisé ; sinon fichier `.storekit` local | build et lancement sans erreur, « Restaurer » répond |
 

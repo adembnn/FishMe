@@ -14,7 +14,7 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 | `app-store.md` | la check-list de soumission et les refus probables, avec le lot qui les corrige | A, MWM |
 | `banc/` | les profils de faux utilisateurs du banc d'essai et les mots interdits | l'atelier (`/banc`) |
 | `atelier.md`, `atelier-mac.md` | l'atelier (harness) et la mise en route d'un Mac | Adem et Titouan (Claude Code), Sullyvan (sans Claude) |
-| `passation.md` | où tout est rangé et ce qui attend Adem, après l'arrêt du 15 oct. à midi | la session qui reprend |
+| `passation.md` | où tout est rangé et ce qui attend Adem, après l'arrêt du 15 oct. à midi et la reprise de l'après-midi | la session qui reprend |
 | `avant-jeudi.md`, `message-mwm.md` | ce qui devait être prêt avant jeudi, le message envoyé à MWM | pour mémoire |
 | `reports/` | les recherches et les évaluations, avec leurs sources (règles du 75 et du 94, texte qui fait foi, prix, reconnaissance, mer, navigation) | pour vérifier un chiffre |
 
@@ -29,7 +29,7 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 - 14h26 (Adem) : plus de « C » ; chaque lot va à Adem, Titouan ou Sullyvan, les plus gros à Titouan et Adem.
 
 ## Choix pris par défaut (dis-moi si tu veux en changer un)
-- Qui (après la décision d'Adem de 14h26, « plus de C ») : A = Adem sur le Mac A et son PC, B = Titouan sur le Mac B (celui de Sullyvan) avec Claude Code, S = Sullyvan, sans Claude ni Mac (`lots.md`). A porte L0, L2, L6, L9, L12, S1 et D3 ; B porte `Core` (C0, L1), D1, L3, L4, L5, L13 et R1 ; S porte D2 et D4, relit les règles d'Île-de-France, les conseils et la fiche, et trie les photos de R1. Mise à jour : L10, L11 et l'aquarium à A, L7 et L8 à B.
+- Qui (après la décision d'Adem de 14h26, « plus de C ») : A = Adem sur le Mac A et son PC, B = Titouan sur le Mac B (celui de Sullyvan) avec Claude Code, S = Sullyvan, sans Claude ni Mac (`lots.md`). A porte L0, L2, L6, L9, L12, S1 et D3 ; B porte `Core` (C0, L1), D1, L3, L4, L5, L13 et R1 ; S porte D2 et D4, relit les règles d'Île-de-France, les conseils et la fiche, et trie les photos de R1. Mise à jour : L10, L11 et L14 Aquarium à A, L7 et L8 à B.
 - Version soumise : les 9 étapes avec les fonctions de l'après-midi (conditions, conseils, niveau, toutes les espèces) ; mise à jour vendredi : écran verrouillé, coins publics, amis, règles téléchargées, aquarium (`parcours-demo.md`). Envoi recalé à L0 + 10 à 11 h (estimation) ; si une porte saute, on coupe dans l'ordre de `lots.md`, « tes conditions » d'abord.
 - Gratuit et Pro des nouvelles fonctions (question 5 du 15 oct.) : gratuit = la météo du jour et la jauge de la rivière sur son spot, la vigilance orage et crue partout, le 1er conseil de chaque espèce ; Pro = 7 jours, autres spots, « préviens-moi », courbe de la rivière et normale, tous les conseils, « tes conditions » après 10 sorties. Un toucher sur une fonction Pro ouvre le paywall, qui nomme la fonction et se ferme (`fiches/L6.md`).
 - Pas de note d'activité « sur 100 » ni d'heure solunaire (question 6 du 15 oct.) : des chiffres mesurés, chacun avec sa source et son heure.
