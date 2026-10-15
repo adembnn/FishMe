@@ -63,7 +63,7 @@ final class ParcoursApp {
     /// Cartes rendues par L4 pour le partage de L9 (recto seul, sans météo).
     var cartesAPartager: [CarteAPartager] = []
 
-    let moteur: MoteurSession
+    let moteur: SuiviSession
     let suivi: SuiviAbonnement
 
     // État de navigation
@@ -110,7 +110,7 @@ final class ParcoursApp {
                                     surTransactions: { transactions in await mesure.enregistrerTransactions(transactions) })
         self.achats = achats
         suivi = SuiviAbonnement(achats: achats)
-        moteur = MoteurSession(session: core.session, soleil: core.soleil, coffre: TrousseauSpotGratuit())
+        moteur = SuiviSession(session: core.session, soleil: core.soleil, coffre: TrousseauSpotGratuit())
 
         moteur.surFin = { [weak self] fin in self?.sessionFinie(fin) }
     }
