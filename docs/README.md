@@ -14,7 +14,6 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 | `app-store.md` | la check-list de soumission et les refus probables, avec le lot qui les corrige | A, MWM |
 | `banc/` | les profils de faux utilisateurs du banc d'essai et les mots interdits | l'atelier (`/banc`) |
 | `atelier.md`, `atelier-mac.md` | l'atelier (harness) et la mise en route d'un Mac | Adem et Titouan (Claude Code), Sullyvan (sans Claude) |
-| `passation.md` | où tout est rangé et ce qui attend Adem, après l'arrêt du 15 oct. à midi et la reprise de l'après-midi | la session qui reprend |
 | `avant-jeudi.md`, `message-mwm.md` | ce qui devait être prêt avant jeudi, le message envoyé à MWM | pour mémoire |
 | `reports/` | les recherches et les évaluations, avec leurs sources (règles du 75 et du 94, texte qui fait foi, prix, reconnaissance, mer, navigation) | pour vérifier un chiffre |
 
