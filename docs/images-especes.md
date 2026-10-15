@@ -1,6 +1,6 @@
 # Images des espèces (`App/Assets.xcassets/Especes/`, branche `lot/images-poissons`)
 
-86 espèces sur 99 ont une illustration détourée et une silhouette (`<id>` et `<id>-silhouette`), nommées par l'identifiant de `especes.json`. Planches anciennes de préférence, sinon photos libres détourées par rembg (isnet). Chaque image a été regardée après détourage. Les licences CC BY et CC BY-SA demandent de citer l'auteur dans la page Sources (L9).
+96 espèces sur 99 ont une illustration détourée et une silhouette (`<id>` et `<id>-silhouette`), nommées par l'identifiant de `especes.json`. Planches anciennes de préférence, sinon photos libres détourées par rembg (isnet). Chaque image a été regardée après détourage. Les licences CC BY et CC BY-SA demandent de citer l'auteur dans la page Sources (L9).
 
 | Espèce | Auteur | Licence | Page |
 |---|---|---|---|
@@ -36,6 +36,7 @@
 | crabe-chinois | Muséum national d'histoire naturelle (France) | Public domain | https://commons.wikimedia.org/wiki/File:Archives_du_Mus%C3%A9um_d%27Histoire_Naturelle,_Paris_(20091318306).jpg |
 | crapet-de-roche | New York Fish and Game Commission | Public domain | https://commons.wikimedia.org/wiki/File:FMIB_41915_Rock_Bass_(Ambloplites_rupestrisi).jpeg |
 | cristivomer | Rawpixel | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Vintage_illustrations_by_Denton_from_Game_Birds_and_Fishes_of_North_America_digitally_enhanced_by_rawpixel_08.jpg |
+| ecrevisse-a-taches-rouges | Zakqary Roy (iNaturalist) | CC BY | https://www.inaturalist.org/photos/589376020 |
 | ecrevisse-americaine | The Cray-Fish (Cambarus affinis = Orconectes limosus) (FMIB 43016) | Public domain | https://commons.wikimedia.org/wiki/File:FMIB_43016_Cray-Fish_(Cambarus_affinis).jpeg |
 | ecrevisse-calicot | Illustration Cambarus immunis spinirostris (Faxon), FMIB 53466 | Public domain | https://commons.wikimedia.org/wiki/File:FMIB_53466_Cambarus_immunis_spinirostris_Fason_Male_Pontoosue_Lake,_Lanesboro,_Mass,_Aug12,_1911.jpeg |
 | ecrevisse-de-louisiane | T. H. Huxley, The Crayfish (1880), Cambarus clarkii after Hagen (FMIB 35672) | Public domain | https://commons.wikimedia.org/wiki/File:FMIB_35672_Cambarus_clarkii,_maleafter_Hagen.jpeg |
@@ -43,7 +44,9 @@
 | ecrevisse-marbree | Lyko, F. 2017. The marbled crayfish (Decapoda: Cambaridae) represents an independent new s | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Procambarus_virginalis_(10.11646-zootaxa.4363.4.6)_Figure_2.png |
 | ecrevisse-pattes-blanches | David Gerke | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Austropotamobius_pallipes.jpg |
 | ecrevisse-pattes-greles | T. H. Huxley, The Crayfish (1880), after Rathke (FMIB 35695) | Public domain | https://commons.wikimedia.org/wiki/File:FMIB_35695_Astacus_leptodactylus_(After_Rathke).jpeg |
+| ecrevisse-pattes-rouges | Anna N Chapman | CC0 | https://commons.wikimedia.org/w/index.php?curid=112855488 |
 | ecrevisse-signal | Hagen, Monograph of the North American Astacidae (FMIB 53513, Astacus leniusculus male) | Public domain | https://commons.wikimedia.org/wiki/File:FMIB_53513_Astacus_leniusculus_Dana_Male.jpeg |
+| ecrevisse-virile | pbaff (iNaturalist) | CC0 | https://www.inaturalist.org/photos/717522110 |
 | epinoche | Bloch, Marcus Elieser | Public domain | https://commons.wikimedia.org/wiki/File:Ichthyologie;_ou,_Histoire_naturelle_des_poissons_(Plate_53)_(7064419569).jpg |
 | epinochette | Bloch, Marcus Elieser | Public domain | https://commons.wikimedia.org/wiki/File:Ichthyologie;_ou,_Histoire_naturelle_des_poissons_(Plate_53)_(7064419569).jpg |
 | esturgeon-europeen | Bloch, Marcus Elieser | Public domain | https://commons.wikimedia.org/wiki/File:Ichthyologie;_ou,_Histoire_naturelle_des_poissons_(Plate_88)_(7064440191).jpg |
@@ -59,10 +62,13 @@
 | grande-alose | Anselmus Boëtius de Boodt (aquarelle, vers 1596-1610), via rawpixel | Domaine public (Flickr: CC BY 2.0 rawpixel) | https://www.flickr.com/photos/rawpixel/50639753573/ |
 | gremille | Bloch, Marcus Elieser | Public domain | https://commons.wikimedia.org/wiki/File:Ichthyologie;_ou,_Histoire_naturelle_des_poissons_(Plate_53)_(7064419569).jpg |
 | grenouille-rieuse | Charles J. Sharp (photo) | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Marsh_frog_(Pelophylax_ridibundus).jpg |
+| grenouille-rousse | Richard Bartz | CC BY-SA | https://commons.wikimedia.org/w/index.php?curid=4621043 |
 | grenouille-taureau | M. Genevieve Hitchings | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:American_bullfrog_-_M._Genevieve_Hitchings.jpg |
+| grenouille-verte | Paweł Sadkowski (iNaturalist) | CC0 | https://www.inaturalist.org/photos/560341693 |
 | hotu | Marcus Elieser Bloch | domaine public | maquettes/assets/fish |
 | huchon | Bloch, Marcus Elieser | Public domain | https://commons.wikimedia.org/wiki/File:Ichthyologie;_ou,_Histoire_naturelle_des_poissons_(Plate_100)_(6918369072).jpg |
 | ide-melanote | Marcus Elieser Bloch | domaine public | maquettes/assets/fish |
+| lamproie-de-planer | mnauky (iNaturalist) | CC BY | https://www.inaturalist.org/photos/202155684 |
 | lamproie-fluviatile | Bloch, Marcus Elieser; Hennig, J. F.; Schneider, Johann Gottlob | Public domain | https://commons.wikimedia.org/wiki/File:M.E._Blochii_..._Systema_ichthyologiae_iconibus_CX_illustratum_(Plate_102)_(6005496625).jpg |
 | lamproie-marine | William Yarrell, A History of British Fishes (gravure coloriée), via rawpixel | Domaine public (Flickr: CC BY 2.0 rawpixel) | https://www.flickr.com/photos/rawpixel/40984892660/ |
 | loche-d-etang | Berger, F. G.; Bloch, Marcus Elieser; Bodenehr, G.; Darchow, C.; Gursch, C. F.; Krüger; Sc | Public domain | https://commons.wikimedia.org/wiki/File:D._Marcus_Elieser_Bloch%27s,_aus%C3%BCbenden_Arztes_zu_Berlin_..._%C3%96konomische_Naturgeschichte_der_Fische_Deutschlands_(Tafel_31)_(6032440809).jpg |
@@ -78,35 +84,29 @@
 | poisson-chat | Duane Raver  (transferred from en.wikimedia.org to commons.wikimedia.org by user:Auriong) | Public domain | https://commons.wikimedia.org/wiki/File:Ameiurus_melas_by_Duane_Raver.png |
 | poisson-rouge | Bloch, Marcus Elieser | Public domain | https://commons.wikimedia.org/wiki/File:Ichthyologie;_ou,_Histoire_naturelle_des_poissons_(Plate_93)_(6918365142).jpg |
 | pseudorasbora | Seotaro, (cleaned up and denoised by Estrilda, and edited by Laitche) | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Pseudorasbora_parva(edited_version).jpg |
+| raye-hybride | James-LaFontaine (iNaturalist) | CC BY | https://www.inaturalist.org/photos/470262567 |
 | rotengle | Marcus Elieser Bloch | domaine public | maquettes/assets/fish |
 | sandre | Marcus Elieser Bloch | domaine public | maquettes/assets/fish |
 | saumon-atlantique | Sherman Foote Denton, enhanced by User:Rawpixel | Public domain | https://commons.wikimedia.org/wiki/File:Vintage_illustrations_by_Denton_from_Game_Birds_and_Fishes_of_North_America_digitally_enhanced_by_rawpixel_13.jpg |
 | silure-glane | Marcus Elieser Bloch | domaine public | maquettes/assets/fish |
+| spirlin | Zsoldos Márton | CC BY-SA 3.0 | https://commons.wikimedia.org/w/index.php?curid=10549415 |
 | sterlet | Marcus Elieser Bloch (planche Acipenser ruthenus, Ichtylogie, num. NYPL) | Public domain (CC0 NYPL) | https://live.staticflickr.com/65535/50639854768_0e6b40cf24_b.jpg |
 | tanche | Marcus Elieser Bloch | domaine public | maquettes/assets/fish |
 | toxostome | Lamiot | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Chondrostoma_toxostoma.jpg |
 | truite-arc-en-ciel | Sherman F. Denton (1896) | Public domain | https://commons.wikimedia.org/wiki/File:Denton_Rainbow_Trout_1896.png |
 | truite-de-mer | Sherman F. Denton (1896), Brown Trout = Salmo trutta | Public domain | https://commons.wikimedia.org/wiki/File:Denton_Brown_Trout_1896.png |
 | truite-fario | Marcus Elieser Bloch | domaine public | maquettes/assets/fish |
+| truite-tigre | Oregon Department of Fish & Wildlife | domaine public (PDM 1.0) | https://www.flickr.com/photos/39743308@N07/24546235641 |
 | vairon | Marcus Elieser Bloch, Ökonomische Naturgeschichte der Fische Deutschlands (Tafel 8, fig. 5 | Domaine public | https://commons.wikimedia.org/wiki/File:D._Marcus_Elieser_Bloch's,_ausübenden_Arztes_zu_Berlin_..._Ökonomische_Naturgeschichte_der_Fische_Deutschlands_(Tafel_8)_(6032433545).jpg |
 | vandoise | Marcus Elieser Bloch, Ichthyologie ou Histoire naturelle des poissons, pl. 97 (Cyprinus le | Public domain | https://commons.wikimedia.org/wiki/File:Ichthyologie;_ou,_Histoire_naturelle_des_poissons_(Plate_97)_(6918367588).jpg |
+| vandoise-du-bearn | Julien Renoult (iNaturalist) | CC BY | https://www.inaturalist.org/photos/553890205 |
 
-## Encore sans image (13)
-Pas d'image libre utilisable trouvée (ou Wikimedia saturé, erreur 429). Pistes : carpe koï (File:Kohaku_nishikigoi_Konishi_Koi_Farm_Martin_Kammerer_ID7185-.jpg, CC BY-SA 4.0), grenouille rousse (File:Roesel_von_Rosenhof_Frogs_1758.png en pleine taille). Outils : /mnt/project-files/build/ecrans/outils-images/.
+## Encore sans image (3)
+- carpe-koi (Carpe koï) : recherche en cours ; la planche Kohaku de Commons est vue de dessus et perd ses nageoires au détourage.
+- vandoise-rostree (Vandoise rostrée) : aucune image libre (iNaturalist et Openverse n'ont que du NC/ND, catégorie Commons vide).
+- hybrides (Hybrides de poissons) : entrée générique, pas d'image unique possible ; l'app montre la silhouette générique.
 
-- spirlin (Spirlin)
-- lamproie-de-planer (Lamproie de Planer)
-- ecrevisse-pattes-rouges (Écrevisse à pattes rouges)
-- ecrevisse-virile (Écrevisse virile)
-- ecrevisse-a-taches-rouges (Écrevisse à taches rouges)
-- grenouille-verte (Grenouille verte (dite commune))
-- grenouille-rousse (Grenouille rousse)
-- hybrides (Hybrides de poissons (« sandre hybride », hybride brème x gardon...))
-- truite-tigre (Truite tigre)
-- carpe-koi (Carpe koï)
-- vandoise-rostree (Vandoise rostrée)
-- vandoise-du-bearn (Vandoise du Béarn)
-- raye-hybride (Rayé hybride)
+Outils : /mnt/project-files/build/ecrans/outils-images/.
 
 ## Photo d'exemple de prise
 `App/Prise/photo-exemple.jpg` (branche `lot/prise`) : brochet tenu par un pêcheur, SpinfisherCRO, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=52630332, sans métadonnées.
