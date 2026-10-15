@@ -6,7 +6,7 @@ Brouillon avancé par Sullyvan (15 oct. 2026), repris sur `lot/store` par A (Cla
 
 Légende : **[?]** = non confirmé, à lire dans le build ou à demander. **À TRANCHER** : voir `a-trancher.md`, où chaque point porte maintenant le choix par défaut de A, à confirmer par Adem. Les crochets `[...]` du texte sont à remplir avant l'envoi ; aucun n'est inventé.
 
-Ce qui n'a pas pu être fait ici : `review_store_text`, `get_store_text_rules`, `search_market_apps` et `analyze_market_keywords` sont des outils du serveur MCP de MWM, non branché dans cette session. Les comptes ci-dessous sont donc faits à la main (Python) et les mots-clés ne sont **pas** tirés des chiffres de la boutique française : à refaire avec ces outils avant l'envoi [?].
+Outils MWM passés le 15 oct. vers 18h30 (heure de Paris), détail dans `mwm-resultats.md` : limites relues par `get_store_text_rules` (version 2026-10, identiques aux comptes ci-dessous ; les mots-clés se comptent en **caractères**, 100 au plus, pas en octets) ; mots-clés refaits avec `search_market_apps` et `analyze_market_keywords` (boutique française, iPhone) ; `review_store_text` ne relève aucun problème sur les six champs.
 
 ## Champs
 
@@ -15,7 +15,7 @@ Ce qui n'a pas pu être fait ici : `review_store_text`, `get_store_text_rules`, 
 | Nom | `FishMe` | 6 car., 6 octets (limite 30 car.) |
 | Sous-titre | `Poissons, règles et Pescedex` | 28 car., 29 octets (limite 30 car.) |
 | Catégorie principale | Sports (secondaire : Mode de vie) | par défaut de `fiches/S1.md`, à confirmer par Adem [?] |
-| Mots-clés | `pêche,brochet,carpe,truite,sandre,perche,rivière,étang,lac,spot,carnet,réglementation,taille` | 92 car., 96 octets (limite 100 octets) |
+| Mots-clés | `pêche,fishing,brochet,carpe,truite,sandre,perche,rivière,étang,lac,spot,carnet,réglementation` | 93 car. (limite 100 car.) |
 | Texte promo | voir ci-dessous | 165 car., 167 octets (limite 170 car.) |
 | Nouveautés | voir ci-dessous | 174 car., 181 octets (limite 4000 car.) |
 | Description | voir ci-dessous | 3231 car., 3324 octets (limite 4000 car.) |
@@ -26,6 +26,8 @@ Ce qui n'a pas pu être fait ici : `review_store_text`, `get_store_text_rules`, 
 | Connexion requise | Non (pas de compte, pas de compte démo) | |
 
 ### Choix de mots-clés
+- Refaits le 15 oct. avec les chiffres MWM (`mwm-resultats.md`) : « fishing » entre (demande 4,2 sur 10, difficulté 6,3, le mot le plus partagé par les apps de pêche en France) ; « taille » sort pour lui faire la place. « spot » reste (demande 4,2). Les mots français (« pêche », espèces, « rivière »…) ne sont pas suivis par MWM en France : « pas relevé », gardés par jugement.
+- Aucun nom de concurrent ni de marque : la liste des concurrents a été passée à `review_store_text`.
 - Ni le nom de l'app, ni « Sports », ni de marque. « poisson » et « règles » sont déjà dans le sous-titre : Apple les indexe, inutile de les répéter ici.
 - « spot » : mot de pêcheur, sans promesse de « bon spot ». « carte » est évité (confusion avec la carte de pêche, le permis).
 - Aucun mot ne dit « météo », « conseils » ou « alertes » : ils n'entrent dans les mots-clés qu'après la porte 3, si le build les a.
