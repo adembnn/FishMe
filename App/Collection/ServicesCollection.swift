@@ -2,7 +2,7 @@ import Core
 import SwiftUI
 
 /// Les services de Core dont la collection a besoin, passés par A dans RootView.swift. Rien n'est calculé ici.
-struct ServicesCollection: Sendable {
+nonisolated struct ServicesCollection: Sendable {
     var especes: any ServiceEspeces
     var soleil: any ServiceSoleil
     var regles: any ServiceRegles
