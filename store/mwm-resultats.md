@@ -32,3 +32,6 @@ Nouvelle liste : `pêche,fishing,brochet,carpe,truite,sandre,perche,rivière,ét
 
 ## Icône (15 oct. 19h05, finale)
 Version retravaillée du logo F1, validée par Adem (« top », fil « Logo de FishMe », 19h05). Chemin : `/mnt/project-files/maquettes/logo/final/fishme-icone-1024.png`, sha256 `da429598…3b9a881d`. Aucune génération MWM. A le pose dans `App/Assets.xcassets/` (dossier de A, pas de S1).
+
+## Pause (15 oct. 19h57, demandée par Adem)
+Tout est poussé sur `lot/store`. Reprise : 1) `get_store_connections` doit dire App Store Connect relié (Adem, console MWM, réponse « I have a store entry, but haven't launched ») ; 2) puis étape 3 de `appels-mwm.md` (questionnaire de confidentialité) ; 3) captures dès que `RootView` est câblé. État du code : `etat-du-code.md` (règles : seulement national, 75, 94).
