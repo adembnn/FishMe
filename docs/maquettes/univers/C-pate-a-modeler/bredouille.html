@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=393, initial-scale=1">
+<title>Sortie sans prise</title><link rel="stylesheet" href="clay.css">
+<style>
+.carte{position:absolute;left:22px;top:116px;width:349px;height:530px;border-radius:44px;padding:14px;--c:#1FA39E;--tr:#0E5C59;--ep:6px;transform:rotate(1deg)}
+.face{position:relative;height:100%;border-radius:32px;--c:var(--cream);padding:16px 20px 0}
+.etiq{font-weight:700;font-size:14px;opacity:.9}
+.nuit{position:relative;height:250px;margin-top:10px;border-radius:26px;overflow:hidden;--c:#2A6FA0}
+.nuit svg{position:absolute;inset:0;width:100%;height:100%}
+h1.t{font-size:27px;line-height:1.15;margin-top:18px;font-weight:700}
+.meta{margin-top:10px;font-size:15.5px;font-weight:700;line-height:1.5}
+.meta span{font-weight:500;display:block;font-size:15px}
+.tag{position:absolute;left:20px;bottom:18px;padding:8px 16px;border-radius:20px;--c:#EAD9A6;--tr:var(--cream-d);--ep:3px;font-weight:700;font-size:14px}
+</style></head>
+<body class="table ec"><main class="ecran">
+<div class="statut" data-h="18:55"></div>
+
+<h2 class="page-titre" style="font-size:24px">Sortie terminée</h2>
+<article class="carte pate" aria-label="Sortie sans prise"><div class="face creux">
+ <div class="etiq">La Marne, Val-de-Marne (94)</div>
+ <div class="nuit creux" aria-hidden="true"><svg viewBox="0 0 321 250" preserveAspectRatio="xMidYMid slice">
+  <defs><linearGradient id="nu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#27507A"/><stop offset="1" stop-color="#4C8DBE"/></linearGradient>
+  <radialGradient id="ea" cx=".25" cy=".2" r=".9"><stop offset="0" stop-color="#7EC8EC"/><stop offset=".6" stop-color="#3F9ACB"/><stop offset="1" stop-color="#2A78A8"/></radialGradient>
+  <radialGradient id="lu" cx=".3" cy=".22" r=".9"><stop offset="0" stop-color="#FFF3B8"/><stop offset=".7" stop-color="#FFD84A"/><stop offset="1" stop-color="#D9A818"/></radialGradient></defs>
+  <rect width="321" height="250" fill="url(#nu)"/>
+  <g filter="url(#ombre)"><path d="M250 40a30 30 0 1 0 22 52a24 24 0 0 1-22-52z" fill="url(#lu)" filter="url(#puff2)"/></g>
+  <g fill="#FFF3B8"><circle cx="60" cy="40" r="3"/><circle cx="130" cy="70" r="2.5"/><circle cx="200" cy="30" r="2.5"/><circle cx="90" cy="100" r="2"/></g>
+  <g filter="url(#ombre)"><path d="M-20 168C50 150 110 190 170 168S270 150 350 176" fill="none" stroke="#14577f" stroke-width="40" stroke-linecap="round" transform="translate(1 4)"/><path d="M-20 168C50 150 110 190 170 168S270 150 350 176" fill="none" stroke="url(#ea)" stroke-width="38" stroke-linecap="round" filter="url(#puff2)"/></g>
+  <g fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2.2" stroke-linecap="round"><path d="M120 214q12-6 24 0t24 0"/><path d="M200 226q10-5 20 0t20 0"/></g>
+  <g filter="url(#ombre)"><path d="M112 120V170" stroke="#2a1000" stroke-opacity=".5" stroke-width="2"/><circle cx="112" cy="176" r="12" fill="#E5352B" filter="url(#puff2)"/><path d="M100 176a12 12 0 0 0 24 0z" fill="#fff" filter="url(#puff2)"/></g>
+  <g fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2.4" stroke-linecap="round"><ellipse cx="112" cy="192" rx="22" ry="5"/><ellipse cx="112" cy="192" rx="36" ry="9" stroke-opacity=".35"/></g>
+ </svg></div>
+ <h1 class="t">Rien n'a mordu. La sortie compte quand même.</h1>
+ <p class="meta">12 oct. · 18 h 55<span>14 °C · lune 2 %</span></p>
+</div></article>
+<button class="bouton prim verre" style="top:716px">Ranger avec mes sorties</button>
+
+<div class="indicateur"></div></main>
+<script src="poisson.js"></script><script>Pate.defs()</script><script src="ui.js"></script>
+</body></html>

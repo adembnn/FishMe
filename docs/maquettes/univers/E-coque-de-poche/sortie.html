@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393,initial-scale=1,viewport-fit=cover">
+<title>Coque de poche, sortie</title>
+<link rel="stylesheet" href="shell.css">
+<link rel="stylesheet" href="screens.css">
+<style></style>
+</head>
+<body>
+<div class="phone page-shell">
+<div class="shell-face"><div class="board board-auto"></div></div>
+<div class="sb" data-time="17:42"></div>
+<div class="abs" style="left:28px;top:62px;right:28px"><div class="h1">Sortie en cours</div><div class="sub" style="margin-top:5px">Coin B · La Marne (94)</div></div>
+<div class="bezel abs" style="left:16px;top:130px;width:361px"><div class="lcd" style="width:331px;height:340px">
+ <div class="strip" style="top:0"><span>&#9679; EN COURS</span><span>COIN B</span></div>
+ <div class="px" style="left:0;right:0;top:52px;text-align:center;font-size:92px;font-weight:600;letter-spacing:2px">1h12</div>
+ <div class="px" style="left:0;right:0;top:158px;text-align:center;font-size:17px;line-height:1.3;white-space:normal;padding:0 22px">avant la fin légale de pêche<br>(18 h 54)</div>
+ <canvas id="w" style="position:absolute;left:0;bottom:0"></canvas>
+</div></div>
+<div class="panel glass" style="top:500px;display:flex;justify-content:space-between;align-items:center;padding:14px 18px"><span style="font:600 18px var(--sys)">0 prise</span><span style="font:500 15px var(--sys)">depuis 17 h 16</span></div>
+<div class="cta pink glass" style="top:586px;height:92px;border-radius:46px;font-size:22px"><svg viewBox="0 0 24 24" style="width:30px;height:30px"><path d="M2.500 12c3-5.500 8.500-6.500 12.500-3l4.500-3.500v13L15 15c-4 3.500-9.500 2.500-12.500-3Z"/><circle cx="7.500" cy="11" r="1" fill="#2A0A18"/></svg>J'ai une prise</div>
+<div class="cta glass" style="top:696px;height:52px;border-radius:26px">Terminer</div>
+<div class="home"></div>
+</div>
+<script src="sprites.js"></script>
+<script src="lcd.js"></script>
+<script src="app.js"></script>
+<script>
+const L=new E.Lcd(document.getElementById('w'),55,14,6);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const bob=["...##...","...##...","..####..",".######.",".#....#.","..####..","...##...","........"];
+function f(){const t=reduce?0:performance.now(),ph=Math.floor(t/600)%2;L.clear();
+ for(let y=6;y<14;y+=3)for(let x=(y+ph*2)%4;x<55;x+=4){L.set(x,y);L.set(x+1,y)}
+ L.glyph(23,ph?2:3,bob);for(let i=0;i<8;i++)L.set(27,-4+i<0?0:0,0);
+ L.draw();if(!reduce)requestAnimationFrame(f)}f();
+</script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393, initial-scale=1, viewport-fit=cover">
+<title>Carte de brochet</title>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/vendor/phosphor/regular/style.css">
+<style>
+:root{
+  --paper:#FFFFFF; --ink:#14181B; --ink-2:#596168; --hair:#C9CED2;
+  --accent:#2F7F6F;           /* eau calme : cadre de la carte, verdict, bouton */
+  --text:#EEF4F1;             /* zone de texte de la carte */
+  --disp:'Bricolage Grotesque',system-ui,sans-serif;
+  --sans:'Hanken Grotesk',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --px:62; --py:38;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#E9EBEC}
+body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;display:flex;justify-content:center}
+::selection{background:var(--accent);color:#fff}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.screen{position:relative;width:393px;height:852px;overflow:hidden;background:var(--paper)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* iOS chrome */
+.island{position:absolute;top:11px;left:50%;width:124px;height:36px;margin-left:-62px;background:#000;border-radius:20px;z-index:30}
+.status{position:absolute;top:0;left:0;right:0;height:54px;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:6px 34px 0 50px;font:600 17px/1 -apple-system,"SF Pro Text",var(--sans);letter-spacing:-.01em}
+.status .r{display:flex;gap:6px;align-items:center}
+.home{position:absolute;bottom:8px;left:50%;width:136px;height:5px;margin-left:-68px;border-radius:3px;background:#0B0F14;z-index:30}
+
+/* verdict : une ligne + réglette fine */
+.verdict{position:absolute;left:16px;right:16px;top:60px;z-index:10}
+.vline{display:flex;align-items:center;gap:8px;height:44px;font-size:15px}
+.vline .ic{font-size:24px;color:var(--accent);flex:none}
+.vline h1{font-size:15px;font-weight:700;color:var(--accent)}
+.vline .m{margin-left:auto;font-family:var(--mono);font-size:15px}
+.info{width:44px;height:44px;margin-right:-12px;display:grid;place-items:center;color:var(--ink-2);font-size:20px;border-radius:22px}
+.ruler{display:block;width:361px;height:34px;overflow:visible}
+.pop{position:absolute;left:0;right:0;top:112px;background:#fff;border:1px solid var(--hair);border-radius:6px;padding:12px 14px;font-size:12px;line-height:1.5;box-shadow:0 8px 24px rgba(20,24,27,.10);opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .25s,transform .25s var(--ease),visibility .25s}
+.pop.open{opacity:1;visibility:visible;transform:none}
+.pop .fine{color:var(--ink-2);margin-top:6px;font-size:12px}
+.pop a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* la carte */
+.stage{position:absolute;left:24px;top:144px;width:345px;height:482px;perspective:1100px;z-index:5}
+.flipper{width:100%;height:100%;transform-style:preserve-3d}
+.card{position:relative;width:100%;height:100%;border-radius:14px;background:var(--accent);padding:10px 10px 0;color:#fff;
+  display:flex;flex-direction:column;
+  box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 18px 28px -10px rgba(20,24,27,.35),0 3px 6px rgba(20,24,27,.18);
+  transform:rotateY(calc((var(--px) - 50) * .12deg)) rotateX(calc((50 - var(--py)) * .1deg));
+  transition:transform .35s var(--ease)}
+.head{display:flex;align-items:center;justify-content:space-between;height:34px;padding:0 4px 4px}
+.head h2{font:700 21px/1 var(--disp);letter-spacing:-.01em}
+.size{display:flex;align-items:center;gap:6px;font:700 21px/1 var(--disp)}
+.size i{font-size:21px}
+.size .mono{font-family:var(--disp);font-variant-numeric:tabular-nums}
+
+.win{position:relative;height:206px;border-radius:4px;overflow:hidden;
+  border:2px solid #D9C98A;               /* liseré laiton, pas jaune */
+  background:
+    radial-gradient(120% 80% at 70% 0%,#EAF5F1 0%,rgba(234,245,241,0) 60%),
+    linear-gradient(180deg,#D3E7E0 0%,#9FC9BC 100%)}
+.win img{position:absolute;left:8px;top:54px;width:304px;transform:rotate(-5deg);filter:drop-shadow(0 10px 6px rgba(20,60,50,.28))}
+.holo{position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:color-dodge;
+  background:
+    linear-gradient(112deg,#7ee0cb 0%,#f2e3a4 20%,#9cc4f0 40%,#7ee0cb 60%,#f2e3a4 80%,#9cc4f0 100%);
+  background-size:300% 100%;
+  background-position:calc(var(--px) * 1%) 0;
+  -webkit-mask-image:radial-gradient(70% 90% at calc(var(--px) * 1%) calc(var(--py) * 1%),#000,rgba(0,0,0,.15));
+  mask-image:radial-gradient(70% 90% at calc(var(--px) * 1%) calc(var(--py) * 1%),#000,rgba(0,0,0,.15));
+  filter:saturate(.75)}
+.glare{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.8;
+  background:radial-gradient(circle at calc(var(--px) * 1%) calc(var(--py) * 1%),rgba(255,255,255,.9),rgba(255,255,255,0) 55%)}
+
+.line{margin:5px 0 0;font-size:11px;font-weight:500;line-height:1;padding:4px 8px;text-align:center;letter-spacing:.01em;
+  background:#D9C98A;color:#2A2410;border-radius:2px;align-self:center}
+.line em{font-style:italic}
+
+.body{flex:1;margin:6px -10px 0;padding:10px 14px 0;background:var(--text);color:var(--ink);display:flex;flex-direction:column;
+  border-radius:0 0 14px 14px}
+.atk{display:flex;align-items:center;gap:10px;min-height:36px;padding:4px 0}
+.atk+.atk{border-top:1px solid #C5D5CE}
+.cost{display:flex;gap:3px;width:34px;flex:none}
+.cost svg{width:11px;height:11px}
+.atk b{font:700 15px/1.1 var(--disp)}
+.atk>span:last-child{margin-left:auto;font-size:12px;color:#2B3A36;text-align:right}
+.rule{display:grid;grid-template-columns:1fr 1.6fr .8fr;gap:8px;margin-top:6px;padding:7px 0;border-top:1px solid #C5D5CE;border-bottom:1px solid #C5D5CE}
+.rule div{display:flex;flex-direction:column;gap:2px}
+.rule small{font-size:11px;color:#4A5A55;line-height:1}
+.rule strong{font-size:12px;font-weight:700;line-height:1.1}
+.flavor{margin-top:10px;font-size:12px;font-style:italic;line-height:1.35;color:#2B3A36}
+.foot{margin-top:auto;height:34px;display:flex;align-items:center;gap:8px;font-size:11px;color:#2B3A36}
+.foot .sym{display:flex;gap:2px;flex:none}
+.foot .sym svg{width:11px;height:11px}
+.foot .no{margin-left:auto;display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:11px;font-weight:500;color:var(--ink)}
+.foot .no i{font-size:14px;color:var(--accent)}
+
+.where{position:absolute;left:24px;right:24px;top:638px;text-align:center;font-size:12px;line-height:1.5;color:var(--ink-2)}
+.release{position:absolute;left:50%;transform:translateX(-50%);top:676px;height:44px;padding:0 16px;display:flex;align-items:center;font-size:12px;color:var(--ink-2);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* contrôles : le seul verre */
+.bar{position:absolute;left:16px;right:16px;bottom:27px;height:62px;border-radius:31px;padding:6px;display:flex;gap:6px;z-index:15;
+  background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6);
+  border:.5px solid rgba(20,24,27,.10);box-shadow:0 6px 20px rgba(20,24,27,.10)}
+.btn{height:50px;border-radius:25px;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform .25s var(--ease),filter .25s}
+.btn i{font-size:20px}
+.btn:active{transform:scale(.97)}
+.main{flex:1;background:var(--accent);color:#fff}
+.main:hover{filter:brightness(1.08)}
+.sec{width:128px;color:var(--ink)}
+.sec:hover{background:rgba(20,24,27,.05)}
+@media (prefers-reduced-motion:reduce){.pop,.card{transition:none}}
+</style>
+</head>
+<body>
+<main class="screen" id="screen">
+  <div class="island"></div>
+  <div class="status" aria-hidden="true">
+    <span>9:41</span>
+    <span class="r">
+      <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#0B0F14"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#0B0F14"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#0B0F14"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#0B0F14"/></svg>
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="#0B0F14" stroke-width="1.9" stroke-linecap="round"><path d="M1.2 4.3a10 10 0 0 1 14.6 0"/><path d="M3.9 7.1a6 6 0 0 1 9.2 0"/><circle cx="8.5" cy="10.2" r=".9" fill="#0B0F14"/></svg>
+      <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.8" fill="none" stroke="#0B0F14" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2.4" fill="#0B0F14"/><path d="M25 4.5v4c.8-.3 1.5-1.1 1.5-2s-.7-1.7-1.5-2z" fill="#0B0F14" opacity=".45"/></svg>
+    </span>
+  </div>
+
+  <section class="verdict" aria-label="Verdict">
+    <div class="vline">
+      <i class="ph ph-seal-check ic" aria-hidden="true"></i>
+      <h1>Garder possible</h1>
+      <span class="m">68 / 60 cm mini</span>
+      <button class="info" id="infoBtn" aria-expanded="false" aria-controls="pop" aria-label="Détail de la règle"><i class="ph ph-info"></i></button>
+    </div>
+    <svg class="ruler" id="ruler" viewBox="0 0 361 34" role="img" aria-label="Réglette : 68 cm, au-dessus du minimum de 60 cm"></svg>
+    <div class="pop" id="pop" role="region" aria-label="Règle applicable">
+      <p>Taille mini 60 cm, le tien : <b class="mono">68 cm</b>.</p>
+      <p>Ouvert jusqu'au 25 janv. · 2 brochets max par jour.</p>
+      <p class="fine">Règle nationale, indicative · <a href="#">Signaler une erreur</a></p>
+    </div>
+  </section>
+
+  <div class="stage" id="stage">
+   <div class="flipper" id="flipper">
+    <article class="card" id="card" aria-label="Carte : Brochet, 68 centimètres, palier 2 sur 3, numéro 6 sur 14">
+      <header class="head">
+        <h2>Brochet</h2>
+        <div class="size"><span class="mono">68 cm</span><i class="ph ph-waves" role="img" aria-label="Eau calme"></i></div>
+      </header>
+      <div class="win">
+        <img src="../assets/fish/brochet.png" alt="Brochet, 68 cm">
+        <div class="holo" id="holo"></div>
+        <div class="glare"></div>
+      </div>
+      <p class="line"><em>Esox lucius</em> · Carnassier · pris le 12 oct. 2026</p>
+      <div class="body">
+        <div class="atk">
+          <span class="cost" role="img" aria-label="Difficulté 2 sur 3"><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="4.5" fill="#2F7F6F"/></svg><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="4.5" fill="#2F7F6F"/></svg><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="none" stroke="#2F7F6F" stroke-width="1.2"/></svg></span>
+          <b>Leurre souple</b><span>Bordures d'herbiers</span>
+        </div>
+        <div class="atk">
+          <span class="cost" role="img" aria-label="Difficulté 1 sur 3"><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="4.5" fill="#2F7F6F"/></svg><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="none" stroke="#2F7F6F" stroke-width="1.2"/></svg><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="none" stroke="#2F7F6F" stroke-width="1.2"/></svg></span>
+          <b>Meilleure heure</b><span>Aube et crépuscule</span>
+        </div>
+        <div class="rule">
+          <div><small>Taille mini</small><strong class="mono">60 cm</strong></div>
+          <div><small>Ouvert</small><strong>jusqu'au 25 janv.</strong></div>
+          <div><small>Quota</small><strong>2 / jour</strong></div>
+        </div>
+        <p class="flavor">Chasseur à l'affût, il attend immobile dans les herbiers avant de jaillir.</p>
+        <footer class="foot">
+          <span class="sym" role="img" aria-label="Palier 2 sur 3"><svg viewBox="0 0 10 10"><path d="M5 .5 9.5 5 5 9.5.5 5z" fill="#2F7F6F"/></svg><svg viewBox="0 0 10 10"><path d="M5 .5 9.5 5 5 9.5.5 5z" fill="#2F7F6F"/></svg><svg viewBox="0 0 10 10"><path d="M5 1.2 8.8 5 5 8.8 1.2 5z" fill="none" stroke="#2F7F6F" stroke-width="1.1"/></svg></span>
+          <span>Peu commun dans le 94 · relevés OFB</span>
+          <span class="no">06/14<i class="ph ph-fish-simple" aria-hidden="true"></i></span>
+        </footer>
+      </div>
+    </article>
+   </div>
+  </div>
+
+  <p class="where">17 h 42 · La Marne, Val-de-Marne (94)<br>4 espèces sur les 11 relevées dans le 94</p>
+  <a class="release" href="#">Je le relâche</a>
+
+  <div class="bar" id="bar">
+    <button class="btn main"><i class="ph ph-books"></i>Ranger dans le Pescedex</button>
+    <button class="btn sec"><i class="ph ph-export"></i>Partager</button>
+  </div>
+  <div class="home"></div>
+</main>
+
+<script src="../assets/vendor/gsap/gsap.min.js"></script>
+<script>
+(function(){
+  const NS='http://www.w3.org/2000/svg';
+  const $=s=>document.querySelector(s);
+  function el(n,a,p){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+
+  /* réglette 0..80 cm, mini 60, prise 68 */
+  const R=$('#ruler'),X=c=>c*361/80,Y=12;
+  el('path',{d:`M0 ${Y}H${X(60)}`,stroke:'#14181B','stroke-opacity':.35,'stroke-width':1},R);
+  el('path',{d:`M${X(60)} ${Y}H${X(80)}`,stroke:'#2F7F6F','stroke-width':2.5},R);
+  for(let c=0;c<=80;c+=10){const big=c%20===0||c===60;
+    el('path',{d:`M${Math.min(Math.max(X(c),.5),360.5)} ${Y}v${big?7:4}`,stroke:'#14181B','stroke-opacity':c>=60?.9:.45,'stroke-width':1},R);}
+  [[0,'0','start'],[20,'20','middle'],[40,'40','middle'],[60,'60 mini','middle'],[80,'80','end']].forEach(a=>{
+    const t=el('text',{x:X(a[0]),y:32,'text-anchor':a[2],'font-family':'IBM Plex Mono','font-size':12,fill:a[0]===60?'#14181B':'#596168'},R);t.textContent=a[1];});
+  el('path',{d:`M${X(68)} ${Y-1.5}l-4 -7h8z`,fill:'#2F7F6F'},R);
+
+  const btn=$('#infoBtn'),pop=$('#pop');
+  btn.addEventListener('click',()=>{const o=pop.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+
+  /* holo : variables CSS pilotées par le pointeur (méthode simeydotme, code réécrit) */
+  const card=$('#card'),stage=$('#stage');
+  const set=(x,y)=>{card.style.setProperty('--px',x.toFixed(1));card.style.setProperty('--py',y.toFixed(1))};
+  card.style.setProperty('--px',62);card.style.setProperty('--py',38);
+  const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let live=false;
+  if(!rm){
+    $('#screen').addEventListener('pointermove',e=>{
+      if(!live)return;const r=stage.getBoundingClientRect();
+      set(Math.min(100,Math.max(0,(e.clientX-r.left)/r.width*100)),Math.min(100,Math.max(0,(e.clientY-r.top)/r.height*100)));});
+    $('#screen').addEventListener('pointerleave',()=>{if(live)set(62,38)});
+  }
+
+  /* l'unique mouvement : la carte se retourne, le reflet la balaie une fois */
+  if(window.gsap){
+    if(rm){
+      gsap.from('#stage',{opacity:0,duration:.6,ease:'none'});
+      gsap.from(['.where','.release','#bar'],{opacity:0,duration:.6,ease:'none'});
+    }else{
+      const p={x:-30},tl=gsap.timeline({defaults:{ease:'expo.out'},onComplete:()=>{live=true}});
+      tl.from('#flipper',{rotationY:-100,opacity:0,y:18,duration:1.1,transformPerspective:1100},.1)
+        .to(p,{x:62,duration:1.3,ease:'power2.inOut',onUpdate:()=>set(p.x,38)},.7)
+        .from('.verdict',{opacity:0,duration:.5,ease:'none'},.1)
+        .from(['.where','.release'],{opacity:0,duration:.5,ease:'none',stagger:.08},1.2)
+        .from('#bar',{opacity:0,y:14,duration:.5},1.3);
+    }
+  }
+})();
+</script>
+</body>
+</html>

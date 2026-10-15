@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393, initial-scale=1, viewport-fit=cover">
+<title>Carte de prise, brochet</title>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/vendor/phosphor/regular/style.css">
+<style>
+:root{
+  --paper:#FFFFFF;
+  --ink:#0B2238;
+  --ink-2:#3F5368;
+  --blue:#1F6FB5;
+  --blue-deep:#16538A;
+  --blue-wash:#D6E7F6;
+  --contour:#9FBAD3;
+  --verdict:#1E7F4F;
+  --verdict-wash:#D3EBDD;
+  --hair:#C9D6E3;
+  --sans:'Hanken Grotesk',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#E7ECF1}
+body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;display:flex;justify-content:center}
+::selection{background:var(--blue);color:#fff}
+.screen{position:relative;width:393px;height:852px;overflow:hidden;background:var(--paper)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---------- iOS chrome ---------- */
+.island{position:absolute;top:11px;left:50%;width:124px;height:36px;margin-left:-62px;background:#000;border-radius:20px;z-index:30}
+.status{position:absolute;top:0;left:0;right:0;height:54px;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:6px 34px 0 50px;font:600 17px/1 -apple-system,"SF Pro Text",var(--sans);letter-spacing:-.01em}
+.status .r{display:flex;gap:6px;align-items:center}
+.home{position:absolute;bottom:8px;left:50%;width:136px;height:5px;margin-left:-68px;border-radius:3px;background:#0B0F14;z-index:30}
+.glass{background:rgba(255,255,255,.5);-webkit-backdrop-filter:blur(18px) saturate(1.8);backdrop-filter:blur(18px) saturate(1.8);border:.5px solid rgba(255,255,255,.85);box-shadow:0 4px 14px rgba(0,0,0,.14),inset 0 1px 0 rgba(255,255,255,.95)}
+
+/* ---------- verdict band (top) ---------- */
+.band{position:absolute;left:0;right:0;top:0;height:240px;background:#E8F4EC;border-bottom:1px solid #B5D6C3}
+.verdict{position:absolute;left:16px;right:16px;top:56px}
+.vhead{display:flex;align-items:center;gap:9px;height:44px;padding-right:52px}
+.vhead i{font-size:30px;color:var(--verdict)}
+.vhead h3{font-size:20px;font-weight:700;letter-spacing:.02em;color:var(--verdict);line-height:1}
+.close{position:absolute;right:0;top:0;width:44px;height:44px;border-radius:22px;color:var(--ink);display:grid;place-items:center;font-size:20px;cursor:pointer;padding:0}
+.ruler{display:block;width:361px;height:50px;margin-top:6px;overflow:visible}
+.reasons{list-style:none;margin-top:9px;display:grid;gap:5px}
+.reasons li{display:flex;gap:8px;align-items:center;font-size:14px;line-height:1.3}
+.reasons i{font-size:17px;color:var(--ink-2);flex:none}
+.reasons b{font-weight:700}
+.vfoot{margin-top:6px;font-size:12px;color:var(--ink-2)}
+.vfoot a{color:var(--blue-deep);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+/* ---------- the collectible card ---------- */
+.stage{position:absolute;left:16px;top:252px;width:361px;height:488px;perspective:900px}
+.card{position:relative;width:100%;height:100%;border-radius:18px;background:#fff;overflow:hidden;border:1px solid var(--blue);
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .5s var(--ease);
+  --mx:72%;--my:34%;touch-action:none}
+.topo,.foil{position:absolute;inset:0}
+.topo svg,.foil svg{display:block;width:100%;height:100%}
+.foil{-webkit-mask-image:radial-gradient(circle 150px at var(--mx) var(--my),#000 0,rgba(0,0,0,.55) 45%,transparent 100%);mask-image:radial-gradient(circle 150px at var(--mx) var(--my),#000 0,rgba(0,0,0,.55) 45%,transparent 100%)}
+.sheen{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.9;
+  background:linear-gradient(115deg,transparent calc(var(--mx) - 26%),rgba(255,255,255,.95) calc(var(--mx) - 6%),rgba(120,200,255,.5) var(--mx),transparent calc(var(--mx) + 18%))}
+.clean-top{position:absolute;left:0;right:0;top:0;height:150px;background:linear-gradient(180deg,#fff 0,#fff 78%,rgba(255,255,255,0) 100%)}
+.clean-bot{position:absolute;left:0;right:0;bottom:0;height:190px;background:linear-gradient(0deg,#fff 0,#fff 80%,rgba(255,255,255,0) 100%)}
+
+.name{position:absolute;left:18px;top:14px}
+.name h2{font-size:48px;line-height:.98;font-weight:700;letter-spacing:-.025em}
+.name .la{font-style:italic;font-size:14px;color:var(--ink-2);margin-top:4px;font-weight:400}
+.name .when{font-size:12px;color:var(--ink-2);margin-top:8px;line-height:1.4}
+
+.fishwrap{position:absolute;left:8px;top:136px;width:345px;height:103px}
+.fishwrap img{width:100%;height:100%;object-fit:contain;display:block;filter:url(#diecut) drop-shadow(0 8px 8px rgba(0,0,0,.30));will-change:transform}
+.dim{position:absolute;left:18px;top:256px;width:325px;height:26px}
+.dim svg{width:100%;height:100%;overflow:visible}
+.dim .lbl{position:absolute;left:50%;top:0;transform:translateX(-50%);background:#fff;padding:0 9px;font-family:var(--mono);font-weight:600;font-size:20px;line-height:26px;color:var(--ink);border-radius:3px}
+
+.bottom{position:absolute;left:18px;right:18px;bottom:16px;display:flex;flex-direction:column;gap:14px}
+.num{font-size:14px;font-weight:600}
+.num .mono{font-weight:600}
+.strip{display:flex;gap:4px;margin:7px 0 5px;height:14px;align-items:flex-end}
+.strip i{flex:1;background:#C3D3E3;height:7px;border-radius:.5px}
+.strip i.on{background:var(--blue);height:14px}
+.cap{font-size:12px;color:var(--ink-2)}
+.rare{display:flex;gap:12px;align-items:flex-start}
+.dots{display:flex;gap:4px;padding-top:3px}
+.dots svg{width:14px;height:14px}
+.rare b{font-size:14px;font-weight:700;display:block;line-height:1.3}
+.rare div>span{font-size:12px;color:var(--ink-2);display:block;margin-top:2px;line-height:1.4}
+.nw{white-space:nowrap}
+
+/* ---------- floating action bar (Liquid Glass over the map texture) ---------- */
+.dockbg{position:absolute;left:0;right:0;bottom:0;height:116px;z-index:1;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 40%);mask-image:linear-gradient(180deg,transparent 0,#000 40%)}
+.dockbg svg{width:100%;height:100%;display:block}
+.bar{position:absolute;left:16px;right:16px;bottom:27px;height:62px;border-radius:31px;padding:6px;display:flex;gap:8px;z-index:15;font-family:-apple-system,"SF Pro Text",var(--sans)}
+.btn{height:50px;border-radius:25px;border:0;font:600 14px/1 -apple-system,"SF Pro Text",var(--sans);display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:transform .25s var(--ease),filter .25s}
+.btn i{font-size:21px}
+.btn:active{transform:scale(.97)}
+.btn.main{flex:1;background:var(--blue);color:#fff}
+.btn.main:hover{filter:brightness(1.07)}
+.btn.sec{width:118px;background:rgba(255,255,255,.78);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(31,111,181,.35)}
+.btn.sec:hover{background:#fff}
+
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="diecut" x="-5%" y="-15%" width="110%" height="130%">
+    <feMorphology in="SourceAlpha" operator="dilate" radius="2.2" result="d"/>
+    <feFlood flood-color="#fff"/><feComposite in2="d" operator="in" result="w"/>
+    <feMerge><feMergeNode in="w"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</svg>
+
+<main class="screen" id="screen">
+  <div class="band"></div>
+  <div class="island"></div>
+  <div class="status" aria-hidden="true">
+    <span>9:41</span>
+    <span class="r">
+      <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#0B0F14"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#0B0F14"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#0B0F14"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#0B0F14"/></svg>
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="#0B0F14" stroke-width="1.9" stroke-linecap="round"><path d="M1.2 4.3a10 10 0 0 1 14.6 0"/><path d="M3.9 7.1a6 6 0 0 1 9.2 0"/><circle cx="8.5" cy="10.2" r=".9" fill="#0B0F14"/></svg>
+      <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.8" fill="none" stroke="#0B0F14" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2.4" fill="#0B0F14"/><path d="M25 4.5v4c.8-.3 1.5-1.1 1.5-2s-.7-1.7-1.5-2z" fill="#0B0F14" opacity=".45"/></svg>
+    </span>
+  </div>
+
+  <section class="verdict" aria-label="Verdict">
+    <div class="vhead" id="vhead"><i class="ph ph-seal-check"></i><h3>GARDER POSSIBLE</h3>
+      <button class="close glass" aria-label="Fermer"><i class="ph ph-x"></i></button></div>
+    <svg class="ruler" id="ruler" viewBox="0 0 361 50" role="img" aria-label="Réglette : 68 cm au-dessus du minimum de 60 cm"></svg>
+    <ul class="reasons">
+      <li><i class="ph ph-ruler"></i><span>Taille mini 60 cm, le tien : <b class="mono">68 cm</b>.</span></li>
+      <li><i class="ph ph-calendar-check"></i><span>Ouvert jusqu'au 25 janv. · 2 brochets max par jour.</span></li>
+    </ul>
+    <p class="vfoot">Règle nationale, indicative · <a href="#">Signaler une erreur</a></p>
+  </section>
+
+  <section class="stage" aria-label="Carte à collectionner : brochet">
+    <article class="card" id="card">
+      <div class="topo"><svg id="topo" viewBox="0 0 361 488" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+      <div class="foil"><svg id="foil" viewBox="0 0 361 488" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+      <div class="clean-top"></div><div class="clean-bot"></div>
+      <div class="sheen"></div>
+
+      <header class="name" id="name">
+        <h2>Brochet</h2>
+        <p class="la">Esox lucius</p>
+        <p class="when">Pris le 12 oct. 2026 à 17 h 42<br>La Marne, Val-de-Marne (94)</p>
+      </header>
+
+      <div class="fishwrap" id="fish"><img src="../assets/fish/brochet.png" alt="Brochet détouré"></div>
+      <div class="dim" id="dim" aria-label="Longueur 68 cm">
+        <svg viewBox="0 0 325 26"><g stroke="#0B2238" stroke-width="1.2" fill="none"><path id="dimline" d="M1 13H324"/><path d="M1 4V22M324 4V22"/></g></svg>
+        <span class="lbl">68 cm</span>
+      </div>
+
+      <footer class="bottom" id="legend">
+        <div>
+          <div class="num"><span class="mono">n° 014</span> dans le Pescedex</div>
+          <div class="strip" id="strip" aria-hidden="true"></div>
+          <div class="cap">4 espèces sur les 11 relevées dans le 94</div>
+        </div>
+        <div class="rare">
+          <div class="dots" role="img" aria-label="Palier 2 sur 3">
+            <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#1F6FB5"/></svg>
+            <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#1F6FB5"/></svg>
+            <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5.2" fill="none" stroke="#1F6FB5" stroke-width="1.4"/></svg>
+          </div>
+          <div>
+            <b>Palier 2 sur 3</b>
+            <span>Commun en <span class="nw">Seine-et-Marne</span>, peu commun ici · <span class="nw">d'après les relevés de l'OFB</span></span>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </section>
+
+  <div class="dockbg" aria-hidden="true"><svg id="dockmap" viewBox="0 372 361 116" preserveAspectRatio="xMidYMid slice"></svg></div>
+  <div class="bar glass" id="bar">
+    <button class="btn main"><i class="ph ph-books"></i>Ranger dans le Pescedex</button>
+    <button class="btn sec"><i class="ph ph-export"></i>Partager</button>
+  </div>
+  <div class="home"></div>
+</main>
+
+<script src="../assets/vendor/d3/d3.min.js"></script>
+<script src="../assets/vendor/gsap/gsap.min.js"></script>
+<script>
+(function(){
+  const NS='http://www.w3.org/2000/svg';
+  const W=361,H=488;
+
+  /* real data: Natural Earth Marne centerline (coarse); the 94 outline is not drawn any more (no place cue on a shared card) */
+  const marne=[[2.573,48.879],[2.554,48.877],[2.546,48.874],[2.538,48.865],[2.525,48.845],[2.514,48.837],[2.492,48.833],[2.482,48.829],[2.483,48.822],[2.493,48.817],[2.508,48.813],[2.52,48.807],[2.52,48.796],[2.509,48.787],[2.494,48.789],[2.481,48.796],[2.457,48.814],[2.44,48.8135],[2.425,48.8155]];
+  const anchor=[2.505,48.8135];
+  const proj=d3.geoMercator().scale(105*6371).center(anchor).translate([150,238]);
+  const pts=marne.map(proj);
+  const base=d3.line().curve(d3.curveCatmullRomOpen.alpha(.5))(pts);
+  const tmp=document.createElementNS(NS,'path');tmp.setAttribute('d',base);
+  const L=tmp.getTotalLength();const dense=[];
+  for(let s=0;s<=L;s+=6){const p=tmp.getPointAtLength(s),q=tmp.getPointAtLength(Math.min(L,s+1));
+    const nx=-(q.y-p.y),ny=(q.x-p.x),nl=Math.hypot(nx,ny)||1;
+    const w=4*Math.sin(s/26)+2*Math.sin(s/10+1.3);
+    dense.push([p.x+nx/nl*w,p.y+ny/nl*w]);}
+  const riverD=d3.line().curve(d3.curveCatmullRom.alpha(.5))(dense);
+
+  /* synthetic elevation field: valley around the river + terraces + soft noise */
+  const rp=document.createElementNS(NS,'path');rp.setAttribute('d',riverD);
+  const rl=rp.getTotalLength(),samp=[];for(let s=0;s<=rl;s+=4){const p=rp.getPointAtLength(s);samp.push([p.x,p.y]);}
+  const step=4,nx=Math.ceil(W/step)+1,ny=Math.ceil(H/step)+1,vals=new Array(nx*ny);
+  const sm=t=>t*t*(3-2*t);
+  for(let j=0;j<ny;j++)for(let i=0;i<nx;i++){
+    const x=i*step,y=j*step;let dm=1e9;
+    for(const p of samp){const d=(p[0]-x)**2+(p[1]-y)**2;if(d<dm)dm=d;}
+    dm=Math.sqrt(dm);
+    const valley=34+46*sm(Math.min(1,dm/170))+16*sm(Math.min(1,dm/340));
+    const n=5*Math.sin(x/41+Math.sin(y/57)*1.4)+4*Math.cos(y/33+x/83)+2.2*Math.sin((x+y)/19);
+    vals[j*nx+i]=valley+n*sm(Math.min(1,dm/40));
+  }
+  const th=d3.range(36,104,5);
+  const cont=d3.contours().size([nx,ny]).thresholds(th)(vals);
+  const gp=d3.geoPath(d3.geoIdentity().scale(step));
+  const tint=d3.interpolateRgb('#BFD8EE','#FFFFFF');
+
+  function el(n,a,p){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+
+  function build(svg,mode){ /* mode: map | foil | dock */
+    const sfx=mode, foil=mode==='foil';
+    const defs=el('defs',{},svg);
+    const g=el('g',{});svg.appendChild(g);
+    if(!foil)el('rect',{width:W,height:H,fill:tint(0)},g);
+    const cg=el('g',{id:'ct-'+sfx,class:'ct',fill:'none','stroke-linejoin':'round'},g);
+    cont.forEach(c=>{const dd=gp(c);if(!dd)return;const idx=(c.value-36)%20===0;const t=(c.value-36)/68;
+      el('path',{d:dd,fill:foil?'none':tint(Math.pow(t,.8)),'fill-rule':'evenodd',stroke:foil?'#1F6FB5':(idx?'#4F86BC':'#7FA9D1'),'stroke-width':foil?(idx?1.8:1.2):(idx?1.6:.9),class:'c'},cg);});
+    const rg=el('g',{class:'river'},g);
+    if(!foil){
+      const m=el('mask',{id:'rm-'+sfx,maskUnits:'userSpaceOnUse',x:0,y:0,width:W,height:H},defs);
+      el('path',{class:'rmask',d:riverD,fill:'none',stroke:'#fff','stroke-width':30,'stroke-linecap':'round'},m);
+      rg.setAttribute('mask','url(#rm-'+sfx+')');
+      el('path',{d:riverD,fill:'none',stroke:'#1F6FB5','stroke-width':15,'stroke-linecap':'round','stroke-linejoin':'round'},rg);
+      el('path',{d:riverD,fill:'none',stroke:'#8FC0EA','stroke-width':12.6,'stroke-linecap':'round','stroke-linejoin':'round'},rg);
+      el('path',{d:riverD,fill:'none',stroke:'#fff','stroke-width':1.2,'stroke-dasharray':'1 8','stroke-linecap':'round',opacity:.9},rg);
+    }else{
+      el('path',{d:riverD,fill:'none',stroke:'#1F6FB5','stroke-width':1.8,'stroke-linecap':'round'},rg);
+    }
+  }
+  build(document.getElementById('topo'),'map');
+  build(document.getElementById('foil'),'foil');
+  build(document.getElementById('dockmap'),'dock');
+
+  /* 4 / 11 strip */
+  const strip=document.getElementById('strip');
+  for(let i=0;i<11;i++){const b=document.createElement('i');if(i<4)b.className='on';strip.appendChild(b);}
+
+  /* size ruler: 0..80 cm, minimum 60, catch 68 */
+  const R=document.getElementById('ruler'),pxcm=361/80,X=c=>c*pxcm;
+  el('defs',{},R).innerHTML='<pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" fill="#F7FAF8"/><path d="M0 0V5" stroke="#B5C4D3" stroke-width="1"/></pattern>';
+  el('rect',{x:0,y:18,width:X(60),height:11,fill:'url(#hatch)',stroke:'#9DB2C6','stroke-width':.8},R);
+  el('rect',{x:X(60),y:18,width:X(20),height:11,fill:'#BDE0CD'},R);
+  const sur=el('rect',{id:'sur',x:X(60),y:18,width:X(8),height:11,fill:'#1E7F4F'},R);
+  const tk=el('g',{stroke:'#0B2238','stroke-width':1},R);
+  for(let c=0;c<=80;c++){const h=c%10===0?9:c%5===0?6:3.5;el('path',{d:`M${Math.min(Math.max(X(c),.5),360.5)} 29v${h}`},tk);}
+  [[0,'0','start'],[20,'20','middle'],[40,'40','middle'],[80,'80','end']].forEach(a=>{const t=el('text',{x:X(a[0]),y:48,'text-anchor':a[2],'font-family':'IBM Plex Mono','font-size':11,fill:'#3F5368'},R);t.textContent=a[1];});
+  const tm=el('text',{x:X(60),y:48,'text-anchor':'middle','font-family':'IBM Plex Mono','font-size':11,'font-weight':600,fill:'#0B2238'},R);tm.textContent='60 mini';
+  el('path',{d:`M${X(60)} 12V37`,stroke:'#0B2238','stroke-width':2},R);
+  const mk=el('g',{id:'mk'},R);
+  el('path',{d:`M${X(68)} 16.5l-4.6-6.5h9.2z`,fill:'#1E7F4F',stroke:'#1E7F4F','stroke-width':1,'stroke-linejoin':'round'},mk);
+  const mt=el('text',{x:X(68),y:8,'text-anchor':'middle','font-family':'IBM Plex Mono','font-size':14,'font-weight':700,fill:'#1E7F4F'},mk);mt.textContent='68';
+  mk.setAttribute('data-x',X(68));
+
+  /* ---- authored motion: the river draws, the contours surface, the fish settles, the ruler lands ---- */
+  const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $=s=>document.querySelector(s);
+  if(window.gsap){
+    if(rm){
+      gsap.from('#card, .verdict, #bar',{opacity:0,duration:.5,ease:'none'});
+    }else{
+      const tl=gsap.timeline({defaults:{ease:'expo.out'}});
+      const rmask=$('#rm-map .rmask'),len=rmask.getTotalLength();
+      tl.fromTo(rmask,{strokeDasharray:len,strokeDashoffset:len},{strokeDashoffset:0,duration:1.05,ease:'power2.inOut'},.1)
+        .from('#ct-map .c',{opacity:0,duration:.5,ease:'power1.out',stagger:{each:.016,from:'start'}},.25)
+        .from('#fish',{y:-22,scale:1.07,opacity:0,filter:'blur(6px)',duration:.75},.95)
+        .fromTo('#dimline',{strokeDasharray:300,strokeDashoffset:300},{strokeDashoffset:0,duration:.4,ease:'power2.out'},1.5)
+        .from('#dim',{opacity:0,duration:.35,ease:'power1.out'},1.55)
+        .from('#name',{y:8,opacity:0,duration:.5,stagger:.06},.7)
+        .from('#legend',{opacity:0,y:10,duration:.5},1.25)
+        .from('#vhead',{opacity:0,y:6,duration:.4},1.55)
+        .from('#ruler',{opacity:0,duration:.3,ease:'none'},1.65)
+        .from('#sur',{scaleX:0,transformOrigin:'0 50%',duration:.45},1.8)
+        .from('#mk',{x:-X(8),opacity:0,duration:.45},1.8)
+        .from('.reasons li, .vfoot',{opacity:0,y:6,duration:.35,stagger:.07},1.85)
+        .from('#bar',{y:24,opacity:0,duration:.5},1.9);
+    }
+  }
+
+  /* ---- tilt-driven sheen: follows the pointer; still frame is a resting state ---- */
+  const card=$('#card');
+  if(!rm){
+    card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();
+      const px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
+      card.style.setProperty('--mx',(px*100)+'%');card.style.setProperty('--my',(py*100)+'%');
+      card.style.setProperty('--ry',((px-.5)*7)+'deg');card.style.setProperty('--rx',((.5-py)*5)+'deg');});
+    card.addEventListener('pointerleave',()=>{['--mx','--my','--rx','--ry'].forEach(k=>card.style.removeProperty(k));});
+  }
+})();
+</script>
+</body>
+</html>

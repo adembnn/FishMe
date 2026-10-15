@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393, initial-scale=1, viewport-fit=cover">
+<title>Montage gardon</title>
+<link rel="stylesheet" href="../../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../../assets/vendor/phosphor/regular/style.css">
+<style>
+:root{
+  --paper:#FFFFFF;--ink:#14181B;--ink-2:#4F575D;--hair:#C9CED2;--accent:#1E7F4F;
+  --sans:'Hanken Grotesk',system-ui,sans-serif;--disp:'Bricolage Grotesque','Hanken Grotesk',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#E9EBEC}
+body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;display:flex;justify-content:center}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.screen{position:relative;width:393px;height:852px;overflow:hidden;background:var(--paper)}
+.island{position:absolute;top:11px;left:50%;width:124px;height:36px;margin-left:-62px;background:#000;border-radius:20px;z-index:30}
+.status{position:absolute;top:0;left:0;right:0;height:54px;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:6px 34px 0 50px;font:600 17px/1 -apple-system,"SF Pro Text",var(--sans);letter-spacing:-.01em}
+.status .r{display:flex;gap:6px;align-items:center}
+.home{position:absolute;bottom:8px;left:50%;width:136px;height:5px;margin-left:-68px;border-radius:3px;background:#0B0F14;z-index:30}
+.glass{background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6);border:.5px solid rgba(20,24,27,.10);box-shadow:0 6px 20px rgba(20,24,27,.10)}
+.bar{position:absolute;left:16px;right:16px;bottom:27px;height:62px;border-radius:31px;padding:6px;display:flex;gap:6px;z-index:15}
+.btn{height:50px;border-radius:25px;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform .25s var(--ease),filter .25s}
+.btn i{font-size:20px}
+.btn:active{transform:scale(.97)}
+.main{flex:1;background:var(--accent);color:#fff}
+.main:hover{filter:brightness(1.08)}
+.sec{width:128px;color:var(--ink)}
+.sec:hover{background:rgba(20,24,27,.05)}
+.round{width:44px;height:44px;border-radius:22px;display:grid;place-items:center;font-size:20px;color:var(--ink)}
+.slot{display:inline-block;padding:4px 10px;border:1px dashed #9AA2A8;border-radius:6px;color:#6B7379;font-size:12px;font-family:var(--mono)}
+.pips{display:inline-flex;gap:3px;vertical-align:middle}
+.pips b{width:6px;height:6px;border-radius:3px;border:1px solid var(--ink-2);display:block}
+.pips b.on{background:var(--ink);border-color:var(--ink)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.nav{position:absolute;left:12px;right:12px;top:58px;display:flex;justify-content:space-between;align-items:center;z-index:12}
+.nav .t{font-size:13px;font-weight:600;color:var(--ink-2)}
+.hd{position:absolute;left:16px;right:16px;top:122px}
+.hd .k{font-size:13px;color:var(--accent);font-weight:600}
+.hd h1{font:700 34px/1.05 var(--disp);letter-spacing:-.02em;margin-top:8px}
+.steps{position:absolute;left:16px;right:16px;top:246px;list-style:none;counter-reset:s}
+.steps li{display:flex;gap:16px;align-items:center;position:relative;padding-bottom:22px}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:35px;top:78px;height:20px;border-left:1px dashed var(--hair)}
+.steps svg{flex:none;border:1px solid #E4E7E9;border-radius:18px;background:#FAFBFA}
+.steps .x{font:500 12px/1 var(--mono);color:var(--ink-2)}
+.steps b{display:block;font:700 18px/1.2 var(--disp);margin-top:5px}
+.steps p{font-size:13px;color:var(--ink-2);margin-top:4px;line-height:1.35}
+
+</style>
+</head>
+<body>
+<main class="screen">
+  <div class="island"></div>
+  <div class="status" aria-hidden="true">
+    <span>17:12</span>
+    <span class="r">
+      <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#0B0F14"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#0B0F14"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#0B0F14"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#0B0F14"/></svg>
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="#0B0F14" stroke-width="1.9" stroke-linecap="round"><path d="M1.2 4.3a10 10 0 0 1 14.6 0"/><path d="M3.9 7.1a6 6 0 0 1 9.2 0"/><circle cx="8.5" cy="10.2" r=".9" fill="#0B0F14"/></svg>
+      <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.8" fill="none" stroke="#0B0F14" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2.4" fill="#0B0F14"/><path d="M25 4.5v4c.8-.3 1.5-1.1 1.5-2s-.7-1.7-1.5-2z" fill="#0B0F14" opacity=".45"/></svg>
+    </span>
+  </div>
+
+  <div class="nav"><button class="round glass" aria-label="Retour"><i class="ph ph-caret-left"></i></button><span class="t">2 sur 2</span><span style="width:44px"></span></div>
+  <section class="hd">
+    <div class="k">Montage</div>
+    <h1>Gardon au pain</h1>
+  </section>
+  <ol class="steps">
+    <li><svg viewBox="0 0 72 72" width="72" height="72" fill="none" stroke="#14181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M36 6v22" stroke="#4F575D"/><ellipse cx="36" cy="38" rx="6" ry="10" fill="#fff"/><path d="M30 38h12" /><path d="M36 48v18" stroke="#4F575D"/><circle cx="36" cy="66" r="1.6" fill="#14181B"/></svg><div><span class="x">1</span><b>Flotteur fin</b><p>Sur une ligne de 0,14 mm.</p></div></li>
+    <li><svg viewBox="0 0 72 72" width="72" height="72" fill="none" stroke="#14181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M36 6v28" stroke="#4F575D"/><path d="M36 34v16c0 8 12 8 12-2v-4"/><path d="M48 44l-3-4" /><circle cx="28" cy="52" r="7" fill="#EFE7D6"/></svg><div><span class="x">2</span><b>Hameçon n° 16</b><p>Une petite boulette de pain.</p></div></li>
+    <li><svg viewBox="0 0 72 72" width="72" height="72" fill="none" stroke="#14181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 54c8-5 14 5 22 0s14 5 22 0 12 3 16 0" stroke="#4F575D"/><path d="M10 14l20 14" /><path d="M30 28c14 0 20 6 22 20" stroke="#4F575D"/><ellipse cx="52" cy="50" rx="3.4" ry="5" fill="#fff"/><path d="M12 64h30" stroke="#1E7F4F"/><path d="M12 61v6M42 61v6" stroke="#1E7F4F"/></svg><div><span class="x">3</span><b>À un mètre du bord</b><p>Lance le long de la berge, amorce un peu.</p></div></li>
+  </ol>
+  <div class="bar glass"><button class="btn main"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 2v5M12 19v3"/><ellipse cx="12" cy="13" rx="3.4" ry="6" /><path d="M8.6 13h6.8"/></svg>Commencer une sortie</button></div>
+  <div class="home"></div>
+</main>
+</body>
+</html>

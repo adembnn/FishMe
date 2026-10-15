@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393,initial-scale=1,viewport-fit=cover">
+<title>Coque de poche, carte</title>
+<link rel="stylesheet" href="shell.css">
+<style>
+.title{position:absolute;left:28px;right:28px;top:60px;z-index:5}
+.title h1{font:600 30px/1 var(--px);letter-spacing:.3px;color:var(--teal-ink)}
+.title p{font:500 15px/1.2 var(--sys);margin-top:6px;color:rgba(5,48,58,.88)}
+.bezel{position:absolute;left:16px;top:122px;width:361px;z-index:4}
+.chip{position:absolute;z-index:3;background:var(--ink);color:var(--lcd);font:600 14px/1 var(--px);min-width:17px;height:17px;padding:2px 3px 0;text-align:center;border-radius:2px}
+.chip.sel{background:var(--lcd);color:var(--ink);box-shadow:0 0 0 2px var(--ink)}
+.river{font:600 14px/1 var(--px);letter-spacing:2px;color:var(--ink);position:absolute;}
+.sheet{position:absolute;left:16px;right:16px;top:578px;height:130px;border-radius:30px;padding:16px 18px;z-index:30}
+.sheet h2{font:600 17px/1.15 var(--px);color:var(--teal-ink);letter-spacing:.2px}
+.sheet h2 b{font-weight:600}
+.species{display:flex;gap:8px;margin-top:11px}
+.sp{flex:1;height:62px;border-radius:14px;background:rgba(255,255,255,.34);box-shadow:inset 0 1px 0 rgba(255,255,255,.8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font:500 13px/1 var(--sys);color:var(--teal-ink)}
+.sp canvas{display:block}
+.go{position:absolute;right:16px;top:14px;height:34px;padding:0 12px 0 14px;border-radius:17px;display:flex;align-items:center;gap:3px;font:600 14px/1 var(--sys);color:var(--teal-ink)}
+.go svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+</style>
+</head>
+<body>
+<div class="phone" id="phone">
+  <div class="shell-face"><div class="board" id="board"></div></div>
+
+  <div class="sb"><div class="t">17:10</div><div class="isl"></div><div class="r" id="sbi"></div></div>
+
+  <div class="title"><h1>Mes coins</h1><p>La Marne, Val-de-Marne (94)</p></div>
+
+  <div class="bezel">
+    <div class="lcd" id="lcd" style="width:330px;height:408px">
+      <canvas id="cv"></canvas>
+      <div class="strip" style="top:0"><span>LA MARNE 94</span><span>5 COINS</span></div>
+      <div class="strip" style="bottom:0"><span>&#9654; COIN B</span><span>2,4 KM</span></div>
+      <span class="river" style="left:236px;top:98px">MARNE</span>
+    </div>
+  </div>
+
+  <div class="sheet glass" role="region" aria-label="Fiche du coin B">
+    <h2>Coin B · 2,4 km · 3 espèces relevées</h2>
+    <div class="species">
+      <div class="sp"><canvas id="s1"></canvas><span>Gardon</span></div>
+      <div class="sp"><canvas id="s2"></canvas><span>Perche</span></div>
+      <div class="sp"><canvas id="s3"></canvas><span>Brochet</span></div>
+    </div>
+  </div>
+
+  <nav class="tabbar glass" aria-label="Navigation">
+    <div class="tab on"><div class="pill"><svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.500L15 20l-6-2.500L3 20z"/><path d="M9 4v13.500M15 6.500V20"/></svg></div><span class="lab">Carte</span></div>
+    <div class="tab"><div class="pill"><svg viewBox="0 0 24 24"><path d="M2.500 12c3-5.500 8.500-6.500 12.500-3l4.500-3.500v13L15 15c-4 3.500-9.500 2.500-12.500-3Z"/><circle cx="7.500" cy="11" r="1"/></svg></div><span class="lab">Pescedex</span></div>
+    <div class="sortie"><div class="btn glass pink"><svg viewBox="0 0 24 24"><path d="M7 4.500v15L20 12z"/></svg><span>Sortie</span></div></div>
+    <div class="tab"><div class="pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.800-6.500 8-6.500s8 2.500 8 6.500"/></svg></div><span class="lab">Moi</span></div>
+  </nav>
+  <div class="home"></div>
+</div>
+
+<script src="sprites.js"></script>
+<script src="lcd.js"></script>
+<script>
+const {Lcd,rng,board,sbIcons}=E;
+document.getElementById('sbi').innerHTML=sbIcons;
+document.getElementById('board').innerHTML=board(393,852);
+
+/* ---------- carte pixel : 55 x 68 cases de 6 px ---------- */
+const COLS=55,ROWS=68;
+const L=new Lcd(document.getElementById('cv'),COLS,ROWS,6);
+const R=rng(94);
+
+function cr(p,t){ // Catmull-Rom
+  const [p0,p1,p2,p3]=p, t2=t*t,t3=t2*t;
+  return [0,1].map(k=>.5*((2*p1[k])+(-p0[k]+p2[k])*t+(2*p0[k]-5*p1[k]+4*p2[k]-p3[k])*t2+(-p0[k]+3*p1[k]-3*p2[k]+p3[k])*t3));
+}
+const pts=[[60,2],[52,6],[44,9],[36,13],[30,19],[28,26],[32,33],[39,36],[45,42],[44,49],[37,53],[28,52],[21,55],[14,60],[8,66],[4,72]];
+const water=new Uint8Array(COLS*ROWS);
+const line=[];
+for(let i=0;i<pts.length-1;i++){
+  const P=[pts[Math.max(0,i-1)],pts[i],pts[i+1],pts[Math.min(pts.length-1,i+2)]];
+  for(let t=0;t<1;t+=.04){const q=cr(P,t);line.push(q)}
+}
+line.forEach(([x,y],i)=>{
+  const r=2.7;
+  for(let yy=-4;yy<=4;yy++)for(let xx=-4;xx<=4;xx++){
+    if(xx*xx+yy*yy<=r*r){const X=Math.round(x+xx),Y=Math.round(y+yy);if(X>=0&&Y>=0&&X<COLS&&Y<ROWS)water[Y*COLS+X]=1}
+  }
+});
+const W=(x,y)=>(x>=0&&y>=0&&x<COLS&&y<ROWS)?water[y*COLS+x]:0;
+
+// route pointillée unique, elle franchit la Marne par le pont (coin C)
+function dashed(x0,y0,x1,y1,gap=4){
+  const n=Math.max(Math.abs(x1-x0),Math.abs(y1-y0));
+  for(let i=0;i<=n;i++){const x=Math.round(x0+(x1-x0)*i/n),y=Math.round(y0+(y1-y0)*i/n);if(i%gap<2)L.set(x,y)}
+}
+function tree(x,y){L.set(x+1,y);L.set(x,y+1);L.set(x+1,y+1);L.set(x+2,y+1);L.set(x+1,y+2)}
+// eau : berges d'une case, vaguelettes en tirets, intérieur éteint
+for(let y=0;y<ROWS;y++)for(let x=0;x<COLS;x++){
+  if(!W(x,y))continue;
+  const edge=!W(x-1,y)||!W(x+1,y)||!W(x,y-1)||!W(x,y+1);
+  if(edge)L.set(x,y);
+}
+for(let y=0;y<ROWS;y++)for(let x=0;x<COLS;x++){
+  if(W(x,y)&&W(x-1,y)&&W(x+1,y)&&W(x,y-1)&&W(x,y+1)&&((x+(y%4)*2)%6<2)&&y%3===1)L.set(x,y);
+}
+dashed(0,27,19,27);dashed(24,27,54,26,4);
+[[3,10],[9,7],[4,16],[47,28],[50,33],[45,35],[41,60],[47,64]].forEach(([x,y])=>{if(!W(x+1,y+1))tree(x,y)});
+const base=L.snapshot();
+
+/* ---------- icônes 8x8 ---------- */
+const G={
+ bobber:["...##...","...##...","..#..#..",".#....#.",".######.",".#....#.","..#..#..","...##..."],
+ fish:["........","..###..#",".#...##.","#.#...##",".#...##.","..###..#","........","........"],
+ bridge:["........","..####..",".#....#.","########","#.#..#.#","#.#..#.#","#.#..#.#","........"],
+ boat:["...#....","..##....",".#.#....","#..#....","########",".#....#.","..####..","........"],
+ tree:["..###...",".#...#..","#.....#.",".#...#..","..#.#...","...#....","...#....","..###..."],
+};
+const spots=[
+ {k:'A',g:G.bobber,x:7,y:17,lx:17,ly:20},
+ {k:'B',g:G.fish,x:33,y:20,lx:42,ly:24,sel:true},
+ {k:'C',g:G.bridge,x:36,y:23,hide:true},
+ {k:'C',g:G.bridge,x:10,y:41,lx:20,ly:45},
+ {k:'D',g:G.boat,x:38,y:42,lx:47,ly:46},
+ {k:'E',g:G.tree,x:3,y:54,lx:12,ly:58},
+];
+// C : pont réel sur la route/rivière
+spots.splice(2,1);
+spots[2].x=21;spots[2].y=24;spots[2].lx=30;spots[2].ly=22;
+
+// toi : losange plein, en bas de la boucle
+const ME=[[24,33],[23,34],[25,34],[22,35],[26,35],[23,36],[25,36],[24,37],[24,35]];
+
+const lcdEl=document.getElementById('lcd');
+{const c=document.createElement('div');c.className='chip';c.textContent='TOI';c.style.left='162px';c.style.top='196px';lcdEl.appendChild(c)}
+spots.forEach(s=>{
+  const c=document.createElement('div');c.className='chip'+(s.sel?' sel':'');c.textContent=s.k;
+  c.style.left=((s.lx!=null?s.lx:s.x+9)*6)+'px';c.style.top=((s.ly!=null?s.ly:s.y)*6)+'px';
+  lcdEl.appendChild(c);
+});
+
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function frame(){
+  const t=reduce?0:performance.now();
+  L.restore(base);
+  ME.forEach(([x,y])=>L.set(x,y));
+  spots.forEach((s,i)=>{
+    if(s.sel){
+      // curseur : coins qui clignotent vite, icône qui reste affichée 800 ms sur 1000
+      const on=true;
+      const cur=reduce||((t%500)<300);
+      for(let j=-1;j<9;j++)for(let i2=-1;i2<9;i2++){
+        const edge=(j===-1||j===8||i2===-1||i2===8);
+        if(!edge)continue;
+        const corner=(j===-1||j===8)&&(i2===-1||i2===8||i2===0||i2===7||i2===1||i2===6);
+        const sideC=(i2===-1||i2===8)&&(j===0||j===1||j===6||j===7);
+        if(cur&&(corner||sideC))L.set(s.x+i2,s.y+j);
+      }
+      // fond effacé sous l'icône pour la lisibilité
+      for(let j=0;j<8;j++)for(let i2=0;i2<8;i2++)L.set(s.x+i2,s.y+j,0);
+      if(on)L.glyph(s.x,s.y,s.g);
+    }else{
+      const bounce=reduce?0:(((t+i*230)%1000)<500?0:-1);
+      for(let j=-1;j<9;j++)for(let i2=-1;i2<9;i2++)L.set(s.x+i2,s.y+j,0);
+      L.glyph(s.x,s.y+bounce,s.g);
+    }
+  });
+  L.draw();
+  if(!reduce)requestAnimationFrame(frame);
+}
+frame();
+
+/* ---------- pastilles d'espèces de la fiche (sprites 38 px réduits à l'affichage) ---------- */
+function mini(id,rows){
+  const cv=document.getElementById(id),w=rows[0].length,h=rows.length;
+  const l=new Lcd(cv,w,h,2);l.sprite(0,0,rows);l.draw();
+  cv.style.borderRadius='3px';
+}
+mini('s1',SPRITES.gardon38);mini('s2',SPRITES.perche38);mini('s3',SPRITES.brochet40);
+</script>
+</body>
+</html>

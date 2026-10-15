@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=393, initial-scale=1">
+<title>Identifier la prise</title><link rel="stylesheet" href="clay.css">
+<style>
+.photo{position:absolute;left:16px;right:16px;top:116px;height:156px;border-radius:30px;--c:#F3D88C;overflow:hidden;display:grid;place-items:center}
+.photo .fish{width:250px}
+.photo .leg{position:absolute;left:14px;top:10px;font-size:13px;font-weight:700;padding:4px 12px;border-radius:14px;--c:var(--cream);--tr:var(--cream-d);--ep:3px;color:var(--ink)}
+.choix{position:absolute;left:16px;right:16px;top:290px;display:flex;flex-direction:column;gap:10px}
+.opt{display:grid;grid-template-columns:86px 1fr 38px;align-items:center;gap:10px;border-radius:26px;padding:0 14px;--c:var(--cream)}
+.opt.on{--c:var(--butter);--tr:var(--butter-d);--ep:7px;height:78px;padding-top:4px}
+.opt:not(.on){height:62px}
+.opt b{font-size:18px}.opt.on b{font-size:22px}
+.opt small{display:block;font-size:13.5px;font-weight:500;opacity:.85}
+.coche{width:34px;height:34px;border-radius:50%;display:grid;place-items:center}
+.coche.vide{box-shadow:inset 3px 4px 5px rgba(50,15,0,.35),inset -2px -2px 3px rgba(255,255,255,.6);background:#EAD9A6}
+.coche.plein{--c:var(--orange);--tr:var(--orange-d);--ep:3px}
+.liens{position:absolute;left:24px;right:24px;top:546px;display:flex;justify-content:space-between}
+.taille{position:absolute;left:20px;right:20px;top:592px;color:#fff}
+.taille .l{display:flex;justify-content:space-between;align-items:baseline;font-weight:700;font-size:16px;text-shadow:0 1px 0 rgba(0,50,48,.6)}
+.taille .l b{font-size:34px;color:var(--cream)}
+.rail{position:relative;margin:12px 0 0;height:20px;border-radius:10px;--c:#0E5C59}
+.rail .plein{position:absolute;left:3px;top:3px;height:14px;width:calc(52.7% - 3px);border-radius:7px;--c:var(--teal);--tr:var(--teal-d);--ep:2px}
+.rail .bille{position:absolute;left:52.7%;top:-9px;width:38px;height:38px;margin-left:-19px;border-radius:50%;--c:var(--orange);--tr:var(--orange-d);--ep:5px}
+.bornes{display:flex;justify-content:space-between;font-size:13px;font-weight:500;margin-top:12px;text-shadow:0 1px 0 rgba(0,50,48,.6)}
+</style></head>
+<body class="table ec"><main class="ecran">
+<div class="statut" data-h="17:43"></div>
+
+<button class="rond g verre" aria-label="Retour"><svg width="14" height="20" viewBox="0 0 14 20" fill="none" stroke="#32190B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2 3 10l8 8"/></svg></button>
+<h1 class="page-titre" style="left:72px;top:68px;font-size:24px">Quelle espèce ?</h1>
+<div class="photo creux"><span class="leg">Ta photo</span><div class="fish" data-fish="brochet,peu"></div></div>
+<div class="choix" role="radiogroup" aria-label="Espèces proposées">
+ <div class="opt on pate" role="radio" aria-checked="true"><div class="fish" data-fish="brochet,peu"></div><div><b>Brochet</b><small>La plus probable</small></div><span class="coche plein pate"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#1d0c03" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.500 7.500 14 15 4"/></svg></span></div>
+ <div class="opt creux" role="radio" aria-checked="false"><div class="fish" data-fish="sandre,rare"></div><div><b>Sandre</b><small>Possible</small></div><span class="coche vide"></span></div>
+ <div class="opt creux" role="radio" aria-checked="false"><div class="fish" data-fish="perche,commun"></div><div><b>Perche</b><small>Possible</small></div><span class="coche vide"></span></div>
+</div>
+<div class="liens"><a class="lien">Aucune de ces espèces</a><a class="lien">Pas un poisson</a></div>
+<div class="taille"><div class="l"><span>Taille</span><b>68 cm</b></div><div class="rail creux"><div class="plein pate"></div><div class="bille pate"></div></div><div class="bornes"><span>10 cm</span><span>120 cm</span></div></div>
+<button class="bouton prim verre" style="top:748px">Continuer</button>
+
+<div class="indicateur"></div></main>
+<script src="poisson.js"></script><script>Pate.defs()</script><script src="ui.js"></script>
+</body></html>

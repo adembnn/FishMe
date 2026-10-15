@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1600, initial-scale=1">
+<title>Les quatre raretés</title>
+<link rel="stylesheet" href="clay.css">
+<style>
+  body{width:1600px;height:900px;overflow:hidden}
+  .titre{position:absolute;left:56px;top:34px;font-size:30px;font-weight:700;color:var(--cream);text-shadow:0 2px 0 rgba(0,50,48,.6)}
+  .sous{position:absolute;right:56px;top:42px;font-size:16px;font-weight:500;color:#fff}
+  .rang{position:absolute;left:44px;right:44px;top:112px;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;align-items:start}
+
+  .carte{--ep:6px;--b:11px;position:relative;border-radius:40px;padding:var(--b);height:586px}
+  .face{position:relative;height:100%;border-radius:calc(40px - var(--b) + 6px);--c:var(--cream);padding:16px 18px 0;display:flex;flex-direction:column}
+  .haut{display:flex;align-items:center;justify-content:space-between;height:30px}
+  .perles{display:flex;gap:7px}
+  .perle{width:17px;height:17px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff6,transparent 50%),#FFD84A;
+    box-shadow:inset 2px 2px 3px rgba(255,255,255,.7),inset -2px -3px 3px rgba(120,80,0,.45),2px 3px 3px rgba(40,15,0,.35)}
+  .perle.vide{background:#E7D49A;box-shadow:inset 2px 3px 3px rgba(60,30,0,.35),inset -1px -1px 2px rgba(255,255,255,.6)}
+  .rar{font-weight:700;font-size:15px}
+  .bassin{position:relative;height:214px;margin-top:10px;border-radius:26px;--c:#A6DDD8;display:grid;place-items:center;overflow:hidden}
+  .bassin .p{width:292px}.bassin svg{display:block;width:100%;height:auto;overflow:visible}
+  .nom{font-size:36px;line-height:1;font-weight:700;margin-top:14px;letter-spacing:-.4px}
+  .lat{font-weight:500;font-size:14px;opacity:.78;margin-top:4px}
+  .t{font-size:40px;font-weight:700;color:var(--orange-d);text-shadow:0 2px 0 rgba(255,255,255,.7);margin-top:8px;line-height:1}
+  .t small{font-size:20px}
+  .ligne{margin-top:10px;font-size:15px;font-weight:500;line-height:1.35}
+  .ligne b{font-weight:700}
+  .matiere{position:absolute;left:18px;right:18px;bottom:16px;padding:9px 14px;border-radius:20px;--ep:3px;font-weight:700;font-size:15px;text-align:center;color:var(--ink)}
+
+  /* Quatre matières : épaisseur de la tranche, nombre de perles, reflet, paillettes */
+  .r0{--c:#1FA39E;--tr:#0E5C59;--ep:5px;--b:9px;transform:rotate(-1.4deg) translateY(26px)}
+  .r1{--c:#FFD84A;--tr:#B88A0C;--ep:11px;--b:12px;transform:rotate(1deg) translateY(2px)}
+  .r2{--c:#F2779C;--tr:#8E2F4E;--ep:15px;--b:15px;transform:rotate(-.8deg) translateY(34px)}
+  .r3{--c:#FF7A3D;--tr:#8A2F0C;--ep:20px;--b:18px;transform:rotate(.8deg) translateY(-6px)}
+  /* mat : aucun reflet, grain visible. satiné : un reflet large. vernis : reflets serrés humides. */
+  .carte::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:3}
+  .r1::before{background:linear-gradient(120deg,rgba(255,255,255,.34) 0,rgba(255,255,255,0) 30%)}
+  .r2::before{background:radial-gradient(60px 18px at 22% 5%,rgba(255,255,255,.95),rgba(255,255,255,0)),radial-gradient(14px 70px at 3% 28%,rgba(255,255,255,.8),rgba(255,255,255,0)),radial-gradient(10px 40px at 97% 82%,rgba(255,255,255,.55),rgba(255,255,255,0));box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
+  .r3::before{background:radial-gradient(60px 18px at 22% 5%,rgba(255,255,255,.95),rgba(255,255,255,0)),radial-gradient(14px 80px at 3% 28%,rgba(255,255,255,.85),rgba(255,255,255,0)),radial-gradient(10px 40px at 97% 82%,rgba(255,255,255,.55),rgba(255,255,255,0));box-shadow:inset 0 0 0 2px rgba(255,235,170,.8),inset 0 0 0 7px rgba(255,201,58,.55)}
+  .or{position:absolute;inset:0;z-index:4;pointer-events:none}
+  .or svg{width:100%;height:100%}
+  .scint{animation:tw .83s steps(1,end) infinite}
+  .s1{animation-delay:.08s}.s2{animation-delay:.25s}.s3{animation-delay:.42s}
+  @keyframes tw{0%{opacity:1}50%{opacity:.25}75%{opacity:1}}
+  .r3 .matiere{--c:#FFD84A;--tr:#B88A0C}
+  .r2 .matiere{--c:#FFC4D6;--tr:#B8506F}
+  .r1 .matiere{--c:#FFF0C4;--tr:#C9A55A}
+  .r0 .matiere{--c:#9BE0DC;--tr:#137A76}
+</style>
+</head>
+<body class="table">
+<h1 class="titre">Les quatre raretés</h1>
+<p class="sous">Même cadre, quatre matières : tranche de plus en plus épaisse, perles, reflets, paillettes</p>
+<div class="rang" id="rang"></div>
+<script src="poisson.js"></script>
+<script>
+  Pate.defs();
+  const C = [
+    {k:'commun',   cl:'r0',lab:'Commun',     mat:'Mat',                          nom:'Gardon',        lat:'Rutilus rutilus', esp:'gardon',  cm:'24',  l:'<b>Commun dans le 94</b><br>24 pêches sur 29', perles:1},
+    {k:'peu',      cl:'r1',lab:'Peu commun', mat:'Satiné',                       nom:'Brochet',       lat:'Esox lucius',     esp:'brochet', cm:'68',  l:'<b>Peu commun dans le 94</b><br>10 pêches sur 29', perles:2},
+    {k:'rare',     cl:'r2',lab:'Rare',       mat:'Vernis',                       nom:'Sandre',        lat:'Sander lucioperca',esp:'sandre', cm:'61',  l:'<b>Rare dans le 94</b><br>3 pêches sur 29', perles:3},
+    {k:'legendaire',cl:'r3',lab:'Légendaire',mat:'Vernis et paillettes dorées',  nom:'Truite fario',  lat:'Salmo trutta fario',esp:'truite',cm:'43',  l:'<b>Jamais relevée ici</b><br>0 pêche sur 29', perles:4}
+  ];
+  const star = (x,y,r,c)=>Pate.etoile(x,y,r,'scint '+c);
+  document.getElementById('rang').innerHTML = C.map(c => `
+    <article class="carte pate ${c.cl}" aria-label="${c.nom}, ${c.lab}">
+      <div class="face creux">
+        <div class="haut"><div class="perles">${[0,1,2,3].map(i=>`<span class="perle${i<c.perles?'':' vide'}"></span>`).join('')}</div><span class="rar">${c.lab}</span></div>
+        <div class="bassin creux"><div class="p">${Pate.poisson(c.esp,c.k)}</div></div>
+        <div class="nom">${c.nom}</div><div class="lat">${c.lat}</div>
+        <div class="t">${c.cm}<small> cm</small></div>
+        <p class="ligne">${c.l}</p>
+        <div class="matiere pate">${c.mat}</div>
+      </div>
+      ${c.k==='legendaire'?`<div class="or"><svg viewBox="0 0 349 586" aria-hidden="true">${star(338,112,13,'s1')}${star(20,330,11,'s2')}${star(332,360,10,'s3')}${star(46,560,13,'s1')}${star(300,556,10,'s2')}${star(250,210,9,'s3')}${star(70,214,8,'s2')}</svg></div>`:''}
+    </article>`).join('');
+</script>
+</body>
+</html>

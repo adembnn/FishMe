@@ -1,0 +1,11 @@
+# F. Vitrine noire
+- Idée : le poisson est un spécimen dans une vitrine éteinte ; une seule lampe chaude s'allume au-dessus de lui et suit l'inclinaison. Le reste de l'écran se tait.
+- Poisson couché à la verticale (tête en haut) : il prend toute la hauteur, c'est le seul héros. Pas de cadre, pas de carte, pas de texture.
+- Police : Hanken Grotesk 600 / 400, chiffres tabulaires. Trois tailles : 34 (nom), 15, 12. Pas de mono.
+- Couleurs : fond #0A0B0B, texte #EDEAE3, texte discret #9D9C96, accent unique ambre #F2B35E (lampe, repère 68 sur la réglette, points de rareté). Contraste mini 6:1.
+- Rareté : 2 points pleins sur 3 (forme + couleur). Verdict : sceau coché blanc, un autre pictogramme à prévoir pour « Remettre à l'eau ».
+- Verdict : une ligne en haut + réglette fine 0-80 (repère 60 en blanc, 68 en ambre). Raisons et « Signaler une erreur » derrière le bouton info. Verso (toucher la vitrine) : phrase départementale, palier, relevés OFB, 4 sur 11.
+- Mouvement : la lampe s'allume (rayon 0 vers 250 px, bref à-coup puis expo.out), textes en fondu, fini à 2,3 s. Reduced-motion : fondu seul. Lumière : pointeur, gyroscope sur iPhone (permission au 1er toucher), état figé en haut à droite.
+- Références : Apple Music / vitrines de muséum éclairées (poisson seul sur noir), Pokémon TCG Pocket (rareté par symbole fixe, reflet à l'inclinaison, méthode pokemon-cards-css réécrite), Fish Rules (verdict en un mot + réglette), Liquid Glass (verre seulement sur la barre d'actions), CapWords (sujet détouré).
+- SwiftUI : fond Color.black ; poisson Image détouré en .rotationEffect(-86°) ; version sombre via .brightness(-0.8) ; version éclairée en overlay avec .mask(RadialGradient centré sur un point animé). Point = CoreMotion (CMMotionManager, roll/pitch) lissé par .animation(.smooth). Allumage : withAnimation(.easeOut(duration: 1.4)) sur le rayon. Barre : .glassEffect() (iOS 26). Verso : rotation3DEffect au toucher.
+- Limites : le poisson est l'illustration Bloch, pas un détourage photo ; le sombre n'est pas validé par Adem (seul style sombre de la série).

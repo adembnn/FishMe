@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393, initial-scale=1, viewport-fit=cover">
+<title>Vignette de brochet</title>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/vendor/phosphor/regular/style.css">
+<style>
+:root{
+  --paper:#F3F5F5;
+  --card:#FFFFFF;
+  --ink:#14181B;
+  --ink-2:#566067;
+  --hair:#DDE2E4;
+  --accent:#1E7F4F;
+  --sans:'Hanken Grotesk',system-ui,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --t-name:22px; --t-small:12px; --t-ui:15px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#E3E6E7}
+body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;display:flex;justify-content:center}
+::selection{background:var(--accent);color:#fff}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.screen{position:relative;width:393px;height:852px;overflow:hidden;background:var(--paper)}
+.num{font-variant-numeric:tabular-nums}
+
+/* iOS chrome */
+.island{position:absolute;top:11px;left:50%;width:124px;height:36px;margin-left:-62px;background:#000;border-radius:20px;z-index:30}
+.status{position:absolute;top:0;left:0;right:0;height:54px;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:6px 34px 0 50px;font:600 17px/1 -apple-system,"SF Pro Text",var(--sans);letter-spacing:-.01em}
+.status .r{display:flex;gap:6px;align-items:center}
+.home{position:absolute;bottom:8px;left:50%;width:136px;height:5px;margin-left:-68px;border-radius:3px;background:#0B0F14;z-index:30}
+
+/* verdict: one line + a thin ruler */
+.verdict{position:absolute;left:16px;right:16px;top:56px;z-index:10}
+.vline{display:flex;align-items:center;gap:8px;height:44px;font-size:var(--t-ui)}
+.vline .ic{font-size:24px;color:var(--accent);flex:none}
+.vline h1{font-size:var(--t-ui);font-weight:600;color:var(--accent)}
+.vline .m{margin-left:auto;font-size:var(--t-ui);font-variant-numeric:tabular-nums}
+.info{width:44px;height:44px;margin-right:-12px;display:grid;place-items:center;color:var(--ink-2);font-size:20px;border-radius:22px}
+.ruler{display:block;width:361px;height:34px;overflow:visible}
+.pop{position:absolute;left:0;right:0;top:108px;background:#fff;border:1px solid var(--hair);border-radius:6px;padding:12px 14px;font-size:var(--t-small);line-height:1.5;box-shadow:0 8px 24px rgba(20,24,27,.10);opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .25s,transform .25s var(--ease),visibility .25s;z-index:25}
+.pop.open{opacity:1;visibility:visible;transform:none}
+.pop .fine{color:var(--ink-2);margin-top:6px}
+.pop a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* album page: a plain sheet, numbered recessed slots */
+.page{position:absolute;left:16px;right:16px;top:146px;height:500px;background:#fff;border-radius:8px;padding:14px}
+.ph-row{display:flex;align-items:baseline;justify-content:space-between;height:20px}
+.ph-row h2{font-size:var(--t-ui);font-weight:600;letter-spacing:-.01em}
+.ph-row span{font-size:var(--t-small);color:var(--ink-2);font-variant-numeric:tabular-nums}
+.seg{display:grid;grid-template-columns:repeat(11,1fr);gap:3px;margin-top:8px;height:4px}
+.seg i{background:var(--hair);border-radius:1px}
+.seg i.on{background:var(--accent)}
+.grid{position:absolute;left:14px;top:62px;display:grid;grid-template-columns:160px 160px;gap:12px}
+.slot{position:relative;width:160px;height:204px;border-radius:6px;background:#EDF0F1;box-shadow:inset 0 1px 3px rgba(20,24,27,.14);display:grid;place-items:center;font-size:var(--t-name);font-weight:400;color:#5F6A71;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+
+/* sticker: white kiss-cut border, field, number tab, rarity tab, name band */
+.sticker{--px:50;--py:50;--rx:0deg;--ry:0deg;position:relative;width:160px;height:204px;border-radius:7px;background:#fff;padding:5px;
+  box-shadow:0 1px 1.5px rgba(20,24,27,.18),0 3px 6px -2px rgba(20,24,27,.18);font-size:var(--t-small);line-height:1.2;color:var(--ink)}
+.in{position:relative;width:100%;height:100%;border-radius:3px;overflow:hidden;background:#E3EFE9}
+.in img.f{position:absolute;left:50%;top:50%;width:136px;transform:translate(-50%,-56%) rotate(-7deg);filter:drop-shadow(0 6px 5px rgba(20,24,27,.18))}
+.tab{position:absolute;top:6px;height:20px;border-radius:3px;background:#fff;display:flex;align-items:center;gap:3px;padding:0 6px;font-weight:700;font-variant-numeric:tabular-nums}
+.tab.l{left:6px}.tab.r{right:6px;padding:0 5px}
+.tab svg{width:12px;height:12px}
+.band{position:absolute;left:0;right:0;bottom:0;height:32px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 8px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;font-variant-numeric:tabular-nums}
+.band span:last-child{letter-spacing:0;font-weight:600}
+.sticker.sib .in img.f{width:124px;transform:translate(-50%,-56%) rotate(-3deg)}
+
+/* hero: tilt + brillante foil, rewritten from the method (offset gradient under a blend mode, moved by the pointer) */
+.heroWrap{position:absolute;left:0;top:0;width:160px;height:204px;perspective:700px;z-index:5;--lift:0}
+.hero{transform:rotateX(var(--rx)) rotateY(var(--ry));transform-style:preserve-3d;cursor:grab;touch-action:pan-y;
+  box-shadow:0 1px 1.5px rgba(20,24,27,.18),0 calc(3px + var(--lift)*22px) calc(6px + var(--lift)*26px) calc(-2px - var(--lift)*4px) rgba(20,24,27,calc(.18 + var(--lift)*.08))}
+.hero:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.holo{position:absolute;inset:0;opacity:.30;mix-blend-mode:color-dodge;pointer-events:none;
+  background:linear-gradient(115deg,#7fd0c0 0%,#ecdc9c 25%,#9fc4e8 50%,#7fd0c0 75%,#ecdc9c 100%);
+  background-size:280% 280%;background-position:calc(var(--px)*1%) calc(var(--py)*1%);filter:saturate(.6)}
+.glare{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.28;
+  background:radial-gradient(circle at calc(var(--px)*1%) calc(var(--py)*1%),rgba(255,255,255,.95),rgba(255,255,255,0) 55%)}
+.backing{position:absolute;left:0;top:0;width:160px;height:204px;border-radius:7px;background:#F7F8F8;border:1px solid var(--hair);box-shadow:0 6px 14px rgba(20,24,27,.12);opacity:0;z-index:4}
+
+.cap{position:absolute;left:24px;right:24px;text-align:center;font-size:var(--t-small);color:var(--ink-2)}
+.where{top:656px}
+.rar{top:674px}
+.release{position:absolute;left:50%;transform:translateX(-50%);top:698px;height:44px;padding:0 16px;display:flex;align-items:center;font-size:var(--t-small);color:var(--ink-2);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* controls: the only glass */
+.bar{position:absolute;left:16px;right:16px;bottom:27px;height:62px;border-radius:31px;padding:6px;display:flex;gap:6px;z-index:15;
+  background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6);
+  border:.5px solid rgba(20,24,27,.10);box-shadow:0 6px 20px rgba(20,24,27,.10)}
+.btn{height:50px;border-radius:25px;font-size:var(--t-ui);font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform .25s var(--ease),filter .25s}
+.btn i{font-size:20px}
+.btn:active{transform:scale(.97)}
+.main{flex:1;background:var(--accent);color:#fff}
+.main:hover{filter:brightness(1.08)}
+.sec{width:128px}
+.sec:hover{background:rgba(20,24,27,.05)}
+@media (prefers-reduced-motion:reduce){.pop{transition:none}}
+</style>
+</head>
+<body>
+<main class="screen" id="screen">
+  <div class="island"></div>
+  <div class="status" aria-hidden="true">
+    <span>9:41</span>
+    <span class="r">
+      <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#0B0F14"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#0B0F14"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#0B0F14"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#0B0F14"/></svg>
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="#0B0F14" stroke-width="1.9" stroke-linecap="round"><path d="M1.2 4.3a10 10 0 0 1 14.6 0"/><path d="M3.9 7.1a6 6 0 0 1 9.2 0"/><circle cx="8.5" cy="10.2" r=".9" fill="#0B0F14"/></svg>
+      <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.8" fill="none" stroke="#0B0F14" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2.4" fill="#0B0F14"/><path d="M25 4.5v4c.8-.3 1.5-1.1 1.5-2s-.7-1.7-1.5-2z" fill="#0B0F14" opacity=".45"/></svg>
+    </span>
+  </div>
+
+  <section class="verdict" id="verdict" aria-label="Verdict">
+    <div class="vline">
+      <i class="ph ph-seal-check ic" aria-hidden="true"></i>
+      <h1>Garder possible</h1>
+      <span class="m">68 / 60 cm mini</span>
+      <button class="info" id="infoBtn" aria-expanded="false" aria-controls="pop" aria-label="Détail de la règle"><i class="ph ph-info"></i></button>
+    </div>
+    <svg class="ruler" id="ruler" viewBox="0 0 361 34" role="img" aria-label="Réglette : 68 cm, au-dessus du minimum de 60 cm"></svg>
+    <div class="pop" id="pop" role="region" aria-label="Règle applicable">
+      <p>Taille mini 60 cm, le tien : <b class="num">68 cm</b>.</p>
+      <p>Ouvert jusqu'au 25 janv. · 2 brochets max par jour.</p>
+      <p class="fine">Règle nationale, indicative · <a href="#">Signaler une erreur</a></p>
+    </div>
+  </section>
+
+  <section class="page" id="page" aria-label="Page du Pescedex">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="full" viewBox="0 0 14 14"><path d="M1 12A6 6 0 0 1 13 12Z" transform="translate(0 -3)" fill="#14181B"/></symbol><symbol id="empty" viewBox="0 0 14 14"><path d="M1.6 11.4A5.4 5.4 0 0 1 12.4 11.4Z" transform="translate(0 -2.4)" fill="none" stroke="#7A858C" stroke-width="1"/></symbol></defs></svg>
+<div class="ph-row"><h2>Pescedex</h2><span>4 sur les 11 relevées dans le 94</span></div>
+    <div class="seg" role="img" aria-label="4 espèces sur 11"><i class="on"></i><i></i><i></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
+    <div class="grid">
+      <div class="slot"><div class="sticker sib" role="img" aria-label="Vignette 05, Perche, palier 1 sur 3"><div class="in"><img class="f" src="../assets/fish/perche.png" alt=""><span class="tab l">05</span><span class="tab r" aria-hidden="true"><svg><use href="#full"/></svg><svg><use href="#empty"/></svg><svg><use href="#empty"/></svg></span><div class="band"><span>Perche</span></div></div></div></div>
+      <div class="slot" id="slot6">06
+        <div class="backing" id="backing" aria-hidden="true"></div>
+        <div class="heroWrap" id="heroWrap">
+          <div class="sticker hero" id="hero" role="group" tabindex="0" aria-label="Vignette brillante 06 sur 14 : Brochet, 68 centimètres, palier 2 sur 3">
+            <div class="in">
+              <div class="holo" aria-hidden="true"></div>
+              <img class="f" src="../assets/fish/brochet.png" alt="Brochet">
+              <div class="glare" aria-hidden="true"></div>
+              <span class="tab l">06</span>
+              <span class="tab r" role="img" aria-label="Palier 2 sur 3"><svg><use href="#full"/></svg><svg><use href="#full"/></svg><svg><use href="#empty"/></svg></span>
+              <div class="band"><span>Brochet</span><span>68 cm</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slot">07</div>
+      <div class="slot"><div class="sticker sib" role="img" aria-label="Vignette 08, Gardon, palier 1 sur 3"><div class="in"><img class="f" src="../assets/fish/gardon.png" alt=""><span class="tab l">08</span><span class="tab r" aria-hidden="true"><svg><use href="#full"/></svg><svg><use href="#empty"/></svg><svg><use href="#empty"/></svg></span><div class="band"><span>Gardon</span></div></div></div></div>
+    </div>
+  </section>
+
+  <p class="cap where">12 oct. 2026 · 17 h 42 · La Marne, Val-de-Marne (94)</p>
+  <p class="cap rar">Commun en Seine-et-Marne, peu commun ici · relevés OFB</p>
+  <a class="release" href="#">Je le relâche</a>
+
+  <div class="bar">
+    <button class="btn main"><i class="ph ph-books"></i>Ranger dans le Pescedex</button>
+    <button class="btn sec"><i class="ph ph-export"></i>Partager</button>
+  </div>
+  <div class="home"></div>
+</main>
+
+<script src="../assets/vendor/gsap/gsap.min.js"></script>
+<script>
+(function(){
+  const NS='http://www.w3.org/2000/svg',$=s=>document.querySelector(s);
+  function el(n,a,p){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+
+  /* ruler 0..80 cm, minimum 60, catch 68 */
+  const R=$('#ruler'),X=c=>c*361/80,Y=12;
+  el('path',{d:`M0 ${Y}H${X(60)}`,stroke:'#14181B','stroke-opacity':.35,'stroke-width':1},R);
+  el('path',{d:`M${X(60)} ${Y}H${X(80)}`,stroke:'#1E7F4F','stroke-width':2.5},R);
+  for(let c=0;c<=80;c+=10){const big=c%20===0||c===60;
+    el('path',{d:`M${Math.min(Math.max(X(c),.5),360.5)} ${Y}v${big?7:4}`,stroke:'#14181B','stroke-opacity':c>=60?.9:.45,'stroke-width':1},R);}
+  [[0,'0','start'],[20,'20','middle'],[40,'40','middle'],[60,'60 mini','middle'],[80,'80','end']].forEach(a=>{
+    const t=el('text',{x:X(a[0]),y:32,'text-anchor':a[2],'font-family':'Hanken Grotesk','font-size':12,fill:a[0]===60?'#14181B':'#566067'},R);t.textContent=a[1];});
+  el('path',{d:`M${X(68)} ${Y-1.5}l-4 -7h8z`,fill:'#1E7F4F'},R);
+
+  const btn=$('#infoBtn'),pop=$('#pop');
+  btn.addEventListener('click',()=>{const o=pop.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+
+  const hero=$('#hero'),wrap=$('#heroWrap'),rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* resting pose: a slight tilt so the still image already shows the foil */
+  const REST={x:.30,y:.26};
+  let tx=REST.x,ty=REST.y,cx=REST.x,cy=REST.y,raf=0,live=false;
+  function apply(){
+    hero.style.setProperty('--px',(cx*100).toFixed(1));hero.style.setProperty('--py',(cy*100).toFixed(1));
+    hero.style.setProperty('--ry',((cx-.5)*20).toFixed(2)+'deg');
+    hero.style.setProperty('--rx',(-(cy-.5)*16).toFixed(2)+'deg');
+  }
+  function tick(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;apply();
+    if(Math.abs(tx-cx)+Math.abs(ty-cy)>.0008)raf=requestAnimationFrame(tick);else raf=0}
+  function aim(x,y){tx=Math.min(1,Math.max(0,x));ty=Math.min(1,Math.max(0,y));if(!raf)raf=requestAnimationFrame(tick)}
+  apply();
+
+  if(!rm){
+    const s=$('#screen');
+    s.addEventListener('pointermove',e=>{if(e.pointerType==='touch'&&!e.buttons)return;
+      const r=s.getBoundingClientRect();aim((e.clientX-r.left)/r.width,(e.clientY-r.top-250)/300)});
+    s.addEventListener('pointerleave',()=>aim(REST.x,REST.y));
+    /* iPhone: gyroscope. iOS asks permission on a user gesture, so the first touch of the sticker does it. */
+    const onTilt=e=>{if(e.gamma==null)return;aim(.5+Math.max(-25,Math.min(25,e.gamma))/50,.5+Math.max(-25,Math.min(25,(e.beta||0)-45))/50)};
+    const startGyro=()=>{if(live||!window.DeviceOrientationEvent)return;
+      const go=()=>{live=true;addEventListener('deviceorientation',onTilt)};
+      if(typeof DeviceOrientationEvent.requestPermission==='function'){DeviceOrientationEvent.requestPermission().then(r=>{if(r==='granted')go()}).catch(()=>{})}
+      else go()};
+    hero.addEventListener('pointerdown',startGyro);
+    hero.addEventListener('keydown',e=>{const k={ArrowLeft:[-.1,0],ArrowRight:[.1,0],ArrowUp:[0,-.1],ArrowDown:[0,.1]}[e.key];if(k){e.preventDefault();aim(tx+k[0],ty+k[1])}});
+  }
+
+  /* the one authored motion: the sticker comes off its backing, hovers, then is pressed into slot 06; the foil catches the light once. Done by ~2.3 s. */
+  if(window.gsap){
+    if(rm){
+      gsap.from('.page,.verdict,.cap,.release,.bar',{opacity:0,duration:.6,ease:'none'});
+    }else{
+      gsap.from(['.verdict','.ph-row','.seg','.slot:not(#slot6) .sticker'],{opacity:0,duration:.5,ease:'none'});
+      gsap.set(wrap,{'--lift':1});
+      const tl=gsap.timeline();
+      tl.fromTo(wrap,{y:-150,scale:1.22,rotation:-5,opacity:0},{y:-44,scale:1.22,rotation:-5,opacity:1,duration:.5,ease:'expo.out'},0)
+        .fromTo('#backing',{x:-6,y:-190,scale:1.22,rotation:-2,opacity:1},{x:-6,y:-90,duration:.5,ease:'expo.out'},0)
+        .to('#backing',{x:80,y:70,rotation:16,opacity:0,duration:.6,ease:'power2.in'},.45)
+        .to(wrap,{y:0,scale:1,rotation:0,duration:.75,ease:'expo.out'},.95)
+        .to(wrap,{'--lift':0,duration:.75,ease:'expo.out'},.95);
+      cx=.95;cy=.75;apply();
+      gsap.to({v:0},{v:1,duration:1.0,delay:1.25,ease:'expo.out',onUpdate(){const v=this.targets()[0].v;cx=.95+(REST.x-.95)*v;cy=.75+(REST.y-.75)*v;tx=cx;ty=cy;apply()}});
+      gsap.from('.cap,.release',{opacity:0,duration:.5,ease:'none',delay:1.2,stagger:.08});
+      gsap.from('.bar',{opacity:0,y:14,duration:.6,ease:'expo.out',delay:1.2});
+    }
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=393,initial-scale=1">
+<title>Identifier la prise</title><style>
+@font-face{font-family:'Fredoka';font-weight:500;font-display:block;src:url('fonts/fredoka-500.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:600;font-display:block;src:url('fonts/fredoka-600.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:700;font-display:block;src:url('fonts/fredoka-700.woff2') format('woff2')}
+
+:root{
+  --navy:#1F2D5C; --cream:#FFF7E0; --sun:#FFC83D; --sky:#3FB8E8; --sky-l:#8DDCFA;
+  --grass:#7ED957; --coral:#FF5A4D; --leaf:#34A853;
+  --glass-bg:rgba(255,255,255,.52); --glass-line:rgba(255,255,255,.85);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#BFE9FF}
+body{font-family:'Fredoka',system-ui,sans-serif;font-weight:500;color:var(--navy);-webkit-font-smoothing:antialiased}
+.glass{
+  background:var(--glass-bg);
+  -webkit-backdrop-filter:blur(16px) saturate(190%);backdrop-filter:blur(16px) saturate(190%);
+  border:1.5px solid var(--glass-line);
+  box-shadow:inset 0 2px 1px rgba(255,255,255,.95), inset 0 -2px 3px rgba(255,255,255,.35), inset 0 0 14px rgba(255,255,255,.35), 0 10px 24px rgba(31,45,92,.22);
+}
+
+.status{position:absolute;left:0;right:0;top:0;height:54px;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:6px 30px 0 44px}
+.time{font-family:-apple-system,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:600;font-size:17px;color:#0B1433;letter-spacing:-.2px}
+.island{position:absolute;left:50%;top:11px;width:124px;height:36px;margin-left:-62px;background:#000;border-radius:20px}
+.sys{display:flex;gap:6px;align-items:center}
+
+.card{position:relative;--p:9px;padding:var(--p);border-radius:30px;border:4px solid var(--navy);width:var(--w,300px);box-shadow:0 8px 0 rgba(31,45,92,.9),0 18px 28px rgba(31,45,92,.25)}
+.card .in{background:var(--cream);border:4px solid var(--navy);border-radius:calc(30px - var(--p) + 2px);padding:12px 12px 12px;display:flex;flex-direction:column;gap:9px;position:relative}
+.head{display:flex;justify-content:space-between;align-items:center}
+.num{font-size:15px;font-weight:600;letter-spacing:.3px}
+.rar{display:flex;align-items:center;gap:7px;font-weight:700;font-size:16px}
+.badge{display:block;flex:none}
+.scene{position:relative;height:var(--sh,170px);border-radius:18px;border:4px solid var(--navy);overflow:hidden;background:radial-gradient(120% 90% at 50% 115%,#B6ECFF 0,#5CC8F2 55%,#3FB8E8 100%)}
+.scene::before{content:"";position:absolute;inset:0;background:var(--pat,none);opacity:var(--patO,.6)}
+.scene .rip{position:absolute;left:50%;bottom:-18px;width:78%;height:46px;margin-left:-39%;border-radius:50%;border:4px solid rgba(255,255,255,.75)}
+.scene .rip.b{width:100%;height:62px;margin-left:-50%;bottom:-30px;border-width:3px;opacity:.5}
+.scene .fishwrap{position:absolute;left:5%;right:5%;top:50%;transform:translateY(-54%);display:flex;justify-content:center}
+.fish{width:100%;height:auto;filter:drop-shadow(0 6px 0 rgba(31,45,92,.28))}
+.stars{position:absolute;left:8px;top:8px;display:flex;gap:2px;padding:3px 7px 3px 5px;border-radius:14px;background:#fff;border:3px solid var(--navy)}
+.st svg{display:block;width:19px;height:19px}
+.st.on svg{fill:#FFC83D;stroke:#1F2D5C}
+.st.off svg{fill:#E7E3D3;stroke:#B8B4A3;stroke-width:2}
+.name{font-size:28px;font-weight:700;line-height:1.05;letter-spacing:.2px}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 11px;border-radius:999px;border:3px solid var(--navy);background:#fff;font-weight:700;font-size:15px;line-height:1.3}
+.fact{font-size:14px;font-weight:600;line-height:1.2}
+/* rareté : matière du cadre qui grandit */
+.r1{--p:9px;background:#D9B27A repeating-linear-gradient(90deg,rgba(90,50,10,.09) 0 2px,transparent 2px 10px);--pat:radial-gradient(rgba(255,255,255,.0) 1px,transparent 1px)}
+.r2{--p:12px;background:linear-gradient(135deg,#F7FAFD,#A9B8CA 28%,#F0F5FA 50%,#8696AB 76%,#E8EEF5);--pat:radial-gradient(rgba(255,255,255,.7) 2.5px,transparent 3px);--patS:16px}
+.r2 .scene::before{background-size:18px 18px}
+.r3{--p:15px;background:linear-gradient(135deg,#FFE680,#F5A623 28%,#FFF2A8 50%,#D98A0B 76%,#FFD95E)}
+.r3 .scene::before{background:repeating-conic-gradient(from 0deg at 50% 62%,rgba(255,255,255,.55) 0 8deg,transparent 8deg 20deg)}
+.r4{--p:19px;background:conic-gradient(from 30deg,#FFD84D,#FF7AA8,#5FD8FF,#7CE38B,#FFD84D);box-shadow:0 8px 0 rgba(31,45,92,.9),0 0 0 6px rgba(255,255,255,.7),0 0 38px 10px rgba(255,214,77,.75)}
+.r4 .scene::before{background:repeating-conic-gradient(from 0deg at 50% 62%,rgba(255,255,255,.7) 0 7deg,transparent 7deg 18deg)}
+.stud{position:absolute;width:11px;height:11px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#C7D2E0 60%,#7C8DA5);border:2.5px solid var(--navy)}
+.r3 .stud{background:radial-gradient(circle at 35% 30%,#FFF6C4,#FFC93C 60%,#C17F06)}
+.r4 .stud{width:13px;height:13px;background:radial-gradient(circle at 35% 30%,#fff,#7FE4FF 55%,#FF7AA8)}
+.stud.tl{left:calc(var(--p)/2 - 7px);top:calc(var(--p)/2 - 7px)}.stud.tr{right:calc(var(--p)/2 - 7px);top:calc(var(--p)/2 - 7px)}
+.stud.bl{left:calc(var(--p)/2 - 7px);bottom:calc(var(--p)/2 - 7px)}.stud.br{right:calc(var(--p)/2 - 7px);bottom:calc(var(--p)/2 - 7px)}
+.crown{position:absolute;left:50%;top:-40px;width:92px;margin-left:-46px;z-index:3;filter:drop-shadow(0 3px 0 rgba(31,45,92,.35))}
+.ribbon{position:absolute;left:50%;top:-14px;transform:translateX(-50%);z-index:3;background:#FF8277;border:3.5px solid var(--navy);border-radius:10px;padding:1px 16px 2px;font-weight:700;font-size:14px;letter-spacing:.8px;color:var(--navy);box-shadow:0 3px 0 rgba(31,45,92,.9);white-space:nowrap}
+.spark{position:absolute;width:26px;height:26px;z-index:4}
+
+.card.mini{--w:106px;border-width:3px;border-radius:20px;box-shadow:0 4px 0 rgba(31,45,92,.9)}
+.mini.r1{--p:5px}.mini.r2{--p:6px}.mini.r3{--p:7px}.mini.r4{--p:8px;box-shadow:0 4px 0 rgba(31,45,92,.9),0 0 14px 3px rgba(255,214,77,.8)}
+.mini .in{padding:6px;gap:4px;border-width:3px;border-radius:13px}
+.mini .scene{height:52px;border-width:3px;border-radius:9px}
+.mini .scene .fishwrap{left:3%;right:3%}
+.mini .fish{filter:drop-shadow(0 3px 0 rgba(31,45,92,.25))}
+.mini .name{font-size:14px;line-height:1.1;display:flex;align-items:center;gap:4px;justify-content:center}
+.mini .name .badge{width:18px;height:18px}
+.mini .rip{display:none}
+.card.mini.ghost{border:3px dashed #8D97B8;background:#E4E9F3;box-shadow:none}
+.mini.ghost .in{background:#F2F4FA;border:3px dashed #B4BCD4}
+.mini.ghost .scene{background:#DCE2EF;border:3px dashed #B4BCD4}
+.mini.ghost .fish{filter:brightness(0) opacity(.28)}
+.mini.ghost .name{color:#4C5679}
+
+html,body{width:393px;height:852px;overflow:hidden}
+.phone{position:relative;width:393px;height:852px;overflow:hidden;background:linear-gradient(#8ADBFA 0,#CFF1FF 38%,#FFF4CC 100%)}
+.rays{position:absolute;left:-200px;right:-200px;top:-140px;height:900px;background:repeating-conic-gradient(from 0deg at 50% 30%,rgba(255,255,255,.3) 0 7deg,transparent 7deg 18deg)}
+.ib{position:absolute;top:60px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;z-index:30;font-family:inherit}
+.ib.l{left:16px}.ib.r{right:16px}
+.ttl{position:absolute;left:0;right:0;top:56px;height:52px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:20}
+.ttl h1{font-size:22px;font-weight:700;line-height:1.1}.ttl p{font-size:14px;font-weight:600}
+.panel{background:var(--cream);border:4px solid #1F2D5C;border-radius:22px;padding:12px 14px;box-shadow:0 5px 0 rgba(31,45,92,.9)}
+.cta{position:absolute;left:16px;right:16px;bottom:34px;height:58px;border-radius:29px;display:flex;align-items:center;justify-content:center;gap:10px;font-family:inherit;font-size:19px;font-weight:700;color:#1F2D5C;background:rgba(255,200,61,.74);border-color:rgba(255,255,255,.9);z-index:30;box-shadow:inset 0 2px 1px rgba(255,255,255,.95),inset 0 -3px 4px rgba(255,255,255,.35),0 5px 0 #1F2D5C,0 12px 22px rgba(31,45,92,.25)}
+.cta.s{height:50px;font-size:17px;background:rgba(255,255,255,.6);box-shadow:inset 0 2px 1px rgba(255,255,255,.95),0 8px 18px rgba(31,45,92,.2)}
+.med{width:58px;height:46px;border-radius:23px;background:#8DDCFA;border:3.5px solid #1F2D5C;display:grid;place-items:center;overflow:hidden;flex:none;box-shadow:0 3px 0 rgba(31,45,92,.85)}
+.med .fish{width:46px;filter:none}
+.med.ghost{background:#E4E9F3;border:3.5px dashed #8D97B8;box-shadow:none}.med.ghost .fish{filter:brightness(0) opacity(.28)}
+.small{font-size:13px;font-weight:600;line-height:1.3;color:#44507A}
+.h2{font-size:17px;font-weight:700;line-height:1.2}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+
+.pol{position:absolute;left:50%;top:124px;width:230px;margin-left:-115px;transform:rotate(-2.5deg);background:#fff;border:4px solid #1F2D5C;border-radius:14px;padding:10px 10px 12px;box-shadow:0 6px 0 rgba(31,45,92,.9)}
+.pol .im{height:116px;border-radius:8px;border:3.5px solid #1F2D5C;background:radial-gradient(120% 90% at 50% 120%,#B6ECFF,#45BDEB);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pol .im .fish{width:92%}
+.pol .cap{margin-top:6px;font-size:14px;font-weight:600;text-align:center}
+.tape{position:absolute;left:50%;top:-14px;width:66px;height:22px;margin-left:-33px;background:rgba(255,200,61,.85);border:3px solid #1F2D5C;border-radius:5px;transform:rotate(3deg)}
+.q{position:absolute;left:16px;right:16px;top:308px}
+.q h2{font-size:20px;font-weight:700}
+ul.ops{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:8px}
+.op{display:flex;align-items:center;gap:10px;background:var(--cream);border:3.5px solid #1F2D5C;border-radius:20px;padding:5px 12px 5px 6px}
+.op.sel{background:#FFF0B0;box-shadow:0 0 0 4px #FFC83D}
+.op .med{width:62px;height:46px}.op .med .fish{width:50px}
+.op .mid{flex:1}.op .nm{font-size:20px;font-weight:700;line-height:1.1}.lat{font-size:14px;font-weight:500;font-style:italic;color:#44507A}
+.rd{width:30px;height:30px;border-radius:50%;border:3.5px solid #1F2D5C;background:#fff;display:grid;place-items:center}.rd.on{background:#5FC26B}
+.links{margin-top:10px;display:flex;justify-content:center;gap:10px;font-size:15px;font-weight:600;text-decoration:underline;text-underline-offset:3px;align-items:center}
+.size{position:absolute;left:16px;right:16px;top:632px}
+.size .row{display:flex;justify-content:space-between;align-items:baseline}
+.size .row b{font-size:17px}.size .row span.v{font-size:30px;font-weight:700;line-height:1}
+.trk{position:relative;height:16px;margin:10px 4px 0;border-radius:8px;background:#fff;border:3.5px solid #1F2D5C}
+.trk i{position:absolute;left:0;top:0;bottom:0;width:52.7%;background:#3AB0F0;border-radius:5px 0 0 5px}
+.trk em{position:absolute;left:52.7%;top:50%;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;background:#FFC83D;border:4px solid #1F2D5C;box-shadow:0 3px 0 rgba(31,45,92,.8)}
+.sc{display:flex;justify-content:space-between;margin:12px 4px 0;font-size:13px;font-weight:600}
+</style></head><body><div class="phone" style="">
+
+<div class="status">
+  <span class="time">17:43</span>
+  <span class="island"></span>
+  <span class="sys">
+    <svg width="19" height="12" viewBox="0 0 19 12"><rect x="0" y="8" width="3.4" height="4" rx="1" fill="#0B1433"/><rect x="5" y="5.5" width="3.4" height="6.5" rx="1" fill="#0B1433"/><rect x="10" y="3" width="3.4" height="9" rx="1" fill="#0B1433"/><rect x="15" y="0" width="3.4" height="12" rx="1" fill="#0B1433"/></svg>
+    <svg width="17" height="12" viewBox="0 0 17 12"><path d="M8.5 11.2 6.3 8.9a3.1 3.1 0 0 1 4.4 0Z" fill="#0B1433"/><path d="M3.9 6.4a6.5 6.5 0 0 1 9.2 0l-1.3 1.4a4.6 4.6 0 0 0-6.6 0Z" fill="#0B1433"/><path d="M1.2 3.7a10.3 10.3 0 0 1 14.6 0l-1.3 1.4a8.4 8.4 0 0 0-12 0Z" fill="#0B1433"/></svg>
+    <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.6" fill="none" stroke="#0B1433" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2.4" fill="#0B1433"/><path d="M25 4.5v4c.9-.3 1.6-1.2 1.6-2s-.7-1.7-1.6-2Z" fill="#0B1433" opacity=".5"/></svg>
+  </span>
+</div>
+
+<button class="ib l glass" aria-label="Fermer"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="#1F2D5C" stroke-width="3.4" stroke-linecap="round"/></svg></button><div class="ttl"><h1>Quelle espèce ?</h1><p>Photo prise à 17 h 43</p></div>
+<div class="pol"><i class="tape"></i><div class="im"><svg class="fish" viewBox="-6 -2 352 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<linearGradient id="phg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9BE86A"/><stop offset="1" stop-color="#3FA640"/></linearGradient>
+<clipPath id="phc"><path d="M334 68C334 60 326 56 316 54L284 46C224 26 134 32 74 50C56 56 46 62 44 70C46 78 56 86 74 92C134 110 224 114 284 96L314 88C326 84 334 78 334 68Z"/></clipPath></defs>
+<path d="M46 70L10 36Q2 32 4 44Q14 70 14 70Q14 70 4 96Q2 108 10 104Z" fill="#FFA43A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M96 46L84 14Q82 8 90 10L134 38Z" fill="#FFA43A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M92 92L80 120Q78 126 86 124L132 98Z" fill="#FFA43A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M200 100L196 122Q196 126 202 124L226 102Z" fill="#FFA43A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M334 68C334 60 326 56 316 54L284 46C224 26 134 32 74 50C56 56 46 62 44 70C46 78 56 86 74 92C134 110 224 114 284 96L314 88C326 84 334 78 334 68Z" fill="url(#phg)"/>
+<g clip-path="url(#phc)"><ellipse cx="190" cy="116" rx="165" ry="28" fill="#FFF1B8"/>
+<ellipse cx="122" cy="58" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="152" cy="52" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="182" cy="54" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="212" cy="58" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="242" cy="62" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="137" cy="74" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="167" cy="72" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="197" cy="74" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="227" cy="78" rx="10" ry="5.5" fill="#E9F59A"/>
+</g>
+<path d="M334 68C334 60 326 56 316 54L284 46C224 26 134 32 74 50C56 56 46 62 44 70C46 78 56 86 74 92C134 110 224 114 284 96L314 88C326 84 334 78 334 68Z" fill="none" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M104 50Q190 32 268 54" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+<path d="M262 52Q250 70 262 92" fill="none" stroke="#1F2D5C" stroke-width="4" stroke-linecap="round"/>
+<path d="M332 70L296 72" fill="none" stroke="#1F2D5C" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="280" cy="82" rx="9" ry="6" fill="#FF8FA3" opacity=".75"/>
+<circle cx="296" cy="61" r="10.5" fill="#fff" stroke="#1F2D5C" stroke-width="3.5"/><circle cx="298" cy="62" r="6" fill="#1F2D5C"/><circle cx="300" cy="59.5" r="2.4" fill="#fff"/>
+<ellipse cx="244" cy="90" rx="18" ry="9" transform="rotate(-22 244 90)" fill="#FFA43A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/></svg></div><div class="cap">Ma prise</div></div>
+<div class="q"><h2>3 espèces proposées</h2>
+<ul class="ops"><li class="op sel"><span class="med"><svg class="fish" viewBox="-6 -2 352 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<linearGradient id="o1g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9BE86A"/><stop offset="1" stop-color="#3FA640"/></linearGradient>
+<clipPath id="o1c"><path d="M334 68C334 60 326 56 316 54L284 46C224 26 134 32 74 50C56 56 46 62 44 70C46 78 56 86 74 92C134 110 224 114 284 96L314 88C326 84 334 78 334 68Z"/></clipPath></defs>
+<path d="M46 70L10 36Q2 32 4 44Q14 70 14 70Q14 70 4 96Q2 108 10 104Z" fill="#FFA43A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M96 46L84 14Q82 8 90 10L134 38Z" fill="#FFA43A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M92 92L80 120Q78 126 86 124L132 98Z" fill="#FFA43A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M200 100L196 122Q196 126 202 124L226 102Z" fill="#FFA43A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M334 68C334 60 326 56 316 54L284 46C224 26 134 32 74 50C56 56 46 62 44 70C46 78 56 86 74 92C134 110 224 114 284 96L314 88C326 84 334 78 334 68Z" fill="url(#o1g)"/>
+<g clip-path="url(#o1c)"><ellipse cx="190" cy="116" rx="165" ry="28" fill="#FFF1B8"/>
+<ellipse cx="122" cy="58" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="152" cy="52" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="182" cy="54" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="212" cy="58" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="242" cy="62" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="137" cy="74" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="167" cy="72" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="197" cy="74" rx="10" ry="5.5" fill="#E9F59A"/><ellipse cx="227" cy="78" rx="10" ry="5.5" fill="#E9F59A"/>
+</g>
+<path d="M334 68C334 60 326 56 316 54L284 46C224 26 134 32 74 50C56 56 46 62 44 70C46 78 56 86 74 92C134 110 224 114 284 96L314 88C326 84 334 78 334 68Z" fill="none" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M104 50Q190 32 268 54" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+<path d="M262 52Q250 70 262 92" fill="none" stroke="#1F2D5C" stroke-width="4" stroke-linecap="round"/>
+<path d="M332 70L296 72" fill="none" stroke="#1F2D5C" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="280" cy="82" rx="9" ry="6" fill="#FF8FA3" opacity=".75"/>
+<circle cx="296" cy="61" r="10.5" fill="#fff" stroke="#1F2D5C" stroke-width="3.5"/><circle cx="298" cy="62" r="6" fill="#1F2D5C"/><circle cx="300" cy="59.5" r="2.4" fill="#fff"/>
+<ellipse cx="244" cy="90" rx="18" ry="9" transform="rotate(-22 244 90)" fill="#FFA43A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/></svg></span><div class="mid"><div class="nm">Brochet</div><div class="lat">Esox lucius</div></div><span class="rd on"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 12.5l5 5L19.5 7" fill="none" stroke="#1F2D5C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></li><li class="op"><span class="med"><svg class="fish" viewBox="-6 -2 352 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<linearGradient id="o2g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9BDDEE"/><stop offset="1" stop-color="#3C8DB3"/></linearGradient>
+<clipPath id="o2c"><path d="M330 70C330 62 318 56 300 50C244 32 134 34 74 52C60 56 50 62 46 70C50 78 60 84 74 88C134 106 244 108 300 90C318 84 330 78 330 70Z"/></clipPath></defs>
+<path d="M52 70L10 34Q2 32 4 44Q14 70 14 70Q14 70 4 96Q2 108 10 106Z" fill="#FFD35A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M202 42L198 14L186 22L178 8L166 20L156 10L148 24L138 42Z" fill="#FFD35A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M126 42L120 22Q100 20 84 48Z" fill="#FFD35A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M120 96L100 122Q98 126 106 126L142 102Z" fill="#FFD35A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M208 100L204 122Q204 126 210 124L232 104Z" fill="#FFD35A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M330 70C330 62 318 56 300 50C244 32 134 34 74 52C60 56 50 62 46 70C50 78 60 84 74 88C134 106 244 108 300 90C318 84 330 78 330 70Z" fill="url(#o2g)"/>
+<g clip-path="url(#o2c)"><ellipse cx="190" cy="112" rx="160" ry="22" fill="#E8F6F7"/>
+<rect x="122" y="26" width="17" height="90" rx="8" fill="#1F2D5C" opacity=".42" transform="skewX(-8)"/><rect x="160" y="26" width="17" height="90" rx="8" fill="#1F2D5C" opacity=".42" transform="skewX(-8)"/><rect x="198" y="26" width="17" height="90" rx="8" fill="#1F2D5C" opacity=".42" transform="skewX(-8)"/><rect x="236" y="26" width="17" height="90" rx="8" fill="#1F2D5C" opacity=".42" transform="skewX(-8)"/>
+</g>
+<path d="M330 70C330 62 318 56 300 50C244 32 134 34 74 52C60 56 50 62 46 70C50 78 60 84 74 88C134 106 244 108 300 90C318 84 330 78 330 70Z" fill="none" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M106 48Q200 34 288 54" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".6"/>
+<path d="M272 54Q260 70 272 88" fill="none" stroke="#1F2D5C" stroke-width="4" stroke-linecap="round"/>
+<path d="M328 72L296 74" fill="none" stroke="#1F2D5C" stroke-width="4" stroke-linecap="round"/>
+<path d="M312 74l2.5 8l3-8" fill="#fff" stroke="#1F2D5C" stroke-width="2.5" stroke-linejoin="round"/>
+<ellipse cx="282" cy="82" rx="9" ry="5.5" fill="#FF8FA3" opacity=".75"/>
+<circle cx="298" cy="62" r="11.5" fill="#fff" stroke="#1F2D5C" stroke-width="3.5"/><circle cx="299" cy="63" r="8" fill="#FFE066"/><circle cx="300" cy="64" r="5" fill="#1F2D5C"/><circle cx="302" cy="61" r="2.3" fill="#fff"/>
+<ellipse cx="246" cy="88" rx="17" ry="8.5" transform="rotate(-22 246 88)" fill="#FFD35A" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/></svg></span><div class="mid"><div class="nm">Sandre</div><div class="lat">Sander lucioperca</div></div><span class="rd"></span></li><li class="op"><span class="med"><svg class="fish" viewBox="-6 -2 352 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<linearGradient id="o3g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DDF07A"/><stop offset="1" stop-color="#4FA23A"/></linearGradient>
+<clipPath id="o3c"><path d="M326 72C326 56 304 36 262 30C210 22 130 28 76 52C58 60 48 66 46 72C48 80 58 86 76 94C130 116 210 120 262 112C304 106 326 90 326 72Z"/></clipPath></defs>
+<path d="M56 72L12 36Q4 34 6 46Q16 72 16 72Q16 72 6 98Q4 110 12 108Z" fill="#FF6B57" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M236 34L230 8L218 14L208 4L196 14L184 8L176 22L172 32Z" fill="#FF6B57" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M160 30L154 12Q130 8 108 40Z" fill="#FF6B57" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M150 108L134 132Q132 136 140 136L176 112Z" fill="#FF6B57" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M232 112L226 134Q226 138 232 136L256 110Z" fill="#FF6B57" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M326 72C326 56 304 36 262 30C210 22 130 28 76 52C58 60 48 66 46 72C48 80 58 86 76 94C130 116 210 120 262 112C304 106 326 90 326 72Z" fill="url(#o3g)"/>
+<g clip-path="url(#o3c)"><ellipse cx="190" cy="124" rx="160" ry="26" fill="#FFF3C4"/>
+<rect x="112" y="22" width="18" height="100" rx="9" fill="#1F2D5C" opacity=".5" transform="skewX(-8)"/><rect x="152" y="22" width="18" height="100" rx="9" fill="#1F2D5C" opacity=".5" transform="skewX(-8)"/><rect x="192" y="22" width="18" height="100" rx="9" fill="#1F2D5C" opacity=".5" transform="skewX(-8)"/><rect x="232" y="22" width="18" height="100" rx="9" fill="#1F2D5C" opacity=".5" transform="skewX(-8)"/>
+</g>
+<path d="M326 72C326 56 304 36 262 30C210 22 130 28 76 52C58 60 48 66 46 72C48 80 58 86 76 94C130 116 210 120 262 112C304 106 326 90 326 72Z" fill="none" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M110 46Q200 28 280 42" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".6"/>
+<path d="M270 40Q258 72 270 102" fill="none" stroke="#1F2D5C" stroke-width="4" stroke-linecap="round"/>
+<path d="M324 76L302 78" fill="none" stroke="#1F2D5C" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="284" cy="88" rx="9" ry="6" fill="#FF8FA3" opacity=".75"/>
+<circle cx="296" cy="58" r="11.5" fill="#fff" stroke="#1F2D5C" stroke-width="3.5"/><circle cx="297" cy="59" r="8" fill="#FFB020"/><circle cx="298" cy="60" r="5" fill="#1F2D5C"/><circle cx="300" cy="57" r="2.3" fill="#fff"/>
+<ellipse cx="252" cy="96" rx="18" ry="9" transform="rotate(-22 252 96)" fill="#FF6B57" stroke="#1F2D5C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/></svg></span><div class="mid"><div class="nm">Perche</div><div class="lat">Perca fluviatilis</div></div><span class="rd"></span></li></ul>
+<div class="links"><span>Aucune de ces espèces</span><span>·</span><span>Pas un poisson</span></div></div>
+<div class="size"><div class="row"><b>Taille</b><span class="v">68 cm</span></div><div class="trk"><i></i><em></em></div><div class="sc"><span>10 cm</span><span>120 cm</span></div></div>
+<button class="cta glass">Continuer<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F2D5C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</div></body></html>
