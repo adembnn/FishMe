@@ -20,7 +20,7 @@ struct ConseilsFichierTests {
 
     @Test func chaqueEspeceEstDeLaListeNationale() throws {
         for c in try chargerFichier().conseils {
-            #expect(Espece.identifiantsNationaux.contains(c.espece), "\(c.id)")
+            #expect(RegleDuLot.idsConnus.contains(c.espece), "\(c.id)")
         }
     }
 
@@ -35,6 +35,20 @@ struct ConseilsFichierTests {
     func chaqueEspeceCourantesAAuMoinsUnConseil() throws {
         let f = try chargerFichier()
         for espece in especesCourantes { #expect(f.conseils.contains { $0.espece == espece }, "\(espece)") }
+    }
+
+    @Test func lesStatutsViennentDeEspecesJson() {
+        // Avec les fichiers de D1 (especes.json et regles/national.json dans les ressources) ; sinon la copie à la main sert de repli.
+        guard RegleDuLot.lesFichiersDeD1SontLa else { return }
+        #expect(RegleDuLot.estProtegee("esturgeon-europeen"))
+        #expect(RegleDuLot.estProtegee("apron-du-rhone"))
+        #expect(RegleDuLot.statuts("perche-soleil") == [.envahissante])
+        #expect(RegleDuLot.statuts("civelle") == [.stadeADemander])
+        #expect(RegleDuLot.statuts("brochet").isEmpty)
+        #expect(RegleDuLot.moisFermes(espece: "brochet", categorie: .deuxieme).isSuperset(of: [2, 3]))
+        #expect(RegleDuLot.moisFermes(espece: "truite-fario", categorie: .deuxieme).contains(10))
+        #expect(RegleDuLot.moisFermes(espece: "sandre", categorie: .premiere).contains(11))
+        #expect(RegleDuLot.moisFermes(espece: "sandre", categorie: .deuxieme).isEmpty)
     }
 
     @Test func fonctionSurLeVraiFichier() throws {
@@ -62,15 +76,16 @@ struct TableauRelectureTests {
         for l in lignes {
             #expect(vus.insert(l.conseil.id).inserted, "identifiant en double \(l.conseil.id)")
             rangs[l.conseil.espece, default: []].append(l.conseil.rang)
-            #expect(Espece.identifiantsNationaux.contains(l.conseil.espece), "\(l.conseil.id) : espèce hors liste")
+            #expect(RegleDuLot.idsConnus.contains(l.conseil.espece), "\(l.conseil.id) : espèce hors liste")
             var erreurs = ValidationConseils.erreurs(l.conseil, sources: l.sources, exigerRelecture: false,
                                                      statuts: RegleDuLot.statuts(l.conseil.espece))
             erreurs += RegleDuLot.erreurs(l.conseil)
+            if RegleDuLot.statuts(l.conseil.espece).contains(.stadeADemander) { erreurs.append("stade à demander : statut non tranché, pas de conseil") }
             #expect(erreurs.isEmpty, "\(l.conseil.id) : \(erreurs)")
         }
         for (espece, r) in rangs {
             #expect(r.sorted() == Array(1...r.count), "\(espece) : rangs \(r)")
-            if RegleDuLot.protegees.contains(espece) { #expect(r.count == 1, "\(espece) : un seul conseil") }
+            if RegleDuLot.estProtegee(espece) { #expect(r.count == 1, "\(espece) : un seul conseil") }
         }
     }
 
