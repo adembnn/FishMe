@@ -53,6 +53,30 @@ struct FauxDonneesTests {
         #expect(faux.poidsEstime(espece: brochet, longueurCm: 60)?.kilos == 1.4)
     }
 
+    @Test func stationsDansFiltreParRectangle() {
+        let faux = EspecesFaux()
+        let paris = RegionCarte(sudOuest: Coordonnee(latitude: 48.0, longitude: 2.0), nordEst: Coordonnee(latitude: 49.0, longitude: 3.0))
+        let s = faux.stationsDans(paris)
+        #expect(s.count == 1 && s[0].especes.count == 2 && s[0].especes[0].nPeches == 9)
+        let large = RegionCarte(sudOuest: Coordonnee(latitude: 47.0, longitude: 1.0), nordEst: Coordonnee(latitude: 49.0, longitude: 3.0))
+        #expect(faux.stationsDans(large).count == 2)
+        let ailleurs = RegionCarte(sudOuest: Coordonnee(latitude: 10, longitude: 10), nordEst: Coordonnee(latitude: 11, longitude: 11))
+        #expect(faux.stationsDans(ailleurs).isEmpty)
+    }
+
+    @Test func stationsDansParDefautVide() {
+        struct Ancien: ServiceEspeces {
+            func rarete(espece: Espece, departement: Departement) -> ResultatRarete { EspecesFaux().rarete(espece: espece, departement: departement) }
+            func especesProches(_ c: Coordonnee) -> [EspeceProche] { [] }
+            func coins(ou espece: Espece, pres c: Coordonnee) -> [Coin] { [] }
+            func especesPechables() -> [EspecePechable] { [] }
+            func classer(scores: [String: Double], especesProches: [Espece]) -> [Proposition] { [] }
+            func poidsEstime(espece: Espece, longueurCm: Double) -> PoidsEstime? { nil }
+        }
+        let r = RegionCarte(sudOuest: Coordonnee(latitude: 0, longitude: 0), nordEst: Coordonnee(latitude: 1, longitude: 1))
+        #expect(Ancien().stationsDans(r).isEmpty)
+    }
+
     @Test func classerRendTroisPropositionsPuisAutreEtPasUnPoisson() {
         let p = EspecesFaux().classer(scores: [:], especesProches: [])
         #expect(p.count == 5)

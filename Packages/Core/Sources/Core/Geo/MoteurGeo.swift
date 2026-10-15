@@ -12,10 +12,10 @@ public struct MoteurGeo: ServiceGeo {
 
     let departements: [Contour]
     let lacs: [Contour]
-    let stations: [StationOFB]
+    let stations: [StationBrute]
     let chargeur: ChargeurRegles?
 
-    init(departements: [Contour], lacs: [Contour], stations: [StationOFB], regles: ChargeurRegles?) {
+    init(departements: [Contour], lacs: [Contour], stations: [StationBrute], regles: ChargeurRegles?) {
         self.departements = departements
         self.lacs = lacs
         self.stations = stations
@@ -24,7 +24,7 @@ public struct MoteurGeo: ServiceGeo {
 
     public init(departementsGeoJSON: Data, lacsGeoJSON: Data? = nil, stationsOFB: Data? = nil, regles: ChargeurRegles? = nil) {
         self.init(departements: Contour.decoder(departementsGeoJSON), lacs: lacsGeoJSON.map(Contour.decoder) ?? [],
-                  stations: stationsOFB.map(StationOFB.decoder) ?? [], regles: regles)
+                  stations: stationsOFB.map(StationBrute.decoder) ?? [], regles: regles)
     }
 
     /// Un point par département (centre de son contour), pour l'heure du soleil de `MoteurRegles`.
@@ -69,7 +69,7 @@ public struct MoteurGeo: ServiceGeo {
     }
 
     /// Un lieu à partir d'une station OFB (son département est déjà rangé par D2).
-    func lieu(station: StationOFB) -> Lieu {
+    func lieu(station: StationBrute) -> Lieu {
         let dep = Departement(code: station.dep)
         let eau = station.eau.map { Eau(nom: $0, cle: cleEau($0), codeSandre: station.codeEau, type: .riviere) }
         return Lieu(departement: dep, eau: eau, categorie: categorieDeLEau(dep: dep, eau: eau))
@@ -83,7 +83,7 @@ public struct MoteurGeo: ServiceGeo {
                 ajouter(eau(deLac: lac))
             }
         }
-        let proches = stations.compactMap { s -> (StationOFB, Double)? in
+        let proches = stations.compactMap { s -> (StationBrute, Double)? in
             guard s.eau != nil else { return nil }
             let d = Geodesie.distanceM(coordonnee, s.coordonnee)
             return d <= Self.rayonEauM ? (s, d) : nil
@@ -110,7 +110,7 @@ public struct MoteurGeo: ServiceGeo {
 
     private func eauAutomatique(_ p: Coordonnee) -> Eau? {
         if let lac = lacs.first(where: { $0.contient(p) }) { return eau(deLac: lac) }
-        var meilleure: (StationOFB, Double)?
+        var meilleure: (StationBrute, Double)?
         for s in stations where s.eau != nil {
             let d = Geodesie.distanceM(p, s.coordonnee)
             if d <= Self.rayonEauM, d < (meilleure?.1 ?? .infinity) { meilleure = (s, d) }

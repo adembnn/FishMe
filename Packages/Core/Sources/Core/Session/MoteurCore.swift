@@ -56,7 +56,7 @@ public struct MoteurCore: Sendable {
 
     public init(donnees: DonneesMoteur, horloge: @escaping @Sendable () -> Date = { Date() },
                 transportHubEau: @escaping HubEauNiveauService.Transport = HubEauNiveauService.transportReseau) {
-        let stationsOFB = donnees.stationsEspeces.map(StationOFB.decoder) ?? []
+        let stationsOFB = donnees.stationsEspeces.map(StationBrute.decoder) ?? []
         let listeEspeces = donnees.especes.map(EspecePechable.decoder) ?? []
         let geo = MoteurGeo(departementsGeoJSON: donnees.departements ?? Data(), lacsGeoJSON: donnees.lacs, regles: donnees.regles)
         let geoAvecStations = MoteurGeo(departements: geo.departements, lacs: geo.lacs, stations: stationsOFB, regles: donnees.regles)

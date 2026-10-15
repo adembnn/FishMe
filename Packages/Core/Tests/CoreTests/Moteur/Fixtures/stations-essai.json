@@ -1,0 +1,6 @@
+[
+  {"id": "E1", "lat": 48.8235, "lon": 2.4160, "dep": "94", "eau": "La Marne", "code_eau": "F6--0020", "peches": 10, "derniere": 2025, "vues": {"2151": 4, "2193": 9, "2195": 1}},
+  {"id": "E2", "lat": 48.80, "lon": 2.45, "dep": "94", "eau": "La Marne", "code_eau": "F6--0020", "peches": 6, "derniere": 2025, "vues": {"2193": 5}},
+  {"id": "E3", "lat": 46.00, "lon": 5.00, "dep": "01", "eau": "L'Ain", "peches": 5, "derniere": 2024, "vues": {"2151": 1}},
+  {"id": "E4", "lat": 48.85, "lon": 2.35, "dep": "75", "peches": 1, "derniere": 2020, "vues": {"9999": 3}}
+]

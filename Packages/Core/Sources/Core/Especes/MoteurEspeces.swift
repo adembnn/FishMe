@@ -14,13 +14,14 @@ struct CoefficientPoids: Sendable, Equatable {
     static func decoder(_ donnees: Data) -> [CoefficientPoids] {
         guard let json = try? JSONSerialization.jsonObject(with: donnees) else { return [] }
         let liste: [[String: Any]]
-        if let l = json as? [[String: Any]] { liste = l } else if let o = json as? [String: Any], let l = (o["especes"] ?? o["coefficients"]) as? [[String: Any]] { liste = l } else { return [] }
+        if let l = json as? [[String: Any]] { liste = l } else if let o = json as? [String: Any], let l = (o["lignes"] ?? o["especes"] ?? o["coefficients"]) as? [[String: Any]] { liste = l } else { return [] }
         return liste.compactMap { e in
-            guard let id = (e["espece"] as? String) ?? (e["id"] as? String),
+            guard let id = (e["espece_id"] as? String) ?? (e["espece"] as? String) ?? (e["id"] as? String),
                   let a = (e["a"] as? NSNumber)?.doubleValue, let b = (e["b"] as? NSNumber)?.doubleValue,
-                  let mn = (e["lt_min_cm"] as? NSNumber)?.doubleValue, let mx = (e["lt_max_cm"] as? NSNumber)?.doubleValue else { return nil }
+                  let mn = ((e["longueur_min_cm"] ?? e["lt_min_cm"]) as? NSNumber)?.doubleValue, let mx = ((e["longueur_max_cm"] ?? e["lt_max_cm"]) as? NSNumber)?.doubleValue else { return nil }
             return CoefficientPoids(espece: id, a: a, b: b, ltMinCm: mn, ltMaxCm: mx, n: (e["n"] as? NSNumber)?.intValue,
-                                    region: e["region"] as? String, source: (e["source"] as? String) ?? "source non indiquée")
+                                    region: e["region"] as? String,
+                                    source: ((e["source"] as? String) ?? "source non indiquée") + ((e["confiance"] as? String) == "approximatif" ? " [approximatif]" : ""))
         }
     }
 }
@@ -78,13 +79,13 @@ public struct MoteurEspeces: ServiceEspeces {
 
     let liste: [EspecePechable]
     let coefficients: [CoefficientPoids]
-    let stations: [StationOFB]
+    let stations: [StationBrute]
     let raretes: DonneesRarete
     let regles: MoteurRegles
     let geo: MoteurGeo
     let horloge: @Sendable () -> Date
 
-    init(especes: [EspecePechable], coefficients: [CoefficientPoids], stations: [StationOFB], raretes: DonneesRarete,
+    init(especes: [EspecePechable], coefficients: [CoefficientPoids], stations: [StationBrute], raretes: DonneesRarete,
          regles: MoteurRegles, geo: MoteurGeo, horloge: @escaping @Sendable () -> Date = { Date() }) {
         self.liste = especes
         self.coefficients = coefficients
@@ -109,7 +110,7 @@ public struct MoteurEspeces: ServiceEspeces {
 
     // MARK: Stations proches
 
-    func stationsProches(_ c: Coordonnee, rayonM: Double) -> [(station: StationOFB, distanceM: Double)] {
+    func stationsProches(_ c: Coordonnee, rayonM: Double) -> [(station: StationBrute, distanceM: Double)] {
         let dLat = rayonM / 111_000 + 0.01
         return stations.compactMap { s in
             if abs(s.coordonnee.latitude - c.latitude) > dLat { return nil }
@@ -119,7 +120,7 @@ public struct MoteurEspeces: ServiceEspeces {
     }
 
     /// Les stations du premier rayon qui en compte assez ; à défaut, tout ce qui se trouve à moins de 30 km.
-    private func stationsDuCoin(_ c: Coordonnee) -> [StationOFB] {
+    private func stationsDuCoin(_ c: Coordonnee) -> [StationBrute] {
         for r in Self.rayonsM {
             let s = stationsProches(c, rayonM: r)
             if s.count >= Self.stationsMinimum { return s.map(\.station) }
@@ -129,8 +130,8 @@ public struct MoteurEspeces: ServiceEspeces {
 
     private func especeDuCode(_ code: String) -> Espece? { liste.first { $0.espece.codeSandre == code }?.espece }
 
-    func especesDeStations(_ stations: [StationOFB], date: Date) -> [EspeceProche] {
-        var parEspece: [String: (n: Int, annee: Int, station: StationOFB)] = [:]
+    func especesDeStations(_ stations: [StationBrute], date: Date) -> [EspeceProche] {
+        var parEspece: [String: (n: Int, annee: Int, station: StationBrute)] = [:]
         for s in stations {
             for (code, n) in s.vues where n > 0 {
                 let courant = parEspece[code]
@@ -159,6 +160,22 @@ public struct MoteurEspeces: ServiceEspeces {
             return Coin(codeStation: s.id, eau: s.eau, departement: Departement(code: s.dep), coordonnee: s.coordonnee, distanceM: d,
                         nPeches: s.vues[code] ?? 0, annee: s.derniere, ouverture: regles.ouverture(espece: espece, lieu: lieu, date: date))
         }
+    }
+
+    /// Toutes les stations OFB du rectangle, avec leurs espèces connues (N et année du dernier relevé de la station).
+    /// Coordonnées arrondies à 0,01° (`Geodesie.arrondi`) : aucune coordonnée exacte ne sort. `[]` sans `stations-especes.json`.
+    /// Une station sans aucune espèce connue de `especes.json` est omise. Triées par code, espèces par N décroissant.
+    public func stationsDans(_ region: RegionCarte) -> [Core.StationOFB] {
+        stations.compactMap { s -> Core.StationOFB? in
+            guard region.contient(s.coordonnee) else { return nil }
+            let relevees: [EspeceRelevee] = s.vues.compactMap { code, n in
+                guard n > 0, let esp = especeDuCode(code) else { return nil }
+                return EspeceRelevee(espece: esp, nPeches: n, annee: s.derniere)
+            }.sorted { ($0.nPeches, $1.espece.id) > ($1.nPeches, $0.espece.id) }
+            guard !relevees.isEmpty else { return nil }
+            return Core.StationOFB(codeStation: s.id, eau: s.eau, departement: Departement(code: s.dep),
+                                   coordonnee: Geodesie.arrondi(s.coordonnee), especes: relevees)
+        }.sorted { $0.codeStation < $1.codeStation }
     }
 
     // MARK: Reconnaissance

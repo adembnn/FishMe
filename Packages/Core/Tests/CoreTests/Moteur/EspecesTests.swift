@@ -126,6 +126,29 @@ struct EspecesTests {
         #expect(especes.coins(ou: Espece(id: "inconnue"), pres: charenton).isEmpty)
     }
 
+    @Test("stationsDans : stations du rectangle sur un petit fichier d'essai, coordonnées arrondies, [] sans fichier")
+    func stationsDansUneRegion() throws {
+        let dossier = URL(fileURLWithPath: #filePath).deletingLastPathComponent().appendingPathComponent("Fixtures")
+        let fichier = try Data(contentsOf: dossier.appendingPathComponent("stations-essai.json"))
+        let avec = MoteurCore(donnees: donneesEssai(stations: fichier), horloge: { quinzeOctobre }).especes
+        let region = RegionCarte(sudOuest: Coordonnee(latitude: 48.75, longitude: 2.30), nordEst: Coordonnee(latitude: 48.90, longitude: 2.50))
+        let stations = avec.stationsDans(region)
+        // E3 est hors du rectangle, E4 n'a aucune espèce connue.
+        #expect(stations.map(\.codeStation) == ["E1", "E2"])
+        let e1 = try #require(stations.first)
+        #expect(e1.coordonnee == Coordonnee(latitude: 48.82, longitude: 2.42))
+        #expect(e1.eau == "La Marne" && e1.departement.code == "94")
+        #expect(e1.especes.map(\.espece.id) == ["perche-commune", "brochet", "sandre"])
+        #expect(e1.especes.map(\.nPeches) == [9, 4, 1])
+        #expect(e1.especes.allSatisfy { $0.annee == 2025 })
+        // Aucune coordonnée exacte du fichier ne sort.
+        #expect(!stations.contains { $0.coordonnee == Coordonnee(latitude: 48.8235, longitude: 2.4160) })
+        let vide = RegionCarte(sudOuest: Coordonnee(latitude: 10, longitude: 10), nordEst: Coordonnee(latitude: 11, longitude: 11))
+        #expect(avec.stationsDans(vide).isEmpty)
+        let sans = MoteurCore(donnees: donneesEssai(stations: nil), horloge: { quinzeOctobre }).especes
+        #expect(sans.stationsDans(region).isEmpty)
+    }
+
     // MARK: classer
 
     let scores: [String: Double] = ["brochet": 0.30, "sandre": 0.25, "perche": 0.20, "gardon": 0.15, "autre poisson": 0.07, "pas un poisson": 0.03]
