@@ -7,6 +7,8 @@ nonisolated enum DeclencheurPaywall: Sendable, Equatable, Hashable {
     case finPremiereSession
     case autreSpot
     case fonction(FonctionPro)
+    /// Le widget aquarium (L15) : « Passer Pro » touché sur l'écran d'accueil.
+    case widget
 
     /// La valeur envoyée : un mot fixe, jamais de texte libre.
     var valeurMesure: String {
@@ -14,6 +16,7 @@ nonisolated enum DeclencheurPaywall: Sendable, Equatable, Hashable {
         case .finPremiereSession: return "fin_premiere_session"
         case .autreSpot: return "autre_spot"
         case .fonction(let fonction): return "fonction_\(fonction.rawValue)"
+        case .widget: return "widget"
         }
     }
 }
