@@ -18,7 +18,7 @@ claude                     # puis tape /lot
 | Après chaque fichier Swift | mise en forme automatique (sur Mac) | `.claude/hooks/formate.sh` |
 | Quand l'agent veut s'arrêter | `scripts/verif.sh --rapide` ; rouge = il continue à corriger (3 fois au plus), sauf s'il te pose une question ou commence par « ROUGE : » | `.claude/hooks/preuve.py` |
 | À chaque commit, même sans Claude | refus hors du lot, sur `main`, de `.env`, des données fabriquées, de « Poké » (marque de Nintendo) | `.githooks/pre-commit` |
-| Envoi vers `main` | seulement par `scripts/fusionner.sh`, qui relance toute la vérification | `.githooks/pre-push` |
+| Envoi vers `main` | seulement par `scripts/fusionner.sh`, qui relance toute la vérification ; les lots de la mise à jour attendent l'étiquette `v1.0-soumise` | `.githooks/pre-push` |
 | Sur GitHub | la vérification Linux tourne à chaque envoi | `.github/workflows/verif.yml` |
 
 Toutes les règles viennent de `docs/lots.md` (colonnes « Branche » et « Dossier ») : si un garde-fou se trompe, on corrige le tableau, pas le script.
@@ -38,6 +38,10 @@ Toutes les règles viennent de `docs/lots.md` (colonnes « Branche » et « Doss
 | `relecteur-regles` | Sonnet | verdicts de pêche, rareté, sources, chiffres OFB |
 | `testeur-ecran` | Sonnet | l'app à l'écran, étape par étape (Mac) |
 | `revue-finale` | Opus | tout `main` avant l'envoi à Apple |
+| `verificateur-wording` | Sonnet | textes affichés contre `docs/banc/mots-interdits.md` (lancé par `/fusion` quand un texte change) |
+| `revue-ux-2taps` | Sonnet | touchers de chaque parcours, lus dans le code (lancé par `/fusion` pour `App/`) |
+| `coupeur` | Sonnet | où ajouter de la force quand un lot est en retard (à la main) |
+| `testeur-identification` | Sonnet | examen du modèle de R1 sur le jeu de test (à la main) |
 Ils ne corrigent rien eux-mêmes : ils rendent au plus 10 points `fichier:ligne`, bloquants d'abord.
 
 ## Sans Claude Code

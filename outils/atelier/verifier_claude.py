@@ -29,7 +29,8 @@ RACINE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SCRIPTS_DU_CONTRAT = {"verif.sh", "fusionner.sh", "lot.sh", "envoi.sh"}
 
 AGENTS_ATTENDUS = {"relecteur-apple", "relecteur-code", "relecteur-regles", "testeur-ecran", "revue-finale",
-                   "banc-utilisateur", "banc-avocat", "codeur", "petites-mains"}
+                   "banc-utilisateur", "banc-avocat", "codeur", "petites-mains",
+                   "testeur-identification", "revue-ux-2taps", "coupeur", "verificateur-wording"}
 COMMANDES_ATTENDUES = {"lot", "fusion", "ecran", "envoi", "point", "banc"}
 
 MODELES = {"sonnet", "opus", "haiku"}
@@ -52,7 +53,7 @@ OUTILS_INTERDITS_EN_LECTURE = {"Write", "Edit", "MultiEdit", "NotebookEdit"}
 TIRET_CADRATIN = "—"
 NOM_VALIDE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 SCRIPT_CITE = re.compile(r"scripts/([A-Za-z0-9_.\-]+\.sh)")
-AGENT_CITE = re.compile(r"\b(relecteur-[a-z]+|testeur-ecran|revue-finale|banc-[a-z]+)\b")
+AGENT_CITE = re.compile(r"\b(relecteur-[a-z]+|testeur-ecran|testeur-identification|revue-finale|revue-ux-2taps|verificateur-wording|banc-[a-z]+)\b")
 MARQUE_NINTENDO = re.compile(r"\bpok[eé]", re.IGNORECASE)
 
 

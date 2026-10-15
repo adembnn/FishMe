@@ -18,6 +18,15 @@ if [ -n "${1:-}" ] && [ "$1" != "$branche" ]; then
 fi
 [ -n "$code" ] || echec "Tu es sur « ${branche:-une tête détachée} », qui n'est la branche d'aucun lot. À faire : scripts/lot.sh <code>, puis lance fusionner.sh depuis le dossier qu'il affiche."
 
+# 0. Les lots de la mise à jour attendent l'envoi de la première version (étiquette posée par A à l'envoi)
+etiquette="v1.0-soumise"
+if python3 "$outil" mise-a-jour "$code"; then
+  git fetch --quiet origin "refs/tags/$etiquette:refs/tags/$etiquette" 2>/dev/null
+  git rev-parse -q --verify "refs/tags/$etiquette" >/dev/null \
+    || echec "Le lot $code est dans la mise à jour (tableau « Dans la mise à jour » de docs/lots.md) : il ne rejoint main qu'après l'envoi de la première version à Apple, marqué par l'étiquette git $etiquette, qui manque encore. À faire : continue sur ta branche ; A pose l'étiquette à l'envoi (git tag $etiquette && git push origin $etiquette), puis relance."
+  echo "✓ Mise à jour : l'étiquette $etiquette est là, le lot $code peut rejoindre main."
+fi
+
 # 1. Arbre propre
 sale=$(git status --porcelain)
 if [ -n "$sale" ]; then

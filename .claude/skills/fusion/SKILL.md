@@ -26,7 +26,10 @@ Lance `scripts/verif.sh` (sans option : la vérification complète). Montre ses 
 ## 3. Choisir les relecteurs
 Lance `git fetch origin main`. Sans réseau, continue avec la copie locale de `origin/main` et dis-le. Puis `git diff --name-only origin/main...HEAD`.
 - Toujours : `relecteur-apple` et `relecteur-code`.
-- En plus `relecteur-regles`, seulement si le lot touche `Packages/Core/`, des données (`Resources/`, `outils/hubeau/`, `outils/verifier_donnees.py`, un fichier `.json`) ou un verdict (cherche `verdict`, `garder`, `rarete`, `rareté` ou `OFB` dans `git diff origin/main...HEAD`). Dis lesquels tu lances et pourquoi.
+- En plus `relecteur-regles`, seulement si le lot touche `Packages/Core/`, des données (`Resources/`, `outils/hubeau/`, `outils/verifier_donnees.py`, un fichier `.json`) ou un verdict (cherche `verdict`, `garder`, `rarete`, `rareté` ou `OFB` dans `git diff origin/main...HEAD`). En plus `verificateur-wording`, si le lot change un texte affiché (un fichier de `App/` ou de `store/`, ou des données affichées de `Resources/` ou `Conseils/`).
+- En plus `revue-ux-2taps`, si le lot change un fichier de `App/`.
+- `coupeur` et `testeur-identification` ne se lancent jamais ici : à la main seulement.
+- Dis lesquels tu lances et pourquoi.
 
 ## 4. Lancer les relecteurs en parallèle
 Dans un seul message, fais un appel par relecteur à l'outil Agent (il s'appelait Task dans les anciennes versions) : `subagent_type` est le nom du relecteur, `model` est `sonnet` (c'est aussi le modèle écrit dans le fichier de l'agent). Prompt de chacun :
