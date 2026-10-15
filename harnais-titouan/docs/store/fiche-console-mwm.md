@@ -53,6 +53,8 @@ Les premières cartes sont offertes. Un abonnement facultatif débloque la suite
 Données de rareté : OFB, Hub'Eau, Licence Ouverte 2.0.
 ```
 
+Ce que le Pro contient réellement (décision `Q24`) : bestiaire de tous les départements, finitions de cartes, bilan de saison et export, sauvegarde iCloud, mode Préparer. **Ne citer dans la description que ce qui est livré dans le build** (règle 2.3 : pas de promesse non tenue). Le paragraphe actuel reste volontairement générique.
+
 À relire avant envoi : la phrase « Les premières cartes sont offertes » remplace « 15 cartes » tant que la grille n'est pas tranchée [I]. Les conditions et la confidentialité doivent aussi être liées dans l'app (paywall et réglages).
 
 ## 4. Adresse d'assistance (obligatoire)
