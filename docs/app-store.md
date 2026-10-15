@@ -1,40 +1,50 @@
 # Soumission App Store : check-list
 
-Version du 12 oct., 17h. Tiré de `reports/app-store.md` (règles et sources) et `reports/eval-apple.md` (relecture simulée, refus R1 à R9).
+Version du 15 oct., refaite pour le kit MWM reçu le 15 oct. et le plan du 15 oct. (3 volets, session dans la version soumise). Remplace celle du 12 oct. (git la garde). Tiré de `reports/app-store.md` (règles et sources) et `reports/eval-apple.md` (relecture simulée, refus R1 à R9).
 Délai d'Apple : au moins 50 % des relectures en moins de 24 h, 90 % en moins de 48 h ([Apple](https://developer.apple.com/help/app-review/after-submitting-for-review/request-expedited-review)). Un refus coûte une file entière : on vise un seul tour.
+
+## Ce que le kit MWM change (15 oct.)
+- Le projet est celui de MWM : `BuildChallenge.xcodeproj`, déjà signé par l'équipe MWM, identifiant `ai.mwm.build.challenge.team.01`. Les six abonnements y sont liés : on ne le change jamais. Importé et réglé par L0 : iPhone seul, portrait, iOS 27.0 minimum.
+- Le README du kit contient le mot de passe du compte MWM : il ne va ni dans git, ni dans le chat, ni dans une fiche.
+- Les abonnements existent déjà (groupe « Premium Plan ») : 3 mensuels (4,99 / 6,99 / 9,99 $) avec 1 semaine d'essai, 3 annuels (34,99 / 49,99 / 69,99 $) sans essai. Il n'y a plus de produit à créer ni d'essai « 1 mois » à demander (ligne 10). Les prix en euros se lisent dans la colonne France d'App Store Connect avant d'écrire le paywall.
+- Le SDK Spark Flash de MWM (0.5.8) ne fait pas de suivi publicitaire et déclare 7 types de données non liés à l'identité : achats, interactions, performances, plantages, autres diagnostics, identifiant utilisateur, identifiant d'appareil (manifeste du SDK, à confirmer par MWM). L'exemple du kit l'initialise au lancement et envoie un événement sur un bouton : L0 retire le bouton, L6 met l'initialisation derrière le consentement (refus R9).
+- Le serveur MCP de MWM (entrée `console-mwm-ai` de `.mcp.json`) publie la politique de confidentialité et les conditions, génère captures et textes, et sait soumettre. Chaque publication attend la confirmation d'Adem ; la soumission à Apple reste un clic humain. Il est injoignable depuis le cloud (proxy) : on l'appelle depuis un Mac. Ce qu'il génère est un brouillon, relu contre le build TestFlight (R7).
 
 ## Check-list
 | # | Point | Qui | Quand |
 |---|---|---|---|
-| 0 | Accès : contrat « Paid Apps Agreement » actif, 3 invitations avec l'accès « Certificates, Identifiers & Profiles », identifiant de l'app créé, capacités WeatherKit et achats intégrés, fiche créée avec un nom provisoire, statut de vendeur européen (DSA) | MWM (message dans `message-mwm.md`) | avant jeudi 9 h |
-| 1 | Xcode 27.0, cible iPhone seulement | A | mercredi |
-| 2 | Textes de fiche : nom (30 car.), sous-titre, mots-clés, description qui nomme les 5 départements, liens conditions et confidentialité dans la description | C | avant jeudi, dès que le nom existe |
-| 3 | Pages web : confidentialité (MWM nommé pour le SDK) et assistance avec un vrai contact | C, validé par MWM | avant jeudi |
-| 4 | Captures 6,9 pouces (1320 x 2868), et 6,3 pouces (1206 x 2622) si App Store Connect les exige (lecture ambiguë de la page Apple le 13 oct. [?]), prises sur le build TestFlight par `fastlane captures`, sans fonction absente | B | jeudi 15 h 30 |
-| 5 | Questionnaire d'âge : contenu d'utilisateurs non (E8 hors build), rien qui vise les enfants | C (rôle App Manager, sur le web) | jeudi 15 h 30 |
-| 6 | Étiquettes « App Privacy » avec la liste de collecte de Spark Flash | C + MWM | jeudi 15 h 30 |
-| 7 | Manifeste `PrivacyInfo.xcprivacy` (app et SDK) | A | jeudi, à T5 |
-| 8 | Textes d'autorisation : caméra, position pendant l'usage ; import par le sélecteur système, sans accès à la photothèque | A | L0 |
-| 9 | `ITSAppUsesNonExemptEncryption` = NON (à confirmer pour le SDK) | A | L0 |
-| 10 | Abonnement : groupe, produit, prix (à fixer par Adem), essai « 1 mois » (Apple ne propose pas « 30 jours »), joint à la version | MWM ou A | avant jeudi 9 h |
-| 11 | Notes pour le relecteur, en anglais : départements couverts, coordonnées d'un quai, chemin vers la photo d'exemple, chemin d'achat, vidéo de 60 s, avertissement légal | C | jeudi 14 h |
-| 12 | Disponibilité France, droits sur le contenu tiers, sortie manuelle | MWM | jeudi |
-| 13 | TestFlight : envoi du squelette à 10 h 30 (T4), du build final à 16 h | A | jeudi |
-| 14 | Envoi à la relecture, puis demande de relecture accélérée par MWM ([formulaire](https://developer.apple.com/contact/app-store/?topic=expedite)) avec l'événement dans les notes | MWM | jeudi 16 h à 17 h 30 |
-| 15 | Lecture de l'e-mail d'Apple dès 7 h et publication à la main | Adem | vendredi |
+| 0 | Accès MWM : le kit donne déjà le projet signé, l'identifiant et les 6 abonnements. À confirmer par écrit auprès de MWM : contrat « Paid Apps Agreement » actif, 3 invitations avec l'accès « Certificates, Identifiers & Profiles », fiche créée avec un nom provisoire, statut de vendeur européen (DSA). Les points 2 et 3 de `message-mwm.md` (WeatherKit, essai « 1 mois ») sont dépassés | A | avant L0 |
+| 1 | Xcode 27.0, cible iPhone seulement, portrait | A | avant L0 |
+| 2 | Textes de fiche : nom (30 car.), sous-titre, mots-clés, description qui ne nomme que les départements dont les règles sont dans le build (R7), liens conditions et confidentialité dans la description | C | dès que le nom existe, prêts à la porte 2 |
+| 3 | Pages web, textes : confidentialité (MWM nommé pour le SDK), conditions d'utilisation, assistance avec un vrai contact ; validées par MWM | C | porte 2 (L0 + 7 h) |
+| 4 | Captures 6,9 pouces (1320 x 2868), et 6,3 pouces (1206 x 2622) si App Store Connect les exige (lecture ambiguë de la page Apple le 13 oct. [?]), prises sur le build TestFlight par `fastlane captures`, sans fonction absente | B | L0 + 7 à 8 h |
+| 5 | Questionnaire d'âge : contenu d'utilisateurs non (amis, E8, hors build), rien qui vise les enfants (rôle App Manager, sur le web) | C | porte 2 |
+| 6 | Étiquettes « App Privacy » avec la liste de collecte de Spark Flash (les 7 types ci-dessus), faites avec MWM | C | porte 2 |
+| 7 | Manifeste `PrivacyInfo.xcprivacy` de l'app, d'accord avec celui du SDK | A | L0 (T5), complété à L6 |
+| 8 | Textes d'autorisation en français : caméra, position pendant l'usage. Pas d'import de photos : une carte ne naît que d'une photo prise dans l'app (`vision.md` §3), le relecteur d'Apple passe par la photo d'exemple, et le sélecteur de photos n'existe que sous `#if DEBUG`. Donc pas de clé de photothèque ; seulement, si le partage de L9 l'exige, la clé d'ajout [?] | A | L0 |
+| 9 | `ITSAppUsesNonExemptEncryption` = NON (à confirmer pour le SDK avec MWM) | A | L0 |
+| 10 | Abonnement : les 6 produits du kit sont joints à la version ; prix en euros (colonne France) écrits dans `CLAUDE.md` ; tarif fondateur porté par l'app (annuel à 34,99 jusqu'au 31 décembre 2026, puis le produit à 49,99) ; mensuel avec 1 semaine d'essai | A | avant L6 |
+| 11 | Notes pour le relecteur, en anglais : départements couverts, coordonnées d'un quai, chemin vers la photo d'exemple, démarrage d'une session, chemin d'achat test, vidéo de 60 s, avertissement légal | C | porte 2 |
+| 12 | Disponibilité France, droits sur le contenu tiers, sortie manuelle, avec MWM | A | avant l'envoi |
+| 13 | TestFlight : envoi du squelette (T4), puis du build final | A | T4 à L0 ; build final L0 + 7 à 8 h |
+| 14 | Envoi à la relecture : le clic reste humain, même si le serveur MCP de MWM sait soumettre. MWM demande ensuite la relecture accélérée ([formulaire](https://developer.apple.com/contact/app-store/?topic=expedite)) avec l'événement dans les notes | A | L0 + 7 à 8 h |
+| 15 | Lecture de l'e-mail d'Apple et publication à la main | A | vendredi dès 7 h |
+| 16 | Projet de MWM : identifiant `ai.mwm.build.challenge.team.01` jamais changé, signature par l'équipe MWM, iPhone seul en portrait | A | L0 |
+| 17 | SDK Spark Flash : ni initialisation ni événement avant le consentement ; refus = SDK éteint ; l'exemple du kit retiré | A | L0 (exemple), L6 (consentement) |
+| 18 | Publication des pages de la ligne 3 par le serveur MCP de MWM, après confirmation d'Adem, depuis un Mac | A | avant l'envoi (L0 + 7 à 8 h) |
 
 ## Les refus probables et où on les corrige
 | Refus (`reports/eval-apple.md`) | Règle | Correction | Lot |
 |---|---|---|---|
-| R1 le relecteur n'a pas de poisson, ne voit jamais la carte ni le paywall | [2.1](https://developer.apple.com/app-store/review/guidelines/#app-completeness) | bouton « essayer avec une photo d'exemple » (photo à nous) | L3 |
+| R1 le relecteur n'a pas de poisson, ne voit jamais la carte ni le paywall | [2.1](https://developer.apple.com/app-store/review/guidelines/#app-completeness) | bouton « essayer avec une photo d'exemple » (photo à nous) | L3, L4 |
 | R2 la liste fermée donne trois poissons pour une tasse | 2.1, 2.3.1 | choix « pas un poisson », message si le détourage ne trouve rien | L3, L4 |
-| R3 plantage en démarrant une session hors de la fenêtre légale | 2.1 | dans la version suivante (E4), plage de dates sûre | L5 |
-| R4 achat introuvable ou paywall incomplet | 3.1.1, 3.1.2 | produit joint, durée, prix et essai venus de StoreKit, liens, « Restaurer » | L6 |
-| R5 partage entre amis non vérifiable seul | 1.2, 5.1.1(v) | E8 hors du build soumis, code retiré (pas de fonction dormante) | L8 |
-| R6 météo sans mention Apple Weather | 5.2.5 | pas de météo dans le build soumis ; logo et lien partout ensuite | L7 |
-| R7 la fiche promet plus que le build | 2.3.1, 2.3.3 | fiche écrite depuis le build ; ni « toute la France », ni amis, ni Siri | S1 |
+| R3 plantage en démarrant une session hors de la fenêtre légale | 2.1 | la session (E4) est dans le build soumis : `finLegale` rend toujours une valeur prévue, état « pêche fermée » sans plantage ; même garantie pour l'écran verrouillé | L1, L5, L10 |
+| R4 achat introuvable ou paywall incomplet | 3.1.1, 3.1.2 | produits du kit joints ; nom, durée, prix et essai (1 semaine sur le mensuel, aucun sur l'annuel) venus de StoreKit, y compris le prix de lancement et le prix suivant ; liens ; « Restaurer » | L6 |
+| R5 partage entre amis non vérifiable seul | 1.2, 5.1.1(v) | amis (E8) hors du build soumis, code retiré (pas de fonction dormante) ; Mon club n'affiche rien venu d'un autre utilisateur | L8, L9 |
+| R6 météo sans mention Apple Weather | 5.2.5 | sans objet : le plan du 15 oct. n'a pas de météo (L7 est « Où chercher : coins publics »). Si elle revient, logo et lien partout | aucun |
+| R7 la fiche promet plus que le build | 2.3.1, 2.3.3 | fiche écrite depuis le build ; ne nomme que les départements dont les règles sont chargées (« toute la France » seulement si D3 est dans le build), ni amis, ni Siri | S1 |
 | R8 rien à voir pour la position du relecteur | 2.1, 5.1.1(iv) | carte ouverte sur l'Île-de-France, choix du département, bandeau des départements couverts | L2 |
-| R9 SDK qui collecte sans consentement | 5.1.1(ii) | écran de consentement avant le SDK ; refus = SDK éteint | L6 |
+| R9 SDK qui collecte sans consentement | 5.1.1(ii) | bouton d'exemple du kit retiré (L0) ; écran de consentement avant le SDK, refus = SDK éteint (L6) | L0, L6 |
 
 ## Marques
 « Pokémon » et « Pokédex » sont des marques de Nintendo : jamais dans la fiche, les captures, les notes ni l'app. « Pescedex », nom de la collection : risque faible (`reports/app-store.md` §2.4). Pas de cadre jaune ni d'effet holographique sur les cartes.
