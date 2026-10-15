@@ -218,7 +218,7 @@ Par défaut : a, sans changement. Le c et le f sont les plus originaux et coûte
 | 2 | Feuille d'un coin | espèces relevées avec « N pêches, dernier relevé AAAA », la règle du jour avec sa source, « Y aller » (ouvre Plans) |
 | 3 | Feuille de prise, en 3 temps | photo (ou photo d'exemple), puis 3 propositions en images ou la grille de toutes les espèces par famille, avec les sosies côte à côte avant de confirmer, puis la taille sur la toise, le poids (« ≈ 1,4 kg estimé ») et la liste de contrôle |
 | 4 | Révélation de la carte | la carte se retourne, puis rejoint le Pescedex |
-| 5 | Volet gauche : le Pescedex | les 14 espèces (silhouettes pour celles pas encore prises), « 4 sur les 11 relevées dans le 94 », une carte s'ouvre au toucher (recto et verso) |
+| 5 | Volet gauche : le Pescedex | toutes les espèces de la liste, en images (silhouettes pour celles pas encore prises), « 4 sur les 11 relevées dans le 94 », une carte s'ouvre au toucher (recto et verso) |
 | 6 | Volet droit : Mon club | ma fédération et mon association (liens), « j'ai ma carte de pêche 2026 », Sources, confidentialité et contact |
 | 7 | Paywall | à la fin de la 1re session, après la carte (il se ferme), et au choix d'un 2e spot (il bloque) ; mensuel avec 1 semaine d'essai, annuels sans essai ; « Restaurer », conditions et confidentialité |
 Pas d'écran d'accueil : la position est demandée au premier lancement et la carte s'y adapte (Adem, 15 oct. 12h51), et la phrase légale vit sous chaque verdict. La page Sources (crédits OFB, OpenStreetMap, IGN, photos d'entraînement) s'ouvre depuis le volet droit.
