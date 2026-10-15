@@ -10,6 +10,7 @@
 		DBC0AD0E307678BC00FA6B3C /* Spark in Frameworks */ = {isa = PBXBuildFile; productRef = DBC0AD0D307678BC00FA6B3C /* Spark */; };
 		FE0C0C0130A0000000000003 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = FE0C0C0130A0000000000002 /* Core */; };
 		FE0C0C0130A0000000000005 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = FE0C0C0130A0000000000004 /* Core */; };
+		FE0C0C0130A0000000000006 /* TestConfig.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 146BEF5E7F88B2C4934CB00E /* TestConfig.storekit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +225,7 @@
 		DBE31DCE30753927004DC02F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				FE0C0C0130A0000000000006 /* TestConfig.storekit in Resources */,
 			);
 		};
 		DBE31DD830753927004DC02F /* Resources */ = {
