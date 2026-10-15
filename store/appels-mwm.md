@@ -17,6 +17,7 @@ Prêt pour le jour où le connecteur MWM est autorisé sur claude.ai (le 15 oct.
 8. `publish_legal_document` : **écrit, oui d'Adem**. Les deux URL vont dans la description et dans App Store Connect.
 
 ## 4. Icône (facturé, 2 appels au plus)
+Mise à jour du 15 oct. 18h54 : Adem a choisi le logo F1 (poisson qui saute devant la lune, en contre-jour, en bleu) dans le fil « Logo de FishMe ». L'icône vient du fichier final de ce fil ; `generate_app_icons` n'est appelé que si ce fichier manque.
 9. `generate_app_icons`, 4 propositions en `low`, à partir de la piste choisie par Adem sur la page des logos (à plat, sans 3D, rien qui vise les enfants, aucun poisson-mascotte).
 10. Adem choisit ; `iterate_app_icon` en `high` sur celle-ci. Fichier 1024 px sans transparence remis à A pour `App/Assets.xcassets/`.
 
