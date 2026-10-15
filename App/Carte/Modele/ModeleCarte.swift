@@ -18,7 +18,7 @@ final class ModeleCarte {
     // Carte
     var camera: MapCameraPosition = .region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 46.6, longitude: 2.5),
                                                                 span: MKCoordinateSpan(latitudeDelta: 11, longitudeDelta: 13)))
-    var regionVisible: RegionCarte = .france
+    var regionVisible: ZoneCarte = .france
     var elements: [ElementCarte] = []
     var animees: [StationAnimee] = []
     var enMouvement = false
@@ -79,11 +79,11 @@ final class ModeleCarte {
                 depart = .horsDeFrance
                 message = "Pas de relevé OFB près de toi : voici Paris et l'Île-de-France."
                 centrer(.parisIleDeFrance)
-                proposerSpot(pres: RegionCarte.parisIleDeFrance.centre)
+                proposerSpot(pres: ZoneCarte.parisIleDeFrance.centre)
             } else {
                 depart = .surLePecheur(position)
                 message = nil
-                centrer(RegionCarte(centre: position, spanLatitude: 0.15, spanLongitude: 0.15))
+                centrer(ZoneCarte(centre: position, spanLatitude: 0.15, spanLongitude: 0.15))
                 proposerSpot(pres: position)
             }
         } else if refusee {
@@ -99,17 +99,17 @@ final class ModeleCarte {
             depart = .horsDeFrance
             message = "Pas de relevé OFB près de toi : voici Paris et l'Île-de-France."
             centrer(.parisIleDeFrance)
-            proposerSpot(pres: RegionCarte.parisIleDeFrance.centre)
+            proposerSpot(pres: ZoneCarte.parisIleDeFrance.centre)
         } else {
             depart = .zoneChoisie(c)
             message = nil
-            centrer(RegionCarte(centre: c, spanLatitude: 0.3, spanLongitude: 0.3))
+            centrer(ZoneCarte(centre: c, spanLatitude: 0.3, spanLongitude: 0.3))
             proposerSpot(pres: c)
         }
         afficherChoixDeZone = false
     }
 
-    private func centrer(_ region: RegionCarte) {
+    private func centrer(_ region: ZoneCarte) {
         regionVisible = region
         camera = .region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: region.centre.latitude, longitude: region.centre.longitude),
                                             span: MKCoordinateSpan(latitudeDelta: region.spanLatitude, longitudeDelta: region.spanLongitude)))
@@ -145,13 +145,13 @@ final class ModeleCarte {
 
     // MARK: Stations, regroupement, poissons
 
-    func chargerApresMouvement(_ region: RegionCarte) {
+    func chargerApresMouvement(_ region: ZoneCarte) {
         regionVisible = region
         enMouvement = false
         charger(pour: region)
     }
 
-    private func charger(pour region: RegionCarte) {
+    private func charger(pour region: ZoneCarte) {
         tacheStations?.cancel()
         let fournisseur = services.stations
         tacheStations = Task {
@@ -162,7 +162,7 @@ final class ModeleCarte {
         }
     }
 
-    private func recalculer(_ region: RegionCarte) {
+    private func recalculer(_ region: ZoneCarte) {
         let points: [PointCarte]
         if filtre != nil {
             points = coinsFiltres.map { PointCarte(id: $0.codeStation, coordonnee: $0.coordonnee) }
@@ -223,7 +223,7 @@ final class ModeleCarte {
             } else {
                 message = nil
                 if !coins.contains(where: { regionVisible.contient($0.coordonnee) }), let premier = coins.first {
-                    centrer(RegionCarte(centre: premier.coordonnee, spanLatitude: 0.6, spanLongitude: 0.6))
+                    centrer(ZoneCarte(centre: premier.coordonnee, spanLatitude: 0.6, spanLongitude: 0.6))
                 }
             }
             recalculer(regionVisible)
@@ -234,7 +234,7 @@ final class ModeleCarte {
     var pointDeReference: Coordonnee {
         switch depart {
         case .surLePecheur(let c), .zoneChoisie(let c): return c
-        case .horsDeFrance: return RegionCarte.parisIleDeFrance.centre
+        case .horsDeFrance: return ZoneCarte.parisIleDeFrance.centre
         default: return regionVisible.centre
         }
     }

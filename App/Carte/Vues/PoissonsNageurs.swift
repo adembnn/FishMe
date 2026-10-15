@@ -10,7 +10,7 @@ struct PoissonsNageurs: View {
     let proxy: MapProxy
     let enMouvement: Bool
     /// Fait relire les positions quand la carte s'arrête.
-    let region: RegionCarte
+    let region: ZoneCarte
 
     @Environment(\.accessibilityReduceMotion) private var reduireLesAnimations
 

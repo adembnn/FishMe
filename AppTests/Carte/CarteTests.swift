@@ -15,7 +15,7 @@ struct CarteTests {
     }
 
     @Test func moinsDeCentCinquantePointsSontTousAffiches() {
-        let region = RegionCarte(centre: Coordonnee(latitude: 46, longitude: 2), spanLatitude: 20, spanLongitude: 20)
+        let region = ZoneCarte(centre: Coordonnee(latitude: 46, longitude: 2), spanLatitude: 20, spanLongitude: 20)
         let elements = Regroupeur.elements(points: points(100), region: region)
         #expect(elements.count == 100)
     }
@@ -36,7 +36,7 @@ struct CarteTests {
             case .groupe(_, _, let n): return somme + n
             }
         }
-        let visibles = tous.filter { RegionCarte.france.contient($0.coordonnee) }.count
+        let visibles = tous.filter { ZoneCarte.france.contient($0.coordonnee) }.count
         #expect(total == visibles)
     }
 
@@ -89,6 +89,17 @@ struct CarteTests {
         await modele.demarrer()
         #expect(modele.pechables.count == 6)
         #expect(modele.peutChangerDeSpot)
+    }
+
+    @Test func lesStationsViennentDeStationsDansEtGardentLesCoordonneesDeCore() async {
+        let stations = await StationsViaCore(especes: EspecesFaux()).stations(dans: .france)
+        #expect(stations.map(\.code) == ["STATION-ESSAI", "STATION-ESSAI-2"])
+        #expect(stations[0].coordonnee == Coordonnee(latitude: 48.8, longitude: 2.4))
+        #expect(stations[0].releves.map(\.nPeches) == [9, 14])
+        #expect(stations[1].releves.map(\.annee) == [2023])
+        let ailleurs = ZoneCarte(centre: Coordonnee(latitude: 43.3, longitude: 5.4), spanLatitude: 0.2, spanLongitude: 0.2)
+        let vide = await StationsViaCore(especes: EspecesFaux()).stations(dans: ailleurs)
+        #expect(vide.isEmpty)
     }
 
     private var dateDeTest: Date { Date(timeIntervalSince1970: 1_792_065_600) }

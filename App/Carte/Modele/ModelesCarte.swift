@@ -3,8 +3,8 @@ import Core
 
 // Types de données purs de la carte : tous `nonisolated` et Sendable, pour être calculés hors du fil principal.
 
-/// Une zone visible de la carte (centre et étendue en degrés).
-nonisolated struct RegionCarte: Sendable, Equatable {
+/// Une zone visible (nommée ZoneCarte pour ne pas masquer `RegionCarte` de Core) de la carte (centre et étendue en degrés).
+nonisolated struct ZoneCarte: Sendable, Equatable {
     var centre: Coordonnee
     var spanLatitude: Double
     var spanLongitude: Double
@@ -16,8 +16,8 @@ nonisolated struct RegionCarte: Sendable, Equatable {
     }
 
     /// Paris et l'Île-de-France : la carte d'un relecteur hors de France (jamais une carte vide).
-    static let parisIleDeFrance = RegionCarte(centre: Coordonnee(latitude: 48.86, longitude: 2.35), spanLatitude: 1.2, spanLongitude: 1.6)
-    static let france = RegionCarte(centre: Coordonnee(latitude: 46.6, longitude: 2.5), spanLatitude: 11, spanLongitude: 13)
+    static let parisIleDeFrance = ZoneCarte(centre: Coordonnee(latitude: 48.86, longitude: 2.35), spanLatitude: 1.2, spanLongitude: 1.6)
+    static let france = ZoneCarte(centre: Coordonnee(latitude: 46.6, longitude: 2.5), spanLatitude: 11, spanLongitude: 13)
 }
 
 /// Une espèce relevée à une station OFB, avec N et l'année : rien d'autre n'est affiché comme chiffre.
@@ -25,7 +25,6 @@ nonisolated struct ReleveEspece: Sendable, Equatable, Hashable {
     var espece: Espece
     var nPeches: Int
     var annee: Int
-    var ouverture: OuvertureDuJour
 }
 
 /// Une station OFB de la carte, avec les espèces qui y sont relevées.
@@ -72,7 +71,7 @@ nonisolated enum Regroupeur {
     /// 12 x 12 = 144 cases au plus : jamais plus de 150 éléments.
     static let cotesGrille = 12
 
-    static func elements(points: [PointCarte], region: RegionCarte, maximum: Int = Regroupeur.maximum) -> [ElementCarte] {
+    static func elements(points: [PointCarte], region: ZoneCarte, maximum: Int = Regroupeur.maximum) -> [ElementCarte] {
         let visibles = points.filter { region.contient($0.coordonnee) }
         if visibles.count <= maximum { return visibles.map { .point($0) } }
 
@@ -98,8 +97,8 @@ nonisolated enum Regroupeur {
     }
 
     /// La région où zoomer quand on touche un regroupement : un tiers de l'étendue, centrée dessus.
-    static func zoom(sur c: Coordonnee, depuis region: RegionCarte) -> RegionCarte {
-        RegionCarte(centre: c, spanLatitude: max(region.spanLatitude / 3, 0.02), spanLongitude: max(region.spanLongitude / 3, 0.02))
+    static func zoom(sur c: Coordonnee, depuis region: ZoneCarte) -> ZoneCarte {
+        ZoneCarte(centre: c, spanLatitude: max(region.spanLatitude / 3, 0.02), spanLongitude: max(region.spanLongitude / 3, 0.02))
     }
 }
 
@@ -139,12 +138,12 @@ nonisolated struct CoinSelectionne: Identifiable, Equatable, Sendable {
 
 // Calculs lourds : hors du fil principal (`@concurrent`), jamais dans une vue.
 
-@concurrent nonisolated func calculerElements(points: [PointCarte], region: RegionCarte) async -> [ElementCarte] {
+@concurrent nonisolated func calculerElements(points: [PointCarte], region: ZoneCarte) async -> [ElementCarte] {
     Regroupeur.elements(points: points, region: region)
 }
 
 /// Les stations où `Core` donne une espèce rare ou légendaire (20 au plus), les plus proches du centre d'abord.
-@concurrent nonisolated func calculerAnimees(stations: [StationCarte], region: RegionCarte, especes: any ServiceEspeces,
+@concurrent nonisolated func calculerAnimees(stations: [StationCarte], region: ZoneCarte, especes: any ServiceEspeces,
                                              images: [String: String]) async -> [StationAnimee] {
     // Trop dézoomé : rien ne nage (les poissons seraient illisibles, la carte coûterait cher).
     guard region.spanLatitude <= 3 else { return [] }

@@ -71,7 +71,7 @@ struct VueCarte: View {
                 }
                 .onMapCameraChange(frequency: .onEnd) { contexte in
                     let r = contexte.region
-                    modele.chargerApresMouvement(RegionCarte(
+                    modele.chargerApresMouvement(ZoneCarte(
                         centre: Coordonnee(latitude: r.center.latitude, longitude: r.center.longitude),
                         spanLatitude: r.span.latitudeDelta, spanLongitude: r.span.longitudeDelta))
                 }

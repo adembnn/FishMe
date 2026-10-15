@@ -26,55 +26,35 @@ nonisolated struct ServicesCarte: Sendable {
 #endif
 }
 
-/// D'où viennent les stations de la carte. `Core` ne donne pas encore « les stations dans une zone » :
-/// l'adaptateur par défaut les rassemble depuis `coins(ou:pres:)` (voir `StationsViaCore`).
+/// D'où viennent les stations de la carte.
 nonisolated protocol FournisseurStations: Sendable {
     /// Les stations de la zone, hors du fil principal.
-    func stations(dans region: RegionCarte) async -> [StationCarte]
+    func stations(dans region: ZoneCarte) async -> [StationCarte]
 }
 
-/// Adaptateur sur les contrats de `Core` : toutes les espèces suivies par l'OFB, un appel de `coins(ou:pres:)` chacune,
-/// fusionnés par station. Gardé en mémoire après la première lecture. Hypothèse à vérifier : `coins` rend toutes les stations
-/// de l'espèce, pas seulement les plus proches (sinon il faut `stationsDans(region)` dans `Core`, à demander à B).
-nonisolated final class StationsViaCore: FournisseurStations, @unchecked Sendable {
+/// Adaptateur sur `stationsDans(_:)` de `Core` : une station par point, N pêches et année du dernier relevé tels que
+/// `Core` les donne. Les coordonnées arrivent déjà arrondies à 0,01° : rien n'est arrondi ni recalculé ici.
+nonisolated final class StationsViaCore: FournisseurStations, Sendable {
     private let especes: any ServiceEspeces
-    private let verrou = NSLock()
-    private var cache: [StationCarte]?
 
     init(especes: any ServiceEspeces) {
         self.especes = especes
     }
 
     @concurrent
-    func stations(dans region: RegionCarte) async -> [StationCarte] {
-        let toutes = chargerOuLire()
-        return toutes.filter { region.contient($0.coordonnee, marge: 0.5) }
-    }
-
-    private func chargerOuLire() -> [StationCarte] {
-        verrou.lock()
-        if let cache { verrou.unlock(); return cache }
-        verrou.unlock()
-
-        let centre = RegionCarte.france.centre
-        var parStation: [String: StationCarte] = [:]
-        for pechable in especes.especesPechables() where pechable.suiviOFB {
-            for coin in especes.coins(ou: pechable.espece, pres: centre) {
-                let releve = ReleveEspece(espece: pechable.espece, nPeches: coin.nPeches, annee: coin.annee, ouverture: coin.ouverture)
-                if var existante = parStation[coin.codeStation] {
-                    existante.releves.append(releve)
-                    parStation[coin.codeStation] = existante
-                } else {
-                    parStation[coin.codeStation] = StationCarte(code: coin.codeStation, eau: coin.eau, departement: coin.departement,
-                                                                coordonnee: coin.coordonnee, releves: [releve])
-                }
-            }
+    func stations(dans region: ZoneCarte) async -> [StationCarte] {
+        // Une demi-zone de marge de chaque côté : le glissement court ne recharge pas.
+        let demiLat = region.spanLatitude / 2 * 1.5
+        let demiLon = region.spanLongitude / 2 * 1.5
+        let zone = RegionCarte(
+            sudOuest: Coordonnee(latitude: region.centre.latitude - demiLat, longitude: region.centre.longitude - demiLon),
+            nordEst: Coordonnee(latitude: region.centre.latitude + demiLat, longitude: region.centre.longitude + demiLon))
+        return especes.stationsDans(zone).map { station in
+            StationCarte(code: station.codeStation, eau: station.eau, departement: station.departement,
+                         coordonnee: station.coordonnee,
+                         releves: station.especes.map { ReleveEspece(espece: $0.espece, nPeches: $0.nPeches, annee: $0.annee) })
         }
-        let resultat = parStation.values.sorted { $0.code < $1.code }
-        verrou.lock()
-        cache = resultat
-        verrou.unlock()
-        return resultat
+        .sorted { $0.code < $1.code }
     }
 }
 
