@@ -24,6 +24,9 @@ struct VueCarte: View {
     let emplacementConseil: (Espece) -> AnyView
     let onCommencerSession: (Spot) -> Void
     let onSpotChange: (Spot) -> Void
+    /// L7 « Où chercher » : la liste des coins proches d'une position, présentée à côté du filtre d'espèce.
+    let ouChercher: ((Coordonnee) -> AnyView)?
+    @State private var afficherOuChercher = false
 
     init(services: ServicesCarte,
          spotFixe: Spot? = nil,
@@ -33,7 +36,8 @@ struct VueCarte: View {
          emplacementMaintenant: @escaping (Coordonnee) -> AnyView = { _ in AnyView(EmptyView()) },
          emplacementConseil: @escaping (Espece) -> AnyView = { _ in AnyView(EmptyView()) },
          onCommencerSession: @escaping (Spot) -> Void = { _ in },
-         onSpotChange: @escaping (Spot) -> Void = { _ in }) {
+         onSpotChange: @escaping (Spot) -> Void = { _ in },
+         ouChercher: ((Coordonnee) -> AnyView)? = nil) {
         _modele = State(initialValue: ModeleCarte(services: services))
         self.spotFixe = spotFixe
         self.sessionsTerminees = sessionsTerminees
@@ -43,6 +47,7 @@ struct VueCarte: View {
         self.emplacementConseil = emplacementConseil
         self.onCommencerSession = onCommencerSession
         self.onSpotChange = onSpotChange
+        self.ouChercher = ouChercher
     }
 
     var body: some View {
@@ -98,6 +103,12 @@ struct VueCarte: View {
             FiltreEspeceView(pechables: modele.pechables, procheDIci: modele.especesProchesDIci(),
                              filtreActuel: modele.filtre, choisir: { modele.choisirFiltre($0) })
                 .presentationDetents([.large])
+        }
+        .sheet(isPresented: $afficherOuChercher) {
+            if let ouChercher {
+                ouChercher(modele.spotAffiche?.centre ?? modele.regionVisible.centre)
+                    .presentationDetents([.medium, .large])
+            }
         }
         .sheet(isPresented: $m.afficherChoixDeZone) {
             ChoixDeZoneView { modele.choisirZone($0) }
@@ -263,6 +274,17 @@ struct VueCarte: View {
                 .background(.regularMaterial, in: Capsule())
         }
         .buttonStyle(.plain)
+
+        if ouChercher != nil {
+            Button { afficherOuChercher = true } label: {
+                Label("Où chercher près d'ici", systemImage: "mappin.and.ellipse")
+                    .font(PolicesCarte.detail())
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 10)
+                    .background(.regularMaterial, in: Capsule())
+            }
+            .buttonStyle(.plain)
+        }
 
         if modele.peutChangerDeSpot, modele.spotAffiche != nil {
             Button { modele.modeChoixDuSpot.toggle() } label: {
