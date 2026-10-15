@@ -184,7 +184,7 @@ struct RessourcesTests {
         let fichiers: [(String, String, String?)] = [
             ("index", "json", "regles"), ("especes", "json", nil), ("longueur-poids", "json", nil), ("conseils", "json", nil),
             ("cas-verdicts", "json", nil), ("credits", "json", nil), ("liens-federations", "json", nil),
-            ("coins-maison", "json", nil), ("stations-especes", "json", nil), ("rarete-departements", "json", nil),
+            ("coins-maison", "json", nil),
             ("stations-hydro", "json", nil), ("departements", "geojson", nil), ("lacs", "geojson", nil), ("coins-osm", "geojson", nil),
         ]
         for (nom, ext, dossier) in fichiers {

@@ -22,9 +22,8 @@ let package = Package(
                 .process("Resources/liens-federations.json"),
                 .process("Resources/coins-maison.json"),
                 .process("Resources/coins-osm.geojson"),
-                .process("Resources/stations-especes.json"),
-                .process("Resources/rarete-departements.json"),
                 .process("Resources/stations-hydro.json"),
+                // stations-especes.json et rarete-departements.json sont fabriqués par scripts/donnees.sh et jamais commités (.gitignore) : absents du dépôt, donc pas déclarés ici.
                 .process("Conseils/conseils.json"),
             ]
         ),
