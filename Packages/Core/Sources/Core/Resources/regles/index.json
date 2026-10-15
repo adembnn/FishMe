@@ -170,6 +170,13 @@
    "sha256": "36d1c56069b1029cc99a886f8485347aa73427f5c1ce44f1db4e70b86197da4c",
    "expire_min": "2026-12-31"
   },
+  "52": {
+   "niveau": "partiel",
+   "confirmees": 117,
+   "a_verifier": 30,
+   "sha256": "711453527a54055db079c26950b64b9951f1cf364ee390971e21776cc00071b0",
+   "expire_min": null
+  },
   "53": {
    "niveau": "partiel",
    "confirmees": 212,
