@@ -69,6 +69,11 @@ class UnSeulOcr:
             self.f.close()
 
 
+# Tesseract en un seul fil : ses fils OpenMP tournent à vide quand la machine est chargée (mesuré dans le cloud
+# le 15 oct. : une page en 1,6 s au lieu de plus de 8 min).
+os.environ.setdefault("OMP_THREAD_LIMIT", "1")
+
+
 def ocr_tesseract(png):
     """OCR français de Tesseract (installé sur le PC d'Adem le 15 oct.). Mesuré plus propre que celui de Windows
     sur un scan dégradé : arrêté 2025-0988 du 93, 2 mots mêlant chiffres et lettres contre 6 ; sur l'AP de l'Eure
