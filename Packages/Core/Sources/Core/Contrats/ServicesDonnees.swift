@@ -36,11 +36,19 @@ public protocol ServiceEspeces: Sendable {
     func rarete(espece: Espece, departement: Departement) -> ResultatRarete
     func especesProches(_ coordonnee: Coordonnee) -> [EspeceProche]
     func coins(ou espece: Espece, pres coordonnee: Coordonnee) -> [Coin]
+    /// Toutes les stations OFB dans un rectangle, avec leurs espèces (ajout du 15 oct. pour L2). Coordonnées arrondies.
+    /// Vide si aucune station ou si les données manquent.
+    func stationsDans(_ region: RegionCarte) -> [StationOFB]
     func especesPechables() -> [EspecePechable]
     /// Transforme les scores du modèle en 3 propositions, puis toujours « autre espèce » et « pas un poisson ».
     func classer(scores: [String: Double], especesProches: [Espece]) -> [Proposition]
     /// `nil` sans coefficient ou hors de la plage de l'étude.
     func poidsEstime(espece: Espece, longueurCm: Double) -> PoidsEstime?
+}
+
+public extension ServiceEspeces {
+    /// Valeur par défaut : aucun faux existant ne casse.
+    func stationsDans(_ region: RegionCarte) -> [StationOFB] { [] }
 }
 
 /// Soleil et lune.
