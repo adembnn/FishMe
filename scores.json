@@ -1,0 +1,112 @@
+{
+ "classes": [
+  "autre-poisson",
+  "black-bass",
+  "brochet",
+  "carpe-commune",
+  "pas-un-poisson",
+  "perche",
+  "sandre",
+  "truite-commune"
+ ],
+ "especes": [
+  "brochet",
+  "sandre",
+  "perche",
+  "truite-commune",
+  "carpe-commune",
+  "black-bass"
+ ],
+ "T": 0.5,
+ "tau": 0.55,
+ "n_train": 19332,
+ "n_test": 5651,
+ "par_espece": {
+  "brochet": {
+   "n": 366,
+   "top1": 0.82,
+   "top3": 0.902
+  },
+  "sandre": {
+   "n": 114,
+   "top1": 0.904,
+   "top3": 0.974
+  },
+  "perche": {
+   "n": 224,
+   "top1": 0.75,
+   "top3": 0.875
+  },
+  "truite-commune": {
+   "n": 383,
+   "top1": 0.807,
+   "top3": 0.932
+  },
+  "carpe-commune": {
+   "n": 543,
+   "top1": 0.902,
+   "top3": 0.959
+  },
+  "black-bass": {
+   "n": 16,
+   "top1": 0.688,
+   "top3": 0.938
+  }
+ },
+ "top1_moy": 0.812,
+ "top3_moy": 0.93,
+ "micro": {
+  "n": 1646,
+  "top1": 0.839,
+  "top3": 0.93
+ },
+ "par_source": {
+  "affine": {
+   "n": 426,
+   "top1": 0.981,
+   "top3": 0.995
+  },
+  "gbif": {
+   "n": 1066,
+   "top1": 0.772,
+   "top3": 0.899
+  },
+  "peche": {
+   "n": 151,
+   "top1": 0.921,
+   "top3": 0.967
+  },
+  "public": {
+   "n": 3,
+   "top1": 0.333,
+   "top3": 0.667
+  }
+ },
+ "refus": {
+  "pas_un_poisson": {
+   "n": 368,
+   "refuses": 0.989
+  },
+  "autre_poisson_et_especes_sorties": {
+   "n": 3637,
+   "refuses": 0.909
+  },
+  "hors_liste_total": {
+   "n": 4005,
+   "refuses": 0.916
+  },
+  "vrais_poissons_refuses_a_tort": 0.171
+ },
+ "avec_seuil": {
+  "couverture": 0.829,
+  "justesse_top1_des_gardees": 0.945
+ },
+ "examen": {
+  "1_top3_moy>=0.90": true,
+  "2_top1_moy>=0.70": true,
+  "3_top3_chaque>=0.80": true,
+  "4_n_test>=10": true,
+  "5_hors_liste_refuses>=0.90": true
+ },
+ "examen_passe": true
+}
