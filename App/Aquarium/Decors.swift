@@ -136,7 +136,7 @@ final class StockageUserDefaults: StockageAquarium {
 }
 
 /// Stockage en mémoire pour les tests.
-final class StockageMemoire: StockageAquarium {
+final class StockageAquariumMemoire: StockageAquarium {
     var decorChoisi: Decor = .bassin
     var rationsDonnees = 0
 }

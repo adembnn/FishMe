@@ -158,9 +158,9 @@ struct AquariumTests {
 
     // MARK: Modèle
 
-    private func modele(sessions: Int, pro: Bool = false, stockage: StockageMemoire? = nil,
+    private func modele(sessions: Int, pro: Bool = false, stockage: StockageAquariumMemoire? = nil,
                         cartes: [Prise] = [Self.prise("brochet"), Self.prise("sandre"), Self.prise("perche")]) -> ModeleAquarium {
-        let m = ModeleAquarium(stockage: stockage ?? StockageMemoire(), maintenant: dateEssai)
+        let m = ModeleAquarium(stockage: stockage ?? StockageAquariumMemoire(), maintenant: dateEssai)
         m.mettreAJour(entrees: entrees(cartes), sessionsTerminees: sessions, proOuvert: pro)
         return m
     }
@@ -181,7 +181,7 @@ struct AquariumTests {
     }
 
     @Test func leDecorChoisiSeRetrouve() {
-        let stock = StockageMemoire()
+        let stock = StockageAquariumMemoire()
         let m = modele(sessions: 0, pro: true, stockage: stock)
         _ = m.choisir(.nocturne)
         #expect(stock.decorChoisi == .nocturne)
@@ -191,7 +191,7 @@ struct AquariumTests {
     }
 
     @Test func uneRationTombeSeulementSIlEnReste() {
-        let stock = StockageMemoire()
+        let stock = StockageAquariumMemoire()
         let m = modele(sessions: 2, stockage: stock)
         #expect(m.rationsRestantes == 2)
         #expect(m.lancerRation(x: 0.5, temps: 1))
@@ -218,7 +218,7 @@ struct AquariumTests {
     }
 
     @Test func leTempsSArreteEnPause() {
-        let m = ModeleAquarium(stockage: StockageMemoire(), maintenant: dateEssai)
+        let m = ModeleAquarium(stockage: StockageAquariumMemoire(), maintenant: dateEssai)
         #expect(m.temps(a: dateEssai.addingTimeInterval(5)) == 5)
         m.mettreEnPause(a: dateEssai.addingTimeInterval(5))
         #expect(m.temps(a: dateEssai.addingTimeInterval(60)) == 5)
