@@ -35,3 +35,10 @@ En tête de chaque fichier : `source`, `licence` (Licence Ouverte 2.0), `mis_a_j
 - `size` d'etat_piscicole : au-dessus de 20 000, l'API revient à 5 000 sans erreur ; 20 000 lignes mettent ~41 s (2 champs). La profondeur n'est pas limitée à 20 000 : page 21 de `size=10000` (ligne 200 000) répond. Hydrométrie : `size` ≤ 10 000, erreur explicite au-delà.
 - Le temps est proportionnel au nombre de lignes (~2 ms/ligne avec `fields`), 4 appels en parallèle ne se ralentissent pas ; d'où `workers` = 4.
 - Chaque point de prélèvement d'une station est une ligne de l'endpoint `stations` : doublons fusionnés par `code_station`.
+
+## Lancé dans le cloud (15 oct. 2026)
+- Hub'Eau répond depuis le conteneur cloud (la mention « jamais dans le cloud » ne vaut plus). Lancé avec `--workers 10` (4 au début, puis 10 après reprise par le cache) : environ 1 h 50 au total.
+- Entrées : `especes.json` de D1 (99 espèces dont 41 avec code Sandre), contours `gregoiredavid/france-geojson` (`departements-version-simplifiee.geojson`, 96 départements, IGN Admin Express COG 2018, Licence ouverte).
+- Comptes : 8 234 stations piscicoles (4 846 avec une pêche sur 10 ans, 6 300 avec un cours d'eau), 96 départements tous présents (75 et 93 sans pêche sur 10 ans), 18 400 pêches sur 10 ans, 37 espèces vues, 3 stations écartées ; 6 159 stations hydro (95 départements).
+- Vérification Sandre : 37 codes sur 41 concordent ; 3 jamais vus par Hub'Eau (omble chevalier, huchon, carpe à grosse tête) ; chevesne : nom latin ancien (Leuciscus cephalus), même espèce.
+- La release `donnees` n'a pas pu être créée depuis cette session (403 « releases not permitted ») : les fichiers sont dans `/home/user/partage/`.
