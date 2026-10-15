@@ -17,8 +17,8 @@ Sources de la toile : `maquettes/toile/project/` (canvas.json + un .dc.html par 
 3. Choix du spot au 1er lancement : X arènes / Y lignes à l'eau / Z cartes retournées (`trois-volets/choix-spot/`). Reco : Z.
 Défauts appliqués : « présentes » = vues par l'OFB ; récap partageable sans lieu précis ; une page par zone.
 
-## En attente du fil « Plan de construction »
-Définition d'un spot (reco du plan : 1 km amont/aval sur une rivière ou un lac entier, département en secours). Recherches fournies : `reports/spot-reglementation.md`, `reports/spot-technique.md`.
+## Définition du spot (défaut du fil « Plan de construction », posé à Adem en question 4)
+Vendredi : un **cercle de 1 km** figé à sa création, nommé d'après l'eau la plus proche, règles du département de son centre ; tronçon ou lac entier dans la mise à jour. Règles et fiche de tout spot gratuites ; payant = session et carte hors du spot gratuit. À faire : passer les maquettes (carte A2, choix du spot) du tronçon surligné au cercle. Questions encore à moi : rayon, changement de spot, mer. Recherches : `reports/spot-reglementation.md`, `reports/spot-technique.md`.
 
 ## Prochaines étapes
 - Appliquer les 3 réponses d'Adem : refaire A2 avec le récap et le choix de spot retenus.
