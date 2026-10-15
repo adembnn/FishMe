@@ -26,7 +26,7 @@ Prérequis : la cible widget de L10 (`FishMeWidget`, voir `L10-ecran-verrouille.
    avec et sans Pro (StoreKit de test) ; toucher « nourrir » ; « Réduire les animations » ; mode teinté de l'écran d'accueil.
    Capture de chaque format dans `reports/ecrans/L15/`.
 
-Fusion : après l'envoi (étiquette `v1.0-soumise`), comme L10 et L14.
+Fusion : dans la version soumise (tout d'un coup), juste après L10. Sans L14, les rations viennent de `PontAquariumWidget.ajouterRations(_:)` à la fin de chaque session.
 
 Points à vérifier à la compilation (écrits sans Mac) : `.widgetAccentedRenderingMode(.desaturated)` sur `Image` ;
 `#Preview(as:) timeline:` avec deux entrées ; `openAppWhenRun` encore valide en iOS 27 ; `nonisolated` sur l'intent
