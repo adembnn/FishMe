@@ -5,7 +5,7 @@ import StoreKit
 /// Le seul fichier qui importe le SDK. La clé d'API n'est pas ici : A passe, dans `BuildChallengeApp.swift`,
 /// la fermeture qui construit la configuration (la clé du kit y est déjà) et appelle `Spark.configure`.
 /// Le SDK plante si on touche `Spark.shared` avant `configure` : `CoucheMesure` n'appelle cette passerelle qu'après l'accord et après `configurer()`.
-struct PasserelleSpark: PasserelleSDK {
+nonisolated struct PasserelleSpark: PasserelleSDK {
     private let configuration: @MainActor @Sendable () -> Void
 
     init(configuration: @escaping @MainActor @Sendable () -> Void) {

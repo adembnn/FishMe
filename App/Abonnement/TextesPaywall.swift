@@ -51,7 +51,7 @@ nonisolated enum TextesPaywall {
         }
     }
 
-    struct Ligne: Sendable, Equatable { let icone: String; let texte: String }
+    nonisolated struct Ligne: Sendable, Equatable { let icone: String; let texte: String }
 
     static let gratuit: [Ligne] = [
         Ligne(icone: "map", texte: "La carte"),
@@ -95,7 +95,7 @@ nonisolated enum TextesPaywall {
     static let restaure = "Ton abonnement est de retour."
 }
 
-extension DeclencheurPaywall {
+nonisolated extension DeclencheurPaywall {
     /// Le mode de Core (`DecisionAcces.paywall`) vers le déclencheur ; `.aucun` n'ouvre rien.
     init?(mode: ModePaywall) {
         switch mode {

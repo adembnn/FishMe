@@ -42,7 +42,7 @@ struct AchatsStoreKitTests {
         session.shouldEnterBillingRetryOnRenewal = true
         let achats = achats()
         _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
-        try await session.forceRenewalOfSubscription(productIdentifier: IdentifiantsProduits.annuelFondateur)
+        try session.forceRenewalOfSubscription(productIdentifier: IdentifiantsProduits.annuelFondateur)
         let etat = await achats.etat()
         guard case .delaiDeGrace = etat else { Issue.record("attendu : délai de grâce, reçu \(etat)"); return }
         #expect(etat.donneAcces)
@@ -53,7 +53,7 @@ struct AchatsStoreKitTests {
         let achats = achats()
         _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
         let transaction = try #require(session.allTransactions().first)
-        try session.refundTransaction(identifier: UInt(transaction.id))
+        try session.refundTransaction(identifier: transaction.identifier)
         #expect(!(await achats.etat().donneAcces))
     }
 
@@ -68,7 +68,7 @@ struct AchatsStoreKitTests {
         let session = try session()
         let achats = achats()
         _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
-        session.setSimulatedError(.generic(.networkError(URLError(.notConnectedToInternet))), forAPI: .loadProducts)
+        try await session.setSimulatedError(.generic(.networkError(URLError(.notConnectedToInternet))), forAPI: .loadProducts)
         #expect(await achats.etat().donneAcces)
     }
 }

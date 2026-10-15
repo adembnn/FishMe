@@ -3,7 +3,7 @@ import StoreKit
 
 /// La seule porte vers le SDK Spark Flash. Tout le reste de l'app parle au contrat `Mesure` de Core ;
 /// cette passerelle existe pour que les tests tournent sans SDK (faux ci-dessous) et que la clé reste dans `BuildChallengeApp.swift`.
-protocol PasserelleSDK: Sendable {
+nonisolated protocol PasserelleSDK: Sendable {
     /// Appelle `Spark.configure(...)`. Une seule fois, jamais avant l'accord : `CoucheMesure` le garantit.
     @MainActor func configurer()
     func evenement(type: String, proprietes: [String: String])
@@ -12,7 +12,7 @@ protocol PasserelleSDK: Sendable {
 }
 
 /// Passerelle sans effet, pour les tests et les aperçus : retient ce qu'on lui demande.
-final class PasserelleFausse: PasserelleSDK, @unchecked Sendable {
+nonisolated final class PasserelleFausse: PasserelleSDK, @unchecked Sendable {
     private let verrou = NSLock()
     private var _configurations = 0
     private var _evenements: [(type: String, proprietes: [String: String])] = []
