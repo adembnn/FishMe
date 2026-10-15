@@ -3,6 +3,11 @@ import Foundation
 
 /// Le vrai service d'amis : une zone `Pescedex` dans la base privée, partagée en entier par une seule `CKShare`
 /// (`publicPermission = .none` : le lien n'ouvre que pour les personnes invitées). SwiftData ne partage pas : tout est à la main.
+///
+/// À VÉRIFIER SUR LE MAC (écrit de mémoire, non compilé ici) : `CKContainer.accept(_:)` async, `recordZoneChanges(inZoneWith:since:desiredKeys:resultsLimit:)`
+/// et ses champs `modificationResultsByID`, `moreComing`, `changeToken` ; `CKRecordNameZoneWideShare` ; sortie d'un participant par suppression
+/// du `CKShare` de la zone dans `sharedCloudDatabase` (`quitterPartage`) ; concordance entre `ownerName` d'une zone reçue et
+/// `userIdentity.userRecordID.recordName` d'un participant (sinon un ami réciproque apparaît en double).
 actor ServiceAmisCloudKit: ServiceAmis {
     private let conteneur: CKContainer
     private let zone = CKRecordZone.ID(zoneName: "Pescedex", ownerName: CKCurrentUserDefaultName)

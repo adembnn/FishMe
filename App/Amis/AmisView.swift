@@ -49,14 +49,14 @@ struct AmisView: View {
                 rangees
                 if gestion.partageActif { suppression }
                 Text("Tu ne vois que les collections de tes amis. Le lieu d'une prise s'arrête au département.")
-                    .font(Jeton.police(13, .bold))
-                    .foregroundStyle(Jeton.ardoise)
+                    .font(JetonAmis.police(13, .bold))
+                    .foregroundStyle(JetonAmis.ardoise)
             }
             .padding(.horizontal, 16)
             .padding(.top, 8)
         }
         .scrollIndicators(.hidden)
-        .background(Jeton.fondPage.ignoresSafeArea())
+        .background(JetonAmis.fondPage.ignoresSafeArea())
     }
 
     // MARK: Pièces
@@ -64,15 +64,15 @@ struct AmisView: View {
     private var entete: some View {
         HStack {
             Text("Amis")
-                .font(Jeton.police(30))
-                .foregroundStyle(Jeton.encre)
+                .font(JetonAmis.police(30))
+                .foregroundStyle(JetonAmis.encre)
             Spacer()
             Button {
                 Task { await gestion.actualiser() }
             } label: {
                 Image(systemName: "arrow.clockwise")
-                    .font(Jeton.police(17))
-                    .frame(width: Jeton.zoneTactile, height: Jeton.zoneTactile)
+                    .font(JetonAmis.police(17))
+                    .frame(width: JetonAmis.zoneTactile, height: JetonAmis.zoneTactile)
             }
             .accessibilityLabel("Actualiser")
         }
@@ -94,48 +94,48 @@ struct AmisView: View {
     private func bandeau(_ texte: String) -> some View {
         HStack(spacing: 10) {
             Text(texte)
-                .font(Jeton.police(15, .bold))
-                .foregroundStyle(Jeton.encre)
+                .font(JetonAmis.police(15, .bold))
+                .foregroundStyle(JetonAmis.encre)
             if gestion.compte == .indisponible, let reglages = URL(string: UIApplication.openSettingsURLString) {
                 Link("Réglages", destination: reglages)
-                    .font(Jeton.police(15))
-                    .frame(minHeight: Jeton.zoneTactile)
+                    .font(JetonAmis.police(15))
+                    .frame(minHeight: JetonAmis.zoneTactile)
             }
         }
         .padding(12)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Jeton.papier, in: RoundedRectangle(cornerRadius: 14))
+        .background(JetonAmis.papier, in: RoundedRectangle(cornerRadius: 14))
     }
 
     private func demande(_ invitation: InvitationRecue) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Demande")
-                .font(Jeton.police(13))
-                .foregroundStyle(Jeton.ardoise)
+                .font(JetonAmis.police(13))
+                .foregroundStyle(JetonAmis.ardoise)
             HStack(spacing: 12) {
                 Avatar(nom: invitation.nomAmi)
                 Text("\(invitation.nomAmi) veut partager sa collection avec toi")
-                    .font(Jeton.police(16))
-                    .foregroundStyle(Jeton.encre)
+                    .font(JetonAmis.police(16))
+                    .foregroundStyle(JetonAmis.encre)
             }
             HStack(spacing: 12) {
                 Button("Accepter") { Task { await gestion.accepterLInvitation() } }
-                    .buttonStyle(BoutonPlein(fond: Jeton.bleu))
+                    .buttonStyle(BoutonPlein(fond: JetonAmis.bleu))
                 Button("Refuser") { gestion.refuserLInvitation() }
-                    .buttonStyle(BoutonPlein(fond: Jeton.ardoise))
+                    .buttonStyle(BoutonPlein(fond: JetonAmis.ardoise))
             }
         }
         .padding(14)
-        .background(Jeton.papier, in: RoundedRectangle(cornerRadius: 16))
+        .background(JetonAmis.papier, in: RoundedRectangle(cornerRadius: 16))
     }
 
     private var inviter: some View {
         ShareLink(item: lienDInvitation, preview: SharePreview("Mon Pescedex")) {
             Label("Inviter un ami", systemImage: "person.badge.plus")
-                .font(Jeton.police(17))
+                .font(JetonAmis.police(17))
                 .foregroundStyle(.white)
-                .frame(maxWidth: .infinity, minHeight: Jeton.zoneTactile)
-                .background(Jeton.bleu, in: Capsule())
+                .frame(maxWidth: .infinity, minHeight: JetonAmis.zoneTactile)
+                .background(JetonAmis.bleu, in: Capsule())
         }
     }
 
@@ -143,15 +143,15 @@ struct AmisView: View {
         HStack {
             ShareLink(item: lienDInvitation, preview: SharePreview("Mon Pescedex")) {
                 Label("Inviter en retour", systemImage: "arrow.uturn.right")
-                    .font(Jeton.police(16))
-                    .frame(minHeight: Jeton.zoneTactile)
+                    .font(JetonAmis.police(16))
+                    .frame(minHeight: JetonAmis.zoneTactile)
             }
             Spacer()
             Button {
                 gestion.fermerLaProposition()
             } label: {
                 Image(systemName: "xmark")
-                    .frame(width: Jeton.zoneTactile, height: Jeton.zoneTactile)
+                    .frame(width: JetonAmis.zoneTactile, height: JetonAmis.zoneTactile)
             }
             .accessibilityLabel("Fermer")
         }
@@ -191,11 +191,11 @@ struct AmisView: View {
         HStack(spacing: 12) {
             Avatar(nom: ami.nom)
             VStack(alignment: .leading, spacing: 2) {
-                Text(ami.nom).font(Jeton.police(17)).foregroundStyle(Jeton.encre)
-                Text(detail).font(Jeton.police(14, .bold)).foregroundStyle(Jeton.ardoise)
+                Text(ami.nom).font(JetonAmis.police(17)).foregroundStyle(JetonAmis.encre)
+                Text(detail).font(JetonAmis.police(14, .bold)).foregroundStyle(JetonAmis.ardoise)
             }
             Spacer()
-            if ouvrable { Image(systemName: "chevron.right").foregroundStyle(Jeton.ardoise) }
+            if ouvrable { Image(systemName: "chevron.right").foregroundStyle(JetonAmis.ardoise) }
         }
         .frame(minHeight: 56)
         .contentShape(Rectangle())
@@ -203,8 +203,8 @@ struct AmisView: View {
 
     private var suppression: some View {
         Button("Supprimer mes cartes partagées", role: .destructive) { confirmerSuppression = true }
-            .font(Jeton.police(15))
-            .frame(minHeight: Jeton.zoneTactile)
+            .font(JetonAmis.police(15))
+            .frame(minHeight: JetonAmis.zoneTactile)
             .confirmationDialog("Tes amis ne verront plus tes cartes. Ton Pescedex reste sur ton iPhone.",
                                 isPresented: $confirmerSuppression, titleVisibility: .visible) {
                 Button("Supprimer", role: .destructive) { Task { await gestion.supprimerMesCartesPartagees() } }
@@ -222,10 +222,10 @@ struct Avatar: View {
 
     var body: some View {
         Text(String(nom.prefix(1)).uppercased())
-            .font(Jeton.police(18))
+            .font(JetonAmis.police(18))
             .foregroundStyle(.white)
             .frame(width: 44, height: 44)
-            .background(Jeton.encreDouce, in: Circle())
+            .background(JetonAmis.encreDouce, in: Circle())
             .accessibilityHidden(true)
     }
 }
@@ -235,9 +235,9 @@ struct BoutonPlein: ButtonStyle {
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(Jeton.police(16))
+            .font(JetonAmis.police(16))
             .foregroundStyle(.white)
-            .frame(maxWidth: .infinity, minHeight: Jeton.zoneTactile)
+            .frame(maxWidth: .infinity, minHeight: JetonAmis.zoneTactile)
             .background(fond.opacity(configuration.isPressed ? 0.8 : 1), in: Capsule())
     }
 }

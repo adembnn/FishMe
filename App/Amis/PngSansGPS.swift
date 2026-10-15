@@ -3,7 +3,7 @@ import ImageIO
 import UniformTypeIdentifiers
 
 /// L'image d'une carte partagée est ré-encodée sans aucune métadonnée : ni GPS, ni EXIF, ni date.
-nonisolated enum ImageSansGPS {
+nonisolated enum PngSansGPS {
     /// Vrai si l'image porte un bloc GPS.
     static func contientGPS(_ donnees: Data) -> Bool {
         guard let source = CGImageSourceCreateWithData(donnees as CFData, nil),

@@ -18,7 +18,7 @@ nonisolated enum FabriqueRecords {
         record["bredouille"] = carte.bredouille ? 1 : 0
         if let departement = carte.departement { record["zone"] = departement }
         if let image = carte.image {
-            guard let propre = ImageSansGPS.nettoyer(image) else { throw ErreurAmis.imageRefusee }
+            guard let propre = PngSansGPS.nettoyer(image) else { throw ErreurAmis.imageRefusee }
             try FileManager.default.createDirectory(at: dossierTemp, withIntermediateDirectories: true)
             let fichier = dossierTemp.appendingPathComponent("\(carte.id.uuidString).png")
             try propre.write(to: fichier, options: .atomic)

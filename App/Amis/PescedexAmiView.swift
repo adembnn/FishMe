@@ -38,7 +38,7 @@ struct PescedexAmiView: View {
             .padding(.top, 8)
         }
         .scrollIndicators(.hidden)
-        .background(Jeton.fondPage.ignoresSafeArea())
+        .background(JetonAmis.fondPage.ignoresSafeArea())
         .sheet(item: $carteOuverte) { carte in
             CarteAmiDetail(carte: carte, nomEspece: gestion.espece(carte.espece)?.nom ?? "") {
                 if let url = gestion.urlDeSignalement(ami: ami, carte: carte) { ouvrirURL(url) }
@@ -59,9 +59,9 @@ struct PescedexAmiView: View {
         HStack {
             Button(action: fermer) {
                 Image(systemName: "chevron.left")
-                    .font(Jeton.police(17))
-                    .frame(width: Jeton.zoneTactile, height: Jeton.zoneTactile)
-                    .background(Jeton.papier, in: Circle())
+                    .font(JetonAmis.police(17))
+                    .frame(width: JetonAmis.zoneTactile, height: JetonAmis.zoneTactile)
+                    .background(JetonAmis.papier, in: Circle())
             }
             .accessibilityLabel("Retour")
             Spacer()
@@ -75,9 +75,9 @@ struct PescedexAmiView: View {
                 }
             } label: {
                 Image(systemName: "ellipsis")
-                    .font(Jeton.police(17))
-                    .frame(width: Jeton.zoneTactile, height: Jeton.zoneTactile)
-                    .background(Jeton.papier, in: Circle())
+                    .font(JetonAmis.police(17))
+                    .frame(width: JetonAmis.zoneTactile, height: JetonAmis.zoneTactile)
+                    .background(JetonAmis.papier, in: Circle())
             }
             .accessibilityLabel("Plus d'actions")
         }
@@ -85,8 +85,8 @@ struct PescedexAmiView: View {
 
     private var compteur: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(ami.nom).font(Jeton.police(30)).foregroundStyle(Jeton.encre)
-            Text(texteCompteur).font(Jeton.police(16, .bold)).foregroundStyle(Jeton.encreDouce)
+            Text(ami.nom).font(JetonAmis.police(30)).foregroundStyle(JetonAmis.encre)
+            Text(texteCompteur).font(JetonAmis.police(16, .bold)).foregroundStyle(JetonAmis.encreDouce)
         }
     }
 
@@ -112,7 +112,7 @@ struct PescedexAmiView: View {
     }
 
     private func tuile(_ carte: CartePartagee) -> some View {
-        let style = StyleRarete(carte.rarete)
+        let style = RareteAmi(carte.rarete)
         let espece = gestion.espece(carte.espece)
         return ZStack(alignment: .topTrailing) {
             RoundedRectangle(cornerRadius: 14)
@@ -120,18 +120,18 @@ struct PescedexAmiView: View {
             if let espece {
                 Image(espece.image).resizable().scaledToFit().padding(10)
             }
-            BadgeRarete(style: style, taille: 24).padding(6)
+            BadgeRareteAmi(style: style, taille: 24).padding(6)
             if !gestion.mesEspeces.contains(carte.espece) {
                 Text("nouvelle")
-                    .font(Jeton.police(11))
+                    .font(JetonAmis.police(11))
                     .foregroundStyle(.white)
                     .padding(.horizontal, 7).padding(.vertical, 3)
-                    .background(Jeton.vert, in: Capsule())
+                    .background(JetonAmis.vert, in: Capsule())
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
                     .padding(6)
             }
         }
-        .aspectRatio(Jeton.rapportCarte, contentMode: .fit)
+        .aspectRatio(JetonAmis.rapportCarte, contentMode: .fit)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("\(espece?.nom ?? "Espèce"), \(style.mot)")
     }
@@ -152,17 +152,17 @@ struct CarteAmiDetail: View {
                     .accessibilityLabel(nomEspece)
             }
             HStack(spacing: 8) {
-                Text(Formats.date(carte.date)).font(Jeton.police(15, .bold)).foregroundStyle(Jeton.encreDouce)
+                Text(JetonAmis.date(carte.date)).font(JetonAmis.police(15, .bold)).foregroundStyle(JetonAmis.encreDouce)
                 if let d = carte.departement {
-                    Text("· dans le \(d)").font(Jeton.police(15, .bold)).foregroundStyle(Jeton.encreDouce)
+                    Text("· dans le \(d)").font(JetonAmis.police(15, .bold)).foregroundStyle(JetonAmis.encreDouce)
                 }
             }
             Button("Signaler cette carte", action: signaler)
-                .font(Jeton.police(16))
-                .frame(minHeight: Jeton.zoneTactile)
+                .font(JetonAmis.police(16))
+                .frame(minHeight: JetonAmis.zoneTactile)
         }
         .padding(20)
         .presentationDetents([.large])
-        .background(Jeton.fondPage.ignoresSafeArea())
+        .background(JetonAmis.fondPage.ignoresSafeArea())
     }
 }

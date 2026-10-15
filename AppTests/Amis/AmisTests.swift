@@ -73,13 +73,13 @@ struct AmisTests {
 
     @Test func lImageEnvoyeeNaPasDeGPS() throws {
         let avec = try pngAvecGPS()
-        #expect(ImageSansGPS.contientGPS(avec))
-        let propre = try #require(ImageSansGPS.nettoyer(avec))
-        #expect(!ImageSansGPS.contientGPS(propre))
+        #expect(PngSansGPS.contientGPS(avec))
+        let propre = try #require(PngSansGPS.nettoyer(avec))
+        #expect(!PngSansGPS.contientGPS(propre))
         let dossier = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         let record = try FabriqueRecords.record(pour: carte(image: avec), zone: zone, dossierTemp: dossier)
         let fichier = try #require((record["image"] as? CKAsset)?.fileURL)
-        #expect(!ImageSansGPS.contientGPS(try Data(contentsOf: fichier)))
+        #expect(!PngSansGPS.contientGPS(try Data(contentsOf: fichier)))
     }
 
     @Test func uneImageIllisibleEstRefusee() {
@@ -108,7 +108,7 @@ struct AmisTests {
         let r = try #require(cartes.first { $0.id == reelle.id })
         #expect(r.departement == "94")
         let image = try #require(r.image)
-        #expect(!ImageSansGPS.contientGPS(image))
+        #expect(!PngSansGPS.contientGPS(image))
         let d = try #require(cartes.first { $0.id == declaree.id })
         #expect(d.image == nil && d.departement == nil && d.rarete == .nonMesuree)
     }
@@ -144,7 +144,7 @@ struct AmisTests {
     @Test func laFileSurvitAUnRedemarrage() async throws {
         let dossier = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         let premiere = FileEnvoi(dossier: dossier)
-        await premiere.mettreEnAttente([carte(image: try #require(ImageSansGPS.nettoyer(try pngAvecGPS())))])
+        await premiere.mettreEnAttente([carte(image: try #require(PngSansGPS.nettoyer(try pngAvecGPS())))])
         let seconde = FileEnvoi(dossier: dossier)
         let relue = await seconde.enAttente()
         #expect(relue.count == 1)
@@ -232,6 +232,14 @@ struct AmisTests {
         #expect(texte.contains("contact@exemple.invalid"))
         #expect(texte.contains(c.id.uuidString))
         #expect(!texte.lowercased().contains("lat"))
+    }
+
+    // MARK: Aides du dossier
+
+    @Test func leDepartementSeLitApresLePointMedian() {
+        #expect(JetonAmis.departement(depuisLieuFlou: "La Marne · 94")?.code == "94")
+        #expect(JetonAmis.departement(depuisLieuFlou: "La Marne") == nil)
+        #expect(JetonAmis.departement(depuisLieuFlou: nil) == nil)
     }
 
     // MARK: Mots interdits

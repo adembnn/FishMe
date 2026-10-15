@@ -194,7 +194,7 @@ final class GestionAmis {
     func especesReleveesDans(_ departement: String) -> Int {
         let zone = Departement(code: departement)
         return constructeur.especes.especesPechables().filter {
-            CompteurPescedex.estReleveeDansLaZone(constructeur.especes.rarete(espece: $0.espece, departement: zone))
+            JetonAmis.estReleveeDansLaZone(constructeur.especes.rarete(espece: $0.espece, departement: zone))
         }.count
     }
 
