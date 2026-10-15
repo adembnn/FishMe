@@ -888,6 +888,35 @@ def essai_fusionner(m):
                    "origin/main" in sujet and "lot/donnees" in sujet, sujet)
 
 
+def essai_mise_a_jour(m):
+    bilan.section("scripts/fusionner.sh : lots de la mise à jour")
+    env = m.env_avec
+    lots = __import__("json").loads(lancer(["python3", "outils/atelier/lots.py", "json"], m.app, env).stdout)
+    branches = [l["branche"] for l in lots if l.get("mise_a_jour")]
+    bilan.verifier("lots.py : les lots de la mise à jour se lisent dans docs/lots.md", len(branches) >= 1, str(branches))
+    soumis = next(l["branche"] for l in lots if not l.get("mise_a_jour") and l["branche"].startswith("lot/"))
+    for branche in branches + [soumis]:
+        git(["checkout", "-q", "-B", branche, "main"], m.app, env)
+        ecrire(m.app, "docs/sale-essai.md", "sale\n")
+        p = lancer(["bash", "scripts/fusionner.sh"], m.app, env)
+        if branche in branches:
+            bilan.verifier(f"fusionner.sh : sans l'étiquette v1.0-soumise, {branche} est refusé et le message dit pourquoi",
+                           p.returncode != 0 and "v1.0-soumise" in p.stderr and "non commités" not in p.stderr, sortie(p))
+        else:
+            bilan.verifier(f"fusionner.sh : {branche} (version soumise) n'attend pas l'étiquette",
+                           "v1.0-soumise" not in sortie(p) and "non commités" in p.stderr, sortie(p))
+        os.remove(m.app / "docs/sale-essai.md")
+    git(["tag", "v1.0-soumise"], m.app, env)
+    git(["checkout", "-q", "-B", branches[0], "main"], m.app, env)
+    ecrire(m.app, "docs/sale-essai.md", "sale\n")
+    p = lancer(["bash", "scripts/fusionner.sh"], m.app, env)
+    bilan.verifier(f"fusionner.sh : avec l'étiquette, {branches[0]} passe à la suite de ses contrôles",
+                   "✓ Mise à jour" in p.stdout and "non commités" in p.stderr, sortie(p))
+    os.remove(m.app / "docs/sale-essai.md")
+    git(["tag", "-d", "v1.0-soumise"], m.app, env)
+    git(["checkout", "-q", "main"], m.app, env)
+
+
 def essai_env(m):
     bilan.section("scripts/env.sh : le .env aux noms vides")
     d = Path(tempfile.mkdtemp(prefix="atelier-env-"))
@@ -933,6 +962,7 @@ def main():
         essai_verif(m)
         essai_cloud_pret(m)
         essai_fusionner(m)
+        essai_mise_a_jour(m)
         essai_env(m)
     except Exception as erreur:  # noqa: BLE001 - un plantage de l'essai est un échec de l'essai
         import traceback

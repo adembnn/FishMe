@@ -14,6 +14,7 @@ Usage :
   python3 outils/atelier/lots.py changes               affiche les fichiers changés depuis la base commune avec main
   python3 outils/atelier/lots.py parties               lit des chemins sur l'entrée, dit quelles parties de verif.sh les touchent
   python3 outils/atelier/lots.py hors-lot <code|->     lit des chemins sur l'entrée, affiche ceux qui sortent du lot
+  python3 outils/atelier/lots.py mise-a-jour <code>  sort 0 si le lot est dans le tableau « Dans la mise à jour » (attend v1.0-soumise)
   python3 outils/atelier/lots.py precommit             contrôle le commit en préparation (crochet de git)
 """
 import json
@@ -36,8 +37,10 @@ def charger(chemin=LOTS_MD):
     """Rend la liste des lots : code, nom, branche, dossiers, qui, etapes, test."""
     with open(chemin, encoding="utf-8") as f:
         lignes = f.read().splitlines()
-    lots, entete = [], None
+    lots, entete, section = [], None, ""
     for ligne in lignes:
+        if ligne.startswith("## "):
+            section = ligne[3:].strip()
         if not ligne.startswith("|"):
             entete = None
             continue
@@ -62,6 +65,7 @@ def charger(chemin=LOTS_MD):
             "qui": r.get("Qui", ""),
             "etapes": r.get("Étapes", ""),
             "test": r.get("Test qui bloque la fusion", ""),
+            "mise_a_jour": section.startswith("Dans la mise à jour"),
         })
     return lots
 
@@ -326,6 +330,9 @@ def main(args):
             return 1
         print(lot["branche"])
         return 0
+    if args[0] == "mise-a-jour" and len(args) == 2:
+        lot = next((l for l in lots if l["code"].upper() == args[1].upper()), None)
+        return 0 if lot and lot["mise_a_jour"] else 1
     if args[0] == "changes":
         print("\n".join(fichiers_changes()))
         return 0

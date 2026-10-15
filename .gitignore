@@ -8,6 +8,7 @@
 # Données fabriquées par script : `scripts/donnees.sh` les télécharge, on ne les commite jamais.
 stations-especes.json
 rarete-departements.json
+App/Donnees/
 
 # Captures d'écran de travail
 reports/ecrans/

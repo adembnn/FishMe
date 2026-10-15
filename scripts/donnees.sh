@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-# Télécharge les 2 fichiers de données fabriqués par script, depuis la release privée « donnees » du dépôt.
+# Télécharge les 3 fichiers de données fabriqués par script, depuis la release privée « donnees » du dépôt.
 # Ils ne sont jamais commités (.gitignore, crochets de git) : chaque ordinateur les télécharge ici.
 # Usage : scripts/donnees.sh        (demande `gh` installé et connecté : gh auth login)
 
 racine=$(cd "$(dirname "$0")/.." && pwd)
 cd "$racine" || exit 1
-dossier="Packages/Core/Sources/Core/Resources"
-fichiers="stations-especes.json rarete-departements.json"
+# Dans App/Donnees/ (ignoré par git) : le dossier synchronisé de l'app les embarque, RootView passe Bundle.main à Core.
+dossier="App/Donnees"
+fichiers="stations-especes.json rarete-departements.json stations-hydro.json"
 
 if ! command -v gh >/dev/null 2>&1; then
   echo "✗ L'outil « gh » (GitHub) n'est pas installé. À faire : brew install gh, puis gh auth login." >&2

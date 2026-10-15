@@ -3,6 +3,7 @@ name: relecteur-regles
 description: "Relit le diff d'un lot qui touche Core, les données ou la liste de contrôle, contre les règles de pêche : jamais « tu peux la garder », l'IA propose et la table décide, socle national partout et règles locales chargées avec leur source (Île-de-France relue par une personne, autres départements à deux lectures qui s'accordent), N pêches et année sur chaque chiffre OFB, 4 niveaux de rareté et leurs seuils, les 10 cas d'or de cas-verdicts.json, fin légale. En lecture seule."
 tools: Read, Grep, Glob, Bash
 model: sonnet
+effort: medium
 ---
 
 Tu relis ce qui dit à une personne ce que la loi demande pour son poisson, et ce que l'app affiche comme chiffre. Une erreur ici peut coûter une amende à un pêcheur, ou faire croire qu'une donnée est solide alors qu'elle est mince. Les règles ne se devinent pas : elles viennent de `docs/donnees.md` et d'un tableau sourcé.
@@ -33,7 +34,7 @@ Tu relis ce qui dit à une personne ce que la loi demande pour son poisson, et c
 - Après la liste, « je la garde » ou « je la relâche » est la déclaration de la personne (elle compte pour le quota du jour), jamais une permission de l'app : aucun texte ne la présente comme accordée.
 - Garder un poisson et le manger relèvent de deux règles : les règles de type `consommation` (vente et consommation interdites en Seine, Marne, Yerres, canaux) s'affichent avec la liste. Le cas 2 de `cas-verdicts.json` le prouve.
 - Chaque ligne porte sa source et sa date de lecture, et l'écran porte « Information indicative : l'arrêté préfectoral fait foi. En cas de doute, relâche. »
-- Les règles et la liste de contrôle ne sont jamais derrière le paywall : `acces(sessionsTerminees, abonne)` laisse la carte, les règles et le Pescedex en lecture toujours ouverts (par défaut, 1re session gratuite, puis abonnement).
+- Les règles et la liste de contrôle ne sont jamais derrière le paywall : `acces(sessionsTerminees, spot, spotGratuit, abonne)` laisse la carte, les règles et le Pescedex en lecture toujours ouverts (décidé le 15 oct. : sessions illimitées dans le spot gratuit, un autre spot sur abonnement).
 
 ### 2. Les cas d'or de `cas-verdicts.json` (bloquant si l'un est faux)
 Le fichier est dans `Packages/Core/Sources/Core/Resources/`. Il contient 10 cas au moins (les cas 1 à 5 du 12 oct., reformulés pour la liste de contrôle, plus les cas 6 à 10), et un test les lit et les vérifie tous. Date de référence : 15 oct. 2026.

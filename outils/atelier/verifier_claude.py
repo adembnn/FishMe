@@ -29,7 +29,8 @@ RACINE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SCRIPTS_DU_CONTRAT = {"verif.sh", "fusionner.sh", "lot.sh", "envoi.sh"}
 
 AGENTS_ATTENDUS = {"relecteur-apple", "relecteur-code", "relecteur-regles", "testeur-ecran", "revue-finale",
-                   "banc-utilisateur", "banc-avocat"}
+                   "banc-utilisateur", "banc-avocat", "codeur", "petites-mains",
+                   "testeur-identification", "revue-ux-2taps", "coupeur", "verificateur-wording"}
 COMMANDES_ATTENDUES = {"lot", "fusion", "ecran", "envoi", "point", "banc"}
 
 MODELES = {"sonnet", "opus", "haiku"}
@@ -52,7 +53,7 @@ OUTILS_INTERDITS_EN_LECTURE = {"Write", "Edit", "MultiEdit", "NotebookEdit"}
 TIRET_CADRATIN = "—"
 NOM_VALIDE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 SCRIPT_CITE = re.compile(r"scripts/([A-Za-z0-9_.\-]+\.sh)")
-AGENT_CITE = re.compile(r"\b(relecteur-[a-z]+|testeur-ecran|revue-finale|banc-[a-z]+)\b")
+AGENT_CITE = re.compile(r"\b(relecteur-[a-z]+|testeur-ecran|testeur-identification|revue-finale|revue-ux-2taps|verificateur-wording|banc-[a-z]+)\b")
 MARQUE_NINTENDO = re.compile(r"\bpok[eé]", re.IGNORECASE)
 
 
@@ -169,6 +170,10 @@ def verifier_agent(chemin, noms_agents):
         problemes.append("model : inherit interdit (écrire sonnet, opus ou haiku)")
     elif modele not in MODELES:
         problemes.append(f"model « {modele} » : attendu sonnet, opus ou haiku")
+    elif modele == "opus":
+        problemes.append("model : opus interdit pour un sous-agent (Adem, 15 oct. 18h19 : Sonnet en effort moyen, Haiku pour le mécanique)")
+    elif modele == "sonnet" and sans_guillemets(champs.get("effort", "")) != "medium":
+        problemes.append("effort : medium attendu pour un agent Sonnet (Adem, 15 oct. 18h19)")
     return problemes
 
 
