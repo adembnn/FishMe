@@ -1,1 +1,4585 @@
-{"version": "0", "sources": [], "conseils": []}
+{
+ "version": "1",
+ "date": "2026-10-15",
+ "sources": [
+  {
+   "id": "g1-decathlon-black-bass",
+   "titre": "Les bases de la pêche du black-bass aux leurres (Decathlon)",
+   "url": "https://conseilsport.decathlon.fr/les-bases-de-la-peche-du-black-bass-aux-leurres",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-decathlon-brochet-automne",
+   "titre": "Brochets d'automne : 9 conseils pour cartonner (Decathlon)",
+   "url": "https://conseilsport.decathlon.fr/brochets-dautomne-9-conseils-pour-cartonner",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-decathlon-hamecons-truite",
+   "titre": "Comment choisir ses hameçons pour la pêche de la truite (Decathlon)",
+   "url": "https://www.decathlon.fr/c/htc/comment-choisir-ses-hamecons-pour-pecher-la-truite_74092e52-3b0d-4238-8347-a6d3ef7034b8",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-fede-morbihan-nokill",
+   "titre": "Les saines pratiques de la remise à l'eau du poisson (fédération de pêche du Morbihan, Bretagne Grands Migrateurs)",
+   "url": "https://morbihan.federationpeche.fr/cms_viewFile.php?idtf=6234&path=No-kill-guide-de-bonnes-pratiques.pdf",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-generationpeche-migrateurs",
+   "titre": "La pêche des salmonides migrateurs (Génération Pêche)",
+   "url": "https://www.generationpeche.fr/3535-la-peche-des-salmonides-migrateurs.htm",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-bb-automne",
+   "titre": "Pêcher le black-bass en fin d'été et début d'automne (peche.com)",
+   "url": "https://www.peche.com/article/52505/pecher-le-black-bass-en-fin-d-ete-et-debut-d-automne-techniques-et-conseils",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-bbpb-leurres",
+   "titre": "4 leurres pour l'achigan à petite bouche (peche.com)",
+   "url": "https://www.peche.com/article/38042/4-leurres-a-emmener-pour-aller-pecher-l-achigan-a-petite-bouche-du-quebec",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-brochet-debutant",
+   "titre": "Débutant : les principes de base de la pêche du brochet au leurre (peche.com)",
+   "url": "https://www.peche.com/article/42938/debutant-les-principes-de-bases-pour-la-peche-du-brochet-au-leurre",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-brochet-premier",
+   "titre": "Comment prendre son premier brochet (peche.com)",
+   "url": "https://www.peche.com/article/51820/comment-prendre-son-premier-brochet-conseils-astuces-pour-reussir",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-coregone",
+   "titre": "Découvrir la pêche du corégone (peche.com)",
+   "url": "https://www.peche.com/article/49631/decouvrir-la-peche-du-coregone-une-peche-passionnante-et-atypique",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-crapet-roche",
+   "titre": "Le crapet de roche, un poisson insolite à leurrer en France (peche.com)",
+   "url": "https://www.peche.com/article/48201/le-crapet-de-roche-un-poisson-insolite-a-leurrer-en-france",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-lacs-altitude",
+   "titre": "La pêche à la mouche en lacs d'altitude (peche.com)",
+   "url": "https://www.peche.com/article/34312/la-peche-a-la-mouche-en-lacs-d-altitude-diversite-des-approches-et-des-poissons-presents",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-omble-chevalier",
+   "titre": "La pêche de l'omble chevalier au leurre en lac de montagne (peche.com)",
+   "url": "https://www.peche.com/article/40990/la-peche-de-l-omble-chevalier-au-leurre",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-ombre-mouche",
+   "titre": "Pêcher l'ombre commun à la mouche (peche.com)",
+   "url": "https://www.peche.com/article/33575/pecher-l-ombre-commun-en-france-a-la-mouche-en-seche-en-nymphes-en-noyees",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-perche-leurres",
+   "titre": "La pêche de la perche aux leurres, deux techniques (peche.com)",
+   "url": "https://peche.com/article/39938/la-peche-de-la-perche-aux-leurres-deux-techniques-tres-efficaces-a-decouvrir",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-perche-soleil",
+   "titre": "La perche soleil, facile à pêcher pour les débutants (peche.com)",
+   "url": "https://www.peche.com/article/38363/la-perche-soleil-une-espece-classee-nuisible-facile-a-pecher-pour-les-debutants",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-perche-ver",
+   "titre": "Perches en hiver au ver de terre au flotteur (peche.com)",
+   "url": "https://www.peche.com/article/38933/les-perches-en-hiver-au-ver-de-terre-au-flotteur-une-technique-tres-efficace-souvent-delaissee",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-sandre-automne",
+   "titre": "Pêche du sandre en automne (peche.com)",
+   "url": "https://www.peche.com/article/52511/peche-du-sandre-en-automne-conseils-techniques-et-astuces",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-sandre-premier",
+   "titre": "Pêcher son premier sandre (peche.com)",
+   "url": "https://www.peche.com/article/51892/pecher-son-premier-sandre-conseils-et-astuces-pour-reussir",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-sandre-souples",
+   "titre": "Les leurres souples pour la pêche du sandre et stratégie (peche.com)",
+   "url": "https://www.peche.com/article/33976/les-leurres-souples-pour-la-peche-du-sandre-et-strategie",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-truite-amont",
+   "titre": "Truite en rivière, pêcher amont ou aval (peche.com)",
+   "url": "https://www.peche.com/article/48426/truite-en-riviere-pecher-amont-ou-aval-comment-bien-pecher-amont",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-truite-appats",
+   "titre": "Techniques de pêche de la truite aux appâts naturels (peche.com)",
+   "url": "https://www.peche.com/article/33560/conseils-sur-les-differentes-techniques-de-peche-de-la-truite-aux-appats-naturels",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-truite-area",
+   "titre": "Pêche de la truite en area, couleurs de leurres (peche.com)",
+   "url": "https://www.peche.com/article/50733/peche-de-la-truite-en-area-bien-choisir-ses-couleurs-de-leurres",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g1-peche-truite-cuillere",
+   "titre": "Salmonidés au leurre : la cuillère tournante (peche.com)",
+   "url": "https://www.peche.com/article/48213/dossier-truite-au-leurre-la-cuillere-tournante-classique-parmi-les-classiques",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g2-decathlon-appat-carpe",
+   "titre": "Comment bien choisir son appât carpe (Decathlon)",
+   "url": "https://www.decathlon.fr/c/htc/comment-bien-choisir-son-appat-carpe_85df12e4-4d79-459c-9f01-9cba997f5229",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g2-decathlon-carpe-ete",
+   "titre": "Comment débuter la pêche de la carpe en été (Decathlon Conseil Sport)",
+   "url": "https://conseilsport.decathlon.fr/comment-debuter-la-peche-de-la-carpe-en-ete",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g2-fwg-bordeliere",
+   "titre": "Brème bordelière, fiche de pêche (Fishing World Guide)",
+   "url": "https://www.fishingworldguide.com/fr/fish/breme-bordeliere",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g2-fwg-carpe-amour",
+   "titre": "Carpe amour, fiche de pêche (Fishing World Guide)",
+   "url": "https://www.fishingworldguide.com/fr/fish/carpe-amour",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g2-fwg-rotengle",
+   "titre": "Rotengle, fiche de pêche (Fishing World Guide)",
+   "url": "https://www.fishingworldguide.com/fr/fish/rotengle",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g2-fwg-tanche",
+   "titre": "Tanche, fiche de pêche (Fishing World Guide)",
+   "url": "https://www.fishingworldguide.com/fr/fish/tanche",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g2-peche-blancs",
+   "titre": "Les différents appâts pour pêcher les poissons blancs (peche.com)",
+   "url": "https://www.peche.com/article/52081/les-differents-appats-pour-pecher-les-poissons-blancs-les-bases",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g2-peche-carassin",
+   "titre": "Comment pêcher le carassin (peche.com)",
+   "url": "https://www.peche.com/article/51851/comment-pecher-le-carassin-astuces-et-conseils-pour-cibler-ce-poisson",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g2-peche-silure",
+   "titre": "Les différents appâts pour pêcher le silure (peche.com)",
+   "url": "https://www.peche.com/article/51925/les-differents-appats-a-employer-pour-pecher-efficacement-le-silure",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g2-pechecom-aspe",
+   "titre": "Top 3 des leurres pour l'aspe en Loire l'été (peche.com)",
+   "url": "https://www.peche.com/article/36743/mon-top-3-des-leurres-de-peche-a-avoir-pour-l-aspe-en-loire-l-ete",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g2-pechecom-ide",
+   "titre": "Pêcher l'ide mélanote au leurre (peche.com)",
+   "url": "https://peche.com/article/46666/l-ide-melanote-au-leurre",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g3-fdp85-vandoise",
+   "titre": "Zoom sur la vandoise (Fédération de pêche de Vendée)",
+   "url": "https://federation-peche-vendee.fr/zoom-sur-la-vandoise/",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g3-fwg-hotu",
+   "titre": "Hotu (Fishing World Guide)",
+   "url": "https://www.fishingworldguide.com/fr/fish/hotu",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g3-gers-cyprinides",
+   "titre": "Les cyprinidés du Gers (Fédération de pêche du Gers)",
+   "url": "https://www.gers-peche.fr/5690-cyprinides.htm",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g3-nootica-coup",
+   "titre": "Bien débuter la pêche au coup (Nootica)",
+   "url": "https://www.nootica.com/nl/webzine/debuter-peche-coup.html",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g3-peche-ablette",
+   "titre": "Bien pêcher l'ablette (peche.com)",
+   "url": "https://www.peche.com/article/48943/bien-pecher-l-ablette-techniques-et-astuces-pour-ce-petit-poisson",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g3-peche-barbeau",
+   "titre": "Le barbeau, roi des rivières (peche.com)",
+   "url": "https://www.peche.com/article/39226/le-barbeau-roi-des-rivieres",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g3-peche-chevesne-annee",
+   "titre": "Le chevesne, un poisson à pêcher toute l'année (peche.com)",
+   "url": "https://www.peche.com/article/49867/le-chevesne-un-poisson-a-pecher-toute-l-annee-de-differentes-manieres",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g3-peche-chevesne-astuces",
+   "titre": "Pêche du chevesne, techniques et astuces (peche.com)",
+   "url": "https://www.peche.com/article/48969/peche-du-chevesne-differentes-techniques-et-astuces-pour-reussir",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g3-peche-vairon",
+   "titre": "La pêche des vairons (peche.com)",
+   "url": "https://www.peche.com/article/39372/la-peche-des-vairons-une-peche-ludique-extremement-facile",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g4-aida-1999",
+   "titre": "Arrêté du 9 juillet 1999, espèces protégées menacées d'extinction (AIDA/Ineris)",
+   "url": "https://aida.ineris.fr/node/33240",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g4-fishipedia-chabot",
+   "titre": "Chabot commun (Fishipedia)",
+   "url": "https://www.fishipedia.fr/fr/poissons/cottus-gobio",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g4-minis-lotte",
+   "titre": "Lotte d'eau douce (Lota lota) : le mystérieux prédateur nocturne de nos rivières (lesminis.fr)",
+   "url": "https://lesminis.fr/blog/lotte-eau-douce-profondeurs-maritimes-poisson-riviere-guide-complet/",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g4-pc-bar-lineaire",
+   "titre": "Pêche du bar en linéaire, une technique facile et évidente (peche.com)",
+   "url": "https://www.peche.com/article/34024/peche-du-bar-en-lineaire-facile-et-evidente",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g4-pc-flet",
+   "titre": "Le flet, poisson plat sauve-bredouille (peche.com)",
+   "url": "https://www.peche.com/article/32436/le-flet-poisson-plat-sauve-bredouille",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g4-pc-invasives",
+   "titre": "Les espèces animales nuisibles et invasives de nos rivières, lacs et étangs (peche.com)",
+   "url": "https://www.peche.com/article/39584/les-especes-animales-nuisibles-et-invasives-de-nos-rivieres-et-etangs",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g4-pc-mulet-appats",
+   "titre": "Quels sont les meilleurs appâts pour pêcher les mulets (peche.com)",
+   "url": "https://www.peche.com/article/49965/quels-sont-les-meilleurs-appats-a-utiliser-pour-pecher-les-mulets",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g4-pc-mulet-bord",
+   "titre": "Comment pêcher le mulet en bord de mer (peche.com)",
+   "url": "https://www.peche.com/article/52107/comment-pecher-le-mulet-en-bord-de-mer-conseils-et-astuces",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g5-guichet-grenouilles",
+   "titre": "Réglementation de la pêche à la grenouille en Dombes (Guichet du savoir)",
+   "url": "https://www.guichetdusavoir.org/question/voir/140264",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g5-ofb-pattes-blanches",
+   "titre": "Écrevisse à pattes blanches, Austropotamobius pallipes (OFB)",
+   "url": "https://ofb.gouv.fr/especes/ecrevisse-a-pattes-blanches-austropotamobius-pallipes",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g5-peche-balance-marais",
+   "titre": "La pêche à la balance des écrevisses du Marais poitevin (peche.com)",
+   "url": "https://www.peche.com/article/39620/la-peche-a-la-balance-des-ecrevisses-du-marais-poitevin-une-peche-ludique-des-le-printemps",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g5-peche-ecrevisse-ete",
+   "titre": "Pêche de l'écrevisse en été : pourquoi et comment réussir ses sorties (peche.com)",
+   "url": "https://www.peche.com/article/52423/peche-de-l-ecrevisse-en-ete-pourquoi-et-comment-reussir-ses-sorties",
+   "lu_le": "2026-10-15"
+  },
+  {
+   "id": "g5-peche-ecrevisses-famille",
+   "titre": "Pêche des écrevisses, une pêche facile à pratiquer en famille (peche.com)",
+   "url": "https://www.peche.com/article/43609/la-peche-des-ecrevisses-une-peche-facile-a-pratiquer-en-famille",
+   "lu_le": "2026-10-15"
+  }
+ ],
+ "conseils": [
+  {
+   "id": "brochet-technique-1",
+   "espece": "brochet",
+   "type": "technique",
+   "texte": "Alterne reprises et longues pauses : la touche vient souvent à l'arrêt",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 1,
+   "sources": [
+    "g1-peche-brochet-debutant"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "brochet-hamecon-1",
+   "espece": "brochet",
+   "type": "hamecon",
+   "texte": "Prends un bas de ligne solide : ses dents coupent le fil fin",
+   "icone": "scope",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g1-peche-brochet-premier"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "brochet-technique-2",
+   "espece": "brochet",
+   "type": "technique",
+   "texte": "Cherche herbiers et branches immergées : il y guette sa proie",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g1-peche-brochet-debutant",
+    "g1-peche-brochet-premier"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "brochet-moment-1",
+   "espece": "brochet",
+   "type": "moment",
+   "texte": "Matin, fin d'après-midi ou lumière qui baisse : il est plus actif",
+   "icone": "clock",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g1-peche-brochet-premier"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "brochet-technique-3",
+   "espece": "brochet",
+   "type": "technique",
+   "texte": "Eau qui refroidit : ralentis, pauses longues, leurre près du fond",
+   "icone": "figure.fishing",
+   "mois": [
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 5,
+   "sources": [
+    "g1-peche-brochet-debutant",
+    "g1-decathlon-brochet-automne"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "sandre-technique-1",
+   "espece": "sandre",
+   "type": "technique",
+   "texte": "Shad sur tête plombée : touche le fond, décolle, remonte avec pauses",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 1,
+   "sources": [
+    "g1-peche-sandre-premier"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "sandre-technique-2",
+   "espece": "sandre",
+   "type": "technique",
+   "texte": "Vise cassures, fosses, piles de pont et branches noyées, près du fond",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g1-peche-sandre-premier"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "sandre-moment-1",
+   "espece": "sandre",
+   "type": "moment",
+   "texte": "Lumière basse ou ciel couvert : le sandre est plus à l'aise",
+   "icone": "clock",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g1-peche-sandre-automne"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "sandre-appat-1",
+   "espece": "sandre",
+   "type": "appat",
+   "texte": "Shad de 5 ou 6 pouces, un peu plus petit en été",
+   "icone": "fork.knife",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 4,
+   "sources": [
+    "g1-peche-sandre-souples"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "sandre-technique-3",
+   "espece": "sandre",
+   "type": "technique",
+   "texte": "Eau qui refroidit : ralentis et multiplie les pauses près des cassures",
+   "icone": "figure.fishing",
+   "mois": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 5,
+   "sources": [
+    "g1-peche-sandre-automne"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "perche-commune-appat-1",
+   "espece": "perche-commune",
+   "type": "appat",
+   "texte": "Ver de terre au flotteur, réglé au ras du fond",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g1-peche-perche-ver"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "perche-commune-hamecon-1",
+   "espece": "perche-commune",
+   "type": "hamecon",
+   "texte": "Hameçon n° 8 à 12 pour le ver ; bas de ligne de 14 à 16 centièmes",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g1-peche-perche-ver"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "perche-commune-technique-1",
+   "espece": "perche-commune",
+   "type": "technique",
+   "texte": "Vise herbiers, branchages et rochers ; change de poste si rien ne vient",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g1-peche-perche-ver"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "perche-commune-moment-1",
+   "espece": "perche-commune",
+   "type": "moment",
+   "texte": "L'hiver, le ver de terre au flotteur est très efficace",
+   "icone": "calendar",
+   "mois": [
+    1,
+    2,
+    3,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g1-peche-perche-ver"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "perche-commune-technique-2",
+   "espece": "perche-commune",
+   "type": "technique",
+   "texte": "Drop shot : plomb au fond, petit leurre libre sur la ligne au-dessus",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 5,
+   "sources": [
+    "g1-peche-perche-leurres"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "black-bass-technique-1",
+   "espece": "black-bass",
+   "type": "technique",
+   "texte": "Reste discret au bord : les vibrations de tes pas l'effraient",
+   "icone": "figure.fishing",
+   "mois": [
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g1-decathlon-black-bass"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "black-bass-technique-2",
+   "espece": "black-bass",
+   "type": "technique",
+   "texte": "Cherche herbiers, nénuphars et pontons ; il y trouve de l'ombre",
+   "icone": "figure.fishing",
+   "mois": [
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g1-decathlon-black-bass"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "black-bass-technique-3",
+   "espece": "black-bass",
+   "type": "technique",
+   "texte": "Weightless, Texas ou wacky : montages courants pour le leurre souple",
+   "icone": "figure.fishing",
+   "mois": [
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 3,
+   "sources": [
+    "g1-decathlon-black-bass"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "black-bass-moment-1",
+   "espece": "black-bass",
+   "type": "moment",
+   "texte": "Début d'automne : repère les bancs de petits poissons, il y chasse",
+   "icone": "calendar",
+   "mois": [
+    9,
+    10
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g1-peche-bb-automne"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "black-bass-technique-4",
+   "espece": "black-bass",
+   "type": "technique",
+   "texte": "Tôt le matin ou le soir : leurre de surface sur les herbiers",
+   "icone": "clock",
+   "mois": [
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 5,
+   "sources": [
+    "g1-peche-bb-automne"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "truite-fario-appat-1",
+   "espece": "truite-fario",
+   "type": "appat",
+   "texte": "Ver de terre qui couvre toute la tige de l'hameçon, en dérive près du fond",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g1-peche-truite-appats"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "truite-fario-technique-1",
+   "espece": "truite-fario",
+   "type": "technique",
+   "texte": "Plombs espacés vers le bas, ligne tendue, ferre dès la touche",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g1-peche-truite-appats"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "truite-fario-hamecon-1",
+   "espece": "truite-fario",
+   "type": "hamecon",
+   "texte": "Gros ver : hameçon n° 6 à 8 à longue tige ; petit ver : n° 10 à 12",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g1-decathlon-hamecons-truite"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "truite-fario-technique-2",
+   "espece": "truite-fario",
+   "type": "technique",
+   "texte": "Remonte la rivière et lance vers l'amont : tu arrives dans leur dos",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 4,
+   "sources": [
+    "g1-peche-truite-amont"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "truite-fario-technique-3",
+   "espece": "truite-fario",
+   "type": "technique",
+   "texte": "Cuillère tournante : petite palette quand l'eau est basse et lente",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 5,
+   "sources": [
+    "g1-peche-truite-cuillere"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "truite-arc-en-ciel-technique-1",
+   "espece": "truite-arc-en-ciel",
+   "type": "technique",
+   "texte": "Le rose est une valeur sûre sur l'arc-en-ciel comme sur la fario",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 1,
+   "sources": [
+    "g1-peche-truite-area"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "truite-arc-en-ciel-hamecon-1",
+   "espece": "truite-arc-en-ciel",
+   "type": "hamecon",
+   "texte": "Maïs : hameçon rond à fil fin, n° 10 à 12, pour ne pas fendre le grain",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g1-decathlon-hamecons-truite"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "truite-arc-en-ciel-technique-2",
+   "espece": "truite-arc-en-ciel",
+   "type": "technique",
+   "texte": "Truites peu actives ? Passe au brun ou kaki, comme les granulés",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 3,
+   "sources": [
+    "g1-peche-truite-area"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "truite-arc-en-ciel-technique-3",
+   "espece": "truite-arc-en-ciel",
+   "type": "technique",
+   "texte": "Eau trouble ou peu de lumière : flashy, UV ou phosphorescent",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 4,
+   "sources": [
+    "g1-peche-truite-area"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ombre-commun-technique-1",
+   "espece": "ombre-commun",
+   "type": "technique",
+   "texte": "Soigne ta dérive, sans traînage : l'ombre refuse souvent ce qui traîne",
+   "icone": "figure.fishing",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "mouche"
+   ],
+   "rang": 1,
+   "sources": [
+    "g1-peche-ombre-mouche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ombre-commun-hamecon-1",
+   "espece": "ombre-commun",
+   "type": "hamecon",
+   "texte": "Bas de ligne long, en 10 centièmes : il fait souvent la différence",
+   "icone": "scope",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "mouche"
+   ],
+   "rang": 2,
+   "sources": [
+    "g1-peche-ombre-mouche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ombre-commun-technique-2",
+   "espece": "ombre-commun",
+   "type": "technique",
+   "texte": "Nymphe au fil, ou à vue quand l'eau est claire",
+   "icone": "figure.fishing",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "mouche"
+   ],
+   "rang": 3,
+   "sources": [
+    "g1-peche-ombre-mouche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ombre-commun-appat-1",
+   "espece": "ombre-commun",
+   "type": "appat",
+   "texte": "En sèche, les petits culs de canard sont une valeur de référence",
+   "icone": "fork.knife",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "mouche"
+   ],
+   "rang": 4,
+   "sources": [
+    "g1-peche-ombre-mouche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ombre-commun-moment-1",
+   "espece": "ombre-commun",
+   "type": "moment",
+   "texte": "Fin d'été et automne : bon moment pour l'ombre à la mouche",
+   "icone": "calendar",
+   "mois": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "mouche"
+   ],
+   "rang": 5,
+   "sources": [
+    "g1-peche-ombre-mouche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "perche-soleil-appat-1",
+   "espece": "perche-soleil",
+   "type": "appat",
+   "texte": "L'asticot donne de très bons résultats, au bord, sous un petit bouchon",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "asticot"
+   ],
+   "rang": 1,
+   "sources": [
+    "g1-peche-perche-soleil"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "perche-soleil-hamecon-1",
+   "espece": "perche-soleil",
+   "type": "hamecon",
+   "texte": "Très petit hameçon, numéro 16 à 20, sous un petit bouchon",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g1-peche-perche-soleil"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "perche-soleil-moment-1",
+   "espece": "perche-soleil",
+   "type": "moment",
+   "texte": "Dès que l'eau se réchauffe, elle vient près des bords",
+   "icone": "calendar",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g1-peche-perche-soleil"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "perche-soleil-technique-1",
+   "espece": "perche-soleil",
+   "type": "technique",
+   "texte": "Elle prend aussi de petits leurres souples ou de petits crankbaits",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 4,
+   "sources": [
+    "g1-peche-perche-soleil"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "perche-soleil-technique-2",
+   "espece": "perche-soleil",
+   "type": "technique",
+   "texte": "Prudence : sa nageoire dorsale a des piquants quand tu la manipules",
+   "icone": "eye",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 5,
+   "sources": [
+    "g1-peche-perche-soleil"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "omble-de-fontaine-moment-1",
+   "espece": "omble-de-fontaine",
+   "type": "moment",
+   "texte": "Active toute la saison, parfois même à midi quand les farios boudent",
+   "icone": "calendar",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g1-peche-lacs-altitude"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "omble-de-fontaine-appat-1",
+   "espece": "omble-de-fontaine",
+   "type": "appat",
+   "texte": "De belles imitations d'insectes passent bien : elle accepte les grosses proies",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "mouche"
+   ],
+   "rang": 2,
+   "sources": [
+    "g1-peche-lacs-altitude"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "omble-chevalier-technique-1",
+   "espece": "omble-chevalier",
+   "type": "technique",
+   "texte": "Petite cuillère ondulante ou jig, lancé loin et ramené très lentement",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 1,
+   "sources": [
+    "g1-peche-omble-chevalier"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "omble-chevalier-technique-2",
+   "espece": "omble-chevalier",
+   "type": "technique",
+   "texte": "Surveille la descente du leurre : les touches viennent souvent quand il coule",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 2,
+   "sources": [
+    "g1-peche-omble-chevalier"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "cristivomer-moment-1",
+   "espece": "cristivomer",
+   "type": "moment",
+   "texte": "Plutôt nocturne : essaie tôt le matin ou au crépuscule",
+   "icone": "moon",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g1-peche-lacs-altitude"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "cristivomer-technique-1",
+   "espece": "cristivomer",
+   "type": "technique",
+   "texte": "Streamer imitant le vairon, animé près du bord dans la pénombre ou en profondeur",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "mouche"
+   ],
+   "rang": 2,
+   "sources": [
+    "g1-peche-lacs-altitude"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "coregones-hamecon-1",
+   "espece": "coregones",
+   "type": "hamecon",
+   "texte": "Plusieurs petites nymphes sur bas de ligne, hameçons n° 12 à 18, sous un plomb",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "bateau"
+   ],
+   "rang": 1,
+   "sources": [
+    "g1-peche-coregone"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "coregones-technique-1",
+   "espece": "coregones",
+   "type": "technique",
+   "texte": "Descends au niveau du poisson, puis soulève doucement pour imiter la larve",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "bateau"
+   ],
+   "rang": 2,
+   "sources": [
+    "g1-peche-coregone"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "coregones-technique-2",
+   "espece": "coregones",
+   "type": "technique",
+   "texte": "Touche très discrète : surveille le scion coloré et ferre en douceur",
+   "icone": "eye",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "bateau"
+   ],
+   "rang": 3,
+   "sources": [
+    "g1-peche-coregone"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "crapet-de-roche-technique-1",
+   "espece": "crapet-de-roche",
+   "type": "technique",
+   "texte": "Cherche blocs de pierre, racines et branches : il vit près des rochers",
+   "icone": "figure.fishing",
+   "mois": [
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g1-peche-crapet-roche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "crapet-de-roche-moment-1",
+   "espece": "crapet-de-roche",
+   "type": "moment",
+   "texte": "Juillet à octobre : sa meilleure période",
+   "icone": "calendar",
+   "mois": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g1-peche-crapet-roche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "black-bass-petite-bouche-technique-1",
+   "espece": "black-bass-petite-bouche",
+   "type": "technique",
+   "texte": "Stick de surface : marche lentement, avec de longues pauses, dans le courant",
+   "icone": "figure.fishing",
+   "mois": [
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 1,
+   "sources": [
+    "g1-peche-bbpb-leurres"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "black-bass-petite-bouche-technique-2",
+   "espece": "black-bass-petite-bouche",
+   "type": "technique",
+   "texte": "Ver souple en wacky ou texan, sur un poste précis que tu as repéré",
+   "icone": "figure.fishing",
+   "mois": [
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 2,
+   "sources": [
+    "g1-peche-bbpb-leurres"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "saumon-atlantique-technique-1",
+   "espece": "saumon-atlantique",
+   "type": "technique",
+   "texte": "Relâche-la vite, mains mouillées : espèce très encadrée",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g1-generationpeche-migrateurs",
+    "g1-fede-morbihan-nokill"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "silure-glane-appat-1",
+   "espece": "silure-glane",
+   "type": "appat",
+   "texte": "Un paquet de gros vers de terre sur un hameçon solide : base pour débuter",
+   "icone": "fork.knife",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g2-peche-silure"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "silure-glane-technique-2",
+   "espece": "silure-glane",
+   "type": "technique",
+   "texte": "Monte l'appât décollé du fond : l'odeur se diffuse mieux",
+   "icone": "figure.fishing",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g2-peche-silure"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "silure-glane-hamecon-3",
+   "espece": "silure-glane",
+   "type": "hamecon",
+   "texte": "Hameçon fort en fer, bas de ligne solide ; cache la pointe dans les vers",
+   "icone": "scope",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g2-peche-silure"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "silure-glane-appat-4",
+   "espece": "silure-glane",
+   "type": "appat",
+   "texte": "Poisson mort entier ou en morceaux : un classique pour le silure",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "poisson_mort"
+   ],
+   "rang": 4,
+   "sources": [
+    "g2-peche-silure"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "silure-glane-moment-5",
+   "espece": "silure-glane",
+   "type": "moment",
+   "texte": "Eau froide : appât très odorant près des fosses et bordures abritées",
+   "icone": "calendar",
+   "mois": [
+    12,
+    1,
+    2
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 5,
+   "sources": [
+    "g2-peche-silure"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carpe-commune-appat-1",
+   "espece": "carpe-commune",
+   "type": "appat",
+   "texte": "Bouillettes ou graines posées sur le fond : les appâts de base",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g2-decathlon-appat-carpe"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carpe-commune-appat-2",
+   "espece": "carpe-commune",
+   "type": "appat",
+   "texte": "Bouillette flottante (pop-up) si le fond est vaseux",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g2-decathlon-appat-carpe"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carpe-commune-moment-3",
+   "espece": "carpe-commune",
+   "type": "moment",
+   "texte": "Matin et soir, cherche-la en bordure ; en journée, vers les arrivées d'eau",
+   "icone": "calendar",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g2-decathlon-carpe-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carpe-commune-technique-4",
+   "espece": "carpe-commune",
+   "type": "technique",
+   "texte": "Amorce surtout en graines, un peu de bouillettes : sans la gaver",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "amorce"
+   ],
+   "rang": 4,
+   "sources": [
+    "g2-decathlon-appat-carpe"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carpe-commune-technique-5",
+   "espece": "carpe-commune",
+   "type": "technique",
+   "texte": "Montage tricheur : une bouillette plus une ou deux graines sur le cheveu",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 5,
+   "sources": [
+    "g2-decathlon-appat-carpe"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "gardon-appat-1",
+   "espece": "gardon",
+   "type": "appat",
+   "texte": "Asticots sur un petit hameçon : la valeur sûre pour le gardon",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "asticot"
+   ],
+   "rang": 1,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "gardon-technique-2",
+   "espece": "gardon",
+   "type": "technique",
+   "texte": "Amorce un peu et souvent : de petites quantités retiennent le banc",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "amorce"
+   ],
+   "rang": 2,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "gardon-appat-3",
+   "espece": "gardon",
+   "type": "appat",
+   "texte": "Maïs doux ou pain quand les asticots ne donnent rien",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "gardon-hamecon-4",
+   "espece": "gardon",
+   "type": "hamecon",
+   "texte": "Petit hameçon et esche petite et nette : la présentation compte",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "gardon-moment-5",
+   "espece": "gardon",
+   "type": "moment",
+   "texte": "En hiver, passe à des appâts plus petits et plus discrets",
+   "icone": "calendar",
+   "mois": [
+    12,
+    1,
+    2
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 5,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "tanche-appat-1",
+   "espece": "tanche",
+   "type": "appat",
+   "texte": "Maïs doux ou vers sur l'hameçon, posés sur le fond vaseux",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g2-fwg-tanche",
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "tanche-technique-2",
+   "espece": "tanche",
+   "type": "technique",
+   "texte": "Pose l'appât sur le fond ou juste au-dessus, près des herbiers et nénuphars",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g2-fwg-tanche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "tanche-moment-3",
+   "espece": "tanche",
+   "type": "moment",
+   "texte": "Tôt le matin et en soirée ; des bulles à la surface trahissent une tanche",
+   "icone": "calendar",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g2-fwg-tanche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "tanche-technique-4",
+   "espece": "tanche",
+   "type": "technique",
+   "texte": "Touches hésitantes : ne ferre que quand le flotteur part franchement",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g2-fwg-tanche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "tanche-technique-5",
+   "espece": "tanche",
+   "type": "technique",
+   "texte": "Flotteur sensible ou scion quivertip pour voir les touches discrètes",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 5,
+   "sources": [
+    "g2-fwg-tanche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "breme-commune-appat-1",
+   "espece": "breme-commune",
+   "type": "appat",
+   "texte": "Maïs doux ou asticots sur l'hameçon : valeurs sûres pour la brème",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "asticot"
+   ],
+   "rang": 1,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "breme-commune-technique-2",
+   "espece": "breme-commune",
+   "type": "technique",
+   "texte": "Au feeder, des pellets regroupent vite les brèmes sur ta zone",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "amorce"
+   ],
+   "rang": 2,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "breme-commune-appat-3",
+   "espece": "breme-commune",
+   "type": "appat",
+   "texte": "Vers de terre si les brèmes se méfient",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "breme-bordeliere-appat-1",
+   "espece": "breme-bordeliere",
+   "type": "appat",
+   "texte": "Asticots, casters ou maïs doux sur un petit hameçon",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "asticot"
+   ],
+   "rang": 1,
+   "sources": [
+    "g2-fwg-bordeliere"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "breme-bordeliere-technique-2",
+   "espece": "breme-bordeliere",
+   "type": "technique",
+   "texte": "Pêche au coup fine au bouchon, avec un bas de ligne fin",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g2-fwg-bordeliere"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "breme-bordeliere-moment-3",
+   "espece": "breme-bordeliere",
+   "type": "moment",
+   "texte": "Tôt le matin et en fin d'après-midi, autour des herbiers",
+   "icone": "calendar",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g2-fwg-bordeliere"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "rotengle-appat-1",
+   "espece": "rotengle",
+   "type": "appat",
+   "texte": "Asticots ou maïs doux près de la surface ou entre deux eaux",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "asticot"
+   ],
+   "rang": 1,
+   "sources": [
+    "g2-fwg-rotengle"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "rotengle-technique-2",
+   "espece": "rotengle",
+   "type": "technique",
+   "texte": "Petit flotteur léger et sensible, posé au bord des herbiers",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g2-fwg-rotengle"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "rotengle-moment-3",
+   "espece": "rotengle",
+   "type": "moment",
+   "texte": "Tôt le matin et en fin de soirée, il gobe en surface près des roseaux",
+   "icone": "calendar",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g2-fwg-rotengle"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carassin-commun-appat-1",
+   "espece": "carassin-commun",
+   "type": "appat",
+   "texte": "Maïs doux sur l'hameçon : valeur sûre pour le carassin",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g2-peche-carassin"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carassin-commun-technique-2",
+   "espece": "carassin-commun",
+   "type": "technique",
+   "texte": "Peu de boules d'amorce collante au départ, puis de petites quantités",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "amorce"
+   ],
+   "rang": 2,
+   "sources": [
+    "g2-peche-carassin"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carassin-commun-technique-3",
+   "espece": "carassin-commun",
+   "type": "technique",
+   "texte": "Pêche au coup : ligne fine et flotteur sensible pour les touches discrètes",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g2-peche-carassin"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carassin-commun-technique-4",
+   "espece": "carassin-commun",
+   "type": "technique",
+   "texte": "Bordures calmes et lisières d'herbiers ; sonde pour trouver la profondeur",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g2-peche-carassin"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carassin-argente-appat-1",
+   "espece": "carassin-argente",
+   "type": "appat",
+   "texte": "Maïs doux sur l'hameçon : valeur sûre pour le carassin",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g2-peche-carassin"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carassin-argente-technique-2",
+   "espece": "carassin-argente",
+   "type": "technique",
+   "texte": "Pêche au coup : ligne fine et flotteur sensible pour les touches discrètes",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g2-peche-carassin"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carpe-amour-appat-1",
+   "espece": "carpe-amour",
+   "type": "appat",
+   "texte": "Maïs doux, noix tigrées ou croûte de pain, posés sur le fond",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g2-fwg-carpe-amour"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carpe-amour-technique-2",
+   "espece": "carpe-amour",
+   "type": "technique",
+   "texte": "Très méfiante en eau claire : reste discret, présente l'appât naturellement",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g2-fwg-carpe-amour"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "carpe-amour-moment-3",
+   "espece": "carpe-amour",
+   "type": "moment",
+   "texte": "De mai à août, cherche-la près des herbiers et arbres en surplomb",
+   "icone": "calendar",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g2-fwg-carpe-amour"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ide-melanote-technique-1",
+   "espece": "ide-melanote",
+   "type": "technique",
+   "texte": "Petit leurre nageur ou cuillère, animation lente, le long des bordures",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 1,
+   "sources": [
+    "g2-pechecom-ide"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ide-melanote-technique-2",
+   "espece": "ide-melanote",
+   "type": "technique",
+   "texte": "Pêche-le à vue avec des lunettes polarisantes ; vise les piles de pont",
+   "icone": "eye",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g2-pechecom-ide"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "aspe-technique-1",
+   "espece": "aspe",
+   "type": "technique",
+   "texte": "Leurre coulant (stick) ramené vite, canne basse, dans le courant",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 1,
+   "sources": [
+    "g2-pechecom-aspe"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "aspe-technique-2",
+   "espece": "aspe",
+   "type": "technique",
+   "texte": "Essaie un leurre silencieux, sans billes sonores",
+   "icone": "sparkles",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 2,
+   "sources": [
+    "g2-pechecom-aspe"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "chevesne-technique-1",
+   "espece": "chevesne",
+   "type": "technique",
+   "texte": "Approche-toi sans bruit et reste bas : le chevesne voit très bien",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g3-peche-chevesne-astuces",
+    "g3-peche-chevesne-annee"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "chevesne-appat-1",
+   "espece": "chevesne",
+   "type": "appat",
+   "texte": "Ver de terre au toc ou sous un bouchon, le long des arbres",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g3-peche-chevesne-annee",
+    "g3-peche-chevesne-astuces"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "chevesne-hamecon-1",
+   "espece": "chevesne",
+   "type": "hamecon",
+   "texte": "Petit hameçon et fil fin : il se méfie du gros matériel",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g3-peche-chevesne-annee"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "chevesne-appat-2",
+   "espece": "chevesne",
+   "type": "appat",
+   "texte": "En été, une sauterelle ou une cerise au bouchon sous les arbres",
+   "icone": "fork.knife",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g3-peche-chevesne-annee",
+    "g3-peche-chevesne-astuces"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "chevesne-technique-2",
+   "espece": "chevesne",
+   "type": "technique",
+   "texte": "À l'automne, vise les courants marqués et les obstacles",
+   "icone": "water.waves",
+   "mois": [
+    9,
+    10,
+    11
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 5,
+   "sources": [
+    "g3-peche-chevesne-annee"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "barbeau-fluviatile-appat-1",
+   "espece": "barbeau-fluviatile",
+   "type": "appat",
+   "texte": "Ver de terre au fond : c'est l'une de ses proies préférées",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g3-peche-barbeau"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "barbeau-fluviatile-technique-1",
+   "espece": "barbeau-fluviatile",
+   "type": "technique",
+   "texte": "Cherche les courants rapides, avec des cailloux et des herbiers",
+   "icone": "water.waves",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g3-peche-barbeau"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "barbeau-fluviatile-technique-2",
+   "espece": "barbeau-fluviatile",
+   "type": "technique",
+   "texte": "Son odorat est fin : un peu d'amorce l'attire vite",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "amorce"
+   ],
+   "rang": 3,
+   "sources": [
+    "g3-peche-barbeau"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "barbeau-fluviatile-technique-3",
+   "espece": "barbeau-fluviatile",
+   "type": "technique",
+   "texte": "Un élastique dans le scion de la canne amortit ses départs",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g3-peche-barbeau"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "barbeau-fluviatile-moment-1",
+   "espece": "barbeau-fluviatile",
+   "type": "moment",
+   "texte": "De juin à août, essaie un petit leurre souple ou à lame",
+   "icone": "calendar",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 5,
+   "sources": [
+    "g3-peche-barbeau"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ablette-hamecon-1",
+   "espece": "ablette",
+   "type": "hamecon",
+   "texte": "Hameçon et fil très fins : l'ablette a la bouche fragile",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g3-peche-ablette"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ablette-technique-1",
+   "espece": "ablette",
+   "type": "technique",
+   "texte": "Matin et soir, pêche près de la surface ; en journée, plus profond",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g3-peche-ablette"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ablette-technique-2",
+   "espece": "ablette",
+   "type": "technique",
+   "texte": "Une amorce légère et régulière retient le banc devant toi",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "amorce"
+   ],
+   "rang": 3,
+   "sources": [
+    "g3-peche-ablette"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ablette-appat-1",
+   "espece": "ablette",
+   "type": "appat",
+   "texte": "Asticot toute l'année, teigne de préférence en été",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "asticot"
+   ],
+   "rang": 4,
+   "sources": [
+    "g3-peche-ablette"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ablette-technique-3",
+   "espece": "ablette",
+   "type": "technique",
+   "texte": "Ferre vite mais sans brusquer, sinon l'hameçon part",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 5,
+   "sources": [
+    "g3-peche-ablette"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "goujon-technique-1",
+   "espece": "goujon",
+   "type": "technique",
+   "texte": "Une canne courte suffit, depuis la rive ou les pieds dans l'eau",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g3-gers-cyprinides"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "goujon-appat-1",
+   "espece": "goujon",
+   "type": "appat",
+   "texte": "Ver de terre au coup : un appât qui se pêche toute l'année",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g3-nootica-coup"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "goujon-moment-1",
+   "espece": "goujon",
+   "type": "moment",
+   "texte": "À l'automne, le goujon se pêche bien au coup",
+   "icone": "calendar",
+   "mois": [
+    9,
+    10,
+    11
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g3-nootica-coup"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "vandoise-technique-1",
+   "espece": "vandoise",
+   "type": "technique",
+   "texte": "Cherche-la dans le courant : elle guette ce qui dérive",
+   "icone": "water.waves",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g3-fdp85-vandoise"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "vandoise-technique-2",
+   "espece": "vandoise",
+   "type": "technique",
+   "texte": "Comme pour le chevesne : au toc, au coup ou à la mouche",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g3-gers-cyprinides"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "vandoise-appat-1",
+   "espece": "vandoise",
+   "type": "appat",
+   "texte": "Présente un ver ou un petit insecte qui dérive dans le courant",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g3-fdp85-vandoise",
+    "g3-gers-cyprinides"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "vandoise-technique-3",
+   "espece": "vandoise",
+   "type": "technique",
+   "texte": "Espèce sensible, rare par endroits : manipule-la les mains mouillées",
+   "icone": "eye",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "confirme",
+    "occasionnel",
+    "debutant"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g3-fdp85-vandoise"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "hotu-technique-1",
+   "espece": "hotu",
+   "type": "technique",
+   "texte": "Pêche au bouchon, l'hameçon juste au-dessus du fond",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g3-fwg-hotu"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "hotu-appat-1",
+   "espece": "hotu",
+   "type": "appat",
+   "texte": "Asticot ou pâte de pain sur un petit hameçon",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "asticot"
+   ],
+   "rang": 2,
+   "sources": [
+    "g3-fwg-hotu"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "hotu-technique-2",
+   "espece": "hotu",
+   "type": "technique",
+   "texte": "Vise les radiers de gravier et la queue des fosses",
+   "icone": "water.waves",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g3-fwg-hotu"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "hotu-moment-1",
+   "espece": "hotu",
+   "type": "moment",
+   "texte": "Il broute les algues en plein jour : pêche quand il fait clair",
+   "icone": "sun.max",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g3-fwg-hotu"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "hotu-technique-3",
+   "espece": "hotu",
+   "type": "technique",
+   "texte": "Mains mouillées, et relâche-le face au courant pour qu'il reprenne son souffle",
+   "icone": "drop",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 5,
+   "sources": [
+    "g3-fwg-hotu"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "vairon-appat-1",
+   "espece": "vairon",
+   "type": "appat",
+   "texte": "Petits morceaux de ver de terre, ou une pinkie, sur ton hameçon",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g3-peche-vairon"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "vairon-hamecon-1",
+   "espece": "vairon",
+   "type": "hamecon",
+   "texte": "Hameçon sans ardillon et flotteur très léger pour le vairon",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g3-peche-vairon"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "vairon-technique-1",
+   "espece": "vairon",
+   "type": "technique",
+   "texte": "Cherche le banc entre herbiers et rochers, face au courant",
+   "icone": "water.waves",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g3-peche-vairon"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "esturgeon-europeen-technique-1",
+   "espece": "esturgeon-europeen",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g4-aida-1999"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "apron-du-rhone-technique-1",
+   "espece": "apron-du-rhone",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g4-aida-1999"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "lotte-appat-1",
+   "espece": "lotte",
+   "type": "appat",
+   "texte": "Un ver de terre posé sur le fond, dans un coin calme",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g4-minis-lotte"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "lotte-moment-1",
+   "espece": "lotte",
+   "type": "moment",
+   "texte": "Elle se cache le jour : tente le crépuscule, quand la lumière baisse",
+   "icone": "moon",
+   "mois": [
+    4,
+    5,
+    6
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g4-minis-lotte"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "chabot-technique-1",
+   "espece": "chabot",
+   "type": "technique",
+   "texte": "Il vit sous les pierres du fond : si tu le sors, relâche-le vite",
+   "icone": "fish",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g4-fishipedia-chabot"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "flet-appat-1",
+   "espece": "flet",
+   "type": "appat",
+   "texte": "Les vers sont son appât favori : pose-les sur un fond sableux ou vaseux",
+   "icone": "fork.knife",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g4-pc-flet"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "flet-technique-1",
+   "espece": "flet",
+   "type": "technique",
+   "texte": "Cherche-le en estuaire et près des ports, dans les creux sablo-vaseux",
+   "icone": "water.waves",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g4-pc-flet"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "flet-technique-2",
+   "espece": "flet",
+   "type": "technique",
+   "texte": "Ajoute une perle phosphorescente si l'eau est chargée de sédiments",
+   "icone": "sparkles",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g4-pc-flet"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "mulet-appat-1",
+   "espece": "mulet",
+   "type": "appat",
+   "texte": "Mie de pain en petites boulettes fraîches, sur un petit hameçon",
+   "icone": "fork.knife",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g4-pc-mulet-appats"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "mulet-hamecon-1",
+   "espece": "mulet",
+   "type": "hamecon",
+   "texte": "Petit hameçon fin et discret, sur un bas de ligne fin",
+   "icone": "scope",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g4-pc-mulet-bord"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "mulet-technique-1",
+   "espece": "mulet",
+   "type": "technique",
+   "texte": "Ne ferre pas trop tôt : il pousse l'appât avant de mordre",
+   "icone": "figure.fishing",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g4-pc-mulet-bord"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "mulet-moment-1",
+   "espece": "mulet",
+   "type": "moment",
+   "texte": "Choisis un moment calme, eau claire et mer peu agitée, près des digues",
+   "icone": "water.waves",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g4-pc-mulet-bord"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "bar-appat-1",
+   "espece": "bar",
+   "type": "appat",
+   "texte": "Un leurre souple lancé puis ramené en continu, c'est simple pour débuter",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 1,
+   "sources": [
+    "g4-pc-bar-lineaire"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "bar-technique-1",
+   "espece": "bar",
+   "type": "technique",
+   "texte": "Ramène à vitesse stable, entre deux eaux, sans à-coups",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 2,
+   "sources": [
+    "g4-pc-bar-lineaire"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "bar-moment-1",
+   "espece": "bar",
+   "type": "moment",
+   "texte": "Des bars chassent en surface ? Lance dedans, ils sont en pleine activité",
+   "icone": "eye",
+   "mois": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 3,
+   "sources": [
+    "g4-pc-bar-lineaire"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "gobie-a-taches-noires-technique-1",
+   "espece": "gobie-a-taches-noires",
+   "type": "technique",
+   "texte": "Espèce invasive : ne la transporte pas vivante, ne l'utilise pas en appât",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g4-pc-invasives"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "gobie-de-kessler-technique-1",
+   "espece": "gobie-de-kessler",
+   "type": "technique",
+   "texte": "Espèce invasive : ne la transporte pas vivante, ne l'utilise pas en appât",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g4-pc-invasives"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-pattes-blanches-technique-1",
+   "espece": "ecrevisse-pattes-blanches",
+   "type": "technique",
+   "texte": "Relâche-la.",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-peche-ecrevisse-ete",
+    "g5-ofb-pattes-blanches",
+    "g5-peche-ecrevisses-famille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-pattes-rouges-technique-1",
+   "espece": "ecrevisse-pattes-rouges",
+   "type": "technique",
+   "texte": "Relâche-la.",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-peche-ecrevisse-ete",
+    "g5-peche-ecrevisses-famille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-des-torrents-technique-1",
+   "espece": "ecrevisse-des-torrents",
+   "type": "technique",
+   "texte": "Relâche-la.",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-peche-ecrevisse-ete",
+    "g5-peche-ecrevisses-famille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-pattes-greles-technique-1",
+   "espece": "ecrevisse-pattes-greles",
+   "type": "technique",
+   "texte": "Relâche-la.",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-peche-ecrevisse-ete",
+    "g5-peche-ecrevisses-famille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "grenouille-verte-technique-1",
+   "espece": "grenouille-verte",
+   "type": "technique",
+   "texte": "Relâche-la.",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-guichet-grenouilles"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "grenouille-rousse-technique-1",
+   "espece": "grenouille-rousse",
+   "type": "technique",
+   "texte": "Relâche-la.",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-guichet-grenouilles"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "grenouille-rieuse-technique-1",
+   "espece": "grenouille-rieuse",
+   "type": "technique",
+   "texte": "Relâche-la.",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-guichet-grenouilles"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-americaine-appat-1",
+   "espece": "ecrevisse-americaine",
+   "type": "appat",
+   "texte": "Appâte ta balance avec du foie, de la sardine ou des croquettes",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-peche-ecrevisse-ete",
+    "g5-peche-balance-marais"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-americaine-technique-1",
+   "espece": "ecrevisse-americaine",
+   "type": "technique",
+   "texte": "Pose la balance à plat au fond, relève-la d'un coup sec après 5 min",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g5-peche-balance-marais",
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-americaine-moment-1",
+   "espece": "ecrevisse-americaine",
+   "type": "moment",
+   "texte": "Pêche en fin de journée : l'eau tiède les rend actives",
+   "icone": "clock",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-americaine-technique-2",
+   "espece": "ecrevisse-americaine",
+   "type": "technique",
+   "texte": "Relève tes balances toutes les 10 min pour multiplier les prises",
+   "icone": "hare",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-de-louisiane-appat-1",
+   "espece": "ecrevisse-de-louisiane",
+   "type": "appat",
+   "texte": "Appâte ta balance avec du foie, de la sardine ou des croquettes",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-peche-ecrevisse-ete",
+    "g5-peche-balance-marais"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-de-louisiane-technique-1",
+   "espece": "ecrevisse-de-louisiane",
+   "type": "technique",
+   "texte": "Pose la balance à plat au fond, relève-la d'un coup sec après 5 min",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g5-peche-balance-marais",
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-de-louisiane-moment-1",
+   "espece": "ecrevisse-de-louisiane",
+   "type": "moment",
+   "texte": "Pêche en fin de journée : l'eau tiède les rend actives",
+   "icone": "clock",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-de-louisiane-technique-2",
+   "espece": "ecrevisse-de-louisiane",
+   "type": "technique",
+   "texte": "Cherche les berges en pente douce, sous les pierres et les racines",
+   "icone": "eye",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-de-louisiane-moment-2",
+   "espece": "ecrevisse-de-louisiane",
+   "type": "moment",
+   "texte": "Active de mars à octobre ; l'hiver, elle se terre dans sa galerie",
+   "icone": "calendar",
+   "mois": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 5,
+   "sources": [
+    "g5-peche-balance-marais"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-signal-appat-1",
+   "espece": "ecrevisse-signal",
+   "type": "appat",
+   "texte": "Sardine, hareng ou tripes : les odeurs fortes marchent le mieux",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-peche-ecrevisses-famille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-signal-technique-1",
+   "espece": "ecrevisse-signal",
+   "type": "technique",
+   "texte": "Mets l'appât dans un petit filet : il tient plus longtemps",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g5-peche-ecrevisses-famille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "ecrevisse-signal-technique-2",
+   "espece": "ecrevisse-signal",
+   "type": "technique",
+   "texte": "Relève tes balances toutes les 10 min pour multiplier les prises",
+   "icone": "hare",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  }
+ ]
+}
