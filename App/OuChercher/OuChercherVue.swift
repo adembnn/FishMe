@@ -68,7 +68,7 @@ private struct CarteEspece: View {
 
     var body: some View {
         VStack(spacing: 8) {
-            ImageEspece(nom: espece.image)
+            ImageEspeceOuChercher(nom: espece.image)
                 .frame(height: 64)
             Text(espece.nom)
                 .font(.subheadline.weight(.bold))
@@ -83,7 +83,7 @@ private struct CarteEspece: View {
 }
 
 /// L'image de l'espèce (livrée par D1 dans les assets, posée par A) ; une icône neutre tant qu'elle manque.
-private struct ImageEspece: View {
+private struct ImageEspeceOuChercher: View {
     let nom: String
 
     var body: some View {
@@ -114,7 +114,7 @@ private struct ListeCoins: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 HStack(spacing: 12) {
-                    ImageEspece(nom: espece.image).frame(width: 56, height: 56)
+                    ImageEspeceOuChercher(nom: espece.image).frame(width: 56, height: 56)
                     Text(espece.nom).font(.title2.weight(.bold)).accessibilityAddTraits(.isHeader)
                     Spacer(minLength: 0)
                 }
