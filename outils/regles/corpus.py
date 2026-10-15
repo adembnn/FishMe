@@ -4,7 +4,7 @@ Usage : python -I outils/regles/corpus.py <code>
 Lit corpus/<code>/sources.json, une liste d'objets :
   {"fichier": "ap-2026-002.pdf", "titre": "...", "url": "https://...", "signe_le": "AAAA-MM-JJ ou null", "etat": "en vigueur, permanent"}
 Pour chaque source : télécharge le fichier s'il manque (curl), extrait le texte à côté (.txt) par la couche texte du PDF,
-sinon par l'OCR en français de Windows (ocr.ps1), et écrit corpus/<code>/manifeste.json (titre, URL, signature,
+sinon par l'OCR français de Tesseract (PC ou Mac, un seul à la fois), à défaut celui de Windows (ocr.ps1), et écrit corpus/<code>/manifeste.json (titre, URL, signature,
 téléchargement, SHA-256). Relançable : ce qui est déjà téléchargé ou extrait n'est pas refait.
 """
 import datetime
@@ -13,6 +13,7 @@ import html
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -37,12 +38,35 @@ def telecharger(url, chemin):
         raise RuntimeError(f"téléchargement refusé ({r.stdout or r.stderr.strip()}) : {url}")
 
 
-TESSERACT_EXE = os.environ.get("TESSERACT_EXE", r"C:\Program Files\Tesseract-OCR\tesseract.exe")
+TESSERACT_EXE = os.environ.get("TESSERACT_EXE") or shutil.which("tesseract") or r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 TESSDATA = os.environ.get("TESSDATA_PREFIX", r"C:\Users\Adem\tessdata")
 
 
 def tesseract_dispo():
-    return os.path.exists(TESSERACT_EXE) and os.path.exists(os.path.join(TESSDATA, "fra.traineddata"))
+    if not os.path.exists(TESSERACT_EXE):
+        return False
+    if os.path.exists(os.path.join(TESSDATA, "fra.traineddata")):
+        return True
+    # Mac (Homebrew, tesseract-lang) : les langues sont dans le dossier de Tesseract, sans TESSDATA_PREFIX.
+    r = subprocess.run([TESSERACT_EXE, "--list-langs"], capture_output=True, text=True)
+    return "fra" in r.stdout.split()
+
+
+class UnSeulOcr:
+    """Verrou entre processus : un seul OCR à la fois sur la machine (Mac de 8 Go partagé). Sans effet sous Windows."""
+    def __enter__(self):
+        try:
+            import fcntl
+        except ImportError:
+            self.f = None
+            return self
+        self.f = open(os.path.join(tempfile.gettempdir(), "regles-ocr.lock"), "w")
+        fcntl.flock(self.f, fcntl.LOCK_EX)
+        return self
+
+    def __exit__(self, *_):
+        if self.f:
+            self.f.close()
 
 
 def ocr_tesseract(png):
@@ -50,7 +74,7 @@ def ocr_tesseract(png):
     sur un scan dégradé : arrêté 2025-0988 du 93, 2 mots mêlant chiffres et lettres contre 6 ; sur l'AP de l'Eure
     les deux moteurs concordent à 97,8 % des mots."""
     r = subprocess.run([TESSERACT_EXE, png, "stdout", "-l", "fra", "--psm", "6"], capture_output=True,
-                       env={**os.environ, "TESSDATA_PREFIX": TESSDATA}, check=True)
+                       env={**os.environ, "TESSDATA_PREFIX": TESSDATA} if os.path.isdir(TESSDATA) else None, check=True)
     return r.stdout.decode("utf-8", "replace")
 
 
@@ -70,7 +94,8 @@ def texte_pdf(chemin, sortie):
             blocs = None
             if tesseract_dispo():
                 try:
-                    blocs = [ocr_tesseract(pngs[i]) for i in scans]
+                    with UnSeulOcr():
+                        blocs = [ocr_tesseract(pngs[i]) for i in scans]
                     moteur = "ocr-tesseract-fra"
                 except (subprocess.CalledProcessError, OSError):
                     blocs = None  # repli sur l'OCR de Windows
