@@ -526,6 +526,9 @@ def lire_json(chemin, aide):
 def ecrire_departement(code, fichier):
     texte = json.dumps(fichier, ensure_ascii=False, indent=1) + "\n"
     if len(texte.encode("utf-8")) > TAILLE_MAX:
+        # Trop gros avec l'indentation (73, 428 Ko le 15 oct.) : on l'écrit sans espaces.
+        texte = json.dumps(fichier, ensure_ascii=False, separators=(",", ":")) + "\n"
+    if len(texte.encode("utf-8")) > TAILLE_MAX:
         raise Refus(f"{code}.json ferait {len(texte.encode('utf-8')) // 1024} Ko (limite 400 Ko).")
     os.makedirs(REGLES, exist_ok=True)
     with open(os.path.join(REGLES, code + ".json"), "w", encoding="utf-8", newline="\n") as f:
