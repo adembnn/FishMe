@@ -5,11 +5,27 @@
   "latin": "Salmo trutta fario",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "truite_commune",
   "code_sandre": "2221",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "truite-arc-en-ciel",
+    "critere": "Arc-en-ciel : points noirs jusque sur la caudale et l'adipeuse, large bande rose sur le flanc et l'opercule, aucun point rouge. Fario : caudale sans points, adipeuse sans point noir (parfois orange), points rouges fréquents, bouche atteignant l'arrière de l'œil.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "truite-de-mer",
+    "critere": "Même espèce. Truite de mer : robe blanche argentée, taches noires souvent sous la ligne latérale, gabarit nettement plus grand. Un smolt ou une truite de lac argentée peut lui ressembler.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "saumon-atlantique",
+    "critere": "Tacon (jeune saumon) : caudale fourchue, adipeuse gris-bleu, 8 à 12 marques ovales régulières sur le flanc, petite bouche, grandes pectorales. Truitelle : caudale droite, adipeuse orangée, bouche jusqu'à l'arrière de l'œil.",
+    "source": "https://www.peche67.fr/cms_viewFile.php?idtf=34432&path=tacon-truitelle.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "truite-fario",
   "silhouette": "truite-fario-silhouette",
@@ -22,11 +38,17 @@
   "latin": "Oncorhynchus mykiss",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "truite_arc_en_ciel",
   "code_sandre": "2216",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "truite-fario",
+    "critere": "Arc-en-ciel : points noirs jusque sur la caudale et l'adipeuse, large bande rose sur le flanc et l'opercule, aucun point rouge. Fario : caudale sans points, adipeuse sans point noir (parfois orange), points rouges fréquents, bouche atteignant l'arrière de l'œil.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "truite-arc-en-ciel",
   "silhouette": "truite-arc-en-ciel-silhouette",
@@ -39,11 +61,22 @@
   "latin": "Salmo trutta trutta",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "truite_de_mer",
   "code_sandre": "2224",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "saumon-atlantique",
+    "critere": "Saumon : pédoncule caudal fin, caudale très échancrée, mâchoire n'atteignant pas l'arrière de l'œil, taches surtout au-dessus de la ligne latérale, adipeuse sans orange. Truite de mer : pédoncule épais, caudale droite, mâchoire qui dépasse l'œil, taches aussi sous la ligne latérale.",
+    "source": "https://www.generationpeche.fr/3535-la-peche-des-salmonides-migrateurs.htm"
+   },
+   {
+    "avec": "truite-fario",
+    "critere": "Même espèce. Truite de mer : robe blanche argentée, taches noires souvent sous la ligne latérale, gabarit nettement plus grand. Un smolt ou une truite de lac argentée peut lui ressembler.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "truite-de-mer",
   "silhouette": "truite-de-mer-silhouette",
@@ -56,11 +89,22 @@
   "latin": "Salmo salar",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "saumon_atlantique",
   "code_sandre": "2220",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "truite-de-mer",
+    "critere": "Saumon : pédoncule caudal fin, caudale très échancrée, mâchoire n'atteignant pas l'arrière de l'œil, taches surtout au-dessus de la ligne latérale, adipeuse sans orange. Truite de mer : pédoncule épais, caudale droite, mâchoire qui dépasse l'œil, taches aussi sous la ligne latérale.",
+    "source": "https://www.generationpeche.fr/3535-la-peche-des-salmonides-migrateurs.htm"
+   },
+   {
+    "avec": "truite-fario",
+    "critere": "Tacon (jeune saumon) : caudale fourchue, adipeuse gris-bleu, 8 à 12 marques ovales régulières sur le flanc, petite bouche, grandes pectorales. Truitelle : caudale droite, adipeuse orangée, bouche jusqu'à l'arrière de l'œil.",
+    "source": "https://www.peche67.fr/cms_viewFile.php?idtf=34432&path=tacon-truitelle.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "saumon-atlantique",
   "silhouette": "saumon-atlantique-silhouette",
@@ -73,11 +117,17 @@
   "latin": "Salvelinus fontinalis",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "omble_de_fontaine",
   "code_sandre": "2227",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "omble-chevalier",
+    "critere": "Omble de fontaine : dos vermiculé, taches rouges cerclées de bleu, caudale droite. Omble chevalier : pas de vermiculures, taches pâles peu nombreuses, caudale légèrement échancrée. Les deux ont un liseré blanc sur les nageoires du bas.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "omble-de-fontaine",
   "silhouette": "omble-de-fontaine-silhouette",
@@ -90,11 +140,22 @@
   "latin": "Salvelinus alpinus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "omble_chevalier",
   "code_sandre": "2226",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "omble-de-fontaine",
+    "critere": "Omble de fontaine : dos vermiculé, taches rouges cerclées de bleu, caudale droite. Omble chevalier : pas de vermiculures, taches pâles peu nombreuses, caudale légèrement échancrée. Les deux ont un liseré blanc sur les nageoires du bas.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "cristivomer",
+    "critere": "Cristivomer : caudale nettement fourchue, nombreuses taches claires jusque sur la tête et les nageoires, pas de rouge.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "omble-chevalier",
   "silhouette": "omble-chevalier-silhouette",
@@ -107,11 +168,17 @@
   "latin": "Salvelinus namaycush",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "cristivomer",
   "code_sandre": "2228",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "omble-chevalier",
+    "critere": "Cristivomer : caudale nettement fourchue, nombreuses taches claires jusque sur la tête et les nageoires, pas de rouge.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "cristivomer",
   "silhouette": "cristivomer-silhouette",
@@ -124,10 +191,10 @@
   "latin": "Thymallus thymallus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "ombre_commun",
   "code_sandre": "2247",
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "moyen",
   "confusions": [],
   "suivi_ofb": true,
   "image": "ombre-commun",
@@ -141,11 +208,17 @@
   "latin": "Hucho hucho",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "autre_poisson",
   "code_sandre": "2214",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "truite-fario",
+    "critere": "Huchon : adipeuse aussi longue que l'anale, corps très allongé, petites taches noires, pas de liseré blanc.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "huchon",
   "silhouette": "huchon-silhouette",
@@ -158,10 +231,10 @@
   "latin": "Coregonus spp.",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "coregone",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "moyen",
   "confusions": [],
   "suivi_ofb": true,
   "image": "coregones",
@@ -175,11 +248,17 @@
   "latin": "Esox lucius",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "brochet",
   "code_sandre": "2151",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "brochet-aquitain",
+    "critere": "Brochet aquitain : museau plus court que la distance œil-opercule, fines bandes obliques donnant une robe marbrée, 101 à 121 écailles sur la ligne latérale. Brochet commun : museau aussi long ou plus long, robe tachetée de points clairs, 117 à 148 écailles.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "brochet",
   "silhouette": "brochet-silhouette",
@@ -192,11 +271,27 @@
   "latin": "Sander lucioperca",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "sandre",
   "code_sandre": "2195",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "perche-commune",
+    "critere": "Sandre : canines, pas d'épine sur l'opercule, corps allongé gris-vert. Perche : 5 à 7 bandes noires verticales, forte épine sur l'opercule, nageoires du bas orange-rouge, pas de canines.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "bar",
+    "critere": "Bar : 2 épines sur l'opercule, pas de canines, dorsales séparées, robe argentée sans bandes.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "apron-du-rhone",
+    "critere": "Apron : petit, tête conique sombre, 3 bandes sombres en selle sur l'arrière du corps, vit posé sur le fond.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "sandre",
   "silhouette": "sandre-silhouette",
@@ -209,11 +304,22 @@
   "latin": "Perca fluviatilis",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "perche",
   "code_sandre": "2193",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "sandre",
+    "critere": "Sandre : canines, pas d'épine sur l'opercule, corps allongé gris-vert. Perche : 5 à 7 bandes noires verticales, forte épine sur l'opercule, nageoires du bas orange-rouge, pas de canines.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "gremille",
+    "critere": "Grémille : dorsales soudées en une seule, corps moucheté sans bandes, petite taille, aiguillon sur l'opercule.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "perche-commune",
   "silhouette": "perche-commune-silhouette",
@@ -226,11 +332,17 @@
   "latin": "Gymnocephalus cernua",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "gremille",
   "code_sandre": "2191",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "perche-commune",
+    "critere": "Grémille : dorsales soudées en une seule, corps moucheté sans bandes, petite taille, aiguillon sur l'opercule.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "gremille",
   "silhouette": "gremille-silhouette",
@@ -243,11 +355,22 @@
   "latin": "Micropterus salmoides",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "black_bass",
   "code_sandre": "2053",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "black-bass-petite-bouche",
+    "critere": "Grande bouche : la commissure dépasse l'arrière de l'œil, larges taches irrégulières le long du flanc. Petite bouche : la commissure ne dépasse pas l'œil, bandes verticales chez les jeunes.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "perche-soleil",
+    "critere": "Perche soleil : corps haut et rond, tache rouge bordée de noir sur l'opercule (mâle), couleurs vives vert-bleu-orange, petite bouche ne dépassant pas l'œil.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "black-bass",
   "silhouette": "black-bass-silhouette",
@@ -260,7 +383,7 @@
   "latin": "Lepomis gibbosus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "perche_soleil",
   "code_sandre": "2050",
   "statut": [
    {
@@ -268,8 +391,19 @@
     "source": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "black-bass",
+    "critere": "Perche soleil : corps haut et rond, tache rouge bordée de noir sur l'opercule (mâle), couleurs vives vert-bleu-orange, petite bouche ne dépassant pas l'œil.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "crapet-de-roche",
+    "critere": "Crapet de roche : brun doré à olive, écailles ponctuées de noir formant des rangées, 5 à 7 épines à l'anale (perche soleil : 3).",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "perche-soleil",
   "silhouette": "perche-soleil-silhouette",
@@ -282,11 +416,22 @@
   "latin": "Silurus glanis",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "silure",
   "code_sandre": "2238",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "poisson-chat",
+    "critere": "Silure : 6 barbillons, dorsale minuscule, pas d'adipeuse, anale très longue. Poisson-chat : 8 barbillons, petite nageoire adipeuse, dorsale plus grande.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "lotte",
+    "critere": "Lotte : un seul barbillon sous le menton, deuxième dorsale très longue, corps lisse et allongé.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "silure-glane",
   "silhouette": "silure-glane-silhouette",
@@ -299,7 +444,7 @@
   "latin": "Ameiurus melas",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "poisson_chat",
   "code_sandre": null,
   "statut": [
    {
@@ -307,8 +452,14 @@
     "source": "https://aida.ineris.fr/reglementation/arrete-020323-portant-mise-a-jour-liste-especes-animales-vegetales-exotiques"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "silure-glane",
+    "critere": "Silure : 6 barbillons, dorsale minuscule, pas d'adipeuse, anale très longue. Poisson-chat : 8 barbillons, petite nageoire adipeuse, dorsale plus grande.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "poisson-chat",
   "silhouette": "poisson-chat-silhouette",
@@ -321,11 +472,22 @@
   "latin": "Cyprinus carpio",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "carpe",
   "code_sandre": "2110",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "carassin-commun",
+    "critere": "Carpe : 4 barbillons autour de la bouche. Carassins et poisson rouge : aucun barbillon.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "carpe-koi",
+    "critere": "Koï : même forme que la carpe et 4 barbillons, robe colorée (orange, blanc, noir) ou écailles métalliques.",
+    "source": "[?] pas de source lue"
+   }
+  ],
   "suivi_ofb": true,
   "image": "carpe-commune",
   "silhouette": "carpe-commune-silhouette",
@@ -338,11 +500,17 @@
   "latin": "Ctenopharyngodon idella",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "amour_blanc",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "carpe-argentee",
+    "critere": "Carpe à grosse tête : tête énorme (un tiers du corps), dos sombre taché de noir. Carpe argentée : tête plus petite (un quart du corps), flancs gris argenté. Les deux ont les yeux très bas et une bouche tournée vers le haut.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "carpe-amour",
   "silhouette": "carpe-amour-silhouette",
@@ -355,11 +523,17 @@
   "latin": "Hypophthalmichthys molitrix",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "carpe_argentee",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "carpe-grosse-tete",
+    "critere": "Carpe à grosse tête : tête énorme (un tiers du corps), dos sombre taché de noir. Carpe argentée : tête plus petite (un quart du corps), flancs gris argenté. Les deux ont les yeux très bas et une bouche tournée vers le haut.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "carpe-argentee",
   "silhouette": "carpe-argentee-silhouette",
@@ -372,11 +546,17 @@
   "latin": "Hypophthalmichthys nobilis (syn. Aristichthys nobilis)",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "carpe_grosse_tete",
   "code_sandre": "2092",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "carpe-argentee",
+    "critere": "Carpe à grosse tête : tête énorme (un tiers du corps), dos sombre taché de noir. Carpe argentée : tête plus petite (un quart du corps), flancs gris argenté. Les deux ont les yeux très bas et une bouche tournée vers le haut.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "carpe-grosse-tete",
   "silhouette": "carpe-grosse-tete-silhouette",
@@ -389,11 +569,22 @@
   "latin": "Rutilus rutilus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "gardon",
   "code_sandre": "2133",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "rotengle",
+    "critere": "Rotengle : dorsale nettement en arrière des pelviennes, bouche tournée vers le haut, iris doré, nageoires rouge vif. Gardon : dorsale à l'aplomb des pelviennes, bouche étroite et droite, iris rouge-orange.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "ide-melanote",
+    "critere": "Ide : plus de 50 écailles sur la ligne latérale (gardon et rotengle : moins de 50), bouche terminale légèrement oblique, dorsale en arrière des pelviennes. L'orfe est sa forme dorée d'élevage.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "gardon",
   "silhouette": "gardon-silhouette",
@@ -406,11 +597,22 @@
   "latin": "Scardinius erythrophthalmus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "rotengle",
   "code_sandre": "2135",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "gardon",
+    "critere": "Rotengle : dorsale nettement en arrière des pelviennes, bouche tournée vers le haut, iris doré, nageoires rouge vif. Gardon : dorsale à l'aplomb des pelviennes, bouche étroite et droite, iris rouge-orange.",
+    "source": "http://www.peche28.fr/4001-rotengle.htm"
+   },
+   {
+    "avec": "ide-melanote",
+    "critere": "Ide : plus de 50 écailles sur la ligne latérale (gardon et rotengle : moins de 50), bouche terminale légèrement oblique, dorsale en arrière des pelviennes. L'orfe est sa forme dorée d'élevage.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "rotengle",
   "silhouette": "rotengle-silhouette",
@@ -423,11 +625,17 @@
   "latin": "Abramis brama",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "breme",
   "code_sandre": "2086",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "breme-bordeliere",
+    "critere": "Brème bordelière : base des nageoires paires orange à rose, œil au moins aussi long que le museau, 19 à 22 rayons à l'anale (brème commune : 23 à 30), 44 à 51 écailles sur la ligne latérale (brème commune : 50 à 62).",
+    "source": "https://www.bkfv-fcbp.ch/fr/la-peche-dans-le-canton-de-berne/especes-de-poissons/breme-commune-et-breme-bordeliere/"
+   }
+  ],
   "suivi_ofb": true,
   "image": "breme-commune",
   "silhouette": "breme-commune-silhouette",
@@ -440,11 +648,17 @@
   "latin": "Blicca bjoerkna",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "breme_bordeliere",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "breme-commune",
+    "critere": "Brème bordelière : base des nageoires paires orange à rose, œil au moins aussi long que le museau, 19 à 22 rayons à l'anale (brème commune : 23 à 30), 44 à 51 écailles sur la ligne latérale (brème commune : 50 à 62).",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "breme-bordeliere",
   "silhouette": "breme-bordeliere-silhouette",
@@ -457,11 +671,32 @@
   "latin": "Squalius cephalus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "chevesne",
   "code_sandre": "31041",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "vandoise",
+    "critere": "Chevesne : bord de l'anale droit ou convexe (concave chez la vandoise et l'ide), grande bouche, tête large, liseré sombre au bord de la caudale, nageoires du bas orangées.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "ide-melanote",
+    "critere": "Chevesne : bord de l'anale droit ou convexe (concave chez la vandoise et l'ide), grande bouche, tête large, liseré sombre au bord de la caudale, nageoires du bas orangées.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "mulet",
+    "critere": "Mulet : deux dorsales bien séparées, tête large et plate, petite bouche, rayures grises le long du flanc. Le chevesne est aussi appelé « mulet » ou « cabot » selon les régions.",
+    "source": "https://www.generationpeche.fr/Liste_fiche_poisson/181-les-fiches-poissons.htm"
+   },
+   {
+    "avec": "aspe",
+    "critere": "Aspe : bouche encore plus grande tournée vers le haut, mâchoire inférieure en crochet, carène derrière les pelviennes.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "chevesne",
   "silhouette": "chevesne-silhouette",
@@ -474,10 +709,10 @@
   "latin": "Tinca tinca",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "tanche",
   "code_sandre": "2137",
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "faible",
   "confusions": [],
   "suivi_ofb": true,
   "image": "tanche",
@@ -491,11 +726,22 @@
   "latin": "Barbus barbus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "barbeau",
   "code_sandre": "2096",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "barbeau-meridional",
+    "critere": "Barbeau méridional : robe marbrée, premier rayon de la dorsale non dentelé, anale atteignant la base de la caudale. Barbeau fluviatile : robe uniforme, premier rayon dentelé, anale plus courte.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "goujon",
+    "critere": "Goujon : 2 barbillons (barbeau : 4), petite taille, rangée de larges taches sombres le long du flanc.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "barbeau-fluviatile",
   "silhouette": "barbeau-fluviatile-silhouette",
@@ -508,11 +754,22 @@
   "latin": "Leuciscus leuciscus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "vandoise",
   "code_sandre": "2122",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "chevesne",
+    "critere": "Chevesne : bord de l'anale droit ou convexe (concave chez la vandoise et l'ide), grande bouche, tête large, liseré sombre au bord de la caudale, nageoires du bas orangées.",
+    "source": "https://federation-peche-vendee.fr/zoom-sur-la-vandoise/"
+   },
+   {
+    "avec": "vandoise-rostree",
+    "critere": "Vandoise rostrée : mâchoire supérieure bien plus longue que l'inférieure, museau proéminent, lèvres épaisses. Vandoise commune : mâchoires presque égales, lèvres fines.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "vandoise",
   "silhouette": "vandoise-silhouette",
@@ -525,11 +782,27 @@
   "latin": "Leuciscus idus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "ide",
   "code_sandre": "2121",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "gardon",
+    "critere": "Ide : plus de 50 écailles sur la ligne latérale (gardon et rotengle : moins de 50), bouche terminale légèrement oblique, dorsale en arrière des pelviennes. L'orfe est sa forme dorée d'élevage.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "rotengle",
+    "critere": "Ide : plus de 50 écailles sur la ligne latérale (gardon et rotengle : moins de 50), bouche terminale légèrement oblique, dorsale en arrière des pelviennes. L'orfe est sa forme dorée d'élevage.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "chevesne",
+    "critere": "Chevesne : bord de l'anale droit ou convexe (concave chez la vandoise et l'ide), grande bouche, tête large, liseré sombre au bord de la caudale, nageoires du bas orangées.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "ide-melanote",
   "silhouette": "ide-melanote-silhouette",
@@ -542,11 +815,17 @@
   "latin": "Chondrostoma nasus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "hotu_toxostome",
   "code_sandre": "2104",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "toxostome",
+    "critere": "Hotu : bouche en rabot à lèvres cornées, nageoires teintées de rouge. Toxostome : bouche en fer à cheval, nageoires très peu colorées.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "hotu",
   "silhouette": "hotu-silhouette",
@@ -559,11 +838,22 @@
   "latin": "Alburnus alburnus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "ablette",
   "code_sandre": "2090",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "spirlin",
+    "critere": "Spirlin : ligne latérale soulignée de deux rangées de points noirs, corps plus haut, bouche terminale. Ablette : bouche oblique à mâchoire inférieure proéminente, robe argentée sans points.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "able-de-heckel",
+    "critere": "Able de Heckel : ligne latérale incomplète (quelques écailles seulement), plus petit, bouche très relevée.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "ablette",
   "silhouette": "ablette-silhouette",
@@ -576,11 +866,27 @@
   "latin": "Gobio gobio",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "goujon",
   "code_sandre": "2113",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "pseudorasbora",
+    "critere": "Pseudorasbora : bouche très relevée presque verticale, aucun barbillon, bande brune sur le flanc. Goujon : bouche en dessous avec 2 barbillons.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "barbeau-fluviatile",
+    "critere": "Goujon : 2 barbillons (barbeau : 4), petite taille, rangée de larges taches sombres le long du flanc.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "gobie-a-taches-noires",
+    "critere": "Gobies : nageoires pelviennes soudées en disque (ventouse), corps couvert d'écailles. Chabot : pelviennes séparées, peau nue sans écailles.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "goujon",
   "silhouette": "goujon-silhouette",
@@ -593,11 +899,17 @@
   "latin": "Alburnoides bipunctatus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "spirlin",
   "code_sandre": "2088",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "ablette",
+    "critere": "Spirlin : ligne latérale soulignée de deux rangées de points noirs, corps plus haut, bouche terminale. Ablette : bouche oblique à mâchoire inférieure proéminente, robe argentée sans points.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "spirlin",
   "silhouette": "spirlin-silhouette",
@@ -610,11 +922,17 @@
   "latin": "Leucaspius delineatus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "ablette",
   "code_sandre": "2117",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "ablette",
+    "critere": "Able de Heckel : ligne latérale incomplète (quelques écailles seulement), plus petit, bouche très relevée.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "able-de-heckel",
   "silhouette": "able-de-heckel-silhouette",
@@ -627,10 +945,10 @@
   "latin": "Rhodeus amarus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "bouviere",
   "code_sandre": "2131",
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "faible",
   "confusions": [],
   "suivi_ofb": true,
   "image": "bouviere",
@@ -644,11 +962,22 @@
   "latin": "Carassius carassius",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "carassin",
   "code_sandre": "2102",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "carassin-argente",
+    "critere": "Carassin commun : bronze doré, lobes de la caudale arrondis, bord de la dorsale convexe, tache noire sur le pédoncule chez le jeune, péritoine clair. Carassin argenté : gris acier, caudale plus fourchue, bord de la dorsale droit ou concave, péritoine noir.",
+    "source": "https://observatoire-fauna.fr/programmes/referentiel-especes/fiche-espece/67210"
+   },
+   {
+    "avec": "carpe-commune",
+    "critere": "Carpe : 4 barbillons autour de la bouche. Carassins et poisson rouge : aucun barbillon.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "carassin-commun",
   "silhouette": "carassin-commun-silhouette",
@@ -661,11 +990,22 @@
   "latin": "Carassius gibelio / Carassius auratus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "carassin",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "carassin-commun",
+    "critere": "Carassin commun : bronze doré, lobes de la caudale arrondis, bord de la dorsale convexe, tache noire sur le pédoncule chez le jeune, péritoine clair. Carassin argenté : gris acier, caudale plus fourchue, bord de la dorsale droit ou concave, péritoine noir.",
+    "source": "https://observatoire-fauna.fr/programmes/referentiel-especes/fiche-espece/67210"
+   },
+   {
+    "avec": "carpe-commune",
+    "critere": "Carpe : 4 barbillons autour de la bouche. Carassins et poisson rouge : aucun barbillon.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "carassin-argente",
   "silhouette": "carassin-argente-silhouette",
@@ -678,11 +1018,17 @@
   "latin": "Leuciscus aspius (Aspius aspius)",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "aspe",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "chevesne",
+    "critere": "Aspe : très grande bouche tournée vers le haut, mâchoire inférieure en crochet, dorsale en arrière des pelviennes, carène derrière les pelviennes.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "aspe",
   "silhouette": "aspe-silhouette",
@@ -695,7 +1041,7 @@
   "latin": "Pseudorasbora parva",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "pseudorasbora",
   "code_sandre": "2129",
   "statut": [
    {
@@ -703,8 +1049,14 @@
     "source": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "goujon",
+    "critere": "Pseudorasbora : bouche très relevée presque verticale, aucun barbillon, bande brune sur le flanc. Goujon : bouche en dessous avec 2 barbillons.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "pseudorasbora",
   "silhouette": "pseudorasbora-silhouette",
@@ -717,7 +1069,7 @@
   "latin": "Perccottus glenii",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "gobie_invasif",
   "code_sandre": null,
   "statut": [
    {
@@ -725,7 +1077,7 @@
     "source": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
    }
   ],
-  "cout_erreur": null,
+  "cout_erreur": "moyen",
   "confusions": [],
   "suivi_ofb": true,
   "image": "goujon-de-l-amour",
@@ -739,11 +1091,17 @@
   "latin": "Phoxinus phoxinus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "vairon",
   "code_sandre": "2125",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "blageon",
+    "critere": "Blageon : large bande noire de la tête à la queue au-dessus de la ligne latérale, ligne latérale souvent soulignée d'orange.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "vairon",
   "silhouette": "vairon-silhouette",
@@ -756,7 +1114,7 @@
   "latin": "Gambusia affinis / Gambusia holbrooki",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "autre_poisson",
   "code_sandre": null,
   "statut": [
    {
@@ -764,7 +1122,7 @@
     "source": "https://aida.ineris.fr/reglementation/arrete-020323-portant-mise-a-jour-liste-especes-animales-vegetales-exotiques"
    }
   ],
-  "cout_erreur": null,
+  "cout_erreur": "faible",
   "confusions": [],
   "suivi_ofb": true,
   "image": "gambusie",
@@ -778,10 +1136,10 @@
   "latin": "Barbatula barbatula",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "loche",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "faible",
   "confusions": [],
   "suivi_ofb": true,
   "image": "loche-franche",
@@ -795,10 +1153,10 @@
   "latin": "Cobitis taenia",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "loche",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "faible",
   "confusions": [],
   "suivi_ofb": true,
   "image": "loche-de-riviere",
@@ -812,10 +1170,10 @@
   "latin": "Misgurnus fossilis",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "loche",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "faible",
   "confusions": [],
   "suivi_ofb": true,
   "image": "loche-d-etang",
@@ -829,11 +1187,22 @@
   "latin": "Cottus gobio",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "chabot",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "gobie-a-taches-noires",
+    "critere": "Gobies : nageoires pelviennes soudées en disque (ventouse), corps couvert d'écailles. Chabot : pelviennes séparées, peau nue sans écailles.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "apron-du-rhone",
+    "critere": "Apron : petit, tête conique sombre, 3 bandes sombres en selle sur l'arrière du corps, vit posé sur le fond.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "chabot",
   "silhouette": "chabot-silhouette",
@@ -846,11 +1215,17 @@
   "latin": "Lota lota",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "lotte",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "silure-glane",
+    "critere": "Lotte : un seul barbillon sous le menton, deuxième dorsale très longue, corps lisse et allongé.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "lotte",
   "silhouette": "lotte-silhouette",
@@ -863,11 +1238,17 @@
   "latin": "Gasterosteus aculeatus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "epinoche",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "epinochette",
+    "critere": "Épinoche : 3 épines devant la dorsale. Épinochette : 8 à 12 épines.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "epinoche",
   "silhouette": "epinoche-silhouette",
@@ -880,10 +1261,10 @@
   "latin": "Platichthys flesus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "flet",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "faible",
   "confusions": [],
   "suivi_ofb": true,
   "image": "flet",
@@ -897,11 +1278,22 @@
   "latin": "Mugilidae (Chelon, Liza)",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "mulet",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "chevesne",
+    "critere": "Mulet : deux dorsales bien séparées, tête large et plate, petite bouche, rayures grises le long du flanc. Le chevesne est aussi appelé « mulet » ou « cabot » selon les régions.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "bar",
+    "critere": "Bar : 2 épines sur l'opercule, grande bouche ; mulet : petite bouche, tête plate.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": false,
   "image": "mulet",
   "silhouette": "mulet-silhouette",
@@ -914,7 +1306,7 @@
   "latin": "Anguilla anguilla",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "anguille",
   "code_sandre": null,
   "statut": [
    {
@@ -922,8 +1314,24 @@
     "source": "https://www.consultations-publiques.developpement-durable.gouv.fr/IMG/pdf/tecl2611426a_projet_am_anguilles_2026.pdf"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "anguille-argentee",
+    "critere": "Anguille argentée : œil agrandi, dos sombre et ventre blanc argenté, ligne latérale bien visible, pectorales plus longues et sombres. Anguille jaune : dos brun-vert, ventre jaunâtre, petit œil.",
+    "source": "https://www.sarthe.gouv.fr/contenu/telechargement/17749/114475/file/fiche_lorigami_differenciation_anguille_jaune_et_argentee.pdf"
+   },
+   {
+    "avec": "lamproie-marine",
+    "critere": "Anguille : mâchoires, nageoires pectorales, une seule fente branchiale de chaque côté. Lamproies : bouche en ventouse, pas de pectorales, 7 orifices branchiaux alignés.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "lotte",
+    "critere": "Lotte : un seul barbillon sous le menton, deuxième dorsale très longue, corps lisse et allongé.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "anguille-jaune",
   "silhouette": "anguille-jaune-silhouette",
@@ -936,7 +1344,7 @@
   "latin": "Anguilla anguilla",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "anguille",
   "code_sandre": null,
   "statut": [
    {
@@ -944,8 +1352,14 @@
     "source": "https://www.consultations-publiques.developpement-durable.gouv.fr/IMG/pdf/tecl2611426a_projet_am_anguilles_2026.pdf"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "anguille-jaune",
+    "critere": "Anguille argentée : œil agrandi, dos sombre et ventre blanc argenté, ligne latérale bien visible, pectorales plus longues et sombres. Anguille jaune : dos brun-vert, ventre jaunâtre, petit œil.",
+    "source": "https://www.sarthe.gouv.fr/contenu/telechargement/17749/114475/file/fiche_lorigami_differenciation_anguille_jaune_et_argentee.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "anguille-argentee",
   "silhouette": "anguille-argentee-silhouette",
@@ -958,7 +1372,7 @@
   "latin": "Anguilla anguilla",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "anguille",
   "code_sandre": null,
   "statut": [
    {
@@ -966,8 +1380,14 @@
     "source": "https://www.consultations-publiques.developpement-durable.gouv.fr/IMG/pdf/tecl2611426a_projet_am_anguilles_2026.pdf"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "anguille-jaune",
+    "critere": "Civelle : anguille de moins de 12 cm, transparente ou peu pigmentée (définition du fichier national).",
+    "source": "/mnt/project-files/build/regles/especes-national.json"
+   }
+  ],
   "suivi_ofb": true,
   "image": "civelle",
   "silhouette": "civelle-silhouette",
@@ -980,11 +1400,17 @@
   "latin": "Alosa alosa",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "alose",
   "code_sandre": "2056",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "alose-feinte",
+    "critere": "Grande alose : une seule grande tache noire derrière l'opercule. Alose feinte : 4 à 8 taches noires alignées.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "grande-alose",
   "silhouette": "grande-alose-silhouette",
@@ -997,11 +1423,17 @@
   "latin": "Alosa fallax",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "alose",
   "code_sandre": "2057",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "grande-alose",
+    "critere": "Grande alose : une seule grande tache noire derrière l'opercule. Alose feinte : 4 à 8 taches noires alignées.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "alose-feinte",
   "silhouette": "alose-feinte-silhouette",
@@ -1014,11 +1446,22 @@
   "latin": "Petromyzon marinus",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "lamproie",
   "code_sandre": "2014",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "lamproie-fluviatile",
+    "critere": "Lamproie marine : marbrée jaune et brun, 50 à 90 cm. Lamproie fluviatile : bronze uniforme, 30 à 50 cm, dorsales séparées. Lamproie de Planer : grise uniforme, 9 à 15 cm, dorsales qui se touchent.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "anguille-jaune",
+    "critere": "Anguille : mâchoires, nageoires pectorales, une seule fente branchiale de chaque côté. Lamproies : bouche en ventouse, pas de pectorales, 7 orifices branchiaux alignés.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "lamproie-marine",
   "silhouette": "lamproie-marine-silhouette",
@@ -1031,11 +1474,22 @@
   "latin": "Lampetra fluviatilis",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "lamproie",
   "code_sandre": "2011",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "lamproie-marine",
+    "critere": "Lamproie marine : marbrée jaune et brun, 50 à 90 cm. Lamproie fluviatile : bronze uniforme, 30 à 50 cm, dorsales séparées. Lamproie de Planer : grise uniforme, 9 à 15 cm, dorsales qui se touchent.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "lamproie-de-planer",
+    "critere": "Lamproie marine : marbrée jaune et brun, 50 à 90 cm. Lamproie fluviatile : bronze uniforme, 30 à 50 cm, dorsales séparées. Lamproie de Planer : grise uniforme, 9 à 15 cm, dorsales qui se touchent.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "lamproie-fluviatile",
   "silhouette": "lamproie-fluviatile-silhouette",
@@ -1048,11 +1502,17 @@
   "latin": "Lampetra planeri",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "lamproie",
   "code_sandre": "2012",
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "lamproie-fluviatile",
+    "critere": "Lamproie marine : marbrée jaune et brun, 50 à 90 cm. Lamproie fluviatile : bronze uniforme, 30 à 50 cm, dorsales séparées. Lamproie de Planer : grise uniforme, 9 à 15 cm, dorsales qui se touchent.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "lamproie-de-planer",
   "silhouette": "lamproie-de-planer-silhouette",
@@ -1065,7 +1525,7 @@
   "latin": "Acipenser sturio",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "esturgeon",
   "code_sandre": null,
   "statut": [
    {
@@ -1077,8 +1537,14 @@
     "source": "https://aida.ineris.fr/node/33240"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "esturgeon-siberien",
+    "critere": "Esturgeon européen : museau court et arrondi, moins de 50 écussons latéraux gris. Esturgeon sibérien : museau long et pointu, moins de 50 écussons gris. Sterlet : museau long, plus de 50 écussons blanc sale.",
+    "source": "http://www.sturio.fr/images/telechargement/Distinction_Sturio_Baeri_sept2007.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "esturgeon-europeen",
   "silhouette": "esturgeon-europeen-silhouette",
@@ -1091,7 +1557,7 @@
   "latin": "Zingel asper",
   "latin_actuel": null,
   "type": "poisson",
-  "classe_modele": null,
+  "classe_modele": "autre_poisson",
   "code_sandre": "2197",
   "statut": [
    {
@@ -1103,8 +1569,19 @@
     "source": "https://aida.ineris.fr/node/33240"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "chabot",
+    "critere": "Apron : petit, tête conique sombre, 3 bandes sombres en selle sur l'arrière du corps, vit posé sur le fond.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "gremille",
+    "critere": "Apron : petit, tête conique sombre, 3 bandes sombres en selle sur l'arrière du corps, vit posé sur le fond.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "apron-du-rhone",
   "silhouette": "apron-du-rhone-silhouette",
@@ -1117,11 +1594,22 @@
   "latin": "Austropotamobius pallipes",
   "latin_actuel": null,
   "type": "écrevisse",
-  "classe_modele": null,
+  "classe_modele": "ecrevisse_protegee",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "ecrevisse-signal",
+    "critere": "Signal : tache blanche ou bleu-vert à l'articulation de la pince, pinces lisses rouges dessous, deux paires de crêtes derrière l'œil. Pattes blanches : pinces rugueuses blanchâtres dessous, une seule paire de crêtes, rostre triangulaire.",
+    "source": "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Guide-identification-ecrevisses-France.pdf"
+   },
+   {
+    "avec": "ecrevisse-americaine",
+    "critere": "Une épine sur la face interne de l'article qui précède la pince (carpopodite) signe une écrevisse américaine au sens large (Cambaridae), toujours exotique.",
+    "source": "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Guide-identification-ecrevisses-France.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "ecrevisse-pattes-blanches",
   "silhouette": "ecrevisse-pattes-blanches-silhouette",
@@ -1134,10 +1622,10 @@
   "latin": "Astacus astacus",
   "latin_actuel": null,
   "type": "écrevisse",
-  "classe_modele": null,
+  "classe_modele": "ecrevisse_protegee",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "eleve",
   "confusions": [],
   "suivi_ofb": true,
   "image": "ecrevisse-pattes-rouges",
@@ -1151,10 +1639,10 @@
   "latin": "Austropotamobius torrentium (Astacus torrentium dans le Code)",
   "latin_actuel": null,
   "type": "écrevisse",
-  "classe_modele": null,
+  "classe_modele": "ecrevisse_protegee",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "eleve",
   "confusions": [],
   "suivi_ofb": true,
   "image": "ecrevisse-des-torrents",
@@ -1168,10 +1656,10 @@
   "latin": "Astacus leptodactylus",
   "latin_actuel": null,
   "type": "écrevisse",
-  "classe_modele": null,
+  "classe_modele": "ecrevisse_protegee",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "eleve",
   "confusions": [],
   "suivi_ofb": true,
   "image": "ecrevisse-pattes-greles",
@@ -1185,7 +1673,7 @@
   "latin": "Faxonius limosus (Orconectes limosus)",
   "latin_actuel": null,
   "type": "écrevisse",
-  "classe_modele": null,
+  "classe_modele": "ecrevisse_americaine",
   "code_sandre": null,
   "statut": [
    {
@@ -1193,8 +1681,24 @@
     "source": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "ecrevisse-pattes-blanches",
+    "critere": "Une épine sur la face interne de l'article qui précède la pince (carpopodite) signe une écrevisse américaine au sens large (Cambaridae), toujours exotique.",
+    "source": "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Guide-identification-ecrevisses-France.pdf"
+   },
+   {
+    "avec": "ecrevisse-de-louisiane",
+    "critere": "Écrevisse américaine : taches rouge-brun en bandes sur l'abdomen, épines sur les côtés de la carapace avant et après le sillon cervical, pointe des pinces orange cerclée de noir.",
+    "source": "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Guide-identification-ecrevisses-France.pdf"
+   },
+   {
+    "avec": "ecrevisse-calicot",
+    "critere": "Écrevisse calicot : touffe de poils sous l'articulation de la pince, encoche sur le doigt mobile.",
+    "source": "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Guide-identification-ecrevisses-France.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "ecrevisse-americaine",
   "silhouette": "ecrevisse-americaine-silhouette",
@@ -1207,7 +1711,7 @@
   "latin": "Procambarus clarkii",
   "latin_actuel": null,
   "type": "écrevisse",
-  "classe_modele": null,
+  "classe_modele": "ecrevisse_louisiane",
   "code_sandre": null,
   "statut": [
    {
@@ -1215,8 +1719,14 @@
     "source": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "ecrevisse-americaine",
+    "critere": "Écrevisse de Louisiane : rouge sombre, pinces couvertes de tubercules rouges, carapace rugueuse.",
+    "source": "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Guide-identification-ecrevisses-France.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "ecrevisse-de-louisiane",
   "silhouette": "ecrevisse-de-louisiane-silhouette",
@@ -1229,7 +1739,7 @@
   "latin": "Pacifastacus leniusculus",
   "latin_actuel": null,
   "type": "écrevisse",
-  "classe_modele": null,
+  "classe_modele": "ecrevisse_signal",
   "code_sandre": null,
   "statut": [
    {
@@ -1237,8 +1747,14 @@
     "source": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "ecrevisse-pattes-blanches",
+    "critere": "Signal : tache blanche ou bleu-vert à l'articulation de la pince, pinces lisses rouges dessous, deux paires de crêtes derrière l'œil. Pattes blanches : pinces rugueuses blanchâtres dessous, une seule paire de crêtes, rostre triangulaire.",
+    "source": "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Guide-identification-ecrevisses-France.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "ecrevisse-signal",
   "silhouette": "ecrevisse-signal-silhouette",
@@ -1251,7 +1767,7 @@
   "latin": "Faxonius virilis",
   "latin_actuel": null,
   "type": "écrevisse",
-  "classe_modele": null,
+  "classe_modele": "ecrevisse_invasive_autre",
   "code_sandre": null,
   "statut": [
    {
@@ -1259,8 +1775,14 @@
     "source": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "ecrevisse-americaine",
+    "critere": "Une épine sur la face interne de l'article qui précède la pince (carpopodite) signe une écrevisse américaine au sens large (Cambaridae), toujours exotique.",
+    "source": "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Guide-identification-ecrevisses-France.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "ecrevisse-virile",
   "silhouette": "ecrevisse-virile-silhouette",
@@ -1273,7 +1795,7 @@
   "latin": "Procambarus virginalis",
   "latin_actuel": null,
   "type": "écrevisse",
-  "classe_modele": null,
+  "classe_modele": "ecrevisse_invasive_autre",
   "code_sandre": null,
   "statut": [
    {
@@ -1281,7 +1803,7 @@
     "source": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
    }
   ],
-  "cout_erreur": null,
+  "cout_erreur": "moyen",
   "confusions": [],
   "suivi_ofb": true,
   "image": "ecrevisse-marbree",
@@ -1295,7 +1817,7 @@
   "latin": "Faxonius rusticus",
   "latin_actuel": null,
   "type": "écrevisse",
-  "classe_modele": null,
+  "classe_modele": "ecrevisse_invasive_autre",
   "code_sandre": null,
   "statut": [
    {
@@ -1303,8 +1825,14 @@
     "source": "https://aida.ineris.fr/reglementation/arrete-020323-portant-mise-a-jour-liste-especes-animales-vegetales-exotiques"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "ecrevisse-americaine",
+    "critere": "Une épine sur la face interne de l'article qui précède la pince (carpopodite) signe une écrevisse américaine au sens large (Cambaridae), toujours exotique.",
+    "source": "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Guide-identification-ecrevisses-France.pdf"
+   }
+  ],
   "suivi_ofb": true,
   "image": "ecrevisse-a-taches-rouges",
   "silhouette": "ecrevisse-a-taches-rouges-silhouette",
@@ -1317,7 +1845,7 @@
   "latin": "Eriocheir sinensis",
   "latin_actuel": null,
   "type": "crabe",
-  "classe_modele": null,
+  "classe_modele": "crabe_chinois",
   "code_sandre": null,
   "statut": [
    {
@@ -1325,7 +1853,7 @@
     "source": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
    }
   ],
-  "cout_erreur": null,
+  "cout_erreur": "faible",
   "confusions": [],
   "suivi_ofb": false,
   "image": "crabe-chinois",
@@ -1339,11 +1867,17 @@
   "latin": "Pelophylax kl. esculentus",
   "latin_actuel": null,
   "type": "grenouille",
-  "classe_modele": null,
+  "classe_modele": "grenouille_verte",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "grenouille-taureau",
+    "critere": "Grenouille-taureau : tympan au moins aussi grand que l'œil, pas de plis dorso-latéraux. Grenouilles vertes : deux plis dorso-latéraux nets, tympan plus petit.",
+    "source": "http://www.bufo-alsace.org/wp-content/uploads/2022/08/Fiche_Grenouille_taureau_Grenouille_verte_V2_BH.pdf"
+   }
+  ],
   "suivi_ofb": false,
   "image": "grenouille-verte",
   "silhouette": "grenouille-verte-silhouette",
@@ -1356,10 +1890,10 @@
   "latin": "Rana temporaria",
   "latin_actuel": null,
   "type": "grenouille",
-  "classe_modele": null,
+  "classe_modele": "grenouille_rousse",
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "eleve",
   "confusions": [],
   "suivi_ofb": false,
   "image": "grenouille-rousse",
@@ -1373,7 +1907,7 @@
   "latin": "Lithobates catesbeianus",
   "latin_actuel": null,
   "type": "grenouille",
-  "classe_modele": null,
+  "classe_modele": "grenouille_taureau",
   "code_sandre": null,
   "statut": [
    {
@@ -1381,8 +1915,14 @@
     "source": "https://saone-et-loire.gouv.fr/index.php/contenu/telechargement/21221/185152/file/am14_02_2018.pdf"
    }
   ],
-  "cout_erreur": null,
-  "confusions": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "grenouille-verte",
+    "critere": "Grenouille-taureau : tympan au moins aussi grand que l'œil, pas de plis dorso-latéraux. Grenouilles vertes : deux plis dorso-latéraux nets, tympan plus petit.",
+    "source": "https://www.parc-loire-anjou-touraine.fr/sites/default/files/2022-09/life-croaa_guide-technique_aee_web_annexe1_compressed.pdf"
+   }
+  ],
   "suivi_ofb": false,
   "image": "grenouille-taureau",
   "silhouette": "grenouille-taureau-silhouette",
@@ -1398,12 +1938,512 @@
   "classe_modele": null,
   "code_sandre": null,
   "statut": [],
-  "cout_erreur": null,
+  "cout_erreur": "eleve",
   "confusions": [],
   "suivi_ofb": true,
   "image": "hybrides",
   "silhouette": "hybrides-silhouette",
   "protection_texte": "Aucune protection nationale lue.",
   "source_liste": "docs/regles/especes-national.json (brouillon version 0, 15 oct. 2026)"
+ },
+ {
+  "id": "truite-tigre",
+  "nom": "Truite tigre",
+  "latin": "Salmo trutta x Salvelinus fontinalis",
+  "latin_actuel": "Salmo trutta x Salvelinus fontinalis",
+  "type": "poisson",
+  "classe_modele": "truite_tigre",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "moyen",
+  "confusions": [],
+  "suivi_ofb": null,
+  "image": "truite-tigre",
+  "silhouette": "truite-tigre-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "carpe-koi",
+  "nom": "Carpe koï",
+  "latin": "Cyprinus rubrofuscus",
+  "latin_actuel": "Cyprinus rubrofuscus (koï) ou Cyprinus carpio de couleur",
+  "type": "poisson",
+  "classe_modele": "carpe",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "carpe-commune",
+    "critere": "Koï : même forme que la carpe et 4 barbillons, robe colorée (orange, blanc, noir) ou écailles métalliques.",
+    "source": "[?] pas de source lue"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "carpe-koi",
+  "silhouette": "carpe-koi-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "poisson-rouge",
+  "nom": "Poisson rouge (carassin doré)",
+  "latin": "Carassius auratus",
+  "latin_actuel": "Carassius auratus",
+  "type": "poisson",
+  "classe_modele": "poisson_rouge",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "faible",
+  "confusions": [],
+  "suivi_ofb": null,
+  "image": "poisson-rouge",
+  "silhouette": "poisson-rouge-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "brochet-aquitain",
+  "nom": "Brochet aquitain",
+  "latin": "Esox aquitanicus",
+  "latin_actuel": "Esox aquitanicus",
+  "type": "poisson",
+  "classe_modele": "brochet",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "brochet",
+    "critere": "Brochet aquitain : museau plus court que la distance œil-opercule, fines bandes obliques donnant une robe marbrée, 101 à 121 écailles sur la ligne latérale. Brochet commun : museau aussi long ou plus long, robe tachetée de points clairs, 117 à 148 écailles.",
+    "source": "https://www.poissons-endemiques.ufbag.fr/identification/brochets/"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "brochet-aquitain",
+  "silhouette": "brochet-aquitain-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "black-bass-petite-bouche",
+  "nom": "Black-bass à petite bouche",
+  "latin": "Micropterus dolomieu",
+  "latin_actuel": "Micropterus dolomieu",
+  "type": "poisson",
+  "classe_modele": "black_bass",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "black-bass",
+    "critere": "Grande bouche : la commissure dépasse l'arrière de l'œil, larges taches irrégulières le long du flanc. Petite bouche : la commissure ne dépasse pas l'œil, bandes verticales chez les jeunes.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "black-bass-petite-bouche",
+  "silhouette": "black-bass-petite-bouche-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "crapet-de-roche",
+  "nom": "Crapet de roche",
+  "latin": "Ambloplites rupestris",
+  "latin_actuel": "Ambloplites rupestris",
+  "type": "poisson",
+  "classe_modele": "autre_poisson",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "perche-soleil",
+    "critere": "Crapet de roche : brun doré à olive, écailles ponctuées de noir formant des rangées, 5 à 7 épines à l'anale (perche soleil : 3).",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "crapet-de-roche",
+  "silhouette": "crapet-de-roche-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "barbue-de-riviere",
+  "nom": "Barbue de rivière (channel catfish)",
+  "latin": "Ictalurus punctatus",
+  "latin_actuel": "Ictalurus punctatus",
+  "type": "poisson",
+  "classe_modele": "poisson_chat",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "moyen",
+  "confusions": [],
+  "suivi_ofb": null,
+  "image": "barbue-de-riviere",
+  "silhouette": "barbue-de-riviere-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "barbeau-meridional",
+  "nom": "Barbeau méridional",
+  "latin": "Barbus meridionalis",
+  "latin_actuel": "Barbus meridionalis",
+  "type": "poisson",
+  "classe_modele": "barbeau_meridional",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "barbeau-fluviatile",
+    "critere": "Barbeau méridional : robe marbrée, premier rayon de la dorsale non dentelé, anale atteignant la base de la caudale. Barbeau fluviatile : robe uniforme, premier rayon dentelé, anale plus courte.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "barbeau-meridional",
+  "silhouette": "barbeau-meridional-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "toxostome",
+  "nom": "Toxostome (sofie)",
+  "latin": "Parachondrostoma toxostoma",
+  "latin_actuel": "Parachondrostoma toxostoma",
+  "type": "poisson",
+  "classe_modele": "hotu_toxostome",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "hotu",
+    "critere": "Hotu : bouche en rabot à lèvres cornées, nageoires teintées de rouge. Toxostome : bouche en fer à cheval, nageoires très peu colorées.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "chevesne",
+    "critere": "Chevesne : bord de l'anale droit ou convexe (concave chez la vandoise et l'ide), grande bouche, tête large, liseré sombre au bord de la caudale, nageoires du bas orangées.",
+    "source": "https://www.gers-peche.fr/5690-cyprinides.htm"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "toxostome",
+  "silhouette": "toxostome-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "blageon",
+  "nom": "Blageon",
+  "latin": "Telestes souffia",
+  "latin_actuel": "Telestes souffia",
+  "type": "poisson",
+  "classe_modele": "blageon",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "vairon",
+    "critere": "Blageon : large bande noire de la tête à la queue au-dessus de la ligne latérale, ligne latérale souvent soulignée d'orange.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "chevesne",
+    "critere": "Blageon : large bande noire de la tête à la queue au-dessus de la ligne latérale, ligne latérale souvent soulignée d'orange.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "blageon",
+  "silhouette": "blageon-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "vandoise-rostree",
+  "nom": "Vandoise rostrée",
+  "latin": "Leuciscus burdigalensis",
+  "latin_actuel": "Leuciscus burdigalensis",
+  "type": "poisson",
+  "classe_modele": "vandoise",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "vandoise",
+    "critere": "Vandoise rostrée : mâchoire supérieure bien plus longue que l'inférieure, museau proéminent, lèvres épaisses. Vandoise commune : mâchoires presque égales, lèvres fines.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "vandoise-rostree",
+  "silhouette": "vandoise-rostree-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "vandoise-du-bearn",
+  "nom": "Vandoise du Béarn",
+  "latin": "Leuciscus bearnensis",
+  "latin_actuel": "Leuciscus bearnensis",
+  "type": "poisson",
+  "classe_modele": "vandoise",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "faible",
+  "confusions": [],
+  "suivi_ofb": null,
+  "image": "vandoise-du-bearn",
+  "silhouette": "vandoise-du-bearn-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "gobie-a-taches-noires",
+  "nom": "Gobie à taches noires (gobie rond)",
+  "latin": "Neogobius melanostomus",
+  "latin_actuel": "Neogobius melanostomus",
+  "type": "poisson",
+  "classe_modele": "gobie_invasif",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "gobie-de-kessler",
+    "critere": "Gobie à taches noires (gobie rond) : tache noire sur la 1re dorsale, disque pelvien ovale. Gobie à grosse tête (de Kessler) : tête aplatie vue de dessus, pas de tache noire, disque arrondi.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "chabot",
+    "critere": "Gobies : nageoires pelviennes soudées en disque (ventouse), corps couvert d'écailles. Chabot : pelviennes séparées, peau nue sans écailles.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "goujon",
+    "critere": "Gobies : nageoires pelviennes soudées en disque (ventouse), corps couvert d'écailles. Chabot : pelviennes séparées, peau nue sans écailles.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "gobie-a-taches-noires",
+  "silhouette": "gobie-a-taches-noires-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "gobie-de-kessler",
+  "nom": "Gobie de Kessler (à grosse tête)",
+  "latin": "Ponticola kessleri",
+  "latin_actuel": "Ponticola kessleri",
+  "type": "poisson",
+  "classe_modele": "gobie_invasif",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "gobie-a-taches-noires",
+    "critere": "Gobie à taches noires (gobie rond) : tache noire sur la 1re dorsale, disque pelvien ovale. Gobie à grosse tête (de Kessler) : tête aplatie vue de dessus, pas de tache noire, disque arrondi.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "gobie-de-kessler",
+  "silhouette": "gobie-de-kessler-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "epinochette",
+  "nom": "Épinochette",
+  "latin": "Pungitius pungitius",
+  "latin_actuel": "Pungitius pungitius (Pungitius spp.)",
+  "type": "poisson",
+  "classe_modele": "epinoche",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "epinoche",
+    "critere": "Épinoche : 3 épines devant la dorsale. Épinochette : 8 à 12 épines.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "epinochette",
+  "silhouette": "epinochette-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "esturgeon-siberien",
+  "nom": "Esturgeon sibérien",
+  "latin": "Acipenser baerii",
+  "latin_actuel": "Huso baerii selon Brownstein et Near 2025 ; Acipenser baerii pour GBIF et la loi",
+  "type": "poisson",
+  "classe_modele": "esturgeon",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "esturgeon-europeen",
+    "critere": "Esturgeon européen : museau court et arrondi, moins de 50 écussons latéraux gris. Esturgeon sibérien : museau long et pointu, moins de 50 écussons gris. Sterlet : museau long, plus de 50 écussons blanc sale.",
+    "source": "http://www.sturio.fr/images/telechargement/Distinction_Sturio_Baeri_sept2007.pdf"
+   },
+   {
+    "avec": "sterlet",
+    "critere": "Esturgeon européen : museau court et arrondi, moins de 50 écussons latéraux gris. Esturgeon sibérien : museau long et pointu, moins de 50 écussons gris. Sterlet : museau long, plus de 50 écussons blanc sale.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "esturgeon-siberien",
+  "silhouette": "esturgeon-siberien-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "sterlet",
+  "nom": "Sterlet (esturgeon du Danube)",
+  "latin": "Acipenser ruthenus",
+  "latin_actuel": "Huso ruthenus selon Brownstein et Near 2025 ; Acipenser ruthenus pour GBIF",
+  "type": "poisson",
+  "classe_modele": "esturgeon",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "eleve",
+  "confusions": [
+   {
+    "avec": "esturgeon-siberien",
+    "critere": "Esturgeon européen : museau court et arrondi, moins de 50 écussons latéraux gris. Esturgeon sibérien : museau long et pointu, moins de 50 écussons gris. Sterlet : museau long, plus de 50 écussons blanc sale.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "sterlet",
+  "silhouette": "sterlet-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "esturgeon-oscietre",
+  "nom": "Esturgeon osciètre (esturgeon russe)",
+  "latin": "Acipenser gueldenstaedtii",
+  "latin_actuel": "Huso gueldenstaedtii selon Brownstein et Near 2025 ; Acipenser gueldenstaedtii pour GBIF",
+  "type": "poisson",
+  "classe_modele": "esturgeon",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "eleve",
+  "confusions": [],
+  "suivi_ofb": null,
+  "image": "esturgeon-oscietre",
+  "silhouette": "esturgeon-oscietre-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "bar",
+  "nom": "Bar (loup)",
+  "latin": "Dicentrarchus labrax",
+  "latin_actuel": "Dicentrarchus labrax",
+  "type": "poisson",
+  "classe_modele": "bar",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "sandre",
+    "critere": "Bar : 2 épines sur l'opercule, pas de canines, dorsales séparées, robe argentée sans bandes.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   },
+   {
+    "avec": "mulet",
+    "critere": "Bar : 2 épines sur l'opercule, grande bouche ; mulet : petite bouche, tête plate.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "bar",
+  "silhouette": "bar-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "raye-hybride",
+  "nom": "Rayé hybride",
+  "latin": "Morone chrysops x Morone saxatilis",
+  "latin_actuel": "Morone chrysops x Morone saxatilis",
+  "type": "poisson",
+  "classe_modele": "autre_poisson",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "faible",
+  "confusions": [
+   {
+    "avec": "bar",
+    "critere": "Rayé hybride : bandes longitudinales noires discontinues sur fond argenté ; bar : sans bandes.",
+    "source": "https://mnhn.hal.science/mnhn-04283275v1/file/Guide%20d'identification%202017.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "raye-hybride",
+  "silhouette": "raye-hybride-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "ecrevisse-calicot",
+  "nom": "Écrevisse calicot",
+  "latin": "Faxonius immunis",
+  "latin_actuel": "Faxonius immunis",
+  "type": "ecrevisse",
+  "classe_modele": "ecrevisse_invasive_autre",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "moyen",
+  "confusions": [
+   {
+    "avec": "ecrevisse-americaine",
+    "critere": "Écrevisse calicot : touffe de poils sous l'articulation de la pince, encoche sur le doigt mobile.",
+    "source": "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Guide-identification-ecrevisses-France.pdf"
+   }
+  ],
+  "suivi_ofb": null,
+  "image": "ecrevisse-calicot",
+  "silhouette": "ecrevisse-calicot-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
+ },
+ {
+  "id": "grenouille-rieuse",
+  "nom": "Grenouille rieuse",
+  "latin": "Pelophylax ridibundus",
+  "latin_actuel": "Pelophylax ridibundus",
+  "type": "grenouille",
+  "classe_modele": "grenouille_verte",
+  "code_sandre": null,
+  "statut": [],
+  "cout_erreur": "moyen",
+  "confusions": [],
+  "suivi_ofb": null,
+  "image": "grenouille-rieuse",
+  "silhouette": "grenouille-rieuse-silhouette",
+  "protection_texte": null,
+  "source_liste": "build/reconnaissance/especes-reconnaissance.json (15 oct. 2026)"
  }
 ]
