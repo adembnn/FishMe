@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393,initial-scale=1,viewport-fit=cover">
+<title>Coque de poche, prise</title>
+<link rel="stylesheet" href="shell.css">
+<style>html,body{background:var(--table)}</style>
+<style>
+/* confettis pixel sur la table : ils passent sous la coque de verre et sont réfractés */
+.confetti i{position:absolute;width:8px;height:8px;background:var(--pink);opacity:.9}
+.egg{position:absolute;left:24px;top:88px;width:345px;height:566px}
+.egg .inner{opacity:.5}
+.egg .bezel{position:absolute;left:32px;top:112px;width:281px;padding:12px;border-radius:26px}
+.egg .lcd{width:256px;height:224px}
+.lcd .n{left:8px;top:7px;font-size:18px;font-weight:600}
+.lcd .sz{right:8px;top:7px;font-size:18px;font-weight:600}
+.lcd .pips{left:8px;bottom:8px;display:flex;gap:4px}
+.lcd .pips i{width:10px;height:10px;background:var(--ink);display:block}
+.lcd .pips i.o{background:none;box-shadow:inset 0 0 0 2px var(--ink)}
+.lcd .rar{right:8px;bottom:7px;font-size:14px;font-weight:600}
+.lcd .t{opacity:0;transition:opacity .01s}
+.lcd .t.on{opacity:1}
+.info{position:absolute;left:30px;right:30px;top:392px;text-align:center;color:var(--teal-ink)}
+.info h2{font:600 20px/1.15 var(--sys);letter-spacing:-.2px}
+.info p{font:500 15px/1.3 var(--sys);margin-top:3px;color:rgba(5,48,58,.9)}
+.verdict{display:inline-flex;white-space:nowrap;align-items:center;gap:8px;margin-top:12px;height:32px;padding:0 13px 0 10px;border-radius:16px;background:rgba(255,255,255,.55);box-shadow:inset 0 1px 0 #fff,0 1px 3px rgba(4,60,80,.2);font:600 14px/1 var(--sys)}
+.verdict i{width:12px;height:12px;background:#0B7A3E;display:block;box-shadow:0 0 0 2px #fff}
+.egg .btns{top:508px}
+.egg .btns i{width:30px;height:30px}
+.acts{position:absolute;left:16px;right:16px;top:680px;display:flex;flex-direction:column;gap:12px;z-index:5}
+.acts .g{height:58px;border-radius:29px;display:flex;align-items:center;justify-content:center;gap:9px;font:600 17px/1 var(--sys);color:var(--teal-ink);border-width:1.5px}
+.acts .g svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.acts .g.pink{color:#2A0A18}
+.fade-in{animation:fadein .35s both}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+.sheen{position:absolute;inset:0;pointer-events:none}
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="table"></div>
+  <div class="confetti" id="conf"></div>
+
+  <div class="sb"><div class="t">17:44</div><div class="isl"></div><div class="r" id="sbi"></div></div>
+
+  <div class="egg translucent" id="egg" style="--ring:rgba(255,111,168,.85)">
+    <div class="ring"></div>
+    <div class="inner" id="inner"></div>
+    <div class="spec"></div>
+    <div class="bezel">
+      <div class="lcd" id="lcd">
+        <canvas id="cv"></canvas>
+        <span class="px n t" id="tn">BROCHET</span>
+        <span class="px sz t" id="ts">68 cm</span>
+        <span class="px pips t" id="tp"><i></i><i></i><i class="o"></i><i class="o"></i></span>
+        <span class="px rar t" id="tr">PEU COMMUN</span>
+      </div>
+    </div>
+    <div class="info">
+      <h2>Peu commun dans le 94</h2>
+      <p>10 pêches sur 29</p>
+      <span class="verdict"><i></i>Garder possible · 68 / 60 cm mini</span>
+    </div>
+    <div class="btns"><i></i><i></i><i></i></div>
+  </div>
+
+  <div class="acts">
+    <div class="g pink glass" role="button"><svg viewBox="0 0 24 24"><path d="M2.500 12c3-5.500 8.500-6.500 12.500-3l4.500-3.500v13L15 15c-4 3.500-9.500 2.500-12.500-3Z"/><circle cx="7.500" cy="11" r="1"/></svg>Ranger dans le Pescedex</div>
+    <div class="g glass" role="button"><svg viewBox="0 0 24 24"><path d="M12 15V3M7.500 7.500 12 3l4.500 4.500M5 12v7.500h14V12"/></svg>Partager</div>
+  </div>
+  <div class="home"></div>
+</div>
+
+<script src="sprites.js"></script>
+<script src="lcd.js"></script>
+<script>
+const {Lcd,rng,board,beep,sbIcons}=E;
+document.getElementById('sbi').innerHTML=sbIcons;
+document.getElementById('inner').innerHTML=board(345,566);
+const R=rng(7),conf=document.getElementById('conf');
+for(let i=0;i<46;i++){const e=document.createElement('i');e.style.left=Math.round(R()*48)*8+'px';e.style.top=Math.round(R()*105)*8+'px';e.style.opacity=.35+R()*.5;if(R()<.4)e.style.background='#fff';if(R()<.15)e.style.background='#4DC9D8';conf.appendChild(e)}
+
+const COLS=64,ROWS=56,L=new Lcd(document.getElementById('cv'),COLS,ROWS,4);
+const S=SPRITES.brochet64,SW=S[0].length,SH=S.length;
+const X0=0,Y0=16;           // le sprite occupe toute la largeur : 64 cases
+const r2=rng(11);
+function paint(opts){
+  L.clear();
+  // rangée d'eau : pointillé sous le poisson
+  for(let x=0;x<COLS;x+=3){L.set(x,Y0+SH+5);L.set(x+1,Y0+SH+5)}
+  for(let x=1;x<COLS;x+=4){L.set(x,Y0+SH+8)}
+  // bulles
+  [[58,10],[60,7],[57,5]].forEach(([x,y])=>{L.set(x,y);L.set(x+1,y)});
+  L.sprite(X0,Y0+(opts.dy||0),S,opts);
+  L.draw();
+}
+function glitchRows(n,amp){const g={};for(let i=0;i<n;i++)g[Math.floor(r2()*SH)]=(r2()<.5?-1:1)*(1+Math.floor(r2()*amp));return g}
+
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=id=>document.getElementById(id);
+function finalState(){paint({});['tn','ts','tp','tr'].forEach(i=>T(i).classList.add('on'))}
+function play(){
+  ['tn','ts','tp','tr'].forEach(i=>T(i).classList.remove('on'));
+  if(reduce){finalState();document.getElementById('lcd').classList.add('fade-in');return}
+  L.clear();L.draw();
+  const steps=[
+    [350,()=>{beep();for(let i=0;i<COLS*ROWS;i++)L.buf[i]=1;L.draw()}],      // flash plein écran
+    [450,()=>{L.clear();L.draw()}],
+    [520,()=>{let c=0;const iv=setInterval(()=>{c+=4;paint({maxCol:c});if(c>=SW)clearInterval(iv)},22)}], // balayage colonne par colonne
+    [1130,()=>paint({glitch:glitchRows(7,4)})],                              // glitch
+    [1230,()=>paint({shiftTail:1})],                                         // image 2
+    [1300,()=>T('tn').classList.add('on')],
+    [1500,()=>{paint({});T('ts').classList.add('on')}],                      // image 1
+    [1700,()=>paint({shiftTail:1})],
+    [1880,()=>paint({glitch:glitchRows(4,2)})],                              // micro-glitch
+    [1960,()=>{paint({});T('tp').classList.add('on')}],
+    [2150,()=>T('tr').classList.add('on')],
+    [2300,()=>paint({})],                                                    // état final, figé
+  ];
+  steps.forEach(([ms,fn])=>setTimeout(fn,ms));
+}
+document.fonts.ready.then(()=>{play();});
+T('egg').addEventListener('click',play);  // toucher la coque rejoue (et débloque le son)
+</script>
+</body>
+</html>

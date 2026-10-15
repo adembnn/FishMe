@@ -1,0 +1,46 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=393,initial-scale=1"><title>Sortie sans prise</title><style>
+@font-face{font-family:'Gochi Hand';src:url(gochi-hand-latin-400-normal.woff2) format('woff2');font-display:block}
+:root{--ink:#15120E;--paper:#FBF1D6;--blue:#2D5DA8;--ocre:#E3B04B;--red:#D6402B;--yellow:#FFD23F;--green:#3E9B55;--sw:3px;
+--hand:'Gochi Hand','Comic Sans MS',ui-rounded,sans-serif;--sys:-apple-system,'SF Pro Text',system-ui,'Segoe UI',Roboto,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#cfc6ad}
+body{font-family:var(--hand);color:var(--ink);-webkit-font-smoothing:antialiased}
+.l{fill:none;stroke:var(--ink);stroke-width:var(--sw);stroke-linejoin:round;stroke-linecap:round}
+svg{display:block;overflow:visible}
+.phone{position:relative;width:393px;height:852px;margin:0 auto;overflow:hidden;background:var(--ocre)}
+.status{position:absolute;left:0;right:0;top:0;height:54px;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:6px 34px 0 42px;font-family:var(--sys);font-weight:600;font-size:17px;letter-spacing:-.2px;color:var(--ink)}
+.island{position:absolute;left:50%;top:11px;width:124px;height:36px;margin-left:-62px;background:#000;border-radius:20px;z-index:51}
+.sicons{display:flex;gap:6px;align-items:center}
+.home{position:absolute;left:50%;bottom:8px;width:136px;height:5px;margin-left:-68px;border-radius:3px;background:var(--ink);z-index:60}
+.glass{background:linear-gradient(160deg,rgba(255,243,206,.62),rgba(235,190,90,.38));-webkit-backdrop-filter:blur(16px) saturate(1.7);backdrop-filter:blur(16px) saturate(1.7);
+border:1.5px solid rgba(255,255,255,.75);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.95),inset 0 -2px 0 rgba(180,120,20,.28),0 8px 22px rgba(21,18,14,.22)}
+.cap{position:absolute;font-family:var(--hand);background:var(--yellow);border:var(--sw) solid var(--ink);padding:1px 8px 2px;font-size:19px;line-height:1.1;z-index:5}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-delay:0s!important}}
+
+.pn{position:absolute;background:var(--paper)}.fw{position:absolute;z-index:5}
+.ghost{filter:grayscale(1) contrast(.5) brightness(1.5);opacity:.75}
+.sq{display:inline-flex;gap:3px;vertical-align:middle}.sq i{display:block;width:10px;height:13px;border:2.5px solid var(--ink);background:var(--ink)}.sq i.o{background:transparent}
+.tag{display:inline-block;background:var(--yellow);border:3px solid var(--ink);padding:0 9px 1px;font-size:18px;line-height:25px;white-space:nowrap}
+.box{position:absolute;background:var(--paper);border:3px solid var(--ink)}
+.t{font-size:22px;line-height:26px}.s{font-family:var(--sys);font-weight:600;font-size:13px;line-height:16px}
+.btn{position:absolute;left:16px;right:16px;border-radius:30px;display:flex;align-items:center;justify-content:center;gap:10px;z-index:30;color:var(--ink)}
+.bR{background:linear-gradient(170deg,#C93A25,#A52B1B);border:3px solid var(--ink);box-shadow:inset 0 2px 0 rgba(255,255,255,.7),0 4px 0 var(--ink);color:#fff}
+.bY{background:linear-gradient(170deg,rgba(255,225,120,.92),rgba(235,175,50,.9));border:3px solid var(--ink);box-shadow:inset 0 2px 0 rgba(255,255,255,.85),0 4px 0 var(--ink)}
+.ban{position:absolute;left:16px;top:60px;background:var(--paper);border:3px solid var(--ink);padding:0 14px 2px;font-size:27px;line-height:38px;height:44px;transform:rotate(-1.2deg);box-shadow:4px 4px 0 var(--ink);z-index:9}
+.under{position:absolute;left:16px;right:16px;background:#2D5DA8;border:3px solid var(--ink)}
+.x{position:absolute;right:16px;top:60px;width:44px;height:44px;border-radius:50%;z-index:40;display:grid;place-items:center}
+.lnk{font-family:var(--sys);font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:3px;color:var(--ink)}
+.tabs{position:absolute;left:16px;right:16px;bottom:24px;height:70px;border-radius:35px;z-index:30;display:flex;justify-content:space-around;align-items:flex-end;padding:0 12px 7px}
+.tab{width:96px;text-align:center;font-size:16px;line-height:18px;position:relative}.tab svg{margin:0 auto 6px}
+.tab.on:before{content:"";position:absolute;left:50%;top:-5px;width:50px;height:31px;margin-left:-25px;background:var(--yellow);border:3px solid var(--ink);border-radius:15px;z-index:-1}.tab.on{z-index:1}
+
+ .stars svg{}
+ </style></head><body><div class="phone"><div class="island"></div><div class="status"><span>18:55</span><span class="sicons">
+<svg width="19" height="12" viewBox="0 0 19 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#15120E"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#15120E"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#15120E"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#15120E"/></svg>
+<svg width="17" height="12" viewBox="0 0 17 12"><path d="M8.5 2.2c2.3 0 4.4.9 6 2.4l1-1.1A10.6 10.6 0 0 0 8.5.6C5.700.6 3.100 1.700 1.200 3.500l1 1.100a8.700 8.700 0 0 1 6.300-2.400zm0 3.600c1.300 0 2.500.5 3.400 1.300l1-1.100a7.200 7.200 0 0 0-4.400-1.700c-1.700 0-3.300.6-4.400 1.700l1 1.100c.9-.8 2.100-1.300 3.400-1.300zm0 3.500c.6 0 1.100.2 1.500.6l-1.500 1.600-1.500-1.600c.4-.4.900-.6 1.500-.6z" fill="#15120E"/></svg>
+<svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="22" height="12" rx="3.500" fill="none" stroke="#15120E" opacity=".45"/><rect x="2" y="2" width="17" height="9" rx="2" fill="#15120E"/><path d="M24.500 4.500v4c.8-.3 1.500-1.100 1.500-2s-.7-1.700-1.500-2z" fill="#15120E" opacity=".5"/></svg></span></div><div class="ban" style="font-size:25px">Case 18 · sans prise</div>
+ <div class="pn" style="left:16px;top:114px;width:361px;height:290px;background:#2F3F78"><svg viewBox="0 0 361 290" width="361" height="290" style="--sw:3px;position:absolute;left:0;top:0;"><path class="f" d="M0 0H361V290H0Z" fill="#2F3F78" style="--i:20"/><path class="f" d="M0 150Q90 132 180 148T361 140V290H0Z" fill="#1F6B5A" style="--i:21"/><path class="l" d="M0 150Q90 132 180 148T361 140V290H0Z" pathLength="1" style="--i:21"/><path class="f" d="M0 160H361V290H0Z" fill="#3E62A8" style="--i:22"/><path class="l" d="M0 160H361V290H0Z" pathLength="1" style="--i:22"/><path class="l" d="M20 196q8-5 16 0t16 0M250 190q8-5 16 0t16 0M120 236q8-5 16 0t16 0" pathLength="1" style="--i:23"/><path class="f" d="M300 30a24 24 0 1 0 6 40a19 19 0 1 1 -6 -40Z" fill="#FFF3C4" style="--i:0"/><path class="l" d="M300 30a24 24 0 1 0 6 40a19 19 0 1 1 -6 -40Z" pathLength="1" style="--i:0"/><path class="l" d="M60 40l4 8l8 1l-6 6l2 8l-8-4l-8 4l2-8l-6-6l8-1Z" pathLength="1" style="--i:1" stroke-width="2"/><path class="l" d="M120 70l3 6l6 1l-5 4l1 6l-5-3l-6 3l1-6l-4-4l6-1Z" pathLength="1" style="--i:2" stroke-width="2"/><path class="l" d="M70 70L190 150" pathLength="1" style="--i:3" stroke-width="3"/><path class="l" d="M190 150L190 214" pathLength="1" style="--i:4" stroke-width="2.4"/><path class="f" d="M182 218a8 8 0 1 0 16 0a8 8 0 1 0 -16 0Z" fill="#fff" style="--i:5"/><path class="l" d="M182 218a8 8 0 1 0 16 0a8 8 0 1 0 -16 0Z" pathLength="1" style="--i:5"/><path class="f" d="M182 218a8 8 0 0 1 16 0Z" fill="#D6402B" style="--i:6"/><path class="l" d="M182 218a8 8 0 0 1 16 0Z" pathLength="1" style="--i:6"/><path class="l" d="M1.5 1.5H359.5V288.5H1.5Z" pathLength="1" style="--i:7"/></svg></div>
+ <svg style="position:absolute;left:36px;top:134px;z-index:9" width="260" height="86" viewBox="0 0 260 86"><path d="M10 3h240q8 0 8 8v40q0 8-8 8H80l-16 18l-4-18H10q-8 0-8-8V11q0-8 8-8Z" fill="#fff" stroke="#15120E" stroke-width="3" stroke-linejoin="round"/></svg>
+ <div style="position:absolute;left:36px;top:140px;width:260px;text-align:center;font-size:20px;line-height:26px;z-index:10;padding:0 10px">Rien n’a mordu.</div><div style="position:absolute;left:36px;top:166px;width:260px;text-align:center;font-size:17px;line-height:22px;z-index:10;padding:0 10px">La sortie compte quand même.</div>
+ <div class="box" style="left:16px;top:416px;width:361px;height:116px;padding:10px 14px"><div class="t" style="font-size:26px;line-height:30px">12 oct. · 18 h 55</div><div class="t" style="font-size:20px;margin-top:4px">14 °C · lune 2 %</div><div class="s" style="margin-top:6px">La Marne, Val-de-Marne (94) · 0 prise · 1 h 39</div></div>
+ <div class="btn bY" style="top:600px;height:62px;font-size:25px">Ranger avec mes sorties</div><div class="home"></div></div></body></html>

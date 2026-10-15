@@ -1,0 +1,98 @@
+/* Pâte à modeler : une seule lumière, en haut à gauche (azimut 225°). Ombres vers le bas droite. */
+@font-face{font-family:"DynaPuff";font-weight:500;src:url(dynapuff-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"DynaPuff";font-weight:700;src:url(dynapuff-latin-700-normal.woff2) format("woff2")}
+
+:root{
+  --teal:#2FB5B0; --teal-d:#137A76; --teal-n:#0E5C59;
+  --orange:#FF7A3D; --orange-d:#B8441A;
+  --butter:#FFD84A; --butter-d:#B88A0C;
+  --pink:#FF8FB0; --pink-d:#B8506F;
+  --cream:#FFF0C4; --cream-d:#C9A55A;
+  --ink:#32190B;
+  --fs:"DynaPuff","Arial Rounded MT Bold",system-ui,sans-serif;
+  --sys:-apple-system,"SF Pro Text",system-ui,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--teal-n)}
+body{font-family:var(--fs);color:var(--ink);-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;border:0;background:none}
+
+/* La table de travail : planche de modelage turquoise sombre, grain */
+.table{
+  background-color:#127C78;
+  background-image:radial-gradient(120% 70% at 20% 0%,rgba(255,255,255,.16),rgba(255,255,255,0) 60%),
+                   radial-gradient(90% 60% at 100% 100%,rgba(0,30,30,.4),rgba(0,0,0,0) 70%),
+                   url(grain.svg);
+  background-blend-mode:normal,normal,multiply;
+}
+
+.ecran{position:relative;width:393px;height:852px;overflow:hidden;margin:0 auto}
+
+/* Barre d'état iOS */
+.statut{position:absolute;left:0;right:0;top:0;height:54px;z-index:50;color:#fff;font-family:var(--sys);
+  display:flex;align-items:center;justify-content:space-between;padding:6px 34px 0 48px;font-weight:600;font-size:17px;letter-spacing:-.2px;
+  text-shadow:0 1px 2px rgba(0,40,40,.5)}
+.statut .ile{position:absolute;left:50%;top:11px;width:124px;height:36px;margin-left:-62px;border-radius:20px;background:#000}
+.statut .droite{display:flex;align-items:center;gap:6px;margin-right:-8px}
+.indicateur{position:absolute;left:50%;bottom:8px;width:138px;height:5px;margin-left:-69px;border-radius:3px;background:#fff;z-index:60;box-shadow:0 0 4px rgba(0,0,0,.35)}
+
+/* Volume de pâte : lumière haut gauche, ombre propre bas droite, tranche visible dessous */
+.pate{
+  --c:var(--butter); --tr:var(--butter-d); --ep:6px;
+  position:relative;background-color:var(--c);
+  background-image:radial-gradient(130% 100% at 24% 14%,rgba(255,255,255,.44),rgba(255,255,255,0) 54%),
+                   radial-gradient(110% 90% at 88% 96%,rgba(80,25,0,.32),rgba(80,25,0,0) 62%),
+                   url(grain.svg);
+  background-blend-mode:normal,normal,multiply;
+  box-shadow:inset 4px 5px 7px -1px rgba(255,255,255,.55),
+             inset -6px -8px 11px -2px rgba(70,25,0,.40),
+             0 var(--ep) 0 var(--tr),
+             7px calc(var(--ep) + 10px) 14px rgba(20,8,0,.38);
+}
+/* Creux : le doigt a enfoncé la pâte, l'ombre tombe sur la paroi haut gauche */
+.creux{
+  background-color:var(--c,#BFE9E4);
+  background-image:url(grain.svg);background-blend-mode:multiply;
+  box-shadow:inset 6px 8px 10px -2px rgba(40,15,0,.38),inset -4px -5px 7px -2px rgba(255,255,255,.55),0 2px 0 rgba(255,255,255,.35);
+}
+/* Empreinte de doigt posée sur un volume */
+.doigt{position:absolute;width:var(--w,64px);height:calc(var(--w,64px)*1.34);background:url(empreinte.svg) center/contain no-repeat;
+  transform:rotate(var(--r,0deg));opacity:var(--o,.7);pointer-events:none}
+
+/* Liquid Glass : un couvercle de boîte posé sur la pâte */
+.verre{
+  position:relative;
+  background:linear-gradient(118deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.16) 34%,rgba(255,255,255,.26) 70%,rgba(255,255,255,.46) 100%);
+  -webkit-backdrop-filter:blur(14px) saturate(1.7);backdrop-filter:blur(14px) saturate(1.7);
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7),
+             inset 3px 4px 5px rgba(255,255,255,.6),
+             inset -3px -5px 8px rgba(255,255,255,.22),
+             0 14px 30px rgba(20,8,0,.30),0 2px 0 rgba(255,255,255,.25);
+}
+.verre::after{content:"";position:absolute;inset:5px;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(112deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.5) 40%,rgba(255,255,255,0) 42.5%,rgba(255,255,255,.28) 45%,rgba(255,255,255,0) 47%)}
+
+.mini{font-size:13px}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important}
+}
+
+/* ---- Passe 2 : éléments communs du parcours ---- */
+body.ec{width:393px;height:852px;overflow:hidden}
+.page-titre{position:absolute;left:24px;top:62px;font-size:27px;line-height:1.1;font-weight:700;color:#fff;text-shadow:0 2px 0 rgba(0,50,48,.65)}
+.page-sous{position:absolute;left:24px;font-size:14.5px;font-weight:500;color:#fff;text-shadow:0 1px 0 rgba(0,50,48,.6)}
+.rond{position:absolute;top:58px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;z-index:20}
+.rond.g{left:16px}.rond.d{right:16px}
+.bouton{position:absolute;left:22px;right:22px;height:58px;border-radius:29px;display:grid;place-items:center;font-weight:700;font-size:17.5px;color:#1d0c03;z-index:20}
+.bouton.prim{background:linear-gradient(118deg,rgba(255,176,118,.96),rgba(255,122,61,.82) 55%,rgba(255,200,136,.94));
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.8),inset 3px 4px 6px rgba(255,255,255,.7),inset -3px -5px 8px rgba(160,50,0,.28),0 12px 22px rgba(10,40,40,.45)}
+.bouton.sec{height:50px;font-size:16px;color:#fff;text-shadow:0 1px 2px rgba(0,50,48,.75)}
+.lien{font-weight:700;font-size:14.5px;color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px;text-shadow:0 1px 0 rgba(0,50,48,.6)}
+.dots{display:flex;gap:4px}
+.dots i{width:11px;height:11px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff8,transparent 50%),#FFD84A;
+  box-shadow:inset 1px 1px 2px rgba(255,255,255,.7),inset -1px -2px 2px rgba(120,80,0,.5),1px 2px 2px rgba(40,15,0,.35)}
+.dots i.v{background:#E7D49A;box-shadow:inset 1px 2px 2px rgba(60,30,0,.4)}
+.plateau{--c:var(--cream);border-radius:30px}
+.fish{display:block}.fish svg{display:block;width:100%;height:auto;overflow:visible}
+.ombre-fish svg{filter:brightness(0) opacity(.3)}

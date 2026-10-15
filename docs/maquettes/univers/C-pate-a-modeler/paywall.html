@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=393, initial-scale=1">
+<title>Abonnement</title><link rel="stylesheet" href="clay.css">
+<style>
+.pile{position:absolute;left:0;right:0;top:112px;height:210px}
+.cc{position:absolute;width:128px;height:176px;border-radius:30px;padding:9px}
+.cc i{display:block;height:100%;border-radius:22px;background:var(--cream);box-shadow:inset 4px 5px 7px rgba(50,15,0,.35),inset -3px -3px 5px rgba(255,255,255,.5)}
+.c0{left:40px;top:34px;--c:#1FA39E;--tr:#0E5C59;--ep:5px;transform:rotate(-14deg)}
+.c1{left:98px;top:14px;--c:var(--butter);--tr:var(--butter-d);--ep:9px;transform:rotate(-5deg)}
+.c2{left:160px;top:12px;--c:#F2779C;--tr:#8E2F4E;--ep:12px;transform:rotate(6deg)}
+.c3{left:222px;top:30px;--c:var(--orange);--tr:#8A2F0C;--ep:16px;transform:rotate(15deg)}
+.essai{position:absolute;left:24px;right:24px;top:352px}
+.essai h1{font-size:36px;line-height:1.05;font-weight:700;color:var(--cream);text-shadow:0 2px 0 rgba(0,50,48,.65)}
+.prix{margin-top:14px;display:inline-flex;gap:8px;align-items:center;height:42px;padding:0 18px;border-radius:21px;--c:#BDB7A8;font-size:15px;font-weight:700;color:#3b3a36;border:2px dashed rgba(40,35,25,.45)}
+.liste{position:absolute;left:16px;right:16px;top:512px;border-radius:28px;padding:10px 18px;--c:var(--cream)}
+.liste div{display:flex;gap:12px;align-items:flex-start;padding:10px 0;font-size:16px;font-weight:700;line-height:1.3}
+.liste div+div{border-top:2px solid rgba(110,70,10,.18)}
+.liste i{flex:none;width:22px;height:22px;margin-top:1px;border-radius:50%;background:var(--teal);box-shadow:inset 1px 1px 2px rgba(255,255,255,.6),inset -1px -2px 3px rgba(0,60,58,.6)}
+.liste small{display:block;font-size:13.5px;font-weight:500;opacity:.8}
+.rest{position:absolute;left:0;right:0;top:798px;text-align:center}
+</style></head>
+<body class="table ec"><main class="ecran">
+<div class="statut" data-h="17:44"></div>
+
+<button class="rond d verre" aria-label="Fermer"><svg width="18" height="18" viewBox="0 0 18 18" stroke="#32190B" stroke-width="2.6" stroke-linecap="round"><path d="M3 3l12 12M15 3 3 15"/></svg></button>
+<div class="pile" aria-hidden="true"><div class="cc pate c0"><i></i></div><div class="cc pate c1"><i></i></div><div class="cc pate c2"><i></i></div><div class="cc pate c3"><i></i></div></div>
+<div class="essai"><h1>1 mois d'essai gratuit</h1><div class="prix creux">Prix à fixer</div></div>
+<section class="liste creux">
+ <div><i></i><span>Raretés et règles de tous les départements</span></div>
+ <div><i></i><span>Cartes de prise illimitées</span></div>
+</section>
+<button class="bouton prim verre" style="top:730px">Commencer l'essai gratuit</button>
+<p class="rest"><a class="lien">Restaurer les achats</a></p>
+
+<div class="indicateur"></div></main>
+<script src="poisson.js"></script><script>Pate.defs()</script><script src="ui.js"></script>
+</body></html>

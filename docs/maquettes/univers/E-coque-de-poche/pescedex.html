@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393,initial-scale=1,viewport-fit=cover">
+<title>Coque de poche, pescedex</title>
+<link rel="stylesheet" href="shell.css">
+<link rel="stylesheet" href="screens.css">
+<style>.st{flex:1;height:58px;border-radius:20px;padding:9px 14px;display:flex;flex-direction:column;justify-content:center;gap:5px;color:var(--teal-ink)}
+.st b{font:600 13px/1 var(--sys)}.st span{font:600 20px/1 var(--px)}
+.seg{position:absolute;left:16px;right:16px;top:204px;height:44px;border-radius:22px;display:flex;padding:4px;gap:4px;font:600 15px/1 var(--sys);color:var(--teal-ink)}
+.seg div{flex:1;display:flex;align-items:center;justify-content:center;border-radius:18px}.seg .on{background:rgba(255,255,255,.65);box-shadow:inset 0 1px 0 #fff,0 1px 3px rgba(4,60,80,.25)}
+.grid{position:absolute;left:16px;right:16px;top:268px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px 11px}
+.mc{border-radius:22px;padding:7px 7px 8px;height:138px;position:relative;display:flex;flex-direction:column;align-items:center;gap:6px}
+.ml{background:var(--lcd);border-radius:9px;padding:0;box-shadow:inset 0 0 0 2px rgba(30,36,26,.55);line-height:0}
+.ml canvas{display:block}
+.mn{font:600 13px/1.1 var(--sys);text-align:center;color:var(--teal-ink)}
+.op{background:#F2ECDC;border:2.5px solid #1E241A}
+.tr{background:linear-gradient(165deg,rgba(255,255,255,.5),rgba(255,255,255,.06) 40%),rgba(77,201,216,.7);border:2px solid rgba(255,255,255,.85);box-shadow:inset 0 2px 0 #fff,0 6px 12px rgba(4,60,80,.25)}
+.gl{background:linear-gradient(165deg,rgba(255,255,255,.5),rgba(255,255,255,.06) 40%),rgba(255,111,168,.7);border:2px solid rgba(255,255,255,.85);box-shadow:inset 0 2px 0 #fff,0 6px 12px rgba(4,60,80,.25)}
+.ch{background:linear-gradient(112deg,transparent 28%,rgba(255,255,255,.75) 42%,transparent 54%),linear-gradient(180deg,#FFF3B0 0,#E7B52B 14%,#7A560A 28%,#FFE58A 42%,#C89A1E 56%,#FFF7C8 66%,#8A640E 80%,#F5CB4A 100%);border:2.5px solid #5E4308;box-shadow:0 6px 12px rgba(60,40,0,.3)}
+.ch .mn{background:rgba(255,250,224,.92);border-radius:8px;padding:3px 6px}
+.op .mn,.tr .mn,.gl .mn{}
+.un{background:rgba(255,255,255,.14);border:2px dashed rgba(5,48,58,.45)}
+.un .ml{background:rgba(158,168,138,.55);box-shadow:none}
+.un .mn{opacity:.8}</style>
+</head>
+<body>
+<div class="phone page-shell">
+<div class="shell-face"><div class="board board-auto"></div></div>
+<div class="sb" data-time="17:45"></div>
+<div class="abs" style="left:28px;top:60px;right:28px"><div class="h1">Pescedex</div><div class="sub" style="margin-top:5px">3 espèces sur les 11 relevées dans le 94</div></div>
+<div class="abs" style="left:16px;right:16px;top:132px;display:flex;gap:10px"><div class="st glass"><b>Légendaires</b><span>1 sur 3</span></div><div class="st glass"><b>Sorties</b><span>1</span></div></div>
+<div class="seg glass"><div class="on">Les miens</div><div>Amis</div></div>
+<div class="grid"><div class="mc op"><div class="ml"><canvas data-sp="gardon38" data-cell="2" data-cols="46" data-rows="34"></canvas></div><div class="mn">Gardon</div></div><div class="mc tr"><div class="ml"><canvas data-sp="brochet40" data-cell="2" data-cols="46" data-rows="34"></canvas></div><div class="mn">Brochet</div></div><div class="mc gl"><div class="ml"><canvas data-sp="sandre44" data-cell="2" data-cols="46" data-rows="34"></canvas></div><div class="mn">Sandre</div></div><div class="mc ch"><div class="ml"><canvas data-sp="truite44" data-cell="2" data-cols="46" data-rows="34"></canvas></div><div class="mn">Truite fario</div></div><div class="mc un"><div class="ml"><canvas data-sp="perche38" data-cell="2" data-cols="46" data-rows="34" data-sil=1></canvas></div><div class="mn">Perche</div></div><div class="mc un"><div class="ml"><canvas data-sp="chevesne36" data-cell="2" data-cols="46" data-rows="34" data-sil=1></canvas></div><div class="mn">Chevesne</div></div><div class="mc un"><div class="ml"><canvas data-sp="breme36" data-cell="2" data-cols="46" data-rows="34" data-sil=1></canvas></div><div class="mn">Brème</div></div><div class="mc un"><div class="ml"><canvas data-sp="silure44" data-cell="2" data-cols="46" data-rows="34" data-sil=1></canvas></div><div class="mn">Silure</div></div><div class="mc un"><div class="ml"><canvas data-sp="tanche36" data-cell="2" data-cols="46" data-rows="34" data-sil=1></canvas></div><div class="mn">Tanche</div></div></div>
+<nav class="tabbar glass"><div class="tab"><div class="pill"><svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.500L15 20l-6-2.500L3 20z"/><path d="M9 4v13.500M15 6.500V20"/></svg></div><span class="lab">Carte</span></div>
+<div class="tab on"><div class="pill"><svg viewBox="0 0 24 24"><path d="M2.500 12c3-5.500 8.500-6.500 12.500-3l4.500-3.500v13L15 15c-4 3.500-9.500 2.500-12.500-3Z"/><circle cx="7.500" cy="11" r="1"/></svg></div><span class="lab">Pescedex</span></div>
+<div class="sortie"><div class="btn glass pink"><svg viewBox="0 0 24 24"><path d="M7 4.500v15L20 12z"/></svg><span>Sortie</span></div></div>
+<div class="tab"><div class="pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.800-6.500 8-6.500s8 2.500 8 6.500"/></svg></div><span class="lab">Moi</span></div></nav>
+<div class="home"></div>
+</div>
+<script src="sprites.js"></script>
+<script src="lcd.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

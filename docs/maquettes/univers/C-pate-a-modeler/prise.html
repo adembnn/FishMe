@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393, initial-scale=1">
+<title>Carte de prise</title>
+<link rel="stylesheet" href="clay.css">
+<style>
+  body{width:393px;height:852px;overflow:hidden}
+  .titre{position:absolute;left:24px;top:66px;font-size:24px;font-weight:700;color:var(--cream);text-shadow:0 2px 0 rgba(0,50,48,.6)}
+  .fermer{position:absolute;right:20px;top:60px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;z-index:20}
+
+  /* Carte de prise : cadre épais satiné (peu commun), face crème en creux */
+  .carte{position:absolute;left:22px;top:118px;width:349px;height:536px;border-radius:44px;padding:14px;
+    --c:var(--butter);--tr:var(--butter-d);--ep:10px;transform:rotate(-1.2deg)}
+  .face{position:relative;height:100%;border-radius:32px;--c:var(--cream);padding:14px 18px 0;
+    display:flex;flex-direction:column}
+  .haut{display:flex;align-items:center;justify-content:space-between;height:34px}
+  .perles{display:flex;gap:7px}
+  .perle{width:17px;height:17px;border-radius:50%;
+    background:radial-gradient(circle at 32% 28%,#fff6,transparent 50%),#FFD84A;
+    box-shadow:inset 2px 2px 3px rgba(255,255,255,.7),inset -2px -3px 3px rgba(120,80,0,.45),2px 3px 3px rgba(40,15,0,.35)}
+  .perle.vide{background:#E7D49A;box-shadow:inset 2px 3px 3px rgba(60,30,0,.35),inset -1px -1px 2px rgba(255,255,255,.6)}
+  .rar{font-weight:700;font-size:14px;letter-spacing:.2px}
+  .bassin{position:relative;height:226px;margin-top:8px;border-radius:26px;--c:#A6DDD8;display:grid;place-items:center;overflow:hidden}
+  .bassin .vagues{position:absolute;inset:0;opacity:.7}
+  .bassin .saut{position:relative;width:258px;transform-origin:50% 88%;animation:rev 2.5s both}
+  .bassin .saut svg{display:block;width:100%;height:auto;overflow:visible}
+
+  /* Révélation : boule de pâte lâchée, écrasée, étirée, puis poisson. 12 images/s (30 images en 2,5 s). */
+  @keyframes rev{
+    0%    {transform:translateY(-130px) scale(.3,1);animation-timing-function:steps(6,end)}
+    20%   {transform:translateY(0) scale(.46,.72);animation-timing-function:steps(4,end)}
+    33.3% {transform:translateY(-34px) scale(.34,1.34);animation-timing-function:steps(4,end)}
+    46.7% {transform:translateY(0) scale(.78,.68);animation-timing-function:steps(4,end)}
+    60%   {transform:translateY(-14px) scale(1.16,.9);animation-timing-function:steps(4,end)}
+    73.3% {transform:translateY(0) scale(.93,1.1);animation-timing-function:steps(4,end)}
+    86.7% {transform:translateY(0) scale(1.04,.97);animation-timing-function:steps(4,end)}
+    100%  {transform:none}
+  }
+  @keyframes pop{0%,66%{transform:scale(0)}  72%{transform:scale(1.3)}  80%,100%{transform:scale(1)}}
+  .perle{animation:pop 2.5s steps(1,end) both}
+  .perle:nth-child(2){animation-delay:.25s}
+  @keyframes texte{0%,72%{opacity:0;transform:translateY(8px)}76%{opacity:.5;transform:translateY(4px)}80%,100%{opacity:1;transform:none}}
+  .revele{animation:texte 2.5s steps(1,end) both}
+
+  .ligne{display:flex;justify-content:space-between;align-items:flex-end;margin-top:14px}
+  .ligne h1{font-size:40px;line-height:1;font-weight:700;letter-spacing:-.5px}
+  .ligne .lat{display:block;font-weight:500;font-size:14px;margin-top:5px;opacity:.78}
+  .taille{font-size:46px;line-height:.9;font-weight:700;color:var(--orange-d);text-shadow:0 2px 0 rgba(255,255,255,.7);text-align:right}
+  .taille small{font-size:22px}
+  .garde{align-self:flex-start;margin-top:14px;padding:8px 16px;border-radius:22px;--c:var(--teal);--tr:var(--teal-d);--ep:4px;font-weight:700;font-size:14.5px;color:#1d0c03;text-shadow:0 1px 0 rgba(255,255,255,.35)}
+  .stat{margin-top:12px;font-weight:500;font-size:15px;line-height:1.35}
+  .stat b{font-weight:700}
+  .pied{position:absolute;left:18px;right:18px;bottom:14px;font-size:13.5px;font-weight:500;opacity:.8;display:flex;align-items:center;gap:6px}
+
+  .actions{position:absolute;left:22px;right:22px;top:690px;z-index:20;display:flex;flex-direction:column;gap:12px}
+  .bouton{position:relative;left:auto;right:auto;height:56px;border-radius:28px;display:grid;place-items:center;font-weight:700;font-size:17px;color:var(--ink)}
+  .bouton.prim{background:linear-gradient(118deg,rgba(255,170,110,.95),rgba(255,122,61,.8) 55%,rgba(255,196,130,.92));
+    box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.8),inset 3px 4px 6px rgba(255,255,255,.7),inset -3px -5px 8px rgba(160,50,0,.28),0 12px 22px rgba(10,40,40,.45)}
+  .bouton.sec{height:50px;font-size:16px;color:#fff;text-shadow:0 1px 2px rgba(0,50,48,.7)}
+  @media (prefers-reduced-motion:reduce){
+    .bassin .saut,.perle,.revele{animation:fondu .5s ease both!important}
+    @keyframes fondu{from{opacity:0}to{opacity:1}}
+  }
+</style>
+</head>
+<body class="table">
+<main class="ecran" aria-label="Carte de prise">
+  <div class="statut"><span>17:44</span><div class="ile"></div>
+    <span class="droite" aria-hidden="true">
+      <svg width="19" height="12" viewBox="0 0 19 12" fill="#fff"><rect x="0" y="8" width="3.2" height="4" rx="1"/><rect x="5" y="5.5" width="3.2" height="6.5" rx="1"/><rect x="10" y="3" width="3.2" height="9" rx="1"/><rect x="15" y="0" width="3.2" height="12" rx="1"/></svg>
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M1.5 4.3a10 10 0 0 1 14 0"/><path d="M4 7a6.5 6.5 0 0 1 9 0"/><circle cx="8.5" cy="10" r="1" fill="#fff" stroke="none"/></svg>
+      <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.8" fill="none" stroke="#fff" stroke-opacity=".6"/><rect x="2" y="2" width="19" height="9" rx="2.6" fill="#fff"/><path d="M25 4.5v4c.9-.3 1.6-1.1 1.6-2s-.7-1.7-1.6-2z" fill="#fff" fill-opacity=".6"/></svg>
+    </span>
+  </div>
+
+  <h2 class="titre">Nouvelle prise</h2>
+  <button class="fermer verre" aria-label="Fermer"><svg width="18" height="18" viewBox="0 0 18 18" stroke="#32190B" stroke-width="2.6" stroke-linecap="round"><path d="M3 3l12 12M15 3 3 15"/></svg></button>
+
+  <article class="carte pate" aria-label="Brochet, 68 centimètres, peu commun">
+    <div class="face creux">
+      <div class="haut">
+        <div class="perles" aria-hidden="true"><span class="perle"></span><span class="perle"></span><span class="perle vide" style="animation:none"></span><span class="perle vide" style="animation:none"></span></div>
+        <span class="rar">Peu commun · satiné</span>
+      </div>
+      <div class="bassin creux">
+        <svg class="vagues" viewBox="0 0 292 226" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke-linecap="round">
+          <g stroke="#2a1000" stroke-opacity=".16" stroke-width="2.4"><path d="M18 40q14-8 28 0t28 0M210 30q14-8 28 0t28 0M30 168q14-8 28 0t28 0M196 176q14-8 28 0t28 0"/></g>
+          <g stroke="#fff" stroke-opacity=".5" stroke-width="1.8" transform="translate(-1.5 -1.5)"><path d="M18 40q14-8 28 0t28 0M210 30q14-8 28 0t28 0M30 168q14-8 28 0t28 0M196 176q14-8 28 0t28 0"/></g>
+        </svg>
+        <div class="saut" id="poisson"></div>
+      </div>
+      <div class="ligne revele">
+        <h1>Brochet<span class="lat">Esox lucius</span></h1>
+        <div class="taille">68<small> cm</small></div>
+      </div>
+      <div class="garde pate revele">Garder possible · 68 / 60 cm mini</div>
+      <p class="stat revele"><b>Peu commun dans le 94</b> : 10 pêches sur 29</p>
+      <div class="pied revele"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="#32190B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 18s6-5.200 6-10a6 6 0 0 0-12 0c0 4.800 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg>La Marne, Val-de-Marne (94)</div>
+    </div>
+    <span class="doigt" style="--w:58px;--r:-18deg;--o:.55;right:-6px;top:-8px"></span>
+    <span class="doigt" style="--w:44px;--r:30deg;--o:.5;left:-4px;bottom:-4px"></span>
+  </article>
+
+  <div class="actions">
+    <button class="bouton prim verre" type="button">Ranger dans le Pescedex</button>
+    <button class="bouton sec verre" type="button">Partager</button>
+  </div>
+  <div class="indicateur"></div>
+</main>
+<script src="poisson.js"></script>
+<script>document.getElementById('poisson').innerHTML = Pate.poisson('brochet','peu');</script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393, initial-scale=1, viewport-fit=cover">
+<title>Carte de prise, brochet</title>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/vendor/phosphor/regular/style.css">
+<style>
+:root{
+  --noir:#0A0B0B;
+  --blanc:#EDEAE3;
+  --sourd:#9D9C96;
+  --ambre:#F2B35E;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --sans:"Hanken Grotesk",-apple-system,"Helvetica Neue",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--noir)}
+body{display:grid;place-items:start center;font-family:var(--sans);color:var(--blanc);-webkit-font-smoothing:antialiased}
+::selection{background:var(--ambre);color:var(--noir)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:2px solid var(--ambre);outline-offset:3px;border-radius:8px}
+.screen{position:relative;width:393px;height:852px;overflow:hidden;background:var(--noir);
+  --lx:272px;--ly:300px;--lr:250px;touch-action:none;font-variant-numeric:tabular-nums}
+
+/* iOS chrome */
+.island{position:absolute;top:11px;left:50%;width:124px;height:36px;margin-left:-62px;background:#000;border-radius:20px;z-index:30}
+.status{position:absolute;top:0;left:0;right:0;height:54px;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:6px 34px 0 50px;font:600 17px/1 -apple-system,"SF Pro Text",var(--sans);letter-spacing:-.01em;color:#fff}
+.status .r{display:flex;gap:6px;align-items:center}
+.home{position:absolute;bottom:8px;left:50%;width:136px;height:5px;margin-left:-68px;border-radius:3px;background:var(--blanc);z-index:30}
+
+/* la lumière : un seul effet */
+.glow{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at var(--lx) var(--ly),rgba(242,179,94,.11),transparent calc(var(--lr)*1.05))}
+.fish,.lit{position:absolute;left:0;right:0;top:150px;height:480px;pointer-events:none}
+.fish img,.lit img{position:absolute;left:50%;top:50%;width:470px;height:auto;
+  transform:translate(-50%,-50%) translateX(54px) rotate(-86deg)}
+.fish img{filter:brightness(.2) saturate(.55)}
+.lit{top:0;height:100%;-webkit-mask-image:radial-gradient(circle at var(--lx) var(--ly),#000 0,rgba(0,0,0,.72) calc(var(--lr)*.38),transparent var(--lr));
+  mask-image:radial-gradient(circle at var(--lx) var(--ly),#000 0,rgba(0,0,0,.72) calc(var(--lr)*.38),transparent var(--lr))}
+.lit .in{position:absolute;left:0;right:0;top:150px;height:480px}
+.lit img{filter:brightness(1.08) saturate(1.05)}
+
+/* verdict */
+.verdict{position:absolute;left:16px;right:16px;top:62px;z-index:10}
+.vrow{display:flex;align-items:center;height:44px;gap:9px;font-size:15px;line-height:1}
+.vrow .ph-seal-check{font-size:24px;color:var(--blanc)}
+.vrow h1{font-size:15px;font-weight:600}
+.vrow .mes{margin-left:auto;color:var(--sourd)}
+.vrow .mes b{color:var(--blanc);font-weight:600}
+.info{width:44px;height:44px;margin-right:-12px;display:grid;place-items:center;font-size:20px;color:var(--sourd)}
+.ruler{display:block;width:361px;height:36px;margin-top:-2px;overflow:visible}
+.ruler text{font:400 12px var(--sans);fill:var(--sourd);font-variant-numeric:tabular-nums}
+.ruler .m text{fill:var(--blanc)}
+.regles{position:absolute;left:0;right:0;top:100px;padding:14px 16px;background:#141616;border-radius:14px;font-size:15px;line-height:1.45;opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s}
+.regles.on{opacity:1;visibility:visible}
+.regles p+p{margin-top:2px}
+.regles small{display:block;margin-top:10px;font-size:12px;color:var(--sourd)}
+.regles a{color:var(--blanc);text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* recto */
+.flip{position:absolute;left:0;right:0;top:150px;height:480px;z-index:5;display:block;width:100%}
+.hint{position:absolute;left:16px;top:2px;font-size:12px;color:var(--sourd);display:flex;gap:6px;align-items:center;pointer-events:none}
+.verso{position:absolute;left:16px;right:16px;top:150px;height:480px;z-index:6;background:var(--noir);opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility .35s;display:flex;flex-direction:column;justify-content:center;gap:22px;font-size:15px;line-height:1.45;pointer-events:none}
+.verso.on{opacity:1;visibility:visible}
+.verso span{display:block;font-size:12px;color:var(--sourd);margin-top:3px}
+.nom{position:absolute;left:16px;top:626px;z-index:7;pointer-events:none}
+.nom h2{font-size:34px;line-height:1.05;font-weight:600;letter-spacing:-.02em}
+.meta{display:flex;gap:18px;align-items:center;margin-top:6px;font-size:15px;line-height:1}
+.pal{display:flex;gap:6px;align-items:center}
+.pal i{width:8px;height:8px;border-radius:50%;background:var(--ambre)}
+.pal i.v{background:none;box-shadow:inset 0 0 0 1.2px var(--sourd)}
+.quand{position:absolute;left:16px;top:700px;font-size:12px;color:var(--sourd);z-index:7}
+
+/* barre de verre : la seule couche contrôles */
+.bar{position:absolute;left:16px;right:16px;top:732px;height:56px;border-radius:28px;padding:4px;display:flex;gap:4px;z-index:10;
+  background:rgba(237,234,227,.1);-webkit-backdrop-filter:blur(20px) saturate(1.6);backdrop-filter:blur(20px) saturate(1.6);
+  box-shadow:inset 0 0 0 .5px rgba(237,234,227,.2),0 6px 20px rgba(0,0,0,.5)}
+.bar button{height:48px;border-radius:24px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:15px;font-weight:600;transition:transform .2s var(--ease)}
+.bar button:active{transform:scale(.97)}
+.bar .go{flex:1;background:var(--blanc);color:var(--noir)}
+.bar .go i,.bar .sh i{font-size:20px}
+.bar .sh{width:122px}
+.relache{position:absolute;left:50%;top:796px;transform:translateX(-50%);height:40px;padding:0 16px;font-size:12px;color:var(--sourd);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;z-index:10}
+@media (prefers-reduced-motion:reduce){.regles,.verso,.bar button{transition-duration:.01s}}
+</style>
+</head>
+<body>
+<main class="screen" id="screen">
+  <div class="glow" id="glow"></div>
+  <div class="fish" aria-hidden="true"><img src="../assets/fish/brochet.png" alt=""></div>
+  <div class="lit" id="lit" aria-hidden="true"><div class="in"><img src="../assets/fish/brochet.png" alt=""></div></div>
+
+  <div class="island"></div>
+  <div class="status" aria-hidden="true">
+    <span>9:41</span>
+    <span class="r">
+      <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#fff"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#fff"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#fff"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#fff"/></svg>
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"><path d="M1.2 4.3a10 10 0 0 1 14.6 0"/><path d="M3.9 7.1a6 6 0 0 1 9.2 0"/><circle cx="8.5" cy="10.2" r=".9" fill="#fff"/></svg>
+      <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.8" fill="none" stroke="#fff" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2.4" fill="#fff"/><path d="M25 4.5v4c.8-.3 1.5-1.1 1.5-2s-.7-1.7-1.5-2z" fill="#fff" opacity=".45"/></svg>
+    </span>
+  </div>
+
+  <section class="verdict" aria-label="Verdict" id="verdict">
+    <div class="vrow">
+      <i class="ph ph-seal-check" aria-hidden="true"></i>
+      <h1>Garder possible</h1>
+      <span class="mes"><b>68</b> / 60 cm mini</span>
+      <button class="info" id="infoBtn" aria-label="Voir les raisons" aria-expanded="false"><i class="ph ph-info"></i></button>
+    </div>
+    <svg class="ruler" id="ruler" viewBox="0 0 361 36" role="img" aria-label="Réglette de 0 à 80 cm : 68 cm, au-dessus du minimum de 60 cm"></svg>
+    <div class="regles" id="regles">
+      <p>Taille mini 60 cm, le tien : 68 cm.</p>
+      <p>Ouvert jusqu'au 25 janv. · 2 brochets max par jour.</p>
+      <small>Règle nationale, indicative · <a href="#">Signaler une erreur</a></small>
+    </div>
+  </section>
+
+  <button class="flip" id="flip" aria-label="Retourner la carte" aria-pressed="false"><span class="hint"><i class="ph ph-arrows-clockwise"></i>Toucher pour retourner</span></button>
+  <div class="verso" id="verso" aria-hidden="true">
+    <p>Commun en Seine-et-Marne, peu commun ici.<span>Palier 2 sur 3 · d'après les relevés de l'OFB</span></p>
+    <p>4 espèces sur les 11 relevées dans le 94.</p>
+  </div>
+
+  <div class="nom">
+    <h2>Brochet</h2>
+    <div class="meta"><span>68 cm</span><span>n° 014</span><span class="pal" role="img" aria-label="Palier 2 sur 3"><i></i><i></i><i class="v"></i></span></div>
+  </div>
+  <p class="quand">12 oct. 2026, 17 h 42 · La Marne, Val-de-Marne (94)</p>
+
+  <div class="bar" role="group" aria-label="Actions">
+    <button class="go"><i class="ph ph-bookmark-simple"></i>Ranger dans le Pescedex</button>
+    <button class="sh"><i class="ph ph-export"></i>Partager</button>
+  </div>
+  <button class="relache">Je le relâche</button>
+  <div class="home"></div>
+</main>
+
+<script src="../assets/vendor/gsap/gsap.min.js"></script>
+<script>
+(function(){
+  var S=document.getElementById('screen'),NS='http://www.w3.org/2000/svg',R=document.getElementById('ruler');
+  function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!=null)e.textContent=t;return e}
+  /* réglette 0..80 cm, fine, sans hachures */
+  var px=361/80,X=function(c){return c*px},y=14;
+  R.appendChild(el('line',{x1:0,x2:X(60),y1:y,y2:y,stroke:'#5b5c58','stroke-width':1}));
+  R.appendChild(el('line',{x1:X(60),x2:X(80),y1:y,y2:y,stroke:'#EDEAE3','stroke-width':1}));
+  for(var c=0;c<=80;c+=10){var big=c%20===0,m=c===60;
+    R.appendChild(el('line',{x1:X(c)+(c===80?-.5:c===0?.5:0),x2:X(c)+(c===80?-.5:c===0?.5:0),y1:y,y2:y+(m?9:big?7:4),stroke:m?'#EDEAE3':'#7b7c77','stroke-width':1}));
+    if(big){var g=el('g',m?{class:'m'}:{});g.appendChild(el('text',{x:X(c)+(c===0?0:c===80?0:0),y:32,'text-anchor':c===0?'start':c===80?'end':'middle'},c));R.appendChild(g)}}
+  R.appendChild(el('circle',{id:'rep',cx:X(68),cy:y,r:4,fill:'#F2B35E'}));
+
+  /* interactions */
+  var ib=document.getElementById('infoBtn'),rg=document.getElementById('regles');
+  ib.addEventListener('click',function(e){e.stopPropagation();var o=rg.classList.toggle('on');ib.setAttribute('aria-expanded',o)});
+  var fl=document.getElementById('flip'),vs=document.getElementById('verso');
+  fl.addEventListener('click',function(){var o=vs.classList.toggle('on');fl.setAttribute('aria-pressed',o);vs.setAttribute('aria-hidden',!o)});
+
+  /* la lumière suit le pointeur ; au repos elle reste en haut à droite */
+  var rest={x:272,y:300},tx=gsap.quickTo(S,'--lx',{duration:.9,ease:'power3.out'}),ty=gsap.quickTo(S,'--ly',{duration:.9,ease:'power3.out'});
+  function aim(x,y){tx(x+'px');ty(y+'px')}
+  S.addEventListener('pointermove',function(e){var b=S.getBoundingClientRect();aim(e.clientX-b.left,e.clientY-b.top)});
+  S.addEventListener('pointerleave',function(){aim(rest.x,rest.y)});
+  function gyro(e){if(e.gamma==null)return;var gx=Math.max(-30,Math.min(30,e.gamma))/30,gy=Math.max(-30,Math.min(30,(e.beta||0)-45))/30;aim(rest.x+gx*130,rest.y+gy*130)}
+  var asked=false;
+  S.addEventListener('pointerdown',function(){if(asked)return;asked=true;
+    if(window.DeviceOrientationEvent&&DeviceOrientationEvent.requestPermission){DeviceOrientationEvent.requestPermission().then(function(r){if(r==='granted')addEventListener('deviceorientation',gyro)}).catch(function(){})}
+    else if(window.DeviceOrientationEvent){addEventListener('deviceorientation',gyro)}});
+
+  /* le seul mouvement écrit : la vitrine s'éclaire sur le poisson (fini à 2,3 s) */
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var txt=['.verdict','.nom','.quand','.bar','.relache','.hint'];
+  if(rm){
+    gsap.from(['#lit','#glow'],{opacity:0,duration:.6,ease:'none'});
+    gsap.from(txt,{opacity:0,duration:.6,ease:'none'});
+  }else{
+    var tl=gsap.timeline();
+    tl.from(S,{'--lr':'0px',duration:.35,ease:'power2.out'},.25)
+      .to(S,{'--lr':'150px',duration:.12,ease:'none'},.6)
+      .to(S,{"--lr":"250px",duration:1.3,ease:'expo.out'},.72)
+      .from(txt,{opacity:0,y:8,duration:.7,ease:'expo.out',stagger:.07},1.15);
+  }
+})();
+</script>
+</body>
+</html>

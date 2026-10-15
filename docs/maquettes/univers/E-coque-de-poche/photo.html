@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393,initial-scale=1,viewport-fit=cover">
+<title>Coque de poche, photo</title>
+<link rel="stylesheet" href="shell.css">
+<link rel="stylesheet" href="screens.css">
+<style></style>
+</head>
+<body>
+<div class="phone page-shell">
+<div class="shell-face"><div class="board board-auto"></div></div>
+<div class="sb" data-time="17:43"></div>
+<div class="circ glass" style="left:16px;top:58px"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></div><div class="abs" style="left:76px;top:62px;right:20px"><div class="h1">Quelle espèce ?</div><div class="sub" style="margin-top:5px">Proposé d'après la photo, à confirmer</div></div>
+<div class="bezel abs" style="left:16px;top:122px;width:361px;padding:12px"><div class="lcd" style="width:337px;height:108px"><canvas id="v"></canvas><div class="strip" style="top:0;height:22px;font-size:13px"><span>PHOTO 1/1</span><span>12 OCT</span></div></div></div>
+<div class="panel glass pink" style="top:262px;height:56px;padding:0 16px;display:flex;align-items:center;gap:12px;border-radius:28px"><canvas data-sp="brochet40" data-cell="2" data-cols="24" data-rows="16" style="border-radius:4px"></canvas><span style="flex:1;font:600 18px var(--sys)">Brochet</span><svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:none;stroke:#2A0A18;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.5l4.500 4.500L19 7.500"/></svg></div><div class="panel glass " style="top:326px;height:56px;padding:0 16px;display:flex;align-items:center;gap:12px;border-radius:28px"><canvas data-sp="sandre44" data-cell="2" data-cols="24" data-rows="16" style="border-radius:4px"></canvas><span style="flex:1;font:600 18px var(--sys)">Sandre</span><span style="width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 2.5px rgba(5,48,58,.55);display:block"></span></div><div class="panel glass " style="top:390px;height:56px;padding:0 16px;display:flex;align-items:center;gap:12px;border-radius:28px"><canvas data-sp="perche38" data-cell="2" data-cols="24" data-rows="16" style="border-radius:4px"></canvas><span style="flex:1;font:600 18px var(--sys)">Perche</span><span style="width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 2.5px rgba(5,48,58,.55);display:block"></span></div>
+<div class="lnk" style="top:458px">Aucune de ces espèces &nbsp;·&nbsp; Pas un poisson</div>
+<div class="panel glass" style="top:492px;padding:14px 16px 16px"><div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:600 16px var(--sys)">Taille</span><span style="font:600 28px var(--px)">68 cm</span></div>
+ <div id="trk" style="position:relative;height:40px;margin-top:8px"><div id="ticks" style="position:absolute;left:0;right:0;top:12px;height:14px"></div><i style="position:absolute;left:calc(52.7% - 16px);top:4px;width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,var(--pink) 55%,var(--pink-deep));box-shadow:0 3px 0 rgba(120,20,70,.45),inset 0 1px 0 #fff"></i></div>
+ <div style="display:flex;justify-content:space-between;font:500 13px var(--sys);margin-top:2px"><span>10 cm</span><span>120 cm</span></div></div>
+<div class="cta pink glass" style="top:690px">Valider</div>
+<div class="home"></div>
+</div>
+<script src="sprites.js"></script>
+<script src="lcd.js"></script>
+<script src="app.js"></script>
+<script>
+const t=document.getElementById('ticks');let h='';for(let i=0;i<=44;i++){const big=i%4===0;h+=`<i style="position:absolute;left:${i/44*100}%;top:${big?0:5}px;width:3px;height:${big?14:6}px;background:#05303A;margin-left:-1px;opacity:${i<=23?1:.35}"></i>`}t.innerHTML=h;
+const L=new E.Lcd(document.getElementById('v'),56,18,6);
+const S=SPRITES.brochet40;L.sprite(8,5,S);for(let x=0;x<56;x+=3){L.set(x,16)}L.draw();
+</script>
+</body>
+</html>
