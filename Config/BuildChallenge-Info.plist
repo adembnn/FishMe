@@ -15,5 +15,11 @@
 			</array>
 		</dict>
 	</array>
+	<key>CKSharingSupported</key>
+	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>FishMe centre la carte sur ta position pour te montrer les coins de pêche proches. Ta position reste sur ton iPhone.</string>
+	<key>ReglesBaseURL</key>
+	<string></string>
 </dict>
 </plist>

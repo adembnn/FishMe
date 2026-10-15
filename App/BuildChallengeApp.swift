@@ -8,6 +8,8 @@ import SwiftUI
 
 @main
 struct BuildChallengeApp: App {
+    /// L8 : reçoit les invitations CloudKit (partage d'une carte entre amis).
+    @UIApplicationDelegateAdaptor(AdaptateurPartage.self) var adaptateur
 
     /// L'unique appel à `Spark.configure` du projet. `RootView` le passe à `PasserelleSpark` ; `CoucheMesure` ne l'appelle
     /// qu'après l'accord du pêcheur (docs/lots.md, L6 : aucun événement avant le consentement).

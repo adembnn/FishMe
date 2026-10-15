@@ -55,6 +55,8 @@ final class ParcoursApp {
     @ObservationIgnored let previensMoi: PreviensMoiModele
     @ObservationIgnored let mesure: CoucheMesure
     @ObservationIgnored let achats: AchatsStoreKit
+    /// L10 : Live Activity de l'écran verrouillé.
+    @ObservationIgnored let ecranVerrouille = PilotageActivite()
 
     /// L4 : le dépôt des cartes, créé une seule fois (SwiftData local, photos sans GPS dans Application Support).
     /// `nil` seulement si SwiftData ne s'ouvre ni sur disque ni en mémoire : le volet Pescedex reste alors vide.
@@ -62,6 +64,9 @@ final class ParcoursApp {
     let pescedex: PescedexModele?
     /// Cartes rendues par L4 pour le partage de L9 (recto seul, sans météo).
     var cartesAPartager: [CarteAPartager] = []
+
+    /// L8 : les amis (CloudKit), créés au premier passage sur l'écran Amis, jamais au lancement.
+    @ObservationIgnored private var gestionAmisCreee: GestionAmis?
 
     let moteur: SuiviSession
     let suivi: SuiviAbonnement
@@ -122,12 +127,29 @@ final class ParcoursApp {
         suivi.demarrer()
         moteur.abonne = suivi.abonne
         moteur.reprendre()
+        if let c = moteur.enCours {
+            await ecranVerrouille.reprendre(debut: c.sortie.debut, finLegale: c.finLegale, prises: moteur.nombrePrises)
+        }
         await rafraichirCollection()
         await marque.rafraichir()
         Task.detached(priority: .utility) { await ReglesAJour.lancer() }
     }
 
     // MARK: Collection (L4)
+
+    /// L8 : `nil` si le cache local des amis ne s'ouvre pas (l'écran Amis le dit alors).
+    func gestionAmis() -> GestionAmis? {
+        if let gestionAmisCreee { return gestionAmisCreee }
+        guard let depot,
+              let conteneur = (try? CacheAmis.creerConteneur()) ?? (try? CacheAmis.creerConteneur(enMemoire: true)) else { return nil }
+        let configuration = ConfigurationAmis(contact: ContactClub.adresse)
+        let gestion = GestionAmis(service: ServiceAmisCloudKit(configuration: configuration),
+                                  cache: CacheAmis(conteneur: conteneur, dossierImages: CacheAmis.dossierParDefaut()),
+                                  file: FileEnvoi(dossier: FileEnvoi.dossierParDefaut()),
+                                  collection: depot, especes: core.especes, configuration: configuration)
+        gestionAmisCreee = gestion
+        return gestion
+    }
 
     /// Recharge le Pescedex et les cartes partageables de L9 après une écriture dans le dépôt.
     func rafraichirCollection() async {
@@ -140,6 +162,45 @@ final class ParcoursApp {
             cartes.append(CarteAPartager(id: prise.id.uuidString, titre: noms[prise.espece] ?? "Carte FishMe", png: png))
         }
         cartesAPartager = cartes
+        publierAquarium()
+    }
+
+    // MARK: Widget aquarium (L15)
+
+    /// Donne au widget les poissons du Pescedex (les plus rares d'abord, sans carte d'exemple ni bredouille, 12 au plus),
+    /// le nombre d'espèces et l'abonnement. Les cartes déclarées (swipe du tunnel) comptent comme les autres.
+    func publierAquarium() {
+        guard let pescedex else { return }
+        let reelles = pescedex.detaillees.map(\.prise).filter { !$0.exemple }
+        let poissons: [InstantaneAquarium.Poisson] = pescedex.emplacements.compactMap { e in
+            guard let carte = e.carte, !carte.exemple else { return nil }
+            let rarete: Int
+            switch e.rarete.niveau {
+            case .commun, .nonMesuree: rarete = 0
+            case .peuCommun: rarete = 1
+            case .rare: rarete = 2
+            case .legendaire: rarete = 3
+            }
+            let nombre = reelles.filter { $0.espece.id == e.espece.espece.id }.count
+            return InstantaneAquarium.Poisson(id: carte.id.uuidString, slug: e.espece.espece.id, rarete: rarete,
+                                              relache: !carte.gardee, nombre: nombre)
+        }
+        .sorted { $0.rarete > $1.rarete }
+        PontAquariumWidget.publier(poissons: Array(poissons.prefix(InstantaneAquarium.plafond)),
+                                   especes: poissons.count, estPro: suivi.abonne)
+    }
+
+    /// Liens `fishme://` du widget. `pro?source=widget` : paywall ; `aquarium` : le volet Pescedex (L14 absent).
+    func ouvrir(url: URL) {
+        guard url.scheme == "fishme" else { return }
+        switch url.host() {
+        case "pro":
+            if !suivi.abonne { montrer(.paywall(.widget)) }
+        case "aquarium":
+            onglet = .pescedex
+        default:
+            break
+        }
     }
 
     /// Écrit dans le dépôt puis recharge. Une erreur d'écriture est ignorée sans planter : la carte n'existe pas, rien n'est annoncé.
@@ -228,6 +289,7 @@ final class ParcoursApp {
         switch moteur.commencer(depart) {
         case .demarree:
             spotSession = spot
+            if let c = moteur.enCours { ecranVerrouille.demarrer(debut: c.sortie.debut, finLegale: c.finLegale) }
             mesure.envoyer(.sessionCommencee)
             onglet = .carte
             Task { await conditions.lire(spot: spot.centre) }
@@ -241,6 +303,9 @@ final class ParcoursApp {
     }
 
     private func sessionFinie(_ fin: FinDeSession) {
+        Task { await ecranVerrouille.terminer() }
+        PontAquariumWidget.ajouterRations(1)
+        publierAquarium()
         mesure.envoyer(.sessionFinie)
         if fin.sortie.prises.isEmpty {
             // Session sans prise : carte bredouille (L4). La révélation avant le paywall n'est pas ouverte ici : elle se voit dans le Pescedex.
@@ -272,6 +337,7 @@ final class ParcoursApp {
         guard let confirmee else { return }
         let instantane = coordonneeSession.flatMap { conditions.instantane(spot: $0) }
         moteur.ajouter(prise: confirmee.prise, conditions: instantane)
+        Task { await ecranVerrouille.mettreAJour(prises: moteur.nombrePrises) }
         let prise = confirmee.prise
         let photo = confirmee.photo
         let duree = moteur.enCours.map { moteur.maintenant().timeIntervalSince($0.sortie.debut) }
@@ -342,6 +408,7 @@ final class ParcoursApp {
 struct RootView: View {
     @State private var app: ParcoursApp
     @AppStorage(ClesConseils.questionVue) private var questionVue = false
+    @State private var amisOuverts = false
 
     /// `configurerMesure` : la seule fermeture qui appelle `Spark.configure` (dans `BuildChallengeApp.swift`), jamais avant l'accord.
     init(configurerMesure: @escaping @MainActor @Sendable () -> Void = {}) {
@@ -389,7 +456,11 @@ struct RootView: View {
             vue(de: modal)
         }
         .onChange(of: questionVue) { app.proposerSuitePremierLancement() }
-        .onChange(of: app.suivi.abonne) { _, abonne in app.moteur.abonne = abonne }
+        .onChange(of: app.suivi.abonne) { _, abonne in
+            app.moteur.abonne = abonne
+            app.publierAquarium()
+        }
+        .onOpenURL { app.ouvrir(url: $0) }
         .task {
             try? await Task.sleep(for: .seconds(1))
             app.positionPassee = true
@@ -454,6 +525,25 @@ struct RootView: View {
             mesureUsage: Binding(get: { app.consentement == .accepte }, set: { app.reglerMesure($0) })
         ) {
             MarqueMeteoView(stockage: app.marque)
+        }
+        .overlay(alignment: .topTrailing) {
+            Button { amisOuverts = true } label: {
+                Label("Mes amis", systemImage: "person.2.fill")
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 8)
+                    .background(.regularMaterial, in: Capsule())
+            }
+            .padding(.trailing, 16)
+            .padding(.top, 8)
+        }
+        .sheet(isPresented: $amisOuverts) {
+            if let gestion = app.gestionAmis() {
+                AmisView(gestion: gestion)
+                    .task { await gestion.synchroniserMesCartes() }
+            } else {
+                ContentUnavailableView("Amis", systemImage: "person.2.slash",
+                                       description: Text("Tes amis ne peuvent pas s'ouvrir pour l'instant."))
+            }
         }
         // « Tes conditions » (TesConditionsView, Pro) : ClubView n'a pas d'emplacement pour elle, non branchée.
     }
