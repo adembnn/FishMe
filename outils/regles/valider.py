@@ -62,6 +62,14 @@ def defauts(donnees):
         portee = r.get("portee")
         if not isinstance(portee, dict) or (portee.get("lieu") is not None and not isinstance(portee.get("lieu"), str)):
             yield f"{q} : portee.lieu doit être un texte ou null"
+        elif isinstance(portee, dict):
+            for champ in ("plan_eau", "cours_eau"):
+                if portee.get(champ) is not None and not isinstance(portee.get(champ), str):
+                    yield f"{q} : portee.{champ} doit être un texte ou null"
+            lieu = portee.get("lieu") or ""
+            nom = portee.get("plan_eau")
+            if nom and consensus.norm(nom) not in consensus.norm(lieu):
+                yield f"{q} : portee.plan_eau « {nom} » doit être écrit dans portee.lieu, en tête"
         if not (r.get("source") or {}).get("texte"):
             yield f"{q} : source.texte manquant"
         if not r.get("phrase"):
