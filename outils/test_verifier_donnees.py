@@ -96,6 +96,16 @@ class Chargeur(unittest.TestCase):
         f, _ = vd.assembler("78", {"regles": sures, "desaccords": {}}, [lecture([]), lecture([], lu="titre seul")], {}, set(), "v")
         self.assertEqual(f["niveau"], "partiel")
 
+    def test_consensus_seul_sans_lectures(self):
+        """Mode regles/local : pas de dep/ ni dep-b/, textes tirés des source, niveau partiel."""
+        sures = [regle(f"s{i}", AVIS if i % 2 else ARRETE, cm=30 + i, espece=str(i)) for i in range(5)]
+        cons = {"regles": sures, "desaccords": {"seulement_a": [regle("z", AVIS, cm=70, espece="99")], "seulement_b": []}}
+        f, _ = vd.assembler("78", cons, [], {}, set(), "v")
+        self.assertEqual((f["niveau"], len(f["regles"]), len(f["a_verifier"])), ("partiel", 5, 1))
+        self.assertEqual({t["titre"] for t in f["textes"]}, {AVIS["texte"], ARRETE["texte"]})
+        for t in f["textes"]:
+            self.assertTrue(t["url"] and t["lu_le"] and t["signe_le"] is None)
+
     def test_protege(self):
         for code in vd.PROTEGES:
             with self.assertRaises(vd.Refus):

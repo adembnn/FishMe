@@ -131,7 +131,9 @@ def verifier_regles(fichiers):
 def ouvert(fichiers, espece, cat, jour):
     """Lit les données : False si une règle chargée ferme l'espèce ce jour-là (période bornée seulement)."""
     j = jour.isoformat()
-    for d in fichiers.values():
+    # Test de bon sens sur le socle national seulement : une règle locale (ex. 04, arc-en-ciel fermée
+    # pendant la fermeture de la 1re catégorie) peut fermer une espèce dans son département sans contredire le national.
+    for d in [fichiers["national"]] if "national" in fichiers else fichiers.values():
         for r in d["regles"]:
             if r["type"] == "interdit" and r["du"] and r["au"] and espece in r["especes"] and r["categorie"] in (cat, "toutes") \
                     and r["du"] <= j <= r["au"]:
@@ -557,7 +559,13 @@ def charger(code, depuis, une_lecture=None):
     else:
         aide = f"Lance d'abord : REGLES_DIR={depuis} python3 <consensus.py de lot/regles-france> {code} --json"
         cons = lire_json(os.path.join(depuis, "consensus", code + ".json"), aide)
-        lectures = [lire_json(os.path.join(depuis, d, code + ".json"), "Il faut les deux lectures (sinon --une-lecture).") for d in ("dep", "dep-b")]
+        chemins = [os.path.join(depuis, d, code + ".json") for d in ("dep", "dep-b")]
+        if not any(os.path.exists(c) for c in chemins):
+            # Mode consensus seul (branche regles/local) : pas de lectures dep/ ni dep-b/. La liste textes
+            # vient des source des règles ; sans en-têtes de lecture, le niveau est partiel.
+            lectures = []
+        else:
+            lectures = [lire_json(c, "Il faut les deux lectures (sinon --une-lecture).") for c in chemins]
         fichier, avert = assembler(code, cons, lectures, ids_deja_pris(code), ids_nat, version_courante())
     ecrire_departement(code, fichier)
     for a in avert:
