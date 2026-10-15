@@ -30,5 +30,5 @@ struct EmplacementsExternes {
         self.meteoDuDos = meteoDuDos
     }
 
-    static let vides = EmplacementsExternes()
+    static var vides: EmplacementsExternes { EmplacementsExternes() }
 }

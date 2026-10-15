@@ -3,7 +3,7 @@ import ImageIO
 import UniformTypeIdentifiers
 
 /// Ré-encode une photo en ne gardant que l'image et son orientation : aucune étiquette de lieu (GPS), de date ou d'appareil.
-enum NettoyagePhoto {
+nonisolated enum NettoyagePhoto {
     /// JPEG sans métadonnée, sauf l'orientation. `nil` si les données ne sont pas une image.
     static func sansMetadonnees(_ donnees: Data, qualite: Double = 0.85) -> Data? {
         guard let source = CGImageSourceCreateWithData(donnees as CFData, nil),

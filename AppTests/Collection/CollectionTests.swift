@@ -6,6 +6,7 @@ import UIKit
 import UniformTypeIdentifiers
 @testable import BuildChallenge
 
+@MainActor
 struct CollectionTests {
     private let services = ServicesCollection(especes: EspecesFaux(), soleil: SoleilFaux(), regles: ReglesFaux())
     private let brochet = Espece(id: "brochet")
@@ -129,14 +130,29 @@ struct CollectionTests {
         #expect(styles.filter(\.aUnReflet) == [.rare, .legendaire])
     }
 
-    @MainActor
-    @Test func imagePartageIdentiqueAvecOuSansMeteo() async throws {
-        let prise = Prise(espece: brochet, longueurCm: 62, mesure: .saisie, date: Date(timeIntervalSince1970: 1_000_000),
+    @Test func imagePartageNePorteAucuneMeteo() async throws {
+        let espece = try #require(services.especes.especesPechables().first)
+        let prise = Prise(espece: espece.espece, longueurCm: 62, mesure: .saisie, date: Date(timeIntervalSince1970: 1_000_000),
                           lieuFlou: "La Marne · 94", cheminPhoto: "x.jpg")
-        let a = try #require(ImagePartage.png(de: prise, services: services))
-        let b = try #require(ImagePartage.png(de: prise, services: services))
-        #expect(a == b)
-        #expect(!NettoyagePhoto.contientGPS(a))
+        let meteo = Conditions(heure: prise.date, ventKmh: 12, pluieMm: 0, pressionHPa: 1015)
+        func infos(_ conditions: Conditions?) -> InfosCarte {
+            InfosCarte.construire(detail: CarteDetaillee(prise: prise, conditions: conditions, dureeSecondes: nil), espece: espece,
+                                  zone: nil, toutesLesCartes: [prise], especesDeLaZone: [], services: services)
+        }
+        // Les données du recto sont les mêmes avec ou sans météo : seule `detail.conditions` change, et le recto ne la lit pas.
+        let sans = infos(nil)
+        let avec = infos(meteo)
+        #expect(sans.texteVoixOff == avec.texteVoixOff)
+        #expect(sans.rarete == avec.rarete)
+        #expect(sans.poids == avec.poids)
+        #expect(sans.lune == avec.lune)
+        #expect(sans.consigne == avec.consigne)
+        // Le rendu lui-même : un vrai PNG, lisible, sans bloc GPS.
+        let png = try #require(ImagePartage.png(de: prise, services: services))
+        #expect(png.starts(with: [0x89, 0x50, 0x4E, 0x47]))
+        let image = try #require(UIImage(data: png))
+        #expect(image.size.width > 0 && image.size.height > image.size.width)
+        #expect(!NettoyagePhoto.contientGPS(png))
     }
 
     @Test func departementLuDansLeLieuFlou() {

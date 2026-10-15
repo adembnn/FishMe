@@ -4,7 +4,7 @@ import SwiftData
 
 /// Une carte du Pescedex telle qu'elle est enregistrée sur l'iPhone. Les modèles SwiftData vivent ici, jamais dans Core.
 @Model
-final class CarteEnregistree {
+nonisolated final class CarteEnregistree {
     @Attribute(.unique) var id: UUID
     var especeId: String
     var codeSandre: String?
@@ -49,7 +49,7 @@ final class CarteEnregistree {
 
 /// Carte bredouille : une session finie sans prise. Rangée à part, sans rareté.
 @Model
-final class BredouilleEnregistree {
+nonisolated final class BredouilleEnregistree {
     @Attribute(.unique) var id: UUID
     var debut: Date
     var fin: Date?
@@ -66,7 +66,7 @@ final class BredouilleEnregistree {
 }
 
 /// Ce que les vues lisent d'une carte bredouille.
-struct CarteBredouille: Sendable, Equatable, Identifiable {
+nonisolated struct CarteBredouille: Sendable, Equatable, Identifiable {
     var id: UUID
     var debut: Date
     var fin: Date?
@@ -78,7 +78,7 @@ struct CarteBredouille: Sendable, Equatable, Identifiable {
 }
 
 /// Une carte avec ce qui ne tient pas dans `Prise` : instantané météo et durée de la session.
-struct CarteDetaillee: Sendable, Equatable {
+nonisolated struct CarteDetaillee: Sendable, Equatable {
     var prise: Prise
     var conditions: Conditions?
     var dureeSecondes: Double?

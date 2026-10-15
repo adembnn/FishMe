@@ -6,6 +6,7 @@ final class PescedexUITests: XCTestCase {
         continueAfterFailure = false
     }
 
+    @MainActor
     func testPescedexSansBarreDeDefilement() throws {
         let app = XCUIApplication()
         app.launch()

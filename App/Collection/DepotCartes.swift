@@ -110,7 +110,7 @@ actor DepotCartes: CollectionCartes {
     }
 }
 
-enum ErreurDepot: Error {
+nonisolated enum ErreurDepot: Error {
     /// Une carte ne naît que d'une photo prise dans l'app.
     case photoIllisible
 }
