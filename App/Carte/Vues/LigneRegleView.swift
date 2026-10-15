@@ -66,7 +66,7 @@ struct LigneRegleView: View {
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     ForEach(Array(ligne.sources.enumerated()), id: \.offset) { _, source in
-                        if let url = source.url.flatMap(URL.init(string:)) {
+                        if let url = source.url.flatMap({ URL(string: $0) }) {
                             Link(destination: url) {
                                 Label(source.titre, systemImage: "arrow.up.right.square")
                                     .font(PolicesCarte.legende())
