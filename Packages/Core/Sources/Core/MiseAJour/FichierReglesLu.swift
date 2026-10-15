@@ -29,7 +29,7 @@ struct RegleLue: Sendable, Equatable {
 }
 
 /// Ce qu'on retient d'un fichier valide.
-struct FichierRegles: Sendable, Equatable {
+struct FichierReglesLu: Sendable, Equatable {
     var version: VersionRegles
     var departement: String
     var niveau: NiveauCouverture
@@ -43,7 +43,7 @@ struct FichierRegles: Sendable, Equatable {
 
     /// Lit et contrôle un fichier : JSON lisible, forme de `donnees.md`, chaque règle avec ses textes, sa citation,
     /// et `expire_le` ; chaque texte avec sa date `lu_le`. Une valeur en forme v1 est refusée.
-    static func lire(_ data: Data) throws -> FichierRegles {
+    static func lire(_ data: Data) throws -> FichierReglesLu {
         guard let objet = try? JSONSerialization.jsonObject(with: data), let racine = objet as? [String: Any] else {
             throw RaisonRefus.illisible
         }
@@ -111,7 +111,7 @@ struct FichierRegles: Sendable, Equatable {
                                  sources: sources, expireLe: expire, dateLecture: lectures.max()))
         }
 
-        return FichierRegles(version: version, departement: departement, niveau: niveau, regles: lues,
+        return FichierReglesLu(version: version, departement: departement, niveau: niveau, regles: lues,
                              nombreAVerifier: aVerifier.count,
                              dernierLu: textesParId.values.map(\.luLe).max())
     }
