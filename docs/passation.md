@@ -31,7 +31,7 @@ Ce qui bloque dans le cloud : sites de l'État et des fédérations refusés (40
 
 ## Questions qui attendent Adem (chacune a un défaut, le travail avance dessus)
 1. Forme de la règle pour une prise (`docs/README.md`, question 1) : défaut b, liste de contrôle sourcée.
-2. Ce que bloque le paywall (`docs/README.md`, question 2) : défaut b. Idée d'Adem du 15 oct. (fil Maquettes) : le gratuit propose UN spot ; tranché le 15 oct. 12h26 : sessions illimitées sur ce spot. Puis le 15 oct. 12h28 : fin de la 1re session = paywall qui se ferme, 2e spot = paywall qui bloque. Reste : qui choisit le spot gratuit (défaut : l'app propose, le pêcheur peut changer avant sa 1re session, puis il est fixé).
+2. Ce que bloque le paywall (`docs/README.md`, question 2) : défaut b. Idée d'Adem du 15 oct. (fil Maquettes) : le gratuit propose UN spot ; tranché le 15 oct. 12h26 : sessions illimitées sur ce spot. Puis le 15 oct. 12h28 : fin de la 1re session = paywall qui se ferme, 2e spot = paywall qui bloque. Spot gratuit (12h32) : l'app propose le plus proche, le pêcheur peut changer avant sa 1re session, puis il est fixé.
 3. Rôle de l'IA d'Apple dans la reconnaissance : défaut a (notre modèle Create ML partout, l'IA d'Apple sur 15 Pro et plus pour la légende, et pour l'espèce seulement si elle passe le même examen).
 4. Taille et poids : défaut a (curseur, poids estimé par la formule longueur-poids ; à 2 cm ou moins de la taille légale, mesurer au mètre), réalité augmentée dans la mise à jour.
 5. Forme du spot : tranché le 15 oct. 12h26, cercle de 1 km vendredi, tronçon ou lac entier dans la mise à jour (`reports/spot.md`).
