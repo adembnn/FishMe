@@ -142,5 +142,30 @@ class TestEspeces(unittest.TestCase):
         self.assertEqual(len(r), 13)
 
 
+class TestAttendu94(unittest.TestCase):
+    """Comptes reels du 94 lus sur Hub'Eau le 15 oct. 2026 (29 peches depuis le 1er janvier 2016).
+    Les seuils de donnees.md (commun >= 50 %, peu commun 20 a 50 %, rare < 20 %, legendaire = 0) sont appliques
+    ICI, dans le test seulement : D2 ne sort que des comptes, le calcul des niveaux est dans Core (L1)."""
+    PECHES = 29
+    COMPTES = {"2133": 27, "2193": 28, "31041": 28, "2151": 8, "2238": 13, "2096": 7, "2195": 4, "2086": 5,
+               "2137": 5, "2053": 1, "2109": 1, "2221": 0, "2216": 0, "2247": 0}
+
+    @staticmethod
+    def niveau(k, n):
+        p = k / n
+        return "commun" if p >= .5 else "peu commun" if p >= .2 else "rare" if k > 0 else "legendaire"
+
+    def test_liste_attendue(self):
+        n = {c: self.niveau(k, self.PECHES) for c, k in self.COMPTES.items()}
+        for c in ("2133", "2193", "31041"):
+            self.assertEqual(n[c], "commun")
+        for c in ("2151", "2238", "2096"):
+            self.assertEqual(n[c], "peu commun")
+        for c in ("2195", "2086", "2137", "2053", "2109"):  # carpe : seule la variete miroir (2109) est vue
+            self.assertEqual(n[c], "rare")
+        for c in ("2221", "2216", "2247"):
+            self.assertEqual(n[c], "legendaire")
+
+
 if __name__ == "__main__":
     unittest.main()
