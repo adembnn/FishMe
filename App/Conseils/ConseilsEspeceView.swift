@@ -28,7 +28,7 @@ struct ConseilLigneView: View {
             if sourceOuverte {
                 HStack(spacing: 8) {
                     Image(systemName: "doc.text").accessibilityHidden(true)
-                    if let url = conseil.source.url.flatMap(URL.init(string:)) {
+                    if let url = conseil.source.url.flatMap { URL(string: $0) } {
                         Link(conseil.source.titre, destination: url)
                     } else {
                         Text(conseil.source.titre)
