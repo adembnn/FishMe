@@ -32,6 +32,8 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 - Deux textes qui se contredisent : la valeur la plus stricte, avec les deux sources (décidé par Adem le 15 oct., en attendant de savoir quel texte fait foi).
 - Rareté sur 10 ans en 4 niveaux (commun, peu commun, rare, légendaire) ; sous 20 pêches dans le département, calculée sur la région, et l'écran le dit.
 - La carte s'ouvre sur l'Île-de-France sans demander la position ; « Autour de moi » la demande.
+- Après la liste de contrôle, le pêcheur déclare « je la relâche » ou « je la garde » (ça compte pour le quota du jour) ; quand aucune ligne ne l'interdit, l'app écrit « aucune règle saisie ne l'interdit ; l'arrêté fait foi », jamais « tu peux la garder ».
+- Reconnaissance : le modèle maison s'il passe son test, l'IA d'Apple seulement si elle passe le même test, sinon la grille des 14 espèces.
 - Les fichiers fabriqués par script restent hors de git : publiés en pièce jointe d'une release privée.
 
 ## Questions pour Adem
