@@ -1,0 +1,871 @@
+{
+ "source": "federationpeche.fr (annuaire des fédérations départementales, FNPF) et cartedepeche.fr/127-federations-departementales.htm, recoupés ; chaque URL ouverte le 2026-10-15",
+ "licence_note": "Liens seulement : rien recopié de l'annuaire des associations de cartedepeche.fr.",
+ "note_carte_peche": "cartedepeche.fr n'a pas de page par département (seulement l'annuaire des associations, non repris) : carte_peche_url est la page nationale « Toutes nos cartes de pêche » (HTTP 200 vérifié).",
+ "departements": [
+  {
+   "code": "01",
+   "nom": "Ain",
+   "federation_url": "https://www.federation-peche-ain.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "02",
+   "nom": "Aisne",
+   "federation_url": "https://www.peche02.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "03",
+   "nom": "Allier",
+   "federation_url": "https://www.federation-peche-allier.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "04",
+   "nom": "Alpes-de-Haute-Provence",
+   "federation_url": "http://www.peche04.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "05",
+   "nom": "Hautes-Alpes",
+   "federation_url": "https://peche-hautes-alpes.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "06",
+   "nom": "Alpes-Maritimes",
+   "federation_url": "https://www.peche06.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "07",
+   "nom": "Ardèche",
+   "federation_url": "https://www.peche-ardeche.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "08",
+   "nom": "Ardennes",
+   "federation_url": "http://www.peche08.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "09",
+   "nom": "Ariège",
+   "federation_url": "https://www.peche-ariege.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "10",
+   "nom": "Aube",
+   "federation_url": "https://www.fedepeche10.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "11",
+   "nom": "Aude",
+   "federation_url": "https://www.fedepeche11.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "12",
+   "nom": "Aveyron",
+   "federation_url": "https://www.pecheaveyron.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "13",
+   "nom": "Bouches-du-Rhône",
+   "federation_url": "https://www.peche13.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "14",
+   "nom": "Calvados",
+   "federation_url": "https://www.federation-peche14.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "15",
+   "nom": "Cantal",
+   "federation_url": "https://www.cantal-peche.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "16",
+   "nom": "Charente",
+   "federation_url": "https://www.federationpeche16.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "17",
+   "nom": "Charente-Maritime",
+   "federation_url": "https://www.peche17.org/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "18",
+   "nom": "Cher",
+   "federation_url": "https://federationpeche18.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "19",
+   "nom": "Corrèze",
+   "federation_url": "https://www.peche19.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "2A",
+   "nom": "Corse-du-Sud",
+   "federation_url": "http://www.truitecorse.org/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": "Fédération de la Corse (federationpeche.fr la range sous 2A ; pied de page : Corse-du-Sud, Ajaccio)."
+  },
+  {
+   "code": "2B",
+   "nom": "Haute-Corse",
+   "federation_url": "http://www.truitecorse.org/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": false,
+   "date_releve": "2026-10-15",
+   "note": "Pas de fédération de Haute-Corse listée : federationpeche.fr n'a qu'une entrée « Corse » (truitecorse.org). Le site s'ouvre mais sa couverture de la Haute-Corse n'est pas confirmée par la page."
+  },
+  {
+   "code": "21",
+   "nom": "Côte-d'Or",
+   "federation_url": "http://www.fedepeche21.com",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "22",
+   "nom": "Côtes-d'Armor",
+   "federation_url": "https://www.federationpeche22.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "23",
+   "nom": "Creuse",
+   "federation_url": "https://fdpeche23.wixsite.com/peche23",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": "L'adresse listée par federationpeche.fr (fdpeche23.wix.com) ne répond plus (HTTP 409) ; le même site répond sur wixsite.com (titre « Fédération de Pêche de la Creuse », trouvé en essayant, pas listé par la FNPF)."
+  },
+  {
+   "code": "24",
+   "nom": "Dordogne",
+   "federation_url": "http://www.federationpechedordogne.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "25",
+   "nom": "Doubs",
+   "federation_url": "https://federation-peche-doubs.org/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "26",
+   "nom": "Drôme",
+   "federation_url": "https://drome.federationpeche.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "27",
+   "nom": "Eure",
+   "federation_url": "http://www.eure-peche.com",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "28",
+   "nom": "Eure-et-Loir",
+   "federation_url": "http://www.peche28.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "29",
+   "nom": "Finistère",
+   "federation_url": "http://peche-en-finistere.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "30",
+   "nom": "Gard",
+   "federation_url": "https://www.pechegard.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "31",
+   "nom": "Haute-Garonne",
+   "federation_url": "https://www.fede-peche31.com",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "32",
+   "nom": "Gers",
+   "federation_url": "https://www.gers-peche.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "33",
+   "nom": "Gironde",
+   "federation_url": "https://www.peche33.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "34",
+   "nom": "Hérault",
+   "federation_url": "https://www.pecheherault.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "35",
+   "nom": "Ille-et-Vilaine",
+   "federation_url": "https://www.peche35.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "36",
+   "nom": "Indre",
+   "federation_url": "https://www.peche36.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "37",
+   "nom": "Indre-et-Loire",
+   "federation_url": "https://www.fedepeche37.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "38",
+   "nom": "Isère",
+   "federation_url": "https://www.peche-isere.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "39",
+   "nom": "Jura",
+   "federation_url": "https://www.peche-jura.com",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "40",
+   "nom": "Landes",
+   "federation_url": "https://www.peche-landes.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "41",
+   "nom": "Loir-et-Cher",
+   "federation_url": "http://www.peche41.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "42",
+   "nom": "Loire",
+   "federation_url": "https://peche42.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "43",
+   "nom": "Haute-Loire",
+   "federation_url": "https://www.pechehauteloire.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "44",
+   "nom": "Loire-Atlantique",
+   "federation_url": "https://www.federationpeche44.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "45",
+   "nom": "Loiret",
+   "federation_url": "https://www.federationpeche45.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "46",
+   "nom": "Lot",
+   "federation_url": "https://www.pechelot.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "47",
+   "nom": "Lot-et-Garonne",
+   "federation_url": "https://www.peche47.com",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "48",
+   "nom": "Lozère",
+   "federation_url": "https://www.lozerepeche.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "49",
+   "nom": "Maine-et-Loire",
+   "federation_url": "https://fedepeche49.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "50",
+   "nom": "Manche",
+   "federation_url": "https://www.peche-manche.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "51",
+   "nom": "Marne",
+   "federation_url": "https://www.peche51.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "52",
+   "nom": "Haute-Marne",
+   "federation_url": "https://www.peche52.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "53",
+   "nom": "Mayenne",
+   "federation_url": "https://www.fedepeche53.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "54",
+   "nom": "Meurthe-et-Moselle",
+   "federation_url": "https://www.peche-54.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "55",
+   "nom": "Meuse",
+   "federation_url": "https://www.peche55.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "56",
+   "nom": "Morbihan",
+   "federation_url": "https://morbihan.federationpeche.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "57",
+   "nom": "Moselle",
+   "federation_url": "https://www.federationpeche57.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "58",
+   "nom": "Nièvre",
+   "federation_url": "https://www.federationdepeche58.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "59",
+   "nom": "Nord",
+   "federation_url": "https://www.peche59.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "60",
+   "nom": "Oise",
+   "federation_url": "https://www.peche60.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "61",
+   "nom": "Orne",
+   "federation_url": "https://www.peche-orne.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "62",
+   "nom": "Pas-de-Calais",
+   "federation_url": "https://www.peche62.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "63",
+   "nom": "Puy-de-Dôme",
+   "federation_url": "https://www.peche63.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "64",
+   "nom": "Pyrénées-Atlantiques",
+   "federation_url": "https://www.federation-peche64.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "65",
+   "nom": "Hautes-Pyrénées",
+   "federation_url": "https://www.peche65.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": "Ouvert par l'outil de lecture web (titre « Fédération de pêche des Hautes-Pyrénées ») ; un téléchargement simple renvoie 200 sans contenu."
+  },
+  {
+   "code": "66",
+   "nom": "Pyrénées-Orientales",
+   "federation_url": "https://www.peche66.org/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "67",
+   "nom": "Bas-Rhin",
+   "federation_url": "https://www.peche67.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "68",
+   "nom": "Haut-Rhin",
+   "federation_url": "https://www.peche68.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "69",
+   "nom": "Rhône",
+   "federation_url": "https://www.peche69.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "70",
+   "nom": "Haute-Saône",
+   "federation_url": "https://www.peche-haute-saone.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "71",
+   "nom": "Saône-et-Loire",
+   "federation_url": "https://www.peche-saone-et-loire.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "72",
+   "nom": "Sarthe",
+   "federation_url": "https://www.peche72.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "73",
+   "nom": "Savoie",
+   "federation_url": "http://www.savoiepeche.com",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "74",
+   "nom": "Haute-Savoie",
+   "federation_url": "https://pechehautesavoie.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "75",
+   "nom": "Paris",
+   "federation_url": "http://www.federation-peche-paris.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": "Fédération interdépartementale unique 75/92/93/94 (en-tête du site : « Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne »). Le site ne répond qu'en http (certificat https invalide)."
+  },
+  {
+   "code": "76",
+   "nom": "Seine-Maritime",
+   "federation_url": "https://www.peche76.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "77",
+   "nom": "Seine-et-Marne",
+   "federation_url": "https://www.federationpeche77.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "78",
+   "nom": "Yvelines",
+   "federation_url": "https://www.federationpeche78.net/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "79",
+   "nom": "Deux-Sèvres",
+   "federation_url": "https://peche-en-deux-sevres.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "80",
+   "nom": "Somme",
+   "federation_url": "https://www.peche80.com/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "81",
+   "nom": "Tarn",
+   "federation_url": "https://www.pechetarn.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "82",
+   "nom": "Tarn-et-Garonne",
+   "federation_url": "https://www.pechetarnetgaronne.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "83",
+   "nom": "Var",
+   "federation_url": "https://www.pechevar.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "84",
+   "nom": "Vaucluse",
+   "federation_url": "https://www.peche-vaucluse.com",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "85",
+   "nom": "Vendée",
+   "federation_url": "http://federation-peche-vendee.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "86",
+   "nom": "Vienne",
+   "federation_url": "https://www.peche86.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "87",
+   "nom": "Haute-Vienne",
+   "federation_url": "https://www.federation-peche87.com",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "88",
+   "nom": "Vosges",
+   "federation_url": "https://www.peche88.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "89",
+   "nom": "Yonne",
+   "federation_url": "https://www.federation-peche-yonne.fr/",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "90",
+   "nom": "Territoire de Belfort",
+   "federation_url": "https://www.fede-peche90.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "91",
+   "nom": "Essonne",
+   "federation_url": "http://www.peche91.com",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  },
+  {
+   "code": "92",
+   "nom": "Hauts-de-Seine",
+   "federation_url": "http://www.federation-peche-paris.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": "Fédération interdépartementale unique 75/92/93/94 (en-tête du site : « Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne »). Le site ne répond qu'en http (certificat https invalide)."
+  },
+  {
+   "code": "93",
+   "nom": "Seine-Saint-Denis",
+   "federation_url": "http://www.federation-peche-paris.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": "Fédération interdépartementale unique 75/92/93/94 (en-tête du site : « Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne »). Le site ne répond qu'en http (certificat https invalide)."
+  },
+  {
+   "code": "94",
+   "nom": "Val-de-Marne",
+   "federation_url": "http://www.federation-peche-paris.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": "Fédération interdépartementale unique 75/92/93/94 (en-tête du site : « Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne »). Le site ne répond qu'en http (certificat https invalide)."
+  },
+  {
+   "code": "95",
+   "nom": "Val-d'Oise",
+   "federation_url": "https://www.peche95.fr",
+   "carte_peche_url": "https://www.cartedepeche.fr/49-cartes-de-peche.htm",
+   "verifie": true,
+   "date_releve": "2026-10-15",
+   "note": null
+  }
+ ]
+}

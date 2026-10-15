@@ -1,0 +1,756 @@
+{
+ "version": "2026-10-15.d1-proposition",
+ "date_reference": "2026-10-15",
+ "lecture": "13 cas d'or dérivés de regles/national.json, 75.json et 94.json du 15 oct. 2026. Les consignes sont celles de `Consigne` (relacheLa, mesureLaSurUneToise, verifieLArrete, aucuneRegleSaisieNeLInterdit) ; « tu peux la garder » n'existe jamais. Les départements 75 et 94 sont `partiel` et sans règle `verifie` : aucun cas n'attend `aucuneRegleSaisieNeLInterdit`. L'IA ne décide jamais : ces réponses sont une proposition à relire.",
+ "reponse_ecrite_par": null,
+ "relu_par": null,
+ "a_valider": "Réponses proposées par D1 d'après les règles chargées ; donnees.md et D1.md exigent qu'une personne (S) les écrive ou les valide contre les arrêtés : tant que `relu_par` est vide, le test 4 de D1 n'est pas passé.",
+ "limites": [
+  "Les fichiers 92, 93, 77 et 78 sont absents du dépôt : les cas d'or de donnees.md sur la Mauldre (78), le quota, l'horaire de 20 h et l'entrée `a_verifier` ne peuvent pas être dérivés des règles présentes.",
+  "Les `lignes_informatives` (consommation, transport vivant) s'affichent mais ne changent jamais la consigne.",
+  "especes.json compte 77 entrées (101 prévues) et le statut `protegee` n'est pas encore posé."
+ ],
+ "cas": [
+  {
+   "id": "cas-01",
+   "titre": "Brochet 55 cm, Marne à Charenton (94) : sous la plus stricte des deux mailles",
+   "entree": {
+    "espece": {
+     "id": "brochet",
+     "codeSandre": "2151"
+    },
+    "tailleCm": 55,
+    "mesure": "toise",
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "94",
+     "eau": {
+      "nom": "La Marne",
+      "cle": "marne"
+     },
+     "categorie": {
+      "valeur": "deuxieme",
+      "origine": "regleDeLEau"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "relacheLa",
+    "lignes": [
+     {
+      "type": "taille",
+      "etat": "nonRespectee",
+      "regles": [
+       "94-bro-taille",
+       "nat-bro-taille"
+      ],
+      "pourquoi": "Deux textes se contredisent : 50 cm (arrêté permanent 2025/00727) et 60 cm (avis annuel 2026) ; la règle est incertain, la plus stricte (60 cm) s'applique et les deux sources sont affichées. 55 < 60.",
+      "sources": [
+       "Arrêté préfectoral permanent n° 2025/00727 du 25/02/2025 (Val-de-Marne), art. 9 (recopie R436-18)",
+       "Avis annuel 2026 Val-de-Marne (rappel de dispositions)"
+      ],
+      "candidats_cm": [
+       50,
+       60
+      ],
+      "maille_retenue_cm": 60,
+      "verdictTaille": "sousLaMaille"
+     },
+     {
+      "type": "periode",
+      "etat": "respectee",
+      "regles": [
+       "94-bro-ouv-2026",
+       "nat-bro-ouv-2e"
+      ],
+      "pourquoi": "Brochet ouvert en 2e catégorie du 25/04 au 31/12/2026 ; le 15 oct. est dans la période (fermeture du 26/01 au 24/04)."
+     },
+     {
+      "type": "reserve",
+      "etat": "aVerifierSurPlace",
+      "raison": "reserve",
+      "regles": [
+       "94-res-barrage-joinville",
+       "94-res-barrage-creteil",
+       "94-res-ouvrage-saint-maur",
+       "nat-res-ouvrages"
+      ],
+      "pourquoi": "Réserves listées sur la Marne dans le 94 (statut incertain, sans coordonnées) et zone de 50 m des ouvrages : la ligne dit « regarde le panneau », l'app ne teste jamais la position."
+     }
+    ],
+    "lignes_informatives": [
+     {
+      "type": "consommation",
+      "etat": "information",
+      "regles": [
+       "94-consom-seine-marne-yerres"
+      ],
+      "pourquoi": "Vente et consommation interdites (arrêté 2010-5378, texte de 2010 non lu, règle brouillon) : ligne affichée, ne change pas la consigne (garder n'est pas manger)."
+     }
+    ]
+   },
+   "pourquoi": "Une ligne de taille n'est pas respectée sous la maille la plus stricte (60 cm) : « relâche-la » prime sur la ligne à vérifier (réserve).",
+   "statut_regle_citee": "incertain (taille), brouillon (reste)"
+  },
+  {
+   "id": "cas-02",
+   "titre": "Brochet 65 cm, Marne à Charenton (94) : taille respectée, mais rien n'autorise à la garder",
+   "entree": {
+    "espece": {
+     "id": "brochet",
+     "codeSandre": "2151"
+    },
+    "tailleCm": 65,
+    "mesure": "toise",
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "94",
+     "eau": {
+      "nom": "La Marne",
+      "cle": "marne"
+     },
+     "categorie": {
+      "valeur": "deuxieme",
+      "origine": "regleDeLEau"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "verifieLArrete",
+    "lignes": [
+     {
+      "type": "taille",
+      "etat": "respectee",
+      "regles": [
+       "94-bro-taille",
+       "nat-bro-taille"
+      ],
+      "pourquoi": "65 cm >= 60 cm, la plus stricte des deux mailles (50 / 60), donc respectée dans les deux textes.",
+      "sources": [
+       "Arrêté préfectoral permanent n° 2025/00727 du 25/02/2025 (Val-de-Marne), art. 9 (recopie R436-18)",
+       "Avis annuel 2026 Val-de-Marne (rappel de dispositions)"
+      ],
+      "candidats_cm": [
+       50,
+       60
+      ],
+      "maille_retenue_cm": 60,
+      "verdictTaille": "respectee"
+     },
+     {
+      "type": "periode",
+      "etat": "respectee",
+      "regles": [
+       "94-bro-ouv-2026",
+       "nat-bro-ouv-2e"
+      ],
+      "pourquoi": "Ouvert le 15 oct. en 2e catégorie."
+     },
+     {
+      "type": "quota",
+      "etat": "respectee",
+      "regles": [
+       "94-car-quota"
+      ],
+      "pourquoi": "Aucune prise gardée ce jour : quota de 3 carnassiers dont 2 brochets non atteint."
+     },
+     {
+      "type": "reserve",
+      "etat": "aVerifierSurPlace",
+      "raison": "reserve",
+      "regles": [
+       "94-res-barrage-joinville",
+       "94-res-barrage-creteil",
+       "94-res-ouvrage-saint-maur",
+       "nat-res-ouvrages"
+      ],
+      "pourquoi": "Réserves listées sur la Marne dans le 94 (statut incertain, sans coordonnées) et zone de 50 m des ouvrages : la ligne dit « regarde le panneau », l'app ne teste jamais la position."
+     }
+    ],
+    "lignes_informatives": [
+     {
+      "type": "consommation",
+      "etat": "information",
+      "regles": [
+       "94-consom-seine-marne-yerres"
+      ],
+      "pourquoi": "Vente et consommation interdites (arrêté 2010-5378, texte de 2010 non lu, règle brouillon) : ligne affichée, ne change pas la consigne (garder n'est pas manger)."
+     }
+    ]
+   },
+   "pourquoi": "Aucune ligne non respectée, mais le 94 est « partiel », ses règles sont brouillon ou incertain et une réserve est à vérifier sur place : jamais « tu peux la garder », jamais « aucune règle saisie ne l'interdit ». Consigne : vérifie l'arrêté.",
+   "statut_regle_citee": "incertain (taille), brouillon (reste)"
+  },
+  {
+   "id": "cas-03",
+   "titre": "Brochet 59 cm, Marne à Charenton (94) : à moins de 2 cm de la maille de 60 cm",
+   "entree": {
+    "espece": {
+     "id": "brochet",
+     "codeSandre": "2151"
+    },
+    "tailleCm": 59,
+    "mesure": "toise",
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "94",
+     "eau": {
+      "nom": "La Marne",
+      "cle": "marne"
+     },
+     "categorie": {
+      "valeur": "deuxieme",
+      "origine": "regleDeLEau"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "mesureLaSurUneToise",
+    "lignes": [
+     {
+      "type": "taille",
+      "etat": "aVerifierSurPlace",
+      "raison": "tropPresDeLaMaille",
+      "regles": [
+       "94-bro-taille",
+       "nat-bro-taille"
+      ],
+      "pourquoi": "59 cm est à 1 cm de la maille la plus stricte (60) : « Trop près de la maille, mesure sur une toise », aucun verdict de taille.",
+      "sources": [
+       "Arrêté préfectoral permanent n° 2025/00727 du 25/02/2025 (Val-de-Marne), art. 9 (recopie R436-18)",
+       "Avis annuel 2026 Val-de-Marne (rappel de dispositions)"
+      ],
+      "candidats_cm": [
+       50,
+       60
+      ],
+      "maille_retenue_cm": 60,
+      "verdictTaille": "tropPres"
+     },
+     {
+      "type": "reserve",
+      "etat": "aVerifierSurPlace",
+      "raison": "reserve",
+      "regles": [
+       "94-res-barrage-joinville",
+       "94-res-barrage-creteil",
+       "94-res-ouvrage-saint-maur",
+       "nat-res-ouvrages"
+      ],
+      "pourquoi": "Réserves listées sur la Marne dans le 94 (statut incertain, sans coordonnées) et zone de 50 m des ouvrages : la ligne dit « regarde le panneau », l'app ne teste jamais la position."
+     }
+    ]
+   },
+   "variantes": [
+    {
+     "mesure": "estimee",
+     "tailleCm": 59,
+     "consigne": "mesureLaSurUneToise",
+     "verdictTaille": "sansVerdict",
+     "pourquoi": "Une mesure estimée (réalité augmentée) ne donne jamais de verdict de taille."
+    }
+   ],
+   "pourquoi": "Aucune autre ligne n'est non respectée : la consigne est « mesure-la sur une toise » (verdictTaille .tropPres ; .sansVerdict si estimée).",
+   "statut_regle_citee": "incertain"
+  },
+  {
+   "id": "cas-04",
+   "titre": "Sandre 45 cm, Seine à Paris (75) : deux mailles contradictoires, 40 et 50 cm",
+   "entree": {
+    "espece": {
+     "id": "sandre",
+     "codeSandre": "2195"
+    },
+    "tailleCm": 45,
+    "mesure": "toise",
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "75",
+     "eau": {
+      "nom": "La Seine",
+      "cle": "seine"
+     },
+     "categorie": {
+      "valeur": "deuxieme",
+      "origine": "regleDeLEau"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "relacheLa",
+    "lignes": [
+     {
+      "type": "taille",
+      "etat": "nonRespectee",
+      "regles": [
+       "75-san-taille",
+       "nat-san-taille"
+      ],
+      "pourquoi": "40 cm d'après l'arrêté permanent 75-2025-02-26-00012, 50 cm d'après l'avis annuel 2026 ; la plus stricte (50 cm) s'applique, avec les deux sources. 45 < 50.",
+      "sources": [
+       "Arrêté préfectoral permanent n° 75-2025-02-26-00012 du 26/02/2025 (Paris), art. 9 (recopie R436-18)",
+       "Avis annuel 2026 Paris (rappel de dispositions)"
+      ],
+      "candidats_cm": [
+       40,
+       50
+      ],
+      "maille_retenue_cm": 50,
+      "verdictTaille": "sousLaMaille"
+     },
+     {
+      "type": "periode",
+      "etat": "respectee",
+      "regles": [
+       "75-ouv-generale",
+       "nat-2e-ouv-generale"
+      ],
+      "pourquoi": "Sandre ouvert toute l'année 2026 en 2e catégorie."
+     }
+    ]
+   },
+   "pourquoi": "Taille sous la plus stricte des deux mailles : relâche-la.",
+   "statut_regle_citee": "incertain"
+  },
+  {
+   "id": "cas-05",
+   "titre": "Écrevisse à pattes blanches, Marne (94) : espèce protégée, pêche interdite toute l'année",
+   "entree": {
+    "espece": {
+     "id": "ecrevisse-pattes-blanches",
+     "codeSandre": null
+    },
+    "tailleCm": null,
+    "mesure": null,
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "94",
+     "eau": {
+      "nom": "La Marne",
+      "cle": "marne"
+     },
+     "categorie": {
+      "valeur": "deuxieme",
+      "origine": "regleDeLEau"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "relacheLa",
+    "lignes": [
+     {
+      "type": "autre",
+      "etat": "nonRespectee",
+      "regles": [
+       "94-interdit-ecrevisses"
+      ],
+      "pourquoi": "Écrevisses à pattes blanches, rouges et des torrents : pêche interdite toute l'année 2026 (avis annuel 2026) : relâche obligatoire."
+     }
+    ]
+   },
+   "pourquoi": "Espèce protégée : aucune capture n'est permise, quelle que soit la taille ; la consigne est « relâche-la ».",
+   "statut_regle_citee": "brouillon (expire le 2026-12-31)",
+   "note": "especes.json n'a pas encore le statut `protegee` pour cette entrée (statut vide) : le test L1 s'appuie sur la règle 94-interdit-ecrevisses."
+  },
+  {
+   "id": "cas-06",
+   "titre": "Truite fario 30 cm, Lyon (69) : fermée par le socle national (R436-6 et R436-7), département sans règle locale",
+   "entree": {
+    "espece": {
+     "id": "truite-fario",
+     "codeSandre": "2221"
+    },
+    "tailleCm": 30,
+    "mesure": "toise",
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "69",
+     "eau": null,
+     "categorie": {
+      "valeur": "inconnue",
+      "origine": "aucune"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "relacheLa",
+    "message": "règles locales non saisies",
+    "lignes": [
+     {
+      "type": "periode",
+      "etat": "nonRespectee",
+      "regles": [
+       "nat-fario-ouv",
+       "nat-fario-ferme-2026-automne"
+      ],
+      "pourquoi": "Fario ouverte du 2e samedi de mars au 3e dimanche de septembre (20/09/2026), même en 2e catégorie ; fermée du 21/09 au 31/12/2026, donc le 15 oct., même avec la prolongation maximale de haute montagne (11 oct.)."
+     }
+    ]
+   },
+   "pourquoi": "Le socle national ferme la fario partout ce jour-là, quelle que soit la catégorie : relâche-la, sans fichier 69.",
+   "statut_regle_citee": "brouillon (expire le 2026-12-31)"
+  },
+  {
+   "id": "cas-07",
+   "titre": "Truite arc-en-ciel 28 cm, Marne à Charenton (94) : ouverte, la fermeture ne vise que la fario",
+   "entree": {
+    "espece": {
+     "id": "truite-arc-en-ciel",
+     "codeSandre": "2216"
+    },
+    "tailleCm": 28,
+    "mesure": "toise",
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "94",
+     "eau": {
+      "nom": "La Marne",
+      "cle": "marne"
+     },
+     "categorie": {
+      "valeur": "deuxieme",
+      "origine": "regleDeLEau"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "verifieLArrete",
+    "lignes": [
+     {
+      "type": "periode",
+      "etat": "respectee",
+      "regles": [
+       "nat-arc-pas-fermeture-2e",
+       "94-ouv-generale"
+      ],
+      "pourquoi": "En 2e catégorie la truite arc-en-ciel est ouverte toute l'année (R436-7 3° ne la ferme qu'en cours d'eau à saumon ou truite de mer) ; l'avis 2026 du 94 ne cite que la fario."
+     },
+     {
+      "type": "taille",
+      "etat": "respectee",
+      "regles": [
+       "nat-tru-taille"
+      ],
+      "pourquoi": "Maille nationale 23 cm ; 28 cm, à plus de 2 cm de la maille."
+     },
+     {
+      "type": "quota",
+      "etat": "respectee",
+      "regles": [
+       "94-sal-quota"
+      ],
+      "pourquoi": "Aucune prise gardée ce jour ; quota de 10 salmonidés."
+     },
+     {
+      "type": "reserve",
+      "etat": "aVerifierSurPlace",
+      "raison": "reserve",
+      "regles": [
+       "94-res-barrage-joinville",
+       "94-res-barrage-creteil",
+       "94-res-ouvrage-saint-maur",
+       "nat-res-ouvrages"
+      ],
+      "pourquoi": "Réserves listées sur la Marne dans le 94 (statut incertain, sans coordonnées) et zone de 50 m des ouvrages : la ligne dit « regarde le panneau », l'app ne teste jamais la position."
+     }
+    ],
+    "lignes_informatives": [
+     {
+      "type": "consommation",
+      "etat": "information",
+      "regles": [
+       "94-consom-seine-marne-yerres"
+      ],
+      "pourquoi": "Vente et consommation interdites (arrêté 2010-5378, texte de 2010 non lu, règle brouillon) : ligne affichée, ne change pas la consigne (garder n'est pas manger)."
+     }
+    ]
+   },
+   "pourquoi": "Aucune ligne non respectée (c'est l'erreur de l'ancien brouillon, qui la fermait comme la fario), mais 94 partiel, règles brouillon et réserve à vérifier sur place : vérifie l'arrêté, pas de feu vert.",
+   "statut_regle_citee": "brouillon"
+  },
+  {
+   "id": "cas-08",
+   "titre": "Perche 22 cm, Lyon (69), catégorie 1re choisie par le pêcheur : 1re catégorie fermée le 15 oct.",
+   "entree": {
+    "espece": {
+     "id": "perche-commune",
+     "codeSandre": "2193"
+    },
+    "tailleCm": 22,
+    "mesure": "toise",
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "69",
+     "eau": null,
+     "categorie": {
+      "valeur": "premiere",
+      "origine": "choixDuPecheur"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "relacheLa",
+    "message": "règles locales non saisies",
+    "lignes": [
+     {
+      "type": "periode",
+      "etat": "nonRespectee",
+      "regles": [
+       "nat-1re-ouv-generale"
+      ],
+      "pourquoi": "En 1re catégorie la pêche est ouverte du 2e samedi de mars (14/03/2026) au 3e dimanche de septembre (20/09/2026) ; le 15 oct. est fermé."
+     }
+    ]
+   },
+   "variantes": [
+    {
+     "categorie": "inconnue",
+     "consigne": "verifieLArrete",
+     "valeursParCategorie": {
+      "premiere": "fermée",
+      "deuxieme": "ouverte (toute l'année)"
+     },
+     "regles": [
+      "nat-1re-ouv-generale",
+      "nat-2e-ouv-generale"
+     ],
+     "pourquoi": "Catégorie inconnue au point : la ligne montre « 1re : fermée · 2e : ouverte », à vérifier sur place ; relâche seulement si la ligne n'est respectée dans aucune des deux ; jamais un choix fait à la place du pêcheur."
+    }
+   ],
+   "pourquoi": "1re catégorie fermée le 15 oct. : relâche-la une fois la catégorie choisie ; catégorie non choisie : vérifie l'arrêté.",
+   "statut_regle_citee": "brouillon"
+  },
+  {
+   "id": "cas-09",
+   "titre": "Anguille argentée 70 cm, Marne (94) : toujours relâchée",
+   "entree": {
+    "espece": {
+     "id": "anguille-argentee",
+     "codeSandre": null
+    },
+    "tailleCm": 70,
+    "mesure": "toise",
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "94",
+     "eau": {
+      "nom": "La Marne",
+      "cle": "marne"
+     },
+     "categorie": {
+      "valeur": "deuxieme",
+      "origine": "regleDeLEau"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "relacheLa",
+    "lignes": [
+     {
+      "type": "autre",
+      "etat": "nonRespectee",
+      "regles": [
+       "94-interdit-anguille"
+      ],
+      "pourquoi": "Anguille argentée (d'avalaison) : pêche interdite toute l'année."
+     }
+    ]
+   },
+   "variantes": [
+    {
+     "espece": "anguille-jaune",
+     "stade": "non choisi",
+     "consigne": "relacheLa",
+     "pourquoi": "Sans stade, l'anguille donne « relâche-la » (le stade est toujours demandé)."
+    }
+   ],
+   "pourquoi": "Stade argenté : pêche interdite toute l'année, quelle que soit la taille : relâche-la.",
+   "statut_regle_citee": "brouillon"
+  },
+  {
+   "id": "cas-10",
+   "titre": "Civelle, Seine à Paris (75) : toujours relâchée",
+   "entree": {
+    "espece": {
+     "id": "civelle",
+     "codeSandre": null
+    },
+    "tailleCm": 8,
+    "mesure": "toise",
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "75",
+     "eau": {
+      "nom": "La Seine",
+      "cle": "seine"
+     },
+     "categorie": {
+      "valeur": "deuxieme",
+      "origine": "regleDeLEau"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "relacheLa",
+    "lignes": [
+     {
+      "type": "autre",
+      "etat": "nonRespectee",
+      "regles": [
+       "75-interdit-anguille"
+      ],
+      "pourquoi": "Anguille argentée et civelle : interdites toute l'année (arrêté permanent 75-2025-02-26-00012)."
+     }
+    ]
+   },
+   "pourquoi": "Civelle : pêche interdite toute l'année, sans considération de taille : relâche-la.",
+   "statut_regle_citee": "brouillon"
+  },
+  {
+   "id": "cas-11",
+   "titre": "Perche soleil 15 cm, Marne (94) : espèce envahissante, transport vivant interdit, aucune ligne de remise à l'eau",
+   "entree": {
+    "espece": {
+     "id": "perche-soleil",
+     "codeSandre": "2050"
+    },
+    "tailleCm": 15,
+    "mesure": "toise",
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "94",
+     "eau": {
+      "nom": "La Marne",
+      "cle": "marne"
+     },
+     "categorie": {
+      "valeur": "deuxieme",
+      "origine": "regleDeLEau"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "verifieLArrete",
+    "lignes": [
+     {
+      "type": "transportVivant",
+      "etat": "information",
+      "regles": [
+       "nat-eee-transport-perche-soleil"
+      ],
+      "pourquoi": "Détention, transport, vente et introduction interdits sur tout le territoire métropolitain et en tout temps (arrêté du 14/02/2018, art. 3 I) : ligne « transport vivant interdit », sans changer la consigne."
+     },
+     {
+      "type": "autre",
+      "etat": "aVerifierSurPlace",
+      "raison": "desaccord",
+      "regles": [
+       "94-introduction-interdite"
+      ],
+      "pourquoi": "Introduction interdite ; le texte ne dit pas si remettre la prise à l'eau vaut introduction : règle incertain, donc à vérifier. Aucune ligne n'affirme qu'il faut ou qu'il ne faut pas la remettre à l'eau."
+     }
+    ]
+   },
+   "pourquoi": "Aucun texte lu ne règle la remise à l'eau (décision d'Adem en attente) : l'app n'invente ni « remets-la à l'eau » ni « ne la remets pas ». La règle incertain donne « vérifie l'arrêté ».",
+   "statut_regle_citee": "brouillon (transport), incertain (remise à l'eau)"
+  },
+  {
+   "id": "cas-12",
+   "titre": "Brochet 70 cm près de Bruxelles : hors de France",
+   "entree": {
+    "espece": {
+     "id": "brochet",
+     "codeSandre": "2151"
+    },
+    "tailleCm": 70,
+    "mesure": "toise",
+    "date": "2026-10-15",
+    "lieu": {
+     "departement": "inconnu",
+     "eau": null,
+     "categorie": {
+      "valeur": "inconnue",
+      "origine": "aucune"
+     }
+    },
+    "prisesDuJour": [],
+    "coordonnee": {
+     "lat": 50.8503,
+     "lon": 4.3517
+    }
+   },
+   "attendu": {
+    "consigne": "verifieLArrete",
+    "message": "hors de France : aucune règle française",
+    "lignes": []
+   },
+   "pourquoi": "Département « inconnu » : aucune règle française ne s'applique, l'app ne devine rien (ni socle national, ni ligne). La session reste permise.",
+   "statut_regle_citee": "aucune",
+   "note": "Cas absent de donnees.md : consigne `verifieLArrete` (cas d'échec du contrat `controle`) et message tiré de la fiche L1 (`acces`). À faire confirmer par S."
+  },
+  {
+   "id": "cas-13",
+   "titre": "Brochet 70 cm, Seine à Paris (75), le 15 janvier 2027 : règles d'avis annuel périmées",
+   "entree": {
+    "espece": {
+     "id": "brochet",
+     "codeSandre": "2151"
+    },
+    "tailleCm": 70,
+    "mesure": "toise",
+    "date": "2027-01-15",
+    "lieu": {
+     "departement": "75",
+     "eau": {
+      "nom": "La Seine",
+      "cle": "seine"
+     },
+     "categorie": {
+      "valeur": "deuxieme",
+      "origine": "regleDeLEau"
+     }
+    },
+    "prisesDuJour": []
+   },
+   "attendu": {
+    "consigne": "verifieLArrete",
+    "lignes": [
+     {
+      "type": "periode",
+      "etat": "aVerifierSurPlace",
+      "raison": "perimee",
+      "regles": [
+       "75-bro-ouv-2026",
+       "75-bro-ferme-2026",
+       "nat-bro-ouv-2e"
+      ],
+      "pourquoi": "Dates de l'avis annuel 2026 (expire_le 2026-12-31) périmées : « vérifie l'arrêté » avec l'année suivante (2027), jamais un feu vert."
+     },
+     {
+      "type": "taille",
+      "etat": "aVerifierSurPlace",
+      "raison": "perimee",
+      "regles": [
+       "75-bro-taille",
+       "nat-bro-taille"
+      ],
+      "pourquoi": "La règle de taille (candidats 50 / 60 cm, incertain, expire_le 2026-12-31) est périmée aussi ; 70 cm est au-dessus des deux candidats."
+     }
+    ]
+   },
+   "pourquoi": "Une règle dont `expire_le` est passé donne « vérifie l'arrêté » ; elle ne peut jamais assouplir.",
+   "statut_regle_citee": "brouillon (période), incertain (taille), expire_le 2026-12-31"
+  }
+ ]
+}
