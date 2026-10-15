@@ -14,6 +14,11 @@ Le lot D3 lit les arrêtés de pêche de toute la France : un collecteur téléc
 
 Le 27 (Eure) est fait.
 
+## Déjà fait, à ne pas relire (fil du plan, 15 oct. 19h58)
+- **Sur `regles/local`** (c93dd79, 19h47) : 28 départements confirmés, 01 à 16, 19, 22, 23, 27, 75, 77, 78, 91 à 95. Avant chaque département : `git fetch origin regles/local`, puis `git ls-tree -r --name-only origin/regles/local | grep consensus/<code>.json` ; s'il y est, passer au suivant.
+- **Sur le PC, avant de relire** : la session D3 du PC (dossier `C:\Users\Adem\Build Challenge`, dépôt peut-être sous `repo\`) a rapporté à 14h39 avoir lu deux fois les 96 départements de métropole (15 537 règles confirmées, dont Oise 179, Loire-Atlantique 306, Haute-Vienne 186 ; tableau dans `reports\regles-local\avancement.md`), sans les pousser. Ce chiffre n'a jamais été vérifié depuis GitHub. Si `outils\regles\consensus\<code>.json` existe dans ce dossier, le pousser avec `pousser.py` au lieu de le relire. Ce rapport laissait à lire 17, 26, 2A, 49, 82, 83, 84, 88 (préfecture refusée ; 04 et 15 sont lus depuis) et à compléter 05, 18, 23, 33, 40, 66, 71.
+- **Déjà dans l'app** (`lot/donnees`) : 44 et 87 (deux lectures copiées dans le dossier partagé) et 60 (une seule lecture, tout en « vérifie l'arrêté »). Leur arrivée sur `regles/local` les remplacera. Les 28 de `regles/local` sont chargés au fil de l'eau par `outils/verifier_donnees.py --charger`.
+
 ## Comment faire un département (Adem et Sullyvan)
 1. Récupérer le plan et l'outil : `git fetch origin`, puis `scripts/lot.sh D3` (copie de travail sur `lot/regles-france`). Les briefs sont dans `outils/regles/` : `brief-collecteur.md`, `brief-lecteur.md`, `consigne-departement.md`.
 2. **Collecte** (un agent par département, **Haiku** suffit, 30 min au plus) : exécuter `brief-collecteur.md` avec `CODE` et `NOM`. Il télécharge les arrêtés dans `outils/regles/corpus/<code>/` et lance `python3 -I outils/regles/corpus.py <code>` (OCR Tesseract français si installé, sinon OCR de Windows).
