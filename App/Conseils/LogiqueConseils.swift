@@ -2,7 +2,7 @@ import Core
 import Foundation
 
 /// Clés de ce qui reste sur l'iPhone (`@AppStorage`). Aucune n'est envoyée nulle part.
-enum ClesConseils {
+nonisolated enum ClesConseils {
     static let niveau = "conseils.niveauPecheur"
     static let questionVue = "conseils.questionNiveauVue"
     static let tunnelVu = "conseils.tunnelVu"
@@ -10,13 +10,13 @@ enum ClesConseils {
 
 extension NiveauPecheur {
     /// Question passée : « occasionnel » (par défaut, à confirmer par Adem).
-    static let parDefaut = NiveauPecheur.occasionnel
+    nonisolated static var parDefaut: NiveauPecheur { .occasionnel }
 
-    static func depuis(_ brut: String) -> NiveauPecheur {
+    nonisolated static func depuis(_ brut: String) -> NiveauPecheur {
         NiveauPecheur(rawValue: brut) ?? .parDefaut
     }
 
-    var mot: String {
+    nonisolated var mot: String {
         switch self {
         case .debutant: "Débutant"
         case .occasionnel: "Occasionnel"
@@ -25,7 +25,7 @@ extension NiveauPecheur {
     }
 
     /// Pictogramme provisoire (SF Symbols), en attendant le choix d'Adem.
-    var pictogramme: String {
+    nonisolated var pictogramme: String {
         switch self {
         case .debutant: "leaf.fill"
         case .occasionnel: "fish.fill"
@@ -35,14 +35,14 @@ extension NiveauPecheur {
 }
 
 /// Ce que l'écran montre d'une liste de conseils. Rien n'est réécrit : on ne fait que retirer et compter.
-struct ConseilsAffiches: Equatable {
+nonisolated struct ConseilsAffiches: Sendable, Equatable {
     var visibles: [Conseil]
     var nbCaches: Int
     /// Vrai : la ligne « tout le kit » s'affiche (il reste des conseils derrière le paywall).
     var toutLeKit: Bool { nbCaches > 0 }
 }
 
-enum RegleConseils {
+nonisolated enum RegleConseils {
     /// - Un conseil sans source ne s'affiche jamais.
     /// - `toutOuvert` vient de `peutUtiliser(.conseilsComplets, ...)` de Core : vrai, tout s'affiche ;
     ///   faux, seuls les conseils marqués gratuits par Core (le 1er de chaque espèce) s'affichent.
@@ -78,7 +78,7 @@ struct ContexteConseils {
 }
 
 /// Les espèces du spot, dans l'ordre de la carte « à essayer ».
-enum EspecesDuSpot {
+nonisolated enum EspecesDuSpot {
     /// Ouvertes d'abord, la plus souvent relevée en tête (par défaut, à confirmer par Adem) ; les fermées ensuite, avec leur date.
     /// Jamais classées par « chances ».
     static func ordonnees(_ proches: [EspeceProche]) -> [EspeceProche] {
@@ -104,7 +104,7 @@ enum EspecesDuSpot {
 }
 
 /// Les ~12 espèces du tunnel des 3 premières minutes : celles de la zone d'abord, puis les autres de la liste.
-enum EspecesDuTunnel {
+nonisolated enum EspecesDuTunnel {
     static let nombre = 12
 
     static func choisir(pechables: [EspecePechable], proches: [EspeceProche], nombre: Int = EspecesDuTunnel.nombre) -> [EspecePechable] {

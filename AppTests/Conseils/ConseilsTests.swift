@@ -3,6 +3,7 @@ import Foundation
 import Testing
 @testable import BuildChallenge
 
+@MainActor
 struct ConseilsTests {
     private func conseil(_ texte: String, gratuit: Bool, source: String = "Fédération (essai)") -> Conseil {
         Conseil(texte: texte, icone: "fish", source: SourceRegle(titre: source), gratuit: gratuit)
