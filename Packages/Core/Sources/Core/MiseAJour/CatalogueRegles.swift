@@ -116,3 +116,8 @@ public struct CatalogueRegles: Sendable {
         return dates
     }
 }
+
+extension CatalogueRegles {
+    /// Le dossier `regles/` embarqué dans le paquet Core, pour que l'app le passe à `MiseAJourRegles`.
+    public static var dossierEmbarque: URL? { Ressources.dossierRegles }
+}
