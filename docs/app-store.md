@@ -43,7 +43,7 @@ Délai d'Apple : au moins 50 % des relectures en moins de 24 h, 90 % en moins de
 | R5 partage entre amis non vérifiable seul | 1.2, 5.1.1(v) | amis (E8) hors du build soumis, code retiré (pas de fonction dormante) ; Mon club n'affiche rien venu d'un autre utilisateur | L8, L9 |
 | R6 météo sans mention Apple Weather | 5.2.5 | sans objet : le plan du 15 oct. n'a pas de météo (L7 est « Où chercher : coins publics »). Si elle revient, logo et lien partout | aucun |
 | R7 la fiche promet plus que le build | 2.3.1, 2.3.3 | fiche écrite depuis le build ; ne nomme que les départements dont les règles sont chargées (« toute la France » seulement si D3 est dans le build), ni amis, ni Siri | S1 |
-| R8 rien à voir pour la position du relecteur | 2.1, 5.1.1(iv) | carte ouverte sur l'Île-de-France, choix du département, bandeau des départements couverts | L2 |
+| R8 rien à voir pour la position du relecteur | 2.1, 5.1.1(iv) | position demandée au lancement (Adem, 15 oct.) ; hors de France ou refusée : carte de l'Île-de-France avec « pas de relevé OFB près de toi » ou choix du département ; bandeau des départements couverts | L2 |
 | R9 SDK qui collecte sans consentement | 5.1.1(ii) | bouton d'exemple du kit retiré (L0) ; écran de consentement avant le SDK, refus = SDK éteint (L6) | L0, L6 |
 
 ## Marques

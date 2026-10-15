@@ -33,7 +33,7 @@ Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `pytho
 - Deux textes qui se contredisent : la valeur la plus stricte, avec les deux sources (décidé par Adem le 15 oct.). Le texte qui fait foi est l'arrêté permanent signé (`reports/qui-est-maitre.md`) ; la valeur la plus stricte reste affichée, car relâcher n'est jamais une infraction.
 - Règles lues par l'IA (décidé par Adem le 15 oct.) : l'app montre chaque règle avec sa source et sa citation, sans étiquette « non relue ». En coulisse, deux lectures indépendantes par département ; une ligne où elles divergent devient « vérifie l'arrêté ».
 - Rareté sur 10 ans en 4 niveaux (commun, peu commun, rare, légendaire) ; sous 20 pêches dans le département, calculée sur la région, et l'écran le dit.
-- La carte s'ouvre sur l'Île-de-France sans demander la position ; « Autour de moi » la demande.
+- Au premier lancement, l'app demande la position et la carte s'y centre ; refusée, le pêcheur choisit son département. Les poissons sont montrés en images, jamais en liste de noms (Adem, 15 oct. 12h51).
 - Après la liste de contrôle, le pêcheur déclare « je la relâche » ou « je la garde » (ça compte pour le quota du jour) ; quand aucune ligne ne l'interdit, l'app écrit « aucune règle saisie ne l'interdit ; l'arrêté fait foi », jamais « tu peux la garder ».
 - Reconnaissance : le modèle maison s'il passe son test, l'IA d'Apple seulement si elle passe le même test, sinon la grille des 14 espèces.
 - Les fichiers fabriqués par script restent hors de git : publiés en pièce jointe d'une release privée.
