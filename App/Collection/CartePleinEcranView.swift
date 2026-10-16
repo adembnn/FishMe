@@ -20,12 +20,8 @@ struct CartePleinEcranView: View {
                 Spacer(minLength: 64)
                 carte
                     .padding(.horizontal, Espace.xl)
-                // Verso : la fiche de la prise sous la carte (P25). Au recto la place reste vide, la carte ne bouge pas.
-                FaitsPrise(infos: infos, emplacements: emplacements)
-                    .frame(height: 120)
-                    .padding(.top, Espace.m)
-                    .opacity(retournee ? 1 : 0)
-                    .accessibilityHidden(!retournee)
+                // Verso : la photo seule (Adem, 16 oct.), rien sous la carte.
+                Spacer(minLength: Espace.l)
                 Button(action: retourner) {
                     Label(retournee ? "Voir le recto" : "Voir la photo", systemImage: "arrow.triangle.2.circlepath")
                 }
