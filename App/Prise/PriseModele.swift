@@ -43,6 +43,8 @@ final class PriseModele {
     private(set) var toise: ToiseCalibrage?
     private(set) var toiseImage: UIImage?
     private(set) var toiseIntrouvable = false
+    /// Fourchette de la dernière mesure en réalité augmentée validée (aucune position du monde n'est gardée).
+    private(set) var mesureAR: PlageMesureAR?
 
     init(services: PriseServices, contexte: PriseContexte, terminer: @escaping (PriseConfirmee?) -> Void) {
         self.services = services
@@ -131,13 +133,36 @@ final class PriseModele {
         longueurCm = cm
     }
 
+    /// Le pêcheur valide la mesure en réalité augmentée : la longueur devient le centre de la fourchette.
+    func mesureARValidee(_ plage: PlageMesureAR) {
+        let centre = min(max(Double(plage.centreCm), PriseLogique.plageTaille.lowerBound), PriseLogique.plageTaille.upperBound)
+        mesureAR = plage
+        longueurLue = nil
+        longueurCm = centre
+    }
+
+    /// La fourchette n'est montrée que tant que la longueur est celle mesurée ; le curseur la fait tomber.
+    var plageAR: PlageMesureAR? {
+        guard let m = mesureAR, longueurCm.rounded() == min(max(Double(m.centreCm), PriseLogique.plageTaille.lowerBound), PriseLogique.plageTaille.upperBound) else { return nil }
+        return m
+    }
+
+    /// « ≈ 1,6 à 2,0 kg, estimé », calculé aux deux bornes de la fourchette.
+    var textePoidsAR: String? {
+        guard let entree = especeConfirmee, let plage = plageAR,
+              let bas = services.especes.poidsEstime(espece: entree.espece, longueurCm: Double(plage.basCm)),
+              let haut = services.especes.poidsEstime(espece: entree.espece, longueurCm: Double(plage.hautCm)) else { return nil }
+        return MesureARCalcul.textePoids(minKilos: bas.kilos, maxKilos: haut.kilos)
+    }
+
     func confirmerLaTaille() {
         tailleConfirmee = true
         etape = .resultat
     }
 
-    /// `.toise` tant que le pêcheur garde la valeur lue sur la toise, sinon `.saisie`. La réalité augmentée (`.estimee`) n'est pas dans ce lot.
+    /// `.estimee` tant que la longueur est celle mesurée en réalité augmentée (jamais de verdict), `.toise` tant que le pêcheur garde la valeur lue sur la toise, sinon `.saisie`.
     var methode: MethodeMesure {
+        if plageAR != nil { return .estimee }
         if let lue = longueurLue, lue == longueurCm.rounded() { return .toise }
         return .saisie
     }

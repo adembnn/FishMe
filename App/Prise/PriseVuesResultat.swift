@@ -7,6 +7,7 @@ import UIKit
 struct PriseTailleView: View {
     @Bindable var modele: PriseModele
     @State private var cameraToise = false
+    @State private var mesureAR = false
 
     var body: some View {
         VStack(spacing: 16) {
@@ -27,6 +28,17 @@ struct PriseTailleView: View {
                     }
                     .padding(16)
                     .background(PriseJetons.papier, in: RoundedRectangle(cornerRadius: PriseJetons.rayon))
+                    if let plage = modele.plageAR {
+                        VStack(spacing: 4) {
+                            Text(plage.texte).font(PriseJetons.titre()).foregroundStyle(PriseJetons.encre)
+                            if let poids = modele.textePoidsAR { Text(poids) }
+                            Text("Mesuré en réalité augmentée").foregroundStyle(PriseJetons.discret)
+                        }
+                        .font(PriseJetons.legende()).foregroundStyle(PriseJetons.encre)
+                    }
+                    if MesureAR.disponible {
+                        Button("Mesurer en réalité augmentée") { mesureAR = true }.buttonStyle(PriseBoutonSecondaire())
+                    }
                     if PriseCamera.disponible {
                         Button("Photo de mon poisson sur la toise") { cameraToise = true }.buttonStyle(PriseBoutonSecondaire())
                     }
@@ -39,6 +51,9 @@ struct PriseTailleView: View {
             Button("Confirmer la taille") { modele.confirmerLaTaille() }.buttonStyle(PriseBoutonPrincipal())
         }
         .padding(20)
+        .fullScreenCover(isPresented: $mesureAR) {
+            MesureARView(surValider: { mesureAR = false; modele.mesureARValidee($0) }, surAnnuler: { mesureAR = false })
+        }
         .fullScreenCover(isPresented: $cameraToise) {
             PriseCamera(onImage: { cameraToise = false; modele.photoToise($0) }, onCancel: { cameraToise = false })
                 .ignoresSafeArea()
@@ -88,6 +103,7 @@ struct PriseResultatView: View {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text("\(Int(modele.longueurCm.rounded())) cm").font(PriseJetons.titre()).foregroundStyle(PriseJetons.encre)
                                 if modele.methode == .toise { Text("Lu sur ta toise").font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret) }
+                                if let plage = modele.plageAR { Text("\(plage.texte), mesuré en réalité augmentée").font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret) }
                             }
                             Spacer(minLength: 0)
                         }
