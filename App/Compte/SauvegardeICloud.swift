@@ -33,6 +33,13 @@ actor SauvegardeICloud: ServiceSauvegarde {
     /// Vrai après « Effacer ma sauvegarde iCloud » : plus de sauvegarde automatique tant que le pêcheur ne touche pas
     /// « Sauvegarder maintenant ».
     nonisolated static let cleCoupee = "compte.sauvegardeCoupee"
+
+    /// Interrupteur d'archivage : iCloud ne sert (sauvegarde, et amis de L8) que si la clé Info `FishMeICloud` vaut YES.
+    /// Sans la capacité iCloud sur l'identifiant, le Mac retire l'entitlement et met la clé à NO : aucun `CKContainer`
+    /// n'est alors créé (il planterait), « Mon compte » et Amis disparaissent, le reste de l'app marche pareil.
+    nonisolated static var actif: Bool {
+        Bundle.main.object(forInfoDictionaryKey: "FishMeICloud") as? Bool ?? false
+    }
     nonisolated private static let zone = CKRecordZone.ID(zoneName: "Sauvegarde", ownerName: CKCurrentUserDefaultName)
     nonisolated private static let lot = 100
 
