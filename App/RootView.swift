@@ -47,6 +47,8 @@ struct PaywallDemande: Identifiable {
 final class ParcoursApp {
     // Services
     @ObservationIgnored let core: MoteurCore
+    /// L7 : un seul moteur de coins, pour garder son index chaud d'une ouverture à l'autre.
+    @ObservationIgnored private(set) lazy var coins = core.coins()
     @ObservationIgnored let servicesCarte: ServicesCarte
     @ObservationIgnored let servicesPrise: PriseServices
     @ObservationIgnored let conseils: any ServiceConseils
@@ -501,7 +503,7 @@ struct RootView: View {
             emplacementConseil: { espece in AnyView(ConseilEmplacement(app: app, espece: espece)) },
             onCommencerSession: { spot in app.commencer(spot) },
             onSpotChange: { spot in app.spotChange(spot) },
-            ouChercher: { position in AnyView(OuChercherVue(especes: app.core.coins(), position: position)) })
+            ouChercher: { position in AnyView(OuChercherVue(especes: app.coins, position: position)) })
             .questionNiveau(declenchee: app.questionNiveauPermise)
             .task { app.carteListe() }
     }
