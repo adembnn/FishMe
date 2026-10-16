@@ -24,7 +24,8 @@ struct VignetteCarteObtenue: View {
       }
     }
     .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
-    .allowsHitTesting(false)
+    // La vignette est le libellé d'un Button : elle doit recevoir le toucher (sinon plus aucune carte ne s'ouvre).
+    .contentShape(Rectangle())
     .accessibilityHidden(true)
   }
 }

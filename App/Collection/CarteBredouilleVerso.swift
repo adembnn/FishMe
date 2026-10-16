@@ -29,8 +29,7 @@ struct CarteBredouilleVersoView: View {
     @ViewBuilder
     private var fond: some View {
         if let image {
-            Color.clear.overlay { Image(uiImage: image).resizable().scaledToFill() }
-                .clipped()
+            PhotoVersoEntiere(image: image)
         } else {
             EauCalmeFond(avecBouchon: true)
         }
