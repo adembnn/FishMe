@@ -21,12 +21,23 @@ def ranger(dossier: Path, slug: str) -> int:
     for ancien in CATALOGUE.iterdir():
         if motif.match(ancien.name):
             shutil.rmtree(ancien)
+    fichiers = [png for png in sorted(dossier.glob(f"{slug}-*.png"))
+                if re.match(rf"^{re.escape(slug)}-(nage|lacet-m?\d+)-\d+$", png.stem)]
+    # Un seul cadre pour toute l'espèce (l'union des contours de tous les angles, 4 px de marge) : le poisson
+    # remplit sa largeur comme les autres, et il ne bouge pas d'un angle à l'autre.
+    boite = None
+    for png in fichiers:
+        b = Image.open(png).getchannel("A").getbbox()
+        if b:
+            boite = b if boite is None else (min(boite[0], b[0]), min(boite[1], b[1]),
+                                             max(boite[2], b[2]), max(boite[3], b[3]))
     n = 0
-    for png in sorted(dossier.glob(f"{slug}-*.png")):
+    for png in fichiers:
         nom = png.stem
-        if not re.match(rf"^{re.escape(slug)}-(nage|lacet-m?\d+)-\d+$", nom):
-            continue
         image = Image.open(png).convert("RGBA")
+        if boite:
+            image = image.crop((max(boite[0] - 4, 0), max(boite[1] - 4, 0),
+                                min(boite[2] + 4, image.width), min(boite[3] + 4, image.height)))
         hauteur = round(image.height * LARGEUR / image.width)
         image = image.resize((LARGEUR, hauteur), Image.LANCZOS).quantize(256, method=Image.Quantize.FASTOCTREE)
         cible = CATALOGUE / f"{nom}.imageset"
