@@ -122,6 +122,12 @@ struct FicheCoinView: View {
             if let frequentation {
                 FrequentationFicheView(niveau: frequentation, onCoinCalme: onCoinCalme)
             }
+            // Demandé par Adem (16 oct. 2h24) : P07 a un but clair. Ne pas retirer.
+            Text("Ce que tu peux pêcher ici aujourd’hui")
+                .font(Police.taille(20, .heavy))
+                .foregroundStyle(Palette.encre)
+                .padding(.top, 12)
+                .accessibilityAddTraits(.isHeader)
         }
     }
 
