@@ -35,6 +35,7 @@ struct CoefficientPoids: Sendable, Equatable {
             let mx = ((e["longueur_max_cm"] ?? e["lt_max_cm"]) as? NSNumber)?.doubleValue
             var source = (e["source"] as? String) ?? "source non indiquée"
             if statut == "proxy" { source += " [proxy : coefficients d'une espèce proche, confiance faible]" }
+            else if statut == "prises" { source += " [estimé sur des prises, sans relation publiée]" }
             else if (e["confiance"] as? String) == "approximatif" { source += " [approximatif]" }
             return CoefficientPoids(espece: id, a: a, b: b, ltMinCm: mn, ltMaxCm: mx, n: (e["n"] as? NSNumber)?.intValue,
                                     region: e["region"] as? String, source: source, statut: statut, p95Cm: p95)

@@ -8,10 +8,10 @@ struct PoidsReelsTests {
     static let service: any ServiceEspeces = CasVerdictsReelsTests.moteur.especes
     static func e(_ id: String) -> Espece { Espece(id: id, codeSandre: nil) }
 
-    @Test("source : gardon 20 cm = 0,007 × 20^3,161 ≈ 0,60 kg, fourchette de 20 %, source citée")
+    @Test("source : gardon 20 cm = 0,00367 × 20^3,3972, fourchette de 20 %, source citée")
     func source() throws {
         let p = try #require(Self.service.poidsEstime(espece: Self.e("gardon"), longueurCm: 20))
-        #expect(abs(p.kilos - 0.007 * pow(20, 3.161) / 1000) < 0.001)
+        #expect(abs(p.kilos - 0.00366816 * pow(20, 3.3972) / 1000) < 0.001)
         #expect(abs(p.minKilos - p.kilos * 0.8) < 0.002)
         #expect(p.source.contains("Irz"))
         #expect(!p.source.contains("proxy"))
@@ -20,13 +20,13 @@ struct PoidsReelsTests {
     @Test("proxy : estimé, source visible et marquée proxy")
     func proxy() throws {
         let p = try #require(Self.service.poidsEstime(espece: Self.e("truite-arc-en-ciel"), longueurCm: 40))
-        #expect(abs(p.kilos - 0.666) < 0.01) // L_test du fichier : 40 cm -> 666 g
+        #expect(abs(p.kilos - 0.00429131 * pow(40, 3.2637) / 1000) < 0.002)
         #expect(p.source.contains("proxy"))
         #expect(p.source.contains("Irz"))
     }
 
     @Test("lacune : aucun poids, mais une longueur plausible quand elle est connue",
-          arguments: ["gambusie", "poisson-chat", "esturgeon-europeen", "lamproie-marine", "mulet", "gobie-a-taches-noires"])
+          arguments: ["gambusie", "poisson-chat", "lamproie-marine", "mulet", "gobie-a-taches-noires"])
     func lacune(id: String) {
         #expect(Self.service.poidsEstime(espece: Self.e(id), longueurCm: 10) == nil)
     }
@@ -52,17 +52,24 @@ struct PoidsReelsTests {
         #expect(Self.service.poidsEstime(espece: Self.e("sandre"), longueurCm: 3) == nil)
     }
 
-    @Test("brochet : source Denys 2024 conservée")
+    @Test("brochet : a et b recalés sur les prises, source visible")
     func brochet() throws {
         let p = try #require(Self.service.poidsEstime(espece: Self.e("brochet"), longueurCm: 60))
-        #expect(p.source.contains("Denys"))
-        #expect(abs(p.kilos - 1.43) < 0.05)
+        #expect(abs(p.kilos - 0.005041 * pow(60, 3.085) / 1000) < 0.01)
+        #expect(p.source.contains("prises"))
+    }
+
+    @Test("esturgeon : statut prises, pas une lacune, plage des prises (65 à 229 cm)")
+    func esturgeon() throws {
+        let p = try #require(Self.service.poidsEstime(espece: Self.e("esturgeon-europeen"), longueurCm: 100))
+        #expect(p.source.contains("prises"))
+        #expect(Self.service.poidsEstime(espece: Self.e("esturgeon-europeen"), longueurCm: 30) == nil)
     }
 
     @Test("silure : la table remplace la ligne serbe de 10 poissons")
     func silure() throws {
         let p = try #require(Self.service.poidsEstime(espece: Self.e("silure-glane"), longueurCm: 140))
-        #expect(abs(p.kilos - 0.0038 * pow(140, 3.1295) / 1000) < 0.05)
+        #expect(abs(p.kilos - 0.00805412 * pow(140, 2.972) / 1000) < 0.05)
         #expect(Self.service.poidsEstime(espece: Self.e("silure-glane"), longueurCm: 150) == nil) // hors plage de l'étude (30,9 à 148,1 cm)
         #expect(p.source.contains("Alp"))
     }
