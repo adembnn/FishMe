@@ -1,7 +1,7 @@
 From 06aed1d990885f85db03f50b4ebd92c267ebe9b1 Mon Sep 17 00:00:00 2001
 From: Claude <noreply@anthropic.com>
 Date: Fri, 16 Oct 2026 03:13:10 +0000
-Subject: [PATCH 1/2] =?UTF-8?q?L3=20:=20tuiles=20de=20groupe=20avec=20un?=
+Subject: [PATCH 1/3] =?UTF-8?q?L3=20:=20tuiles=20de=20groupe=20avec=20un?=
  =?UTF-8?q?=20vrai=20nom=20(=C2=AB=20Poisson-chat=20ou=20barbue=20=C2=BB,?=
  =?UTF-8?q?=20plus=20de=20nom=20brut)=20;=20brochet=20aquitain,=20black-ba?=
  =?UTF-8?q?ss=20=C3=A0=20petite=20bouche,=20crapet,=20barbue=20rang=C3=A9s?=
@@ -173,7 +173,7 @@ index 55b8676..d0cfb2b 100644
 From fcbbe1bf8d4ab0c7869f2f83abe08f1b1a700245 Mon Sep 17 00:00:00 2001
 From: Claude <noreply@anthropic.com>
 Date: Fri, 16 Oct 2026 03:15:12 +0000
-Subject: [PATCH 2/2] =?UTF-8?q?L3=20:=20les=204=20classes=20recal=C3=A9es?=
+Subject: [PATCH 2/3] =?UTF-8?q?L3=20:=20les=204=20classes=20recal=C3=A9es?=
  =?UTF-8?q?=20=C3=A0=20l'examen=20du=20mod=C3=A8le=20v2=20(chabot,=20grand?=
  =?UTF-8?q?e=20alose,=20mulet,=20omble=20chevalier)=20ne=20sont=20plus=20p?=
  =?UTF-8?q?ropos=C3=A9es,=20la=20grille=20s'ouvre?=
@@ -224,6 +224,248 @@ index 6ad4e67..d6b7f00 100644
      }
  }
  
+-- 
+2.43.0
+
+
+From 5ea52d4f7c3b94097a8b28e245098fb13f18fc5a Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 16 Oct 2026 03:29:36 +0000
+Subject: [PATCH 3/3] =?UTF-8?q?L3=20:=20lecture=20de=20toise=20robuste,=20?=
+ =?UTF-8?q?seuils=20mesur=C3=A9s=20sur=2013=20vraies=20photos=20(graduatio?=
+ =?UTF-8?q?n=20lue=20d'un=20bloc=20d=C3=A9coup=C3=A9e=20nombre=20par=20nom?=
+ =?UTF-8?q?bre,=20chiffres=20parasites=20=C3=A9cart=C3=A9s,=20=C3=A9chelle?=
+ =?UTF-8?q?=20plausible)=20:=203=20toises=20lues,=20aucune=20fausse=20lect?=
+ =?UTF-8?q?ure?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01TXxtbJKci969LZsj79YbJr
+---
+ App/Prise/ToiseCalibrage.swift         | 84 ++++++++++++++++++++------
+ App/Prise/ToiseLecteur.swift           |  2 +-
+ AppTests/Prise/PriseLogiqueTests.swift | 76 +++++++++++++++++++++++
+ 3 files changed, 144 insertions(+), 18 deletions(-)
+
+diff --git a/App/Prise/ToiseCalibrage.swift b/App/Prise/ToiseCalibrage.swift
+index 851ba53..4767ede 100644
+--- a/App/Prise/ToiseCalibrage.swift
++++ b/App/Prise/ToiseCalibrage.swift
+@@ -23,34 +23,80 @@ nonisolated struct ToiseCalibrage: Equatable, Sendable {
+ 
+     func cm(en pixels: Double) -> Double { pente * pixels + origine }
+ 
+-    /// Seuils (à mesurer sur les 10 photos de toise) : au moins 3 chiffres distincts, étendue d'au moins 20 cm, écart maximal de 1,5 cm.
+-    static let reperesMin = 3
+-    static let etendueMinCm = 20.0
++    /// Seuils mesurés le 16 oct. 2026 sur 13 vraies photos de toise lues par Vision (`reports/reconnaissance/toise.md`) :
++    /// 3 toises lues, aucune fausse lecture. Avec 3 repères, un journal sous le poisson donnait une fausse toise.
++    static let reperesMin = 4
++    static let etendueMinCm = 15.0
+     static let ecartMaxCm = 1.5
++    /// Un centimètre occupe entre 0,25 % et 12 % de la longueur de l'image le long de la toise (poisson de 15 cm en gros plan
++    /// jusqu'à un silure de 2 m). Hors de cette plage, la droite vient d'autres chiffres (prix, dates).
++    static let cmMinFractionImage = 0.0025
++    static let cmMaxFractionImage = 0.12
+ 
+-    /// Cherche la toise dans les textes lus. `nil` si rien de cohérent : le pêcheur règle alors le curseur lui-même.
+-    static func lire(_ textes: [TexteLu]) -> ToiseCalibrage? {
+-        var chiffres: [(valeur: Double, centre: CGPoint)] = []
+-        for t in textes {
+-            let net = t.texte.trimmingCharacters(in: .whitespaces)
+-            if let v = Int(net), (0...200).contains(v) {
+-                chiffres.append((valeur: Double(v), centre: CGPoint(x: t.rect.midX, y: t.rect.midY)))
++    /// Les nombres d'un texte lu, chacun à sa place. Vision rend souvent toute la graduation en un seul texte
++    /// (« 10 11 12 13 »), d'où une position estimée par l'indice des caractères dans le rectangle.
++    static func nombres(dans t: TexteLu) -> [(valeur: Double, centre: CGPoint)] {
++        let caracteres = Array(t.texte)
++        guard !caracteres.isEmpty else { return [] }
++        let vertical = t.rect.height > 1.5 * t.rect.width && caracteres.count > 2
++        var resultat: [(valeur: Double, centre: CGPoint)] = []
++        var i = 0
++        while i < caracteres.count {
++            guard caracteres[i].isASCII, caracteres[i].isNumber else { i += 1; continue }
++            var j = i
++            while j < caracteres.count, caracteres[j].isASCII, caracteres[j].isNumber { j += 1 }
++            if let v = Int(String(caracteres[i..<j])), (0...200).contains(v) {
++                let f = CGFloat(i + j) / 2 / CGFloat(caracteres.count)
++                let centre = vertical
++                    ? CGPoint(x: t.rect.midX, y: t.rect.minY + t.rect.height * f)
++                    : CGPoint(x: t.rect.minX + t.rect.width * f, y: t.rect.midY)
++                resultat.append((valeur: Double(v), centre: centre))
+             }
++            i = j
+         }
+-        var meilleur: (ToiseCalibrage, Double)?
++        return resultat
++    }
++
++    /// Cherche la toise dans les textes lus. `nil` si rien de cohérent : le pêcheur règle alors le curseur lui-même.
++    /// `taille` : celle de l'image, pour écarter une droite impossible (nil dans les tests sans image).
++    static func lire(_ textes: [TexteLu], taille: CGSize? = nil) -> ToiseCalibrage? {
++        let chiffres = textes.flatMap { nombres(dans: $0) }
++        var meilleur: (calibrage: ToiseCalibrage, reperes: Int, pire: Double)?
+         for axe in [Axe.horizontal, Axe.vertical] {
+             let reperes = chiffres.map { RepereToise(position: axe == .horizontal ? Double($0.centre.x) : Double($0.centre.y), valeurCm: $0.valeur) }
+-            if let c = ajuster(reperes, axe: axe), meilleur == nil || c.1 < meilleur!.1 {
++            let longueurImage = taille.map { Double(axe == .horizontal ? $0.width : $0.height) }
++            guard let c = ajuster(reperes, axe: axe, longueurImage: longueurImage) else { continue }
++            if meilleur == nil || c.reperes > meilleur!.reperes || (c.reperes == meilleur!.reperes && c.pire < meilleur!.pire) {
+                 meilleur = c
+             }
+         }
+-        return meilleur?.0
++        return meilleur?.calibrage
+     }
+ 
+-    /// Régression des moindres carrés ; rend la droite et son pire écart, ou `nil` si elle n'est pas fiable.
+-    static func ajuster(_ reperes: [RepereToise], axe: Axe) -> (ToiseCalibrage, Double)? {
++    /// Ajustement robuste : chaque paire de repères propose une droite, on garde celle qui explique le plus de repères
++    /// (à `ecartMaxCm` près), puis les moindres carrés sur ces repères. Les chiffres parasites (marque, prix) sont ainsi ignorés.
++    static func ajuster(_ reperes: [RepereToise], axe: Axe, longueurImage: Double? = nil) -> (calibrage: ToiseCalibrage, reperes: Int, pire: Double)? {
++        var meilleur: (calibrage: ToiseCalibrage, reperes: Int, pire: Double)?
++        for i in reperes.indices {
++            for j in reperes.indices where j > i {
++                let a = reperes[i], b = reperes[j]
++                guard a.valeurCm != b.valeurCm, abs(a.position - b.position) > 1e-6 else { continue }
++                let pente = (b.valeurCm - a.valeurCm) / (b.position - a.position)
++                let origine = a.valeurCm - pente * a.position
++                let retenus = reperes.filter { abs(pente * $0.position + origine - $0.valeurCm) <= ecartMaxCm }
++                guard let c = moindresCarres(retenus, axe: axe, longueurImage: longueurImage) else { continue }
++                if meilleur == nil || c.reperes > meilleur!.reperes || (c.reperes == meilleur!.reperes && c.pire < meilleur!.pire) {
++                    meilleur = c
++                }
++            }
++        }
++        return meilleur
++    }
++
++    /// Droite des moindres carrés ; `nil` si elle n'est pas fiable (trop peu de repères, étendue courte, écart, échelle impossible).
++    static func moindresCarres(_ reperes: [RepereToise], axe: Axe, longueurImage: Double?) -> (calibrage: ToiseCalibrage, reperes: Int, pire: Double)? {
+         let uniques = Set(reperes.map { $0.valeurCm })
+-        guard reperes.count >= reperesMin, uniques.count >= reperesMin else { return nil }
++        guard uniques.count >= reperesMin else { return nil }
+         guard let mini = uniques.min(), let maxi = uniques.max(), maxi - mini >= etendueMinCm else { return nil }
+         let n = Double(reperes.count)
+         let sx = reperes.reduce(0) { $0 + $1.position }
+@@ -61,10 +107,14 @@ nonisolated struct ToiseCalibrage: Equatable, Sendable {
+         guard abs(denom) > 1e-9 else { return nil }
+         let pente = (n * sxy - sx * sy) / denom
+         guard abs(pente) > 1e-9 else { return nil }
++        if let l = longueurImage, l > 0 {
++            let pixelsParCm = 1 / abs(pente)
++            guard pixelsParCm >= cmMinFractionImage * l, pixelsParCm <= cmMaxFractionImage * l else { return nil }
++        }
+         let origine = (sy - pente * sx) / n
+         let pire = reperes.map { abs(pente * $0.position + origine - $0.valeurCm) }.max() ?? Double.infinity
+         guard pire <= ecartMaxCm else { return nil }
+-        return (ToiseCalibrage(axe: axe, pente: pente, origine: origine), pire)
++        return (ToiseCalibrage(axe: axe, pente: pente, origine: origine), uniques.count, pire)
+     }
+ 
+     /// La longueur du poisson : de la butée (0 cm) au bout de la queue touché par le pêcheur, en pixels.
+diff --git a/App/Prise/ToiseLecteur.swift b/App/Prise/ToiseLecteur.swift
+index a90caa4..9c9d22f 100644
+--- a/App/Prise/ToiseLecteur.swift
++++ b/App/Prise/ToiseLecteur.swift
+@@ -24,7 +24,7 @@ enum ToiseLecteur {
+                 let rect = CGRect(x: n.minX * largeur, y: (1 - n.maxY) * hauteur, width: n.width * largeur, height: n.height * hauteur)
+                 textes.append(TexteLu(texte: meilleur.string, rect: rect))
+             }
+-            return ToiseCalibrage.lire(textes)
++            return ToiseCalibrage.lire(textes, taille: CGSize(width: largeur, height: hauteur))
+         } catch {
+             return nil
+         }
+diff --git a/AppTests/Prise/PriseLogiqueTests.swift b/AppTests/Prise/PriseLogiqueTests.swift
+index d0cfb2b..e6d023c 100644
+--- a/AppTests/Prise/PriseLogiqueTests.swift
++++ b/AppTests/Prise/PriseLogiqueTests.swift
+@@ -118,6 +118,82 @@ struct ToiseCalibrageTests {
+         let fouillis = [texte(0, x: 50), texte(40, x: 150), texte(10, x: 250), texte(30, x: 350)]
+         #expect(ToiseCalibrage.lire(fouillis) == nil)
+     }
++
++    /// Textes lus par Vision sur de vraies photos de prises (16 oct. 2026, `reports/reconnaissance/toise.md`).
++    private func l(_ s: String, _ x: Double, _ y: Double, _ w: Double, _ h: Double) -> TexteLu {
++        TexteLu(texte: s, rect: CGRect(x: x, y: y, width: w, height: h))
++    }
++
++    @Test func vraiePhotoGraduationEnUnSeulTexte() throws {
++        // Photo 3 : mètre pliant, Vision rend « 10 11 12 … 33 » d'un bloc, avec des chiffres collés (« 19200 »).
++        let textes = [
++            l("}»4N 5¿6 ₫D]", 68, 286, 78, 10),
++            l("10 11 12 13 14 15 16 17 18 19200 21 22 23024 25 26 27 28 29 3 0 31 32 33", 201.88, 283.69, 478.23, 19.06),
++        ]
++        let c = try #require(ToiseCalibrage.lire(textes, taille: CGSize(width: 700, height: 394)))
++        #expect(c.axe == .horizontal)
++        #expect(abs(c.cm(en: 680) - 33) < 1.5)
++    }
++
++    @Test func vraiePhotoTapisImprime() throws {
++        // Photo 1 : tapis de mesure, « 10. 20. 30. 40. 50. » d'un bloc, plus la marque du tapis.
++        let textes = [
++            l("10. 20. 30. 40. 50.", 159.9, 136.91, 501.4, 76.25),
++            l("a #mcjorfish", 95.09, 466.16, 59.68, 18.48),
++            l("www.major-fish.de | @ tmajorfish", 237.05, 442.42, 153.7, 29.43),
++            l("www.major-fish.de | @ #majortish", 469.17, 425.38, 143.6, 24.9),
++        ]
++        let c = try #require(ToiseCalibrage.lire(textes, taille: CGSize(width: 700, height: 525)))
++        #expect(abs(c.cm(en: 159.9 + 501.4 * 17 / 19) - 50) < 1.5)
++    }
++
++    @Test func vraiePhotoRubanAvecBruit() throws {
++        // Photo 8 : ruban jaune, Vision mêle chiffres et bruit (« 405@8--7==8 »).
++        let textes = [
++            l("3 405@8--7==8 @9 =10 115_12-13-14 15 18 17 18 19", 105.68, 300.2, 372.57, 27.45),
++            l("22 23 24", 516, 302, 62, 12),
++            l("25", 586, 302, 12, 10),
++        ]
++        let c = try #require(ToiseCalibrage.lire(textes, taille: CGSize(width: 600, height: 450)))
++        #expect(abs(c.cm(en: 592) - 25) < 1.5)
++    }
++
++    @Test func vraiePhotoJournalNeDonnePasDeFausseToise() {
++        // Photo 7 : seuls « 10 » et « 20 » du mètre sont lus, au milieu d'un journal (prix, tailles d'écran).
++        let journal = [
++            l("LCD-TV", -1.04, 330.61, 99.18, 103.79),
++            l("107 cm/42\"", 28.84, 321.88, 77.76, 84.98),
++            l("• LG", 334, 400, 22, 48),
++            l("Litet Siced", 354, 384, 10, 38),
++            l("2 LV 375 S", 362, 402, 12, 46),
++            l("10", 202, 266, 16, 12),
++            l("20", 382, 264, 18, 16),
++            l("Alle Preise Abholpreise. Keine &", 426.97, 283.69, 18.51, 164.6),
++            l("ehmej", 426, 238, 16, 30),
++            l("RAUSVERI", 464.09, 211.93, 65.85, 238.25),
++            l("WIR SO:", 522.45, 251.1, 72.42, 200.48),
++            l("I Fina", 32.87, -1.6, 19.92, 32.57),
++            l("24 klei", 62, 0, 12, 32),
++            l("ab 10 €", 76, 0, 12, 32),
++            l("vom 6.", 90, 0, 10, 32),
++            l("integr. HD-", 168, 0, 10, 50),
++            l("digitaler Hl", 189.53, -0.38, 14.37, 52.83),
++            l("für Antenn", 202, 0, 10, 50),
++            l("USB-Anschi", 226, 0, 10, 52),
++            l("D9", 298, 0, 98, 126),
++            l("Barpreis oder 24 x 24,95 l", 407.07, -0.26, 17.46, 134.52),
++            l("JF:", 462, 88, 48, 62),
++            l("Y PLAT", 501.74, -5.87, 68.84, 133.89),
++        ]
++        #expect(ToiseCalibrage.lire(journal, taille: CGSize(width: 600, height: 450)) == nil)
++        let carton = [
++            l("o doberg Zi", 81.63, 224.28, 56.58, 13.02),
++            l("Angel", 308, 90, 40, 12),
++            l("Masters", 296.95, 101.09, 60.15, 21.05),
++            l("2012", 310, 118, 34, 14),
++        ]
++        #expect(ToiseCalibrage.lire(carton, taille: CGSize(width: 448, height: 336)) == nil)
++    }
+ }
+ 
+ @MainActor
 -- 
 2.43.0
 
