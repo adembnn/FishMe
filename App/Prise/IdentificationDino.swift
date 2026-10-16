@@ -51,6 +51,8 @@ nonisolated struct IdentificationDino: IdentifieEspece {
         "coregones": "coregone", "hotu": "hotu_toxostome", "lamproie-planer": "lamproie",
         "loche-franche": "loche", "loche-riviere": "loche", "omble-fontaine": "omble_de_fontaine",
         "ombre": "ombre_commun", "saumon": "saumon_atlantique",
+        // Modèle v2 (55 classes) : grande alose et lamproie fluviatile partagent la classe de leurs sosies.
+        "grande-alose": "alose", "lamproie-fluviatile": "lamproie",
     ]
 }
 
