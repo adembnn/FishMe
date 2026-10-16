@@ -2,7 +2,7 @@
  "v": 3,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-16T02:52:48Z"
+  "at": "2026-10-16T03:13:54Z"
  },
  "title": "FishMe · design système et maquettes",
  "launch": {
@@ -1040,6 +1040,190 @@
    "title": "P42 · C · Sujet",
    "page": "tout"
   },
+  "P43-revelation-A.dc.html": {
+   "x": 16100,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P43 · A · Plans",
+   "page": "tout"
+  },
+  "P43-revelation-B.dc.html": {
+   "x": 16570,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P43 · B · Réglages",
+   "page": "tout"
+  },
+  "P43-revelation-C.dc.html": {
+   "x": 17040,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P43 · C · Sujet",
+   "page": "tout"
+  },
+  "P44-lancement-A.dc.html": {
+   "x": 16100,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P44 · A · Plans",
+   "page": "tout"
+  },
+  "P44-lancement-B.dc.html": {
+   "x": 16570,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P44 · B · Réglages",
+   "page": "tout"
+  },
+  "P44-lancement-C.dc.html": {
+   "x": 17040,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P44 · C · Sujet",
+   "page": "tout"
+  },
+  "P45-vides-A.dc.html": {
+   "x": 16100,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P45 · A · Plans",
+   "page": "tout"
+  },
+  "P45-vides-B.dc.html": {
+   "x": 16570,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P45 · B · Réglages",
+   "page": "tout"
+  },
+  "P45-vides-C.dc.html": {
+   "x": 17040,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P45 · C · Sujet",
+   "page": "tout"
+  },
+  "P46-vides2-A.dc.html": {
+   "x": 16100,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P46 · A · Plans",
+   "page": "tout"
+  },
+  "P46-vides2-B.dc.html": {
+   "x": 16570,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P46 · B · Réglages",
+   "page": "tout"
+  },
+  "P46-vides2-C.dc.html": {
+   "x": 17040,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P46 · C · Sujet",
+   "page": "tout"
+  },
+  "P47-bredouille-A.dc.html": {
+   "x": 16100,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P47 · A · Plans",
+   "page": "tout"
+  },
+  "P47-bredouille-B.dc.html": {
+   "x": 16570,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P47 · B · Réglages",
+   "page": "tout"
+  },
+  "P47-bredouille-C.dc.html": {
+   "x": 17040,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P47 · C · Sujet",
+   "page": "tout"
+  },
+  "P48-compteur-A.dc.html": {
+   "x": 16100,
+   "y": 6250,
+   "w": 390,
+   "h": 844,
+   "title": "P48 · A · Plans",
+   "page": "tout"
+  },
+  "P48-compteur-B.dc.html": {
+   "x": 16570,
+   "y": 6250,
+   "w": 390,
+   "h": 844,
+   "title": "P48 · B · Réglages",
+   "page": "tout"
+  },
+  "P48-compteur-C.dc.html": {
+   "x": 17040,
+   "y": 6250,
+   "w": 390,
+   "h": 844,
+   "title": "P48 · C · Sujet",
+   "page": "tout"
+  },
+  "P49-image-partagee-A.dc.html": {
+   "x": 16100,
+   "y": 7500,
+   "w": 390,
+   "h": 844,
+   "title": "P49 · A · Plans",
+   "page": "tout"
+  },
+  "P49-image-partagee-B.dc.html": {
+   "x": 16570,
+   "y": 7500,
+   "w": 390,
+   "h": 844,
+   "title": "P49 · B · Réglages",
+   "page": "tout"
+  },
+  "P49-image-partagee-C.dc.html": {
+   "x": 17040,
+   "y": 7500,
+   "w": 390,
+   "h": 844,
+   "title": "P49 · C · Sujet",
+   "page": "tout"
+  },
+  "P50-paywall-petit-A.dc.html": {
+   "x": 16100,
+   "y": 8750,
+   "w": 375,
+   "h": 667,
+   "title": "P50 · A · Plans",
+   "page": "tout"
+  },
+  "P50-paywall-petit-B.dc.html": {
+   "x": 16570,
+   "y": 8750,
+   "w": 375,
+   "h": 667,
+   "title": "P50 · B · Réglages",
+   "page": "tout"
+  },
   "C01-ce-que-sait-l-app.dc.html": {
    "x": 0,
    "y": 3100,
@@ -1250,6 +1434,29 @@
   "P42-sansposition-A.dc.html",
   "P42-sansposition-B.dc.html",
   "P42-sansposition-C.dc.html",
+  "P43-revelation-A.dc.html",
+  "P43-revelation-B.dc.html",
+  "P43-revelation-C.dc.html",
+  "P44-lancement-A.dc.html",
+  "P44-lancement-B.dc.html",
+  "P44-lancement-C.dc.html",
+  "P45-vides-A.dc.html",
+  "P45-vides-B.dc.html",
+  "P45-vides-C.dc.html",
+  "P46-vides2-A.dc.html",
+  "P46-vides2-B.dc.html",
+  "P46-vides2-C.dc.html",
+  "P47-bredouille-A.dc.html",
+  "P47-bredouille-B.dc.html",
+  "P47-bredouille-C.dc.html",
+  "P48-compteur-A.dc.html",
+  "P48-compteur-B.dc.html",
+  "P48-compteur-C.dc.html",
+  "P49-image-partagee-A.dc.html",
+  "P49-image-partagee-B.dc.html",
+  "P49-image-partagee-C.dc.html",
+  "P50-paywall-petit-A.dc.html",
+  "P50-paywall-petit-B.dc.html",
   "C01-ce-que-sait-l-app.dc.html",
   "C02-anatomie-recto.dc.html",
   "C03-recto-trois-directions.dc.html",
@@ -1694,6 +1901,80 @@
    "x": 14500,
    "y": 7250,
    "text": "P42 · Sans position",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tg10": {
+   "x": 16100,
+   "y": -700,
+   "text": "10 · Écrans à choisir (nouveaux)",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tP43": {
+   "x": 16100,
+   "y": -250,
+   "text": "P43 · Révélation de la carte",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP44": {
+   "x": 16100,
+   "y": 1000,
+   "text": "P44 · Écran de lancement",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP45": {
+   "x": 16100,
+   "y": 2250,
+   "text": "P45 · Pescedex vide",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP46": {
+   "x": 16100,
+   "y": 3500,
+   "text": "P46 · Pas de spot, pas de réseau",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP47": {
+   "x": 16100,
+   "y": 4750,
+   "text": "P47 · Session bredouille",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP48": {
+   "x": 16100,
+   "y": 6000,
+   "text": "P48 · Compteur du Pescedex",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP49": {
+   "x": 16100,
+   "y": 7250,
+   "text": "P49 · Image partagée",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP50": {
+   "x": 16100,
+   "y": 8500,
+   "text": "P50 · Paywall sur petit iPhone",
    "kind": "title1",
    "maxW": 1350,
    "page": "tout"

@@ -63,3 +63,13 @@ Les 3 premières minutes : P01 niveau → P02 tes poissons (swipe) → P03 où p
 - **P40 Widgets de l'écran d'accueil** [L15 WidgetAquarium, L12 conditions] : un fichier par widget, tailles iOS 170×170, 364×170, 364×382, rayon 22. A « Ma carte » : une carte seule, sans texte autour, petit en recto et grand en verso (vraie photo), un bouton flèche discret (App Intent, iOS 17+) la retourne. B « Ma session » : session en direct (chrono 1:24 qui défile, fin légale 19:29, 2 prises, eau 14 °C) avec boutons Prise et Pause, petit et moyen, plus l'état « Commencer une session ». C « Mon aquarium » : scène fixe de 4 poissons du Pescedex en eau marine (au plus 5, grand format Pro, légende « Les poissons changent de place au fil de la journée ») et feuille « Modifier le widget » (appui long) avec grille d'espèces, coches et « 4 sur 5 ».
 - **P41 Widgets de l'écran verrouillé** : trois widgets en une teinte (Ma carte, Ma session, Mon aquarium) sans aucun compteur ; A session (ligne « Fin légale 19:29 », rectangle chrono 1:24, jauge circulaire vers la fin légale), B collection (carte seule + aquarium), C un seul grand aquarium.
 - **P42 Sans position** [Carte/ChoixDeZoneView] : position refusée : la carte s'ouvre sur la zone choisie à la main (département ou commune), bandeau discret qui redemande la permission une seule fois, au premier écran de carte ; amis, conseils et Pescedex restent accessibles.
+
+## Écrans ajoutés le 16 oct. (à choisir)
+- **P43 Révélation de la carte** [Collection/RevelationCarteView] : l'instant où la carte se retourne après une prise, rareté révélée, le poisson nage dedans.
+- **P44 Écran de lancement** [App] : fond marine, logo La Lune, « FishMe ».
+- **P45 Pescedex vide** [Collection/PescedexView] : invitation à la première prise, jamais culpabilisant.
+- **P46 Pas de spot, pas de réseau** [Carte] : choisir un spot ; hors réseau, les cartes restent là (pas d'orange).
+- **P47 Session bredouille** [Session/FinSessionView] : durée, conditions, un conseil pour la prochaine fois.
+- **P48 Compteur du Pescedex** [Collection/PescedexView] : par zone avec le nom de l'eau (« La Marne · 94 »), jamais un total national.
+- **P49 Image partagée** [Club/PartageCarteView] : la carte en format story, département au plus, jamais de lieu précis.
+- **P50 Paywall sur petit iPhone** [Abonnement/PaywallVue] : A tout tient sans défiler, B le haut défile et les boutons restent en bas.
