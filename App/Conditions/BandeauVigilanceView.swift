@@ -13,14 +13,14 @@ struct BandeauVigilanceView: View {
             Button { detail.toggle() } label: {
                 HStack(spacing: 10) {
                     Image(systemName: alerte.type == .orage ? "cloud.bolt.fill" : "water.waves")
-                    Text(titre).font(JetonsConditions.police(.subheadline)).multilineTextAlignment(.leading)
+                    Text(titre).font(Police.detail).foregroundStyle(Palette.encre).multilineTextAlignment(.leading)
                     Spacer(minLength: 0)
                     Image(systemName: detail ? "chevron.up" : "chevron.down")
                 }
-                .foregroundStyle(.white)
-                .padding(12)
-                .background(alerte.type == .orage ? JetonsConditions.haut : JetonsConditions.crue,
-                            in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                .foregroundStyle(Palette.alerte)
+                .padding(Espace.m)
+                .frame(minHeight: Gabarit.zoneTactile)
+                .background(Palette.alerteDoux, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
             }
             .buttonStyle(.plain)
             if detail {

@@ -10,7 +10,7 @@ private struct CaseCondition: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
             Image(systemName: icone).foregroundStyle(JetonsConditions.accent)
-            Text(valeur).font(JetonsConditions.police(.headline)).foregroundStyle(JetonsConditions.encre)
+            Text(valeur).font(Police.chiffreMoyen).minimumScaleFactor(0.6).lineLimit(1).foregroundStyle(JetonsConditions.encre)
             if let detail { Text(detail).font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2) }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -48,6 +48,9 @@ struct RangeeMaintenantView: View {
                 .font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
             MarqueMeteoView(stockage: marque)
         }
+        .padding(Espace.l)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .tuileFishMe(rayon: Rayon.l)
         .accessibilityIdentifier("rangee-maintenant")
     }
 

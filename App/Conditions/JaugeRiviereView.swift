@@ -29,7 +29,7 @@ struct JaugeRiviereView: View {
                     Text(libelle).font(JetonsConditions.police(.headline)).foregroundStyle(couleur)
                 }
                 if let h = eau.hauteurM {
-                    Text("\(FormatConditions.nombre(h, decimales: 2)) m").font(JetonsConditions.police(.headline))
+                    Text("\(FormatConditions.nombre(h, decimales: 2)) m").font(Police.chiffreMoyen)
                         .foregroundStyle(JetonsConditions.encre)
                 }
                 if let q = eau.debitM3s {
