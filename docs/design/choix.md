@@ -17,3 +17,5 @@ Direction retenue pour chaque page de la toile (A · Plans, B · Réglages, C ·
 | P12 Sept jours | A · Plans | 16 oct. 2h40 |
 | P13 Alerte orage ou crue | C · Sujet | 16 oct. 2h40 |
 | P14 Session en cours | C · Sujet | 16 oct. 2h41 |
+| P16 Fin de session | A · Plans | 16 oct. 2h42 |
+| P17 Mes sorties | A · Plans | 16 oct. 2h42 |
