@@ -14,7 +14,7 @@ struct PriseTailleView: View {
     private var curseurVisible: Bool { saisieOuverte || !MesureAR.disponible || modele.toiseImage != nil }
 
     var body: some View {
-        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retourAuxPropositions() }) {
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }) {
             VStack(spacing: Espace.m) {
                 if let image = modele.toiseImage { photoToise(image) }
                 chiffres
@@ -140,7 +140,7 @@ struct PriseDetailsView: View {
     @Bindable var modele: PriseModele
 
     var body: some View {
-        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retourALaTaille() }) {
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }) {
             VStack(alignment: .leading, spacing: Espace.m) {
                 Text("Ta prise").font(Police.titre).foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
@@ -199,6 +199,15 @@ struct PriseResultatView: View {
         }
         .scrollIndicators(.hidden)
         .background(Palette.fond.ignoresSafeArea())
+        .safeAreaInset(edge: .top) {
+            HStack {
+                PriseBoutonRond(symbole: "chevron.left", etiquette: "Retour", action: { modele.retour() })
+                Spacer()
+                PriseBoutonRond(symbole: "xmark", etiquette: "Fermer", action: { modele.terminer(nil) })
+            }
+            .padding(.horizontal, Espace.bord).padding(.vertical, Espace.xs)
+            .background(Palette.fond)
+        }
         .safeAreaInset(edge: .bottom) {
             VStack(spacing: Espace.xs) {
                 if modele.exemple {

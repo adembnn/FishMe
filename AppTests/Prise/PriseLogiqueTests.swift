@@ -248,6 +248,20 @@ struct PriseModeleTests {
         #expect(m.curseurBouge)
     }
 
+    @Test func retourRevientALEtapeDAvant() throws {
+        let m = modele()
+        let brochet = try #require(m.catalogue.first { $0.espece.id == "brochet" })
+        m.ouvrirLaGrille()
+        m.choisir(brochet)
+        #expect(m.etape == .taille)
+        m.retour()
+        #expect(m.etape == .grille(classe: nil))
+        m.retour()
+        #expect(m.etape == .photo)
+        m.retour()
+        #expect(m.etape == .photo)
+    }
+
     @Test func lAnguilleDemandeSonStade() throws {
         let m = modele()
         let anguille = try #require(m.catalogue.first { PriseLogique.estAnguille($0.espece) })

@@ -23,10 +23,24 @@ struct PriseRacineView: View {
             contenu
         }
         .tint(Palette.marine)
+        // Une croix « Fermer » sur chaque étape après la photo (la photo et le résultat ont déjà la leur).
+        .overlay(alignment: .topTrailing) {
+            if croixDuRacine {
+                PriseBoutonRond(symbole: "xmark", etiquette: "Fermer", action: { modele.terminer(nil) })
+                    .padding(Espace.bord)
+            }
+        }
         .fullScreenCover(isPresented: $cameraOuverte) {
             PriseCamera(onImage: { image in cameraOuverte = false; modele.photoPrise(image) },
                         onCancel: { cameraOuverte = false })
                 .ignoresSafeArea()
+        }
+    }
+
+    private var croixDuRacine: Bool {
+        switch modele.etape {
+        case .photo, .resultat: return false
+        default: return true
         }
     }
 
@@ -231,7 +245,7 @@ struct PriseEtapeLecture: View {
     var modele: PriseModele
 
     var body: some View {
-        PriseFeuille(photo: modele.imagePhoto) {
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }) {
             ProgressView().controlSize(.large).frame(minHeight: 96)
                 .accessibilityLabel("Lecture de ta photo")
         }
