@@ -99,15 +99,8 @@ struct FinSessionView: View {
     }
 
     private var boutonFermer: some View {
-        Button(action: surFermer) {
-            Image(systemName: "xmark")
-                .font(Police.sousTitre)
-                .foregroundStyle(Palette.encre)
-                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                .background(.regularMaterial, in: Circle())
-        }
-        .accessibilityLabel("Fermer")
-        .padding(.leading, Espace.bord)
+        BoutonRond(role: .fermer, rendu: .verre, action: surFermer)
+            .padding(.leading, Espace.bord)
         .padding(.top, Espace.s)
     }
 
