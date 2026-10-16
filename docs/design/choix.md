@@ -8,3 +8,4 @@ Direction retenue pour chaque page de la toile (A · Plans, B · Réglages, C ·
 | P02 Tes poissons (swipe) | A · Plans | 16 oct. 2h30 |
 | P03 Où pêches-tu | C · Sujet | 16 oct. 2h31 |
 | P04 Zone sans position | A · Plans | 16 oct. 2h31 |
+| P06 Carte et ton spot | C · Sujet | 16 oct. 2h34 |
