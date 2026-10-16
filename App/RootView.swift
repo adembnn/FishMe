@@ -940,6 +940,9 @@ private struct RacineContenu: View {
                                    guard let departement = Formats.departement(depuisLieuFlou: prise.lieuFlou) ?? app.spotCourant?.departement,
                                          !departement.estInconnu else { return nil }
                                    return app.core.especes.rarete(espece: prise.espece, departement: departement)
+                               },
+                               photoDe: { prise in
+                                   prise.cheminPhoto.flatMap { try? Data(contentsOf: DepotCartes.dossierParDefaut().appendingPathComponent($0)) }
                                })
                     .interactiveDismissDisabled()
             }

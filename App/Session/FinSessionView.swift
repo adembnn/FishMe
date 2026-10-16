@@ -47,13 +47,17 @@ struct FinSessionView: View {
     let rarete: (Prise) -> ResultatRarete?
     /// Vrai quand l'espèce entre dans le Pescedex avec cette sortie. Par défaut : jamais annoncé.
     let estNouvelleEspece: (Espece) -> Bool
+    /// Photo d'une prise, pour le verso de la carte ouverte en plein écran. Par défaut : aucune photo (dessin de l'espèce).
+    let photoDe: (Prise) -> Data?
 
     init(fin: FinDeSession, infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, lieu: String? = nil,
          conseil: String? = nil, surTerminer: @escaping () -> Void, surFermer: (() -> Void)? = nil,
          poidsEstime: @escaping (Espece, Double) -> PoidsEstime? = { _, _ in nil },
          surPhotoSortie: ((Data) -> Void)? = nil,
          rarete: @escaping (Prise) -> ResultatRarete? = { _ in nil },
-         estNouvelleEspece: @escaping (Espece) -> Bool = { _ in false }) {
+         estNouvelleEspece: @escaping (Espece) -> Bool = { _ in false },
+         photoDe: @escaping (Prise) -> Data? = { _ in nil }) {
+        self.photoDe = photoDe
         self.surPhotoSortie = surPhotoSortie
         self.poidsEstime = poidsEstime
         self.conseil = conseil
@@ -69,7 +73,7 @@ struct FinSessionView: View {
     var body: some View {
         RecapSortieView(fin: fin, infosEspece: infosEspece, lieu: lieu, conseil: conseil, surTerminer: surTerminer,
                         surFermer: surFermer, poidsEstime: poidsEstime, surPhotoSortie: surPhotoSortie, rarete: rarete,
-                        estNouvelleEspece: estNouvelleEspece)
+                        estNouvelleEspece: estNouvelleEspece, photoDe: photoDe)
     }
 }
 

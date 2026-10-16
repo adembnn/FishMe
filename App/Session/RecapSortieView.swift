@@ -16,6 +16,7 @@ struct RecapSortieView: View {
     let surPhotoSortie: ((Data) -> Void)?
     let rarete: (Prise) -> ResultatRarete?
     let estNouvelleEspece: (Espece) -> Bool
+    var photoDe: (Prise) -> Data? = { _ in nil }
 
     @Environment(\.dynamicTypeSize) private var tailleTexte
     /// La photo ajoutée à l'instant, montrée tout de suite sur la carte « Eau calme ».
@@ -30,7 +31,7 @@ struct RecapSortieView: View {
             VStack(spacing: Espace.xl) {
                 enTete
                 chiffres
-                if prises.isEmpty { bredouille } else { RecapSortieCartes(cartes: cartes) }
+                if prises.isEmpty { bredouille } else { RecapSortieCartes(cartes: cartes, photoDe: photoDe) }
                 if let message = fin.message {
                     Text(message)
                         .font(Police.detail)
@@ -138,7 +139,7 @@ struct RecapSortieView: View {
                 departement: Formats.departement(depuisLieuFlou: prise.lieuFlou), rangDansLaZone: nil,
                 poids: prise.longueurCm.flatMap { poidsEstime(prise.espece, $0) },
                 lune: .nouvelle, consigne: nil, sourceConsigne: nil)
-            return RecapCarte(id: prise.id, infos: infos, nouvelle: estNouvelleEspece(prise.espece))
+            return RecapCarte(id: prise.id, prise: prise, infos: infos, nouvelle: estNouvelleEspece(prise.espece))
         }
     }
 

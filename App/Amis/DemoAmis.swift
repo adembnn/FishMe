@@ -117,8 +117,8 @@ struct DemoAmisContenu: View {
             fil
         }
         .padding(.top, avecInviter ? Espace.s : 0)
-        .sheet(item: $carteOuverte) { carte in
-            DemoCarteDetail(carte: carte)
+        .fullScreenCover(item: $carteOuverte) { carte in
+            carte.visionneuse { carteOuverte = nil }
         }
         .fullScreenCover(item: $amiOuvert) { ami in
             DemoCollectionAmi(ami: ami)
@@ -261,29 +261,16 @@ private struct DemoCollectionAmi: View {
         .scrollIndicators(.hidden)
         .background(Palette.fond.ignoresSafeArea())
         .overlay(alignment: .topLeading) { BoutonRond(role: .fermer, rendu: .verre).padding(Espace.bord) }
-        .sheet(item: $carteOuverte) { carte in DemoCarteDetail(carte: carte) }
+        .fullScreenCover(item: $carteOuverte) { carte in
+            carte.visionneuse { carteOuverte = nil }
+        }
     }
 }
 
-/// Détail local d'une carte de démo : la carte en grand, aucun signalement possible, rien ne sort de la vue.
-private struct DemoCarteDetail: View {
-    let carte: DemoCarte
-
-    var body: some View {
-        VStack(spacing: Espace.l) {
-            CarteAmiMini(style: StyleRarete(carte.rarete), nomEspece: carte.espece, imageEspece: carte.image,
-                         photo: carte.photo, tailleCm: carte.tailleCm)
-                .frame(maxWidth: 280)
-            Text("\(carte.ami) · \(JetonAmis.date(carte.date))")
-                .font(Police.detail)
-                .foregroundStyle(Palette.encreDouce)
-            Spacer(minLength: 0)
-        }
-        .padding(Espace.l)
-        .padding(.top, Espace.xl)
-        .frame(maxWidth: .infinity)
-        .presentationDetents([.large])
-        .background(Palette.fond.ignoresSafeArea())
-        .overlay(alignment: .topLeading) { BoutonRond(role: .fermer, rendu: .verre).padding(Espace.bord) }
+extension DemoCarte {
+    /// La carte ouverte en plein écran : recto, puis dos avec la vraie photo de démo. Rien ne sort de la vue.
+    @MainActor func visionneuse(fermer: @escaping () -> Void) -> some View {
+        VisionneuseCarte(nomEspece: espece, imageEspece: image, tailleCm: Int(tailleCm.rounded()), niveau: rarete,
+                         photo: photo, detail: "\(ami) · \(JetonAmis.date(date))", fermer: fermer)
     }
 }

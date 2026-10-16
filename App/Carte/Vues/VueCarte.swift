@@ -764,15 +764,20 @@ struct VueCarte: View {
                 bulleDuSpot
             }
             bandeauSession
-            HStack(alignment: .bottom, spacing: 12) {
+            // « Commencer une session » au milieu de l'écran (zéro friction : le pouce l'atteint sans chercher) ;
+            // la colonne des 4 boutons reste à droite.
+            ZStack(alignment: .bottom) {
                 zoneCommencer
-                Spacer(minLength: 0)
-                ColonneBoutonsCarte(
-                    teinteFiltre: couleurDuFiltre,
-                    meteo: ouvrirMeteo,
-                    autourDeMoi: autourDeMoi,
-                    filtre: { modele.afficherFiltre = true },
-                    reglages: ouvrirProfil)
+                    .frame(maxWidth: .infinity)
+                HStack(alignment: .bottom) {
+                    Spacer(minLength: 0)
+                    ColonneBoutonsCarte(
+                        teinteFiltre: couleurDuFiltre,
+                        meteo: ouvrirMeteo,
+                        autourDeMoi: autourDeMoi,
+                        filtre: { modele.afficherFiltre = true },
+                        reglages: ouvrirProfil)
+                }
             }
         }
         .padding(.horizontal, 16)
@@ -784,7 +789,7 @@ struct VueCarte: View {
     @ViewBuilder
     private var zoneCommencer: some View {
         if !sessionEnCours && !feuilleSpotMasquee {
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .center, spacing: 4) {
                 if modele.spotAffiche == nil {
                     if modele.peutChangerDeSpot {
                         Text("Touche la carte pour poser ton spot")

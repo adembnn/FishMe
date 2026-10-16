@@ -1,5 +1,6 @@
 import Core
 import SwiftUI
+import UIKit
 
 /// Page « Club » de l'onglet Communauté. On crée un club parce qu'on en a envie (nom, poisson ou photo), puis on y partage ses cartes.
 /// De haut en bas : « Créer mon club » et « Rejoindre un nouveau club », puis le club choisi (en-tête, membres,
@@ -25,6 +26,8 @@ struct ClubPageView: View {
   @State private var creationOuverte = false
   @State private var rechercheOuverte = false
   @State private var partageOuvert = false
+  /// La carte ouverte en grand dans `VisionneuseCarte`.
+  @State private var carteOuverte: CarteOuverteClub?
   /// Identifiants de mes cartes partagées, par club (gardés sur l'iPhone).
   @State private var partages: [String: Set<String>] = PartagesClub.lire()
 
@@ -73,7 +76,9 @@ struct ClubPageView: View {
   private var mesCartesPartagees: [CarteAPartager] {
     cartes.filter { mesPartagees.contains($0.id) }
   }
-  private var nombreDeMembres: Int { membresAffiches.count + 1 }
+  /// Dans le club de démo de l'ESSEC, l'utilisateur est l'un des membres listés : on ne l'ajoute pas une seconde fois.
+  private var moiDansLaListe: Bool { enDemo && DemoClub.utilisateurEstMembre(club) }
+  private var nombreDeMembres: Int { membresAffiches.count + (moiDansLaListe ? 0 : 1) }
 
   var body: some View {
     NavigationStack {
@@ -123,6 +128,13 @@ struct ClubPageView: View {
       .tint(Palette.marine)
       .background(Palette.fond.ignoresSafeArea())
       .toolbar(.hidden, for: .navigationBar)
+      .fullScreenCover(item: $carteOuverte) { ouverte in
+        VisionneuseCarte(
+          nomEspece: ouverte.nomEspece, imageEspece: ouverte.imageEspece,
+          tailleCm: ouverte.tailleCm, niveau: ouverte.niveau, photo: ouverte.photo,
+          detail: ouverte.detail
+        ) { carteOuverte = nil }
+      }
       .sheet(isPresented: $creationOuverte) {
         CreerClubView(poissons: poissons) { nom, poisson, photo in
           clubs.creer(nom: nom, poissonId: poisson, photo: photo)
@@ -211,14 +223,23 @@ struct ClubPageView: View {
           ForEach(mesCartesPartagees) { carte in
             VStack(spacing: Espace.xs) {
               VignetteMaCarteClub(carte: carte)
-              Text("Moi").font(Police.detail).foregroundStyle(Palette.encre)
+              Text(moiDansLaListe ? "Titouan" : "Moi").font(Police.detail).foregroundStyle(Palette.encre)
             }
           }
           ForEach(cartesDesMembres) { carte in
             VStack(spacing: Espace.xs) {
-              VignetteCarteClub(
-                image: carte.image, nom: carte.espece, niveau: carte.niveau,
-                tailleCm: carte.tailleCm, photo: carte.photo)
+              Button {
+                carteOuverte = CarteOuverteClub(
+                  id: carte.id, nomEspece: carte.espece, imageEspece: carte.image,
+                  tailleCm: carte.tailleCm, niveau: carte.niveau,
+                  photo: PhotoDemoClub.image(carte.photo), detail: "\(carte.membre) · \(carte.jour)")
+              } label: {
+                VignetteCarteClub(
+                  image: carte.image, nom: carte.espece, niveau: carte.niveau,
+                  tailleCm: carte.tailleCm, photo: carte.photo)
+              }
+              .buttonStyle(.plain)
+              .accessibilityHint("Ouvre la carte en grand")
               Text(carte.membre).font(Police.detail).foregroundStyle(Palette.encre)
                 .lineLimit(1).minimumScaleFactor(0.7)
             }
@@ -232,10 +253,19 @@ struct ClubPageView: View {
     Group {
       if let record = recordAffiche {
         HStack(alignment: .center, spacing: Espace.l) {
-          VignetteCarteClub(
-            image: record.image, nom: record.titre, niveau: record.niveau,
-            tailleCm: record.tailleCm, photo: record.photo
-          )
+          Button {
+            carteOuverte = CarteOuverteClub(
+              id: "record", nomEspece: record.titre, imageEspece: record.image,
+              tailleCm: record.tailleCm, niveau: record.niveau,
+              photo: PhotoDemoClub.image(record.photo), detail: "\(record.membre) · record du club")
+          } label: {
+            VignetteCarteClub(
+              image: record.image, nom: record.titre, niveau: record.niveau,
+              tailleCm: record.tailleCm, photo: record.photo
+            )
+          }
+          .buttonStyle(.plain)
+          .accessibilityHint("Ouvre la carte en grand")
           .frame(width: 130)
           VStack(alignment: .leading, spacing: 2) {
             Text(record.titre).font(Police.corps).foregroundStyle(Palette.encre)
@@ -294,18 +324,20 @@ struct ClubPageView: View {
     return GroupeClub {
       ScrollView(.horizontal) {
         HStack(alignment: .top, spacing: 0) {
-          VStack(spacing: 2) {
-            PastilleMembre(nom: "Moi", rang: 0)
-            Text("Moi").font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
-            Text(cartes.count == 1 ? "1 carte" : "\(cartes.count) cartes")
-              .font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
+          if !moiDansLaListe {
+            VStack(spacing: 2) {
+              PastilleMembre(nom: "Moi", rang: 0)
+              Text("Moi").font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
+              Text(cartes.count == 1 ? "1 carte" : "\(cartes.count) cartes")
+                .font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
+            }
+            .frame(minWidth: large ? 76 : 0, maxWidth: large ? 76 : .infinity)
+            .accessibilityElement(children: .combine)
           }
-          .frame(minWidth: large ? 76 : 0, maxWidth: large ? 76 : .infinity)
-          .accessibilityElement(children: .combine)
           ForEach(Array(membresAffiches.prefix(large ? 6 : 2).enumerated()), id: \.element.id) {
             rang, membre in
             VStack(spacing: 2) {
-              PastilleMembre(nom: membre.nom, rang: rang + 1)
+              PastilleMembre(nom: membre.nom, rang: moiDansLaListe ? rang : rang + 1)
               Text(membre.nom).font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
               Text(membre.nombreDeCartes.map { $0 == 1 ? "1 carte" : "\($0) cartes" } ?? " ")
                 .font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
@@ -337,6 +369,17 @@ struct ClubPageView: View {
       .scrollDisabled(!large)
     }
   }
+}
+
+/// Une carte du club ouverte en grand dans `VisionneuseCarte` (écrite par le lot Collection).
+struct CarteOuverteClub: Identifiable {
+  let id: String
+  let nomEspece: String
+  let imageEspece: String
+  let tailleCm: Int?
+  let niveau: NiveauRarete
+  let photo: UIImage?
+  let detail: String
 }
 
 /// Mes cartes partagées par club, gardées dans les réglages de l'iPhone (jamais envoyées).
