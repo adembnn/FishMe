@@ -343,10 +343,10 @@ final class ParcoursApp {
         Task { await conditions.lire(spot: spot.centre) }
     }
 
-    var surSonSpot: Bool { surSonSpot(en: spotCourant?.centre) }
+    var surSonSpot: Bool { surSonSpotEn(spotCourant?.centre) }
 
     /// Le point est-il dans le cercle du spot gratuit ? Sans point ou sans spot gratuit : oui.
-    func surSonSpot(en point: Coordonnee?) -> Bool {
+    func surSonSpotEn(_ point: Coordonnee?) -> Bool {
         guard let point, let gratuit = moteur.spotGratuit else { return true }
         return distanceMetres(point, gratuit.centre) <= gratuit.rayonM
     }
@@ -357,7 +357,7 @@ final class ParcoursApp {
 
     /// Même règle, mais pour le coin montré (la fiche peut s'ouvrir loin du spot gratuit).
     func autorise(_ fonction: FonctionPro, en point: Coordonnee) -> Bool {
-        core.session.peutUtiliser(fonction, abonne: suivi.abonne, surSonSpot: surSonSpot(en: point))
+        core.session.peutUtiliser(fonction, abonne: suivi.abonne, surSonSpot: surSonSpotEn(point))
     }
 
     // MARK: Session
