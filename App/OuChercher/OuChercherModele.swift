@@ -30,6 +30,7 @@ nonisolated enum OuChercherTextes {
     static let creditOSM = "© contributeurs OpenStreetMap"
     static let titreEcran = "Choisir un autre spot"
     static let invite = "Quel poisson cherches-tu ?"
+    static func recherche(_ nom: String) -> String { "Je cherche les coins pour \(nom)…" }
 }
 
 /// Composition des phrases d'un coin. Pure, testable sans écran.
@@ -125,6 +126,8 @@ nonisolated struct EspeceChoix: Identifiable, Equatable {
 
 nonisolated enum EtatListe: Equatable {
     case choixEspece
+    /// Les coins se cherchent hors de l'écran : la vue montre un indicateur d'attente.
+    case chargement(espece: EspeceChoix)
     case resultats(espece: EspeceChoix, coins: [CoinAffiche])
     /// Aucun coin : « Aucun relevé OFB à proximité ».
     case aucunReleve(espece: EspeceChoix)
@@ -140,6 +143,7 @@ final class OuChercherModele {
 
     private(set) var grille: [EspeceChoix] = []
     private(set) var etat: EtatListe = .choixEspece
+    @ObservationIgnored private var recherche: Task<Void, Never>?
 
     init(especes: any ServiceEspeces & ServiceCoinsPublics, position: Coordonnee, compositeur: CompositeurCoins = CompositeurCoins()) {
         self.especes = especes
@@ -157,12 +161,30 @@ final class OuChercherModele {
         return toutes.filter(\.pres) + toutes.filter { !$0.pres }
     }
 
+    /// La recherche (lecture des coins, liaison aux stations, règles) tourne hors du fil principal : l'écran passe à `.chargement`
+    /// puis à `.resultats` ou `.aucunReleve`. Un nouveau choix, ou « Changer d'espèce », abandonne la recherche en cours.
     func choisir(_ choix: EspeceChoix) {
-        let coins = compositeur.afficher(especes.coinsProches(ou: choix.espece, pres: position))
-        etat = coins.isEmpty ? .aucunReleve(espece: choix) : .resultats(espece: choix, coins: coins)
+        recherche?.cancel()
+        etat = .chargement(espece: choix)
+        let service = especes, point = position, compositeur = compositeur
+        recherche = Task { [weak self] in
+            let coins = await Task.detached(priority: .userInitiated) {
+                // L'écran n'en montre que 3 : Core ne calcule pas les 200 autres.
+                compositeur.afficher(service.coinsProches(ou: choix.espece, pres: point, limite: 3))
+            }.value
+            guard !Task.isCancelled, let self else { return }
+            self.etat = coins.isEmpty ? .aucunReleve(espece: choix) : .resultats(espece: choix, coins: coins)
+        }
+    }
+
+    /// Attend la fin de la recherche en cours (tests).
+    func attendreRecherche() async {
+        await recherche?.value
     }
 
     func changerEspece() {
+        recherche?.cancel()
+        recherche = nil
         etat = .choixEspece
     }
 }
