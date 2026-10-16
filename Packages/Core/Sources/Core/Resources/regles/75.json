@@ -62,7 +62,7 @@
   {
    "id": "t8",
    "titre": "Arrêté préfectoral permanent n° 75-2025-02-26-00012 du 26/02/2025 (Paris), art. 9",
-   "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/",
+   "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
    "signe_le": "2025-02-26",
    "lu_le": "2026-10-15",
    "version": "recueil 75-2025-126 du 27/02/2025 ; texte propre"
@@ -547,7 +547,11 @@
    "citation": "Dans les eaux classées en 2éme catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50 m pour le sandre et 0,60 m pour le brochet.",
    "expire_le": "2026-12-31",
    "statut": "incertain",
-   "verifie_par": null
+   "verifie_par": null,
+   "citations": {
+    "t8": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : – 0,50 mètre pour le brochet ;",
+    "t7": "Dans les eaux classées en 2éme catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50 m pour le sandre et 0,60 m pour le brochet."
+   }
   },
   {
    "id": "75-san-taille",
@@ -582,7 +586,11 @@
    "citation": "Dans les eaux classées en 2éme catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50 m pour le sandre et 0,60 m pour le brochet.",
    "expire_le": "2026-12-31",
    "statut": "incertain",
-   "verifie_par": null
+   "verifie_par": null,
+   "citations": {
+    "t8": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : – 0,40 mètre pour le sandre dans les eaux de la 2e catégorie ;",
+    "t7": "Dans les eaux classées en 2éme catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50 m pour le sandre et 0,60 m pour le brochet."
+   }
   },
   {
    "id": "75-bla-taille",
@@ -617,7 +625,11 @@
    "citation": "Dans les eaux classées en 2éme catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50 m pour le sandre et 0,60 m pour le brochet.",
    "expire_le": "2026-12-31",
    "statut": "incertain",
-   "verifie_par": null
+   "verifie_par": null,
+   "citations": {
+    "t8": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : – 0,30 mètre pour le black – bass dans les eaux de la 2e catégorie ;",
+    "t7": "Dans les eaux classées en 2éme catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50 m pour le sandre et 0,60 m pour le brochet."
+   }
   },
   {
    "id": "75-car-quota",

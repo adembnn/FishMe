@@ -33,10 +33,13 @@ public enum RaisonAVerifier: String, Sendable, Equatable, Hashable, Codable {
 public struct SourceRegle: Sendable, Equatable, Hashable, Codable {
     public var titre: String
     public var url: String?
+    /// Passage de CE texte qui fonde la règle (peut différer d'une source à l'autre).
+    public var citation: String?
 
-    public init(titre: String, url: String? = nil) {
+    public init(titre: String, url: String? = nil, citation: String? = nil) {
         self.titre = titre
         self.url = url
+        self.citation = citation
     }
 }
 

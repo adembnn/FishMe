@@ -352,7 +352,7 @@ public struct MoteurRegles: ServiceRegles {
         var sources: [SourceRegle] = []
         let lecture = reserves.compactMap { dateLecture($0.0, fichier: $0.1) }.min()
         for (r, f) in reserves {
-            var s = r.textes.compactMap { sourceDe(id: $0, fichier: f) }
+            var s = r.textes.compactMap { sourceDe(id: $0, fichier: f, regle: r) }
             if s.isEmpty, let en = r.source { s = [SourceRegle(titre: en.texte ?? "Source", url: en.url)] }
             for x in s where !sources.contains(x) { sources.append(x) }
         }
@@ -540,7 +540,7 @@ public struct MoteurRegles: ServiceRegles {
     }
 
     private func ligneDeBase(_ r: RegleDonnee, fichier: FichierRegles, etat: EtatLigne) -> LigneControle {
-        var sources = r.textes.compactMap { sourceDe(id: $0, fichier: fichier) }
+        var sources = r.textes.compactMap { sourceDe(id: $0, fichier: fichier, regle: r) }
         var lecture = r.textes.compactMap { fichier.textes[$0]?.luLe }.compactMap { dateAAAAMMJJ($0) }.min()
         if sources.isEmpty, let s = r.source {
             sources = [SourceRegle(titre: s.texte ?? "Source", url: s.url)]
@@ -552,9 +552,9 @@ public struct MoteurRegles: ServiceRegles {
         return LigneControle(type: type, etat: etat, phrase: r.phrase, sources: sources, citation: r.citation, dateLecture: lecture)
     }
 
-    private func sourceDe(id: String, fichier: FichierRegles) -> SourceRegle? {
+    private func sourceDe(id: String, fichier: FichierRegles, regle: RegleDonnee? = nil) -> SourceRegle? {
         guard let t = fichier.textes[id] else { return nil }
-        return SourceRegle(titre: t.titre ?? id, url: t.url)
+        return SourceRegle(titre: t.titre ?? id, url: t.url, citation: regle?.citations?[id] ?? regle?.citation)
     }
 
     private func typeLigne(_ type: String) -> TypeRegle {
@@ -699,7 +699,7 @@ public struct MoteurRegles: ServiceRegles {
                 let texte = ((r.valeur["texte"]?.texte ?? "") + " " + r.phrase).lowercased()
                 if texte.contains("autorise : non") || texte.contains("pas de pêche")
                     || r.phrase.lowercased().contains("interdit") { continue }
-                var sources = r.textes.compactMap { sourceDe(id: $0, fichier: local) }
+                var sources = r.textes.compactMap { sourceDe(id: $0, fichier: local, regle: r) }
                 if let codeSource, !sources.contains(codeSource) { sources.append(codeSource) }
                 return LigneControle(type: .nuit, etat: .nonRespectee, phrase: Self.phraseCarpeAutorisee,
                                      sources: sources, citation: r.citation,

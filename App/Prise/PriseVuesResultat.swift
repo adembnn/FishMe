@@ -404,6 +404,8 @@ struct PriseResultatView: View {
 /// Une ligne de la liste de contrôle : la phrase, puis ses sources et sa date de lecture d'un toucher.
 struct PriseLigneView: View {
     var ligne: LigneControle
+    /// Vrai si les sources portent des citations différentes : chacune montre la sienne, sans la citation unique en plus.
+    private var sourcesAvecCitation: Bool { Set(ligne.sources.compactMap(\.citation)).count > 1 }
     @State private var ouverte = false
 
     var body: some View {
@@ -416,16 +418,21 @@ struct PriseLigneView: View {
                 }
                 if ouverte {
                     ForEach(Array(ligne.sources.enumerated()), id: \.offset) { _, s in
-                        if let url = s.url.flatMap({ URL(string: $0) }) {
-                            Link(destination: url) {
-                                Label(s.titre, systemImage: "arrow.up.right.square")
-                                    .font(Police.legende).multilineTextAlignment(.leading)
+                        VStack(alignment: .leading, spacing: 2) {
+                            if let url = s.url.flatMap({ URL(string: $0) }) {
+                                Link(destination: url) {
+                                    Label(s.titre, systemImage: "arrow.up.right.square")
+                                        .font(Police.legende).multilineTextAlignment(.leading)
+                                }
+                            } else {
+                                Text(s.titre).font(Police.legende).foregroundStyle(Palette.encreDouce)
                             }
-                        } else {
-                            Text(s.titre).font(Police.legende).foregroundStyle(Palette.encreDouce)
+                            if sourcesAvecCitation, let citation = s.citation {
+                                Text(citation).font(Police.legende).foregroundStyle(Palette.encreDouce)
+                            }
                         }
                     }
-                    if let citation = ligne.citation { Text(citation).font(Police.legende).foregroundStyle(Palette.encreDouce) }
+                    if !sourcesAvecCitation, let citation = ligne.citation { Text(citation).font(Police.legende).foregroundStyle(Palette.encreDouce) }
                     if let date = ligne.dateLecture {
                         Text("Lue le \(date.formatted(.dateTime.day().month(.wide).year().locale(Locale(identifier: "fr_FR"))))")
                             .font(Police.legende).foregroundStyle(Palette.encreDouce)
