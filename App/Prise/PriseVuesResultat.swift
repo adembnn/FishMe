@@ -66,10 +66,10 @@ struct PriseTailleView: View {
         VStack(alignment: .leading, spacing: Espace.s) {
             HStack(alignment: .top) {
                 if let plage = modele.plageAR {
-                    (Text("\(plage.basCm) à \(plage.hautCm)").font(Police.taille(44, .heavy).monospacedDigit()) + Text(" cm").font(Police.titre))
+                    (Text("\(plage.basCm) à \(plage.hautCm)").font(Police.taille(56, .heavy).monospacedDigit()) + Text(" cm").font(Police.titre))
                         .foregroundStyle(Palette.encre).minimumScaleFactor(0.6).lineLimit(1)
                 } else if modele.curseurBouge {
-                    (Text("\(Int(modele.longueurCm.rounded()))").font(Police.taille(44, .heavy).monospacedDigit()) + Text(" cm").font(Police.titre))
+                    (Text("\(Int(modele.longueurCm.rounded()))").font(Police.taille(56, .heavy).monospacedDigit()) + Text(" cm").font(Police.titre))
                         .foregroundStyle(Palette.encre).lineLimit(1)
                 } else {
                     Text("Mesure ton poisson").font(Police.titre).foregroundStyle(Palette.encre)
@@ -138,7 +138,7 @@ struct PriseTailleView: View {
         } else if MesureAR.disponible {
             Button("Mesurer en réalité augmentée") { mesureAR = true }.buttonStyle(.principal)
         } else {
-            Button("Valider") { modele.confirmerLaTaille() }.buttonStyle(.principal)
+            Button("Règle le curseur") {}.buttonStyle(.principal)
                 .disabled(true).opacity(0.5)
         }
     }
@@ -255,7 +255,7 @@ struct PriseResultatView: View {
                     Text("Carte d'exemple : elle ne compte pas au Pescedex")
                         .font(Police.legende).foregroundStyle(Palette.encreDouce)
                 }
-                Button(modele.exemple ? "Ranger (carte d'exemple)" : "Ajouter au Pescedex") { modele.ranger() }
+                Button("Ajouter au Pescedex") { modele.ranger() }
                     .buttonStyle(.principal)
             }
             .padding(.horizontal, Espace.bord).padding(.vertical, Espace.s)
@@ -348,149 +348,37 @@ struct PriseResultatView: View {
 
     // MARK: Carte (recto et verso)
 
-    private var carte: some View {
-        GeometryReader { geo in
-            let coin = geo.size.width * Gabarit.coinCarte
-            ZStack {
-                if verso { versoCarte } else { rectoCarte }
+    /// La carte de l'écran Pescedex (`CarteRectoView`, `CarteVersoView`) construite avec ce que la prise sait déjà.
+    /// Rareté : table de Core pour le département de la prise. Rang dans la zone, consigne et lune : absents ici
+    /// (ni le recto ni le verso ne les montrent).
+    private var infosCarte: InfosCarte? {
+        guard let entree = modele.especeConfirmee else { return nil }
+        let prise = Prise(espece: entree.espece, longueurCm: modele.longueurCm.rounded(), mesure: modele.methode,
+                          stade: modele.stade, date: modele.contexte.date, lieuFlou: modele.contexte.lieuFlou,
+                          gardee: modele.gardee, exemple: modele.exemple)
+        let departement = modele.contexte.lieu.departement
+        return InfosCarte(detail: CarteDetaillee(prise: prise, conditions: nil, dureeSecondes: nil), espece: entree,
+                          rarete: modele.services.especes.rarete(espece: entree.espece, departement: departement),
+                          departement: departement, rangDansLaZone: nil, poids: modele.poids,
+                          lune: .nouvelle, consigne: nil, sourceConsigne: nil)
+    }
+
+    @ViewBuilder private var carte: some View {
+        if let infos = infosCarte {
+            Group {
+                if verso {
+                    CarteVersoView(infos: infos, photo: modele.photo)
+                } else {
+                    CarteRectoView(infos: infos)
+                }
             }
-            .frame(width: geo.size.width, height: geo.size.height)
-            .clipShape(RoundedRectangle(cornerRadius: coin, style: .continuous))
-            .shadow(color: Palette.encre.opacity(0.15), radius: 12, y: 6)
-        }
-        .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
-        .frame(maxWidth: 360)
-    }
-
-    /// Recto : le poisson en image et son nom.
-    /// À brancher : la rareté et le nombre de pêches OFB (« 10 pêches sur 29 dans le 94 · OFB »), le badge Trophée et le centile de taille,
-    /// le numéro de carte : ces données viennent du Pescedex (L4), pas de l'écran Prise.
-    private var rectoCarte: some View {
-        GeometryReader { geo in
-            let l = geo.size.width
-            let h = geo.size.height
-            ZStack(alignment: .topLeading) {
-                Self.vertCarte
-                // Le poisson, en haut de la carte.
-                if let entree = modele.especeConfirmee {
-                    Group {
-                        if UIImage(named: entree.image) != nil {
-                            Image(entree.image).resizable().scaledToFit().padding(.horizontal, l * 0.06)
-                        } else {
-                            Image(systemName: PriseFamille.de(entree.espece.id).symbole)
-                                .font(.system(size: 72, weight: .bold, design: .rounded)).foregroundStyle(.white.opacity(0.7))
-                        }
-                    }
-                    .frame(width: l, height: h * 0.5).position(x: l / 2, y: h * 0.36)
-                    .accessibilityHidden(true)
-                }
-                // Le panneau clair du bas, coupé en biais comme sur la maquette.
-                PanneauBiais()
-                    .fill(Self.papierCarte).frame(width: l, height: h * 0.45).position(x: l / 2, y: h * 0.775)
-                VStack(alignment: .leading, spacing: Espace.s) {
-                    HStack(alignment: .firstTextBaseline, spacing: Espace.s) {
-                        Text(modele.especeConfirmee?.nom ?? "Ta prise").font(Police.taille(l * 0.105, .heavy))
-                            .foregroundStyle(Palette.encre).minimumScaleFactor(0.6).lineLimit(1)
-                        if let latin = modele.especeConfirmee?.nomLatin {
-                            Text(latin).font(Police.legende).italic().foregroundStyle(Palette.encreDouce).lineLimit(1)
-                        }
-                    }
-                    Divider().overlay(Palette.silhouette)
-                    // À brancher : la rareté (« PEU COMMUN »), la fréquence « FRQ » et « N pêches sur M dans le 94 · OFB »,
-                    // le centile de taille « 84e » (en haut à gauche), le badge Trophée et le numéro « n° 014 » :
-                    // ces données viennent du Pescedex (L4), pas de l'écran Prise. Rien n'est inventé ici.
-                    VStack(alignment: .leading, spacing: 2) {
-                        (Text(tailleChiffre).font(Police.taille(l * 0.085, .heavy).monospacedDigit()) + Text(" cm").font(Police.detail))
-                            .foregroundStyle(Palette.encre).minimumScaleFactor(0.6).lineLimit(1)
-                        Text("TAI").font(Police.legende).foregroundStyle(Palette.encreDouce)
-                    }
-                    Spacer(minLength: 0)
-                }
-                .padding(.horizontal, l * 0.08)
-                .frame(width: l, height: h * 0.40, alignment: .topLeading)
-                .position(x: l / 2, y: h * 0.80)
-            }
-            .frame(width: l, height: h)
-        }
-        .accessibilityElement(children: .combine)
-    }
-
-    private static let vertCarte = Color(red: 0.10, green: 0.27, blue: 0.26)
-    private static let papierCarte = Color(red: 0.91, green: 0.93, blue: 0.93)
-
-    /// Texte de la taille sans l'unité : « 68 » ou « 66 à 70 ».
-    private var tailleChiffre: String {
-        if let plage = modele.plageAR { return "\(plage.basCm) à \(plage.hautCm)" }
-        return "\(Int(modele.longueurCm.rounded()))"
-    }
-
-    /// Verso : la vraie photo du pêcheur, puis taille (avec sa méthode), poids estimé, ce qu'il en a fait, la date.
-    /// À brancher : appât ou leurre, température de l'eau, niveau de la rivière (conditions de la sortie) et le prénom du pêcheur.
-    private var versoCarte: some View {
-        GeometryReader { geo in
-            VStack(spacing: 0) {
-                Color.clear
-                    .overlay {
-                        if let image = modele.imagePhoto {
-                            Image(uiImage: image).resizable().scaledToFill().accessibilityLabel("Ta photo")
-                        } else {
-                            Palette.tuile
-                        }
-                    }
-                    .clipShape(RoundedRectangle(cornerRadius: geo.size.width * 0.04, style: .continuous))
-                    .frame(height: geo.size.height * 0.54)
-                    .padding(geo.size.width * 0.026)
-                // Trois colonnes : taille, poids, ce qu'il en a fait.
-                // À brancher : appât ou leurre, température de l'eau et niveau de la rivière (2e rangée de la maquette P23-D),
-                // puis le prénom du pêcheur (en bas à gauche) : `Prise` (Core) n'a pas encore ces champs.
-                LazyVGrid(columns: [GridItem(.flexible(), alignment: .topLeading), GridItem(.flexible(), alignment: .topLeading), GridItem(.flexible(), alignment: .topLeading)],
-                          spacing: Espace.m) {
-                    chiffre(tailleTexte, legende: methodeTexte)
-                    if let poids = poidsTexte { chiffre(poids, legende: "estimé") }
-                    if let devenir = devenirTexte { chiffre(devenir, legende: "la prise") }
-                }
-                .padding(.horizontal, geo.size.width * 0.055).padding(.top, Espace.s)
-                Spacer(minLength: 0)
-                HStack(alignment: .lastTextBaseline) {
-                    Text(modele.contexte.lieuFlou ?? "").font(Police.detail).foregroundStyle(Palette.encreDouce).lineLimit(1)
-                    Spacer()
-                    Text(modele.contexte.date.formatted(.dateTime.day().month(.abbreviated).hour().minute().locale(Locale(identifier: "fr_FR"))))
-                        .font(Police.detail).foregroundStyle(Palette.encreDouce)
-                }
-                .padding(.horizontal, geo.size.width * 0.055).padding(.bottom, Espace.l)
-            }
-            .frame(width: geo.size.width, height: geo.size.height)
-        }
-        .background(Self.papierCarte)
-    }
-
-    private func chiffre(_ valeur: String, legende: String) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Text(valeur).font(Police.sousTitre).foregroundStyle(Palette.encre).minimumScaleFactor(0.7).lineLimit(1)
-            if !legende.isEmpty { Text(legende).font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1) }
-        }
-    }
-
-    private var methodeTexte: String {
-        switch modele.methode {
-        case .estimee: return "réalité augmentée"
-        case .toise: return "lue sur ta toise"
-        case .saisie: return "saisie"
-        }
-    }
-
-    /// « ≈ 1,9 à 2,4 kg » (deux bornes quand la taille est une fourchette), marqué « estimé » dessous.
-    private var poidsTexte: String? {
-        if let texte = modele.textePoidsAR { return texte.replacingOccurrences(of: ", estimé", with: "") }
-        guard let poids = modele.poids else { return nil }
-        return "≈ \(PriseLogique.kilos(poids.kilos)) kg"
-    }
-
-    private var devenirTexte: String? {
-        switch modele.devenir {
-        case .relachee: return "Relâchée"
-        case .gardee: return "Gardée"
-        case .nonDit: return nil
+            .frame(maxWidth: 360)
+        } else {
+            RoundedRectangle(cornerRadius: Rayon.l, style: .continuous)
+                .fill(Palette.tuile)
+                .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
+                .frame(maxWidth: 360)
+                .accessibilityHidden(true)
         }
     }
 }
@@ -559,18 +447,5 @@ struct PriseLigneView: View {
         case .aVerifier: return Palette.marine
         case .alerte: return Palette.alerte
         }
-    }
-}
-
-/// Le panneau clair du bas de la carte : le bord haut est légèrement en biais.
-private struct PanneauBiais: Shape {
-    func path(in rect: CGRect) -> Path {
-        var p = Path()
-        p.move(to: CGPoint(x: rect.minX, y: rect.minY + rect.height * 0.04))
-        p.addLine(to: CGPoint(x: rect.maxX, y: rect.minY + rect.height * 0.10))
-        p.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        p.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
-        p.closeSubpath()
-        return p
     }
 }

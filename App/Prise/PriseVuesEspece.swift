@@ -27,7 +27,7 @@ struct PriseImageEspece: View {
 struct PriseVignetteEspece: View {
     var entree: EspecePechable
     var selectionne = false
-    /// Grille « Autre » : tuile de 62 points au lieu de 70.
+    /// Grille « Autre » : tuile de 62 points au lieu de 84.
     var compacte = false
 
     var body: some View {
@@ -41,7 +41,7 @@ struct PriseVignetteEspece: View {
                     .foregroundStyle(Palette.encreDouce)
             }
         }
-        .frame(maxWidth: .infinity, minHeight: compacte ? 62 : 70, maxHeight: compacte ? 62 : 70)
+        .frame(maxWidth: .infinity, minHeight: compacte ? 62 : 84, maxHeight: compacte ? 62 : 84)
         .background(selectionne ? Palette.marineDoux : Palette.tuile, in: RoundedRectangle(cornerRadius: rayon, style: .continuous))
         .overlay {
             if selectionne {
@@ -115,11 +115,20 @@ struct PrisePropositionsView: View {
 
     var body: some View {
         let liste = Array(tuiles.prefix(3))
-        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }) {
+        if liste.isEmpty {
+            // Aucune proposition : la phrase, puis la grille directement.
+            PriseGrilleView(modele: modele, classe: nil, titre: "Je n'ai pas reconnu ton poisson")
+        } else {
+            propositions(liste)
+        }
+    }
+
+    private func propositions(_ liste: [Tuile]) -> some View {
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }, voile: 0.12) {
             VStack(alignment: .leading, spacing: 20) {
                 Text("Quelle espèce ?").font(Police.titre).foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
-                HStack(alignment: .top, spacing: 10) {
+                HStack(alignment: .top, spacing: Espace.m) {
                     // Dans l'ordre du modèle (le plus probable d'abord), espèce seule ou groupe de sosies.
                     // Un groupe (« brochet » : brochet et brochet aquitain) montre l'image de sa 1re espèce et ouvre ses sosies.
                     ForEach(Array(liste.enumerated()), id: \.offset) { i, tuile in
@@ -151,7 +160,7 @@ struct PrisePropositionsView: View {
             VStack(spacing: 6) {
                 Image(systemName: "square.grid.2x2.fill")
                     .font(.system(size: 26, weight: .bold, design: .rounded)).foregroundStyle(Palette.marine)
-                    .frame(width: 44, height: 70)
+                    .frame(maxWidth: .infinity, minHeight: 84, maxHeight: 84)
                     .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).strokeBorder(Palette.filet, lineWidth: 1.5))
                 Text("Autre").font(Police.detail).foregroundStyle(Palette.encre)
             }
@@ -174,17 +183,45 @@ struct PrisePropositionsView: View {
 struct PriseGrilleView: View {
     var modele: PriseModele
     var classe: String?
+    /// Titre de la feuille ; « Autre espèce » par défaut.
+    var titre = "Autre espèce"
     @State private var familleChoisie: PriseFamille?
+    /// Filtre la grille par le nom ; ce n'est pas une saisie d'espèce : l'espèce se touche toujours dans la grille.
+    @State private var filtre = ""
+
+    private func correspond(_ entree: EspecePechable) -> Bool {
+        let texte = filtre.trimmingCharacters(in: .whitespaces)
+        if texte.isEmpty { return true }
+        return entree.nom.range(of: texte, options: [.caseInsensitive, .diacriticInsensitive]) != nil
+    }
 
     var body: some View {
-        let groupes = PriseLogique.groupes(catalogue: modele.catalogue, proches: modele.proches, filtreClasse: classe)
+        let tous = PriseLogique.groupes(catalogue: modele.catalogue, proches: modele.proches, filtreClasse: classe)
+        let groupes = tous.filter { groupe in groupe.especes.contains(where: correspond) }
         let active = familleChoisie ?? groupes.first?.famille
         PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }, pleine: true, voile: 0.4) {
             ScrollViewReader { lecteur in
                 VStack(alignment: .leading, spacing: Espace.m) {
-                    Text("Autre espèce").font(Police.titre).foregroundStyle(Palette.encre)
+                    Text(titre).font(Police.titre).foregroundStyle(Palette.encre)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .accessibilityAddTraits(.isHeader)
+                    HStack(spacing: Espace.s) {
+                        Image(systemName: "magnifyingglass").foregroundStyle(Palette.encreDouce).accessibilityHidden(true)
+                        TextField("Chercher dans la liste", text: $filtre)
+                            .font(Police.corps)
+                            .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
+                        if !filtre.isEmpty {
+                            Button { filtre = "" } label: {
+                                Image(systemName: "xmark.circle.fill").foregroundStyle(Palette.encreDouce)
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityLabel("Effacer")
+                        }
+                    }
+                    .padding(.horizontal, Espace.m)
+                    .frame(minHeight: Gabarit.zoneTactile)
+                    .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
                     ScrollView(.horizontal) {
                         HStack(spacing: Espace.s) {
                             ForEach(groupes, id: \.famille) { groupe in
@@ -205,13 +242,13 @@ struct PriseGrilleView: View {
                     }
                     .scrollIndicators(.hidden)
                     ScrollView {
-                        VStack(alignment: .leading, spacing: 22) {
+                        VStack(alignment: .leading, spacing: Espace.m) {
                             ForEach(groupes, id: \.famille) { groupe in
                                 VStack(alignment: .leading, spacing: Espace.m) {
                                     Text(groupe.famille.titre).font(Police.sousTitre).foregroundStyle(Palette.encre)
                                         .accessibilityAddTraits(.isHeader)
-                                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3), spacing: 14) {
-                                        ForEach(groupe.especes, id: \.espece.id) { entree in
+                                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: Espace.m), count: 3), spacing: Espace.m) {
+                                        ForEach(groupe.especes.filter(correspond), id: \.espece.id) { entree in
                                             PriseTuile(entree: entree, duCoin: groupe.duCoin.contains(entree.espece.id), compacte: true) { modele.choisir(entree) }
                                         }
                                     }

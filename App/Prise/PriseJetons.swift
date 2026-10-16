@@ -52,7 +52,7 @@ struct PriseBoutonRond: View {
     }
 }
 
-/// La feuille du bas, posée sur la photo de la prise (voile marine) : poignée, flottante à 8 points des bords, coins arrondis, fond `surface`.
+/// La feuille du bas, posée sur la photo de la prise (voile marine) : poignée, flottante à `Espace.bord` des bords, coins arrondis, fond `surface`.
 /// Le bouton de retour flotte en haut à gauche.
 struct PriseFeuille<Contenu: View>: View {
     var photo: UIImage?
@@ -84,8 +84,8 @@ struct PriseFeuille<Contenu: View>: View {
                 .padding(.bottom, 20)
                 .frame(maxWidth: .infinity, maxHeight: pleine ? .infinity : nil)
                 .background(Palette.surface, in: RoundedRectangle(cornerRadius: 28, style: .continuous))
-                .padding(.horizontal, Espace.s)
-                .padding(.bottom, Espace.s)
+                .padding(.horizontal, Espace.bord)
+                .padding(.bottom, Espace.bord)
             }
         }
     }

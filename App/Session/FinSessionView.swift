@@ -38,16 +38,21 @@ struct FinSessionView: View {
     /// // À brancher : le conseil vient des données de L1 (appât, heure) pour l'espèce visée ; rien n'est inventé ici.
     let conseil: String?
     let surTerminer: () -> Void
-    let surFermer: () -> Void
+    /// La croix en haut à gauche. `nil` : pas de croix (elle ne termine jamais la session : seul « Terminer » le fait).
+    let surFermer: (() -> Void)?
+    /// Poids estimé d'après la formule longueur-poids de Core (`ServiceEspeces.poidsEstime`). Par défaut : aucun poids.
+    let poidsEstime: (Espece, Double) -> PoidsEstime?
 
     init(fin: FinDeSession, infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, lieu: String? = nil,
-         conseil: String? = nil, surTerminer: @escaping () -> Void, surFermer: (() -> Void)? = nil) {
+         conseil: String? = nil, surTerminer: @escaping () -> Void, surFermer: (() -> Void)? = nil,
+         poidsEstime: @escaping (Espece, Double) -> PoidsEstime? = { _, _ in nil }) {
+        self.poidsEstime = poidsEstime
         self.conseil = conseil
         self.fin = fin
         self.infosEspece = infosEspece
         self.lieu = lieu
         self.surTerminer = surTerminer
-        self.surFermer = surFermer ?? surTerminer
+        self.surFermer = surFermer
     }
 
     private var sortie: Sortie { fin.sortie }
@@ -90,9 +95,15 @@ struct FinSessionView: View {
                         .frame(width: geo.size.width, height: geo.size.height * 0.62)
                         .clipped()
                 } else {
-                    Image(systemName: "water.waves")
-                        .font(.system(size: 72, weight: .bold))
-                        .foregroundStyle(Palette.surMarine.opacity(0.35))
+                    // Prise sans photo : l'image de l'espèce sur marine doux.
+                    Palette.marineDoux
+                    if let vedette, let infos = infosEspece(vedette.espece) {
+                        Image(infos.image).resizable().scaledToFit().padding(Espace.xl)
+                    } else {
+                        Image(systemName: "water.waves")
+                            .font(.system(size: 72, weight: .bold))
+                            .foregroundStyle(Palette.marine.opacity(0.35))
+                    }
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height * 0.62)
@@ -103,23 +114,25 @@ struct FinSessionView: View {
         .accessibilityHidden(true)
     }
 
-    private var boutonFermer: some View {
-        BoutonRond(role: .fermer, rendu: .verre, action: surFermer)
-            .padding(.leading, Espace.bord)
-        .padding(.top, Espace.s)
+    @ViewBuilder private var boutonFermer: some View {
+        if let surFermer {
+            // Sans photo, le haut est clair : icône marine seule ; sur une photo, rond de verre.
+            BoutonRond(role: .fermer, rendu: imageDe(vedette) == nil ? .simple : .verre, action: surFermer)
+                .padding(.leading, Espace.bord)
+                .padding(.top, Espace.s)
+        }
     }
 
     // MARK: Feuille
 
     private var feuille: some View {
         VStack(alignment: .leading, spacing: Espace.l) {
-            Capsule().fill(Palette.filet).frame(width: 36, height: 5).frame(maxWidth: .infinity)
             enTete
             if let vedette {
                 ligneVedette(vedette)
                 if prises.count > 1 { autresPrises }
             }
-            if let conditions { ligneConditions(conditions) }
+            if let conditions { ligneConditions(conditions) } else { pasDeReleve }
             if vedette == nil { bredouille }
             if let message = fin.message {
                 Text(message)
@@ -183,10 +196,14 @@ struct FinSessionView: View {
         return nom
     }
 
-    /// « relâché » ou « gardé » : ce que le pêcheur a déclaré, jamais un verdict de l'app.
-    /// Le poids estimé n'est pas dans `Prise` : // À brancher : poids estimé (formule longueur-poids de L3), marqué « estimé ».
+    /// « ≈ 1,4 kg estimé · relâché » : le poids vient de la formule longueur-poids de Core, marqué « estimé » ;
+    /// « relâché » ou « gardé » est ce que le pêcheur a déclaré, jamais un verdict de l'app.
     private func detailPrise(_ prise: Prise) -> String? {
-        prise.gardee ? "gardé" : "relâché"
+        let devenir = prise.gardee ? "gardé" : "relâché"
+        if let cm = prise.longueurCm, let poids = poidsEstime(prise.espece, cm) {
+            return "≈ \(PriseLogique.kilos(poids.kilos)) kg estimé · \(devenir)"
+        }
+        return devenir
     }
 
     private var autresPrises: some View {
@@ -262,6 +279,18 @@ struct FinSessionView: View {
         }
         .padding(.top, Espace.m)
         .overlay(alignment: .top) { Rectangle().fill(Palette.filet).frame(height: 0.5) }
+    }
+
+    /// Aucun relevé enregistré pour cette sortie.
+    private var pasDeReleve: some View {
+        HStack(spacing: Espace.s) {
+            Image(systemName: "cloud.slash").foregroundStyle(Palette.encreDouce).accessibilityHidden(true)
+            Text("Pas de relevé météo").font(Police.detail).foregroundStyle(Palette.encreDouce)
+            Spacer(minLength: 0)
+        }
+        .padding(.top, Espace.m)
+        .overlay(alignment: .top) { Rectangle().fill(Palette.filet).frame(height: 0.5) }
+        .accessibilityElement(children: .combine)
     }
 
     private func caseCondition(symbole: String, valeur: String, legende: String, alerte: Bool = false) -> some View {

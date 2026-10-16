@@ -12,10 +12,15 @@ struct MesSortiesView: View {
     /// « la Marne » ; `nil` : rien n'est écrit.
     let lieu: String?
     let surChoix: (Sortie) -> Void
+    /// La croix en haut à gauche ferme l'écran.
     let surRetour: () -> Void
+    /// Écran vide : le bouton « Commencer une session ». `nil` : pas de bouton.
+    let surCommencer: (() -> Void)?
 
     init(sorties: [Sortie], infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, lieu: String? = nil,
-         surChoix: @escaping (Sortie) -> Void = { _ in }, surRetour: @escaping () -> Void = {}) {
+         surChoix: @escaping (Sortie) -> Void = { _ in }, surRetour: @escaping () -> Void = {},
+         surCommencer: (() -> Void)? = nil) {
+        self.surCommencer = surCommencer
         self.sorties = sorties
         self.infosEspece = infosEspece
         self.lieu = lieu
@@ -26,39 +31,15 @@ struct MesSortiesView: View {
     private var triees: [Sortie] { sorties.filter { $0.fin != nil }.sorted { $0.debut > $1.debut } }
 
     var body: some View {
-        ZStack(alignment: .bottom) {
-            fondCarte
-            feuille
-        }
-        .background(Palette.fond)
-        .overlay(alignment: .topLeading) {
-            BoutonRond(role: .retour, rendu: .verre, action: surRetour)
-                .padding(.leading, Espace.bord)
-                .padding(.top, Espace.s)
-        }
-    }
-
-    /// P17 A : la carte de la zone derrière la feuille (aplats d'eau, pas de point exact).
-    private var fondCarte: some View {
-        GeometryReader { geo in
-            ZStack {
-                Palette.fond
-                Palette.eauClaire.frame(height: geo.size.height * 0.2).rotationEffect(.degrees(-12)).offset(y: 20)
-                Palette.eau.frame(height: geo.size.height * 0.1).rotationEffect(.degrees(-12)).offset(y: 20)
-            }
-            .frame(width: geo.size.width, height: geo.size.height)
-            .clipped()
-        }
-        .ignoresSafeArea()
-        .accessibilityHidden(true)
-    }
-
-    private var feuille: some View {
         VStack(alignment: .leading, spacing: Espace.m) {
-            Capsule().fill(Palette.filet).frame(width: 36, height: 5).frame(maxWidth: .infinity)
+            HStack {
+                BoutonRond(role: .fermer, rendu: .verre, action: surRetour)
+                Spacer(minLength: 0)
+            }
             Text("Mes sorties")
-                .font(Police.titre)
+                .font(Police.grandTitre)
                 .foregroundStyle(Palette.encre)
+                .accessibilityAddTraits(.isHeader)
             if triees.isEmpty {
                 vide
             } else {
@@ -71,27 +52,31 @@ struct MesSortiesView: View {
                                 }
                         }
                     }
+                    .padding(.horizontal, Espace.m)
+                    .tuileFishMe(rayon: Rayon.l)
                 }
                 .scrollIndicators(.hidden)
-                .frame(maxHeight: 340)
             }
         }
         .padding(.horizontal, Espace.bord)
         .padding(.top, Espace.s)
         .padding(.bottom, Espace.l)
-        .frame(maxWidth: .infinity)
-        .background(Palette.surface, in: UnevenRoundedRectangle(topLeadingRadius: Rayon.l, topTrailingRadius: Rayon.l, style: .continuous))
-        .ignoresSafeArea(edges: .bottom)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .background(Palette.fond.ignoresSafeArea())
     }
 
     private var vide: some View {
-        VStack(spacing: Espace.m) {
+        VStack(spacing: Espace.l) {
             Image(systemName: "water.waves")
                 .font(.system(size: 40, weight: .bold))
                 .foregroundStyle(Palette.marine)
             Text("Ta première sortie t'attend")
                 .font(Police.sousTitre)
                 .foregroundStyle(Palette.encre)
+            if let surCommencer {
+                Button("Commencer une session", action: surCommencer)
+                    .buttonStyle(.principal)
+            }
         }
         .frame(maxWidth: .infinity)
         .padding(.top, Espace.xxl)
@@ -111,10 +96,6 @@ struct MesSortiesView: View {
                         .lineLimit(2)
                 }
                 Spacer(minLength: Espace.s)
-                Image(systemName: "chevron.right")
-                    .font(Police.legende)
-                    .foregroundStyle(Palette.silhouette)
-                    .accessibilityHidden(true)
             }
             .padding(.vertical, Espace.m)
             .frame(minHeight: Gabarit.zoneTactile)
@@ -165,7 +146,7 @@ struct MesSortiesView: View {
 
     /// « Ton spot · Marne 1,42 m » n'est pas possible : le spot, la température et la hauteur d'eau
     /// ne sont pas dans `Sortie` (// À brancher : spot gratuit, température et hauteur d'eau par sortie).
-    /// On écrit ce qui existe : le lieu flou, le vent, la pression, la rivière si elle est en crue.
+    /// On écrit ce qui existe : le lieu flou, la rivière si elle est en crue, le nombre de prises.
     private func legende(_ sortie: Sortie) -> String {
         if FormatSortie.prises(sortie).isEmpty {
             let duree = FormatSortie.duree(sortie)
@@ -175,8 +156,6 @@ struct MesSortiesView: View {
         var morceaux: [String] = []
         if let lieu, !lieu.isEmpty { morceaux.append(lieu) }
         if let c = sortie.conditions.last {
-            if let vent = c.ventKmh { morceaux.append("\(Int(vent.rounded())) km/h") }
-            if let hpa = c.pressionHPa { morceaux.append("\(Int(hpa.rounded())) hPa") }
             if c.etatRiviere == .crue { morceaux.append("crue") }
         }
         let n = FormatSortie.prises(sortie).count
