@@ -268,7 +268,7 @@ struct NageTests {
             for q in poses {
                 #expect(q.x >= 0.23 * 0.45 - 1e-9 && q.x <= 1 - 0.23 * 0.45 + 1e-9, "\(slug) x \(q.x)")
                 #expect(q.y >= 0.12 && q.y <= 0.72, "\(slug) y \(q.y)")
-                #expect(abs(q.sens) >= 0.18 && abs(q.sens) <= 1)
+                #expect(abs(q.sens) >= 0.28 && abs(q.sens) <= 1)
                 #expect((0..<8).contains(q.image))
                 #expect(q.profondeur >= 0 && q.profondeur <= 1)
                 #expect(abs(q.assiette) <= 0.22 + 1e-9)
@@ -408,7 +408,7 @@ struct PleineEauTests {
             for q in boucle(slug) {
                 #expect(q.echelle >= 0.41 && q.echelle <= 1.55)
                 #expect(q.opacite >= 0 && q.opacite <= 1)
-                #expect(abs(q.sens) >= 0.18 && abs(q.sens) <= 1)
+                #expect(abs(q.sens) >= 0.28 && abs(q.sens) <= 1)
                 #expect((0..<8).contains(q.image))
             }
         }

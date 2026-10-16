@@ -233,7 +233,7 @@ nonisolated public enum NageWidget {
             // milieu d'un demi-tour), et il n'est jamais plus étroit que 18 % de sa largeur.
             let cap = etat.cap + dcap * u
             var sens = cos(cap) / max(hypot(cos(cap), 0.35 * sin(cap)), 1e-6)
-            if abs(sens) < 0.18 { sens = sens < 0 ? -0.18 : 0.18 }
+            if abs(sens) < 0.28 { sens = sens < 0 ? -0.28 : 0.28 }  // raccourci minimal de NAGE-3D.md
             let image = Int((phase * m).rounded(.down)) % max(imagesCycle, 1)
             phase = (phase + frequence(etat.v, longueur) * dt * echelleCycles).truncatingRemainder(dividingBy: 1)
             let p = bac.profondeur > 0 ? z / bac.profondeur : 0
@@ -342,7 +342,7 @@ nonisolated public enum NageWidget {
             // Cap : surtout de profil ; il ne s'amincit que s'il fonce vers nous ou s'éloigne.
             let cap = atan2(-q.vz * 0.6, q.vx)
             var sens = cos(cap) / max(hypot(cos(cap), 0.35 * sin(cap)), 1e-6)
-            if abs(sens) < 0.18 { sens = sens < 0 ? -0.18 : 0.18 }
+            if abs(sens) < 0.28 { sens = sens < 0 ? -0.28 : 0.28 }  // raccourci minimal de NAGE-3D.md
             let assiette = min(max(atan2(-q.vy, abs(q.vx) + 1e-6) * 0.6, -0.22), 0.22)
             let image = Int((phase * m).rounded(.down)) % max(imagesCycle, 1)
             phase = (phase + frequence(q.vitesse, longueur) * dt * echelleCycles).truncatingRemainder(dividingBy: 1)
