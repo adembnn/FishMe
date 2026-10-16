@@ -25,15 +25,8 @@ struct TunnelPremiersPasView: View {
         VStack(spacing: Espace.l) {
             HStack {
                 if index > 0 {
-                    Button(action: revenir) {
-                        Image(systemName: "arrow.uturn.backward")
-                            .font(Police.taille(15, .bold))
-                            .foregroundStyle(Palette.marine)
-                            .frame(width: 44, height: 44)
-                            .contentShape(Rectangle())
-                    }
-                    .buttonStyle(.plain)
-                    .accessibilityLabel("Revenir à la carte d'avant")
+                    BoutonRond(role: .retour, action: revenir)
+                        .accessibilityLabel("Revenir à la carte d'avant")
                 }
                 if index < especes.count {
                     Text("\(index + 1) / \(especes.count)")
