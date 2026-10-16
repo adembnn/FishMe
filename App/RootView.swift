@@ -152,7 +152,8 @@ final class ParcoursApp {
     init(chargement: Chargement, configurerMesure: @escaping @MainActor @Sendable () -> Void) {
         let core = chargement.core
         self.core = core
-        servicesCarte = ServicesCarte(geo: core.geo, regles: core.regles, especes: core.especes, session: core.session)
+        servicesCarte = ServicesCarte(geo: core.geo, regles: core.regles, especes: core.especes, session: core.session,
+                                     coinsPublics: core.coins())
         // Reconnaissance : modèle DINOv2 embarqué (App/Prise/Modele), sous 0,4 de confiance la grille des espèces s'ouvre.
         servicesPrise = PriseServices(especes: core.especes, regles: core.regles, identification: IdentificationDino())
         // Si conseils.json ne se charge pas : aucun conseil en vrai, le faux seulement en DEBUG (à vérifier sur le Mac).
@@ -226,6 +227,8 @@ final class ParcoursApp {
     /// Recharge le Pescedex et les cartes partageables de L9 après une écriture dans le dépôt.
     func rafraichirCollection() async {
         guard let depot else { return }
+        // Mode démo : les cartes d'exemple (vraies photos sous licence libre) s'installent ou se retirent ici.
+        _ = await DemoPescedex.synchroniser(demo: UserDefaults.standard.bool(forKey: DemoPescedex.cle), depot: depot)
         await pescedex?.charger()
         publierAquarium()
         rendrePartagesEnFond(depot: depot)
@@ -445,6 +448,11 @@ final class ParcoursApp {
     }
 
     /// « Terminer » de la fin de session : acquitte la fin, puis ouvre le paywall qui se ferme à la 1re session.
+    /// Sortie sans prise : la photo de soi qu'on ajoute à la carte « Eau calme » (sans GPS, écrite à côté des photos de prises).
+    func ajouterPhotoSortie(_ data: Data, pour id: UUID) {
+        Task { _ = await ecrire { try await $0.ajouterPhotoBredouille(id: id, photo: data) } }
+    }
+
     func finTerminee() {
         guard let fin = finAffichee else { courant = nil; return }
         if moteur.derniereFin == fin { moteur.acquitterFin() }
@@ -628,7 +636,10 @@ struct RootView: View {
 private struct RacineContenu: View {
     @Bindable var app: ParcoursApp
     @AppStorage(ClesConseils.questionVue) private var questionVue = false
-    @State private var amisOuverts = false
+    @AppStorage("demo.communaute") private var demo = false
+    @AppStorage("profil.nom") private var nomProfil = ""
+    @State private var profilOuvert = false
+    @State private var aquariumOuvert = false
     /// Vrai de l'apparition de la couverture de session jusqu'à la fin de son retrait.
     /// P03 « Où pêches-tu ? » : montré une seule fois, avant la première demande de position.
     @AppStorage("premierLancement.ouPechesTuVu") private var ouPechesTuVu = false
@@ -738,10 +749,12 @@ private struct RacineContenu: View {
             Tab("Carte", systemImage: "map.fill", value: Onglet.carte) {
                 carte
             }
-            Tab("Club", systemImage: "person.2.fill", value: Onglet.club) {
+            Tab("Communauté", systemImage: "person.2.fill", value: Onglet.club) {
                 club
             }
         }
+        // Pendant la session en plein écran, la barre d'onglets se range : l'écran du chrono est à lui seul.
+        .toolbarVisibility(app.moteur.enCours != nil && !app.sessionReduite ? .hidden : .automatic, for: .tabBar)
         // Session en cours en plein écran réductible (P14 C) : le bouton « Carte » la range en bandeau sur la carte.
         .overlay {
             if app.moteur.enCours != nil && !app.sessionReduite {
@@ -766,10 +779,18 @@ private struct RacineContenu: View {
                     commentLaPecher: { espece in AnyView(CommentLaPecherEmplacement(app: app, espece: espece)) },
                     tesConditions: { AnyView(TesConditionsEmplacement(app: app)) },
                     meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }),
+                voirAquarium: { aquariumOuvert = true },
                 photographier: { app.ajouterPrise() },
                 declarer: { app.montrer(.tunnel) },
                 voirAmis: { app.onglet = .club },
                 changerZone: { app.onglet = .carte })
+            .fullScreenCover(isPresented: $aquariumOuvert) {
+                AquariumView(modele: modele, fermer: { aquariumOuvert = false },
+                             emplacements: EmplacementsExternes(
+                                commentLaPecher: { espece in AnyView(CommentLaPecherEmplacement(app: app, espece: espece)) },
+                                tesConditions: { AnyView(TesConditionsEmplacement(app: app)) },
+                                meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }))
+            }
         } else {
             ContentUnavailableView("Pescedex", systemImage: "square.grid.2x2.fill",
                                    description: Text("Tes cartes ne peuvent pas s'ouvrir pour l'instant."))
@@ -779,14 +800,12 @@ private struct RacineContenu: View {
     // MARK: Volet Carte (L2) avec L5, L12, L13
 
     @ViewBuilder private var carte: some View {
-        Group {
-            if app.sansPositionAffiche {
-                carteSansPosition
-            } else {
-                vueCarte
-            }
-        }
-        .questionNiveau(declenchee: app.questionNiveauPermise)
+        // Toujours la carte plein écran (démo ou non, position accordée ou non) : la pastille de profil est dans son en-tête.
+        // `carteSansPosition` n'est plus affichée ici.
+        vueCarte
+            .sheet(isPresented: $profilOuvert) { ProfilEmplacement(app: app, reglages: reglagesClub) }
+            .onChange(of: demo) { _, _ in Task { await app.rafraichirCollection() } }
+            .questionNiveau(declenchee: app.questionNiveauPermise)
     }
 
     private var carteSansPosition: some View {
@@ -798,7 +817,7 @@ private struct RacineContenu: View {
             },
             voirLaCarte: { app.sansPositionAffiche = false },
             ouvrirPescedex: { app.onglet = .pescedex },
-            ouvrirAmis: { app.onglet = .club; amisOuverts = true },
+            ouvrirAmis: { app.onglet = .club },
             codeZone: app.spotCourant.flatMap { $0.departement.estInconnu ? nil : $0.departement.code })
     }
 
@@ -824,13 +843,16 @@ private struct RacineContenu: View {
                 app.choixDeZoneOuvert = ouvert
                 if !ouvert { app.proposerSuitePremierLancement() }
             },
-            demandeChoixDeZone: app.choixDeZoneOuvert, volVersLeSpot: app.volDemande)
+            demandeChoixDeZone: app.choixDeZoneOuvert, volVersLeSpot: app.volDemande,
+            pastilleProfil: AnyView(
+                ProfilPastille(nom: ProfilEmplacement<EmptyView>.nomAffiche(nomProfil),
+                               nombreDeCartes: app.cartesAPartager.count) { profilOuvert = true }))
             .task { app.carteListe() }
     }
 
-    // MARK: Volet Mon club (L9) avec L6
+    // MARK: Volet Communauté (Amis et Club, L8 et L9) avec L6
 
-    private var club: some View {
+    private var reglagesClub: some View {
         let departement = app.moteur.spotGratuit?.departement ?? .inconnu
         let federation = app.core.regles.liensFederation(departement: departement)
         let liens = LiensClub(
@@ -843,39 +865,20 @@ private struct RacineContenu: View {
         }
         sources.append(SourceClub(nom: "Photo d'exemple", mention: "Photo d'exemple : SpinfisherCRO, CC BY-SA",
                                   lien: URL(string: "https://creativecommons.org/licenses/by-sa/4.0/")))
-        return ClubView(
-            liens: liens, sources: sources,
-            cartes: app.cartesAPartager,
-            mesureUsage: Binding(get: { app.consentement == .accepte }, set: { app.reglerMesure($0) })
-        ) {
-            MarqueMeteoView(stockage: app.marque)
+        sources += DemoPescedex.credits().map { SourceClub(nom: $0.nom, mention: $0.mention, lien: $0.url) }
+        return ReglagesClubView(
+            liens: liens, sources: sources, cartes: app.cartesAPartager,
+            mesureUsage: Binding(get: { app.consentement == .accepte }, set: { app.reglerMesure($0) }),
+            marqueMeteo: MarqueMeteoView(stockage: app.marque))
+    }
+
+    private var club: some View {
+        let poissons = app.core.especes.especesPechables().map { PoissonClub(id: $0.espece.id, nom: $0.nom, image: $0.image) }
+        return CommunauteView {
+            AmisPageView(gestion: app.gestionAmis())
+        } club: {
+            ClubPageView(cartes: app.cartesAPartager, poissons: poissons)
         }
-        .poissonsDuClub(app.core.especes.especesPechables().map { PoissonClub(id: $0.espece.id, nom: $0.nom, image: $0.image) })
-        // Plus de bouton « Mes amis » en surimpression : un seul menu mène aux amis, aux sorties et aux réglages.
-        .overlay(alignment: .topTrailing) {
-            Menu {
-                Button { amisOuverts = true } label: { Label("Mes amis", systemImage: "person.2.fill") }
-                Button { app.montrer(.mesSorties) } label: { Label("Mes sorties", systemImage: "clock.arrow.circlepath") }
-                Button { app.montrer(.reglages) } label: { Label("Réglages", systemImage: "gearshape") }
-            } label: {
-                Image(systemName: "ellipsis")
-                    .frame(width: 44, height: 44)
-                    .background(.regularMaterial, in: Circle())
-            }
-            .accessibilityLabel("Amis, sorties et réglages")
-            .padding(.trailing, 16)
-            .padding(.top, 4)
-        }
-        .sheet(isPresented: $amisOuverts) {
-            if let gestion = app.gestionAmis() {
-                AmisView(gestion: gestion)
-                    .task { await gestion.synchroniserMesCartes() }
-            } else {
-                ContentUnavailableView("Amis", systemImage: "person.2.slash",
-                                       description: Text("Tes amis ne peuvent pas s'ouvrir pour l'instant."))
-            }
-        }
-        // « Tes conditions » (TesConditionsView, Pro) : ClubView n'a pas d'emplacement pour elle, non branchée.
     }
 
     // MARK: Écrans modaux
@@ -916,7 +919,8 @@ private struct RacineContenu: View {
 
         case .finSession:
             if let fin = app.finAffichee {
-                FinSessionView(fin: fin, infosEspece: app.infosEspece(), lieu: app.finLieu, surTerminer: { app.finTerminee() })
+                FinSessionView(fin: fin, infosEspece: app.infosEspece(), lieu: app.finLieu, surTerminer: { app.finTerminee() },
+                               surPhotoSortie: fin.sortie.prises.isEmpty ? { data in app.ajouterPhotoSortie(data, pour: fin.sortie.id) } : nil)
                     .interactiveDismissDisabled()
             }
 
@@ -1095,8 +1099,26 @@ private struct CommentLaPecherEmplacement: View {
     }
 }
 
-/// « Tes conditions » (L12, Pro) ouvert depuis le Pescedex : les comptes de ses propres sorties, ou le paywall.
+/// « Tes conditions » ouvert depuis le Pescedex : la météo de l'iPhone (WeatherKit) pour ton spot.
 private struct TesConditionsEmplacement: View {
+    let app: ParcoursApp
+    @State private var paywall: PaywallDemande?
+
+    var body: some View {
+        let centre = app.spotCourant?.centre ?? app.moteur.spotGratuit?.centre
+        TesConditionsMeteoView(
+            centre: centre, conditions: app.conditions, marque: app.marque,
+            porte: PorteConditions(
+                autorise: { fonction in centre.map { app.autorise(fonction, en: $0) } ?? false },
+                ouvrirPaywall: { fonction in paywall = PaywallDemande(declencheur: .fonction(fonction)) }))
+            .sheet(item: $paywall) { demande in
+                app.paywall(demande.declencheur, fermer: { paywall = nil })
+            }
+    }
+}
+
+/// « Mes statistiques » (L12, Pro) : les comptes de ses propres sorties, ou le paywall.
+private struct MesStatistiquesEmplacement: View {
     let app: ParcoursApp
     @Environment(\.dismiss) private var fermer
 
@@ -1106,6 +1128,82 @@ private struct TesConditionsEmplacement: View {
                               sortiesTerminees: app.moteur.sortiesTerminees.count, marque: app.marque)
         } else {
             app.paywall(.fonction(.analyseConditions), fermer: { fermer() })
+        }
+    }
+}
+
+/// Le profil (depuis la pastille de la page Carte) : nom, badge, mes statistiques, mes sorties, les réglages de l'app
+/// et tout ce qui était dans « Mon club ». Compte simulé : rien n'est créé en ligne, tout reste sur l'iPhone.
+private struct ProfilEmplacement<Reglages: View>: View {
+    let app: ParcoursApp
+    let reglages: Reglages
+    @Environment(\.dismiss) private var fermer
+    @AppStorage("demo.communaute") private var demo = false
+    @AppStorage("profil.nom") private var nom = ""
+
+    private var nomAffiche: String { ProfilEmplacement.nomAffiche(nom) }
+    static func nomAffiche(_ nom: String) -> String {
+        let propre = nom.trimmingCharacters(in: .whitespaces)
+        return propre.isEmpty ? "Pêcheur" : propre
+    }
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section {
+                    HStack(spacing: Espace.m) {
+                        AvatarProfil(nom: nomAffiche, taille: 56)
+                        VStack(alignment: .leading, spacing: 4) {
+                            TextField("Ton nom de profil", text: $nom)
+                                .font(Police.corps.weight(.semibold))
+                                .textInputAutocapitalization(.words)
+                                .submitLabel(.done)
+                            let niveau = BadgeProfil.niveau(cartes: app.cartesAPartager.count)
+                            Label("\(niveau.titre) · \(app.cartesAPartager.count) cartes", systemImage: niveau.symbole)
+                                .font(Police.legende)
+                                .foregroundStyle(Palette.marine)
+                        }
+                    }
+                    .padding(.vertical, 4)
+                } footer: {
+                    Text("Pas de compte à créer : ton profil reste sur cet iPhone.")
+                }
+                Section {
+                    Toggle(isOn: $demo) {
+                        Label("Mode démo", systemImage: "sparkles.rectangle.stack")
+                    }
+                } footer: {
+                    Text("Remplit le Pescedex, les amis et le club avec des exemples. Rien n'est envoyé.")
+                }
+                Section {
+                    NavigationLink { MesStatistiquesEmplacement(app: app) } label: {
+                        Label("Mes statistiques", systemImage: "chart.bar.xaxis")
+                    }
+                    Button { ouvrir(.mesSorties) } label: {
+                        Label("Mes sorties", systemImage: "clock.arrow.circlepath")
+                    }
+                    Button { ouvrir(.reglages) } label: {
+                        Label("Réglages", systemImage: "gearshape")
+                    }
+                }
+                Section {
+                    NavigationLink { reglages } label: {
+                        Label("Ma pêche, sécurité et sources", systemImage: "slider.horizontal.3")
+                    }
+                }
+            }
+            .navigationTitle("Mon profil")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("Fermer") { fermer() } } }
+        }
+    }
+
+    /// Ferme le profil d'abord : deux feuilles ne se superposent pas.
+    private func ouvrir(_ modal: Modal) {
+        fermer()
+        Task {
+            try? await Task.sleep(for: .milliseconds(450))
+            app.montrer(modal)
         }
     }
 }
