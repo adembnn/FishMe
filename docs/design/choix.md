@@ -10,3 +10,5 @@ Direction retenue pour chaque page de la toile (A · Plans, B · Réglages, C ·
 | P04 Zone sans position | A · Plans | 16 oct. 2h31 |
 | P06 Carte et ton spot | C · Sujet | 16 oct. 2h34 |
 | P05 Mesure d'audience (accord SDK MWM) | B · Réglages | 16 oct. 2h36 |
+| P08 Règle d'une espèce | B · Réglages | 16 oct. 2h37 |
+| P09 Quel poisson cherches-tu | B · Réglages | 16 oct. 2h37 |
