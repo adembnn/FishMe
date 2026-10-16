@@ -1,22 +1,22 @@
 import Core
 import SwiftUI
 
-/// Mode démo de la page Amis : quatre amis et un fil de cartes d'exemple, 100 % locaux à la vue.
+/// Mode démo de la page Amis : quatre amis et un fil de cartes, 100 % locaux à la vue.
 /// Rien ici ne touche `GestionAmis`, CloudKit, le réseau ni le disque : aucun signalement, blocage ou retrait réel.
-/// Les noms sont fictifs, aucun lieu n'est donné, et tout est marqué « Exemple » à l'écran.
+/// Les prénoms sont fictifs et aucun lieu n'est donné.
 /// Interrupteur : `@AppStorage("demo.communaute")`, branché dans les réglages.
 enum DemoCommunaute {
     static let cle = "demo.communaute"
 }
 
-/// Un ami d'exemple (sans identifiant iCloud).
+/// Un ami de démo (sans identifiant iCloud).
 struct DemoAmi: Identifiable, Hashable {
     let id: String
     let nom: String
     let nombreDeCartes: Int
 }
 
-/// Une carte d'exemple. `image` est le nom d'une image d'espèce déjà présente dans les ressources de l'app.
+/// Une carte de démo. `image` est le nom d'une image d'espèce déjà présente dans les ressources de l'app.
 struct DemoCarte: Identifiable, Hashable {
     let id: String
     let ami: String
@@ -27,9 +27,26 @@ struct DemoCarte: Identifiable, Hashable {
     /// Nombre de mois avant aujourd'hui (le fil n'affiche que le mois et l'année).
     let ilYaMois: Int
 
+    /// La vraie photo de démo (`App/Demo/Photos/<image>-1.jpg`), ou `nil` : la carte montre alors l'image d'espèce.
+    var photo: Data? { PhotosDemoAmis.donnees(especeId: image) }
+
     var date: Date {
         let jour = Calendar(identifier: .gregorian).date(byAdding: .month, value: -ilYaMois, to: Date()) ?? Date()
         return CartePartagee.moisEtAnnee(jour)
+    }
+}
+
+/// Les photos de démo embarquées. Cherchées à la racine du bundle puis dans `Photos` ou `Demo/Photos` ; absentes : `nil`.
+enum PhotosDemoAmis {
+    static func donnees(especeId: String, bundle: Bundle = .main) -> Data? {
+        let base = "\(especeId)-1"
+        for dossier in [nil, "Photos", "Demo/Photos"] as [String?] {
+            if let url = bundle.url(forResource: base, withExtension: "jpg", subdirectory: dossier),
+               let donnees = try? Data(contentsOf: url) {
+                return donnees
+            }
+        }
+        return nil
     }
 }
 
@@ -55,14 +72,14 @@ enum DonneesDemoAmis {
 }
 
 extension DemoCarte {
-    /// La carte au format de la grille (même dessin que les cartes d'Adem), toujours marquée « Exemple ».
+    /// La carte au format de la grille (même dessin que les cartes d'Adem).
     var pourGrille: CarteAmiGrille {
         CarteAmiGrille(id: id, prenom: ami, mois: JetonAmis.date(date), style: StyleRarete(rarete), nomEspece: espece,
-                       imageEspece: image, tailleCm: tailleCm, exemple: true)
+                       imageEspece: image, tailleCm: tailleCm, photo: photo)
     }
 }
 
-/// Le contenu de la page Amis en mode démo : bandeau « Exemple », liste d'amis et cartes, tout en local.
+/// Le contenu de la page Amis en mode démo : liste d'amis et cartes, tout en local.
 /// `avecInviter` : sans `GestionAmis` (pas d'iCloud), la page n'a pas son propre bouton ; celui-ci le remplace, sans effet réel.
 struct DemoAmisContenu: View {
     var avecInviter = false
@@ -84,7 +101,6 @@ struct DemoAmisContenu: View {
                 }
                 .buttonStyle(.principal)
             }
-            bandeau
             listeDesAmis
             fil
         }
@@ -95,21 +111,11 @@ struct DemoAmisContenu: View {
         .fullScreenCover(item: $amiOuvert) { ami in
             DemoCollectionAmi(ami: ami)
         }
-        .alert("Ami d'exemple", isPresented: $actionSansEffet) {
+        .alert("Action indisponible en démo", isPresented: $actionSansEffet) {
             Button("OK", role: .cancel) {}
         } message: {
-            Text("Rien n'est envoyé, signalé, bloqué ni retiré : ce sont des données d'exemple pour la démo.")
+            Text("Cette action n'est pas disponible en démo.")
         }
-    }
-
-    private var bandeau: some View {
-        Label("Données d'exemple pour la démo", systemImage: "info.circle")
-            .font(Police.detail)
-            .foregroundStyle(Palette.encre)
-            .padding(Espace.m)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .tuileFishMe()
-            .accessibilityElement(children: .combine)
     }
 
     private var listeDesAmis: some View {
@@ -134,10 +140,11 @@ struct DemoAmisContenu: View {
                 HStack(spacing: Espace.m) {
                     Avatar(nom: ami.nom)
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(ami.nom).font(Police.corps).foregroundStyle(Palette.encre)
-                        Text("\(ami.nombreDeCartes) cartes · Exemple")
+                        Text(ami.nom).font(Police.corps).foregroundStyle(Palette.encre).lineLimit(1).minimumScaleFactor(0.7)
+                        Text("\(ami.nombreDeCartes) cartes")
                             .font(Police.detail)
                             .foregroundStyle(Palette.encreDouce)
+                            .lineLimit(2)
                     }
                     Spacer(minLength: Espace.s)
                     Image(systemName: "chevron.right").foregroundStyle(Palette.encreDouce)
@@ -158,7 +165,7 @@ struct DemoAmisContenu: View {
                     .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
                     .contentShape(Rectangle())
             }
-            .accessibilityLabel("Plus d'actions pour \(ami.nom), exemple")
+            .accessibilityLabel("Plus d'actions pour \(ami.nom)")
         }
     }
 
@@ -174,7 +181,7 @@ struct DemoAmisContenu: View {
     }
 }
 
-/// La collection d'un ami d'exemple : ses cartes d'exemple, au même dessin que les vraies. Rien n'est lu en ligne.
+/// La collection d'un ami de démo : ses cartes, au même dessin que les vraies. Rien n'est lu en ligne.
 private struct DemoCollectionAmi: View {
     let ami: DemoAmi
     @State private var carteOuverte: DemoCarte?
@@ -187,11 +194,8 @@ private struct DemoCollectionAmi: View {
                     .font(Police.grandTitre)
                     .foregroundStyle(Palette.encre)
                     .padding(.top, Espace.xl)
-                Label("Exemple pour la démo", systemImage: "info.circle")
-                    .font(Police.legende)
-                    .foregroundStyle(Palette.encreDouce)
                 if cartes.isEmpty {
-                    Text("Pas de carte d'exemple pour \(ami.nom).")
+                    Text("Pas encore de carte pour \(ami.nom).")
                         .font(Police.detail)
                         .foregroundStyle(Palette.encreDouce)
                 } else {
@@ -212,20 +216,17 @@ private struct DemoCollectionAmi: View {
     }
 }
 
-/// Détail local d'une carte d'exemple : la carte en grand, aucun signalement possible, rien ne sort de la vue.
+/// Détail local d'une carte de démo : la carte en grand, aucun signalement possible, rien ne sort de la vue.
 private struct DemoCarteDetail: View {
     let carte: DemoCarte
 
     var body: some View {
         VStack(spacing: Espace.l) {
             CarteAmiMini(style: StyleRarete(carte.rarete), nomEspece: carte.espece, imageEspece: carte.image,
-                         tailleCm: carte.tailleCm, exemple: true)
+                         photo: carte.photo, tailleCm: carte.tailleCm)
                 .frame(maxWidth: 280)
             Text("\(carte.ami) · \(JetonAmis.date(carte.date))")
                 .font(Police.detail)
-                .foregroundStyle(Palette.encreDouce)
-            Label("Exemple pour la démo", systemImage: "info.circle")
-                .font(Police.legende)
                 .foregroundStyle(Palette.encreDouce)
             Spacer(minLength: 0)
         }

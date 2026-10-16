@@ -116,9 +116,15 @@ final class ModeleCarte {
 
     /// Aucune position ne vient (refus ou échec) et rien n'a posé la carte : le pêcheur choisit son département ou sa commune.
     func positionIndisponible() {
+        ouvrirSurZoneParDefaut()
+    }
+
+    /// Sans position et sans zone gardée : la carte s'ouvre quand même, sur l'Île-de-France, sans feuille ni message.
+    /// Le pêcheur cherche une commune, touche la carte ou touche « Autour de moi ».
+    func ouvrirSurZoneParDefaut() {
         guard !cameraPlacee, depart == .enAttente else { return }
-        depart = .choixDeZone
-        afficherChoixDeZone = true
+        depart = .horsDeFrance
+        centrer(.parisIleDeFrance)
     }
 
     private func restaurerDepuisCache() async {
@@ -166,10 +172,8 @@ final class ModeleCarte {
             case .zoneChoisie, .horsDeFrance: return
             default: break
             }
-            // Spot fixé ou dernière vue déjà à l'écran : rien à redemander.
-            if cameraPlacee { return }
-            depart = .choixDeZone
-            afficherChoixDeZone = true
+            // Spot fixé ou dernière vue déjà à l'écran : rien à redemander. Sinon la zone par défaut, jamais une feuille.
+            ouvrirSurZoneParDefaut()
         }
     }
 

@@ -2,8 +2,8 @@ import Core
 import SwiftUI
 
 /// Page « Club » de l'onglet Communauté. On crée un club parce qu'on en a envie (nom, poisson ou photo), puis on y partage ses cartes.
-/// De haut en bas : l'en-tête du club choisi, le bouton « Partager une carte au club », les cartes du club, les membres, le record.
-/// Rejoindre ou créer un club reste accessible, plus discret, en bas de page.
+/// De haut en bas : « Créer mon club » et « Rejoindre un nouveau club », puis le club choisi (en-tête, membres,
+/// « Partager une carte au club »), les cartes du club et le record.
 /// Rien n'est envoyé sur un serveur dans cette version : les cartes que je partage restent sur cet iPhone,
 /// et les cartes des autres membres viendront du partage CloudKit (lot Amis).
 /// Aucun réglage ici : ils restent derrière la roue crantée.
@@ -44,16 +44,16 @@ struct ClubPageView: View {
     self.invitation = invitation
   }
 
-  /// Mes vrais clubs, plus les 2 clubs d'exemple en mode démo (jamais écrits dans `MesClubs`).
+  /// Les 2 clubs de la démo (le premier est déjà choisi), puis mes vrais clubs. Les clubs de la démo ne sont jamais écrits dans `MesClubs`.
   private var tousLesClubs: [ClubLocal] {
-    demo ? clubs.clubs + DemoClub.clubs : clubs.clubs
+    demo ? DemoClub.clubs + clubs.clubs : clubs.clubs
   }
 
   private var club: ClubLocal? {
     tousLesClubs.first { $0.id == clubChoisi } ?? tousLesClubs.first
   }
 
-  private var enDemo: Bool { demo && DemoClub.estExemple(club) }
+  private var enDemo: Bool { demo && DemoClub.estDemo(club) }
   private var membresAffiches: [MembreClub] {
     if enDemo, let club { return DemoClub.membres(pour: club) }
     return membres
@@ -85,20 +85,20 @@ struct ClubPageView: View {
             .padding(.horizontal, Espace.l)
             .accessibilityAddTraits(.isHeader)
 
-          if demo {
-            BandeauDemoClub().padding(.top, Espace.s)
-          }
+          boutonsClub.padding(.top, Espace.m)
 
           if let club {
             if tousLesClubs.count > 1 { choixDuClub }
             entete(club)
+            EnteteGroupeClub(titre: "Membres", haut: Espace.m)
+            groupeMembres(club)
             Button {
               partageOuvert = true
             } label: {
               Label("Partager une carte au club", systemImage: "square.and.arrow.up")
             }
             .buttonStyle(.principal)
-            .padding(.top, Espace.m)
+            .padding(.top, Espace.l)
             Text("Visible par les membres de ton club")
               .font(Police.legende).foregroundStyle(Palette.encreDouce)
               .frame(maxWidth: .infinity)
@@ -106,12 +106,8 @@ struct ClubPageView: View {
 
             EnteteGroupeClub(titre: "Cartes du club")
             cartesDuClub
-            EnteteGroupeClub(titre: "Membres")
-            groupeMembres(club)
             EnteteGroupeClub(titre: "Record du club")
             recordDuClub
-            EnteteGroupeClub(titre: "Autres clubs")
-            boutonsClub(discrets: true)
           } else {
             GroupeClub {
               Text(
@@ -122,7 +118,6 @@ struct ClubPageView: View {
               .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(.top, Espace.m)
-            boutonsClub(discrets: false).padding(.top, Espace.m)
           }
         }
         .padding(.horizontal, Espace.bord)
@@ -228,8 +223,10 @@ struct ClubPageView: View {
           ForEach(cartesDesMembres) { carte in
             VStack(spacing: Espace.xs) {
               VignetteCarteClub(
-                image: carte.image, nom: carte.espece, niveau: carte.niveau, exemple: enDemo)
+                image: carte.image, nom: carte.espece, niveau: carte.niveau,
+                tailleCm: carte.tailleCm, photo: carte.photo)
               Text(carte.membre).font(Police.detail).foregroundStyle(Palette.encre)
+                .lineLimit(1).minimumScaleFactor(0.7)
             }
           }
         }
@@ -241,12 +238,18 @@ struct ClubPageView: View {
     Group {
       if let record = recordAffiche {
         HStack(alignment: .center, spacing: Espace.l) {
-          VignetteCarteClub(image: record.image, nom: record.titre, niveau: record.niveau, exemple: enDemo)
-            .frame(width: 130)
+          VignetteCarteClub(
+            image: record.image, nom: record.titre, niveau: record.niveau,
+            tailleCm: record.tailleCm, photo: record.photo
+          )
+          .frame(width: 130)
           VStack(alignment: .leading, spacing: 2) {
             Text(record.titre).font(Police.corps).foregroundStyle(Palette.encre)
+              .lineLimit(3).minimumScaleFactor(0.8)
             Text("\(record.tailleCm) cm").font(Police.titre.monospacedDigit()).foregroundStyle(Palette.marine)
+              .lineLimit(1).minimumScaleFactor(0.7)
             Text(record.membre).font(Police.legende).foregroundStyle(Palette.encreDouce)
+              .lineLimit(1)
           }
           Spacer(minLength: 0)
         }
@@ -271,7 +274,8 @@ struct ClubPageView: View {
 
   // MARK: Rejoindre ou créer
 
-  private func boutonsClub(discrets: Bool) -> some View {
+  /// Tout en haut de la page, sous le titre : bien visibles, avant le club choisi.
+  private var boutonsClub: some View {
     VStack(spacing: Espace.s) {
       Button {
         creationOuverte = true
@@ -282,17 +286,16 @@ struct ClubPageView: View {
       Button {
         rechercheOuverte = true
       } label: {
-        Label("Rejoindre un club", systemImage: "magnifyingglass")
+        Label("Rejoindre un nouveau club", systemImage: "magnifyingglass")
       }
       .buttonStyle(.secondaire)
     }
-    .modifier(DiscretClub(actif: discrets))
   }
 
   // MARK: Membres
 
   private func groupeMembres(_ club: ClubLocal) -> some View {
-    // Au-delà de 2 membres (cas des clubs d'exemple), la rangée défile pour garder des pastilles lisibles.
+    // Au-delà de 2 membres (cas des clubs de la démo), la rangée défile pour garder des pastilles lisibles.
     let large = membresAffiches.count > 2
     return GroupeClub {
       ScrollView(.horizontal) {
@@ -305,7 +308,7 @@ struct ClubPageView: View {
           }
           .frame(minWidth: large ? 76 : 0, maxWidth: large ? 76 : .infinity)
           .accessibilityElement(children: .combine)
-          ForEach(Array(membresAffiches.prefix(large ? 5 : 2).enumerated()), id: \.element.id) {
+          ForEach(Array(membresAffiches.prefix(large ? 6 : 2).enumerated()), id: \.element.id) {
             rang, membre in
             VStack(spacing: 2) {
               PastilleMembre(nom: membre.nom, rang: rang + 1)
@@ -339,14 +342,6 @@ struct ClubPageView: View {
       .scrollIndicators(.hidden)
       .scrollDisabled(!large)
     }
-  }
-}
-
-/// Boutons « Créer » et « Rejoindre » quand on a déjà un club : plus petits, sans le gros bouton plein.
-private struct DiscretClub: ViewModifier {
-  let actif: Bool
-  func body(content: Content) -> some View {
-    if actif { content.controlSize(.small).opacity(0.9) } else { content }
   }
 }
 

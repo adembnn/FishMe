@@ -224,6 +224,8 @@ struct Avatar: View {
         Text(String(nom.prefix(1)).uppercased())
             .font(JetonAmis.police(18))
             .foregroundStyle(Palette.surMarine)
+            .lineLimit(1)
+            .minimumScaleFactor(0.5)
             .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
             .background(Palette.marine, in: Circle())
             .accessibilityHidden(true)

@@ -2,14 +2,42 @@ import Core
 import SwiftUI
 import UIKit
 
-/// Une carte vue dans un club, au même dessin que les vignettes du classeur (fond de rareté, nom, badge) :
-/// le poisson sur son fond, puis une bande avec le nom de l'espèce et le badge de rareté.
+/// Les vraies photos de pêche embarquées pour la démo (`App/Demo/Photos/<espece>-<n>.jpg`), lues dans le bundle de l'app.
+/// Fichier absent : `nil`, et la carte retombe sur l'image de l'espèce.
+@MainActor
+enum PhotoDemoClub {
+  private static let memoire = NSCache<NSString, UIImage>()
+
+  static func image(_ nom: String?, bundle: Bundle = .main) -> UIImage? {
+    guard let nom, !nom.isEmpty else { return nil }
+    let base = nom.hasSuffix(".jpg") ? String(nom.dropLast(4)) : nom
+    if let connue = memoire.object(forKey: base as NSString) { return connue }
+    for dossier in [nil, "Photos", "Demo/Photos", "Demo"] as [String?] {
+      if let url = bundle.url(forResource: base, withExtension: "jpg", subdirectory: dossier),
+        let image = UIImage(contentsOfFile: url.path)
+      {
+        memoire.setObject(image, forKey: base as NSString)
+        return image
+      }
+    }
+    return nil
+  }
+}
+
+/// Une carte vue dans un club, au même dessin que les vignettes du classeur (fond de rareté, nom, badge).
+/// Hauteur fixe : le dessin (photo ou poisson) occupe le haut, une bande de hauteur fixe sous l'image porte
+/// le nom de l'espèce, la taille et le badge de rareté. Aucun texte ne passe sur le dessin, même avec un nom très long
+/// ou du texte agrandi (les polices de la carte ont une taille fixe, comme dans le Pescedex).
 struct VignetteCarteClub: View {
   let image: String
   let nom: String
   let niveau: NiveauRarete
-  /// Les cartes d'exemple portent l'étiquette « Exemple ».
-  var exemple = false
+  var tailleCm: Int? = nil
+  /// Nom du fichier de la vraie photo (sans « .jpg »), s'il y en a une.
+  var photo: String? = nil
+
+  /// Hauteur de la zone réservée sous l'image.
+  private static let hauteurBande: CGFloat = 46
 
   var body: some View {
     let style = StyleRarete(niveau)
@@ -18,42 +46,51 @@ struct VignetteCarteClub: View {
       .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
       .overlay {
         VStack(spacing: 0) {
-          ZStack(alignment: .topTrailing) {
+          ZStack {
             LinearGradient(colors: style.fond, startPoint: .top, endPoint: .bottom)
-            Image(image)
-              .resizable().scaledToFit()
-              .padding(Espace.xs)
-              .frame(maxWidth: .infinity, maxHeight: .infinity)
-            if exemple {
-              Text("Exemple")
-                .font(Police.taille(11, .heavy))
-                .foregroundStyle(Palette.encre)
-                .padding(.horizontal, 7)
-                .frame(height: 18)
-                .background(Palette.surface, in: Capsule())
-                .padding(5)
+            if let vraie = PhotoDemoClub.image(photo) {
+              Color.clear
+                .overlay { Image(uiImage: vraie).resizable().scaledToFill() }
+                .clipped()
+            } else {
+              Image(image)
+                .resizable().scaledToFit()
+                .padding(Espace.xs)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
           }
           .frame(maxHeight: .infinity)
+          .clipped()
           HStack(spacing: Espace.xs) {
-            Text(nom)
-              .font(Police.taille(13, .heavy))
-              .foregroundStyle(Palette.encre)
-              .lineLimit(1)
-              .minimumScaleFactor(0.7)
+            VStack(alignment: .leading, spacing: 1) {
+              Text(nom)
+                .font(Police.taille(12, .heavy))
+                .foregroundStyle(Palette.encre)
+                .lineLimit(2)
+                .minimumScaleFactor(0.6)
+                .multilineTextAlignment(.leading)
+              if let tailleCm {
+                Text("\(tailleCm) cm")
+                  .font(Police.taille(11, .bold).monospacedDigit())
+                  .foregroundStyle(Palette.encreDouce)
+                  .lineLimit(1)
+              }
+            }
             Spacer(minLength: 0)
             BadgeRarete(style: style, taille: 16)
           }
           .padding(.horizontal, Espace.s)
-          .frame(height: 34)
+          .frame(maxWidth: .infinity)
+          .frame(height: Self.hauteurBande)
           .background(Palette.tuile)
+          .clipped()
         }
       }
       .clipShape(forme)
       .overlay(forme.strokeBorder(Palette.filet, lineWidth: 1))
       .shadow(color: Palette.encre.opacity(0.14), radius: 5, y: 3)
       .accessibilityElement(children: .ignore)
-      .accessibilityLabel("\(nom), \(style.mot)\(exemple ? ", exemple" : "")")
+      .accessibilityLabel("\(nom)\(tailleCm.map { ", \($0) cm" } ?? ""), \(style.mot)")
   }
 }
 

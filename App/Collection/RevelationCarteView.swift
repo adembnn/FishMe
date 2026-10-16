@@ -68,6 +68,10 @@ struct RevelationCarteView: View {
         }
         .contentShape(Rectangle())
         .onTapGesture { toucherFond() }
+        // Glisser vers le bas ferme, une fois la révélation finie (la carte est déjà enregistrée).
+        .gesture(DragGesture(minimumDistance: 30).onEnded { v in
+            if estTermine, v.translation.height > 120, abs(v.translation.width) < v.translation.height { ranger() }
+        })
         .onAppear { demarrer() }
         .onDisappear {
             visible = false

@@ -2,95 +2,133 @@ import Core
 import SwiftUI
 import UIKit
 
-/// Le verso : seulement la photo que le pêcheur a prise, sur toute la carte (Adem, 16 oct. : « on met que la photo uploadée »).
-/// Ni date, ni lune, ni rareté, ni consigne, ni conseil.
+/// Le verso de toute carte (prise réelle, déclarée, exemple, sans photo) : la photo de la prise (sinon l'espèce), puis où (département ou
+/// lieu flou, jamais de coordonnées), quand, la taille et le poids estimé si connus, la consigne et sa source. Une valeur absente est omise.
 struct CarteVersoView: View {
     let infos: InfosCarte
     let photo: Data?
-    /// Gardé pour les appelants ; « comment la pêcher » s'affiche maintenant dans `FaitsPrise`.
+    /// Gardé pour les appelants ; « comment la pêcher » s'affiche dans `FaitsPrise`.
     var emplacements: EmplacementsExternes = .vides
 
+    private var declaree: Bool { infos.prise.estDeclaree }
+
     var body: some View {
-        // P25 : fond gris clair de la carte (`.fc.verso`), photo à 2,6 % du bord, coins à 4 % de la largeur.
-        CarteCadre(style: infos.style, declaree: infos.prise.estDeclaree, fond: Color(carte: 0xE9EDEB)) {
+        // Fond gris clair de la carte (`.fc.verso`) ; tailles en pourcentage de la largeur, comme le recto.
+        CarteCadre(style: infos.style, declaree: declaree, fond: Color(carte: 0xE9EDEB)) {
             GeometryReader { geo in
                 let u = geo.size.width / 100
-                fondPhoto
-                    .clipShape(RoundedRectangle(cornerRadius: 4 * u, style: .continuous))
-                    .padding(2.6 * u)
+                VStack(spacing: 0) {
+                    fondPhoto(u)
+                        .frame(width: geo.size.width - 5.2 * u, height: 66 * u)
+                        .clipShape(RoundedRectangle(cornerRadius: 4 * u, style: .continuous))
+                        .padding(.top, 2.6 * u)
+                    infosPrise(u)
+                        .padding(.horizontal, 5.5 * u)
+                        .padding(.top, 3.4 * u)
+                        .padding(.bottom, 4.6 * u)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                        .clipped()
+                }
+                .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
             }
         }
         .accessibilityElement(children: .contain)
     }
 
+    // MARK: Photo
+
     @ViewBuilder
-    private var fondPhoto: some View {
+    private func fondPhoto(_ u: CGFloat) -> some View {
         if let photo, let image = UIImage(data: photo) {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFill()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .clipped()
-                .accessibilityLabel("Photo de la prise")
+            Color.clear.overlay {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+            }
+            .clipped()
+            .accessibilityLabel("Photo de la prise")
         } else {
             ZStack {
                 LinearGradient(colors: infos.style.fond, startPoint: .top, endPoint: .bottom).opacity(0.5)
-                VStack(spacing: Espace.s) {
-                    Image(systemName: "camera")
-                        .font(Police.taille(34))
-                        .accessibilityHidden(true)
-                    Text(infos.prise.estDeclaree ? "Carte déclarée : pas de photo" : "Pas de photo")
-                        .font(Jeton.police(17))
+                VStack(spacing: 2 * u) {
+                    if let poisson = UIImage(named: infos.espece.image) {
+                        Image(uiImage: poisson)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 60 * u, height: 30 * u)
+                            .saturation(declaree ? 0.55 : 1)
+                            .accessibilityHidden(true)
+                    }
+                    Text(declaree ? "Carte déclarée : pas de photo" : "Pas de photo")
+                        .font(Police.taille(4.4 * u, .heavy))
+                        .foregroundStyle(Palette.encreDouce)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.6)
                         .multilineTextAlignment(.center)
+                        .padding(.horizontal, 4 * u)
                 }
-                .foregroundStyle(Palette.encreDouce)
-                .padding(Espace.l)
             }
         }
     }
 
-    /// Le lieu flou (« La Marne · 94 », jamais le point exact) en gras à gauche, le jour et l'heure à droite.
-    private var bande: some View {
-        HStack(alignment: .center, spacing: Espace.s) {
-            // À brancher : le prénom du pêcheur (« Adem ») ; aucune donnée de profil n'arrive jusqu'ici. Le lieu flou le remplace.
-            Text(infos.prise.estDeclaree ? infos.espece.nom : (infos.prise.lieuFlou ?? infos.espece.nom))
-                .font(Jeton.police(22, .heavy))
-                .lineLimit(1)
+    // MARK: Infos
+
+    /// Le lieu flou tel qu'enregistré (« La Marne · 94 »), sinon le département ; jamais un point exact.
+    private var lieu: String? {
+        if let flou = infos.prise.lieuFlou, !flou.isEmpty { return flou }
+        return infos.departement.map { "Département \($0.code)" }
+    }
+
+    private func infosPrise(_ u: CGFloat) -> some View {
+        let encre = Color(carte: 0x0F1A1C)
+        let gris = Color(carte: 0x5B6A6E)
+        return VStack(alignment: .leading, spacing: 1.8 * u) {
+            Text(infos.espece.nom)
+                .font(Police.taille(5.6 * u, .black))
+                .foregroundStyle(encre)
+                .lineLimit(2)
                 .minimumScaleFactor(0.6)
-            Spacer(minLength: 0)
-            if !infos.prise.estDeclaree {
-                VStack(alignment: .trailing, spacing: 0) {
-                    Text(Formats.date(infos.prise.date))
-                    Text(Formats.heure(infos.prise.date))
+            if declaree {
+                Text("Tu l'as déjà pêché : cette carte n'a ni photo, ni taille, ni date.")
+                    .font(Police.taille(3.6 * u, .bold))
+                    .foregroundStyle(gris)
+                    .lineLimit(3)
+                    .minimumScaleFactor(0.7)
+            } else {
+                ligne("mappin.and.ellipse", lieu ?? "Lieu non renseigné", u: u)
+                ligne(
+                    "calendar", "\(Formats.date(infos.prise.date)) · \(Formats.heure(infos.prise.date))", u: u
+                )
+                if let taille = Formats.taille(infos.prise) {
+                    ligne(
+                        "ruler",
+                        [taille, Formats.poids(infos.poids)].compactMap { $0 }.joined(separator: " · "), u: u)
                 }
-                .font(Jeton.police(12))
-                .monospacedDigit()
-                .foregroundStyle(Palette.encreDouce)
+                if let consigne = infos.consigne {
+                    Text(consigne + (infos.sourceConsigne.map { " (source : \($0))" } ?? ""))
+                        .font(Police.taille(3 * u, .semibold))
+                        .foregroundStyle(gris)
+                        .lineLimit(3)
+                        .minimumScaleFactor(0.7)
+                        .padding(.top, 0.6 * u)
+                }
             }
         }
-        .foregroundStyle(Palette.encre)
-        .padding(.horizontal, Espace.l)
-        .padding(.vertical, Espace.m)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
-    /// Le verso dit « dans les relevés OFB », jamais une promesse de prise.
-    var phraseRarete: String {
-        let r = infos.rarete
-        let zone = infos.departement.map { "du \($0.code)" } ?? "de la zone"
-        switch r.niveau {
-        case .nonMesuree:
-            return "Espèce non suivie par l'OFB : rareté non mesurée."
-        case .legendaire:
-            let depuis = r.anneeDernierReleve.map { " depuis \($0)" } ?? ""
-            return "Rareté dans les relevés de l'Office français de la biodiversité (OFB) \(zone) : aucune pêche ne l'a relevée\(depuis)."
-        default:
-            let annee = r.anneeDernierReleve.map { ", dernier relevé \($0)" } ?? ""
-            var texte = "Rareté dans les relevés de l'Office français de la biodiversité (OFB) \(zone) : relevée dans \(r.nPeches) pêches sur \(r.nTotal)\(annee)."
-            if r.echelle == .region {
-                texte += " Moins de 20 pêches dans le département : rareté calculée sur la région."
-            }
-            return texte
+    private func ligne(_ icone: String, _ texte: String, u: CGFloat) -> some View {
+        HStack(spacing: 2 * u) {
+            Image(systemName: icone)
+                .font(Police.taille(3.6 * u))
+                .foregroundStyle(Palette.marine)
+                .frame(width: 4.6 * u)
+                .accessibilityHidden(true)
+            Text(texte)
+                .font(Police.taille(3.8 * u, .bold))
+                .foregroundStyle(Color(carte: 0x0F1A1C))
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
         }
     }
 }
@@ -110,7 +148,9 @@ struct FaitsPrise: View {
                         .multilineTextAlignment(.center)
                 } else {
                     if let taille = Formats.taille(infos.prise) {
-                        ligne("ruler", [taille, Formats.poids(infos.poids)].compactMap { $0 }.joined(separator: " · "))
+                        ligne(
+                            "ruler",
+                            [taille, Formats.poids(infos.poids)].compactMap { $0 }.joined(separator: " · "))
                     }
                     // À brancher : l'appât ou le leurre de la prise (« Relâché · leurre souple ») ; la prise ne le garde pas.
                     ligne("water.waves", infos.prise.gardee ? "Gardé" : "Relâché")
@@ -119,8 +159,10 @@ struct FaitsPrise: View {
                         MarqueAppleWeather()
                     }
                     if let consigne = infos.consigne {
-                        ligne("info.circle", consigne + (infos.sourceConsigne.map { " (source : \($0))" } ?? ""))
-                            .font(Police.detail)
+                        ligne(
+                            "info.circle", consigne + (infos.sourceConsigne.map { " (source : \($0))" } ?? "")
+                        )
+                        .font(Police.detail)
                     }
                 }
                 if let comment = emplacements.commentLaPecher {

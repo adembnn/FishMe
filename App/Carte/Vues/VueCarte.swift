@@ -34,9 +34,13 @@ struct VueCarte: View {
     /// Vrai quand la racine demande le choix de zone (« Choisir sur la carte » de « Où pêches-tu ? ») :
     /// la feuille s'ouvre, et sa fermeture repasse par `surChoixDeZone(false)`.
     let demandeChoixDeZone: Bool
+    /// La pastille de profil (posée par la racine) : elle prend la place à gauche de la barre de recherche, rien ne la recouvre.
+    let pastilleProfil: AnyView
+    @Environment(\.dynamicTypeSize) private var tailleDuTexte
     @State private var afficherOuChercher = false
-    /// Faux : on arrive sur « Ton spot » (maquette P06 C). Vrai : la carte, ouverte d'un toucher sur le bouton carte.
-    @State private var afficherCarte = false
+    /// Vrai : l'onglet Carte s'ouvre toujours sur la carte plein écran (jamais sur « Pas de spot »).
+    /// L'écran « Ton spot » (`ecranSpot`) reste dans le fichier mais n'est plus atteint.
+    @State private var afficherCarte = true
     @State private var apercu: ApercuSpot?
     @State private var reseauDisponible = true
 
@@ -52,7 +56,8 @@ struct VueCarte: View {
          onSpotChange: @escaping (Spot) -> Void = { _ in },
          ouChercher: ((Coordonnee) -> AnyView)? = nil,
          surChoixDeZone: @escaping (Bool) -> Void = { _ in },
-         demandeChoixDeZone: Bool = false) {
+         demandeChoixDeZone: Bool = false,
+         pastilleProfil: AnyView = AnyView(EmptyView())) {
         _modele = State(initialValue: ModeleCarte(services: services))
         self.spotFixe = spotFixe
         self.sessionsTerminees = sessionsTerminees
@@ -66,6 +71,7 @@ struct VueCarte: View {
         self.ouChercher = ouChercher
         self.surChoixDeZone = surChoixDeZone
         self.demandeChoixDeZone = demandeChoixDeZone
+        self.pastilleProfil = pastilleProfil
     }
 
     var body: some View {
@@ -181,7 +187,8 @@ struct VueCarte: View {
                                                        minimumDistance: 300, maximumDistance: altitudeMaximale)
 
     private var masqueDuToucher: GestureMask {
-        modele.modeChoixDuSpot ? .all : .subviews
+        // Avant la 1re session, un toucher sur la carte pose toujours le cercle de 1 km ; ensuite le spot est fixé.
+        (modele.modeChoixDuSpot || modele.peutChangerDeSpot) ? .all : .subviews
     }
 
     private func toucherPourPoser(proxy: MapProxy) -> some Gesture {
@@ -295,6 +302,8 @@ struct VueCarte: View {
         reagirAuStatut()
         if demandeChoixDeZone { modele.afficherChoixDeZone = true }
         await modele.demarrer()
+        // Pas de position ni de zone gardée : la carte s'ouvre sur l'Île-de-France (la position se demande à « Autour de moi »).
+        if !position.estAutorisee { modele.ouvrirSurZoneParDefaut() }
     }
 
     private func recevoirPosition(_ nouvelle: Coordonnee?) {
@@ -537,6 +546,9 @@ struct VueCarte: View {
         if position.estAutorisee {
             if let p = position.position { modele.appliquer(position: p, refusee: false) }
             position.relire()
+        } else if position.nAPasEteDemandee {
+            // La demande de position se fait ici, au toucher : jamais au lancement de la carte.
+            position.demanderAuPremierEcran()
         } else {
             modele.afficherChoixDeZone = true
         }
@@ -580,15 +592,42 @@ struct VueCarte: View {
 
     private var haut: some View {
         VStack(spacing: 8) {
-            enTeteCarte
-            HStack(spacing: 0) {
+            ligneProfilEtRecherche
+            HStack(spacing: 8) {
                 Spacer(minLength: 0)
                 boutonsSecondaires
+                BoutonVerreCarte(symbole: "line.3.horizontal.decrease", libelle: "Filtrer par espèce",
+                                 teinte: couleurDuFiltre) {
+                    modele.afficherFiltre = true
+                }
             }
             bandeauHaut
             messageDeCarte
         }
         .padding(.horizontal, 16)
+    }
+
+    /// Première ligne : la pastille de profil à gauche, la recherche sur le reste de la largeur.
+    /// En texte très agrandi, la recherche passe sous la pastille : rien ne se chevauche.
+    @ViewBuilder
+    private var ligneProfilEtRecherche: some View {
+        if tailleDuTexte.isAccessibilitySize {
+            VStack(alignment: .leading, spacing: 8) {
+                pastilleProfil.frame(maxWidth: .infinity, alignment: .leading)
+                rechercheDeZone
+            }
+        } else {
+            HStack(alignment: .top, spacing: 8) {
+                pastilleProfil
+                    .frame(maxWidth: 170, alignment: .leading)
+                rechercheDeZone
+                    .frame(minWidth: 140)
+            }
+        }
+    }
+
+    private var rechercheDeZone: some View {
+        BarreRechercheZone(choisir: choisirZone, codeDepartement: codeDepartement)
     }
 
     /// Un message d'état de la carte (aucun relevé, erreur) : seulement quand il y en a un.
@@ -603,36 +642,6 @@ struct VueCarte: View {
                 .padding(.horizontal, Espace.m)
                 .padding(.vertical, Espace.s)
                 .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-        }
-    }
-
-    /// En haut de la carte : retour à « Ton spot », le lieu, le filtre par espèce (maquette P06 A).
-    private var enTeteCarte: some View {
-        HStack(spacing: 8) {
-            BoutonRond(role: .retour, rendu: .verre, action: retourAuSpot)
-            HStack(spacing: 8) {
-                Image(systemName: "mappin")
-                    .font(Police.taille(18))
-                    .foregroundStyle(Palette.marine)
-                    .accessibilityHidden(true)
-                Text(apercu?.lieu ?? "Carte")
-                    .font(Police.detail)
-                    .foregroundStyle(Palette.encre)
-                    .lineLimit(1)
-                Spacer(minLength: 0)
-            }
-            .padding(.horizontal, Espace.l)
-            .frame(height: Gabarit.zoneTactile)
-            .background {
-                Capsule()
-                    .fill(.regularMaterial)
-                    .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
-                    .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
-            }
-            BoutonVerreCarte(symbole: "line.3.horizontal.decrease", libelle: "Filtrer par espèce",
-                             teinte: couleurDuFiltre) {
-                modele.afficherFiltre = true
-            }
         }
     }
 
@@ -796,29 +805,17 @@ struct VueCarte: View {
         .opacity(modele.spotAffiche == nil ? 0.5 : 1)
     }
 
-    /// « Choisir un autre spot » ; pendant le choix, la consigne prend sa place (toucher l'annule).
+    /// Avant la 1re session : la consigne du toucher sur la carte (sans spot, elle dit comment activer le bouton).
     @ViewBuilder
     private var lienAutreSpotCarte: some View {
-        if modele.modeChoixDuSpot {
-            Button { modele.modeChoixDuSpot = false } label: {
-                Text("Touche la rivière pour poser ton cercle de 1 km")
-                    .font(Police.corps)
-                    .foregroundStyle(Palette.marine)
-                    .multilineTextAlignment(.center)
-                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
-                    .contentShape(Rectangle())
-            }
-            .buttonStyle(.plain)
-            .accessibilityHint("Touche pour annuler")
-        } else if modele.peutChangerDeSpot {
-            Button { modele.modeChoixDuSpot = true } label: {
-                Text("Choisir un autre spot")
-                    .font(Police.corps)
-                    .foregroundStyle(Palette.marine)
-                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
-                    .contentShape(Rectangle())
-            }
-            .buttonStyle(.plain)
+        if modele.peutChangerDeSpot {
+            Text(modele.spotAffiche == nil
+                 ? "Touche la carte pour poser ton cercle de 1 km"
+                 : "Touche la carte pour déplacer ton cercle de 1 km")
+                .font(Police.corps)
+                .foregroundStyle(Palette.marine)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
         }
     }
 

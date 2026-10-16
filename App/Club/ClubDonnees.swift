@@ -90,6 +90,8 @@ struct CarteRecenteClub: Identifiable, Hashable {
     let image: String
     /// Rareté affichée sur la carte (fond et badge, comme dans le Pescedex).
     var niveau: NiveauRarete = .commun
+    /// Nom du fichier de la vraie photo embarquée (sans « .jpg »), si la carte en a une.
+    var photo: String? = nil
 }
 
 /// Le record du club : « Plus gros brochet · Malo · 74 cm ».
@@ -99,6 +101,7 @@ struct RecordClub: Hashable {
     let tailleCm: Int
     let image: String
     var niveau: NiveauRarete = .commun
+    var photo: String? = nil
 }
 
 /// Une personne invitée, avec l'état de son invitation (P31).

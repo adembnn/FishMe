@@ -782,23 +782,12 @@ private struct RacineContenu: View {
     // MARK: Volet Carte (L2) avec L5, L12, L13
 
     @ViewBuilder private var carte: some View {
-        Group {
-            // Mode démo : la carte s'ouvre toujours, même sans position (le jury n'a pas de GPS en salle).
-            if app.sansPositionAffiche && !demo {
-                carteSansPosition
-            } else {
-                vueCarte
-            }
-        }
-        .overlay(alignment: .topLeading) {
-            ProfilPastille(nom: ProfilEmplacement<EmptyView>.nomAffiche(nomProfil),
-                           nombreDeCartes: app.cartesAPartager.count) { profilOuvert = true }
-                .padding(.leading, Espace.bord)
-                .padding(.top, 2)
-        }
-        .sheet(isPresented: $profilOuvert) { ProfilEmplacement(app: app, reglages: reglagesClub) }
-        .onChange(of: demo) { _, _ in Task { await app.rafraichirCollection() } }
-        .questionNiveau(declenchee: app.questionNiveauPermise)
+        // Toujours la carte plein écran (démo ou non, position accordée ou non) : la pastille de profil est dans son en-tête.
+        // `carteSansPosition` n'est plus affichée ici.
+        vueCarte
+            .sheet(isPresented: $profilOuvert) { ProfilEmplacement(app: app, reglages: reglagesClub) }
+            .onChange(of: demo) { _, _ in Task { await app.rafraichirCollection() } }
+            .questionNiveau(declenchee: app.questionNiveauPermise)
     }
 
     private var carteSansPosition: some View {
@@ -830,7 +819,10 @@ private struct RacineContenu: View {
                 app.choixDeZoneOuvert = ouvert
                 if !ouvert { app.proposerSuitePremierLancement() }
             },
-            demandeChoixDeZone: app.choixDeZoneOuvert)
+            demandeChoixDeZone: app.choixDeZoneOuvert,
+            pastilleProfil: AnyView(
+                ProfilPastille(nom: ProfilEmplacement<EmptyView>.nomAffiche(nomProfil),
+                               nombreDeCartes: app.cartesAPartager.count) { profilOuvert = true }))
             .task { app.carteListe() }
     }
 

@@ -254,32 +254,33 @@ struct CarteRectoView: View {
         VStack(alignment: .leading, spacing: 0) {
             nomEtLatin(u)
             statistiques(u)
-                .padding(.top, 3.6 * u)
+                .padding(.top, 2.4 * u)
             Spacer(minLength: 0)
             pied(u)
         }
-        .padding(.top, 8 * u)
+        .padding(.top, 6 * u)
         .padding(.horizontal, 5.5 * u)
-        .padding(.bottom, 4.6 * u)
+        .padding(.bottom, 4 * u)
     }
 
+    /// Le nom sur deux lignes au plus (« Omble de fontaine (saumon de fontaine) »), le nom latin dessous : jamais l'un sur l'autre.
     private func nomEtLatin(_ u: CGFloat) -> some View {
-        HStack(alignment: .firstTextBaseline, spacing: 2.4 * u) {
+        VStack(alignment: .leading, spacing: 0.8 * u) {
             Text(infos.espece.nom)
-                .font(Police.taille(8.4 * u, .black))
+                .font(Police.taille(7 * u, .black))
                 .foregroundStyle(encreCarte)
-                .lineLimit(1)
-                .minimumScaleFactor(0.6)
-                .layoutPriority(2)
+                .lineLimit(2)
+                .minimumScaleFactor(0.55)
+                .fixedSize(horizontal: false, vertical: true)
             Text(infos.espece.nomLatin)
                 .font(Police.taille(3.2 * u, .bold))
                 .italic()
                 .foregroundStyle(grisCarte)
                 .lineLimit(1)
-                .truncationMode(.tail)
-            Spacer(minLength: 0)
+                .minimumScaleFactor(0.7)
         }
-        .padding(.bottom, 3 * u)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.bottom, 2 * u)
         .overlay(alignment: .bottom) {
             Rectangle().fill(Color(red: 15 / 255, green: 26 / 255, blue: 28 / 255).opacity(0.12)).frame(height: 1)
         }

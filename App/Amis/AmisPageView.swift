@@ -6,7 +6,7 @@ import SwiftUI
 /// Pour un ami, seuls le mois et l'année d'une carte comptent : le fil écrit donc « octobre 2026 », pas un jour exact.
 struct AmisPageView: View {
     let gestion: GestionAmis?
-    /// Mode démo (réglages) : sans iCloud non plus, la page montre ses amis d'exemple, marqués « Exemple ».
+    /// Mode démo (réglages) : sans iCloud non plus, la page montre ses amis de démo.
     @AppStorage("demo.communaute") private var demo = false
 
     init(gestion: GestionAmis?) {
@@ -283,8 +283,8 @@ private struct AmisPageContenu: View {
         HStack(spacing: Espace.m) {
             Avatar(nom: ami.nom)
             VStack(alignment: .leading, spacing: 2) {
-                Text(ami.nom).font(Police.corps).foregroundStyle(Palette.encre)
-                Text(detail).font(Police.detail).foregroundStyle(Palette.encreDouce)
+                Text(ami.nom).font(Police.corps).foregroundStyle(Palette.encre).lineLimit(1).minimumScaleFactor(0.7)
+                Text(detail).font(Police.detail).foregroundStyle(Palette.encreDouce).lineLimit(2)
             }
             Spacer(minLength: Espace.s)
             if ouvrable { Image(systemName: "chevron.right").foregroundStyle(Palette.encreDouce) }

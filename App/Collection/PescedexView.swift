@@ -58,10 +58,7 @@ struct PescedexView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading, spacing: 0) {
-                entete
-                classeur
-            }
+            classeur
             .padding(.horizontal, Espace.bord)
             .background(Palette.fond.ignoresSafeArea())
             .navigationTitle("Pescedex")
@@ -119,6 +116,10 @@ struct PescedexView: View {
                     .foregroundStyle(Palette.encreDouce)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 6)
+            }
+            if zoneEnCartes {
+                blocZone
+                    .padding(.top, Espace.s)
             }
             if let voirAquarium, !estVide {
                 Button(action: voirAquarium) {
@@ -322,14 +323,16 @@ struct PescedexView: View {
     private var aTrouver: [Emplacement] { modele.emplacements.filter { $0.carte == nil } }
 
     private var colonnes: [GridItem] { Array(repeating: GridItem(.flexible(), spacing: Espace.s), count: 3) }
+    /// Les cartes obtenues, deux par ligne : assez grandes pour montrer la photo.
+    private var colonnesCartes: [GridItem] { Array(repeating: GridItem(.flexible(), spacing: Espace.m), count: 2) }
 
     private var classeur: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
+                entete
                 if estVide {
                     if photographier != nil || declarer != nil { pourCommencer } else { premierePrise }
                 } else {
-                    if zoneEnCartes { blocZone }
                     sectionCartes("Trouvées", trouvees)
                     sectionDeclarees
                     sectionATrouver
@@ -374,12 +377,11 @@ struct PescedexView: View {
         if !liste.isEmpty {
             VStack(alignment: .leading, spacing: 0) {
                 enteteDeGroupe("\(titre) · \(liste.count)", haut: 16)
-                LazyVGrid(columns: colonnes, spacing: Espace.s) {
+                LazyVGrid(columns: colonnesCartes, spacing: Espace.m) {
                     ForEach(liste) { emplacement in cellule(emplacement) }
                 }
-                .padding(Espace.m)
-                .tuileFishMe(rayon: Rayon.m)
-                .padding(.top, Espace.s)
+                .padding(.horizontal, Espace.xs)
+                .padding(.top, Espace.m)
             }
         }
     }
@@ -393,23 +395,22 @@ struct PescedexView: View {
                 enteteDeGroupe("Déclarées · \(liste.count)", haut: 16)
                 Group {
                     if liste.count == 1, let seule = liste.first {
-                        UnTiersDeuxTiers(espacement: Espace.s) {
+                        UnTiersDeuxTiers(espacement: Espace.m) {
                             cellule(seule)
                             noteDeclaree
                                 .padding(.horizontal, Espace.s)
                         }
                     } else {
                         VStack(alignment: .leading, spacing: Espace.m) {
-                            LazyVGrid(columns: colonnes, spacing: Espace.s) {
+                            LazyVGrid(columns: colonnesCartes, spacing: Espace.m) {
                                 ForEach(liste) { emplacement in cellule(emplacement) }
                             }
                             noteDeclaree
                         }
                     }
                 }
-                .padding(Espace.m)
-                .tuileFishMe(rayon: Rayon.m)
-                .padding(.top, Espace.s)
+                .padding(.horizontal, Espace.xs)
+                .padding(.top, Espace.m)
             }
         }
     }
@@ -421,25 +422,43 @@ struct PescedexView: View {
             .fixedSize(horizontal: false, vertical: true)
     }
 
-    /// Dos de cartes marine, toutes les espèces pas encore trouvées (P26 B).
+    /// Les emplacements vides, légers, rangés par rareté (commun d'abord : le plus facile à compléter).
     @ViewBuilder
     private var sectionATrouver: some View {
         let liste = aTrouver
         if !liste.isEmpty {
             VStack(alignment: .leading, spacing: 0) {
-                enteteDeGroupe("À trouver · \(liste.count)", haut: 16)
-                LazyVGrid(columns: colonnes, spacing: Espace.s) {
-                    ForEach(liste) { e in
-                        Button { ficheOuverte = e.id } label: { DosAATrouver(espece: e.espece) }
-                            .buttonStyle(.plain)
-                            .accessibilityLabel("\(e.espece.nom), pas encore pris")
+                enteteDeGroupe("À trouver · \(liste.count)", haut: 22)
+                ForEach(paliers, id: \.1) { palier in
+                    let groupe = liste.filter { StyleRarete($0.rarete.niveau) == palier.0 }
+                    if !groupe.isEmpty {
+                        HStack(spacing: 6) {
+                            MarqueRarete(style: palier.0, taille: 14)
+                            Text("\(palier.1) · \(groupe.count)")
+                                .font(Police.taille(13, .heavy))
+                                .foregroundStyle(palier.0.couleur)
+                                .lineLimit(1)
+                        }
+                        .padding(.horizontal, Espace.l)
+                        .padding(.top, Espace.m)
+                        LazyVGrid(columns: colonnes, spacing: Espace.s) {
+                            ForEach(groupe) { e in
+                                Button { ficheOuverte = e.id } label: { EmplacementATrouver(emplacement: e) }
+                                    .buttonStyle(.plain)
+                                    .accessibilityLabel("\(e.espece.nom), pas encore pris")
+                            }
+                        }
+                        .padding(.horizontal, Espace.xs)
+                        .padding(.top, Espace.s)
                     }
                 }
-                .padding(Espace.m)
-                .tuileFishMe(rayon: Rayon.m)
-                .padding(.top, Espace.s)
             }
         }
+    }
+
+    private var paliers: [(StyleRarete, String)] {
+        [(.commun, "Communes"), (.peuCommun, "Peu communes"), (.rare, "Rares"), (.legendaire, "Légendaires"),
+         (.nonMesuree, "Rareté non mesurée")]
     }
 
     /// Les sessions finies sans poisson, rangées à part : six vignettes au plus, puis « + N autres ».
@@ -499,9 +518,7 @@ struct PescedexView: View {
                 ficheOuverte = e.id
             }
         } label: {
-            if let infos = InfosCarte.vignette(emplacement: e, zone: modele.zone) {
-                CarteRectoView(infos: infos, mini: true)
-            }
+            VignetteCarteObtenue(emplacement: e) { carte in await modele.depot.photo(de: carte) }
         }
         .buttonStyle(.plain)
         .accessibilityLabel(libelle(e))
@@ -541,48 +558,6 @@ private struct UnTiersDeuxTiers: Layout {
                           proposal: ProposedViewSize(width: un, height: h1))
         subviews[1].place(at: CGPoint(x: bounds.minX + un + espacement, y: bounds.minY + (bounds.height - h2) / 2),
                           anchor: .topLeading, proposal: ProposedViewSize(width: deux, height: h2))
-    }
-}
-
-/// Le dos d'une carte « à trouver » (`.fc.dos`, P26 B) : marine, les anneaux de l'eau, la silhouette blanche de l'espèce et son nom en bas.
-struct DosAATrouver: View {
-    let espece: EspecePechable
-
-    var body: some View {
-        // Marine fixe (même en mode sombre) pour que le texte blanc reste lisible.
-        CarteCadre(style: .commun, declaree: false, fond: Color(carte: 0x0D4A85)) {
-            GeometryReader { geo in
-                let w = geo.size.width
-                let h = geo.size.height
-                let u = w / 100
-                let rapport: CGFloat = {
-                    guard let image = UIImage(named: espece.image), image.size.height > 0 else { return 2.8 }
-                    return image.size.width / image.size.height
-                }()
-                ZStack(alignment: .topLeading) {
-                    OndesFenetre().opacity(0.18)
-                    Image(espece.image)
-                        .renderingMode(.template)
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundStyle(.white.opacity(0.4))
-                        .frame(width: w * 0.68, height: w * 0.68 / rapport)
-                        .offset(x: w * 0.16, y: h * 0.36)
-                        .accessibilityHidden(true)
-                    Text(espece.nom)
-                        .font(Police.taille(9 * u, .heavy))
-                        .foregroundStyle(.white.opacity(0.85))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.6)
-                        .padding(.horizontal, 6 * u)
-                        .frame(width: w)
-                        .position(x: w / 2, y: h * 0.91 - 4.5 * u)
-                }
-                .frame(width: w, height: h, alignment: .topLeading)
-            }
-        }
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("\(espece.nom), pas encore pris")
     }
 }
 

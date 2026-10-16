@@ -2,10 +2,10 @@ import Core
 import SwiftUI
 import UIKit
 
-/// La carte d'une prise, ouverte en plein écran (P24 A pour le recto, P25 C pour le verso) : le poisson nage, les rares et légendaires brillent,
-/// un toucher la retourne. Le mouvement n'est lancé qu'ici, jamais sur la grille du classeur.
-/// Recto : fond bleu clair, fermer à gauche, retourner et partager à droite, rien d'autre. Verso : fond blanc, fermer et partager,
-/// la photo seule sur la carte (Adem, 16 oct.), et « Voir le recto » en bas.
+/// La carte d'une prise, ouverte depuis le Pescedex : posée au milieu de l'écran, avec de la marge (même cadrage que la révélation,
+/// recto et verso à la même taille), sur un fond sobre. On la fait tourner au doigt (rotation sur Y) ; un toucher ou un glissement
+/// qui dépasse 90 degrés la retourne ; lâchée, elle revient à plat. L'inclinaison de l'iPhone ajoute un léger effet de relief.
+/// Fermer est toujours en haut à gauche ; glisser vers le bas ferme aussi.
 struct CartePleinEcranView: View {
     let infos: InfosCarte
     let photo: Data?
@@ -14,34 +14,43 @@ struct CartePleinEcranView: View {
     var png: Data? = nil
     let fermer: () -> Void
 
-    @State private var retournee = false
+    /// Angle total de la carte autour de Y, en degrés : 0 recto à plat, 180 verso à plat.
+    @State private var angle: Double = 0
+    @State private var angleDebut: Double?
+    @State private var descente: CGFloat = 0
+    @State private var sens: Sens?
     @State private var apercuOuvert = false
     @State private var mouvement = MouvementIPhone()
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
 
-    /// Largeur de la carte à l'écran (la maquette : 302 pt sur 390).
-    private let largeurCarte: CGFloat = 302
+    private enum Sens { case horizontal, vertical }
+
+    private var montreLeRecto: Bool { cos(angle * .pi / 180) > 0 }
 
     var body: some View {
         ZStack {
-            (retournee ? Palette.surface : Palette.tuile).ignoresSafeArea()
+            Palette.fond.ignoresSafeArea()
             VStack(spacing: 0) {
                 entete
-                carte
-                    .frame(width: largeurCarte)
-                    .padding(.top, 15)
-                Spacer(minLength: Espace.l)
-                if retournee {
-                    Button(action: retourner) {
-                        Label("Voir le recto", systemImage: "arrow.triangle.2.circlepath")
-                    }
-                    .buttonStyle(.principal)
-                    .padding(.horizontal, Espace.bord)
-                    .padding(.bottom, 6)
+                GeometryReader { g in
+                    // Même cadrage que la révélation : 24 pt de marge de chaque côté, jamais plus haut que la place disponible.
+                    let largeur = max(1, min(g.size.width - 2 * Espace.xl, (g.size.height - Espace.l) * Gabarit.rapportCarte))
+                    carte
+                        .frame(width: largeur, height: largeur / Gabarit.rapportCarte)
+                        .position(x: g.size.width / 2, y: g.size.height / 2)
                 }
+                Text("Touche la carte pour la retourner")
+                    .font(Police.legende)
+                    .foregroundStyle(Palette.encreDouce)
+                    .frame(minHeight: Gabarit.zoneTactile)
+                    .padding(.horizontal, Espace.bord)
             }
+            .offset(y: descente)
+            .opacity(1 - Double(min(descente, 200)) / 600)
         }
-        .onAppear { if infos.style.aUnReflet && !reduireAnimations { mouvement.demarrer() } }
+        .contentShape(Rectangle())
+        .gesture(glisser)
+        .onAppear { if !reduireAnimations { mouvement.demarrer() } }
         .onDisappear { mouvement.arreter() }
         .fullScreenCover(isPresented: $apercuOuvert) {
             if let png {
@@ -52,72 +61,99 @@ struct CartePleinEcranView: View {
 
     // MARK: En-tête
 
-    /// Haut de l'écran, à 16 pt des bords : fermer à gauche ; retourner (recto seulement) et partager à droite.
+    /// Haut de l'écran, à 16 pt des bords : fermer à gauche ; retourner et partager à droite.
     private var entete: some View {
         HStack(spacing: Espace.s) {
-            if retournee {
-                RondSimple(icone: "xmark", libelle: "Fermer", couleur: Palette.encre, action: fermer)
-            } else {
-                BoutonRond(role: .fermer, rendu: .verre, action: fermer)
-            }
+            BoutonRond(role: .fermer, rendu: .verre, action: fermer)
             Spacer(minLength: 0)
-            if !retournee {
-                RondSimple(icone: "arrow.triangle.2.circlepath", libelle: "Retourner la carte", couleur: Palette.encre,
-                           verre: true, action: retourner)
-            }
+            RondSimple(icone: "arrow.triangle.2.circlepath", libelle: "Retourner la carte", action: retourner)
             if png != nil {
-                RondSimple(icone: "square.and.arrow.up", libelle: "Partager", couleur: retournee ? Palette.marine : Palette.encre,
-                           verre: !retournee) { apercuOuvert = true }
+                RondSimple(icone: "square.and.arrow.up", libelle: "Partager") { apercuOuvert = true }
             }
         }
         .padding(.horizontal, Espace.bord)
     }
 
-    private func retourner() {
-        withAnimation(reduireAnimations ? .easeInOut(duration: 0.2) : .spring(duration: 0.55)) {
-            retournee.toggle()
-        }
-    }
+    // MARK: Carte
 
     private var carte: some View {
-        ZStack {
+        let tourne = !reduireAnimations
+        let reposRecto = abs(angle.truncatingRemainder(dividingBy: 360)) < 0.5
+        // Relief de l'iPhone seulement quand la carte est à plat sur son recto.
+        let reliefX = tourne && reposRecto ? Double(mouvement.inclinaison.height) * -6 : 0
+        let reliefY = tourne && reposRecto ? Double(mouvement.inclinaison.width) * 8 : 0
+        return ZStack {
             CarteRectoView(infos: infos, anime: true, inclinaison: mouvement.inclinaison, refletFixe: reduireAnimations)
-                .opacity(retournee ? 0 : 1)
+                .opacity(montreLeRecto ? 1 : 0)
             CarteVersoView(infos: infos, photo: photo, emplacements: emplacements)
-                .opacity(retournee ? 1 : 0)
-                .rotation3DEffect(.degrees(reduireAnimations ? 0 : 180), axis: (x: 0, y: 1, z: 0))
+                .opacity(montreLeRecto ? 0 : 1)
+                .rotation3DEffect(.degrees(tourne ? 180 : 0), axis: (x: 0, y: 1, z: 0))
         }
-        .rotation3DEffect(.degrees(retournee && !reduireAnimations ? 180 : 0), axis: (x: 0, y: 1, z: 0), perspective: 0.6)
+        .rotation3DEffect(.degrees(tourne ? angle : 0), axis: (x: 0, y: 1, z: 0), perspective: 0.5)
+        .rotation3DEffect(.degrees(reliefX), axis: (x: 1, y: 0, z: 0), perspective: 0.5)
+        .rotation3DEffect(.degrees(reliefY), axis: (x: 0, y: 1, z: 0), perspective: 0.5)
         .contentShape(Rectangle())
         .onTapGesture { retourner() }
         .accessibilityAddTraits(.isButton)
-        .accessibilityHint("Retourne la carte")
+        .accessibilityHint(montreLeRecto ? "Montre le verso" : "Montre le recto")
+    }
+
+    private func retourner() {
+        let cible = ((angle / 180).rounded() + 1) * 180
+        withAnimation(reduireAnimations ? .easeInOut(duration: 0.2) : .spring(duration: 0.55)) { angle = cible }
+    }
+
+    // MARK: Geste
+
+    /// Horizontal : fait tourner la carte, qui se pose sur la face la plus proche en lâchant. Vertical vers le bas : ferme.
+    private var glisser: some Gesture {
+        DragGesture(minimumDistance: 12)
+            .onChanged { v in
+                if sens == nil { sens = abs(v.translation.width) >= abs(v.translation.height) ? .horizontal : .vertical }
+                switch sens {
+                case .horizontal:
+                    if reduireAnimations { return }
+                    if angleDebut == nil { angleDebut = angle }
+                    angle = (angleDebut ?? 0) + Double(v.translation.width) * 0.6
+                case .vertical:
+                    descente = max(0, v.translation.height)
+                case nil:
+                    break
+                }
+            }
+            .onEnded { v in
+                defer { sens = nil; angleDebut = nil }
+                if sens == .vertical {
+                    if v.translation.height > 120 || v.predictedEndTranslation.height > 300 {
+                        fermer()
+                    } else {
+                        withAnimation(.spring(duration: 0.35)) { descente = 0 }
+                    }
+                } else if sens == .horizontal {
+                    let cible = (angle / 180).rounded() * 180
+                    withAnimation(.spring(duration: 0.55, bounce: 0.2)) { angle = cible }
+                }
+            }
     }
 }
 
-/// Bouton rond de 44 pt à icône : de verre (`.rond.verre`) ou sur fond bleu clair (`.rond` du verso).
+/// Bouton rond de 44 pt à icône, de verre comme `BoutonRond`.
 private struct RondSimple: View {
     let icone: String
     let libelle: String
-    let couleur: Color
-    var verre = false
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
             Image(systemName: icone)
                 .font(.system(size: 18, weight: .bold, design: .rounded))
-                .foregroundStyle(couleur)
+                .foregroundStyle(Palette.encre)
                 .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
                 .background {
-                    if verre {
-                        Circle()
-                            .fill(.regularMaterial)
-                            .overlay(Circle().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
-                            .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
-                    } else {
-                        Circle().fill(Palette.tuile)
-                    }
+                    Circle()
+                        .fill(.regularMaterial)
+                        .overlay(Circle().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
+                        .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
                 }
                 .contentShape(Circle())
         }
