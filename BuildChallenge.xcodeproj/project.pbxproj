@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CBB6EBACF7097F5A52A44F8 /* FishMeWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F65635D316F4CA7AD787ABB6 /* FishMeWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DBC0AD0E307678BC00FA6B3C /* Spark in Frameworks */ = {isa = PBXBuildFile; productRef = DBC0AD0D307678BC00FA6B3C /* Spark */; };
 		FE0C0C0130A0000000000003 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = FE0C0C0130A0000000000002 /* Core */; };
 		FE0C0C0130A0000000000005 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = FE0C0C0130A0000000000004 /* Core */; };
 		FE0C0C0130A0000000000006 /* TestConfig.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 146BEF5E7F88B2C4934CB00E /* TestConfig.storekit */; };
-		6CBB6EBACF7097F5A52A44F8 /* FishMeWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F65635D316F4CA7AD787ABB6 /* FishMeWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8795D939B14B5D9AB1EE6E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBE31DBB30753926004DC02F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4DB592F1DF096ACE956B33F;
+			remoteInfo = FishMeWidget;
+		};
 		DBE31DD130753927004DC02F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DBE31DBB30753926004DC02F /* Project object */;
@@ -29,26 +36,17 @@
 			remoteGlobalIDString = DBE31DC230753926004DC02F;
 			remoteInfo = BuildChallenge;
 		};
-		8795D939B14B5D9AB1EE6E80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DBE31DBB30753926004DC02F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E4DB592F1DF096ACE956B33F;
-			remoteInfo = FishMeWidget;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		804A6B478620EED6C511BCDE /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstSubfolder = PlugIns;
 			files = (
 				6CBB6EBACF7097F5A52A44F8 /* FishMeWidget.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -61,6 +59,29 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0097F38EEF3AB0F94E6B05B6 /* Exceptions for "WidgetAquarium" folder in "FishMeWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AstuceAjouterWidget.swift,
+				fabriquer_cycle_nage.py,
+				fabriquer_poissons_volume.py,
+				integrer_poissons_3d.py,
+				Polices/fabriquer_polices.py,
+				"Polices/LICENCE-modele-clignotant.txt",
+				Polices/LISEZMOI.md,
+				PontAquariumWidget.swift,
+				PontCartesWidget.swift,
+				PontSessionWidget.swift,
+			);
+			target = E4DB592F1DF096ACE956B33F /* FishMeWidget */;
+		};
+		2858787429A9DB9DF5F36CE2 /* Exceptions for "Widget" folder in "FishMeWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Session/PilotageActivite.swift,
+			);
+			target = E4DB592F1DF096ACE956B33F /* FishMeWidget */;
+		};
 		B26D89297129488570767A21 /* Exceptions for "Widget" folder in "BuildChallenge" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -72,45 +93,22 @@
 		ECDF41671AB08CAA06479CB4 /* Exceptions for "WidgetAquarium" folder in "BuildChallenge" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				PoissonsWidget.xcassets,
-				Polices/LICENCE-modele-clignotant.txt,
-				Polices/LISEZMOI.md,
-				Polices/fabriquer_polices.py,
 				fabriquer_cycle_nage.py,
 				fabriquer_poissons_volume.py,
 				integrer_poissons_3d.py,
+				PoissonsWidget.xcassets,
+				Polices/fabriquer_polices.py,
+				"Polices/LICENCE-modele-clignotant.txt",
+				Polices/LISEZMOI.md,
 			);
 			target = DBE31DC230753926004DC02F /* BuildChallenge */;
-		};
-		2858787429A9DB9DF5F36CE2 /* Exceptions for "Widget" folder in "FishMeWidget" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Session/PilotageActivite.swift,
-			);
-			target = E4DB592F1DF096ACE956B33F /* FishMeWidget */;
-		};
-		0097F38EEF3AB0F94E6B05B6 /* Exceptions for "WidgetAquarium" folder in "FishMeWidget" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Polices/LICENCE-modele-clignotant.txt,
-				Polices/LISEZMOI.md,
-				Polices/fabriquer_polices.py,
-				AstuceAjouterWidget.swift,
-				PontAquariumWidget.swift,
-				PontCartesWidget.swift,
-				PontSessionWidget.swift,
-				fabriquer_cycle_nage.py,
-				fabriquer_poissons_volume.py,
-				integrer_poissons_3d.py,
-			);
-			target = E4DB592F1DF096ACE956B33F /* FishMeWidget */;
 		};
 		FCE76338372E45435561C7CB /* Exceptions for "AppTests" folder in "BuildChallengeTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				WidgetAquarium/HorlogeAnimationTests.swift,
-				WidgetAquarium/lancer-tests-session.sh,
-				WidgetAquarium/lancer-tests.sh,
+				"WidgetAquarium/lancer-tests-session.sh",
+				"WidgetAquarium/lancer-tests.sh",
 				WidgetAquarium/NageWidgetTests.swift,
 				WidgetAquarium/Package.swift,
 				WidgetAquarium/Package.swift.modele,
@@ -122,7 +120,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Mouvement/LISEZMOI.md,
-				Prise/photo-exemple-source.md,
+				"Prise/photo-exemple-source.md",
 				Style/LISEZMOI.md,
 			);
 			target = DBE31DC230753926004DC02F /* BuildChallenge */;
@@ -130,27 +128,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DBE31DC530753926004DC02F /* BuildChallenge */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				FE0C0C0130A00000000000A1 /* Exceptions for "App" folder in "BuildChallenge" target */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		DBE31DD330753927004DC02F /* BuildChallengeTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				FCE76338372E45435561C7CB /* Exceptions for "AppTests" folder in "BuildChallengeTests" target */,
-			);
-			path = AppTests;
-			sourceTree = "<group>";
-		};
-		DBE31DDD30753927004DC02F /* BuildChallengeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AppUITests;
-			sourceTree = "<group>";
-		};
 		B29CE497196F265084FE656B /* Widget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -169,9 +146,35 @@
 			path = WidgetAquarium;
 			sourceTree = "<group>";
 		};
+		DBE31DC530753926004DC02F /* App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FE0C0C0130A00000000000A1 /* Exceptions for "App" folder in "BuildChallenge" target */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DBE31DD330753927004DC02F /* AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FCE76338372E45435561C7CB /* Exceptions for "AppTests" folder in "BuildChallengeTests" target */,
+			);
+			path = AppTests;
+			sourceTree = "<group>";
+		};
+		DBE31DDD30753927004DC02F /* AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AppUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		67CB204C71CBE4242A41C7C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
 		DBE31DC030753926004DC02F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
@@ -190,22 +193,15 @@
 			files = (
 			);
 		};
-		67CB204C71CBE4242A41C7C3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		DBE31DBA30753926004DC02F = {
 			isa = PBXGroup;
 			children = (
-				DBE31DC530753926004DC02F /* BuildChallenge */,
-				DBE31DD330753927004DC02F /* BuildChallengeTests */,
-				DBE31DDD30753927004DC02F /* BuildChallengeUITests */,
+				DBE31DC530753926004DC02F /* App */,
+				DBE31DD330753927004DC02F /* AppTests */,
+				DBE31DDD30753927004DC02F /* AppUITests */,
 				146BEF5E7F88B2C4934CB00E /* TestConfig.storekit */,
 				DBE31DC430753926004DC02F /* Products */,
 				B29CE497196F265084FE656B /* Widget */,
@@ -242,9 +238,9 @@
 				9FD2AF09CC2680D424630B14 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				DBE31DC530753926004DC02F /* BuildChallenge */,
 				B29CE497196F265084FE656B /* Widget */,
 				B3263ED39F87D60584456137 /* WidgetAquarium */,
+				DBE31DC530753926004DC02F /* App */,
 			);
 			name = BuildChallenge;
 			packageProductDependencies = (
@@ -269,7 +265,7 @@
 				DBE31DD230753927004DC02F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				DBE31DD330753927004DC02F /* BuildChallengeTests */,
+				DBE31DD330753927004DC02F /* AppTests */,
 			);
 			name = BuildChallengeTests;
 			packageProductDependencies = (
@@ -293,7 +289,7 @@
 				DBE31DDC30753927004DC02F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				DBE31DDD30753927004DC02F /* BuildChallengeUITests */,
+				DBE31DDD30753927004DC02F /* AppUITests */,
 			);
 			name = BuildChallengeUITests;
 			productName = BuildChallengeUITests;
@@ -310,15 +306,11 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			fileSystemSynchronizedGroups = (
 				B29CE497196F265084FE656B /* Widget */,
 				B3263ED39F87D60584456137 /* WidgetAquarium */,
 			);
 			name = FishMeWidget;
-			packageProductDependencies = (
-			);
 			productName = FishMeWidget;
 			productReference = F65635D316F4CA7AD787ABB6 /* FishMeWidget.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -333,9 +325,6 @@
 				LastSwiftUpdateCheck = 2700;
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
-					E4DB592F1DF096ACE956B33F = {
-						CreatedOnToolsVersion = 27.0;
-					};
 					DBE31DC230753926004DC02F = {
 						CreatedOnToolsVersion = 27.0;
 					};
@@ -346,6 +335,9 @@
 					DBE31DD930753927004DC02F = {
 						CreatedOnToolsVersion = 27.0;
 						TestTargetID = DBE31DC230753926004DC02F;
+					};
+					E4DB592F1DF096ACE956B33F = {
+						CreatedOnToolsVersion = 27.0;
 					};
 				};
 			};
@@ -376,6 +368,11 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		20C386B6245215E50F83CBB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
 		DBE31DC130753926004DC02F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
@@ -392,16 +389,14 @@
 			files = (
 			);
 		};
-		20C386B6245215E50F83CBB1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BBA791916A8F1646A2B17A8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 		DBE31DBF30753926004DC02F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
@@ -417,16 +412,14 @@
 			files = (
 			);
 		};
-		BBA791916A8F1646A2B17A8C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9FD2AF09CC2680D424630B14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4DB592F1DF096ACE956B33F /* FishMeWidget */;
+			targetProxy = 8795D939B14B5D9AB1EE6E80 /* PBXContainerItemProxy */;
+		};
 		DBE31DD230753927004DC02F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DBE31DC230753926004DC02F /* BuildChallenge */;
@@ -437,14 +430,40 @@
 			target = DBE31DC230753926004DC02F /* BuildChallenge */;
 			targetProxy = DBE31DDB30753927004DC02F /* PBXContainerItemProxy */;
 		};
-		9FD2AF09CC2680D424630B14 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E4DB592F1DF096ACE956B33F /* FishMeWidget */;
-			targetProxy = 8795D939B14B5D9AB1EE6E80 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3C55A41FEE388FA3E06AC332 /* Debug configuration for PBXNativeTarget "FishMeWidget" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/FishMeWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = ZUQ3ZP29N4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/FishMeWidget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FishMeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.mwm.build.challenge.team.01.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
 		DBE31DE030753927004DC02F /* Debug configuration for PBXProject "BuildChallenge" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,15 +590,21 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Config/BuildChallenge.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = ZUQ3ZP29N4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Config/BuildChallenge-Info.plist;
+				INFOPLIST_FILE = "Config/BuildChallenge-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FishMe;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Pour photographier ta prise. La photo reste sur ton iPhone, sans GPS.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Pour te montrer les poissons et les règles près de toi. Ton coin exact ne quitte jamais ton iPhone.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "FishMe enregistre l'image de ta carte dans tes photos quand tu le demandes, sans aucune position.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -604,15 +629,21 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Config/BuildChallenge.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = ZUQ3ZP29N4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Config/BuildChallenge-Info.plist;
+				INFOPLIST_FILE = "Config/BuildChallenge-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FishMe;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Pour photographier ta prise. La photo reste sur ton iPhone, sans GPS.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Pour te montrer les poissons et les règles près de toi. Ton coin exact ne quitte jamais ton iPhone.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "FishMe enregistre l'image de ta carte dans tes photos quand tu le demandes, sans aucune position.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -710,49 +741,18 @@
 			};
 			name = Release;
 		};
-		3C55A41FEE388FA3E06AC332 /* Debug configuration for PBXNativeTarget "FishMeWidget" */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Config/FishMeWidget.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZUQ3ZP29N4;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Config/FishMeWidget-Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = FishMeWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ai.mwm.build.challenge.team.01.widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
 		E45366E1F5185A0BA12CDABB /* Release configuration for PBXNativeTarget "FishMeWidget" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Config/FishMeWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = ZUQ3ZP29N4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Config/FishMeWidget-Info.plist;
+				INFOPLIST_FILE = "Config/FishMeWidget-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FishMeWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -775,6 +775,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6BF245E6BC2E70417D89042C /* Build configuration list for PBXNativeTarget "FishMeWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C55A41FEE388FA3E06AC332 /* Debug configuration for PBXNativeTarget "FishMeWidget" */,
+				E45366E1F5185A0BA12CDABB /* Release configuration for PBXNativeTarget "FishMeWidget" */,
+			);
+			defaultConfigurationName = Release;
+		};
 		DBE31DBE30753926004DC02F /* Build configuration list for PBXProject "BuildChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -804,14 +812,6 @@
 			buildConfigurations = (
 				DBE31DE930753927004DC02F /* Debug configuration for PBXNativeTarget "BuildChallengeUITests" */,
 				DBE31DEA30753927004DC02F /* Release configuration for PBXNativeTarget "BuildChallengeUITests" */,
-			);
-			defaultConfigurationName = Release;
-		};
-		6BF245E6BC2E70417D89042C /* Build configuration list for PBXNativeTarget "FishMeWidget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3C55A41FEE388FA3E06AC332 /* Debug configuration for PBXNativeTarget "FishMeWidget" */,
-				E45366E1F5185A0BA12CDABB /* Release configuration for PBXNativeTarget "FishMeWidget" */,
 			);
 			defaultConfigurationName = Release;
 		};
