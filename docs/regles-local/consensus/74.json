@@ -4197,7 +4197,7 @@
    "valeur": {
     "texte": "toute carpe capturée de nuit doit être remise à l'eau ; une carpe capturée de jour peut être conservée"
    },
-   "phrase": "Lac du Môle : toute carpe capturée de nuit est remise à l'eau, une carpe capturée de jour peut être gardée.",
+   "phrase": "Lac du Môle : toute carpe capturée de nuit est remise à l'eau ; la règle de nuit ne vise pas les carpes prises de jour.",
    "source": {
     "texte": "Arrêté DDT-2025-0445 (réglementation permanente, hors Léman et Annecy), article 6",
     "url": "https://pechehautesavoie.com/wp-content/uploads/2025/03/ARP_2025_peche-eau-douce.pdf",
@@ -9511,7 +9511,7 @@
    "valeur": {
     "cm": 30
    },
-   "phrase": "Au lac d'Arvouin, la truite se garde à partir de 30 cm.",
+   "phrase": "Au lac d'Arvouin, la truite, taille minimale 30 cm.",
    "source": {
     "texte": "Arrêté DDT-2025-0445 du 7 mars 2025 portant réglementation permanente de la pêche en eau douce en Haute-Savoie hors lac Léman et lac d'Annecy, article 7 (note 4)",
     "url": "https://web.archive.org/web/20250311051342id_/https://www.haute-savoie.gouv.fr/contenu/telechargement/47605/302531/file/ARP0445_2025.pdf",
@@ -9552,7 +9552,7 @@
    "valeur": {
     "cm": 30
    },
-   "phrase": "Au lac de Tavaneuse, la truite se garde à partir de 30 cm.",
+   "phrase": "Au lac de Tavaneuse, la truite, taille minimale 30 cm.",
    "source": {
     "texte": "Arrêté DDT-2025-0445 du 7 mars 2025 portant réglementation permanente de la pêche en eau douce en Haute-Savoie hors lac Léman et lac d'Annecy, article 7 (note 4)",
     "url": "https://web.archive.org/web/20250311051342id_/https://www.haute-savoie.gouv.fr/contenu/telechargement/47605/302531/file/ARP0445_2025.pdf",
@@ -9593,7 +9593,7 @@
    "valeur": {
     "cm": 30
    },
-   "phrase": "Dranse : la truite se garde à partir de 30 cm, sur le tronçon de la confluence Dranse de Morzine / Dranse d'Abondance au parement amont du pont de la D1005.",
+   "phrase": "Dranse : la truite, taille minimale 30 cm, sur le tronçon de la confluence Dranse de Morzine / Dranse d'Abondance au parement amont du pont de la D1005.",
    "source": {
     "texte": "Arrêté DDT-2025-0445 du 7 mars 2025 portant réglementation permanente de la pêche en eau douce en Haute-Savoie hors lac Léman et lac d'Annecy, article 7 (liste des cours d'eau à 30 cm)",
     "url": "https://web.archive.org/web/20250311051342id_/https://www.haute-savoie.gouv.fr/contenu/telechargement/47605/302531/file/ARP0445_2025.pdf",
@@ -9635,7 +9635,7 @@
    "valeur": {
     "cm": 30
    },
-   "phrase": "Eau morte : la truite se garde à partir de 30 cm, sur le tronçon du pont de la RD 1508 (Doussard) au lac d'Annecy.",
+   "phrase": "Eau morte : la truite, taille minimale 30 cm, sur le tronçon du pont de la RD 1508 (Doussard) au lac d'Annecy.",
    "source": {
     "texte": "Arrêté DDT-2025-0445 du 7 mars 2025 portant réglementation permanente de la pêche en eau douce en Haute-Savoie hors lac Léman et lac d'Annecy, article 7 (liste des cours d'eau à 30 cm)",
     "url": "https://web.archive.org/web/20250311051342id_/https://www.haute-savoie.gouv.fr/contenu/telechargement/47605/302531/file/ARP0445_2025.pdf",
@@ -14745,7 +14745,7 @@
    "valeur": {
     "texte": "membres de l'AAPPMA Annecy Lac Pêche titulaires d'une carte annuelle : 5 jours par an, le quota quotidien d'ombles ou de corégones peut être porté à 6, sans changer le quota de 8 salmonidés ni le quota annuel de 200"
    },
-   "phrase": "Lac d'Annecy : 5 jours par an, les membres de l'AAPPMA Annecy Lac Pêche (carte annuelle) peuvent garder 6 ombles ou corégones par jour.",
+   "phrase": "Lac d'Annecy : 5 jours par an, pour les membres de l'AAPPMA Annecy Lac Pêche (carte annuelle), quota 6 ombles ou corégones par jour.",
    "source": {
     "texte": "Arrêté DDT-2023-1579 du 21 décembre 2023 portant réglementation permanente de la pêche dans le lac d'Annecy, article 5-2",
     "url": "https://web.archive.org/web/20250314125712id_/https://www.haute-savoie.gouv.fr/contenu/telechargement/43945/280690/file/ARP_DDT_1579.pdf",

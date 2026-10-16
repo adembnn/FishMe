@@ -1950,7 +1950,7 @@
    "valeur": {
     "cm": 60
    },
-   "phrase": "Brochet : 60 cm minimum pour le garder.",
+   "phrase": "Brochet : taille minimale 60 cm.",
    "source": {
     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 (pêche en eau douce 2026), article 3",
     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
@@ -2197,7 +2197,7 @@
     "min_cm": 60,
     "max_cm": 80
    },
-   "phrase": "Brochet : on ne garde que les brochets de 60 à 80 cm ; tout brochet de plus de 80 cm est remis à l'eau immédiatement.",
+   "phrase": "Brochet : taille encadrée : brochets de 60 à 80 cm seulement ; tout brochet de plus de 80 cm est remis à l'eau immédiatement.",
    "source": {
     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 (pêche en eau douce 2026), article 3",
     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
@@ -3895,7 +3895,7 @@
    "valeur": {
     "texte": "tout poisson remis à l'eau (bourriche interdite), sauf les truites qui peuvent être conservées"
    },
-   "phrase": "Plan d'eau de la Clare : tout poisson est remis à l'eau, sauf les truites qui peuvent être gardées.",
+   "phrase": "Plan d'eau de la Clare : tout poisson est remis à l'eau, sauf les truites (taille et quota de la loi).",
    "source": {
     "texte": "Projet d'arrêté du 7 octobre 2025, pêche 2026, page 6/6 (non signé), article 6-6",
     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/37983/251064/file/ap_20251007_seb-bb_ouverture-peche-2026.pdf",
@@ -4092,7 +4092,7 @@
    "valeur": {
     "texte": "prélèvement autorisé sauf pour le black-bass"
    },
-   "phrase": "Plan d'eau de Monlebrel : du 14 février au 30 septembre, on peut garder les poissons sauf le black-bass.",
+   "phrase": "Plan d'eau de Monlebrel : du 14 février au 30 septembre, remise à l'eau obligatoire du black-bass.",
    "source": {
     "texte": "Projet d'arrêté du 7 octobre 2025, pêche 2026, page 6/6 (non signé), article 6-6",
     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/37983/251064/file/ap_20251007_seb-bb_ouverture-peche-2026.pdf",

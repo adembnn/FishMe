@@ -1244,7 +1244,7 @@
    "valeur": {
     "cm": 30
    },
-   "phrase": "Sur la Sioule, la truite fario se garde à partir de 30 cm.",
+   "phrase": "Sur la Sioule, la truite fario, taille minimale 30 cm.",
    "source": {
     "texte": "Arrêté préfectoral n° 2804/2025 du 10 décembre 2025, article 5",
     "url": "https://www.federation-peche-allier.fr/wp-content/uploads/2025/12/Arrete-reglementation-peche-2026.pdf",
@@ -1285,7 +1285,7 @@
    "valeur": {
     "cm": 23
    },
-   "phrase": "Sur le Cher et ses affluents, la truite fario se garde à partir de 23 cm.",
+   "phrase": "Sur le Cher et ses affluents, la truite fario, taille minimale 23 cm.",
    "source": {
     "texte": "Arrêté préfectoral n° 2804/2025 du 10 décembre 2025, article 5",
     "url": "https://www.federation-peche-allier.fr/wp-content/uploads/2025/12/Arrete-reglementation-peche-2026.pdf",
@@ -1326,7 +1326,7 @@
    "valeur": {
     "cm": 23
    },
-   "phrase": "Sur la Besbre à l'aval du pont Clavel, la truite fario se garde à partir de 23 cm.",
+   "phrase": "Sur la Besbre à l'aval du pont Clavel, la truite fario, taille minimale 23 cm.",
    "source": {
     "texte": "Arrêté préfectoral n° 2804/2025 du 10 décembre 2025, article 5",
     "url": "https://www.federation-peche-allier.fr/wp-content/uploads/2025/12/Arrete-reglementation-peche-2026.pdf",
@@ -1367,7 +1367,7 @@
    "valeur": {
     "cm": 23
    },
-   "phrase": "Sur le Sichon, du gué Chervais à la confluence avec le Jolan, la truite fario se garde à partir de 23 cm.",
+   "phrase": "Sur le Sichon, du gué Chervais à la confluence avec le Jolan, la truite fario, taille minimale 23 cm.",
    "source": {
     "texte": "Arrêté préfectoral n° 2804/2025 du 10 décembre 2025, article 5",
     "url": "https://www.federation-peche-allier.fr/wp-content/uploads/2025/12/Arrete-reglementation-peche-2026.pdf",
@@ -1408,7 +1408,7 @@
    "valeur": {
     "cm": 20
    },
-   "phrase": "Dans les autres cours d'eau de 1re catégorie, la truite fario se garde à partir de 20 cm.",
+   "phrase": "Dans les autres cours d'eau de 1re catégorie, la truite fario, taille minimale 20 cm.",
    "source": {
     "texte": "Arrêté préfectoral n° 2804/2025 du 10 décembre 2025, article 5",
     "url": "https://www.federation-peche-allier.fr/wp-content/uploads/2025/12/Arrete-reglementation-peche-2026.pdf",
@@ -1449,7 +1449,7 @@
    "valeur": {
     "cm": 23
    },
-   "phrase": "Le saumon de fontaine se garde à partir de 23 cm.",
+   "phrase": "Le saumon de fontaine, taille minimale 23 cm.",
    "source": {
     "texte": "Arrêté préfectoral n° 2804/2025 du 10 décembre 2025, article 5",
     "url": "https://www.federation-peche-allier.fr/wp-content/uploads/2025/12/Arrete-reglementation-peche-2026.pdf",
@@ -1491,7 +1491,7 @@
     "min_cm": 60,
     "max_cm": 80
    },
-   "phrase": "On garde les brochets de 60 à 80 cm ; plus petit ou plus grand, on remet à l'eau.",
+   "phrase": "Brochet : taille encadrée de 60 à 80 cm ; en dessous ou au-dessus, remise à l'eau.",
    "source": {
     "texte": "Arrêté préfectoral n° 2804/2025 du 10 décembre 2025, article 5",
     "url": "https://www.federation-peche-allier.fr/wp-content/uploads/2025/12/Arrete-reglementation-peche-2026.pdf",
@@ -1532,7 +1532,7 @@
    "valeur": {
     "cm": 50
    },
-   "phrase": "En 2e catégorie, le sandre se garde à partir de 50 cm.",
+   "phrase": "En 2e catégorie, le sandre, taille minimale 50 cm.",
    "source": {
     "texte": "Arrêté préfectoral n° 2804/2025 du 10 décembre 2025, article 5",
     "url": "https://www.federation-peche-allier.fr/wp-content/uploads/2025/12/Arrete-reglementation-peche-2026.pdf",
@@ -5773,7 +5773,7 @@
    "valeur": {
     "cm": 60
    },
-   "phrase": "Retenue de Saint-Clément, zone centrale : le brochet se garde à partir de 60 cm.",
+   "phrase": "Retenue de Saint-Clément, zone centrale : le brochet, taille minimale 60 cm.",
    "source": {
     "texte": "Arrêté préfectoral n° 1639/2020 du 30 juin 2020, article 4",
     "url": "https://www.federation-peche-allier.fr/wp-content/uploads/2018/02/ARR_200630_reglementation_st_clement.pdf",

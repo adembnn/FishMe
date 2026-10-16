@@ -2790,7 +2790,7 @@
    "valeur": {
     "cm": 60
    },
-   "phrase": "Le brochet se garde à partir de 60 cm.",
+   "phrase": "Le brochet, taille minimale 60 cm.",
    "source": {
     "texte": "Arrêté SEEB-PECHE 2022 n° 112 (règlement permanent), article 6",
     "url": "https://www.maine-et-loire.gouv.fr/index.php/contenu/telechargement/14108/96739/file/202212_ap_reglement_permanent_49_-_no112_-_signe.pdf",
@@ -2831,7 +2831,7 @@
    "valeur": {
     "cm": 50
    },
-   "phrase": "En 2e catégorie, le sandre se garde à partir de 50 cm.",
+   "phrase": "En 2e catégorie, le sandre, taille minimale 50 cm.",
    "source": {
     "texte": "Arrêté SEEB-PECHE 2022 n° 112 (règlement permanent), article 6",
     "url": "https://www.maine-et-loire.gouv.fr/index.php/contenu/telechargement/14108/96739/file/202212_ap_reglement_permanent_49_-_no112_-_signe.pdf",
@@ -2872,7 +2872,7 @@
    "valeur": {
     "cm": 40
    },
-   "phrase": "En 2e catégorie, le black-bass se garde à partir de 40 cm.",
+   "phrase": "En 2e catégorie, le black-bass, taille minimale 40 cm.",
    "source": {
     "texte": "Arrêté SEEB-PECHE 2022 n° 112 (règlement permanent), article 6",
     "url": "https://www.maine-et-loire.gouv.fr/index.php/contenu/telechargement/14108/96739/file/202212_ap_reglement_permanent_49_-_no112_-_signe.pdf",
