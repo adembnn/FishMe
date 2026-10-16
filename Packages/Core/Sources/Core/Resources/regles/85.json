@@ -5,6 +5,94 @@
  "textes": [
   {
    "id": "t1",
+   "titre": "Arrêté 25-DDTM85-748 ouverture et fermeture 2026, article 1",
+   "url": "https://www.vix.fr/userfile/documents/PECHE-25-DDTM85-748%20du%2015%20d%C3%A9c_Ouverture%20et%20fermeture%202026%20-%20JUSQU%27AU%2031-12-2026.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2025-12-15"
+  },
+  {
+   "id": "t2",
+   "titre": "Arrêté 25-DDTM85-748 ouverture et fermeture 2026, article 3",
+   "url": "https://www.vix.fr/userfile/documents/PECHE-25-DDTM85-748%20du%2015%20d%C3%A9c_Ouverture%20et%20fermeture%202026%20-%20JUSQU%27AU%2031-12-2026.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2025-12-15"
+  },
+  {
+   "id": "t3",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 5 B 1",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
+  },
+  {
+   "id": "t4",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 2, 3) heures d'interdiction",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
+  },
+  {
+   "id": "t5",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 6 A",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
+  },
+  {
+   "id": "t6",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 6 B 1",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
+  },
+  {
+   "id": "t7",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 6 A et B 2",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
+  },
+  {
+   "id": "t8",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 6 B 3",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
+  },
+  {
+   "id": "t9",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 7, 3",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
+  },
+  {
+   "id": "t10",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 10",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
+  },
+  {
+   "id": "t11",
+   "titre": "Arrêté 21-DDTM85-514 frayères à sandre, article 1",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/21_DDTM85_514.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2021-12-09"
+  },
+  {
+   "id": "t12",
    "titre": "Arrêté 25-DDTM85-748 du 15 décembre 2025, article 1er",
    "url": "https://files.appli-intramuros.com/files/alerts/attachments/category/664/20251222215526765297_25-ddtm85-748-1.pdf",
    "signe_le": null,
@@ -12,7 +100,7 @@
    "version": "2025-12-15"
   },
   {
-   "id": "t2",
+   "id": "t13",
    "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 6 B 3",
    "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
@@ -20,15 +108,7 @@
    "version": "2023-03-20"
   },
   {
-   "id": "t3",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 7 (3)",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
-  },
-  {
-   "id": "t4",
+   "id": "t14",
    "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 10",
    "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
@@ -36,295 +116,223 @@
    "version": "2023-03-20"
   },
   {
-   "id": "t5",
-   "titre": "Arrêté 25-DDTM85-748 du 15 décembre 2025, article 2 (tableau)",
-   "url": "https://files.appli-intramuros.com/files/alerts/attachments/category/664/20251222215526765297_25-ddtm85-748-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2025-12-15"
-  },
-  {
-   "id": "t6",
-   "titre": "Arrêté 25-DDTM85-748 du 15 décembre 2025, article 2 (tableau, « saumon de fontaine »)",
-   "url": "https://files.appli-intramuros.com/files/alerts/attachments/category/664/20251222215526765297_25-ddtm85-748-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2025-12-15"
-  },
-  {
-   "id": "t7",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 2 (2), tableau des ouvertures spécifiques",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
-  },
-  {
-   "id": "t8",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 2 (2), mention « Signalé »",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
-  },
-  {
-   "id": "t9",
-   "titre": "Arrêté 25-DDTM85-748 du 15 décembre 2025, article 2 (poissons migrateurs)",
-   "url": "https://files.appli-intramuros.com/files/alerts/attachments/category/664/20251222215526765297_25-ddtm85-748-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2025-12-15"
-  },
-  {
-   "id": "t10",
-   "titre": "Arrêté 25-DDTM85-748 du 15 décembre 2025, article 4",
-   "url": "https://files.appli-intramuros.com/files/alerts/attachments/category/664/20251222215526765297_25-ddtm85-748-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2025-12-15"
-  },
-  {
-   "id": "t11",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 3 (tableau, relu sur l'image de la page)",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
-  },
-  {
-   "id": "t12",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 4",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
-  },
-  {
-   "id": "t13",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 2 (3), point 3",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
-  },
-  {
-   "id": "t14",
-   "titre": "Arrêté 25-DDTM85-748 du 15 décembre 2025, article 3",
-   "url": "https://files.appli-intramuros.com/files/alerts/attachments/category/664/20251222215526765297_25-ddtm85-748-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2025-12-15"
-  },
-  {
    "id": "t15",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 2 (3), point 2",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 25-DDTM85-748 ouverture et fermeture 2026, article 2",
+   "url": "https://www.vix.fr/userfile/documents/PECHE-25-DDTM85-748%20du%2015%20d%C3%A9c_Ouverture%20et%20fermeture%202026%20-%20JUSQU%27AU%2031-12-2026.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
+   "lu_le": "2026-10-16",
+   "version": "2025-12-15"
   },
   {
    "id": "t16",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 6 A",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 2 (sandre)",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t17",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 7 (1)",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 25-DDTM85-748 ouverture et fermeture 2026, article 2 (brochet : carnassiers dont la pêche reste ouverte)",
+   "url": "https://www.vix.fr/userfile/documents/PECHE-25-DDTM85-748%20du%2015%20d%C3%A9c_Ouverture%20et%20fermeture%202026%20-%20JUSQU%27AU%2031-12-2026.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
-  },
-  {
-   "id": "t18",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 7 (2)",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
-  },
-  {
-   "id": "t19",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023, article 8",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
-  },
-  {
-   "id": "t20",
-   "titre": "Arrêté 25-DDTM85-58 du 25 février 2025, articles 1 et 2",
-   "url": "https://actes.larochesuryon.fr/wp-content/uploads/2025-03-03_03:01:49-pm_2025-Ville-0269-arrete-n-25-ddtm85-58-reserves-quinquennales.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2025-02-25"
-  },
-  {
-   "id": "t21",
-   "titre": "Arrêté 25-DDTM85-748 du 15 décembre 2025 (annuel 2026), article 2",
-   "url": "https://files.appli-intramuros.com/files/alerts/attachments/category/664/20251222215526765297_25-ddtm85-748-1.pdf",
-   "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2025-12-15"
   },
   {
-   "id": "t22",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 3 (tableau lu sur l'image : l'OCR le rend mal ; même valeur dans l'annuel 2026)",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "id": "t18",
+   "titre": "Arrêté 25-DDTM85-748 ouverture et fermeture 2026, article 2 (poissons migrateurs)",
+   "url": "https://www.vix.fr/userfile/documents/PECHE-25-DDTM85-748%20du%2015%20d%C3%A9c_Ouverture%20et%20fermeture%202026%20-%20JUSQU%27AU%2031-12-2026.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
+   "version": "2025-12-15"
+  },
+  {
+   "id": "t19",
+   "titre": "Arrêté 25-DDTM85-748 ouverture et fermeture 2026, article 4",
+   "url": "https://www.vix.fr/userfile/documents/PECHE-25-DDTM85-748%20du%2015%20d%C3%A9c_Ouverture%20et%20fermeture%202026%20-%20JUSQU%27AU%2031-12-2026.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2025-12-15"
+  },
+  {
+   "id": "t20",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 2 (anguille jaune)",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
+  },
+  {
+   "id": "t21",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 2",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
+  },
+  {
+   "id": "t22",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 5 A",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t23",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 2 (2)",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 3",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t24",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 2",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 4",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t25",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 3 (tableau lu sur l'image : l'OCR le rend mal)",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 permanent, annexe I",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t26",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 4",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 permanent, article 8",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t27",
-   "titre": "Arrêté 25-DDTM85-748 du 15 décembre 2025 (annuel 2026), article 4",
-   "url": "https://files.appli-intramuros.com/files/alerts/attachments/category/664/20251222215526765297_25-ddtm85-748-1.pdf",
+   "titre": "Arrêté 25-DDTM85-748 fixant les périodes d'ouverture et de fermeture de la pêche en eau douce en Vendée en 2026, article 2",
+   "url": "https://www.vix.fr/userfile/documents/PECHE-25-DDTM85-748%20du%2015%20d%C3%A9c_Ouverture%20et%20fermeture%202026%20-%20JUSQU%27AU%2031-12-2026.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2025-12-15"
   },
   {
    "id": "t28",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 5 A",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 réglementaire permanent relatif à l'exercice de la pêche en eau douce en Vendée, article 2, 2) Ouvertures spécifiques",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t29",
-   "titre": "Arrêté 25-DDTM85-748 du 15 décembre 2025 (annuel 2026), article 3",
-   "url": "https://files.appli-intramuros.com/files/alerts/attachments/category/664/20251222215526765297_25-ddtm85-748-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 réglementaire permanent relatif à l'exercice de la pêche en eau douce en Vendée, article 3",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2025-12-15"
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
   },
   {
    "id": "t30",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 2 (3)",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 réglementaire permanent relatif à l'exercice de la pêche en eau douce en Vendée, article 4",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t31",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 2 (3) 2",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 réglementaire permanent relatif à l'exercice de la pêche en eau douce en Vendée, article 5 A",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t32",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 6 A",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 25-DDTM85-748 fixant les périodes d'ouverture et de fermeture de la pêche en eau douce en Vendée en 2026, article 4",
+   "url": "https://www.vix.fr/userfile/documents/PECHE-25-DDTM85-748%20du%2015%20d%C3%A9c_Ouverture%20et%20fermeture%202026%20-%20JUSQU%27AU%2031-12-2026.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
+   "lu_le": "2026-10-16",
+   "version": "2025-12-15"
   },
   {
    "id": "t33",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 6 B 3",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 25-DDTM85-748 fixant les périodes d'ouverture et de fermeture de la pêche en eau douce en Vendée en 2026, article 3",
+   "url": "https://www.vix.fr/userfile/documents/PECHE-25-DDTM85-748%20du%2015%20d%C3%A9c_Ouverture%20et%20fermeture%202026%20-%20JUSQU%27AU%2031-12-2026.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2023-03-20"
+   "lu_le": "2026-10-16",
+   "version": "2025-12-15"
   },
   {
    "id": "t34",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 7 (1)",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 réglementaire permanent relatif à l'exercice de la pêche en eau douce en Vendée, article 2, 3) Heures d'interdiction",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t35",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 7 (2)",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 réglementaire permanent relatif à l'exercice de la pêche en eau douce en Vendée, article 6 A",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t36",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 7 (3)",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 réglementaire permanent relatif à l'exercice de la pêche en eau douce en Vendée, article 6 B 3) et annexe 1",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t37",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 8",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 réglementaire permanent relatif à l'exercice de la pêche en eau douce en Vendée, article 6 B 3)",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t38",
-   "titre": "Arrêté 23-DDTM85-92 du 20 mars 2023 (permanent), article 10",
-   "url": "https://www.boisdecene.fr/wp-content/uploads/sites/5/2023/04/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
+   "titre": "Arrêté 23-DDTM85-92 réglementaire permanent relatif à l'exercice de la pêche en eau douce en Vendée, article 7 3)",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
+   "lu_le": "2026-10-16",
    "version": "2023-03-20"
   },
   {
    "id": "t39",
-   "titre": "Arrêté 25-DDTM85-58 du 25 février 2025 (réserves quinquennales), articles 1 et 2",
-   "url": "https://actes.larochesuryon.fr/wp-content/uploads/2025-03-03_03:01:49-pm_2025-Ville-0269-arrete-n-25-ddtm85-58-reserves-quinquennales.pdf",
+   "titre": "Arrêté 23-DDTM85-92 réglementaire permanent relatif à l'exercice de la pêche en eau douce en Vendée, article 8",
+   "url": "https://www.saintphilbertdebouaine.fr/wp-content/uploads/sites/11/2023/05/230320_AP23-DDTM85-92_permanentPeche_signe-1.pdf",
    "signe_le": null,
-   "lu_le": "2026-10-15",
-   "version": "2025-02-25"
+   "lu_le": "2026-10-16",
+   "version": "2023-03-20"
+  },
+  {
+   "id": "t40",
+   "titre": "Tableau carnassiers 2026 de la fédération de Vendée, tableau carnassiers (information)",
+   "url": "https://federation-peche-vendee.fr/wp-content/uploads/2026/01/Tableau-carnassier-2026.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2026"
   }
  ],
  "eaux": [
   {
    "cle": "albert",
-   "nom": "Albert",
+   "nom": "Lac d'Albert",
    "code": null
   },
   {
    "cle": "apremont",
-   "nom": "Apremont",
+   "nom": "Lac d'Apremont",
    "code": null
   },
   {
@@ -333,18 +341,13 @@
    "code": null
   },
   {
-   "cle": "barrages",
-   "nom": "Barrages",
-   "code": null
-  },
-  {
    "cle": "bassin versant de la sevre niortaise",
    "nom": "Bassin versant de la Sèvre Niortaise",
    "code": null
   },
   {
-   "cle": "bretaudiere",
-   "nom": "Bretaudière",
+   "cle": "boulogne",
+   "nom": "Boulogne",
    "code": null
   },
   {
@@ -353,23 +356,8 @@
    "code": null
   },
   {
-   "cle": "bultiere",
-   "nom": "Bultière",
-   "code": null
-  },
-  {
    "cle": "champs",
    "nom": "Canal des Champs",
-   "code": null
-  },
-  {
-   "cle": "chaume 2",
-   "nom": "Chaume 2",
-   "code": null
-  },
-  {
-   "cle": "chausseliere",
-   "nom": "Chausselière",
    "code": null
   },
   {
@@ -383,8 +371,8 @@
    "code": null
   },
   {
-   "cle": "chenal des hautes mers ou petit chenal des hautes mers",
-   "nom": "Chenal des Hautes Mers ou Petit Chenal des Hautes Mers",
+   "cle": "chenal des hautes mers",
+   "nom": "Chenal des Hautes Mers",
    "code": null
   },
   {
@@ -393,48 +381,43 @@
    "code": null
   },
   {
-   "cle": "dispositifs de circulation des poissons des ouvrages dans le lit des cours d eau",
-   "nom": "Dispositifs de circulation des poissons des ouvrages dans le lit des cours d'eau",
+   "cle": "domaine public fluvial de la sevre niortaise",
+   "nom": "Domaine public fluvial de la Sèvre Niortaise",
    "code": null
   },
   {
-   "cle": "etier du dain ou de l epoids",
-   "nom": "Étier du Dain ou de l'Epoids",
+   "cle": "etier du dain",
+   "nom": "Étier du Dain",
    "code": null
   },
   {
-   "cle": "falleron ou etier du port de la roche",
-   "nom": "Falleron ou Étier du Port de la Roche",
+   "cle": "falleron",
+   "nom": "Falleron",
    "code": null
   },
   {
-   "cle": "grand pont de beauvoir ou grand etier de sallertaine",
-   "nom": "Canal du Grand Pont de Beauvoir ou Grand Étier de Sallertaine",
+   "cle": "grand pont de beauvoir",
+   "nom": "Canal du Grand Pont de Beauvoir",
    "code": null
   },
   {
    "cle": "graon",
-   "nom": "Graon",
+   "nom": "Lac du Graon",
    "code": null
   },
   {
-   "cle": "gue chatenay ou riviere de talmont",
-   "nom": "Gué Chatenay ou rivière de Talmont",
+   "cle": "gue chatenay",
+   "nom": "Gué Chatenay",
    "code": null
   },
   {
    "cle": "gue gorand",
-   "nom": "Gué Gorand",
+   "nom": "Lac du Gué Gorand",
    "code": null
   },
   {
-   "cle": "haute riviere",
-   "nom": "Haute Rivière",
-   "code": null
-  },
-  {
-   "cle": "ile ou vertonne",
-   "nom": "Île ou Vertonne",
+   "cle": "ile",
+   "nom": "Île",
    "code": null
   },
   {
@@ -443,8 +426,8 @@
    "code": null
   },
   {
-   "cle": "karuns",
-   "nom": "Karuns",
+   "cle": "l angle guignard",
+   "nom": "Lac de l'Angle Guignard",
    "code": null
   },
   {
@@ -453,13 +436,23 @@
    "code": null
   },
   {
+   "cle": "la bultiere",
+   "nom": "Lac de la Bultière",
+   "code": null
+  },
+  {
    "cle": "la louippe",
    "nom": "Canal de la Louippe",
    "code": null
   },
   {
-   "cle": "la vouraie ou de la silloniere",
-   "nom": "la Vouraie ou de la Sillonière",
+   "cle": "la vouraie",
+   "nom": "Lac de La Vouraie",
+   "code": null
+  },
+  {
+   "cle": "lacs de sorin",
+   "nom": "Lacs de Sorin",
    "code": null
   },
   {
@@ -474,17 +467,17 @@
   },
   {
    "cle": "marillet",
-   "nom": "Marillet",
+   "nom": "Lac du Marillet",
+   "code": null
+  },
+  {
+   "cle": "mervent",
+   "nom": "Lac de Mervent",
    "code": null
   },
   {
    "cle": "moulin papon",
-   "nom": "Moulin Papon",
-   "code": null
-  },
-  {
-   "cle": "narillet",
-   "nom": "Narillet",
+   "nom": "Lac de Moulin Papon",
    "code": null
   },
   {
@@ -493,38 +486,23 @@
    "code": null
   },
   {
-   "cle": "permoullieres",
-   "nom": "Permoullières",
+   "cle": "perrier",
+   "nom": "Canal du Perrier",
    "code": null
   },
   {
-   "cle": "perrier ou de la taillee",
-   "nom": "Canal du Perrier ou de la Taillée",
-   "code": null
-  },
-  {
-   "cle": "pertuis",
-   "nom": "Pertuis",
-   "code": null
-  },
-  {
-   "cle": "plessis bergeret",
-   "nom": "Plessis Bergeret",
-   "code": null
-  },
-  {
-   "cle": "retenues de production d eau potable et plans d eau",
-   "nom": "Retenues de production d'eau potable et plans d'eau",
+   "cle": "pierre brune",
+   "nom": "Lac de Pierre Brune",
    "code": null
   },
   {
    "cle": "rochereau",
-   "nom": "Rochereau",
+   "nom": "Lac de Rochereau",
    "code": null
   },
   {
-   "cle": "sections de cours d eau mitoyennes entre plusieurs departements",
-   "nom": "Sections de cours d'eau mitoyennes entre plusieurs départements",
+   "cle": "sevre nantaise",
+   "nom": "Sèvre Nantaise",
    "code": null
   },
   {
@@ -533,33 +511,13 @@
    "code": null
   },
   {
-   "cle": "sites balises definis par arrete prefectoral",
-   "nom": "Sites balisés définis par arrêté préfectoral",
-   "code": null
-  },
-  {
-   "cle": "tanchet",
-   "nom": "Tanchet",
-   "code": null
-  },
-  {
    "cle": "vie",
    "nom": "Vie",
    "code": null
   },
   {
-   "cle": "vouraie",
-   "nom": "Vouraie",
-   "code": null
-  },
-  {
-   "cle": "zones de frayere a sandre identifiees et balisees",
-   "nom": "Zones de frayère à sandre identifiées et balisées",
-   "code": null
-  },
-  {
-   "cle": "zones de frayere a sandres identifiees et balisees",
-   "nom": "Zones de frayère à sandres identifiées et balisées",
+   "cle": "yon",
+   "nom": "Yon",
    "code": null
   }
  ],
@@ -582,11 +540,2229 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Toute la Vendée est en 2e catégorie : tous les cours d'eau et plans d'eau en amont de la limite de salure des eaux.",
+   "phrase": "Tous les cours d'eau et plans d'eau de Vendée en amont de la limite de salure sont en 2e catégorie.",
    "textes": [
     "t1"
    ],
-   "citation": "tous les cours d'eau et plans d'eau situés en amont de la limite de salure des eaux sont classés en 2° catégorie",
+   "citation": "où tous les cours d'eau et plans d'eau situés en amont de la limite de salure des eaux sont classés en 2° catégorie",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-interdit-vente-poisson",
+   "portee": {
+    "niveau": "departement",
+    "code": "85",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Vente du poisson par les pêcheurs amateurs interdite"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La vente du poisson par les pêcheurs amateurs est interdite.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "La vente du poisson et des grenouilles par les pêcheurs amateurs est interdite.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-grenouilles-autres-interdit-vente",
+   "portee": {
+    "niveau": "departement",
+    "code": "85",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Vente des grenouilles par les pêcheurs amateurs interdite"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La vente des grenouilles par les pêcheurs amateurs est interdite.",
+   "textes": [
+    "t2"
+   ],
+   "citation": "La vente du poisson et des grenouilles par les pêcheurs amateurs est interdite.",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-autre-domaine-public-licence-engins",
+   "portee": {
+    "niveau": "departement",
+    "code": "85",
+    "eau": null,
+    "lieu": "Domaine public fluvial de l'État et eaux visées à l'article L.435-1 (Lay, Vendée, Vie)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "autre",
+   "valeur": {
+    "texte": "Domaine public fluvial de l'État et eaux L.435-1 (Lay, Vendée, Vie) : licence annuelle et carnet de capture pour la pêche aux engins"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Sur le domaine public de l'État, la pêche aux engins demande une licence annuelle et un carnet de capture.",
+   "textes": [
+    "t3"
+   ],
+   "citation": "Tout pêcheur amateur aux engins doit être détenteur d'une licence annuelle à titre individuel délivrée par le Préfet de la Vendée et consigner sa pêche sur le carnet de capture",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-interdit-nasses-releve",
+   "portee": {
+    "niveau": "departement",
+    "code": "85",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Nasses ni placées, ni manoeuvrées, ni relevées du samedi 18 h au lundi 6 h"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Du samedi 18 h au lundi 6 h, les nasses ne peuvent être ni placées, ni manoeuvrées, ni relevées (sauf bosselles et nasses anguillères).",
+   "textes": [
+    "t4"
+   ],
+   "citation": "les nasses (bosselles à anguilles et nasses anguillères exceptées) ne peuvent être ni placées, ni manœuvrées, ni relevées.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-interdit-teleferique",
+   "portee": {
+    "niveau": "departement",
+    "code": "85",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche au téléphérique ou au cassant interdite"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La pêche dite au téléphérique (ou au cassant) est interdite.",
+   "textes": [
+    "t5"
+   ],
+   "citation": "La pêche dite au téléphérique (ou au cassant) est interdite.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-autre-domaine-public-maille-vendeenne",
+   "portee": {
+    "niveau": "departement",
+    "code": "85",
+    "eau": null,
+    "lieu": "Domaine public fluvial de l'État et eaux visées à l'article L.435-1",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "autre",
+   "valeur": {
+    "texte": "Membres de La Maille Vendéenne avec licence amateur : engins et filets du cahier des charges de la location du droit de pêche de l'État"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Sur le domaine public de l'État, les engins et filets autorisés sont ceux du cahier des charges (La Maille Vendéenne).",
+   "textes": [
+    "t6"
+   ],
+   "citation": "autorisés à utiliser les engins et filets figurant au cahier des charges qui fixe les conditions et clauses particulières de la location par l'État du droit de pêche sur le domaine public fluvial",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-autre-sevre-niortaise-cahier-charges",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "85",
+    "eau": "domaine public fluvial de la sevre niortaise",
+    "lieu": "Domaine public fluvial de la Sèvre Niortaise, des Autises et du Mignon (institution interdépartementale du bassin de la Sèvre Niortaise)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "autre",
+   "valeur": {
+    "texte": "Pêcheurs aux lignes, aux engins et aux filets : conditions du cahier des charges de l'institution interdépartementale du bassin de la Sèvre Niortaise, sans déroger à l'arrêté"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Sur la Sèvre Niortaise, les Autises et le Mignon (domaine public), la pêche suit le cahier des charges du gestionnaire.",
+   "textes": [
+    "t7"
+   ],
+   "citation": "autorisés à pêcher selon les conditions de leur cahier des charges consultable sur le site de la préfecture et qui ne dérogent pas aux prescriptions du présent arrêté",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-mode_peche-engin-retenues-balances",
+   "portee": {
+    "niveau": "departement",
+    "code": "85",
+    "eau": null,
+    "lieu": "Retenues de production d'eau potable et plans d'eau (eaux non domaniales)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "Seuls engins autorisés : 6 balances à écrevisses"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Sur les retenues d'eau potable et plans d'eau, seulement 6 balances à écrevisses.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "SUR LES RETENUES DE PRODUCTION D'EAU POTABLE ET PLANS D'EAU, sont uniquement autorisés : - 6 balances à écrevisses - 1 vermée durant la période d'ouverture de la pêche à l'anguille",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-mode_peche-engin-retenues-vermee",
+   "portee": {
+    "niveau": "departement",
+    "code": "85",
+    "eau": null,
+    "lieu": "Retenues de production d'eau potable et plans d'eau (eaux non domaniales)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "texte": "Seuls engins autorisés : 1 vermée durant la période d'ouverture de la pêche à l'anguille"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Sur les retenues d'eau potable et plans d'eau, 1 vermée pendant l'ouverture de l'anguille.",
+   "textes": [
+    "t8"
+   ],
+   "citation": "SUR LES RETENUES DE PRODUCTION D'EAU POTABLE ET PLANS D'EAU, sont uniquement autorisés : - 6 balances à écrevisses - 1 vermée durant la période d'ouverture de la pêche à l'anguille",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-mode_peche-filet-sevre-niortaise-janvier",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "85",
+    "eau": "bassin versant de la sevre niortaise",
+    "lieu": "Bassin versant de la Sèvre Niortaise",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "maille_mm_min": 70,
+    "texte": "Un filet de type droit, trémail, araignée ou épervier par pêcheur amateur, du 16 juin au dernier dimanche de janvier"
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "remplace": null,
+   "phrase": "Bassin de la Sèvre Niortaise : 1 filet par pêcheur amateur (droit, trémail, araignée ou épervier), maille de 70 mm au moins.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "Toutefois, pour le bassin versant de la Sèvre Niortaise, l'usage d'un filet de type droit, trémail, araignée, épervier par pêcheur amateur est autorisé du 16 juin au dernier dimanche de janvier.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-mode_peche-filet-sevre-niortaise-juin-decembre",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "85",
+    "eau": "bassin versant de la sevre niortaise",
+    "lieu": "Bassin versant de la Sèvre Niortaise",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "maille_mm_min": 70,
+    "texte": "Un filet de type droit, trémail, araignée ou épervier par pêcheur amateur, du 16 juin au dernier dimanche de janvier"
+   },
+   "du": "2026-06-16",
+   "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Bassin de la Sèvre Niortaise : 1 filet par pêcheur amateur (droit, trémail, araignée ou épervier), maille de 70 mm au moins.",
+   "textes": [
+    "t9"
+   ],
+   "citation": "Toutefois, pour le bassin versant de la Sèvre Niortaise, l'usage d'un filet de type droit, trémail, araignée, épervier par pêcheur amateur est autorisé du 16 juin au dernier dimanche de janvier.",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-sevre-niortaise",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "sevre niortaise",
+    "lieu": "Sèvre Niortaise : en aval de l'écluse du Carreau d'Or, commune de Marans",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval de l'écluse du Carreau d'Or, commune de Marans"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Sèvre Niortaise : en aval de l'écluse du Carreau d'Or, commune de Marans, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "La Sèvre Niortaise, en aval de l'écluse du Carreau d'Or, commune de Marans",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-canal-de-lucon",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "lucon",
+    "lieu": "Canal de Luçon : en totalité",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en totalité"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Canal de Luçon : en totalité, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Canal de Luçon, en totalité",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-chenal-de-la-dune",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "chenal de la dune",
+    "lieu": "Chenal de la Dune : en aval du barrage de La Dune, commune de Triaize",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval du barrage de La Dune, commune de Triaize"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Chenal de la Dune : en aval du barrage de La Dune, commune de Triaize, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Chenal de la Dune, en aval du barrage de La Dune, commune de Triaize",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-chenal-vieux",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "chenal vieux",
+    "lieu": "Chenal Vieux : en aval du barrage de Triaize, même commune",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval du barrage de Triaize, même commune"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Chenal Vieux : en aval du barrage de Triaize, même commune, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Chenal Vieux, en aval du barrage de Triaize, même commune",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-chenal-de-la-raque",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "chenal de la raque",
+    "lieu": "Chenal de la Raque : en aval du barrage de la Gravelle, limitrophe des communes de Saint-Michel-en-l'Herm et de L'Aiguillon-sur-Mer",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval du barrage de la Gravelle, limitrophe des communes de Saint-Michel-en-l'Herm et de L'Aiguillon-sur-Mer"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Chenal de la Raque : en aval du barrage de la Gravelle, limitrophe des communes de Saint-Michel-en-l'Herm et de L'Aiguillon-sur-Mer, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Chenal de la Raque, en aval du barrage de la Gravelle, limitrophe des communes de Saint-Michel-en-l'Herm et de L'Aiguillon-sur-Mer",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-lay",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "lay",
+    "lieu": "Lay : en aval du barrage de Moricq, communes d'Angles (R.D.) et de Grues (R.G.)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval du barrage de Moricq, communes d'Angles (R.D.) et de Grues (R.G.)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Lay : en aval du barrage de Moricq, communes d'Angles (R.D.) et de Grues (R.G.), c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Lay, en aval du barrage de Moricq, communes d'Angles (R.D.) et de Grues (R.G.)",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-gue-chatenay",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "gue chatenay",
+    "lieu": "Gué Chatenay (rivière de Talmont) : en aval du pont du bourg à Talmont-Saint-Hilaire, même commune",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval du pont du bourg à Talmont-Saint-Hilaire, même commune"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Gué Chatenay ou rivière de Talmont : en aval du pont du bourg à Talmont-Saint-Hilaire, même commune, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Gué Chatenay ou rivière de Talmont, en aval du pont du bourg à Talmont-Saint-Hilaire, même commune",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-chenal-des-hautes-mers",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "chenal des hautes mers",
+    "lieu": "Chenal des Hautes Mers (Petit Chenal des Hautes Mers) : en aval du village de la Planche, commune de Talmont-Saint-Hilaire",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval du village de la Planche, commune de Talmont-Saint-Hilaire"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Chenal des Hautes Mers ou Petit Chenal des Hautes Mers : en aval du village de la Planche, commune de Talmont-Saint-Hilaire, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Chenal des Hautes Mers ou Petit Chenal des Hautes Mers, en aval du village de la Planche, commune de Talmont-Saint-Hilaire",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-ile-vertonne",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "ile",
+    "lieu": "Île (Vertonne) : en aval du Pont Vertou, commune de L'Île-d'Olonne",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval du Pont Vertou, commune de L'Île-d'Olonne"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "L'Île ou Vertonne : en aval du Pont Vertou, commune de L'Île-d'Olonne, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "L'Île ou Vertonne, en aval du Pont Vertou, commune de L'Île-d'Olonne",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-jaunay",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "jaunay",
+    "lieu": "Jaunay : en aval du barrage situé à Saint-Gilles-Croix-de-Vie, à 10 mètres au-dessous du pont qui relie l'Avenue de la Plage au quai rivière et à l'Avenue du Jaunay",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval du barrage situé à Saint-Gilles-Croix-de-Vie, à 10 mètres au-dessous du pont qui relie l'Avenue de la Plage au quai rivière et à l'Avenue du Jaunay"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Jaunay : en aval du barrage situé à Saint-Gilles-Croix-de-Vie, à 10 mètres au-dessous du pont qui relie l'Avenue de la Plage au quai rivière et à l'Avenue du Jaunay, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Jaunay, en aval du barrage situé à Saint-Gilles-Croix-de-Vie, à 10 mètres au-dessous du pont qui relie l'Avenue de la Plage au quai rivière et à l'Avenue du Jaunay",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-auzance",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "auzance",
+    "lieu": "Auzance : en aval du pont de la Grève, communes de Vairé (R.D.) et de L'Île-d'Olonne (R.G.)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval du pont de la Grève, communes de Vairé (R.D.) et de L'Île-d'Olonne (R.G.)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "L'Auzance : en aval du pont de la Grève, communes de Vairé (R.D.) et de L'Île-d'Olonne (R.G.), c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "L'Auzance, en aval du pont de la Grève, communes de Vairé (R.D.) et de L'Île-d'Olonne (R.G.)",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-vie",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "vie",
+    "lieu": "Vie : en aval du barrage des Vallées, communes de Saint-Hilaire-de-Riez (R.D.) et du Fenouiller (R.G.)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval du barrage des Vallées, communes de Saint-Hilaire-de-Riez (R.D.) et du Fenouiller (R.G.)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Vie : en aval du barrage des Vallées, communes de Saint-Hilaire-de-Riez (R.D.) et du Fenouiller (R.G.), c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "La Vie, en aval du barrage des Vallées, communes de Saint-Hilaire-de-Riez (R.D.) et du Fenouiller (R.G.)",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-canal-du-perrier",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "perrier",
+    "lieu": "Canal du Perrier (de la Taillée) : en aval de l'écluse située au confluent de l'étier de La Barre-de-Monts, même commune",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval de l'écluse située au confluent de l'étier de La Barre-de-Monts, même commune"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Canal du Perrier ou de la Taillée : en aval de l'écluse située au confluent de l'étier de La Barre-de-Monts, même commune, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Canal du Perrier ou de la Taillée, en aval de l'écluse située au confluent de l'étier de La Barre-de-Monts, même commune",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-canal-de-la-barre-de-monts",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "la barre de monts",
+    "lieu": "Canal de la Barre de Monts : en totalité",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en totalité"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Canal de la Barre de Monts : en totalité, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Canal de la Barre de Monts, en totalité",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-canal-du-grand-pont-de-beauvoir",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "grand pont de beauvoir",
+    "lieu": "Canal du Grand Pont de Beauvoir (Grand Étier de Sallertaine) : en aval du pont du Poirot, commune de Saint-Urbain",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval du pont du Poirot, commune de Saint-Urbain"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Canal du Grand Pont de Beauvoir ou Grand Étier de Sallertaine : en aval du pont du Poirot, commune de Saint-Urbain, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Canal du Grand Pont de Beauvoir ou Grand Étier de Sallertaine, en aval du pont du Poirot, commune de Saint-Urbain",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-etier-du-dain",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "etier du dain",
+    "lieu": "Étier du Dain (de l'Epoids) : en aval de la caserne dite du Fresne, limitrophe des communes de Bouin et de Beauvoir-sur-Mer",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval de la caserne dite du Fresne, limitrophe des communes de Bouin et de Beauvoir-sur-Mer"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "L'Étier du Dain ou de l'Epoids : en aval de la caserne dite du Fresne, limitrophe des communes de Bouin et de Beauvoir-sur-Mer, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "L'Étier du Dain ou de l'Epoids, en aval de la caserne dite du Fresne, limitrophe des communes de Bouin et de Beauvoir-sur-Mer",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-canal-de-la-louippe",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "la louippe",
+    "lieu": "Canal de la Louippe : commune de Bouin, en totalité",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : commune de Bouin, en totalité"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Canal de la Louippe : commune de Bouin, en totalité, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Canal de la Louippe, commune de Bouin, en totalité",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-canal-des-brochets",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "brochets",
+    "lieu": "Canal des Brochets : commune de Bouin, en totalité",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : commune de Bouin, en totalité"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Canal des Brochets : commune de Bouin, en totalité, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Canal des Brochets, commune de Bouin, en totalité",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-falleron",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "falleron",
+    "lieu": "Falleron (Étier du Port de la Roche) : en aval de l'écluse du port de la Roche, communes de Machecoul (44) et Bois-de-Céné",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : en aval de l'écluse du port de la Roche, communes de Machecoul (44) et Bois-de-Céné"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Falleron ou Étier du Port de la Roche : en aval de l'écluse du port de la Roche, communes de Machecoul (44) et Bois-de-Céné, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Falleron ou Étier du Port de la Roche, en aval de l'écluse du port de la Roche, communes de Machecoul (44) et Bois-de-Céné",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-limite_eau_douce-canal-des-champs",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "champs",
+    "lieu": "Canal des Champs : commune de Bouin, en totalité",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "limite_eau_douce",
+   "valeur": {
+    "texte": "Section située à l'aval de la limite de salure des eaux, soumise à la réglementation maritime : commune de Bouin, en totalité"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Canal des Champs : commune de Bouin, en totalité, c'est la réglementation maritime qui s'applique, plus celle de la pêche en eau douce.",
+   "textes": [
+    "t10"
+   ],
+   "citation": "Le Canal des Champs, commune de Bouin, en totalité",
+   "expire_le": null,
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "marillet",
+    "lieu": "Lac du Marillet (Château-Guibert) : réserve n° 1, Pointe de Corbaon (rive droite du lac), Sur 150 m de part et d'autre de la pointe, 300 m soit 5000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Pointe de Corbaon (rive droite du lac), Sur 150 m de part et d'autre de la pointe, 300 m soit 5000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Marillet : réserve Pointe de Corbaon (rive droite du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "marillet",
+    "lieu": "Lac du Marillet (Château-Guibert) : réserve n° 2, Baie de la Barilleraie (rive droite du lac), Sur les 100 m de la Baie, 100 m soit 2 500 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Baie de la Barilleraie (rive droite du lac), Sur les 100 m de la Baie, 100 m soit 2 500 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Marillet : réserve Baie de la Barilleraie (rive droite du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n3",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "marillet",
+    "lieu": "Lac du Marillet (Château-Guibert) : réserve n° 3, Baie de la Rousselière (rive gauche du lac), Sur les 50 m de la Baie, 50 m soit 250 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Baie de la Rousselière (rive gauche du lac), Sur les 50 m de la Baie, 50 m soit 250 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Marillet : réserve Baie de la Rousselière (rive gauche du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n4",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "marillet",
+    "lieu": "Lac du Marillet (Château-Guibert) : réserve n° 4, Pointe des Picoulières (rive droite du lac), Sur 75 m de part et d'autre de la pointe, 150 m soit 2 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Pointe des Picoulières (rive droite du lac), Sur 75 m de part et d'autre de la pointe, 150 m soit 2 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Marillet : réserve Pointe des Picoulières (rive droite du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n5",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "marillet",
+    "lieu": "Lac du Marillet (Château-Guibert) : réserve n° 5, Pointe du ruisseau de la Rochette (rive droite du lac), Sur 250 m de part et d'autre de la pointe, 500 m soit 9 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Pointe du ruisseau de la Rochette (rive droite du lac), Sur 250 m de part et d'autre de la pointe, 500 m soit 9 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Marillet : réserve Pointe du ruisseau de la Rochette (rive droite du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n6",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "marillet",
+    "lieu": "Lac du Marillet (Château-Guibert) : réserve n° 6, Pointe de Bellevue (rive gauche), Sur 150 m de part et d'autre de la pointe, 300 m soit 4 500 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Pointe de Bellevue (rive gauche), Sur 150 m de part et d'autre de la pointe, 300 m soit 4 500 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Marillet : réserve Pointe de Bellevue (rive gauche) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n7",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "marillet",
+    "lieu": "Lac du Marillet (Château-Guibert) : réserve n° 7, Réserve de l'Oucherie (rive droite du lac), Sur 100 m à gauche du chemin jusqu'à la passerelle engloutie, sur 50 m à droite du chemin, Sur 150 m de long par 20 m de large soit 3000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de l'Oucherie (rive droite du lac), Sur 100 m à gauche du chemin jusqu'à la passerelle engloutie, sur 50 m à droite du chemin, Sur 150 m de long par 20 m de large soit 3000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Marillet : réserve Réserve de l'Oucherie (rive droite du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n8",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "marillet",
+    "lieu": "Lac du Marillet (Château-Guibert) : réserve n° 8, Réserve de la Grassière (rive gauche du lac), Pont de la Grassière, sur 150 m en aval, Sur 150 m de long par 20 m de large soit 3 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de la Grassière (rive gauche du lac), Pont de la Grassière, sur 150 m en aval, Sur 150 m de long par 20 m de large soit 3 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Marillet : réserve Réserve de la Grassière (rive gauche du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n9",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "marillet",
+    "lieu": "Lac du Marillet (Château-Guibert) : réserve n° 9, Pointe de la Brunetière (partie Moinie), Sur 300 m de part et d'autre de la pointe, 16 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Pointe de la Brunetière (partie Moinie), Sur 300 m de part et d'autre de la pointe, 16 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Marillet : réserve Pointe de la Brunetière (partie Moinie) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n10",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "marillet",
+    "lieu": "Lac du Marillet (Château-Guibert) : réserve n° 10, Réserve du pont de Luçon (partie Tourteron), Pont de Luçon, 250 m en aval du pont sur les 2 rives, Sur les 2 rives sur 250 m soit 4 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve du pont de Luçon (partie Tourteron), Pont de Luçon, 250 m en aval du pont sur les 2 rives, Sur les 2 rives sur 250 m soit 4 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Marillet : réserve Réserve du pont de Luçon (partie Tourteron) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-la-vouraie-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "la vouraie",
+    "lieu": "Lac de La Vouraie (Saint-Hilaire-de-Voust) : réserve n° 1, Réserve de l'anse du Viaduc (en rive gauche du lac), Sur 450 m de part et d'autre de la pointe de l'anse, Sur 450 m sur les 2 rives soit 19 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de l'anse du Viaduc (en rive gauche du lac), Sur 450 m de part et d'autre de la pointe de l'anse, Sur 450 m sur les 2 rives soit 19 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de La Vouraie : réserve Réserve de l'anse du Viaduc (en rive gauche du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-la-vouraie-n2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "la vouraie",
+    "lieu": "Lac de La Vouraie (Saint-Hilaire-de-Voust) : réserve n° 2, Réserve de l'anse de la Cambaudière (en rive gauche du lac), Sur 400 m de part et d'autre de la pointe de l'anse, Sur 800 m de rive soit 14 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de l'anse de la Cambaudière (en rive gauche du lac), Sur 400 m de part et d'autre de la pointe de l'anse, Sur 800 m de rive soit 14 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de La Vouraie : réserve Réserve de l'anse de la Cambaudière (en rive gauche du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-la-vouraie-n3",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "la vouraie",
+    "lieu": "Lac de La Vouraie (Bournezeau) : réserve n° 3, Réserve frayère aval rive droite viaduc (rive droite du lac), Sur 100 m de rive et 20 m de large, 2 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve frayère aval rive droite viaduc (rive droite du lac), Sur 100 m de rive et 20 m de large, 2 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de La Vouraie : réserve Réserve frayère aval rive droite viaduc (rive droite du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-la-vouraie-n4",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "la vouraie",
+    "lieu": "Lac de La Vouraie (Saint-Hilaire-de-Voust) : réserve n° 4, Anse de Rassouillet (en rive gauche du lac), Sur 180 m de part et d'autre de la pointe de l'anse, Sur 360 m soit 9 500 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Anse de Rassouillet (en rive gauche du lac), Sur 180 m de part et d'autre de la pointe de l'anse, Sur 360 m soit 9 500 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de La Vouraie : réserve Anse de Rassouillet (en rive gauche du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-jaunay-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "jaunay",
+    "lieu": "Lac du Jaunay (La Chapelle-Hermier) : réserve n° 1, Réserve du grand bois, Sur 250 mètres de rives, Sur les 250 m de rive soit 9000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve du grand bois, Sur 250 mètres de rives, Sur les 250 m de rive soit 9000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Jaunay : réserve Réserve du grand bois fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-jaunay-n2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "jaunay",
+    "lieu": "Lac du Jaunay (St Julien et Landevieille) : réserve n° 2, Anse de La Roche Guillaume (en rive gauche du lac), De la pointe de l'anse à la passerelle, Soit 9 500 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Anse de La Roche Guillaume (en rive gauche du lac), De la pointe de l'anse à la passerelle, Soit 9 500 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Jaunay : réserve Anse de La Roche Guillaume (en rive gauche du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-jaunay-n3",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "jaunay",
+    "lieu": "Lac du Jaunay (Landevieille) : réserve n° 3, Anse de la Servantière (en rive gauche du lac), Sur 150 m de part et d'autre de la pointe de l'anse, Soit 6 500 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Anse de la Servantière (en rive gauche du lac), Sur 150 m de part et d'autre de la pointe de l'anse, Soit 6 500 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Jaunay : réserve Anse de la Servantière (en rive gauche du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-la-bultiere-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "la bultiere",
+    "lieu": "Lac de la Bultière (Chavagnes-en-Paillers et Boissière-de-Montaigu) : réserve n° 1, Réserve aval Pont de Preuilly, Pont de Preuilly, 50 m en aval du pont, 50 m sur les 2 rives soit une surface de 4 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve aval Pont de Preuilly, Pont de Preuilly, 50 m en aval du pont, 50 m sur les 2 rives soit une surface de 4 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de la Bultière : réserve Réserve aval Pont de Preuilly fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-la-bultiere-n2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "la bultiere",
+    "lieu": "Lac de la Bultière (Boissière-de-Montaigu) : réserve n° 2, Couarde de la Flatrière (rive droite), Rectangle de 150 m par 65 m situé entre la limite du parcours carpe et le barrage, 9 750 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Couarde de la Flatrière (rive droite), Rectangle de 150 m par 65 m situé entre la limite du parcours carpe et le barrage, 9 750 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de la Bultière : réserve Couarde de la Flatrière (rive droite) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-rochereau-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "rochereau",
+    "lieu": "Lac de Rochereau (Sigournais et Monsireigne) : réserve n° 1, Réserve aval Pont de la Louraie, Ouvrage, sur 20 m en aval immédiat de l'ouvrage, 20 m en aval immédiat soit 4 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve aval Pont de la Louraie, Ouvrage, sur 20 m en aval immédiat de l'ouvrage, 20 m en aval immédiat soit 4 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de Rochereau : réserve Réserve aval Pont de la Louraie fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-rochereau-n2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "rochereau",
+    "lieu": "Lac de Rochereau (Sigournais et Chavagnes-les-Redoux) : réserve n° 2, Réserve aval barrage de la Bouillère, Ouvrage, sur 20 m en aval immédiat de l'ouvrage, 30 m en aval immédiat de l'ouvrage soit 2 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve aval barrage de la Bouillère, Ouvrage, sur 20 m en aval immédiat de l'ouvrage, 30 m en aval immédiat de l'ouvrage soit 2 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de Rochereau : réserve Réserve aval barrage de la Bouillère fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-rochereau-n3",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "rochereau",
+    "lieu": "Lac de Rochereau (Bazoges-en-Pareds) : réserve n° 3, Réserve de l'anse située à proximité de la descente à bateaux (rive gauche), Sur 500 m de part et d'autre de la pointe, Surface de 5 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de l'anse située à proximité de la descente à bateaux (rive gauche), Sur 500 m de part et d'autre de la pointe, Surface de 5 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de Rochereau : réserve Réserve de l'anse située à proximité de la descente à bateaux (rive gauche) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-langle-guignard-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "l angle guignard",
+    "lieu": "Lac de l'Angle Guignard (La Réorthe et Chantonnay) : réserve n° 1, Couarde du ruisseau de l'étang perdu, Sur 150 m de part et d'autre de la pointe, Surface de 5 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Couarde du ruisseau de l'étang perdu, Sur 150 m de part et d'autre de la pointe, Surface de 5 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de l'Angle Guignard : réserve Couarde du ruisseau de l'étang perdu fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lacs-de-sorin-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "lacs de sorin",
+    "lieu": "Lacs de Sorin (Poiroux) : réserve n° 1, Réserve du « Moulin de Sorin » sur Sorin (rive droite), Rectangle de 100 m par 50 m situé en bordure au lieu-dit « Moulin de Sorin », Surface de 5 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve du « Moulin de Sorin » sur Sorin (rive droite), Rectangle de 100 m par 50 m situé en bordure au lieu-dit « Moulin de Sorin », Surface de 5 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lacs de Sorin : réserve Réserve du « Moulin de Sorin » sur Sorin (rive droite) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-dalbert-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "albert",
+    "lieu": "Lac d'Albert (Saint-Michel-le-Cloucq) : réserve n° 1, Réserve de l'anse de la « Martrie » (rive gauche du lac), 150 m de part et d'autre de la pointe, Toute l'anse soit 6 500 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de l'anse de la « Martrie » (rive gauche du lac), 150 m de part et d'autre de la pointe, Toute l'anse soit 6 500 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac d'Albert : réserve Réserve de l'anse de la « Martrie » (rive gauche du lac) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-dalbert-n2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "albert",
+    "lieu": "Lac d'Albert (Foussay et Payré) : réserve n° 2, Réserve de l'anse du Bois de la Baugisière (rive droite), Anse de 80 m de long par 20 m de large, Totalité de l'anse du Bois de la Baugisière",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de l'anse du Bois de la Baugisière (rive droite), Anse de 80 m de long par 20 m de large, Totalité de l'anse du Bois de la Baugisière"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac d'Albert : réserve Réserve de l'anse du Bois de la Baugisière (rive droite) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-pierre-brune-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "pierre brune",
+    "lieu": "Lac de Pierre Brune (Vouvant) : réserve n° 1, Réserve du Chemin du Petit Château (rive gauche), Sur 80 m de rives en berge par 20 m de large, Soit 1 600 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve du Chemin du Petit Château (rive gauche), Sur 80 m de rives en berge par 20 m de large, Soit 1 600 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de Pierre Brune : réserve Réserve du Chemin du Petit Château (rive gauche) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-mervent-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "mervent",
+    "lieu": "Lac de Mervent (Mervent) : réserve n° 1, Réserve de Mongoustan (rive droite après le Pont de la Vallée), Sur 50 m de rives en berge par 20 m de large, Soit 1 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de Mongoustan (rive droite après le Pont de la Vallée), Sur 50 m de rives en berge par 20 m de large, Soit 1 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de Mervent : réserve Réserve de Mongoustan (rive droite après le Pont de la Vallée) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-gue-gorand-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "gue gorand",
+    "lieu": "Lac du Gué Gorand (Coëx) : réserve n° 1, Réserve du Chemin du Petit Château, Pont de la Guérinière, 70 m en aval du pont, 70 m sur les 2 rives",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve du Chemin du Petit Château, Pont de la Guérinière, 70 m en aval du pont, 70 m sur les 2 rives"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Gué Gorand : réserve Réserve du Chemin du Petit Château fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-de-moulin-papon-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "moulin papon",
+    "lieu": "Lac de Moulin Papon (La Ferrière, La Roche-sur-Yon et Dompierre-sur-Yon) : réserve n° 1, Réserve de Moulin Neuf, Du clapet de Foliot à l'amont du pont de Moulin Neuf, Soit une surface de 10 hectares",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de Moulin Neuf, Du clapet de Foliot à l'amont du pont de Moulin Neuf, Soit une surface de 10 hectares"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac de Moulin Papon : réserve Réserve de Moulin Neuf fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-du-graon-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "graon",
+    "lieu": "Lac du Graon (Saint-Vincent-sur-Graon) : réserve n° 1, Réserve de la Branche du Fossé Chalong, Sur 600 m en amont du pont de la route de la Glorandière (D85), jusqu'à ce pont, Soit sur une surface de 3 hectares",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de la Branche du Fossé Chalong, Sur 600 m en amont du pont de la route de la Glorandière (D85), jusqu'à ce pont, Soit sur une surface de 3 hectares"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac du Graon : réserve Réserve de la Branche du Fossé Chalong fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lac-dapremont-n1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "85",
+    "eau": "apremont",
+    "lieu": "Lac d'Apremont (Aizenay) : réserve n° 1, Couarde de la Mouzinière, La totalité de la couarde, La totalité de la couarde soit 9 000 m²",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Couarde de la Mouzinière, La totalité de la couarde, La totalité de la couarde soit 9 000 m²"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lac d'Apremont : réserve Couarde de la Mouzinière fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "sevre nantaise",
+    "lieu": "Sèvre Nantaise (Treize-Vents et Les Épesses) : réserve n° 1, Réserve de la Chaussée du Grand Moulin, La Chaussée, sur 50 m en aval de la chaussée, 50 m",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de la Chaussée du Grand Moulin, La Chaussée, sur 50 m en aval de la chaussée, 50 m"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Sèvre Nantaise : réserve Réserve de la Chaussée du Grand Moulin fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "sevre nantaise",
+    "lieu": "Sèvre Nantaise (Treize-Vents et Les Épesses) : réserve n° 2, Réserve de la Chaussée de Froment, La Chaussée, sur 50 m en aval de la chaussée, 50 m",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de la Chaussée de Froment, La Chaussée, sur 50 m en aval de la chaussée, 50 m"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Sèvre Nantaise : réserve Réserve de la Chaussée de Froment fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n3",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "sevre nantaise",
+    "lieu": "Sèvre Nantaise (Les Épesses et Mallièvre) : réserve n° 3, Réserve de la Chaussée de Moulin Baubry, La Chaussée, sur 50 m en aval de la chaussée, 50 m",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de la Chaussée de Moulin Baubry, La Chaussée, sur 50 m en aval de la chaussée, 50 m"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Sèvre Nantaise : réserve Réserve de la Chaussée de Moulin Baubry fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n4",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "sevre nantaise",
+    "lieu": "Sèvre Nantaise (Évrunes et Mortagne-sur-Sèvre) : réserve n° 4, Réserve de la Chaussée de Gazeau, La Chaussée, sur 100 m en rive droite et 80 m en rive gauche, 100 m",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de la Chaussée de Gazeau, La Chaussée, sur 100 m en rive droite et 80 m en rive gauche, 100 m"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Sèvre Nantaise : réserve Réserve de la Chaussée de Gazeau fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n5",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "sevre nantaise",
+    "lieu": "Sèvre Nantaise (Saint-Aubin-des-Ormeaux) : réserve n° 5, Réserve de la Chaussée de Grenon, La Chaussée, sur 100 m en aval de la chaussée, 100 m",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de la Chaussée de Grenon, La Chaussée, sur 100 m en aval de la chaussée, 100 m"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Sèvre Nantaise : réserve Réserve de la Chaussée de Grenon fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n6",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "sevre nantaise",
+    "lieu": "Sèvre Nantaise (Saint-Aubin-des-Ormeaux) : réserve n° 6, Réserve du barrage des rivières, Barrage, 200 m en aval du barrage, 200 m",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve du barrage des rivières, Barrage, 200 m en aval du barrage, 200 m"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Sèvre Nantaise : réserve Réserve du barrage des rivières fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n7",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "sevre nantaise",
+    "lieu": "Sèvre Nantaise (Saint-Aubin-des-Ormeaux et Longeron (49)) : réserve n° 7, Réserve de la Chaussée de Gallard, La Chaussée, 200 m en aval de la chaussée, 200 m",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de la Chaussée de Gallard, La Chaussée, 200 m en aval de la chaussée, 200 m"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Sèvre Nantaise : réserve Réserve de la Chaussée de Gallard fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n8",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "sevre nantaise",
+    "lieu": "Sèvre Nantaise (Cugand (85) et Gétigné (44)) : réserve n° 8, Réserve de la Chaussée de Hucheloup (1), La passerelle, sur 80 m en aval de la passerelle, 80 m",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de la Chaussée de Hucheloup (1), La passerelle, sur 80 m en aval de la passerelle, 80 m"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Sèvre Nantaise : réserve Réserve de la Chaussée de Hucheloup (1) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n9",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "sevre nantaise",
+    "lieu": "Sèvre Nantaise (Cugand (85) et Gétigné (44)) : réserve n° 9, Réserve de la Chaussée de Hucheloup (2), À 350 m en amont de la chaussée, à 300 m en amont de la chaussée, Sur 50 m de part et d'autre sur les 2 rives (3000 m²)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de la Chaussée de Hucheloup (2), À 350 m en amont de la chaussée, à 300 m en amont de la chaussée, Sur 50 m de part et d'autre sur les 2 rives (3000 m²)"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Sèvre Nantaise : réserve Réserve de la Chaussée de Hucheloup (2) fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lay-n1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "lay",
+    "lieu": "Lay (Mareuil-sur-Lay) : réserve n° 1, Réserve de l'embouchure du Marillet / le Lay, 50 m en amont de l'embouchure avec le Marillet, 50 m en aval, Sur 150 m sur les 2 rives",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de l'embouchure du Marillet / le Lay, 50 m en amont de l'embouchure avec le Marillet, 50 m en aval, Sur 150 m sur les 2 rives"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lay : réserve Réserve de l'embouchure du Marillet / le Lay fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lay-n2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "lay",
+    "lieu": "Lay (Mareuil-sur-Lay) : réserve n° 2, Réserve de la Mothe Gallard, Sur 50 m sur les 2 rives, Sur 50 m sur les 2 rives",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de la Mothe Gallard, Sur 50 m sur les 2 rives, Sur 50 m sur les 2 rives"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lay : réserve Réserve de la Mothe Gallard fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lay-n3",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "lay",
+    "lieu": "Lay (Mareuil-sur-Lay) : réserve n° 3, Réserve Lavert, Sur 50 m sur les 2 rives, Sur 50 m sur les 2 rives",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve Lavert, Sur 50 m sur les 2 rives, Sur 50 m sur les 2 rives"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lay : réserve Réserve Lavert fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lay-et-yon-n1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "lay",
+    "lieu": "Lay (Péault et La Couture) : réserve n° 1, Réserve des Touches, Sur 50 m sur les 2 rives, 50 m sur les 2 rives",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve des Touches, Sur 50 m sur les 2 rives, 50 m sur les 2 rives"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lay et Yon : réserve Réserve des Touches fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lay-et-yon-n2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "lay",
+    "lieu": "Lay (Péault et La Couture) : réserve n° 2, Réserve des Chailloux, Sur 50 m sur les 2 rives (à 200 m en amont du pont Eiffel), 50 m sur les 2 rives",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve des Chailloux, Sur 50 m sur les 2 rives (à 200 m en amont du pont Eiffel), 50 m sur les 2 rives"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lay et Yon : réserve Réserve des Chailloux fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lay-et-yon-n3",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "lay",
+    "lieu": "Lay (Péault) : réserve n° 3, Réserve de l'ancien bras du Lay, Sur la totalité du bras, 1 160 m sur les 2 rives",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de l'ancien bras du Lay, Sur la totalité du bras, 1 160 m sur les 2 rives"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lay et Yon : réserve Réserve de l'ancien bras du Lay fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lay-et-yon-n4",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "lay",
+    "lieu": "Lay (La Bretonnière-la-Claye) : réserve n° 4, Réserve Mortevieille / portes de Jars, Aval portes de Mortevieille, 50 m en amont des portes de Jars, 950 m sur les 2 rives",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve Mortevieille / portes de Jars, Aval portes de Mortevieille, 50 m en amont des portes de Jars, 950 m sur les 2 rives"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lay et Yon : réserve Réserve Mortevieille / portes de Jars fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-lay-et-yon-n5",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "yon",
+    "lieu": "Yon (Rosnay et Le Champ-Saint-Père) : réserve n° 5, Réserve sur l'Yon, confluence avec le Lay, De la porte de l'Yon à la confluence avec le Lay, 250 m des 2 rives",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve sur l'Yon, confluence avec le Lay, De la porte de l'Yon à la confluence avec le Lay, 250 m des 2 rives"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Lay et Yon : réserve Réserve sur l'Yon, confluence avec le Lay fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-vie-n1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "vie",
+    "lieu": "Vie (Fenouiller et Saint-Hilaire-de-Riez) : réserve n° 1, Réserve de pêche du barrage de Fenouiller, Barrage du Fenouiller, sur 80 m en aval du barrage, 80 m",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de pêche du barrage de Fenouiller, Barrage du Fenouiller, sur 80 m en aval du barrage, 80 m"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Vie : réserve Réserve de pêche du barrage de Fenouiller fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "85-toutes-reserve-frayere-sandre-boulogne-n1",
+   "portee": {
+    "niveau": "troncon",
+    "code": "85",
+    "eau": "boulogne",
+    "lieu": "Boulogne (Saint-Philbert-de-Bouaine et Saint-Colomban) : réserve n° 1, Réserve de pêche de la chaussée de la Vrignaie, 50 m en amont de la chaussée de la Vrignaie, 1500 m en aval de la chaussée de la Vrignaie, 1550 m",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Pêche par tous moyens sur toutes espèces interdite du 1er février au 31 mai : Réserve de pêche de la chaussée de la Vrignaie, 50 m en amont de la chaussée de la Vrignaie, 1500 m en aval de la chaussée de la Vrignaie, 1550 m"
+   },
+   "du": "2026-02-01",
+   "au": "2026-05-31",
+   "remplace": null,
+   "phrase": "Boulogne : réserve Réserve de pêche de la chaussée de la Vrignaie fermée à toute pêche du 1er février au 31 mai 2026.",
+   "textes": [
+    "t11"
+   ],
+   "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
    "expire_le": "2026-12-31",
    "statut": "brouillon",
    "verifie_par": null
@@ -612,7 +2788,7 @@
    "remplace": null,
    "phrase": "La pêche aux lignes est autorisée du 1er janvier au 31 décembre 2026, sauf pour les espèces citées à part.",
    "textes": [
-    "t1"
+    "t12"
    ],
    "citation": "la pêche aux lignes, aux engins, et aux filets est autorisée du 1er janvier au 31 décembre 2026",
    "expire_le": "2026-12-31",
@@ -640,7 +2816,7 @@
    "remplace": null,
    "phrase": "La pêche aux engins et aux filets est autorisée du 1er janvier au 31 décembre 2026, dans les conditions de l'arrêté permanent.",
    "textes": [
-    "t1"
+    "t12"
    ],
    "citation": "la pêche aux lignes, aux engins, et aux filets est autorisée du 1er janvier au 31 décembre 2026",
    "expire_le": "2026-12-31",
@@ -668,7 +2844,7 @@
    "remplace": null,
    "phrase": "3 nasses à poissons (hors anguille) autorisées, maille de 27 mm minimum.",
    "textes": [
-    "t2"
+    "t13"
    ],
    "citation": "- 3 nasses à poissons (hors anguille)",
    "expire_le": null,
@@ -696,90 +2872,9 @@
    "remplace": null,
    "phrase": "Lignes de fond : 18 hameçons au total, eschés aux vers uniquement (vifs interdits), pendant l'ouverture de l'anguille jaune.",
    "textes": [
-    "t2"
+    "t13"
    ],
    "citation": "des lignes de fond munies pour l'ensemble de 18 hameçons eschées aux vers uniquement",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-mode_peche-balances-ecrevisses",
-   "portee": {
-    "niveau": "departement",
-    "code": "85",
-    "eau": null,
-    "lieu": "Eaux non domaniales (domaine privé), hors retenues de production d'eau potable et plans d'eau",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "mode_peche",
-   "valeur": {
-    "texte": "6 balances à écrevisses, 30 cm de diamètre ou de diagonale au plus, maille de 10 mm minimum"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "6 balances à écrevisses autorisées.",
-   "textes": [
-    "t2"
-   ],
-   "citation": "- 6 balances à écrevisses",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-mode_peche-carafe",
-   "portee": {
-    "niveau": "departement",
-    "code": "85",
-    "eau": null,
-    "lieu": "Eaux non domaniales (domaine privé), hors retenues de production d'eau potable et plans d'eau",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "mode_peche",
-   "valeur": {
-    "texte": "1 carafe ou bouteille de 2 litres au plus"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "1 carafe ou bouteille de 2 litres au plus pour les vairons et autres poissons d'amorce.",
-   "textes": [
-    "t2"
-   ],
-   "citation": "1 carafe, où bouteille, destinée à la capture des vairons et autres poissons servant",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-mode_peche-vermee",
-   "portee": {
-    "niveau": "departement",
-    "code": "85",
-    "eau": null,
-    "lieu": "Eaux non domaniales (domaine privé), hors retenues de production d'eau potable et plans d'eau",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "mode_peche",
-   "valeur": {
-    "texte": "1 vermée pendant l'ouverture de l'anguille"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "1 vermée autorisée pendant l'ouverture de la pêche de l'anguille.",
-   "textes": [
-    "t2"
-   ],
-   "citation": "- 1 vermée durant la période d'ouverture de la pêche à l'anguille",
    "expire_le": null,
    "statut": "brouillon",
    "verifie_par": null
@@ -805,281 +2900,9 @@
    "remplace": null,
    "phrase": "1 carrelet de 2 m de côté et 4 m2 au plus : mailles de 27 mm pour le poisson, 10 mm pour les petites espèces listées.",
    "textes": [
-    "t2"
+    "t13"
    ],
    "citation": "1 carrelet, à mailles de 27 millimètres pour la capture du poisson et 10 millimètres",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-mode_peche-eau-potable-balances",
-   "portee": {
-    "niveau": "departement",
-    "code": "85",
-    "eau": null,
-    "lieu": "Retenues de production d'eau potable et plans d'eau",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "mode_peche",
-   "valeur": {
-    "texte": "6 balances à écrevisses"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Retenues de production d'eau potable et plans d'eau : seules 6 balances à écrevisses sont autorisées.",
-   "textes": [
-    "t2"
-   ],
-   "citation": "SUR LES RETENUES DE PRODUCTION D'EAU POTABLE ET PLANS D'EAU, sont uniquement autorisés : - 6 balances à écrevisses",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-mode_peche-eau-potable-vermee",
-   "portee": {
-    "niveau": "departement",
-    "code": "85",
-    "eau": null,
-    "lieu": "Retenues de production d'eau potable et plans d'eau",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "mode_peche",
-   "valeur": {
-    "texte": "1 vermée pendant l'ouverture de l'anguille"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Retenues de production d'eau potable et plans d'eau : 1 vermée seulement pendant l'ouverture de l'anguille.",
-   "textes": [
-    "t2"
-   ],
-   "citation": "- 1 vermée durant la période d'ouverture de la pêche à l’anguille",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-mode_peche-filet-seve-niortaise-janvier",
-   "portee": {
-    "niveau": "cours_eau",
-    "code": "85",
-    "eau": "bassin versant de la sevre niortaise",
-    "lieu": "Bassin versant de la Sèvre Niortaise",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "mode_peche",
-   "valeur": {
-    "maille_mm_min": 70,
-    "texte": "un filet par pêcheur, ne se cumule pas avec un carrelet ; longueur du tramail ou de l'araignée au plus 2/3 de la largeur mouillée"
-   },
-   "du": "2026-01-01",
-   "au": "2026-01-25",
-   "remplace": null,
-   "phrase": "Bassin de la Sèvre Niortaise : un filet de type droit, trémail, araignée ou épervier par pêcheur, maille de 70 mm au moins, du 16 juin au dernier dimanche de janvier ; il ne se cumule pas avec un carrelet.",
-   "textes": [
-    "t3"
-   ],
-   "citation": "est autorisé du 16 juin au dernier dimanche de janvier. La maille minimale est de 70 millimètres.",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-mode_peche-filet-seve-niortaise-ete",
-   "portee": {
-    "niveau": "cours_eau",
-    "code": "85",
-    "eau": "bassin versant de la sevre niortaise",
-    "lieu": "Bassin versant de la Sèvre Niortaise",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "mode_peche",
-   "valeur": {
-    "maille_mm_min": 70,
-    "texte": "un filet par pêcheur, ne se cumule pas avec un carrelet ; longueur du tramail ou de l'araignée au plus 2/3 de la largeur mouillée"
-   },
-   "du": "2026-06-16",
-   "au": "2026-12-31",
-   "remplace": null,
-   "phrase": "Bassin de la Sèvre Niortaise : un filet de type droit, trémail, araignée ou épervier par pêcheur, maille de 70 mm au moins, du 16 juin au dernier dimanche de janvier ; il ne se cumule pas avec un carrelet.",
-   "textes": [
-    "t3"
-   ],
-   "citation": "est autorisé du 16 juin au dernier dimanche de janvier. La maille minimale est de 70 millimètres.",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-sevre-niortaise",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "sevre niortaise",
-    "lieu": "Sèvre Niortaise : en aval de l'écluse du Carreau d'Or, commune de MARANS",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : en aval de l'écluse du Carreau d'Or, commune de MARANS"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Sèvre Niortaise (en aval de l'écluse du Carreau d'Or, commune de MARANS) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LA SÈVRE NIORTAISE, en aval de l'écluse du Carreau d'Or, commune de MARANS",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-canal-de-lucon",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "lucon",
-    "lieu": "Canal de Luçon : en totalité",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : en totalité"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Canal de Luçon (en totalité) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LE CANAL DE LUÇON, en totalité",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-chenal-de-la-dune",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "chenal de la dune",
-    "lieu": "Chenal de la Dune : en aval du barrage de La Dune, commune de TRIAIZE",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : en aval du barrage de La Dune, commune de TRIAIZE"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Chenal de la Dune (en aval du barrage de La Dune, commune de TRIAIZE) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LE CHENAL DE LA DUNE, en aval du barrage de La Dune, commune de TRIAIZE",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-chenal-vieux",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "chenal vieux",
-    "lieu": "Chenal Vieux : en aval du barrage de TRIAIZE, même commune",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : en aval du barrage de TRIAIZE, même commune"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Chenal Vieux (en aval du barrage de TRIAIZE, même commune) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LE CHENAL VIEUX, en aval du barrage de TRIAIZE, même commune",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-chenal-de-la-raque",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "chenal de la raque",
-    "lieu": "Chenal de la Raque : en aval du barrage de la Gravelle, limitrophe des communes de ST MICHEL EN L'HERM et de L'AIGUILLON SUR MER",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : en aval du barrage de la Gravelle, limitrophe des communes de ST MICHEL EN L'HERM et de L'AIGUILLON SUR MER"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Chenal de la Raque (en aval du barrage de la Gravelle, limitrophe des communes de ST MICHEL EN L'HERM et de L'AIGUILLON SUR MER) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LE CHENAL DE LA RAQUE, en aval du barrage de la Gravelle",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-lay",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "lay",
-    "lieu": "Lay : en aval du barrage de MORICQ, communes d'ANGLES (R.D.) et de GRUES (R.G.)",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : en aval du barrage de MORICQ, communes d'ANGLES (R.D.) et de GRUES (R.G.)"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Lay (en aval du barrage de MORICQ, communes d'ANGLES (R.D.) et de GRUES (R.G.)) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LE LAY, en aval du barrage de MORICQ, communes d'ANGLES (R.D.) et de GRUES (R.G.)",
    "expire_le": null,
    "statut": "brouillon",
    "verifie_par": null
@@ -1104,225 +2927,9 @@
    "remplace": null,
    "phrase": "Payre (1re branche) (50 mètres en amont du pont de L'Île Bernard, commune de TALMONT ST HILAIRE) : la réglementation maritime remplace celle de la pêche en eau douce.",
    "textes": [
-    "t4"
+    "t14"
    ],
    "citation": "LE PAYRE, 1re branche, 50 mètres en amont du pont de L'Île Bernard",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-jaunay",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "jaunay",
-    "lieu": "Jaunay : en aval du barrage situé à ST GILLES CROIX DE VIE, à 10 mètres au-dessous du pont qui relie l'Avenue de la Plage au quai rivière et à l'Avenue du Jaunay",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : en aval du barrage situé à ST GILLES CROIX DE VIE, à 10 mètres au-dessous du pont qui relie l'Avenue de la Plage au quai rivière et à l'Avenue du Jaunay"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Jaunay (en aval du barrage situé à ST GILLES CROIX DE VIE, à 10 mètres au-dessous du pont qui relie l'Avenue de la Plage au quai rivière et à l'Avenue du Jaunay) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LE JAUNAY, en aval du barrage situé à ST GILLES CROIX DE VIE",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-auzance",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "auzance",
-    "lieu": "Auzance : en aval du pont de la Grève, communes de VAIRÉ (R.D.) et de L'Île D'OLONNE (R.G.)",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : en aval du pont de la Grève, communes de VAIRÉ (R.D.) et de L'Île D'OLONNE (R.G.)"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Auzance (en aval du pont de la Grève, communes de VAIRÉ (R.D.) et de L'Île D'OLONNE (R.G.)) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "L'AUZANCE, en aval du pont de la Grève",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-vie",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "vie",
-    "lieu": "Vie : en aval du barrage des Vallées, communes de ST HILAIRE DE RIEZ (R.D.) et du FENOUILLER (R.G.)",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : en aval du barrage des Vallées, communes de ST HILAIRE DE RIEZ (R.D.) et du FENOUILLER (R.G.)"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Vie (en aval du barrage des Vallées, communes de ST HILAIRE DE RIEZ (R.D.) et du FENOUILLER (R.G.)) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LA VIE, en aval du barrage des Vallées",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-canal-du-perrier-ou-de-la-taillee",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "perrier ou de la taillee",
-    "lieu": "Canal du Perrier ou de la Taillée : en aval de l'écluse située au confluent de l'étier de LA BARRE DE MONTS, même commune",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : en aval de l'écluse située au confluent de l'étier de LA BARRE DE MONTS, même commune"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Canal du Perrier ou de la Taillée (en aval de l'écluse située au confluent de l'étier de LA BARRE DE MONTS, même commune) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LE CANAL DU PERRIER ou de la TAILLÉE, en aval de l'écluse",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-canal-de-la-barre-de-monts",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "la barre de monts",
-    "lieu": "Canal de la Barre de Monts : en totalité",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : en totalité"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Canal de la Barre de Monts (en totalité) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LE CANAL DE LA BARRE DE MONTS, en totalité",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-canal-de-la-louippe",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "la louippe",
-    "lieu": "Canal de la Louippe : commune de BOUIN, en totalité",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : commune de BOUIN, en totalité"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Canal de la Louippe (commune de BOUIN, en totalité) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LE CANAL DE LA LOUIPPE, commune de BOUIN, en totalité",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-canal-des-brochets",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "brochets",
-    "lieu": "Canal des Brochets : commune de BOUIN, en totalité",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : commune de BOUIN, en totalité"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Canal des Brochets (commune de BOUIN, en totalité) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LE CANAL DES BROCHETS, commune de BOUIN en totalité",
-   "expire_le": null,
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "85-toutes-limite_eau_douce-canal-des-champs",
-   "portee": {
-    "niveau": "troncon",
-    "code": "85",
-    "eau": "champs",
-    "lieu": "Canal des Champs : commune de BOUIN, en totalité",
-    "geometrie": null
-   },
-   "especes": [],
-   "categorie": "toutes",
-   "type": "limite_eau_douce",
-   "valeur": {
-    "texte": "section à l'aval soumise à la réglementation maritime : commune de BOUIN, en totalité"
-   },
-   "du": null,
-   "au": null,
-   "remplace": null,
-   "phrase": "Canal des Champs (commune de BOUIN, en totalité) : la réglementation maritime remplace celle de la pêche en eau douce.",
-   "textes": [
-    "t4"
-   ],
-   "citation": "LE CANAL DES CHAMPS, commune de BOUIN, en totalité",
    "expire_le": null,
    "statut": "brouillon",
    "verifie_par": null
@@ -1331,13 +2938,33 @@
  "a_verifier": [
   {
    "type": "ouverture",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t1"
+   ]
+  },
+  {
+   "type": "ouverture",
    "especes": [
     "2221"
    ],
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t15"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t15"
    ]
   },
   {
@@ -1348,7 +2975,18 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t6"
+    "t15"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t15"
    ]
   },
   {
@@ -1359,7 +2997,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t15"
    ]
   },
   {
@@ -1370,7 +3008,51 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t15"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t15"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t15"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t16"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t17"
    ]
   },
   {
@@ -1381,29 +3063,18 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t7"
+    "t15"
    ]
   },
   {
-   "type": "interdit",
+   "type": "taille_min",
    "especes": [
     "2195"
    ],
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [
-    "2195"
-   ],
-   "categorie": "toutes",
-   "eau": "zones de frayere a sandre identifiees et balisees",
-   "textes": [
-    "t8"
+    "t15"
    ]
   },
   {
@@ -1414,7 +3085,18 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t15"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t15"
    ]
   },
   {
@@ -1425,7 +3107,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t9"
+    "t18"
    ]
   },
   {
@@ -1436,40 +3118,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t9"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [
-    "anguille-jaune"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t10"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "anguille"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t10"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [
-    "anguille"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t10"
+    "t18"
    ]
   },
   {
@@ -1480,7 +3129,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t9"
+    "t18"
    ]
   },
   {
@@ -1491,7 +3140,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t9"
+    "t18"
    ]
   },
   {
@@ -1502,7 +3151,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t9"
+    "t18"
    ]
   },
   {
@@ -1513,7 +3162,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t9"
+    "t18"
    ]
   },
   {
@@ -1524,7 +3173,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t9"
+    "t18"
    ]
   },
   {
@@ -1535,7 +3184,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t9"
+    "t18"
    ]
   },
   {
@@ -1546,7 +3195,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t9"
+    "t18"
    ]
   },
   {
@@ -1557,7 +3206,71 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t9"
+    "t18"
+   ]
+  },
+  {
+   "type": "horaire",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t2"
+   ]
+  },
+  {
+   "type": "horaire",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t2"
+   ]
+  },
+  {
+   "type": "horaire",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t19"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t19"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t19"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t20"
    ]
   },
   {
@@ -1568,7 +3281,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t21"
    ]
   },
   {
@@ -1579,7 +3292,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t21"
    ]
   },
   {
@@ -1590,7 +3303,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t21"
    ]
   },
   {
@@ -1601,7 +3314,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t21"
    ]
   },
   {
@@ -1612,7 +3325,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t21"
    ]
   },
   {
@@ -1623,7 +3336,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t21"
    ]
   },
   {
@@ -1634,29 +3347,29 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t21"
    ]
   },
   {
    "type": "ouverture",
    "especes": [
-    "ecrevisse-californie"
+    "autre:écrevisse signal"
    ],
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t21"
    ]
   },
   {
    "type": "transport_vivant",
    "especes": [
-    "ecrevisse-californie"
+    "autre:écrevisse signal"
    ],
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t21"
    ]
   },
   {
@@ -1667,7 +3380,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t21"
    ]
   },
   {
@@ -1678,141 +3391,18 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
+    "t21"
    ]
   },
   {
-   "type": "interdit",
+   "type": "autre",
    "especes": [
-    "2151"
+    "anguille-jaune"
    ],
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t5"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [
-    "2195"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t5"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [
-    "2053"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t5"
-   ]
-  },
-  {
-   "type": "taille_min",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t11"
-   ]
-  },
-  {
-   "type": "taille_min",
-   "especes": [
-    "2195"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t11"
-   ]
-  },
-  {
-   "type": "taille_min",
-   "especes": [
-    "2221"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t11"
-   ]
-  },
-  {
-   "type": "taille_min",
-   "especes": [
-    "omble-fontaine"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t11"
-   ]
-  },
-  {
-   "type": "taille_min",
-   "especes": [
-    "2053"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t11"
-   ]
-  },
-  {
-   "type": "taille_min",
-   "especes": [
-    "mulet"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t11"
-   ]
-  },
-  {
-   "type": "quota_jour",
-   "especes": [
-    "salmonides"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t12"
-   ]
-  },
-  {
-   "type": "quota_jour",
-   "especes": [
-    "2195",
-    "2151",
-    "2053"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t12"
-   ]
-  },
-  {
-   "type": "quota_jour",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t12"
+    "t22"
    ]
   },
   {
@@ -1823,18 +3413,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t13"
-   ]
-  },
-  {
-   "type": "horaire",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t14"
+    "t4"
    ]
   },
   {
@@ -1845,88 +3424,18 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t13"
+    "t4"
    ]
   },
   {
-   "type": "horaire",
-   "especes": [],
+   "type": "autre",
+   "especes": [
+    "2110"
+   ],
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t14"
-   ]
-  },
-  {
-   "type": "horaire",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t15"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t14"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t2"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t18"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": null,
-   "textes": [
-    "t3"
+    "t4"
    ]
   },
   {
@@ -1935,7 +3444,136 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t19"
+    "t4"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "mulet"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t23"
+   ]
+  },
+  {
+   "type": "quota_jour",
+   "especes": [
+    "2151",
+    "2195",
+    "2053"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t24"
+   ]
+  },
+  {
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t24"
+   ]
+  },
+  {
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t24"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t5"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t8"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t8"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t8"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t25"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t9"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": "bassin versant de la sevre niortaise",
+   "textes": [
+    "t9"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t26"
    ]
   },
   {
@@ -1944,320 +3582,16 @@
    "categorie": "toutes",
    "eau": "payre",
    "textes": [
-    "t4"
-   ]
-  },
-  {
-   "type": "limite_eau_douce",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "gue chatenay ou riviere de talmont",
-   "textes": [
-    "t4"
-   ]
-  },
-  {
-   "type": "limite_eau_douce",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "chenal des hautes mers ou petit chenal des hautes mers",
-   "textes": [
-    "t4"
-   ]
-  },
-  {
-   "type": "limite_eau_douce",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "ile ou vertonne",
-   "textes": [
-    "t4"
-   ]
-  },
-  {
-   "type": "limite_eau_douce",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "grand pont de beauvoir ou grand etier de sallertaine",
-   "textes": [
-    "t4"
-   ]
-  },
-  {
-   "type": "limite_eau_douce",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "etier du dain ou de l epoids",
-   "textes": [
-    "t4"
-   ]
-  },
-  {
-   "type": "limite_eau_douce",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "falleron ou etier du port de la roche",
-   "textes": [
-    "t4"
+    "t10"
    ]
   },
   {
    "type": "reserve",
    "especes": [],
    "categorie": "toutes",
-   "eau": "albert",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "rochereau",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "vouraie",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "narillet",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "moulin papon",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "graon",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "jaunay",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "gue gorand",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "apremont",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "bultiere",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "permoullieres",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "haute riviere",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "chausseliere",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "tanchet",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "bretaudiere",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "karuns",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "plessis bergeret",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "chaume 2",
-   "textes": [
-    "t20"
-   ]
-  },
-  {
-   "type": "ouverture",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t21"
-   ]
-  },
-  {
-   "type": "taille_min",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t22"
-   ]
-  },
-  {
-   "type": "ouverture",
-   "especes": [
-    "2195"
-   ],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t21"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "2",
-   "eau": "zones de frayere a sandres identifiees et balisees",
-   "textes": [
-    "t23"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [
-    "2195"
-   ],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t24"
-   ]
-  },
-  {
-   "type": "taille_min",
-   "especes": [
-    "2195"
-   ],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t22"
-   ]
-  },
-  {
-   "type": "ouverture",
-   "especes": [
-    "2053"
-   ],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t21"
-   ]
-  },
-  {
-   "type": "taille_min",
-   "especes": [
-    "2053"
-   ],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t22"
+    "t16"
    ]
   },
   {
@@ -2268,7 +3602,18 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
    ]
   },
   {
@@ -2279,7 +3624,18 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
    ]
   },
   {
@@ -2290,7 +3646,148 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "reserve",
+   "especes": [],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "mode_peche",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
    ]
   },
   {
@@ -2301,7 +3798,18 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t22"
+    "t27"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t29"
    ]
   },
   {
@@ -2312,7 +3820,84 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t25"
+    "t27"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t29"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "taille_min",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t29"
    ]
   },
   {
@@ -2323,7 +3908,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t25"
+    "t29"
    ]
   },
   {
@@ -2334,20 +3919,20 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t26"
+    "t30"
    ]
   },
   {
    "type": "quota_jour",
    "especes": [
-    "2195",
     "2151",
+    "2195",
     "2053"
    ],
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t26"
+    "t30"
    ]
   },
   {
@@ -2358,7 +3943,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t26"
+    "t30"
    ]
   },
   {
@@ -2369,7 +3954,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
    ]
   },
   {
@@ -2380,7 +3965,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
    ]
   },
   {
@@ -2391,7 +3976,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
    ]
   },
   {
@@ -2402,7 +3987,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
    ]
   },
   {
@@ -2413,7 +3998,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
    ]
   },
   {
@@ -2424,7 +4009,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
    ]
   },
   {
@@ -2435,29 +4020,29 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
    ]
   },
   {
    "type": "ouverture",
    "especes": [
-    "ecrevisse-californie"
+    "autre:écrevisse signal"
    ],
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
    ]
   },
   {
    "type": "transport_vivant",
    "especes": [
-    "ecrevisse-californie"
+    "autre:écrevisse signal"
    ],
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
    ]
   },
   {
@@ -2468,7 +4053,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
    ]
   },
   {
@@ -2479,7 +4064,128 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t27"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "transport_vivant",
+   "especes": [
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "transport_vivant",
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "autre:écrevisse signal"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "transport_vivant",
+   "especes": [
+    "autre:écrevisse signal"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
    ]
   },
   {
@@ -2490,35 +4196,13 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
-   ]
-  },
-  {
-   "type": "autre",
-   "especes": [
-    "anguille-jaune"
-   ],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t21"
-   ]
-  },
-  {
-   "type": "horaire",
-   "especes": [
-    "anguille-jaune"
-   ],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
     "t27"
    ]
   },
   {
-   "type": "remise_eau",
+   "type": "interdit",
    "especes": [
-    "anguille"
+    "anguille-civelle"
    ],
    "categorie": "2",
    "eau": null,
@@ -2529,7 +4213,7 @@
   {
    "type": "interdit",
    "especes": [
-    "anguille"
+    "anguille-argentee"
    ],
    "categorie": "2",
    "eau": null,
@@ -2538,7 +4222,73 @@
    ]
   },
   {
-   "type": "autre",
+   "type": "interdit",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "ouverture",
    "especes": [
     "anguille-jaune"
    ],
@@ -2556,7 +4306,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t28"
    ]
   },
   {
@@ -2567,7 +4317,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t28"
    ]
   },
   {
@@ -2578,7 +4328,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t28"
    ]
   },
   {
@@ -2589,7 +4339,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t28"
    ]
   },
   {
@@ -2600,7 +4350,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t28"
    ]
   },
   {
@@ -2611,7 +4361,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t28"
    ]
   },
   {
@@ -2622,7 +4372,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t28"
    ]
   },
   {
@@ -2633,7 +4383,95 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t21"
+    "t28"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t27"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t31"
+   ]
+  },
+  {
+   "type": "horaire",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t32"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t32"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t32"
+   ]
+  },
+  {
+   "type": "horaire",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "remise_eau",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
+   ]
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t28"
    ]
   },
   {
@@ -2642,7 +4480,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t29"
+    "t33"
    ]
   },
   {
@@ -2651,9 +4489,29 @@
     "2110"
    ],
    "categorie": "2",
-   "eau": "sites balises definis par arrete prefectoral",
+   "eau": null,
    "textes": [
-    "t30"
+    "t33"
+   ]
+  },
+  {
+   "type": "horaire",
+   "especes": [],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t34"
+   ]
+  },
+  {
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t34"
    ]
   },
   {
@@ -2664,99 +4522,14 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t30"
-   ]
-  },
-  {
-   "type": "autre",
-   "especes": [],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t29"
-   ]
-  },
-  {
-   "type": "autre",
-   "especes": [],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t31"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t32"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t32"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [
-    "anguille-jaune"
-   ],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
-    "t33"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [
-    "anguille-jaune"
-   ],
-   "categorie": "2",
-   "eau": "retenues de production d eau potable et plans d eau",
-   "textes": [
-    "t33"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "2",
-   "eau": null,
-   "textes": [
     "t34"
    ]
   },
   {
-   "type": "interdit",
+   "type": "mode_peche",
    "especes": [],
    "categorie": "2",
-   "eau": "dispositifs de circulation des poissons des ouvrages dans le lit des cours d eau",
-   "textes": [
-    "t35"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "2",
-   "eau": "pertuis",
-   "textes": [
-    "t35"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "2",
-   "eau": "barrages",
+   "eau": null,
    "textes": [
     "t35"
    ]
@@ -2767,196 +4540,89 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t36"
+    "t35"
    ]
   },
   {
-   "type": "autre",
-   "especes": [],
+   "type": "mode_peche",
+   "especes": [
+    "anguille-jaune"
+   ],
    "categorie": "2",
-   "eau": "bassin versant de la sevre niortaise",
+   "eau": null,
    "textes": [
     "t36"
    ]
   },
   {
-   "type": "autre",
-   "especes": [],
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
    "categorie": "2",
-   "eau": "sections de cours d eau mitoyennes entre plusieurs departements",
+   "eau": null,
    "textes": [
     "t37"
    ]
   },
   {
-   "type": "limite_eau_douce",
+   "type": "mode_peche",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t37"
+   ]
+  },
+  {
+   "type": "interdit",
    "especes": [],
    "categorie": "2",
-   "eau": "payre",
+   "eau": null,
    "textes": [
     "t38"
    ]
   },
   {
-   "type": "reserve",
+   "type": "mode_peche",
    "especes": [],
    "categorie": "2",
-   "eau": "albert",
+   "eau": "bassin versant de la sevre niortaise",
+   "textes": [
+    "t38"
+   ]
+  },
+  {
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "eau": null,
    "textes": [
     "t39"
    ]
   },
   {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "rochereau",
+   "type": "quota_jour",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "eau": null,
    "textes": [
-    "t39"
+    "t40"
    ]
   },
   {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "la vouraie ou de la silloniere",
+   "type": "interdit",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "eau": null,
    "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "marillet",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "moulin papon",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "graon",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "jaunay",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "gue gorand",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "apremont",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "bultiere",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "permoullieres",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "haute riviere",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "chausseliere",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "tanchet",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "bretaudiere",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "karuns",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "plessis bergeret",
-   "textes": [
-    "t39"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "2",
-   "eau": "chaume 2",
-   "textes": [
-    "t39"
+    "t40"
    ]
   }
  ]
