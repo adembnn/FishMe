@@ -11,6 +11,9 @@ struct LigneRegleView: View {
 
     @State private var ouverte = false
 
+    /// Vrai si les sources portent des citations différentes : chacune montre la sienne, sans la citation unique en plus.
+    private var sourcesAvecCitation: Bool { Set(ligne.sources.compactMap(\.citation)).count > 1 }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Button {
@@ -61,24 +64,32 @@ struct LigneRegleView: View {
 
             if ouverte {
                 VStack(alignment: .leading, spacing: 6) {
-                    if let citation = ligne.citation {
+                    if !sourcesAvecCitation, let citation = ligne.citation {
                         Text("« \(citation) »")
                             .font(PolicesCarte.detail())
                             .foregroundStyle(Palette.encre)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     ForEach(Array(ligne.sources.enumerated()), id: \.offset) { _, source in
-                        if let url = source.url.flatMap({ URL(string: $0) }) {
-                            Link(destination: url) {
-                                Label(source.titre, systemImage: "arrow.up.right.square")
+                        VStack(alignment: .leading, spacing: 2) {
+                            if let url = source.url.flatMap({ URL(string: $0) }) {
+                                Link(destination: url) {
+                                    Label(source.titre, systemImage: "arrow.up.right.square")
+                                        .font(PolicesCarte.legende())
+                                        .foregroundStyle(Palette.marine)
+                                        .multilineTextAlignment(.leading)
+                                }
+                            } else {
+                                Text(source.titre)
                                     .font(PolicesCarte.legende())
-                                    .foregroundStyle(Palette.marine)
-                                    .multilineTextAlignment(.leading)
+                                    .foregroundStyle(Palette.encreDouce)
                             }
-                        } else {
-                            Text(source.titre)
-                                .font(PolicesCarte.legende())
-                                .foregroundStyle(Palette.encreDouce)
+                            if sourcesAvecCitation, let citation = source.citation {
+                                Text("« \(citation) »")
+                                    .font(PolicesCarte.detail())
+                                    .foregroundStyle(Palette.encre)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
                         }
                     }
                     if let date = ligne.dateLecture {

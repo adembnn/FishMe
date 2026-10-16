@@ -1150,7 +1150,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Dans les cours d'eau, l'omble et le saumon de fontaine se garde à partir de 18 cm.",
+   "phrase": "Dans les cours d'eau, l'omble et le saumon de fontaine, taille minimale 18 cm.",
    "textes": [
     "t3"
    ],
@@ -1180,7 +1180,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Dans les plans d'eau, l'omble et le saumon de fontaine se garde à partir de 23 cm.",
+   "phrase": "Dans les plans d'eau, l'omble et le saumon de fontaine, taille minimale 23 cm.",
    "textes": [
     "t3"
    ],
@@ -1210,7 +1210,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En amont des embouchures, le mulet se garde à partir de 20 cm.",
+   "phrase": "En amont des embouchures, le mulet, taille minimale 20 cm.",
    "textes": [
     "t3"
    ],
@@ -1239,7 +1239,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le sandre se garde à partir de 40 cm.",
+   "phrase": "En 2e catégorie, le sandre, taille minimale 40 cm.",
    "textes": [
     "t3"
    ],

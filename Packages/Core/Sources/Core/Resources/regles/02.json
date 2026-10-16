@@ -2313,7 +2313,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le sandre se garde à partir de 50 cm (le Code dit 40 cm).",
+   "phrase": "En 2e catégorie, le sandre, taille minimale 50 cm (le Code dit 40 cm).",
    "textes": [
     "t5"
    ],
@@ -2342,7 +2342,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La truite fario se garde à partir de 25 cm (le Code dit 23 cm).",
+   "phrase": "La truite fario, taille minimale 25 cm (le Code dit 23 cm).",
    "textes": [
     "t5"
    ],
@@ -2371,7 +2371,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La truite arc-en-ciel se garde à partir de 25 cm (le Code dit 23 cm).",
+   "phrase": "La truite arc-en-ciel, taille minimale 25 cm (le Code dit 23 cm).",
    "textes": [
     "t5"
    ],
@@ -2401,7 +2401,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, brochet : taille encadrée de 50 à 70 cm ; en dehors, remise à l'eau.",
+   "phrase": "En 2e catégorie, taille encadrée : brochet de 50 à 70 cm seulement ; en dehors, tu le remets à l'eau.",
    "textes": [
     "t5"
    ],

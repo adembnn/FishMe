@@ -2015,7 +2015,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 1re catégorie, le brochet se garde à partir de 60 cm.",
+   "phrase": "En 1re catégorie, le brochet, taille minimale 60 cm.",
    "textes": [
     "t7"
    ],
@@ -2045,7 +2045,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, on ne garde que les brochets de 60 à 80 cm.",
+   "phrase": "En 2e catégorie, taille encadrée : brochets de 60 à 80 cm seulement.",
    "textes": [
     "t7"
    ],
@@ -2074,7 +2074,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le sandre se garde à partir de 50 cm (sauf Seine et ballastières communicantes).",
+   "phrase": "En 2e catégorie, le sandre, taille minimale 50 cm (sauf Seine et ballastières communicantes).",
    "textes": [
     "t7"
    ],
@@ -2132,7 +2132,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le black-bass se garde à partir de 30 cm.",
+   "phrase": "En 2e catégorie, le black-bass, taille minimale 30 cm.",
    "textes": [
     "t7"
    ],
@@ -2161,7 +2161,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "L'ombre commun se garde à partir de 30 cm.",
+   "phrase": "L'ombre commun, taille minimale 30 cm.",
    "textes": [
     "t7"
    ],
@@ -2190,7 +2190,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La truite fario se garde à partir de 30 cm.",
+   "phrase": "La truite fario, taille minimale 30 cm.",
    "textes": [
     "t7"
    ],
@@ -2248,7 +2248,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "L'omble ou saumon de fontaine se garde à partir de 25 cm.",
+   "phrase": "L'omble ou saumon de fontaine, taille minimale 25 cm.",
    "textes": [
     "t7"
    ],
@@ -2277,7 +2277,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Le mulet se garde à partir de 20 cm.",
+   "phrase": "Le mulet, taille minimale 20 cm.",
    "textes": [
     "t7"
    ],
@@ -2306,7 +2306,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La grenouille verte se garde à partir de 8 cm de corps (museau au cloaque).",
+   "phrase": "La grenouille verte, taille minimale 8 cm de corps (museau au cloaque).",
    "textes": [
     "t7"
    ],
@@ -2335,7 +2335,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La grenouille rousse se garde à partir de 8 cm de corps (museau au cloaque).",
+   "phrase": "La grenouille rousse, taille minimale 8 cm de corps (museau au cloaque).",
    "textes": [
     "t7"
    ],
@@ -5533,7 +5533,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La truite de mer se garde à partir de 35 cm.",
+   "phrase": "La truite de mer, taille minimale 35 cm.",
    "textes": [
     "t20"
    ],

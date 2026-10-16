@@ -1207,7 +1207,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Grenouille verte : on garde seulement celles de 8 cm et plus (museau au cloaque).",
+   "phrase": "Grenouille verte : taille minimale 8 cm (museau au cloaque).",
    "textes": [
     "t4"
    ],
@@ -1323,7 +1323,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Grenouille rousse : on garde seulement celles de 8 cm et plus (museau au cloaque).",
+   "phrase": "Grenouille rousse : taille minimale 8 cm (museau au cloaque).",
    "textes": [
     "t4"
    ],

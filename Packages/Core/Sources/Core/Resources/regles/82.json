@@ -2281,7 +2281,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Brochet : 60 cm minimum pour le garder.",
+   "phrase": "Brochet : taille minimale 60 cm.",
    "textes": [
     "t7"
    ],
@@ -2456,7 +2456,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Brochet : on ne garde que les brochets de 60 à 80 cm ; tout brochet de plus de 80 cm est remis à l'eau immédiatement.",
+   "phrase": "Brochet : taille encadrée : brochets de 60 à 80 cm seulement ; tout brochet de plus de 80 cm est remis à l'eau immédiatement.",
    "textes": [
     "t7"
    ],
@@ -3633,7 +3633,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau de la Clare : tout poisson est remis à l'eau, sauf les truites qui peuvent être gardées.",
+   "phrase": "Plan d'eau de la Clare : tout poisson est remis à l'eau, sauf les truites (taille et quota de la loi).",
    "textes": [
     "t11"
    ],

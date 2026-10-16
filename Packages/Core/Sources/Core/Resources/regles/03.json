@@ -1815,7 +1815,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur la Sioule, la truite fario se garde à partir de 30 cm.",
+   "phrase": "Sur la Sioule, la truite fario, taille minimale 30 cm.",
    "textes": [
     "t5"
    ],
@@ -1844,7 +1844,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le Cher et ses affluents, la truite fario se garde à partir de 23 cm.",
+   "phrase": "Sur le Cher et ses affluents, la truite fario, taille minimale 23 cm.",
    "textes": [
     "t5"
    ],
@@ -1873,7 +1873,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur la Besbre à l'aval du pont Clavel, la truite fario se garde à partir de 23 cm.",
+   "phrase": "Sur la Besbre à l'aval du pont Clavel, la truite fario, taille minimale 23 cm.",
    "textes": [
     "t5"
    ],
@@ -1902,7 +1902,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le Sichon, du gué Chervais à la confluence avec le Jolan, la truite fario se garde à partir de 23 cm.",
+   "phrase": "Sur le Sichon, du gué Chervais à la confluence avec le Jolan, la truite fario, taille minimale 23 cm.",
    "textes": [
     "t5"
    ],
@@ -1931,7 +1931,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Dans les autres cours d'eau de 1re catégorie, la truite fario se garde à partir de 20 cm.",
+   "phrase": "Dans les autres cours d'eau de 1re catégorie, la truite fario, taille minimale 20 cm.",
    "textes": [
     "t5"
    ],
@@ -1960,7 +1960,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Le saumon de fontaine se garde à partir de 23 cm.",
+   "phrase": "Le saumon de fontaine, taille minimale 23 cm.",
    "textes": [
     "t5"
    ],
@@ -1990,7 +1990,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "On garde les brochets de 60 à 80 cm ; plus petit ou plus grand, on remet à l'eau.",
+   "phrase": "Brochet : taille encadrée de 60 à 80 cm ; en dessous ou au-dessus, remise à l'eau.",
    "textes": [
     "t5"
    ],
@@ -2019,7 +2019,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le sandre se garde à partir de 50 cm.",
+   "phrase": "En 2e catégorie, le sandre, taille minimale 50 cm.",
    "textes": [
     "t5"
    ],
@@ -4985,7 +4985,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Saint-Clément, zone centrale : le brochet se garde à partir de 60 cm.",
+   "phrase": "Retenue de Saint-Clément, zone centrale : le brochet, taille minimale 60 cm.",
    "textes": [
     "t21"
    ],

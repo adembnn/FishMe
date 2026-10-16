@@ -6743,7 +6743,7 @@
    "du": "2026-01-01",
    "au": "2026-04-30",
    "remplace": null,
-   "phrase": "Sablonnière : 1 poisson gardé par jour et par pêcheur.",
+   "phrase": "Sablonnière : quota 1 poisson par jour et par pêcheur.",
    "textes": [
     "t14"
    ],
@@ -6797,7 +6797,7 @@
    "du": "2026-10-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Sablonnière : 1 poisson gardé par jour et par pêcheur.",
+   "phrase": "Sablonnière : quota 1 poisson par jour et par pêcheur.",
    "textes": [
     "t14"
    ],
@@ -6826,7 +6826,7 @@
    "du": "2026-05-01",
    "au": "2026-05-31",
    "remplace": null,
-   "phrase": "Sablonnière en mai : 1 seul brochet gardé par jour.",
+   "phrase": "Sablonnière en mai : quota 1 brochet par jour.",
    "textes": [
     "t14"
    ],

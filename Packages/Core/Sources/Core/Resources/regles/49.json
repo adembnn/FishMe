@@ -2618,7 +2618,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Le brochet se garde à partir de 60 cm.",
+   "phrase": "Le brochet, taille minimale 60 cm.",
    "textes": [
     "t16"
    ],
@@ -2647,7 +2647,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le sandre se garde à partir de 50 cm.",
+   "phrase": "En 2e catégorie, le sandre, taille minimale 50 cm.",
    "textes": [
     "t16"
    ],
@@ -2676,7 +2676,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le black-bass se garde à partir de 40 cm.",
+   "phrase": "En 2e catégorie, le black-bass, taille minimale 40 cm.",
    "textes": [
     "t16"
    ],

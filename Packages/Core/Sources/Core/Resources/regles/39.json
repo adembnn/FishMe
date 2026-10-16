@@ -1938,7 +1938,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La truite arc-en-ciel se garde à partir de 25 cm.",
+   "phrase": "La truite arc-en-ciel, taille minimale 25 cm.",
    "textes": [
     "t3"
    ],
@@ -1967,7 +1967,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La truite fario se garde à partir de 30 cm.",
+   "phrase": "La truite fario, taille minimale 30 cm.",
    "textes": [
     "t3"
    ],
@@ -1996,7 +1996,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Le brochet se garde à partir de 60 cm.",
+   "phrase": "Le brochet, taille minimale 60 cm.",
    "textes": [
     "t3"
    ],
@@ -2025,7 +2025,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le sandre se garde à partir de 50 cm.",
+   "phrase": "En 2e catégorie, le sandre, taille minimale 50 cm.",
    "textes": [
     "t3"
    ],
@@ -2054,7 +2054,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le black-bass se garde à partir de 40 cm.",
+   "phrase": "En 2e catégorie, le black-bass, taille minimale 40 cm.",
    "textes": [
     "t3"
    ],
@@ -2083,7 +2083,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Au lac Chalain, le corégone se garde à partir de 35 cm.",
+   "phrase": "Au lac Chalain, le corégone, taille minimale 35 cm.",
    "textes": [
     "t3"
    ],
@@ -2112,7 +2112,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Au lac Vouglans, le corégone se garde à partir de 35 cm.",
+   "phrase": "Au lac Vouglans, le corégone, taille minimale 35 cm.",
    "textes": [
     "t3"
    ],
@@ -2141,7 +2141,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Au lac Le Val, le corégone se garde à partir de 35 cm.",
+   "phrase": "Au lac Le Val, le corégone, taille minimale 35 cm.",
    "textes": [
     "t3"
    ],
@@ -2170,7 +2170,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Au lac Les Rousses, le corégone se garde à partir de 35 cm.",
+   "phrase": "Au lac Les Rousses, le corégone, taille minimale 35 cm.",
    "textes": [
     "t3"
    ],
@@ -2199,7 +2199,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Au lac Grand lac de Clairvaux, le corégone se garde à partir de 32 cm.",
+   "phrase": "Au lac Grand lac de Clairvaux, le corégone, taille minimale 32 cm.",
    "textes": [
     "t3"
    ],
@@ -2228,7 +2228,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Au lac Ilay, le corégone se garde à partir de 32 cm.",
+   "phrase": "Au lac Ilay, le corégone, taille minimale 32 cm.",
    "textes": [
     "t3"
    ],

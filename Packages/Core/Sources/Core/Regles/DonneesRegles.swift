@@ -122,12 +122,14 @@ struct RegleDonnee: Decodable, Sendable {
     var textes: [String]
     var source: SourceEnLigne?
     var citation: String?
+    /// Citation propre à chaque texte (id du texte → passage), quand plusieurs sources se contredisent.
+    var citations: [String: String]?
     var statut: String?
     var expireLe: String?
     var remplace: String?
 
     enum Cle: String, CodingKey {
-        case id, type, especes, categorie, portee, du, au, valeur, phrase, textes, source, citation, statut
+        case id, type, especes, categorie, portee, du, au, valeur, phrase, textes, source, citation, citations, statut
         case expireLe = "expire_le", remplace
     }
 
@@ -145,6 +147,7 @@ struct RegleDonnee: Decodable, Sendable {
         textes = (try? c.decodeIfPresent([String].self, forKey: .textes)) ?? []
         source = try? c.decodeIfPresent(SourceEnLigne.self, forKey: .source)
         citation = try? c.decodeIfPresent(String.self, forKey: .citation)
+        citations = try? c.decodeIfPresent([String: String].self, forKey: .citations)
         statut = try? c.decodeIfPresent(String.self, forKey: .statut)
         expireLe = try? c.decodeIfPresent(String.self, forKey: .expireLe)
         remplace = try? c.decodeIfPresent(String.self, forKey: .remplace)
