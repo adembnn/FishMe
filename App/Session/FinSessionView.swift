@@ -204,7 +204,26 @@ struct FinSessionView: View {
 
     /// Cas bredouille : zéro prise, ton positif. Le bloc « La prochaine fois » n'existe que si un conseil est fourni.
     @ViewBuilder private var bredouille: some View {
-        if let conseil, !conseil.isEmpty {
+        if conseil == nil || conseil?.isEmpty == true {
+            // Sans conseil de L1, une phrase positive plutôt qu'un vide au-dessus du bouton.
+            HStack(spacing: 14) {
+                Image(systemName: "water.waves")
+                    .font(.system(size: 28, weight: .bold))
+                    .foregroundStyle(Palette.marine)
+                    .frame(width: 84, height: 56)
+                    .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                    .accessibilityHidden(true)
+                Text("Bredouille, ça arrive. Une sortie de plus au compteur.")
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
+                Spacer(minLength: 0)
+            }
+            .padding(.top, 16)
+            .padding(.bottom, 20)
+            .frame(maxWidth: .infinity)
+            .overlay(alignment: .top) { Rectangle().fill(Palette.filet).frame(height: 0.5) }
+            .accessibilityElement(children: .combine)
+        } else if let conseil {
             HStack(spacing: 14) {
                 // À brancher : la maquette montre l'image de l'espèce conseillée (perche) ; le conseil n'est qu'un texte, on met une silhouette.
                 Image(systemName: "fish")
