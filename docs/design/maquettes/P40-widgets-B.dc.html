@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Widgets accueil · B Réglages</title>
+<title>Widgets accueil · Ma session</title>
 <script src="./support.js"></script>
 <link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
 </head>
@@ -12,8 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
 <style>
 body{margin:0}
-
-.p40-w{position:absolute;left:26px;border-radius:22px;overflow:hidden;background:#fff;color:var(--encre)}
+.p40-w{position:absolute;border-radius:22px;overflow:hidden;background:#fff;color:var(--encre)}
 .p40-ic{position:absolute;width:60px;display:flex;flex-direction:column;align-items:center;gap:6px}
 .p40-ic i{display:block;width:60px;height:60px;border-radius:13.4px;background:var(--p40-ph)}
 .p40-ic b{display:block;width:36px;height:6px;border-radius:3px;background:var(--p40-lb)}
@@ -24,15 +23,37 @@ body{margin:0}
 .p40-dock{position:absolute;left:14px;right:14px;bottom:20px;height:92px;border-radius:34px;background:var(--p40-dk);display:flex;justify-content:space-around;align-items:center;padding:0 10px}
 .p40-dock i{display:block;width:60px;height:60px;border-radius:13.4px;background:var(--p40-ph2)}
 .p40-n{font-variant-numeric:tabular-nums}
+.p40b-top{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--encre-douce)}
+.p40b-top img{width:22px;height:22px;border-radius:6px}
+.p40b-chrono{font-weight:900;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--encre)}
+.ecran button.p40b-btn{display:flex;align-items:center;justify-content:center;gap:7px;border:0;border-radius:999px;font:inherit;font-size:17px;font-weight:800;color:#fff;padding:0}
+.p40b-btn svg{flex:none}
+.ecran button.p40b-pri{background:#0D4A85}
+.ecran button.p40b-doux{background:var(--tuile);color:var(--marine)}
 
 </style>
 </helmet>
-<div class="ecran" style="background:#0A1620;--p40-ph:rgba(255,255,255,.13);--p40-lb:rgba(255,255,255,.34);--p40-tx:#fff;--p40-dot:rgba(255,255,255,.35);--p40-dk:rgba(255,255,255,.1);--p40-ph2:rgba(255,255,255,.14);">
-<div class="p40-w" style="top:70px;width:338px;height:158px"><div style="position:absolute;left:16px;top:14px;bottom:14px;width:104px;display:flex;flex-direction:column"><div class="t-legende">Pescedex</div><div class="t-chiffre" style="font-size:64px;color:var(--marine);margin-top:10px">3</div><div class="t-legende" style="margin-top:auto;line-height:1.25">sur 11 espèces<br>du 94</div></div>
-<div style="position:absolute;left:132px;top:20px;bottom:14px;width:.5px;background:var(--filet)"></div>
-<div style="position:absolute;left:146px;right:16px;top:14px"><div class="t-legende" style="margin-bottom:4px">Dernières cartes</div><div style="display:flex;align-items:center;gap:8px;height:32px"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="Brochet" style="width:48px;height:26px;object-fit:contain"><span style="flex:1;font-size:15px;font-weight:800">Brochet</span><span class="rar pc"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.5 13.6 4.75v6.5L8 14.5 2.4 11.25v-6.5Z"/></svg></span></div><div style="display:flex;align-items:center;gap:8px;height:32px"><img src="/_blob/0af5e5e6f274e011d4317ff12600a103" alt="Perche" style="width:48px;height:26px;object-fit:contain"><span style="flex:1;font-size:15px;font-weight:800">Perche</span><span class="rar c"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="8" cy="8" r="6"/></svg></span></div><div style="display:flex;align-items:center;gap:8px;height:32px"><img src="/_blob/4799d66fb5fc82ab53e0051d38867b2d" alt="Gardon" style="width:48px;height:26px;object-fit:contain"><span style="flex:1;font-size:15px;font-weight:800">Gardon</span><span class="rar c"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="8" cy="8" r="6"/></svg></span></div></div></div><div class="p40-w" style="top:250px;width:338px;height:354px"><div style="position:absolute;left:16px;right:16px;top:14px;display:flex;align-items:center;gap:8px"><span class="t-sous">Mon aquarium</span><span style="font-size:11px;font-weight:800;color:var(--marine-fonce);background:var(--marine-doux);border-radius:9px;padding:2px 8px">Pro</span><span class="t-legende" style="margin-left:auto">3 sur 11</span></div>
-<div style="position:absolute;left:10px;right:10px;top:50px;bottom:10px;border-radius:16px;background:var(--marine);overflow:hidden"><div style="position:absolute;left:0;right:0;top:0;height:36px;background:rgba(255,255,255,.1)"></div><svg viewBox="0 0 338 300" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:rgba(255,255,255,.4);stroke-width:1.5"><circle cx="40" cy="240" r="5"/><circle cx="52" cy="210" r="3"/><circle cx="290" cy="90" r="6"/><circle cx="302" cy="60" r="3"/><circle cx="250" cy="250" r="4"/></svg>
-<img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="Brochet" style="position:absolute;left:36px;top:62px;width:190px;transform:rotate(-6deg)"><img src="/_blob/0af5e5e6f274e011d4317ff12600a103" alt="Perche" style="position:absolute;right:20px;top:150px;width:124px;transform:scaleX(1)"><img src="/_blob/4799d66fb5fc82ab53e0051d38867b2d" alt="Gardon" style="position:absolute;left:44px;top:200px;width:100px;transform:rotate(5deg)"></div></div><div class="p40-ic" style="left:28px;top:626px"><i></i><b></b></div><div class="p40-ic" style="left:119px;top:626px"><img src="/_blob/7667ed4766b13859a7e0245c1b4db27c" alt="FishMe" style="width:60px;height:60px;border-radius:13.4px"><em>FishMe</em></div><div class="p40-ic" style="left:211px;top:626px"><i></i><b></b></div><div class="p40-ic" style="left:302px;top:626px"><i></i><b></b></div><div class="p40-dots"><i class="on"></i><i></i><i></i></div><div class="p40-dock"><i></i><i></i><i></i><i></i></div>
+<div class="ecran" style="background:#D6E4F3;--p40-ph:rgba(14,26,38,.14);--p40-lb:rgba(14,26,38,.32);--p40-tx:#0E1A26;--p40-dot:rgba(14,26,38,.3);--p40-dk:rgba(255,255,255,.5);--p40-ph2:rgba(14,26,38,.14);">
+<div class="p40-w" style="left:20px;top:66px;width:170px;height:170px">
+<div style="position:absolute;inset:14px;display:flex;flex-direction:column">
+<div class="p40b-top"><img src="/_blob/7667ed4766b13859a7e0245c1b4db27c" alt="FishMe"><span>2 prises</span></div>
+<div class="p40b-chrono" style="font-size:50px;margin-top:8px">1:24</div>
+<div class="p40-n" style="font-size:13px;color:var(--encre-douce);margin-top:5px">Fin légale <span style="color:var(--encre);font-size:15px">19:29</span></div>
+<div style="display:flex;gap:8px;margin-top:auto"><button class="p40b-btn p40b-pri" style="flex:1;height:38px" aria-label="Ajouter une prise, ouvre l'appareil photo"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:22px;height:22px"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.6"/></g></svg></button><button class="p40b-btn p40b-doux" style="flex:1;height:38px" aria-label="Mettre la session en pause"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px"><path fill="currentColor" d="M7 4h3.4v16H7Zm6.6 0H17v16h-3.4Z"/></svg></button></div></div></div>
+<div class="p40-ic" style="left:209px;top:70px"><i></i><b></b></div><div class="p40-ic" style="left:300px;top:70px"><i></i><b></b></div><div class="p40-ic" style="left:209px;top:161px"><i></i><b></b></div><div class="p40-ic" style="left:300px;top:161px"><i></i><b></b></div>
+<div class="p40-w" style="left:13px;top:256px;width:364px;height:170px">
+<div style="position:absolute;left:16px;top:16px;width:206px;bottom:16px;display:flex;flex-direction:column">
+<div class="p40b-top"><img src="/_blob/7667ed4766b13859a7e0245c1b4db27c" alt="FishMe"><span>2 prises</span></div>
+<div class="p40b-chrono" style="font-size:62px;margin-top:10px">1:24</div>
+<div class="p40-n" style="display:flex;gap:12px;white-space:nowrap;align-items:baseline;margin-top:auto;font-size:13px;color:var(--encre-douce)"><span>Fin légale <b style="color:var(--encre);font-size:17px">19:29</b></span><span>Eau <b style="color:var(--encre);font-size:17px">14 °C</b></span></div></div>
+<div style="position:absolute;right:16px;top:16px;bottom:16px;width:128px;display:flex;flex-direction:column;justify-content:center;gap:10px"><button class="p40b-btn p40b-pri" style="height:46px" aria-label="Ajouter une prise, ouvre l'appareil photo"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:22px;height:22px"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.6"/></g></svg>Prise</button><button class="p40b-btn p40b-doux" style="height:46px" aria-label="Mettre la session en pause"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px"><path fill="currentColor" d="M7 4h3.4v16H7Zm6.6 0H17v16h-3.4Z"/></svg>Pause</button></div></div>
+<div class="p40-w" style="left:20px;top:446px;width:170px;height:170px">
+<div style="position:absolute;inset:14px;display:flex;flex-direction:column">
+<img src="/_blob/7667ed4766b13859a7e0245c1b4db27c" alt="FishMe" style="width:34px;height:34px;border-radius:9px">
+<div class="t-titre" style="margin-top:10px;line-height:1.15">Commencer une session</div>
+<button class="p40b-btn p40b-pri" style="margin-top:auto;align-self:flex-end;width:44px;height:44px" aria-label="Commencer une session"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></button></div></div>
+<div class="p40-ic" style="left:209px;top:450px"><i></i><b></b></div><div class="p40-ic" style="left:300px;top:450px"><i></i><b></b></div><div class="p40-ic" style="left:209px;top:541px"><i></i><b></b></div><div class="p40-ic" style="left:300px;top:541px"><i></i><b></b></div>
+<div class="p40-dots"><i class="on"></i><i></i><i></i></div><div class="p40-dock"><i></i><i></i><i></i><i></i></div>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
