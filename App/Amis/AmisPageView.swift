@@ -6,6 +6,8 @@ import SwiftUI
 /// Pour un ami, seuls le mois et l'année d'une carte comptent : le fil écrit donc « octobre 2026 », pas un jour exact.
 struct AmisPageView: View {
     let gestion: GestionAmis?
+    /// Mode démo (réglages) : sans iCloud non plus, la page montre ses amis d'exemple, marqués « Exemple ».
+    @AppStorage("demo.communaute") private var demo = false
 
     init(gestion: GestionAmis?) {
         self.gestion = gestion
@@ -14,6 +16,13 @@ struct AmisPageView: View {
     var body: some View {
         if let gestion {
             AmisPageContenu(gestion: gestion)
+        } else if demo {
+            ScrollView {
+                DemoAmisContenu()
+                    .padding(.horizontal, Espace.bord)
+                    .padding(.bottom, Espace.xl)
+            }
+            .scrollIndicators(.hidden)
         } else {
             ContentUnavailableView("Amis", systemImage: "person.2.slash",
                                    description: Text("Tes amis ne peuvent pas s'ouvrir pour l'instant."))
@@ -55,6 +64,8 @@ private struct AmisPageContenu: View {
     @State private var action: ActionSurAmi?
     @State private var confirmerSuppression = false
     @Environment(\.openURL) private var ouvrirURL
+    /// Mode démo : amis et fil d'exemple, locaux à la vue (voir `DemoAmis.swift`).
+    @AppStorage("demo.communaute") private var demo = false
 
     /// Combien de cartes le fil montre au plus.
     private static let longueurDuFil = 30
@@ -63,13 +74,18 @@ private struct AmisPageContenu: View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.xl) {
                 entete
-                if let message = texteDuMessage { bandeau(message) }
-                if let invitation = gestion.invitationRecue { demande(invitation) }
-                if gestion.compte == .disponible { inviter }
-                if gestion.proposerInvitationEnRetour { enRetour }
-                listeDesAmis
-                fil
-                if gestion.partageActif { suppression }
+                if demo {
+                    if gestion.compte == .disponible { inviter }
+                    DemoAmisContenu()
+                } else {
+                    if let message = texteDuMessage { bandeau(message) }
+                    if let invitation = gestion.invitationRecue { demande(invitation) }
+                    if gestion.compte == .disponible { inviter }
+                    if gestion.proposerInvitationEnRetour { enRetour }
+                    listeDesAmis
+                    fil
+                    if gestion.partageActif { suppression }
+                }
                 Text("Tu ne vois que les collections de tes amis. Le lieu d'une prise s'arrête au département.")
                     .font(Police.legende)
                     .foregroundStyle(Palette.encreDouce)

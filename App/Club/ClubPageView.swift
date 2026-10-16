@@ -17,6 +17,7 @@ struct ClubPageView: View {
   var invites: [InviteClub] = []
   var invitation: InvitationPescedex?
 
+  @AppStorage("demo.communaute") private var demo = false
   @State private var clubs = MesClubs()
   @State private var clubChoisi: UUID?
   @State private var creationOuverte = false
@@ -36,8 +37,27 @@ struct ClubPageView: View {
     self.invitation = invitation
   }
 
+  /// Mes vrais clubs, plus les 2 clubs d'exemple en mode démo (jamais écrits dans `MesClubs`).
+  private var tousLesClubs: [ClubLocal] {
+    demo ? clubs.clubs + DemoClub.clubs : clubs.clubs
+  }
+
   private var club: ClubLocal? {
-    clubs.clubs.first { $0.id == clubChoisi } ?? clubs.clubs.first
+    tousLesClubs.first { $0.id == clubChoisi } ?? tousLesClubs.first
+  }
+
+  private var enDemo: Bool { demo && DemoClub.estExemple(club) }
+  private var membresAffiches: [MembreClub] {
+    if enDemo, let club { return DemoClub.membres(pour: club) }
+    return membres
+  }
+  private var cartesAffichees: [CarteRecenteClub] {
+    if enDemo, let club { return DemoClub.dernieresCartes(pour: club) }
+    return dernieresCartes
+  }
+  private var recordAffiche: RecordClub? {
+    if enDemo, let club { return DemoClub.record(pour: club) }
+    return record
   }
 
   var body: some View {
@@ -49,6 +69,10 @@ struct ClubPageView: View {
             .foregroundStyle(Palette.encre)
             .padding(.horizontal, Espace.l)
             .accessibilityAddTraits(.isHeader)
+
+          if demo {
+            BandeauDemoClub().padding(.top, Espace.s)
+          }
 
           VStack(spacing: Espace.s) {
             Button {
@@ -67,7 +91,7 @@ struct ClubPageView: View {
           .padding(.top, Espace.m)
 
           EnteteGroupeClub(titre: "Mes clubs").padding(.top, Espace.s)
-          if clubs.clubs.isEmpty {
+          if tousLesClubs.isEmpty {
             GroupeClub {
               Text(
                 "Tu n'as pas encore de club. Rejoins celui d'un ami avec son lien, ou crée le tien."
@@ -84,11 +108,11 @@ struct ClubPageView: View {
             EnteteGroupeClub(titre: club.nom)
             groupeMembres(club)
             EnteteGroupeClub(titre: "Dernières cartes")
-            if dernieresCartes.isEmpty {
+            if cartesAffichees.isEmpty {
               tuileVide
             } else {
               GroupeClub {
-                ForEach(Array(dernieresCartes.enumerated()), id: \.element.id) { rang, carte in
+                ForEach(Array(cartesAffichees.enumerated()), id: \.element.id) { rang, carte in
                   if rang > 0 { FiletClub(retrait: 80) }
                   ligneCarte(
                     image: carte.image, titre: carte.membre,
@@ -97,7 +121,7 @@ struct ClubPageView: View {
               }
             }
             EnteteGroupeClub(titre: "Record du club")
-            if let record {
+            if let record = recordAffiche {
               GroupeClub {
                 ligneCarte(
                   image: record.image, titre: record.titre, detail: record.membre,
@@ -124,7 +148,7 @@ struct ClubPageView: View {
         }
       }
       .sheet(isPresented: $rechercheOuverte) {
-        RechercheClubView(clubs: clubs.clubs, poissons: poissons) { choisi in
+        RechercheClubView(clubs: tousLesClubs, poissons: poissons) { choisi in
           clubChoisi = choisi.id
         } creer: {
           // La feuille de recherche se ferme d'abord, puis celle de création s'ouvre.
@@ -142,7 +166,7 @@ struct ClubPageView: View {
 
   private var mesClubs: some View {
     GroupeClub {
-      ForEach(Array(clubs.clubs.enumerated()), id: \.element.id) { rang, c in
+      ForEach(Array(tousLesClubs.enumerated()), id: \.element.id) { rang, c in
         let choisi = c.id == club?.id
         if rang > 0 { FiletClub(retrait: Espace.l + 36 + Espace.m) }
         Button {
@@ -153,8 +177,8 @@ struct ClubPageView: View {
             VStack(alignment: .leading, spacing: 0) {
               Text(c.nom).font(Police.corps).foregroundStyle(Palette.encre)
               // À brancher : le nombre de membres de chaque club vient du partage CloudKit ; connu seulement pour le club choisi.
-              if choisi, !membres.isEmpty {
-                Text(membres.count == 1 ? "1 membre" : "\(membres.count) membres")
+              if choisi, !membresAffiches.isEmpty {
+                Text(membresAffiches.count == 1 ? "1 membre" : "\(membresAffiches.count) membres")
                   .font(Police.legende).foregroundStyle(Palette.encreDouce)
               }
             }
@@ -182,44 +206,52 @@ struct ClubPageView: View {
   // MARK: Membres
 
   private func groupeMembres(_ club: ClubLocal) -> some View {
-    GroupeClub {
-      HStack(alignment: .top, spacing: 0) {
-        VStack(spacing: 2) {
-          PastilleMembre(nom: "Moi", rang: 0)
-          Text("Moi").font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
-          Text(cartes.count == 1 ? "1 carte" : "\(cartes.count) cartes")
-            .font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
-        }
-        .frame(maxWidth: .infinity)
-        .accessibilityElement(children: .combine)
-        ForEach(Array(membres.prefix(2).enumerated()), id: \.element.id) { rang, membre in
+    // Au-delà de 2 membres (cas des clubs d'exemple), la rangée défile pour garder des pastilles lisibles.
+    let large = membresAffiches.count > 2
+    return GroupeClub {
+      ScrollView(.horizontal) {
+        HStack(alignment: .top, spacing: 0) {
           VStack(spacing: 2) {
-            PastilleMembre(nom: membre.nom, rang: rang + 1)
-            Text(membre.nom).font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
-            Text(membre.nombreDeCartes.map { $0 == 1 ? "1 carte" : "\($0) cartes" } ?? " ")
+            PastilleMembre(nom: "Moi", rang: 0)
+            Text("Moi").font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
+            Text(cartes.count == 1 ? "1 carte" : "\(cartes.count) cartes")
               .font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
           }
-          .frame(maxWidth: .infinity)
+          .frame(minWidth: large ? 76 : 0, maxWidth: large ? 76 : .infinity)
           .accessibilityElement(children: .combine)
-        }
-        NavigationLink {
-          InviterClubView(club: club, invites: invites, invitation: invitation)
-        } label: {
-          VStack(spacing: 2) {
-            Image(systemName: "plus")
-              .font(.system(size: 22, weight: .bold, design: .rounded))
-              .frame(width: 36, height: 36)
-            Text("Inviter").font(Police.detail)
-            Text(" ").font(Police.legende)
+          ForEach(Array(membresAffiches.prefix(large ? 5 : 2).enumerated()), id: \.element.id) {
+            rang, membre in
+            VStack(spacing: 2) {
+              PastilleMembre(nom: membre.nom, rang: rang + 1)
+              Text(membre.nom).font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
+              Text(membre.nombreDeCartes.map { $0 == 1 ? "1 carte" : "\($0) cartes" } ?? " ")
+                .font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
+            }
+            .frame(minWidth: large ? 76 : 0, maxWidth: large ? 76 : .infinity)
+            .accessibilityElement(children: .combine)
           }
-          .foregroundStyle(Palette.marine)
-          .frame(maxWidth: .infinity)
-          .contentShape(Rectangle())
+          NavigationLink {
+            InviterClubView(club: club, invites: invites, invitation: invitation)
+          } label: {
+            VStack(spacing: 2) {
+              Image(systemName: "plus")
+                .font(.system(size: 22, weight: .bold, design: .rounded))
+                .frame(width: 36, height: 36)
+              Text("Inviter").font(Police.detail)
+              Text(" ").font(Police.legende)
+            }
+            .foregroundStyle(Palette.marine)
+            .frame(minWidth: large ? 76 : 0, maxWidth: large ? 76 : .infinity)
+            .contentShape(Rectangle())
+          }
+          .buttonStyle(.plain)
+          .accessibilityLabel("Inviter un ami")
         }
-        .buttonStyle(.plain)
-        .accessibilityLabel("Inviter un ami")
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 10)
       }
-      .padding(.vertical, 10)
+      .scrollIndicators(.hidden)
+      .scrollDisabled(!large)
     }
   }
 

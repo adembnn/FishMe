@@ -815,6 +815,8 @@ private struct RacineContenu: View {
             pageAmis
         } club: {
             ClubPageView(cartes: app.cartesAPartager, poissons: poissons)
+        } decouvrir: {
+            DecouvrirView()
         } reglages: {
             ReglagesRoueEmplacement(app: app, reglages: reglages)
         }
@@ -1074,10 +1076,18 @@ private struct ReglagesRoueEmplacement<Reglages: View>: View {
     let app: ParcoursApp
     let reglages: Reglages
     @Environment(\.dismiss) private var fermer
+    @AppStorage("demo.communaute") private var demo = false
 
     var body: some View {
         NavigationStack {
             List {
+                Section {
+                    Toggle(isOn: $demo) {
+                        Label("Mode démo", systemImage: "sparkles.rectangle.stack")
+                    }
+                } footer: {
+                    Text("Montre des amis, un club et un fil d'exemple, marqués « Exemple ». Rien n'est envoyé ni enregistré.")
+                }
                 Section {
                     NavigationLink { MesStatistiquesEmplacement(app: app) } label: {
                         Label("Mes statistiques", systemImage: "chart.bar.xaxis")
