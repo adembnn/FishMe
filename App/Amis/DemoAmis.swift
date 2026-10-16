@@ -29,8 +29,8 @@ struct DemoCarte: Identifiable, Hashable {
     /// Nombre de mois avant aujourd'hui (le fil n'affiche que le mois et l'année).
     let ilYaMois: Int
 
-    /// Aucune photo en démo : la carte montre l'illustration de l'espèce.
-    var photo: UIImage? { nil }
+    /// La photo libre de démo (`App/Demo/Photos/<image>-1.jpg`, crédits dans Réglages), ou `nil` : la carte montre l'image d'espèce.
+    @MainActor var photo: UIImage? { PhotoDemoClub.image("\(image)-1") }
 
     var date: Date {
         let jour = Calendar(identifier: .gregorian).date(byAdding: .month, value: -ilYaMois, to: Date()) ?? Date()

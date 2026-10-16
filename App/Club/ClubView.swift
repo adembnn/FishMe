@@ -178,7 +178,7 @@ struct ClubView<MarqueMeteo: View>: View {
                     illustrationClub.padding(.top, Espace.l)
                     Text("Pêche à plusieurs")
                         .font(Police.titre).foregroundStyle(Palette.encre)
-                    Text("Crée un club, invite tes amis et regardez vos cartes ensemble.")
+                    Text(CloudKitPermis.actif ? "Crée un club, invite tes amis et regardez vos cartes ensemble." : "Crée ton club. L'invitation d'amis arrive bientôt.")
                         .font(Police.detail).foregroundStyle(Palette.encreDouce)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, Espace.l)

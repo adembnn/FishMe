@@ -253,6 +253,7 @@ private struct AProposVue: View {
     let liens: LiensLegaux
     @State private var conditionsOuvertes = false
     @State private var confidentialiteOuverte = false
+    @State private var creditsOuverts = false
 
     var body: some View {
         ScrollView {
@@ -269,6 +270,11 @@ private struct AProposVue: View {
                     }
                     .buttonStyle(.plain)
                     SeparateurReglages()
+                    Button { creditsOuverts = true } label: {
+                        ContenuLigneReglages(titre: "Crédits photos", chevron: true)
+                    }
+                    .buttonStyle(.plain)
+                    SeparateurReglages()
                     ContenuLigneReglages(titre: "Version", valeur: ReglagesView.version)
                         .accessibilityElement(children: .combine)
                 }
@@ -282,6 +288,7 @@ private struct AProposVue: View {
         .toolbar(.hidden, for: .navigationBar)
         .sheet(isPresented: $conditionsOuvertes) { ConditionsFeuille() }
         .sheet(isPresented: $confidentialiteOuverte) { ConfidentialiteFeuille() }
+        .sheet(isPresented: $creditsOuverts) { CreditsPhotosFeuille() }
     }
 }
 
