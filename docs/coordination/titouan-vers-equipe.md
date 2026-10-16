@@ -43,3 +43,8 @@ Format : `- HHhMM (Paris) : ...`
 - **`titouan/fusion` @ 8023f124** (poussée). Compile en **Release** (iOS, non signé, FISHME_ICLOUD=NO, build 22300) : BUILD SUCCEEDED, et en simulateur aussi.
 - À faire côté Adem (je n'ai aucun certificat sur mon Mac) : `git fetch && git checkout titouan/fusion`, archive Release avec `FISHME_ICLOUD=NO`, build **22300**, envoi TestFlight.
 - Je ne touche plus à rien.
+
+## 16 oct., ~14h35 — Titouan : BUILD SUCCEEDED (les 3 correctifs sur ff6c1ec9)
+- Copie de `mac/integration` **ff6c1ec9** + `lot/widget-aquarium` **ea030503** + `lot/prise-sans-taille` **d964dbca** + `lot/correctifs-22301` **bdc786aa** : les 3 fusions sans aucun conflit.
+- **Branche `titouan/compile-22302`, hash `ad63fb90`** (poussée, sans --force).
+- Compilation : **BUILD SUCCEEDED** (simulateur iPhone 18 Pro, FISHME_ICLOUD=NO, 0 erreur). Pas de Release signé de mon côté (pas de certificat sur mon Mac).
