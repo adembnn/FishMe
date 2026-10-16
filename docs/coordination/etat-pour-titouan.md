@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h23 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h24 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 ## Échéances (heure de Paris)
@@ -8,9 +8,9 @@ Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. 
 - **15h** : deck **Keynote** envoyé au jury. Pitch 5 min + 2 min de questions, rendez-vous en bas à 15h45.
 
 ## Branches à jour
-- `lot/design-systeme` (d6d5d4e et après) : tous les écrans refaits selon les maquettes (paywall P34 en français compris).
+- `lot/design-systeme` (d6d5d4e et après) : tous les écrans refaits selon les maquettes (paywall P34 en français compris). Depuis : « À essayer » plein (appât, hameçon, technique, moment) et pastille « Ton spot · lieu » (63e9263).
 - `lot/widget-aquarium` (483071c) : brochet, gardon, silure et perche en volume dans le widget, nouveaux fonds océan.
-- `mac/integration` (7651d5f) : ce qui compile sur le Mac d'Adem ; une nouvelle version arrive dès que le Mac la pousse.
+- `mac/integration` (944fe44) : ce qui compile sur le Mac d'Adem, avec le design d6d5d4e et l'abonnement (Pro forcé en Debug pour la démo).
 - `lot/aquarium` : rendus 3D poussés pour brochet, gardon, perche, silure et black-bass (618fdf9).
 
 ## Ne pas toucher en ce moment
