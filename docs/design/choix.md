@@ -46,3 +46,13 @@ Décision (16 oct. 2h50) : badge « Trophée » sur la carte d'une prise plus gr
 | P38 Accès à l'appareil photo | C · Sujet | 16 oct. 3h00 |
 | P42 Sans position | B · Réglages | 16 oct. 3h04 |
 | P39 Notifications | B · Réglages | 16 oct. 3h13 |
+| P07 Fiche du spot (épurée) | A · Plans (choisi par Claude, Adem : « je te fais confiance, même style ») | 16 oct. 5h54 |
+| P41 Widgets de l'écran verrouillé | A · Plans (session et fin légale) | 16 oct. 5h54 |
+| P43 Révélation de la carte | C · Sujet | 16 oct. 5h54 |
+| P44 Écran de lancement | B · Réglages (logo seul sur marine) | 16 oct. 5h54 |
+| P45 Pescedex vide | B · Réglages (comme P26 B) | 16 oct. 5h54 |
+| P46 Pas de spot, pas de réseau | B · Réglages (comme P42 B) | 16 oct. 5h54 |
+| P47 Session bredouille | A · Plans (comme P16 A) | 16 oct. 5h54 |
+| P48 Compteur du Pescedex | B · Réglages (barre, comme P26 B) | 16 oct. 5h54 |
+| P49 Image partagée | A · Plans (comme P33 A) | 16 oct. 5h54 |
+| P50 Paywall petit iPhone | B (boutons fixés en bas) | 16 oct. 5h54 |
