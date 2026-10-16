@@ -4,6 +4,7 @@ import Core
 
 /// P35 (direction B, « Réglages ») : niveau du pêcheur, alertes, mesure d'audience, sources, sécurité,
 /// abonnement, restauration, pages légales et version. Une liste de blocs arrondis, sans texte inutile.
+/// Les conditions d'utilisation s'ouvrent dans l'app (`ConditionsFeuille`) ; la confidentialité ouvre `liens.confidentialite`.
 /// A la branche dans `RootView.swift` :
 /// A la branche dans `RootView.swift` : `ReglagesView(niveau:alertes:mesureAudience:abonne:achats:liens:surEtat:ouvrirSource:ouvrirSecurite:ouvrirPaywall:)`.
 struct ReglagesView: View {
@@ -24,6 +25,7 @@ struct ReglagesView: View {
 
     @State private var gestionOuverte = false
     @State private var message: String?
+    @State private var conditionsOuvertes = false
 
     private static let sources: [(nom: String, role: String)] = [
         ("OFB", "Poissons par station"),
@@ -75,7 +77,7 @@ struct ReglagesView: View {
                         .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)
                         .padding(.horizontal, Espace.l)
                     separateur
-                    lien("Conditions d'utilisation", liens.conditions)
+                    ligne("Conditions d'utilisation", valeur: nil) { conditionsOuvertes = true }
                     separateur
                     lien("Confidentialité", liens.confidentialite)
                     separateur
@@ -102,6 +104,7 @@ struct ReglagesView: View {
         .scrollIndicators(.hidden)
         .background(Palette.fond)
         .manageSubscriptionsSheet(isPresented: $gestionOuverte)
+        .sheet(isPresented: $conditionsOuvertes) { ConditionsFeuille() }
     }
 
     // MARK: Pièces
