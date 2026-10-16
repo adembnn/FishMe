@@ -101,6 +101,30 @@
   },
   {
    "id": "t13",
+   "titre": "Arrêté 41-2026-07-28-00001 du 28 juillet 2026 modifiant l'arrêté préfectoral du 15 janvier 2026 relatif à l'exercice de la pêche en eau douce (RAA spécial 41-2026-07-047), article 1er",
+   "url": "https://www.loir-et-cher.gouv.fr/contenu/telechargement/42951/326747/file/recueil-41-2026-07-047-recueil-des-actes-administratifs-special.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2026-07-28"
+  },
+  {
+   "id": "t14",
+   "titre": "Arrêté 41-2026-07-28-00001 du 28 juillet 2026 modifiant l'arrêté préfectoral du 15 janvier 2026 relatif à l'exercice de la pêche en eau douce (RAA spécial 41-2026-07-047), article 2",
+   "url": "https://www.loir-et-cher.gouv.fr/contenu/telechargement/42951/326747/file/recueil-41-2026-07-047-recueil-des-actes-administratifs-special.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2026-07-28"
+  },
+  {
+   "id": "t15",
+   "titre": "Arrêté 41-2026-07-28-00001 du 28 juillet 2026 modifiant l'arrêté préfectoral du 15 janvier 2026 relatif à l'exercice de la pêche en eau douce (RAA spécial 41-2026-07-047), article 2, alinéa 3",
+   "url": "https://www.loir-et-cher.gouv.fr/contenu/telechargement/42951/326747/file/recueil-41-2026-07-047-recueil-des-actes-administratifs-special.pdf",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "2026-07-28"
+  },
+  {
+   "id": "t16",
    "titre": "Arrêté préfectoral n° 41-2025-12-18-00004 relatif à l'exercice de la pêche en eau douce dans le département de Loir-et-Cher pour l'année 2026, art. 3",
    "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
    "signe_le": null,
@@ -108,7 +132,7 @@
    "version": "2025-12-18"
   },
   {
-   "id": "t14",
+   "id": "t17",
    "titre": "Arrêté préfectoral n° 41-2025-12-18-00004 relatif à l'exercice de la pêche en eau douce dans le département de Loir-et-Cher pour l'année 2026, art. 7",
    "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
    "signe_le": null,
@@ -116,7 +140,7 @@
    "version": "2025-12-18"
   },
   {
-   "id": "t15",
+   "id": "t18",
    "titre": "Arrêté préfectoral n° 41-2025-12-18-00004 relatif à l'exercice de la pêche en eau douce dans le département de Loir-et-Cher pour l'année 2026, art. 10",
    "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
    "signe_le": null,
@@ -124,7 +148,7 @@
    "version": "2025-12-18"
   },
   {
-   "id": "t16",
+   "id": "t19",
    "titre": "Arrêté préfectoral n° 41-2025-12-18-00004 relatif à l'exercice de la pêche en eau douce dans le département de Loir-et-Cher pour l'année 2026, art. 11",
    "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
    "signe_le": null,
@@ -132,7 +156,7 @@
    "version": "2025-12-18"
   },
   {
-   "id": "t17",
+   "id": "t20",
    "titre": "Arrêté préfectoral n° 41-2025-12-18-00004 relatif à l'exercice de la pêche en eau douce dans le département de Loir-et-Cher pour l'année 2026, art. 12",
    "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
    "signe_le": null,
@@ -140,7 +164,7 @@
    "version": "2025-12-18"
   },
   {
-   "id": "t18",
+   "id": "t21",
    "titre": "Fédération de pêche du Loir-et-Cher : Périodes de pêche 2026",
    "url": "http://www.peche41.fr/605-periodes-de-peche.htm",
    "signe_le": null,
@@ -148,7 +172,7 @@
    "version": "page consultée le 2026-10-15"
   },
   {
-   "id": "t19",
+   "id": "t22",
    "titre": "Fédération de pêche du Loir-et-Cher : Plans d'eau associatifs",
    "url": "http://www.peche41.fr/4639-les-plans-d-eau-associatifs.htm",
    "signe_le": null,
@@ -828,64 +852,6 @@
     "t2"
    ],
    "citation": "écrevisses à pattes rouges, des torrents, à pattes blanches, à pattes grêles : pêche interdite",
-   "expire_le": "2026-12-31",
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "41-anguille-jaune-ouverture-cat1",
-   "portee": {
-    "niveau": "departement",
-    "code": "41",
-    "eau": null,
-    "lieu": null,
-    "geometrie": null
-   },
-   "especes": [
-    "anguille-jaune"
-   ],
-   "categorie": "1",
-   "type": "ouverture",
-   "valeur": {
-    "formule": "du 1er avril au 31 août inclus"
-   },
-   "du": "2026-04-01",
-   "au": "2026-08-31",
-   "remplace": null,
-   "phrase": "Anguille jaune : pêche ouverte du 1er avril au 31 août inclus en 1re catégorie.",
-   "textes": [
-    "t1"
-   ],
-   "citation": "anguille jaune : du 1° avril au 31 août inclus",
-   "expire_le": "2026-12-31",
-   "statut": "brouillon",
-   "verifie_par": null
-  },
-  {
-   "id": "41-anguille-jaune-ouverture-cat2",
-   "portee": {
-    "niveau": "departement",
-    "code": "41",
-    "eau": null,
-    "lieu": null,
-    "geometrie": null
-   },
-   "especes": [
-    "anguille-jaune"
-   ],
-   "categorie": "2",
-   "type": "ouverture",
-   "valeur": {
-    "formule": "du 1er avril au 31 août inclus"
-   },
-   "du": "2026-04-01",
-   "au": "2026-08-31",
-   "remplace": null,
-   "phrase": "Anguille jaune : pêche ouverte du 1er avril au 31 août inclus en 2e catégorie.",
-   "textes": [
-    "t2"
-   ],
-   "citation": "anguille jaune : du 1° avril au 31 août inclus",
    "expire_le": "2026-12-31",
    "statut": "brouillon",
    "verifie_par": null
@@ -4104,6 +4070,64 @@
    "expire_le": "2026-12-31",
    "statut": "incertain",
    "verifie_par": null
+  },
+  {
+   "id": "41-anguille-jaune-ouverture-departement",
+   "portee": {
+    "niveau": "departement",
+    "code": "41",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "anguille jaune : du 1er avril au 31 juillet inclus"
+   },
+   "du": "2026-04-01",
+   "au": "2026-07-31",
+   "remplace": null,
+   "phrase": "La pêche de l'anguille jaune est ouverte du 1er avril au 31 juillet 2026 inclus dans le Loir-et-Cher (fermeture avancée du 31 août au 31 juillet).",
+   "textes": [
+    "t13"
+   ],
+   "citation": "« anguille jaune : du 1er avril au 31 juillet inclus »",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "41-anguille-jaune-autre-declaration-lignes",
+   "portee": {
+    "niveau": "departement",
+    "code": "41",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "type": "autre",
+   "valeur": {
+    "texte": "Le pêcheur amateur aux lignes déclare ses captures d'anguilles jaunes sous 24 heures, par le téléservice (demarche.numerique.gouv.fr) ou, sans accès numérique, par courrier papier à la fédération départementale (cachet de la poste), à compter de l'entrée en vigueur de l'arrêté et jusqu'au 31 juillet 2026."
+   },
+   "du": null,
+   "au": "2026-07-31",
+   "remplace": null,
+   "phrase": "Pêcheur aux lignes : déclare chaque anguille jaune capturée dans les 24 heures, en ligne ou par courrier à la fédération, jusqu'au 31 juillet 2026.",
+   "textes": [
+    "t14"
+   ],
+   "citation": "tout pêcheur amateur aux lignes déclare ses captures d'anguilles jaunes dans un délai de 24heures",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
   }
  ],
  "a_verifier": [
@@ -4271,6 +4295,39 @@
    ]
   },
   {
+   "type": "autre",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "eau": null,
+   "textes": [
+    "t15"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "1",
+   "eau": null,
+   "textes": [
+    "t1"
+   ]
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "eau": null,
+   "textes": [
+    "t2"
+   ]
+  },
+  {
    "type": "ouverture",
    "especes": [
     "omble-fontaine"
@@ -4278,7 +4335,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t13"
+    "t16"
    ]
   },
   {
@@ -4289,7 +4346,7 @@
    "categorie": "toutes",
    "eau": "la ferte beauharnais",
    "textes": [
-    "t14"
+    "t17"
    ]
   },
   {
@@ -4300,7 +4357,7 @@
    "categorie": "toutes",
    "eau": "la ferte beauharnais",
    "textes": [
-    "t14"
+    "t17"
    ]
   },
   {
@@ -4311,7 +4368,7 @@
    "categorie": "toutes",
    "eau": "souge",
    "textes": [
-    "t14"
+    "t17"
    ]
   },
   {
@@ -4322,7 +4379,7 @@
    "categorie": "toutes",
    "eau": "souge",
    "textes": [
-    "t14"
+    "t17"
    ]
   },
   {
@@ -4333,7 +4390,7 @@
    "categorie": "toutes",
    "eau": "souge",
    "textes": [
-    "t14"
+    "t17"
    ]
   },
   {
@@ -4344,7 +4401,7 @@
    "categorie": "1",
    "eau": null,
    "textes": [
-    "t15"
+    "t18"
    ]
   },
   {
@@ -4355,7 +4412,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t15"
+    "t18"
    ]
   },
   {
@@ -4366,7 +4423,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t15"
+    "t18"
    ]
   },
   {
@@ -4375,7 +4432,7 @@
    "categorie": "1",
    "eau": "choue",
    "textes": [
-    "t16"
+    "t19"
    ]
   },
   {
@@ -4384,7 +4441,7 @@
    "categorie": "1",
    "eau": "choue",
    "textes": [
-    "t17"
+    "t20"
    ]
   },
   {
@@ -4393,7 +4450,7 @@
    "categorie": "1",
    "eau": "saint martin des bois",
    "textes": [
-    "t16"
+    "t19"
    ]
   },
   {
@@ -4402,7 +4459,7 @@
    "categorie": "1",
    "eau": "saint martin des bois",
    "textes": [
-    "t17"
+    "t20"
    ]
   },
   {
@@ -4413,7 +4470,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t16"
+    "t19"
    ]
   },
   {
@@ -4424,7 +4481,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t18"
+    "t21"
    ]
   },
   {
@@ -4435,7 +4492,7 @@
    "categorie": "1",
    "eau": null,
    "textes": [
-    "t18"
+    "t21"
    ]
   },
   {
@@ -4446,7 +4503,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t18"
+    "t21"
    ]
   },
   {
@@ -4457,7 +4514,7 @@
    "categorie": "2",
    "eau": null,
    "textes": [
-    "t18"
+    "t21"
    ]
   },
   {
@@ -4468,7 +4525,7 @@
    "categorie": "1",
    "eau": null,
    "textes": [
-    "t18"
+    "t21"
    ]
   },
   {
@@ -4479,7 +4536,7 @@
    "categorie": "toutes",
    "eau": null,
    "textes": [
-    "t18"
+    "t21"
    ]
   },
   {
@@ -4510,7 +4567,7 @@
    "categorie": "2",
    "eau": "bas de la roche",
    "textes": [
-    "t19"
+    "t22"
    ]
   },
   {
@@ -4519,7 +4576,7 @@
    "categorie": "2",
    "eau": "chitenay",
    "textes": [
-    "t19"
+    "t22"
    ]
   },
   {
@@ -4528,7 +4585,7 @@
    "categorie": "2",
    "eau": "le mouet",
    "textes": [
-    "t19"
+    "t22"
    ]
   },
   {
@@ -4539,7 +4596,7 @@
    "categorie": "2",
    "eau": "plans d eau des fontaines",
    "textes": [
-    "t19"
+    "t22"
    ]
   },
   {
@@ -4548,7 +4605,7 @@
    "categorie": "2",
    "eau": "le chapitre",
    "textes": [
-    "t19"
+    "t22"
    ]
   },
   {
@@ -4557,7 +4614,7 @@
    "categorie": "2",
    "eau": "villiers",
    "textes": [
-    "t19"
+    "t22"
    ]
   }
  ]

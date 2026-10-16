@@ -28,7 +28,7 @@ nonisolated enum OuChercherTextes {
     static let sansRelevePres = "Aucun relevé OFB à proximité"
     static let explicationOrdre = "Du plus proche au plus loin. Relevée à proximité : la station OFB est un point de mesure, pas toujours un accès public."
     static let creditOSM = "© contributeurs OpenStreetMap"
-    static let titreEcran = "Où chercher près d'ici"
+    static let titreEcran = "Choisir un autre spot"
     static let invite = "Quel poisson cherches-tu ?"
     static func recherche(_ nom: String) -> String { "Je cherche les coins pour \(nom)…" }
 }
