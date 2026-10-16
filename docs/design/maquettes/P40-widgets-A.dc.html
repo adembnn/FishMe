@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Widgets accueil · Ma carte</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.p40-w{position:absolute;border-radius:22px;overflow:hidden;background:#fff;color:var(--encre)}
+.p40-ic{position:absolute;width:60px;display:flex;flex-direction:column;align-items:center;gap:6px}
+.p40-ic i{display:block;width:60px;height:60px;border-radius:13.4px;background:var(--p40-ph)}
+.p40-ic b{display:block;width:36px;height:6px;border-radius:3px;background:var(--p40-lb)}
+.p40-ic em{font-style:normal;font-size:11px;font-weight:800;line-height:1;color:var(--p40-tx)}
+.p40-dots{position:absolute;left:0;right:0;top:712px;display:flex;justify-content:center;gap:10px}
+.p40-dots i{width:7px;height:7px;border-radius:4px;background:var(--p40-dot)}
+.p40-dots i.on{background:var(--p40-tx)}
+.p40-dock{position:absolute;left:14px;right:14px;bottom:20px;height:92px;border-radius:34px;background:var(--p40-dk);display:flex;justify-content:space-around;align-items:center;padding:0 10px}
+.p40-dock i{display:block;width:60px;height:60px;border-radius:13.4px;background:var(--p40-ph2)}
+.p40-n{font-variant-numeric:tabular-nums}
+.ecran button.p40a-flip{position:absolute;display:grid;place-items:center;border:0;padding:0;border-radius:50%;background:rgba(14,26,38,.08);color:var(--encre-douce)}
+.p40a-flip svg{display:block}
+.p40a-card{position:absolute}
+
+</style>
+</helmet>
+<div class="ecran" style="background:#D6E4F3;--p40-ph:rgba(14,26,38,.14);--p40-lb:rgba(14,26,38,.32);--p40-tx:#0E1A26;--p40-dot:rgba(14,26,38,.3);--p40-dk:rgba(255,255,255,.5);--p40-ph2:rgba(14,26,38,.14);">
+<div class="p40-w" style="left:20px;top:66px;width:170px;height:170px;background:var(--tuile)">
+<div class="p40a-card" style="left:33px;top:10px"><div class="fc pc mini" style="width:104px"><div class="win"></div><div class="fish"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="Brochet"></div><div class="cen">84<i>e</i></div><div class="pl"><div class="nm"><b>Brochet</b></div><svg class="rkm pc" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 1.5 13.6 4.75v6.5L8 14.5 2.4 11.25v-6.5Z"/></svg></div><i class="in"></i></div></div>
+<button class="p40a-flip" style="right:5px;bottom:6px;width:24px;height:24px" aria-label="Retourner la carte"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5M20 4v4.5h-4.5M20 12a8 8 0 0 1-13.7 5.6L4 15.5M4 20v-4.5h4.5"/></svg></button></div>
+<div class="p40-ic" style="left:209px;top:70px"><i></i><b></b></div><div class="p40-ic" style="left:300px;top:70px"><i></i><b></b></div><div class="p40-ic" style="left:209px;top:161px"><img src="/_blob/7667ed4766b13859a7e0245c1b4db27c" alt="FishMe" style="width:60px;height:60px;border-radius:13.4px"><em>FishMe</em></div><div class="p40-ic" style="left:300px;top:161px"><i></i><b></b></div>
+<div class="p40-w" style="left:13px;top:256px;width:364px;height:382px;background:var(--tuile)">
+<div class="p40a-card" style="left:60px;top:14px"><div class="fc verso pc" style="width:244px"><div class="ph"><img src="/_blob/084d443133499a1c8e783fc6ededce32" alt="Adem et son brochet"></div><div class="bp"><b>Adem</b><span>12 oct.<br>17:42</span></div><i class="in"></i></div></div>
+<button class="p40a-flip" style="right:16px;bottom:14px;width:30px;height:30px" aria-label="Retourner la carte"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5M20 4v4.5h-4.5M20 12a8 8 0 0 1-13.7 5.6L4 15.5M4 20v-4.5h4.5"/></svg></button></div>
+<div class="p40-dots"><i class="on"></i><i></i><i></i></div><div class="p40-dock"><i></i><i></i><i></i><i></i></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

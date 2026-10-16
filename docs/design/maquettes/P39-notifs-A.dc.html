@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Notifications · A Plans</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+
+.p39-dim{position:absolute;inset:0;background:rgba(0,0,0,.4);z-index:40}
+.p39-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding-bottom:30px;z-index:50}
+.ecran .p39-al{width:270px;border-radius:14px;background:rgba(244,244,247,.88);-webkit-backdrop-filter:blur(40px) saturate(1.8);backdrop-filter:blur(40px) saturate(1.8);font-family:-apple-system,system-ui,"Helvetica Neue",sans-serif;font-weight:400;color:#000;text-align:center;overflow:hidden}
+.ecran .p39-al .c{padding:20px 16px 18px}
+.ecran .p39-al h2{font-size:17px;font-weight:600;line-height:22px;letter-spacing:-.01em}
+.ecran .p39-al p{font-size:13px;font-weight:400;line-height:18px;margin-top:4px}
+.ecran .p39-al .b{display:block;width:100%;height:44px;border-top:.5px solid rgba(60,60,67,.36);color:#0A84FF;font-family:inherit;font-size:17px;font-weight:400}
+.ecran .p39-al .b.g{font-weight:600}
+.ecran .p39-al .rg{display:flex}
+.ecran .p39-al .rg .b{flex:1;border-top:.5px solid rgba(60,60,67,.36)}
+.ecran .p39-al .rg .b+.b{border-left:.5px solid rgba(60,60,67,.36)}
+
+.p39-tg{width:51px;height:31px;border-radius:16px;background:var(--marine);position:relative;flex:none}
+.p39-tg::after{content:"";position:absolute;left:22px;top:2px;width:27px;height:27px;border-radius:14px;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.2)}
+.p39-ic{width:24px;height:24px;display:grid;color:var(--alerte);flex:none}
+.p39-ic svg{width:24px;height:24px}
+.p39-nt{position:absolute;left:16px;right:16px;color:#0E1A26;font-family:-apple-system,system-ui,sans-serif;font-weight:400}
+
+</style>
+</helmet>
+<div class="ecran">
+<img class="fond-carte" src="/_blob/358f1ded92a9e441995d46a2c2f81624" alt="Carte de la Marne"><div class="spot-cercle" style="left:176px;top:366px;width:172px;height:172px"></div>
+<div class="alerte-bandeau" style="position:absolute;left:16px;right:16px;top:59px"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg><span>Orage à 18 h</span></div>
+<div class="feuille"><div class="poignee"></div>
+<h1 class="t-titre">Être prévenu</h1><p class="t-detail" style="margin:6px 0 20px">Une alerte quand un orage ou une crue approche de ton spot.</p>
+<button class="btn pri">Préviens-moi</button><button class="lien" style="margin-top:4px">Plus tard</button></div>
+<div class="p39-dim"></div><div class="p39-wrap"><div class="p39-al" role="alertdialog" aria-label="Fenêtre système"><div class="c"><h2>“FishMe” souhaite vous envoyer des notifications</h2><p>Les notifications peuvent inclure des alertes, des sons et des pastilles d’icônes. Ces notifications peuvent être configurées dans Réglages.</p></div><div class="rg"><button class="b">Ne pas autoriser</button><button class="b g">Autoriser</button></div></div></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

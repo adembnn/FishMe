@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Accès appareil photo · B Réglages</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+
+.p38-dim{position:absolute;inset:0;background:rgba(0,0,0,.4);z-index:40}
+.p38-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding-bottom:30px;z-index:50}
+.ecran .p38-al{width:270px;border-radius:14px;background:rgba(244,244,247,.88);-webkit-backdrop-filter:blur(40px) saturate(1.8);backdrop-filter:blur(40px) saturate(1.8);font-family:-apple-system,system-ui,"Helvetica Neue",sans-serif;font-weight:400;color:#000;text-align:center;overflow:hidden}
+.ecran .p38-al .c{padding:20px 16px 18px}
+.ecran .p38-al h2{font-size:17px;font-weight:600;line-height:22px;letter-spacing:-.01em}
+.ecran .p38-al p{font-size:13px;font-weight:400;line-height:18px;margin-top:4px}
+.ecran .p38-al .b{display:block;width:100%;height:44px;border-top:.5px solid rgba(60,60,67,.36);color:#0A84FF;font-family:inherit;font-size:17px;font-weight:400}
+.ecran .p38-al .b.g{font-weight:600}
+.ecran .p38-al .rg{display:flex}
+.ecran .p38-al .rg .b{flex:1;border-top:.5px solid rgba(60,60,67,.36)}
+.ecran .p38-al .rg .b+.b{border-left:.5px solid rgba(60,60,67,.36)}
+
+.p38-cd{position:absolute;width:44px;height:44px;border:0 solid rgba(255,255,255,.7)}
+
+</style>
+</helmet>
+<div class="ecran">
+<div class="haut"><h1 class="t-grand">Ta prise</h1><p class="t-detail" style="margin-top:8px">FishMe va te demander l’accès à l’appareil photo.</p></div>
+<div class="zone"><div class="groupe" style="margin-top:24px">
+<div class="ligne" style="min-height:72px"><span style="color:var(--marine);width:28px;display:grid"><svg style="width:28px;height:28px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.6"/></svg></span><div class="texte"><div class="t-corps">Appareil photo</div><div class="t-legende">Pour photographier ta prise.</div></div></div>
+<div class="ligne" style="min-height:72px"><span style="color:var(--marine);width:28px;display:grid"><svg style="width:28px;height:28px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z"/><path d="M5.6 5.6l12.8 12.8"/></svg></span><div class="texte"><div class="t-corps">Sans GPS</div><div class="t-legende">La photo reste sur ton iPhone.</div></div></div></div>
+</div>
+<div style="position:absolute;left:16px;right:16px;bottom:40px"><button class="btn pri">Continuer</button><button class="lien" style="margin-top:4px">Choisir une photo</button></div>
+<div class="p38-dim"></div><div class="p38-wrap"><div class="p38-al" role="alertdialog" aria-label="Fenêtre système"><div class="c"><h2>“FishMe” souhaite accéder à l’appareil photo</h2><p>Pour photographier ta prise. La photo reste sur ton iPhone, sans GPS.</p></div><div class="rg"><button class="b">Refuser</button><button class="b g">Autoriser</button></div></div></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

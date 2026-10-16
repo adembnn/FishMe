@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Widgets écran verrouillé · C Un seul widget</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.p41-fond{position:absolute;inset:0;width:390px;height:844px;object-fit:cover;object-position:62% 50%;filter:blur(14px) brightness(.52) saturate(.9);transform:scale(1.15)}
+.p41-cad{position:absolute;left:50%;top:60px;margin-left:-8px;width:16px;height:16px;color:#fff;opacity:.9}
+.p41-hl{position:absolute;left:0;right:0;top:92px;text-align:center;color:#fff}
+.p41-hl .d{font-size:20px;font-weight:800;opacity:.85}
+.p41-hl .h{font-size:92px;font-weight:900;line-height:1;letter-spacing:-.03em;margin-top:2px;font-variant-numeric:tabular-nums}
+.p41-in{display:inline-flex;align-items:center;gap:6px}
+.p41-in svg{width:18px;height:18px}
+.p41-bt{position:absolute;bottom:34px;width:50px;height:50px;border-radius:25px;background:rgba(255,255,255,.16);display:grid;place-items:center;color:#fff}
+.p41-bt svg{width:22px;height:22px}
+.p41-bar{position:absolute;bottom:8px;left:50%;margin-left:-67px;width:134px;height:5px;border-radius:3px;background:#fff}
+.p41-row{position:absolute;top:232px;left:0;right:0;display:flex;justify-content:center;gap:8px;color:#fff;font-variant-numeric:tabular-nums}
+.p41-w{position:relative;flex:none;background:rgba(255,255,255,.18);color:#fff;overflow:hidden}
+.p41-c{width:72px;height:72px;border-radius:36px}
+.p41-r{width:160px;height:72px;border-radius:18px}
+.p41-rr{width:328px;height:72px;border-radius:18px}
+.p41-s{position:absolute;filter:brightness(0) invert(1)}
+.p41-lbl{position:absolute;left:14px;top:11px;display:flex;align-items:center;gap:5px;font-size:13px;font-weight:800;opacity:.8}
+.p41-lbl svg{width:14px;height:14px}
+.p41-big{position:absolute;left:14px;bottom:5px;font-size:40px;font-weight:900;line-height:1;letter-spacing:-.02em}
+</style>
+</helmet>
+<div class="ecran">
+<img class="p41-fond" src="/_blob/084d443133499a1c8e783fc6ededce32" alt="">
+<svg class="p41-cad" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17 10V8A5 5 0 0 0 7 8v2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-8-2a3 3 0 0 1 6 0v2H9Z"/></svg>
+<div class="p41-hl"><div class="d">lundi 12 octobre</div><div class="h">17:42</div></div>
+<div class="p41-row"><div class="p41-w p41-rr" role="img" aria-label="Mon aquarium, cinq poissons"><div style="position:absolute;left:10px;right:10px;top:14px;height:1.5px;border-radius:1px;background:rgba(255,255,255,.35)"></div><img class="p41-s" src="/_blob/43a6a26a33145dfb814690ff8bc29d3a" alt="" style="left:18px;top:38px;width:72px;opacity:0.95"><img class="p41-s" src="/_blob/eccef0c68e8215e3f026211d80c01507" alt="" style="left:106px;top:20px;width:44px;opacity:0.7;transform:scaleX(-1)"><img class="p41-s" src="/_blob/057a9ce505900d4d834edfa7cc3ccd76" alt="" style="left:140px;top:46px;width:54px;opacity:0.85"><img class="p41-s" src="/_blob/b1e4b71a29726b13c2d34e2adfcfef68" alt="" style="left:214px;top:28px;width:56px;opacity:0.9"><img class="p41-s" src="/_blob/5bc5742808831bfeb9ea9f6d4e226842" alt="" style="left:272px;top:40px;width:46px;opacity:0.65;transform:scaleX(-1)"></div></div>
+<div class="p41-bt" style="left:46px"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 2h8v4l-2 2v13a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V8L8 6Z"/></svg></div><div class="p41-bt" style="right:46px"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.6"/></g></svg></div><div class="p41-bar"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
