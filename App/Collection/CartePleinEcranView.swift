@@ -28,15 +28,8 @@ struct CartePleinEcranView: View {
                 .padding(.horizontal, Espace.bord)
                 .padding(.bottom, Espace.l)
             }
-            Button(action: fermer) {
-                Image(systemName: "xmark")
-                    .font(Police.sousTitre)
-                    .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                    .background(.regularMaterial, in: Circle())
-                    .foregroundStyle(Palette.encre)
-            }
-            .accessibilityLabel("Fermer")
-            .padding(Espace.l)
+            BoutonRond(role: .fermer, rendu: .verre, action: fermer)
+                .padding(Espace.bord)
         }
         .onAppear { if infos.style.aUnReflet && !reduireAnimations { mouvement.demarrer() } }
         .onDisappear { mouvement.arreter() }

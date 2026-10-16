@@ -53,7 +53,9 @@ struct RevelationCarteView: View {
                 Spacer(minLength: 16)
             }
         }
-        .avecCroixFermer { ranger() }
+        .overlay(alignment: .topLeading) {
+            BoutonRond(role: .fermer, rendu: .verre) { ranger() }.padding(Espace.bord)
+        }
         .contentShape(Rectangle())
         .onTapGesture { if rapide { ranger() } }
         .task {
