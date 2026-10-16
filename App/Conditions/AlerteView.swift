@@ -17,89 +17,110 @@ struct AlerteView: View {
     @State private var sourceOuverte = false
 
     var body: some View {
-        VStack(spacing: 0) {
-            HStack {
-                Spacer()
-                BoutonRond(role: .fermer, rendu: .verre)
+        // Positions de la maquette P13-alerte-C, mesurées depuis le haut de l'écran de 844 pt.
+        ZStack(alignment: .top) {
+            Palette.surface
+            // Pastille 84 pt à 140, heure en 120 pt, titre.
+            VStack(spacing: 0) {
+                Image(systemName: alerte.type == .orage ? "bolt.fill" : "water.waves")
+                    .font(Police.taille(42))
+                    .foregroundStyle(Palette.alerte)
+                    .frame(width: 84, height: 84)
+                    .background(Palette.alerteDoux, in: Circle())
+                    .accessibilityHidden(true)
+                Text(heureAlerte)
+                    .font(Police.taille(120, .black).monospacedDigit())
+                    .minimumScaleFactor(0.5).lineLimit(1)
+                    .foregroundStyle(Palette.alerte)
+                    .padding(.top, 36)
+                Text(titre).font(Police.titre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
+                    .padding(.top, 22)
             }
-            .padding(.top, Espace.s)
-            GeometryReader { geo in
-                ScrollView {
-                    VStack(spacing: 0) {
-                        Spacer(minLength: Espace.l)
-                        Image(systemName: alerte.type == .orage ? "bolt.fill" : "water.waves")
-                            .font(Police.taille(40))
-                            .foregroundStyle(Palette.alerte)
-                            .frame(width: 84, height: 84)
-                            .background(Palette.alerteDoux, in: Circle())
-                            .accessibilityHidden(true)
-                        Text(FormatConditions.heure(alerte.heure))
-                            .font(Police.taille(120, .heavy).monospacedDigit())
-                            .minimumScaleFactor(0.5).lineLimit(1)
-                            .foregroundStyle(Palette.alerte)
-                            .padding(.top, 36)
-                        Text(titre).font(Police.titre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
-                            .padding(.top, 22)
-                        Spacer(minLength: Espace.xl)
-                        Text(explication).font(Police.sousTitre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
-                            .padding(.horizontal, Espace.xl)
-                        if sourceOuverte {
-                            VStack(spacing: Espace.s) {
-                                Text("\(alerte.mesure) · \(alerte.source)")
-                                    .font(Police.legende).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
-                                Button { ouvrir(lien) } label: {
-                                    Label(alerte.type == .orage ? "Vigilance de Météo-France" : "Vigicrues", systemImage: "arrow.up.right.square")
-                                        .font(Police.legende)
-                                }
-                                .frame(minHeight: Gabarit.zoneTactile)
-                                Text("L'alerte officielle fait foi.").font(Police.legende).foregroundStyle(Palette.encreDouce)
-                            }
-                            .padding(.top, Espace.m)
+            .padding(.horizontal, Espace.bord)
+            .padding(.top, 140)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            // Explication à 460, côtés 40 ; la source s'ouvre d'un toucher, sous le texte.
+            VStack(spacing: 0) {
+                Text(explication).font(Police.sousTitre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
+                if sourceOuverte {
+                    VStack(spacing: Espace.s) {
+                        Text("\(alerte.mesure) · \(alerte.source)")
+                            .font(Police.legende).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
+                        Button { ouvrir(lien) } label: {
+                            Label(alerte.type == .orage ? "Vigilance de Météo-France" : "Vigicrues", systemImage: "arrow.up.right.square")
+                                .font(Police.legende)
                         }
-                        Spacer(minLength: Espace.xl)
-                        if let previensMoi {
-                            InterrupteurPrevienMoi(modele: previensMoi, lecture: lecture)
-                                .padding(.horizontal, Espace.bord)
-                        }
-                        Spacer(minLength: Espace.l)
-                    }
-                    .frame(maxWidth: .infinity, minHeight: geo.size.height)
-                }
-                .scrollIndicators(.hidden)
-            }
-        }
-        .safeAreaInset(edge: .bottom, spacing: 0) {
-            VStack(spacing: Espace.m) {
-            Button("Compris") { fermer() }
-                .buttonStyle(.principal)
-            if let marque {
-                MarqueMeteoView(stockage: marque,
-                                libelleLien: alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources",
-                                action: { withAnimation { sourceOuverte.toggle() } })
-                    .accessibilityHint("Affiche la source de l'alerte")
-            } else {
-                Button { withAnimation { sourceOuverte.toggle() } } label: {
-                    Text(alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources")
-                        .font(Police.legende).foregroundStyle(Palette.marine).underline()
                         .frame(minHeight: Gabarit.zoneTactile)
+                        Text("L’alerte officielle fait foi.").font(Police.legende).foregroundStyle(Palette.encreDouce)
+                    }
+                    .padding(.top, Espace.m)
                 }
-                .accessibilityHint("Affiche la source de l'alerte")
             }
+            .padding(.horizontal, 40)
+            .padding(.top, 460)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            // « Préviens-moi » à 560, côtés 24.
+            if let previensMoi {
+                InterrupteurPrevienMoi(modele: previensMoi, lecture: lecture)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 560)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            }
+            // « Compris » et la marque, à 40 pt du bas.
+            VStack(spacing: 14) {
+                Button("Compris") { fermer() }
+                    .buttonStyle(.principal)
+                if let marque {
+                    MarqueMeteoView(stockage: marque,
+                                    libelleLien: alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources",
+                                    action: { withAnimation { sourceOuverte.toggle() } })
+                        .accessibilityHint("Affiche la source de l'alerte")
+                } else {
+                    Button { withAnimation { sourceOuverte.toggle() } } label: {
+                        Text(alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources")
+                            .font(Police.taille(13, .heavy)).foregroundStyle(Palette.marine).underline()
+                            .frame(minHeight: Gabarit.zoneTactile)
+                    }
+                    .accessibilityHint("Affiche la source de l'alerte")
+                }
+            }
+            .padding(.horizontal, Espace.bord)
+            .padding(.bottom, 40)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+            // Fermer : rond de 44 pt, fond clair (pas de verre), en haut à droite, à 59 pt du haut.
+            Button { fermer() } label: {
+                Image(systemName: "xmark")
+                    .font(.system(size: 18, weight: .bold, design: .rounded))
+                    .foregroundStyle(Palette.encre)
+                    .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                    .background(Palette.fond, in: Circle())
+                    .contentShape(Circle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Fermer")
+            .padding(.top, 59).padding(.trailing, Espace.bord)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
         }
-            .padding(.top, Espace.s)
-            .background(Palette.surface)
-        }
-        .padding(.horizontal, Espace.bord)
-        .padding(.bottom, Espace.l)
-        .background(Palette.surface.ignoresSafeArea())
+        .ignoresSafeArea()
         .accessibilityIdentifier("alerte-plein-ecran")
+    }
+
+    /// « 18 h » pile, « 18 h 05 » sinon : la maquette montre l'heure sans les minutes quand elles sont à zéro.
+    private var heureAlerte: String {
+        let m = Calendar.current.component(.minute, from: alerte.heure)
+        if m == 0 { return "\(Calendar.current.component(.hour, from: alerte.heure)) h" }
+        return FormatConditions.heure(alerte.heure)
     }
 
     private var titre: String {
         switch alerte.type {
         case .orage:
-            // À brancher : le niveau de vigilance de l'orage (jaune, orange, rouge) n'est pas dans `Alerte`.
-            return "Alerte orage"
+            // Le niveau n'est pas dans `Alerte` : on le lit dans le texte de l'alerte officielle (jamais deviné).
+            let texte = alerte.mesure.lowercased()
+            for niveau in ["jaune", "orange", "rouge"] where texte.contains(niveau) {
+                return "Orage, vigilance \(niveau)"
+            }
+            return "Orage"
         case .crue:
             switch lecture?.eau?.vigilance {
             case .jaune: return "Crue, vigilance jaune"
@@ -111,7 +132,7 @@ struct AlerteView: View {
     }
 
     private var explication: String {
-        alerte.type == .orage ? "Range tes cannes en carbone et mets-toi à l'abri." : "Reste loin de l'eau."
+        alerte.type == .orage ? "Range tes cannes en carbone et mets-toi à l’abri." : "Reste loin de l'eau."
     }
 
     private var lien: URL { alerte.type == .orage ? LiensVigilance.vigilanceMeteoFrance : LiensVigilance.vigicrues }
@@ -126,7 +147,7 @@ private struct InterrupteurPrevienMoi: View {
         HStack(spacing: Espace.m) {
             Text("Préviens-moi").font(Police.corps).foregroundStyle(Palette.encre)
             Spacer(minLength: 0)
-            Toggle("Préviens-moi", isOn: $modele.vigilanceActive).labelsHidden()
+            Toggle("Préviens-moi", isOn: $modele.vigilanceActive).labelsHidden().tint(Palette.marine)
         }
         .frame(minHeight: Gabarit.zoneTactile)
             .onChange(of: modele.vigilanceActive) { _, _ in
