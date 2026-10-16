@@ -564,6 +564,8 @@ struct RootView: View {
             let nouvelle = ParcoursApp(chargement: chargement, configurerMesure: configurerMesure)
             app = nouvelle
             await nouvelle.demarrer()
+            // DEBUG seulement, avec -FishMeForcerPro YES : le widget aquarium s'affiche en Pro (vidéo de démo). Rien en Release.
+            PontAquariumWidget.appliquerProForce()
         }
     }
 }
