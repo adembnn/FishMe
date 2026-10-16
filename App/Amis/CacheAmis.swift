@@ -56,7 +56,8 @@ actor CacheAmis {
 
     static func creerConteneur(enMemoire: Bool = false) throws -> ModelContainer {
         let schema = Schema([AmiCarte.self, AmiBloque.self])
-        let configuration = ModelConfiguration("Amis", schema: schema, isStoredInMemoryOnly: enMemoire, cloudKitDatabase: .none)
+        // Hors App Group (comme DepotCartes) : sinon SwiftData vise le conteneur partagé du widget.
+        let configuration = ModelConfiguration("Amis", schema: schema, isStoredInMemoryOnly: enMemoire, groupContainer: .none, cloudKitDatabase: .none)
         return try ModelContainer(for: schema, configurations: [configuration])
     }
 
