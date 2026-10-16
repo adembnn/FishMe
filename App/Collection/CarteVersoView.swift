@@ -11,8 +11,11 @@ struct CarteVersoView: View {
 
     var body: some View {
         CarteCadre(style: infos.style, declaree: infos.prise.estDeclaree) {
-            ZStack(alignment: .bottom) {
+            VStack(spacing: 0) {
                 fondPhoto
+                    .clipShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
+                    .padding([.top, .horizontal], Espace.s)
+                    .layoutPriority(1)
                 bande
             }
         }
@@ -31,36 +34,41 @@ struct CarteVersoView: View {
         } else {
             ZStack {
                 LinearGradient(colors: infos.style.fond, startPoint: .top, endPoint: .bottom).opacity(0.5)
-                Text(infos.prise.estDeclaree ? "Carte déclarée : pas de photo" : "Pas de photo")
-                    .font(Jeton.police(17))
-                    .foregroundStyle(Jeton.encre)
-                    .padding(.bottom, 160)
+                VStack(spacing: Espace.s) {
+                    Image(systemName: "camera")
+                        .font(Police.taille(34))
+                        .accessibilityHidden(true)
+                    Text(infos.prise.estDeclaree ? "Carte déclarée : pas de photo" : "Pas de photo")
+                        .font(Jeton.police(17))
+                        .multilineTextAlignment(.center)
+                }
+                .foregroundStyle(Palette.encreDouce)
+                .padding(Espace.l)
             }
         }
     }
 
     private var bande: some View {
-        VStack(alignment: .leading, spacing: 6) {
+        VStack(alignment: .leading, spacing: Espace.xs) {
             if infos.prise.estDeclaree {
                 Text("Tu as déclaré l'avoir déjà pêché : cette carte n'a ni photo, ni taille, ni lieu.")
-                    .font(Jeton.police(14, .semibold))
+                    .font(Jeton.police(13))
             } else {
-                Text(phraseRarete).font(Jeton.police(14, .semibold))
+                Text(ligneMoment).font(Jeton.police(13)).foregroundStyle(Palette.encreDouce)
+                Text(phraseRarete).font(Jeton.police(13))
                 if let consigne = infos.consigne {
                     Text(consigne + (infos.sourceConsigne.map { " (source : \($0))" } ?? ""))
-                        .font(Jeton.police(14))
+                        .font(Jeton.police(13))
                 }
-                Text(ligneMoment).font(Jeton.police(13, .semibold)).foregroundStyle(Jeton.encreDouce)
                 meteo
             }
             if let comment = emplacements.commentLaPecher {
                 comment(infos.prise.espece)
             }
         }
-        .foregroundStyle(Jeton.encre)
-        .padding(12)
+        .foregroundStyle(Palette.encre)
+        .padding(Espace.m)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.regularMaterial)
     }
 
     /// Le verso dit « dans les relevés OFB », jamais une promesse de prise.
@@ -84,7 +92,7 @@ struct CarteVersoView: View {
     }
 
     private var ligneMoment: String {
-        var morceaux = [Formats.heure(infos.prise.date), Formats.lune(infos.lune)]
+        var morceaux = [Formats.date(infos.prise.date), Formats.heure(infos.prise.date), Formats.lune(infos.lune)]
         if let s = infos.detail.dureeSecondes { morceaux.append("session de \(Formats.duree(s))") }
         return morceaux.joined(separator: " · ")
     }
@@ -118,7 +126,7 @@ struct BlocMeteoSimple: View {
             if let pluie = conditions.pluieMm { ligne("Pluie \(Formats.nombre(pluie)) mm", heure) }
             if conditions.etatRiviere != .inconnu { ligne("Rivière : \(etat)", heure) }
         }
-        .font(Jeton.police(13, .semibold))
+        .font(Jeton.police(13))
     }
 
     private var tendance: String {
@@ -146,11 +154,11 @@ struct MarqueAppleWeather: View {
     var body: some View {
         HStack(spacing: 8) {
             Label("Apple Weather", systemImage: "applelogo")
-                .font(Jeton.police(12, .semibold))
+                .font(Jeton.police(12))
             if let url = URL(string: "https://weatherkit.apple.com/legal-attribution.html") {
                 Link("Autres sources de données", destination: url)
-                    .font(Jeton.police(12, .semibold))
-                    .frame(minHeight: Jeton.zoneTactile)
+                    .font(Jeton.police(12))
+                    .frame(minHeight: Gabarit.zoneTactile)
             }
         }
     }

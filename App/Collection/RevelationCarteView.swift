@@ -24,7 +24,7 @@ struct RevelationCarteView: View {
 
     var body: some View {
         ZStack {
-            Jeton.fondPage.ignoresSafeArea()
+            Palette.fond.ignoresSafeArea()
             VStack(spacing: 14) {
                 Spacer(minLength: 24)
                 carte
@@ -32,14 +32,11 @@ struct RevelationCarteView: View {
                     .rotation3DEffect(.degrees(reduireAnimations ? 0 : angle), axis: (x: 0, y: 1, z: 0), perspective: 0.6)
                 rarete
                     .opacity(face == .cachee ? 0 : 1)
-                    .frame(minHeight: Jeton.zoneTactile)
+                    .frame(minHeight: Gabarit.zoneTactile)
                 Button(action: ranger) {
                     Text("Ranger dans le Pescedex")
-                        .font(Jeton.police(17))
-                        .frame(maxWidth: .infinity, minHeight: Jeton.zoneTactile)
-                        .foregroundStyle(.white)
-                        .background(Jeton.encre, in: Capsule())
                 }
+                .buttonStyle(.principal)
                 .padding(.horizontal, 20)
                 .opacity(face == .cachee ? 0 : 1)
                 .disabled(face == .cachee)

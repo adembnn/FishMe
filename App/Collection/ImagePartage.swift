@@ -15,9 +15,9 @@ enum ImagePartage {
                                           especesDeLaZone: [], services: services)
         let vue = CarteRectoView(infos: infos, anime: false, inclinaison: .zero, refletFixe: true,
                                 imageDecodee: UIImage(named: infos.espece.image), pourPartage: true)
-            .frame(width: largeur, height: largeur / Jeton.rapportCarte)
+            .frame(width: largeur, height: largeur / Gabarit.rapportCarte)
             .padding(16)
-            .background(Jeton.fondPage)
+            .background(Palette.fond)
         let rendu = ImageRenderer(content: vue)
         rendu.scale = 3
         // Un premier rendu peut échouer le temps que le moteur graphique chauffe (simulateur) : un seul nouvel essai.
