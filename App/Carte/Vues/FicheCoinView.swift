@@ -55,7 +55,11 @@ struct FicheCoinView: View {
             .padding(.bottom, Espace.xl)
         }
         .scrollIndicators(.hidden)
-        .overlay(alignment: .topTrailing) { croixFermer }
+        .overlay(alignment: .topTrailing) {
+            BoutonRond(role: .fermer)
+                .padding(.top, Espace.s)
+                .padding(.trailing, Espace.bord)
+        }
         .task { await modele.charger() }
         .sheet(isPresented: $reglesOuvertes) { feuilleRegles }
     }
@@ -191,20 +195,6 @@ struct FicheCoinView: View {
         }
     }
 
-    /// Croix « Fermer » en haut à droite de la fiche.
-    private var croixFermer: some View {
-        Button { dismiss() } label: {
-            Image(systemName: "xmark")
-                .font(Police.corps)
-                .foregroundStyle(Palette.marine)
-                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                .background(Palette.marineDoux, in: Circle())
-        }
-        .accessibilityLabel("Fermer")
-        .padding(.top, Espace.s)
-        .padding(.trailing, Espace.bord)
-    }
-
     // MARK: Feuille des règles (derrière la pastille)
 
     private var feuilleRegles: some View {
@@ -234,8 +224,8 @@ struct FicheCoinView: View {
             .navigationTitle("Règles du jour")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Fermer") { reglesOuvertes = false }
+                ToolbarItem(placement: .topBarLeading) {
+                    BoutonRond(role: .fermer, rendu: .simple) { reglesOuvertes = false }
                 }
             }
         }

@@ -12,18 +12,13 @@ struct AutreSpotProView: View {
     var body: some View {
         VStack(spacing: Espace.l) {
             HStack {
+                BoutonRond(role: .fermer, rendu: .verre, action: plusTard)
+                Spacer(minLength: Espace.s)
                 Text("Choisir un autre spot")
                     .font(Police.detail)
                     .foregroundStyle(Palette.encre)
                 Spacer(minLength: Espace.s)
-                Button(action: plusTard) {
-                    Image(systemName: "xmark")
-                        .font(Police.corps)
-                        .foregroundStyle(Palette.marine)
-                        .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                        .background(Palette.marineDoux, in: Circle())
-                }
-                .accessibilityLabel("Fermer")
+                Color.clear.frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
             }
 
             Spacer(minLength: 0)
