@@ -31,3 +31,7 @@ Direction retenue pour chaque page de la toile (A · Plans, B · Réglages, C ·
 
 Décision (16 oct. 2h50) : badge « Trophée » sur la carte d'une prise plus grande que 90 % des prises connues de son espèce ; la rareté ne bouge pas (fréquence OFB seule).
 | P26 Pescedex | B · Réglages, avec le bouton « Voir mon aquarium » | 16 oct. 2h51 |
+| P27 Fiche d'une espèce | B · Réglages | 16 oct. 2h54 |
+| P28 Carte déclarée | B · Réglages | 16 oct. 2h54 |
+| P27 Fiche d'une espèce | B · Réglages | 16 oct. 2h54 |
+| P28 Carte déclarée | B · Réglages | 16 oct. 2h54 |
