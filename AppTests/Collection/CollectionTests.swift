@@ -158,6 +158,28 @@ struct CollectionTests {
     @Test func departementLuDansLeLieuFlou() {
         #expect(Formats.departement(depuisLieuFlou: "La Marne · 94") == Departement(code: "94"))
         #expect(Formats.departement(depuisLieuFlou: "94") == nil)
+        // Format de MoteurGeo.lieuFlou quand aucune eau n'est nommée, et hors de France.
+        #expect(Formats.departement(depuisLieuFlou: "Département 94") == Departement(code: "94"))
+        #expect(Formats.departement(depuisLieuFlou: "Hors de France") == nil)
         #expect(Formats.departement(depuisLieuFlou: nil) == nil)
+    }
+
+    /// Bug du simulateur : une prise à Charenton (lieuFlou « Département 94 », pas d'eau nommée) laissait la zone vide,
+    /// donc l'en-tête « Tes cartes se rangent ici » ; la carte doit tenir son emplacement et la zone devenir le 94.
+    @Test func priseSansEauNommeeDonneLaZoneEtOccupeSonEmplacement() async throws {
+        let depot = try nouveauDepot()
+        let jpeg = try jpegAvecGPS()
+        _ = try await depot.enregistrer(prise: Prise(espece: brochet, longueurCm: 60, mesure: .saisie, date: Date(),
+                                                     lieuFlou: "Département 94", cheminPhoto: nil, gardee: true), photo: jpeg)
+        let modele = PescedexModele(depot: depot, services: services)
+        await modele.charger()
+        #expect(modele.zone == Departement(code: "94"))
+        #expect(modele.emplacements.first { $0.id == "brochet" }?.carte != nil)
+        // Même sans lieu lisible, la carte garde son emplacement.
+        let sansLieu = CompteurPescedex.emplacements(
+            cartes: modele.detaillees.map(\.prise), especes: services.especes.especesPechables(), zone: nil) { _, _ in
+            ResultatRarete(niveau: .nonMesuree, nPeches: 0, nTotal: 0, anneeDernierReleve: nil, echelle: .departement)
+        }
+        #expect(sansLieu.first { $0.id == "brochet" }?.carte != nil)
     }
 }

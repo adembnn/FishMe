@@ -48,9 +48,18 @@ enum Formats {
         }
     }
 
-    /// « La Marne · 94 » : le département est ce qui suit le dernier point médian. Jamais un point exact.
+    /// « La Marne · 94 » (eau connue) ou « Département 94 » (pas d'eau nommée) : le département est le dernier mot.
+    /// « Hors de France » et les textes sans code n'en donnent aucun. Jamais un point exact.
     static func departement(depuisLieuFlou lieu: String?) -> Departement? {
-        guard let lieu, lieu.contains("·"), let reste = lieu.split(separator: "·").last else { return nil }
+        guard let lieu else { return nil }
+        let reste: String
+        if lieu.contains("·"), let fin = lieu.split(separator: "·").last {
+            reste = String(fin)
+        } else if lieu.hasPrefix("Département "), let fin = lieu.split(separator: " ").last {
+            reste = String(fin)
+        } else {
+            return nil
+        }
         let code = reste.trimmingCharacters(in: .whitespaces)
         guard !code.isEmpty, code.count <= 3 else { return nil }
         return Departement(code: code)

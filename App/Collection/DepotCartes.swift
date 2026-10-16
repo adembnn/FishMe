@@ -19,8 +19,18 @@ actor DepotCartes: CollectionCartes {
     /// Base locale : `cloudKitDatabase: .none`, jamais de synchro iCloud.
     static func creerConteneur(enMemoire: Bool = false) throws -> ModelContainer {
         let schema = Schema([CarteEnregistree.self, BredouilleEnregistree.self])
-        let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: enMemoire, cloudKitDatabase: .none)
+        // Fichier nommé dans Application Support, hors App Group : avec l'App Group du widget (L15), SwiftData irait sinon
+        // dans le conteneur partagé (absent sans provisionnement), et la base retombait en mémoire : les cartes se perdaient.
+        let configuration = enMemoire
+            ? ModelConfiguration(schema: schema, isStoredInMemoryOnly: true, groupContainer: .none, cloudKitDatabase: .none)
+            : ModelConfiguration(schema: schema, url: fichierBase(), cloudKitDatabase: .none)
         return try ModelContainer(for: schema, configurations: [configuration])
+    }
+
+    static func fichierBase() -> URL {
+        let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        try? FileManager.default.createDirectory(at: base, withIntermediateDirectories: true)
+        return base.appendingPathComponent("cartes.store")
     }
 
     static func dossierParDefaut() -> URL {
