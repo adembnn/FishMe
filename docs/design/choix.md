@@ -19,3 +19,5 @@ Direction retenue pour chaque page de la toile (A · Plans, B · Réglages, C ·
 | P14 Session en cours | C · Sujet | 16 oct. 2h41 |
 | P16 Fin de session | A · Plans | 16 oct. 2h42 |
 | P17 Mes sorties | A · Plans | 16 oct. 2h42 |
+| P18 Photo de la prise | C · Sujet | 16 oct. 2h43 |
+| P19 Espèce proposée | A · Plans | 16 oct. 2h43 |

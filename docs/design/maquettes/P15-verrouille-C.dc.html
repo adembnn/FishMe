@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Écran verrouillé · C Sujet</title>
+<title>Île dynamique · C Sujet</title>
 <script src="./support.js"></script>
 <link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
 </head>
@@ -17,24 +17,29 @@ body{margin:0}
 .p15-hl .d{font-size:20px;font-weight:800;opacity:.85}
 .p15-hl .h{font-size:92px;font-weight:900;line-height:1;letter-spacing:-.03em;margin-top:2px;font-variant-numeric:tabular-nums}
 .p15-cad{position:absolute;left:50%;top:60px;margin-left:-8px;width:16px;height:16px;color:#fff;opacity:.9}
-.p15-bt{position:absolute;bottom:34px;width:50px;height:50px;border-radius:25px;background:rgba(30,40,52,.45);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);display:grid;place-items:center;color:#fff}
-.p15-bt svg{width:22px;height:22px}
 .p15-bar{position:absolute;bottom:8px;left:50%;margin-left:-67px;width:134px;height:5px;border-radius:3px;background:#fff}
-.p15-la{position:absolute;left:16px;right:16px;color:#fff;font-family:var(--police)}
-.p15-ile{position:absolute;left:50%;top:11px;margin-left:-63px;width:126px;height:37px;border-radius:19px;background:#000}
+.p15-la{position:absolute;left:16px;right:16px;color:#fff;background:rgba(18,28,40,.62);-webkit-backdrop-filter:blur(30px);backdrop-filter:blur(30px);font-variant-numeric:tabular-nums}
+.p15-top{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:800}
+.p15-top img{width:26px;height:26px;border-radius:7px}
+.p15-btn{display:flex;align-items:center;justify-content:center;gap:8px;height:44px;border:0;border-radius:22px;color:#fff;font:inherit;font-size:17px;font-weight:800;padding:0 18px;white-space:nowrap}
+.p15-btn svg{width:22px;height:22px;flex:none}
+.ecran button.p15-pri{background:#0D4A85;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+.ecran button.p15-gl{background:rgba(255,255,255,.2)}
+.p15-cap{position:absolute;left:0;right:0;text-align:center;color:#fff;font-size:13px;font-weight:800;opacity:.7}
+
 </style>
 </helmet>
 <div class="ecran">
 <img class="p15-fond" src="/_blob/084d443133499a1c8e783fc6ededce32" alt="">
-<svg class="p15-cad" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17 10V8A5 5 0 0 0 7 8v2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-8-2a3 3 0 0 1 6 0v2H9Z"/></svg>
-<div class="p15-hl"><div class="d">lundi 12 octobre</div><div class="h">17:42</div></div>
-<div class="p15-ile"></div>
-<div class="p15-la" style="top:324px;padding:20px 20px 18px;border-radius:30px;background:rgba(18,28,40,.5);-webkit-backdrop-filter:blur(30px);backdrop-filter:blur(30px);text-align:center">
-<div style="font-size:64px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.03em">1:24:10</div>
-<div style="font-size:15px;font-weight:800;opacity:.8;margin-top:10px">Fin légale 19:29</div></div>
-<div style="position:absolute;left:50%;top:470px;margin-left:-93px;width:186px;height:37px;border-radius:19px;background:#000;display:flex;align-items:center;justify-content:space-between;padding:0 14px;color:#fff;font-family:var(--police)"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="Brochet" style="width:30px;height:14px;object-fit:contain"><span style="font-size:15px;font-weight:900;font-variant-numeric:tabular-nums">1:24</span></div>
-<div class="p15-bt" style="left:46px"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 2h8v4l-2 2v13a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V8L8 6Z"/></svg></div>
-<div class="p15-bt" style="right:46px"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.6"/></g></svg></div>
+<div style="position:absolute;left:12px;right:12px;top:11px;height:206px;border-radius:46px;background:#000;color:#fff;font-variant-numeric:tabular-nums">
+<div style="position:absolute;left:50%;top:0;margin-left:-63px;width:126px;height:37px;border-radius:19px;background:#0b0b0c"></div>
+<div style="position:absolute;left:24px;right:24px;top:52px;display:flex;align-items:flex-end;justify-content:space-between"><div><div class="p15-top" style="font-size:13px;opacity:.75"><img style="width:20px;height:20px;border-radius:6px" src="/_blob/7667ed4766b13859a7e0245c1b4db27c" alt="FishMe"><span>2 prises</span></div><div style="font-size:44px;font-weight:900;line-height:1;letter-spacing:-.02em;margin-top:6px">1:24</div></div><div style="text-align:right;padding-bottom:3px"><div style="font-size:13px;font-weight:700;opacity:.7">Fin légale</div><div style="font-size:20px;font-weight:900">19:29</div></div></div>
+<div style="position:absolute;left:20px;right:20px;bottom:18px;display:flex;gap:10px"><button class="p15-btn p15-pri" style="flex:1" aria-label="Ajouter une prise, ouvre l'appareil photo"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.6"/></g></svg>Prise</button><button class="p15-btn p15-gl" style="flex:1" aria-label="Mettre la session en pause"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4h3.4v16H7Zm6.6 0H17v16h-3.4Z"/></svg>Pause</button></div></div>
+<div class="p15-cap" style="top:230px">iPhone déverrouillé</div>
+<div class="p15-cap" style="top:316px">iPhone verrouillé</div>
+<div class="p15-la" style="top:344px;padding:14px;border-radius:26px">
+<div class="p15-top"><img src="/_blob/7667ed4766b13859a7e0245c1b4db27c" alt="FishMe"><span style="opacity:.85">Marne · Saint-Maur</span><span style="margin-left:auto;opacity:.85">2 prises</span></div>
+<div style="display:flex;align-items:flex-end;justify-content:space-between;margin-top:10px"><div style="font-size:44px;font-weight:900;line-height:1;letter-spacing:-.02em">1:24</div><div style="text-align:right;padding-bottom:3px"><div style="font-size:13px;font-weight:700;opacity:.7">Fin légale</div><div style="font-size:20px;font-weight:900">19:29</div></div></div></div>
 <div class="p15-bar"></div>
 </div>
 </x-dc>

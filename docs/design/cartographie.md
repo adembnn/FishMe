@@ -24,7 +24,7 @@ Navigation : barre d'onglets iOS à 3 volets, Pescedex · Carte · Club, ouvertu
 
 ## G4 · Session
 - **P14 Session en cours** [Session/BandeauSession] : chrono 1:24:10, fin légale 19:29, prises de la session en images, gros bouton « Ajouter une prise » (appareil photo), lien « Terminer la session ». La carte reste visible.
-- **P15 Écran verrouillé** [L10, Live Activity] : écran verrouillé de l'iPhone avec l'activité en direct FishMe : chrono, fin légale, nombre de prises, alerte orage éventuelle. Dessiner l'écran verrouillé (heure 17:42 en grand, fond photo floutée) et l'activité.
+- **P15 Écran verrouillé** [L10, Live Activity] : écran verrouillé de l'iPhone avec l'activité en direct FishMe : chrono, fin légale, nombre de prises, alerte orage éventuelle. Dessiner l'écran verrouillé (heure 17:42 en grand, fond photo floutée) et l'activité. Boutons App Intents dans l'activité (iOS 17+) : « Pause » agit sans ouvrir l'app, « Ajouter une prise » ouvre l'appareil photo (après Face ID si verrouillé). A : deux boutons côte à côte ; B : un grand bouton + pause ronde, état « En pause » (Reprendre) ; C : Dynamic Island déployée + bannière simple.
 - **P16 Fin de session** [Session, BlocConditionsPriseView] : résumé : durée 1 h 24, prises (le brochet), conditions de la sortie gardées (14°, Marne 1,42 m, pression), bouton « Terminer ». Si c'est la 1re session : c'est ici que le paywall s'ouvre ensuite (et se ferme).
 - **P17 Mes sorties** [Collection/BredouilleView, historique] : historique des sorties avec leurs conditions ; une sortie bredouille est montrée sans honte (« Bredouille, ça arrive : 2 h sur la Marne ») ; chaque sortie : date, spot, durée, prises en images.
 
