@@ -22,6 +22,8 @@ struct ReglagesView: View {
     let ouvrirSecurite: () -> Void
     /// Ouvre le paywall quand le pêcheur n'est pas abonné.
     let ouvrirPaywall: () -> Void
+    /// Ouvre « Mon compte » (sauvegarde iCloud, App/Compte). `nil` : la ligne est cachée.
+    var ouvrirCompte: (() -> Void)? = nil
 
     @State private var gestionOuverte = false
     @State private var message: String?
@@ -42,6 +44,9 @@ struct ReglagesView: View {
                     .font(Police.grandTitre)
                     .foregroundStyle(Palette.encre)
                     .padding(.horizontal, Espace.xs)
+                if let ouvrirCompte {
+                    bloc { ligne("Mon compte", valeur: "iCloud", action: ouvrirCompte) }
+                }
                 bloc {
                     ligneNiveau
                     separateur

@@ -104,6 +104,20 @@ final class ParcoursApp {
     let moteur: SuiviSession
     let suivi: SuiviAbonnement
 
+    /// Compte : la sauvegarde iCloud des cartes, des photos et du profil (App/Compte). `nil` sans dépôt.
+    @ObservationIgnored private(set) lazy var sauvegarde: SauvegardeICloud? = depot.map { SauvegardeICloud(depot: $0) }
+    @ObservationIgnored private(set) lazy var compte: CompteModele? = sauvegarde.map { service in
+        CompteModele(service: service,
+                     restaurerAchats: { [weak self] in
+                         guard let self else { return false }
+                         let etat = await self.achats.restaurer()
+                         self.etatAchatsLu(etat)
+                         return etat.donneAcces
+                     },
+                     surRapatriement: { [weak self] in await self?.apresRapatriement() })
+    }
+    @ObservationIgnored private var sauvegardePrevue: Task<Void, Never>?
+
     // État de navigation
     var onglet: Onglet = .carte
     var courant: Modal?
@@ -212,6 +226,31 @@ final class ParcoursApp {
         await pescedex?.charger()
         publierAquarium()
         rendrePartagesEnFond(depot: depot)
+        prevoirSauvegarde()
+    }
+
+    // MARK: Compte (sauvegarde iCloud)
+
+    /// Sauvegarde en fond quelques secondes après une écriture (et au lancement) ; un nouvel appel repousse la précédente.
+    /// Sans iCloud, rien ne part et rien ne bloque : l'app marche pareil, hors ligne et sans compte.
+    private func prevoirSauvegarde() {
+        guard let sauvegarde else { return }
+        sauvegardePrevue?.cancel()
+        sauvegardePrevue = Task(priority: .utility) { [weak self] in
+            try? await Task.sleep(for: .seconds(5))
+            if Task.isCancelled || UserDefaults.standard.bool(forKey: SauvegardeICloud.cleCoupee) { return }
+            guard await sauvegarde.etatCompte() == .disponible,
+                  let bilan = try? await sauvegarde.synchroniser() else { return }
+            if bilan.aRelire { await self?.apresRapatriement() }
+        }
+    }
+
+    /// Des cartes ou un profil sont revenus d'iCloud (nouvel iPhone) : Pescedex, aquarium et sorties se relisent.
+    func apresRapatriement() async {
+        await pescedex?.charger()
+        publierAquarium()
+        if let depot { rendrePartagesEnFond(depot: depot) }
+        moteur.reprendre()
     }
 
     /// Rend les PNG du partage (L9) en fond, une carte à la fois, quelques secondes après l'affichage :
@@ -991,6 +1030,7 @@ private struct ReglagesEmplacement: View {
     @ObservedObject private var previens: PreviensMoiModele
     @AppStorage(ClesConseils.niveau) private var niveauBrut = NiveauPecheur.parDefaut.rawValue
     @State private var securite = false
+    @State private var compteOuvert = false
     @Environment(\.openURL) private var ouvrir
 
     init(app: ParcoursApp) {
@@ -1010,9 +1050,13 @@ private struct ReglagesEmplacement: View {
                 surEtat: { app.etatAchatsLu($0) },
                 ouvrirSource: { nom in if let url = Self.page(de: nom) { ouvrir(url) } },
                 ouvrirSecurite: { securite = true },
-                ouvrirPaywall: { app.remplacerPar(.paywall(.widget)) })
+                ouvrirPaywall: { app.remplacerPar(.paywall(.widget)) },
+                ouvrirCompte: app.compte == nil ? nil : { compteOuvert = true })
                 .toolbar(.hidden, for: .navigationBar)
                 .navigationDestination(isPresented: $securite) { SecuriteView() }
+                .navigationDestination(isPresented: $compteOuvert) {
+                    if let compte = app.compte { CompteView(modele: compte, abonne: app.suivi.abonne) }
+                }
         }
         .onChange(of: previens.vigilanceActive) {
             Task {
