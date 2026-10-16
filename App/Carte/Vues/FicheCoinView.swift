@@ -38,11 +38,15 @@ struct FicheCoinView: View {
                     if let touchee = modele.especeTouchee {
                         emplacementConseil(touchee)
                     }
+                    // Un seul bouton principal : « Commencer une session » quand on peut, sinon « Y aller ».
                     if let onCommencerSession {
                         Button(action: onCommencerSession) {
                             Label("Commencer une session", systemImage: "play.fill")
                         }
                         .buttonStyle(.principal)
+                        boutonYAller.buttonStyle(.secondaire)
+                    } else {
+                        boutonYAller.buttonStyle(.principal)
                     }
                     releve
                 } else {
@@ -354,11 +358,6 @@ struct FicheCoinView: View {
 
     private var pied: some View {
         VStack(alignment: .leading, spacing: Espace.m) {
-            Button(action: ouvrirDansPlans) {
-                Label("Y aller", systemImage: "arrow.triangle.turn.up.right.diamond.fill")
-            }
-            .buttonStyle(.secondaire)
-
             Text("En cas de doute, relâche.")
                 .font(Police.legende)
                 .foregroundStyle(Palette.encreDouce)
@@ -366,11 +365,23 @@ struct FicheCoinView: View {
         }
     }
 
-    /// Plans d'Apple sur ce coin (la station OFB, jamais la position du pêcheur).
+    private var boutonYAller: some View {
+        Button(action: ouvrirDansPlans) {
+            Label("Y aller", systemImage: "arrow.triangle.turn.up.right.diamond.fill")
+        }
+        .accessibilityHint("Ouvre l'itinéraire en voiture dans Plans")
+    }
+
+    /// Plans d'Apple, itinéraire en voiture jusqu'à ce coin (la station OFB, jamais la position du pêcheur).
+    /// Rien ne part tant que le pêcheur n'a pas touché « Y aller ».
     private func ouvrirDansPlans() {
         let c = modele.selection.coordonnee
         let item = MKMapItem(location: CLLocation(latitude: c.latitude, longitude: c.longitude), address: nil)
-        item.name = modele.fiche?.lieuFlou ?? "Coin de pêche"
-        item.openInMaps()
+        if let fiche = modele.fiche {
+            item.name = nomEau(fiche)
+        } else {
+            item.name = modele.selection.eau ?? "Coin de pêche"
+        }
+        item.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
     }
 }
