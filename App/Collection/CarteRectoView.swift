@@ -67,32 +67,35 @@ struct CarteRectoView: View {
         .accessibilityLabel(infos.texteVoixOff)
     }
 
+    /// La fenêtre : fond de rareté, ondes concentriques, poisson de profil (il nage une fois la carte ouverte).
+    /// Le bord bas est incliné, comme sur la maquette.
     private var illustration: some View {
         ZStack(alignment: .topLeading) {
             LinearGradient(colors: infos.style.fond, startPoint: .top, endPoint: .bottom)
+            OndesFenetre().stroke(.white.opacity(0.12), lineWidth: 1)
             if anime {
                 NageView(nomImage: infos.espece.image)
+                    .padding(.bottom, 18)
             } else {
                 (imageDecodee.map { Image(uiImage: $0) } ?? Image(infos.espece.image))
                     .resizable()
                     .scaledToFit()
-                    .padding(Espace.m)
+                    .padding(.horizontal, Espace.m)
+                    .padding(.bottom, Espace.xl)
                     .saturation(infos.prise.estDeclaree ? 0.35 : 1)
             }
-            HStack(alignment: .top) {
-                BadgeRarete(style: infos.style)
-                Spacer(minLength: 0)
-                VStack(alignment: .trailing, spacing: 6) {
-                    if infos.prise.estDeclaree { etiquette("Déclarée") }
-                    if infos.prise.exemple { etiquette("Exemple") }
-                    // À brancher : badge « Trophée » (plus grand que 90 % des prises connues de l'espèce).
-                    // Aucune donnée de centile n'existe encore dans Core ; rien n'est affiché tant qu'elle manque.
-                }
+            // À brancher : le centile de taille (« 84e », gros chiffre blanc en haut à gauche avec « CEN · centile de taille »).
+            // Aucune donnée de centile n'existe encore dans Core ; rien n'est affiché tant qu'elle manque. Même chose pour le badge « Trophée ».
+            VStack(alignment: .trailing, spacing: 6) {
+                if infos.prise.estDeclaree { etiquette("Déclarée") }
+                if infos.prise.exemple { etiquette("Exemple") }
             }
+            .frame(maxWidth: .infinity, alignment: .trailing)
             .padding(Espace.m)
         }
         .frame(maxWidth: .infinity)
         .frame(maxHeight: .infinity)
+        .clipShape(FenetreInclinee())
         .layoutPriority(1)
     }
 
@@ -107,25 +110,28 @@ struct CarteRectoView: View {
 
     private var bas: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            VStack(alignment: .leading, spacing: 0) {
+            HStack(alignment: .firstTextBaseline, spacing: Espace.s) {
                 Text(infos.espece.nom)
-                    .font(Jeton.police(26, .heavy))
-                    .minimumScaleFactor(0.6)
+                    .font(Jeton.police(30, .heavy))
+                    .minimumScaleFactor(0.5)
                     .lineLimit(1)
                 Text(infos.espece.nomLatin)
                     .font(Jeton.police(13))
                     .italic()
                     .foregroundStyle(Palette.encreDouce)
                     .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
             Divider().overlay(Palette.filet)
             statistiques
+            Spacer(minLength: 0)
             pied
         }
         .foregroundStyle(Palette.encre)
         .padding(.horizontal, Espace.l)
-        .padding(.top, Espace.m)
+        .padding(.top, Espace.s)
         .padding(.bottom, Espace.m)
+        .frame(height: 190)
     }
 
     private var statistiques: some View {
@@ -186,23 +192,50 @@ struct CarteRectoView: View {
         }
     }
 
+    /// Source du chiffre OFB à gauche, rang dans le Pescedex à droite.
     private var pied: some View {
-        VStack(alignment: .leading, spacing: 2) {
+        HStack(alignment: .firstTextBaseline, spacing: 6) {
             if let source = sourceOFB {
-                Text(source).font(Jeton.police(12)).foregroundStyle(Palette.encreDouce)
+                Text(source)
+                    .font(Jeton.police(12))
+                    .foregroundStyle(Palette.encreDouce)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
             }
-            HStack(spacing: 6) {
-                Text(pourPartage ? Formats.moisAnnee(infos.prise.date) : Formats.date(infos.prise.date))
-                if !pourPartage, !infos.prise.estDeclaree, let lieu = infos.prise.lieuFlou { Text("· \(lieu)") }
-                Spacer(minLength: 0)
-                if let rang = infos.rangDansLaZone {
-                    Text("n° \(rang)").monospacedDigit()
-                }
+            Spacer(minLength: 0)
+            if let rang = infos.rangDansLaZone {
+                Text("n° \(String(format: "%03d", rang))")
+                    .font(Jeton.police(12))
+                    .monospaced()
+                    .foregroundStyle(Palette.encre)
             }
-            .font(Jeton.police(12))
-            .foregroundStyle(Palette.encreDouce)
-            .lineLimit(1)
-            .minimumScaleFactor(0.6)
         }
+    }
+}
+
+/// Bord bas de la fenêtre : plus haut à gauche qu'à droite (maquette P24).
+private nonisolated struct FenetreInclinee: Shape {
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        p.move(to: CGPoint(x: rect.minX, y: rect.minY))
+        p.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        p.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        p.addLine(to: CGPoint(x: rect.minX, y: rect.maxY - 16))
+        p.closeSubpath()
+        return p
+    }
+}
+
+/// Cercles concentriques de l'eau, centrés à droite du poisson.
+private nonisolated struct OndesFenetre: Shape {
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        let c = CGPoint(x: rect.minX + rect.width * 0.7, y: rect.minY + rect.height * 0.5)
+        var r: CGFloat = 16
+        while r < rect.width * 1.1 {
+            p.addEllipse(in: CGRect(x: c.x - r, y: c.y - r, width: r * 2, height: r * 2))
+            r += 16
+        }
+        return p
     }
 }

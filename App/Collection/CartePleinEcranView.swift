@@ -15,12 +15,17 @@ struct CartePleinEcranView: View {
 
     var body: some View {
         ZStack(alignment: .topLeading) {
-            Palette.fond.ignoresSafeArea()
+            (retournee ? Palette.surface : Palette.tuile).ignoresSafeArea()
             VStack {
                 Spacer(minLength: 64)
                 carte
                     .padding(.horizontal, Espace.xl)
-                Spacer(minLength: Espace.l)
+                // Verso : la fiche de la prise sous la carte (P25). Au recto la place reste vide, la carte ne bouge pas.
+                FaitsPrise(infos: infos, emplacements: emplacements)
+                    .frame(height: 120)
+                    .padding(.top, Espace.m)
+                    .opacity(retournee ? 1 : 0)
+                    .accessibilityHidden(!retournee)
                 Button(action: retourner) {
                     Label(retournee ? "Voir le recto" : "Voir la photo", systemImage: "arrow.triangle.2.circlepath")
                 }
