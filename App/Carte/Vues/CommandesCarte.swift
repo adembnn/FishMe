@@ -15,8 +15,9 @@ struct BoutonCommencerVerre: View {
                 .frame(minHeight: Gabarit.zoneTactile)
         }
         .buttonStyle(.glassProminent)
-        .tint(Palette.marine)
+        .tint(Palette.marine.opacity(0.5))
         .controlSize(.large)
+        .frame(maxWidth: 300)
         .disabled(!actif)
         .accessibilityHint(actif ? "" : "Pose d'abord ton spot en touchant la carte")
     }

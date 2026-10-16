@@ -127,9 +127,6 @@ private struct AmisPageContenu: View {
 
     private var entete: some View {
         HStack {
-            Text("Amis")
-                .font(Police.grandTitre)
-                .foregroundStyle(Palette.encre)
             Spacer()
             Button {
                 Task { await gestion.actualiser() }

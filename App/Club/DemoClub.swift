@@ -30,6 +30,11 @@ enum DemoClub {
     ClubLocal(id: idVal, nom: "AAPPMA du Val-de-Marne · Démo", poissonId: "brochet"),
   ]
 
+  /// Dans le club de l'ESSEC, l'utilisateur (Titouan) fait partie des 3 membres : pas de pastille « Moi » à part.
+  static func utilisateurEstMembre(_ club: ClubLocal?) -> Bool {
+    club?.id == idEssec
+  }
+
   static func estDemo(_ club: ClubLocal?) -> Bool {
     guard let club else { return false }
     return clubs.contains { $0.id == club.id }
@@ -38,12 +43,9 @@ enum DemoClub {
   static func membres(pour club: ClubLocal) -> [MembreClub] {
     if club.id == idEssec {
       return [
-        MembreClub(id: "demo-e1", nom: "Hugo", nombreDeCartes: 21),
-        MembreClub(id: "demo-e2", nom: "Camille", nombreDeCartes: 17),
-        MembreClub(id: "demo-e3", nom: "Yanis", nombreDeCartes: 12),
-        MembreClub(id: "demo-e4", nom: "Salomé", nombreDeCartes: 9),
-        MembreClub(id: "demo-e5", nom: "Théo", nombreDeCartes: 6),
-        MembreClub(id: "demo-e6", nom: "Maëlle", nombreDeCartes: 4),
+        MembreClub(id: "demo-e1", nom: "Adem", nombreDeCartes: 14),
+        MembreClub(id: "demo-e2", nom: "Sullyvan", nombreDeCartes: 9),
+        MembreClub(id: "demo-e3", nom: "Titouan", nombreDeCartes: 11),
       ]
     }
     return [
@@ -65,16 +67,16 @@ enum DemoClub {
           id: "demo-ec2", membre: "Camille", espece: "Perche", jour: "dim.",
           tailleCm: 27, image: "perche-commune", niveau: .commun),
         CarteRecenteClub(
-          id: "demo-ec3", membre: "Yanis", espece: "Sandre", jour: "sam.",
+          id: "demo-ec3", membre: "Titouan", espece: "Sandre", jour: "sam.",
           tailleCm: 61, image: "sandre", niveau: .rare, photo: "sandre-1"),
         CarteRecenteClub(
-          id: "demo-ec4", membre: "Salomé", espece: "Black-bass", jour: "ven.",
+          id: "demo-ec4", membre: "Adem", espece: "Black-bass", jour: "ven.",
           tailleCm: 38, image: "black-bass", niveau: .peuCommun, photo: "black-bass-1"),
         CarteRecenteClub(
           id: "demo-ec5", membre: "Théo", espece: "Carpe commune", jour: "jeu.",
           tailleCm: 72, image: "carpe-commune", niveau: .peuCommun),
         CarteRecenteClub(
-          id: "demo-ec6", membre: "Maëlle", espece: "Omble de fontaine (saumon de fontaine)",
+          id: "demo-ec6", membre: "Titouan", espece: "Omble de fontaine (saumon de fontaine)",
           jour: "mer.", tailleCm: 34, image: "omble-de-fontaine", niveau: .rare),
       ]
     }
