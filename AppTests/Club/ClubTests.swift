@@ -5,6 +5,7 @@ import Testing
 import UniformTypeIdentifiers
 @testable import BuildChallenge
 
+@MainActor
 struct ClubTests {
     private func jpegAvecGPS() throws -> Data {
         let contexte = try #require(CGContext(data: nil, width: 8, height: 8, bitsPerComponent: 8, bytesPerRow: 0,
@@ -62,6 +63,10 @@ struct ClubTests {
     }
 
     @Test func uneAdresseVideCacheLesBoutonsContact() {
-        #expect(ContactClub.courriel(objet: "x") == nil || !ContactClub.adresse.isEmpty)
+        if ContactClub.adresse.isEmpty {
+            #expect(ContactClub.courriel(objet: "x") == nil)
+        } else {
+            #expect(ContactClub.courriel(objet: "x") != nil)
+        }
     }
 }

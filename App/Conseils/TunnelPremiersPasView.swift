@@ -38,11 +38,13 @@ struct TunnelPremiersPasView: View {
             } else {
                 fin
             }
-            // En bas, à portée du pouce.
-            Button("Passer", action: passer)
-                .font(Police.corps)
-                .foregroundStyle(Palette.marine)
-                .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
+            // En bas, à portée du pouce ; l'écran de fin a déjà son bouton.
+            if index < especes.count {
+                Button("Passer", action: passer)
+                    .font(Police.corps)
+                    .foregroundStyle(Palette.marine)
+                    .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
+            }
         }
         .padding(Espace.bord)
         .background(Palette.fond)
