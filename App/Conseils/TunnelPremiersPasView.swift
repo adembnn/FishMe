@@ -1,4 +1,5 @@
 import Core
+import MapKit
 import SwiftUI
 
 /// Tunnel des 3 premières minutes (Adem, 15 oct. 16h), après la question du niveau :
@@ -53,14 +54,26 @@ struct TunnelPremiersPasView: View {
                     .padding(Espace.bord)
             }
         }
-        .background(Palette.fond.ignoresSafeArea())
-        // À brancher : la maquette pose ces cartes sur la carte de la zone, floutée (blur 5, saturation .6, voile .62) ;
-        // l'app n'a pas d'image de carte à cet endroit, le fond reste uni.
+        // Maquette P02-A : les cartes posées sur la carte de la zone, floutée (blur 5, saturation .6, voile .6).
+        .background { fondCarte.ignoresSafeArea() }
         .presentationBackground(Palette.fond)
         .presentationDetents([.large])
         .presentationDragIndicator(.hidden)
         .interactiveDismissDisabled()
         .accessibilityIdentifier("tunnel-premiers-pas")
+    }
+
+    /// Carte MapKit non interactive (France entière), floutée et voilée : décor seulement, aucune donnée.
+    private var fondCarte: some View {
+        Map(initialPosition: .region(MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 46.6, longitude: 2.5),
+            span: MKCoordinateSpan(latitudeDelta: 9, longitudeDelta: 9)))) {}
+            .mapStyle(.standard(elevation: .flat, pointsOfInterest: .excludingAll))
+            .allowsHitTesting(false)
+            .saturation(0.6)
+            .blur(radius: 5)
+            .overlay(Palette.fond.opacity(0.6))
+            .accessibilityHidden(true)
     }
 
     /// « 4 / 12 » en pastille de verre centrée en haut (36 pt de haut, texte de 15 en encre) : aucun autre élément.
