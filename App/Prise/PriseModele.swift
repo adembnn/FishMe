@@ -31,6 +31,8 @@ final class PriseModele {
     let terminer: (PriseConfirmee?) -> Void
 
     private(set) var etape: PriseEtape = .photo
+    /// Les étapes déjà traversées, pour le bouton « Retour » (la dernière est l'étape d'avant).
+    private(set) var historique: [PriseEtape] = []
     private(set) var photo: Data?
     private(set) var imagePhoto: UIImage?
     private(set) var catalogue: [EspecePechable] = []
@@ -88,16 +90,19 @@ final class PriseModele {
         photo = data
         imagePhoto = droite
         self.exemple = exemple
+        historique = [.photo]
         etape = .lecture
         Task { await identifier(data) }
     }
 
     private func identifier(_ data: Data) async {
         let resultat = await services.identification.identifier(photo: data)
+        // Le pêcheur est peut-être revenu en arrière pendant la lecture : on n'impose pas le résultat.
+        guard etape == .lecture, photo == data else { return }
         switch resultat {
         case .scores(let scores):
             let a = services.especes.classer(scores: scores, especesProches: proches.map { $0.espece })
-            if a.isEmpty { ouvrirLaGrille() } else { propositions = a; etape = .propositions }
+            if a.isEmpty { ouvrirLaGrille() } else { propositions = a; aller(.propositions) }
         case .grille:
             ouvrirLaGrille()
         }
@@ -105,7 +110,7 @@ final class PriseModele {
 
     // MARK: Choix de l'espèce
 
-    func ouvrirLaGrille(classe: String? = nil) { etape = .grille(classe: classe) }
+    func ouvrirLaGrille(classe: String? = nil) { aller(.grille(classe: classe)) }
 
     func toucher(_ proposition: Proposition) {
         switch proposition.type {
@@ -119,12 +124,12 @@ final class PriseModele {
 
     /// Le pêcheur touche une espèce : anguille, d'abord son stade ; sosies coûteux, d'abord les sosies côte à côte.
     func choisir(_ entree: EspecePechable) {
-        if PriseLogique.estAnguille(entree.espece) { etape = .stade; return }
+        if PriseLogique.estAnguille(entree.espece) { aller(.stade); return }
         var classeChoisie: String?
         if case .grille(let classe) = etape { classeChoisie = classe }
         if PriseLogique.demandeSosies(entree),
            !PriseLogique.sosiesDejaTranches(entree, classe: classeChoisie, catalogue: catalogue) {
-            etape = .sosies(entree); return
+            aller(.sosies(entree)); return
         }
         confirmer(entree)
     }
@@ -138,10 +143,24 @@ final class PriseModele {
             curseurBouge = false
             if let derniere = memoire.derniere(entree.espece) { longueurCm = derniere }
         }
-        etape = .taille
+        aller(.taille)
     }
 
     func jeNeSaisPas() { terminer(nil) }
+
+    /// Passe à l'étape suivante en gardant l'étape quittée pour le retour.
+    private func aller(_ suivante: PriseEtape) {
+        if suivante == etape { return }
+        historique.append(etape)
+        etape = suivante
+    }
+
+    /// Le bouton « Retour » : revient à l'étape d'avant (l'attente de lecture est sautée). Depuis la première étape, ne fait rien.
+    func retour() {
+        var cible = historique.popLast() ?? .photo
+        while cible == .lecture { cible = historique.popLast() ?? .photo }
+        etape = cible
+    }
 
     func retourAuxPropositions() { etape = propositions.isEmpty ? .grille(classe: nil) : .propositions }
 
@@ -194,11 +213,11 @@ final class PriseModele {
     func confirmerLaTaille() {
         if plageAR == nil, let entree = especeConfirmee { memoire.retenir(longueurCm, pour: entree.espece) }
         tailleConfirmee = true
-        etape = .details
+        aller(.details)
     }
 
     /// P22 terminé : on passe au verdict.
-    func continuerDetails() { etape = .resultat }
+    func continuerDetails() { aller(.resultat) }
 
     /// Retour d'une étape à la précédente (flèche en haut à gauche).
     func retourALaTaille() { etape = .taille }

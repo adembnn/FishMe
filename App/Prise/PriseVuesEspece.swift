@@ -111,7 +111,7 @@ struct PrisePropositionsView: View {
 
     var body: some View {
         let liste = Array(tuiles.prefix(3))
-        PriseFeuille(photo: modele.imagePhoto, retour: nil) {
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }) {
             VStack(alignment: .leading, spacing: Espace.m) {
                 Text("Quelle espèce ?").font(Police.titre).foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
@@ -175,7 +175,7 @@ struct PriseGrilleView: View {
     var classe: String?
 
     var body: some View {
-        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retourAuxPropositions() }, pleine: true) {
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }, pleine: true) {
             VStack(alignment: .leading, spacing: Espace.m) {
                 Text("Autre espèce").font(Police.titre).foregroundStyle(Palette.encre)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -211,7 +211,7 @@ struct PriseSosiesView: View {
 
     var body: some View {
         let sosies = PriseLogique.sosies(de: entree, catalogue: modele.catalogue)
-        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retourAuxPropositions() }) {
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }) {
             VStack(spacing: Espace.m) {
                 PriseEntete(titre: "Touche le bon")
                 HStack(alignment: .top, spacing: Espace.m) {
@@ -249,7 +249,7 @@ struct PriseStadeView: View {
 
     var body: some View {
         let stades = PriseLogique.stades(catalogue: modele.catalogue)
-        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retourAuxPropositions() }, pleine: true) {
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }, pleine: true) {
             VStack(spacing: Espace.m) {
                 PriseEntete(titre: "Quel stade ?")
                 ScrollView {
