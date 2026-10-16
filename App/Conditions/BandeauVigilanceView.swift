@@ -5,17 +5,19 @@ import Core
 /// l'app n'en calcule aucune, elle affiche l'`Alerte` que `Core` rend.
 struct BandeauVigilanceView: View {
     let alerte: Alerte
+    /// Facultatifs : sans eux, l'écran d'alerte n'a pas l'interrupteur « Préviens-moi ».
+    var previensMoi: PreviensMoiModele? = nil
+    var lecture: LectureConditions? = nil
     @State private var detail = false
-    @Environment(\.openURL) private var ouvrir
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Button { detail.toggle() } label: {
+            Button { detail = true } label: {
                 HStack(spacing: 10) {
                     Image(systemName: alerte.type == .orage ? "cloud.bolt.fill" : "water.waves")
                     Text(titre).font(Police.detail).foregroundStyle(Palette.encre).multilineTextAlignment(.leading)
                     Spacer(minLength: 0)
-                    Image(systemName: detail ? "chevron.up" : "chevron.down")
+                    Image(systemName: "chevron.right")
                 }
                 .foregroundStyle(Palette.alerte)
                 .padding(Espace.m)
@@ -23,17 +25,9 @@ struct BandeauVigilanceView: View {
                 .background(Palette.alerteDoux, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
             }
             .buttonStyle(.plain)
-            if detail {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("\(alerte.mesure) · \(alerte.source) · \(FormatConditions.heure(alerte.heure))")
-                        .font(JetonsConditions.police(.caption)).foregroundStyle(JetonsConditions.encre2)
-                    Button { ouvrir(lien) } label: {
-                        Label(alerte.type == .orage ? "Vigilance de Météo-France" : "Vigicrues", systemImage: "arrow.up.right.square")
-                            .font(JetonsConditions.police(.footnote))
-                    }
-                    Text("L'alerte officielle fait foi.").font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
-                }
-            }
+        }
+        .fullScreenCover(isPresented: $detail) {
+            AlerteView(alerte: alerte, previensMoi: previensMoi, lecture: lecture)
         }
         .accessibilityIdentifier("bandeau-vigilance")
     }
@@ -41,8 +35,6 @@ struct BandeauVigilanceView: View {
     private var titre: String {
         alerte.type == .orage ? "Vigilance orage : range la canne en carbone" : "Vigilance crue : reste loin de l'eau"
     }
-
-    private var lien: URL { alerte.type == .orage ? LiensVigilance.vigilanceMeteoFrance : LiensVigilance.vigicrues }
 }
 
 /// Une ligne courte pour le bandeau de session (L5), seulement s'il y a la place.
