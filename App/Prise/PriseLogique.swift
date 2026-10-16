@@ -78,6 +78,33 @@ enum PriseLogique {
         resultat.lignes.contains { $0.raison == .tropPresDeLaMaille }
     }
 
+    /// Le verdict affiché en haut de la carte (P23). Il vient de la table sourcée de `Core`, jamais de l'IA.
+    enum VerdictAffiche: Equatable {
+        /// Taille au-dessus de la taille minimale, sur toute la fourchette.
+        case tailleLegale
+        /// Taille sous la taille minimale, sur toute la fourchette.
+        case sousLaMaille
+        /// Une autre règle n'est pas respectée (période, quota, réserve…) : « Relâche-la ».
+        case regleNonRespectee
+        /// Les bornes ne s'accordent pas, trop près de la maille, ou règle à vérifier : mesure sur une toise / vérifie l'arrêté.
+        case aVerifier
+        /// Aucune règle de taille saisie : on montre seulement la consigne de `Core`.
+        case sansRegleDeTaille
+    }
+
+    /// Un résultat de `Core` par borne de la fourchette (un seul sans fourchette).
+    static func verdict(resultats: [ResultatControle]) -> VerdictAffiche? {
+        guard !resultats.isEmpty else { return nil }
+        let autres = resultats.flatMap { $0.lignes }.filter { $0.type != .taille }
+        if autres.contains(where: { $0.etat == .nonRespectee }) { return .regleNonRespectee }
+        let tailles = resultats.map { r in r.lignes.first(where: { $0.type == .taille }) }
+        guard tailles.allSatisfy({ $0 != nil }) else { return .sansRegleDeTaille }
+        let etats = tailles.compactMap { $0?.etat }
+        if etats.allSatisfy({ $0 == .respectee }) { return .tailleLegale }
+        if etats.allSatisfy({ $0 == .nonRespectee }) { return .sousLaMaille }
+        return .aVerifier
+    }
+
     /// Avant confirmation de l'espèce : seulement la consigne « relâche-la ».
     static let consigneAvantConfirmation = Consigne.relacheLa.texte
     /// Phrase imposée sous chaque verdict (docs/donnees.md).

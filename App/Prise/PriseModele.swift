@@ -12,7 +12,14 @@ enum PriseEtape: Equatable {
     case sosies(EspecePechable)
     case stade
     case taille
+    /// Ce que le pêcheur a fait de sa prise : relâchée, gardée, ou « ne pas dire » (P22).
+    case details
     case resultat
+}
+
+/// Le devenir de la prise, déclaré par le pêcheur. « Ne pas dire » compte comme relâchée pour le quota du jour.
+enum DevenirPrise: Equatable, Sendable {
+    case relachee, gardee, nonDit
 }
 
 /// L'état de l'écran Prise. L'IA propose, le pêcheur confirme, `Core` décide : ce modèle ne calcule aucune règle.
@@ -43,7 +50,12 @@ final class PriseModele {
     /// Valeur lue sur la toise, pour savoir si le pêcheur a gardé la valeur pré-réglée.
     private(set) var longueurLue: Double?
     private(set) var tailleConfirmee = false
-    var gardee = false
+    var devenir: DevenirPrise = .relachee
+    /// Déclaration « gardée » (alimente seulement le quota du jour).
+    var gardee: Bool {
+        get { devenir == .gardee }
+        set { devenir = newValue ? .gardee : .relachee }
+    }
     private(set) var toise: ToiseCalibrage?
     private(set) var toiseImage: UIImage?
     private(set) var toiseIntrouvable = false
@@ -166,8 +178,14 @@ final class PriseModele {
 
     func confirmerLaTaille() {
         tailleConfirmee = true
-        etape = .resultat
+        etape = .details
     }
+
+    /// P22 terminé : on passe au verdict.
+    func continuerDetails() { etape = .resultat }
+
+    /// Retour d'une étape à la précédente (flèche en haut à gauche).
+    func retourALaTaille() { etape = .taille }
 
     /// `.estimee` tant que la longueur est celle mesurée en réalité augmentée (jamais de verdict), `.toise` tant que le pêcheur garde la valeur lue sur la toise, sinon `.saisie`.
     var methode: MethodeMesure {
@@ -183,6 +201,20 @@ final class PriseModele {
         guard let entree = especeConfirmee, tailleConfirmee else { return nil }
         return services.regles.controle(espece: entree.espece, tailleCm: longueurCm.rounded(), mesure: methode,
                                         date: contexte.date, lieu: contexte.lieu, prisesDuJour: contexte.prisesDuJour)
+    }
+
+    /// Verdict de taille sur la fourchette mesurée en réalité augmentée : on interroge la table sourcée aux deux bornes
+    /// (jamais le centre seul). Un verdict n'existe que si les deux bornes disent la même chose ; sinon « mesure sur une toise ».
+    var verdictTaille: PriseLogique.VerdictAffiche? {
+        guard let entree = especeConfirmee, tailleConfirmee else { return nil }
+        let longueurs: [Double]
+        if let plage = plageAR { longueurs = [Double(plage.basCm), Double(plage.hautCm)] } else { longueurs = [longueurCm.rounded()] }
+        let mesure: MethodeMesure = plageAR == nil ? methode : .saisie
+        let resultats = longueurs.map {
+            services.regles.controle(espece: entree.espece, tailleCm: $0, mesure: mesure,
+                                     date: contexte.date, lieu: contexte.lieu, prisesDuJour: contexte.prisesDuJour)
+        }
+        return PriseLogique.verdict(resultats: resultats)
     }
 
     var poids: PoidsEstime? {

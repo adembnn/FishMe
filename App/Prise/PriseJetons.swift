@@ -1,44 +1,101 @@
 import SwiftUI
 
-/// Jetons de style PROVISOIRES de l'écran Prise, tous ici : quand App/Style (lot D0, posé par A) existera,
-/// ce fichier seul change. Style « Natif », SF Pro Rounded en gras.
+/// Les jetons de l'écran Prise pointent vers `App/Style/Style.swift` (Palette, Police, Espace, Rayon) :
+/// pour retoucher une couleur ou une police, on change ce fichier-là, jamais les écrans.
 enum PriseJetons {
-    static let encre = Color(red: 0.024, green: 0.220, blue: 0.302)       // #06384D
-    static let accent = Color(red: 0.082, green: 0.478, blue: 0.306)      // #157A4E
-    static let papier = Color(red: 0.965, green: 0.992, blue: 1.0)        // #F6FDFF
-    static let fond = Color(red: 0.796, green: 0.937, blue: 0.969)        // #CBEFF7
-    static let discret = Color(red: 0.310, green: 0.400, blue: 0.451)     // #4F6673
-    static let mise = Color(red: 0.118, green: 0.357, blue: 0.722)        // #1E5BB8
+    static let encre = Palette.encre
+    static let accent = Palette.marine
+    static let papier = Palette.surface
+    static let fond = Palette.fond
+    static let discret = Palette.encreDouce
+    static let mise = Palette.marine
 
-    static let rayon: CGFloat = 20
-    static let cibleMin: CGFloat = 44
+    static let rayon: CGFloat = Rayon.l
+    static let cibleMin: CGFloat = Gabarit.zoneTactile
 
-    static func titre() -> Font { .system(.title2, design: .rounded, weight: .heavy) }
-    static func corps() -> Font { .system(.body, design: .rounded, weight: .bold) }
-    static func legende() -> Font { .system(.footnote, design: .rounded, weight: .bold) }
-    static func chiffre() -> Font { .system(.largeTitle, design: .rounded, weight: .heavy) }
+    static func titre() -> Font { Police.titre }
+    static func corps() -> Font { Police.corps }
+    static func legende() -> Font { Police.legende }
+    static func chiffre() -> Font { Police.chiffre }
 }
 
-/// Bouton principal : pleine largeur, au moins 44 points de haut.
+/// Bouton principal : celui de `Style` (marine, pilule, pleine largeur).
 struct PriseBoutonPrincipal: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(PriseJetons.corps())
-            .foregroundStyle(.white)
-            .frame(maxWidth: .infinity, minHeight: 54)
-            .padding(.horizontal, 16)
-            .background(PriseJetons.accent.opacity(configuration.isPressed ? 0.8 : 1), in: Capsule())
+        BoutonPrincipal().makeBody(configuration: configuration)
     }
 }
 
+/// Bouton secondaire : celui de `Style`.
 struct PriseBoutonSecondaire: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(PriseJetons.corps())
-            .foregroundStyle(PriseJetons.encre)
-            .frame(maxWidth: .infinity, minHeight: PriseJetons.cibleMin + 8)
-            .padding(.horizontal, 16)
-            .background(PriseJetons.papier.opacity(configuration.isPressed ? 0.7 : 1), in: Capsule())
-            .overlay(Capsule().stroke(PriseJetons.encre.opacity(0.15), lineWidth: 1))
+        BoutonSecondaire().makeBody(configuration: configuration)
+    }
+}
+
+/// Bouton rond de 44 points posé sur une photo (retour, fermer).
+struct PriseBoutonRond: View {
+    var symbole: String
+    var etiquette: String
+    var action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: symbole)
+                .font(.system(size: 17, weight: .bold, design: .rounded))
+                .foregroundStyle(Palette.encre)
+                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                .background(.regularMaterial, in: Circle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(etiquette)
+    }
+}
+
+/// La feuille du bas, posée sur la photo de la prise : poignée, coins hauts arrondis, fond `surface`.
+/// Le bouton de retour flotte en haut à gauche.
+struct PriseFeuille<Contenu: View>: View {
+    var photo: UIImage?
+    var retour: (() -> Void)?
+    var pleine = false
+    @ViewBuilder var contenu: () -> Contenu
+
+    var body: some View {
+        ZStack {
+            fond
+            VStack(spacing: 0) {
+                if let retour {
+                    HStack {
+                        PriseBoutonRond(symbole: "chevron.left", etiquette: "Retour", action: retour)
+                        Spacer()
+                    }
+                    .padding(Espace.bord)
+                }
+                Spacer(minLength: 0)
+                VStack(spacing: Espace.l) {
+                    Capsule().fill(Palette.filet).frame(width: 36, height: 5)
+                        .accessibilityHidden(true)
+                    contenu()
+                }
+                .padding(.horizontal, Espace.bord)
+                .padding(.top, Espace.s)
+                .padding(.bottom, Espace.l)
+                .frame(maxWidth: .infinity, maxHeight: pleine ? .infinity : nil)
+                .background(Palette.surface, in: UnevenRoundedRectangle(topLeadingRadius: 28, topTrailingRadius: 28, style: .continuous))
+                .ignoresSafeArea(edges: .bottom)
+            }
+        }
+    }
+
+    @ViewBuilder private var fond: some View {
+        if let photo {
+            Color.clear
+                .overlay(Image(uiImage: photo).resizable().scaledToFill())
+                .clipped()
+                .ignoresSafeArea()
+                .accessibilityHidden(true)
+        } else {
+            Palette.nuit.ignoresSafeArea()
+        }
     }
 }
