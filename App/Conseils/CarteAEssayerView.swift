@@ -53,14 +53,7 @@ struct CarteAEssayerView: View {
                     .font(JetonsConseils.police(.subheadline))
                     .foregroundStyle(etatEau == .crue ? JetonsConseils.alerte : JetonsConseils.marne)
             }
-            Button(action: fermer) {
-                Image(systemName: "xmark")
-                    .font(.body.weight(.bold))
-                    .frame(width: JetonsConseils.tailleToucher, height: JetonsConseils.tailleToucher)
-                    .background(.quaternary, in: Circle())
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel("Fermer")
+            BoutonRond(role: .fermer, action: fermer)
         }
     }
 
