@@ -25,25 +25,48 @@ extension ModeleCarte {
     }
 
     /// Dessine l'eau de la zone visible. Rien tant qu'un filtre d'espèce est actif : une épingle d'eau n'a pas d'espèce relevée.
-    func recalculerEau(_ region: ZoneCarte) {
+    /// `delai` : attente avant le calcul (un mouvement de caméra enchaîné annule le précédent, un seul calcul part).
+    func recalculerEau(_ region: ZoneCarte, delai: Duration = .zero) {
         tacheEau?.cancel()
         guard filtre == nil else {
             if !elementsEau.isEmpty { elementsEau = [] }
-            spotsEauAffiches = [:]
+            if !spotsEauAffiches.isEmpty { spotsEauAffiches = [:] }
             return
         }
         let fournisseur = services.spotsEau
         let cours = coursDEau
         let enLigne = lieuxEnLigne
+        let zoneDejaLue = zoneLieuxPublics
+        let dejaLus = lieuxPublics
         tacheEau = Task {
-            let publics = await fournisseur.lieuxPublics(dans: region)
-            if Task.isCancelled { return }
-            lieuxPublics = publics
+            if delai > .zero {
+                try? await Task.sleep(for: delai)
+                if Task.isCancelled { return }
+            }
+            let publics: [SpotEau]
+            if let zoneDejaLue, Self.vue(region, tientDans: zoneDejaLue) {
+                publics = dejaLus
+            } else {
+                publics = await fournisseur.lieuxPublics(dans: region)
+                if Task.isCancelled { return }
+                lieuxPublics = publics
+                // Une zone trop large rend toujours `[]` : on ne la retient pas, sinon un zoom ensuite réutiliserait ce vide.
+                zoneLieuxPublics = region.spanLatitude <= SpotsEauReels.etendueMaximaleLieux ? region : nil
+            }
             let couche = await calculerCoucheEau(spots: cours + publics + enLigne, region: region)
             if Task.isCancelled { return }
-            elementsEau = couche.elements
-            spotsEauAffiches = couche.spots
+            // Rien à redessiner si le résultat est le même : la carte ne reconstruit pas ses épingles pour rien.
+            if elementsEau != couche.elements { elementsEau = couche.elements }
+            if spotsEauAffiches != couche.spots { spotsEauAffiches = couche.spots }
         }
+    }
+
+    /// Vrai si `vue` tient dans la zone `lue` (lue avec 10 % de marge par `lieuxPublics(dans:)`).
+    private static func vue(_ vue: ZoneCarte, tientDans lue: ZoneCarte) -> Bool {
+        let demiLat = vue.spanLatitude / 2 * 1.1
+        let demiLon = vue.spanLongitude / 2 * 1.1
+        return abs(vue.centre.latitude - lue.centre.latitude) + demiLat <= lue.spanLatitude / 2 * 1.1
+            && abs(vue.centre.longitude - lue.centre.longitude) + demiLon <= lue.spanLongitude / 2 * 1.1
     }
 
     /// La recherche MapKit part seulement après un geste du pêcheur, jamais pour l'affichage initial ni pour un déplacement du code.

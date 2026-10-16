@@ -21,6 +21,8 @@ struct VignetteCarteObtenue: View {
           .frame(width: Self.largeurReference, height: Self.largeurReference / Gabarit.rapportCarte)
           .scaleEffect(reduction, anchor: .topLeading)
           .frame(width: geo.size.width, height: geo.size.height, alignment: .topLeading)
+          // Rendu aplati une fois à la taille finale : le défilement ne redessine plus ombres, dégradés et textes de chaque carte.
+          .drawingGroup()
       }
     }
     .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)

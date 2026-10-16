@@ -564,8 +564,11 @@ struct PescedexView: View {
             if let carte = e.carte, !carte.estDeclaree {
                 Task {
                     photoOuverte = await modele.depot.photo(de: carte)
-                    pngOuvert = await modele.depot.imagePNG(de: carte)
+                    // La carte s'ouvre tout de suite ; le PNG de partage (rendu lourd) arrive juste après.
+                    pngOuvert = nil
                     carteOuverte = e
+                    let png = await modele.depot.imagePNG(de: carte)
+                    if carteOuverte?.id == e.id { pngOuvert = png }
                 }
             } else {
                 ficheOuverte = e.id

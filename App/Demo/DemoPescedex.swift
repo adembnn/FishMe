@@ -104,9 +104,21 @@ nonisolated enum DemoPescedex {
   static func synchroniser(demo: Bool, depot: DepotCartes) async
     -> Bool
   {
-    let presentes = Set(await depot.identifiants().cartes)
+    var presentes = Set(await depot.identifiants().cartes)
     if demo {
       var change = false
+      // Réparation : une carte de démo déjà installée mais sans fichier photo lisible (ancienne version, installation
+      // interrompue) est retirée puis réinstallée avec sa photo. Sans photo embarquée, on la laisse telle quelle.
+      var aReparer: [UUID] = []
+      for carte in await depot.cartes() where estDemo(carte.id) {
+        if await depot.urlPhoto(de: carte) == nil, donneesPhoto(especeId: carte.espece.id, numero: 1) != nil {
+          aReparer.append(carte.id)
+        }
+      }
+      if !aReparer.isEmpty, await depot.supprimer(ids: aReparer) > 0 {
+        presentes.subtract(aReparer)
+        change = true
+      }
       let maintenant = Date()
       for m in modeles {
         let id = identifiant(m.n)

@@ -5,6 +5,8 @@ import UIKit
 /// Une carte créée par la sortie, prête à être posée dans le carrousel.
 struct RecapCarte: Identifiable {
     let id: UUID
+    /// La prise, pour retrouver sa photo au verso.
+    let prise: Prise
     let infos: InfosCarte
     /// Vrai quand l'espèce entre dans le Pescedex avec cette sortie.
     let nouvelle: Bool
@@ -14,7 +16,10 @@ struct RecapCarte: Identifiable {
 /// Avec « Réduire les animations », tout est déjà en place et rien ne bouge.
 struct RecapSortieCartes: View {
     let cartes: [RecapCarte]
+    /// La photo de la prise (dépôt de cartes), pour le verso en plein écran. Par défaut : aucune, le verso montre le dessin de l'espèce.
+    var photoDe: (Prise) -> Data? = { _ in nil }
 
+    @State private var ouverte: RecapCarte?
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
     @State private var posees = false
     @State private var inclinaison: CGSize = .zero
@@ -28,8 +33,12 @@ struct RecapSortieCartes: View {
                 LazyHStack(spacing: Espace.l) {
                     ForEach(Array(cartes.enumerated()), id: \.element.id) { index, carte in
                         VStack(spacing: Espace.m) {
-                            CarteRectoView(infos: carte.infos, inclinaison: inclinaison)
-                                .containerRelativeFrame(.horizontal) { largeur, _ in largeur * 0.62 }
+                            Button { ouverte = carte } label: {
+                                CarteRectoView(infos: carte.infos, inclinaison: inclinaison)
+                                    .containerRelativeFrame(.horizontal) { largeur, _ in largeur * 0.62 }
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityHint("Ouvre la carte en plein écran. Retourne-la pour voir la photo.")
                             legende(carte)
                         }
                         .opacity(posees || reduireAnimations ? 1 : 0)
@@ -58,6 +67,9 @@ struct RecapSortieCartes: View {
             }
         }
         .accessibilityElement(children: .contain)
+        .fullScreenCover(item: $ouverte) { carte in
+            CartePleinEcranView(infos: carte.infos, photo: photoDe(carte.prise)) { ouverte = nil }
+        }
     }
 
     private func legende(_ carte: RecapCarte) -> some View {

@@ -108,12 +108,6 @@ struct AquariumView: View {
                         fiche(choisi, carte: carte)
                             .transition(.move(edge: .bottom).combined(with: .opacity))
                     }
-                    Text(compteur)
-                        .font(Police.detail)
-                        .foregroundStyle(.white)
-                        .padding(.horizontal, Espace.l)
-                        .padding(.vertical, Espace.s)
-                        .background(.black.opacity(0.35), in: Capsule())
                 }
                 .padding(.horizontal, Espace.l)
                 .padding(.bottom, max(geo.safeAreaInsets.bottom, 34) + Espace.l)
