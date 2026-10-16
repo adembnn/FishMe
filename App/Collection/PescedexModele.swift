@@ -25,9 +25,17 @@ final class PescedexModele {
         self.especes = services.especes.especesPechables()
     }
 
+    /// Numéro du dernier chargement demandé : un chargement plus ancien qui finit après ne doit pas écraser le récent.
+    private var generation = 0
+
     func charger() async {
-        detaillees = await depot.detaillees()
-        bredouilles = await depot.bredouilles()
+        generation += 1
+        let moi = generation
+        let lues = await depot.detaillees()
+        let sansPrise = await depot.bredouilles()
+        guard moi == generation else { return }
+        detaillees = lues
+        bredouilles = sansPrise
         let cartes = detaillees.map(\.prise)
         zone = CompteurPescedex.zoneParDefaut(cartes: cartes, repli: zoneDeRepli)
         let services = self.services
