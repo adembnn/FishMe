@@ -48,12 +48,15 @@ struct ConseilLigneView: View {
 struct ConseilsEspeceView: View {
     let espece: Espece
     let contexte: ContexteConseils
+    /// Textes déjà montrés ailleurs sur l'écran (les tuiles de « À essayer ») : on ne les répète pas.
+    var dejaMontres: Set<String> = []
     @AppStorage(ClesConseils.niveau) private var niveauBrut = NiveauPecheur.parDefaut.rawValue
 
     var body: some View {
         let a = contexte.affiches(espece: espece, niveau: .depuis(niveauBrut))
+        let visibles = a.visibles.filter { !dejaMontres.contains($0.texte) }
         VStack(alignment: .leading, spacing: 8) {
-            ForEach(Array(a.visibles.enumerated()), id: \.offset) { _, conseil in
+            ForEach(Array(visibles.enumerated()), id: \.offset) { _, conseil in
                 ConseilLigneView(conseil: conseil)
             }
             if a.visibles.isEmpty && !a.toutLeKit {

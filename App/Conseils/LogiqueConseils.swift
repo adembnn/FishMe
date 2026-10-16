@@ -79,6 +79,13 @@ struct ContexteConseils {
         return liste
     }
 
+    /// Le meilleur conseil de chaque type (appât, hameçon, technique, moment), pris au mois le plus proche.
+    /// Vide si le service ne sait pas répondre par type (faux services) : l'écran retombe alors sur la liste.
+    func parType(espece: Espece, niveau: NiveauPecheur) -> [TypeConseil: Conseil] {
+        guard let service = conseils as? any ServiceConseilsParType else { return [:] }
+        return service.conseilsParType(espece: espece, niveau: niveau, mois: mois, lieu: lieu)
+    }
+
     func affiches(espece: Espece, niveau: NiveauPecheur) -> ConseilsAffiches {
         // Core ne rend que les conseils du mois (conseils.json : surtout avril à août). Hors saison la liste serait
         // vide : on prend alors les conseils du mois le plus proche, plutôt que « Pas encore de conseil ».
