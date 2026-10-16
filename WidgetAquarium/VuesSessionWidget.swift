@@ -51,75 +51,93 @@ struct VueSessionWidget: View {
         switch famille {
         case .accessoryCircular: rond
         case .accessoryRectangular: rectangle
+        case .accessoryInline: enLigne
         default: ecranAccueil
         }
     }
 
-    // MARK: Écran verrouillé (une teinte, pas de couleur)
+    // MARK: Écran verrouillé (maquette P41 A : blanc translucide, une teinte, pas de couleur)
 
-    private var rond: some View {
-        ZStack {
-            AccessoryWidgetBackground()
+    /// Au-dessus de l'heure : « Fin légale 19:29 ».
+    @ViewBuilder
+    private var enLigne: some View {
+        Group {
             switch affichage.contenu {
-            case .aucuneSession:
-                Image(systemName: "fish").font(.rond(22))
-            case .compteARebours(let debut, let fin):
-                VStack(spacing: 0) {
-                    Image(systemName: "fish.fill").font(.rond(11))
-                    Text(timerInterval: debut...fin, pauseTime: nil, countsDown: true, showsHours: false)
-                        .monospacedDigit().font(.rond(13)).minimumScaleFactor(0.6).multilineTextAlignment(.center)
-                    Text("\(affichage.prises)").font(.rond(11))
-                }
-                .padding(2)
-            case .finLegalePassee(let fin):
-                VStack(spacing: 0) {
-                    Image(systemName: "fish.fill").font(.rond(11))
-                    heure(fin).monospacedDigit().font(.rond(14)).minimumScaleFactor(0.6)
-                    Text("\(affichage.prises)").font(.rond(11))
-                }
+            case .compteARebours(_, let fin), .finLegalePassee(let fin):
+                Label { Text("Fin légale \(heure(fin))") } icon: { Image(systemName: "clock") }
             case .pecheFermee:
-                Image(systemName: "nosign").font(.rond(24))
-            case .finInconnue(let depuis):
-                VStack(spacing: 0) {
-                    Image(systemName: "fish.fill").font(.rond(11))
-                    Text(depuis, style: .timer).monospacedDigit().font(.rond(13)).minimumScaleFactor(0.6)
-                        .multilineTextAlignment(.center)
-                    Text("\(affichage.prises)").font(.rond(11))
-                }
+                Label("Pêche fermée", systemImage: "nosign")
+            case .aucuneSession, .finInconnue:
+                Label("FishMe", systemImage: "fish")
             }
         }
         .widgetURL(urlSession)
         .containerBackground(for: .widget) { Color.clear }
     }
 
+    /// Jauge du temps restant jusqu'à la fin légale, le reste au centre.
+    private var rond: some View {
+        ZStack {
+            switch affichage.contenu {
+            case .compteARebours(let debut, let fin):
+                ProgressView(timerInterval: debut...fin, countsDown: true) {
+                    EmptyView()
+                } currentValueLabel: {
+                    VStack(spacing: 0) {
+                        Image(systemName: "clock").font(.rond(10))
+                        Text(timerInterval: debut...fin, pauseTime: nil, countsDown: true, showsHours: true)
+                            .monospacedDigit().font(.rond(13)).minimumScaleFactor(0.5).lineLimit(1)
+                            .multilineTextAlignment(.center)
+                    }
+                    .padding(.horizontal, 4)
+                }
+                .progressViewStyle(.circular)
+            case .finLegalePassee(let fin):
+                AccessoryWidgetBackground()
+                VStack(spacing: 0) {
+                    Image(systemName: "clock").font(.rond(10))
+                    heure(fin).monospacedDigit().font(.rond(14)).minimumScaleFactor(0.6)
+                }
+            case .pecheFermee:
+                AccessoryWidgetBackground()
+                Image(systemName: "nosign").font(.rond(24))
+            case .aucuneSession, .finInconnue:
+                AccessoryWidgetBackground()
+                Image(systemName: "fish").font(.rond(22))
+            }
+        }
+        .widgetURL(urlSession)
+        .containerBackground(for: .widget) { Color.clear }
+    }
+
+    /// « Session » et la durée de la session, en grand.
     private var rectangle: some View {
-        VStack(alignment: .leading, spacing: 2) {
+        VStack(alignment: .leading, spacing: 0) {
             switch affichage.contenu {
             case .aucuneSession:
                 Label("Pas de session", systemImage: "fish").font(.rond(15))
-            case .compteARebours(let debut, let fin):
-                Text(timerInterval: debut...fin, pauseTime: nil, countsDown: true, showsHours: true)
-                    .monospacedDigit().font(.rond(26)).minimumScaleFactor(0.6).lineLimit(1)
-                HStack {
-                    Label("\(affichage.prises)", systemImage: "fish.fill")
-                    Spacer()
-                    heure(fin).monospacedDigit()
-                }
-                .font(.rond(13))
-            case .finLegalePassee(let fin):
-                heure(fin).monospacedDigit().font(.rond(26))
-                Label("\(affichage.prises)", systemImage: "fish.fill").font(.rond(13))
             case .pecheFermee:
                 Label("Pêche fermée", systemImage: "nosign").font(.rond(18))
-                Label("\(affichage.prises)", systemImage: "fish.fill").font(.rond(13))
+            case .compteARebours(let debut, _):
+                titreSession
+                Text(debut, style: .timer).monospacedDigit().font(.rond(28)).minimumScaleFactor(0.6).lineLimit(1)
             case .finInconnue(let depuis):
-                Text(depuis, style: .timer).monospacedDigit().font(.rond(26)).lineLimit(1)
-                Label("\(affichage.prises)", systemImage: "fish.fill").font(.rond(13))
+                titreSession
+                Text(depuis, style: .timer).monospacedDigit().font(.rond(28)).minimumScaleFactor(0.6).lineLimit(1)
+            case .finLegalePassee(let fin):
+                Label { Text("Fin légale") } icon: { Image(systemName: "clock") }.font(.rond(13))
+                heure(fin).monospacedDigit().font(.rond(28))
             }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+        .padding(.horizontal, 10)
+        .background { AccessoryWidgetBackground().clipShape(.rect(cornerRadius: 14)) }
         .widgetURL(urlSession)
         .containerBackground(for: .widget) { Color.clear }
+    }
+
+    private var titreSession: some View {
+        Label { Text("Session") } icon: { Image(systemName: "clock") }.font(.rond(13))
     }
 
     // MARK: Écran d'accueil

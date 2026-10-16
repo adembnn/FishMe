@@ -143,3 +143,10 @@ Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntent
 - Queue : `fabriquer_cycle_nage.py` refait les 8 images avec l'ondulation de NAGE.md (amplitude par espèce) ;
   la fréquence suit la vitesse (f = 0.9 + 2.2 v/L, au plus 3,5 par seconde).
 - Rien à changer dans les cibles : mêmes fichiers, même catalogue NagePoissons.
+
+## Écran verrouillé de la session (16 oct., 06h, maquette P41 A choisie)
+- `SessionWidget` ajoute `.accessoryInline` : « Fin légale 19:29 » au-dessus de l'heure.
+- Rectangle : « Session » et la durée écoulée en grand. Rond : jauge du temps restant jusqu'à la fin légale
+  (`ProgressView(timerInterval:countsDown:)`), le reste au centre. Blanc translucide, une seule teinte.
+- 3 aperçus `#Preview` (en ligne, rectangle, rond) dans `SessionWidget.swift`. Capture attendue de l'écran verrouillé
+  dans `reports/ecrans/L15/`.
