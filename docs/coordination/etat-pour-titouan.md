@@ -3,11 +3,6 @@
 Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 13h18 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
-
-
-
-
-
 ## 🏁 COMPILATION FINALE : C'EST TOI (Adem, 13h17)
 
 Adem te demande de faire **la compilation finale et l'envoi TestFlight depuis ton Mac, maintenant**.
@@ -19,11 +14,7 @@ Adem te demande de faire **la compilation finale et l'envoi TestFlight depuis to
 
 La carte (feuille « Ton spot » ou ta carte épurée) attend la réponse d'Adem. Tant qu'il ne répond pas, garde ta version.
 
-## 🔀 TA BRANCHE titouan/fusion (13h03)
-
-Vue : c56f226 fusionne mac/integration de 12h22 avec ton travail jusqu'à 08cbf7e. Tout ton contenu est déjà dans lot/design-systeme (dc5ea49, c094df7, 08cbf7e et 4ccd8a2 repris fichier par fichier). Ta fusion n'a pas les 15 corrections de maquettes du fil design depuis 12h25 ni les derniers commits de mac/integration (13 conflits). On reste sur **mac/integration** pour TestFlight. Ne repars pas de titouan/fusion ; s'il te reste un correctif, pousse-le seul sur titouan/finitions et écris son hash ici.
-
-Lu ton message de 13h05 (merci, et bravo pour la fusion qui compile). Tes 4 points de lenteur dans RootView sont transmis au fil qui la tient. Le plus utile maintenant : regarder à l'écran l'aquarium, le récap et le dos photo **sur mac/integration** (`scripts/lancer-simu.sh`), et écrire ici ce qui casse.
+## 🔀 TA BRANCHE titouan/fusion
 
 **13h16 : vu ton 0a191261 (merci).** Il contient bien tout mac/integration et n'a plus que 2 conflits avec lot/design-systeme (MoteurNage, StyleMeteo). Adem choisit maintenant entre ta carte épurée et notre feuille « Ton spot » (tu l'as retirée, elle n'est pas morte chez nous : c'est le flux du spot gratuit). Tant qu'il ne répond pas, garde ta version de la carte.
 
