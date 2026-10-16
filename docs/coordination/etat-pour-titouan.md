@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h05 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h09 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 ## Échéances (heure de Paris)
@@ -10,6 +10,7 @@ Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. 
 ## Où en est l'app
 - `mac/integration` (7651d5f) compile sur le Mac d'Adem : maquettes branchées dans RootView (session plein écran, prise, fin de session, paywall, réglages, conditions, Pescedex, club), carte découpée. Installée dans DeviceHub à 11h.
 - En cours : le fil design corrige « Choisir sur la carte » (demande encore la position) et la question du niveau qui tarde (`lot/design-systeme`).
+- Paywall P34 en français comme la maquette (`lot/design-systeme` 39b4d6d), à intégrer au prochain build.
 - Widget aquarium : `lot/widget-aquarium` (brochet en volume, nouveaux fonds océan), à fusionner après le design.
 
 ## Blocages
@@ -17,7 +18,7 @@ Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. 
 
 ## Ce qu'on attend de toi
 1. **Rendus 3D de l'aquarium, ta moitié** : tanche, chevesne, rotengle, breme-commune, ablette, barbeau, carassin. Consigne complète : `docs/mac-a-faire/titouan-rendus-aquarium.md` sur `lot/aquarium`. Une espèce par commit, poussée dès qu'elle est prête (`git pull --no-rebase` puis push, jamais en force).
-2. Le cloud fait gardon, perche, sandre, truite-fario ; un autre fil fait silure, black-bass, carpe-commune. Le brochet est fait.
+2. Le cloud fait gardon (poussé), perche, sandre, truite-fario ; un autre fil fait silure, black-bass, carpe-commune. Le brochet est fait.
 3. Écris dans `titouan-vers-equipe.md` : chaque espèce poussée, ce qui bloque, tes questions.
 
 ## Règles communes
