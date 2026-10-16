@@ -52,13 +52,14 @@ struct CarteRevelee: Identifiable {
 // MARK: - Chargement hors du fil principal
 
 /// Ce qui est lourd à construire au lancement : le moteur de Core (règles, espèces, stations) et le conteneur SwiftData.
-struct Chargement: Sendable {
+nonisolated struct Chargement: Sendable {
     let core: MoteurCore
     let conteneur: ModelContainer?
 
     /// À appeler hors du fil principal.
-    static func preparer() -> Chargement {
-        let core = MoteurCore(donnees: .embarque(dossierFabriques: Bundle.main.resourceURL, reglesTelechargees: ReglesAJour.dossierCopies))
+    /// `dossierRegles` est lu sur le fil principal avant l'appel (`ReglesAJour` y est isolé).
+    static func preparer(dossierRegles: URL?) -> Chargement {
+        let core = MoteurCore(donnees: .embarque(dossierFabriques: Bundle.main.resourceURL, reglesTelechargees: dossierRegles))
         let conteneur = (try? DepotCartes.creerConteneur()) ?? (try? DepotCartes.creerConteneur(enMemoire: true))
         return Chargement(core: core, conteneur: conteneur)
     }
@@ -473,7 +474,7 @@ final class ParcoursApp {
 }
 
 /// Repli de production si conseils.json ne se charge pas : aucun conseil, jamais un faux.
-private struct ConseilsVides: ServiceConseils {
+private nonisolated struct ConseilsVides: ServiceConseils {
     func conseils(espece: Espece, niveau: NiveauPecheur, mois: Int) -> [Conseil] { [] }
     func conseils(espece: Espece, niveau: NiveauPecheur, mois: Int, lieu: Lieu) -> [Conseil] { [] }
 }
@@ -504,7 +505,8 @@ struct RootView: View {
         }
         .task {
             guard app == nil else { return }
-            let chargement = await Task.detached(priority: .userInitiated) { Chargement.preparer() }.value
+            let dossierRegles = ReglesAJour.dossierCopies
+            let chargement = await Task.detached(priority: .userInitiated) { Chargement.preparer(dossierRegles: dossierRegles) }.value
             let nouvelle = ParcoursApp(chargement: chargement, configurerMesure: configurerMesure)
             app = nouvelle
             await nouvelle.demarrer()

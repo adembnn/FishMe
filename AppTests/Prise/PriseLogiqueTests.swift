@@ -131,7 +131,7 @@ struct PriseModeleTests {
         m.choisir(brochet)
         #expect(m.etape == .taille)
         #expect(m.controle == nil)
-        m.longueurCm = 60
+        m.deplacerCurseur(60)
         m.confirmerLaTaille()
         #expect(m.controle != nil)
         #expect(m.poids != nil)
@@ -145,7 +145,7 @@ struct PriseModeleTests {
         #expect(m.longueurCm == PriseLogique.tailleDeDepart)
         #expect(PriseLogique.plageTaille.contains(m.longueurCm) && m.longueurCm != 40)
         #expect(!m.curseurBouge)
-        m.longueurCm = 55
+        m.deplacerCurseur(55)
         #expect(m.curseurBouge)
     }
 

@@ -16,7 +16,7 @@ struct PriseTailleView: View {
                     if let image = modele.toiseImage { photoToise(image) }
                     VStack(spacing: 8) {
                         Text("\(Int(modele.longueurCm.rounded())) cm").font(PriseJetons.chiffre()).foregroundStyle(PriseJetons.encre)
-                        Slider(value: $modele.longueurCm, in: PriseLogique.plageTaille, step: 1)
+                        Slider(value: Binding(get: { modele.longueurCm }, set: { modele.deplacerCurseur($0) }), in: PriseLogique.plageTaille, step: 1)
                             .accessibilityLabel("Taille en centimètres")
                         HStack {
                             Text("\(Int(PriseLogique.plageTaille.lowerBound)) cm")
