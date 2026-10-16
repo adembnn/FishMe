@@ -45,9 +45,6 @@ struct FicheCoinView: View {
                         .buttonStyle(.principal)
                     }
                     releve
-                } else {
-                    ChargementBouchon(texte: "Chargement du spot")
-                        .frame(maxWidth: .infinity, minHeight: 120)
                 }
             }
             .padding(.horizontal, Espace.bord)
@@ -55,6 +52,13 @@ struct FicheCoinView: View {
             .padding(.bottom, Espace.xl)
         }
         .scrollIndicators(.hidden)
+        // Attente en page entière, bouchon au centre (jamais un petit bloc en haut de la feuille).
+        .overlay {
+            if modele.fiche == nil {
+                EcranChargement(texte: "Chargement du spot")
+            }
+        }
+        .animation(.easeOut(duration: 0.25), value: modele.fiche == nil)
         .overlay(alignment: .topTrailing) {
             BoutonRond(role: .fermer)
                 .padding(.top, Espace.s)

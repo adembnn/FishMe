@@ -260,9 +260,10 @@ struct PriseEtapeLecture: View {
     var modele: PriseModele
 
     var body: some View {
-        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }) {
-            ChargementBouchon().frame(minHeight: 96)
-                .accessibilityLabel("Lecture de ta photo")
-        }
+        EcranChargement(texte: "Lecture de ta photo", photo: modele.imagePhoto)
+            .overlay(alignment: .topLeading) {
+                BoutonRond(role: .retour, rendu: .verre) { modele.retour() }
+                    .padding(Espace.bord)
+            }
     }
 }
