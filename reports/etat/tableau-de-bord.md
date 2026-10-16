@@ -10,7 +10,7 @@ Branche des corrections : `claude/finir-app-ud5swp` (commits acc2598, ec69c1c, 5
 | Fonctions de la version soumise | 15 vues, 13 codées, 10 partielles, 1 absente | [fonctions.md](fonctions.md) |
 | Conformité Apple (check-list) | 9/24 avant la nuit, ~15/24 après la vague 1 | `docs/app-store.md` |
 | Tests Core (Linux) | **201 verts**, 1 problème connu (cas d'or 09) | [tests-core.md](tests-core.md) |
-| Règles chargées dans l'app | **19 340 confirmées**, 9 107 « vérifie l'arrêté », 96 départements | [regles.md](regles.md), [CSV](regles-par-departement.csv) |
+| Règles chargées dans l'app | **19 402 confirmées**, 9 093 « vérifie l'arrêté », 96 départements | [regles.md](regles.md), [CSV](regles-par-departement.csv) |
 | Départements sous 50 % confirmé | 10 (05, 09, 18, 28, 32, 47, 85, 91, 92, 93 ; pire : 85 à 15 %) | [regles.md](regles.md) |
 | Règles qui expirent le 31/12/2026 | ~60 % | [regles.md](regles.md) |
 | Modèle de reconnaissance | v2, 55 classes, 22 Mo, seuil 0,4 | [reconnaissance.md](reconnaissance.md) |
