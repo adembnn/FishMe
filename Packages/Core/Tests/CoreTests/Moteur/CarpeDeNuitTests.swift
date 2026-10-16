@@ -53,4 +53,12 @@ struct CarpeDeNuitTests {
         #expect(ligneCarpe(m.controle(espece: carpe, tailleCm: 60, mesure: .toise, date: quinzeOctobre, lieu: lieuParis, prisesDuJour: [])) == nil)
         #expect(ligneCarpe(m.controle(espece: percheEssai, tailleCm: 25, mesure: .toise, date: nuit, lieu: lieuParis, prisesDuJour: [])) == nil)
     }
+
+    @Test("Texte réel du 75 (« bateaux amorceurs : interdits ») : reste un secteur autorisé")
+    func texteReelParis() {
+        let texte = "autorise : oui ; lignes max : 4 ; appats : amorces et appâts végétaux seulement ; depuis la rive seulement : oui ; bateaux amorceurs : interdits ; captivite et transport la nuit : interdits (R436-14)"
+        let r = moteur(phrase: "Carpe de nuit autorisée sur la Seine à Paris.", texte: texte)
+            .controle(espece: carpe, tailleCm: 60, mesure: .toise, date: nuit, lieu: lieuParis, prisesDuJour: [])
+        #expect(ligneCarpe(r)?.phrase == "Carpe de nuit : remise à l'eau obligatoire, appâts végétaux seulement")
+    }
 }

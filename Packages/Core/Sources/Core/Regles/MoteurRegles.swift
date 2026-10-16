@@ -627,8 +627,11 @@ public struct MoteurRegles: ServiceRegles {
                 guard let id = interne.regleId, interne.ligne.raison == nil, interne.ligne.etat != .aVerifierSurPlace,
                       let r = local.regles.first(where: { $0.id == id }), r.type == "carpe_nuit", r.statut != "incertain",
                       ["cours_eau", "plan_eau", "troncon"].contains(r.portee?.niveau ?? "") else { continue }
+                // « interdits » apparaît aussi dans les textes qui autorisent (bateaux amorceurs, captivité) :
+                // on ne le cherche que dans la phrase, pas dans le détail de la valeur.
                 let texte = ((r.valeur["texte"]?.texte ?? "") + " " + r.phrase).lowercased()
-                if texte.contains("autorise : non") || texte.contains("interdit") || texte.contains("pas de pêche") { continue }
+                if texte.contains("autorise : non") || texte.contains("pas de pêche")
+                    || r.phrase.lowercased().contains("interdit") { continue }
                 var sources = r.textes.compactMap { sourceDe(id: $0, fichier: local) }
                 if let codeSource, !sources.contains(codeSource) { sources.append(codeSource) }
                 return LigneControle(type: .nuit, etat: .nonRespectee, phrase: Self.phraseCarpeAutorisee,
