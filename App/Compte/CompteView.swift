@@ -144,7 +144,7 @@ struct CompteView: View {
             VStack(spacing: Espace.m) {
                 switch modele.etat {
                 case .inconnu:
-                    ProgressView()
+                    ChargementBouchon(taille: 44)
                         .frame(minHeight: Gabarit.zoneTactile)
                 case .disponible:
                     symbole("checkmark.icloud.fill", Palette.marine)
