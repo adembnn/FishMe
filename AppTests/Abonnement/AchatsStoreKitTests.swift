@@ -10,6 +10,23 @@ import Core
 /// NON COMPILÉ : les API de `SKTestSession` sont à vérifier sous Xcode (voir le rapport de L6).
 @MainActor
 struct AchatsStoreKitTests {
+    /// Chaque test passe par ici : la session est vidée en sortie, sinon le processus de test ne se termine pas.
+    private func avecSession(_ corps: (SKTestSession, AchatsStoreKit) async throws -> Void) async throws {
+        let session = try session()
+        let achats = achats()
+        do {
+            try await corps(session, achats)
+        } catch {
+            achats.arreterEcoute()
+            session.clearTransactions()
+            session.resetToDefaultState()
+            throw error
+        }
+        achats.arreterEcoute()
+        session.clearTransactions()
+        session.resetToDefaultState()
+    }
+
     private func session() throws -> SKTestSession {
         let session = try SKTestSession(configurationFileNamed: "TestConfig")
         session.resetToDefaultState()
@@ -23,59 +40,60 @@ struct AchatsStoreKitTests {
     }
 
     @Test func sansAchatNonAbonne() async throws {
-        _ = try session()
-        #expect(await achats().etat() == .nonAbonne)
+        try await avecSession { _, achats in
+            #expect(await achats.etat() == .nonAbonne)
+        }
     }
 
     @Test func achatPuisAbonnementExpireSansAcces() async throws {
-        let session = try session()
-        let achats = achats()
-        let apres = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
-        #expect(apres.donneAcces)
-        try session.expireSubscription(productIdentifier: IdentifiantsProduits.annuelFondateur)
-        // StoreKit propage l'expiration de façon asynchrone : on sonde jusqu'à 10 s au lieu de lire une seule fois.
-        var acces = await achats.etat().donneAcces
-        for _ in 0..<40 where acces {
-            try await Task.sleep(for: .milliseconds(250))
-            acces = await achats.etat().donneAcces
+        try await avecSession { session, achats in
+            let apres = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
+            #expect(apres.donneAcces)
+            try session.expireSubscription(productIdentifier: IdentifiantsProduits.annuelFondateur)
+            // StoreKit propage l'expiration de façon asynchrone : on sonde jusqu'à 10 s au lieu de lire une seule fois.
+            var acces = await achats.etat().donneAcces
+            for _ in 0..<40 where acces {
+                try await Task.sleep(for: .milliseconds(250))
+                acces = await achats.etat().donneAcces
+            }
+            #expect(!acces)
         }
-        #expect(!acces)
     }
 
     @Test func delaiDeGraceGardeLAcces() async throws {
-        let session = try session()
-        session.billingGracePeriodIsEnabled = true
-        session.shouldEnterBillingRetryOnRenewal = true
-        let achats = achats()
-        _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
-        try session.forceRenewalOfSubscription(productIdentifier: IdentifiantsProduits.annuelFondateur)
-        let etat = await achats.etat()
-        guard case .delaiDeGrace = etat else { Issue.record("attendu : délai de grâce, reçu \(etat)"); return }
-        #expect(etat.donneAcces)
+        try await avecSession { session, achats in
+            session.billingGracePeriodIsEnabled = true
+            session.shouldEnterBillingRetryOnRenewal = true
+            _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
+            try session.forceRenewalOfSubscription(productIdentifier: IdentifiantsProduits.annuelFondateur)
+            let etat = await achats.etat()
+            guard case .delaiDeGrace = etat else { Issue.record("attendu : délai de grâce, reçu \(etat)"); return }
+            #expect(etat.donneAcces)
+        }
     }
 
     @Test func remboursementRetireLAcces() async throws {
-        let session = try session()
-        let achats = achats()
-        _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
-        let transaction = try #require(session.allTransactions().first)
-        try session.refundTransaction(identifier: transaction.identifier)
-        #expect(!(await achats.etat().donneAcces))
+        try await avecSession { session, achats in
+            _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
+            let transaction = try #require(session.allTransactions().first)
+            try session.refundTransaction(identifier: transaction.identifier)
+            #expect(!(await achats.etat().donneAcces))
+        }
     }
 
     @Test func restaurerRendLAbonnement() async throws {
-        _ = try session()
-        let achats = achats()
-        _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
-        #expect(await achats.restaurer().donneAcces)
+        try await avecSession { _, achats in
+            _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
+            #expect(await achats.restaurer().donneAcces)
+        }
     }
 
     @Test func modeAvionLeDernierEtatVerifieSert() async throws {
-        let session = try session()
-        let achats = achats()
-        _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
-        try await session.setSimulatedError(.generic(.networkError(URLError(.notConnectedToInternet))), forAPI: .loadProducts)
-        #expect(await achats.etat().donneAcces)
+        try await avecSession { session, achats in
+            _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
+            try await session.setSimulatedError(.generic(.networkError(URLError(.notConnectedToInternet))), forAPI: .loadProducts)
+            #expect(await achats.etat().donneAcces)
+        }
     }
 }
 #endif

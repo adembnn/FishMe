@@ -87,6 +87,15 @@ nonisolated final class AchatsStoreKit: Achats, @unchecked Sendable {
         }
     }
 
+    /// Arrête l'écoute de `Transaction.updates` (fin d'app ou de test) ; `demarrerEcoute()` peut ensuite repartir.
+    func arreterEcoute() {
+        let tache = verrou.withLock { () -> Task<Void, Never>? in
+            defer { ecoute = nil }
+            return ecoute
+        }
+        tache?.cancel()
+    }
+
     private func traiter(_ resultat: VerificationResult<Transaction>) async {
         guard case .verified(let transaction) = resultat else { return }
         await transaction.finish()
@@ -106,17 +115,19 @@ nonisolated final class AchatsStoreKit: Achats, @unchecked Sendable {
     private func lireEtat() async -> EtatAchats {
         let maintenant = horloge()
         var droits: [StatutAbonnement] = []
+        var produitsAvecDroit: Set<String> = []
         for await resultat in Transaction.currentEntitlements {
             guard case .verified(let transaction) = resultat, identifiants.contains(transaction.productID) else { continue }
             if transaction.revocationDate != nil {
                 droits.append(Self.statutRevoque(transaction))
             } else if transaction.expirationDate.map({ $0 > maintenant }) ?? true {
                 droits.append(.abonne)
+                produitsAvecDroit.insert(transaction.productID)
             }
         }
 
         do {
-            let statuts = try await statutsAbonnement()
+            let statuts = try await statutsAbonnement(droitsActifs: produitsAvecDroit, maintenant: maintenant)
             if !statuts.isEmpty { return ResolveurEtat.etat(statuts: statuts, maintenant: maintenant) }
             return ResolveurEtat.etat(statuts: droits, maintenant: maintenant)
         } catch {
@@ -127,7 +138,7 @@ nonisolated final class AchatsStoreKit: Achats, @unchecked Sendable {
         }
     }
 
-    private func statutsAbonnement() async throws -> [StatutAbonnement] {
+    private func statutsAbonnement(droitsActifs: Set<String>, maintenant: Date) async throws -> [StatutAbonnement] {
         let produits = try await Product.products(for: identifiants)
         var statuts: [StatutAbonnement] = []
         for produit in produits {
@@ -136,7 +147,16 @@ nonisolated final class AchatsStoreKit: Achats, @unchecked Sendable {
                 guard case .verified(let transaction) = statut.transaction else { continue }
                 switch statut.state {
                 case .subscribed:
-                    statuts.append(.abonne)
+                    // StoreKit peut garder « abonné » en cache après l'expiration : la date de fin, la révocation
+                    // et la liste des droits en cours (`currentEntitlements`) font foi.
+                    let echu = transaction.expirationDate.map { $0 <= maintenant } ?? false
+                    if transaction.revocationDate != nil {
+                        statuts.append(Self.statutRevoque(transaction))
+                    } else if echu || !droitsActifs.contains(transaction.productID) {
+                        statuts.append(.expire)
+                    } else {
+                        statuts.append(.abonne)
+                    }
                 case .inGracePeriod:
                     var fin: Date?
                     if case .verified(let renouvellement) = statut.renewalInfo { fin = renouvellement.gracePeriodExpirationDate }
