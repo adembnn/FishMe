@@ -20,7 +20,7 @@ private let urlPro = URL(string: "fishme://pro?source=widget")
 
 /// Combien de poissons nagent : 3 en petit, 5 partout ailleurs (le pêcheur les choisit, 5 au plus).
 /// Sert aussi au fournisseur (`AquariumWidget.swift`) pour réduire l'instantané avant la timeline.
-func limitePoissons(_ famille: WidgetFamily) -> Int {
+nonisolated func limitePoissons(_ famille: WidgetFamily) -> Int {
     InstantaneAquarium.limiteAffichee(petit: famille == .systemSmall)
 }
 
@@ -110,6 +110,8 @@ private struct FondEau: View {
 private struct CoucheNage: View {
     let entree: EntreeAquarium
     let famille: WidgetFamily
+    /// Faux : poissons figés (tests d'image, repli sans animation).
+    var anime: Bool = true
     @Environment(\.widgetRenderingMode) private var rendu
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
 
