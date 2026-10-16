@@ -116,3 +116,69 @@ public struct ConseilsParEspece: ServiceConseils {
         return cal.date(from: c) ?? maintenant
     }
 }
+
+// MARK: - Un conseil par type (écran « À essayer »)
+
+/// Le meilleur conseil de chaque type (appât, hameçon, technique, moment) pour une espèce.
+/// Un type sans conseil dans le mois demandé prend celui du mois le plus proche ; un type absent du dictionnaire n'a aucun conseil relu.
+public protocol ServiceConseilsParType: ServiceConseils {
+    func conseilsParType(espece: Espece, niveau: NiveauPecheur, mois: Int, lieu: Lieu?) -> [TypeConseil: Conseil]
+}
+
+public extension ServiceConseilsParType {
+    func conseilsParType(espece: Espece, niveau: NiveauPecheur, mois: Int) -> [TypeConseil: Conseil] {
+        conseilsParType(espece: espece, niveau: niveau, mois: mois, lieu: nil)
+    }
+}
+
+extension ConseilsParEspece: ServiceConseilsParType {
+    public func conseilsParType(espece: Espece, niveau: NiveauPecheur, mois: Int, lieu: Lieu?) -> [TypeConseil: Conseil] {
+        guard (1...12).contains(mois) else { return [:] }
+        var resultat: [TypeConseil: Conseil] = [:]
+        for type in TypeConseil.allCases {
+            if let c = meilleur(type: type, espece: espece, niveau: niveau, mois: mois, lieu: lieu) {
+                resultat[type] = c
+            }
+        }
+        return resultat
+    }
+
+    /// Le mois demandé d'abord, puis +1, -1, +2, -2… (circulaire).
+    static func moisParProximite(_ mois: Int) -> [Int] {
+        var liste = [mois]
+        for d in 1...6 {
+            for m in [mois + d, mois - d] {
+                let n = (m - 1 + 12) % 12 + 1
+                if !liste.contains(n) { liste.append(n) }
+            }
+        }
+        return liste
+    }
+
+    private func meilleur(type: TypeConseil, espece: Espece, niveau: NiveauPecheur, mois: Int, lieu: Lieu?) -> Conseil? {
+        let categorie = lieu?.categorie.valeur
+        // Premier passage : le niveau du pêcheur sur tous les mois ; second passage : n'importe quel niveau.
+        for tousNiveaux in [false, true] {
+            for m in Self.moisParProximite(mois) {
+                let interdits: Set<ModeConseil> = lieu.map { modesInterdits(lieu: $0, mois: m) } ?? []
+                let candidats = fichier.conseils
+                    .filter { $0.espece == espece.id && $0.type == type && $0.mois.contains(m) }
+                    .filter { tousNiveaux || $0.niveaux.contains(niveau) }
+                    .filter { c in
+                        if c.modes.contains(where: interdits.contains) { return false }
+                        switch categorie {
+                        case .premiere: return c.categorie != .deuxieme
+                        case .deuxieme: return c.categorie != .premiere
+                        case .inconnue: return c.categorie == .toutes
+                        case nil: return true
+                        }
+                    }
+                    .sorted { ($0.rang, $0.id) < ($1.rang, $1.id) }
+                for c in candidats {
+                    if let source = source(de: c) { return Conseil(texte: c.texte, icone: c.icone, source: source, gratuit: false) }
+                }
+            }
+        }
+        return nil
+    }
+}

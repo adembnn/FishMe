@@ -7373,6 +7373,465 @@
     "h7-garbolino-carassin"
    ],
    "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "brochet-appat-1",
+   "espece": "brochet",
+   "type": "appat",
+   "texte": "Leurre souple sur tête plombée, cuiller ou petit poisson nageur",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 6,
+   "sources": [
+    "g1-peche-brochet-premier"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "brochet-appat-2",
+   "espece": "brochet",
+   "type": "appat",
+   "texte": "À l'automne : poisson nageur, cuiller tournante ou leurre souple",
+   "icone": "fork.knife",
+   "mois": [
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 7,
+   "sources": [
+    "g1-decathlon-brochet-automne"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "sandre-hamecon-1",
+   "espece": "sandre",
+   "type": "hamecon",
+   "texte": "Leurre souple sur tête plombée de 10 à 20 g (7 à 10 g en eau peu profonde)",
+   "icone": "scope",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 6,
+   "sources": [
+    "g1-peche-sandre-premier"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "sandre-hamecon-2",
+   "espece": "sandre",
+   "type": "hamecon",
+   "texte": "Adapte le poids de la tête plombée à la profondeur, au courant et au vent",
+   "icone": "scope",
+   "mois": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 7,
+   "sources": [
+    "g1-peche-sandre-automne"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "black-bass-appat-1",
+   "espece": "black-bass",
+   "type": "appat",
+   "texte": "Leurres souples, créatures ou poissons nageurs : la base du black-bass",
+   "icone": "fork.knife",
+   "mois": [
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 6,
+   "sources": [
+    "g1-decathlon-black-bass"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "black-bass-appat-2",
+   "espece": "black-bass",
+   "type": "appat",
+   "texte": "Début d'automne : shad, spinnerbait ou crankbait pour couvrir du terrain",
+   "icone": "fork.knife",
+   "mois": [
+    9,
+    10
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 7,
+   "sources": [
+    "g1-peche-bb-automne"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "black-bass-hamecon-1",
+   "espece": "black-bass",
+   "type": "hamecon",
+   "texte": "Montage du leurre souple : weightless, Carolina, Texas, wacky ou drop shot",
+   "icone": "scope",
+   "mois": [
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 8,
+   "sources": [
+    "g1-decathlon-black-bass"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "black-bass-hamecon-2",
+   "espece": "black-bass",
+   "type": "hamecon",
+   "texte": "Poissons méfiants : worm en wacky ou leurre souple monté en Texas rig",
+   "icone": "scope",
+   "mois": [
+    9,
+    10
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 9,
+   "sources": [
+    "g1-peche-bb-automne"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "truite-fario-moment-1",
+   "espece": "truite-fario",
+   "type": "moment",
+   "texte": "Les appâts naturels, au toc ou en dérive, marchent en toute saison",
+   "icone": "calendar",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 6,
+   "sources": [
+    "g1-peche-truite-appats"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "carpe-commune-hamecon-1",
+   "espece": "carpe-commune",
+   "type": "hamecon",
+   "texte": "Sur le cheveu, au bout de l'hameçon : une bouillette et une ou deux graines",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 6,
+   "sources": [
+    "g2-decathlon-appat-carpe"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "tanche-hamecon-1",
+   "espece": "tanche",
+   "type": "hamecon",
+   "texte": "Esche petite, nette et bien équilibrée, hameçon adapté à elle",
+   "icone": "scope",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 6,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "chevesne-moment-1",
+   "espece": "chevesne",
+   "type": "moment",
+   "texte": "En été, pêche à vue tôt le matin ou en fin de journée",
+   "icone": "calendar",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 6,
+   "sources": [
+    "g3-peche-chevesne-astuces"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "chevesne-moment-2",
+   "espece": "chevesne",
+   "type": "moment",
+   "texte": "En hiver, il ralentit : montages discrets et pêche lente",
+   "icone": "calendar",
+   "mois": [
+    12,
+    1,
+    2
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 7,
+   "sources": [
+    "g3-peche-chevesne-annee"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ablette-moment-1",
+   "espece": "ablette",
+   "type": "moment",
+   "texte": "Printemps et été, par temps ensoleillé : ses meilleures périodes",
+   "icone": "calendar",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 6,
+   "sources": [
+    "g3-peche-ablette"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "breme-commune-hamecon-1",
+   "espece": "breme-commune",
+   "type": "hamecon",
+   "texte": "Esche petite, nette et bien équilibrée, hameçon adapté à elle",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "breme-commune-moment-1",
+   "espece": "breme-commune",
+   "type": "moment",
+   "texte": "En été, esches vivantes et présentations légères",
+   "icone": "calendar",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "asticot"
+   ],
+   "rang": 5,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "breme-commune-moment-2",
+   "espece": "breme-commune",
+   "type": "moment",
+   "texte": "En hiver, des appâts plus petits et plus discrets",
+   "icone": "calendar",
+   "mois": [
+    12,
+    1,
+    2
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 6,
+   "sources": [
+    "g2-peche-blancs"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "rotengle-hamecon-1",
+   "espece": "rotengle",
+   "type": "hamecon",
+   "texte": "Petit hameçon et bas de ligne léger : ligne fine et discrète",
+   "icone": "scope",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "g2-fwg-rotengle"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
   }
  ]
 }
