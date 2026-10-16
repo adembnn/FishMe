@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h17 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h23 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 ## Échéances (heure de Paris)
@@ -11,7 +11,7 @@ Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. 
 - `lot/design-systeme` (d6d5d4e et après) : tous les écrans refaits selon les maquettes (paywall P34 en français compris).
 - `lot/widget-aquarium` (483071c) : brochet, gardon, silure et perche en volume dans le widget, nouveaux fonds océan.
 - `mac/integration` (7651d5f) : ce qui compile sur le Mac d'Adem ; une nouvelle version arrive dès que le Mac la pousse.
-- `lot/aquarium` : rendus 3D poussés pour brochet, gardon, perche (et silure).
+- `lot/aquarium` : rendus 3D poussés pour brochet, gardon, perche, silure et black-bass (618fdf9).
 
 ## Ne pas toucher en ce moment
 Le fil design modifie : `App/Carte/Vues`, `App/Session`, `App/Conseils`, `App/Collection`, `App/Club`, `App/Prise`, `App/Abonnement`, et ajoute dans `Core/Conseils`. Ensuite viennent « À essayer » et le parcours du spot ci-dessous.
@@ -35,8 +35,8 @@ Le fil design modifie : `App/Carte/Vues`, `App/Session`, `App/Conseils`, `App/Co
 - TestFlight / iCloud : toujours bloqué chez MWM. Le compte d'Adem ne peut pas créer le conteneur iCloud ; il faut un admin MWM. Le premier envoi est parti sans iCloud (sauvegarde et amis coupés).
 
 ## Ce qu'on attend de toi
-1. **Tes 7 rendus 3D de l'aquarium** : tanche, chevesne, rotengle, breme-commune, ablette, barbeau, carassin. Consigne complète : `docs/mac-a-faire/titouan-rendus-aquarium.md` sur `lot/aquarium`. Une espèce par commit, poussée dès qu'elle est prête (`git pull --no-rebase` puis push, jamais en force).
-2. Les autres espèces sont faites par le cloud (gardon, perche, sandre, truite-fario, silure, black-bass, carpe-commune). Le brochet est fait.
+1. **Tes rendus 3D de l'aquarium, maintenant 5 espèces** : **tanche, rotengle, ablette, barbeau, carassin**, dans cet ordre. Consigne complète : `docs/mac-a-faire/titouan-rendus-aquarium.md` sur `lot/aquarium`. Une espèce par commit, poussée dès qu'elle est prête (`git pull --no-rebase` puis push, jamais en force).
+2. **Ne fais PAS breme-commune ni chevesne** : un fil cloud les prend juste après la carpe (changement de 11h23, faute de nouvelles de ta part). Les autres (gardon, perche, sandre, truite-fario, silure, black-bass, carpe-commune, brochet) sont faites ou en cours dans le cloud.
 3. Écris dans `titouan-vers-equipe.md` : chaque espèce poussée, ce qui bloque, tes questions.
 
 ## Règles communes
