@@ -197,3 +197,14 @@ reports/aquarium-3d/widget-ocean/poissons-3d/<slug>/) dans NagePoissons.xcassets
 320 px de large, 256 couleurs avec transparence (environ 1,9 Mo pour 208 images). `fabriquer_cycle_nage.py` refuse
 désormais d'écraser un catalogue qui contient des poissons en volume. Brochet intégré le 16 oct. (394f7079), fonds
 océan v2 (46d876a4).
+
+### Poissons pêchés et astuce « ajouter le widget » (Adem, 16 oct. 09h45)
+
+- Le widget montre déjà les poissons du Pescedex : `RootView.publierAquarium()` écrit `aquarium-widget.json` dans
+  l'App Group `group.ai.mwm.build.challenge.team.01` (appelé au lancement et après chaque prise). Si le widget reste
+  vide après une prise, c'est que l'App Group n'est pas sur l'identifiant MWM (portail Apple, puis profils).
+- Avant la 1re prise : un gardon d'accueil nage, voilé, derrière « Ta 1re prise nagera ici ».
+- `AstuceAjouterWidget.swift` (app seulement : à mettre dans les exceptions de la cible FishMeWidget, comme
+  PontAquariumWidget.swift) : brancher `.astuceAjouterWidget(prises: <nombre de vraies prises>)` sur la vue racine
+  de RootView. Feuille unique, trois gestes, après la 1re prise.
+- Ajouter aussi `integrer_poissons_3d.py` aux exceptions des deux cibles.
