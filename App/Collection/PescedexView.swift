@@ -66,7 +66,10 @@ struct PescedexView: View {
             }
         }
         .sheet(isPresented: $conditionsOuvertes) {
-            if let tes = emplacements.tesConditions { tes() }
+            Group {
+                if let tes = emplacements.tesConditions { tes() }
+            }
+            .avecCroixFermer()
         }
     }
 
@@ -473,6 +476,7 @@ struct FicheEspeceView: View {
         .scrollIndicators(.hidden)
         .presentationDetents([.medium, .large])
         .background(Palette.fond.ignoresSafeArea())
+        .avecCroixFermer()
     }
 
     private var tuileEspece: some View {

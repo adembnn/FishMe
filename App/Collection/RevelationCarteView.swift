@@ -53,6 +53,7 @@ struct RevelationCarteView: View {
                 Spacer(minLength: 16)
             }
         }
+        .avecCroixFermer { ranger() }
         .contentShape(Rectangle())
         .onTapGesture { if rapide { ranger() } }
         .task {
