@@ -16,6 +16,8 @@ nonisolated final class AchatsStoreKit: Achats, @unchecked Sendable {
 
     private let reglages: UserDefaults
     private let cleDernierAcces = "achats.dernierEtatDonneAcces"
+    /// Fin du dernier droit vérifié : hors réseau, l'accès gardé ne dépasse jamais cette date.
+    private let cleFinDernierAcces = "achats.finDernierAcces"
     private let identifiants: Set<String>
     private let horloge: @Sendable () -> Date
     private let surAchat: SurAchat
@@ -116,6 +118,7 @@ nonisolated final class AchatsStoreKit: Achats, @unchecked Sendable {
         let maintenant = horloge()
         var droits: [StatutAbonnement] = []
         var produitsAvecDroit: Set<String> = []
+        var finDroits: Date?
         for await resultat in Transaction.currentEntitlements {
             guard case .verified(let transaction) = resultat, identifiants.contains(transaction.productID) else { continue }
             if transaction.revocationDate != nil {
@@ -123,8 +126,11 @@ nonisolated final class AchatsStoreKit: Achats, @unchecked Sendable {
             } else if transaction.expirationDate.map({ $0 > maintenant }) ?? true {
                 droits.append(.abonne)
                 produitsAvecDroit.insert(transaction.productID)
+                if let fin = transaction.expirationDate { finDroits = max(finDroits ?? fin, fin) }
             }
         }
+
+        if let finDroits { reglages.set(finDroits, forKey: cleFinDernierAcces) }
 
         do {
             let statuts = try await statutsAbonnement(droitsActifs: produitsAvecDroit, maintenant: maintenant)
@@ -133,7 +139,13 @@ nonisolated final class AchatsStoreKit: Achats, @unchecked Sendable {
         } catch {
             // Pas de réseau pour les statuts : un droit vérifié sur l'appareil suffit, sinon le dernier état vérifié sert.
             if !droits.isEmpty { return ResolveurEtat.etat(statuts: droits, maintenant: maintenant) }
-            if reglages.bool(forKey: cleDernierAcces) { return ResolveurEtat.sansReseau(dernierEtat: .abonne) }
+            // Le dernier état donnait accès, mais sa date de fin est passée : l'abonnement a expiré, même sans réseau.
+            if reglages.bool(forKey: cleDernierAcces) {
+                if let fin = reglages.object(forKey: cleFinDernierAcces) as? Date, fin <= maintenant {
+                    return ResolveurEtat.etat(statuts: [.expire], maintenant: maintenant)
+                }
+                return ResolveurEtat.sansReseau(dernierEtat: .abonne)
+            }
             return .nonAbonne
         }
     }
