@@ -54,10 +54,10 @@ enum StyleRarete: Equatable {
 
     var couleur: Color {
         switch self {
-        case .commun, .nonMesuree: return Jeton.ardoise
-        case .peuCommun: return Jeton.vert
-        case .rare: return Jeton.bleu
-        case .legendaire: return Jeton.bordeaux
+        case .commun, .nonMesuree: return Palette.commun
+        case .peuCommun: return Palette.peuCommun
+        case .rare: return Palette.rare
+        case .legendaire: return Palette.legendaire
         }
     }
 
@@ -65,13 +65,13 @@ enum StyleRarete: Equatable {
     var fond: [Color] {
         switch self {
         case .commun, .nonMesuree:
-            return [Color(red: 0.95, green: 0.97, blue: 0.98), Color(red: 0.80, green: 0.85, blue: 0.88)]
+            return [Palette.tuile, Palette.eauClaire]
         case .peuCommun:
-            return [Color(red: 0.89, green: 0.97, blue: 0.93), Color(red: 0.50, green: 0.83, blue: 0.67)]
+            return [Palette.ouvertDoux, Palette.peuCommun.opacity(0.45)]
         case .rare:
-            return [Color(red: 0.81, green: 0.89, blue: 1.0), Color(red: 0.31, green: 0.56, blue: 0.89)]
+            return [Palette.rare.opacity(0.25), Palette.rare.opacity(0.7)]
         case .legendaire:
-            return [Color(red: 0.55, green: 0.30, blue: 0.38), Color(red: 0.16, green: 0.05, blue: 0.10)]
+            return [Palette.legendaire.opacity(0.55), Palette.nuit]
         }
     }
 
@@ -121,7 +121,7 @@ struct BadgeRarete: View {
                     }
                     if style != .legendaire {
                         Text("\(style.rang)")
-                            .font(Jeton.policeFixe(taille * 0.46))
+                            .font(Police.taille(taille * 0.46, .heavy))
                             .foregroundStyle(.white)
                     }
                 }

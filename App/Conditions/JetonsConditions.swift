@@ -1,13 +1,23 @@
 import SwiftUI
 
-// Jetons provisoires du lot L12 (style « Natif », SF Pro Rounded gras). À remplacer par App/Style/ quand il existe.
+// Les jetons de ce dossier pointent vers App/Style/Style.swift (Palette, Police).
 enum JetonsConditions {
-    static func police(_ style: Font.TextStyle) -> Font { .system(style, design: .rounded).weight(.bold) }
+    static func police(_ style: Font.TextStyle) -> Font {
+        switch style {
+        case .largeTitle: return Police.grandTitre
+        case .title, .title2, .title3: return Police.titre
+        case .headline: return Police.sousTitre
+        case .body: return Police.corps
+        case .subheadline: return Police.detail
+        default: return Police.legende
+        }
+    }
 
-    static var encre: Color { Color(red: 0x14 / 255, green: 0x18 / 255, blue: 0x1B / 255) }
-    static var encre2: Color { Color(red: 0x4F / 255, green: 0x57 / 255, blue: 0x5D / 255) }
-    static var filet: Color { Color(red: 0xC9 / 255, green: 0xCE / 255, blue: 0xD2 / 255) }
-    static var accent: Color { Color(red: 0x1E / 255, green: 0x7F / 255, blue: 0x4F / 255) }
-    static var haut: Color { .orange }
-    static var crue: Color { .red }
+    static var encre: Color { Palette.encre }
+    static var encre2: Color { Palette.encreDouce }
+    static var filet: Color { Palette.filet }
+    static var accent: Color { Palette.marine }
+    /// Orange : alertes seulement (orage, crue).
+    static var haut: Color { Palette.alerte }
+    static var crue: Color { Palette.alerte }
 }

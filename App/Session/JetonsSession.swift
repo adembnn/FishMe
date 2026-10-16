@@ -1,11 +1,11 @@
 import SwiftUI
 
-/// Jetons provisoires (style « Natif », SF Pro Rounded gras) : à remplacer par `App/Style/` quand il existera.
+/// Jetons de la session : tout pointe vers `App/Style/` (Palette, Police).
 enum JetonsSession {
-    static let marine = Color(red: 0.024, green: 0.220, blue: 0.302)
-    static let vert = Color(red: 0.082, green: 0.478, blue: 0.306)
-    static let papier = Color(red: 0.965, green: 0.992, blue: 1.0)
-    static let alerte = Color(red: 0.72, green: 0.30, blue: 0.05)
+    static let marine = Palette.encre
+    static let vert = Palette.marine
+    static let papier = Palette.fond
+    static let alerte = Palette.alerte
 
-    static func police(_ taille: Font.TextStyle) -> Font { .system(taille, design: .rounded).weight(.heavy) }
+    static func police(_ taille: Font.TextStyle) -> Font { .system(taille, design: .rounded, weight: .heavy) }
 }

@@ -6,7 +6,9 @@ struct SecuriteView: View {
         List {
             Section {
                 Label("Orage : range la canne en carbone, éloigne-toi de l'eau.", systemImage: "cloud.bolt")
+                    .foregroundStyle(Palette.alerte)
                 Label("Crue : ne pêche pas au bord d'une rivière en crue.", systemImage: "water.waves")
+                    .foregroundStyle(Palette.alerte)
             } footer: {
                 Text("L'alerte officielle fait foi.")
             }
@@ -20,6 +22,9 @@ struct SecuriteView: View {
             }
         }
         .scrollIndicators(.hidden)
+        .font(Police.corps)
+        .scrollContentBackground(.hidden)
+        .background(Palette.fond.ignoresSafeArea())
         .navigationTitle("Sécurité")
     }
 }

@@ -10,8 +10,8 @@ struct SeptJoursView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
                 ForEach(jours, id: \.debut) { jour in
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text(FormatConditions.jour(jour.debut)).font(JetonsConditions.police(.headline))
+                    VStack(alignment: .leading, spacing: Espace.s) {
+                        Text(FormatConditions.jour(jour.debut)).font(Police.titre).foregroundStyle(Palette.encre)
                         ScrollView(.horizontal) {
                             LazyHStack(alignment: .top, spacing: 14) {
                                 ForEach(jour.heures, id: \.heure) { h in
@@ -29,13 +29,17 @@ struct SeptJoursView: View {
                         }
                         .scrollIndicators(.hidden)
                     }
+                    .padding(Espace.l)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .tuileFishMe(rayon: Rayon.l)
                 }
                 Text("prévu, prévision lue \(FormatConditions.jourHeure(lecture.lueLe))")
                     .font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
                 MarqueMeteoView(stockage: marque)
             }
-            .padding(16)
+            .padding(Espace.bord)
         }
+        .background(Palette.fond)
         .scrollIndicators(.hidden)
         .accessibilityIdentifier("sept-jours")
     }

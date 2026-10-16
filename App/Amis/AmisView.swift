@@ -40,7 +40,7 @@ struct AmisView: View {
 
     private var liste: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 18) {
+            VStack(alignment: .leading, spacing: Espace.l + 2) {
                 entete
                 if let message = texteDuMessage { bandeau(message) }
                 if let invitation = gestion.invitationRecue { demande(invitation) }
@@ -52,8 +52,8 @@ struct AmisView: View {
                     .font(JetonAmis.police(13, .bold))
                     .foregroundStyle(JetonAmis.ardoise)
             }
-            .padding(.horizontal, 16)
-            .padding(.top, 8)
+            .padding(.horizontal, Espace.bord)
+            .padding(.top, Espace.s)
         }
         .scrollIndicators(.hidden)
         .background(JetonAmis.fondPage.ignoresSafeArea())
@@ -104,7 +104,7 @@ struct AmisView: View {
         }
         .padding(12)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(JetonAmis.papier, in: RoundedRectangle(cornerRadius: 14))
+        .background(JetonAmis.papier, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
     }
 
     private func demande(_ invitation: InvitationRecue) -> some View {
@@ -120,23 +120,20 @@ struct AmisView: View {
             }
             HStack(spacing: 12) {
                 Button("Accepter") { Task { await gestion.accepterLInvitation() } }
-                    .buttonStyle(BoutonPlein(fond: JetonAmis.bleu))
+                    .buttonStyle(.principal)
                 Button("Refuser") { gestion.refuserLInvitation() }
-                    .buttonStyle(BoutonPlein(fond: JetonAmis.ardoise))
+                    .buttonStyle(.secondaire)
             }
         }
-        .padding(14)
-        .background(JetonAmis.papier, in: RoundedRectangle(cornerRadius: 16))
+        .padding(Espace.l)
+        .tuileFishMe()
     }
 
     private var inviter: some View {
         ShareLink(item: lienDInvitation, preview: SharePreview("Mon Pescedex")) {
             Label("Inviter un ami", systemImage: "person.badge.plus")
-                .font(JetonAmis.police(17))
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity, minHeight: JetonAmis.zoneTactile)
-                .background(JetonAmis.bleu, in: Capsule())
         }
+        .buttonStyle(.principal)
     }
 
     private var enRetour: some View {
@@ -178,6 +175,8 @@ struct AmisView: View {
                     Divider()
                 }
             }
+            .padding(.horizontal, Espace.l)
+            .tuileFishMe()
         }
     }
 
@@ -223,9 +222,9 @@ struct Avatar: View {
     var body: some View {
         Text(String(nom.prefix(1)).uppercased())
             .font(JetonAmis.police(18))
-            .foregroundStyle(.white)
-            .frame(width: 44, height: 44)
-            .background(JetonAmis.encreDouce, in: Circle())
+            .foregroundStyle(Palette.surMarine)
+            .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+            .background(Palette.marine, in: Circle())
             .accessibilityHidden(true)
     }
 }

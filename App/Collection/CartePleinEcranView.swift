@@ -15,29 +15,37 @@ struct CartePleinEcranView: View {
 
     var body: some View {
         ZStack(alignment: .topLeading) {
-            Jeton.fondPage.ignoresSafeArea()
+            Palette.fond.ignoresSafeArea()
             VStack {
-                Spacer(minLength: 56)
+                Spacer(minLength: 64)
                 carte
-                    .padding(.horizontal, 20)
-                Text(retournee ? "Touche la carte pour revoir le recto" : "Touche la carte pour la retourner")
-                    .font(Jeton.police(14, .semibold))
-                    .foregroundStyle(Jeton.encreDouce)
-                    .padding(.top, 12)
-                Spacer(minLength: 24)
+                    .padding(.horizontal, Espace.xl)
+                Spacer(minLength: Espace.l)
+                Button(action: retourner) {
+                    Label(retournee ? "Voir le recto" : "Voir la photo", systemImage: "arrow.triangle.2.circlepath")
+                }
+                .buttonStyle(.principal)
+                .padding(.horizontal, Espace.bord)
+                .padding(.bottom, Espace.l)
             }
             Button(action: fermer) {
-                Label("Fermer", systemImage: "xmark")
-                    .font(Jeton.police(16))
-                    .padding(.horizontal, 14)
-                    .frame(minHeight: Jeton.zoneTactile)
-                    .background(.regularMaterial, in: Capsule())
-                    .foregroundStyle(Jeton.encre)
+                Image(systemName: "xmark")
+                    .font(Police.sousTitre)
+                    .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                    .background(.regularMaterial, in: Circle())
+                    .foregroundStyle(Palette.encre)
             }
-            .padding(16)
+            .accessibilityLabel("Fermer")
+            .padding(Espace.l)
         }
         .onAppear { if infos.style.aUnReflet && !reduireAnimations { mouvement.demarrer() } }
         .onDisappear { mouvement.arreter() }
+    }
+
+    private func retourner() {
+        withAnimation(reduireAnimations ? .easeInOut(duration: 0.2) : .spring(duration: 0.55)) {
+            retournee.toggle()
+        }
     }
 
     private var carte: some View {
@@ -50,11 +58,7 @@ struct CartePleinEcranView: View {
         }
         .rotation3DEffect(.degrees(retournee && !reduireAnimations ? 180 : 0), axis: (x: 0, y: 1, z: 0), perspective: 0.6)
         .contentShape(Rectangle())
-        .onTapGesture {
-            withAnimation(reduireAnimations ? .easeInOut(duration: 0.2) : .spring(duration: 0.55)) {
-                retournee.toggle()
-            }
-        }
+        .onTapGesture { retourner() }
         .accessibilityAddTraits(.isButton)
         .accessibilityHint("Retourne la carte")
     }

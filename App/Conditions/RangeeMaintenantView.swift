@@ -10,7 +10,7 @@ private struct CaseCondition: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
             Image(systemName: icone).foregroundStyle(JetonsConditions.accent)
-            Text(valeur).font(JetonsConditions.police(.headline)).foregroundStyle(JetonsConditions.encre)
+            Text(valeur).font(Police.chiffreMoyen).minimumScaleFactor(0.6).lineLimit(1).foregroundStyle(JetonsConditions.encre)
             if let detail { Text(detail).font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2) }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -30,6 +30,18 @@ struct RangeeMaintenantView: View {
         // Vent, pluie et pression viennent du point météo le plus proche : on dit de quand il date.
         let heureMesure = point.map { "mesuré à \(FormatConditions.heure($0.heure))" }
         VStack(alignment: .leading, spacing: 10) {
+            if let point {
+                HStack(alignment: .firstTextBaseline, spacing: Espace.m) {
+                    Text("\(FormatConditions.nombre(point.temperatureC))°")
+                        .font(Police.taille(72, .heavy).monospacedDigit()).minimumScaleFactor(0.6).lineLimit(1)
+                        .foregroundStyle(Palette.encre)
+                    Image(systemName: FormatConditions.symbole(codeTemps: point.codeTemps))
+                        .font(Police.taille(32)).foregroundStyle(Palette.marine)
+                    // À brancher : libellé du temps (« Nuageux »), absent du modèle ; seul le symbole du code est montré.
+                }
+                .accessibilityElement(children: .combine)
+                .accessibilityIdentifier("temperature-maintenant")
+            }
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 130), spacing: 12, alignment: .topLeading)], alignment: .leading, spacing: 14) {
                 if let v = c.ventKmh {
                     CaseCondition(icone: "wind", valeur: "\(FormatConditions.nombre(v)) km/h", detail: detailVent(point, mesureA: heureMesure))
@@ -48,6 +60,9 @@ struct RangeeMaintenantView: View {
                 .font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
             MarqueMeteoView(stockage: marque)
         }
+        .padding(Espace.l)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .tuileFishMe(rayon: Rayon.l)
         .accessibilityIdentifier("rangee-maintenant")
     }
 

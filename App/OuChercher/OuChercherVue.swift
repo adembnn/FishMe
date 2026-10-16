@@ -33,6 +33,7 @@ struct OuChercherVue: View {
             #endif
         }
         .fontDesign(.rounded)
+        .background(Palette.fond)
     }
 }
 
@@ -45,11 +46,12 @@ private struct GrilleEspeces: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: Espace.l) {
                 Text(OuChercherTextes.invite)
-                    .font(.title2.weight(.bold))
+                    .font(Police.titre)
+                    .foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: largeurMin), spacing: 12)], spacing: 12) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: largeurMin), spacing: Espace.m)], spacing: Espace.m) {
                     ForEach(especes) { e in
                         Button { choisir(e) } label: { CarteEspece(espece: e) }
                             .buttonStyle(.plain)
@@ -73,14 +75,15 @@ private struct CarteEspece: View {
             ImageEspeceCoin(nom: espece.image)
                 .frame(height: 64)
             Text(espece.nom)
-                .font(.subheadline.weight(.bold))
+                .font(Police.detail)
+                .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity, minHeight: 44)
         .padding(10)
-        .background(.quaternary, in: RoundedRectangle(cornerRadius: 16))
-        .contentShape(RoundedRectangle(cornerRadius: 16))
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
+        .contentShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
     }
 }
 
@@ -92,7 +95,7 @@ private struct ImageEspeceCoin: View {
         if existe(nom) {
             Image(nom).resizable().scaledToFit()
         } else {
-            Image(systemName: "fish").resizable().scaledToFit().padding(8).foregroundStyle(.secondary)
+            Image(systemName: "fish").resizable().scaledToFit().padding(8).foregroundStyle(Palette.silhouette)
         }
     }
 
@@ -118,14 +121,13 @@ private struct ChargementCoins: View {
             ProgressView()
                 .controlSize(.large)
             Text(OuChercherTextes.recherche(espece.nom))
-                .font(.headline.weight(.bold))
+                .font(Police.sousTitre)
+                .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
             Button(action: changer) {
                 Label("Changer d'espèce", systemImage: "arrow.left")
-                    .font(.body.weight(.bold))
-                    .frame(minHeight: 44)
             }
-            .buttonStyle(.bordered)
+            .buttonStyle(.secondaire)
             Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity)
@@ -147,28 +149,27 @@ private struct ListeCoins: View {
             VStack(alignment: .leading, spacing: 16) {
                 HStack(spacing: 12) {
                     ImageEspeceCoin(nom: espece.image).frame(width: 56, height: 56)
-                    Text(espece.nom).font(.title2.weight(.bold)).accessibilityAddTraits(.isHeader)
+                    Text(espece.nom).font(Police.titre).foregroundStyle(Palette.encre).accessibilityAddTraits(.isHeader)
                     Spacer(minLength: 0)
                 }
                 Button(action: changer) {
                     Label("Changer d'espèce", systemImage: "arrow.left")
-                        .font(.body.weight(.bold))
-                        .frame(minHeight: 44)
                 }
-                .buttonStyle(.bordered)
+                .buttonStyle(.secondaire)
 
                 if coins.isEmpty {
                     Text(OuChercherTextes.sansRelevePres)
-                        .font(.headline.weight(.bold))
-                        .padding(.vertical, 8)
+                        .font(Police.sousTitre)
+                        .foregroundStyle(Palette.encre)
+                        .padding(.vertical, Espace.s)
                 } else {
                     Text(OuChercherTextes.explicationOrdre)
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
+                        .font(Police.legende)
+                        .foregroundStyle(Palette.encreDouce)
                     ForEach(coins) { LigneCoin(coin: $0) }
                     Text(OuChercherTextes.creditOSM)
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
+                        .font(Police.legende)
+                        .foregroundStyle(Palette.encreDouce)
                 }
             }
             .padding(.horizontal, 16)
@@ -184,19 +185,20 @@ private struct LigneCoin: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(alignment: .firstTextBaseline) {
-                Text(coin.titre).font(.headline.weight(.bold))
+                Text(coin.titre).font(Police.sousTitre).foregroundStyle(Palette.encre)
                 Spacer(minLength: 8)
-                Text(coin.distance).font(.subheadline.weight(.bold)).foregroundStyle(.secondary)
+                Text(coin.distance).font(Police.detail).foregroundStyle(Palette.encreDouce)
             }
-            if let acces = coin.acces { Text(acces).font(.footnote).foregroundStyle(.secondary) }
-            Text(coin.releve).font(.subheadline)
-            Text(coin.station).font(.footnote).foregroundStyle(.secondary)
+            if let acces = coin.acces { Text(acces).font(Police.legende).foregroundStyle(Palette.encreDouce) }
+            Text(coin.releve).font(Police.detail).foregroundStyle(Palette.encre)
+            Text(coin.station).font(Police.legende).foregroundStyle(Palette.encreDouce)
             Label(coin.ouverture, systemImage: coin.estOuvert ? "checkmark.circle" : "clock")
-                .font(.subheadline.weight(.bold))
+                .font(Police.detail)
+                .foregroundStyle(coin.estOuvert ? Palette.ouvert : Palette.alerte)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(14)
-        .background(.quaternary, in: RoundedRectangle(cornerRadius: 16))
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(coin.phraseVoixOff)
     }

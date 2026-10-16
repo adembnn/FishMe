@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FishMe · carte déclarée</title>
+<link rel="stylesheet" href="natif.css">
+<style>
+html,body{width:auto;height:auto;overflow:hidden;background:#C9D3DE}
+.deux{display:flex;gap:40px;padding:0}
+.ecran{position:relative;width:393px;height:852px;overflow:hidden;background:var(--fond);flex:none}
+.ecran.sombre{background:var(--fond)}
+.ico{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.sb-droite{display:flex;gap:6px;align-items:center}
+/* titre */
+.titre{position:absolute;left:20px;right:20px;top:62px;display:flex;justify-content:space-between;align-items:center}
+.titre h1{font:900 34px/1.1 var(--police);letter-spacing:-.01em}
+.zone{display:flex;align-items:center;gap:6px;min-height:var(--toucher);padding:0 14px 0 10px;border-radius:999px;background:var(--surface);color:var(--marine);font:800 14px/1 var(--police);box-shadow:0 0 0 1px var(--filet)}
+.zone .ico{width:18px;height:18px}
+/* compteur */
+.compteur{position:absolute;left:20px;right:20px;top:116px}
+.compteur .ligne{display:flex;align-items:baseline;gap:8px}
+.compteur .ligne b{font:900 30px/1 var(--police);color:var(--marine)}
+.compteur .ligne span{font:700 15px/1.1 var(--police);color:var(--encre-douce)}
+.pips{display:flex;gap:4px;margin-top:10px}
+.pip{flex:1;height:8px;border-radius:4px;background:var(--tuile)}
+.pip.pr{background:var(--marine)}
+.pip.de{background:transparent;box-shadow:inset 0 0 0 1.5px var(--marine);background:repeating-linear-gradient(135deg,var(--marine-doux) 0 2px,transparent 2px 4px)}
+.legende{display:flex;gap:16px;margin-top:9px;font:700 12px/1 var(--police);color:var(--encre-douce)}
+.legende i{display:inline-block;width:10px;height:10px;border-radius:3px;vertical-align:-1px;margin-right:5px;background:var(--marine)}
+.legende i.d{background:var(--marine-doux);box-shadow:inset 0 0 0 1.5px var(--marine)}
+/* classeur */
+.classeur{position:absolute;left:12px;right:12px;top:214px;bottom:-120px;border-radius:26px;background:#E3EAF2;padding:10px;box-shadow:inset 0 0 0 1px var(--filet)}
+.grille{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.poche{border-radius:12px;padding:3px;background:#D5DEE9;box-shadow:inset 0 2px 4px rgba(14,26,38,.18)}
+.poche .fc{box-shadow:0 5px 10px -6px rgba(0,0,0,.5),0 0 0 1px rgba(0,0,0,.1)}
+/* carte : base .fc planche K (copie exacte) */
+.fc{--dispf:var(--police);position:relative;aspect-ratio:69/100;container-type:inline-size;border-radius:6%/4.2%;overflow:hidden;background:var(--fw);box-shadow:0 12px 26px -14px rgba(0,0,0,.55),0 0 0 1px rgba(0,0,0,.1);font-family:var(--police);color:#0F1A1C;--fw:#5F7775;--fpl:#E9EDEB;--fcen:#fff}
+.fc .win{position:absolute;inset:0;background:var(--fw);overflow:hidden}
+.fc .win::before{content:"";position:absolute;inset:0;opacity:.32;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='white' stroke-width='.6'%3E%3Cg%3E%3Cellipse cx='150' cy='60' rx='20' ry='14'/%3E%3Cellipse cx='150' cy='60' rx='34' ry='24'/%3E%3Cellipse cx='150' cy='60' rx='50' ry='36'/%3E%3Cellipse cx='150' cy='60' rx='68' ry='50'/%3E%3Cellipse cx='70' cy='130' rx='16' ry='11'/%3E%3Cellipse cx='70' cy='130' rx='30' ry='21'/%3E%3Cellipse cx='70' cy='130' rx='46' ry='33'/%3E%3Cellipse cx='70' cy='130' rx='64' ry='46'/%3E%3C/g%3E%3C/svg%3E") center/cover}
+.fc .in{position:absolute;inset:2.4cqw;border-radius:4.4cqw;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);pointer-events:none;z-index:4}
+.fc .fish{position:absolute;left:12%;right:4%;top:23%;transform:rotate(-13deg);filter:drop-shadow(-1.5cqw 2.5cqw 2cqw rgba(0,0,0,.35));z-index:1}
+.fc .fish img{width:100%;display:block}
+.fc .cen{position:absolute;left:5.5cqw;top:4cqw;font-weight:900;font-size:16cqw;line-height:.9;color:var(--fcen);letter-spacing:-.04em;z-index:2}
+.fc .cen i{font-style:normal;font-size:7cqw;letter-spacing:0}
+.fc .cenl{position:absolute;left:5.5cqw;top:19.5cqw;font-size:3cqw;font-weight:800;color:var(--fcen);opacity:.85;z-index:2}
+.fc .pl{position:absolute;left:0;right:0;bottom:0;height:40%;background:var(--fpl);clip-path:polygon(0 0,100% 7%,100% 100%,0 100%);padding:8cqw 5.5cqw 4.6cqw;display:flex;flex-direction:column;z-index:3}
+.fc .nm{display:flex;align-items:baseline;gap:2.4cqw;padding-bottom:3cqw;border-bottom:1px solid rgba(15,26,28,.12);white-space:nowrap}
+.fc .nm b{font-size:8.4cqw;font-weight:900;line-height:1}
+.fc .nm em{font-size:3.2cqw;font-weight:700;font-style:italic;color:#5B6A6E;overflow:hidden;text-overflow:ellipsis}
+.fc .st{display:grid;grid-template-columns:1fr 1fr 1fr;margin-top:3.6cqw;align-items:end}
+.fc .st b{display:block;font-size:7.4cqw;font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
+.fc .st b small{font-size:3.4cqw;font-weight:700}
+.fc .st span{display:block;font-size:2.9cqw;font-weight:800;letter-spacing:.06em;color:#5B6A6E;margin-top:1.4cqw}
+.fc .st .rk{text-align:center}
+.fc .fo{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;font-size:3cqw;font-weight:700;color:#5B6A6E}
+.fc .fo u{text-decoration:none;font:700 3.1cqw/1 var(--police);color:#0F1A1C}
+.fc.pc{--fw:#17403F}
+.fc.pc .win::after{content:"";position:absolute;inset:0;background:linear-gradient(118deg,transparent 38%,rgba(190,255,235,.22) 47%,transparent 56%)}
+.fc.mini .cenl,.fc.mini .st,.fc.mini .fo,.fc.mini .nm em{display:none}
+.fc.mini .cen{font-size:22cqw}.fc.mini .cen i{font-size:10cqw}
+.fc.mini .pl{height:28%;padding:9cqw 7cqw 0;flex-direction:row;justify-content:space-between;align-items:flex-start}
+.fc.mini .nm{border:0;padding:0;min-width:0}.fc.mini .nm b{font-size:12.5cqw;overflow:hidden;text-overflow:ellipsis}
+.fc.mini .fish{top:22%;left:4%;right:4%}
+/* rangs (forme + points, comme .badge) */
+.rg{display:inline-block;flex:none;color:#fff}
+.rg.c{background:var(--commun);border-radius:50%}
+.rg.p{background:var(--peu-commun);clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%)}
+.rg.v{background:var(--rare);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.fc.mini .rg{width:11cqw;height:11cqw}
+.fc .st .rk .rg{width:6.6cqw;height:6.6cqw;display:block;margin:0 auto}
+/* ===== carte DÉCLARÉE : gravure pâle, bord en pointillés, pas de photo ===== */
+.fc.dec{--fw:#E4ECF4;--fpl:#F4F7FB;--fcen:var(--marine);box-shadow:0 8px 16px -12px rgba(8,42,76,.45),0 0 0 1px rgba(13,74,133,.18)}
+.fc.dec .win::before{opacity:1;background:repeating-linear-gradient(135deg,rgba(13,74,133,.10) 0 1px,transparent 1px 5cqw)}
+.fc.dec .win::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 25%,rgba(255,255,255,.9),transparent 60%)}
+.fc.dec .fish{filter:grayscale(1) contrast(1.35) brightness(1.08);mix-blend-mode:multiply;opacity:.55}
+.fc.dec .in{inset:2cqw;box-shadow:none;border:max(1.2px,.5cqw) dashed rgba(13,74,133,.55);border-radius:4.4cqw}
+.fc.dec .cen{opacity:.45}
+.fc.dec .pl{clip-path:none;border-top:1px dashed rgba(13,74,133,.3)}
+.fc.dec .nm b{color:var(--marine-fonce)}
+.rg.vide{background:none;clip-path:none;border-radius:0}
+.tag{position:absolute;z-index:5;right:5.5cqw;top:5cqw;display:flex;align-items:center;gap:1.4cqw;padding:1.4cqw 2.6cqw;border-radius:999px;background:var(--marine);color:#fff;font-weight:900;font-size:5.2cqw;line-height:1;letter-spacing:.01em}
+.fc.mini .tag{font-size:8cqw;padding:2cqw 3.4cqw;right:5cqw;top:5cqw}
+.fc.dec .rg{background:none;position:relative}
+/* silhouettes */
+.fc.sil{--fw:#EDF2F7;--fpl:#E3EAF2;box-shadow:inset 0 0 0 1px var(--filet);background:#EDF2F7}
+.fc.sil .win::before{display:none}
+.fc.sil .fish{filter:brightness(0);opacity:.09}
+.fc.sil .cen{color:var(--silhouette);font-size:17cqw}
+.fc.sil .pl{background:transparent;clip-path:none}
+.fc.sil .pl::after{content:"";width:46%;height:4cqw;border-radius:3cqw;background:var(--silhouette);opacity:.5}
+.fc.sil .in,.fc.sil .nm,.fc.sil .rg{display:none}
+.fc.sil{box-shadow:none}
+/* barre d'onglets Liquid Glass */
+.onglets{position:absolute;left:16px;right:16px;bottom:26px;height:68px;border-radius:34px;padding:5px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;z-index:20;background:rgba(255,255,255,.62);backdrop-filter:blur(22px) saturate(1.6);-webkit-backdrop-filter:blur(22px) saturate(1.6);box-shadow:0 0 0 1px rgba(255,255,255,.7),inset 0 1px 0 rgba(255,255,255,.9),0 10px 28px -10px rgba(8,42,76,.35)}
+.onglet{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border-radius:29px;font:800 11px/1 var(--police);color:var(--encre-douce)}
+.onglet .ico{width:26px;height:26px}
+.onglet.on{background:rgba(255,255,255,.95);color:var(--marine);box-shadow:0 1px 3px rgba(8,42,76,.2),inset 0 0 0 1px rgba(13,74,133,.12)}
+/* ===== écran 2 ===== */
+.nav{position:absolute;left:16px;right:16px;top:60px;display:flex;justify-content:space-between;align-items:center;z-index:10}
+.verre{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--marine);background:rgba(255,255,255,.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 0 0 1px rgba(255,255,255,.8),0 4px 12px -4px rgba(8,42,76,.3)}
+.nav .etat{display:flex;align-items:center;gap:7px;height:36px;padding:0 14px 0 11px;border-radius:999px;background:var(--surface);color:var(--marine);font:900 14px/1 var(--police);box-shadow:inset 0 0 0 1.5px var(--marine);border:0}
+.nav .etat .ico{width:17px;height:17px}
+.scene{position:absolute;left:0;right:0;top:116px;height:536px}
+.scene .grand{position:absolute;left:22px;top:0;width:337px;z-index:2}
+.scene .verso{position:absolute;left:40px;top:14px;width:337px;aspect-ratio:69/100;border-radius:6%/4.2%;transform:rotate(4deg);background:var(--marine-doux);box-shadow:inset 0 0 0 2px rgba(13,74,133,.35);border:0;z-index:1;display:grid;place-items:center;color:var(--marine)}
+.verso::before{content:"";position:absolute;inset:10px;border-radius:18px;border:2px dashed rgba(13,74,133,.5)}
+.verso .ico{width:34px;height:34px;opacity:.75;transform:translate(115px,20px)}
+.grand.fc{box-shadow:0 22px 34px -18px rgba(8,42,76,.5),0 0 0 1px rgba(13,74,133,.2)}
+.bas{position:absolute;left:20px;right:20px;bottom:38px}
+.btn.cta{background:var(--marine);color:#fff;min-height:58px;font-size:18px;font-weight:800;box-shadow:0 12px 22px -10px rgba(13,74,133,.7)}
+.btn.cta .ico{width:24px;height:24px}
+.aide{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:14px;color:var(--encre-douce);font:700 13px/1 var(--police)}
+.aide .ico{width:18px;height:18px}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-cartes" viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="3"/><path d="M9 8h6M9 11.500h3"/></symbol>
+<symbol id="i-carte" viewBox="0 0 24 24"><path d="M3.5 6.500l5-2 7 2 5-2v13l-5 2-7-2-5 2z"/><path d="M8.5 4.500v13M15.5 6.500v13"/></symbol>
+<symbol id="i-club" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3 19c.5-3.5 3-5.2 6-5.200s5.5 1.7 6 5.2"/><circle cx="17" cy="9.5" r="2.5"/><path d="M17.5 14c2.2.3 3.5 1.8 3.8 4.5"/></symbol>
+<symbol id="i-photo" viewBox="0 0 24 24"><path d="M4 8.500A2.5 2.5 0 0 1 6.5 6h1.300l1.2-2h6l1.2 2h1.300A2.5 2.5 0 0 1 20 8.500v8A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.500z"/><circle cx="12" cy="12.5" r="3.5"/></symbol>
+<symbol id="i-retour" viewBox="0 0 24 24"><path d="M14.5 5l-7 7 7 7"/></symbol>
+<symbol id="i-crayon" viewBox="0 0 24 24"><path d="M4 20l1-4.500L16.5 4a2 2 0 0 1 3 3L8 18.500z"/></symbol>
+<symbol id="i-flip" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.300M20 12a8 8 0 0 1-14 5.3"/><path d="M18.5 3v4h-4M5.5 21v-4h4"/></symbol>
+</defs></svg>
+<div class="deux">
+
+<!-- ================= ÉCRAN 1 : Pescedex ================= -->
+<div class="ecran">
+ <div class="statut"><span>9:41</span><span class="sb-droite"><svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg width="26" height="12" viewBox="0 0 26 12"><rect x=".5" y=".5" width="22" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="17" height="8" rx="2" fill="currentColor"/></svg></span></div><div class="ilot"></div>
+
+ <div class="titre"><h1>Pescedex</h1><button class="zone"><svg class="ico"><use href="#i-pin"/></svg>94</button></div>
+
+ <div class="compteur">
+  <div class="ligne"><b>3 sur 11</b><span>espèces de la zone</span></div>
+  <div class="pips"><i class="pip pr"></i><i class="pip de"></i><i class="pip de"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i></div>
+  <div class="legende"><span><i></i>1 prise</span><span><i class="d"></i>2 déclarées</span></div>
+ </div>
+
+ <div class="classeur"><div class="grille">
+  <!-- vraie prise : brochet, peu commun -->
+  <div class="poche"><div class="fc pc mini"><div class="win"></div><div class="fish"><img src="img/brochet.webp" alt="Brochet"></div><div class="cen">84<i>e</i></div><div class="pl"><div class="nm"><b>Brochet</b></div><span class="rg p"></span></div><i class="in"></i></div></div>
+  <!-- déclarées -->
+  <div class="poche"><div class="fc dec mini"><div class="win"></div><div class="fish"><img src="img/gardon.webp" alt="Gardon"></div><div class="cen">–</div><span class="tag">déclarée</span><div class="pl"><div class="nm"><b>Gardon</b></div><svg class="rg" viewBox="0 0 10 10" width="10" height="10"><circle cx="5" cy="5" r="4" fill="none" stroke="#6B7780" stroke-width="1.3" stroke-dasharray="2 1.3"/></svg></div><i class="in"></i></div></div>
+  <div class="poche"><div class="fc dec mini"><div class="win"></div><div class="fish"><img src="img/perche.webp" alt="Perche"></div><div class="cen">–</div><span class="tag">déclarée</span><div class="pl"><div class="nm"><b>Perche</b></div><svg class="rg" viewBox="0 0 10 10" width="10" height="10"><circle cx="5" cy="5" r="4" fill="none" stroke="#6B7780" stroke-width="1.3" stroke-dasharray="2 1.3"/></svg></div><i class="in"></i></div></div>
+  <!-- silhouettes -->
+  <div class="poche"><div class="fc sil mini"><div class="win"></div><div class="fish"><img src="img/sandre.webp" alt=""></div><div class="cen">4</div><div class="pl"></div></div></div>
+  <div class="poche"><div class="fc sil mini"><div class="win"></div><div class="fish"><img src="img/chevesne.webp" alt=""></div><div class="cen">5</div><div class="pl"></div></div></div>
+  <div class="poche"><div class="fc sil mini"><div class="win"></div><div class="fish"><img src="img/truite-fario.webp" alt=""></div><div class="cen">6</div><div class="pl"></div></div></div>
+  <div class="poche"><div class="fc sil mini"><div class="win"></div><div class="fish"><img src="img/tanche.webp" alt=""></div><div class="cen">7</div><div class="pl"></div></div></div>
+  <div class="poche"><div class="fc sil mini"><div class="win"></div><div class="fish"><img src="img/barbeau.webp" alt=""></div><div class="cen">8</div><div class="pl"></div></div></div>
+  <div class="poche"><div class="fc sil mini"><div class="win"></div><div class="fish"><img src="img/carpe-commune.webp" alt=""></div><div class="cen">9</div><div class="pl"></div></div></div>
+ </div></div>
+
+ <nav class="onglets">
+  <div class="onglet on"><svg class="ico"><use href="#i-cartes"/></svg>Pescedex</div>
+  <div class="onglet"><svg class="ico"><use href="#i-carte"/></svg>Carte</div>
+  <div class="onglet"><svg class="ico"><use href="#i-club"/></svg>Club</div>
+ </nav>
+ <div class="accueil"></div>
+</div>
+
+<!-- ================= ÉCRAN 2 : carte déclarée plein écran ================= -->
+<div class="ecran">
+ <div class="statut"><span>9:41</span><span class="sb-droite"><svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg width="26" height="12" viewBox="0 0 26 12"><rect x=".5" y=".5" width="22" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="17" height="8" rx="2" fill="currentColor"/></svg></span></div><div class="ilot"></div>
+
+ <div class="nav"><button class="verre"><svg class="ico"><use href="#i-retour"/></svg></button><span class="etat"><svg class="ico"><use href="#i-crayon"/></svg>Déclarée</span><button class="verre"><svg class="ico"><use href="#i-flip"/></svg></button></div>
+
+ <div class="scene">
+  <div class="verso"></div>
+  <div class="fc dec grand">
+   <div class="win"></div><div class="fish"><img src="img/gardon.webp" alt="Gardon"></div>
+   <div class="cen">–</div><div class="cenl">pas encore mesuré</div>
+   <span class="tag">déclarée</span>
+   <div class="pl"><div class="nm"><b>Gardon</b><em>Rutilus rutilus</em></div>
+    <div class="st"><div><b>–<small> cm</small></b><span>TAI</span></div><div><b>83<small> %</small></b><span>FRQ</span></div><div class="rk"><svg class="rg" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="none" stroke="#6B7780" stroke-width="1.3" stroke-dasharray="2 1.3"/></svg><span>COMMUN</span></div></div>
+    <div class="fo"><span>24 pêches sur 29 dans le 94 · OFB 2023</span><u>n° 003</u></div></div>
+   <i class="in"></i>
+  </div>
+ </div>
+
+ <div class="bas">
+  <button class="btn cta"><svg class="ico"><use href="#i-photo"/></svg>Photographier une vraie prise</button>
+  <div class="aide"><svg class="ico"><use href="#i-flip"/></svg>Verso vide</div>
+ </div>
+ <div class="accueil"></div>
+</div>
+</div>
+</body></html>

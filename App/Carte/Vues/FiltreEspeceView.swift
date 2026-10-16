@@ -10,34 +10,60 @@ struct FiltreEspeceView: View {
     let choisir: (EspecePechable?) -> Void
 
     @State private var recherche = ""
+    @State private var toutVoir = false
     @Environment(\.dismiss) private var dismiss
 
-    private let colonnes = [GridItem(.adaptive(minimum: 96), spacing: 12, alignment: .top)]
+    /// Nombre d'espèces montrées avant « Voir les N autres espèces ».
+    private let apercu = 6
 
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .leading, spacing: Espace.l) {
+                    VStack(alignment: .leading, spacing: Espace.xs) {
+                        Text("Quel poisson ?")
+                            .font(Police.grandTitre)
+                            .foregroundStyle(Palette.encre)
+                            .accessibilityAddTraits(.isHeader)
+                        Text("La carte garde les tronçons où il a été relevé.")
+                            .font(Police.detail)
+                            .foregroundStyle(Palette.encreDouce)
+                    }
                     if filtreActuel != nil {
                         Button("Retirer le filtre") { choisir(nil) }
-                            .font(PolicesCarte.corps())
-                            .buttonStyle(.bordered)
-                            .tint(CouleursCarte.accent)
+                            .buttonStyle(.secondaire)
                     }
-                    if !proches.isEmpty {
-                        section("Relevées près d'ici", especes: proches)
-                    }
-                    section(proches.isEmpty ? "Toutes les espèces" : "Les autres espèces", especes: autres)
-                    if proches.isEmpty && autres.isEmpty {
+                    if correspondantes.isEmpty {
                         Text("Aucune espèce ne porte ce nom.")
-                            .font(PolicesCarte.corps())
-                            .foregroundStyle(.secondary)
+                            .font(Police.corps)
+                            .foregroundStyle(Palette.encreDouce)
+                    } else {
+                        carte(visibles)
+                        if cachees > 0 {
+                            Button { withAnimation(.snappy) { toutVoir = true } } label: {
+                                HStack {
+                                    Text("Voir les \(cachees) autres espèces")
+                                        .font(Police.corps)
+                                        .foregroundStyle(Palette.marine)
+                                    Spacer(minLength: Espace.s)
+                                    Image(systemName: "chevron.right")
+                                        .foregroundStyle(Palette.silhouette)
+                                        .accessibilityHidden(true)
+                                }
+                                .padding(Espace.l)
+                                .frame(minHeight: Gabarit.zoneTactile)
+                                .tuileFishMe(rayon: Rayon.l)
+                                .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                        }
                     }
                 }
-                .padding(16)
+                .padding(Espace.bord)
             }
             .scrollIndicators(.hidden)
-            .navigationTitle("Choisir un autre spot")
+            .background(Palette.fond)
+            .navigationTitle("Quel poisson ?")
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $recherche, prompt: "Chercher une espèce")
             .toolbar {
@@ -47,6 +73,17 @@ struct FiltreEspeceView: View {
             }
         }
     }
+
+    /// Les espèces relevées près d'ici d'abord, puis les autres.
+    private var ordonnees: [EspecePechable] { proches + autres }
+
+    private var enRecherche: Bool { !recherche.trimmingCharacters(in: .whitespaces).isEmpty }
+
+    private var visibles: [EspecePechable] {
+        (toutVoir || enRecherche) ? ordonnees : Array(ordonnees.prefix(apercu))
+    }
+
+    private var cachees: Int { (toutVoir || enRecherche) ? 0 : max(0, ordonnees.count - apercu) }
 
     private var correspondantes: [EspecePechable] {
         let terme = recherche.trimmingCharacters(in: .whitespaces)
@@ -64,32 +101,39 @@ struct FiltreEspeceView: View {
         return correspondantes.filter { !ids.contains($0.espece.id) }
     }
 
-    private func section(_ titre: String, especes: [EspecePechable]) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(titre)
-                .font(PolicesCarte.legende())
-                .foregroundStyle(.secondary)
-                .textCase(.uppercase)
-            LazyVGrid(columns: colonnes, spacing: 14) {
-                ForEach(especes, id: \.espece.id) { e in
-                    Button { choisir(e) } label: {
-                        VStack(spacing: 6) {
-                            ImageEspeceCarte(nom: e.image)
-                                .frame(height: 44)
-                            Text(e.nom)
-                                .font(PolicesCarte.legende())
-                                .multilineTextAlignment(.center)
-                                .fixedSize(horizontal: false, vertical: true)
+    /// Une carte blanche : une ligne par espèce, l'image à gauche, le nom, une coche sur le filtre actuel.
+    private func carte(_ especes: [EspecePechable]) -> some View {
+        VStack(spacing: 0) {
+            ForEach(Array(especes.enumerated()), id: \.element.espece.id) { index, e in
+                Button { choisir(e) } label: {
+                    HStack(spacing: Espace.m) {
+                        ImageEspeceCarte(nom: e.image)
+                            .frame(width: 56, height: 36)
+                        Text(e.nom)
+                            .font(Police.sousTitre)
+                            .foregroundStyle(Palette.encre)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                        // À brancher : la rareté de l'espèce sous le nom (le filtre ne reçoit pas encore de rareté).
+                        Spacer(minLength: Espace.s)
+                        if filtreActuel?.espece == e.espece {
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(Police.titre)
+                                .foregroundStyle(Palette.marine)
+                                .accessibilityHidden(true)
                         }
-                        .padding(8)
-                        .frame(maxWidth: .infinity)
-                        .background(filtreActuel?.espece == e.espece ? CouleursCarte.accent.opacity(0.15) : Color.primary.opacity(0.05),
-                                    in: RoundedRectangle(cornerRadius: 14))
                     }
-                    .buttonStyle(.plain)
-                    .accessibilityLabel(e.nom)
+                    .padding(.vertical, Espace.s)
+                    .frame(minHeight: Gabarit.zoneTactile)
+                    .contentShape(Rectangle())
                 }
+                .buttonStyle(.plain)
+                .accessibilityLabel(e.nom)
+                .accessibilityAddTraits(filtreActuel?.espece == e.espece ? .isSelected : [])
+                if index < especes.count - 1 { Divider().overlay(Palette.filet) }
             }
         }
+        .padding(.horizontal, Espace.l)
+        .tuileFishMe(rayon: Rayon.l)
     }
 }

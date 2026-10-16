@@ -20,17 +20,21 @@ struct TunnelPremiersPasView: View {
     private let seuil: CGFloat = 100
 
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: Espace.l) {
             HStack {
                 if index < especes.count {
                     Text("\(index + 1) / \(especes.count)")
-                        .font(JetonsConseils.police(.subheadline))
-                        .foregroundStyle(.secondary)
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encre)
+                        .padding(.horizontal, Espace.l)
+                        .frame(minHeight: 36)
+                        .background(Palette.surface, in: Capsule())
                 }
                 Spacer()
                 Button("Passer", action: passer)
-                    .font(JetonsConseils.police(.body))
-                    .frame(minWidth: JetonsConseils.tailleToucher, minHeight: JetonsConseils.tailleToucher)
+                    .font(Police.corps)
+                    .foregroundStyle(Palette.marine)
+                    .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
             }
             if index < especes.count {
                 cartes
@@ -39,25 +43,31 @@ struct TunnelPremiersPasView: View {
                 fin
             }
         }
-        .padding(16)
+        .padding(Espace.bord)
+        .background(Palette.fond)
         .accessibilityIdentifier("tunnel-premiers-pas")
     }
 
     private var cartes: some View {
         let espece = especes[index]
-        return VStack(spacing: 12) {
+        // À brancher : la rareté de l'espèce dans la zone (maquette : « • Commun » sous le nom) ; absente de ce paramètre.
+        return VStack(spacing: Espace.l) {
+            Spacer(minLength: 0)
             ImageEspece(nom: espece.image, libelle: espece.nom)
                 .frame(maxWidth: .infinity, maxHeight: 260)
             Text(espece.nom)
-                .font(JetonsConseils.police(.title2))
+                .font(Police.grandTitre)
+                .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 0)
         }
-        .padding(24)
+        .padding(Espace.xl)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(JetonsConseils.accent.opacity(0.08), in: RoundedRectangle(cornerRadius: 28))
-        .overlay(alignment: .topLeading) { marque("xmark", visible: decalage < -30, couleur: JetonsConseils.alerte) }
-        .overlay(alignment: .topTrailing) { marque("checkmark", visible: decalage > 30, couleur: JetonsConseils.accent) }
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l + 6, style: .continuous))
+        .shadow(color: Palette.encre.opacity(0.10), radius: 14, y: 6)
+        .overlay(alignment: .topLeading) { marque("xmark", visible: decalage < -30, couleur: Palette.encreDouce) }
+        .overlay(alignment: .topTrailing) { marque("checkmark", visible: decalage > 30, couleur: Palette.marine) }
         .offset(x: decalage)
         .rotationEffect(.degrees(Double(decalage) / 20))
         .gesture(
@@ -79,30 +89,35 @@ struct TunnelPremiersPasView: View {
 
     private func marque(_ icone: String, visible: Bool, couleur: Color) -> some View {
         Image(systemName: icone)
-            .font(.title.weight(.bold))
+            .font(Police.chiffreMoyen)
             .foregroundStyle(couleur)
-            .padding(16)
+            .padding(Espace.l)
             .opacity(visible ? 1 : 0)
             .accessibilityHidden(true)
     }
 
     /// Les deux boutons font la même chose que le glissement (VoiceOver, un toucher).
     private var boutons: some View {
-        HStack(spacing: 24) {
-            bouton(icone: "xmark", mot: "Jamais pêché", couleur: JetonsConseils.alerte) { repondre(dejaPeche: false) }
-            bouton(icone: "checkmark", mot: "Déjà pêché", couleur: JetonsConseils.accent) { repondre(dejaPeche: true) }
+        HStack(spacing: Espace.xl) {
+            bouton(icone: "xmark", mot: "Jamais pêché", plein: false) { repondre(dejaPeche: false) }
+            bouton(icone: "checkmark", mot: "Déjà pêché", plein: true) { repondre(dejaPeche: true) }
         }
+        .padding(.vertical, Espace.l)
+        .frame(maxWidth: .infinity)
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
     }
 
-    private func bouton(icone: String, mot: String, couleur: Color, action: @escaping () -> Void) -> some View {
+    /// « Non » : rond blanc cerclé, croix marine. « Oui » : rond marine plein, coche blanche (jamais d'orange ici).
+    private func bouton(icone: String, mot: String, plein: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
-            VStack(spacing: 4) {
+            VStack(spacing: Espace.xs) {
                 Image(systemName: icone)
-                    .font(.title2.weight(.bold))
-                    .frame(width: 64, height: 64)
-                    .background(couleur.opacity(0.14), in: Circle())
-                    .foregroundStyle(couleur)
-                Text(mot).font(JetonsConseils.police(.caption)).foregroundStyle(.primary)
+                    .font(Police.taille(24, .bold))
+                    .frame(width: 68, height: 68)
+                    .background(plein ? Palette.marine : Palette.surface, in: Circle())
+                    .overlay(Circle().strokeBorder(Palette.filet, lineWidth: plein ? 0 : 1))
+                    .foregroundStyle(plein ? Palette.surMarine : Palette.marine)
+                Text(mot).font(Police.detail).foregroundStyle(Palette.encreDouce)
             }
         }
         .buttonStyle(.plain)
@@ -110,31 +125,34 @@ struct TunnelPremiersPasView: View {
     }
 
     private var fin: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: Espace.l) {
             Spacer(minLength: 0)
             Image(systemName: "checkmark.seal.fill")
-                .font(.system(size: 56, weight: .bold, design: .rounded))
-                .foregroundStyle(JetonsConseils.accent)
+                .font(Police.taille(56, .bold))
+                .foregroundStyle(Palette.marine)
                 .accessibilityHidden(true)
             Text("\(nbDeclarees)")
-                .font(.system(size: 56, weight: .bold, design: .rounded))
+                .font(Police.chiffre)
+                .foregroundStyle(Palette.encre)
             Label("dans ton Pescedex", systemImage: "square.stack.fill")
-                .font(JetonsConseils.police(.title3))
+                .font(Police.titre)
+                .foregroundStyle(Palette.encre)
             Spacer(minLength: 0)
             gros("Pêcher maintenant", icone: "figure.fishing", plein: true, action: pecherMaintenant)
             gros("Choisir un spot", icone: "mappin.and.ellipse", plein: false, action: choisirUnSpot)
         }
     }
 
+    /// Un seul bouton principal (« Pêcher maintenant »), l'autre est secondaire.
+    @ViewBuilder
     private func gros(_ mot: String, icone: String, plein: Bool, action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Label(mot, systemImage: icone)
-                .font(JetonsConseils.police(.headline))
-                .frame(maxWidth: .infinity, minHeight: 56)
-                .foregroundStyle(plein ? Color.white : JetonsConseils.accent)
-                .background(plein ? JetonsConseils.accent : JetonsConseils.accent.opacity(0.12), in: Capsule())
+        if plein {
+            Button(action: action) { Label(mot, systemImage: icone) }
+                .buttonStyle(.principal)
+        } else {
+            Button(action: action) { Label(mot, systemImage: icone) }
+                .buttonStyle(.secondaire)
         }
-        .buttonStyle(.plain)
     }
 
     private func repondre(dejaPeche: Bool) {

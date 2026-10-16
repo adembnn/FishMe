@@ -11,6 +11,16 @@ struct ClubView<MarqueMeteo: View>: View {
 
     @AppStorage("club.cartePeche2026") private var aSaCarte = false
     @State private var gestionAbonnement = false
+    @State private var clubs = MesClubs()
+    @State private var creationOuverte = false
+    /// Les poissons proposés comme image d'un club. À brancher : RootView les passe avec `.poissonsDuClub(_:)`.
+    var poissons: [PoissonClub] = []
+
+    func poissonsDuClub(_ poissons: [PoissonClub]) -> Self {
+        var copie = self
+        copie.poissons = poissons
+        return copie
+    }
 
     init(liens: LiensClub, sources: [SourceClub], cartes: [CarteAPartager], mesureUsage: Binding<Bool>,
          @ViewBuilder marqueMeteo: () -> MarqueMeteo) {
@@ -24,7 +34,9 @@ struct ClubView<MarqueMeteo: View>: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("Ma pêche") {
+                MesClubsSection(clubs: clubs.clubs, poissons: poissons) { creationOuverte = true }
+
+                Section {
                     Link(destination: liens.federation ?? LiensOfficiels.federationNationale) {
                         LigneSortie(titre: "Ma fédération", sousTitre: liens.nomFederation, icone: "building.columns")
                     }
@@ -39,14 +51,18 @@ struct ClubView<MarqueMeteo: View>: View {
                     Link(destination: liens.carteDePeche) {
                         LigneSortie(titre: "Voir la carte de pêche sur le site officiel", sousTitre: nil, icone: "safari")
                     }
+                } header: {
+                    Text("Ma pêche").font(Police.legende)
                 }
 
-                Section("Partager") {
+                Section {
                     NavigationLink {
                         PartageCarteView(cartes: cartes)
                     } label: {
                         Label("Partager une carte en image", systemImage: "square.and.arrow.up")
                     }
+                } header: {
+                    Text("Partager").font(Police.legende)
                 }
 
                 Section {
@@ -62,7 +78,7 @@ struct ClubView<MarqueMeteo: View>: View {
                     }
                 }
 
-                Section("Confidentialité") {
+                Section {
                     if let page = liens.confidentialite {
                         Link(destination: page) {
                             LigneSortie(titre: "Politique de confidentialité", sousTitre: nil, icone: "hand.raised")
@@ -71,6 +87,8 @@ struct ClubView<MarqueMeteo: View>: View {
                     Toggle(isOn: $mesureUsage) {
                         Label("Mesure d'usage", systemImage: "chart.bar")
                     }
+                } header: {
+                    Text("Confidentialité").font(Police.legende)
                 }
 
                 Section {
@@ -92,7 +110,17 @@ struct ClubView<MarqueMeteo: View>: View {
                 }
             }
             .scrollIndicators(.hidden)
+            .font(Police.corps)
+            .foregroundStyle(Palette.encre)
+            .tint(Palette.marine)
+            .scrollContentBackground(.hidden)
+            .background(Palette.fond.ignoresSafeArea())
             .navigationTitle("Mon club")
+            .sheet(isPresented: $creationOuverte) {
+                CreerClubView(poissons: poissons) { nom, poisson, photo in
+                    clubs.creer(nom: nom, poissonId: poisson, photo: photo)
+                }
+            }
             .manageSubscriptionsSheet(isPresented: $gestionAbonnement)
         }
     }
@@ -110,7 +138,7 @@ private struct LigneSortie: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(titre)
                     if let sousTitre {
-                        Text(sousTitre).font(.footnote).foregroundStyle(.secondary)
+                        Text(sousTitre).font(Police.legende).foregroundStyle(Palette.encreDouce)
                     }
                 }
             } icon: {
@@ -118,8 +146,8 @@ private struct LigneSortie: View {
             }
             Spacer(minLength: 8)
             Image(systemName: "arrow.up.right")
-                .font(.footnote)
-                .foregroundStyle(.tertiary)
+                .font(Police.legende)
+                .foregroundStyle(Palette.encreDouce)
                 .accessibilityHidden(true)
         }
     }

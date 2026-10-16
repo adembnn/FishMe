@@ -1,0 +1,44 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=393"><title>FishMe - Propositions</title>
+<link rel="stylesheet" href="natif.css">
+<style>
+body{position:relative;background:var(--fond)}
+.statut{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.3)}
+.photo{position:absolute;left:0;right:0;top:0;height:300px;border-radius:0 0 30px 30px;overflow:hidden;
+ background:radial-gradient(90% 80% at 50% 58%,#5E6B52 0%,#434C3A 55%,#2A3024 100%)}
+.photo::before{content:"";position:absolute;inset:0;background:
+ repeating-linear-gradient(172deg,rgba(255,255,255,.035) 0 2px,transparent 2px 15px),
+ linear-gradient(180deg,rgba(0,0,0,.35),transparent 30%,transparent 70%,rgba(0,0,0,.3))}
+.photo::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 90px 20px rgba(10,14,8,.55)}
+.photo img{position:absolute;left:50%;top:120px;width:290px;margin-left:-145px;transform:rotate(-6deg);filter:drop-shadow(0 14px 14px rgba(0,0,0,.45)) saturate(.85) brightness(.92);z-index:2}
+.retake{position:absolute;left:16px;top:62px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;z-index:5;background:rgba(255,255,255,.22);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(255,255,255,.35) inset}
+.retake svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+h1{position:absolute;left:24px;top:322px;font:900 28px/1.1 var(--police);letter-spacing:-.015em}
+.grille{position:absolute;left:16px;right:16px;top:372px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.t{position:relative;height:172px;border-radius:22px;background:var(--tuile);overflow:hidden;text-align:left;box-shadow:0 0 0 1px var(--filet) inset}
+.t img{position:absolute;left:50%;top:44px;width:148px;margin-left:-74px;filter:drop-shadow(0 4px 5px rgba(8,42,76,.16))}
+.t .nom{position:absolute;left:14px;bottom:12px;font:900 18px/1 var(--police);color:var(--nuit)}
+.bars{position:absolute;right:14px;bottom:12px;display:flex;gap:3px;align-items:flex-end}
+.bars i{width:5px;border-radius:2px;background:rgba(13,74,133,.2)}
+.bars i:nth-child(1){height:8px}.bars i:nth-child(2){height:12px}.bars i:nth-child(3){height:16px}
+.bars i.on{background:var(--marine)}
+.t.top{background:var(--marine-doux);box-shadow:0 0 0 3px var(--marine) inset}
+.autre{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:var(--surface)}
+.autre svg{width:44px;height:44px;fill:none;stroke:var(--marine);stroke-width:2.6;stroke-linecap:round}
+.autre svg rect{fill:var(--marine-doux)}
+.autre span{font:900 18px/1 var(--police);color:var(--nuit)}
+.bas{position:absolute;left:16px;right:16px;bottom:34px}
+.btn.off{background:var(--filet);color:var(--silhouette)}
+</style></head><body>
+<div class="photo"><img src="img/brochet.webp" alt=""></div>
+<div class="statut"><span>9:41</span><span></span></div><div class="ilot"></div>
+<button class="retake" aria-label="Reprendre la photo"><svg viewBox="0 0 20 20"><path d="M12 4L6 10l6 6"/></svg></button>
+<h1>C'est lequel&nbsp;?</h1>
+<div class="grille">
+ <button class="t top"><img src="img/brochet.webp" alt=""><span class="nom">Brochet</span><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i></span></button>
+ <button class="t"><img src="img/sandre.webp" alt=""><span class="nom">Sandre</span><span class="bars"><i class="on"></i><i class="on"></i><i></i></span></button>
+ <button class="t"><img src="img/perche.webp" alt=""><span class="nom">Perche</span><span class="bars"><i class="on"></i><i></i><i></i></span></button>
+ <button class="t autre"><svg viewBox="0 0 44 44"><rect x="6" y="6" width="13" height="13" rx="4"/><rect x="25" y="6" width="13" height="13" rx="4"/><rect x="6" y="25" width="13" height="13" rx="4"/><rect x="25" y="25" width="13" height="13" rx="4"/></svg><span>Autre</span></button>
+</div>
+<div class="bas"><button class="btn off" disabled>Confirmer</button></div>
+<div class="accueil"></div>
+</body></html>
