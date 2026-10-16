@@ -48,4 +48,4 @@ Espacements 4 · 8 · 12 · 16 · 24 · 32 pt, marge d'écran 16 pt. Arrondis 10
 ## À ne jamais écrire
 « Poké », « Pokémon » ou « Pokédex » (la collection s'appelle le Pescedex), « bon spot », « tu peux la garder ».
 
-Sources : choix d'Adem page par page dans [`docs/design/choix.md`](../design/choix.md), maquettes HTML dans [`docs/design/maquettes/`](../design/maquettes).
+Sources : choix d'Adem page par page dans [`docs/design/choix.md`](../design/choix.md), maquettes HTML dans [`docs/design/maquettes/`](https://github.com/adembnn/Build-Challenge-Unaite-MWM-Apple-F/tree/claude/design-systeme-4qneio/docs/design/maquettes).
