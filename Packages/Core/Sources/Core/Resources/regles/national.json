@@ -1,5 +1,5 @@
 {
- "version": "2026-10-16.1",
+ "version": "2026-10-16.2",
  "departement": "national",
  "niveau": "partiel",
  "textes": [
@@ -605,8 +605,37 @@
    "valeur": {
     "formule": "du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre inclus"
    },
-   "du": "2026-01-01",
+   "du": "2026-04-25",
    "au": "2026-12-31",
+   "remplace": null,
+   "phrase": "Brochet en 2e catégorie : ouvert du 1er janvier au 25 janvier 2026 et du 25 avril au 31 décembre 2026.",
+   "textes": [
+    "t6"
+   ],
+   "citation": "1° La pêche du brochet, qui est autorisée du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre, inclus ;",
+   "expire_le": "2026-12-31",
+   "statut": "brouillon",
+   "verifie_par": null
+  },
+  {
+   "id": "nat-bro-ouv-2e-janvier",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "eau": null,
+    "lieu": null,
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "type": "ouverture",
+   "valeur": {
+    "formule": "du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre inclus"
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
    "remplace": null,
    "phrase": "Brochet en 2e catégorie : ouvert du 1er janvier au 25 janvier 2026 et du 25 avril au 31 décembre 2026.",
    "textes": [
@@ -663,7 +692,7 @@
    "valeur": {
     "formule": "du troisième samedi de mai au 31 décembre inclus"
    },
-   "du": "2026-01-01",
+   "du": "2026-05-16",
    "au": "2026-12-31",
    "remplace": null,
    "phrase": "Ombre commun en 2e catégorie : ouvert du 16 mai au 31 décembre 2026.",
