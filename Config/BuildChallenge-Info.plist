@@ -21,11 +21,25 @@
 	</array>
 	<key>CKSharingSupported</key>
 	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>NSCameraUsageDescription</key>
 	<string>FishMe utilise l'appareil photo pour photographier ta prise et mesurer sa taille. Les photos restent sur ton iPhone, sans position.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>FishMe centre la carte sur ta position pour te montrer les coins de pêche proches. Ta position reste sur ton iPhone.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>FishMe enregistre l'image de ta carte dans tes photos quand tu le demandes, sans aucune position.</string>
 	<key>ReglesBaseURL</key>
 	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FishMeMasquePair.ttf</string>
+		<string>FishMeMasqueImpair.ttf</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>FondLancement</string>
+	</dict>
 </dict>
 </plist>
