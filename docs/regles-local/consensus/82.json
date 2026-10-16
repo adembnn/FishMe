@@ -6285,6 +6285,2503 @@
     },
     "citation": "commune de Grisolles : sur le grand plan d’eau communal de Julias ◦ anse sud-est et anse nord-ouest, délimitées par des panneaux et des bouées"
    }
+  },
+  {
+   "id": "82-ouverture-2221-departement-1",
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "82",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "14 mars au 20 septembre"
+   },
+   "phrase": "Pêche de la truite fario en 2e catégorie : du 14 mars au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (tableau des dispositions spécifiques)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "Truite fario, Omble ou Saumon de fontaine 14 mars au 20 septembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2221-ouverture-2",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (tableau)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Truite fario, Omble ou Saumon de fontaine 14 mars au 20 septembre"
+   }
+  },
+  {
+   "id": "82-ouverture-omble-fontaine-departement-1",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "82",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "14 mars au 20 septembre"
+   },
+   "phrase": "Pêche de l'omble ou saumon de fontaine (omble de fontaine) en 2e catégorie : du 14 mars au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (tableau des dispositions spécifiques)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "Truite fario, Omble ou Saumon de fontaine 14 mars au 20 septembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-omble-fontaine-ouverture-2",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (tableau)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Truite fario, Omble ou Saumon de fontaine 14 mars au 20 septembre"
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-albias-la-clare",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "La Clare (Albias) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "La Clare",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau La Clare (Albias) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "ALBIAS La Clare AAPPMA de Montauban",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-clare-albias",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-barry-d-islemade-jendraux",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Jendraux (Barry d'Islemade) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Jendraux",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Jendraux (Barry d'Islemade) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "BARRY d’ISLEMADE Jendraux AAPPMA de Meauzac",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-jendraux-barry-d-islemade",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-bioule-communal",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Communal (Bioule) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Communal",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Communal (Bioule) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "BIOULE Communal AAPPMA de Réalville",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-plan-d-eau-communal-bioule",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-castelferrus-dittes",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Dittes (Castelferrus) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Dittes",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Dittes (Castelferrus) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "CASTELFERRUS Dittes (plan d’eau à truites) AAPPMA de Castelmayran",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-dittes-castelferrus-plan-d-eau-a-truites",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-castelsarrasin-malaurens",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Malaurens (Castelsarrasin) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Malaurens",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Malaurens (Castelsarrasin) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "CASTELSARRASIN Malaurens AAPPMA de Castelsarrasin",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-malaurens-castelsarrasin",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-donzac-les-sources",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Les sources (Donzac) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Les sources",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Les sources (Donzac) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "DONZAC Les sources AAPPMA du Brulhois",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-sources-donzac",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-dunes-templiers",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Templiers (Dunes) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Templiers",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Templiers (Dunes) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "DUNES Templiers AAPPMA du Brulhois",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-templiers-dunes",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-finhan-la-gravette",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "La Gravette (Finhan) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "La Gravette",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau La Gravette (Finhan) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "FINHAN La Gravette AAPPMA de Finhan",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-gravette-finhan",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-grisolles-juliasse",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Juliasse (Grisolles) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Juliasse",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Juliasse (Grisolles) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "GRISOLLES Juliasse (plan d’eau à truites) AAPPMA de Grisolles",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-juliasse-grisolles-plan-d-eau-a-truites",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-lamagistere-lasparrieres",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Lasparrières (Lamagistère) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Lasparrières",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Lasparrières (Lamagistère) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "LAMAGISTERE Lasparrières AAPPMA de Lamagistère",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-lasparrieres-lamagistere",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-malause-bouzigues",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Bouzigues (Malause) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Bouzigues",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Bouzigues (Malause) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "MALAUSE Bouzigues AAPPMA de Saint Nicolas de la Grave",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-bouzigues-malause",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-montauban-austrie",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Austrie (Montauban) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Austrie",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Austrie (Montauban) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "MONTAUBAN Austrie AAPPMA de Montauban",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-austrie-montauban",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-montech-mouscane",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Mouscane (Montech) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Mouscane",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Mouscane (Montech) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "MONTECH Mouscane AAPPMA de Montauban",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-mouscane-montech",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-valence-d-agen-lasbordes",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Lasbordes (Valence d'Agen) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Lasbordes",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Lasbordes (Valence d'Agen) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "VALENCE D’AGEN Lasbordes AAPPMA de Valence",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-lasbordes-valence-d-agen",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-ouverture-truite-eau-close-villemade-communal",
+   "type": "ouverture",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Communal (Villemade) : plan d'eau clos classé de la liste de l'article 2",
+    "plan_eau": "Communal",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "Plan d'eau Communal (Villemade) : la truite se pêche toute l'année 2026 (voir aussi le règlement de la fédération et de l'AAPPMA).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 2 (pêche de la truite dans les eaux closes classées)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "VILLEMADE Communal AAPPMA de Montauban",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-truite-ouverture-plan-d-eau-communal-villemade",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 2 (eaux closes classées)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Dans les plans d’eau listés ci-après, la pêche des truites est autorisée du 1er janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "82-carpe-nuit-garonne-troncon-court-circuite-b",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Garonne, tronçon court-circuité : de 200 m en aval du barrage de Malause à la limite départementale du Lot-et-Garonne, sauf les 50 m en amont et en aval des seuils",
+    "plan_eau": null,
+    "cours_eau": "Garonne"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de nuit de la carpe autorisée sur ce parcours, du 1er janvier au 31 décembre."
+   },
+   "phrase": "Pêche de nuit de la carpe autorisée : Garonne, tronçon court-circuité de Malause.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 5",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "Sur le tronçon court-circuité : autorisation de 200 m en aval du barrage de Malause à la limite départementale du Lot-et-Garonne, à l’exception des 50 m en amont et en aval des seuils.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-toutes-carpe_nuit-garonne-tout-le-lineaire-de-la-limite-de",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 5",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "SUR LA GARONNE : • Autorisation sur tout le linéaire de la limite départementale de la Haute-Garonne jusqu’à la limite départementale avec le Lot-et-Garonne."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-monestie",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Monestié (Castelsarrasin) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "Monestié",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau Monestié (Castelsarrasin) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Castelsarrasin : plans d’eau de Monestié et des Fourrières-Hautes",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-monestie-castelsarrasin",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-fourrieres-hautes",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Fourrières-Hautes (Castelsarrasin) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "Fourrières-Hautes",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau Fourrières-Hautes (Castelsarrasin) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Castelsarrasin : plans d’eau de Monestié et des Fourrières-Hautes",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-fourrieres-hautes-castelsarrasin",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-juliasse-generaliste",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Juliasse Généraliste (Grisolles) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "Juliasse Généraliste",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau Juliasse Généraliste (Grisolles) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Grisolles : plans d’eau du complexe de Juliasse (Généraliste et Carpodrome)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-juliasse-generaliste-grisolles",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-juliasse-carpodrome",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Juliasse Carpodrome (Grisolles) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "Juliasse Carpodrome",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau Juliasse Carpodrome (Grisolles) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Grisolles : plans d’eau du complexe de Juliasse (Généraliste et Carpodrome)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-juliasse-carpodrome-grisolles",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-lasbordes",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Lasbordes (Golfech, Valence) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "Lasbordes",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau Lasbordes (Golfech, Valence) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "communes de Golfech et de Valence : plans d’eau de Lasbordes",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-lasbordes-golfech-valence",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-bergon",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Bergon (Lamagistère) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "Bergon",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau Bergon (Lamagistère) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Lamagistère : plans d’eau de Bergon et de Lasparrières",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-bergon-lamagistere",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-lasparrieres",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Lasparrières (Lamagistère) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "Lasparrières",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau Lasparrières (Lamagistère) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Lamagistère : plans d’eau de Bergon et de Lasparrières",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-lasparrieres-lamagistere",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-malivert",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Malivert (Molières) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "Malivert",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau Malivert (Molières) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Molières : plan d’eau de Malivert",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-malivert-molieres",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-balat-david",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Balat-David (Montauban) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "Balat-David",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau Balat-David (Montauban) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Montauban : plan d’eau de Balat-David",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-balat-david-montauban",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-bois-des-allegres",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "bois des Allègres (Nohic) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "bois des Allègres",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau bois des Allègres (Nohic) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Nohic : plan d’eau du bois des Allègres",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-bois-des-allegres-nohic",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-grand-plan-d-eau-des-saulous",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "grand plan d'eau des Saulous (Saint-Porquier) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "grand plan d'eau des Saulous",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau grand plan d'eau des Saulous (Saint-Porquier) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Saint-Porquier : grand plan d’eau des Saulous",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-grand-plan-d-eau-des-saulous-saint-porqu",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-boulet",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Boulet (Saint-Sardos) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "Boulet",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau Boulet (Saint-Sardos) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Saint-Sardos : plans d’eau du Boulet et de Combecave",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-boulet-saint-sardos",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-combecave",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Combecave (Saint-Sardos) : plan d'eau du parcours spécial carpe",
+    "plan_eau": "Combecave",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, plan d'eau Combecave (Saint-Sardos) : toute carpe est remise à l'eau tout de suite (garder ou conserver en vivier interdit).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Saint-Sardos : plans d’eau du Boulet et de Combecave",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-combecave-saint-sardos",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-canal-montech",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Canal de Montech à Montauban (Lacourt-Saint-Pierre, Montauban, Montbeton) : section comprise entre l'écluse 8 bis dite de Verlhaguet et l'écluse 9 bis dite de Borde-basse",
+    "plan_eau": null,
+    "cours_eau": "Canal de Montech à Montauban"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, canal de Montech à Montauban (écluses 8 bis à 9 bis) : toute carpe est remise à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "communes de Lacourt-Saint-Pierre, Montauban et Montbeton : section comprise",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-canal-montech",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-canal-lateral",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Canal latéral à la Garonne (Bessens, Canals, Dieupentale, Grisolles, Montbartier, Montech, Pompignan) : section comprise entre le pont de Saint-Rustice et l'écluse 10 de Lavache",
+    "plan_eau": null,
+    "cours_eau": "Canal latéral à la Garonne"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, canal latéral à la Garonne (pont de Saint-Rustice à écluse 10) : toute carpe est remise à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "section comprise entre le pont de Saint-Rustice et l’écluse 10 de Lavache",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-canal-lateral",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-carpe-tarn",
+   "type": "remise_eau",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Tarn (Albefeuille-Lagarde, Bressols, Corbarieu, Labastide-Saint-Pierre, Montauban) : du barrage de Corbarieu au barrage d'Albefeuille-Lagarde",
+    "plan_eau": null,
+    "cours_eau": "Tarn"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toutes les carpes doivent être remises immédiatement à l'eau ; prélèvement et maintien en captivité interdits."
+   },
+   "phrase": "Parcours spécial carpe, Tarn (barrage de Corbarieu au barrage d'Albefeuille-Lagarde) : toute carpe est remise à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-1 (parcours spécial carpe)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "du barrage de Corbarieu au barrage d’Albefeuille-Lagarde",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2110-remise_eau-tarn",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-1 (parcours spécial carpe)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau toutes les carpes (prélèvement et maintien en captivité interdits) pour tous les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-lapeyrieres",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Lapeyrières (Bessens) : plan d'eau du parcours spécial black-bass",
+    "plan_eau": "Lapeyrières",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, plan d'eau Lapeyrières (Bessens) : tout black-bass pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Bessens : plan d’eau de Lapeyrières",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-lapeyrieres-bessens",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-bregnol",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Brégnol (Fabas) : plan d'eau du parcours spécial black-bass",
+    "plan_eau": "Brégnol",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, plan d'eau Brégnol (Fabas) : tout black-bass pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Fabas : plan d’eau de Brégnol",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-bregnol-fabas",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-chenes",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Chênes (Montaigu-de-Quercy) : plan d'eau du parcours spécial black-bass",
+    "plan_eau": "Chênes",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, plan d'eau Chênes (Montaigu-de-Quercy) : tout black-bass pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Montaigu-de-Quercy : plan d’eau des Chênes",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-des-chenes-montaigu-de-quercy",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-austrie",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Austrie (Montauban) : plan d'eau du parcours spécial black-bass",
+    "plan_eau": "Austrie",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, plan d'eau Austrie (Montauban) : tout black-bass pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Montauban : plan d’eau d’Austrie",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-austrie-montauban",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-mouscane",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Mouscane (Montech) : plan d'eau du parcours spécial black-bass",
+    "plan_eau": "Mouscane",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, plan d'eau Mouscane (Montech) : tout black-bass pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Montech : plan d’eau de la Mouscane",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-mouscane-montech",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-lac-vert",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Lac vert (Montpezat-de-Quercy) : plan d'eau du parcours spécial black-bass",
+    "plan_eau": "Lac vert",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, plan d'eau Lac vert (Montpezat-de-Quercy) : tout black-bass pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Montpezat-de-Quercy : lac vert",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-lac-vert-montpezat-de-quercy",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-bois-des-allegres",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "bois des Allègres (Nohic) : plan d'eau du parcours spécial black-bass",
+    "plan_eau": "bois des Allègres",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, plan d'eau bois des Allègres (Nohic) : tout black-bass pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Nohic : plan d’eau du bois des Allègres",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-bois-des-allegres-nohic",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-prieur",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Prieur (Saint-Aignan) : plan d'eau du parcours spécial black-bass",
+    "plan_eau": "Prieur",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, plan d'eau Prieur (Saint-Aignan) : tout black-bass pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Saint-Aignan : plan d’eau du Prieur",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-prieur-saint-aignan",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-petit-saulou",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "petit Saulou (Saint-Porquier) : plan d'eau du parcours spécial black-bass",
+    "plan_eau": "petit Saulou",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, plan d'eau petit Saulou (Saint-Porquier) : tout black-bass pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Saint-Porquier : plan d’eau du petit Saulou",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-petit-saulou-saint-porquier",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-boulet",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Boulet (Saint-Sardos) : plan d'eau du parcours spécial black-bass",
+    "plan_eau": "Boulet",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, plan d'eau Boulet (Saint-Sardos) : tout black-bass pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Saint-Sardos : plans d’eau du Boulet et de Combecave",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-boulet-saint-sardos",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-combecave",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Combecave (Saint-Sardos) : plan d'eau du parcours spécial black-bass",
+    "plan_eau": "Combecave",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, plan d'eau Combecave (Saint-Sardos) : tout black-bass pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Saint-Sardos : plans d’eau du Boulet et de Combecave",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-combecave-saint-sardos",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-canal",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Canal latéral à la Garonne et embranchement de Montech à Montauban (Montech, Lacourt-Saint-Pierre, Montauban) : du canal latéral entre l'écluse 10 de Lavache et l'écluse 11 de Montech, et la totalité de l'embranchement de Montech à Montauban",
+    "plan_eau": null,
+    "cours_eau": "Canal latéral à la Garonne"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, canal latéral à la Garonne (écluse 10 à écluse 11) et embranchement de Montech : tout black-bass pêché est remis à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "section comprise sur le canal latéral à la Garonne de l’écluse 10 de Lavache à l’écluse 11 de Montech et sur la totalité de l’embranchement de Montech à Montauban.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-canal",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-tarn",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Tarn (Moissac, Les Barthes, Castelsarrasin, Boudou, Saint-Nicolas-de-la-Grave) : de la chaussée de Sainte-Livrade à la confluence du Tarn dans la Garonne",
+    "plan_eau": null,
+    "cours_eau": "Tarn"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout black-bass capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial black-bass, Tarn (chaussée de Sainte-Livrade à la Garonne) : tout black-bass pêché est remis à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-2 (parcours spécial black-bass)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "section comprise entre la chaussée de Sainte-Livrade et la confluence du Tarn dans la Garonne",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-tarn",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-2 (parcours spécial black-bass)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout black-bass capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-brochet-vallee-des-loisirs",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Vallée des loisirs (Lafrançaise) : plan d'eau du parcours spécial brochet",
+    "plan_eau": "Vallée des loisirs",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout brochet capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial brochet, plan d'eau Vallée des loisirs (Lafrançaise) : tout brochet pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-3 (parcours spécial brochet)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Lafrançaise : lac de la vallée des loisirs ;",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2151-remise_eau-vallee-des-loisirs-lafrancaise",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-3 (parcours spécial brochet)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout brochet capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-brochet-therondel",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Thérondel (La Salvetat-Belmontet, Monclar-de-Quercy) : plan d'eau du parcours spécial brochet",
+    "plan_eau": "Thérondel",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout brochet capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial brochet, plan d'eau Thérondel (La Salvetat-Belmontet, Monclar-de-Quercy) : tout brochet pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-3 (parcours spécial brochet)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de La-Salvetat-Belmontet et de Monclar-de-Quercy : plan d’eau du Thérondel",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2151-remise_eau-therondel-la-salvetat-belmontet-monclar-",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-3 (parcours spécial brochet)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout brochet capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-brochet-balat-david",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Balat-David (Montauban) : plan d'eau du parcours spécial brochet",
+    "plan_eau": "Balat-David",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout brochet capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial brochet, plan d'eau Balat-David (Montauban) : tout brochet pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-3 (parcours spécial brochet)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Montauban : plan d’eau de Balat-David ;",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2151-remise_eau-balat-david-montauban",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-3 (parcours spécial brochet)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout brochet capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-brochet-malivert",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Malivert (Molières) : plan d'eau du parcours spécial brochet",
+    "plan_eau": "Malivert",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout brochet capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial brochet, plan d'eau Malivert (Molières) : tout brochet pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-3 (parcours spécial brochet)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Molières : plan d’eau de Malivert ;",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2151-remise_eau-malivert-molieres",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-3 (parcours spécial brochet)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout brochet capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-brochet-parisot",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Parisot (Parisot) : plan d'eau du parcours spécial brochet",
+    "plan_eau": "Parisot",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout brochet capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial brochet, plan d'eau Parisot (Parisot) : tout brochet pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-3 (parcours spécial brochet)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Parisot : plan d’eau de Parisot",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2151-remise_eau-parisot-parisot",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-3 (parcours spécial brochet)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout brochet capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-brochet-grands-camps",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Grands Camps (Pompignan) : plan d'eau du parcours spécial brochet",
+    "plan_eau": "Grands Camps",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout brochet capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial brochet, plan d'eau Grands Camps (Pompignan) : tout brochet pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-3 (parcours spécial brochet)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "commune de Pompignan : plan d’eau de Grands Camps",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2151-remise_eau-grands-camps-pompignan",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-3 (parcours spécial brochet)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout brochet capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-brochet-aveyron-lexos-salet",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Aveyron (Varen, Féneyrols, Saint-Antonin-Noble-Val) : du seuil de Lexos bas au seuil du Moulin de Salet",
+    "plan_eau": null,
+    "cours_eau": "Aveyron"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout brochet capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial brochet, Aveyron (seuil de Lexos bas au seuil du Moulin de Salet) : tout brochet pêché est remis à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-3 (parcours spécial brochet)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "section comprise entre le seuil de Lexos bas et le seuil du Moulin de Salet",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2151-remise_eau-aveyron-lexos",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-3 (parcours spécial brochet)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout brochet capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-brochet-aveyron-albias-ardus",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Aveyron (Albias, Réalville, Mirabel, L'Honor de Cos, Lamothe-Capdeville, Montauban) : du seuil du moulin d'Albias au seuil d'Ardus",
+    "plan_eau": null,
+    "cours_eau": "Aveyron"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout brochet capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial brochet, Aveyron (seuil du moulin d'Albias au seuil d'Ardus) : tout brochet pêché est remis à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-3 (parcours spécial brochet)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "section comprise entre le seuil du moulin d’Albias et le seuil d’Ardus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2151-remise_eau-aveyron-albias",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-3 (parcours spécial brochet)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout brochet capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-brochet-tarn",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Tarn (Moissac, Les Barthes, Castelsarrasin, Boudou, Saint-Nicolas-de-la-Grave) : de la chaussée de Sainte-Livrade à la confluence du Tarn dans la Garonne",
+    "plan_eau": null,
+    "cours_eau": "Tarn"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout brochet capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial brochet, Tarn (chaussée de Sainte-Livrade à la Garonne) : tout brochet pêché est remis à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-3 (parcours spécial brochet)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "section comprise entre la chaussée de Sainte-Livrade et la confluence du Tarn dans la Garonne",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2151-remise_eau-tarn",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-3 (parcours spécial brochet)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout brochet capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-brochet-canal",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Canal latéral à la Garonne et embranchement de Montech à Montauban (Montech, Lacourt-Saint-Pierre, Montauban) : du canal latéral entre l'écluse 10 de Lavache et l'écluse 11 de Montech, et la totalité de l'embranchement de Montech à Montauban",
+    "plan_eau": null,
+    "cours_eau": "Canal latéral à la Garonne"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout brochet capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial brochet, canal latéral à la Garonne (écluse 10 à écluse 11) et embranchement de Montech : tout brochet pêché est remis à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-3 (parcours spécial brochet)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "section comprise sur le canal latéral à la Garonne de l’écluse 10 de Lavache à l’écluse 11 de Montech et sur la totalité de l’embranchement de Montech à Montauban.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2151-remise_eau-canal",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-3 (parcours spécial brochet)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l’eau tout brochet capturé sur les parcours ci-après."
+   }
+  },
+  {
+   "id": "82-remise-eau-salmonides-seye",
+   "type": "remise_eau",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Seye (Ginals, Verfeil) : du pont de la RD33 à l'aval de l'Abbaye de Beaulieu au pont de la RD33 à l'aval de Verfeil",
+    "plan_eau": null,
+    "cours_eau": "Seye"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout salmonidé capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial truite, Seye (Ginals, Verfeil) : tout salmonidé pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-4 (parcours spécial truite)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "Obligation de remettre immédiatement à l'eau tout salmonidé capturé sur les parcours ci-après.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-salmonides-remise_eau-seye",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-4 (parcours spécial truite)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l'eau tout salmonidé capturé sur les parcours ci-après. Emploi d'hameçons simples sans ardillons."
+   }
+  },
+  {
+   "id": "82-remise-eau-salmonides-lere",
+   "type": "remise_eau",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Lère (Cayriech) : du pont au cœur du village, route de Lapenche, au moulin de Pech, route de Tapon",
+    "plan_eau": null,
+    "cours_eau": "Lère"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout salmonidé capturé doit être remis immédiatement à l'eau."
+   },
+   "phrase": "Parcours spécial truite, Lère (Cayriech) : tout salmonidé pêché est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-4 (parcours spécial truite)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "Obligation de remettre immédiatement à l'eau tout salmonidé capturé sur les parcours ci-après.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-salmonides-remise_eau-lere",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-4 (parcours spécial truite)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l'eau tout salmonidé capturé sur les parcours ci-après. Emploi d'hameçons simples sans ardillons."
+   }
+  },
+  {
+   "id": "82-remise-eau-black-bass-monlebrel",
+   "type": "remise_eau",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "82",
+    "lieu": "Monlebrel (Dieupentale) : plan d'eau de Monlebrel",
+    "plan_eau": "Monlebrel",
+    "cours_eau": null
+   },
+   "du": "2026-02-14",
+   "au": "2026-09-30",
+   "valeur": {
+    "texte": "Du 14 février au 30 septembre, le prélèvement est autorisé sauf pour le black-bass (black-bass non prélevable)."
+   },
+   "phrase": "Plan d'eau de Monlebrel (Dieupentale), du 14 février au 30 septembre : le black-bass ne se garde pas.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-6 (plans d'eau à réglementation spécifique)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-20"
+   },
+   "citation": "Du 14 février au 30 septembre, prélèvement des poissons autorisé sauf pour l'espèce Black-bass.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-2053-remise_eau-monlebrel-bb",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-6",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Du 14 février au 30 septembre, prélèvement des poissons autorisé sauf pour l'espèce Black-bass."
+   }
+  },
+  {
+   "id": "82-reserve-perm-aveyron-loubejac",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "82",
+    "lieu": "Aveyron (L'Honor-de-Cos, Montauban) : les 50 mètres en aval du seuil du moulin de Loubéjac",
+    "plan_eau": null,
+    "cours_eau": "Aveyron"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Réserve de pêche permanente du 1er janvier 2026 au 31 décembre 2030 (toutes espèces) ; parcours délimité par des panneaux et/ou des bouées."
+   },
+   "phrase": "Réserve de pêche permanente (2026-2030) : Aveyron (L'Honor-de-Cos, Montauban), 50 m en aval du seuil du moulin de Loubéjac.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 82-2025-11-13-00002 portant création de réserves pluriannuelles de pêche 2026-2030, article 1er (réserves permanentes)",
+    "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/38418/253653/file/ap_20251113_seb_reserves-plurian-2026-2030-signe.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-13"
+   },
+   "citation": "les 50 mètres en aval du seuil du moulin de Loubéjac",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "82-toutes-reserve-aveyron-l-honor-de-cos-montauban-les-50-",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-13-00002 portant création de réserves pluriannuelles de pêche 2026-2030, art. 1 (réserves permanentes)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/38418/253653/file/ap_20251113_seb_reserves-plurian-2026-2030-signe.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-13"
+    },
+    "citation": "communes de L'Honor-de-Cos et Montauban : les 50 mètres en aval du seuil du moulin de Loubéjac."
+   }
   }
  ],
  "desaccords": {
@@ -7713,6 +10210,356 @@
     "citation": "Tout poisson doit immédiatement être remis à l’eau (maintien dans une bourriche interdit) à l’exception des truites qui peuvent être conservées.",
     "statut": "incertain",
     "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-taille-min-truite-arc-en-ciel-2-aucune",
+    "type": "taille_min",
+    "especes": [
+     "2216"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "82",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pas de taille minimale en 2e catégorie."
+    },
+    "phrase": "Truite arc-en-ciel en 2e catégorie : pas de taille minimale.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 3",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "(pas de taille minimale en 2ème catégorie)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-mode-peche-hamecon-sans-ardillon-seye",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "cours_eau",
+     "code": "82",
+     "lieu": "Seye (Ginals, Verfeil) : du pont de la RD33 à l'aval de l'Abbaye de Beaulieu au pont de la RD33 à l'aval de Verfeil",
+     "plan_eau": null,
+     "cours_eau": "Seye"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Emploi d'hameçons simples sans ardillons."
+    },
+    "phrase": "Parcours spécial truite, Seye (Ginals, Verfeil) : hameçons simples sans ardillons obligatoires.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-4 (parcours spécial truite)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Emploi d'hameçons simples sans ardillons.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-mode-peche-hamecon-sans-ardillon-lere",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "cours_eau",
+     "code": "82",
+     "lieu": "Lère (Cayriech) : du pont au cœur du village, route de Lapenche, au moulin de Pech, route de Tapon",
+     "plan_eau": null,
+     "cours_eau": "Lère"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Emploi d'hameçons simples sans ardillons."
+    },
+    "phrase": "Parcours spécial truite, Lère (Cayriech) : hameçons simples sans ardillons obligatoires.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-4 (parcours spécial truite)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Emploi d'hameçons simples sans ardillons.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-mode-peche-monlebrel-mouche-01",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Monlebrel (Dieupentale) : plan d'eau de Monlebrel",
+     "plan_eau": "Monlebrel",
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-02-13",
+    "valeur": {
+     "texte": "du 1er janvier au 13 février : pêche à la mouche fouettée uniquement, streamers autorisés."
+    },
+    "phrase": "Plan d'eau de Monlebrel (Dieupentale), du 1er janvier au 13 février : pêche à la mouche fouettée uniquement (streamers autorisés).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-6 (plans d'eau à réglementation spécifique)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "pêche à la mouche fouettée uniquement, streamers autorisés",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-mode-peche-monlebrel-hamecon-01",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Monlebrel (Dieupentale) : plan d'eau de Monlebrel",
+     "plan_eau": "Monlebrel",
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-02-13",
+    "valeur": {
+     "texte": "du 1er janvier au 13 février : emploi d'hameçons simples sans ardillons obligatoire."
+    },
+    "phrase": "Plan d'eau de Monlebrel (Dieupentale), du 1er janvier au 13 février : hameçons simples sans ardillons obligatoires.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-6 (plans d'eau à réglementation spécifique)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Emploi d'hameçons simples sans ardillons et usage de l'épuisette obligatoires.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-autre-monlebrel-epuisette-01",
+    "type": "autre",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Monlebrel (Dieupentale) : plan d'eau de Monlebrel",
+     "plan_eau": "Monlebrel",
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-02-13",
+    "valeur": {
+     "texte": "du 1er janvier au 13 février : usage de l'épuisette obligatoire."
+    },
+    "phrase": "Plan d'eau de Monlebrel (Dieupentale), du 1er janvier au 13 février : épuisette obligatoire.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-6 (plans d'eau à réglementation spécifique)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Emploi d'hameçons simples sans ardillons et usage de l'épuisette obligatoires.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-mode-peche-monlebrel-mouche-10",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Monlebrel (Dieupentale) : plan d'eau de Monlebrel",
+     "plan_eau": "Monlebrel",
+     "cours_eau": null
+    },
+    "du": "2026-10-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "du 1er octobre au 31 décembre : pêche à la mouche fouettée uniquement, streamers autorisés."
+    },
+    "phrase": "Plan d'eau de Monlebrel (Dieupentale), du 1er octobre au 31 décembre : pêche à la mouche fouettée uniquement (streamers autorisés).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-6 (plans d'eau à réglementation spécifique)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "pêche à la mouche fouettée uniquement, streamers autorisés",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-mode-peche-monlebrel-hamecon-10",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Monlebrel (Dieupentale) : plan d'eau de Monlebrel",
+     "plan_eau": "Monlebrel",
+     "cours_eau": null
+    },
+    "du": "2026-10-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "du 1er octobre au 31 décembre : emploi d'hameçons simples sans ardillons obligatoire."
+    },
+    "phrase": "Plan d'eau de Monlebrel (Dieupentale), du 1er octobre au 31 décembre : hameçons simples sans ardillons obligatoires.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-6 (plans d'eau à réglementation spécifique)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Emploi d'hameçons simples sans ardillons et usage de l'épuisette obligatoires.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-autre-monlebrel-epuisette-10",
+    "type": "autre",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Monlebrel (Dieupentale) : plan d'eau de Monlebrel",
+     "plan_eau": "Monlebrel",
+     "cours_eau": null
+    },
+    "du": "2026-10-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "du 1er octobre au 31 décembre : usage de l'épuisette obligatoire."
+    },
+    "phrase": "Plan d'eau de Monlebrel (Dieupentale), du 1er octobre au 31 décembre : épuisette obligatoire.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-6 (plans d'eau à réglementation spécifique)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Emploi d'hameçons simples sans ardillons et usage de l'épuisette obligatoires.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-autre-monlebrel-prelevement",
+    "type": "autre",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Monlebrel (Dieupentale) : plan d'eau de Monlebrel",
+     "plan_eau": "Monlebrel",
+     "cours_eau": null
+    },
+    "du": "2026-02-14",
+    "au": "2026-09-30",
+    "valeur": {
+     "texte": "Du 14 février au 30 septembre, prélèvement des poissons autorisé sauf pour le black-bass."
+    },
+    "phrase": "Plan d'eau de Monlebrel (Dieupentale), du 14 février au 30 septembre : on peut garder le poisson, sauf le black-bass.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, article 6-6 (plans d'eau à réglementation spécifique)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Du 14 février au 30 septembre, prélèvement des poissons autorisé sauf pour l'espèce Black-bass.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-reserve-perm-garonne-seuils",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "cours_eau",
+     "code": "82",
+     "lieu": "Garonne (Auvillar, Espalais, Malause, Merles, Valence d'Agen) : des 50 m en amont jusqu'aux 50 m en aval des seuils 1 à 5",
+     "plan_eau": null,
+     "cours_eau": "Garonne"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Réserve de pêche permanente du 1er janvier 2026 au 31 décembre 2030 (toutes espèces) ; parcours délimité par des panneaux et/ou des bouées."
+    },
+    "phrase": "Réserve de pêche permanente (2026-2030) : Garonne (Auvillar, Espalais, Malause, Merles, Valence d'Agen), de 50 m en amont à 50 m en aval des seuils 1 à 5.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-13-00002 portant création de réserves pluriannuelles de pêche 2026-2030, article 1er (réserves permanentes)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/38418/253653/file/ap_20251113_seb_reserves-plurian-2026-2030-signe.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-13"
+    },
+    "citation": "des 50 m en amont jusqu'aux 50 m en aval des seuils 1 à",
+    "statut": "brouillon",
+    "expire_le": "2030-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-reserve-temp-juliasse",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Juliasse (Grisolles) : grand plan d'eau communal de Julias, anse sud-est et anse nord-ouest",
+     "plan_eau": "Juliasse",
+     "cours_eau": null
+    },
+    "du": "2026-01-25",
+    "au": "2026-06-06",
+    "valeur": {
+     "texte": "Réserve de pêche temporaire (toutes espèces) du 1er janvier 2026 au 31 décembre 2030 : pêche interdite chaque année de la fin de l'heure légale de pêche du dernier dimanche de janvier au début de l'heure légale de pêche du premier samedi de juin."
+    },
+    "phrase": "Réserve temporaire du dernier dimanche de janvier (25 janvier 2026) au premier samedi de juin (6 juin 2026), chaque année jusqu'en 2030 : grand plan d'eau de Juliasse (Grisolles), anse sud-est et anse nord-ouest (le texte écrit Julias).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-13-00002 portant création de réserves pluriannuelles de pêche 2026-2030, article 2 (réserves temporaires)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/38418/253653/file/ap_20251113_seb_reserves-plurian-2026-2030-signe.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-13"
+    },
+    "citation": "sur le grand plan d'eau communal de Julias",
+    "statut": "brouillon",
+    "expire_le": "2030-12-31",
     "remplace": null
    }
   ],
@@ -9192,6 +12039,246 @@
     },
     "citation": "toutes les écluses de la limite de leur perré amont jusqu’à la limite du perré aval",
     "statut": "incertain",
+    "expire_le": "2030-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-salmonides-mode_peche-seye-hamecon",
+    "type": "mode_peche",
+    "especes": [
+     "salmonides"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "82",
+     "lieu": "Seye (Ginals, Verfeil) : du pont de la RD33 à l'aval de l'Abbaye de Beaulieu au pont de la RD33 à l'aval de Verfeil",
+     "plan_eau": null,
+     "cours_eau": "Seye"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "hamecons_max": 1,
+     "texte": "Emploi d'hameçons simples sans ardillons."
+    },
+    "phrase": "Parcours spécial truite, Seye : hameçons simples sans ardillons.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-4 (parcours spécial truite)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l'eau tout salmonidé capturé sur les parcours ci-après. Emploi d'hameçons simples sans ardillons.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-salmonides-mode_peche-lere-hamecon",
+    "type": "mode_peche",
+    "especes": [
+     "salmonides"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "82",
+     "lieu": "Lère (Cayriech) : du pont au cœur du village, route de Lapenche, au moulin de Pech, route de Tapon",
+     "plan_eau": null,
+     "cours_eau": "Lère"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "hamecons_max": 1,
+     "texte": "Emploi d'hameçons simples sans ardillons."
+    },
+    "phrase": "Parcours spécial truite, Lère : hameçons simples sans ardillons.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-4 (parcours spécial truite)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Obligation de remettre immédiatement à l'eau tout salmonidé capturé sur les parcours ci-après. Emploi d'hameçons simples sans ardillons.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-toutes-mode_peche-monlebrel-mode-2026-01-01",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Monlebrel (Dieupentale)",
+     "plan_eau": "Monlebrel",
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-02-13",
+    "valeur": {
+     "texte": "Du 1er janvier au 13 février : pêche à la mouche fouettée uniquement, streamers autorisés ; hameçons simples sans ardillons et épuisette obligatoires.",
+     "hamecons_max": 1
+    },
+    "phrase": "Plan d'eau de Monlebrel, du 1er janvier au 13 février : mouche fouettée seulement, hameçon simple sans ardillon, épuisette obligatoire.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-6",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Pendant cette période, pêche à la mouche fouettée uniquement, streamers autorisés. Emploi d'hameçons simples sans ardillons et usage de l'épuisette obligatoires.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-toutes-mode_peche-monlebrel-mode-2026-10-01",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Monlebrel (Dieupentale)",
+     "plan_eau": "Monlebrel",
+     "cours_eau": null
+    },
+    "du": "2026-10-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Du 1er octobre au 31 décembre : pêche à la mouche fouettée uniquement, streamers autorisés ; hameçons simples sans ardillons et épuisette obligatoires.",
+     "hamecons_max": 1
+    },
+    "phrase": "Plan d'eau de Monlebrel, du 1er octobre au 31 décembre : mouche fouettée seulement, hameçon simple sans ardillon, épuisette obligatoire.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-20-00001 portant réglementation de la pêche en eau douce dans le département de Tarn-et-Garonne pour l'année 2026, art. 6-6",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/39174/257967/file/ap_20251120_seb-bb_ouverture-peche-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-20"
+    },
+    "citation": "Pendant cette période, pêche à la mouche fouettée uniquement, streamers autorisés. Emploi d'hameçons simples sans ardillons et usage de l'épuisette obligatoires.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-toutes-reserve-canal-eclusesp",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "82",
+     "lieu": "Canal latéral à la Garonne et embranchement de Montech : les écluses sur toute leur emprise (Bessens, Canals, Dieupentale, Grisolles, Montbartier, Montech, Pompignan, Lacourt Saint-Pierre, Montauban, Escatalens, Saint-Porquier, Castelsarrasin, Moissac, Boudou, Malause, Pommevic, Goudourville, Valence, Golfech, Lamagistère)",
+     "plan_eau": null,
+     "cours_eau": "Canal latéral à la Garonne"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Réserve permanente (pêche interdite, toutes espèces) : Les écluses sur toute leur emprise, de la limite du perré amont à la limite du perré aval, ouvrage compris."
+    },
+    "phrase": "Réserve permanente, pêche interdite : Canal latéral à la Garonne et embranchement de Montech : les écluses sur toute leur emprise (Bessens, Canals, Dieupentale, Grisolles, Montbartier, Montech, Pompignan, Lacourt Saint-Pierre, Montauban, Escatalens, Saint-Porquier, Castelsarrasin, Moissac, Boudou, Malause, Pommevic, Goudourville, Valence, Golfech, Lamagistère).",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-13-00002 portant création de réserves pluriannuelles de pêche 2026-2030, art. 1 (réserves permanentes)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/38418/253653/file/ap_20251113_seb_reserves-plurian-2026-2030-signe.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-13"
+    },
+    "citation": "les écluses sur toute leur emprise, depuis la limite du perré amont jusqu'à la limite du perré aval, incluant l'ensemble de l'ouvrage.",
+    "statut": "brouillon",
+    "expire_le": "2030-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-toutes-reserve-marnieres-affluent-de-la-vere-bruniquel-",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "82",
+     "lieu": "Marnières, affluent de la Vère (Bruniquel) : de sa confluence jusqu'à ses sources",
+     "plan_eau": null,
+     "cours_eau": "Marnières"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Réserve permanente (pêche interdite, toutes espèces) : De sa confluence avec la Vère jusqu'à ses sources."
+    },
+    "phrase": "Réserve permanente, pêche interdite : Marnières, affluent de la Vère (Bruniquel) : de sa confluence jusqu'à ses sources.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-13-00002 portant création de réserves pluriannuelles de pêche 2026-2030, art. 1 (réserves permanentes)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/38418/253653/file/ap_20251113_seb_reserves-plurian-2026-2030-signe.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-13"
+    },
+    "citation": "ainsi que son affluent « les Marnières », de sa confluence et jusqu'à ses sources.",
+    "statut": "brouillon",
+    "expire_le": "2030-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-toutes-reserve-julias-grisolles-anse-sud-estt",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Julias (Grisolles) : anse sud-est",
+     "plan_eau": "Julias",
+     "cours_eau": null
+    },
+    "du": "2026-01-25",
+    "au": "2026-06-06",
+    "valeur": {
+     "texte": "Réserve temporaire (pêche interdite, toutes espèces, de la fin de l'heure légale du dernier dimanche de janvier au début de l'heure légale du premier samedi de juin) : Anse sud-est."
+    },
+    "phrase": "Réserve temporaire (fin janvier à début juin), pêche interdite : Julias (Grisolles) : anse sud-est.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-13-00002 portant création de réserves pluriannuelles de pêche 2026-2030, art. 2 (réserves temporaires)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/38418/253653/file/ap_20251113_seb_reserves-plurian-2026-2030-signe.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-13"
+    },
+    "citation": "anse sud-est et anse nord-ouest, délimitées par des panneaux et des bouées",
+    "statut": "brouillon",
+    "expire_le": "2030-12-31",
+    "remplace": null
+   },
+   {
+    "id": "82-toutes-reserve-julias-grisolles-anse-nord-ouestt",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "82",
+     "lieu": "Julias (Grisolles) : anse nord-ouest",
+     "plan_eau": "Julias",
+     "cours_eau": null
+    },
+    "du": "2026-01-25",
+    "au": "2026-06-06",
+    "valeur": {
+     "texte": "Réserve temporaire (pêche interdite, toutes espèces, de la fin de l'heure légale du dernier dimanche de janvier au début de l'heure légale du premier samedi de juin) : Anse nord-ouest."
+    },
+    "phrase": "Réserve temporaire (fin janvier à début juin), pêche interdite : Julias (Grisolles) : anse nord-ouest.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 82-2025-11-13-00002 portant création de réserves pluriannuelles de pêche 2026-2030, art. 2 (réserves temporaires)",
+     "url": "https://www.tarn-et-garonne.gouv.fr/contenu/telechargement/38418/253653/file/ap_20251113_seb_reserves-plurian-2026-2030-signe.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-13"
+    },
+    "citation": "anse sud-est et anse nord-ouest, délimitées par des panneaux et des bouées",
+    "statut": "brouillon",
     "expire_le": "2030-12-31",
     "remplace": null
    }
