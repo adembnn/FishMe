@@ -24,3 +24,4 @@ Direction retenue pour chaque page de la toile (A · Plans, B · Réglages, C ·
 | P20 Autre espèce (grille) | A · Plans | 16 oct. 2h45 |
 | P21 Taille et poids (réalité augmentée) | A · Plans | 16 oct. 2h45 |
 | P15 Écran verrouillé (boutons Prise et Pause) | A · Plans | 16 oct. 2h45 |
+| P22 Détails de la prise | A · Plans, avec une 3e option « Ne pas dire » | 16 oct. 2h47 |
