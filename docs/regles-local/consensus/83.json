@@ -6866,7 +6866,7 @@
     "version": "2026-03-04"
    },
    "citation": "il est interdit d'utiliser les procédés, modes de pêche ou engins suivants : la vermée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -6878,7 +6878,8 @@
      "version": "2026-03-04"
     },
     "citation": "l’emploi de repères flottants conçus de manière artisanale n’est pas autorisé."
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "83-general-interdit-bouteille-carafe-saint-cassien",
@@ -7612,7 +7613,7 @@
     "version": "2026-04-20"
    },
    "citation": "Les seuls procédés et modes de pêche autorisés sur cette zone, pour les membres des associations agréées de pêche et de protection du milieu aquatique (AAPPMA), sont les suivants :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7624,7 +7625,8 @@
      "version": "2026-04-20"
     },
     "citation": "agréées de pêche et de protection du milieu aquatique (AAPPMA), sont les suivants : • une ligne montée sur canne et munie : ➢ soit d'un hameçon simple ; ➢ soit de trois mouches artificielles"
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "83-general-ouverture-traine-sainte-croix",

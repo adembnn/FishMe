@@ -532,7 +532,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-24"
    },
-   "citation": "La période d'autorisation de la pêche dans les eaux de 1°\"* catégorie est fixée du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus. Les cours d'eau concernés sont :",
+   "citation": "La période d'autorisation de la pêche dans les eaux de 1re catégorie est fixée du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus.",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -545,7 +545,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "La période d'autorisation de la pêche dans les eaux de 1re catégorie est fixée du samedi 14 mars 2026 au dimanche 20 septembre 2026 inclus."
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "59-grenouille-verte-ouverture-grenouille-verte",
@@ -615,7 +616,7 @@
     "version": "2025-12-24"
    },
    "citation": "Les grenouilles dont les espèces sont mentionnées à l'article 2 du présent arrêté ne peuvent être pêchées et doivent être remises à l'eau immédiatement après leur capture si leur corps est",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -627,7 +628,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "doivent être remises à l'eau immédiatement après leur capture si leur corps est d'une longueur inférieure à 8 cm"
-   }
+   },
+   "citation_a_revoir": "nombre 8 absent"
   },
   {
    "id": "59-grenouille-rousse-ouverture-grenouille-rousse",
@@ -697,7 +699,7 @@
     "version": "2025-12-24"
    },
    "citation": "Les grenouilles dont les espèces sont mentionnées à l'article 2 du présent arrêté ne peuvent être pêchées et doivent être remises à l'eau immédiatement après leur capture si leur corps est",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -709,7 +711,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "doivent être remises à l'eau immédiatement après leur capture si leur corps est d'une longueur inférieure à 8 cm"
-   }
+   },
+   "citation_a_revoir": "nombre 8 absent"
   },
   {
    "id": "59-ecrevisse-pattes-rouges-interdit-ecrevisse-pattes-rouges",
@@ -4197,7 +4200,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4209,7 +4212,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-canal-de-bourbourg-de-l-ecluse-de-gui",
@@ -4319,7 +4323,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4331,7 +4335,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-lys-nord-sailly-sur-la-",
@@ -4400,7 +4405,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4412,7 +4417,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-canal-de-seclin-en-entier",
@@ -4481,7 +4487,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4493,7 +4499,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-scarpe-inferieure-rache",
@@ -4562,7 +4569,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4574,7 +4581,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-scarpe-inferieure-rache-2",
@@ -4643,7 +4651,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4655,7 +4663,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-scarpe-inferieure-lalla",
@@ -4724,7 +4733,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4736,7 +4745,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-scarpe-inferieure-vred-",
@@ -4805,7 +4815,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4817,7 +4827,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-scarpe-inferieure-march",
@@ -4886,7 +4897,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4898,7 +4909,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-scarpe-inferieure-warla",
@@ -4967,7 +4979,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4979,7 +4991,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-scarpe-saint-amand-les-eaux-de-l-ecl",
@@ -5048,7 +5061,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5060,7 +5073,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-canal-de-saint-quentin-masnieres-du",
@@ -5129,7 +5143,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5141,7 +5155,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-sambre-canalisee-aymeri",
@@ -5210,7 +5225,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5222,7 +5237,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-sambre-canalisee-pont-s",
@@ -5291,7 +5307,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5303,7 +5319,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-sambre-canalisee-pont-s-2",
@@ -5372,7 +5389,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5384,7 +5401,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-sambre-canalisee-pont-s-3",
@@ -5453,7 +5471,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5465,7 +5483,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-sambre-canalisee-pont-s-4",
@@ -5534,7 +5553,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5546,7 +5565,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-sambre-canalisee-pont-s-5",
@@ -5615,7 +5635,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5627,7 +5647,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-riviere-de-la-sambre-canalisee-marpen",
@@ -5696,7 +5717,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5708,7 +5729,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-canal-de-roubaix-leers-roubaix-bief",
@@ -5941,7 +5963,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5953,7 +5975,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-bras-mort-de-saint-georges-sur-l-aa-g",
@@ -6063,7 +6086,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6075,7 +6098,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-lac-du-val-joly-eppe-sauvage-bras-de",
@@ -6144,7 +6168,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6156,7 +6180,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-voyon-du-pont-de-la-rd-119-a-la-confl",
@@ -6225,7 +6250,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6237,7 +6262,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-etang-de-phalempin-phalempin-la-tota",
@@ -6429,7 +6455,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6441,7 +6467,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2151-no_kill-nk-brochet-etang-vauban-le-quesnoy-la-totalite",
@@ -6633,7 +6660,7 @@
     "version": "2019-06-27"
    },
    "citation": "Les lignes de pêche destinées à la capture des carnassiers seront avec hameçon sans ardillon ou écrasé. Article 3 - Cette pratique est autorisée",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6645,7 +6672,8 @@
      "lu_le": "2026-10-15"
     },
     "citation": "le nombre de lignes autorisé par pêcheur est limité à quatre"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "59-2053-no_kill-nk-black-bass-etang-wagnier-thivencelle-la-total",
@@ -16986,7 +17014,7 @@
     "lu_le": "2026-10-15",
     "version": "2023-08-22"
    },
-   "citation": "Il est également insta::ré en réserve temporaire de pêche, les sites suivants :",
+   "citation": "l'ensemble des cours d'eau, affluents, rivières situés à l'intérieur du périmètre de la forêt domaniale de Mormal (cf. annexe 9)",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -16999,7 +17027,8 @@
      "version": "2023-08-22"
     },
     "citation": "l'ensemble des cours d'eau, affluents, rivières situés à l'intérieur du périmètre de la forêt domaniale de Mormal (cf. annexe 9)"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "59-toutes-reserve-valjoly",
@@ -17025,7 +17054,7 @@
     "lu_le": "2026-10-15",
     "version": "2023-08-22"
    },
-   "citation": "Il est également insta::ré en réserve temporaire de pêche, les sites suivants :",
+   "citation": "et de la forêt domaniale de l'Abbé Val-Joly (cf. annexe 10)",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -17038,7 +17067,8 @@
      "version": "2023-08-22"
     },
     "citation": "et de la forêt domaniale de l'Abbé Val-Joly (cf. annexe 10)"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "59-toutes-reserve-barrages",
@@ -17064,7 +17094,7 @@
     "lu_le": "2026-10-15",
     "version": "2023-08-22"
    },
-   "citation": "Il est également insta::ré en réserve temporaire de pêche, les sites suivants :",
+   "citation": "les 50 mètres en amont et en aval de l'extrémité des barrages ou des écluses du domaine public fluvial (cf. annexes 11 à 16)",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -17077,7 +17107,8 @@
      "version": "2023-08-22"
     },
     "citation": "les 50 mètres en amont et en aval de l'extrémité des barrages ou des écluses du domaine public fluvial (cf. annexes 11 à 16)"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "59-toutes-reserve-armbouts",
@@ -17103,7 +17134,7 @@
     "lu_le": "2026-10-15",
     "version": "2023-08-22"
    },
-   "citation": "Il est également insta::ré en réserve temporaire de pêche, les sites suivants :",
+   "citation": "les berges du lac d'ARMBOUTS-CAPPEL où se situent les zones de frayères aménagées (cf. annexe 17)",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -17116,7 +17147,8 @@
      "version": "2023-08-22"
     },
     "citation": "les berges du lac d'ARMBOUTS-CAPPEL où se situent les zones de frayères aménagées (cf. annexe 17)"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "59-toutes-reserve-galoperie",
@@ -17142,7 +17174,7 @@
     "lu_le": "2026-10-15",
     "version": "2023-08-22"
    },
-   "citation": "Il est également insta::ré en réserve temporaire de pêche, les sites suivants :",
+   "citation": "l'ensemble des berges de l'étang de la Galoperie à ANOR (cf. annexe 18 ; pour les modalités de pêche sur ce plan d'eau, se renseigner auprès de la fédération de pêche du Nord)",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -17155,7 +17187,8 @@
      "version": "2023-08-22"
     },
     "citation": "l'ensemble des berges de l'étang de la Galoperie à ANOR (cf. annexe 18 ; pour les modalités de pêche sur ce plan d'eau, se renseigner auprès de la fédération de pêche du Nord)"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "59-toutes-reserve-goriaux",
@@ -17181,7 +17214,7 @@
     "lu_le": "2026-10-15",
     "version": "2023-08-22"
    },
-   "citation": "Il est également insta::ré en réserve temporaire de pêche, les sites suivants :",
+   "citation": "la zone de frayère et les zones de roselière de l'étang « la mare à Goriaux » à RAISMES (cf. annexe 19).",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -17194,7 +17227,8 @@
      "version": "2023-08-22"
     },
     "citation": "la zone de frayère et les zones de roselière de l'étang « la mare à Goriaux » à RAISMES (cf. annexe 19)."
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "59-toutes-reserve-solre-obrechies",
@@ -17220,7 +17254,7 @@
     "lu_le": "2026-10-15",
     "version": "2026-07-20"
    },
-   "citation": "L'article 2 de l'arrêté préfectoral du 22 août 2023 susvisé est complété par les éléments suivants",
+   "citation": "Réserve de la frayère de la Solre à OBRECHIES La Solre B 0384, B 0290, B 0385, B 0291, B 0773, B 0772, B 0299, B 0302, B 0303 et B 0304",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -17233,7 +17267,8 @@
      "version": "2026-07-20"
     },
     "citation": "Réserve de la frayère de la Solre à OBRECHIES La Solre B 0384, B 0290, B 0385, B 0291, B 0773, B 0772, B 0299, B 0302, B 0303 et B 0304"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "59-toutes-reserve-selle",
@@ -17259,7 +17294,7 @@
     "lu_le": "2026-10-15",
     "version": "2026-07-20"
    },
-   "citation": "L'article 2 de l'arrêté préfectoral du 22 août 2023 susvisé est complété par les éléments suivants",
+   "citation": "Toutes les parcelles rive gauche et droite de la rivière Selle de la limite du département du Nord (lieu-dit le Petit Marais sur la commune de SAINT-SOUPLET) au pont de la route départementale 67",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -17272,7 +17307,8 @@
      "version": "2026-07-20"
     },
     "citation": "Toutes les parcelles rive gauche et droite de la rivière Selle de la limite du département du Nord (lieu-dit le Petit Marais sur la commune de SAINT-SOUPLET) au pont de la route départementale 67"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "59-toutes-reserve-sambre-pont",
@@ -17298,7 +17334,7 @@
     "lu_le": "2026-10-15",
     "version": "2026-07-20"
    },
-   "citation": "L'article 2 de l'arrêté préfectoral du 22 août 2023 susvisé est complété par les éléments suivants",
+   "citation": "Réserve de la frayère de PONT-SUR-SAMBRE La Sambre AD 0511, AD 0512",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -17311,7 +17347,8 @@
      "version": "2026-07-20"
     },
     "citation": "Réserve de la frayère de PONT-SUR-SAMBRE La Sambre AD 0511, AD 0512"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "59-toutes-consommation-deule",

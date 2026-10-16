@@ -3123,7 +3123,7 @@
     "lu_le": "2026-10-16",
     "version": "2024-04-26"
    },
-   "citation": "dans les eaux de 1",
+   "citation": "2 brochets dans les eaux de 1ère catégorie",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -3137,7 +3137,8 @@
     },
     "citation": "2 brochets dans les eaux de 1ère catégorie"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_de": "lecture_b"
   },
   {
    "id": "91-carnassiers-quota_jour-cat2",
@@ -3168,7 +3169,7 @@
     "version": "2024-04-26"
    },
    "citation": "Le nombre de captures de carnassiers (sandres, brochets) autorisé par pêcheur et par jour,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -3181,7 +3182,8 @@
     },
     "citation": "est limité à trois (dont deux brochets maximum)."
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "nombre 3 absent"
   },
   {
    "id": "91-2151-quota_jour-cat2",
@@ -3704,7 +3706,7 @@
     "version": "2023-03-03"
    },
    "citation": "Fleuve SEINE - Lot 5 :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3717,7 +3719,8 @@
     },
     "citation": "Fleuve SEINE - Lot 5 :"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "91-toutes-carpe_nuit-fosse-montalbot",
@@ -4144,7 +4147,7 @@
     "version": "2024-03-11"
    },
    "citation": "la JUINE, en amont des ponts de Morigny, ses affluents et sous-affluents à l'exception de :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4157,7 +4160,8 @@
     },
     "citation": "1) Cours d'eau de 1ère catégorie : - la JUINE, en amont des ponts de Morigny, ses affluents et sous-affluents à l'exception de :"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "91-toutes-categorie-juine-affluents",
@@ -4184,7 +4188,7 @@
     "version": "2024-03-11"
    },
    "citation": "la JUINE, en amont des ponts de Morigny, ses affluents et sous-affluents à l'exception de :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4197,7 +4201,8 @@
     },
     "citation": "1) Cours d'eau de 1ère catégorie : - la JUINE, en amont des ponts de Morigny, ses affluents et sous-affluents à l'exception de :"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "91-toutes-categorie-tortue",

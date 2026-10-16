@@ -1662,7 +1662,7 @@
     "version": "2025-12-16"
    },
    "citation": "la taille minimale de capture des truites est fixée sur l’ensemble du département de l’Ain à 25 cm sauf pour les secteurs situés ci-dessous où elle est fixée à 30 cm",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1674,7 +1674,8 @@
      "version": "2025-12-16"
     },
     "citation": "la taille minimale de capture des truites est fixée sur l’ensemble du département de l’Ain à 25 cm sauf pour les secteurs situés ci-dessous où elle est fixée à 30 cm"
-   }
+   },
+   "note": "Art. 5-1 de l'arrêté 2026 signé : 25 cm sur tout le département sauf les secteurs listés, où la taille est 30 cm. Les deux valeurs sont justes ; tant que l'eau n'est pas reconnue, l'app dit « vérifie l'arrêté » au lieu d'afficher 25 cm."
   },
   {
    "id": "01-truite-taille_min-ain",
@@ -1744,7 +1745,7 @@
     "version": "2025-12-16"
    },
    "citation": "sauf pour les secteurs situés ci-dessous où elle est fixée à 30 cm",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1756,7 +1757,8 @@
      "version": "2025-12-16"
     },
     "citation": "Suran (1ère catégorie : secteur aval) Pont de Fromente Confluence avec l’Ain"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "01-truite-taille_min-oignin",
@@ -1785,7 +1787,7 @@
     "version": "2025-12-16"
    },
    "citation": "sauf pour les secteurs situés ci-dessous où elle est fixée à 30 cm",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1797,7 +1799,8 @@
      "version": "2025-12-16"
     },
     "citation": "Oignin Intégralité du cours d'eau et ses affluents y compris le bras du lac (depuis la sortie du lac de Nantua jusqu'à la confluence avec l’Oignin)"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "01-truite-taille_min-merdanson",
@@ -1826,7 +1829,7 @@
     "version": "2025-12-16"
    },
    "citation": "sauf pour les secteurs situés ci-dessous où elle est fixée à 30 cm",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1838,7 +1841,8 @@
      "version": "2025-12-16"
     },
     "citation": "Merdanson Intégralité du cours d'eau et ses affluents"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "01-truite-taille_min-versoix-allondon-annaz",
@@ -1867,7 +1871,7 @@
     "version": "2025-12-16"
    },
    "citation": "sauf pour les secteurs situés ci-dessous où elle est fixée à 30 cm",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1879,7 +1883,8 @@
      "version": "2025-12-16"
     },
     "citation": "Bassin versant de la Versoix, l'Allondon et de l'Annaz Intégralité des cours d’eau de 1ère catégorie du Pays de Gex"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "01-truite-taille_min-valserine",
@@ -1908,7 +1913,7 @@
     "version": "2025-12-16"
    },
    "citation": "sauf pour les secteurs situés ci-dessous où elle est fixée à 30 cm",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1920,7 +1925,8 @@
      "version": "2025-12-16"
     },
     "citation": "La Valserine Confluence avec la Semine Confluence avec le Rhône"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "01-truite-fenetre_capture-albarine",
@@ -11631,7 +11637,7 @@
     "version": "2025-12-16"
    },
    "citation": "La pêche en bateau n’est autorisée que du 1er janvier 2026 au 31 janvier 2026 et du 1er lundi suivant le premier week-end d’octobre 2026 au 31 décembre 2026.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -11643,7 +11649,8 @@
      "version": "2025-12-16"
     },
     "citation": "La pêche en bateau n’est autorisée que du 1er janvier 2026 au 31 janvier 2026 et du 1er lundi suivant le premier week-end d’octobre 2026 au 31 décembre 2026."
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "01-toutes-mode_peche-lac-de-divonne-bateau-octobre",
@@ -11670,7 +11677,7 @@
     "version": "2025-12-16"
    },
    "citation": "La pêche en bateau n’est autorisée que du 1er janvier 2026 au 31 janvier 2026 et du 1er lundi suivant le premier week-end d’octobre 2026 au 31 décembre 2026.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -11682,7 +11689,8 @@
      "version": "2025-12-16"
     },
     "citation": "La pêche en bateau n’est autorisée que du 1er janvier 2026 au 31 janvier 2026 et du 1er lundi suivant le premier week-end d’octobre 2026 au 31 décembre 2026."
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "01-toutes-interdit-lac-de-divonne-ile-du-lac",

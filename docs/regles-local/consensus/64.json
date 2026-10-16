@@ -1367,7 +1367,7 @@
     "version": "2025-12-22"
    },
    "citation": "au poisson mort ou vif en première catégorie du 14 mars au 20 septembre sur :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1379,7 +1379,8 @@
      "version": "2025-12-22"
     },
     "citation": "Toute pêche est interdite : au poisson mort ou vif en première catégorie du 14 mars au 20 septembre sur"
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "64-toutes-interdit-poisson-vif-mort-gave-ossau",
@@ -1406,7 +1407,7 @@
     "version": "2025-12-22"
    },
    "citation": "au poisson mort ou vif en première catégorie du 14 mars au 20 septembre sur :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1418,7 +1419,8 @@
      "version": "2025-12-22"
     },
     "citation": "Toute pêche est interdite : au poisson mort ou vif en première catégorie du 14 mars au 20 septembre sur"
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "64-toutes-interdit-poisson-vif-mort-gave-aspe",
@@ -1445,7 +1447,7 @@
     "version": "2025-12-22"
    },
    "citation": "au poisson mort ou vif en première catégorie du 14 mars au 20 septembre sur :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1457,7 +1459,8 @@
      "version": "2025-12-22"
     },
     "citation": "Toute pêche est interdite : au poisson mort ou vif en première catégorie du 14 mars au 20 septembre sur"
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "64-toutes-interdit-poisson-vif-mort-vert",
@@ -1484,7 +1487,7 @@
     "version": "2025-12-22"
    },
    "citation": "au poisson mort ou vif en première catégorie du 14 mars au 20 septembre sur :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1496,7 +1499,8 @@
      "version": "2025-12-22"
     },
     "citation": "Toute pêche est interdite : au poisson mort ou vif en première catégorie du 14 mars au 20 septembre sur"
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "64-toutes-interdit-poisson-vif-mort-lourdios",
@@ -1523,7 +1527,7 @@
     "version": "2025-12-22"
    },
    "citation": "au poisson mort ou vif en première catégorie du 14 mars au 20 septembre sur :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1535,7 +1539,8 @@
      "version": "2025-12-22"
     },
     "citation": "Toute pêche est interdite : au poisson mort ou vif en première catégorie du 14 mars au 20 septembre sur"
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "64-toutes-transport_vivant-lacs-montagne",
@@ -4237,7 +4242,7 @@
     "version": "2008-12-12"
    },
    "citation": "La pêche à l'asticot sans amorçage est autorisée sur tous les tronçons de cours d'eau de première catégorie ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4249,7 +4254,8 @@
      "version": "2008-12-12"
     },
     "citation": "La pêche à l’asticot sans amorçage est autorisée sur tous les tronçons de cours d’eau de première catégorie ci-après, ainsi que les plans d’eau et les canaux en communication avec eux"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "64-toutes-mode_peche-asticot-gave-ossau",
@@ -4276,7 +4282,7 @@
     "version": "2008-12-12"
    },
    "citation": "La pêche à l'asticot sans amorçage est autorisée sur tous les tronçons de cours d'eau de première catégorie ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4288,7 +4294,8 @@
      "version": "2008-12-12"
     },
     "citation": "La pêche à l’asticot sans amorçage est autorisée sur tous les tronçons de cours d’eau de première catégorie ci-après, ainsi que les plans d’eau et les canaux en communication avec eux"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "64-toutes-mode_peche-asticot-saison",
@@ -4315,7 +4322,7 @@
     "version": "2008-12-12"
    },
    "citation": "La pêche à l'asticot sans amorçage est autorisée sur tous les tronçons de cours d'eau de première catégorie ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4327,7 +4334,8 @@
      "version": "2008-12-12"
     },
     "citation": "La pêche à l’asticot sans amorçage est autorisée sur tous les tronçons de cours d’eau de première catégorie ci-après, ainsi que les plans d’eau et les canaux en communication avec eux"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "64-toutes-mode_peche-asticot-gave-larrau",
@@ -4354,7 +4362,7 @@
     "version": "2008-12-12"
    },
    "citation": "La pêche à l'asticot sans amorçage est autorisée sur tous les tronçons de cours d'eau de première catégorie ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4366,7 +4374,8 @@
      "version": "2008-12-12"
     },
     "citation": "La pêche à l’asticot sans amorçage est autorisée sur tous les tronçons de cours d’eau de première catégorie ci-après, ainsi que les plans d’eau et les canaux en communication avec eux"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "64-toutes-mode_peche-asticot-gave-ste-engrace",
@@ -4393,7 +4402,7 @@
     "version": "2008-12-12"
    },
    "citation": "La pêche à l'asticot sans amorçage est autorisée sur tous les tronçons de cours d'eau de première catégorie ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4405,7 +4414,8 @@
      "version": "2008-12-12"
     },
     "citation": "La pêche à l’asticot sans amorçage est autorisée sur tous les tronçons de cours d’eau de première catégorie ci-après, ainsi que les plans d’eau et les canaux en communication avec eux"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "64-toutes-mode_peche-asticot-ouzom",
@@ -4432,7 +4442,7 @@
     "version": "2008-12-12"
    },
    "citation": "La pêche à l'asticot sans amorçage est autorisée sur tous les tronçons de cours d'eau de première catégorie ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4444,7 +4454,8 @@
      "version": "2008-12-12"
     },
     "citation": "La pêche à l’asticot sans amorçage est autorisée sur tous les tronçons de cours d’eau de première catégorie ci-après, ainsi que les plans d’eau et les canaux en communication avec eux"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "64-toutes-mode_peche-asticot-neez",
@@ -4549,7 +4560,7 @@
     "version": "2008-12-12"
    },
    "citation": "La pêche à l'asticot sans amorçage est autorisée sur tous les tronçons de cours d'eau de première catégorie ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4561,7 +4572,8 @@
      "version": "2008-12-12"
     },
     "citation": "La pêche à l’asticot sans amorçage est autorisée sur tous les tronçons de cours d’eau de première catégorie ci-après, ainsi que les plans d’eau et les canaux en communication avec eux"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "64-toutes-mode_peche-asticot-bidouze",
@@ -4588,7 +4600,7 @@
     "version": "2008-12-12"
    },
    "citation": "La pêche à l'asticot sans amorçage est autorisée sur tous les tronçons de cours d'eau de première catégorie ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4600,7 +4612,8 @@
      "version": "2008-12-12"
     },
     "citation": "La pêche à l’asticot sans amorçage est autorisée sur tous les tronçons de cours d’eau de première catégorie ci-après, ainsi que les plans d’eau et les canaux en communication avec eux"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "64-toutes-mode_peche-asticot-lac-coarraze",
@@ -5002,7 +5015,7 @@
     "version": "2008-12-12"
    },
    "citation": "tous les lacs de montagne situés à une altitude minimale de 1 000 mètres",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5014,7 +5027,8 @@
      "version": "2008-12-12"
     },
     "citation": "tous les lacs de montagne situés hors de la zone cœur du Parc national des Pyrénées et à une altitude minimale de 1 000 mètres"
-   }
+   },
+   "citation_a_revoir": "nombre 2 absent"
   },
   {
    "id": "64-toutes-transport_vivant-indesirables",
@@ -6898,7 +6912,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) Gave de Mauléon ou Saison Pont d’Osserain"
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-2216-taille_min-25cm-saison",
@@ -6939,7 +6954,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) Gave de Mauléon ou Saison Pont d’Osserain"
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-omble-fontaine-taille_min-25cm-saison",
@@ -6980,7 +6996,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) Gave de Mauléon ou Saison Pont d’Osserain"
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-omble-chevalier-taille_min-25cm-saison",
@@ -7021,7 +7038,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) Gave de Mauléon ou Saison Pont d’Osserain"
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-2221-taille_min-25cm-nive",
@@ -7542,7 +7560,7 @@
     "version": "2008-12-12"
    },
    "citation": "S'y ajoutent le lac de Baliros et la retenue de Montaut.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7554,7 +7572,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) S’y ajoutent le lac de Baliros et la retenue de Montaut."
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-2216-taille_min-25cm-baliros",
@@ -7583,7 +7602,7 @@
     "version": "2008-12-12"
    },
    "citation": "S'y ajoutent le lac de Baliros et la retenue de Montaut.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7595,7 +7614,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) S’y ajoutent le lac de Baliros et la retenue de Montaut."
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-omble-fontaine-taille_min-25cm-baliros",
@@ -7624,7 +7644,7 @@
     "version": "2008-12-12"
    },
    "citation": "S'y ajoutent le lac de Baliros et la retenue de Montaut.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7636,7 +7656,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) S’y ajoutent le lac de Baliros et la retenue de Montaut."
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-omble-chevalier-taille_min-25cm-baliros",
@@ -7665,7 +7686,7 @@
     "version": "2008-12-12"
    },
    "citation": "S'y ajoutent le lac de Baliros et la retenue de Montaut.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7677,7 +7698,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) S’y ajoutent le lac de Baliros et la retenue de Montaut."
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-2221-taille_min-25cm-montaut",
@@ -7706,7 +7728,7 @@
     "version": "2008-12-12"
    },
    "citation": "S'y ajoutent le lac de Baliros et la retenue de Montaut.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7718,7 +7740,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) S’y ajoutent le lac de Baliros et la retenue de Montaut."
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-2216-taille_min-25cm-montaut",
@@ -7747,7 +7770,7 @@
     "version": "2008-12-12"
    },
    "citation": "S'y ajoutent le lac de Baliros et la retenue de Montaut.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7759,7 +7782,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) S’y ajoutent le lac de Baliros et la retenue de Montaut."
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-omble-fontaine-taille_min-25cm-montaut",
@@ -7788,7 +7812,7 @@
     "version": "2008-12-12"
    },
    "citation": "S'y ajoutent le lac de Baliros et la retenue de Montaut.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7800,7 +7824,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) S’y ajoutent le lac de Baliros et la retenue de Montaut."
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-omble-chevalier-taille_min-25cm-montaut",
@@ -7829,7 +7854,7 @@
     "version": "2008-12-12"
    },
    "citation": "S'y ajoutent le lac de Baliros et la retenue de Montaut.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7841,7 +7866,8 @@
      "version": "2008-12-12"
     },
     "citation": "0,25 m pour les zones avals des cours d’eau (et les canaux en dérivation) S’y ajoutent le lac de Baliros et la retenue de Montaut."
-   }
+   },
+   "citation_a_revoir": "nombre 25 absent"
   },
   {
    "id": "64-2221-taille_min-20cm-lac-roumassot",
@@ -11134,7 +11160,7 @@
     "lu_le": "2026-10-15",
     "version": "2026-05-13"
    },
-   "citation": "Pour tous les plans d'eau",
+   "citation": "La pratique du « no-kill » se fait au moyen de deux hameçons ou trois mouches artificielles au plus.",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -11147,7 +11173,8 @@
      "version": "2025-12-22"
     },
     "citation": "La pratique du « no-kill » se fait au moyen de deux hameçons ou trois mouches artificielles au plus."
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "64-2221-taille_min-zone-coeur-bersau-paradis",

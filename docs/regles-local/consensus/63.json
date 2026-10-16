@@ -3912,7 +3912,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-15"
    },
-   "citation": "3) du lundi suivant le deuxième samedi de mars (lundi 16 mars 2026) au vendredi précédent le deuxième samedi de juin (vendredi 12 juin 2026) : a) rivière Sioule, communes des Ancizes-Comps et de Saint",
+   "citation": "a) rivière Sioule, communes des Ancizes-Comps et de Saint-Jacques-d’Ambur : de la nouvelle mise à l’eau du « parcours Passion » rive droite en aval et de la confluence Sioule - Sioulet rive gauche en",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -3925,7 +3925,8 @@
      "version": "2025-12-15"
     },
     "citation": "a) rivière Sioule, communes des Ancizes-Comps et de Saint-Jacques-d’Ambur : de la nouvelle mise à l’eau du « parcours Passion » rive droite en aval et de la confluence Sioule - Sioulet rive gauche en"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "63-toutes-carpe_nuit-fades-3b",
@@ -3951,7 +3952,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-15"
    },
-   "citation": "3) du lundi suivant le deuxième samedi de mars (lundi 16 mars 2026) au vendredi précédent le deuxième samedi de juin (vendredi 12 juin 2026) : b) rivière Sioulet, communes de Miremont et de Saint-Jacq",
+   "citation": "b) rivière Sioulet, communes de Miremont et de Saint-Jacques-d’Ambur : du poste de secours de la plage du Pont du Bouchet rive gauche en aval et de la confluence Sioule - Sioulet rive droite en aval,",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -3964,7 +3965,8 @@
      "version": "2025-12-15"
     },
     "citation": "b) rivière Sioulet, communes de Miremont et de Saint-Jacques-d’Ambur : du poste de secours de la plage du Pont du Bouchet rive gauche en aval et de la confluence Sioule - Sioulet rive droite en aval,"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "63-toutes-carpe_nuit-bort-01",
@@ -10895,7 +10897,7 @@
     "version": "2025-12-19"
    },
    "citation": "la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -10907,7 +10909,8 @@
      "version": "2025-12-19"
     },
     "citation": "pendant cette même période, la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "63-toutes-interdit-s0-poisson-mort",
@@ -10934,7 +10937,7 @@
     "version": "2025-12-19"
    },
    "citation": "la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -10946,7 +10949,8 @@
      "version": "2025-12-19"
     },
     "citation": "pendant cette même période, la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "63-toutes-interdit-s0-poisson-artificiel",
@@ -10973,7 +10977,7 @@
     "version": "2025-12-19"
    },
    "citation": "la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -10985,7 +10989,8 @@
      "version": "2025-12-19"
     },
     "citation": "pendant cette même période, la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "63-toutes-interdit-s0-appats-manies",
@@ -11012,7 +11017,7 @@
     "version": "2025-12-19"
    },
    "citation": "la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -11024,7 +11029,8 @@
      "version": "2025-12-19"
     },
     "citation": "pendant cette même période, la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "63-toutes-interdit-s0-cuiller",
@@ -11051,7 +11057,7 @@
     "version": "2025-12-19"
    },
    "citation": "la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -11063,7 +11069,8 @@
      "version": "2025-12-19"
     },
     "citation": "pendant cette même période, la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "63-toutes-interdit-s0-autres-leurres",
@@ -11090,7 +11097,7 @@
     "version": "2025-12-19"
    },
    "citation": "la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -11102,7 +11109,8 @@
      "version": "2025-12-19"
     },
     "citation": "pendant cette même période, la pêche au vif, au poisson mort ou artificiel, aux appâts maniés, à la cuiller et autres leurres est interdite sur les secteurs ci-dessous"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "63-toutes-interdit-s2-vif",

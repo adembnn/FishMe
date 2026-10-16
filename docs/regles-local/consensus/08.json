@@ -709,7 +709,7 @@
     "version": "2025-12-31"
    },
    "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -721,7 +721,8 @@
      "version": "2025-12-31"
     },
     "citation": "Le fleuve Meuse en rive gauche du ruisseau de Létanne au ruisseau des Moulins"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "08-carpe-nuit-meuse-moulins-frontiere",
@@ -748,7 +749,7 @@
     "version": "2025-12-31"
    },
    "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -760,7 +761,8 @@
      "version": "2025-12-31"
     },
     "citation": "Le fleuve Meuse en rive gauche du ruisseau de Létanne au ruisseau des Moulins"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "08-carpe-nuit-canal-de-la-meuse",
@@ -787,7 +789,7 @@
     "version": "2025-12-31"
    },
    "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -799,7 +801,8 @@
      "version": "2025-12-31"
     },
     "citation": "Le fleuve Meuse en rive gauche du ruisseau de Létanne au ruisseau des Moulins"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "08-carpe-nuit-ballastiere-la-culatte",
@@ -825,7 +828,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-31"
    },
-   "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+   "citation": "la ballastière La Culatte VILLERS-SEMEUSE Chemin des pêcheurs, autorisée uniquement aux Ateliers Pêche Nature du département",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -838,7 +841,8 @@
      "version": "2025-12-31"
     },
     "citation": "la ballastière La Culatte VILLERS-SEMEUSE Chemin des pêcheurs, autorisée uniquement aux Ateliers Pêche Nature du département"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "08-carpe-nuit-semoy",
@@ -864,7 +868,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-31"
    },
-   "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
+   "citation": "la rivière Semoy des rives droite et gauche de l'entrée de la Semoy en France à la confluence avec la Meuse.",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -877,7 +881,8 @@
      "version": "2025-12-31"
     },
     "citation": "la rivière Semoy des rives droite et gauche de l'entrée de la Semoy en France à la confluence avec la Meuse."
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "08-carpe-nuit-aisne",
@@ -904,7 +909,7 @@
     "version": "2025-12-31"
    },
    "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -916,7 +921,8 @@
      "version": "2025-12-31"
     },
     "citation": "la rivière Aisne rives droite et gauche de la limite du département des Ardennes et de la Marne à la limite du département des Ardennes et de l'Aisne."
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "08-carpe-nuit-canal-lateral-a-l-aisne",
@@ -943,7 +949,7 @@
     "version": "2025-12-31"
    },
    "citation": "La pêche de nuit de la carpe est autorisée : toute l'année sur les parcours spécifiques listés à l'annexe 1 du présent arrêté",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -955,7 +961,8 @@
      "version": "2025-12-31"
     },
     "citation": "la rivière Aisne rives droite et gauche de la limite du département des Ardennes et de la Marne à la limite du département des Ardennes et de l'Aisne."
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "08-carpe-nuit-lac-des-vieilles-forges",

@@ -2235,7 +2235,7 @@
     "version": "2025-12-22"
    },
    "citation": "tout poisson capturé doit être remis à l'eau immédiatement, à l'exception des espèces listées à l’article 5.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -2247,7 +2247,8 @@
      "version": "2025-12-22"
     },
     "citation": "tout poisson capturé doit être remis à l'eau immédiatement, à l'exception des espèces listées à l’article 5"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "90-lignes-cat1",

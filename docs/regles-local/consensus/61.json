@@ -4361,7 +4361,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-02-25"
    },
-   "citation": "la pêche de la carpe est autorisée à toute heure, y compris la nuit :",
+   "citation": "la pêche de la carpe est autorisée à toute heure, y compris la nuit",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -4374,7 +4374,8 @@
      "version": "2025-02-25"
     },
     "citation": "la pêche de la carpe est autorisée à toute heure, y compris la nuit"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "61-2110-carpe-nuit-remise-sarthe-alencon",

@@ -716,7 +716,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-18"
    },
-   "citation": "Brochet : du 1° janvier au dernier dimanche de janvier inclus et du dernier samedi d'avril au 31 décembre inclus *:",
+   "citation": "Brochet : du 1° janvier au dernier dimanche de janvier inclus et du dernier samedi",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -729,7 +729,8 @@
      "version": "2025-12-18"
     },
     "citation": "Brochet : du 1° janvier au dernier dimanche de janvier inclus et du dernier samedi"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "81-2151-ouverture-2e-cat-fin-d-annee",
@@ -758,7 +759,7 @@
     "version": "2025-12-18"
    },
    "citation": "Brochet : du 1° janvier au dernier dimanche de janvier inclus et du dernier samedi d'avril au 31 décembre inclus *:",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -770,7 +771,8 @@
      "version": "2025-12-18"
     },
     "citation": "du dernier samedi d'avril au 31 décembre inclus"
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "81-2195-ouverture-2e-cat-janvier",
@@ -2318,7 +2320,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-18"
    },
-   "citation": "Black-bass, Brochet, Sandre : 3 (toutes espèces confondues dont 2 Brochets maximum) sauf sur les lacs suivants :",
+   "citation": "Black-bass, Brochet, Sandre : 3 (toutes espèces confondues dont 2 Brochets maximum) sauf sur les lacs suivants",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -2331,7 +2333,8 @@
      "version": "2025-12-18"
     },
     "citation": "Black-bass, Brochet, Sandre : 3 (toutes espèces confondues dont 2 Brochets maximum) sauf sur les lacs suivants"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "81-2151-quota_jour-2e-cat",
@@ -2359,7 +2362,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-18"
    },
-   "citation": "Black-bass, Brochet, Sandre : 3 (toutes espèces confondues dont 2 Brochets maximum) sauf sur les lacs suivants :",
+   "citation": "dont 2 Brochets maximum",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -2372,7 +2375,8 @@
      "version": "2025-12-18"
     },
     "citation": "dont 2 Brochets maximum"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "81-2151-2195-quota_jour-bancalie",
@@ -6484,7 +6488,7 @@
     "lu_le": "2026-10-15",
     "version": "2018-10-26"
    },
-   "citation": "la pêche est interdite en dehors des temps d'ouverture suivants : - Ouverture le deuxième samedi de mars ; - Fermeture le premier dimanche de novembre.",
+   "citation": "Ouverture le deuxième samedi de mars ; - Fermeture le premier dimanche de novembre.",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -6497,7 +6501,8 @@
      "version": "2018-10-26"
     },
     "citation": "Ouverture le deuxième samedi de mars ; - Fermeture le premier dimanche de novembre."
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "81-toutes-mode_peche-4-lignes",
@@ -7932,7 +7937,7 @@
     "lu_le": "2026-10-15",
     "version": "2020-01-13"
    },
-   "citation": "le ruisseau de Rieucros :",
+   "citation": "le ruisseau de Rieucros",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -7945,7 +7950,8 @@
      "version": "2020-01-13"
     },
     "citation": "le ruisseau de Rieucros"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "81-toutes-categorie-fun-ruisseau",

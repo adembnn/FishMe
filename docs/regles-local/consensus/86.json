@@ -2189,7 +2189,7 @@
     "version": "2025-11-25"
    },
    "citation": "Brochet 0,6",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2201,7 +2201,8 @@
      "version": "2025-11-25"
     },
     "citation": "Brochet 0,6"
-   }
+   },
+   "citation_a_revoir": "nombre 60 absent"
   },
   {
    "id": "86-grande-alose-taille_min-dep",
@@ -2230,7 +2231,7 @@
     "version": "2025-11-25"
    },
    "citation": "Aloses 0,3",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2242,7 +2243,8 @@
      "version": "2025-11-25"
     },
     "citation": "Aloses 0,3"
-   }
+   },
+   "citation_a_revoir": "nombre 30 absent"
   },
   {
    "id": "86-alose-feinte-taille_min-dep",
@@ -2271,7 +2273,7 @@
     "version": "2025-11-25"
    },
    "citation": "Aloses 0,3",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2283,7 +2285,8 @@
      "version": "2025-11-25"
     },
     "citation": "Aloses 0,3"
-   }
+   },
+   "citation_a_revoir": "nombre 30 absent"
   },
   {
    "id": "86-anguille-jaune-taille_min-dep",
@@ -2476,7 +2479,7 @@
     "version": "2025-11-25"
    },
    "citation": "Sandre 0,5",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2488,7 +2491,8 @@
      "version": "2025-11-25"
     },
     "citation": "Sandre 0,5"
-   }
+   },
+   "citation_a_revoir": "nombre 50 absent"
   },
   {
    "id": "86-salmonides-quota_jour-dep",
@@ -4735,7 +4739,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Nonnes Châtellerault 3,5 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -4748,7 +4752,8 @@
      "version": "2025-11-25"
     },
     "citation": "Nonnes Châtellerault 3,5 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-bracon-naintre",
@@ -4776,7 +4781,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Bracon Naintré 2,7 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -4789,7 +4794,8 @@
      "version": "2025-11-25"
     },
     "citation": "Bracon Naintré 2,7 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-etang-communal-valence-en-poitou",
@@ -4817,7 +4823,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Étang communal Valence-en-Poitou (Vaux) 0,65 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -4830,7 +4836,8 @@
      "version": "2025-11-25"
     },
     "citation": "Étang communal Valence-en-Poitou (Vaux) 0,65 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-etang-du-breuil-valence-en-poito",
@@ -4858,7 +4865,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Étang du Breuil Valence-en-Poitou (Payré) 8 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -4871,7 +4878,8 @@
      "version": "2025-11-25"
     },
     "citation": "Étang du Breuil Valence-en-Poitou (Payré) 8 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-chapelle-montreuil-boivre-la-val",
@@ -4899,7 +4907,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Chapelle-Montreuil Boivre-la-Vallée 1,5 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -4912,7 +4920,8 @@
      "version": "2025-11-25"
     },
     "citation": "Chapelle-Montreuil Boivre-la-Vallée 1,5 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-fleix-ayron",
@@ -4940,7 +4949,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Fleix Ayron 14 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -4953,7 +4962,8 @@
      "version": "2025-11-25"
     },
     "citation": "Fleix Ayron 14 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-mercure-massognes",
@@ -4981,7 +4991,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Mercure Massognes 1 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -4994,7 +5004,8 @@
      "version": "2025-11-25"
     },
     "citation": "Mercure Massognes 1 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-le-grand-etang-la-puye",
@@ -5022,7 +5033,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Le Grand Étang La Puye 10 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -5035,7 +5046,8 @@
      "version": "2025-11-25"
     },
     "citation": "Le Grand Étang La Puye 10 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-verneuil-gencay",
@@ -5063,7 +5075,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Verneuil Gençay 2,5 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -5076,7 +5088,8 @@
      "version": "2025-11-25"
     },
     "citation": "Verneuil Gençay 2,5 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-beausoleil-loudun",
@@ -5104,7 +5117,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Beausoleil Loudun 1,5 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -5117,7 +5130,8 @@
      "version": "2025-11-25"
     },
     "citation": "Beausoleil Loudun 1,5 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-montreuil-bonnin-boivre-la-valle",
@@ -5145,7 +5159,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Montreuil-Bonnin Boivre-la-Vallée 1 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -5158,7 +5172,8 @@
      "version": "2025-11-25"
     },
     "citation": "Montreuil-Bonnin Boivre-la-Vallée 1 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-etang-communal-roches-premarie-a",
@@ -5186,7 +5201,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Étang communal Roches-Prémarie-Andillé 1 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -5199,7 +5214,8 @@
      "version": "2025-11-25"
     },
     "citation": "Étang communal Roches-Prémarie-Andillé 1 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-la-folie-poitiers",
@@ -5227,7 +5243,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "La Folie Poitiers 2,2 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -5240,7 +5256,8 @@
      "version": "2025-11-25"
     },
     "citation": "La Folie Poitiers 2,2 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-etang-communal-chateau-larcher",
@@ -5268,7 +5285,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Étang communal Château-Larcher 2,2 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -5281,7 +5298,8 @@
      "version": "2025-11-25"
     },
     "citation": "Étang communal Château-Larcher 2,2 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-2110-carpe_nuit-carpe-nuit-plan-etang-du-bourg-civaux",
@@ -5309,7 +5327,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-25"
    },
-   "citation": "Liste des plans d'eau où la pêche à la carpe de nuit et son maintien en captivité sont autorisés (attention cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA)",
+   "citation": "Étang du bourg Civaux 2,8 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -5322,7 +5340,8 @@
      "version": "2025-11-25"
     },
     "citation": "Étang du bourg Civaux 2,8 ha : cette autorisation n'est valable que pendant les enduro-carpes autorisés par la FDAAPPMA"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "86-toutes-reserve-reserve-frayere-du-moulin-fargan",

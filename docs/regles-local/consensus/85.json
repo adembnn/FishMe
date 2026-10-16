@@ -428,7 +428,7 @@
     "lu_le": "2026-10-16",
     "version": "2023-03-20"
    },
-   "citation": "Toutefois, pour le bassin versant de la Sèvre Niortaise, l'usage d'un filet de type droit, trémail, araignée, épervier par pêcheur amateur est autorisé du 16 juin au dernier dimanche de janvier.",
+   "citation": "l'usage d'un filet de type droit, trémail, araignée, épervier par pêcheur amateur est autorisé du 16 juin au dernier dimanche de janvier. La maille minimale est de 70 millimètres",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -442,7 +442,8 @@
     },
     "citation": "l'usage d'un filet de type droit, trémail, araignée, épervier par pêcheur amateur est autorisé du 16 juin au dernier dimanche de janvier. La maille minimale est de 70 millimètres"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_de": "lecture_b"
   },
   {
    "id": "85-toutes-mode_peche-filet-sevre-niortaise-juin-decembre",
@@ -469,7 +470,7 @@
     "lu_le": "2026-10-16",
     "version": "2023-03-20"
    },
-   "citation": "Toutefois, pour le bassin versant de la Sèvre Niortaise, l'usage d'un filet de type droit, trémail, araignée, épervier par pêcheur amateur est autorisé du 16 juin au dernier dimanche de janvier.",
+   "citation": "l'usage d'un filet de type droit, trémail, araignée, épervier par pêcheur amateur est autorisé du 16 juin au dernier dimanche de janvier. La maille minimale est de 70 millimètres",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -483,7 +484,8 @@
     },
     "citation": "l'usage d'un filet de type droit, trémail, araignée, épervier par pêcheur amateur est autorisé du 16 juin au dernier dimanche de janvier. La maille minimale est de 70 millimètres"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_de": "lecture_b"
   },
   {
    "id": "85-toutes-limite_eau_douce-sevre-niortaise",
@@ -1310,7 +1312,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1323,7 +1325,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n2",
@@ -1350,7 +1353,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1363,7 +1366,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n3",
@@ -1390,7 +1394,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1403,7 +1407,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n4",
@@ -1430,7 +1435,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1443,7 +1448,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n5",
@@ -1470,7 +1476,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1483,7 +1489,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n6",
@@ -1510,7 +1517,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1523,7 +1530,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n7",
@@ -1550,7 +1558,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1563,7 +1571,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n8",
@@ -1590,7 +1599,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1603,7 +1612,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n9",
@@ -1630,7 +1640,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1643,7 +1653,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-marillet-n10",
@@ -1670,7 +1681,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1683,7 +1694,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-la-vouraie-n1",
@@ -1710,7 +1722,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1723,7 +1735,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-la-vouraie-n2",
@@ -1750,7 +1763,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1763,7 +1776,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-la-vouraie-n3",
@@ -1790,7 +1804,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1803,7 +1817,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-la-vouraie-n4",
@@ -1830,7 +1845,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1843,7 +1858,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-jaunay-n1",
@@ -1870,7 +1886,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1883,7 +1899,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-jaunay-n2",
@@ -1910,7 +1927,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1923,7 +1940,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-jaunay-n3",
@@ -1950,7 +1968,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1963,7 +1981,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-la-bultiere-n1",
@@ -1990,7 +2009,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2003,7 +2022,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-la-bultiere-n2",
@@ -2030,7 +2050,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2043,7 +2063,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-rochereau-n1",
@@ -2070,7 +2091,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2083,7 +2104,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-rochereau-n2",
@@ -2110,7 +2132,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2123,7 +2145,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-rochereau-n3",
@@ -2150,7 +2173,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2163,7 +2186,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-langle-guignard-n1",
@@ -2190,7 +2214,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2203,7 +2227,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lacs-de-sorin-n1",
@@ -2230,7 +2255,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2243,7 +2268,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-dalbert-n1",
@@ -2270,7 +2296,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2283,7 +2309,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-dalbert-n2",
@@ -2310,7 +2337,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2323,7 +2350,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-pierre-brune-n1",
@@ -2350,7 +2378,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2363,7 +2391,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-mervent-n1",
@@ -2390,7 +2419,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2403,7 +2432,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-gue-gorand-n1",
@@ -2430,7 +2460,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2443,7 +2473,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-de-moulin-papon-n1",
@@ -2470,7 +2501,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2483,7 +2514,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-du-graon-n1",
@@ -2510,7 +2542,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2523,7 +2555,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lac-dapremont-n1",
@@ -2550,7 +2583,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2563,7 +2596,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n1",
@@ -2590,7 +2624,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2603,7 +2637,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n2",
@@ -2630,7 +2665,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2643,7 +2678,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n3",
@@ -2670,7 +2706,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2683,7 +2719,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n4",
@@ -2710,7 +2747,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2723,7 +2760,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n5",
@@ -2750,7 +2788,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2763,7 +2801,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n6",
@@ -2790,7 +2829,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2803,7 +2842,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n7",
@@ -2830,7 +2870,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2843,7 +2883,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n8",
@@ -2870,7 +2911,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2883,7 +2924,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-sevre-nantaise-n9",
@@ -2910,7 +2952,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2923,7 +2965,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-reserve-frayere-sandre-lay-n1",
@@ -3310,7 +3353,7 @@
     "version": "2021-12-09"
    },
    "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai de chaque année",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3323,7 +3366,8 @@
     },
     "citation": "La pêche par tous moyens, sur toutes espèces, est interdite sur les zones de frayères répertoriées et listées ci-après, entre le 1er février et le 31 mai"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "85-toutes-ouverture-lignes",
@@ -3433,7 +3477,7 @@
     "version": "2023-03-20"
    },
    "citation": "- 3 nasses à poissons (hors anguille)",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -3446,7 +3490,8 @@
     },
     "citation": "- 3 nasses à poissons {hors anguille)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_a_revoir": "nombre 27 absent"
   },
   {
    "id": "85-toutes-mode_peche-lignes-fond",

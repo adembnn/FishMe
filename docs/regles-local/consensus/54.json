@@ -6988,7 +6988,7 @@
     "lu_le": "2026-10-15",
     "version": "2024-11-28"
    },
-   "citation": "Le nombre maximal de captures de salmonidés (truites, corégone, omble chevalier) autorisé par",
+   "citation": "Le nombre maximal de captures de salmonidés (truites, corégone, omble chevalier) autorisé par pêcheur et par jour est limité à 6.",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -7001,7 +7001,8 @@
      "version": "2024-11-28"
     },
     "citation": "Le nombre maximal de captures de salmonidés (truites, corégone, omble chevalier) autorisé par pêcheur et par jour est limité à 6."
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "54-pierre-percee-carnassiers-quota_jour",
@@ -7031,7 +7032,7 @@
     "lu_le": "2026-10-15",
     "version": "2024-11-28"
    },
-   "citation": "Le nombre maximal de captures de carnassiers (sandre, brochet) autorisé par pêcheur et par jour est",
+   "citation": "Le nombre maximal de captures de carnassiers (sandre, brochet) autorisé par pêcheur et par jour est limité à 1.",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -7044,7 +7045,8 @@
      "version": "2024-11-28"
     },
     "citation": "Le nombre maximal de captures de carnassiers (sandre, brochet) autorisé par pêcheur et par jour est limité à 1."
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "54-pierre-percee-toutes-mode_peche-deux-hamecons",
@@ -8109,7 +8111,7 @@
     "lu_le": "2026-10-16",
     "version": "2025-12-18"
    },
-   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 10 et samedi 11 avril",
+   "citation": "vendredi 10 et samedi 11 avril",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -8122,7 +8124,8 @@
      "version": "2025-12-18"
     },
     "citation": "vendredi 10 et samedi 11 avril"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "54-carpe-nuit-plan-eau-thiriet-mai",
@@ -8150,7 +8153,7 @@
     "lu_le": "2026-10-16",
     "version": "2025-12-18"
    },
-   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 8 et samedi 9 mai",
+   "citation": "vendredi 8 et samedi 9 mai",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -8163,7 +8166,8 @@
      "version": "2025-12-18"
     },
     "citation": "vendredi 8 et samedi 9 mai"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "54-carpe-nuit-plan-eau-thiriet-juin",
@@ -8191,7 +8195,7 @@
     "lu_le": "2026-10-16",
     "version": "2025-12-18"
    },
-   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 5 et samedi 6 juin",
+   "citation": "vendredi 5 et samedi 6 juin",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -8204,7 +8208,8 @@
      "version": "2025-12-18"
     },
     "citation": "vendredi 5 et samedi 6 juin"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "54-carpe-nuit-plan-eau-thiriet-juillet",
@@ -8232,7 +8237,7 @@
     "lu_le": "2026-10-16",
     "version": "2025-12-18"
    },
-   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 3 et samedi 4 juillet",
+   "citation": "vendredi 3 et samedi 4 juillet",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -8245,7 +8250,8 @@
      "version": "2025-12-18"
     },
     "citation": "vendredi 3 et samedi 4 juillet"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "54-carpe-nuit-plan-eau-thiriet-août",
@@ -8273,7 +8279,7 @@
     "lu_le": "2026-10-16",
     "version": "2025-12-18"
    },
-   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 7 et samedi 8 août",
+   "citation": "vendredi 7 et samedi 8 août",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -8286,7 +8292,8 @@
      "version": "2025-12-18"
     },
     "citation": "vendredi 7 et samedi 8 août"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "54-carpe-nuit-plan-eau-thiriet-septembre",
@@ -8314,7 +8321,7 @@
     "lu_le": "2026-10-16",
     "version": "2025-12-18"
    },
-   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 4 et samedi 5 septembre",
+   "citation": "vendredi 4 et samedi 5 septembre",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -8327,7 +8334,8 @@
      "version": "2025-12-18"
     },
     "citation": "vendredi 4 et samedi 5 septembre"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "54-carpe-nuit-plan-eau-thiriet-octobre",
@@ -8355,7 +8363,7 @@
     "lu_le": "2026-10-16",
     "version": "2025-12-18"
    },
-   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 2 et samedi 3 octobre",
+   "citation": "vendredi 2 et samedi 3 octobre",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -8368,7 +8376,8 @@
      "version": "2025-12-18"
     },
     "citation": "vendredi 2 et samedi 3 octobre"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "54-2110-transport_vivant-nuit",

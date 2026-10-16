@@ -1502,7 +1502,7 @@
     "version": "2025-11-20"
    },
    "citation": "Espèces dont la pêche est interdite toute l’année :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1514,7 +1514,8 @@
      "version": "2025-11-20"
     },
     "citation": "• alose feinte ; • grande alose ; • anguille argentée ; • écrevisse à pattes blanches ; • lamproie marine ; • saumon atlantique ; • truite de mer."
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "82-grande-alose-interdit-toute-annee",
@@ -1543,7 +1544,7 @@
     "version": "2025-11-20"
    },
    "citation": "Espèces dont la pêche est interdite toute l’année :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1555,7 +1556,8 @@
      "version": "2025-11-20"
     },
     "citation": "• alose feinte ; • grande alose ; • anguille argentée ; • écrevisse à pattes blanches ; • lamproie marine ; • saumon atlantique ; • truite de mer."
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "82-anguille-argentee-interdit-toute-annee",
@@ -1584,7 +1586,7 @@
     "version": "2025-11-20"
    },
    "citation": "Espèces dont la pêche est interdite toute l’année :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1596,7 +1598,8 @@
      "version": "2025-11-20"
     },
     "citation": "• alose feinte ; • grande alose ; • anguille argentée ; • écrevisse à pattes blanches ; • lamproie marine ; • saumon atlantique ; • truite de mer."
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "82-ecrevisse-pattes-blanches-interdit-toute-annee",
@@ -1625,7 +1628,7 @@
     "version": "2025-11-20"
    },
    "citation": "Espèces dont la pêche est interdite toute l’année :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1637,7 +1640,8 @@
      "version": "2025-11-20"
     },
     "citation": "• alose feinte ; • grande alose ; • anguille argentée ; • écrevisse à pattes blanches ; • lamproie marine ; • saumon atlantique ; • truite de mer."
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "82-lamproie-marine-interdit-toute-annee",
@@ -1666,7 +1670,7 @@
     "version": "2025-11-20"
    },
    "citation": "Espèces dont la pêche est interdite toute l’année :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1678,7 +1682,8 @@
      "version": "2025-11-20"
     },
     "citation": "• alose feinte ; • grande alose ; • anguille argentée ; • écrevisse à pattes blanches ; • lamproie marine ; • saumon atlantique ; • truite de mer."
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "82-saumon-atlantique-interdit-toute-annee",
@@ -1707,7 +1712,7 @@
     "version": "2025-11-20"
    },
    "citation": "Espèces dont la pêche est interdite toute l’année :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1719,7 +1724,8 @@
      "version": "2025-11-20"
     },
     "citation": "• alose feinte ; • grande alose ; • anguille argentée ; • écrevisse à pattes blanches ; • lamproie marine ; • saumon atlantique ; • truite de mer."
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "82-truite-de-mer-interdit-toute-annee",
@@ -1748,7 +1754,7 @@
     "version": "2025-11-20"
    },
    "citation": "Espèces dont la pêche est interdite toute l’année :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1760,7 +1766,8 @@
      "version": "2025-11-20"
     },
     "citation": "• alose feinte ; • grande alose ; • anguille argentée ; • écrevisse à pattes blanches ; • lamproie marine ; • saumon atlantique ; • truite de mer."
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "82-horaire-demi-heure",
@@ -3708,7 +3715,8 @@
      "version": "projet du 2025-10-07, non signé"
     },
     "citation": "Obligation de remettre immédiatement à l’eau tout poisson capturé dans les plans d’eau ci-après. Maintien dans une bourriche ou un vivier interdit."
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "82-no-kill-toutes-especes-courbieu",
@@ -3747,7 +3755,8 @@
      "version": "projet du 2025-10-07, non signé"
     },
     "citation": "Obligation de remettre immédiatement à l’eau tout poisson capturé dans les plans d’eau ci-après. Maintien dans une bourriche ou un vivier interdit."
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "82-no-kill-toutes-especes-clairefont",
@@ -3786,7 +3795,8 @@
      "version": "projet du 2025-10-07, non signé"
     },
     "citation": "Obligation de remettre immédiatement à l’eau tout poisson capturé dans les plans d’eau ci-après. Maintien dans une bourriche ou un vivier interdit."
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "82-no-kill-toutes-especes-rejus",
@@ -3825,7 +3835,8 @@
      "version": "projet du 2025-10-07, non signé"
     },
     "citation": "Obligation de remettre immédiatement à l’eau tout poisson capturé dans les plans d’eau ci-après. Maintien dans une bourriche ou un vivier interdit."
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "82-no-kill-toutes-especes-gouyre",
@@ -3864,7 +3875,8 @@
      "version": "projet du 2025-10-07, non signé"
     },
     "citation": "Obligation de remettre immédiatement à l’eau tout poisson capturé dans les plans d’eau ci-après. Maintien dans une bourriche ou un vivier interdit."
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "82-no-kill-toutes-especes-clare",

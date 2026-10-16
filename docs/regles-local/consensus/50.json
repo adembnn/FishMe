@@ -4669,7 +4669,7 @@
     "lu_le": "2026-10-15",
     "version": "2026-02-19"
    },
-   "citation": "La navigation (barque, floatube...) est interdite pour la pratique de la pêche sur les canaux, étang et lac suivants : Canal du Gravier ; Canal des Espagnols ; Canal du Vieux-Bout ; Canal d'Auvers ;",
+   "citation": "Le bateau amorceur est interdit pour la pratique de la pêche sur le Lac des Bruyères.",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -4682,7 +4682,8 @@
      "version": "2026-02-19"
     },
     "citation": "Le bateau amorceur est interdit pour la pratique de la pêche sur le Lac des Bruyères."
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "50-embarcation-motorisee-interdit-etang-du-goulet",
@@ -7205,7 +7206,7 @@
     "version": "2026-02-19"
    },
    "citation": "du dernier dimanche de janvier exclu au 1er samedi de juin exclu en rive droite de la commune de Saint-Sauveur-le-Vicomte sur les parcelles suivantes B13, B14, B15",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7217,7 +7218,8 @@
      "version": "2026-02-19"
     },
     "citation": "La pratique de la pêche est interdite temporairement sur les secteurs suivants : du dernier dimanche de janvier exclu au 1er samedi de juin exclu"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "50-reserve-douve-infra-annuelle-secteur-2",
@@ -7244,7 +7246,7 @@
     "version": "2026-02-19"
    },
    "citation": "du dernier dimanche de janvier exclu au 1er samedi de juin exclu en rive gauche sur la commune de Rauville-la-Place sur les parcelles suivantes D279, D293, D294, D321",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7256,7 +7258,8 @@
      "version": "2026-02-19"
     },
     "citation": "La pratique de la pêche est interdite temporairement sur les secteurs suivants : du dernier dimanche de janvier exclu au 1er samedi de juin exclu"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "50-reserve-douve-infra-annuelle-secteur-3",

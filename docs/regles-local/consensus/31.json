@@ -758,7 +758,7 @@
     "version": "2025-11-24"
    },
    "citation": "Écrevisse (hormis l’écrevisse à pattes blanches mentionnée dans l’article 1) : pas d’ouverture sauf du 14 mars au 20 septembre 2026 sur :",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -770,7 +770,8 @@
      "version": "2025-11-24"
     },
     "citation": "pas d’ouverture sauf du 14 mars au 20 septembre 2026 sur"
-   }
+   },
+   "citation_a_revoir": "en-tête de liste"
   },
   {
    "id": "31-ecrevisse-ouverture-bassin-du-sor-secteur-de-revel",
@@ -3250,7 +3251,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Ger (du pont de la RD 26 sur la commune de Soueich jusqu'à la confluence Ger/Job sur la commune de Lespiteau",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3262,7 +3263,8 @@
      "version": "2025-11-24"
     },
     "citation": "23 cm : - sur le Ger (du pont de la RD 26 sur la commune de Soueich jusqu'à la confluence Ger/Job sur la commune de Lespiteau"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-ger-soueich-lespiteau-du-pont-de-la-rd-2",
@@ -3291,7 +3293,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Ger (du pont de la RD 26 sur la commune de Soueich jusqu'à la confluence Ger/Job sur la commune de Lespiteau",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3303,7 +3305,8 @@
      "version": "2025-11-24"
     },
     "citation": "23 cm : - sur le Ger (du pont de la RD 26 sur la commune de Soueich jusqu'à la confluence Ger/Job sur la commune de Lespiteau"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-ger-soueich-lespiteau-du-pont-de-la-rd-2",
@@ -3332,7 +3335,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Ger (du pont de la RD 26 sur la commune de Soueich jusqu'à la confluence Ger/Job sur la commune de Lespiteau",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3344,7 +3347,8 @@
      "version": "2025-11-24"
     },
     "citation": "23 cm : - sur le Ger (du pont de la RD 26 sur la commune de Soueich jusqu'à la confluence Ger/Job sur la commune de Lespiteau"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-2221-taille_min-job-de-la-confluence-avec-le-ruisseau-de",
@@ -3373,7 +3377,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Job (de la confluence avec le ruisseau de la Lose jusqu'à la confluence Job/ Ger)",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3385,7 +3389,8 @@
      "version": "2025-11-24"
     },
     "citation": "- sur le Job (de la confluence avec le ruisseau de la Lose jusqu'à la confluence Job/ Ger)"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-job-de-la-confluence-avec-le-ruisseau-de",
@@ -3414,7 +3419,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Job (de la confluence avec le ruisseau de la Lose jusqu'à la confluence Job/ Ger)",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3426,7 +3431,8 @@
      "version": "2025-11-24"
     },
     "citation": "- sur le Job (de la confluence avec le ruisseau de la Lose jusqu'à la confluence Job/ Ger)"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-job-de-la-confluence-avec-le-ruisseau-de",
@@ -3455,7 +3461,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Job (de la confluence avec le ruisseau de la Lose jusqu'à la confluence Job/ Ger)",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3467,7 +3473,8 @@
      "version": "2025-11-24"
     },
     "citation": "- sur le Job (de la confluence avec le ruisseau de la Lose jusqu'à la confluence Job/ Ger)"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-2221-taille_min-garonne",
@@ -3496,7 +3503,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3508,7 +3515,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-garonne",
@@ -3537,7 +3545,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3549,7 +3557,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-garonne",
@@ -3578,7 +3587,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3590,7 +3599,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-2221-taille_min-neste",
@@ -3619,7 +3629,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3631,7 +3641,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-neste",
@@ -3660,7 +3671,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3672,7 +3683,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-neste",
@@ -3701,7 +3713,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3713,7 +3725,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-2221-taille_min-lacs-de-la-vallee-d-oo",
@@ -3742,7 +3755,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3754,7 +3767,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-lacs-de-la-vallee-d-oo",
@@ -3783,7 +3797,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3795,7 +3809,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-lacs-de-la-vallee-d-oo",
@@ -3824,7 +3839,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3836,7 +3851,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-2221-taille_min-ruisseaux-en-amont-du-lac-d-oo",
@@ -3865,7 +3881,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3877,7 +3893,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-ruisseaux-en-amont-du-lac-d-oo",
@@ -3906,7 +3923,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3918,7 +3935,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-ruisseaux-en-amont-du-lac-d-oo",
@@ -3947,7 +3965,7 @@
     "version": "2025-11-24"
    },
    "citation": "dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -3959,7 +3977,8 @@
      "version": "2025-11-24"
     },
     "citation": "- dans la Garonne, la Neste et dans les lacs de la Vallée d'Oô et ruisseaux en amont du lac d'Oô."
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-2221-taille_min-pique-du-barrage-de-luret-a-la-confluenc",
@@ -3988,7 +4007,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur la Pique ( du barrage de Luret jusqu’à la confluence avec la Garonne)",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4000,7 +4019,8 @@
      "version": "2025-11-24"
     },
     "citation": "- sur la Pique ( du barrage de Luret jusqu’à la confluence avec la Garonne)"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-pique-du-barrage-de-luret-a-la-confluenc",
@@ -4029,7 +4049,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur la Pique ( du barrage de Luret jusqu’à la confluence avec la Garonne)",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4041,7 +4061,8 @@
      "version": "2025-11-24"
     },
     "citation": "- sur la Pique ( du barrage de Luret jusqu’à la confluence avec la Garonne)"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-pique-du-barrage-de-luret-a-la-confluenc",
@@ -4070,7 +4091,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur la Pique ( du barrage de Luret jusqu’à la confluence avec la Garonne)",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4082,7 +4103,8 @@
      "version": "2025-11-24"
     },
     "citation": "- sur la Pique ( du barrage de Luret jusqu’à la confluence avec la Garonne)"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "31-2221-taille_min-ger-et-ses-affluents-en-amont-du-pont-de",
@@ -4111,7 +4133,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Ger et ses affluents en amont du pont de Turon (RD 5 A, commune de Sengouagnet),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4123,7 +4145,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-ger-et-ses-affluents-en-amont-du-pont-de",
@@ -4152,7 +4175,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Ger et ses affluents en amont du pont de Turon (RD 5 A, commune de Sengouagnet),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4164,7 +4187,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-ger-et-ses-affluents-en-amont-du-pont-de",
@@ -4193,7 +4217,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Ger et ses affluents en amont du pont de Turon (RD 5 A, commune de Sengouagnet),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4205,7 +4229,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-2221-taille_min-job-et-ses-affluents-en-amont-de-la-digu",
@@ -4234,7 +4259,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Job et ses affluents en amont de la digue de la Bouche (commune d'Izaut-de-l'Hôtel),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4246,7 +4271,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-job-et-ses-affluents-en-amont-de-la-digu",
@@ -4275,7 +4301,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Job et ses affluents en amont de la digue de la Bouche (commune d'Izaut-de-l'Hôtel),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4287,7 +4313,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-job-et-ses-affluents-en-amont-de-la-digu",
@@ -4316,7 +4343,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le Job et ses affluents en amont de la digue de la Bouche (commune d'Izaut-de-l'Hôtel),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4328,7 +4355,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-2221-taille_min-affluents-de-la-garonne-en-amont-de-la-c",
@@ -4357,7 +4385,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur tous les affluents de la Garonne en amont de la confluence de la Pique,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4369,7 +4397,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur tous les affluents de la Garonne en amont de la confluence de la Pique"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-affluents-de-la-garonne-en-amont-de-la-c",
@@ -4398,7 +4427,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur tous les affluents de la Garonne en amont de la confluence de la Pique,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4410,7 +4439,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur tous les affluents de la Garonne en amont de la confluence de la Pique"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-affluents-de-la-garonne-en-amont-de-la-c",
@@ -4439,7 +4469,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur tous les affluents de la Garonne en amont de la confluence de la Pique,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4451,7 +4481,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur tous les affluents de la Garonne en amont de la confluence de la Pique"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-2221-taille_min-ruisseau-du-burat-marignac",
@@ -4480,7 +4511,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le ruisseau du Burat (commune de Marignac),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4492,7 +4523,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur le ruisseau du Burat (commune de Marignac)"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-ruisseau-du-burat-marignac",
@@ -4521,7 +4553,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le ruisseau du Burat (commune de Marignac),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4533,7 +4565,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur le ruisseau du Burat (commune de Marignac)"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-ruisseau-du-burat-marignac",
@@ -4562,7 +4595,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le ruisseau du Burat (commune de Marignac),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4574,7 +4607,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur le ruisseau du Burat (commune de Marignac)"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-2221-taille_min-arbas-et-ses-affluents-en-amont-de-la-co",
@@ -4603,7 +4637,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur l'Arbas et ses affluents en amont de la confluence du Rieumajou à Barat (commune d'Arbas),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4615,7 +4649,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-arbas-et-ses-affluents-en-amont-de-la-co",
@@ -4644,7 +4679,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur l'Arbas et ses affluents en amont de la confluence du Rieumajou à Barat (commune d'Arbas),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4656,7 +4691,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-arbas-et-ses-affluents-en-amont-de-la-co",
@@ -4685,7 +4721,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur l'Arbas et ses affluents en amont de la confluence du Rieumajou à Barat (commune d'Arbas),",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4697,7 +4733,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-2221-taille_min-pique-en-amont-de-la-confluence-de-l-one",
@@ -4726,7 +4763,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur la Pique en amont de la confluence de l’One,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4738,7 +4775,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur la Pique en amont de la confluence de l’One"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-pique-en-amont-de-la-confluence-de-l-one",
@@ -4767,7 +4805,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur la Pique en amont de la confluence de l’One,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4779,7 +4817,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur la Pique en amont de la confluence de l’One"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-pique-en-amont-de-la-confluence-de-l-one",
@@ -4808,7 +4847,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur la Pique en amont de la confluence de l’One,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4820,7 +4859,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur la Pique en amont de la confluence de l’One"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-2221-taille_min-affluents-de-la-pique",
@@ -4849,7 +4889,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur tous les affluents de la Pique,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4861,7 +4901,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur tous les affluents de la Pique"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-affluents-de-la-pique",
@@ -4890,7 +4931,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur tous les affluents de la Pique,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4902,7 +4943,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur tous les affluents de la Pique"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-affluents-de-la-pique",
@@ -4931,7 +4973,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur tous les affluents de la Pique,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4943,7 +4985,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur tous les affluents de la Pique"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-2221-taille_min-one-et-ses-affluents",
@@ -4972,7 +5015,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur l’One et ses affluents,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4984,7 +5027,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-one-et-ses-affluents",
@@ -5013,7 +5057,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur l’One et ses affluents,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5025,7 +5069,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-one-et-ses-affluents",
@@ -5054,7 +5099,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur l’One et ses affluents,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5066,7 +5111,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur l’One et ses affluents"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-2221-taille_min-ruisseau-de-l-escalere-cierp-gaud",
@@ -5095,7 +5141,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le ruisseau de l’Escalère (commune de Cierp-Gaud).",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5107,7 +5153,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur le ruisseau de l’Escalère (commune de Cierp-Gaud)"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-fontaine-taille_min-ruisseau-de-l-escalere-cierp-gaud",
@@ -5136,7 +5183,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le ruisseau de l’Escalère (commune de Cierp-Gaud).",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5148,7 +5195,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur le ruisseau de l’Escalère (commune de Cierp-Gaud)"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-omble-chevalier-taille_min-ruisseau-de-l-escalere-cierp-gaud",
@@ -5177,7 +5225,7 @@
     "version": "2025-11-24"
    },
    "citation": "sur le ruisseau de l’Escalère (commune de Cierp-Gaud).",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5189,7 +5237,8 @@
      "version": "2025-11-24"
     },
     "citation": "sur le ruisseau de l’Escalère (commune de Cierp-Gaud)"
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "31-2151-taille_min-1",

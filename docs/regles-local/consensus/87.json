@@ -4076,7 +4076,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-20"
    },
-   "citation": "de la vermée et de 6 balances maximum",
+   "citation": "la dimension des mailles est fixée à 10 mm minimum",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -4089,7 +4089,8 @@
      "version": "2025-11-20"
     },
     "citation": "la dimension des mailles est fixée à 10 mm minimum"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "87-mode-peche-vif-vassiere",

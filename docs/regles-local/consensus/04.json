@@ -4003,7 +4003,8 @@
      "version": "2025-12-31"
     },
     "citation": "Sur le territoire des communes de Curbans et de la Saulce, la pêche est interdite à partir des ouvrages ci-après désignés situés à l'aval du barrage EDF de Curbans"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "04-toutes-reserve-curbans-ouvrage-rd-durance",
@@ -6622,7 +6623,7 @@
     "version": "2024-02-07"
    },
    "citation": "de la ligne de sonde (ligne montée sur canne dont l'extrémité est munie d'un plomb et sur laquelle les appâts artificiels, seuls autorisés, sont disposés sur des potences le long de celle-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6634,7 +6635,8 @@
      "version": "2024-02-07"
     },
     "citation": "munie de six hameçons au plus. Une seule ligne de sonde est autorisée par pêcheur."
-   }
+   },
+   "citation_a_revoir": "nombre 6 absent"
   },
   {
    "id": "04-toutes-mode-peche-traine-semaine-sainte-croix",
@@ -7030,7 +7032,7 @@
     "version": "2024-02-07"
    },
    "citation": "de la ligne de sonde (ligne montée sur canne dont l'extrémité est munie d'un plomb et sur laquelle les appâts artificiels, seuls autorisés, sont disposés sur des potences le long de celle-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7042,7 +7044,8 @@
      "version": "2024-02-07"
     },
     "citation": "munie de six hameçons au plus. Une seule ligne de sonde est autorisée par pêcheur."
-   }
+   },
+   "citation_a_revoir": "nombre 6 absent"
   },
   {
    "id": "04-toutes-mode-peche-traine-semaine-quinson",
@@ -7398,7 +7401,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-08"
    },
-   "citation": "Le lac de retenue de Gréoux-les-Bains ;",
+   "citation": "pour lesquels la taille demeure fixée à 0,23 m",
    "statut": "incertain",
    "expire_le": null,
    "remplace": null,
@@ -7411,7 +7414,8 @@
      "version": "2025-12-08"
     },
     "citation": "pour lesquels la taille demeure fixée à 0,23 m"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "04-salmonides-quota-jour-salmonides-greoux-esparron",

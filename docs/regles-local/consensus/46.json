@@ -967,7 +967,7 @@
     "version": "2025-12-15"
    },
    "citation": "- l'Ouysse en amont du gouffre de Thémines, - le Francès,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -979,7 +979,8 @@
      "version": "2025-12-15"
     },
     "citation": "- l'Ouysse en amont du gouffre de Thémines,"
-   }
+   },
+   "citation_a_revoir": "nombre 20 absent"
   },
   {
    "id": "46-2221-taille_min-affluents-du-cele-sauf-le-cele-et-la-sag",
@@ -2641,7 +2642,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-15"
    },
-   "citation": "Lot sur l’ensemble du linéaire de berges en rive droite et rive gauche, à l’exception :",
+   "citation": "sur l’ensemble du linéaire de berges en rive droite et rive gauche",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -2654,7 +2655,8 @@
      "version": "2025-12-15"
     },
     "citation": "sur l’ensemble du linéaire de berges en rive droite et rive gauche"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "46-2110-carpe_nuit-plan-d-eau-de-la-prairie",

@@ -1575,7 +1575,7 @@
     "lu_le": "2026-10-15",
     "version": "2022-12-13"
    },
-   "citation": "Dans les eaux classées en première catégorie, le nombre de captures de brochets autorisé par pêcheur et par",
+   "citation": "Dans les eaux classées en première catégorie, le nombre de captures de brochets autorisé par pêcheur et par jour est fixé à 2.",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -1588,7 +1588,8 @@
      "version": "2022-12-13"
     },
     "citation": "Dans les eaux classées en première catégorie, le nombre de captures de brochets autorisé par pêcheur et par jour est fixé à 2."
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "55-sandre-brochet-quota_jour-cat2",
@@ -4461,7 +4462,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4473,7 +4474,8 @@
      "version": "2023-12-22"
     },
     "citation": "Brochet, Sandre, Carpe, Black-bass | Carpe : Hameçon simple – tresse interdite Carnassiers : RAS | Ballastières du Val de Meuse | Ancemont"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-2195-no_kill-ballastieres-du-val-de-meuse-a",
@@ -4502,7 +4504,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4514,7 +4516,8 @@
      "version": "2023-12-22"
     },
     "citation": "Brochet, Sandre, Carpe, Black-bass | Carpe : Hameçon simple – tresse interdite Carnassiers : RAS | Ballastières du Val de Meuse | Ancemont"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-2110-no_kill-ballastieres-du-val-de-meuse-a",
@@ -4543,7 +4546,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4555,7 +4558,8 @@
      "version": "2023-12-22"
     },
     "citation": "Brochet, Sandre, Carpe, Black-bass | Carpe : Hameçon simple – tresse interdite Carnassiers : RAS | Ballastières du Val de Meuse | Ancemont"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-2053-no_kill-ballastieres-du-val-de-meuse-a",
@@ -4584,7 +4588,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4596,7 +4600,8 @@
      "version": "2023-12-22"
     },
     "citation": "Brochet, Sandre, Carpe, Black-bass | Carpe : Hameçon simple – tresse interdite Carnassiers : RAS | Ballastières du Val de Meuse | Ancemont"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-carpe-hame-on-simple-tresse-in-mode_peche-ballastieres-du-val-de-meuse-a",
@@ -4666,7 +4671,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4678,7 +4683,8 @@
      "version": "2023-12-22"
     },
     "citation": "Salmonidés | Mouche fouettée - Hameçon simple sans ardillon | La Saulx | Beurey/Saulx"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-mouche-fouettee-mode_peche-la-saulx-beurey-saulx",
@@ -4783,7 +4789,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4795,7 +4801,8 @@
      "version": "2023-12-22"
     },
     "citation": "Toutes espèces | Mouche fouettée - Hameçon sans ardillon | L'Ornain | Bar le Duc"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-mouche-fouettee-mode_peche-lornain-bar-le-duc",
@@ -4941,7 +4948,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4953,7 +4960,8 @@
      "version": "2023-12-22"
     },
     "citation": "Carpes, Black-bass | Ballastières cadastrées Z2 et Z3 | Dun/Meuse | Ensemble des ballastières"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-2053-no_kill-ballastieres-cadastrees-z2-et-",
@@ -4982,7 +4990,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -4994,7 +5002,8 @@
      "version": "2023-12-22"
     },
     "citation": "Carpes, Black-bass | Ballastières cadastrées Z2 et Z3 | Dun/Meuse | Ensemble des ballastières"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-toutes-no_kill-laire-nubecourt",
@@ -5021,7 +5030,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5033,7 +5042,8 @@
      "version": "2023-12-22"
     },
     "citation": "Toutes espèces | Mouche fouettée ou leurre - Hameçon simple sans ardillon | L'Aire | Nubécourt"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-mouche-fouettee-ou-leurre-mode_peche-laire-nubecourt",
@@ -5140,7 +5150,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5152,7 +5162,8 @@
      "version": "2023-12-22"
     },
     "citation": "Salmonidés | Mouche fouettée | L'Ornain | Gondrecourt"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-mouche-fouettee-mode_peche-lornain-gondrecourt",
@@ -5218,7 +5229,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5230,7 +5241,8 @@
      "version": "2023-12-22"
     },
     "citation": "Toutes espèces | Mouche fouettée | La Saulx | Haironville"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-mouche-fouettee-mode_peche-la-saulx-haironville",
@@ -5295,7 +5307,7 @@
     "lu_le": "2026-10-15",
     "version": "2023-12-22"
    },
-   "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
+   "citation": "Toutes espèces | La Saulx | Mognéville",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -5308,7 +5320,8 @@
      "version": "2023-12-22"
     },
     "citation": "Toutes espèces | La Saulx | Mognéville"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "55-toutes-no_kill-ballastiere-carpodrome-ze73-et",
@@ -5335,7 +5348,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5347,7 +5360,8 @@
      "version": "2023-12-22"
     },
     "citation": "Toutes espèces | Pêche aux carnassiers interdite - 2 cannes maxi/pêcheur - Hameçon sans ardillon | Ballastière carpodrome ZE73 et ZE76 | Damvillers"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-hame-on-sans-ardillon-mode_peche-ballastiere-carpodrome-ze73-et",
@@ -5413,7 +5427,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5425,7 +5439,8 @@
      "version": "2023-12-22"
     },
     "citation": "Toutes espèces | Pêche à la carpe interdite - 1 canne maxi/pêcheur - Hameçon sans ardillon | Ballastière parcours carnassiers ZE74 et ZE75 | Damvillers"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-hame-on-sans-ardillon-mode_peche-ballastiere-parcours-carnassie",
@@ -5490,7 +5505,7 @@
     "lu_le": "2026-10-15",
     "version": "2023-12-22"
    },
-   "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
+   "citation": "Toutes espèces | 1 canne maxi/pêcheur | Ballastière parcours découverte | Damvillers",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -5503,7 +5518,8 @@
      "version": "2023-12-22"
     },
     "citation": "Toutes espèces | 1 canne maxi/pêcheur | Ballastière parcours découverte | Damvillers"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "55-autre:carnassiers-no_kill-lothain-bazeilles",
@@ -5531,7 +5547,7 @@
     "lu_le": "2026-10-15",
     "version": "2023-12-22"
    },
-   "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
+   "citation": "Carnassiers | L'Othain | Bazeilles Villecloye | Limite parcelles B3 281 et 280 (270m en amont de la connexion de la noue)",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -5544,7 +5560,8 @@
      "version": "2023-12-22"
     },
     "citation": "Carnassiers | L'Othain | Bazeilles Villecloye | Limite parcelles B3 281 et 280 (270m en amont de la connexion de la noue)"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "55-autre:carnassiers-no_kill-le-loison-quincy",
@@ -5572,7 +5589,7 @@
     "lu_le": "2026-10-15",
     "version": "2023-12-22"
    },
-   "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
+   "citation": "Carnassiers | Le Loison | Quincy Landzecourt | Seuil du moulin de la Crouée",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -5585,7 +5602,8 @@
      "version": "2023-12-22"
     },
     "citation": "Carnassiers | Le Loison | Quincy Landzecourt | Seuil du moulin de la Crouée"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "55-toutes-no_kill-lornain-revigny",
@@ -5612,7 +5630,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5624,7 +5642,8 @@
      "version": "2023-12-22"
     },
     "citation": "Toutes espèces | Mouche fouettée - Hameçon sans ardillon | L'Ornain | Revigny"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-mouche-fouettee-mode_peche-lornain-revigny",
@@ -5731,7 +5750,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5743,7 +5762,8 @@
      "version": "2023-12-22"
     },
     "citation": "Salmonidés | Mouche fouettée - Hameçon sans ardillon | L'Ornain | Treveray"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-mouche-fouettee-mode_peche-lornain-treveray",
@@ -5848,7 +5868,7 @@
     "version": "2023-12-22"
    },
    "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
    "lecture_b": {
@@ -5860,7 +5880,8 @@
      "version": "2023-12-22"
     },
     "citation": "Toutes espèces | Hameçon sans ardillon - Appâts naturels interdits | Canaux St Airy et Puty | Verdun"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "55-hame-on-sans-ardillon-mode_peche-canaux-st-airy-et-du-puty-verd",
@@ -5966,7 +5987,7 @@
     "lu_le": "2026-10-15",
     "version": "2023-12-22"
    },
-   "citation": "Les parcours de pêche définis dans le tableau ci-dessous sont réservés à la seule pratique de la pêche avec obligation de remise à l'eau des espèces listées dans celui-ci",
+   "citation": "Black-bass | Meuse sauvage et canalisée, canaux et noues | Belleray, Verdun, Belleville, Thierville, Bras, Charny, Vacherauville, Champneuville, Samogneux, Brabant",
    "statut": "brouillon",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -5979,7 +6000,8 @@
      "version": "2023-12-22"
     },
     "citation": "Black-bass | Meuse sauvage et canalisée, canaux et noues | Belleray, Verdun, Belleville, Thierville, Bras, Charny, Vacherauville, Champneuville, Samogneux, Brabant"
-   }
+   },
+   "citation_de": "lecture_b"
   }
  ],
  "desaccords": {

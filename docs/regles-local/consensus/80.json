@@ -3304,7 +3304,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-29"
    },
-   "citation": "les brochets doivent être remis à l'eau sur les secteurs suivants : - entre le pont SNCF de Lamotte-Brebière et le pont René Gambier de Camon,",
+   "citation": "- entre le pont SNCF de Lamotte-Brebière et le pont René Gambier de Camon,",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -3317,7 +3317,8 @@
      "version": "2025-12-29"
     },
     "citation": "- entre le pont SNCF de Lamotte-Brebière et le pont René Gambier de Camon,"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "80-2151-remise-eau-secteur2",

@@ -3932,7 +3932,7 @@
     "version": "2026-01-30"
    },
    "citation": "Sur les bassins versants du Haut-Chéran, du Guiers, de l'Avant-pays et du lac du Bourget SIX",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -3944,7 +3944,8 @@
      "version": "2026-01-30"
     },
     "citation": "SIX salmonidés de taille réglementaire, dont UN ombre commun au maximum, par jour et par pêcheur ;"
-   }
+   },
+   "citation_a_revoir": "nombre 1 absent"
   },
   {
    "id": "73-salmonides-quota_jour-guiers",
@@ -4016,7 +4017,7 @@
     "version": "2026-01-30"
    },
    "citation": "Sur les bassins versants du Haut-Chéran, du Guiers, de l'Avant-pays et du lac du Bourget SIX",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4028,7 +4029,8 @@
      "version": "2026-01-30"
     },
     "citation": "SIX salmonidés de taille réglementaire, dont UN ombre commun au maximum, par jour et par pêcheur ;"
-   }
+   },
+   "citation_a_revoir": "nombre 1 absent"
   },
   {
    "id": "73-salmonides-quota_jour-avant-pays",
@@ -4100,7 +4102,7 @@
     "version": "2026-01-30"
    },
    "citation": "Sur les bassins versants du Haut-Chéran, du Guiers, de l'Avant-pays et du lac du Bourget SIX",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4112,7 +4114,8 @@
      "version": "2026-01-30"
     },
     "citation": "SIX salmonidés de taille réglementaire, dont UN ombre commun au maximum, par jour et par pêcheur ;"
-   }
+   },
+   "citation_a_revoir": "nombre 1 absent"
   },
   {
    "id": "73-salmonides-quota_jour-lac-du-bourget",
@@ -4184,7 +4187,7 @@
     "version": "2026-01-30"
    },
    "citation": "Sur les bassins versants du Haut-Chéran, du Guiers, de l'Avant-pays et du lac du Bourget SIX",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -4196,7 +4199,8 @@
      "version": "2026-01-30"
     },
     "citation": "SIX salmonidés de taille réglementaire, dont UN ombre commun au maximum, par jour et par pêcheur ;"
-   }
+   },
+   "citation_a_revoir": "nombre 1 absent"
   },
   {
    "id": "73-brochet-quota_jour-departement-2",
@@ -8454,7 +8458,7 @@
     "version": "2026-01-30"
    },
    "citation": "les truites, saumons de fontaine et ombles chevaliers : du 2° samedi de mars au 3* dimanche suivant le 3° dimanche de septembre",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -8466,7 +8470,8 @@
      "version": "2026-01-30"
     },
     "citation": "les truites, saumons de fontaine et ombles chevaliers : du 2e samedi de mars au 3e dimanche suivant le 3e dimanche de septembre ;"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-omble-fontaine-ouverture-lac-d-aiguebelette",
@@ -8495,7 +8500,7 @@
     "version": "2026-01-30"
    },
    "citation": "les truites, saumons de fontaine et ombles chevaliers : du 2° samedi de mars au 3* dimanche suivant le 3° dimanche de septembre",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -8507,7 +8512,8 @@
      "version": "2026-01-30"
     },
     "citation": "les truites, saumons de fontaine et ombles chevaliers : du 2e samedi de mars au 3e dimanche suivant le 3e dimanche de septembre ;"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-omble-chevalier-ouverture-lac-d-aiguebelette",
@@ -8536,7 +8542,7 @@
     "version": "2026-01-30"
    },
    "citation": "les truites, saumons de fontaine et ombles chevaliers : du 2° samedi de mars au 3* dimanche suivant le 3° dimanche de septembre",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -8548,7 +8554,8 @@
      "version": "2026-01-30"
     },
     "citation": "les truites, saumons de fontaine et ombles chevaliers : du 2e samedi de mars au 3e dimanche suivant le 3e dimanche de septembre ;"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-grenouille-verte-ouverture-lac-d-aiguebelette",
@@ -8823,7 +8830,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -8835,7 +8842,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-1-du-bout-de-la-point-poste1-09",
@@ -8864,7 +8872,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -8876,7 +8884,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-2-rive-nord-pointe-de-poste2-01",
@@ -8905,7 +8914,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -8917,7 +8926,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-2-rive-nord-pointe-de-poste2-09",
@@ -8946,7 +8956,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -8958,7 +8968,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-3-camping-du-mont-gre-poste3-01",
@@ -8987,7 +8998,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -8999,7 +9010,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-3-camping-du-mont-gre-poste3-09",
@@ -9028,7 +9040,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -9040,7 +9052,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-4-pisciculture-d-aigu-poste4-01",
@@ -9069,7 +9082,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -9081,7 +9094,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-4-pisciculture-d-aigu-poste4-09",
@@ -9110,7 +9124,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -9122,7 +9136,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-5-port-au-lieu-dit-le-poste5-01",
@@ -9151,7 +9166,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -9163,7 +9178,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-5-port-au-lieu-dit-le-poste5-09",
@@ -9192,7 +9208,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -9204,7 +9220,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-6-plage-du-bon-vent-a-poste6-01",
@@ -9233,7 +9250,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -9245,7 +9262,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-6-plage-du-bon-vent-a-poste6-09",
@@ -9274,7 +9292,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -9286,7 +9304,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-7-au-droit-de-la-parc-poste7-01",
@@ -9315,7 +9334,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -9327,7 +9346,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-carpe-carpe_nuit-lac-d-aiguebelette-poste-n-7-au-droit-de-la-parc-poste7-09",
@@ -9356,7 +9376,7 @@
     "version": "2026-01-30"
    },
    "citation": "la pêche de la carpe est autorisée du 1° janvier au 30 juin et du 1“ septembre au 31 décembre sur les postes définis ci-après",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -9368,7 +9388,8 @@
      "version": "2026-01-30"
     },
     "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, la pêche de la carpe est autorisée du 1er janvier au 30 juin et du 1er septembre au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-brochet-taille_min-lac-d-aiguebelette",
@@ -9893,7 +9914,7 @@
     "version": "2026-01-30"
    },
    "citation": "Les pêcheurs en bateau où depuis tout engin flottant ayant acquitté une cotisation supplémentaire à cet égard, peuvent en tout temps utiliser Un maximum de 4 lignes par pêcheur.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -9905,7 +9926,8 @@
      "version": "2026-01-30"
     },
     "citation": "Les pêcheurs en bateau ou depuis tout engin flottant ayant acquitté une cotisation supplémentaire à cet égard, peuvent en tout temps utiliser un maximum de 4 lignes par pêcheur."
-   }
+   },
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "73-truite-mode_peche-lac-d-aiguebelette-traine",
@@ -11003,7 +11025,7 @@
     "version": "2026-01-30"
    },
    "citation": "du lundi suivant le 3° samedi d'avril (hors jours fériés) au 31 décembre",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -11015,7 +11037,8 @@
      "version": "2026-01-30"
     },
     "citation": "brochet: * du 1er janvier au dernier dimanche de février ; ° du lundi suivant le 3e samedi d'avril (hors jours fériés) au 31 décembre"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-perche-ouverture-lac-du-bourget-janvier",
@@ -11788,7 +11811,7 @@
     "version": "2026-01-30"
    },
    "citation": "La ligne spécifique montée sur canne et munie de 10 hameçons ou nymphes maximum.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -11800,7 +11823,8 @@
      "version": "2026-01-30"
     },
     "citation": "La ligne spécifique montée sur canne et munie de 10 hameçons ou nymphes maximum. Son emploi est réservé aux titulaires d'une carte de membre des associations agréées locataires"
-   }
+   },
+   "citation_a_revoir": "nombre 4 absent"
   },
   {
    "id": "73-toutes-mode_peche-lac-du-bourget-bateau",
@@ -11868,7 +11892,7 @@
     "version": "2026-01-30"
    },
    "citation": "restitué à celle-ci avant le 31 janvier de l'année suivante.",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -11880,7 +11904,8 @@
      "version": "2026-01-30"
     },
     "citation": "L'utilisation de l'asticot et des autres larves de diptères en tant qu'esche est autorisée."
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "73-ecrevisse-californie-transport_vivant-lac-du-bourget",

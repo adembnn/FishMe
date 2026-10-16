@@ -2063,7 +2063,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-26"
    },
-   "citation": "Sandres dans les eaux de 2ème catégorie",
+   "citation": "Sandres dans les eaux de 2ème catégorie 50 cm",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -2076,7 +2076,8 @@
      "version": "2025-11-26"
     },
     "citation": "Sandres dans les eaux de 2ème catégorie 50 cm"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "89-brochet-taille-min-cat1",
@@ -2104,7 +2105,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-26"
    },
-   "citation": "Brochets dans les eaux de 1ère catégorie",
+   "citation": "Brochets dans les eaux de 1ère catégorie 60 cm",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -2117,7 +2118,8 @@
      "version": "2025-11-26"
     },
     "citation": "Brochets dans les eaux de 1ère catégorie 60 cm"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "89-brochet-fenetre-capture-cat2",
@@ -2230,7 +2232,7 @@
     "version": "2025-11-26"
    },
    "citation": "Truites sur cours d’eau de la Cure, du Cousin et leurs affluents, en amont de la confluence Cure-Cousin",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2242,7 +2244,8 @@
      "version": "2025-11-26"
     },
     "citation": "Truites sur cours d’eau de la Cure, du Cousin et leurs affluents, en amont de la confluence Cure-Cousin 23 cm"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "89-truite-taille-min-cousin",
@@ -2272,7 +2275,7 @@
     "version": "2025-11-26"
    },
    "citation": "Truites sur cours d’eau de la Cure, du Cousin et leurs affluents, en amont de la confluence Cure-Cousin",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2284,7 +2287,8 @@
      "version": "2025-11-26"
     },
     "citation": "Truites sur cours d’eau de la Cure, du Cousin et leurs affluents, en amont de la confluence Cure-Cousin 23 cm"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "89-cristivomer-taille-min",
@@ -2312,7 +2316,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-26"
    },
-   "citation": "Cristivomers",
+   "citation": "Cristivomers 35 cm",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -2325,7 +2329,8 @@
      "version": "2025-11-26"
     },
     "citation": "Cristivomers 35 cm"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "89-ombre-taille-min",
@@ -2353,7 +2358,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-26"
    },
-   "citation": "Ombres communs",
+   "citation": "Ombres communs 35 cm",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -2366,7 +2371,8 @@
      "version": "2025-11-26"
     },
     "citation": "Ombres communs 35 cm"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "89-anguille-taille-min",
@@ -2394,7 +2400,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-11-26"
    },
-   "citation": "Anguilles",
+   "citation": "Anguilles 12 cm",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -2407,7 +2413,8 @@
      "version": "2025-11-26"
     },
     "citation": "Anguilles 12 cm"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "89-omble-chevalier-taille-min",
@@ -2436,7 +2443,7 @@
     "version": "2025-11-26"
    },
    "citation": "Ombles chevaliers, saumons de Fontaine",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2448,7 +2455,8 @@
      "version": "2025-11-26"
     },
     "citation": "Ombles chevaliers, saumons de Fontaine 23 cm"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "89-omble-fontaine-taille-min",
@@ -2477,7 +2485,7 @@
     "version": "2025-11-26"
    },
    "citation": "Ombles chevaliers, saumons de Fontaine",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2489,7 +2497,8 @@
      "version": "2025-11-26"
     },
     "citation": "Ombles chevaliers, saumons de Fontaine 23 cm"
-   }
+   },
+   "citation_a_revoir": "nombre 23 absent"
   },
   {
    "id": "89-grenouille-verte-taille-min",
@@ -2518,7 +2527,7 @@
     "version": "2025-11-26"
    },
    "citation": "Grenouilles",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2530,7 +2539,8 @@
      "version": "2025-11-26"
     },
     "citation": "Grenouilles 8 cm"
-   }
+   },
+   "citation_a_revoir": "nombre 8 absent"
   },
   {
    "id": "89-grenouille-rousse-taille-min",
@@ -2559,7 +2569,7 @@
     "version": "2025-11-26"
    },
    "citation": "Grenouilles",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -2571,7 +2581,8 @@
      "version": "2025-11-26"
     },
     "citation": "Grenouilles 8 cm"
-   }
+   },
+   "citation_a_revoir": "nombre 8 absent"
   },
   {
    "id": "89-salmonides-quota-jour",

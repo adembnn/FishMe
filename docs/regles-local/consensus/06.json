@@ -2109,7 +2109,7 @@
     "lu_le": "2026-10-15",
     "version": "2026-01-08"
    },
-   "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants",
+   "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants : la Siagne sur tout son cours",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -2122,7 +2122,8 @@
      "version": "2026-01-08"
     },
     "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants : la Siagne sur tout son cours"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "06-2221-taille-min-cagne",
@@ -2151,7 +2152,7 @@
     "version": "2026-01-08"
    },
    "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -2163,7 +2164,8 @@
      "version": "2026-01-08"
     },
     "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants (…) la Cagne et le Malvan sur tout leur cours"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "06-2221-taille-min-malvan",
@@ -2192,7 +2194,7 @@
     "version": "2026-01-08"
    },
    "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -2204,7 +2206,8 @@
      "version": "2026-01-08"
     },
     "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants (…) la Cagne et le Malvan sur tout leur cours"
-   }
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
   },
   {
    "id": "06-2221-taille-min-paillons",
@@ -2232,7 +2235,7 @@
     "lu_le": "2026-10-15",
     "version": "2026-01-08"
    },
-   "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants",
+   "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants (…) les Paillons sur tout leur cours",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -2245,7 +2248,8 @@
      "version": "2026-01-08"
     },
     "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants (…) les Paillons sur tout leur cours"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "06-2221-taille-min-loup",
@@ -2355,7 +2359,7 @@
     "lu_le": "2026-10-15",
     "version": "2026-01-08"
    },
-   "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants",
+   "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants (…) l'Esteron de la confluence avec le Var à la clue d'Aiglun",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -2368,7 +2372,8 @@
      "version": "2026-01-08"
     },
     "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants (…) l'Esteron de la confluence avec le Var à la clue d'Aiglun"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "06-2221-taille-min-tinee",
@@ -2396,7 +2401,7 @@
     "lu_le": "2026-10-15",
     "version": "2026-01-08"
    },
-   "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants",
+   "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants (…) la Tinée de la confluence avec le Var au pont de Clans",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -2409,7 +2414,8 @@
      "version": "2026-01-08"
     },
     "citation": "0,23 mètre pour la truite fario sur les cours d'eau ou parties de cours d'eau suivants (…) la Tinée de la confluence avec le Var au pont de Clans"
-   }
+   },
+   "citation_de": "lecture_b"
   },
   {
    "id": "06-omble-fontaine-taille-min",
@@ -2809,7 +2815,7 @@
     "version": "2026-01-08"
    },
    "citation": "à l'exception du lac du Broc, du lac de St Grat, commune de Belvédère, du lac d'Estenc commune d'Entraunes, du lac de Thorenc",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -2821,7 +2827,8 @@
      "version": "2026-01-08"
     },
     "citation": "du lac du Broc, du lac de St Grat, commune de Belvédère, du lac d'Estenc commune d'Entraunes, du lac de Thorenc , commune d'Andon et des plans d'eau de la commune de Tende où seules 6 captures"
-   }
+   },
+   "citation_a_revoir": "nombre 6 absent"
   },
   {
    "id": "06-salmonides-quota-jour-st-grat",
@@ -2851,7 +2858,7 @@
     "version": "2026-01-08"
    },
    "citation": "à l'exception du lac du Broc, du lac de St Grat, commune de Belvédère, du lac d'Estenc commune d'Entraunes, du lac de Thorenc",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -2863,7 +2870,8 @@
      "version": "2026-01-08"
     },
     "citation": "du lac du Broc, du lac de St Grat, commune de Belvédère, du lac d'Estenc commune d'Entraunes, du lac de Thorenc , commune d'Andon et des plans d'eau de la commune de Tende où seules 6 captures"
-   }
+   },
+   "citation_a_revoir": "nombre 6 absent"
   },
   {
    "id": "06-salmonides-quota-jour-estenc",
@@ -2893,7 +2901,7 @@
     "version": "2026-01-08"
    },
    "citation": "à l'exception du lac du Broc, du lac de St Grat, commune de Belvédère, du lac d'Estenc commune d'Entraunes, du lac de Thorenc",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -2905,7 +2913,8 @@
      "version": "2026-01-08"
     },
     "citation": "du lac du Broc, du lac de St Grat, commune de Belvédère, du lac d'Estenc commune d'Entraunes, du lac de Thorenc , commune d'Andon et des plans d'eau de la commune de Tende où seules 6 captures"
-   }
+   },
+   "citation_a_revoir": "nombre 6 absent"
   },
   {
    "id": "06-salmonides-quota-jour-thorenc",
@@ -3115,7 +3124,8 @@
      "version": "2026-01-08"
     },
     "citation": "ainsi que sur le territoire de la commune de Tende, à l'exemption des secteurs qui restent fermés à la pratique de la pêche"
-   }
+   },
+   "citation_a_revoir": "nombre 3 absent"
   },
   {
    "id": "06-salmonides-quota-jour-aappma-vesubie",

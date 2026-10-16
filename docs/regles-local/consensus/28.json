@@ -1198,7 +1198,7 @@
     "version": "2025-12-30"
    },
    "citation": "trois lignes de fond munies pour l’ensemble d’un maximum de dix-huit hameçons eschés de vers de terre uniquement,",
-   "statut": "brouillon",
+   "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
    "lecture_b": {
@@ -1211,7 +1211,8 @@
     },
     "citation": "trois lignes de fond munies pour l’ensemble d’un maximum de dix-huit hameçons eschés de vers de terre uniquement,"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "nombre 18 absent"
   },
   {
    "id": "28-anguille-jaune-mode_peche-bosselles-nasses",
@@ -5617,7 +5618,8 @@
     },
     "citation": "Pêche limitée à 1 ligne"
    },
-   "passe": "cloud-16-oct"
+   "passe": "cloud-16-oct",
+   "citation_a_revoir": "nombre 1 absent"
   },
   {
    "id": "28-2053-no_kill-plan-eau-grand-barbot",
@@ -15113,7 +15115,7 @@
   },
   {
    "id": "28-tous-interdit-huisne",
-   "type": "interdit",
+   "type": "mode_peche",
    "especes": [],
    "categorie": "toutes",
    "portee": {
@@ -15149,7 +15151,8 @@
     },
     "citation": "la peche en marchant dans l'eau est interdite en premiere categorie et sur l'Huisne jusqu'au 1er mai."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "correction": "type interdit -> mode_peche : le texte interdit la pêche en marchant dans l'eau, pas toute pêche"
   },
   {
    "id": "28-ecrevisse-remise_eau-departement",
