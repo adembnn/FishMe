@@ -677,10 +677,12 @@ struct VueCarte: View {
                     .font(Police.taille(18))
                     .foregroundStyle(Palette.marine)
                     .accessibilityHidden(true)
-                Text(apercu?.lieu ?? "Carte")
+                // « Ton spot · La Marne · 94 » : la pastille dit que c'est le spot, pas la position de l'iPhone.
+                Text(apercu.map { "Ton spot · \($0.lieu)" } ?? "Carte")
                     .font(Police.detail)
                     .foregroundStyle(Palette.encre)
                     .lineLimit(1)
+                    .minimumScaleFactor(0.8)
                 Spacer(minLength: 0)
             }
             .padding(.horizontal, Espace.l)
