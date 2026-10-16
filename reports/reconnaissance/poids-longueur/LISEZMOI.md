@@ -32,3 +32,10 @@ Fourchettes de bon sens à partir de tailles usuelles de pêche, pas des mesures
 
 ## Limites
 Poids estimé = moyenne de la population ; un poisson individuel peut s'en écarter de ±15 %. Ne pas afficher de poids avec plus de deux chiffres significatifs.
+
+## Recalage sur de vraies prises (16 oct. 2026)
+Les colonnes `a` et `b` (W en grammes = a·L^b, L longueur totale en cm) viennent maintenant, pour 28 espèces, de 8 053 fiches de prises pesées et mesurées par des pêcheurs (fisch-hitparade.de, Allemagne et pays voisins). Régression log-log robuste (Huber), points à plus de 3 écarts retirés, au moins 30 prises par espèce. La colonne `origine_ab` dit d'où viennent a et b : `prises`, `source` (publication), `proxy` (espèce voisine) ou `lacune` (pas de poids : afficher la taille seule).
+- Les valeurs publiées restent dans `a_litterature` et `b_litterature`, et l'ancienne table dans `poids_longueur.litterature.csv`.
+- `prises_L_min_cm` et `prises_L_max_cm` : plage de longueurs vue dans ces prises. Ce sont surtout de beaux poissons ; sous cette plage, la formule reste correcte à peu près mais moins sûre.
+- `prises_ecart_log10` ≈ 0,07 à 0,09 : un poisson réel s'écarte de ±20 % environ du poids estimé (embonpoint, saison). La fourchette de poids affichée vient de la fourchette de taille ; elle reste « estimée ».
+- Écarts notables avec la littérature, à longueur égale : brochet +12 %, carpe +37 % (carpes d'étang nourries), brème +50 %, sandre +17 %. Esturgeon gagne un poids (160 prises). Flet et mulet : trop peu de prises, toujours sans poids.
