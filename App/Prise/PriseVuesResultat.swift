@@ -329,7 +329,7 @@ struct PriseResultatView: View {
                     .buttonStyle(.plain)
                     .accessibilityLabel(verso ? "Voir le recto de la carte" : "Voir la photo au verso")
                 }
-                // Sortie visible vers les détails : la maquette n'a ni retour ni croix, mais on ne reste jamais enfermé sans pouvoir corriger la prise.
+                // Sortie visible vers le choix de l'espèce : la maquette n'a ni retour ni croix, mais on ne reste jamais enfermé sans pouvoir corriger la prise.
                 Button("Modifier la prise") { modele.retour() }
                     .font(Police.corps).foregroundStyle(Palette.marine)
                     .frame(minHeight: Gabarit.zoneTactile)
@@ -356,6 +356,7 @@ struct PriseResultatView: View {
 
     private var tailleTexte: String {
         if let plage = modele.plageAR { return plage.texte }
+        guard modele.tailleConnue else { return "" }
         return "\(Int(modele.longueurCm.rounded())) cm"
     }
 
@@ -363,7 +364,7 @@ struct PriseResultatView: View {
     private func texteTailleMini(_ controle: ResultatControle?, _ verdict: PriseLogique.VerdictAffiche?) -> String {
         let mini = controle?.lignes.first(where: { $0.type == .taille })
             .flatMap { Self.tailleMinimale(dans: $0.phrase) }
-        guard let mini else { return tailleTexte }
+        guard let mini, modele.tailleConnue else { return tailleTexte }
         let taille = modele.plageAR?.texte.replacingOccurrences(of: " cm", with: "") ?? "\(Int(modele.longueurCm.rounded()))"
         return "\(taille) / \(mini) cm mini"
     }
@@ -414,7 +415,7 @@ struct PriseResultatView: View {
             .buttonStyle(.plain)
             if sourcesOuvertes, let controle {
                 VStack(spacing: Espace.s) {
-                    if verdict == .aVerifier || PriseLogique.tropPresDeLaMaille(controle) {
+                    if modele.tailleConnue, verdict == .aVerifier || PriseLogique.tropPresDeLaMaille(controle) {
                         Text("Trop près de la taille minimale, mesure sur une toise")
                             .font(Police.corps).foregroundStyle(Palette.encre)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -462,7 +463,8 @@ struct PriseResultatView: View {
     /// (ni le recto ni le verso ne les montrent).
     private var infosCarte: InfosCarte? {
         guard let entree = modele.especeConfirmee else { return nil }
-        let prise = Prise(espece: entree.espece, longueurCm: modele.longueurCm.rounded(), mesure: modele.methode,
+        let prise = Prise(espece: entree.espece, longueurCm: modele.tailleConnue ? modele.longueurCm.rounded() : nil,
+                          mesure: modele.tailleConnue ? modele.methode : nil,
                           stade: modele.stade, date: modele.contexte.date, lieuFlou: modele.contexte.lieuFlou,
                           gardee: modele.gardee, exemple: modele.exemple)
         let departement = modele.contexte.lieu.departement
