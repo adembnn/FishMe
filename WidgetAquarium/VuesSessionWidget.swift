@@ -23,6 +23,8 @@ private func heure(_ date: Date) -> Text {
 
 private extension Font {
     static func rond(_ taille: CGFloat) -> Font { .system(size: taille, weight: .bold, design: .rounded) }
+    /// Chrono de la maquette P40 : arrondi, très gras.
+    static func chrono(_ taille: CGFloat) -> Font { .system(size: taille, weight: .heavy, design: .rounded) }
 }
 
 struct VueSessionWidget: View {
@@ -130,7 +132,7 @@ struct VueSessionWidget: View {
         if fondVisible {
             ZStack {
                 fond
-                contenu.padding(16)
+                contenu.padding(famille == .systemMedium ? 16 : 14)
             }
         } else {
             contenu.containerBackground(for: .widget) { fond }
@@ -168,11 +170,11 @@ struct VueSessionWidget: View {
         switch affichage.contenu {
         case .compteARebours(let debut, let fin):
             Text(timerInterval: debut...fin, pauseTime: nil, countsDown: true, showsHours: true)
-                .monospacedDigit().font(.rond(taille)).minimumScaleFactor(0.5).lineLimit(1)
+                .monospacedDigit().font(.chrono(taille)).minimumScaleFactor(0.5).lineLimit(1)
         case .finLegalePassee(let fin):
             VStack(alignment: .leading, spacing: 0) {
                 Label("fin légale", systemImage: "sunset.fill").font(.rond(13))
-                heure(fin).monospacedDigit().font(.rond(taille))
+                heure(fin).monospacedDigit().font(.chrono(taille))
             }
             .foregroundStyle(Teintes.alerte)
         case .pecheFermee:
@@ -181,7 +183,7 @@ struct VueSessionWidget: View {
                 .foregroundStyle(Teintes.alerte)
         case .finInconnue(let depuis):
             Text(depuis, style: .timer)
-                .monospacedDigit().font(.rond(taille)).minimumScaleFactor(0.5).lineLimit(1)
+                .monospacedDigit().font(.chrono(taille)).minimumScaleFactor(0.5).lineLimit(1)
         case .aucuneSession:
             EmptyView()
         }
@@ -192,58 +194,54 @@ struct VueSessionWidget: View {
             .accessibilityLabel("\(affichage.prises) prises")
     }
 
+    /// Petit (170×170, marge 14) : chrono 50 pt, puis deux boutons icône de 38 pt de haut, écart 8.
     private var petit: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Image(systemName: "fish.fill").font(.rond(16)).opacity(0.75)
-            gros(taille: 34)
+        VStack(alignment: .leading, spacing: 8) {
+            gros(taille: 50)
             Spacer(minLength: 0)
-            HStack {
-                nombrePrises.font(.rond(22))
-                Spacer()
-                if case .compteARebours(_, let fin) = affichage.contenu {
-                    heure(fin).monospacedDigit().font(.rond(15)).opacity(0.8)
-                }
+            HStack(spacing: 8) {
+                boutonIcone("Prise", symbole: "plus.circle.fill", url: urlPrise, hauteur: 38)
+                boutonIcone("Pause", symbole: "pause.circle.fill", url: urlPause, hauteur: 38)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
     }
 
+    /// Moyen (364×170) : colonne gauche de 206 pt avec le chrono de 62 pt, colonne droite avec les deux boutons de 46 pt.
     private var moyen: some View {
-        VStack(spacing: 8) {
-            HStack(alignment: .center) {
-                VStack(alignment: .leading, spacing: 2) {
-                    if case .compteARebours = affichage.contenu {
-                        Text("fin légale dans").font(.rond(12)).opacity(0.75)
-                    }
-                    gros(taille: 40)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                VStack(alignment: .trailing, spacing: 4) {
-                    nombrePrises.font(.rond(30))
+        HStack(spacing: 12) {
+            VStack(alignment: .leading, spacing: 2) {
+                gros(taille: 62)
+                HStack(spacing: 10) {
+                    nombrePrises.font(.rond(18))
                     if case .compteARebours(_, let fin) = affichage.contenu {
                         HStack(spacing: 4) { Image(systemName: "sunset.fill"); heure(fin).monospacedDigit() }
                             .font(.rond(15)).opacity(0.85)
                     }
                 }
             }
-            HStack(spacing: 8) {
-                boutonLien("Prise", symbole: "plus.circle.fill", url: urlPrise)
-                boutonLien("Pause", symbole: "pause.circle.fill", url: urlPause)
+            .frame(width: 206, alignment: .leading)
+            VStack(spacing: 8) {
+                boutonIcone("Prise", symbole: "plus.circle.fill", url: urlPrise, hauteur: 46)
+                boutonIcone("Pause", symbole: "pause.circle.fill", url: urlPause, hauteur: 46)
             }
+            .frame(maxWidth: .infinity)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
     }
 
+    /// Bouton icône seul (le libellé ne sert qu'à l'accessibilité) : un lien vers l'app.
     @ViewBuilder
-    private func boutonLien(_ titre: String, symbole: String, url: URL?) -> some View {
+    private func boutonIcone(_ titre: String, symbole: String, url: URL?, hauteur: CGFloat) -> some View {
         if let url {
             Link(destination: url) {
-                Label(titre, systemImage: symbole)
-                    .font(.rond(15))
+                Image(systemName: symbole)
+                    .font(.rond(hauteur * 0.55))
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 7)
+                    .frame(height: hauteur)
                     .background(Capsule().fill(.white.opacity(0.2)))
             }
+            .accessibilityLabel(titre)
         }
     }
 }

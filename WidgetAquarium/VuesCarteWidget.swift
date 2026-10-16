@@ -90,20 +90,38 @@ struct VueCarteWidget: View {
         }
     }
 
-    private var marge: CGFloat { famille == .systemLarge ? 16 : 12 }
+    /// Taille de la carte selon la maquette P40 : petit 104×150 dans 170×170 ; grand 244×354 dans 364×382
+    /// (marges 60 à gauche et à droite, 14 en haut et en bas). Réduite seulement si le widget est plus petit.
+    private func tailleCarte(dans zone: CGSize) -> CGSize {
+        let voulue = famille == .systemLarge ? CGSize(width: 244, height: 354) : CGSize(width: 104, height: 150)
+        let facteur = min(1, zone.width / voulue.width, zone.height / voulue.height)
+        return CGSize(width: voulue.width * facteur, height: voulue.height * facteur)
+    }
 
     private var contenu: some View {
         GeometryReader { geo in
-            let dispo = CGSize(width: max(geo.size.width - 2 * marge, 1), height: max(geo.size.height - 2 * marge, 1))
-            // La plus grande carte au bon format qui tient dans le widget, centrée.
-            let largeur = min(dispo.width, dispo.height * rapportCarte)
-            let taille = CGSize(width: largeur, height: largeur / rapportCarte)
+            let taille = tailleCarte(dans: CGSize(width: max(geo.size.width, 1), height: max(geo.size.height, 1)))
             ZStack {
                 if let carte = entree.carte {
+                    // La carte entière reste touchable pour la retourner.
                     Button(intent: RetournerCarteIntent(idCarte: carte.id)) {
                         faceAnimee(carte: carte, taille: taille)
                     }
                     .buttonStyle(.plain)
+                    // Petit format : bouton rond « retourner » de 24 pt, en bas à droite, dans le coin libre.
+                    if famille != .systemLarge {
+                        Button(intent: RetournerCarteIntent(idCarte: carte.id)) {
+                            Image(systemName: "arrow.2.squarepath")
+                                .font(.system(size: 12, weight: .bold, design: .rounded))
+                                .foregroundStyle(.white)
+                                .frame(width: 24, height: 24)
+                                .background(Circle().fill(Color.white.opacity(0.22)))
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityLabel("Retourner la carte")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+                        .padding(8)
+                    }
                 } else {
                     EmplacementVide(taille: taille)
                 }

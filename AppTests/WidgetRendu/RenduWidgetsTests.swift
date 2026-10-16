@@ -87,7 +87,7 @@ struct RenduWidgetsTests {
 
     private func aquarium(_ entree: EntreeAquarium, _ format: TailleRendu, _ nom: String) throws {
         try rendreEtEcrire(
-            VueAquariumWidget(entree: entree, famille: format.famille, fondVisible: true),
+            VueAquariumWidget(entree: entree, famille: format.famille, fondVisible: true, anime: false),
             format: format, nom: nom)
     }
 
