@@ -2112,7 +2112,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Brochet sur la Charente à Cognac : fenêtre de capture de 60 à 80 cm.",
+   "phrase": "Brochet sur la Charente à Cognac : taille encadrée : brochet de 60 à 80 cm seulement.",
    "textes": [
     "t5"
    ],
@@ -2142,7 +2142,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Perche sur la Charente à Cognac : fenêtre de capture, moins de 30 cm.",
+   "phrase": "Perche sur la Charente à Cognac : perches : taille maximale 30 cm.",
    "textes": [
     "t5"
    ],
@@ -2783,7 +2783,7 @@
    "textes": [
     "t10"
    ],
-   "citation": "seuls les engins suivants sont autorisés : une nasse à poisson à maille de 27 mm et une bosselle anguilles (ou nasses anguillères à maille de 10 mm).",
+   "citation": "OU nasse(s) à poissons à mailles de 27 mm 0 1 uniquement sur la Charente domaine privé entre Taizé- Aizie et Montignac",
    "expire_le": "2026-12-31",
    "statut": "brouillon",
    "verifie_par": null
@@ -5196,7 +5196,7 @@
    ],
    "citation": "Parcours amont : longueur 1200 m → limite amont : jonction de la Boëme et de l’ancien canal de fuite du moulin de Nanteuillet. → limite aval : matérialisé par le pont (panneau)",
    "expire_le": null,
-   "statut": "brouillon",
+   "statut": "incertain",
    "verifie_par": null
   },
   {
@@ -5933,7 +5933,7 @@
    ],
    "citation": "l'exercice de la pêche est interdit, à l'exception des opérations de sauvetage piscicole autorisées par le préfet, sur l'ensemble des cours d'eau situés dans les bassins versants suivants",
    "expire_le": "2026-09-20",
-   "statut": "brouillon",
+   "statut": "incertain",
    "verifie_par": null
   },
   {
@@ -5987,7 +5987,7 @@
    ],
    "citation": "l'exercice de la pêche est interdit, à l'exception des opérations de sauvetage piscicole autorisées par le préfet, sur l'ensemble des cours d'eau situés dans les bassins versants suivants",
    "expire_le": "2026-09-20",
-   "statut": "brouillon",
+   "statut": "incertain",
    "verifie_par": null
   },
   {
@@ -6014,7 +6014,7 @@
    ],
    "citation": "l'exercice de la pêche est interdit, à l'exception des opérations de sauvetage piscicole autorisées par le préfet, sur l'ensemble des cours d'eau situés dans les bassins versants suivants",
    "expire_le": "2026-09-20",
-   "statut": "brouillon",
+   "statut": "incertain",
    "verifie_par": null
   }
  ],
