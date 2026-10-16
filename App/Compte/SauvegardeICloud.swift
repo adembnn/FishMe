@@ -38,7 +38,10 @@ actor SauvegardeICloud: ServiceSauvegarde {
     /// Sans la capacité iCloud sur l'identifiant, le Mac retire l'entitlement et met la clé à NO : aucun `CKContainer`
     /// n'est alors créé (il planterait), « Mon compte » et Amis disparaissent, le reste de l'app marche pareil.
     nonisolated static var actif: Bool {
-        Bundle.main.object(forInfoDictionaryKey: "FishMeICloud") as? Bool ?? false
+        // Une seule clé pour toute l'app (comme `CloudKitPermis` de L8) : `$(FISHME_ICLOUD)`, vide = iCloud présent,
+        // « NO » dans les archives de repli sans iCloud (scripts/archive-planb.sh).
+        let valeur = (Bundle.main.object(forInfoDictionaryKey: "FishMeICloud") as? String ?? "").uppercased()
+        return !["NO", "0", "FALSE"].contains(valeur)
     }
     nonisolated private static let zone = CKRecordZone.ID(zoneName: "Sauvegarde", ownerName: CKCurrentUserDefaultName)
     nonisolated private static let lot = 100
