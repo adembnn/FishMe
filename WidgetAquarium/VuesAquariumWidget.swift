@@ -134,32 +134,22 @@ private struct CoucheNage: View {
                                                            rapport: Double(h / max(l, 1))))
             }
             ZStack {
-                // Couche de base (poissons à leur place de départ), puis 160 copies (10 s à 16 images/s) ; chaque copie
-                // dessine l'eau et TOUS les poissons à leur place de cet instant, et deux masques chronos n'en
-                // laissent voir qu'une à la fois, par-dessus la couche de base.
-                ImagesAnimees(reference: reference, actif: animePoissons, fond: {
-                    FondEau(famille: famille).frame(width: l, height: h).clipped()
-                }) { j in
+                // 160 copies (10 s à 16 images/s) ; chaque copie dessine TOUS les poissons à leur place de cet instant
+                // (sans l'eau : c'est le fond du widget), et deux masques chronos n'en laissent voir qu'une à la fois.
+                ImagesAnimees(reference: reference, actif: animePoissons) { j in
                     ZStack {
                         // Les poissons du fond d'abord : ceux de devant passent par-dessus.
                         let ordre = nageurs.sorted { $0.poses[j].profondeur > $1.poses[j].profondeur }
                         ForEach(ordre) { nageur in
                             let pose = nageur.poses[j]
-                            // Il tourne en fondu entre les deux lacets rendus les plus proches : jamais de saut.
-                            let vues = nageur.angles.isEmpty ? [(angle: 0, poids: 1.0)]
-                                : NageWidget.melange(lacet: pose.lacet, angles: nageur.angles)
-                            ZStack {
-                                ForEach(Array(vues.enumerated()), id: \.offset) { rang, vue in
-                                    ImagePoisson(slug: nageur.slug, image: nageur.cycle ? pose.image * nageur.pas : nil,
-                                                 largeur: nageur.largeur * pose.echelle, sens: pose.sens,
-                                                 angle: vue.angle, volume: !nageur.angles.isEmpty)
-                                        .opacity(rang == 0 ? 1 : vue.poids)
-                                }
-                            }
-                                // Brume du fond (NAGE-3D.md) : plus loin, plus pâle et plus clair. Sans flou, trop
-                                // coûteux sur 160 copies.
-                                .saturation(1 - 0.55 * max(pose.profondeur, 0))
-                                .brightness(0.12 * max(pose.profondeur, 0))
+                            // Le lacet rendu le plus proche, une seule image (plus de fondu entre deux) : la moitié
+                            // moins d'images à garder en mémoire dans l'extension.
+                            let vue = nageur.angles.isEmpty ? 0
+                                : (NageWidget.melange(lacet: pose.lacet, angles: nageur.angles)
+                                    .max { $0.poids < $1.poids }?.angle ?? 0)
+                            ImagePoisson(slug: nageur.slug, image: nageur.cycle ? pose.image * nageur.pas : nil,
+                                         largeur: nageur.largeur * pose.echelle, sens: pose.sens,
+                                         angle: vue, volume: !nageur.angles.isEmpty)
                                 .opacity(pose.opacite)
                                 // Il lève un peu le nez quand il monte (moitié de l'assiette de nage.js).
                                 .rotationEffect(.radians(-pose.assiette * 0.5 * (pose.sens > 0 ? 1 : -1)))
