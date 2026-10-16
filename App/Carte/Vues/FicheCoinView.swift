@@ -124,9 +124,9 @@ struct FicheCoinView: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .accessibilityAddTraits(.isHeader)
                 Spacer(minLength: Espace.s)
+                pastilleOuverture(ouverture(fiche))
                 croixFiche
             }
-            pastilleOuverture(ouverture(fiche))
             if let frequentation {
                 FrequentationFicheView(niveau: frequentation, onCoinCalme: onCoinCalme)
             }

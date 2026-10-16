@@ -120,22 +120,33 @@ struct OuPechesTuView: View {
         .accessibilityIdentifier("ou-peches-tu")
     }
 
-    /// Rond de 280 pt : une rivière dessinée (aucune carte de France), fond marine doux, point marine du pêcheur au centre.
+    /// Rond de 280 pt : un plan clair dessiné (aucune carte de France), deux routes blanches, une large rivière bleue
+    /// en diagonale, point « moi » au centre (maquette P03-C).
     private var carteRonde: some View {
-        Palette.marineDoux
+        Color(red: 241 / 255, green: 244 / 255, blue: 248 / 255)
             .overlay {
                 Canvas { contexte, taille in
                     let l = taille.width, h = taille.height
+                    func pt(_ x: CGFloat, _ y: CGFloat) -> CGPoint { CGPoint(x: l * x, y: h * y) }
+                    // Routes blanches.
+                    var route1 = Path()
+                    route1.move(to: pt(-0.05, 0.43))
+                    route1.addCurve(to: pt(1.05, 0.56), control1: pt(0.3, 0.5), control2: pt(0.7, 0.5))
+                    contexte.stroke(route1, with: .color(.white), style: StrokeStyle(lineWidth: 9, lineCap: .round))
+                    var route2 = Path()
+                    route2.move(to: pt(0.06, 0.4))
+                    route2.addCurve(to: pt(0.08, 0.95), control1: pt(0.03, 0.55), control2: pt(0.1, 0.75))
+                    contexte.stroke(route2, with: .color(.white), style: StrokeStyle(lineWidth: 5, lineCap: .round))
+                    // Rivière : berges #C7DFF3 puis eau #9CC7EA, du haut vers le bas gauche.
                     var riviere = Path()
-                    riviere.move(to: CGPoint(x: -10, y: h * 0.78))
-                    riviere.addCurve(to: CGPoint(x: l * 0.5, y: h * 0.5),
-                                     control1: CGPoint(x: l * 0.25, y: h * 0.9),
-                                     control2: CGPoint(x: l * 0.3, y: h * 0.5))
-                    riviere.addCurve(to: CGPoint(x: l + 10, y: h * 0.18),
-                                     control1: CGPoint(x: l * 0.72, y: h * 0.5),
-                                     control2: CGPoint(x: l * 0.8, y: h * 0.1))
-                    contexte.stroke(riviere, with: .color(Palette.eau),
-                                    style: StrokeStyle(lineWidth: 16, lineCap: .round, lineJoin: .round))
+                    riviere.move(to: pt(0.4, -0.08))
+                    riviere.addCurve(to: pt(0.58, 0.36), control1: pt(0.5, 0.1), control2: pt(0.62, 0.2))
+                    riviere.addCurve(to: pt(0.3, 0.78), control1: pt(0.55, 0.52), control2: pt(0.42, 0.62))
+                    riviere.addCurve(to: pt(0.14, 1.08), control1: pt(0.24, 0.86), control2: pt(0.18, 0.96))
+                    contexte.stroke(riviere, with: .color(Color(red: 199 / 255, green: 223 / 255, blue: 243 / 255)),
+                                    style: StrokeStyle(lineWidth: 66, lineCap: .butt, lineJoin: .round))
+                    contexte.stroke(riviere, with: .color(Color(red: 156 / 255, green: 199 / 255, blue: 234 / 255)),
+                                    style: StrokeStyle(lineWidth: 50, lineCap: .butt, lineJoin: .round))
                 }
             }
             .frame(width: 280, height: 280)

@@ -1,4 +1,5 @@
 import ActivityKit
+import AppIntents
 import SwiftUI
 import WidgetKit
 
@@ -56,22 +57,96 @@ private struct NombrePrises: View {
     }
 }
 
+private func rond(_ taille: CGFloat, _ poids: Font.Weight = .heavy) -> Font {
+    .system(size: taille, weight: poids, design: .rounded)
+}
+
+/// Écran verrouillé : en-tête (app, prises), durée écoulée à gauche, fin légale à droite.
+/// Le lieu de la maquette n'est pas là (pas de nom de coin sur l'écran verrouillé).
+private struct EcranVerrouille: View {
+    let etat: EtatSession
+    let perime: Bool
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Label("FishMe", systemImage: "fish.fill")
+                    .font(rond(15))
+                    .foregroundStyle(.white.opacity(0.85))
+                Spacer()
+                Text(etat.prises == 1 ? "1 prise" : "\(etat.prises) prises")
+                    .font(rond(15))
+                    .foregroundStyle(.white.opacity(0.85))
+            }
+            HStack(alignment: .bottom) {
+                Text(etat.debut, style: .timer)
+                    .font(rond(36))
+                    .monospacedDigit()
+                    .foregroundStyle(.white)
+                    .lineLimit(1)
+                Spacer()
+                FinLegale(etat: etat, perime: perime)
+            }
+            BoutonsSession().padding(.top, 4)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 14)
+    }
+}
+
+/// Boutons de la maquette P15 A : « Prise » (marine, appareil photo) et « Pause » (gris).
+private struct BoutonsSession: View {
+    var body: some View {
+        HStack(spacing: 10) {
+            Button(intent: PrendrePriseIntent()) {
+                Label("Prise", systemImage: "camera.fill")
+                    .font(rond(17))
+                    .frame(maxWidth: .infinity, minHeight: 40)
+                    .background(Capsule().fill(Teintes.marine))
+            }
+            // « Pause » (maquette) : caché tant que le moteur de session n'a pas de vraie pause,
+            // pour ne jamais montrer un bouton qui ne fait rien. `PauseSessionIntent` est prêt.
+        }
+        .buttonStyle(.plain)
+        .foregroundStyle(.white)
+    }
+}
+
+private struct FinLegale: View {
+    let etat: EtatSession
+    let perime: Bool
+
+    var body: some View {
+        Group {
+            switch etat.affichage(maintenant: .now, perime: perime) {
+            case .pecheFermee:
+                Label("pêche fermée", systemImage: "nosign")
+                    .font(rond(15))
+                    .foregroundStyle(Teintes.alerte)
+            case .compteARebours(let fin), .finLegale(let fin):
+                VStack(alignment: .trailing, spacing: 0) {
+                    Text("Fin légale")
+                        .font(rond(13, .bold))
+                        .foregroundStyle(.white.opacity(0.7))
+                    heure(fin)
+                        .font(rond(22))
+                        .monospacedDigit()
+                        .foregroundStyle(.white)
+                }
+            case .finInconnue:
+                EmptyView()
+            }
+        }
+    }
+}
+
 struct SessionLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: SessionActivityAttributes.self) { context in
-            // Écran verrouillé
-            HStack {
-                Decompte(etat: context.state, perime: context.isStale)
-                    .font(.title2)
-                Spacer()
-                NombrePrises(prises: context.state.prises)
-                    .font(.title2)
-            }
-            .fontDesign(.rounded).fontWeight(.bold)
-            .foregroundStyle(.white)
-            .padding()
-            .activityBackgroundTint(Teintes.marine)
-            .activitySystemActionForegroundColor(.white)
+            // Écran verrouillé (maquette P15 A)
+            EcranVerrouille(etat: context.state, perime: context.isStale)
+                .activityBackgroundTint(Color(white: 0.14, opacity: 0.78))
+                .activitySystemActionForegroundColor(.white)
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.leading) {
