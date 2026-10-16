@@ -107,11 +107,18 @@ struct PescedexView: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             if pages.count > 1 {
-                Text("Page \(page + 1) sur \(pages.count)")
-                    .font(Jeton.police(13, .semibold))
-                    .foregroundStyle(Jeton.encreDouce)
-                    .frame(maxWidth: .infinity)
-                    .padding(.bottom, 4)
+                // Le compteur par zone est en tête de l'écran ; ici, seulement des points de page.
+                HStack(spacing: 6) {
+                    ForEach(0..<pages.count, id: \.self) { i in
+                        Circle()
+                            .fill(i == page ? Jeton.encre : Jeton.ardoise.opacity(0.35))
+                            .frame(width: 7, height: 7)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.bottom, 4)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("Page \(page + 1) sur \(pages.count)")
             }
         }
     }
@@ -203,12 +210,12 @@ struct EmplacementView: View {
             .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
             Text(emplacement.espece.nom)
                 .font(Jeton.police(13))
-                .lineLimit(1)
-                .minimumScaleFactor(0.7)
+                .lineLimit(2)
+                .multilineTextAlignment(.center)
                 .foregroundStyle(prise == nil ? Jeton.ardoise : Jeton.encre)
-            if let prise, !prise.estDeclaree { PointsRarete(style: style, taille: 8) }
+            if let prise, !prise.estDeclaree { PointsRarete(style: style, taille: 10) }
             if prise?.estDeclaree == true {
-                Text("DÉCLARÉE").font(Jeton.police(9)).foregroundStyle(Jeton.ardoise)
+                Text("DÉCLARÉE").font(Jeton.police(11)).foregroundStyle(Jeton.ardoise)
             }
         }
         .padding(6)
@@ -218,6 +225,10 @@ struct EmplacementView: View {
             if prise?.estDeclaree == true {
                 RoundedRectangle(cornerRadius: 18, style: .continuous)
                     .strokeBorder(Jeton.ardoise, style: StrokeStyle(lineWidth: 2, dash: [6, 4]))
+            } else if prise != nil, style != .nonMesuree {
+                // Filets de rareté (1, 1, 2, 3), comme sur la fiche plein écran.
+                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                    .strokeBorder(style.couleur, lineWidth: CGFloat(style.filets) * 1.5)
             }
         }
     }

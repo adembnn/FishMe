@@ -23,7 +23,6 @@ private struct CaseCondition: View {
 struct RangeeMaintenantView: View {
     let lecture: LectureConditions
     @ObservedObject var marque: StockageMarque
-    @State private var expliquePression = false
 
     var body: some View {
         let c = lecture.conditions
@@ -37,19 +36,11 @@ struct RangeeMaintenantView: View {
                     CaseCondition(icone: "cloud.rain", valeur: "\(FormatConditions.nombre(p, decimales: 1)) mm", detail: nil)
                 }
                 if let hpa = c.pressionHPa {
-                    Button { expliquePression.toggle() } label: {
-                        CaseCondition(icone: "gauge.medium", valeur: FormatConditions.pression(hpa, tendance: c.tendancePressionHPa6h), detail: nil)
-                    }
-                    .buttonStyle(.plain)
-                    .accessibilityHint("Touche pour lire ce que disent les études")
+                    CaseCondition(icone: "gauge.medium", valeur: FormatConditions.pression(hpa, tendance: c.tendancePressionHPa6h), detail: nil)
                 }
                 if let a = c.aube { CaseCondition(icone: "sunrise.fill", valeur: FormatConditions.heure(a), detail: nil) }
                 if let s = c.crepuscule { CaseCondition(icone: "sunset.fill", valeur: FormatConditions.heure(s), detail: nil) }
                 if let f = c.finLegale { CaseCondition(icone: "clock.badge.exclamationmark", valeur: FormatConditions.heure(f), detail: "fin légale") }
-            }
-            if expliquePression {
-                Text("Beaucoup de pêcheurs y voient un bon signe. Les études ne sont pas d'accord.")
-                    .font(JetonsConditions.police(.footnote)).foregroundStyle(JetonsConditions.encre2)
             }
             Text(lecture.depuisCache ? "lu à \(FormatConditions.heure(lecture.lueLe)), sans réseau" : "lu à \(FormatConditions.heure(lecture.lueLe))")
                 .font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)

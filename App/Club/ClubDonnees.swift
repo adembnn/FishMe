@@ -13,6 +13,8 @@ struct SourceClub: Identifiable, Hashable {
 /// Les liens officiels du pêcheur : RootView les fabrique depuis `liensFederation(departement)` de Core.
 struct LiensClub: Hashable {
     var federation: URL?
+    /// Nom de la fédération, affiché sous « Ma fédération » quand RootView le connaît.
+    var nomFederation: String? = nil
     var association: URL?
     var carteDePeche: URL = LiensOfficiels.carteDePeche
     /// Page de confidentialité publiée par le serveur MCP de MWM ; vide tant qu'elle n'existe pas.
@@ -40,7 +42,9 @@ nonisolated enum LiensOfficiels {
 }
 
 nonisolated enum ContactClub {
-    /// Adresse réelle fournie par Adem ou MWM (écrite dans CLAUDE.md). Jamais inventée : vide, le test échoue.
+    /// Adresse réelle fournie par Adem ou MWM (écrite dans CLAUDE.md). Jamais inventée.
+    /// Vide : les lignes « Contact » et « Signaler une erreur de règle » disparaissent.
+    // À remplir par Adem : l'adresse courriel de contact (un seul endroit).
     static let adresse = ""
 
     static func courriel(objet: String) -> URL? {

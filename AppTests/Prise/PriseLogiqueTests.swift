@@ -10,6 +10,16 @@ struct PriseLogiqueTests {
         EspecePechable(espece: Espece(id: id), nom: nom, nomLatin: nom, image: id, confusions: confusions)
     }
 
+    @Test func sosiesDejaTranchesDansUnGroupeDuModele() {
+        var aquitain = entree("brochet-aquitain", nom: "Brochet aquitain"); aquitain.classeModele = "brochet"
+        var brochet = entree("brochet", nom: "Brochet", confusions: [Confusion(avec: aquitain.espece, critere: "c", source: "s")])
+        brochet.classeModele = "brochet"
+        let cat = [brochet, aquitain]
+        #expect(PriseLogique.sosiesDejaTranches(brochet, classe: "brochet", catalogue: cat))
+        #expect(!PriseLogique.sosiesDejaTranches(brochet, classe: nil, catalogue: cat))
+        #expect(!PriseLogique.sosiesDejaTranches(brochet, classe: "autre", catalogue: cat))
+    }
+
     @Test func grilleGroupeParFamilleEtMetLesEspecesDuCoinEnPremier() {
         let catalogue = [entree("sandre", nom: "Sandre"), entree("brochet", nom: "Brochet"), entree("truite-fario", nom: "Truite fario")]
         let proches = [EspeceProche(espece: Espece(id: "sandre"), nPeches: 3, annee: 2024, ouverture: .ouverte)]

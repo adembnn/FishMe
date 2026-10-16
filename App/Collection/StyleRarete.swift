@@ -121,7 +121,7 @@ struct BadgeRarete: View {
                     }
                     if style != .legendaire {
                         Text("\(style.rang)")
-                            .font(Jeton.police(taille * 0.46))
+                            .font(Jeton.policeFixe(taille * 0.46))
                             .foregroundStyle(.white)
                     }
                 }

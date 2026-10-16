@@ -70,6 +70,8 @@ struct MarqueMeteoView: View {
                     Text("Autres données météo")
                         .font(JetonsConditions.police(.caption2))
                         .underline()
+                        .frame(minHeight: 44)
+                        .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Source météo : page légale d'Apple Weather")

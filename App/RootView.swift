@@ -494,6 +494,7 @@ struct RootView: View {
             services: app.servicesCarte,
             spotFixe: app.moteur.spotGratuit,
             sessionsTerminees: app.moteur.sessionsTerminees,
+            sessionEnCours: app.moteur.enCours != nil,
             bandeauHaut: AnyView(VigilanceEmplacement(app: app)),
             bandeauSession: AnyView(
                 BandeauSession(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() }) {

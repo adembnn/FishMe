@@ -14,5 +14,7 @@
 	<array>
 		<string>group.ai.mwm.build.challenge.team.01</string>
 	</array>
+	<key>com.apple.developer.weatherkit</key>
+	<true/>
 </dict>
 </plist>

@@ -92,7 +92,12 @@ final class PriseModele {
     /// Le pêcheur touche une espèce : anguille, d'abord son stade ; sosies coûteux, d'abord les sosies côte à côte.
     func choisir(_ entree: EspecePechable) {
         if PriseLogique.estAnguille(entree.espece) { etape = .stade; return }
-        if PriseLogique.demandeSosies(entree) { etape = .sosies(entree); return }
+        var classeChoisie: String?
+        if case .grille(let classe) = etape { classeChoisie = classe }
+        if PriseLogique.demandeSosies(entree),
+           !PriseLogique.sosiesDejaTranches(entree, classe: classeChoisie, catalogue: catalogue) {
+            etape = .sosies(entree); return
+        }
         confirmer(entree)
     }
 
