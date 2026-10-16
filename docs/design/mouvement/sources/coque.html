@@ -1,0 +1,276 @@
+<title>FishMe en mouvement</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap">
+<style>
+/* Mise en page : une colonne de sections ; dans chaque section, une rangée de téléphones ou de tuiles qui passe à la ligne. */
+:root {
+  --fond: #F2F5F9; --surface: #FFFFFF; --tuile: #E7EFF8; --filet: #DCE3EB;
+  --encre: #0E1A26; --encre-douce: #566576; --marine: #0D4A85; --marine-doux: #DCE8F5; --sur-marine: #FFFFFF;
+  --nuit: #082A4C; --bouchon: #E8571C;
+  --commun: #6B7780; --peu-commun: #23885A; --rare: #5B4FD0; --legendaire: #B07A12;
+  --ombre: 0 1px 2px rgba(14,26,38,.06), 0 8px 24px rgba(14,26,38,.06);
+  --police: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --fond: #0D1218; --surface: #151C24; --tuile: #1B2530; --filet: #26303B;
+  --encre: #E7EDF3; --encre-douce: #97A4B2; --marine: #7FB8EE; --marine-doux: #16314D; --sur-marine: #061A2C;
+  --commun: #9AA6AE; --peu-commun: #4CC28A; --rare: #9C93F2; --legendaire: #E0AE45;
+  --ombre: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25); color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --fond: #0D1218; --surface: #151C24; --tuile: #1B2530; --filet: #26303B;
+  --encre: #E7EDF3; --encre-douce: #97A4B2; --marine: #7FB8EE; --marine-doux: #16314D; --sur-marine: #061A2C;
+  --commun: #9AA6AE; --peu-commun: #4CC28A; --rare: #9C93F2; --legendaire: #E0AE45;
+  --ombre: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25); color-scheme: dark; }
+
+body { background: var(--fond); color: var(--encre); font-family: var(--police); font-weight: 700; line-height: 1.45; }
+.page { max-width: 1180px; margin: 0 auto; padding-block: 28px 80px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 56px; }
+
+/* En-tête */
+.tete { display: grid; gap: 18px; }
+.tete-haut { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.tete-logo { width: 56px; height: 56px; border-radius: 12.5px; overflow: hidden; flex: none; box-shadow: var(--ombre); }
+.tete-logo svg { display: block; width: 100%; height: 100%; }
+h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.05; font-weight: 900; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+.chapeau { max-width: 64ch; color: var(--encre-douce); font-size: 16px; margin: 0; }
+.regles { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.regle { background: var(--surface); border-radius: 16px; padding: 14px 16px; box-shadow: var(--ombre); display: grid; gap: 4px; }
+.regle b { font-size: 22px; font-weight: 900; font-variant-numeric: tabular-nums; color: var(--marine); }
+.regle span { color: var(--encre-douce); font-size: 14px; }
+
+/* Barre de commandes collante */
+.barre { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--fond) 88%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--filet); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--fond); }
+.barre-in { max-width: 1180px; margin: 0 auto; padding-block: 10px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.barre nav { display: flex; gap: 4px; flex-wrap: wrap; flex: 1 1 auto; min-width: 0; }
+.barre nav a { color: var(--encre-douce); text-decoration: none; font-size: 14px; padding: 6px 10px; border-radius: 999px; }
+.barre nav a:hover { background: var(--tuile); color: var(--encre); }
+.bouton { font: inherit; font-size: 14px; font-weight: 800; border: 0; border-radius: 999px; padding: 9px 14px; cursor: pointer; background: var(--tuile); color: var(--encre); display: inline-flex; align-items: center; gap: 7px; }
+.bouton:hover { filter: brightness(.97); }
+.bouton.principal { background: var(--marine); color: var(--sur-marine); }
+.bouton[aria-pressed="true"] { background: var(--marine); color: var(--sur-marine); }
+.bouton:focus-visible, .seg button:focus-visible, .choix input:focus-visible + span, a:focus-visible { outline: 3px solid var(--marine); outline-offset: 2px; }
+.bouton svg { width: 16px; height: 16px; flex: none; }
+
+/* Sections */
+section { display: grid; gap: 20px; scroll-margin-top: 80px; }
+.sec-tete { display: grid; gap: 6px; max-width: 72ch; }
+.sec-tete .ou { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--marine); font-weight: 900; }
+h2 { font-size: clamp(24px, 3.4vw, 32px); font-weight: 900; letter-spacing: -.015em; margin: 0; line-height: 1.1; text-wrap: balance; }
+.sec-tete p { margin: 0; color: var(--encre-douce); font-size: 15px; }
+.rangee { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 22px; align-items: start; }
+.rangee.tuiles { grid-template-columns: repeat(auto-fill, minmax(232px, 1fr)); }
+
+/* Fiche d'une variation */
+.var { background: var(--surface); border-radius: 22px; padding: 14px; box-shadow: var(--ombre); display: grid; gap: 12px; min-width: 0; border: 2px solid transparent; transition: border-color .2s; }
+.var.choisie { border-color: var(--marine); }
+.scene-cadre { position: relative; border-radius: 30px; padding: 6px; background: #0E1A26; box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+.tuile .scene-cadre { border-radius: 18px; padding: 0; background: none; box-shadow: inset 0 0 0 1px var(--filet); }
+.scene { position: relative; overflow: hidden; width: 100%; border-radius: 25px; cursor: pointer; isolation: isolate; }
+.tuile .scene { border-radius: 18px; }
+.scene.telephone { aspect-ratio: 390 / 844; max-height: 560px; }
+.scene.tuile-sc { aspect-ratio: 1 / 1; }
+.scene.nuit { background: #082A4C; }
+.scene.clair { background: #F2F5F9; }
+.scene-vide { position: absolute; inset: 0; display: grid; place-items: center; color: #97A4B2; font-size: 13px; text-align: center; padding: 20px; }
+.var-tete { display: flex; align-items: baseline; gap: 10px; }
+.lettre { flex: none; width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; background: var(--marine-doux); color: var(--marine); font-weight: 900; font-size: 15px; }
+.var h3 { margin: 0; font-size: 18px; font-weight: 900; line-height: 1.2; }
+.var .resume { margin: 0; font-size: 14px; color: var(--encre); font-weight: 700; }
+.meta { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; font-size: 13px; margin: 0; }
+.meta dt { color: var(--encre-douce); }
+.meta dd { margin: 0; min-width: 0; }
+.var details { font-size: 13px; color: var(--encre-douce); }
+.var summary { cursor: pointer; color: var(--marine); font-weight: 800; }
+.var details p { margin: 6px 0 0; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.choix { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; font-size: 14px; font-weight: 800; margin-left: auto; }
+.choix input { position: absolute; opacity: 0; pointer-events: none; }
+.choix span { padding: 8px 12px; border-radius: 999px; border: 2px solid var(--filet); color: var(--encre-douce); }
+.choix input:checked + span { border-color: var(--marine); background: var(--marine); color: var(--sur-marine); }
+
+/* Choix de rareté */
+.seg { display: grid; grid-template-columns: 1fr 1fr; background: var(--tuile); padding: 3px; border-radius: 16px; gap: 2px; }
+.seg button { font: inherit; font-size: 13px; font-weight: 800; border: 0; background: none; color: var(--encre-douce); padding: 7px 10px; border-radius: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap; }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--encre); box-shadow: 0 1px 3px rgba(14,26,38,.12); }
+.seg i { width: 9px; height: 9px; display: inline-block; flex: none; }
+.r-commun { background: var(--commun); border-radius: 50%; }
+.r-peu-commun { background: var(--peu-commun); clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%); }
+.r-rare { background: var(--rare); clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+.r-legendaire { background: var(--legendaire); clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+
+/* Sons */
+.moments { display: grid; gap: 14px; }
+.moment { background: var(--surface); border-radius: 20px; padding: 16px; box-shadow: var(--ombre); display: grid; grid-template-columns: minmax(170px, 230px) 1fr; gap: 16px; align-items: start; }
+.moment-nom { display: grid; gap: 4px; min-width: 0; }
+.moment-nom h3 { margin: 0; font-size: 17px; font-weight: 900; display: flex; align-items: center; gap: 8px; }
+.moment-nom p { margin: 0; font-size: 13px; color: var(--encre-douce); }
+.sons { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; min-width: 0; }
+.son { border: 2px solid var(--filet); border-radius: 16px; padding: 10px; display: grid; gap: 8px; min-width: 0; transition: border-color .2s; }
+.son.choisi { border-color: var(--marine); }
+.son-haut { display: flex; align-items: center; gap: 10px; }
+.jouer { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--marine); color: var(--sur-marine); display: grid; place-items: center; cursor: pointer; }
+.jouer svg { width: 16px; height: 16px; }
+.jouer.joue { animation: pouls .5s ease-out; }
+@keyframes pouls { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--marine) 50%, transparent); } 100% { box-shadow: 0 0 0 14px transparent; } }
+.son-titre { display: grid; min-width: 0; }
+.son-titre b { font-size: 15px; font-weight: 900; }
+.son-titre small { color: var(--encre-douce); font-size: 12px; font-variant-numeric: tabular-nums; }
+.onde { width: 100%; height: 38px; display: block; }
+.son p { margin: 0; font-size: 12.5px; color: var(--encre-douce); }
+.son .choix { margin-left: 0; font-size: 13px; }
+.son .choix span { padding: 5px 10px; }
+.reco { font-size: 11px; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; color: var(--peu-commun); }
+
+/* Tableau des moments */
+.table-zone { overflow-x: auto; background: var(--surface); border-radius: 20px; box-shadow: var(--ombre); }
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--filet); vertical-align: top; }
+th { font-size: 12px; letter-spacing: .05em; text-transform: uppercase; color: var(--encre-douce); font-weight: 900; }
+tr:last-child td { border-bottom: 0; }
+td.n { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.colonnes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.bloc { background: var(--surface); border-radius: 20px; padding: 18px; box-shadow: var(--ombre); display: grid; gap: 8px; align-content: start; }
+.bloc h3 { margin: 0; font-size: 17px; font-weight: 900; }
+.bloc p, .bloc li { margin: 0; color: var(--encre-douce); font-size: 14px; }
+.bloc ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+
+/* Mes choix */
+.panier { background: var(--nuit); color: #E7EDF3; border-radius: 24px; padding: 20px; display: grid; gap: 12px; }
+.panier h2 { color: #fff; }
+.panier pre { margin: 0; white-space: pre-wrap; font-family: var(--police); font-size: 15px; color: #C7DFF3; background: rgba(255,255,255,.06); border-radius: 14px; padding: 14px; min-height: 60px; }
+.panier .bouton { background: #F4FBFF; color: #082A4C; justify-self: start; }
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%) translateY(20px); background: var(--encre); color: var(--fond); padding: 10px 16px; border-radius: 999px; font-size: 14px; opacity: 0; transition: .25s; pointer-events: none; z-index: 40; }
+.toast.vu { opacity: 1; transform: translateX(-50%); }
+
+@media (max-width: 640px) {
+  .barre nav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; flex-basis: 100%; }
+  .barre nav::-webkit-scrollbar { display: none; }
+  .barre nav a { white-space: nowrap; }
+  .regles { grid-template-columns: 1fr 1fr; }
+  .moment { grid-template-columns: 1fr; }
+  .rangee { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .rangee.tuiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .scene.telephone { max-height: 480px; }
+}
+@media (prefers-reduced-motion: reduce) { .jouer.joue { animation: none; } }
+</style>
+
+<div class="barre"><div class="barre-in">
+  <nav aria-label="Sections">
+    <a href="#lancement">Lancement</a><a href="#arrivee">Arrivée d'une carte</a><a href="#attente">Attentes</a><a href="#carte">Carte</a><a href="#reconnaissance">Photo</a><a href="#sons">Sons</a><a href="#choix">Mes choix</a>
+  </nav>
+  <button class="bouton principal" id="b-son" type="button" aria-pressed="false">
+    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 6h2.5L8 3v10L4.5 10H2z"/><path d="M10.5 5.2a3.6 3.6 0 0 1 0 5.6M12.4 3.4a6 6 0 0 1 0 9.2" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+    <span>Activer le son</span></button>
+  <button class="bouton" id="b-reduit" type="button" aria-pressed="false">Réduire les animations</button>
+</div></div>
+
+<main class="page">
+  <header class="tete">
+    <div class="tete-haut"><div class="tete-logo" id="tete-logo"></div><h1>FishMe en mouvement</h1></div>
+    <p class="chapeau">Des animations de chargement et des sons à choisir pour l'app. Rien n'est figé : chaque attente montre de l'eau ou un poisson qui bouge. Touche une scène pour la rejouer avec le son, choisis une variation par moment, puis copie tes choix en bas de page.</p>
+    <div class="regles">
+      <div class="regle"><b>0,3 s</b><span>Au-delà, une animation remplace toujours l'image figée.</span></div>
+      <div class="regle"><b>1,4 s max</b><span>Pour l'animation du lancement, qui ne retient jamais le pêcheur.</span></div>
+      <div class="regle"><b>1,6 → 4,5 s</b><span>L'arrivée d'une carte dure plus longtemps quand la rareté monte. Un toucher la passe.</span></div>
+      <div class="regle"><b>Mode silencieux</b><span>Les sons le respectent et ne coupent pas la musique. La vibration reste.</span></div>
+    </div>
+  </header>
+
+  <section id="lancement" data-groupe="lancement">
+    <div class="sec-tete"><span class="ou">Écran de lancement</span><h2>Le logo prend vie</h2>
+    <p>iOS impose une image fixe au tout premier instant : le logo seul sur la marine (P44 B, déjà codé). La première vue SwiftUI reprend ce logo au même endroit et l'anime, sans saut visible, puis ouvre la carte.</p></div>
+    <div class="rangee" data-rangee="lancement"></div>
+  </section>
+
+  <section id="arrivee" data-groupe="arrivee">
+    <div class="sec-tete"><span class="ou">Révélation de la carte</span><h2>Une carte qui arrive</h2>
+    <p>Le moment le plus fort de l'app, après la photo d'une prise. Chaque rareté ajoute une étape, de la lumière et un son plus long. Choisis la rareté sous chaque téléphone.</p></div>
+    <div class="rangee" data-rangee="arrivee"></div>
+  </section>
+
+  <section id="attente" data-groupe="attente">
+    <div class="sec-tete"><span class="ou">Petites attentes</span><h2>À la place de la roue qui tourne</h2>
+    <p>Pour un spot qui se charge, la météo, une sauvegarde. Taille réelle d'un indicateur iOS, au centre de la zone qui attend.</p></div>
+    <div class="rangee tuiles" data-rangee="attente"></div>
+  </section>
+
+  <section id="carte" data-groupe="carte">
+    <div class="sec-tete"><span class="ou">Carte</span><h2>La carte qui se charge</h2>
+    <p>Pendant que les stations OFB et les rivières arrivent. Le contenu se place tout de suite, puis se précise.</p></div>
+    <div class="rangee" data-rangee="carte"></div>
+  </section>
+
+  <section id="reconnaissance" data-groupe="reconnaissance">
+    <div class="sec-tete"><span class="ou">Photo de la prise</span><h2>Pendant que le modèle reconnaît l'espèce</h2>
+    <p>Une seconde environ. Les trois meilleures espèces montent comme des bulles.</p></div>
+    <div class="rangee" data-rangee="reconnaissance"></div>
+  </section>
+
+  <section id="sons">
+    <div class="sec-tete"><span class="ou">Sons</span><h2>Les sons, moment par moment</h2>
+    <p>Tous fabriqués ici, note par note, dans ton navigateur : aucun son pris à un autre jeu, donc aucun droit à payer. La variation choisie est celle que jouent les animations plus haut. Pense à monter le volume.</p></div>
+    <div class="moments" id="moments"></div>
+  </section>
+
+  <section id="regles-son">
+    <div class="sec-tete"><span class="ou">Dans l'app</span><h2>Son, vibration et mouvement ensemble</h2>
+    <p>Le son ne porte jamais seul l'information : beaucoup de pêcheurs ont le téléphone en silencieux au bord de l'eau. La vibration et l'image disent la même chose.</p></div>
+    <div class="table-zone"><table>
+      <thead><tr><th>Moment</th><th>Son</th><th>Vibration (Core Haptics)</th><th>Durée</th></tr></thead>
+      <tbody id="tableau-moments"></tbody>
+    </table></div>
+    <div class="colonnes">
+      <div class="bloc"><h3>Comment les sons entrent dans l'app</h3><ul>
+        <li>Chaque son retenu est exporté en fichier, converti en CAF (mono, 44,1 kHz), moins de 1 Mo pour tous.</li>
+        <li>Session audio « ambiante » : le bouton silencieux coupe les sons et la musique du pêcheur continue.</li>
+        <li>Un réglage « Sons » et un réglage « Vibrations », tous deux activés au départ.</li>
+        <li>Petites variations de hauteur à chaque lecture, pour ne jamais entendre deux fois le même son.</li>
+      </ul></div>
+      <div class="bloc"><h3>Ce qu'on a regardé</h3><ul>
+        <li>Coffres de Clash Royale : le coffre tremble, éclate, chaque carte se retourne avec un son qui monte selon la rareté.</li>
+        <li>Paquets de Pokémon TCG Pocket : on déchire du doigt, les cartes rares ont une pause et des étincelles en plus.</li>
+        <li>Marvel Snap : révélation courte, brillance de la variante. La vitesse avant la cérémonie.</li>
+        <li>Fishbrain, Fishangler, Deeper : roue grise ou écran fixe. Rien autour de l'eau, donc la place est libre.</li>
+      </ul></div>
+      <div class="bloc"><h3>Si on veut de vrais enregistrements</h3><ul>
+        <li>Kenney.nl : sons d'interface en CC0, sans crédit à donner.</li>
+        <li>Freesound.org avec le filtre CC0 seulement (vérifier fichier par fichier).</li>
+        <li>À éviter : sons des jeux cités, BBC (usage non commercial), tout ce qui demande un crédit qu'on oublierait.</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section id="choix">
+    <div class="panier">
+      <h2>Mes choix</h2>
+      <p style="margin:0;color:#97A4B2;font-size:14px">Ils se remplissent quand tu touches « Je prends ». Copie-les et colle-les dans le fil.</p>
+      <pre id="mes-choix">Rien de choisi pour l'instant.</pre>
+      <button class="bouton" id="b-copier" type="button">Copier mes choix</button>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* Moteur de la page : défini avant les fichiers d'animation. */
+window.FM = {
+  anims: [],
+  sonActif: false,
+  choixSons: {},
+  son(moment) {
+    if (!FM.sonActif || !window.FMSons) return;
+    const id = FM.sonChoisi(moment);
+    if (id) { try { FMSons.jouer(id); } catch (e) {} }
+  },
+  sonChoisi(moment) {
+    if (FM.choixSons[moment]) return FM.choixSons[moment];
+    const cat = (window.FMSons && FMSons.catalogue) || [];
+    const d = cat.find(s => s.moment === moment && s.defaut) || cat.find(s => s.moment === moment);
+    return d ? d.id : null;
+  }
+};
+</script>
