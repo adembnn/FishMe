@@ -200,3 +200,42 @@ extension View {
         background(Palette.surface, in: RoundedRectangle(cornerRadius: rayon, style: .continuous))
     }
 }
+
+// MARK: - Fermer et revenir (kit : `.rond`, icônes « fermer » et « retour »)
+
+/// Le bouton rond de 44 pt qui ferme un écran ou revient à l'étape d'avant, le même partout.
+/// - `.verre` (directions A · Plans et C · Sujet) : rond de verre, icône encre. Posé en haut à gauche,
+///   à 16 pt du bord, sauf sur une feuille façon Plans (fiche d'un coin) où il va en haut à droite.
+/// - `.simple` (direction B · Réglages) : icône marine seule, sans fond, comme une barre de navigation iOS.
+struct BoutonRond: View {
+    enum Role { case fermer, retour }
+    enum Rendu { case verre, simple }
+
+    let role: Role
+    var rendu: Rendu = .verre
+    /// Sans action, le bouton ferme l'écran présenté (`dismiss`).
+    var action: (() -> Void)? = nil
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        Button {
+            if let action { action() } else { dismiss() }
+        } label: {
+            Image(systemName: role == .fermer ? "xmark" : "chevron.left")
+                .font(.system(size: 18, weight: .bold, design: .rounded))
+                .foregroundStyle(rendu == .verre ? Palette.encre : Palette.marine)
+                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                .background {
+                    if rendu == .verre {
+                        Circle()
+                            .fill(.regularMaterial)
+                            .overlay(Circle().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
+                            .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
+                    }
+                }
+                .contentShape(Circle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(role == .fermer ? "Fermer" : "Retour")
+    }
+}
