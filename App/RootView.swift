@@ -496,6 +496,15 @@ final class ParcoursApp {
                              date: moteur.maintenant(), prisesDuJour: moteur.prisesGardeesDuJour())
     }
 
+    /// Une prise ajoutée à la main depuis le Pescedex (photo importée) : une carte comme les autres, sans GPS.
+    func ajouterPriseManuelle(photo: Data, espece: Espece, cm: Int?, date: Date, lieu: String?) async {
+        let prise = Prise(espece: espece, origine: .priseReelle, longueurCm: cm.map(Double.init),
+                          mesure: cm == nil ? nil : .saisie, date: date, lieuFlou: lieu, exemple: false)
+        if await ecrire({ _ = try await $0.enregistrer(prise: prise, photo: photo) }) {
+            await revelerCarte(prise, photoBrute: photo)
+        }
+    }
+
     func terminerPrise(_ confirmee: PriseConfirmee?) {
         courant = nil
         guard let confirmee else { return }
@@ -639,6 +648,8 @@ private struct RacineContenu: View {
     @AppStorage("demo.communaute") private var demo = false
     @AppStorage("profil.nom") private var nomProfil = ""
     @State private var profilOuvert = false
+    /// « Tes conditions » (météo), ouvert par le bouton météo de la carte.
+    @State private var meteoOuverte = false
     @State private var aquariumOuvert = false
     /// Vrai de l'apparition de la couverture de session jusqu'à la fin de son retrait.
     /// P03 « Où pêches-tu ? » : montré une seule fois, avant la première demande de position.
@@ -783,7 +794,10 @@ private struct RacineContenu: View {
                 photographier: { app.ajouterPrise() },
                 declarer: { app.montrer(.tunnel) },
                 voirAmis: { app.onglet = .club },
-                changerZone: { app.onglet = .carte })
+                changerZone: { app.onglet = .carte },
+                ajouterManuellement: { photo, espece, cm, date, lieu in
+                    await app.ajouterPriseManuelle(photo: photo, espece: espece, cm: cm, date: date, lieu: lieu)
+                })
             .fullScreenCover(isPresented: $aquariumOuvert) {
                 AquariumView(modele: modele, fermer: { aquariumOuvert = false },
                              emplacements: EmplacementsExternes(
@@ -804,6 +818,7 @@ private struct RacineContenu: View {
         // `carteSansPosition` n'est plus affichée ici.
         vueCarte
             .sheet(isPresented: $profilOuvert) { ProfilEmplacement(app: app, reglages: reglagesClub) }
+            .sheet(isPresented: $meteoOuverte) { TesConditionsEmplacement(app: app) }
             .onChange(of: demo) { _, _ in Task { await app.rafraichirCollection() } }
             .questionNiveau(declenchee: app.questionNiveauPermise)
     }
@@ -817,7 +832,7 @@ private struct RacineContenu: View {
             },
             voirLaCarte: { app.sansPositionAffiche = false },
             ouvrirPescedex: { app.onglet = .pescedex },
-            ouvrirAmis: { app.onglet = .club },
+            ouvrirAmis: SauvegardeICloud.actif ? { app.onglet = .club } : nil,
             codeZone: app.spotCourant.flatMap { $0.departement.estInconnu ? nil : $0.departement.code })
     }
 
@@ -846,7 +861,9 @@ private struct RacineContenu: View {
             demandeChoixDeZone: app.choixDeZoneOuvert, volVersLeSpot: app.volDemande,
             pastilleProfil: AnyView(
                 ProfilPastille(nom: ProfilEmplacement<EmptyView>.nomAffiche(nomProfil),
-                               nombreDeCartes: app.cartesAPartager.count) { profilOuvert = true }))
+                               nombreDeCartes: app.cartesAPartager.count) { profilOuvert = true }),
+            ouvrirMeteo: { meteoOuverte = true },
+            ouvrirProfil: { profilOuvert = true })
             .task { app.carteListe() }
     }
 
@@ -920,7 +937,15 @@ private struct RacineContenu: View {
         case .finSession:
             if let fin = app.finAffichee {
                 FinSessionView(fin: fin, infosEspece: app.infosEspece(), lieu: app.finLieu, surTerminer: { app.finTerminee() },
-                               surPhotoSortie: fin.sortie.prises.isEmpty ? { data in app.ajouterPhotoSortie(data, pour: fin.sortie.id) } : nil)
+                               surPhotoSortie: fin.sortie.prises.isEmpty ? { data in app.ajouterPhotoSortie(data, pour: fin.sortie.id) } : nil,
+                               rarete: { prise in
+                                   guard let departement = Formats.departement(depuisLieuFlou: prise.lieuFlou) ?? app.spotCourant?.departement,
+                                         !departement.estInconnu else { return nil }
+                                   return app.core.especes.rarete(espece: prise.espece, departement: departement)
+                               },
+                               photoDe: { prise in
+                                   prise.cheminPhoto.flatMap { try? Data(contentsOf: DepotCartes.dossierParDefaut().appendingPathComponent($0)) }
+                               })
                     .interactiveDismissDisabled()
             }
 
