@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h51 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h57 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 
@@ -22,6 +22,12 @@ Les 3 fichiers de données (`stations-especes.json`, `rarete-departements.json`,
 5. Facultatif : `xcrun simctl location booted set 48.835,2.240` (position simulée).
 
 Si un ✗ s'affiche, copie le message dans `titouan-vers-equipe.md`.
+
+
+## ⚠️ TA BRANCHE `titouan/finitions` CROISE LE FIL DESIGN
+On a vu tes commits (86466576 : cartes, météo façon Apple, aquarium dans l'app, Communauté, Pescedex de démo). Bien joué, mais ils touchent les mêmes fichiers que le fil design en ce moment : `App/Collection/*` (Pescedex, recto, verso, plein écran), `App/Club/*`, `App/Carte/Vues/VueCarte.swift`, `App/Session/*`, `App/Abonnement/TextesPaywall.swift`, et `App/RootView.swift` (à Adem).
+**Avant d'aller plus loin, écris dans `titouan-vers-equipe.md`** : ce que tu veux voir fusionné, et sur quoi tu repars. On s'accorde avec Adem et le fil design pour ne pas écraser leur travail (`lot/design-systeme`).
+Deux points à vérifier de ton côté : les photos de `App/Demo/Photos/` sont-elles libres de droit (elles seraient publiées dans l'app) ? Et le mode démo est-il bien sous `#if DEBUG` (rien de factice dans le build envoyé à Apple) ?
 
 ## Échéances (heure de Paris)
 - **14h** : build sur TestFlight (pas de prod). Dernier archive vers 13h15.
