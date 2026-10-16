@@ -34,6 +34,7 @@ private struct FondPartage<Carte: View>: View {
     let departement: Departement?
 
     private var legende: String {
+        // À brancher : le nom du département (« Val-de-Marne ») ; Core ne donne que le code, qui le remplace.
         if let d = departement, !d.estInconnu { return "Mon Pescedex · \(d.code)" }
         return "Mon Pescedex"
     }
@@ -76,7 +77,8 @@ private struct FondPartage<Carte: View>: View {
                 HStack(spacing: 8 * k) {
                     logo(k)
                     Text("FishMe")
-                        .font(Police.taille(15 * k, .heavy))
+                        .font(Police.taille(15 * k, .black))
+                        .tracking(0.01 * 15 * k)
                         .foregroundStyle(.white.opacity(0.85))
                 }
                 .padding(.top, 22 * k)
@@ -93,5 +95,46 @@ private struct FondPartage<Carte: View>: View {
         }
         .frame(width: largeur, height: hauteur)
         .clipped()
+    }
+}
+
+/// P49 A : l'image qui va partir, vue en entier (324 × 576 pt, coins de 22), fermer en haut à gauche et un seul bouton « Partager » en bas.
+/// Le PNG est celui de `ImagePartage` : sans métadonnée, sans lieu précis.
+struct ApercuPartageView: View {
+    let png: Data
+    let fermer: () -> Void
+
+    var body: some View {
+        let image = UIImage(data: png)
+        ZStack {
+            Palette.fond.ignoresSafeArea()
+            VStack(spacing: 0) {
+                HStack {
+                    BoutonRond(role: .fermer, rendu: .verre, action: fermer)
+                    Spacer(minLength: 0)
+                }
+                .padding(.horizontal, Espace.bord)
+                Spacer(minLength: Espace.s)
+                if let image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: 324, maxHeight: 576)
+                        .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+                        .shadow(color: Palette.encre.opacity(0.28), radius: 20, y: 18)
+                        .overlay(RoundedRectangle(cornerRadius: 22, style: .continuous).strokeBorder(Palette.encre.opacity(0.08), lineWidth: 1))
+                        .accessibilityLabel("Aperçu de l'image à partager")
+                }
+                Spacer(minLength: Espace.l)
+                if let image {
+                    ShareLink(item: Image(uiImage: image), preview: SharePreview("Ma carte FishMe", image: Image(uiImage: image))) {
+                        Label("Partager", systemImage: "square.and.arrow.up")
+                    }
+                    .buttonStyle(.principal)
+                    .padding(.horizontal, Espace.bord)
+                    .padding(.bottom, 6)
+                }
+            }
+        }
     }
 }
