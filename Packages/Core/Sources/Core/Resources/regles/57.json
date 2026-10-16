@@ -1861,7 +1861,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 1re catégorie, le brochet se garde à partir de 50 cm.",
+   "phrase": "En 1re catégorie, le brochet, taille minimale 50 cm.",
    "textes": [
     "t6"
    ],
@@ -1890,7 +1890,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le brochet se garde à partir de 60 cm.",
+   "phrase": "En 2e catégorie, le brochet, taille minimale 60 cm.",
    "textes": [
     "t6"
    ],
@@ -1919,7 +1919,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le sandre se garde à partir de 50 cm.",
+   "phrase": "En 2e catégorie, le sandre, taille minimale 50 cm.",
    "textes": [
     "t6"
    ],
@@ -1948,7 +1948,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, le black-bass se garde à partir de 30 cm.",
+   "phrase": "En 2e catégorie, le black-bass, taille minimale 30 cm.",
    "textes": [
     "t6"
    ],
@@ -1977,7 +1977,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La lamproie fluviatile se garde à partir de 20 cm.",
+   "phrase": "La lamproie fluviatile, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2006,7 +2006,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "L'ombre commun se garde à partir de 30 cm.",
+   "phrase": "L'ombre commun, taille minimale 30 cm.",
    "textes": [
     "t6"
    ],
@@ -2036,7 +2036,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La grenouille verte se garde à partir de 8 cm (museau au cloaque).",
+   "phrase": "La grenouille verte, taille minimale 8 cm (museau au cloaque).",
    "textes": [
     "t6"
    ],
@@ -2066,7 +2066,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La grenouille rousse se garde à partir de 8 cm (museau au cloaque).",
+   "phrase": "La grenouille rousse, taille minimale 8 cm (museau au cloaque).",
    "textes": [
     "t6"
    ],
@@ -2095,7 +2095,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sarre Blanche et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Sarre Blanche et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2124,7 +2124,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sarre Rouge et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Sarre Rouge et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2153,7 +2153,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sarre et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Sarre et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2182,7 +2182,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Bièvre et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Bièvre et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2211,7 +2211,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Zorn et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Zorn et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2240,7 +2240,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mossig et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Mossig et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2269,7 +2269,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mosselbach et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Mosselbach et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2298,7 +2298,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Nessel et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Nessel et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2327,7 +2327,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Zinzel du Nord et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Zinzel du Nord et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2356,7 +2356,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Zinzel du Sud et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Zinzel du Sud et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2385,7 +2385,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Ischbach et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Ischbach et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2414,7 +2414,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Spietersbach et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Spietersbach et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2443,7 +2443,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saumuhlbach et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Saumuhlbach et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2472,7 +2472,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mulgraben et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Mulgraben et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2501,7 +2501,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Klapparbach et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Klapparbach et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2530,7 +2530,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Falkensteinerbach et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Falkensteinerbach et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2559,7 +2559,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Schwarzbach et ses affluents (1re catégorie) : truite fario gardée à partir de 20 cm.",
+   "phrase": "Schwarzbach et ses affluents (1re catégorie) : truite fario, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2588,7 +2588,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sarre Blanche et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Sarre Blanche et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2617,7 +2617,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sarre Rouge et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Sarre Rouge et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2646,7 +2646,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sarre et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Sarre et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2675,7 +2675,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Bièvre et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Bièvre et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2704,7 +2704,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Zorn et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Zorn et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2733,7 +2733,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mossig et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Mossig et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2762,7 +2762,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mosselbach et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Mosselbach et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2791,7 +2791,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Nessel et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Nessel et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2820,7 +2820,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Zinzel du Nord et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Zinzel du Nord et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2849,7 +2849,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Zinzel du Sud et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Zinzel du Sud et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2878,7 +2878,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Ischbach et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Ischbach et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2907,7 +2907,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Spietersbach et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Spietersbach et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2936,7 +2936,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saumuhlbach et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Saumuhlbach et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2965,7 +2965,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mulgraben et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Mulgraben et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -2994,7 +2994,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Klapparbach et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Klapparbach et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -3023,7 +3023,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Falkensteinerbach et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Falkensteinerbach et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],
@@ -3052,7 +3052,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Schwarzbach et ses affluents (1re catégorie) : omble ou saumon de fontaine gardée à partir de 20 cm.",
+   "phrase": "Schwarzbach et ses affluents (1re catégorie) : omble ou saumon de fontaine, taille minimale 20 cm.",
    "textes": [
     "t6"
    ],

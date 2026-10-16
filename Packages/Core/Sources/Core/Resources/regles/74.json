@@ -4419,7 +4419,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac du Môle : toute carpe capturée de nuit est remise à l'eau, une carpe capturée de jour peut être gardée.",
+   "phrase": "Lac du Môle : toute carpe capturée de nuit est remise à l'eau ; la règle de nuit ne vise pas les carpes prises de jour.",
    "textes": [
     "t15"
    ],
@@ -8133,7 +8133,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Au lac d'Arvouin, la truite se garde à partir de 30 cm.",
+   "phrase": "Au lac d'Arvouin, la truite, taille minimale 30 cm.",
    "textes": [
     "t37"
    ],
@@ -8162,7 +8162,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Au lac de Tavaneuse, la truite se garde à partir de 30 cm.",
+   "phrase": "Au lac de Tavaneuse, la truite, taille minimale 30 cm.",
    "textes": [
     "t37"
    ],
@@ -8191,7 +8191,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Dranse : la truite se garde à partir de 30 cm, sur le tronçon de la confluence Dranse de Morzine / Dranse d'Abondance au parement amont du pont de la D1005.",
+   "phrase": "Dranse : la truite, taille minimale 30 cm, sur le tronçon de la confluence Dranse de Morzine / Dranse d'Abondance au parement amont du pont de la D1005.",
    "textes": [
     "t38"
    ],
@@ -8220,7 +8220,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Eau morte : la truite se garde à partir de 30 cm, sur le tronçon du pont de la RD 1508 (Doussard) au lac d'Annecy.",
+   "phrase": "Eau morte : la truite, taille minimale 30 cm, sur le tronçon du pont de la RD 1508 (Doussard) au lac d'Annecy.",
    "textes": [
     "t38"
    ],
@@ -11791,7 +11791,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac d'Annecy : 5 jours par an, les membres de l'AAPPMA Annecy Lac Pêche (carte annuelle) peuvent garder 6 ombles ou corégones par jour.",
+   "phrase": "Lac d'Annecy : 5 jours par an, pour les membres de l'AAPPMA Annecy Lac Pêche (carte annuelle), quota 6 ombles ou corégones par jour.",
    "textes": [
     "t56"
    ],
