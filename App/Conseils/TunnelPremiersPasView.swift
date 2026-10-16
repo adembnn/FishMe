@@ -195,24 +195,46 @@ struct TunnelPremiersPasView: View {
     private var fin: some View {
         VStack(spacing: Espace.l) {
             Spacer(minLength: 0)
-            Image(systemName: "checkmark.seal.fill")
-                .font(Police.taille(56, .bold))
-                .foregroundStyle(Palette.marine)
-                .accessibilityHidden(true)
             if nbDeclarees > 0 {
                 Text("\(nbDeclarees)")
-                    .font(Police.chiffre)
-                    .foregroundStyle(Palette.encre)
+                    .font(Police.taille(72, .heavy).monospacedDigit())
+                    .foregroundStyle(Palette.marine)
                 Label("dans ton Pescedex", systemImage: "square.stack.fill")
                     .font(Police.titre)
                     .foregroundStyle(Palette.encre)
+                poissonsDeclares
             } else {
+                Image(systemName: "fish.fill")
+                    .font(Police.taille(56, .bold))
+                    .foregroundStyle(Palette.marine)
+                    .frame(width: 128, height: 128)
+                    .background(Palette.marineDoux, in: Circle())
+                    .accessibilityHidden(true)
                 Text("Pas encore de carte")
                     .font(Police.titre)
                     .foregroundStyle(Palette.encre)
+                Text("Ta première prise photographiée en crée une.")
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
+                    .multilineTextAlignment(.center)
             }
             Spacer(minLength: 0)
             gros("Voir mon spot", icone: "mappin.and.ellipse", plein: true, action: voirMonSpot ?? choisirUnSpot)
+        }
+    }
+
+    /// Les poissons déclarés, en images (jamais en liste de noms), 3 par rangée.
+    private var poissonsDeclares: some View {
+        let colonnes = Array(repeating: GridItem(.flexible(), spacing: Espace.m), count: 3)
+        let choisis = declarees.sorted().filter { $0 < especes.count }.map { especes[$0] }
+        return LazyVGrid(columns: colonnes, spacing: Espace.m) {
+            ForEach(choisis, id: \.espece) { e in
+                ImageEspece(nom: e.image, libelle: e.nom)
+                    .frame(height: 52)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, Espace.s)
+                    .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
+            }
         }
     }
 
