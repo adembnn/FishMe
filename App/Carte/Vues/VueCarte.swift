@@ -31,6 +31,9 @@ struct VueCarte: View {
     let ouChercher: ((Coordonnee) -> AnyView)?
     /// Vrai tant que le choix de zone ou la redemande est à l'écran : la racine attend avant d'ouvrir une autre feuille.
     let surChoixDeZone: (Bool) -> Void
+    /// Vrai quand la racine demande le choix de zone (« Choisir sur la carte » de « Où pêches-tu ? ») :
+    /// la feuille s'ouvre, et sa fermeture repasse par `surChoixDeZone(false)`.
+    let demandeChoixDeZone: Bool
     @State private var afficherOuChercher = false
     /// Faux : on arrive sur « Ton spot » (maquette P06 C). Vrai : la carte, ouverte d'un toucher sur le bouton carte.
     @State private var afficherCarte = false
@@ -48,7 +51,8 @@ struct VueCarte: View {
          onCommencerSession: @escaping (Spot) -> Void = { _ in },
          onSpotChange: @escaping (Spot) -> Void = { _ in },
          ouChercher: ((Coordonnee) -> AnyView)? = nil,
-         surChoixDeZone: @escaping (Bool) -> Void = { _ in }) {
+         surChoixDeZone: @escaping (Bool) -> Void = { _ in },
+         demandeChoixDeZone: Bool = false) {
         _modele = State(initialValue: ModeleCarte(services: services))
         self.spotFixe = spotFixe
         self.sessionsTerminees = sessionsTerminees
@@ -61,6 +65,7 @@ struct VueCarte: View {
         self.onSpotChange = onSpotChange
         self.ouChercher = ouChercher
         self.surChoixDeZone = surChoixDeZone
+        self.demandeChoixDeZone = demandeChoixDeZone
     }
 
     var body: some View {
@@ -85,107 +90,219 @@ struct VueCarte: View {
 
     // MARK: La carte
 
+    // Découpée en petites vues aux types simples : le compilateur ne vérifie jamais tout d'un seul bloc.
+
     private var carteComplete: some View {
-        @Bindable var m = modele
-        return MapReader { proxy in
-            ZStack {
-                Map(position: $m.camera) {
-                    UserAnnotation()
-                    if let spot = modele.spotAffiche {
-                        MapCircle(center: CLLocationCoordinate2D(latitude: spot.centre.latitude, longitude: spot.centre.longitude),
-                                  radius: spot.rayonM)
-                            .foregroundStyle(Palette.marine.opacity(0.15))
-                            .stroke(Palette.marine, lineWidth: 2)
-                    }
-                    ForEach(modele.elements) { element in
-                        Annotation("", coordinate: CLLocationCoordinate2D(latitude: element.coordonnee.latitude,
-                                                                          longitude: element.coordonnee.longitude)) {
-                            marque(element)
-                        }
-                        .annotationTitles(.hidden)
-                    }
-                }
-                // Jamais la France entière : au plus quelques départements à l'écran, et seulement au-dessus de la France.
-                .mapCameraBounds(MapCameraBounds(centerCoordinateBounds: Self.franceEtVoisins,
-                                                 minimumDistance: 300, maximumDistance: Self.altitudeMaximale))
-                .mapControls { MapCompass() }
-                .onMapCameraChange(frequency: .onEnd) { contexte in
-                    let r = contexte.region
-                    modele.chargerApresMouvement(ZoneCarte(
-                        centre: Coordonnee(latitude: r.center.latitude, longitude: r.center.longitude),
-                        spanLatitude: r.span.latitudeDelta, spanLongitude: r.span.longitudeDelta))
-                }
-                // Le toucher qui pose le cercle n'existe qu'en mode « poser mon spot » : le reste du temps,
-                // la carte garde tous ses gestes (pincer, double toucher, glisser) sans rien qui les retienne.
-                .simultaneousGesture(SpatialTapGesture().onEnded { valeur in
-                    guard let c = proxy.convert(valeur.location, from: .local) else { return }
-                    if let spot = modele.poserSpot(en: Coordonnee(latitude: c.latitude, longitude: c.longitude)) {
-                        onSpotChange(spot)
-                    }
-                }, including: modele.modeChoixDuSpot ? .all : .subviews)
+        carteAvecFeuilles
+            .alert("Ta position aide à centrer la carte", isPresented: redemandeOuverte) {
+                Button("Ouvrir les réglages") { ouvrirLesReglages() }
+                Button("Choisir à la main", role: .cancel) { modele.appliquer(position: nil, refusee: true) }
+            } message: {
+                Text("Sans elle, tu choisis ton département ou ta commune sur la carte. Rien ne bloque.")
             }
+            .task { await demarrerLaCarte() }
+            .onChange(of: spotFixe) { _, nouveau in modele.recevoir(spotFixe: nouveau) }
+            .onChange(of: sessionsTerminees) { _, nouveau in modele.sessionsTerminees = nouveau }
+            .onChange(of: position.position) { _, nouvelle in recevoirPosition(nouvelle) }
+            .onChange(of: position.statut) { _, _ in reagirAuStatut() }
+            .onChange(of: position.echec) { _, echec in if echec { modele.positionIndisponible() } }
+            .onChange(of: choixOuRedemandeOuvert) { _, ouvert in surChoixDeZone(ouvert) }
+            // La racine demande le choix de zone (« Choisir sur la carte » au premier lancement).
+            .onChange(of: demandeChoixDeZone) { _, demande in if demande { modele.afficherChoixDeZone = true } }
+            // Le spot proposé (zone choisie ou position) est connu de la racine : tunnel, conseils et conditions s'en servent.
+            .onChange(of: modele.spotLocal) { _, nouveau in if let nouveau { onSpotChange(nouveau) } }
+    }
+
+    private var carteAvecFeuilles: some View {
+        carteAvecBarres
+            .sheet(item: selectionOuverte) { selection in feuilleFiche(selection) }
+            .sheet(isPresented: filtreOuvert) { feuilleFiltre }
+            .sheet(isPresented: $afficherOuChercher) { feuilleOuChercher }
+            .sheet(isPresented: choixDeZoneOuvert) { feuilleChoixDeZone }
+    }
+
+    private var carteAvecBarres: some View {
+        carteSeule
+            .safeAreaInset(edge: .top, spacing: 8) { haut }
+            .safeAreaInset(edge: .bottom, spacing: 8) { bas }
+    }
+
+    private var carteSeule: some View {
+        MapReader { (proxy: MapProxy) in
+            carteMapKit(proxy: proxy)
         }
-        .safeAreaInset(edge: .top, spacing: 8) { haut }
-        .safeAreaInset(edge: .bottom, spacing: 8) { bas }
-        .sheet(item: $m.selection) { selection in
-            FicheCoinView(services: modele.services, selection: selection, pechables: modele.pechables,
-                          emplacementMaintenant: emplacementMaintenant, emplacementConseil: emplacementConseil,
-                          onCommencerSession: (sessionEnCours || modele.spotAffiche == nil) ? nil : {
-                              if let spot = modele.spotAffiche {
-                                  modele.selection = nil
-                                  onCommencerSession(spot)
-                              }
-                          })
-                .presentationDragIndicator(.visible)
+    }
+
+    private func carteMapKit(proxy: MapProxy) -> some View {
+        Map(position: cameraLiee) {
+            contenuCarte
         }
-        .sheet(isPresented: $m.afficherFiltre) {
-            FiltreEspeceView(pechables: modele.pechables, procheDIci: modele.especesProchesDIci(),
-                             filtreActuel: modele.filtre, choisir: { modele.choisirFiltre($0) },
-                             raretes: raretesDuSecteur())
-                .presentationDetents([.large])
+        // Jamais la France entière : au plus quelques départements à l'écran, et seulement au-dessus de la France.
+        .mapCameraBounds(Self.limitesCamera)
+        .mapControls { MapCompass() }
+        .onMapCameraChange(frequency: .onEnd) { (contexte: MapCameraUpdateContext) in
+            chargerApresMouvement(contexte.region)
         }
-        .sheet(isPresented: $afficherOuChercher) {
-            if let ouChercher {
-                ouChercher(modele.spotAffiche?.centre ?? modele.regionVisible.centre)
-                    .presentationDetents([.medium, .large])
-            }
+        // Le toucher qui pose le cercle n'existe qu'en mode « poser mon spot » : le reste du temps,
+        // la carte garde tous ses gestes (pincer, double toucher, glisser) sans rien qui les retienne.
+        .simultaneousGesture(toucherPourPoser(proxy: proxy), including: masqueDuToucher)
+    }
+
+    @MapContentBuilder
+    private var contenuCarte: some MapContent {
+        UserAnnotation()
+        if let spot = modele.spotAffiche {
+            cercleDuSpot(spot)
         }
-        .sheet(isPresented: $m.afficherChoixDeZone) {
-            ChoixDeZoneView(choisir: { modele.choisirZone($0) },
-                            codeDepartement: { c in
-                                let d = modele.services.geo.departement(de: c)
-                                return d.estInconnu ? nil : d.code
-                            })
+        ForEach(modele.elements) { (element: ElementCarte) in
+            annotation(element)
         }
-        .alert("Ta position aide à centrer la carte", isPresented: $m.afficherRedemande) {
-            Button("Ouvrir les réglages") {
-                if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
-                modele.appliquer(position: nil, refusee: true)
-            }
-            Button("Choisir à la main", role: .cancel) { modele.appliquer(position: nil, refusee: true) }
-        } message: {
-            Text("Sans elle, tu choisis ton département ou ta commune sur la carte. Rien ne bloque.")
+    }
+
+    private func cercleDuSpot(_ spot: Spot) -> some MapContent {
+        MapCircle(center: Self.cl(spot.centre), radius: spot.rayonM)
+            .foregroundStyle(Palette.marine.opacity(0.15))
+            .stroke(Palette.marine, lineWidth: 2)
+    }
+
+    private func annotation(_ element: ElementCarte) -> some MapContent {
+        Annotation("", coordinate: Self.cl(element.coordonnee)) {
+            marque(element)
         }
-        .task {
-            modele.spotFixe = spotFixe
-            modele.sessionsTerminees = sessionsTerminees
-            // Avant toute question de position : le spot fixé ou la dernière zone choisie posent la carte tout de suite.
-            modele.placerALOuverture()
-            // La position se demande tout de suite : elle n'attend ni les espèces ni le cache.
-            position.demanderAuPremierEcran()
-            reagirAuStatut()
-            await modele.demarrer()
+        .annotationTitles(.hidden)
+    }
+
+    private static func cl(_ c: Coordonnee) -> CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: c.latitude, longitude: c.longitude)
+    }
+
+    private static let limitesCamera = MapCameraBounds(centerCoordinateBounds: franceEtVoisins,
+                                                       minimumDistance: 300, maximumDistance: altitudeMaximale)
+
+    private var masqueDuToucher: GestureMask {
+        modele.modeChoixDuSpot ? .all : .subviews
+    }
+
+    private func toucherPourPoser(proxy: MapProxy) -> some Gesture {
+        SpatialTapGesture().onEnded { (valeur: SpatialTapGesture.Value) in
+            poserSpot(au: valeur.location, proxy: proxy)
         }
-        .onChange(of: spotFixe) { _, nouveau in modele.recevoir(spotFixe: nouveau) }
-        .onChange(of: sessionsTerminees) { _, nouveau in modele.sessionsTerminees = nouveau }
-        .onChange(of: position.position) { _, nouvelle in
-            if let nouvelle { modele.appliquer(position: nouvelle, refusee: false) }
+    }
+
+    private func poserSpot(au point: CGPoint, proxy: MapProxy) {
+        guard let c = proxy.convert(point, from: .local) else { return }
+        if let spot = modele.poserSpot(en: Coordonnee(latitude: c.latitude, longitude: c.longitude)) {
+            onSpotChange(spot)
         }
-        .onChange(of: position.statut) { _, _ in reagirAuStatut() }
-        .onChange(of: position.echec) { _, echec in if echec { modele.positionIndisponible() } }
-        .onChange(of: modele.afficherChoixDeZone || modele.afficherRedemande) { _, ouvert in surChoixDeZone(ouvert) }
-        // Le spot proposé (zone choisie ou position) est connu de la racine : tunnel, conseils et conditions s'en servent.
-        .onChange(of: modele.spotLocal) { _, nouveau in if let nouveau { onSpotChange(nouveau) } }
+    }
+
+    private func chargerApresMouvement(_ r: MKCoordinateRegion) {
+        let zone = ZoneCarte(centre: Coordonnee(latitude: r.center.latitude, longitude: r.center.longitude),
+                             spanLatitude: r.span.latitudeDelta, spanLongitude: r.span.longitudeDelta)
+        modele.chargerApresMouvement(zone)
+    }
+
+    // MARK: Liaisons (des Binding simples, sans @Bindable dans un long bloc)
+
+    private var cameraLiee: Binding<MapCameraPosition> {
+        Binding(get: { modele.camera }, set: { modele.camera = $0 })
+    }
+
+    private var selectionOuverte: Binding<CoinSelectionne?> {
+        Binding(get: { modele.selection }, set: { modele.selection = $0 })
+    }
+
+    private var filtreOuvert: Binding<Bool> {
+        Binding(get: { modele.afficherFiltre }, set: { modele.afficherFiltre = $0 })
+    }
+
+    private var choixDeZoneOuvert: Binding<Bool> {
+        Binding(get: { modele.afficherChoixDeZone }, set: { modele.afficherChoixDeZone = $0 })
+    }
+
+    private var redemandeOuverte: Binding<Bool> {
+        Binding(get: { modele.afficherRedemande }, set: { modele.afficherRedemande = $0 })
+    }
+
+    private var choixOuRedemandeOuvert: Bool {
+        modele.afficherChoixDeZone || modele.afficherRedemande
+    }
+
+    // MARK: Feuilles de la carte
+
+    /// `nil` pendant une session ou sans spot : la fiche n'a alors pas de bouton « Commencer une session ».
+    private var commencerDepuisLaFiche: (() -> Void)? {
+        if sessionEnCours { return nil }
+        guard modele.spotAffiche != nil else { return nil }
+        return {
+            guard let spot = modele.spotAffiche else { return }
+            modele.selection = nil
+            onCommencerSession(spot)
+        }
+    }
+
+    private func feuilleFiche(_ selection: CoinSelectionne) -> some View {
+        FicheCoinView(services: modele.services, selection: selection, pechables: modele.pechables,
+                      emplacementMaintenant: emplacementMaintenant, emplacementConseil: emplacementConseil,
+                      onCommencerSession: commencerDepuisLaFiche)
+            .presentationDragIndicator(.visible)
+    }
+
+    private var feuilleFiltre: some View {
+        let raretes: [String: NiveauRarete] = raretesDuSecteur()
+        return FiltreEspeceView(pechables: modele.pechables, procheDIci: modele.especesProchesDIci(),
+                                filtreActuel: modele.filtre, choisir: choisirFiltre, raretes: raretes)
+            .presentationDetents([.large])
+    }
+
+    private func choisirFiltre(_ espece: EspecePechable?) {
+        modele.choisirFiltre(espece)
+    }
+
+    @ViewBuilder
+    private var feuilleOuChercher: some View {
+        if let ouChercher {
+            let centre: Coordonnee = modele.spotAffiche?.centre ?? modele.regionVisible.centre
+            ouChercher(centre)
+                .presentationDetents([.medium, .large])
+        }
+    }
+
+    private var feuilleChoixDeZone: some View {
+        ChoixDeZoneView(choisir: choisirZone, codeDepartement: codeDepartement)
+    }
+
+    private func choisirZone(_ coordonnee: Coordonnee) {
+        modele.choisirZone(coordonnee)
+    }
+
+    private func codeDepartement(_ c: Coordonnee) -> String? {
+        let d: Departement = modele.services.geo.departement(de: c)
+        return d.estInconnu ? nil : d.code
+    }
+
+    // MARK: Départ de la carte
+
+    private func demarrerLaCarte() async {
+        modele.spotFixe = spotFixe
+        modele.sessionsTerminees = sessionsTerminees
+        // Avant toute question de position : le spot fixé ou la dernière zone choisie posent la carte tout de suite.
+        modele.placerALOuverture()
+        // La permission de position se demande au premier lancement (« Où pêches-tu ? », au toucher
+        // « Utiliser ma position »), jamais ici : la carte lit seulement la position si elle est déjà permise.
+        position.relire()
+        reagirAuStatut()
+        if demandeChoixDeZone { modele.afficherChoixDeZone = true }
+        await modele.demarrer()
+    }
+
+    private func recevoirPosition(_ nouvelle: Coordonnee?) {
+        if let nouvelle { modele.appliquer(position: nouvelle, refusee: false) }
+    }
+
+    private func ouvrirLesReglages() {
+        if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+        modele.appliquer(position: nil, refusee: true)
     }
 
     /// La rareté de chaque espèce dans le département du spot, sinon de la région visible (`Core` donne le verdict).
