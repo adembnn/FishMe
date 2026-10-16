@@ -182,7 +182,7 @@ struct AquariumView: View {
                     .offset(x: -px * 0.4, y: -py * 0.4)
                     .clipped()
                 if !reduireAnimations {
-                    CoucheFondEau(t: t).offset(x: -px * 0.5, y: -py * 0.5)
+                    CoucheFondEau().offset(x: -px * 0.5, y: -py * 0.5)
                 }
                 // Toucher l'eau vide : une onde de lumière, les petits s'écartent. Sous les zones des poissons.
                 Color.clear

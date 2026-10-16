@@ -44,7 +44,7 @@ enum ReglagesNage {
   static let margeHauteur = 0.08
 
   // Allure (multiplicateurs de calme : les vitesses « réelles » de la table des espèces sont ralenties à l'écran)
-  static let echelleVitesse = 0.30
+  static let echelleVitesse = 0.75
   static let echelleVirage = 0.55
   /// Accélération angulaire maximale (rad/s²).
   static let accelerationAngulaire = 1.1

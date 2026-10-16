@@ -196,15 +196,18 @@ nonisolated enum EffetsEau {
 }
 
 /// Les couches derrière les poissons : rais de lumière, caustiques, poussières du fond.
+/// Ces couches bougent très lentement : elles ont leur propre horloge à 20 images par seconde (au lieu de suivre les poissons
+/// à chaque image de l'écran) et se dessinent hors du fil principal.
 struct CoucheFondEau: View {
-  let t: Double
-
   var body: some View {
-    Canvas { ctx, taille in
-      EffetsEau.raisLumiere(&ctx, taille: taille, t: t)
-      EffetsEau.caustiques(&ctx, taille: taille, t: t)
-      EffetsEau.particules(
-        &ctx, taille: taille, t: t, de: 0, jusqua: ReglagesEffets.particulesFond, avant: false)
+    TimelineView(.animation(minimumInterval: 1.0 / 20)) { contexte in
+      let t = contexte.date.timeIntervalSinceReferenceDate
+      Canvas(rendersAsynchronously: true) { ctx, taille in
+        EffetsEau.raisLumiere(&ctx, taille: taille, t: t)
+        EffetsEau.caustiques(&ctx, taille: taille, t: t)
+        EffetsEau.particules(
+          &ctx, taille: taille, t: t, de: 0, jusqua: ReglagesEffets.particulesFond, avant: false)
+      }
     }
     .allowsHitTesting(false)
     .accessibilityHidden(true)
@@ -218,7 +221,7 @@ struct CoucheAvantEau: View {
   let ondes: [Onde]
 
   var body: some View {
-    Canvas { ctx, taille in
+    Canvas(rendersAsynchronously: true) { ctx, taille in
       let debut = ReglagesEffets.particulesFond
       EffetsEau.particules(
         &ctx, taille: taille, t: t, de: debut, jusqua: debut + ReglagesEffets.particulesAvant,

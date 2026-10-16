@@ -111,7 +111,7 @@ struct PescedexAmiView: View {
     private var grandeCarte: some View {
         if let carte = carteEnGrand {
             Button { if carte.image != nil { carteOuverte = carte } } label: {
-                if let donnees = carte.image, let image = UIImage(data: donnees) {
+                if let donnees = carte.image, let image = ImagesAmisEnCache.image(donnees) {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
@@ -277,7 +277,7 @@ struct CarteAmiDetail: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            if let donnees = carte.image, let image = UIImage(data: donnees) {
+            if let donnees = carte.image, let image = ImagesAmisEnCache.image(donnees) {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
