@@ -158,46 +158,53 @@ struct PaywallVue: View {
     // MARK: Produit introuvable
 
     private var indisponible: some View {
-        VStack(spacing: 16) {
-            Text(TextesPaywall.produitIntrouvable)
-                .font(Police.sousTitre)
-                .foregroundStyle(Palette.encre)
-                .multilineTextAlignment(.center)
-            Button("Réessayer") { Task { await modele.charger() } }
-                .buttonStyle(.principal)
+        ScrollView {
+            VStack(spacing: 16) {
+                Text(TextesPaywall.produitIntrouvable)
+                    .font(Police.sousTitre)
+                    .foregroundStyle(Palette.encre)
+                    .multilineTextAlignment(.center)
+                Button("Réessayer") { Task { await modele.charger() } }
+                    .buttonStyle(.principal)
+            }
+            .padding(24)
+            .frame(maxWidth: .infinity)
         }
-        .padding(24)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .scrollIndicators(.hidden)
     }
 
     // MARK: Pied : restaurer, message, fermer, liens légaux
 
     private var pied: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 4) {
             if let message {
                 Text(message).font(Police.legende).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
             }
-            Button("Restaurer les achats") { Task { await restaurer() } }
-                .font(Police.legende)
-                .foregroundStyle(Palette.marine)
-                .frame(minHeight: Gabarit.zoneTactile)
-                .contentShape(Rectangle())
             Button(action: fermer) {
                 Text(declencheur.texteFermeture)
             }
             .buttonStyle(.secondaire)
             // Liens légaux toujours visibles, même si ce pied recouvre ceux de la boutique.
-            HStack(spacing: 24) {
-                Link("Conditions d'utilisation", destination: liens.conditions)
-                Link("Confidentialité", destination: liens.confidentialite)
+            // Une seule ligne (ou deux si le texte est agrandi) : le pied reste bas sur iPhone SE et 13 mini.
+            ViewThatFits(in: .horizontal) {
+                HStack(spacing: Espace.l) { piedLiens }
+                VStack(spacing: 0) { piedLiens }
             }
             .font(Police.legende)
             .foregroundStyle(Palette.marine)
-            .frame(minHeight: Gabarit.zoneTactile)
         }
         .padding(.horizontal, Espace.bord)
         .padding(.vertical, Espace.s)
         .background(Palette.surface)
+    }
+
+    @ViewBuilder private var piedLiens: some View {
+        Button("Restaurer") { Task { await restaurer() } }
+            .frame(minHeight: Gabarit.zoneTactile)
+        Link("Conditions", destination: liens.conditions)
+            .frame(minHeight: Gabarit.zoneTactile)
+        Link("Confidentialité", destination: liens.confidentialite)
+            .frame(minHeight: Gabarit.zoneTactile)
     }
 
     private func restaurer() async {
