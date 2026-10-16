@@ -597,7 +597,7 @@ struct VueCarte: View {
 
     private func autourDeMoi() {
         if position.estAutorisee {
-            if let p = position.position { modele.appliquer(position: p, refusee: false) }
+            if let p = position.position { modele.centrerSurMaPosition(p) }
             position.relire()
         } else {
             modele.afficherChoixDeZone = true
