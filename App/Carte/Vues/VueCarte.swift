@@ -91,6 +91,7 @@ struct VueCarte: View {
             apercu = nil
             guard let spot = modele.spotAffiche else { return }
             apercu = await calculerApercuSpot(services: modele.services, spot: spot, date: Date())
+            await modele.rafraichirFrequentation(spot: spot)
         }
         .task {
             for await connecte in fluxReseauCarte() { reseauDisponible = connecte }
@@ -300,15 +301,37 @@ struct VueCarte: View {
         return {
             guard let spot = modele.spotAffiche else { return }
             modele.selection = nil
-            onCommencerSession(spot)
+            commencer(spot)
         }
+    }
+
+    /// Un passage anonyme est enregistré juste avant que la session démarre (tronçon, jour, jeton du jour).
+    private func commencer(_ spot: Spot) {
+        modele.enregistrerPassage(spot: spot)
+        onCommencerSession(spot)
     }
 
     private func feuilleFiche(_ selection: CoinSelectionne) -> some View {
         FicheCoinView(services: modele.services, selection: selection, pechables: modele.pechables,
                       emplacementMaintenant: emplacementMaintenant, emplacementConseil: emplacementConseil,
-                      onCommencerSession: commencerDepuisLaFiche)
+                      onCommencerSession: commencerDepuisLaFiche,
+                      frequentation: modele.niveauxConnus[selection.id],
+                      onCoinCalme: coinCalmeDeLaFiche(selection))
             .presentationDragIndicator(.visible)
+            .task(id: selection.id) { await modele.rafraichirFrequentation(selection: selection) }
+    }
+
+    /// Le bouton « Coin plus calme » de la fiche : seulement si un coin plus calme existe et que le spot peut encore changer.
+    private func coinCalmeDeLaFiche(_ selection: CoinSelectionne) -> (() -> Void)? {
+        guard modele.peutChangerDeSpot, modele.tronconsAvecCoinCalme.contains(selection.id) else { return nil }
+        return { modele.adopterCoinCalme(depuis: modele.spot(de: selection)) }
+    }
+
+    /// Le bouton « Coin plus calme » de la feuille « Ton spot ».
+    private var coinCalmeDuSpot: (() -> Void)? {
+        guard modele.peutChangerDeSpot, let spot = modele.spotAffiche,
+              let t = modele.troncon(de: spot), modele.tronconsAvecCoinCalme.contains(t) else { return nil }
+        return { modele.adopterCoinCalme(depuis: spot) }
     }
 
     private var feuilleFiltre: some View {
@@ -478,7 +501,7 @@ struct VueCarte: View {
                 if !sessionEnCours {
                 VStack(spacing: 2) {
                     Button {
-                        if let spot = modele.spotAffiche { onCommencerSession(spot) }
+                        if let spot = modele.spotAffiche { commencer(spot) }
                     } label: {
                         Label("Commencer une session", systemImage: "play.fill")
                     }
@@ -682,7 +705,6 @@ struct VueCarte: View {
                     .font(Police.detail)
                     .foregroundStyle(Palette.encre)
                     .lineLimit(1)
-                    .minimumScaleFactor(0.8)
                 Spacer(minLength: 0)
             }
             .padding(.horizontal, Espace.l)
@@ -738,6 +760,7 @@ struct VueCarte: View {
                 .padding(.bottom, 12)
                 .accessibilityHidden(true)
             titreFeuilleCarte
+            badgeFrequentationSpot
             tuilesFeuilleCarte
                 .padding(.top, 14)
                 .padding(.bottom, 18)
@@ -764,6 +787,16 @@ struct VueCarte: View {
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
             }
+        }
+    }
+
+    /// Calme, Normal ou Chargé sous le titre (en mots, gratuit) ; rien tant que le niveau n'est pas connu.
+    @ViewBuilder
+    private var badgeFrequentationSpot: some View {
+        if let niveau = modele.niveauDuSpot {
+            FrequentationFicheView(niveau: niveau, onCoinCalme: coinCalmeDuSpot)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 8)
         }
     }
 
@@ -855,7 +888,7 @@ struct VueCarte: View {
 
     private var boutonCommencerCarte: some View {
         Button {
-            if let spot = modele.spotAffiche { onCommencerSession(spot) }
+            if let spot = modele.spotAffiche { commencer(spot) }
         } label: {
             Label("Commencer une session", systemImage: "play.fill")
         }

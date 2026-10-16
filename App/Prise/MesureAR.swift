@@ -71,24 +71,24 @@ struct MesureARView: View {
                     Spacer()
                 }
                 Text(etat.consigne)
-                    .font(.system(.title3, design: .rounded, weight: .heavy))
+                    .font(Police.titre)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 16).padding(.vertical, 10)
                     .background(.ultraThinMaterial, in: Capsule())
                 Spacer()
                 if let plage = etat.plage, etat.estPlausible {
                     Text(plage.texte)
-                        .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                        .font(Police.chiffre)
                         .padding(.horizontal, 20).padding(.vertical, 8)
                         .background(.ultraThinMaterial, in: Capsule())
                 }
                 HStack(spacing: 12) {
                     Button("Recommencer") { etat.recommencer() }
-                        .font(.system(.body, design: .rounded, weight: .bold))
+                        .font(Police.corps)
                         .frame(maxWidth: .infinity, minHeight: 54)
                         .background(.ultraThinMaterial, in: Capsule())
                     Button("Valider") { if let plage = etat.plage { surValider(plage) } }
-                        .font(.system(.body, design: .rounded, weight: .bold))
+                        .font(Police.corps)
                         .foregroundStyle(.white)
                         .frame(maxWidth: .infinity, minHeight: 54)
                         .background(PriseJetons.accent.opacity(etat.estPlausible ? 1 : 0.4), in: Capsule())

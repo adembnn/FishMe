@@ -177,21 +177,25 @@ struct RangeeMaintenantVideView: View {
     var reessayer: (() -> Void)? = nil
 
     var body: some View {
-        VStack(spacing: Espace.s) {
-            Image(systemName: "wifi.slash").font(Police.taille(28)).foregroundStyle(Palette.encreDouce)
+        VStack(spacing: Espace.m) {
+            Image(systemName: "cloud.sun").font(Police.taille(40)).foregroundStyle(Palette.marine)
                 .accessibilityHidden(true)
-            Text("pas de lecture").font(Police.detail).foregroundStyle(Palette.encreDouce)
+            Text("Pas de météo pour l'instant").font(Police.sousTitre).foregroundStyle(Palette.encre)
+            Text("Vérifie ta connexion").font(Police.detail).foregroundStyle(Palette.encreDouce)
             if let reessayer {
                 Button(action: reessayer) {
                     Text("Réessayer").font(Police.corps).foregroundStyle(Palette.marine)
-                        .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
-                        .contentShape(Rectangle())
+                        .frame(minWidth: 120, minHeight: Gabarit.zoneTactile)
+                        .background(Palette.tuile, in: Capsule())
+                        .contentShape(Capsule())
                 }
                 .buttonStyle(.plain)
             }
         }
         .frame(maxWidth: .infinity)
+        .padding(.vertical, Espace.xl)
         .padding(.horizontal, Espace.bord)
+        .tuileFishMe(rayon: Rayon.l)
         .accessibilityElement(children: .contain)
         .accessibilityIdentifier("rangee-vide")
     }

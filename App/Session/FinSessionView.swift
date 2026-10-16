@@ -42,10 +42,15 @@ struct FinSessionView: View {
     let surFermer: (() -> Void)?
     /// Poids estimé d'après la formule longueur-poids de Core (`ServiceEspeces.poidsEstime`). Par défaut : aucun poids.
     let poidsEstime: (Espece, Double) -> PoidsEstime?
+    /// Espèce montrée en image dans le bloc bredouille (la plus pêchée du spot, ou celle du conseil).
+    /// // À brancher : A passe l'espèce la plus pêchée du spot (relevés OFB) ; `nil` : une silhouette.
+    let especeConseil: Espece?
 
     init(fin: FinDeSession, infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, lieu: String? = nil,
          conseil: String? = nil, surTerminer: @escaping () -> Void, surFermer: (() -> Void)? = nil,
-         poidsEstime: @escaping (Espece, Double) -> PoidsEstime? = { _, _ in nil }) {
+         poidsEstime: @escaping (Espece, Double) -> PoidsEstime? = { _, _ in nil },
+         especeConseil: Espece? = nil) {
+        self.especeConseil = especeConseil
         self.poidsEstime = poidsEstime
         self.conseil = conseil
         self.fin = fin
@@ -149,8 +154,9 @@ struct FinSessionView: View {
     private var enTete: some View {
         HStack(alignment: .firstTextBaseline) {
             Text(titre)
-                .font(Police.taille(22, .heavy))
+                .font(Police.titre)
                 .foregroundStyle(Palette.encre)
+                .lineLimit(2)
             Spacer(minLength: Espace.s)
             Text(FormatSortie.date(sortie.debut))
                 .font(Police.detail)
@@ -204,15 +210,23 @@ struct FinSessionView: View {
 
     /// Cas bredouille : zéro prise, ton positif. Le bloc « La prochaine fois » n'existe que si un conseil est fourni.
     @ViewBuilder private var bredouille: some View {
-        if let conseil, !conseil.isEmpty {
+        if conseil == nil || conseil?.isEmpty == true {
+            // Sans conseil de L1, une phrase positive plutôt qu'un vide au-dessus du bouton.
             HStack(spacing: 14) {
-                // À brancher : la maquette montre l'image de l'espèce conseillée (perche) ; le conseil n'est qu'un texte, on met une silhouette.
-                Image(systemName: "fish")
-                    .font(.system(size: 28, weight: .bold))
-                    .foregroundStyle(Palette.marine)
-                    .frame(width: 84, height: 56)
-                    .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                    .accessibilityHidden(true)
+                tuileConseil
+                Text("Bredouille, ça arrive. Une sortie de plus au compteur.")
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
+                Spacer(minLength: 0)
+            }
+            .padding(.top, 16)
+            .padding(.bottom, 20)
+            .frame(maxWidth: .infinity)
+            .overlay(alignment: .top) { Rectangle().fill(Palette.filet).frame(height: 0.5) }
+            .accessibilityElement(children: .combine)
+        } else if let conseil {
+            HStack(spacing: 14) {
+                tuileConseil
                 VStack(alignment: .leading, spacing: 2) {
                     Text("La prochaine fois")
                         .font(Police.taille(17, .heavy))
@@ -229,6 +243,24 @@ struct FinSessionView: View {
             .overlay(alignment: .top) { Rectangle().fill(Palette.filet).frame(height: 0.5) }
             .accessibilityElement(children: .combine)
         }
+    }
+
+    /// La tuile 84 × 56 de la maquette P47 : le poisson de profil (image) de l'espèce conseillée ; sans espèce, une silhouette.
+    private var tuileConseil: some View {
+        let infos = especeConseil.flatMap { infosEspece($0) }
+        return ZStack {
+            RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Palette.tuile)
+            if let infos {
+                Image(infos.image).resizable().scaledToFit()
+                    .frame(width: 84 * 0.8, height: 42)
+            } else {
+                Image(systemName: "fish.fill")
+                    .font(.system(size: 26, weight: .bold))
+                    .foregroundStyle(Palette.silhouette)
+            }
+        }
+        .frame(width: 84, height: 56)
+        .accessibilityHidden(true)
     }
 
     private func tuilePoisson(_ infos: EspecePechable?, largeur: CGFloat, hauteur: CGFloat, image: CGFloat) -> some View {
@@ -266,7 +298,7 @@ struct FinSessionView: View {
                 caseCondition(symbole: "clock", valeur: fin.formatted(.dateTime.hour().minute().locale(Locale(identifier: "fr_FR"))),
                               legende: "fin légale")
             } else if let hpa = c.pressionHPa {
-                caseCondition(symbole: "gauge.medium", valeur: "\(Int(hpa.rounded()))", legende: "hPa")
+                caseCondition(symbole: "gauge.medium", valeur: Int(hpa.rounded()).formatted(.number.locale(Locale(identifier: "fr_FR"))), legende: "hPa")
             }
         }
         .padding(.top, bordure ? 14 : 16)

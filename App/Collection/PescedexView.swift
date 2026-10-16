@@ -8,7 +8,7 @@ private let chevronGris = Color(carte: 0xB4BFCB)
 /// Titre d'écran (`.t-grand` : 34 pt, 900, interlettrage -0,01 em).
 private func grandTitre(_ texte: String) -> some View {
     Text(texte)
-        .font(.system(.largeTitle, design: .rounded, weight: .black))
+        .font(Police.grandTitre)
         .tracking(-0.34)
         .foregroundStyle(Palette.encre)
 }
@@ -16,7 +16,7 @@ private func grandTitre(_ texte: String) -> some View {
 /// En-tête de groupe (`.entete-groupe` : 13 pt, 800, majuscules, interlettrage 0,04 em, décalé de 16).
 private func enteteDeGroupe(_ texte: String, haut: CGFloat = 8) -> some View {
     Text(texte.uppercased())
-        .font(.system(.footnote, design: .rounded, weight: .heavy))
+        .font(Police.legende)
         .tracking(0.52)
         .foregroundStyle(Palette.encreDouce)
         .padding(.horizontal, Espace.l)
@@ -53,6 +53,7 @@ struct PescedexView: View {
     @State private var photoOuverte: Data?
     @State private var pngOuvert: Data?
     @State private var bredouillesDepliees = false
+    @State private var aTrouverDeplie = false
 
     private enum Volet: String, CaseIterable, Identifiable {
         case miens = "Les miens"
@@ -238,7 +239,7 @@ struct PescedexView: View {
                     HStack(alignment: .firstTextBaseline) {
                         HStack(alignment: .firstTextBaseline, spacing: 0) {
                             Text("\(c.trouvees)")
-                                .font(.system(.largeTitle, design: .rounded, weight: .black))
+                                .font(Police.chiffre)
                                 .monospacedDigit()
                                 .foregroundStyle(Palette.encre)
                             Text(" sur \(c.releveesDansLaZone)").font(Police.detail).foregroundStyle(Palette.encreDouce)
@@ -340,7 +341,12 @@ struct PescedexView: View {
 
     private var trouvees: [Emplacement] { modele.emplacements.filter { $0.carte != nil && $0.carte?.estDeclaree == false } }
     private var declarees: [Emplacement] { modele.emplacements.filter { $0.carte?.estDeclaree == true } }
-    private var aTrouver: [Emplacement] { modele.emplacements.filter { $0.carte == nil } }
+    /// À trouver : les espèces de la zone pas encore prises (le M du compteur) ; sans relevé, toutes celles pas encore prises.
+    private var aTrouver: [Emplacement] {
+        let sans = modele.emplacements.filter { $0.carte == nil }
+        let zone = sans.filter(\.releveeDansLaZone)
+        return zone.isEmpty ? sans : zone
+    }
 
     private var colonnes: [GridItem] { Array(repeating: GridItem(.flexible(), spacing: Espace.s), count: 3) }
 
@@ -349,6 +355,8 @@ struct PescedexView: View {
             VStack(alignment: .leading, spacing: 0) {
                 if estVide {
                     if photographier != nil || declarer != nil { pourCommencer } else { premierePrise }
+                    // P45 B : le Pescedex vide reste plein, avec six silhouettes de la zone puis « + N autres ».
+                    sectionATrouver
                 } else {
                     if zoneEnCartes { blocZone }
                     sectionCartes("Trouvées", trouvees)
@@ -447,13 +455,26 @@ struct PescedexView: View {
     private var sectionATrouver: some View {
         let liste = aTrouver
         if !liste.isEmpty {
+            let visibles = (estVide && !aTrouverDeplie) ? Array(liste.prefix(apercu)) : liste
             VStack(alignment: .leading, spacing: 0) {
                 enteteDeGroupe("À trouver · \(liste.count)", haut: 16)
-                LazyVGrid(columns: colonnes, spacing: Espace.s) {
-                    ForEach(liste) { e in
-                        Button { ficheOuverte = e.id } label: { DosAATrouver(espece: e.espece) }
-                            .buttonStyle(.plain)
-                            .accessibilityLabel("\(e.espece.nom), pas encore pris")
+                VStack(spacing: Espace.s) {
+                    LazyVGrid(columns: colonnes, spacing: Espace.s) {
+                        ForEach(visibles) { e in
+                            Button { ficheOuverte = e.id } label: { DosAATrouver(espece: e.espece) }
+                                .buttonStyle(.plain)
+                                .accessibilityLabel("\(e.espece.nom), pas encore pris")
+                        }
+                    }
+                    if estVide, liste.count > apercu {
+                        Button { aTrouverDeplie.toggle() } label: {
+                            Text(aTrouverDeplie ? "Réduire" : "+ \(liste.count - apercu) autres")
+                                .font(Police.detail)
+                                .foregroundStyle(Palette.encreDouce)
+                                .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                                .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
                 .padding(Espace.m)
@@ -479,7 +500,7 @@ struct PescedexView: View {
                                 VStack(spacing: 6) {
                                     Image(systemName: "water.waves")
                                         .font(Police.taille(28))
-                                    Text(Formats.date(b.debut)).font(Police.legende).lineLimit(1).minimumScaleFactor(0.7)
+                                    Text(Formats.date(b.debut)).font(Police.legende).lineLimit(1)
                                 }
                                 .foregroundStyle(Palette.commun)
                                 .frame(maxWidth: .infinity, minHeight: 88)
@@ -590,11 +611,10 @@ struct DosAATrouver: View {
                         .frame(width: w * 0.68, height: w * 0.68 / rapport)
                         .offset(x: w * 0.16, y: h * 0.36)
                         .accessibilityHidden(true)
-                    Text(espece.nom)
+                    Text(NomCarte.court(espece.nom))
                         .font(Police.taille(9 * u, .heavy))
                         .foregroundStyle(.white.opacity(0.85))
                         .lineLimit(1)
-                        .minimumScaleFactor(0.6)
                         .padding(.horizontal, 6 * u)
                         .frame(width: w)
                         .position(x: w / 2, y: h * 0.91 - 4.5 * u)
@@ -654,6 +674,7 @@ struct FicheEspeceView: View {
                 } else {
                     tuileEspece
                         .padding(.top, 12)
+                    if zone != nil, style != .nonMesuree { releves }
                 }
                 if let pecherEnPhoto, estDeclaree {
                     Button { pecherEnPhoto(emplacement.espece.espece) } label: {
@@ -743,6 +764,46 @@ struct FicheEspeceView: View {
         .tuileFishMe(rayon: Rayon.m)
     }
 
+    /// P27 B, bloc « Où il vit » : aucune donnée d'habitat, donc les relevés OFB réels de la zone (nombre de pêches et année).
+    @ViewBuilder
+    private var releves: some View {
+        let r = emplacement.rarete
+        VStack(alignment: .leading, spacing: 0) {
+            enteteDeGroupe("Relevés OFB dans ta zone", haut: 22)
+            VStack(spacing: 0) {
+                if r.niveau == .legendaire {
+                    ligneReleve("eye.slash", "Jamais relevée", "dans ta zone")
+                } else {
+                    ligneReleve("fish", "Pêches", "\(r.nPeches) sur \(r.nTotal)")
+                    Divider().overlay(Palette.filet).padding(.leading, 52)
+                    if let part = partOFB { ligneReleve("chart.pie", "Part des pêches", "\(part) %") }
+                }
+                if let annee = r.anneeDernierReleve {
+                    Divider().overlay(Palette.filet).padding(.leading, 52)
+                    ligneReleve("calendar", "Dernier relevé", "\(annee)")
+                }
+            }
+            .tuileFishMe(rayon: Rayon.m)
+            .padding(.top, Espace.s)
+        }
+    }
+
+    private func ligneReleve(_ icone: String, _ titre: String, _ valeur: String) -> some View {
+        HStack(spacing: Espace.m) {
+            Image(systemName: icone)
+                .font(.system(size: 20, weight: .bold, design: .rounded))
+                .foregroundStyle(Palette.marine)
+                .frame(width: 28)
+                .accessibilityHidden(true)
+            Text(titre).font(Police.corps).foregroundStyle(Palette.encre)
+            Spacer(minLength: 0)
+            Text(valeur).font(Police.taille(17, .bold)).monospacedDigit().foregroundStyle(Palette.encreDouce)
+        }
+        .padding(.horizontal, Espace.l)
+        .frame(minHeight: 56)
+        .accessibilityElement(children: .combine)
+    }
+
     private var motDuPalier: String {
         style.mot.prefix(1).uppercased() + style.mot.dropFirst()
     }
@@ -806,8 +867,7 @@ struct FicheEspeceView: View {
                     Text("\(s.mot.prefix(1).uppercased() + s.mot.dropFirst()) · \(r.nPeches) sur \(r.nTotal)\(annee)")
                         .font(Police.taille(13, .heavy))
                         .foregroundStyle(s.couleur)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.7)
+                        .lineLimit(2)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)

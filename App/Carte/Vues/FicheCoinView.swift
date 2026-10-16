@@ -21,15 +21,23 @@ struct FicheCoinView: View {
     let emplacementConseil: (Espece) -> AnyView
     /// « Commencer une session » : `nil` (pendant une session, ou sans spot) cache le bouton.
     let onCommencerSession: (() -> Void)?
+    /// Niveau du tronçon en mots (gratuit, sans cadenas). À brancher : compteur de fréquentation ; `nil` = rien d'affiché.
+    let frequentation: NiveauFrequentation?
+    /// « Coin plus calme » pour un tronçon chargé ; `nil` = pas de bouton. À brancher : station calme la plus proche.
+    let onCoinCalme: (() -> Void)?
 
     init(services: ServicesCarte, selection: CoinSelectionne, pechables: [EspecePechable],
          emplacementMaintenant: @escaping (Coordonnee) -> AnyView = { _ in AnyView(EmptyView()) },
          emplacementConseil: @escaping (Espece) -> AnyView = { _ in AnyView(EmptyView()) },
-         onCommencerSession: (() -> Void)? = nil) {
+         onCommencerSession: (() -> Void)? = nil,
+         frequentation: NiveauFrequentation? = nil,
+         onCoinCalme: (() -> Void)? = nil) {
         _modele = State(initialValue: ModeleFiche(services: services, selection: selection, pechables: pechables))
         self.emplacementMaintenant = emplacementMaintenant
         self.emplacementConseil = emplacementConseil
         self.onCommencerSession = onCommencerSession
+        self.frequentation = frequentation
+        self.onCoinCalme = onCoinCalme
     }
 
     var body: some View {
@@ -110,9 +118,8 @@ struct FicheCoinView: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .center, spacing: Espace.m) {
                 Text(nomEau(fiche))
-                    .font(Police.taille(22, .heavy))
+                    .font(Police.titre)
                     .foregroundStyle(Palette.encre)
-                    .minimumScaleFactor(0.6)
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
                     .accessibilityAddTraits(.isHeader)
@@ -120,6 +127,10 @@ struct FicheCoinView: View {
                 croixFiche
             }
             pastilleOuverture(ouverture(fiche))
+            if let frequentation {
+                FrequentationFicheView(niveau: frequentation, onCoinCalme: onCoinCalme)
+            }
+            // Demandé par Adem (16 oct. 2h24) : P07 a un but clair. Ne pas retirer.
             Text("Ce que tu peux pêcher ici aujourd’hui")
                 .font(Police.taille(20, .heavy))
                 .foregroundStyle(Palette.encre)
@@ -215,11 +226,10 @@ struct FicheCoinView: View {
                             .foregroundStyle(CouleursCarte.rarete(niveau))
                             .accessibilityHidden(true)
                     }
-                    Text(modele.nom(ligne.espece))
-                        .font(Police.taille(14, .heavy))
+                    Text(NomCarte.court(modele.nom(ligne.espece)))
+                        .font(Police.detail)
                         .foregroundStyle(Palette.encre)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.7)
+                        .lineLimit(2)
                 }
                 // Sans taille lisible dans la règle, rien n'est écrit (aucun chiffre inventé).
                 Text(ligne.tailleMiniCm.map { "\($0) cm mini" } ?? " ")
@@ -354,7 +364,8 @@ struct FicheCoinView: View {
         let quota = lignes.first { $0.type == .quota }
         let parJour = quota.flatMap { LectureRegle.nombreAvantParJour($0.phrase) }
         let utilisees = [tailleCm == nil ? nil : taille, jusquau == nil ? nil : periode, parJour == nil ? nil : quota].compactMap { $0 }
-        let autres = lignes.filter { ligne in !utilisees.contains(ligne) }
+        let reserves = lignes.filter { $0.type == .reserve }
+        let autres = lignes.filter { ligne in !utilisees.contains(ligne) && ligne.type != .reserve }
         let avecSources: LigneControle?
         if let taille, !taille.sources.isEmpty { avecSources = taille } else { avecSources = lignes.first(where: { !$0.sources.isEmpty }) }
         return VStack(alignment: .leading, spacing: 0) {
@@ -366,9 +377,8 @@ struct FicheCoinView: View {
             HStack(alignment: .center, spacing: 14) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(modele.nom(espece))
-                        .font(Police.taille(34, .heavy))
+                        .font(Police.grandTitre)
                         .foregroundStyle(Palette.encre)
-                        .minimumScaleFactor(0.6)
                         .lineLimit(2)
                         .accessibilityAddTraits(.isHeader)
                     Text("Règles dans le \(fiche.lieu.departement.code)")
@@ -380,6 +390,10 @@ struct FicheCoinView: View {
                     .frame(width: 120, height: 52)
             }
             .padding(.top, 8)
+            if !reserves.isEmpty {
+                ReserveEnTeteView(lignes: reserves)
+                    .padding(.top, 20)
+            }
             VStack(spacing: 0) {
                 if lignes.isEmpty {
                     Text("Pas de règle lue ici, vérifie l'arrêté")
@@ -445,7 +459,7 @@ struct FicheCoinView: View {
                 }
             }
             .tuileFishMe(rayon: Rayon.m)
-            .padding(.top, 24)
+            .padding(.top, reserves.isEmpty ? 24 : 16)
             if let taille, taille.sources.count > 1 {
                 legendeContradiction(taille, tailleCm: tailleCm)
             }
@@ -585,8 +599,15 @@ struct FicheCoinView: View {
     }
 
     private func regles(_ fiche: FicheCalculee) -> some View {
-        let visibles = OrdreRegles.visibles(fiche.lignes, toutVoir: toutesLesRegles)
+        let reserves = fiche.lignes.filter { $0.type == .reserve }
+        let autres = fiche.lignes.filter { $0.type != .reserve }
+        let visibles = OrdreRegles.visibles(autres, toutVoir: toutesLesRegles)
         return VStack(alignment: .leading, spacing: 0) {
+            // Q7 : la réserve listée sur la rivière passe avant toutes les règles, avec sa citation.
+            if !reserves.isEmpty {
+                ReserveEnTeteView(lignes: reserves)
+                    .padding(.bottom, Espace.l)
+            }
             Text(modele.especeTouchee.map { "Règles du jour : \(modele.nom($0))" } ?? "Règles du jour")
                 .font(Police.legende)
                 .foregroundStyle(Palette.encreDouce)
@@ -598,11 +619,11 @@ struct FicheCoinView: View {
                                confirmerTroncon: { libelle in Task { await modele.confirmerTroncon(libelle) } })
                 Divider().overlay(Palette.filet)
             }
-            if fiche.lignes.count > OrdreRegles.apercu {
+            if autres.count > OrdreRegles.apercu {
                 Button {
                     withAnimation(.snappy) { toutesLesRegles.toggle() }
                 } label: {
-                    Text(toutesLesRegles ? "Voir moins" : "Voir toutes les règles (\(fiche.lignes.count))")
+                    Text(toutesLesRegles ? "Voir moins" : "Voir toutes les règles (\(autres.count))")
                         .font(Police.corps)
                         .foregroundStyle(Palette.marine)
                         .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)

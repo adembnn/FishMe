@@ -126,7 +126,23 @@ struct PescedexAmiView: View {
             .buttonStyle(.plain)
             .accessibilityLabel(gestion.espece(carte.espece)?.nom ?? "Carte")
         } else {
-            ContentUnavailableView("Pas encore de carte", systemImage: "rectangle.stack")
+            // Aucune carte partagée : le dos d'une carte (marine, motif de vagues) et une phrase, jamais un vide.
+            VStack(spacing: Espace.m) {
+                RoundedRectangle(cornerRadius: 244 * Gabarit.coinCarte, style: .continuous)
+                    .fill(Palette.marine)
+                    .frame(width: 244, height: 244 / Gabarit.rapportCarte)
+                    .overlay {
+                        Image(systemName: "fish.fill")
+                            .font(Police.taille(64))
+                            .foregroundStyle(Color.white.opacity(0.4))
+                    }
+                    .shadow(color: Palette.encre.opacity(0.3), radius: 15, y: 14)
+                Text("\(ami.nom) n'a pas encore partagé de carte")
+                    .font(Police.sousTitre).foregroundStyle(Palette.encre)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, Espace.xl)
+            }
+            .accessibilityElement(children: .combine)
         }
     }
 
@@ -200,11 +216,10 @@ struct PescedexAmiView: View {
             }
             VStack {
                 Spacer()
-                Text(espece?.nom ?? "")
+                Text(NomCarte.court(espece?.nom ?? ""))
                     .font(Police.taille(9 * u, .heavy))
                     .foregroundStyle(Color.white.opacity(0.85))
                     .lineLimit(1)
-                    .minimumScaleFactor(0.6)
                     .padding(.horizontal, 4)
                     .padding(.bottom, hauteur * 0.09)
             }
@@ -238,11 +253,10 @@ struct PescedexAmiView: View {
             VStack(spacing: 0) {
                 Spacer(minLength: 0)
                 HStack(alignment: .top, spacing: 0) {
-                    Text(espece?.nom ?? "")
+                    Text(NomCarte.court(espece?.nom ?? ""))
                         .font(Police.taille(12.5 * u, .heavy))
                         .foregroundStyle(Color(red: 15 / 255, green: 26 / 255, blue: 28 / 255))
                         .lineLimit(1)
-                        .minimumScaleFactor(0.6)
                     Spacer(minLength: 2)
                     if let forme = symboleRarete(style) {
                         Image(systemName: forme)

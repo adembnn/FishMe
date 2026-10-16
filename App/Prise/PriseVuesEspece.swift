@@ -267,6 +267,7 @@ struct PriseGrilleView: View {
                     .padding(.horizontal, -20)
                     .scrollIndicators(.hidden)
                     .padding(.top, 14)
+                    if groupes.isEmpty { rechercheVide.padding(.top, 18) }
                     ScrollView {
                         VStack(alignment: .leading, spacing: 0) {
                             ForEach(Array(groupes.enumerated()), id: \.offset) { rang, groupe in
@@ -288,10 +289,25 @@ struct PriseGrilleView: View {
                         }
                     }
                     .scrollIndicators(.hidden)
-                    .padding(.top, 18)
+                    .scrollDismissesKeyboard(.interactively)
+                    .padding(.top, groupes.isEmpty ? 0 : 18)
                 }
             }
         }
+    }
+
+    /// État sans résultat : un poisson, une phrase, une issue (jamais un blanc).
+    private var rechercheVide: some View {
+        VStack(spacing: Espace.m) {
+            Image(systemName: "fish.fill")
+                .font(.system(size: 44, weight: .bold, design: .rounded)).foregroundStyle(Palette.encreDouce)
+                .accessibilityHidden(true)
+            Text("Aucune espèce ne porte ce nom").font(Police.sousTitre).foregroundStyle(Palette.encre)
+                .multilineTextAlignment(.center)
+            Button("Effacer la recherche") { filtre = "" }.buttonStyle(.secondaire)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, Espace.xl)
     }
 }
 

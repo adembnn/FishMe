@@ -51,6 +51,7 @@ nonisolated enum LiensOfficiels {
 nonisolated enum ContactClub {
     /// Adresse réelle fournie par Adem ou MWM (écrite dans CLAUDE.md). Jamais inventée.
     /// Vide : les lignes « Contact » et « Signaler une erreur de règle » disparaissent.
+    // E-mail de contact et du club (Adem, 16 oct.).
     static let adresse = "fishme.app@gmail.com"
 
     static func courriel(objet: String) -> URL? {

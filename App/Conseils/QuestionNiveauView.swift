@@ -66,7 +66,6 @@ struct QuestionNiveauView: View {
                     .foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
-                    .minimumScaleFactor(0.8)
                     .frame(maxWidth: .infinity, alignment: .top)
             }
             .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .top)
