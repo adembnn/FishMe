@@ -1,6 +1,6 @@
 {
- "version": "1",
- "date": "2026-10-15",
+ "version": "2",
+ "date": "2026-10-16",
  "sources": [
   {
    "id": "g1-decathlon-black-bass",
@@ -343,6 +343,270 @@
    "titre": "Pêche des écrevisses, une pêche facile à pratiquer en famille (peche.com)",
    "url": "https://www.peche.com/article/43609/la-peche-des-ecrevisses-une-peche-facile-a-pratiquer-en-famille",
    "lu_le": "2026-10-15"
+  },
+  {
+   "id": "h1-dpsg-truite-reservoir",
+   "titre": "La pêche de la truite au leurre en réservoir (DPSG)",
+   "url": "https://dpsg.fr/blog/la-peche-de-la-truite-au-leurre-en-reservoir-une-bonne-option-durant-la-fermeture",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h1-fede-allier-anguille",
+   "titre": "Anguille (Fédération de Pêche de l'Allier)",
+   "url": "https://www.federation-peche-allier.fr/project/anguille",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h1-fede85-anguille",
+   "titre": "Anguille (Fédération de la pêche 85)",
+   "url": "https://federation-peche-vendee.fr/quelles-especes/anguille",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h1-fishbase-huchon",
+   "titre": "Territory List - Hucho hucho (FishBase)",
+   "url": "https://fishbase.se/country/4664",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h1-odfw-tiger-trout",
+   "titre": "Tiger trout Fishing (Oregon Dept of Fish & Wildlife)",
+   "url": "https://myodfw.com/fishing/species/tiger-trout",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h1-pa-ver-de-terre",
+   "titre": "Pêche au ver de terre : guide complet (Pêche Assistant)",
+   "url": "https://peche-assistant.fr/blog/peche-au-ver-de-terre",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h1-pc-truite-mer-mouche",
+   "titre": "Pêche de la truite de mer à la mouche, quelles techniques utiliser ? (peche.com)",
+   "url": "https://www.peche.com/article/46719/pe-770-che-de-la-truite-de-mer-a-la-mouche-quelles-techniques-utiliser",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h2-doris-gremille",
+   "titre": "Gymnocephalus cernua, Grémille (DORIS, FFESSM)",
+   "url": "https://doris.ffessm.fr/Especes/Gymnocephalus-cernua-Gremille-329",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h2-fede-allier-poisson-chat",
+   "titre": "Poisson-Chat (Fédération de Pêche de l'Allier)",
+   "url": "https://www.federation-peche-allier.fr/project/poisson-chat",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h2-fede-dordogne-gremille",
+   "titre": "Grémille (Fédération Pêche Dordogne)",
+   "url": "https://www.federationpechedordogne.fr/poisson/gremille",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h2-fede-var-poisson-chat",
+   "titre": "Le poisson chat (Fédération de pêche du Var)",
+   "url": "https://www.pechevar.fr/4038-le-poisson-chat.htm",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h2-fishingworldguide-barbue",
+   "titre": "Barbue de rivière (Fishing World Guide)",
+   "url": "https://www.fishingworldguide.com/fr/fish/barbue-de-riviere",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h2-fishipedia-brochet-aquitain",
+   "titre": "Brochet aquitain, Esox aquitanicus (Fishipedia)",
+   "url": "https://www.fishipedia.fr/fr/poissons/esox-aquitanicus",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h2-wikipedia-hybrid-striped-bass",
+   "titre": "Hybrid striped bass (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Hybrid_striped_bass",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h3-fede77-vandoise",
+   "titre": "La vandoise (fédération de pêche de Seine-et-Marne)",
+   "url": "https://www.federationpeche77.fr/cms_viewFile.php?idtf=20246&path=Vandoise.pdf",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h3-fishbase-barbeau-merid",
+   "titre": "Barbus meridionalis, Mediterranean barbel (FishBase)",
+   "url": "https://www.fishbase.se/summary/Barbus-meridionalis.html",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h3-gers-cyprinides",
+   "titre": "Les cyprinidés (fédération de pêche du Gers)",
+   "url": "https://www.gers-peche.fr/5690-cyprinides.htm",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h3-magnifix-koi",
+   "titre": "Carpe koï : variétés, biologie et pêche en France (Magnifixcarp)",
+   "url": "https://magnifixcarp.com/blogs/peche-carpe/carpe-koi",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h3-peche-carpe-pain",
+   "titre": "La pêche de la carpe au pain en surface (peche.com)",
+   "url": "https://www.peche.com/article/37686/la-peche-de-la-carpe-au-pain-en-surface-ou-l-eloge-de-la-simplicite",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h3-uicn-poissons",
+   "titre": "Liste rouge des poissons d'eau douce de France métropolitaine (UICN France, 2019)",
+   "url": "https://uicn.fr/wp-content/uploads/2019/08/tableau-liste-rouge-poissons-d-eau-douce-de-france-metropolitaine.pdf",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h4-doris-epinoche",
+   "titre": "Épinoche à trois épines (DORIS)",
+   "url": "https://doris.ffessm.fr/Especes/Gasterosteus-aculeatus-Epinoche-a-trois-epines-1449",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h4-fede77-envahissantes",
+   "titre": "Les espèces de poissons envahissantes (fédération de pêche de Seine-et-Marne)",
+   "url": "https://www.federationpeche77.fr/5931-les-especes-de-poissons-envahissantes.htm",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h4-fede85-spirlin",
+   "titre": "Spirlin, Alburnoides bipunctatus (fédération de pêche de Vendée)",
+   "url": "https://federation-peche-vendee.fr/especes-et-repartitions/spirlin-alburnoides-bipunctatus",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h4-fishbase-perccottus",
+   "titre": "Perccottus glenii (FishBase)",
+   "url": "https://www.fishbase.se/Summary/SpeciesSummary.php?AT=Trawianka&ID=4696",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h4-fishipedia-blageon",
+   "titre": "Blageon, Telestes souffia (Fishipedia)",
+   "url": "https://www.fishipedia.fr/fr/poissons/telestes-souffia",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h4-gisd-gambusie",
+   "titre": "Gambusia holbrooki (Global Invasive Species Database)",
+   "url": "https://www.iucngisd.org/gisd/species.php?sc=617",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h4-legifrance-1988",
+   "titre": "Arrêté du 8 décembre 1988 fixant la liste des espèces de poissons protégées (Légifrance)",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000327373",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h4-opsn-loche-franche",
+   "titre": "La Loche franche (Observatoire des poissons Seine-Normandie)",
+   "url": "https://www.observatoire-poissons-seine-normandie.fr/poissons/loche-franche",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h4-opsn-spirlin",
+   "titre": "Le spirlin (Observatoire des poissons Seine-Normandie)",
+   "url": "https://www.observatoire-poissons-seine-normandie.fr/poissons/spirlin",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h4-peche69-poissons",
+   "titre": "Tout savoir sur les poissons d'eau douce (fédération de pêche du Rhône)",
+   "url": "https://www.peche69.fr/4529-tout-savoir-sur-les-poissons-d-eau-douce.htm",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h5-aude-lamproie-marine",
+   "titre": "Lamproie marine, avis de recherche (services de l'État dans l'Aude)",
+   "url": "https://www.aude.gouv.fr/Actions-de-l-Etat/Environnement-eau-foret-chasse-risques-naturels-technologiques/Eau/Lamproie-marine-Avis-de-recherche",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h5-drieat-lamproies",
+   "titre": "Projet d'arrêté poissons migrateurs bassin Seine-Normandie 2024-2025 (DRIEAT Île-de-France)",
+   "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/3-note_de_presentation_consultation_public.pdf",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h5-life-esturgeon",
+   "titre": "Conservation and restoration of the European sturgeon (LIFE98 NAT/F/005212, Commission européenne)",
+   "url": "https://webgate.ec.europa.eu/life/publicWebsite/project/LIFE98-NAT-F-005212/conservation-and-restoration-of-the-european-sturgeon",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h5-migado-alose",
+   "titre": "Grande alose (Migado, Migrateurs Garonne Dordogne Charente Seudre)",
+   "url": "https://www.migado.fr/alose",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h5-ofb-lamproie-planer",
+   "titre": "Fiche lamproie de Planer (OFB, PATBiodiv)",
+   "url": "https://patbiodiv.ofb.fr/document/fichelamproieplanerpdf-208",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h5-pecheidf-alose-feinte",
+   "titre": "L'alose feinte (Fédération de pêche d'Île-de-France)",
+   "url": "https://www.peche-idf.fr/5534-l-alose-feinte.htm",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h5-pechemanche-alose",
+   "titre": "Grande alose (Fédération de la Manche pour la pêche)",
+   "url": "https://www.peche-manche.com/poisson/grande-alose",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h5-sudouest-gattes",
+   "titre": "Pêche en Sud-Gironde : les aloses feintes sont de retour (Sud Ouest)",
+   "url": "https://www.sudouest.fr/environnement/peche/peche-en-sud-gironde-les-aloses-feintes-sont-de-retour-c-est-plutot-positif-pour-un-debut-de-saison-28768754.php",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h5-wiki-osciete",
+   "titre": "Acipenser gueldenstaedtii (Wikipédia)",
+   "url": "https://fr.wikipedia.org/wiki/Acipenser_gueldenstaedtii",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h5-wiki-sterlet",
+   "titre": "Sterlet (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Sterlet",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h6-aube-ecrevisses",
+   "titre": "Les espèces d'écrevisses (Fédération de pêche de l'Aube)",
+   "url": "https://www.fedepeche10.fr/les-especes-d-ecrevisses",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h6-doris-crabe-chinois",
+   "titre": "Eriocheir sinensis, crabe chinois à mitaines (DORIS)",
+   "url": "https://doris.ffessm.fr/Especes/Eriocheir-sinensis-Crabe-chinois-a-mitaines-4304",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h6-lux-grenouille-taureau",
+   "titre": "Grenouille-taureau, fiche d'identification (Administration de l'environnement, Luxembourg)",
+   "url": "https://environnement.public.lu/dam-assets/documents/natur/biodiversite/especes_invasives/fiches-identification/Grenouille-Taureau-FR.pdf",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h6-peche85-louisiane",
+   "titre": "Pêche des écrevisses rouges de Louisiane (Fédération de pêche de la Vendée)",
+   "url": "https://federation-peche-vendee.fr/peche-des-ecrevisses-rouges-de-lousiane",
+   "lu_le": "2026-10-16"
   }
  ],
  "conseils": [
@@ -4580,6 +4844,2288 @@
     "g5-peche-ecrevisse-ete"
    ],
    "relu_par": "Claude, relecture contre la source, 2026-10-15"
+  },
+  {
+   "id": "gremille-appat-1",
+   "espece": "gremille",
+   "type": "appat",
+   "texte": "Un petit ver ou du ver de vase, posé sur le fond",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h2-doris-gremille",
+    "h2-fede-dordogne-gremille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "gremille-technique-1",
+   "espece": "gremille",
+   "type": "technique",
+   "texte": "Cherche les eaux calmes à fond de sable ou de limon",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h2-doris-gremille",
+    "h2-fede-dordogne-gremille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "gremille-moment-1",
+   "espece": "gremille",
+   "type": "moment",
+   "texte": "Elle se nourrit surtout la nuit : essaie à la tombée du soir",
+   "icone": "calendar",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h2-doris-gremille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "raye-hybride-technique-1",
+   "espece": "raye-hybride",
+   "type": "technique",
+   "texte": "Petites cuillères, jigs ou leurres souples imitant un poisson",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 1,
+   "sources": [
+    "h2-wikipedia-hybrid-striped-bass"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "raye-hybride-technique-2",
+   "espece": "raye-hybride",
+   "type": "technique",
+   "texte": "Cherche les bancs de petits poissons qui font bouillonner la surface",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h2-wikipedia-hybrid-striped-bass"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "brochet-aquitain-technique-1",
+   "espece": "brochet-aquitain",
+   "type": "technique",
+   "texte": "Il chasse à l'affût : cherche les zones calmes et les herbiers",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h2-fishipedia-brochet-aquitain"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "brochet-aquitain-moment-1",
+   "espece": "brochet-aquitain",
+   "type": "moment",
+   "texte": "Plutôt actif de jour, dans les petites rivières et affluents",
+   "icone": "calendar",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h2-fishipedia-brochet-aquitain"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "brochet-aquitain-technique-2",
+   "espece": "brochet-aquitain",
+   "type": "technique",
+   "texte": "Espèce rare : mains mouillées, sans serrer, hameçon retiré avec douceur",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h2-fishipedia-brochet-aquitain",
+    "g1-fede-morbihan-nokill"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "poisson-chat-appat-1",
+   "espece": "poisson-chat",
+   "type": "appat",
+   "texte": "Un ver de terre moyen, posé sur le fond",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h2-fede-allier-poisson-chat"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "poisson-chat-hamecon-1",
+   "espece": "poisson-chat",
+   "type": "hamecon",
+   "texte": "Petit hameçon du 16 au 12, petit plomb de touche juste au-dessus",
+   "icone": "scope",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h2-fede-allier-poisson-chat"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "poisson-chat-moment-1",
+   "espece": "poisson-chat",
+   "type": "moment",
+   "texte": "Il est surtout actif la nuit : essaie le soir",
+   "icone": "calendar",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h2-fede-allier-poisson-chat"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "poisson-chat-technique-1",
+   "espece": "poisson-chat",
+   "type": "technique",
+   "texte": "Pêche au coup ou au feeder, appât calé au fond",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "amorce"
+   ],
+   "rang": 4,
+   "sources": [
+    "h2-fede-var-poisson-chat"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "barbue-de-riviere-appat-1",
+   "espece": "barbue-de-riviere",
+   "type": "appat",
+   "texte": "Foie de volaille ou pâte très odorante : elle chasse à l'odorat",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h2-fishingworldguide-barbue"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "barbue-de-riviere-technique-1",
+   "espece": "barbue-de-riviere",
+   "type": "technique",
+   "texte": "Pêche au posé, avec un plomb lourd pour tenir l'appât au fond",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h2-fishingworldguide-barbue"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "barbue-de-riviere-moment-1",
+   "espece": "barbue-de-riviere",
+   "type": "moment",
+   "texte": "La nuit et à l'aube, elle remonte chasser vers les bordures",
+   "icone": "calendar",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h2-fishingworldguide-barbue"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "carpe-koi-appat-1",
+   "espece": "carpe-koi",
+   "type": "appat",
+   "texte": "Du maïs, comme pour la carpe : la koï y répond aussi",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h3-magnifix-koi"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "carpe-koi-technique-1",
+   "espece": "carpe-koi",
+   "type": "technique",
+   "texte": "Du pain en surface : lance-le près d'elle, jamais sur sa tête",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h3-peche-carpe-pain"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "carpe-koi-hamecon-1",
+   "espece": "carpe-koi",
+   "type": "hamecon",
+   "texte": "Hameçon n°6, pain frais piqué deux ou trois fois avec sa croûte",
+   "icone": "scope",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h3-peche-carpe-pain"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "carpe-koi-technique-2",
+   "espece": "carpe-koi",
+   "type": "technique",
+   "texte": "Tapis et mains bien mouillés : sa robe et son mucus sont fragiles",
+   "icone": "eye",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "h3-magnifix-koi"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "vandoise-rostree-technique-1",
+   "espece": "vandoise-rostree",
+   "type": "technique",
+   "texte": "Comme la vandoise : au toc, au coup ou à la mouche",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h3-gers-cyprinides",
+    "h3-fede77-vandoise"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "vandoise-rostree-appat-1",
+   "espece": "vandoise-rostree",
+   "type": "appat",
+   "texte": "Petit appât près de la surface : ver de terre, blé ou pain",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h3-fede77-vandoise"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "vandoise-rostree-technique-2",
+   "espece": "vandoise-rostree",
+   "type": "technique",
+   "texte": "Quasi menacée en France : manipule-la vite, les mains mouillées",
+   "icone": "eye",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h3-uicn-poissons"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "vandoise-du-bearn-technique-1",
+   "espece": "vandoise-du-bearn",
+   "type": "technique",
+   "texte": "Comme la vandoise : au toc, au coup ou à la mouche",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h3-gers-cyprinides",
+    "h3-fede77-vandoise"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "vandoise-du-bearn-appat-1",
+   "espece": "vandoise-du-bearn",
+   "type": "appat",
+   "texte": "Petit appât près de la surface : ver de terre, blé ou pain",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h3-fede77-vandoise"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "vandoise-du-bearn-technique-2",
+   "espece": "vandoise-du-bearn",
+   "type": "technique",
+   "texte": "Quasi menacée en France : manipule-la vite, les mains mouillées",
+   "icone": "eye",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h3-uicn-poissons"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "toxostome-technique-1",
+   "espece": "toxostome",
+   "type": "technique",
+   "texte": "Cherche-le en eau vive, sur les fonds de galets",
+   "icone": "water.waves",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h3-gers-cyprinides"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "toxostome-technique-2",
+   "espece": "toxostome",
+   "type": "technique",
+   "texte": "Quasi menacé en France : manipule-le vite, les mains mouillées",
+   "icone": "eye",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h3-uicn-poissons"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "barbeau-meridional-technique-1",
+   "espece": "barbeau-meridional",
+   "type": "technique",
+   "texte": "Cherche-le en eau claire et vive, sur sable ou graviers",
+   "icone": "water.waves",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h3-fishbase-barbeau-merid"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "barbeau-meridional-technique-2",
+   "espece": "barbeau-meridional",
+   "type": "technique",
+   "texte": "Quasi menacé en France : manipule-le vite, les mains mouillées",
+   "icone": "eye",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h3-uicn-poissons"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-virile-appat-1",
+   "espece": "ecrevisse-virile",
+   "type": "appat",
+   "texte": "Foie, sardine ou croquettes percées : l'odeur forte attire de loin",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-peche-ecrevisse-ete",
+    "h6-peche85-louisiane"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-virile-technique-1",
+   "espece": "ecrevisse-virile",
+   "type": "technique",
+   "texte": "Pose la balance au fond, attends quelques minutes, puis relève",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g5-peche-balance-marais"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-virile-moment-1",
+   "espece": "ecrevisse-virile",
+   "type": "moment",
+   "texte": "Au crépuscule et en début de nuit, elles sont les plus actives",
+   "icone": "calendar",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-marbree-appat-1",
+   "espece": "ecrevisse-marbree",
+   "type": "appat",
+   "texte": "Sardine, hareng ou tripes : les odeurs fortes marchent le mieux",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-peche-ecrevisses-famille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-marbree-technique-1",
+   "espece": "ecrevisse-marbree",
+   "type": "technique",
+   "texte": "Mets l'appât dans un petit filet : il tient plus longtemps",
+   "icone": "leaf",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g5-peche-ecrevisses-famille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-marbree-moment-1",
+   "espece": "ecrevisse-marbree",
+   "type": "moment",
+   "texte": "Les soirs d'été, du crépuscule jusqu'au milieu de la nuit",
+   "icone": "moon",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-a-taches-rouges-appat-1",
+   "espece": "ecrevisse-a-taches-rouges",
+   "type": "appat",
+   "texte": "Restes de poisson ou croquettes : de quoi les attirer dans la balance",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h6-peche85-louisiane"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-a-taches-rouges-technique-1",
+   "espece": "ecrevisse-a-taches-rouges",
+   "type": "technique",
+   "texte": "Pose plusieurs balances espacées et relève-les toutes les 10 minutes",
+   "icone": "hare",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-a-taches-rouges-moment-1",
+   "espece": "ecrevisse-a-taches-rouges",
+   "type": "moment",
+   "texte": "Eau au-dessus de 15 °C : elles bougent plus et mordent mieux",
+   "icone": "thermometer.medium",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-calicot-appat-1",
+   "espece": "ecrevisse-calicot",
+   "type": "appat",
+   "texte": "Foie, abats ou sardine : des appâts très odorants dans la balance",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-calicot-technique-1",
+   "espece": "ecrevisse-calicot",
+   "type": "technique",
+   "texte": "Cherche-la en canaux, marais, plans d'eau et rivières",
+   "icone": "water.waves",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h6-aube-ecrevisses"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "ecrevisse-calicot-moment-1",
+   "espece": "ecrevisse-calicot",
+   "type": "moment",
+   "texte": "Vise la fin de journée et le début de nuit, quand elle se nourrit",
+   "icone": "calendar",
+   "mois": [
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "g5-peche-ecrevisse-ete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "crabe-chinois-technique-1",
+   "espece": "crabe-chinois",
+   "type": "technique",
+   "texte": "Cherche-le au bord des cours d'eau et canaux : il creuse les berges",
+   "icone": "water.waves",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h6-doris-crabe-chinois"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "crabe-chinois-technique-2",
+   "espece": "crabe-chinois",
+   "type": "technique",
+   "texte": "Reconnais-le : pinces du mâle couvertes de poils, bouts blancs",
+   "icone": "eye",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h6-doris-crabe-chinois"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "grenouille-taureau-technique-1",
+   "espece": "grenouille-taureau",
+   "type": "technique",
+   "texte": "Elle se reconnaît à son tympan, aussi large que deux fois son œil",
+   "icone": "eye",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h6-lux-grenouille-taureau"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "grenouille-taureau-technique-2",
+   "espece": "grenouille-taureau",
+   "type": "technique",
+   "texte": "Écoute son chant grave et lent, en séries : un mugissement",
+   "icone": "eye",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h6-lux-grenouille-taureau"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "grande-alose-technique-1",
+   "espece": "grande-alose",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h5-migado-alose"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "alose-feinte-technique-1",
+   "espece": "alose-feinte",
+   "type": "technique",
+   "texte": "À la mouche : touche brutale, combat sportif, poisson en forme",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "mouche"
+   ],
+   "rang": 1,
+   "sources": [
+    "h5-sudouest-gattes"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "alose-feinte-technique-2",
+   "espece": "alose-feinte",
+   "type": "technique",
+   "texte": "Une cuillère tournante peut la tenter sur les frayères",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 2,
+   "sources": [
+    "h5-sudouest-gattes",
+    "h5-pechemanche-alose"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "alose-feinte-moment-1",
+   "espece": "alose-feinte",
+   "type": "moment",
+   "texte": "Elle remonte les fleuves en mai et juin pour frayer",
+   "icone": "calendar",
+   "mois": [
+    5,
+    6
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h5-pecheidf-alose-feinte"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "lamproie-marine-technique-1",
+   "espece": "lamproie-marine",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h5-drieat-lamproies",
+    "h5-aude-lamproie-marine"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "lamproie-fluviatile-technique-1",
+   "espece": "lamproie-fluviatile",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h5-drieat-lamproies"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "lamproie-de-planer-technique-1",
+   "espece": "lamproie-de-planer",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h5-ofb-lamproie-planer"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "esturgeon-siberien-technique-1",
+   "espece": "esturgeon-siberien",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h5-life-esturgeon"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "sterlet-technique-1",
+   "espece": "sterlet",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h5-life-esturgeon",
+    "h5-wiki-sterlet"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "esturgeon-oscietre-technique-1",
+   "espece": "esturgeon-oscietre",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "categorie": "2",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h5-life-esturgeon",
+    "h5-wiki-osciete"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "spirlin-technique-1",
+   "espece": "spirlin",
+   "type": "technique",
+   "texte": "Cherche-le en banc dans les zones courantes, près des radiers",
+   "icone": "water.waves",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-opsn-spirlin",
+    "h4-fede85-spirlin"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "spirlin-technique-2",
+   "espece": "spirlin",
+   "type": "technique",
+   "texte": "Il déserte l'eau polluée ou trop chaude : vise l'eau claire et fraîche",
+   "icone": "thermometer.medium",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h4-opsn-spirlin"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "blageon-technique-1",
+   "espece": "blageon",
+   "type": "technique",
+   "texte": "Cherche-le en eau claire et vive, sur fond de galets ou de graviers",
+   "icone": "water.waves",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-fishipedia-blageon"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "blageon-technique-2",
+   "espece": "blageon",
+   "type": "technique",
+   "texte": "Il évite l'eau stagnante et les fonds vaseux : reste en courant",
+   "icone": "eye",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h4-fishipedia-blageon"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "able-de-heckel-technique-1",
+   "espece": "able-de-heckel",
+   "type": "technique",
+   "texte": "Monte une ligne très fine : sa touche est très rapide",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-peche69-poissons"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "able-de-heckel-technique-2",
+   "espece": "able-de-heckel",
+   "type": "technique",
+   "texte": "Il vit en banc dense, en rivière lente ou en étang",
+   "icone": "water.waves",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h4-peche69-poissons"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "bouviere-technique-1",
+   "espece": "bouviere",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-legifrance-1988"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "loche-d-etang-technique-1",
+   "espece": "loche-d-etang",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-legifrance-1988"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "loche-de-riviere-technique-1",
+   "espece": "loche-de-riviere",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-legifrance-1988"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "loche-franche-moment-1",
+   "espece": "loche-franche",
+   "type": "moment",
+   "texte": "Elle sort se nourrir à la tombée de la nuit",
+   "icone": "moon",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-opsn-loche-franche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "loche-franche-appat-1",
+   "espece": "loche-franche",
+   "type": "appat",
+   "texte": "Au fond, elle mange vers et larves d'insectes : reste près du fond",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h4-opsn-loche-franche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "epinoche-appat-1",
+   "espece": "epinoche",
+   "type": "appat",
+   "texte": "Très vorace, elle se nourrit entre autres de vers et de petits crustacés",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-doris-epinoche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "epinoche-technique-1",
+   "espece": "epinoche",
+   "type": "technique",
+   "texte": "Cherche-la dans les petits fonds riches en plantes, souvent en bancs",
+   "icone": "leaf",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h4-doris-epinoche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "epinochette-technique-1",
+   "espece": "epinochette",
+   "type": "technique",
+   "texte": "Reconnais-la : corps plus allongé, une dizaine d'épines sur le dos",
+   "icone": "eye",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-doris-epinoche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "pseudorasbora-technique-1",
+   "espece": "pseudorasbora",
+   "type": "technique",
+   "texte": "Cherche-le surtout en eau calme : lac, étang ou bassin",
+   "icone": "water.waves",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-fede77-envahissantes"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "goujon-de-l-amour-technique-1",
+   "espece": "goujon-de-l-amour",
+   "type": "technique",
+   "texte": "Cherche-le en eau calme et très végétalisée, pas dans le courant",
+   "icone": "leaf",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-fishbase-perccottus"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "goujon-de-l-amour-technique-2",
+   "espece": "goujon-de-l-amour",
+   "type": "technique",
+   "texte": "Reconnais le mâle en ponte : sombre, taches vert vif, bosse sur la nuque",
+   "icone": "eye",
+   "mois": [
+    5,
+    6,
+    7
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h4-fishbase-perccottus"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "gambusie-technique-1",
+   "espece": "gambusie",
+   "type": "technique",
+   "texte": "Cherche-la au bord, en eau chaude, calme et peu profonde, parmi les plantes",
+   "icone": "sun.max",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h4-gisd-gambusie"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "gambusie-technique-2",
+   "espece": "gambusie",
+   "type": "technique",
+   "texte": "Elle gobe les insectes tombés à la surface : observe-la au bord",
+   "icone": "eye",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h4-gisd-gambusie"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "truite-de-mer-technique-1",
+   "espece": "truite-de-mer",
+   "type": "technique",
+   "texte": "Mouche noyée lancée vers l'aval, qu'on laisse dériver puis remonter",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "mouche"
+   ],
+   "rang": 1,
+   "sources": [
+    "h1-pc-truite-mer-mouche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "truite-de-mer-technique-2",
+   "espece": "truite-de-mer",
+   "type": "technique",
+   "texte": "Elle mange peu : fais passer la nymphe tout près du fond",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "mouche"
+   ],
+   "rang": 2,
+   "sources": [
+    "h1-pc-truite-mer-mouche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "truite-de-mer-moment-1",
+   "espece": "truite-de-mer",
+   "type": "moment",
+   "texte": "On la dit lucifuge : essaie l'eau teintée ou la fin de journée",
+   "icone": "moon",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h1-pc-truite-mer-mouche"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "huchon-technique-1",
+   "espece": "huchon",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h1-fishbase-huchon"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "truite-tigre-technique-1",
+   "espece": "truite-tigre",
+   "type": "technique",
+   "texte": "Une petite cuillère ondulante est la valeur sûre en réservoir",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 1,
+   "sources": [
+    "h1-dpsg-truite-reservoir"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "truite-tigre-technique-2",
+   "espece": "truite-tigre",
+   "type": "technique",
+   "texte": "Varie : récupération lente un jour, twitches rapides le suivant",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 2,
+   "sources": [
+    "h1-dpsg-truite-reservoir"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "truite-tigre-hamecon-1",
+   "espece": "truite-tigre",
+   "type": "hamecon",
+   "texte": "Ardillon écrasé : décrochage facile et poisson ménagé",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h1-dpsg-truite-reservoir"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "truite-tigre-technique-3",
+   "espece": "truite-tigre",
+   "type": "technique",
+   "texte": "Elle mange des poissons : un petit minnow imite bien un alevin",
+   "icone": "fish",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "leurre"
+   ],
+   "rang": 4,
+   "sources": [
+    "h1-odfw-tiger-trout",
+    "h1-dpsg-truite-reservoir"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "anguille-jaune-appat-1",
+   "espece": "anguille-jaune",
+   "type": "appat",
+   "texte": "Un gros ver de terre ou canadien entier, posé au fond",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h1-fede-allier-anguille",
+    "h1-pa-ver-de-terre"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "anguille-jaune-technique-1",
+   "espece": "anguille-jaune",
+   "type": "technique",
+   "texte": "Montage au posé : plombée d'environ 15 g, ligne costaud",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h1-fede-allier-anguille",
+    "h1-pa-ver-de-terre"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "anguille-jaune-hamecon-1",
+   "espece": "anguille-jaune",
+   "type": "hamecon",
+   "texte": "Hameçon à hampe longue n°6 : le ver s'enfile jusqu'au bout",
+   "icone": "scope",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h1-fede-allier-anguille",
+    "h1-pa-ver-de-terre"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "anguille-jaune-moment-1",
+   "espece": "anguille-jaune",
+   "type": "moment",
+   "texte": "Elle chasse à l'odeur, surtout de nuit et en eau trouble",
+   "icone": "clock",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 4,
+   "sources": [
+    "h1-fede-allier-anguille",
+    "h1-pa-ver-de-terre"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "anguille-argentee-technique-1",
+   "espece": "anguille-argentee",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h1-fede85-anguille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "civelle-technique-1",
+   "espece": "civelle",
+   "type": "technique",
+   "texte": "Relâche-la",
+   "icone": "fish",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 1,
+   "sources": [
+    "h1-fede85-anguille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
   }
  ]
 }
