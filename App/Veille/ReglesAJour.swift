@@ -16,7 +16,7 @@ import Foundation
 
 enum ReglesAJour {
     /// Dossier des copies téléchargées. À passer à `DonneesMoteur.embarque(reglesTelechargees:)` dans `ParcoursApp.init`.
-    static var dossierCopies: URL {
+    nonisolated static var dossierCopies: URL {
         let base = (try? FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask,
                                                  appropriateFor: nil, create: true))
             ?? FileManager.default.temporaryDirectory
