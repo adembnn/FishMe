@@ -12,6 +12,7 @@ sauve=$(mktemp -d); cp Config/BuildChallenge.entitlements Config/FishMeWidget.en
 trap 'cp "$sauve"/*.entitlements Config/; echo "entitlements remis"' EXIT
 cp "Config/planb/app-$v.entitlements" Config/BuildChallenge.entitlements
 [ "$v" = minimal ] && cp Config/planb/widget-minimal.entitlements Config/FishMeWidget.entitlements
-xcodebuild -project BuildChallenge.xcodeproj -scheme BuildChallenge -configuration Release \
+icloud=YES; case "$v" in sans-icloud*|minimal) icloud=NO ;; esac
+xcodebuild FISHME_ICLOUD=$icloud -project BuildChallenge.xcodeproj -scheme BuildChallenge -configuration Release \
   -destination generic/platform=iOS -archivePath "build/FishMe-$v.xcarchive" -allowProvisioningUpdates archive
 echo "Archive : build/FishMe-$v.xcarchive (Organizer d'Xcode > Distribute App > TestFlight)"
