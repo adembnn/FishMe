@@ -94,13 +94,7 @@ struct CasVerdictsReelsTests {
             let attendue = v["consigne"] as? String ?? ""
             let rv = Self.controle(e, espece: v["espece"] as? String, taille: (v["tailleCm"] as? NSNumber).map { Optional($0.doubleValue) },
                                    mesure: (v["mesure"] as? String).map { Optional($0) }, categorie: v["categorie"] as? String)
-            // Divergence connue (reports/l1-divergences.md) : anguille-jaune « sans stade » rend « vérifie l'arrêté ».
-            if id == "cas-09", v["espece"] as? String == "anguille-jaune" {
-                withKnownIssue("anguille-jaune sans stade : le cas attend relâche-la, les règles de D1 ne visent que l'argentée et la civelle") {
-                    #expect(rv.consigne.rawValue == attendue)
-                }
-                continue
-            }
+            // cas-09 (anguille jaune sans stade) passe depuis le socle national à 135 règles (regles/local 0679d8e).
             #expect(rv.consigne.rawValue == attendue, "\(id) variante \(v) : rendue \(rv.consigne.rawValue), attendue \(attendue)")
         }
     }
