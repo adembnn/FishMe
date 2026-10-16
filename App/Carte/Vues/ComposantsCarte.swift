@@ -100,6 +100,8 @@ nonisolated struct ApercuSpot: Sendable, Equatable {
     var codeDepartement: String? = nil
     /// Une ligne honnête sous les tuiles (« Pas de relevé OFB ici : espèces du département ») ; `nil` si un relevé existe tout près.
     var noteHonnete: String? = nil
+    /// Toutes les espèces du spot, la vedette d'abord : la liste complète qu'ouvre « + N ».
+    var toutes: [LigneEspece] = []
 }
 
 /// Une station OFB est « à proximité » si elle est à moins de 10 km : c'est le premier rayon de `Core` pour les espèces d'un coin.
@@ -157,7 +159,8 @@ nonisolated enum ProximiteOFB {
     }
     return ApercuSpot(lieu: lieu, vedette: vedette, autres: Array(autres.prefix(3)), reste: max(0, autres.count - 3),
                        vedetteEstRare: vedetteEstRare, parDepartement: parDepartement,
-                       codeDepartement: spot.departement.estInconnu ? nil : spot.departement.code, noteHonnete: noteHonnete)
+                       codeDepartement: spot.departement.estInconnu ? nil : spot.departement.code, noteHonnete: noteHonnete,
+                       toutes: (vedette.map { [$0] } ?? []) + autres)
 }
 
 /// Bouton rond de 44 pt en Liquid Glass (carte) : icône encre ou marine.

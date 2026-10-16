@@ -53,6 +53,9 @@ struct VueCarte: View {
     @State private var afficherCarte = true
     /// La feuille « Ton spot » (P06 A) ne monte plus d'elle-même : elle s'ouvre d'un toucher sur la pastille « Ton spot » en haut.
     @State private var feuilleSpotOuverte = false
+    /// Les poissons du spot, ouverts d'un toucher sur un poisson ou sur « + N » ; `especeOuverte` est le poisson touché.
+    @State private var poissonsOuverts = false
+    @State private var especeOuverte: Espece?
     @State private var apercu: ApercuSpot?
     @State private var reseauDisponible = true
 
@@ -102,6 +105,12 @@ struct VueCarte: View {
             }
         }
         .animation(.easeInOut(duration: 0.25), value: afficherCarte)
+        .sheet(isPresented: $poissonsOuverts) {
+            if let apercu {
+                PoissonsDuSpotView(lieu: apercu.lieu, lignes: apercu.toutes, pechable: { modele.pechable($0) },
+                                   emplacementConseil: emplacementConseil, touchee: especeOuverte)
+            }
+        }
         .task(id: modele.spotAffiche) {
             apercu = nil
             guard let spot = modele.spotAffiche else { return }
@@ -573,6 +582,9 @@ struct VueCarte: View {
                     .frame(height: 170)
                     .padding(.horizontal, Espace.xs)
                     .padding(.top, 40)
+                    .contentShape(Rectangle())
+                    .onTapGesture { ouvrirPoissons(ligne.espece) }
+                    .accessibilityAddTraits(.isButton)
                 VStack(spacing: Espace.s) {
                     Text(fiche?.nom ?? ligne.espece.id)
                         .font(Police.taille(34, .heavy))
@@ -626,14 +638,25 @@ struct VueCarte: View {
     private func autresPoissons(_ apercu: ApercuSpot) -> some View {
         HStack(spacing: 18) {
             ForEach(apercu.autres) { ligne in
-                ImageEspeceCarte(nom: modele.pechable(ligne.espece)?.image)
-                    .frame(width: 72, height: 34)
-                    .accessibilityLabel(modele.pechable(ligne.espece)?.nom ?? ligne.espece.id)
+                Button { ouvrirPoissons(ligne.espece) } label: {
+                    ImageEspeceCarte(nom: modele.pechable(ligne.espece)?.image)
+                        .frame(width: 72, height: 34)
+                        .frame(minHeight: Gabarit.zoneTactile)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(modele.pechable(ligne.espece)?.nom ?? ligne.espece.id)
             }
             if apercu.reste > 0 {
-                Text("+ \(apercu.reste)")
-                    .font(Police.taille(15))
-                    .foregroundStyle(Palette.encreDouce)
+                Button { ouvrirPoissons(nil) } label: {
+                    Text("+ \(apercu.reste)")
+                        .font(Police.taille(15))
+                        .foregroundStyle(Palette.encreDouce)
+                        .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Voir les \(apercu.reste) autres poissons du spot")
             }
         }
     }
@@ -992,17 +1015,22 @@ struct VueCarte: View {
     private func tuilePoissonCarte(_ ligne: LigneEspece) -> some View {
         let fiche = modele.pechable(ligne.espece)
         let niveau: NiveauRarete = ligne.rarete?.niveau ?? .nonMesuree
-        return VStack(spacing: 6) {
-            ImageEspeceCarte(nom: fiche?.image)
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, 7)
-                .padding(.vertical, 6)
-                .frame(height: 52)
-                .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-            marqueRareteCarte(niveau)
+        return Button { ouvrirPoissons(ligne.espece) } label: {
+            VStack(spacing: 6) {
+                ImageEspeceCarte(nom: fiche?.image)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 7)
+                    .padding(.vertical, 6)
+                    .frame(height: 52)
+                    .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                marqueRareteCarte(niveau)
+            }
+            .frame(maxWidth: .infinity)
+            .contentShape(Rectangle())
         }
-        .frame(maxWidth: .infinity)
+        .buttonStyle(.plain)
         .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
         .accessibilityLabel(fiche?.nom ?? ligne.espece.id)
         .accessibilityValue(niveau == .nonMesuree ? "" : niveau.libelle)
     }
@@ -1020,16 +1048,27 @@ struct VueCarte: View {
     }
 
     private func tuileResteCarte(_ reste: Int) -> some View {
-        VStack(spacing: 6) {
-            Text("+ \(reste)")
-                .font(Police.detail)
-                .foregroundStyle(Palette.encreDouce)
-                .frame(maxWidth: .infinity)
-                .frame(height: 52)
-                .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous).strokeBorder(Palette.filet, lineWidth: 1.5))
-            Color.clear.frame(width: 14, height: 14)
+        Button { ouvrirPoissons(nil) } label: {
+            VStack(spacing: 6) {
+                Text("+ \(reste)")
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 52)
+                    .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous).strokeBorder(Palette.filet, lineWidth: 1.5))
+                Color.clear.frame(width: 14, height: 14)
+            }
+            .frame(maxWidth: .infinity)
+            .contentShape(Rectangle())
         }
-        .frame(maxWidth: .infinity)
+        .buttonStyle(.plain)
+        .accessibilityLabel("Voir les \(reste) autres poissons du spot")
+    }
+
+    /// Ouvre tous les poissons du spot, sur le poisson touché s'il y en a un.
+    private func ouvrirPoissons(_ espece: Espece?) {
+        especeOuverte = espece
+        poissonsOuverts = true
     }
 
     private var boutonCommencerCarte: some View {
