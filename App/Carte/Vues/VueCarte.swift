@@ -102,7 +102,13 @@ struct VueCarte: View {
         .safeAreaInset(edge: .bottom, spacing: 8) { bas }
         .sheet(item: $m.selection) { selection in
             FicheCoinView(services: modele.services, selection: selection, pechables: modele.pechables,
-                          emplacementMaintenant: emplacementMaintenant, emplacementConseil: emplacementConseil)
+                          emplacementMaintenant: emplacementMaintenant, emplacementConseil: emplacementConseil,
+                          onCommencerSession: (sessionEnCours || modele.spotAffiche == nil) ? nil : {
+                              if let spot = modele.spotAffiche {
+                                  modele.selection = nil
+                                  onCommencerSession(spot)
+                              }
+                          })
                 .presentationDetents([.medium, .large])
                 .presentationBackgroundInteraction(.enabled(upThrough: .medium))
                 .presentationDragIndicator(.visible)

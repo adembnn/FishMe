@@ -34,11 +34,15 @@ struct FinSessionView: View {
     let infosEspece: (Espece) -> EspecePechable?
     /// « la Marne » : l'eau, jamais le point exact. `nil` : rien n'est écrit.
     let lieu: String?
+    /// Conseil « La prochaine fois » (cas bredouille). `nil` : le bloc n'est pas montré.
+    /// // À brancher : le conseil vient des données de L1 (appât, heure) pour l'espèce visée ; rien n'est inventé ici.
+    let conseil: String?
     let surTerminer: () -> Void
     let surFermer: () -> Void
 
     init(fin: FinDeSession, infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, lieu: String? = nil,
-         surTerminer: @escaping () -> Void, surFermer: (() -> Void)? = nil) {
+         conseil: String? = nil, surTerminer: @escaping () -> Void, surFermer: (() -> Void)? = nil) {
+        self.conseil = conseil
         self.fin = fin
         self.infosEspece = infosEspece
         self.lieu = lieu
@@ -69,7 +73,12 @@ struct FinSessionView: View {
         GeometryReader { geo in
             ZStack {
                 Palette.nuit
-                if let photo = imageDe(vedette) {
+                if vedette == nil {
+                    // P47 A : le fond carte/eau de la sortie sans prise (pas de position exacte).
+                    Palette.fond
+                    Palette.eauClaire.frame(height: geo.size.height * 0.2).rotationEffect(.degrees(-12)).offset(y: 20)
+                    Palette.eau.frame(height: geo.size.height * 0.1).rotationEffect(.degrees(-12)).offset(y: 20)
+                } else if let photo = imageDe(vedette) {
                     Image(uiImage: photo)
                         .resizable()
                         .scaledToFill()
@@ -82,6 +91,7 @@ struct FinSessionView: View {
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height * 0.62)
+            .clipped()
             .frame(maxHeight: .infinity, alignment: .top)
         }
         .ignoresSafeArea()
@@ -110,10 +120,9 @@ struct FinSessionView: View {
             if let vedette {
                 ligneVedette(vedette)
                 if prises.count > 1 { autresPrises }
-            } else {
-                bredouille
             }
             if let conditions { ligneConditions(conditions) }
+            if vedette == nil { bredouille }
             if let message = fin.message {
                 Text(message)
                     .font(Police.detail)
@@ -145,7 +154,9 @@ struct FinSessionView: View {
     /// « 1 h 24 sur la Marne » ou « 1 h 24 ».
     private var titre: String {
         let duree = FormatSortie.duree(sortie)
-        if let lieu, !lieu.isEmpty { return "\(duree) sur \(lieu)" }
+        if let lieu, !lieu.isEmpty {
+            return vedette == nil ? "\(duree) au bord de \(lieu)" : "\(duree) sur \(lieu)"
+        }
         return duree
     }
 
@@ -189,26 +200,28 @@ struct FinSessionView: View {
         }
     }
 
-    /// Cas bredouille : zéro prise, ton positif.
-    private var bredouille: some View {
-        HStack(spacing: Espace.m) {
-            Image(systemName: "water.waves")
-                .font(.system(size: 28, weight: .bold))
-                .foregroundStyle(Palette.marine)
-                .frame(width: 96, height: 60)
-                .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
-                .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: Espace.xs) {
-                Text("Bredouille, ça arrive")
-                    .font(Police.sousTitre)
-                    .foregroundStyle(Palette.encre)
-                Text("Une belle sortie au bord de l'eau")
-                    .font(Police.detail)
-                    .foregroundStyle(Palette.encreDouce)
+    /// Cas bredouille : zéro prise, ton positif. Le bloc « La prochaine fois » n'existe que si un conseil est fourni.
+    @ViewBuilder private var bredouille: some View {
+        if let conseil, !conseil.isEmpty {
+            HStack(spacing: Espace.m) {
+                Image(systemName: "fish")
+                    .font(.system(size: 28, weight: .bold))
+                    .foregroundStyle(Palette.marine)
+                    .frame(width: 84, height: 56)
+                    .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
+                    .accessibilityHidden(true)
+                VStack(alignment: .leading, spacing: Espace.xs) {
+                    Text("La prochaine fois")
+                        .font(Police.sousTitre)
+                        .foregroundStyle(Palette.encre)
+                    Text(conseil)
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encreDouce)
+                }
+                Spacer(minLength: 0)
             }
-            Spacer(minLength: 0)
+            .accessibilityElement(children: .combine)
         }
-        .accessibilityElement(children: .combine)
     }
 
     private func tuilePoisson(_ infos: EspecePechable?, largeur: CGFloat, hauteur: CGFloat) -> some View {
@@ -234,6 +247,10 @@ struct FinSessionView: View {
     /// // À brancher : température et hauteur d'eau (« 14° », « 1,42 m ») n'existent pas encore dans `Conditions`.
     private func ligneConditions(_ c: Conditions) -> some View {
         HStack(alignment: .top, spacing: Espace.s) {
+            if let fin = c.finLegale {
+                caseCondition(symbole: "clock", valeur: fin.formatted(.dateTime.hour().minute().locale(Locale(identifier: "fr_FR"))),
+                              legende: "fin légale")
+            }
             if let vent = c.ventKmh {
                 caseCondition(symbole: "wind", valeur: "\(Int(vent.rounded()))", legende: "km/h")
             }

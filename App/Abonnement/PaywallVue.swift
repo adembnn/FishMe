@@ -228,6 +228,8 @@ struct PaywallVue: View {
         .padding(.horizontal, Espace.bord)
         .padding(.vertical, Espace.s)
         .background(Palette.surface)
+        // P50 B : le pied reste fixé en bas, avec une ombre légère sur ce qui défile dessous.
+        .shadow(color: Palette.encre.opacity(0.08), radius: 8, y: -2)
     }
 
     @ViewBuilder private var piedLiens: some View {

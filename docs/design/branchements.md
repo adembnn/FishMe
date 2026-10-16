@@ -12,3 +12,10 @@ Vues restylées ou créées d'après docs/design/choix.md. Rien n'a été compil
 - PescedexView(voirAquarium:, pecherEnPhoto:) (App/Collection) : sans ces closures, « Voir mon aquarium » et « Le pêcher en photo » sont cachés.
 - AppTests/Prise/PriseVerdictTests.swift : 7 tests du verdict sur fourchette (étape .details ajoutée entre taille et résultat).
 - À vérifier à la compilation (Prise) : PriseFeuille (init @ViewBuilder), UnevenRoundedRectangle, Task { @MainActor } dans AVCaptureDevice.requestAccess.
+
+## Pages restantes (16 oct. 6h)
+- PescedexView(photographier:, declarer:) : sans ces closures, le groupe « Pour commencer » du Pescedex vide (P45) n'apparaît pas.
+- FinSessionView(conseil:) : conseil de la prochaine fois (P47), tiré des conseils de L1 ; sans lui, le bloc est caché.
+- Écran de lancement P44 B (A, Info.plist) : UILaunchScreen avec fond marine #0D4A85 et le logo La Lune centré, rien d'autre (maquette docs/design/maquettes/P44-lancement-B sur claude/design-systeme-4qneio).
+- P46 B (App/Carte/Vues/EtatsVidesCarte.swift) : afficher BandeauPasDeReseauView() dans le haut de VueCarte quand le réseau manque (NWPathMonitor, comme Amis/SurveillanceReseau.swift), et PasDeSpotView(choisirUnSpot:) quand spotAffiche == nil.
+- Après P44 (16 oct. 6h) : iOS n'autorise qu'un écran de lancement statique. Prévoir dans RootView un point d'accroche pour une vue d'ouverture animée qui prend le relais juste après (vue plein écran marine, posée au-dessus du contenu au démarrage puis retirée). L'animation elle-même vient du fil « Animations de chargement et sons », après le choix d'Adem.
