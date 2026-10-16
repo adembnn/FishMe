@@ -607,6 +607,24 @@
    "titre": "Pêche des écrevisses rouges de Louisiane (Fédération de pêche de la Vendée)",
    "url": "https://federation-peche-vendee.fr/peche-des-ecrevisses-rouges-de-lousiane",
    "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h7-garbolino-carassin",
+   "titre": "Pêche du carassin au printemps (Garbolino)",
+   "url": "https://www.garbolino.fr/peche-du-carassin-au-printemps",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h7-wiki-bighead-carp",
+   "titre": "Bighead carp (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Bighead_carp",
+   "lu_le": "2026-10-16"
+  },
+  {
+   "id": "h7-wiki-silver-carp",
+   "titre": "Silver carp (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Silver_carp",
+   "lu_le": "2026-10-16"
   }
  ],
  "conseils": [
@@ -7124,6 +7142,235 @@
    "rang": 1,
    "sources": [
     "h1-fede85-anguille"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "carpe-argentee-appat-1",
+   "espece": "carpe-argentee",
+   "type": "appat",
+   "texte": "Grosse boule de pâte qui se délite lentement, sous un gros flotteur",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "amorce"
+   ],
+   "rang": 1,
+   "sources": [
+    "h7-wiki-silver-carp"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "carpe-argentee-hamecon-1",
+   "espece": "carpe-argentee",
+   "type": "hamecon",
+   "texte": "De très petits hameçons autour de la boule de pâte",
+   "icone": "scope",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h7-wiki-silver-carp"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "carpe-argentee-technique-1",
+   "espece": "carpe-argentee",
+   "type": "technique",
+   "texte": "Elle filtre le plancton : elle prend mal un appât classique",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h7-wiki-silver-carp"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "carpe-grosse-tete-appat-1",
+   "espece": "carpe-grosse-tete",
+   "type": "appat",
+   "texte": "Boule de pâte qui se délite lentement, suspendue sous un gros flotteur",
+   "icone": "fork.knife",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "amorce"
+   ],
+   "rang": 1,
+   "sources": [
+    "h7-wiki-bighead-carp"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "carpe-grosse-tete-technique-1",
+   "espece": "carpe-grosse-tete",
+   "type": "technique",
+   "texte": "Elle filtre l'eau : elle prend mal un appât classique à la canne",
+   "icone": "figure.fishing",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h7-wiki-bighead-carp"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "carpe-grosse-tete-technique-2",
+   "espece": "carpe-grosse-tete",
+   "type": "technique",
+   "texte": "Contrairement à l'argentée, elle ne saute pas hors de l'eau si on l'effraie",
+   "icone": "eye",
+   "mois": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h7-wiki-bighead-carp",
+    "h7-wiki-silver-carp"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "poisson-rouge-appat-1",
+   "espece": "poisson-rouge",
+   "type": "appat",
+   "texte": "Asticots, vers de terreau ou maïs, comme pour le carassin",
+   "icone": "fork.knife",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "debutant",
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [
+    "asticot"
+   ],
+   "rang": 1,
+   "sources": [
+    "h7-garbolino-carassin"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "poisson-rouge-hamecon-1",
+   "espece": "poisson-rouge",
+   "type": "hamecon",
+   "texte": "Petit hameçon léger, comme le carassin qui mord du bout des lèvres",
+   "icone": "scope",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 2,
+   "sources": [
+    "h7-garbolino-carassin"
+   ],
+   "relu_par": "Claude, relecture contre la source, 2026-10-16"
+  },
+  {
+   "id": "poisson-rouge-technique-1",
+   "espece": "poisson-rouge",
+   "type": "technique",
+   "texte": "Ligne fine et flotteur sensible : les touches du carassin sont discrètes",
+   "icone": "figure.fishing",
+   "mois": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "categorie": "toutes",
+   "niveaux": [
+    "occasionnel",
+    "confirme"
+   ],
+   "modes": [],
+   "rang": 3,
+   "sources": [
+    "h7-garbolino-carassin"
    ],
    "relu_par": "Claude, relecture contre la source, 2026-10-16"
   }
