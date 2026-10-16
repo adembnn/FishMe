@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Ce que sait l'app</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+
+body{margin:0}
+.k-h1{font-size:46px;line-height:1.05;margin:0;letter-spacing:-.01em}
+.k-sub{font-size:19px;line-height:1.35;color:var(--encre-douce);max-width:1150px;margin-top:10px}
+.k-pin{position:absolute;width:6.2cqw;height:6.2cqw;margin:-3.1cqw 0 0 -3.1cqw;border-radius:50%;background:#fff;color:#0F1A1C;font-weight:900;font-size:3.7cqw;line-height:6.2cqw;text-align:center;box-shadow:0 0 0 .5cqw #0F1A1C,0 .6cqw 1.4cqw rgba(0,0,0,.4);transform:rotate(12deg);z-index:6}
+.k-pn{position:absolute;width:28px;height:28px;margin:-14px 0 0 -14px;border-radius:50%;background:#0E1A26;color:#fff;font-weight:800;font-size:15px;line-height:28px;text-align:center;box-shadow:0 0 0 3px #fff,0 2px 6px rgba(0,0,0,.3)}
+.k-n{display:inline-block;flex:none;width:22px;height:22px;border-radius:11px;background:#0E1A26;color:#fff;font-size:13px;font-weight:800;line-height:22px;text-align:center}
+.k-fig{position:relative}.k-fig img{display:block;width:100%}
+.k-lg{display:flex;align-items:center;gap:10px;font-size:17px;line-height:1.25;color:var(--encre)}
+.k-reg{display:block;width:100%;margin-top:1.4cqw}
+.k-reg text{font-family:var(--police);font-weight:800;fill:#5B6A6E}
+.k-sg{display:flex;gap:2cqw;margin-top:2.6cqw}
+.k-sg div{flex:1;display:flex;align-items:flex-start;gap:1.4cqw;font-size:2.9cqw;line-height:1.15;color:#0F1A1C;font-weight:800}
+.k-sg i{flex:none;width:4.4cqw;height:4.4cqw;border-radius:50%;background:#0F1A1C;color:#fff;font-style:normal;font-size:2.7cqw;line-height:4.4cqw;text-align:center;font-weight:900}
+.k-mi{width:3.3cqw;height:3.3cqw;vertical-align:-.7cqw;margin-left:1cqw;display:inline-block}
+.fc.k-rg .st{grid-template-columns:1.7fr .8fr 1fr}
+.fc.k-rg .st b{font-size:6.4cqw}
+.fc.k-ra .st{margin-top:2cqw}
+.fc.k-ra .nm{padding-bottom:2.2cqw}
+.fc.k-ra .fo{margin-top:auto}
+.fc.k-sa .st{margin-top:2.4cqw}
+.k-ech{position:absolute;right:5.5cqw;bottom:62cqw;z-index:3;color:var(--fcen);font-size:2.8cqw;font-weight:800}
+.k-ech .l1{display:flex;align-items:flex-end;gap:2.4cqw}
+.k-ech img.s{display:block;width:34cqw;filter:brightness(0) invert(1);opacity:.92}
+.k-ech .ph{width:7.4cqw;height:3.6cqw;border:.5cqw solid currentColor;border-radius:1cqw;box-sizing:border-box;opacity:.95}
+.k-ech .l2{display:flex;justify-content:space-between;margin-top:1cqw;opacity:.9}
+.k-ech .tick{height:1.2cqw;border:.4cqw solid currentColor;border-top:0;box-sizing:border-box;opacity:.8}
+/* versos */
+.fc.verso.k-va .ph{inset:2.6cqw 2.6cqw 46% 2.6cqw}
+.fc.verso.k-va .ph img{object-position:62% 50%}
+.k-fi{position:absolute;left:5.5cqw;right:5.5cqw;top:84cqw;display:grid;grid-template-columns:1fr 1fr 1fr;row-gap:6.5cqw;column-gap:2cqw}
+.k-fi b{display:block;font-size:6.6cqw;font-weight:900;line-height:1;white-space:nowrap}
+.k-fi b small{font-size:3.4cqw;font-weight:700}
+.k-fi span{display:block;font-size:3cqw;font-weight:800;color:#5B6A6E;margin-top:1.3cqw}
+.k-fi svg{width:5.6cqw;height:5.6cqw;vertical-align:-.8cqw;margin-right:1cqw}
+.fc.verso.k-vb{background:#1b2a30}
+.fc.verso.k-vb .ph{inset:0;border-radius:0}
+.fc.verso.k-vb .ph img{object-position:60% 50%}
+.k-vb .k-who{position:absolute;left:4cqw;bottom:30cqw;display:flex;gap:2cqw;align-items:baseline;padding:2cqw 3.4cqw;border-radius:6cqw;background:rgba(250,252,255,.74);-webkit-backdrop-filter:blur(20px) saturate(1.7);backdrop-filter:blur(20px) saturate(1.7);font-size:3.6cqw;font-weight:800;color:#0F1A1C;z-index:3}
+.k-vb .k-who b{font-size:4.6cqw;font-weight:900}
+.k-vb .k-band{position:absolute;left:4cqw;right:4cqw;bottom:4cqw;height:22cqw;border-radius:6cqw;background:rgba(250,252,255,.74);-webkit-backdrop-filter:blur(20px) saturate(1.7);backdrop-filter:blur(20px) saturate(1.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 0 0 .5px rgba(14,26,38,.12);display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:center;padding:0 4cqw;z-index:3}
+.k-vb .k-band div{text-align:center;color:#0F1A1C}
+.k-vb .k-band b{display:block;font-size:8cqw;font-weight:900;line-height:1;white-space:nowrap}
+.k-vb .k-band b small{font-size:3.6cqw;font-weight:700}
+.k-vb .k-band span{display:block;font-size:3cqw;font-weight:800;color:#566576;margin-top:1.4cqw}
+.fc.verso.k-vc .ph{inset:2.6cqw 2.6cqw 64% 2.6cqw}
+.fc.verso.k-vc .ph img{object-position:60% 55%}
+.k-vc .k-fg{position:absolute;left:8cqw;right:8cqw;top:57cqw}
+.k-vc .k-pin{transform:none}
+.k-vc .k-sg{position:absolute;left:5.5cqw;right:5.5cqw;top:90cqw;margin:0}
+.k-vc .k-ok{position:absolute;left:5.5cqw;right:5.5cqw;top:105cqw;display:flex;flex-direction:column;gap:2.4cqw;font-size:3.5cqw;font-weight:800;color:#0F1A1C}
+.k-vc .k-ok div{display:flex;align-items:center;gap:2cqw}
+.k-vc .k-ok svg{width:5cqw;height:5cqw;flex:none}
+.fc.k-t1 .win::after,.fc.k-t3 .win::after{}
+.fc.r.k-t1 .win::after{background:linear-gradient(115deg,transparent 4%,rgba(120,190,255,.85) 20%,rgba(255,205,230,.55) 28%,transparent 40%);mix-blend-mode:normal}
+.fc.r.k-t2 .win::after{background:linear-gradient(115deg,transparent 32%,rgba(120,190,255,.85) 46%,rgba(255,205,230,.55) 53%,transparent 66%);mix-blend-mode:normal}
+.fc.r.k-t3 .win::after{background:linear-gradient(115deg,transparent 58%,rgba(120,190,255,.85) 74%,rgba(255,205,230,.55) 82%,transparent 96%);mix-blend-mode:normal}
+
+</style>
+</helmet>
+<div class="ecran blanc" style="width:1440px;height:900px;padding:64px">
+<header><h1 class="k-h1">Ce que l'app sait d'une prise</h1><div class="k-sub">Cinq choses, et pour chacune : comment l'app le sait, ce que le pêcheur voit. Rien d'autre n'est affiché comme « reconnu ».</div></header><div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:28px;margin-top:56px"><div style="display:flex;flex-direction:column;gap:20px;"><div class="t-titre" style="font-size:30px">Espèce</div><div style="height:150px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start"><div style="display:flex;gap:10px;align-items:center"><div class="tuile-poisson" style="width:78px;height:78px;box-shadow:0 0 0 3px var(--marine)"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="width:64px;display:block"></div><div class="tuile-poisson" style="width:78px;height:78px;"><img src="/_blob/64752134d1301c8ae5245b9230566c2d" alt="" style="width:64px;display:block"></div><div class="tuile-poisson" style="width:78px;height:78px;"><img src="/_blob/0af5e5e6f274e011d4317ff12600a103" alt="" style="width:64px;display:block"></div></div><div class="puce" style="margin-top:12px;align-self:flex-start">Autre</div></div><div style="min-height:215px"><div class="t-legende" style="font-size:14px">Comment l'app le sait</div><div class="t-detail" style="color:var(--encre);font-size:16px;line-height:1.4;margin-top:6px">Un modèle sur ton iPhone, 55 espèces. Sur des photos de prises, la bonne est la 1re proposition 88 fois sur 100, dans les 3 premières 96 fois sur 100.</div></div><div><div class="t-legende" style="font-size:14px">Ce que tu vois</div><div class="t-detail" style="color:var(--encre);font-size:16px;line-height:1.4;margin-top:6px">3 espèces en images, tu touches la bonne. Sous 0,4 de confiance, la grille « Autre » s'ouvre.</div></div></div><div style="display:flex;flex-direction:column;gap:20px;border-left:1px solid var(--filet);padding-left:28px;"><div class="t-titre" style="font-size:30px">Taille</div><div style="height:150px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start"><svg width="210" height="120" viewBox="0 0 210 120" aria-hidden="true"><rect x="0" y="52" width="210" height="46" rx="8" fill="#E7EFF8"/><g stroke="#566576" stroke-width="2" stroke-linecap="round"><path d="M20 52v14M45 52v22M70 52v14M95 52v22M120 52v14M145 52v22M170 52v14M195 52v22"/></g><g font-family="ui-rounded,Nunito,sans-serif" font-weight="800" font-size="13" fill="#0E1A26"><text x="45" y="92" text-anchor="middle">60</text><text x="95" y="92" text-anchor="middle">70</text><text x="145" y="92" text-anchor="middle">80</text></g><g fill="none" stroke="#0D4A85" stroke-width="2.4" stroke-linecap="round"><path d="M42 30v-10h10M118 20h10v10M42 44v8"/><path d="M85 46v6"/></g><rect x="54" y="16" width="62" height="30" rx="15" fill="#0D4A85"/><text x="85" y="37" text-anchor="middle" font-family="ui-rounded,Nunito,sans-serif" font-weight="900" font-size="17" fill="#fff">68 cm</text></svg></div><div style="min-height:215px"><div class="t-legende" style="font-size:14px">Comment l'app le sait</div><div class="t-detail" style="color:var(--encre);font-size:16px;line-height:1.4;margin-top:6px">Une toise sur la photo : Vision lit les chiffres, tu confirmes. Sans toise, une mesure en réalité augmentée ou un curseur. Jamais devinée sur la photo seule.</div></div><div><div class="t-legende" style="font-size:14px">Ce que tu vois</div><div class="t-detail" style="color:var(--encre);font-size:16px;line-height:1.4;margin-top:6px">68 cm à la toise, ou 52 à 56 cm en réalité augmentée. CEN 84e : plus grand que 84 % des prises de l'espèce.</div></div></div><div style="display:flex;flex-direction:column;gap:20px;border-left:1px solid var(--filet);padding-left:28px;"><div class="t-titre" style="font-size:30px">Poids</div><div style="height:150px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start"><div style="font-size:64px;font-weight:900;line-height:1;letter-spacing:-.02em;white-space:nowrap">≈ 2,1<span style="font-size:26px"> kg</span></div><div class="puce on" style="margin-top:12px;align-self:flex-start">estimé</div></div><div style="min-height:215px"><div class="t-legende" style="font-size:14px">Comment l'app le sait</div><div class="t-detail" style="color:var(--encre);font-size:16px;line-height:1.4;margin-top:6px">La formule longueur-poids de l'espèce, appliquée à ta taille.</div></div><div><div class="t-legende" style="font-size:14px">Ce que tu vois</div><div class="t-detail" style="color:var(--encre);font-size:16px;line-height:1.4;margin-top:6px">≈ 2,1 kg, ou ≈ 1,6 à 2,0 kg en fourchette. Toujours « estimé », jamais une pesée.</div></div></div><div style="display:flex;flex-direction:column;gap:20px;border-left:1px solid var(--filet);padding-left:28px;"><div class="t-titre" style="font-size:30px">Rareté</div><div style="height:150px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 14px"><span class="rar c" style="font-size:17px"><svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor" style="width:18px;height:18px"><circle cx="8" cy="8" r="6"/></svg><span>Commun</span></span><span class="rar pc" style="font-size:17px"><svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor" style="width:18px;height:18px"><path d="M8 1.5 13.6 4.75v6.5L8 14.5 2.4 11.25v-6.5Z"/></svg><span>Peu commun</span></span><span class="rar r" style="font-size:17px"><svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor" style="width:18px;height:18px"><path d="M8 1 15 8 8 15 1 8Z"/></svg><span>Rare</span></span><span class="rar l" style="font-size:17px"><svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor" style="width:18px;height:18px"><path d="m8 1 2.1 4.4 4.9.6-3.6 3.4.9 4.8L8 11.9l-4.3 2.3.9-4.8L1 6l4.9-.6Z"/></svg><span>Légendaire</span></span></div><div style="font-size:34px;font-weight:900;margin-top:14px;line-height:1">10<span style="font-size:17px"> pêches sur 29</span></div></div><div style="min-height:215px"><div class="t-legende" style="font-size:14px">Comment l'app le sait</div><div class="t-detail" style="color:var(--encre);font-size:16px;line-height:1.4;margin-top:6px">Les relevés OFB du département : la part des pêches où l'espèce apparaît, 4 paliers.</div></div><div><div class="t-legende" style="font-size:14px">Ce que tu vois</div><div class="t-detail" style="color:var(--encre);font-size:16px;line-height:1.4;margin-top:6px">Une forme et un mot, et « 10 pêches sur 29 dans le 94 · OFB ».</div></div></div><div style="display:flex;flex-direction:column;gap:20px;border-left:1px solid var(--filet);padding-left:28px;"><div class="t-titre" style="font-size:30px">Règle</div><div style="height:150px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start"><div class="verdict ok" style="font-size:17px;flex-wrap:wrap;gap:4px 10px"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-1.3 14.2-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4Z"/></svg><span>Taille légale</span><span class="src" style="flex-basis:100%;margin-left:32px">68 / 60 cm mini</span></div></div><div style="min-height:215px"><div class="t-legende" style="font-size:14px">Comment l'app le sait</div><div class="t-detail" style="color:var(--encre);font-size:16px;line-height:1.4;margin-top:6px">Une table sourcée : la plus stricte des deux textes, ici 60 cm dans le 94. L'IA ne décide jamais.</div></div><div><div class="t-legende" style="font-size:14px">Ce que tu vois</div><div class="t-detail" style="color:var(--encre);font-size:16px;line-height:1.4;margin-top:6px">Un verdict, et la source d'un toucher.</div></div></div></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

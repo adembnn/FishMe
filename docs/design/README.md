@@ -7,7 +7,7 @@ Le 16 oct. (2h), Adem a trouvé que l'app compilée s'en éloigne : ce dossier r
 - `cartographie.md` : les 42 pages, ce que chacune montre, et la vue SwiftUI qui la porte.
 - `kit.md` : règles de dessin, images, icônes, les 3 directions, interdits et données d'exemple.
 - `fishme-ds.css` : les composants en CSS (miroir des jetons de `App/Style/Style.swift`).
-- `maquettes/` : la source de chaque maquette (`P06-carte-A.dc.html`…) et son aperçu PNG.
+- `maquettes/` : la source de chaque maquette (`P06-carte-A.dc.html`…, planche des cartes `C01` à `C07`) et son aperçu JPG ; `canvas.json` place tout sur la toile.
 - `choix.md` : la direction choisie par Adem pour chaque page (à remplir).
 
 ## Jetons (identiques à `App/Style/Style.swift`)

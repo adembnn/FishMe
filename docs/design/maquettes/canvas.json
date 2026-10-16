@@ -1,0 +1,1703 @@
+{
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-16T02:33:37Z"
+ },
+ "title": "FishMe · design système et maquettes",
+ "launch": {
+  "view": "canvas",
+  "page": "tout"
+ },
+ "pages": [
+  {
+   "id": "tout",
+   "name": "Toutes les pages"
+  }
+ ],
+ "boards": {
+  "Main.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 2300,
+   "title": "Design système",
+   "page": "tout"
+  },
+  "P01-niveau-A.dc.html": {
+   "x": 1700,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P01 · A · Plans",
+   "page": "tout"
+  },
+  "P01-niveau-B.dc.html": {
+   "x": 2170,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P01 · B · Réglages",
+   "page": "tout"
+  },
+  "P01-niveau-C.dc.html": {
+   "x": 2640,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P01 · C · Sujet",
+   "page": "tout"
+  },
+  "P02-poissons-A.dc.html": {
+   "x": 1700,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P02 · A · Plans",
+   "page": "tout"
+  },
+  "P02-poissons-B.dc.html": {
+   "x": 2170,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P02 · B · Réglages",
+   "page": "tout"
+  },
+  "P02-poissons-C.dc.html": {
+   "x": 2640,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P02 · C · Sujet",
+   "page": "tout"
+  },
+  "P03-position-A.dc.html": {
+   "x": 1700,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P03 · A · Plans",
+   "page": "tout"
+  },
+  "P03-position-B.dc.html": {
+   "x": 2170,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P03 · B · Réglages",
+   "page": "tout"
+  },
+  "P03-position-C.dc.html": {
+   "x": 2640,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P03 · C · Sujet",
+   "page": "tout"
+  },
+  "P04-zone-A.dc.html": {
+   "x": 1700,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P04 · A · Plans",
+   "page": "tout"
+  },
+  "P04-zone-B.dc.html": {
+   "x": 2170,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P04 · B · Réglages",
+   "page": "tout"
+  },
+  "P04-zone-C.dc.html": {
+   "x": 2640,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P04 · C · Sujet",
+   "page": "tout"
+  },
+  "P05-mesure-A.dc.html": {
+   "x": 1700,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P05 · A · Plans",
+   "page": "tout"
+  },
+  "P05-mesure-B.dc.html": {
+   "x": 2170,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P05 · B · Réglages",
+   "page": "tout"
+  },
+  "P05-mesure-C.dc.html": {
+   "x": 2640,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P05 · C · Sujet",
+   "page": "tout"
+  },
+  "P06-carte-A.dc.html": {
+   "x": 3300,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P06 · A · Plans",
+   "page": "tout"
+  },
+  "P06-carte-B.dc.html": {
+   "x": 3770,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P06 · B · Réglages",
+   "page": "tout"
+  },
+  "P06-carte-C.dc.html": {
+   "x": 4240,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P06 · C · Sujet",
+   "page": "tout"
+  },
+  "P07-fiche-A.dc.html": {
+   "x": 3300,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P07 · A · Plans",
+   "page": "tout"
+  },
+  "P07-fiche-B.dc.html": {
+   "x": 3770,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P07 · B · Réglages",
+   "page": "tout"
+  },
+  "P07-fiche-C.dc.html": {
+   "x": 4240,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P07 · C · Sujet",
+   "page": "tout"
+  },
+  "P08-regle-A.dc.html": {
+   "x": 3300,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P08 · A · Plans",
+   "page": "tout"
+  },
+  "P08-regle-B.dc.html": {
+   "x": 3770,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P08 · B · Réglages",
+   "page": "tout"
+  },
+  "P08-regle-C.dc.html": {
+   "x": 4240,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P08 · C · Sujet",
+   "page": "tout"
+  },
+  "P09-filtre-A.dc.html": {
+   "x": 3300,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P09 · A · Plans",
+   "page": "tout"
+  },
+  "P09-filtre-B.dc.html": {
+   "x": 3770,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P09 · B · Réglages",
+   "page": "tout"
+  },
+  "P09-filtre-C.dc.html": {
+   "x": 4240,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P09 · C · Sujet",
+   "page": "tout"
+  },
+  "P10-autre-spot-A.dc.html": {
+   "x": 3300,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P10 · A · Plans",
+   "page": "tout"
+  },
+  "P10-autre-spot-B.dc.html": {
+   "x": 3770,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P10 · B · Réglages",
+   "page": "tout"
+  },
+  "P10-autre-spot-C.dc.html": {
+   "x": 4240,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P10 · C · Sujet",
+   "page": "tout"
+  },
+  "P11-conditions-A.dc.html": {
+   "x": 4900,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P11 · A · Plans",
+   "page": "tout"
+  },
+  "P11-conditions-B.dc.html": {
+   "x": 5370,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P11 · B · Réglages",
+   "page": "tout"
+  },
+  "P11-conditions-C.dc.html": {
+   "x": 5840,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P11 · C · Sujet",
+   "page": "tout"
+  },
+  "P12-septjours-A.dc.html": {
+   "x": 4900,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P12 · A · Plans",
+   "page": "tout"
+  },
+  "P12-septjours-B.dc.html": {
+   "x": 5370,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P12 · B · Réglages",
+   "page": "tout"
+  },
+  "P12-septjours-C.dc.html": {
+   "x": 5840,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P12 · C · Sujet",
+   "page": "tout"
+  },
+  "P13-alerte-A.dc.html": {
+   "x": 4900,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P13 · A · Plans",
+   "page": "tout"
+  },
+  "P13-alerte-B.dc.html": {
+   "x": 5370,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P13 · B · Réglages",
+   "page": "tout"
+  },
+  "P13-alerte-C.dc.html": {
+   "x": 5840,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P13 · C · Sujet",
+   "page": "tout"
+  },
+  "P14-session-A.dc.html": {
+   "x": 6500,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P14 · A · Plans",
+   "page": "tout"
+  },
+  "P14-session-B.dc.html": {
+   "x": 6970,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P14 · B · Réglages",
+   "page": "tout"
+  },
+  "P14-session-C.dc.html": {
+   "x": 7440,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P14 · C · Sujet",
+   "page": "tout"
+  },
+  "P15-verrouille-A.dc.html": {
+   "x": 6500,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P15 · A · Plans",
+   "page": "tout"
+  },
+  "P15-verrouille-B.dc.html": {
+   "x": 6970,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P15 · B · Réglages",
+   "page": "tout"
+  },
+  "P15-verrouille-C.dc.html": {
+   "x": 7440,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P15 · C · Sujet",
+   "page": "tout"
+  },
+  "P16-fin-A.dc.html": {
+   "x": 6500,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P16 · A · Plans",
+   "page": "tout"
+  },
+  "P16-fin-B.dc.html": {
+   "x": 6970,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P16 · B · Réglages",
+   "page": "tout"
+  },
+  "P16-fin-C.dc.html": {
+   "x": 7440,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P16 · C · Sujet",
+   "page": "tout"
+  },
+  "P17-sorties-A.dc.html": {
+   "x": 6500,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P17 · A · Plans",
+   "page": "tout"
+  },
+  "P17-sorties-B.dc.html": {
+   "x": 6970,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P17 · B · Réglages",
+   "page": "tout"
+  },
+  "P17-sorties-C.dc.html": {
+   "x": 7440,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P17 · C · Sujet",
+   "page": "tout"
+  },
+  "P18-photo-A.dc.html": {
+   "x": 8100,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P18 · A · Plans",
+   "page": "tout"
+  },
+  "P18-photo-B.dc.html": {
+   "x": 8570,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P18 · B · Réglages",
+   "page": "tout"
+  },
+  "P18-photo-C.dc.html": {
+   "x": 9040,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P18 · C · Sujet",
+   "page": "tout"
+  },
+  "P19-espece-A.dc.html": {
+   "x": 8100,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P19 · A · Plans",
+   "page": "tout"
+  },
+  "P19-espece-B.dc.html": {
+   "x": 8570,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P19 · B · Réglages",
+   "page": "tout"
+  },
+  "P19-espece-C.dc.html": {
+   "x": 9040,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P19 · C · Sujet",
+   "page": "tout"
+  },
+  "P20-autre-A.dc.html": {
+   "x": 8100,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P20 · A · Plans",
+   "page": "tout"
+  },
+  "P20-autre-B.dc.html": {
+   "x": 8570,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P20 · B · Réglages",
+   "page": "tout"
+  },
+  "P20-autre-C.dc.html": {
+   "x": 9040,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P20 · C · Sujet",
+   "page": "tout"
+  },
+  "P21-taille-A.dc.html": {
+   "x": 8100,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P21 · A · Plans",
+   "page": "tout"
+  },
+  "P21-taille-B.dc.html": {
+   "x": 8570,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P21 · B · Réglages",
+   "page": "tout"
+  },
+  "P21-taille-C.dc.html": {
+   "x": 9040,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P21 · C · Sujet",
+   "page": "tout"
+  },
+  "P22-details-A.dc.html": {
+   "x": 8100,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P22 · A · Plans",
+   "page": "tout"
+  },
+  "P22-details-B.dc.html": {
+   "x": 8570,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P22 · B · Réglages",
+   "page": "tout"
+  },
+  "P22-details-C.dc.html": {
+   "x": 9040,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P22 · C · Sujet",
+   "page": "tout"
+  },
+  "P23-verdict-A.dc.html": {
+   "x": 8100,
+   "y": 6250,
+   "w": 390,
+   "h": 844,
+   "title": "P23 · A · Plans",
+   "page": "tout"
+  },
+  "P23-verdict-B.dc.html": {
+   "x": 8570,
+   "y": 6250,
+   "w": 390,
+   "h": 844,
+   "title": "P23 · B · Réglages",
+   "page": "tout"
+  },
+  "P23-verdict-C.dc.html": {
+   "x": 9040,
+   "y": 6250,
+   "w": 390,
+   "h": 844,
+   "title": "P23 · C · Sujet",
+   "page": "tout"
+  },
+  "P24-recto-A.dc.html": {
+   "x": 9700,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P24 · A · Plans",
+   "page": "tout"
+  },
+  "P24-recto-B.dc.html": {
+   "x": 10170,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P24 · B · Réglages",
+   "page": "tout"
+  },
+  "P24-recto-C.dc.html": {
+   "x": 10640,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P24 · C · Sujet",
+   "page": "tout"
+  },
+  "P25-verso-A.dc.html": {
+   "x": 9700,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P25 · A · Plans",
+   "page": "tout"
+  },
+  "P25-verso-B.dc.html": {
+   "x": 10170,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P25 · B · Réglages",
+   "page": "tout"
+  },
+  "P25-verso-C.dc.html": {
+   "x": 10640,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P25 · C · Sujet",
+   "page": "tout"
+  },
+  "P26-pescedex-A.dc.html": {
+   "x": 9700,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P26 · A · Plans",
+   "page": "tout"
+  },
+  "P26-pescedex-B.dc.html": {
+   "x": 10170,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P26 · B · Réglages",
+   "page": "tout"
+  },
+  "P26-pescedex-C.dc.html": {
+   "x": 10640,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P26 · C · Sujet",
+   "page": "tout"
+  },
+  "P27-espece-A.dc.html": {
+   "x": 9700,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P27 · A · Plans",
+   "page": "tout"
+  },
+  "P27-espece-B.dc.html": {
+   "x": 10170,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P27 · B · Réglages",
+   "page": "tout"
+  },
+  "P27-espece-C.dc.html": {
+   "x": 10640,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P27 · C · Sujet",
+   "page": "tout"
+  },
+  "P28-declaree-A.dc.html": {
+   "x": 9700,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P28 · A · Plans",
+   "page": "tout"
+  },
+  "P28-declaree-B.dc.html": {
+   "x": 10170,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P28 · B · Réglages",
+   "page": "tout"
+  },
+  "P28-declaree-C.dc.html": {
+   "x": 10640,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P28 · C · Sujet",
+   "page": "tout"
+  },
+  "P29-club-A.dc.html": {
+   "x": 11300,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P29 · A · Plans",
+   "page": "tout"
+  },
+  "P29-club-B.dc.html": {
+   "x": 11770,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P29 · B · Réglages",
+   "page": "tout"
+  },
+  "P29-club-C.dc.html": {
+   "x": 12240,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P29 · C · Sujet",
+   "page": "tout"
+  },
+  "P30-creer-A.dc.html": {
+   "x": 11300,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P30 · A · Plans",
+   "page": "tout"
+  },
+  "P30-creer-B.dc.html": {
+   "x": 11770,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P30 · B · Réglages",
+   "page": "tout"
+  },
+  "P30-creer-C.dc.html": {
+   "x": 12240,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P30 · C · Sujet",
+   "page": "tout"
+  },
+  "P31-inviter-A.dc.html": {
+   "x": 11300,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P31 · A · Plans",
+   "page": "tout"
+  },
+  "P31-inviter-B.dc.html": {
+   "x": 11770,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P31 · B · Réglages",
+   "page": "tout"
+  },
+  "P31-inviter-C.dc.html": {
+   "x": 12240,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P31 · C · Sujet",
+   "page": "tout"
+  },
+  "P32-ami-A.dc.html": {
+   "x": 11300,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P32 · A · Plans",
+   "page": "tout"
+  },
+  "P32-ami-B.dc.html": {
+   "x": 11770,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P32 · B · Réglages",
+   "page": "tout"
+  },
+  "P32-ami-C.dc.html": {
+   "x": 12240,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P32 · C · Sujet",
+   "page": "tout"
+  },
+  "P33-partage-A.dc.html": {
+   "x": 11300,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P33 · A · Plans",
+   "page": "tout"
+  },
+  "P33-partage-B.dc.html": {
+   "x": 11770,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P33 · B · Réglages",
+   "page": "tout"
+  },
+  "P33-partage-C.dc.html": {
+   "x": 12240,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P33 · C · Sujet",
+   "page": "tout"
+  },
+  "P34-paywall-A.dc.html": {
+   "x": 12900,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P34 · A · Plans",
+   "page": "tout"
+  },
+  "P34-paywall-B.dc.html": {
+   "x": 13370,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P34 · B · Réglages",
+   "page": "tout"
+  },
+  "P34-paywall-C.dc.html": {
+   "x": 13840,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P34 · C · Sujet",
+   "page": "tout"
+  },
+  "P35-reglages-A.dc.html": {
+   "x": 12900,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P35 · A · Plans",
+   "page": "tout"
+  },
+  "P35-reglages-B.dc.html": {
+   "x": 13370,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P35 · B · Réglages",
+   "page": "tout"
+  },
+  "P35-reglages-C.dc.html": {
+   "x": 13840,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P35 · C · Sujet",
+   "page": "tout"
+  },
+  "P36-icone-A.dc.html": {
+   "x": 14500,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P36 · A · Plans",
+   "page": "tout"
+  },
+  "P36-icone-B.dc.html": {
+   "x": 14970,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P36 · B · Réglages",
+   "page": "tout"
+  },
+  "P36-icone-C.dc.html": {
+   "x": 15440,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "P36 · C · Sujet",
+   "page": "tout"
+  },
+  "P37-permposition-A.dc.html": {
+   "x": 14500,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P37 · A · Plans",
+   "page": "tout"
+  },
+  "P37-permposition-B.dc.html": {
+   "x": 14970,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P37 · B · Réglages",
+   "page": "tout"
+  },
+  "P37-permposition-C.dc.html": {
+   "x": 15440,
+   "y": 1250,
+   "w": 390,
+   "h": 844,
+   "title": "P37 · C · Sujet",
+   "page": "tout"
+  },
+  "P38-permphoto-A.dc.html": {
+   "x": 14500,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P38 · A · Plans",
+   "page": "tout"
+  },
+  "P38-permphoto-B.dc.html": {
+   "x": 14970,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P38 · B · Réglages",
+   "page": "tout"
+  },
+  "P38-permphoto-C.dc.html": {
+   "x": 15440,
+   "y": 2500,
+   "w": 390,
+   "h": 844,
+   "title": "P38 · C · Sujet",
+   "page": "tout"
+  },
+  "P39-notifs-A.dc.html": {
+   "x": 14500,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P39 · A · Plans",
+   "page": "tout"
+  },
+  "P39-notifs-B.dc.html": {
+   "x": 14970,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P39 · B · Réglages",
+   "page": "tout"
+  },
+  "P39-notifs-C.dc.html": {
+   "x": 15440,
+   "y": 3750,
+   "w": 390,
+   "h": 844,
+   "title": "P39 · C · Sujet",
+   "page": "tout"
+  },
+  "P40-widgets-A.dc.html": {
+   "x": 14500,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P40 · A · Plans",
+   "page": "tout"
+  },
+  "P40-widgets-B.dc.html": {
+   "x": 14970,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P40 · B · Réglages",
+   "page": "tout"
+  },
+  "P40-widgets-C.dc.html": {
+   "x": 15440,
+   "y": 5000,
+   "w": 390,
+   "h": 844,
+   "title": "P40 · C · Sujet",
+   "page": "tout"
+  },
+  "P41-widgetsverrou-A.dc.html": {
+   "x": 14500,
+   "y": 6250,
+   "w": 390,
+   "h": 844,
+   "title": "P41 · A · Plans",
+   "page": "tout"
+  },
+  "P41-widgetsverrou-B.dc.html": {
+   "x": 14970,
+   "y": 6250,
+   "w": 390,
+   "h": 844,
+   "title": "P41 · B · Réglages",
+   "page": "tout"
+  },
+  "P41-widgetsverrou-C.dc.html": {
+   "x": 15440,
+   "y": 6250,
+   "w": 390,
+   "h": 844,
+   "title": "P41 · C · Sujet",
+   "page": "tout"
+  },
+  "P42-sansposition-A.dc.html": {
+   "x": 14500,
+   "y": 7500,
+   "w": 390,
+   "h": 844,
+   "title": "P42 · A · Plans",
+   "page": "tout"
+  },
+  "P42-sansposition-B.dc.html": {
+   "x": 14970,
+   "y": 7500,
+   "w": 390,
+   "h": 844,
+   "title": "P42 · B · Réglages",
+   "page": "tout"
+  },
+  "P42-sansposition-C.dc.html": {
+   "x": 15440,
+   "y": 7500,
+   "w": 390,
+   "h": 844,
+   "title": "P42 · C · Sujet",
+   "page": "tout"
+  },
+  "C01-ce-que-sait-l-app.dc.html": {
+   "x": 0,
+   "y": 3100,
+   "w": 1440,
+   "h": 900,
+   "title": "C01 · ce que sait l app",
+   "page": "tout"
+  },
+  "C02-anatomie-recto.dc.html": {
+   "x": 0,
+   "y": 4120,
+   "w": 1440,
+   "h": 1150,
+   "title": "C02 · anatomie recto",
+   "page": "tout"
+  },
+  "C03-recto-trois-directions.dc.html": {
+   "x": 0,
+   "y": 5390,
+   "w": 1440,
+   "h": 1250,
+   "title": "C03 · recto trois directions",
+   "page": "tout"
+  },
+  "C04-quatre-paliers.dc.html": {
+   "x": 0,
+   "y": 6760,
+   "w": 1440,
+   "h": 1150,
+   "title": "C04 · quatre paliers",
+   "page": "tout"
+  },
+  "C05-verso-trois-directions.dc.html": {
+   "x": 0,
+   "y": 8030,
+   "w": 1440,
+   "h": 1250,
+   "title": "C05 · verso trois directions",
+   "page": "tout"
+  },
+  "C06-signes-par-espece.dc.html": {
+   "x": 0,
+   "y": 9400,
+   "w": 1440,
+   "h": 1300,
+   "title": "C06 · signes par espece",
+   "page": "tout"
+  },
+  "C07-nage-A.dc.html": {
+   "x": 0,
+   "y": 11070,
+   "w": 390,
+   "h": 844,
+   "title": "C07 · Ondulation",
+   "page": "tout"
+  },
+  "C07-nage-B.dc.html": {
+   "x": 470,
+   "y": 11070,
+   "w": 390,
+   "h": 844,
+   "title": "C07 · Aller-retour",
+   "page": "tout"
+  },
+  "C07-nage-C.dc.html": {
+   "x": 940,
+   "y": 11070,
+   "w": 390,
+   "h": 844,
+   "title": "C07 · Rare",
+   "page": "tout"
+  }
+ },
+ "order": [
+  "Main.dc.html",
+  "P01-niveau-A.dc.html",
+  "P01-niveau-B.dc.html",
+  "P01-niveau-C.dc.html",
+  "P02-poissons-A.dc.html",
+  "P02-poissons-B.dc.html",
+  "P02-poissons-C.dc.html",
+  "P03-position-A.dc.html",
+  "P03-position-B.dc.html",
+  "P03-position-C.dc.html",
+  "P04-zone-A.dc.html",
+  "P04-zone-B.dc.html",
+  "P04-zone-C.dc.html",
+  "P05-mesure-A.dc.html",
+  "P05-mesure-B.dc.html",
+  "P05-mesure-C.dc.html",
+  "P06-carte-A.dc.html",
+  "P06-carte-B.dc.html",
+  "P06-carte-C.dc.html",
+  "P07-fiche-A.dc.html",
+  "P07-fiche-B.dc.html",
+  "P07-fiche-C.dc.html",
+  "P08-regle-A.dc.html",
+  "P08-regle-B.dc.html",
+  "P08-regle-C.dc.html",
+  "P09-filtre-A.dc.html",
+  "P09-filtre-B.dc.html",
+  "P09-filtre-C.dc.html",
+  "P10-autre-spot-A.dc.html",
+  "P10-autre-spot-B.dc.html",
+  "P10-autre-spot-C.dc.html",
+  "P11-conditions-A.dc.html",
+  "P11-conditions-B.dc.html",
+  "P11-conditions-C.dc.html",
+  "P12-septjours-A.dc.html",
+  "P12-septjours-B.dc.html",
+  "P12-septjours-C.dc.html",
+  "P13-alerte-A.dc.html",
+  "P13-alerte-B.dc.html",
+  "P13-alerte-C.dc.html",
+  "P14-session-A.dc.html",
+  "P14-session-B.dc.html",
+  "P14-session-C.dc.html",
+  "P15-verrouille-A.dc.html",
+  "P15-verrouille-B.dc.html",
+  "P15-verrouille-C.dc.html",
+  "P16-fin-A.dc.html",
+  "P16-fin-B.dc.html",
+  "P16-fin-C.dc.html",
+  "P17-sorties-A.dc.html",
+  "P17-sorties-B.dc.html",
+  "P17-sorties-C.dc.html",
+  "P18-photo-A.dc.html",
+  "P18-photo-B.dc.html",
+  "P18-photo-C.dc.html",
+  "P19-espece-A.dc.html",
+  "P19-espece-B.dc.html",
+  "P19-espece-C.dc.html",
+  "P20-autre-A.dc.html",
+  "P20-autre-B.dc.html",
+  "P20-autre-C.dc.html",
+  "P21-taille-A.dc.html",
+  "P21-taille-B.dc.html",
+  "P21-taille-C.dc.html",
+  "P22-details-A.dc.html",
+  "P22-details-B.dc.html",
+  "P22-details-C.dc.html",
+  "P23-verdict-A.dc.html",
+  "P23-verdict-B.dc.html",
+  "P23-verdict-C.dc.html",
+  "P24-recto-A.dc.html",
+  "P24-recto-B.dc.html",
+  "P24-recto-C.dc.html",
+  "P25-verso-A.dc.html",
+  "P25-verso-B.dc.html",
+  "P25-verso-C.dc.html",
+  "P26-pescedex-A.dc.html",
+  "P26-pescedex-B.dc.html",
+  "P26-pescedex-C.dc.html",
+  "P27-espece-A.dc.html",
+  "P27-espece-B.dc.html",
+  "P27-espece-C.dc.html",
+  "P28-declaree-A.dc.html",
+  "P28-declaree-B.dc.html",
+  "P28-declaree-C.dc.html",
+  "P29-club-A.dc.html",
+  "P29-club-B.dc.html",
+  "P29-club-C.dc.html",
+  "P30-creer-A.dc.html",
+  "P30-creer-B.dc.html",
+  "P30-creer-C.dc.html",
+  "P31-inviter-A.dc.html",
+  "P31-inviter-B.dc.html",
+  "P31-inviter-C.dc.html",
+  "P32-ami-A.dc.html",
+  "P32-ami-B.dc.html",
+  "P32-ami-C.dc.html",
+  "P33-partage-A.dc.html",
+  "P33-partage-B.dc.html",
+  "P33-partage-C.dc.html",
+  "P34-paywall-A.dc.html",
+  "P34-paywall-B.dc.html",
+  "P34-paywall-C.dc.html",
+  "P35-reglages-A.dc.html",
+  "P35-reglages-B.dc.html",
+  "P35-reglages-C.dc.html",
+  "P36-icone-A.dc.html",
+  "P36-icone-B.dc.html",
+  "P36-icone-C.dc.html",
+  "P37-permposition-A.dc.html",
+  "P37-permposition-B.dc.html",
+  "P37-permposition-C.dc.html",
+  "P38-permphoto-A.dc.html",
+  "P38-permphoto-B.dc.html",
+  "P38-permphoto-C.dc.html",
+  "P39-notifs-A.dc.html",
+  "P39-notifs-B.dc.html",
+  "P39-notifs-C.dc.html",
+  "P40-widgets-A.dc.html",
+  "P40-widgets-B.dc.html",
+  "P40-widgets-C.dc.html",
+  "P41-widgetsverrou-A.dc.html",
+  "P41-widgetsverrou-B.dc.html",
+  "P41-widgetsverrou-C.dc.html",
+  "P42-sansposition-A.dc.html",
+  "P42-sansposition-B.dc.html",
+  "P42-sansposition-C.dc.html",
+  "C01-ce-que-sait-l-app.dc.html",
+  "C02-anatomie-recto.dc.html",
+  "C03-recto-trois-directions.dc.html",
+  "C04-quatre-paliers.dc.html",
+  "C05-verso-trois-directions.dc.html",
+  "C06-signes-par-espece.dc.html",
+  "C07-nage-A.dc.html",
+  "C07-nage-B.dc.html",
+  "C07-nage-C.dc.html"
+ ],
+ "notes": {
+  "tds": {
+   "x": 0,
+   "y": -700,
+   "text": "Design système",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tg1": {
+   "x": 1700,
+   "y": -700,
+   "text": "1 · Premier lancement",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tP01": {
+   "x": 1700,
+   "y": -250,
+   "text": "P01 · Bienvenue et niveau",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP02": {
+   "x": 1700,
+   "y": 1000,
+   "text": "P02 · Tes poissons",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP03": {
+   "x": 1700,
+   "y": 2250,
+   "text": "P03 · Où pêches-tu ?",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP04": {
+   "x": 1700,
+   "y": 3500,
+   "text": "P04 · Choisir sa zone sans GPS",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP05": {
+   "x": 1700,
+   "y": 4750,
+   "text": "P05 · Mesure d'audience",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tg2": {
+   "x": 3300,
+   "y": -700,
+   "text": "2 · Carte",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tP06": {
+   "x": 3300,
+   "y": -250,
+   "text": "P06 · Carte et ton spot",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP07": {
+   "x": 3300,
+   "y": 1000,
+   "text": "P07 · Fiche du spot",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP08": {
+   "x": 3300,
+   "y": 2250,
+   "text": "P08 · Une règle et sa source",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP09": {
+   "x": 3300,
+   "y": 3500,
+   "text": "P09 · Filtrer par espèce",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP10": {
+   "x": 3300,
+   "y": 4750,
+   "text": "P10 · Choisir un autre spot",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tg3": {
+   "x": 4900,
+   "y": -700,
+   "text": "3 · Conditions",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tP11": {
+   "x": 4900,
+   "y": -250,
+   "text": "P11 · Conditions du jour",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP12": {
+   "x": 4900,
+   "y": 1000,
+   "text": "P12 · 7 jours et rivière",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP13": {
+   "x": 4900,
+   "y": 2250,
+   "text": "P13 · Alerte orage ou crue",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tg4": {
+   "x": 6500,
+   "y": -700,
+   "text": "4 · Session",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tP14": {
+   "x": 6500,
+   "y": -250,
+   "text": "P14 · Session en cours",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP15": {
+   "x": 6500,
+   "y": 1000,
+   "text": "P15 · Écran verrouillé",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP16": {
+   "x": 6500,
+   "y": 2250,
+   "text": "P16 · Fin de session",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP17": {
+   "x": 6500,
+   "y": 3500,
+   "text": "P17 · Mes sorties",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tg5": {
+   "x": 8100,
+   "y": -700,
+   "text": "5 · Prise",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tP18": {
+   "x": 8100,
+   "y": -250,
+   "text": "P18 · Appareil photo",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP19": {
+   "x": 8100,
+   "y": 1000,
+   "text": "P19 · Quelle espèce ?",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP20": {
+   "x": 8100,
+   "y": 2250,
+   "text": "P20 · Autre espèce",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP21": {
+   "x": 8100,
+   "y": 3500,
+   "text": "P21 · Taille et poids",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP22": {
+   "x": 8100,
+   "y": 4750,
+   "text": "P22 · Détails de la prise",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP23": {
+   "x": 8100,
+   "y": 6000,
+   "text": "P23 · Verdict et révélation",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tg6": {
+   "x": 9700,
+   "y": -700,
+   "text": "6 · Cartes et Pescedex",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tP24": {
+   "x": 9700,
+   "y": -250,
+   "text": "P24 · La carte, recto",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP25": {
+   "x": 9700,
+   "y": 1000,
+   "text": "P25 · La carte, verso",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP26": {
+   "x": 9700,
+   "y": 2250,
+   "text": "P26 · Pescedex",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP27": {
+   "x": 9700,
+   "y": 3500,
+   "text": "P27 · Fiche espèce et conseils",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP28": {
+   "x": 9700,
+   "y": 4750,
+   "text": "P28 · Carte déclarée et carte à essayer",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tg7": {
+   "x": 11300,
+   "y": -700,
+   "text": "7 · Club",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tP29": {
+   "x": 11300,
+   "y": -250,
+   "text": "P29 · Mon club",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP30": {
+   "x": 11300,
+   "y": 1000,
+   "text": "P30 · Créer son club",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP31": {
+   "x": 11300,
+   "y": 2250,
+   "text": "P31 · Inviter des amis",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP32": {
+   "x": 11300,
+   "y": 3500,
+   "text": "P32 · Pescedex d'un ami",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP33": {
+   "x": 11300,
+   "y": 4750,
+   "text": "P33 · Partager une carte",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tg8": {
+   "x": 12900,
+   "y": -700,
+   "text": "8 · Pro et réglages",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tP34": {
+   "x": 12900,
+   "y": -250,
+   "text": "P34 · Paywall",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP35": {
+   "x": 12900,
+   "y": 1000,
+   "text": "P35 · Réglages, sources et sécurité",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tg9": {
+   "x": 14500,
+   "y": -700,
+   "text": "9 · Autorisations et widgets",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tP36": {
+   "x": 14500,
+   "y": -250,
+   "text": "P36 · Icône et nom",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP37": {
+   "x": 14500,
+   "y": 1000,
+   "text": "P37 · Fenêtre de position",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP38": {
+   "x": 14500,
+   "y": 2250,
+   "text": "P38 · Accès à l'appareil photo",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP39": {
+   "x": 14500,
+   "y": 3500,
+   "text": "P39 · Notifications",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP40": {
+   "x": 14500,
+   "y": 4750,
+   "text": "P40 · Widgets de l'écran d'accueil",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP41": {
+   "x": 14500,
+   "y": 6000,
+   "text": "P41 · Widgets de l'écran verrouillé",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tP42": {
+   "x": 14500,
+   "y": 7250,
+   "text": "P42 · Sans position",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  },
+  "tcartes": {
+   "x": 0,
+   "y": 2400,
+   "text": "Cartes recto et verso",
+   "kind": "title1",
+   "size": "xxl",
+   "color": "blue",
+   "maxW": 1400,
+   "page": "tout"
+  },
+  "tnage": {
+   "x": 0,
+   "y": 10820,
+   "text": "C07 · Le poisson nage dans sa carte",
+   "kind": "title1",
+   "maxW": 1350,
+   "page": "tout"
+  }
+ },
+ "designSystems": []
+}

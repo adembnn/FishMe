@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Fiche du spot · A Plans</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.pt-p{width:10px;height:10px;border-radius:5px;display:inline-block;flex:none}
+.pt-p.o{background:var(--ouvert)}
+.pt-p.f{background:var(--alerte)}
+.pt-f{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;flex:1;background:none}
+.pt-f .tuile-poisson{width:100%}
+.pt-f b{font-size:22px;line-height:1;display:flex;align-items:center;gap:6px;color:var(--encre)}
+.pt-f b small{font-size:13px;font-weight:800;color:var(--encre-douce)}
+.pt-plus{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:6px;background:none}
+.pt-plus span{width:100%;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--filet);display:grid;place-items:center;color:var(--encre-douce);font-size:15px}
+
+</style>
+</helmet>
+<div class="ecran">
+<img class="fond-carte" style="top:-240px" src="/_blob/358f1ded92a9e441995d46a2c2f81624" alt="Carte de la Marne"><div class="spot-cercle" style="left:176px;top:132px;width:172px;height:172px"></div>
+<div style="position:absolute;left:16px;right:16px;top:59px;display:flex;justify-content:space-between"><span></span><button class="rond verre" aria-label="Fermer" style="color:var(--encre)"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+<div class="feuille" style="top:470px;bottom:8px;display:flex;flex-direction:column"><div class="poignee"></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline"><h1 class="t-titre">Ton spot</h1><span class="t-detail">La Marne · 2,4 km</span></div>
+<div style="margin-top:20px"><div style="display:flex;gap:8px;align-items:flex-start"><button class="pt-f" aria-label="Brochet, taille minimale 60 cm, ouvert"><div class="tuile-poisson" style="height:68px"><img class="poisson" src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="width:88%;height:48px"></div><b>60<span class="pt-p o"></span></b></button><button class="pt-f" aria-label="Sandre, taille minimale 50 cm, ouvert"><div class="tuile-poisson" style="height:68px"><img class="poisson" src="/_blob/64752134d1301c8ae5245b9230566c2d" alt="" style="width:88%;height:48px"></div><b>50<span class="pt-p o"></span></b></button><button class="pt-f" aria-label="Black-bass, taille minimale 40 cm, ouvert"><div class="tuile-poisson" style="height:68px"><img class="poisson" src="/_blob/822cd2aa2361109755135f4ca4af8f47" alt="" style="width:88%;height:48px"></div><b>40<span class="pt-p o"></span></b></button><button class="pt-f" aria-label="Truite fario, taille minimale 23 cm, fermé"><div class="tuile-poisson" style="height:68px"><img class="poisson" src="/_blob/9c9a3e6836050e27289055b62c3d60d5" alt="" style="width:88%;height:48px"></div><b>23<span class="pt-p f"></span></b></button><button class="pt-plus" aria-label="7 autres espèces"><span style="height:68px">+7</span></button></div></div>
+<div class="t-detail" style="margin-top:16px;color:var(--encre-douce)">3 carnassiers par jour</div>
+<div style="margin-top:auto"><button class="btn pri"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg>Commencer une session</button></div></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

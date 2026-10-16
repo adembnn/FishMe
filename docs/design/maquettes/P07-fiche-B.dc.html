@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Fiche du spot · B Réglages</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.pt-p{width:10px;height:10px;border-radius:5px;display:inline-block;flex:none}
+.pt-p.o{background:var(--ouvert)}
+.pt-p.f{background:var(--alerte)}
+.pt-f{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;flex:1;background:none}
+.pt-f .tuile-poisson{width:100%}
+.pt-f b{font-size:22px;line-height:1;display:flex;align-items:center;gap:6px;color:var(--encre)}
+.pt-f b small{font-size:13px;font-weight:800;color:var(--encre-douce)}
+.pt-plus{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:6px;background:none}
+.pt-plus span{width:100%;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--filet);display:grid;place-items:center;color:var(--encre-douce);font-size:15px}
+
+</style>
+</helmet>
+<div class="ecran">
+<div class="haut" style="display:flex;justify-content:space-between;align-items:center"><span></span><button class="rond" aria-label="Fermer" style="background:var(--surface);color:var(--marine)"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+<div class="zone" style="margin-top:8px"><h1 class="t-grand">Ton spot</h1><div class="t-detail" style="margin-top:4px">La Marne · Saint-Maur · 2,4 km</div>
+<div class="groupe" style="margin-top:24px"><div class="ligne" style="display:block;padding:16px"><div style="display:flex;gap:8px;align-items:flex-start"><button class="pt-f" aria-label="Brochet, taille minimale 60 cm, ouvert"><div class="tuile-poisson" style="height:64px"><img class="poisson" src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="width:88%;height:46px"></div><b>60<span class="pt-p o"></span></b></button><button class="pt-f" aria-label="Sandre, taille minimale 50 cm, ouvert"><div class="tuile-poisson" style="height:64px"><img class="poisson" src="/_blob/64752134d1301c8ae5245b9230566c2d" alt="" style="width:88%;height:46px"></div><b>50<span class="pt-p o"></span></b></button><button class="pt-f" aria-label="Black-bass, taille minimale 40 cm, ouvert"><div class="tuile-poisson" style="height:64px"><img class="poisson" src="/_blob/822cd2aa2361109755135f4ca4af8f47" alt="" style="width:88%;height:46px"></div><b>40<span class="pt-p o"></span></b></button><button class="pt-f" aria-label="Truite fario, taille minimale 23 cm, fermé"><div class="tuile-poisson" style="height:64px"><img class="poisson" src="/_blob/9c9a3e6836050e27289055b62c3d60d5" alt="" style="width:88%;height:46px"></div><b>23<span class="pt-p f"></span></b></button><button class="pt-plus" aria-label="7 autres espèces"><span style="height:64px">+7</span></button></div></div>
+<div class="ligne"><div class="texte">Par jour</div><span class="valeur" style="color:var(--encre)">3 carnassiers</span></div>
+<div class="ligne"><div class="texte">Aujourd’hui</div><span class="valeur">14° · Marne stable</span></div></div></div>
+<div style="position:absolute;left:16px;right:16px;bottom:34px"><button class="btn pri"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg>Commencer une session</button></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

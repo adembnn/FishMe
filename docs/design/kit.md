@@ -46,7 +46,7 @@ Règles du format (sinon ça casse en silence) :
 
 CSS du design système : /_blob/69bbcf2d203990410cc97809f5b38487
 
-Poissons détourés (fond transparent, profil tourné vers la gauche) :
+Poissons détourés (fond transparent, profil, tête vers la droite) :
 - brochet `/_blob/325cfac7b539aef705c1b3f944fa8bcf`
 - sandre `/_blob/64752134d1301c8ae5245b9230566c2d`
 - perche `/_blob/0af5e5e6f274e011d4317ff12600a103`

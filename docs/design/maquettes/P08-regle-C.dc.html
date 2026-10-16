@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Une règle et sa source · C Sujet</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.pt-p{width:10px;height:10px;border-radius:5px;display:inline-block;flex:none}
+.pt-p.o{background:var(--ouvert)}
+.pt-p.f{background:var(--alerte)}
+.pt-f{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;flex:1;background:none}
+.pt-f .tuile-poisson{width:100%}
+.pt-f b{font-size:22px;line-height:1;display:flex;align-items:center;gap:6px;color:var(--encre)}
+.pt-f b small{font-size:13px;font-weight:800;color:var(--encre-douce)}
+.pt-plus{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:6px;background:none}
+.pt-plus span{width:100%;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--filet);display:grid;place-items:center;color:var(--encre-douce);font-size:15px}
+
+</style>
+</helmet>
+<div class="ecran blanc">
+<div class="haut" style="display:flex;justify-content:space-between;align-items:center"><span class="t-detail" style="display:flex;gap:8px;align-items:center;color:var(--encre)"><img class="poisson" src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="Brochet" style="width:44px;height:22px">Brochet · 94</span><button class="rond" aria-label="Fermer" style="background:var(--tuile);color:var(--marine)"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+<div style="position:absolute;left:0;right:0;top:190px;display:flex;flex-direction:column;align-items:center;gap:12px"><div class="t-geant" style="color:var(--marine)">60<span class="t-unite"> cm</span></div><div class="t-sous">Taille minimale</div></div>
+<div style="position:absolute;left:16px;right:16px;top:410px;display:flex;justify-content:center"><div style="display:flex;gap:8px;flex-wrap:wrap"><span class="puce on">Ouvert jusqu’au 31 déc.</span><span class="puce">3 par jour</span></div></div>
+<div style="position:absolute;left:16px;right:16px;bottom:34px"><button class="lien" style="height:48px">Autres règles · 4 ›</button><button class="btn pri"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 16h6" stroke-linecap="round"/></g></svg>Source</button></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

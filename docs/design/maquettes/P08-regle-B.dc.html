@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Une règle et sa source · B Réglages</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.pt-p{width:10px;height:10px;border-radius:5px;display:inline-block;flex:none}
+.pt-p.o{background:var(--ouvert)}
+.pt-p.f{background:var(--alerte)}
+.pt-f{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;flex:1;background:none}
+.pt-f .tuile-poisson{width:100%}
+.pt-f b{font-size:22px;line-height:1;display:flex;align-items:center;gap:6px;color:var(--encre)}
+.pt-f b small{font-size:13px;font-weight:800;color:var(--encre-douce)}
+.pt-plus{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:6px;background:none}
+.pt-plus span{width:100%;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--filet);display:grid;place-items:center;color:var(--encre-douce);font-size:15px}
+
+</style>
+</helmet>
+<div class="ecran">
+<div class="haut" style="display:flex;justify-content:space-between;align-items:center"><button class="rond" aria-label="Retour" style="color:var(--marine);margin-left:-8px"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg></button></div>
+<div class="zone" style="margin-top:8px;display:flex;align-items:center;gap:14px"><div style="flex:1"><h1 class="t-grand">Brochet</h1><div class="t-detail" style="margin-top:4px">Règles dans le 94</div></div><img class="poisson" src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="Brochet" style="width:120px;height:52px"></div>
+<div class="zone"><div class="groupe" style="margin-top:24px">
+<div class="ligne"><div class="texte">Taille minimale</div><span class="t-titre" style="color:var(--marine)">60 cm</span></div>
+<div class="ligne"><div class="texte">Ouvert jusqu’au</div><span class="valeur" style="color:var(--encre)">31 déc.</span></div>
+<div class="ligne"><div class="texte">Par jour</div><span class="valeur" style="color:var(--encre)">3</span></div>
+<div class="ligne"><div class="texte">Autres règles</div><span class="valeur">4</span><svg class="chevron" viewBox="0 0 8 14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m1.5 1.5 5 5.5-5 5.5"/></svg></div>
+<div class="ligne"><div class="texte" style="color:var(--marine)">Source</div><svg class="chevron" viewBox="0 0 8 14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m1.5 1.5 5 5.5-5 5.5"/></svg></div></div>
+<div class="t-legende" style="margin:10px 16px 0">Arrêté 2025 : 50 cm. Avis 2026 : 60 cm, le plus strict.</div></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
