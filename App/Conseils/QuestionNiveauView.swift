@@ -10,44 +10,46 @@ struct QuestionNiveauView: View {
     @State private var selection: NiveauPecheur? = NiveauPecheur.parDefaut
 
     var body: some View {
-        VStack(spacing: Espace.l) {
-            Spacer(minLength: 0)
-            VStack(spacing: Espace.m) {
+        VStack(spacing: 0) {
+            // Maquette : icône de 168 pt (coins 38) avec son ombre, « FishMe » dessous, puis la question vers 55 % de la hauteur.
+            VStack(spacing: Espace.l) {
                 Image(systemName: "fish.fill")
-                    .font(Police.taille(44, .heavy))
+                    .font(Police.taille(84, .heavy))
                     .foregroundStyle(Palette.surMarine)
-                    .frame(width: 84, height: 84)
-                    .background(Palette.nuit, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
+                    .frame(width: 168, height: 168)
+                    .background(Palette.nuit, in: RoundedRectangle(cornerRadius: 38, style: .continuous))
+                    .shadow(color: Palette.nuit.opacity(0.55), radius: 18, y: 14)
                     .accessibilityHidden(true)
                 Text("FishMe")
                     .font(Police.grandTitre)
                     .foregroundStyle(Palette.encre)
             }
-            Spacer(minLength: 0)
+            .padding(.top, Espace.xxl * 2)
+            Spacer(minLength: Espace.xl)
             Text("Tu pêches depuis…")
                 .font(Police.titre)
                 .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
-            HStack(alignment: .top, spacing: Espace.m) {
+            HStack(alignment: .top, spacing: Espace.s) {
                 ForEach([NiveauPecheur.debutant, .occasionnel, .confirme], id: \.self) { niveau in
                     pastille(niveau)
                 }
             }
-            Spacer(minLength: 0)
+            .padding(.top, Espace.xl + Espace.xs)
+            Spacer(minLength: Espace.xl)
+            // Pas de « Passer » dans la maquette : glisser la feuille vers le bas garde le niveau par défaut.
             Button("Continuer") {
                 if let selection { choisir(selection) }
             }
             .buttonStyle(.principal)
             .disabled(selection == nil)
             .opacity(selection == nil ? 0.45 : 1)
-            Button("Passer", action: passer)
-                .font(Police.corps)
-                .foregroundStyle(Palette.marine)
-                .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
+            .padding(.bottom, Espace.s)
         }
         .padding(.horizontal, Espace.bord)
         .padding(.vertical, Espace.l)
-        .background(Palette.fond)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Palette.surface.ignoresSafeArea())
         .accessibilityIdentifier("question-niveau")
     }
 
@@ -106,8 +108,8 @@ struct QuestionNiveauModifier: ViewModifier {
                         ouverte = false
                     }
                 )
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
+                .presentationDetents([.large])
+                .presentationDragIndicator(.hidden)
             }
     }
 

@@ -22,78 +22,95 @@ struct TunnelPremiersPasView: View {
     private let seuil: CGFloat = 100
 
     var body: some View {
-        VStack(spacing: Espace.l) {
+        Group {
+            if index < especes.count {
+                VStack(spacing: 0) {
+                    compteur
+                    cartes
+                    panneau
+                }
+            } else {
+                fin
+                    .padding(Espace.bord)
+            }
+        }
+        .background(Palette.fond.ignoresSafeArea())
+        .accessibilityIdentifier("tunnel-premiers-pas")
+    }
+
+    /// « 4 / 12 » en pastille centrée en haut (le retour, s'il y en a un, reste à gauche).
+    private var compteur: some View {
+        ZStack {
+            Text("\(index + 1) / \(especes.count)")
+                .font(Police.detail)
+                .foregroundStyle(Palette.encre)
+                .padding(.horizontal, Espace.l)
+                .frame(minHeight: 36)
+                .background(.regularMaterial, in: Capsule())
+                .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
             HStack {
                 if index > 0 {
                     BoutonRond(role: .retour, action: revenir)
                         .accessibilityLabel("Revenir à la carte d'avant")
                 }
-                if index < especes.count {
-                    Text("\(index + 1) / \(especes.count)")
-                        .font(Police.detail)
-                        .foregroundStyle(Palette.encre)
-                        .padding(.horizontal, Espace.l)
-                        .frame(minHeight: 36)
-                        .background(Palette.surface, in: Capsule())
-                }
                 Spacer()
-            }
-            if index < especes.count {
-                cartes
-                boutons
-            } else {
-                fin
-            }
-            // En bas, à portée du pouce ; l'écran de fin a déjà son bouton.
-            if index < especes.count {
                 Button("Passer", action: passer)
-                    .font(Police.corps)
-                    .foregroundStyle(Palette.marine)
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
                     .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
             }
         }
-        .padding(Espace.bord)
-        .background(Palette.fond)
-        .accessibilityIdentifier("tunnel-premiers-pas")
+        .padding(.horizontal, Espace.bord)
+        .padding(.top, Espace.s)
     }
 
     private var cartes: some View {
         let espece = especes[index]
         // À brancher : la rareté de l'espèce dans la zone (maquette : « • Commun » sous le nom) ; absente de ce paramètre.
-        return VStack(spacing: Espace.l) {
-            Spacer(minLength: 0)
-            ImageEspece(nom: espece.image, libelle: espece.nom)
-                .frame(maxWidth: .infinity, maxHeight: 260)
-            Text(espece.nom)
-                .font(Police.grandTitre)
-                .foregroundStyle(Palette.encre)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-            Spacer(minLength: 0)
-        }
-        .padding(Espace.xl)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l + 6, style: .continuous))
-        .shadow(color: Palette.encre.opacity(0.10), radius: 14, y: 6)
-        .overlay(alignment: .topLeading) { marque("xmark", visible: decalage < -30, couleur: Palette.encreDouce) }
-        .overlay(alignment: .topTrailing) { marque("checkmark", visible: decalage > 30, couleur: Palette.marine) }
-        .offset(x: decalage)
-        .rotationEffect(.degrees(Double(decalage) / 20))
-        .gesture(
-            DragGesture()
-                .onChanged { decalage = $0.translation.width }
-                .onEnded { valeur in
-                    if valeur.translation.width > seuil {
-                        repondre(dejaPeche: true)
-                    } else if valeur.translation.width < -seuil {
-                        repondre(dejaPeche: false)
-                    } else {
-                        withAnimation(.spring) { decalage = 0 }
+        return ZStack {
+            // La carte d'en dessous, légèrement penchée de l'autre côté.
+            RoundedRectangle(cornerRadius: 32, style: .continuous)
+                .fill(Palette.tuile)
+                .padding(.horizontal, Espace.xl + Espace.s)
+                .padding(.vertical, Espace.l)
+                .rotationEffect(.degrees(4))
+            VStack(spacing: Espace.m) {
+                ImageEspece(nom: espece.image, libelle: espece.nom)
+                    .frame(maxWidth: 270, maxHeight: 180)
+                Text(espece.nom)
+                    .font(Police.grandTitre)
+                    .foregroundStyle(Palette.encre)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, Espace.m)
+            }
+            .padding(Espace.xl)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
+            .shadow(color: Palette.encre.opacity(0.18), radius: 20, y: 12)
+            .padding(.horizontal, Espace.xl + Espace.s)
+            .padding(.vertical, Espace.l)
+            .overlay(alignment: .topLeading) { marque("xmark", visible: decalage < -30, couleur: Palette.encreDouce) }
+            .overlay(alignment: .topTrailing) { marque("checkmark", visible: decalage > 30, couleur: Palette.marine) }
+            .offset(x: decalage)
+            .rotationEffect(.degrees(-2.5 + Double(decalage) / 20))
+            .gesture(
+                DragGesture()
+                    .onChanged { decalage = $0.translation.width }
+                    .onEnded { valeur in
+                        if valeur.translation.width > seuil {
+                            repondre(dejaPeche: true)
+                        } else if valeur.translation.width < -seuil {
+                            repondre(dejaPeche: false)
+                        } else {
+                            withAnimation(.spring) { decalage = 0 }
+                        }
                     }
-                }
-        )
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel(espece.nom)
+            )
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel(espece.nom)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     private func marque(_ icone: String, visible: Bool, couleur: Color) -> some View {
@@ -105,28 +122,42 @@ struct TunnelPremiersPasView: View {
             .accessibilityHidden(true)
     }
 
-    /// Les deux boutons font la même chose que le glissement (VoiceOver, un toucher).
-    private var boutons: some View {
-        HStack(spacing: Espace.xl) {
-            bouton(icone: "xmark", mot: "Jamais pêché", plein: false) { repondre(dejaPeche: false) }
-            bouton(icone: "checkmark", mot: "Déjà pêché", plein: true) { repondre(dejaPeche: true) }
+    /// Le panneau du bas : poignée, puis les deux boutons ronds (même effet que le glissement, pour VoiceOver).
+    private var panneau: some View {
+        VStack(spacing: Espace.s) {
+            Capsule()
+                .fill(Palette.filet)
+                .frame(width: 36, height: 5)
+                .accessibilityHidden(true)
+            HStack {
+                Spacer()
+                bouton(icone: "xmark", mot: "Jamais pêché", plein: false) { repondre(dejaPeche: false) }
+                Spacer()
+                bouton(icone: "checkmark", mot: "Déjà pêché", plein: true) { repondre(dejaPeche: true) }
+                Spacer()
+            }
+            .padding(.bottom, Espace.s)
         }
-        .padding(.vertical, Espace.l)
+        .padding(.top, Espace.s)
+        .padding(.bottom, Espace.m)
         .frame(maxWidth: .infinity)
-        .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
+        .shadow(color: Palette.encre.opacity(0.10), radius: 16, y: -4)
+        .padding(.horizontal, Espace.s)
+        .padding(.bottom, Espace.s)
     }
 
     /// « Non » : rond blanc cerclé, croix marine. « Oui » : rond marine plein, coche blanche (jamais d'orange ici).
     private func bouton(icone: String, mot: String, plein: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
-            VStack(spacing: Espace.xs) {
+            VStack(spacing: Espace.s) {
                 Image(systemName: icone)
                     .font(Police.taille(24, .bold))
                     .frame(width: 68, height: 68)
                     .background(plein ? Palette.marine : Palette.surface, in: Circle())
                     .overlay(Circle().strokeBorder(Palette.filet, lineWidth: plein ? 0 : 1))
                     .foregroundStyle(plein ? Palette.surMarine : Palette.marine)
-                Text(mot).font(Police.detail).foregroundStyle(Palette.encreDouce)
+                Text(mot).font(Police.detail).foregroundStyle(Palette.encre)
             }
         }
         .buttonStyle(.plain)
