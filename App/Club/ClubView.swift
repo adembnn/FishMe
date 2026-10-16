@@ -69,8 +69,10 @@ struct ClubView<MarqueMeteo: View>: View {
                     if let club {
                         EnteteGroupeClub(titre: club.nom)
                         groupeMembres(club)
-                        if !dernieresCartes.isEmpty {
-                            EnteteGroupeClub(titre: "Dernières cartes")
+                        EnteteGroupeClub(titre: "Dernières cartes")
+                        if dernieresCartes.isEmpty {
+                            tuileVide
+                        } else {
                             GroupeClub {
                                 ForEach(Array(dernieresCartes.enumerated()), id: \.element.id) { rang, carte in
                                     if rang > 0 { FiletClub(retrait: 80) }
@@ -79,32 +81,34 @@ struct ClubView<MarqueMeteo: View>: View {
                                 }
                             }
                         }
+                        EnteteGroupeClub(titre: "Record du club")
                         if let record {
-                            EnteteGroupeClub(titre: "Record du club")
                             GroupeClub {
                                 ligneCarte(image: record.image, titre: record.titre, detail: record.membre,
                                            taille: record.tailleCm)
                             }
+                        } else {
+                            tuileVide
                         }
                     }
-                    GroupeClub {
-                        NavigationLink {
-                            ReglagesClubView(liens: liens, sources: sources, cartes: cartes,
-                                             mesureUsage: $mesureUsage, marqueMeteo: marqueMeteo)
-                        } label: {
-                            HStack(spacing: Espace.m) {
-                                Image(systemName: "slider.horizontal.3").foregroundStyle(Palette.marine)
-                                Text("Ma pêche, sécurité et sources").font(Police.corps).foregroundStyle(Palette.encre)
-                                Spacer()
-                                Image(systemName: "chevron.right").font(Police.legende).foregroundStyle(Palette.silhouette)
-                            }
-                            .frame(minHeight: 52)
-                            .padding(.horizontal, Espace.l)
-                            .contentShape(Rectangle())
+                    NavigationLink {
+                        ReglagesClubView(liens: liens, sources: sources, cartes: cartes,
+                                         mesureUsage: $mesureUsage, marqueMeteo: marqueMeteo)
+                    } label: {
+                        HStack(spacing: Espace.s) {
+                            Image(systemName: "slider.horizontal.3")
+                            Text("Ma pêche, sécurité et sources")
+                            Spacer()
+                            Image(systemName: "chevron.right")
                         }
-                        .buttonStyle(.plain)
+                        .font(Police.legende)
+                        .foregroundStyle(Palette.encreDouce)
+                        .frame(minHeight: Gabarit.zoneTactile)
+                        .padding(.horizontal, Espace.l)
+                        .contentShape(Rectangle())
                     }
-                    .padding(.top, Espace.xl)
+                    .buttonStyle(.plain)
+                    .padding(.top, Espace.l)
                 }
                 .padding(.horizontal, Espace.bord)
                 .padding(.bottom, Espace.xl)
@@ -162,7 +166,7 @@ struct ClubView<MarqueMeteo: View>: View {
                 .buttonStyle(.plain)
                 .accessibilityLabel(c.nom)
                 .accessibilityAddTraits(choisi ? AccessibilityTraits.isSelected : AccessibilityTraits())
-                FiletClub()
+                FiletClub(retrait: Espace.l + 36 + Espace.m)
             }
             HStack(spacing: 0) {
                 Button { rejoindreOuvert = true } label: {
@@ -176,10 +180,10 @@ struct ClubView<MarqueMeteo: View>: View {
                         .frame(maxWidth: .infinity, minHeight: 48)
                 }
             }
-            .font(Police.taille(14))
+            .font(Police.corps)
             .foregroundStyle(Palette.marine)
             .lineLimit(1)
-            .minimumScaleFactor(0.8)
+            .minimumScaleFactor(0.85)
             .padding(.horizontal, Espace.s)
         }
     }
@@ -189,9 +193,17 @@ struct ClubView<MarqueMeteo: View>: View {
     private func groupeMembres(_ club: ClubLocal) -> some View {
         GroupeClub {
             HStack(alignment: .top, spacing: 0) {
-                ForEach(Array(membres.prefix(3).enumerated()), id: \.element.id) { rang, membre in
+                VStack(spacing: 2) {
+                    PastilleMembre(nom: "Moi", rang: 0)
+                    Text("Moi").font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
+                    Text(cartes.count == 1 ? "1 carte" : "\(cartes.count) cartes")
+                        .font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
+                }
+                .frame(maxWidth: .infinity)
+                .accessibilityElement(children: .combine)
+                ForEach(Array(membres.prefix(2).enumerated()), id: \.element.id) { rang, membre in
                     VStack(spacing: 2) {
-                        PastilleMembre(nom: membre.nom, rang: rang)
+                        PastilleMembre(nom: membre.nom, rang: rang + 1)
                         Text(membre.nom).font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
                         Text(membre.nombreDeCartes.map { $0 == 1 ? "1 carte" : "\($0) cartes" } ?? " ")
                             .font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
@@ -221,6 +233,15 @@ struct ClubView<MarqueMeteo: View>: View {
     }
 
     // MARK: Cartes
+
+    private var tuileVide: some View {
+        GroupeClub {
+            Text("Aucune carte partagée pour l'instant")
+                .font(Police.legende).foregroundStyle(Palette.encreDouce)
+                .frame(maxWidth: .infinity, minHeight: 52)
+                .padding(.horizontal, Espace.l)
+        }
+    }
 
     private func ligneCarte(image: String, titre: String, detail: String, taille: Int?) -> some View {
         HStack(spacing: Espace.m) {

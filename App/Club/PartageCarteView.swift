@@ -4,6 +4,7 @@ import UIKit
 /// Choisir une carte déjà rendue par L4, puis la feuille de partage d'iOS. L'image part sans aucune métadonnée.
 /// P33 : la carte en grand, « Sans ta position », « Partager au club » (si le club est branché) et « Autres apps ».
 struct PartageCarteView: View {
+    @Environment(\.dismiss) private var fermer
     let cartes: [CarteAPartager]
     /// À brancher : l'envoi au club passe par le partage CloudKit du lot Amis. Sans lui, le bouton n'apparaît pas.
     var partagerAuClub: ((CarteAPartager) -> Void)? = nil
@@ -29,7 +30,7 @@ struct PartageCarteView: View {
                         .scaledToFit()
                         .clipShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
                         .shadow(color: Palette.encre.opacity(0.18), radius: 14, y: 8)
-                        .padding(.horizontal, Espace.xxl + Espace.s)
+                        .padding(.horizontal, Espace.xl)
                         .accessibilityLabel(Text(choisie.titre))
                     if cartes.count > 1 { bandeau }
                     Spacer(minLength: Espace.s)
@@ -37,7 +38,7 @@ struct PartageCarteView: View {
                 }
             }
             HStack {
-                BoutonRond(role: .fermer, rendu: .verre)
+                BoutonRond(role: .fermer, rendu: .verre) { fermer() }
                 Spacer()
             }
             .padding(.horizontal, Espace.bord)

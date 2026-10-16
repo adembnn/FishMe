@@ -202,8 +202,11 @@ struct CreerClubView: View {
                             Image(systemName: "lock.fill").foregroundStyle(Palette.marine)
                             Text("Amis invités seulement").font(Police.corps).foregroundStyle(Palette.encre)
                             Spacer()
+                            Text("Toujours").font(Police.legende).foregroundStyle(Palette.encreDouce)
                             Image(systemName: "checkmark.circle.fill").foregroundStyle(Palette.marine)
                         }
+                        .accessibilityElement(children: .combine)
+                        .allowsHitTesting(false)
                         .frame(minHeight: 56)
                         .padding(.horizontal, Espace.l)
                     }
@@ -214,6 +217,7 @@ struct CreerClubView: View {
                 .padding(.horizontal, Espace.bord)
             }
             .scrollIndicators(.hidden)
+            .scrollDismissesKeyboard(.interactively)
             .background(Palette.fond.ignoresSafeArea())
             .navigationTitle("Nouveau club")
             .navigationBarTitleDisplayMode(.inline)
@@ -314,8 +318,19 @@ struct InviterClubView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
+                EnteteGroupeClub(titre: "Lien d'invitation").padding(.top, Espace.s)
+                if lienTexte == nil {
+                    GroupeClub {
+                        HStack(spacing: Espace.m) {
+                            ProgressView()
+                            Text("Prépare ton invitation…").font(Police.corps).foregroundStyle(Palette.encreDouce)
+                            Spacer()
+                        }
+                        .frame(minHeight: 56)
+                        .padding(.horizontal, Espace.l)
+                    }
+                }
                 if let lienTexte {
-                    EnteteGroupeClub(titre: "Lien d'invitation").padding(.top, Espace.s)
                     GroupeClub {
                         HStack {
                             Text(lienTexte)
@@ -331,11 +346,21 @@ struct InviterClubView: View {
                         .padding(.horizontal, Espace.l)
                     }
                 }
-                if !invites.isEmpty {
-                    EnteteGroupeClub(titre: "Invitations").padding(.top, lienTexte == nil ? Espace.s : Espace.xl)
+                EnteteGroupeClub(titre: "Invitations")
+                if invites.isEmpty {
+                    GroupeClub {
+                        HStack(spacing: Espace.m) {
+                            Image(systemName: "person.crop.circle.badge.questionmark").foregroundStyle(Palette.silhouette)
+                            Text("Personne n'est invité").font(Police.corps).foregroundStyle(Palette.encreDouce)
+                            Spacer()
+                        }
+                        .frame(minHeight: 56)
+                        .padding(.horizontal, Espace.l)
+                    }
+                } else {
                     GroupeClub {
                         ForEach(Array(invites.enumerated()), id: \.element.id) { rang, invite in
-                            if rang > 0 { FiletClub() }
+                            if rang > 0 { FiletClub(retrait: Espace.l + 36 + Espace.m) }
                             HStack(spacing: Espace.m) {
                                 PastilleMembre(nom: invite.nom, rang: rang, enAttente: !invite.acceptee)
                                 Text(invite.nom).font(Police.corps).foregroundStyle(Palette.encre)
@@ -360,6 +385,7 @@ struct InviterClubView: View {
         .background(Palette.fond.ignoresSafeArea())
         .navigationTitle("Inviter")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar(.visible, for: .navigationBar)
         .safeAreaInset(edge: .bottom) {
             Group {
                 if let invitation {
@@ -368,10 +394,15 @@ struct InviterClubView: View {
                     }
                     .buttonStyle(.principal)
                 } else {
-                    Button {} label: { Label("Envoyer l'invitation", systemImage: "square.and.arrow.up") }
-                        .buttonStyle(.principal)
-                        .disabled(true)
-                        .opacity(0.5)
+                    VStack(spacing: Espace.s) {
+                        Text("Connecte-toi à iCloud pour inviter tes amis")
+                            .font(Police.corps).foregroundStyle(Palette.encreDouce)
+                            .multilineTextAlignment(.center)
+                        Button("Ouvrir les réglages") {
+                            if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+                        }
+                        .buttonStyle(.secondaire)
+                    }
                 }
             }
             .padding(.horizontal, Espace.bord)
