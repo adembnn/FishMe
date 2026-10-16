@@ -82,7 +82,7 @@ struct OffresTests {
 
     @Test func aucunMotInterditDansLesTextes() {
         var textes = [TextesPaywall.renouvellement, TextesPaywall.produitIntrouvable, TextesPaywall.rienARestaurer, TextesPaywall.restaure]
-        textes += TextesPaywall.gratuit.map(\.texte) + TextesPaywall.pro.map(\.texte) + FonctionPro.allCases.map(TextesPaywall.titre)
+        textes += TextesPaywall.comparaison.map(\.texte) + TextesPaywall.gratuit.map(\.texte) + TextesPaywall.pro.map(\.texte) + FonctionPro.allCases.map(TextesPaywall.titre)
         for texte in textes {
             let bas = texte.lowercased()
             #expect(!bas.contains("poké"))
@@ -108,5 +108,52 @@ struct OffresTests {
         #expect(DeclencheurPaywall.finPremiereSession.texteFermeture.contains("gratuitement"))
         #expect(!DeclencheurPaywall.autreSpot.texteFermeture.contains("gratuitement"))
         #expect(!DeclencheurPaywall.fonction(.septJours).texteFermeture.contains("gratuitement"))
+    }
+}
+
+/// Le paywall ne dit que ce que le code ferme : chaque ligne de la comparaison est confrontée à `peutUtiliser` de Core
+/// (et à `RegleConseils` pour les conseils). Preuve du code : `MoteurSession.peutUtiliser`, `RootView.swift` (`autorise`, `VigilanceEmplacement`).
+struct ComparaisonPaywallTests {
+    let session = MoteurCore(donnees: .embarque()).session
+
+    private func conseil(_ gratuit: Bool) -> Conseil {
+        Conseil(texte: "x", icone: "fish", source: SourceRegle(titre: "essai"), gratuit: gratuit)
+    }
+
+    @Test func chaqueLigneDuPaywallDitLaVeriteDuCode() {
+        for ligne in TextesPaywall.comparaison {
+            switch ligne.verrou {
+            case .libre:
+                #expect(ligne.gratuit != .non)
+            case .surTonSpot(let f):
+                #expect(session.peutUtiliser(f, abonne: false, surSonSpot: true))
+                #expect(!session.peutUtiliser(f, abonne: false, surSonSpot: false))
+                #expect(session.peutUtiliser(f, abonne: true, surSonSpot: false))
+                #expect(ligne.gratuit != .non && ligne.gratuit != .oui)
+            case .proSeul(let f):
+                #expect(!session.peutUtiliser(f, abonne: false, surSonSpot: true))
+                #expect(!session.peutUtiliser(f, abonne: false, surSonSpot: false))
+                #expect(session.peutUtiliser(f, abonne: true, surSonSpot: false))
+                #expect(ligne.gratuit == .non)
+            case .partiel(let f):
+                #expect(!session.peutUtiliser(f, abonne: false, surSonSpot: true))
+                #expect(session.peutUtiliser(f, abonne: true, surSonSpot: false))
+                let ferme = RegleConseils.affiches([conseil(true), conseil(false)], toutOuvert: false)
+                #expect(ferme.visibles.count == 1 && ferme.nbCaches == 1)
+                #expect(ligne.gratuit != .non && ligne.gratuit != .oui)
+            }
+            #expect(ligne.pro != .non)
+        }
+    }
+
+    @Test func toutesLesFonctionsProDuCodeSontAnnoncees() {
+        let annoncees = TextesPaywall.comparaison.compactMap { ligne -> FonctionPro? in
+            switch ligne.verrou {
+            case .libre: return nil
+            case .surTonSpot(let f), .proSeul(let f), .partiel(let f): return f
+            }
+        }
+        #expect(Set(annoncees) == Set(FonctionPro.allCases))
+        #expect(annoncees.count == FonctionPro.allCases.count)
     }
 }
