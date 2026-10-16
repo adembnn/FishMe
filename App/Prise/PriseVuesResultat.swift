@@ -101,6 +101,9 @@ struct PriseResultatView: View {
                     if let poids = modele.poids { blocPoids(poids) }
                     if let controle {
                         ForEach(Array(controle.lignes.enumerated()), id: \.offset) { _, ligne in PriseLigneView(ligne: ligne) }
+                        Text(PriseLogique.avertissement)
+                            .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     Toggle("Gardée", isOn: $modele.gardee)
                         .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
@@ -151,7 +154,14 @@ struct PriseLigneView: View {
                 }
                 if ouverte {
                     ForEach(Array(ligne.sources.enumerated()), id: \.offset) { _, s in
-                        Text(s.titre).font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
+                        if let url = s.url.flatMap({ URL(string: $0) }) {
+                            Link(destination: url) {
+                                Label(s.titre, systemImage: "arrow.up.right.square")
+                                    .font(PriseJetons.legende()).multilineTextAlignment(.leading)
+                            }
+                        } else {
+                            Text(s.titre).font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
+                        }
                     }
                     if let citation = ligne.citation { Text(citation).font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret) }
                     if let date = ligne.dateLecture {

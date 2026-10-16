@@ -80,6 +80,8 @@ enum PriseLogique {
 
     /// Avant confirmation de l'espèce : seulement la consigne « relâche-la ».
     static let consigneAvantConfirmation = Consigne.relacheLa.texte
+    /// Phrase imposée sous chaque verdict (docs/donnees.md).
+    static let avertissement = "Information indicative : l'arrêté préfectoral fait foi. En cas de doute, relâche."
 
     /// « ≈ 1,4 kg estimé ».
     static func texteDuPoids(_ poids: PoidsEstime) -> String {
