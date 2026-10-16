@@ -2,11 +2,12 @@ import Core
 import SwiftUI
 import UIKit
 
-/// Le verso : la vraie photo de la prise en plein cadre, puis une bande courte (rareté OFB, consigne, heure, lune, durée, météo).
+/// Le verso (P25 C) : la vraie photo en grand, puis une bande courte (qui et quand). Le détail de la prise
+/// (taille, poids estimé, relâché ou gardé, conditions) est dans `FaitsPrise`, posé sous la carte.
 struct CarteVersoView: View {
     let infos: InfosCarte
     let photo: Data?
-    /// Durée de la session d'où vient la prise, si elle en vient.
+    /// Gardé pour les appelants ; « comment la pêcher » s'affiche maintenant dans `FaitsPrise`.
     var emplacements: EmplacementsExternes = .vides
 
     var body: some View {
@@ -48,26 +49,28 @@ struct CarteVersoView: View {
         }
     }
 
+    /// Le lieu flou (« La Marne · 94 », jamais le point exact) en gras à gauche, le jour et l'heure à droite.
     private var bande: some View {
-        VStack(alignment: .leading, spacing: Espace.xs) {
-            if infos.prise.estDeclaree {
-                Text("Tu as déclaré l'avoir déjà pêché : cette carte n'a ni photo, ni taille, ni lieu.")
-                    .font(Jeton.police(13))
-            } else {
-                Text(ligneMoment).font(Jeton.police(13)).foregroundStyle(Palette.encreDouce)
-                Text(phraseRarete).font(Jeton.police(13))
-                if let consigne = infos.consigne {
-                    Text(consigne + (infos.sourceConsigne.map { " (source : \($0))" } ?? ""))
-                        .font(Jeton.police(13))
+        HStack(alignment: .center, spacing: Espace.s) {
+            // À brancher : le prénom du pêcheur (« Adem ») ; aucune donnée de profil n'arrive jusqu'ici. Le lieu flou le remplace.
+            Text(infos.prise.estDeclaree ? infos.espece.nom : (infos.prise.lieuFlou ?? infos.espece.nom))
+                .font(Jeton.police(22, .heavy))
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+            Spacer(minLength: 0)
+            if !infos.prise.estDeclaree {
+                VStack(alignment: .trailing, spacing: 0) {
+                    Text(Formats.date(infos.prise.date))
+                    Text(Formats.heure(infos.prise.date))
                 }
-                meteo
-            }
-            if let comment = emplacements.commentLaPecher {
-                comment(infos.prise.espece)
+                .font(Jeton.police(12))
+                .monospacedDigit()
+                .foregroundStyle(Palette.encreDouce)
             }
         }
         .foregroundStyle(Palette.encre)
-        .padding(Espace.m)
+        .padding(.horizontal, Espace.l)
+        .padding(.vertical, Espace.m)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
@@ -90,25 +93,70 @@ struct CarteVersoView: View {
             return texte
         }
     }
+}
 
-    private var ligneMoment: String {
-        var morceaux = [Formats.date(infos.prise.date), Formats.heure(infos.prise.date), Formats.lune(infos.lune)]
-        if let s = infos.detail.dureeSecondes { morceaux.append("session de \(Formats.duree(s))") }
-        return morceaux.joined(separator: " · ")
+/// Sous la carte retournée : trois lignes à icône (taille et poids estimé, relâché ou gardé, conditions),
+/// puis la consigne et « comment la pêcher » si on les a. Chaque valeur absente est omise, jamais inventée.
+struct FaitsPrise: View {
+    let infos: InfosCarte
+    var emplacements: EmplacementsExternes = .vides
+
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 10) {
+                if infos.prise.estDeclaree {
+                    Text("Tu as déclaré l'avoir déjà pêché : cette carte n'a ni photo, ni taille, ni lieu.")
+                        .font(Police.corps)
+                        .multilineTextAlignment(.center)
+                } else {
+                    if let taille = Formats.taille(infos.prise) {
+                        ligne("ruler", [taille, Formats.poids(infos.poids)].compactMap { $0 }.joined(separator: " · "))
+                    }
+                    // À brancher : l'appât ou le leurre de la prise (« Relâché · leurre souple ») ; la prise ne le garde pas.
+                    ligne("water.waves", infos.prise.gardee ? "Gardé" : "Relâché")
+                    if let conditions = infos.detail.conditions, let texte = texteConditions(conditions) {
+                        ligne("cloud", texte)
+                        MarqueAppleWeather()
+                    }
+                    if let consigne = infos.consigne {
+                        ligne("info.circle", consigne + (infos.sourceConsigne.map { " (source : \($0))" } ?? ""))
+                            .font(Police.detail)
+                    }
+                }
+                if let comment = emplacements.commentLaPecher {
+                    comment(infos.prise.espece)
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, Espace.bord)
+        }
+        .scrollIndicators(.hidden)
     }
 
-    @ViewBuilder
-    private var meteo: some View {
-        if let conditions = infos.detail.conditions {
-            VStack(alignment: .leading, spacing: 4) {
-                if let slot = emplacements.meteoDuDos {
-                    slot(conditions)
-                } else {
-                    BlocMeteoSimple(conditions: conditions)
-                }
-                MarqueAppleWeather()
-            }
+    private func ligne(_ icone: String, _ texte: String) -> some View {
+        HStack(spacing: Espace.s) {
+            Image(systemName: icone)
+                .foregroundStyle(Palette.marine)
+                .accessibilityHidden(true)
+            Text(texte)
+                .multilineTextAlignment(.leading)
         }
+        .font(Police.corps)
+        .foregroundStyle(Palette.encre)
+        .frame(maxWidth: .infinity)
+    }
+
+    /// « Vent 14 km/h · Rivière niveau normal » : seulement ce que la prise a gardé.
+    private func texteConditions(_ c: Conditions) -> String? {
+        var morceaux: [String] = []
+        if let v = c.ventKmh { morceaux.append("Vent \(Formats.nombre(v, decimales: 0)) km/h") }
+        switch c.etatRiviere {
+        case .normal: morceaux.append("Rivière niveau normal")
+        case .haut: morceaux.append("Rivière niveau haut")
+        case .crue: morceaux.append("Rivière en crue")
+        case .inconnu: break
+        }
+        return morceaux.isEmpty ? nil : morceaux.joined(separator: " · ")
     }
 }
 

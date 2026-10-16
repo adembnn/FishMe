@@ -81,35 +81,83 @@ struct VignetteClub: View {
     }
 }
 
-/// P29 : « Mes clubs », seulement ceux dont on est membre.
-struct MesClubsSection: View {
-    let clubs: [ClubLocal]
-    let poissons: [PoissonClub]
-    let creer: () -> Void
+// MARK: - Briques communes des écrans Club
+
+/// Le titre d'un groupe : petites capitales discrètes au-dessus de la carte blanche (« MES CLUBS »).
+struct EnteteGroupeClub: View {
+    let titre: String
 
     var body: some View {
-        Section {
-            ForEach(clubs) { club in
-                NavigationLink {
-                    InviterClubView(club: club)
-                } label: {
-                    HStack(spacing: Espace.m) {
-                        VignetteClub(club: club, poissons: poissons)
-                        // À brancher : le nombre de membres vient du partage CloudKit (lot Amis).
-                        Text(club.nom).font(Police.sousTitre).foregroundStyle(Palette.encre)
-                    }
-                    .frame(minHeight: Gabarit.zoneTactile)
+        Text(titre.uppercased())
+            .font(Police.legende)
+            .foregroundStyle(Palette.encreDouce)
+            .padding(.horizontal, Espace.l)
+            .padding(.top, Espace.xl)
+            .padding(.bottom, Espace.s)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .accessibilityAddTraits(.isHeader)
+    }
+}
+
+/// La carte blanche d'un groupe ; les lignes y sont séparées par un filet.
+struct GroupeClub<Contenu: View>: View {
+    @ViewBuilder let contenu: () -> Contenu
+
+    var body: some View {
+        VStack(spacing: 0, content: contenu)
+            .frame(maxWidth: .infinity)
+            .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
+    }
+}
+
+/// Le filet entre deux lignes, aligné sur le texte.
+struct FiletClub: View {
+    var retrait: CGFloat = Espace.l
+
+    var body: some View {
+        Rectangle().fill(Palette.filet).frame(height: 1).padding(.leading, retrait)
+    }
+}
+
+/// La pastille ronde d'un membre : son initiale. En attente : fond blanc et contour.
+struct PastilleMembre: View {
+    let nom: String
+    let rang: Int
+    var enAttente = false
+    var taille: CGFloat = 36
+
+    private var fond: Color {
+        [Palette.marine, Palette.ouvert, Palette.nuit][rang % 3]
+    }
+
+    var body: some View {
+        Text(String(nom.prefix(1)).uppercased())
+            .font(Police.taille(15, .heavy))
+            .foregroundStyle(enAttente ? Palette.encreDouce : Palette.surMarine)
+            .frame(width: taille, height: taille)
+            .background {
+                if enAttente {
+                    Circle().fill(Palette.surface).overlay(Circle().strokeBorder(Palette.silhouette, lineWidth: 2))
+                } else {
+                    Circle().fill(fond)
                 }
             }
-            Button(action: creer) {
-                Label("Créer un club", systemImage: "plus")
-                    .font(Police.corps)
-                    .foregroundStyle(Palette.marine)
-                    .frame(minHeight: Gabarit.zoneTactile)
-            }
-        } header: {
-            Text("Mes clubs").font(Police.legende).foregroundStyle(Palette.encreDouce)
-        }
+            .accessibilityHidden(true)
+    }
+}
+
+/// La vignette d'un poisson : 48 x 32, fond doux, coins de 8.
+struct VignettePoissonClub: View {
+    let image: String
+
+    var body: some View {
+        Image(image)
+            .resizable()
+            .scaledToFit()
+            .padding(.horizontal, 6)
+            .frame(width: 48, height: 32)
+            .background(Palette.marineDoux, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+            .accessibilityHidden(true)
     }
 }
 
@@ -126,33 +174,44 @@ struct CreerClubView: View {
 
     private var peutCreer: Bool { !nom.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
 
+    /// Les cinq poissons les plus pêchés d'abord (comme la maquette), puis les autres ; six tuiles en tout avec la galerie.
+    private var proposes: [PoissonClub] {
+        let preferes = ["perche-commune", "brochet", "sandre", "carpe-commune", "truite-fario"]
+        let premiers = preferes.compactMap { id in poissons.first { $0.id == id } }
+        let autres = poissons.filter { p in !preferes.contains(p.id) }
+        return Array((premiers + autres).prefix(5))
+    }
+
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: Espace.xl) {
-                    bloc("Nom") {
+                VStack(alignment: .leading, spacing: 0) {
+                    EnteteGroupeClub(titre: "Nom").padding(.top, Espace.s)
+                    GroupeClub {
                         TextField("Nom du club", text: $nom)
-                            .font(Police.sousTitre)
-                            .frame(minHeight: Gabarit.zoneTactile)
+                            .font(Police.corps)
+                            .foregroundStyle(Palette.encre)
+                            .frame(minHeight: 56)
                             .padding(.horizontal, Espace.l)
-                            .tuileFishMe()
                     }
-                    bloc("Image") { grille }
-                    bloc("Qui voit les collections") {
+                    EnteteGroupeClub(titre: "Image")
+                    GroupeClub { grille.padding(Espace.m) }
+                    EnteteGroupeClub(titre: "Qui voit les collections")
+                    GroupeClub {
                         HStack(spacing: Espace.m) {
                             Image(systemName: "lock.fill").foregroundStyle(Palette.marine)
-                            Text("Amis invités seulement").font(Police.sousTitre).foregroundStyle(Palette.encre)
+                            Text("Amis invités seulement").font(Police.corps).foregroundStyle(Palette.encre)
                             Spacer()
                             Image(systemName: "checkmark.circle.fill").foregroundStyle(Palette.marine)
                         }
-                        .frame(minHeight: Gabarit.zoneTactile)
+                        .frame(minHeight: 56)
                         .padding(.horizontal, Espace.l)
-                        .tuileFishMe()
-                        Text("Jamais en public. Seuls les amis que tu invites voient tes cartes.")
-                            .font(Police.legende).foregroundStyle(Palette.encreDouce)
                     }
+                    Text("Jamais en public. Seuls les amis que tu invites voient tes cartes.")
+                        .font(Police.legende).foregroundStyle(Palette.encreDouce)
+                        .padding(.horizontal, Espace.l).padding(.top, Espace.s)
                 }
-                .padding(Espace.bord)
+                .padding(.horizontal, Espace.bord)
             }
             .scrollIndicators(.hidden)
             .background(Palette.fond.ignoresSafeArea())
@@ -183,20 +242,13 @@ struct CreerClubView: View {
         }
     }
 
-    private func bloc<Contenu: View>(_ titre: String, @ViewBuilder _ contenu: () -> Contenu) -> some View {
-        VStack(alignment: .leading, spacing: Espace.s) {
-            Text(titre.uppercased()).font(Police.legende).foregroundStyle(Palette.encreDouce)
-            contenu()
-        }
-    }
-
     private var grille: some View {
-        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: Espace.m), count: 3), spacing: Espace.m) {
+        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: Espace.s), count: 3), spacing: Espace.s) {
             PhotosPicker(selection: $choixGalerie, matching: .images) {
                 tuileGalerie
             }
             .accessibilityLabel("Galerie")
-            ForEach(poissons) { poisson in
+            ForEach(proposes) { poisson in
                 Button {
                     poissonChoisi = poisson.id
                     photo = nil
@@ -211,8 +263,6 @@ struct CreerClubView: View {
                 .accessibilityLabel(poisson.nom)
             }
         }
-        .padding(Espace.m)
-        .tuileFishMe(rayon: Rayon.l)
     }
 
     private var tuileGalerie: some View {
@@ -226,7 +276,7 @@ struct CreerClubView: View {
             }
             Label("Galerie", systemImage: "photo")
                 .font(Police.legende).foregroundStyle(Palette.surMarine)
-                .frame(maxWidth: .infinity, minHeight: 28)
+                .frame(maxWidth: .infinity, minHeight: 24)
                 .background(Palette.marine)
         }
         .aspectRatio(1, contentMode: .fit)
@@ -234,32 +284,98 @@ struct CreerClubView: View {
         .overlay(selection(photo != nil))
     }
 
+    /// Le contour marine et la coche d'une tuile choisie.
     @ViewBuilder
     private func selection(_ actif: Bool) -> some View {
         if actif {
-            RoundedRectangle(cornerRadius: Rayon.m, style: .continuous).strokeBorder(Palette.marine, lineWidth: 3)
+            ZStack {
+                RoundedRectangle(cornerRadius: Rayon.m, style: .continuous).strokeBorder(Palette.marine, lineWidth: 2.5)
+                Image(systemName: "checkmark.circle.fill")
+                    .font(.system(size: 22, weight: .bold, design: .rounded))
+                    .foregroundStyle(Palette.surMarine, Palette.marine)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                    .padding(4)
+            }
         }
     }
 }
 
-/// P31 : inviter. Le lien et la liste des invités viennent du partage CloudKit du lot Amis.
+/// P31 : inviter. Le lien, la liste des invités et l'envoi viennent du partage CloudKit du lot Amis ;
+/// tant que RootView ne les passe pas, les blocs correspondants restent vides ou masqués.
 struct InviterClubView: View {
     let club: ClubLocal
+    /// À brancher : adresse courte du club (partage CloudKit). Sans elle, la ligne « Lien d'invitation » n'apparaît pas.
+    var lienTexte: String? = nil
+    /// À brancher : `Ami.enAttente` et `Ami.jeVoisSaCollection` du lot Amis.
+    var invites: [InviteClub] = []
+    /// À brancher : le partage CloudKit en lecture seule, réservé aux personnes invitées.
+    var invitation: InvitationPescedex? = nil
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: Espace.xl) {
-                // À brancher : lien d'invitation (ShareLink d'AmisView) et état des invités (Ami.enAttente), pas de donnée ici.
-                ContentUnavailableView("Aucune invitation", systemImage: "person.badge.plus",
-                                       description: Text("Invite des amis depuis l'onglet Amis."))
+            VStack(alignment: .leading, spacing: 0) {
+                if let lienTexte {
+                    EnteteGroupeClub(titre: "Lien d'invitation").padding(.top, Espace.s)
+                    GroupeClub {
+                        HStack {
+                            Text(lienTexte)
+                                .font(.system(size: 15, weight: .regular, design: .monospaced))
+                                .foregroundStyle(Palette.encre)
+                                .lineLimit(1)
+                            Spacer(minLength: Espace.s)
+                            Button("Copier") { UIPasteboard.general.string = lienTexte }
+                                .font(Police.corps)
+                                .foregroundStyle(Palette.marine)
+                        }
+                        .frame(minHeight: 56)
+                        .padding(.horizontal, Espace.l)
+                    }
+                }
+                if !invites.isEmpty {
+                    EnteteGroupeClub(titre: "Invitations").padding(.top, lienTexte == nil ? Espace.s : Espace.xl)
+                    GroupeClub {
+                        ForEach(Array(invites.enumerated()), id: \.element.id) { rang, invite in
+                            if rang > 0 { FiletClub() }
+                            HStack(spacing: Espace.m) {
+                                PastilleMembre(nom: invite.nom, rang: rang, enAttente: !invite.acceptee)
+                                Text(invite.nom).font(Police.corps).foregroundStyle(Palette.encre)
+                                Spacer()
+                                Text(invite.acceptee ? "Acceptée" : "En attente")
+                                    .font(Police.corps)
+                                    .foregroundStyle(invite.acceptee ? Palette.ouvert : Palette.encreDouce)
+                            }
+                            .frame(minHeight: 56)
+                            .padding(.horizontal, Espace.l)
+                            .accessibilityElement(children: .combine)
+                        }
+                    }
+                }
                 Text("Ton coin exact ne quitte jamais ton iPhone. Les amis invités voient tes cartes, personne d'autre.")
                     .font(Police.legende).foregroundStyle(Palette.encreDouce)
+                    .padding(.horizontal, Espace.l).padding(.top, Espace.m)
             }
-            .padding(Espace.bord)
+            .padding(.horizontal, Espace.bord)
         }
         .scrollIndicators(.hidden)
         .background(Palette.fond.ignoresSafeArea())
-        .navigationTitle(club.nom)
+        .navigationTitle("Inviter")
         .navigationBarTitleDisplayMode(.inline)
+        .safeAreaInset(edge: .bottom) {
+            Group {
+                if let invitation {
+                    ShareLink(item: invitation, preview: SharePreview(club.nom)) {
+                        Label("Envoyer l'invitation", systemImage: "square.and.arrow.up")
+                    }
+                    .buttonStyle(.principal)
+                } else {
+                    Button {} label: { Label("Envoyer l'invitation", systemImage: "square.and.arrow.up") }
+                        .buttonStyle(.principal)
+                        .disabled(true)
+                        .opacity(0.5)
+                }
+            }
+            .padding(.horizontal, Espace.bord)
+            .padding(.bottom, Espace.s)
+        }
     }
 }

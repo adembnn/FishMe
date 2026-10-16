@@ -12,8 +12,8 @@ struct FeuilleConsentement: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.l) {
             VStack(alignment: .leading, spacing: Espace.xs) {
-                // Fermer sans choisir vaut « Refuser » : rien n'est mesuré tant que le pêcheur n'a pas accepté.
-                BoutonRond(role: .fermer, rendu: .simple, action: refuser)
+                // Pas de bouton fermer (la maquette n'en a pas) : la feuille ne se ferme que par « Refuser » ou « Accepter »,
+                // donc rien n'est mesuré tant que le pêcheur n'a pas accepté.
                 Text("Mesure d'audience")
                     .font(Police.grandTitre)
                     .foregroundStyle(Palette.encre)
@@ -78,7 +78,7 @@ struct FeuilleConsentement: View {
                                 .foregroundStyle(Palette.encreDouce)
                         }
                     }
-                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)
+                    .frame(maxWidth: .infinity, minHeight: ligne.1 == nil ? Gabarit.zoneTactile : 64, alignment: .leading)
                     .padding(.horizontal, Espace.l)
                     .padding(.vertical, Espace.s)
                     .accessibilityElement(children: .combine)

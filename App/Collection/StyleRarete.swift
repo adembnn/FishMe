@@ -61,17 +61,18 @@ enum StyleRarete: Equatable {
         }
     }
 
-    /// Fond de l'illustration : de plus en plus sombre avec la rareté.
+    /// Fond de la fenêtre du poisson (P24) : mat et sombre, pour que le poisson et le texte blanc ressortent.
+    /// Commun ardoise, peu commun vert mat, rare violet, légendaire or foncé.
     var fond: [Color] {
         switch self {
         case .commun, .nonMesuree:
-            return [Palette.tuile, Palette.eauClaire]
+            return [Color(red: 0x5E / 255, green: 0x7A / 255, blue: 0x84 / 255), Color(red: 0x46 / 255, green: 0x62 / 255, blue: 0x6C / 255)]
         case .peuCommun:
-            return [Palette.ouvertDoux, Palette.peuCommun.opacity(0.45)]
+            return [Color(red: 0x21 / 255, green: 0x5A / 255, blue: 0x56 / 255), Color(red: 0x14 / 255, green: 0x3E / 255, blue: 0x3C / 255)]
         case .rare:
-            return [Palette.rare.opacity(0.25), Palette.rare.opacity(0.7)]
+            return [Color(red: 0x6B / 255, green: 0x5F / 255, blue: 0xD6 / 255), Color(red: 0x45 / 255, green: 0x38 / 255, blue: 0xA8 / 255)]
         case .legendaire:
-            return [Palette.legendaire.opacity(0.55), Palette.nuit]
+            return [Color(red: 0xC7 / 255, green: 0x9A / 255, blue: 0x2E / 255), Color(red: 0x7A / 255, green: 0x54 / 255, blue: 0x10 / 255)]
         }
     }
 
