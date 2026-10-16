@@ -21,3 +21,5 @@ Direction retenue pour chaque page de la toile (A · Plans, B · Réglages, C ·
 | P17 Mes sorties | A · Plans | 16 oct. 2h42 |
 | P18 Photo de la prise | C · Sujet | 16 oct. 2h43 |
 | P19 Espèce proposée | A · Plans | 16 oct. 2h43 |
+| P20 Autre espèce (grille) | A · Plans | 16 oct. 2h45 |
+| P21 Taille et poids (réalité augmentée) | A · Plans | 16 oct. 2h45 |
