@@ -212,7 +212,10 @@ struct PriseModeleTests {
         let contexte = PriseContexte(coordonnee: Coordonnee(latitude: 48.8, longitude: 2.4),
                                      lieu: Lieu(departement: Departement(code: "94")), lieuFlou: "La Marne · 94",
                                      date: Date(timeIntervalSince1970: 1_792_065_600), prisesDuJour: [])
-        return PriseModele(services: .faux, contexte: contexte, terminer: { _ in })
+        let m = PriseModele(services: .faux, contexte: contexte, terminer: { _ in })
+        // Mémoire de taille isolée : une taille confirmée par un autre test ne doit pas déplacer le départ du curseur.
+        m.memoire = MemoireTaille(defauts: UserDefaults(suiteName: "prise-logique-\(UUID().uuidString)")!)
+        return m
     }
 
     @Test func avantConfirmationAucunControleNiPoids() {
