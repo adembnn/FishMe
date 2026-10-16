@@ -22,6 +22,8 @@ struct ReglagesView: View {
     let ouvrirPaywall: () -> Void
     /// Ouvre « Mon compte » (sauvegarde iCloud, App/Compte). `nil` : la ligne est cachée.
     var ouvrirCompte: (() -> Void)? = nil
+    /// Vrai quand l'abonné a l'annuel du tarif fondateur (34,99). `nil` : l'info manque, la ligne dit « Actif ».
+    var tarifFondateur: Bool? = nil
 
     @State private var gestionOuverte = false
     @State private var message: String?
@@ -70,7 +72,7 @@ struct ReglagesView: View {
                     ligne("Sécurité au bord de l'eau", valeur: nil, action: ouvrirSecurite)
                     separateur
                     // Abonné : la ligne ouvre la gestion de l'abonnement d'Apple ; sinon le paywall.
-                    ligne("FishMe Pro", valeur: abonne ? "Actif" : "Découvrir") {
+                    ligne("FishMe Pro", valeur: abonne ? (tarifFondateur == true ? "Fondateur" : "Actif") : "Découvrir") {
                         if abonne { gestionOuverte = true } else { ouvrirPaywall() }
                     }
                     separateur

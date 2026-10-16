@@ -46,7 +46,7 @@ struct SansPositionView: View {
                 if ouvrirPescedex != nil || ouvrirAmis != nil || ouvrirConseils != nil {
                     titreGroupe("Toujours accessibles")
                     groupe {
-                        if let ouvrirPescedex { rangee("square.grid.2x2", "Pescedex", valeur: compteurPescedex, action: ouvrirPescedex) }
+                        if let ouvrirPescedex { rangee("fish.circle", "Pescedex", valeur: compteurPescedex, action: ouvrirPescedex) }
                         if let ouvrirAmis {
                             if ouvrirPescedex != nil { filet(16) }
                             rangee("person.2", "Amis", valeur: compteurAmis, action: ouvrirAmis)
