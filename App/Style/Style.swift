@@ -200,39 +200,3 @@ extension View {
         background(Palette.surface, in: RoundedRectangle(cornerRadius: rayon, style: .continuous))
     }
 }
-
-// MARK: - Fermer et revenir
-
-/// Croix « Fermer » ronde, la même sur toutes les feuilles et tous les plein écrans.
-/// Sans action, elle ferme l'écran présenté (`dismiss`).
-struct BoutonFermer: View {
-    var action: (() -> Void)? = nil
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        Button {
-            if let action { action() } else { dismiss() }
-        } label: {
-            Image(systemName: "xmark")
-                .font(.system(size: 15, weight: .bold, design: .rounded))
-                .foregroundStyle(Palette.encreDouce)
-                .frame(width: 32, height: 32)
-                .background(.regularMaterial, in: Circle())
-                .frame(width: 44, height: 44)
-                .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-        .accessibilityLabel("Fermer")
-    }
-}
-
-extension View {
-    /// Pose la croix « Fermer » en haut à droite d'un écran présenté qui n'a pas de moyen de partir.
-    func fermable(_ action: (() -> Void)? = nil) -> some View {
-        overlay(alignment: .topTrailing) {
-            BoutonFermer(action: action)
-                .padding(.top, Espace.s)
-                .padding(.trailing, Espace.m)
-        }
-    }
-}
