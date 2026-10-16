@@ -866,6 +866,24 @@ struct VueCarte: View {
         }
     }
 
+    @ViewBuilder
+    private var tuilesFeuilleCarte: some View {
+        if let apercu {
+            let lignes: [LigneEspece] = lignesDeLaFeuille(apercu)
+            HStack(alignment: .top, spacing: 10) {
+                ForEach(lignes) { (ligne: LigneEspece) in
+                    tuilePoissonCarte(ligne)
+                }
+                if resteDeLaFeuille(apercu) > 0 {
+                    tuileResteCarte(resteDeLaFeuille(apercu))
+                }
+            }
+        } else {
+            // Relevés en cours de lecture : la place des tuiles reste, sans rien inventer.
+            Color.clear.frame(height: 52 + 6 + 14)
+        }
+    }
+
     /// Calme, Normal ou Chargé sous le titre (en mots, gratuit) ; rien tant que le niveau n'est pas connu.
     @ViewBuilder
     private var badgeFrequentationSpot: some View {
