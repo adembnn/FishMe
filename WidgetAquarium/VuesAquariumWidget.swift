@@ -127,7 +127,7 @@ private struct CoucheNage: View {
                                                        centre: (placement.x, placement.y)))
             }
             ZStack {
-                // Couche de base (poissons à leur place de départ), puis 80 copies (10 s à 8 images/s) ; chaque copie
+                // Couche de base (poissons à leur place de départ), puis 160 copies (10 s à 16 images/s) ; chaque copie
                 // dessine l'eau et TOUS les poissons à leur place de cet instant, et deux masques chronos n'en
                 // laissent voir qu'une à la fois, par-dessus la couche de base.
                 ImagesAnimees(reference: reference, actif: animePoissons, fond: {

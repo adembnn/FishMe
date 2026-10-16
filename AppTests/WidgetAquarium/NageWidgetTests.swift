@@ -335,4 +335,13 @@ struct NageTests {
             #expect(q.x >= 0.44 * 0.45 - 1e-9 && q.x <= 1 - 0.44 * 0.45 + 1e-9)
         }
     }
+
+    /// À 16 images/s (160 copies), la boucle se referme aussi et le poisson avance par petits pas.
+    @Test func boucleA16ImagesParSeconde() {
+        let poses = NageWidget.boucle(id: "p1", slug: "gardon", creneau: 7, nombre: 160, longueur: 0.23,
+                                      rapport: 170.0 / 364)
+        #expect(poses.count == 160)
+        let maxPas = NageWidget.espece("gardon").croisiere * 0.23 * 1.5 / 16 + 0.006
+        for j in 0..<160 { #expect(abs(poses[(j + 1) % 160].x - poses[j].x) <= maxPas) }
+    }
 }

@@ -150,3 +150,8 @@ Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntent
   (`ProgressView(timerInterval:countsDown:)`), le reste au centre. Blanc translucide, une seule teinte.
 - 3 aperçus `#Preview` (en ligne, rectangle, rond) dans `SessionWidget.swift`. Capture attendue de l'écran verrouillé
   dans `reports/ecrans/L15/`.
+
+## 16 images par seconde (16 oct., 06h10)
+- Adem trouve 8 images/s saccadé : `HorlogeAnimation.imagesParSeconde = 16` (160 copies sur 10 s). Rien d'autre à changer.
+- À surveiller sur l'iPhone : mémoire de l'extension (limite d'environ 30 Mo) et fluidité. Si le widget ne s'affiche plus ou
+  se fige, essayer 12 (une seule constante), et le dire au fil Widget avec la mesure.

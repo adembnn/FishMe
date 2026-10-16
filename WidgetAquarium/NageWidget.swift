@@ -89,7 +89,7 @@ nonisolated public enum NageWidget {
     // Même nage que l'aquarium 3D (reports/aquarium-3d/temps-reel/nage.js et NAGE.md, lot/aquarium ecbe9a9) :
     // le poisson vise un but tiré au hasard dans sa bande de hauteur, tourne vers lui sans dépasser son virage,
     // accélère et freine en douceur, se repose au but (`calme`), puis repart. Le battement de queue accélère avec
-    // la vitesse (f = 0.9 + 2.2 × vitesse / longueur). Le widget évalue cette nage à 80 instants (10 s à 8 images/s)
+    // la vitesse (f = 0.9 + 2.2 × vitesse / longueur). Le widget évalue cette nage à 160 instants (10 s à 16 images/s)
     // et en fait une boucle : dans un long trajet, le morceau où il revient à son point de départ (même cap, même
     // vitesse), ramené à 10 s, puis un léger recalage pour que la fin rejoigne exactement le début.
 

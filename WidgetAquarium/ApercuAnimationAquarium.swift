@@ -3,7 +3,7 @@ import SwiftUI
 import WidgetKit
 
 // DEBUG seulement. Vérifier l'animation du widget aquarium SANS l'écran d'accueil : la même vue que le widget
-// (VueAquariumWidget, ses 80 copies et ses masques chronos) affichée en plein écran dans l'app, où les chronos
+// (VueAquariumWidget, ses 160 copies et ses masques chronos) affichée en plein écran dans l'app, où les chronos
 // tournent comme dans l'hôte des widgets. Lancer l'app avec `-FishMeApercuWidget YES`, puis filmer :
 //   xcrun simctl launch booted ai.mwm.build.challenge.team.01 -FishMeApercuWidget YES
 //   xcrun simctl io booted recordVideo --codec=h264 reports/ecrans/L15/nage.mp4   (Ctrl-C après 12 s)
@@ -26,7 +26,7 @@ struct ApercuAnimationAquarium: View {
                 VueAquariumWidget(entree: entree, famille: .systemLarge, fondVisible: true)
                     .frame(width: 364, height: 382)
                     .clipShape(.rect(cornerRadius: 22))
-                TimelineView(.periodic(from: .now, by: 1.0 / 8)) { contexte in
+                TimelineView(.periodic(from: .now, by: 1.0 / Double(HorlogeAnimation.imagesParSeconde))) { contexte in
                     let reference = HorlogeAnimation.reference(pour: entree.date)
                     Text("copie attendue \(HorlogeAnimation.imageVisible(reference: reference, a: contexte.date)) · polices \(PolicesMasque.disponibles ? "ok" : "KO")")
                         .font(.caption.monospacedDigit())

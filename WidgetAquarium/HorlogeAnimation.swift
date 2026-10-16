@@ -5,10 +5,10 @@ import Foundation
 // `Text(date, style: .timer)` est redessiné par le système chaque seconde, même dans un widget. Les polices
 // `FishMeClignoteChiffreK` remplacent les secondes du chrono par un carré plein seulement quand leur chiffre des
 // unités vaut K : la vue est pleine 1 s toutes les 10 s. Deux masques imbriqués (chiffre q décalé de r/8 s,
-// chiffre q−1 décalé de (r+1)/8 s) ne laissent passer qu'une fenêtre de 1/8 s : 80 images à 8 images/s,
-// en boucle de 10 s, une seule visible à la fois.
+// chiffre q−1 décalé de (r+1)/16 s) ne laissent passer qu'une fenêtre de 1/16 s : 160 images à 16 images/s,
+// en boucle de 10 s, une seule visible à la fois. Adem (16 oct. 06h) : 8 images/s paraissait saccadé.
 enum HorlogeAnimation {
-    static let imagesParSeconde = 8
+    static let imagesParSeconde = 16
     /// Une boucle = un tour complet du chiffre des unités des secondes.
     static let dureeBoucle: TimeInterval = 10
     static let nombreImages = imagesParSeconde * 10
@@ -40,7 +40,7 @@ enum HorlogeAnimation {
             && dernierChiffre(reference: reference, decalage: b.decalage, a: instant) == b.chiffre
     }
 
-    /// Numéro (0..<80) de l'image visible à cet instant, par le calcul direct.
+    /// Numéro (0..<nombreImages) de l'image visible à cet instant, par le calcul direct.
     static func imageVisible(reference: Date, a instant: Date, parSeconde: Int = imagesParSeconde) -> Int {
         let nombre = parSeconde * 10
         let t = instant.timeIntervalSince(reference)
