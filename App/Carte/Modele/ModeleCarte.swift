@@ -26,6 +26,8 @@ final class ModeleCarte {
     // Données
     var pechables: [EspecePechable] = []
     private(set) var stations: [StationCarte] = []
+    /// La zone dont les stations sont chargées (ou en cours de chargement) : sert à ne pas relire ce qui est déjà là.
+    private(set) var regionChargee: ZoneCarte?
 
     // Filtre « Choisir un autre spot »
     var filtre: EspecePechable?
@@ -43,9 +45,14 @@ final class ModeleCarte {
     @ObservationIgnored private var tacheElements: Task<Void, Never>?
     @ObservationIgnored private var tacheAnimees: Task<Void, Never>?
     @ObservationIgnored private var tacheStations: Task<Void, Never>?
+    /// Le premier « fin de mouvement » de la caméra est l'affichage initial, pas un geste du pêcheur.
+    @ObservationIgnored private var premiereCameraAttendue = true
+    /// Dossier du cache des stations du dernier lancement (Caches de l'app). `nil` : pas de cache (tests).
+    @ObservationIgnored private let dossierCache: URL?
 
-    init(services: ServicesCarte) {
+    init(services: ServicesCarte, dossierCache: URL? = StockageCacheCarte.dossierParDefaut) {
         self.services = services
+        self.dossierCache = dossierCache
     }
 
     var spotAffiche: Spot? { spotFixe ?? spotLocal }
@@ -62,9 +69,28 @@ final class ModeleCarte {
 
     // MARK: Démarrage
 
+    /// La carte s'affiche tout de suite. On ne lit plus la France entière au départ : on montre les stations du dernier lancement
+    /// (cache local), on les rafraîchit, et la position (ou la zone choisie) charge sa zone dès qu'elle arrive.
     func demarrer() async {
         pechables = await lirePechables()
-        charger(pour: regionVisible)
+        await restaurerDepuisCache()
+    }
+
+    private func restaurerDepuisCache() async {
+        guard let dossier = dossierCache else { return }
+        let cache = await Task.detached(priority: .userInitiated) {
+            StockageCacheCarte.lire(dans: dossier, maintenant: Date())
+        }.value
+        // Si la position est déjà arrivée, sa zone est plus fraîche que le cache.
+        guard let cache, depart == .enAttente, regionChargee == nil else { return }
+        regionVisible = cache.region
+        camera = .region(MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: cache.region.centre.latitude, longitude: cache.region.centre.longitude),
+            span: MKCoordinateSpan(latitudeDelta: cache.region.spanLatitude, longitudeDelta: cache.region.spanLongitude)))
+        stations = cache.stations
+        regionChargee = cache.region
+        recalculer(cache.region)
+        charger(pour: cache.region)
     }
 
     private func lirePechables() async -> [EspecePechable] {
@@ -151,17 +177,33 @@ final class ModeleCarte {
     func chargerApresMouvement(_ region: ZoneCarte) {
         regionVisible = region
         enMouvement = false
+        let premiere = premiereCameraAttendue
+        premiereCameraAttendue = false
+        // Affichage initial sans position ni cache : on n'ira pas lire toute la France pour rien.
+        if premiere, depart == .enAttente { return }
+        // Zone déjà couverte par le dernier chargement : on regroupe seulement (calcul court, hors du fil principal).
+        if let deja = regionChargee, region.estCouverte(parChargee: deja) {
+            recalculer(region)
+            return
+        }
         charger(pour: region)
     }
 
     private func charger(pour region: ZoneCarte) {
         tacheStations?.cancel()
+        regionChargee = region
         let fournisseur = services.stations
+        let dossier = dossierCache
         tacheStations = Task {
             let lues = await fournisseur.stations(dans: region)
             if Task.isCancelled { return }
             stations = lues
             recalculer(region)
+            // Pour le prochain lancement : seulement une vue assez proche (petit fichier), en tâche de fond.
+            if let dossier, region.spanLatitude <= StockageCacheCarte.etendueMaximale, !lues.isEmpty {
+                let cache = CacheCarte.pour(region: region, stations: lues)
+                Task.detached(priority: .utility) { StockageCacheCarte.ecrire(cache, dans: dossier) }
+            }
         }
     }
 

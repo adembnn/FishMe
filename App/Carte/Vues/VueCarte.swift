@@ -133,9 +133,10 @@ struct VueCarte: View {
         .task {
             modele.spotFixe = spotFixe
             modele.sessionsTerminees = sessionsTerminees
-            await modele.demarrer()
+            // La position se demande tout de suite : elle n'attend ni les espèces ni le cache.
             position.demanderAuPremierEcran()
             reagirAuStatut()
+            await modele.demarrer()
         }
         .onChange(of: spotFixe) { _, nouveau in modele.spotFixe = nouveau }
         .onChange(of: sessionsTerminees) { _, nouveau in modele.sessionsTerminees = nouveau }
