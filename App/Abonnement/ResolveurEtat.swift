@@ -30,6 +30,21 @@ nonisolated enum ResolveurEtat {
         }
     }
 
+    /// Les statuts d'UN produit : le plus grave gagne. StoreKit peut garder « abonné » en cache à côté du délai de grâce
+    /// ou d'un remboursement ; ces événements, plus récents, font foi.
+    static func pourUnProduit(_ statuts: [StatutAbonnement]) -> StatutAbonnement? {
+        func rang(_ s: StatutAbonnement) -> Int {
+            switch s {
+            case .rembourse, .revoque: return 0
+            case .delaiDeGrace: return 1
+            case .relancePaiement: return 2
+            case .abonne: return 3
+            case .expire: return 4
+            }
+        }
+        return statuts.min { rang($0) < rang($1) }
+    }
+
     /// Si plusieurs abonnements existent, le plus favorable gagne : un accès ouvert l'emporte sur un accès fermé.
     static func etat(statuts: [StatutAbonnement], maintenant: Date) -> EtatAchats {
         guard !statuts.isEmpty else { return .nonAbonne }

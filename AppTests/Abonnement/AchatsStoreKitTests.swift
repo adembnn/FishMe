@@ -16,6 +16,8 @@ struct AchatsStoreKitTests {
     /// Chaque test passe par ici : la session est vidée en sortie, sinon le processus de test ne se termine pas.
     private func avecSession(_ corps: (SKTestSession, AchatsStoreKit) async throws -> Void) async throws {
         let session = try session()
+        // Une erreur simulée (mode avion) d'un test précédent resterait sur le démon partagé.
+        try? await session.setSimulatedError(nil, forAPI: .loadProducts)
         let achats = achats()
         do {
             try await corps(session, achats)

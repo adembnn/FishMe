@@ -137,7 +137,13 @@ nonisolated final class AchatsStoreKit: Achats, @unchecked Sendable {
             if !statuts.isEmpty { return ResolveurEtat.etat(statuts: statuts, maintenant: maintenant) }
             return ResolveurEtat.etat(statuts: droits, maintenant: maintenant)
         } catch {
-            // Pas de réseau pour les statuts : un droit vérifié sur l'appareil suffit, sinon le dernier état vérifié sert.
+            // Pas de réseau pour les statuts. Un remboursement ou une révocation se lit sur l'appareil : il passe avant tout.
+            for identifiant in identifiants {
+                if case .verified(let derniere)? = await Transaction.latest(for: identifiant), derniere.revocationDate != nil {
+                    return ResolveurEtat.etat(statut: Self.statutRevoque(derniere), maintenant: maintenant)
+                }
+            }
+            // Sinon un droit vérifié sur l'appareil suffit, sinon le dernier état vérifié sert.
             if !droits.isEmpty { return ResolveurEtat.etat(statuts: droits, maintenant: maintenant) }
             // Le dernier état donnait accès, mais sa date de fin est passée : l'abonnement a expiré, même sans réseau.
             if reglages.bool(forKey: cleDernierAcces) {
@@ -152,7 +158,9 @@ nonisolated final class AchatsStoreKit: Achats, @unchecked Sendable {
 
     private func statutsAbonnement(droitsActifs: Set<String>, maintenant: Date) async throws -> [StatutAbonnement] {
         let produits = try await Product.products(for: identifiants)
-        var statuts: [StatutAbonnement] = []
+        // Les statuts sont ceux du groupe d'abonnement, répétés pour chaque produit : on les range par produit,
+        // puis chaque produit garde son état le plus grave (un délai de grâce ou un remboursement l'emporte sur « abonné » en cache).
+        var parProduit: [String: [StatutAbonnement]] = [:]
         for produit in produits {
             guard let statutsProduit = try await produit.subscription?.status else { continue }
             for statut in statutsProduit {
@@ -163,28 +171,28 @@ nonisolated final class AchatsStoreKit: Achats, @unchecked Sendable {
                     // et la liste des droits en cours (`currentEntitlements`) font foi.
                     let echu = transaction.expirationDate.map { $0 <= maintenant } ?? false
                     if transaction.revocationDate != nil {
-                        statuts.append(Self.statutRevoque(transaction))
+                        parProduit[transaction.productID, default: []].append(Self.statutRevoque(transaction))
                     } else if echu || !droitsActifs.contains(transaction.productID) {
-                        statuts.append(.expire)
+                        parProduit[transaction.productID, default: []].append(.expire)
                     } else {
-                        statuts.append(.abonne)
+                        parProduit[transaction.productID, default: []].append(.abonne)
                     }
                 case .inGracePeriod:
                     var fin: Date?
                     if case .verified(let renouvellement) = statut.renewalInfo { fin = renouvellement.gracePeriodExpirationDate }
-                    statuts.append(.delaiDeGrace(fin: fin))
+                    parProduit[transaction.productID, default: []].append(.delaiDeGrace(fin: fin))
                 case .inBillingRetryPeriod:
-                    statuts.append(.relancePaiement)
+                    parProduit[transaction.productID, default: []].append(.relancePaiement)
                 case .expired:
-                    statuts.append(.expire)
+                    parProduit[transaction.productID, default: []].append(.expire)
                 case .revoked:
-                    statuts.append(Self.statutRevoque(transaction))
+                    parProduit[transaction.productID, default: []].append(Self.statutRevoque(transaction))
                 default:
-                    statuts.append(.expire)
+                    parProduit[transaction.productID, default: []].append(.expire)
                 }
             }
         }
-        return statuts
+        return parProduit.keys.sorted().compactMap { ResolveurEtat.pourUnProduit(parProduit[$0] ?? []) }
     }
 
     /// Partage familial arrêté : révoqué ; sinon : remboursé.
