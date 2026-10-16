@@ -35,3 +35,9 @@ Version retravaillée du logo F1, validée par Adem (« top », fil « Logo de F
 
 ## Pause (15 oct. 19h57, demandée par Adem)
 Tout est poussé sur `lot/store`. Reprise : 1) `get_store_connections` doit dire App Store Connect relié (Adem, console MWM, réponse « I have a store entry, but haven't launched ») ; 2) puis étape 3 de `appels-mwm.md` (questionnaire de confidentialité) ; 3) captures dès que `RootView` est câblé. État du code : `etat-du-code.md` (règles : seulement national, 75, 94).
+
+## 16 oct. ~3h30 UTC : version soumise avec Amis, écran verrouillé et widget
+- `fiche-fishme.md` (56899bf), `notes-relecteur-en.md` et `checklist-app-store.md` (17d2bae), `confidentialite.md`, `conditions.md`, `etiquettes-confidentialite.md` (5634fb7), lus sur `mac/integration` 5780585 et `claude/finir-app-ud5swp`.
+- `review_store_text` sur les six champs de la nouvelle fiche : **aucune remarque** (même erreur de format du serveur quand tout est propre).
+- `get_store_connections` : App Store Connect toujours non relié (clé API à créer par Adem).
+- Écarts à régler par A (fil Xcode) : `App/PrivacyInfo.xcprivacy` déclare zéro donnée alors que Spark Flash en déclare 7 ; lien de confidentialité du paywall vers la page d'Apple (`RootView.swift:472`) ; schéma CloudKit à déployer en production ; capacités iCloud, App Group (app + `.widget`) et WeatherKit à cocher.
