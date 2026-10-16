@@ -12,7 +12,9 @@ struct IdentificationDinoTests {
               let data = try? Data(contentsOf: url) else { return }
         let resultat = await IdentificationDino(bundle: modele).identifier(photo: data)
         switch resultat {
-        case .scores(let s): #expect(!s.isEmpty); #expect(s.values.allSatisfy { $0 >= 0 && $0 <= 1.0001 })
+        case .scores(let s):
+            #expect(s.values.allSatisfy { $0 >= 0 && $0 <= 1.0001 })
+            #expect(s.max(by: { $0.value < $1.value })?.key == "brochet", "la photo d'exemple montre un brochet")
         case .grille(let raison): #expect(raison != .aucunModele, "le modèle est présent")
         }
     }
