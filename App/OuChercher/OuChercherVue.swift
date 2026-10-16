@@ -30,8 +30,8 @@ struct OuChercherVue: View {
             }
             .navigationTitle(OuChercherTextes.titreEcran)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Fermer") { dismiss() }
+                ToolbarItem(placement: .topBarLeading) {
+                    BoutonRond(role: .fermer, rendu: .simple) { dismiss() }
                 }
             }
             #if os(iOS)
