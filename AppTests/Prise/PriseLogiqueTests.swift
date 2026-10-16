@@ -138,6 +138,17 @@ struct PriseModeleTests {
         #expect(m.methode == .saisie)
     }
 
+    @Test func leCurseurDemarreAuMilieuEtDoitBouger() throws {
+        let m = modele()
+        let brochet = try #require(m.catalogue.first { $0.espece.id == "brochet" })
+        m.choisir(brochet)
+        #expect(m.longueurCm == PriseLogique.tailleDeDepart)
+        #expect(PriseLogique.plageTaille.contains(m.longueurCm) && m.longueurCm != 40)
+        #expect(!m.curseurBouge)
+        m.longueurCm = 55
+        #expect(m.curseurBouge)
+    }
+
     @Test func lAnguilleDemandeSonStade() throws {
         let m = modele()
         let anguille = try #require(m.catalogue.first { PriseLogique.estAnguille($0.espece) })

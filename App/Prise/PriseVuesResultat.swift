@@ -49,6 +49,8 @@ struct PriseTailleView: View {
             }
             .scrollIndicators(.hidden)
             Button("Confirmer la taille") { modele.confirmerLaTaille() }.buttonStyle(PriseBoutonPrincipal())
+                .disabled(!modele.curseurBouge)
+                .opacity(modele.curseurBouge ? 1 : 0.5)
         }
         .padding(20)
         .fullScreenCover(isPresented: $mesureAR) {
@@ -116,6 +118,7 @@ struct PriseResultatView: View {
                     }
                     if let poids = modele.poids { blocPoids(poids) }
                     if let controle {
+                        if modele.contexte.lieu.categorie.valeur == .inconnue { categorieInconnue }
                         ForEach(Array(controle.lignes.enumerated()), id: \.offset) { _, ligne in PriseLigneView(ligne: ligne) }
                         Text(PriseLogique.avertissement)
                             .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
@@ -135,6 +138,17 @@ struct PriseResultatView: View {
                 .buttonStyle(PriseBoutonPrincipal())
         }
         .padding(20)
+    }
+
+    /// Ligne neutre (icône discrète, pas d'orange) quand la catégorie du cours d'eau n'est pas connue.
+    private var categorieInconnue: some View {
+        HStack(alignment: .top, spacing: 10) {
+            Image(systemName: "info.circle").foregroundStyle(PriseJetons.discret).accessibilityHidden(true)
+            Text(PriseLogique.categorieInconnue).font(PriseJetons.corps()).foregroundStyle(PriseJetons.encre)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(14).frame(maxWidth: .infinity, minHeight: PriseJetons.cibleMin, alignment: .leading)
+        .background(PriseJetons.papier, in: RoundedRectangle(cornerRadius: PriseJetons.rayon))
     }
 
     private func blocPoids(_ poids: PoidsEstime) -> some View {

@@ -104,4 +104,10 @@ enum PriseLogique {
 
     /// Limites du curseur de taille, en centimètres.
     static let plageTaille: ClosedRange<Double> = 5...150
+
+    /// Départ du curseur : le milieu de la plage, sans taille typique par espèce dans le code. Le pêcheur doit le bouger.
+    static let tailleDeDepart: Double = ((plageTaille.lowerBound + plageTaille.upperBound) / 2).rounded(.up)
+
+    /// Catégorie piscicole inconnue : une ligne neutre, jamais une alerte.
+    static let categorieInconnue = "Catégorie du cours d'eau inconnue : vérifie l'arrêté"
 }
