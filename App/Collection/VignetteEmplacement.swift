@@ -2,131 +2,30 @@ import Core
 import SwiftUI
 import UIKit
 
-/// Encre et gris d'une carte (mêmes valeurs que CarteRectoView, qui les garde privées).
-private let encreVignette = Color(carte: 0x0F1A1C)
-private let grisVignette = Color(carte: 0x5B6A6E)
-
-/// Une prise du classeur, montrée face visible comme une vraie carte à collectionner (69/100) :
-/// la photo de la prise dans une fenêtre aux couleurs de la rareté, puis une plaque réservée au nom et à la taille.
-/// Le texte ne passe jamais sur l'image. Sans photo (carte déclarée), le poisson dessiné remplace la photo.
+/// Une prise du classeur : la version réduite fidèle du recto de la vraie carte (même dessin d'espèce sur le fond de sa rareté,
+/// même cadre, même plaque, même nom, taille et badge). Pas de photo : elle n'apparaît qu'au verso de la carte ouverte.
+/// C'est `CarteRectoView` en pleine taille de référence (300 pt de large), réduite à la largeur de la cellule.
 struct VignetteCarteObtenue: View {
   let emplacement: Emplacement
-  /// Rend la photo de la prise (le dépôt de cartes). `nil` ou sans résultat : le poisson dessiné.
-  let photoDe: (Prise) async -> Data?
+  /// Département de la collection, quand la prise n'en donne pas.
+  let zone: Departement?
 
-  @State private var photo: UIImage?
-
-  private var style: StyleRarete { StyleRarete(emplacement.rarete.niveau) }
-  private var declaree: Bool { emplacement.carte?.estDeclaree == true }
-  private var nom: String { emplacement.espece.nom }
+  /// Largeur de référence de la carte dessinée avant réduction.
+  private static let largeurReference: CGFloat = 300
 
   var body: some View {
-    CarteCadre(style: style, declaree: declaree) {
-      GeometryReader { geo in
-        let w = geo.size.width
-        let h = geo.size.height
-        let u = w / 100
-        VStack(spacing: 0) {
-          fenetre(u)
-            .frame(width: w - 8 * u, height: h * 0.70 - 4 * u)
-            .clipShape(RoundedRectangle(cornerRadius: 3.4 * u, style: .continuous))
-            .padding(.top, 4 * u)
-          plaque(u)
-            .frame(width: w, height: h * 0.30 - 0.0)
-        }
-        .frame(width: w, height: h, alignment: .top)
+    GeometryReader { geo in
+      let reduction = geo.size.width / Self.largeurReference
+      if let infos = InfosCarte.vignette(emplacement: emplacement, zone: zone) {
+        CarteRectoView(infos: infos, refletFixe: true)
+          .frame(width: Self.largeurReference, height: Self.largeurReference / Gabarit.rapportCarte)
+          .scaleEffect(reduction, anchor: .topLeading)
+          .frame(width: geo.size.width, height: geo.size.height, alignment: .topLeading)
       }
     }
-    .task(id: emplacement.carte?.id) {
-      guard let carte = emplacement.carte, !declaree, let donnees = await photoDe(carte),
-        let image = UIImage(data: donnees)
-      else { return }
-      photo =
-        await image.byPreparingThumbnail(
-          ofSize: CGSize(width: 480, height: 480 * image.size.height / max(1, image.size.width)))
-        ?? image
-    }
-  }
-
-  // MARK: Fenêtre
-
-  private func fenetre(_ u: CGFloat) -> some View {
-    ZStack {
-      fondFenetre
-      if let photo {
-        Image(uiImage: photo)
-          .resizable()
-          .scaledToFill()
-      } else {
-        Image(emplacement.espece.image)
-          .resizable()
-          .scaledToFit()
-          .saturation(declaree ? 0.55 : 1)
-          .padding(.horizontal, 6 * u)
-          .rotationEffect(.degrees(-12))
-          .shadow(color: .black.opacity(0.3), radius: 1 * u, x: -1 * u, y: 2 * u)
-      }
-      if style.aUnReflet && !declaree {
-        RefletHolographique(inclinaison: .zero, fixe: true)
-      }
-    }
-    .overlay(alignment: .topTrailing) {
-      BadgeRarete(style: style, taille: 15 * u)
-        .padding(3 * u)
-        .shadow(color: .black.opacity(0.3), radius: 1.5 * u, y: 1 * u)
-    }
-    .overlay(alignment: .topLeading) {
-      if declaree {
-        Text("Déclarée")
-          .font(Police.taille(6.5 * u, .heavy))
-          .foregroundStyle(.white)
-          .lineLimit(1)
-          .padding(.horizontal, 2.6 * u)
-          .padding(.vertical, 1.2 * u)
-          .background(Color.black.opacity(0.5), in: Capsule())
-          .padding(3 * u)
-      }
-    }
+    .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
+    .allowsHitTesting(false)
     .accessibilityHidden(true)
-  }
-
-  @ViewBuilder
-  private var fondFenetre: some View {
-    let fond = style.fond
-    LinearGradient(colors: fond, startPoint: .top, endPoint: .bottom)
-  }
-
-  // MARK: Plaque
-
-  private func plaque(_ u: CGFloat) -> some View {
-    VStack(spacing: 1.2 * u) {
-      Text(nom)
-        .font(Police.taille(8.6 * u, .heavy))
-        .foregroundStyle(encreVignette)
-        .lineLimit(2)
-        .minimumScaleFactor(0.55)
-        .multilineTextAlignment(.center)
-        .fixedSize(horizontal: false, vertical: true)
-      HStack(spacing: 1.6 * u) {
-        MarqueRarete(style: style, taille: 7.5 * u)
-        Text(ligneBasse)
-          .font(Police.taille(6.8 * u, .bold))
-          .foregroundStyle(style == .legendaire ? Color(carte: 0x7A5410) : grisVignette)
-          .lineLimit(1)
-          .minimumScaleFactor(0.6)
-      }
-    }
-    .padding(.horizontal, 5 * u)
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-  }
-
-  /// « 62 cm · rare », ou le seul palier pour une carte déclarée ou sans taille.
-  private var ligneBasse: String {
-    let palier = style.mot
-    guard !declaree, let carte = emplacement.carte, let t = Formats.taille(carte) else {
-      return palier
-    }
-    return "\(t) · \(palier)"
   }
 }
 

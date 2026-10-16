@@ -2,8 +2,9 @@ import Core
 import SwiftUI
 import UIKit
 
-/// Le verso de toute carte (prise réelle, déclarée, exemple, sans photo) : la photo de la prise (sinon l'espèce), puis où (département ou
-/// lieu flou, jamais de coordonnées), quand, la taille et le poids estimé si connus, la consigne et sa source. Une valeur absente est omise.
+/// Le verso de toute carte : la photo de la prise seule, plein cadre, sans aucun texte, bandeau ni pastille (décision d'Adem).
+/// Sans photo (carte déclarée, ancienne carte, exemple), le dessin de l'espèce en grand sur le fond de sa rareté, toujours sans texte.
+/// Le lieu, la date, la taille et la consigne se lisent sur le recto ou sous la carte (`FaitsPrise`).
 struct CarteVersoView: View {
     let infos: InfosCarte
     let photo: Data?
@@ -13,32 +14,20 @@ struct CarteVersoView: View {
     private var declaree: Bool { infos.prise.estDeclaree }
 
     var body: some View {
-        // Fond gris clair de la carte (`.fc.verso`) ; tailles en pourcentage de la largeur, comme le recto.
+        // Même cadre, même arrondi et même bordure que le recto ; le gris clair ne se voit que si l'image ne couvre pas tout.
         CarteCadre(style: infos.style, declaree: declaree, fond: Color(carte: 0xE9EDEB)) {
             GeometryReader { geo in
-                let u = geo.size.width / 100
-                VStack(spacing: 0) {
-                    fondPhoto(u)
-                        .frame(width: geo.size.width - 5.2 * u, height: 66 * u)
-                        .clipShape(RoundedRectangle(cornerRadius: 4 * u, style: .continuous))
-                        .padding(.top, 2.6 * u)
-                    infosPrise(u)
-                        .padding(.horizontal, 5.5 * u)
-                        .padding(.top, 3.4 * u)
-                        .padding(.bottom, 4.6 * u)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                        .clipped()
-                }
-                .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
+                fond(geo.size)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .clipped()
             }
         }
-        .accessibilityElement(children: .contain)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(photo == nil ? "Verso de la carte, \(infos.espece.nom)" : "Photo de la prise, \(infos.espece.nom)")
     }
 
-    // MARK: Photo
-
     @ViewBuilder
-    private func fondPhoto(_ u: CGFloat) -> some View {
+    private func fond(_ taille: CGSize) -> some View {
         if let photo, let image = UIImage(data: photo) {
             Color.clear.overlay {
                 Image(uiImage: image)
@@ -46,89 +35,19 @@ struct CarteVersoView: View {
                     .scaledToFill()
             }
             .clipped()
-            .accessibilityLabel("Photo de la prise")
         } else {
             ZStack {
-                LinearGradient(colors: infos.style.fond, startPoint: .top, endPoint: .bottom).opacity(0.5)
-                VStack(spacing: 2 * u) {
-                    if let poisson = UIImage(named: infos.espece.image) {
-                        Image(uiImage: poisson)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 60 * u, height: 30 * u)
-                            .saturation(declaree ? 0.55 : 1)
-                            .accessibilityHidden(true)
-                    }
-                    Text(declaree ? "Carte déclarée : pas de photo" : "Pas de photo")
-                        .font(Police.taille(4.4 * u, .heavy))
-                        .foregroundStyle(Palette.encreDouce)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.6)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 4 * u)
+                LinearGradient(colors: infos.style.fond, startPoint: .top, endPoint: .bottom)
+                if let poisson = UIImage(named: infos.espece.image) {
+                    Image(uiImage: poisson)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: taille.width * 0.88)
+                        .saturation(declaree ? 0.55 : 1)
+                        .shadow(color: .black.opacity(0.3), radius: taille.width * 0.01, x: -taille.width * 0.015, y: taille.width * 0.025)
+                        .rotationEffect(.degrees(-12))
                 }
             }
-        }
-    }
-
-    // MARK: Infos
-
-    /// Le lieu flou tel qu'enregistré (« La Marne · 94 »), sinon le département ; jamais un point exact.
-    private var lieu: String? {
-        if let flou = infos.prise.lieuFlou, !flou.isEmpty { return flou }
-        return infos.departement.map { "Département \($0.code)" }
-    }
-
-    private func infosPrise(_ u: CGFloat) -> some View {
-        let encre = Color(carte: 0x0F1A1C)
-        let gris = Color(carte: 0x5B6A6E)
-        return VStack(alignment: .leading, spacing: 1.8 * u) {
-            Text(infos.espece.nom)
-                .font(Police.taille(5.6 * u, .black))
-                .foregroundStyle(encre)
-                .lineLimit(2)
-                .minimumScaleFactor(0.6)
-            if declaree {
-                Text("Tu l'as déjà pêché : cette carte n'a ni photo, ni taille, ni date.")
-                    .font(Police.taille(3.6 * u, .bold))
-                    .foregroundStyle(gris)
-                    .lineLimit(3)
-                    .minimumScaleFactor(0.7)
-            } else {
-                ligne("mappin.and.ellipse", lieu ?? "Lieu non renseigné", u: u)
-                ligne(
-                    "calendar", "\(Formats.date(infos.prise.date)) · \(Formats.heure(infos.prise.date))", u: u
-                )
-                if let taille = Formats.taille(infos.prise) {
-                    ligne(
-                        "ruler",
-                        [taille, Formats.poids(infos.poids)].compactMap { $0 }.joined(separator: " · "), u: u)
-                }
-                if let consigne = infos.consigne {
-                    Text(consigne + (infos.sourceConsigne.map { " (source : \($0))" } ?? ""))
-                        .font(Police.taille(3 * u, .semibold))
-                        .foregroundStyle(gris)
-                        .lineLimit(3)
-                        .minimumScaleFactor(0.7)
-                        .padding(.top, 0.6 * u)
-                }
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
-
-    private func ligne(_ icone: String, _ texte: String, u: CGFloat) -> some View {
-        HStack(spacing: 2 * u) {
-            Image(systemName: icone)
-                .font(Police.taille(3.6 * u))
-                .foregroundStyle(Palette.marine)
-                .frame(width: 4.6 * u)
-                .accessibilityHidden(true)
-            Text(texte)
-                .font(Police.taille(3.8 * u, .bold))
-                .foregroundStyle(Color(carte: 0x0F1A1C))
-                .lineLimit(1)
-                .minimumScaleFactor(0.6)
         }
     }
 }

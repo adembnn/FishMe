@@ -45,11 +45,12 @@ struct PositionRefuseeTests {
 
     // MARK: Choix de zone
 
-    @Test func unRefusOuvreLeChoixDeZone() {
+    @Test func unRefusOuvreLaCarteSurLaZoneParDefaut() {
         let modele = ModeleCarte(services: .faux())
         modele.appliquer(position: nil, refusee: true)
-        #expect(modele.depart == .choixDeZone)
-        #expect(modele.afficherChoixDeZone)
+        #expect(modele.cameraPlacee)
+        #expect(!modele.afficherChoixDeZone)
+        #expect(modele.message == nil)
     }
 
     @Test func laZoneChoisieDonneUnSpotSansGPS() async {

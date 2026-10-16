@@ -511,7 +511,7 @@ struct PescedexView: View {
                 ficheOuverte = e.id
             }
         } label: {
-            VignetteCarteObtenue(emplacement: e) { carte in await modele.depot.photo(de: carte) }
+            VignetteCarteObtenue(emplacement: e, zone: modele.zone)
         }
         .buttonStyle(.plain)
         .accessibilityLabel(libelle(e))
