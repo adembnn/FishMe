@@ -34,6 +34,13 @@ struct VueCarte: View {
     /// Vrai quand la racine demande le choix de zone (« Choisir sur la carte » de « Où pêches-tu ? ») :
     /// la feuille s'ouvre, et sa fermeture repasse par `surChoixDeZone(false)`.
     let demandeChoixDeZone: Bool
+    /// Vrai quand la racine demande le « vol vers le spot » (« Voir mon spot » du swipe) : la caméra passe de la zone
+    /// au cercle de 1 km, une bulle dit la distance, puis la feuille « Ton spot » monte. Une seule fois (`volFait`).
+    let volVersLeSpot: Bool
+    @AppStorage("carte.volVersLeSpotFait") private var volFait = false
+    @State private var demandeVol = 0
+    @State private var bulleSpot = false
+    @State private var feuilleSpotMasquee = false
     @State private var afficherOuChercher = false
     /// Faux : on arrive sur « Ton spot » (maquette P06 C). Vrai : la carte, ouverte d'un toucher sur le bouton carte.
     @State private var afficherCarte = false
@@ -52,7 +59,8 @@ struct VueCarte: View {
          onSpotChange: @escaping (Spot) -> Void = { _ in },
          ouChercher: ((Coordonnee) -> AnyView)? = nil,
          surChoixDeZone: @escaping (Bool) -> Void = { _ in },
-         demandeChoixDeZone: Bool = false) {
+         demandeChoixDeZone: Bool = false,
+         volVersLeSpot: Bool = false) {
         _modele = State(initialValue: ModeleCarte(services: services))
         self.spotFixe = spotFixe
         self.sessionsTerminees = sessionsTerminees
@@ -66,6 +74,7 @@ struct VueCarte: View {
         self.ouChercher = ouChercher
         self.surChoixDeZone = surChoixDeZone
         self.demandeChoixDeZone = demandeChoixDeZone
+        self.volVersLeSpot = volVersLeSpot
     }
 
     var body: some View {
@@ -86,6 +95,59 @@ struct VueCarte: View {
         .task {
             for await connecte in fluxReseauCarte() { reseauDisponible = connecte }
         }
+        .onChange(of: volVersLeSpot) { _, demande in
+            if demande && !volFait { demandeVol += 1 }
+        }
+        .task(id: demandeVol) { await volerVersLeSpot() }
+    }
+
+    // MARK: Vol vers le spot (parcours du 16 oct.)
+
+    /// La carte s'ouvre sur la zone, la caméra vole ~2 s jusqu'au cercle de 1 km, la bulle dit la distance, la feuille monte.
+    private func volerVersLeSpot() async {
+        guard demandeVol > 0, !volFait else { return }
+        feuilleSpotMasquee = true
+        defer { feuilleSpotMasquee = false }
+        afficherCarte = true
+        // Le spot proposé arrive de Core : on l'attend 3 s au plus.
+        var essais = 0
+        while modele.spotAffiche == nil && essais < 30 {
+            try? await Task.sleep(for: .milliseconds(100))
+            essais += 1
+        }
+        try? await Task.sleep(for: .milliseconds(600))
+        guard !Task.isCancelled else { return }
+        guard let spot = modele.spotAffiche else { volFait = true; return }
+        let but = MapCamera(centerCoordinate: Self.cl(spot.centre), distance: 3500)
+        withAnimation(.easeInOut(duration: 2)) { modele.camera = .camera(but) }
+        try? await Task.sleep(for: .milliseconds(2200))
+        guard !Task.isCancelled else { return }
+        volFait = true
+        bulleSpot = true
+        withAnimation(.spring) { feuilleSpotMasquee = false }
+        try? await Task.sleep(for: .seconds(6))
+        withAnimation { bulleSpot = false }
+    }
+
+    /// « Ton spot, à 2,3 km. Touche la rivière pour le déplacer » ; sans position, sans distance.
+    private var texteBulleSpot: String {
+        let debut: String = distanceAuSpot.map { "Ton spot, à \($0)." } ?? "Ton spot."
+        return modele.peutChangerDeSpot ? debut + " Touche la rivière pour le déplacer" : debut
+    }
+
+    private var bulleDuSpot: some View {
+        Text(texteBulleSpot)
+            .font(Police.detail)
+            .foregroundStyle(Palette.encre)
+            .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
+            .padding(.horizontal, Espace.l)
+            .padding(.vertical, Espace.s)
+            .background(.regularMaterial, in: Capsule())
+            .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
+            .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
+            .onTapGesture { withAnimation { bulleSpot = false } }
+            .transition(.opacity.combined(with: .move(edge: .bottom)))
     }
 
     // MARK: La carte
@@ -650,9 +712,13 @@ struct VueCarte: View {
 
     private var bas: some View {
         VStack(spacing: 8) {
+            if bulleSpot {
+                bulleDuSpot
+            }
             bandeauSession
-            if !sessionEnCours {
+            if !sessionEnCours && !feuilleSpotMasquee {
                 feuilleSpotCarte
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
         .padding(.horizontal, 8)
