@@ -1,6 +1,6 @@
 # Fonctions promises par la fiche, à cocher sur le build (porte 3)
 
-La fiche, les notes et les captures ne promettent que ce qui est coché ici, vu sur l'iPhone dans le build TestFlight de la porte 3 (L0 + 4 h). Liste de départ : E1 à E9 de `docs/parcours-demo.md` et les décisions d'Adem du 15 oct. après-midi (`CLAUDE.md`). Rien n'est coupé d'avance (Adem, 15 oct. 14h42) ; une ligne non cochée à la porte 3 sort de `fiche-fishme.md`, de `notes-relecteur-en.md` et des captures. Qui coche : A ou B, à l'écran ; Adem valide la liste.
+La fiche, les notes et les captures ne promettent que ce qui est coché ici, vu sur l'iPhone dans le build TestFlight de la porte 3 (L0 + 4 h). Liste de départ : E1 à E9 de `docs/parcours-demo.md` et les décisions d'Adem du 15 oct. après-midi (`CLAUDE.md`), plus, depuis le 16 oct., Amis, le widget « Mon aquarium » et l'écran verrouillé (une seule soumission, décision d'Adem ; code lu sur `mac/integration`, lignes citées dans `fiche-fishme.md`, « Qui prouve quoi »). Rien n'est coupé d'avance (Adem, 15 oct. 14h42) ; une ligne non cochée à la porte 3 sort de `fiche-fishme.md`, de `notes-relecteur-en.md` et des captures. Qui coche : A ou B, à l'écran ; Adem valide la liste.
 
 | Vu | Fonction | Étape, lot | Phrase de la fiche qui en dépend |
 |---|---|---|---|
@@ -26,5 +26,16 @@ La fiche, les notes et les captures ne promettent que ce qui est coché ici, vu 
 | [ ] | Météo du jour et niveau de l'eau sur son spot, avec Apple Weather | E2, L12 | GRATUIT ; « Météo : Apple Weather » |
 | [ ] | Pro : 7 jours, courbe de 48 h, « Préviens-moi », tous les conseils, « Tes conditions » | E2, E6, E7, L12, D4 | FISHME PRO, une fonction par fonction |
 | [ ] | Consentement avant Spark Flash, refus = SDK éteint | L6 | notes, EXTERNAL SERVICES |
+| [ ] | Amis : « Mes amis » dans Mon club, invitation par le partage Apple (`ShareLink`), l'ami voit la collection en lecture seule, « Inviter en retour » | L8, `RootView.swift:619`, `AmisView.swift:133` | AMIS, 1re ligne |
+| [ ] | Amis : lieu d'une carte limité au département, image sans GPS, rien en public | L8, `ConstructeurCartes.swift:20-26` | AMIS, 2e ligne |
+| [ ] | Amis : supprimer ses cartes partagées, signaler une carte | L8, `AmisView.swift:204`, `PescedexAmiView.swift:107` | AMIS, 2e ligne |
+| [ ] | Amis : marche par iCloud, message clair si iCloud est absent, aucun compte FishMe | L8, `AmisView.swift:86` | AMIS, 3e ligne ; RESPECTUEUX |
+| [ ] | Écran verrouillé et Dynamic Island pendant une session : compte à rebours jusqu'à la fin légale, nombre de prises, sans nom de coin | L10, `SessionLiveActivity.swift:61` | ÉCRAN VERROUILLÉ ET WIDGET, 1re ligne |
+| [ ] | Widget « Mon aquarium » : petit sur l'écran d'accueil (gratuit), état vide sans faux poisson | L15, `AquariumWidget.swift:36` | ÉCRAN VERROUILLÉ ET WIDGET, 2e ligne ; GRATUIT |
+| [ ] | Widget « Mon aquarium » moyen, grand, très grand : verrouillé (flou et pastille Pro) sans abonnement, ouvre le paywall | L15, `VuesAquariumWidget.swift:301-308`, `RootView.swift:244` | FISHME PRO, dernière ligne |
 
-Hors de la version soumise (jamais dans la fiche) : amis, aquarium, écran verrouillé, coins publics, tronçons, téléchargement des règles.
+Hors de la version soumise (jamais dans la fiche) : coins publics, tronçons, téléchargement des règles, aquarium dans l'app (bouton « Voir mon aquarium » absent, `RootView.swift:239`), widget « Ma carte » (sur `lot/widget-aquarium`, pas dans `mac/integration`), collections visibles en public.
+
+Si une ligne Amis, écran verrouillé ou widget n'est pas cochée à la porte 3, on retire la section correspondante de la description (AMIS, ÉCRAN VERROUILLÉ ET WIDGET), la ligne « Gratuit » ou « Pro » qui la cite, la phrase des Nouveautés et la phrase du texte promo.
+
+Points à décider par Adem : le paywall (`TextesPaywall.gratuit` / `.pro`) ne cite ni Amis ni les widgets ; la description dit Amis gratuit, petit widget gratuit, grands widgets Pro, parce que c'est ce que fait le code.
