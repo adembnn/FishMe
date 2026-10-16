@@ -26,7 +26,7 @@ struct PriseRacineView: View {
         // Une croix « Fermer » sur chaque étape après la photo (la photo et le résultat ont déjà la leur).
         .overlay(alignment: .topTrailing) {
             if croixDuRacine {
-                PriseBoutonRond(symbole: "xmark", etiquette: "Fermer", action: { modele.terminer(nil) })
+                BoutonRond(role: .fermer, rendu: .verre, action: { modele.terminer(nil) })
                     .padding(Espace.bord)
             }
         }
@@ -98,7 +98,7 @@ struct PriseEtapePhoto: View {
     private var permission: some View {
         VStack(spacing: Espace.l) {
             HStack {
-                PriseBoutonRond(symbole: "xmark", etiquette: "Fermer", action: fermer)
+                BoutonRond(role: .fermer, rendu: .verre, action: fermer)
                 Spacer()
             }
             Spacer(minLength: 0)
@@ -156,7 +156,7 @@ struct PriseEtapePhoto: View {
                 .accessibilityHidden(true)
             VStack(spacing: Espace.s) {
                 HStack {
-                    PriseBoutonRond(symbole: "xmark", etiquette: "Fermer", action: fermer)
+                    BoutonRond(role: .fermer, rendu: .verre, action: fermer)
                     Spacer()
                 }
                 Spacer(minLength: 0)
