@@ -500,6 +500,7 @@ struct RootView: View {
                 BandeauSession(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() }) {
                     LigneSessionEmplacement(app: app)
                 }),
+            sessionEnCours: app.moteur.enCours != nil,
             emplacementMaintenant: { coordonnee in AnyView(ConditionsEmplacement(app: app, coordonnee: coordonnee)) },
             emplacementConseil: { espece in AnyView(ConseilEmplacement(app: app, espece: espece)) },
             onCommencerSession: { spot in app.commencer(spot) },
