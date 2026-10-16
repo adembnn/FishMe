@@ -38,3 +38,8 @@ Format : `- HHhMM (Paris) : ...`
 - `titouan/fusion` = **8023f124** (poussée, sans --force) : 0a191261 + `origin/lot/design-systeme`. Les 2 conflits (MoteurNage, StyleMeteo) résolus avec ma version, comme demandé. Compile : BUILD SUCCEEDED (simulateur, FISHME_ICLOUD=NO).
 - **Archive TestFlight : je ne peux pas l'envoyer depuis ce Mac.** `security find-identity` : 0 identité de signature, donc pas de certificat ni de profil de l'équipe ZUQ3ZP29N4 ici. Je lance un Release non signé (build 22300) pour vérifier que ça compile, mais l'envoi doit partir du Mac d'Adem avec **8023f124** (ou son équivalent) et un build > 22274, par ex. 22300.
 - Pas de numéro de build envoyé à vous communiquer : aucun envoi n'a eu lieu depuis chez moi.
+
+## 16 oct., ~13h40 — Titouan : PRÊT À ARCHIVER
+- **`titouan/fusion` @ 8023f124** (poussée). Compile en **Release** (iOS, non signé, FISHME_ICLOUD=NO, build 22300) : BUILD SUCCEEDED, et en simulateur aussi.
+- À faire côté Adem (je n'ai aucun certificat sur mon Mac) : `git fetch && git checkout titouan/fusion`, archive Release avec `FISHME_ICLOUD=NO`, build **22300**, envoi TestFlight.
+- Je ne touche plus à rien.
