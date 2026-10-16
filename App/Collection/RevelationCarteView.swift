@@ -32,11 +32,12 @@ struct RevelationCarteView: View {
 
     var body: some View {
         ZStack {
-            Palette.fond.ignoresSafeArea()
-            VStack(spacing: 14) {
-                Spacer(minLength: 24)
+            // P43 C : fond blanc (la surface du système, sombre en mode sombre), la carte grande, la rareté en grand.
+            Palette.surface.ignoresSafeArea()
+            VStack(spacing: Espace.l) {
+                Spacer(minLength: Espace.xl)
                 carte
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, Espace.xl)
                     .rotation3DEffect(.degrees(reduireAnimations ? 0 : angle), axis: (x: 0, y: 1, z: 0), perspective: 0.6)
                 rarete
                     .opacity(face == .cachee ? 0 : 1)
@@ -45,7 +46,7 @@ struct RevelationCarteView: View {
                     Text("Ranger dans le Pescedex")
                 }
                 .buttonStyle(.principal)
-                .padding(.horizontal, 20)
+                .padding(.horizontal, Espace.bord)
                 .opacity(boutonVisible ? 1 : 0)
                 .disabled(!boutonVisible)
                 .accessibilityHidden(!boutonVisible)
@@ -100,14 +101,18 @@ struct RevelationCarteView: View {
     }
 
     private var rarete: some View {
-        HStack(spacing: 10) {
-            BadgeRarete(style: style, taille: 32)
-            if style != .nonMesuree {
-                PointsRarete(style: style, taille: 10)
+        VStack(spacing: Espace.s) {
+            HStack(spacing: Espace.m) {
+                BadgeRarete(style: style, taille: 44)
+                Text(style.mot.capitalized)
+                    .font(Police.taille(34, .heavy))
+                    .minimumScaleFactor(0.7)
+                    .lineLimit(1)
+                    .foregroundStyle(style.couleur)
             }
-            Text(style.mot.capitalized)
-                .font(Jeton.police(19))
-                .foregroundStyle(style.couleur)
+            if style != .nonMesuree {
+                PointsRarete(style: style, taille: 12)
+            }
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Rareté : \(style.mot)")
