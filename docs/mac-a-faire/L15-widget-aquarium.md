@@ -31,3 +31,13 @@ Fusion : dans la version soumise (tout d'un coup), juste après L10. Sans L14, l
 Points à vérifier à la compilation (écrits sans Mac) : `.widgetAccentedRenderingMode(.desaturated)` sur `Image` ;
 `#Preview(as:) timeline:` avec deux entrées ; `openAppWhenRun` encore valide en iOS 27 ; `nonisolated` sur l'intent
 (les retirer si le compilateur râle) ; symbole `circle.grid.2x2.fill` ; `.accessoryInline` cité pour rien dans `FondEau`.
+
+## Voir les widgets en images
+
+Pour montrer les widgets à Adem sans passer par la galerie : `AppTests/WidgetRendu/RenduWidgetsTests.swift` les rend en PNG avec `ImageRenderer` (14 images, échelle 3, dans `reports/ecrans/L15/`).
+
+1. Mettre aussi les fichiers de vues de `WidgetAquarium/` (vues, entrées, exemples de rendu) dans la cible BuildChallenge : WidgetKit s'importe sans problème dans une app, et le test fait `@testable import BuildChallenge`. Les exemples `exempleRendu` n'existent qu'en DEBUG.
+2. Lancer : `xcodebuild test -scheme BuildChallenge -destination 'platform=iOS Simulator,name=iPhone 17' -only-testing:BuildChallengeTests/RenduWidgetsTests` (cible de test `BuildChallengeTests`, déjà dans le projet ; adapter le nom du simulateur).
+3. Puis `git add reports/ecrans/L15 && git push`.
+
+Limite connue d'`ImageRenderer` : `Button(intent:)`, `widgetURL` et `containerBackground` sont sans effet hors widget, c'est voulu (d'où `fondVisible: true`). Les accessoires sont posés sur un fond gris foncé (#1C2A33) en mode sombre : c'est une simulation de l'écran verrouillé, pas un rendu exact. Les images de poissons viennent du catalogue de l'app hôte des tests.
