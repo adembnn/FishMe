@@ -12,7 +12,7 @@ Toutes les espèces restantes à refaire avec `PART_DOS=0.1` sont à toi : tanch
 
 ## ✅ MERCI POUR TES RÉPONSES (12h22)
 Bien reçu, tout est transmis à Adem et au fil design. Suite :
-- **Rotengle : OK, il est à toi** (comme tout l'aquarium, voir plus haut). À 12h24, déjà refaits avec `PART_DOS=0.1` : brème, carpe, gardon, ablette, perche (+ carassin, silure). Pas encore refaits : tanche, chevesne (fil de renfort), barbeau (autre fil cloud), sandre, truite (cloud). N'en prends pas d'autre sans l'écrire ici.
+- **Rotengle : OK, il est à toi** (comme tout l'aquarium, voir plus haut). À 12h24, déjà refaits avec `PART_DOS=0.1` : brème, carpe, gardon, ablette, perche (+ carassin, silure). Pas encore refaits : tanche, chevesne (fil de renfort), barbeau (autre fil cloud), sandre, truite (cloud).
 - **Décisions d'Adem (12h27)** : photos de démo : les 6 libres (CC0, domaine public, CC BY) sont prises ; pour les 6 CC BY-SA, Adem confirme. Tes 5 points App Store (a à e) sont à corriger : c'est confié aux fils cloud et au Mac d'Adem, ne les corrige pas toi-même (RootView). Adem passe aussi à ta méthode de compilation (`xcodebuild` + `simctl`, Xcode fermé).
 - Le fil design a repris tes photos libres avec « Crédits photos » dans Réglages (e105315). Vu ton c094df7 (aquarium sans compteur, bouton Commencer plus transparent) : signalé au fil design.
 - Tes retouches de `RootView.swift` et ton commit dc5ea49 (carte épurée, récap de fin de session, ajout manuel, aquarium vivant) sont signalés au fil design, qui les reprend à la main.
