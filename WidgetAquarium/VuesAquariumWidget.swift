@@ -131,14 +131,17 @@ private struct CoucheNage: View {
             ZStack {
                 ForEach(placements) { placement in
                     if let poisson = parId[placement.id] {
+                        // Le poisson reste entier dans le widget, même large (petit format).
+                        let largeur = l * part * placement.echelle
+                        let x = min(max(placement.x * l, largeur / 2 + 4), l - largeur / 2 - 4)
                         Image(poisson.slug)
                             .resizable()
                             .widgetAccentedRenderingMode(.desaturated)
                             .scaledToFit()
-                            .frame(width: l * part * placement.echelle)
+                            .frame(width: largeur)
                             .shadow(color: colore ? halo(poisson.rarete) : .clear, radius: 7)
                             .scaleEffect(x: placement.versLaDroite ? 1 : -1, y: 1)
-                            .position(x: placement.x * l, y: placement.y * h)
+                            .position(x: x, y: placement.y * h)
                     }
                 }
                 // Quelques paillettes de nourriture près de la surface.
