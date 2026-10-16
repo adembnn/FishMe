@@ -14,7 +14,7 @@ private func grandTitre(_ texte: String) -> some View {
 }
 
 /// En-tête de groupe (`.entete-groupe` : 13 pt, 800, majuscules, interlettrage 0,04 em, décalé de 16).
-private func enteteDeGroupe(_ texte: String, haut: CGFloat = 8) -> some View {
+func enteteDeGroupe(_ texte: String, haut: CGFloat = 8) -> some View {
     Text(texte.uppercased())
         .font(Police.legende)
         .tracking(0.52)
@@ -42,6 +42,9 @@ struct PescedexView: View {
     var declarer: (() -> Void)? = nil
     /// Choix « Amis » du sélecteur. À brancher : RootView (`app.onglet = .club`). Tant que c'est `nil`, le choix revient sur « Les miens ».
     var voirAmis: (() -> Void)? = nil
+    /// Les meilleurs conseils par type (appât, hameçon, technique, moment) pour une espèce et le niveau du pêcheur, déjà filtrés
+    /// par l'abonnement. À brancher : RootView (voir `ContexteConseils.parType`). Tant que c'est `nil`, la fiche garde « comment la pêcher ».
+    var conseilsParType: ((Espece, NiveauPecheur) -> [TypeConseil: Conseil])? = nil
     /// « Changer » sur la ligne de la zone (P48 B). À brancher : RootView (choix d'une autre zone). Tant que c'est `nil`, la ligne n'a ni « Changer » ni chevron.
     var changerZone: (() -> Void)? = nil
     /// « Importer une photo » : enregistre la carte (photo brute, espèce, taille en cm, date, lieu flou), recharge le Pescedex
@@ -82,7 +85,7 @@ struct PescedexView: View {
                 if let emplacement = modele.emplacements.first(where: { $0.id == id }) {
                     FicheEspeceView(emplacement: emplacement, zone: modele.zone, emplacements: emplacements_,
                                     infos: emplacement.carte?.estDeclaree == true ? modele.infos(pour: emplacement) : nil,
-                                    pecherEnPhoto: pecherEnPhoto, aEssayer: aEssayer)
+                                    pecherEnPhoto: pecherEnPhoto, aEssayer: aEssayer, conseilsParType: conseilsParType)
                 }
             }
         }
@@ -213,13 +216,26 @@ struct PescedexView: View {
         let c = modele.compteur
         if estVide {
             if modele.zone != nil, c.releveesDansLaZone > 0 {
-                return "Tu n'as pas encore trouvé les \(c.releveesDansLaZone) espèces de la zone"
+                return phraseAvecNom("Tu n'as pas encore trouvé les \(c.releveesDansLaZone) espèces de la zone") ?? ""
             }
             return PescedexVide.texte
         }
         // Avec le bloc de zone (P48 B), la phrase est sous la barre : pas de sous-titre.
         if zoneEnCartes { return "" }
-        return c.phraseDeZone ?? c.texte
+        return phraseAvecNom(c.phraseDeZone) ?? c.texte
+    }
+
+    /// Le nom du département en toutes lettres (« Val-de-Marne »). Le nom de l'eau n'existe pas dans le modèle.
+    private var nomDepartement: String? {
+        guard let zone = modele.compteur.zone, !zone.estInconnu else { return nil }
+        return NomsDepartements.nom(code: zone.code)
+    }
+
+    /// « … espèces de la zone » devient « … espèces de la zone (Val-de-Marne) » quand le nom est connu.
+    private func phraseAvecNom(_ phrase: String?) -> String? {
+        guard let phrase else { return nil }
+        guard let nom = nomDepartement else { return phrase }
+        return phrase.replacingOccurrences(of: "de la zone", with: "de la zone (\(nom))")
     }
 
     // MARK: Zone (P48 B)
@@ -238,7 +254,7 @@ struct PescedexView: View {
                 .frame(width: 32)
                 .accessibilityHidden(true)
             // À brancher : le nom de l'eau (« La Marne · 94 ») n'existe pas dans le modèle ; le département seul, jamais un total national.
-            Text(NomDeZone.texte(departement: modele.compteur.zone) ?? "Zone")
+            Text(texteLigneZone)
                 .font(Police.corps)
                 .foregroundStyle(Palette.encre)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -256,6 +272,12 @@ struct PescedexView: View {
         .padding(.vertical, Espace.s)
         .frame(minHeight: 56)
         .contentShape(Rectangle())
+    }
+
+    /// P48 B : « Val-de-Marne · 94 » ; sans nom connu, le code seul (« Département 94 »).
+    private var texteLigneZone: String {
+        if let nom = nomDepartement, let code = modele.compteur.zone?.code { return "\(nom) · \(code)" }
+        return NomDeZone.texte(departement: modele.compteur.zone) ?? "Zone"
     }
 
     private var blocZone: some View {
@@ -693,6 +715,13 @@ struct FicheEspeceView: View {
     var pecherEnPhoto: ((Espece) -> Void)? = nil
     /// Une espèce de la zone pas encore trouvée, pour « À essayer près de toi » (carte déclarée seulement).
     var aEssayer: Emplacement? = nil
+    /// Conseils par type pour « Pour toi » (P27 B) et « À essayer près de toi » (P28 B). `nil` : l'ancien bloc « comment la pêcher ».
+    var conseilsParType: ((Espece, NiveauPecheur) -> [TypeConseil: Conseil])? = nil
+    @AppStorage(ClesConseils.niveau) private var niveauBrut = NiveauPecheur.parDefaut.rawValue
+
+    private func conseils(_ e: Emplacement) -> [TypeConseil: Conseil] {
+        conseilsParType?(e.espece.espece, NiveauPecheur.depuis(niveauBrut)) ?? [:]
+    }
 
     private var style: StyleRarete { StyleRarete(emplacement.rarete.niveau) }
     private var estDeclaree: Bool { emplacement.carte?.estDeclaree == true }
@@ -742,16 +771,12 @@ struct FicheEspeceView: View {
                 }
                 if estDeclaree, let aEssayer {
                     enteteDeGroupe("À essayer près de toi", haut: 22)
-                    ligneAEssayer(aEssayer)
+                    blocAEssayer(aEssayer)
                         .tuileFishMe(rayon: Rayon.m)
                         .padding(.top, Espace.s)
                 }
-                // À brancher : « Où il vit » (cache, eau) : aucune donnée d'habitat n'existe dans le modèle.
-                // « Pour toi » (appât, hameçon, technique, moment) : c'est le bloc « comment la pêcher » de L13, rendu par RootView.
-                if let comment = emplacements.commentLaPecher {
-                    comment(emplacement.espece.espece)
-                        .padding(.top, Espace.m)
-                }
+                // « Où il vit » (cache, eau) : aucune donnée d'habitat n'existe, on garde les relevés OFB ci-dessus.
+                pourToi
             }
             .padding(.horizontal, Espace.bord)
             .padding(.bottom, Espace.xl)
@@ -761,6 +786,34 @@ struct FicheEspeceView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(.visible, for: .navigationBar)
         .toolbarBackground(.hidden, for: .navigationBar)
+    }
+
+    /// P27 B, « Pour toi » : les lignes Appât / Hameçon / Technique / Moment si les conseils sont branchés,
+    /// sinon le bloc « comment la pêcher » de L13 rendu par RootView.
+    @ViewBuilder private var pourToi: some View {
+        let parType = conseils(emplacement)
+        if !parType.isEmpty {
+            BlocPourToi(parType: parType)
+        } else if let comment = emplacements.commentLaPecher {
+            comment(emplacement.espece.espece)
+                .padding(.top, Espace.m)
+        }
+    }
+
+    /// P28 B : dans un seul bloc, la ligne de l'espèce, « Conseil du jour » (l'appât) et « Moment ». Une ligne sans donnée disparaît.
+    private func blocAEssayer(_ e: Emplacement) -> some View {
+        let parType = conseils(e)
+        return VStack(spacing: 0) {
+            ligneAEssayer(e)
+            if let appat = parType[.appat] {
+                Divider().overlay(Palette.filet).padding(.leading, 52)
+                LigneIconeFiche(icone: IconesConseils.parDefaut(.appat), titre: "Conseil du jour", valeur: appat.texte)
+            }
+            if let moment = parType[.moment] {
+                Divider().overlay(Palette.filet).padding(.leading, 52)
+                LigneIconeFiche(icone: IconesConseils.parDefaut(.moment), titre: "Moment", valeur: moment.texte)
+            }
+        }
     }
 
     /// P27 B : le poisson en image (260 × 78), puis le palier à gauche et « 34 % · 10 sur 29 » à droite.
