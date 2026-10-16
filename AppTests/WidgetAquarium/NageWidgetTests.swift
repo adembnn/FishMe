@@ -403,6 +403,18 @@ struct PleineEauTests {
         #expect(loin >= 5 && pres >= 5, "loin \(loin), près \(pres)")
     }
 
+    /// 16 images par battement avec les rendus en volume ; images paires seulement si on plafonne à 8.
+    @Test func seizeImagesParBattement() {
+        #expect(NageWidget.cycleUtilise(disponibles: 16) == (16, 1))
+        #expect(NageWidget.cycleUtilise(disponibles: 16, plafond: 8) == (8, 2))
+        #expect(NageWidget.cycleUtilise(disponibles: 8) == (8, 1))
+        #expect(NageWidget.cycleUtilise(disponibles: 0) == (0, 1))
+        let poses = boucle("brochet").map(\.image)
+        let seize = NageWidget.traversees(id: "p1", slug: "brochet", creneau: 3, nombre: 160, imagesCycle: 16,
+                                          longueur: 0.26, rapport: 170.0 / 364).map(\.image)
+        #expect(seize.allSatisfy { (0..<16).contains($0) } && Set(seize).count > Set(poses).count)
+    }
+
     /// Les vues trois-quarts suivent le sens de la profondeur : vers le fond (1) quand il s'éloigne, vers nous (2).
     @Test func vuesTroisQuarts() {
         var vues = Set<Int>()

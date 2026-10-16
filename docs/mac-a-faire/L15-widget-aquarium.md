@@ -176,6 +176,8 @@ Le widget sait afficher des vues en volume dès qu'elles sont dans `NagePoissons
 - `<slug>-vue-1-0` à `-7` : trois-quarts, tourné de 45° vers le fond (il s'éloigne en allant à droite) ;
 - `<slug>-vue-2-0` à `-7` : trois-quarts, tourné de 45° vers nous (il approche en allant à droite).
 
-Même cycle de queue en 8 images, même cadrage serré (6 px de marge), PNG transparents, 600 px de large au plus.
+Cycle de queue en 16 images (`-0` à `-15`, caméra à 20°, environ 600×200) ; le widget lit encore les anciens
+cycles de 8. Si la mémoire ne suit pas, `NageWidget.imagesParBattementMax = 8` ne garde que les images paires.
+Quand les rendus arrivent, ils remplacent les poissons cartoon (`PoissonsOcean/`). Même cadrage serré (6 px de marge), PNG transparents, 600 px de large au plus.
 Les poses passent en vue 1 ou 2 au-delà de 22,5° du profil (`PoseNage.vue`) ; une vue trois-quarts n'est jamais
 aplatie, seulement retournée vers la gauche. Une espèce sans vues garde le profil aplati.

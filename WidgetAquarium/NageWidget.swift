@@ -359,6 +359,19 @@ nonisolated public enum NageWidget {
         }
     }
 
+    /// Images par battement de queue au plus : 16 avec les rendus en volume. À 8 si la mémoire ou la timeline
+    /// ne suivent pas : on ne garde alors que les images paires.
+    public static let imagesParBattementMax = 16
+
+    /// Combien d'images du battement on montre, et le pas entre deux numéros d'image, pour une espèce qui en a
+    /// `disponibles` (16 pour les rendus en volume, 8 pour les anciens, 0 sans cycle).
+    public static func cycleUtilise(disponibles: Int, plafond: Int = imagesParBattementMax) -> (images: Int, pas: Int) {
+        guard disponibles > 0 else { return (0, 1) }
+        var pas = 1
+        while disponibles / pas > max(plafond, 1), disponibles % (pas * 2) == 0 { pas *= 2 }
+        return (disponibles / pas, pas)
+    }
+
     /// Battements par seconde (nage.js), plafonnés à 3,5 : au-delà, 8 images par seconde ne suivent plus.
     static func frequence(_ v: Double, _ L: Double) -> Double {
         min(0.9 + 2.2 * v / max(L, 1e-6), 3.5)
