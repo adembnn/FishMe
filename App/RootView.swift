@@ -152,7 +152,8 @@ final class ParcoursApp {
     init(chargement: Chargement, configurerMesure: @escaping @MainActor @Sendable () -> Void) {
         let core = chargement.core
         self.core = core
-        servicesCarte = ServicesCarte(geo: core.geo, regles: core.regles, especes: core.especes, session: core.session)
+        servicesCarte = ServicesCarte(geo: core.geo, regles: core.regles, especes: core.especes, session: core.session,
+                                     coinsPublics: core.coins())
         // Reconnaissance : modèle DINOv2 embarqué (App/Prise/Modele), sous 0,4 de confiance la grille des espèces s'ouvre.
         servicesPrise = PriseServices(especes: core.especes, regles: core.regles, identification: IdentificationDino())
         // Si conseils.json ne se charge pas : aucun conseil en vrai, le faux seulement en DEBUG (à vérifier sur le Mac).

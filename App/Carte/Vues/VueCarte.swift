@@ -125,6 +125,7 @@ struct VueCarte: View {
         guard !Task.isCancelled else { return }
         guard let spot = modele.spotAffiche else { volFait = true; return }
         let but = MapCamera(centerCoordinate: Self.cl(spot.centre), distance: 3500)
+        modele.marquerDeplacementProgramme(duree: 4.5)
         withAnimation(.easeInOut(duration: 2)) { modele.camera = .camera(but) }
         try? await Task.sleep(for: .milliseconds(2200))
         guard !Task.isCancelled else { return }
@@ -223,9 +224,20 @@ struct VueCarte: View {
         if let spot = modele.spotAffiche {
             cercleDuSpot(spot)
         }
+        // L'eau d'abord : les stations OFB (poissons relevés) passent par-dessus.
+        ForEach(modele.elementsEau) { (element: ElementCarte) in
+            annotationEau(element)
+        }
         ForEach(modele.elements) { (element: ElementCarte) in
             annotation(element)
         }
+    }
+
+    private func annotationEau(_ element: ElementCarte) -> some MapContent {
+        Annotation("", coordinate: Self.cl(element.coordonnee)) {
+            marqueEau(element)
+        }
+        .annotationTitles(.hidden)
     }
 
     private func cercleDuSpot(_ spot: Spot) -> some MapContent {
@@ -260,6 +272,8 @@ struct VueCarte: View {
     }
 
     private func poserSpot(au point: CGPoint, proxy: MapProxy) {
+        // Le toucher d'une épingle d'eau a déjà posé le cercle, au bon endroit : celui de la carte ne le déplace pas.
+        if modele.toucherEauRecent { return }
         guard let c = proxy.convert(point, from: .local) else { return }
         if let spot = modele.poserSpot(en: Coordonnee(latitude: c.latitude, longitude: c.longitude)) {
             onSpotChange(spot)
@@ -650,6 +664,23 @@ struct VueCarte: View {
         }
     }
 
+    /// Une épingle d'eau (cours d'eau, plan d'eau, coin public) ou un regroupement. Aucun chiffre : l'eau n'est pas un relevé.
+    @ViewBuilder
+    private func marqueEau(_ element: ElementCarte) -> some View {
+        switch element {
+        case .groupe(_, _, let nombre):
+            MarqueGroupeEauView(nombre: nombre) { modele.zoomerSurGroupeEau(element) }
+        case .point(let p):
+            if let spot = modele.spotsEauAffiches[p.id] {
+                MarqueEauView(spot: spot, poseLeSpot: modele.peutChangerDeSpot) { toucherEau(spot) }
+            }
+        }
+    }
+
+    private func toucherEau(_ spot: SpotEau) {
+        if let pose = modele.toucherEau(spot) { onSpotChange(pose) }
+    }
+
     // MARK: Bandeaux du haut
 
     private var haut: some View {
@@ -747,7 +778,9 @@ struct VueCarte: View {
             titreFeuilleCarte
             tuilesFeuilleCarte
                 .padding(.top, 14)
-                .padding(.bottom, 18)
+                .padding(.bottom, legendeSpotPresente ? 8 : 18)
+            legendeSpot
+                .padding(.bottom, legendeSpotPresente ? 14 : 0)
             boutonCommencerCarte
             lienAutreSpotCarte
                 .padding(.top, 4)
@@ -801,6 +834,46 @@ struct VueCarte: View {
         } else {
             // Relevés en cours de lecture : la place des tuiles reste, sans rien inventer.
             Color.clear.frame(height: 52 + 6 + 14)
+        }
+    }
+
+    private var legendeSpotPresente: Bool {
+        modele.spotEauChoisi != nil || apercu?.noteHonnete != nil
+    }
+
+    /// Sous les tuiles : le spot d'eau touché et sa source, puis la vérité sur les relevés (jamais un chiffre sans N ni année).
+    @ViewBuilder
+    private var legendeSpot: some View {
+        if legendeSpotPresente {
+            VStack(spacing: 4) {
+                if let eau = modele.spotEauChoisi {
+                    Label(eau.nom, systemImage: eau.origine.symboleSF)
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encre)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.center)
+                    Text("\(eau.origine.libelle) · source \(eau.origine.source)")
+                        .font(Police.legende)
+                        .foregroundStyle(Palette.encreDouce)
+                }
+                if let apercu, let note = apercu.noteHonnete {
+                    Text(note)
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encreDouce)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                    if let ligne = apercu.vedette, let code = apercu.codeDepartement {
+                        let nom = modele.pechable(ligne.espece)?.nom ?? ligne.espece.id
+                        Text("\(nom) : présent dans le \(code), \(texteVedette(ligne))")
+                            .font(Police.legende)
+                            .foregroundStyle(Palette.encreDouce)
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .accessibilityElement(children: .combine)
         }
     }
 

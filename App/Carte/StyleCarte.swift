@@ -1,10 +1,18 @@
 import SwiftUI
+import UIKit
 import Core
 
 // Les jetons du lot Carte pointent vers App/Style/Style.swift (Palette, Police) : rien de codé en dur ici.
 
 enum CouleursCarte {
     static let accent = Palette.marine
+    /// Les spots d'eau (cours d'eau, plans d'eau) : un aqua à part, pour ne pas les confondre avec les stations OFB (marine).
+    /// Fond sombre en mode clair (texte blanc lisible), fond clair en mode sombre (glyphe `Palette.surMarine`).
+    static let aqua = Color(uiColor: UIColor { traits in
+        traits.userInterfaceStyle == .dark
+            ? UIColor(red: 0.31, green: 0.82, blue: 0.83, alpha: 1)
+            : UIColor(red: 0.03, green: 0.46, blue: 0.54, alpha: 1)
+    })
     static let encreDouce = Palette.encreDouce
     static let filet = Palette.filet
     /// Orange : alertes seulement (espèce fermée, règle non respectée).

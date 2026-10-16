@@ -67,6 +67,16 @@ struct AquariumView: View {
         let creneau: Int
     }
 
+    /// Une boucle de 90 s (le widget boucle sur 10 s) : dans l'app on se pose et on regarde, les poissons passent doucement,
+    /// environ 30 s pour traverser l'écran. Mêmes trajectoires, mêmes poses, juste étalées dans le temps.
+    private static let dureeDeLaBoucle: TimeInterval = 90
+    private static let nombreDePoses = Int(dureeDeLaBoucle) * HorlogeAnimation.imagesParSeconde
+
+    /// Zone sûre du haut de la fenêtre (îlot dynamique, barre d'état) : `geo.safeAreaInsets` vaut 0 quand l'écran l'ignore.
+    private static var hautDeLaFenetre: CGFloat {
+        UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first?.keyWindow?.safeAreaInsets.top ?? 59
+    }
+
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -93,7 +103,10 @@ struct AquariumView: View {
             .overlay(alignment: .topLeading) {
                 BoutonRond(role: .fermer, action: fermer)
                     .padding(.leading, Espace.l)
-                    .padding(.top, geo.safeAreaInsets.top + Espace.s)
+                    // L'écran ignore les zones sûres : on lit celle de la fenêtre pour poser la croix sous l'îlot dynamique.
+                    .padding(.top, max(geo.safeAreaInsets.top, Self.hautDeLaFenetre) + Espace.l)
+                    .contentShape(Rectangle())
+                    .zIndex(10)
             }
             .overlay(alignment: .bottom) {
                 VStack(spacing: Espace.s) {
@@ -109,7 +122,7 @@ struct AquariumView: View {
                         .background(.black.opacity(0.35), in: Capsule())
                 }
                 .padding(.horizontal, Espace.l)
-                .padding(.bottom, geo.safeAreaInsets.bottom + Espace.l)
+                .padding(.bottom, max(geo.safeAreaInsets.bottom, 34) + Espace.l)
             }
         }
         .ignoresSafeArea()
@@ -154,7 +167,7 @@ struct AquariumView: View {
                 cycle: battement.images > 0, pas: battement.pas,
                 angles: battement.images > 0 ? PoissonVivant.anglesDisponibles(poisson.slug) : [],
                 poses: NageWidget.traversees(id: poisson.id, slug: poisson.slug, creneau: creneau,
-                                             nombre: HorlogeAnimation.nombreImages,
+                                             nombre: Self.nombreDePoses, duree: Self.dureeDeLaBoucle,
                                              imagesCycle: max(battement.images, 1), longueur: longueur,
                                              rapport: Double(taille.height / max(taille.width, 1))))
         }
@@ -164,7 +177,8 @@ struct AquariumView: View {
     private func scene(taille: CGSize) -> some View {
         TimelineView(.animation(paused: reduireAnimations)) { contexte in
             let j = reduireAnimations ? 0
-                : HorlogeAnimation.imageVisible(reference: Date(timeIntervalSince1970: 0), a: contexte.date)
+                : Int((contexte.date.timeIntervalSince1970 * Double(HorlogeAnimation.imagesParSeconde)).rounded(.down))
+                    % Self.nombreDePoses
             let l = taille.width, h = taille.height
             // Les poissons du fond d'abord : ceux de devant passent par-dessus.
             let ordre = nageurs.filter { $0.poses.indices.contains(j) }

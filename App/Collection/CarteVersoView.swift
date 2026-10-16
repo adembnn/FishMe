@@ -29,12 +29,7 @@ struct CarteVersoView: View {
     @ViewBuilder
     private func fond(_ taille: CGSize) -> some View {
         if let photo, let image = UIImage(data: photo) {
-            Color.clear.overlay {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFill()
-            }
-            .clipped()
+            PhotoVersoEntiere(image: image)
         } else {
             ZStack {
                 LinearGradient(colors: infos.style.fond, startPoint: .top, endPoint: .bottom)
@@ -170,5 +165,31 @@ struct MarqueAppleWeather: View {
                     .frame(minHeight: Gabarit.zoneTactile)
             }
         }
+    }
+}
+
+
+/// La photo du verso en entier (jamais rognée) : la photo à sa taille, posée sur son propre flou qui remplit le cadre.
+struct PhotoVersoEntiere: View {
+    let image: UIImage
+
+    var body: some View {
+        GeometryReader { geo in
+            ZStack {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .blur(radius: 26)
+                    .overlay(Color.black.opacity(0.15))
+                    .clipped()
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: geo.size.width, height: geo.size.height)
+            }
+            .frame(width: geo.size.width, height: geo.size.height)
+        }
+        .clipped()
     }
 }

@@ -44,6 +44,26 @@ final class ModeleCarte {
 
     var selection: CoinSelectionne?
 
+    // Spots d'eau : cours d'eau (hors ligne), coins publics (hors ligne), plans d'eau (MapKit, en ligne)
+    /// Ce que la carte dessine pour l'eau : épingles et regroupements, vide quand un filtre d'espèce est actif.
+    var elementsEau: [ElementCarte] = []
+    /// Les spots des épingles d'eau affichées, par identifiant.
+    var spotsEauAffiches: [String: SpotEau] = [:]
+    /// Le spot d'eau touché qui a posé le cercle (pour afficher son nom et sa source) ; `nil` si le cercle vient d'ailleurs.
+    var spotEauChoisi: SpotEau?
+    @ObservationIgnored var coursDEau: [SpotEau] = []
+    @ObservationIgnored var lieuxPublics: [SpotEau] = []
+    @ObservationIgnored var lieuxEnLigne: [SpotEau] = []
+    @ObservationIgnored var idsEnLigne: Set<String> = []
+    @ObservationIgnored var tacheEau: Task<Void, Never>?
+    @ObservationIgnored var tacheRechercheEau: Task<Void, Never>?
+    @ObservationIgnored var tacheCoursDEau: Task<Void, Never>?
+    /// Vrai dès que le pêcheur a bougé la carte (ou choisi une zone) : avant, aucune recherche en ligne ne part.
+    @ObservationIgnored var rechercheEnLigneAutorisee = false
+    /// Jusqu'à cet instant, un « fin de mouvement » de la caméra vient du code (position, zone, vol), pas du doigt.
+    @ObservationIgnored var finDeplacementProgramme = Date.distantPast
+    @ObservationIgnored var instantToucherEau = Date.distantPast
+
     @ObservationIgnored private var tacheElements: Task<Void, Never>?
     @ObservationIgnored private var tacheStations: Task<Void, Never>?
     /// Le premier « fin de mouvement » de la caméra est l'affichage initial, pas un geste du pêcheur.
@@ -84,6 +104,8 @@ final class ModeleCarte {
     /// (cache local), on les rafraîchit, et la position (ou la zone choisie) charge sa zone dès qu'elle arrive.
     func demarrer() async {
         placerALOuverture()
+        // Les cours d'eau se lisent en tâche de fond : la carte ne les attend pas.
+        tacheCoursDEau = Task { await chargerCoursDEau() }
         pechables = await lirePechables()
         await restaurerDepuisCache()
     }
@@ -179,6 +201,7 @@ final class ModeleCarte {
 
     /// « Autour de moi » : la carte va sur la position de l'iPhone, même quand un spot est fixé ailleurs.
     func centrerSurMaPosition(_ position: Coordonnee) {
+        rechercheEnLigneAutorisee = true
         appliquer(position: position, refusee: false)
         if case .surLePecheur = depart {
             centrer(ZoneCarte(centre: position, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
@@ -187,6 +210,7 @@ final class ModeleCarte {
 
     /// Le pêcheur a posé sa zone à la main (sans GPS) : département ou commune.
     func choisirZone(_ c: Coordonnee) {
+        rechercheEnLigneAutorisee = true
         if services.geo.departement(de: c).estInconnu {
             depart = .horsDeFrance
             message = "Pas de relevé OFB près de toi : voici Paris et l'Île-de-France."
@@ -202,12 +226,14 @@ final class ModeleCarte {
         afficherChoixDeZone = false
     }
 
-    private func centrer(_ region: ZoneCarte) {
+    func centrer(_ region: ZoneCarte) {
+        marquerDeplacementProgramme()
         cameraPlacee = true
         regionVisible = region
         camera = .region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: region.centre.latitude, longitude: region.centre.longitude),
                                             span: MKCoordinateSpan(latitudeDelta: region.spanLatitude, longitudeDelta: region.spanLongitude)))
         charger(pour: region)
+        recalculerEau(region)
     }
 
     // MARK: Spot gratuit
@@ -219,6 +245,7 @@ final class ModeleCarte {
         Task {
             let spot = await Task.detached { session.spotPropose(coordonnee: c, date: Date()) }.value
             spotLocal = spot
+            spotEauChoisi = nil
             if spot == nil, message == nil { message = "Aucun relevé OFB à proximité." }
         }
     }
@@ -233,6 +260,7 @@ final class ModeleCarte {
         }
         let spot = Spot(centre: c, rayonM: 1000, departement: departement)
         spotLocal = spot
+        spotEauChoisi = nil
         modeChoixDuSpot = false
         return spot
     }
@@ -243,6 +271,9 @@ final class ModeleCarte {
         regionVisible = region
         let premiere = premiereCameraAttendue
         premiereCameraAttendue = false
+        // L'eau suit chaque mouvement : le calcul est local et court. La recherche en ligne attend un vrai geste du pêcheur.
+        recalculerEau(region)
+        declencherRechercheEnLigne(region, affichageInitial: premiere)
         // Affichage initial sans position ni cache : on n'ira pas lire toute la France pour rien.
         if premiere, depart == .enAttente { return }
         // Zone déjà couverte par le dernier chargement : on regroupe seulement (calcul court, hors du fil principal).
@@ -286,6 +317,8 @@ final class ModeleCarte {
             if Task.isCancelled { return }
             elements = calcules
         }
+        // Le filtre d'espèce masque l'eau (elle n'a pas d'espèce relevée) ; sans filtre elle revient.
+        recalculerEau(regionVisible)
     }
 
     // MARK: Sélection

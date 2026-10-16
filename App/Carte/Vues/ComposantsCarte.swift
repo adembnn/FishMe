@@ -94,11 +94,51 @@ nonisolated struct ApercuSpot: Sendable, Equatable {
     var reste: Int
     /// Toujours faux depuis le 16 oct. : la vedette est la plus pêchée, jamais la plus rare.
     var vedetteEstRare: Bool = false
+    /// Vrai quand aucune station OFB n'est à proximité : les espèces sont alors celles du département (rareté de `Core`).
+    var parDepartement: Bool = false
+    /// Le code du département dont viennent les espèces quand `parDepartement` est vrai.
+    var codeDepartement: String? = nil
+    /// Une ligne honnête sous les tuiles (« Pas de relevé OFB ici : espèces du département ») ; `nil` si un relevé existe tout près.
+    var noteHonnete: String? = nil
+}
+
+/// Une station OFB est « à proximité » si elle est à moins de 10 km : c'est le premier rayon de `Core` pour les espèces d'un coin.
+nonisolated enum ProximiteOFB {
+    static let rayonM = 10_000.0
+
+    static func aUneStation(pres c: Coordonnee, services: ServicesCarte) -> Bool {
+        let dLat = rayonM / 111_000
+        let dLon = rayonM / (111_000 * max(0.2, cos(c.latitude * .pi / 180)))
+        let zone = RegionCarte(sudOuest: Coordonnee(latitude: c.latitude - dLat, longitude: c.longitude - dLon),
+                               nordEst: Coordonnee(latitude: c.latitude + dLat, longitude: c.longitude + dLon))
+        return services.especes.stationsDans(zone).contains { distanceMetres($0.coordonnee, c) <= rayonM }
+    }
+
+    /// Les espèces du département, de la plus pêchée à la moins pêchée, avec la rareté de `Core` (nombre de pêches et année du dernier
+    /// relevé). Une espèce sans relevé dans le département (ou sans année) n'est pas listée : aucun chiffre n'est inventé.
+    static func especesDuDepartement(_ departement: Departement, services: ServicesCarte) -> [LigneEspece] {
+        guard !departement.estInconnu else { return [] }
+        return services.especes.especesPechables().compactMap { p -> LigneEspece? in
+            let r = services.especes.rarete(espece: p.espece, departement: departement)
+            guard r.nPeches > 0, let annee = r.anneeDernierReleve else { return nil }
+            return LigneEspece(espece: p.espece, nPeches: r.nPeches, annee: annee, ouverture: nil, rarete: r)
+        }
+        .sorted { ($0.nPeches, $1.espece.id) > ($1.nPeches, $0.espece.id) }
+    }
 }
 
 @concurrent nonisolated func calculerApercuSpot(services: ServicesCarte, spot: Spot, date: Date) async -> ApercuSpot {
     let fiche = await calculerFiche(services: services, coordonnee: spot.centre, choix: nil, espece: nil, date: date)
-    let releves = fiche.especes.filter { $0.releve }
+    var releves = fiche.especes.filter { $0.releve }
+    // Aucune station OFB à proximité : on ne prête pas à ce spot les poissons d'une station lointaine. On dit la vérité, puis on
+    // liste les espèces du département avec la rareté de Core.
+    var parDepartement = false
+    var noteHonnete: String?
+    if !ProximiteOFB.aUneStation(pres: spot.centre, services: services) {
+        parDepartement = true
+        releves = ProximiteOFB.especesDuDepartement(spot.departement, services: services)
+        noteHonnete = releves.isEmpty ? "Pas de relevé OFB ici ni dans le département." : "Pas de relevé OFB ici : espèces du département."
+    }
     // La vedette est toujours l'espèce la plus pêchée de la station (Adem, 16 oct. : l'app ne met jamais
     // un spot en avant pour une espèce rare). Les rares restent visibles dans la liste du spot.
     let vedette = releves.max { $0.nPeches < $1.nPeches }
@@ -116,7 +156,8 @@ nonisolated struct ApercuSpot: Sendable, Equatable {
     case (nil, nil): lieu = "Ton spot"
     }
     return ApercuSpot(lieu: lieu, vedette: vedette, autres: Array(autres.prefix(3)), reste: max(0, autres.count - 3),
-                       vedetteEstRare: vedetteEstRare)
+                       vedetteEstRare: vedetteEstRare, parDepartement: parDepartement,
+                       codeDepartement: spot.departement.estInconnu ? nil : spot.departement.code, noteHonnete: noteHonnete)
 }
 
 /// Bouton rond de 44 pt en verre (carte) : icône encre ou marine.

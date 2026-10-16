@@ -8,14 +8,20 @@ nonisolated struct ServicesCarte: Sendable {
     var especes: any ServiceEspeces
     var session: any ServiceSession
     var stations: any FournisseurStations
+    /// Les spots d'eau (cours d'eau hors ligne, plans d'eau en ligne) : en plus des stations OFB.
+    var spotsEau: any FournisseurSpotsEau
 
+    /// `coinsPublics` : le moteur de coins publics OpenStreetMap de `Core` (`core.coins()`), pour que ces coins deviennent des spots d'eau.
+    /// Sans lui, on regarde si `especes` en est un ; sinon la couche se passe des coins publics.
     init(geo: any ServiceGeo, regles: any ServiceRegles, especes: any ServiceEspeces, session: any ServiceSession,
-         stations: (any FournisseurStations)? = nil) {
+         stations: (any FournisseurStations)? = nil, spotsEau: (any FournisseurSpotsEau)? = nil,
+         coinsPublics: (any ServiceCoinsPublics)? = nil) {
         self.geo = geo
         self.regles = regles
         self.especes = especes
         self.session = session
         self.stations = stations ?? StationsViaCore(especes: especes)
+        self.spotsEau = spotsEau ?? SpotsEauReels(coinsPublics: coinsPublics ?? (especes as? any ServiceCoinsPublics))
     }
 
 #if DEBUG
