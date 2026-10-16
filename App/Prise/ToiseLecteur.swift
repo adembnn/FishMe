@@ -24,7 +24,7 @@ enum ToiseLecteur {
                 let rect = CGRect(x: n.minX * largeur, y: (1 - n.maxY) * hauteur, width: n.width * largeur, height: n.height * hauteur)
                 textes.append(TexteLu(texte: meilleur.string, rect: rect))
             }
-            return ToiseCalibrage.lire(textes)
+            return ToiseCalibrage.lire(textes, taille: CGSize(width: largeur, height: hauteur))
         } catch {
             return nil
         }
