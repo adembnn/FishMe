@@ -8,24 +8,41 @@ import Foundation
 /// et ses champs `modificationResultsByID`, `moreComing`, `changeToken` ; `CKRecordNameZoneWideShare` ; sortie d'un participant par suppression
 /// du `CKShare` de la zone dans `sharedCloudDatabase` (`quitterPartage`) ; concordance entre `ownerName` d'une zone reçue et
 /// `userIdentity.userRecordID.recordName` d'un participant (sinon un ami réciproque apparaît en double).
+/// Le droit iCloud est-il dans cette archive ? Clé Info `FishMeICloud` : « NO » dans les archives de repli sans iCloud
+/// (`scripts/archive-planb.sh sans-icloud…`, réglage `FISHME_ICLOUD=NO`). Absente ou vide : iCloud est là (archive normale).
+nonisolated enum CloudKitPermis {
+    static var actif: Bool {
+        let valeur = (Bundle.main.object(forInfoDictionaryKey: "FishMeICloud") as? String ?? "").uppercased()
+        return !["NO", "0", "FALSE"].contains(valeur)
+    }
+}
+
 actor ServiceAmisCloudKit: ServiceAmis {
-    private let conteneur: CKContainer
+    /// `nil` dans une archive de repli sans iCloud : créer un `CKContainer` sans le droit iCloud fait quitter l'app.
+    private let conteneurPermis: CKContainer?
     private let zone = CKRecordZone.ID(zoneName: "Pescedex", ownerName: CKCurrentUserDefaultName)
     private let dossierTemp: URL
 
     init(configuration: ConfigurationAmis) {
-        self.conteneur = CKContainer(identifier: configuration.conteneur)
+        self.conteneurPermis = CloudKitPermis.actif ? CKContainer(identifier: configuration.conteneur) : nil
         self.dossierTemp = FileManager.default.temporaryDirectory.appendingPathComponent("AmisEnvoi", isDirectory: true)
     }
 
-    private var privee: CKDatabase { conteneur.privateCloudDatabase }
-    private var partagee: CKDatabase { conteneur.sharedCloudDatabase }
+    private var conteneur: CKContainer {
+        get throws {
+            guard let conteneurPermis else { throw ErreurAmis.iCloudIndisponible }
+            return conteneurPermis
+        }
+    }
+    private var privee: CKDatabase { get throws { try conteneur.privateCloudDatabase } }
+    private var partagee: CKDatabase { get throws { try conteneur.sharedCloudDatabase } }
     private var idPartage: CKRecord.ID { CKRecord.ID(recordName: CKRecordNameZoneWideShare, zoneID: zone) }
 
     // MARK: Compte
 
     func etatCompte() async -> EtatCompte {
-        (try? await conteneur.accountStatus()) == .available ? .disponible : .indisponible
+        guard let conteneurPermis else { return .indisponible }
+        return (try? await conteneurPermis.accountStatus()) == .available ? .disponible : .indisponible
     }
 
     // MARK: Mes cartes

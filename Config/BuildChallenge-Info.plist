@@ -29,6 +29,8 @@
 	<string>FishMe centre la carte sur ta position pour te montrer les coins de pêche proches. Ta position reste sur ton iPhone.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>FishMe enregistre l'image de ta carte dans tes photos quand tu le demandes, sans aucune position.</string>
+	<key>FishMeICloud</key>
+	<string>$(FISHME_ICLOUD)</string>
 	<key>ReglesBaseURL</key>
 	<string></string>
 	<key>UIAppFonts</key>
