@@ -50,7 +50,7 @@ struct AquariumWidget: Widget {
             VueAquariumLue(entree: entree)
         }
         .configurationDisplayName("Mon aquarium")
-        .description("Les poissons de ton Pescedex. Appui long, « Modifier le widget », pour choisir ceux qui nagent.")
+        .description("Tes poissons nagent et changent de place au fil de la journée. Appui long pour choisir lesquels.")
         .supportedFamilies([
             .systemSmall, .systemMedium, .systemLarge, .systemExtraLargePortrait,
             .accessoryRectangular, .accessoryCircular,

@@ -362,20 +362,6 @@ struct VueAquariumWidget: View {
                 if verrouille {
                     PastillePro()
                 }
-                if famille == .systemLarge && !verrouille {
-                    // Légende du grand format (maquette P40) : à gauche, sur deux lignes au besoin, sans toucher au bouton nourrir.
-                    Text("Les poissons changent de place au fil de la journée")
-                        .font(.system(size: 13, weight: .bold, design: .rounded))
-                        .foregroundStyle(Color.white.opacity(0.7))
-                        .shadow(color: .black.opacity(0.35), radius: 2)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: 250, alignment: .leading)
-                        .padding(.leading, 14)
-                        .padding(.bottom, 12)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-                        .accessibilityHidden(true)
-                }
                 if avecBouton {
                     BoutonNourrir(rations: instantane.rations)
                         .padding(10)
