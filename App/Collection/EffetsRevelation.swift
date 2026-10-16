@@ -22,9 +22,11 @@ enum CourbesRevelation {
     /// Ressort sous-amorti de 0 vers 1 (z : amortissement, w : pulsation).
     static func ressort(_ u: Double, _ z: Double, _ w: Double) -> Double {
         if u <= 0 { return 0 }
-        let s = (1 - z * z).squareRoot()
-        let wd = w * s
-        return 1 - exp(-z * w * u) * (cos(wd * u) + (z / s) * sin(wd * u))
+        let s: Double = (1 - z * z).squareRoot()
+        let wd: Double = w * s
+        let amorti: Double = exp(-z * w * u)
+        let oscille: Double = cos(wd * u) + (z / s) * sin(wd * u)
+        return 1 - amorti * oscille
     }
 }
 
@@ -270,7 +272,8 @@ struct ChronoRevelation {
                 let env: Double = leg
                     ? (0.32 + 0.68 * us) * (1 - C.sstep((us - 0.9) / 0.1))
                     : pow(sin(Double.pi * us), 0.8)
-                let phase = Double.pi * 2 * tr.cycles * (leg ? us * (0.7 + 0.6 * us) : us)
+                let avance: Double = leg ? us * (0.7 + 0.6 * us) : us
+                let phase: Double = Double.pi * 2 * tr.cycles * avance
                 ang = tr.amplitude * env * sin(phase)
                 sx = ang * 0.22
                 if leg { scl = 1 + 0.028 * C.sstep(us) }
@@ -287,7 +290,8 @@ struct ChronoRevelation {
         let build: Double = leg ? tens * (0.8 + 0.2 * sin(t / 95 * (1 + tens))) : (rare ? tens * 0.55 : 0)
         let repos: Double = forte ? 0.28 : (niveau == .peuCommun ? 0.12 : 0.06)
         let eAura = max(build * (1 - C.sstep(C.prog(t, retourneA, cross))), 0)
-        let auraT = eAura + (t >= retourneA ? C.sstep(C.prog(t, retourneA, retourneB)) * repos + burst * 0.8 : 0)
+        let retour: Double = t >= retourneA ? C.sstep(C.prog(t, retourneA, retourneB)) * repos + burst * 0.8 : 0
+        let auraT: Double = eAura + retour
         e.aura = C.c01(auraT)
         e.lueurBord = build * (1 - C.sstep(C.prog(t, retourneA - 60, retourneA + 140)))
 
@@ -314,7 +318,8 @@ struct ChronoRevelation {
         e.angle = t < retourneA ? 0 : 180 * C.ressort(C.prog(t, retourneA, retourneB), 0.62, 10)
         e.arrive = t >= cross
         e.inclinaison = C.sstep(C.prog(t, retourneB - 200, retourneB + 500))
-        let pop = 1 + 0.075 * sin(Double.pi * milieu) * (niveau == .commun ? 0.6 : 1)
+        let ampleur: Double = niveau == .commun ? 0.6 : 1
+        let pop: Double = 1 + 0.075 * sin(Double.pi * milieu) * ampleur
         e.soulevement = -(sin(Double.pi * milieu) * 1.8)
         e.echelle = scl * pop * pose
         e.ombreFace = (1 - abs(cos(e.angle * Double.pi / 180))) * 0.5
@@ -324,13 +329,16 @@ struct ChronoRevelation {
         // Éclat qui balaie le recto à l'arrivée.
         let sw = C.prog(t, cross - 40, cross + 700)
         e.progressionEclat = sw
-        e.eclat = (sw > 0 && sw < 1) ? sin(Double.pi * sw) * (niveau == .commun ? 0.45 : 0.8) : 0
+        let forceEclat: Double = niveau == .commun ? 0.45 : 0.8
+        e.eclat = (sw > 0 && sw < 1) ? sin(Double.pi * sw) * forceEclat : 0
 
         // Rayons violets (rare) : montent pendant le tremblement, éclatent à l'arrivée.
         if rare {
-            var ray = max(0.34 * tens * (1 - C.sstep(C.prog(t, retourneA, cross))), 0)
-                + (t >= retourneA ? C.sstep(C.prog(t, retourneA, cross)) * 0.3 : 0)
-            ray = max(ray, burst * 1.15) + (t >= cross ? 0.12 * (1 - burst) : 0)
+            let montee: Double = max(0.34 * tens * (1 - C.sstep(C.prog(t, retourneA, cross))), 0)
+            let plus: Double = t >= retourneA ? C.sstep(C.prog(t, retourneA, cross)) * 0.3 : 0
+            var ray: Double = montee + plus
+            let apres: Double = t >= cross ? 0.12 * (1 - burst) : 0
+            ray = max(ray, burst * 1.15) + apres
             e.rayons = C.c01(ray)
             e.rayonsLongueur = 0.9 + 0.55 * max(burst, tens * 0.6)
         } else if leg {
@@ -404,8 +412,9 @@ struct ArtDosCarte: View {
             var x = -2.0
             var premier = true
             while x <= 102 {
-                let y1 = 1.6 + kd * 3.2 + 1.9 * sin(x * 0.17 + kd * 0.36)
-                let y2 = 1.6 + kd * 3.2 + 1.9 * sin(x * 0.17 - kd * 0.36 + 1.2)
+                let base: Double = 1.6 + kd * 3.2
+                let y1: Double = base + 1.9 * sin(x * 0.17 + kd * 0.36)
+                let y2: Double = base + 1.9 * sin(x * 0.17 - kd * 0.36 + 1.2)
                 if premier {
                     vagues1.move(to: CGPoint(x: x, y: y1))
                     vagues2.move(to: CGPoint(x: x, y: y2))
@@ -702,8 +711,9 @@ private func gerbeDeRayons(_ c: inout GraphicsContext, centre: CGPoint, rotation
     c.drawLayer { l in
         l.blendMode = .plusLighter
         for i in 0..<nombre {
-            let a = rotation + Double(i) * Double.pi * 2 / Double(nombre)
-            let w = (i % 2 == 1 ? 0.05 : 0.085) * (0.7 + 0.3 * sin(rotation * 3 + Double(i)))
+            let a: Double = rotation + Double(i) * Double.pi * 2 / Double(nombre)
+            let base: Double = i % 2 == 1 ? 0.05 : 0.085
+            let w: Double = base * (0.7 + 0.3 * sin(rotation * 3 + Double(i)))
             let facteur: CGFloat = i % 3 == 0 ? 1 : (i % 3 == 1 ? 0.78 : 0.6)
             let long = longueur * facteur
             var triangle = Path()
@@ -749,11 +759,13 @@ struct FondRevelation: View {
                     let px = alea.suivant(), py = alea.suivant(), pr = 0.5 + alea.suivant() * 1.3
                     let pa = 0.15 + alea.suivant() * 0.35, pph = alea.suivant() * 6.28, psp = 0.3 + alea.suivant()
                     let scintille = 0.5 + 0.5 * sin(t / 1000 * psp * 2 + pph)
-                    let x = px * taille.width + sin(t / 4000 + pph) * 6 * echelle
-                    let brut = py * taille.height - t / 1000 * 6 * echelle * psp
+                    let derive = CGFloat(sin(t / 4000 + pph)) * 6 * echelle
+                    let x: CGFloat = CGFloat(px) * taille.width + derive
+                    let montee = CGFloat(t / 1000 * psp) * 6 * echelle
+                    let brut: CGFloat = CGFloat(py) * taille.height - montee
                     let y = brut.truncatingRemainder(dividingBy: taille.height)
-                    let yy = y < 0 ? y + taille.height : y
-                    let r = pr * echelle
+                    let yy: CGFloat = y < 0 ? y + taille.height : y
+                    let r: CGFloat = CGFloat(pr) * echelle
                     c.fill(Path(ellipseIn: CGRect(x: x - r, y: yy - r, width: r * 2, height: r * 2)),
                            with: .color(Color(rev: 0xC7DFF3, opacite: pa * scintille)))
                 }
@@ -814,18 +826,23 @@ struct AvantRevelation: View {
             // Éclat de l'arrivée (rare : violet ; légendaire : or).
             if etat.flash > 0.004 && niveau != .commun && niveau != .peuCommun {
                 let leg = niveau == .legendaire
-                let g = leg
-                    ? Gradient(stops: [
+                let g: Gradient
+                if leg {
+                    let arrets: [Gradient.Stop] = [
                         .init(color: Color(rev: 0xFFF8DE, opacite: 1), location: 0),
                         .init(color: Color(rev: 0xFFD678, opacite: 0.78), location: 0.24),
                         .init(color: Color(rev: 0xF0B842, opacite: 0.28), location: 0.52),
                         .init(color: Color(rev: 0xF0B842, opacite: 0), location: 0.78)
-                    ])
-                    : Gradient(stops: [
+                    ]
+                    g = Gradient(stops: arrets)
+                } else {
+                    let arrets: [Gradient.Stop] = [
                         .init(color: Color(rev: 0xECE6FF, opacite: 0.9), location: 0),
                         .init(color: Color(rev: 0x9682FF, opacite: 0.45), location: 0.3),
                         .init(color: Color(rev: 0x7C6BFF, opacite: 0), location: 0.7)
-                    ])
+                    ]
+                    g = Gradient(stops: arrets)
+                }
                 let rayon = max(taille.width, taille.height) * 0.9
                 c.drawLayer { l in
                     l.opacity = min(1, etat.flash)
@@ -845,7 +862,8 @@ struct AvantRevelation: View {
                     let rr = CGFloat(CourbesRevelation.lerp(Double(cw * 0.35), Double(max(taille.width, taille.height) * 0.85),
                                                             CourbesRevelation.eO3(p)))
                     let vif = Color(rev: 0xFFD678, opacite: (1 - p) * (w == 1 ? 0.5 : 0.95))
-                    let epais = max(0.6, (w == 1 ? 5 : 9) * echelle * CGFloat(1 - p))
+                    let base: CGFloat = w == 1 ? 5 : 9
+                    let epais: CGFloat = max(0.6, base * echelle * CGFloat(1 - p))
                     l.stroke(Path(ellipseIn: CGRect(x: centre.x - rr, y: centre.y - rr * 1.04, width: rr * 2, height: rr * 2.08)),
                              with: .color(vif), lineWidth: epais)
                     let rr2 = rr * 0.985
@@ -869,9 +887,11 @@ struct AvantRevelation: View {
                     if age < 0 { continue }
                     let reste = age.truncatingRemainder(dividingBy: vie)
                     let fr = reste / vie
-                    let al = sin(Double.pi * fr) * (0.55 + 0.45 * sin(age / 130 * f + ph))
-                    let x = centre.x + CGFloat(mx0) * cw * 0.6 + CGFloat(sin(age / 1000 * f * 2 + ph) * sw) * echelle
-                    let y = centre.y + ch * CGFloat(my0 - 0.15) - CGFloat(reste / 1000 * v * 1.7) * echelle
+                    let al: Double = sin(Double.pi * fr) * (0.55 + 0.45 * sin(age / 130 * f + ph))
+                    let balance = CGFloat(sin(age / 1000 * f * 2 + ph) * sw) * echelle
+                    let x: CGFloat = centre.x + CGFloat(mx0) * cw * 0.6 + balance
+                    let hauteur = CGFloat(reste / 1000 * v * 1.7) * echelle
+                    let y: CGFloat = centre.y + ch * CGFloat(my0 - 0.15) - hauteur
                     var calque = l
                     lueurDouce(&calque, rgb: (255, 222, 140), x: x, y: y, rayon: CGFloat(r * 3.4) * echelle,
                                alpha: CourbesRevelation.c01(al))

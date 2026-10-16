@@ -21,7 +21,7 @@ struct ChargementBouchon: View {
                     dessiner(&gc, taille: taille, t: t)
                 }
                 // Réduire les animations : bouchon immobile, léger fondu doux.
-                .opacity(reduireAnimations ? 0.75 + 0.25 * sin(t * 2 * .pi / 2.4) : 1)
+                .opacity(reduireAnimations ? Self.respiration(t) : 1)
             }
             .frame(width: taille * 1.9, height: taille * 1.1)
 
@@ -39,15 +39,21 @@ struct ChargementBouchon: View {
         .accessibilityAddTraits(.updatesFrequently)
     }
 
+    /// Opacité douce (0,5 à 1) pour « réduire les animations ».
+    private static func respiration(_ t: Double) -> Double {
+        let onde: Double = sin(t * 2 * Double.pi / 2.4)
+        return 0.75 + 0.25 * onde
+    }
+
     // MARK: Dessin
 
     private func dessiner(_ gc: inout GraphicsContext, taille zone: CGSize, t: Double) {
         let s = taille / 70
         let cx = zone.width / 2
         let eau = zone.height * 0.72
-        let p = reduireAnimations ? 0 : (t / duree).truncatingRemainder(dividingBy: 1)
-        let dy = 3 * (1 - cos(2 * .pi * p))
-        let inclinaison = reduireAnimations ? 0 : 0.075 * sin(2 * .pi * p + 0.5)
+        let p: Double = reduireAnimations ? 0 : (t / duree).truncatingRemainder(dividingBy: 1)
+        let dy: Double = 3 * (1 - cos(2 * Double.pi * p))
+        let inclinaison: Double = reduireAnimations ? 0 : 0.075 * sin(2 * Double.pi * p + 0.5)
         let largeurEau = 56 * s
 
         let ages = reduireAnimations ? [] : agesOndes(t)
@@ -92,8 +98,10 @@ struct ChargementBouchon: View {
             var ligne = Path()
             var x = -largeurEau
             while x <= largeurEau {
-                let y = eau + sin(x * 0.09 - t * 3) * 0.5 * s * (reduireAnimations ? 0 : 1)
-                    + sin(x * 0.21 + t * 2) * 0.3 * s * (reduireAnimations ? 0 : 1)
+                let amplitude: CGFloat = reduireAnimations ? 0 : 1
+                let o1 = CGFloat(sin(Double(x) * 0.09 - t * 3))
+                let o2 = CGFloat(sin(Double(x) * 0.21 + t * 2))
+                let y: CGFloat = eau + o1 * 0.5 * s * amplitude + o2 * 0.3 * s * amplitude
                 if x == -largeurEau { ligne.move(to: CGPoint(x: cx + x, y: y)) } else { ligne.addLine(to: CGPoint(x: cx + x, y: y)) }
                 x += 3
             }
@@ -108,8 +116,8 @@ struct ChargementBouchon: View {
         }
 
         // Ménisque autour du bouchon.
-        let im = 1 - min(1, dy / 6) * 0.2
-        let rx = 12.5 * s * im
+        let im = CGFloat(1 - min(1, dy / 6) * 0.2)
+        let rx: CGFloat = 12.5 * s * im
         var menisque = Path()
         menisque.addArc(center: .zero, radius: 1, startAngle: .zero, endAngle: .degrees(180), clockwise: false)
         menisque = menisque.applying(CGAffineTransform(scaleX: rx, y: 3 * s).concatenating(CGAffineTransform(translationX: cx, y: eau)))
@@ -134,10 +142,12 @@ struct ChargementBouchon: View {
 
     private func ondulation(_ gc: inout GraphicsContext, cx: CGFloat, eau: CGFloat, s: CGFloat, age: Double, devant: Bool) {
         let k = age / 1.5
-        let rx = (9 + 44 * (1 - pow(1 - k, 2.2))) * s
-        let ry = rx * 0.27
-        let alpha = pow(1 - k, 1.7) * 0.5
-        let epaisseur = (1.7 + (0.5 - 1.7) * k) * max(0.9, s * 0.9)
+        let grandit: Double = 9 + 44 * (1 - pow(1 - k, 2.2))
+        let rx: CGFloat = CGFloat(grandit) * s
+        let ry: CGFloat = rx * 0.27
+        let alpha: Double = pow(1 - k, 1.7) * 0.5
+        let finesse: Double = 1.7 + (0.5 - 1.7) * k
+        let epaisseur: CGFloat = CGFloat(finesse) * max(0.9, s * 0.9)
         var demi = Path()
         demi.addArc(center: .zero, radius: 1, startAngle: devant ? .zero : .degrees(180),
                     endAngle: devant ? .degrees(180) : .degrees(360), clockwise: false)
@@ -146,7 +156,7 @@ struct ChargementBouchon: View {
     }
 
     private func placer(_ c: inout GraphicsContext, cx: CGFloat, eau: CGFloat, s: CGFloat, dy: Double, inclinaison: Double) {
-        c.translateBy(x: cx, y: eau - 5 * s + dy * s)
+        c.translateBy(x: cx, y: eau - 5 * s + CGFloat(dy) * s)
         c.rotate(by: .radians(inclinaison))
         c.scaleBy(x: s, y: s)
     }

@@ -56,10 +56,11 @@ struct ChargementSonar: View {
         let angle = depart + tour * phase
 
         // Anneaux de portée.
-        for rayon in [0.14, 0.28, 0.42, 0.56] {
+        let rayons: [CGFloat] = [0.14, 0.28, 0.42, 0.56]
+        for rayon in rayons {
             var anneau = Path()
-            anneau.addEllipse(in: CGRect(x: centre.x - portee * rayon, y: centre.y - portee * rayon,
-                                         width: portee * rayon * 2, height: portee * rayon * 2))
+            let r: CGFloat = portee * rayon
+            anneau.addEllipse(in: CGRect(x: centre.x - r, y: centre.y - r, width: r * 2, height: r * 2))
             gc.stroke(anneau, with: .color(Palette.marine.opacity(0.08)), lineWidth: 1)
         }
 
@@ -80,10 +81,10 @@ struct ChargementSonar: View {
 
             var trait = Path()
             trait.move(to: centre)
-            trait.addLine(to: CGPoint(x: centre.x + cos(angle) * portee, y: centre.y + sin(angle) * portee))
+            let bout = CGPoint(x: centre.x + CGFloat(cos(angle)) * portee, y: centre.y + CGFloat(sin(angle)) * portee)
+            trait.addLine(to: bout)
             let fil = Gradient(colors: [Palette.marine.opacity(0.4), Palette.marine.opacity(0)])
-            gc.stroke(trait, with: .linearGradient(fil, startPoint: centre,
-                                                    endPoint: CGPoint(x: centre.x + cos(angle) * portee, y: centre.y + sin(angle) * portee)),
+            gc.stroke(trait, with: .linearGradient(fil, startPoint: centre, endPoint: bout),
                       style: StrokeStyle(lineWidth: 1.6, lineCap: .round))
         }
 
@@ -91,7 +92,7 @@ struct ChargementSonar: View {
         for point in points {
             let x = point.x * taille.width
             let y = point.y * taille.height
-            let phi = atan2(y - centre.y, x - centre.x)
+            let phi = Double(atan2(Double(y - centre.y), Double(x - centre.x)))
             var tours = (phi - depart).truncatingRemainder(dividingBy: tour)
             if tours < 0 { tours += tour }
             // Temps écoulé depuis le dernier passage du faisceau sur ce point.
@@ -104,7 +105,7 @@ struct ChargementSonar: View {
                 if age < dureeEcho {
                     let q = age / dureeEcho
                     let e = 1 - pow(1 - q, 3)
-                    let r = 6 + 22 * e
+                    let r = CGFloat(6 + 22 * e)
                     var echo = Path()
                     echo.addEllipse(in: CGRect(x: x - r, y: y - r, width: r * 2, height: r * 2))
                     gc.stroke(echo, with: .color(Palette.marine.opacity(0.6 * (1 - q))), lineWidth: 2.4 - 1.8 * q)

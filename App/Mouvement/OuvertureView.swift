@@ -149,8 +149,9 @@ private nonisolated enum Bond {
         for p in segments {
             for i in 0...100 {
                 let t = Double(i) / 100, u = 1 - t
-                let x = u * u * u * p[0].0 + 3 * u * u * t * p[1].0 + 3 * u * t * t * p[2].0 + t * t * t * p[3].0
-                let y = u * u * u * p[0].1 + 3 * u * u * t * p[1].1 + 3 * u * t * t * p[2].1 + t * t * t * p[3].1
+                let c0: Double = u * u * u, c1: Double = 3 * u * u * t, c2: Double = 3 * u * t * t, c3: Double = t * t * t
+                let x: Double = c0 * p[0].0 + c1 * p[1].0 + c2 * p[2].0 + c3 * p[3].0
+                let y: Double = c0 * p[0].1 + c1 * p[1].1 + c2 * p[2].1 + c3 * p[3].1
                 table.append((x: x, y: y))
             }
         }
@@ -171,9 +172,9 @@ private nonisolated enum Bond {
 
     static func poisson(_ t: Double) -> (dx: Double, dy: Double, th: Double) {
         let q1 = seg(t, 0.08, 0.34), q2 = seg(t, 0.34, 0.9)
-        let dy = q2 > 0 ? -23 + 80 * q2 * q2 : -23 * bez(0.3, 0.5, 0.6, 1, q1)
-        let dx = -4 * eStd(seg(t, 0.08, 0.8))
-        let th = t < 0.34 ? -28 - 12 * eOut(seg(t, 0.08, 0.34)) : -40 + 112 * eIO(seg(t, 0.34, 0.8))
+        let dy: Double = q2 > 0 ? -23 + 80 * q2 * q2 : -23 * bez(0.3, 0.5, 0.6, 1, q1)
+        let dx: Double = -4 * eStd(seg(t, 0.08, 0.8))
+        let th: Double = t < 0.34 ? -28 - 12 * eOut(seg(t, 0.08, 0.34)) : -40 + 112 * eIO(seg(t, 0.34, 0.8))
         return (dx, dy, th)
     }
 
@@ -182,9 +183,9 @@ private nonisolated enum Bond {
         var tt = 0.4
         while tt < 0.9 {
             let s = poisson(tt)
-            let a = s.th * .pi / 180
-            let nx = 50 + s.dx + 27.36 * cos(a)
-            let ny = 46 + s.dy + 27.36 * sin(a)
+            let a: Double = s.th * Double.pi / 180
+            let nx: Double = 50 + s.dx + 27.36 * cos(a)
+            let ny: Double = 46 + s.dy + 27.36 * sin(a)
             if ny >= eauY(nx) + 0.5 { return (tt, nx, eauY(nx)) }
             tt += 0.002
         }
@@ -224,8 +225,10 @@ private nonisolated enum Bond {
                 global = 1 - eStd(seg(t - debutO, 0.27, 0.47))
             }
         }
+        let pulse: Double = sin(t * 2 * Double.pi / 1.8) * 0.012 * b
+        let vague: Double = sin(t * 2 * Double.pi / cycle) * 0.6
         return Etat(intro: intro, mot: mot, b: b, tl: tl, ouvert: ouvert, temps: temps, global: global,
-                    pulse: sin(t * 2 * .pi / 1.8) * 0.012 * b, vague: sin(t * 2 * .pi / cycle) * 0.6)
+                    pulse: pulse, vague: vague)
     }
 
     // MARK: Formes du logo (repère 0 à 100)
@@ -346,7 +349,8 @@ private nonisolated enum Bond {
                     let rx = 2 + 17 * eOut(p)
                     let ellipse = Path(ellipseIn: CGRect(x: entree.x - rx, y: entree.y + 6 - rx * 0.2,
                                                          width: 2 * rx, height: 2 * rx * 0.2))
-                    let alpha = 0.85 * pow(1 - p, 1.35) * clamp(p / 0.08) * fonduEau * a
+                    let decroit: Double = pow(1 - p, 1.35)
+                    let alpha: Double = 0.85 * decroit * clamp(p / 0.08) * fonduEau * a
                     o.stroke(ellipse, with: .color(couleur(0x9CC7EA, alpha)), lineWidth: 0.9 * (1 - p) + 0.25)
                 }
             }
@@ -360,8 +364,8 @@ private nonisolated enum Bond {
             if alphaGoutte > 0 {
                 for i in 0..<3 {
                     let d = depart[i]
-                    let gx = d.x + vitesse[i].0 * td * 0.5
-                    let gy = d.y + vitesse[i].1 * td + 0.5 * 300 * td * td
+                    let gx: Double = d.x + vitesse[i].0 * td * 0.5
+                    let gy: Double = d.y + vitesse[i].1 * td + 150 * td * td
                     let gr = d.r * (td > 0 ? 1 - 0.25 * seg(td, 0, 0.3) : 1)
                     l.fill(cercle(gx, gy, gr), with: .color(couleur(0x04122B, alphaGoutte)))
                 }
@@ -390,8 +394,8 @@ private nonisolated enum Bond {
             let tau = e.tl - entree.t
             let duree = 2 * -j.vy / gravite
             if tau < 0 || tau > duree { continue }
-            let gx = entree.x + j.vx * tau
-            let gy = entree.y + j.vy * tau + 0.5 * gravite * tau * tau
+            let gx: Double = entree.x + j.vx * tau
+            let gy: Double = entree.y + j.vy * tau + 0.5 * gravite * tau * tau
             let vy = j.vy + gravite * tau
             let angle = atan2(vy, j.vx)
             let allonge = min(1.7, 1 + abs(vy) / 90)
