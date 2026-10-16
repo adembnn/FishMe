@@ -2,6 +2,9 @@ import AVFoundation
 import Core
 import SwiftUI
 import UIKit
+#if DEBUG
+import PhotosUI
+#endif
 
 /// L'écran Prise : de la photo à la liste de contrôle. A le branche dans `RootView.swift` avec ses services, le contexte de la sortie et la fermeture `terminer`
 /// (`nil` : aucune carte créée ; sinon la prise confirmée et la photo, que L4 range).
@@ -106,12 +109,10 @@ struct PriseEtapePhoto: View {
                     Button("Continuer") { demanderEtOuvrir() }.buttonStyle(.principal)
                 }
             }
-            Button("Essayer avec une photo d'exemple") { modele.photoPrise(PhotoExemple.image(), exemple: true) }
-                .font(Police.corps).foregroundStyle(Palette.marine)
-                .frame(minHeight: Gabarit.zoneTactile)
-            #if DEBUG
-            PriseSelecteurDebug { modele.photoPrise($0) }.font(Police.legende).foregroundStyle(Palette.marine)
-            #endif
+            PriseChoixPhoto(modele: modele) {
+                Text(PriseChoixPhotoTexte.libelle).font(Police.corps).foregroundStyle(Palette.marine)
+                    .frame(minHeight: Gabarit.zoneTactile)
+            }
         }
         .padding(Espace.bord)
     }
@@ -133,41 +134,79 @@ struct PriseEtapePhoto: View {
 
     private var cadre: some View {
         ZStack {
+            // P18 C : la photo prend tout l'écran (l'aperçu vivant est ouvert par le déclencheur), coins de cadrage, consigne dans le cadre.
             Palette.nuit.ignoresSafeArea()
-            VStack(spacing: Espace.l) {
+            PriseCoinsDeCadre().stroke(.white, style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                .aspectRatio(1.0, contentMode: .fit)
+                .padding(.horizontal, Espace.xl)
+                .accessibilityHidden(true)
+            VStack(spacing: Espace.s) {
                 HStack {
                     PriseBoutonRond(symbole: "xmark", etiquette: "Fermer", action: fermer)
                     Spacer()
-                    Label("Sur l'iPhone, sans réseau", systemImage: "lock.fill")
-                        .font(Police.legende).foregroundStyle(Palette.encre)
-                        .padding(.horizontal, Espace.m).frame(minHeight: 36)
-                        .background(.regularMaterial, in: Capsule())
-                    Spacer()
-                    Color.clear.frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
                 }
                 Spacer(minLength: 0)
-                PriseCoinsDeCadre().stroke(.white, style: StrokeStyle(lineWidth: 4, lineCap: .round))
-                    .aspectRatio(1.3, contentMode: .fit)
-                    .padding(.horizontal, Espace.xl)
-                    .accessibilityHidden(true)
                 Text("Le poisson entier, de profil")
-                    .font(Police.corps).foregroundStyle(.white)
-                Spacer(minLength: 0)
-                Button(action: ouvrirCamera) {
-                    Circle().fill(.white).frame(width: 72, height: 72)
-                        .overlay(Circle().strokeBorder(.white.opacity(0.5), lineWidth: 5).frame(width: 84, height: 84))
-                        .frame(width: 88, height: 88)
+                    .font(Police.corps).foregroundStyle(.white).multilineTextAlignment(.center)
+                Spacer(minLength: Espace.xxl)
+                ZStack {
+                    Button(action: ouvrirCamera) {
+                        Circle().fill(.white).frame(width: 72, height: 72)
+                            .overlay(Circle().strokeBorder(.white.opacity(0.5), lineWidth: 5).frame(width: 84, height: 84))
+                            .frame(width: 88, height: 88)
+                    }
+                    .accessibilityLabel("Prendre la photo")
+                    HStack {
+                        PriseChoixPhoto(modele: modele) {
+                            Image(systemName: "photo")
+                                .font(.system(size: 18, weight: .bold, design: .rounded)).foregroundStyle(.white)
+                                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
+                        }
+                        Spacer()
+                    }
                 }
-                .accessibilityLabel("Prendre la photo")
-                Button("Essayer avec une photo d'exemple") { modele.photoPrise(PhotoExemple.image(), exemple: true) }
-                    .font(Police.detail).foregroundStyle(.white)
-                    .frame(minHeight: Gabarit.zoneTactile)
-                #if DEBUG
-                PriseSelecteurDebug { modele.photoPrise($0) }.font(Police.legende).foregroundStyle(.white)
-                #endif
+                Label("Sur l'iPhone, sans réseau", systemImage: "lock.fill")
+                    .font(Police.legende).foregroundStyle(.white.opacity(0.85))
             }
             .padding(Espace.bord)
         }
+    }
+}
+
+private enum PriseChoixPhotoTexte {
+    #if DEBUG
+    static let libelle = "Choisir une photo"
+    #else
+    static let libelle = "Essayer avec une photo d'exemple"
+    #endif
+}
+
+/// Le second chemin vers une photo : la photothèque sous #if DEBUG (simulateur sans caméra), sinon la photo d'exemple.
+/// Une vraie carte ne naît que d'une photo prise avec l'appareil.
+private struct PriseChoixPhoto<Etiquette: View>: View {
+    var modele: PriseModele
+    @ViewBuilder var etiquette: () -> Etiquette
+    #if DEBUG
+    @State private var choix: PhotosPickerItem?
+    #endif
+
+    var body: some View {
+        #if DEBUG
+        PhotosPicker(selection: $choix, matching: .images) { etiquette() }
+            .accessibilityLabel("Choisir une photo")
+            .onChange(of: choix) { _, nouveau in
+                guard let nouveau else { return }
+                Task {
+                    if let data = try? await nouveau.loadTransferable(type: Data.self), let image = UIImage(data: data) {
+                        modele.photoPrise(image)
+                    }
+                }
+            }
+        #else
+        Button { modele.photoPrise(PhotoExemple.image(), exemple: true) } label: { etiquette() }
+            .accessibilityLabel("Essayer avec une photo d'exemple")
+        #endif
     }
 }
 
