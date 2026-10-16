@@ -32,6 +32,17 @@ struct CompteurPescedex: Equatable {
         return base
     }
 
+    /// La phrase sous le titre du Pescedex (P26 B, P48 B) : « Tu en as trouvé 3 sur 11 espèces de la zone ».
+    /// `nil` sans zone connue ou sans espèce relevée dedans.
+    var phraseDeZone: String? {
+        guard let zone, !zone.estInconnu, releveesDansLaZone > 0 else { return nil }
+        var base = "Tu en as trouvé \(trouvees) sur \(releveesDansLaZone) espèces de la zone"
+        if legendairesEnPlus > 0 {
+            base += ", + \(legendairesEnPlus) légendaire" + (legendairesEnPlus > 1 ? "s" : "")
+        }
+        return base
+    }
+
     /// La zone par défaut est le département de la dernière carte avec un lieu ; les cartes déclarées n'en ont pas.
     static func zoneParDefaut(cartes: [Prise], repli: Departement? = nil) -> Departement? {
         let avecLieu = cartes

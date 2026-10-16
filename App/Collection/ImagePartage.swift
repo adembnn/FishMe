@@ -15,7 +15,7 @@ enum ImagePartage {
                                           especesDeLaZone: [], services: services)
         let carte = CarteRectoView(infos: infos, anime: false, inclinaison: .zero, refletFixe: true,
                                    imageDecodee: UIImage(named: infos.espece.image), pourPartage: true)
-            .frame(width: largeur, height: largeur / Gabarit.rapportCarte)
+            .frame(width: largeur * 0.81, height: largeur * 0.81 / Gabarit.rapportCarte)
         let vue = FondPartage(carte: carte, largeur: largeur, departement: dept)
         let rendu = ImageRenderer(content: vue)
         rendu.scale = 3
@@ -24,8 +24,8 @@ enum ImagePartage {
     }
 }
 
-/// P49 A : fond bleu nuit, la carte légèrement inclinée, le logo discret en haut, « Mon Pescedex · <département> » en bas.
-/// Jamais de lieu précis : le département seulement, et rien du tout s'il est inconnu.
+/// P49 A : un format 9/16 bleu nuit semé de ronds d'eau, le logo discret en haut, la carte inclinée de 3 degrés (81 % de la largeur),
+/// « Mon Pescedex · <département> » en bas. Jamais de lieu précis : le département seulement, et rien du tout s'il est inconnu.
 private struct FondPartage<Carte: View>: View {
     let carte: Carte
     let largeur: CGFloat
@@ -37,24 +37,45 @@ private struct FondPartage<Carte: View>: View {
     }
 
     var body: some View {
-        VStack(spacing: Espace.xl) {
-            HStack(spacing: Espace.s) {
-                Image(systemName: "fish.fill")
-                Text("FishMe")
+        // Toutes les mesures de la maquette (324 pt de large) suivent la largeur demandée.
+        let k = largeur / 324
+        let hauteur = largeur * 16 / 9
+        ZStack {
+            // Bleu nuit fixe : l'image partagée ne dépend pas du mode sombre.
+            Color(red: 8 / 255, green: 42 / 255, blue: 76 / 255)
+            ZStack {
+                ForEach(1..<24, id: \.self) { i in
+                    Circle()
+                        .strokeBorder(.white.opacity(0.08), lineWidth: 1)
+                        .frame(width: CGFloat(i) * 46 * k, height: CGFloat(i) * 46 * k)
+                }
             }
-            .font(Police.taille(18, .heavy))
-            .foregroundStyle(.white.opacity(0.9))
-            carte
-                .rotationEffect(.degrees(-4))
-                .shadow(color: .black.opacity(0.35), radius: 18, y: 10)
-                .padding(.vertical, Espace.m)
-            Text(legende)
-                .font(Police.taille(20, .heavy))
-                .foregroundStyle(.white.opacity(0.85))
+            .position(x: largeur / 2, y: hauteur * 0.46)
+            VStack(spacing: 0) {
+                HStack(spacing: 8 * k) {
+                    Image(systemName: "fish.fill")
+                        .font(Police.taille(13 * k, .heavy))
+                        .foregroundStyle(.white)
+                        .frame(width: 24 * k, height: 24 * k)
+                        .background(Color(red: 13 / 255, green: 74 / 255, blue: 133 / 255),
+                                    in: RoundedRectangle(cornerRadius: 5 * k, style: .continuous))
+                    Text("FishMe")
+                        .font(Police.taille(15 * k, .heavy))
+                        .foregroundStyle(.white.opacity(0.85))
+                }
+                .padding(.top, 22 * k)
+                Spacer(minLength: 0)
+                carte
+                    .rotationEffect(.degrees(-3))
+                    .shadow(color: .black.opacity(0.35), radius: 18 * k, y: 10 * k)
+                Spacer(minLength: 0)
+                Text(legende)
+                    .font(Police.taille(15 * k, .heavy))
+                    .foregroundStyle(.white.opacity(0.8))
+                    .padding(.bottom, 26 * k)
+            }
         }
-        .padding(.horizontal, Espace.xl)
-        .padding(.vertical, Espace.xxl)
-        // Bleu nuit fixe : l'image partagée ne dépend pas du mode sombre.
-        .background(Color(red: 8 / 255, green: 42 / 255, blue: 76 / 255))
+        .frame(width: largeur, height: hauteur)
+        .clipped()
     }
 }
