@@ -19,6 +19,8 @@ struct OuChercherVue: View {
                 switch modele.etat {
                 case .choixEspece:
                     GrilleEspeces(especes: modele.grille, choisir: modele.choisir)
+                case .chargement(let espece):
+                    ChargementCoins(espece: espece, changer: modele.changerEspece)
                 case .resultats(let espece, let coins):
                     ListeCoins(espece: espece, coins: coins, changer: modele.changerEspece)
                 case .aucunReleve(let espece):
@@ -100,6 +102,36 @@ private struct ImageEspeceCoin: View {
         #else
         false
         #endif
+    }
+}
+
+// MARK: - Recherche en cours
+
+private struct ChargementCoins: View {
+    let espece: EspeceChoix
+    let changer: () -> Void
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Spacer(minLength: 0)
+            ImageEspeceCoin(nom: espece.image).frame(width: 72, height: 72)
+            ProgressView()
+                .controlSize(.large)
+            Text(OuChercherTextes.recherche(espece.nom))
+                .font(.headline.weight(.bold))
+                .multilineTextAlignment(.center)
+            Button(action: changer) {
+                Label("Changer d'espèce", systemImage: "arrow.left")
+                    .font(.body.weight(.bold))
+                    .frame(minHeight: 44)
+            }
+            .buttonStyle(.bordered)
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal, 16)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(OuChercherTextes.recherche(espece.nom))
     }
 }
 

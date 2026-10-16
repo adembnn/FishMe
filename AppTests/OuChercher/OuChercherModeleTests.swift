@@ -74,15 +74,25 @@ struct OuChercherModeleTests {
         #expect(m.grille.count == 6)
     }
 
-    @Test func choisirUneEspeceDonneLesCoinsOuAucunReleve() {
+    @Test func choisirUneEspeceDonneLesCoinsOuAucunReleve() async {
         let m = OuChercherModele(especes: CoinsFaux(), position: position)
         m.choisir(m.grille[0])
+        // La recherche tourne hors du fil principal : l'écran attend d'abord.
+        if case .chargement = m.etat {} else { Issue.record("« chargement » attendu") }
+        await m.attendreRecherche()
         if case .resultats(_, let coins) = m.etat { #expect(coins.count == 1) } else { Issue.record("résultats attendus") }
         m.changerEspece()
         #expect(m.etat == .choixEspece)
 
+        // Changer d'espèce pendant la recherche : la réponse tardive n'écrase pas le choix.
+        m.choisir(m.grille[0])
+        m.changerEspece()
+        await m.attendreRecherche()
+        #expect(m.etat == .choixEspece)
+
         let vide = OuChercherModele(especes: SansCoins(), position: position)
         vide.choisir(vide.grille[0])
+        await vide.attendreRecherche()
         if case .aucunReleve = vide.etat {} else { Issue.record("« aucun relevé » attendu") }
     }
 }
