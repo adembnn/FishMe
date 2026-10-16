@@ -181,3 +181,11 @@ cycles de 8. Si la mémoire ne suit pas, `NageWidget.imagesParBattementMax = 8` 
 Quand les rendus arrivent, ils remplacent les poissons cartoon (`PoissonsOcean/`). Même cadrage serré (6 px de marge), PNG transparents, 600 px de large au plus.
 Les poses passent en vue 1 ou 2 au-delà de 22,5° du profil (`PoseNage.vue`) ; une vue trois-quarts n'est jamais
 aplatie, seulement retournée vers la gauche. Une espèce sans vues garde le profil aplati.
+
+### Virages sans téléportation (Adem, 16 oct. 08h35)
+
+Le lacet de chaque pose (`PoseNage.lacet`, en degrés, + vers le fond, − vers nous) varie en continu, et le widget
+fond les deux rendus les plus proches (`NageWidget.melange`) : aucun saut d'une vue à l'autre. Rendus attendus, en
+plus du profil `-nage-k` : `<slug>-lacet-15-k`, `-30-`, `-45-`, `-60-` (vers le fond) et `-lacet-m15-k`, `-m30-`,
+`-m45-`, `-m60-` (vers nous), tête à droite, 16 images par battement. Plus il y a d'angles, moins le fondu se voit ;
+avec 15° d'écart, il ne se voit plus. Les anciennes `-vue-1-`/`-vue-2-` comptent pour 45° et −45°.

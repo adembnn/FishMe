@@ -23,9 +23,20 @@ enum PoissonVivant {
         return cycleDisponible(slug) ? 8 : 0
     }
 
-    /// Les deux vues trois-quarts en volume (vers le fond, vers nous) existent-elles ?
-    static func vuesDisponibles(_ slug: String) -> Bool {
-        UIImage(named: "\(slug)-vue-1-0") != nil && UIImage(named: "\(slug)-vue-2-0") != nil
+    /// Lacets rendus en volume (en degrés, hors profil) : `<slug>-lacet-<a>-<k>` (a = 15, 30… vers le fond ;
+    /// m15, m30… vers nous), et les anciennes vues `-vue-1-` (45) et `-vue-2-` (−45).
+    static let lacetsPossibles = [-75, -60, -45, -30, -15, 15, 30, 45, 60, 75]
+
+    static func anglesDisponibles(_ slug: String) -> [Int] {
+        lacetsPossibles.filter { UIImage(named: nomVue(slug, angle: $0, image: 0)) != nil }
+    }
+
+    /// Nom de l'image d'un lacet (0 : le profil `-nage-`).
+    static func nomVue(_ slug: String, angle: Int, image: Int) -> String {
+        if angle == 0 { return "\(slug)-nage-\(image)" }
+        let lacet = "\(slug)-lacet-\(angle < 0 ? "m" : "")\(abs(angle))-\(image)"
+        if abs(angle) == 45, UIImage(named: lacet) == nil { return "\(slug)-vue-\(angle > 0 ? 1 : 2)-\(image)" }
+        return lacet
     }
 }
 
@@ -36,13 +47,14 @@ struct ImagePoisson: View {
     let image: Int?
     let largeur: CGFloat
     let sens: Double
-    /// Vue en volume (0 : profil). Une vue trois-quarts est déjà rendue tournée : on ne l'aplatit pas, on la
-    /// retourne seulement quand il nage vers la gauche.
-    var vue: Int = 0
+    /// Lacet rendu à montrer (0 : profil). Avec des rendus en volume, l'image est déjà tournée : on ne l'aplatit
+    /// pas, on la retourne seulement quand il nage vers la gauche.
+    var angle: Int = 0
+    var volume = false
 
     var body: some View {
-        let nom = image.map { vue > 0 ? "\(slug)-vue-\(vue)-\($0)" : "\(slug)-nage-\($0)" } ?? slug
-        let echelleX = vue > 0 && image != nil ? (sens < 0 ? -1.0 : 1.0) : sens
+        let nom = image.map { PoissonVivant.nomVue(slug, angle: angle, image: $0) } ?? slug
+        let echelleX = volume && image != nil ? (sens < 0 ? -1.0 : 1.0) : sens
         let base = (image != nil || PoissonVivant.imageDisponible(slug) ? Image(nom) : Image(systemName: "fish.fill"))
             .resizable()
         #if canImport(WidgetKit)

@@ -147,6 +147,24 @@ nonisolated public enum NageWidget {
         /// Vue rendue en volume, si l'espèce en a (images `<slug>-vue-<vue>-<k>`) : 0 = de profil,
         /// 1 = trois-quarts, il part vers le fond ; 2 = trois-quarts, il vient vers nous.
         public var vue: Int = 0
+        /// Lacet en degrés : 0 = de profil, positif = il s'éloigne vers le fond, négatif = il vient vers nous.
+        /// Il varie en continu : les vues rendues se fondent l'une dans l'autre (`melange`), sans saut.
+        public var lacet: Double = 0
+    }
+
+    /// Les vues rendues à mélanger pour un lacet : celle juste en dessous et celle juste au-dessus (le profil, 0,
+    /// est toujours là), avec leurs poids (somme 1), la plus lourde d'abord. Un fondu continu, jamais de saut.
+    public static func melange(lacet: Double, angles: [Int]) -> [(angle: Int, poids: Double)] {
+        let tous = Array(Set(angles + [0])).sorted()
+        guard let premier = tous.first, let dernier = tous.last else { return [(0, 1)] }
+        if lacet <= Double(premier) { return [(premier, 1)] }
+        if lacet >= Double(dernier) { return [(dernier, 1)] }
+        guard let i = tous.lastIndex(where: { Double($0) <= lacet }), i + 1 < tous.count else { return [(0, 1)] }
+        let a = tous[i], b = tous[i + 1]
+        let w = (lacet - Double(a)) / Double(b - a)
+        if w < 1e-3 { return [(a, 1)] }
+        if w > 1 - 1e-3 { return [(b, 1)] }
+        return w > 0.5 ? [(b, w), (a, 1 - w)] : [(a, 1 - w), (b, w)]
     }
 
     /// Une boucle de `nombre` poses (10 s), pour un poisson.
@@ -352,10 +370,10 @@ nonisolated public enum NageWidget {
             // Il sort du bleu lointain peu à peu (au-delà de z = 0,7), et se perd un peu dans l'eau au loin.
             let opacite = min(1, max(0, (1 - q.z) / 0.3) * (1 - 0.25 * max(q.z, 0)))
             // Au-delà de 22,5° du profil, la vue trois-quarts (vers le fond ou vers nous).
-            let tourne = atan2(abs(q.vz) * 0.6, abs(q.vx)) > 0.39
-            let vue = tourne ? (q.vz > 0 ? 1 : 2) : 0
+            let lacet = atan2(q.vz * 0.6, abs(q.vx)) * 180 / .pi
+            let vue = abs(lacet) > 22.5 ? (lacet > 0 ? 1 : 2) : 0
             return PoseNage(x: ex, y: ey / h, sens: sens, image: image, profondeur: q.z, assiette: assiette,
-                            echelle: s, opacite: opacite, vue: vue)
+                            echelle: s, opacite: opacite, vue: vue, lacet: lacet)
         }
     }
 
