@@ -50,7 +50,7 @@ nonisolated enum TextesPaywall {
         case .prevenirMoi: return "« Préviens-moi »"
         case .courbeEtNormale: return "La courbe de la rivière sur 48 h"
         case .conseilsComplets: return "Tous les conseils de chaque espèce"
-        case .analyseConditions: return "Tes conditions"
+        case .analyseConditions: return "Mes statistiques"
         }
     }
 
@@ -70,7 +70,7 @@ nonisolated enum TextesPaywall {
         Ligne(icone: "bell", texte: "« Préviens-moi »"),
         Ligne(icone: "chart.xyaxis.line", texte: "La courbe de la rivière sur 48 h"),
         Ligne(icone: "lightbulb", texte: "Tous les conseils de chaque espèce"),
-        Ligne(icone: "list.bullet.clipboard", texte: "Tes conditions, après 10 sorties"),
+        Ligne(icone: "list.bullet.clipboard", texte: "Mes statistiques, après 10 sorties"),
     ]
 
     /// La liste Pro, avec la fonction touchée en tête (autre spot : la ligne des spots).
@@ -131,7 +131,7 @@ nonisolated enum TextesPaywall {
         LigneComparee(icone: "chart.xyaxis.line", texte: "Courbe de la rivière", gratuit: .non, pro: .oui, verrou: .proSeul(.courbeEtNormale)),
         LigneComparee(icone: "bell", texte: "« Préviens-moi »", gratuit: .non, pro: .oui, verrou: .proSeul(.prevenirMoi)),
         LigneComparee(icone: "lightbulb", texte: "Conseils", gratuit: .texte("1 par espèce"), pro: .texte("Tous"), verrou: .partiel(.conseilsComplets)),
-        LigneComparee(icone: "list.bullet.clipboard", texte: "Tes conditions", gratuit: .non, pro: .oui, verrou: .proSeul(.analyseConditions)),
+        LigneComparee(icone: "list.bullet.clipboard", texte: "Mes statistiques", gratuit: .non, pro: .oui, verrou: .proSeul(.analyseConditions)),
     ]
 
     static let produitIntrouvable = "Les offres ne sont pas disponibles pour le moment. Vérifie ta connexion, puis réessaie."

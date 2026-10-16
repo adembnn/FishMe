@@ -18,7 +18,7 @@ enum TexteConditions {
     static let articles: [ArticleConditions] = [
         ArticleConditions(id: 1, titre: "Qui édite FishMe", paragraphes: [
             "FishMe est éditée par [RAISON SOCIALE DE L'ÉDITEUR, à donner par MWM], [forme juridique et capital], immatriculée au RCS de [ville] sous le numéro [numéro], dont le siège est au [adresse]. Numéro de TVA : [numéro]. Directeur de la publication : [nom].",
-            "Contact : [E-MAIL DE CONTACT, à donner par Adem], téléphone ou formulaire : [à donner par MWM]. Pour une erreur dans une règle de pêche, utilise aussi « Signaler une erreur de règle » dans Mon club.",
+            "Contact : fishme.app@gmail.com, téléphone ou formulaire : [à donner par MWM]. Pour une erreur dans une règle de pêche, utilise aussi « Signaler une erreur de règle » dans Mon club.",
             "Hébergement du site web de FishMe : [nom, adresse et téléphone de l'hébergeur, à donner par MWM]. Ta collection est hébergée par Apple, dans ton iCloud.",
         ]),
         ArticleConditions(id: 2, titre: "Accepter ces conditions", paragraphes: [
