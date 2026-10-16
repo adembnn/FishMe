@@ -52,9 +52,10 @@ nonisolated public enum NageWidget {
 
         return gardes.enumerated().map { index, poisson in
             let echelle = echelleDe(poisson)
-            // Au repas, les poissons gardent leurs couloirs mais montent dans la moitié haute (vers la nourriture).
-            let haut = repas ? 0.08 : 0.15
-            let bas = repas ? 0.55 : 0.85
+            // Les poissons nagent au-dessus des galets du fond (le bas du décor). Au repas, ils gardent leurs couloirs
+            // mais montent dans la moitié haute, vers la nourriture.
+            let haut = repas ? 0.08 : 0.14
+            let bas = repas ? 0.50 : 0.70
             let x = xNage(poisson.id, creneau, colonne: (index + creneau) % c, sur: c)
             let avant = xNage(poisson.id, creneau - 1, colonne: (index + creneau - 1) % c, sur: c)
             let versLaDroite = repas ? x < 0.5 : x > avant
