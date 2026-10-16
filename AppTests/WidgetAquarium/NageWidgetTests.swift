@@ -77,8 +77,8 @@ struct NageWidgetTests {
             #expect(p.count == 6)
             for e in p {
                 #expect(e.auRepas)
-                #expect(e.y >= 0.08 && e.y <= 0.25)
-                #expect(e.x >= 0.25 && e.x <= 0.75)
+                #expect(e.y >= 0.08 && e.y <= 0.55)
+                #expect(e.x >= 0.18 && e.x <= 0.82)
                 #expect(e.versLaDroite == (e.x < 0.5))
             }
         }
@@ -174,6 +174,8 @@ struct NageWidgetTests {
             #expect((p[0].x < 0.5) != (p[1].x < 0.5))
             #expect(abs(p[0].y - p[1].y) < 0.25)
             for q in p { #expect(q.x >= 0.18 && q.x <= 0.82) }
+            // Deux voisins de rangée ne se chevauchent pas : plus d'un tiers de largeur entre eux.
+            #expect(abs(p[0].x - p[1].x) >= 0.37)
         }
         let a = NageWidget.placements(poissons(2), a: t0, dernierRepas: nil, limite: 2, colonnes: 2)
         let b = NageWidget.placements(poissons(2), a: t0.addingTimeInterval(NageWidget.pas), dernierRepas: nil, limite: 2, colonnes: 2)
