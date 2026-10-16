@@ -675,6 +675,7 @@ struct FicheEspeceView: View {
                 } else {
                     tuileEspece
                         .padding(.top, 12)
+                    if zone != nil, style != .nonMesuree { releves }
                 }
                 if let pecherEnPhoto, estDeclaree {
                     Button { pecherEnPhoto(emplacement.espece.espece) } label: {
@@ -762,6 +763,46 @@ struct FicheEspeceView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .tuileFishMe(rayon: Rayon.m)
+    }
+
+    /// P27 B, bloc « Où il vit » : aucune donnée d'habitat, donc les relevés OFB réels de la zone (nombre de pêches et année).
+    @ViewBuilder
+    private var releves: some View {
+        let r = emplacement.rarete
+        VStack(alignment: .leading, spacing: 0) {
+            enteteDeGroupe("Relevés OFB dans ta zone", haut: 22)
+            VStack(spacing: 0) {
+                if r.niveau == .legendaire {
+                    ligneReleve("eye.slash", "Jamais relevée", "dans ta zone")
+                } else {
+                    ligneReleve("fish", "Pêches", "\(r.nPeches) sur \(r.nTotal)")
+                    Divider().overlay(Palette.filet).padding(.leading, 52)
+                    if let part = partOFB { ligneReleve("chart.pie", "Part des pêches", "\(part) %") }
+                }
+                if let annee = r.anneeDernierReleve {
+                    Divider().overlay(Palette.filet).padding(.leading, 52)
+                    ligneReleve("calendar", "Dernier relevé", "\(annee)")
+                }
+            }
+            .tuileFishMe(rayon: Rayon.m)
+            .padding(.top, Espace.s)
+        }
+    }
+
+    private func ligneReleve(_ icone: String, _ titre: String, _ valeur: String) -> some View {
+        HStack(spacing: Espace.m) {
+            Image(systemName: icone)
+                .font(.system(size: 20, weight: .bold, design: .rounded))
+                .foregroundStyle(Palette.marine)
+                .frame(width: 28)
+                .accessibilityHidden(true)
+            Text(titre).font(Police.corps).foregroundStyle(Palette.encre)
+            Spacer(minLength: 0)
+            Text(valeur).font(Police.taille(17, .bold)).monospacedDigit().foregroundStyle(Palette.encreDouce)
+        }
+        .padding(.horizontal, Espace.l)
+        .frame(minHeight: 56)
+        .accessibilityElement(children: .combine)
     }
 
     private var motDuPalier: String {
