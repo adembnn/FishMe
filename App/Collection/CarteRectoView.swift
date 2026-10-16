@@ -257,13 +257,21 @@ struct CarteRectoView: View {
         VStack(alignment: .leading, spacing: 0) {
             nomEtLatin(u)
             statistiques(u)
-                .padding(.top, 3.6 * u)
+                .padding(.top, 2.8 * u)
             Spacer(minLength: 0)
+            if let lieu = lieuEtDate {
+                Text(lieu)
+                    .font(Police.taille(3.1 * u, .bold))
+                    .foregroundStyle(grisCarte)
+                    .lineLimit(1)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom, 1.2 * u)
+            }
             pied(u)
         }
-        .padding(.top, 8 * u)
+        .padding(.top, 6 * u)
         .padding(.horizontal, 5.5 * u)
-        .padding(.bottom, 4.6 * u)
+        .padding(.bottom, 4 * u)
     }
 
     private func nomEtLatin(_ u: CGFloat) -> some View {
@@ -285,6 +293,23 @@ struct CarteRectoView: View {
         .overlay(alignment: .bottom) {
             Rectangle().fill(Color(red: 15 / 255, green: 26 / 255, blue: 28 / 255).opacity(0.12)).frame(height: 1)
         }
+    }
+
+    /// « La Marne · 94 · 12 oct. 2026 » : où et quand la prise a été pêchée. Jamais de coordonnées ; rien pour une carte déclarée.
+    /// Sur l'image partagée : le département seulement et « mois année ».
+    private var lieuEtDate: String? {
+        guard !declaree else { return nil }
+        let departement = infos.departement.map { "Département \($0.code)" }
+        var lieu: String?
+        if pourPartage {
+            lieu = departement
+        } else if let flou = infos.prise.lieuFlou, !flou.isEmpty {
+            lieu = flou
+        } else {
+            lieu = departement
+        }
+        let date = pourPartage ? Formats.moisAnnee(infos.prise.date) : Formats.date(infos.prise.date)
+        return [lieu, date].compactMap { $0 }.joined(separator: " · ")
     }
 
     /// TAI, FRQ et le palier : trois colonnes égales, alignées sur leur bas.

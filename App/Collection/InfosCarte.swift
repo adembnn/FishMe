@@ -78,7 +78,8 @@ struct InfosCarte {
     static func vignette(emplacement: Emplacement, zone: Departement?) -> InfosCarte? {
         guard let prise = emplacement.carte else { return nil }
         return InfosCarte(detail: CarteDetaillee(prise: prise, conditions: nil, dureeSecondes: nil), espece: emplacement.espece,
-                          rarete: emplacement.rarete, departement: zone, rangDansLaZone: nil, poids: nil, lune: .nouvelle,
+                          rarete: emplacement.rarete,
+                          departement: Formats.departement(depuisLieuFlou: prise.lieuFlou) ?? zone, rangDansLaZone: nil, poids: nil, lune: .nouvelle,
                           consigne: nil, sourceConsigne: nil)
     }
 }

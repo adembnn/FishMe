@@ -95,8 +95,10 @@ private struct CoucheNage: View {
         let slug: String
         let largeur: CGFloat
         let cycle: Bool
-        /// Vues trois-quarts rendues en volume (fil Aquarium) : sinon, le profil aplati horizontalement.
-        let vues: Bool
+        /// Pas entre deux numéros d'image du battement (2 : images paires seulement).
+        let pas: Int
+        /// Lacets rendus en volume (fil Aquarium) ; vide : le profil aplati horizontalement.
+        let angles: [Int]
         let poses: [NageWidget.PoseNage]
         var id: String { placement.id }
     }
@@ -121,12 +123,14 @@ private struct CoucheNage: View {
             let nageurs: [Nageur] = placements.compactMap { placement in
                 guard let poisson = parId[placement.id] else { return nil }
                 let longueur = part * placement.echelle
+                let battement = NageWidget.cycleUtilise(disponibles: PoissonVivant.imagesDisponibles(poisson.slug))
                 return Nageur(placement: placement, slug: poisson.slug, largeur: l * longueur,
-                              cycle: PoissonVivant.cycleDisponible(poisson.slug),
-                              vues: PoissonVivant.vuesDisponibles(poisson.slug),
+                              cycle: battement.images > 0, pas: battement.pas,
+                              angles: battement.images > 0 ? PoissonVivant.anglesDisponibles(poisson.slug) : [],
                               // Pleine eau (Adem, 16 oct. 07h) : traversées en perspective, sorties par les bords.
                               poses: NageWidget.traversees(id: poisson.id, slug: poisson.slug, creneau: creneau,
-                                                           nombre: HorlogeAnimation.nombreImages, longueur: longueur,
+                                                           nombre: HorlogeAnimation.nombreImages,
+                                                           imagesCycle: max(battement.images, 1), longueur: longueur,
                                                            rapport: Double(h / max(l, 1))))
             }
             ZStack {
@@ -141,9 +145,17 @@ private struct CoucheNage: View {
                         let ordre = nageurs.sorted { $0.poses[j].profondeur > $1.poses[j].profondeur }
                         ForEach(ordre) { nageur in
                             let pose = nageur.poses[j]
-                            ImagePoisson(slug: nageur.slug, image: nageur.cycle ? pose.image : nil,
-                                         largeur: nageur.largeur * pose.echelle, sens: pose.sens,
-                                         vue: nageur.cycle && nageur.vues ? pose.vue : 0)
+                            // Il tourne en fondu entre les deux lacets rendus les plus proches : jamais de saut.
+                            let vues = nageur.angles.isEmpty ? [(angle: 0, poids: 1.0)]
+                                : NageWidget.melange(lacet: pose.lacet, angles: nageur.angles)
+                            ZStack {
+                                ForEach(Array(vues.enumerated()), id: \.offset) { rang, vue in
+                                    ImagePoisson(slug: nageur.slug, image: nageur.cycle ? pose.image * nageur.pas : nil,
+                                                 largeur: nageur.largeur * pose.echelle, sens: pose.sens,
+                                                 angle: vue.angle, volume: !nageur.angles.isEmpty)
+                                        .opacity(rang == 0 ? 1 : vue.poids)
+                                }
+                            }
                                 // Brume du fond (NAGE-3D.md) : plus loin, plus pâle et plus clair. Sans flou, trop
                                 // coûteux sur 160 copies.
                                 .saturation(1 - 0.55 * max(pose.profondeur, 0))
