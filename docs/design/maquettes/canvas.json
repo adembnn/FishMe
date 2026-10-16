@@ -2,7 +2,7 @@
  "v": 3,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-16T02:49:52Z"
+  "at": "2026-10-16T02:52:48Z"
  },
  "title": "FishMe · design système et maquettes",
  "launch": {
@@ -1088,9 +1088,17 @@
    "title": "C06 · signes par espece",
    "page": "tout"
   },
+  "C08-trophee.dc.html": {
+   "x": 0,
+   "y": 10820,
+   "w": 1440,
+   "h": 1240,
+   "title": "C08 · trophee",
+   "page": "tout"
+  },
   "C07-nage-A.dc.html": {
    "x": 0,
-   "y": 11070,
+   "y": 12430,
    "w": 390,
    "h": 844,
    "title": "C07 · Ondulation",
@@ -1098,7 +1106,7 @@
   },
   "C07-nage-B.dc.html": {
    "x": 470,
-   "y": 11070,
+   "y": 12430,
    "w": 390,
    "h": 844,
    "title": "C07 · Aller-retour",
@@ -1106,7 +1114,7 @@
   },
   "C07-nage-C.dc.html": {
    "x": 940,
-   "y": 11070,
+   "y": 12430,
    "w": 390,
    "h": 844,
    "title": "C07 · Rare",
@@ -1248,6 +1256,7 @@
   "C04-quatre-paliers.dc.html",
   "C05-verso-trois-directions.dc.html",
   "C06-signes-par-espece.dc.html",
+  "C08-trophee.dc.html",
   "C07-nage-A.dc.html",
   "C07-nage-B.dc.html",
   "C07-nage-C.dc.html"
@@ -1701,7 +1710,7 @@
   },
   "tnage": {
    "x": 0,
-   "y": 10820,
+   "y": 12180,
    "text": "C07 · Le poisson nage dans sa carte",
    "kind": "title1",
    "maxW": 1350,
