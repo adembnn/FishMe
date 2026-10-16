@@ -23,24 +23,10 @@ struct PriseRacineView: View {
             contenu
         }
         .tint(Palette.marine)
-        // Une croix « Fermer » sur chaque étape après la photo (la photo et le résultat ont déjà la leur).
-        .overlay(alignment: .topTrailing) {
-            if croixDuRacine {
-                BoutonRond(role: .fermer, rendu: .verre, action: { modele.terminer(nil) })
-                    .padding(Espace.bord)
-            }
-        }
         .fullScreenCover(isPresented: $cameraOuverte) {
             PriseCamera(onImage: { image in cameraOuverte = false; modele.photoPrise(image) },
                         onCancel: { cameraOuverte = false })
                 .ignoresSafeArea()
-        }
-    }
-
-    private var croixDuRacine: Bool {
-        switch modele.etape {
-        case .photo, .resultat: return false
-        default: return true
         }
     }
 
@@ -96,28 +82,29 @@ struct PriseEtapePhoto: View {
     // MARK: P38 : accès à l'appareil photo
 
     private var permission: some View {
-        // P38 C : grande icône d'appareil photo en trait fin, titre et phrase au milieu, bouton et lien en bas.
-        VStack(spacing: 0) {
-            Spacer(minLength: Espace.xxl)
-            Image(systemName: "camera")
-                .font(.system(size: 150, weight: .regular, design: .rounded))
-                .foregroundStyle(Palette.marine)
+        // P38 C : fond blanc, grande icône d'appareil photo en trait fin (210 pt, à 96 pt du haut), titre à 520 pt, bouton et lien à 40 pt du bas.
+        // La fenêtre d'autorisation est celle d'iOS : l'app ne la dessine pas.
+        let refus = acces == .denied || acces == .restricted
+        return ZStack(alignment: .topLeading) {
+          ZStack(alignment: .top) {
+            Palette.surface
+            PriseIconeAppareil()
+                .stroke(Palette.marine, style: StrokeStyle(lineWidth: 0.9 * 210 / 24, lineJoin: .round))
+                .frame(width: 210, height: 210)
+                .padding(.top, 96)
                 .accessibilityHidden(true)
-            Spacer(minLength: Espace.l)
             VStack(spacing: Espace.m) {
                 Text("Photographier ta prise")
                     .font(Police.grandTitre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
                     .accessibilityAddTraits(.isHeader)
-                Text(acces == .denied || acces == .restricted
-                     ? "L'appareil photo est coupé pour FishMe."
-                     : "La photo reste sur ton iPhone, sans GPS.")
+                Text(refus ? "L'appareil photo est coupé pour FishMe." : "La photo reste sur ton iPhone, sans GPS.")
                     .font(Police.detail).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
             }
             .padding(.horizontal, Espace.xl)
-            Spacer(minLength: Espace.l)
+            .padding(.top, 520)
             VStack(spacing: Espace.xs) {
                 if PriseCamera.disponible {
-                    if acces == .denied || acces == .restricted {
+                    if refus {
                         Button("Ouvrir les réglages") {
                             if let url = URL(string: UIApplication.openSettingsURLString) { ouvrirURL(url) }
                         }
@@ -128,17 +115,16 @@ struct PriseEtapePhoto: View {
                 }
                 PriseChoixPhoto(modele: modele) {
                     Text(PriseChoixPhotoTexte.libelle).font(Police.corps).foregroundStyle(Palette.marine)
-                        .frame(minHeight: Gabarit.zoneTactile)
+                        .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
                 }
             }
-            .padding(.bottom, Espace.s)
-        }
-        .padding(.horizontal, Espace.bord)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Palette.surface.ignoresSafeArea())
-        .overlay(alignment: .topLeading) {
-            // La maquette n'a pas de croix ici ; on la garde pour qu'on puisse toujours quitter l'écran.
-            BoutonRond(role: .fermer, rendu: .simple, action: fermer).padding(Espace.bord)
+            .padding(.horizontal, Espace.bord)
+            .padding(.bottom, 40)
+            .frame(maxHeight: .infinity, alignment: .bottom)
+          }
+          .ignoresSafeArea()
+            // La maquette n'a pas de croix ici ; on la garde pour qu'on puisse toujours quitter l'écran (sans elle, seule une photo sort de l'écran).
+            BoutonRond(role: .fermer, rendu: .verre, action: fermer).padding(.horizontal, Espace.bord)
         }
     }
 
@@ -158,49 +144,46 @@ struct PriseEtapePhoto: View {
     // MARK: P18 : cadre de prise de vue
 
     private var cadre: some View {
-        ZStack {
-            // P18 C : la photo prend tout l'écran (l'aperçu vivant est ouvert par le déclencheur), voile marine, coins de cadrage, consigne sous le cadre.
-            Palette.nuit.ignoresSafeArea()
-            Color(red: 8 / 255, green: 42 / 255, blue: 76 / 255).opacity(0.28).ignoresSafeArea()
-            VStack(spacing: 0) {
-                HStack {
-                    BoutonRond(role: .fermer, rendu: .simple, action: fermer)
-                    Spacer()
-                }
-                Spacer(minLength: 0)
-                PriseCoinsDeCadre().stroke(.white, style: StrokeStyle(lineWidth: 4, lineCap: .round))
-                    .aspectRatio(320.0 / 290.0, contentMode: .fit)
-                    .frame(maxWidth: 320)
-                    .padding(.horizontal, 35)
-                    .accessibilityHidden(true)
-                Text("Le poisson entier, de profil")
-                    .font(Police.sousTitre).foregroundStyle(.white).multilineTextAlignment(.center)
-                    .shadow(color: .black.opacity(0.45), radius: 4, y: 1)
-                    .padding(.top, Espace.l)
-                Spacer(minLength: Espace.l)
-                ZStack {
-                    Button(action: ouvrirCamera) {
-                        Circle().fill(.white).frame(width: 92, height: 92)
-                            .overlay(Circle().strokeBorder(.white.opacity(0.55), lineWidth: 4).frame(width: 100, height: 100))
-                            .frame(width: 100, height: 100)
-                    }
-                    .accessibilityLabel("Prendre la photo")
-                    HStack {
-                        PriseChoixPhoto(modele: modele) {
-                            Image(systemName: "photo")
-                                .font(.system(size: 22, weight: .bold, design: .rounded)).foregroundStyle(Palette.encre)
-                                .frame(width: 48, height: 48)
-                                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                        }
-                        .padding(.leading, Espace.s)
-                        Spacer()
-                    }
-                }
-                Text("Sur l'iPhone, sans réseau")
-                    .font(Police.legende).foregroundStyle(.white.opacity(0.85))
-                    .padding(.top, Espace.l)
+        // P18 C : la photo prend tout l'écran (l'aperçu vivant est ouvert par le déclencheur), voile marine à 28 %, coins de cadrage (320 × 290 à 230 pt du haut),
+        // consigne à 545 pt, déclencheur de 92 pt à 92 pt du bas, galerie 48 pt à gauche, mention à 48 pt du bas.
+        ZStack(alignment: .topLeading) {
+          ZStack(alignment: .top) {
+            Palette.nuit
+            Color(red: 8 / 255, green: 42 / 255, blue: 76 / 255).opacity(0.28)
+            PriseCoinsDeCadre().stroke(.white, style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
+                .aspectRatio(320.0 / 290.0, contentMode: .fit)
+                .frame(width: 320)
+                .padding(.top, 230)
+                .accessibilityHidden(true)
+            Text("Le poisson entier, de profil")
+                .font(Police.sousTitre).foregroundStyle(.white).multilineTextAlignment(.center)
+                .shadow(color: .black.opacity(0.45), radius: 4, y: 1)
+                .frame(maxWidth: .infinity)
+                .padding(.top, 545)
+            Button(action: ouvrirCamera) {
+                Circle().fill(.white).frame(width: 92, height: 92)
+                    .overlay(Circle().strokeBorder(.white.opacity(0.55), lineWidth: 4).frame(width: 100, height: 100))
+                    .frame(width: 100, height: 100)
             }
-            .padding(Espace.bord)
+            .accessibilityLabel("Prendre la photo")
+            .padding(.bottom, 88)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+            PriseChoixPhoto(modele: modele) {
+                Image(systemName: "photo")
+                    .font(.system(size: 22, weight: .bold, design: .rounded)).foregroundStyle(Palette.encre)
+                    .frame(width: 48, height: 48)
+                    .background(Color(red: 250 / 255, green: 252 / 255, blue: 255 / 255).opacity(0.92),
+                                in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+            }
+            .padding(.leading, 32).padding(.bottom, 114)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+            Text("Sur l\u{2019}iPhone, sans réseau")
+                .font(Police.legende).foregroundStyle(.white.opacity(0.85))
+                .padding(.bottom, 48)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+          }
+          .ignoresSafeArea()
+            BoutonRond(role: .fermer, rendu: .verre, action: fermer).padding(.horizontal, Espace.bord)
         }
     }
 }
@@ -241,18 +224,30 @@ private struct PriseChoixPhoto<Etiquette: View>: View {
     }
 }
 
-/// Les quatre coins du cadre de prise de vue.
+/// Les quatre coins du cadre de prise de vue : le tracé de la maquette P18 (viewBox 320 × 290, coins arrondis de 12).
 nonisolated struct PriseCoinsDeCadre: Shape {
     func path(in rect: CGRect) -> Path {
-        let b = min(rect.width, rect.height) * 0.16
+        let kx = rect.width / 320, ky = rect.height / 290
+        func pt(_ x: CGFloat, _ y: CGFloat) -> CGPoint { CGPoint(x: rect.minX + x * kx, y: rect.minY + y * ky) }
         var p = Path()
-        for (x, dx) in [(rect.minX, b), (rect.maxX, -b)] {
-            for (y, dy) in [(rect.minY, b), (rect.maxY, -b)] {
-                p.move(to: CGPoint(x: x + dx, y: y))
-                p.addLine(to: CGPoint(x: x, y: y))
-                p.addLine(to: CGPoint(x: x, y: y + dy))
-            }
-        }
+        p.move(to: pt(2, 44)); p.addLine(to: pt(2, 14)); p.addQuadCurve(to: pt(14, 2), control: pt(2, 2)); p.addLine(to: pt(44, 2))
+        p.move(to: pt(276, 2)); p.addLine(to: pt(306, 2)); p.addQuadCurve(to: pt(318, 14), control: pt(318, 2)); p.addLine(to: pt(318, 44))
+        p.move(to: pt(318, 246)); p.addLine(to: pt(318, 276)); p.addQuadCurve(to: pt(306, 288), control: pt(318, 288)); p.addLine(to: pt(276, 288))
+        p.move(to: pt(44, 288)); p.addLine(to: pt(14, 288)); p.addQuadCurve(to: pt(2, 276), control: pt(2, 288)); p.addLine(to: pt(2, 246))
+        return p
+    }
+}
+
+/// L'icône d'appareil photo de la maquette P38 (viewBox 24 × 24) : boîtier et objectif, en trait.
+nonisolated struct PriseIconeAppareil: Shape {
+    func path(in rect: CGRect) -> Path {
+        let k = min(rect.width, rect.height) / 24
+        func pt(_ x: CGFloat, _ y: CGFloat) -> CGPoint { CGPoint(x: rect.minX + x * k, y: rect.minY + y * k) }
+        var p = Path()
+        p.move(to: pt(4, 8))
+        for (x, y) in [(7, 8), (9, 5), (15, 5), (17, 8), (20, 8), (20, 19), (4, 19)] as [(CGFloat, CGFloat)] { p.addLine(to: pt(x, y)) }
+        p.closeSubpath()
+        p.addEllipse(in: CGRect(x: rect.minX + 8.4 * k, y: rect.minY + 9.4 * k, width: 7.2 * k, height: 7.2 * k))
         return p
     }
 }
