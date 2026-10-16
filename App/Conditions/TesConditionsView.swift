@@ -1,7 +1,7 @@
 import SwiftUI
 import Core
 
-/// « Tes conditions » (Pro) : des comptes de ses propres prises, avec leur N, jamais une prédiction.
+/// « Mes statistiques » (Pro) : des comptes de ses propres prises, avec leur N, jamais une prédiction.
 /// `constats` vient de `tesConditions(sorties:)` de `Core` ; `nil` avant 10 sorties.
 struct TesConditionsView: View {
     let constats: [Constat]?
@@ -11,6 +11,7 @@ struct TesConditionsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 14) {
+                Text("Mes statistiques").font(JetonsConditions.police(.title2)).foregroundStyle(JetonsConditions.encre)
                 if let constats {
                     ForEach(constats, id: \.texte) { c in
                         VStack(alignment: .leading, spacing: 2) {

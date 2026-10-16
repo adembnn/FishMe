@@ -624,7 +624,6 @@ struct RootView: View {
 private struct RacineContenu: View {
     @Bindable var app: ParcoursApp
     @AppStorage(ClesConseils.questionVue) private var questionVue = false
-    @State private var amisOuverts = false
     /// P03 « Où pêches-tu ? » : montré une seule fois, avant la première demande de position.
     @AppStorage("premierLancement.ouPechesTuVu") private var ouPechesTuVu = false
 
@@ -689,7 +688,7 @@ private struct RacineContenu: View {
             Tab("Carte", systemImage: "map.fill", value: Onglet.carte) {
                 carte
             }
-            Tab("Mon club", systemImage: "person.2.fill", value: Onglet.club) {
+            Tab("Communauté", systemImage: "person.2.fill", value: Onglet.club) {
                 club
             }
         }
@@ -769,7 +768,7 @@ private struct RacineContenu: View {
             },
             voirLaCarte: { app.sansPositionAffiche = false },
             ouvrirPescedex: { app.onglet = .pescedex },
-            ouvrirAmis: { app.onglet = .club; amisOuverts = true },
+            ouvrirAmis: { app.onglet = .club },
             codeZone: app.spotCourant.flatMap { $0.departement.estInconnu ? nil : $0.departement.code })
     }
 
@@ -792,7 +791,7 @@ private struct RacineContenu: View {
             .task { app.carteListe() }
     }
 
-    // MARK: Volet Mon club (L9) avec L6
+    // MARK: Volet Communauté (Amis et Club, L8 et L9) avec L6
 
     private var club: some View {
         let departement = app.moteur.spotGratuit?.departement ?? .inconnu
@@ -807,39 +806,22 @@ private struct RacineContenu: View {
         }
         sources.append(SourceClub(nom: "Photo d'exemple", mention: "Photo d'exemple : SpinfisherCRO, CC BY-SA",
                                   lien: URL(string: "https://creativecommons.org/licenses/by-sa/4.0/")))
-        return ClubView(
-            liens: liens, sources: sources,
-            cartes: app.cartesAPartager,
-            mesureUsage: Binding(get: { app.consentement == .accepte }, set: { app.reglerMesure($0) })
-        ) {
-            MarqueMeteoView(stockage: app.marque)
+        let poissons = app.core.especes.especesPechables().map { PoissonClub(id: $0.espece.id, nom: $0.nom, image: $0.image) }
+        let reglages = ReglagesClubView(
+            liens: liens, sources: sources, cartes: app.cartesAPartager,
+            mesureUsage: Binding(get: { app.consentement == .accepte }, set: { app.reglerMesure($0) }),
+            marqueMeteo: MarqueMeteoView(stockage: app.marque))
+        return CommunauteView {
+            pageAmis
+        } club: {
+            ClubPageView(cartes: app.cartesAPartager, poissons: poissons)
+        } reglages: {
+            ReglagesRoueEmplacement(app: app, reglages: reglages)
         }
-        .poissonsDuClub(app.core.especes.especesPechables().map { PoissonClub(id: $0.espece.id, nom: $0.nom, image: $0.image) })
-        // Plus de bouton « Mes amis » en surimpression : un seul menu mène aux amis, aux sorties et aux réglages.
-        .overlay(alignment: .topTrailing) {
-            Menu {
-                Button { amisOuverts = true } label: { Label("Mes amis", systemImage: "person.2.fill") }
-                Button { app.montrer(.mesSorties) } label: { Label("Mes sorties", systemImage: "clock.arrow.circlepath") }
-                Button { app.montrer(.reglages) } label: { Label("Réglages", systemImage: "gearshape") }
-            } label: {
-                Image(systemName: "ellipsis")
-                    .frame(width: 44, height: 44)
-                    .background(.regularMaterial, in: Circle())
-            }
-            .accessibilityLabel("Amis, sorties et réglages")
-            .padding(.trailing, 16)
-            .padding(.top, 4)
-        }
-        .sheet(isPresented: $amisOuverts) {
-            if let gestion = app.gestionAmis() {
-                AmisView(gestion: gestion)
-                    .task { await gestion.synchroniserMesCartes() }
-            } else {
-                ContentUnavailableView("Amis", systemImage: "person.2.slash",
-                                       description: Text("Tes amis ne peuvent pas s'ouvrir pour l'instant."))
-            }
-        }
-        // « Tes conditions » (TesConditionsView, Pro) : ClubView n'a pas d'emplacement pour elle, non branchée.
+    }
+
+    private var pageAmis: some View {
+        AmisPageView(gestion: app.gestionAmis())
     }
 
     // MARK: Écrans modaux
@@ -1054,8 +1036,26 @@ private struct CommentLaPecherEmplacement: View {
     }
 }
 
-/// « Tes conditions » (L12, Pro) ouvert depuis le Pescedex : les comptes de ses propres sorties, ou le paywall.
+/// « Tes conditions » ouvert depuis le Pescedex : la météo de l'iPhone (WeatherKit) pour ton spot.
 private struct TesConditionsEmplacement: View {
+    let app: ParcoursApp
+    @State private var paywall: PaywallDemande?
+
+    var body: some View {
+        let centre = app.spotCourant?.centre ?? app.moteur.spotGratuit?.centre
+        TesConditionsMeteoView(
+            centre: centre, conditions: app.conditions, marque: app.marque,
+            porte: PorteConditions(
+                autorise: { fonction in centre.map { app.autorise(fonction, en: $0) } ?? false },
+                ouvrirPaywall: { fonction in paywall = PaywallDemande(declencheur: .fonction(fonction)) }))
+            .sheet(item: $paywall) { demande in
+                app.paywall(demande.declencheur, fermer: { paywall = nil })
+            }
+    }
+}
+
+/// « Mes statistiques » (L12, Pro) : les comptes de ses propres sorties, ou le paywall.
+private struct MesStatistiquesEmplacement: View {
     let app: ParcoursApp
     @Environment(\.dismiss) private var fermer
 
@@ -1065,6 +1065,48 @@ private struct TesConditionsEmplacement: View {
                               sortiesTerminees: app.moteur.sortiesTerminees.count, marque: app.marque)
         } else {
             app.paywall(.fonction(.analyseConditions), fermer: { fermer() })
+        }
+    }
+}
+
+/// La roue crantée de Communauté : mes statistiques, mes sorties, les réglages de l'app, puis tout ce qui était dans « Mon club ».
+private struct ReglagesRoueEmplacement<Reglages: View>: View {
+    let app: ParcoursApp
+    let reglages: Reglages
+    @Environment(\.dismiss) private var fermer
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section {
+                    NavigationLink { MesStatistiquesEmplacement(app: app) } label: {
+                        Label("Mes statistiques", systemImage: "chart.bar.xaxis")
+                    }
+                    Button { ouvrir(.mesSorties) } label: {
+                        Label("Mes sorties", systemImage: "clock.arrow.circlepath")
+                    }
+                    Button { ouvrir(.reglages) } label: {
+                        Label("Réglages", systemImage: "gearshape")
+                    }
+                }
+                Section {
+                    NavigationLink { reglages } label: {
+                        Label("Ma pêche, sécurité et sources", systemImage: "slider.horizontal.3")
+                    }
+                }
+            }
+            .navigationTitle("Réglages")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("Fermer") { fermer() } } }
+        }
+    }
+
+    /// Ferme la roue d'abord : deux feuilles ne se superposent pas.
+    private func ouvrir(_ modal: Modal) {
+        fermer()
+        Task {
+            try? await Task.sleep(for: .milliseconds(450))
+            app.montrer(modal)
         }
     }
 }
