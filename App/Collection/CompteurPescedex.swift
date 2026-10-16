@@ -25,22 +25,19 @@ struct CompteurPescedex: Equatable {
         if releveesDansLaZone == 0 {
             return "Aucune espèce relevée dans le \(code) pour l'instant."
         }
-        var base = "\(trouvees) sur les \(releveesDansLaZone) espèces relevées dans le \(code)"
-        if legendairesEnPlus > 0 {
-            base += ", + \(legendairesEnPlus) légendaire" + (legendairesEnPlus > 1 ? "s" : "")
-        }
-        return base
+        return "\(trouvees) sur les \(releveesDansLaZone) espèces relevées dans le \(code)" + suffixeLegendaires
+    }
+
+    /// « , + 1 légendaire » : partagé par `texte` (tests, accessibilité) et `phraseDeZone` (écran).
+    private var suffixeLegendaires: String {
+        legendairesEnPlus > 0 ? ", + \(legendairesEnPlus) légendaire" + (legendairesEnPlus > 1 ? "s" : "") : ""
     }
 
     /// La phrase sous le titre du Pescedex (P26 B, P48 B) : « Tu en as trouvé 3 sur 11 espèces de la zone ».
     /// `nil` sans zone connue ou sans espèce relevée dedans.
     var phraseDeZone: String? {
         guard let zone, !zone.estInconnu, releveesDansLaZone > 0 else { return nil }
-        var base = "Tu en as trouvé \(trouvees) sur \(releveesDansLaZone) espèces de la zone"
-        if legendairesEnPlus > 0 {
-            base += ", + \(legendairesEnPlus) légendaire" + (legendairesEnPlus > 1 ? "s" : "")
-        }
-        return base
+        return "Tu en as trouvé \(trouvees) sur \(releveesDansLaZone) espèces de la zone" + suffixeLegendaires
     }
 
     /// La zone par défaut est le département de la dernière carte avec un lieu ; les cartes déclarées n'en ont pas.
