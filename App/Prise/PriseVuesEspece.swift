@@ -52,6 +52,21 @@ struct PriseTuile: View {
 struct PrisePropositionsView: View {
     var modele: PriseModele
 
+    private enum Tuile {
+        case espece(EspecePechable)
+        case classe(String, premiere: EspecePechable?)
+    }
+
+    private var tuiles: [Tuile] {
+        modele.propositions.compactMap { p in
+            switch p.type {
+            case .espece(let e): return modele.catalogue.first { $0.espece == e }.map(Tuile.espece)
+            case .classe(let nom): return .classe(nom, premiere: modele.catalogue.first { $0.classeModele == nom })
+            default: return nil
+            }
+        }
+    }
+
     private var trois: [EspecePechable] {
         modele.propositions.compactMap { p in
             if case .espece(let e) = p.type { return modele.catalogue.first { $0.espece == e } }
@@ -70,12 +85,20 @@ struct PrisePropositionsView: View {
             ScrollView {
                 VStack(spacing: 16) {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 100), spacing: 12)], spacing: 12) {
-                        ForEach(Array(trois.enumerated()), id: \.offset) { _, entree in
-                            PriseTuile(entree: entree) { modele.choisir(entree) }
-                        }
-                        ForEach(Array(classes.enumerated()), id: \.offset) { _, nom in
-                            Button(nom.capitalized) { modele.ouvrirLaGrille(classe: nom) }
-                                .buttonStyle(PriseBoutonSecondaire())
+                        // Dans l'ordre du modèle (le plus probable d'abord), espèce seule ou groupe de sosies.
+                        // Un groupe (« brochet » : brochet et brochet aquitain) montre l'image de sa 1re espèce et ouvre ses sosies.
+                        ForEach(Array(tuiles.enumerated()), id: \.offset) { _, tuile in
+                            switch tuile {
+                            case .espece(let entree):
+                                PriseTuile(entree: entree) { modele.choisir(entree) }
+                            case .classe(let nom, let premiere):
+                                if let premiere {
+                                    PriseTuile(entree: premiere) { modele.ouvrirLaGrille(classe: nom) }
+                                } else {
+                                    Button(nom.split(separator: "_").joined(separator: " ou ").capitalizedPremiere) { modele.ouvrirLaGrille(classe: nom) }
+                                        .buttonStyle(PriseBoutonSecondaire())
+                                }
+                            }
                         }
                     }
                     Button("Autre espèce") { modele.ouvrirLaGrille() }.buttonStyle(PriseBoutonSecondaire())
@@ -189,4 +212,10 @@ struct PriseStadeView: View {
         }
         .padding(20)
     }
+}
+
+
+private extension String {
+    /// Majuscule à la première lettre seulement (« Hotu ou toxostome »).
+    var capitalizedPremiere: String { prefix(1).uppercased() + dropFirst() }
 }
