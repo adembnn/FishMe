@@ -69,3 +69,28 @@ Le chrono tourne tout seul (`Text(timerInterval:)`, rendu par le système) ; la 
 7. Tests de la logique : `sh AppTests/WidgetAquarium/lancer-tests-session.sh` (passent sous Docker swift:6.4).
 8. À vérifier à la compilation : `AccessoryWidgetBackground` dans `accessoryCircular`; `Text(timerInterval:pauseTime:countsDown:showsHours:)`; `Link` dans un widget moyen; symboles `sunset.fill`, `pause.circle.fill`, `plus.circle.fill`; `#Preview(as:)` avec une seule entrée; `containerBackground(for:)` appelé dans `ecranAccueil` après un `let` dans un `@ViewBuilder`.
    Capture de chaque format dans `reports/ecrans/L15/`.
+
+## Widget « Ma carte » (16 oct., demande d'Adem : « juste une carte, recto et verso, sans informations »)
+
+Une carte du Pescedex sur l'écran d'accueil, petit et grand (la carte est verticale : pas de moyen). Aucun texte ni chiffre
+sur la carte, aucune coordonnée, photos sans métadonnées. Un toucher retourne la carte ; le réglage « Choisir la carte »
+(appui long, Modifier le widget) choisit laquelle, sinon la plus rare puis la plus récente. Dessin repris de `.fc` dans
+`docs/design/fishme-ds.css` (ratio 69/100), première version avant les maquettes du fil design.
+
+1. App Groups : déjà fait pour l'aquarium (même groupe). Le widget écrit `cartes-widget.json` et `cartes-photos/<id>.jpg` dans le conteneur.
+2. Appartenance des fichiers de `WidgetAquarium/` :
+   - `InstantaneCartes.swift`, `RetournerCarteIntent.swift` : FishMeWidget + BuildChallenge ;
+   - `CarteWidget.swift`, `VuesCarteWidget.swift` : FishMeWidget seulement ;
+   - `PontCartesWidget.swift` : BuildChallenge seulement.
+   Les images des poissons (`<slug>` et `<slug>-silhouette`) viennent de `PoissonsWidget.xcassets`, déjà dans la cible widget.
+3. `Widget/FishMeWidgetBundle.swift` : ajouter `CarteWidget()` dans `body`.
+4. Branchements dans l'app (A, `RootView.swift`) :
+   - après la révélation d'une carte : `PontCartesWidget.enregistrerPhoto(image, id:)` (photo du verso, réduite à 600 px, JPEG sans EXIF/GPS),
+     puis `PontCartesWidget.publier(cartes:)` (plus récentes d'abord, 60 au plus, `rarete` 0 à 3 venue de la collection, `nom` pour la liste de choix seulement, `aPhoto` vrai si la photo est écrite) ;
+   - à la suppression d'une carte, au recalcul de rareté et à l'ajout d'une carte déclarée (sans photo) : `publier(cartes:)` ; les photos orphelines sont rangées par le pont.
+5. Essai sur l'iPhone : ajouter le widget en petit et en grand ; toucher la carte (retournement) ; choisir une carte ; carte sans photo (dos marine) ;
+   aucune carte (emplacement en pointillés) ; « Réduire les animations » (fondu au lieu du retournement) ; mode teinté. Captures dans `reports/ecrans/L15/`.
+
+Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntentTimelineProvider` ; `@Parameter` sur un `AppEntity?` ;
+`rotation3DEffect` dans une transition de widget (si le retournement ne joue pas, il reste un fondu) ;
+`.widgetAccentedRenderingMode` après `.resizable()` ; `UIImage` dans une `TimelineEntry` (`@unchecked Sendable`) ; `nonisolated` sur les intents.
