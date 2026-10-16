@@ -33,7 +33,7 @@ struct NageWidgetTests {
             let instant = t0.addingTimeInterval(Double(k) * NageWidget.pas)
             for p in NageWidget.placements(poissons(12), a: instant, dernierRepas: nil, limite: 12) {
                 #expect(p.x >= 0.18 && p.x <= 0.82)
-                #expect(p.y >= 0.15 && p.y <= 0.85)
+                #expect(p.y >= 0.14 && p.y <= 0.70)
                 #expect(p.echelle >= 0.75 && p.echelle <= 1.25)
                 #expect(!p.auRepas)
             }
@@ -77,7 +77,7 @@ struct NageWidgetTests {
             #expect(p.count == 6)
             for e in p {
                 #expect(e.auRepas)
-                #expect(e.y >= 0.08 && e.y <= 0.55)
+                #expect(e.y >= 0.08 && e.y <= 0.50)
                 #expect(e.x >= 0.18 && e.x <= 0.82)
                 #expect(e.versLaDroite == (e.x < 0.5))
             }

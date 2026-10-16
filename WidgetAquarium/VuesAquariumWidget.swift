@@ -41,29 +41,7 @@ private func colonnes(_ famille: WidgetFamily) -> Int {
 
 // MARK: - L'eau
 
-/// Quelques rayons très légers venant de la surface.
-private struct Rayons: View {
-    var body: some View {
-        GeometryReader { geo in
-            let l = geo.size.width
-            let h = geo.size.height
-            ForEach(0..<3, id: \.self) { i in
-                let x = l * (0.12 + 0.32 * CGFloat(i))
-                Path { chemin in
-                    chemin.move(to: CGPoint(x: x, y: 0))
-                    chemin.addLine(to: CGPoint(x: x + l * 0.10, y: 0))
-                    chemin.addLine(to: CGPoint(x: x - l * 0.02, y: h * 0.85))
-                    chemin.addLine(to: CGPoint(x: x - l * 0.16, y: h * 0.85))
-                    chemin.closeSubpath()
-                }
-                .fill(LinearGradient(colors: [.white.opacity(0.11), .white.opacity(0)],
-                                     startPoint: .top, endPoint: .bottom))
-            }
-        }
-    }
-}
-
-/// Le fond du widget : dégradé marine, rayons, une ligne de sable.
+/// Le fond du widget : le décor rendu en 3D (eau, plantes, galets) ; un simple dégradé en rendu teinté.
 private struct FondEau: View {
     let famille: WidgetFamily
     /// Faux coupe l'animation (rendu en image : `ImageRenderer` ne fait pas tourner les chronos).
@@ -77,22 +55,23 @@ private struct FondEau: View {
         case .accessoryRectangular, .accessoryCircular, .accessoryInline:
             Color.clear
         default:
-            ZStack {
-                LinearGradient(
-                    colors: accentue
-                        ? [Color(white: 0.30), Color(white: 0.14)]
-                        : [Teintes.marine, Teintes.fond],
-                    startPoint: .top, endPoint: .bottom)
-                Rayons()
-                GeometryReader { geo in
-                    Ellipse()
-                        .fill(LinearGradient(
-                            colors: [Teintes.sable.opacity(accentue ? 0.25 : 0.40), Teintes.sable.opacity(0.12)],
-                            startPoint: .top, endPoint: .bottom))
-                        .frame(width: geo.size.width * 1.5, height: geo.size.height * 0.20)
-                        .position(x: geo.size.width / 2, y: geo.size.height * 1.0)
-                }
+            if accentue {
+                // Rendu teinté : iOS impose une teinte, une photo y deviendrait une tache grise.
+                LinearGradient(colors: [Color(white: 0.30), Color(white: 0.14)], startPoint: .top, endPoint: .bottom)
+            } else {
+                // Eau, vallisnéries, galets, roches et bois : rendus en 3D par le fil Aquarium (scene.py, v2), sans poissons.
+                Image(nomFond)
+                    .resizable()
+                    .scaledToFill()
             }
+        }
+    }
+
+    private var nomFond: String {
+        switch famille {
+        case .systemSmall: "fond-petit"
+        case .systemMedium: "fond-moyen"
+        default: "fond-grand"
         }
     }
 }
