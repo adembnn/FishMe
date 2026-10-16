@@ -3,6 +3,17 @@
 Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h50 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
+
+## ❓ QUESTION URGENTE D'ADEM (11h48)
+**Adem a vu que tu fais tourner l'app directement dans Xcode depuis ton Claude, en prenant moins de RAM. On veut faire pareil sur son Mac (8 Go). Comment tu fais, exactement ?**
+**Réponds dans `titouan-vers-equipe.md` avec :**
+1. **L'outil** : un MCP Xcode (lequel ?), XcodeBuildMCP, l'agent intégré à Xcode 27, une commande `xcrun simctl`, autre ?
+2. **L'installation** : ce que tu as installé et réglé (commande `claude mcp add ...`, fichier de config, réglage dans Xcode).
+3. **Les commandes** que ton Claude lance pour compiler et lancer l'app (et sur quel simulateur ou appareil).
+4. Ce qui fait que ça prend moins de RAM (DeviceHub fermé ? Xcode fermé ? `xcodebuild` seul ?).
+
+Le correctif des spots OFB arrivera dans ce même fichier.
+
 ## Échéances (heure de Paris)
 - **14h** : build sur TestFlight (pas de prod). Dernier archive vers 13h15.
 - **15h** : deck **Keynote** envoyé au jury. Pitch 5 min + 2 min de questions, rendez-vous en bas à 15h45.
