@@ -15,7 +15,28 @@ Chaque branche ci-dessous part de `lot/design-systeme` (bea70da) et y ajoute un 
 
 Ne pas fusionner `claude/navigation-retour-7s97rl` sauf ce fichier : son commit `.fermable()` dans Style n'est utilisé par personne.
 
+## 2e passe : boutons au design système (Adem, 16 oct. 7h27)
+
+Toutes les croix et tous les retours passent par `BoutonRond` (App/Style/Style.swift) : rond 44 pt, en verre avec icône encre pour les écrans en direction A ou C, icône marine sans fond pour la direction B (docs/design/choix.md, kit.md `.rond verre`). Placement du kit : en haut à gauche, à 16 pt ; la fiche d'un coin (P07) en haut à droite ; Retour à gauche et Fermer à droite quand il y a les deux.
+
+À fusionner par-dessus `mac/integration`, **`lot/style` en premier** (les autres en dépendent) :
+
+| Branche | Commit |
+|---|---|
+| `lot/style` | 9f17c243 (BoutonRond) |
+| `lot/carte` | 8b7df83c |
+| `lot/ou-chercher` | 443b912d |
+| `lot/session` | 3b00fe93 |
+| `lot/prise` | 62b2630a |
+| `lot/collection` | 581ca1ce |
+| `lot/amis` | 2a99e8ec |
+| `lot/abonnement` | 2226a80c |
+| `lot/premier-pas` | 9509d49a |
+
+Restes connus : la croix d'Amis et celle de « Carte à essayer » sont dans leur en-tête, à droite (pas déplacées) ; `PriseBoutonRond` n'est plus utilisé.
+
 ## À vérifier dans le simulateur
+- Chaque croix et chaque retour : rond de verre (ou icône marine seule sur Réglages, consentement, fiche d'espèce, règles, filtre, Où chercher, résultat de la prise), 44 pt, rien qui se chevauche.
 - Fiche d'un coin : croix visible en medium et large, ne couvre ni le nom de l'eau ni la pastille.
 - Où chercher : « Fermer » à chaque étape (grille, chargement, résultats).
 - Pescedex : fiche d'espèce et « Tes conditions » se ferment par la croix ; la croix ne masque pas le titre.
