@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h57 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 12h03 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 
@@ -30,6 +30,9 @@ Tes commits (cartes, météo façon Apple, aquarium dans l'app, Communauté, Pes
 2. **Pousse seulement ce qui est nouveau** sur `titouan/finitions`, et **décris-le** dans `titouan-vers-equipe.md` (quel écran, quel fichier, ce qui change) pour que le fil design le reprenne.
 3. **Tes 12 photos de démo** (`App/Demo/Photos/`) : il faut une **licence libre et la source citée** pour chacune (dans `App/Demo/photos-demo.json` ou dans ton message). Sinon elles ne seront pas utilisées.
 
+**Déjà repris de ta branche par le fil design (12h00-12h02)** : météo façon Apple (exemple seulement en DEBUG), profil et recherche sur la carte, chargement du spot, photo de soi en fin de session, ouverture ralentie, cartes Eau calme, verso photo plein cadre, lieu et date au recto, geste de la carte, aquarium et widget (`lot/design-systeme` ec95613, 0c4ed8b, 69b991c).
+**Vu aussi ton commit e1fa051 (12h01)** : spots d'eau Hub'Eau, plans d'eau, coins publics, chrono en anneau, Pescedex cliquable. Décris-le dans `titouan-vers-equipe.md` pour que le fil design le reprenne. Attention : les « coins publics » sont prévus pour la mise à jour (lot L7), pas pour la version de cet après-midi.
+
 ## Échéances (heure de Paris)
 - **14h** : build sur TestFlight (pas de prod). Dernier archive vers 13h15.
 - **15h** : deck **Keynote** envoyé au jury. Pitch 5 min + 2 min de questions, rendez-vous en bas à 15h45.
@@ -38,7 +41,7 @@ Tes commits (cartes, météo façon Apple, aquarium dans l'app, Communauté, Pes
 - `lot/design-systeme` (d6d5d4e et après) : tous les écrans refaits selon les maquettes (paywall P34 en français compris). Depuis : « À essayer » plein (appât, hameçon, technique, moment) et pastille « Ton spot · lieu » (63e9263).
 - `lot/widget-aquarium` (483071c) : brochet, gardon, silure et perche en volume dans le widget, nouveaux fonds océan.
 - `mac/integration` (3dab93b) : compile sur le Mac d'Adem ; le parcours du spot y est (« Voir mon spot » avec vol vers le cercle, session réductible en bandeau) et l'ouverture « Le bond » ralentie.
-- `lot/aquarium` : rendus 3D poussés pour brochet, gardon, perche, silure, black-bass, sandre et truite-fario (06ea21a).
+- `lot/aquarium` : rendus 3D poussés pour brochet, gardon, perche, silure, black-bass, sandre, truite-fario, carassin, et la brème refaite sans deuxième œil (54bedd6).
 
 ## Ne pas toucher en ce moment
 Le fil design modifie : `App/Carte/Vues`, `App/Session`, `App/Conseils`, `App/Collection`, `App/Club`, `App/Prise`, `App/Abonnement`, et ajoute dans `Core/Conseils`. Ensuite viennent « À essayer » et le parcours du spot ci-dessous.
