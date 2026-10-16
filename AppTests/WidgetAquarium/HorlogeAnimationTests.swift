@@ -7,8 +7,8 @@ private let ref = HorlogeAnimation.reference(pour: Date(timeIntervalSince1970: 1
 @Suite("HorlogeAnimation")
 struct HorlogeAnimationTests {
     @Test func constantes() {
-        #expect(HorlogeAnimation.imagesParSeconde == 16)
-        #expect(HorlogeAnimation.nombreImages == 160)
+        #expect(HorlogeAnimation.imagesParSeconde == 8)
+        #expect(HorlogeAnimation.nombreImages == 80)
         #expect(HorlogeAnimation.dureeBoucle == 10)
         #expect(HorlogeAnimation.reference(pour: Date(timeIntervalSince1970: 100)) == Date(timeIntervalSince1970: 40))
     }
@@ -46,16 +46,16 @@ struct HorlogeAnimationTests {
         #expect(HorlogeAnimation.imageVisible(reference: ref, a: ref.addingTimeInterval(10.01), parSeconde: 8) == 0)
     }
 
-    /// Image par image : sur une seconde, les 16 instants montrent 16 copies différentes, dans l'ordre, et la boucle
+    /// Image par image : sur une seconde, les 8 instants montrent 8 copies différentes, dans l'ordre, et la boucle
     /// revient à la copie 0 au bout de 10 s.
-    @Test func seizeImagesDifferentesParSeconde() {
+    @Test func huitImagesDifferentesParSeconde() {
         let reference = Date(timeIntervalSinceReferenceDate: 1_000_000)
         let depart = reference.addingTimeInterval(60.03)
-        let vues = (0..<16).map {
-            HorlogeAnimation.imageVisible(reference: reference, a: depart.addingTimeInterval(Double($0) / 16))
+        let vues = (0..<8).map {
+            HorlogeAnimation.imageVisible(reference: reference, a: depart.addingTimeInterval(Double($0) / 8))
         }
-        #expect(Set(vues).count == 16)
-        for k in 1..<16 { #expect((vues[k] - vues[k - 1] + 160) % 160 == 1) }
+        #expect(Set(vues).count == 8)
+        for k in 1..<8 { #expect((vues[k] - vues[k - 1] + 80) % 80 == 1) }
         #expect(HorlogeAnimation.imageVisible(reference: reference, a: depart.addingTimeInterval(10)) == vues[0])
     }
 }

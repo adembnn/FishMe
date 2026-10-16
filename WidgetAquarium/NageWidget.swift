@@ -379,7 +379,7 @@ nonisolated public enum NageWidget {
 
     /// Images par battement de queue au plus : 16 avec les rendus en volume. À 8 si la mémoire ou la timeline
     /// ne suivent pas : on ne garde alors que les images paires.
-    public static let imagesParBattementMax = 16
+    public static let imagesParBattementMax = 8
 
     /// Combien d'images du battement on montre, et le pas entre deux numéros d'image, pour une espèce qui en a
     /// `disponibles` (16 pour les rendus en volume, 8 pour les anciens, 0 sans cycle).

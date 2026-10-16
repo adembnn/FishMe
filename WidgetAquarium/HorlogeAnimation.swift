@@ -8,7 +8,9 @@ import Foundation
 // chiffre q−1 décalé de (r+1)/16 s) ne laissent passer qu'une fenêtre de 1/16 s : 160 images à 16 images/s,
 // en boucle de 10 s, une seule visible à la fois. Adem (16 oct. 06h) : 8 images/s paraissait saccadé.
 enum HorlogeAnimation {
-    static let imagesParSeconde = 16
+    /// 8 et pas 16 (16 oct. 14h, build 22301) : à 160 copies, le grand widget sortait tout noir sur l'iPhone 12
+    /// (rendu trop lourd pour la mémoire de l'extension). 80 copies suffisent, comme la 1re version qui tournait.
+    static let imagesParSeconde = 8
     /// Une boucle = un tour complet du chiffre des unités des secondes.
     static let dureeBoucle: TimeInterval = 10
     static let nombreImages = imagesParSeconde * 10
