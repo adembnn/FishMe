@@ -41,14 +41,13 @@ struct FicheCoinView: View {
                     if let touchee = modele.especeTouchee {
                         emplacementConseil(touchee)
                     }
-                    // Toujours visible. Sans action (session déjà en cours, ou aucun spot choisi), il reste grisé.
-                    // À brancher : RootView / VueCarte passe `onCommencerSession` dès qu'un spot est choisi.
-                    Button { onCommencerSession?() } label: {
-                        Label("Commencer une session", systemImage: "play.fill")
+                    // Pas de bouton sans action (session déjà en cours, ou aucun spot choisi).
+                    if let onCommencerSession {
+                        Button(action: onCommencerSession) {
+                            Label("Commencer une session", systemImage: "play.fill")
+                        }
+                        .buttonStyle(.principal)
                     }
-                    .buttonStyle(.principal)
-                    .disabled(onCommencerSession == nil)
-                    .opacity(onCommencerSession == nil ? 0.45 : 1)
                     releve(fiche)
                 } else {
                     ChargementBouchon(texte: "Chargement du spot")
@@ -62,10 +61,20 @@ struct FicheCoinView: View {
         }
         .scrollIndicators(.hidden)
         .scrollBounceBehavior(.basedOnSize)
-        // La feuille a la hauteur de son contenu (comme la maquette), et peut se tirer jusqu'en grand.
-        .presentationDetents(hauteurContenu > 0 ? [.height(hauteurContenu + 24), .large] : [.medium, .large])
+        // Tant que la fiche charge : moyen. Ensuite la hauteur du contenu (comme la maquette), ou grand.
+        .presentationDetents(detentsFiche)
+        .presentationBackground(Palette.surface)
+        .presentationBackgroundInteraction(.enabled(upThrough: hauteurFiche))
         .task { await modele.charger() }
         .sheet(isPresented: $reglesOuvertes) { feuilleRegles }
+    }
+
+    private var hauteurFiche: PresentationDetent {
+        hauteurContenu > 0 ? .height(hauteurContenu + 40) : .medium
+    }
+
+    private var detentsFiche: Set<PresentationDetent> {
+        modele.fiche == nil ? [.medium] : [hauteurFiche, .large]
     }
 
     // MARK: En-tête : nom de l'eau, pastille d'ouverture
@@ -116,7 +125,14 @@ struct FicheCoinView: View {
         }
         let fond = ouverture == nil ? Palette.marineDoux : (ouvert ? Palette.ouvertDoux : Palette.alerteDoux)
         let encre = ouverture == nil ? Palette.marine : (ouvert ? Palette.ouvert : Palette.alerte)
-        return Button { reglesOuvertes = true } label: {
+        return Button {
+            // La pastille ouvre les règles du jour, pas celles d'une espèce.
+            if modele.especeTouchee != nil {
+                modele.especeTouchee = nil
+                Task { await modele.charger() }
+            }
+            reglesOuvertes = true
+        } label: {
             HStack(spacing: Espace.s) {
                 Circle().fill(encre).frame(width: 8, height: 8)
                     .accessibilityHidden(true)
@@ -157,7 +173,11 @@ struct FicheCoinView: View {
         let choisie = modele.especeTouchee == ligne.espece
         let niveau = ligne.rarete?.niveau
         return Button {
-            Task { await modele.toucherEspece(ligne.espece) }
+            Task {
+                await modele.toucherEspece(ligne.espece)
+                // Un toucher sur un poisson ouvre ses règles ; un deuxième le désélectionne.
+                reglesOuvertes = modele.especeTouchee == ligne.espece
+            }
         } label: {
             VStack(spacing: Espace.xs) {
                 ImageEspeceCarte(nom: modele.image(ligne.espece))
@@ -170,7 +190,7 @@ struct FicheCoinView: View {
                 HStack(spacing: 4) {
                     if let niveau, niveau != .nonMesuree {
                         Image(systemName: symbole(niveau))
-                            .font(Police.taille(10))
+                            .font(Police.legende)
                             .foregroundStyle(CouleursCarte.rarete(niveau))
                             .accessibilityHidden(true)
                     }
@@ -204,7 +224,7 @@ struct FicheCoinView: View {
     private func badgeOuverture(_ ouverture: OuvertureDuJour?) -> some View {
         if let ouverture {
             Text(ouverture.estOuverte ? "Ouvert" : "Fermé")
-                .font(Police.taille(12))
+                .font(Police.legende)
                 .foregroundStyle(ouverture.estOuverte ? Palette.ouvert : Palette.alerte)
                 .padding(.horizontal, Espace.s)
                 .padding(.vertical, 3)
@@ -267,7 +287,7 @@ struct FicheCoinView: View {
                 }
             }
         }
-        .presentationDetents([.medium, .large])
+        .presentationDetents(modele.especeTouchee == nil ? [.medium, .large] : [.large])
     }
 
     /// Les règles du jour du spot, sans espèce choisie.
@@ -298,16 +318,15 @@ struct FicheCoinView: View {
         let periode = lignes.first { $0.type == .periode }
         let jusquau = periode.flatMap { LectureRegle.dateApresJusquAu($0.phrase) }
         let quota = lignes.first { $0.type == .quota }
-        let parJour = quota.flatMap { LectureRegle.premierEntier($0.phrase) }
+        let parJour = quota.flatMap { LectureRegle.nombreAvantParJour($0.phrase) }
         let utilisees = [tailleCm == nil ? nil : taille, jusquau == nil ? nil : periode, parJour == nil ? nil : quota].compactMap { $0 }
         let autres = lignes.filter { ligne in !utilisees.contains(ligne) }
         let avecSources: LigneControle?
         if let taille, !taille.sources.isEmpty { avecSources = taille } else { avecSources = lignes.first(where: { !$0.sources.isEmpty }) }
         return VStack(alignment: .leading, spacing: Espace.l) {
             HStack {
-                BoutonRond(role: .retour, rendu: .simple) { Task { await modele.toucherEspece(espece) } }
-                    .offset(x: -Espace.s)
                 Spacer(minLength: 0)
+                BoutonRond(role: .fermer, rendu: .simple) { reglesOuvertes = false }
             }
             HStack(alignment: .center, spacing: Espace.m) {
                 VStack(alignment: .leading, spacing: Espace.xs) {
@@ -326,6 +345,14 @@ struct FicheCoinView: View {
                     .frame(width: 120, height: 52)
             }
             VStack(spacing: 0) {
+                if lignes.isEmpty {
+                    Text("Pas de règle lue ici, vérifie l'arrêté")
+                        .font(Police.corps)
+                        .foregroundStyle(Palette.encre)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(Espace.l)
+                }
                 if let tailleCm {
                     ligneValeur("Taille minimale") {
                         Text("\(tailleCm) cm").font(Police.chiffreMoyen).foregroundStyle(Palette.marine)
@@ -383,7 +410,12 @@ struct FicheCoinView: View {
             }
             .tuileFishMe(rayon: Rayon.l)
             if let taille, taille.sources.count > 1 {
-                Text("Deux textes se contredisent : " + taille.sources.map(\.titre).joined(separator: " · ") + ". Le plus strict est affiché.")
+                let parSource = taille.sources.compactMap { source -> String? in
+                    source.citation.flatMap { LectureRegle.nombre(avant: "cm", dans: $0) }.map { "\(source.titre) : \($0) cm" }
+                }
+                Text(parSource.count == taille.sources.count
+                     ? "Deux textes se contredisent. " + parSource.joined(separator: " · ") + ". Le plus strict est affiché."
+                     : "Deux textes se contredisent : " + taille.sources.map(\.titre).joined(separator: " · ") + ". Le plus strict est affiché.")
                     .font(Police.legende)
                     .foregroundStyle(Palette.encreDouce)
                     .fixedSize(horizontal: false, vertical: true)
@@ -574,6 +606,15 @@ nonisolated enum LectureRegle {
     static func premierEntier(_ phrase: String) -> String? {
         let mots = phrase.split(whereSeparator: { !$0.isNumber && !$0.isLetter }).map(String.init)
         return mots.first { !$0.isEmpty && $0.count <= 2 && $0.allSatisfy(\.isNumber) }
+    }
+
+    /// Le nombre juste avant « par jour » (« 3 par jour ») ; `nil` si la phrase ne le dit pas ainsi.
+    static func nombreAvantParJour(_ phrase: String) -> String? {
+        let mots = phrase.split(whereSeparator: { $0 == " " || $0 == "\u{00A0}" || $0 == "\u{202F}" }).map(String.init)
+        for i in mots.indices where i > 0 && i + 1 < mots.count {
+            if mots[i].lowercased() == "par", mots[i + 1].lowercased().hasPrefix("jour"), let n = chiffres(mots[i - 1]) { return n }
+        }
+        return nil
     }
 
     /// « 31 déc. » quand la phrase dit « jusqu'au 31 décembre ».

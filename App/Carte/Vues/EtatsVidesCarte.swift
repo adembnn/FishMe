@@ -57,8 +57,8 @@ struct PasDeSpotView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal, Espace.l)
-            .padding(.top, 28)
-            .padding(.bottom, 20)
+            .padding(.top, Espace.xl)
+            .padding(.bottom, Espace.l)
             .frame(maxWidth: .infinity)
 
             Divider().overlay(Palette.filet)

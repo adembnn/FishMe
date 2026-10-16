@@ -92,6 +92,8 @@ nonisolated struct ApercuSpot: Sendable, Equatable {
     var vedette: LigneEspece?
     var autres: [LigneEspece]
     var reste: Int
+    /// Vrai : la vedette est l'espèce la plus rare (rareté mesurée). Faux : aucune rareté mesurée, c'est la plus pêchée.
+    var vedetteEstRare: Bool = true
 }
 
 @concurrent nonisolated func calculerApercuSpot(services: ServicesCarte, spot: Spot, date: Date) async -> ApercuSpot {
@@ -104,7 +106,9 @@ nonisolated struct ApercuSpot: Sendable, Equatable {
             let ra = a.rarete?.niveau.rang ?? 0, rb = b.rarete?.niveau.rang ?? 0
             return ra != rb ? ra > rb : a.nPeches < b.nPeches
         }
-    let vedette = parRarete.first
+    // Sans rareté mesurée, la vedette est l'espèce la plus pêchée de la station (jamais « pas de relevé » s'il y en a).
+    let vedette = parRarete.first ?? releves.max { $0.nPeches < $1.nPeches }
+    let vedetteEstRare = parRarete.first != nil
     let autres = releves
         .filter { $0.espece != vedette?.espece }
         .sorted { $0.nPeches > $1.nPeches }
@@ -117,7 +121,8 @@ nonisolated struct ApercuSpot: Sendable, Equatable {
     case let (nil, code?): lieu = "Ton spot · \(code)"
     case (nil, nil): lieu = "Ton spot"
     }
-    return ApercuSpot(lieu: lieu, vedette: vedette, autres: Array(autres.prefix(3)), reste: max(0, autres.count - 3))
+    return ApercuSpot(lieu: lieu, vedette: vedette, autres: Array(autres.prefix(3)), reste: max(0, autres.count - 3),
+                       vedetteEstRare: vedetteEstRare)
 }
 
 /// Bouton rond de 44 pt en verre (carte) : icône encre ou marine.

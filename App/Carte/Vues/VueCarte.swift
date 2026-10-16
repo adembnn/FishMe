@@ -140,7 +140,8 @@ struct VueCarte: View {
         }
         .sheet(isPresented: $m.afficherFiltre) {
             FiltreEspeceView(pechables: modele.pechables, procheDIci: modele.especesProchesDIci(),
-                             filtreActuel: modele.filtre, choisir: { modele.choisirFiltre($0) })
+                             filtreActuel: modele.filtre, choisir: { modele.choisirFiltre($0) },
+                             raretes: raretesDuSecteur())
                 .presentationDetents([.large])
         }
         .sheet(isPresented: $afficherOuChercher) {
@@ -185,6 +186,17 @@ struct VueCarte: View {
         .onChange(of: modele.afficherChoixDeZone || modele.afficherRedemande) { _, ouvert in surChoixDeZone(ouvert) }
         // Le spot proposé (zone choisie ou position) est connu de la racine : tunnel, conseils et conditions s'en servent.
         .onChange(of: modele.spotLocal) { _, nouveau in if let nouveau { onSpotChange(nouveau) } }
+    }
+
+    /// La rareté de chaque espèce dans le département du spot, sinon de la région visible (`Core` donne le verdict).
+    private func raretesDuSecteur() -> [String: NiveauRarete] {
+        let departement = modele.spotAffiche?.departement ?? modele.services.geo.departement(de: modele.regionVisible.centre)
+        guard !departement.estInconnu else { return [:] }
+        var resultat: [String: NiveauRarete] = [:]
+        for e in modele.pechables {
+            resultat[e.espece.id] = modele.services.especes.rarete(espece: e.espece, departement: departement).niveau
+        }
+        return resultat
     }
 
     // MARK: Caméra
@@ -244,7 +256,7 @@ struct VueCarte: View {
                         .foregroundStyle(Palette.marine)
                         .accessibilityHidden(true)
                     Text(apercu?.lieu ?? " ")
-                        .font(Police.detail)
+                        .font(Police.sousTitre)
                         .foregroundStyle(Palette.encre)
                         .lineLimit(1)
                 }
@@ -263,13 +275,21 @@ struct VueCarte: View {
             if !reseauDisponible { BandeauPasDeReseauView() }
             bandeauHaut
 
-            Spacer(minLength: 0)
-            vedette
-            Spacer(minLength: 0)
-
-            bandeauSession
-            if !sessionEnCours {
-                VStack(spacing: 2) {
+            ScrollView {
+                vedette
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, Espace.s)
+            }
+            .scrollIndicators(.hidden)
+            .scrollBounceBehavior(.basedOnSize)
+        }
+        .padding(.horizontal, Espace.bord)
+        .padding(.top, Espace.s)
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            VStack(spacing: Espace.s) {
+                bandeauSession
+                if !sessionEnCours {
+                VStack(spacing: Espace.xs) {
                     Button {
                         if let spot = modele.spotAffiche { onCommencerSession(spot) }
                     } label: {
@@ -287,11 +307,12 @@ struct VueCarte: View {
                     }
                     .buttonStyle(.plain)
                 }
+                }
             }
+            .padding(.horizontal, Espace.bord)
+            .padding(.vertical, Espace.s)
+            .background(Palette.fond)
         }
-        .padding(.horizontal, Espace.bord)
-        .padding(.top, Espace.s)
-        .padding(.bottom, Espace.s)
     }
 
     @ViewBuilder
@@ -300,7 +321,7 @@ struct VueCarte: View {
             let fiche = modele.pechable(ligne.espece)
             let niveau = ligne.rarete?.niveau ?? .nonMesuree
             VStack(spacing: Espace.m) {
-                Text("Le plus rare de ton spot")
+                Text(apercu.vedetteEstRare ? "Le plus rare de ton spot" : "Le plus pêché de ton spot")
                     .font(Police.legende)
                     .foregroundStyle(Palette.encreDouce)
                 ImageEspeceCarte(nom: fiche?.image)
@@ -313,11 +334,19 @@ struct VueCarte: View {
                         .foregroundStyle(Palette.encre)
                         .multilineTextAlignment(.center)
                         .accessibilityAddTraits(.isHeader)
-                    Label(niveau.libelle, systemImage: niveau.symboleSF)
-                        .font(Police.detail)
-                        .foregroundStyle(CouleursCarte.rarete(niveau))
-                    if let rarete = ligne.rarete {
+                    if apercu.vedetteEstRare, niveau != .nonMesuree {
+                        Label(niveau.libelle, systemImage: niveau.symboleSF)
+                            .font(Police.detail)
+                            .foregroundStyle(CouleursCarte.rarete(niveau))
+                    }
+                    if apercu.vedetteEstRare, let rarete = ligne.rarete {
                         Text(texteVedette(rarete, annee: ligne.annee))
+                            .font(Police.detail)
+                            .foregroundStyle(Palette.encreDouce)
+                            .multilineTextAlignment(.center)
+                    } else if !apercu.vedetteEstRare {
+                        let mot = ligne.nPeches > 1 ? "pêches" : "pêche"
+                        Text("\(ligne.nPeches) \(mot) OFB · \(String(ligne.annee))")
                             .font(Police.detail)
                             .foregroundStyle(Palette.encreDouce)
                             .multilineTextAlignment(.center)
@@ -353,7 +382,7 @@ struct VueCarte: View {
     }
 
     private func autresPoissons(_ apercu: ApercuSpot) -> some View {
-        HStack(spacing: 18) {
+        HStack(spacing: Espace.l) {
             ForEach(apercu.autres) { ligne in
                 ImageEspeceCarte(nom: modele.pechable(ligne.espece)?.image)
                     .frame(width: 72, height: 34)

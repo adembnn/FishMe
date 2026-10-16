@@ -10,7 +10,7 @@ struct FiltreEspeceView: View {
     let filtreActuel: EspecePechable?
     let choisir: (EspecePechable?) -> Void
     /// Rareté par identifiant d'espèce, dans le département du spot. Vide : la rareté n'est pas montrée.
-    /// À brancher : `VueCarte` doit la passer (`services.especes.rarete(espece:departement:)` pour chaque espèce).
+    /// `VueCarte` la calcule (`services.especes.rarete(espece:departement:)` pour chaque espèce).
     var raretes: [String: NiveauRarete] = [:]
 
     @State private var toutVoir = false
@@ -22,7 +22,11 @@ struct FiltreEspeceView: View {
     private let apercu = 6
 
     var body: some View {
-        ScrollView {
+        // Calculés une fois par affichage, pas à chaque ligne.
+        let ordonnees = ordonneesCalculees()
+        let visibles = toutVoir ? ordonnees : Array(ordonnees.prefix(apercu))
+        let cachees = toutVoir ? 0 : max(0, ordonnees.count - apercu)
+        return ScrollView {
             VStack(alignment: .leading, spacing: Espace.l) {
                 HStack {
                     BoutonRond(role: .fermer, rendu: .simple) { dismiss() }
@@ -38,7 +42,12 @@ struct FiltreEspeceView: View {
                         .font(Police.detail)
                         .foregroundStyle(Palette.encreDouce)
                 }
-                carte(visibles)
+                if procheDIci.isEmpty {
+                    Label("Rien de relevé près d'ici", systemImage: "magnifyingglass")
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encreDouce)
+                }
+                carte(visibles, total: ordonnees.count)
                 if cachees > 0 {
                     Button { withAnimation(.snappy) { toutVoir = true } } label: {
                         HStack {
@@ -64,6 +73,7 @@ struct FiltreEspeceView: View {
             .padding(.bottom, Espace.xl)
         }
         .scrollIndicators(.hidden)
+        .presentationDragIndicator(.visible)
         .background(Palette.fond.ignoresSafeArea())
         .safeAreaInset(edge: .bottom) {
             Button {
@@ -84,23 +94,10 @@ struct FiltreEspeceView: View {
         }
     }
 
-    /// Les espèces relevées près d'ici d'abord, puis les autres.
-    private var ordonnees: [EspecePechable] { proches + autres }
-
-    private var visibles: [EspecePechable] {
-        toutVoir ? ordonnees : Array(ordonnees.prefix(apercu))
-    }
-
-    private var cachees: Int { toutVoir ? 0 : max(0, ordonnees.count - apercu) }
-
-    private var proches: [EspecePechable] {
+    /// Les espèces relevées près d'ici d'abord, puis les autres (un seul Set pour les deux).
+    private func ordonneesCalculees() -> [EspecePechable] {
         let ids = Set(procheDIci.map(\.id))
-        return pechables.filter { ids.contains($0.espece.id) }
-    }
-
-    private var autres: [EspecePechable] {
-        let ids = Set(procheDIci.map(\.id))
-        return pechables.filter { !ids.contains($0.espece.id) }
+        return pechables.filter { ids.contains($0.espece.id) } + pechables.filter { !ids.contains($0.espece.id) }
     }
 
     /// Une forme par niveau, pour se lire sans la couleur.
@@ -114,23 +111,22 @@ struct FiltreEspeceView: View {
     }
 
     /// Une carte blanche : « Toutes les espèces » et leur nombre, puis une ligne par espèce (image, nom, rareté, coche).
-    private func carte(_ especes: [EspecePechable]) -> some View {
-        VStack(spacing: 0) {
+    private func carte(_ especes: [EspecePechable], total: Int) -> some View {
+        LazyVStack(spacing: 0) {
             Button { choisie = nil } label: {
                 HStack {
                     Text("Toutes les espèces")
                         .font(Police.corps)
                         .foregroundStyle(Palette.encre)
                     Spacer(minLength: Espace.s)
+                    Text("\(total)")
+                        .font(Police.corps)
+                        .foregroundStyle(Palette.encreDouce)
                     if choisie == nil {
                         Image(systemName: "checkmark.circle.fill")
                             .font(Police.titre)
                             .foregroundStyle(Palette.marine)
                             .accessibilityHidden(true)
-                    } else {
-                        Text("\(ordonnees.count)")
-                            .font(Police.corps)
-                            .foregroundStyle(Palette.encreDouce)
                     }
                 }
                 .frame(minHeight: 56)
