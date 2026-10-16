@@ -20,7 +20,7 @@ struct ClubPageView: View {
   var invites: [InviteClub] = []
   var invitation: InvitationPescedex?
 
-  @AppStorage("demo.communaute") private var demo = false
+  @AppStorage(DemoClub.cle) private var demo = false
   @State private var clubs = MesClubs()
   @State private var clubChoisi: UUID?
   @State private var creationOuverte = false
@@ -84,7 +84,13 @@ struct ClubPageView: View {
     NavigationStack {
       ScrollView {
         VStack(alignment: .leading, spacing: 0) {
-          boutonsClub.padding(.top, Espace.s)
+          Text("Club")
+            .font(Police.grandTitre)
+            .foregroundStyle(Palette.encre)
+            .padding(.horizontal, Espace.l)
+            .accessibilityAddTraits(.isHeader)
+
+          boutonsClub.padding(.top, Espace.m)
 
           if let club {
             if tousLesClubs.count > 1 { choixDuClub }
@@ -180,6 +186,7 @@ struct ClubPageView: View {
           .lineLimit(2).minimumScaleFactor(0.8)
         Text(nombreDeMembres == 1 ? "1 membre" : "\(nombreDeMembres) membres")
           .font(Police.legende).foregroundStyle(Palette.encreDouce)
+        if DemoClub.estDemo(club) { PastilleDemo() }
       }
       Spacer(minLength: 0)
     }

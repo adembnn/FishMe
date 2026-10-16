@@ -37,17 +37,33 @@ struct FeuilleFlottante<Contenu: View>: View {
     }
 }
 
-/// Le fond de carte des maquettes P17 et P47 : rivière bleue sur fond clair (dessin simple, sans position exacte).
+/// Le fond de carte des maquettes P17 et P47 : un parc, des rues blanches et la rivière qui serpente, dessinés sans aucun lieu réel
+/// (aucune position exacte). Les formes suivent les maquettes, mesurées sur 390 × 844.
 struct FondCarteSession: View {
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                Palette.fond
-                Palette.eauClaire.frame(height: geo.size.height * 0.2).rotationEffect(.degrees(-12)).offset(y: geo.size.height * 0.05)
-                Palette.eau.frame(height: geo.size.height * 0.1).rotationEffect(.degrees(-12)).offset(y: geo.size.height * 0.05)
-            }
-            .frame(width: geo.size.width, height: geo.size.height)
-            .clipped()
+        Canvas { ctx, size in
+            let sx = size.width / 390
+            let sy = size.height / 844
+            func pt(_ x: Double, _ y: Double) -> CGPoint { CGPoint(x: x * sx, y: y * sy) }
+            ctx.fill(Path(CGRect(origin: .zero, size: size)), with: .color(Palette.fond))
+            // Parc en haut à droite.
+            ctx.fill(Path(ellipseIn: CGRect(x: 270 * sx, y: 10 * sy, width: 200 * sx, height: 190 * sy)),
+                     with: .color(Palette.ouvertDoux))
+            // Rues.
+            var rues = Path()
+            rues.move(to: pt(60, 0)); rues.addQuadCurve(to: pt(105, 330), control: pt(70, 200))
+            rues.move(to: pt(150, 60)); rues.addLine(to: pt(340, 40))
+            rues.move(to: pt(0, 300)); rues.addQuadCurve(to: pt(160, 325), control: pt(80, 295))
+            rues.move(to: pt(300, 430)); rues.addQuadCurve(to: pt(390, 450), control: pt(340, 430))
+            ctx.stroke(rues, with: .color(Palette.surface), style: StrokeStyle(lineWidth: 8 * sx, lineCap: .round))
+            // Rivière : large trait clair dessous, trait plus étroit dessus.
+            var riviere = Path()
+            riviere.move(to: pt(-20, 185))
+            riviere.addCurve(to: pt(215, 235), control1: pt(80, 165), control2: pt(180, 170))
+            riviere.addCurve(to: pt(280, 420), control1: pt(310, 300), control2: pt(330, 350))
+            riviere.addCurve(to: pt(250, 880), control1: pt(240, 540), control2: pt(230, 700))
+            ctx.stroke(riviere, with: .color(Palette.eauClaire), style: StrokeStyle(lineWidth: 64 * sx, lineCap: .round, lineJoin: .round))
+            ctx.stroke(riviere, with: .color(Palette.eau), style: StrokeStyle(lineWidth: 50 * sx, lineCap: .round, lineJoin: .round))
         }
         .ignoresSafeArea()
         .accessibilityHidden(true)

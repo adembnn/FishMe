@@ -59,6 +59,7 @@ struct SeptJoursView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 Text("7 jours").font(Police.titre).foregroundStyle(Palette.encre)
+                if jours.isEmpty { aucunJour }
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(jours, id: \.jour) { j in
                         VStack(spacing: Espace.s) {
@@ -101,6 +102,19 @@ struct SeptJoursView: View {
         .presentationDetents([.height(460), .large])
         .presentationDragIndicator(.visible)
         .accessibilityIdentifier("sept-jours")
+    }
+
+    /// Pas de prévision lue : un état plein et une issue (la feuille se rouvre quand le réseau revient).
+    private var aucunJour: some View {
+        VStack(spacing: Espace.s) {
+            Image(systemName: "cloud.sun").font(Police.taille(40)).foregroundStyle(Palette.marine)
+            Text("Pas de prévision pour l'instant").font(Police.sousTitre).foregroundStyle(Palette.encre)
+            Text("Vérifie ta connexion, puis rouvre cette feuille.").font(Police.detail).foregroundStyle(Palette.encreDouce)
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.top, Espace.xl)
+        .accessibilityElement(children: .combine)
     }
 
     /// La rivière : le nom de la station et sa hauteur, la courbe de 48 h, et l'état en un mot.

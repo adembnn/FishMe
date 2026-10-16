@@ -64,7 +64,7 @@ extension DemoCarte {
     /// La carte au format de la grille (même dessin que les cartes d'Adem).
     @MainActor var pourGrille: CarteAmiGrille {
         CarteAmiGrille(id: id, prenom: ami, mois: JetonAmis.date(date), style: StyleRarete(rarete), nomEspece: espece,
-                       imageEspece: image, tailleCm: tailleCm, photo: photo)
+                       imageEspece: image, tailleCm: tailleCm, photoImage: photo)
     }
 }
 
@@ -106,6 +106,9 @@ struct DemoAmisContenu: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.xl) {
             if avecInviter {
+                Text("Amis")
+                    .font(Police.grandTitre)
+                    .foregroundStyle(Palette.encre)
                 Button { actionSansEffet = true } label: {
                     Label("Inviter un ami", systemImage: "person.badge.plus")
                         .font(Police.sousTitre)
@@ -160,9 +163,12 @@ struct DemoAmisContenu: View {
 
     private var listeDesAmis: some View {
         VStack(alignment: .leading, spacing: Espace.m) {
-            Text("Tes amis")
-                .font(Police.titre)
-                .foregroundStyle(Palette.encre)
+            HStack(spacing: Espace.s) {
+                Text("Tes amis")
+                    .font(Police.titre)
+                    .foregroundStyle(Palette.encre)
+                PastilleDemo()
+            }
             VStack(spacing: 0) {
                 ForEach(Array(amisVisibles.enumerated()), id: \.element.id) { index, ami in
                     rangee(ami)
@@ -220,9 +226,12 @@ struct DemoAmisContenu: View {
 
     private var fil: some View {
         VStack(alignment: .leading, spacing: Espace.m) {
-            Text("Nouvelles cartes")
-                .font(Police.titre)
-                .foregroundStyle(Palette.encre)
+            HStack(spacing: Espace.s) {
+                Text("Nouvelles cartes")
+                    .font(Police.titre)
+                    .foregroundStyle(Palette.encre)
+                PastilleDemo()
+            }
             GrilleCartesAmis(cartes: cartesVisibles.map(\.pourGrille)) { choisie in
                 carteOuverte = cartesVisibles.first { $0.id == choisie.id }
             }

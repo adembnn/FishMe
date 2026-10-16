@@ -734,6 +734,8 @@ private struct RacineContenu: View {
 
     private var onglets: some View {
         avecModales(tabView, dansSession: false)
+            // Après la 1re vraie prise, une fois : comment poser « Mon aquarium » sur l'écran d'accueil.
+            .astuceAjouterWidget(prises: app.pescedex?.detaillees.filter { !$0.prise.exemple }.count ?? 0)
             .onChange(of: questionVue) { app.proposerSuitePremierLancement() }
             .onChange(of: app.suivi.abonne) { _, abonne in
                 app.moteur.abonne = abonne

@@ -49,6 +49,9 @@ struct FinSessionView: View {
     let estNouvelleEspece: (Espece) -> Bool
     /// Photo d'une prise, pour le verso de la carte ouverte en plein écran. Par défaut : aucune photo (dessin de l'espèce).
     let photoDe: (Prise) -> Data?
+    /// Espèce de l'image du bloc bredouille (version design). Acceptée pour la compatibilité avec l'appel de la racine ;
+    /// la page récap n'affiche pas d'image de conseil, donc elle n'est pas utilisée.
+    let especeConseil: Espece?
 
     init(fin: FinDeSession, infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, lieu: String? = nil,
          conseil: String? = nil, surTerminer: @escaping () -> Void, surFermer: (() -> Void)? = nil,
@@ -56,7 +59,9 @@ struct FinSessionView: View {
          surPhotoSortie: ((Data) -> Void)? = nil,
          rarete: @escaping (Prise) -> ResultatRarete? = { _ in nil },
          estNouvelleEspece: @escaping (Espece) -> Bool = { _ in false },
-         photoDe: @escaping (Prise) -> Data? = { _ in nil }) {
+         photoDe: @escaping (Prise) -> Data? = { _ in nil },
+         especeConseil: Espece? = nil) {
+        self.especeConseil = especeConseil
         self.photoDe = photoDe
         self.surPhotoSortie = surPhotoSortie
         self.poidsEstime = poidsEstime

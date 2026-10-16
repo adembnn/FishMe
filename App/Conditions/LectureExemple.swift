@@ -1,3 +1,4 @@
+#if DEBUG
 import Foundation
 import Core
 
@@ -48,3 +49,4 @@ enum LectureExemple {
                                  eau: eau, alerte: nil, lueLe: maintenant)
     }
 }
+#endif

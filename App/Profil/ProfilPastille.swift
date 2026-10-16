@@ -38,8 +38,8 @@ struct AvatarProfil: View {
 
     var body: some View {
         Text(String(nom.trimmingCharacters(in: .whitespaces).prefix(1)).uppercased())
-            .font(.system(size: taille * 0.5, weight: .bold, design: .rounded))
-            .foregroundStyle(Palette.surMarine)
+            .font(Police.taille(taille * 0.5, .heavy))
+            .foregroundStyle(.white)
             .frame(width: taille, height: taille)
             .background(Palette.marine, in: Circle())
             .accessibilityHidden(true)

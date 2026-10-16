@@ -12,12 +12,14 @@ struct TesConditionsMeteoView: View {
     @ObservedObject var marque: StockageMarque
     let porte: PorteConditions
 
+    #if DEBUG
     @AppStorage("demo.communaute") private var demo = false
+    /// La lecture d'exemple de la démo : créée une fois, jamais recalculée à chaque `body`.
+    @State private var exemple: LectureConditions?
+    #endif
     @State private var lecture: LectureConditions?
     @State private var essaiFait = false
     @State private var courbe = false
-    /// La lecture d'exemple du mode démo : créée une fois, jamais recalculée à chaque `body`.
-    @State private var exemple: LectureConditions?
 
     init(centre: Coordonnee?, conditions: ConditionsDuSpot, marque: StockageMarque, porte: PorteConditions) {
         self.centre = centre
@@ -29,7 +31,9 @@ struct TesConditionsMeteoView: View {
     /// La lecture réelle, ou en démo l'exemple quand il n'y en a pas.
     private var affichee: (lecture: LectureConditions, exemple: Bool)? {
         if let lecture { return (lecture, false) }
-        if demo, let exemple { return (exemple, true) }
+        #if DEBUG
+        if demo, centre == nil || essaiFait, let exemple { return (exemple, true) }
+        #endif
         return nil
     }
 
@@ -70,17 +74,17 @@ struct TesConditionsMeteoView: View {
                 .padding(.top, Espace.s).padding(.leading, Espace.bord)
         }
         .foregroundStyle(.white)
-        .fontDesign(.default)
-        .fontWeight(.regular)
         .preferredColorScheme(.dark)
         .task(id: centre) {
+            #if DEBUG
             if demo && exemple == nil { exemple = LectureExemple.creer() }
+            #endif
             guard let c = centre else { lecture = nil; return }
             lecture = conditions.derniere(spot: c)
             await lire(forcer: false)
         }
         .sheet(isPresented: $courbe) {
-            if let eau = affichee?.lecture.eau { CourbeRiviereView(eau: eau) }
+            if let eau = lecture?.eau { CourbeRiviereView(eau: eau) }
         }
         .accessibilityIdentifier("tes-conditions-meteo")
     }
@@ -91,7 +95,7 @@ struct TesConditionsMeteoView: View {
         enTete(lecture, point: point, maintenant: maintenant)
         if exemple {
             Text("Données d'exemple (mode démo)")
-                .font(.system(.footnote, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+                .font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
         }
         if let alerte = lecture.alerte {
             BandeauVigilanceView(alerte: alerte, lecture: lecture, marque: marque)
@@ -108,15 +112,10 @@ struct TesConditionsMeteoView: View {
         }
         if lecture.depuisCache {
             Text("lu à \(FormatConditions.heure(lecture.lueLe)), sans réseau")
-                .font(.system(.footnote, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+                .font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
         }
-        // Marque Apple Weather et lien légal : obligatoires sous une vraie lecture WeatherKit, jamais à côté de chiffres d'exemple.
-        if exemple {
-            Text("Données d'exemple (mode démo)")
-                .font(.system(.footnote, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
-        } else {
-            MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : "Hub’Eau")
-        }
+        // Marque Apple Weather et lien légal : obligatoires, toujours visibles en pied de page.
+        MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : "Hub’Eau")
     }
 
     private func enTete(_ lecture: LectureConditions, point: PointMeteo, maintenant: Date) -> some View {
@@ -124,15 +123,15 @@ struct TesConditionsMeteoView: View {
         let duJour = liste.first { Calendar.current.isDate($0.jour, inSameDayAs: maintenant) } ?? liste.first
         let lieu = lecture.eau?.station.eau ?? lecture.eau?.station.nom ?? "Ton spot"
         return VStack(spacing: 2) {
-            Text(lieu).font(.system(size: 30, weight: .regular)).lineLimit(1).minimumScaleFactor(0.6)
+            Text(lieu).font(Police.taille(30, .bold)).lineLimit(1)
             Text("\(FormatConditions.nombre(point.temperatureC))°")
-                .font(.system(size: 96, weight: .thin)).fontWeight(.thin).monospacedDigit()
+                .font(Police.taille(96, .heavy)).monospacedDigit()
                 .accessibilityIdentifier("temperature-maintenant")
             Text(StyleMeteo.libelle(codeTemps: point.codeTemps))
-                .font(.system(size: 20, weight: .medium)).foregroundStyle(.white.opacity(0.85))
+                .font(Police.taille(20, .bold)).foregroundStyle(.white.opacity(0.85))
             if let j = duJour {
                 Text("Max. \(FormatConditions.nombre(j.temperatureMaxC))°  Min. \(FormatConditions.nombre(j.temperatureMinC))°")
-                    .font(.system(size: 20, weight: .medium)).monospacedDigit()
+                    .font(Police.taille(20, .bold)).monospacedDigit()
             }
         }
         .frame(maxWidth: .infinity)
@@ -188,7 +187,7 @@ struct TesConditionsMeteoView: View {
             Image(systemName: "mappin.slash").font(.system(size: 28)).foregroundStyle(StyleMeteo.texteDoux)
                 .accessibilityHidden(true)
             Text("Choisis un spot sur la carte pour voir la météo.")
-                .font(.system(.body, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux).multilineTextAlignment(.center)
+                .font(Police.taille(17, .bold)).foregroundStyle(StyleMeteo.texteDoux).multilineTextAlignment(.center)
             MarqueMeteoView(stockage: marque).padding(.top, Espace.s)
         }
         .frame(maxWidth: .infinity)

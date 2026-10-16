@@ -78,6 +78,7 @@
 				Polices/fabriquer_polices.py,
 				fabriquer_cycle_nage.py,
 				fabriquer_poissons_volume.py,
+				integrer_poissons_3d.py,
 			);
 			target = DBE31DC230753926004DC02F /* BuildChallenge */;
 		};
@@ -94,11 +95,13 @@
 				Polices/LICENCE-modele-clignotant.txt,
 				Polices/LISEZMOI.md,
 				Polices/fabriquer_polices.py,
+				AstuceAjouterWidget.swift,
 				PontAquariumWidget.swift,
 				PontCartesWidget.swift,
 				PontSessionWidget.swift,
 				fabriquer_cycle_nage.py,
 				fabriquer_poissons_volume.py,
+				integrer_poissons_3d.py,
 			);
 			target = E4DB592F1DF096ACE956B33F /* FishMeWidget */;
 		};

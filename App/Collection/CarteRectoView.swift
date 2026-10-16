@@ -236,11 +236,14 @@ struct CarteRectoView: View {
 
     private func plaqueMini(_ u: CGFloat) -> some View {
         HStack(alignment: .top, spacing: 0) {
-            Text(infos.espece.nom)
-                .font(Police.taille(12.5 * u, .black))
+            // Même police et même taille pour toutes les cartes (Adem, 16 oct.) : jamais de réduction automatique,
+            // le nom court sur 2 lignes au plus.
+            Text(NomCarte.court(infos.espece.nom))
+                .font(Police.taille(11 * u, .black))
                 .foregroundStyle(encreCarte)
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
+                .lineLimit(2)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
             Spacer(minLength: 2 * u)
             if style != .nonMesuree {
                 MarqueRarete(style: style, taille: 11 * u)
@@ -254,42 +257,39 @@ struct CarteRectoView: View {
         VStack(alignment: .leading, spacing: 0) {
             nomEtLatin(u)
             statistiques(u)
-                .padding(.top, 2.4 * u)
+                .padding(.top, 2.8 * u)
             Spacer(minLength: 0)
             if let lieu = lieuEtDate {
                 Text(lieu)
                     .font(Police.taille(3.1 * u, .bold))
                     .foregroundStyle(grisCarte)
                     .lineLimit(1)
-                    .minimumScaleFactor(0.6)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 1.2 * u)
             }
             pied(u)
         }
-        .padding(.top, 5 * u)
+        .padding(.top, 6 * u)
         .padding(.horizontal, 5.5 * u)
         .padding(.bottom, 4 * u)
     }
 
-    /// Le nom sur deux lignes au plus (« Omble de fontaine (saumon de fontaine) »), le nom latin dessous : jamais l'un sur l'autre.
     private func nomEtLatin(_ u: CGFloat) -> some View {
-        VStack(alignment: .leading, spacing: 0.8 * u) {
-            Text(infos.espece.nom)
-                .font(Police.taille(7 * u, .black))
+        HStack(alignment: .firstTextBaseline, spacing: 2.4 * u) {
+            Text(NomCarte.court(infos.espece.nom))
+                .font(Police.taille(8.4 * u, .black))
                 .foregroundStyle(encreCarte)
-                .lineLimit(2)
-                .minimumScaleFactor(0.55)
-                .fixedSize(horizontal: false, vertical: true)
+                .lineLimit(1)
+                .layoutPriority(2)
             Text(infos.espece.nomLatin)
                 .font(Police.taille(3.2 * u, .bold))
                 .italic()
                 .foregroundStyle(grisCarte)
                 .lineLimit(1)
-                .minimumScaleFactor(0.7)
+                .truncationMode(.tail)
+            Spacer(minLength: 0)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.bottom, 2 * u)
+        .padding(.bottom, 3 * u)
         .overlay(alignment: .bottom) {
             Rectangle().fill(Color(red: 15 / 255, green: 26 / 255, blue: 28 / 255).opacity(0.12)).frame(height: 1)
         }
@@ -499,5 +499,28 @@ private struct BulleOr: View {
                 center: UnitPoint(x: x, y: y), startRadius: 0, endRadius: loin * fin
             )
         }
+    }
+}
+
+/// Le nom affiché sur une carte : le nom commun court, sans parenthèse ni précision
+/// (« Carpe commune (miroir, cuir) » → « Carpe commune », « Black-bass à grande bouche » → « Black-bass »).
+nonisolated enum NomCarte {
+    private static let raccourcis: [String: String] = [
+        "Black-bass à grande bouche": "Black-bass",
+        "Black-bass à petite bouche": "Black-bass petite bouche",
+        "Perche commune": "Perche",
+        "Brème commune": "Brème",
+        "Silure glane": "Silure",
+        "Chevesne (chevaine)": "Chevesne",
+    ]
+
+    static func court(_ nom: String) -> String {
+        if let r = raccourcis[nom] { return r }
+        var court = nom
+        for marque in [" (", ", ", " / "] {
+            if let r = court.range(of: marque) { court = String(court[..<r.lowerBound]) }
+        }
+        let net = court.trimmingCharacters(in: .whitespaces)
+        return raccourcis[net] ?? net
     }
 }

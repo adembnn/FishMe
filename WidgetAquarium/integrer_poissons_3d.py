@@ -14,7 +14,7 @@ LARGEUR = 320
 ICI = Path(__file__).resolve().parent
 CATALOGUE = ICI / "NagePoissons.xcassets"
 # Dossier du fil Aquarium -> identifiant de l'espèce dans l'app (especes.json).
-ALIAS = {"silure": "silure-glane", "perche": "perche-commune"}
+ALIAS = {"silure": "silure-glane", "perche": "perche-commune", "barbeau": "barbeau-fluviatile", "ombre": "ombre-commun", "carassin": "carassin-commun"}
 ESPECES = ICI.parent / "Packages/Core/Sources/Core/Resources/especes.json"
 
 

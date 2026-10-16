@@ -75,15 +75,15 @@ enum StyleMeteo {
         return h < 7 || h >= 21
     }
 
-    /// Couleur d'une température sur la barre de plage (froid bleu, doux vert-jaune, chaud orange).
+    /// Couleur d'une température sur la barre de plage : teintes marine et eau seulement (l'orange est réservé aux alertes).
     static func couleur(temperature t: Double) -> Color {
         switch t {
-        case ..<0: return couleur(0x7FB8FF)
-        case 0..<10: return couleur(0x5CC8F0)
-        case 10..<16: return couleur(0x59D6A8)
-        case 16..<22: return couleur(0xE8D84A)
-        case 22..<28: return couleur(0xF5A63A)
-        default: return couleur(0xEF6A3A)
+        case ..<0: return couleur(0xC7DFF3)
+        case 0..<10: return couleur(0x9CC7EA)
+        case 10..<16: return couleur(0x7FB8EE)
+        case 16..<22: return couleur(0x5C9FE0)
+        case 22..<28: return couleur(0x3F86D0)
+        default: return couleur(0x2670D0)
         }
     }
 
@@ -93,17 +93,17 @@ enum StyleMeteo {
 
     static let texteDoux = Color.white.opacity(0.65)
 
+    /// « 14 h »
+    static func heureCourte(_ date: Date) -> String {
+        fHeureCourte.string(from: date)
+    }
+
     nonisolated(unsafe) private static let fHeureCourte: DateFormatter = {
         let f = DateFormatter()
         f.locale = Locale(identifier: "fr_FR")
         f.dateFormat = "H 'h'"
         return f
     }()
-
-    /// « 14 h »
-    static func heureCourte(_ date: Date) -> String {
-        fHeureCourte.string(from: date)
-    }
 
     /// Les sept jours rendus par `Core` ; à défaut, regroupés depuis la météo heure par heure (mise en page, pas de calcul de prévision).
     static func jours(_ lecture: LectureConditions) -> [JourConditions] {
@@ -130,9 +130,9 @@ struct CarteVitree<Contenu: View>: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.m) {
             Label {
-                Text(titre.uppercased()).font(.system(.caption, weight: .semibold)).tracking(0.4)
+                Text(titre.uppercased()).font(Police.taille(12, .bold)).tracking(0.4)
             } icon: {
-                Image(systemName: icone).font(.system(.caption, weight: .semibold))
+                Image(systemName: icone).font(.system(size: 12, weight: .bold))
             }
             .foregroundStyle(StyleMeteo.texteDoux)
             .accessibilityAddTraits(.isHeader)

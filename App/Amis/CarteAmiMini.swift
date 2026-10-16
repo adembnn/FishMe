@@ -32,7 +32,9 @@ struct CarteAmiMini: View {
     /// PNG de la carte envoyé par l'ami (sans GPS). S'il existe, il est montré tel quel, comme la vraie carte.
     var imageCarte: Data? = nil
     /// Vraie photo de la prise (démo). Si elle manque, la fenêtre montre l'image d'espèce.
-    var photo: UIImage? = nil
+    var photo: Data? = nil
+    /// Photo de démo déjà décodée (cache de `PhotoDemoClub`), prioritaire sur `photo`.
+    var photoImage: UIImage? = nil
     var tailleCm: Double? = nil
 
     /// Hauteur fixe de la zone de texte, sous l'image : le texte ne passe jamais sur le dessin.
@@ -69,7 +71,7 @@ struct CarteAmiMini: View {
     private var fenetre: some View {
         ZStack {
             LinearGradient(colors: style.fond, startPoint: .top, endPoint: .bottom)
-            if let image = photo {
+            if let image = photoImage ?? photo.flatMap({ ImagesAmisEnCache.image($0) }) {
                 Color.clear.overlay {
                     Image(uiImage: image)
                         .resizable()
@@ -98,7 +100,6 @@ struct CarteAmiMini: View {
                     .font(Police.taille(13, .heavy))
                     .foregroundStyle(Palette.encre)
                     .lineLimit(2)
-                    .minimumScaleFactor(0.6)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
                 if let t = tailleCm {
@@ -130,7 +131,8 @@ struct CarteAmiGrille: Identifiable {
     let imageEspece: String?
     var imageCarte: Data? = nil
     var tailleCm: Double? = nil
-    var photo: UIImage? = nil
+    var photo: Data? = nil
+    var photoImage: UIImage? = nil
 }
 
 /// Grille de deux colonnes de cartes d'amis, chacune toucable.
@@ -146,17 +148,15 @@ struct GrilleCartesAmis: View {
                 Button { ouvrir(carte) } label: {
                     VStack(alignment: .leading, spacing: Espace.s) {
                         CarteAmiMini(style: carte.style, nomEspece: carte.nomEspece, imageEspece: carte.imageEspece,
-                                     imageCarte: carte.imageCarte, photo: carte.photo, tailleCm: carte.tailleCm)
+                                     imageCarte: carte.imageCarte, photo: carte.photo, photoImage: carte.photoImage, tailleCm: carte.tailleCm)
                         Text(carte.prenom)
                             .font(Police.detail)
                             .foregroundStyle(Palette.encre)
                             .lineLimit(1)
-                            .minimumScaleFactor(0.8)
                         Text(carte.mois)
                             .font(Police.legende)
                             .foregroundStyle(Palette.encreDouce)
                             .lineLimit(1)
-                            .minimumScaleFactor(0.8)
                     }
                     .contentShape(Rectangle())
                 }

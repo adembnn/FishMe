@@ -14,7 +14,14 @@ struct CarteAEssayerView: View {
     @AppStorage(ClesConseils.niveau) private var niveauBrut = NiveauPecheur.parDefaut.rawValue
     @State private var choix: String?
 
-    private var especes: [EspeceProche] { EspecesDuSpot.ordonnees(especesProches) }
+    /// Aucun relevé OFB près du spot : l'écran ne reste pas vide, il propose les espèces courantes en France (sans chiffre).
+    private var sansReleve: Bool { especesProches.isEmpty }
+    private var especes: [EspeceProche] {
+        if !sansReleve { return EspecesDuSpot.ordonnees(especesProches) }
+        // L'ouverture du jour n'est pas connue ici : `.ouverte` ne sert qu'à garder la sélection ; l'écran dit « vérifie l'ouverture ».
+        return EspecesDuTunnel.choisir(pechables: pechables, proches: [], nombre: 8)
+            .map { EspeceProche(espece: $0.espece, nPeches: 0, annee: 0, ouverture: .ouverte) }
+    }
     private func fiche(_ e: EspeceProche) -> EspecePechable? { pechables.first { $0.espece == e.espece } }
     private var selection: EspeceProche? {
         especes.first { $0.espece.id == choix } ?? especes.first { EspecesDuSpot.texteFermeture($0.ouverture) == nil }
@@ -29,32 +36,73 @@ struct CarteAEssayerView: View {
                 } else {
                     niveauChoisi
                     if especes.isEmpty {
-                        Label("Aucun relevé près d'ici", systemImage: "mappin.slash")
-                            .font(JetonsConseils.police(.body))
-                            .foregroundStyle(.secondary)
+                        videPlein
                     } else {
+                        titreRangee
                         rangeeEspeces
                         conseilsDeLEspece
                     }
                 }
             }
-            .padding(16)
+            .padding(.horizontal, Espace.bord)
+            .padding(.top, Espace.l)
+            .padding(.bottom, Espace.xl)
         }
         .scrollIndicators(.hidden)
+        .background(Palette.fond.ignoresSafeArea())
+        .presentationBackground(Palette.fond)
         .accessibilityIdentifier("carte-a-essayer")
     }
 
     private var entete: some View {
         HStack(spacing: 12) {
-            Text("À essayer").font(JetonsConseils.police(.title2))
+            VStack(alignment: .leading, spacing: 2) {
+                Text("À essayer")
+                    .font(Police.grandTitre)
+                    .foregroundStyle(Palette.encre)
+                    .accessibilityAddTraits(.isHeader)
+                Text("Près de ton spot, aujourd'hui")
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
+            }
             Spacer(minLength: 0)
             if let eau = IconeEau(etat: etatEau) {
                 Label(eau.mot, systemImage: eau.icone)
-                    .font(JetonsConseils.police(.subheadline))
+                    .font(Police.legende)
                     .foregroundStyle(etatEau == .crue ? JetonsConseils.alerte : JetonsConseils.marne)
             }
             BoutonRond(role: .fermer, action: fermer)
         }
+    }
+
+    /// Légende de la rangée : d'où viennent les espèces (relevés OFB ou espèces courantes).
+    private var titreRangee: some View {
+        Text(sansReleve ? "Espèces courantes en France" : "Relevées près de ton spot")
+            .font(Police.sousTitre)
+            .foregroundStyle(Palette.encre)
+    }
+
+    /// Ni espèce ni relevé : un état plein (poisson, phrase, issue), jamais un écran blanc.
+    private var videPlein: some View {
+        VStack(spacing: Espace.l) {
+            Image(systemName: "fish.fill")
+                .font(Police.taille(64, .bold))
+                .foregroundStyle(Palette.marine)
+                .frame(width: 140, height: 140)
+                .background(Palette.marineDoux, in: Circle())
+                .accessibilityHidden(true)
+            Text("Pas encore de conseil ici")
+                .font(Police.titre)
+                .foregroundStyle(Palette.encre)
+            Text("Aucun relevé de l'OFB près de ce spot. Choisis un autre spot sur la carte pour voir les poissons et quoi leur proposer.")
+                .font(Police.detail)
+                .foregroundStyle(Palette.encreDouce)
+                .multilineTextAlignment(.center)
+            Button(action: fermer) { Label("Voir la carte", systemImage: "map.fill") }
+                .buttonStyle(.principal)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, Espace.xxl)
     }
 
     /// Le niveau se change d'un toucher : il ne change que le ton et le nombre de conseils, jamais leur contenu.
@@ -65,7 +113,7 @@ struct CarteAEssayerView: View {
                 Button { niveauBrut = n.rawValue } label: {
                     HStack(spacing: 5) {
                         Image(systemName: n.pictogramme).font(.caption.weight(.bold))
-                        Text(n.motPecheur).lineLimit(1).minimumScaleFactor(0.7)
+                        Text(n.motPecheur).lineLimit(1)
                     }
                     .font(Police.legende)
                     .padding(.horizontal, 6)
@@ -105,15 +153,16 @@ struct CarteAEssayerView: View {
                 ImageEspece(nom: fiche(e)?.image ?? e.espece.id, libelle: nom)
                     .frame(width: 96, height: 56)
                     .opacity(fermee == nil ? 1 : 0.45)
-                Text(nom)
+                Text(NomCarte.court(nom))
                     .font(Police.detail)
                     .foregroundStyle(Palette.encre)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
-                PastilleOuverture(ouverte: fermee == nil)
-                Text(Self.releveCourt(nPeches: e.nPeches, annee: e.annee))
-                    .font(.caption2.weight(.bold))
-                    .foregroundStyle(Palette.encreDouce)
+                    .lineLimit(2)
+                if !sansReleve {
+                    PastilleOuverture(ouverte: fermee == nil)
+                    Text(Self.releveCourt(nPeches: e.nPeches, annee: e.annee))
+                        .font(Police.legende)
+                        .foregroundStyle(Palette.encreDouce)
+                }
             }
             .frame(width: 116)
             .padding(.vertical, 10)
@@ -121,7 +170,7 @@ struct CarteAEssayerView: View {
             .overlay { forme.strokeBorder(actif ? Palette.marine : Palette.filet, lineWidth: actif ? 3 : 1) }
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(fermee.map { "\(nom), \($0)" } ?? "\(nom), ouverte")
+        .accessibilityLabel(sansReleve ? nom : (fermee.map { "\(nom), \($0)" } ?? "\(nom), ouverte"))
         .accessibilityAddTraits(actif ? .isSelected : [])
     }
 
@@ -136,6 +185,11 @@ struct CarteAEssayerView: View {
                         .foregroundStyle(JetonsConseils.alerte)
                 }
             } else {
+                if sansReleve {
+                    Label("Vérifie l'ouverture dans les règles du spot", systemImage: "info.circle")
+                        .font(Police.legende)
+                        .foregroundStyle(Palette.encreDouce)
+                }
                 aujourdhui(e)
             }
         } else {
@@ -181,7 +235,7 @@ extension CarteAEssayerView {
         let nom = fiche(e)?.nom ?? e.espece.id
         return VStack(alignment: .leading, spacing: 6) {
             Text(titre).font(Police.legende).foregroundStyle(Palette.encreDouce)
-            Text(nom).font(Police.titre).foregroundStyle(Palette.encre).lineLimit(2).minimumScaleFactor(0.8)
+            Text(nom).font(Police.titre).foregroundStyle(Palette.encre).lineLimit(2)
             ImageEspece(nom: fiche(e)?.image ?? e.espece.id, libelle: nom)
                 .frame(maxWidth: .infinity)
                 .frame(height: 150)
@@ -198,7 +252,7 @@ struct PastilleOuverture: View {
 
     var body: some View {
         Text(ouverte ? "Ouverte" : "Fermée")
-            .font(.caption2.weight(.heavy))
+            .font(Police.legende)
             .foregroundStyle(ouverte ? Palette.ouvert : Palette.encreDouce)
             .padding(.horizontal, 8)
             .padding(.vertical, 3)
@@ -251,7 +305,7 @@ struct TuileConseilView: View {
                                     Text(conseil.source.titre)
                                 }
                             }
-                            .font(.caption2.weight(.bold))
+                            .font(Police.legende)
                             .foregroundStyle(Palette.encreDouce)
                         }
                     }
@@ -325,20 +379,34 @@ struct IconeEau {
 
 /// En crue : la mise en garde d'abord, le lien Vigicrues, aucun conseil de pêche.
 struct AvertissementCrueView: View {
+    @Environment(\.openURL) private var ouvrirURL
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Label("Crue : ne pêche pas au bord de l'eau", systemImage: "exclamationmark.triangle.fill")
-                .font(JetonsConseils.police(.title3))
+        VStack(spacing: 14) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(Police.taille(44, .bold))
                 .foregroundStyle(JetonsConseils.alerte)
-            Link(destination: URL(string: "https://www.vigicrues.gouv.fr")!) {
-                Label("Vigicrues", systemImage: "arrow.up.right.square")
-                    .font(JetonsConseils.police(.body))
-                    .frame(minHeight: JetonsConseils.tailleToucher)
+                .frame(width: 96, height: 96)
+                .background(Palette.alerteDoux, in: Circle())
+                .accessibilityHidden(true)
+            Text("Crue : ne pêche pas au bord de l'eau")
+                .font(Police.titre)
+                .foregroundStyle(JetonsConseils.alerte)
+                .multilineTextAlignment(.center)
+            Text("Reviens quand l'eau a baissé. Les niveaux officiels sont sur Vigicrues.")
+                .font(Police.detail)
+                .foregroundStyle(Palette.encreDouce)
+                .multilineTextAlignment(.center)
+            if let url = URL(string: "https://www.vigicrues.gouv.fr") {
+                Button { ouvrirURL(url) } label: {
+                    Label("Vigicrues", systemImage: "arrow.up.right.square")
+                }
+                .buttonStyle(.secondaire)
             }
         }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(JetonsConseils.alerte.opacity(0.10), in: RoundedRectangle(cornerRadius: 16))
+        .padding(Espace.xl)
+        .frame(maxWidth: .infinity)
+        .background(Palette.alerteDoux, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
         .accessibilityIdentifier("avertissement-crue")
     }
 }

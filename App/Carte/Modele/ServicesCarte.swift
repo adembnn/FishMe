@@ -8,14 +8,17 @@ nonisolated struct ServicesCarte: Sendable {
     var especes: any ServiceEspeces
     var session: any ServiceSession
     var stations: any FournisseurStations
+    /// Le niveau de fréquentation des tronçons (gratuit). Valeur par défaut : `compteurParDefaut()`.
+    var compteur: any CompteurFrequentation
     /// Les spots d'eau (cours d'eau hors ligne, plans d'eau en ligne) : en plus des stations OFB.
     var spotsEau: any FournisseurSpotsEau
 
     /// `coinsPublics` : le moteur de coins publics OpenStreetMap de `Core` (`core.coins()`), pour que ces coins deviennent des spots d'eau.
     /// Sans lui, on regarde si `especes` en est un ; sinon la couche se passe des coins publics.
     init(geo: any ServiceGeo, regles: any ServiceRegles, especes: any ServiceEspeces, session: any ServiceSession,
-         stations: (any FournisseurStations)? = nil, spotsEau: (any FournisseurSpotsEau)? = nil,
-         coinsPublics: (any ServiceCoinsPublics)? = nil) {
+         stations: (any FournisseurStations)? = nil, compteur: (any CompteurFrequentation)? = nil,
+         spotsEau: (any FournisseurSpotsEau)? = nil, coinsPublics: (any ServiceCoinsPublics)? = nil) {
+        self.compteur = compteur ?? ServicesCarte.compteurParDefaut()
         self.geo = geo
         self.regles = regles
         self.especes = especes

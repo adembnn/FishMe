@@ -1,10 +1,24 @@
 import Core
 import SwiftUI
 
+/// Petite pastille « Démo » : tout élément de démonstration la porte, rien n'y passe pour une vraie prise.
+struct PastilleDemo: View {
+  var body: some View {
+    Text("Démo")
+      .font(Police.taille(11, .heavy))
+      .foregroundStyle(Palette.marine)
+      .padding(.horizontal, Espace.s)
+      .padding(.vertical, 2)
+      .background(Palette.marineDoux, in: Capsule())
+      .accessibilityLabel("Contenu de démonstration")
+  }
+}
+
 /// Mode démo de la page Club, piloté par `@AppStorage("demo.communaute")`.
 /// Les clubs, membres, cartes et records ci-dessous sont écrits en dur pour la démo :
 /// ils ne viennent ni de CloudKit ni d'une vraie personne, et ne sont jamais enregistrés dans `MesClubs`.
 /// Les cartes montrent les vraies photos de `App/Demo/Photos` (repli sur l'image de l'espèce si le fichier manque). Aucune position GPS.
+/// Chaque club porte « Démo » dans son nom et la pastille `PastilleDemo`.
 enum DemoClub {
   /// Clé de réglage (UserDefaults) de l'interrupteur.
   static let cle = "demo.communaute"
@@ -14,8 +28,8 @@ enum DemoClub {
 
   /// Les 2 clubs de la démo : « Les pêcheurs de l'ESSEC » (déjà rejoint, donc choisi à l'ouverture) puis « Les Carnassiers du 94 ».
   static let clubs: [ClubLocal] = [
-    ClubLocal(id: idEssec, nom: "Les pêcheurs de l'ESSEC", poissonId: "sandre"),
-    ClubLocal(id: idVal, nom: "Les Carnassiers du 94", poissonId: "brochet"),
+    ClubLocal(id: idEssec, nom: "Les pêcheurs de l'ESSEC · Démo", poissonId: "sandre"),
+    ClubLocal(id: idVal, nom: "Les Carnassiers du 94 · Démo", poissonId: "brochet"),
   ]
 
   /// Dans le club de l'ESSEC, l'utilisateur (Titouan) fait partie des 3 membres : pas de pastille « Moi » à part.

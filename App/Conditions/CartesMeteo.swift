@@ -18,13 +18,13 @@ struct CarteHoraireView: View {
                         let nuit = StyleMeteo.estNuit(p.heure, conditions: lecture.conditions)
                         VStack(spacing: Espace.s) {
                             Text(i == 0 ? "Auj." : StyleMeteo.heureCourte(p.heure))
-                                .font(.system(.subheadline, weight: .medium))
+                                .font(Police.taille(15, .bold))
                             Image(systemName: StyleMeteo.symbole(codeTemps: p.codeTemps, nuit: nuit))
                                 .symbolRenderingMode(.multicolor)
                                 .font(.system(size: 24))
                                 .frame(height: 30)
                             Text("\(FormatConditions.nombre(p.temperatureC))°")
-                                .font(.system(.body, weight: .semibold)).monospacedDigit()
+                                .font(Police.taille(17, .bold)).monospacedDigit()
                         }
                         .foregroundStyle(.white)
                         .accessibilityElement(children: .ignore)
@@ -52,7 +52,7 @@ struct CarteSeptJoursView: View {
                     if i > 0 { Divider().overlay(Color.white.opacity(0.18)) }
                     HStack(spacing: Espace.m) {
                         Text(FormatConditions.jourCourt(j.jour, aujourdhui: aujourdhui))
-                            .font(.system(.body, weight: .semibold))
+                            .font(Police.taille(17, .bold))
                             .frame(width: 52, alignment: .leading)
                         Image(systemName: StyleMeteo.symbole(codeTemps: j.codeTemps, nuit: false))
                             .symbolRenderingMode(.multicolor)
@@ -63,7 +63,7 @@ struct CarteSeptJoursView: View {
                         BarrePlage(minimum: j.temperatureMinC, maximum: j.temperatureMaxC, bas: bas, haut: haut)
                             .frame(height: 5)
                         Text("\(FormatConditions.nombre(j.temperatureMaxC))°")
-                            .font(.system(.body, weight: .semibold)).monospacedDigit()
+                            .font(Police.taille(17, .bold)).monospacedDigit()
                             .frame(width: 34, alignment: .leading)
                     }
                     .foregroundStyle(.white)
@@ -111,12 +111,12 @@ struct CarteVentView: View {
         CarteVitree(titre: "Vent", icone: "wind") {
             VStack(alignment: .leading, spacing: Espace.s) {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
-                    Text(FormatConditions.nombre(point.ventKmh)).font(.system(size: 34, weight: .semibold)).monospacedDigit()
-                    Text("km/h").font(.system(.subheadline, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+                    Text(FormatConditions.nombre(point.ventKmh)).font(Police.taille(34, .heavy)).monospacedDigit()
+                    Text("km/h").font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
                 if let r = point.rafalesKmh {
                     Text("Rafales à \(FormatConditions.nombre(r)) km/h")
-                        .font(.system(.footnote, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+                        .font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
                 Spacer(minLength: 0)
                 if let d = point.directionDeg { Boussole(direction: d).frame(maxWidth: .infinity) }
@@ -139,7 +139,7 @@ private struct Boussole: View {
             ZStack {
                 Circle().strokeBorder(Color.white.opacity(0.35), lineWidth: 1.5)
                 ForEach(Array(["N", "E", "S", "O"].enumerated()), id: \.offset) { i, lettre in
-                    Text(lettre).font(.system(size: 8, weight: .semibold)).foregroundStyle(StyleMeteo.texteDoux)
+                    Text(lettre).font(Police.taille(8, .heavy)).foregroundStyle(StyleMeteo.texteDoux)
                         .offset(x: sin(Double(i) * .pi / 2) * 19, y: -cos(Double(i) * .pi / 2) * 19)
                 }
                 Image(systemName: "location.north.fill").font(.system(size: 14))
@@ -147,7 +147,7 @@ private struct Boussole: View {
             }
             .frame(width: 52, height: 52)
             Text("d'\(FormatConditions.cardinal(direction))")
-                .font(.system(.footnote, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+                .font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
         }
         .accessibilityLabel("Vent venant du \(FormatConditions.cardinal(direction))")
     }
@@ -162,13 +162,13 @@ struct CartePluieView: View {
             VStack(alignment: .leading, spacing: Espace.s) {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
                     Text(FormatConditions.nombre(cumulMm, decimales: cumulMm < 10 ? 1 : 0))
-                        .font(.system(size: 34, weight: .semibold)).monospacedDigit()
-                    Text("mm").font(.system(.subheadline, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+                        .font(Police.taille(34, .heavy)).monospacedDigit()
+                    Text("mm").font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
-                Text("prévus dans les 24 h").font(.system(.footnote, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+                Text("prévus dans les 24 h").font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 Spacer(minLength: 0)
                 Text(cumulMm < 0.1 ? "Aucune pluie prévue." : "Cumul des 24 prochaines heures.")
-                    .font(.system(.footnote, weight: .medium))
+                    .font(Police.taille(13, .bold))
             }
             .foregroundStyle(.white)
             .frame(maxHeight: .infinity, alignment: .topLeading)
@@ -188,13 +188,13 @@ struct CartePressionView: View {
         CarteVitree(titre: "Pression", icone: "gauge.medium") {
             VStack(alignment: .leading, spacing: Espace.s) {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
-                    Text(FormatConditions.nombre(hPa)).font(.system(size: 34, weight: .semibold)).monospacedDigit()
-                    Text("hPa").font(.system(.subheadline, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+                    Text(FormatConditions.nombre(hPa)).font(Police.taille(34, .heavy)).monospacedDigit()
+                    Text("hPa").font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
                 Spacer(minLength: 0)
                 if let t = tendance {
                     Label(texte(t), systemImage: t < -0.5 ? "arrow.down.right" : (t > 0.5 ? "arrow.up.right" : "arrow.right"))
-                        .font(.system(.footnote, weight: .medium))
+                        .font(Police.taille(13, .bold))
                 }
             }
             .foregroundStyle(.white)
@@ -226,11 +226,11 @@ struct CarteRiviereView: View {
                 CarteVitree(titre: "Niveau de l'eau", icone: "water.waves") {
                     HStack(alignment: .firstTextBaseline) {
                         VStack(alignment: .leading, spacing: 2) {
-                            Text(valeur).font(.system(size: 34, weight: .semibold)).monospacedDigit()
-                            Text(eau.station.nom).font(.system(.footnote, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+                            Text(valeur).font(Police.taille(34, .heavy)).monospacedDigit()
+                            Text(eau.station.nom).font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                         }
                         Spacer(minLength: Espace.m)
-                        if let mot = mot { Text(mot).font(.system(.subheadline, weight: .semibold)) }
+                        if let mot = mot { Text(mot).font(Police.taille(15, .bold)) }
                         if ouvrirCourbe != nil { Image(systemName: "chevron.right").foregroundStyle(StyleMeteo.texteDoux) }
                     }
                     .foregroundStyle(.white)

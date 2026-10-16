@@ -65,7 +65,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
             }
             // Sans prise, l'anneau est au milieu de l'écran ; avec une prise il remonte pour laisser la place au poisson.
             chrono(session, maintenant: maintenant)
-                .padding(.top, FormatSortie.prises(session.sortie).isEmpty ? 330 - 59 : 150 - 59)
+                .padding(.top, FormatSortie.prises(session.sortie).isEmpty ? 280 - 59 : 120 - 59)
             // Sans prise, le chrono reste seul : pas de poisson gris.
             if !FormatSortie.prises(session.sortie).isEmpty {
                 dernierePrise(session)
@@ -199,6 +199,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
                     Image(systemName: "fish.fill").resizable().scaledToFit()
                         .foregroundStyle(derniere == nil ? Palette.silhouette : Palette.marine)
                         .padding(.horizontal, 60)
+                        .scaleEffect(x: -1, y: 1)
                 }
             }
             .frame(width: 190, height: 70)
@@ -213,7 +214,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
 
     private func legendePrises(_ prises: [Prise], _ derniere: Prise?) -> String {
         let n = prises.count
-        var texte = n == 0 ? "0 prise" : "\(n) prise\(n > 1 ? "s" : "")"
+        var texte = n == 0 ? "Pas encore de prise" : "\(n) prise\(n > 1 ? "s" : "")"
         if let cm = derniere?.longueurCm { texte += " · \(Int(cm.rounded())) cm" }
         return texte
     }

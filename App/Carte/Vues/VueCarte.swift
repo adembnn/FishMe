@@ -106,6 +106,7 @@ struct VueCarte: View {
             apercu = nil
             guard let spot = modele.spotAffiche else { return }
             apercu = await calculerApercuSpot(services: modele.services, spot: spot, date: Date())
+            await modele.rafraichirFrequentation(spot: spot)
         }
         .task {
             for await connecte in fluxReseauCarte() { reseauDisponible = connecte }
@@ -337,15 +338,37 @@ struct VueCarte: View {
         return {
             guard let spot = modele.spotAffiche else { return }
             modele.selection = nil
-            onCommencerSession(spot)
+            commencer(spot)
         }
+    }
+
+    /// Un passage anonyme est enregistré juste avant que la session démarre (tronçon, jour, jeton du jour).
+    private func commencer(_ spot: Spot) {
+        modele.enregistrerPassage(spot: spot)
+        onCommencerSession(spot)
     }
 
     private func feuilleFiche(_ selection: CoinSelectionne) -> some View {
         FicheCoinView(services: modele.services, selection: selection, pechables: modele.pechables,
                       emplacementMaintenant: emplacementMaintenant, emplacementConseil: emplacementConseil,
-                      onCommencerSession: commencerDepuisLaFiche)
+                      onCommencerSession: commencerDepuisLaFiche,
+                      frequentation: modele.niveauxConnus[selection.id],
+                      onCoinCalme: coinCalmeDeLaFiche(selection))
             .presentationDragIndicator(.visible)
+            .task(id: selection.id) { await modele.rafraichirFrequentation(selection: selection) }
+    }
+
+    /// Le bouton « Coin plus calme » de la fiche : seulement si un coin plus calme existe et que le spot peut encore changer.
+    private func coinCalmeDeLaFiche(_ selection: CoinSelectionne) -> (() -> Void)? {
+        guard modele.peutChangerDeSpot, modele.tronconsAvecCoinCalme.contains(selection.id) else { return nil }
+        return { modele.adopterCoinCalme(depuis: modele.spot(de: selection)) }
+    }
+
+    /// Le bouton « Coin plus calme » de la feuille « Ton spot ».
+    private var coinCalmeDuSpot: (() -> Void)? {
+        guard modele.peutChangerDeSpot, let spot = modele.spotAffiche,
+              let t = modele.troncon(de: spot), modele.tronconsAvecCoinCalme.contains(t) else { return nil }
+        return { modele.adopterCoinCalme(depuis: spot) }
     }
 
     private var feuilleFiltre: some View {
@@ -394,8 +417,6 @@ struct VueCarte: View {
         reagirAuStatut()
         if demandeChoixDeZone { modele.afficherChoixDeZone = true }
         await modele.demarrer()
-        // Pas de position ni de zone gardée : la carte s'ouvre sur l'Île-de-France (la position se demande à « Autour de moi »).
-        if !position.estAutorisee { modele.ouvrirSurZoneParDefaut() }
     }
 
     private func recevoirPosition(_ nouvelle: Coordonnee?) {
@@ -437,6 +458,11 @@ struct VueCarte: View {
             }
         }
         .background(Palette.fond.ignoresSafeArea())
+        // Le profil reste atteignable depuis « Ton spot » (la pastille de la racine).
+        .safeAreaInset(edge: .top, spacing: 0) {
+            HStack { pastilleProfil.frame(maxWidth: 170, alignment: .leading); Spacer(minLength: 0) }
+                .padding(.horizontal, 16)
+        }
     }
 
     private func ouvrirLaCarte(poserLeSpot: Bool = false) {
@@ -517,7 +543,7 @@ struct VueCarte: View {
                 if !sessionEnCours {
                 VStack(spacing: 2) {
                     Button {
-                        if let spot = modele.spotAffiche { onCommencerSession(spot) }
+                        if let spot = modele.spotAffiche { commencer(spot) }
                     } label: {
                         Label("Commencer une session", systemImage: "play.fill")
                     }
@@ -802,7 +828,7 @@ struct VueCarte: View {
                     }
                 }
                 BoutonCommencerVerre(actif: modele.spotAffiche != nil) {
-                    if let spot = modele.spotAffiche { onCommencerSession(spot) }
+                    if let spot = modele.spotAffiche { commencer(spot) }
                 }
             }
             .transition(.move(edge: .bottom).combined(with: .opacity))
@@ -826,6 +852,7 @@ struct VueCarte: View {
                             .foregroundStyle(Palette.encreDouce)
                     }
                 }
+                badgeFrequentationSpot
                 if let apercu {
                     ForEach(lignesDeLaFeuille(apercu)) { (ligne: LigneEspece) in
                         let fiche = modele.pechable(ligne.espece)
@@ -847,6 +874,15 @@ struct VueCarte: View {
         }
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
+    }
+
+    /// Calme, Normal ou Chargé sous le titre (en mots, gratuit) ; rien tant que le niveau n'est pas connu.
+    @ViewBuilder
+    private var badgeFrequentationSpot: some View {
+        if let niveau = modele.niveauDuSpot {
+            FrequentationFicheView(niveau: niveau, onCoinCalme: coinCalmeDuSpot)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
     }
 
     /// « 2,4 km » entre l'iPhone et le centre du spot ; `nil` sans position ou sans spot.

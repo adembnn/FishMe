@@ -2,8 +2,10 @@ import Core
 import Foundation
 import SwiftData
 
-/// Mode démo du Pescedex : une dizaine de cartes de prises d'exemple, avec de vraies photos, pour que le compte du jury
-/// semble déjà utilisé. Interrupteur : `@AppStorage("demo.communaute")` (réglages).
+/// Mode démo du Pescedex (Adem, « Démo cachée ») : une dizaine de cartes. Les espèces dont on a une photo LIBRE
+/// (CC0, domaine public, CC BY ; `photos-demo.json`) reçoivent une carte avec cette vraie photo au dos ; les autres restent
+/// des cartes « déclarées » (jamais présentées comme de vraies prises), sans photo : le verso montre l'illustration de l'espèce.
+/// Les écrans qui les montrent affichent une pastille « Démo » (`estDemo(id)`). Interrupteur dans Réglages, éteint par défaut. Interrupteur : `@AppStorage("demo.communaute")` (réglages).
 ///
 /// Garde-fous :
 /// - les cartes ont des identifiants fixes et reconnaissables (`DemoPescedex.estDemo`) : on n'installe et on ne retire que celles-là,
@@ -11,13 +13,11 @@ import SwiftData
 /// - lieu au département seulement, aucune coordonnée, photos ré-encodées sans GPS par `DepotCartes.enregistrer` ;
 /// - `exemple` reste faux exprès : une carte marquée « exemple » est exclue du classeur, du compteur et de l'aquarium
 ///   (`CompteurPescedex.emplacements`, `publierAquarium`), donc elle ne se verrait pas. `gardee` reste faux : aucun quota touché ;
-/// - une carte dont la photo est introuvable dans l'app n'est pas installée (pas de carte vide) ;
 /// - les cartes se retirent d'elles-mêmes quand l'interrupteur est coupé, avec leur photo.
 nonisolated enum DemoPescedex {
   static let cle = "demo.communaute"
 
   // MARK: Les cartes d'exemple
-
   private struct Modele {
     let n: Int
     let espece: String
@@ -77,7 +77,9 @@ nonisolated enum DemoPescedex {
     id.uuidString.uppercased().hasPrefix("DE300000-0000-4000-8000-")
   }
 
-  static var identifiantsDemo: [UUID] { modeles.map { identifiant($0.n) } }
+  static var identifiantsDemo: [UUID] {
+    modeles.map { identifiant($0.n) }
+  }
 
   // MARK: Photos
 
@@ -99,18 +101,21 @@ nonisolated enum DemoPescedex {
   /// À appeler au lancement, à chaque changement de l'interrupteur « demo.communaute » et après un rapatriement iCloud.
   /// `demo` vrai : installe les cartes qui manquent. `demo` faux : retire celles de la démo, et seulement elles.
   /// Renvoie vrai si le dépôt a changé (alors recharger le Pescedex et republier l'aquarium).
+  /// `conteneur` : conservé pour les appelants, plus utilisé (le dépôt retire lui-même ses cartes).
   @discardableResult
-  static func synchroniser(demo: Bool, depot: DepotCartes) async
+  static func synchroniser(demo: Bool, depot: DepotCartes, conteneur: ModelContainer? = nil) async
     -> Bool
   {
     var presentes = Set(await depot.identifiants().cartes)
     if demo {
       var change = false
-      // Réparation : une carte de démo déjà installée mais sans fichier photo lisible (ancienne version, installation
-      // interrompue) est retirée puis réinstallée avec sa photo. Sans photo embarquée, on la laisse telle quelle.
+      // Réparation : une carte de démo à photo libre déjà installée mais sans fichier photo lisible (ancienne version,
+      // installation interrompue, ou carte « déclarée ») est retirée puis réinstallée avec sa photo.
       var aReparer: [UUID] = []
       for carte in await depot.cartes() where estDemo(carte.id) {
-        if await depot.urlPhoto(de: carte) == nil, donneesPhoto(especeId: carte.espece.id, numero: 1) != nil {
+        if await depot.urlPhoto(de: carte) == nil,
+          donneesPhoto(especeId: carte.espece.id, numero: 1) != nil
+        {
           aReparer.append(carte.id)
         }
       }
@@ -121,20 +126,26 @@ nonisolated enum DemoPescedex {
       let maintenant = Date()
       for m in modeles {
         let id = identifiant(m.n)
-        guard !presentes.contains(id),
-          let photo = donneesPhoto(especeId: m.espece, numero: m.photo)
-        else { continue }
+        guard !presentes.contains(id) else { continue }
         // Un peu de variété d'heure, sans jamais dépasser maintenant.
         let jour =
           Calendar.current.date(byAdding: .day, value: -m.ilYaJours, to: maintenant) ?? maintenant
         let date =
-          Calendar.current.date(
-            bySettingHour: 9 + (m.n * 3) % 9, minute: (m.n * 17) % 60, second: 0, of: jour) ?? jour
-        let prise = Prise(
-          id: id, espece: Espece(id: m.espece), origine: .priseReelle, longueurCm: m.cm,
-          mesure: m.mesure,
-          date: min(date, maintenant), lieuFlou: m.lieu, cheminPhoto: nil, gardee: false,
-          exemple: false)
+          min(
+            Calendar.current.date(
+              bySettingHour: 9 + (m.n * 3) % 9, minute: (m.n * 17) % 60, second: 0, of: jour)
+              ?? jour, maintenant)
+        let photo = donneesPhoto(especeId: m.espece, numero: m.photo)
+        let prise =
+          photo != nil
+          ? Prise(
+            id: id, espece: Espece(id: m.espece), origine: .priseReelle, longueurCm: m.cm,
+            mesure: m.mesure, date: date, lieuFlou: m.lieu, cheminPhoto: nil, gardee: false,
+            exemple: false)
+          : Prise(
+            id: id, espece: Espece(id: m.espece), origine: .declaree, longueurCm: nil,
+            mesure: nil, date: date, lieuFlou: nil, cheminPhoto: nil, gardee: false,
+            exemple: false)
         if (try? await depot.enregistrer(prise: prise, photo: photo)) != nil { change = true }
       }
       return change
@@ -164,12 +175,11 @@ nonisolated enum DemoPescedex {
     var urlSource: String?
   }
 
-  /// Une ligne par photo du JSON `photos-demo.json` (ressource de l'app). Vide si le fichier est absent ou illisible.
+  /// Une ligne par photo de `photos-demo.json` (ressource de l'app, uniquement des photos CC0, domaine public ou CC BY).
+  /// Vide si le fichier est absent ou illisible.
   static func credits(bundle: Bundle = .main) -> [(nom: String, mention: String, url: URL?)] {
-    let url = ["", "Demo", "Photos"].lazy.compactMap { (dossier: String) -> URL? in
-      bundle.url(
-        forResource: "photos-demo", withExtension: "json",
-        subdirectory: dossier.isEmpty ? nil : dossier)
+    let url = [nil, "Demo", "Photos"].lazy.compactMap { (dossier: String?) -> URL? in
+      bundle.url(forResource: "photos-demo", withExtension: "json", subdirectory: dossier)
     }.first
     guard let url, let donnees = try? Data(contentsOf: url),
       let entrees = try? JSONDecoder().decode([EntreePhoto].self, from: donnees)

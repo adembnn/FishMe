@@ -27,7 +27,13 @@ enum ReglagesNage {
   /// Pas de simulation (s) : 120 Hz, l'état est donc fluide à 60 comme à 120 images par seconde.
   static let pasFixe = 1.0 / 120
   /// Un trou plus long (écran en veille, retour d'une autre app) n'est pas rattrapé : la scène reprend là où elle est.
-  static let trouMax = 0.1
+  /// 1 s : si l'écran n'affiche que 3 ou 4 images par seconde (simulateur, appareil chargé), la simulation suit quand même
+  /// l'horloge au lieu de tourner au ralenti (avec 0,1 s, les poissons semblaient immobiles).
+  static let trouMax = 1.0
+  /// Pas de rattrapage quand l'image arrive tard (plus de 3 pas fixes en retard) : 30 Hz suffit à une nage lente.
+  static let pasRattrapage = 1.0 / 30
+  /// Nombre maximal de pas de simulation par image.
+  static let pasParImageMax = 40
 
   // Le bac
   static let fuiteX = 0.5
@@ -38,9 +44,18 @@ enum ReglagesNage {
   static let zMin = 0.02
   static let zMax = 0.92
   /// Largeur de la zone où les murs mous poussent (en monde) et leur force.
-  static let margeMur = 0.17
+  /// Large et progressif : le virage commence tôt, en arc, pour ne jamais cogner le bord.
+  static let margeMur = 0.30
+  /// Secondes de trajet devant lui que le mur latéral prend en compte.
+  static let anticipationMur = 2.0
   static let margeProfondeur = 0.22
-  static let forceMur = 2.4
+  static let forceMur = 3.0
+  /// Un poisson qui « prend le large » : intervalle entre deux départs, durée hors champ, écart minimal entre deux mouvements.
+  static let intervalleDepart = (10.0, 25.0)
+  static let dureeAbsence = (8.0, 30.0)
+  static let ecartMouvements = (3.0, 5.0)
+  /// Il reprend les murs latéraux quand son centre est à cette part de l'écran du bord par lequel il est revenu.
+  static let reprendreMurs = 0.25
   static let margeHauteur = 0.08
 
   // Allure (multiplicateurs de calme : les vitesses « réelles » de la table des espèces sont ralenties à l'écran)
@@ -383,6 +398,11 @@ final class MoteurNage {
   private(set) var ondes = [Onde](repeating: Onde(), count: ReglagesNage.ondesMax)
   /// Temps de la simulation (s).
   private(set) var temps = 0.0
+  /// Compteur d'images simulées : la vue le reçoit en valeur à chaque image, ce qui force SwiftUI à relire les positions
+  /// (le moteur n'est pas observable : sans lui, rien ne dit à SwiftUI que les poissons ont bougé).
+  private(set) var trame = 0
+  /// Durée (s) de la dernière image : le lissage visuel (lacet, assiette, roulis) suit le temps réel, pas un pas fixe.
+  private var dtImage = ReglagesNage.pasFixe
 
   private var dernier: Date?
   private var reste = 0.0
@@ -393,6 +413,9 @@ final class MoteurNage {
   private var scene: Hasard
   /// Secondes avant le prochain mouvement d'entrée ou de sortie (un seul à la fois, toutes les 8 à 20 s).
   private var evenement = 6.0
+  /// Secondes avant que n'importe quel mouvement (départ ou retour) puisse commencer : ils ne se touchent jamais.
+  private var pauseMouvements = 0.0
+  private var mouvementEnCours = false
   private let calendrier: Bool
 
   /// `rapport` : hauteur / largeur de l'écran.
@@ -408,16 +431,19 @@ final class MoteurNage {
       var hasard = Hasard(graine: Hasard.empreinte(e.slug) &+ Hasard.empreinte(e.id) &* 31)
       let tous = e.angles.isEmpty ? [] : Array(Set(e.angles + [0])).sorted()
       var n = Nageur(
-        id: e.id, nom: e.nom, slug: e.slug, largeur: e.largeur, cycle: e.cycle, imagesCycle: max(e.images, 1),
+        id: e.id, nom: e.nom, slug: e.slug, largeur: e.largeur, cycle: e.cycle,
+        imagesCycle: max(e.images, 1),
         pas: e.pas, angles: tous, volume: !e.angles.isEmpty, profil: profil,
         decalage: hasard.suivant(), lag: hasard.entre(0.15, 0.9), hasard: hasard)
       // Répartis sur la largeur (nombre d'or), à des profondeurs et des hauteurs différentes.
       let fraction = (Double(rang) * 0.618_034 + 0.13).truncatingRemainder(dividingBy: 1)
-      n.x = 0.24 + 0.52 * fraction
+      n.x = 0.12 + 0.76 * fraction
       n.z = n.hasard.entre(0.12, 0.75)
       let (yLo, yHi) = Self.bande(profil)
       n.y = n.hasard.entre(yLo, yHi)
       n.cap = (n.hasard.suivant() < 0.5 ? 0 : Double.pi) + n.hasard.entre(-0.3, 0.3)
+      // Près d'un bord au départ, il regarde vers le large : pas de poisson lancé droit sur un mur.
+      if abs(n.x - 0.5) > 0.2 { n.cap = (n.x < 0.5 ? 0 : Double.pi) + n.hasard.entre(-0.3, 0.3) }
       n.v = profil.croisiere
       n.errance = n.hasard.entre(-0.3, 0.3)
       n.biais = n.hasard.entre(-0.18, 0.18)
@@ -430,12 +456,12 @@ final class MoteurNage {
       n.cadence = 1.2
       n.lacetAffiche = Self.lacetCible(cap: n.cap)
       n.sensMiroir = cos(n.cap) >= 0 ? 1 : -1
-      n.echeance = n.hasard.entre(30, 100)
+      n.echeance = n.hasard.entre(0, 10)
       liste.append(n)
     }
     // Qui est là au départ : au moins la moitié, les autres reviennent plus tard, chacun à son heure.
     if !tousPresents, liste.count > 1 {
-      let absents = liste.count - min(liste.count, max((liste.count + 1) / 2, liste.count - 2))
+      let absents = max(1, liste.count / 3)
       var rang = 0
       for i in liste.indices.reversed() where rang < absents {
         liste[i].etat = .absent
@@ -443,12 +469,14 @@ final class MoteurNage {
         rang += 1
       }
       evenement = scene.entre(5, 10)
+      pauseMouvements = scene.entre(2, 4)
     }
     // Le meneur du banc (premier grégaire présent) et ses suiveurs, posés près de lui.
     meneur = liste.firstIndex { $0.profil.role == .banc && $0.etat == .present }
     if let m = meneur {
       let chef = liste[m]
-      for i in liste.indices where i != m && liste[i].profil.role == .banc && liste[i].etat == .present {
+      for i in liste.indices
+      where i != m && liste[i].profil.role == .banc && liste[i].etat == .present {
         liste[i].x = borner(chef.x + liste[i].hasard.entre(-0.14, 0.14), 0.15, 0.85)
         liste[i].z = borner(chef.z + liste[i].hasard.entre(-0.14, 0.14), 0.05, 0.85)
         liste[i].y = borner(
@@ -458,8 +486,48 @@ final class MoteurNage {
         liste[i].sensMiroir = cos(liste[i].cap) >= 0 ? 1 : -1
       }
     }
+    Self.etaler(&liste, rapport: self.rapport)
     nageurs = liste
     for i in nageurs.indices { rendre(i) }
+  }
+
+  /// Au départ, aucun poisson ne chevauche un autre à l'écran : on écarte (en x et en hauteur) ceux dont les silhouettes
+  /// se recouvrent, sans toucher à leur profondeur. Les suiveurs d'un banc restent groupés mais séparés.
+  private static func etaler(_ liste: inout [Nageur], rapport: Double) {
+    func projete(_ n: Nageur) -> (x: Double, y: Double, l: Double) {
+      let s = 1 / (1 + 1.4 * borner(n.z, 0, 1.1))
+      return (
+        ReglagesNage.fuiteX + (n.x - ReglagesNage.fuiteX) * s,
+        ReglagesNage.fuiteY + (n.y - ReglagesNage.fuiteY) * s, n.largeur * s
+      )
+    }
+    for _ in 0..<80 {
+      var bouge = false
+      for i in liste.indices where liste[i].etat == .present {
+        for j in liste.indices where j > i && liste[j].etat == .present {
+          let a = projete(liste[i])
+          let b = projete(liste[j])
+          // Silhouette : un peu plus large que haute (en largeurs d'écran).
+          let demiL = 0.5 * (a.l + b.l) * 0.8
+          let demiH = 0.5 * (a.l + b.l) * 0.30
+          let ex = (a.x - b.x) / demiL
+          let ey = (a.y - b.y) * rapport / demiH
+          guard ex * ex + ey * ey < 1 else { continue }
+          bouge = true
+          let haut = (a.y <= b.y) ? -1.0 : 1.0
+          let gauche = (a.x <= b.x) ? -1.0 : 1.0
+          let yMin = ReglagesNage.ySurface + 0.03
+          let yMax = ReglagesNage.yFond - 0.03
+          liste[i].y = borner(liste[i].y + haut * 0.012, yMin, yMax)
+          liste[j].y = borner(liste[j].y - haut * 0.012, yMin, yMax)
+          liste[i].x = borner(liste[i].x + gauche * 0.012, 0.12, 0.88)
+          liste[j].x = borner(liste[j].x - gauche * 0.012, 0.12, 0.88)
+          liste[i].yBut = liste[i].y
+          liste[j].yBut = liste[j].y
+        }
+      }
+      if !bouge { break }
+    }
   }
 
   // MARK: Avancer
@@ -471,15 +539,20 @@ final class MoteurNage {
       return
     }
     dernier = date
-    reste += min(max(date.timeIntervalSince(avant), 0), ReglagesNage.trouMax)
-    let h = ReglagesNage.pasFixe
+    let dt = min(max(date.timeIntervalSince(avant), 0), ReglagesNage.trouMax)
+    dtImage = min(max(dt, ReglagesNage.pasFixe), 0.25)
+    reste += dt
     var pas = 0
-    while reste >= h, pas < 16 {
+    while pas < ReglagesNage.pasParImageMax {
+      let h = reste > 3 * ReglagesNage.pasFixe ? ReglagesNage.pasRattrapage : ReglagesNage.pasFixe
+      if reste < h { break }
       reste -= h
       pas += 1
       unPas(h)
     }
+    if pas == ReglagesNage.pasParImageMax { reste = 0 }
     for i in nageurs.indices { rendre(i) }
+    trame &+= 1
   }
 
   // MARK: Interaction
@@ -534,37 +607,58 @@ final class MoteurNage {
     meneur = nageurs.firstIndex { $0.profil.role == .banc && $0.etat == .present }
     if calendrier {
       evenement -= h
-      if evenement <= 0 { declencherEvenement() }
+      pauseMouvements -= h
+      gererMouvements()
     }
     for i in nageurs.indices { avancer(i, h) }
   }
 
-  /// Un seul mouvement à la fois, toutes les 8 à 20 s : un poisson repart OU un autre arrive, jamais plusieurs ensemble.
-  /// Chacun ne bouge qu'après sa propre échéance (durées tirées par sa graine).
-  private func declencherEvenement() {
-    if nageurs.contains(where: { $0.etat == .entrant || $0.etat == .sortant }) { evenement = 2; return }
-    let actifs = nageurs.filter { $0.etat == .present }.count
-    let plancher = min(nageurs.count, max(1, (nageurs.count + 1) / 2))
-    let partants = nageurs.indices.filter {
-      let n = nageurs[$0]
-      return n.etat == .present && n.echeance <= temps && !n.selectionne && n.curiosite <= 0 && actifs > plancher
+  /// Départs et retours, un seul mouvement à la fois et jamais coordonnés.
+  /// Environ un poisson sur trois est hors champ au plus ; toutes les 10 à 25 s l'un des présents « prend le large »
+  /// par le côté vers lequel il nage déjà ; absent 8 à 30 s, il revient par un côté tiré au hasard.
+  /// Un retour attend la fin du mouvement en cours, puis 3 à 5 s : deux poissons ne sont jamais hors cadre ensemble
+  /// en train de sortir ou d'entrer.
+  private func gererMouvements() {
+    let enCours = nageurs.contains(where: { $0.etat == .entrant || $0.etat == .sortant })
+    if enCours || mouvementEnCours {
+      // Fin d'un mouvement : le suivant attend 3 à 5 s, il ne démarre jamais à l'instant où l'autre se termine.
+      if mouvementEnCours, !enCours {
+        pauseMouvements = scene.entre(ReglagesNage.ecartMouvements.0, ReglagesNage.ecartMouvements.1)
+      }
+      mouvementEnCours = enCours
+      return
     }
+    if pauseMouvements > 0 { return }
     let venants = nageurs.indices.filter { nageurs[$0].etat == .absent && nageurs[$0].echeance <= temps }
-    guard !partants.isEmpty || !venants.isEmpty else { evenement = 2; return }
-    let sort = venants.isEmpty || (!partants.isEmpty && scene.suivant() < 0.5)
-    let liste = sort ? partants : venants
-    let i = liste[min(Int(scene.suivant() * Double(liste.count)), liste.count - 1)]
-    if sort { faireSortir(i) } else { faireEntrer(i) }
-    evenement = scene.entre(8, 20)
+    let absents = nageurs.filter { $0.etat == .absent }.count
+    let maxAbsents = max(1, nageurs.count / 3)
+    if evenement <= 0, absents < maxAbsents {
+      let partants = nageurs.indices.filter {
+        let n = nageurs[$0]
+        return n.etat == .present && n.echeance <= temps && !n.selectionne && n.curiosite <= 0
+      }
+      if !partants.isEmpty {
+        let i = partants[min(Int(scene.suivant() * Double(partants.count)), partants.count - 1)]
+        faireSortir(i)
+        evenement = scene.entre(ReglagesNage.intervalleDepart.0, ReglagesNage.intervalleDepart.1)
+        mouvementEnCours = true
+        return
+      }
+    }
+    if !venants.isEmpty {
+      let i = venants[min(Int(scene.suivant() * Double(venants.count)), venants.count - 1)]
+      faireEntrer(i)
+      mouvementEnCours = true
+    }
   }
 
-  /// Un côté et une profondeur d'entrée ou de sortie : le plus souvent par l'arrière-plan, parfois par un côté.
+  /// Il prend le large : plus de mur latéral, ligne presque droite vers le bord vers lequel il nage déjà.
   private func faireSortir(_ i: Int) {
     var n = nageurs[i]
     n.etat = .sortant
-    n.passeParLeFond = n.hasard.suivant() < 0.6
-    n.passeADroite = n.x >= 0.5
-    n.zBut = n.passeParLeFond ? n.zBut : n.hasard.entre(0.1, 0.45)
+    n.passeParLeFond = false
+    n.passeADroite = cos(n.cap) >= 0
+    n.zBut = n.hasard.entre(0.1, 0.45)
     n.mode = .nage
     n.minuteur = 60
     nageurs[i] = n
@@ -573,7 +667,7 @@ final class MoteurNage {
   private func faireEntrer(_ i: Int) {
     var n = nageurs[i]
     n.etat = .entrant
-    n.passeParLeFond = n.hasard.suivant() < 0.6
+    n.passeParLeFond = false
     let (yLo, yHi) = Self.bande(n.profil)
     n.y = n.hasard.entre(yLo, yHi)
     n.yBut = n.y
@@ -581,21 +675,14 @@ final class MoteurNage {
     n.mode = .nage
     n.minuteur = 60
     n.v = n.profil.croisiere
-    if n.passeParLeFond {
-      n.z = 1.12
-      n.x = n.hasard.entre(0.3, 0.7)
-      n.cap = -Double.pi / 2 + n.hasard.entre(-0.5, 0.5)
-      n.zBut = n.hasard.entre(0.25, 0.7)
-    } else {
-      n.passeADroite = n.hasard.suivant() < 0.5
-      n.z = n.hasard.entre(0.1, 0.4)
-      let s = 1 / (1 + 1.4 * n.z)
-      // Hors de l'écran à la projection : tout le corps hors cadre avant d'entrer.
-      let bord = n.passeADroite ? 1 + 0.5 * n.largeur * s + 0.04 : -0.5 * n.largeur * s - 0.04
-      n.x = ReglagesNage.fuiteX + (bord - ReglagesNage.fuiteX) / s
-      n.cap = n.passeADroite ? Double.pi : 0
-      n.zBut = n.z
-    }
+    n.passeADroite = n.hasard.suivant() < 0.5
+    n.z = n.hasard.entre(0.1, 0.4)
+    let s = 1 / (1 + 1.4 * n.z)
+    // Hors de l'écran à la projection : tout le corps hors cadre avant d'entrer.
+    let bord = n.passeADroite ? 1 + 0.5 * n.largeur * s + 0.04 : -0.5 * n.largeur * s - 0.04
+    n.x = ReglagesNage.fuiteX + (bord - ReglagesNage.fuiteX) / s
+    n.cap = n.passeADroite ? Double.pi : 0
+    n.zBut = n.z
     n.lacetAffiche = Self.lacetCible(cap: n.cap)
     n.sensMiroir = cos(n.cap) >= 0 ? 1 : -1
     n.omega = 0
@@ -699,14 +786,24 @@ final class MoteurNage {
     let marge = 0.45 * L + 0.03
     let m = ReglagesNage.margeMur
     let gauche = marge + m
+    var proximiteMur = 0.0
+    // Il regarde devant lui : la poussée du mur compte la distance qu'il parcourra pendant son demi-tour.
+    let devant = n.v * unite * cos(n.cap) * ReglagesNage.anticipationMur
+    let xm = n.x + devant
+    // Un demi-tour face au mur est un arc, pas un retournement sur place : on le courbe vers le milieu de la profondeur.
+    let tangente: Double = n.z < 0.45 ? 1 : -1
     let droite = 1 - marge - m
-    if present, n.x < gauche {
-      let k = (gauche - n.x) / m
-      dx += ReglagesNage.forceMur * k * k
+    if present, xm < gauche {
+      let k = min(1.5, (gauche - xm) / m)
+      dx += ReglagesNage.forceMur * k * (0.35 + 0.65 * k)
+      dz += tangente * ReglagesNage.forceMur * 0.5 * k
+      if cos(n.cap) < 0 { proximiteMur = max(proximiteMur, k) }
     }
-    if present, n.x > droite {
-      let k = (n.x - droite) / m
-      dx -= ReglagesNage.forceMur * k * k
+    if present, xm > droite {
+      let k = min(1.5, (xm - droite) / m)
+      dx -= ReglagesNage.forceMur * k * (0.35 + 0.65 * k)
+      dz += tangente * ReglagesNage.forceMur * 0.5 * k
+      if cos(n.cap) > 0 { proximiteMur = max(proximiteMur, k) }
     }
     let mp = ReglagesNage.margeProfondeur
     if present, n.z < ReglagesNage.zMin + mp {
@@ -784,7 +881,8 @@ final class MoteurNage {
     if p.role == .banc {
       var ax = 0.0
       var az = 0.0
-      for j in nageurs.indices where nageurs[j].profil.role == .predateur && nageurs[j].etat == .present {
+      for j in nageurs.indices
+      where nageurs[j].profil.role == .predateur && nageurs[j].etat == .present {
         let o = nageurs[j]
         let ox = n.x - o.x
         let oz = n.z - o.z
@@ -902,6 +1000,9 @@ final class MoteurNage {
         cible = max(cible, p.croisiere * 0.7)
       }
     }
+    // Il ralentit en abordant un mur de face : le virage a le temps de se faire, sans cogner.
+    cible *= 1 - 0.6 * min(1, proximiteMur)
+    if proximiteMur > 0.4, n.mode == .plane || n.mode == .glisse { n.mode = .nage; n.minuteur = 3; n.depuisMode = 0 }
     let accel = p.accel * (n.mode == .rafale ? 4 : 1)
     let decel = 0.14 + 0.1 * p.croisiere
     n.v = max(0, n.v + borner((cible - n.v) * 1.5, -decel, accel) * h)
@@ -968,15 +1069,14 @@ final class MoteurNage {
         ? n.z > 1.1 : (ecranX < -0.5 * L * sProj - 0.03 || ecranX > 1 + 0.5 * L * sProj + 0.03)
       if dehors {
         n.etat = .absent
-        n.echeance = temps + n.hasard.entre(15, 60)
+        n.echeance = temps + n.hasard.entre(ReglagesNage.dureeAbsence.0, ReglagesNage.dureeAbsence.1)
         n.v = 0
       }
     } else if n.etat == .entrant {
-      let marge = 0.45 * L + 0.03 + 0.04
-      let dedans = n.passeParLeFond ? n.z < ReglagesNage.zMax - 0.04 : (n.x > marge && n.x < 1 - marge)
+      let dedans = abs(ecranX - 0.5) < 0.5 - ReglagesNage.reprendreMurs
       if dedans {
         n.etat = .present
-        n.echeance = temps + n.hasard.entre(30, 100)
+        n.echeance = temps + n.hasard.entre(10, 40)
         n.minuteur = n.hasard.entre(n.profil.nage)
         n.depuisMode = 0
       }
@@ -1001,7 +1101,7 @@ final class MoteurNage {
 
     // Lacet affiché : suit le cap, en douceur.
     let lacetVoulu = Self.lacetCible(cap: n.cap)
-    let pas = ReglagesNage.pasFixe
+    let pas = dtImage
     n.lacetAffiche += (lacetVoulu - n.lacetAffiche) * (1 - exp(-pas * 4.5))
     n.lacet = n.lacetAffiche
 

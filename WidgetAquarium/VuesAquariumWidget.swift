@@ -355,6 +355,13 @@ struct VueAquariumWidget: View {
         }
     }
 
+    /// L'entrée de l'état vide : un seul gardon, commun, qui n'appartient à aucune prise.
+    static func entreeAccueil(_ entree: EntreeAquarium) -> EntreeAquarium {
+        var accueil = entree.instantane
+        accueil.poissons = [InstantaneAquarium.Poisson(id: "accueil", slug: "gardon", rarete: 0, relache: true, nombre: 0)]
+        return EntreeAquarium(date: entree.date, instantane: accueil)
+    }
+
     private func aquarium(verrouille: Bool, avecBouton: Bool) -> some View {
         ZStack {
             #if DEBUG
@@ -362,6 +369,11 @@ struct VueAquariumWidget: View {
             DiagnosticAquarium(instantane: instantane)
             #endif
             if instantane.poissons.isEmpty {
+                // Avant la 1re prise (Adem, 16 oct.) : un gardon d'accueil nage, voilé, derrière l'invitation. Ce
+                // n'est pas une prise : il n'entre ni au compte d'espèces ni dans la liste de choix.
+                CoucheNage(entree: Self.entreeAccueil(entree), famille: famille, anime: anime)
+                    .opacity(0.55)
+                    .accessibilityHidden(true)
                 TexteVide()
             } else {
                 CoucheNage(entree: entree, famille: famille, anime: anime)

@@ -65,17 +65,17 @@ struct AjoutPhotoSortieView: View {
 
     private var vignette: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: Rayon.s, style: .continuous).fill(Palette.tuile)
+            RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Palette.tuile)
             if let apercu {
                 Image(uiImage: apercu).resizable().scaledToFill()
             } else {
                 Image(systemName: "camera")
-                    .font(Police.taille(24))
+                    .font(Police.taille(24, .bold))
                     .foregroundStyle(Palette.marine)
             }
         }
         .frame(width: 84, height: 56)
-        .clipShape(RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
         .accessibilityHidden(true)
     }
 }

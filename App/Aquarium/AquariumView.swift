@@ -36,7 +36,7 @@ struct AquariumView: View {
     /// Lue au rendu de la vue (changement de cartes, toucher), jamais à chaque image de l'animation.
     private var poissons: [Emplacement] {
         Array(modele.emplacements.filter { $0.carte != nil }
-            .sorted { niveau($0) > niveau($1) }
+            .sorted { niveau($0) != niveau($1) ? niveau($0) > niveau($1) : $0.id < $1.id }
             .prefix(poissonsAffiches))
     }
 
@@ -167,7 +167,9 @@ struct AquariumView: View {
     /// Avec « Réduire les animations » : tous les poissons à leur place de départ, aucune couche d'ambiance, rien ne bouge.
     private func scene(taille: CGSize, moteur: MoteurNage) -> some View {
         TimelineView(.animation(paused: reduireAnimations)) { contexte in
-            let _ = avancer(moteur, a: contexte.date)
+            // La simulation avance ici, puis on lit UNE copie des poissons : elle est passée en valeur aux sous-vues
+            // avec le compteur d'images, de sorte que SwiftUI relit les positions à chaque image.
+            let liste = avancer(moteur, a: contexte.date)
             let l = taille.width, h = taille.height
             let t = reduireAnimations ? 0 : moteur.temps
             // Léger balancement de caméra : le fond bouge moins que les poissons, les particules proches plus.
@@ -191,29 +193,7 @@ struct AquariumView: View {
                         guard !reduireAnimations else { return }
                         moteur.toucherEau(x: Double(point.x / l), y: Double(point.y / h))
                     }
-                ZStack {
-                    ForEach(0..<moteur.nageurs.count, id: \.self) { i in
-                        let n = moteur.nageurs[i]
-                        if n.etat != .absent, n.opacite > 0.01 {
-                            vue(n, l: l, h: h)
-                        }
-                    }
-                    // Les zones de toucher suivent les poissons, au premier plan (celui de devant gagne).
-                    ForEach(0..<moteur.nageurs.count, id: \.self) { i in
-                        let n = moteur.nageurs[i]
-                        if n.etat == .present {
-                            let cote = max(n.largeur * l * n.echelle, 56)
-                            Color.clear
-                                .frame(width: cote, height: max(cote * 0.5, 56))
-                                .contentShape(Rectangle())
-                                .onTapGesture { toucher(i, moteur: moteur) }
-                                .position(x: n.sx * l, y: n.sy * h)
-                                .zIndex(200 + (1 - n.profondeur))
-                                .accessibilityLabel(n.nom)
-                                .accessibilityAddTraits(.isButton)
-                        }
-                    }
-                }
+                CoucheNageurs(nageurs: liste, trame: moteur.trame, l: l, h: h) { toucher($0, moteur: moteur) }
                 .offset(x: px, y: py)
                 if !reduireAnimations {
                     CoucheAvantEau(t: t, tempsMoteur: moteur.temps, ondes: moteur.ondes)
@@ -225,35 +205,9 @@ struct AquariumView: View {
         }
     }
 
-    private func avancer(_ moteur: MoteurNage, a date: Date) {
+    private func avancer(_ moteur: MoteurNage, a date: Date) -> [Nageur] {
         if !reduireAnimations { moteur.avancer(a: date) }
-    }
-
-    /// Un poisson : il tourne en fondu entre les deux lacets rendus les plus proches (jamais de saut), plus loin il est
-    /// plus petit, plus pâle et plus bleuté (brume), le nez suit sa vitesse verticale, léger roulis dans les virages.
-    private func vue(_ n: Nageur, l: CGFloat, h: CGFloat) -> some View {
-        let largeur = CGFloat(n.largeur) * l * CGFloat(n.echelle)
-        let brume = max(n.profondeur, 0)
-        let miroir = n.sens >= 0 ? 1.0 : -1.0
-        return ZStack {
-            ImagePoisson(slug: n.slug, image: n.cycle ? n.image * n.pas : nil, largeur: largeur, sens: n.sens,
-                         angle: n.angleA, volume: n.volume)
-            if n.poidsB > 0 {
-                ImagePoisson(slug: n.slug, image: n.cycle ? n.image * n.pas : nil, largeur: largeur, sens: n.sens,
-                             angle: n.angleB, volume: n.volume)
-                    .opacity(n.poidsB)
-            }
-        }
-        .saturation(1 - 0.55 * brume)
-        .brightness(0.12 * brume)
-        .colorMultiply(Color(red: 1 - 0.22 * brume, green: 1 - 0.07 * brume, blue: 1))
-        .opacity(n.opacite)
-        .rotation3DEffect(.radians(n.roulis), axis: (x: 1, y: 0, z: 0), perspective: 0.3)
-        .rotationEffect(.radians(-(n.assiette + n.ondulation) * miroir))
-        .shadow(color: .white.opacity(n.selectionne ? 0.9 : 0), radius: 8)
-        .position(x: n.sx * l, y: n.sy * h)
-        .zIndex(1 - n.profondeur)
-        .allowsHitTesting(false)
+        return moteur.nageurs
     }
 
     private func toucher(_ index: Int, moteur: MoteurNage) {
@@ -302,5 +256,68 @@ struct AquariumView: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(e.espece.nom), voir la carte")
+    }
+}
+
+/// Les poissons et leurs zones de toucher. Reçoit les poissons EN VALEUR et le compteur d'images du moteur : chaque image,
+/// ces valeurs changent, donc SwiftUI réévalue la vue et redessine les positions (le moteur n'est pas observable).
+private struct CoucheNageurs: View {
+    let nageurs: [Nageur]
+    let trame: Int
+    let l: CGFloat
+    let h: CGFloat
+    let toucher: (Int) -> Void
+
+    var body: some View {
+        ZStack {
+            ForEach(nageurs.indices, id: \.self) { i in
+                let n = nageurs[i]
+                if n.etat != .absent, n.opacite > 0.01 {
+                    vue(n)
+                }
+            }
+            // Les zones de toucher suivent les poissons, au premier plan (celui de devant gagne).
+            ForEach(nageurs.indices, id: \.self) { i in
+                let n = nageurs[i]
+                if n.etat == .present {
+                    let cote = max(n.largeur * l * n.echelle, 56)
+                    Color.clear
+                        .frame(width: cote, height: max(cote * 0.5, 56))
+                        .contentShape(Rectangle())
+                        .onTapGesture { toucher(i) }
+                        .position(x: n.sx * l, y: n.sy * h)
+                        .zIndex(200 + (1 - n.profondeur))
+                        .accessibilityLabel(n.nom)
+                        .accessibilityAddTraits(.isButton)
+                }
+            }
+        }
+    }
+
+    /// Un poisson : il tourne en fondu entre les deux lacets rendus les plus proches (jamais de saut), plus loin il est
+    /// plus petit, plus pâle et plus bleuté (brume), le nez suit sa vitesse verticale, léger roulis dans les virages.
+    func vue(_ n: Nageur) -> some View {
+        let largeur = CGFloat(n.largeur) * l * CGFloat(n.echelle)
+        let brume = max(n.profondeur, 0)
+        let miroir = n.sens >= 0 ? 1.0 : -1.0
+        return ZStack {
+            ImagePoisson(slug: n.slug, image: n.cycle ? n.image * n.pas : nil, largeur: largeur, sens: n.sens,
+                         angle: n.angleA, volume: n.volume)
+            if n.poidsB > 0 {
+                ImagePoisson(slug: n.slug, image: n.cycle ? n.image * n.pas : nil, largeur: largeur, sens: n.sens,
+                             angle: n.angleB, volume: n.volume)
+                    .opacity(n.poidsB)
+            }
+        }
+        .saturation(1 - 0.55 * brume)
+        .brightness(0.12 * brume)
+        .colorMultiply(Color(red: 1 - 0.22 * brume, green: 1 - 0.07 * brume, blue: 1))
+        .opacity(n.opacite)
+        .rotation3DEffect(.radians(n.roulis), axis: (x: 1, y: 0, z: 0), perspective: 0.3)
+        .rotationEffect(.radians(-(n.assiette + n.ondulation) * miroir))
+        .shadow(color: n.selectionne ? .white.opacity(0.9) : .clear, radius: n.selectionne ? 8 : 0)
+        .position(x: n.sx * l, y: n.sy * h)
+        .zIndex(1 - n.profondeur)
+        .allowsHitTesting(false)
     }
 }

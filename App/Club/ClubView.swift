@@ -15,6 +15,7 @@ struct ClubView<MarqueMeteo: View>: View {
     @State private var creationOuverte = false
     @State private var rejoindreOuvert = false
     @State private var clubChoisi: UUID?
+    @State private var inviterOuvert = false
     /// Les poissons proposés comme image d'un club. À brancher : RootView les passe avec `.poissonsDuClub(_:)`.
     var poissons: [PoissonClub] = []
     /// À brancher : membres, dernières cartes, record et invitations viennent du partage CloudKit (lot Amis).
@@ -63,11 +64,20 @@ struct ClubView<MarqueMeteo: View>: View {
                         .font(Police.grandTitre)
                         .foregroundStyle(Palette.encre)
                         .accessibilityAddTraits(.isHeader)
-                    EnteteGroupeClub(titre: "Mes clubs", haut: 4)
-                    mesClubs
+                    if clubs.clubs.isEmpty {
+                        etatSansClub
+                    } else {
+                        EnteteGroupeClub(titre: "Mes clubs", haut: 4)
+                        mesClubs
+                    }
                     if let club {
                         EnteteGroupeClub(titre: club.nom)
                         groupeMembres(club)
+                        if membres.isEmpty && dernieresCartes.isEmpty && record == nil {
+                            etatSansMembres
+                        }
+                    }
+                    if club != nil, !(membres.isEmpty && dernieresCartes.isEmpty && record == nil) {
                         EnteteGroupeClub(titre: "Dernières cartes")
                         if dernieresCartes.isEmpty {
                             tuileVide
@@ -118,6 +128,9 @@ struct ClubView<MarqueMeteo: View>: View {
             .tint(Palette.marine)
             .background(Palette.fond.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
+            .navigationDestination(isPresented: $inviterOuvert) {
+                if let club { InviterClubView(club: club, invites: invites, invitation: invitation) }
+            }
             .fullScreenCover(isPresented: $creationOuverte) {
                 CreerClubView(poissons: poissons) { nom, poisson, photo in
                     clubs.creer(nom: nom, poissonId: poisson, photo: photo)
@@ -130,6 +143,99 @@ struct ClubView<MarqueMeteo: View>: View {
                 Text("Touche le lien d'invitation que tu as reçu : FishMe s'ouvre sur le club.")
             }
         }
+    }
+
+    // MARK: États vides (jamais un écran blanc)
+
+    /// Trois poissons de profil, tête à droite, sur des pastilles : l'illustration des deux états vides.
+    private var illustrationClub: some View {
+        HStack(spacing: -10) {
+            ForEach(Array(poissons.prefix(3))) { poisson in
+                Image(poisson.image).resizable().scaledToFit()
+                    .padding(.horizontal, 12)
+                    .frame(width: 84, height: 84)
+                    .background(Palette.tuile, in: Circle())
+                    .overlay(Circle().strokeBorder(Palette.surface, lineWidth: 3))
+                    .accessibilityHidden(true)
+            }
+            if poissons.isEmpty {
+                Image(systemName: "person.3.fill")
+                    .font(Police.taille(34))
+                    .foregroundStyle(Palette.marine)
+                    .frame(width: 84, height: 84)
+                    .background(Palette.tuile, in: Circle())
+                    .accessibilityHidden(true)
+            }
+        }
+    }
+
+    /// Aucun club : le poisson, une phrase, « Créer un club » (le seul bouton principal) et « Rejoindre avec un lien ».
+    private var etatSansClub: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            EnteteGroupeClub(titre: "Mes clubs", haut: 4)
+            GroupeClub {
+                VStack(spacing: Espace.m) {
+                    illustrationClub.padding(.top, Espace.l)
+                    Text("Pêche à plusieurs")
+                        .font(Police.titre).foregroundStyle(Palette.encre)
+                    Text("Crée un club, invite tes amis et regardez vos cartes ensemble.")
+                        .font(Police.detail).foregroundStyle(Palette.encreDouce)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, Espace.l)
+                    Button("Créer un club") { creationOuverte = true }
+                        .buttonStyle(.principal)
+                        .padding(.horizontal, Espace.l)
+                    Button { rejoindreOuvert = true } label: {
+                        Label("Rejoindre avec un lien", systemImage: "link")
+                            .font(Police.taille(15)).foregroundStyle(Palette.marine)
+                            .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                    }
+                    .padding(.bottom, Espace.s)
+                }
+            }
+            EnteteGroupeClub(titre: "Ce que tu verras")
+            GroupeClub {
+                avantage("person.2.fill", "Les membres et leurs cartes")
+                FiletClub(retrait: 56)
+                avantage("rectangle.stack.fill", "Les dernières cartes du club")
+                FiletClub(retrait: 56)
+                avantage("trophy.fill", "Le record du club")
+            }
+        }
+    }
+
+    private func avantage(_ icone: String, _ texte: String) -> some View {
+        HStack(spacing: Espace.m) {
+            Image(systemName: icone).font(Police.taille(17)).foregroundStyle(Palette.marine)
+                .frame(width: 28)
+            Text(texte).font(Police.corps).foregroundStyle(Palette.encre)
+            Spacer(minLength: 0)
+        }
+        .frame(minHeight: 52)
+        .padding(.horizontal, Espace.l)
+        .accessibilityElement(children: .combine)
+    }
+
+    /// Un club sans autre membre : une carte pleine avec « Inviter » à la place des deux tuiles vides.
+    private var etatSansMembres: some View {
+        GroupeClub {
+            VStack(spacing: Espace.m) {
+                illustrationClub.padding(.top, Espace.l)
+                Text("Ton club attend ses premiers membres")
+                    .font(Police.sousTitre).foregroundStyle(Palette.encre)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, Espace.l)
+                Text("Les cartes partagées et le record du club apparaîtront ici.")
+                    .font(Police.legende).foregroundStyle(Palette.encreDouce)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, Espace.l)
+                Button("Inviter") { inviterOuvert = true }
+                    .buttonStyle(.principal)
+                    .padding(.horizontal, Espace.l)
+                    .padding(.bottom, Espace.l)
+            }
+        }
+        .padding(.top, Espace.m)
     }
 
     // MARK: Mes clubs

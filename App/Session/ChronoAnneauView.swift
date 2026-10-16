@@ -31,7 +31,7 @@ struct ChronoAnneauView<SousTitre: View>: View {
         .animation(reduireAnimations ? nil : .linear(duration: 1), value: progression)
       VStack(spacing: Espace.xs) {
         Text(temps)
-          .font(.system(size: diametre * 0.2, weight: .light, design: .rounded).monospacedDigit())
+          .font(Police.taille(diametre * 0.2, .bold).monospacedDigit())
           .foregroundStyle(Palette.encre)
           .lineLimit(1)
           .minimumScaleFactor(0.4)
@@ -43,5 +43,35 @@ struct ChronoAnneauView<SousTitre: View>: View {
     .frame(width: diametre, height: diametre)
     .padding(epaisseur / 2)
     .accessibilityElement(children: .contain)
+  }
+}
+
+/// Un gros bouton rond façon Horloge : un disque teinté, l'icône au centre, le libellé dessous.
+struct BoutonRondHorloge: View {
+  let titre: String
+  let icone: String
+  let couleur: Color
+  var diametre: CGFloat = 84
+  let action: () -> Void
+
+  var body: some View {
+    Button(action: action) {
+      VStack(spacing: Espace.s) {
+        Image(systemName: icone)
+          .font(.system(size: diametre * 0.34, weight: .semibold, design: .rounded))
+          .foregroundStyle(couleur)
+          .frame(width: diametre, height: diametre)
+          .background(Circle().fill(couleur.opacity(0.18)))
+          .overlay(Circle().strokeBorder(couleur.opacity(0.35), lineWidth: 1))
+        Text(titre)
+          .font(Police.detail)
+          .foregroundStyle(Palette.encre)
+          .lineLimit(1)
+          .minimumScaleFactor(0.7)
+      }
+      .contentShape(Rectangle())
+    }
+    .buttonStyle(.plain)
+    .accessibilityLabel(titre)
   }
 }
