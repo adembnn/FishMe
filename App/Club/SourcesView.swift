@@ -22,6 +22,9 @@ struct SourcesView<MarqueMeteo: View>: View {
             }
         }
         .scrollIndicators(.hidden)
+        .font(Police.corps)
+        .scrollContentBackground(.hidden)
+        .background(Palette.fond.ignoresSafeArea())
         .navigationTitle("Sources")
     }
 
@@ -29,8 +32,8 @@ struct SourcesView<MarqueMeteo: View>: View {
         VStack(alignment: .leading, spacing: 2) {
             Text(source.nom)
             Text(source.mention)
-                .font(.footnote)
-                .foregroundStyle(.secondary)
+                .font(Police.legende)
+                .foregroundStyle(Palette.encreDouce)
         }
     }
 }

@@ -29,13 +29,13 @@ struct PescedexAmiView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: Espace.l) {
                 barre
                 compteur
                 grille
             }
-            .padding(.horizontal, 16)
-            .padding(.top, 8)
+            .padding(.horizontal, Espace.bord)
+            .padding(.top, Espace.s)
         }
         .scrollIndicators(.hidden)
         .background(JetonAmis.fondPage.ignoresSafeArea())
@@ -65,6 +65,16 @@ struct PescedexAmiView: View {
             }
             .accessibilityLabel("Retour")
             Spacer()
+            HStack(spacing: Espace.s) {
+                Avatar(nom: ami.nom).scaleEffect(0.75).frame(width: 34, height: 34)
+                Text(ami.nom).font(Police.sousTitre).foregroundStyle(Palette.encre)
+            }
+            .padding(.leading, Espace.xs).padding(.trailing, Espace.l)
+            .frame(minHeight: Gabarit.zoneTactile)
+            .background(Palette.surface, in: Capsule())
+            .accessibilityElement(children: .combine)
+            Spacer()
+            // Signaler et Bloquer restent rangés dans ce menu, jamais au premier niveau.
             Menu {
                 if let url = gestion.urlDeSignalement(ami: ami) {
                     Link(destination: url) { Label("Signaler", systemImage: "flag") }
@@ -85,8 +95,7 @@ struct PescedexAmiView: View {
 
     private var compteur: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(ami.nom).font(JetonAmis.police(30)).foregroundStyle(JetonAmis.encre)
-            Text(texteCompteur).font(JetonAmis.police(16, .bold)).foregroundStyle(JetonAmis.encreDouce)
+            Text(texteCompteur).font(Police.chiffreMoyen).foregroundStyle(Palette.encre)
         }
     }
 
@@ -94,11 +103,11 @@ struct PescedexAmiView: View {
         let n = especes.count
         let mot = n == 1 ? "espèce" : "espèces"
         guard let zone else { return "\(n) \(mot)" }
-        return "\(n) \(mot) sur les \(gestion.especesReleveesDans(zone)) relevées dans le \(zone)"
+        return "\(n) sur \(gestion.especesReleveesDans(zone)) espèces de la zone (\(zone))"
     }
 
     private var grille: some View {
-        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 3), spacing: 12) {
+        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: Espace.m), count: 3), spacing: Espace.m) {
             ForEach(especes) { carte in
                 Button { if carte.image != nil { carteOuverte = carte } } label: { tuile(carte) }
                     .buttonStyle(.plain)
@@ -115,7 +124,7 @@ struct PescedexAmiView: View {
         let style = RareteAmi(carte.rarete)
         let espece = gestion.espece(carte.espece)
         return ZStack(alignment: .topTrailing) {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: Rayon.m, style: .continuous)
                 .fill(LinearGradient(colors: style.fond, startPoint: .top, endPoint: .bottom))
             if let espece {
                 Image(espece.image).resizable().scaledToFit().padding(10)
@@ -124,7 +133,7 @@ struct PescedexAmiView: View {
             if !gestion.mesEspeces.contains(carte.espece) {
                 Text("nouvelle")
                     .font(JetonAmis.police(11))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Palette.surMarine)
                     .padding(.horizontal, 7).padding(.vertical, 3)
                     .background(JetonAmis.vert, in: Capsule())
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
