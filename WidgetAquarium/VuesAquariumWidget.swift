@@ -134,12 +134,9 @@ private struct CoucheNage: View {
                                                            rapport: Double(h / max(l, 1))))
             }
             ZStack {
-                // Couche de base (poissons à leur place de départ), puis 80 copies (10 s à 8 images/s) ; chaque copie
-                // dessine l'eau et TOUS les poissons à leur place de cet instant, et deux masques chronos n'en
-                // laissent voir qu'une à la fois, par-dessus la couche de base.
-                ImagesAnimees(reference: reference, actif: animePoissons, fond: {
-                    FondEau(famille: famille).frame(width: l, height: h).clipped()
-                }) { j in
+                // 160 copies (10 s à 16 images/s) ; chaque copie dessine TOUS les poissons à leur place de cet instant
+                // (sans l'eau : c'est le fond du widget), et deux masques chronos n'en laissent voir qu'une à la fois.
+                ImagesAnimees(reference: reference, actif: animePoissons) { j in
                     ZStack {
                         // Les poissons du fond d'abord : ceux de devant passent par-dessus.
                         let ordre = nageurs.sorted { $0.poses[j].profondeur > $1.poses[j].profondeur }
