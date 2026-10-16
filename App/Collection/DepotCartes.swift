@@ -114,6 +114,51 @@ actor DepotCartes: CollectionCartes {
         return await MainActor.run { ImagePartage.png(de: carte, services: services) }
     }
 
+    // MARK: Sauvegarde iCloud (App/Compte)
+
+    /// Identifiants de toutes les cartes et bredouilles, pour savoir ce qui manque d'un côté ou de l'autre.
+    func identifiants() -> (cartes: [UUID], bredouilles: [UUID]) {
+        (detaillees().map(\.prise.id), bredouilles().map(\.id))
+    }
+
+    /// Fichier de la photo nettoyée d'une carte, s'il existe : CloudKit l'envoie tel quel (déjà sans GPS).
+    func urlPhoto(de prise: Prise) -> URL? {
+        guard let nom = prise.cheminPhoto else { return nil }
+        let url = dossierPhotos.appendingPathComponent(nom)
+        return FileManager.default.fileExists(atPath: url.path) ? url : nil
+    }
+
+    /// Remet une carte revenue d'iCloud (nouvel iPhone). Ne fait rien si elle est déjà là.
+    /// La photo repasse par le nettoyage ; sans photo lisible, la carte revient quand même, plutôt que d'être perdue.
+    func importer(_ carte: CarteDetaillee, photo: Data?) throws {
+        let id = carte.prise.id
+        let contexte = ModelContext(conteneur)
+        let existe = (try? contexte.fetchCount(FetchDescriptor<CarteEnregistree>(predicate: #Predicate { $0.id == id }))) ?? 0
+        guard existe == 0 else { return }
+        var prise = carte.prise
+        prise.cheminPhoto = nil
+        if let photo, let propre = NettoyagePhoto.sansMetadonnees(photo) {
+            let nom = "\(id.uuidString).jpg"
+            try propre.write(to: dossierPhotos.appendingPathComponent(nom), options: .completeFileProtection)
+            prise.cheminPhoto = nom
+        }
+        let json = try carte.conditions.map { try JSONEncoder().encode($0) }
+        contexte.insert(CarteEnregistree(prise: prise, conditionsJSON: json, dureeSecondes: carte.dureeSecondes))
+        try contexte.save()
+    }
+
+    /// Remet une carte bredouille revenue d'iCloud, si elle n'est pas déjà là.
+    func importer(bredouille: CarteBredouille) throws {
+        let id = bredouille.id
+        let contexte = ModelContext(conteneur)
+        let existe = (try? contexte.fetchCount(FetchDescriptor<BredouilleEnregistree>(predicate: #Predicate { $0.id == id }))) ?? 0
+        guard existe == 0 else { return }
+        let json = try bredouille.conditions.map { try JSONEncoder().encode($0) }
+        contexte.insert(BredouilleEnregistree(id: id, debut: bredouille.debut, fin: bredouille.fin,
+                                              lieuFlou: bredouille.lieuFlou, conditionsJSON: json))
+        try contexte.save()
+    }
+
     private static func decoder(_ donnees: Data?) -> Conditions? {
         guard let donnees else { return nil }
         return try? JSONDecoder().decode(Conditions.self, from: donnees)
