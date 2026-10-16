@@ -399,12 +399,9 @@ struct PescedexView: View {
 
     private var trouvees: [Emplacement] { modele.emplacements.filter { $0.carte != nil && $0.carte?.estDeclaree == false } }
     private var declarees: [Emplacement] { modele.emplacements.filter { $0.carte?.estDeclaree == true } }
-    /// À trouver : les espèces de la zone pas encore prises (le M du compteur) ; sans relevé, toutes celles pas encore prises.
-    private var aTrouver: [Emplacement] {
-        let sans = modele.emplacements.filter { $0.carte == nil }
-        let zone = sans.filter(\.releveeDansLaZone)
-        return zone.isEmpty ? sans : zone
-    }
+    /// À trouver : toutes les espèces pas encore prises, rangées par rareté plus bas. Les légendaires (jamais relevées
+    /// dans le département) y sont comprises : c'est ce qui donne envie de compléter (Adem, 16 oct.).
+    private var aTrouver: [Emplacement] { modele.emplacements.filter { $0.carte == nil } }
 
     private var colonnes: [GridItem] { Array(repeating: GridItem(.flexible(), spacing: Espace.s), count: 3) }
     /// Les cartes obtenues, deux par ligne : assez grandes pour voir la rareté (fond, badge, reflet des rares et légendaires).

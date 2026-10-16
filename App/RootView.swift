@@ -801,6 +801,13 @@ private struct RacineContenu: View {
                 photographier: { app.ajouterPrise() },
                 declarer: { app.montrer(.tunnel) },
                 voirAmis: { app.onglet = .club },
+                // P27 « Pour toi » : Appât, Hameçon, Technique, Moment, au mois le plus proche et à n'importe quel niveau
+                // s'il le faut (jamais vide quand Core a un conseil). Sans abonnement : l'appât seul, le reste derrière Pro.
+                conseilsParType: { espece, niveau in
+                    let tout = app.contexteConseils(lieu: app.lieuDuSpot(), toutLeKit: { _ in })
+                        .parType(espece: espece, niveau: niveau)
+                    return app.autorise(.conseilsComplets) ? tout : tout.filter { $0.key == .appat }
+                },
                 changerZone: { app.onglet = .carte },
                 ajouterManuellement: { photo, espece, cm, date, lieu in
                     await app.ajouterPriseManuelle(photo: photo, espece: espece, cm: cm, date: date, lieu: lieu)
