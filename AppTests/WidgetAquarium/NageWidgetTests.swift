@@ -280,4 +280,20 @@ struct NageTests {
         let b = NageWidget.pose(autre, copie: 0, nombre: 80, demiLargeur: 0.15)
         #expect(a.x != b.x || a.sens != b.sens)
     }
+
+    /// Image par image : d'une copie à la suivante, chaque poisson se déplace un peu (il nage), sans sauter.
+    @Test func poseAvanceDUneCopieALaSuivante() {
+        let places = NageWidget.placements(poissons(3), a: Date(timeIntervalSinceReferenceDate: 0), dernierRepas: nil,
+                                           limite: 5, colonnes: 1)
+        for placement in places {
+            var bouge = 0
+            for j in 0..<80 {
+                let a = NageWidget.pose(placement, copie: j, nombre: 80, demiLargeur: 0.1)
+                let b = NageWidget.pose(placement, copie: (j + 1) % 80, nombre: 80, demiLargeur: 0.1)
+                if abs(a.x - b.x) > 0.0005 || a.image != b.image { bouge += 1 }
+                #expect(abs(a.x - b.x) < 0.08, "saut de \(placement.id) entre les copies \(j) et \(j + 1)")
+            }
+            #expect(bouge >= 70, "\(placement.id) ne bouge presque pas")
+        }
+    }
 }

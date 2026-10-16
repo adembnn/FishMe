@@ -74,7 +74,8 @@ private struct VueAquariumLue: View {
 #Preview(as: .systemMedium) {
     AquariumWidget()
 } timeline: {
-    EntreeAquarium.exempleRendu(pro: true)
-    EntreeAquarium.exempleRendu(pro: true, repas: true)
+    // Date de maintenant : le canevas d'Xcode fait tourner les chronos, les poissons doivent y nager.
+    EntreeAquarium.exempleRendu(pro: true, date: .now)
+    EntreeAquarium.exempleRendu(pro: true, repas: true, date: .now)
 }
 #endif

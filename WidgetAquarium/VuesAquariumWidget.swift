@@ -80,6 +80,7 @@ private struct CoucheNage: View {
     /// Faux : poissons figés (tests d'image, repli sans animation).
     var anime: Bool = true
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
+    @Environment(\.widgetRenderingMode) private var rendu
 
     private static func estAccessoire(_ famille: WidgetFamily) -> Bool {
         switch famille {
@@ -105,7 +106,8 @@ private struct CoucheNage: View {
             colonnes: 1)
         let parId = Dictionary(instantane.poissons.map { ($0.id, $0) }, uniquingKeysWith: { premier, _ in premier })
         let part = partPoisson(famille)
-        let animePoissons = anime && !reduireAnimations && !Self.estAccessoire(famille)
+        // Rendu teinté : iOS remplace le fond, les copies (qui portent l'eau) le cacheraient. Poissons fixes.
+        let animePoissons = anime && !reduireAnimations && !Self.estAccessoire(famille) && rendu != .accented
         let reference = HorlogeAnimation.reference(pour: entree.date)
 
         GeometryReader { geo in
@@ -117,9 +119,12 @@ private struct CoucheNage: View {
                               cycle: PoissonVivant.cycleDisponible(poisson.slug))
             }
             ZStack {
-                // 80 copies (10 s à 8 images/s) ; chaque copie dessine TOUS les poissons à leur place de cet instant,
-                // et deux masques chronos n'en laissent voir qu'une à la fois.
-                ImagesAnimees(reference: reference, actif: animePoissons) { j in
+                // Couche de base (poissons à leur place de départ), puis 80 copies (10 s à 8 images/s) ; chaque copie
+                // dessine l'eau et TOUS les poissons à leur place de cet instant, et deux masques chronos n'en
+                // laissent voir qu'une à la fois, par-dessus la couche de base.
+                ImagesAnimees(reference: reference, actif: animePoissons, fond: {
+                    FondEau(famille: famille).frame(width: l, height: h).clipped()
+                }) { j in
                     ZStack {
                         ForEach(nageurs) { nageur in
                             let pose = NageWidget.pose(nageur.placement, copie: j, nombre: HorlogeAnimation.nombreImages,
@@ -352,9 +357,11 @@ struct VueAquariumWidget: View {
 #if DEBUG
 extension EntreeAquarium {
     /// Un aquarium d'exemple pour rendre des images (tests, aperçus) : 5 poissons aux vrais noms d'images.
-    /// La date est fixe, donc la nage aussi. `repas` : une ration vient d'être donnée (poissons en surface).
-    static func exempleRendu(pro: Bool, repas: Bool = false) -> EntreeAquarium {
-        let date = Date(timeIntervalSince1970: 1_800_000_000)
+    /// La date est fixe par défaut, donc la nage aussi. `repas` : une ration vient d'être donnée (poissons en surface).
+    /// Pour voir l'animation (aperçus), passer `date: .now` : le chrono des masques part de 60 s avant cette date ;
+    /// une date lointaine donnerait un chrono trop long pour son cadre.
+    static func exempleRendu(pro: Bool, repas: Bool = false,
+                             date: Date = Date(timeIntervalSince1970: 1_800_000_000)) -> EntreeAquarium {
         let instantane = InstantaneAquarium(
             poissons: [
                 .init(id: "ex-brochet", slug: "brochet", rarete: 3, relache: true, nom: "Brochet"),

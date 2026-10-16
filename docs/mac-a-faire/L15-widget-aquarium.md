@@ -116,3 +116,22 @@ Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntent
 - Nouveau catalogue `WidgetAquarium/NagePoissons.xcassets` (cycle de battement, 8 images par espèce) dans FishMeWidget et BuildChallenge.
 - `DecorAnime.swift` est supprimé (bulles et lumière animées retirées, le décor 3D est fixe).
 - Preuve attendue : AquariumDepuisJSONTests (4 tests) vert, puis 2 captures du widget à 0,5 s d'écart qui diffèrent.
+
+## Couche de base et vérification sans écran d'accueil (16 oct., 05h45)
+- Sous les 80 copies animées, une couche fixe dessine toujours les poissons à leur place de départ. Chaque copie porte
+  l'eau derrière ses poissons : la copie visible recouvre la couche fixe (jamais deux fois le même poisson). Si l'hôte
+  ne dessine pas les masques, le widget montre au moins les poissons, immobiles. En mode teinté, poissons fixes.
+- Tests : `renduAnimeMontreLePoisson` est remplacé par `renduFixeMontreLePoisson` et `coucheDeBaseVisibleSousLAnimation`
+  (ImageRenderer ne dessine pas les chronos, la couche fixe doit rester). Logique image par image sous Linux :
+  `huitImagesDifferentesParSeconde`, `poseAvanceDUneCopieALaSuivante` (37 tests verts, `AppTests/WidgetAquarium/lancer-tests.sh`).
+- Aperçus Xcode : `#Preview(as: .systemMedium)` dans `AquariumWidget.swift` (timeline datée de maintenant : le canevas
+  fait tourner les chronos) et `#Preview("Aquarium animé (vue du widget)")` dans `ApercuAnimationAquarium.swift`.
+- Sans l'écran d'accueil du simulateur : dans `RootView`, ajouter `.apercuWidgetSiDemande()` (DEBUG, ne fait rien sans
+  l'argument), puis :
+  ```
+  xcrun simctl launch booted ai.mwm.build.challenge.team.01 -FishMeApercuWidget YES
+  xcrun simctl io booted screenshot reports/ecrans/L15/nage-a.png; sleep 0.5; xcrun simctl io booted screenshot reports/ecrans/L15/nage-b.png
+  xcrun simctl io booted recordVideo --codec=h264 reports/ecrans/L15/nage.mp4   # Ctrl-C après 12 s
+  ```
+  L'écran montre les 3 tailles de l'aquarium avec les vrais masques chronos, et en bas la copie attendue par le calcul.
+  Les deux captures doivent différer ; si les poissons restent immobiles avec « polices ok », ce sont les masques.
