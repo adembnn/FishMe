@@ -8,6 +8,9 @@ import Core
 /// poser `SessionEnCoursView(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() }, infosEspece: …, eau: …) { LigneSessionEmplacement(app: app) }`
 /// en plein écran (par exemple `.overlay { … }` ou un `ZStack` au-dessus du `TabView`, `.ignoresSafeArea()` compris), et ne plus passer
 /// `BandeauSession` à `VueCarte` (`bandeauSession` reste vide).
+///
+/// État réduit (16 oct., « plein écran réductible ») : avec `reduire`, un bouton « Carte » en haut et un geste vers le bas
+/// rendent la main à la racine, qui pose alors `BandeauSessionView` sur la carte ; toucher le bandeau rouvre ce plein écran.
 struct SessionEnCoursView<LigneConditions: View>: View {
     let moteur: SuiviSession
     let ajouterPrise: () -> Void
@@ -15,6 +18,8 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     let infosEspece: (Espece) -> EspecePechable?
     /// « la Marne » : l'eau du spot, jamais le point exact. `nil` : « Ton spot » seul.
     let eau: String?
+    /// Réduit l'écran en bandeau sur la carte. `nil` : pas de bouton « Carte », pas de geste.
+    let reduire: (() -> Void)?
     let ligneConditions: LigneConditions
     @Environment(\.dynamicTypeSize) private var tailleTexte
     @State private var explicationFin = false
@@ -22,11 +27,13 @@ struct SessionEnCoursView<LigneConditions: View>: View {
 
     init(moteur: SuiviSession, ajouterPrise: @escaping () -> Void,
          infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, eau: String? = nil,
+         reduire: (() -> Void)? = nil,
          @ViewBuilder ligneConditions: () -> LigneConditions) {
         self.moteur = moteur
         self.ajouterPrise = ajouterPrise
         self.infosEspece = infosEspece
         self.eau = eau
+        self.reduire = reduire
         self.ligneConditions = ligneConditions()
     }
 
@@ -70,11 +77,38 @@ struct SessionEnCoursView<LigneConditions: View>: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Palette.surface.ignoresSafeArea())
         .accessibilityElement(children: .contain)
+        .simultaneousGesture(gesteReduire)
         .confirmationDialog("Terminer la session ?", isPresented: $confirmationFin, titleVisibility: .visible) {
             Button("Terminer la session", role: .destructive) { moteur.terminer() }
             Button("Continuer à pêcher", role: .cancel) {}
         }
         .onChange(of: maintenant) { _, _ in moteur.verifierFin() }
+    }
+
+    /// Un geste vers le bas (assez long, surtout vertical) réduit l'écran en bandeau.
+    private var gesteReduire: some Gesture {
+        DragGesture(minimumDistance: 24).onEnded { (valeur: DragGesture.Value) in
+            let bas: Bool = valeur.translation.height > 90 && abs(valeur.translation.width) < valeur.translation.height
+            if bas, let reduire { reduire() }
+        }
+    }
+
+    /// « Carte » : le bouton qui réduit P14 en bandeau (seulement si la racine a fourni `reduire`).
+    @ViewBuilder
+    private var boutonReduire: some View {
+        if let reduire {
+            Button(action: reduire) {
+                Label("Carte", systemImage: "map")
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.marine)
+                    .padding(.horizontal, Espace.m)
+                    .frame(minHeight: Gabarit.zoneTactile)
+                    .background(Palette.tuile, in: Capsule())
+                    .contentShape(Capsule())
+            }
+            .buttonStyle(.plain)
+            .accessibilityHint("Réduit la session en bandeau sur la carte")
+        }
     }
 
     /// « Ton spot · <eau> », puis les avis (quota, fin légale) et la ligne de conditions.
@@ -86,6 +120,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
                 Spacer(minLength: 0)
+                boutonReduire
             }
             ForEach(session.messages, id: \.self) { AvisSession(texte: $0) }
             if moteur.quotaAtteint { AvisSession(texte: "Quota du jour atteint") }
@@ -162,7 +197,8 @@ struct SessionEnCoursView<LigneConditions: View>: View {
 
 extension SessionEnCoursView where LigneConditions == EmptyView {
     init(moteur: SuiviSession, ajouterPrise: @escaping () -> Void,
-         infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, eau: String? = nil) {
-        self.init(moteur: moteur, ajouterPrise: ajouterPrise, infosEspece: infosEspece, eau: eau) { EmptyView() }
+         infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, eau: String? = nil,
+         reduire: (() -> Void)? = nil) {
+        self.init(moteur: moteur, ajouterPrise: ajouterPrise, infosEspece: infosEspece, eau: eau, reduire: reduire) { EmptyView() }
     }
 }

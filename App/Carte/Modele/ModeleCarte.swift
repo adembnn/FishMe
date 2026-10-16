@@ -177,6 +177,14 @@ final class ModeleCarte {
         }
     }
 
+    /// « Autour de moi » : la carte va sur la position de l'iPhone, même quand un spot est fixé ailleurs.
+    func centrerSurMaPosition(_ position: Coordonnee) {
+        appliquer(position: position, refusee: false)
+        if case .surLePecheur = depart {
+            centrer(ZoneCarte(centre: position, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
+        }
+    }
+
     /// Le pêcheur a posé sa zone à la main (sans GPS) : département ou commune.
     func choisirZone(_ c: Coordonnee) {
         if services.geo.departement(de: c).estInconnu {

@@ -2,19 +2,23 @@ import Core
 import SwiftUI
 
 /// Tunnel des 3 premières minutes (Adem, 15 oct. 16h), après la question du niveau :
-/// des cartes à swiper (gauche : jamais pêché, droite : déjà pêché), puis « pêcher maintenant » ou « choisir un spot ».
+/// des cartes à swiper (gauche : jamais pêché, droite : déjà pêché), puis un seul bouton « Voir mon spot » (16 oct. : il ne démarre jamais la session).
 /// Chaque droite crée une carte « déclarée » (sans photo) que A range au Pescedex via `declarer`.
 struct TunnelPremiersPasView: View {
     let especes: [EspecePechable]
     let maintenant: () -> Date
     /// A range la carte au Pescedex.
     let declarer: (Prise) -> Void
+    /// Plus utilisé depuis le 16 oct. (le swipe ne démarre jamais la session) ; le paramètre reste pour ne pas casser l'appelant.
     let pecherMaintenant: () -> Void
+    /// Repli de « Voir mon spot » quand `voirMonSpot` n'est pas fourni.
     let choisirUnSpot: () -> Void
     /// Plus de bouton « Passer » à l'écran (la maquette n'en a pas) ; le paramètre reste pour ne pas casser l'appelant.
     let passer: () -> Void
     /// Rareté de l'espèce dans la zone, affichée sous le nom quand elle est fournie (libellé et couleur de rareté).
     var rarete: (EspecePechable) -> (libelle: String, couleur: Color)? = { _ in nil }
+    /// « Voir mon spot » : la racine ferme le swipe, ouvre l'onglet Carte et demande le vol vers le spot.
+    var voirMonSpot: (() -> Void)? = nil
 
     @State private var index = 0
     @State private var decalage: CGFloat = 0
@@ -208,12 +212,11 @@ struct TunnelPremiersPasView: View {
                     .foregroundStyle(Palette.encre)
             }
             Spacer(minLength: 0)
-            gros("Pêcher maintenant", icone: "figure.fishing", plein: true, action: pecherMaintenant)
-            gros("Choisir un spot", icone: "mappin.and.ellipse", plein: false, action: choisirUnSpot)
+            gros("Voir mon spot", icone: "mappin.and.ellipse", plein: true, action: voirMonSpot ?? choisirUnSpot)
         }
     }
 
-    /// Un seul bouton principal (« Pêcher maintenant »), l'autre est secondaire.
+    /// Un seul bouton principal (« Voir mon spot »).
     @ViewBuilder
     private func gros(_ mot: String, icone: String, plein: Bool, action: @escaping () -> Void) -> some View {
         if plein {

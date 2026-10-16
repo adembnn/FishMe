@@ -127,6 +127,8 @@ final class ParcoursApp {
     var positionPassee = false
     /// Le choix de zone (position refusée) ou la redemande est à l'écran : aucune autre feuille ne s'ouvre en même temps.
     var choixDeZoneOuvert = false
+    var volDemande = false
+    var sessionReduite = false
     var consentement: Consentement
     private var consentementPropose = false
     private var carteListeEnvoyee = false
@@ -406,6 +408,7 @@ final class ParcoursApp {
 
     func commencer(_ spot: Spot) {
         spotCourant = spot
+        sessionReduite = false
         let depart = ContexteDepart(coordonnee: spot.centre, departement: spot.departement, spotChoisi: spot,
                                     abonne: suivi.abonne, conditions: conditions.instantane(spot: spot.centre))
         switch moteur.commencer(depart) {
@@ -425,6 +428,7 @@ final class ParcoursApp {
     }
 
     private func sessionFinie(_ fin: FinDeSession) {
+        sessionReduite = false
         Task { await ecranVerrouille.terminer() }
         PontAquariumWidget.ajouterRations(1)
         publierAquarium()
@@ -630,7 +634,6 @@ private struct RacineContenu: View {
     @AppStorage("profil.nom") private var nomProfil = ""
     @State private var profilOuvert = false
     /// Vrai de l'apparition de la couverture de session jusqu'à la fin de son retrait.
-    @State private var sessionAffichee = false
     /// P03 « Où pêches-tu ? » : montré une seule fois, avant la première demande de position.
     @AppStorage("premierLancement.ouPechesTuVu") private var ouPechesTuVu = false
 
@@ -679,12 +682,9 @@ private struct RacineContenu: View {
         }
     }
 
-    /// Qui présente : la racine quand aucune session n'est à l'écran, sinon la couverture de session (une présentation
-    /// lancée depuis la racine ne s'affiche pas sous un plein écran). La racine attend aussi la fin du retrait de la couverture
-    /// (`sessionAffichee`) : la fin de session s'ouvre alors une fois la couverture partie, jamais pendant son retrait.
-    private func actif(dansSession: Bool) -> Bool {
-        dansSession ? app.moteur.enCours != nil : (app.moteur.enCours == nil && !sessionAffichee)
-    }
+    /// Qui présente : la racine, toujours. La session est un calque (overlay) réductible, pas une couverture : les feuilles
+    /// et pleins écrans posés sur la racine s'affichent par-dessus elle.
+    private func actif(dansSession: Bool) -> Bool { !dansSession }
 
     /// Le modal courant, vu seulement par la présentation (feuille ou plein écran) qui le montre.
     private func liaison(pleinEcran: Bool, dansSession: Bool) -> Binding<Modal?> {
@@ -744,17 +744,16 @@ private struct RacineContenu: View {
                 club
             }
         }
-        // Session en cours en plein écran (P14 C), par-dessus les onglets. Les modales (prise, fin, feuilles) sont aussi
-        // posées sur la couverture : une présentation de la racine ne s'afficherait pas par-dessus elle.
-        .fullScreenCover(isPresented: Binding(get: { app.moteur.enCours != nil }, set: { _ in }),
-                         onDismiss: { sessionAffichee = false }) {
-            avecModales(
+        // Session en cours en plein écran réductible (P14 C) : le bouton « Carte » la range en bandeau sur la carte.
+        .overlay {
+            if app.moteur.enCours != nil && !app.sessionReduite {
                 SessionEnCoursView(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() },
-                                   infosEspece: app.infosEspece(), eau: app.lieuDuSpot()?.eau?.nom) {
+                                   infosEspece: app.infosEspece(), eau: app.lieuDuSpot()?.eau?.nom,
+                                   reduire: { withAnimation { app.sessionReduite = true } }) {
                     LigneSessionEmplacement(app: app)
                 }
-                .onAppear { sessionAffichee = true },
-                dansSession: true)
+                .transition(.move(edge: .bottom))
+            }
         }
         // `styleFishMe()` : App/Style/ n'existe pas sur cette branche, rien à poser ici.
     }
@@ -809,6 +808,12 @@ private struct RacineContenu: View {
             spotFixe: app.moteur.spotGratuit,
             sessionsTerminees: app.moteur.sessionsTerminees,
             bandeauHaut: AnyView(VigilanceEmplacement(app: app)),
+            bandeauSession: AnyView(Group {
+                if app.moteur.enCours != nil && app.sessionReduite {
+                    BandeauSessionView(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() },
+                                       rouvrir: { withAnimation { app.sessionReduite = false } })
+                }
+            }),
             sessionEnCours: app.moteur.enCours != nil,
             emplacementMaintenant: { coordonnee in AnyView(ConditionsEmplacement(app: app, coordonnee: coordonnee)) },
             emplacementConseil: { espece in AnyView(ConseilEmplacement(app: app, espece: espece)) },
@@ -819,7 +824,7 @@ private struct RacineContenu: View {
                 app.choixDeZoneOuvert = ouvert
                 if !ouvert { app.proposerSuitePremierLancement() }
             },
-            demandeChoixDeZone: app.choixDeZoneOuvert,
+            demandeChoixDeZone: app.choixDeZoneOuvert, volVersLeSpot: app.volDemande,
             pastilleProfil: AnyView(
                 ProfilPastille(nom: ProfilEmplacement<EmptyView>.nomAffiche(nomProfil),
                                nombreDeCartes: app.cartesAPartager.count) { profilOuvert = true }))
@@ -870,11 +875,7 @@ private struct RacineContenu: View {
                                                  categorie: categorie),
                 maintenant: { app.moteur.maintenant() },
                 declarer: { prise in app.declarer(prise) },
-                pecherMaintenant: {
-                    app.courant = nil
-                    app.onglet = .carte
-                    if let spot = app.spotCourant { app.attenteDepart(spot) }
-                },
+                pecherMaintenant: { app.courant = nil; app.onglet = .carte },
                 choisirUnSpot: { app.courant = nil; app.onglet = .carte },
                 passer: { app.courant = nil },
                 rarete: { pechable in
@@ -882,7 +883,8 @@ private struct RacineContenu: View {
                     let niveau = app.core.especes.rarete(espece: pechable.espece, departement: departement).niveau
                     let style = StyleRarete(niveau)
                     return (style.mot, style.couleur)
-                })
+                },
+                voirMonSpot: { app.courant = nil; app.onglet = .carte; app.volDemande = true })
 
         case .consentement:
             FeuilleConsentement(accepter: { app.accorderOuRefuser(true) }, refuser: { app.accorderOuRefuser(false) })
