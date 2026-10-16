@@ -13,16 +13,37 @@ from PIL import Image
 LARGEUR = 320
 ICI = Path(__file__).resolve().parent
 CATALOGUE = ICI / "NagePoissons.xcassets"
+# Dossier du fil Aquarium -> identifiant de l'espèce dans l'app (especes.json).
+ALIAS = {"silure": "silure-glane", "perche": "perche-commune"}
+ESPECES = ICI.parent / "Packages/Core/Sources/Core/Resources/especes.json"
 
 
-def ranger(dossier: Path, slug: str) -> int:
+def identifiant(source: str) -> str:
+    """Le dossier s'appelle comme l'espèce, ou en abrégé (silure pour silure-glane) : on retrouve l'identifiant."""
+    if source in ALIAS:
+        return ALIAS[source]
+    try:
+        ids = {e["id"] for e in json.loads(ESPECES.read_text())}
+    except (OSError, ValueError, KeyError, TypeError):
+        return source
+    if source in ids:
+        return source
+    proches = [i for i in ids if i.startswith(source + "-")]
+    if len(proches) == 1:
+        return proches[0]
+    print(f"attention : {source} n'est pas une espèce de especes.json", file=sys.stderr)
+    return source
+
+
+def ranger(dossier: Path, source: str) -> int:
+    slug = identifiant(source)
     # Les anciens cycles de l'espèce partent (pas ceux d'une espèce dont le nom commence pareil).
     motif = re.compile(rf"^{re.escape(slug)}-(nage|vue-[12]|lacet-m?\d+)-\d+\.imageset$")
     for ancien in CATALOGUE.iterdir():
         if motif.match(ancien.name):
             shutil.rmtree(ancien)
-    fichiers = [png for png in sorted(dossier.glob(f"{slug}-*.png"))
-                if re.match(rf"^{re.escape(slug)}-(nage|lacet-m?\d+)-\d+$", png.stem)]
+    fichiers = [png for png in sorted(dossier.glob(f"{source}-*.png"))
+                if re.match(rf"^{re.escape(source)}-(nage|lacet-m?\d+)-\d+$", png.stem)]
     # Un seul cadre pour toute l'espèce (l'union des contours de tous les angles, 4 px de marge) : le poisson
     # remplit sa largeur comme les autres, et il ne bouge pas d'un angle à l'autre.
     boite = None
@@ -33,7 +54,7 @@ def ranger(dossier: Path, slug: str) -> int:
                                              max(boite[2], b[2]), max(boite[3], b[3]))
     n = 0
     for png in fichiers:
-        nom = png.stem
+        nom = slug + png.stem[len(source):]
         image = Image.open(png).convert("RGBA")
         if boite:
             image = image.crop((max(boite[0] - 4, 0), max(boite[1] - 4, 0),
@@ -54,4 +75,4 @@ if __name__ == "__main__":
     racine = Path(sys.argv[1])
     slugs = sys.argv[2:] or sorted(p.name for p in racine.iterdir() if p.is_dir())
     for slug in slugs:
-        print(slug, ranger(racine / slug, slug), "images")
+        print(slug, "->", identifiant(slug), ranger(racine / slug, slug), "images")
