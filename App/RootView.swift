@@ -241,7 +241,7 @@ final class ParcoursApp {
             if Task.isCancelled || UserDefaults.standard.bool(forKey: SauvegardeICloud.cleCoupee) { return }
             guard await sauvegarde.etatCompte() == .disponible,
                   let bilan = try? await sauvegarde.synchroniser() else { return }
-            if bilan.rapatriees > 0 { await self?.apresRapatriement() }
+            if bilan.aRelire { await self?.apresRapatriement() }
         }
     }
 

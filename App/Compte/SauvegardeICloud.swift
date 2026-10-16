@@ -14,6 +14,9 @@ nonisolated struct BilanSauvegarde: Sendable, Equatable {
     /// Cartes revenues d'iCloud à cette synchro (nouvel iPhone, ou carte prise sur un autre).
     var rapatriees: Int
     var date: Date
+    /// Vrai si l'iPhone a reçu quelque chose (cartes, sorties, réglages) : Pescedex et sessions doivent se relire,
+    /// sinon `SuiviSession` réécrirait son ancien fichier par-dessus.
+    var aRelire: Bool = false
 }
 
 nonisolated protocol ServiceSauvegarde: Sendable {
@@ -30,12 +33,14 @@ actor SauvegardeICloud: ServiceSauvegarde {
     /// Vrai après « Effacer ma sauvegarde iCloud » : plus de sauvegarde automatique tant que le pêcheur ne touche pas
     /// « Sauvegarder maintenant ».
     nonisolated static let cleCoupee = "compte.sauvegardeCoupee"
-    private static let zone = CKRecordZone.ID(zoneName: "Sauvegarde", ownerName: CKCurrentUserDefaultName)
-    private static let lot = 100
+    nonisolated private static let zone = CKRecordZone.ID(zoneName: "Sauvegarde", ownerName: CKCurrentUserDefaultName)
+    nonisolated private static let lot = 100
 
     private let depot: DepotCartes
     private var conteneur: CKContainer?
     private var zonePrete = false
+    /// La synchro en cours : un second appel l'attend au lieu d'en lancer une autre en parallèle.
+    private var enCours: Task<BilanSauvegarde, Error>?
 
     init(depot: DepotCartes) {
         self.depot = depot
@@ -63,6 +68,14 @@ actor SauvegardeICloud: ServiceSauvegarde {
     // MARK: Synchro
 
     func synchroniser() async throws -> BilanSauvegarde {
+        if let enCours { return try await enCours.value }
+        let tache = Task { try await self.faireSynchro() }
+        enCours = tache
+        defer { enCours = nil }
+        return try await tache.value
+    }
+
+    private func faireSynchro() async throws -> BilanSauvegarde {
         UserDefaults.standard.set(false, forKey: Self.cleCoupee)
         let db = base
         try await preparerZone(db)
@@ -80,12 +93,19 @@ actor SauvegardeICloud: ServiceSauvegarde {
         let local = await MainActor.run { ProfilLocal().lire() }
         let fusion = FusionSauvegarde.fusionner(local: local, distant: distant.profil ?? ProfilSauvegarde())
         await MainActor.run { ProfilLocal().ecrire(fusion) }
-        let enregistrement = distant.enregistrementProfil ?? CKRecord(recordType: Type.profil, recordID: Self.idProfil)
-        enregistrement["json"] = try JSONEncoder().encode(fusion) as NSData
-        _ = try await db.modifyRecords(saving: [enregistrement], deleting: [], savePolicy: .changedKeys, atomically: false)
+        // Le profil (toutes les sorties) peut dépasser la limite d'un enregistrement (1 Mo) : il part en fichier joint.
+        let fichier = FileManager.default.temporaryDirectory.appendingPathComponent("profil-\(UUID().uuidString).json")
+        try JSONEncoder().encode(fusion).write(to: fichier)
+        defer { try? FileManager.default.removeItem(at: fichier) }
+        let enregistrement = distant.enregistrementProfil ?? CKRecord(recordType: Genre.profil, recordID: Self.idProfil)
+        enregistrement["fichier"] = CKAsset(fileURL: fichier)
+        try await sauver([enregistrement], db)
 
+        var avant = local, apres = fusion
+        avant.modifie = .distantPast
+        apres.modifie = .distantPast
         return BilanSauvegarde(cartes: Set(locaux.cartes).union(distant.cartes).count, sorties: fusion.sorties.count,
-                               rapatriees: rapatriees, date: Date())
+                               rapatriees: rapatriees, date: Date(), aRelire: rapatriees > 0 || avant != apres)
     }
 
     /// Suppression du compte (App Store 5.1.1(v)) : efface la sauvegarde et la zone « Pescedex » partagée aux amis (L8),
@@ -101,13 +121,13 @@ actor SauvegardeICloud: ServiceSauvegarde {
 
     // MARK: Pièces
 
-    private enum Type {
+    private enum Genre {
         static let carte = "Carte"
         static let bredouille = "Bredouille"
         static let profil = "Profil"
     }
 
-    private static let idProfil = CKRecord.ID(recordName: "profil", zoneID: zone)
+    nonisolated private static let idProfil = CKRecord.ID(recordName: "profil", zoneID: zone)
 
     private static func id(_ uuid: UUID) -> CKRecord.ID { CKRecord.ID(recordName: uuid.uuidString, zoneID: zone) }
 
@@ -131,17 +151,17 @@ actor SauvegardeICloud: ServiceSauvegarde {
         var encore = true
         while encore {
             let page = try await db.recordZoneChanges(inZoneWith: Self.zone, since: jeton,
-                                                      desiredKeys: ["origine", "json"], resultsLimit: nil)
+                                                      desiredKeys: ["origine", "fichier"], resultsLimit: nil)
             for (_, essai) in page.modificationResultsByID {
                 guard let enregistrement = try? essai.get().record else { continue }
                 switch enregistrement.recordType {
-                case Type.carte:
+                case Genre.carte:
                     if let uuid = UUID(uuidString: enregistrement.recordID.recordName) { resultat.cartes.append(uuid) }
-                case Type.bredouille:
+                case Genre.bredouille:
                     if let uuid = UUID(uuidString: enregistrement.recordID.recordName) { resultat.bredouilles.append(uuid) }
-                case Type.profil:
+                case Genre.profil:
                     resultat.enregistrementProfil = enregistrement
-                    if let json = enregistrement["json"] as? Data {
+                    if let url = (enregistrement["fichier"] as? CKAsset)?.fileURL, let json = try? Data(contentsOf: url) {
                         resultat.profil = try? JSONDecoder().decode(ProfilSauvegarde.self, from: json)
                     }
                 default: break
@@ -160,7 +180,7 @@ actor SauvegardeICloud: ServiceSauvegarde {
             aSauver.append(await enregistrement(de: carte))
         }
         for b in await depot.bredouilles() where bredouilles.contains(b.id) {
-            let r = CKRecord(recordType: Type.bredouille, recordID: Self.id(b.id))
+            let r = CKRecord(recordType: Genre.bredouille, recordID: Self.id(b.id))
             r["debut"] = b.debut as NSDate
             r["fin"] = b.fin.map { $0 as NSDate }
             r["lieuFlou"] = b.lieuFlou as NSString?
@@ -168,17 +188,23 @@ actor SauvegardeICloud: ServiceSauvegarde {
             aSauver.append(r)
         }
         for debut in stride(from: 0, to: aSauver.count, by: Self.lot) {
-            let tranche = Array(aSauver[debut..<min(debut + Self.lot, aSauver.count)])
-            let reponse = try await db.modifyRecords(saving: tranche, deleting: [], savePolicy: .changedKeys, atomically: false)
-            // Une carte refusée (réseau coupé au milieu) repartira à la prochaine synchro : on ne bloque pas les autres.
-            _ = reponse
+            try await sauver(Array(aSauver[debut..<min(debut + Self.lot, aSauver.count)]), db)
+        }
+    }
+
+    /// Envoie des enregistrements et lève la première erreur : jamais « Sauvegardé » à l'écran si un envoi a échoué.
+    /// Ce qui est passé reste passé ; le reste repart à la prochaine synchro.
+    private func sauver(_ enregistrements: [CKRecord], _ db: CKDatabase) async throws {
+        let reponse = try await db.modifyRecords(saving: enregistrements, deleting: [], savePolicy: .changedKeys, atomically: false)
+        for (_, resultat) in reponse.saveResults {
+            if case .failure(let erreur) = resultat { throw erreur }
         }
     }
 
     /// Champs d'une carte : jamais de coordonnée, seulement le lieu flou (cours d'eau et département) déjà gardé sur l'iPhone.
     private func enregistrement(de carte: CarteDetaillee) async -> CKRecord {
         let p = carte.prise
-        let r = CKRecord(recordType: Type.carte, recordID: Self.id(p.id))
+        let r = CKRecord(recordType: Genre.carte, recordID: Self.id(p.id))
         r["especeId"] = p.espece.id as NSString
         r["codeSandre"] = p.espece.codeSandre as NSString?
         r["origine"] = p.origine.rawValue as NSString
@@ -203,11 +229,11 @@ actor SauvegardeICloud: ServiceSauvegarde {
             let lus = try await db.records(for: tranche)
             for (_, essai) in lus {
                 guard let r = try? essai.get() else { continue }
-                if r.recordType == Type.carte, let carte = Self.carte(depuis: r) {
+                if r.recordType == Genre.carte, let carte = Self.carte(depuis: r) {
                     let photo = (r["photo"] as? CKAsset)?.fileURL.flatMap { try? Data(contentsOf: $0) }
                     try await depot.importer(carte, photo: photo)
                     revenues += 1
-                } else if r.recordType == Type.bredouille, let uuid = UUID(uuidString: r.recordID.recordName),
+                } else if r.recordType == Genre.bredouille, let uuid = UUID(uuidString: r.recordID.recordName),
                           let debut = r["debut"] as? Date {
                     let conditions = (r["conditions"] as? Data).flatMap { try? JSONDecoder().decode(Conditions.self, from: $0) }
                     try await depot.importer(bredouille: CarteBredouille(id: uuid, debut: debut, fin: r["fin"] as? Date,

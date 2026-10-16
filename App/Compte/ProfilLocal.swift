@@ -20,10 +20,11 @@ struct ProfilLocal {
             sorties: fichier.terminees,
             sessionsTerminees: fichier.sessionsTerminees)
         // Date de modification : celle de la dernière synchro si rien n'a bougé depuis, sinon maintenant.
-        if let dernier = Self.dernier(), Self.memeContenu(dernier, profil) {
-            profil.modifie = dernier.modifie
-        } else if !profil.estVide {
-            profil.modifie = Date()
+        // Jamais synchronisé (iPhone neuf) : date la plus ancienne, pour que le niveau et les clubs d'iCloud gagnent.
+        if let dernier = Self.dernier() {
+            profil.modifie = Self.memeContenu(dernier, profil) ? dernier.modifie : Date()
+        } else {
+            profil.modifie = .distantPast
         }
         return profil
     }

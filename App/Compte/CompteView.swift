@@ -42,7 +42,7 @@ final class CompteModele {
         do {
             let resultat = try await service.synchroniser()
             bilan = resultat
-            if resultat.rapatriees > 0 { await surRapatriement() }
+            if resultat.aRelire { await surRapatriement() }
         } catch {
             message = "La sauvegarde n'a pas pu se faire. Réessaie avec du réseau."
         }

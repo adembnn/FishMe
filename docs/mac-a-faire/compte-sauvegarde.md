@@ -26,3 +26,8 @@ règle « aucun coin exact ne quitte l'iPhone ») et l'accord de mesure d'audien
 5. Avant TestFlight : console CloudKit, déployer le schéma (types Carte, Bredouille, Profil) de Development vers Production.
 6. Partager FishMe : ajouter la clé Info `FishMeLienAppStore` = `https://apps.apple.com/app/id<numéro>` quand App Store Connect donne
    le numéro. Sans la clé, le bouton reste caché.
+
+## Limites connues
+- Synchro en ajout seul : une carte corrigée après coup n'est pas renvoyée, et une future suppression de carte devra laisser
+  une marque de suppression dans iCloud, sinon la carte reviendra.
+- Le profil (sorties) part en fichier joint `fichier` du type Profil, pas en champ : pas de limite de 1 Mo.
