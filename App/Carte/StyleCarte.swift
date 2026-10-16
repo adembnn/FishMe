@@ -74,7 +74,7 @@ extension OuvertureDuJour {
         }
     }
 
-    var estOuverte: Bool {
+    nonisolated var estOuverte: Bool {
         if case .ouverte = self { return true }
         return false
     }

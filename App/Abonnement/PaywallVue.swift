@@ -192,13 +192,15 @@ struct PaywallVue: View {
             // P34 A : un seul bouton principal (celui de la boutique) ; la croix en haut ferme la feuille.
             // Liens légaux toujours visibles, même si ce pied recouvre ceux de la boutique.
             // Une seule ligne (ou deux si le texte est agrandi) : le pied reste bas sur iPhone SE et 13 mini.
-            if tailleTexte >= .accessibility1 {
-                Menu("Plus") { piedLiens }
-                    .frame(minHeight: Gabarit.zoneTactile)
-            } else {
-                ViewThatFits(in: .horizontal) {
-                    HStack(spacing: Espace.l) { piedLiens }
-                    VStack(spacing: 0) { piedLiens }
+            Group {
+                if tailleTexte >= .accessibility1 {
+                    Menu("Plus") { piedLiens }
+                        .frame(minHeight: Gabarit.zoneTactile)
+                } else {
+                    ViewThatFits(in: .horizontal) {
+                        HStack(spacing: Espace.l) { piedLiens }
+                        VStack(spacing: 0) { piedLiens }
+                    }
                 }
             }
             .font(Police.legende)
