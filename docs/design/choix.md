@@ -12,3 +12,4 @@ Direction retenue pour chaque page de la toile (A · Plans, B · Réglages, C ·
 | P05 Mesure d'audience (accord SDK MWM) | B · Réglages | 16 oct. 2h36 |
 | P08 Règle d'une espèce | B · Réglages | 16 oct. 2h37 |
 | P09 Quel poisson cherches-tu | B · Réglages | 16 oct. 2h37 |
+| P10 Choisir un autre spot | C · Sujet (textes à revoir façon MWM, « Pro = spots illimités ») | 16 oct. 2h38 |
