@@ -104,6 +104,20 @@ final class ParcoursApp {
     let moteur: SuiviSession
     let suivi: SuiviAbonnement
 
+    /// Compte : la sauvegarde iCloud des cartes, des photos et du profil (App/Compte). `nil` sans dépôt.
+    @ObservationIgnored private(set) lazy var sauvegarde: SauvegardeICloud? = depot.map { SauvegardeICloud(depot: $0) }
+    @ObservationIgnored private(set) lazy var compte: CompteModele? = sauvegarde.map { service in
+        CompteModele(service: service,
+                     restaurerAchats: { [weak self] in
+                         guard let self else { return false }
+                         let etat = await self.achats.restaurer()
+                         self.etatAchatsLu(etat)
+                         return etat.donneAcces
+                     },
+                     surRapatriement: { [weak self] in await self?.apresRapatriement() })
+    }
+    @ObservationIgnored private var sauvegardePrevue: Task<Void, Never>?
+
     // État de navigation
     var onglet: Onglet = .carte
     var courant: Modal?
@@ -212,6 +226,31 @@ final class ParcoursApp {
         await pescedex?.charger()
         publierAquarium()
         rendrePartagesEnFond(depot: depot)
+        prevoirSauvegarde()
+    }
+
+    // MARK: Compte (sauvegarde iCloud)
+
+    /// Sauvegarde en fond quelques secondes après une écriture (et au lancement) ; un nouvel appel repousse la précédente.
+    /// Sans iCloud, rien ne part et rien ne bloque : l'app marche pareil, hors ligne et sans compte.
+    private func prevoirSauvegarde() {
+        guard let sauvegarde else { return }
+        sauvegardePrevue?.cancel()
+        sauvegardePrevue = Task(priority: .utility) { [weak self] in
+            try? await Task.sleep(for: .seconds(5))
+            if Task.isCancelled || UserDefaults.standard.bool(forKey: SauvegardeICloud.cleCoupee) { return }
+            guard await sauvegarde.etatCompte() == .disponible,
+                  let bilan = try? await sauvegarde.synchroniser() else { return }
+            if bilan.aRelire { await self?.apresRapatriement() }
+        }
+    }
+
+    /// Des cartes ou un profil sont revenus d'iCloud (nouvel iPhone) : Pescedex, aquarium et sorties se relisent.
+    func apresRapatriement() async {
+        await pescedex?.charger()
+        publierAquarium()
+        if let depot { rendrePartagesEnFond(depot: depot) }
+        moteur.reprendre()
     }
 
     /// Rend les PNG du partage (L9) en fond, une carte à la fois, quelques secondes après l'affichage :
@@ -538,6 +577,8 @@ private nonisolated struct ConseilsVides: ServiceConseils {
 struct RootView: View {
     /// `nil` le temps que le moteur se charge en fond : l'écran marine s'affiche alors tout de suite.
     @State private var app: ParcoursApp?
+    /// Vrai tant que l'ouverture animée couvre l'écran (une fois par lancement).
+    @State private var ouvertureAffichee = true
     private let configurerMesure: @MainActor @Sendable () -> Void
 
     /// `configurerMesure` : la seule fermeture qui appelle `Spark.configure` (dans `BuildChallengeApp.swift`), jamais avant l'accord.
@@ -550,15 +591,21 @@ struct RootView: View {
             if let app {
                 RacineContenu(app: app)
             } else {
-                // Même marine que l'écran de lancement, un indicateur discret : rien de blanc pendant le chargement.
-                ZStack {
-                    Color(red: 13 / 255, green: 74 / 255, blue: 133 / 255).ignoresSafeArea()
-                    ProgressView().tint(.white)
-                }
+                // Même marine que l'écran de lancement : rien de blanc pendant le chargement.
+                Color(red: 13 / 255, green: 74 / 255, blue: 133 / 255).ignoresSafeArea()
             }
         }
+        // Ouverture « Le bond » (choix d'Adem, 16 oct.) : le logo prend vie pendant le chargement, puis s'ouvre sur l'app.
+        .overlay {
+            if ouvertureAffichee {
+                OuvertureView(pret: app != nil) { ouvertureAffichee = false }
+            }
+        }
+        // DEBUG, avec -FishMeApercuWidget YES : l'animation du widget aquarium par-dessus l'app (vidéo sans écran d'accueil).
+        .apercuWidgetSiDemande()
         .task {
             guard app == nil else { return }
+            Sons.prechauffer()
             let dossierRegles = ReglesAJour.dossierCopies
             let chargement = await Task.detached(priority: .userInitiated) { Chargement.preparer(dossierRegles: dossierRegles) }.value
             let nouvelle = ParcoursApp(chargement: chargement, configurerMesure: configurerMesure)
@@ -985,6 +1032,7 @@ private struct ReglagesEmplacement: View {
     @ObservedObject private var previens: PreviensMoiModele
     @AppStorage(ClesConseils.niveau) private var niveauBrut = NiveauPecheur.parDefaut.rawValue
     @State private var securite = false
+    @State private var compteOuvert = false
     @Environment(\.openURL) private var ouvrir
 
     init(app: ParcoursApp) {
@@ -1004,9 +1052,13 @@ private struct ReglagesEmplacement: View {
                 surEtat: { app.etatAchatsLu($0) },
                 ouvrirSource: { nom in if let url = Self.page(de: nom) { ouvrir(url) } },
                 ouvrirSecurite: { securite = true },
-                ouvrirPaywall: { app.remplacerPar(.paywall(.widget)) })
+                ouvrirPaywall: { app.remplacerPar(.paywall(.widget)) },
+                ouvrirCompte: app.compte == nil ? nil : { compteOuvert = true })
                 .toolbar(.hidden, for: .navigationBar)
                 .navigationDestination(isPresented: $securite) { SecuriteView() }
+                .navigationDestination(isPresented: $compteOuvert) {
+                    if let compte = app.compte { CompteView(modele: compte, abonne: app.suivi.abonne) }
+                }
         }
         .onChange(of: previens.vigilanceActive) {
             Task {

@@ -109,11 +109,23 @@
 			);
 			target = DBE31DCF30753927004DC02F /* BuildChallengeTests */;
 		};
+		FE0C0C0130A00000000000A1 /* Exceptions for "App" folder in "BuildChallenge" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Mouvement/LISEZMOI.md,
+				Prise/photo-exemple-source.md,
+				Style/LISEZMOI.md,
+			);
+			target = DBE31DC230753926004DC02F /* BuildChallenge */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DBE31DC530753926004DC02F /* BuildChallenge */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FE0C0C0130A00000000000A1 /* Exceptions for "App" folder in "BuildChallenge" target */,
+			);
 			path = App;
 			sourceTree = "<group>";
 		};
