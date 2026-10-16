@@ -4,7 +4,7 @@ Adem (16 oct. 08h53) : « pour les animations 3D de l'aquarium et widgets, n'hé
 Ce document suffit seul : tout ce qu'il faut est dans ce dépôt, branche `lot/aquarium`.
 
 ## À refaire (16 oct. 09h50 UTC)
-Un deuxième œil apparaît sur le haut de la tête (relecture du dos) : tanche, chevesne, rotengle, brème, ablette, barbeau, gardon, perche, sandre, truite-fario. Correction : `PART_DOS=0.1` dans la commande (déjà mis ci-dessous). Avant de relancer une espèce, regarder `docs/coordination` et le fil Synchro pour savoir qui la refait.
+Un deuxième œil apparaît sur le haut de la tête (relecture du dos) : tanche, chevesne, rotengle, brème, ablette, barbeau, gardon, perche, sandre, truite-fario. Correction : `PART_DOS=0.1` dans la commande (déjà mis ci-dessous). Qui refait quoi : le cloud refait gardon, perche, sandre, truite-fario (et fait le carassin) ; le fil de renfort refait tanche, chevesne, rotengle ; un autre fil cloud refait brème, ablette, barbeau. Si Titouan est disponible, il peut reprendre parmi ses 6 celles qui n'ont pas encore été repoussées avec la correction (regarder `git log origin/lot/aquarium` : un commit « … PART_DOS=0.1 » ou « deuxième œil » après 09h50 UTC veut dire déjà refaite).
 
 ## Le partage
 - **Titouan** : tanche, chevesne, rotengle, breme-commune, ablette, barbeau, carassin.
