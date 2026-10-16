@@ -75,6 +75,7 @@ struct AmisView: View {
                     .frame(width: JetonAmis.zoneTactile, height: JetonAmis.zoneTactile)
             }
             .accessibilityLabel("Actualiser")
+            CroixFermerAmis()
         }
     }
 

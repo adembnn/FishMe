@@ -173,5 +173,6 @@ struct CarteAmiDetail: View {
         .padding(20)
         .presentationDetents([.large])
         .background(JetonAmis.fondPage.ignoresSafeArea())
+        .overlay(alignment: .topTrailing) { CroixFermerAmis().padding(8) }
     }
 }
