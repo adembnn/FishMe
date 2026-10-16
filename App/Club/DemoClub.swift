@@ -12,10 +12,10 @@ enum DemoClub {
   private static let idEssec = UUID(uuidString: "D0D0D0D0-0000-4000-8000-000000000002")!
   private static let idVal = UUID(uuidString: "D0D0D0D0-0000-4000-8000-000000000001")!
 
-  /// Les 2 clubs de la démo : « Les pêcheurs de l'ESSEC » (déjà rejoint, donc choisi à l'ouverture) puis « AAPPMA du Val-de-Marne ».
+  /// Les 2 clubs de la démo : « Les pêcheurs de l'ESSEC » (déjà rejoint, donc choisi à l'ouverture) puis « Les Carnassiers du 94 ».
   static let clubs: [ClubLocal] = [
     ClubLocal(id: idEssec, nom: "Les pêcheurs de l'ESSEC", poissonId: "sandre"),
-    ClubLocal(id: idVal, nom: "AAPPMA du Val-de-Marne", poissonId: "brochet"),
+    ClubLocal(id: idVal, nom: "Les Carnassiers du 94", poissonId: "brochet"),
   ]
 
   static func estDemo(_ club: ClubLocal?) -> Bool {

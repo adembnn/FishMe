@@ -17,7 +17,7 @@ struct BredouilleView: View {
 }
 
 /// Une carte « Eau calme » ouverte en plein écran : on la retourne au toucher ou au glissement, comme `CartePleinEcranView`.
-/// Au verso, la météo du départ (bloc L12 s'il est branché) et la marque Apple Weather passent sous la carte.
+/// Au verso, la météo du départ (bloc L12 s'il est branché) (avec la marque Apple Weather) passe sous la carte.
 struct BredouillePleinEcranView: View {
     let carte: CarteBredouille
     let services: ServicesCollection
@@ -63,10 +63,10 @@ struct BredouillePleinEcranView: View {
 
     @ViewBuilder
     private var pied: some View {
-        if !montreLeRecto, let c = carte.conditions {
+        // Le bloc météo branché (L12) porte déjà la marque Apple Weather ; sans lui, aucune donnée météo n'est montrée.
+        if !montreLeRecto, let c = carte.conditions, let slot = emplacements.meteoDuDos {
             VStack(spacing: Espace.xs) {
-                if let slot = emplacements.meteoDuDos { slot(c) } else { BlocMeteoSimple(conditions: c) }
-                MarqueAppleWeather()
+                slot(c)
             }
             .foregroundStyle(Palette.encre)
             .padding(.horizontal, Espace.bord)
@@ -146,7 +146,7 @@ private struct RondRetourner: View {
     var body: some View {
         Button(action: action) {
             Image(systemName: icone)
-                .font(.system(size: 18, weight: .bold, design: .rounded))
+                .font(Police.taille(18))
                 .foregroundStyle(Palette.encre)
                 .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
                 .background {

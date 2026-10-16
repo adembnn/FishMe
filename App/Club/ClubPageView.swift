@@ -324,7 +324,7 @@ struct ClubPageView: View {
           } label: {
             VStack(spacing: 2) {
               Image(systemName: "plus")
-                .font(.system(size: 22, weight: .bold, design: .rounded))
+                .font(Police.taille(22))
                 .frame(width: 36, height: 36)
               Text("Inviter").font(Police.detail)
               Text(" ").font(Police.legende)

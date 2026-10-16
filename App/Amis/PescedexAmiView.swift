@@ -194,7 +194,7 @@ struct PescedexAmiView: View {
             Palette.marine
             if let espece {
                 Image(espece.image).resizable().renderingMode(.template).scaledToFit()
-                    .foregroundStyle(Color.white.opacity(0.4))
+                    .foregroundStyle(Palette.surMarine.opacity(0.4))
                     .frame(width: largeur * 0.68)
                     .padding(.top, hauteur * 0.36)
             }
@@ -202,7 +202,7 @@ struct PescedexAmiView: View {
                 Spacer()
                 Text(espece?.nom ?? "")
                     .font(Police.taille(9 * u, .heavy))
-                    .foregroundStyle(Color.white.opacity(0.85))
+                    .foregroundStyle(Palette.surMarine.opacity(0.85))
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
                     .padding(.horizontal, 4)
@@ -210,7 +210,7 @@ struct PescedexAmiView: View {
             }
             RoundedRectangle(cornerRadius: 4.4 * u, style: .continuous)
                 .inset(by: 2.4 * u)
-                .strokeBorder(Color.white.opacity(0.28), lineWidth: 1)
+                .strokeBorder(Palette.surMarine.opacity(0.28), lineWidth: 1)
         }
         .frame(width: largeur, height: hauteur)
         .clipShape(RoundedRectangle(cornerRadius: largeur * Gabarit.coinCarte, style: .continuous))
@@ -218,80 +218,43 @@ struct PescedexAmiView: View {
         .accessibilityLabel("\(espece?.nom ?? "Espèce") pas encore pêchée")
     }
 
-    /// Une carte de l'ami en petit (maquette « mini ») : fond de sa rareté, poisson, nom et forme de rareté.
+    /// Une carte de l'ami en petit : le cadre `CarteCadre` d'Adem, le fond de sa rareté, le poisson, le nom et le badge `BadgeRarete`.
     /// Le centile de taille n'est pas dans ce que l'ami partage : il n'est pas affiché.
     // À brancher : le centile (« 52e ») quand `CartePartagee` le portera.
     private func tuile(_ carte: CartePartagee, largeur: CGFloat = 76) -> some View {
-        let style = RareteAmi(carte.rarete)
+        let style = StyleRarete(carte.rarete)
         let espece = gestion.espece(carte.espece)
         let hauteur = largeur / Gabarit.rapportCarte
         let u = largeur / 100
-        return ZStack(alignment: .top) {
-            fondCarte(style)
-            if let espece {
-                Image(espece.image).resizable().scaledToFit()
-                    .frame(width: largeur * 0.92)
-                    .rotationEffect(.degrees(-12))
-                    .shadow(color: Color.black.opacity(0.35), radius: 2 * u, x: -1.5 * u, y: 2.5 * u)
-                    .padding(.top, hauteur * 0.20)
-            }
+        return CarteCadre(style: style, declaree: false) {
             VStack(spacing: 0) {
-                Spacer(minLength: 0)
-                HStack(alignment: .top, spacing: 0) {
-                    Text(espece?.nom ?? "")
-                        .font(Police.taille(12.5 * u, .heavy))
-                        .foregroundStyle(Color(red: 15 / 255, green: 26 / 255, blue: 28 / 255))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.6)
-                    Spacer(minLength: 2)
-                    if let forme = symboleRarete(style) {
-                        Image(systemName: forme)
-                            .font(Police.taille(11 * u))
-                            .foregroundStyle(style.couleur)
+                ZStack {
+                    LinearGradient(colors: style.fond, startPoint: .top, endPoint: .bottom)
+                    if let espece {
+                        Image(espece.image).resizable().scaledToFit()
+                            .padding(4 * u)
                     }
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .clipped()
+                HStack(spacing: 2 * u) {
+                    Text(espece?.nom ?? "")
+                        .font(Police.taille(11 * u, .heavy))
+                        .foregroundStyle(Palette.encre)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.6)
+                    Spacer(minLength: 0)
+                    BadgeRarete(style: style, taille: 14 * u)
+                }
                 .padding(.horizontal, 7 * u)
-                .padding(.top, 9 * u)
-                .frame(maxWidth: .infinity, minHeight: hauteur * 0.28, maxHeight: hauteur * 0.28, alignment: .topLeading)
-                .background(style == .legendaire
-                            ? Color(red: 0xF4 / 255, green: 0xE6 / 255, blue: 0xBF / 255)
-                            : Color(red: 0xE9 / 255, green: 0xED / 255, blue: 0xEB / 255))
+                .frame(maxWidth: .infinity)
+                .frame(height: hauteur * 0.22)
+                .background(Palette.surface)
             }
-            RoundedRectangle(cornerRadius: 4.4 * u, style: .continuous)
-                .inset(by: 2.4 * u)
-                .strokeBorder(Color.white.opacity(0.28), lineWidth: 1)
         }
         .frame(width: largeur, height: hauteur)
-        .clipShape(RoundedRectangle(cornerRadius: largeur * Gabarit.coinCarte, style: .continuous))
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("\(espece?.nom ?? "Espèce"), \(style.mot)")
-    }
-
-    /// Le fond de la carte, par rareté : ardoise verte, vert sombre, argent, or.
-    @ViewBuilder
-    private func fondCarte(_ style: RareteAmi) -> some View {
-        switch style {
-        case .commun, .nonMesuree: Color(red: 0x5F / 255, green: 0x77 / 255, blue: 0x75 / 255)
-        case .peuCommun: Color(red: 0x17 / 255, green: 0x40 / 255, blue: 0x3F / 255)
-        case .rare:
-            LinearGradient(colors: [Color(red: 0xDC / 255, green: 0xE3 / 255, blue: 0xE8 / 255),
-                                    Color(red: 0xAF / 255, green: 0xBC / 255, blue: 0xC6 / 255),
-                                    Color(red: 0xC9 / 255, green: 0xD2 / 255, blue: 0xD8 / 255),
-                                    Color(red: 0x84 / 255, green: 0x97 / 255, blue: 0xA3 / 255)],
-                           startPoint: .topLeading, endPoint: .bottomTrailing)
-        case .legendaire: Color(red: 0xC8 / 255, green: 0x96 / 255, blue: 0x2F / 255)
-        }
-    }
-
-    /// Rond, hexagone, losange, étoile : le niveau se lit sans la couleur.
-    private func symboleRarete(_ style: RareteAmi) -> String? {
-        switch style {
-        case .commun: return "circle.fill"
-        case .peuCommun: return "hexagon.fill"
-        case .rare: return "diamond.fill"
-        case .legendaire: return "star.fill"
-        case .nonMesuree: return nil
-        }
     }
 }
 

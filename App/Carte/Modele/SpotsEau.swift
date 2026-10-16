@@ -100,7 +100,7 @@ nonisolated final class SpotsEauReels: FournisseurSpotsEau, Sendable {
   static let etendueMaximaleLieux = 2.5
   static let maximumParVue = 60
   static let requetes = [
-    "étang", "lac", "plan d'eau", "rivière", "canal", "base de loisirs", "pêche",
+    "étang", "lac", "plan d'eau",
   ]
 
   private let lecture = LectureCoursDEau()
@@ -147,6 +147,8 @@ nonisolated final class SpotsEauReels: FournisseurSpotsEau, Sendable {
     else { return [] }
     let cle = Self.cleDeZone(zone)
     if let deja = await cache.lire(cle) { return deja }
+    // Zone déjà cherchée sans rien trouver depuis moins de 2 minutes : MapKit limite les requêtes, on ne retente pas.
+    if await cache.videRecent(cle) { return [] }
 
     // Les requêtes partent ensemble ; l'annulation de la tâche annule chaque recherche MapKit en cours.
     var tous: [SpotEau] = []
@@ -159,8 +161,12 @@ nonisolated final class SpotsEauReels: FournisseurSpotsEau, Sendable {
     if Task.isCancelled { return [] }
 
     let resultat = Self.dedupliquer(tous, centre: zone.centre, maximum: Self.maximumParVue)
-    // Un résultat vide peut venir d'un échec réseau ou d'un quota : on ne le garde pas.
-    if !resultat.isEmpty { await cache.ecrire(resultat, pour: cle) }
+    // Un résultat vide peut venir d'un échec réseau ou d'un quota : on ne le retient que 2 minutes.
+    if resultat.isEmpty {
+      await cache.noterVide(cle)
+    } else {
+      await cache.ecrire(resultat, pour: cle)
+    }
     return resultat
   }
 
@@ -211,10 +217,14 @@ nonisolated final class SpotsEauReels: FournisseurSpotsEau, Sendable {
   private static func chercher(_ requete: String, dans zone: ZoneCarte) async -> [SpotEau] {
     let demande = MKLocalSearch.Request()
     demande.naturalLanguageQuery = requete
+    // Aucun coin précis ne quitte l'iPhone : centre arrondi à 0,05° (environ 5 km), étendue d'au moins 0,1°.
+    let pas = 0.05
     demande.region = MKCoordinateRegion(
       center: CLLocationCoordinate2D(
-        latitude: zone.centre.latitude, longitude: zone.centre.longitude),
-      span: MKCoordinateSpan(latitudeDelta: zone.spanLatitude, longitudeDelta: zone.spanLongitude))
+        latitude: (zone.centre.latitude / pas).rounded() * pas,
+        longitude: (zone.centre.longitude / pas).rounded() * pas),
+      span: MKCoordinateSpan(
+        latitudeDelta: max(0.1, zone.spanLatitude), longitudeDelta: max(0.1, zone.spanLongitude)))
     let porte = PorteAnnulation()
     return await withTaskCancellationHandler {
       let recherche = MKLocalSearch(request: demande)
@@ -264,11 +274,26 @@ nonisolated final class PorteAnnulation: @unchecked Sendable {
   }
 }
 
-/// Les résultats des dernières zones, pour ne pas relancer sept recherches quand le pêcheur revient quelque part.
+/// Les résultats des dernières zones, pour ne pas relancer trois recherches quand le pêcheur revient quelque part.
 actor CacheZonesEau {
   private var valeurs: [String: [SpotEau]] = [:]
   private var ordre: [String] = []
   private let capacite = 40
+  private var vides: [String: Date] = [:]
+  private let dureeVide: TimeInterval = 120
+
+  /// Vrai si cette zone a rendu un résultat vide il y a moins de 2 minutes.
+  func videRecent(_ cle: String) -> Bool {
+    guard let date = vides[cle] else { return false }
+    if Date().timeIntervalSince(date) < dureeVide { return true }
+    vides[cle] = nil
+    return false
+  }
+
+  func noterVide(_ cle: String) {
+    if vides.count > capacite { vides = vides.filter { Date().timeIntervalSince($0.value) < dureeVide } }
+    vides[cle] = Date()
+  }
 
   func lire(_ cle: String) -> [SpotEau]? { valeurs[cle] }
 

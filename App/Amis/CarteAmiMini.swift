@@ -13,7 +13,7 @@ struct CarteAmiMini: View {
     /// PNG de la carte envoyé par l'ami (sans GPS). S'il existe, il est montré tel quel, comme la vraie carte.
     var imageCarte: Data? = nil
     /// Vraie photo de la prise (démo). Si elle manque, la fenêtre montre l'image d'espèce.
-    var photo: Data? = nil
+    var photo: UIImage? = nil
     var tailleCm: Double? = nil
 
     /// Hauteur fixe de la zone de texte, sous l'image : le texte ne passe jamais sur le dessin.
@@ -50,7 +50,7 @@ struct CarteAmiMini: View {
     private var fenetre: some View {
         ZStack {
             LinearGradient(colors: style.fond, startPoint: .top, endPoint: .bottom)
-            if let donnees = photo, let image = UIImage(data: donnees) {
+            if let image = photo {
                 Color.clear.overlay {
                     Image(uiImage: image)
                         .resizable()
@@ -111,7 +111,7 @@ struct CarteAmiGrille: Identifiable {
     let imageEspece: String?
     var imageCarte: Data? = nil
     var tailleCm: Double? = nil
-    var photo: Data? = nil
+    var photo: UIImage? = nil
 }
 
 /// Grille de deux colonnes de cartes d'amis, chacune toucable.
