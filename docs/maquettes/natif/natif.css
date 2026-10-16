@@ -1,0 +1,34 @@
+/* Jetons des maquettes « Natif », miroir exact de App/Style/Style.swift (palette Marine). */
+:root{
+  --marine:#0D4A85; --marine-fonce:#0B3D6B; --marine-doux:#DCE8F5; --nuit:#082A4C; --sur-marine:#FFFFFF;
+  --encre:#0E1A26; --encre-douce:#566576; --bouchon:#E8571C; --alerte-doux:#FDE6DA;
+  --fond:#F2F5F9; --surface:#FFFFFF; --tuile:#E7EFF8; --filet:#DCE3EB; --silhouette:#B9C8D8;
+  --eau:#9CC7EA; --eau-claire:#C7DFF3; --ouvert:#13643B; --ouvert-doux:#E1F1E8;
+  --commun:#6B7780; --peu-commun:#23885A; --rare:#5B4FD0; --legendaire:#B07A12;
+  --e-xs:4px; --e-s:8px; --e-m:12px; --e-l:16px; --e-xl:24px; --e-xxl:32px;
+  --r-s:10px; --r-m:16px; --r-l:22px; --toucher:44px; --bouton:54px;
+  /* SF Pro Rounded sur iPhone et Mac ; Nunito (même famille arrondie) seulement pour les captures sous Linux. */
+  --police:ui-rounded,"SF Pro Rounded","Nunito",system-ui,sans-serif;
+}
+@font-face{font-family:"Nunito";font-weight:700;src:url(../niveau-2/fonts/nunito-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Nunito";font-weight:800;src:url(../niveau-2/fonts/nunito-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Nunito";font-weight:900;src:url(../niveau-2/fonts/nunito-latin-900-normal.woff2) format("woff2")}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+*::-webkit-scrollbar{display:none}
+html,body{width:393px;height:852px;overflow:hidden;background:var(--fond);color:var(--encre);font-family:var(--police);font-weight:700}
+button{font:inherit;color:inherit;border:0;background:none}
+/* Barre d'état iOS */
+.statut{position:absolute;left:0;right:0;top:0;height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 32px 0 44px;font:700 17px/1 var(--police);z-index:50}
+.ilot{position:absolute;left:50%;top:11px;width:126px;height:37px;margin-left:-63px;border-radius:20px;background:#000;z-index:51}
+/* Boutons */
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:var(--bouton);border-radius:999px;font:700 17px/1 var(--police)}
+.btn.principal{background:var(--marine);color:var(--sur-marine)}
+.btn.secondaire{background:var(--surface);color:var(--marine);box-shadow:inset 0 0 0 1px var(--filet)}
+/* Badges de rareté : forme + points + mot (lisibles en noir et blanc) */
+.badge{width:28px;height:28px;display:inline-grid;place-items:center;color:#fff;font:900 13px/1 var(--police)}
+.badge.c{background:var(--commun);border-radius:50%}
+.badge.pc{background:var(--peu-commun);clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%)}
+.badge.r{background:var(--rare);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.badge.l{background:var(--legendaire);clip-path:polygon(50% 0,62% 36%,100% 38%,70% 60%,80% 98%,50% 76%,20% 98%,30% 60%,0 38%,38% 36%)}
+/* Indicateur d'accueil */
+.accueil{position:absolute;left:50%;bottom:8px;width:134px;height:5px;margin-left:-67px;border-radius:3px;background:var(--encre);opacity:.9;z-index:50}
