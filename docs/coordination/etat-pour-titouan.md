@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 14h40 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 15h11 (Paris). **Dernière mise à jour : la boucle de synchro s'arrête ici (heure limite prévue).** Pour la suite, passe par Adem directement.
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 
