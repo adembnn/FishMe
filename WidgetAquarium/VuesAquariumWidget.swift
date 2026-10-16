@@ -28,6 +28,21 @@ private func limite(_ famille: WidgetFamily) -> Int {
     }
 }
 
+/// Largeur d'un poisson, en part de la largeur du widget (avant son échelle).
+private func partPoisson(_ famille: WidgetFamily) -> Double {
+    switch famille {
+    case .systemSmall: 0.44
+    case .systemMedium: 0.25
+    case .systemLarge: 0.30
+    default: 0.24
+    }
+}
+
+/// Les formats larges rangent les poissons sur 2 colonnes (moins de chevauchements).
+private func colonnes(_ famille: WidgetFamily) -> Int {
+    famille == .systemSmall ? 1 : 2
+}
+
 private func halo(_ rarete: Int) -> Color {
     switch rarete {
     case 3: Teintes.legendaire.opacity(0.85)
@@ -98,15 +113,16 @@ private struct CoucheNage: View {
     let entree: EntreeAquarium
     let limite: Int
     @Environment(\.widgetRenderingMode) private var rendu
+    @Environment(\.widgetFamily) private var famille
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
 
     var body: some View {
         let instantane = entree.instantane
         let placements = NageWidget.placements(
-            instantane.poissons, a: entree.date, dernierRepas: instantane.dernierRepas, limite: limite)
+            instantane.poissons, a: entree.date, dernierRepas: instantane.dernierRepas, limite: limite,
+            colonnes: colonnes(famille))
         let parId = Dictionary(instantane.poissons.map { ($0.id, $0) }, uniquingKeysWith: { premier, _ in premier })
-        // Moins large quand il y a beaucoup de poissons.
-        let part = max(0.17, 0.30 - 0.015 * Double(max(placements.count - 3, 0)))
+        let part = partPoisson(famille)
         let colore = rendu != .accented
 
         GeometryReader { geo in

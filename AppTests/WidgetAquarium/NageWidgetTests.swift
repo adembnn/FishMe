@@ -164,4 +164,20 @@ struct NageWidgetTests {
         try DepotAquariumWidget.ecrire(s, vers: url)
         #expect(DepotAquariumWidget.lire(depuis: url) == s)
     }
+
+    @Test func deuxColonnes() {
+        // Formats larges : deux voisins de rangée sont de part et d'autre du milieu, et changent de côté au créneau suivant.
+        for k in 0..<6 {
+            let instant = t0.addingTimeInterval(Double(k) * NageWidget.pas)
+            let p = NageWidget.placements(poissons(5), a: instant, dernierRepas: nil, limite: 5, colonnes: 2)
+            #expect(p.count == 5)
+            #expect((p[0].x < 0.5) != (p[1].x < 0.5))
+            #expect(abs(p[0].y - p[1].y) < 0.25)
+            for q in p { #expect(q.x >= 0.18 && q.x <= 0.82) }
+        }
+        let a = NageWidget.placements(poissons(2), a: t0, dernierRepas: nil, limite: 2, colonnes: 2)
+        let b = NageWidget.placements(poissons(2), a: t0.addingTimeInterval(NageWidget.pas), dernierRepas: nil, limite: 2, colonnes: 2)
+        #expect((a[0].x < 0.5) != (b[0].x < 0.5))
+        #expect(b[0].versLaDroite == (b[0].x > a[0].x))
+    }
 }

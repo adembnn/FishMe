@@ -39,12 +39,16 @@ nonisolated public enum NageWidget {
     // MARK: - Positions
 
     public static func placements(_ poissons: [InstantaneAquarium.Poisson], a instant: Date,
-                                  dernierRepas: Date?, limite: Int) -> [PlacementPoisson] {
+                                  dernierRepas: Date?, limite: Int, colonnes: Int = 1) -> [PlacementPoisson] {
         let gardes = Array(poissons.prefix(max(limite, 0)))
         let n = gardes.count
         guard n > 0 else { return [] }
         let creneau = creneauDe(instant)
         let repas = repasEnCours(a: instant, dernierRepas: dernierRepas)
+        // Widgets larges : les poissons se partagent 2 colonnes (et changent de côté à chaque créneau),
+        // ce qui double la hauteur de chaque couloir et évite qu'ils se chevauchent.
+        let c = min(max(colonnes, 1), n)
+        let rangees = (n + c - 1) / c
 
         return gardes.enumerated().map { index, poisson in
             let echelle = echelleDe(poisson)
@@ -54,9 +58,9 @@ nonisolated public enum NageWidget {
                 return PlacementPoisson(id: poisson.id, x: x, y: y, versLaDroite: x < 0.5,
                                         echelle: echelle, auRepas: true)
             }
-            let x = xNage(poisson.id, creneau)
-            let avant = xNage(poisson.id, creneau - 1)
-            return PlacementPoisson(id: poisson.id, x: x, y: yNage(poisson.id, creneau, index: index, sur: n),
+            let x = xNage(poisson.id, creneau, colonne: (index + creneau) % c, sur: c)
+            let avant = xNage(poisson.id, creneau - 1, colonne: (index + creneau - 1) % c, sur: c)
+            return PlacementPoisson(id: poisson.id, x: x, y: yNage(poisson.id, creneau, index: index / c, sur: rangees),
                                     versLaDroite: x > avant, echelle: echelle, auRepas: false)
         }
     }
@@ -92,8 +96,11 @@ nonisolated public enum NageWidget {
         return ecart >= 0 && ecart < dureeRepas
     }
 
-    private static func xNage(_ id: String, _ creneau: Int) -> Double {
-        0.18 + 0.64 * hasard(id, creneau, "x")
+    /// Position horizontale entre 0.18 et 0.82, dans la colonne `colonne` parmi `sur`.
+    private static func xNage(_ id: String, _ creneau: Int, colonne: Int, sur c: Int) -> Double {
+        let largeur = 0.64 / Double(c)
+        let marge = c > 1 ? 0.15 : 0
+        return 0.18 + largeur * (Double((colonne % c + c) % c) + marge + (1 - 2 * marge) * hasard(id, creneau, "x"))
     }
 
     /// Couloir vertical de l'index `index` parmi `sur`, réparti entre 0.15 et 0.85, avec un petit décalage dedans.
