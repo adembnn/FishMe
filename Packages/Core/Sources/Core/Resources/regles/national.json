@@ -1,5 +1,5 @@
 {
- "version": "2026-10-15.1",
+ "version": "2026-10-16.1",
  "departement": "national",
  "niveau": "partiel",
  "textes": [
@@ -98,6 +98,78 @@
    "signe_le": null,
    "lu_le": "2026-10-15",
    "version": "lu par recoupement ; texte consolidé non lu"
+  },
+  {
+   "id": "t13",
+   "titre": "Code de l'environnement, R436-62",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195439",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "en vigueur au 16/10/2026 ; texte lu sur la copie francois76/legifrance (août 2024)"
+  },
+  {
+   "id": "t14",
+   "titre": "Code de l'environnement, R436-65-3 et R436-65-5",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195439",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "en vigueur au 16/10/2026 ; texte lu sur la copie francois76/legifrance (août 2024)"
+  },
+  {
+   "id": "t15",
+   "titre": "Code de l'environnement, R436-10",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006838560",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "en vigueur au 16/10/2026 ; texte lu sur la copie francois76/legifrance (août 2024)"
+  },
+  {
+   "id": "t16",
+   "titre": "Code de l'environnement, R436-65",
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006195439",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "en vigueur au 16/10/2026 ; texte lu sur la copie francois76/legifrance (août 2024)"
+  },
+  {
+   "id": "t17",
+   "titre": "Arrêté du 12 juin 2026 relatif à la fermeture anticipée de la pêche de loisir en eau douce de l'anguille d'Europe pour la saison 2025-2026 (art. 1)",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000054245499",
+   "signe_le": "2026-06-12",
+   "lu_le": "2026-10-16",
+   "version": "JORF n°0137 du 13 juin 2026, en vigueur depuis le 14/06/2026"
+  },
+  {
+   "id": "t18",
+   "titre": "Arrêté du 14 mars 2024 relatif aux périodes de pêche de l'anguille européenne en Méditerranée et dans les eaux douces des bassins Rhône-Méditerranée et Corse (pêche de loisir)",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000049343501",
+   "signe_le": "2024-03-14",
+   "lu_le": "2026-10-16",
+   "version": "en vigueur depuis le 31/03/2024"
+  },
+  {
+   "id": "t19",
+   "titre": "Arrêté du 20 décembre 2004 relatif à la protection de l'espèce Acipenser sturio (esturgeon), art. 1 et 3",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000259841",
+   "signe_le": "2004-12-20",
+   "lu_le": "2026-10-16",
+   "version": "en vigueur depuis le 07/01/2005"
+  },
+  {
+   "id": "t20",
+   "titre": "Code de l'environnement, R436-11",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006838561",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "en vigueur au 16/10/2026 ; texte lu sur la copie francois76/legifrance (août 2024)"
+  },
+  {
+   "id": "t21",
+   "titre": "Code de l'environnement, R436-6 I",
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043940083",
+   "signe_le": null,
+   "lu_le": "2026-10-16",
+   "version": "en vigueur depuis le 01/08/2021"
   }
  ],
  "eaux": [],
@@ -384,7 +456,12 @@
    "especes": [
     "2221",
     "2216",
-    "2247"
+    "2247",
+    "omble-de-fontaine",
+    "omble-chevalier",
+    "cristivomer",
+    "huchon",
+    "coregones"
    ],
    "categorie": "toutes",
    "type": "quota_jour",
@@ -1088,19 +1165,2975 @@
    "expire_le": null,
    "statut": "brouillon",
    "verifie_par": null
-  }
- ],
- "a_verifier": [
+  },
   {
+   "id": "nat-huchon-taille",
+   "type": "taille_min",
+   "especes": [
+    "huchon"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 70
+   },
+   "phrase": "Taille minimale du huchon : 70 cm. Plus petit, remets-le à l'eau tout de suite.",
+   "citation": "0,70 mètre pour le huchon",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-cristivomer-taille",
+   "type": "taille_min",
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 35
+   },
+   "phrase": "Taille minimale du cristivomer : 35 cm. Plus petit, remets-le à l'eau tout de suite.",
+   "citation": "0,35 mètre pour le cristivomer",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-coregones-taille",
+   "type": "taille_min",
+   "especes": [
+    "coregones"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Taille minimale du corégone : 30 cm. Plus petit, remets-le à l'eau tout de suite.",
+   "citation": "0,30 mètre pour l'ombre commun et le corégone",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-lamproie-fluviatile-taille",
+   "type": "taille_min",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 20
+   },
+   "phrase": "Taille minimale du lamproie fluviatile : 20 cm. Plus petit, remets-le à l'eau tout de suite.",
+   "citation": "0,20 mètre pour la lamproie fluviatile et 0,40 mètre pour la lamproie marine",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-lamproie-marine-taille",
+   "type": "taille_min",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "Taille minimale du lamproie marine : 40 cm. Plus petit, remets-le à l'eau tout de suite.",
+   "citation": "0,20 mètre pour la lamproie fluviatile et 0,40 mètre pour la lamproie marine",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-omble-de-fontaine-taille",
+   "type": "taille_min",
+   "especes": [
+    "omble-de-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23
+   },
+   "phrase": "Taille minimale du omble (saumon) de fontaine : 23 cm. Plus petit, remets-le à l'eau tout de suite.",
+   "citation": "0,23 mètre pour les truites autres que la truite de mer, l'omble ou saumon de fontaine et l'omble chevalier",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-omble-chevalier-taille",
+   "type": "taille_min",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23
+   },
+   "phrase": "Taille minimale du omble chevalier : 23 cm. Plus petit, remets-le à l'eau tout de suite.",
+   "citation": "0,23 mètre pour les truites autres que la truite de mer, l'omble ou saumon de fontaine et l'omble chevalier",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-mulet-taille",
+   "type": "taille_min",
+   "especes": [
+    "mulet"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 20
+   },
+   "phrase": "Taille minimale du mulet : 20 cm. Plus petit, remets-le à l'eau tout de suite.",
+   "citation": "0,20 mètre pour le mulet",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-rouges-taille",
+   "type": "taille_min",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 9,
+    "texte": "mesurée de la pointe de la tête, pinces et antennes non comprises, au bout de la queue déployée"
+   },
+   "phrase": "Écrevisse pattes rouges : 9 cm au moins, sinon remise à l'eau.",
+   "citation": "0,09 mètre pour les écrevisses appartenant aux espèces mentionnées à l'article R. 436-10",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-rouges-ouv",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "dix jours consécutifs à partir du quatrième samedi de juillet"
+   },
+   "phrase": "Écrevisse pattes rouges : pêche ouverte seulement du 25 juillet au 3 août 2026 (le préfet peut l'interdire).",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-rouges-ferme-2026-avant",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-07-24",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-ecrevisse-pattes-rouges-ouv"
+   },
+   "phrase": "Écrevisse pattes rouges : pêche fermée jusqu'au 24 juillet 2026.",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-rouges-ferme-2026-apres",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-08-04",
+   "au": "2026-12-31",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-ecrevisse-pattes-rouges-ouv"
+   },
+   "phrase": "Écrevisse pattes rouges : pêche fermée à partir du 4 août 2026.",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-des-torrents-taille",
+   "type": "taille_min",
+   "especes": [
+    "ecrevisse-des-torrents"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 9,
+    "texte": "mesurée de la pointe de la tête, pinces et antennes non comprises, au bout de la queue déployée"
+   },
+   "phrase": "Écrevisse des torrents : 9 cm au moins, sinon remise à l'eau.",
+   "citation": "0,09 mètre pour les écrevisses appartenant aux espèces mentionnées à l'article R. 436-10",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-des-torrents-ouv",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-des-torrents"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "dix jours consécutifs à partir du quatrième samedi de juillet"
+   },
+   "phrase": "Écrevisse des torrents : pêche ouverte seulement du 25 juillet au 3 août 2026 (le préfet peut l'interdire).",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-des-torrents-ferme-2026-avant",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-des-torrents"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-07-24",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-ecrevisse-des-torrents-ouv"
+   },
+   "phrase": "Écrevisse des torrents : pêche fermée jusqu'au 24 juillet 2026.",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-des-torrents-ferme-2026-apres",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-des-torrents"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-08-04",
+   "au": "2026-12-31",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-ecrevisse-des-torrents-ouv"
+   },
+   "phrase": "Écrevisse des torrents : pêche fermée à partir du 4 août 2026.",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-blanches-taille",
+   "type": "taille_min",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 9,
+    "texte": "mesurée de la pointe de la tête, pinces et antennes non comprises, au bout de la queue déployée"
+   },
+   "phrase": "Écrevisse à pattes blanches : 9 cm au moins, sinon remise à l'eau.",
+   "citation": "0,09 mètre pour les écrevisses appartenant aux espèces mentionnées à l'article R. 436-10",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-blanches-ouv",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "dix jours consécutifs à partir du quatrième samedi de juillet"
+   },
+   "phrase": "Écrevisse à pattes blanches : pêche ouverte seulement du 25 juillet au 3 août 2026 (le préfet peut l'interdire).",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-blanches-ferme-2026-avant",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-07-24",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-ecrevisse-pattes-blanches-ouv"
+   },
+   "phrase": "Écrevisse à pattes blanches : pêche fermée jusqu'au 24 juillet 2026.",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-blanches-ferme-2026-apres",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-08-04",
+   "au": "2026-12-31",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-ecrevisse-pattes-blanches-ouv"
+   },
+   "phrase": "Écrevisse à pattes blanches : pêche fermée à partir du 4 août 2026.",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-greles-taille",
+   "type": "taille_min",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 9,
+    "texte": "mesurée de la pointe de la tête, pinces et antennes non comprises, au bout de la queue déployée"
+   },
+   "phrase": "Écrevisse à pattes grêles : 9 cm au moins, sinon remise à l'eau.",
+   "citation": "0,09 mètre pour les écrevisses appartenant aux espèces mentionnées à l'article R. 436-10",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-greles-ouv",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "dix jours consécutifs à partir du quatrième samedi de juillet"
+   },
+   "phrase": "Écrevisse à pattes grêles : pêche ouverte seulement du 25 juillet au 3 août 2026 (le préfet peut l'interdire).",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-greles-ferme-2026-avant",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-07-24",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-ecrevisse-pattes-greles-ouv"
+   },
+   "phrase": "Écrevisse à pattes grêles : pêche fermée jusqu'au 24 juillet 2026.",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-ecrevisse-pattes-greles-ferme-2026-apres",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-08-04",
+   "au": "2026-12-31",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-ecrevisse-pattes-greles-ouv"
+   },
+   "phrase": "Écrevisse à pattes grêles : pêche fermée à partir du 4 août 2026.",
+   "citation": "est autorisée pendant une période de dix jours consécutifs commençant le quatrième samedi de juillet",
+   "textes": [
+    "t15"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-grenouille-verte-taille",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8,
+    "texte": "longueur du corps, du bout du museau au cloaque"
+   },
+   "phrase": "Grenouille verte : corps de 8 cm au moins (museau au cloaque), sinon remise à l'eau.",
+   "citation": "si leur corps est d'une longueur inférieure à 8 cm. La longueur du corps d'une grenouille est mesurée du bout du museau au cloaque.",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-grenouille-verte-periode",
+   "type": "autre",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "période d'ouverture fixée par le préfet, dix mois au plus"
+   },
+   "phrase": "Grenouille verte : la période de pêche est fixée par l'arrêté du département (dix mois au plus).",
+   "citation": "est autorisée pendant une période maximum de dix mois fixée par le préfet",
+   "textes": [
+    "t20"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-grenouille-rousse-taille",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8,
+    "texte": "longueur du corps, du bout du museau au cloaque"
+   },
+   "phrase": "Grenouille rousse : corps de 8 cm au moins (museau au cloaque), sinon remise à l'eau.",
+   "citation": "si leur corps est d'une longueur inférieure à 8 cm. La longueur du corps d'une grenouille est mesurée du bout du museau au cloaque.",
+   "textes": [
+    "t4"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-grenouille-rousse-periode",
+   "type": "autre",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "période d'ouverture fixée par le préfet, dix mois au plus"
+   },
+   "phrase": "Grenouille rousse : la période de pêche est fixée par l'arrêté du département (dix mois au plus).",
+   "citation": "est autorisée pendant une période maximum de dix mois fixée par le préfet",
+   "textes": [
+    "t20"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-saumon-atlantique-taille",
+   "type": "taille_min",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50,
+    "texte": "en amont de la limite de salure des eaux"
+   },
+   "phrase": "Taille minimale du saumon en eau douce : 50 cm.",
+   "citation": "Dans les eaux situées en amont de la limite de salure des eaux : pour le saumon : 0,50 mètre",
+   "textes": [
+    "t13"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-truite-de-mer-taille",
+   "type": "taille_min",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 35,
+    "texte": "en amont de la limite de salure des eaux"
+   },
+   "phrase": "Taille minimale de la truite de mer en eau douce : 35 cm.",
+   "citation": "Dans les eaux situées en amont de la limite de salure des eaux : pour la truite de mer : 0,35 mètre",
+   "textes": [
+    "t13"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-grande-alose-taille",
+   "type": "taille_min",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30,
+    "texte": "en amont de la limite de salure des eaux"
+   },
+   "phrase": "Taille minimale de la grande alose en eau douce : 30 cm.",
+   "citation": "Dans les eaux situées en amont de la limite de salure des eaux : pour les aloses : 0,30 mètre",
+   "textes": [
+    "t13"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-alose-feinte-taille",
+   "type": "taille_min",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30,
+    "texte": "en amont de la limite de salure des eaux"
+   },
+   "phrase": "Taille minimale de la alose feinte en eau douce : 30 cm.",
+   "citation": "Dans les eaux situées en amont de la limite de salure des eaux : pour les aloses : 0,30 mètre",
+   "textes": [
+    "t13"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-saumon-atlantique-periode",
+   "type": "autre",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "périodes d'ouverture arrêtées par le préfet de département selon le plan de gestion des poissons migrateurs (R436-57)"
+   },
+   "phrase": "Saumon : les dates d'ouverture sont fixées par l'arrêté du département ; vérifie l'arrêté avant de pêcher.",
+   "citation": "sont arrêtées conformément au plan de gestion des poissons migrateurs [...] par le préfet de département pour la pêche en eau douce",
+   "textes": [
+    "t13"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-truite-de-mer-periode",
+   "type": "autre",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "périodes d'ouverture arrêtées par le préfet de département selon le plan de gestion des poissons migrateurs (R436-57)"
+   },
+   "phrase": "Truite de mer : les dates d'ouverture sont fixées par l'arrêté du département ; vérifie l'arrêté avant de pêcher.",
+   "citation": "sont arrêtées conformément au plan de gestion des poissons migrateurs [...] par le préfet de département pour la pêche en eau douce",
+   "textes": [
+    "t13"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-grande-alose-periode",
+   "type": "autre",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "périodes d'ouverture arrêtées par le préfet de département selon le plan de gestion des poissons migrateurs (R436-57)"
+   },
+   "phrase": "Grande alose : les dates d'ouverture sont fixées par l'arrêté du département ; vérifie l'arrêté avant de pêcher.",
+   "citation": "sont arrêtées conformément au plan de gestion des poissons migrateurs [...] par le préfet de département pour la pêche en eau douce",
+   "textes": [
+    "t13"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-alose-feinte-periode",
+   "type": "autre",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "périodes d'ouverture arrêtées par le préfet de département selon le plan de gestion des poissons migrateurs (R436-57)"
+   },
+   "phrase": "Alose feinte : les dates d'ouverture sont fixées par l'arrêté du département ; vérifie l'arrêté avant de pêcher.",
+   "citation": "sont arrêtées conformément au plan de gestion des poissons migrateurs [...] par le préfet de département pour la pêche en eau douce",
+   "textes": [
+    "t13"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-lamproie-marine-periode",
+   "type": "autre",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "périodes d'ouverture arrêtées par le préfet de département selon le plan de gestion des poissons migrateurs (R436-57)"
+   },
+   "phrase": "Lamproie marine : les dates d'ouverture sont fixées par l'arrêté du département ; vérifie l'arrêté avant de pêcher.",
+   "citation": "sont arrêtées conformément au plan de gestion des poissons migrateurs [...] par le préfet de département pour la pêche en eau douce",
+   "textes": [
+    "t13"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-lamproie-fluviatile-periode",
+   "type": "autre",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "périodes d'ouverture arrêtées par le préfet de département selon le plan de gestion des poissons migrateurs (R436-57)"
+   },
+   "phrase": "Lamproie fluviatile : les dates d'ouverture sont fixées par l'arrêté du département ; vérifie l'arrêté avant de pêcher.",
+   "citation": "sont arrêtées conformément au plan de gestion des poissons migrateurs [...] par le préfet de département pour la pêche en eau douce",
+   "textes": [
+    "t13"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-saumon-atlantique-marque",
+   "type": "autre",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "marque d'identification non utilisée et carnet nominatif obligatoires ; marque fixée et carnet rempli avant de transporter le saumon ; déclaration de chaque capture à l'OFB"
+   },
+   "phrase": "Saumon : marque d'identification et carnet nominatif obligatoires ; pose la marque avant de le transporter et déclare la capture à l'OFB.",
+   "citation": "doit détenir une marque d'identification non utilisée et son carnet nominatif de pêche",
+   "textes": [
+    "t16"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "anguille de moins de 12 cm, y compris la civelle : pêche interdite aux pêcheurs de loisir en tous lieux"
+   },
+   "phrase": "Anguille de moins de 12 cm (civelle) : pêche interdite aux pêcheurs de loisir, partout et toute l'année.",
+   "citation": "La pêche de l'anguille de moins de 12 centimètres est interdite aux pêcheurs de loisir en tous lieux.",
+   "textes": [
+    "t14"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de l'anguille argentée interdite (dérogations pour certains pêcheurs professionnels seulement)"
+   },
+   "phrase": "Anguille argentée : pêche interdite toute l'année.",
+   "citation": "La pêche de l'anguille argentée est interdite.",
+   "textes": [
+    "t14"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-ferme-2026",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-08-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "texte": "fermeture de la pêche de loisir de l'anguille fixée au 31 juillet 2026 (saison 2025-2026), sauf date antérieure ; bassins Rhône-Méditerranée et Corse : pêche de loisir interdite toute l'année"
+   },
+   "phrase": "Anguille jaune : pêche de loisir fermée depuis le 31 juillet 2026, jusqu'à la fin de l'année.",
+   "citation": "la fermeture de la pêche de loisir de l'anguille d'Europe dans les eaux douces des bassins autres que Rhône-Méditerranée et Corse est fixée au 31 juillet 2026",
+   "textes": [
+    "t17"
+   ],
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-01",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "01",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-01",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "01",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-01",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "01",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-04",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "04",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-04",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "04",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-04",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "04",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-05",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "05",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-05",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "05",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-05",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "05",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-06",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "06",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-06",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "06",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-06",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "06",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-13",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "13",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-13",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "13",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-13",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "13",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-25",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "25",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-25",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "25",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-25",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "25",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-26",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "26",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-26",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "26",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-26",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "26",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-2A",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-2A",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-2A",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2A",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-2B",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-2B",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-2B",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-30",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "30",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-30",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "30",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-30",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "30",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-34",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "34",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-34",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "34",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-34",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "34",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-38",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "38",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-38",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "38",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-38",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "38",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-39",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "39",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-39",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "39",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-39",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "39",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-66",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "66",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-66",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "66",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-66",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "66",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-73",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "73",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-73",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "73",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-73",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "73",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-74",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "74",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-74",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "74",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-74",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "74",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-83",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "83",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-83",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "83",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-83",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "83",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-jaune-interdit-rmc-84",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "84",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-anguille-argentee-interdit-rmc-84",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "84",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-civelle-interdit-rmc-84",
+   "type": "interdit",
+   "especes": [
+    "civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "84",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "bassins Rhône-Méditerranée et Corse : pêche de loisir de l'anguille interdite à tous ses stades"
+   },
+   "phrase": "Anguille : pêche de loisir interdite toute l'année dans les bassins Rhône-Méditerranée et Corse.",
+   "citation": "La pêche de loisir de l'anguille est interdite, à tous ses stades de développement, [...] dans les eaux [...] situées dans les bassins Rhône-Méditerranée et Corse.",
+   "textes": [
+    "t18"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-esturgeon-interdit",
+   "type": "interdit",
+   "especes": [
+    "esturgeon-europeen"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "espèce protégée : capture, transport, vente interdits partout et en tout temps ; tout esturgeon capturé accidentellement est remis à l'eau"
+   },
+   "phrase": "Esturgeon européen : espèce protégée, pêche interdite ; s'il mord par accident, remets-le à l'eau.",
+   "citation": "Sont interdits sur tout le territoire national et en tout temps [...] la capture, l'enlèvement [...] de l'espèce Acipenser sturio",
+   "textes": [
+    "t19"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-esturgeon-remise",
+   "type": "remise_eau",
+   "especes": [
+    "esturgeon-europeen"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "remise à l'eau obligatoire de tout esturgeon européen capturé accidentellement"
+   },
+   "phrase": "Esturgeon européen pris par accident : remise à l'eau obligatoire.",
+   "citation": "Tout esturgeon européen (Acipenser sturio) capturé accidentellement doit être remis à l'eau",
+   "textes": [
+    "t19"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-bro-remise-1re",
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "brochet capturé du deuxième samedi de mars au vendredi précédant le dernier samedi d'avril : remise à l'eau immédiate, en 1re catégorie"
+   },
+   "phrase": "Brochet en 1re catégorie : remise à l'eau obligatoire du 14 mars au 24 avril 2026.",
+   "citation": "tout brochet capturé du deuxième samedi de mars au vendredi précédant le dernier samedi d'avril doit être immédiatement remis à l'eau",
+   "textes": [
+    "t21"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-omb-ouv-1re",
+   "type": "ouverture",
+   "especes": [
+    "2247"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du troisième samedi de mai au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Ombre commun en 1re catégorie : ouvert du 16 mai au 20 septembre 2026.",
+   "citation": "la pêche de l'ombre commun qui est autorisée du troisième samedi de mai au troisième dimanche de septembre inclus",
+   "textes": [
+    "t21"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-omb-ferme-1re-2026",
+   "type": "interdit",
+   "especes": [
+    "2247"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-05-15",
+   "valeur": {
+    "texte": "raison : fermeture ; derive de : nat-omb-ouv-1re"
+   },
+   "phrase": "Ombre commun en 1re catégorie : fermé jusqu'au 15 mai 2026.",
+   "citation": "la pêche de l'ombre commun qui est autorisée du troisième samedi de mai au troisième dimanche de septembre inclus",
+   "textes": [
+    "t21"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
+  },
+  {
+   "id": "nat-bro-quota-1re",
    "type": "quota_jour",
    "especes": [
     "2151"
    ],
    "categorie": "1",
-   "eau": null,
+   "portee": {
+    "niveau": "national",
+    "code": "FR",
+    "lieu": null,
+    "eau": null,
+    "geometrie": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "Brochet en 1re catégorie : 2 par jour au plus.",
+   "citation": "Dans les eaux classées en 1re catégorie, le nombre de captures de brochets autorisé par pêcheur de loisir et par jour est fixé à 2.",
    "textes": [
-    "t12"
-   ]
+    "t5"
+   ],
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "verifie_par": null
   }
- ]
+ ],
+ "a_verifier": []
 }
