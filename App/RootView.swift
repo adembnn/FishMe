@@ -42,6 +42,13 @@ struct PaywallDemande: Identifiable {
     var id: String { declencheur.valeurMesure }
 }
 
+/// La carte révélée après une prise (E6).
+struct CarteRevelee: Identifiable {
+    let id = UUID()
+    let infos: InfosCarte
+    let photo: Data?
+}
+
 // MARK: - Chargement hors du fil principal
 
 /// Ce qui est lourd à construire au lancement : le moteur de Core (règles, espèces, stations) et le conteneur SwiftData.
@@ -92,6 +99,8 @@ final class ParcoursApp {
     // État de navigation
     var onglet: Onglet = .carte
     var courant: Modal?
+    /// E6 : la carte d'une prise qui vient d'être enregistrée, révélée en plein écran.
+    var carteRevelee: CarteRevelee?
     private var attente: [Modal] = []
     var positionPassee = false
     var consentement: Consentement
@@ -382,8 +391,20 @@ final class ParcoursApp {
             // `.carteCreee` ne part qu'une fois la carte réellement enregistrée.
             if await ecrire({ _ = try await $0.enregistrer(prise: prise, photo: photo, conditions: instantane, dureeSecondes: duree) }) {
                 mesure.envoyer(.carteCreee)
+                await revelerCarte(prise, photoBrute: photo)
             }
         }
+    }
+
+    /// Prépare la révélation (E6) une fois la carte rangée : `ecrire` a déjà rechargé le Pescedex.
+    private func revelerCarte(_ prise: Prise, photoBrute: Data?) async {
+        guard let modele = pescedex,
+              var emplacement = modele.emplacements.first(where: { $0.id == prise.espece.id }) else { return }
+        emplacement.carte = prise
+        guard let infos = modele.infos(pour: emplacement) else { return }
+        // La photo relue est celle sans métadonnées, comme dans le Pescedex.
+        let photo = await modele.depot.photo(de: prise) ?? photoBrute
+        carteRevelee = CarteRevelee(infos: infos, photo: photo)
     }
 
     /// Carte déclarée du swipe du premier lancement (L4) : sans photo, ne compte pas comme une prise.
@@ -518,6 +539,9 @@ private struct RacineContenu: View {
         }
         .sheet(item: $app.courant, onDismiss: { app.feuilleFermee() }) { modal in
             vue(de: modal)
+        }
+        .fullScreenCover(item: $app.carteRevelee) { revelee in
+            RevelationCarteView(infos: revelee.infos, photo: revelee.photo) { app.carteRevelee = nil }
         }
         .onChange(of: questionVue) { app.proposerSuitePremierLancement() }
         .onChange(of: app.suivi.abonne) { _, abonne in
