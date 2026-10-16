@@ -1,78 +1,157 @@
 import SwiftUI
 import Core
 
-/// Une valeur : une icône, un chiffre, un petit libellé. Pas de phrase.
-private struct CaseCondition: View {
-    let icone: String
-    let valeur: String
-    let detail: String?
+/// L'arc du soleil de la maquette P11 : le jour en gris, la part déjà écoulée en marine, un rond à l'heure qu'il est.
+private struct ArcSoleil: View {
+    /// 0 au lever, 1 au coucher.
+    let progres: Double
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Image(systemName: icone).foregroundStyle(JetonsConditions.accent)
-            Text(valeur).font(Police.chiffreMoyen).minimumScaleFactor(0.6).lineLimit(1).foregroundStyle(JetonsConditions.encre)
-            if let detail { Text(detail).font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2) }
+        Canvas { ctx, size in
+            let sx = size.width / 320
+            let sy = size.height / 120
+            func pt(_ x: Double, _ y: Double) -> CGPoint { CGPoint(x: x * sx, y: y * sy) }
+            func milieu(_ a: CGPoint, _ b: CGPoint, _ t: Double) -> CGPoint {
+                CGPoint(x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t)
+            }
+            let depart = pt(20, 108)
+            let controle = pt(160, -12)
+            let arrivee = pt(300, 108)
+
+            var jour = Path()
+            jour.move(to: depart)
+            jour.addQuadCurve(to: arrivee, control: controle)
+            ctx.stroke(jour, with: .color(Palette.filet), style: StrokeStyle(lineWidth: 3, lineCap: .round))
+
+            var sol = Path()
+            sol.move(to: pt(6, 108))
+            sol.addLine(to: pt(314, 108))
+            ctx.stroke(sol, with: .color(Palette.filet), style: StrokeStyle(lineWidth: 2, lineCap: .round))
+
+            // Courbe de Bézier coupée à t (de Casteljau) : la part du jour écoulée.
+            let t = min(max(progres, 0), 1)
+            let q1 = milieu(depart, controle, t)
+            let r1 = milieu(controle, arrivee, t)
+            let soleil = milieu(q1, r1, t)
+            var ecoule = Path()
+            ecoule.move(to: depart)
+            ecoule.addQuadCurve(to: soleil, control: q1)
+            ctx.stroke(ecoule, with: .color(Palette.marine), style: StrokeStyle(lineWidth: 3, lineCap: .round))
+
+            let rond = Path(ellipseIn: CGRect(x: soleil.x - 8, y: soleil.y - 8, width: 16, height: 16))
+            ctx.fill(rond, with: .color(Palette.surface))
+            ctx.stroke(rond, with: .color(Palette.marine), lineWidth: 3.5)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .accessibilityElement(children: .combine)
+        .accessibilityHidden(true)
     }
 }
 
-/// Rangée « maintenant » (E2) : vent, pluie, pression et tendance, aube, crépuscule, fin légale. Tout vient de `Core` ;
-/// la direction et les rafales sont lues telles quelles dans la météo brute.
+/// Conditions du jour (maquette P11-conditions-A) : la température en grand, le vent et la pression à droite,
+/// l'arc du soleil de l'aube au crépuscule, puis la fin légale et le niveau de la rivière. Tout vient de `Core`.
 struct RangeeMaintenantView: View {
     let lecture: LectureConditions
     @ObservedObject var marque: StockageMarque
+    /// Montre le niveau de la rivière (donnée Pro) : faux quand la fonction est verrouillée.
+    var montrerRiviere: Bool = true
+    /// Un toucher sur le niveau de la rivière ouvre la courbe de 48 h (Pro : l'appelant passe la porte).
+    var ouvrirCourbe: (() -> Void)? = nil
 
     var body: some View {
         let c = lecture.conditions
         let point = FormatConditions.pointLePlusProche(lecture.meteo, de: c.heure)
-        // Vent, pluie et pression viennent du point météo le plus proche : on dit de quand il date.
-        let heureMesure = point.map { "mesuré à \(FormatConditions.heure($0.heure))" }
-        VStack(alignment: .leading, spacing: 10) {
-            if let point {
-                HStack(alignment: .firstTextBaseline, spacing: Espace.m) {
-                    Text("\(FormatConditions.nombre(point.temperatureC))°")
-                        .font(Police.taille(72, .heavy).monospacedDigit()).minimumScaleFactor(0.6).lineLimit(1)
-                        .foregroundStyle(Palette.encre)
-                    Image(systemName: FormatConditions.symbole(codeTemps: point.codeTemps))
-                        .font(Police.taille(32)).foregroundStyle(Palette.marine)
-                    // À brancher : libellé du temps (« Nuageux »), absent du modèle ; seul le symbole du code est montré.
+        VStack(spacing: 0) {
+            HStack(alignment: .bottom) {
+                if let point {
+                    VStack(alignment: .leading, spacing: Espace.s) {
+                        Text("\(FormatConditions.nombre(point.temperatureC))°")
+                            .font(Police.taille(72, .heavy).monospacedDigit()).minimumScaleFactor(0.6).lineLimit(1)
+                            .foregroundStyle(Palette.encre)
+                            .accessibilityIdentifier("temperature-maintenant")
+                        Text(FormatConditions.libelle(codeTemps: point.codeTemps))
+                            .font(Police.sousTitre).foregroundStyle(Palette.encre)
+                    }
+                    .accessibilityElement(children: .combine)
                 }
-                .accessibilityElement(children: .combine)
-                .accessibilityIdentifier("temperature-maintenant")
+                Spacer(minLength: Espace.m)
+                VStack(alignment: .trailing, spacing: Espace.s) {
+                    if let v = c.ventKmh {
+                        ligne("wind", "\(FormatConditions.nombre(v)) km/h")
+                    }
+                    if let hpa = c.pressionHPa {
+                        ligne("gauge.medium", "\(FormatConditions.nombre(hpa)) hPa")
+                    }
+                }
+                .padding(.bottom, Espace.xs)
             }
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 130), spacing: 12, alignment: .topLeading)], alignment: .leading, spacing: 14) {
-                if let v = c.ventKmh {
-                    CaseCondition(icone: "wind", valeur: "\(FormatConditions.nombre(v)) km/h", detail: detailVent(point, mesureA: heureMesure))
+            if let aube = c.aube, let soir = c.crepuscule, soir > aube {
+                ArcSoleil(progres: c.heure.timeIntervalSince(aube) / soir.timeIntervalSince(aube))
+                    .frame(height: 112)
+                    .padding(.top, Espace.m)
+                HStack {
+                    Text("Lever \(FormatConditions.horloge(aube))")
+                    Spacer()
+                    Text("Coucher \(FormatConditions.horloge(soir))")
                 }
-                if let p = c.pluieMm {
-                    CaseCondition(icone: "cloud.rain", valeur: "\(FormatConditions.nombre(p, decimales: 1)) mm", detail: heureMesure)
-                }
-                if let hpa = c.pressionHPa {
-                    CaseCondition(icone: "gauge.medium", valeur: FormatConditions.pression(hpa, tendance: c.tendancePressionHPa6h), detail: heureMesure)
-                }
-                if let a = c.aube { CaseCondition(icone: "sunrise.fill", valeur: FormatConditions.heure(a), detail: nil) }
-                if let s = c.crepuscule { CaseCondition(icone: "sunset.fill", valeur: FormatConditions.heure(s), detail: nil) }
-                if let f = c.finLegale { CaseCondition(icone: "clock.badge.exclamationmark", valeur: FormatConditions.heure(f), detail: "fin légale") }
+                .font(Police.detail).foregroundStyle(Palette.encreDouce).monospacedDigit()
+                .padding(.top, 2)
             }
-            Text(lecture.depuisCache ? "lu à \(FormatConditions.heure(lecture.lueLe)), sans réseau" : "lu à \(FormatConditions.heure(lecture.lueLe))")
-                .font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
-            MarqueMeteoView(stockage: marque)
+            if c.finLegale != nil || (montrerRiviere && lecture.eau != nil) {
+                Rectangle().fill(Palette.filet).frame(height: 1)
+                    .padding(.top, Espace.l).padding(.bottom, Espace.m)
+                HStack(alignment: .top) {
+                    if let f = c.finLegale {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Fin légale").font(Police.legende).foregroundStyle(Palette.encreDouce)
+                            Text(FormatConditions.horloge(f)).font(Police.taille(28, .heavy).monospacedDigit())
+                                .foregroundStyle(Palette.encre)
+                        }
+                        .accessibilityElement(children: .combine)
+                    }
+                    Spacer(minLength: Espace.m)
+                    if montrerRiviere, let eau = lecture.eau { riviere(eau) }
+                }
+            }
+            if lecture.depuisCache {
+                Text("lu à \(FormatConditions.heure(lecture.lueLe)), sans réseau")
+                    .font(Police.legende).foregroundStyle(Palette.encreDouce)
+                    .padding(.top, Espace.s)
+            }
+            MarqueMeteoView(stockage: marque).padding(.top, Espace.s)
         }
-        .padding(Espace.l)
+        .padding(20)
         .frame(maxWidth: .infinity, alignment: .leading)
         .tuileFishMe(rayon: Rayon.l)
         .accessibilityIdentifier("rangee-maintenant")
     }
 
-    private func detailVent(_ p: PointMeteo?, mesureA: String?) -> String? {
-        guard let p else { return nil }
-        var morceaux: [String] = []
-        if let mesureA { morceaux.append(mesureA) }
-        if let d = p.directionDeg { morceaux.append(FormatConditions.cardinal(d)) }
-        if let r = p.rafalesKmh { morceaux.append("rafales \(FormatConditions.nombre(r))") }
-        return morceaux.isEmpty ? nil : morceaux.joined(separator: " · ")
+    private func ligne(_ icone: String, _ texte: String) -> some View {
+        HStack(spacing: Espace.s) {
+            Image(systemName: icone).foregroundStyle(Palette.marine).frame(width: 20)
+            Text(texte).font(Police.corps).foregroundStyle(Palette.encre).monospacedDigit()
+        }
+        .accessibilityElement(children: .combine)
+    }
+
+    /// Le niveau : le nom de la station et la hauteur ; sans hauteur, le débit ; sans rien, rien (jamais un chiffre inventé).
+    @ViewBuilder private func riviere(_ eau: NiveauEau) -> some View {
+        let valeur: String? = eau.hauteurM.map { "\(FormatConditions.nombre($0, decimales: 2)) m" }
+            ?? eau.debitM3s.map { "\(FormatConditions.nombre($0)) m³/s" }
+        if let valeur {
+            let bloc = VStack(alignment: .trailing, spacing: 2) {
+                Text(eau.station.nom).font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
+                Text(valeur).font(Police.taille(28, .heavy).monospacedDigit()).minimumScaleFactor(0.6).lineLimit(1)
+                    .foregroundStyle(Palette.encre)
+            }
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("\(eau.station.nom), \(valeur), mesuré à \(FormatConditions.heure(eau.heureMesure))")
+            .accessibilityIdentifier("jauge-riviere")
+            if let ouvrirCourbe {
+                Button(action: ouvrirCourbe) { bloc.frame(minHeight: Gabarit.zoneTactile).contentShape(Rectangle()) }
+                    .buttonStyle(.plain)
+            } else {
+                bloc
+            }
+        }
     }
 }
 

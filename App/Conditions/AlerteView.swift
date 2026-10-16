@@ -9,6 +9,9 @@ struct AlerteView: View {
     var previensMoi: PreviensMoiModele? = nil
     var lecture: LectureConditions? = nil
 
+    /// Marque Apple Weather sous le bouton ; sans elle, seul le lien des sources est montré.
+    var marque: StockageMarque? = nil
+
     @Environment(\.dismiss) private var fermer
     @Environment(\.openURL) private var ouvrir
     @State private var sourceOuverte = false
@@ -19,58 +22,74 @@ struct AlerteView: View {
                 Spacer()
                 Button { fermer() } label: {
                     Image(systemName: "xmark")
-                        .font(Police.sousTitre)
+                        .font(Police.taille(18))
                         .foregroundStyle(Palette.encre)
                         .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
                         .background(Palette.fond, in: Circle())
                 }
                 .accessibilityLabel("Fermer")
             }
-            ScrollView {
-                VStack(spacing: Espace.l) {
-                    Image(systemName: alerte.type == .orage ? "bolt.fill" : "water.waves")
-                        .font(Police.taille(40))
-                        .foregroundStyle(Palette.alerte)
-                        .frame(width: 84, height: 84)
-                        .background(Palette.alerteDoux, in: Circle())
-                        .accessibilityHidden(true)
-                    Text(FormatConditions.heure(alerte.heure))
-                        .font(Police.taille(96, .heavy).monospacedDigit())
-                        .minimumScaleFactor(0.5).lineLimit(1)
-                        .foregroundStyle(Palette.alerte)
-                    Text(titre).font(Police.titre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
-                    Text(explication).font(Police.corps).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
-                        .padding(.horizontal, Espace.xl)
-                    if let previensMoi {
-                        InterrupteurPrevienMoi(modele: previensMoi, lecture: lecture)
-                            .padding(.horizontal, Espace.l)
-                    }
-                    if sourceOuverte {
-                        VStack(spacing: Espace.s) {
-                            Text("\(alerte.mesure) · \(alerte.source)")
-                                .font(Police.legende).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
-                            Button { ouvrir(lien) } label: {
-                                Label(alerte.type == .orage ? "Vigilance de Météo-France" : "Vigicrues", systemImage: "arrow.up.right.square")
-                                    .font(Police.legende)
+            .padding(.top, Espace.s)
+            GeometryReader { geo in
+                ScrollView {
+                    VStack(spacing: 0) {
+                        Spacer(minLength: Espace.l)
+                        Image(systemName: alerte.type == .orage ? "bolt.fill" : "water.waves")
+                            .font(Police.taille(40))
+                            .foregroundStyle(Palette.alerte)
+                            .frame(width: 84, height: 84)
+                            .background(Palette.alerteDoux, in: Circle())
+                            .accessibilityHidden(true)
+                        Text(FormatConditions.heure(alerte.heure))
+                            .font(Police.taille(120, .heavy).monospacedDigit())
+                            .minimumScaleFactor(0.5).lineLimit(1)
+                            .foregroundStyle(Palette.alerte)
+                            .padding(.top, 36)
+                        Text(titre).font(Police.titre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
+                            .padding(.top, 22)
+                        Spacer(minLength: Espace.xl)
+                        Text(explication).font(Police.sousTitre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
+                            .padding(.horizontal, Espace.xl)
+                        if sourceOuverte {
+                            VStack(spacing: Espace.s) {
+                                Text("\(alerte.mesure) · \(alerte.source)")
+                                    .font(Police.legende).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
+                                Button { ouvrir(lien) } label: {
+                                    Label(alerte.type == .orage ? "Vigilance de Météo-France" : "Vigicrues", systemImage: "arrow.up.right.square")
+                                        .font(Police.legende)
+                                }
+                                .frame(minHeight: Gabarit.zoneTactile)
+                                Text("L'alerte officielle fait foi.").font(Police.legende).foregroundStyle(Palette.encreDouce)
                             }
-                            .frame(minHeight: Gabarit.zoneTactile)
-                            Text("L'alerte officielle fait foi.").font(Police.legende).foregroundStyle(Palette.encreDouce)
+                            .padding(.top, Espace.m)
                         }
+                        Spacer(minLength: Espace.xl)
+                        if let previensMoi {
+                            InterrupteurPrevienMoi(modele: previensMoi, lecture: lecture)
+                                .padding(.horizontal, Espace.s)
+                        }
+                        Spacer(minLength: Espace.l)
                     }
+                    .frame(maxWidth: .infinity, minHeight: geo.size.height)
                 }
-                .frame(maxWidth: .infinity)
-                .padding(.top, Espace.xl)
+                .scrollIndicators(.hidden)
             }
-            .scrollIndicators(.hidden)
             VStack(spacing: Espace.m) {
                 Button("Compris") { fermer() }
                     .buttonStyle(.principal)
-                Button { withAnimation { sourceOuverte.toggle() } } label: {
-                    Label(alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources", systemImage: "info.circle")
-                        .font(Police.legende).foregroundStyle(Palette.marine)
-                        .frame(minHeight: Gabarit.zoneTactile)
+                if let marque {
+                    MarqueMeteoView(stockage: marque,
+                                    libelleLien: alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources",
+                                    action: { withAnimation { sourceOuverte.toggle() } })
+                        .accessibilityHint("Affiche la source de l'alerte")
+                } else {
+                    Button { withAnimation { sourceOuverte.toggle() } } label: {
+                        Text(alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources")
+                            .font(Police.legende).foregroundStyle(Palette.marine).underline()
+                            .frame(minHeight: Gabarit.zoneTactile)
+                    }
+                    .accessibilityHint("Affiche la source de l'alerte")
                 }
-                .accessibilityHint("Affiche la source de l'alerte")
             }
         }
         .padding(.horizontal, Espace.bord)
@@ -80,7 +99,18 @@ struct AlerteView: View {
     }
 
     private var titre: String {
-        alerte.type == .orage ? "Orage, vigilance" : "Crue, vigilance"
+        switch alerte.type {
+        case .orage:
+            // À brancher : le niveau de vigilance de l'orage (jaune, orange, rouge) n'est pas dans `Alerte`.
+            return "Orage, vigilance"
+        case .crue:
+            switch lecture?.eau?.vigilance {
+            case .jaune: return "Crue, vigilance jaune"
+            case .orange: return "Crue, vigilance orange"
+            case .rouge: return "Crue, vigilance rouge"
+            default: return "Crue, vigilance"
+            }
+        }
     }
 
     private var explication: String {
@@ -96,9 +126,12 @@ private struct InterrupteurPrevienMoi: View {
     let lecture: LectureConditions?
 
     var body: some View {
-        Toggle("Préviens-moi", isOn: $modele.vigilanceActive)
-            .font(Police.corps)
-            .frame(minHeight: Gabarit.zoneTactile)
+        HStack(spacing: Espace.m) {
+            Text("Préviens-moi").font(Police.corps).foregroundStyle(Palette.encre)
+            Spacer(minLength: 0)
+            Toggle("Préviens-moi", isOn: $modele.vigilanceActive).labelsHidden()
+        }
+        .frame(minHeight: Gabarit.zoneTactile)
             .onChange(of: modele.vigilanceActive) { _, _ in
                 Task {
                     _ = await modele.assurerPermission()

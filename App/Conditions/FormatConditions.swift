@@ -26,6 +26,38 @@ nonisolated enum FormatConditions {
         return f.string(from: date)
     }
 
+    /// « 08:02 »
+    static func horloge(_ date: Date) -> String {
+        let f = DateFormatter()
+        f.locale = Locale(identifier: "fr_FR")
+        f.dateFormat = "HH:mm"
+        return f.string(from: date)
+    }
+
+    /// « Auj. » pour aujourd'hui, sinon « Mar. », « Mer. »…
+    static func jourCourt(_ date: Date, aujourdhui: Date = Date()) -> String {
+        if Calendar.current.isDate(date, inSameDayAs: aujourdhui) { return "Auj." }
+        let f = DateFormatter()
+        f.locale = Locale(identifier: "fr_FR")
+        f.dateFormat = "EEE"
+        let court = f.string(from: date)
+        return court.prefix(1).uppercased() + court.dropFirst()
+    }
+
+    /// Mot court d'un code de temps au format WMO (« Nuageux »).
+    static func libelle(codeTemps: Int) -> String {
+        switch codeTemps {
+        case 0: return "Dégagé"
+        case 1, 2: return "Éclaircies"
+        case 45...48: return "Brouillard"
+        case 51...57: return "Bruine"
+        case 61...67, 80...82: return "Pluie"
+        case 71...77, 85, 86: return "Neige"
+        case 95...99: return "Orage"
+        default: return "Nuageux"
+        }
+    }
+
     static func nombre(_ v: Double, decimales: Int = 0) -> String {
         let f = NumberFormatter()
         f.locale = Locale(identifier: "fr_FR")

@@ -8,6 +8,8 @@ struct BandeauVigilanceView: View {
     /// Facultatifs : sans eux, l'écran d'alerte n'a pas l'interrupteur « Préviens-moi ».
     var previensMoi: PreviensMoiModele? = nil
     var lecture: LectureConditions? = nil
+    /// Marque Apple Weather de l'écran d'alerte (facultative).
+    var marque: StockageMarque? = nil
     @State private var detail = false
 
     var body: some View {
@@ -27,7 +29,7 @@ struct BandeauVigilanceView: View {
             .buttonStyle(.plain)
         }
         .fullScreenCover(isPresented: $detail) {
-            AlerteView(alerte: alerte, previensMoi: previensMoi, lecture: lecture)
+            AlerteView(alerte: alerte, previensMoi: previensMoi, lecture: lecture, marque: marque)
         }
         .accessibilityIdentifier("bandeau-vigilance")
     }
