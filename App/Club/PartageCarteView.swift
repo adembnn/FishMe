@@ -1,3 +1,4 @@
+import MapKit
 import SwiftUI
 import UIKit
 
@@ -17,7 +18,7 @@ struct PartageCarteView: View {
 
     var body: some View {
         ZStack(alignment: .top) {
-            Palette.fond.ignoresSafeArea()
+            fondCarte.ignoresSafeArea()
             if cartes.isEmpty {
                 ContentUnavailableView("Aucune carte", systemImage: "rectangle.stack",
                                        description: Text("Ta première prise crée ta première carte."))
@@ -48,6 +49,19 @@ struct PartageCarteView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .toolbar(.hidden, for: .navigationBar)
+    }
+
+    /// Maquette P33-A : carte MapKit non interactive (France entière), floutée et voilée, décor seulement.
+    private var fondCarte: some View {
+        Map(initialPosition: .region(MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 46.6, longitude: 2.5),
+            span: MKCoordinateSpan(latitudeDelta: 9, longitudeDelta: 9)))) {}
+            .mapStyle(.standard(elevation: .flat, pointsOfInterest: .excludingAll))
+            .allowsHitTesting(false)
+            .saturation(0.6)
+            .blur(radius: 5)
+            .overlay(Palette.fond.opacity(0.6))
+            .accessibilityHidden(true)
     }
 
     private var bandeau: some View {
