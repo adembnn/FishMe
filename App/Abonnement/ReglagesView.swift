@@ -25,6 +25,7 @@ struct ReglagesView: View {
     /// Ouvre « Mon compte » (sauvegarde iCloud, App/Compte). `nil` : la ligne est cachée.
     var ouvrirCompte: (() -> Void)? = nil
 
+    @Environment(\.dismiss) private var dismiss
     @State private var gestionOuverte = false
     @State private var message: String?
     @State private var conditionsOuvertes = false
@@ -40,10 +41,23 @@ struct ReglagesView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.l) {
-                Text("Réglages")
-                    .font(Police.grandTitre)
-                    .foregroundStyle(Palette.encre)
-                    .padding(.horizontal, Espace.xs)
+                HStack {
+                    Text("Réglages")
+                        .font(Police.grandTitre)
+                        .foregroundStyle(Palette.encre)
+                    Spacer(minLength: Espace.s)
+                    // Ferme la feuille (la barre de navigation est cachée par RootView).
+                    Button { dismiss() } label: {
+                        Image(systemName: "xmark")
+                            .font(.body.weight(.bold))
+                            .foregroundStyle(Palette.encre)
+                            .frame(width: 44, height: 44)
+                            .background(Palette.surface, in: Circle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Fermer")
+                }
+                .padding(.horizontal, Espace.xs)
                 if let ouvrirCompte {
                     bloc { ligne("Mon compte", valeur: "iCloud", action: ouvrirCompte) }
                 }
