@@ -625,6 +625,8 @@ private struct RacineContenu: View {
     @Bindable var app: ParcoursApp
     @AppStorage(ClesConseils.questionVue) private var questionVue = false
     @State private var amisOuverts = false
+    /// Vrai de l'apparition de la couverture de session jusqu'à la fin de son retrait.
+    @State private var sessionAffichee = false
     /// P03 « Où pêches-tu ? » : montré une seule fois, avant la première demande de position.
     @AppStorage("premierLancement.ouPechesTuVu") private var ouPechesTuVu = false
 
@@ -665,23 +667,68 @@ private struct RacineContenu: View {
 
     // MARK: Les 3 volets
 
+    /// Plein écran : fin de session, mes sorties, paywall « autre spot », prise et tunnel. Feuille : le reste.
     private func estPleinEcran(_ modal: Modal) -> Bool {
         switch modal {
-        case .finSession, .prise, .tunnel: true
+        case .finSession, .mesSorties, .prise, .tunnel, .paywall(.autreSpot): true
         default: false
         }
     }
 
+    /// Qui présente : la racine quand aucune session n'est à l'écran, sinon la couverture de session (une présentation
+    /// lancée depuis la racine ne s'affiche pas sous un plein écran). La racine attend aussi la fin du retrait de la couverture
+    /// (`sessionAffichee`) : la fin de session s'ouvre alors une fois la couverture partie, jamais pendant son retrait.
+    private func actif(dansSession: Bool) -> Bool {
+        dansSession ? app.moteur.enCours != nil : (app.moteur.enCours == nil && !sessionAffichee)
+    }
+
     /// Le modal courant, vu seulement par la présentation (feuille ou plein écran) qui le montre.
-    private func liaison(pleinEcran: Bool) -> Binding<Modal?> {
+    private func liaison(pleinEcran: Bool, dansSession: Bool) -> Binding<Modal?> {
         Binding(
-            get: { app.courant.flatMap { estPleinEcran($0) == pleinEcran ? $0 : nil } },
+            get: { actif(dansSession: dansSession) ? app.courant.flatMap { estPleinEcran($0) == pleinEcran ? $0 : nil } : nil },
             set: { nouveau in
                 if nouveau == nil, let c = app.courant, estPleinEcran(c) == pleinEcran { app.courant = nil }
             })
     }
 
+    private func liaisonRevelee(dansSession: Bool) -> Binding<CarteRevelee?> {
+        Binding(get: { actif(dansSession: dansSession) ? app.carteRevelee : nil },
+                set: { if $0 == nil { app.carteRevelee = nil } })
+    }
+
+    /// Les mêmes présentations (feuille, plein écran, carte révélée) posées sur la racine et sur la couverture de session.
+    private func avecModales<V: View>(_ contenu: V, dansSession: Bool) -> some View {
+        contenu
+            .sheet(item: liaison(pleinEcran: false, dansSession: dansSession), onDismiss: { app.feuilleFermee() }) { modal in
+                vue(de: modal)
+            }
+            .fullScreenCover(item: liaison(pleinEcran: true, dansSession: dansSession), onDismiss: { app.feuilleFermee() }) { modal in
+                vue(de: modal)
+            }
+            .fullScreenCover(item: liaisonRevelee(dansSession: dansSession)) { revelee in
+                RevelationCarteView(infos: revelee.infos, photo: revelee.photo) { app.carteRevelee = nil }
+            }
+    }
+
     private var onglets: some View {
+        avecModales(tabView, dansSession: false)
+            .onChange(of: questionVue) { app.proposerSuitePremierLancement() }
+            .onChange(of: app.suivi.abonne) { _, abonne in
+                app.moteur.abonne = abonne
+                app.publierAquarium()
+            }
+            .onOpenURL { app.ouvrir(url: $0) }
+            // La question du niveau et le tunnel attendent la réponse à la position (accordée ou refusée), puis le choix de zone.
+            // Repli : si le système ne répond pas en 30 s, on continue sans elle.
+            .task(id: app.gps.nAPasEteDemandee) {
+                try? await Task.sleep(for: .seconds(app.gps.nAPasEteDemandee ? 30 : 1))
+                if Task.isCancelled { return }
+                app.positionPassee = true
+                app.proposerSuitePremierLancement()
+            }
+    }
+
+    private var tabView: some View {
         TabView(selection: $app.onglet) {
             Tab("Pescedex", systemImage: "square.grid.2x2.fill", value: Onglet.pescedex) {
                 pescedex
@@ -689,41 +736,21 @@ private struct RacineContenu: View {
             Tab("Carte", systemImage: "map.fill", value: Onglet.carte) {
                 carte
             }
-            Tab("Mon club", systemImage: "person.2.fill", value: Onglet.club) {
+            Tab("Club", systemImage: "person.2.fill", value: Onglet.club) {
                 club
             }
         }
-        // Session en cours en plein écran (P14 C), par-dessus les onglets.
-        .overlay {
-            if app.moteur.enCours != nil {
-                SessionEnCoursView(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() }) {
+        // Session en cours en plein écran (P14 C), par-dessus les onglets. Les modales (prise, fin, feuilles) sont aussi
+        // posées sur la couverture : une présentation de la racine ne s'afficherait pas par-dessus elle.
+        .fullScreenCover(isPresented: Binding(get: { app.moteur.enCours != nil }, set: { _ in }),
+                         onDismiss: { sessionAffichee = false }) {
+            avecModales(
+                SessionEnCoursView(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() },
+                                   infosEspece: app.infosEspece(), eau: app.lieuDuSpot()?.eau?.nom) {
                     LigneSessionEmplacement(app: app)
                 }
-            }
-        }
-        // Une seule file (`app.courant`), deux présentations : plein écran pour fin de session, prise et tunnel, feuille pour le reste.
-        .sheet(item: liaison(pleinEcran: false), onDismiss: { app.feuilleFermee() }) { modal in
-            vue(de: modal)
-        }
-        .fullScreenCover(item: liaison(pleinEcran: true), onDismiss: { app.feuilleFermee() }) { modal in
-            vue(de: modal)
-        }
-        .fullScreenCover(item: $app.carteRevelee) { revelee in
-            RevelationCarteView(infos: revelee.infos, photo: revelee.photo) { app.carteRevelee = nil }
-        }
-        .onChange(of: questionVue) { app.proposerSuitePremierLancement() }
-        .onChange(of: app.suivi.abonne) { _, abonne in
-            app.moteur.abonne = abonne
-            app.publierAquarium()
-        }
-        .onOpenURL { app.ouvrir(url: $0) }
-        // La question du niveau et le tunnel attendent la réponse à la position (accordée ou refusée), puis le choix de zone.
-        // Repli : si le système ne répond pas en 30 s, on continue sans elle.
-        .task(id: app.gps.nAPasEteDemandee) {
-            try? await Task.sleep(for: .seconds(app.gps.nAPasEteDemandee ? 30 : 1))
-            if Task.isCancelled { return }
-            app.positionPassee = true
-            app.proposerSuitePremierLancement()
+                .onAppear { sessionAffichee = true },
+                dansSession: true)
         }
         // `styleFishMe()` : App/Style/ n'existe pas sur cette branche, rien à poser ici.
     }
@@ -740,7 +767,8 @@ private struct RacineContenu: View {
                     meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }),
                 photographier: { app.ajouterPrise() },
                 declarer: { app.montrer(.tunnel) },
-                voirAmis: { app.onglet = .club })
+                voirAmis: { app.onglet = .club },
+                changerZone: { app.onglet = .carte })
         } else {
             ContentUnavailableView("Pescedex", systemImage: "square.grid.2x2.fill",
                                    description: Text("Tes cartes ne peuvent pas s'ouvrir pour l'instant."))
@@ -960,6 +988,7 @@ private struct ConditionsEmplacement: View {
     let app: ParcoursApp
     let coordonnee: Coordonnee
     @State private var lecture: LectureConditions?
+    @State private var meteo = false
     @State private var septJours = false
     @State private var courbe = false
     @State private var previens = false
@@ -968,14 +997,7 @@ private struct ConditionsEmplacement: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             if let lecture {
-                if app.autorise(.meteoDuJour, en: coordonnee) {
-                    RangeeMaintenantView(lecture: lecture, marque: app.marque,
-                                         montrerRiviere: app.autorise(.niveauEau, en: coordonnee),
-                                         ouvrirCourbe: { ouvrir(.courbeEtNormale) { courbe = true } },
-                                         enFeuille: true)
-                } else {
-                    bouton("Météo du moment", "cloud.sun", .meteoDuJour) {}
-                }
+                bouton("Météo du moment", "cloud.sun", .meteoDuJour) { meteo = true }
                 if !app.autorise(.niveauEau, en: coordonnee) {
                     bouton("Niveau de l'eau", "water.waves", .niveauEau) {}
                 }
@@ -990,6 +1012,20 @@ private struct ConditionsEmplacement: View {
         .task(id: coordonnee) {
             lecture = app.conditions.derniere(spot: coordonnee)
             lecture = await app.conditions.lire(spot: coordonnee) ?? lecture
+        }
+        .sheet(isPresented: $meteo) {
+            if let lecture {
+                ConditionsDuJourView(lecture: lecture, marque: app.marque,
+                                     montrerRiviere: app.autorise(.niveauEau, en: coordonnee),
+                                     ouvrirCourbe: {
+                                         // Une feuille à la fois : la courbe s'ouvre une fois la météo refermée.
+                                         meteo = false
+                                         Task {
+                                             try? await Task.sleep(for: .milliseconds(450))
+                                             ouvrir(.courbeEtNormale) { courbe = true }
+                                         }
+                                     })
+            }
         }
         .sheet(isPresented: $septJours) {
             if let lecture { SeptJoursView(lecture: lecture, marque: app.marque) }
