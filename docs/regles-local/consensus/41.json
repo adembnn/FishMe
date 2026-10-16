@@ -5375,6 +5375,88 @@
     },
     "citation": "Sur tous les parcours, la pêche est limitée à 4 jours et 3 nuits pour permettre l'accès à tous les pêcheurs. L'intervalle entre 2 séjours est fixé à 7 jours."
    }
+  },
+  {
+   "id": "41-anguille-jaune-ouverture-departement",
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "41",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-04-01",
+   "au": "2026-07-31",
+   "valeur": {
+    "formule": "anguille jaune : du 1er avril au 31 juillet inclus"
+   },
+   "phrase": "La pêche de l'anguille jaune est ouverte du 1er avril au 31 juillet 2026 inclus dans le Loir-et-Cher (fermeture avancée du 31 août au 31 juillet).",
+   "source": {
+    "texte": "Arrêté 41-2026-07-28-00001 du 28 juillet 2026 modifiant l'arrêté préfectoral du 15 janvier 2026 relatif à l'exercice de la pêche en eau douce (RAA spécial 41-2026-07-047), article 1er",
+    "url": "https://www.loir-et-cher.gouv.fr/contenu/telechargement/42951/326747/file/recueil-41-2026-07-047-recueil-des-actes-administratifs-special.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-07-28"
+   },
+   "citation": "« anguille jaune : du 1er avril au 31 juillet inclus »",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "41-anguille-jaune-ouverture-departement",
+    "source": {
+     "texte": "Arrêté 41-2026-07-28-00001 du 28 juillet 2026 modifiant l'arrêté préfectoral du 15 janvier 2026 relatif à l'exercice de la pêche en eau douce, article 1",
+     "url": "https://www.loir-et-cher.gouv.fr/contenu/telechargement/42951/326747/file/recueil-41-2026-07-047-recueil-des-actes-administratifs-special.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-07-28"
+    },
+    "citation": "anguille jaune : du 1er avril au 31 juillet inclus"
+   }
+  },
+  {
+   "id": "41-anguille-jaune-autre-declaration-lignes",
+   "type": "autre",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "41",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": "2026-07-31",
+   "valeur": {
+    "texte": "Le pêcheur amateur aux lignes déclare ses captures d'anguilles jaunes sous 24 heures, par le téléservice (demarche.numerique.gouv.fr) ou, sans accès numérique, par courrier papier à la fédération départementale (cachet de la poste), à compter de l'entrée en vigueur de l'arrêté et jusqu'au 31 juillet 2026."
+   },
+   "phrase": "Pêcheur aux lignes : déclare chaque anguille jaune capturée dans les 24 heures, en ligne ou par courrier à la fédération, jusqu'au 31 juillet 2026.",
+   "source": {
+    "texte": "Arrêté 41-2026-07-28-00001 du 28 juillet 2026 modifiant l'arrêté préfectoral du 15 janvier 2026 relatif à l'exercice de la pêche en eau douce (RAA spécial 41-2026-07-047), article 2",
+    "url": "https://www.loir-et-cher.gouv.fr/contenu/telechargement/42951/326747/file/recueil-41-2026-07-047-recueil-des-actes-administratifs-special.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-07-28"
+   },
+   "citation": "tout pêcheur amateur aux lignes déclare ses captures d'anguilles jaunes dans un délai de 24heures",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "41-anguille-jaune-autre-declaration-24h",
+    "source": {
+     "texte": "Arrêté 41-2026-07-28-00001 du 28 juillet 2026 modifiant l'arrêté préfectoral du 15 janvier 2026 relatif à l'exercice de la pêche en eau douce, article 2",
+     "url": "https://www.loir-et-cher.gouv.fr/contenu/telechargement/42951/326747/file/recueil-41-2026-07-047-recueil-des-actes-administratifs-special.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-07-28"
+    },
+    "citation": "tout pêcheur amateur aux lignes déclare ses captures d'anguilles jaunes dans un délai de 24heures"
+   }
   }
  ],
  "desaccords": {
@@ -5839,6 +5921,37 @@
      "version": "saison 2026"
     },
     "citation": "Tout transport ou transfert de poissons dans un autre plan d’eau ou cours d’eau est strictement interdit",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "41-anguille-jaune-autre-declaration-engins",
+    "type": "autre",
+    "especes": [
+     "anguille-jaune"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "41",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Les pêcheurs amateurs aux engins et aux filets, y compris les membres d'AAPPMA autorisés à utiliser engins et filets, continuent de déclarer leurs captures d'anguilles jaunes dans les conditions de l'arrêté du 22 octobre 2010 (conditions non reprises dans ce texte)."
+    },
+    "phrase": "Pêcheur aux engins ou aux filets : la déclaration des anguilles jaunes reste celle de l'arrêté ministériel du 22 octobre 2010.",
+    "source": {
+     "texte": "Arrêté 41-2026-07-28-00001 du 28 juillet 2026 modifiant l'arrêté préfectoral du 15 janvier 2026 relatif à l'exercice de la pêche en eau douce (RAA spécial 41-2026-07-047), article 2, alinéa 3",
+     "url": "https://www.loir-et-cher.gouv.fr/contenu/telechargement/42951/326747/file/recueil-41-2026-07-047-recueil-des-actes-administratifs-special.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-07-28"
+    },
+    "citation": "continuent de déclarer leurs captures d’anguilles jaunes dans les conditions prévues par l'arrêté du 22 octobre 2010 susvisé",
     "statut": "incertain",
     "expire_le": "2026-12-31",
     "remplace": null
