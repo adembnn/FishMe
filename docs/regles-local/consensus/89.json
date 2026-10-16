@@ -3710,6 +3710,2424 @@
     },
     "citation": "Etang n° 2 Saint Denis Le Sens : Points Matérialisés (1200 m) uniquement de vendredi à samedi, de samedi à dimanche et de dimanche à lundi Année 2026"
    }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-81-batardeau",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Auxerre) : sas de l'écluse n° 81 BATARDEAU, PK 173.756",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Auxerre), sas de l'écluse n° 81 BATARDEAU, PK 173.756 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-81-batardeau",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-80-preuilly",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Auxerre) : sas de l'écluse n° 80 PREUILLY, PK 172.481",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Auxerre), sas de l'écluse n° 80 PREUILLY, PK 172.481 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-80-preuilly",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-79-augy",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Auxerre) : sas de l'écluse n° 79 AUGY, PK 170.620",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Auxerre), sas de l'écluse n° 79 AUGY, PK 170.620 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-79-augy",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-78-vaux",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Auxerre) : sas de l'écluse n° 78 VAUX, PK 168.623",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Auxerre), sas de l'écluse n° 78 VAUX, PK 168.623 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-78-vaux",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-77-toussac",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Auxerre) : sas de l'écluse n° 77 TOUSSAC, PK 166.177",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Auxerre), sas de l'écluse n° 77 TOUSSAC, PK 166.177 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-77-toussac",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-76-bellombre",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Jussy) : sas de l'écluse n° 76 BELLOMBRE, PK 164.980",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Jussy), sas de l'écluse n° 76 BELLOMBRE, PK 164.980 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-76-bellombre",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-75-bailly",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Escolives-Sainte-Camille) : sas de l'écluse n° 75 BAILLY, PK 163.359",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Escolives-Sainte-Camille), sas de l'écluse n° 75 BAILLY, PK 163.359 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-75-bailly",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-74-vincelottes",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Vincelles) : sas de l'écluse n° 74 VINCELOTTES, PK 161.246",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Vincelles), sas de l'écluse n° 74 VINCELOTTES, PK 161.246 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-74-vincelottes",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-73-vincelles",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Vincelles) : sas de l'écluse n° 73 VINCELLES, PK 159.528",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Vincelles), sas de l'écluse n° 73 VINCELLES, PK 159.528 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-73-vincelles",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-72-rivottes",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Vincelles) : sas de l'écluse n° 72 RIVOTTES, PK 158.233",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Vincelles), sas de l'écluse n° 72 RIVOTTES, PK 158.233 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-72-rivottes",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-71-maunoir",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Bazarnes) : sas de l'écluse n° 71 MAUNOIR, PK 154.407",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Bazarnes), sas de l'écluse n° 71 MAUNOIR, PK 154.407 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-71-maunoir",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-70-saint-agnan",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Sainte-Pallaye) : sas de l'écluse n° 70 SAINT AGNAN, PK 153.747",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Sainte-Pallaye), sas de l'écluse n° 70 SAINT AGNAN, PK 153.747 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-70-saint-agnan",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-69-sainte-pallaye",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Sainte-Pallaye) : sas de l'écluse n° 69 SAINTE PALLAYE, PK 152.392",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Sainte-Pallaye), sas de l'écluse n° 69 SAINTE PALLAYE, PK 152.392 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-69-sainte-pallaye",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-67-dames",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Prégilbert) : sas de l'écluse n° 67 DAMES, PK 150.054",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Prégilbert), sas de l'écluse n° 67 DAMES, PK 150.054 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-67-dames",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-66-saint-maur",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Séry) : sas de l'écluse n° 66 SAINT MAUR, PK 148.613",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Séry), sas de l'écluse n° 66 SAINT MAUR, PK 148.613 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-66-saint-maur",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-65-sery",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Séry) : sas de l'écluse n° 65 SERY, PK 147.525",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Séry), sas de l'écluse n° 65 SERY, PK 147.525 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-65-sery",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-63-mailly-la-ville",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Mailly-la-Ville) : sas de l'écluse n° 63 MAILLY LA VILLE, PK 145.402",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Mailly-la-Ville), sas de l'écluse n° 63 MAILLY LA VILLE, PK 145.402 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-63-mailly-la-ville",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-62-parc",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Mailly-le-Château) : sas de l'écluse n° 62 PARC, PK 142.767",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Mailly-le-Château), sas de l'écluse n° 62 PARC, PK 142.767 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-62-parc",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-60-ravereau",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Merry-sur-Yonne) : sas de l'écluse n° 60 RAVEREAU, PK 139.374",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Merry-sur-Yonne), sas de l'écluse n° 60 RAVEREAU, PK 139.374 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-60-ravereau",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-59-rechimet",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Merry-sur-Yonne) : sas de l'écluse n° 59 RECHIMET, PK 136.512",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Merry-sur-Yonne), sas de l'écluse n° 59 RECHIMET, PK 136.512 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-59-rechimet",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-58-magny",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Châtel-Censoir) : sas de l'écluse n° 58 MAGNY, PK 134.523",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Châtel-Censoir), sas de l'écluse n° 58 MAGNY, PK 134.523 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-58-magny",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-57-chatel-censoir",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Châtel-Censoir) : sas de l'écluse n° 57 CHÂTEL CENSOIR, PK 132.588",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Châtel-Censoir), sas de l'écluse n° 57 CHÂTEL CENSOIR, PK 132.588 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-57-chatel-censoir",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-56-la-place",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Châtel-Censoir) : sas de l'écluse n° 56 LA PLACE, PK 130.208",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Châtel-Censoir), sas de l'écluse n° 56 LA PLACE, PK 130.208 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-56-la-place",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-55-lucy-sur-yonne",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Lichères-sur-Yonne) : sas de l'écluse n° 55 LUCY SUR YONNE, PK 127.140",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Lichères-sur-Yonne), sas de l'écluse n° 55 LUCY SUR YONNE, PK 127.140 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-55-lucy-sur-yonne",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-54-beze",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Lucy-sur-Yonne) : sas de l'écluse n° 54 BEZE, PK 125.093",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Lucy-sur-Yonne), sas de l'écluse n° 54 BEZE, PK 125.093 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-54-beze",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-53-crain",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Crain) : sas de l'écluse n° 53 CRAIN, PK 123.707",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Crain), sas de l'écluse n° 53 CRAIN, PK 123.707 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-53-crain",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-du-nivernais-ecluse-52-coulanges",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal du Nivernais (Coulanges-sur-Yonne) : sas de l'écluse n° 52 COULANGES, PK 122.791",
+    "plan_eau": null,
+    "cours_eau": "Canal du Nivernais"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal du Nivernais (Coulanges-sur-Yonne), sas de l'écluse n° 52 COULANGES, PK 122.791 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-nivernais-ecluse-52-coulanges",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-d-accolay-embranchement-de-vermenton-ecluse-2-la-noue",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal d'Accolay (embranchement de Vermenton) (Sainte-Pallaye) : sas de l'écluse n° 2 LA NOUE",
+    "plan_eau": null,
+    "cours_eau": "Canal d'Accolay"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal d'Accolay (embranchement de Vermenton) (Sainte-Pallaye), sas de l'écluse n° 2 LA NOUE est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-accolay-ecluse-2-la-noue",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-d-accolay-embranchement-de-vermenton-ecluse-1-accolay",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal d'Accolay (embranchement de Vermenton) (Accolay) : sas de l'écluse n° 1 ACCOLAY",
+    "plan_eau": null,
+    "cours_eau": "Canal d'Accolay"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal d'Accolay (embranchement de Vermenton) (Accolay), sas de l'écluse n° 1 ACCOLAY est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-accolay-ecluse-1-accolay",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-de-briare-ecluse-18-sainte-barbe",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de Briare (Rogny-les-Sept-Écluses) : sas de l'écluse n° 18 SAINTE BARBE, PK 18.626",
+    "plan_eau": null,
+    "cours_eau": "Canal de Briare"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de Briare (Rogny-les-Sept-Écluses), sas de l'écluse n° 18 SAINTE BARBE, PK 18.626 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-briare-ecluse-18-sainte-barbe",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-de-briare-ecluse-17-rogny",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de Briare (Rogny-les-Sept-Écluses) : sas de l'écluse n° 17 ROGNY",
+    "plan_eau": null,
+    "cours_eau": "Canal de Briare"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de Briare (Rogny-les-Sept-Écluses), sas de l'écluse n° 17 ROGNY est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-briare-ecluse-17-rogny",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-de-briare-ecluse-16-chantepinot",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de Briare (Rogny-les-Sept-Écluses) : sas de l'écluse n° 16 CHANTEPINOT",
+    "plan_eau": null,
+    "cours_eau": "Canal de Briare"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de Briare (Rogny-les-Sept-Écluses), sas de l'écluse n° 16 CHANTEPINOT est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-briare-ecluse-16-chantepinot",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-de-briare-ecluse-15-saint-joseph",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de Briare (Rogny-les-Sept-Écluses) : sas de l'écluse n° 15 SAINT JOSEPH",
+    "plan_eau": null,
+    "cours_eau": "Canal de Briare"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de Briare (Rogny-les-Sept-Écluses), sas de l'écluse n° 15 SAINT JOSEPH est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-briare-ecluse-15-saint-joseph",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-de-briare-ecluse-14-racault",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de Briare (Rogny-les-Sept-Écluses) : sas de l'écluse n° 14 RACAULT",
+    "plan_eau": null,
+    "cours_eau": "Canal de Briare"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de Briare (Rogny-les-Sept-Écluses), sas de l'écluse n° 14 RACAULT est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-briare-ecluse-14-racault",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-de-briare-ecluse-13-javaciere",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de Briare (Rogny-les-Sept-Écluses) : sas de l'écluse n° 13 JAVACIERE, PK 17.012",
+    "plan_eau": null,
+    "cours_eau": "Canal de Briare"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de Briare (Rogny-les-Sept-Écluses), sas de l'écluse n° 13 JAVACIERE, PK 17.012 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0048, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-briare-ecluse-13-javaciere",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0048 du 6 octobre 2025 (réserve temporaire, sas des écluses des canaux du Nivernais, d'Accolay et de Briare), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-12-champfleury",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Michery) : sas de l'écluse n° 12 CHAMPFLEURY, PK 80.185",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Michery), sas de l'écluse n° 12 CHAMPFLEURY, PK 80.185 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-12-champfleury",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-11-villeperrot",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Cuy) : sas de l'écluse n° 11 VILLEPERROT, PK 74.486",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Cuy), sas de l'écluse n° 11 VILLEPERROT, PK 74.486 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-11-villeperrot",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-10-saint-martin",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Saint-Denis-lès-Sens) : sas de l'écluse n° 10 SAINT MARTIN, PK 69.545",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Saint-Denis-lès-Sens), sas de l'écluse n° 10 SAINT MARTIN, PK 69.545 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-10-saint-martin",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-9-saint-bond",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Sens) : sas de l'écluse n° 9 SAINT BOND, PK 65.253",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Sens), sas de l'écluse n° 9 SAINT BOND, PK 65.253 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-9-saint-bond",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-8-rosoy",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Rosoy) : sas de l'écluse n° 8 ROSOY, PK 60.545",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Rosoy), sas de l'écluse n° 8 ROSOY, PK 60.545 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-8-rosoy",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-7-etigny",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Véron) : sas de l'écluse n° 7 ETIGNY, PK 56.043",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Véron), sas de l'écluse n° 7 ETIGNY, PK 56.043 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-7-etigny",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-6-villeneuve",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Villeneuve-sur-Yonne) : sas de l'écluse n° 6 VILLENEUVE, PK 50.515",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Villeneuve-sur-Yonne), sas de l'écluse n° 6 VILLENEUVE, PK 50.515 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-6-villeneuve",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-5-armeau",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Armeau) : sas de l'écluse n° 5 ARMEAU, PK 44.940",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Armeau), sas de l'écluse n° 5 ARMEAU, PK 44.940 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-5-armeau",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-4-villevallier",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Villevallier) : sas de l'écluse n° 4 VILLEVALLIER, PK 40.337",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Villevallier), sas de l'écluse n° 4 VILLEVALLIER, PK 40.337 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-4-villevallier",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-2-pechoir",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Joigny) : sas de l'écluse n° 2 PECHOIR, PK 28.690",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Joigny), sas de l'écluse n° 2 PECHOIR, PK 28.690 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-2-pechoir",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-1-epineau",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Épineau-les-Voves) : sas de l'écluse n° 1 EPINEAU, PK 24.830",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Épineau-les-Voves), sas de l'écluse n° 1 EPINEAU, PK 24.830 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-1-epineau",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-9-la-graviere",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Charmoy) : sas de l'écluse n° 9 LA GRAVIERE, PK 21.300",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Charmoy), sas de l'écluse n° 9 LA GRAVIERE, PK 21.300 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-9-la-graviere",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-8-bassou",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Beaumont) : sas de l'écluse n° 8 BASSOU, PK 16.980",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Beaumont), sas de l'écluse n° 8 BASSOU, PK 16.980 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-8-bassou",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-5-moneteau",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Monéteau) : sas de l'écluse n° 5 MONETEAU, PK 7.545",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Monéteau), sas de l'écluse n° 5 MONETEAU, PK 7.545 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-5-moneteau",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-4-les-boisseaux",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Monéteau) : sas de l'écluse n° 4 LES BOISSEAUX, PK 5.900",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Monéteau), sas de l'écluse n° 4 LES BOISSEAUX, PK 5.900 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-4-les-boisseaux",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-3-les-dumonts",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Auxerre) : sas de l'écluse n° 3 LES DUMONTS, PK 4.273",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Auxerre), sas de l'écluse n° 3 LES DUMONTS, PK 4.273 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-3-les-dumonts",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-2-l-ile-brulee",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Auxerre) : sas de l'écluse n° 2 L'ILE BRULEE, PK 2.500",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Auxerre), sas de l'écluse n° 2 L'ILE BRULEE, PK 2.500 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-2-l-ile-brulee",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-yonne-ecluse-1-la-chainette",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne (Auxerre) : sas de l'écluse n° 1 LA CHAINETTE, PK 0.980",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne (Auxerre), sas de l'écluse n° 1 LA CHAINETTE, PK 0.980 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-yonne-ecluse-1-la-chainette",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-de-la-derivation-de-joigny-ecluse-3-saint-aubin",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de la dérivation de Joigny (Saint-Aubin-sur-Yonne) : sas de l'écluse n° 3 SAINT AUBIN, PK 35.486",
+    "plan_eau": null,
+    "cours_eau": "Canal de la dérivation de Joigny"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de la dérivation de Joigny (Saint-Aubin-sur-Yonne), sas de l'écluse n° 3 SAINT AUBIN, PK 35.486 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-derivation-joigny-ecluse-3-saint-aubin",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-de-la-derivation-de-gurgy-ecluse-7-raveuse",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de la dérivation de Gurgy (Gurgy) : sas de l'écluse n° 7 RAVEUSE, PK 15.400",
+    "plan_eau": null,
+    "cours_eau": "Canal de la dérivation de Gurgy"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de la dérivation de Gurgy (Gurgy), sas de l'écluse n° 7 RAVEUSE, PK 15.400 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-derivation-gurgy-ecluse-7-raveuse",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-de-la-derivation-de-gurgy-ecluse-6-neron",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de la dérivation de Gurgy (Gurgy) : sas de l'écluse n° 6 NERON, PK 14.000",
+    "plan_eau": null,
+    "cours_eau": "Canal de la dérivation de Gurgy"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de la dérivation de Gurgy (Gurgy), sas de l'écluse n° 6 NERON, PK 14.000 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-derivation-gurgy-ecluse-6-neron",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-de-la-derivation-de-courlon-ecluse-14-port-renard",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de la dérivation de Courlon (Vinneuf) : sas de l'écluse n° 14 PORT RENARD, PK 91.813",
+    "plan_eau": null,
+    "cours_eau": "Canal de la dérivation de Courlon"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de la dérivation de Courlon (Vinneuf), sas de l'écluse n° 14 PORT RENARD, PK 91.813 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-derivation-courlon-ecluse-14-port-renard",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-sas-canal-de-la-derivation-de-courlon-ecluse-13-vinneuf",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de la dérivation de Courlon (Vinneuf) : sas de l'écluse n° 13 VINNEUF, PK 90.140",
+    "plan_eau": null,
+    "cours_eau": "Canal de la dérivation de Courlon"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de la dérivation de Courlon (Vinneuf), sas de l'écluse n° 13 VINNEUF, PK 90.140 est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0052, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-derivation-courlon-ecluse-13-vinneuf",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0052 du 6 octobre 2025 (réserve temporaire, sas des écluses entre Auxerre et Vinneuf), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite à partir du 1er Janvier 2026 au 31 décembre 2030 dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-canal-cascade-tonnerre-lot-19",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de prise d'eau « la Cascade » (Tonnerre), lot de pêche n° 19 : de la rivière Armançon au bief n°96(Y) du Canal de Bourgogne, environ 650 mètres",
+    "plan_eau": null,
+    "cours_eau": "Canal de prise d'eau la Cascade"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de prise d'eau « la Cascade » (Tonnerre), lot de pêche n° 19, de la rivière Armançon au bief n°96(Y) du Canal de Bourgogne, environ 650 mètres est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0049, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite du 1er janvier 2026 au 31 décembre 2030, dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-cascade-tonnerre",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0049 du 6 octobre 2025 (réserve temporaire, canal de prise d'eau « la Cascade », Tonnerre), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite du 1er janvier 2026 au 31 décembre 2030, dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-canal-cascade-tonnerre-lot-20",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de prise d'eau « la Cascade » (Tonnerre), lot de pêche n° 20 : de la rivière Armançon au bief n°96(Y) du Canal de Bourgogne, environ 650 mètres",
+    "plan_eau": null,
+    "cours_eau": "Canal de prise d'eau la Cascade"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de prise d'eau « la Cascade » (Tonnerre), lot de pêche n° 20, de la rivière Armançon au bief n°96(Y) du Canal de Bourgogne, environ 650 mètres est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0049, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite du 1er janvier 2026 au 31 décembre 2030, dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-cascade-tonnerre",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0049 du 6 octobre 2025 (réserve temporaire, canal de prise d'eau « la Cascade », Tonnerre), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite du 1er janvier 2026 au 31 décembre 2030, dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-yonne-more-ragon-charmoy",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Yonne, réserve « More Ragon », rive gauche (Charmoy) : en amont et en aval du barrage de la gravière, lieu-dit les communaux, « les Prés de la gravière », environ 2000 mètres, 4 hectares",
+    "plan_eau": null,
+    "cours_eau": "Yonne"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Yonne, réserve « More Ragon », rive gauche (Charmoy), en amont et en aval du barrage de la gravière, lieu-dit les communaux, « les Prés de la gravière », environ 2000 mètres, 4 hectares est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0050, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite du 1er janvier 2026 au 31 décembre 2030, dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-more-ragon-charmoy",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0050 du 6 octobre 2025 (réserve temporaire, Yonne, More Ragon, Charmoy), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite du 1er janvier 2026 au 31 décembre 2030, dans la réserve de pêche désignée à l'article 2"
+   }
+  },
+  {
+   "id": "89-toutes-reserve-canal-hate-aux-moines-germigny-lot-8",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "89",
+    "lieu": "Canal de prise d'eau « la Hâte aux Moines » (Germigny), lot de pêche n° 8 : de la rivière Armançon au bief n°108(Y) du Canal de Bourgogne, environ 260 mètres",
+    "plan_eau": null,
+    "cours_eau": "Canal de prise d'eau la Hâte aux Moines"
+   },
+   "du": "2026-01-01",
+   "au": "2030-12-31",
+   "valeur": {
+    "texte": "Toute pêche est interdite, sauf pêches à des fins scientifiques ou opérations de sauvetage de poissons expressément autorisées."
+   },
+   "phrase": "Pêche interdite du 1er janvier 2026 au 31 décembre 2030 : Canal de prise d'eau « la Hâte aux Moines » (Germigny), lot de pêche n° 8, de la rivière Armançon au bief n°108(Y) du Canal de Bourgogne, environ 260 mètres est une réserve de pêche temporaire (sauf pêche scientifique ou sauvetage de poissons autorisés).",
+   "source": {
+    "texte": "Arrêté n° DDT/SEE/2025/0053, articles 2 et 3",
+    "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-10-06"
+   },
+   "citation": "Toute pêche est interdite du 1er janvier 2026 au 31 décembre 2030, dans la réserve de pêche désignée à l'article 2",
+   "statut": "brouillon",
+   "expire_le": "2030-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "89-toutes-reserve-hate-aux-moines-germigny",
+    "source": {
+     "texte": "Arrêté n° DDT/SEE/2025/0053 du 6 octobre 2025 (réserve temporaire, canal de prise d'eau « la Hâte aux Moines », Germigny), articles 2 et 3",
+     "url": "https://www.yonne.gouv.fr/contenu/telechargement/47868/378165/file/recueil-89-2025-356-recueil-des-actes-administratifs.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-10-06"
+    },
+    "citation": "Toute pêche est interdite du 1er janvier 2026 au 31 décembre 2030, dans la réserve de pêche désignée à l'article 2"
+   }
   }
  ],
  "desaccords": {
