@@ -62,7 +62,7 @@ nonisolated struct RequetePoissonsAquarium: EntityQuery {
 }
 
 /// La configuration du widget : les poissons choisis, dans l'ordre choisi.
-nonisolated struct ChoixAquariumIntent: WidgetConfigurationIntent {
+struct ChoixAquariumIntent: WidgetConfigurationIntent {
     static let title: LocalizedStringResource = "Choisir les poissons"
     static let description = IntentDescription("Les poissons de ton Pescedex qui nagent dans le widget.")
 

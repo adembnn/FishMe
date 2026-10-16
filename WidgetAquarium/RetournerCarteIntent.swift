@@ -7,7 +7,7 @@ import Foundation
 // Aucun lieu, aucune donnée de pêche : seulement un id de carte.
 
 /// Toucher la carte l'autre face. WidgetKit recharge le widget tout seul après un bouton d'intent.
-nonisolated struct RetournerCarteIntent: AppIntent {
+struct RetournerCarteIntent: AppIntent {
     static let title: LocalizedStringResource = "Retourner la carte"
     static let openAppWhenRun = false
 
@@ -67,7 +67,7 @@ nonisolated struct RequeteCartesWidget: EntityQuery {
 }
 
 /// Le réglage du widget : quelle carte afficher. Rien de choisi : la plus rare, puis la plus récente.
-nonisolated struct ChoixCarteIntent: WidgetConfigurationIntent {
+struct ChoixCarteIntent: WidgetConfigurationIntent {
     static let title: LocalizedStringResource = "Choisir la carte"
     static let description = IntentDescription("Choisis la carte de ton Pescedex à montrer.")
 
