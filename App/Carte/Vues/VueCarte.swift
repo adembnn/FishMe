@@ -48,8 +48,11 @@ struct VueCarte: View {
     @State private var bulleSpot = false
     @State private var feuilleSpotMasquee = false
     @State private var afficherOuChercher = false
-    /// Faux : on arrive sur « Ton spot » (maquette P06 C). Vrai : la carte, ouverte d'un toucher sur le bouton carte.
-    @State private var afficherCarte = false
+    /// Vrai : on arrive sur la carte seule (Adem, 16 oct. : « on veut juste la carte », rien qui surgit).
+    /// Faux : « Ton spot » (maquette P06 C), ouvert d'un toucher sur le bouton retour de la carte.
+    @State private var afficherCarte = true
+    /// La feuille « Ton spot » (P06 A) ne monte plus d'elle-même : elle s'ouvre d'un toucher sur la pastille « Ton spot » en haut.
+    @State private var feuilleSpotOuverte = false
     @State private var apercu: ApercuSpot?
     @State private var reseauDisponible = true
 
@@ -138,7 +141,7 @@ struct VueCarte: View {
         guard !Task.isCancelled else { return }
         volFait = true
         bulleSpot = true
-        withAnimation(.spring) { feuilleSpotMasquee = false }
+        feuilleSpotMasquee = false
         try? await Task.sleep(for: .seconds(6))
         withAnimation { bulleSpot = false }
     }
@@ -763,26 +766,41 @@ struct VueCarte: View {
     private var enTeteCarte: some View {
         HStack(spacing: 8) {
             BoutonRond(role: .retour, rendu: .verre, action: retourAuSpot)
-            HStack(spacing: 8) {
-                Image(systemName: "mappin")
-                    .font(Police.taille(18))
-                    .foregroundStyle(Palette.marine)
-                    .accessibilityHidden(true)
-                // « Ton spot · La Marne · 94 » : la pastille dit que c'est le spot, pas la position de l'iPhone.
-                Text(apercu.map { "Ton spot · \($0.lieu)" } ?? "Carte")
-                    .font(Police.detail)
-                    .foregroundStyle(Palette.encre)
-                    .lineLimit(1)
-                Spacer(minLength: 0)
+            // Un toucher sur la pastille ouvre (ou range) la feuille « Ton spot » : elle ne monte jamais d'elle-même.
+            Button {
+                withAnimation(.spring) { feuilleSpotOuverte.toggle() }
+            } label: {
+                HStack(spacing: 8) {
+                    Image(systemName: "mappin")
+                        .font(Police.taille(18))
+                        .foregroundStyle(Palette.marine)
+                        .accessibilityHidden(true)
+                    // « Ton spot · La Marne · 94 » : la pastille dit que c'est le spot, pas la position de l'iPhone.
+                    Text(apercu.map { "Ton spot · \($0.lieu)" } ?? "Carte")
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encre)
+                        .lineLimit(1)
+                    Spacer(minLength: 0)
+                    if modele.spotAffiche != nil && !sessionEnCours {
+                        Image(systemName: feuilleSpotOuverte ? "chevron.down" : "chevron.up")
+                            .font(Police.taille(14, .bold))
+                            .foregroundStyle(Palette.encreDouce)
+                            .accessibilityHidden(true)
+                    }
+                }
+                .padding(.horizontal, Espace.l)
+                .frame(height: Gabarit.zoneTactile)
+                .background {
+                    Capsule()
+                        .fill(.regularMaterial)
+                        .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
+                        .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
+                }
+                .contentShape(Capsule())
             }
-            .padding(.horizontal, Espace.l)
-            .frame(height: Gabarit.zoneTactile)
-            .background {
-                Capsule()
-                    .fill(.regularMaterial)
-                    .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
-                    .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
-            }
+            .buttonStyle(.plain)
+            .disabled(modele.spotAffiche == nil || sessionEnCours)
+            .accessibilityHint(feuilleSpotOuverte ? "Ranger Ton spot" : "Ouvrir Ton spot")
         }
     }
 
@@ -814,7 +832,7 @@ struct VueCarte: View {
                     reglages: ouvrirProfil)
                 .padding(.trailing, 8)
             }
-            if !sessionEnCours && !feuilleSpotMasquee {
+            if !sessionEnCours && !feuilleSpotMasquee && feuilleSpotOuverte {
                 feuilleSpotCarte
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
@@ -832,7 +850,11 @@ struct VueCarte: View {
                 .frame(width: 36, height: 5)
                 .padding(.top, 7)
                 .padding(.bottom, 12)
-                .accessibilityHidden(true)
+                .frame(maxWidth: .infinity)
+                .contentShape(Rectangle())
+                .onTapGesture { fermerFeuilleSpot() }
+                .accessibilityAddTraits(.isButton)
+                .accessibilityLabel("Fermer Ton spot")
             titreFeuilleCarte
             badgeFrequentationSpot
             tuilesFeuilleCarte
@@ -848,6 +870,14 @@ struct VueCarte: View {
         .padding(.bottom, 24)
         .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
         .shadow(color: Palette.encre.opacity(0.16), radius: 15, y: -2)
+        // Glisser vers le bas range la feuille : la carte redevient seule.
+        .simultaneousGesture(DragGesture(minimumDistance: 20).onEnded { valeur in
+            if valeur.translation.height > 60 { fermerFeuilleSpot() }
+        })
+    }
+
+    private func fermerFeuilleSpot() {
+        withAnimation(.spring) { feuilleSpotOuverte = false }
     }
 
     private var titreFeuilleCarte: some View {

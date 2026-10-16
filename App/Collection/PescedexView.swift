@@ -60,7 +60,6 @@ struct PescedexView: View {
     @State private var photoOuverte: Data?
     @State private var pngOuvert: Data?
     @State private var bredouillesDepliees = false
-    @State private var aTrouverDeplie = false
 
     private enum Volet: String, CaseIterable, Identifiable {
         case miens = "Les miens"
@@ -408,13 +407,15 @@ struct PescedexView: View {
     }
 
     private var colonnes: [GridItem] { Array(repeating: GridItem(.flexible(), spacing: Espace.s), count: 3) }
+    /// Les cartes obtenues, deux par ligne : assez grandes pour voir la rareté (fond, badge, reflet des rares et légendaires).
+    private var colonnesCartes: [GridItem] { Array(repeating: GridItem(.flexible(), spacing: Espace.m), count: 2) }
 
     private var classeur: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 if estVide {
                     if photographier != nil || declarer != nil { pourCommencer } else { premierePrise }
-                    // P45 B : le Pescedex vide reste plein, avec six silhouettes de la zone puis « + N autres ».
+                    // Le Pescedex vide reste plein : les espèces de la zone rangées par rareté, légendaires compris.
                     sectionATrouver
                 } else {
                     if zoneEnCartes { blocZone }
@@ -462,12 +463,11 @@ struct PescedexView: View {
         if !liste.isEmpty {
             VStack(alignment: .leading, spacing: 0) {
                 enteteDeGroupe("\(titre) · \(liste.count)", haut: 16)
-                LazyVGrid(columns: colonnes, spacing: Espace.s) {
+                LazyVGrid(columns: colonnesCartes, spacing: Espace.m) {
                     ForEach(liste) { emplacement in cellule(emplacement) }
                 }
-                .padding(Espace.m)
-                .tuileFishMe(rayon: Rayon.m)
-                .padding(.top, Espace.s)
+                .padding(.horizontal, Espace.xs)
+                .padding(.top, Espace.m)
             }
         }
     }
@@ -481,23 +481,22 @@ struct PescedexView: View {
                 enteteDeGroupe("Déclarées · \(liste.count)", haut: 16)
                 Group {
                     if liste.count == 1, let seule = liste.first {
-                        UnTiersDeuxTiers(espacement: Espace.s) {
+                        UnTiersDeuxTiers(espacement: Espace.m) {
                             cellule(seule)
                             noteDeclaree
                                 .padding(.horizontal, Espace.s)
                         }
                     } else {
                         VStack(alignment: .leading, spacing: Espace.m) {
-                            LazyVGrid(columns: colonnes, spacing: Espace.s) {
+                            LazyVGrid(columns: colonnesCartes, spacing: Espace.m) {
                                 ForEach(liste) { emplacement in cellule(emplacement) }
                             }
                             noteDeclaree
                         }
                     }
                 }
-                .padding(Espace.m)
-                .tuileFishMe(rayon: Rayon.m)
-                .padding(.top, Espace.s)
+                .padding(.horizontal, Espace.xs)
+                .padding(.top, Espace.m)
             }
         }
     }
@@ -509,38 +508,47 @@ struct PescedexView: View {
             .fixedSize(horizontal: false, vertical: true)
     }
 
-    /// Dos de cartes marine, toutes les espèces pas encore trouvées (P26 B).
+    /// Les espèces pas encore trouvées, rangées par rareté (Communes, Peu communes, Rares, Légendaires), chacune avec sa marque :
+    /// on voit d'un coup d'œil les légendaires qui restent à trouver (repris du Pescedex de Titouan, titouan/finitions).
     @ViewBuilder
     private var sectionATrouver: some View {
         let liste = aTrouver
         if !liste.isEmpty {
-            let visibles = (estVide && !aTrouverDeplie) ? Array(liste.prefix(apercu)) : liste
             VStack(alignment: .leading, spacing: 0) {
-                enteteDeGroupe("À trouver · \(liste.count)", haut: 16)
-                VStack(spacing: Espace.s) {
-                    LazyVGrid(columns: colonnes, spacing: Espace.s) {
-                        ForEach(visibles) { e in
-                            Button { ficheOuverte = e.id } label: { DosAATrouver(espece: e.espece) }
-                                .buttonStyle(.plain)
-                                .accessibilityLabel("\(e.espece.nom), pas encore pris")
+                enteteDeGroupe("À trouver · \(liste.count)", haut: 22)
+                ForEach(paliers, id: \.1) { palier in
+                    let groupe = liste.filter { StyleRarete($0.rarete.niveau) == palier.0 }
+                    if !groupe.isEmpty {
+                        HStack(spacing: 6) {
+                            MarqueRarete(style: palier.0, taille: 14)
+                            Text("\(palier.1) · \(groupe.count)")
+                                .font(Police.taille(13, .heavy))
+                                .foregroundStyle(palier.0.couleur)
+                                .lineLimit(1)
                         }
-                    }
-                    if estVide, liste.count > apercu {
-                        Button { aTrouverDeplie.toggle() } label: {
-                            Text(aTrouverDeplie ? "Réduire" : "+ \(liste.count - apercu) autres")
-                                .font(Police.detail)
-                                .foregroundStyle(Palette.encreDouce)
-                                .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
-                                .contentShape(Rectangle())
+                        .padding(.horizontal, Espace.l)
+                        .padding(.top, Espace.m)
+                        .accessibilityElement(children: .combine)
+                        .accessibilityAddTraits(.isHeader)
+                        LazyVGrid(columns: colonnes, spacing: Espace.s) {
+                            ForEach(groupe) { e in
+                                Button { ficheOuverte = e.id } label: { EmplacementATrouver(emplacement: e) }
+                                    .buttonStyle(.plain)
+                                    .accessibilityLabel("\(e.espece.nom), \(StyleRarete(e.rarete.niveau).mot), pas encore pris")
+                            }
                         }
-                        .buttonStyle(.plain)
+                        .padding(.horizontal, Espace.xs)
+                        .padding(.top, Espace.s)
                     }
                 }
-                .padding(Espace.m)
-                .tuileFishMe(rayon: Rayon.m)
-                .padding(.top, Espace.s)
             }
         }
+    }
+
+    /// Du plus facile au plus dur à compléter, comme le Pescedex de Titouan.
+    private var paliers: [(StyleRarete, String)] {
+        [(.commun, "Communes"), (.peuCommun, "Peu communes"), (.rare, "Rares"), (.legendaire, "Légendaires"),
+         (.nonMesuree, "Rareté non mesurée")]
     }
 
     /// Les sessions finies sans poisson, rangées à part : six vignettes au plus, puis « + N autres ».
@@ -596,15 +604,13 @@ struct PescedexView: View {
                 ficheOuverte = e.id
             }
         } label: {
-            if let infos = InfosCarte.vignette(emplacement: e, zone: modele.zone) {
-                CarteRectoView(infos: infos, mini: true)
-                    // Mode démo (Adem, 16 oct.) : une carte installée par la démo le dit toujours.
-                    .overlay(alignment: .bottom) {
-                        if let carte = e.carte, DemoPescedex.estDemo(carte.id) {
-                            PastilleDemo().padding(.bottom, 6)
-                        }
+            VignetteCarteObtenue(emplacement: e, zone: modele.zone)
+                // Mode démo (Adem, 16 oct.) : une carte installée par la démo le dit toujours.
+                .overlay(alignment: .topTrailing) {
+                    if let carte = e.carte, DemoPescedex.estDemo(carte.id) {
+                        PastilleDemo().padding(.top, 8).padding(.trailing, 8)
                     }
-            }
+                }
         }
         .buttonStyle(.plain)
         .accessibilityLabel(libelle(e))
