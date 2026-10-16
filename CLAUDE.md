@@ -21,6 +21,7 @@ Les documents que le plan cite sans chemin (`lots.md`, `fiches/L3.md`, `reports/
 - Repli du modèle (Adem, 15 oct. 17h) : si le modèle à 77 espèces n'est pas prêt, la démo se fait sur les 6 espèces les plus pêchées (brochet, sandre, perche, truite fario, carpe, black-bass), entraînées avec des photos de qualité ; les autres passent par « Autre ». Téléchargement et préparation des images sur le PC d'Adem, entraînement Create ML sur un Mac.
 - Amis (Adem, 15 oct.) : CloudKit, zone partagée par `CKShare`, SwiftData reste local (`docs/reports/amis.md`, option 1) ; lot L8 lancé le 15 oct. ; L7 attend L2.
 - Conseils hors saison (Adem, 16 oct. 4h) : sans conseil pour le mois, l'app montre ceux du mois le plus proche (`ContexteConseils.affiches`, L13). SDK Spark de MWM (Adem, 16 oct. 4h) : configuré seulement après l'accord du pêcheur (`BuildChallengeApp.configurerSpark`, appelé par `CoucheMesure`).
+- E-mail de contact de FishMe (Adem, 16 oct. 07h42 et 08h03 UTC) : fishme.app@gmail.com, partout (CGU `docs/legal/conditions-fishme.md`, `ContactClub.adresse`, signalements des amis).
 - L'IA ne décide jamais si un poisson peut être gardé : elle propose l'espèce, l'utilisateur confirme, la table sourcée donne le verdict.
 - Aucun coin de pêche exact ne quitte l'iPhone. Les photos enregistrées n'ont pas de GPS.
 - Aucune fausse donnée : chaque chiffre OFB affiche son nombre de pêches et l'année du dernier relevé.
