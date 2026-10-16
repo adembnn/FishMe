@@ -56,6 +56,8 @@ final class ModeleCarte {
     @ObservationIgnored var lieuxEnLigne: [SpotEau] = []
     @ObservationIgnored var idsEnLigne: Set<String> = []
     @ObservationIgnored var tacheEau: Task<Void, Never>?
+    /// La zone des derniers coins publics lus : tant que la vue y reste, on ne les relit pas à chaque mouvement.
+    @ObservationIgnored var zoneLieuxPublics: ZoneCarte?
     @ObservationIgnored var tacheRechercheEau: Task<Void, Never>?
     @ObservationIgnored var tacheCoursDEau: Task<Void, Never>?
     /// Vrai dès que le pêcheur a bougé la carte (ou choisi une zone) : avant, aucune recherche en ligne ne part.
@@ -272,7 +274,7 @@ final class ModeleCarte {
         let premiere = premiereCameraAttendue
         premiereCameraAttendue = false
         // L'eau suit chaque mouvement : le calcul est local et court. La recherche en ligne attend un vrai geste du pêcheur.
-        recalculerEau(region)
+        recalculerEau(region, delai: .milliseconds(150))
         declencherRechercheEnLigne(region, affichageInitial: premiere)
         // Affichage initial sans position ni cache : on n'ira pas lire toute la France pour rien.
         if premiere, depart == .enAttente { return }

@@ -15,7 +15,7 @@ struct BoutonCommencerVerre: View {
                 .frame(minHeight: Gabarit.zoneTactile)
         }
         .buttonStyle(.glassProminent)
-        .tint(Palette.marine.opacity(0.82))
+        .tint(Palette.marine.opacity(0.5))
         .controlSize(.large)
         .frame(maxWidth: 300)
         .disabled(!actif)

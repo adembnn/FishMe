@@ -80,7 +80,10 @@ extension Regroupeur {
 @concurrent nonisolated func calculerCoucheEau(spots: [SpotEau], region: ZoneCarte) async
   -> CoucheEau
 {
-  let points = spots.map { PointCarte(id: $0.id, coordonnee: $0.coordonnee) }
+  // On écarte d'abord les spots hors vue (même test que `Regroupeur`) : pas de tableau de 6 000 points à chaque mouvement.
+  let points = spots.compactMap { s -> PointCarte? in
+    region.contient(s.coordonnee) ? PointCarte(id: s.id, coordonnee: s.coordonnee) : nil
+  }
   let elements = Regroupeur.elements(points: points, region: region, maximum: Regroupeur.maximumEau)
   var ids: Set<String> = []
   for e in elements {

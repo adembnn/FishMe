@@ -800,17 +800,6 @@ struct VueCarte: View {
                             .padding(.vertical, 6)
                             .glassEffect(.regular, in: Capsule())
                     }
-                } else {
-                    Button { afficherPoissons = true } label: {
-                        Label("Voir les poissons", systemImage: "fish")
-                            .font(Police.legende)
-                            .foregroundStyle(Palette.encre)
-                            .padding(.horizontal, Espace.m)
-                            .frame(minHeight: Gabarit.zoneTactile)
-                            .glassEffect(.regular.interactive(), in: Capsule())
-                            .contentShape(Capsule())
-                    }
-                    .buttonStyle(.plain)
                 }
                 BoutonCommencerVerre(actif: modele.spotAffiche != nil) {
                     if let spot = modele.spotAffiche { onCommencerSession(spot) }
