@@ -17,7 +17,7 @@ Parcours d'un nouveau pêcheur dans l'iPhone 18 Pro virtuel (iOS 27), app neuve,
 |---|---|---|
 | Prise | Sur la photo d'un brochet, l'app proposait « Barbeau fluviatile » et « Hotu_-Toxo-stome » | Deux bugs : la 1re proposition (un groupe de deux espèces) disparaissait parce que deux listes de la grille partageaient les mêmes identifiants ; le recadrage par masque cassait dans le simulateur. Propositions dans l'ordre du modèle, image entière comme dans l'évaluation vérifiée, CPU seul dans le simulateur. Le brochet sort 1er. |
 | Prise | Nom brut « Hotu_-Toxo-stome » pour un groupe d'espèces | Libellé « Hotu ou toxostome », image de la 1re espèce du groupe |
-| Pescedex | La prise rangée n'apparaissait pas, et toutes les cartes étaient perdues à la relance | SwiftData rangeait la base dans le conteneur de l'App Group du widget (absent sans provisionnement), retombait en mémoire et perdait tout. Base nommée dans Application Support (`cartes.store`, et `Amis` hors App Group). |
+| Pescedex | Toutes les cartes étaient perdues à la relance | SwiftData rangeait la base dans le conteneur de l'App Group du widget (absent sans provisionnement), retombait en mémoire et perdait tout. Base nommée dans Application Support (`cartes.store`, et `Amis` hors App Group). |
 | Pescedex | Zone inconnue quand la prise n'est près d'aucune eau nommée (« Département 94 ») | `Formats.departement` lit aussi cette forme |
 | À essayer | « Pas encore de conseil » pour la perche, le chevesne, l'ablette | En octobre, aucun conseil débutant dans `conseils.json` (ils couvrent avril à août). Repli sur le mois le plus proche. À valider par Adem (voir plus bas). |
 | Paywall | Textes d'Apple en anglais | Langue de base `fr` (`CFBundleDevelopmentRegion`) ; à revoir à l'écran. Passer le StoreKit de test en France bloquait ses tests : laissé en `USA`. |
@@ -31,6 +31,9 @@ Parcours d'un nouveau pêcheur dans l'iPhone 18 Pro virtuel (iOS 27), app neuve,
 - Prise : choisir entre brochet et brochet aquitain se fait deux fois (groupe, puis sosies).
 - Données : « Brochet aquitain » est rangé dans les Cyprinidés ; « Poisson-chat (Ameiurus melas ; Ameiurus nebulosus [?]) » affiche son nom brut (lot D1).
 - Verdict : la ligne « Brochet : pêche fermée du 26 janvier au 24 avril » porte une coche verte.
+- Une prise faite avec « Essayer avec une photo d'exemple » devient une carte d'exemple (`exemple = 1` en base) : elle n'occupe pas sa place au Pescedex, c'est voulu par L4, mais le pêcheur ne le sait pas. À vérifier avec une vraie photo sur l'iPhone.
+- L'écran Où chercher porte le titre « Choisir un autre spot », comme le filtre d'espèce de la carte.
+- Au lancement, une fenêtre « Connectez-vous à votre compte Apple » est apparue une fois (StoreKit) : le schéma Run doit utiliser `TestConfig.storekit`.
 - Pas de révélation de la carte avant le paywall de fin de session (prévu par L4).
 - Tests unitaires : 122 sur 125 verts. Rouges : abonnement expiré (StoreKit de test), adresse de contact du club vide (à fournir par Adem), 2 espèces sans image. Le lanceur de tests reste bloqué après la suite StoreKit (fin de suite jamais rendue) : la lancer seule.
 
