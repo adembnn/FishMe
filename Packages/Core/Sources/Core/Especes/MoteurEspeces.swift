@@ -1,27 +1,43 @@
 import Foundation
 
 /// Un coefficient de la relation longueur-poids W = a × L^b (`longueur-poids.json`, W en grammes, L longueur totale en cm).
+/// `statut` : `source` (lu dans un article), `proxy` (coefficients d'une espèce proche, confiance faible) ou `lacune` (aucun poids).
 struct CoefficientPoids: Sendable, Equatable {
     var espece: String
     var a: Double
     var b: Double
-    var ltMinCm: Double
-    var ltMaxCm: Double
+    /// Plage de l'étude ; nil si l'article ne la donne pas (la garde de plausibilité prend alors le relais).
+    var ltMinCm: Double?
+    var ltMaxCm: Double?
     var n: Int?
     var region: String?
     var source: String
+    var statut: String = "source"
+    /// 95e centile des longueurs mesurées sur des photos de l'espèce (`nl_p95_cm`).
+    var p95Cm: Double?
+
+    var estLacune: Bool { statut == "lacune" }
 
     static func decoder(_ donnees: Data) -> [CoefficientPoids] {
         guard let json = try? JSONSerialization.jsonObject(with: donnees) else { return [] }
         let liste: [[String: Any]]
         if let l = json as? [[String: Any]] { liste = l } else if let o = json as? [String: Any], let l = (o["lignes"] ?? o["especes"] ?? o["coefficients"]) as? [[String: Any]] { liste = l } else { return [] }
         return liste.compactMap { e in
-            guard let id = (e["espece_id"] as? String) ?? (e["espece"] as? String) ?? (e["id"] as? String),
-                  let a = (e["a"] as? NSNumber)?.doubleValue, let b = (e["b"] as? NSNumber)?.doubleValue,
-                  let mn = ((e["longueur_min_cm"] ?? e["lt_min_cm"]) as? NSNumber)?.doubleValue, let mx = ((e["longueur_max_cm"] ?? e["lt_max_cm"]) as? NSNumber)?.doubleValue else { return nil }
+            guard let id = (e["espece_id"] as? String) ?? (e["espece"] as? String) ?? (e["id"] as? String) else { return nil }
+            let statut = (e["statut"] as? String) ?? "source"
+            let p95 = (e["nl_p95_cm"] as? NSNumber)?.doubleValue
+            if statut == "lacune" {
+                return CoefficientPoids(espece: id, a: 0, b: 0, ltMinCm: nil, ltMaxCm: nil, n: nil, region: nil,
+                                        source: "poids non estimable", statut: statut, p95Cm: p95)
+            }
+            guard let a = (e["a"] as? NSNumber)?.doubleValue, let b = (e["b"] as? NSNumber)?.doubleValue else { return nil }
+            let mn = ((e["longueur_min_cm"] ?? e["lt_min_cm"]) as? NSNumber)?.doubleValue
+            let mx = ((e["longueur_max_cm"] ?? e["lt_max_cm"]) as? NSNumber)?.doubleValue
+            var source = (e["source"] as? String) ?? "source non indiquée"
+            if statut == "proxy" { source += " [proxy : coefficients d'une espèce proche, confiance faible]" }
+            else if (e["confiance"] as? String) == "approximatif" { source += " [approximatif]" }
             return CoefficientPoids(espece: id, a: a, b: b, ltMinCm: mn, ltMaxCm: mx, n: (e["n"] as? NSNumber)?.intValue,
-                                    region: e["region"] as? String,
-                                    source: ((e["source"] as? String) ?? "source non indiquée") + ((e["confiance"] as? String) == "approximatif" ? " [approximatif]" : ""))
+                                    region: e["region"] as? String, source: source, statut: statut, p95Cm: p95)
         }
     }
 }
@@ -63,8 +79,22 @@ extension EspecePechable {
     }
 }
 
+/// Longueur plausible maximale d'une espèce (95e centile des longueurs mesurées sur photos). Protocole à part pour ne rien
+/// ajouter aux exigences de `ServiceEspeces` : les faux existants restent valides.
+public protocol ServiceLongueurPlausible: Sendable {
+    /// En cm ; `nil` si l'espèce n'a pas de référence.
+    func longueurPlausibleMax(espece: Espece) -> Double?
+}
+
+public extension ServiceEspeces {
+    /// `nil` pour un service qui ne sait pas la donner (faux, enveloppes) ; le p95 de `MoteurEspeces` sinon.
+    func longueurPlausibleMax(espece: Espece) -> Double? {
+        (self as? ServiceLongueurPlausible)?.longueurPlausibleMax(espece: espece)
+    }
+}
+
 /// Espèces : liste, rareté, espèces d'un coin, reconnaissance, poids.
-public struct MoteurEspeces: ServiceEspeces {
+public struct MoteurEspeces: ServiceEspeces, ServiceLongueurPlausible {
     /// Rayons successifs de recherche des stations OFB autour d'un coin : 10 km, puis 20, puis 30 s'il y en a moins de 2.
     public static let rayonsM: [Double] = [10_000, 20_000, 30_000]
     public static let stationsMinimum = 2
@@ -212,9 +242,25 @@ public struct MoteurEspeces: ServiceEspeces {
 
     // MARK: Poids
 
+    /// Au-delà de ce multiple du p95 mesuré, une longueur sans plage d'étude n'est pas estimée.
+    static let facteurPlausible = 1.2
+    /// Plafond quand ni la plage de l'étude ni le p95 ne sont connus.
+    static let plafondSansReference = 200.0
+
+    public func longueurPlausibleMax(espece: Espece) -> Double? {
+        coefficients.first(where: { $0.espece == espece.id })?.p95Cm
+    }
+
+    /// `nil` sur une lacune, sans coefficient, hors plage de l'étude (quand elle est connue) ou au-delà de 1,2 × p95 (sinon).
     public func poidsEstime(espece: Espece, longueurCm: Double) -> PoidsEstime? {
-        guard let c = coefficients.first(where: { $0.espece == espece.id }),
-              longueurCm >= c.ltMinCm, longueurCm <= c.ltMaxCm, longueurCm > 0 else { return nil }
+        guard let c = coefficients.first(where: { $0.espece == espece.id }), !c.estLacune,
+              longueurCm.isFinite, longueurCm > 0 else { return nil }
+        if c.ltMinCm != nil || c.ltMaxCm != nil {
+            if let mn = c.ltMinCm, longueurCm < mn { return nil }
+            if let mx = c.ltMaxCm, longueurCm > mx { return nil }
+        } else if longueurCm > (c.p95Cm.map { $0 * Self.facteurPlausible } ?? Self.plafondSansReference) {
+            return nil
+        }
         let kilos = c.a * pow(longueurCm, c.b) / 1000
         var source = c.source
         let details = [c.region, c.n.map { "n = \($0)" }].compactMap { $0 }
