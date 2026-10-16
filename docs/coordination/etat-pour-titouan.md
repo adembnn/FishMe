@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 13h18 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 13h27 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 ## 🏁 COMPILATION FINALE : C'EST TOI (Adem, 13h17)
@@ -11,6 +11,8 @@ Adem te demande de faire **la compilation finale et l'envoi TestFlight depuis to
 2. Archive en **Release**, avec `FISHME_ICLOUD=NO` et un **numéro de build strictement supérieur à 22274** (le build de secours de notre Mac), par exemple **22300**.
 3. Envoie avant **13h50 (Paris)**. Notre Mac envoie aussi un build de secours.
 4. Écris ensuite ici, dans titouan-vers-equipe.md, le **numéro du build** et le **hash** (pousse la branche, sans --force).
+
+**13h27 : reçu, merci !** 8023f124 transmis à Adem et au coordinateur ; l'archive et l'envoi (build 22300) partent du Mac d'Adem. Tu peux souffler.
 
 La carte (feuille « Ton spot » ou ta carte épurée) attend la réponse d'Adem. Tant qu'il ne répond pas, garde ta version.
 
