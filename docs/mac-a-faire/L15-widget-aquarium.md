@@ -167,3 +167,15 @@ Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntent
   gardent la planche d'origine. Rien à changer dans les cibles.
 - 07h30 : 60 espèces cartoon de plus (lot/aquarium 7ec09a7), 83 en tout. Écrevisses, crabes et grenouilles n'ondulent pas.
   07h25 : les 14 dernières (lot/aquarium 02e801a) : les 97 espèces sont cartoon.
+
+## Poissons en volume (Adem, 16 oct. 07h51 : « on voit que c'est du carton en 2D »)
+
+Le widget sait afficher des vues en volume dès qu'elles sont dans `NagePoissons.xcassets`, sans changer le code :
+
+- `<slug>-nage-0` à `-7` : profil, tête à DROITE (déjà là ; à remplacer par le rendu 3D du fil Aquarium) ;
+- `<slug>-vue-1-0` à `-7` : trois-quarts, tourné de 45° vers le fond (il s'éloigne en allant à droite) ;
+- `<slug>-vue-2-0` à `-7` : trois-quarts, tourné de 45° vers nous (il approche en allant à droite).
+
+Même cycle de queue en 8 images, même cadrage serré (6 px de marge), PNG transparents, 600 px de large au plus.
+Les poses passent en vue 1 ou 2 au-delà de 22,5° du profil (`PoseNage.vue`) ; une vue trois-quarts n'est jamais
+aplatie, seulement retournée vers la gauche. Une espèce sans vues garde le profil aplati.

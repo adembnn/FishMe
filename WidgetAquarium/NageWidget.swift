@@ -144,6 +144,9 @@ nonisolated public enum NageWidget {
         public var echelle: Double = 1
         /// Opacité : un poisson qui arrive du fond de l'océan apparaît peu à peu.
         public var opacite: Double = 1
+        /// Vue rendue en volume, si l'espèce en a (images `<slug>-vue-<vue>-<k>`) : 0 = de profil,
+        /// 1 = trois-quarts, il part vers le fond ; 2 = trois-quarts, il vient vers nous.
+        public var vue: Int = 0
     }
 
     /// Une boucle de `nombre` poses (10 s), pour un poisson.
@@ -348,8 +351,11 @@ nonisolated public enum NageWidget {
             phase = (phase + frequence(q.vitesse, longueur) * dt * echelleCycles).truncatingRemainder(dividingBy: 1)
             // Il sort du bleu lointain peu à peu (au-delà de z = 0,7), et se perd un peu dans l'eau au loin.
             let opacite = min(1, max(0, (1 - q.z) / 0.3) * (1 - 0.25 * max(q.z, 0)))
+            // Au-delà de 22,5° du profil, la vue trois-quarts (vers le fond ou vers nous).
+            let tourne = atan2(abs(q.vz) * 0.6, abs(q.vx)) > 0.39
+            let vue = tourne ? (q.vz > 0 ? 1 : 2) : 0
             return PoseNage(x: ex, y: ey / h, sens: sens, image: image, profondeur: q.z, assiette: assiette,
-                            echelle: s, opacite: opacite)
+                            echelle: s, opacite: opacite, vue: vue)
         }
     }
 
