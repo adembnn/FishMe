@@ -65,11 +65,9 @@ struct SessionEnCoursView<LigneConditions: View>: View {
             }
             chrono(session, maintenant: maintenant)
                 .padding(.top, 190 - 59)
-            // Sans prise, le chrono reste seul : pas de poisson gris.
-            if !FormatSortie.prises(session.sortie).isEmpty {
-                dernierePrise(session)
-                    .padding(.top, 430 - 59)
-            }
+            // Sans prise : une silhouette claire et « 0 prise », pour que le milieu de l'écran ne soit jamais vide.
+            dernierePrise(session)
+                .padding(.top, 430 - 59)
         }
         .padding(.horizontal, Espace.bord)
         .padding(.bottom, 24)
@@ -162,7 +160,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
         .frame(maxWidth: .infinity)
     }
 
-    /// Le poisson de la dernière prise (image) et « 1 prise · 68 cm ». Aucune prise : une silhouette et « 0 prise ».
+    /// Le poisson de la dernière prise (image) et « 1 prise · 68 cm ». Aucune prise : une silhouette et « Pas encore de prise ».
     private func dernierePrise(_ session: SessionEnCours) -> some View {
         let prises = FormatSortie.prises(session.sortie)
         let derniere = prises.last
@@ -175,6 +173,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
                     Image(systemName: "fish.fill").resizable().scaledToFit()
                         .foregroundStyle(derniere == nil ? Palette.silhouette : Palette.marine)
                         .padding(.horizontal, 60)
+                        .scaleEffect(x: -1, y: 1)
                 }
             }
             .frame(width: 190, height: 70)
@@ -189,7 +188,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
 
     private func legendePrises(_ prises: [Prise], _ derniere: Prise?) -> String {
         let n = prises.count
-        var texte = n == 0 ? "0 prise" : "\(n) prise\(n > 1 ? "s" : "")"
+        var texte = n == 0 ? "Pas encore de prise" : "\(n) prise\(n > 1 ? "s" : "")"
         if let cm = derniere?.longueurCm { texte += " · \(Int(cm.rounded())) cm" }
         return texte
     }
