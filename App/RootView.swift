@@ -105,7 +105,7 @@ final class ParcoursApp {
     let suivi: SuiviAbonnement
 
     /// Compte : la sauvegarde iCloud des cartes, des photos et du profil (App/Compte). `nil` sans dépôt.
-    @ObservationIgnored private(set) lazy var sauvegarde: SauvegardeICloud? = depot.map { SauvegardeICloud(depot: $0) }
+    @ObservationIgnored private(set) lazy var sauvegarde: SauvegardeICloud? = SauvegardeICloud.actif ? depot.map { SauvegardeICloud(depot: $0) } : nil
     @ObservationIgnored private(set) lazy var compte: CompteModele? = sauvegarde.map { service in
         CompteModele(service: service,
                      restaurerAchats: { [weak self] in
@@ -209,7 +209,8 @@ final class ParcoursApp {
     /// L8 : `nil` si le cache local des amis ne s'ouvre pas (l'écran Amis le dit alors).
     func gestionAmis() -> GestionAmis? {
         if let gestionAmisCreee { return gestionAmisCreee }
-        guard let depot,
+        // Sans iCloud à l'archivage (clé Info `FishMeICloud` à NO), aucun CKContainer : l'écran Amis dit qu'il est indisponible.
+        guard SauvegardeICloud.actif, let depot,
               let conteneur = (try? CacheAmis.creerConteneur()) ?? (try? CacheAmis.creerConteneur(enMemoire: true)) else { return nil }
         let configuration = ConfigurationAmis(contact: ContactClub.adresse)
         let gestion = GestionAmis(service: ServiceAmisCloudKit(configuration: configuration),
@@ -602,7 +603,9 @@ struct RootView: View {
             }
         }
         // DEBUG, avec -FishMeApercuWidget YES : l'animation du widget aquarium par-dessus l'app (vidéo sans écran d'accueil).
+        #if DEBUG
         .apercuWidgetSiDemande()
+        #endif
         .task {
             guard app == nil else { return }
             Sons.prechauffer()
