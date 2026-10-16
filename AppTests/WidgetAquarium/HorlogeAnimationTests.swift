@@ -1,69 +1,47 @@
-import Testing
 import Foundation
+import Testing
 @testable import WidgetAquariumLogique
 
-private let ref = HorlogeAnimation.dateReference
+private let ref = HorlogeAnimation.reference(pour: Date(timeIntervalSince1970: 1_800_000_000))
 
 @Suite("HorlogeAnimation")
 struct HorlogeAnimationTests {
-    @Test func referenceFixeEntiereEtPassee() {
-        #expect(ref.timeIntervalSince1970 == 1_700_000_000)
-        #expect(ref.timeIntervalSince1970.truncatingRemainder(dividingBy: 1) == 0)
-        #expect(ref < Date())
+    @Test func constantes() {
+        #expect(HorlogeAnimation.nombreImages == 80)
+        #expect(HorlogeAnimation.dureeBoucle == 10)
+        #expect(HorlogeAnimation.reference(pour: Date(timeIntervalSince1970: 100)) == Date(timeIntervalSince1970: 40))
     }
 
-    @Test func decalagesDesMasques() {
-        #expect(HorlogeAnimation.decalagePair(copie: 0) == 0)
-        #expect(HorlogeAnimation.decalagePair(copie: 3) == 0.375)
-        #expect(HorlogeAnimation.decalageImpair(copie: 0) == 0.125)
-        #expect(HorlogeAnimation.decalageImpair(copie: 15) == 2)
-        #expect(HorlogeAnimation.dureeBoucle() == 2)
+    @Test func masquesDeLaCopie() {
+        #expect(HorlogeAnimation.masques(copie: 0).a == (0, 0))
+        #expect(HorlogeAnimation.masques(copie: 0).b == (9, 0.125))
+        #expect(HorlogeAnimation.masques(copie: 13).a == (1, 0.625))
+        #expect(HorlogeAnimation.masques(copie: 13).b == (0, 0.75))
+        #expect(HorlogeAnimation.masques(copie: 79).a == (9, 0.875))
+        #expect(HorlogeAnimation.masques(copie: 79).b == (8, 1))
     }
 
-    @Test func chronoComptePositifVersLeHaut() {
-        // Une seconde après la date : chiffre 1 ; 10 s après : 0 ; 12,9 s : 2.
-        #expect(HorlogeAnimation.dernierChiffre(decalage: 0, a: ref.addingTimeInterval(1.0)) == 1)
-        #expect(HorlogeAnimation.dernierChiffre(decalage: 0, a: ref.addingTimeInterval(10.0)) == 0)
-        #expect(HorlogeAnimation.dernierChiffre(decalage: 0, a: ref.addingTimeInterval(12.9)) == 2)
-        // Décalage 0,5 s : la date est 0,5 s plus tard, donc le chiffre change 0,5 s plus tard.
-        #expect(HorlogeAnimation.dernierChiffre(decalage: 0.5, a: ref.addingTimeInterval(1.2)) == 0)
-        #expect(HorlogeAnimation.dernierChiffre(decalage: 0.5, a: ref.addingTimeInterval(1.5)) == 1)
+    @Test func dernierChiffre() {
+        #expect(HorlogeAnimation.dernierChiffre(reference: ref, decalage: 0, a: ref.addingTimeInterval(1.0)) == 1)
+        #expect(HorlogeAnimation.dernierChiffre(reference: ref, decalage: 0, a: ref.addingTimeInterval(12.9)) == 2)
+        #expect(HorlogeAnimation.dernierChiffre(reference: ref, decalage: 0.5, a: ref.addingTimeInterval(1.2)) == 0)
     }
 
-    /// Le cœur : à chaque instant (pas de 1/64 s sur 6 s), UNE seule copie est visible, et c'est celle du calcul direct.
-    @Test func uneSeuleCopieVisible() {
-        var t = ref.addingTimeInterval(1234)
-        let fin = t.addingTimeInterval(6)
-        while t < fin {
-            let visibles = (0..<16).filter { HorlogeAnimation.copieVisible($0, a: t) }
-            #expect(visibles.count == 1, "instant \(t.timeIntervalSince(ref))")
-            #expect(visibles.first == HorlogeAnimation.imageVisible(a: t))
-            t = t.addingTimeInterval(1.0 / 64)
+    @Test func uneSeuleCopieVisibleAChaqueInstant() {
+        // Sur 30 s, tous les 1/64 s : exactement une copie visible, celle que donne le calcul direct.
+        for pas in 0..<(30 * 64) {
+            let t = ref.addingTimeInterval(Double(pas) / 64 + 1.0 / 128)
+            let visibles = (0..<80).filter { HorlogeAnimation.copieVisible($0, reference: ref, a: t) }
+            #expect(visibles.count == 1)
+            #expect(visibles.first == HorlogeAnimation.imageVisible(reference: ref, a: t))
         }
     }
 
-    @Test func huitImagesParSeconde() {
-        // Au milieu de chaque fenêtre de 1/8 s, l'image j de la boucle est visible.
-        let debut = ref.addingTimeInterval(5000) // multiple de 2 s
-        for j in 0..<16 {
-            let t = debut.addingTimeInterval(Double(j) / 8 + 1.0 / 16)
-            #expect(HorlogeAnimation.imageVisible(a: t) == j)
-            #expect(HorlogeAnimation.copieVisible(j, a: t))
+    @Test func ordreEtBoucle() {
+        for j in 0..<80 {
+            let t = ref.addingTimeInterval(Double(j) / 8 + 0.06)
+            #expect(HorlogeAnimation.imageVisible(reference: ref, a: t) == j)
         }
-        // La boucle dure 2 s.
-        #expect(HorlogeAnimation.imageVisible(a: debut.addingTimeInterval(2.03)) == 0)
-    }
-
-    @Test func bornesDeFenetre() {
-        let debut = ref.addingTimeInterval(5000)
-        #expect(HorlogeAnimation.imageVisible(a: debut) == 0)
-        #expect(HorlogeAnimation.imageVisible(a: debut.addingTimeInterval(0.124)) == 0)
-        #expect(HorlogeAnimation.imageVisible(a: debut.addingTimeInterval(0.125)) == 1)
-        #expect(HorlogeAnimation.imageVisible(a: debut.addingTimeInterval(1.999)) == 15)
-    }
-
-    @Test func entreeInvalide() {
-        #expect(HorlogeAnimation.imageVisible(a: ref, nombre: 0) == 0)
-        #expect(HorlogeAnimation.imageVisible(a: ref.addingTimeInterval(-3.2)) >= 0)
+        #expect(HorlogeAnimation.imageVisible(reference: ref, a: ref.addingTimeInterval(10.01)) == 0)
     }
 }

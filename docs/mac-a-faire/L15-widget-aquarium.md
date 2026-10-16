@@ -109,3 +109,10 @@ Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntent
 - Dans `RootView`, au lancement : `.task { PontAquariumWidget.appliquerProForce() }` (ne fait rien sans l'argument, ni en Release).
 - Lancer avec `-FishMeForcerPro YES` : le widget aquarium passe en Pro (poissons visibles, bouton nourrir) ; chaque `publier` le garde.
 - Simulateur : `xcrun simctl launch booted ai.mwm.build.challenge.team.01 -FishMeForcerPro YES`
+
+## Vraie nage (16 oct., 05h30)
+- Polices : remplacer dans `UIAppFonts` (FishMeWidget ET BuildChallenge) les deux `FishMeMasque*.ttf` par les 10 fichiers
+  `FishMeClignoteChiffre0.otf` … `FishMeClignoteChiffre9.otf` (WidgetAquarium/Polices/). `modele-clignotant.otf` n'est pas à déclarer.
+- Nouveau catalogue `WidgetAquarium/NagePoissons.xcassets` (cycle de battement, 8 images par espèce) dans FishMeWidget et BuildChallenge.
+- `DecorAnime.swift` est supprimé (bulles et lumière animées retirées, le décor 3D est fixe).
+- Preuve attendue : AquariumDepuisJSONTests (4 tests) vert, puis 2 captures du widget à 0,5 s d'écart qui diffèrent.

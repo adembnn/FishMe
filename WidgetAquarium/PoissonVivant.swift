@@ -4,36 +4,31 @@ import UIKit
 import WidgetKit
 #endif
 
-// Widget + app. Un poisson qui nage en continu : la planche (fond transparent, regarde vers la DROITE) est coupée
-// en deux par des masques. Le corps (65 % avant) reste en place avec un très léger roulis ; la queue (35 % arrière)
-// pivote autour de la jonction. Le halo de rareté n'est PAS ici : il se dessine une fois, derrière.
-struct PoissonVivant: View {
-    let slug: String
-    let largeur: CGFloat
-    let versLaDroite: Bool
-    let phase: Int
-    let anime: Bool
+// Widget + app. Les images d'un poisson qui nage : le cycle de battement de queue vu de profil
+// (`NagePoissons.xcassets`, `<slug>-nage-0` … `-7` : la queue se raccourcit puis s'élargit, elle bat vers nous
+// puis loin de nous ; fabriqué par `fabriquer_cycle_nage.py`). Sans cycle, l'image fixe de l'espèce ;
+// sans image du tout, une silhouette blanche : jamais un poisson invisible.
+enum PoissonVivant {
+    static let imagesCycle = 8
 
-    init(slug: String, largeur: CGFloat, versLaDroite: Bool, phase: Int, anime: Bool) {
-        self.slug = slug
-        self.largeur = largeur
-        self.versLaDroite = versLaDroite
-        self.phase = phase
-        self.anime = anime
-    }
-
-    /// Part avant de la planche qui reste rigide.
-    private static let partCorps: CGFloat = 0.65
-    /// Recouvrement des deux morceaux à la jonction, en points (évite une fente).
-    private static let recouvrement: CGFloat = 2
-    private static let angleQueue = 14.0
-
-    /// L'image de l'espèce existe-t-elle dans le catalogue de cette cible ? Sinon, une silhouette générique :
-    /// jamais un poisson invisible (slug inconnu, catalogue absent de la cible).
+    /// L'image fixe de l'espèce existe-t-elle dans le catalogue de cette cible ?
     static func imageDisponible(_ slug: String) -> Bool { UIImage(named: slug) != nil }
 
-    private var planche: some View {
-        let base = (Self.imageDisponible(slug) ? Image(slug) : Image(systemName: "fish.fill"))
+    /// Le cycle de nage de l'espèce existe-t-il ?
+    static func cycleDisponible(_ slug: String) -> Bool { UIImage(named: "\(slug)-nage-0") != nil }
+}
+
+/// Une image du poisson : `image` = n° dans le cycle de nage (nil : image fixe). Les planches regardent à DROITE ;
+/// `sens` est l'échelle horizontale (−1 : à gauche, entre les deux pendant un demi-tour).
+struct ImagePoisson: View {
+    let slug: String
+    let image: Int?
+    let largeur: CGFloat
+    let sens: Double
+
+    var body: some View {
+        let nom = image.map { "\(slug)-nage-\($0)" } ?? slug
+        let base = (image != nil || PoissonVivant.imageDisponible(slug) ? Image(nom) : Image(systemName: "fish.fill"))
             .resizable()
         #if canImport(WidgetKit)
             .widgetAccentedRenderingMode(.desaturated)
@@ -42,45 +37,6 @@ struct PoissonVivant: View {
             .scaledToFit()
             .foregroundStyle(.white.opacity(0.85))
             .frame(width: largeur)
-    }
-
-    var body: some View {
-        Group {
-            if anime {
-                ImagesAnimees { k in
-                    image(numero: k)
-                }
-            } else {
-                planche
-            }
-        }
-        .scaleEffect(x: versLaDroite ? 1 : -1, y: 1)
-    }
-
-    /// L'image n° k de la boucle de 16 images (2 s).
-    private func image(numero k: Int) -> some View {
-        let n = Double(k + phase)
-        // 2 battements de queue par boucle ; roulis, tangage et avance-recul : 1 période par boucle.
-        let battement = sin(2 * .pi * n / 8)
-        let cycle = sin(2 * .pi * n / 16)
-        let angle = battement * Self.angleQueue
-        let roulis = cycle * 0.8
-        let tangage = CGFloat(cos(2 * .pi * n / 16)) * 1.5
-        let avance = CGFloat(cycle) * 2
-        let coupe = largeur * Self.partCorps
-
-        return ZStack {
-            planche
-                .mask(alignment: .leading) {
-                    Rectangle().frame(width: coupe + Self.recouvrement / 2)
-                }
-                .rotationEffect(.degrees(roulis))
-            planche
-                .mask(alignment: .trailing) {
-                    Rectangle().frame(width: largeur - coupe + Self.recouvrement / 2)
-                }
-                .rotationEffect(.degrees(angle), anchor: UnitPoint(x: Self.partCorps, y: 0.5))
-        }
-        .offset(x: avance, y: tangage)
+            .scaleEffect(x: sens, y: 1)
     }
 }

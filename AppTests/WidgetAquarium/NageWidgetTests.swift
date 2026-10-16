@@ -240,3 +240,44 @@ struct NageWidgetTests {
         #expect(InstantaneAquarium.vide.retenus(choisis: nil, limite: 5).isEmpty)
     }
 }
+
+@Suite("Nage")
+struct NageTests {
+    private let p = PlacementPoisson(id: "brochet-1", x: 0.5, y: 0.4, versLaDroite: true, echelle: 1, auRepas: false)
+
+    @Test func resteDansLAquarium() {
+        for j in 0..<80 {
+            let q = NageWidget.pose(p, copie: j, nombre: 80, demiLargeur: 0.15)
+            #expect(q.x - 0.15 >= 0 && q.x + 0.15 <= 1)
+            #expect(abs(q.y - 0.4) <= 0.026)
+            #expect(abs(q.sens) >= 0.18 && abs(q.sens) <= 1)
+            #expect((0..<8).contains(q.image))
+        }
+    }
+
+    @Test func traverseEtRevient() {
+        let poses = (0..<80).map { NageWidget.pose(p, copie: $0, nombre: 80, demiLargeur: 0.15) }
+        let xs = poses.map(\.x)
+        // Il va vraiment d'un bord à l'autre : au moins 40 % de la largeur parcourue.
+        #expect(xs.max()! - xs.min()! >= 0.4)
+        // Il regarde dans le sens où il avance.
+        for j in 0..<80 {
+            let dx = poses[(j + 1) % 80].x - poses[j].x
+            if abs(dx) > 0.001 { #expect((dx > 0) == (poses[j].sens > 0)) }
+        }
+        // Pas de saut : d'une image à la suivante, il avance de moins de 4 % de la largeur.
+        for j in 0..<80 { #expect(abs(poses[(j + 1) % 80].x - poses[j].x) < 0.04) }
+    }
+
+    @Test func battementDeQueueRegulier() {
+        let images = (0..<16).map { NageWidget.pose(p, copie: $0, nombre: 80, demiLargeur: 0.15).image }
+        for j in 0..<15 { #expect((images[j] + 1) % 8 == images[j + 1]) }
+    }
+
+    @Test func phasesDifferentes() {
+        let autre = PlacementPoisson(id: "perche-2", x: 0.5, y: 0.6, versLaDroite: true, echelle: 1, auRepas: false)
+        let a = NageWidget.pose(p, copie: 0, nombre: 80, demiLargeur: 0.15)
+        let b = NageWidget.pose(autre, copie: 0, nombre: 80, demiLargeur: 0.15)
+        #expect(a.x != b.x || a.sens != b.sens)
+    }
+}
