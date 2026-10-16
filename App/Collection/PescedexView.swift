@@ -53,6 +53,7 @@ struct PescedexView: View {
     @State private var photoOuverte: Data?
     @State private var pngOuvert: Data?
     @State private var bredouillesDepliees = false
+    @State private var aTrouverDeplie = false
 
     private enum Volet: String, CaseIterable, Identifiable {
         case miens = "Les miens"
@@ -340,7 +341,12 @@ struct PescedexView: View {
 
     private var trouvees: [Emplacement] { modele.emplacements.filter { $0.carte != nil && $0.carte?.estDeclaree == false } }
     private var declarees: [Emplacement] { modele.emplacements.filter { $0.carte?.estDeclaree == true } }
-    private var aTrouver: [Emplacement] { modele.emplacements.filter { $0.carte == nil } }
+    /// À trouver : les espèces de la zone pas encore prises (le M du compteur) ; sans relevé, toutes celles pas encore prises.
+    private var aTrouver: [Emplacement] {
+        let sans = modele.emplacements.filter { $0.carte == nil }
+        let zone = sans.filter(\.releveeDansLaZone)
+        return zone.isEmpty ? sans : zone
+    }
 
     private var colonnes: [GridItem] { Array(repeating: GridItem(.flexible(), spacing: Espace.s), count: 3) }
 
@@ -349,6 +355,8 @@ struct PescedexView: View {
             VStack(alignment: .leading, spacing: 0) {
                 if estVide {
                     if photographier != nil || declarer != nil { pourCommencer } else { premierePrise }
+                    // P45 B : le Pescedex vide reste plein, avec six silhouettes de la zone puis « + N autres ».
+                    sectionATrouver
                 } else {
                     if zoneEnCartes { blocZone }
                     sectionCartes("Trouvées", trouvees)
@@ -447,13 +455,26 @@ struct PescedexView: View {
     private var sectionATrouver: some View {
         let liste = aTrouver
         if !liste.isEmpty {
+            let visibles = (estVide && !aTrouverDeplie) ? Array(liste.prefix(apercu)) : liste
             VStack(alignment: .leading, spacing: 0) {
                 enteteDeGroupe("À trouver · \(liste.count)", haut: 16)
-                LazyVGrid(columns: colonnes, spacing: Espace.s) {
-                    ForEach(liste) { e in
-                        Button { ficheOuverte = e.id } label: { DosAATrouver(espece: e.espece) }
-                            .buttonStyle(.plain)
-                            .accessibilityLabel("\(e.espece.nom), pas encore pris")
+                VStack(spacing: Espace.s) {
+                    LazyVGrid(columns: colonnes, spacing: Espace.s) {
+                        ForEach(visibles) { e in
+                            Button { ficheOuverte = e.id } label: { DosAATrouver(espece: e.espece) }
+                                .buttonStyle(.plain)
+                                .accessibilityLabel("\(e.espece.nom), pas encore pris")
+                        }
+                    }
+                    if estVide, liste.count > apercu {
+                        Button { aTrouverDeplie.toggle() } label: {
+                            Text(aTrouverDeplie ? "Réduire" : "+ \(liste.count - apercu) autres")
+                                .font(Police.detail)
+                                .foregroundStyle(Palette.encreDouce)
+                                .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                                .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
                 .padding(Espace.m)
