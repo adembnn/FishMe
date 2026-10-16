@@ -403,6 +403,21 @@ struct PleineEauTests {
         #expect(loin >= 5 && pres >= 5, "loin \(loin), près \(pres)")
     }
 
+    /// Les vues trois-quarts suivent le sens de la profondeur : vers le fond (1) quand il s'éloigne, vers nous (2).
+    @Test func vuesTroisQuarts() {
+        var vues = Set<Int>()
+        for slug in slugs {
+            for id in ["a", "b", "c", "d", "e", "f"] {
+                let poses = boucle(slug, id: id)
+                vues.formUnion(poses.map(\.vue))
+                for j in 0..<159 where poses[j].vue == 1 && poses[j + 1].vue == 1 {
+                    #expect(poses[j + 1].profondeur >= poses[j].profondeur - 1e-9, "\(slug) \(id) vue 1 à \(j)")
+                }
+            }
+        }
+        #expect(vues == [0, 1, 2])
+    }
+
     @Test func perspectiveEtOpacite() {
         for slug in slugs {
             for q in boucle(slug) {

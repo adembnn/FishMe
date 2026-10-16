@@ -16,6 +16,11 @@ enum PoissonVivant {
 
     /// Le cycle de nage de l'espèce existe-t-il ?
     static func cycleDisponible(_ slug: String) -> Bool { UIImage(named: "\(slug)-nage-0") != nil }
+
+    /// Les deux vues trois-quarts en volume (vers le fond, vers nous) existent-elles ?
+    static func vuesDisponibles(_ slug: String) -> Bool {
+        UIImage(named: "\(slug)-vue-1-0") != nil && UIImage(named: "\(slug)-vue-2-0") != nil
+    }
 }
 
 /// Une image du poisson : `image` = n° dans le cycle de nage (nil : image fixe). Les planches regardent à DROITE ;
@@ -25,9 +30,13 @@ struct ImagePoisson: View {
     let image: Int?
     let largeur: CGFloat
     let sens: Double
+    /// Vue en volume (0 : profil). Une vue trois-quarts est déjà rendue tournée : on ne l'aplatit pas, on la
+    /// retourne seulement quand il nage vers la gauche.
+    var vue: Int = 0
 
     var body: some View {
-        let nom = image.map { "\(slug)-nage-\($0)" } ?? slug
+        let nom = image.map { vue > 0 ? "\(slug)-vue-\(vue)-\($0)" : "\(slug)-nage-\($0)" } ?? slug
+        let echelleX = vue > 0 && image != nil ? (sens < 0 ? -1.0 : 1.0) : sens
         let base = (image != nil || PoissonVivant.imageDisponible(slug) ? Image(nom) : Image(systemName: "fish.fill"))
             .resizable()
         #if canImport(WidgetKit)
@@ -37,6 +46,6 @@ struct ImagePoisson: View {
             .scaledToFit()
             .foregroundStyle(.white.opacity(0.85))
             .frame(width: largeur)
-            .scaleEffect(x: sens, y: 1)
+            .scaleEffect(x: echelleX, y: 1)
     }
 }
