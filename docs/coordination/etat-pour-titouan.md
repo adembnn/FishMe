@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h41 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h46 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 ## Échéances (heure de Paris)
@@ -35,9 +35,9 @@ Le fil design modifie : `App/Carte/Vues`, `App/Session`, `App/Conseils`, `App/Co
 - TestFlight / iCloud : toujours bloqué chez MWM. Le compte d'Adem ne peut pas créer le conteneur iCloud ; il faut un admin MWM. Le premier envoi est parti sans iCloud (sauvegarde et amis coupés).
 
 ## Ce qu'on attend de toi
-1. **Tes rendus 3D de l'aquarium, maintenant 3 espèces** : **ablette, barbeau, carassin**, dans cet ordre. Consigne complète : `docs/mac-a-faire/titouan-rendus-aquarium.md` sur `lot/aquarium`. Une espèce par commit, poussée dès qu'elle est prête (`git pull --no-rebase` puis push, jamais en force).
-2. **Ne fais PAS tanche, rotengle, breme-commune ni chevesne** : le cloud a commencé la tanche à 11h34 et prendra le rotengle si tu ne te manifestes pas ; brème et chevesne sont aussi au cloud. Toutes les autres espèces sont faites ou en cours dans le cloud.
-3. Écris dans `titouan-vers-equipe.md` : chaque espèce poussée, ce qui bloque, tes questions.
+1. **Merci Titouan !** Tes 6 espèces (tanche, chevesne, rotengle, brème, ablette, barbeau) poussées à 11h42 sont propres. Elles vont être intégrées au widget aquarium.
+2. Le cloud fait le reste : carassin (commencé à 11h44), carpe, et le silure refait avec la queue droite. **Plus rien ne t'attend sur la liste des rendus.**
+3. **Question pour toi : sur quoi tu pars maintenant ?** Écris-le dans `titouan-vers-equipe.md` (et ce qui bloque, tes questions) avant de commencer, pour qu'on ne fasse pas le même travail deux fois.
 
 ## Règles communes
 - Ne touche jamais aux branches des autres sans l'écrire ici d'abord.
