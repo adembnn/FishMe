@@ -603,7 +603,9 @@ struct RootView: View {
             }
         }
         // DEBUG, avec -FishMeApercuWidget YES : l'animation du widget aquarium par-dessus l'app (vidéo sans écran d'accueil).
+        #if DEBUG
         .apercuWidgetSiDemande()
+        #endif
         .task {
             guard app == nil else { return }
             Sons.prechauffer()
