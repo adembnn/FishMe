@@ -10,6 +10,35 @@ struct FeuilleConsentement: View {
     @State private var detailOuvert = false
 
     var body: some View {
+        ScrollView {
+            contenu
+                .padding(Espace.bord)
+        }
+        .scrollIndicators(.hidden)
+        .scrollBounceBehavior(.basedOnSize)
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            VStack(spacing: Espace.s) {
+                ViewThatFits(in: .horizontal) {
+                    HStack(spacing: Espace.m) { boutons }
+                    VStack(spacing: Espace.m) { boutons }
+                }
+                Button(detailOuvert ? "Masquer" : "En savoir plus") { detailOuvert.toggle() }
+                    .font(Police.corps)
+                    .foregroundStyle(Palette.marine)
+                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+            }
+            .padding(.horizontal, Espace.bord)
+            .padding(.top, Espace.s)
+            .background(Palette.fond)
+        }
+        .background(Palette.fond)
+        .presentationBackground(Palette.fond)
+        .presentationDetents([.large])
+        .presentationDragIndicator(.hidden)
+        .interactiveDismissDisabled()
+    }
+
+    private var contenu: some View {
         VStack(alignment: .leading, spacing: Espace.l) {
             VStack(alignment: .leading, spacing: Espace.xs) {
                 // Pas de bouton fermer (la maquette n'en a pas) : la feuille ne se ferme que par « Refuser » ou « Accepter »,
@@ -18,6 +47,7 @@ struct FeuilleConsentement: View {
                     .font(Police.grandTitre)
                     .foregroundStyle(Palette.encre)
                     .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityAddTraits(.isHeader)
                 Text("Tu peux changer ton choix à tout moment dans les réglages.")
                     .font(Police.corps)
                     .foregroundStyle(Palette.encreDouce)
@@ -43,27 +73,14 @@ struct FeuilleConsentement: View {
                     .foregroundStyle(Palette.encreDouce)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            Spacer(minLength: 0)
-            ViewThatFits(in: .horizontal) {
-                HStack(spacing: Espace.m) { boutons }
-                VStack(spacing: Espace.m) { boutons }
-            }
-            Button(detailOuvert ? "Masquer" : "En savoir plus") { detailOuvert.toggle() }
-                .font(Police.corps)
-                .foregroundStyle(Palette.marine)
-                .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
         }
-        .padding(Espace.bord)
-        .background(Palette.fond)
-        .presentationDetents([.large])
-        .presentationDragIndicator(.hidden)
-        .interactiveDismissDisabled()
     }
 
     private func groupe(titre: String, lignes: [(String, String?)]) -> some View {
         VStack(alignment: .leading, spacing: Espace.s) {
             Text(titre.uppercased())
                 .font(Police.legende)
+                .tracking(0.5)
                 .foregroundStyle(Palette.encreDouce)
                 .padding(.leading, Espace.l)
             VStack(spacing: 0) {

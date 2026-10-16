@@ -12,6 +12,8 @@ struct TunnelPremiersPasView: View {
     let pecherMaintenant: () -> Void
     let choisirUnSpot: () -> Void
     let passer: () -> Void
+    /// Rareté de l'espèce dans la zone, affichée sous le nom quand elle est fournie (libellé et couleur de rareté).
+    var rarete: (EspecePechable) -> (libelle: String, couleur: Color)? = { _ in nil }
 
     @State private var index = 0
     @State private var decalage: CGFloat = 0
@@ -46,8 +48,8 @@ struct TunnelPremiersPasView: View {
                 .foregroundStyle(Palette.encre)
                 .padding(.horizontal, Espace.l)
                 .frame(minHeight: 36)
-                .background(.regularMaterial, in: Capsule())
-                .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
+                .background(Palette.surface, in: Capsule())
+                .overlay(Capsule().strokeBorder(Palette.filet, lineWidth: 1))
             HStack {
                 if index > 0 {
                     BoutonRond(role: .retour, action: revenir)
@@ -66,14 +68,14 @@ struct TunnelPremiersPasView: View {
 
     private var cartes: some View {
         let espece = especes[index]
-        // À brancher : la rareté de l'espèce dans la zone (maquette : « • Commun » sous le nom) ; absente de ce paramètre.
         return ZStack {
             // La carte d'en dessous, légèrement penchée de l'autre côté.
             RoundedRectangle(cornerRadius: 32, style: .continuous)
-                .fill(Palette.tuile)
+                .fill(Palette.marineDoux)
                 .padding(.horizontal, Espace.xl + Espace.s)
                 .padding(.vertical, Espace.l)
-                .rotationEffect(.degrees(4))
+                .rotationEffect(.degrees(2))
+                .offset(x: 10, y: 8)
             VStack(spacing: Espace.m) {
                 ImageEspece(nom: espece.image, libelle: espece.nom)
                     .frame(maxWidth: 270, maxHeight: 180)
@@ -83,6 +85,12 @@ struct TunnelPremiersPasView: View {
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, Espace.m)
+                if let rareté = rarete(espece) {
+                    Label(rareté.libelle, systemImage: "circle.fill")
+                        .labelStyle(.titleAndIcon)
+                        .font(Police.detail)
+                        .foregroundStyle(rareté.couleur)
+                }
             }
             .padding(Espace.xl)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -122,13 +130,9 @@ struct TunnelPremiersPasView: View {
             .accessibilityHidden(true)
     }
 
-    /// Le panneau du bas : poignée, puis les deux boutons ronds (même effet que le glissement, pour VoiceOver).
+    /// Le panneau du bas, à 16 pt du bord : les deux boutons ronds (même effet que le glissement, pour VoiceOver).
     private var panneau: some View {
         VStack(spacing: Espace.s) {
-            Capsule()
-                .fill(Palette.filet)
-                .frame(width: 36, height: 5)
-                .accessibilityHidden(true)
             HStack {
                 Spacer()
                 bouton(icone: "xmark", mot: "Jamais pêché", plein: false) { repondre(dejaPeche: false) }
@@ -143,8 +147,8 @@ struct TunnelPremiersPasView: View {
         .frame(maxWidth: .infinity)
         .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
         .shadow(color: Palette.encre.opacity(0.10), radius: 16, y: -4)
-        .padding(.horizontal, Espace.s)
-        .padding(.bottom, Espace.s)
+        .padding(.horizontal, Espace.l)
+        .padding(.bottom, Espace.l)
     }
 
     /// « Non » : rond blanc cerclé, croix marine. « Oui » : rond marine plein, coche blanche (jamais d'orange ici).
@@ -171,12 +175,18 @@ struct TunnelPremiersPasView: View {
                 .font(Police.taille(56, .bold))
                 .foregroundStyle(Palette.marine)
                 .accessibilityHidden(true)
-            Text("\(nbDeclarees)")
-                .font(Police.chiffre)
-                .foregroundStyle(Palette.encre)
-            Label("dans ton Pescedex", systemImage: "square.stack.fill")
-                .font(Police.titre)
-                .foregroundStyle(Palette.encre)
+            if nbDeclarees > 0 {
+                Text("\(nbDeclarees)")
+                    .font(Police.chiffre)
+                    .foregroundStyle(Palette.encre)
+                Label("dans ton Pescedex", systemImage: "square.stack.fill")
+                    .font(Police.titre)
+                    .foregroundStyle(Palette.encre)
+            } else {
+                Text("Pas encore de carte")
+                    .font(Police.titre)
+                    .foregroundStyle(Palette.encre)
+            }
             Spacer(minLength: 0)
             gros("Pêcher maintenant", icone: "figure.fishing", plein: true, action: pecherMaintenant)
             gros("Choisir un spot", icone: "mappin.and.ellipse", plein: false, action: choisirUnSpot)

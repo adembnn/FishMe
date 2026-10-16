@@ -10,45 +10,47 @@ struct QuestionNiveauView: View {
     @State private var selection: NiveauPecheur? = NiveauPecheur.parDefaut
 
     var body: some View {
-        VStack(spacing: 0) {
-            // Maquette : icône de 168 pt (coins 38) avec son ombre, « FishMe » dessous, puis la question vers 55 % de la hauteur.
-            VStack(spacing: Espace.l) {
-                Image(systemName: "fish.fill")
-                    .font(Police.taille(84, .heavy))
-                    .foregroundStyle(Palette.surMarine)
-                    .frame(width: 168, height: 168)
-                    .background(Palette.nuit, in: RoundedRectangle(cornerRadius: 38, style: .continuous))
-                    .shadow(color: Palette.nuit.opacity(0.55), radius: 18, y: 14)
-                    .accessibilityHidden(true)
-                Text("FishMe")
-                    .font(Police.grandTitre)
-                    .foregroundStyle(Palette.encre)
-            }
-            .padding(.top, Espace.xxl * 2)
-            Spacer(minLength: Espace.xl)
-            Text("Tu pêches depuis…")
-                .font(Police.titre)
-                .foregroundStyle(Palette.encre)
-                .multilineTextAlignment(.center)
-            HStack(alignment: .top, spacing: Espace.s) {
-                ForEach([NiveauPecheur.debutant, .occasionnel, .confirme], id: \.self) { niveau in
-                    pastille(niveau)
+        GeometryReader { geo in
+            VStack(spacing: 0) {
+                // Maquette : icône de 168 pt (coins 38) avec son ombre, « FishMe » dessous, puis la question vers 56 % de la hauteur.
+                // À brancher : la vraie icône de l'app (aucun asset image n'existe, seulement AppIcon.appiconset), le symbole reste.
+                VStack(spacing: Espace.l) {
+                    Image(systemName: "fish.fill")
+                        .font(Police.taille(84, .heavy))
+                        .foregroundStyle(Palette.surMarine)
+                        .frame(width: 168, height: 168)
+                        .background(Palette.nuit, in: RoundedRectangle(cornerRadius: 38, style: .continuous))
+                        .shadow(color: Palette.nuit.opacity(0.55), radius: 18, y: 14)
+                        .accessibilityHidden(true)
+                    Text("FishMe")
+                        .font(Police.grandTitre)
+                        .foregroundStyle(Palette.encre)
                 }
+                .padding(.top, Espace.xxl * 2)
+                // Hauteur du bloc icône : 64 + 168 + 16 + environ 41.
+                Spacer().frame(height: max(Espace.xl, geo.size.height * 0.56 - 290))
+                Text("Tu pêches depuis…")
+                    .font(Police.titre)
+                    .foregroundStyle(Palette.encre)
+                    .multilineTextAlignment(.center)
+                HStack(alignment: .top, spacing: Espace.s) {
+                    ForEach([NiveauPecheur.debutant, .occasionnel, .confirme], id: \.self) { niveau in
+                        pastille(niveau)
+                    }
+                }
+                .padding(.top, Espace.xl)
+                Spacer(minLength: Espace.l)
+                // Pas de « Passer » dans la maquette : la feuille ne se ferme que par « Continuer » (niveau par défaut pré-choisi).
+                Button("Continuer") {
+                    if let selection { choisir(selection) }
+                }
+                .buttonStyle(.principal)
+                .padding(.bottom, Espace.s)
             }
-            .padding(.top, Espace.xl + Espace.xs)
-            Spacer(minLength: Espace.xl)
-            // Pas de « Passer » dans la maquette : glisser la feuille vers le bas garde le niveau par défaut.
-            Button("Continuer") {
-                if let selection { choisir(selection) }
-            }
-            .buttonStyle(.principal)
-            .disabled(selection == nil)
-            .opacity(selection == nil ? 0.45 : 1)
-            .padding(.bottom, Espace.s)
+            .padding(.horizontal, Espace.bord)
+            .padding(.vertical, Espace.l)
+            .frame(width: geo.size.width, height: geo.size.height)
         }
-        .padding(.horizontal, Espace.bord)
-        .padding(.vertical, Espace.l)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Palette.surface.ignoresSafeArea())
         .accessibilityIdentifier("question-niveau")
     }
@@ -71,10 +73,12 @@ struct QuestionNiveauView: View {
                     .frame(width: 76, height: 76)
                     .background(choisie ? Palette.marine : Palette.marineDoux, in: Circle())
                 Text(phrase(niveau))
-                    .font(Police.detail)
+                    .font(Police.corps)
                     .foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.8)
+                    .frame(maxWidth: .infinity, minHeight: 44, alignment: .top)
             }
             .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
             .contentShape(Rectangle())
@@ -97,7 +101,7 @@ struct QuestionNiveauModifier: ViewModifier {
         content
             .onAppear(perform: ouvrirSiBesoin)
             .onChange(of: declenchee) { ouvrirSiBesoin() }
-            .sheet(isPresented: $ouverte, onDismiss: { questionVue = true }) {
+            .fullScreenCover(isPresented: $ouverte, onDismiss: { questionVue = true }) {
                 QuestionNiveauView(
                     choisir: { niveau in
                         niveauBrut = niveau.rawValue
@@ -108,8 +112,7 @@ struct QuestionNiveauModifier: ViewModifier {
                         ouverte = false
                     }
                 )
-                .presentationDetents([.large])
-                .presentationDragIndicator(.hidden)
+                .interactiveDismissDisabled()
             }
     }
 
