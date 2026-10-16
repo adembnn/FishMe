@@ -12,15 +12,23 @@ struct RevelationCarteView: View {
     var delaiAuto: Double = 1.4
     let ranger: () -> Void
 
+    /// Révélations déjà montrées pendant cette session de l'app.
+    @MainActor private static var dejaRevelees = 0
+    /// Vrai à partir de la 2e révélation, ou pour un « commun » déjà possédé : le bouton est là tout de suite.
+    var dejaPossedee = false
+
     private enum Face { case cachee, recto, verso }
 
     @State private var face: Face = .cachee
     @State private var angle: Double = 0
     @State private var enCours = false
     @State private var mouvement = MouvementIPhone()
+    @State private var rapide = false
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
 
     private var style: StyleRarete { infos.style }
+
+    private var boutonVisible: Bool { face != .cachee || rapide || reduireAnimations }
 
     var body: some View {
         ZStack {
@@ -38,16 +46,22 @@ struct RevelationCarteView: View {
                 }
                 .buttonStyle(.principal)
                 .padding(.horizontal, 20)
-                .opacity(face == .cachee ? 0 : 1)
-                .disabled(face == .cachee)
-                .accessibilityHidden(face == .cachee)
+                .opacity(boutonVisible ? 1 : 0)
+                .disabled(!boutonVisible)
+                .accessibilityHidden(!boutonVisible)
                 Spacer(minLength: 16)
             }
         }
+        .contentShape(Rectangle())
+        .onTapGesture { if rapide { ranger() } }
         .task {
             guard face == .cachee else { return }
-            try? await Task.sleep(for: .seconds(reduireAnimations ? 0.3 : delaiAuto))
+            try? await Task.sleep(for: .seconds(reduireAnimations ? 0.3 : (rapide ? 0.15 : delaiAuto)))
             if !Task.isCancelled, face == .cachee { await retourner(vers: .recto) }
+        }
+        .onAppear {
+            rapide = Self.dejaRevelees >= 1 || (dejaPossedee && infos.style == .commun)
+            Self.dejaRevelees += 1
         }
         .onAppear { if style.aUnReflet && !reduireAnimations { mouvement.demarrer() } }
         .onDisappear { mouvement.arreter() }
@@ -74,6 +88,7 @@ struct RevelationCarteView: View {
         }
         .contentShape(Rectangle())
         .onTapGesture {
+            if rapide { ranger(); return }
             Task {
                 switch face {
                 case .cachee, .verso: await retourner(vers: .recto)

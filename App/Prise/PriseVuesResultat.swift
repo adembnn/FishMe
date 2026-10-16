@@ -76,8 +76,19 @@ struct PriseTailleView: View {
 
     private var curseur: some View {
         VStack(spacing: Espace.xs) {
-            Slider(value: Binding(get: { modele.longueurCm }, set: { modele.deplacerCurseur($0) }), in: PriseLogique.plageTaille, step: 1)
-                .accessibilityLabel("Taille en centimètres")
+            HStack(spacing: Espace.xs) {
+                Button { modele.ajusterCurseur(-1) } label: {
+                    Image(systemName: "minus.circle.fill").font(.title2).frame(width: 44, height: 44)
+                }
+                .accessibilityLabel("Un centimètre de moins")
+                Slider(value: Binding(get: { modele.longueurCm }, set: { modele.deplacerCurseur($0) }), in: PriseLogique.plageTaille, step: 1)
+                    .accessibilityLabel("Taille en centimètres")
+                Button { modele.ajusterCurseur(1) } label: {
+                    Image(systemName: "plus.circle.fill").font(.title2).frame(width: 44, height: 44)
+                }
+                .accessibilityLabel("Un centimètre de plus")
+            }
+            .foregroundStyle(Palette.encre)
             HStack {
                 Text("\(Int(PriseLogique.plageTaille.lowerBound)) cm")
                 Spacer()
