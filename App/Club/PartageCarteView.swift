@@ -23,26 +23,28 @@ struct PartageCarteView: View {
                                        description: Text("Ta première prise crée ta première carte."))
                     .frame(maxHeight: .infinity)
             } else if let choisie {
-                VStack(spacing: Espace.m) {
-                    Spacer(minLength: 64)
+                // Maquette : rond « Fermer » à 59 pt du haut, carte de 290 pt de large 53 pt plus bas.
+                VStack(spacing: 0) {
+                    Spacer().frame(height: 53)
                     apercu(choisie)
                         .resizable()
                         .scaledToFit()
-                        .clipShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-                        .shadow(color: Palette.encre.opacity(0.18), radius: 14, y: 8)
-                        .padding(.horizontal, Espace.xl)
+                        .frame(width: 290)
+                        .clipShape(RoundedRectangle(cornerRadius: 290 * Gabarit.coinCarte, style: .continuous))
+                        .shadow(color: Palette.encre.opacity(0.3), radius: 15, y: 14)
                         .accessibilityLabel(Text(choisie.titre))
-                    if cartes.count > 1 { bandeau }
                     Spacer(minLength: Espace.s)
+                    // Seul ajout à la maquette : choisir quelle carte partager quand il y en a plusieurs.
+                    if cartes.count > 1 { bandeau.padding(.bottom, Espace.s) }
                     feuille(choisie)
                 }
+                .ignoresSafeArea(edges: .bottom)
             }
             HStack {
                 BoutonRond(role: .fermer, rendu: .verre) { fermer() }
                 Spacer()
             }
             .padding(.horizontal, Espace.bord)
-            .padding(.top, Espace.s)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .toolbar(.hidden, for: .navigationBar)
@@ -71,11 +73,12 @@ struct PartageCarteView: View {
     /// La feuille du bas : poignée, « Sans ta position », le bouton principal, puis « Autres apps ».
     private func feuille(_ carte: CarteAPartager) -> some View {
         VStack(alignment: .leading, spacing: 0) {
-            Capsule().fill(Palette.silhouette).frame(width: 36, height: 5)
+            Capsule().fill(Palette.filet).frame(width: 36, height: 5)
                 .frame(maxWidth: .infinity)
+                .padding(.top, 7)
                 .padding(.bottom, Espace.m)
             HStack(spacing: Espace.m) {
-                Image(systemName: "lock.fill").font(Police.titre).foregroundStyle(Palette.ouvert)
+                Image(systemName: "lock.fill").font(Police.taille(20)).foregroundStyle(Palette.ouvert)
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Sans ta position").font(Police.sousTitre).foregroundStyle(Palette.encre)
                     Text("Ni lieu exact, ni GPS dans l'image.").font(Police.legende).foregroundStyle(Palette.encreDouce)
@@ -99,12 +102,13 @@ struct PartageCarteView: View {
                 .padding(.top, 18)
             }
         }
-        .padding(.horizontal, Espace.xl)
-        .padding(.top, Espace.s)
+        .padding(.horizontal, 20)
         .padding(.bottom, Espace.xl)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 38, style: .continuous))
+        .shadow(color: Palette.encre.opacity(0.16), radius: 15, y: -2)
         .padding(.horizontal, Espace.s)
+        .padding(.bottom, Espace.s)
     }
 
     private func apercu(_ carte: CarteAPartager) -> Image {

@@ -31,38 +31,47 @@ struct MesSortiesView: View {
     private var triees: [Sortie] { sorties.filter { $0.fin != nil }.sorted { $0.debut > $1.debut } }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: Espace.m) {
-            HStack {
-                BoutonRond(role: .fermer, rendu: .verre, action: surRetour)
-                Spacer(minLength: 0)
-            }
-            Text("Mes sorties")
-                .font(Police.grandTitre)
-                .foregroundStyle(Palette.encre)
-                .accessibilityAddTraits(.isHeader)
-            if triees.isEmpty {
-                vide
-            } else {
-                ScrollView {
-                    LazyVStack(spacing: 0) {
-                        ForEach(Array(triees.enumerated()), id: \.element.id) { index, sortie in
-                            ligne(sortie)
-                                .overlay(alignment: .top) {
-                                    if index > 0 { Rectangle().fill(Palette.filet).frame(height: 0.5) }
-                                }
+        // Maquette P17 A : la carte en fond (voilée à 20 %), retour de verre, feuille flottante « Mes sorties ».
+        ZStack(alignment: .bottom) {
+            FondCarteSession()
+            Palette.fond.opacity(0.2).ignoresSafeArea().accessibilityHidden(true)
+            FeuilleFlottante(basPadding: 16) {
+                Text("Mes sorties")
+                    .font(Police.taille(22, .heavy))
+                    .foregroundStyle(Palette.encre)
+                    .accessibilityAddTraits(.isHeader)
+                if triees.isEmpty {
+                    vide
+                } else {
+                    // La feuille s'adapte à la liste ; au-delà de 440 pt, la liste défile.
+                    ViewThatFits(in: .vertical) {
+                        liste.padding(.top, 12)
+                        ScrollView {
+                            liste.padding(.top, 12)
                         }
+                        .scrollIndicators(.hidden)
                     }
-                    .padding(.horizontal, Espace.m)
-                    .tuileFishMe(rayon: Rayon.l)
+                    .frame(maxHeight: 440)
                 }
-                .scrollIndicators(.hidden)
             }
         }
-        .padding(.horizontal, Espace.bord)
-        .padding(.top, Espace.s)
-        .padding(.bottom, Espace.l)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Palette.fond.ignoresSafeArea())
+        .overlay(alignment: .topLeading) {
+            BoutonRond(role: .retour, rendu: .verre, action: surRetour)
+                .padding(.leading, Espace.bord)
+        }
+    }
+
+    private var liste: some View {
+        VStack(spacing: 0) {
+            ForEach(Array(triees.enumerated()), id: \.element.id) { index, sortie in
+                ligne(sortie)
+                    .overlay(alignment: .top) {
+                        if index > 0 { Rectangle().fill(Palette.filet).frame(height: 0.5) }
+                    }
+            }
+        }
     }
 
     private var vide: some View {
@@ -79,25 +88,30 @@ struct MesSortiesView: View {
             }
         }
         .frame(maxWidth: .infinity)
-        .padding(.top, Espace.xxl)
+        .padding(.vertical, Espace.xl)
     }
 
     private func ligne(_ sortie: Sortie) -> some View {
         Button { surChoix(sortie) } label: {
-            HStack(spacing: Espace.m) {
+            HStack(spacing: 14) {
                 vignettes(sortie)
                 VStack(alignment: .leading, spacing: 2) {
                     Text("\(FormatSortie.date(sortie.debut)) · \(FormatSortie.duree(sortie))")
-                        .font(Police.sousTitre)
+                        .font(Police.taille(17, .heavy))
                         .foregroundStyle(Palette.encre)
                     Text(legende(sortie))
                         .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                         .lineLimit(2)
+                        .multilineTextAlignment(.leading)
                 }
-                Spacer(minLength: Espace.s)
+                Spacer(minLength: 0)
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .bold))
+                    .foregroundStyle(Palette.silhouette)
+                    .accessibilityHidden(true)
             }
-            .padding(.vertical, Espace.m)
+            .padding(.vertical, 12)
             .frame(minHeight: Gabarit.zoneTactile)
             .contentShape(Rectangle())
         }
@@ -110,19 +124,20 @@ struct MesSortiesView: View {
         let especes = especesDistinctes(sortie)
         if especes.isEmpty {
             Image(systemName: "water.waves")
-                .font(.system(size: 26, weight: .bold))
+                .font(.system(size: 30, weight: .bold))
                 .foregroundStyle(Palette.marine)
                 .frame(width: 88, height: 56)
-                .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
+                .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                 .accessibilityHidden(true)
         } else {
             let largeur: CGFloat = especes.count == 1 ? 88 : 41
             HStack(spacing: 6) {
                 ForEach(especes, id: \.id) { espece in
                     ZStack {
-                        RoundedRectangle(cornerRadius: Rayon.s, style: .continuous).fill(Palette.tuile)
+                        RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Palette.tuile)
                         if let infos = infosEspece(espece) {
-                            Image(infos.image).resizable().scaledToFit().padding(Espace.xs)
+                            Image(infos.image).resizable().scaledToFit()
+                                .frame(width: largeur * 0.86, height: especes.count == 1 ? 40 : 26)
                         } else {
                             Image(systemName: "fish").foregroundStyle(Palette.marine)
                         }

@@ -29,6 +29,7 @@ struct PaywallVue: View {
     @State private var modele: ModeleOffres
     @State private var message: String?
     @State private var dejaMontre = false
+    @State private var achatEnCours = false
     @Environment(\.dynamicTypeSize) private var tailleTexte
 
     init(declencheur: DeclencheurPaywall, produits: ProduitsMontres, achats: Achats, mesure: MesurePaywall, liens: LiensLegaux,
@@ -44,25 +45,28 @@ struct PaywallVue: View {
         _modele = State(initialValue: ModeleOffres(produits: produits))
     }
 
+    /// P34 A (et P50 B sur petit iPhone) : la carte de l'app reste visible derrière un voile, la croix en verre est en haut à gauche,
+    /// la feuille blanche (rayon 38, 8 pt de marge) flotte en bas. Sur petit écran sa hauteur est plafonnée : le contenu défile
+    /// et le bouton et les liens restent fixés en bas.
     var body: some View {
-        Group {
-            switch modele.etat {
-            case .chargement:
-                EcranChargement()
-            case .indisponible:
-                indisponible
-            case .pret:
-                boutique
+        GeometryReader { geo in
+            ZStack(alignment: .bottom) {
+                Palette.fond.opacity(0.62).ignoresSafeArea()
+                feuille
+                    .frame(height: min(max(geo.size.height - 60, 0), 540))
+                    .padding(.horizontal, 8)
+                    .padding(.bottom, 8)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         }
-        .background(Palette.surface)
-        .safeAreaInset(edge: .bottom) { pied }
         // Croix toujours visible (règle Apple) : elle ferme la feuille sans rien débloquer, même quand le paywall bloque.
-        .overlay(alignment: .topTrailing) {
+        .overlay(alignment: .topLeading) {
             BoutonRond(role: .fermer, action: fermer)
-                .padding(.top, Espace.m)
-                .padding(.trailing, Espace.bord)
+                .padding(.top, Espace.s)
+                .padding(.leading, Espace.bord)
         }
+        .presentationBackground(.clear)
+        .presentationDragIndicator(.hidden)
         .task {
             if !dejaMontre {
                 dejaMontre = true
@@ -72,85 +76,155 @@ struct PaywallVue: View {
         }
     }
 
-    // MARK: Boutique native
-
-    private var boutique: some View {
-        SubscriptionStoreView(productIDs: modele.produits.identifiants) {
-            argumentaire
-        }
-        .subscriptionStoreControlStyle(.prominentPicker)
-        .subscriptionStoreButtonLabel(.multiline)
-        .subscriptionStorePolicyDestination(url: liens.conditions, for: .termsOfService)
-        .subscriptionStorePolicyDestination(url: liens.confidentialite, for: .privacyPolicy)
-        .storeButton(.hidden, for: .restorePurchases)
-        .scrollIndicators(.hidden)
-        .onInAppPurchaseCompletion { _, resultat in
-            guard case .success(let achat) = resultat else { return }
-            await mesure.enregistrerAchat(achat)
-            if case .success(.verified(let transaction)) = achat { await transaction.finish() }
-            let etat = await achats.etat()
-            surEtat(etat)
-            if etat.donneAcces {
-                surAchatTermine(declencheur)
-                fermer()
+    private var feuille: some View {
+        VStack(spacing: 0) {
+            Group {
+                switch modele.etat {
+                case .chargement:
+                    ChargementBouchon().frame(maxWidth: .infinity, maxHeight: .infinity)
+                case .indisponible:
+                    indisponible
+                case .pret:
+                    boutique
+                }
             }
+            pied
+        }
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 38, style: .continuous))
+        .shadow(color: Palette.encre.opacity(0.16), radius: 30, y: -2)
+    }
+
+    // MARK: Boutique (P34 A)
+
+    /// Nos propres lignes d'offre et notre bouton « Continuer », en français et aux mesures de la maquette.
+    /// (La boutique toute faite d'Apple écrasait l'offre sous son bouton et parlait anglais.)
+    private var boutique: some View {
+        VStack(spacing: 0) {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    argumentaire
+                    VStack(spacing: 10) {
+                        ligneOffre(id: modele.produits.annuel, titre: "Annuel", detail: modele.phraseLancement, prix: modele.prixAnnuel)
+                        if let mensuel = modele.produits.mensuel, let prix = modele.prixMensuel {
+                            ligneOffre(id: mensuel, titre: "Mensuel", detail: modele.phraseEssai, prix: prix)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                }
+            }
+            .scrollIndicators(.hidden)
+            .scrollBounceBehavior(.basedOnSize)
+
+            Button {
+                Task { await acheter() }
+            } label: {
+                Group {
+                    if achatEnCours { ProgressView().tint(Palette.surMarine) } else { Text("Continuer") }
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.principal)
+            .disabled(achatEnCours)
+            .padding(.horizontal, 20)
+            .padding(.top, 14)
+        }
+    }
+
+    /// Une offre : rond de sélection, nom et phrase, prix à droite. Bord marine quand elle est cochée.
+    private func ligneOffre(id: String, titre: String, detail: String?, prix: String?) -> some View {
+        let coche = modele.choix == id
+        return Button {
+            modele.choix = id
+        } label: {
+            HStack(spacing: 12) {
+                ZStack {
+                    Circle().strokeBorder(coche ? Palette.marine : Palette.filet, lineWidth: 2)
+                    if coche { Circle().fill(Palette.marine).frame(width: 12, height: 12) }
+                }
+                .frame(width: 24, height: 24)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(titre)
+                        .font(Police.taille(17, .heavy))
+                        .foregroundStyle(Palette.encre)
+                    if let detail {
+                        Text(detail)
+                            .font(Police.taille(13, .bold))
+                            .foregroundStyle(Palette.encreDouce)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                Spacer(minLength: 8)
+                if let prix {
+                    Text(prix)
+                        .font(Police.taille(17, .heavy))
+                        .foregroundStyle(Palette.encre)
+                        .monospacedDigit()
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 14)
+            .frame(maxWidth: .infinity, minHeight: 64, alignment: .leading)
+            .background(Palette.surface, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .strokeBorder(coche ? Palette.marine : Palette.filet, lineWidth: coche ? 2 : 1))
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityAddTraits(coche ? .isSelected : [])
+    }
+
+    private func acheter() async {
+        achatEnCours = true
+        defer { achatEnCours = false }
+        message = nil
+        // La mesure de l'achat passe par `AchatsStoreKit` (rappel `surAchat` branché par A).
+        let etat = await achats.acheter(produit: modele.choix)
+        surEtat(etat)
+        if etat.donneAcces {
+            surAchatTermine(declencheur)
+            fermer()
         }
     }
 
     // MARK: Contenu au-dessus des offres
 
     private var argumentaire: some View {
-        VStack(alignment: .leading, spacing: Espace.m) {
-            VStack(alignment: .leading, spacing: Espace.xs) {
-                Text("FishMe Pro")
-                    .font(Police.grandTitre)
-                    .foregroundStyle(Palette.encre)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-                    .padding(.trailing, Gabarit.zoneTactile + Espace.s)
-                if case .fonction(let fonction) = declencheur {
-                    Text(TextesPaywall.titre(fonction))
-                        .font(Police.sousTitre)
-                        .foregroundStyle(Palette.marine)
-                        .multilineTextAlignment(.leading)
-                }
-            }
+        VStack(alignment: .leading, spacing: 0) {
+            Text("FishMe Pro")
+                .font(Police.taille(22, .heavy))
+                .foregroundStyle(Palette.encre)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
             pastilles
-            // Une seule ligne légale : prix de lancement, essai éventuel, renouvellement automatique et résiliation.
-            Text(mentions)
-                .font(Police.legende)
-                .foregroundStyle(Palette.encreDouce)
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 18)
+                .padding(.bottom, 22)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.horizontal, Espace.bord)
-        .padding(.top, Espace.xl)
+        .padding(.horizontal, 20)
+        .padding(.top, 26)
     }
 
+    /// La ligne sous le bouton : renouvellement automatique et résiliation (le tarif fondateur est sur la ligne Annuel).
     private var mentions: String {
-        let morceaux = [modele.phraseLancement, modele.phraseEssai].compactMap { $0 }
-        let renouvellement = "Renouvellement automatique, résiliable dans les réglages Apple, 24 h avant la fin de la période."
-        return (morceaux + [renouvellement]).joined(separator: " · ")
+        TextesPaywall.renouvellementCourt
     }
 
     /// P34 A : quatre pastilles rondes (spots, météo et rivière, alertes, conseils), une icône et un mot chacune.
     private var pastilles: some View {
-        HStack(alignment: .top, spacing: Espace.xs) {
+        HStack(alignment: .top, spacing: 6) {
             pastille("map", "Tous les spots")
             pastille("cloud", "Météo et rivière")
             pastille("bolt.fill", "Alertes")
             pastille("doc.text", "Conseils")
         }
-        .padding(.vertical, Espace.s)
     }
 
     private func pastille(_ icone: String, _ texte: String) -> some View {
-        VStack(spacing: Espace.s) {
+        VStack(spacing: 8) {
             Image(systemName: icone)
-                .font(Police.sousTitre)
+                .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .foregroundStyle(Palette.marine)
-                .frame(width: 52, height: 52)
+                .frame(width: 48, height: 48)
                 .background(Circle().fill(Palette.marineDoux))
                 .accessibilityHidden(true)
             Text(texte)
@@ -159,6 +233,7 @@ struct PaywallVue: View {
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
                 .minimumScaleFactor(0.8)
+                .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity)
         .accessibilityElement(children: .combine)
@@ -185,39 +260,47 @@ struct PaywallVue: View {
     // MARK: Pied : restaurer, message, fermer, liens légaux
 
     private var pied: some View {
-        VStack(spacing: 4) {
+        VStack(spacing: 0) {
             if let message {
                 Text(message).font(Police.legende).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
+                    .padding(.bottom, Espace.xs)
             }
             // P34 A : un seul bouton principal (celui de la boutique) ; la croix en haut ferme la feuille.
-            // Liens légaux toujours visibles, même si ce pied recouvre ceux de la boutique.
-            // Une seule ligne (ou deux si le texte est agrandi) : le pied reste bas sur iPhone SE et 13 mini.
+            if modele.etat == .pret {
+                Text(mentions)
+                    .font(Police.legende)
+                    .foregroundStyle(Palette.encreDouce)
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity)
+                    .padding(.top, 12)
+            }
+            // Liens légaux toujours visibles. Une seule ligne (ou deux si le texte est agrandi) : le pied reste bas sur petit iPhone.
             Group {
                 if tailleTexte >= .accessibility1 {
                     Menu("Plus") { piedLiens }
                         .frame(minHeight: Gabarit.zoneTactile)
                 } else {
                     ViewThatFits(in: .horizontal) {
-                        HStack(spacing: Espace.l) { piedLiens }
+                        HStack(spacing: 4) { piedLiens }
                         VStack(spacing: 0) { piedLiens }
                     }
                 }
             }
-            .font(Police.legende)
+            .font(Police.taille(13, .heavy))
             .foregroundStyle(Palette.marine)
         }
-        .padding(.horizontal, Espace.bord)
-        .padding(.vertical, Espace.s)
-        .background(Palette.surface)
+        .padding(.horizontal, 20)
+        .padding(.top, Espace.xs)
+        .padding(.bottom, 12)
     }
 
     @ViewBuilder private var piedLiens: some View {
         Button("Restaurer les achats") { Task { await restaurer() } }
-            .frame(minHeight: Gabarit.zoneTactile)
+            .frame(minHeight: Gabarit.zoneTactile).padding(.horizontal, 6)
         Link("Conditions", destination: liens.conditions)
-            .frame(minHeight: Gabarit.zoneTactile)
+            .frame(minHeight: Gabarit.zoneTactile).padding(.horizontal, 6)
         Link("Confidentialité", destination: liens.confidentialite)
-            .frame(minHeight: Gabarit.zoneTactile)
+            .frame(minHeight: Gabarit.zoneTactile).padding(.horizontal, 6)
     }
 
     private func restaurer() async {

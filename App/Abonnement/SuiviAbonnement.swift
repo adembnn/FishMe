@@ -16,6 +16,10 @@ final class SuiviAbonnement {
     /// Lit l'état au lancement puis suit les changements (renouvellement, remboursement, achat sur un autre appareil).
     func demarrer() {
         guard tache == nil else { return }
+        #if DEBUG
+        // DEBUG seulement, avec -FishMeForcerPro YES : l'app passe en Pro sans achat (démo, comme le widget). Rien en Release.
+        if UserDefaults.standard.bool(forKey: "FishMeForcerPro") { etat = .abonne; return }
+        #endif
         let source = achats
         tache = Task { [weak self] in
             let initial = await source.etat()

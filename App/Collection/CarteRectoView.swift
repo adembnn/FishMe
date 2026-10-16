@@ -2,43 +2,68 @@ import Core
 import SwiftUI
 import UIKit
 
-/// Cadre commun : recto et verso, comme toutes les cartes, ont exactement la même taille.
+/// Gris des petits textes d'une carte (`#5B6A6E` dans la maquette).
+private let grisCarte = Color(carte: 0x5B6A6E)
+/// Encre d'une carte (`#0F1A1C`).
+private let encreCarte = Color(carte: 0x0F1A1C)
+
+/// Cadre commun de la carte à collectionner (`.fc` de `fishme-ds.css`) : recto, verso et bredouille ont exactement la même taille.
+/// Coins à 6 % de la largeur, ombre portée, filet de 1 pt, et la ligne intérieure (`.in`) : un filet clair, doublé pour les rares.
 struct CarteCadre<Contenu: View>: View {
     let style: StyleRarete
     let declaree: Bool
+    /// Fond derrière le contenu : la plaque du palier par défaut, gris clair pour le verso.
+    var fond: Color? = nil
     @ViewBuilder var contenu: () -> Contenu
 
-    private static var rayon: CGFloat { Rayon.l + 2 }
-
     var body: some View {
-        let forme = RoundedRectangle(cornerRadius: Self.rayon, style: .continuous)
-        contenu()
-            .background(Palette.surface, in: forme)
-            .clipShape(forme)
-            .overlay { filets(forme) }
-            .shadow(color: Palette.encre.opacity(0.22), radius: 14, y: 8)
-            .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
-    }
-
-    @ViewBuilder
-    private func filets(_ forme: RoundedRectangle) -> some View {
-        if declaree {
-            // Carte déclarée : cadre en tirets, jamais plein.
-            forme.strokeBorder(Palette.commun, style: StrokeStyle(lineWidth: 3, dash: [9, 6]))
-        } else {
-            ZStack {
-                ForEach(0..<style.filets, id: \.self) { i in
-                    RoundedRectangle(cornerRadius: Self.rayon - CGFloat(i) * 4, style: .continuous)
-                        .strokeBorder(i % 2 == 0 ? style.couleur : Palette.surface, lineWidth: 3)
-                        .padding(CGFloat(i) * 4)
-                }
-            }
+        GeometryReader { geo in
+            let u = geo.size.width / 100
+            let forme = RoundedRectangle(cornerRadius: 6 * u, style: .continuous)
+            contenu()
+                .frame(width: geo.size.width, height: geo.size.height)
+                .background(fond ?? style.plaque, in: forme)
+                .clipShape(forme)
+                .overlay { LigneInterieure(style: style, u: u) }
+                .overlay(forme.strokeBorder(Color.black.opacity(0.1), lineWidth: 1))
+                .shadow(color: Color.black.opacity(0.32), radius: 4.6 * u, y: 4 * u)
         }
+        .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
     }
 }
 
-/// Le recto (piste « Plans ») : le poisson en grand sur son fond de rareté, son nom, sa taille, la fréquence OFB, la rareté,
-/// puis la source du chiffre et la date. Le reflet holographique ne couvre que les rares et les légendaires.
+/// `.fc .in` : filet blanc à 2,4 % du bord ; sur les rares (`.fc.r .in`), trois filets (blanc, gris bleu, blanc) à 1,8 %.
+private struct LigneInterieure: View {
+    let style: StyleRarete
+    let u: CGFloat
+
+    var body: some View {
+        ZStack {
+            if style == .rare {
+                let r = 4.4 * u
+                RoundedRectangle(cornerRadius: r, style: .continuous)
+                    .strokeBorder(Color.white.opacity(0.9), lineWidth: 1)
+                    .padding(1.8 * u)
+                RoundedRectangle(cornerRadius: max(0, r - 1), style: .continuous)
+                    .strokeBorder(Color(red: 90 / 255, green: 110 / 255, blue: 125 / 255).opacity(0.55), lineWidth: 1.4)
+                    .padding(1.8 * u + 1)
+                RoundedRectangle(cornerRadius: max(0, r - 2.4), style: .continuous)
+                    .strokeBorder(Color.white.opacity(0.8), lineWidth: 1)
+                    .padding(1.8 * u + 2.4)
+            } else {
+                RoundedRectangle(cornerRadius: 4.4 * u, style: .continuous)
+                    .strokeBorder(Color.white.opacity(0.28), lineWidth: 1)
+                    .padding(2.4 * u)
+            }
+        }
+        .allowsHitTesting(false)
+        .accessibilityHidden(true)
+    }
+}
+
+/// Le recto (P24 A, planche C02) : la fenêtre du palier avec le centile de taille en haut à gauche et le poisson de profil,
+/// puis la plaque du bas (nom et nom latin, TAI, FRQ, palier, source OFB et numéro). Le reflet ne couvre que les rares et les légendaires.
+/// Avec `mini`, la vignette du Pescedex (P26 B) : centile, poisson, nom et marque de palier seulement.
 struct CarteRectoView: View {
     let infos: InfosCarte
     /// Vrai seulement sur la carte ouverte en plein écran : le poisson nage.
@@ -49,130 +74,278 @@ struct CarteRectoView: View {
     var imageDecodee: UIImage? = nil
     /// Image partagée : ni rivière, ni jour exact (le département et « mois année » suffisent).
     var pourPartage = false
+    /// Vignette du classeur : mêmes éléments que la maquette `.fc.mini`.
+    var mini = false
+    /// Centile de taille (« 84e » : plus grand que 84 % des prises de l'espèce).
+    /// À brancher : aucune table de centiles n'existe dans Core ; sans valeur, la carte affiche « – » à la place du chiffre.
+    var centile: Int? = nil
+
+    private var declaree: Bool { infos.prise.estDeclaree }
+    private var style: StyleRarete { infos.style }
 
     var body: some View {
-        CarteCadre(style: infos.style, declaree: infos.prise.estDeclaree) {
-            ZStack {
-                VStack(alignment: .leading, spacing: 0) {
-                    illustration
-                    bas
-                }
-                if infos.style.aUnReflet && !infos.prise.estDeclaree {
-                    RefletHolographique(inclinaison: inclinaison, fixe: refletFixe)
-                        .clipShape(RoundedRectangle(cornerRadius: Rayon.l + 2, style: .continuous))
-                }
+        CarteCadre(style: style, declaree: declaree) {
+            GeometryReader { geo in
+                carte(geo.size)
             }
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(infos.texteVoixOff)
     }
 
-    /// La fenêtre : fond de rareté, ondes concentriques, poisson de profil (il nage une fois la carte ouverte).
-    /// Le bord bas est incliné, comme sur la maquette.
-    private var illustration: some View {
-        ZStack(alignment: .topLeading) {
-            LinearGradient(colors: infos.style.fond, startPoint: .top, endPoint: .bottom)
-            OndesFenetre().stroke(.white.opacity(0.12), lineWidth: 1)
+    // MARK: Assemblage
+
+    private func carte(_ taille: CGSize) -> some View {
+        let w = taille.width
+        let h = taille.height
+        let u = w / 100
+        return ZStack(alignment: .topLeading) {
+            fenetre(w, h)
+            poisson(w, h, u)
+            centileEtLegende(u)
+            plaque(w, h, u)
+            etiquettes()
+        }
+        .frame(width: w, height: h, alignment: .topLeading)
+    }
+
+    // MARK: Fenêtre
+
+    /// Fond du palier, ondes concentriques, et la finition : vernis (peu commun), reflet holographique (rare, légendaire).
+    private func fenetre(_ w: CGFloat, _ h: CGFloat) -> some View {
+        ZStack {
+            fondFenetre
+            OndesFenetre()
+                .opacity(0.3)
+            if style == .peuCommun {
+                DegradeAngle(angle: 118, arrets: [
+                    .init(color: .clear, location: 0.38),
+                    .init(color: Color(red: 190 / 255, green: 1, blue: 235 / 255).opacity(0.22), location: 0.47),
+                    .init(color: .clear, location: 0.56),
+                ])
+            }
+            if style.aUnReflet && !declaree {
+                RefletHolographique(inclinaison: inclinaison, fixe: refletFixe)
+            }
+        }
+        .frame(width: w, height: h)
+        .clipped()
+    }
+
+    @ViewBuilder
+    private var fondFenetre: some View {
+        switch style {
+        case .commun, .nonMesuree, .peuCommun:
+            Rectangle().fill(style.fond[0])
+        case .rare:
+            DegradeAngle(angle: 160, arrets: [
+                .init(color: Color(carte: 0xDCE3E8), location: 0),
+                .init(color: Color(carte: 0xAFBCC6), location: 0.45),
+                .init(color: Color(carte: 0xC9D2D8), location: 0.60),
+                .init(color: Color(carte: 0x8497A3), location: 1),
+            ])
+        case .legendaire:
+            ZStack {
+                DegradeAngle(angle: 150, arrets: [
+                    .init(color: Color(carte: 0xE3B654), location: 0),
+                    .init(color: Color(carte: 0xB8862A), location: 0.5),
+                    .init(color: Color(carte: 0xD9A845), location: 1),
+                ])
+                BulleOr(x: 0.20, y: 0.30, couleur: Color(carte: 0xF6D98A), plein: 0.06, fin: 0.12)
+                BulleOr(x: 0.70, y: 0.18, couleur: Color(carte: 0xFBE3A0), plein: 0.05, fin: 0.11)
+                BulleOr(x: 0.55, y: 0.60, couleur: Color(carte: 0xF2CF78), plein: 0.07, fin: 0.14)
+                BulleOr(x: 0.85, y: 0.70, couleur: Color(carte: 0xE9BD5A), plein: 0.06, fin: 0.12)
+            }
+        }
+    }
+
+    // MARK: Poisson
+
+    private var imageUI: UIImage? { imageDecodee ?? UIImage(named: infos.espece.image) }
+
+    /// Le poisson de profil, tête à droite, incliné de 12 degrés vers le haut, avec son ombre portée.
+    private func poisson(_ w: CGFloat, _ h: CGFloat, _ u: CGFloat) -> some View {
+        let largeur = w * (mini ? 0.92 : 0.88)
+        let rapport: CGFloat = {
+            guard let image = imageUI, image.size.height > 0 else { return 2.8 }
+            return image.size.width / image.size.height
+        }()
+        let hauteur = largeur / rapport
+        return Group {
             if anime {
                 NageView(nomImage: infos.espece.image)
-                    .padding(.bottom, 18)
             } else {
-                (imageDecodee.map { Image(uiImage: $0) } ?? Image(infos.espece.image))
+                (imageUI.map { Image(uiImage: $0) } ?? Image(infos.espece.image))
                     .resizable()
                     .scaledToFit()
-                    .padding(.horizontal, Espace.m)
-                    .padding(.bottom, Espace.xl)
-                    .saturation(infos.prise.estDeclaree ? 0.35 : 1)
+                    .saturation(declaree ? 0.55 : 1)
             }
-            // À brancher : le centile de taille (« 84e », gros chiffre blanc en haut à gauche avec « CEN · centile de taille »).
-            // Aucune donnée de centile n'existe encore dans Core ; rien n'est affiché tant qu'elle manque. Même chose pour le badge « Trophée ».
-            VStack(alignment: .trailing, spacing: 6) {
-                if infos.prise.estDeclaree { etiquette("Déclarée") }
-                if infos.prise.exemple { etiquette("Exemple") }
-            }
-            .frame(maxWidth: .infinity, alignment: .trailing)
-            .padding(Espace.m)
         }
-        .frame(maxWidth: .infinity)
-        .frame(maxHeight: .infinity)
-        .clipShape(FenetreInclinee())
-        .layoutPriority(1)
+        .frame(width: largeur, height: hauteur)
+        .shadow(color: Color.black.opacity(0.35), radius: 1 * u, x: -1.5 * u, y: 2.5 * u)
+        .rotationEffect(.degrees(-12))
+        .offset(x: w * (mini ? 0.04 : 0.08), y: h * (mini ? 0.20 : 0.22))
     }
 
-    private func etiquette(_ texte: String) -> some View {
-        Text(texte)
-            .font(Jeton.police(12))
-            .padding(.horizontal, Espace.s)
-            .padding(.vertical, Espace.xs)
-            .background(Palette.surface, in: Capsule())
-            .foregroundStyle(Palette.encre)
-    }
+    // MARK: Centile
 
-    private var bas: some View {
-        VStack(alignment: .leading, spacing: Espace.s) {
-            HStack(alignment: .firstTextBaseline, spacing: Espace.s) {
-                Text(infos.espece.nom)
-                    .font(Jeton.police(30, .heavy))
-                    .minimumScaleFactor(0.5)
-                    .lineLimit(1)
-                Text(infos.espece.nomLatin)
-                    .font(Jeton.police(13))
-                    .italic()
-                    .foregroundStyle(Palette.encreDouce)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-            }
-            Divider().overlay(Palette.filet)
-            statistiques
-            Spacer(minLength: 0)
-            pied
-        }
-        .foregroundStyle(Palette.encre)
-        .padding(.horizontal, Espace.l)
-        .padding(.top, Espace.s)
-        .padding(.bottom, Espace.m)
-        .frame(height: 190)
-    }
-
-    private var statistiques: some View {
-        HStack(alignment: .top, spacing: Espace.l) {
-            if let l = infos.prise.longueurCm {
-                colonne(Formats.nombre(l, decimales: 0), unite: "cm",
-                        legende: infos.prise.mesure == .estimee ? "TAILLE ESTIMÉE" : "TAILLE")
-            }
-            if let pourcent = frequence {
-                colonne("\(pourcent)", unite: "%", legende: "FRÉQUENCE")
-            }
-            Spacer(minLength: 0)
-            if infos.style != .nonMesuree {
-                VStack(spacing: 4) {
-                    BadgeRarete(style: infos.style, taille: 26)
-                    Text(infos.style.mot.uppercased())
-                        .font(Jeton.police(11))
-                        .foregroundStyle(infos.style.couleur)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.6)
+    /// « 84e » en gros, avec sa légende sur la carte pleine taille. « – » tant que le centile n'est pas connu (et pour une carte déclarée).
+    private func centileEtLegende(_ u: CGFloat) -> some View {
+        let gros = (mini ? 22 : 16) * u
+        let petit = (mini ? 10 : 7) * u
+        let valeur: Int? = declaree ? nil : centile
+        return ZStack(alignment: .topLeading) {
+            HStack(alignment: .firstTextBaseline, spacing: 0) {
+                Text(valeur.map { "\($0)" } ?? "–")
+                    .font(Police.taille(gros, .black))
+                    .tracking(-0.04 * gros)
+                if valeur != nil {
+                    Text("e").font(Police.taille(petit, .black))
                 }
             }
+            .foregroundStyle(style.couleurCentile)
+            .fixedSize()
+            .frame(height: 0.9 * gros)
+            .offset(x: 5.5 * u, y: 4 * u)
+            if !mini {
+                let pastille = style == .rare || style == .legendaire
+                Text("CEN · centile de taille")
+                    .font(Police.taille(3 * u, .heavy))
+                    .foregroundStyle(style.couleurCentile.opacity(pastille ? 1 : 0.85))
+                    .lineLimit(1)
+                    .fixedSize()
+                    .padding(.horizontal, pastille ? 1.6 * u : 0)
+                    .padding(.vertical, pastille ? 0.8 * u : 0)
+                    .background(pastille ? Color.white.opacity(0.75) : Color.clear, in: RoundedRectangle(cornerRadius: 1.4 * u, style: .continuous))
+                    .offset(x: (pastille ? 5 : 5.5) * u, y: 19.5 * u)
+            }
         }
     }
 
-    private func colonne(_ valeur: String, unite: String, legende: String) -> some View {
-        VStack(alignment: .leading, spacing: 0) {
-            HStack(alignment: .firstTextBaseline, spacing: 2) {
-                Text(valeur).font(Jeton.police(26, .heavy)).monospacedDigit()
-                Text(unite).font(Jeton.police(13)).foregroundStyle(Palette.encreDouce)
+    // MARK: Plaque du bas
+
+    private func plaque(_ w: CGFloat, _ h: CGFloat, _ u: CGFloat) -> some View {
+        let hauteur = h * (mini ? 0.28 : 0.40)
+        return Group {
+            if mini { plaqueMini(u) } else { plaqueComplete(u) }
+        }
+        .frame(width: w, height: hauteur, alignment: .top)
+        .background { PlaqueInclinee().fill(style.plaque) }
+        .offset(y: h - hauteur)
+    }
+
+    private func plaqueMini(_ u: CGFloat) -> some View {
+        HStack(alignment: .top, spacing: 0) {
+            Text(infos.espece.nom)
+                .font(Police.taille(12.5 * u, .black))
+                .foregroundStyle(encreCarte)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
+            Spacer(minLength: 2 * u)
+            if style != .nonMesuree {
+                MarqueRarete(style: style, taille: 11 * u)
             }
+        }
+        .padding(.top, 9 * u)
+        .padding(.horizontal, 7 * u)
+    }
+
+    private func plaqueComplete(_ u: CGFloat) -> some View {
+        VStack(alignment: .leading, spacing: 0) {
+            nomEtLatin(u)
+            statistiques(u)
+                .padding(.top, 3.6 * u)
+            Spacer(minLength: 0)
+            pied(u)
+        }
+        .padding(.top, 8 * u)
+        .padding(.horizontal, 5.5 * u)
+        .padding(.bottom, 4.6 * u)
+    }
+
+    private func nomEtLatin(_ u: CGFloat) -> some View {
+        HStack(alignment: .firstTextBaseline, spacing: 2.4 * u) {
+            Text(infos.espece.nom)
+                .font(Police.taille(8.4 * u, .black))
+                .foregroundStyle(encreCarte)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+                .layoutPriority(2)
+            Text(infos.espece.nomLatin)
+                .font(Police.taille(3.2 * u, .bold))
+                .italic()
+                .foregroundStyle(grisCarte)
+                .lineLimit(1)
+                .truncationMode(.tail)
+            Spacer(minLength: 0)
+        }
+        .padding(.bottom, 3 * u)
+        .overlay(alignment: .bottom) {
+            Rectangle().fill(Color(red: 15 / 255, green: 26 / 255, blue: 28 / 255).opacity(0.12)).frame(height: 1)
+        }
+    }
+
+    /// TAI, FRQ et le palier : trois colonnes égales, alignées sur leur bas.
+    private func statistiques(_ u: CGFloat) -> some View {
+        HStack(alignment: .bottom, spacing: 0) {
+            colonne(valeur: tailleTexte, unite: tailleTexte == "–" ? nil : "cm", legende: legendeTaille, u: u)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            colonne(valeur: frequence.map { "\($0)" } ?? "–", unite: frequence == nil ? nil : "%", legende: "FRQ", u: u)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            palier(u)
+                .frame(maxWidth: .infinity)
+        }
+    }
+
+    private func colonne(valeur: String, unite: String?, legende: String, u: CGFloat) -> some View {
+        VStack(alignment: .leading, spacing: 1.4 * u) {
+            HStack(alignment: .firstTextBaseline, spacing: 0) {
+                Text(valeur)
+                    .font(Police.taille(7.4 * u, .black))
+                    .monospacedDigit()
+                if let unite {
+                    Text(" \(unite)").font(Police.taille(3.4 * u, .bold))
+                }
+            }
+            .foregroundStyle(encreCarte)
             .lineLimit(1)
             .minimumScaleFactor(0.6)
-            Text(legende).font(Jeton.police(11)).foregroundStyle(Palette.encreDouce)
+            Text(legende)
+                .font(Police.taille(2.9 * u, .heavy))
+                .tracking(0.06 * 2.9 * u)
+                .foregroundStyle(grisCarte)
+                .lineLimit(1)
         }
+    }
+
+    private func palier(_ u: CGFloat) -> some View {
+        VStack(spacing: 1.4 * u) {
+            if style != .nonMesuree {
+                MarqueRarete(style: style, taille: 6.6 * u)
+            }
+            Text(style.mot.uppercased())
+                .font(Police.taille(2.9 * u, .heavy))
+                .tracking(0.06 * 2.9 * u)
+                .foregroundStyle(style.couleur)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+        }
+    }
+
+    private var tailleTexte: String {
+        guard !declaree, let l = infos.prise.longueurCm else { return "–" }
+        return Formats.nombre(l, decimales: 0)
+    }
+
+    /// TAI ; la taille choisie au curseur reste marquée « estimée ».
+    private var legendeTaille: String {
+        infos.prise.mesure == .estimee && tailleTexte != "–" ? "TAI · EST." : "TAI"
     }
 
     /// Part des pêches OFB de la zone où l'espèce a été relevée. `nil` sans relevé.
     private var frequence: Int? {
         let r = infos.rarete
-        guard infos.style != .nonMesuree, r.nTotal > 0 else { return nil }
+        guard style != .nonMesuree, r.nTotal > 0 else { return nil }
         return Int((Double(r.nPeches) / Double(r.nTotal) * 100).rounded())
     }
 
@@ -180,62 +353,124 @@ struct CarteRectoView: View {
     private var sourceOFB: String? {
         let r = infos.rarete
         let zone = infos.departement.map { " dans le \($0.code)" } ?? ""
-        switch infos.style {
-        case .nonMesuree: return nil
+        let annee = r.anneeDernierReleve.map { " \($0)" } ?? ""
+        switch style {
+        case .nonMesuree:
+            return nil
         case .legendaire:
-            let depuis = r.anneeDernierReleve.map { " · dernier relevé \($0)" } ?? ""
-            return "Jamais relevée\(zone) · OFB\(depuis)"
+            let total = r.nTotal > 0 ? "0 pêche sur \(r.nTotal) · " : ""
+            return "\(total)jamais relevée ici · OFB\(annee)"
         default:
-            let annee = r.anneeDernierReleve.map { " · dernier relevé \($0)" } ?? ""
             let mot = r.nPeches > 1 ? "pêches" : "pêche"
             return "\(r.nPeches) \(mot) sur \(r.nTotal)\(zone) · OFB\(annee)"
         }
     }
 
-    /// Source du chiffre OFB à gauche, rang dans le Pescedex à droite.
-    private var pied: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 6) {
+    /// Source du chiffre OFB à gauche, rang dans le Pescedex à droite (« déclarée » pour une carte sans photo).
+    private func pied(_ u: CGFloat) -> some View {
+        HStack(alignment: .firstTextBaseline, spacing: 0) {
             if let source = sourceOFB {
                 Text(source)
-                    .font(Jeton.police(12))
-                    .foregroundStyle(Palette.encreDouce)
+                    .font(Police.taille(3 * u, .bold))
+                    .foregroundStyle(grisCarte)
                     .lineLimit(1)
-                    .minimumScaleFactor(0.6)
+                    .minimumScaleFactor(0.5)
             }
-            Spacer(minLength: 0)
-            if let rang = infos.rangDansLaZone {
-                Text("n° \(String(format: "%03d", rang))")
-                    .font(Jeton.police(12))
-                    .monospaced()
-                    .foregroundStyle(Palette.encre)
+            Spacer(minLength: 2 * u)
+            if let droite = numero {
+                Text(droite)
+                    .font(.system(size: 3.1 * u, weight: .semibold, design: .monospaced))
+                    .foregroundStyle(encreCarte)
+                    .lineLimit(1)
             }
         }
     }
+
+    private var numero: String? {
+        if declaree { return "déclarée" }
+        return infos.rangDansLaZone.map { "n° \(String(format: "%03d", $0))" }
+    }
+
+    // MARK: Étiquettes
+
+    /// « Déclarée » en haut à droite (P26 B, P28 B) ; « Exemple » sous elle pour la carte d'exemple. Tailles fixes, comme la maquette.
+    private func etiquettes() -> some View {
+        VStack(alignment: .trailing, spacing: 3) {
+            if declaree { etiquette("Déclarée") }
+            if infos.prise.exemple { etiquette("Exemple") }
+        }
+        .frame(maxWidth: .infinity, alignment: .topTrailing)
+        .padding(.top, mini ? 6 : 10)
+        .padding(.trailing, mini ? 5 : 10)
+    }
+
+    private func etiquette(_ texte: String) -> some View {
+        Text(texte)
+            .font(Police.taille(11, .heavy))
+            .foregroundStyle(Palette.encre)
+            .lineLimit(1)
+            .padding(.horizontal, mini ? 7 : 8)
+            .frame(height: 18)
+            .background(Palette.surface, in: Capsule())
+    }
 }
 
-/// Bord bas de la fenêtre : plus haut à gauche qu'à droite (maquette P24).
-private nonisolated struct FenetreInclinee: Shape {
+/// Plaque du bas : bord haut incliné, 0 % à gauche, 7 % de sa hauteur à droite (`clip-path` de `.fc .pl`).
+private nonisolated struct PlaqueInclinee: Shape {
     func path(in rect: CGRect) -> Path {
         var p = Path()
         p.move(to: CGPoint(x: rect.minX, y: rect.minY))
-        p.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        p.addLine(to: CGPoint(x: rect.maxX, y: rect.minY + rect.height * 0.07))
         p.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        p.addLine(to: CGPoint(x: rect.minX, y: rect.maxY - 16))
+        p.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
         p.closeSubpath()
         return p
     }
 }
 
-/// Cercles concentriques de l'eau, centrés à droite du poisson.
-private nonisolated struct OndesFenetre: Shape {
-    func path(in rect: CGRect) -> Path {
-        var p = Path()
-        let c = CGPoint(x: rect.minX + rect.width * 0.7, y: rect.minY + rect.height * 0.5)
-        var r: CGFloat = 16
-        while r < rect.width * 1.1 {
-            p.addEllipse(in: CGRect(x: c.x - r, y: c.y - r, width: r * 2, height: r * 2))
-            r += 16
+/// Anneaux de l'eau (`.fc .win::before`) : ellipses centrées à 74 % / 26 %, un trait blanc tous les 15 pt.
+struct OndesFenetre: View {
+    var body: some View {
+        Canvas { contexte, taille in
+            guard taille.width > 0 else { return }
+            let cx = taille.width * 0.74
+            let cy = taille.height * 0.26
+            let rapport = taille.height / taille.width
+            let rayonMax = 2.0.squareRoot() * taille.width * 0.74
+            var r: CGFloat = 14.5
+            while r < rayonMax {
+                let ellipse = Path(ellipseIn: CGRect(x: cx - r, y: cy - r * rapport, width: r * 2, height: r * 2 * rapport))
+                contexte.stroke(ellipse, with: .color(.white.opacity(0.55)), lineWidth: 1)
+                r += 15
+            }
         }
-        return p
+        .allowsHitTesting(false)
+    }
+}
+
+/// Une tache d'or de la fenêtre légendaire : `radial-gradient(circle at x y, couleur 0 plein, transparent fin)`.
+private struct BulleOr: View {
+    let x: CGFloat
+    let y: CGFloat
+    let couleur: Color
+    let plein: CGFloat
+    let fin: CGFloat
+
+    var body: some View {
+        GeometryReader { geo in
+            let w = geo.size.width
+            let h = geo.size.height
+            let centre = CGPoint(x: x * w, y: y * h)
+            // Rayon « farthest-corner » : distance au coin le plus loin.
+            let loin = hypot(max(centre.x, w - centre.x), max(centre.y, h - centre.y))
+            RadialGradient(
+                gradient: Gradient(stops: [
+                    .init(color: couleur, location: 0),
+                    .init(color: couleur, location: plein / fin),
+                    .init(color: couleur.opacity(0), location: 1),
+                ]),
+                center: UnitPoint(x: x, y: y), startRadius: 0, endRadius: loin * fin
+            )
+        }
     }
 }

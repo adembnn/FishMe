@@ -37,10 +37,11 @@ struct ChoixDeZoneView: View {
                     if let posee {
                         // Cercle de zone : la même forme que le spot, en marine.
                         MapCircle(center: posee, radius: 1000)
-                            .foregroundStyle(Palette.marine.opacity(0.15))
-                            .stroke(Palette.marine, lineWidth: 2)
+                            .foregroundStyle(Palette.marine.opacity(0.12))
+                            .stroke(Palette.marine, lineWidth: 2.5)
                     }
                 }
+                .mapStyle(.standard(elevation: .flat, emphasis: .muted, pointsOfInterest: .excludingAll))
                 .onTapGesture { point in
                     if let c = proxy.convert(point, from: .local) {
                         posee = c
@@ -71,6 +72,7 @@ struct ChoixDeZoneView: View {
             BoutonRond(role: .retour, rendu: .verre) { dismiss() }
             HStack(spacing: Espace.s) {
                 Image(systemName: "magnifyingglass")
+                    .font(Police.taille(18, .heavy))
                     .foregroundStyle(Palette.marine)
                     .accessibilityHidden(true)
                 TextField("Commune ou département", text: $terme)
@@ -95,11 +97,19 @@ struct ChoixDeZoneView: View {
 
     /// La feuille du bas, façon Plans : « Ta zone », les communes trouvées avec leur code, un seul bouton « Valider ».
     private var feuille: some View {
-        VStack(alignment: .leading, spacing: Espace.s) {
+        VStack(alignment: .leading, spacing: 0) {
+            Capsule()
+                .fill(Palette.filet)
+                .frame(width: 36, height: 5)
+                .frame(maxWidth: .infinity)
+                .padding(.top, 7)
+                .padding(.bottom, 12)
+                .accessibilityHidden(true)
             Text("Ta zone")
-                .font(Police.titre)
+                .font(Police.taille(22, .heavy))
                 .foregroundStyle(Palette.encre)
                 .padding(.leading, Espace.xs)
+                .padding(.bottom, 6)
                 .accessibilityAddTraits(.isHeader)
             if trouvees.isEmpty {
                 if let posee {
@@ -123,7 +133,9 @@ struct ChoixDeZoneView: View {
                             camera = .region(MKCoordinateRegion(center: zone.coordonnee,
                                                                 span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)))
                         }
-                        if zone.id != trouvees.last?.id { Divider().overlay(Palette.filet) }
+                        if zone.id != trouvees.last?.id {
+                            Divider().overlay(Palette.filet).padding(.leading, 16)
+                        }
                     }
                 }
             }
@@ -133,12 +145,13 @@ struct ChoixDeZoneView: View {
             .buttonStyle(.principal)
             .disabled(posee == nil)
             .opacity(posee == nil ? 0.5 : 1)
-            .padding(.top, Espace.s)
+            .padding(.top, 14)
         }
-        .padding(Espace.l)
+        .padding(.horizontal, 20)
+        .padding(.bottom, 24)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l + 6, style: .continuous))
-        .shadow(color: Palette.encre.opacity(0.12), radius: 14, y: -2)
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 38, style: .continuous))
+        .shadow(color: Palette.encre.opacity(0.16), radius: 15, y: -2)
         .padding(.horizontal, Espace.s)
         .padding(.bottom, Espace.s)
     }
@@ -157,15 +170,16 @@ struct ChoixDeZoneView: View {
                         .font(Police.corps)
                         .foregroundStyle(Palette.encreDouce)
                 }
-                Image(systemName: "checkmark")
-                    .font(Police.taille(15))
-                    .foregroundStyle(Palette.marine)
-                    .opacity(choisie ? 1 : 0)
-                    .frame(width: 20)
-                    .accessibilityHidden(true)
+                if choisie {
+                    Image(systemName: "checkmark")
+                        .font(Police.taille(17, .heavy))
+                        .foregroundStyle(Palette.marine)
+                        .frame(width: 20, height: 20)
+                        .accessibilityHidden(true)
+                }
             }
             .padding(.horizontal, Espace.xs)
-            .frame(minHeight: 56)
+            .frame(minHeight: 52)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)

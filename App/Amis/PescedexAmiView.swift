@@ -42,15 +42,15 @@ struct PescedexAmiView: View {
     var body: some View {
         ZStack(alignment: .top) {
             JetonAmis.fondPage.ignoresSafeArea()
+            // Maquette P32 : barre de 44 pt à 59 pt du haut (le bord de la zone sûre), carte de 244 pt à 118 pt.
             VStack(spacing: 0) {
-                Spacer(minLength: 72)
+                barre
+                    .padding(.horizontal, Espace.bord)
+                Spacer().frame(height: 15)
                 grandeCarte
                 Spacer(minLength: Espace.m)
                 feuille
             }
-            barre
-                .padding(.horizontal, Espace.bord)
-                .padding(.top, Espace.s)
         }
         .sheet(item: $carteOuverte) { carte in
             CarteAmiDetail(carte: carte, nomEspece: gestion.espece(carte.espece)?.nom ?? "") {
@@ -72,18 +72,18 @@ struct PescedexAmiView: View {
         HStack {
             BoutonRond(role: .retour, rendu: .verre, action: fermer)
             Spacer()
-            HStack(spacing: Espace.s) {
+            HStack(spacing: 10) {
                 Text(String(ami.nom.prefix(1)).uppercased())
-                    .font(JetonAmis.police(16))
+                    .font(JetonAmis.police(13))
                     .foregroundStyle(Palette.surMarine)
-                    .frame(width: 34, height: 34)
+                    .frame(width: 32, height: 32)
                     .background(Palette.marine, in: Circle())
                     .accessibilityHidden(true)
                 Text(ami.nom).font(Police.sousTitre).foregroundStyle(Palette.encre)
             }
-            .padding(.leading, Espace.xs).padding(.trailing, Espace.l)
-            .frame(minHeight: Gabarit.zoneTactile)
-            .background(Palette.surface, in: Capsule())
+            .padding(.leading, 6).padding(.trailing, Espace.l)
+            .frame(height: Gabarit.zoneTactile)
+            .fondVerre(Capsule())
             .accessibilityElement(children: .combine)
             Spacer()
             // Signaler et Bloquer restent rangés dans ce menu, jamais au premier niveau.
@@ -97,11 +97,12 @@ struct PescedexAmiView: View {
                 }
             } label: {
                 Image(systemName: "ellipsis")
-                    .font(JetonAmis.police(17))
+                    .font(Police.taille(18))
+                    .foregroundStyle(Palette.encre)
                     .frame(width: JetonAmis.zoneTactile, height: JetonAmis.zoneTactile)
-                    .background(JetonAmis.papier, in: Circle())
+                    .fondVerre(Circle())
             }
-            .accessibilityLabel("Plus d'actions")
+            .accessibilityLabel("Signaler ou bloquer \(ami.nom)")
         }
     }
 
@@ -114,35 +115,36 @@ struct PescedexAmiView: View {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
-                        .clipShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-                        .shadow(color: Palette.encre.opacity(0.18), radius: 14, y: 8)
+                        .frame(width: 244)
+                        .clipShape(RoundedRectangle(cornerRadius: 244 * Gabarit.coinCarte, style: .continuous))
+                        .shadow(color: Palette.encre.opacity(0.3), radius: 15, y: 14)
                 } else {
-                    tuile(carte)
+                    tuile(carte, largeur: 244)
+                        .shadow(color: Palette.encre.opacity(0.3), radius: 15, y: 14)
                 }
             }
             .buttonStyle(.plain)
-            .frame(maxWidth: 320)
-            .padding(.horizontal, Espace.xl)
             .accessibilityLabel(gestion.espece(carte.espece)?.nom ?? "Carte")
         } else {
             ContentUnavailableView("Pas encore de carte", systemImage: "rectangle.stack")
         }
     }
 
-    /// La feuille du bas : « 4 sur 11 espèces de la zone » puis les cartes de l'ami, côte à côte.
+    /// La feuille du bas : « 4 sur 11 espèces de la zone » puis les cartes de l'ami, côte à côte (4 de 76 pt).
     private var feuille: some View {
-        VStack(alignment: .leading, spacing: Espace.m) {
-            Capsule().fill(Palette.silhouette).frame(width: 36, height: 5)
+        VStack(alignment: .leading, spacing: 0) {
+            Capsule().fill(Palette.filet).frame(width: 36, height: 5)
                 .frame(maxWidth: .infinity)
+                .padding(.top, 7)
+                .padding(.bottom, Espace.m)
             compteur
             ScrollView(.horizontal) {
-                HStack(spacing: Espace.m) {
+                HStack(spacing: 10) {
                     ForEach(especes) { carte in
                         Button { carteChoisieId = carte.id } label: {
                             tuile(carte)
-                                .frame(width: 76)
-                                .overlay(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous)
-                                    .strokeBorder(Palette.marine, lineWidth: carte.id == carteEnGrand?.id ? 3 : 0))
+                                .overlay(RoundedRectangle(cornerRadius: 76 * Gabarit.coinCarte, style: .continuous)
+                                    .strokeBorder(Palette.marine, lineWidth: carte.id == carteEnGrand?.id ? 2 : 0))
                         }
                         .buttonStyle(.plain)
                         .contextMenu {
@@ -151,18 +153,20 @@ struct PescedexAmiView: View {
                             }
                         }
                     }
-                    ForEach(manquantes, id: \.self) { id in tuileSilhouette(id).frame(width: 76) }
+                    ForEach(manquantes, id: \.self) { id in tuileSilhouette(id) }
                 }
-                .padding(.vertical, Espace.xs)
+                .padding(.vertical, 6)
             }
             .scrollIndicators(.hidden)
+            .padding(.top, 6)
         }
-        .padding(.horizontal, Espace.xl)
-        .padding(.top, Espace.s)
+        .padding(.horizontal, 20)
         .padding(.bottom, Espace.xl)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
         .padding(.horizontal, Espace.s)
+        // À régler dans RootView : la maquette pose la feuille à 100 pt du bas, au-dessus de la barre d'onglets.
+        .padding(.bottom, Espace.s)
     }
 
     @ViewBuilder
@@ -180,43 +184,125 @@ struct PescedexAmiView: View {
         }
     }
 
+    /// Une espèce que l'ami n'a pas encore : le dos de la carte (marine, silhouette blanche, nom).
     private func tuileSilhouette(_ id: String) -> some View {
         let espece = gestion.espece(id)
-        return RoundedRectangle(cornerRadius: Rayon.m, style: .continuous)
-            .fill(Palette.marineDoux)
-            .overlay {
-                if let espece {
-                    Image(espece.image).resizable().renderingMode(.template).scaledToFit()
-                        .foregroundStyle(Palette.silhouette).padding(10)
-                }
+        let largeur: CGFloat = 76
+        let hauteur = largeur / Gabarit.rapportCarte
+        let u = largeur / 100
+        return ZStack(alignment: .top) {
+            Palette.marine
+            if let espece {
+                Image(espece.image).resizable().renderingMode(.template).scaledToFit()
+                    .foregroundStyle(Color.white.opacity(0.4))
+                    .frame(width: largeur * 0.68)
+                    .padding(.top, hauteur * 0.36)
             }
-            .aspectRatio(JetonAmis.rapportCarte, contentMode: .fit)
-            .accessibilityLabel("\(espece?.nom ?? "Espèce") pas encore pêchée")
+            VStack {
+                Spacer()
+                Text(espece?.nom ?? "")
+                    .font(Police.taille(9 * u, .heavy))
+                    .foregroundStyle(Color.white.opacity(0.85))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                    .padding(.horizontal, 4)
+                    .padding(.bottom, hauteur * 0.09)
+            }
+            RoundedRectangle(cornerRadius: 4.4 * u, style: .continuous)
+                .inset(by: 2.4 * u)
+                .strokeBorder(Color.white.opacity(0.28), lineWidth: 1)
+        }
+        .frame(width: largeur, height: hauteur)
+        .clipShape(RoundedRectangle(cornerRadius: largeur * Gabarit.coinCarte, style: .continuous))
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(espece?.nom ?? "Espèce") pas encore pêchée")
     }
 
-    private func tuile(_ carte: CartePartagee) -> some View {
+    /// Une carte de l'ami en petit (maquette « mini ») : fond de sa rareté, poisson, nom et forme de rareté.
+    /// Le centile de taille n'est pas dans ce que l'ami partage : il n'est pas affiché.
+    // À brancher : le centile (« 52e ») quand `CartePartagee` le portera.
+    private func tuile(_ carte: CartePartagee, largeur: CGFloat = 76) -> some View {
         let style = RareteAmi(carte.rarete)
         let espece = gestion.espece(carte.espece)
-        return ZStack(alignment: .topTrailing) {
-            RoundedRectangle(cornerRadius: Rayon.m, style: .continuous)
-                .fill(LinearGradient(colors: style.fond, startPoint: .top, endPoint: .bottom))
+        let hauteur = largeur / Gabarit.rapportCarte
+        let u = largeur / 100
+        return ZStack(alignment: .top) {
+            fondCarte(style)
             if let espece {
-                Image(espece.image).resizable().scaledToFit().padding(10)
+                Image(espece.image).resizable().scaledToFit()
+                    .frame(width: largeur * 0.92)
+                    .rotationEffect(.degrees(-12))
+                    .shadow(color: Color.black.opacity(0.35), radius: 2 * u, x: -1.5 * u, y: 2.5 * u)
+                    .padding(.top, hauteur * 0.20)
             }
-            BadgeRareteAmi(style: style, taille: 24).padding(6)
-            if !gestion.mesEspeces.contains(carte.espece) {
-                Text("nouvelle")
-                    .font(JetonAmis.police(11))
-                    .foregroundStyle(Palette.surMarine)
-                    .padding(.horizontal, 7).padding(.vertical, 3)
-                    .background(JetonAmis.vert, in: Capsule())
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-                    .padding(6)
+            VStack(spacing: 0) {
+                Spacer(minLength: 0)
+                HStack(alignment: .top, spacing: 0) {
+                    Text(espece?.nom ?? "")
+                        .font(Police.taille(12.5 * u, .heavy))
+                        .foregroundStyle(Color(red: 15 / 255, green: 26 / 255, blue: 28 / 255))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.6)
+                    Spacer(minLength: 2)
+                    if let forme = symboleRarete(style) {
+                        Image(systemName: forme)
+                            .font(Police.taille(11 * u))
+                            .foregroundStyle(style.couleur)
+                    }
+                }
+                .padding(.horizontal, 7 * u)
+                .padding(.top, 9 * u)
+                .frame(maxWidth: .infinity, minHeight: hauteur * 0.28, maxHeight: hauteur * 0.28, alignment: .topLeading)
+                .background(style == .legendaire
+                            ? Color(red: 0xF4 / 255, green: 0xE6 / 255, blue: 0xBF / 255)
+                            : Color(red: 0xE9 / 255, green: 0xED / 255, blue: 0xEB / 255))
             }
+            RoundedRectangle(cornerRadius: 4.4 * u, style: .continuous)
+                .inset(by: 2.4 * u)
+                .strokeBorder(Color.white.opacity(0.28), lineWidth: 1)
         }
-        .aspectRatio(JetonAmis.rapportCarte, contentMode: .fit)
+        .frame(width: largeur, height: hauteur)
+        .clipShape(RoundedRectangle(cornerRadius: largeur * Gabarit.coinCarte, style: .continuous))
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("\(espece?.nom ?? "Espèce"), \(style.mot)")
+    }
+
+    /// Le fond de la carte, par rareté : ardoise verte, vert sombre, argent, or.
+    @ViewBuilder
+    private func fondCarte(_ style: RareteAmi) -> some View {
+        switch style {
+        case .commun, .nonMesuree: Color(red: 0x5F / 255, green: 0x77 / 255, blue: 0x75 / 255)
+        case .peuCommun: Color(red: 0x17 / 255, green: 0x40 / 255, blue: 0x3F / 255)
+        case .rare:
+            LinearGradient(colors: [Color(red: 0xDC / 255, green: 0xE3 / 255, blue: 0xE8 / 255),
+                                    Color(red: 0xAF / 255, green: 0xBC / 255, blue: 0xC6 / 255),
+                                    Color(red: 0xC9 / 255, green: 0xD2 / 255, blue: 0xD8 / 255),
+                                    Color(red: 0x84 / 255, green: 0x97 / 255, blue: 0xA3 / 255)],
+                           startPoint: .topLeading, endPoint: .bottomTrailing)
+        case .legendaire: Color(red: 0xC8 / 255, green: 0x96 / 255, blue: 0x2F / 255)
+        }
+    }
+
+    /// Rond, hexagone, losange, étoile : le niveau se lit sans la couleur.
+    private func symboleRarete(_ style: RareteAmi) -> String? {
+        switch style {
+        case .commun: return "circle.fill"
+        case .peuCommun: return "hexagon.fill"
+        case .rare: return "diamond.fill"
+        case .legendaire: return "star.fill"
+        case .nonMesuree: return nil
+        }
+    }
+}
+
+/// Le verre des ronds et capsules posés sur une page (matière fine, filet, ombre douce).
+private extension View {
+    func fondVerre<S: InsettableShape>(_ forme: S) -> some View {
+        background {
+            forme.fill(.regularMaterial)
+                .overlay(forme.strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
+                .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
+        }
     }
 }
 

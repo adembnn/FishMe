@@ -34,10 +34,11 @@ struct FicheCoinView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: Espace.xl) {
+            VStack(alignment: .leading, spacing: 14) {
                 if let fiche = modele.fiche {
                     entete(fiche)
                     poissons(fiche)
+                        .padding(.bottom, 10)
                     if let touchee = modele.especeTouchee {
                         emplacementConseil(touchee)
                     }
@@ -54,9 +55,9 @@ struct FicheCoinView: View {
                     releve(fiche)
                 }
             }
-            .padding(.horizontal, Espace.bord)
-            .padding(.top, Espace.l)
-            .padding(.bottom, Espace.xl)
+            .padding(.horizontal, 20)
+            .padding(.top, 20)
+            .padding(.bottom, 28)
             .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { hauteurContenu = $0 }
         }
         .scrollIndicators(.hidden)
@@ -106,32 +107,46 @@ struct FicheCoinView: View {
     /// Le nom de l'eau et la croix sur une ligne, la pastille dessous, puis le but de la fiche en une phrase :
     /// rien ne se chevauche, la croix a sa place dans la ligne du titre.
     private func entete(_ fiche: FicheCalculee) -> some View {
-        VStack(alignment: .leading, spacing: Espace.m) {
+        VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .center, spacing: Espace.m) {
                 Text(nomEau(fiche))
-                    .font(Police.taille(30, .heavy))
+                    .font(Police.taille(22, .heavy))
                     .foregroundStyle(Palette.encre)
                     .minimumScaleFactor(0.6)
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
                     .accessibilityAddTraits(.isHeader)
                 Spacer(minLength: Espace.s)
-                BoutonRond(role: .fermer)
+                croixFiche
             }
             pastilleOuverture(ouverture(fiche))
-            Text("Ce que tu peux pêcher ici aujourd'hui")
-                .font(Police.titre)
+            Text("Ce que tu peux pêcher ici aujourd’hui")
+                .font(Police.taille(20, .heavy))
                 .foregroundStyle(Palette.encre)
-                .padding(.top, Espace.s)
+                .padding(.top, 12)
                 .accessibilityAddTraits(.isHeader)
         }
+    }
+
+    /// P07 A : croix de 44 pt, fond encre à 6 %, trait de 18 pt, dans la ligne du titre.
+    private var croixFiche: some View {
+        Button { dismiss() } label: {
+            Image(systemName: "xmark")
+                .font(Police.taille(18, .heavy))
+                .foregroundStyle(Palette.encre)
+                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                .background(Palette.encre.opacity(0.06), in: Circle())
+                .contentShape(Circle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Fermer")
     }
 
     private func pastilleOuverture(_ ouverture: OuvertureDuJour?) -> some View {
         let ouvert = ouverture?.estOuverte ?? true
         let texte: String
         if let ouverture {
-            texte = ouverture.estOuverte ? "Ouvert aujourd'hui" : (String(ouverture.texte.prefix(1)).uppercased() + String(ouverture.texte.dropFirst()))
+            texte = ouverture.estOuverte ? "Ouvert aujourd’hui" : (String(ouverture.texte.prefix(1)).uppercased() + String(ouverture.texte.dropFirst()))
         } else {
             texte = "Règles du jour"
         }
@@ -149,13 +164,13 @@ struct FicheCoinView: View {
                 Circle().fill(encre).frame(width: 8, height: 8)
                     .accessibilityHidden(true)
                 Text(texte)
-                    .font(Police.detail)
+                    .font(Police.taille(15, .heavy))
                     .foregroundStyle(encre)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(.horizontal, Espace.m)
-            .frame(minHeight: Gabarit.zoneTactile)
+            .padding(.horizontal, 14)
+            .frame(minHeight: 34)
             .background(fond, in: Capsule())
             .contentShape(Capsule())
         }
@@ -191,30 +206,24 @@ struct FicheCoinView: View {
                 reglesOuvertes = modele.especeTouchee == ligne.espece
             }
         } label: {
-            VStack(spacing: Espace.xs) {
-                ImageEspeceCarte(nom: modele.image(ligne.espece))
-                    .padding(Espace.s)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 84)
-                    .background(Palette.marineDoux, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
-                    .overlay(RoundedRectangle(cornerRadius: Rayon.s, style: .continuous)
-                        .strokeBorder(choisie ? Palette.marine : Color.clear, lineWidth: 2))
-                HStack(spacing: 4) {
+            VStack(spacing: 10) {
+                tuileImage(ligne, choisie: choisie)
+                HStack(spacing: 5) {
                     if let niveau, niveau != .nonMesuree {
                         Image(systemName: symbole(niveau))
-                            .font(Police.legende)
+                            .font(Police.taille(12, .heavy))
                             .foregroundStyle(CouleursCarte.rarete(niveau))
                             .accessibilityHidden(true)
                     }
                     Text(modele.nom(ligne.espece))
-                        .font(Police.legende)
+                        .font(Police.taille(14, .heavy))
                         .foregroundStyle(Palette.encre)
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
                 }
                 // Sans taille lisible dans la règle, rien n'est écrit (aucun chiffre inventé).
                 Text(ligne.tailleMiniCm.map { "\($0) cm mini" } ?? " ")
-                    .font(Police.detail)
+                    .font(Police.taille(15, .heavy))
                     .foregroundStyle(Palette.marine)
                     .lineLimit(1)
                     .minimumScaleFactor(0.7)
@@ -231,16 +240,29 @@ struct FicheCoinView: View {
         .accessibilityAddTraits(choisie ? [.isButton, .isSelected] : .isButton)
     }
 
+    /// La tuile image de la maquette : fond tuile, coins de 12, poisson à 86 % de large et 48 de haut.
+    private func tuileImage(_ ligne: LigneEspece, choisie: Bool) -> some View {
+        let forme = RoundedRectangle(cornerRadius: 12, style: .continuous)
+        return ImageEspeceCarte(nom: modele.image(ligne.espece))
+            .frame(height: 48)
+            .padding(.horizontal, 8)
+            .frame(maxWidth: .infinity)
+            .frame(height: 84)
+            .background(Palette.tuile, in: forme)
+            .overlay(forme.strokeBorder(choisie ? Palette.marine : Color.clear, lineWidth: 2))
+    }
+
     /// « Ouvert » en vert, « Fermé » en orange (une alerte), rien si l'ouverture n'est pas connue.
     @ViewBuilder
     private func badgeOuverture(_ ouverture: OuvertureDuJour?) -> some View {
         if let ouverture {
             Text(ouverture.estOuverte ? "Ouvert" : "Fermé")
-                .font(Police.legende)
+                .font(Police.taille(12, .heavy))
                 .foregroundStyle(ouverture.estOuverte ? Palette.ouvert : Palette.alerte)
-                .padding(.horizontal, Espace.s)
+                .padding(.horizontal, 9)
                 .padding(.vertical, 3)
-                .background(ouverture.estOuverte ? Palette.ouvertDoux : Palette.alerteDoux, in: Capsule())
+                .background(ouverture.estOuverte ? Palette.ouvertDoux : Palette.alerteDoux,
+                            in: RoundedRectangle(cornerRadius: 10, style: .continuous))
         } else {
             Color.clear.frame(height: 20)
         }
@@ -265,7 +287,7 @@ struct FicheCoinView: View {
             ?? fiche.especes.first(where: { $0.releve }).map { ($0.nPeches, $0.annee) }
         if let chiffre {
             Text("\(chiffre.0) \(chiffre.0 > 1 ? "pêches" : "pêche") OFB · \(String(chiffre.1))")
-                .font(Police.detail)
+                .font(Police.taille(13))
                 .foregroundStyle(Palette.encreDouce)
                 .frame(maxWidth: .infinity)
                 .multilineTextAlignment(.center)
@@ -335,15 +357,16 @@ struct FicheCoinView: View {
         let autres = lignes.filter { ligne in !utilisees.contains(ligne) }
         let avecSources: LigneControle?
         if let taille, !taille.sources.isEmpty { avecSources = taille } else { avecSources = lignes.first(where: { !$0.sources.isEmpty }) }
-        return VStack(alignment: .leading, spacing: Espace.l) {
+        return VStack(alignment: .leading, spacing: 0) {
             HStack {
+                BoutonRond(role: .retour, rendu: .simple) { reglesOuvertes = false }
+                    .padding(.leading, -8)
                 Spacer(minLength: 0)
-                BoutonRond(role: .fermer, rendu: .simple) { reglesOuvertes = false }
             }
-            HStack(alignment: .center, spacing: Espace.m) {
-                VStack(alignment: .leading, spacing: Espace.xs) {
+            HStack(alignment: .center, spacing: 14) {
+                VStack(alignment: .leading, spacing: 4) {
                     Text(modele.nom(espece))
-                        .font(Police.grandTitre)
+                        .font(Police.taille(34, .heavy))
                         .foregroundStyle(Palette.encre)
                         .minimumScaleFactor(0.6)
                         .lineLimit(2)
@@ -356,6 +379,7 @@ struct FicheCoinView: View {
                 ImageEspeceCarte(nom: modele.image(espece))
                     .frame(width: 120, height: 52)
             }
+            .padding(.top, 8)
             VStack(spacing: 0) {
                 if lignes.isEmpty {
                     Text("Pas de règle lue ici, vérifie l'arrêté")
@@ -367,11 +391,11 @@ struct FicheCoinView: View {
                 }
                 if let tailleCm {
                     ligneValeur("Taille minimale") {
-                        Text("\(tailleCm) cm").font(Police.chiffreMoyen).foregroundStyle(Palette.marine)
+                        Text("\(tailleCm) cm").font(Police.taille(22, .heavy)).foregroundStyle(Palette.marine)
                     }
                 }
                 if let jusquau {
-                    ligneValeur("Ouvert jusqu'au") {
+                    ligneValeur("Ouvert jusqu’au") {
                         Text(jusquau).font(Police.corps).foregroundStyle(Palette.encre)
                     }
                 }
@@ -420,20 +444,36 @@ struct FicheCoinView: View {
                     }
                 }
             }
-            .tuileFishMe(rayon: Rayon.l)
+            .tuileFishMe(rayon: Rayon.m)
+            .padding(.top, 24)
             if let taille, taille.sources.count > 1 {
-                let parSource = taille.sources.compactMap { source -> String? in
-                    source.citation.flatMap { LectureRegle.nombre(avant: "cm", dans: $0) }.map { "\(source.titre) : \($0) cm" }
-                }
-                Text(parSource.count == taille.sources.count
-                     ? "Deux textes se contredisent. " + parSource.joined(separator: " · ") + ". Le plus strict est affiché."
-                     : "Deux textes se contredisent : " + taille.sources.map(\.titre).joined(separator: " · ") + ". Le plus strict est affiché.")
-                    .font(Police.legende)
-                    .foregroundStyle(Palette.encreDouce)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, Espace.l)
+                legendeContradiction(taille, tailleCm: tailleCm)
             }
         }
+    }
+
+    /// P08 B : « Arrêté 2025 : 50 cm. Avis 2026 : 60 cm, le plus strict. » Sans les nombres, les titres seuls.
+    private func legendeContradiction(_ taille: LigneControle, tailleCm: String?) -> some View {
+        let parSource: [(String, String)] = taille.sources.compactMap { source in
+            guard let nombre = source.citation.flatMap({ LectureRegle.nombre(avant: "cm", dans: $0) }) else { return nil }
+            return (source.titre, nombre)
+        }
+        let texte: String
+        if parSource.count == taille.sources.count {
+            let morceaux = parSource.map { titre, nombre -> String in
+                let strict = nombre == tailleCm ? ", le plus strict" : ""
+                return "\(titre) : \(nombre) cm\(strict)."
+            }
+            texte = morceaux.joined(separator: " ")
+        } else {
+            texte = taille.sources.map(\.titre).joined(separator: " · ") + " : le plus strict est affiché."
+        }
+        return Text(texte)
+            .font(Police.taille(13))
+            .foregroundStyle(Palette.encreDouce)
+            .fixedSize(horizontal: false, vertical: true)
+            .padding(.horizontal, Espace.l)
+            .padding(.top, 10)
     }
 
     private func ligneValeur<V: View>(_ titre: String, @ViewBuilder valeur: () -> V) -> some View {

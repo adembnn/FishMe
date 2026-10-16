@@ -415,6 +415,31 @@ struct PleineEauTests {
         #expect(seize.allSatisfy { (0..<16).contains($0) } && Set(seize).count > Set(poses).count)
     }
 
+    /// Il tourne sans saut : le lacet varie peu d'une image à l'autre, et le fondu passe d'une vue à l'autre.
+    @Test func tourneSansTeleportation() {
+        for slug in slugs {
+            for id in ["a", "b", "c", "d"] {
+                let poses = boucle(slug, id: id)
+                for j in 0..<159 where !dehors(poses[j]) && !dehors(poses[j + 1]) {
+                    #expect(abs(poses[j + 1].lacet - poses[j].lacet) < 6, "\(slug) \(id) lacet saute à \(j)")
+                }
+            }
+        }
+        let angles = [-45, -15, 15, 45]
+        #expect(NageWidget.melange(lacet: 0, angles: angles).map(\.angle) == [0])
+        let m = NageWidget.melange(lacet: 25, angles: angles)
+        #expect(m.map(\.angle) == [15, 45] && abs(m[0].poids - 2.0 / 3) < 1e-9)
+        #expect(NageWidget.melange(lacet: -80, angles: angles).map(\.angle) == [-45])
+        // Poids continus : 0,1° plus loin ne change presque rien.
+        for l in stride(from: -60.0, through: 60.0, by: 0.5) {
+            func poids(_ l: Double) -> [Int: Double] {
+                Dictionary(NageWidget.melange(lacet: l, angles: angles).map { ($0.angle, $0.poids) }, uniquingKeysWith: +)
+            }
+            let a = poids(l), b = poids(l + 0.1)
+            for k in Set(a.keys).union(b.keys) { #expect(abs((a[k] ?? 0) - (b[k] ?? 0)) < 0.01, "saut à \(l)") }
+        }
+    }
+
     /// Les vues trois-quarts suivent le sens de la profondeur : vers le fond (1) quand il s'éloigne, vers nous (2).
     @Test func vuesTroisQuarts() {
         var vues = Set<Int>()

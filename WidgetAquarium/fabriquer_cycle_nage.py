@@ -145,6 +145,10 @@ def ecrire_contents(dossier, nom):
 
 
 def main():
+    # Les poissons rendus en volume (integrer_poissons_3d.py) seraient effacés : on refuse sans --ecraser.
+    if SORTIE.exists() and any(SORTIE.glob("*-lacet-*.imageset")) and "--ecraser" not in sys.argv:
+        sys.exit("NagePoissons.xcassets contient des poissons en volume : relancer integrer_poissons_3d.py après, "
+                 "ou passer --ecraser.")
     if SORTIE.exists():
         shutil.rmtree(SORTIE)
     SORTIE.mkdir()

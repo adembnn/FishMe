@@ -61,18 +61,32 @@ enum StyleRarete: Equatable {
         }
     }
 
-    /// Fond de la fenêtre du poisson (P24) : mat et sombre, pour que le poisson et le texte blanc ressortent.
-    /// Commun ardoise, peu commun vert mat, rare violet, légendaire or foncé.
+    /// Fond de la fenêtre du poisson (P24, `fishme-ds.css` : `.fc`, `.fc.pc`, `.fc.r`, `.fc.l`) : mat et sombre pour le commun
+    /// et le peu commun, argent pour le rare, or pour le légendaire. Deux couleurs, de haut en bas (une seule répétée si le fond est uni).
     var fond: [Color] {
         switch self {
         case .commun, .nonMesuree:
-            return [Color(red: 0x5E / 255, green: 0x7A / 255, blue: 0x84 / 255), Color(red: 0x46 / 255, green: 0x62 / 255, blue: 0x6C / 255)]
+            return [Color(carte: 0x5F7775), Color(carte: 0x5F7775)]
         case .peuCommun:
-            return [Color(red: 0x21 / 255, green: 0x5A / 255, blue: 0x56 / 255), Color(red: 0x14 / 255, green: 0x3E / 255, blue: 0x3C / 255)]
+            return [Color(carte: 0x17403F), Color(carte: 0x17403F)]
         case .rare:
-            return [Color(red: 0x6B / 255, green: 0x5F / 255, blue: 0xD6 / 255), Color(red: 0x45 / 255, green: 0x38 / 255, blue: 0xA8 / 255)]
+            return [Color(carte: 0xDCE3E8), Color(carte: 0x8497A3)]
         case .legendaire:
-            return [Color(red: 0xC7 / 255, green: 0x9A / 255, blue: 0x2E / 255), Color(red: 0x7A / 255, green: 0x54 / 255, blue: 0x10 / 255)]
+            return [Color(carte: 0xE3B654), Color(carte: 0xB8862A)]
+        }
+    }
+
+    /// Fond de la plaque du bas (`--fpl`) : gris très clair, crème pour le légendaire.
+    var plaque: Color {
+        self == .legendaire ? Color(carte: 0xF4E6BF) : Color(carte: 0xE9EDEB)
+    }
+
+    /// Couleur du centile en haut de la carte (`--fcen`) : blanc sur les fonds sombres, encre sur l'argent et l'or.
+    var couleurCentile: Color {
+        switch self {
+        case .commun, .nonMesuree, .peuCommun: return .white
+        case .rare: return Color(carte: 0x0F1A1C)
+        case .legendaire: return Color(carte: 0x1A1408)
         }
     }
 
@@ -148,5 +162,41 @@ struct PointsRarete: View {
             }
         }
         .accessibilityHidden(true)
+    }
+}
+
+extension Color {
+    /// Une couleur fixe lue en hexadécimal (0xRRGGBB) : les cartes ne suivent pas le mode sombre.
+    init(carte hex: UInt32) {
+        self.init(red: Double((hex >> 16) & 0xFF) / 255, green: Double((hex >> 8) & 0xFF) / 255, blue: Double(hex & 0xFF) / 255)
+    }
+}
+
+/// La marque de palier de la maquette (P24, `.rkm` et `.rk svg`) : rond, hexagone, losange ou étoile, dessinés dans une boîte de 16.
+/// Une forme et un mot disent le palier ; la couleur seule ne suffit jamais.
+struct MarqueRarete: View {
+    let style: StyleRarete
+    var taille: CGFloat = 16
+
+    var body: some View {
+        Group {
+            switch style {
+            case .commun, .nonMesuree:
+                Circle().fill(style.couleur).frame(width: taille * 12 / 16, height: taille * 12 / 16)
+            case .peuCommun:
+                Self.forme([(8, 1.5), (13.6, 4.75), (13.6, 11.25), (8, 14.5), (2.4, 11.25), (2.4, 4.75)]).fill(style.couleur)
+            case .rare:
+                Self.forme([(8, 1), (15, 8), (8, 15), (1, 8)]).fill(style.couleur)
+            case .legendaire:
+                Self.forme([(8, 1), (10.1, 5.4), (15, 6), (11.4, 9.4), (12.3, 14.2), (8, 11.9), (3.7, 14.2), (4.6, 9.4), (1, 6), (5.9, 5.4)])
+                    .fill(style.couleur)
+            }
+        }
+        .frame(width: taille, height: taille)
+        .accessibilityHidden(true)
+    }
+
+    private static func forme(_ points: [(CGFloat, CGFloat)]) -> Polygone {
+        Polygone(points: points.map { CGPoint(x: $0.0 / 16, y: $0.1 / 16) })
     }
 }

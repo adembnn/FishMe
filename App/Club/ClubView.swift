@@ -62,9 +62,8 @@ struct ClubView<MarqueMeteo: View>: View {
                     Text("Club")
                         .font(Police.grandTitre)
                         .foregroundStyle(Palette.encre)
-                        .padding(.horizontal, Espace.l)
                         .accessibilityAddTraits(.isHeader)
-                    EnteteGroupeClub(titre: "Mes clubs").padding(.top, Espace.xs)
+                    EnteteGroupeClub(titre: "Mes clubs", haut: 4)
                     mesClubs
                     if let club {
                         EnteteGroupeClub(titre: club.nom)
@@ -75,7 +74,7 @@ struct ClubView<MarqueMeteo: View>: View {
                         } else {
                             GroupeClub {
                                 ForEach(Array(dernieresCartes.enumerated()), id: \.element.id) { rang, carte in
-                                    if rang > 0 { FiletClub(retrait: 80) }
+                                    if rang > 0 { FiletClub(retrait: 84) }
                                     ligneCarte(image: carte.image, titre: carte.membre,
                                                detail: "\(carte.espece), \(carte.jour)", taille: carte.tailleCm)
                                 }
@@ -119,7 +118,7 @@ struct ClubView<MarqueMeteo: View>: View {
             .tint(Palette.marine)
             .background(Palette.fond.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
-            .sheet(isPresented: $creationOuverte) {
+            .fullScreenCover(isPresented: $creationOuverte) {
                 CreerClubView(poissons: poissons) { nom, poisson, photo in
                     clubs.creer(nom: nom, poissonId: poisson, photo: photo)
                     clubChoisi = clubs.clubs.last?.id
@@ -166,25 +165,33 @@ struct ClubView<MarqueMeteo: View>: View {
                 .buttonStyle(.plain)
                 .accessibilityLabel(c.nom)
                 .accessibilityAddTraits(choisi ? AccessibilityTraits.isSelected : AccessibilityTraits())
-                FiletClub(retrait: Espace.l + 36 + Espace.m)
+                FiletClub()
             }
+            // Deux boutons de 48 pt, texte de 14 pt, icône de 20 pt, largeurs 1,5 pour 1 (maquette P29).
             HStack(spacing: 0) {
                 Button { rejoindreOuvert = true } label: {
-                    Label("Rejoindre avec un lien", systemImage: "link")
-                        .frame(maxWidth: .infinity, minHeight: 48)
+                    HStack(spacing: 4) {
+                        Image(systemName: "link").font(Police.taille(17))
+                        Text("Rejoindre avec un lien")
+                    }
+                    .frame(maxWidth: .infinity, minHeight: 48)
                 }
-                .layoutPriority(1)
+                .containerRelativeFrame(.horizontal) { largeur, _ in (largeur - 2 * Espace.bord - 20 - 1) * 0.6 }
                 Rectangle().fill(Palette.filet).frame(width: 1, height: 24)
                 Button { creationOuverte = true } label: {
-                    Label("Créer un club", systemImage: "plus")
-                        .frame(maxWidth: .infinity, minHeight: 48)
+                    HStack(spacing: 4) {
+                        Image(systemName: "plus").font(Police.taille(17))
+                        Text("Créer un club")
+                    }
+                    .frame(maxWidth: .infinity, minHeight: 48)
                 }
+                .containerRelativeFrame(.horizontal) { largeur, _ in (largeur - 2 * Espace.bord - 20 - 1) * 0.4 }
             }
-            .font(Police.corps)
+            .font(Police.taille(14))
             .foregroundStyle(Palette.marine)
             .lineLimit(1)
             .minimumScaleFactor(0.85)
-            .padding(.horizontal, Espace.s)
+            .padding(.horizontal, 10)
         }
     }
 
@@ -195,7 +202,7 @@ struct ClubView<MarqueMeteo: View>: View {
             HStack(alignment: .top, spacing: 0) {
                 VStack(spacing: 2) {
                     PastilleMembre(nom: "Moi", rang: 0)
-                    Text("Moi").font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
+                    Text("Moi").font(Police.detail).foregroundStyle(Palette.encreDouce).lineLimit(1)
                     Text(cartes.count == 1 ? "1 carte" : "\(cartes.count) cartes")
                         .font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
                 }
@@ -204,7 +211,7 @@ struct ClubView<MarqueMeteo: View>: View {
                 ForEach(Array(membres.prefix(2).enumerated()), id: \.element.id) { rang, membre in
                     VStack(spacing: 2) {
                         PastilleMembre(nom: membre.nom, rang: rang + 1)
-                        Text(membre.nom).font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
+                        Text(membre.nom).font(Police.detail).foregroundStyle(Palette.encreDouce).lineLimit(1)
                         Text(membre.nombreDeCartes.map { $0 == 1 ? "1 carte" : "\($0) cartes" } ?? " ")
                             .font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
                     }
@@ -216,9 +223,9 @@ struct ClubView<MarqueMeteo: View>: View {
                 } label: {
                     VStack(spacing: 2) {
                         Image(systemName: "plus")
-                            .font(.system(size: 22, weight: .bold, design: .rounded))
+                            .font(Police.taille(26))
                             .frame(width: 36, height: 36)
-                        Text("Inviter").font(Police.detail)
+                        Text("Inviter").font(Police.detail).foregroundStyle(Palette.encreDouce)
                         Text(" ").font(Police.legende)
                     }
                     .foregroundStyle(Palette.marine)
@@ -254,10 +261,11 @@ struct ClubView<MarqueMeteo: View>: View {
             if let taille {
                 Text("\(taille) cm").font(Police.corps.monospacedDigit()).foregroundStyle(Palette.encreDouce)
             }
+            Image(systemName: "chevron.right").font(Police.taille(13)).foregroundStyle(Palette.silhouette)
         }
-        .frame(minHeight: 48)
         .padding(.horizontal, Espace.l)
-        .padding(.vertical, Espace.xs)
+        .padding(.vertical, Espace.s)
+        .frame(minHeight: 48)
         .accessibilityElement(children: .combine)
     }
 }
@@ -273,6 +281,7 @@ struct ReglagesClubView<MarqueMeteo: View>: View {
 
     @AppStorage("club.cartePeche2026") private var aSaCarte = false
     @State private var gestionAbonnement = false
+    @State private var partageOuvert = false
 
     var body: some View {
         List {
@@ -297,9 +306,7 @@ struct ReglagesClubView<MarqueMeteo: View>: View {
             }
 
             Section {
-                NavigationLink {
-                    PartageCarteView(cartes: cartes)
-                } label: {
+                Button { partageOuvert = true } label: {
                     Label("Partager une carte en image", systemImage: "square.and.arrow.up")
                 }
             } header: {
@@ -359,6 +366,10 @@ struct ReglagesClubView<MarqueMeteo: View>: View {
         .navigationTitle("Ma pêche")
         .navigationBarTitleDisplayMode(.inline)
         .manageSubscriptionsSheet(isPresented: $gestionAbonnement)
+        // P33 est plein écran, avec son rond « Fermer » en haut à gauche.
+        .fullScreenCover(isPresented: $partageOuvert) {
+            PartageCarteView(cartes: cartes)
+        }
     }
 }
 

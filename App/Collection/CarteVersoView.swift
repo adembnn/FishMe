@@ -11,10 +11,14 @@ struct CarteVersoView: View {
     var emplacements: EmplacementsExternes = .vides
 
     var body: some View {
-        CarteCadre(style: infos.style, declaree: infos.prise.estDeclaree) {
-            fondPhoto
-                .clipShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-                .padding(Espace.s)
+        // P25 : fond gris clair de la carte (`.fc.verso`), photo à 2,6 % du bord, coins à 4 % de la largeur.
+        CarteCadre(style: infos.style, declaree: infos.prise.estDeclaree, fond: Color(carte: 0xE9EDEB)) {
+            GeometryReader { geo in
+                let u = geo.size.width / 100
+                fondPhoto
+                    .clipShape(RoundedRectangle(cornerRadius: 4 * u, style: .continuous))
+                    .padding(2.6 * u)
+            }
         }
         .accessibilityElement(children: .contain)
     }

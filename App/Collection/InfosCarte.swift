@@ -72,4 +72,13 @@ struct InfosCarte {
                           poids: poids, lune: services.soleil.phaseLune(date: prise.date), consigne: consigne,
                           sourceConsigne: source)
     }
+
+    /// Les infos d'une vignette du classeur (P26 B) : seulement ce que la mini-carte affiche (poisson, nom, palier, étiquette « Déclarée »).
+    /// Aucun contrôle de règles ici : le classeur en dessine des dizaines. `nil` pour une espèce sans carte.
+    static func vignette(emplacement: Emplacement, zone: Departement?) -> InfosCarte? {
+        guard let prise = emplacement.carte else { return nil }
+        return InfosCarte(detail: CarteDetaillee(prise: prise, conditions: nil, dureeSecondes: nil), espece: emplacement.espece,
+                          rarete: emplacement.rarete, departement: zone, rangDansLaZone: nil, poids: nil, lune: .nouvelle,
+                          consigne: nil, sourceConsigne: nil)
+    }
 }

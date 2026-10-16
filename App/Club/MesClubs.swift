@@ -69,13 +69,14 @@ struct VignetteClub: View {
                let image = UIImage(contentsOfFile: url.path) {
                 Image(uiImage: image).resizable().scaledToFill()
             } else if let poisson = poissons.first(where: { $0.id == club.poissonId }) {
-                Image(poisson.image).resizable().scaledToFit().padding(taille * 0.12)
+                // Maquette : poisson de 30 x 18 dans une pastille de 36.
+                Image(poisson.image).resizable().scaledToFit().frame(width: taille * 30 / 36, height: taille * 18 / 36)
             } else {
                 Image(systemName: "person.3.fill").foregroundStyle(Palette.marine)
             }
         }
         .frame(width: taille, height: taille)
-        .background(Palette.marineDoux)
+        .background(Palette.tuile)
         .clipShape(Circle())
         .accessibilityHidden(true)
     }
@@ -86,13 +87,16 @@ struct VignetteClub: View {
 /// Le titre d'un groupe : petites capitales discrètes au-dessus de la carte blanche (« MES CLUBS »).
 struct EnteteGroupeClub: View {
     let titre: String
+    /// Espace au-dessus du titre : 22 pt dans la maquette ; 4 sous le grand titre, 12 sur un écran de formulaire.
+    var haut: CGFloat = 22
 
     var body: some View {
         Text(titre.uppercased())
             .font(Police.legende)
             .foregroundStyle(Palette.encreDouce)
+            .tracking(0.5)
             .padding(.horizontal, Espace.l)
-            .padding(.top, Espace.xl)
+            .padding(.top, haut)
             .padding(.bottom, Espace.s)
             .frame(maxWidth: .infinity, alignment: .leading)
             .accessibilityAddTraits(.isHeader)
@@ -106,7 +110,7 @@ struct GroupeClub<Contenu: View>: View {
     var body: some View {
         VStack(spacing: 0, content: contenu)
             .frame(maxWidth: .infinity)
-            .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
+            .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
     }
 }
 
@@ -115,7 +119,7 @@ struct FiletClub: View {
     var retrait: CGFloat = Espace.l
 
     var body: some View {
-        Rectangle().fill(Palette.filet).frame(height: 1).padding(.leading, retrait)
+        Rectangle().fill(Palette.filet).frame(height: 0.5).padding(.leading, retrait)
     }
 }
 
@@ -156,12 +160,13 @@ struct VignettePoissonClub: View {
             .scaledToFit()
             .padding(.horizontal, 6)
             .frame(width: 48, height: 32)
-            .background(Palette.marineDoux, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+            .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
             .accessibilityHidden(true)
     }
 }
 
 /// P30 : créer un club. Nom, image (un poisson ou une photo de la galerie), collections pour les amis invités seulement.
+/// Présenté plein écran (maquette B · Réglages) : « Annuler », titre au centre, bouton « Créer le club » en bas.
 struct CreerClubView: View {
     let poissons: [PoissonClub]
     let valider: (_ nom: String, _ poissonId: String?, _ photo: Data?) -> Void
@@ -184,46 +189,46 @@ struct CreerClubView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 0) {
-                    EnteteGroupeClub(titre: "Nom").padding(.top, Espace.s)
-                    GroupeClub {
-                        TextField("Nom du club", text: $nom)
-                            .font(Police.corps)
-                            .foregroundStyle(Palette.encre)
+            VStack(spacing: 0) {
+                barre
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 0) {
+                        EnteteGroupeClub(titre: "Nom", haut: 12)
+                        GroupeClub {
+                            TextField("Nom du club", text: $nom)
+                                .font(Police.corps)
+                                .foregroundStyle(Palette.encre)
+                                .frame(minHeight: 56)
+                                .padding(.horizontal, Espace.l)
+                        }
+                        EnteteGroupeClub(titre: "Image")
+                        GroupeClub { grille.padding(Espace.m) }
+                        EnteteGroupeClub(titre: "Qui voit les collections")
+                        GroupeClub {
+                            HStack(spacing: Espace.m) {
+                                Image(systemName: "lock.fill")
+                                    .font(Police.taille(18)).foregroundStyle(Palette.marine)
+                                Text("Amis invités seulement").font(Police.corps).foregroundStyle(Palette.encre)
+                                Spacer(minLength: Espace.s)
+                                Image(systemName: "checkmark.circle.fill")
+                                    .font(Police.taille(22)).foregroundStyle(Palette.marine)
+                            }
+                            .accessibilityElement(children: .combine)
+                            .allowsHitTesting(false)
                             .frame(minHeight: 56)
                             .padding(.horizontal, Espace.l)
-                    }
-                    EnteteGroupeClub(titre: "Image")
-                    GroupeClub { grille.padding(Espace.m) }
-                    EnteteGroupeClub(titre: "Qui voit les collections")
-                    GroupeClub {
-                        HStack(spacing: Espace.m) {
-                            Image(systemName: "lock.fill").foregroundStyle(Palette.marine)
-                            Text("Amis invités seulement").font(Police.corps).foregroundStyle(Palette.encre)
-                            Spacer()
-                            Text("Toujours").font(Police.legende).foregroundStyle(Palette.encreDouce)
-                            Image(systemName: "checkmark.circle.fill").foregroundStyle(Palette.marine)
                         }
-                        .accessibilityElement(children: .combine)
-                        .allowsHitTesting(false)
-                        .frame(minHeight: 56)
-                        .padding(.horizontal, Espace.l)
+                        Text("Jamais en public. Seuls les amis que tu invites voient tes cartes.")
+                            .font(Police.legende).foregroundStyle(Palette.encreDouce)
+                            .padding(.horizontal, Espace.l).padding(.top, Espace.s)
                     }
-                    Text("Jamais en public. Seuls les amis que tu invites voient tes cartes.")
-                        .font(Police.legende).foregroundStyle(Palette.encreDouce)
-                        .padding(.horizontal, Espace.l).padding(.top, Espace.s)
+                    .padding(.horizontal, Espace.bord)
                 }
-                .padding(.horizontal, Espace.bord)
+                .scrollIndicators(.hidden)
+                .scrollDismissesKeyboard(.interactively)
             }
-            .scrollIndicators(.hidden)
-            .scrollDismissesKeyboard(.interactively)
             .background(Palette.fond.ignoresSafeArea())
-            .navigationTitle("Nouveau club")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) { Button("Annuler") { fermer() } }
-            }
+            .toolbar(.hidden, for: .navigationBar)
             .safeAreaInset(edge: .bottom) {
                 Button("Créer le club") {
                     valider(nom, poissonChoisi, photo)
@@ -233,7 +238,6 @@ struct CreerClubView: View {
                 .disabled(!peutCreer)
                 .opacity(peutCreer ? 1 : 0.5)
                 .padding(.horizontal, Espace.bord)
-                .padding(.bottom, Espace.s)
             }
             .onChange(of: choixGalerie) { _, nouveau in
                 guard let nouveau else { return }
@@ -244,6 +248,22 @@ struct CreerClubView: View {
                 }
             }
         }
+    }
+
+    /// « Annuler », « Nouveau club » au centre, rien à droite : 44 pt sous la barre d'état (maquette : 103 pt avec elle).
+    private var barre: some View {
+        HStack(spacing: 0) {
+            Button("Annuler") { fermer() }
+                .font(Police.corps)
+                .foregroundStyle(Palette.marine)
+                .frame(minWidth: 90, minHeight: Gabarit.zoneTactile, alignment: .leading)
+            Spacer(minLength: 0)
+            Text("Nouveau club").font(Police.sousTitre).foregroundStyle(Palette.encre)
+                .accessibilityAddTraits(.isHeader)
+            Spacer(minLength: 0)
+            Color.clear.frame(width: 90, height: 1)
+        }
+        .padding(.horizontal, Espace.bord)
     }
 
     private var grille: some View {
@@ -258,10 +278,11 @@ struct CreerClubView: View {
                     photo = nil
                     choixGalerie = nil
                 } label: {
-                    Image(poisson.image).resizable().scaledToFit().padding(Espace.s)
-                        .frame(maxWidth: .infinity).aspectRatio(1, contentMode: .fit)
-                        .background(Palette.marineDoux, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-                        .overlay(selection(poissonChoisi == poisson.id && photo == nil))
+                    Image(poisson.image).resizable().scaledToFit()
+                        .frame(width: 96 * 0.82, height: 40)
+                        .frame(width: 96, height: 96)
+                        .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                        .overlay(selection(poissonChoisi == poisson.id && photo == nil, rayon: 12))
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel(poisson.nom)
@@ -273,30 +294,34 @@ struct CreerClubView: View {
         ZStack(alignment: .bottom) {
             if let photo, let image = UIImage(data: photo) {
                 Image(uiImage: image).resizable().scaledToFill()
+                    .frame(width: 96, height: 96).clipped()
             } else {
-                Palette.marineDoux
+                Palette.tuile
                 Image(systemName: "photo.on.rectangle").font(Police.titre).foregroundStyle(Palette.marine)
                     .frame(maxHeight: .infinity)
             }
-            Label("Galerie", systemImage: "photo")
-                .font(Police.legende).foregroundStyle(Palette.surMarine)
-                .frame(maxWidth: .infinity, minHeight: 24)
-                .background(Palette.marine)
+            HStack(spacing: 4) {
+                Image(systemName: "photo").font(Police.taille(12))
+                Text("Galerie")
+            }
+            .font(Police.legende).foregroundStyle(Palette.surMarine)
+            .frame(maxWidth: .infinity, minHeight: 24, maxHeight: 24)
+            .background(Palette.marine)
         }
-        .aspectRatio(1, contentMode: .fit)
+        .frame(width: 96, height: 96)
         .clipShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-        .overlay(selection(photo != nil))
+        .overlay(selection(photo != nil, rayon: Rayon.m))
     }
 
-    /// Le contour marine et la coche d'une tuile choisie.
+    /// Le contour marine (2,5 pt) et la coche blanche de 24 pt d'une tuile choisie.
     @ViewBuilder
-    private func selection(_ actif: Bool) -> some View {
+    private func selection(_ actif: Bool, rayon: CGFloat) -> some View {
         if actif {
             ZStack {
-                RoundedRectangle(cornerRadius: Rayon.m, style: .continuous).strokeBorder(Palette.marine, lineWidth: 2.5)
+                RoundedRectangle(cornerRadius: rayon, style: .continuous).strokeBorder(Palette.marine, lineWidth: 2.5)
                 Image(systemName: "checkmark.circle.fill")
-                    .font(.system(size: 22, weight: .bold, design: .rounded))
-                    .foregroundStyle(Palette.surMarine, Palette.marine)
+                    .font(Police.taille(24))
+                    .foregroundStyle(Palette.marine, Palette.surMarine)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
                     .padding(4)
             }
@@ -306,86 +331,89 @@ struct CreerClubView: View {
 
 /// P31 : inviter. Le lien, la liste des invités et l'envoi viennent du partage CloudKit du lot Amis ;
 /// tant que RootView ne les passe pas, les blocs correspondants restent vides ou masqués.
+/// Poussé dans la pile du Club : barre de 44 pt (retour marine, « Inviter » au centre), bouton en bas.
 struct InviterClubView: View {
     let club: ClubLocal
-    /// À brancher : adresse courte du club (partage CloudKit). Sans elle, la ligne « Lien d'invitation » n'apparaît pas.
+    /// À brancher : adresse courte du club (partage CloudKit). Sans elle, la ligne « Lien d'invitation » montre l'attente.
     var lienTexte: String? = nil
     /// À brancher : `Ami.enAttente` et `Ami.jeVoisSaCollection` du lot Amis.
     var invites: [InviteClub] = []
     /// À brancher : le partage CloudKit en lecture seule, réservé aux personnes invitées.
     var invitation: InvitationPescedex? = nil
 
+    @Environment(\.dismiss) private var fermer
+
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 0) {
-                EnteteGroupeClub(titre: "Lien d'invitation").padding(.top, Espace.s)
-                if lienTexte == nil {
-                    GroupeClub {
-                        HStack(spacing: Espace.m) {
-                            ProgressView()
-                            Text("Prépare ton invitation…").font(Police.corps).foregroundStyle(Palette.encreDouce)
-                            Spacer()
-                        }
-                        .frame(minHeight: 56)
-                        .padding(.horizontal, Espace.l)
-                    }
-                }
-                if let lienTexte {
-                    GroupeClub {
-                        HStack {
-                            Text(lienTexte)
-                                .font(.system(size: 15, weight: .regular, design: .monospaced))
-                                .foregroundStyle(Palette.encre)
-                                .lineLimit(1)
-                            Spacer(minLength: Espace.s)
-                            Button("Copier") { UIPasteboard.general.string = lienTexte }
-                                .font(Police.corps)
-                                .foregroundStyle(Palette.marine)
-                        }
-                        .frame(minHeight: 56)
-                        .padding(.horizontal, Espace.l)
-                    }
-                }
-                EnteteGroupeClub(titre: "Invitations")
-                if invites.isEmpty {
-                    GroupeClub {
-                        HStack(spacing: Espace.m) {
-                            Image(systemName: "person.crop.circle.badge.questionmark").foregroundStyle(Palette.silhouette)
-                            Text("Personne n'est invité").font(Police.corps).foregroundStyle(Palette.encreDouce)
-                            Spacer()
-                        }
-                        .frame(minHeight: 56)
-                        .padding(.horizontal, Espace.l)
-                    }
-                } else {
-                    GroupeClub {
-                        ForEach(Array(invites.enumerated()), id: \.element.id) { rang, invite in
-                            if rang > 0 { FiletClub(retrait: Espace.l + 36 + Espace.m) }
+        VStack(spacing: 0) {
+            barre
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    EnteteGroupeClub(titre: "Lien d'invitation", haut: 12)
+                    if let lienTexte {
+                        GroupeClub {
                             HStack(spacing: Espace.m) {
-                                PastilleMembre(nom: invite.nom, rang: rang, enAttente: !invite.acceptee)
-                                Text(invite.nom).font(Police.corps).foregroundStyle(Palette.encre)
-                                Spacer()
-                                Text(invite.acceptee ? "Acceptée" : "En attente")
+                                Text(lienTexte)
+                                    .font(.system(size: 15, weight: .medium, design: .monospaced))
+                                    .foregroundStyle(Palette.encre)
+                                    .lineLimit(1)
+                                Spacer(minLength: Espace.s)
+                                Button("Copier") { UIPasteboard.general.string = lienTexte }
                                     .font(Police.corps)
-                                    .foregroundStyle(invite.acceptee ? Palette.ouvert : Palette.encreDouce)
+                                    .foregroundStyle(Palette.marine)
                             }
                             .frame(minHeight: 56)
                             .padding(.horizontal, Espace.l)
-                            .accessibilityElement(children: .combine)
+                        }
+                    } else {
+                        GroupeClub {
+                            HStack(spacing: Espace.m) {
+                                ProgressView()
+                                Text("Prépare ton invitation…").font(Police.corps).foregroundStyle(Palette.encreDouce)
+                                Spacer()
+                            }
+                            .frame(minHeight: 56)
+                            .padding(.horizontal, Espace.l)
                         }
                     }
+                    EnteteGroupeClub(titre: "Invitations")
+                    if invites.isEmpty {
+                        GroupeClub {
+                            HStack(spacing: Espace.m) {
+                                Image(systemName: "person.crop.circle.badge.questionmark").foregroundStyle(Palette.silhouette)
+                                Text("Personne n'est invité").font(Police.corps).foregroundStyle(Palette.encreDouce)
+                                Spacer()
+                            }
+                            .frame(minHeight: 56)
+                            .padding(.horizontal, Espace.l)
+                        }
+                    } else {
+                        GroupeClub {
+                            ForEach(Array(invites.enumerated()), id: \.element.id) { rang, invite in
+                                if rang > 0 { FiletClub() }
+                                HStack(spacing: Espace.m) {
+                                    PastilleMembre(nom: invite.nom, rang: rang, enAttente: !invite.acceptee)
+                                    Text(invite.nom).font(Police.corps).foregroundStyle(Palette.encre)
+                                    Spacer()
+                                    Text(invite.acceptee ? "Acceptée" : "En attente")
+                                        .font(Police.corps)
+                                        .foregroundStyle(invite.acceptee ? Palette.ouvert : Palette.encreDouce)
+                                }
+                                .frame(minHeight: 56)
+                                .padding(.horizontal, Espace.l)
+                                .accessibilityElement(children: .combine)
+                            }
+                        }
+                    }
+                    Text("Ton coin exact ne quitte jamais ton iPhone. Les amis invités voient tes cartes, personne d'autre.")
+                        .font(Police.legende).foregroundStyle(Palette.encreDouce)
+                        .padding(.horizontal, Espace.l).padding(.top, 10)
                 }
-                Text("Ton coin exact ne quitte jamais ton iPhone. Les amis invités voient tes cartes, personne d'autre.")
-                    .font(Police.legende).foregroundStyle(Palette.encreDouce)
-                    .padding(.horizontal, Espace.l).padding(.top, Espace.m)
+                .padding(.horizontal, Espace.bord)
             }
-            .padding(.horizontal, Espace.bord)
+            .scrollIndicators(.hidden)
         }
-        .scrollIndicators(.hidden)
         .background(Palette.fond.ignoresSafeArea())
-        .navigationTitle("Inviter")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar(.visible, for: .navigationBar)
+        .toolbar(.hidden, for: .navigationBar)
         .safeAreaInset(edge: .bottom) {
             Group {
                 if let invitation {
@@ -406,7 +434,28 @@ struct InviterClubView: View {
                 }
             }
             .padding(.horizontal, Espace.bord)
-            .padding(.bottom, Espace.s)
         }
+    }
+
+    /// Retour marine de 44 pt (décalé de 8 à gauche), « Inviter » au centre, 44 pt vides à droite.
+    private var barre: some View {
+        HStack(spacing: 0) {
+            Button { fermer() } label: {
+                Image(systemName: "chevron.left")
+                    .font(Police.taille(20))
+                    .foregroundStyle(Palette.marine)
+                    .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Retour")
+            .padding(.leading, -8)
+            Spacer(minLength: 0)
+            Text("Inviter").font(Police.sousTitre).foregroundStyle(Palette.encre)
+                .accessibilityAddTraits(.isHeader)
+            Spacer(minLength: 0)
+            Color.clear.frame(width: Gabarit.zoneTactile, height: 1)
+        }
+        .padding(.horizontal, Espace.bord)
     }
 }
