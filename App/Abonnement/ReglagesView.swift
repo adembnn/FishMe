@@ -2,10 +2,8 @@ import SwiftUI
 import StoreKit
 import Core
 
-/// P35 (direction B, « Réglages ») : niveau du pêcheur, alertes, mesure d'audience, sources, sécurité,
-/// abonnement, restauration, pages légales et version. Une liste de blocs arrondis, sans texte inutile.
-/// Les conditions d'utilisation s'ouvrent dans l'app (`ConditionsFeuille`) ; la confidentialité ouvre `liens.confidentialite`.
-/// A la branche dans `RootView.swift` :
+/// P35 (direction B, « Réglages ») : retour, grand titre, niveau du pêcheur, alertes, mesure d'audience, sources,
+/// puis sécurité, FishMe Pro, restauration et « À propos » (conditions, confidentialité, version).
 /// A la branche dans `RootView.swift` : `ReglagesView(niveau:alertes:mesureAudience:abonne:achats:liens:surEtat:ouvrirSource:ouvrirSecurite:ouvrirPaywall:)`.
 struct ReglagesView: View {
     @Binding var niveau: NiveauPecheur
@@ -25,13 +23,9 @@ struct ReglagesView: View {
     /// Ouvre « Mon compte » (sauvegarde iCloud, App/Compte). `nil` : la ligne est cachée.
     var ouvrirCompte: (() -> Void)? = nil
 
-    @Environment(\.dismiss) private var dismiss
     @State private var gestionOuverte = false
     @State private var message: String?
-    @State private var conditionsOuvertes = false
-    /// Sons et vibrations de l'app (App/Mouvement/Sons.swift lit ces mêmes clés, allumés par défaut).
-    @AppStorage("reglages.sons") private var sons = true
-    @AppStorage("reglages.vibrations") private var vibrations = true
+    @State private var aProposOuvert = false
 
     private static let sources: [(nom: String, role: String)] = [
         ("OFB", "Poissons par station"),
@@ -43,10 +37,8 @@ struct ReglagesView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: Espace.l) {
-                if let ouvrirCompte {
-                    bloc { ligne("Mon compte", valeur: "iCloud", action: ouvrirCompte) }
-                }
+            VStack(alignment: .leading, spacing: 0) {
+                EnteteEcranReglages(titre: "Réglages")
                 bloc {
                     ligneNiveau
                     separateur
@@ -54,97 +46,74 @@ struct ReglagesView: View {
                     separateur
                     ligneInterrupteur("Mesure d'audience", $mesureAudience)
                 }
-                section("AMBIANCE") {
-                    ligneInterrupteur("Sons", $sons)
-                    separateur
-                    ligneInterrupteur("Vibrations", $vibrations)
-                }
-                section("SOURCES") {
+                .padding(.top, 14)
+                Text("Sources")
+                    .font(Police.taille(13, .heavy))
+                    .textCase(.uppercase)
+                    .tracking(0.52)
+                    .foregroundStyle(Palette.encreDouce)
+                    .padding(.leading, 16)
+                    .padding(.top, 16)
+                    .padding(.bottom, 6)
+                    .accessibilityAddTraits(.isHeader)
+                bloc {
                     ForEach(Array(Self.sources.enumerated()), id: \.offset) { position, source in
                         ligne(source.nom, valeur: source.role) { ouvrirSource(source.nom) }
                         if position < Self.sources.count - 1 { separateur }
                     }
                 }
-                section("FISHME PRO") {
-                    ligne("FishMe Pro", valeur: abonne ? "Actif" : "Découvrir", couleurValeur: Palette.marine) {
+                bloc {
+                    ligne("Sécurité au bord de l'eau", valeur: nil, action: ouvrirSecurite)
+                    separateur
+                    // Abonné : la ligne ouvre la gestion de l'abonnement d'Apple ; sinon le paywall.
+                    ligne("FishMe Pro", valeur: abonne ? "Actif" : "Découvrir") {
                         if abonne { gestionOuverte = true } else { ouvrirPaywall() }
-                    }
-                    if abonne {
-                        separateur
-                        ligne("Gérer l'abonnement", valeur: nil) { gestionOuverte = true }
                     }
                     separateur
                     Button("Restaurer les achats") { Task { await restaurer() } }
                         .font(Police.corps)
                         .foregroundStyle(Palette.marine)
-                        .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)
-                        .padding(.horizontal, Espace.l)
-                }
-                section("LÉGAL") {
-                    ligne("Sécurité au bord de l'eau", valeur: nil, action: ouvrirSecurite)
-                    separateur
-                    ligne("Conditions d'utilisation", valeur: nil) { conditionsOuvertes = true }
-                    separateur
-                    lien("Confidentialité", liens.confidentialite)
-                    separateur
-                    HStack {
-                        Text("À propos").foregroundStyle(Palette.encre)
-                        Spacer(minLength: Espace.s)
-                        Text(Self.version).foregroundStyle(Palette.encreDouce)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 4)
+                        .frame(maxWidth: .infinity, minHeight: Self.hauteurLigne, alignment: .leading)
+                    if let ouvrirCompte {
+                        separateur
+                        ligne("Mon compte", valeur: "iCloud", action: ouvrirCompte)
                     }
-                    .font(Police.corps)
-                    .frame(minHeight: Gabarit.zoneTactile)
-                    .padding(.horizontal, Espace.l)
-                    .accessibilityElement(children: .combine)
+                    separateur
+                    ligne("À propos", valeur: Self.version) { aProposOuvert = true }
                 }
+                .padding(.top, 16)
                 if let message {
                     Text(message)
                         .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
-                        .padding(.horizontal, Espace.l)
+                        .padding(.horizontal, 16)
+                        .padding(.top, Espace.m)
                 }
             }
-            .padding(.horizontal, Espace.bord)
-            .padding(.vertical, Espace.l)
+            .padding(.horizontal, 16)
+            .padding(.bottom, Espace.xl)
         }
         .scrollIndicators(.hidden)
         .background(Palette.fond)
-        .navigationTitle("Réglages")
-        .navigationBarTitleDisplayMode(.large)
-        .toolbar {
-            ToolbarItem(placement: .confirmationAction) {
-                Button("OK") { dismiss() }
-                    .font(Police.corps)
-                    .foregroundStyle(Palette.marine)
-            }
-        }
         .manageSubscriptionsSheet(isPresented: $gestionOuverte)
-        .sheet(isPresented: $conditionsOuvertes) { ConditionsFeuille() }
+        .navigationDestination(isPresented: $aProposOuvert) { AProposVue(liens: liens) }
     }
 
     // MARK: Pièces
 
-    private static var version: String {
+    /// La hauteur d'une ligne de la maquette : 46 pt.
+    fileprivate static let hauteurLigne: CGFloat = 46
+
+    fileprivate static var version: String {
         Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
     }
 
-    private var separateur: some View {
-        Divider().padding(.leading, Espace.l)
-    }
-
-    private func section<Contenu: View>(_ titre: String, @ViewBuilder _ contenu: () -> Contenu) -> some View {
-        VStack(alignment: .leading, spacing: Espace.xs) {
-            Text(titre)
-                .font(Police.legende)
-                .foregroundStyle(Palette.encreDouce)
-                .padding(.leading, Espace.l)
-            bloc(contenu)
-        }
-    }
+    private var separateur: some View { SeparateurReglages() }
 
     private func bloc<Contenu: View>(@ViewBuilder _ contenu: () -> Contenu) -> some View {
-        VStack(spacing: 0, content: contenu)
-            .tuileFishMe(rayon: Rayon.l)
+        BlocReglages(contenu: contenu)
     }
 
     private var ligneNiveau: some View {
@@ -155,16 +124,7 @@ struct ReglagesView: View {
                 }
             }
         } label: {
-            HStack {
-                Text("Niveau de pêcheur").foregroundStyle(Palette.encre)
-                Spacer(minLength: Espace.s)
-                Text(Self.nom(niveau)).foregroundStyle(Palette.encreDouce)
-                chevron
-            }
-            .font(Police.corps)
-            .frame(minHeight: Gabarit.zoneTactile)
-            .padding(.horizontal, Espace.l)
-            .contentShape(Rectangle())
+            ContenuLigneReglages(titre: "Niveau de pêcheur", valeur: Self.nom(niveau), chevron: true)
         }
     }
 
@@ -180,51 +140,142 @@ struct ReglagesView: View {
         Toggle(titre, isOn: valeur)
             .font(Police.corps)
             .foregroundStyle(Palette.encre)
-            .frame(minHeight: Gabarit.zoneTactile)
-            .padding(.horizontal, Espace.l)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 4)
+            .frame(minHeight: Self.hauteurLigne)
     }
 
-    private var chevron: some View {
-        Image(systemName: "chevron.right")
-            .font(Police.legende)
-            .foregroundStyle(Palette.silhouette)
-            .accessibilityHidden(true)
-    }
-
-    private func ligne(_ titre: String, valeur: String?, couleurValeur: Color = Palette.encreDouce, action: @escaping () -> Void) -> some View {
+    private func ligne(_ titre: String, valeur: String?, action: @escaping () -> Void) -> some View {
         Button(action: action) {
-            HStack {
-                Text(titre).foregroundStyle(Palette.encre)
-                Spacer(minLength: Espace.s)
-                if let valeur { Text(valeur).foregroundStyle(couleurValeur) }
-                chevron
-            }
-            .font(Police.corps)
-            .frame(minHeight: Gabarit.zoneTactile)
-            .padding(.horizontal, Espace.l)
-            .contentShape(Rectangle())
+            ContenuLigneReglages(titre: titre, valeur: valeur, chevron: true)
         }
         .buttonStyle(.plain)
-    }
-
-    private func lien(_ titre: String, _ adresse: URL) -> some View {
-        Link(destination: adresse) {
-            HStack {
-                Text(titre).foregroundStyle(Palette.encre)
-                Spacer(minLength: Espace.s)
-                chevron
-            }
-            .font(Police.corps)
-            .frame(minHeight: Gabarit.zoneTactile)
-            .padding(.horizontal, Espace.l)
-            .contentShape(Rectangle())
-        }
     }
 
     private func restaurer() async {
         let etat = await achats.restaurer()
         surEtat(etat)
         message = etat.donneAcces ? TextesPaywall.restaure : TextesPaywall.rienARestaurer
+    }
+}
+
+// MARK: - Pièces communes (Réglages et À propos)
+
+/// Retour en marine, sans fond, puis le grand titre (P35 : haut de 103 pt, titre remonté de 6 pt).
+private struct EnteteEcranReglages: View {
+    let titre: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            BoutonRond(role: .retour, rendu: .simple)
+                .padding(.leading, -8)
+                .padding(.top, Espace.s)
+            Text(titre)
+                .font(Police.grandTitre)
+                .foregroundStyle(Palette.encre)
+                .padding(.top, -6)
+                .accessibilityAddTraits(.isHeader)
+        }
+    }
+}
+
+private struct BlocReglages<Contenu: View>: View {
+    private let contenu: Contenu
+
+    init(@ViewBuilder contenu: () -> Contenu) { self.contenu = contenu() }
+
+    var body: some View {
+        VStack(spacing: 0) { contenu }
+            .frame(maxWidth: .infinity)
+            .background(Palette.surface, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+    }
+}
+
+/// Le filet de 0,5 pt entre deux lignes, qui part à 16 pt du bord.
+private struct SeparateurReglages: View {
+    var body: some View {
+        Rectangle().fill(Palette.filet).frame(height: 0.5).padding(.leading, 16)
+    }
+}
+
+/// Une ligne : texte, valeur à droite, chevron de 8 × 14 pt gris-bleu.
+private struct ContenuLigneReglages: View {
+    let titre: String
+    var valeur: String? = nil
+    var chevron = false
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Text(titre)
+                .foregroundStyle(Palette.encre)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            if let valeur {
+                Text(valeur)
+                    .foregroundStyle(Palette.encreDouce)
+                    .monospacedDigit()
+            }
+            if chevron {
+                ChevronReglages()
+                    .stroke(Color(.sRGB, red: 180 / 255, green: 191 / 255, blue: 203 / 255),
+                            style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
+                    .frame(width: 8, height: 14)
+                    .accessibilityHidden(true)
+            }
+        }
+        .font(Police.corps)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 4)
+        .frame(minHeight: ReglagesView.hauteurLigne)
+        .contentShape(Rectangle())
+    }
+}
+
+/// Le chevron de la maquette : `m1.5 1.5 5 5.5-5 5.5` dans une boîte de 8 × 14.
+private struct ChevronReglages: Shape {
+    func path(in rect: CGRect) -> Path {
+        var chemin = Path()
+        chemin.move(to: CGPoint(x: rect.minX + rect.width * 1.5 / 8, y: rect.minY + rect.height * 1.5 / 14))
+        chemin.addLine(to: CGPoint(x: rect.minX + rect.width * 6.5 / 8, y: rect.minY + rect.height * 7 / 14))
+        chemin.addLine(to: CGPoint(x: rect.minX + rect.width * 1.5 / 8, y: rect.minY + rect.height * 12.5 / 14))
+        return chemin
+    }
+}
+
+// MARK: - À propos : conditions, confidentialité, version
+
+/// La page derrière « À propos » : les conditions s'ouvrent dans l'app, la confidentialité dans le navigateur.
+private struct AProposVue: View {
+    let liens: LiensLegaux
+    @State private var conditionsOuvertes = false
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                EnteteEcranReglages(titre: "À propos")
+                BlocReglages {
+                    Button { conditionsOuvertes = true } label: {
+                        ContenuLigneReglages(titre: "Conditions d'utilisation", chevron: true)
+                    }
+                    .buttonStyle(.plain)
+                    SeparateurReglages()
+                    Link(destination: liens.confidentialite) {
+                        ContenuLigneReglages(titre: "Confidentialité", chevron: true)
+                    }
+                    .buttonStyle(.plain)
+                    SeparateurReglages()
+                    ContenuLigneReglages(titre: "Version", valeur: ReglagesView.version)
+                        .accessibilityElement(children: .combine)
+                }
+                .padding(.top, 14)
+            }
+            .padding(.horizontal, 16)
+            .padding(.bottom, Espace.xl)
+        }
+        .scrollIndicators(.hidden)
+        .background(Palette.fond)
+        .toolbar(.hidden, for: .navigationBar)
+        .sheet(isPresented: $conditionsOuvertes) { ConditionsFeuille() }
     }
 }
 

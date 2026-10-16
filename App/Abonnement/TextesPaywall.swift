@@ -12,12 +12,15 @@ nonisolated enum TextesPaywall {
 
     static let renouvellement = "L'abonnement se renouvelle automatiquement, sauf résiliation au moins 24 h avant la fin de la période, dans les réglages de ton compte Apple."
 
+    /// P34 : « Tarif fondateur jusqu'au 31 déc. 2026, puis 49,99 € » (le prix d'après vient de StoreKit, jamais écrit ici).
     static func phraseLancement(prixApres: String?) -> String {
-        var phrase = "Prix de lancement jusqu'au \(finTarifFondateur)."
-        if let prixApres { phrase += " Ensuite \(prixApres) par an pour les nouveaux abonnés." }
-        phrase += " Tu gardes ton prix tant que tu restes abonné."
-        return phrase
+        var phrase = "Tarif fondateur jusqu'au 31 déc. 2026"
+        if let prixApres { phrase += ", puis \(prixApres)" }
+        return phrase + "."
     }
+
+    /// P34 : la ligne légale sous le bouton (renouvellement automatique et résiliation).
+    static let renouvellementCourt = "Abonnement à renouvellement automatique, résiliable à tout moment dans les réglages de ton compte Apple."
 
     /// « 1 semaine offerte » : durée et unité lues depuis l'offre d'introduction de StoreKit.
     static func dureeOfferte(valeur: Int, unite: UniteDuree) -> String {

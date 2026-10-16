@@ -23,9 +23,10 @@ struct BandeauPasDeReseauView: View {
             }
             Spacer(minLength: 0)
         }
-        .padding(Espace.l)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .tuileFishMe(rayon: Rayon.l)
+        .padding(.horizontal, Espace.l)
+        .padding(.vertical, Espace.s)
+        .frame(maxWidth: .infinity, minHeight: 56, alignment: .leading)
+        .tuileFishMe(rayon: Rayon.m)
         .accessibilityElement(children: .combine)
     }
 }
@@ -36,29 +37,29 @@ struct PasDeSpotView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            VStack(spacing: Espace.m) {
+            VStack(spacing: 10) {
                 ZStack {
                     Circle()
                         .strokeBorder(Palette.marine, style: StrokeStyle(lineWidth: 2.5, dash: [5, 4]))
                         .frame(width: 72, height: 72)
                     Image(systemName: "mappin")
-                        .font(Police.taille(30))
+                        .font(Police.taille(32))
                         .foregroundStyle(Palette.marine)
                 }
                 .accessibilityHidden(true)
                 Text("Pas de spot")
-                    .font(Police.titre)
+                    .font(Police.taille(22, .heavy))
                     .foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
                 Text("Pose un cercle d'1 km sur ta rivière pour voir ses poissons.")
-                    .font(Police.detail)
+                    .font(Police.taille(15))
                     .foregroundStyle(Palette.encreDouce)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal, Espace.l)
-            .padding(.top, Espace.xl)
-            .padding(.bottom, Espace.l)
+            .padding(.top, 28)
+            .padding(.bottom, 20)
             .frame(maxWidth: .infinity)
 
             Divider().overlay(Palette.filet)
@@ -70,7 +71,8 @@ struct PasDeSpotView: View {
                         .foregroundStyle(Palette.marine)
                     Spacer(minLength: Espace.s)
                     Image(systemName: "chevron.right")
-                        .foregroundStyle(Palette.silhouette)
+                        .font(Police.taille(13))
+                        .foregroundStyle(Palette.encreDouce)
                         .accessibilityHidden(true)
                 }
                 .padding(.horizontal, Espace.l)
@@ -79,7 +81,7 @@ struct PasDeSpotView: View {
             }
             .buttonStyle(.plain)
         }
-        .tuileFishMe(rayon: Rayon.l)
+        .tuileFishMe(rayon: Rayon.m)
     }
 }
 

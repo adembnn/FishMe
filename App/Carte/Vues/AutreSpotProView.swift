@@ -17,11 +17,11 @@ struct AutreSpotProView: View {
         .scrollIndicators(.hidden)
         .scrollBounceBehavior(.basedOnSize)
         .safeAreaInset(edge: .bottom, spacing: 0) {
-            VStack(spacing: Espace.xs) {
+            VStack(spacing: 6) {
                 Button("Découvrir Pro", action: decouvrir)
                     .buttonStyle(.principal)
                 Button("Plus tard", action: plusTard)
-                    .font(Police.corps)
+                    .font(Police.taille(17, .heavy))
                     .foregroundStyle(Palette.marine)
                     .frame(minHeight: Gabarit.zoneTactile)
             }
@@ -42,7 +42,7 @@ struct AutreSpotProView: View {
                 Spacer(minLength: Espace.s)
                 Button(action: plusTard) {
                     Image(systemName: "xmark")
-                        .font(Police.taille(18))
+                        .font(Police.taille(20, .heavy))
                         .foregroundStyle(Palette.marine)
                         .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
                         .background(Palette.tuile, in: Circle())
@@ -52,30 +52,31 @@ struct AutreSpotProView: View {
                 .accessibilityLabel("Fermer")
             }
 
-            Spacer(minLength: Espace.l)
             illustration
-            VStack(spacing: Espace.m) {
+                .padding(.top, 47)
+            VStack(spacing: 10) {
                 Text("Spots illimités")
                     .font(Police.taille(28, .heavy))
                     .foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.center)
                     .accessibilityAddTraits(.isHeader)
                 Text("Pose un cercle où tu veux : tronçons entiers de rivière et lacs.")
-                    .font(Police.detail)
+                    .font(Police.taille(15))
                     .foregroundStyle(Palette.encreDouce)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
-                HStack(spacing: Espace.s) {
+                HStack(spacing: 6) {
                     Image(systemName: "checkmark.circle.fill")
+                        .font(Police.taille(16))
                         .foregroundStyle(Palette.ouvert)
                         .accessibilityHidden(true)
                     Text("Ton spot gratuit reste à toi, pour toujours")
                         .foregroundStyle(Palette.encreDouce)
                         .multilineTextAlignment(.center)
                 }
-                .font(Police.legende)
+                .font(Police.taille(13))
             }
-            .padding(.top, Espace.xl)
+            .padding(.top, 32)
             .padding(.horizontal, Espace.l)
         }
     }
@@ -92,13 +93,14 @@ struct AutreSpotProView: View {
             cercle(x: -85, y: 70)
             cercle(x: 55, y: 85)
             Circle()
-                .strokeBorder(Palette.marine, lineWidth: 2)
+                .strokeBorder(Palette.marine, lineWidth: 2.5)
+                .background(Circle().fill(Color.white.opacity(0.35)))
                 .frame(width: 80, height: 80)
             Text("Ton spot")
-                .font(Police.legende)
+                .font(Police.taille(12))
                 .foregroundStyle(Palette.surMarine)
-                .padding(.horizontal, Espace.s)
-                .padding(.vertical, Espace.xs)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 4)
                 .background(Palette.marine, in: Capsule())
         }
         .frame(maxWidth: 280)
@@ -110,8 +112,8 @@ struct AutreSpotProView: View {
 
     private func cercle(x: CGFloat, y: CGFloat) -> some View {
         Circle()
-            .strokeBorder(Palette.marine, style: StrokeStyle(lineWidth: 2, dash: [4, 3]))
-            .background(Circle().fill(Palette.marine.opacity(0.12)))
+            .strokeBorder(Palette.marine, style: StrokeStyle(lineWidth: 2.5, dash: [4, 3]))
+            .background(Circle().fill(Color.white.opacity(0.35)))
             .frame(width: 56, height: 56)
             .offset(x: x, y: y)
     }

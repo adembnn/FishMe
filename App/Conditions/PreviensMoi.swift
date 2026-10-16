@@ -129,8 +129,6 @@ final class PreviensMoiModele: ObservableObject {
 struct PreviensMoiView: View {
     @ObservedObject var modele: PreviensMoiModele
     let lecture: LectureConditions?
-    @State private var ventActif = false
-    @State private var vent: Double = 15
 
     /// Nom réel de la station hydrométrique si la lecture en a une.
     private var legendeCrue: String {
@@ -138,34 +136,29 @@ struct PreviensMoiView: View {
         return "Niveau de ta rivière"
     }
 
+    // Maquette P39-notifs-B : titre, une ligne de texte, un groupe de deux lignes (Orage, Crue), un bouton en bas.
+    // Les réglages fins (vent, pression, rivière normale) restent dans `CriteresPreviensMoi` et le planificateur,
+    // mais la maquette n'a pas d'écran pour eux : ils ne sont plus affichés ici.
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: Espace.l) {
+            VStack(alignment: .leading, spacing: 0) {
                 Text("Alertes")
-                    .font(Police.grandTitre).foregroundStyle(Palette.encre)
+                    .font(Police.taille(34, .black)).foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
                 Text("FishMe te prévient avant que ça tourne mal.")
                     .font(Police.detail).foregroundStyle(Palette.encreDouce)
+                    .padding(.top, 8)
                 VStack(spacing: 0) {
                     ligne(icone: "bolt.fill", titre: "Orage", legende: "Vigilance Météo-France sur ton spot", actif: $modele.vigilanceActive)
-                    Divider().padding(.leading, Espace.xxl + Espace.l)
+                    Rectangle().fill(Palette.filet).frame(height: 0.5).padding(.leading, Espace.l)
                     ligne(icone: "water.waves", titre: "Crue", legende: legendeCrue, actif: $modele.crueActive)
                 }
                 .tuileFishMe()
-                DisclosureGroup("Plus de réglages") {
-                    VStack(alignment: .leading, spacing: Espace.s) {
-                        Toggle("vent sous \(FormatConditions.nombre(vent)) km/h", isOn: $ventActif)
-                        if ventActif { Slider(value: $vent, in: 5...40, step: 1) }
-                        Toggle("pression en baisse", isOn: $modele.criteres.pressionEnBaisse)
-                        Toggle("rivière normale", isOn: $modele.criteres.niveauNormal)
-                    }
-                    .padding(.top, Espace.s)
-                }
-                .font(Police.detail).foregroundStyle(Palette.encre)
-                .tint(Palette.marine)
+                .padding(.top, 24)
             }
             .padding(.horizontal, Espace.bord)
-            .padding(.top, Espace.l)
+            .padding(.top, 32)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
         .scrollIndicators(.hidden)
         .background(Palette.fond.ignoresSafeArea())
@@ -180,9 +173,8 @@ struct PreviensMoiView: View {
             .padding(.horizontal, Espace.bord)
             .padding(.bottom, Espace.s)
         }
-        .onChange(of: ventActif) { _, _ in appliquer() }
-        .onChange(of: vent) { _, _ in appliquer() }
         .onChange(of: modele.criteres) { _, _ in appliquer() }
+        .presentationDetents([.large])
         .accessibilityIdentifier("previens-moi")
     }
 
@@ -191,21 +183,21 @@ struct PreviensMoiView: View {
             Image(systemName: icone)
                 .font(.system(size: 22, weight: .bold, design: .rounded))
                 .foregroundStyle(Palette.alerte)
-                .frame(width: Espace.xxl)
+                .frame(width: 24, height: 24)
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text(titre).font(Police.corps).foregroundStyle(Palette.encre)
-                Text(legende).font(Police.detail).foregroundStyle(Palette.encreDouce)
+                Text(legende).font(Police.legende).foregroundStyle(Palette.encreDouce)
             }
             Spacer(minLength: Espace.s)
             Toggle(titre, isOn: actif).labelsHidden().tint(Palette.marine)
         }
-        .padding(Espace.l)
+        .padding(.horizontal, Espace.l).padding(.vertical, Espace.s)
+        .frame(minHeight: 72)
     }
 
     /// Reprogramme avec la permission déjà donnée ; ne la demande jamais (c'est le bouton qui s'en charge).
     private func appliquer() {
-        modele.criteres.ventSousKmh = ventActif ? vent : nil
         Task { await modele.reprogrammer(avec: lecture) }
     }
 }

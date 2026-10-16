@@ -81,10 +81,9 @@ struct OffresTests {
 
     @Test func phraseDeLancementLitLePrixApresOuLOmet() {
         let avec = TextesPaywall.phraseLancement(prixApres: "49,99 €")
-        #expect(avec.contains("jusqu'au 31 décembre 2026"))
-        #expect(avec.contains("Ensuite 49,99 € par an pour les nouveaux abonnés."))
-        #expect(avec.contains("Tu gardes ton prix tant que tu restes abonné."))
-        #expect(!TextesPaywall.phraseLancement(prixApres: nil).contains("Ensuite"))
+        #expect(avec.contains("Tarif fondateur jusqu'au 31 déc. 2026"))
+        #expect(avec.contains("puis 49,99 €"))
+        #expect(!TextesPaywall.phraseLancement(prixApres: nil).contains("puis"))
     }
 
     @Test func aucunMotInterditDansLesTextes() {

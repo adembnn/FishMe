@@ -8,9 +8,11 @@ private struct ArcSoleil: View {
 
     var body: some View {
         Canvas { ctx, size in
-            let sx = size.width / 320
-            let sy = size.height / 120
-            func pt(_ x: Double, _ y: Double) -> CGPoint { CGPoint(x: x * sx, y: y * sy) }
+            // Comme le viewBox 320 × 120 de la maquette (échelle unique, centré) : l'arc ne se déforme pas.
+            let echelle = min(size.width / 320, size.height / 120)
+            let dx = (size.width - 320 * echelle) / 2
+            let dy = (size.height - 120 * echelle) / 2
+            func pt(_ x: Double, _ y: Double) -> CGPoint { CGPoint(x: dx + x * echelle, y: dy + y * echelle) }
             func milieu(_ a: CGPoint, _ b: CGPoint, _ t: Double) -> CGPoint {
                 CGPoint(x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t)
             }
@@ -38,7 +40,7 @@ private struct ArcSoleil: View {
             ecoule.addQuadCurve(to: soleil, control: q1)
             ctx.stroke(ecoule, with: .color(Palette.marine), style: StrokeStyle(lineWidth: 3, lineCap: .round))
 
-            let rond = Path(ellipseIn: CGRect(x: soleil.x - 8, y: soleil.y - 8, width: 16, height: 16))
+            let rond = Path(ellipseIn: CGRect(x: soleil.x - 8 * echelle, y: soleil.y - 8 * echelle, width: 16 * echelle, height: 16 * echelle))
             ctx.fill(rond, with: .color(Palette.surface))
             ctx.stroke(rond, with: .color(Palette.marine), lineWidth: 3.5)
         }
@@ -66,7 +68,7 @@ struct RangeeMaintenantView: View {
                 if let point {
                     VStack(alignment: .leading, spacing: Espace.s) {
                         Text("\(FormatConditions.nombre(point.temperatureC))°")
-                            .font(Police.taille(72, .heavy).monospacedDigit()).minimumScaleFactor(0.6).lineLimit(1)
+                            .font(Police.taille(72, .black).monospacedDigit()).minimumScaleFactor(0.6).lineLimit(1)
                             .foregroundStyle(Palette.encre)
                             .accessibilityIdentifier("temperature-maintenant")
                         Text(FormatConditions.libelle(codeTemps: point.codeTemps))
@@ -88,6 +90,7 @@ struct RangeeMaintenantView: View {
             if let aube = c.aube, let soir = c.crepuscule, soir > aube {
                 ArcSoleil(progres: c.heure.timeIntervalSince(aube) / soir.timeIntervalSince(aube))
                     .frame(height: 112)
+                    .padding(.horizontal, -4)
                     .padding(.top, Espace.m)
                 HStack {
                     Text("Lever \(FormatConditions.horloge(aube))")
@@ -104,7 +107,7 @@ struct RangeeMaintenantView: View {
                     if let f = c.finLegale {
                         VStack(alignment: .leading, spacing: 2) {
                             Text("Fin légale").font(Police.legende).foregroundStyle(Palette.encreDouce)
-                            Text(FormatConditions.horloge(f)).font(Police.taille(28, .heavy).monospacedDigit())
+                            Text(FormatConditions.horloge(f)).font(Police.taille(28, .black).monospacedDigit())
                                 .foregroundStyle(Palette.encre)
                         }
                         .accessibilityElement(children: .combine)
@@ -118,9 +121,12 @@ struct RangeeMaintenantView: View {
                     .font(Police.legende).foregroundStyle(Palette.encreDouce)
                     .padding(.top, Espace.s)
             }
-            MarqueMeteoView(stockage: marque).padding(.top, Espace.s)
+            // La ligne de la marque fait 44 pt de haut (zone tactile) : le texte tombe à 14 pt sous le bloc, comme la maquette.
+            MarqueMeteoView(stockage: marque)
         }
-        .padding(enFeuille ? Espace.bord : 20)
+        .padding(.horizontal, 20)
+        .padding(.top, enFeuille ? 24 : 20)
+        .padding(.bottom, enFeuille ? 24 : 20)
         .frame(maxWidth: .infinity, alignment: .leading)
         .modifier(HabillageTuile(actif: !enFeuille))
         .accessibilityIdentifier("rangee-maintenant")
@@ -141,7 +147,7 @@ struct RangeeMaintenantView: View {
         if let valeur {
             let bloc = VStack(alignment: .trailing, spacing: 2) {
                 Text(eau.station.nom).font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)
-                Text(valeur).font(Police.taille(28, .heavy).monospacedDigit()).minimumScaleFactor(0.6).lineLimit(1)
+                Text(valeur).font(Police.taille(28, .black).monospacedDigit()).minimumScaleFactor(0.6).lineLimit(1)
                     .foregroundStyle(Palette.encre)
             }
             .accessibilityElement(children: .combine)
@@ -188,5 +194,28 @@ struct RangeeMaintenantVideView: View {
         .padding(.horizontal, Espace.bord)
         .accessibilityElement(children: .contain)
         .accessibilityIdentifier("rangee-vide")
+    }
+}
+
+
+/// La feuille « Conditions du jour » de la maquette P11-conditions-A : `RangeeMaintenantView` en feuille, poignée visible,
+/// hauteur de la maquette (444 pt). À présenter avec `.sheet`. Le bouton fermer et le nom du lieu (« La Marne · 94 »)
+/// sont posés sur la carte, hors de la feuille : c'est l'affaire de `RootView` (une feuille système ne dessine pas hors d'elle).
+struct ConditionsDuJourView: View {
+    let lecture: LectureConditions
+    @ObservedObject var marque: StockageMarque
+    var montrerRiviere: Bool = true
+    var ouvrirCourbe: (() -> Void)? = nil
+
+    var body: some View {
+        VStack(spacing: 0) {
+            RangeeMaintenantView(lecture: lecture, marque: marque, montrerRiviere: montrerRiviere,
+                                 ouvrirCourbe: ouvrirCourbe, enFeuille: true)
+            Spacer(minLength: 0)
+        }
+        .presentationDetents([.height(444)])
+        .presentationDragIndicator(.visible)
+        .presentationBackground(Palette.surface)
+        .accessibilityIdentifier("conditions-du-jour")
     }
 }

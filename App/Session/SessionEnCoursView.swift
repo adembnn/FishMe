@@ -39,30 +39,34 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     }
 
     private func contenu(_ session: SessionEnCours, maintenant: Date) -> some View {
-        VStack(spacing: 0) {
-            enTete(session)
-            Spacer(minLength: Espace.l)
+        // Maquette : chrono à 190 pt du haut, poisson à 430 pt, boutons à 24 pt du bas (écran 390 × 844, haut sûr 59 pt).
+        ZStack(alignment: .top) {
+            VStack(spacing: 0) {
+                enTete(session)
+                Spacer(minLength: 0)
+                VStack(spacing: 0) {
+                    Button(action: ajouterPrise) {
+                        Label("Ajouter une prise", systemImage: "camera")
+                    }
+                    .buttonStyle(.principal)
+                    Button("Terminer la session", role: .cancel) { confirmationFin = true }
+                        .font(Police.taille(17, .heavy))
+                        .foregroundStyle(Palette.marine)
+                        .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                        .padding(.top, Espace.xs)
+                }
+            }
             chrono(session, maintenant: maintenant)
-            Spacer(minLength: Espace.l)
+                .padding(.top, 190 - 59)
             // Sans prise, le chrono reste seul : pas de poisson gris.
             if !FormatSortie.prises(session.sortie).isEmpty {
                 dernierePrise(session)
-                Spacer(minLength: Espace.l)
-            }
-            VStack(spacing: Espace.s) {
-                Button(action: ajouterPrise) {
-                    Label("Ajouter une prise", systemImage: "camera.fill")
-                }
-                .buttonStyle(.principal)
-                Button("Terminer la session", role: .cancel) { confirmationFin = true }
-                    .font(Police.sousTitre)
-                    .foregroundStyle(Palette.marine)
-                    .frame(minHeight: Gabarit.zoneTactile)
+                    .padding(.top, 430 - 59)
             }
         }
         .padding(.horizontal, Espace.bord)
-        .padding(.top, Espace.s)
-        .padding(.bottom, Espace.l)
+        .padding(.bottom, 24)
+        .ignoresSafeArea(edges: .bottom)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Palette.surface.ignoresSafeArea())
         .accessibilityElement(children: .contain)
@@ -95,17 +99,17 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     }
 
     private func chrono(_ session: SessionEnCours, maintenant: Date) -> some View {
-        VStack(spacing: Espace.m) {
+        VStack(spacing: 16) {
             Text(BandeauSession<EmptyView>.formater(moteur.duree(a: maintenant)))
-                .font(Police.taille(80, .heavy).monospacedDigit())
-                .tracking(-3)
+                .font(Police.taille(80, .black).monospacedDigit())
+                .tracking(-3.2)
                 .foregroundStyle(Palette.encre)
                 .minimumScaleFactor(0.5)
                 .lineLimit(1)
             if let legale = session.finLegale {
                 Button { explicationFin.toggle() } label: {
                     Text("Fin légale \(BandeauSession<EmptyView>.heure(legale))")
-                        .font(Police.sousTitre.monospacedDigit())
+                        .font(Police.taille(17, .heavy).monospacedDigit())
                         .foregroundStyle(Palette.encreDouce)
                         .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
                 }
@@ -128,7 +132,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
         let prises = FormatSortie.prises(session.sortie)
         let derniere = prises.last
         let infos = derniere.flatMap { infosEspece($0.espece) }
-        return VStack(spacing: Espace.m) {
+        return VStack(spacing: 10) {
             Group {
                 if let infos {
                     Image(infos.image).resizable().scaledToFit()

@@ -23,31 +23,38 @@ struct SansPositionView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: Espace.l) {
-                VStack(alignment: .leading, spacing: Espace.xs) {
+            VStack(alignment: .leading, spacing: 0) {
+                VStack(alignment: .leading, spacing: 8) {
                     Text("Ta zone")
-                        .font(Police.grandTitre)
+                        .font(Police.taille(34, .heavy))
                         .foregroundStyle(Palette.encre)
                         .accessibilityAddTraits(.isHeader)
                     Text("Choisie à la main, sans ta position.")
-                        .font(Police.detail)
+                        .font(Police.taille(15))
                         .foregroundStyle(Palette.encreDouce)
                 }
 
                 groupe {
                     rangeeZone(zone ?? "Choisir ma zone", valeur: codeZone)
                     if let commune {
-                        Divider().overlay(Palette.filet)
+                        filet(84)
                         rangeeZone(commune, valeur: "Commune")
                     }
                 }
+                .padding(.top, 20)
 
                 if ouvrirPescedex != nil || ouvrirAmis != nil || ouvrirConseils != nil {
                     titreGroupe("Toujours accessibles")
                     groupe {
                         if let ouvrirPescedex { rangee("square.grid.2x2", "Pescedex", valeur: compteurPescedex, action: ouvrirPescedex) }
-                        if let ouvrirAmis { rangee("person.2", "Amis", valeur: compteurAmis, action: ouvrirAmis) }
-                        if let ouvrirConseils { rangee("doc.text", "Conseils de pêche", valeur: nil, action: ouvrirConseils) }
+                        if let ouvrirAmis {
+                            if ouvrirPescedex != nil { filet(16) }
+                            rangee("person.2", "Amis", valeur: compteurAmis, action: ouvrirAmis)
+                        }
+                        if let ouvrirConseils {
+                            if ouvrirPescedex != nil || ouvrirAmis != nil { filet(16) }
+                            rangee("doc.text", "Conseils de pêche", valeur: nil, action: ouvrirConseils)
+                        }
                     }
                 }
 
@@ -55,8 +62,9 @@ struct SansPositionView: View {
                 groupe {
                     HStack(spacing: Espace.m) {
                         Image(systemName: "location.slash")
+                            .font(Police.taille(22))
                             .foregroundStyle(Palette.marine)
-                            .frame(width: 28)
+                            .frame(width: 26)
                             .accessibilityHidden(true)
                         Text("Utiliser ma position")
                             .font(Police.corps)
@@ -66,9 +74,10 @@ struct SansPositionView: View {
                             .font(Police.corps)
                             .foregroundStyle(Palette.encreDouce)
                     }
-                    .frame(minHeight: Gabarit.zoneTactile)
+                    .padding(.horizontal, Espace.l)
+                    .frame(minHeight: 56)
                     .accessibilityElement(children: .combine)
-                    Divider().overlay(Palette.filet)
+                    filet(16)
                     Button(action: autoriserPosition) {
                         HStack {
                             Text("Autoriser la position")
@@ -76,18 +85,21 @@ struct SansPositionView: View {
                                 .foregroundStyle(Palette.marine)
                             Spacer(minLength: Espace.s)
                             Image(systemName: "chevron.right")
+                                .font(Police.taille(13))
                                 .foregroundStyle(Palette.silhouette)
                                 .accessibilityHidden(true)
                         }
-                        .frame(minHeight: Gabarit.zoneTactile)
+                        .padding(.horizontal, Espace.l)
+                        .frame(minHeight: 56)
                         .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
                 }
-                Text("Sans position, les règles, les relevés de l'Office français de la biodiversité (OFB) et ton spot marchent pareil.")
-                    .font(Police.legende)
+                Text("Sans position, les règles, les relevés OFB et ton spot marchent pareil.")
+                    .font(Police.taille(13))
                     .foregroundStyle(Palette.encreDouce)
-                    .padding(.horizontal, Espace.s)
+                    .padding(.horizontal, Espace.l)
+                    .padding(.top, 8)
             }
             .padding(Espace.bord)
         }
@@ -104,17 +116,24 @@ struct SansPositionView: View {
 
     private func titreGroupe(_ texte: String) -> some View {
         Text(texte)
-            .font(Police.legende)
+            .font(Police.taille(13, .heavy))
             .foregroundStyle(Palette.encreDouce)
             .textCase(.uppercase)
-            .padding(.horizontal, Espace.s)
+            .tracking(0.5)
+            .padding(.horizontal, Espace.l)
+            .padding(.top, 22)
+            .padding(.bottom, Espace.s)
             .accessibilityAddTraits(.isHeader)
+    }
+
+    /// Filet du bas d'une rangée : de l'inset au bord droit, comme `.ligne+.ligne` de la maquette.
+    private func filet(_ inset: CGFloat) -> some View {
+        Divider().overlay(Palette.filet).padding(.leading, inset)
     }
 
     private func groupe<Contenu: View>(@ViewBuilder _ contenu: () -> Contenu) -> some View {
         VStack(spacing: 0) { contenu() }
-            .padding(.horizontal, Espace.l)
-            .tuileFishMe(rayon: Rayon.l)
+            .tuileFishMe(rayon: Rayon.m)
     }
 
     /// Une zone : une petite vignette de carte (rivière sur fond clair), le nom, le code, le chevron.
@@ -142,9 +161,11 @@ struct SansPositionView: View {
                         .foregroundStyle(Palette.encreDouce)
                 }
                 Image(systemName: "chevron.right")
+                    .font(Police.taille(13))
                     .foregroundStyle(Palette.silhouette)
                     .accessibilityHidden(true)
             }
+            .padding(.horizontal, Espace.l)
             .frame(minHeight: 56)
             .contentShape(Rectangle())
         }
@@ -155,8 +176,9 @@ struct SansPositionView: View {
         Button(action: action) {
             HStack(spacing: Espace.m) {
                 Image(systemName: symbole)
+                    .font(Police.taille(22))
                     .foregroundStyle(Palette.marine)
-                    .frame(width: 28)
+                    .frame(width: 26)
                     .accessibilityHidden(true)
                 Text(titre)
                     .font(Police.corps)
@@ -169,10 +191,12 @@ struct SansPositionView: View {
                         .foregroundStyle(Palette.encreDouce)
                 }
                 Image(systemName: "chevron.right")
+                    .font(Police.taille(13))
                     .foregroundStyle(Palette.silhouette)
                     .accessibilityHidden(true)
             }
-            .frame(minHeight: Gabarit.zoneTactile)
+            .padding(.horizontal, Espace.l)
+            .frame(minHeight: 56)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)

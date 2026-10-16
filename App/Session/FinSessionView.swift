@@ -64,11 +64,13 @@ struct FinSessionView: View {
     private var conditions: Conditions? { sortie.conditions.last }
 
     var body: some View {
+        // Maquette P16 A / P47 A : plein écran, photo (ou carte) en haut, feuille flottante dessous, croix de verre à 16 pt du bord.
         ZStack(alignment: .bottom) {
             haut
             feuille
         }
-        .background(Palette.nuit)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Palette.fond.ignoresSafeArea())
         .overlay(alignment: .topLeading) { boutonFermer }
     }
 
@@ -76,39 +78,38 @@ struct FinSessionView: View {
 
     @ViewBuilder private var haut: some View {
         GeometryReader { geo in
-            ZStack {
-                Palette.nuit
+            ZStack(alignment: .top) {
                 if vedette == nil {
-                    // P47 A : le fond carte/eau de la sortie sans prise (pas de position exacte).
-                    Palette.fond
-                    Palette.eauClaire.frame(height: geo.size.height * 0.2).rotationEffect(.degrees(-12)).offset(y: 20)
-                    Palette.eau.frame(height: geo.size.height * 0.1).rotationEffect(.degrees(-12)).offset(y: 20)
-                    // Le cercle du spot (1 km), posé sur la rivière : jamais un point exact.
+                    // P47 A : la carte de la sortie sans prise, le cercle du spot (1 km) posé sur la rivière : jamais un point exact.
+                    FondCarteSession()
                     Circle().fill(Palette.marine.opacity(0.12))
-                        .overlay(Circle().stroke(Palette.marine, lineWidth: 2))
+                        .overlay(Circle().stroke(Palette.marine, lineWidth: 2.5))
                         .frame(width: 172, height: 172)
-                        .offset(x: geo.size.width * 0.17, y: geo.size.height * 0.1)
+                        .position(x: geo.size.width * 262 / 390, y: geo.size.height * 452 / 844)
                 } else if let photo = imageDe(vedette) {
+                    // P16 A : la photo, 560 pt de haut sur 844.
                     Image(uiImage: photo)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: geo.size.width, height: geo.size.height * 0.62)
+                        .frame(width: geo.size.width, height: geo.size.height * 560 / 844)
                         .clipped()
                 } else {
                     // Prise sans photo : l'image de l'espèce sur marine doux.
-                    Palette.marineDoux
-                    if let vedette, let infos = infosEspece(vedette.espece) {
-                        Image(infos.image).resizable().scaledToFit().padding(Espace.xl)
-                    } else {
-                        Image(systemName: "water.waves")
-                            .font(.system(size: 72, weight: .bold))
-                            .foregroundStyle(Palette.marine.opacity(0.35))
+                    ZStack {
+                        Palette.marineDoux
+                        if let vedette, let infos = infosEspece(vedette.espece) {
+                            Image(infos.image).resizable().scaledToFit().padding(Espace.xl)
+                        } else {
+                            Image(systemName: "water.waves")
+                                .font(.system(size: 72, weight: .bold))
+                                .foregroundStyle(Palette.marine.opacity(0.35))
+                        }
                     }
+                    .frame(width: geo.size.width, height: geo.size.height * 560 / 844)
+                    .clipped()
                 }
             }
-            .frame(width: geo.size.width, height: geo.size.height * 0.62)
-            .clipped()
-            .frame(maxHeight: .infinity, alignment: .top)
+            .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
         }
         .ignoresSafeArea()
         .accessibilityHidden(true)
@@ -116,44 +117,39 @@ struct FinSessionView: View {
 
     @ViewBuilder private var boutonFermer: some View {
         if let surFermer {
-            // Sans photo, le haut est clair : icône marine seule ; sur une photo, rond de verre.
-            BoutonRond(role: .fermer, rendu: imageDe(vedette) == nil ? .simple : .verre, action: surFermer)
+            BoutonRond(role: .fermer, rendu: .verre, action: surFermer)
                 .padding(.leading, Espace.bord)
-                .padding(.top, Espace.s)
         }
     }
 
     // MARK: Feuille
 
     private var feuille: some View {
-        VStack(alignment: .leading, spacing: Espace.l) {
+        FeuilleFlottante {
             enTete
             if let vedette {
                 ligneVedette(vedette)
-                if prises.count > 1 { autresPrises }
+                    .padding(.vertical, 16)
+                if let conditions { ligneConditions(conditions, bordure: true) } else { pasDeReleve(bordure: true) }
+            } else {
+                if let conditions { ligneConditions(conditions, bordure: false) } else { pasDeReleve(bordure: false) }
+                bredouille
             }
-            if let conditions { ligneConditions(conditions) } else { pasDeReleve }
-            if vedette == nil { bredouille }
             if let message = fin.message {
                 Text(message)
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
+                    .padding(.bottom, Espace.s)
             }
             Button("Terminer", action: surTerminer)
                 .buttonStyle(.principal)
         }
-        .padding(.horizontal, Espace.bord)
-        .padding(.top, Espace.s)
-        .padding(.bottom, Espace.l)
-        .frame(maxWidth: .infinity)
-        .background(Palette.surface, in: UnevenRoundedRectangle(topLeadingRadius: Rayon.l, topTrailingRadius: Rayon.l, style: .continuous))
-        .ignoresSafeArea(edges: .bottom)
     }
 
     private var enTete: some View {
         HStack(alignment: .firstTextBaseline) {
             Text(titre)
-                .font(Police.titre)
+                .font(Police.taille(22, .heavy))
                 .foregroundStyle(Palette.encre)
             Spacer(minLength: Espace.s)
             Text(FormatSortie.date(sortie.debut))
@@ -173,11 +169,11 @@ struct FinSessionView: View {
 
     private func ligneVedette(_ prise: Prise) -> some View {
         let infos = infosEspece(prise.espece)
-        return HStack(spacing: Espace.m) {
-            tuilePoisson(infos, largeur: 96, hauteur: 60)
+        return HStack(spacing: 14) {
+            tuilePoisson(infos, largeur: 96, hauteur: 60, image: 44)
             VStack(alignment: .leading, spacing: Espace.xs) {
                 Text(titrePrise(prise, infos))
-                    .font(Police.sousTitre)
+                    .font(Police.taille(17, .heavy))
                     .foregroundStyle(Palette.encre)
                 if let detail = detailPrise(prise) {
                     Text(detail)
@@ -196,38 +192,30 @@ struct FinSessionView: View {
         return nom
     }
 
-    /// « ≈ 1,4 kg estimé · relâché » : le poids vient de la formule longueur-poids de Core, marqué « estimé » ;
+    /// « ~2,1 kg estimé · relâché » : le poids vient de la formule longueur-poids de Core, marqué « estimé » ;
     /// « relâché » ou « gardé » est ce que le pêcheur a déclaré, jamais un verdict de l'app.
     private func detailPrise(_ prise: Prise) -> String? {
         let devenir = prise.gardee ? "gardé" : "relâché"
         if let cm = prise.longueurCm, let poids = poidsEstime(prise.espece, cm) {
-            return "≈ \(PriseLogique.kilos(poids.kilos)) kg estimé · \(devenir)"
+            return "~\(PriseLogique.kilos(poids.kilos)) kg estimé · \(devenir)"
         }
         return devenir
-    }
-
-    private var autresPrises: some View {
-        HStack(spacing: Espace.s) {
-            ForEach(prises.filter { $0.id != vedette?.id }.prefix(4)) { prise in
-                tuilePoisson(infosEspece(prise.espece), largeur: 48, hauteur: 34)
-            }
-            Spacer(minLength: 0)
-        }
     }
 
     /// Cas bredouille : zéro prise, ton positif. Le bloc « La prochaine fois » n'existe que si un conseil est fourni.
     @ViewBuilder private var bredouille: some View {
         if let conseil, !conseil.isEmpty {
-            HStack(spacing: Espace.m) {
+            HStack(spacing: 14) {
+                // À brancher : la maquette montre l'image de l'espèce conseillée (perche) ; le conseil n'est qu'un texte, on met une silhouette.
                 Image(systemName: "fish")
                     .font(.system(size: 28, weight: .bold))
                     .foregroundStyle(Palette.marine)
                     .frame(width: 84, height: 56)
-                    .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
+                    .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: Espace.xs) {
+                VStack(alignment: .leading, spacing: 2) {
                     Text("La prochaine fois")
-                        .font(Police.sousTitre)
+                        .font(Police.taille(17, .heavy))
                         .foregroundStyle(Palette.encre)
                     Text(conseil)
                         .font(Police.detail)
@@ -235,18 +223,22 @@ struct FinSessionView: View {
                 }
                 Spacer(minLength: 0)
             }
+            .padding(.top, 16)
+            .padding(.bottom, 20)
+            .frame(maxWidth: .infinity)
+            .overlay(alignment: .top) { Rectangle().fill(Palette.filet).frame(height: 0.5) }
             .accessibilityElement(children: .combine)
         }
     }
 
-    private func tuilePoisson(_ infos: EspecePechable?, largeur: CGFloat, hauteur: CGFloat) -> some View {
+    private func tuilePoisson(_ infos: EspecePechable?, largeur: CGFloat, hauteur: CGFloat, image: CGFloat) -> some View {
         ZStack {
-            RoundedRectangle(cornerRadius: Rayon.s, style: .continuous).fill(Palette.tuile)
+            RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Palette.tuile)
             if let infos {
                 Image(infos.image)
                     .resizable()
                     .scaledToFit()
-                    .padding(Espace.xs)
+                    .frame(width: largeur * 0.86, height: image)
             } else {
                 Image(systemName: "fish")
                     .foregroundStyle(Palette.marine)
@@ -260,9 +252,9 @@ struct FinSessionView: View {
 
     /// Seulement ce que `Conditions` porte : vent, pression, état de la rivière.
     /// // À brancher : température et hauteur d'eau (« 14° », « 1,42 m ») n'existent pas encore dans `Conditions`.
-    private func ligneConditions(_ c: Conditions) -> some View {
+    private func ligneConditions(_ c: Conditions, bordure: Bool) -> some View {
         HStack(alignment: .top, spacing: Espace.s) {
-            // P16 A : vent, rivière, pression. P47 A (bredouille) : vent, rivière, puis la fin légale.
+            // P16 A : météo, rivière, pression. P47 A (bredouille) : météo, rivière, puis la fin légale.
             if let vent = c.ventKmh {
                 caseCondition(symbole: "wind", valeur: "\(Int(vent.rounded()))", legende: "km/h")
             }
@@ -277,29 +269,32 @@ struct FinSessionView: View {
                 caseCondition(symbole: "gauge.medium", valeur: "\(Int(hpa.rounded()))", legende: "hPa")
             }
         }
-        .padding(.top, Espace.m)
-        .overlay(alignment: .top) { Rectangle().fill(Palette.filet).frame(height: 0.5) }
+        .padding(.top, bordure ? 14 : 16)
+        .padding(.bottom, bordure ? 20 : 16)
+        .frame(maxWidth: .infinity)
+        .overlay(alignment: .top) { if bordure { Rectangle().fill(Palette.filet).frame(height: 0.5) } }
     }
 
     /// Aucun relevé enregistré pour cette sortie.
-    private var pasDeReleve: some View {
+    private func pasDeReleve(bordure: Bool) -> some View {
         HStack(spacing: Espace.s) {
             Image(systemName: "cloud.slash").foregroundStyle(Palette.encreDouce).accessibilityHidden(true)
             Text("Pas de relevé météo").font(Police.detail).foregroundStyle(Palette.encreDouce)
             Spacer(minLength: 0)
         }
-        .padding(.top, Espace.m)
-        .overlay(alignment: .top) { Rectangle().fill(Palette.filet).frame(height: 0.5) }
+        .padding(.top, bordure ? 14 : 16)
+        .padding(.bottom, bordure ? 20 : 16)
+        .overlay(alignment: .top) { if bordure { Rectangle().fill(Palette.filet).frame(height: 0.5) } }
         .accessibilityElement(children: .combine)
     }
 
     private func caseCondition(symbole: String, valeur: String, legende: String, alerte: Bool = false) -> some View {
         VStack(spacing: Espace.xs) {
             Image(systemName: symbole)
-                .font(Police.sousTitre)
+                .font(.system(size: 22, weight: .regular))
                 .foregroundStyle(alerte ? Palette.alerte : Palette.marine)
             Text(valeur)
-                .font(Police.sousTitre)
+                .font(Police.taille(17, .heavy))
                 .foregroundStyle(alerte ? Palette.alerte : Palette.encre)
             Text(legende)
                 .font(Police.legende)
