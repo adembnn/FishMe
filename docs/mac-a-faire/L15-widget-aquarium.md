@@ -162,3 +162,6 @@ Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntent
 - Nage : `NageWidget.traversees` remplace `boucle` dans la vue. Chaque poisson traverse en perspective (point de fuite
   au centre, plus petit et plus transparent au loin), sort par un bord et rentre ailleurs, parfois du fond de l'océan.
   Un widget ne dessine jamais hors de son cadre : le poisson sort par le bord et disparaît.
+- 07h20 : fonds « Lagon » et 23 poissons cartoon du fil aquarium 3D intégrés (lot/aquarium 7a7e7fc).
+  `WidgetAquarium/PoissonsOcean/` (sources, hors catalogue) nourrit `fabriquer_cycle_nage.py`. Les 74 autres espèces
+  gardent la planche d'origine. Rien à changer dans les cibles.

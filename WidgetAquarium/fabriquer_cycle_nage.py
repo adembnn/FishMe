@@ -35,6 +35,9 @@ from PIL import Image
 ICI = Path(__file__).resolve().parent
 ENTREE = ICI / "PoissonsWidget.xcassets"
 SORTIE = ICI / "NagePoissons.xcassets"
+# Poissons cartoon du fil aquarium 3D (lot/aquarium 7a7e7fc, reports/aquarium-3d/widget-ocean/poissons/) : ils
+# remplacent la planche de PoissonsWidget.xcassets pour les espèces qu'ils couvrent.
+CARTOON = ICI / "PoissonsOcean"
 
 # Amplitude du battement par espèce (fraction de la longueur). Table reprise de
 # ESPECES dans reports/aquarium-3d/temps-reel/nage.js (lot/aquarium ecbe9a9).
@@ -144,11 +147,21 @@ def main():
     total = nb_pal = nb = 0
     gros = []
     for slug in slugs:
-        src = ENTREE / f"{slug}.imageset" / f"{slug}.png"
+        src = CARTOON / f"{slug}.png"
+        if not src.exists():
+            src = ENTREE / f"{slug}.imageset" / f"{slug}.png"
         if not src.exists():
             print("absent :", src, file=sys.stderr)
             continue
         base = Image.open(src).convert("RGBA")
+        if src.parent == CARTOON:
+            # Les planches cartoon gardent la taille relative des espèces dans un cadre fixe : on recadre sur le
+            # poisson (comme les planches d'origine), le widget règle lui-même la taille à l'écran.
+            boite = base.getchannel("A").point(lambda a: 255 if a > SEUIL_ALPHA else 0).getbbox()
+            if boite:
+                m = 6
+                base = base.crop((max(boite[0] - m, 0), max(boite[1] - m, 0),
+                                  min(boite[2] + m, base.width), min(boite[3] + m, base.height)))
         for k in range(NB_IMAGES):
             nom = f"{slug}-nage-{k}"
             dossier = SORTIE / f"{nom}.imageset"
