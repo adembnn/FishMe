@@ -131,6 +131,13 @@ def reduire(img):
     return img, False
 
 
+def amplitude(slug):
+    """Écrevisses, crabes et grenouilles n'ondulent pas comme un poisson : leur image reste fixe."""
+    if slug.startswith(("ecrevisse", "crabe", "grenouille")):
+        return 0.0
+    return AMPLITUDES.get(slug, AMPLITUDE_DEFAUT)
+
+
 def ecrire_contents(dossier, nom):
     contenu = {"images": [{"filename": f"{nom}.png", "idiom": "universal"}],
                "info": {"author": "xcode", "version": 1}}
@@ -166,7 +173,7 @@ def main():
             nom = f"{slug}-nage-{k}"
             dossier = SORTIE / f"{nom}.imageset"
             dossier.mkdir()
-            img, palette = reduire(cycle_image(base, k, AMPLITUDES.get(slug, AMPLITUDE_DEFAUT)))
+            img, palette = reduire(cycle_image(base, k, amplitude(slug)))
             chemin = dossier / f"{nom}.png"
             img.save(chemin, optimize=True)
             ecrire_contents(dossier, nom)

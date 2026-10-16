@@ -165,3 +165,5 @@ Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntent
 - 07h20 : fonds « Lagon » et 23 poissons cartoon du fil aquarium 3D intégrés (lot/aquarium 7a7e7fc).
   `WidgetAquarium/PoissonsOcean/` (sources, hors catalogue) nourrit `fabriquer_cycle_nage.py`. Les 74 autres espèces
   gardent la planche d'origine. Rien à changer dans les cibles.
+- 07h30 : 60 espèces cartoon de plus (lot/aquarium 7ec09a7), 83 en tout. Écrevisses, crabes et grenouilles n'ondulent pas.
+  Les 14 dernières (écrevisses, épinoches, esturgeon européen) gardent l'ancienne planche en attendant leur commit.
