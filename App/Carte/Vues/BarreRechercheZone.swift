@@ -58,7 +58,6 @@ struct BarreRechercheZone: View {
                 .foregroundStyle(Palette.encre)
                 .submitLabel(.search)
                 .focused($active)
-                .onSubmit { Task { await chercher() } }
             if !terme.isEmpty {
                 Button {
                     terme = ""

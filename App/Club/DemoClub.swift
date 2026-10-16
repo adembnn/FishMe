@@ -17,7 +17,7 @@ struct PastilleDemo: View {
 /// Mode démo de la page Club, piloté par `@AppStorage("demo.communaute")`.
 /// Les clubs, membres, cartes et records ci-dessous sont écrits en dur pour la démo :
 /// ils ne viennent ni de CloudKit ni d'une vraie personne, et ne sont jamais enregistrés dans `MesClubs`.
-/// Les cartes montrent les vraies photos de `App/Demo/Photos` (repli sur l'image de l'espèce si le fichier manque). Aucune position GPS.
+/// Quelques cartes montrent une photo libre de droits de `App/Demo/Photos` (crédits dans Réglages, « Crédits photos »), les autres l'illustration de l'espèce. Aucune position GPS.
 /// Chaque club porte « Démo » dans son nom et la pastille `PastilleDemo`.
 enum DemoClub {
   /// Clé de réglage (UserDefaults) de l'interrupteur.
@@ -64,10 +64,10 @@ enum DemoClub {
       return [
         CarteRecenteClub(
           id: "demo-ec1", membre: "Adem", espece: "Silure glane", jour: "lundi",
-          tailleCm: 118, image: "silure-glane", niveau: .legendaire, photo: "silure-glane-1"),
+          tailleCm: 118, image: "silure-glane", niveau: .legendaire),
         CarteRecenteClub(
           id: "demo-ec2", membre: "Sullyvan", espece: "Perche", jour: "dim.",
-          tailleCm: 27, image: "perche-commune", niveau: .commun, photo: "perche-commune-2"),
+          tailleCm: 27, image: "perche-commune", niveau: .commun),
         CarteRecenteClub(
           id: "demo-ec3", membre: "Titouan", espece: "Sandre", jour: "sam.",
           tailleCm: 61, image: "sandre", niveau: .rare, photo: "sandre-1"),
@@ -76,7 +76,7 @@ enum DemoClub {
           tailleCm: 38, image: "black-bass", niveau: .peuCommun, photo: "black-bass-1"),
         CarteRecenteClub(
           id: "demo-ec5", membre: "Sullyvan", espece: "Carpe commune", jour: "jeu.",
-          tailleCm: 72, image: "carpe-commune", niveau: .peuCommun, photo: "carpe-commune-1"),
+          tailleCm: 72, image: "carpe-commune", niveau: .peuCommun),
         CarteRecenteClub(
           id: "demo-ec6", membre: "Titouan", espece: "Omble de fontaine (saumon de fontaine)",
           jour: "mer.", tailleCm: 34, image: "omble-de-fontaine", niveau: .rare),
@@ -88,7 +88,7 @@ enum DemoClub {
         tailleCm: 52, image: "sandre", niveau: .rare, photo: "sandre-1"),
       CarteRecenteClub(
         id: "demo-vc2", membre: "Malo", espece: "Brochet", jour: "dim.",
-        tailleCm: 74, image: "brochet", niveau: .rare, photo: "brochet-2"),
+        tailleCm: 74, image: "brochet", niveau: .rare, photo: "brochet-1"),
       CarteRecenteClub(
         id: "demo-vc3", membre: "Inès", espece: "Perche", jour: "sam.",
         tailleCm: 29, image: "perche-commune", niveau: .commun, photo: "perche-commune-1"),
@@ -97,7 +97,7 @@ enum DemoClub {
         tailleCm: 33, image: "truite-fario", niveau: .peuCommun, photo: "truite-fario-1"),
       CarteRecenteClub(
         id: "demo-vc5", membre: "Jade", espece: "Gardon", jour: "jeu.",
-        tailleCm: 24, image: "gardon", niveau: .commun, photo: "gardon-1"),
+        tailleCm: 24, image: "gardon", niveau: .commun),
     ]
   }
 
@@ -105,10 +105,10 @@ enum DemoClub {
     if club.id == idEssec {
       return RecordClub(
         titre: "Plus gros silure", membre: "Adem", tailleCm: 118, image: "silure-glane",
-        niveau: .legendaire, photo: "silure-glane-1")
+        niveau: .legendaire)
     }
     return RecordClub(
       titre: "Plus gros brochet", membre: "Malo", tailleCm: 74, image: "brochet",
-      niveau: .rare, photo: "brochet-2")
+      niveau: .rare)
   }
 }

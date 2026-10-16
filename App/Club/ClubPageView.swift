@@ -84,13 +84,7 @@ struct ClubPageView: View {
     NavigationStack {
       ScrollView {
         VStack(alignment: .leading, spacing: 0) {
-          Text("Club")
-            .font(Police.grandTitre)
-            .foregroundStyle(Palette.encre)
-            .padding(.horizontal, Espace.l)
-            .accessibilityAddTraits(.isHeader)
-
-          boutonsClub.padding(.top, Espace.m)
+          boutonsClub.padding(.top, Espace.s)
 
           if let club {
             if tousLesClubs.count > 1 { choixDuClub }
@@ -116,7 +110,7 @@ struct ClubPageView: View {
           } else {
             GroupeClub {
               Text(
-                "Crée ton club avec un nom et un poisson ou une photo, puis partage-y tes cartes. Tu peux aussi rejoindre celui d'un ami avec son lien."
+                "Crée ton club avec un nom et un poisson ou une photo, puis choisis les cartes à y mettre. Ton club reste sur ton iPhone pour l'instant."
               )
               .font(Police.legende).foregroundStyle(Palette.encreDouce)
               .padding(Espace.l)

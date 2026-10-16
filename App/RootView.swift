@@ -832,7 +832,7 @@ private struct RacineContenu: View {
             },
             voirLaCarte: { app.sansPositionAffiche = false },
             ouvrirPescedex: { app.onglet = .pescedex },
-            ouvrirAmis: { app.onglet = .club },
+            ouvrirAmis: SauvegardeICloud.actif ? { app.onglet = .club } : nil,
             codeZone: app.spotCourant.flatMap { $0.departement.estInconnu ? nil : $0.departement.code })
     }
 

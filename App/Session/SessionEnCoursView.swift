@@ -65,7 +65,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
             }
             // Sans prise, l'anneau est au milieu de l'écran ; avec une prise il remonte pour laisser la place au poisson.
             chrono(session, maintenant: maintenant)
-                .padding(.top, FormatSortie.prises(session.sortie).isEmpty ? 280 - 59 : 120 - 59)
+                .padding(.top, FormatSortie.prises(session.sortie).isEmpty ? 330 - 59 : 150 - 59)
             // Sans prise, le chrono reste seul : pas de poisson gris.
             if !FormatSortie.prises(session.sortie).isEmpty {
                 dernierePrise(session)

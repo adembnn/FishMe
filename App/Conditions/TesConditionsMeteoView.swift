@@ -84,7 +84,7 @@ struct TesConditionsMeteoView: View {
             await lire(forcer: false)
         }
         .sheet(isPresented: $courbe) {
-            if let eau = lecture?.eau { CourbeRiviereView(eau: eau) }
+            if let eau = affichee?.lecture.eau { CourbeRiviereView(eau: eau) }
         }
         .accessibilityIdentifier("tes-conditions-meteo")
     }
@@ -114,8 +114,10 @@ struct TesConditionsMeteoView: View {
             Text("lu à \(FormatConditions.heure(lecture.lueLe)), sans réseau")
                 .font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
         }
-        // Marque Apple Weather et lien légal : obligatoires, toujours visibles en pied de page.
-        MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : "Hub’Eau")
+        // Marque Apple Weather et lien légal : obligatoires sous une vraie lecture WeatherKit, jamais à côté de chiffres d'exemple.
+        if !exemple {
+            MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : "Hub’Eau")
+        }
     }
 
     private func enTete(_ lecture: LectureConditions, point: PointMeteo, maintenant: Date) -> some View {

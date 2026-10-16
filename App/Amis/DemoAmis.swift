@@ -5,7 +5,7 @@ import UIKit
 /// Mode démo de la page Amis : quatre amis et un fil de cartes, 100 % locaux à la vue.
 /// Rien ici ne touche `GestionAmis`, CloudKit, le réseau ni le disque : signaler, bloquer et retirer agissent sur la liste locale
 /// de la vue seulement (l'ami et ses cartes disparaissent), rien n'est envoyé.
-/// Les prénoms sont fictifs et aucun lieu n'est donné.
+/// Les prénoms sont fictifs et aucun lieu n'est donné. Chaque bloc porte la pastille « Démo ».
 /// Interrupteur : `@AppStorage("demo.communaute")`, branché dans les réglages.
 enum DemoCommunaute {
     static let cle = "demo.communaute"
@@ -29,7 +29,7 @@ struct DemoCarte: Identifiable, Hashable {
     /// Nombre de mois avant aujourd'hui (le fil n'affiche que le mois et l'année).
     let ilYaMois: Int
 
-    /// La vraie photo de démo (`App/Demo/Photos/<image>-1.jpg`), ou `nil` : la carte montre alors l'image d'espèce.
+    /// La photo libre de démo (`App/Demo/Photos/<image>-1.jpg`, crédits dans Réglages), ou `nil` : la carte montre l'image d'espèce.
     /// Décodée une fois puis gardée par le cache de `PhotoDemoClub`.
     @MainActor var photo: UIImage? { PhotoDemoClub.image("\(image)-1") }
 

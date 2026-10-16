@@ -13,6 +13,7 @@ struct RecapSortieView: View {
     let surTerminer: () -> Void
     let surFermer: (() -> Void)?
     let poidsEstime: (Espece, Double) -> PoidsEstime?
+    let especeConseil: Espece?
     let surPhotoSortie: ((Data) -> Void)?
     let rarete: (Prise) -> ResultatRarete?
     let estNouvelleEspece: (Espece) -> Bool
@@ -25,6 +26,21 @@ struct RecapSortieView: View {
     private var sortie: Sortie { fin.sortie }
     private var prises: [Prise] { FormatSortie.prises(sortie) }
     private var nbEspeces: Int { Set(prises.map(\.espece.id)).count }
+
+    /// Le poisson de profil de l'espèce conseillée ; sans espèce, une silhouette.
+    private var tuileConseil: some View {
+        let infos = especeConseil.flatMap { infosEspece($0) }
+        return ZStack {
+            RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Palette.tuile)
+            if let infos {
+                Image(infos.image).resizable().scaledToFit().frame(width: 67, height: 42)
+            } else {
+                Image(systemName: "fish.fill").font(Police.taille(26, .heavy)).foregroundStyle(Palette.silhouette)
+            }
+        }
+        .frame(width: 84, height: 56)
+        .accessibilityHidden(true)
+    }
 
     var body: some View {
         ScrollView {
@@ -162,9 +178,13 @@ struct RecapSortieView: View {
             }
             .padding(.horizontal, Espace.bord)
             if let conseil, !conseil.isEmpty {
-                VStack(alignment: .leading, spacing: Espace.xs) {
-                    Text("La prochaine fois").font(Police.sousTitre).foregroundStyle(Palette.encre)
-                    Text(conseil).font(Police.detail).foregroundStyle(Palette.encreDouce)
+                HStack(spacing: Espace.m) {
+                    tuileConseil
+                    VStack(alignment: .leading, spacing: Espace.xs) {
+                        Text("La prochaine fois").font(Police.sousTitre).foregroundStyle(Palette.encre)
+                        Text(conseil).font(Police.detail).foregroundStyle(Palette.encreDouce)
+                    }
+                    Spacer(minLength: 0)
                 }
                 .padding(Espace.l)
                 .frame(maxWidth: .infinity, alignment: .leading)

@@ -423,13 +423,15 @@ struct InviterClubView: View {
                     .buttonStyle(.principal)
                 } else {
                     VStack(spacing: Espace.s) {
-                        Text("Connecte-toi à iCloud pour inviter tes amis")
+                        Text(CloudKitPermis.actif ? "Connecte-toi à iCloud pour inviter tes amis" : "L'invitation d'amis arrive bientôt")
                             .font(Police.corps).foregroundStyle(Palette.encreDouce)
                             .multilineTextAlignment(.center)
-                        Button("Ouvrir les réglages") {
-                            if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+                        if CloudKitPermis.actif {
+                            Button("Ouvrir les réglages") {
+                                if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+                            }
+                            .buttonStyle(.secondaire)
                         }
-                        .buttonStyle(.secondaire)
                     }
                 }
             }

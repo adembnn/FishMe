@@ -41,6 +41,8 @@ struct FinSessionView: View {
     let surFermer: (() -> Void)?
     /// Poids estimé d'après la formule longueur-poids de Core. Sert au poids affiché sur la carte.
     let poidsEstime: (Espece, Double) -> PoidsEstime?
+    /// Espèce montrée en image dans le conseil de la sortie bredouille (la plus pêchée du spot). `nil` : une silhouette.
+    let especeConseil: Espece?
     /// Photo de soi pour la carte « Eau calme » (sortie sans prise). `nil` : le bouton n'est pas montré.
     let surPhotoSortie: ((Data) -> Void)?
     /// Rareté d'une prise dans son département (Core). Par défaut `nil` : la carte s'affiche « rareté non mesurée », jamais inventée.
@@ -49,21 +51,18 @@ struct FinSessionView: View {
     let estNouvelleEspece: (Espece) -> Bool
     /// Photo d'une prise, pour le verso de la carte ouverte en plein écran. Par défaut : aucune photo (dessin de l'espèce).
     let photoDe: (Prise) -> Data?
-    /// Espèce de l'image du bloc bredouille (version design). Acceptée pour la compatibilité avec l'appel de la racine ;
-    /// la page récap n'affiche pas d'image de conseil, donc elle n'est pas utilisée.
-    let especeConseil: Espece?
 
     init(fin: FinDeSession, infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, lieu: String? = nil,
          conseil: String? = nil, surTerminer: @escaping () -> Void, surFermer: (() -> Void)? = nil,
          poidsEstime: @escaping (Espece, Double) -> PoidsEstime? = { _, _ in nil },
+         especeConseil: Espece? = nil,
          surPhotoSortie: ((Data) -> Void)? = nil,
          rarete: @escaping (Prise) -> ResultatRarete? = { _ in nil },
          estNouvelleEspece: @escaping (Espece) -> Bool = { _ in false },
-         photoDe: @escaping (Prise) -> Data? = { _ in nil },
-         especeConseil: Espece? = nil) {
-        self.especeConseil = especeConseil
+         photoDe: @escaping (Prise) -> Data? = { _ in nil }) {
         self.photoDe = photoDe
         self.surPhotoSortie = surPhotoSortie
+        self.especeConseil = especeConseil
         self.poidsEstime = poidsEstime
         self.conseil = conseil
         self.fin = fin
@@ -77,7 +76,8 @@ struct FinSessionView: View {
 
     var body: some View {
         RecapSortieView(fin: fin, infosEspece: infosEspece, lieu: lieu, conseil: conseil, surTerminer: surTerminer,
-                        surFermer: surFermer, poidsEstime: poidsEstime, surPhotoSortie: surPhotoSortie, rarete: rarete,
+                        surFermer: surFermer, poidsEstime: poidsEstime, especeConseil: especeConseil,
+                        surPhotoSortie: surPhotoSortie, rarete: rarete,
                         estNouvelleEspece: estNouvelleEspece, photoDe: photoDe)
     }
 }
