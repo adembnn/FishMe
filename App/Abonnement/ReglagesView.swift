@@ -44,12 +44,6 @@ struct ReglagesView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.l) {
-                // Ferme la feuille (la barre de navigation est cachée par RootView).
-                BoutonRond(role: .fermer, rendu: .simple)
-                Text("Réglages")
-                    .font(Police.grandTitre)
-                    .foregroundStyle(Palette.encre)
-                    .padding(.horizontal, Espace.xs)
                 if let ouvrirCompte {
                     bloc { ligne("Mon compte", valeur: "iCloud", action: ouvrirCompte) }
                 }
@@ -59,26 +53,20 @@ struct ReglagesView: View {
                     ligneInterrupteur("Alertes orage et crue", $alertes)
                     separateur
                     ligneInterrupteur("Mesure d'audience", $mesureAudience)
-                    separateur
+                }
+                section("AMBIANCE") {
                     ligneInterrupteur("Sons", $sons)
                     separateur
                     ligneInterrupteur("Vibrations", $vibrations)
                 }
-                Text("SOURCES")
-                    .font(Police.legende)
-                    .foregroundStyle(Palette.encreDouce)
-                    .padding(.leading, Espace.l)
-                    .padding(.bottom, -Espace.s)
-                bloc {
+                section("SOURCES") {
                     ForEach(Array(Self.sources.enumerated()), id: \.offset) { position, source in
                         ligne(source.nom, valeur: source.role) { ouvrirSource(source.nom) }
                         if position < Self.sources.count - 1 { separateur }
                     }
                 }
-                bloc {
-                    ligne("Sécurité au bord de l'eau", valeur: nil, action: ouvrirSecurite)
-                    separateur
-                    ligne("FishMe Pro", valeur: abonne ? "Actif" : "Découvrir") {
+                section("FISHME PRO") {
+                    ligne("FishMe Pro", valeur: abonne ? "Actif" : "Découvrir", couleurValeur: Palette.marine) {
                         if abonne { gestionOuverte = true } else { ouvrirPaywall() }
                     }
                     if abonne {
@@ -91,6 +79,9 @@ struct ReglagesView: View {
                         .foregroundStyle(Palette.marine)
                         .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)
                         .padding(.horizontal, Espace.l)
+                }
+                section("LÉGAL") {
+                    ligne("Sécurité au bord de l'eau", valeur: nil, action: ouvrirSecurite)
                     separateur
                     ligne("Conditions d'utilisation", valeur: nil) { conditionsOuvertes = true }
                     separateur
@@ -118,6 +109,15 @@ struct ReglagesView: View {
         }
         .scrollIndicators(.hidden)
         .background(Palette.fond)
+        .navigationTitle("Réglages")
+        .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                Button("OK") { dismiss() }
+                    .font(Police.corps)
+                    .foregroundStyle(Palette.marine)
+            }
+        }
         .manageSubscriptionsSheet(isPresented: $gestionOuverte)
         .sheet(isPresented: $conditionsOuvertes) { ConditionsFeuille() }
     }
@@ -130,6 +130,16 @@ struct ReglagesView: View {
 
     private var separateur: some View {
         Divider().padding(.leading, Espace.l)
+    }
+
+    private func section<Contenu: View>(_ titre: String, @ViewBuilder _ contenu: () -> Contenu) -> some View {
+        VStack(alignment: .leading, spacing: Espace.xs) {
+            Text(titre)
+                .font(Police.legende)
+                .foregroundStyle(Palette.encreDouce)
+                .padding(.leading, Espace.l)
+            bloc(contenu)
+        }
     }
 
     private func bloc<Contenu: View>(@ViewBuilder _ contenu: () -> Contenu) -> some View {
@@ -181,12 +191,12 @@ struct ReglagesView: View {
             .accessibilityHidden(true)
     }
 
-    private func ligne(_ titre: String, valeur: String?, action: @escaping () -> Void) -> some View {
+    private func ligne(_ titre: String, valeur: String?, couleurValeur: Color = Palette.encreDouce, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             HStack {
                 Text(titre).foregroundStyle(Palette.encre)
                 Spacer(minLength: Espace.s)
-                if let valeur { Text(valeur).foregroundStyle(Palette.encreDouce) }
+                if let valeur { Text(valeur).foregroundStyle(couleurValeur) }
                 chevron
             }
             .font(Police.corps)

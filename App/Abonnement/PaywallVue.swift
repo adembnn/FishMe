@@ -58,9 +58,10 @@ struct PaywallVue: View {
         .background(Palette.surface)
         .safeAreaInset(edge: .bottom) { pied }
         // Croix toujours visible (règle Apple) : elle ferme la feuille sans rien débloquer, même quand le paywall bloque.
-        .overlay(alignment: .topLeading) {
+        .overlay(alignment: .topTrailing) {
             BoutonRond(role: .fermer, action: fermer)
-                .padding(.leading, Espace.bord)
+                .padding(.top, Espace.m)
+                .padding(.trailing, Espace.bord)
         }
         .task {
             if !dejaMontre {
@@ -77,7 +78,7 @@ struct PaywallVue: View {
         SubscriptionStoreView(productIDs: modele.produits.identifiants) {
             argumentaire
         }
-        .subscriptionStoreControlStyle(.picker)
+        .subscriptionStoreControlStyle(.prominentPicker)
         .subscriptionStoreButtonLabel(.multiline)
         .subscriptionStorePolicyDestination(url: liens.conditions, for: .termsOfService)
         .subscriptionStorePolicyDestination(url: liens.confidentialite, for: .privacyPolicy)
@@ -99,34 +100,38 @@ struct PaywallVue: View {
     // MARK: Contenu au-dessus des offres
 
     private var argumentaire: some View {
-        VStack(spacing: Espace.m) {
-            VStack(spacing: Espace.xs) {
+        VStack(alignment: .leading, spacing: Espace.m) {
+            VStack(alignment: .leading, spacing: Espace.xs) {
                 Text("FishMe Pro")
                     .font(Police.grandTitre)
                     .foregroundStyle(Palette.encre)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .padding(.trailing, Gabarit.zoneTactile + Espace.s)
                 if case .fonction(let fonction) = declencheur {
                     Text(TextesPaywall.titre(fonction))
                         .font(Police.sousTitre)
                         .foregroundStyle(Palette.marine)
-                        .multilineTextAlignment(.center)
+                        .multilineTextAlignment(.leading)
                 }
             }
             pastilles
-            if let phrase = modele.phraseLancement {
-                Text(phrase).font(Police.legende).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
-            }
-            if let essai = modele.phraseEssai {
-                Text(essai).font(Police.legende).foregroundStyle(Palette.marine).multilineTextAlignment(.center)
-            }
-            Text(TextesPaywall.renouvellement)
+            // Une seule ligne légale : prix de lancement, essai éventuel, renouvellement automatique et résiliation.
+            Text(mentions)
                 .font(Police.legende)
                 .foregroundStyle(Palette.encreDouce)
-                .multilineTextAlignment(.center)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, Espace.bord)
-        .padding(.top, Espace.xl + Espace.xs)
-        .fixedSize(horizontal: false, vertical: true)
+        .padding(.top, Espace.xl)
+    }
+
+    private var mentions: String {
+        let morceaux = [modele.phraseLancement, modele.phraseEssai].compactMap { $0 }
+        let renouvellement = "Renouvellement automatique, résiliable dans les réglages Apple, 24 h avant la fin de la période."
+        return (morceaux + [renouvellement]).joined(separator: " · ")
     }
 
     /// P34 A : quatre pastilles rondes (spots, météo et rivière, alertes, conseils), une icône et un mot chacune.
@@ -187,9 +192,14 @@ struct PaywallVue: View {
             // P34 A : un seul bouton principal (celui de la boutique) ; la croix en haut ferme la feuille.
             // Liens légaux toujours visibles, même si ce pied recouvre ceux de la boutique.
             // Une seule ligne (ou deux si le texte est agrandi) : le pied reste bas sur iPhone SE et 13 mini.
-            ViewThatFits(in: .horizontal) {
-                HStack(spacing: Espace.l) { piedLiens }
-                VStack(spacing: 0) { piedLiens }
+            if tailleTexte >= .accessibility1 {
+                Menu("Plus") { piedLiens }
+                    .frame(minHeight: Gabarit.zoneTactile)
+            } else {
+                ViewThatFits(in: .horizontal) {
+                    HStack(spacing: Espace.l) { piedLiens }
+                    VStack(spacing: 0) { piedLiens }
+                }
             }
             .font(Police.legende)
             .foregroundStyle(Palette.marine)
@@ -197,8 +207,6 @@ struct PaywallVue: View {
         .padding(.horizontal, Espace.bord)
         .padding(.vertical, Espace.s)
         .background(Palette.surface)
-        // P50 B : le pied reste fixé en bas, avec une ombre légère sur ce qui défile dessous.
-        .shadow(color: Palette.encre.opacity(0.08), radius: 8, y: -2)
     }
 
     @ViewBuilder private var piedLiens: some View {
