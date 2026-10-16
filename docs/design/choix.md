@@ -40,3 +40,5 @@ Décision (16 oct. 2h50) : badge « Trophée » sur la carte d'une prise plus gr
 | P31 Inviter des amis | B · Réglages | 16 oct. 2h56 |
 | P32 Profil d'un ami | A · Plans (Signaler et Bloquer rangés dans le menu ⋯) | 16 oct. 2h56 |
 | P33 Partager une carte | A · Plans | 16 oct. 2h57 |
+| P34 Paywall | A · Plans | 16 oct. 2h58 |
+| P35 Réglages | B · Réglages | 16 oct. 2h58 |
