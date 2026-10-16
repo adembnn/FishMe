@@ -160,7 +160,7 @@ nonisolated enum ProximiteOFB {
                        codeDepartement: spot.departement.estInconnu ? nil : spot.departement.code, noteHonnete: noteHonnete)
 }
 
-/// Bouton rond de 44 pt en verre (carte) : icône encre ou marine.
+/// Bouton rond de 44 pt en Liquid Glass (carte) : icône encre ou marine.
 struct BoutonVerreCarte: View {
     let symbole: String
     let libelle: String
@@ -173,12 +173,7 @@ struct BoutonVerreCarte: View {
                 .font(Police.taille(18))
                 .foregroundStyle(teinte)
                 .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                .background {
-                    Circle()
-                        .fill(.regularMaterial)
-                        .overlay(Circle().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
-                        .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
-                }
+                .glassEffect(.regular.interactive(), in: Circle())
                 .contentShape(Circle())
         }
         .buttonStyle(.plain)

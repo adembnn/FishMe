@@ -111,7 +111,7 @@ struct ClubPageView: View {
           } else {
             GroupeClub {
               Text(
-                "Crée ton club avec un nom et un poisson ou une photo, puis partage-y tes cartes. Tu peux aussi rejoindre celui d'un ami avec son lien."
+                "Crée ton club avec un nom et un poisson ou une photo, puis choisis les cartes à y mettre. Ton club reste sur ton iPhone pour l'instant."
               )
               .font(Police.legende).foregroundStyle(Palette.encreDouce)
               .padding(Espace.l)
@@ -325,7 +325,7 @@ struct ClubPageView: View {
           } label: {
             VStack(spacing: 2) {
               Image(systemName: "plus")
-                .font(.system(size: 22, weight: .bold, design: .rounded))
+                .font(Police.taille(22))
                 .frame(width: 36, height: 36)
               Text("Inviter").font(Police.detail)
               Text(" ").font(Police.legende)

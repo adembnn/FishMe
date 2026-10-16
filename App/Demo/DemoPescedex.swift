@@ -100,9 +100,8 @@ nonisolated enum DemoPescedex {
   /// À appeler au lancement, à chaque changement de l'interrupteur « demo.communaute » et après un rapatriement iCloud.
   /// `demo` vrai : installe les cartes qui manquent. `demo` faux : retire celles de la démo, et seulement elles.
   /// Renvoie vrai si le dépôt a changé (alors recharger le Pescedex et republier l'aquarium).
-  /// `conteneur` : celui de `DepotCartes` ; si `nil`, il est retrouvé dans le dépôt.
   @discardableResult
-  static func synchroniser(demo: Bool, depot: DepotCartes, conteneur: ModelContainer? = nil) async
+  static func synchroniser(demo: Bool, depot: DepotCartes) async
     -> Bool
   {
     let presentes = Set(await depot.identifiants().cartes)
@@ -128,35 +127,9 @@ nonisolated enum DemoPescedex {
       return change
     } else {
       let aRetirer = identifiantsDemo.filter(presentes.contains)
-      let trouve: ModelContainer?
-      if let conteneur { trouve = conteneur } else { trouve = conteneurDe(depot) }
-      guard !aRetirer.isEmpty, let trouve else { return false }
-      return retirer(ids: aRetirer, conteneur: trouve, dossierPhotos: dossierPhotosDe(depot))
+      guard !aRetirer.isEmpty else { return false }
+      return await depot.supprimer(ids: aRetirer.filter(estDemo)) > 0
     }
-  }
-  private static func retirer(ids: [UUID], conteneur: ModelContainer, dossierPhotos: URL) -> Bool {
-    let contexte = ModelContext(conteneur)
-    let lignes = ((try? contexte.fetch(FetchDescriptor<CarteEnregistree>())) ?? []).filter {
-      ids.contains($0.id) && estDemo($0.id)
-    }
-    guard !lignes.isEmpty else { return false }
-    for ligne in lignes {
-      if let nom = ligne.nomPhoto {
-        try? FileManager.default.removeItem(at: dossierPhotos.appendingPathComponent(nom))
-      }
-      contexte.delete(ligne)
-    }
-    return (try? contexte.save()) != nil
-  }
-
-  /// Le conteneur du dépôt, retrouvé par réflexion : `DepotCartes` ne l'expose pas
-  /// et son fichier ne doit pas être modifié. Préférer passer `conteneur:` si RootView le garde.
-  private static func conteneurDe(_ depot: DepotCartes) -> ModelContainer? {
-    Mirror(reflecting: depot).children.first { $0.label == "conteneur" }?.value as? ModelContainer
-  }
-
-  private static func dossierPhotosDe(_ depot: DepotCartes) -> URL {
-    depot.dossierPhotos
   }
 
   // MARK: Aquarium

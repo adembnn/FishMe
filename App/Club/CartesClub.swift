@@ -41,55 +41,49 @@ struct VignetteCarteClub: View {
 
   var body: some View {
     let style = StyleRarete(niveau)
-    let forme = RoundedRectangle(cornerRadius: Rayon.s, style: .continuous)
-    Color.clear
-      .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
-      .overlay {
-        VStack(spacing: 0) {
-          ZStack {
-            LinearGradient(colors: style.fond, startPoint: .top, endPoint: .bottom)
-            if let vraie = PhotoDemoClub.image(photo) {
-              Color.clear
-                .overlay { Image(uiImage: vraie).resizable().scaledToFill() }
-                .clipped()
-            } else {
-              Image(image)
-                .resizable().scaledToFit()
-                .padding(Espace.xs)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-            }
+    CarteCadre(style: style, declaree: false) {
+      VStack(spacing: 0) {
+        ZStack {
+          LinearGradient(colors: style.fond, startPoint: .top, endPoint: .bottom)
+          if let vraie = PhotoDemoClub.image(photo) {
+            Color.clear
+              .overlay { Image(uiImage: vraie).resizable().scaledToFill() }
+              .clipped()
+          } else {
+            Image(image)
+              .resizable().scaledToFit()
+              .padding(Espace.xs)
+              .frame(maxWidth: .infinity, maxHeight: .infinity)
           }
-          .frame(maxHeight: .infinity)
-          .clipped()
-          HStack(spacing: Espace.xs) {
-            VStack(alignment: .leading, spacing: 1) {
-              Text(nom)
-                .font(Police.taille(12, .heavy))
-                .foregroundStyle(Palette.encre)
-                .lineLimit(2)
-                .multilineTextAlignment(.leading)
-              if let tailleCm {
-                Text("\(tailleCm) cm")
-                  .font(Police.taille(11, .bold).monospacedDigit())
-                  .foregroundStyle(Palette.encreDouce)
-                  .lineLimit(1)
-              }
-            }
-            Spacer(minLength: 0)
-            BadgeRarete(style: style, taille: 16)
-          }
-          .padding(.horizontal, Espace.s)
-          .frame(maxWidth: .infinity)
-          .frame(height: Self.hauteurBande)
-          .background(Palette.tuile)
-          .clipped()
         }
+        .frame(maxHeight: .infinity)
+        .clipped()
+        HStack(spacing: Espace.xs) {
+          VStack(alignment: .leading, spacing: 1) {
+            Text(nom)
+              .font(Police.taille(12, .heavy))
+              .foregroundStyle(Palette.encre)
+              .lineLimit(2)
+              .multilineTextAlignment(.leading)
+            if let tailleCm {
+              Text("\(tailleCm) cm")
+                .font(Police.taille(11, .bold).monospacedDigit())
+                .foregroundStyle(Palette.encreDouce)
+                .lineLimit(1)
+            }
+          }
+          Spacer(minLength: 0)
+          BadgeRarete(style: style, taille: 16)
+        }
+        .padding(.horizontal, Espace.s)
+        .frame(maxWidth: .infinity)
+        .frame(height: Self.hauteurBande)
+        .background(Palette.tuile)
+        .clipped()
       }
-      .clipShape(forme)
-      .overlay(forme.strokeBorder(Palette.filet, lineWidth: 1))
-      .shadow(color: Palette.encre.opacity(0.14), radius: 5, y: 3)
-      .accessibilityElement(children: .ignore)
-      .accessibilityLabel("\(nom)\(tailleCm.map { ", \($0) cm" } ?? ""), \(style.mot)")
+    }
+    .accessibilityElement(children: .ignore)
+    .accessibilityLabel("\(nom)\(tailleCm.map { ", \($0) cm" } ?? ""), \(style.mot)")
   }
 }
 
@@ -146,7 +140,7 @@ struct PartagerCarteClubView: View {
                   VignetteMaCarteClub(carte: carte)
                     .overlay(alignment: .topTrailing) {
                       Image(systemName: choisie ? "checkmark.circle.fill" : "circle")
-                        .font(.system(size: 24, weight: .bold, design: .rounded))
+                        .font(Police.taille(24))
                         .foregroundStyle(choisie ? Palette.marine : Palette.silhouette)
                         .background(Circle().fill(Palette.surface).padding(2))
                         .padding(6)

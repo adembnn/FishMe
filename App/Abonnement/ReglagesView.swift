@@ -252,6 +252,7 @@ private nonisolated struct ChevronReglages: Shape {
 private struct AProposVue: View {
     let liens: LiensLegaux
     @State private var conditionsOuvertes = false
+    @State private var confidentialiteOuverte = false
 
     var body: some View {
         ScrollView {
@@ -263,7 +264,7 @@ private struct AProposVue: View {
                     }
                     .buttonStyle(.plain)
                     SeparateurReglages()
-                    Link(destination: liens.confidentialite) {
+                    Button { confidentialiteOuverte = true } label: {
                         ContenuLigneReglages(titre: "Confidentialité", chevron: true)
                     }
                     .buttonStyle(.plain)
@@ -280,6 +281,7 @@ private struct AProposVue: View {
         .background(Palette.fond)
         .toolbar(.hidden, for: .navigationBar)
         .sheet(isPresented: $conditionsOuvertes) { ConditionsFeuille() }
+        .sheet(isPresented: $confidentialiteOuverte) { ConfidentialiteFeuille() }
     }
 }
 

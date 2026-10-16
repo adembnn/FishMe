@@ -44,8 +44,12 @@ struct PescedexView: View {
     var voirAmis: (() -> Void)? = nil
     /// « Changer » sur la ligne de la zone (P48 B). À brancher : RootView (choix d'une autre zone). Tant que c'est `nil`, la ligne n'a ni « Changer » ni chevron.
     var changerZone: (() -> Void)? = nil
+    /// « Importer une photo » : enregistre la carte (photo brute, espèce, taille en cm, date, lieu flou), recharge le Pescedex
+    /// et montre la révélation. À brancher : RootView. Tant que c'est `nil`, la carte est écrite ici dans le dépôt et le Pescedex rechargé.
+    var ajouterManuellement: ((Data, Espece, Int?, Date, String?) async -> Void)? = nil
 
     @State private var volet: Volet = .miens
+    @State private var ajoutManuelOuvert = false
     @State private var carteOuverte: Emplacement?
     @State private var ficheOuverte: String?
     @State private var bredouilleOuverte: CarteBredouille?
@@ -101,17 +105,46 @@ struct PescedexView: View {
                 bredouilleOuverte = nil
             }
         }
+        .sheet(isPresented: $ajoutManuelOuvert) {
+            AjoutManuelPriseView(especes: modele.services.especes.especesPechables(), creer: creerManuellement)
+        }
         .sheet(isPresented: $conditionsOuvertes) {
             Group {
                 if let tes = emplacements.tesConditions { tes() }
-            }
-            .overlay(alignment: .topLeading) {
-                BoutonRond(role: .fermer, rendu: .verre).padding(Espace.bord)
             }
         }
     }
 
     private var emplacements_: EmplacementsExternes { emplacements }
+
+    /// Crée la carte d'une photo importée : la closure de RootView si elle est branchée, sinon écriture directe dans le dépôt.
+    private func creerManuellement(_ photo: Data, _ espece: Espece, _ cm: Int?, _ date: Date, _ lieu: String?) async {
+        if let ajouterManuellement {
+            await ajouterManuellement(photo, espece, cm, date, lieu)
+            return
+        }
+        let prise = Prise(espece: espece, origine: .priseReelle, longueurCm: cm.map(Double.init),
+                          mesure: cm == nil ? nil : .saisie, date: date, lieuFlou: lieu, exemple: false)
+        _ = try? await modele.depot.enregistrer(prise: prise, photo: photo)
+        await modele.charger()
+    }
+
+    /// « Ajouter une prise » : photo prise dans l'app, ou photo importée de la photothèque.
+    private var boutonAjout: some View {
+        Menu {
+            if let photographier {
+                Button { photographier() } label: { Label("Prendre une photo", systemImage: "camera") }
+            }
+            Button { ajoutManuelOuvert = true } label: { Label("Importer une photo", systemImage: "photo.on.rectangle") }
+        } label: {
+            Image(systemName: "plus.circle.fill")
+                .font(.system(size: 28, weight: .bold, design: .rounded))
+                .foregroundStyle(Palette.marine)
+                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                .contentShape(Rectangle())
+        }
+        .accessibilityLabel("Ajouter une prise")
+    }
 
     private var estVide: Bool { PescedexVide.estVide(modele.emplacements) }
 
@@ -126,7 +159,11 @@ struct PescedexView: View {
 
     private var entete: some View {
         VStack(alignment: .leading, spacing: 0) {
-            grandTitre("Pescedex")
+            HStack(alignment: .center) {
+                grandTitre("Pescedex")
+                Spacer(minLength: Espace.s)
+                boutonAjout
+            }
             if !sousTitre.isEmpty {
                 Text(sousTitre)
                     .font(Police.detail)

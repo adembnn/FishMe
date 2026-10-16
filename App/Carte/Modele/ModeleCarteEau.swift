@@ -8,7 +8,7 @@ extension ModeleCarte {
     /// Nombre de plans d'eau gardés d'une vue à l'autre : le pêcheur qui revient en arrière les retrouve sans nouvelle recherche.
     static let plansDEauGardes = 500
     /// Délai avant de lancer la recherche en ligne : un geste continu n'en déclenche qu'une.
-    static let delaiRechercheEau: Duration = .milliseconds(500)
+    static let delaiRechercheEau: Duration = .milliseconds(800)
 
     /// Lit les cours d'eau du fichier embarqué (une seule fois) puis dessine la couche.
     func chargerCoursDEau() async {

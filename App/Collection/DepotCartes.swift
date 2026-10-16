@@ -122,6 +122,21 @@ actor DepotCartes: CollectionCartes {
         (detaillees().map(\.prise.id), bredouilles().map(\.id))
     }
 
+    /// Supprime des cartes et leurs fichiers photo. Rend le nombre de cartes retirées.
+    @discardableResult
+    func supprimer(ids: [UUID]) -> Int {
+        let contexte = ModelContext(conteneur)
+        let lignes = ((try? contexte.fetch(FetchDescriptor<CarteEnregistree>())) ?? []).filter { ids.contains($0.id) }
+        guard !lignes.isEmpty else { return 0 }
+        for ligne in lignes {
+            if let nom = ligne.nomPhoto {
+                try? FileManager.default.removeItem(at: dossierPhotos.appendingPathComponent(nom))
+            }
+            contexte.delete(ligne)
+        }
+        return (try? contexte.save()) != nil ? lignes.count : 0
+    }
+
     /// Fichier de la photo nettoyée d'une carte, s'il existe : CloudKit l'envoie tel quel (déjà sans GPS).
     func urlPhoto(de prise: Prise) -> URL? {
         guard let nom = prise.cheminPhoto else { return nil }

@@ -32,7 +32,14 @@ enum LectureExemple {
         let soir = cal.date(bySettingHour: 19, minute: 41, second: 0, of: maintenant)
         let station = StationHydro(code: "F7100000", nom: "La Marne à Gournay", eau: "La Marne",
                                    coordonnee: Coordonnee(latitude: 48.86, longitude: 2.58))
-        let eau = NiveauEau(station: station, hauteurM: 1.32, debitM3s: 41, serie48h: [], normaleDebitM3s: 45,
+        // Une crue douce puis une décrue, un point tous les quarts d'heure sur 48 h, terminant sur la mesure courante.
+        let serie: [MesureNiveau] = (0...192).map { i in
+            let t = Double(i) / 192
+            let date = maintenant.addingTimeInterval(-Double(192 - i) * 900)
+            let onde: Double = sin(t * 2 * Double.pi) * (1 - t)
+            return MesureNiveau(heure: date, hauteurM: 1.32 + 0.18 * onde, debitM3s: 41 + 6 * onde)
+        }
+        let eau = NiveauEau(station: station, hauteurM: 1.32, debitM3s: 41, serie48h: serie, normaleDebitM3s: 45,
                             vigilance: .vert, heureMesure: maintenant)
         let point = heures.min { abs($0.heure.timeIntervalSince(maintenant)) < abs($1.heure.timeIntervalSince(maintenant)) }
         let conditions = Conditions(heure: maintenant, ventKmh: point?.ventKmh, pluieMm: point?.pluieMm,

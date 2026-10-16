@@ -18,6 +18,8 @@ struct TesConditionsMeteoView: View {
     @State private var lecture: LectureConditions?
     @State private var essaiFait = false
     @State private var courbe = false
+    /// La lecture d'exemple du mode démo : créée une fois, jamais recalculée à chaque `body`.
+    @State private var exemple: LectureConditions?
 
     init(centre: Coordonnee?, conditions: ConditionsDuSpot, marque: StockageMarque, porte: PorteConditions) {
         self.centre = centre
@@ -30,7 +32,7 @@ struct TesConditionsMeteoView: View {
     private var affichee: (lecture: LectureConditions, exemple: Bool)? {
         if let lecture { return (lecture, false) }
         #if DEBUG
-        if demo && (centre == nil || essaiFait) { return (LectureExemple.creer(), true) }
+        if demo, let exemple { return (exemple, true) }
         #endif
         return nil
     }
@@ -74,12 +76,15 @@ struct TesConditionsMeteoView: View {
         .foregroundStyle(.white)
         .preferredColorScheme(.dark)
         .task(id: centre) {
+            #if DEBUG
+            if demo && exemple == nil { exemple = LectureExemple.creer() }
+            #endif
             guard let c = centre else { lecture = nil; return }
             lecture = conditions.derniere(spot: c)
             await lire(forcer: false)
         }
         .sheet(isPresented: $courbe) {
-            if let eau = lecture?.eau { CourbeRiviereView(eau: eau) }
+            if let eau = affichee?.lecture.eau { CourbeRiviereView(eau: eau) }
         }
         .accessibilityIdentifier("tes-conditions-meteo")
     }
@@ -109,8 +114,13 @@ struct TesConditionsMeteoView: View {
             Text("lu à \(FormatConditions.heure(lecture.lueLe)), sans réseau")
                 .font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
         }
-        // Marque Apple Weather et lien légal : obligatoires, toujours visibles en pied de page.
-        MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : "Hub’Eau")
+        // Marque Apple Weather et lien légal : obligatoires sous une vraie lecture WeatherKit, jamais à côté de chiffres d'exemple.
+        if exemple {
+            Text("Données d'exemple (mode démo)")
+                .font(.system(.footnote, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+        } else {
+            MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : "Hub’Eau")
+        }
     }
 
     private func enTete(_ lecture: LectureConditions, point: PointMeteo, maintenant: Date) -> some View {
