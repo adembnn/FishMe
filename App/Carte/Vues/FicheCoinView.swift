@@ -7,6 +7,7 @@ import Core
 /// sont des fermetures que A remplit ; vides par défaut, la fiche marche seule.
 struct FicheCoinView: View {
     @State private var modele: ModeleFiche
+    @State private var aideCategorie = false
     let emplacementMaintenant: (Coordonnee) -> AnyView
     let emplacementConseil: (Espece) -> AnyView
 
@@ -64,23 +65,38 @@ struct FicheCoinView: View {
         switch lieu.categorie.valeur {
         case .premiere: texte = "1re"
         case .deuxieme: texte = "2e"
-        case .inconnue: texte = "?"
+        case .inconnue: texte = "inconnue"
         }
-        return Menu {
-            Button("1re catégorie") { Task { await modele.choisirCategorie(.premiere) } }
-            Button("2e catégorie") { Task { await modele.choisirCategorie(.deuxieme) } }
-            Button("Je ne sais pas") { Task { await modele.choisirCategorie(nil) } }
-        } label: {
-            Text(texte)
-                .font(PolicesCarte.corps())
-                .frame(minWidth: 36)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 6)
-                .background(CouleursCarte.accent.opacity(0.15), in: Capsule())
-                .foregroundStyle(CouleursCarte.accent)
+        let libelle = TexteCategorie.libelle(lieu.categorie.valeur)
+        return HStack(spacing: 4) {
+            Menu {
+                Button("1re catégorie") { Task { await modele.choisirCategorie(.premiere) } }
+                Button("2e catégorie") { Task { await modele.choisirCategorie(.deuxieme) } }
+                Button("Je ne sais pas") { Task { await modele.choisirCategorie(nil) } }
+            } label: {
+                Text(texte)
+                    .font(PolicesCarte.corps())
+                    .frame(minWidth: 36)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(CouleursCarte.accent.opacity(0.15), in: Capsule())
+                    .foregroundStyle(CouleursCarte.accent)
+            }
+            .accessibilityLabel("Catégorie de l'eau : \(libelle)")
+            .accessibilityHint("Choisir la catégorie")
+            Button { aideCategorie = true } label: {
+                Image(systemName: "info.circle")
+                    .frame(minWidth: 44, minHeight: 44)
+                    .contentShape(Rectangle())
+            }
+            .foregroundStyle(CouleursCarte.accent)
+            .accessibilityLabel("Que veut dire la catégorie ?")
         }
-        .accessibilityLabel("Catégorie de l'eau : \(texte == "?" ? "inconnue" : texte)")
-        .accessibilityHint("Choisir la catégorie")
+        .alert("Catégorie de l'eau", isPresented: $aideCategorie) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(TexteCategorie.aide)
+        }
     }
 
     private func choixEau(_ fiche: FicheCalculee) -> some View {
@@ -133,10 +149,15 @@ struct FicheCoinView: View {
     // MARK: Relevé du filtre
 
     private func releveDuFiltre(_ coin: Coin) -> some View {
-        Text("\(texteReleve(nPeches: coin.nPeches, annee: coin.annee)) · \(coin.ouverture.texte)")
-            .font(PolicesCarte.detail())
-            .foregroundStyle(.secondary)
-            .fixedSize(horizontal: false, vertical: true)
+        VStack(alignment: .leading, spacing: 2) {
+            Text("\(texteReleve(nPeches: coin.nPeches, annee: coin.annee)) · \(coin.ouverture.texte)")
+                .font(PolicesCarte.detail())
+                .foregroundStyle(.secondary)
+            Text(TexteOFB.explication)
+                .font(PolicesCarte.legende())
+                .foregroundStyle(.secondary)
+        }
+        .fixedSize(horizontal: false, vertical: true)
     }
 
     // MARK: Espèces en images

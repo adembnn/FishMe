@@ -106,7 +106,7 @@ struct QuestionNiveauModifier: ViewModifier {
                         ouverte = false
                     }
                 )
-                .presentationDetents([.large])
+                .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.visible)
             }
     }

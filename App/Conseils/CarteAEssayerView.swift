@@ -98,7 +98,7 @@ struct CarteAEssayerView: View {
                             Text(nom).font(JetonsConseils.police(.caption)).foregroundStyle(.primary)
                                 .fixedSize(horizontal: false, vertical: true)
                             // Chaque chiffre OFB porte son nombre de pêches et l'année du dernier relevé.
-                            Text("\(e.nPeches) pêches, \(String(e.annee))")
+                            Text(texteReleve(nPeches: e.nPeches, annee: e.annee))
                                 .font(.caption2).foregroundStyle(.secondary)
                         }
                         .frame(width: 104)

@@ -80,10 +80,10 @@ struct CarteVersoView: View {
             return "Espèce non suivie par l'OFB : rareté non mesurée."
         case .legendaire:
             let depuis = r.anneeDernierReleve.map { " depuis \($0)" } ?? ""
-            return "Rareté dans les relevés OFB \(zone) : aucune pêche OFB ne l'a relevée\(depuis)."
+            return "Rareté dans les relevés de l'Office français de la biodiversité (OFB) \(zone) : aucune pêche ne l'a relevée\(depuis)."
         default:
             let annee = r.anneeDernierReleve.map { ", dernier relevé \($0)" } ?? ""
-            var texte = "Rareté dans les relevés OFB \(zone) : relevée dans \(r.nPeches) pêches sur \(r.nTotal)\(annee)."
+            var texte = "Rareté dans les relevés de l'Office français de la biodiversité (OFB) \(zone) : relevée dans \(r.nPeches) pêches sur \(r.nTotal)\(annee)."
             if r.echelle == .region {
                 texte += " Moins de 20 pêches dans le département : rareté calculée sur la région."
             }
