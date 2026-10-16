@@ -122,10 +122,8 @@ public struct MoteurRegles: ServiceRegles {
     private func vise(_ liste: [String], _ espece: Espece?) -> Bool {
         guard let espece else { return true }
         if liste.isEmpty { return true }
-        return liste.contains {
-            if $0.hasPrefix("nom:") { return $0 == "nom:" + RegleDonnee.cleNom(espece.id) }
-            return $0 == espece.id || (espece.codeSandre != nil && $0 == espece.codeSandre)
-        }
+        let nom = especes.first(where: { $0.espece.id == espece.id })?.nom
+        return liste.contains { GroupesEspeces.vise($0, espece: espece, nom: nom) }
     }
 
     private func calculer(_ ctx: Contexte) -> Calcul {
@@ -258,6 +256,7 @@ public struct MoteurRegles: ServiceRegles {
         -> (lignes: [LigneInterne], aVerifierTouche: Bool) {
         var retenues: [Retenue] = []
         var info: [LigneInterne] = []
+        var reservesLocales: [(RegleDonnee, FichierRegles)] = []
         let fichiers: [(FichierRegles, Bool)] = [national, local].enumerated().compactMap { i, f in f.map { ($0, i == 0) } }
         for (fichier, estNational) in fichiers {
             for r in fichier.regles {
@@ -268,19 +267,25 @@ public struct MoteurRegles: ServiceRegles {
                     retenues.append(Retenue(regle: r, fichier: fichier, rang: 1, confirmeTroncon: true))
                 case "departement":
                     if let c = r.portee?.code, c != dep, c != "FR" { continue }
-                    if r.type == "reserve" { continue }
+                    // Une réserve du département sans eau ni géométrie ne se place pas sur la carte : jamais masquée,
+                    // elle devient une ligne « à vérifier sur place » avec sa source (voir `ligneReservesLocales`).
+                    if r.type == "reserve", !(r.portee?.lieu ?? "").lowercased().hasPrefix("tous") {
+                        reservesLocales.append((r, fichier))
+                        continue
+                    }
                     retenues.append(Retenue(regle: r, fichier: fichier, rang: estNational ? 1 : 2, confirmeTroncon: true))
                 case "cours_eau", "plan_eau":
                     guard memeEau(r.portee?.eau, lieu: ctx.lieu, fichier: fichier) else { continue }
                     retenues.append(Retenue(regle: r, fichier: fichier, rang: 3, confirmeTroncon: true))
                 case "troncon":
                     guard memeEau(r.portee?.eau, lieu: ctx.lieu, fichier: fichier) else { continue }
-                    if ctx.lieu.tronconsConfirmes.contains(r.id) {
+                    // L'app enregistre le libellé du tronçon (celui de la ligne « à vérifier »), le moteur accepte aussi l'id de la règle.
+                    if ctx.lieu.tronconsConfirmes.contains(r.id) || ctx.lieu.tronconsConfirmes.contains(libelleDuTroncon(r)) {
                         retenues.append(Retenue(regle: r, fichier: fichier, rang: 4, confirmeTroncon: true))
                     } else {
                         var ligne = ligneDeBase(r, fichier: fichier, etat: .aVerifierSurPlace)
                         ligne.raison = .troncon
-                        ligne.libelleTroncon = r.portee?.lieu ?? r.phrase
+                        ligne.libelleTroncon = libelleDuTroncon(r)
                         info.append(LigneInterne(ligne: ligne, regleId: r.id, reouverture: nil, etiquette: "à vérifier"))
                     }
                 default:
@@ -302,6 +307,7 @@ public struct MoteurRegles: ServiceRegles {
         var resultat: [LigneInterne] = retenues.map { evaluer($0, ctx: ctx, dep: dep) }
         resultat = fusionnerOuvertures(resultat, retenues: retenues)
         resultat.append(contentsOf: info)
+        if let reserves = ligneReservesLocales(reservesLocales) { resultat.append(reserves) }
 
         var touche = false
         for fichier in [local, national].compactMap({ $0 }) {
@@ -323,7 +329,7 @@ public struct MoteurRegles: ServiceRegles {
                 }
                 if !trouve {
                     let ligne = LigneControle(type: type, etat: .aVerifierSurPlace, raison: .desaccord,
-                                              phrase: "Une règle de ce type existe peut-être (\(libelleType(av.type))) : vérifie l'arrêté.",
+                                              phrase: "Règle locale possible (\(libelleType(av.type))) : vérifie l'arrêté.",
                                               sources: sources)
                     resultat.append(LigneInterne(ligne: ligne, regleId: nil, reouverture: nil, etiquette: "à vérifier"))
                 }
@@ -332,17 +338,52 @@ public struct MoteurRegles: ServiceRegles {
         return (resultat, touche)
     }
 
+    private func libelleDuTroncon(_ r: RegleDonnee) -> String { r.portee?.lieu ?? r.phrase }
+
+    /// Réserves du département qu'on ne sait pas placer (ports, darses, estacades...) : une seule ligne « à vérifier sur place »,
+    /// avec toutes leurs sources. La consigne ne change pas : le moteur ne dit pas où est la réserve, il dit qu'elle existe.
+    private func ligneReservesLocales(_ reserves: [(RegleDonnee, FichierRegles)]) -> LigneInterne? {
+        guard !reserves.isEmpty else { return nil }
+        var sources: [SourceRegle] = []
+        for (r, f) in reserves {
+            var s = r.textes.compactMap { sourceDe(id: $0, fichier: f) }
+            if s.isEmpty, let en = r.source { s = [SourceRegle(titre: en.texte ?? "Source", url: en.url)] }
+            for x in s where !sources.contains(x) { sources.append(x) }
+        }
+        let n = reserves.count
+        let phrase = n == 1
+            ? "\(reserves[0].0.phrase) Regarde le panneau."
+            : "\(n) réserves de pêche locales dans le département (ports, darses, ouvrages) : regarde les panneaux sur place."
+        let ligne = LigneControle(type: .reserve, etat: .aVerifierSurPlace, raison: .reserve, phrase: phrase, sources: sources,
+                                  citation: n == 1 ? reserves[0].0.citation : nil)
+        return LigneInterne(ligne: ligne, regleId: nil, reouverture: nil, etiquette: "à vérifier")
+    }
+
     private func categorieConvient(_ valeur: String, _ cat: Categorie) -> Bool {
         if valeur == "toutes" || valeur.isEmpty { return true }
         return valeur == (cat == .premiere ? "1" : "2")
     }
 
+    /// Le lieu est-il sur l'eau que vise la règle ? Une règle peut viser plusieurs cours d'eau d'un coup
+    /// (`seine-marne-et-yerres`, nom « Seine, Marne et Yerres ») : on compare le lieu à chaque cours d'eau du nom, jamais à des
+    /// morceaux de mots (« seine » ne touche pas « seine-saint-denis »).
     private func memeEau(_ cle: String?, lieu: Lieu, fichier: FichierRegles) -> Bool {
         guard let cle, !cle.isEmpty, let eau = lieu.eau else { return false }
         let k = cleEau(cle)
-        if k == cleEau(eau.cle) || k == cleEau(eau.nom) { return true }
-        if let code = eau.codeSandre, let e = fichier.eaux.first(where: { cleEau($0.cle) == k }), e.code == code { return true }
-        return false
+        let cles = [cleEau(eau.cle), cleEau(eau.nom)]
+        if cles.contains(k) { return true }
+        guard let declaree = fichier.eaux.first(where: { cleEau($0.cle) == k }) else { return false }
+        if let code = eau.codeSandre, declaree.code == code { return true }
+        return cleEaux(declaree).contains { cles.contains($0) }
+    }
+
+    /// Les cours d'eau cités dans le nom d'une eau de règle : « Seine, Marne et Yerres » donne seine, marne, yerres.
+    /// Un nom avec « hors » (« Seine et canaux de Paris, hors les deux lots listés ») reste un seul bloc : pas de découpe.
+    private func cleEaux(_ e: EauDonnee) -> [String] {
+        guard var nom = e.nom?.lowercased(), !nom.contains(" hors ") else { return [] }
+        while let o = nom.firstIndex(of: "("), let f = nom[o...].firstIndex(of: ")") { nom.removeSubrange(o...f) }
+        return nom.replacingOccurrences(of: " et ", with: ",").split(separator: ",")
+            .map { cleEau(String($0)) }.filter { !$0.isEmpty }
     }
 
     /// Plusieurs fenêtres d'ouverture de même groupe : ouvert si l'une contient la date.
@@ -369,7 +410,7 @@ public struct MoteurRegles: ServiceRegles {
     private func evaluer(_ r: Retenue, ctx: Contexte, dep: String) -> LigneInterne {
         let regle = r.regle
         var ligne = ligneDeBase(regle, fichier: r.fichier, etat: .respectee)
-        if regle.portee?.niveau == "troncon" { ligne.libelleTroncon = regle.portee?.lieu ?? regle.phrase }
+        if regle.portee?.niveau == "troncon" { ligne.libelleTroncon = libelleDuTroncon(regle) }
         var reouverture: Date?
         let unJour: TimeInterval = 86_400
 
@@ -422,6 +463,8 @@ public struct MoteurRegles: ServiceRegles {
             if du > ctx.date { reouverture = du }
             return fini(.nonRespectee, etiq: "fermée")
         case "interdit":
+            // Interdiction générale de moyen, de vente ou d'accès (« la gaffe est interdite ») : une ligne d'information.
+            if regle.especes.isEmpty && regle.du == nil && regle.au == nil { return fini(.respectee) }
             guard let du = dateAAAAMMJJ(regle.du), let au = dateAAAAMMJJ(regle.au) else {
                 if regle.du == nil && regle.au == nil { return fini(.nonRespectee, etiq: "fermée") }
                 return fini(.aVerifierSurPlace)
@@ -479,7 +522,8 @@ public struct MoteurRegles: ServiceRegles {
             lecture = dateAAAAMMJJ(s.luLe)
         }
         // Interdiction qui vise des espèces nommées (écrevisses, migrateurs, anguille argentée) : ligne « autre », comme dans cas-verdicts.json.
-        let type = r.type == "interdit" && r.especes.contains { $0.hasPrefix("nom:") } ? TypeRegle.autre : typeLigne(r.type)
+        let generale = r.type == "interdit" && r.especes.isEmpty && r.du == nil && r.au == nil
+        let type = r.type == "interdit" && (generale || r.especes.contains { $0.hasPrefix("nom:") }) ? TypeRegle.autre : typeLigne(r.type)
         return LigneControle(type: type, etat: etat, phrase: r.phrase, sources: sources, citation: r.citation, dateLecture: lecture)
     }
 
@@ -502,13 +546,24 @@ public struct MoteurRegles: ServiceRegles {
         }
     }
 
+    /// Le type d'une règle en français, pour « Règle locale possible (réserve de pêche) : vérifie l'arrêté. »
     private func libelleType(_ type: String) -> String {
         switch type {
         case "taille_min": return "taille minimale"
+        case "fenetre_capture": return "fenêtre de capture"
         case "ouverture", "interdit": return "période d'ouverture"
         case "quota_jour": return "quota du jour"
         case "mode_peche": return "mode de pêche"
-        default: return type
+        case "reserve": return "réserve de pêche"
+        case "consommation": return "consommation du poisson"
+        case "categorie": return "catégorie de l'eau"
+        case "no_kill": return "parcours no-kill"
+        case "remise_eau": return "remise à l'eau"
+        case "carpe_nuit": return "pêche de la carpe de nuit"
+        case "horaire": return "horaires de pêche"
+        case "transport_vivant": return "transport du poisson vivant"
+        case "limite_eau_douce": return "limite eau douce, eau salée"
+        default: return "autre règle"
         }
     }
 
