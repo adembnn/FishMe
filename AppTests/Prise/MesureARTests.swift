@@ -40,6 +40,18 @@ struct MesureARTests {
         #expect(!MesureARCalcul.plausible(120, plage: 10...100))
     }
 
+    @Test func plageEspeceDepuisLeP95() {
+        #expect(MesureARCalcul.plageEspece(p95Cm: nil) == MesureARCalcul.plageParDefaut)
+        #expect(MesureARCalcul.plageEspece(p95Cm: .nan) == MesureARCalcul.plageParDefaut)
+        let gremille = MesureARCalcul.plageEspece(p95Cm: 15) // plafond 18 cm
+        #expect(MesureARCalcul.plausible(17, plage: gremille))
+        #expect(!MesureARCalcul.plausible(40, plage: gremille))
+        #expect(!MesureARCalcul.plausible(2, plage: gremille))
+        let silure = MesureARCalcul.plageEspece(p95Cm: 166.3) // plafond 199,56 cm
+        #expect(MesureARCalcul.plausible(190, plage: silure))
+        #expect(!MesureARCalcul.plausible(210, plage: silure))
+    }
+
     @Test func textePoidsAuxDeuxBornes() {
         #expect(MesureARCalcul.textePoids(minKilos: 1.6, maxKilos: 2.04) == "≈ 1,6 à 2,0 kg, estimé")
     }

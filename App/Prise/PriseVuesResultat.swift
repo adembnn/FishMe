@@ -54,7 +54,10 @@ struct PriseTailleView: View {
         }
         .padding(20)
         .fullScreenCover(isPresented: $mesureAR) {
-            MesureARView(surValider: { mesureAR = false; modele.mesureARValidee($0) }, surAnnuler: { mesureAR = false })
+            // Garde-fou : jusqu'à 1,2 × le p95 des prises connues de l'espèce (table poids-longueur), sinon 3 à 200 cm.
+            MesureARView(plausible: MesureARCalcul.plageEspece(p95Cm: modele.especeConfirmee.flatMap {
+                                modele.services.especes.longueurPlausibleMax(espece: $0.espece) }),
+                         surValider: { mesureAR = false; modele.mesureARValidee($0) }, surAnnuler: { mesureAR = false })
         }
         .fullScreenCover(isPresented: $cameraToise) {
             PriseCamera(onImage: { cameraToise = false; modele.photoToise($0) }, onCancel: { cameraToise = false })
