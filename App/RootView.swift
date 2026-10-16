@@ -8,6 +8,7 @@
 
 import Core
 import Observation
+import SwiftData
 import SwiftUI
 
 // MARK: - Navigation
@@ -39,6 +40,28 @@ enum Modal: Identifiable, Equatable {
 struct PaywallDemande: Identifiable {
     let declencheur: DeclencheurPaywall
     var id: String { declencheur.valeurMesure }
+}
+
+/// La carte révélée après une prise (E6).
+struct CarteRevelee: Identifiable {
+    let id = UUID()
+    let infos: InfosCarte
+    let photo: Data?
+}
+
+// MARK: - Chargement hors du fil principal
+
+/// Ce qui est lourd à construire au lancement : le moteur de Core (règles, espèces, stations) et le conteneur SwiftData.
+nonisolated struct Chargement: Sendable {
+    let core: MoteurCore
+    let conteneur: ModelContainer?
+
+    /// À appeler hors du fil principal.
+    static func preparer() -> Chargement {
+        let core = MoteurCore(donnees: .embarque(dossierFabriques: Bundle.main.resourceURL, reglesTelechargees: ReglesAJour.dossierCopies))
+        let conteneur = (try? DepotCartes.creerConteneur()) ?? (try? DepotCartes.creerConteneur(enMemoire: true))
+        return Chargement(core: core, conteneur: conteneur)
+    }
 }
 
 // MARK: - Assemblage et parcours
@@ -76,19 +99,24 @@ final class ParcoursApp {
     // État de navigation
     var onglet: Onglet = .carte
     var courant: Modal?
+    /// E6 : la carte d'une prise qui vient d'être enregistrée, révélée en plein écran.
+    var carteRevelee: CarteRevelee?
     private var attente: [Modal] = []
     var positionPassee = false
     var consentement: Consentement
     private var consentementPropose = false
     private var carteListeEnvoyee = false
+    @ObservationIgnored private var rendu: Task<Void, Never>?
 
     // Spot
     var spotCourant: Spot?
     private var spotSession: Spot?
     private var spotEnAttente: Spot?
 
-    init(configurerMesure: @escaping @MainActor @Sendable () -> Void) {
-        let core = MoteurCore(donnees: .embarque(dossierFabriques: Bundle.main.resourceURL, reglesTelechargees: ReglesAJour.dossierCopies))
+    /// Le moteur de Core et le conteneur SwiftData sont construits hors du fil principal (`Chargement.preparer`), pas ici :
+    /// la lecture des fichiers de règles et de stations bloquait le premier rendu 15 à 20 s.
+    init(chargement: Chargement, configurerMesure: @escaping @MainActor @Sendable () -> Void) {
+        let core = chargement.core
         self.core = core
         servicesCarte = ServicesCarte(geo: core.geo, regles: core.regles, especes: core.especes, session: core.session)
         // Reconnaissance : modèle DINOv2 embarqué (App/Prise/Modele), sous 0,4 de confiance la grille des espèces s'ouvre.
@@ -100,7 +128,7 @@ final class ParcoursApp {
         previensMoi = PreviensMoiModele(notifieur: NotifieurSysteme())
 
         let servicesCollection = ServicesCollection(especes: core.especes, soleil: core.soleil, regles: core.regles)
-        if let conteneur = (try? DepotCartes.creerConteneur()) ?? (try? DepotCartes.creerConteneur(enMemoire: true)) {
+        if let conteneur = chargement.conteneur {
             let depot = DepotCartes(conteneur: conteneur, dossierPhotos: DepotCartes.dossierParDefaut(), services: servicesCollection)
             self.depot = depot
             pescedex = PescedexModele(depot: depot, services: servicesCollection)
@@ -132,8 +160,9 @@ final class ParcoursApp {
         if let c = moteur.enCours {
             await ecranVerrouille.reprendre(debut: c.sortie.debut, finLegale: c.finLegale, prises: moteur.nombrePrises)
         }
+        // La météo ne retient plus la suite : réseau lent ou WeatherKit absent, on n'attend pas.
+        Task { await marque.rafraichir() }
         await rafraichirCollection()
-        await marque.rafraichir()
         Task.detached(priority: .utility) { await ReglesAJour.lancer() }
     }
 
@@ -157,14 +186,29 @@ final class ParcoursApp {
     func rafraichirCollection() async {
         guard let depot else { return }
         await pescedex?.charger()
-        let noms = Dictionary(core.especes.especesPechables().map { ($0.espece, $0.nom) }, uniquingKeysWith: { a, _ in a })
-        var cartes: [CarteAPartager] = []
-        for prise in await depot.cartes() {
-            guard let png = await depot.imagePNG(de: prise) else { continue }
-            cartes.append(CarteAPartager(id: prise.id.uuidString, titre: noms[prise.espece] ?? "Carte FishMe", png: png))
-        }
-        cartesAPartager = cartes
         publierAquarium()
+        rendrePartagesEnFond(depot: depot)
+    }
+
+    /// Rend les PNG du partage (L9) en fond, une carte à la fois, quelques secondes après l'affichage :
+    /// plus de rendu d'image au lancement. Un nouvel appel annule le rendu en cours.
+    private func rendrePartagesEnFond(depot: DepotCartes) {
+        rendu?.cancel()
+        let especes = core.especes
+        rendu = Task(priority: .utility) { [weak self] in
+            try? await Task.sleep(for: .seconds(3))
+            let noms = Dictionary(especes.especesPechables().map { ($0.espece, $0.nom) }, uniquingKeysWith: { a, _ in a })
+            var cartes: [CarteAPartager] = []
+            for prise in await depot.cartes() {
+                if Task.isCancelled { return }
+                if let png = await depot.imagePNG(de: prise) {
+                    cartes.append(CarteAPartager(id: prise.id.uuidString, titre: noms[prise.espece] ?? "Carte FishMe", png: png))
+                }
+                await Task.yield()
+            }
+            if Task.isCancelled { return }
+            self?.cartesAPartager = cartes
+        }
     }
 
     // MARK: Widget aquarium (L15)
@@ -347,8 +391,20 @@ final class ParcoursApp {
             // `.carteCreee` ne part qu'une fois la carte réellement enregistrée.
             if await ecrire({ _ = try await $0.enregistrer(prise: prise, photo: photo, conditions: instantane, dureeSecondes: duree) }) {
                 mesure.envoyer(.carteCreee)
+                await revelerCarte(prise, photoBrute: photo)
             }
         }
+    }
+
+    /// Prépare la révélation (E6) une fois la carte rangée : `ecrire` a déjà rechargé le Pescedex.
+    private func revelerCarte(_ prise: Prise, photoBrute: Data?) async {
+        guard let modele = pescedex,
+              var emplacement = modele.emplacements.first(where: { $0.id == prise.espece.id }) else { return }
+        emplacement.carte = prise
+        guard let infos = modele.infos(pour: emplacement) else { return }
+        // La photo relue est celle sans métadonnées, comme dans le Pescedex.
+        let photo = await modele.depot.photo(de: prise) ?? photoBrute
+        carteRevelee = CarteRevelee(infos: infos, photo: photo)
     }
 
     /// Carte déclarée du swipe du premier lancement (L4) : sans photo, ne compte pas comme une prise.
@@ -408,18 +464,45 @@ final class ParcoursApp {
 // MARK: - Vue racine
 
 struct RootView: View {
-    @State private var app: ParcoursApp
-    @AppStorage(ClesConseils.questionVue) private var questionVue = false
-    @State private var amisOuverts = false
+    /// `nil` le temps que le moteur se charge en fond : l'écran marine s'affiche alors tout de suite.
+    @State private var app: ParcoursApp?
+    private let configurerMesure: @MainActor @Sendable () -> Void
 
     /// `configurerMesure` : la seule fermeture qui appelle `Spark.configure` (dans `BuildChallengeApp.swift`), jamais avant l'accord.
     init(configurerMesure: @escaping @MainActor @Sendable () -> Void = {}) {
-        _app = State(initialValue: ParcoursApp(configurerMesure: configurerMesure))
+        self.configurerMesure = configurerMesure
     }
 
     var body: some View {
+        Group {
+            if let app {
+                RacineContenu(app: app)
+            } else {
+                // Même marine que l'écran de lancement, un indicateur discret : rien de blanc pendant le chargement.
+                ZStack {
+                    Color(red: 13 / 255, green: 74 / 255, blue: 133 / 255).ignoresSafeArea()
+                    ProgressView().tint(.white)
+                }
+            }
+        }
+        .task {
+            guard app == nil else { return }
+            let chargement = await Task.detached(priority: .userInitiated) { Chargement.preparer() }.value
+            let nouvelle = ParcoursApp(chargement: chargement, configurerMesure: configurerMesure)
+            app = nouvelle
+            await nouvelle.demarrer()
+        }
+    }
+}
+
+/// Les 3 volets, une fois le moteur chargé.
+private struct RacineContenu: View {
+    @Bindable var app: ParcoursApp
+    @AppStorage(ClesConseils.questionVue) private var questionVue = false
+    @State private var amisOuverts = false
+
+    var body: some View {
         corps
-            .task { await app.demarrer() }
     }
 
     @ViewBuilder private var corps: some View {
@@ -456,6 +539,9 @@ struct RootView: View {
         }
         .sheet(item: $app.courant, onDismiss: { app.feuilleFermee() }) { modal in
             vue(de: modal)
+        }
+        .fullScreenCover(item: $app.carteRevelee) { revelee in
+            RevelationCarteView(infos: revelee.infos, photo: revelee.photo) { app.carteRevelee = nil }
         }
         .onChange(of: questionVue) { app.proposerSuitePremierLancement() }
         .onChange(of: app.suivi.abonne) { _, abonne in
