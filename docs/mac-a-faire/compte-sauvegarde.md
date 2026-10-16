@@ -15,6 +15,13 @@ règle « aucun coin exact ne quitte l'iPhone ») et l'accord de mesure d'audien
   (ligne « Mon compte », paramètre `ouvrirCompte` facultatif), `App/RootView.swift` (modèle du compte, sauvegarde 5 s après chaque écriture
   et au lancement, relecture après un rapatriement, destination « Mon compte » dans les Réglages).
 
+## Interrupteur iCloud pour l'archivage (gel 10h30 UTC)
+- Capacité iCloud prête sur `ai.mwm.build.challenge.team.01` : ne rien changer (`FishMeICloud` = YES dans `Config/BuildChallenge-Info.plist`).
+- Pas prête : dans `Config/BuildChallenge-Info.plist`, `FishMeICloud` à NO, et retirer les deux clés iCloud
+  (`icloud-container-identifiers`, `icloud-services`) de `Config/BuildChallenge.entitlements`. Aucun CKContainer n'est alors créé :
+  « Mon compte » disparaît des Réglages, l'écran Amis dit qu'il est indisponible, tout le reste marche. Clé absente = NO.
+- Schéma CloudKit pas déployé en Production : pas de plantage, la synchro échoue et l'app continue (erreurs avalées en fond).
+
 ## À faire sur le Mac
 1. Ajouter le dossier `App/Compte/` à la cible BuildChallenge s'il n'est pas pris par le dossier synchronisé.
 2. Compiler BuildChallenge (iOS 27). Points à surveiller : `recordZoneChanges(inZoneWith:since:desiredKeys:resultsLimit:)`,
