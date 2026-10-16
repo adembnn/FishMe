@@ -63,6 +63,7 @@ struct RevelationCarteView: View {
             }
         }
         .background { fondNuit.ignoresSafeArea() }
+        .avecCroixFermer { ranger() }
         .contentShape(Rectangle())
         .onTapGesture { toucherFond() }
         .onAppear { demarrer() }
