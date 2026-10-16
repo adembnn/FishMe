@@ -25,7 +25,7 @@ enum PoissonVivant {
 
     /// Lacets rendus en volume (en degrés, hors profil) : `<slug>-lacet-<a>-<k>` (a = 15, 30… vers le fond ;
     /// m15, m30… vers nous), et les anciennes vues `-vue-1-` (45) et `-vue-2-` (−45).
-    static let lacetsPossibles = [-75, -60, -45, -30, -15, 15, 30, 45, 60, 75]
+    static let lacetsPossibles = [-90, -75, -60, -45, -30, -15, 15, 30, 45, 60, 75, 90]
 
     static func anglesDisponibles(_ slug: String) -> [Int] {
         lacetsPossibles.filter { UIImage(named: nomVue(slug, angle: $0, image: 0)) != nil }
