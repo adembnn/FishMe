@@ -156,7 +156,16 @@ h1 { margin: 0; font-size: 22px; font-weight: 900; letter-spacing: -0.01em; text
 
   // chargement
   var chargeur = new THREE.GLTFLoader();
-  function charger(url) { return new Promise(function (ok, ko) { chargeur.load(url, ok, undefined, ko); }); }
+  // textures lues par une balise image (pas par fetch, que la page n'a pas le droit d'utiliser sur un blob)
+  chargeur.register(function (parser) { parser.textureLoader = new THREE.TextureLoader(parser.options.manager); return { name: "textures_par_image" }; });
+  // les modèles arrivent en .json (le .glb encodé en base64) : la page ne peut lire que des fichiers servis à côté d'elle
+  function charger(url) {
+    return fetch(url).then(function (r) { if (!r.ok) throw new Error(url + " : " + r.status); return r.json(); }).then(function (j) {
+      var bin = atob(j.glb), n = bin.length, octets = new Uint8Array(n);
+      for (var i = 0; i < n; i++) octets[i] = bin.charCodeAt(i);
+      return new Promise(function (ok, ko) { chargeur.parse(octets.buffer, "", ok, ko); });
+    });
+  }
 
   var BANC = [
     ["brochet", 0.30, [0.02, 0.50, -0.30], 180], ["truite-fario", 0.20, [-0.06, 0.36, -0.10], 6],
