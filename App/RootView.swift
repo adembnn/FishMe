@@ -538,6 +538,8 @@ private nonisolated struct ConseilsVides: ServiceConseils {
 struct RootView: View {
     /// `nil` le temps que le moteur se charge en fond : l'écran marine s'affiche alors tout de suite.
     @State private var app: ParcoursApp?
+    /// Vrai tant que l'ouverture animée couvre l'écran (une fois par lancement).
+    @State private var ouvertureAffichee = true
     private let configurerMesure: @MainActor @Sendable () -> Void
 
     /// `configurerMesure` : la seule fermeture qui appelle `Spark.configure` (dans `BuildChallengeApp.swift`), jamais avant l'accord.
@@ -550,15 +552,19 @@ struct RootView: View {
             if let app {
                 RacineContenu(app: app)
             } else {
-                // Même marine que l'écran de lancement, un indicateur discret : rien de blanc pendant le chargement.
-                ZStack {
-                    Color(red: 13 / 255, green: 74 / 255, blue: 133 / 255).ignoresSafeArea()
-                    ProgressView().tint(.white)
-                }
+                // Même marine que l'écran de lancement : rien de blanc pendant le chargement.
+                Color(red: 13 / 255, green: 74 / 255, blue: 133 / 255).ignoresSafeArea()
+            }
+        }
+        // Ouverture « Le bond » (choix d'Adem, 16 oct.) : le logo prend vie pendant le chargement, puis s'ouvre sur l'app.
+        .overlay {
+            if ouvertureAffichee {
+                OuvertureView(pret: app != nil) { ouvertureAffichee = false }
             }
         }
         .task {
             guard app == nil else { return }
+            Sons.prechauffer()
             let dossierRegles = ReglesAJour.dossierCopies
             let chargement = await Task.detached(priority: .userInitiated) { Chargement.preparer(dossierRegles: dossierRegles) }.value
             let nouvelle = ParcoursApp(chargement: chargement, configurerMesure: configurerMesure)
