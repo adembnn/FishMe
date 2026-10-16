@@ -69,7 +69,9 @@ struct PescedexView: View {
             Group {
                 if let tes = emplacements.tesConditions { tes() }
             }
-            .avecCroixFermer()
+            .overlay(alignment: .topLeading) {
+                BoutonRond(role: .fermer, rendu: .verre).padding(Espace.bord)
+            }
         }
     }
 
@@ -476,7 +478,9 @@ struct FicheEspeceView: View {
         .scrollIndicators(.hidden)
         .presentationDetents([.medium, .large])
         .background(Palette.fond.ignoresSafeArea())
-        .avecCroixFermer()
+        .overlay(alignment: .topLeading) {
+            BoutonRond(role: .fermer, rendu: .simple).padding(Espace.bord)
+        }
     }
 
     private var tuileEspece: some View {

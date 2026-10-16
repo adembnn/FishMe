@@ -55,15 +55,8 @@ struct BredouillePleinEcranView: View {
                 BredouilleView(carte: carte, services: services, emplacements: emplacements).padding(.horizontal, 20)
                 Spacer(minLength: 24)
             }
-            Button(action: fermer) {
-                Label("Fermer", systemImage: "xmark")
-                    .font(Jeton.police(16))
-                    .padding(.horizontal, 14)
-                    .frame(minHeight: Jeton.zoneTactile)
-                    .background(.regularMaterial, in: Capsule())
-                    .foregroundStyle(Jeton.encre)
-            }
-            .padding(16)
+            BoutonRond(role: .fermer, rendu: .verre, action: fermer)
+                .padding(Espace.bord)
         }
     }
 }
