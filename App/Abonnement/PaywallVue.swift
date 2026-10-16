@@ -57,6 +57,19 @@ struct PaywallVue: View {
         }
         .background(Palette.surface)
         .safeAreaInset(edge: .bottom) { pied }
+        // Croix toujours visible (règle Apple) : elle ferme la feuille sans rien débloquer, même quand le paywall bloque.
+        .overlay(alignment: .topTrailing) {
+            Button(action: fermer) {
+                Image(systemName: "xmark")
+                    .font(.body.weight(.bold))
+                    .foregroundStyle(Palette.encre)
+                    .frame(width: 44, height: 44)
+                    .background(.thinMaterial, in: Circle())
+            }
+            .buttonStyle(.plain)
+            .padding(Espace.m)
+            .accessibilityLabel("Fermer")
+        }
         .task {
             if !dejaMontre {
                 dejaMontre = true

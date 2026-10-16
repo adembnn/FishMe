@@ -22,6 +22,7 @@ struct ReglagesView: View {
     /// Ouvre le paywall quand le pêcheur n'est pas abonné.
     let ouvrirPaywall: () -> Void
 
+    @Environment(\.dismiss) private var dismiss
     @State private var gestionOuverte = false
     @State private var message: String?
 
@@ -36,10 +37,23 @@ struct ReglagesView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.l) {
-                Text("Réglages")
-                    .font(Police.grandTitre)
-                    .foregroundStyle(Palette.encre)
-                    .padding(.horizontal, Espace.xs)
+                HStack {
+                    Text("Réglages")
+                        .font(Police.grandTitre)
+                        .foregroundStyle(Palette.encre)
+                    Spacer(minLength: Espace.s)
+                    // Ferme la feuille (la barre de navigation est cachée par RootView).
+                    Button { dismiss() } label: {
+                        Image(systemName: "xmark")
+                            .font(.body.weight(.bold))
+                            .foregroundStyle(Palette.encre)
+                            .frame(width: 44, height: 44)
+                            .background(Palette.surface, in: Circle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Fermer")
+                }
+                .padding(.horizontal, Espace.xs)
                 bloc {
                     ligneNiveau
                     separateur
