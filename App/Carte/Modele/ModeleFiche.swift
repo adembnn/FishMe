@@ -7,8 +7,10 @@ nonisolated struct LigneEspece: Sendable, Equatable, Identifiable {
     var espece: Espece
     var nPeches: Int
     var annee: Int
-    var ouverture: OuvertureDuJour
+    var ouverture: OuvertureDuJour?
     var rarete: ResultatRarete?
+    /// Faux pour la truite fario proposée en 1re catégorie sans relevé : nPeches et annee ne valent alors rien.
+    var releve: Bool = true
     var id: String { espece.id }
 }
 
@@ -38,11 +40,12 @@ nonisolated struct FicheCalculee: Sendable {
         LigneEspece(espece: p.espece, nPeches: p.nPeches, annee: p.annee, ouverture: p.ouverture,
                     rarete: services.especes.rarete(espece: p.espece, departement: lieu.departement))
     }
+    let especesAffichees = TruiteEnPremiere.completer(especes, categorie: lieu.categorie.valeur)
     let lignes: [LigneControle]
     if let espece {
-        lignes = services.regles.controle(espece: espece, tailleCm: nil, mesure: nil, date: date, lieu: lieu, prisesDuJour: []).lignes
+        lignes = OrdreRegles.trier(services.regles.controle(espece: espece, tailleCm: nil, mesure: nil, date: date, lieu: lieu, prisesDuJour: []).lignes)
     } else {
-        lignes = services.regles.reglesDuJour(lieu: lieu, date: date)
+        lignes = OrdreRegles.trier(services.regles.reglesDuJour(lieu: lieu, date: date))
     }
     let couvert = services.regles.departementsCouverts().first { $0.departement == lieu.departement }
     let lien = services.regles.liensFederation(departement: lieu.departement).siteFederation
@@ -53,7 +56,7 @@ nonisolated struct FicheCalculee: Sendable {
     case nil: couverture = .nonSaisie(lien: lien)
     }
     return FicheCalculee(lieu: lieu, lieuFlou: services.geo.lieuFlou(coordonnee), eaux: services.geo.eauxProches(coordonnee),
-                         especes: especes, lignes: lignes, couverture: couverture)
+                         especes: especesAffichees, lignes: lignes, couverture: couverture)
 }
 
 /// Le choix de l'eau, de la catégorie et des tronçons confirmés : gardé dans le spot, sur l'iPhone seulement.

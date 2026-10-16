@@ -44,6 +44,8 @@ struct RangeeEspece: View {
     var rarete: ResultatRarete?
     var ouverture: OuvertureDuJour?
     var selectionnee = false
+    /// Faux : espèce proposée sans relevé OFB ici ; aucun chiffre n'est montré.
+    var releve = true
 
     var body: some View {
         HStack(spacing: 12) {
@@ -53,7 +55,7 @@ struct RangeeEspece: View {
                 Text(nom)
                     .font(PolicesCarte.corps())
                     .fixedSize(horizontal: false, vertical: true)
-                Text(texteReleve(nPeches: nPeches, annee: annee))
+                Text(releve ? texteReleve(nPeches: nPeches, annee: annee) : "pas relevée ici")
                     .font(PolicesCarte.legende())
                     .foregroundStyle(Palette.encreDouce)
                     .fixedSize(horizontal: false, vertical: true)

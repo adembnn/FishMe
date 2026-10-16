@@ -8,6 +8,7 @@ import Core
 struct FicheCoinView: View {
     @State private var modele: ModeleFiche
     @State private var aideCategorie = false
+    @State private var toutesLesRegles = false
     let emplacementMaintenant: (Coordonnee) -> AnyView
     let emplacementConseil: (Espece) -> AnyView
 
@@ -28,8 +29,8 @@ struct FicheCoinView: View {
                     if let coin = modele.selection.coin {
                         releveDuFiltre(coin)
                     }
-                    especes(fiche)
                     regles(fiche)
+                    especes(fiche)
                     pied
                 } else {
                     ProgressView()
@@ -174,8 +175,8 @@ struct FicheCoinView: View {
                         Task { await modele.toucherEspece(ligne.espece) }
                     } label: {
                         RangeeEspece(nom: modele.nom(ligne.espece), image: modele.image(ligne.espece), nPeches: ligne.nPeches,
-                                     annee: ligne.annee, rarete: ligne.rarete, ouverture: ligne.ouverture,
-                                     selectionnee: modele.especeTouchee == ligne.espece)
+                                     annee: ligne.releve ? ligne.annee : nil, rarete: ligne.rarete, ouverture: ligne.ouverture,
+                                     selectionnee: modele.especeTouchee == ligne.espece, releve: ligne.releve)
                     }
                     .buttonStyle(.plain)
                     .accessibilityAddTraits(modele.especeTouchee == ligne.espece ? .isSelected : [])
@@ -190,18 +191,36 @@ struct FicheCoinView: View {
     // MARK: Règles du jour
 
     private func regles(_ fiche: FicheCalculee) -> some View {
-        VStack(alignment: .leading, spacing: 0) {
+        let visibles = OrdreRegles.visibles(fiche.lignes, toutVoir: toutesLesRegles)
+        return VStack(alignment: .leading, spacing: 0) {
             Text(modele.especeTouchee.map { "Règles du jour : \(modele.nom($0))" } ?? "Règles du jour")
                 .font(PolicesCarte.legende())
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
                 .padding(.bottom, 4)
-            ForEach(Array(fiche.lignes.enumerated()), id: \.offset) { _, ligne in
+            ForEach(Array(visibles.enumerated()), id: \.offset) { _, ligne in
                 LigneRegleView(ligne: ligne, categorieInconnue: fiche.lieu.categorie.valeur == .inconnue,
                                tronconConfirme: ligne.libelleTroncon.map { fiche.lieu.tronconsConfirmes.contains($0) } ?? false,
                                confirmerTroncon: { libelle in Task { await modele.confirmerTroncon(libelle) } })
                 Divider()
             }
+            if fiche.lignes.count > OrdreRegles.apercu {
+                Button {
+                    withAnimation(.snappy) { toutesLesRegles.toggle() }
+                } label: {
+                    Text(toutesLesRegles ? "Voir moins" : "Voir toutes les règles (\(fiche.lignes.count))")
+                        .font(PolicesCarte.corps())
+                        .foregroundStyle(CouleursCarte.accent)
+                        .frame(maxWidth: .infinity, minHeight: 44, alignment: .leading)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+            }
+            Text("Information indicative : l'arrêté préfectoral fait foi.")
+                .font(PolicesCarte.legende())
+                .foregroundStyle(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 4)
         }
     }
 
@@ -218,7 +237,7 @@ struct FicheCoinView: View {
             .buttonStyle(.borderedProminent)
             .tint(CouleursCarte.accent)
 
-            Text("Information indicative : l'arrêté préfectoral fait foi. En cas de doute, relâche.")
+            Text("En cas de doute, relâche.")
                 .font(PolicesCarte.legende())
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)
