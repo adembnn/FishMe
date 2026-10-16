@@ -71,7 +71,13 @@ struct AchatsStoreKitTests {
             session.shouldEnterBillingRetryOnRenewal = true
             _ = await achats.acheter(produit: IdentifiantsProduits.annuelFondateur)
             try session.forceRenewalOfSubscription(productIdentifier: IdentifiantsProduits.annuelFondateur)
-            let etat = await achats.etat()
+            // Comme l'expiration, le passage en délai de grâce arrive de façon asynchrone : on sonde jusqu'à 10 s.
+            var etat = await achats.etat()
+            for _ in 0..<40 {
+                if case .delaiDeGrace = etat { break }
+                try await Task.sleep(for: .milliseconds(250))
+                etat = await achats.etat()
+            }
             guard case .delaiDeGrace = etat else { Issue.record("attendu : délai de grâce, reçu \(etat)"); return }
             #expect(etat.donneAcces)
         }
