@@ -209,7 +209,9 @@ struct PriseResultatView: View {
         return "\(Int(modele.longueurCm.rounded())) cm"
     }
 
+    /// Lignes « à vérifier » et règles d'interdiction : visibles sous le titre, pas dans « Règle et sources » replié.
     private func bandeauVerdict(_ controle: ResultatControle?) -> some View {
+        let lignesVisibles = controle.map { PriseLogique.lignesVisibles([$0]) } ?? []
         let verdict = modele.verdictTaille
         let (symbole, titre, couleur) = presentation(verdict, controle)
         return VStack(spacing: 0) {
@@ -221,6 +223,12 @@ struct PriseResultatView: View {
                 Text(tailleTexte).font(Police.detail).foregroundStyle(Palette.encreDouce)
             }
             .padding(Espace.m)
+            if !lignesVisibles.isEmpty {
+                VStack(spacing: Espace.s) {
+                    ForEach(Array(lignesVisibles.enumerated()), id: \.offset) { _, ligne in PriseLigneView(ligne: ligne) }
+                }
+                .padding([.horizontal, .bottom], Espace.m)
+            }
             Divider().overlay(Palette.filet)
             Button { withAnimation { sourcesOuvertes.toggle() } } label: {
                 HStack(spacing: Espace.m) {
@@ -241,7 +249,7 @@ struct PriseResultatView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     if modele.contexte.lieu.categorie.valeur == .inconnue { categorieInconnue }
-                    ForEach(Array(controle.lignes.enumerated()), id: \.offset) { _, ligne in PriseLigneView(ligne: ligne) }
+                    ForEach(Array(controle.lignes.filter { !lignesVisibles.contains($0) }.enumerated()), id: \.offset) { _, ligne in PriseLigneView(ligne: ligne) }
                     Text(PriseLogique.avertissement)
                         .font(Police.legende).foregroundStyle(Palette.encreDouce)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -257,6 +265,7 @@ struct PriseResultatView: View {
         let consigne = controle?.consigne.texte ?? PriseLogique.consigneAvantConfirmation
         switch verdict {
         case .tailleLegale: return ("checkmark.circle.fill", "Taille légale", Palette.ouvert)
+        case .tailleRespecteeAVerifier: return ("info.circle.fill", "Taille respectée · vérifie le parcours", Palette.encreDouce)
         case .sousLaMaille: return ("xmark.octagon.fill", "Sous la taille minimale", Palette.alerte)
         case .regleNonRespectee: return ("xmark.octagon.fill", "Relâche-la", Palette.alerte)
         case .aVerifier, .sansRegleDeTaille: return ("questionmark.circle.fill", consigne, Palette.marine)
@@ -419,19 +428,24 @@ struct PriseLigneView: View {
         .buttonStyle(.plain)
     }
 
+    private var style: PriseLogique.StyleLigne { PriseLogique.styleDeLigne(type: ligne.type, etat: ligne.etat) }
+
     private var symbole: String {
-        switch ligne.etat {
-        case .respectee: return ligne.type == .periode ? "calendar" : "checkmark.circle.fill"
-        case .nonRespectee: return "xmark.octagon.fill"
-        case .aVerifierSurPlace: return "questionmark.circle.fill"
+        switch style {
+        case .coche: return "checkmark.circle.fill"
+        case .calendrier: return "calendar"
+        case .info: return "info.circle.fill"
+        case .aVerifier: return "questionmark.circle.fill"
+        case .alerte: return "xmark.octagon.fill"
         }
     }
 
     private var couleur: Color {
-        switch ligne.etat {
-        case .respectee: return ligne.type == .periode ? Palette.encreDouce : Palette.ouvert
-        case .nonRespectee: return Palette.alerte
-        case .aVerifierSurPlace: return Palette.marine
+        switch style {
+        case .coche: return Palette.ouvert
+        case .calendrier, .info: return Palette.encreDouce
+        case .aVerifier: return Palette.marine
+        case .alerte: return Palette.alerte
         }
     }
 }

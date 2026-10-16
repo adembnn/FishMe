@@ -424,7 +424,13 @@ final class ParcoursApp {
         // Au-delà de 3 km du spot, la position est celle d'un pêcheur qui n'est pas sur place : on garde le centre.
         let centre = coordonneeSession ?? Coordonnee(latitude: 0, longitude: 0)
         let c = gps.position.flatMap { distanceMetres($0, centre) <= 3000 ? $0 : nil } ?? centre
-        return PriseContexte(coordonnee: c, lieu: core.geo.lieu(de: c, choix: nil), lieuFlou: core.geo.lieuFlou(c),
+        // Le tronçon confirmé sur la fiche du coin s'applique à la prise (sinon les règles de tronçon sont perdues).
+        let degre = 0.02
+        let stations = core.especes.stationsDans(RegionCarte(
+            sudOuest: Coordonnee(latitude: c.latitude - degre, longitude: c.longitude - degre),
+            nordEst: Coordonnee(latitude: c.latitude + degre, longitude: c.longitude + degre)))
+        let choix = PriseLogique.choixEnregistre(pres: c, stations: stations, lire: { StockageChoixLieu.lire($0) })
+        return PriseContexte(coordonnee: c, lieu: core.geo.lieu(de: c, choix: choix), lieuFlou: core.geo.lieuFlou(c),
                              date: moteur.maintenant(), prisesDuJour: moteur.prisesGardeesDuJour())
     }
 
