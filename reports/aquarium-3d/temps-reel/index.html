@@ -1,0 +1,320 @@
+<meta charset="utf-8">
+<title>Mon aquarium 3D</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap">
+<style>
+/* Une seule ambiance (l'eau du bac), claire ou sombre : couleurs fixées ici */
+:root { --eau: #0d2f31; --texte: #f3efe4; --doux: rgba(243,239,228,.72); --voile: rgba(8,26,28,.55); color-scheme: dark;
+  --titre: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, sans-serif; }
+html, body { height: 100%; }
+body { background: var(--eau); color: var(--texte); font-family: var(--titre); overflow: hidden; overscroll-behavior: none;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0; }
+#scene { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+.haut { position: fixed; top: 0; left: 0; right: 0; padding: calc(env(safe-area-inset-top, 0px) + 14px) max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px));
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px; pointer-events: none; }
+h1 { margin: 0; font-size: 22px; font-weight: 900; letter-spacing: -0.01em; text-shadow: 0 1px 8px rgba(0,0,0,.35); }
+#ips { font-size: 12px; font-weight: 800; color: var(--doux); font-variant-numeric: tabular-nums; }
+.bas { position: fixed; left: 0; right: 0; bottom: 0; padding: 0 max(16px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 16px) max(16px, env(safe-area-inset-left, 0px));
+  display: flex; justify-content: center; pointer-events: none; }
+.bas p { margin: 0; padding: 8px 14px; border-radius: 999px; background: var(--voile); color: var(--doux); font-size: 13px; font-weight: 800; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); text-align: center; }
+#charge { position: fixed; inset: 0; display: grid; place-items: center; color: var(--doux); font-weight: 800; font-size: 15px; }
+</style>
+<canvas id="scene" aria-label="Aquarium en 3D : les poissons du Pescedex nagent entre galets, roches et herbiers"></canvas>
+<div class="haut"><h1>Mon aquarium</h1><span id="ips"></span></div>
+<div class="bas"><p id="aide">Glisse pour tourner autour du bac · touche l'eau pour nourrir</p></div>
+<div id="charge">Remplissage du bac…</div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/environments/RoomEnvironment.js"></script>
+<script src="nage.js"></script>
+<script>
+(function () {
+  var canvas = document.getElementById("scene");
+  var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, powerPreference: "high-performance" });
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  renderer.setPixelRatio(dpr);
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
+
+  var scene = new THREE.Scene();
+  var EAU = new THREE.Color(0x1b5450);
+  scene.fog = new THREE.FogExp2(0x1d5a55, 0.5);
+  scene.background = new THREE.Color(0x0d2f31);
+  var pmrem = new THREE.PMREMGenerator(renderer);
+  var env = pmrem.fromScene(new THREE.RoomEnvironment(), 0.04).texture;
+
+  // bac (repère glTF) : x ±0.45, y 0 (sol) à 0.72 (surface), z de 0 (vitre) à -0.5 (fond)
+  var BAC = { min: [-0.42, 0.10, -0.44], max: [0.42, 0.68, -0.06] };
+  var CENTRE = new THREE.Vector3(0, 0.34, -0.25);
+
+  var camera = new THREE.PerspectiveCamera(48, 1, 0.02, 10);
+  var orbite = { az: 0, el: 0.02, vaz: 0, distance: 0.96 };
+
+  // lumière : ciel d'eau, soleil chaud par la rampe, contre-jour froid
+  scene.add(new THREE.HemisphereLight(0xcfeee6, 0x3a3226, 0.6));
+  var soleil = new THREE.DirectionalLight(0xfff1dc, 1.6); soleil.position.set(0.25, 2, 0.4); scene.add(soleil);
+  var face = new THREE.DirectionalLight(0xffe6c8, 0.35); face.position.set(0.3, 0.4, 1.5); scene.add(face);
+
+  var horloge = { t: 0 };
+  var uniCommuns = { uTemps: { value: 0 } };
+
+  // caustiques animées projetées du dessus, ajoutées à tous les matériaux du décor et des poissons
+  var CAUSTIQUE = [
+    "uniform float uTemps;",
+    "varying vec3 vMondePos; varying vec3 vMondeNorm;",
+    "float caustique(vec2 uv, float t) {",
+    "  vec2 p = mod(uv * 6.2831853, 6.2831853) - 250.0;",
+    "  vec2 i = p; float c = 1.0;",
+    "  for (int n = 0; n < 4; n++) {",
+    "    float tt = t * (1.0 - 3.5 / float(n + 1));",
+    "    i = p + vec2(cos(tt - i.x) + sin(tt + i.y), sin(tt - i.y) + cos(tt + i.x));",
+    "    c += 1.0 / length(vec2(p.x / (sin(i.x + tt) / 0.005), p.y / (cos(i.y + tt) / 0.005)));",
+    "  }",
+    "  c /= 4.0; c = 1.17 - pow(c, 1.4);",
+    "  return clamp(pow(abs(c), 8.0), 0.0, 1.5);",
+    "}"
+  ].join("\n");
+
+  function brancher(mat, options) {
+    options = options || {};
+    mat.onBeforeCompile = function (sh) {
+      sh.uniforms.uTemps = uniCommuns.uTemps;
+      if (options.nage) { sh.uniforms.uPhase = options.nage.uPhase; sh.uniforms.uAmp = options.nage.uAmp; sh.uniforms.uCourbe = options.nage.uCourbe; }
+      if (options.herbe) { sh.uniforms.uHerbe = { value: 1 }; }
+      var avant = "varying vec3 vMondePos; varying vec3 vMondeNorm; uniform float uTemps;\n" +
+        (options.nage ? "uniform float uPhase; uniform float uAmp; uniform float uCourbe;\n" : "") +
+        (options.herbe ? "varying float vHaut;\n" : "");
+      sh.vertexShader = avant + sh.vertexShader.replace("#include <begin_vertex>", "#include <begin_vertex>\n" +
+        (options.nage ? NAGE.GLSL + "\n" : "") +
+        (options.herbe ? [
+          "float hh = clamp((transformed.y - 0.06) / 0.5, 0.0, 1.0); vHaut = hh;",
+          "transformed.x += sin(uTemps * 1.1 + transformed.x * 9.0 + transformed.z * 6.0) * 0.022 * hh * hh;",
+          "transformed.z += cos(uTemps * 0.9 + transformed.x * 7.0) * 0.012 * hh * hh;"
+        ].join("\n") : "")
+      ).replace("#include <project_vertex>", "#include <project_vertex>\n vMondePos = (modelMatrix * vec4(transformed, 1.0)).xyz; vMondeNorm = normalize(mat3(modelMatrix) * objectNormal);");
+      sh.fragmentShader = CAUSTIQUE + "\n" + (options.herbe ? "varying float vHaut;\n" : "") + sh.fragmentShader
+        .replace("#include <color_fragment>", "#include <color_fragment>\n" + (options.herbe ?
+          "diffuseColor.rgb = mix(vec3(0.03, 0.09, 0.03), vec3(0.30, 0.50, 0.12), vHaut);" : ""))
+        .replace("#include <output_fragment>", [
+          "float cDessus = clamp(vMondeNorm.y * 0.7 + 0.3, 0.0, 1.0);",
+          "float cProf = smoothstep(0.0, 0.7, vMondePos.y) * 0.6 + 0.4;",
+          "float cau = caustique(vMondePos.xz * 2.2, uTemps * 0.45);",
+          "outgoingLight += diffuseColor.rgb * cau * cDessus * cProf * " + (options.force || "1.1") + ";",
+          "#include <output_fragment>"
+        ].join("\n"));
+    };
+    mat.customProgramCacheKey = function () { return (options.nage ? "n" : "") + (options.herbe ? "h" : "") + "c"; };
+    return mat;
+  }
+
+  // fond du bac : dégradé d'eau profonde, et surface vue de dessous qui scintille
+  var fond = new THREE.Mesh(new THREE.PlaneGeometry(4, 1.6), new THREE.ShaderMaterial({
+    uniforms: uniCommuns, depthWrite: false,
+    vertexShader: "varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }",
+    fragmentShader: "varying vec2 vUv; void main(){ vec3 b = vec3(0.012,0.05,0.05), h = vec3(0.14,0.36,0.33); float y = smoothstep(0.15, 0.85, vUv.y); gl_FragColor = vec4(mix(b, h, y), 1.0); }"
+  }));
+  fond.position.set(0, 0.4, -0.75); scene.add(fond);
+
+  var surface = new THREE.Mesh(new THREE.PlaneGeometry(4, 2.4), new THREE.ShaderMaterial({
+    uniforms: uniCommuns, transparent: true, depthWrite: false, side: THREE.DoubleSide,
+    vertexShader: "varying vec3 vP; void main(){ vP = (modelMatrix*vec4(position,1.0)).xyz; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }",
+    fragmentShader: CAUSTIQUE + "\nvarying vec3 vP; void main(){ float c = caustique(vP.xz * 1.2, uTemps * 0.6); float bord = smoothstep(1.4, 0.2, length(vP.xz - vec2(0.0,-0.25))); gl_FragColor = vec4(vec3(0.30,0.55,0.52) * (0.6 + 0.8 * c), (0.75 + 0.2 * c) * bord); }"
+  }));
+  surface.rotation.x = Math.PI / 2; surface.position.set(0, 0.72, -0.25); scene.add(surface);
+
+  // rayons de lumière : quelques voiles additifs qui respirent
+  var rayons = [];
+  var matRayon = new THREE.ShaderMaterial({
+    uniforms: { uTemps: uniCommuns.uTemps, uDecal: { value: 0 } }, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide,
+    vertexShader: "varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }",
+    fragmentShader: "uniform float uTemps; uniform float uDecal; varying vec2 vUv; void main(){ float x = abs(vUv.x - 0.5) * 2.0; float a = (1.0 - x * x) * smoothstep(0.0, 0.9, vUv.y) * (0.5 + 0.5 * sin(uTemps * 0.5 + uDecal)); gl_FragColor = vec4(vec3(0.85,0.97,0.9) * a * 0.09, 1.0); }"
+  });
+  for (var r = 0; r < 6; r++) {
+    var m = matRayon.clone(); m.uniforms.uTemps = uniCommuns.uTemps; m.uniforms.uDecal = { value: r * 1.7 };
+    var g = new THREE.PlaneGeometry(0.08 + Math.random() * 0.08, 0.9);
+    var ray = new THREE.Mesh(g, m);
+    ray.position.set(-0.35 + r * 0.14, 0.33, -0.15 - Math.random() * 0.3);
+    ray.rotation.z = 0.28; ray.rotation.y = Math.random() * 0.6 - 0.3;
+    scene.add(ray); rayons.push(ray);
+  }
+
+  // particules en suspension
+  var nbP = 260, posP = new Float32Array(nbP * 3);
+  for (var k = 0; k < nbP; k++) { posP[k * 3] = (Math.random() - 0.5) * 0.9; posP[k * 3 + 1] = Math.random() * 0.7; posP[k * 3 + 2] = -Math.random() * 0.5; }
+  var geoP = new THREE.BufferGeometry(); geoP.setAttribute("position", new THREE.BufferAttribute(posP, 3));
+  var poussiere = new THREE.Points(geoP, new THREE.PointsMaterial({ color: 0xdff3ea, size: 0.0035, transparent: true, opacity: 0.55, depthWrite: false }));
+  scene.add(poussiere);
+
+  // bulles qui montent d'un diffuseur dans le coin
+  var nbB = 30, bulles = [];
+  var geoB = new THREE.SphereGeometry(1, 10, 8);
+  var matB = new THREE.MeshPhysicalMaterial({ color: 0xffffff, roughness: 0.05, metalness: 0, transparent: true, opacity: 0.35, envMap: env, envMapIntensity: 1.6 });
+  var instB = new THREE.InstancedMesh(geoB, matB, nbB); scene.add(instB);
+  for (k = 0; k < nbB; k++) bulles.push({ y: Math.random() * 0.6 + 0.1, r: 0.0015 + Math.random() * 0.003, v: 0.06 + Math.random() * 0.05, o: Math.random() * 6 });
+  var tmpM = new THREE.Matrix4();
+
+  // chargement
+  var chargeur = new THREE.GLTFLoader();
+  function charger(url) { return new Promise(function (ok, ko) { chargeur.load(url, ok, undefined, ko); }); }
+
+  var BANC = [
+    ["brochet", 0.30, [0.02, 0.50, -0.30], 180], ["truite-fario", 0.20, [-0.06, 0.36, -0.10], 6],
+    ["carpe-commune", 0.22, [0.07, 0.21, -0.28], 176], ["sandre", 0.19, [-0.13, 0.29, -0.36], 12],
+    ["tanche", 0.15, [0.10, 0.13, -0.18], 192], ["perche", 0.12, [0.15, 0.26, -0.06], 200],
+    ["perche", 0.10, [0.20, 0.31, -0.14], 194], ["gardon", 0.09, [-0.16, 0.60, -0.30], 10],
+    ["gardon", 0.085, [-0.07, 0.66, -0.24], 2], ["gardon", 0.09, [-0.21, 0.57, -0.38], 14],
+    ["rotengle", 0.10, [0.13, 0.62, -0.40], 186]
+  ];
+  var especes = {}; BANC.forEach(function (b) { especes[b[0]] = true; });
+  var poissons = [];
+
+  Promise.all([charger("decor.json")].concat(Object.keys(especes).map(function (e) { return charger("poissons/" + e + ".json"); })))
+  .then(function (res) {
+    var decor = res[0].scene;
+    decor.traverse(function (o) {
+      if (!o.isMesh) return;
+      var herbe = o.material && o.material.name === "herbe";
+      if (herbe) o.material = new THREE.MeshStandardMaterial({ color: 0x4a7a20, roughness: 0.6, side: THREE.DoubleSide });
+      o.material.envMap = env; o.material.envMapIntensity = 0.2;
+      var sol = o.material.name === "galets";
+      if (sol) o.material.color.setRGB(0.62, 0.64, 0.6);
+      brancher(o.material, { herbe: herbe, force: herbe ? "0.6" : (sol ? "0.7" : "1.0") });
+    });
+    scene.add(decor);
+    var modeles = {}; Object.keys(especes).forEach(function (e, i) { modeles[e] = res[i + 1].scene; });
+    BANC.forEach(function (b, i) {
+      var obj = modeles[b[0]].clone(true);
+      var nage = { uPhase: { value: Math.random() * 6 }, uAmp: { value: 0.07 }, uCourbe: { value: 0 } };
+      obj.traverse(function (o) {
+        if (!o.isMesh) return;
+        var peau = o.material.name && o.material.name.indexOf("peau") === 0;
+        o.material = o.material.clone();
+        if (peau) {
+          o.material.alphaTest = 0.5; o.material.transparent = false; o.material.side = THREE.DoubleSide;
+          o.material.envMap = env; o.material.envMapIntensity = 0.55; o.material.roughness = 0.38;
+          if (o.material.normalMap) o.material.normalScale.set(0.6, 0.6);
+          brancher(o.material, { nage: nage, force: "0.8" });
+        } else {
+          o.material = new THREE.MeshPhysicalMaterial({ color: 0x050505, roughness: 0.04, clearcoat: 1, envMap: env, envMapIntensity: 1.4 });
+        }
+      });
+      obj.scale.setScalar(b[1]);
+      scene.add(obj);
+      var n = new NAGE.Nageur(b[0], b[1], BAC, { position: b[2], cap: b[3] * Math.PI / 180 });
+      poissons.push({ obj: obj, n: n, nage: nage, espece: b[0] });
+    });
+    // les gardons nagent en banc derrière le premier
+    var gardons = poissons.filter(function (p) { return p.espece === "gardon"; });
+    gardons.slice(1).forEach(function (g, i) { g.n.meneur = gardons[0].n; g.n.ecart = [-0.07 - 0.03 * i, (i ? -0.035 : 0.03), i ? 0.05 : -0.05]; });
+    document.getElementById("charge").remove();
+    demarrer();
+  }).catch(function (e) { document.getElementById("charge").textContent = "Le bac n'a pas pu se remplir : " + e.message; });
+
+  // nourrir : une granule tombe là où on touche, le poisson le plus proche vient la manger
+  var granules = [];
+  var geoG = new THREE.SphereGeometry(0.004, 8, 6), matG = new THREE.MeshStandardMaterial({ color: 0x9a5a28, roughness: 0.7 });
+  var lancer = new THREE.Raycaster(), plan = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0.22), pt = new THREE.Vector3();
+  function nourrir(cx, cy) {
+    var r = canvas.getBoundingClientRect();
+    lancer.setFromCamera({ x: (cx - r.left) / r.width * 2 - 1, y: -((cy - r.top) / r.height) * 2 + 1 }, camera);
+    if (!lancer.ray.intersectPlane(plan, pt)) return;
+    var x = Math.max(-0.38, Math.min(0.38, pt.x));
+    for (var i = 0; i < 3; i++) {
+      var m = new THREE.Mesh(geoG, matG); m.position.set(x + (Math.random() - 0.5) * 0.04, 0.71, -0.22 + (Math.random() - 0.5) * 0.06);
+      scene.add(m); granules.push({ m: m, v: 0.03 + Math.random() * 0.015, o: Math.random() * 6, mange: false });
+    }
+  }
+
+  // gestes : glisser fait tourner autour du bac ; toucher sans glisser nourrit
+  var appui = null;
+  canvas.addEventListener("pointerdown", function (e) { appui = { x: e.clientX, y: e.clientY, x0: e.clientX, y0: e.clientY, t: performance.now() }; canvas.setPointerCapture(e.pointerId); });
+  canvas.addEventListener("pointermove", function (e) {
+    if (!appui) return;
+    var dx = e.clientX - appui.x, dy = e.clientY - appui.y; appui.x = e.clientX; appui.y = e.clientY;
+    orbite.vaz = -dx * 0.004; orbite.az = Math.max(-0.75, Math.min(0.75, orbite.az + orbite.vaz));
+    orbite.el = Math.max(-0.12, Math.min(0.32, orbite.el + dy * 0.002));
+  });
+  canvas.addEventListener("pointerup", function (e) {
+    if (appui && Math.hypot(e.clientX - appui.x0, e.clientY - appui.y0) < 8 && performance.now() - appui.t < 400) nourrir(e.clientX, e.clientY);
+    appui = null;
+  });
+
+  function taille() {
+    var w = window.innerWidth, h = window.innerHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.fov = w / h > 0.8 ? 40 : 52;
+    orbite.distance = w / h > 0.8 ? 0.92 : 1.0;
+    camera.updateProjectionMatrix();
+  }
+  window.addEventListener("resize", taille); taille();
+
+  var lent = 0;
+  var calme = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var ips = document.getElementById("ips"), images = 0, tIps = performance.now(), avant = performance.now();
+  var vise = new THREE.Vector3(), q = new THREE.Quaternion(), eul = new THREE.Euler(0, 0, 0, "YXZ");
+
+  function demarrer() { requestAnimationFrame(boucle); }
+  function boucle(maintenant) {
+    var dt = Math.min(0.05, (maintenant - avant) / 1000); avant = maintenant;
+    if (calme) dt *= 0.35;
+    horloge.t += dt; uniCommuns.uTemps.value = horloge.t;
+
+    // caméra : inertie après le geste, puis revient doucement face au bac
+    if (!appui) { orbite.az += orbite.vaz; orbite.vaz *= 0.9; orbite.az *= 0.995; orbite.el += (0.02 - orbite.el) * 0.01; }
+    orbite.az = Math.max(-0.75, Math.min(0.75, orbite.az));
+    camera.position.set(CENTRE.x + Math.sin(orbite.az) * orbite.distance, CENTRE.y + 0.02 + Math.sin(orbite.el) * orbite.distance, CENTRE.z + Math.cos(orbite.az) * orbite.distance);
+    vise.copy(CENTRE); vise.y -= 0.01; camera.lookAt(vise);
+
+    // granules
+    for (var i = granules.length - 1; i >= 0; i--) {
+      var g = granules[i];
+      g.m.position.y = Math.max(0.06, g.m.position.y - g.v * dt);
+      g.m.position.x += Math.sin(horloge.t * 2 + g.o) * 0.004 * dt;
+      if (!g.cible) {
+        var meilleur = null, dmin = 1e9;
+        poissons.forEach(function (p) { if (p.faim) return; var b = p.n.bouche(); var d = Math.hypot(b[0] - g.m.position.x, b[1] - g.m.position.y, b[2] - g.m.position.z); if (d < dmin) { dmin = d; meilleur = p; } });
+        if (meilleur) { g.cible = meilleur; meilleur.faim = g; }
+      }
+      if (g.cible) {
+        g.cible.n.viser([g.m.position.x, g.m.position.y, g.m.position.z]);
+        var bo = g.cible.n.bouche();
+        if (Math.hypot(bo[0] - g.m.position.x, bo[1] - g.m.position.y, bo[2] - g.m.position.z) < g.cible.n.L * 0.12) {
+          scene.remove(g.m); g.cible.faim = null; g.cible.n.choisir(); granules.splice(i, 1); continue;
+        }
+      }
+      if (g.m.position.y <= 0.06 && !g.cible) { scene.remove(g.m); granules.splice(i, 1); }
+    }
+
+    // poissons
+    poissons.forEach(function (p) {
+      p.n.pas(dt);
+      p.obj.position.set(p.n.p[0], p.n.p[1], p.n.p[2]);
+      eul.set(0, p.n.cap, p.n.assiette, "YXZ"); p.obj.quaternion.setFromEuler(eul);
+      p.nage.uPhase.value = p.n.phase; p.nage.uAmp.value = p.n.amp; p.nage.uCourbe.value = p.n.courbe;
+    });
+
+    // bulles
+    for (i = 0; i < nbB; i++) {
+      var bu = bulles[i];
+      bu.y += bu.v * dt; if (bu.y > 0.71) bu.y = 0.08;
+      var s = bu.r * (1 + bu.y * 0.6);
+      tmpM.makeScale(s, s, s).setPosition(0.36 + Math.sin(horloge.t * 3 + bu.o) * 0.006, bu.y, -0.40 + Math.cos(horloge.t * 2.4 + bu.o) * 0.005);
+      instB.setMatrixAt(i, tmpM);
+    }
+    instB.instanceMatrix.needsUpdate = true;
+    poussiere.rotation.y = Math.sin(horloge.t * 0.05) * 0.05; poussiere.position.y = Math.sin(horloge.t * 0.2) * 0.01;
+
+    renderer.render(scene, camera);
+
+    images++;
+    if (maintenant - tIps > 1000) {
+      var f = Math.round(images * 1000 / (maintenant - tIps)); ips.textContent = f + " i/s"; images = 0; tIps = maintenant;
+      // fluidité d'abord : si l'appareil peine, on baisse la définition par paliers (jamais sous 1)
+      if (f < 50 && dpr > 1) { lent = (lent || 0) + 1; if (lent >= 2) { dpr = Math.max(1, dpr - 0.25); renderer.setPixelRatio(dpr); taille(); lent = 0; } } else lent = 0;
+    }
+    requestAnimationFrame(boucle);
+  }
+})();
+</script>
