@@ -247,7 +247,7 @@ struct VueCarte: View {
         .scrollIndicators(.hidden)
     }
 
-    /// P06 C : le lieu, le poisson le plus rare en grand, trois autres, « Commencer une session », « Choisir un autre spot ».
+    /// P06 C : le lieu, le poisson le plus pêché en grand, trois autres, « Commencer une session », « Choisir un autre spot ».
     private var ecranAvecSpot: some View {
         VStack(spacing: Espace.l) {
             HStack {
