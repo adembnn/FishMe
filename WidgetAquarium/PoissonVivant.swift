@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 #if canImport(WidgetKit)
 import WidgetKit
 #endif
@@ -27,14 +28,19 @@ struct PoissonVivant: View {
     private static let recouvrement: CGFloat = 2
     private static let angleQueue = 14.0
 
+    /// L'image de l'espèce existe-t-elle dans le catalogue de cette cible ? Sinon, une silhouette générique :
+    /// jamais un poisson invisible (slug inconnu, catalogue absent de la cible).
+    static func imageDisponible(_ slug: String) -> Bool { UIImage(named: slug) != nil }
+
     private var planche: some View {
-        let base = Image(slug)
+        let base = (Self.imageDisponible(slug) ? Image(slug) : Image(systemName: "fish.fill"))
             .resizable()
         #if canImport(WidgetKit)
             .widgetAccentedRenderingMode(.desaturated)
         #endif
         return base
             .scaledToFit()
+            .foregroundStyle(.white.opacity(0.85))
             .frame(width: largeur)
     }
 
