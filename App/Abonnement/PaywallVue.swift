@@ -53,7 +53,7 @@ struct PaywallVue: View {
             ZStack(alignment: .bottom) {
                 Palette.fond.opacity(0.62).ignoresSafeArea()
                 feuille
-                    .frame(height: min(max(geo.size.height - 60, 0), 540))
+                    .frame(maxHeight: max(geo.size.height - 60, 0))
                     .padding(.horizontal, 8)
                     .padding(.bottom, 8)
             }
@@ -76,19 +76,37 @@ struct PaywallVue: View {
         }
     }
 
+    /// La feuille prend la hauteur de son contenu (pas d'espace vide sous le texte). Si le contenu ne tient pas
+    /// (petit iPhone, texte agrandi), la partie haute défile et le bouton et les liens restent fixés en bas (P50 B).
     private var feuille: some View {
-        VStack(spacing: 0) {
-            Group {
-                switch modele.etat {
-                case .chargement:
-                    ChargementBouchon().frame(maxWidth: .infinity, maxHeight: .infinity)
-                case .indisponible:
+        Group {
+            switch modele.etat {
+            case .chargement:
+                VStack(spacing: 0) {
+                    ChargementBouchon().frame(maxWidth: .infinity).frame(height: 300)
+                    pied
+                }
+            case .indisponible:
+                VStack(spacing: 0) {
                     indisponible
-                case .pret:
-                    boutique
+                    pied
+                }
+            case .pret:
+                ViewThatFits(in: .vertical) {
+                    VStack(spacing: 0) {
+                        contenuHaut
+                        boutonContinuer
+                        pied
+                    }
+                    VStack(spacing: 0) {
+                        ScrollView { contenuHaut }
+                            .scrollIndicators(.hidden)
+                            .scrollBounceBehavior(.basedOnSize)
+                        boutonContinuer
+                        pied
+                    }
                 }
             }
-            pied
         }
         .background(Palette.surface, in: RoundedRectangle(cornerRadius: 38, style: .continuous))
         .shadow(color: Palette.encre.opacity(0.16), radius: 30, y: -2)
@@ -98,36 +116,32 @@ struct PaywallVue: View {
 
     /// Nos propres lignes d'offre et notre bouton « Continuer », en français et aux mesures de la maquette.
     /// (La boutique toute faite d'Apple écrasait l'offre sous son bouton et parlait anglais.)
-    private var boutique: some View {
-        VStack(spacing: 0) {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 0) {
-                    argumentaire
-                    VStack(spacing: 10) {
-                        ligneOffre(id: modele.produits.annuel, titre: "Annuel", detail: modele.phraseLancement, prix: modele.prixAnnuel)
-                        if let mensuel = modele.produits.mensuel, let prix = modele.prixMensuel {
-                            ligneOffre(id: mensuel, titre: "Mensuel", detail: modele.phraseEssai, prix: prix)
-                        }
-                    }
-                    .padding(.horizontal, 20)
+    private var contenuHaut: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            argumentaire
+            VStack(spacing: 8) {
+                ligneOffre(id: modele.produits.annuel, titre: "Annuel", detail: modele.phraseLancement, prix: modele.prixAnnuel)
+                if let mensuel = modele.produits.mensuel, let prix = modele.prixMensuel {
+                    ligneOffre(id: mensuel, titre: "Mensuel", detail: modele.phraseEssai, prix: prix)
                 }
             }
-            .scrollIndicators(.hidden)
-            .scrollBounceBehavior(.basedOnSize)
-
-            Button {
-                Task { await acheter() }
-            } label: {
-                Group {
-                    if achatEnCours { ProgressView().tint(Palette.surMarine) } else { Text("Continuer") }
-                }
-                .frame(maxWidth: .infinity)
-            }
-            .buttonStyle(.principal)
-            .disabled(achatEnCours)
             .padding(.horizontal, 20)
-            .padding(.top, 14)
         }
+    }
+
+    private var boutonContinuer: some View {
+        Button {
+            Task { await acheter() }
+        } label: {
+            Group {
+                if achatEnCours { ProgressView().tint(Palette.surMarine) } else { Text("Continuer") }
+            }
+            .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.principal)
+        .disabled(achatEnCours)
+        .padding(.horizontal, 20)
+        .padding(.top, 14)
     }
 
     /// Une offre : rond de sélection, nom et phrase, prix à droite. Bord marine quand elle est cochée.
@@ -254,6 +268,7 @@ struct PaywallVue: View {
             .padding(24)
             .frame(maxWidth: .infinity)
         }
+        .frame(height: 260)
         .scrollIndicators(.hidden)
     }
 
