@@ -37,7 +37,7 @@ Branche des corrections : `claude/finir-app-ud5swp` (commits acc2598, ec69c1c, 5
 | Cocher WeatherKit, iCloud et App Group sur l'identifiant MWM | Adem (portail développeur) |
 | Vraie page de confidentialité (le paywall pointe vers celle d'Apple) | fil « Fiche App Store avec MWM », après le oui d'Adem |
 | Fiche App Store : textes provisoires, captures | fil « Fiche App Store avec MWM » (attend la clé API ou MWM) |
-| Code Amis, widget, Live Activity dans le build alors que la fiche les dit absents | décision d'Adem : les retirer du build ou les annoncer |
+| Amis, widget, Live Activity restent dans la version soumise (Adem, 15 oct. : tout d'un coup) : les finir et les annoncer dans la fiche | fil Xcode et fil « Fiche App Store avec MWM » |
 | Repli `ConseilsFaux` hors DEBUG (`RootView.swift:97`) | fil Xcode |
 | `stations-hydro.json` à télécharger par `scripts/donnees.sh` avant chaque build | fil Xcode (Mac) |
 | Crédit de la photo d'exemple (CC BY-SA, SpinfisherCRO) | ce fil, dans Sources des données |
@@ -66,6 +66,5 @@ Branche des corrections : `claude/finir-app-ud5swp` (commits acc2598, ec69c1c, 5
 
 ## Décisions qui n'attendent qu'Adem
 1. Le mensuel du paywall (4,99, 6,99 ou 9,99).
-2. Amis, widget et Live Activity : dans le build soumis ou retirés.
-3. L'adresse de contact (club, signalement d'erreur de règle).
-4. Cocher les 3 capacités sur l'identifiant MWM.
+2. L'adresse de contact (club, signalement d'erreur de règle), donnée à 9h.
+3. Cocher les 3 capacités sur l'identifiant MWM.
