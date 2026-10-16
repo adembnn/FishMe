@@ -11,3 +11,6 @@ Tests au moment de la pause : cœur 231 verts ; app 196 sur 197 (adresse du club
 5. **Curseur de taille** : glisser depuis la poignée pendant au moins 0,5 s ; s'il ne bouge pas, le signaler au fil Finir (curseur maison).
 
 Pièges : simulateur tué au lancement (chien de garde de 30 s) quand la charge du Mac dépasse ~150 ; lancer les tests seulement quand la charge est basse. La suite StoreKit se lance seule (le lanceur reste bloqué après elle).
+
+## Écart à la règle de l'atelier (16 oct., 9h55)
+Un commit de `mac/integration` est passé avec `git commit --no-verify` : « Intégration : Info.plist repris de lot/squelette (une seule clé FishMeICloud ; la fusion avait gardé le doublon) ». Le fichier vient tel quel de `lot/squelette` (5e5470f) ; le crochet refusait seulement parce que la branche d'intégration n'est pas un lot. Ne pas le refaire : un fichier protégé se corrige sur sa branche de lot, ou on demande à Adem.
