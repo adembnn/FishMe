@@ -27,6 +27,35 @@ struct ConseilsTests {
         #expect(a.visibles.isEmpty)
     }
 
+    /// Core ne rend que les conseils du mois ; le vrai fichier couvre surtout avril à août.
+    private struct ConseilsDeSaison: ServiceConseils {
+        var moisCouverts: Set<Int>
+        func conseils(espece: Espece, niveau: NiveauPecheur, mois: Int) -> [Conseil] {
+            guard moisCouverts.contains(mois) else { return [] }
+            return [Conseil(texte: "Ver sous une flotte", icone: "fish", source: SourceRegle(titre: "Page lue (essai)"), gratuit: true)]
+        }
+        func conseils(espece: Espece, niveau: NiveauPecheur, mois: Int, lieu: Lieu) -> [Conseil] {
+            conseils(espece: espece, niveau: niveau, mois: mois)
+        }
+    }
+
+    @Test func horsSaisonOnPrendLeMoisLePlusProcheAuLieuDeRienMontrer() {
+        let contexte = ContexteConseils(conseils: ConseilsDeSaison(moisCouverts: Set(4...8)), session: SessionFaux(toutOuvert: true),
+                                        mois: 10, lieu: nil, abonne: true, surSonSpot: true, toutLeKit: { _ in })
+        #expect(!contexte.affiches(espece: Espece(id: "perche-commune"), niveau: .debutant).visibles.isEmpty)
+        #expect(ContexteConseils.moisParProximite(10).prefix(4) == [10, 11, 9, 12])
+        #expect(Set(ContexteConseils.moisParProximite(1)) == Set(1...12))
+        #expect(ContexteConseils.moisParProximite(13) == [13])
+    }
+
+    @Test func percheCommuneADesConseilsPourUnDebutantEnOctobreSurLeVraiFichier() throws {
+        let contexte = ContexteConseils(conseils: try ConseilsParEspece.charger(), session: SessionFaux(toutOuvert: true),
+                                        mois: 10, lieu: nil, abonne: true, surSonSpot: true, toutLeKit: { _ in })
+        for id in ["perche-commune", "chevesne", "ablette"] {
+            #expect(!contexte.affiches(espece: Espece(id: id), niveau: .debutant).visibles.isEmpty, "\(id)")
+        }
+    }
+
     @Test func leContexteSuitPeutUtiliserDeCore() {
         let fermé = ContexteConseils(conseils: ConseilsFaux(), session: SessionFaux(toutOuvert: false), mois: 10, lieu: nil,
                                      abonne: false, surSonSpot: true, toutLeKit: { _ in })

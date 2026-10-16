@@ -66,12 +66,28 @@ struct ContexteConseils {
     /// Action de A vers le paywall de L6, avec le nom de la fonction touchée (E7).
     var toutLeKit: (FonctionPro) -> Void
 
-    func affiches(espece: Espece, niveau: NiveauPecheur) -> ConseilsAffiches {
-        let brut = if let lieu {
-            conseils.conseils(espece: espece, niveau: niveau, mois: mois, lieu: lieu)
-        } else {
-            conseils.conseils(espece: espece, niveau: niveau, mois: mois)
+    /// Le mois demandé d'abord, puis +1, -1, +2, -2… (circulaire). Mois hors 1...12 : seulement lui (Core rend vide).
+    static func moisParProximite(_ mois: Int) -> [Int] {
+        guard (1...12).contains(mois) else { return [mois] }
+        var liste = [mois]
+        for d in 1...6 {
+            for m in [mois + d, mois - d] {
+                let n = (m - 1 + 12) % 12 + 1
+                if !liste.contains(n) { liste.append(n) }
+            }
         }
+        return liste
+    }
+
+    func affiches(espece: Espece, niveau: NiveauPecheur) -> ConseilsAffiches {
+        // Core ne rend que les conseils du mois (conseils.json : surtout avril à août). Hors saison la liste serait
+        // vide : on prend alors les conseils du mois le plus proche, plutôt que « Pas encore de conseil ».
+        let brut = Self.moisParProximite(mois).lazy
+            .map { m -> [Conseil] in
+                if let lieu { return conseils.conseils(espece: espece, niveau: niveau, mois: m, lieu: lieu) }
+                return conseils.conseils(espece: espece, niveau: niveau, mois: m)
+            }
+            .first { !$0.isEmpty } ?? []
         let ouvert = session.peutUtiliser(.conseilsComplets, abonne: abonne, surSonSpot: surSonSpot)
         return RegleConseils.affiches(brut, toutOuvert: ouvert)
     }
