@@ -4,7 +4,7 @@ import Foundation
 // Fichier partagé par l'app et l'extension widget (dossier `Widget/` synchronisé dans les deux cibles).
 // Les boutons de la Live Activity écrivent l'action demandée ; l'app la lit à l'activation (`ActionSessionEnAttente`).
 
-enum CleActionSession {
+nonisolated enum CleActionSession {
     static let suite = "group.ai.mwm.build.challenge.team.01"
     static let cle = "session.actionDemandee"
 
