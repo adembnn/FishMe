@@ -788,7 +788,8 @@ private struct RacineContenu: View {
             surChoixDeZone: { ouvert in
                 app.choixDeZoneOuvert = ouvert
                 if !ouvert { app.proposerSuitePremierLancement() }
-            })
+            },
+            demandeChoixDeZone: app.choixDeZoneOuvert)
             .task { app.carteListe() }
     }
 
