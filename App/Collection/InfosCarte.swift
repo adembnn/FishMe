@@ -34,6 +34,23 @@ struct InfosCarte {
         return morceaux.joined(separator: ", ")
     }
 
+    /// La source de la ligne qui décide : d'abord une règle non respectée, puis une règle à vérifier sur place, puis la taille.
+    /// Deux sources quand les textes se contredisent. Rien si aucune de ces lignes n'a de source.
+    /// Le Pescedex ne garde ni verdict ni source avec la prise : le contrôle est donc refait à l'ouverture de la carte.
+    static func sourceDecisive(_ lignes: [LigneControle]) -> String? {
+        let ordre: [(LigneControle) -> Bool] = [
+            { $0.etat == .nonRespectee },
+            { $0.etat == .aVerifierSurPlace },
+            { $0.type == .taille }
+        ]
+        for critere in ordre {
+            if let ligne = lignes.first(where: { critere($0) && !$0.sources.isEmpty }) {
+                return ligne.sources.map(\.titre).joined(separator: " · ")
+            }
+        }
+        return nil
+    }
+
     static func construire(detail: CarteDetaillee, espece: EspecePechable, zone: Departement?, toutesLesCartes: [Prise],
                            especesDeLaZone: Set<String>, services: ServicesCollection) -> InfosCarte {
         let prise = detail.prise
@@ -47,7 +64,7 @@ struct InfosCarte {
             let resultat = services.regles.controle(espece: prise.espece, tailleCm: prise.longueurCm, mesure: prise.mesure,
                                                     date: prise.date, lieu: Lieu(departement: d), prisesDuJour: [])
             consigne = resultat.consigne.texte
-            source = resultat.lignes.first?.sources.first?.titre
+            source = sourceDecisive(resultat.lignes)
         }
         return InfosCarte(detail: detail, espece: espece, rarete: rarete, departement: dept,
                           rangDansLaZone: CompteurPescedex.rang(de: prise, parmi: toutesLesCartes, zone: zone,

@@ -182,4 +182,18 @@ struct CollectionTests {
         }
         #expect(sansLieu.first { $0.id == "brochet" }?.carte != nil)
     }
+
+    @Test func laSourceAfficheeEstCelleDeLaLigneQuiDecide() {
+        let a = SourceRegle(titre: "Code de l'environnement")
+        let b = SourceRegle(titre: "Arrêté 94")
+        let c = SourceRegle(titre: "Avis 2026")
+        let periode = LigneControle(type: .periode, etat: .respectee, phrase: "p", sources: [a])
+        let taille = LigneControle(type: .taille, etat: .respectee, phrase: "t", sources: [b])
+        let verifier = LigneControle(type: .quota, etat: .aVerifierSurPlace, phrase: "q", sources: [c])
+        let interdite = LigneControle(type: .reserve, etat: .nonRespectee, phrase: "r", sources: [a, b])
+        #expect(InfosCarte.sourceDecisive([periode, taille]) == "Arrêté 94")
+        #expect(InfosCarte.sourceDecisive([periode, taille, verifier]) == "Avis 2026")
+        #expect(InfosCarte.sourceDecisive([periode, verifier, interdite]) == "Code de l'environnement · Arrêté 94")
+        #expect(InfosCarte.sourceDecisive([periode]) == nil)
+    }
 }

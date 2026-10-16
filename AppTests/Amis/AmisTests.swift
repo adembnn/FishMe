@@ -37,7 +37,7 @@ struct AmisTests {
     }
 
     private func carte(_ espece: Espece = Espece(id: "brochet"), image: Data? = nil) -> CartePartagee {
-        CartePartagee(id: UUID(), espece: espece.id, rarete: .rare, date: Date(timeIntervalSince1970: 1_760_000_000), tailleCm: 62,
+        CartePartagee(id: UUID(), espece: espece.id, rarete: .rare, date: CartePartagee.moisEtAnnee(Date(timeIntervalSince1970: 1_760_000_000)), tailleCm: 62,
                       bredouille: false, departement: "94", image: image)
     }
 
@@ -87,6 +87,22 @@ struct AmisTests {
         #expect(throws: ErreurAmis.imageRefusee) {
             _ = try FabriqueRecords.record(pour: carte(image: Data([1, 2, 3])), zone: zone, dossierTemp: dossier)
         }
+    }
+
+    @Test func laDateEnvoyeeEstLePremierDuMois() throws {
+        let exacte = Date(timeIntervalSince1970: 1_760_000_000) // 9 oct. 2025
+        let arrondie = CartePartagee.moisEtAnnee(exacte)
+        var paris = Calendar(identifier: .gregorian)
+        paris.timeZone = try #require(TimeZone(identifier: "Europe/Paris"))
+        let c = paris.dateComponents([.year, .month, .day, .hour, .minute], from: arrondie)
+        #expect(c.day == 1 && c.hour == 0 && c.minute == 0)
+        #expect(c.month == 10 && c.year == 2025)
+        #expect(CartePartagee.moisEtAnnee(arrondie) == arrondie)
+        let dossier = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        var ancienne = carte()
+        ancienne.date = exacte
+        let record = try FabriqueRecords.record(pour: ancienne, zone: zone, dossierTemp: dossier)
+        #expect(record["datePrise"] as? Date == arrondie)
     }
 
     @Test func leRecordSeRelitSansPerte() throws {

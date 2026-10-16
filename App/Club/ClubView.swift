@@ -38,18 +38,19 @@ struct ClubView<MarqueMeteo: View>: View {
 
                 Section {
                     Link(destination: liens.federation ?? LiensOfficiels.federationNationale) {
-                        LigneSortie(titre: "Ma fédération", sousTitre: liens.nomFederation, icone: "building.columns")
+                        LigneSortie(titre: "Ma fédération", sousTitre: liens.libelleFederation, icone: "building.columns")
                     }
-                    // Sans association connue, la ligne ouvre la page nationale : le libellé le dit.
-                    Link(destination: liens.association ?? liens.carteDePeche) {
-                        LigneSortie(titre: liens.association == nil ? "Trouver mon association (AAPPMA)" : "Mon association",
-                                    sousTitre: nil, icone: "person.3")
+                    // Sans association connue, pas de ligne : elle ouvrirait la même page que « Cartes de pêche ».
+                    if let association = liens.association {
+                        Link(destination: association) {
+                            LigneSortie(titre: "Mon association", sousTitre: nil, icone: "person.3")
+                        }
                     }
                     Toggle(isOn: $aSaCarte) {
                         Label("J'ai ma carte de pêche 2026", systemImage: "checkmark.seal")
                     }
                     Link(destination: liens.carteDePeche) {
-                        LigneSortie(titre: "Voir la carte de pêche sur le site officiel", sousTitre: nil, icone: "safari")
+                        LigneSortie(titre: "Cartes de pêche, site officiel", sousTitre: nil, icone: "safari")
                     }
                 } header: {
                     Text("Ma pêche").font(Police.legende)

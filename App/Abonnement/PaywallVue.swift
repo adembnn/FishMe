@@ -231,7 +231,7 @@ struct PaywallVue: View {
     }
 
     @ViewBuilder private var piedLiens: some View {
-        Button("Restaurer") { Task { await restaurer() } }
+        Button("Restaurer les achats") { Task { await restaurer() } }
             .frame(minHeight: Gabarit.zoneTactile)
         Link("Conditions", destination: liens.conditions)
             .frame(minHeight: Gabarit.zoneTactile)
