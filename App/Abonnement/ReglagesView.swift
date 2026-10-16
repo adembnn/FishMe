@@ -232,7 +232,7 @@ private struct ContenuLigneReglages: View {
 }
 
 /// Le chevron de la maquette : `m1.5 1.5 5 5.5-5 5.5` dans une boîte de 8 × 14.
-private struct ChevronReglages: Shape {
+private nonisolated struct ChevronReglages: Shape {
     func path(in rect: CGRect) -> Path {
         var chemin = Path()
         chemin.move(to: CGPoint(x: rect.minX + rect.width * 1.5 / 8, y: rect.minY + rect.height * 1.5 / 14))
