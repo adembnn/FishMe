@@ -17,6 +17,12 @@ enum PoissonVivant {
     /// Le cycle de nage de l'espèce existe-t-il ?
     static func cycleDisponible(_ slug: String) -> Bool { UIImage(named: "\(slug)-nage-0") != nil }
 
+    /// Images par battement fournies : 16 (rendus en volume, `-nage-0` à `-15`), 8 (anciens), 0 (sans cycle).
+    static func imagesDisponibles(_ slug: String) -> Int {
+        if UIImage(named: "\(slug)-nage-15") != nil { return 16 }
+        return cycleDisponible(slug) ? 8 : 0
+    }
+
     /// Les deux vues trois-quarts en volume (vers le fond, vers nous) existent-elles ?
     static func vuesDisponibles(_ slug: String) -> Bool {
         UIImage(named: "\(slug)-vue-1-0") != nil && UIImage(named: "\(slug)-vue-2-0") != nil
