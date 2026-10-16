@@ -2145,426 +2145,6 @@
    }
   },
   {
-   "id": "71-2151-fenetre_capture-fenetre-plan-d-eau-du-fourneau",
-   "type": "fenetre_capture",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "portee": {
-    "niveau": "plan_eau",
-    "code": "71",
-    "lieu": "Plan d'eau du Fourneau (Palinges)",
-    "plan_eau": "Plan d'eau du Fourneau",
-    "cours_eau": null
-   },
-   "du": null,
-   "au": null,
-   "valeur": {
-    "min_cm": 60,
-    "max_cm": 80
-   },
-   "phrase": "Brochet à Plan d'eau du Fourneau : on garde seulement entre 60 et 80 cm.",
-   "source": {
-    "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
-    "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2024-12-13"
-   },
-   "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
-   "statut": "brouillon",
-   "expire_le": null,
-   "remplace": null,
-   "lecture_b": {
-    "id": "71-brochet-fenetre-plan-d-eau-du-fourneau",
-    "source": {
-     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
-     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2024-12-13"
-    },
-    "citation": "- plan d'eau du Fourneau sur la commune Palinges ;"
-   }
-  },
-  {
-   "id": "71-2151-fenetre_capture-fenetre-reservoir-de-la-motte",
-   "type": "fenetre_capture",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "portee": {
-    "niveau": "plan_eau",
-    "code": "71",
-    "lieu": "Réservoir de la Motte (Ecuisses)",
-    "plan_eau": "Réservoir de la Motte",
-    "cours_eau": null
-   },
-   "du": null,
-   "au": null,
-   "valeur": {
-    "min_cm": 60,
-    "max_cm": 80
-   },
-   "phrase": "Brochet à Réservoir de la Motte : on garde seulement entre 60 et 80 cm.",
-   "source": {
-    "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
-    "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2024-12-13"
-   },
-   "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
-   "statut": "brouillon",
-   "expire_le": null,
-   "remplace": null,
-   "lecture_b": {
-    "id": "71-brochet-fenetre-reservoir-de-la-motte",
-    "source": {
-     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
-     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2024-12-13"
-    },
-    "citation": "- réservoir de la Motte sur la commune d'Ecuisses ;"
-   }
-  },
-  {
-   "id": "71-2151-fenetre_capture-fenetre-reservoir-de-bondilly",
-   "type": "fenetre_capture",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "portee": {
-    "niveau": "plan_eau",
-    "code": "71",
-    "lieu": "Réservoir de Bondilly (Ecuisses)",
-    "plan_eau": "Réservoir de Bondilly",
-    "cours_eau": null
-   },
-   "du": null,
-   "au": null,
-   "valeur": {
-    "min_cm": 60,
-    "max_cm": 80
-   },
-   "phrase": "Brochet à Réservoir de Bondilly : on garde seulement entre 60 et 80 cm.",
-   "source": {
-    "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
-    "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2024-12-13"
-   },
-   "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
-   "statut": "brouillon",
-   "expire_le": null,
-   "remplace": null,
-   "lecture_b": {
-    "id": "71-brochet-fenetre-reservoir-de-bondilly",
-    "source": {
-     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
-     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2024-12-13"
-    },
-    "citation": "- réservoir de Bondilly sur la commune d'Ecuisses"
-   }
-  },
-  {
-   "id": "71-2151-fenetre_capture-fenetre-reservoir-de-longpendu",
-   "type": "fenetre_capture",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "portee": {
-    "niveau": "plan_eau",
-    "code": "71",
-    "lieu": "Réservoir de Longpendu (Ecuisses)",
-    "plan_eau": "Réservoir de Longpendu",
-    "cours_eau": null
-   },
-   "du": null,
-   "au": null,
-   "valeur": {
-    "min_cm": 60,
-    "max_cm": 80
-   },
-   "phrase": "Brochet à Réservoir de Longpendu : on garde seulement entre 60 et 80 cm.",
-   "source": {
-    "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
-    "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2024-12-13"
-   },
-   "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
-   "statut": "brouillon",
-   "expire_le": null,
-   "remplace": null,
-   "lecture_b": {
-    "id": "71-brochet-fenetre-reservoir-de-longpendu",
-    "source": {
-     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
-     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2024-12-13"
-    },
-    "citation": "- réservoir de Longpendu sur la commune d'Ecuisses ;"
-   }
-  },
-  {
-   "id": "71-2151-fenetre_capture-fenetre-etang-de-brandon",
-   "type": "fenetre_capture",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "portee": {
-    "niveau": "plan_eau",
-    "code": "71",
-    "lieu": "Étang de Brandon (Saint-Pierre-de-Varennes)",
-    "plan_eau": "Étang de Brandon",
-    "cours_eau": null
-   },
-   "du": null,
-   "au": null,
-   "valeur": {
-    "min_cm": 60,
-    "max_cm": 80
-   },
-   "phrase": "Brochet à Étang de Brandon : on garde seulement entre 60 et 80 cm.",
-   "source": {
-    "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
-    "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2024-12-13"
-   },
-   "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
-   "statut": "brouillon",
-   "expire_le": null,
-   "remplace": null,
-   "lecture_b": {
-    "id": "71-brochet-fenetre-etang-de-brandon",
-    "source": {
-     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
-     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2024-12-13"
-    },
-    "citation": "- étang de Brandon sur la commune de Saint-Pierre-de-Varennes ;"
-   }
-  },
-  {
-   "id": "71-2151-fenetre_capture-fenetre-reservoir-du-pont-du-roi",
-   "type": "fenetre_capture",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "portee": {
-    "niveau": "plan_eau",
-    "code": "71",
-    "lieu": "Réservoir du Pont du Roi (Tintry)",
-    "plan_eau": "Réservoir du Pont du Roi",
-    "cours_eau": null
-   },
-   "du": null,
-   "au": null,
-   "valeur": {
-    "min_cm": 60,
-    "max_cm": 80
-   },
-   "phrase": "Brochet à Réservoir du Pont du Roi : on garde seulement entre 60 et 80 cm.",
-   "source": {
-    "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
-    "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2024-12-13"
-   },
-   "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
-   "statut": "brouillon",
-   "expire_le": null,
-   "remplace": null,
-   "lecture_b": {
-    "id": "71-brochet-fenetre-reservoir-du-pont-du-roi",
-    "source": {
-     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
-     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2024-12-13"
-    },
-    "citation": "- réservoir du Pont du Roi sur la commune de Tintry ;"
-   }
-  },
-  {
-   "id": "71-2151-fenetre_capture-fenetre-etang-de-montchanin",
-   "type": "fenetre_capture",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "portee": {
-    "niveau": "plan_eau",
-    "code": "71",
-    "lieu": "Étang de Montchanin (Saint-Laurent-d'Andenay)",
-    "plan_eau": "Étang de Montchanin",
-    "cours_eau": null
-   },
-   "du": null,
-   "au": null,
-   "valeur": {
-    "min_cm": 60,
-    "max_cm": 80
-   },
-   "phrase": "Brochet à Étang de Montchanin : on garde seulement entre 60 et 80 cm.",
-   "source": {
-    "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
-    "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2024-12-13"
-   },
-   "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
-   "statut": "brouillon",
-   "expire_le": null,
-   "remplace": null,
-   "lecture_b": {
-    "id": "71-brochet-fenetre-etang-de-montchanin",
-    "source": {
-     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
-     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2024-12-13"
-    },
-    "citation": "- étang de Montchanin sur la commune de Saint-Laurent-d'Andenay ;"
-   }
-  },
-  {
-   "id": "71-2151-fenetre_capture-fenetre-etang-du-chene-aux-pretres",
-   "type": "fenetre_capture",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "portee": {
-    "niveau": "plan_eau",
-    "code": "71",
-    "lieu": "Étang du Chêne aux Prêtres (Le Breuil)",
-    "plan_eau": "Étang du Chêne aux Prêtres",
-    "cours_eau": null
-   },
-   "du": null,
-   "au": null,
-   "valeur": {
-    "min_cm": 60,
-    "max_cm": 80
-   },
-   "phrase": "Brochet à Étang du Chêne aux Prêtres : on garde seulement entre 60 et 80 cm.",
-   "source": {
-    "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
-    "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2024-12-13"
-   },
-   "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
-   "statut": "brouillon",
-   "expire_le": null,
-   "remplace": null,
-   "lecture_b": {
-    "id": "71-brochet-fenetre-etang-du-chene-aux-pretres",
-    "source": {
-     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
-     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2024-12-13"
-    },
-    "citation": "- étang du Chêne aux Prêtres sur la commune du Breuil ;"
-   }
-  },
-  {
-   "id": "71-2151-fenetre_capture-fenetre-lac-de-montaubry",
-   "type": "fenetre_capture",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "portee": {
-    "niveau": "plan_eau",
-    "code": "71",
-    "lieu": "Lac de Montaubry (Le Breuil)",
-    "plan_eau": "Lac de Montaubry",
-    "cours_eau": null
-   },
-   "du": null,
-   "au": null,
-   "valeur": {
-    "min_cm": 60,
-    "max_cm": 80
-   },
-   "phrase": "Brochet à Lac de Montaubry : on garde seulement entre 60 et 80 cm.",
-   "source": {
-    "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
-    "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2024-12-13"
-   },
-   "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
-   "statut": "brouillon",
-   "expire_le": null,
-   "remplace": null,
-   "lecture_b": {
-    "id": "71-brochet-fenetre-lac-de-montaubry",
-    "source": {
-     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
-     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2024-12-13"
-    },
-    "citation": "- lac de Montaubry sur la commune du Breuil ;"
-   }
-  },
-  {
-   "id": "71-2151-fenetre_capture-fenetre-lac-de-la-sorme",
-   "type": "fenetre_capture",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "portee": {
-    "niveau": "plan_eau",
-    "code": "71",
-    "lieu": "Lac de la Sorme (Les Bizots, Blanzy, Charmoy, Saint-Bérain-sous-Sanvignes)",
-    "plan_eau": "Lac de la Sorme",
-    "cours_eau": null
-   },
-   "du": null,
-   "au": null,
-   "valeur": {
-    "min_cm": 60,
-    "max_cm": 80
-   },
-   "phrase": "Brochet à Lac de la Sorme : on garde seulement entre 60 et 80 cm.",
-   "source": {
-    "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
-    "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2024-12-13"
-   },
-   "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
-   "statut": "brouillon",
-   "expire_le": null,
-   "remplace": null,
-   "lecture_b": {
-    "id": "71-brochet-fenetre-lac-de-la-sorme",
-    "source": {
-     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
-     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2024-12-13"
-    },
-    "citation": "- lac de la Sorme sur les communes des Bizots, Blanzy, Charmoy et Saint-Bérain-sous-Sanvignes."
-   }
-  },
-  {
    "id": "71-toutes-carpe_nuit-lot-n-1",
    "type": "carpe_nuit",
    "especes": [],
@@ -14134,6 +13714,436 @@
    }
   },
   {
+   "id": "71-2151-fenetre_capture-plan-d-eau-du-fourneau-palinges",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "71",
+    "lieu": "Plan d'eau du Fourneau (Palinges)",
+    "plan_eau": "plan d'eau du Fourneau",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Taille maximale de capture du brochet fixée à 80 cm ; les brochets de plus de 80 cm sont remis à l'eau (et ceux de moins de 60 cm, taille minimale)."
+   },
+   "phrase": "Brochet, plan d'eau du Fourneau : taille maximale de capture 80 cm (minimale 60 cm).",
+   "source": {
+    "texte": "Arrêté modificatif 71-2026-01-09-00001, art. 1 (complète la liste de l'art. 7)",
+    "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-09"
+   },
+   "citation": "plan d'eau du Fourneau sur la commune Palinges ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "71-2151-fenetre_capture-fenetre-plan-d-eau-du-fourneau",
+    "source": {
+     "texte": "Arrêté préfectoral n° 71-2026-01-09-00001 du 9 janvier 2026 (modifie le permanent), art. 1 (complète la liste de l'art. 7 du permanent)",
+     "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-09"
+    },
+    "citation": "plan d'eau du Fourneau sur la commune Palinges"
+   }
+  },
+  {
+   "id": "71-2151-fenetre_capture-reservoir-de-la-motte-ecuisses",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "71",
+    "lieu": "Réservoir de la Motte (Ecuisses)",
+    "plan_eau": "réservoir de la Motte",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Taille maximale de capture du brochet fixée à 80 cm ; les brochets de plus de 80 cm sont remis à l'eau (et ceux de moins de 60 cm, taille minimale)."
+   },
+   "phrase": "Brochet, réservoir de la Motte : taille maximale de capture 80 cm (minimale 60 cm).",
+   "source": {
+    "texte": "Arrêté modificatif 71-2026-01-09-00001, art. 1 (complète la liste de l'art. 7)",
+    "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-09"
+   },
+   "citation": "réservoir de la Motte sur la commune d'Ecuisses ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "71-2151-fenetre_capture-fenetre-reservoir-de-la-motte",
+    "source": {
+     "texte": "Arrêté préfectoral n° 71-2026-01-09-00001 du 9 janvier 2026 (modifie le permanent), art. 1 (complète la liste de l'art. 7 du permanent)",
+     "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-09"
+    },
+    "citation": "réservoir de la Motte sur la commune d'Ecuisses"
+   }
+  },
+  {
+   "id": "71-2151-fenetre_capture-reservoir-de-bondilly-ecuisses",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "71",
+    "lieu": "Réservoir de Bondilly (Ecuisses)",
+    "plan_eau": "réservoir de Bondilly",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Taille maximale de capture du brochet fixée à 80 cm ; les brochets de plus de 80 cm sont remis à l'eau (et ceux de moins de 60 cm, taille minimale)."
+   },
+   "phrase": "Brochet, réservoir de Bondilly : taille maximale de capture 80 cm (minimale 60 cm).",
+   "source": {
+    "texte": "Arrêté modificatif 71-2026-01-09-00001, art. 1 (complète la liste de l'art. 7)",
+    "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-09"
+   },
+   "citation": "réservoir de Bondilly sur la commune d'Ecuisses ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "71-2151-fenetre_capture-fenetre-reservoir-de-bondilly",
+    "source": {
+     "texte": "Arrêté préfectoral n° 71-2026-01-09-00001 du 9 janvier 2026 (modifie le permanent), art. 1 (complète la liste de l'art. 7 du permanent)",
+     "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-09"
+    },
+    "citation": "réservoir de Bondilly sur la commune d'Ecuisses"
+   }
+  },
+  {
+   "id": "71-2151-fenetre_capture-reservoir-de-longpendu-ecuisses",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "71",
+    "lieu": "Réservoir de Longpendu (Ecuisses)",
+    "plan_eau": "réservoir de Longpendu",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Taille maximale de capture du brochet fixée à 80 cm ; les brochets de plus de 80 cm sont remis à l'eau (et ceux de moins de 60 cm, taille minimale)."
+   },
+   "phrase": "Brochet, réservoir de Longpendu : taille maximale de capture 80 cm (minimale 60 cm).",
+   "source": {
+    "texte": "Arrêté modificatif 71-2026-01-09-00001, art. 1 (complète la liste de l'art. 7)",
+    "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-09"
+   },
+   "citation": "réservoir de Longpendu sur la commune d'Ecuisses ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "71-2151-fenetre_capture-fenetre-reservoir-de-longpendu",
+    "source": {
+     "texte": "Arrêté préfectoral n° 71-2026-01-09-00001 du 9 janvier 2026 (modifie le permanent), art. 1 (complète la liste de l'art. 7 du permanent)",
+     "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-09"
+    },
+    "citation": "réservoir de Longpendu"
+   }
+  },
+  {
+   "id": "71-2151-fenetre_capture-etang-de-brandon-saint-pierre-de-varennes",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "71",
+    "lieu": "Étang de Brandon (Saint-Pierre-de-Varennes)",
+    "plan_eau": "étang de Brandon",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Taille maximale de capture du brochet fixée à 80 cm ; les brochets de plus de 80 cm sont remis à l'eau (et ceux de moins de 60 cm, taille minimale)."
+   },
+   "phrase": "Brochet, étang de Brandon : taille maximale de capture 80 cm (minimale 60 cm).",
+   "source": {
+    "texte": "Arrêté modificatif 71-2026-01-09-00001, art. 1 (complète la liste de l'art. 7)",
+    "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-09"
+   },
+   "citation": "étang de Brandon sur la commune de Saint-Pierre-de-Varennes ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "71-2151-fenetre_capture-fenetre-etang-de-brandon",
+    "source": {
+     "texte": "Arrêté préfectoral n° 71-2026-01-09-00001 du 9 janvier 2026 (modifie le permanent), art. 1 (complète la liste de l'art. 7 du permanent)",
+     "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-09"
+    },
+    "citation": "étang de Brandon sur la commune de Saint-Pierre-de-Varennes"
+   }
+  },
+  {
+   "id": "71-2151-fenetre_capture-reservoir-du-pont-du-roi-tintry",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "71",
+    "lieu": "Réservoir du Pont du Roi (Tintry)",
+    "plan_eau": "réservoir du Pont du Roi",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Taille maximale de capture du brochet fixée à 80 cm ; les brochets de plus de 80 cm sont remis à l'eau (et ceux de moins de 60 cm, taille minimale)."
+   },
+   "phrase": "Brochet, réservoir du Pont du Roi : taille maximale de capture 80 cm (minimale 60 cm).",
+   "source": {
+    "texte": "Arrêté modificatif 71-2026-01-09-00001, art. 1 (complète la liste de l'art. 7)",
+    "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-09"
+   },
+   "citation": "réservoir du Pont du Roi sur la commune de Tintry;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "71-2151-fenetre_capture-fenetre-reservoir-du-pont-du-roi",
+    "source": {
+     "texte": "Arrêté préfectoral n° 71-2026-01-09-00001 du 9 janvier 2026 (modifie le permanent), art. 1 (complète la liste de l'art. 7 du permanent)",
+     "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-09"
+    },
+    "citation": "réservoir du Pont du Roi sur la commune de Tintry"
+   }
+  },
+  {
+   "id": "71-2151-fenetre_capture-etang-de-montchanin-saint-laurent-d-andenay",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "71",
+    "lieu": "Étang de Montchanin (Saint-Laurent-d'Andenay)",
+    "plan_eau": "étang de Montchanin",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Taille maximale de capture du brochet fixée à 80 cm ; les brochets de plus de 80 cm sont remis à l'eau (et ceux de moins de 60 cm, taille minimale)."
+   },
+   "phrase": "Brochet, étang de Montchanin : taille maximale de capture 80 cm (minimale 60 cm).",
+   "source": {
+    "texte": "Arrêté modificatif 71-2026-01-09-00001, art. 1 (complète la liste de l'art. 7)",
+    "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-09"
+   },
+   "citation": "étang de Montchanin sur la commune de Saint-Laurent-d'Andenay ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "71-2151-fenetre_capture-fenetre-etang-de-montchanin",
+    "source": {
+     "texte": "Arrêté préfectoral n° 71-2026-01-09-00001 du 9 janvier 2026 (modifie le permanent), art. 1 (complète la liste de l'art. 7 du permanent)",
+     "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-09"
+    },
+    "citation": "étang de Montchanin sur la commune de Saint-Laurent-d'Andenay"
+   }
+  },
+  {
+   "id": "71-2151-fenetre_capture-etang-du-chene-aux-pretres-le-breuil",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "71",
+    "lieu": "Étang du Chêne aux Prêtres (Le Breuil)",
+    "plan_eau": "étang du Chêne aux Prêtres",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Taille maximale de capture du brochet fixée à 80 cm ; les brochets de plus de 80 cm sont remis à l'eau (et ceux de moins de 60 cm, taille minimale)."
+   },
+   "phrase": "Brochet, étang du Chêne aux Prêtres : taille maximale de capture 80 cm (minimale 60 cm).",
+   "source": {
+    "texte": "Arrêté modificatif 71-2026-01-09-00001, art. 1 (complète la liste de l'art. 7)",
+    "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-09"
+   },
+   "citation": "étang du Chêne aux Prêtres sur la commune du Breuil ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "71-2151-fenetre_capture-fenetre-etang-du-chene-aux-pretres",
+    "source": {
+     "texte": "Arrêté préfectoral n° 71-2026-01-09-00001 du 9 janvier 2026 (modifie le permanent), art. 1 (complète la liste de l'art. 7 du permanent)",
+     "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-09"
+    },
+    "citation": "étang du Chêne aux Prêtres sur la commune du Breuil"
+   }
+  },
+  {
+   "id": "71-2151-fenetre_capture-lac-de-montaubry-le-breuil",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "71",
+    "lieu": "Lac de Montaubry (Le Breuil)",
+    "plan_eau": "lac de Montaubry",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Taille maximale de capture du brochet fixée à 80 cm ; les brochets de plus de 80 cm sont remis à l'eau (et ceux de moins de 60 cm, taille minimale)."
+   },
+   "phrase": "Brochet, lac de Montaubry : taille maximale de capture 80 cm (minimale 60 cm).",
+   "source": {
+    "texte": "Arrêté modificatif 71-2026-01-09-00001, art. 1 (complète la liste de l'art. 7)",
+    "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-09"
+   },
+   "citation": "lac de Montaubry sur la commune du Breuil ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "71-2151-fenetre_capture-fenetre-lac-de-montaubry",
+    "source": {
+     "texte": "Arrêté préfectoral n° 71-2026-01-09-00001 du 9 janvier 2026 (modifie le permanent), art. 1 (complète la liste de l'art. 7 du permanent)",
+     "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-09"
+    },
+    "citation": "lac de Montaubry sur la commune du Breuil"
+   }
+  },
+  {
+   "id": "71-2151-fenetre_capture-lac-de-la-sorme-les-bizots-blanzy-charmoy-saint-berain-sous-sanvignes",
+   "type": "fenetre_capture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "71",
+    "lieu": "Lac de la Sorme (Les Bizots, Blanzy, Charmoy, Saint-Bérain-sous-Sanvignes)",
+    "plan_eau": "lac de la Sorme",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "min_cm": 60,
+    "max_cm": 80,
+    "texte": "Taille maximale de capture du brochet fixée à 80 cm ; les brochets de plus de 80 cm sont remis à l'eau (et ceux de moins de 60 cm, taille minimale)."
+   },
+   "phrase": "Brochet, lac de la Sorme : taille maximale de capture 80 cm (minimale 60 cm).",
+   "source": {
+    "texte": "Arrêté modificatif 71-2026-01-09-00001, art. 1 (complète la liste de l'art. 7)",
+    "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-09"
+   },
+   "citation": "lac de la Sorme sur les communes des Bizots, Blanzy, Charmoy et Saint-Bérain-sous-Sanvignes ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "71-2151-fenetre_capture-fenetre-lac-de-la-sorme",
+    "source": {
+     "texte": "Arrêté préfectoral n° 71-2026-01-09-00001 du 9 janvier 2026 (modifie le permanent), art. 1 (complète la liste de l'art. 7 du permanent)",
+     "url": "https://www.saone-et-loire.gouv.fr/contenu/telechargement/35866/301398/file/20260109_AP_Modif.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-09"
+    },
+    "citation": "lac de la Sorme sur les communes des Bizots, Blanzy, Charmoy et Saint-Bérain-sous-Sanvignes"
+   }
+  },
+  {
    "id": "71-2151-fenetre_capture-graviere-de-l-ile-des-motrots-navilly",
    "type": "fenetre_capture",
    "especes": [
@@ -16601,6 +16611,436 @@
     "statut": "incertain",
     "expire_le": "2027-12-31",
     "remplace": null
+   },
+   {
+    "id": "71-2151-fenetre_capture-fenetre-plan-d-eau-du-fourneau",
+    "type": "fenetre_capture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "71",
+     "lieu": "Plan d'eau du Fourneau (Palinges)",
+     "plan_eau": "Plan d'eau du Fourneau",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "min_cm": 60,
+     "max_cm": 80
+    },
+    "phrase": "Brochet à Plan d'eau du Fourneau : on garde seulement entre 60 et 80 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
+     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2024-12-13"
+    },
+    "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null,
+    "lecture_b": {
+     "id": "71-brochet-fenetre-plan-d-eau-du-fourneau",
+     "source": {
+      "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
+      "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2024-12-13"
+     },
+     "citation": "- plan d'eau du Fourneau sur la commune Palinges ;"
+    },
+    "retire_car": "texte abrogé ou modifié"
+   },
+   {
+    "id": "71-2151-fenetre_capture-fenetre-reservoir-de-la-motte",
+    "type": "fenetre_capture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "71",
+     "lieu": "Réservoir de la Motte (Ecuisses)",
+     "plan_eau": "Réservoir de la Motte",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "min_cm": 60,
+     "max_cm": 80
+    },
+    "phrase": "Brochet à Réservoir de la Motte : on garde seulement entre 60 et 80 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
+     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2024-12-13"
+    },
+    "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null,
+    "lecture_b": {
+     "id": "71-brochet-fenetre-reservoir-de-la-motte",
+     "source": {
+      "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
+      "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2024-12-13"
+     },
+     "citation": "- réservoir de la Motte sur la commune d'Ecuisses ;"
+    },
+    "retire_car": "texte abrogé ou modifié"
+   },
+   {
+    "id": "71-2151-fenetre_capture-fenetre-reservoir-de-bondilly",
+    "type": "fenetre_capture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "71",
+     "lieu": "Réservoir de Bondilly (Ecuisses)",
+     "plan_eau": "Réservoir de Bondilly",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "min_cm": 60,
+     "max_cm": 80
+    },
+    "phrase": "Brochet à Réservoir de Bondilly : on garde seulement entre 60 et 80 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
+     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2024-12-13"
+    },
+    "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null,
+    "lecture_b": {
+     "id": "71-brochet-fenetre-reservoir-de-bondilly",
+     "source": {
+      "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
+      "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2024-12-13"
+     },
+     "citation": "- réservoir de Bondilly sur la commune d'Ecuisses"
+    },
+    "retire_car": "texte abrogé ou modifié"
+   },
+   {
+    "id": "71-2151-fenetre_capture-fenetre-reservoir-de-longpendu",
+    "type": "fenetre_capture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "71",
+     "lieu": "Réservoir de Longpendu (Ecuisses)",
+     "plan_eau": "Réservoir de Longpendu",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "min_cm": 60,
+     "max_cm": 80
+    },
+    "phrase": "Brochet à Réservoir de Longpendu : on garde seulement entre 60 et 80 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
+     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2024-12-13"
+    },
+    "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null,
+    "lecture_b": {
+     "id": "71-brochet-fenetre-reservoir-de-longpendu",
+     "source": {
+      "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
+      "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2024-12-13"
+     },
+     "citation": "- réservoir de Longpendu sur la commune d'Ecuisses ;"
+    },
+    "retire_car": "texte abrogé ou modifié"
+   },
+   {
+    "id": "71-2151-fenetre_capture-fenetre-etang-de-brandon",
+    "type": "fenetre_capture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "71",
+     "lieu": "Étang de Brandon (Saint-Pierre-de-Varennes)",
+     "plan_eau": "Étang de Brandon",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "min_cm": 60,
+     "max_cm": 80
+    },
+    "phrase": "Brochet à Étang de Brandon : on garde seulement entre 60 et 80 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
+     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2024-12-13"
+    },
+    "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null,
+    "lecture_b": {
+     "id": "71-brochet-fenetre-etang-de-brandon",
+     "source": {
+      "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
+      "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2024-12-13"
+     },
+     "citation": "- étang de Brandon sur la commune de Saint-Pierre-de-Varennes ;"
+    },
+    "retire_car": "texte abrogé ou modifié"
+   },
+   {
+    "id": "71-2151-fenetre_capture-fenetre-reservoir-du-pont-du-roi",
+    "type": "fenetre_capture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "71",
+     "lieu": "Réservoir du Pont du Roi (Tintry)",
+     "plan_eau": "Réservoir du Pont du Roi",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "min_cm": 60,
+     "max_cm": 80
+    },
+    "phrase": "Brochet à Réservoir du Pont du Roi : on garde seulement entre 60 et 80 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
+     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2024-12-13"
+    },
+    "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null,
+    "lecture_b": {
+     "id": "71-brochet-fenetre-reservoir-du-pont-du-roi",
+     "source": {
+      "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
+      "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2024-12-13"
+     },
+     "citation": "- réservoir du Pont du Roi sur la commune de Tintry ;"
+    },
+    "retire_car": "texte abrogé ou modifié"
+   },
+   {
+    "id": "71-2151-fenetre_capture-fenetre-etang-de-montchanin",
+    "type": "fenetre_capture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "71",
+     "lieu": "Étang de Montchanin (Saint-Laurent-d'Andenay)",
+     "plan_eau": "Étang de Montchanin",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "min_cm": 60,
+     "max_cm": 80
+    },
+    "phrase": "Brochet à Étang de Montchanin : on garde seulement entre 60 et 80 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
+     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2024-12-13"
+    },
+    "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null,
+    "lecture_b": {
+     "id": "71-brochet-fenetre-etang-de-montchanin",
+     "source": {
+      "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
+      "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2024-12-13"
+     },
+     "citation": "- étang de Montchanin sur la commune de Saint-Laurent-d'Andenay ;"
+    },
+    "retire_car": "texte abrogé ou modifié"
+   },
+   {
+    "id": "71-2151-fenetre_capture-fenetre-etang-du-chene-aux-pretres",
+    "type": "fenetre_capture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "71",
+     "lieu": "Étang du Chêne aux Prêtres (Le Breuil)",
+     "plan_eau": "Étang du Chêne aux Prêtres",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "min_cm": 60,
+     "max_cm": 80
+    },
+    "phrase": "Brochet à Étang du Chêne aux Prêtres : on garde seulement entre 60 et 80 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
+     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2024-12-13"
+    },
+    "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null,
+    "lecture_b": {
+     "id": "71-brochet-fenetre-etang-du-chene-aux-pretres",
+     "source": {
+      "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
+      "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2024-12-13"
+     },
+     "citation": "- étang du Chêne aux Prêtres sur la commune du Breuil ;"
+    },
+    "retire_car": "texte abrogé ou modifié"
+   },
+   {
+    "id": "71-2151-fenetre_capture-fenetre-lac-de-montaubry",
+    "type": "fenetre_capture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "71",
+     "lieu": "Lac de Montaubry (Le Breuil)",
+     "plan_eau": "Lac de Montaubry",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "min_cm": 60,
+     "max_cm": 80
+    },
+    "phrase": "Brochet à Lac de Montaubry : on garde seulement entre 60 et 80 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
+     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2024-12-13"
+    },
+    "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null,
+    "lecture_b": {
+     "id": "71-brochet-fenetre-lac-de-montaubry",
+     "source": {
+      "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
+      "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2024-12-13"
+     },
+     "citation": "- lac de Montaubry sur la commune du Breuil ;"
+    },
+    "retire_car": "texte abrogé ou modifié"
+   },
+   {
+    "id": "71-2151-fenetre_capture-fenetre-lac-de-la-sorme",
+    "type": "fenetre_capture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "71",
+     "lieu": "Lac de la Sorme (Les Bizots, Blanzy, Charmoy, Saint-Bérain-sous-Sanvignes)",
+     "plan_eau": "Lac de la Sorme",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "min_cm": 60,
+     "max_cm": 80
+    },
+    "phrase": "Brochet à Lac de la Sorme : on garde seulement entre 60 et 80 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1 (complète l'article 7 de l'arrêté de 2022)",
+     "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2024-12-13"
+    },
+    "citation": "la liste des plans d'eau sur lesquels la taille maximale de capture est fixée pour le brochet est complétée par :",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null,
+    "lecture_b": {
+     "id": "71-brochet-fenetre-lac-de-la-sorme",
+     "source": {
+      "texte": "Arrêté préfectoral du 13 décembre 2024 modifiant l'arrêté n° 71-2022-12-22-00001, article 1",
+      "url": "https://www.peche-saone-et-loire.fr/wp-content/uploads/2024/12/20241213_arrêté-préfectoral-complémentaire-à-larrêté-permanent.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2024-12-13"
+     },
+     "citation": "- lac de la Sorme sur les communes des Bizots, Blanzy, Charmoy et Saint-Bérain-sous-Sanvignes."
+    },
+    "retire_car": "texte abrogé ou modifié"
    },
    {
     "id": "71-saumon-atlantique-autre-declaration-capture-accidentelle",
