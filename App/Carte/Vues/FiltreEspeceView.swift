@@ -67,8 +67,8 @@ struct FiltreEspeceView: View {
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $recherche, prompt: "Chercher une espèce")
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Fermer") { dismiss() }
+                ToolbarItem(placement: .topBarLeading) {
+                    BoutonRond(role: .fermer, rendu: .simple) { dismiss() }
                 }
             }
         }
