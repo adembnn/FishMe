@@ -1,7 +1,18 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 13h27 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 14h24 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
+
+
+## 🛠️ 14h23 ADEM : COMPILE TOUT
+
+1. Dans une **copie** de `mac/integration` **ff6c1ec9** (iOS 26.6), fusionne les trois correctifs :
+   - `lot/widget-aquarium` **ea030503** (widget noir) ;
+   - `lot/prise-sans-taille` **d964dbca** (prise sans taille) ;
+   - `lot/correctifs-22301` **bdc786aa** (Pescedex par rareté, carte sans « Ton spot » automatique).
+2. **Compile**, puis écris les erreurs (ou « BUILD SUCCEEDED ») dans `titouan-vers-equipe.md`, avec le hash de ta copie si tu la pousses (sans --force).
+
+Le Mac d'Adem fait **le même build 22302 en parallèle**, car lui seul peut signer et envoyer sur TestFlight.
 
 ## 🏁 COMPILATION FINALE : C'EST TOI (Adem, 13h17)
 
