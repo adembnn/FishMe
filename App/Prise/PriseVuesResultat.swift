@@ -3,58 +3,44 @@ import Foundation
 import SwiftUI
 import UIKit
 
-/// Taille : curseur de longueur, pré-réglé par la toise quand Vision a lu les chiffres. Le pêcheur confirme toujours.
+/// P21 : la taille, sur la photo. Une fourchette (« 52 à 56 cm ») quand elle est mesurée en réalité augmentée,
+/// avec le poids estimé aux deux bornes ; la toise et le curseur restent en secours. Le pêcheur valide toujours.
 struct PriseTailleView: View {
     @Bindable var modele: PriseModele
     @State private var cameraToise = false
     @State private var mesureAR = false
+    @State private var saisieOuverte = false
+
+    private var curseurVisible: Bool { saisieOuverte || !MesureAR.disponible || modele.toiseImage != nil }
 
     var body: some View {
-        VStack(spacing: 16) {
-            PriseEntete(titre: "Quelle taille ?", consigne: PriseLogique.consigneAvantConfirmation)
-            ScrollView {
-                VStack(spacing: 16) {
-                    if let image = modele.toiseImage { photoToise(image) }
-                    VStack(spacing: 8) {
-                        Text("\(Int(modele.longueurCm.rounded())) cm").font(PriseJetons.chiffre()).foregroundStyle(PriseJetons.encre)
-                        Slider(value: $modele.longueurCm, in: PriseLogique.plageTaille, step: 1)
-                            .accessibilityLabel("Taille en centimètres")
-                        HStack {
-                            Text("\(Int(PriseLogique.plageTaille.lowerBound)) cm")
-                            Spacer()
-                            Text("\(Int(PriseLogique.plageTaille.upperBound)) cm")
-                        }
-                        .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
-                    }
-                    .padding(16)
-                    .background(PriseJetons.papier, in: RoundedRectangle(cornerRadius: PriseJetons.rayon))
-                    if let plage = modele.plageAR {
-                        VStack(spacing: 4) {
-                            Text(plage.texte).font(PriseJetons.titre()).foregroundStyle(PriseJetons.encre)
-                            if let poids = modele.textePoidsAR { Text(poids) }
-                            Text("Mesuré en réalité augmentée").foregroundStyle(PriseJetons.discret)
-                        }
-                        .font(PriseJetons.legende()).foregroundStyle(PriseJetons.encre)
-                    }
-                    if MesureAR.disponible {
-                        Button("Mesurer en réalité augmentée") { mesureAR = true }.buttonStyle(PriseBoutonSecondaire())
-                    }
-                    if PriseCamera.disponible {
-                        Button("Photo de mon poisson sur la toise") { cameraToise = true }.buttonStyle(PriseBoutonSecondaire())
-                    }
-                    if modele.toiseIntrouvable {
-                        Text("Je n'ai pas lu la toise : règle le curseur.").font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
-                    }
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retourAuxPropositions() }) {
+            VStack(spacing: Espace.m) {
+                if let image = modele.toiseImage { photoToise(image) }
+                chiffres
+                if curseurVisible { curseur }
+                if modele.toiseIntrouvable {
+                    Text("Je n'ai pas lu la toise : règle le curseur.").font(Police.legende).foregroundStyle(Palette.encreDouce)
                 }
             }
-            .scrollIndicators(.hidden)
-            Button("Confirmer la taille") { modele.confirmerLaTaille() }.buttonStyle(PriseBoutonPrincipal())
-                .disabled(!modele.curseurBouge)
-                .opacity(modele.curseurBouge ? 1 : 0.5)
+            principal
+            HStack {
+                if PriseCamera.disponible {
+                    Button("Toise") { cameraToise = true }
+                }
+                Spacer()
+                if MesureAR.disponible && !saisieOuverte && modele.toiseImage == nil {
+                    Button("Saisir à la main") { saisieOuverte = true }
+                } else if MesureAR.disponible && modele.curseurBouge {
+                    Button("Mesurer en réalité augmentée") { mesureAR = true }
+                }
+            }
+            .font(Police.corps).foregroundStyle(Palette.marine)
+            .frame(minHeight: Gabarit.zoneTactile)
         }
-        .padding(20)
         .fullScreenCover(isPresented: $mesureAR) {
             // Garde-fou : jusqu'à 1,2 × le p95 des prises connues de l'espèce (table poids-longueur), sinon 3 à 200 cm.
+            // À brancher : le poisson de l'espèce posé sur la scène AR, comme sur la maquette P21 (MesureARView dessine la mesure seulement).
             MesureARView(plausible: MesureARCalcul.plageEspece(p95Cm: modele.especeConfirmee.flatMap {
                                 modele.services.especes.longueurPlausibleMax(espece: $0.espece) }),
                          surValider: { mesureAR = false; modele.mesureARValidee($0) }, surAnnuler: { mesureAR = false })
@@ -65,9 +51,57 @@ struct PriseTailleView: View {
         }
     }
 
+    /// Le gros chiffre : la fourchette en réalité augmentée, sinon la longueur réglée ; le poids est toujours « estimé ».
+    private var chiffres: some View {
+        HStack(alignment: .firstTextBaseline) {
+            if let plage = modele.plageAR {
+                (Text("\(plage.basCm) à \(plage.hautCm)").font(Police.chiffre) + Text(" cm").font(Police.titre))
+                    .foregroundStyle(Palette.encre)
+            } else if modele.curseurBouge {
+                (Text("\(Int(modele.longueurCm.rounded()))").font(Police.chiffre) + Text(" cm").font(Police.titre))
+                    .foregroundStyle(Palette.encre)
+            } else {
+                Text("Mesure ton poisson").font(Police.titre).foregroundStyle(Palette.encre)
+            }
+            Spacer(minLength: Espace.s)
+            if let poids = modele.textePoidsAR {
+                Text(poids).font(Police.detail).foregroundStyle(Palette.encre).multilineTextAlignment(.trailing)
+            } else if modele.curseurBouge, let entree = modele.especeConfirmee,
+                      let poids = modele.services.especes.poidsEstime(espece: entree.espece, longueurCm: modele.longueurCm.rounded()) {
+                Text(PriseLogique.texteDuPoids(poids)).font(Police.detail).foregroundStyle(Palette.encre)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private var curseur: some View {
+        VStack(spacing: Espace.xs) {
+            Slider(value: $modele.longueurCm, in: PriseLogique.plageTaille, step: 1)
+                .accessibilityLabel("Taille en centimètres")
+            HStack {
+                Text("\(Int(PriseLogique.plageTaille.lowerBound)) cm")
+                Spacer()
+                Text("\(Int(PriseLogique.plageTaille.upperBound)) cm")
+            }
+            .font(Police.legende).foregroundStyle(Palette.encreDouce)
+        }
+    }
+
+    /// Un seul bouton principal : « Valider » dès qu'il y a une taille, sinon la mesure en réalité augmentée quand elle existe.
+    @ViewBuilder private var principal: some View {
+        if modele.curseurBouge {
+            Button("Valider") { modele.confirmerLaTaille() }.buttonStyle(.principal)
+        } else if MesureAR.disponible {
+            Button("Mesurer en réalité augmentée") { mesureAR = true }.buttonStyle(.principal)
+        } else {
+            Button("Valider") { modele.confirmerLaTaille() }.buttonStyle(.principal)
+                .disabled(true).opacity(0.5)
+        }
+    }
+
     /// La photo de la toise ; quand les chiffres sont lus, un toucher sur le bout de la queue règle le curseur.
     @ViewBuilder private func photoToise(_ image: UIImage) -> some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Espace.s) {
             GeometryReader { geo in
                 let echelle = min(geo.size.width / image.size.width, geo.size.height / image.size.height)
                 let affiche = CGSize(width: image.size.width * echelle, height: image.size.height * echelle)
@@ -82,93 +116,268 @@ struct PriseTailleView: View {
                     }
             }
             .frame(height: 220)
-            .clipShape(RoundedRectangle(cornerRadius: PriseJetons.rayon))
+            .clipShape(RoundedRectangle(cornerRadius: Rayon.m))
             if modele.toise != nil {
-                Text("Touche le bout de la queue.").font(PriseJetons.legende()).foregroundStyle(PriseJetons.encre)
+                Text("Touche le bout de la queue.").font(Police.legende).foregroundStyle(Palette.encre)
             }
         }
     }
 }
 
-/// Le résultat : la consigne et la liste de contrôle de `Core`, le poids estimé, l'interrupteur « gardée ».
+/// P22 : ce que le pêcheur a fait de sa prise. « Ne pas dire » est permis : la prise entre quand même au Pescedex.
+struct PriseDetailsView: View {
+    @Bindable var modele: PriseModele
+
+    var body: some View {
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retourALaTaille() }) {
+            VStack(alignment: .leading, spacing: Espace.m) {
+                Text("Ta prise").font(Police.titre).foregroundStyle(Palette.encre)
+                    .accessibilityAddTraits(.isHeader)
+                HStack(spacing: Espace.s) {
+                    tuile("Relâchée", symbole: "water.waves", pour: .relachee)
+                    tuile("Gardée", symbole: "basket", pour: .gardee)
+                    tuile("Ne pas dire", symbole: "ellipsis", pour: .nonDit)
+                }
+                // À brancher : « Appât ou leurre » et « Technique » (maquette P22), puis la météo et le niveau de la rivière
+                // « ajoutés tout seuls ». `Prise` (Core) n'a pas encore de champ pour eux : rien n'est inventé ici.
+            }
+            Button("Continuer") { modele.continuerDetails() }.buttonStyle(.principal)
+        }
+    }
+
+    private func tuile(_ titre: String, symbole: String, pour devenir: DevenirPrise) -> some View {
+        let choisi = modele.devenir == devenir
+        return Button { modele.devenir = devenir } label: {
+            VStack(spacing: Espace.s) {
+                Image(systemName: symbole).font(.system(size: 22, weight: .bold, design: .rounded))
+                Text(titre).font(Police.detail).multilineTextAlignment(.center)
+            }
+            .foregroundStyle(choisi ? Palette.surMarine : Palette.encre)
+            .frame(maxWidth: .infinity, minHeight: 84)
+            .background(choisi ? Palette.marine : Palette.marineDoux, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
+        }
+        .buttonStyle(.plain)
+        .accessibilityAddTraits(choisi ? .isSelected : [])
+    }
+}
+
+/// P23 : le verdict en haut (taille comparée à la taille minimale, sur toute la fourchette), « Règle et sources » d'un toucher,
+/// puis la carte (recto : le poisson ; verso : la vraie photo) et un seul bouton, « Ajouter au Pescedex ».
+/// Le verdict vient de la table sourcée de `Core` ; l'IA n'y décide rien.
 struct PriseResultatView: View {
     @Bindable var modele: PriseModele
-    @State private var poidsOuvert = false
+    @State private var sourcesOuvertes = false
+    @State private var verso = false
 
     var body: some View {
         let controle = modele.controle
-        VStack(spacing: 12) {
-            PriseEntete(titre: modele.especeConfirmee?.nom ?? "Ta prise",
-                        consigne: controle?.consigne.texte ?? PriseLogique.consigneAvantConfirmation)
-            ScrollView {
-                VStack(spacing: 14) {
-                    if let entree = modele.especeConfirmee {
-                        HStack(spacing: 14) {
-                            PriseImageEspece(entree: entree, cote: 88)
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("\(Int(modele.longueurCm.rounded())) cm").font(PriseJetons.titre()).foregroundStyle(PriseJetons.encre)
-                                if modele.methode == .toise { Text("Lu sur ta toise").font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret) }
-                                if let plage = modele.plageAR { Text("\(plage.texte), mesuré en réalité augmentée").font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret) }
-                            }
-                            Spacer(minLength: 0)
-                        }
-                    }
-                    if let controle, PriseLogique.tropPresDeLaMaille(controle) {
-                        Text("Trop près de la taille minimale, mesure sur une toise")
-                            .font(PriseJetons.corps()).foregroundStyle(PriseJetons.encre)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(14).background(PriseJetons.papier, in: RoundedRectangle(cornerRadius: PriseJetons.rayon))
-                    }
-                    if let poids = modele.poids { blocPoids(poids) }
-                    if let controle {
-                        if modele.contexte.lieu.categorie.valeur == .inconnue { categorieInconnue }
-                        ForEach(Array(controle.lignes.enumerated()), id: \.offset) { _, ligne in PriseLigneView(ligne: ligne) }
-                        Text(PriseLogique.avertissement)
-                            .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                    Toggle("Gardée", isOn: $modele.gardee)
-                        .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
-                        .frame(minHeight: PriseJetons.cibleMin)
+        ScrollView {
+            VStack(spacing: Espace.l) {
+                bandeauVerdict(controle)
+                carte
+                Button { withAnimation { verso.toggle() } } label: {
+                    Image(systemName: "arrow.triangle.2.circlepath")
+                        .font(.system(size: 17, weight: .bold, design: .rounded)).foregroundStyle(Palette.marine)
+                        .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                        .background(Palette.surface, in: Circle())
                 }
+                .buttonStyle(.plain)
+                .accessibilityLabel(verso ? "Voir le recto de la carte" : "Voir la photo au verso")
             }
-            .scrollIndicators(.hidden)
-            if modele.exemple {
-                Text("Carte d'exemple : elle ne compte pas au Pescedex")
-                    .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
-            }
-            Button(modele.exemple ? "Ranger (carte d'exemple)" : "Ranger dans le Pescedex") { modele.ranger() }
-                .buttonStyle(PriseBoutonPrincipal())
+            .padding(Espace.bord)
         }
-        .padding(20)
+        .scrollIndicators(.hidden)
+        .background(Palette.fond.ignoresSafeArea())
+        .safeAreaInset(edge: .bottom) {
+            VStack(spacing: Espace.xs) {
+                if modele.exemple {
+                    Text("Carte d'exemple : elle ne compte pas au Pescedex")
+                        .font(Police.legende).foregroundStyle(Palette.encreDouce)
+                }
+                Button(modele.exemple ? "Ranger (carte d'exemple)" : "Ajouter au Pescedex") { modele.ranger() }
+                    .buttonStyle(.principal)
+            }
+            .padding(.horizontal, Espace.bord).padding(.vertical, Espace.s)
+            .background(Palette.fond)
+        }
+    }
+
+    // MARK: Verdict
+
+    private var tailleTexte: String {
+        if let plage = modele.plageAR { return plage.texte }
+        return "\(Int(modele.longueurCm.rounded())) cm"
+    }
+
+    private func bandeauVerdict(_ controle: ResultatControle?) -> some View {
+        let verdict = modele.verdictTaille
+        let (symbole, titre, couleur) = presentation(verdict, controle)
+        return VStack(spacing: 0) {
+            HStack(spacing: Espace.m) {
+                Image(systemName: symbole).font(.system(size: 22, weight: .bold, design: .rounded))
+                    .foregroundStyle(couleur).accessibilityHidden(true)
+                Text(titre).font(Police.sousTitre).foregroundStyle(couleur)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text(tailleTexte).font(Police.detail).foregroundStyle(Palette.encreDouce)
+            }
+            .padding(Espace.m)
+            Divider().overlay(Palette.filet)
+            Button { withAnimation { sourcesOuvertes.toggle() } } label: {
+                HStack(spacing: Espace.m) {
+                    Image(systemName: "doc.text").foregroundStyle(Palette.marine).accessibilityHidden(true)
+                    Text("Règle et sources").font(Police.corps).foregroundStyle(Palette.encre)
+                    Spacer()
+                    Image(systemName: sourcesOuvertes ? "chevron.up" : "chevron.right")
+                        .foregroundStyle(Palette.encreDouce).accessibilityHidden(true)
+                }
+                .padding(Espace.m).frame(minHeight: Gabarit.zoneTactile)
+            }
+            .buttonStyle(.plain)
+            if sourcesOuvertes, let controle {
+                VStack(spacing: Espace.s) {
+                    if verdict == .aVerifier || PriseLogique.tropPresDeLaMaille(controle) {
+                        Text("Trop près de la taille minimale, mesure sur une toise")
+                            .font(Police.corps).foregroundStyle(Palette.encre)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    if modele.contexte.lieu.categorie.valeur == .inconnue { categorieInconnue }
+                    ForEach(Array(controle.lignes.enumerated()), id: \.offset) { _, ligne in PriseLigneView(ligne: ligne) }
+                    Text(PriseLogique.avertissement)
+                        .font(Police.legende).foregroundStyle(Palette.encreDouce)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding([.horizontal, .bottom], Espace.m)
+            }
+        }
+        .tuileFishMe(rayon: Rayon.l)
+    }
+
+    /// Icône, titre et couleur du verdict. Orange seulement quand c'est une alerte (sous la taille, règle non respectée).
+    private func presentation(_ verdict: PriseLogique.VerdictAffiche?, _ controle: ResultatControle?) -> (String, String, Color) {
+        let consigne = controle?.consigne.texte ?? PriseLogique.consigneAvantConfirmation
+        switch verdict {
+        case .tailleLegale: return ("checkmark.circle.fill", "Taille légale", Palette.ouvert)
+        case .sousLaMaille: return ("xmark.octagon.fill", "Sous la taille minimale", Palette.alerte)
+        case .regleNonRespectee: return ("xmark.octagon.fill", "Relâche-la", Palette.alerte)
+        case .aVerifier, .sansRegleDeTaille: return ("questionmark.circle.fill", consigne, Palette.marine)
+        case nil: return ("questionmark.circle.fill", consigne, Palette.marine)
+        }
     }
 
     /// Ligne neutre (icône discrète, pas d'orange) quand la catégorie du cours d'eau n'est pas connue.
     private var categorieInconnue: some View {
-        HStack(alignment: .top, spacing: 10) {
-            Image(systemName: "info.circle").foregroundStyle(PriseJetons.discret).accessibilityHidden(true)
-            Text(PriseLogique.categorieInconnue).font(PriseJetons.corps()).foregroundStyle(PriseJetons.encre)
+        HStack(alignment: .top, spacing: Espace.m) {
+            Image(systemName: "info.circle").foregroundStyle(Palette.encreDouce).accessibilityHidden(true)
+            Text(PriseLogique.categorieInconnue).font(Police.corps).foregroundStyle(Palette.encre)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(14).frame(maxWidth: .infinity, minHeight: PriseJetons.cibleMin, alignment: .leading)
-        .background(PriseJetons.papier, in: RoundedRectangle(cornerRadius: PriseJetons.rayon))
+        .padding(Espace.m).frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)
+        .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
     }
 
-    private func blocPoids(_ poids: PoidsEstime) -> some View {
-        Button { withAnimation { poidsOuvert.toggle() } } label: {
-            VStack(alignment: .leading, spacing: 6) {
-                Text(PriseLogique.texteDuPoids(poids)).font(PriseJetons.titre()).foregroundStyle(PriseJetons.encre)
-                if poidsOuvert {
-                    Text(PriseLogique.texteDeLaFourchette(poids))
-                    Text(poids.source)
-                    Text(PriseLogique.calculePasPese)
-                }
+    // MARK: Carte (recto et verso)
+
+    private var carte: some View {
+        GeometryReader { geo in
+            let coin = geo.size.width * Gabarit.coinCarte
+            ZStack {
+                if verso { versoCarte } else { rectoCarte }
             }
-            .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(14).background(PriseJetons.papier, in: RoundedRectangle(cornerRadius: PriseJetons.rayon))
+            .frame(width: geo.size.width, height: geo.size.height)
+            .clipShape(RoundedRectangle(cornerRadius: coin, style: .continuous))
+            .shadow(color: Palette.encre.opacity(0.15), radius: 12, y: 6)
         }
-        .buttonStyle(.plain)
+        .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
+        .frame(maxWidth: 360)
+    }
+
+    /// Recto : le poisson en image et son nom.
+    /// À brancher : la rareté et le nombre de pêches OFB (« 10 pêches sur 29 dans le 94 · OFB »), le badge Trophée et le centile de taille,
+    /// le numéro de carte : ces données viennent du Pescedex (L4), pas de l'écran Prise.
+    private var rectoCarte: some View {
+        ZStack {
+            Palette.nuit
+            VStack(spacing: Espace.m) {
+                Spacer(minLength: 0)
+                if let entree = modele.especeConfirmee {
+                    if UIImage(named: entree.image) != nil {
+                        Image(entree.image).resizable().scaledToFit().padding(.horizontal, Espace.l)
+                            .accessibilityHidden(true)
+                    } else {
+                        Image(systemName: PriseFamille.de(entree.espece.id).symbole)
+                            .font(.system(size: 72, weight: .bold, design: .rounded)).foregroundStyle(.white.opacity(0.7))
+                            .accessibilityHidden(true)
+                    }
+                }
+                Spacer(minLength: 0)
+                VStack(alignment: .leading, spacing: Espace.xs) {
+                    Text(modele.especeConfirmee?.nom ?? "Ta prise").font(Police.grandTitre).foregroundStyle(.white)
+                        .minimumScaleFactor(0.6).lineLimit(1)
+                    if let latin = modele.especeConfirmee?.nomLatin {
+                        Text(latin).font(Police.detail).italic().foregroundStyle(.white.opacity(0.7))
+                    }
+                    Text(tailleTexte).font(Police.chiffreMoyen).foregroundStyle(.white)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(Espace.l)
+            }
+        }
+        .accessibilityElement(children: .combine)
+    }
+
+    /// Verso : la vraie photo du pêcheur, puis taille (avec sa méthode), poids estimé, ce qu'il en a fait, la date.
+    /// À brancher : appât ou leurre, température de l'eau, niveau de la rivière (conditions de la sortie) et le prénom du pêcheur.
+    private var versoCarte: some View {
+        VStack(spacing: 0) {
+            Color.clear
+                .overlay {
+                    if let image = modele.imagePhoto {
+                        Image(uiImage: image).resizable().scaledToFill().accessibilityLabel("Ta photo")
+                    } else {
+                        Palette.tuile
+                    }
+                }
+                .clipped()
+                .padding(Espace.s)
+            LazyVGrid(columns: [GridItem(.flexible(), alignment: .topLeading), GridItem(.flexible(), alignment: .topLeading)], spacing: Espace.m) {
+                chiffre(tailleTexte, legende: methodeTexte)
+                if let poids = poidsTexte { chiffre(poids, legende: "estimé") }
+                if let devenir = devenirTexte { chiffre(devenir, legende: "la prise") }
+                chiffre(modele.contexte.date.formatted(.dateTime.day().month(.abbreviated).locale(Locale(identifier: "fr_FR"))), legende: modele.contexte.lieuFlou ?? "")
+            }
+            .padding(Espace.l)
+        }
+        .background(Palette.surface)
+    }
+
+    private func chiffre(_ valeur: String, legende: String) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(valeur).font(Police.sousTitre).foregroundStyle(Palette.encre).minimumScaleFactor(0.7).lineLimit(1)
+            if !legende.isEmpty { Text(legende).font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1) }
+        }
+    }
+
+    private var methodeTexte: String {
+        switch modele.methode {
+        case .estimee: return "réalité augmentée"
+        case .toise: return "lue sur ta toise"
+        case .saisie: return "saisie"
+        }
+    }
+
+    /// « ≈ 1,9 à 2,4 kg » (deux bornes quand la taille est une fourchette), marqué « estimé » dessous.
+    private var poidsTexte: String? {
+        if let texte = modele.textePoidsAR { return texte.replacingOccurrences(of: ", estimé", with: "") }
+        guard let poids = modele.poids else { return nil }
+        return "≈ \(PriseLogique.kilos(poids.kilos)) kg"
+    }
+
+    private var devenirTexte: String? {
+        switch modele.devenir {
+        case .relachee: return "Relâchée"
+        case .gardee: return "Gardée"
+        case .nonDit: return nil
+        }
     }
 }
 
@@ -179,10 +388,10 @@ struct PriseLigneView: View {
 
     var body: some View {
         Button { withAnimation { ouverte.toggle() } } label: {
-            VStack(alignment: .leading, spacing: 6) {
-                HStack(alignment: .top, spacing: 10) {
+            VStack(alignment: .leading, spacing: Espace.s) {
+                HStack(alignment: .top, spacing: Espace.m) {
                     Image(systemName: symbole).foregroundStyle(couleur).accessibilityHidden(true)
-                    Text(ligne.phrase).font(PriseJetons.corps()).foregroundStyle(PriseJetons.encre)
+                    Text(ligne.phrase).font(Police.corps).foregroundStyle(Palette.encre)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 if ouverte {
@@ -190,22 +399,22 @@ struct PriseLigneView: View {
                         if let url = s.url.flatMap({ URL(string: $0) }) {
                             Link(destination: url) {
                                 Label(s.titre, systemImage: "arrow.up.right.square")
-                                    .font(PriseJetons.legende()).multilineTextAlignment(.leading)
+                                    .font(Police.legende).multilineTextAlignment(.leading)
                             }
                         } else {
-                            Text(s.titre).font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
+                            Text(s.titre).font(Police.legende).foregroundStyle(Palette.encreDouce)
                         }
                     }
-                    if let citation = ligne.citation { Text(citation).font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret) }
+                    if let citation = ligne.citation { Text(citation).font(Police.legende).foregroundStyle(Palette.encreDouce) }
                     if let date = ligne.dateLecture {
                         Text("Lue le \(date.formatted(.dateTime.day().month(.wide).year().locale(Locale(identifier: "fr_FR"))))")
-                            .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
+                            .font(Police.legende).foregroundStyle(Palette.encreDouce)
                     }
                 }
             }
-            .padding(14)
+            .padding(Espace.m)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(PriseJetons.papier, in: RoundedRectangle(cornerRadius: PriseJetons.rayon))
+            .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
         }
         .buttonStyle(.plain)
     }
@@ -220,9 +429,9 @@ struct PriseLigneView: View {
 
     private var couleur: Color {
         switch ligne.etat {
-        case .respectee: return ligne.type == .periode ? PriseJetons.discret : PriseJetons.accent
-        case .nonRespectee: return .red
-        case .aVerifierSurPlace: return PriseJetons.mise
+        case .respectee: return ligne.type == .periode ? Palette.encreDouce : Palette.ouvert
+        case .nonRespectee: return Palette.alerte
+        case .aVerifierSurPlace: return Palette.marine
         }
     }
 }
