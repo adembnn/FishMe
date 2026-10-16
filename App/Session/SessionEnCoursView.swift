@@ -63,11 +63,14 @@ struct SessionEnCoursView<LigneConditions: View>: View {
                         .padding(.top, Espace.xs)
                 }
             }
+            // Sans prise, l'anneau est au milieu de l'écran ; avec une prise il remonte pour laisser la place au poisson.
             chrono(session, maintenant: maintenant)
-                .padding(.top, 190 - 59)
-            // Sans prise : une silhouette claire et « 0 prise », pour que le milieu de l'écran ne soit jamais vide.
-            dernierePrise(session)
-                .padding(.top, 430 - 59)
+                .padding(.top, FormatSortie.prises(session.sortie).isEmpty ? 280 - 59 : 120 - 59)
+            // Sans prise, le chrono reste seul : pas de poisson gris.
+            if !FormatSortie.prises(session.sortie).isEmpty {
+                dernierePrise(session)
+                    .padding(.top, 430 - 59)
+            }
         }
         .padding(.horizontal, Espace.bord)
         .padding(.bottom, 24)
@@ -131,36 +134,57 @@ struct SessionEnCoursView<LigneConditions: View>: View {
         return "Ton spot"
     }
 
+    /// Le chrono façon minuteur d'Apple : un anneau qui avance jusqu'à la fin légale (un tour par heure si elle est inconnue),
+    /// le temps écoulé en gros chiffres fins au centre. Le reste de l'écran (boutons, poisson) est celui du design système.
     private func chrono(_ session: SessionEnCours, maintenant: Date) -> some View {
-        VStack(spacing: 16) {
-            Text(BandeauSession<EmptyView>.formater(moteur.duree(a: maintenant)))
-                .font(Police.taille(80, .black).monospacedDigit())
-                .tracking(-3.2)
-                .foregroundStyle(Palette.encre)
-                .minimumScaleFactor(0.5)
-                .lineLimit(1)
+        let ecoule = moteur.duree(a: maintenant)
+        return ChronoAnneauView(temps: Self.temps(ecoule), progression: progression(session, maintenant: maintenant),
+                                diametre: 270) {
             if let legale = session.finLegale {
-                Button { explicationFin.toggle() } label: {
-                    Text("Fin légale \(BandeauSession<EmptyView>.heure(legale))")
-                        .font(Police.taille(17, .heavy).monospacedDigit())
-                        .foregroundStyle(Palette.encreDouce)
-                        .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
-                }
-                .buttonStyle(.plain)
-                .accessibilityHint("Touche pour lire d'où vient cette heure")
-                if explicationFin {
-                    Text(BandeauSession<EmptyView>.explication(legale))
-                        .font(Police.legende)
-                        .foregroundStyle(Palette.encreDouce)
-                        .multilineTextAlignment(.center)
-                        .frame(maxWidth: .infinity)
+                VStack(spacing: 2) {
+                    Button { explicationFin.toggle() } label: {
+                        Text("Fin légale \(BandeauSession<EmptyView>.heure(legale))")
+                            .font(Police.taille(15, .heavy).monospacedDigit())
+                            .foregroundStyle(Palette.encreDouce)
+                            .lineLimit(1)
+                            .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityHint("Touche pour lire d'où vient cette heure")
+                    if explicationFin {
+                        Text(BandeauSession<EmptyView>.explication(legale))
+                            .font(Police.legende)
+                            .foregroundStyle(Palette.encreDouce)
+                            .multilineTextAlignment(.center)
+                            .lineLimit(3)
+                    }
                 }
             }
         }
         .frame(maxWidth: .infinity)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Durée de la session")
+        .accessibilityValue(Self.temps(ecoule))
     }
 
-    /// Le poisson de la dernière prise (image) et « 1 prise · 68 cm ». Aucune prise : une silhouette et « Pas encore de prise ».
+    /// Temps écoulé jusqu'à la fin légale si elle est connue ; sinon un tour par heure.
+    private func progression(_ session: SessionEnCours, maintenant: Date) -> Double {
+        let ecoule = moteur.duree(a: maintenant)
+        if let legale = session.finLegale {
+            let total = legale.timeIntervalSince(session.sortie.debut)
+            if total > 0 { return min(1, ecoule / total) }
+        }
+        return ecoule.truncatingRemainder(dividingBy: 3600) / 3600
+    }
+
+    /// « 1:23:45 » ou « 12:34 ».
+    private static func temps(_ secondes: TimeInterval) -> String {
+        let total = Int(secondes)
+        let h = total / 3600, m = (total % 3600) / 60, s = total % 60
+        return h > 0 ? String(format: "%d:%02d:%02d", h, m, s) : String(format: "%d:%02d", m, s)
+    }
+
+    /// Le poisson de la dernière prise (image) et « 1 prise · 68 cm ». Aucune prise : une silhouette et « 0 prise ».
     private func dernierePrise(_ session: SessionEnCours) -> some View {
         let prises = FormatSortie.prises(session.sortie)
         let derniere = prises.last
