@@ -1,3 +1,4 @@
+import Core
 import CoreTransferable
 import Foundation
 import UniformTypeIdentifiers
@@ -87,6 +88,8 @@ struct CarteRecenteClub: Identifiable, Hashable {
     let tailleCm: Int?
     /// Nom de l'image du poisson dans les ressources.
     let image: String
+    /// Rareté affichée sur la carte (fond et badge, comme dans le Pescedex).
+    var niveau: NiveauRarete = .commun
 }
 
 /// Le record du club : « Plus gros brochet · Malo · 74 cm ».
@@ -95,6 +98,7 @@ struct RecordClub: Hashable {
     let membre: String
     let tailleCm: Int
     let image: String
+    var niveau: NiveauRarete = .commun
 }
 
 /// Une personne invitée, avec l'état de son invitation (P31).

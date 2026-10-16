@@ -1,16 +1,18 @@
+import Core
 import SwiftUI
 
-/// Page « Club » de l'onglet Communauté : mes clubs, le club choisi (membres, dernières cartes, record),
-/// un gros bouton pour rejoindre un club et un bouton pour créer le sien.
-/// Aucun réglage ici (fédération, carte de pêche, sécurité, sources, confidentialité, abonnement) :
-/// ils restent derrière la roue crantée, hors de cette page.
-/// Les clubs vivent sur l'iPhone et se partagent par invitation CloudKit : il n'existe pas d'annuaire en ligne.
+/// Page « Club » de l'onglet Communauté. On crée un club parce qu'on en a envie (nom, poisson ou photo), puis on y partage ses cartes.
+/// De haut en bas : l'en-tête du club choisi, le bouton « Partager une carte au club », les cartes du club, les membres, le record.
+/// Rejoindre ou créer un club reste accessible, plus discret, en bas de page.
+/// Rien n'est envoyé sur un serveur dans cette version : les cartes que je partage restent sur cet iPhone,
+/// et les cartes des autres membres viendront du partage CloudKit (lot Amis).
+/// Aucun réglage ici : ils restent derrière la roue crantée.
 struct ClubPageView: View {
-  /// Les cartes du Pescedex de l'utilisateur (seul leur nombre sert ici, pour la pastille « Moi »).
+  /// Mes cartes du Pescedex, déjà rendues : ce sont elles que je peux partager au club.
   let cartes: [CarteAPartager]
   /// Les poissons proposés comme image d'un club (RootView les fabrique depuis le catalogue de Core).
   var poissons: [PoissonClub] = []
-  /// À brancher : membres, dernières cartes, record et invitations viennent du partage CloudKit (lot Amis).
+  /// À brancher : membres, cartes des membres, record et invitations viennent du partage CloudKit (lot Amis).
   var membres: [MembreClub] = []
   var dernieresCartes: [CarteRecenteClub] = []
   var record: RecordClub?
@@ -22,6 +24,11 @@ struct ClubPageView: View {
   @State private var clubChoisi: UUID?
   @State private var creationOuverte = false
   @State private var rechercheOuverte = false
+  @State private var partageOuvert = false
+  /// Identifiants de mes cartes partagées, par club (gardés sur l'iPhone).
+  @State private var partages: [String: Set<String>] = PartagesClub.lire()
+
+  private let colonnes = [GridItem(.flexible(), spacing: Espace.m), GridItem(.flexible(), spacing: Espace.m)]
 
   init(
     cartes: [CarteAPartager], poissons: [PoissonClub] = [], membres: [MembreClub] = [],
@@ -51,7 +58,7 @@ struct ClubPageView: View {
     if enDemo, let club { return DemoClub.membres(pour: club) }
     return membres
   }
-  private var cartesAffichees: [CarteRecenteClub] {
+  private var cartesDesMembres: [CarteRecenteClub] {
     if enDemo, let club { return DemoClub.dernieresCartes(pour: club) }
     return dernieresCartes
   }
@@ -59,6 +66,14 @@ struct ClubPageView: View {
     if enDemo, let club { return DemoClub.record(pour: club) }
     return record
   }
+  private var mesPartagees: Set<String> {
+    guard let club else { return [] }
+    return partages[club.id.uuidString] ?? []
+  }
+  private var mesCartesPartagees: [CarteAPartager] {
+    cartes.filter { mesPartagees.contains($0.id) }
+  }
+  private var nombreDeMembres: Int { membresAffiches.count + 1 }
 
   var body: some View {
     NavigationStack {
@@ -74,62 +89,40 @@ struct ClubPageView: View {
             BandeauDemoClub().padding(.top, Espace.s)
           }
 
-          VStack(spacing: Espace.s) {
+          if let club {
+            if tousLesClubs.count > 1 { choixDuClub }
+            entete(club)
             Button {
-              rechercheOuverte = true
+              partageOuvert = true
             } label: {
-              Label("Rejoindre un club", systemImage: "magnifyingglass")
+              Label("Partager une carte au club", systemImage: "square.and.arrow.up")
             }
             .buttonStyle(.principal)
-            Button {
-              creationOuverte = true
-            } label: {
-              Label("Créer mon club", systemImage: "plus")
-            }
-            .buttonStyle(.secondaire)
-          }
-          .padding(.top, Espace.m)
+            .padding(.top, Espace.m)
+            Text("Visible par les membres de ton club")
+              .font(Police.legende).foregroundStyle(Palette.encreDouce)
+              .frame(maxWidth: .infinity)
+              .padding(.top, Espace.xs)
 
-          EnteteGroupeClub(titre: "Mes clubs").padding(.top, Espace.s)
-          if tousLesClubs.isEmpty {
+            EnteteGroupeClub(titre: "Cartes du club")
+            cartesDuClub
+            EnteteGroupeClub(titre: "Membres")
+            groupeMembres(club)
+            EnteteGroupeClub(titre: "Record du club")
+            recordDuClub
+            EnteteGroupeClub(titre: "Autres clubs")
+            boutonsClub(discrets: true)
+          } else {
             GroupeClub {
               Text(
-                "Tu n'as pas encore de club. Rejoins celui d'un ami avec son lien, ou crée le tien."
+                "Crée ton club avec un nom et un poisson ou une photo, puis partage-y tes cartes. Tu peux aussi rejoindre celui d'un ami avec son lien."
               )
               .font(Police.legende).foregroundStyle(Palette.encreDouce)
-              .frame(maxWidth: .infinity, minHeight: 52, alignment: .leading)
-              .padding(.horizontal, Espace.l)
+              .padding(Espace.l)
+              .frame(maxWidth: .infinity, alignment: .leading)
             }
-          } else {
-            mesClubs
-          }
-
-          if let club {
-            EnteteGroupeClub(titre: club.nom)
-            groupeMembres(club)
-            EnteteGroupeClub(titre: "Dernières cartes")
-            if cartesAffichees.isEmpty {
-              tuileVide
-            } else {
-              GroupeClub {
-                ForEach(Array(cartesAffichees.enumerated()), id: \.element.id) { rang, carte in
-                  if rang > 0 { FiletClub(retrait: 80) }
-                  ligneCarte(
-                    image: carte.image, titre: carte.membre,
-                    detail: "\(carte.espece), \(carte.jour)", taille: carte.tailleCm)
-                }
-              }
-            }
-            EnteteGroupeClub(titre: "Record du club")
-            if let record = recordAffiche {
-              GroupeClub {
-                ligneCarte(
-                  image: record.image, titre: record.titre, detail: record.membre,
-                  taille: record.tailleCm)
-              }
-            } else {
-              tuileVide
-            }
+            .padding(.top, Espace.m)
+            boutonsClub(discrets: false).padding(.top, Espace.m)
           }
         }
         .padding(.horizontal, Espace.bord)
@@ -147,6 +140,13 @@ struct ClubPageView: View {
           clubChoisi = clubs.clubs.last?.id
         }
       }
+      .sheet(isPresented: $partageOuvert) {
+        if let club {
+          PartagerCarteClubView(
+            club: club, cartes: cartes, partagees: mesPartagees,
+            basculer: { basculer($0, dans: club) })
+        }
+      }
       .sheet(isPresented: $rechercheOuverte) {
         RechercheClubView(clubs: tousLesClubs, poissons: poissons) { choisi in
           clubChoisi = choisi.id
@@ -162,45 +162,131 @@ struct ClubPageView: View {
     }
   }
 
-  // MARK: Mes clubs
+  private func basculer(_ id: String, dans club: ClubLocal) {
+    var ensemble = partages[club.id.uuidString] ?? []
+    if ensemble.contains(id) { ensemble.remove(id) } else { ensemble.insert(id) }
+    partages[club.id.uuidString] = ensemble
+    PartagesClub.ecrire(partages)
+  }
 
-  private var mesClubs: some View {
-    GroupeClub {
-      ForEach(Array(tousLesClubs.enumerated()), id: \.element.id) { rang, c in
-        let choisi = c.id == club?.id
-        if rang > 0 { FiletClub(retrait: Espace.l + 36 + Espace.m) }
-        Button {
-          clubChoisi = c.id
-        } label: {
-          HStack(spacing: Espace.m) {
-            VignetteClub(club: c, poissons: poissons, taille: 36)
-            VStack(alignment: .leading, spacing: 0) {
-              Text(c.nom).font(Police.corps).foregroundStyle(Palette.encre)
-              // À brancher : le nombre de membres de chaque club vient du partage CloudKit ; connu seulement pour le club choisi.
-              if choisi, !membresAffiches.isEmpty {
-                Text(membresAffiches.count == 1 ? "1 membre" : "\(membresAffiches.count) membres")
-                  .font(Police.legende).foregroundStyle(Palette.encreDouce)
-              }
-            }
-            Spacer(minLength: Espace.s)
-            if choisi {
-              Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 22, weight: .bold, design: .rounded))
-                .foregroundStyle(Palette.marine)
-            } else {
-              Image(systemName: "chevron.right").font(Police.legende).foregroundStyle(
-                Palette.silhouette)
+  // MARK: En-tête
+
+  private func entete(_ club: ClubLocal) -> some View {
+    HStack(spacing: Espace.m) {
+      VignetteClub(club: club, poissons: poissons, taille: 64)
+      VStack(alignment: .leading, spacing: 2) {
+        Text(club.nom).font(Police.titre).foregroundStyle(Palette.encre)
+          .lineLimit(2).minimumScaleFactor(0.8)
+        Text(nombreDeMembres == 1 ? "1 membre" : "\(nombreDeMembres) membres")
+          .font(Police.legende).foregroundStyle(Palette.encreDouce)
+      }
+      Spacer(minLength: 0)
+    }
+    .padding(.horizontal, Espace.l)
+    .padding(.top, Espace.m)
+    .accessibilityElement(children: .combine)
+  }
+
+  /// Plusieurs clubs : une rangée de pastilles pour passer de l'un à l'autre.
+  private var choixDuClub: some View {
+    ScrollView(.horizontal) {
+      HStack(spacing: Espace.m) {
+        ForEach(tousLesClubs) { c in
+          let choisi = c.id == club?.id
+          Button {
+            clubChoisi = c.id
+          } label: {
+            VignetteClub(club: c, poissons: poissons, taille: 44)
+              .overlay(Circle().strokeBorder(choisi ? Palette.marine : .clear, lineWidth: 3).padding(-3))
+          }
+          .buttonStyle(.plain)
+          .accessibilityLabel(c.nom)
+          .accessibilityAddTraits(choisi ? .isSelected : [])
+        }
+      }
+      .padding(.horizontal, Espace.l)
+      .padding(.vertical, Espace.s)
+    }
+    .scrollIndicators(.hidden)
+    .padding(.top, Espace.s)
+  }
+
+  // MARK: Cartes du club
+
+  private var cartesDuClub: some View {
+    Group {
+      if mesCartesPartagees.isEmpty && cartesDesMembres.isEmpty {
+        tuileVide
+      } else {
+        LazyVGrid(columns: colonnes, spacing: Espace.l) {
+          ForEach(mesCartesPartagees) { carte in
+            VStack(spacing: Espace.xs) {
+              VignetteMaCarteClub(carte: carte)
+              Text("Moi").font(Police.detail).foregroundStyle(Palette.encre)
             }
           }
-          .frame(minHeight: 52)
-          .padding(.horizontal, Espace.l)
-          .contentShape(Rectangle())
+          ForEach(cartesDesMembres) { carte in
+            VStack(spacing: Espace.xs) {
+              VignetteCarteClub(
+                image: carte.image, nom: carte.espece, niveau: carte.niveau, exemple: enDemo)
+              Text(carte.membre).font(Police.detail).foregroundStyle(Palette.encre)
+            }
+          }
         }
-        .buttonStyle(.plain)
-        .accessibilityLabel(c.nom)
-        .accessibilityAddTraits(choisi ? AccessibilityTraits.isSelected : AccessibilityTraits())
       }
     }
+  }
+
+  private var recordDuClub: some View {
+    Group {
+      if let record = recordAffiche {
+        HStack(alignment: .center, spacing: Espace.l) {
+          VignetteCarteClub(image: record.image, nom: record.titre, niveau: record.niveau, exemple: enDemo)
+            .frame(width: 130)
+          VStack(alignment: .leading, spacing: 2) {
+            Text(record.titre).font(Police.corps).foregroundStyle(Palette.encre)
+            Text("\(record.tailleCm) cm").font(Police.titre.monospacedDigit()).foregroundStyle(Palette.marine)
+            Text(record.membre).font(Police.legende).foregroundStyle(Palette.encreDouce)
+          }
+          Spacer(minLength: 0)
+        }
+        .padding(Espace.l)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
+        .accessibilityElement(children: .combine)
+      } else {
+        tuileVide
+      }
+    }
+  }
+
+  private var tuileVide: some View {
+    GroupeClub {
+      Text("Aucune carte partagée pour l'instant")
+        .font(Police.legende).foregroundStyle(Palette.encreDouce)
+        .frame(maxWidth: .infinity, minHeight: 52)
+        .padding(.horizontal, Espace.l)
+    }
+  }
+
+  // MARK: Rejoindre ou créer
+
+  private func boutonsClub(discrets: Bool) -> some View {
+    VStack(spacing: Espace.s) {
+      Button {
+        creationOuverte = true
+      } label: {
+        Label("Créer mon club", systemImage: "plus")
+      }
+      .buttonStyle(.principal)
+      Button {
+        rechercheOuverte = true
+      } label: {
+        Label("Rejoindre un club", systemImage: "magnifyingglass")
+      }
+      .buttonStyle(.secondaire)
+    }
+    .modifier(DiscretClub(actif: discrets))
   }
 
   // MARK: Membres
@@ -254,35 +340,29 @@ struct ClubPageView: View {
       .scrollDisabled(!large)
     }
   }
+}
 
-  // MARK: Cartes
+/// Boutons « Créer » et « Rejoindre » quand on a déjà un club : plus petits, sans le gros bouton plein.
+private struct DiscretClub: ViewModifier {
+  let actif: Bool
+  func body(content: Content) -> some View {
+    if actif { content.controlSize(.small).opacity(0.9) } else { content }
+  }
+}
 
-  private var tuileVide: some View {
-    GroupeClub {
-      Text("Aucune carte partagée pour l'instant")
-        .font(Police.legende).foregroundStyle(Palette.encreDouce)
-        .frame(maxWidth: .infinity, minHeight: 52)
-        .padding(.horizontal, Espace.l)
-    }
+/// Mes cartes partagées par club, gardées dans les réglages de l'iPhone (jamais envoyées).
+enum PartagesClub {
+  private static let cle = "club.cartesPartagees"
+
+  static func lire() -> [String: Set<String>] {
+    guard let donnees = UserDefaults.standard.data(forKey: cle),
+      let lu = try? JSONDecoder().decode([String: Set<String>].self, from: donnees)
+    else { return [:] }
+    return lu
   }
 
-  private func ligneCarte(image: String, titre: String, detail: String, taille: Int?) -> some View {
-    HStack(spacing: Espace.m) {
-      VignettePoissonClub(image: image)
-      VStack(alignment: .leading, spacing: 0) {
-        Text(titre).font(Police.corps).foregroundStyle(Palette.encre)
-        Text(detail).font(Police.legende).foregroundStyle(Palette.encreDouce)
-      }
-      Spacer(minLength: Espace.s)
-      if let taille {
-        Text("\(taille) cm").font(Police.corps.monospacedDigit()).foregroundStyle(
-          Palette.encreDouce)
-      }
-    }
-    .frame(minHeight: 48)
-    .padding(.horizontal, Espace.l)
-    .padding(.vertical, Espace.xs)
-    .accessibilityElement(children: .combine)
+  static func ecrire(_ valeur: [String: Set<String>]) {
+    if let donnees = try? JSONEncoder().encode(valeur) { UserDefaults.standard.set(donnees, forKey: cle) }
   }
 }
 

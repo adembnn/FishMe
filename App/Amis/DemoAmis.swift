@@ -54,24 +54,51 @@ enum DonneesDemoAmis {
     ]
 }
 
-/// Le contenu de la page Amis en mode démo : bandeau « Exemple », liste d'amis et fil, tout en local.
+extension DemoCarte {
+    /// La carte au format de la grille (même dessin que les cartes d'Adem), toujours marquée « Exemple ».
+    var pourGrille: CarteAmiGrille {
+        CarteAmiGrille(id: id, prenom: ami, mois: JetonAmis.date(date), style: StyleRarete(rarete), nomEspece: espece,
+                       imageEspece: image, tailleCm: tailleCm, exemple: true)
+    }
+}
+
+/// Le contenu de la page Amis en mode démo : bandeau « Exemple », liste d'amis et cartes, tout en local.
+/// `avecInviter` : sans `GestionAmis` (pas d'iCloud), la page n'a pas son propre bouton ; celui-ci le remplace, sans effet réel.
 struct DemoAmisContenu: View {
+    var avecInviter = false
+
     @State private var carteOuverte: DemoCarte?
+    @State private var amiOuvert: DemoAmi?
     @State private var actionSansEffet = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.xl) {
+            if avecInviter {
+                Text("Amis")
+                    .font(Police.grandTitre)
+                    .foregroundStyle(Palette.encre)
+                Button { actionSansEffet = true } label: {
+                    Label("Inviter un ami", systemImage: "person.badge.plus")
+                        .font(Police.sousTitre)
+                        .padding(.vertical, Espace.s)
+                }
+                .buttonStyle(.principal)
+            }
             bandeau
             listeDesAmis
             fil
         }
+        .padding(.top, avecInviter ? Espace.s : 0)
         .sheet(item: $carteOuverte) { carte in
             DemoCarteDetail(carte: carte)
+        }
+        .fullScreenCover(item: $amiOuvert) { ami in
+            DemoCollectionAmi(ami: ami)
         }
         .alert("Ami d'exemple", isPresented: $actionSansEffet) {
             Button("OK", role: .cancel) {}
         } message: {
-            Text("Rien n'est signalé, bloqué ni retiré : ce sont des données d'exemple pour la démo.")
+            Text("Rien n'est envoyé, signalé, bloqué ni retiré : ce sont des données d'exemple pour la démo.")
         }
     }
 
@@ -102,15 +129,24 @@ struct DemoAmisContenu: View {
     }
 
     private func rangee(_ ami: DemoAmi) -> some View {
-        HStack(spacing: Espace.m) {
-            Avatar(nom: ami.nom)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(ami.nom).font(Police.corps).foregroundStyle(Palette.encre)
-                Text("\(ami.nombreDeCartes) cartes · Exemple")
-                    .font(Police.detail)
-                    .foregroundStyle(Palette.encreDouce)
+        HStack(spacing: 0) {
+            Button { amiOuvert = ami } label: {
+                HStack(spacing: Espace.m) {
+                    Avatar(nom: ami.nom)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(ami.nom).font(Police.corps).foregroundStyle(Palette.encre)
+                        Text("\(ami.nombreDeCartes) cartes · Exemple")
+                            .font(Police.detail)
+                            .foregroundStyle(Palette.encreDouce)
+                    }
+                    Spacer(minLength: Espace.s)
+                    Image(systemName: "chevron.right").foregroundStyle(Palette.encreDouce)
+                }
+                .frame(minHeight: 60)
+                .contentShape(Rectangle())
+                .accessibilityElement(children: .combine)
             }
-            Spacer(minLength: Espace.s)
+            .buttonStyle(.plain)
             Menu {
                 Button { actionSansEffet = true } label: { Label("Signaler", systemImage: "flag") }
                 Button { actionSansEffet = true } label: { Label("Bloquer", systemImage: "hand.raised") }
@@ -124,8 +160,6 @@ struct DemoAmisContenu: View {
             }
             .accessibilityLabel("Plus d'actions pour \(ami.nom), exemple")
         }
-        .frame(minHeight: 60)
-        .accessibilityElement(children: .contain)
     }
 
     private var fil: some View {
@@ -133,77 +167,61 @@ struct DemoAmisContenu: View {
             Text("Nouvelles cartes")
                 .font(Police.titre)
                 .foregroundStyle(Palette.encre)
-            VStack(spacing: Espace.m) {
-                ForEach(DonneesDemoAmis.cartes) { carte in carteDuFil(carte) }
+            GrilleCartesAmis(cartes: DonneesDemoAmis.cartes.map(\.pourGrille)) { choisie in
+                carteOuverte = DonneesDemoAmis.cartes.first { $0.id == choisie.id }
             }
         }
-    }
-
-    private func carteDuFil(_ carte: DemoCarte) -> some View {
-        let style = RareteAmi(carte.rarete)
-        return Button { carteOuverte = carte } label: {
-            HStack(spacing: Espace.m) {
-                DemoVignette(image: carte.image, style: style)
-                    .frame(width: 84)
-                VStack(alignment: .leading, spacing: Espace.xs) {
-                    Text(carte.espece)
-                        .font(Police.sousTitre)
-                        .foregroundStyle(Palette.encre)
-                    Text("\(carte.tailleCm.formatted(.number.precision(.fractionLength(0...1)).locale(Locale(identifier: "fr_FR")))) cm")
-                        .font(Police.detail)
-                        .foregroundStyle(Palette.encre)
-                    HStack(spacing: Espace.xs) {
-                        BadgeRareteAmi(style: style, taille: 18)
-                        Text(style.mot).font(Police.legende).foregroundStyle(Palette.encreDouce)
-                    }
-                    Text("\(carte.ami) · \(JetonAmis.date(carte.date)) · Exemple")
-                        .font(Police.legende)
-                        .foregroundStyle(Palette.encreDouce)
-                }
-                Spacer(minLength: 0)
-            }
-            .padding(Espace.m)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .tuileFishMe()
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-        .accessibilityElement(children: .combine)
-        .accessibilityHint("Ouvre la carte d'exemple")
     }
 }
 
-/// L'illustration de l'espèce sur le fond de sa rareté (comme une carte déclarée sans photo).
-private struct DemoVignette: View {
-    let image: String
-    let style: RareteAmi
+/// La collection d'un ami d'exemple : ses cartes d'exemple, au même dessin que les vraies. Rien n'est lu en ligne.
+private struct DemoCollectionAmi: View {
+    let ami: DemoAmi
+    @State private var carteOuverte: DemoCarte?
 
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: Rayon.s, style: .continuous)
-                .fill(LinearGradient(colors: style.fond, startPoint: .top, endPoint: .bottom))
-            Image(image).resizable().scaledToFit().padding(Espace.s)
+        let cartes = DonneesDemoAmis.cartes.filter { $0.ami == ami.nom }
+        ScrollView {
+            VStack(alignment: .leading, spacing: Espace.l) {
+                Text("Collection de \(ami.nom)")
+                    .font(Police.grandTitre)
+                    .foregroundStyle(Palette.encre)
+                    .padding(.top, Espace.xl)
+                Label("Exemple pour la démo", systemImage: "info.circle")
+                    .font(Police.legende)
+                    .foregroundStyle(Palette.encreDouce)
+                if cartes.isEmpty {
+                    Text("Pas de carte d'exemple pour \(ami.nom).")
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encreDouce)
+                } else {
+                    GrilleCartesAmis(cartes: cartes.map(\.pourGrille)) { choisie in
+                        if let carte = cartes.first(where: { $0.id == choisie.id }) {
+                            carteOuverte = carte
+                        }
+                    }
+                }
+            }
+            .padding(.horizontal, Espace.bord)
+            .padding(.bottom, Espace.xl)
         }
-        .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
-        .accessibilityHidden(true)
+        .scrollIndicators(.hidden)
+        .background(Palette.fond.ignoresSafeArea())
+        .overlay(alignment: .topLeading) { BoutonRond(role: .fermer, rendu: .verre).padding(Espace.bord) }
+        .sheet(item: $carteOuverte) { carte in DemoCarteDetail(carte: carte) }
     }
 }
 
-/// Détail local d'une carte d'exemple : aucun signalement possible, rien ne sort de la vue.
+/// Détail local d'une carte d'exemple : la carte en grand, aucun signalement possible, rien ne sort de la vue.
 private struct DemoCarteDetail: View {
     let carte: DemoCarte
 
     var body: some View {
-        let style = RareteAmi(carte.rarete)
         VStack(spacing: Espace.l) {
-            DemoVignette(image: carte.image, style: style)
-                .frame(maxWidth: 260)
-            Text(carte.espece).font(Police.titre).foregroundStyle(Palette.encre)
-            HStack(spacing: Espace.s) {
-                BadgeRareteAmi(style: style, taille: 24)
-                Text(style.mot).font(Police.corps).foregroundStyle(Palette.encreDouce)
-            }
-            Text("\(carte.tailleCm.formatted(.number.precision(.fractionLength(0...1)).locale(Locale(identifier: "fr_FR")))) cm · \(carte.ami) · \(JetonAmis.date(carte.date))")
+            CarteAmiMini(style: StyleRarete(carte.rarete), nomEspece: carte.espece, imageEspece: carte.image,
+                         tailleCm: carte.tailleCm, exemple: true)
+                .frame(maxWidth: 280)
+            Text("\(carte.ami) · \(JetonAmis.date(carte.date))")
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
             Label("Exemple pour la démo", systemImage: "info.circle")

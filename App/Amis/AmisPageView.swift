@@ -18,7 +18,7 @@ struct AmisPageView: View {
             AmisPageContenu(gestion: gestion)
         } else if demo {
             ScrollView {
-                DemoAmisContenu()
+                DemoAmisContenu(avecInviter: true)
                     .padding(.horizontal, Espace.bord)
                     .padding(.bottom, Espace.xl)
             }
@@ -327,75 +327,20 @@ private struct AmisPageContenu: View {
                             : "Tes amis n'ont pas encore publié de carte.",
                             symbole: "rectangle.stack")
             } else {
-                VStack(spacing: Espace.m) {
-                    ForEach(cartes) { element in carteDuFil(element) }
+                GrilleCartesAmis(cartes: cartes.map(elementDeGrille)) { choisie in
+                    carteOuverte = cartes.first { $0.id.uuidString == choisie.id }
                 }
             }
         }
     }
 
-    private func carteDuFil(_ element: CarteDuFil) -> some View {
+    /// La carte du fil, au dessin des cartes d'Adem : cadre de rareté, poisson, prénom et mois dessous.
+    private func elementDeGrille(_ element: CarteDuFil) -> CarteAmiGrille {
         let carte = element.carte
         let espece = gestion.espece(carte.espece)
-        let style = RareteAmi(carte.rarete)
-        return Button { carteOuverte = element } label: {
-            HStack(spacing: Espace.m) {
-                vignette(carte, nomImage: espece?.image, style: style)
-                    .frame(width: 84)
-                VStack(alignment: .leading, spacing: Espace.xs) {
-                    Text(espece?.nom ?? "Espèce")
-                        .font(Police.sousTitre)
-                        .foregroundStyle(Palette.encre)
-                    if let taille = carte.tailleCm {
-                        Text("\(taille.formatted(.number.precision(.fractionLength(0...1)).locale(Locale(identifier: "fr_FR")))) cm")
-                            .font(Police.detail)
-                            .foregroundStyle(Palette.encre)
-                    }
-                    HStack(spacing: Espace.xs) {
-                        BadgeRareteAmi(style: style, taille: 18)
-                        Text(style.mot).font(Police.legende).foregroundStyle(Palette.encreDouce)
-                    }
-                    Text("\(element.ami.nom) · \(JetonAmis.date(carte.date))")
-                        .font(Police.legende)
-                        .foregroundStyle(Palette.encreDouce)
-                }
-                Spacer(minLength: 0)
-            }
-            .padding(Espace.m)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .tuileFishMe()
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-        .contextMenu {
-            if let url = gestion.urlDeSignalement(ami: element.ami, carte: carte) {
-                Link(destination: url) { Label("Signaler cette carte", systemImage: "flag") }
-            }
-        }
-        .accessibilityElement(children: .combine)
-        .accessibilityHint("Ouvre la carte")
-    }
-
-    /// L'image envoyée par l'ami ; sans elle (carte déclarée), l'illustration de l'espèce sur le fond de sa rareté.
-    @ViewBuilder
-    private func vignette(_ carte: CartePartagee, nomImage: String?, style: RareteAmi) -> some View {
-        if let donnees = carte.image, let image = UIImage(data: donnees) {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFit()
-                .clipShape(RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
-                .accessibilityHidden(true)
-        } else {
-            ZStack {
-                RoundedRectangle(cornerRadius: Rayon.s, style: .continuous)
-                    .fill(LinearGradient(colors: style.fond, startPoint: .top, endPoint: .bottom))
-                if let nomImage {
-                    Image(nomImage).resizable().scaledToFit().padding(Espace.s)
-                }
-            }
-            .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
-            .accessibilityHidden(true)
-        }
+        return CarteAmiGrille(id: carte.id.uuidString, prenom: element.ami.nom, mois: JetonAmis.date(carte.date),
+                              style: StyleRarete(carte.rarete), nomEspece: espece?.nom ?? "Espèce",
+                              imageEspece: espece?.image, imageCarte: carte.image, tailleCm: carte.tailleCm)
     }
 
     // MARK: Pièces communes

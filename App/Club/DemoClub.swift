@@ -1,3 +1,4 @@
+import Core
 import SwiftUI
 
 /// Mode démo de la page Club, piloté par `@AppStorage("demo.communaute")`.
@@ -47,47 +48,49 @@ enum DemoClub {
       return [
         CarteRecenteClub(
           id: "demo-sc1", membre: "Hugo", espece: "Silure glane", jour: "lundi, exemple",
-          tailleCm: 118, image: "silure-glane"),
+          tailleCm: 118, image: "silure-glane", niveau: .legendaire),
         CarteRecenteClub(
           id: "demo-sc2", membre: "Camille", espece: "Perche", jour: "dim., exemple",
-          tailleCm: 27, image: "perche-commune"),
+          tailleCm: 27, image: "perche-commune", niveau: .commun),
         CarteRecenteClub(
           id: "demo-sc3", membre: "Yanis", espece: "Sandre", jour: "sam., exemple",
-          tailleCm: 61, image: "sandre"),
+          tailleCm: 61, image: "sandre", niveau: .rare),
         CarteRecenteClub(
           id: "demo-sc4", membre: "Salomé", espece: "Black-bass", jour: "ven., exemple",
-          tailleCm: 38, image: "black-bass"),
+          tailleCm: 38, image: "black-bass", niveau: .peuCommun),
         CarteRecenteClub(
           id: "demo-sc5", membre: "Théo", espece: "Carpe commune", jour: "jeu., exemple",
-          tailleCm: 72, image: "carpe-commune"),
+          tailleCm: 72, image: "carpe-commune", niveau: .peuCommun),
       ]
     }
     return [
       CarteRecenteClub(
         id: "demo-vc1", membre: "Léa", espece: "Sandre", jour: "lundi, exemple",
-        tailleCm: 52, image: "sandre"),
+        tailleCm: 52, image: "sandre", niveau: .rare),
       CarteRecenteClub(
         id: "demo-vc2", membre: "Malo", espece: "Brochet", jour: "dim., exemple",
-        tailleCm: 74, image: "brochet"),
+        tailleCm: 74, image: "brochet", niveau: .rare),
       CarteRecenteClub(
         id: "demo-vc3", membre: "Inès", espece: "Perche", jour: "sam., exemple",
-        tailleCm: 29, image: "perche-commune"),
+        tailleCm: 29, image: "perche-commune", niveau: .commun),
       CarteRecenteClub(
         id: "demo-vc4", membre: "Nathan", espece: "Truite fario", jour: "ven., exemple",
-        tailleCm: 33, image: "truite-fario"),
+        tailleCm: 33, image: "truite-fario", niveau: .peuCommun),
       CarteRecenteClub(
         id: "demo-vc5", membre: "Jade", espece: "Carpe commune", jour: "jeu., exemple",
-        tailleCm: 64, image: "carpe-commune"),
+        tailleCm: 64, image: "carpe-commune", niveau: .commun),
     ]
   }
 
   static func record(pour club: ClubLocal) -> RecordClub {
     if club.id == idSeine {
       return RecordClub(
-        titre: "Plus gros silure (exemple)", membre: "Hugo", tailleCm: 118, image: "silure-glane")
+        titre: "Plus gros silure", membre: "Hugo", tailleCm: 118, image: "silure-glane",
+        niveau: .legendaire)
     }
     return RecordClub(
-      titre: "Plus gros brochet (exemple)", membre: "Malo", tailleCm: 74, image: "brochet")
+      titre: "Plus gros brochet", membre: "Malo", tailleCm: 74, image: "brochet",
+      niveau: .rare)
   }
 }
 

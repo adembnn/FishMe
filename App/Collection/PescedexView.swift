@@ -20,7 +20,6 @@ struct PescedexView: View {
     /// Choix « Amis » du sélecteur. À brancher : RootView (`app.onglet = .club`). Tant que c'est `nil`, le choix revient sur « Les miens ».
     var voirAmis: (() -> Void)? = nil
 
-    @State private var volet: Volet = .miens
     @State private var carteOuverte: Emplacement?
     @State private var ficheOuverte: Emplacement?
     @State private var bredouilleOuverte: CarteBredouille?
@@ -28,12 +27,6 @@ struct PescedexView: View {
     @State private var photoOuverte: Data?
     @State private var aTrouverDeplie = false
     @State private var bredouillesDepliees = false
-
-    private enum Volet: String, CaseIterable, Identifiable {
-        case miens = "Les miens"
-        case amis = "Amis"
-        var id: String { rawValue }
-    }
 
     /// Nombre de dos de cartes montrés avant « + N autres ».
     private let apercu = 6
@@ -47,12 +40,6 @@ struct PescedexView: View {
         .padding(.top, Espace.s)
         .background(Palette.fond.ignoresSafeArea())
         .task { await modele.charger() }
-        .onChange(of: volet) { _, nouveau in
-            if nouveau == .amis {
-                voirAmis?()
-                volet = .miens
-            }
-        }
         .fullScreenCover(item: $carteOuverte) { emplacement in
             if let infos = modele.infos(pour: emplacement) {
                 CartePleinEcranView(infos: infos, photo: photoOuverte, emplacements: emplacements_) {
@@ -97,14 +84,6 @@ struct PescedexView: View {
                     .foregroundStyle(Palette.encreDouce)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 6)
-            }
-            if !estVide {
-                Picker("Volet", selection: $volet) {
-                    ForEach(Volet.allCases) { Text($0.rawValue).tag($0) }
-                }
-                .pickerStyle(.segmented)
-                .frame(minHeight: Gabarit.zoneTactile)
-                .padding(.top, Espace.m)
             }
             if let voirAquarium {
                 Button(action: voirAquarium) {
