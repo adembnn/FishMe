@@ -177,11 +177,12 @@ struct CarteRectoView: View {
         switch infos.style {
         case .nonMesuree: return nil
         case .legendaire:
-            let depuis = r.anneeDernierReleve.map { " · \($0)" } ?? ""
+            let depuis = r.anneeDernierReleve.map { " · dernier relevé \($0)" } ?? ""
             return "Jamais relevée\(zone) · OFB\(depuis)"
         default:
-            let annee = r.anneeDernierReleve.map { " · \($0)" } ?? ""
-            return "\(r.nPeches) pêches sur \(r.nTotal)\(zone) · OFB\(annee)"
+            let annee = r.anneeDernierReleve.map { " · dernier relevé \($0)" } ?? ""
+            let mot = r.nPeches > 1 ? "pêches" : "pêche"
+            return "\(r.nPeches) \(mot) sur \(r.nTotal)\(zone) · OFB\(annee)"
         }
     }
 

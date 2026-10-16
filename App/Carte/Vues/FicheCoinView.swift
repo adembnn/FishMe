@@ -7,6 +7,8 @@ import Core
 /// sont des fermetures que A remplit ; vides par défaut, la fiche marche seule.
 struct FicheCoinView: View {
     @State private var modele: ModeleFiche
+    @State private var aideCategorie = false
+    @State private var toutesLesRegles = false
     let emplacementMaintenant: (Coordonnee) -> AnyView
     let emplacementConseil: (Espece) -> AnyView
 
@@ -27,8 +29,8 @@ struct FicheCoinView: View {
                     if let coin = modele.selection.coin {
                         releveDuFiltre(coin)
                     }
-                    especes(fiche)
                     regles(fiche)
+                    especes(fiche)
                     pied
                 } else {
                     ProgressView()
@@ -64,23 +66,38 @@ struct FicheCoinView: View {
         switch lieu.categorie.valeur {
         case .premiere: texte = "1re"
         case .deuxieme: texte = "2e"
-        case .inconnue: texte = "?"
+        case .inconnue: texte = "inconnue"
         }
-        return Menu {
-            Button("1re catégorie") { Task { await modele.choisirCategorie(.premiere) } }
-            Button("2e catégorie") { Task { await modele.choisirCategorie(.deuxieme) } }
-            Button("Je ne sais pas") { Task { await modele.choisirCategorie(nil) } }
-        } label: {
-            Text(texte)
-                .font(PolicesCarte.corps())
-                .frame(minWidth: 36)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 6)
-                .background(CouleursCarte.accent.opacity(0.15), in: Capsule())
-                .foregroundStyle(CouleursCarte.accent)
+        let libelle = TexteCategorie.libelle(lieu.categorie.valeur)
+        return HStack(spacing: 4) {
+            Menu {
+                Button("1re catégorie") { Task { await modele.choisirCategorie(.premiere) } }
+                Button("2e catégorie") { Task { await modele.choisirCategorie(.deuxieme) } }
+                Button("Je ne sais pas") { Task { await modele.choisirCategorie(nil) } }
+            } label: {
+                Text(texte)
+                    .font(PolicesCarte.corps())
+                    .frame(minWidth: 36)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(CouleursCarte.accent.opacity(0.15), in: Capsule())
+                    .foregroundStyle(CouleursCarte.accent)
+            }
+            .accessibilityLabel("Catégorie de l'eau : \(libelle)")
+            .accessibilityHint("Choisir la catégorie")
+            Button { aideCategorie = true } label: {
+                Image(systemName: "info.circle")
+                    .frame(minWidth: 44, minHeight: 44)
+                    .contentShape(Rectangle())
+            }
+            .foregroundStyle(CouleursCarte.accent)
+            .accessibilityLabel("Que veut dire la catégorie ?")
         }
-        .accessibilityLabel("Catégorie de l'eau : \(texte == "?" ? "inconnue" : texte)")
-        .accessibilityHint("Choisir la catégorie")
+        .alert("Catégorie de l'eau", isPresented: $aideCategorie) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(TexteCategorie.aide)
+        }
     }
 
     private func choixEau(_ fiche: FicheCalculee) -> some View {
@@ -133,10 +150,15 @@ struct FicheCoinView: View {
     // MARK: Relevé du filtre
 
     private func releveDuFiltre(_ coin: Coin) -> some View {
-        Text("\(texteReleve(nPeches: coin.nPeches, annee: coin.annee)) · \(coin.ouverture.texte)")
-            .font(PolicesCarte.detail())
-            .foregroundStyle(.secondary)
-            .fixedSize(horizontal: false, vertical: true)
+        VStack(alignment: .leading, spacing: 2) {
+            Text("\(texteReleve(nPeches: coin.nPeches, annee: coin.annee)) · \(coin.ouverture.texte)")
+                .font(PolicesCarte.detail())
+                .foregroundStyle(.secondary)
+            Text(TexteOFB.explication)
+                .font(PolicesCarte.legende())
+                .foregroundStyle(.secondary)
+        }
+        .fixedSize(horizontal: false, vertical: true)
     }
 
     // MARK: Espèces en images
@@ -153,8 +175,8 @@ struct FicheCoinView: View {
                         Task { await modele.toucherEspece(ligne.espece) }
                     } label: {
                         RangeeEspece(nom: modele.nom(ligne.espece), image: modele.image(ligne.espece), nPeches: ligne.nPeches,
-                                     annee: ligne.annee, rarete: ligne.rarete, ouverture: ligne.ouverture,
-                                     selectionnee: modele.especeTouchee == ligne.espece)
+                                     annee: ligne.releve ? ligne.annee : nil, rarete: ligne.rarete, ouverture: ligne.ouverture,
+                                     selectionnee: modele.especeTouchee == ligne.espece, releve: ligne.releve)
                     }
                     .buttonStyle(.plain)
                     .accessibilityAddTraits(modele.especeTouchee == ligne.espece ? .isSelected : [])
@@ -169,18 +191,36 @@ struct FicheCoinView: View {
     // MARK: Règles du jour
 
     private func regles(_ fiche: FicheCalculee) -> some View {
-        VStack(alignment: .leading, spacing: 0) {
+        let visibles = OrdreRegles.visibles(fiche.lignes, toutVoir: toutesLesRegles)
+        return VStack(alignment: .leading, spacing: 0) {
             Text(modele.especeTouchee.map { "Règles du jour : \(modele.nom($0))" } ?? "Règles du jour")
                 .font(PolicesCarte.legende())
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
                 .padding(.bottom, 4)
-            ForEach(Array(fiche.lignes.enumerated()), id: \.offset) { _, ligne in
+            ForEach(Array(visibles.enumerated()), id: \.offset) { _, ligne in
                 LigneRegleView(ligne: ligne, categorieInconnue: fiche.lieu.categorie.valeur == .inconnue,
                                tronconConfirme: ligne.libelleTroncon.map { fiche.lieu.tronconsConfirmes.contains($0) } ?? false,
                                confirmerTroncon: { libelle in Task { await modele.confirmerTroncon(libelle) } })
                 Divider()
             }
+            if fiche.lignes.count > OrdreRegles.apercu {
+                Button {
+                    withAnimation(.snappy) { toutesLesRegles.toggle() }
+                } label: {
+                    Text(toutesLesRegles ? "Voir moins" : "Voir toutes les règles (\(fiche.lignes.count))")
+                        .font(PolicesCarte.corps())
+                        .foregroundStyle(CouleursCarte.accent)
+                        .frame(maxWidth: .infinity, minHeight: 44, alignment: .leading)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+            }
+            Text("Information indicative : l'arrêté préfectoral fait foi.")
+                .font(PolicesCarte.legende())
+                .foregroundStyle(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 4)
         }
     }
 
@@ -197,7 +237,7 @@ struct FicheCoinView: View {
             .buttonStyle(.borderedProminent)
             .tint(CouleursCarte.accent)
 
-            Text("Information indicative : l'arrêté préfectoral fait foi. En cas de doute, relâche.")
+            Text("En cas de doute, relâche.")
                 .font(PolicesCarte.legende())
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)

@@ -16,6 +16,8 @@ public enum EtatLigne: String, Sendable, Equatable, Hashable, Codable {
     case respectee
     case nonRespectee
     case aVerifierSurPlace
+    /// Interdiction ou obligation à appliquer (consommation, mode de pêche, carpe de nuit...) : ni vert ni rouge, jamais « respectée ».
+    case information
 }
 
 /// Pourquoi une ligne est « à vérifier sur place ».

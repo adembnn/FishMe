@@ -78,9 +78,10 @@ nonisolated enum TextesPaywall {
         case .autreSpot: rang = 0
         case .fonction(let fonction):
             switch fonction {
-            case .septJours, .meteoDuJour: rang = 1
+            case .meteoDuJour, .niveauEau: rang = 0
+            case .septJours: rang = 1
             case .prevenirMoi: rang = 2
-            case .courbeEtNormale, .niveauEau: rang = 3
+            case .courbeEtNormale: rang = 3
             case .conseilsComplets: rang = 4
             case .analyseConditions: rang = 5
             }
@@ -89,6 +90,46 @@ nonisolated enum TextesPaywall {
         let touchee = lignes.remove(at: rang)
         return [touchee] + lignes
     }
+
+    /// Ce que contient une case de la comparaison.
+    nonisolated enum Cellule: Sendable, Equatable {
+        case oui, non
+        case texte(String)
+    }
+
+    /// Ce que le code ferme vraiment (`peutUtiliser` de Core, `RegleConseils`) ; `AbonnementTests` le vérifie ligne par ligne.
+    nonisolated enum Verrou: Sendable, Equatable {
+        /// Jamais fermé (carte, règles, Pescedex, spot gratuit, bandeau d'alerte de la carte).
+        case libre
+        /// Ouvert sur son spot gratuit, fermé ailleurs (`.meteoDuJour`, `.niveauEau`).
+        case surTonSpot(FonctionPro)
+        /// Fermé sans Pro (`peutUtiliser` faux partout).
+        case proSeul(FonctionPro)
+        /// Fermé sans Pro, sauf le 1er conseil de chaque espèce (`RegleConseils`).
+        case partiel(FonctionPro)
+    }
+
+    nonisolated struct LigneComparee: Sendable, Equatable {
+        let icone: String
+        let texte: String
+        let gratuit: Cellule
+        let pro: Cellule
+        let verrou: Verrou
+    }
+
+    /// La comparaison Gratuit / Pro du paywall. Une ligne = un comportement du code, pas une promesse.
+    static let comparaison: [LigneComparee] = [
+        LigneComparee(icone: "map", texte: "Carte, règles, Pescedex", gratuit: .oui, pro: .oui, verrou: .libre),
+        LigneComparee(icone: "cloud.bolt", texte: "Alertes orage et crue", gratuit: .oui, pro: .oui, verrou: .libre),
+        LigneComparee(icone: "mappin.and.ellipse", texte: "Spots pour pêcher", gratuit: .texte("1"), pro: .texte("Tous"), verrou: .libre),
+        LigneComparee(icone: "cloud.sun", texte: "Météo du moment", gratuit: .texte("1 spot"), pro: .texte("Tous"), verrou: .surTonSpot(.meteoDuJour)),
+        LigneComparee(icone: "water.waves", texte: "Niveau de l'eau", gratuit: .texte("1 spot"), pro: .texte("Tous"), verrou: .surTonSpot(.niveauEau)),
+        LigneComparee(icone: "calendar", texte: "7 jours heure par heure", gratuit: .non, pro: .oui, verrou: .proSeul(.septJours)),
+        LigneComparee(icone: "chart.xyaxis.line", texte: "Courbe de la rivière", gratuit: .non, pro: .oui, verrou: .proSeul(.courbeEtNormale)),
+        LigneComparee(icone: "bell", texte: "« Préviens-moi »", gratuit: .non, pro: .oui, verrou: .proSeul(.prevenirMoi)),
+        LigneComparee(icone: "lightbulb", texte: "Conseils", gratuit: .texte("1 par espèce"), pro: .texte("Tous"), verrou: .partiel(.conseilsComplets)),
+        LigneComparee(icone: "list.bullet.clipboard", texte: "Tes conditions", gratuit: .non, pro: .oui, verrou: .proSeul(.analyseConditions)),
+    ]
 
     static let produitIntrouvable = "Les offres ne sont pas disponibles pour le moment. Vérifie ta connexion, puis réessaie."
     static let rienARestaurer = "Aucun abonnement à restaurer sur ce compte Apple."

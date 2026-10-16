@@ -124,34 +124,66 @@ struct PaywallVue: View {
         .fixedSize(horizontal: false, vertical: true)
     }
 
-    /// Les quatre avantages de la maquette P34 A : une pastille ronde et un mot chacun.
-    private static let avantagesPro: [(icone: String, titre: String)] = [
-        ("map", "Tous les spots"),
-        ("cloud", "Météo et rivière"),
-        ("bolt", "Alertes"),
-        ("doc.text", "Conseils"),
-    ]
-
+    /// Comparaison Gratuit / Pro, lue dans `TextesPaywall.comparaison` : dix lignes courtes, sans défilement propre.
     private var avantages: some View {
-        let disposition = tailleTexte.isAccessibilitySize
-            ? AnyLayout(VStackLayout(alignment: .leading, spacing: Espace.m))
-            : AnyLayout(HStackLayout(alignment: .top, spacing: Espace.s))
-        return disposition {
-            ForEach(Self.avantagesPro, id: \.titre) { avantage in
-                VStack(spacing: Espace.s) {
-                    Image(systemName: avantage.icone)
-                        .font(Police.sousTitre)
+        VStack(spacing: 0) {
+            HStack(spacing: Espace.s) {
+                Spacer(minLength: 0)
+                Text("Gratuit").frame(width: Self.largeurColonne)
+                Text("Pro").foregroundStyle(Palette.marine).frame(width: Self.largeurColonne)
+            }
+            .font(Police.legende)
+            .foregroundStyle(Palette.encreDouce)
+            .accessibilityHidden(true)
+            ForEach(TextesPaywall.comparaison, id: \.texte) { ligne in
+                HStack(spacing: Espace.s) {
+                    Image(systemName: ligne.icone)
+                        .font(Police.legende)
                         .foregroundStyle(Palette.marine)
-                        .frame(width: 48, height: 48)
-                        .background(Palette.marineDoux, in: Circle())
-                    Text(avantage.titre)
+                        .frame(width: 24)
+                        .accessibilityHidden(true)
+                    Text(ligne.texte)
                         .font(Police.legende)
                         .foregroundStyle(Palette.encre)
-                        .multilineTextAlignment(.center)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.8)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    cellule(ligne.gratuit, pro: false)
+                    cellule(ligne.pro, pro: true)
                 }
-                .frame(maxWidth: .infinity)
-                .accessibilityElement(children: .combine)
+                .padding(.vertical, 5)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(ligne.texte)
+                .accessibilityValue("Gratuit : \(Self.parole(ligne.gratuit)). Pro : \(Self.parole(ligne.pro)).")
             }
+        }
+    }
+
+    private static let largeurColonne: CGFloat = 64
+
+    @ViewBuilder private func cellule(_ cellule: TextesPaywall.Cellule, pro: Bool) -> some View {
+        Group {
+            switch cellule {
+            case .oui:
+                Image(systemName: "checkmark.circle.fill").foregroundStyle(pro ? Palette.marine : Palette.ouvert)
+            case .non:
+                Image(systemName: "minus").foregroundStyle(Palette.encreDouce)
+            case .texte(let texte):
+                Text(texte)
+                    .font(Police.legende)
+                    .foregroundStyle(pro ? Palette.marine : Palette.encre)
+                    .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.7)
+            }
+        }
+        .frame(width: Self.largeurColonne)
+    }
+
+    private static func parole(_ cellule: TextesPaywall.Cellule) -> String {
+        switch cellule {
+        case .oui: return "oui"
+        case .non: return "non"
+        case .texte(let texte): return texte
         }
     }
 
@@ -199,7 +231,7 @@ struct PaywallVue: View {
     }
 
     @ViewBuilder private var piedLiens: some View {
-        Button("Restaurer") { Task { await restaurer() } }
+        Button("Restaurer les achats") { Task { await restaurer() } }
             .frame(minHeight: Gabarit.zoneTactile)
         Link("Conditions", destination: liens.conditions)
             .frame(minHeight: Gabarit.zoneTactile)

@@ -13,12 +13,19 @@ struct SourceClub: Identifiable, Hashable {
 /// Les liens officiels du pêcheur : RootView les fabrique depuis `liensFederation(departement)` de Core.
 struct LiensClub: Hashable {
     var federation: URL?
-    /// Nom de la fédération, affiché sous « Ma fédération » quand RootView le connaît.
-    var nomFederation: String? = nil
+    /// Nom du département (champ `nom` de liens-federations.json), que RootView passe s'il le connaît.
+    var nomDepartement: String? = nil
     var association: URL?
     var carteDePeche: URL = LiensOfficiels.carteDePeche
     /// Page de confidentialité publiée par le serveur MCP de MWM ; vide tant qu'elle n'existe pas.
     var confidentialite: URL?
+
+    /// « Fédération de Val-de-Marne » : le nom du département tel quel, aucun nom officiel inventé.
+    /// `nil` sans nom de département : la ligne n'a alors pas de sous-titre.
+    var libelleFederation: String? {
+        guard let nom = nomDepartement?.trimmingCharacters(in: .whitespacesAndNewlines), !nom.isEmpty else { return nil }
+        return "Fédération de \(nom)"
+    }
 }
 
 /// Une carte du Pescedex déjà rendue par L4, passée par RootView.

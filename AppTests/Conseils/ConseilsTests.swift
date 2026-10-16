@@ -66,8 +66,9 @@ struct ConseilsTests {
         #expect(ouvert.affiches(espece: espece, niveau: .confirme).visibles.count == 2)
     }
 
-    @Test func niveauInconnuDonneOccasionnel() {
-        #expect(NiveauPecheur.depuis("n'importe quoi") == .occasionnel)
+    @Test func niveauInconnuDonneDebutant() {
+        #expect(NiveauPecheur.depuis("n'importe quoi") == .debutant)
+        #expect(NiveauPecheur.parDefaut == .debutant)
         #expect(NiveauPecheur.depuis("confirme") == .confirme)
     }
 

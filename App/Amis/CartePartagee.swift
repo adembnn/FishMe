@@ -21,6 +21,15 @@ nonisolated struct CartePartagee: Sendable, Equatable, Hashable, Codable, Identi
         case id, espece, rarete, date, tailleCm, bredouille, departement
     }
 
+    /// Pour un ami, seuls le mois et l'année comptent (comme sur l'image partagée) : le premier du mois, à Paris.
+    /// Sans effet sur une date déjà arrondie ; une ancienne carte à date exacte est donc arrondie à l'envoi.
+    static func moisEtAnnee(_ date: Date) -> Date {
+        var calendrier = Calendar(identifier: .gregorian)
+        calendrier.timeZone = TimeZone(identifier: "Europe/Paris") ?? .gmt
+        let composants = calendrier.dateComponents([.year, .month], from: date)
+        return calendrier.date(from: composants) ?? date
+    }
+
     /// Les noms des champs, figés : un test compare cette liste à la structure réelle.
     static let champsAutorises: Set<String> = ["id", "espece", "rarete", "date", "tailleCm", "bredouille", "departement", "image"]
 }

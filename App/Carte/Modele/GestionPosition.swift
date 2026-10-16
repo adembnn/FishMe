@@ -14,11 +14,11 @@ final class GestionPosition: NSObject, CLLocationManagerDelegate {
     /// Une seule redemande, au premier écran de carte (Adem, 15 oct.).
     @ObservationIgnored private static let cleRedemande = "carte.redemandeFaite"
 
-    init(reglages: UserDefaults = .standard) {
+    init(reglages: UserDefaults = .standard, statutInitial: CLAuthorizationStatus? = nil) {
         let manager = CLLocationManager()
         self.manager = manager
         self.reglages = reglages
-        self.statut = manager.authorizationStatus
+        self.statut = statutInitial ?? manager.authorizationStatus
         super.init()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyHundredMeters

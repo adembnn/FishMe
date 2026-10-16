@@ -31,10 +31,6 @@ struct TunnelPremiersPasView: View {
                         .background(Palette.surface, in: Capsule())
                 }
                 Spacer()
-                Button("Passer", action: passer)
-                    .font(Police.corps)
-                    .foregroundStyle(Palette.marine)
-                    .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
             }
             if index < especes.count {
                 cartes
@@ -42,6 +38,11 @@ struct TunnelPremiersPasView: View {
             } else {
                 fin
             }
+            // En bas, à portée du pouce.
+            Button("Passer", action: passer)
+                .font(Police.corps)
+                .foregroundStyle(Palette.marine)
+                .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
         }
         .padding(Espace.bord)
         .background(Palette.fond)

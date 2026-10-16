@@ -45,6 +45,11 @@ final class PriseModele {
     private(set) var longueurCm: Double = PriseLogique.tailleDeDepart
     /// Faux tant que ni le curseur ni la toise n'ont donné une taille : on ne confirme pas la valeur de départ.
     private(set) var curseurBouge = false
+    /// Dernière taille confirmée par espèce.
+    @ObservationIgnored var memoire = MemoireTaille()
+
+    /// Bouton − ou + : 1 cm de plus ou de moins, dans la plage du curseur.
+    func ajusterCurseur(_ delta: Double) { deplacerCurseur(MemoireTaille.apresPas(longueurCm, delta: delta)) }
 
     /// Le curseur de taille : la valeur bouge, la taille n'est plus celle de départ.
     func deplacerCurseur(_ cm: Double) {
@@ -129,7 +134,10 @@ final class PriseModele {
         especeConfirmee = entree
         stade = PriseLogique.stade(de: entree.espece)
         tailleConfirmee = false
-        if longueurLue == nil { curseurBouge = false }
+        if longueurLue == nil {
+            curseurBouge = false
+            if let derniere = memoire.derniere(entree.espece) { longueurCm = derniere }
+        }
         etape = .taille
     }
 
@@ -184,6 +192,7 @@ final class PriseModele {
     }
 
     func confirmerLaTaille() {
+        if plageAR == nil, let entree = especeConfirmee { memoire.retenir(longueurCm, pour: entree.espece) }
         tailleConfirmee = true
         etape = .details
     }
@@ -212,11 +221,14 @@ final class PriseModele {
 
     /// Verdict de taille sur la fourchette mesurée en réalité augmentée : on interroge la table sourcée aux deux bornes
     /// (jamais le centre seul). Un verdict n'existe que si les deux bornes disent la même chose ; sinon « mesure sur une toise ».
+    /// Une mesure estimée en réalité augmentée reste `.estimee` : Core ne rend alors aucun verdict de taille.
+    var mesurePourVerdict: MethodeMesure { methode }
+
     var verdictTaille: PriseLogique.VerdictAffiche? {
         guard let entree = especeConfirmee, tailleConfirmee else { return nil }
         let longueurs: [Double]
         if let plage = plageAR { longueurs = [Double(plage.basCm), Double(plage.hautCm)] } else { longueurs = [longueurCm.rounded()] }
-        let mesure: MethodeMesure = plageAR == nil ? methode : .saisie
+        let mesure = mesurePourVerdict
         let resultats = longueurs.map {
             services.regles.controle(espece: entree.espece, tailleCm: $0, mesure: mesure,
                                      date: contexte.date, lieu: contexte.lieu, prisesDuJour: contexte.prisesDuJour)

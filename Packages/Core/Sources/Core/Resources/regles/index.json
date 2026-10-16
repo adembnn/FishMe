@@ -648,16 +648,16 @@
   },
   "92": {
    "niveau": "partiel",
-   "confirmees": 25,
+   "confirmees": 69,
    "a_verifier": 60,
-   "sha256": "2785010c4d5f5b3d290212ad4753e504e3f7c56e4c06b6a0e5119e0814a40790",
+   "sha256": "2ee32e55adff2076e48ca692d40a6dc148c92b3d600e7074a95718ea2442b41f",
    "expire_min": "2026-12-31"
   },
   "93": {
    "niveau": "partiel",
-   "confirmees": 28,
+   "confirmees": 85,
    "a_verifier": 37,
-   "sha256": "9602305b3fcda134f05cb2ce49060f0b16d18aa1213498407671eef34ccb248b",
+   "sha256": "55ae46a22c8201ffab63bcfabe77d44ca89456028e5889e4c72b0cb1e8a8f061",
    "expire_min": "2026-12-31"
   },
   "94": {

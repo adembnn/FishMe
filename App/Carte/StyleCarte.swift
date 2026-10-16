@@ -59,6 +59,24 @@ extension OuvertureDuJour {
     }
 }
 
+/// Le sigle OFB, dit une fois en toutes lettres au débutant.
+nonisolated enum TexteOFB {
+    static let nomComplet = "Office français de la biodiversité (OFB)"
+    static let explication = "Relevés de l'Office français de la biodiversité (OFB) : des pêches scientifiques dans les rivières."
+}
+
+/// Libellé et aide de la catégorie piscicole de l'eau (jamais une simple pastille « ? »).
+nonisolated enum TexteCategorie {
+    static func libelle(_ c: Categorie) -> String {
+        switch c {
+        case .premiere: "1re catégorie"
+        case .deuxieme: "2e catégorie"
+        case .inconnue: "catégorie inconnue"
+        }
+    }
+    static let aide = "1re catégorie : surtout des truites. 2e catégorie : surtout des carnassiers (brochet, sandre) et des poissons blancs."
+}
+
 /// « N pêches, dernier relevé AAAA » : chaque chiffre OFB porte son nombre de pêches et son année (aucune fausse donnée).
 nonisolated func texteReleve(nPeches: Int, annee: Int?) -> String {
     let mot = nPeches > 1 ? "pêches" : "pêche"

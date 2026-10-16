@@ -9,8 +9,8 @@ nonisolated enum ClesConseils {
 }
 
 extension NiveauPecheur {
-    /// Question passée : « occasionnel » (par défaut, à confirmer par Adem).
-    nonisolated static var parDefaut: NiveauPecheur { .occasionnel }
+    /// Question passée ou niveau inconnu : « je débute » (conseils les plus simples).
+    nonisolated static var parDefaut: NiveauPecheur { .debutant }
 
     nonisolated static func depuis(_ brut: String) -> NiveauPecheur {
         NiveauPecheur(rawValue: brut) ?? .parDefaut

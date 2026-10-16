@@ -98,7 +98,7 @@ struct CarteAEssayerView: View {
                             Text(nom).font(JetonsConseils.police(.caption)).foregroundStyle(.primary)
                                 .fixedSize(horizontal: false, vertical: true)
                             // Chaque chiffre OFB porte son nombre de pêches et l'année du dernier relevé.
-                            Text("\(e.nPeches) pêches, \(String(e.annee))")
+                            Text(Self.releve(nPeches: e.nPeches, annee: e.annee))
                                 .font(.caption2).foregroundStyle(.secondary)
                         }
                         .frame(width: 104)
@@ -168,5 +168,14 @@ struct AvertissementCrueView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(JetonsConseils.alerte.opacity(0.10), in: RoundedRectangle(cornerRadius: 16))
         .accessibilityIdentifier("avertissement-crue")
+    }
+}
+
+extension CarteAEssayerView {
+    /// « 1 pêche, dernier relevé 2024 » : même forme que la fiche d'un coin (le dossier Conseils n'importe pas Carte).
+    nonisolated static func releve(nPeches: Int, annee: Int?) -> String {
+        let mot = nPeches > 1 ? "pêches" : "pêche"
+        guard let annee else { return "\(nPeches) \(mot)" }
+        return "\(nPeches) \(mot), dernier relevé \(annee)"
     }
 }

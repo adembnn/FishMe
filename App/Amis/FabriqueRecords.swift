@@ -13,7 +13,7 @@ nonisolated enum FabriqueRecords {
         record["cardID"] = carte.id.uuidString
         record["espece"] = carte.espece
         record["rarete"] = carte.rarete.rawValue
-        record["datePrise"] = carte.date
+        record["datePrise"] = CartePartagee.moisEtAnnee(carte.date)
         if let taille = carte.tailleCm { record["taille"] = taille }
         record["bredouille"] = carte.bredouille ? 1 : 0
         if let departement = carte.departement { record["zone"] = departement }

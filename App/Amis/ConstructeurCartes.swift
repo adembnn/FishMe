@@ -23,7 +23,7 @@ struct ConstructeurCartes {
         if !prise.estDeclaree, let png = await collection.imagePNG(de: prise) {
             image = PngSansGPS.nettoyer(png)
         }
-        return CartePartagee(id: prise.id, espece: prise.espece.id, rarete: niveau, date: prise.date, tailleCm: prise.longueurCm,
+        return CartePartagee(id: prise.id, espece: prise.espece.id, rarete: niveau, date: CartePartagee.moisEtAnnee(prise.date), tailleCm: prise.longueurCm,
                              bredouille: false, departement: departement?.code, image: image)
     }
 }

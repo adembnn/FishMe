@@ -189,7 +189,7 @@ public struct MoteurRegles: ServiceRegles {
 
     private func rang(_ e: EtatLigne) -> Int {
         switch e {
-        case .respectee: return 0
+        case .respectee, .information: return 0
         case .aVerifierSurPlace: return 1
         case .nonRespectee: return 2
         }
@@ -228,7 +228,8 @@ public struct MoteurRegles: ServiceRegles {
         var ligne = base.ligne
         let manque = "aucune règle saisie"
         ligne.valeursParCategorie = [.premiere: a?.etiquette ?? manque, .deuxieme: b?.etiquette ?? manque]
-        let e1 = a?.ligne.etat ?? .respectee, e2 = b?.ligne.etat ?? .respectee
+        let defaut: EtatLigne = (a?.ligne.etat == .information || b?.ligne.etat == .information) ? .information : .respectee
+        let e1 = a?.ligne.etat ?? defaut, e2 = b?.ligne.etat ?? defaut
         if e1 == e2 {
             ligne.etat = e1
             ligne.raison = e1 == .aVerifierSurPlace ? (a?.ligne.raison ?? b?.ligne.raison) : nil
@@ -318,10 +319,13 @@ public struct MoteurRegles: ServiceRegles {
                 touche = true
                 let type = typeLigne(av.type)
                 let sources = av.textes.compactMap { sourceDe(id: $0, fichier: fichier) }
+                // Date de lecture des textes cités ; à défaut, la lecture la plus récente du fichier.
+                let lectureAVerifier = av.textes.compactMap { fichier.textes[$0]?.luLe }.compactMap { dateAAAAMMJJ($0) }.min()
+                    ?? fichier.textes.values.compactMap { dateAAAAMMJJ($0.luLe) }.max()
                 var trouve = false
                 for i in resultat.indices where resultat[i].ligne.type == type && resultat[i].ligne.raison != .troncon {
                     trouve = true
-                    if resultat[i].ligne.etat == .respectee {
+                    if resultat[i].ligne.etat == .respectee || resultat[i].ligne.etat == .information {
                         resultat[i].ligne.etat = .aVerifierSurPlace
                         resultat[i].ligne.raison = .desaccord
                         resultat[i].etiquette = "à vérifier"
@@ -331,7 +335,7 @@ public struct MoteurRegles: ServiceRegles {
                 if !trouve {
                     let ligne = LigneControle(type: type, etat: .aVerifierSurPlace, raison: .desaccord,
                                               phrase: "Règle locale possible (\(libelleType(av.type))) : vérifie l'arrêté.",
-                                              sources: sources)
+                                              sources: sources, dateLecture: lectureAVerifier)
                     resultat.append(LigneInterne(ligne: ligne, regleId: nil, reouverture: nil, etiquette: "à vérifier"))
                 }
             }
@@ -346,6 +350,7 @@ public struct MoteurRegles: ServiceRegles {
     private func ligneReservesLocales(_ reserves: [(RegleDonnee, FichierRegles)]) -> LigneInterne? {
         guard !reserves.isEmpty else { return nil }
         var sources: [SourceRegle] = []
+        let lecture = reserves.compactMap { dateLecture($0.0, fichier: $0.1) }.min()
         for (r, f) in reserves {
             var s = r.textes.compactMap { sourceDe(id: $0, fichier: f) }
             if s.isEmpty, let en = r.source { s = [SourceRegle(titre: en.texte ?? "Source", url: en.url)] }
@@ -356,7 +361,7 @@ public struct MoteurRegles: ServiceRegles {
             ? "\(reserves[0].0.phrase) Regarde le panneau."
             : "\(n) réserves de pêche locales dans le département (ports, darses, ouvrages) : regarde les panneaux sur place."
         let ligne = LigneControle(type: .reserve, etat: .aVerifierSurPlace, raison: .reserve, phrase: phrase, sources: sources,
-                                  citation: n == 1 ? reserves[0].0.citation : nil)
+                                  citation: n == 1 ? reserves[0].0.citation : nil, dateLecture: lecture)
         return LigneInterne(ligne: ligne, regleId: nil, reouverture: nil, etiquette: "à vérifier")
     }
 
@@ -418,11 +423,13 @@ public struct MoteurRegles: ServiceRegles {
         func fini(_ etat: EtatLigne, _ raison: RaisonAVerifier? = nil, etiq: String? = nil) -> LigneInterne {
             ligne.etat = etat
             ligne.raison = raison
-            let e = etiq ?? (etat == .respectee ? "respectée" : etat == .nonRespectee ? "non respectée" : "à vérifier")
+            let e = etiq ?? (etat == .respectee ? "respectée" : etat == .nonRespectee ? "non respectée" : etat == .information ? "information" : "à vérifier")
             return LigneInterne(ligne: ligne, regleId: regle.id, reouverture: reouverture, etiquette: e)
         }
 
-        if let expire = dateAAAAMMJJ(regle.expireLe), ctx.date >= expire.addingTimeInterval(unJour) {
+        // Les dates des règles sont des jours français (« AAAA-MM-JJ », lus à minuit UTC) : on compare avec le jour de Paris.
+        let aujourdhui = Self.jourDeParis(ctx.date)
+        if let expire = dateAAAAMMJJ(regle.expireLe), aujourdhui >= expire.addingTimeInterval(unJour) {
             let annee = Calendar.utcGregorien.component(.year, from: expire) + 1
             ligne.phrase += " Cette règle a expiré le \(jjmmaaaa(expire)) : vérifie l'arrêté \(annee)."
             return fini(.aVerifierSurPlace, .perimee)
@@ -460,17 +467,17 @@ public struct MoteurRegles: ServiceRegles {
             return fini(dedans ? .respectee : .nonRespectee)
         case "ouverture":
             guard let du = dateAAAAMMJJ(regle.du), let au = dateAAAAMMJJ(regle.au) else { return fini(.aVerifierSurPlace) }
-            if ctx.date >= du && ctx.date < au.addingTimeInterval(unJour) { return fini(.respectee, etiq: "ouverte") }
-            if du > ctx.date { reouverture = du }
+            if aujourdhui >= du && aujourdhui < au.addingTimeInterval(unJour) { return fini(.respectee, etiq: "ouverte") }
+            if du > aujourdhui { reouverture = du }
             return fini(.nonRespectee, etiq: "fermée")
         case "interdit":
             // Interdiction générale de moyen, de vente ou d'accès (« la gaffe est interdite ») : une ligne d'information.
-            if regle.especes.isEmpty && regle.du == nil && regle.au == nil { return fini(.respectee) }
+            if regle.especes.isEmpty && regle.du == nil && regle.au == nil { return fini(.information) }
             guard let du = dateAAAAMMJJ(regle.du), let au = dateAAAAMMJJ(regle.au) else {
                 if regle.du == nil && regle.au == nil { return fini(.nonRespectee, etiq: "fermée") }
                 return fini(.aVerifierSurPlace)
             }
-            if ctx.date >= du && ctx.date < au.addingTimeInterval(unJour) {
+            if aujourdhui >= du && aujourdhui < au.addingTimeInterval(unJour) {
                 reouverture = au.addingTimeInterval(unJour)
                 return fini(.nonRespectee, etiq: "fermée")
             }
@@ -478,10 +485,10 @@ public struct MoteurRegles: ServiceRegles {
         case "quota_jour":
             let total = regle.valeur["total"]?.nombre ?? regle.valeur["nombre"]?.nombre
             guard let total, !fiche, let espece = ctx.espece else { return fini(.respectee) }
-            let jour = Calendar.utcGregorien
+            let jour = Self.calendrierParis
             let gardees = ctx.prises.filter { $0.gardee && !$0.estDeclaree && !$0.exemple && jour.isDate($0.date, inSameDayAs: ctx.date) }
             let dansRegle = gardees.filter { vise(regle.especes, completer($0.espece)) }
-            ligne.phrase += " (déjà \(dansRegle.count) gardé\(dansRegle.count > 1 ? "s" : "") aujourd'hui)"
+            ligne.phrase += " (déjà \(dansRegle.count) aujourd'hui)"
             if Double(dansRegle.count) >= total { return fini(.nonRespectee) }
             if let dont = regle.valeur["dont_brochet"]?.nombre, completer(espece).id == "brochet" || completer(espece).codeSandre == "2151" {
                 let brochets = dansRegle.filter { completer($0.espece).id == "brochet" || completer($0.espece).codeSandre == "2151" }
@@ -507,12 +514,29 @@ public struct MoteurRegles: ServiceRegles {
             return fini(.nonRespectee)
         case "remise_eau":
             return fini(.aVerifierSurPlace)
+        case "carpe_nuit" where !eauConvient(regle, lieu: ctx.lieu):
+            // Règle visant les cours d'eau, pêcheur sur un plan d'eau, « autre » ou une eau inconnue : on ne l'applique pas.
+            return fini(.aVerifierSurPlace)
         case "consommation", "transport_vivant", "mode_peche", "carpe_nuit", "limite_eau_douce", "autre":
-            // Information : la ligne montre la règle, elle ne change pas la consigne.
-            return fini(.respectee)
+            // Information (interdiction ou obligation à appliquer) : jamais « respectée », ne change pas la consigne.
+            return fini(.information)
         default:
             return fini(.aVerifierSurPlace)
         }
+    }
+
+    /// Une règle de département dont le lieu ne vise que les cours d'eau ne vaut que sur une rivière.
+    private func eauConvient(_ r: RegleDonnee, lieu: Lieu) -> Bool {
+        guard r.portee?.niveau == "departement" else { return true }
+        let l = (r.portee?.lieu ?? "").lowercased().replacingOccurrences(of: "’", with: "'")
+        guard l.contains("cours d'eau"), !l.contains("plan d'eau"), !l.contains("lac") else { return true }
+        return lieu.eau?.type == .riviere
+    }
+
+    /// Date de lecture d'une règle : la plus ancienne de ses textes, sinon celle de sa source.
+    private func dateLecture(_ r: RegleDonnee, fichier: FichierRegles) -> Date? {
+        let lue = r.textes.compactMap { fichier.textes[$0]?.luLe }.compactMap { dateAAAAMMJJ($0) }.min()
+        return lue ?? dateAAAAMMJJ(r.source?.luLe)
     }
 
     private func ligneDeBase(_ r: RegleDonnee, fichier: FichierRegles, etat: EtatLigne) -> LigneControle {
@@ -568,23 +592,63 @@ public struct MoteurRegles: ServiceRegles {
         }
     }
 
+    /// Calendrier de Paris : le « aujourd'hui » du quota et des ouvertures (une prise à 00 h 30 à Paris est du nouveau jour).
+    static let calendrierParis: Calendar = {
+        var c = Calendar(identifier: .gregorian)
+        c.timeZone = TimeZone(identifier: "Europe/Paris") ?? TimeZone(secondsFromGMT: 3600)!
+        return c
+    }()
+
+    /// Le jour de Paris de cette date, ramené à minuit UTC pour se comparer aux dates « AAAA-MM-JJ » des règles.
+    static func jourDeParis(_ d: Date) -> Date {
+        let c = calendrierParis.dateComponents([.year, .month, .day], from: d)
+        return Calendar.utcGregorien.date(from: c) ?? d
+    }
+
     private func jjmmaaaa(_ d: Date) -> String {
         let c = Calendar.utcGregorien.dateComponents([.day, .month, .year], from: d)
         return "\(c.day ?? 0)/\(c.month ?? 0)/\(c.year ?? 0)"
+    }
+
+    /// Sources du socle national par identifiant de texte, avec la plus ancienne date de lecture ; `repli` (lu le 16/10/2026)
+    /// si le fichier national n'est pas chargé.
+    private func sourcesNationales(_ ids: [String], repli: [SourceRegle]) -> ([SourceRegle], Date?) {
+        if let national = chargeur.fichier("national") {
+            let textes = ids.compactMap { national.textes[$0] }
+            if textes.count == ids.count {
+                let sources = textes.map { SourceRegle(titre: $0.titre ?? $0.id, url: $0.url) }
+                return (sources, textes.compactMap { dateAAAAMMJJ($0.luLe) }.min())
+            }
+        }
+        return (repli, dateAAAAMMJJ("2026-10-16"))
     }
 
     /// Lignes qui tiennent à l'espèce elle-même (statut de `especes.json`, anguille sans stade).
     private func lignesDEspece(_ espece: Espece) -> [LigneControle] {
         var lignes: [LigneControle] = []
         if espece.id == "anguille" {
+            let (sources, lecture) = sourcesNationales(
+                ["t17", "t18"], repli: [
+                    SourceRegle(titre: "Arrêté du 12 juin 2026 relatif à la fermeture anticipée de la pêche de loisir en eau douce de l'anguille d'Europe",
+                                url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000054245499"),
+                    SourceRegle(titre: "Arrêté du 14 mars 2024 relatif aux périodes de pêche de l'anguille européenne (pêche de loisir)",
+                                url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000049343501")])
             lignes.append(LigneControle(type: .periode, etat: .nonRespectee,
-                                        phrase: "Stade de l'anguille non précisé : relâche-la.", sources: []))
+                                        phrase: "Stade de l'anguille non précisé : relâche-la.", sources: sources, dateLecture: lecture))
         }
         if let e = especes.first(where: { $0.espece.id == espece.id }),
            e.statuts.contains(.protegee) || e.statuts.contains(.toujoursRelachee) {
+            var (sources, lecture) = sourcesNationales(
+                ["t19"], repli: [
+                    SourceRegle(titre: "Arrêté du 20 décembre 2004 relatif à la protection de l'espèce Acipenser sturio (esturgeon)",
+                                url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000259841")])
+            // Arrêté du 8 décembre 1988 (liste des poissons protégés), lu le 16/10/2026 (même source que les conseils).
+            sources.append(SourceRegle(titre: "Arrêté du 8 décembre 1988 fixant la liste des espèces de poissons protégées",
+                                       url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000327373"))
+            lecture = [lecture, dateAAAAMMJJ("2026-10-16")].compactMap { $0 }.max()
             lignes.append(LigneControle(type: .periode, etat: .nonRespectee,
                                         phrase: "Espèce protégée ou toujours relâchée : remise à l'eau obligatoire.",
-                                        sources: [SourceRegle(titre: "Liste des espèces (statut)")]))
+                                        sources: sources, dateLecture: lecture))
         }
         return lignes
     }
@@ -618,15 +682,18 @@ public struct MoteurRegles: ServiceRegles {
         guard estDeNuit(ctx.date, departements: deps) else { return nil }
         let national = chargeur.fichier("national")
         var codeSource: SourceRegle?
+        var codeLecture: Date?
         if let national, let t = national.textes.values.first(where: { ($0.titre ?? "").contains("R436-14") }) {
             codeSource = SourceRegle(titre: t.titre ?? "R436-14", url: t.url)
+            codeLecture = dateAAAAMMJJ(t.luLe)
         }
         for dep in deps {
             guard let local = chargeur.fichier(dep) else { continue }
             for interne in calcul.internes {
                 guard let id = interne.regleId, interne.ligne.raison == nil, interne.ligne.etat != .aVerifierSurPlace,
                       let r = local.regles.first(where: { $0.id == id }), r.type == "carpe_nuit", r.statut != "incertain",
-                      ["cours_eau", "plan_eau", "troncon"].contains(r.portee?.niveau ?? "") else { continue }
+                      ["departement", "cours_eau", "plan_eau", "troncon"].contains(r.portee?.niveau ?? ""),
+                      eauConvient(r, lieu: ctx.lieu) else { continue }
                 // « interdits » apparaît aussi dans les textes qui autorisent (bateaux amorceurs, captivité) :
                 // on ne le cherche que dans la phrase, pas dans le détail de la valeur.
                 let texte = ((r.valeur["texte"]?.texte ?? "") + " " + r.phrase).lowercased()
@@ -635,11 +702,12 @@ public struct MoteurRegles: ServiceRegles {
                 var sources = r.textes.compactMap { sourceDe(id: $0, fichier: local) }
                 if let codeSource, !sources.contains(codeSource) { sources.append(codeSource) }
                 return LigneControle(type: .nuit, etat: .nonRespectee, phrase: Self.phraseCarpeAutorisee,
-                                     sources: sources, citation: r.citation)
+                                     sources: sources, citation: r.citation,
+                                     dateLecture: dateLecture(r, fichier: local) ?? codeLecture)
             }
         }
         return LigneControle(type: .nuit, etat: .aVerifierSurPlace, phrase: Self.phraseCarpeAVerifier,
-                             sources: codeSource.map { [$0] } ?? [])
+                             sources: codeSource.map { [$0] } ?? [], dateLecture: codeLecture)
     }
 
     // MARK: Consigne

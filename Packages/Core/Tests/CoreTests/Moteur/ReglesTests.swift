@@ -232,7 +232,7 @@ struct ReglesTests {
         let r = regles.controle(espece: Espece(id: "ecrevisse-signal"), tailleCm: 10, mesure: .toise, date: quinzeOctobre, lieu: lieuCharenton, prisesDuJour: [])
         let l = ligne(r, .transportVivant)
         #expect(l?.phrase.contains("transport vivant interdit") == true)
-        #expect(l?.etat == .respectee)
+        #expect(l?.etat == .information)
     }
 
     @Test("Hors de France : aucune règle française, jamais un feu vert")

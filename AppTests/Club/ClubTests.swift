@@ -51,4 +51,17 @@ struct ClubTests {
         #expect(LiensOfficiels.vigicrues.host == "www.vigicrues.gouv.fr")
         #expect(LiensOfficiels.carteDePeche.host == "www.cartedepeche.fr")
     }
+
+    @Test func laFederationPorteLeNomDuDepartementSansNomInvente() {
+        var liens = LiensClub()
+        #expect(liens.libelleFederation == nil)
+        liens.nomDepartement = "  "
+        #expect(liens.libelleFederation == nil)
+        liens.nomDepartement = "Val-de-Marne"
+        #expect(liens.libelleFederation == "Fédération de Val-de-Marne")
+    }
+
+    @Test func uneAdresseVideCacheLesBoutonsContact() {
+        #expect(ContactClub.courriel(objet: "x") == nil || !ContactClub.adresse.isEmpty)
+    }
 }

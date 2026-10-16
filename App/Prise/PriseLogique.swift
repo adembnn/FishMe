@@ -109,6 +109,9 @@ enum PriseLogique {
     enum VerdictAffiche: Equatable {
         /// Taille au-dessus de la taille minimale, sur toute la fourchette.
         case tailleLegale
+        /// Taille au-dessus de la maille, mais une ligne pertinente reste « à vérifier » (tronçon, réserve…) ou la
+        /// consommation est interdite : titre neutre, jamais de coche verte.
+        case tailleRespecteeAVerifier
         /// Taille sous la taille minimale, sur toute la fourchette.
         case sousLaMaille
         /// Une autre règle n'est pas respectée (période, quota, réserve…) : « Relâche-la ».
@@ -127,9 +130,62 @@ enum PriseLogique {
         let tailles = resultats.map { r in r.lignes.first(where: { $0.type == .taille }) }
         guard tailles.allSatisfy({ $0 != nil }) else { return .sansRegleDeTaille }
         let etats = tailles.compactMap { $0?.etat }
-        if etats.allSatisfy({ $0 == .respectee }) { return .tailleLegale }
+        if etats.allSatisfy({ $0 == .respectee }) {
+            return lignesQuiBloquentLeVert(resultats).isEmpty ? .tailleLegale : .tailleRespecteeAVerifier
+        }
         if etats.allSatisfy({ $0 == .nonRespectee }) { return .sousLaMaille }
         return .aVerifier
+    }
+
+    /// Types de règles qui interdisent ou encadrent : jamais une coche verte, toujours une ligne visible.
+    static func estUneInterdiction(_ type: TypeRegle) -> Bool {
+        type == .consommation || type == .modeDePeche || type == .nuit
+    }
+
+    /// Lignes (hors taille) qui empêchent la coche verte : « à vérifier » quelle que soit la raison, ou consommation interdite.
+    static func lignesQuiBloquentLeVert(_ resultats: [ResultatControle]) -> [LigneControle] {
+        sansDoublon(resultats.flatMap { $0.lignes }.filter { l in
+            l.type != .taille && (l.etat == .aVerifierSurPlace || l.type == .consommation)
+        })
+    }
+
+    /// Lignes montrées sous le titre, hors du bloc replié : celles qui bloquent le vert et les règles d'interdiction.
+    static func lignesVisibles(_ resultats: [ResultatControle]) -> [LigneControle] {
+        sansDoublon(resultats.flatMap { $0.lignes }.filter { l in
+            l.type != .taille && (l.etat == .aVerifierSurPlace || estUneInterdiction(l.type))
+        })
+    }
+
+    private static func sansDoublon(_ lignes: [LigneControle]) -> [LigneControle] {
+        var vues = Set<LigneControle>()
+        return lignes.filter { vues.insert($0).inserted }
+    }
+
+    /// Présentation d'une ligne : décidée sur le type, pas seulement sur l'état.
+    enum StyleLigne: Equatable {
+        case coche, calendrier, info, aVerifier, alerte
+    }
+
+    static func styleDeLigne(type: TypeRegle, etat: EtatLigne) -> StyleLigne {
+        if etat == .nonRespectee { return .alerte }
+        if estUneInterdiction(type) { return etat == .aVerifierSurPlace ? .aVerifier : .info }
+        switch etat {
+        case .respectee: return type == .periode ? .calendrier : .coche
+        case .aVerifierSurPlace: return .aVerifier
+        case .nonRespectee: return .alerte
+        case .information: return .info
+        }
+    }
+
+    /// Le choix de lieu (tronçons confirmés) enregistré pour le coin de la prise : la station la plus proche, à 1,5 km au plus,
+    /// qui a un choix gardé. `nil` sinon : la prise garde alors le lieu calculé sans choix.
+    static func choixEnregistre(pres c: Coordonnee, stations: [StationOFB], lire: (String) -> ChoixLieu?) -> ChoixLieu? {
+        stations
+            .map { ($0, distanceMetres($0.coordonnee, c)) }
+            .filter { $0.1 <= 1500 }
+            .sorted { $0.1 < $1.1 }
+            .lazy.compactMap { lire($0.0.codeStation) }
+            .first
     }
 
     /// Avant confirmation de l'espèce : seulement la consigne « relâche-la ».

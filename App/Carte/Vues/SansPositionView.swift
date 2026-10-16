@@ -76,7 +76,7 @@ struct SansPositionView: View {
                     }
                     .buttonStyle(.plain)
                 }
-                Text("Sans position, les règles, les relevés OFB et ton spot marchent pareil.")
+                Text("Sans position, les règles, les relevés de l'Office français de la biodiversité (OFB) et ton spot marchent pareil.")
                     .font(Police.legende)
                     .foregroundStyle(Palette.encreDouce)
                     .padding(.horizontal, Espace.s)

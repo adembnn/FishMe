@@ -117,6 +117,22 @@ struct PescedexView: View {
                     }
                     .buttonStyle(.plain)
                 }
+                if PescedexVide.estVide(modele.emplacements) {
+                    VStack(spacing: Espace.s) {
+                        Image(systemName: "fish")
+                            .font(Police.taille(40, .bold))
+                            .foregroundStyle(Palette.marine)
+                            .accessibilityHidden(true)
+                        Text(PescedexVide.texte)
+                            .font(Police.corps)
+                            .foregroundStyle(Palette.encre)
+                            .multilineTextAlignment(.center)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(Espace.l)
+                    .tuileFishMe()
+                    .accessibilityElement(children: .combine)
+                }
                 section("Trouvées", trouvees)
                 section("Déclarées", declarees, note: "Sans photo. Pêches-en un pour en faire une vraie carte.")
                 section("À trouver", aTrouver)
@@ -352,5 +368,13 @@ struct FicheEspeceView: View {
         .padding(Espace.l)
         .frame(maxWidth: .infinity, alignment: .leading)
         .tuileFishMe(rayon: Rayon.l)
+    }
+}
+
+/// Pescedex sans aucune carte (ni vraie, ni déclarée) : un état vide court au lieu du silence.
+enum PescedexVide {
+    static let texte = "Ta première prise ouvrira ton Pescedex"
+    static func estVide(_ emplacements: [Emplacement]) -> Bool {
+        !emplacements.contains { $0.carte != nil }
     }
 }

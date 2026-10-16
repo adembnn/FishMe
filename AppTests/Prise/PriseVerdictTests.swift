@@ -59,4 +59,52 @@ struct PriseVerdictTests {
         #expect(m.etape == .resultat)
         #expect(m.verdictTaille != nil)
     }
+
+    private func avec(_ lignes: [LigneControle]) -> [ResultatControle] {
+        [ResultatControle(lignes: [LigneControle(type: .taille, etat: .respectee, phrase: "t")] + lignes, consigne: .verifieLArrete)]
+    }
+
+    @Test func uneLigneAVerifierEmpecheLaCocheVerte() {
+        let troncon = LigneControle(type: .reserve, etat: .aVerifierSurPlace, raison: .troncon, phrase: "no-kill ?")
+        let r = avec([troncon])
+        #expect(PriseLogique.verdict(resultats: r) == .tailleRespecteeAVerifier)
+        #expect(PriseLogique.lignesVisibles(r) == [troncon])
+    }
+
+    @Test func consommationInterditeNEstJamaisVerteNiCacheeNiCocheVerte() {
+        let conso = LigneControle(type: .consommation, etat: .respectee, phrase: "Consommation interdite")
+        let r = avec([conso])
+        #expect(PriseLogique.verdict(resultats: r) == .tailleRespecteeAVerifier)
+        #expect(PriseLogique.lignesVisibles(r) == [conso])
+        #expect(PriseLogique.styleDeLigne(type: .consommation, etat: .respectee) == .info)
+        #expect(PriseLogique.styleDeLigne(type: .modeDePeche, etat: .respectee) == .info)
+        #expect(PriseLogique.styleDeLigne(type: .nuit, etat: .respectee) == .info)
+        #expect(PriseLogique.styleDeLigne(type: .consommation, etat: .nonRespectee) == .alerte)
+        #expect(PriseLogique.styleDeLigne(type: .taille, etat: .respectee) == .coche)
+    }
+
+    @Test func sansLigneAVerifierLaCocheVerteResteEtLesRegleSimplesNeSontPasMontrees() {
+        let r = avec([LigneControle(type: .quota, etat: .respectee, phrase: "q")])
+        #expect(PriseLogique.verdict(resultats: r) == .tailleLegale)
+        #expect(PriseLogique.lignesVisibles(r).isEmpty)
+    }
+
+    @Test func leTronconConfirmeDuCoinServAPriseSiLaStationEstAMoinsDe1500m() {
+        let proche = StationOFB(codeStation: "A", eau: nil, departement: Departement(code: "94"),
+                                coordonnee: Coordonnee(latitude: 48.8, longitude: 2.4), especes: [])
+        let loin = StationOFB(codeStation: "B", eau: nil, departement: Departement(code: "94"),
+                              coordonnee: Coordonnee(latitude: 48.9, longitude: 2.4), especes: [])
+        let choix = ChoixLieu(tronconsConfirmes: ["Aval du barrage"])
+        let lire: (String) -> ChoixLieu? = { $0 == "A" || $0 == "B" ? choix : nil }
+        let ici = Coordonnee(latitude: 48.801, longitude: 2.4)
+        #expect(PriseLogique.choixEnregistre(pres: ici, stations: [loin, proche], lire: lire) == choix)
+        #expect(PriseLogique.choixEnregistre(pres: ici, stations: [loin], lire: lire) == nil)
+        #expect(PriseLogique.choixEnregistre(pres: ici, stations: [proche], lire: { _ in nil }) == nil)
+    }
+
+    @Test func uneLigneInformationNEstJamaisVerte() {
+        #expect(PriseLogique.styleDeLigne(type: .consommation, etat: .information) == .info)
+        #expect(PriseLogique.styleDeLigne(type: .transportVivant, etat: .information) == .info)
+        #expect(PriseLogique.styleDeLigne(type: .autre, etat: .information) == .info)
+    }
 }

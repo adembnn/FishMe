@@ -39,7 +39,7 @@ enum JetonAmis {
     }
 
     nonisolated static func date(_ d: Date) -> String {
-        d.formatted(.dateTime.day().month(.abbreviated).year().locale(Locale(identifier: "fr_FR")))
+        d.formatted(.dateTime.month(.wide).year().locale(Locale(identifier: "fr_FR")))
     }
 }
 
