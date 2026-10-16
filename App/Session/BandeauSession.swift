@@ -8,12 +8,8 @@ struct BoutonCommencerSession: View {
     var body: some View {
         Button(action: action) {
             Label("Commencer une session", systemImage: "figure.fishing")
-                .font(JetonsSession.police(.headline))
-                .frame(maxWidth: .infinity, minHeight: 56)
         }
-        .buttonStyle(.borderedProminent)
-        .tint(JetonsSession.vert)
-        .controlSize(.large)
+        .buttonStyle(.principal)
     }
 }
 
@@ -42,38 +38,40 @@ struct BandeauSession<LigneConditions: View>: View {
     }
 
     private func contenu(_ session: SessionEnCours, maintenant: Date) -> some View {
-        VStack(spacing: 10) {
-            HStack(alignment: .firstTextBaseline) {
-                VStack(alignment: .leading, spacing: 2) {
-                    if let legale = session.finLegale {
-                        Button { explicationFin.toggle() } label: {
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text("Fin légale \(Self.heure(legale))")
-                                    .font(.system(.title, design: .rounded).weight(.heavy).monospacedDigit())
-                                    .minimumScaleFactor(0.6)
-                                    .lineLimit(1)
-                                if legale > maintenant {
-                                    Text("encore \(Self.reste(legale.timeIntervalSince(maintenant)))")
-                                        .font(JetonsSession.police(.headline))
-                                }
-                            }
-                            .frame(minHeight: 44, alignment: .leading)
+        // P14 C « Sujet » : le chrono en grand, la fin légale dessous, puis les prises et un seul bouton principal.
+        VStack(spacing: Espace.m) {
+            Text(Self.formater(moteur.duree(a: maintenant)))
+                .font(Police.taille(64, .heavy).monospacedDigit())
+                .foregroundStyle(Palette.encre)
+                .minimumScaleFactor(0.5)
+                .lineLimit(1)
+            if let legale = session.finLegale {
+                Button { explicationFin.toggle() } label: {
+                    VStack(spacing: Espace.xs) {
+                        Text("Fin légale \(Self.heure(legale))")
+                            .font(Police.sousTitre.monospacedDigit())
+                            .foregroundStyle(Palette.encreDouce)
+                        if legale > maintenant {
+                            Text("encore \(Self.reste(legale.timeIntervalSince(maintenant)))")
+                                .font(Police.legende)
+                                .foregroundStyle(Palette.encreDouce)
                         }
-                        .buttonStyle(.plain)
-                        .accessibilityHint("Touche pour lire d'où vient cette heure")
                     }
-                    Text(Self.formater(moteur.duree(a: maintenant)))
-                        .font(JetonsSession.police(.subheadline).monospacedDigit())
+                    .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
                 }
-                Spacer(minLength: 8)
-                Text(moteur.nombrePrises == 0 ? "0 prise" : "\(moteur.nombrePrises) prise\(moteur.nombrePrises > 1 ? "s" : "")")
-                    .font(JetonsSession.police(.subheadline))
+                .buttonStyle(.plain)
+                .accessibilityHint("Touche pour lire d'où vient cette heure")
             }
             if explicationFin, let legale = session.finLegale {
                 Text(Self.explication(legale))
-                    .font(JetonsSession.police(.footnote))
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(Police.legende)
+                    .foregroundStyle(Palette.encreDouce)
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity)
             }
+            Text(moteur.nombrePrises == 0 ? "0 prise" : "\(moteur.nombrePrises) prise\(moteur.nombrePrises > 1 ? "s" : "")")
+                .font(Police.detail)
+                .foregroundStyle(Palette.encreDouce)
             ForEach(session.messages, id: \.self) { AvisSession(texte: $0) }
             if moteur.quotaAtteint {
                 AvisSession(texte: "Quota du jour atteint")
@@ -83,18 +81,15 @@ struct BandeauSession<LigneConditions: View>: View {
             }
             Button(action: ajouterPrise) {
                 Label("Ajouter une prise", systemImage: "camera.fill")
-                    .font(JetonsSession.police(.title3))
-                    .frame(maxWidth: .infinity, minHeight: 56)
             }
-            .buttonStyle(.borderedProminent)
-            .tint(JetonsSession.vert)
-            Button("Terminer", role: .cancel) { moteur.terminer() }
-                .font(JetonsSession.police(.subheadline))
-                .frame(minHeight: 44)
+            .buttonStyle(.principal)
+            Button("Terminer la session", role: .cancel) { moteur.terminer() }
+                .font(Police.corps)
+                .foregroundStyle(Palette.marine)
+                .frame(minHeight: Gabarit.zoneTactile)
         }
-        .foregroundStyle(JetonsSession.marine)
-        .padding(16)
-        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 28, style: .continuous))
+        .padding(Espace.l)
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
         .accessibilityElement(children: .contain)
         .onChange(of: maintenant) { _, _ in moteur.verifierFin() }
     }
@@ -135,9 +130,9 @@ struct AvisSession: View {
 
     var body: some View {
         Text(texte)
-            .font(JetonsSession.police(.subheadline))
-            .foregroundStyle(JetonsSession.alerte)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .font(Police.detail)
+            .foregroundStyle(Palette.alerte)
+            .frame(maxWidth: .infinity, alignment: .center)
     }
 }
 
