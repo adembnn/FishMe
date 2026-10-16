@@ -52,7 +52,7 @@ struct CarteRevelee: Identifiable {
 // MARK: - Chargement hors du fil principal
 
 /// Ce qui est lourd à construire au lancement : le moteur de Core (règles, espèces, stations) et le conteneur SwiftData.
-struct Chargement: Sendable {
+nonisolated struct Chargement: Sendable {
     let core: MoteurCore
     let conteneur: ModelContainer?
 
@@ -580,7 +580,6 @@ private struct RacineContenu: View {
             services: app.servicesCarte,
             spotFixe: app.moteur.spotGratuit,
             sessionsTerminees: app.moteur.sessionsTerminees,
-            sessionEnCours: app.moteur.enCours != nil,
             bandeauHaut: AnyView(VigilanceEmplacement(app: app)),
             bandeauSession: AnyView(
                 BandeauSession(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() }) {
