@@ -447,6 +447,11 @@ final class ParcoursApp {
     }
 
     /// « Terminer » de la fin de session : acquitte la fin, puis ouvre le paywall qui se ferme à la 1re session.
+    /// Sortie sans prise : la photo de soi qu'on ajoute à la carte « Eau calme » (sans GPS, écrite à côté des photos de prises).
+    func ajouterPhotoSortie(_ data: Data, pour id: UUID) {
+        Task { _ = await ecrire { try await $0.ajouterPhotoBredouille(id: id, photo: data) } }
+    }
+
     func finTerminee() {
         guard let fin = finAffichee else { courant = nil; return }
         if moteur.derniereFin == fin { moteur.acquitterFin() }
@@ -633,6 +638,7 @@ private struct RacineContenu: View {
     @AppStorage("demo.communaute") private var demo = false
     @AppStorage("profil.nom") private var nomProfil = ""
     @State private var profilOuvert = false
+    @State private var aquariumOuvert = false
     /// Vrai de l'apparition de la couverture de session jusqu'à la fin de son retrait.
     /// P03 « Où pêches-tu ? » : montré une seule fois, avant la première demande de position.
     @AppStorage("premierLancement.ouPechesTuVu") private var ouPechesTuVu = false
@@ -768,10 +774,18 @@ private struct RacineContenu: View {
                     commentLaPecher: { espece in AnyView(CommentLaPecherEmplacement(app: app, espece: espece)) },
                     tesConditions: { AnyView(TesConditionsEmplacement(app: app)) },
                     meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }),
+                voirAquarium: { aquariumOuvert = true },
                 photographier: { app.ajouterPrise() },
                 declarer: { app.montrer(.tunnel) },
                 voirAmis: { app.onglet = .club },
                 changerZone: { app.onglet = .carte })
+            .fullScreenCover(isPresented: $aquariumOuvert) {
+                AquariumView(modele: modele, fermer: { aquariumOuvert = false },
+                             emplacements: EmplacementsExternes(
+                                commentLaPecher: { espece in AnyView(CommentLaPecherEmplacement(app: app, espece: espece)) },
+                                tesConditions: { AnyView(TesConditionsEmplacement(app: app)) },
+                                meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }))
+            }
         } else {
             ContentUnavailableView("Pescedex", systemImage: "square.grid.2x2.fill",
                                    description: Text("Tes cartes ne peuvent pas s'ouvrir pour l'instant."))
@@ -900,7 +914,8 @@ private struct RacineContenu: View {
 
         case .finSession:
             if let fin = app.finAffichee {
-                FinSessionView(fin: fin, infosEspece: app.infosEspece(), lieu: app.finLieu, surTerminer: { app.finTerminee() })
+                FinSessionView(fin: fin, infosEspece: app.infosEspece(), lieu: app.finLieu, surTerminer: { app.finTerminee() },
+                               surPhotoSortie: fin.sortie.prises.isEmpty ? { data in app.ajouterPhotoSortie(data, pour: fin.sortie.id) } : nil)
                     .interactiveDismissDisabled()
             }
 

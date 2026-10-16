@@ -73,6 +73,8 @@ nonisolated struct CarteBredouille: Sendable, Equatable, Identifiable {
     var lieuFlou: String?
     /// Conditions du départ de la session, si L12 en a un instantané.
     var conditions: Conditions?
+    /// La photo de la sortie (nettoyée, sans GPS), si le pêcheur en a ajouté une. `nil` : la carte reste belle sans photo.
+    var photoURL: URL? = nil
 
     var dureeSecondes: Double? { fin.map { $0.timeIntervalSince(debut) } }
 }

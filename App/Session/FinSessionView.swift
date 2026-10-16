@@ -42,10 +42,15 @@ struct FinSessionView: View {
     let surFermer: (() -> Void)?
     /// Poids estimé d'après la formule longueur-poids de Core (`ServiceEspeces.poidsEstime`). Par défaut : aucun poids.
     let poidsEstime: (Espece, Double) -> PoidsEstime?
+    /// Photo de soi pour la carte « Eau calme » (sortie sans prise). `nil` : le bouton n'est pas montré.
+    /// À brancher dans RootView : enregistrer les octets avec `DepotCartes.ajouterPhotoBredouille(id: sortie.id, photo:)`.
+    let surPhotoSortie: ((Data) -> Void)?
 
     init(fin: FinDeSession, infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, lieu: String? = nil,
          conseil: String? = nil, surTerminer: @escaping () -> Void, surFermer: (() -> Void)? = nil,
-         poidsEstime: @escaping (Espece, Double) -> PoidsEstime? = { _, _ in nil }) {
+         poidsEstime: @escaping (Espece, Double) -> PoidsEstime? = { _, _ in nil },
+         surPhotoSortie: ((Data) -> Void)? = nil) {
+        self.surPhotoSortie = surPhotoSortie
         self.poidsEstime = poidsEstime
         self.conseil = conseil
         self.fin = fin
@@ -134,6 +139,10 @@ struct FinSessionView: View {
             } else {
                 if let conditions { ligneConditions(conditions, bordure: false) } else { pasDeReleve(bordure: false) }
                 bredouille
+                if let surPhotoSortie {
+                    AjoutPhotoSortieView(surPhoto: surPhotoSortie)
+                        .padding(.bottom, Espace.s)
+                }
             }
             if let message = fin.message {
                 Text(message)

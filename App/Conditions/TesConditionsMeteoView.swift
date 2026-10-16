@@ -1,22 +1,20 @@
 import SwiftUI
 import Core
 
-/// « Tes conditions » : la météo du spot courant (WeatherKit, plus Hub'Eau pour la rivière).
-/// Rien n'est inventé : sans spot, un message ; sans réseau, la dernière lecture marquée « sans réseau » ;
-/// sans aucune lecture, « pas de lecture » et un bouton pour réessayer.
+/// « Tes conditions » : la météo du spot courant, dans le style de l'app Météo d'Apple (une seule page qui défile).
+/// Rien n'est inventé : une donnée absente n'a pas de carte. Sans lecture (WeatherKit muet), le mode démo
+/// (`demo.communaute`) montre une lecture d'exemple annoncée comme telle ; hors démo, « pas de lecture » et un bouton pour réessayer.
 /// Le gating Pro arrive par `porte` (le verdict de `peutUtiliser` de `Core`, déjà résolu pour ce spot), sans `ParcoursApp`.
 struct TesConditionsMeteoView: View {
-    private enum Onglet: Hashable { case maintenant, septJours }
-
     /// Le centre du spot courant, ou `nil` quand aucun spot n'est choisi.
     let centre: Coordonnee?
     @ObservedObject var conditions: ConditionsDuSpot
     @ObservedObject var marque: StockageMarque
     let porte: PorteConditions
 
+    @AppStorage("demo.communaute") private var demo = false
     @State private var lecture: LectureConditions?
     @State private var essaiFait = false
-    @State private var onglet: Onglet = .maintenant
     @State private var courbe = false
 
     init(centre: Coordonnee?, conditions: ConditionsDuSpot, marque: StockageMarque, porte: PorteConditions) {
@@ -26,40 +24,53 @@ struct TesConditionsMeteoView: View {
         self.porte = porte
     }
 
+    /// La lecture réelle, ou en démo l'exemple quand il n'y en a pas.
+    private var affichee: (lecture: LectureConditions, exemple: Bool)? {
+        if let lecture { return (lecture, false) }
+        if demo && (centre == nil || essaiFait) { return (LectureExemple.creer(), true) }
+        return nil
+    }
+
     var body: some View {
-        VStack(alignment: .leading, spacing: Espace.m) {
-            Text("Tes conditions").font(Police.titre).foregroundStyle(Palette.encre)
-                .padding(.top, Gabarit.zoneTactile + Espace.bord)
-                .padding(.horizontal, Espace.bord)
-                .accessibilityAddTraits(.isHeader)
-            if centre == nil {
-                videSansSpot
-            } else if let lecture {
-                if let alerte = lecture.alerte {
-                    BandeauVigilanceView(alerte: alerte, lecture: lecture, marque: marque)
-                        .padding(.horizontal, Espace.bord)
-                }
-                Picker("Période", selection: $onglet) {
-                    Text("Maintenant").tag(Onglet.maintenant)
-                    Text("7 jours").tag(Onglet.septJours)
-                }
-                .pickerStyle(.segmented)
-                .padding(.horizontal, Espace.bord)
-                contenu(lecture)
-            } else if essaiFait {
-                ScrollView {
-                    VStack(spacing: Espace.l) {
-                        RangeeMaintenantVideView(reessayer: { Task { await lire(forcer: true) } })
-                        MarqueMeteoView(stockage: marque)
+        let maintenant = Date()
+        let vue = affichee
+        let point = vue.flatMap { FormatConditions.pointLePlusProche($0.lecture.meteo, de: maintenant) }
+        let nuit = vue.map { StyleMeteo.estNuit(maintenant, conditions: $0.lecture.conditions) } ?? false
+        let fond = StyleMeteo.fond(codeTemps: point?.codeTemps ?? 3, nuit: nuit)
+
+        ZStack(alignment: .top) {
+            LinearGradient(colors: fond, startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+                .animation(.easeInOut(duration: 0.6), value: point?.codeTemps)
+            ScrollView {
+                VStack(spacing: Espace.m) {
+                    if let vue, let point {
+                        page(vue.lecture, exemple: vue.exemple, point: point, maintenant: maintenant)
+                    } else if centre == nil {
+                        videSansSpot
+                    } else if essaiFait {
+                        VStack(spacing: Espace.l) {
+                            RangeeMaintenantVideView(reessayer: { Task { await lire(forcer: true) } })
+                            MarqueMeteoView(stockage: marque)
+                        }
+                        .padding(.top, 120)
+                    } else {
+                        ProgressView("Lecture de la météo").tint(.white).frame(maxWidth: .infinity).padding(.top, 140)
                     }
-                    .padding(Espace.bord)
                 }
-            } else {
-                ProgressView("Lecture de la météo").frame(maxWidth: .infinity).padding(Espace.bord)
+                .padding(.horizontal, Espace.bord)
+                .padding(.bottom, Espace.xl)
             }
-            Spacer(minLength: 0)
+            .scrollIndicators(.hidden)
         }
-        .background(Palette.surface)
+        .overlay(alignment: .topLeading) {
+            BoutonRond(role: .fermer, rendu: .verre)
+                .padding(.top, Espace.s).padding(.leading, Espace.bord)
+        }
+        .foregroundStyle(.white)
+        .fontDesign(.default)
+        .fontWeight(.regular)
+        .preferredColorScheme(.dark)
         .task(id: centre) {
             guard let c = centre else { lecture = nil; return }
             lecture = conditions.derniere(spot: c)
@@ -71,52 +82,112 @@ struct TesConditionsMeteoView: View {
         .accessibilityIdentifier("tes-conditions-meteo")
     }
 
-    @ViewBuilder private func contenu(_ lecture: LectureConditions) -> some View {
-        switch onglet {
-        case .maintenant:
-            ScrollView {
-                if porte.autorise(.meteoDuJour) {
-                    RangeeMaintenantView(lecture: lecture, marque: marque,
-                                         montrerRiviere: porte.autorise(.niveauEau),
-                                         ouvrirCourbe: porte.autorise(.courbeEtNormale)
-                                            ? { courbe = true } : { porte.ouvrirPaywall(.courbeEtNormale) },
-                                         enFeuille: true)
-                } else {
-                    VerrouPro(fonction: .meteoDuJour, titre: "Météo du moment", icone: "cloud.sun", porte: porte)
-                        .padding(Espace.bord)
-                }
-                if porte.autorise(.meteoDuJour) && !porte.autorise(.niveauEau) {
-                    VerrouPro(fonction: .niveauEau, titre: "Niveau de l'eau", icone: "water.waves", porte: porte)
-                        .padding(.horizontal, Espace.bord)
-                }
+    // MARK: la page
+
+    @ViewBuilder private func page(_ lecture: LectureConditions, exemple: Bool, point: PointMeteo, maintenant: Date) -> some View {
+        enTete(lecture, point: point, maintenant: maintenant)
+        if exemple {
+            Text("Données d'exemple (mode démo)")
+                .font(.system(.footnote, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+        }
+        if let alerte = lecture.alerte {
+            BandeauVigilanceView(alerte: alerte, lecture: lecture, marque: marque)
+        }
+        if porte.autorise(.meteoDuJour) {
+            CarteHoraireView(lecture: lecture, maintenant: maintenant)
+            jours(lecture, maintenant: maintenant)
+            tuiles(lecture, point: point, maintenant: maintenant)
+            riviere(lecture)
+        } else {
+            CarteVitree(titre: "Météo du moment", icone: "cloud.sun") {
+                VerrouPro(fonction: .meteoDuJour, titre: "Météo du moment", icone: "cloud.sun", porte: porte)
             }
-            .scrollIndicators(.hidden)
-        case .septJours:
-            if porte.autorise(.septJours) {
-                SeptJoursView(lecture: lecture, marque: marque)
+        }
+        if lecture.depuisCache {
+            Text("lu à \(FormatConditions.heure(lecture.lueLe)), sans réseau")
+                .font(.system(.footnote, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
+        }
+        // Marque Apple Weather et lien légal : obligatoires, toujours visibles en pied de page.
+        MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : "Hub’Eau")
+    }
+
+    private func enTete(_ lecture: LectureConditions, point: PointMeteo, maintenant: Date) -> some View {
+        let liste = StyleMeteo.jours(lecture)
+        let duJour = liste.first { Calendar.current.isDate($0.jour, inSameDayAs: maintenant) } ?? liste.first
+        let lieu = lecture.eau?.station.eau ?? lecture.eau?.station.nom ?? "Ton spot"
+        return VStack(spacing: 2) {
+            Text(lieu).font(.system(size: 30, weight: .regular)).lineLimit(1).minimumScaleFactor(0.6)
+            Text("\(FormatConditions.nombre(point.temperatureC))°")
+                .font(.system(size: 96, weight: .thin)).fontWeight(.thin).monospacedDigit()
+                .accessibilityIdentifier("temperature-maintenant")
+            Text(StyleMeteo.libelle(codeTemps: point.codeTemps))
+                .font(.system(size: 20, weight: .medium)).foregroundStyle(.white.opacity(0.85))
+            if let j = duJour {
+                Text("Max. \(FormatConditions.nombre(j.temperatureMaxC))°  Min. \(FormatConditions.nombre(j.temperatureMinC))°")
+                    .font(.system(size: 20, weight: .medium)).monospacedDigit()
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.top, Gabarit.zoneTactile + Espace.xl)
+        .padding(.bottom, Espace.m)
+        .accessibilityElement(children: .combine)
+    }
+
+    @ViewBuilder private func jours(_ lecture: LectureConditions, maintenant: Date) -> some View {
+        let liste = StyleMeteo.jours(lecture)
+        if porte.autorise(.septJours) {
+            if !liste.isEmpty { CarteSeptJoursView(jours: liste, aujourdhui: maintenant) }
+        } else {
+            CarteVitree(titre: "Prévisions sur 7 jours", icone: "calendar") {
+                VerrouPro(fonction: .septJours, titre: "7 jours", icone: "calendar", porte: porte)
+            }
+        }
+    }
+
+    /// Vent, pluie, pression en cartes carrées, deux par ligne. Pas de température ressentie : WeatherKit n'est lu que pour
+    /// la température réelle, et rien n'est calculé ici.
+    @ViewBuilder private func tuiles(_ lecture: LectureConditions, point: PointMeteo, maintenant: Date) -> some View {
+        let cumul = lecture.meteo.heures
+            .filter { $0.heure > maintenant.addingTimeInterval(-1800) && $0.heure <= maintenant.addingTimeInterval(24 * 3600) }
+            .map(\.pluieMm).reduce(0, +)
+        let aPluie = lecture.meteo.heures.contains { $0.heure > maintenant }
+        LazyVGrid(columns: [GridItem(.flexible(), spacing: Espace.m), GridItem(.flexible(), spacing: Espace.m)], spacing: Espace.m) {
+            CarteVentView(point: point)
+            if aPluie { CartePluieView(cumulMm: cumul) }
+            if point.pressionHPa > 0 {
+                CartePressionView(hPa: lecture.conditions.pressionHPa ?? point.pressionHPa,
+                                  tendance: lecture.conditions.tendancePressionHPa6h)
+            }
+        }
+    }
+
+    @ViewBuilder private func riviere(_ lecture: LectureConditions) -> some View {
+        if let eau = lecture.eau {
+            if porte.autorise(.niveauEau) {
+                CarteRiviereView(eau: eau, etat: lecture.conditions.etatRiviere,
+                                 ouvrirCourbe: porte.autorise(.courbeEtNormale)
+                                    ? { courbe = true } : { porte.ouvrirPaywall(.courbeEtNormale) })
             } else {
-                VStack(alignment: .leading, spacing: Espace.l) {
-                    VerrouPro(fonction: .septJours, titre: "7 jours", icone: "calendar", porte: porte)
-                    MarqueMeteoView(stockage: marque)
+                CarteVitree(titre: "Niveau de l'eau", icone: "water.waves") {
+                    VerrouPro(fonction: .niveauEau, titre: "Niveau de l'eau", icone: "water.waves", porte: porte)
                 }
-                .padding(Espace.bord)
             }
         }
     }
 
     private var videSansSpot: some View {
         VStack(spacing: Espace.m) {
-            Image(systemName: "mappin.slash").font(Police.taille(28)).foregroundStyle(Palette.encreDouce)
+            Image(systemName: "mappin.slash").font(.system(size: 28)).foregroundStyle(StyleMeteo.texteDoux)
                 .accessibilityHidden(true)
             Text("Choisis un spot sur la carte pour voir la météo.")
-                .font(Police.corps).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
+                .font(.system(.body, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux).multilineTextAlignment(.center)
             MarqueMeteoView(stockage: marque).padding(.top, Espace.s)
         }
         .frame(maxWidth: .infinity)
-        .padding(Espace.bord)
+        .padding(.top, 140)
     }
 
-    /// Lit le spot ; sans réseau `lire` rend la dernière lecture marquée « cache » (la rangée écrit « lu à …, sans réseau »).
+    /// Lit le spot ; sans réseau `lire` rend la dernière lecture marquée « cache ».
     private func lire(forcer: Bool) async {
         guard let c = centre else { return }
         let lue = await conditions.lire(spot: c, forcer: forcer)
