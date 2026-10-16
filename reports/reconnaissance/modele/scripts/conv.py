@@ -42,7 +42,7 @@ with torch.no_grad(): tr=torch.jit.trace(m,ex,check_trace=False)
 with torch.no_grad(): print("trace diff",float((tr(x)-m(x)).abs().max()))
 ml=ct.convert(tr,inputs=[ct.ImageType(name="image",shape=(1,3,224,224),color_layout=ct.colorlayout.RGB,scale=1.0)],
   classifier_config=ct.ClassifierConfig(cl),convert_to="mlprogram",minimum_deployment_target=ct.target.iOS17,compute_precision=ct.precision.FLOAT16)
-out="/mnt/project-files/build/reconnaissance/coreml";os.makedirs(out,exist_ok=True)
+out="/mnt/project-files/build/reconnaissance/coreml/v2";os.makedirs(out,exist_ok=True)
 ml.short_description="Classifieur d'especes de poissons d'eau douce (DINOv2-small + regression logistique)"
 ml.save(out+"/PoissonsDino.mlpackage")
 import coremltools.optimize.coreml as cto

@@ -20,6 +20,7 @@
   "chabot",
   "chevesne",
   "coregones",
+  "cristivomer",
   "epinoche",
   "esturgeon",
   "flet",
@@ -32,6 +33,7 @@
   "hotu",
   "huchon",
   "ide",
+  "lamproie-fluviatile",
   "lamproie-planer",
   "loche-franche",
   "loche-riviere",
@@ -59,72 +61,64 @@
    15,
    3
   ],
-  "cristivomer": [
-   18,
-   4
-  ],
   "goujon-amour": [
-   21,
+   78,
    2
   ],
-  "lamproie-fluviatile": [
-   23,
-   16
-  ],
   "lamproie-marine": [
-   101,
-   3
+   159,
+   4
   ],
   "loche-etang": [
-   15,
+   45,
    0
   ],
   "pseudorasbora": [
-   17,
+   18,
    8
   ],
   "spirlin": [
-   16,
+   33,
    1
   ]
  },
- "photos_entrainement": 23745,
- "photos_test": 7647,
- "fuites_retirees": 62,
+ "photos_entrainement": 33998,
+ "photos_test": 10452,
+ "fuites_retirees": 78,
  "modeles": {
   "dinov2-s": {
-   "top1": 0.717,
+   "top1": 0.728,
    "top3": 0.86,
-   "top1_poissons": 0.713,
-   "top3_poissons": 0.853,
+   "top1_poissons": 0.726,
+   "top3_poissons": 0.855,
    "par_source": {
+    "public": [
+     23,
+     0.565,
+     0.739
+    ],
+    "gbif": [
+     2837,
+     0.479,
+     0.703
+    ],
     "unsplash": [
      530,
-     0.777,
-     0.968
+     0.768,
+     0.96
+    ],
+    "peche": [
+     5215,
+     0.807,
+     0.899
     ],
     "affine": [
      1847,
-     0.876,
-     0.963
-    ],
-    "peche": [
-     2120,
-     0.809,
-     0.908
-    ],
-    "public": [
-     329,
-     0.97,
-     0.982
-    ],
-    "gbif": [
-     2821,
-     0.503,
-     0.722
+     0.877,
+     0.964
     ]
    },
-   "top1_moyenne_par_classe": 0.689,
+   "top1_moyenne_par_classe": 0.705,
    "par_classe": {
     "able-heckel": {
      "n": 26,
@@ -146,27 +140,27 @@
      ]
     },
     "ablette": {
-     "n": 48,
-     "top1": 0.396,
-     "top3": 0.604,
+     "n": 49,
+     "top1": 0.327,
+     "top3": 0.592,
      "confusions": [
-      [
-       "able-heckel",
-       7
-      ],
       [
        "gambusie",
        5
       ],
       [
+       "able-heckel",
+       5
+      ],
+      [
        "vandoise",
-       4
+       5
       ]
      ]
     },
     "anguille": {
-     "n": 350,
-     "top1": 0.674,
+     "n": 380,
+     "top1": 0.666,
      "top3": 0.863,
      "confusions": [
       [
@@ -174,88 +168,88 @@
        53
       ],
       [
-       "gambusie",
+       "poisson-chat",
        7
       ],
       [
-       "pas-un-poisson",
+       "epinoche",
        7
       ]
      ]
     },
     "aspe": {
-     "n": 175,
-     "top1": 0.817,
-     "top3": 0.914,
+     "n": 206,
+     "top1": 0.723,
+     "top3": 0.85,
      "confusions": [
       [
+       "silure",
+       11
+      ],
+      [
        "ide",
-       5
+       7
       ],
       [
        "vandoise",
        5
-      ],
-      [
-       "hotu",
-       3
       ]
      ]
     },
     "autre-poisson": {
      "n": 167,
-     "top1": 0.689,
-     "top3": 0.904,
+     "top1": 0.695,
+     "top3": 0.898,
      "confusions": [
       [
        "pas-un-poisson",
-       27
+       26
       ],
       [
-       "saumon",
+       "lamproie-fluviatile",
        4
       ],
       [
-       "lamproie-planer",
-       3
+       "sandre",
+       2
       ]
      ]
     },
     "barbeau": {
-     "n": 147,
-     "top1": 0.884,
-     "top3": 0.932,
+     "n": 176,
+     "top1": 0.824,
+     "top3": 0.898,
      "confusions": [
+      [
+       "carpe-amour",
+       6
+      ],
       [
        "aspe",
        4
       ],
       [
-       "anguille",
+       "poisson-chat",
        3
-      ],
-      [
-       "huchon",
-       2
       ]
      ]
     },
     "black-bass": {
-     "n": 333,
-     "top1": 0.961,
-     "top3": 0.97,
+     "n": 466,
+     "top1": 0.876,
+     "top3": 0.923,
      "confusions": [
       [
-       "carpe-argentee",
-       2
-      ],
-      [
-       "autre-poisson",
-       2
-      ],
-      [
        "poisson-chat",
-       1
+       15
+      ],
+      [
+       "perche",
+       6
+      ],
+      [
+       "tanche",
+       4
       ]
      ]
     },
@@ -266,8 +260,8 @@
      "confusions": []
     },
     "breme-bordeliere": {
-     "n": 89,
-     "top1": 0.843,
+     "n": 91,
+     "top1": 0.846,
      "top3": 0.978,
      "confusions": [
       [
@@ -285,51 +279,51 @@
      ]
     },
     "breme-commune": {
-     "n": 209,
-     "top1": 0.813,
-     "top3": 0.904,
+     "n": 227,
+     "top1": 0.802,
+     "top3": 0.903,
      "confusions": [
       [
        "breme-bordeliere",
-       18
+       22
       ],
       [
        "ablette",
        4
       ],
       [
-       "truite-arc-en-ciel",
+       "poisson-chat",
        3
       ]
      ]
     },
     "brochet": {
-     "n": 555,
-     "top1": 0.735,
-     "top3": 0.836,
+     "n": 856,
+     "top1": 0.771,
+     "top3": 0.86,
      "confusions": [
       [
-       "vairon",
+       "cristivomer",
+       14
+      ],
+      [
+       "silure",
        13
       ],
       [
-       "barbeau",
-       12
-      ],
-      [
-       "truite-arc-en-ciel",
-       11
+       "vairon",
+       13
       ]
      ]
     },
     "carassin-argente": {
      "n": 170,
-     "top1": 0.612,
-     "top3": 0.882,
+     "top1": 0.629,
+     "top3": 0.876,
      "confusions": [
       [
        "carassin-commun",
-       29
+       28
       ],
       [
        "rotengle",
@@ -337,41 +331,41 @@
       ],
       [
        "carpe-commune",
-       8
+       6
       ]
      ]
     },
     "carassin-commun": {
-     "n": 109,
-     "top1": 0.578,
+     "n": 115,
+     "top1": 0.6,
      "top3": 0.826,
      "confusions": [
       [
        "carassin-argente",
-       22
+       23
       ],
       [
        "carpe-commune",
-       4
+       3
       ],
       [
-       "perche",
-       3
+       "epinoche",
+       2
       ]
      ]
     },
     "carpe-amour": {
-     "n": 178,
-     "top1": 0.871,
-     "top3": 0.904,
+     "n": 187,
+     "top1": 0.866,
+     "top3": 0.914,
      "confusions": [
       [
        "chevesne",
-       6
+       8
       ],
       [
        "carpe-commune",
-       5
+       4
       ],
       [
        "barbeau",
@@ -381,7 +375,7 @@
     },
     "carpe-argentee": {
      "n": 27,
-     "top1": 0.63,
+     "top1": 0.593,
      "top3": 0.852,
      "confusions": [
       [
@@ -399,47 +393,47 @@
      ]
     },
     "carpe-commune": {
-     "n": 838,
-     "top1": 0.7,
-     "top3": 0.858,
+     "n": 1176,
+     "top1": 0.719,
+     "top3": 0.87,
      "confusions": [
       [
        "carpe-amour",
-       45
+       49
       ],
       [
        "chevesne",
-       34
+       43
       ],
       [
        "carassin-argente",
-       29
+       38
       ]
      ]
     },
     "carpe-grosse-tete": {
      "n": 41,
-     "top1": 0.78,
+     "top1": 0.732,
      "top3": 0.927,
      "confusions": [
       [
        "carpe-argentee",
-       6
+       8
       ],
       [
        "silure",
        1
       ],
       [
-       "anguille",
+       "grande-alose",
        1
       ]
      ]
     },
     "chabot": {
      "n": 59,
-     "top1": 0.559,
-     "top3": 0.78,
+     "top1": 0.576,
+     "top3": 0.797,
      "confusions": [
       [
        "gobie-invasif",
@@ -447,7 +441,7 @@
       ],
       [
        "lotte",
-       6
+       5
       ],
       [
        "gambusie",
@@ -456,9 +450,9 @@
      ]
     },
     "chevesne": {
-     "n": 172,
-     "top1": 0.64,
-     "top3": 0.843,
+     "n": 177,
+     "top1": 0.672,
+     "top3": 0.847,
      "confusions": [
       [
        "vandoise",
@@ -475,13 +469,13 @@
      ]
     },
     "coregones": {
-     "n": 77,
-     "top1": 0.831,
-     "top3": 0.922,
+     "n": 82,
+     "top1": 0.829,
+     "top3": 0.902,
      "confusions": [
       [
        "aspe",
-       4
+       3
       ],
       [
        "ablette",
@@ -493,14 +487,33 @@
       ]
      ]
     },
+    "cristivomer": {
+     "n": 283,
+     "top1": 0.862,
+     "top3": 0.933,
+     "confusions": [
+      [
+       "omble-fontaine",
+       9
+      ],
+      [
+       "truite-arc-en-ciel",
+       4
+      ],
+      [
+       "omble-chevalier",
+       4
+      ]
+     ]
+    },
     "epinoche": {
      "n": 212,
-     "top1": 0.613,
-     "top3": 0.835,
+     "top1": 0.632,
+     "top3": 0.849,
      "confusions": [
       [
        "gambusie",
-       19
+       20
       ],
       [
        "able-heckel",
@@ -508,7 +521,7 @@
       ],
       [
        "vairon",
-       9
+       7
       ]
      ]
     },
@@ -525,26 +538,26 @@
     },
     "flet": {
      "n": 64,
-     "top1": 0.812,
+     "top1": 0.828,
      "top3": 0.859,
      "confusions": [
       [
        "silure",
-       3
-      ],
-      [
-       "anguille",
-       2
+       4
       ],
       [
        "mulet",
        2
+      ],
+      [
+       "lamproie-fluviatile",
+       1
       ]
      ]
     },
     "gambusie": {
      "n": 68,
-     "top1": 0.676,
+     "top1": 0.691,
      "top3": 0.868,
      "confusions": [
       [
@@ -556,15 +569,15 @@
        3
       ],
       [
-       "pas-un-poisson",
+       "anguille",
        2
       ]
      ]
     },
     "gardon": {
-     "n": 218,
-     "top1": 0.459,
-     "top3": 0.716,
+     "n": 230,
+     "top1": 0.448,
+     "top3": 0.704,
      "confusions": [
       [
        "rotengle",
@@ -575,14 +588,14 @@
        10
       ],
       [
-       "saumon",
+       "ide",
        9
       ]
      ]
     },
     "gobie-invasif": {
      "n": 106,
-     "top1": 0.887,
+     "top1": 0.896,
      "top3": 0.972,
      "confusions": [
       [
@@ -601,8 +614,8 @@
     },
     "goujon": {
      "n": 112,
-     "top1": 0.705,
-     "top3": 0.812,
+     "top1": 0.714,
+     "top3": 0.821,
      "confusions": [
       [
        "vairon",
@@ -619,9 +632,9 @@
      ]
     },
     "grande-alose": {
-     "n": 7,
-     "top1": 0.143,
-     "top3": 0.286,
+     "n": 12,
+     "top1": 0.5,
+     "top3": 0.5,
      "confusions": [
       [
        "mulet",
@@ -632,7 +645,7 @@
        1
       ],
       [
-       "carpe-grosse-tete",
+       "epinoche",
        1
       ]
      ]
@@ -647,42 +660,42 @@
        2
       ],
       [
-       "gobie-invasif",
-       1
+       "goujon",
+       2
       ],
       [
-       "goujon",
+       "gobie-invasif",
        1
       ]
      ]
     },
     "hotu": {
      "n": 75,
-     "top1": 0.693,
-     "top3": 0.853,
+     "top1": 0.68,
+     "top3": 0.88,
      "confusions": [
       [
        "barbeau",
        6
       ],
       [
-       "saumon",
+       "ide",
        2
       ],
       [
-       "truite-arc-en-ciel",
+       "silure",
        2
       ]
      ]
     },
     "huchon": {
-     "n": 9,
-     "top1": 0.222,
-     "top3": 0.667,
+     "n": 48,
+     "top1": 0.875,
+     "top3": 0.917,
      "confusions": [
       [
-       "truite-arc-en-ciel",
-       3
+       "carpe-grosse-tete",
+       2
       ],
       [
        "ombre",
@@ -695,40 +708,59 @@
      ]
     },
     "ide": {
-     "n": 144,
-     "top1": 0.722,
-     "top3": 0.868,
+     "n": 160,
+     "top1": 0.744,
+     "top3": 0.844,
      "confusions": [
       [
-       "aspe",
-       7
+       "chevesne",
+       8
       ],
       [
-       "chevesne",
-       7
+       "aspe",
+       5
       ],
       [
        "breme-commune",
-       3
+       4
+      ]
+     ]
+    },
+    "lamproie-fluviatile": {
+     "n": 17,
+     "top1": 0.294,
+     "top3": 0.471,
+     "confusions": [
+      [
+       "anguille",
+       7
+      ],
+      [
+       "autre-poisson",
+       1
+      ],
+      [
+       "ide",
+       1
       ]
      ]
     },
     "lamproie-planer": {
      "n": 64,
-     "top1": 0.328,
-     "top3": 0.812,
+     "top1": 0.312,
+     "top3": 0.797,
      "confusions": [
       [
        "anguille",
-       28
+       26
       ],
       [
        "vairon",
-       4
+       6
       ],
       [
-       "able-heckel",
-       2
+       "lamproie-fluviatile",
+       4
       ]
      ]
     },
@@ -738,8 +770,8 @@
      "top3": 0.65,
      "confusions": [
       [
-       "loche-riviere",
-       2
+       "vairon",
+       3
       ],
       [
        "gobie-invasif",
@@ -771,13 +803,13 @@
      ]
     },
     "lotte": {
-     "n": 71,
-     "top1": 0.662,
-     "top3": 0.789,
+     "n": 96,
+     "top1": 0.677,
+     "top3": 0.812,
      "confusions": [
       [
        "anguille",
-       5
+       6
       ],
       [
        "vairon",
@@ -790,74 +822,74 @@
      ]
     },
     "mulet": {
-     "n": 72,
-     "top1": 0.542,
+     "n": 76,
+     "top1": 0.539,
      "top3": 0.75,
      "confusions": [
       [
-       "poisson-chat",
-       5
-      ],
-      [
-       "lamproie-planer",
+       "flet",
        3
       ],
       [
-       "gambusie",
+       "ablette",
+       3
+      ],
+      [
+       "poisson-chat",
        3
       ]
      ]
     },
     "omble-chevalier": {
-     "n": 30,
-     "top1": 0.8,
-     "top3": 0.9,
+     "n": 41,
+     "top1": 0.732,
+     "top3": 0.878,
      "confusions": [
       [
        "omble-fontaine",
-       3
+       5
       ],
       [
        "pas-un-poisson",
        2
       ],
       [
-       "lotte",
+       "flet",
        1
       ]
      ]
     },
     "omble-fontaine": {
-     "n": 40,
-     "top1": 0.625,
-     "top3": 0.75,
+     "n": 204,
+     "top1": 0.632,
+     "top3": 0.824,
      "confusions": [
       [
-       "saumon",
-       3
+       "truite-arc-en-ciel",
+       18
+      ],
+      [
+       "cristivomer",
+       12
       ],
       [
        "truite-commune",
-       3
-      ],
-      [
-       "omble-chevalier",
-       2
+       7
       ]
      ]
     },
     "ombre": {
-     "n": 29,
-     "top1": 0.759,
-     "top3": 0.897,
+     "n": 36,
+     "top1": 0.75,
+     "top3": 0.806,
      "confusions": [
       [
-       "able-heckel",
+       "ide",
        2
       ],
       [
-       "ide",
-       1
+       "able-heckel",
+       2
       ],
       [
        "carassin-commun",
@@ -867,16 +899,16 @@
     },
     "pas-un-poisson": {
      "n": 368,
-     "top1": 0.807,
-     "top3": 0.984,
+     "top1": 0.791,
+     "top3": 0.976,
      "confusions": [
       [
        "autre-poisson",
-       55
+       51
       ],
       [
-       "anguille",
-       4
+       "lamproie-fluviatile",
+       8
       ],
       [
        "grande-alose",
@@ -885,142 +917,142 @@
      ]
     },
     "perche": {
-     "n": 289,
-     "top1": 0.619,
-     "top3": 0.73,
+     "n": 398,
+     "top1": 0.653,
+     "top3": 0.751,
      "confusions": [
       [
        "poisson-chat",
-       29
+       21
       ],
       [
        "epinoche",
-       14
+       15
       ],
       [
-       "gambusie",
-       7
+       "autre-poisson",
+       12
       ]
      ]
     },
     "perche-soleil": {
-     "n": 100,
-     "top1": 0.83,
-     "top3": 0.88,
+     "n": 296,
+     "top1": 0.878,
+     "top3": 0.922,
      "confusions": [
       [
-       "vairon",
+       "gremille",
        3
       ],
       [
-       "gremille",
-       2
+       "carassin-commun",
+       3
       ],
       [
-       "carassin-commun",
-       2
+       "gambusie",
+       3
       ]
      ]
     },
     "poisson-chat": {
-     "n": 25,
-     "top1": 0.84,
-     "top3": 0.88,
+     "n": 142,
+     "top1": 0.866,
+     "top3": 0.93,
      "confusions": [
       [
-       "omble-chevalier",
-       1
+       "perche-soleil",
+       3
       ],
       [
        "silure",
-       1
+       3
       ],
       [
-       "huchon",
-       1
+       "lotte",
+       2
       ]
      ]
     },
     "rotengle": {
-     "n": 209,
-     "top1": 0.545,
-     "top3": 0.809,
+     "n": 210,
+     "top1": 0.562,
+     "top3": 0.81,
      "confusions": [
       [
        "gardon",
-       26
+       28
       ],
       [
        "gambusie",
-       14
+       13
       ],
       [
-       "carassin-commun",
-       6
+       "able-heckel",
+       5
       ]
      ]
     },
     "sandre": {
-     "n": 223,
-     "top1": 0.897,
-     "top3": 0.964,
+     "n": 318,
+     "top1": 0.881,
+     "top3": 0.94,
      "confusions": [
       [
        "perche",
        5
       ],
       [
-       "gobie-invasif",
-       2
+       "truite-arc-en-ciel",
+       4
       ],
       [
-       "ombre",
-       2
+       "silure",
+       3
       ]
      ]
     },
     "saumon": {
-     "n": 39,
-     "top1": 0.359,
-     "top3": 0.744,
+     "n": 91,
+     "top1": 0.571,
+     "top3": 0.802,
      "confusions": [
       [
        "truite-commune",
-       7
-      ],
-      [
-       "omble-chevalier",
-       5
+       10
       ],
       [
        "vairon",
+       5
+      ],
+      [
+       "cristivomer",
        5
       ]
      ]
     },
     "silure": {
-     "n": 216,
-     "top1": 0.843,
-     "top3": 0.903,
+     "n": 402,
+     "top1": 0.821,
+     "top3": 0.896,
      "confusions": [
       [
-       "pas-un-poisson",
+       "grande-alose",
+       8
+      ],
+      [
+       "lamproie-fluviatile",
+       7
+      ],
+      [
+       "anguille",
        5
-      ],
-      [
-       "lotte",
-       4
-      ],
-      [
-       "saumon",
-       4
       ]
      ]
     },
     "tanche": {
-     "n": 179,
-     "top1": 0.944,
-     "top3": 0.961,
+     "n": 195,
+     "top1": 0.928,
+     "top3": 0.954,
      "confusions": [
       [
        "breme-commune",
@@ -1031,53 +1063,53 @@
        2
       ],
       [
-       "brochet",
+       "poisson-chat",
        2
       ]
      ]
     },
     "truite-arc-en-ciel": {
-     "n": 133,
-     "top1": 0.602,
-     "top3": 0.774,
+     "n": 368,
+     "top1": 0.628,
+     "top3": 0.799,
      "confusions": [
       [
-       "truite-commune",
-       10
+       "saumon",
+       21
       ],
       [
-       "poisson-chat",
-       9
+       "cristivomer",
+       14
       ],
       [
-       "omble-chevalier",
-       7
+       "huchon",
+       13
       ]
      ]
     },
     "truite-commune": {
-     "n": 470,
-     "top1": 0.557,
-     "top3": 0.738,
+     "n": 777,
+     "top1": 0.6,
+     "top3": 0.754,
      "confusions": [
       [
        "saumon",
-       31
+       46
       ],
       [
        "truite-arc-en-ciel",
-       28
+       32
       ],
       [
        "vairon",
-       21
+       26
       ]
      ]
     },
     "vairon": {
      "n": 65,
-     "top1": 0.615,
-     "top3": 0.831,
+     "top1": 0.631,
+     "top3": 0.846,
      "confusions": [
       [
        "gambusie",
@@ -1115,42 +1147,42 @@
    }
   },
   "fishial": {
-   "top1": 0.75,
-   "top3": 0.854,
-   "top1_poissons": 0.761,
+   "top1": 0.759,
+   "top3": 0.853,
+   "top1_poissons": 0.768,
    "top3_poissons": 0.853,
    "par_source": {
+    "public": [
+     23,
+     0.696,
+     0.783
+    ],
+    "gbif": [
+     2837,
+     0.56,
+     0.709
+    ],
     "unsplash": [
      530,
-     0.619,
-     0.872
+     0.591,
+     0.857
+    ],
+    "peche": [
+     5215,
+     0.831,
+     0.891
     ],
     "affine": [
      1847,
-     0.908,
-     0.969
-    ],
-    "peche": [
-     2120,
-     0.843,
-     0.906
-    ],
-    "public": [
-     329,
-     0.939,
-     0.964
-    ],
-    "gbif": [
-     2821,
-     0.581,
-     0.725
+     0.91,
+     0.966
     ]
    },
-   "top1_moyenne_par_classe": 0.739,
+   "top1_moyenne_par_classe": 0.731,
    "par_classe": {
     "able-heckel": {
      "n": 26,
-     "top1": 0.577,
+     "top1": 0.538,
      "top3": 0.692,
      "confusions": [
       [
@@ -1158,125 +1190,125 @@
        3
       ],
       [
-       "truite-commune",
+       "epinoche",
        2
       ],
       [
-       "epinoche",
-       2
+       "lamproie-fluviatile",
+       1
       ]
      ]
     },
     "ablette": {
-     "n": 48,
-     "top1": 0.688,
-     "top3": 0.75,
+     "n": 49,
+     "top1": 0.653,
+     "top3": 0.735,
      "confusions": [
       [
-       "able-heckel",
+       "autre-poisson",
        3
       ],
       [
-       "autre-poisson",
+       "breme-bordeliere",
        2
       ],
       [
-       "pas-un-poisson",
+       "gambusie",
        2
       ]
      ]
     },
     "anguille": {
-     "n": 350,
-     "top1": 0.637,
-     "top3": 0.823,
+     "n": 380,
+     "top1": 0.611,
+     "top3": 0.816,
      "confusions": [
       [
        "lamproie-planer",
        43
       ],
       [
-       "pas-un-poisson",
-       12
+       "lamproie-fluviatile",
+       23
       ],
       [
-       "saumon",
-       8
+       "pas-un-poisson",
+       10
       ]
      ]
     },
     "aspe": {
-     "n": 175,
-     "top1": 0.931,
-     "top3": 0.96,
+     "n": 206,
+     "top1": 0.845,
+     "top3": 0.879,
      "confusions": [
       [
-       "breme-commune",
-       2
+       "silure",
+       11
       ],
       [
-       "omble-chevalier",
-       1
+       "grande-alose",
+       4
       ],
       [
-       "carpe-argentee",
-       1
+       "pas-un-poisson",
+       3
       ]
      ]
     },
     "autre-poisson": {
      "n": 167,
-     "top1": 0.671,
-     "top3": 0.874,
+     "top1": 0.635,
+     "top3": 0.85,
      "confusions": [
       [
        "pas-un-poisson",
-       26
+       27
       ],
       [
-       "saumon",
+       "grande-alose",
+       6
+      ],
+      [
+       "lamproie-fluviatile",
        4
-      ],
-      [
-       "brochet",
-       2
       ]
      ]
     },
     "barbeau": {
-     "n": 147,
-     "top1": 0.918,
-     "top3": 0.925,
+     "n": 176,
+     "top1": 0.858,
+     "top3": 0.909,
      "confusions": [
       [
-       "aspe",
-       2
+       "carpe-commune",
+       5
+      ],
+      [
+       "carpe-amour",
+       3
       ],
       [
        "gambusie",
        2
-      ],
-      [
-       "loche-riviere",
-       1
       ]
      ]
     },
     "black-bass": {
-     "n": 333,
-     "top1": 0.925,
-     "top3": 0.946,
+     "n": 466,
+     "top1": 0.908,
+     "top3": 0.927,
      "confusions": [
       [
-       "pas-un-poisson",
-       6
-      ],
-      [
-       "anguille",
+       "poisson-chat",
        4
       ],
       [
-       "sandre",
+       "tanche",
+       3
+      ],
+      [
+       "anguille",
        3
       ]
      ]
@@ -1288,13 +1320,13 @@
      "confusions": []
     },
     "breme-bordeliere": {
-     "n": 89,
-     "top1": 0.764,
-     "top3": 0.91,
+     "n": 91,
+     "top1": 0.769,
+     "top3": 0.912,
      "confusions": [
       [
        "breme-commune",
-       8
+       9
       ],
       [
        "aspe",
@@ -1302,75 +1334,75 @@
       ],
       [
        "ablette",
-       4
+       3
       ]
      ]
     },
     "breme-commune": {
-     "n": 209,
-     "top1": 0.828,
-     "top3": 0.914,
+     "n": 227,
+     "top1": 0.837,
+     "top3": 0.912,
      "confusions": [
       [
        "breme-bordeliere",
        15
       ],
       [
-       "anguille",
-       4
+       "ide",
+       3
       ],
       [
-       "ide",
+       "cristivomer",
        2
       ]
      ]
     },
     "brochet": {
-     "n": 555,
-     "top1": 0.795,
-     "top3": 0.843,
+     "n": 856,
+     "top1": 0.814,
+     "top3": 0.852,
      "confusions": [
       [
        "gambusie",
-       12
+       15
       ],
       [
        "anguille",
-       11
+       12
       ],
       [
-       "saumon",
+       "grande-alose",
        10
       ]
      ]
     },
     "carassin-argente": {
      "n": 170,
-     "top1": 0.641,
-     "top3": 0.847,
+     "top1": 0.671,
+     "top3": 0.859,
      "confusions": [
       [
        "carassin-commun",
-       18
+       19
       ],
       [
        "rotengle",
-       5
+       4
       ],
       [
-       "saumon",
-       5
+       "epinoche",
+       4
       ]
      ]
     },
     "carassin-commun": {
-     "n": 109,
-     "top1": 0.56,
-     "top3": 0.862,
+     "n": 115,
+     "top1": 0.557,
+     "top3": 0.852,
      "confusions": [
       [
        "carassin-argente",
-       26
+       27
       ],
       [
        "carpe-commune",
@@ -1383,9 +1415,9 @@
      ]
     },
     "carpe-amour": {
-     "n": 178,
-     "top1": 0.888,
-     "top3": 0.91,
+     "n": 187,
+     "top1": 0.898,
+     "top3": 0.92,
      "confusions": [
       [
        "chevesne",
@@ -1393,45 +1425,45 @@
       ],
       [
        "carpe-commune",
-       4
+       3
       ],
       [
-       "brochet",
-       3
+       "anguille",
+       2
       ]
      ]
     },
     "carpe-argentee": {
      "n": 27,
-     "top1": 0.519,
+     "top1": 0.593,
      "top3": 0.852,
      "confusions": [
       [
        "carpe-grosse-tete",
-       9
+       7
       ],
       [
-       "carassin-commun",
+       "grande-alose",
        1
       ],
       [
-       "saumon",
+       "truite-arc-en-ciel",
        1
       ]
      ]
     },
     "carpe-commune": {
-     "n": 838,
-     "top1": 0.754,
-     "top3": 0.845,
+     "n": 1176,
+     "top1": 0.782,
+     "top3": 0.866,
      "confusions": [
       [
        "carpe-amour",
-       25
+       32
       ],
       [
-       "pas-un-poisson",
-       18
+       "carassin-commun",
+       24
       ],
       [
        "carassin-argente",
@@ -1460,35 +1492,35 @@
     },
     "chabot": {
      "n": 59,
-     "top1": 0.695,
+     "top1": 0.678,
      "top3": 0.797,
      "confusions": [
       [
+       "gambusie",
+       5
+      ],
+      [
+       "gobie-invasif",
+       3
+      ],
+      [
        "flet",
        3
-      ],
-      [
-       "gambusie",
-       3
-      ],
-      [
-       "lamproie-planer",
-       2
       ]
      ]
     },
     "chevesne": {
-     "n": 172,
-     "top1": 0.791,
-     "top3": 0.895,
+     "n": 177,
+     "top1": 0.785,
+     "top3": 0.876,
      "confusions": [
-      [
-       "vandoise",
-       5
-      ],
       [
        "ide",
        5
+      ],
+      [
+       "vandoise",
+       4
       ],
       [
        "rotengle",
@@ -1497,35 +1529,54 @@
      ]
     },
     "coregones": {
-     "n": 77,
-     "top1": 0.883,
-     "top3": 0.896,
+     "n": 82,
+     "top1": 0.854,
+     "top3": 0.902,
      "confusions": [
       [
        "ombre",
        2
       ],
       [
-       "grande-alose",
-       1
+       "ablette",
+       2
       ],
       [
-       "ide",
-       1
+       "pas-un-poisson",
+       2
+      ]
+     ]
+    },
+    "cristivomer": {
+     "n": 283,
+     "top1": 0.876,
+     "top3": 0.926,
+     "confusions": [
+      [
+       "omble-chevalier",
+       4
+      ],
+      [
+       "omble-fontaine",
+       3
+      ],
+      [
+       "lamproie-fluviatile",
+       3
       ]
      ]
     },
     "epinoche": {
      "n": 212,
-     "top1": 0.566,
-     "top3": 0.741,
+     "top1": 0.575,
+     "top3": 0.759,
      "confusions": [
       [
-       "lamproie-planer",
-       10
+       "gambusie",
+       13
       ],
       [
-       "gambusie",
+       "lamproie-planer",
        10
       ],
       [
@@ -1551,9 +1602,13 @@
     },
     "flet": {
      "n": 64,
-     "top1": 0.844,
-     "top3": 0.859,
+     "top1": 0.828,
+     "top3": 0.875,
      "confusions": [
+      [
+       "lamproie-fluviatile",
+       2
+      ],
       [
        "mulet",
        2
@@ -1561,16 +1616,12 @@
       [
        "omble-chevalier",
        2
-      ],
-      [
-       "autre-poisson",
-       1
       ]
      ]
     },
     "gambusie": {
      "n": 68,
-     "top1": 0.588,
+     "top1": 0.618,
      "top3": 0.838,
      "confusions": [
       [
@@ -1588,28 +1639,28 @@
      ]
     },
     "gardon": {
-     "n": 218,
-     "top1": 0.587,
-     "top3": 0.72,
+     "n": 230,
+     "top1": 0.591,
+     "top3": 0.717,
      "confusions": [
       [
-       "rotengle",
-       11
+       "pas-un-poisson",
+       12
       ],
       [
-       "pas-un-poisson",
+       "rotengle",
        10
       ],
       [
-       "gambusie",
+       "ide",
        6
       ]
      ]
     },
     "gobie-invasif": {
      "n": 106,
-     "top1": 0.906,
-     "top3": 0.943,
+     "top1": 0.915,
+     "top3": 0.934,
      "confusions": [
       [
        "chabot",
@@ -1620,23 +1671,23 @@
        1
       ],
       [
-       "lamproie-planer",
+       "pas-un-poisson",
        1
       ]
      ]
     },
     "goujon": {
      "n": 112,
-     "top1": 0.786,
+     "top1": 0.804,
      "top3": 0.875,
      "confusions": [
       [
-       "vairon",
-       5
+       "autre-poisson",
+       4
       ],
       [
-       "autre-poisson",
-       3
+       "vairon",
+       4
       ],
       [
        "gambusie",
@@ -1645,16 +1696,16 @@
      ]
     },
     "grande-alose": {
-     "n": 7,
-     "top1": 0.286,
-     "top3": 0.286,
+     "n": 12,
+     "top1": 0.5,
+     "top3": 0.583,
      "confusions": [
       [
        "autre-poisson",
        1
       ],
       [
-       "perche",
+       "hotu",
        1
       ],
       [
@@ -1677,14 +1728,14 @@
        1
       ],
       [
-       "truite-arc-en-ciel",
+       "lotte",
        1
       ]
      ]
     },
     "hotu": {
      "n": 75,
-     "top1": 0.693,
+     "top1": 0.68,
      "top3": 0.787,
      "confusions": [
       [
@@ -1693,37 +1744,37 @@
       ],
       [
        "ide",
-       4
+       5
       ],
       [
-       "silure",
+       "lamproie-fluviatile",
        2
       ]
      ]
     },
     "huchon": {
-     "n": 9,
-     "top1": 0.556,
-     "top3": 0.667,
+     "n": 48,
+     "top1": 0.708,
+     "top3": 0.917,
      "confusions": [
       [
-       "mulet",
-       1
+       "pas-un-poisson",
+       5
       ],
       [
-       "saumon",
-       1
+       "lamproie-fluviatile",
+       3
       ],
       [
-       "truite-commune",
-       1
+       "truite-arc-en-ciel",
+       3
       ]
      ]
     },
     "ide": {
-     "n": 144,
-     "top1": 0.84,
-     "top3": 0.875,
+     "n": 160,
+     "top1": 0.812,
+     "top3": 0.844,
      "confusions": [
       [
        "chevesne",
@@ -1734,45 +1785,64 @@
        3
       ],
       [
-       "carassin-commun",
+       "rotengle",
        2
+      ]
+     ]
+    },
+    "lamproie-fluviatile": {
+     "n": 17,
+     "top1": 0.235,
+     "top3": 0.471,
+     "confusions": [
+      [
+       "lamproie-planer",
+       5
+      ],
+      [
+       "anguille",
+       3
+      ],
+      [
+       "vairon",
+       1
       ]
      ]
     },
     "lamproie-planer": {
      "n": 64,
-     "top1": 0.391,
-     "top3": 0.719,
+     "top1": 0.359,
+     "top3": 0.672,
      "confusions": [
       [
        "anguille",
-       22
+       18
+      ],
+      [
+       "lamproie-fluviatile",
+       7
       ],
       [
        "vairon",
-       5
-      ],
-      [
-       "truite-commune",
-       2
+       6
       ]
      ]
     },
     "loche-franche": {
      "n": 20,
      "top1": 0.7,
-     "top3": 0.7,
+     "top3": 0.75,
      "confusions": [
+      [
+       "vairon",
+       2
+      ],
       [
        "chevesne",
        1
       ],
       [
        "loche-riviere",
-       1
-      ],
-      [
-       "vairon",
        1
       ]
      ]
@@ -1797,9 +1867,9 @@
      ]
     },
     "lotte": {
-     "n": 71,
-     "top1": 0.803,
-     "top3": 0.831,
+     "n": 96,
+     "top1": 0.781,
+     "top3": 0.854,
      "confusions": [
       [
        "anguille",
@@ -1807,25 +1877,25 @@
       ],
       [
        "gobie-invasif",
-       3
+       4
       ],
       [
-       "lamproie-planer",
-       1
+       "poisson-chat",
+       3
       ]
      ]
     },
     "mulet": {
-     "n": 72,
-     "top1": 0.611,
-     "top3": 0.75,
+     "n": 76,
+     "top1": 0.618,
+     "top3": 0.763,
      "confusions": [
       [
-       "poisson-chat",
+       "flet",
        4
       ],
       [
-       "autre-poisson",
+       "poisson-chat",
        3
       ],
       [
@@ -1835,286 +1905,294 @@
      ]
     },
     "omble-chevalier": {
-     "n": 30,
-     "top1": 0.8,
-     "top3": 0.867,
+     "n": 41,
+     "top1": 0.756,
+     "top3": 0.829,
      "confusions": [
       [
-       "autre-poisson",
-       2
+       "omble-fontaine",
+       3
       ],
       [
        "pas-un-poisson",
-       1
+       2
       ],
       [
-       "flet",
-       1
+       "saumon",
+       2
       ]
      ]
     },
     "omble-fontaine": {
-     "n": 40,
-     "top1": 0.85,
-     "top3": 0.85,
+     "n": 204,
+     "top1": 0.775,
+     "top3": 0.853,
      "confusions": [
       [
-       "truite-arc-en-ciel",
-       1
+       "truite-commune",
+       6
+      ],
+      [
+       "cristivomer",
+       6
+      ],
+      [
+       "omble-chevalier",
+       5
+      ]
+     ]
+    },
+    "ombre": {
+     "n": 36,
+     "top1": 0.778,
+     "top3": 0.833,
+     "confusions": [
+      [
+       "lamproie-planer",
+       2
       ],
       [
        "chevesne",
        1
       ],
       [
-       "perche",
-       1
-      ]
-     ]
-    },
-    "ombre": {
-     "n": 29,
-     "top1": 0.862,
-     "top3": 0.931,
-     "confusions": [
-      [
-       "lamproie-planer",
-       2
-      ],
-      [
        "barbeau",
-       1
-      ],
-      [
-       "coregones",
        1
       ]
      ]
     },
     "pas-un-poisson": {
      "n": 368,
-     "top1": 0.59,
-     "top3": 0.864,
+     "top1": 0.565,
+     "top3": 0.853,
      "confusions": [
       [
        "autre-poisson",
-       61
+       63
+      ],
+      [
+       "lamproie-fluviatile",
+       21
       ],
       [
        "grande-alose",
        12
-      ],
-      [
-       "chabot",
-       8
       ]
      ]
     },
     "perche": {
-     "n": 289,
-     "top1": 0.654,
-     "top3": 0.744,
+     "n": 398,
+     "top1": 0.681,
+     "top3": 0.756,
      "confusions": [
       [
        "poisson-chat",
-       25
+       17
       ],
       [
-       "epinoche",
-       6
+       "mulet",
+       8
       ],
       [
-       "gambusie",
-       6
+       "autre-poisson",
+       8
       ]
      ]
     },
     "perche-soleil": {
-     "n": 100,
-     "top1": 0.84,
-     "top3": 0.86,
+     "n": 296,
+     "top1": 0.878,
+     "top3": 0.899,
      "confusions": [
       [
        "gambusie",
        5
       ],
       [
-       "vairon",
-       3
+       "poisson-chat",
+       5
       ],
       [
-       "gremille",
-       2
+       "vairon",
+       3
       ]
      ]
     },
     "poisson-chat": {
-     "n": 25,
-     "top1": 0.96,
-     "top3": 1.0,
+     "n": 142,
+     "top1": 0.803,
+     "top3": 0.859,
      "confusions": [
       [
-       "huchon",
-       1
+       "grande-alose",
+       4
+      ],
+      [
+       "pas-un-poisson",
+       3
+      ],
+      [
+       "lamproie-fluviatile",
+       3
       ]
      ]
     },
     "rotengle": {
-     "n": 209,
-     "top1": 0.694,
-     "top3": 0.799,
+     "n": 210,
+     "top1": 0.69,
+     "top3": 0.805,
      "confusions": [
       [
        "gardon",
-       18
-      ],
-      [
-       "gambusie",
-       7
+       19
       ],
       [
        "mulet",
+       7
+      ],
+      [
+       "gambusie",
        6
       ]
      ]
     },
     "sandre": {
-     "n": 223,
-     "top1": 0.951,
-     "top3": 0.973,
+     "n": 318,
+     "top1": 0.918,
+     "top3": 0.943,
      "confusions": [
       [
-       "anguille",
-       2
-      ],
-      [
        "pas-un-poisson",
+       4
+      ],
+      [
+       "epinoche",
        2
       ],
       [
-       "lotte",
+       "huchon",
        2
       ]
      ]
     },
     "saumon": {
-     "n": 39,
-     "top1": 0.538,
-     "top3": 0.769,
+     "n": 91,
+     "top1": 0.758,
+     "top3": 0.824,
      "confusions": [
-      [
-       "truite-commune",
-       8
-      ],
       [
        "pas-un-poisson",
        3
       ],
       [
        "loche-riviere",
-       2
+       3
+      ],
+      [
+       "truite-commune",
+       3
       ]
      ]
     },
     "silure": {
-     "n": 216,
-     "top1": 0.843,
-     "top3": 0.903,
+     "n": 402,
+     "top1": 0.781,
+     "top3": 0.856,
      "confusions": [
       [
-       "anguille",
-       6
-      ],
-      [
        "pas-un-poisson",
-       4
+       13
       ],
       [
-       "carpe-argentee",
-       3
+       "grande-alose",
+       10
+      ],
+      [
+       "poisson-chat",
+       8
       ]
      ]
     },
     "tanche": {
-     "n": 179,
-     "top1": 0.927,
-     "top3": 0.955,
+     "n": 195,
+     "top1": 0.913,
+     "top3": 0.944,
      "confusions": [
       [
+       "lamproie-fluviatile",
+       2
+      ],
+      [
        "anguille",
-       3
+       2
       ],
       [
-       "gambusie",
-       1
-      ],
-      [
-       "flet",
+       "carpe-argentee",
        1
       ]
      ]
     },
     "truite-arc-en-ciel": {
-     "n": 133,
-     "top1": 0.692,
-     "top3": 0.805,
+     "n": 368,
+     "top1": 0.734,
+     "top3": 0.815,
      "confusions": [
       [
        "saumon",
-       11
-      ],
-      [
-       "omble-chevalier",
-       7
-      ],
-      [
-       "pas-un-poisson",
-       4
-      ]
-     ]
-    },
-    "truite-commune": {
-     "n": 470,
-     "top1": 0.664,
-     "top3": 0.804,
-     "confusions": [
-      [
-       "saumon",
-       23
-      ],
-      [
-       "vairon",
        15
       ],
       [
        "omble-chevalier",
-       13
+       8
+      ],
+      [
+       "grande-alose",
+       7
+      ]
+     ]
+    },
+    "truite-commune": {
+     "n": 777,
+     "top1": 0.68,
+     "top3": 0.803,
+     "confusions": [
+      [
+       "saumon",
+       37
+      ],
+      [
+       "truite-arc-en-ciel",
+       28
+      ],
+      [
+       "vairon",
+       20
       ]
      ]
     },
     "vairon": {
      "n": 65,
      "top1": 0.615,
-     "top3": 0.8,
+     "top3": 0.785,
      "confusions": [
       [
        "gambusie",
-       6
-      ],
-      [
-       "lamproie-planer",
-       3
+       7
       ],
       [
        "epinoche",
        3
+      ],
+      [
+       "lamproie-planer",
+       2
       ]
      ]
     },
     "vandoise": {
      "n": 27,
-     "top1": 0.815,
-     "top3": 0.889,
+     "top1": 0.778,
+     "top3": 0.852,
      "confusions": [
       [
        "chevesne",
@@ -2133,47 +2211,47 @@
    }
   },
   "fishial+dinov2-s": {
-   "top1": 0.795,
-   "top3": 0.898,
-   "top1_poissons": 0.795,
+   "top1": 0.807,
+   "top3": 0.896,
+   "top1_poissons": 0.809,
    "top3_poissons": 0.892,
    "par_source": {
+    "public": [
+     23,
+     0.696,
+     0.783
+    ],
+    "gbif": [
+     2837,
+     0.621,
+     0.784
+    ],
     "unsplash": [
      530,
-     0.8,
-     0.979
+     0.791,
+     0.972
+    ],
+    "peche": [
+     5215,
+     0.868,
+     0.922
     ],
     "affine": [
      1847,
-     0.931,
-     0.978
-    ],
-    "peche": [
-     2120,
-     0.868,
-     0.928
-    ],
-    "public": [
-     329,
-     0.964,
-     0.982
-    ],
-    "gbif": [
-     2821,
-     0.63,
-     0.797
+     0.93,
+     0.976
     ]
    },
-   "top1_moyenne_par_classe": 0.768,
+   "top1_moyenne_par_classe": 0.773,
    "par_classe": {
     "able-heckel": {
      "n": 26,
      "top1": 0.654,
-     "top3": 0.808,
+     "top3": 0.769,
      "confusions": [
       [
        "gambusie",
-       5
+       4
       ],
       [
        "epinoche",
@@ -2186,9 +2264,9 @@
      ]
     },
     "ablette": {
-     "n": 48,
-     "top1": 0.667,
-     "top3": 0.75,
+     "n": 49,
+     "top1": 0.653,
+     "top3": 0.735,
      "confusions": [
       [
        "rotengle",
@@ -2199,45 +2277,45 @@
        3
       ],
       [
-       "vairon",
+       "mulet",
        2
       ]
      ]
     },
     "anguille": {
-     "n": 350,
-     "top1": 0.723,
-     "top3": 0.891,
+     "n": 380,
+     "top1": 0.732,
+     "top3": 0.9,
      "confusions": [
       [
        "lamproie-planer",
-       37
+       36
       ],
       [
        "epinoche",
-       8
+       7
       ],
       [
        "truite-commune",
-       7
+       6
       ]
      ]
     },
     "aspe": {
-     "n": 175,
-     "top1": 0.931,
-     "top3": 0.966,
+     "n": 206,
+     "top1": 0.864,
+     "top3": 0.888,
      "confusions": [
+      [
+       "silure",
+       11
+      ],
       [
        "ide",
        2
       ],
       [
-       "carpe-argentee",
-       2
-      ],
-      [
-       "gardon",
+       "grande-alose",
        2
       ]
      ]
@@ -2245,56 +2323,56 @@
     "autre-poisson": {
      "n": 167,
      "top1": 0.737,
-     "top3": 0.928,
+     "top3": 0.934,
      "confusions": [
       [
        "pas-un-poisson",
-       30
+       28
       ],
       [
-       "breme-bordeliere",
+       "lamproie-fluviatile",
+       4
+      ],
+      [
+       "grande-alose",
        2
-      ],
-      [
-       "saumon",
-       1
       ]
      ]
     },
     "barbeau": {
-     "n": 147,
-     "top1": 0.912,
-     "top3": 0.939,
+     "n": 176,
+     "top1": 0.869,
+     "top3": 0.938,
      "confusions": [
       [
+       "carpe-commune",
+       4
+      ],
+      [
+       "chevesne",
+       3
+      ],
+      [
        "aspe",
-       2
-      ],
-      [
-       "anguille",
-       2
-      ],
-      [
-       "gambusie",
        2
       ]
      ]
     },
     "black-bass": {
-     "n": 333,
-     "top1": 0.949,
-     "top3": 0.964,
+     "n": 466,
+     "top1": 0.91,
+     "top3": 0.946,
      "confusions": [
       [
-       "sandre",
+       "poisson-chat",
+       10
+      ],
+      [
+       "truite-arc-en-ciel",
        3
       ],
       [
-       "epinoche",
-       2
-      ],
-      [
-       "silure",
+       "tanche",
        2
       ]
      ]
@@ -2306,9 +2384,9 @@
      "confusions": []
     },
     "breme-bordeliere": {
-     "n": 89,
-     "top1": 0.798,
-     "top3": 0.966,
+     "n": 91,
+     "top1": 0.813,
+     "top3": 0.967,
      "confusions": [
       [
        "breme-commune",
@@ -2316,18 +2394,18 @@
       ],
       [
        "aspe",
-       4
+       3
       ],
       [
-       "vandoise",
-       1
+       "rotengle",
+       2
       ]
      ]
     },
     "breme-commune": {
-     "n": 209,
-     "top1": 0.847,
-     "top3": 0.928,
+     "n": 227,
+     "top1": 0.841,
+     "top3": 0.925,
      "confusions": [
       [
        "breme-bordeliere",
@@ -2335,75 +2413,75 @@
       ],
       [
        "ide",
-       2
+       3
       ],
       [
-       "tanche",
+       "poisson-chat",
        2
       ]
      ]
     },
     "brochet": {
-     "n": 555,
-     "top1": 0.827,
-     "top3": 0.881,
+     "n": 856,
+     "top1": 0.85,
+     "top3": 0.891,
      "confusions": [
       [
        "anguille",
-       14
+       11
+      ],
+      [
+       "gambusie",
+       10
       ],
       [
        "carpe-commune",
        9
-      ],
-      [
-       "saumon",
-       7
       ]
      ]
     },
     "carassin-argente": {
      "n": 170,
-     "top1": 0.7,
-     "top3": 0.871,
+     "top1": 0.688,
+     "top3": 0.876,
      "confusions": [
       [
        "carassin-commun",
-       21
+       22
       ],
       [
        "rotengle",
        6
       ],
       [
-       "carpe-commune",
-       5
+       "gambusie",
+       4
       ]
      ]
     },
     "carassin-commun": {
-     "n": 109,
-     "top1": 0.587,
-     "top3": 0.853,
+     "n": 115,
+     "top1": 0.609,
+     "top3": 0.852,
      "confusions": [
       [
        "carassin-argente",
        24
       ],
       [
-       "carpe-commune",
+       "epinoche",
        3
       ],
       [
-       "tanche",
+       "lamproie-fluviatile",
        2
       ]
      ]
     },
     "carpe-amour": {
-     "n": 178,
-     "top1": 0.921,
-     "top3": 0.933,
+     "n": 187,
+     "top1": 0.914,
+     "top3": 0.936,
      "confusions": [
       [
        "carpe-commune",
@@ -2414,7 +2492,7 @@
        3
       ],
       [
-       "ablette",
+       "barbeau",
        2
       ]
      ]
@@ -2422,38 +2500,38 @@
     "carpe-argentee": {
      "n": 27,
      "top1": 0.556,
-     "top3": 0.889,
+     "top3": 0.852,
      "confusions": [
       [
        "carpe-grosse-tete",
-       9
+       8
       ],
       [
        "anguille",
        1
       ],
       [
-       "pas-un-poisson",
+       "truite-arc-en-ciel",
        1
       ]
      ]
     },
     "carpe-commune": {
-     "n": 838,
-     "top1": 0.816,
-     "top3": 0.911,
+     "n": 1176,
+     "top1": 0.842,
+     "top3": 0.915,
      "confusions": [
       [
        "carpe-amour",
-       27
+       30
       ],
       [
        "carassin-argente",
-       18
+       17
       ],
       [
-       "autre-poisson",
-       12
+       "carassin-commun",
+       16
       ]
      ]
     },
@@ -2471,15 +2549,15 @@
        1
       ],
       [
-       "anguille",
+       "grande-alose",
        1
       ]
      ]
     },
     "chabot": {
      "n": 59,
-     "top1": 0.678,
-     "top3": 0.814,
+     "top1": 0.695,
+     "top3": 0.797,
      "confusions": [
       [
        "gobie-invasif",
@@ -2496,28 +2574,28 @@
      ]
     },
     "chevesne": {
-     "n": 172,
+     "n": 177,
      "top1": 0.808,
-     "top3": 0.913,
+     "top3": 0.904,
      "confusions": [
       [
        "ide",
        7
       ],
       [
-       "gardon",
+       "rotengle",
        4
       ],
       [
-       "rotengle",
-       4
+       "gardon",
+       3
       ]
      ]
     },
     "coregones": {
-     "n": 77,
-     "top1": 0.909,
-     "top3": 0.922,
+     "n": 82,
+     "top1": 0.89,
+     "top3": 0.915,
      "confusions": [
       [
        "aspe",
@@ -2533,21 +2611,40 @@
       ]
      ]
     },
+    "cristivomer": {
+     "n": 283,
+     "top1": 0.901,
+     "top3": 0.951,
+     "confusions": [
+      [
+       "omble-fontaine",
+       7
+      ],
+      [
+       "omble-chevalier",
+       3
+      ],
+      [
+       "autre-poisson",
+       2
+      ]
+     ]
+    },
     "epinoche": {
      "n": 212,
-     "top1": 0.717,
-     "top3": 0.877,
+     "top1": 0.722,
+     "top3": 0.868,
      "confusions": [
       [
        "gambusie",
-       13
+       14
       ],
       [
        "ablette",
        6
       ],
       [
-       "able-heckel",
+       "vairon",
        5
       ]
      ]
@@ -2562,79 +2659,79 @@
        1
       ],
       [
-       "saumon",
+       "huchon",
        1
       ]
      ]
     },
     "flet": {
      "n": 64,
-     "top1": 0.859,
+     "top1": 0.875,
      "top3": 0.891,
      "confusions": [
-      [
-       "silure",
-       2
-      ],
       [
        "autre-poisson",
        1
       ],
       [
        "saumon",
+       1
+      ],
+      [
+       "silure",
        1
       ]
      ]
     },
     "gambusie": {
      "n": 68,
-     "top1": 0.706,
-     "top3": 0.882,
+     "top1": 0.735,
+     "top3": 0.868,
      "confusions": [
       [
        "vairon",
-       6
+       5
       ],
       [
        "epinoche",
        3
       ],
       [
-       "autre-poisson",
-       2
+       "lamproie-planer",
+       3
       ]
      ]
     },
     "gardon": {
-     "n": 218,
-     "top1": 0.592,
-     "top3": 0.766,
+     "n": 230,
+     "top1": 0.587,
+     "top3": 0.757,
      "confusions": [
       [
        "rotengle",
-       14
+       15
       ],
       [
        "saumon",
-       9
+       8
       ],
       [
-       "ide",
-       5
+       "ablette",
+       6
       ]
      ]
     },
     "gobie-invasif": {
      "n": 106,
-     "top1": 0.943,
-     "top3": 0.981,
+     "top1": 0.953,
+     "top3": 0.972,
      "confusions": [
       [
-       "chabot",
-       2
+       "rotengle",
+       1
       ],
       [
-       "rotengle",
+       "chabot",
        1
       ],
       [
@@ -2645,8 +2742,8 @@
     },
     "goujon": {
      "n": 112,
-     "top1": 0.812,
-     "top3": 0.875,
+     "top1": 0.804,
+     "top3": 0.866,
      "confusions": [
       [
        "vairon",
@@ -2654,29 +2751,29 @@
       ],
       [
        "epinoche",
-       3
+       4
       ],
       [
-       "gobie-invasif",
-       2
+       "able-heckel",
+       3
       ]
      ]
     },
     "grande-alose": {
-     "n": 7,
-     "top1": 0.286,
-     "top3": 0.429,
+     "n": 12,
+     "top1": 0.583,
+     "top3": 0.75,
      "confusions": [
-      [
-       "saumon",
-       2
-      ],
       [
        "mulet",
        1
       ],
       [
-       "gobie-invasif",
+       "flet",
+       1
+      ],
+      [
+       "truite-arc-en-ciel",
        1
       ]
      ]
@@ -2702,8 +2799,8 @@
     },
     "hotu": {
      "n": 75,
-     "top1": 0.72,
-     "top3": 0.867,
+     "top1": 0.707,
+     "top3": 0.84,
      "confusions": [
       [
        "barbeau",
@@ -2714,65 +2811,84 @@
        3
       ],
       [
-       "brochet",
-       1
+       "ombre",
+       2
       ]
      ]
     },
     "huchon": {
-     "n": 9,
-     "top1": 0.444,
-     "top3": 0.667,
+     "n": 48,
+     "top1": 0.833,
+     "top3": 0.917,
      "confusions": [
       [
        "truite-arc-en-ciel",
-       3
-      ],
-      [
-       "saumon",
-       1
+       2
       ],
       [
        "truite-commune",
+       2
+      ],
+      [
+       "lamproie-fluviatile",
        1
       ]
      ]
     },
     "ide": {
-     "n": 144,
-     "top1": 0.847,
-     "top3": 0.882,
+     "n": 160,
+     "top1": 0.819,
+     "top3": 0.863,
      "confusions": [
       [
        "chevesne",
+       5
+      ],
+      [
+       "rotengle",
        3
       ],
       [
        "hotu",
        2
+      ]
+     ]
+    },
+    "lamproie-fluviatile": {
+     "n": 17,
+     "top1": 0.235,
+     "top3": 0.471,
+     "confusions": [
+      [
+       "anguille",
+       6
       ],
       [
-       "carassin-commun",
-       2
+       "autre-poisson",
+       1
+      ],
+      [
+       "epinoche",
+       1
       ]
      ]
     },
     "lamproie-planer": {
      "n": 64,
-     "top1": 0.359,
-     "top3": 0.812,
+     "top1": 0.344,
+     "top3": 0.797,
      "confusions": [
       [
        "anguille",
-       26
+       25
       ],
       [
        "vairon",
        7
       ],
       [
-       "gambusie",
-       2
+       "lamproie-fluviatile",
+       4
       ]
      ]
     },
@@ -2815,17 +2931,17 @@
      ]
     },
     "lotte": {
-     "n": 71,
-     "top1": 0.789,
-     "top3": 0.873,
+     "n": 96,
+     "top1": 0.802,
+     "top3": 0.917,
      "confusions": [
       [
        "anguille",
-       5
+       4
       ],
       [
        "gobie-invasif",
-       2
+       3
       ],
       [
        "vairon",
@@ -2834,66 +2950,66 @@
      ]
     },
     "mulet": {
-     "n": 72,
-     "top1": 0.653,
-     "top3": 0.792,
+     "n": 76,
+     "top1": 0.645,
+     "top3": 0.829,
      "confusions": [
       [
        "poisson-chat",
-       6
+       5
       ],
       [
        "flet",
        4
       ],
       [
-       "able-heckel",
-       3
+       "chevesne",
+       2
       ]
      ]
     },
     "omble-chevalier": {
-     "n": 30,
-     "top1": 0.867,
-     "top3": 0.9,
+     "n": 41,
+     "top1": 0.78,
+     "top3": 0.878,
      "confusions": [
+      [
+       "omble-fontaine",
+       3
+      ],
       [
        "pas-un-poisson",
        2
       ],
       [
-       "autre-poisson",
-       1
-      ],
-      [
-       "lotte",
-       1
+       "saumon",
+       2
       ]
      ]
     },
     "omble-fontaine": {
-     "n": 40,
-     "top1": 0.775,
-     "top3": 0.85,
+     "n": 204,
+     "top1": 0.799,
+     "top3": 0.897,
      "confusions": [
       [
        "omble-chevalier",
-       3
+       8
+      ],
+      [
+       "truite-commune",
+       7
       ],
       [
        "truite-arc-en-ciel",
-       1
-      ],
-      [
-       "chevesne",
-       1
+       7
       ]
      ]
     },
     "ombre": {
-     "n": 29,
-     "top1": 0.862,
-     "top3": 0.931,
+     "n": 36,
+     "top1": 0.806,
+     "top3": 0.861,
      "confusions": [
       [
        "able-heckel",
@@ -2911,31 +3027,31 @@
     },
     "pas-un-poisson": {
      "n": 368,
-     "top1": 0.821,
-     "top3": 0.997,
+     "top1": 0.81,
+     "top3": 0.984,
      "confusions": [
       [
        "autre-poisson",
-       49
+       45
       ],
       [
-       "anguille",
+       "lamproie-fluviatile",
+       7
+      ],
+      [
+       "grande-alose",
        4
-      ],
-      [
-       "mulet",
-       3
       ]
      ]
     },
     "perche": {
-     "n": 289,
-     "top1": 0.668,
+     "n": 398,
+     "top1": 0.724,
      "top3": 0.827,
      "confusions": [
       [
        "poisson-chat",
-       26
+       17
       ],
       [
        "epinoche",
@@ -2948,10 +3064,14 @@
      ]
     },
     "perche-soleil": {
-     "n": 100,
-     "top1": 0.85,
-     "top3": 0.86,
+     "n": 296,
+     "top1": 0.909,
+     "top3": 0.932,
      "confusions": [
+      [
+       "gambusie",
+       3
+      ],
       [
        "gremille",
        2
@@ -2959,179 +3079,183 @@
       [
        "epinoche",
        2
-      ],
-      [
-       "gambusie",
-       2
       ]
      ]
     },
     "poisson-chat": {
-     "n": 25,
-     "top1": 0.96,
-     "top3": 0.96,
+     "n": 142,
+     "top1": 0.887,
+     "top3": 0.951,
      "confusions": [
       [
-       "huchon",
-       1
+       "omble-fontaine",
+       3
+      ],
+      [
+       "anguille",
+       3
+      ],
+      [
+       "pas-un-poisson",
+       2
       ]
      ]
     },
     "rotengle": {
-     "n": 209,
-     "top1": 0.679,
-     "top3": 0.842,
+     "n": 210,
+     "top1": 0.69,
+     "top3": 0.838,
      "confusions": [
       [
        "gardon",
        20
       ],
       [
-       "gambusie",
+       "epinoche",
        8
       ],
       [
-       "mulet",
-       5
+       "gambusie",
+       7
       ]
      ]
     },
     "sandre": {
-     "n": 223,
-     "top1": 0.969,
-     "top3": 0.987,
+     "n": 318,
+     "top1": 0.943,
+     "top3": 0.959,
      "confusions": [
       [
        "pas-un-poisson",
+       3
+      ],
+      [
+       "black-bass",
        2
       ],
       [
-       "gambusie",
-       1
-      ],
-      [
-       "mulet",
-       1
+       "carpe-commune",
+       2
       ]
      ]
     },
     "saumon": {
-     "n": 39,
-     "top1": 0.564,
-     "top3": 0.846,
+     "n": 91,
+     "top1": 0.758,
+     "top3": 0.868,
      "confusions": [
       [
        "truite-commune",
-       8
+       6
       ],
       [
        "pas-un-poisson",
        2
       ],
       [
-       "vairon",
+       "grande-alose",
        2
       ]
      ]
     },
     "silure": {
-     "n": 216,
-     "top1": 0.894,
-     "top3": 0.921,
+     "n": 402,
+     "top1": 0.866,
+     "top3": 0.898,
      "confusions": [
       [
-       "anguille",
+       "grande-alose",
+       7
+      ],
+      [
+       "poisson-chat",
        5
       ],
       [
-       "saumon",
-       4
-      ],
-      [
-       "hotu",
-       2
+       "pas-un-poisson",
+       5
       ]
      ]
     },
     "tanche": {
-     "n": 179,
-     "top1": 0.95,
-     "top3": 0.966,
+     "n": 195,
+     "top1": 0.938,
+     "top3": 0.949,
      "confusions": [
       [
        "epinoche",
        2
       ],
       [
-       "brochet",
-       2
+       "carpe-argentee",
+       1
       ],
       [
-       "carpe-argentee",
+       "flet",
        1
       ]
      ]
     },
     "truite-arc-en-ciel": {
-     "n": 133,
-     "top1": 0.744,
-     "top3": 0.872,
+     "n": 368,
+     "top1": 0.785,
+     "top3": 0.88,
      "confusions": [
       [
        "saumon",
+       17
+      ],
+      [
+       "mulet",
        7
       ],
       [
        "omble-chevalier",
-       6
-      ],
-      [
-       "truite-commune",
-       5
+       7
       ]
      ]
     },
     "truite-commune": {
-     "n": 470,
-     "top1": 0.7,
-     "top3": 0.838,
+     "n": 777,
+     "top1": 0.722,
+     "top3": 0.842,
      "confusions": [
       [
+       "truite-arc-en-ciel",
+       34
+      ],
+      [
        "saumon",
-       26
+       32
       ],
       [
        "omble-chevalier",
        16
-      ],
-      [
-       "truite-arc-en-ciel",
-       14
       ]
      ]
     },
     "vairon": {
      "n": 65,
      "top1": 0.708,
-     "top3": 0.815,
+     "top3": 0.831,
      "confusions": [
       [
        "epinoche",
-       5
+       6
       ],
       [
        "gambusie",
-       5
+       6
       ],
       [
-       "lamproie-planer",
-       3
+       "lamproie-fluviatile",
+       2
       ]
      ]
     },
     "vandoise": {
      "n": 27,
-     "top1": 0.778,
+     "top1": 0.741,
      "top3": 0.815,
      "confusions": [
       [
@@ -3139,11 +3263,11 @@
        2
       ],
       [
-       "breme-bordeliere",
+       "gardon",
        1
       ],
       [
-       "goujon",
+       "breme-bordeliere",
        1
       ]
      ]
@@ -3151,38 +3275,38 @@
    }
   },
   "fishial-sans-entrainement": {
-   "top1": 0.597,
-   "top3": 0.671,
-   "top1_poissons": 0.642,
-   "top3_poissons": 0.721,
+   "top1": 0.628,
+   "top3": 0.694,
+   "top1_poissons": 0.662,
+   "top3_poissons": 0.732,
    "par_source": {
+    "public": [
+     23,
+     0.522,
+     0.565
+    ],
+    "gbif": [
+     2837,
+     0.448,
+     0.532
+    ],
     "unsplash": [
      530,
      0.0,
      0.0
     ],
+    "peche": [
+     5215,
+     0.737,
+     0.799
+    ],
     "affine": [
      1847,
      0.776,
      0.85
-    ],
-    "peche": [
-     2120,
-     0.733,
-     0.821
-    ],
-    "public": [
-     329,
-     0.942,
-     0.945
-    ],
-    "gbif": [
-     2821,
-     0.451,
-     0.535
     ]
    },
-   "top1_moyenne_par_classe": 0.525,
+   "top1_moyenne_par_classe": 0.524,
    "par_classe": {
     "able-heckel": {
      "n": 26,
@@ -3204,9 +3328,9 @@
      ]
     },
     "ablette": {
-     "n": 48,
+     "n": 49,
      "top1": 0.0,
-     "top3": 0.354,
+     "top3": 0.367,
      "confusions": [
       [
        "breme-bordeliere",
@@ -3214,7 +3338,7 @@
       ],
       [
        "able-heckel",
-       10
+       11
       ],
       [
        "gardon",
@@ -3223,40 +3347,40 @@
      ]
     },
     "anguille": {
-     "n": 350,
-     "top1": 0.414,
-     "top3": 0.983,
+     "n": 380,
+     "top1": 0.397,
+     "top3": 0.984,
      "confusions": [
       [
        "able-heckel",
-       149
+       167
       ],
       [
        "silure",
        12
       ],
       [
-       "black-bass",
-       6
+       "coregones",
+       7
       ]
      ]
     },
     "aspe": {
-     "n": 175,
-     "top1": 0.743,
-     "top3": 0.891,
+     "n": 206,
+     "top1": 0.689,
+     "top3": 0.82,
      "confusions": [
       [
        "ide",
-       21
+       22
       ],
       [
        "able-heckel",
-       8
+       15
       ],
       [
-       "carpe-amour",
-       6
+       "silure",
+       7
       ]
      ]
     },
@@ -3280,40 +3404,40 @@
      ]
     },
     "barbeau": {
-     "n": 147,
-     "top1": 0.918,
-     "top3": 0.918,
+     "n": 176,
+     "top1": 0.824,
+     "top3": 0.875,
      "confusions": [
       [
-       "able-heckel",
-       9
-      ],
-      [
        "carpe-amour",
-       1
+       10
       ],
       [
-       "gardon",
-       1
+       "able-heckel",
+       10
+      ],
+      [
+       "carpe-commune",
+       8
       ]
      ]
     },
     "black-bass": {
-     "n": 333,
-     "top1": 0.928,
-     "top3": 0.928,
+     "n": 466,
+     "top1": 0.672,
+     "top3": 0.689,
      "confusions": [
       [
        "able-heckel",
-       18
+       81
       ],
       [
-       "silure",
-       2
+       "poisson-chat",
+       23
       ],
       [
-       "truite-arc-en-ciel",
-       2
+       "barbeau",
+       16
       ]
      ]
     },
@@ -3337,9 +3461,9 @@
      ]
     },
     "breme-bordeliere": {
-     "n": 89,
-     "top1": 0.584,
-     "top3": 0.775,
+     "n": 91,
+     "top1": 0.593,
+     "top3": 0.78,
      "confusions": [
       [
        "breme-commune",
@@ -3350,46 +3474,46 @@
        4
       ],
       [
-       "able-heckel",
+       "coregones",
        4
       ]
      ]
     },
     "breme-commune": {
-     "n": 209,
-     "top1": 0.799,
-     "top3": 0.871,
+     "n": 227,
+     "top1": 0.784,
+     "top3": 0.863,
      "confusions": [
       [
        "able-heckel",
-       14
+       13
       ],
       [
        "breme-bordeliere",
        8
       ],
       [
-       "carpe-amour",
-       6
+       "coregones",
+       7
       ]
      ]
     },
     "brochet": {
-     "n": 555,
-     "top1": 0.728,
-     "top3": 0.733,
+     "n": 856,
+     "top1": 0.763,
+     "top3": 0.778,
      "confusions": [
       [
        "able-heckel",
-       90
+       112
+      ],
+      [
+       "cristivomer",
+       14
       ],
       [
        "black-bass",
-       8
-      ],
-      [
-       "carpe-commune",
-       8
+       13
       ]
      ]
     },
@@ -3413,9 +3537,9 @@
      ]
     },
     "carassin-commun": {
-     "n": 109,
-     "top1": 0.642,
-     "top3": 0.743,
+     "n": 115,
+     "top1": 0.652,
+     "top3": 0.748,
      "confusions": [
       [
        "carassin-argente",
@@ -3423,7 +3547,7 @@
       ],
       [
        "able-heckel",
-       13
+       12
       ],
       [
        "carpe-commune",
@@ -3432,9 +3556,9 @@
      ]
     },
     "carpe-amour": {
-     "n": 178,
-     "top1": 0.91,
-     "top3": 0.921,
+     "n": 187,
+     "top1": 0.914,
+     "top3": 0.925,
      "confusions": [
       [
        "able-heckel",
@@ -3470,17 +3594,17 @@
      ]
     },
     "carpe-commune": {
-     "n": 838,
-     "top1": 0.692,
-     "top3": 0.753,
+     "n": 1176,
+     "top1": 0.761,
+     "top3": 0.813,
      "confusions": [
       [
        "able-heckel",
-       121
+       127
       ],
       [
        "carpe-amour",
-       72
+       85
       ],
       [
        "carassin-argente",
@@ -3510,7 +3634,7 @@
      "confusions": [
       [
        "able-heckel",
-       14
+       13
       ],
       [
        "flet",
@@ -3523,32 +3647,32 @@
      ]
     },
     "chevesne": {
-     "n": 172,
+     "n": 177,
      "top1": 0.0,
      "top3": 0.0,
      "confusions": [
       [
        "carpe-amour",
-       98
+       99
       ],
       [
        "ide",
-       42
+       43
       ],
       [
        "able-heckel",
-       9
+       10
       ]
      ]
     },
     "coregones": {
-     "n": 77,
-     "top1": 0.818,
-     "top3": 0.909,
+     "n": 82,
+     "top1": 0.805,
+     "top3": 0.902,
      "confusions": [
       [
        "able-heckel",
-       6
+       7
       ],
       [
        "aspe",
@@ -3557,6 +3681,25 @@
       [
        "ombre",
        1
+      ]
+     ]
+    },
+    "cristivomer": {
+     "n": 283,
+     "top1": 0.859,
+     "top3": 0.876,
+     "confusions": [
+      [
+       "able-heckel",
+       24
+      ],
+      [
+       "omble-chevalier",
+       3
+      ],
+      [
+       "truite-arc-en-ciel",
+       3
       ]
      ]
     },
@@ -3590,7 +3733,7 @@
       ],
       [
        "able-heckel",
-       14
+       13
       ],
       [
        "carpe-amour",
@@ -3637,13 +3780,13 @@
      ]
     },
     "gardon": {
-     "n": 218,
-     "top1": 0.61,
-     "top3": 0.711,
+     "n": 230,
+     "top1": 0.604,
+     "top3": 0.7,
      "confusions": [
       [
        "able-heckel",
-       19
+       22
       ],
       [
        "rotengle",
@@ -3662,7 +3805,7 @@
      "confusions": [
       [
        "able-heckel",
-       17
+       16
       ],
       [
        "chabot",
@@ -3694,20 +3837,20 @@
      ]
     },
     "grande-alose": {
-     "n": 7,
+     "n": 12,
      "top1": 0.0,
      "top3": 0.0,
      "confusions": [
       [
        "able-heckel",
-       3
+       6
+      ],
+      [
+       "truite-arc-en-ciel",
+       2
       ],
       [
        "carpe-argentee",
-       1
-      ],
-      [
-       "ide",
        1
       ]
      ]
@@ -3751,40 +3894,59 @@
      ]
     },
     "huchon": {
-     "n": 9,
+     "n": 48,
      "top1": 0.0,
      "top3": 0.0,
      "confusions": [
       [
        "truite-arc-en-ciel",
-       5
+       13
       ],
       [
        "able-heckel",
-       2
+       12
       ],
       [
        "saumon",
-       1
+       9
       ]
      ]
     },
     "ide": {
-     "n": 144,
-     "top1": 0.854,
-     "top3": 0.889,
+     "n": 160,
+     "top1": 0.825,
+     "top3": 0.856,
      "confusions": [
       [
        "able-heckel",
-       6
+       9
       ],
       [
        "carpe-amour",
-       5
+       6
       ],
       [
        "carpe-commune",
        2
+      ]
+     ]
+    },
+    "lamproie-fluviatile": {
+     "n": 17,
+     "top1": 0.0,
+     "top3": 0.0,
+     "confusions": [
+      [
+       "able-heckel",
+       12
+      ],
+      [
+       "truite-arc-en-ciel",
+       1
+      ],
+      [
+       "anguille",
+       1
       ]
      ]
     },
@@ -3846,28 +4008,28 @@
      ]
     },
     "lotte": {
-     "n": 71,
-     "top1": 0.803,
-     "top3": 0.803,
+     "n": 96,
+     "top1": 0.802,
+     "top3": 0.802,
      "confusions": [
       [
        "able-heckel",
-       8
+       10
+      ],
+      [
+       "brochet",
+       2
       ],
       [
        "sandre",
-       1
-      ],
-      [
-       "anguille",
        1
       ]
      ]
     },
     "mulet": {
-     "n": 72,
-     "top1": 0.472,
-     "top3": 0.5,
+     "n": 76,
+     "top1": 0.487,
+     "top3": 0.513,
      "confusions": [
       [
        "able-heckel",
@@ -3879,52 +4041,52 @@
       ],
       [
        "flet",
-       4
+       5
       ]
      ]
     },
     "omble-chevalier": {
-     "n": 30,
-     "top1": 0.667,
-     "top3": 0.8,
+     "n": 41,
+     "top1": 0.561,
+     "top3": 0.707,
      "confusions": [
       [
        "able-heckel",
-       3
+       5
       ],
       [
-       "truite-commune",
-       1
+       "omble-fontaine",
+       2
       ],
       [
-       "ide",
-       1
+       "cristivomer",
+       2
       ]
      ]
     },
     "omble-fontaine": {
-     "n": 40,
-     "top1": 0.725,
-     "top3": 0.85,
+     "n": 204,
+     "top1": 0.593,
+     "top3": 0.716,
      "confusions": [
       [
        "able-heckel",
-       3
+       22
+      ],
+      [
+       "cristivomer",
+       17
       ],
       [
        "truite-arc-en-ciel",
-       1
-      ],
-      [
-       "omble-chevalier",
-       1
+       13
       ]
      ]
     },
     "ombre": {
-     "n": 29,
-     "top1": 0.828,
-     "top3": 0.897,
+     "n": 36,
+     "top1": 0.778,
+     "top3": 0.833,
      "confusions": [
       [
        "barbeau",
@@ -3935,8 +4097,8 @@
        2
       ],
       [
-       "brochet",
-       1
+       "able-heckel",
+       2
       ]
      ]
     },
@@ -3960,55 +4122,55 @@
      ]
     },
     "perche": {
-     "n": 289,
-     "top1": 0.585,
-     "top3": 0.599,
+     "n": 398,
+     "top1": 0.616,
+     "top3": 0.628,
      "confusions": [
       [
        "able-heckel",
-       71
+       91
+      ],
+      [
+       "carpe-commune",
+       8
       ],
       [
        "sandre",
        7
-      ],
-      [
-       "carpe-commune",
-       6
       ]
      ]
     },
     "perche-soleil": {
-     "n": 100,
-     "top1": 0.8,
-     "top3": 0.8,
+     "n": 296,
+     "top1": 0.831,
+     "top3": 0.838,
      "confusions": [
       [
        "able-heckel",
-       11
+       26
+      ],
+      [
+       "truite-arc-en-ciel",
+       5
       ],
       [
        "carpe-commune",
        2
-      ],
-      [
-       "gremille",
-       1
       ]
      ]
     },
     "poisson-chat": {
-     "n": 25,
-     "top1": 0.2,
-     "top3": 0.24,
+     "n": 142,
+     "top1": 0.648,
+     "top3": 0.662,
      "confusions": [
       [
-       "carpe-amour",
-       10
+       "able-heckel",
+       30
       ],
       [
-       "able-heckel",
-       9
+       "carpe-amour",
+       11
       ],
       [
        "truite-arc-en-ciel",
@@ -4017,9 +4179,9 @@
      ]
     },
     "rotengle": {
-     "n": 209,
-     "top1": 0.632,
-     "top3": 0.756,
+     "n": 210,
+     "top1": 0.633,
+     "top3": 0.757,
      "confusions": [
       [
        "gardon",
@@ -4036,116 +4198,116 @@
      ]
     },
     "sandre": {
-     "n": 223,
-     "top1": 0.906,
-     "top3": 0.919,
+     "n": 318,
+     "top1": 0.896,
+     "top3": 0.906,
+     "confusions": [
+      [
+       "able-heckel",
+       18
+      ],
+      [
+       "black-bass",
+       6
+      ],
+      [
+       "carpe-commune",
+       2
+      ]
+     ]
+    },
+    "saumon": {
+     "n": 91,
+     "top1": 0.67,
+     "top3": 0.736,
      "confusions": [
       [
        "able-heckel",
        12
       ],
       [
-       "black-bass",
-       5
-      ],
-      [
-       "mulet",
-       1
-      ]
-     ]
-    },
-    "saumon": {
-     "n": 39,
-     "top1": 0.462,
-     "top3": 0.564,
-     "confusions": [
-      [
-       "able-heckel",
-       8
-      ],
-      [
        "truite-arc-en-ciel",
-       6
+       7
       ],
       [
        "truite-commune",
-       2
+       4
       ]
      ]
     },
     "silure": {
-     "n": 216,
-     "top1": 0.782,
-     "top3": 0.792,
+     "n": 402,
+     "top1": 0.724,
+     "top3": 0.734,
      "confusions": [
       [
        "able-heckel",
-       28
+       71
+      ],
+      [
+       "carpe-commune",
+       5
       ],
       [
        "truite-arc-en-ciel",
-       2
-      ],
-      [
-       "poisson-chat",
-       2
+       4
       ]
      ]
     },
     "tanche": {
-     "n": 179,
-     "top1": 0.916,
-     "top3": 0.916,
+     "n": 195,
+     "top1": 0.903,
+     "top3": 0.908,
      "confusions": [
       [
        "able-heckel",
-       7
+       9
       ],
       [
-       "gardon",
-       1
+       "silure",
+       2
       ],
       [
-       "chabot",
-       1
+       "carpe-commune",
+       2
       ]
      ]
     },
     "truite-arc-en-ciel": {
-     "n": 133,
-     "top1": 0.647,
-     "top3": 0.654,
+     "n": 368,
+     "top1": 0.745,
+     "top3": 0.764,
      "confusions": [
       [
        "able-heckel",
-       24
+       50
       ],
       [
        "carpe-amour",
-       11
+       12
       ],
       [
-       "ide",
-       3
+       "anguille",
+       4
       ]
      ]
     },
     "truite-commune": {
-     "n": 470,
-     "top1": 0.564,
-     "top3": 0.653,
+     "n": 777,
+     "top1": 0.61,
+     "top3": 0.699,
      "confusions": [
       [
        "able-heckel",
-       73
+       99
       ],
       [
        "truite-arc-en-ciel",
-       34
+       60
       ],
       [
        "saumon",
-       33
+       54
       ]
      ]
     },
