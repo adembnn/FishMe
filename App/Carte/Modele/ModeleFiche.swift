@@ -11,6 +11,8 @@ nonisolated struct LigneEspece: Sendable, Equatable, Identifiable {
     var rarete: ResultatRarete?
     /// Faux pour la truite fario proposée en 1re catégorie sans relevé : nPeches et annee ne valent alors rien.
     var releve: Bool = true
+    /// La taille minimale lue dans la règle de `Core` (« 50 »), `nil` si aucune phrase ne la donne.
+    var tailleMiniCm: String? = nil
     var id: String { espece.id }
 }
 
@@ -40,7 +42,21 @@ nonisolated struct FicheCalculee: Sendable {
         LigneEspece(espece: p.espece, nPeches: p.nPeches, annee: p.annee, ouverture: p.ouverture,
                     rarete: services.especes.rarete(espece: p.espece, departement: lieu.departement))
     }
-    let especesAffichees = TruiteEnPremiere.completer(especes, categorie: lieu.categorie.valeur)
+    // Les espèces ouvertes aujourd'hui d'abord (ordre gardé sinon), puis la taille minimale des 3 montrées sur la fiche.
+    let completees = TruiteEnPremiere.completer(especes, categorie: lieu.categorie.valeur)
+    let ouvertesDAbord = completees.enumerated().sorted { a, b in
+        let oa = a.element.ouverture?.estOuverte ?? false
+        let ob = b.element.ouverture?.estOuverte ?? false
+        return oa != ob ? oa : a.offset < b.offset
+    }.map(\.element)
+    let especesAffichees = ouvertesDAbord.enumerated().map { i, ligne -> LigneEspece in
+        guard i < 3 else { return ligne }
+        var avecTaille = ligne
+        let taille = services.regles.controle(espece: ligne.espece, tailleCm: nil, mesure: nil, date: date, lieu: lieu, prisesDuJour: [])
+            .lignes.first { $0.type == .taille }
+        avecTaille.tailleMiniCm = taille.flatMap { LectureRegle.nombre(avant: "cm", dans: $0.phrase) }
+        return avecTaille
+    }
     let lignes: [LigneControle]
     if let espece {
         lignes = OrdreRegles.trier(services.regles.controle(espece: espece, tailleCm: nil, mesure: nil, date: date, lieu: lieu, prisesDuJour: []).lignes)

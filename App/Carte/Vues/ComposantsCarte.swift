@@ -84,3 +84,64 @@ struct RangeeEspece: View {
         .accessibilityElement(children: .combine)
     }
 }
+
+/// Ce que l'écran « Ton spot » montre : le lieu, l'espèce la plus rare relevée, trois autres et le reste.
+/// Tout vient de `calculerFiche` (donc de `Core`) ; chaque chiffre garde son nombre de pêches et son année.
+nonisolated struct ApercuSpot: Sendable, Equatable {
+    var lieu: String
+    var vedette: LigneEspece?
+    var autres: [LigneEspece]
+    var reste: Int
+}
+
+@concurrent nonisolated func calculerApercuSpot(services: ServicesCarte, spot: Spot, date: Date) async -> ApercuSpot {
+    let fiche = await calculerFiche(services: services, coordonnee: spot.centre, choix: nil, espece: nil, date: date)
+    let releves = fiche.especes.filter { $0.releve }
+    // Le plus rare d'abord ; à rareté égale, celui qui a été le moins pêché.
+    let parRarete = releves
+        .filter { $0.rarete != nil && $0.rarete?.niveau != .nonMesuree }
+        .sorted { a, b in
+            let ra = a.rarete?.niveau.rang ?? 0, rb = b.rarete?.niveau.rang ?? 0
+            return ra != rb ? ra > rb : a.nPeches < b.nPeches
+        }
+    let vedette = parRarete.first
+    let autres = releves
+        .filter { $0.espece != vedette?.espece }
+        .sorted { $0.nPeches > $1.nPeches }
+    let eau = fiche.eaux.first?.nom ?? fiche.lieu.eau?.nom
+    let code = spot.departement.estInconnu ? nil : spot.departement.code
+    let lieu: String
+    switch (eau, code) {
+    case let (eau?, code?): lieu = "\(eau) · \(code)"
+    case let (eau?, nil): lieu = eau
+    case let (nil, code?): lieu = "Ton spot · \(code)"
+    case (nil, nil): lieu = "Ton spot"
+    }
+    return ApercuSpot(lieu: lieu, vedette: vedette, autres: Array(autres.prefix(3)), reste: max(0, autres.count - 3))
+}
+
+/// Bouton rond de 44 pt en verre (carte) : icône encre ou marine.
+struct BoutonVerreCarte: View {
+    let symbole: String
+    let libelle: String
+    var teinte: Color = Palette.encre
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: symbole)
+                .font(Police.taille(18))
+                .foregroundStyle(teinte)
+                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                .background {
+                    Circle()
+                        .fill(.regularMaterial)
+                        .overlay(Circle().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
+                        .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
+                }
+                .contentShape(Circle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(libelle)
+    }
+}

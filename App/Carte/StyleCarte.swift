@@ -31,6 +31,27 @@ enum PolicesCarte {
 }
 
 extension NiveauRarete {
+    /// Une forme par niveau (rond, hexagone, losange, étoile) : la rareté se lit sans la couleur.
+    var symboleSF: String {
+        switch self {
+        case .commun, .nonMesuree: return "circle.fill"
+        case .peuCommun: return "hexagon.fill"
+        case .rare: return "diamond.fill"
+        case .legendaire: return "star.fill"
+        }
+    }
+
+    /// Du moins rare (0) au plus rare (4) : sert à choisir « le plus rare de ton spot ».
+    nonisolated var rang: Int {
+        switch self {
+        case .nonMesuree: return 0
+        case .commun: return 1
+        case .peuCommun: return 2
+        case .rare: return 3
+        case .legendaire: return 4
+        }
+    }
+
     var libelle: String {
         switch self {
         case .commun: return "Commun"

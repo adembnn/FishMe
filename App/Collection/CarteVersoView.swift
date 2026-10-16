@@ -2,8 +2,8 @@ import Core
 import SwiftUI
 import UIKit
 
-/// Le verso (P25 C) : la vraie photo en grand, puis une bande courte (qui et quand). Le détail de la prise
-/// (taille, poids estimé, relâché ou gardé, conditions) est dans `FaitsPrise`, posé sous la carte.
+/// Le verso : seulement la photo que le pêcheur a prise, sur toute la carte (Adem, 16 oct. : « on met que la photo uploadée »).
+/// Ni date, ni lune, ni rareté, ni consigne, ni conseil.
 struct CarteVersoView: View {
     let infos: InfosCarte
     let photo: Data?
@@ -12,13 +12,9 @@ struct CarteVersoView: View {
 
     var body: some View {
         CarteCadre(style: infos.style, declaree: infos.prise.estDeclaree) {
-            VStack(spacing: 0) {
-                fondPhoto
-                    .clipShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-                    .padding([.top, .horizontal], Espace.s)
-                    .layoutPriority(1)
-                bande
-            }
+            fondPhoto
+                .clipShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
+                .padding(Espace.s)
         }
         .accessibilityElement(children: .contain)
     }
