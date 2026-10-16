@@ -10,6 +10,29 @@ struct AutreSpotProView: View {
     let plusTard: () -> Void
 
     var body: some View {
+        ScrollView {
+            contenu
+                .padding(Espace.bord)
+        }
+        .scrollIndicators(.hidden)
+        .scrollBounceBehavior(.basedOnSize)
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            VStack(spacing: Espace.xs) {
+                Button("Découvrir Pro", action: decouvrir)
+                    .buttonStyle(.principal)
+                Button("Plus tard", action: plusTard)
+                    .font(Police.corps)
+                    .foregroundStyle(Palette.marine)
+                    .frame(minHeight: Gabarit.zoneTactile)
+            }
+            .padding(.horizontal, Espace.bord)
+            .padding(.top, Espace.s)
+            .background(Palette.surface)
+        }
+        .background(Palette.surface.ignoresSafeArea())
+    }
+
+    private var contenu: some View {
         VStack(spacing: 0) {
             HStack {
                 Text("Choisir un autre spot")
@@ -31,7 +54,7 @@ struct AutreSpotProView: View {
 
             Spacer(minLength: Espace.l)
             illustration
-            VStack(spacing: 10) {
+            VStack(spacing: Espace.m) {
                 Text("Spots illimités")
                     .font(Police.taille(28, .heavy))
                     .foregroundStyle(Palette.encre)
@@ -42,7 +65,7 @@ struct AutreSpotProView: View {
                     .foregroundStyle(Palette.encreDouce)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
-                HStack(spacing: 6) {
+                HStack(spacing: Espace.s) {
                     Image(systemName: "checkmark.circle.fill")
                         .foregroundStyle(Palette.ouvert)
                         .accessibilityHidden(true)
@@ -54,19 +77,7 @@ struct AutreSpotProView: View {
             }
             .padding(.top, Espace.xl)
             .padding(.horizontal, Espace.l)
-            Spacer(minLength: Espace.l)
-
-            VStack(spacing: 6) {
-                Button("Découvrir Pro", action: decouvrir)
-                    .buttonStyle(.principal)
-                Button("Plus tard", action: plusTard)
-                    .font(Police.corps)
-                    .foregroundStyle(Palette.marine)
-                    .frame(minHeight: Gabarit.zoneTactile)
-            }
         }
-        .padding(Espace.bord)
-        .background(Palette.surface.ignoresSafeArea())
     }
 
     /// Une rivière, ton spot au centre et trois cercles en pointillés : l'idée de « plusieurs spots », sans cadenas.
@@ -84,13 +95,14 @@ struct AutreSpotProView: View {
                 .strokeBorder(Palette.marine, lineWidth: 2)
                 .frame(width: 80, height: 80)
             Text("Ton spot")
-                .font(Police.taille(12))
+                .font(Police.legende)
                 .foregroundStyle(Palette.surMarine)
                 .padding(.horizontal, Espace.s)
                 .padding(.vertical, Espace.xs)
                 .background(Palette.marine, in: Capsule())
         }
-        .frame(width: 280, height: 280)
+        .frame(maxWidth: 280)
+        .aspectRatio(1, contentMode: .fit)
         .clipShape(Circle())
         .overlay(Circle().strokeBorder(Palette.filet, lineWidth: 1))
         .accessibilityHidden(true)

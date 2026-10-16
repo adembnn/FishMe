@@ -54,6 +54,16 @@ struct ChoixDeZoneView: View {
             enTete
         }
         .safeAreaInset(edge: .bottom, spacing: 0) { feuille }
+        // La feuille du bas fait partie de l'écran : un glissement ne doit pas la fermer par mégarde.
+        .interactiveDismissDisabled()
+        // Recherche au fil de la frappe : 300 ms après le dernier caractère, dès 3 caractères.
+        .task(id: terme) {
+            let propre = terme.trimmingCharacters(in: .whitespaces)
+            guard propre.count >= 3 else { return }
+            try? await Task.sleep(for: .milliseconds(300))
+            guard !Task.isCancelled else { return }
+            await chercher()
+        }
     }
 
     private var enTete: some View {
@@ -86,11 +96,6 @@ struct ChoixDeZoneView: View {
     /// La feuille du bas, façon Plans : « Ta zone », les communes trouvées avec leur code, un seul bouton « Valider ».
     private var feuille: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            Capsule()
-                .fill(Palette.silhouette)
-                .frame(width: 36, height: 5)
-                .frame(maxWidth: .infinity)
-                .accessibilityHidden(true)
             Text("Ta zone")
                 .font(Police.titre)
                 .foregroundStyle(Palette.encre)
@@ -98,8 +103,8 @@ struct ChoixDeZoneView: View {
                 .accessibilityAddTraits(.isHeader)
             if trouvees.isEmpty {
                 if let posee {
-                    rangee(nom: "Ma zone", code: codeDepartement(Coordonnee(latitude: posee.latitude, longitude: posee.longitude)),
-                           choisie: true, action: {})
+                    let code = codeDepartement(Coordonnee(latitude: posee.latitude, longitude: posee.longitude))
+                    rangee(nom: code.map { "Département \($0)" } ?? "Ma zone", code: code, choisie: true, action: {})
                 } else {
                     Text(resultatsVides ? "Aucune commune trouvée. Touche la carte à la place."
                                         : "Touche la carte sur ton département ou ta commune.")
@@ -160,7 +165,7 @@ struct ChoixDeZoneView: View {
                     .accessibilityHidden(true)
             }
             .padding(.horizontal, Espace.xs)
-            .frame(minHeight: 52)
+            .frame(minHeight: 56)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)

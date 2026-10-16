@@ -18,6 +18,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     let ligneConditions: LigneConditions
     @Environment(\.dynamicTypeSize) private var tailleTexte
     @State private var explicationFin = false
+    @State private var confirmationFin = false
 
     init(moteur: SuiviSession, ajouterPrise: @escaping () -> Void,
          infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, eau: String? = nil,
@@ -39,21 +40,21 @@ struct SessionEnCoursView<LigneConditions: View>: View {
 
     private func contenu(_ session: SessionEnCours, maintenant: Date) -> some View {
         VStack(spacing: 0) {
-            enTete
+            enTete(session)
             Spacer(minLength: Espace.l)
             chrono(session, maintenant: maintenant)
             Spacer(minLength: Espace.l)
-            dernierePrise(session)
-            Spacer(minLength: Espace.l)
+            // Sans prise, le chrono reste seul : pas de poisson gris.
+            if !FormatSortie.prises(session.sortie).isEmpty {
+                dernierePrise(session)
+                Spacer(minLength: Espace.l)
+            }
             VStack(spacing: Espace.s) {
-                ForEach(session.messages, id: \.self) { AvisSession(texte: $0) }
-                if moteur.quotaAtteint { AvisSession(texte: "Quota du jour atteint") }
-                if !tailleTexte.isAccessibilitySize { ligneConditions }
                 Button(action: ajouterPrise) {
                     Label("Ajouter une prise", systemImage: "camera.fill")
                 }
                 .buttonStyle(.principal)
-                Button("Terminer la session", role: .cancel) { moteur.terminer() }
+                Button("Terminer la session", role: .cancel) { confirmationFin = true }
                     .font(Police.sousTitre)
                     .foregroundStyle(Palette.marine)
                     .frame(minHeight: Gabarit.zoneTactile)
@@ -65,18 +66,27 @@ struct SessionEnCoursView<LigneConditions: View>: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Palette.surface.ignoresSafeArea())
         .accessibilityElement(children: .contain)
+        .confirmationDialog("Terminer la session ?", isPresented: $confirmationFin, titleVisibility: .visible) {
+            Button("Terminer la session", role: .destructive) { moteur.terminer() }
+            Button("Continuer à pêcher", role: .cancel) {}
+        }
         .onChange(of: maintenant) { _, _ in moteur.verifierFin() }
     }
 
-    private var enTete: some View {
-        HStack(spacing: Espace.s) {
-            Circle().fill(Palette.ouvert).frame(width: 10, height: 10).accessibilityHidden(true)
-            Text(titreSpot)
-                .font(Police.detail)
-                .foregroundStyle(Palette.encreDouce)
-            Spacer(minLength: 0)
+    /// « Ton spot · <eau> », puis les avis (quota, fin légale) et la ligne de conditions.
+    private func enTete(_ session: SessionEnCours) -> some View {
+        VStack(spacing: Espace.s) {
+            HStack(spacing: Espace.s) {
+                Circle().fill(Palette.ouvert).frame(width: 10, height: 10).accessibilityHidden(true)
+                Text(titreSpot)
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
+                Spacer(minLength: 0)
+            }
+            ForEach(session.messages, id: \.self) { AvisSession(texte: $0) }
+            if moteur.quotaAtteint { AvisSession(texte: "Quota du jour atteint") }
+            if !tailleTexte.isAccessibilitySize { ligneConditions }
         }
-        .padding(.top, Espace.xl)
     }
 
     private var titreSpot: String {
