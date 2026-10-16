@@ -72,9 +72,9 @@
 		ECDF41671AB08CAA06479CB4 /* Exceptions for "WidgetAquarium" folder in "BuildChallenge" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				AquariumWidget.swift,
+				Polices/LISEZMOI.md,
+				Polices/fabriquer_polices.py,
 				PoissonsWidget.xcassets,
-				VuesAquariumWidget.swift,
 			);
 			target = DBE31DC230753926004DC02F /* BuildChallenge */;
 		};
@@ -88,16 +88,24 @@
 		0097F38EEF3AB0F94E6B05B6 /* Exceptions for "WidgetAquarium" folder in "FishMeWidget" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Polices/LISEZMOI.md,
+				Polices/fabriquer_polices.py,
 				PontAquariumWidget.swift,
+				PontCartesWidget.swift,
+				PontSessionWidget.swift,
 			);
 			target = E4DB592F1DF096ACE956B33F /* FishMeWidget */;
 		};
 		FCE76338372E45435561C7CB /* Exceptions for "AppTests" folder in "BuildChallengeTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				WidgetAquarium/HorlogeAnimationTests.swift,
+				WidgetAquarium/lancer-tests-session.sh,
 				WidgetAquarium/lancer-tests.sh,
 				WidgetAquarium/NageWidgetTests.swift,
 				WidgetAquarium/Package.swift,
+				WidgetAquarium/Package.swift.modele,
+				WidgetAquarium/SessionWidgetEssais.swift,
 			);
 			target = DBE31DCF30753927004DC02F /* BuildChallengeTests */;
 		};

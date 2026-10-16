@@ -31,6 +31,11 @@
 	<string>FishMe enregistre l'image de ta carte dans tes photos quand tu le demandes, sans aucune position.</string>
 	<key>ReglesBaseURL</key>
 	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FishMeMasquePair.ttf</string>
+		<string>FishMeMasqueImpair.ttf</string>
+	</array>
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
