@@ -106,9 +106,6 @@ struct DemoAmisContenu: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.xl) {
             if avecInviter {
-                Text("Amis")
-                    .font(Police.grandTitre)
-                    .foregroundStyle(Palette.encre)
                 Button { actionSansEffet = true } label: {
                     Label("Inviter un ami", systemImage: "person.badge.plus")
                         .font(Police.sousTitre)

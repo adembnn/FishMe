@@ -79,13 +79,7 @@ struct ClubPageView: View {
     NavigationStack {
       ScrollView {
         VStack(alignment: .leading, spacing: 0) {
-          Text("Club")
-            .font(Police.grandTitre)
-            .foregroundStyle(Palette.encre)
-            .padding(.horizontal, Espace.l)
-            .accessibilityAddTraits(.isHeader)
-
-          boutonsClub.padding(.top, Espace.m)
+          boutonsClub.padding(.top, Espace.s)
 
           if let club {
             if tousLesClubs.count > 1 { choixDuClub }
