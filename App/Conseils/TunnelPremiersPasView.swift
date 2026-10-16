@@ -94,7 +94,6 @@ struct TunnelPremiersPasView: View {
                     .font(Police.grandTitre)
                     .foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.center)
-                    .minimumScaleFactor(0.7)
                     .lineLimit(2)
                     .padding(.top, 14)
                 if let rareté = rarete(espece) {

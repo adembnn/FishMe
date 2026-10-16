@@ -55,8 +55,7 @@ struct CarteVersoView: View {
             // À brancher : le prénom du pêcheur (« Adem ») ; aucune donnée de profil n'arrive jusqu'ici. Le lieu flou le remplace.
             Text(infos.prise.estDeclaree ? infos.espece.nom : (infos.prise.lieuFlou ?? infos.espece.nom))
                 .font(Jeton.police(22, .heavy))
-                .lineLimit(1)
-                .minimumScaleFactor(0.6)
+                .lineLimit(2)
             Spacer(minLength: 0)
             if !infos.prise.estDeclaree {
                 VStack(alignment: .trailing, spacing: 0) {

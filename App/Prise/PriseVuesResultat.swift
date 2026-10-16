@@ -374,7 +374,7 @@ struct PriseResultatView: View {
                 Image(systemName: symbole).font(.system(size: 22, weight: .bold, design: .rounded))
                     .foregroundStyle(couleur).accessibilityHidden(true)
                 Text(titre).font(Police.corps).foregroundStyle(couleur)
-                    .frame(maxWidth: .infinity, alignment: .leading).lineLimit(2).minimumScaleFactor(0.7)
+                    .frame(maxWidth: .infinity, alignment: .leading).lineLimit(2)
                 // À brancher : « 68 / 60 cm mini » (la taille minimale n'est pas un champ du résultat de Core, seulement dans la phrase de la règle).
                 Text(tailleTexte).font(Police.corps.monospacedDigit()).foregroundStyle(Palette.encreDouce).lineLimit(1)
             }

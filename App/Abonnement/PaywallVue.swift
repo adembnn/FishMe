@@ -205,10 +205,9 @@ struct PaywallVue: View {
     private var argumentaire: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("FishMe Pro")
-                .font(Police.taille(22, .heavy))
+                .font(Police.titre)
                 .foregroundStyle(Palette.encre)
                 .lineLimit(1)
-                .minimumScaleFactor(0.7)
             pastilles
                 .padding(.top, 18)
                 .padding(.bottom, 22)
@@ -246,7 +245,6 @@ struct PaywallVue: View {
                 .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
-                .minimumScaleFactor(0.8)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity)

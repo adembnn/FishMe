@@ -8,7 +8,7 @@ private let chevronGris = Color(carte: 0xB4BFCB)
 /// Titre d'écran (`.t-grand` : 34 pt, 900, interlettrage -0,01 em).
 private func grandTitre(_ texte: String) -> some View {
     Text(texte)
-        .font(.system(.largeTitle, design: .rounded, weight: .black))
+        .font(Police.grandTitre)
         .tracking(-0.34)
         .foregroundStyle(Palette.encre)
 }
@@ -16,7 +16,7 @@ private func grandTitre(_ texte: String) -> some View {
 /// En-tête de groupe (`.entete-groupe` : 13 pt, 800, majuscules, interlettrage 0,04 em, décalé de 16).
 private func enteteDeGroupe(_ texte: String, haut: CGFloat = 8) -> some View {
     Text(texte.uppercased())
-        .font(.system(.footnote, design: .rounded, weight: .heavy))
+        .font(Police.legende)
         .tracking(0.52)
         .foregroundStyle(Palette.encreDouce)
         .padding(.horizontal, Espace.l)
@@ -239,7 +239,7 @@ struct PescedexView: View {
                     HStack(alignment: .firstTextBaseline) {
                         HStack(alignment: .firstTextBaseline, spacing: 0) {
                             Text("\(c.trouvees)")
-                                .font(.system(.largeTitle, design: .rounded, weight: .black))
+                                .font(Police.chiffre)
                                 .monospacedDigit()
                                 .foregroundStyle(Palette.encre)
                             Text(" sur \(c.releveesDansLaZone)").font(Police.detail).foregroundStyle(Palette.encreDouce)
@@ -500,7 +500,7 @@ struct PescedexView: View {
                                 VStack(spacing: 6) {
                                     Image(systemName: "water.waves")
                                         .font(Police.taille(28))
-                                    Text(Formats.date(b.debut)).font(Police.legende).lineLimit(1).minimumScaleFactor(0.7)
+                                    Text(Formats.date(b.debut)).font(Police.legende).lineLimit(1)
                                 }
                                 .foregroundStyle(Palette.commun)
                                 .frame(maxWidth: .infinity, minHeight: 88)
@@ -611,11 +611,10 @@ struct DosAATrouver: View {
                         .frame(width: w * 0.68, height: w * 0.68 / rapport)
                         .offset(x: w * 0.16, y: h * 0.36)
                         .accessibilityHidden(true)
-                    Text(espece.nom)
+                    Text(NomCarte.court(espece.nom))
                         .font(Police.taille(9 * u, .heavy))
                         .foregroundStyle(.white.opacity(0.85))
                         .lineLimit(1)
-                        .minimumScaleFactor(0.6)
                         .padding(.horizontal, 6 * u)
                         .frame(width: w)
                         .position(x: w / 2, y: h * 0.91 - 4.5 * u)
@@ -868,8 +867,7 @@ struct FicheEspeceView: View {
                     Text("\(s.mot.prefix(1).uppercased() + s.mot.dropFirst()) · \(r.nPeches) sur \(r.nTotal)\(annee)")
                         .font(Police.taille(13, .heavy))
                         .foregroundStyle(s.couleur)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.7)
+                        .lineLimit(2)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)

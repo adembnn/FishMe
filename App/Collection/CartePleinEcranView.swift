@@ -114,13 +114,11 @@ struct CartePleinEcranView: View {
                 .font(Police.taille(13, .heavy))
                 .foregroundStyle(style.couleur)
                 .lineLimit(1)
-                .minimumScaleFactor(0.7)
             Text(seuil)
                 .font(Police.taille(11))
                 .foregroundStyle(Palette.encreDouce)
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
-                .minimumScaleFactor(0.8)
         }
         .padding(.vertical, 10)
         .frame(maxWidth: .infinity)

@@ -154,10 +154,9 @@ struct FinSessionView: View {
     private var enTete: some View {
         HStack(alignment: .firstTextBaseline) {
             Text(titre)
-                .font(Police.taille(22, .heavy))
+                .font(Police.titre)
                 .foregroundStyle(Palette.encre)
-                .lineLimit(1)
-                .minimumScaleFactor(0.7)
+                .lineLimit(2)
             Spacer(minLength: Espace.s)
             Text(FormatSortie.date(sortie.debut))
                 .font(Police.detail)

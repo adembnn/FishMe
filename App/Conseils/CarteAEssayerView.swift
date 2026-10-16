@@ -113,7 +113,7 @@ struct CarteAEssayerView: View {
                 Button { niveauBrut = n.rawValue } label: {
                     HStack(spacing: 5) {
                         Image(systemName: n.pictogramme).font(.caption.weight(.bold))
-                        Text(n.motPecheur).lineLimit(1).minimumScaleFactor(0.7)
+                        Text(n.motPecheur).lineLimit(1)
                     }
                     .font(Police.legende)
                     .padding(.horizontal, 6)
@@ -153,15 +153,14 @@ struct CarteAEssayerView: View {
                 ImageEspece(nom: fiche(e)?.image ?? e.espece.id, libelle: nom)
                     .frame(width: 96, height: 56)
                     .opacity(fermee == nil ? 1 : 0.45)
-                Text(nom)
+                Text(NomCarte.court(nom))
                     .font(Police.detail)
                     .foregroundStyle(Palette.encre)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
+                    .lineLimit(2)
                 if !sansReleve {
                     PastilleOuverture(ouverte: fermee == nil)
                     Text(Self.releveCourt(nPeches: e.nPeches, annee: e.annee))
-                        .font(.caption2.weight(.bold))
+                        .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                 }
             }
@@ -236,7 +235,7 @@ extension CarteAEssayerView {
         let nom = fiche(e)?.nom ?? e.espece.id
         return VStack(alignment: .leading, spacing: 6) {
             Text(titre).font(Police.legende).foregroundStyle(Palette.encreDouce)
-            Text(nom).font(Police.titre).foregroundStyle(Palette.encre).lineLimit(2).minimumScaleFactor(0.8)
+            Text(nom).font(Police.titre).foregroundStyle(Palette.encre).lineLimit(2)
             ImageEspece(nom: fiche(e)?.image ?? e.espece.id, libelle: nom)
                 .frame(maxWidth: .infinity)
                 .frame(height: 150)
@@ -253,7 +252,7 @@ struct PastilleOuverture: View {
 
     var body: some View {
         Text(ouverte ? "Ouverte" : "Fermée")
-            .font(.caption2.weight(.heavy))
+            .font(Police.legende)
             .foregroundStyle(ouverte ? Palette.ouvert : Palette.encreDouce)
             .padding(.horizontal, 8)
             .padding(.vertical, 3)
@@ -306,7 +305,7 @@ struct TuileConseilView: View {
                                     Text(conseil.source.titre)
                                 }
                             }
-                            .font(.caption2.weight(.bold))
+                            .font(Police.legende)
                             .foregroundStyle(Palette.encreDouce)
                         }
                     }
