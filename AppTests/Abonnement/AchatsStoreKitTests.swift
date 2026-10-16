@@ -8,7 +8,10 @@ import Core
 
 /// Session de test StoreKit sur `TestConfig.storekit` (A l'ajoute aux ressources de la cible de tests).
 /// NON COMPILÉ : les API de `SKTestSession` sont à vérifier sous Xcode (voir le rapport de L6).
-@MainActor
+/// `.serialized` est indispensable : Swift Testing lance les tests en parallèle, or le démon StoreKit de test est unique
+/// pour tout le processus. Un test qui achète (ou qui fait `clearTransactions`/`resetToDefaultState`) change les droits d'un autre :
+/// l'abonnement « expiré » voyait l'achat d'un voisin et gardait l'accès pendant tout le sondage.
+@Suite(.serialized) @MainActor
 struct AchatsStoreKitTests {
     /// Chaque test passe par ici : la session est vidée en sortie, sinon le processus de test ne se termine pas.
     private func avecSession(_ corps: (SKTestSession, AchatsStoreKit) async throws -> Void) async throws {
