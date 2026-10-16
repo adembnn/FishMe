@@ -37,7 +37,7 @@ struct SessionWidget: Widget {
         }
         .configurationDisplayName("Ma session")
         .description("Ta session de pêche en direct.")
-        .supportedFamilies([.systemSmall, .systemMedium, .accessoryRectangular, .accessoryCircular])
+        .supportedFamilies([.systemSmall, .systemMedium, .accessoryRectangular, .accessoryCircular, .accessoryInline])
     }
 }
 
@@ -77,5 +77,24 @@ extension EntreeSessionWidget {
     SessionWidget()
 } timeline: {
     EntreeSessionWidget.exempleRendu(enCours: false)
+}
+
+// Écran verrouillé, maquette P41 A : fin légale en ligne, durée de session, jauge du temps restant.
+#Preview("Verrouillé, en ligne", as: .accessoryInline) {
+    SessionWidget()
+} timeline: {
+    EntreeSessionWidget.exempleRendu(enCours: true)
+}
+
+#Preview("Verrouillé, rectangle", as: .accessoryRectangular) {
+    SessionWidget()
+} timeline: {
+    EntreeSessionWidget.exempleRendu(enCours: true)
+}
+
+#Preview("Verrouillé, rond", as: .accessoryCircular) {
+    SessionWidget()
+} timeline: {
+    EntreeSessionWidget.exempleRendu(enCours: true)
 }
 #endif

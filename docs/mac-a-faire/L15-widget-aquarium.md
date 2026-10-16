@@ -116,3 +116,52 @@ Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntent
 - Nouveau catalogue `WidgetAquarium/NagePoissons.xcassets` (cycle de battement, 8 images par espèce) dans FishMeWidget et BuildChallenge.
 - `DecorAnime.swift` est supprimé (bulles et lumière animées retirées, le décor 3D est fixe).
 - Preuve attendue : AquariumDepuisJSONTests (4 tests) vert, puis 2 captures du widget à 0,5 s d'écart qui diffèrent.
+
+## Couche de base et vérification sans écran d'accueil (16 oct., 05h45)
+- Sous les 80 copies animées, une couche fixe dessine toujours les poissons à leur place de départ. Chaque copie porte
+  l'eau derrière ses poissons : la copie visible recouvre la couche fixe (jamais deux fois le même poisson). Si l'hôte
+  ne dessine pas les masques, le widget montre au moins les poissons, immobiles. En mode teinté, poissons fixes.
+- Tests : `renduAnimeMontreLePoisson` est remplacé par `renduFixeMontreLePoisson` et `coucheDeBaseVisibleSousLAnimation`
+  (ImageRenderer ne dessine pas les chronos, la couche fixe doit rester). Logique image par image sous Linux :
+  `huitImagesDifferentesParSeconde`, `poseAvanceDUneCopieALaSuivante` (37 tests verts, `AppTests/WidgetAquarium/lancer-tests.sh`).
+- Aperçus Xcode : `#Preview(as: .systemMedium)` dans `AquariumWidget.swift` (timeline datée de maintenant : le canevas
+  fait tourner les chronos) et `#Preview("Aquarium animé (vue du widget)")` dans `ApercuAnimationAquarium.swift`.
+- Sans l'écran d'accueil du simulateur : dans `RootView`, ajouter `.apercuWidgetSiDemande()` (DEBUG, ne fait rien sans
+  l'argument), puis :
+  ```
+  xcrun simctl launch booted ai.mwm.build.challenge.team.01 -FishMeApercuWidget YES
+  xcrun simctl io booted screenshot reports/ecrans/L15/nage-a.png; sleep 0.5; xcrun simctl io booted screenshot reports/ecrans/L15/nage-b.png
+  xcrun simctl io booted recordVideo --codec=h264 reports/ecrans/L15/nage.mp4   # Ctrl-C après 12 s
+  ```
+  L'écran montre les 3 tailles de l'aquarium avec les vrais masques chronos, et en bas la copie attendue par le calcul.
+  Les deux captures doivent différer ; si les poissons restent immobiles avec « polices ok », ce sont les masques.
+
+## Nage calée sur l'aquarium 3D (16 oct., 06h)
+- Trajet : `NageWidget.boucle` porte `Nageur.pas` de nage.js (buts au hasard dans la bande de l'espèce, virage limité,
+  repos `calme`, réglages ESPECES). La boucle de 10 s est un morceau du trajet où le poisson revient à son point de départ.
+  Chaque poisson se tient près de son coin (placements sur 2 colonnes en moyen et grand) ; le fond est dessiné d'abord.
+- Queue : `fabriquer_cycle_nage.py` refait les 8 images avec l'ondulation de NAGE.md (amplitude par espèce) ;
+  la fréquence suit la vitesse (f = 0.9 + 2.2 v/L, au plus 3,5 par seconde).
+- Rien à changer dans les cibles : mêmes fichiers, même catalogue NagePoissons.
+
+## Écran verrouillé de la session (16 oct., 06h, maquette P41 A choisie)
+- `SessionWidget` ajoute `.accessoryInline` : « Fin légale 19:29 » au-dessus de l'heure.
+- Rectangle : « Session » et la durée écoulée en grand. Rond : jauge du temps restant jusqu'à la fin légale
+  (`ProgressView(timerInterval:countsDown:)`), le reste au centre. Blanc translucide, une seule teinte.
+- 3 aperçus `#Preview` (en ligne, rectangle, rond) dans `SessionWidget.swift`. Capture attendue de l'écran verrouillé
+  dans `reports/ecrans/L15/`.
+
+## 16 images par seconde (16 oct., 06h10)
+- Adem trouve 8 images/s saccadé : `HorlogeAnimation.imagesParSeconde = 16` (160 copies sur 10 s). Rien d'autre à changer.
+- À surveiller sur l'iPhone : mémoire de l'extension (limite d'environ 30 Mo) et fluidité. Si le widget ne s'affiche plus ou
+  se fige, essayer 12 (une seule constante), et le dire au fil Widget avec la mesure.
+
+## Pleine eau (Adem, 16 oct. 07h)
+- Plus de décor : `FondsWidget.xcassets` contient un océan provisoire (dégradé, rayons, particules), en attendant le fond
+  en perspective du fil « Aquarium 3D des prises », qui refait aussi les poissons (plus cartoon).
+- Nage : `NageWidget.traversees` remplace `boucle` dans la vue. Chaque poisson traverse en perspective (point de fuite
+  au centre, plus petit et plus transparent au loin), sort par un bord et rentre ailleurs, parfois du fond de l'océan.
+  Un widget ne dessine jamais hors de son cadre : le poisson sort par le bord et disparaît.
+- 07h20 : fonds « Lagon » et 23 poissons cartoon du fil aquarium 3D intégrés (lot/aquarium 7a7e7fc).
+  `WidgetAquarium/PoissonsOcean/` (sources, hors catalogue) nourrit `fabriquer_cycle_nage.py`. Les 74 autres espèces
+  gardent la planche d'origine. Rien à changer dans les cibles.

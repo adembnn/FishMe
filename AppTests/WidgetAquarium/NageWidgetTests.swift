@@ -243,41 +243,160 @@ struct NageWidgetTests {
 
 @Suite("Nage")
 struct NageTests {
-    private let p = PlacementPoisson(id: "brochet-1", x: 0.5, y: 0.4, versLaDroite: true, echelle: 1, auRepas: false)
+    private let slugs = ["brochet", "gardon", "tanche", "truite-fario", "perche-commune", "silure"]
+
+    private func boucle(_ slug: String, id: String = "p1", longueur: Double = 0.23, rapport: Double = 170.0 / 364,
+                        repas: Bool = false) -> [NageWidget.PoseNage] {
+        NageWidget.boucle(id: id, slug: slug, creneau: 7, longueur: longueur, rapport: rapport, repas: repas)
+    }
+
+    @Test func deterministe() {
+        #expect(boucle("brochet") == boucle("brochet"))
+        #expect(boucle("brochet", id: "p1") != boucle("brochet", id: "p2"))
+    }
+
+    @Test func especesDeNageJS() {
+        #expect(NageWidget.espece("brochet").croisiere == 0.30)
+        #expect(NageWidget.espece("perche-commune") == NageWidget.espece("perche"))
+        #expect(NageWidget.espece("silure") == NageWidget.espece("gardon"))
+    }
 
     @Test func resteDansLAquarium() {
-        for j in 0..<80 {
-            let q = NageWidget.pose(p, copie: j, nombre: 80, demiLargeur: 0.15)
-            #expect(q.x - 0.15 >= 0 && q.x + 0.15 <= 1)
-            #expect(abs(q.y - 0.4) <= 0.026)
-            #expect(abs(q.sens) >= 0.18 && abs(q.sens) <= 1)
-            #expect((0..<8).contains(q.image))
+        for slug in slugs {
+            let poses = boucle(slug)
+            #expect(poses.count == 80)
+            for q in poses {
+                #expect(q.x >= 0.23 * 0.45 - 1e-9 && q.x <= 1 - 0.23 * 0.45 + 1e-9, "\(slug) x \(q.x)")
+                #expect(q.y >= 0.12 && q.y <= 0.72, "\(slug) y \(q.y)")
+                #expect(abs(q.sens) >= 0.18 && abs(q.sens) <= 1)
+                #expect((0..<8).contains(q.image))
+                #expect(q.profondeur >= 0 && q.profondeur <= 1)
+                #expect(abs(q.assiette) <= 0.22 + 1e-9)
+            }
         }
     }
 
-    @Test func traverseEtRevient() {
-        let poses = (0..<80).map { NageWidget.pose(p, copie: $0, nombre: 80, demiLargeur: 0.15) }
-        let xs = poses.map(\.x)
-        // Il va vraiment d'un bord à l'autre : au moins 40 % de la largeur parcourue.
-        #expect(xs.max()! - xs.min()! >= 0.4)
-        // Il regarde dans le sens où il avance.
-        for j in 0..<80 {
-            let dx = poses[(j + 1) % 80].x - poses[j].x
-            if abs(dx) > 0.001 { #expect((dx > 0) == (poses[j].sens > 0)) }
+    /// La boucle se referme : de la dernière pose à la première, pas plus de saut qu'entre deux images.
+    @Test func boucleSansSaut() {
+        for slug in slugs {
+            let poses = boucle(slug)
+            let e = NageWidget.espece(slug)
+            // Au plus 1,5 fois la croisière sur 1/8 s, plus une marge pour le recalage de la boucle.
+            let maxPas = e.croisiere * 0.23 * 1.5 / 8 + 0.01
+            for j in 0..<80 {
+                let a = poses[j], b = poses[(j + 1) % 80]
+                #expect(abs(b.x - a.x) <= maxPas, "\(slug) saut en x entre \(j) et \(j + 1)")
+                // Un demi-tour passe par la tranche (±0,18) : jamais de bascule de face à face d'une image à l'autre.
+                #expect(abs(b.sens - a.sens) <= 1.0, "\(slug) volte-face entre \(j) et \(j + 1)")
+            }
         }
-        // Pas de saut : d'une image à la suivante, il avance de moins de 4 % de la largeur.
-        for j in 0..<80 { #expect(abs(poses[(j + 1) % 80].x - poses[j].x) < 0.04) }
     }
 
-    @Test func battementDeQueueRegulier() {
-        let images = (0..<16).map { NageWidget.pose(p, copie: $0, nombre: 80, demiLargeur: 0.15).image }
-        for j in 0..<15 { #expect((images[j] + 1) % 8 == images[j + 1]) }
+    /// Il nage vraiment : il parcourt du chemin, et il regarde là où il va.
+    @Test func nageVersOuIlRegarde() {
+        for slug in slugs {
+            let poses = boucle(slug)
+            var chemin = 0.0, dansLeBonSens = 0, avance = 0
+            for j in 0..<80 {
+                let dx = poses[(j + 1) % 80].x - poses[j].x
+                chemin += abs(dx)
+                if abs(dx) > 0.002 { avance += 1; if (dx > 0) == (poses[j].sens > 0) { dansLeBonSens += 1 } }
+            }
+            #expect(chemin >= 0.15, "\(slug) ne nage presque pas (\(chemin))")
+            #expect(Double(dansLeBonSens) >= 0.9 * Double(avance), "\(slug) nage à reculons")
+        }
     }
 
-    @Test func phasesDifferentes() {
-        let autre = PlacementPoisson(id: "perche-2", x: 0.5, y: 0.6, versLaDroite: true, echelle: 1, auRepas: false)
-        let a = NageWidget.pose(p, copie: 0, nombre: 80, demiLargeur: 0.15)
-        let b = NageWidget.pose(autre, copie: 0, nombre: 80, demiLargeur: 0.15)
-        #expect(a.x != b.x || a.sens != b.sens)
+    /// La queue bat sans arrêt : l'image avance de 0 à 4 crans par copie, et fait des tours entiers sur la boucle.
+    @Test func battementContinu() {
+        for slug in slugs {
+            let poses = boucle(slug)
+            var crans = 0
+            for j in 0..<80 {
+                let d = (poses[(j + 1) % 80].image - poses[j].image + 8) % 8
+                #expect(d <= 4)
+                crans += d
+            }
+            #expect(crans % 8 == 0, "\(slug) : la boucle ne retombe pas sur la même image")
+            #expect(crans >= 8 * 8, "\(slug) : moins d'un battement par seconde")
+        }
+    }
+
+    /// Chaque espèce reste dans sa bande : la tanche près du fond, l'ablette près de la surface ; au repas, en haut.
+    @Test func bandesDeHauteur() {
+        let moyenne: ([NageWidget.PoseNage]) -> Double = { $0.reduce(0) { $0 + $1.y } / Double($0.count) }
+        #expect(moyenne(boucle("tanche")) > moyenne(boucle("ablette")))
+        #expect(moyenne(boucle("tanche", repas: true)) < 0.30)
+    }
+
+    /// Petit widget (poisson à 0,44 de la largeur) : il reste dedans.
+    @Test func petitWidget() {
+        for q in boucle("brochet", longueur: 0.44, rapport: 1) {
+            #expect(q.x >= 0.44 * 0.45 - 1e-9 && q.x <= 1 - 0.44 * 0.45 + 1e-9)
+        }
+    }
+
+    /// À 16 images/s (160 copies), la boucle se referme aussi et le poisson avance par petits pas.
+    @Test func boucleA16ImagesParSeconde() {
+        let poses = NageWidget.boucle(id: "p1", slug: "gardon", creneau: 7, nombre: 160, longueur: 0.23,
+                                      rapport: 170.0 / 364)
+        #expect(poses.count == 160)
+        let maxPas = NageWidget.espece("gardon").croisiere * 0.23 * 1.5 / 16 + 0.006
+        for j in 0..<160 { #expect(abs(poses[(j + 1) % 160].x - poses[j].x) <= maxPas) }
+    }
+}
+
+@Suite("Pleine eau")
+struct PleineEauTests {
+    private let slugs = ["brochet", "gardon", "tanche", "truite-fario", "silure"]
+    private func boucle(_ slug: String, id: String = "p1", rapport: Double = 170.0 / 364) -> [NageWidget.PoseNage] {
+        NageWidget.traversees(id: id, slug: slug, creneau: 3, nombre: 160, longueur: 0.26, rapport: rapport)
+    }
+    private func dehors(_ q: NageWidget.PoseNage) -> Bool {
+        let demi = 0.26 * q.echelle / 2
+        return q.x + demi < 0 || q.x - demi > 1 || q.y < -0.05 || q.y > 1.05 || q.opacite < 0.02
+    }
+
+    @Test func deterministeEtPropreAChaquePoisson() {
+        #expect(boucle("gardon") == boucle("gardon"))
+        #expect(boucle("gardon", id: "p1") != boucle("gardon", id: "p2"))
+    }
+
+    /// Il sort du widget et rentre ailleurs : la boucle passe hors du cadre, et elle se referme hors du cadre.
+    @Test func sortEtRevient() {
+        for slug in slugs {
+            for id in ["a", "b", "c", "d"] {
+                let poses = boucle(slug, id: id)
+                #expect(poses.count == 160)
+                #expect(poses.contains(where: dehors), "\(slug) \(id) ne sort jamais")
+                #expect(poses.contains { !dehors($0) }, "\(slug) \(id) ne se voit jamais")
+                #expect(dehors(poses[0]), "\(slug) \(id) : la boucle doit se refermer hors du cadre")
+            }
+        }
+    }
+
+    /// Dans le cadre, il avance sans saut et regarde là où il va.
+    @Test func nageFluideDansLeCadre() {
+        for slug in slugs {
+            let poses = boucle(slug)
+            var bon = 0, avance = 0
+            for j in 0..<159 where !dehors(poses[j]) && !dehors(poses[j + 1]) {
+                let dx = poses[j + 1].x - poses[j].x
+                #expect(abs(dx) < 0.06 && abs(poses[j + 1].y - poses[j].y) < 0.12, "\(slug) saut à \(j)")
+                if abs(dx) > 0.002 { avance += 1; if (dx > 0) == (poses[j].sens > 0) { bon += 1 } }
+            }
+            #expect(Double(bon) >= 0.9 * Double(avance), "\(slug) nage à reculons")
+        }
+    }
+
+    @Test func perspectiveEtOpacite() {
+        for slug in slugs {
+            for q in boucle(slug) {
+                #expect(q.echelle >= 0.41 && q.echelle <= 1)
+                #expect(q.opacite >= 0 && q.opacite <= 1)
+                #expect(abs(q.sens) >= 0.18 && abs(q.sens) <= 1)
+                #expect((0..<8).contains(q.image))
+            }
+        }
     }
 }

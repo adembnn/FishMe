@@ -50,26 +50,38 @@ struct AquariumDepuisJSONTests {
         #expect(PolicesMasque.disponibles, "polices de masque absentes (UIAppFonts) : le widget restera figé")
     }
 
-    /// Rendu animé (pas le repli) : au moins un pixel du poisson doit être opaque à l'instant du rendu.
-    @Test func renduAnimeMontreLePoisson() throws {
+    /// Pixels opaques dans les 2/3 hauts du rendu (le bouton nourrir est en bas à droite). Fond transparent
+    /// (`fondVisible: false`) : tout pixel opaque vient des poissons.
+    private func pixelsOpaques(anime: Bool) throws -> Int {
         let instantane = try lire()
         let entree = EntreeAquarium(date: .now, instantane: instantane)
-        let vue = VueAquariumWidget(entree: entree, famille: .systemMedium, fondVisible: false, anime: true)
+        let vue = VueAquariumWidget(entree: entree, famille: .systemMedium, fondVisible: false, anime: anime)
             .frame(width: 364, height: 170)
         let rendu = ImageRenderer(content: vue)
         rendu.scale = 1
         let image = try #require(rendu.cgImage)
-        // Fond transparent (fondVisible: false) : tout pixel opaque vient des poissons ou du bouton.
         let largeur = image.width, hauteur = image.height
         var octets = [UInt8](repeating: 0, count: largeur * hauteur * 4)
         let contexte = try #require(CGContext(data: &octets, width: largeur, height: hauteur, bitsPerComponent: 8,
                                              bytesPerRow: largeur * 4, space: CGColorSpaceCreateDeviceRGB(),
                                              bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue))
         contexte.draw(image, in: CGRect(x: 0, y: 0, width: largeur, height: hauteur))
-        // Zone haute du widget (le bouton nourrir est en bas à droite).
         var opaques = 0
         for y in 0..<(hauteur * 2 / 3) { for x in 0..<largeur where octets[(y * largeur + x) * 4 + 3] > 200 { opaques += 1 } }
-        #expect(opaques > 200, "aucun poisson dessiné dans le rendu animé (\(opaques) pixels opaques)")
+        return opaques
+    }
+
+    /// Poissons figés (repli) : le poisson est dessiné.
+    @Test func renduFixeMontreLePoisson() throws {
+        let opaques = try pixelsOpaques(anime: false)
+        #expect(opaques > 200, "aucun poisson dans le rendu fixe (\(opaques) pixels opaques)")
+    }
+
+    /// Rendu animé : `ImageRenderer` ne dessine pas les masques chronos (0 pixel au 16 oct.), mais la couche de base
+    /// fixe, sous les copies, doit rester visible. C'est ce que verrait le pêcheur si l'hôte ne dessinait pas les masques.
+    @Test func coucheDeBaseVisibleSousLAnimation() throws {
+        let opaques = try pixelsOpaques(anime: true)
+        #expect(opaques > 200, "couche de base absente du rendu animé (\(opaques) pixels opaques)")
     }
 }
 #endif

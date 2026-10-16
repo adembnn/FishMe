@@ -30,27 +30,41 @@ struct MasqueClignotant: View {
 }
 
 /// Empile les 80 images d'une boucle de 10 s (n° 0..<80). Chaque copie j n'est visible que 1/8 s par boucle,
-/// grâce à deux masques imbriqués (voir `HorlogeAnimation.masques`). Une seule image est visible à la fois.
-/// `actif` faux, ou polices absentes : l'image 0, fixe (jamais rien).
-struct ImagesAnimees<Contenu: View>: View {
+/// grâce à deux masques imbriqués (voir `HorlogeAnimation.masques`). Une seule copie est visible à la fois.
+///
+/// Sous les copies, une couche de base fixe : l'image 0, toujours dessinée. Si l'hôte ne dessine pas les masques
+/// (ou `ImageRenderer`, qui rend les chronos vides), on voit au moins les poissons à leur place de départ.
+/// Chaque copie porte `fond` derrière son image : la copie visible recouvre ainsi la couche de base, et l'on ne
+/// voit jamais deux fois le même poisson. `actif` faux, ou polices absentes : la couche de base seule.
+struct ImagesAnimees<Contenu: View, Fond: View>: View {
     let reference: Date
     let actif: Bool
+    @ViewBuilder let fond: () -> Fond
     @ViewBuilder let image: (Int) -> Contenu
 
     var body: some View {
-        if actif && PolicesMasque.disponibles {
-            ZStack {
+        ZStack {
+            image(0)
+            if actif && PolicesMasque.disponibles {
                 ForEach(0..<HorlogeAnimation.nombreImages, id: \.self) { j in
                     let m = HorlogeAnimation.masques(copie: j)
-                    image(j)
-                        .mask(MasqueClignotant(chiffre: m.a.chiffre, reference: reference, decalage: m.a.decalage))
-                        .mask(MasqueClignotant(chiffre: m.b.chiffre, reference: reference, decalage: m.b.decalage))
+                    ZStack {
+                        fond()
+                        image(j)
+                    }
+                    .mask(MasqueClignotant(chiffre: m.a.chiffre, reference: reference, decalage: m.a.decalage))
+                    .mask(MasqueClignotant(chiffre: m.b.chiffre, reference: reference, decalage: m.b.decalage))
                 }
             }
-            .allowsHitTesting(false)
-        } else {
-            image(0)
         }
+        .allowsHitTesting(false)
+    }
+}
+
+extension ImagesAnimees where Fond == EmptyView {
+    /// Sans fond : la copie visible ne cache pas la couche de base (à réserver aux images sans déplacement).
+    init(reference: Date, actif: Bool, @ViewBuilder image: @escaping (Int) -> Contenu) {
+        self.init(reference: reference, actif: actif, fond: { EmptyView() }, image: image)
     }
 }
 

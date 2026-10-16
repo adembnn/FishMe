@@ -7,18 +7,19 @@ private let ref = HorlogeAnimation.reference(pour: Date(timeIntervalSince1970: 1
 @Suite("HorlogeAnimation")
 struct HorlogeAnimationTests {
     @Test func constantes() {
-        #expect(HorlogeAnimation.nombreImages == 80)
+        #expect(HorlogeAnimation.imagesParSeconde == 16)
+        #expect(HorlogeAnimation.nombreImages == 160)
         #expect(HorlogeAnimation.dureeBoucle == 10)
         #expect(HorlogeAnimation.reference(pour: Date(timeIntervalSince1970: 100)) == Date(timeIntervalSince1970: 40))
     }
 
     @Test func masquesDeLaCopie() {
-        #expect(HorlogeAnimation.masques(copie: 0).a == (0, 0))
-        #expect(HorlogeAnimation.masques(copie: 0).b == (9, 0.125))
-        #expect(HorlogeAnimation.masques(copie: 13).a == (1, 0.625))
-        #expect(HorlogeAnimation.masques(copie: 13).b == (0, 0.75))
-        #expect(HorlogeAnimation.masques(copie: 79).a == (9, 0.875))
-        #expect(HorlogeAnimation.masques(copie: 79).b == (8, 1))
+        #expect(HorlogeAnimation.masques(copie: 0, parSeconde: 8).a == (0, 0))
+        #expect(HorlogeAnimation.masques(copie: 0, parSeconde: 8).b == (9, 0.125))
+        #expect(HorlogeAnimation.masques(copie: 13, parSeconde: 8).a == (1, 0.625))
+        #expect(HorlogeAnimation.masques(copie: 13, parSeconde: 8).b == (0, 0.75))
+        #expect(HorlogeAnimation.masques(copie: 79, parSeconde: 8).a == (9, 0.875))
+        #expect(HorlogeAnimation.masques(copie: 79, parSeconde: 8).b == (8, 1))
     }
 
     @Test func dernierChiffre() {
@@ -31,7 +32,7 @@ struct HorlogeAnimationTests {
         // Sur 30 s, tous les 1/64 s : exactement une copie visible, celle que donne le calcul direct.
         for pas in 0..<(30 * 64) {
             let t = ref.addingTimeInterval(Double(pas) / 64 + 1.0 / 128)
-            let visibles = (0..<80).filter { HorlogeAnimation.copieVisible($0, reference: ref, a: t) }
+            let visibles = (0..<HorlogeAnimation.nombreImages).filter { HorlogeAnimation.copieVisible($0, reference: ref, a: t) }
             #expect(visibles.count == 1)
             #expect(visibles.first == HorlogeAnimation.imageVisible(reference: ref, a: t))
         }
@@ -40,8 +41,21 @@ struct HorlogeAnimationTests {
     @Test func ordreEtBoucle() {
         for j in 0..<80 {
             let t = ref.addingTimeInterval(Double(j) / 8 + 0.06)
-            #expect(HorlogeAnimation.imageVisible(reference: ref, a: t) == j)
+            #expect(HorlogeAnimation.imageVisible(reference: ref, a: t, parSeconde: 8) == j)
         }
-        #expect(HorlogeAnimation.imageVisible(reference: ref, a: ref.addingTimeInterval(10.01)) == 0)
+        #expect(HorlogeAnimation.imageVisible(reference: ref, a: ref.addingTimeInterval(10.01), parSeconde: 8) == 0)
+    }
+
+    /// Image par image : sur une seconde, les 16 instants montrent 16 copies différentes, dans l'ordre, et la boucle
+    /// revient à la copie 0 au bout de 10 s.
+    @Test func seizeImagesDifferentesParSeconde() {
+        let reference = Date(timeIntervalSinceReferenceDate: 1_000_000)
+        let depart = reference.addingTimeInterval(60.03)
+        let vues = (0..<16).map {
+            HorlogeAnimation.imageVisible(reference: reference, a: depart.addingTimeInterval(Double($0) / 16))
+        }
+        #expect(Set(vues).count == 16)
+        for k in 1..<16 { #expect((vues[k] - vues[k - 1] + 160) % 160 == 1) }
+        #expect(HorlogeAnimation.imageVisible(reference: reference, a: depart.addingTimeInterval(10)) == vues[0])
     }
 }
