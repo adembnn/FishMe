@@ -8,9 +8,12 @@ nonisolated struct ServicesCarte: Sendable {
     var especes: any ServiceEspeces
     var session: any ServiceSession
     var stations: any FournisseurStations
+    /// Le niveau de fréquentation des tronçons (gratuit). Valeur par défaut : `compteurParDefaut()`.
+    var compteur: any CompteurFrequentation
 
     init(geo: any ServiceGeo, regles: any ServiceRegles, especes: any ServiceEspeces, session: any ServiceSession,
-         stations: (any FournisseurStations)? = nil) {
+         stations: (any FournisseurStations)? = nil, compteur: (any CompteurFrequentation)? = nil) {
+        self.compteur = compteur ?? ServicesCarte.compteurParDefaut()
         self.geo = geo
         self.regles = regles
         self.especes = especes

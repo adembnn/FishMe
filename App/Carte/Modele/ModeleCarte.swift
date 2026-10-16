@@ -44,6 +44,9 @@ final class ModeleCarte {
 
     var selection: CoinSelectionne?
 
+    // Fréquentation : le niveau connu de chaque tronçon lu (en mots, jamais un nombre).
+    private(set) var niveauxConnus: [String: NiveauFrequentation] = [:]
+
     @ObservationIgnored private var tacheElements: Task<Void, Never>?
     @ObservationIgnored private var tacheStations: Task<Void, Never>?
     /// Le premier « fin de mouvement » de la caméra est l'affichage initial, pas un geste du pêcheur.
@@ -212,8 +215,16 @@ final class ModeleCarte {
     private func proposerSpot(pres c: Coordonnee) {
         guard spotFixe == nil else { return }
         let session = services.session
+        let niveau = ReglagesFrequentation.niveauPecheur()
+        let graine = ReglagesFrequentation.graine()
         Task {
-            let spot = await Task.detached { session.spotPropose(coordonnee: c, date: Date()) }.value
+            let spot = await Task.detached { () -> Spot? in
+                // Répartition (docs/frequentation.md) : le spot est tiré parmi les meilleures stations, selon la graine de l'iPhone.
+                if let reparti = (session as? any ServiceRepartition)?.spotPropose(coordonnee: c, date: Date(), niveau: niveau, graine: graine) {
+                    return reparti
+                }
+                return session.spotPropose(coordonnee: c, date: Date())
+            }.value
             spotLocal = spot
             if spot == nil, message == nil { message = "Aucun relevé OFB à proximité." }
         }
@@ -231,6 +242,94 @@ final class ModeleCarte {
         spotLocal = spot
         modeChoixDuSpot = false
         return spot
+    }
+
+    // MARK: Fréquentation (gratuit, en mots seulement)
+
+    private var repartition: (any ServiceRepartition)? { services.session as? any ServiceRepartition }
+
+    /// Le tronçon d'un spot : la station OFB la plus proche (5 km au plus).
+    func troncon(de spot: Spot) -> String? {
+        repartition?.troncon(de: spot)
+    }
+
+    /// Lit le niveau d'un tronçon et le garde ; `nil` : rien n'est affiché.
+    func chargerNiveau(troncon: String) async {
+        let niveau = await services.compteur.niveau(troncon: troncon, aujourdhui: Date())
+        niveauxConnus[troncon] = niveau
+    }
+
+    /// Le niveau du tronçon du spot affiché, quand on le connaît.
+    var niveauDuSpot: NiveauFrequentation? {
+        guard let spot = spotAffiche, let t = troncon(de: spot) else { return nil }
+        return niveauxConnus[t]
+    }
+
+    /// Au démarrage d'une session : un passage anonyme (tronçon, jour, jeton du jour), gardé sur l'iPhone.
+    func enregistrerPassage(spot: Spot, maintenant: Date = Date()) {
+        guard let t = troncon(de: spot) else { return }
+        let jour = JetonDuJour.jour(maintenant)
+        let passage = Passage(troncon: t, jour: jour, jeton: JetonDuJour.jeton(graine: ReglagesFrequentation.graine(), jour: jour))
+        let compteur = services.compteur
+        Task { await compteur.enregistrer(passage) }
+    }
+
+    /// « Coin plus calme » : un spot éligible dont le tronçon n'est pas chargé ; `nil` : pas de bouton.
+    func chercherCoinCalme(depuis spot: Spot) async -> Spot? {
+        guard let reparti = repartition else { return nil }
+        let connus = niveauxConnus
+        let niveau = ReglagesFrequentation.niveauPecheur()
+        let maintenant = Date()
+        return await Task.detached { () -> Spot? in
+            reparti.coinCalme(depuis: spot, date: maintenant, niveau: niveau, estCharge: { connus[$0] == .charge })
+        }.value
+    }
+
+    /// Le spot calme devient le spot affiché, comme un toucher sur la rivière (avant la 1re session seulement).
+    func adopterCoinCalme(depuis spot: Spot) {
+        guard peutChangerDeSpot else { return }
+        Task {
+            guard let calme = await chercherCoinCalme(depuis: spot) else { return }
+            spotLocal = calme
+            selection = nil
+            modeChoixDuSpot = false
+            centrer(ZoneCarte(centre: calme.centre, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
+        }
+    }
+
+    /// Les tronçons chargés pour lesquels un coin plus calme existe : le bouton n'apparaît que pour eux.
+    private(set) var tronconsAvecCoinCalme: Set<String> = []
+
+    /// Vérifie, pour un tronçon chargé, qu'un coin plus calme existe avant d'afficher le bouton.
+    func verifierCoinCalme(troncon: String, spot: Spot) async {
+        guard peutChangerDeSpot, niveauxConnus[troncon] == .charge else {
+            tronconsAvecCoinCalme.remove(troncon)
+            return
+        }
+        if await chercherCoinCalme(depuis: spot) != nil {
+            tronconsAvecCoinCalme.insert(troncon)
+        } else {
+            tronconsAvecCoinCalme.remove(troncon)
+        }
+    }
+
+    /// Niveau et coin calme d'un spot : appelé quand le spot affiché change.
+    func rafraichirFrequentation(spot: Spot) async {
+        guard let t = troncon(de: spot) else { return }
+        await chargerNiveau(troncon: t)
+        await verifierCoinCalme(troncon: t, spot: spot)
+    }
+
+    /// Niveau et coin calme d'une station touchée sur la carte (la fiche d'un coin).
+    func rafraichirFrequentation(selection: CoinSelectionne) async {
+        await chargerNiveau(troncon: selection.id)
+        await verifierCoinCalme(troncon: selection.id, spot: spot(de: selection))
+    }
+
+    /// Le spot d'une station touchée sur la carte, pour chercher un coin plus calme depuis la fiche.
+    func spot(de selection: CoinSelectionne) -> Spot {
+        Spot(centre: selection.coordonnee, rayonM: 1000,
+             departement: selection.departement ?? services.geo.departement(de: selection.coordonnee))
     }
 
     // MARK: Stations, regroupement, poissons

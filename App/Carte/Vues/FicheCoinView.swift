@@ -22,7 +22,7 @@ struct FicheCoinView: View {
     /// « Commencer une session » : `nil` (pendant une session, ou sans spot) cache le bouton.
     let onCommencerSession: (() -> Void)?
     /// Niveau du tronçon en mots (gratuit, sans cadenas). À brancher : compteur de fréquentation ; `nil` = rien d'affiché.
-    let frequentation: NiveauFrequentationFiche?
+    let frequentation: NiveauFrequentation?
     /// « Coin plus calme » pour un tronçon chargé ; `nil` = pas de bouton. À brancher : station calme la plus proche.
     let onCoinCalme: (() -> Void)?
 
@@ -30,7 +30,7 @@ struct FicheCoinView: View {
          emplacementMaintenant: @escaping (Coordonnee) -> AnyView = { _ in AnyView(EmptyView()) },
          emplacementConseil: @escaping (Espece) -> AnyView = { _ in AnyView(EmptyView()) },
          onCommencerSession: (() -> Void)? = nil,
-         frequentation: NiveauFrequentationFiche? = nil,
+         frequentation: NiveauFrequentation? = nil,
          onCoinCalme: (() -> Void)? = nil) {
         _modele = State(initialValue: ModeleFiche(services: services, selection: selection, pechables: pechables))
         self.emplacementMaintenant = emplacementMaintenant
@@ -109,9 +109,8 @@ struct FicheCoinView: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .center, spacing: Espace.m) {
                 Text(nomEau(fiche))
-                    .font(Police.taille(22, .heavy))
+                    .font(Police.titre)
                     .foregroundStyle(Palette.encre)
-                    .minimumScaleFactor(0.6)
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
                     .accessibilityAddTraits(.isHeader)
@@ -218,11 +217,10 @@ struct FicheCoinView: View {
                             .foregroundStyle(CouleursCarte.rarete(niveau))
                             .accessibilityHidden(true)
                     }
-                    Text(modele.nom(ligne.espece))
-                        .font(Police.taille(14, .heavy))
+                    Text(NomCarte.court(modele.nom(ligne.espece)))
+                        .font(Police.detail)
                         .foregroundStyle(Palette.encre)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.7)
+                        .lineLimit(2)
                 }
                 // Sans taille lisible dans la règle, rien n'est écrit (aucun chiffre inventé).
                 Text(ligne.tailleMiniCm.map { "\($0) cm mini" } ?? " ")
@@ -370,9 +368,8 @@ struct FicheCoinView: View {
             HStack(alignment: .center, spacing: 14) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(modele.nom(espece))
-                        .font(Police.taille(34, .heavy))
+                        .font(Police.grandTitre)
                         .foregroundStyle(Palette.encre)
-                        .minimumScaleFactor(0.6)
                         .lineLimit(2)
                         .accessibilityAddTraits(.isHeader)
                     Text("Règles dans le \(fiche.lieu.departement.code)")

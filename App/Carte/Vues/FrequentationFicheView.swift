@@ -1,20 +1,9 @@
 import SwiftUI
 import Core
 
-/// Le niveau de fréquentation d'un tronçon, en mots (docs/frequentation.md, règle 6). Jamais un nombre de pêcheurs.
-/// À brancher : le compteur (App/Frequentation, Core `NiveauFrequentation`) le fournit ; tant qu'il n'existe pas,
-/// la fiche reçoit `nil` et n'affiche rien (aucune fausse donnée).
-nonisolated enum NiveauFrequentationFiche: Sendable, Equatable {
-    case calme, normal, charge
-
-    var mot: String {
-        switch self {
-        case .calme: return "Calme"
-        case .normal: return "Normal"
-        case .charge: return "Chargé"
-        }
-    }
-
+/// Le niveau de fréquentation d'un tronçon (`NiveauFrequentation` de Core), en mots (docs/frequentation.md, règle 6).
+/// Jamais un nombre de pêcheurs. Le compteur de `Core` le fournit ; sans niveau, la fiche reçoit `nil` et n'affiche rien.
+extension NiveauFrequentation {
     var symbole: String {
         switch self {
         case .calme: return "leaf.fill"
@@ -27,7 +16,7 @@ nonisolated enum NiveauFrequentationFiche: Sendable, Equatable {
 /// Le badge « Calme / Normal / Chargé » de la fiche, et pour un tronçon chargé le bouton « Coin plus calme ».
 /// Gratuit pour tous : aucun cadenas. Pas orange : ce n'est pas une alerte, rien n'est interdit.
 struct FrequentationFicheView: View {
-    let niveau: NiveauFrequentationFiche
+    let niveau: NiveauFrequentation
     /// Propose la station éligible la plus proche dont le tronçon n'est pas chargé ; `nil` : pas de bouton.
     let onCoinCalme: (() -> Void)?
 
@@ -49,7 +38,7 @@ struct FrequentationFicheView: View {
             Image(systemName: niveau.symbole)
                 .font(Police.taille(13, .heavy))
                 .accessibilityHidden(true)
-            Text(niveau.mot)
+            Text(niveau.libelle)
                 .font(Police.taille(15, .heavy))
         }
         .foregroundStyle(Palette.marine)
@@ -57,7 +46,7 @@ struct FrequentationFicheView: View {
         .frame(minHeight: 34)
         .background(Palette.marineDoux, in: Capsule())
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("Fréquentation : \(niveau.mot)")
+        .accessibilityLabel("Fréquentation : \(niveau.libelle)")
     }
 }
 
