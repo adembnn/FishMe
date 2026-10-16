@@ -9,6 +9,7 @@ struct PescedexAmiView: View {
     let fermer: () -> Void
 
     @State private var carteOuverte: CartePartagee?
+    @State private var carteChoisieId: UUID?
     @State private var confirmerBlocage = false
     @State private var confirmerRetrait = false
     @Environment(\.openURL) private var ouvrirURL
@@ -27,18 +28,24 @@ struct PescedexAmiView: View {
         return comptes.max { $0.value < $1.value }?.key
     }
 
+    /// La carte montrée en grand : celle qu'on a touchée en bas, sinon la plus récente de l'ami.
+    private var carteEnGrand: CartePartagee? {
+        especes.first { $0.id == carteChoisieId } ?? especes.first
+    }
+
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: Espace.l) {
-                barre
-                compteur
-                grille
+        ZStack(alignment: .top) {
+            JetonAmis.fondPage.ignoresSafeArea()
+            VStack(spacing: 0) {
+                Spacer(minLength: 72)
+                grandeCarte
+                Spacer(minLength: Espace.m)
+                feuille
             }
-            .padding(.horizontal, Espace.bord)
-            .padding(.top, Espace.s)
+            barre
+                .padding(.horizontal, Espace.bord)
+                .padding(.top, Espace.s)
         }
-        .scrollIndicators(.hidden)
-        .background(JetonAmis.fondPage.ignoresSafeArea())
         .sheet(item: $carteOuverte) { carte in
             CarteAmiDetail(carte: carte, nomEspece: gestion.espece(carte.espece)?.nom ?? "") {
                 if let url = gestion.urlDeSignalement(ami: ami, carte: carte) { ouvrirURL(url) }
@@ -87,30 +94,77 @@ struct PescedexAmiView: View {
         }
     }
 
-    private var compteur: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(texteCompteur).font(Police.chiffreMoyen).foregroundStyle(Palette.encre)
+    /// La carte de l'ami en grand, au centre. Un toucher l'ouvre (avec « Signaler »).
+    @ViewBuilder
+    private var grandeCarte: some View {
+        if let carte = carteEnGrand {
+            Button { if carte.image != nil { carteOuverte = carte } } label: {
+                if let donnees = carte.image, let image = UIImage(data: donnees) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
+                        .shadow(color: Palette.encre.opacity(0.18), radius: 14, y: 8)
+                } else {
+                    tuile(carte)
+                }
+            }
+            .buttonStyle(.plain)
+            .frame(maxWidth: 244)
+            .padding(.horizontal, Espace.xl)
+            .accessibilityLabel(gestion.espece(carte.espece)?.nom ?? "Carte")
+        } else {
+            ContentUnavailableView("Pas encore de carte", systemImage: "rectangle.stack")
         }
     }
 
-    private var texteCompteur: String {
-        let n = especes.count
-        let mot = n == 1 ? "espèce" : "espèces"
-        guard let zone else { return "\(n) \(mot)" }
-        return "\(n) sur \(gestion.especesReleveesDans(zone)) espèces de la zone (\(zone))"
-    }
-
-    private var grille: some View {
-        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: Espace.m), count: 3), spacing: Espace.m) {
-            ForEach(especes) { carte in
-                Button { if carte.image != nil { carteOuverte = carte } } label: { tuile(carte) }
-                    .buttonStyle(.plain)
-                    .contextMenu {
-                        if let url = gestion.urlDeSignalement(ami: ami, carte: carte) {
-                            Link(destination: url) { Label("Signaler cette carte", systemImage: "flag") }
+    /// La feuille du bas : « 4 sur 11 espèces de la zone » puis les cartes de l'ami, côte à côte.
+    private var feuille: some View {
+        VStack(alignment: .leading, spacing: Espace.m) {
+            Capsule().fill(Palette.silhouette).frame(width: 36, height: 5)
+                .frame(maxWidth: .infinity)
+            compteur
+            ScrollView(.horizontal) {
+                HStack(spacing: Espace.m) {
+                    ForEach(especes) { carte in
+                        Button { carteChoisieId = carte.id } label: {
+                            tuile(carte)
+                                .frame(width: 76)
+                                .overlay(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous)
+                                    .strokeBorder(Palette.marine, lineWidth: carte.id == carteEnGrand?.id ? 3 : 0))
+                        }
+                        .buttonStyle(.plain)
+                        .contextMenu {
+                            if let url = gestion.urlDeSignalement(ami: ami, carte: carte) {
+                                Link(destination: url) { Label("Signaler cette carte", systemImage: "flag") }
+                            }
                         }
                     }
+                }
+                .padding(.vertical, Espace.xs)
             }
+            .scrollIndicators(.hidden)
+        }
+        .padding(.horizontal, Espace.xl)
+        .padding(.top, Espace.s)
+        .padding(.bottom, Espace.xl)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
+        .padding(.horizontal, Espace.s)
+    }
+
+    @ViewBuilder
+    private var compteur: some View {
+        let n = especes.count
+        if let zone {
+            HStack(alignment: .firstTextBaseline) {
+                Text("\(n) sur \(gestion.especesReleveesDans(zone))").font(Police.titre).foregroundStyle(Palette.encre)
+                Spacer()
+                Text("espèces de la zone").font(Police.detail).foregroundStyle(Palette.encreDouce)
+            }
+            .accessibilityElement(children: .combine)
+        } else {
+            Text(n == 1 ? "1 espèce" : "\(n) espèces").font(Police.titre).foregroundStyle(Palette.encre)
         }
     }
 

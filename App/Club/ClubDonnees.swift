@@ -66,3 +66,41 @@ nonisolated enum ContactClub {
     static var contact: URL? { courriel(objet: "FishMe") }
     static var erreurDeRegle: URL? { courriel(objet: "Erreur de règle") }
 }
+
+// MARK: - Ce que l'écran Club montre d'un groupe (P29, P31)
+// Rien de tout ça n'existe encore côté données : RootView les passe quand le partage CloudKit les donne.
+// Sans eux, les blocs correspondants ne s'affichent pas.
+
+/// Un membre du club : une pastille à son initiale et le nombre de cartes qu'il a partagées.
+struct MembreClub: Identifiable, Hashable {
+    let id: String
+    let nom: String
+    let nombreDeCartes: Int?
+}
+
+/// Une carte récente d'un membre : « Léa · Sandre, lundi · 52 cm ».
+struct CarteRecenteClub: Identifiable, Hashable {
+    let id: String
+    let membre: String
+    let espece: String
+    /// Jour en toutes lettres courtes (« lundi », « dim. »).
+    let jour: String
+    let tailleCm: Int?
+    /// Nom de l'image du poisson dans les ressources.
+    let image: String
+}
+
+/// Le record du club : « Plus gros brochet · Malo · 74 cm ».
+struct RecordClub: Hashable {
+    let titre: String
+    let membre: String
+    let tailleCm: Int
+    let image: String
+}
+
+/// Une personne invitée, avec l'état de son invitation (P31).
+struct InviteClub: Identifiable, Hashable {
+    let id: String
+    let nom: String
+    let acceptee: Bool
+}
