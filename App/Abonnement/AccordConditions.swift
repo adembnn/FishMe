@@ -27,7 +27,7 @@ struct SuiviConditions {
     }
 }
 
-/// La phrase à poser sous un bouton d'inscription ou de création de compte.
+/// La phrase à poser sous le bouton « Continuer » du premier lancement (pas d'inscription : le compte, c'est l'identifiant Apple).
 /// « Conditions d'utilisation » ouvre la feuille des conditions ; « Politique de confidentialité » ouvre `confidentialite`.
 struct LigneAccordConditions: View {
     let confidentialite: URL

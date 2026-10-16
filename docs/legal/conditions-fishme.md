@@ -1,6 +1,6 @@
 # Conditions d'utilisation de FishMe (CGU)
 
-Source unique du texte des CGU. L'app l'affiche hors ligne (Réglages, et à la création du compte) : après chaque changement, lancer `python3 outils/legal/generer_conditions.py`, qui réécrit `App/Abonnement/TexteConditions.swift`. Un changement qui doit être ré-accepté fait monter `numero` de 1.
+Source unique du texte des CGU. L'app l'affiche hors ligne (Réglages, et au premier lancement) : après chaque changement, lancer `python3 outils/legal/generer_conditions.py`, qui réécrit `App/Abonnement/TexteConditions.swift`. Un changement qui doit être ré-accepté fait monter `numero` de 1.
 Les crochets `[...]` sont à remplir avant l'envoi à Apple (identité de l'éditeur : MWM ; e-mail de contact : Adem ; médiateur : MWM). Rien n'est publié hors du dépôt sans le oui d'Adem ; la version web passe par le serveur MCP de MWM.
 Tout ce qui est au-dessus du premier titre `##` n'est pas montré dans l'app.
 
@@ -16,7 +16,7 @@ Hébergement du site web de FishMe : [nom, adresse et téléphone de l'hébergeu
 
 ## 2. Accepter ces conditions
 
-Tu peux lire ces conditions avant de créer ton compte. En touchant le bouton qui crée ton compte, sous la phrase qui renvoie à ces conditions, tu les acceptes.
+Au premier lancement, l'app te montre un lien vers ces conditions avant que tu continues. En touchant le bouton pour continuer, sous ce lien, tu les acceptes.
 
 FishMe est faite pour les 15 ans et plus. Entre 15 et 18 ans, l'abonnement doit être acheté ou autorisé par un parent. Si tu as moins de 15 ans, ne crée pas de compte sans l'accord de tes parents, donné avec toi : il est nécessaire pour utiliser tes données.
 
@@ -54,11 +54,11 @@ Les relevés de l'OFB sont montrés avec leur nombre de pêches et l'année du d
 
 ## 7. Ton compte et la sauvegarde de ta collection
 
-Ton compte sert à retrouver ta collection, tes cartes et ton abonnement quand tu changes d'iPhone ou que tu réinstalles l'app. Ta collection est sauvegardée dans ton propre iCloud, avec ton identifiant Apple : nous ne te demandons pas de mot de passe et nous n'avons pas accès à ton iCloud. Ton abonnement est lié à ton identifiant Apple et se récupère avec « Restaurer les achats ».
+Ton compte, c'est ton identifiant Apple : il n'y a pas d'inscription chez nous. Il sert à retrouver ta collection, tes cartes et ton abonnement quand tu changes d'iPhone ou que tu réinstalles l'app. Ta collection est sauvegardée dans ton propre iCloud, avec ton identifiant Apple : nous ne te demandons pas de mot de passe et nous n'avons pas accès à ton iCloud. Ton abonnement est lié à ton identifiant Apple et se récupère avec « Restaurer les achats ».
 
 Garde ton iPhone et ton identifiant Apple protégés. Si ton iPhone est perdu ou volé, ou si quelqu'un utilise ton compte sans ton accord, préviens Apple et écris-nous dès que possible.
 
-Tu peux supprimer ton compte à tout moment dans les Réglages de l'app. Ta collection sauvegardée et tes cartes partagées sont alors effacées, tes amis perdent l'accès à ce que tu as partagé, et les données de mesure d'usage qui te concernent sont supprimées. La suppression du compte ne résilie pas ton abonnement : celui-ci se résilie chez Apple (article 9).
+Tu peux supprimer ton compte à tout moment dans les Réglages de l'app (Mon compte, « Supprimer mon compte et mes données iCloud »). Ta sauvegarde iCloud et tes cartes partagées sont alors effacées, et tes amis perdent l'accès à ce que tu as partagé. Tes cartes restent sur cet iPhone jusqu'à ce que tu supprimes l'app. Pour effacer aussi les données de mesure d'usage, écris-nous à l'adresse de l'article 1. La suppression du compte ne résilie pas ton abonnement : celui-ci se résilie chez Apple (article 9).
 
 ## 8. Amis et club : ce que tu partages
 
@@ -104,7 +104,7 @@ Ta position précise et tes coins de pêche restent sur ton iPhone. Tes photos e
 
 Nous pouvons faire évoluer l'app, sans frais pour toi, pour suivre une nouvelle loi ou un nouvel arrêté, la corriger, l'améliorer ou suivre une évolution technique. Si un changement te gêne de façon importante, nous te prévenons au moins 30 jours avant, et tu peux alors arrêter gratuitement dans les 30 jours.
 
-Si nous changeons ces conditions, l'app te montre la nouvelle version et te demande de l'accepter ; si tu refuses, tu peux supprimer ton compte. La date de version est en haut de cette page.
+Si nous changeons ces conditions, l'app te montre la nouvelle version et te demande de l'accepter ; si tu refuses, tu peux supprimer ton compte et l'app. La date de version est en haut de cette page.
 
 Tu peux arrêter d'utiliser FishMe à tout moment en supprimant ton compte et l'app. Si nous retirons un contenu ou l'accès au partage, nous t'expliquons pourquoi, sauf urgence ou obligation légale ; tu peux nous répondre à l'adresse de l'article 1 et nous réexaminons ta situation. Une suspension du partage n'enlève rien à ta collection, aux règles ni à ton abonnement.
 
