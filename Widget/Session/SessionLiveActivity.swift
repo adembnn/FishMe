@@ -56,22 +56,77 @@ private struct NombrePrises: View {
     }
 }
 
+private func rond(_ taille: CGFloat, _ poids: Font.Weight = .heavy) -> Font {
+    .system(size: taille, weight: poids, design: .rounded)
+}
+
+/// Écran verrouillé : en-tête (app, prises), durée écoulée à gauche, fin légale à droite.
+/// Le lieu et les boutons « Prise » / « Pause » de la maquette ne sont pas là : voir le rapport.
+private struct EcranVerrouille: View {
+    let etat: EtatSession
+    let perime: Bool
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Label("FishMe", systemImage: "fish.fill")
+                    .font(rond(15))
+                    .foregroundStyle(.white.opacity(0.85))
+                Spacer()
+                Text(etat.prises == 1 ? "1 prise" : "\(etat.prises) prises")
+                    .font(rond(15))
+                    .foregroundStyle(.white.opacity(0.85))
+            }
+            HStack(alignment: .bottom) {
+                Text(etat.debut, style: .timer)
+                    .font(rond(36))
+                    .monospacedDigit()
+                    .foregroundStyle(.white)
+                    .lineLimit(1)
+                Spacer()
+                FinLegale(etat: etat, perime: perime)
+            }
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 14)
+    }
+}
+
+private struct FinLegale: View {
+    let etat: EtatSession
+    let perime: Bool
+
+    var body: some View {
+        Group {
+            switch etat.affichage(maintenant: .now, perime: perime) {
+            case .pecheFermee:
+                Label("pêche fermée", systemImage: "nosign")
+                    .font(rond(15))
+                    .foregroundStyle(Teintes.alerte)
+            case .compteARebours(let fin), .finLegale(let fin):
+                VStack(alignment: .trailing, spacing: 0) {
+                    Text("Fin légale")
+                        .font(rond(13, .bold))
+                        .foregroundStyle(.white.opacity(0.7))
+                    heure(fin)
+                        .font(rond(22))
+                        .monospacedDigit()
+                        .foregroundStyle(.white)
+                }
+            case .finInconnue:
+                EmptyView()
+            }
+        }
+    }
+}
+
 struct SessionLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: SessionActivityAttributes.self) { context in
-            // Écran verrouillé
-            HStack {
-                Decompte(etat: context.state, perime: context.isStale)
-                    .font(.title2)
-                Spacer()
-                NombrePrises(prises: context.state.prises)
-                    .font(.title2)
-            }
-            .fontDesign(.rounded).fontWeight(.bold)
-            .foregroundStyle(.white)
-            .padding()
-            .activityBackgroundTint(Teintes.marine)
-            .activitySystemActionForegroundColor(.white)
+            // Écran verrouillé (maquette P15 A)
+            EcranVerrouille(etat: context.state, perime: context.isStale)
+                .activityBackgroundTint(Color(white: 0.14, opacity: 0.78))
+                .activitySystemActionForegroundColor(.white)
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.leading) {
