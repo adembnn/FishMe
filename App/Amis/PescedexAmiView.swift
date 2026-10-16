@@ -57,13 +57,7 @@ struct PescedexAmiView: View {
 
     private var barre: some View {
         HStack {
-            Button(action: fermer) {
-                Image(systemName: "chevron.left")
-                    .font(JetonAmis.police(17))
-                    .frame(width: JetonAmis.zoneTactile, height: JetonAmis.zoneTactile)
-                    .background(JetonAmis.papier, in: Circle())
-            }
-            .accessibilityLabel("Retour")
+            BoutonRond(role: .retour, rendu: .verre, action: fermer)
             Spacer()
             HStack(spacing: Espace.s) {
                 Avatar(nom: ami.nom).scaleEffect(0.75).frame(width: 34, height: 34)
@@ -173,6 +167,6 @@ struct CarteAmiDetail: View {
         .padding(20)
         .presentationDetents([.large])
         .background(JetonAmis.fondPage.ignoresSafeArea())
-        .overlay(alignment: .topTrailing) { CroixFermerAmis().padding(8) }
+        .overlay(alignment: .topLeading) { BoutonRond(role: .fermer, rendu: .verre).padding(Espace.bord) }
     }
 }
