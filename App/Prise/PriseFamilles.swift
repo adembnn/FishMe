@@ -29,12 +29,12 @@ nonisolated enum PriseFamille: Int, CaseIterable, Sendable {
 
     static func de(_ id: String) -> PriseFamille {
         if id.hasPrefix("ecrevisse") || id == "crabe-chinois" { return .ecrevisses }
-        if id.hasPrefix("grenouille") || id == "hybrides" { return .grenouilles }
+        if id.hasPrefix("grenouille") { return .grenouilles }
         if id.hasPrefix("truite") || id.hasPrefix("saumon") || id.hasPrefix("omble") || ["cristivomer", "ombre-commun", "huchon", "coregones"].contains(id) { return .salmonides }
-        if id.hasPrefix("carpe") || id.hasPrefix("carassin") { return .carpes }
-        if ["brochet", "sandre", "perche-commune", "gremille", "black-bass", "perche-soleil", "silure-glane", "lotte", "poisson-chat"].contains(id) { return .carnassiers }
-        if id.hasPrefix("anguille") || id == "civelle" || id.hasPrefix("lamproie") || id.hasPrefix("esturgeon") || id.hasSuffix("alose") || id.hasPrefix("alose") || ["flet", "mulet", "apron-du-rhone"].contains(id) || id.contains("alose") { return .migrateurs }
-        if id.hasPrefix("loche") || ["chabot", "epinoche", "vairon", "gambusie", "goujon", "goujon-de-l-amour", "spirlin", "pseudorasbora"].contains(id) { return .petitsDeFond }
+        if id.hasPrefix("carpe") || id.hasPrefix("carassin") || id == "poisson-rouge" { return .carpes }
+        if id.hasPrefix("brochet") || id.hasPrefix("black-bass") || ["sandre", "perche-commune", "gremille", "perche-soleil", "crapet-de-roche", "silure-glane", "lotte", "poisson-chat", "barbue-de-riviere"].contains(id) { return .carnassiers }
+        if id.hasPrefix("anguille") || id == "civelle" || id.hasPrefix("lamproie") || id.hasPrefix("esturgeon") || id.contains("alose") || ["sterlet", "flet", "mulet", "bar", "raye-hybride", "apron-du-rhone"].contains(id) { return .migrateurs }
+        if id.hasPrefix("loche") || id.hasPrefix("gobie") || id.hasPrefix("epinoche") || ["chabot", "vairon", "gambusie", "goujon", "goujon-de-l-amour", "spirlin", "pseudorasbora"].contains(id) { return .petitsDeFond }
         return .cyprinides
     }
 }

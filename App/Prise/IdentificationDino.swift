@@ -37,12 +37,17 @@ nonisolated struct IdentificationDino: IdentifieEspece {
     /// Étiquette du modèle (labels.txt) → `classe_modele` de especes.json. nil : pas d'espèce correspondante
     /// (`autre-poisson`, `pas-un-poisson`, `gambusie` dont la classe est `autre_poisson`, que Core écarte).
     static func classe(deEtiquette e: String) -> String? {
+        if horsExamen.contains(e) { return nil }
         if let c = correspondances[e] { return c }
         if sansEquivalent.contains(e) { return nil }
         return e.replacingOccurrences(of: "-", with: "_")
     }
 
     static let sansEquivalent: Set<String> = ["autre-poisson", "pas-un-poisson", "gambusie"]
+
+    /// Classes recalées à l'examen du modèle v2 (bonne espèce dans les 3 propositions moins de 80 % du temps,
+    /// `reports/reconnaissance/examen-v2.md`) : jamais proposées, la grille s'ouvre à la place.
+    static let horsExamen: Set<String> = ["chabot", "grande-alose", "mulet", "omble-chevalier"]
 
     /// Les étiquettes dont la classe n'est pas simplement l'étiquette avec des `_`.
     static let correspondances: [String: String] = [

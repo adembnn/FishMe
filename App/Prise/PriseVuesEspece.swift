@@ -54,13 +54,15 @@ struct PriseTuile: View {
     var entree: EspecePechable
     var duCoin = false
     var selectionne = false
+    /// Nom affiché à la place de celui de l'espèce (tuile d'un groupe de sosies).
+    var titre: String?
     var action: () -> Void
 
     var body: some View {
         Button(action: action) {
             VStack(spacing: Espace.xs) {
                 PriseVignetteEspece(entree: entree, selectionne: selectionne)
-                Text(entree.nom)
+                Text(titre ?? entree.nom)
                     .font(Police.legende).foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             }
@@ -73,7 +75,7 @@ struct PriseTuile: View {
                     .padding(Espace.xs).accessibilityHidden(true)
             }
         }
-        .accessibilityLabel(entree.nom)
+        .accessibilityLabel(titre ?? entree.nom)
         .accessibilityValue(duCoin ? "Relevée près de toi" : "")
         .accessibilityAddTraits(selectionne ? .isSelected : [])
     }
@@ -103,7 +105,7 @@ struct PrisePropositionsView: View {
     private func nom(_ tuile: Tuile) -> String {
         switch tuile {
         case .espece(let e): return e.nom
-        case .classe(let nom, let premiere): return premiere?.nom ?? nom.split(separator: "_").joined(separator: " ou ").capitalizedPremiere
+        case .classe(let nom, _): return PriseLogique.nomDeGroupe(classe: nom, membres: modele.catalogue.filter { $0.classeModele == nom })
         }
     }
 
@@ -122,7 +124,7 @@ struct PrisePropositionsView: View {
                             PriseTuile(entree: entree, selectionne: choix == i) { choix = i }
                         case .classe(_, let premiere):
                             if let premiere {
-                                PriseTuile(entree: premiere, selectionne: choix == i) { choix = i }
+                                PriseTuile(entree: premiere, selectionne: choix == i, titre: nom(tuile)) { choix = i }
                             } else {
                                 Button(nom(tuile)) { choix = i }.buttonStyle(.secondaire)
                             }

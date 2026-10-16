@@ -3,6 +3,33 @@ import Foundation
 
 /// Logique de présentation, sans écran, testable sur Mac. Elle ne calcule ni a priori, ni seuil, ni consigne, ni poids : tout cela vient de Core.
 enum PriseLogique {
+    /// Noms des groupes de sosies (classes du modèle qui regroupent plusieurs espèces de `especes.json`).
+    static let nomsDeGroupe: [String: String] = [
+        "truite_commune": "Truite fario ou de mer", "carpe": "Carpe commune ou koï", "carassin": "Carassin ou poisson rouge",
+        "ablette": "Ablette ou able de Heckel", "loche": "Loche", "anguille": "Anguille", "alose": "Alose",
+        "lamproie": "Lamproie", "esturgeon": "Esturgeon", "black_bass": "Black-bass", "poisson_chat": "Poisson-chat ou barbue",
+        "hotu_toxostome": "Hotu ou toxostome", "vandoise": "Vandoise", "gobie_invasif": "Gobie ou goujon de l'Amour",
+        "epinoche": "Épinoche ou épinochette", "brochet": "Brochet", "ecrevisse_protegee": "Écrevisse protégée",
+        "ecrevisse_invasive_autre": "Écrevisse invasive", "grenouille_verte": "Grenouille verte",
+    ]
+
+    /// Nom de la tuile d'un groupe : le nom du groupe, jamais le nom brut de sa 1re espèce (« Poisson-chat (Ameiurus…) »).
+    static func nomDeGroupe(classe: String, membres: [EspecePechable]) -> String {
+        if let nom = nomsDeGroupe[classe] { return nom }
+        if let premier = membres.first { return nomCourt(premier.nom) }
+        let brut = classe.replacingOccurrences(of: "_", with: " ")
+        return brut.prefix(1).uppercased() + brut.dropFirst()
+    }
+
+    /// Le nom sans ses précisions : « Huchon (huchen) » → « Huchon », « Anguille européenne, stade jaune » → « Anguille européenne ».
+    static func nomCourt(_ nom: String) -> String {
+        var court = nom
+        for marque in [" (", ", ", " / "] {
+            if let r = court.range(of: marque) { court = String(court[..<r.lowerBound]) }
+        }
+        return court.trimmingCharacters(in: .whitespaces)
+    }
+
     struct Groupe: Equatable {
         var famille: PriseFamille
         var especes: [EspecePechable]

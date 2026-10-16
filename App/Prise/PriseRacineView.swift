@@ -211,7 +211,7 @@ private struct PriseChoixPhoto<Etiquette: View>: View {
 }
 
 /// Les quatre coins du cadre de prise de vue.
-struct PriseCoinsDeCadre: Shape {
+nonisolated struct PriseCoinsDeCadre: Shape {
     func path(in rect: CGRect) -> Path {
         let b = min(rect.width, rect.height) * 0.16
         var p = Path()

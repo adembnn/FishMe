@@ -78,6 +78,26 @@ struct PriseLogiqueTests {
         #expect(PriseFamille.de("esturgeon-europeen") == .migrateurs)
         #expect(PriseFamille.de("ecrevisse-signal") == .ecrevisses)
     }
+
+    @Test func especesAjouteesRangeesDansLaBonneFamille() {
+        for id in ["brochet-aquitain", "black-bass-petite-bouche", "crapet-de-roche", "barbue-de-riviere"] {
+            #expect(PriseFamille.de(id) == .carnassiers, "\(id)")
+        }
+        for id in ["sterlet", "bar", "raye-hybride"] { #expect(PriseFamille.de(id) == .migrateurs, "\(id)") }
+        for id in ["gobie-a-taches-noires", "gobie-de-kessler", "epinochette"] { #expect(PriseFamille.de(id) == .petitsDeFond, "\(id)") }
+        #expect(PriseFamille.de("poisson-rouge") == .carpes)
+        #expect(PriseFamille.de("hybrides") == .cyprinides)
+    }
+
+    @Test func tuileDeGroupeSansNomBrut() {
+        let chat = entree("poisson-chat", nom: "Poisson-chat (Ameiurus melas ; Ameiurus nebulosus [?])")
+        #expect(PriseLogique.nomDeGroupe(classe: "poisson_chat", membres: [chat]) == "Poisson-chat ou barbue")
+        #expect(PriseLogique.nomDeGroupe(classe: "inconnue", membres: [chat]) == "Poisson-chat")
+        #expect(PriseLogique.nomDeGroupe(classe: "hotu_toxostome", membres: []) == "Hotu ou toxostome")
+        #expect(PriseLogique.nomCourt("Anguille européenne, stade jaune") == "Anguille européenne")
+        #expect(PriseLogique.nomCourt("Carassin argenté / poisson rouge") == "Carassin argenté")
+        for nom in PriseLogique.nomsDeGroupe.values { #expect(!nom.contains("(") && !nom.contains("[")) }
+    }
 }
 
 @MainActor

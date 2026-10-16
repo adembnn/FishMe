@@ -52,7 +52,7 @@ struct PriseVerdictTests {
         let m = PriseModele(services: .faux, contexte: contexte, terminer: { _ in })
         let brochet = try #require(m.catalogue.first { $0.espece.id == "brochet" })
         m.choisir(brochet)
-        m.longueurCm = 60
+        m.deplacerCurseur(60)
         m.confirmerLaTaille()
         #expect(m.etape == .details)
         m.continuerDetails()
