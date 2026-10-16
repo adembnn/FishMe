@@ -7323,6 +7323,1210 @@
     },
     "citation": "La pêche sur les tronçons de berges et rives ainsi que les zones mentionnées sur le plan annexé au présent arrêté et signalées par panneaux ou bouées."
    }
+  },
+  {
+   "id": "54-toutes-mode_peche-cat1",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 1,
+    "hamecons_max": 2,
+    "mouches_max": 3,
+    "texte": "1 seule ligne montée sur canne, par membre d'une AAPPMA"
+   },
+   "phrase": "En 1re catégorie : 1 ligne, 2 hameçons ou 3 mouches artificielles au plus.",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 7 1",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "dans les eaux de 1re catégorie, 1 seule ligne, montée sur canne munie de 2 hameçons ou de trois mouches artificielles, au plus, est autorisée par membre d'une Association",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-mode-peche-cat1",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 7-1",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "1 seule ligne, montée sur canne munie de 2 hameçons ou de trois mouches artificielles, au plus, est autorisée par membre d'une Association"
+   }
+  },
+  {
+   "id": "54-toutes-mode_peche-cat2",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 4,
+    "hamecons_max": 2,
+    "mouches_max": 3,
+    "texte": "par membre d'AAPPMA ; lignes disposées à proximité du pêcheur"
+   },
+   "phrase": "En 2e catégorie : 4 lignes au plus, chacune avec 2 hameçons ou 3 mouches, près du pêcheur.",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 7 2",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "est limité à 4 (ligne montée sur canne munie de 2 hameçons ou de 3 mouches artificielles au plus). Elles doivent être disposées à proximité du pêcheur.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-mode-peche-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 7-2",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "le nombre de lignes autorisées par membre d'Association pour la Pêche et la Protection du Milieu Aquatique est limité à 4"
+   }
+  },
+  {
+   "id": "54-ecrevisse-mode_peche-balances-cat2",
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "6 balances au plus par pêcheur, de diamètre ou diagonale inférieur ou égal à 0,30 m"
+   },
+   "phrase": "En 2e catégorie, 6 balances à écrevisses au plus par pêcheur (0,30 m maximum).",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 7 2",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "L'utilisation de 6 balances au plus par pêcheur (de diamètre ou diagonale inférieur ou égal à 0,30 m) pour la pêche des écrevisses est autorisée.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-ecrevisse-mode-peche-balances-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 7-2",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "L'utilisation de 6 balances au plus par pêcheur (de diamètre ou diagonale inférieur ou égal à 0,30 m)"
+   }
+  },
+  {
+   "id": "54-toutes-mode_peche-carafe-cat2",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "carafe en verre ou bouteille pour la pêche au vairon et autres poissons servant d'amorces : 1 par pêcheur, contenance maximale 2 litres"
+   },
+   "phrase": "En 2e catégorie, 1 carafe ou bouteille de 2 litres au plus par pêcheur pour les poissons d'amorce.",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 7 3",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "la carafe en verre ou la bouteille pour la pêche au vairon et autres poissons servant d'amorces, est autorisée, au nombre de 1 par pêcheur. Leur contenance maximale est de 2 litres.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-mode-peche-carafe-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 7-3",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "la carafe en verre ou la bouteille pour la pêche au vairon et autres poissons servant d'amorces, est autorisée, au nombre de 1 par pêcheur"
+   }
+  },
+  {
+   "id": "54-ecrevisse-mode_peche-fagot-plans-eau-cat2",
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "dans les plans d'eau de 2e catégorie, un seul fagot à écrevisses ; le texte écrit « pour la pêche des espèces autres que celles mentionnées à l'article 7 »"
+   },
+   "phrase": "En plan d'eau de 2e catégorie, un seul fagot à écrevisses est permis (renvoi de l'article peu clair).",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 7 4",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "dans les plans d'eau de 2e catégorie, l'emploi d'un seul fagot à écrevisses pour la pêche des espèces autres que celles mentionnées à l'article 7 est autorisé.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-ecrevisse-mode-peche-balances-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 7-2",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "L'utilisation de 6 balances au plus par pêcheur (de diamètre ou diagonale inférieur ou égal à 0,30 m)"
+   }
+  },
+  {
+   "id": "54-goujon-mode_peche-pilonnage",
+   "type": "mode_peche",
+   "especes": [
+    "goujon"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pilonnage effectué par le pêcheur lui-même autorisé, pour la pêche à la ligne du goujon uniquement"
+   },
+   "phrase": "Le pilonnage fait par le pêcheur lui-même est permis pour pêcher le goujon à la ligne.",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 7 5",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "pour la pêche à la ligne du goujon uniquement, le pilonnage effectué par le pêcheur lui-même est autorisé.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-goujon-mode-peche-pilonnage",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 7-5",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "le pilonnage effectué par le pêcheur lui-même est autorisé"
+   }
+  },
+  {
+   "id": "54-toutes-interdit-procede-non-vise",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "tout procédé et mode de pêche non visé est interdit ; le texte renvoie à « l'article 5 » (les modes sont à l'article 7)"
+   },
+   "phrase": "Tout procédé de pêche qui n'est pas prévu par l'arrêté est interdit.",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 8 1",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "tout procédé et mode de pêche non visé à l'article 5 du présent arrêté est interdit.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-interdit-appat-poisson-taille-legale",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 8-5",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "il est interdit d'appâter les hamecçons et tous autres engins avec les poissons appartenant aux espèces soumises à une taille légale de capture"
+   }
+  },
+  {
+   "id": "54-toutes-interdit-main-glace-eau-trouble",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche à la main, sous la glace, en troublant l'eau ou en fouillant sous les racines et autres retraites du poisson"
+   },
+   "phrase": "Interdit de pêcher à la main, sous la glace, en troublant l'eau ou en fouillant sous les racines.",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 8 2",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "il est interdit de pêcher à la main ou sous la glace ou en troublant l'eau ou en fouillant sous les racines et autres retraites fréquentées par le poisson.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-interdit-appat-poisson-taille-legale",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 8-5",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "il est interdit d'appâter les hamecçons et tous autres engins avec les poissons appartenant aux espèces soumises à une taille légale de capture"
+   }
+  },
+  {
+   "id": "54-toutes-interdit-engins-accrocher",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "engins destinés à accrocher le poisson autrement que par la bouche ; épuisette et gaffe permises pour retirer un poisson déjà ferré"
+   },
+   "phrase": "Interdit d'utiliser des engins qui accrochent le poisson ailleurs que par la bouche.",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 8 3",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "il ne peut être fait usage d'engins destinés à accrocher le poisson autrement que par la bouche.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-interdit-appat-poisson-taille-legale",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 8-5",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "il est interdit d'appâter les hamecçons et tous autres engins avec les poissons appartenant aux espèces soumises à une taille légale de capture"
+   }
+  },
+  {
+   "id": "54-toutes-interdit-oeufs-poisson-appat",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "œufs de poisson naturels, frais ou de conserve, ou mélangés à une composition d'appâts, interdits comme appât ou amorce"
+   },
+   "phrase": "Interdit d'utiliser des œufs de poisson comme appât ou amorce.",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 8 4",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "il est interdit d'utiliser comme appât ou comme amorce les œufs de poisson, naturels, frais ou de conserve",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-interdit-appat-poisson-taille-legale",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 8-5",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "il est interdit d'appâter les hamecçons et tous autres engins avec les poissons appartenant aux espèces soumises à une taille légale de capture"
+   }
+  },
+  {
+   "id": "54-toutes-interdit-appater-poissons-taille-legale",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "appâter les hameçons et engins avec des poissons d'espèces soumises à une taille légale de capture, non représentées en France, susceptibles de provoquer des déséquilibres biologiques, exotiques envahissantes (arrêté du 10 mars 2020) ou protégées"
+   },
+   "phrase": "Interdit d'appâter avec des poissons à taille légale, exotiques envahissantes ou protégés.",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 8 5",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "il est interdit d'appâter les hameçons et tous autres engins avec les poissons appartenant aux espèces soumises à une taille légale de capture",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-interdit-appat-poisson-taille-legale",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 8-5",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "il est interdit d'appâter les hamecçons et tous autres engins avec les poissons appartenant aux espèces soumises à une taille légale de capture"
+   }
+  },
+  {
+   "id": "54-anguille-civelle-interdit-appater",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "interdit d'appâter les hameçons et engins avec des civelles, de l'anguille ou leur chair"
+   },
+   "phrase": "Interdit d'appâter avec la civelle ou sa chair.",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 8 5",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "aux espèces protégées ainsi qu'avec des civelles, anguille ou leur chair.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-anguille-civelle-interdit-appat",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-071 (avis annuel 2026), article 2",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52942&path=avis-annuel-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Il est interdit d’appâter les hameçons et les engins avec la civelle, l’anguille ou sa chair."
+   }
+  },
+  {
+   "id": "54-toutes-interdit-asticots-cat1",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "asticots et autres larves de diptères interdits comme appâts et amorces, hors conditions de l'article 7 (plans d'eau, sans amorçage)"
+   },
+   "phrase": "En 1re catégorie, asticots et larves de diptères interdits comme appât et amorce (sauf plans d'eau, sans amorçage).",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 8 6",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "dans les eaux de 1re catégorie, il est interdit d'utiliser comme appâts et amorces les asticots et autres larves de diptères",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-interdit-asticots-cat1",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 8-6",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "dans les eaux de 1* catégorie, il est interdit d'utiliser comme appâts et amorces les asticots et autres larves de diptères"
+   }
+  },
+  {
+   "id": "54-2151-interdit-vif-leurres-cat2",
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer le brochet de manière non accidentelle, pendant la fermeture du brochet ; dates calculées d'après l'avis 2026 (brochet ouvert du 1er au 25 janvier puis dès le 25 avril)"
+   },
+   "phrase": "En 2e catégorie, pendant la fermeture du brochet, vif, poisson mort ou artificiel et leurres sont interdits.",
+   "source": {
+    "texte": "AP permanent DDT-ERC 2022-128, art. 8 7",
+    "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2022-11-03"
+   },
+   "citation": "pendant la période d'interdiction spécifique de la pêche au brochet, la pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer ce poisson",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-brochet-interdit-vif-fermeture-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 8-7",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "la pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer ce poisson de manière non accidentelle, est interdite"
+   }
+  },
+  {
+   "id": "54-reserve-orne-hatrize",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "54",
+    "lieu": "Orne : annexe hydraulique d'Hatrize, totalité",
+    "plan_eau": null,
+    "cours_eau": "Orne"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "texte": "pêche interdite (bras, totalité)"
+   },
+   "phrase": "Réserve de pêche : Orne : annexe hydraulique d'Hatrize, totalité, pêche interdite toute l'année 2026.",
+   "source": {
+    "texte": "AP réserves temporaires 2026 DDT-ERC 2025-070, art. 1, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-22"
+   },
+   "citation": "Annexe hydraulique d'HATRIZE Totalité",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-reserve-orne-hatrize",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Annexe hydraulique d'HATRIZE"
+   }
+  },
+  {
+   "id": "54-reserve-esch-heymonrupt",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "54",
+    "lieu": "Esch : sur les deux rives, de la confluence de l'Heymonrupt jusqu'à 10 m en aval de la passerelle",
+    "plan_eau": null,
+    "cours_eau": "Esch"
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "texte": "pêche interdite (lit principal, 150 m)"
+   },
+   "phrase": "Réserve de pêche : Esch : sur les deux rives, de la confluence de l'Heymonrupt jusqu'à 10 m en aval de la passerelle, pêche interdite toute l'année 2026.",
+   "source": {
+    "texte": "AP réserves temporaires 2026 DDT-ERC 2025-070, art. 1, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-22"
+   },
+   "citation": "Sur les deux rives, de la confluence de l'Heymonrupt jusqu'à 10m en aval de la passerelle 150 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-reserve-esch-heymonrupt",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Sur les deux rives, de la confluence de l’Heymonrupt jusqu'à 10m en aval"
+   }
+  },
+  {
+   "id": "54-grac-plan-eau-apn",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "54",
+    "lieu": "Étang de l'APN : intégralité",
+    "plan_eau": "APN",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson"
+   },
+   "phrase": "Parcours de graciation : Étang de l'APN, poisson remis à l'eau tout de suite.",
+   "source": {
+    "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-22"
+   },
+   "citation": "Étangs de l'APN et du Pré Albert Intégralité des deux étangs Gondreville et Toul Toutes espèces",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-graciation-etang-apn-toutes",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-069 (parcours de graciation 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Intégralité des deux étangs"
+   }
+  },
+  {
+   "id": "54-grac-plan-eau-pre-albert",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "54",
+    "lieu": "Étang du Pré Albert : intégralité",
+    "plan_eau": "Pré Albert",
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson"
+   },
+   "phrase": "Parcours de graciation : Étang du Pré Albert, poisson remis à l'eau tout de suite.",
+   "source": {
+    "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-11-22"
+   },
+   "citation": "Étangs de l'APN et du Pré Albert Intégralité des deux étangs Gondreville et Toul Toutes espèces",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-graciation-etang-pre-albert-toutes",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-069 (parcours de graciation 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Intégralité des deux étangs"
+   }
+  },
+  {
+   "id": "54-carpe-nuit-canal-marne-rhin-xures-droite",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "54",
+    "lieu": "Canal de la Marne au Rhin (Mouacourt, Xures) : rive droite, du pont du moulin de Xures jusqu'au port, 340 m",
+    "plan_eau": null,
+    "cours_eau": "canal de la Marne au Rhin"
+   },
+   "du": "2026-04-01",
+   "au": "2026-10-31",
+   "valeur": {
+    "texte": "pêche de la carpe à toute heure autorisée ; AAPPMA gestionnaire : Lunéville"
+   },
+   "phrase": "Carpe de nuit autorisée sur Canal de la Marne au Rhin (Mouacourt, Xures) du 1er avril au 31 octobre 2026.",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 1 et art. 2, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "Rive droite : du pont du moulin de Xures jusqu'au port, soit 340 m.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-carpe-nuit-canal-marne-rhin-xures-rd",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 2 (secteurs autorisés)",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "Rive droite :du pont du moulin de Xures jusqu'au port, soit 340 m."
+   }
+  },
+  {
+   "id": "54-carpe-nuit-plan-eau-thiriet-avril",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "54",
+    "lieu": "Étang Thiriet (Lunéville) : intégralité du plan d'eau, uniquement les nuits du vendredi 10 au samedi 11 avril",
+    "plan_eau": "Thiriet",
+    "cours_eau": null
+   },
+   "du": "2026-04-10",
+   "au": "2026-04-11",
+   "valeur": {
+    "texte": "pêche de la carpe à toute heure autorisée (uniquement vendredi 10 et samedi 11 avril 2026 (nuits du vendredi au samedi et du samedi au dimanche)) ; AAPPMA gestionnaire : Lunéville"
+   },
+   "phrase": "Carpe de nuit autorisée sur Étang Thiriet (Lunéville) (uniquement vendredi 10 et samedi 11 avril 2026 (nuits du vendredi au samedi et du samedi au dimanche)).",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 1 et art. 2, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 10 et samedi 11 avril",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-carpe-nuit-etang-thiriet-avril",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 2 (secteurs autorisés)",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "vendredi 10 et samedi 11 avril"
+   }
+  },
+  {
+   "id": "54-carpe-nuit-plan-eau-thiriet-mai",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "54",
+    "lieu": "Étang Thiriet (Lunéville) : intégralité du plan d'eau, uniquement les nuits du vendredi 8 au samedi 9 mai",
+    "plan_eau": "Thiriet",
+    "cours_eau": null
+   },
+   "du": "2026-05-08",
+   "au": "2026-05-09",
+   "valeur": {
+    "texte": "pêche de la carpe à toute heure autorisée (uniquement vendredi 8 et samedi 9 mai 2026 (nuits du vendredi au samedi et du samedi au dimanche)) ; AAPPMA gestionnaire : Lunéville"
+   },
+   "phrase": "Carpe de nuit autorisée sur Étang Thiriet (Lunéville) (uniquement vendredi 8 et samedi 9 mai 2026 (nuits du vendredi au samedi et du samedi au dimanche)).",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 1 et art. 2, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 8 et samedi 9 mai",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-carpe-nuit-etang-thiriet-mai",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 2 (secteurs autorisés)",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "vendredi 8 et samedi 9 mai"
+   }
+  },
+  {
+   "id": "54-carpe-nuit-plan-eau-thiriet-juin",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "54",
+    "lieu": "Étang Thiriet (Lunéville) : intégralité du plan d'eau, uniquement les nuits du vendredi 5 au samedi 6 juin",
+    "plan_eau": "Thiriet",
+    "cours_eau": null
+   },
+   "du": "2026-06-05",
+   "au": "2026-06-06",
+   "valeur": {
+    "texte": "pêche de la carpe à toute heure autorisée (uniquement vendredi 5 et samedi 6 juin 2026 (nuits du vendredi au samedi et du samedi au dimanche)) ; AAPPMA gestionnaire : Lunéville"
+   },
+   "phrase": "Carpe de nuit autorisée sur Étang Thiriet (Lunéville) (uniquement vendredi 5 et samedi 6 juin 2026 (nuits du vendredi au samedi et du samedi au dimanche)).",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 1 et art. 2, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 5 et samedi 6 juin",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-carpe-nuit-etang-thiriet-juin",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 2 (secteurs autorisés)",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "vendredi 5 et samedi 6 juin"
+   }
+  },
+  {
+   "id": "54-carpe-nuit-plan-eau-thiriet-juillet",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "54",
+    "lieu": "Étang Thiriet (Lunéville) : intégralité du plan d'eau, uniquement les nuits du vendredi 3 au samedi 4 juillet",
+    "plan_eau": "Thiriet",
+    "cours_eau": null
+   },
+   "du": "2026-07-03",
+   "au": "2026-07-04",
+   "valeur": {
+    "texte": "pêche de la carpe à toute heure autorisée (uniquement vendredi 3 et samedi 4 juillet 2026 (nuits du vendredi au samedi et du samedi au dimanche)) ; AAPPMA gestionnaire : Lunéville"
+   },
+   "phrase": "Carpe de nuit autorisée sur Étang Thiriet (Lunéville) (uniquement vendredi 3 et samedi 4 juillet 2026 (nuits du vendredi au samedi et du samedi au dimanche)).",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 1 et art. 2, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 3 et samedi 4 juillet",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-carpe-nuit-etang-thiriet-juillet",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 2 (secteurs autorisés)",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "vendredi 3 et samedi 4 juillet"
+   }
+  },
+  {
+   "id": "54-carpe-nuit-plan-eau-thiriet-août",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "54",
+    "lieu": "Étang Thiriet (Lunéville) : intégralité du plan d'eau, uniquement les nuits du vendredi 7 au samedi 8 août",
+    "plan_eau": "Thiriet",
+    "cours_eau": null
+   },
+   "du": "2026-08-07",
+   "au": "2026-08-08",
+   "valeur": {
+    "texte": "pêche de la carpe à toute heure autorisée (uniquement vendredi 7 et samedi 8 août 2026 (nuits du vendredi au samedi et du samedi au dimanche)) ; AAPPMA gestionnaire : Lunéville"
+   },
+   "phrase": "Carpe de nuit autorisée sur Étang Thiriet (Lunéville) (uniquement vendredi 7 et samedi 8 août 2026 (nuits du vendredi au samedi et du samedi au dimanche)).",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 1 et art. 2, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 7 et samedi 8 août",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-carpe-nuit-etang-thiriet-août",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 2 (secteurs autorisés)",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "vendredi 7 et samedi 8 août"
+   }
+  },
+  {
+   "id": "54-carpe-nuit-plan-eau-thiriet-septembre",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "54",
+    "lieu": "Étang Thiriet (Lunéville) : intégralité du plan d'eau, uniquement les nuits du vendredi 4 au samedi 5 septembre",
+    "plan_eau": "Thiriet",
+    "cours_eau": null
+   },
+   "du": "2026-09-04",
+   "au": "2026-09-05",
+   "valeur": {
+    "texte": "pêche de la carpe à toute heure autorisée (uniquement vendredi 4 et samedi 5 septembre 2026 (nuits du vendredi au samedi et du samedi au dimanche)) ; AAPPMA gestionnaire : Lunéville"
+   },
+   "phrase": "Carpe de nuit autorisée sur Étang Thiriet (Lunéville) (uniquement vendredi 4 et samedi 5 septembre 2026 (nuits du vendredi au samedi et du samedi au dimanche)).",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 1 et art. 2, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 4 et samedi 5 septembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-carpe-nuit-etang-thiriet-septembre",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 2 (secteurs autorisés)",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "vendredi 4 et samedi 5 septembre"
+   }
+  },
+  {
+   "id": "54-carpe-nuit-plan-eau-thiriet-octobre",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "54",
+    "lieu": "Étang Thiriet (Lunéville) : intégralité du plan d'eau, uniquement les nuits du vendredi 2 au samedi 3 octobre",
+    "plan_eau": "Thiriet",
+    "cours_eau": null
+   },
+   "du": "2026-10-02",
+   "au": "2026-10-03",
+   "valeur": {
+    "texte": "pêche de la carpe à toute heure autorisée (uniquement vendredi 2 et samedi 3 octobre 2026 (nuits du vendredi au samedi et du samedi au dimanche)) ; AAPPMA gestionnaire : Lunéville"
+   },
+   "phrase": "Carpe de nuit autorisée sur Étang Thiriet (Lunéville) (uniquement vendredi 2 et samedi 3 octobre 2026 (nuits du vendredi au samedi et du samedi au dimanche)).",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 1 et art. 2, tableau",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "Intégralité du plan d'eau. Uniquement aux dates suivantes (les nuits du vendredi au samedi et du samedi au dimanche) : - vendredi 2 et samedi 3 octobre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-carpe-nuit-etang-thiriet-octobre",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 2 (secteurs autorisés)",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "vendredi 2 et samedi 3 octobre"
+   }
+  },
+  {
+   "id": "54-2110-transport_vivant-nuit",
+   "type": "transport_vivant",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": "Secteurs de carpe de nuit de l'arrêté DDT-ERC 2025-068 (cours d'eau et plans d'eau de 2e catégorie listés à l'article 2)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-04-01",
+   "au": "2026-10-31",
+   "valeur": {
+    "texte": "de une demi-heure après le coucher du soleil à une demi-heure avant son lever, toute carpe capturée ne peut être maintenue en captivité ni transportée"
+   },
+   "phrase": "Sur les secteurs carpe de nuit, la nuit, une carpe prise ne peut être gardée en captivité ni transportée.",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 1",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "toute carpe capturée par les pêcheurs amateurs aux lignes ne peut être maintenue en captivité ou transportée.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-carpe-transport-vivant-nuit",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "toute carpe capturée par les pêcheurs amateurs aux lignes ne peut être maintenue en captivité ou transportée"
+   }
+  },
+  {
+   "id": "54-toutes-interdit-captivite-nuit",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": "Secteurs de carpe de nuit de l'arrêté DDT-ERC 2025-068 (cours d'eau et plans d'eau de 2e catégorie listés à l'article 2)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-04-01",
+   "au": "2026-10-31",
+   "valeur": {
+    "texte": "la nuit, le maintien en captivité de tout poisson est interdit"
+   },
+   "phrase": "Sur les secteurs carpe de nuit, la nuit, aucun poisson ne peut être gardé en captivité.",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 1",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "est également interdit la nuit, le maintien en captivité de tout poisson.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-interdit-captivite-nuit",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "est également interdit la nuit, le maintien en captivité de tout poisson"
+   }
+  },
+  {
+   "id": "54-toutes-interdit-vehicules-digues-carpe-nuit",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": "Secteurs de carpe de nuit de l'arrêté DDT-ERC 2025-068 (cours d'eau et plans d'eau de 2e catégorie listés à l'article 2)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-04-01",
+   "au": "2026-10-31",
+   "valeur": {
+    "texte": "circulation à bord de véhicules à moteur et stationnement sur les digues, chemins de halage et de service des voies navigables interdits"
+   },
+   "phrase": "Sur ces secteurs, véhicules à moteur interdits en circulation et en stationnement sur digues et chemins de halage.",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 5",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "La circulation à bord de véhicules à moteur et le stationnement sur les digues, chemins de halage et de service des voies navigables sont interdits.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-interdit-captivite-nuit",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "est également interdit la nuit, le maintien en captivité de tout poisson"
+   }
+  },
+  {
+   "id": "54-toutes-interdit-amenagement-berge-carpe-nuit",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "54",
+    "lieu": "Secteurs de carpe de nuit de l'arrêté DDT-ERC 2025-068 (cours d'eau et plans d'eau de 2e catégorie listés à l'article 2)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-04-01",
+   "au": "2026-10-31",
+   "valeur": {
+    "texte": "aucun aménagement de berge (défrichement, terrassement, déplacement d'enrochements, édification de ponton, etc.)"
+   },
+   "phrase": "Sur ces secteurs, aucun aménagement de berge (ponton, terrassement, défrichement) n'est permis.",
+   "source": {
+    "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 6",
+    "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-12-18"
+   },
+   "citation": "Aucun aménagement de berge (défrichement, terrassement, déplacement d'enrochements, édification de ponton, etc.) ne peut être réalisé.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "54-toutes-interdit-captivite-nuit",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "est également interdit la nuit, le maintien en captivité de tout poisson"
+   }
   }
  ],
  "desaccords": {
@@ -7833,6 +9037,1043 @@
     },
     "citation": "La pêche du brochet et du sandre est autorisée sur les mêmes périodes que la",
     "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-2195-autre-sans-taille-cat1",
+    "type": "autre",
+    "especes": [
+     "2195"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "La taille minimale n'est pas applicable en 1re catégorie."
+    },
+    "phrase": "Pas de taille minimale pour le sandre en 1re catégorie.",
+    "source": {
+     "texte": "AP permanent DDT-ERC 2022-128, art. 5",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "Pour le Black-bass et le Sandre, la taille minimale n'est pas applicable en 1re catégorie.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-2053-autre-sans-taille-cat1",
+    "type": "autre",
+    "especes": [
+     "2053"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "La taille minimale n'est pas applicable en 1re catégorie."
+    },
+    "phrase": "Pas de taille minimale pour le black-bass en 1re catégorie.",
+    "source": {
+     "texte": "AP permanent DDT-ERC 2022-128, art. 5",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "Pour le Black-bass et le Sandre, la taille minimale n'est pas applicable en 1re catégorie.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-2216-taille_min-la-plaine",
+    "type": "taille_min",
+    "especes": [
+     "2216"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "cours_eau",
+     "code": "54",
+     "lieu": "La Plaine : tout le cours d'eau",
+     "plan_eau": null,
+     "cours_eau": "La Plaine"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 20
+    },
+    "phrase": "Sur La Plaine, taille minimale de la truite arc-en-ciel : 20 cm.",
+    "source": {
+     "texte": "Avis annuel 2026 DDT-ERC 2025-071, art. 3",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52942&path=avis-annuel-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "et du saumon de fontaine est fixée à 0,25 m sur tout le département, à l'exception de La Plaine où la taille minimale est fixée à 0,20 m",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-2221-2247-quota_jour-3",
+    "type": "quota_jour",
+    "especes": [
+     "2221",
+     "2247"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 3,
+     "texte": "truites fario et ombres communs confondus, dans le quota de 6 salmonidés"
+    },
+    "phrase": "Dans les 6 salmonidés du jour, 3 truites fario ou ombres communs au plus.",
+    "source": {
+     "texte": "AP permanent DDT-ERC 2022-128, art. 6",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "est fixé à 6 dont 3 truites fario ou ombres communs maximum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-toutes-mode_peche-asticots-plans-eau-cat1",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Dans les plans d'eau de 1re catégorie, asticots comme appâts autorisés, sans amorçage."
+    },
+    "phrase": "Dans les plans d'eau de 1re catégorie, les asticots sont permis comme appâts, sans amorçage.",
+    "source": {
+     "texte": "AP permanent DDT-ERC 2022-128, art. 7 1",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "Dans les plans d'eaux de 1re catégorie, l'emploi des asticots comme appâts, sans amorçage, est autorisé.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-grenouille-verte-interdit-peche",
+    "type": "interdit",
+    "especes": [
+     "grenouille-verte"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche des grenouilles interdite dans le département, par quelque moyen que ce soit"
+    },
+    "phrase": "Pêche interdite dans le département : grenouille verte.",
+    "source": {
+     "texte": "AP permanent DDT-ERC 2022-128, art. 9 al. 1",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "la pêche des grenouilles, par quelques moyens que ce soit, est interdite dans le département.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-grenouille-rousse-interdit-peche",
+    "type": "interdit",
+    "especes": [
+     "grenouille-rousse"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche des grenouilles interdite dans le département, par quelque moyen que ce soit"
+    },
+    "phrase": "Pêche interdite dans le département : grenouille rousse.",
+    "source": {
+     "texte": "AP permanent DDT-ERC 2022-128, art. 9 al. 1",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "la pêche des grenouilles, par quelques moyens que ce soit, est interdite dans le département.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-moselle-champagne",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Bras de Moselle (Toul), lieu-dit « la champagne », rive gauche : du rejet de la station d'épuration à la pointe aval de l'île, y compris l'île, lot de pêche 14",
+     "plan_eau": null,
+     "cours_eau": "Moselle"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "pêche interdite (bras, 300 m)"
+    },
+    "phrase": "Réserve de pêche : Bras de Moselle (Toul), lieu-dit « la champagne », rive gauche : du rejet de la station d'épuration à la pointe aval de l'île, y compris l'île, lot de pêche 14, pêche interdite toute l'année 2026.",
+    "source": {
+     "texte": "AP réserves temporaires 2026 DDT-ERC 2025-070, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Bras de MOSELLE à TOUL, lieu-dit « la champagne », rive gauche : du rejet de la station d'épuration à la pointe aval de l'île, y compris l'île. 300 m Lot de pêche 14.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-2221-esch-saint-jean",
+    "type": "no_kill",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Ruisseau d'Esch : du pont de St-Jean jusqu'à la passerelle de l'ancienne route de Saint-Jean",
+     "plan_eau": null,
+     "cours_eau": "ruisseau d'Esch"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson"
+    },
+    "phrase": "Parcours de graciation : Ruisseau d'Esch, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Le ruisseau d'Esch Du pont de St-Jean jusqu'à la passerelle de l'ancienne route de Saint-Jean Truite fario (Salmo trutta fario)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-2221-esch-haut-parge",
+    "type": "no_kill",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Ruisseau d'Esch : de la confluence avec le ruisseau du Haut Pargé en aval, au gué du Bois Guyot en amont, environ 1 km",
+     "plan_eau": null,
+     "cours_eau": "ruisseau d'Esch"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson"
+    },
+    "phrase": "Parcours de graciation : Ruisseau d'Esch, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Le ruisseau d'Esch De la confluence avec le ruisseau du Haut Pargé en aval, au gué du Bois Guyot en amont, soit environ 1 km Truite fario (Salmo trutta fario)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-2151-meurthe-neufcours",
+    "type": "no_kill",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe : du barrage de Neufcours jusqu'au seuil du pont de la D116",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson"
+    },
+    "phrase": "Parcours de graciation : Meurthe, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La Meurthe Du barrage de Neufcours jusqu'au seuil du pont de la D116 Dombasle Brochet (Esox Lucius)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-2247-meurthe-damelevieres",
+    "type": "no_kill",
+    "especes": [
+     "2247"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe : du pont de Damelevières à la limite départementale avec les Vosges",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson"
+    },
+    "phrase": "Parcours de graciation : Meurthe, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La Meurthe Du pont de Damelevières à la limite départementale avec les Vosges Lunéville et Baccarat Ombre commun (Thymallus thymallus)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-meurthe-solvay",
+    "type": "no_kill",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe : limite amont pont du chemin de fer, limite aval seuils de la prise d'eau de Solvay",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson"
+    },
+    "phrase": "Parcours de graciation : Meurthe, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La Meurthe Limite amont : pont du chemin de fer limite aval seuils de la prise d'eau de Solvay Dombasle Toutes espèces",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-truite-chiers",
+    "type": "no_kill",
+    "especes": [
+     "truite"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Chiers : intégralité du lot, 21,5 km",
+     "plan_eau": null,
+     "cours_eau": "Chiers"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson"
+    },
+    "phrase": "Parcours de graciation : Chiers, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La Chiers Intégralité du lot, soit 21,5 km Longuyon Truite commune et ombre commun",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-2247-chiers",
+    "type": "no_kill",
+    "especes": [
+     "2247"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Chiers : intégralité du lot, 21,5 km",
+     "plan_eau": null,
+     "cours_eau": "Chiers"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson"
+    },
+    "phrase": "Parcours de graciation : Chiers, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La Chiers Intégralité du lot, soit 21,5 km Longuyon Truite commune et ombre commun",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-2151-orne-viaduc",
+    "type": "no_kill",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Orne : du seuil de l'ancien viaduc jusqu'à 600 m en amont sur les 2 rives",
+     "plan_eau": null,
+     "cours_eau": "Orne"
+    },
+    "du": "2025-07-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson; seulement du 1er juillet 2025 au 31 décembre 2026"
+    },
+    "phrase": "Parcours de graciation : Orne, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "L'Orne Du seuil de l'ancien viaduc jusqu'à 600m en amont sur les 2 rives. Uniquement du 1er juillet 2025 au 31 décembre 2026 Les pêcheurs de l'Orne Brochet, perche, sandre, black-bass",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-2193-orne-viaduc",
+    "type": "no_kill",
+    "especes": [
+     "2193"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Orne : du seuil de l'ancien viaduc jusqu'à 600 m en amont sur les 2 rives",
+     "plan_eau": null,
+     "cours_eau": "Orne"
+    },
+    "du": "2025-07-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson; seulement du 1er juillet 2025 au 31 décembre 2026"
+    },
+    "phrase": "Parcours de graciation : Orne, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "L'Orne Du seuil de l'ancien viaduc jusqu'à 600m en amont sur les 2 rives. Uniquement du 1er juillet 2025 au 31 décembre 2026 Les pêcheurs de l'Orne Brochet, perche, sandre, black-bass",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-2195-orne-viaduc",
+    "type": "no_kill",
+    "especes": [
+     "2195"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Orne : du seuil de l'ancien viaduc jusqu'à 600 m en amont sur les 2 rives",
+     "plan_eau": null,
+     "cours_eau": "Orne"
+    },
+    "du": "2025-07-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson; seulement du 1er juillet 2025 au 31 décembre 2026"
+    },
+    "phrase": "Parcours de graciation : Orne, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "L'Orne Du seuil de l'ancien viaduc jusqu'à 600m en amont sur les 2 rives. Uniquement du 1er juillet 2025 au 31 décembre 2026 Les pêcheurs de l'Orne Brochet, perche, sandre, black-bass",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-2053-orne-viaduc",
+    "type": "no_kill",
+    "especes": [
+     "2053"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Orne : du seuil de l'ancien viaduc jusqu'à 600 m en amont sur les 2 rives",
+     "plan_eau": null,
+     "cours_eau": "Orne"
+    },
+    "du": "2025-07-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson; seulement du 1er juillet 2025 au 31 décembre 2026"
+    },
+    "phrase": "Parcours de graciation : Orne, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "L'Orne Du seuil de l'ancien viaduc jusqu'à 600m en amont sur les 2 rives. Uniquement du 1er juillet 2025 au 31 décembre 2026 Les pêcheurs de l'Orne Brochet, perche, sandre, black-bass",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-2110-meurthe-chenevieres",
+    "type": "no_kill",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe : du seuil de la commune de Chenevières au barrage de Damelevières",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson"
+    },
+    "phrase": "Parcours de graciation : Meurthe, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La Meurthe du seuil de la commune de Chenevières au barrage de Damelevières Lunéville Carpe commune",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-grac-2110-vezouze-saint-martin",
+    "type": "no_kill",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Vezouze : du barrage du moulin de la commune de Saint-Martin à la confluence Meurthe",
+     "plan_eau": null,
+     "cours_eau": "Vezouze"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "parcours de graciation : remise à l'eau immédiate obligatoire du poisson"
+    },
+    "phrase": "Parcours de graciation : Vezouze, poisson remis à l'eau tout de suite.",
+    "source": {
+     "texte": "AP parcours de graciation 2026 DDT-ERC 2025-069, art. 1, tableau",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La Vezouze Du barrage du moulin de la commune de Saint-Martin à la confluence Meurthe Lunéville Carpe commune",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-2110-mode_peche-appats-nuit",
+    "type": "mode_peche",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": "Secteurs de carpe de nuit de l'arrêté DDT-ERC 2025-068 (cours d'eau et plans d'eau de 2e catégorie listés à l'article 2)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-04-01",
+    "au": "2026-10-31",
+    "valeur": {
+     "texte": "durant la nuit, appâts limités aux seuls farineux (céréales, pâtes et pelotes dites « bouillettes »)"
+    },
+    "phrase": "Sur les secteurs carpe de nuit, la nuit, seuls les appâts farineux sont permis (céréales, pâtes, bouillettes).",
+    "source": {
+     "texte": "AP carpe de nuit 2026 DDT-ERC 2025-068, art. 4",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "les appâts autorisés sont limités aux seuls farineux (céréales, pâtes et pelotes dites « bouillettes »).",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-ouverture-ligne-balance",
+    "type": "ouverture",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "formule": "du 1er janvier au 31 décembre",
+     "texte": "pêche à la ligne et à la balance"
+    },
+    "phrase": "Au lac de Pierre-Percée, pêche à la ligne et à la balance toute l'année.",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche à la ligne et à la balance est autorisée du 1er janvier au 31 décembre sur le lac de PIERRE-PERCÉE.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-mode_peche-ligne-2-hamecons",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "hamecons_max": 2,
+     "texte": "ligne montée sur canne"
+    },
+    "phrase": "Au lac de Pierre-Percée, ligne sur canne avec 2 hameçons au plus.",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche à la ligne munie de deux hameçons au plus montée sur canne est autorisée.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-coregone-mode_peche-lignes-plombees",
+    "type": "mode_peche",
+    "especes": [
+     "coregone"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "hamecons_max": 10,
+     "texte": "lignes plombées, hameçons étagés au-dessus du plomb, exclusivement pour la pêche du corégone"
+    },
+    "phrase": "Au lac de Pierre-Percée, lignes plombées à 10 hameçons au plus, pour le seul corégone.",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "L'utilisation de lignes plombées munies chacune de dix hameçons au plus, étagés au-dessus du plomb, est permise exclusivement pour la pêche du corégone.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-mode_peche-plusieurs-lignes-cartes",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Peuvent pêcher à plus d'une ligne montée sur canne, du bord ou d'une embarcation, les titulaires de toute carte Personne majeure, Personne mineure, Hebdomadaire ou Journalière d'une AAPPMA de Meurthe-et-Moselle, de toute carte Interfédérale (URNE, CHI, EHGO), ou de toute carte Personne Majeure, Personne Mineure, Hebdomadaire d'une AAPPMA adhérant à l'URNE, au CHI ou à l'EHGO ; le nombre de lignes n'est pas écrit"
+    },
+    "phrase": "Au lac de Pierre-Percée, plus d'une ligne sur canne est permise aux titulaires de certaines cartes (nombre non précisé).",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "Peuvent pêcher à plus d'une ligne montée sur canne, du bord ou à partir d'une embarcation, les pêcheurs titulaires de :",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-mode_peche-trois-lignes-traine",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 3,
+     "texte": "lignes pêchantes montées sur cannes, à la traîne à partir d'une embarcation"
+    },
+    "phrase": "Au lac de Pierre-Percée, 3 lignes à la traîne depuis une embarcation.",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche à trois lignes pêchantes montées sur cannes à la traîne à partir d'une embarcation est autorisée.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-mode_peche-embarcation",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche en embarcation à propulsion humaine ou électrique autorisée"
+    },
+    "phrase": "Au lac de Pierre-Percée, pêche en embarcation à propulsion humaine ou électrique permise.",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche en embarcation, à propulsion humaine ou électrique est autorisée.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-mode_peche-float-tube",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche en float-tube autorisée"
+    },
+    "phrase": "Au lac de Pierre-Percée, pêche en float-tube permise.",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche en float-tube est autorisée.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-2151-2195-quota_jour-1",
+    "type": "quota_jour",
+    "especes": [
+     "2151",
+     "2195"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 1,
+     "texte": "carnassiers (sandre, brochet) confondus, par pêcheur et par jour ; chiffre lu sur l'image de la page 3, l'OCR l'avait perdu"
+    },
+    "phrase": "Au lac de Pierre-Percée, 1 carnassier (sandre ou brochet) au plus par pêcheur et par jour.",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 1, nombre de captures",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "Le nombre maximal de captures de carnassiers (sandre, brochet) autorisé par pêcheur et par jour est limité à 1.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-categorie-2",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "2",
+     "texte": "lac de montagne classé en deuxième catégorie"
+    },
+    "phrase": "Le lac de Pierre-Percée est classé en 2e catégorie.",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "la pêche dans le lac de PIERRE-PERCÉE ou de VIEUX PRE, domaine public de l'État, lac de montagne, classé en deuxième catégorie",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-interdit-filets-engins",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche aux filets et autres engins que ceux mentionnés à l'article 1 interdite"
+    },
+    "phrase": "Au lac de Pierre-Percée, interdit de pêcher aux filets ou avec d'autres engins que ceux permis.",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 2",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche aux filets et autres engins que ceux mentionnés à l'article 1,",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-interdit-amarrage-distance",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "amarrage à distance interdit"
+    },
+    "phrase": "Au lac de Pierre-Percée, l'amarrage à distance est interdit.",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 2",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "L'amarrage à distance,",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-reserve-zones-plan-annexe",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée (Pierre-Percée, Badonviller, Pexonne, Fenneviller)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche interdite sur les tronçons de berges et rives et les zones du plan annexé, signalées par panneaux ou bouées ; zones lisibles seulement sur le plan, non transcrites"
+    },
+    "phrase": "Au lac de Pierre-Percée, pêche interdite dans les zones du plan annexé, signalées par panneaux ou bouées.",
+    "source": {
+     "texte": "AP lac de Pierre-Percée DDT-ERC-2024-108, art. 2",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche sur les tronçons de berges et rives ainsi que les zones mentionnées sur le plan annexé au présent arrêté et signalées par panneaux ou bouées.",
+    "statut": "incertain",
     "expire_le": null,
     "remplace": null
    }
@@ -8375,6 +10616,1433 @@
     "citation": "Des parcours de graciation (remise à l'eau immédiate obligatoire du poisson) sont instaurés du 1er janvier au 31 décembre 2026. Orne : Uniquement du 1er juillet 2025 au 31 décembre 2026",
     "statut": "brouillon",
     "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-truite-fario-taille-min-crusnes",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "cours_eau",
+     "code": "54",
+     "lieu": "Crusnes : bassin versant",
+     "plan_eau": null,
+     "cours_eau": "Crusnes"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 30
+    },
+    "phrase": "Truite fario : 30 cm minimum dans le bassin versant de la Crusnes.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-071 (avis annuel 2026), article 3",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52942&path=avis-annuel-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "du bassin versant de la Crusnes où la taille minimale de capture de la truite fario est fixée à 0,30 m",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-toutes-mode-peche-asticots-plans-eau-cat1",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": "plans d'eau de 1re catégorie",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Dans les plans d'eau de 1re catégorie, l'emploi des asticots comme appâts, sans amorçage, est autorisé."
+    },
+    "phrase": "Dans les plans d'eau de 1re catégorie, les asticots sont permis comme appât, sans amorçage.",
+    "source": {
+     "texte": "Arrêté préfectoral réglementaire permanent n° DDT-ERC 2022-128, article 7-1",
+     "url": "https://www.tucquegnieux.mairie54.fr/UserFiles/610/File/actualites/ap-128-peche-en-eau-douce.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2022-11-03"
+    },
+    "citation": "Dans les plans d'eaux de 1\" catégorie, l'émploi des asticots comme appâts, sans amorçage, est autorisé.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-carpe-carpe-nuit-periode",
+    "type": "carpe_nuit",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-04-01",
+    "au": "2026-10-31",
+    "valeur": {
+     "texte": "Pêche de la carpe à toute heure du 1er avril au 31 octobre 2026, uniquement dans les secteurs de 2e catégorie listés à l'article 2."
+    },
+    "phrase": "La carpe peut se pêcher à toute heure du 1er avril au 31 octobre 2026, seulement dans les secteurs listés.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "La pêche de la carpe est autorisée à toute heure du 1er avril au 31 octobre 2026",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-carpe-transport-vivant-nuit",
+    "type": "transport_vivant",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-04-01",
+    "au": "2026-10-31",
+    "valeur": {
+     "texte": "De une demi-heure après le coucher du soleil à une demi-heure avant son lever, toute carpe capturée ne peut être maintenue en captivité ou transportée."
+    },
+    "phrase": "La nuit, toute carpe prise ne peut être ni gardée en captivité ni transportée.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "toute carpe capturée par les pêcheurs amateurs aux lignes ne peut être maintenue en captivité ou transportée",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-toutes-mode-peche-appats-nuit-carpe",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-04-01",
+    "au": "2026-10-31",
+    "valeur": {
+     "texte": "Durant la nuit, les appâts autorisés sont limités aux seuls farineux (céréales, pâtes et pelotes dites « bouillettes »)."
+    },
+    "phrase": "La nuit (carpe de nuit), seuls les appâts farineux sont permis : céréales, pâtes, bouillettes.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 4",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "les appâts autorisés sont limités aux seuls farineux (céréales, pâtes et pelotes dites « bouillettes »)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-toutes-autre-vehicules-halage-carpe",
+    "type": "autre",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "54",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Circulation de véhicules à moteur et stationnement interdits sur les digues, chemins de halage et de service des voies navigables ; les pêcheurs circulent à pied."
+    },
+    "phrase": "Sur les sites carpe de nuit : pas de véhicule à moteur ni de stationnement sur digues et chemins de halage.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-068 (carpe de nuit 2026), article 5",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52943&path=arrete-carpe-de-nuit-54-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-12-18"
+    },
+    "citation": "La circulation à bord de véhicules à moteur et le stationnement sur les digues, chemins de halage et de service des voies navigables sont interdits.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-moselle-morte-rau",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Moselle, Pont-à-Mousson : canal du moulin dit « la Morte Rau », intégralité du bras (1 908 m)",
+     "plan_eau": null,
+     "cours_eau": "Moselle"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Toute pêche interdite."
+    },
+    "phrase": "Réserve de pêche : Moselle, Pont-à-Mousson : canal du moulin dit « la Morte Rau », intégralité du bras (1 908 m). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Canal du moulin dit « la Morte Rau » : intégralité du bras",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-moselle-obrion",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Moselle, Dieulouard : bras de l'Obrion, du barrage de Mons (ancien pont) jusqu'à la confluence avec la Moselle (1 700 m)",
+     "plan_eau": null,
+     "cours_eau": "Moselle"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Toute pêche interdite."
+    },
+    "phrase": "Réserve de pêche : Moselle, Dieulouard : bras de l'Obrion, du barrage de Mons (ancien pont) jusqu'à la confluence avec la Moselle (1 700 m). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Bras de l'Obrion à DIEULOUARD : du barrage de MONS (ancien pont)",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-moselle-la-champagne",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Moselle, Toul : bras de Moselle, lieu-dit « la champagne », rive gauche, du rejet de la station d'épuration à la pointe aval de l'île y compris l'île, lot n° 14 (300 m)",
+     "plan_eau": null,
+     "cours_eau": "Moselle"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Toute pêche interdite."
+    },
+    "phrase": "Réserve de pêche : Moselle, Toul : bras de Moselle, lieu-dit « la champagne », rive gauche, du rejet de la station d'épuration à la pointe aval de l'île y compris l'île, lot n° 14 (300 m). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Bras de MOSELLE à TOUL, lieu-dit « la champagne », rive gauche : du rejet",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-moselle-le-jard",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Moselle sauvage, Toul : « Le Jard » sur toute sa longueur jusqu'à sa confluence avec la Moselle (120 m)",
+     "plan_eau": null,
+     "cours_eau": "Moselle"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Toute pêche interdite."
+    },
+    "phrase": "Réserve de pêche : Moselle sauvage, Toul : « Le Jard » sur toute sa longueur jusqu'à sa confluence avec la Moselle (120 m). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "« Le Jard » sur toute sa longueur jusqu'à sa confluence avec la Moselle",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-meurthe-st-clement-ancienne-riviere",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe, Saint-Clément : reculée de l'ancienne rivière en amont de l'ancien pont (350 m)",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-04-26",
+    "valeur": {
+     "texte": "Toute pêche interdite du 1er janvier au 26 avril 2026."
+    },
+    "phrase": "Réserve de pêche : Meurthe, Saint-Clément : reculée de l'ancienne rivière en amont de l'ancien pont (350 m). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La reculée de l’ancienne rivière en amont de l'ancien pont à SAINT-",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-meurthe-st-clement-grehachot",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe, Saint-Clément : reculée « Le Gréhachot » (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-04-26",
+    "valeur": {
+     "texte": "Toute pêche interdite du 1er janvier au 26 avril 2026."
+    },
+    "phrase": "Réserve de pêche : Meurthe, Saint-Clément : reculée « Le Gréhachot » (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La reculée « Le Gréhachot » à SAINT-CLEMENT",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-meurthe-chenevieres-grand-paquis",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe, Chenevières : reculée du « Grand Paquis » (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-04-26",
+    "valeur": {
+     "texte": "Toute pêche interdite du 1er janvier au 26 avril 2026."
+    },
+    "phrase": "Réserve de pêche : Meurthe, Chenevières : reculée du « Grand Paquis » (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La reculée du « Grand Paquis » à CHENEVIERES",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-meurthe-chenevieres-navarre",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe, Chenevières : reculée en aval du seuil fixe du canal des papeteries de Navarre (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-04-26",
+    "valeur": {
+     "texte": "Toute pêche interdite du 1er janvier au 26 avril 2026."
+    },
+    "phrase": "Réserve de pêche : Meurthe, Chenevières : reculée en aval du seuil fixe du canal des papeteries de Navarre (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La reculée en aval du seuil fixe du canal des papeteries de Navarre à",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-meurthe-luneville-popard",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe, Lunéville : reculées « Popard » au lieu-dit Les Grands Moulins (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-04-26",
+    "valeur": {
+     "texte": "Toute pêche interdite du 1er janvier au 26 avril 2026."
+    },
+    "phrase": "Réserve de pêche : Meurthe, Lunéville : reculées « Popard » au lieu-dit Les Grands Moulins (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Les reculées « Popard » au lieu-dit Les Grands Moulins à LUNEVILLE",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-meurthe-moncel-petite-pologne",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe, Moncel-lès-Lunéville : reculées de la ferme de la Petite Pologne, de chaque côté de la RN 333 (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-04-26",
+    "valeur": {
+     "texte": "Toute pêche interdite du 1er janvier au 26 avril 2026."
+    },
+    "phrase": "Réserve de pêche : Meurthe, Moncel-lès-Lunéville : reculées de la ferme de la Petite Pologne, de chaque côté de la RN 333 (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Les reculées de la ferme de la Petite Pologne de chaque côté de la RN 333",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-meurthe-moncel-pilot-orme",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe, Moncel-lès-Lunéville : reculée dite du « Pilot de l'Orme », amont de l'embouchure du ruisseau du Mississipi (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-04-26",
+    "valeur": {
+     "texte": "Toute pêche interdite du 1er janvier au 26 avril 2026."
+    },
+    "phrase": "Réserve de pêche : Meurthe, Moncel-lès-Lunéville : reculée dite du « Pilot de l'Orme », amont de l'embouchure du ruisseau du Mississipi (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La reculée dite du « Pilot de l'Orme » (amont de l'embouchure du ruisseau",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-meurthe-mont-bois-le-duc",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe, Mont-sur-Meurthe : reculée du « Bois le Duc » (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-04-26",
+    "valeur": {
+     "texte": "Toute pêche interdite du 1er janvier au 26 avril 2026."
+    },
+    "phrase": "Réserve de pêche : Meurthe, Mont-sur-Meurthe : reculée du « Bois le Duc » (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La reculée du « Bois le Duc » à MONT-SUR-MEURTHE",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-meurthe-damelevieres-le-plain",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe, Damelevières : reculée dite « Le Plain » (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-04-26",
+    "valeur": {
+     "texte": "Toute pêche interdite du 1er janvier au 26 avril 2026."
+    },
+    "phrase": "Réserve de pêche : Meurthe, Damelevières : reculée dite « Le Plain » (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "La reculée dite « Le Plain » à DAMELEVIERES",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-meurthe-moncel-basse-mondon",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Meurthe, Moncel-lès-Lunéville : annexe dite « de la ferme de la Basse Mondon » (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Meurthe"
+    },
+    "du": "2026-01-01",
+    "au": "2026-04-26",
+    "valeur": {
+     "texte": "Toute pêche interdite du 1er janvier au 26 avril 2026."
+    },
+    "phrase": "Réserve de pêche : Meurthe, Moncel-lès-Lunéville : annexe dite « de la ferme de la Basse Mondon » (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Annexe dite « de la ferme de la Basse Mondon à MONCEL-LES-LUNEVILLE",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-madon-vaux",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Madon, Lemainville : annexe hydraulique dite « des Vaux » (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Madon"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Toute pêche interdite."
+    },
+    "phrase": "Réserve de pêche : Madon, Lemainville : annexe hydraulique dite « des Vaux » (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Annexe hydraulique dite « des Vaux » à LEMAINVILLE",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-madon-justice",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Madon, Haroué : annexe hydraulique dite « la Justice » (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Madon"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Toute pêche interdite."
+    },
+    "phrase": "Réserve de pêche : Madon, Haroué : annexe hydraulique dite « la Justice » (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Annexe hydraulique dite « la Justice » à HAROUE",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-madon-grande-prele",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Madon, Ceintrey : annexe hydraulique de la « Grande Prêle » (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Madon"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Toute pêche interdite."
+    },
+    "phrase": "Réserve de pêche : Madon, Ceintrey : annexe hydraulique de la « Grande Prêle » (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Annexe hydraulique de la « Grande Prêle » à CEINTREY",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-madon-patis-graive",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Madon, Vaudeville : annexe hydraulique en rive droite au lieu-dit « Pâtis de la Graive » (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Madon"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Toute pêche interdite."
+    },
+    "phrase": "Réserve de pêche : Madon, Vaudeville : annexe hydraulique en rive droite au lieu-dit « Pâtis de la Graive » (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Annexe hydraulique en rive droite au lieu-dit « Pâtis de la Graive » à",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-reserve-mortagne-pre-maigrat",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Mortagne, Gerbéviller : annexe hydraulique dite du « Pré Maigrat » (totalité)",
+     "plan_eau": null,
+     "cours_eau": "Mortagne"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Toute pêche interdite."
+    },
+    "phrase": "Réserve de pêche : Mortagne, Gerbéviller : annexe hydraulique dite du « Pré Maigrat » (totalité). Toute pêche est interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-070 (réserves temporaires 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52945&path=arrete-reserves-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Annexe hydraulique dite du « Pré Maigrat » à GERBEVILLER",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-graciation-canal-marne-rhin-nancy-toutes",
+    "type": "no_kill",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Canal de la Marne au Rhin (Dombasle, Nancy) : depuis la rue des Tiercelins jusqu'au pont de la route de Malzéville, commune de Nancy",
+     "plan_eau": null,
+     "cours_eau": "Canal de la Marne au Rhin"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Parcours de graciation : remise à l'eau immédiate obligatoire du poisson."
+    },
+    "phrase": "Parcours de graciation, remise à l'eau immédiate obligatoire (toutes espèces) : Canal de la Marne au Rhin (Dombasle, Nancy) : depuis la rue des Tiercelins jusqu'au pont de la route de Malzéville, commune de Nancy.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-069 (parcours de graciation 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Depuis la rue des Tiercelins jusqu'au pont de la route de Malzéville",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-graciation-esch-jezainville-2221",
+    "type": "no_kill",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Esch (La Vallée de l'Esch, Jézainville) : du pont des Pâtureaux à Jézainville jusqu'à 1 km en amont",
+     "plan_eau": null,
+     "cours_eau": "Esch"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Parcours de graciation : remise à l'eau immédiate obligatoire du poisson."
+    },
+    "phrase": "Parcours de graciation, remise à l'eau immédiate obligatoire (2221) : Esch (La Vallée de l'Esch, Jézainville) : du pont des Pâtureaux à Jézainville jusqu'à 1 km en amont.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-069 (parcours de graciation 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Du pont des Pâtureaux à Jézainville jusqu'à 1 km en amont",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-graciation-orne-viaduc-2151",
+    "type": "no_kill",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Orne (Les pêcheurs de l'Orne) : du seuil de l'ancien viaduc jusqu'à 600 m en amont, sur les 2 rives",
+     "plan_eau": null,
+     "cours_eau": "Orne"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Parcours de graciation : remise à l'eau immédiate obligatoire du poisson. Texte : uniquement du 1er juillet 2025 au 31 décembre 2026."
+    },
+    "phrase": "Parcours de graciation, remise à l'eau immédiate obligatoire (2151) : Orne (Les pêcheurs de l'Orne) : du seuil de l'ancien viaduc jusqu'à 600 m en amont, sur les 2 rives.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-069 (parcours de graciation 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Du seuil de l'ancien viaduc jusqu'à 600m en amont sur les 2 rives",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-graciation-orne-viaduc-2193",
+    "type": "no_kill",
+    "especes": [
+     "2193"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Orne (Les pêcheurs de l'Orne) : du seuil de l'ancien viaduc jusqu'à 600 m en amont, sur les 2 rives",
+     "plan_eau": null,
+     "cours_eau": "Orne"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Parcours de graciation : remise à l'eau immédiate obligatoire du poisson. Texte : uniquement du 1er juillet 2025 au 31 décembre 2026."
+    },
+    "phrase": "Parcours de graciation, remise à l'eau immédiate obligatoire (2193) : Orne (Les pêcheurs de l'Orne) : du seuil de l'ancien viaduc jusqu'à 600 m en amont, sur les 2 rives.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-069 (parcours de graciation 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Du seuil de l'ancien viaduc jusqu'à 600m en amont sur les 2 rives",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-graciation-orne-viaduc-2195",
+    "type": "no_kill",
+    "especes": [
+     "2195"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Orne (Les pêcheurs de l'Orne) : du seuil de l'ancien viaduc jusqu'à 600 m en amont, sur les 2 rives",
+     "plan_eau": null,
+     "cours_eau": "Orne"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Parcours de graciation : remise à l'eau immédiate obligatoire du poisson. Texte : uniquement du 1er juillet 2025 au 31 décembre 2026."
+    },
+    "phrase": "Parcours de graciation, remise à l'eau immédiate obligatoire (2195) : Orne (Les pêcheurs de l'Orne) : du seuil de l'ancien viaduc jusqu'à 600 m en amont, sur les 2 rives.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-069 (parcours de graciation 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Du seuil de l'ancien viaduc jusqu'à 600m en amont sur les 2 rives",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-graciation-orne-viaduc-2053",
+    "type": "no_kill",
+    "especes": [
+     "2053"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "54",
+     "lieu": "Orne (Les pêcheurs de l'Orne) : du seuil de l'ancien viaduc jusqu'à 600 m en amont, sur les 2 rives",
+     "plan_eau": null,
+     "cours_eau": "Orne"
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "texte": "Parcours de graciation : remise à l'eau immédiate obligatoire du poisson. Texte : uniquement du 1er juillet 2025 au 31 décembre 2026."
+    },
+    "phrase": "Parcours de graciation, remise à l'eau immédiate obligatoire (2053) : Orne (Les pêcheurs de l'Orne) : du seuil de l'ancien viaduc jusqu'à 600 m en amont, sur les 2 rives.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC 2025-069 (parcours de graciation 2026), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52944&path=arrete-parcours-de-graciation-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-11-22"
+    },
+    "citation": "Du seuil de l'ancien viaduc jusqu'à 600m en amont sur les 2 rives",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-categorie",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "2"
+    },
+    "phrase": "Le lac de Pierre-Percée (ou Vieux-Pré), lac de montagne du domaine public, est classé en 2e catégorie.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "lac de montagne, classé en deuxième catégorie",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-ligne-balance-ouverture",
+    "type": "ouverture",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "du 1er janvier au 31 décembre, pêche à la ligne et à la balance"
+    },
+    "phrase": "Pêche à la ligne et à la balance ouverte toute l'année sur le lac de Pierre-Percée.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche à la ligne et à la balance est autorisée du 1er janvier au 31 décembre",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-brochet-ouverture",
+    "type": "ouverture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "formule": "mêmes périodes que la réglementation départementale de la pêche en eau douce"
+    },
+    "phrase": "Lac de Pierre-Percée : brochet ouvert aux mêmes périodes que dans le reste du département (2e catégorie).",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche du brochet et du sandre est autorisée sur les mêmes périodes que la réglementation départementale de la pêche en eau douce",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-sandre-ouverture",
+    "type": "ouverture",
+    "especes": [
+     "2195"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "formule": "mêmes périodes que la réglementation départementale de la pêche en eau douce"
+    },
+    "phrase": "Lac de Pierre-Percée : sandre ouvert aux mêmes périodes que dans le reste du département (2e catégorie).",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche du brochet et du sandre est autorisée sur les mêmes périodes que la réglementation départementale de la pêche en eau douce",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-mode-peche-canne",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "hamecons_max": 2,
+     "texte": "Pêche à la ligne munie de deux hameçons au plus montée sur canne."
+    },
+    "phrase": "Lac de Pierre-Percée : ligne montée sur canne avec 2 hameçons au plus.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche à la ligne munie de deux hameçons au plus montée sur canne est autorisée",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-coregone-mode-peche-lignes-plombees",
+    "type": "mode_peche",
+    "especes": [
+     "coregone"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "hamecons_max": 10,
+     "texte": "Lignes plombées munies chacune de dix hameçons au plus, étagés au-dessus du plomb, exclusivement pour la pêche du corégone."
+    },
+    "phrase": "Lac de Pierre-Percée : lignes plombées à 10 hameçons au plus, pour le corégone seulement.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "munies chacune de dix hameçons au plus, étagés au-dessus du plomb, est permise exclusivement pour la pêche du corégone",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-mode-peche-plusieurs-lignes",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Plus d'une ligne montée sur canne, du bord ou d'une embarcation, pour les titulaires d'une carte Personne majeure, mineure, Hebdomadaire ou Journalière d'une AAPPMA de Meurthe-et-Moselle, d'une carte interfédérale (URNE, CHI, EHGO), ou d'une carte majeure, mineure ou hebdomadaire d'une AAPPMA adhérant à l'URNE, au CHI ou à l'EHGO."
+    },
+    "phrase": "Lac de Pierre-Percée : plus d'une ligne sur canne permise aux titulaires des cartes listées.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "Peuvent pêcher à plus d'une ligne montée sur canne, du bord ou à partir d'une embarcation, les pêcheurs titulaires de",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-mode-peche-traine",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 3,
+     "texte": "Pêche à trois lignes pêchantes montées sur cannes à la traîne à partir d'une embarcation."
+    },
+    "phrase": "Lac de Pierre-Percée : 3 lignes sur cannes à la traîne depuis une embarcation.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche à trois lignes pêchantes montées sur cannes à la traîne à partir d'une embarcation est autorisée",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-autre-embarcation",
+    "type": "autre",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "La pêche en embarcation, à propulsion humaine ou électrique, est autorisée."
+    },
+    "phrase": "Lac de Pierre-Percée : pêche en embarcation à propulsion humaine ou électrique permise.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche en embarcation, à propulsion humaine ou électrique est autorisée",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-autre-float-tube",
+    "type": "autre",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "La pêche en float-tube est autorisée."
+    },
+    "phrase": "Lac de Pierre-Percée : pêche en float-tube permise.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche en float-tube est autorisée",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-truite-taille-min",
+    "type": "taille_min",
+    "especes": [
+     "truite"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 25
+    },
+    "phrase": "Lac de Pierre-Percée : truite 25 cm minimum.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "Truite 0,25 m",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-coregone-taille-min",
+    "type": "taille_min",
+    "especes": [
+     "coregone"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 30
+    },
+    "phrase": "Lac de Pierre-Percée : coregone 30 cm minimum.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "Corégone 0,30 m",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-omble-chevalier-taille-min",
+    "type": "taille_min",
+    "especes": [
+     "omble-chevalier"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 30
+    },
+    "phrase": "Lac de Pierre-Percée : omble chevalier 30 cm minimum.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "Omble Chevalier 0,30 m",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-carnassiers-quota-jour",
+    "type": "quota_jour",
+    "especes": [
+     "2195",
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 1,
+     "texte": "Carnassiers (sandre, brochet). Chiffre lu sur l'image de la page : « limité à 1 »."
+    },
+    "phrase": "Lac de Pierre-Percée : 1 carnassier (sandre ou brochet) par jour et par pêcheur.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 1",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "Le nombre maximal de captures de carnassiers (sandre, brochet) autorisé par pêcheur et par jour est limité à 1.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-interdit-filets",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche aux filets et autres engins que ceux mentionnés à l'article 1 interdite."
+    },
+    "phrase": "Lac de Pierre-Percée : filets et autres engins non prévus interdits.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 2",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche aux filets et autres engins que ceux mentionnés à l’article 1",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-interdit-amarrage-distance",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Amarrage à distance interdit."
+    },
+    "phrase": "Lac de Pierre-Percée : amarrage à distance interdit.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 2",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "L'amarrage à distance",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "54-pierre-percee-reserve-plan-annexe",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "54",
+     "lieu": "Lac de Pierre-Percée ou de Vieux-Pré (Pierre-Percée)",
+     "plan_eau": "Pierre-Percée",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche interdite sur les tronçons de berges et rives ainsi que les zones mentionnées sur le plan annexé, signalées par panneaux ou bouées (plan non exploité ici)."
+    },
+    "phrase": "Lac de Pierre-Percée : pêche interdite dans les zones du plan annexé, signalées par panneaux ou bouées.",
+    "source": {
+     "texte": "Arrêté préfectoral n° DDT-ERC-2024-108 (lac de Pierre-Percée), article 2",
+     "url": "https://www.peche-54.fr/cms_viewFile.php?idtf=52946&path=Arrete-Pierre-Percee.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-11-28"
+    },
+    "citation": "La pêche sur les tronçons de berges et rives ainsi que les zones mentionnées sur le plan annexé",
+    "statut": "brouillon",
+    "expire_le": null,
     "remplace": null
    }
   ]
