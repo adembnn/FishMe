@@ -48,3 +48,24 @@ Pour montrer les widgets à Adem sans passer par la galerie : `AppTests/WidgetRe
 3. Puis `git add reports/ecrans/L15 && git push`.
 
 Limite connue d'`ImageRenderer` : `Button(intent:)`, `widgetURL` et `containerBackground` sont sans effet hors widget, c'est voulu (d'où `fondVisible: true`). Les accessoires sont posés sur un fond gris foncé (#1C2A33) en mode sombre : c'est une simulation de l'écran verrouillé, pas un rendu exact. Les images de poissons viennent du catalogue de l'app hôte des tests.
+
+## Widget Ma session (16 oct., écrit sans Mac)
+
+Demande d'Adem : « un widget où on a notre session de pêche en temps réel ». Gratuit. Familles : petit, moyen, écran verrouillé (rectangle et rond).
+Le chrono tourne tout seul (`Text(timerInterval:)`, rendu par le système) ; la timeline n'a que deux entrées (maintenant, fin légale), politique `.never`.
+
+1. Fichiers (dossier `WidgetAquarium/`) :
+   - `DepotSessionWidget.swift` (+ `Widget/Session/EtatSession.swift` et `InstantaneAquarium.swift`, qui porte le nom du groupe) : FishMeWidget + BuildChallenge ;
+   - `SessionWidget.swift`, `VuesSessionWidget.swift` : FishMeWidget seulement ;
+   - `PontSessionWidget.swift` : BuildChallenge seulement.
+2. Même App Group que l'aquarium (`group.ai.mwm.build.challenge.team.01`) ; fichier partagé `session-widget.json` (absent = pas de session).
+3. `Widget/FishMeWidgetBundle.swift` : ajouter `SessionWidget()` dans `body`.
+4. Branchements dans `RootView.swift` / la session (A) : `PontSessionWidget.publier(etat)` aux mêmes endroits que `PilotageActivite` (démarrer, reprendre, mettreAJour) et `PontSessionWidget.publier(nil)` à `terminer`.
+5. Schéma `fishme://` (déjà déclaré pour l'aquarium), à gérer dans `.onOpenURL` :
+   - `fishme://session` : ouvre l'écran de la session (ou le lancement d'une session s'il n'y en a pas) ;
+   - `fishme://session/prise` : ouvre l'ajout de prise (bouton « Prise » du widget moyen) ;
+   - `fishme://session/pause` : met la session en pause (bouton « Pause », maquette P15 A). Il n'existe pas d'intent de pause côté app : le bouton est un `Link`. Si une `AppIntent` de pause est ajoutée plus tard, remplacer ce `Link` par `Button(intent:)` dans `VuesSessionWidget.swift` (`boutonLien`).
+6. Le petit format n'a pas de bouton. Orange seulement pour « pêche fermée » et fin légale dépassée.
+7. Tests de la logique : `sh AppTests/WidgetAquarium/lancer-tests-session.sh` (passent sous Docker swift:6.4).
+8. À vérifier à la compilation : `AccessoryWidgetBackground` dans `accessoryCircular`; `Text(timerInterval:pauseTime:countsDown:showsHours:)`; `Link` dans un widget moyen; symboles `sunset.fill`, `pause.circle.fill`, `plus.circle.fill`; `#Preview(as:)` avec une seule entrée; `containerBackground(for:)` appelé dans `ecranAccueil` après un `let` dans un `@ViewBuilder`.
+   Capture de chaque format dans `reports/ecrans/L15/`.
