@@ -46,34 +46,37 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     }
 
     private func contenu(_ session: SessionEnCours, maintenant: Date) -> some View {
-        // Chrono façon Horloge d'Apple : l'anneau au centre vertical, Prise et Terminer en boutons ronds dessous,
-        // les infos (prises, quota, avis, conditions) en cartes discrètes. Le tout défile si le texte est très agrandi.
-        GeometryReader { geo in
-            ScrollView {
-                VStack(spacing: Espace.l) {
-                    enTete(session)
-                    Spacer(minLength: Espace.s)
-                    ChronoAnneauView(temps: Self.temps(moteur.duree(a: maintenant)),
-                                     progression: progression(session, maintenant: maintenant),
-                                     diametre: diametreAnneau(geo.size)) {
-                        sousTitreFin(session, maintenant: maintenant)
+        // Maquette : chrono à 190 pt du haut, poisson à 430 pt, boutons à 24 pt du bas (écran 390 × 844, haut sûr 59 pt).
+        ZStack(alignment: .top) {
+            VStack(spacing: 0) {
+                enTete(session)
+                Spacer(minLength: 0)
+                VStack(spacing: 0) {
+                    Button(action: ajouterPrise) {
+                        Label("Ajouter une prise", systemImage: "camera")
                     }
-                    .accessibilityLabel("Durée de la session")
-                    .accessibilityValue(Self.temps(moteur.duree(a: maintenant)))
-                    boutons
-                    Spacer(minLength: Espace.s)
-                    cartes(session)
+                    .buttonStyle(.principal)
+                    Button("Terminer la session", role: .cancel) { confirmationFin = true }
+                        .font(Police.taille(17, .heavy))
+                        .foregroundStyle(Palette.marine)
+                        .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                        .padding(.top, Espace.xs)
                 }
-                .padding(.horizontal, Espace.bord)
-                .padding(.bottom, Espace.xl)
-                .frame(maxWidth: .infinity, minHeight: geo.size.height)
             }
-            .scrollBounceBehavior(.basedOnSize)
+            // Sans prise, l'anneau est au milieu de l'écran ; avec une prise il remonte pour laisser la place au poisson.
+            chrono(session, maintenant: maintenant)
+                .padding(.top, FormatSortie.prises(session.sortie).isEmpty ? 280 - 59 : 120 - 59)
+            // Sans prise, le chrono reste seul : pas de poisson gris.
+            if !FormatSortie.prises(session.sortie).isEmpty {
+                dernierePrise(session)
+                    .padding(.top, 430 - 59)
+            }
         }
-        .background(
-            LinearGradient(colors: [Palette.fond, Palette.marineDoux], startPoint: .top, endPoint: .bottom)
-                .ignoresSafeArea()
-        )
+        .padding(.horizontal, Espace.bord)
+        .padding(.bottom, 24)
+        .ignoresSafeArea(edges: .bottom)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Palette.surface.ignoresSafeArea())
         .accessibilityElement(children: .contain)
         .simultaneousGesture(gesteReduire)
         .confirmationDialog("Terminer la session ?", isPresented: $confirmationFin, titleVisibility: .visible) {
@@ -81,92 +84,6 @@ struct SessionEnCoursView<LigneConditions: View>: View {
             Button("Continuer à pêcher", role: .cancel) {}
         }
         .onChange(of: maintenant) { _, _ in moteur.verifierFin() }
-    }
-
-    /// L'anneau tient dans la largeur et dans une part de la hauteur (le reste va aux boutons et aux cartes).
-    private func diametreAnneau(_ taille: CGSize) -> CGFloat {
-        let parLargeur = taille.width - 2 * Espace.bord - Espace.xl
-        let parHauteur = taille.height * (tailleTexte.isAccessibilitySize ? 0.5 : 0.44)
-        return max(180, min(parLargeur, parHauteur, 340))
-    }
-
-    /// Temps écoulé jusqu'à la fin légale si elle est connue ; sinon un tour par heure.
-    private func progression(_ session: SessionEnCours, maintenant: Date) -> Double {
-        let ecoule = moteur.duree(a: maintenant)
-        if let legale = session.finLegale {
-            let total = legale.timeIntervalSince(session.sortie.debut)
-            if total > 0 { return min(1, ecoule / total) }
-        }
-        return ecoule.truncatingRemainder(dividingBy: 3600) / 3600
-    }
-
-    /// « 1:23:45 » ou « 12:34 ».
-    private static func temps(_ secondes: TimeInterval) -> String {
-        let total = Int(secondes)
-        let h = total / 3600, m = (total % 3600) / 60, s = total % 60
-        return h > 0 ? String(format: "%d:%02d:%02d", h, m, s) : String(format: "%d:%02d", m, s)
-    }
-
-    /// « Fin légale à 20:41 » et « dans 2 h 15 » ; touche pour lire d'où vient l'heure.
-    @ViewBuilder
-    private func sousTitreFin(_ session: SessionEnCours, maintenant: Date) -> some View {
-        if let legale = session.finLegale {
-            Button { explicationFin.toggle() } label: {
-                VStack(spacing: 2) {
-                    Text("Fin légale à \(BandeauSession<EmptyView>.heure(legale))")
-                        .font(Police.detail.monospacedDigit())
-                    if legale > maintenant {
-                        Text("dans \(BandeauSession<EmptyView>.reste(legale.timeIntervalSince(maintenant)))")
-                            .font(Police.legende)
-                    }
-                }
-                .foregroundStyle(Palette.encreDouce)
-                .lineLimit(1)
-                .minimumScaleFactor(0.6)
-                .frame(minHeight: Gabarit.zoneTactile)
-            }
-            .buttonStyle(.plain)
-            .accessibilityHint("Touche pour lire d'où vient cette heure")
-        }
-    }
-
-    private var boutons: some View {
-        HStack(spacing: Espace.xxl) {
-            BoutonRondHorloge(titre: "Prise", icone: "camera.fill", couleur: Palette.ouvert, action: ajouterPrise)
-            BoutonRondHorloge(titre: "Terminer", icone: "stop.fill", couleur: .red) { confirmationFin = true }
-        }
-        .frame(maxWidth: .infinity)
-    }
-
-    /// Les infos de la session, sous l'anneau : prises, quota, explication de la fin légale.
-    private func cartes(_ session: SessionEnCours) -> some View {
-        VStack(spacing: Espace.s) {
-            dernierePrise(session)
-            if let ligneQuota { carte(ligneQuota, icone: "fish") }
-            if explicationFin, let legale = session.finLegale {
-                carte(BandeauSession<EmptyView>.explication(legale), icone: "sunset")
-            }
-        }
-        .frame(maxWidth: 460)
-    }
-
-    private var ligneQuota: String? {
-        let q = moteur.quotaDuJour()
-        guard let plafond = q.plafond else { return nil }
-        return "Quota du jour : \(q.gardees) sur \(plafond)"
-    }
-
-    private func carte(_ texte: String, icone: String) -> some View {
-        HStack(spacing: Espace.m) {
-            Image(systemName: icone).foregroundStyle(Palette.marine).accessibilityHidden(true)
-            Text(texte)
-                .font(Police.detail)
-                .foregroundStyle(Palette.encreDouce)
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .padding(Espace.m)
-        .tuileFishMe()
     }
 
     /// Un geste vers le bas (assez long, surtout vertical) réduit l'écran en bandeau.
@@ -217,32 +134,81 @@ struct SessionEnCoursView<LigneConditions: View>: View {
         return "Ton spot"
     }
 
-    /// La carte des prises : vignette de la dernière espèce, « 1 prise · 68 cm ». Aucune prise : « 0 prise ».
+    /// Le chrono façon minuteur d'Apple : un anneau qui avance jusqu'à la fin légale (un tour par heure si elle est inconnue),
+    /// le temps écoulé en gros chiffres fins au centre. Le reste de l'écran (boutons, poisson) est celui du design système.
+    private func chrono(_ session: SessionEnCours, maintenant: Date) -> some View {
+        let ecoule = moteur.duree(a: maintenant)
+        return ChronoAnneauView(temps: Self.temps(ecoule), progression: progression(session, maintenant: maintenant),
+                                diametre: 270) {
+            if let legale = session.finLegale {
+                VStack(spacing: 2) {
+                    Button { explicationFin.toggle() } label: {
+                        Text("Fin légale \(BandeauSession<EmptyView>.heure(legale))")
+                            .font(Police.taille(15, .heavy).monospacedDigit())
+                            .foregroundStyle(Palette.encreDouce)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
+                            .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityHint("Touche pour lire d'où vient cette heure")
+                    if explicationFin {
+                        Text(BandeauSession<EmptyView>.explication(legale))
+                            .font(Police.legende)
+                            .foregroundStyle(Palette.encreDouce)
+                            .multilineTextAlignment(.center)
+                            .lineLimit(3)
+                            .minimumScaleFactor(0.8)
+                    }
+                }
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Durée de la session")
+        .accessibilityValue(Self.temps(ecoule))
+    }
+
+    /// Temps écoulé jusqu'à la fin légale si elle est connue ; sinon un tour par heure.
+    private func progression(_ session: SessionEnCours, maintenant: Date) -> Double {
+        let ecoule = moteur.duree(a: maintenant)
+        if let legale = session.finLegale {
+            let total = legale.timeIntervalSince(session.sortie.debut)
+            if total > 0 { return min(1, ecoule / total) }
+        }
+        return ecoule.truncatingRemainder(dividingBy: 3600) / 3600
+    }
+
+    /// « 1:23:45 » ou « 12:34 ».
+    private static func temps(_ secondes: TimeInterval) -> String {
+        let total = Int(secondes)
+        let h = total / 3600, m = (total % 3600) / 60, s = total % 60
+        return h > 0 ? String(format: "%d:%02d:%02d", h, m, s) : String(format: "%d:%02d", m, s)
+    }
+
+    /// Le poisson de la dernière prise (image) et « 1 prise · 68 cm ». Aucune prise : une silhouette et « 0 prise ».
     private func dernierePrise(_ session: SessionEnCours) -> some View {
         let prises = FormatSortie.prises(session.sortie)
         let derniere = prises.last
         let infos = derniere.flatMap { infosEspece($0.espece) }
-        return HStack(spacing: Espace.m) {
+        return VStack(spacing: 10) {
             Group {
                 if let infos {
                     Image(infos.image).resizable().scaledToFit()
                 } else {
                     Image(systemName: "fish.fill").resizable().scaledToFit()
                         .foregroundStyle(derniere == nil ? Palette.silhouette : Palette.marine)
+                        .padding(.horizontal, 60)
                 }
             }
-            .frame(width: 64, height: 32)
-            .accessibilityHidden(true)
+            .frame(width: 190, height: 70)
+            .accessibilityLabel(infos?.nom ?? "")
             Text(legendePrises(prises, derniere))
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
-                .lineLimit(2)
-                .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(Espace.m)
-        .tuileFishMe()
+        .frame(maxWidth: .infinity)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel(infos.map { "\($0.nom), " + legendePrises(prises, derniere) } ?? legendePrises(prises, derniere))
     }
 
     private func legendePrises(_ prises: [Prise], _ derniere: Prise?) -> String {
