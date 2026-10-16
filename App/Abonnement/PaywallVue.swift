@@ -99,8 +99,8 @@ struct PaywallVue: View {
     // MARK: Contenu au-dessus des offres
 
     private var argumentaire: some View {
-        VStack(alignment: .leading, spacing: Espace.l) {
-            VStack(alignment: .leading, spacing: Espace.xs) {
+        VStack(spacing: Espace.m) {
+            VStack(spacing: Espace.xs) {
                 Text("FishMe Pro")
                     .font(Police.grandTitre)
                     .foregroundStyle(Palette.encre)
@@ -108,88 +108,55 @@ struct PaywallVue: View {
                     Text(TextesPaywall.titre(fonction))
                         .font(Police.sousTitre)
                         .foregroundStyle(Palette.marine)
+                        .multilineTextAlignment(.center)
                 }
             }
-            avantages
-            Text("Ton spot gratuit reste à toi, pour toujours.")
-                .font(Police.detail)
-                .foregroundStyle(Palette.encreDouce)
+            pastilles
             if let phrase = modele.phraseLancement {
-                Text(phrase).font(Police.detail).foregroundStyle(Palette.encre)
+                Text(phrase).font(Police.legende).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
             }
             if let essai = modele.phraseEssai {
-                Text(essai).font(Police.detail).foregroundStyle(Palette.marine)
+                Text(essai).font(Police.legende).foregroundStyle(Palette.marine).multilineTextAlignment(.center)
             }
             Text(TextesPaywall.renouvellement)
                 .font(Police.legende)
                 .foregroundStyle(Palette.encreDouce)
+                .multilineTextAlignment(.center)
         }
+        .frame(maxWidth: .infinity)
         .padding(.horizontal, Espace.bord)
-        .padding(.top, Espace.s)
+        .padding(.top, Espace.xl + Espace.xs)
         .fixedSize(horizontal: false, vertical: true)
     }
 
-    /// Comparaison Gratuit / Pro, lue dans `TextesPaywall.comparaison` : dix lignes courtes, sans défilement propre.
-    private var avantages: some View {
-        VStack(spacing: 0) {
-            HStack(spacing: Espace.s) {
-                Spacer(minLength: 0)
-                Text("Gratuit").frame(width: Self.largeurColonne)
-                Text("Pro").foregroundStyle(Palette.marine).frame(width: Self.largeurColonne)
-            }
-            .font(Police.legende)
-            .foregroundStyle(Palette.encreDouce)
-            .accessibilityHidden(true)
-            ForEach(TextesPaywall.comparaison, id: \.texte) { ligne in
-                HStack(spacing: Espace.s) {
-                    Image(systemName: ligne.icone)
-                        .font(Police.legende)
-                        .foregroundStyle(Palette.marine)
-                        .frame(width: 24)
-                        .accessibilityHidden(true)
-                    Text(ligne.texte)
-                        .font(Police.legende)
-                        .foregroundStyle(Palette.encre)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.8)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    cellule(ligne.gratuit, pro: false)
-                    cellule(ligne.pro, pro: true)
-                }
-                .padding(.vertical, 5)
-                .accessibilityElement(children: .ignore)
-                .accessibilityLabel(ligne.texte)
-                .accessibilityValue("Gratuit : \(Self.parole(ligne.gratuit)). Pro : \(Self.parole(ligne.pro)).")
-            }
+    /// P34 A : quatre pastilles rondes (spots, météo et rivière, alertes, conseils), une icône et un mot chacune.
+    private var pastilles: some View {
+        HStack(alignment: .top, spacing: Espace.xs) {
+            pastille("map", "Tous les spots")
+            pastille("cloud", "Météo et rivière")
+            pastille("bolt.fill", "Alertes")
+            pastille("doc.text", "Conseils")
         }
+        .padding(.vertical, Espace.s)
     }
 
-    private static let largeurColonne: CGFloat = 64
-
-    @ViewBuilder private func cellule(_ cellule: TextesPaywall.Cellule, pro: Bool) -> some View {
-        Group {
-            switch cellule {
-            case .oui:
-                Image(systemName: "checkmark.circle.fill").foregroundStyle(pro ? Palette.marine : Palette.ouvert)
-            case .non:
-                Image(systemName: "minus").foregroundStyle(Palette.encreDouce)
-            case .texte(let texte):
-                Text(texte)
-                    .font(Police.legende)
-                    .foregroundStyle(pro ? Palette.marine : Palette.encre)
-                    .multilineTextAlignment(.center)
-                    .minimumScaleFactor(0.7)
-            }
+    private func pastille(_ icone: String, _ texte: String) -> some View {
+        VStack(spacing: Espace.s) {
+            Image(systemName: icone)
+                .font(Police.sousTitre)
+                .foregroundStyle(Palette.marine)
+                .frame(width: 52, height: 52)
+                .background(Circle().fill(Palette.marineDoux))
+                .accessibilityHidden(true)
+            Text(texte)
+                .font(Police.legende)
+                .foregroundStyle(Palette.encre)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
         }
-        .frame(width: Self.largeurColonne)
-    }
-
-    private static func parole(_ cellule: TextesPaywall.Cellule) -> String {
-        switch cellule {
-        case .oui: return "oui"
-        case .non: return "non"
-        case .texte(let texte): return texte
-        }
+        .frame(maxWidth: .infinity)
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: Produit introuvable
@@ -217,10 +184,7 @@ struct PaywallVue: View {
             if let message {
                 Text(message).font(Police.legende).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
             }
-            Button(action: fermer) {
-                Text(declencheur.texteFermeture)
-            }
-            .buttonStyle(.secondaire)
+            // P34 A : un seul bouton principal (celui de la boutique) ; la croix en haut ferme la feuille.
             // Liens légaux toujours visibles, même si ce pied recouvre ceux de la boutique.
             // Une seule ligne (ou deux si le texte est agrandi) : le pied reste bas sur iPhone SE et 13 mini.
             ViewThatFits(in: .horizontal) {
