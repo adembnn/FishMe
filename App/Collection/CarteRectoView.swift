@@ -504,7 +504,7 @@ private struct BulleOr: View {
 
 /// Le nom affiché sur une carte : le nom commun court, sans parenthèse ni précision
 /// (« Carpe commune (miroir, cuir) » → « Carpe commune », « Black-bass à grande bouche » → « Black-bass »).
-enum NomCarte {
+nonisolated enum NomCarte {
     private static let raccourcis: [String: String] = [
         "Black-bass à grande bouche": "Black-bass",
         "Black-bass à petite bouche": "Black-bass petite bouche",
@@ -514,7 +514,7 @@ enum NomCarte {
         "Chevesne (chevaine)": "Chevesne",
     ]
 
-    nonisolated static func court(_ nom: String) -> String {
+    static func court(_ nom: String) -> String {
         if let r = raccourcis[nom] { return r }
         var court = nom
         for marque in [" (", ", ", " / "] {
