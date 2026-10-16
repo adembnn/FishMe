@@ -5,7 +5,8 @@ import Foundation
 // le widget le lit. Foundation seulement : ce fichier compile aussi sous Linux (tests).
 // JAMAIS de lieu : ni coordonnées, ni station, ni département, ni nom de coin. Le widget est vu par d'autres.
 
-/// Ce que l'app donne au widget : les poissons déjà choisis (les plus rares d'abord), les rations, l'abonnement.
+/// Ce que l'app donne au widget : TOUT le Pescedex (les plus rares d'abord), les rations, l'abonnement.
+/// C'est le pêcheur qui choisit, par « Modifier le widget », lesquels nagent (4 ou 5 au plus).
 nonisolated public struct InstantaneAquarium: Codable, Hashable, Sendable {
     /// Un poisson du widget. `slug` est le nom de l'image (« brochet », « perche-commune »),
     /// la silhouette s'appelle « <slug>-silhouette ».
@@ -17,17 +18,38 @@ nonisolated public struct InstantaneAquarium: Codable, Hashable, Sendable {
         public var relache: Bool
         /// Prises de la même espèce regroupées dans ce poisson (≥ 1).
         public var nombre: Int
+        /// Nom commun de l'espèce (« Brochet »). Sert seulement à la liste de choix de « Modifier le widget » :
+        /// jamais affiché dans le widget. Absent des anciens fichiers.
+        public var nom: String?
 
-        public init(id: String, slug: String, rarete: Int, relache: Bool, nombre: Int = 1) {
+        public init(id: String, slug: String, rarete: Int, relache: Bool, nombre: Int = 1, nom: String? = nil) {
             self.id = id
             self.slug = slug
             self.rarete = min(max(rarete, 0), 3)
             self.relache = relache
             self.nombre = max(nombre, 1)
+            self.nom = nom
+        }
+
+        private enum CodingKeys: String, CodingKey {
+            case id, slug, rarete, relache, nombre, nom
+        }
+
+        /// Décodage tolérant : un ancien fichier (sans `nom`, voire sans `nombre`) se lit quand même.
+        public init(from decodeur: Decoder) throws {
+            let c = try decodeur.container(keyedBy: CodingKeys.self)
+            self.init(
+                id: try c.decode(String.self, forKey: .id),
+                slug: try c.decode(String.self, forKey: .slug),
+                rarete: try c.decodeIfPresent(Int.self, forKey: .rarete) ?? 0,
+                relache: try c.decodeIfPresent(Bool.self, forKey: .relache) ?? true,
+                nombre: try c.decodeIfPresent(Int.self, forKey: .nombre) ?? 1,
+                nom: try c.decodeIfPresent(String.self, forKey: .nom)
+            )
         }
     }
 
-    /// Au plus `InstantaneAquarium.plafond` poissons, triés : les plus rares d'abord.
+    /// Au plus `InstantaneAquarium.plafond` poissons (tout le Pescedex), triés : les plus rares d'abord.
     public var poissons: [Poisson]
     /// Nombre d'espèces différentes prises (pour le petit chiffre du widget).
     public var especes: Int
@@ -39,8 +61,29 @@ nonisolated public struct InstantaneAquarium: Codable, Hashable, Sendable {
     public var dernierRepas: Date?
     public var misAJour: Date
 
-    /// Le plus grand widget montre au plus 12 poissons ; au-delà ce serait illisible.
-    public static let plafond = 12
+    /// Le fichier porte tout le Pescedex, jusqu'à 200 entrées. Ce que le widget montre est bien plus petit
+    /// (voir `limiteAffichee`) : le reste ne sert qu'à la liste de choix.
+    public static let plafond = 200
+
+    /// Combien de poissons nagent dans un widget : 3 dans le petit, 5 dans tous les autres.
+    public static func limiteAffichee(petit: Bool) -> Int { petit ? 3 : 5 }
+
+    /// Les poissons qui nagent : ceux choisis, dans l'ordre choisi, qui existent encore ici (un id disparu
+    /// est ignoré, un id en double compte une fois) ; rien de choisi → les plus rares d'abord (l'ordre du fichier,
+    /// déjà trié par l'app). Jamais plus de `limite`.
+    public func retenus(choisis ids: [String]?, limite: Int) -> [Poisson] {
+        let limite = max(limite, 0)
+        guard let ids, !ids.isEmpty else { return Array(poissons.prefix(limite)) }
+        let parId = Dictionary(poissons.map { ($0.id, $0) }, uniquingKeysWith: { premier, _ in premier })
+        var vus = Set<String>()
+        var resultat: [Poisson] = []
+        for id in ids where vus.insert(id).inserted {
+            if let poisson = parId[id] { resultat.append(poisson) }
+            if resultat.count == limite { break }
+        }
+        // Tous les choix ont disparu (cartes supprimées) : on retombe sur les plus rares plutôt que sur une eau vide.
+        return resultat.isEmpty ? Array(poissons.prefix(limite)) : resultat
+    }
 
     public init(poissons: [Poisson], especes: Int, rations: Int, estPro: Bool, dernierRepas: Date? = nil, misAJour: Date = .now) {
         self.poissons = Array(poissons.prefix(Self.plafond))

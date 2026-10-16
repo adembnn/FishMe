@@ -180,4 +180,61 @@ struct NageWidgetTests {
         #expect((a[0].x < 0.5) != (b[0].x < 0.5))
         #expect(b[0].versLaDroite == (b[0].x > a[0].x))
     }
+
+    @Test func ancienJSONSansNom() throws {
+        // Fichier écrit avant l'ajout de `nom` (et sans `nombre`) : il se lit, `nom` vaut nil.
+        let json = """
+        {"dernierRepas":null,"especes":2,"misAJour":"2023-11-14T22:15:00Z","rations":1,"estPro":true,
+         "poissons":[{"id":"a","slug":"brochet","rarete":3,"relache":true,"nombre":2},
+                     {"id":"b","slug":"sandre","rarete":2,"relache":false}]}
+        """
+        let s = try JSONDecoder.aquarium.decode(InstantaneAquarium.self, from: Data(json.utf8))
+        #expect(s.poissons.count == 2)
+        #expect(s.poissons[0].nom == nil)
+        #expect(s.poissons[0].nombre == 2)
+        #expect(s.poissons[1].nombre == 1)
+    }
+
+    @Test func nomFaitLAllerRetour() throws {
+        let p = InstantaneAquarium.Poisson(id: "a", slug: "brochet", rarete: 3, relache: true, nom: "Brochet")
+        let s = InstantaneAquarium(poissons: [p], especes: 1, rations: 0, estPro: false, misAJour: t0)
+        let relu = try JSONDecoder.aquarium.decode(InstantaneAquarium.self, from: JSONEncoder.aquarium.encode(s))
+        #expect(relu.poissons.first?.nom == "Brochet")
+    }
+
+    @Test func plafondDe200() {
+        #expect(InstantaneAquarium.plafond == 200)
+        let s = InstantaneAquarium(poissons: poissons(250), especes: 40, rations: 0, estPro: true, misAJour: t0)
+        #expect(s.poissons.count == 200)
+    }
+
+    @Test func limitesAffichees() {
+        #expect(InstantaneAquarium.limiteAffichee(petit: true) == 3)
+        #expect(InstantaneAquarium.limiteAffichee(petit: false) == 5)
+    }
+
+    @Test func retenusDansLOrdreChoisi() {
+        let s = InstantaneAquarium(poissons: poissons(8), especes: 8, rations: 0, estPro: true, misAJour: t0)
+        let r = s.retenus(choisis: ["p5", "p1", "p3"], limite: 5)
+        #expect(r.map(\.id) == ["p5", "p1", "p3"])
+    }
+
+    @Test func retenusIgnorentLesDisparusEtLesDoublons() {
+        let s = InstantaneAquarium(poissons: poissons(4), especes: 4, rations: 0, estPro: true, misAJour: t0)
+        #expect(s.retenus(choisis: ["zz", "p2", "p2", "p0"], limite: 5).map(\.id) == ["p2", "p0"])
+    }
+
+    @Test func retenusRespectentLaLimite() {
+        let s = InstantaneAquarium(poissons: poissons(8), especes: 8, rations: 0, estPro: true, misAJour: t0)
+        #expect(s.retenus(choisis: ["p0", "p1", "p2", "p3", "p4", "p5", "p6"], limite: 3).map(\.id) == ["p0", "p1", "p2"])
+    }
+
+    @Test func retenusSansChoixPrennentLesPlusRares() {
+        let s = InstantaneAquarium(poissons: poissons(8), especes: 8, rations: 0, estPro: true, misAJour: t0)
+        #expect(s.retenus(choisis: nil, limite: 5).map(\.id) == ["p0", "p1", "p2", "p3", "p4"])
+        #expect(s.retenus(choisis: [], limite: 3).map(\.id) == ["p0", "p1", "p2"])
+        // Tous les choix ont disparu : repli sur les plus rares, jamais une eau vide.
+        #expect(s.retenus(choisis: ["zz"], limite: 3).map(\.id) == ["p0", "p1", "p2"])
+        #expect(InstantaneAquarium.vide.retenus(choisis: nil, limite: 5).isEmpty)
+    }
 }

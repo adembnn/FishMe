@@ -1,8 +1,9 @@
+import AppIntents
 import SwiftUI
 import WidgetKit
 
 // Cible widget seulement. Le widget « Mon aquarium » : les poissons du Pescedex qui nagent sur l'écran d'accueil.
-// Petit gratuit ; moyen, grand et très grand avec Pro (Adem, 15 oct. 21h50 : « grand format Pro »).
+// Les poissons se choisissent par « Modifier le widget » (3 au plus en petit, 5 ailleurs). Petit gratuit ; moyen, grand et très grand avec Pro (Adem, 15 oct. 21h50 : « grand format Pro »).
 // Aucun lieu : l'écran d'accueil et l'écran verrouillé sont vus par d'autres. Aucun faux poisson : vide = état vide.
 
 /// Une image de l'aquarium à une date donnée.
@@ -11,33 +12,45 @@ nonisolated struct EntreeAquarium: TimelineEntry, Sendable {
     let instantane: InstantaneAquarium
 }
 
-nonisolated struct FournisseurAquarium: TimelineProvider {
+nonisolated struct FournisseurAquarium: AppIntentTimelineProvider {
+    typealias Intent = ChoixAquariumIntent
+
     /// Le système rend cette entrée floutée (`.placeholder`) ; elle ne contient aucun poisson.
     func placeholder(in context: Context) -> EntreeAquarium {
         EntreeAquarium(date: .now, instantane: .vide)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (EntreeAquarium) -> Void) {
+    func snapshot(for configuration: ChoixAquariumIntent, in context: Context) async -> EntreeAquarium {
         // Les vraies données ; si l'aquarium est vide, c'est l'état vide, jamais de poissons d'exemple.
-        completion(EntreeAquarium(date: .now, instantane: DepotAquariumWidget.lire()))
+        EntreeAquarium(date: .now, instantane: Self.instantane(configuration, famille: context.family))
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<EntreeAquarium>) -> Void) {
-        let instantane = DepotAquariumWidget.lire()
+    func timeline(for configuration: ChoixAquariumIntent, in context: Context) async -> Timeline<EntreeAquarium> {
+        let instantane = Self.instantane(configuration, famille: context.family)
         var dates = NageWidget.dates(depuis: .now, dernierRepas: instantane.dernierRepas)
         if dates.isEmpty { dates = [.now] }
         let entrees = dates.map { EntreeAquarium(date: $0, instantane: instantane) }
-        completion(Timeline(entries: entrees, policy: .atEnd))
+        return Timeline(entries: entrees, policy: .atEnd)
+    }
+
+    /// Le fichier partagé, réduit aux poissons choisis (dans l'ordre choisi) ou, sans choix, aux plus rares.
+    /// Le nombre d'espèces, les rations et l'abonnement restent ceux du fichier entier.
+    private static func instantane(_ configuration: ChoixAquariumIntent, famille: WidgetFamily) -> InstantaneAquarium {
+        var instantane = DepotAquariumWidget.lire()
+        let ids = configuration.poissons?.map(\.id)
+        instantane.poissons = instantane.retenus(choisis: ids, limite: limitePoissons(famille))
+        return instantane
     }
 }
 
 struct AquariumWidget: Widget {
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: DepotAquariumWidget.genre, provider: FournisseurAquarium()) { entree in
-            VueAquariumWidget(entree: entree)
+        AppIntentConfiguration(kind: DepotAquariumWidget.genre, intent: ChoixAquariumIntent.self,
+                               provider: FournisseurAquarium()) { entree in
+            VueAquariumLue(entree: entree)
         }
         .configurationDisplayName("Mon aquarium")
-        .description("Les poissons de ton Pescedex.")
+        .description("Les poissons de ton Pescedex. Appui long, « Modifier le widget », pour choisir ceux qui nagent.")
         .supportedFamilies([
             .systemSmall, .systemMedium, .systemLarge, .systemExtraLargePortrait,
             .accessoryRectangular, .accessoryCircular,
@@ -46,27 +59,22 @@ struct AquariumWidget: Widget {
     }
 }
 
-#if DEBUG
-private extension InstantaneAquarium {
-    static var exemple: InstantaneAquarium {
-        InstantaneAquarium(
-            poissons: [
-                .init(id: "p1", slug: "brochet", rarete: 3, relache: true),
-                .init(id: "p2", slug: "sandre", rarete: 2, relache: false),
-                .init(id: "p3", slug: "perche-commune", rarete: 1, relache: true),
-                .init(id: "p4", slug: "perche-commune", rarete: 0, relache: true, nombre: 3),
-                .init(id: "p5", slug: "sandre", rarete: 0, relache: false),
-            ],
-            especes: 3, rations: 2, estPro: true,
-            dernierRepas: nil, misAJour: .now
-        )
+/// Lit la famille dans l'environnement du widget, puis la passe à la vue (qui, elle, n'en lit plus :
+/// elle peut ainsi se rendre hors widget, pour les tests d'image).
+private struct VueAquariumLue: View {
+    let entree: EntreeAquarium
+    @Environment(\.widgetFamily) private var famille
+
+    var body: some View {
+        VueAquariumWidget(entree: entree, famille: famille)
     }
 }
 
+#if DEBUG
 #Preview(as: .systemMedium) {
     AquariumWidget()
 } timeline: {
-    EntreeAquarium(date: .now, instantane: .exemple)
-    EntreeAquarium(date: .now.addingTimeInterval(30), instantane: .exemple)
+    EntreeAquarium.exempleRendu(pro: true)
+    EntreeAquarium.exempleRendu(pro: true, repas: true)
 }
 #endif

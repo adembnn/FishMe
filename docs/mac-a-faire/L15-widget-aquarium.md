@@ -11,7 +11,8 @@ Prérequis : la cible widget de L10 (`FishMeWidget`, voir `L10-ecran-verrouille.
    Le projet est signé chez MWM : si Xcode refuse de créer le groupe, le demander à MWM. Sans groupe, le widget
    reste sur « Ta 1re prise nagera ici » (il ne plante pas).
 2. Glisser le dossier `WidgetAquarium/` du dépôt. Appartenance :
-   - `InstantaneAquarium.swift`, `NageWidget.swift`, `NourrirAquariumIntent.swift` : FishMeWidget + BuildChallenge ;
+   - `InstantaneAquarium.swift`, `NageWidget.swift`, `NourrirAquariumIntent.swift`, `ChoixPoissonsAquarium.swift` : FishMeWidget + BuildChallenge
+     (`ChoixPoissonsAquarium.swift` porte les types AppIntents du choix des poissons : il doit être sur les deux cibles) ;
    - `AquariumWidget.swift`, `VuesAquariumWidget.swift`, `PoissonsWidget.xcassets` : FishMeWidget seulement ;
    - `PontAquariumWidget.swift` : BuildChallenge seulement.
 3. `Widget/FishMeWidgetBundle.swift` (lot L10, A) : ajouter `AquariumWidget()` dans `body`.
@@ -19,8 +20,12 @@ Prérequis : la cible widget de L10 (`FishMeWidget`, voir `L10-ecran-verrouille.
    `fishme://aquarium` ouvre « Voir mon aquarium » (L14), `fishme://pro?source=widget` ouvre le paywall (déclencheur `widget`).
 5. Branchements dans `RootView.swift` (A) : `PontAquariumWidget.publier(...)` après chaque carte ajoutée au Pescedex,
    à la fin d'une session et quand l'abonnement change ; `PontAquariumWidget.ajouterRations(_:)` à la fin d'une session
-   (même règle que les rations de l'aquarium L14). Les poissons passés : les plus rares d'abord, sans carte d'exemple
-   ni bredouille, 12 au plus (même sélection que l'aquarium).
+   (même règle que les rations de l'aquarium L14). Les poissons passés : TOUT le Pescedex (une entrée par carte ou par
+   espèce regroupée, les plus rares d'abord, 200 au plus, sans carte d'exemple ni bredouille), avec `Poisson.nom` = nom
+   commun de l'espèce (liste de choix seulement). Le pêcheur choisit ceux qui nagent : appui long sur le widget,
+   « Modifier le widget », « Poissons » (5 au plus ; le widget petit en montre 3). Sans choix : les plus rares d'abord.
+   Le widget est un `AppIntentConfiguration` (`ChoixAquariumIntent`, fournisseur `AppIntentTimelineProvider`), plus un
+   `StaticConfiguration`. Les images des poissons sont dans le catalogue du widget : la liste de choix les prend là.
 6. Compiler le schéma BuildChallenge. Tests de la logique : `sh AppTests/WidgetAquarium/lancer-tests.sh`.
 7. Essai sur l'iPhone : ajouter le widget en petit, moyen, grand et très grand, puis sur l'écran verrouillé ;
    avec et sans Pro (StoreKit de test) ; toucher « nourrir » ; « Réduire les animations » ; mode teinté de l'écran d'accueil.
@@ -30,7 +35,9 @@ Fusion : dans la version soumise (tout d'un coup), juste après L10. Sans L14, l
 
 Points à vérifier à la compilation (écrits sans Mac) : `.widgetAccentedRenderingMode(.desaturated)` sur `Image` ;
 `#Preview(as:) timeline:` avec deux entrées ; `openAppWhenRun` encore valide en iOS 27 ; `nonisolated` sur l'intent
-(les retirer si le compilateur râle) ; symbole `circle.grid.2x2.fill` ; `.accessoryInline` cité pour rien dans `FondEau`.
+(les retirer si le compilateur râle) ; `@Parameter(title:size:)` avec `size: 5` sur un tableau (sinon enlever `size:`,
+la limite de 5 est déjà faite dans le code) ; `DisplayRepresentation.Image(named:)` et son image absente du catalogue de l'app ;
+`AppIntentConfiguration(kind:intent:provider:)` avec `#Preview(as:)` ; symbole `circle.grid.2x2.fill` ; `.accessoryInline` cité pour rien dans `FondEau`.
 
 ## Voir les widgets en images
 
