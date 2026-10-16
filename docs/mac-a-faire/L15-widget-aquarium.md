@@ -135,3 +135,11 @@ Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntent
   ```
   L'écran montre les 3 tailles de l'aquarium avec les vrais masques chronos, et en bas la copie attendue par le calcul.
   Les deux captures doivent différer ; si les poissons restent immobiles avec « polices ok », ce sont les masques.
+
+## Nage calée sur l'aquarium 3D (16 oct., 06h)
+- Trajet : `NageWidget.boucle` porte `Nageur.pas` de nage.js (buts au hasard dans la bande de l'espèce, virage limité,
+  repos `calme`, réglages ESPECES). La boucle de 10 s est un morceau du trajet où le poisson revient à son point de départ.
+  Chaque poisson se tient près de son coin (placements sur 2 colonnes en moyen et grand) ; le fond est dessiné d'abord.
+- Queue : `fabriquer_cycle_nage.py` refait les 8 images avec l'ondulation de NAGE.md (amplitude par espèce) ;
+  la fréquence suit la vitesse (f = 0.9 + 2.2 v/L, au plus 3,5 par seconde).
+- Rien à changer dans les cibles : mêmes fichiers, même catalogue NagePoissons.

@@ -243,57 +243,96 @@ struct NageWidgetTests {
 
 @Suite("Nage")
 struct NageTests {
-    private let p = PlacementPoisson(id: "brochet-1", x: 0.5, y: 0.4, versLaDroite: true, echelle: 1, auRepas: false)
+    private let slugs = ["brochet", "gardon", "tanche", "truite-fario", "perche-commune", "silure"]
+
+    private func boucle(_ slug: String, id: String = "p1", longueur: Double = 0.23, rapport: Double = 170.0 / 364,
+                        repas: Bool = false) -> [NageWidget.PoseNage] {
+        NageWidget.boucle(id: id, slug: slug, creneau: 7, longueur: longueur, rapport: rapport, repas: repas)
+    }
+
+    @Test func deterministe() {
+        #expect(boucle("brochet") == boucle("brochet"))
+        #expect(boucle("brochet", id: "p1") != boucle("brochet", id: "p2"))
+    }
+
+    @Test func especesDeNageJS() {
+        #expect(NageWidget.espece("brochet").croisiere == 0.30)
+        #expect(NageWidget.espece("perche-commune") == NageWidget.espece("perche"))
+        #expect(NageWidget.espece("silure") == NageWidget.espece("gardon"))
+    }
 
     @Test func resteDansLAquarium() {
-        for j in 0..<80 {
-            let q = NageWidget.pose(p, copie: j, nombre: 80, demiLargeur: 0.15)
-            #expect(q.x - 0.15 >= 0 && q.x + 0.15 <= 1)
-            #expect(abs(q.y - 0.4) <= 0.026)
-            #expect(abs(q.sens) >= 0.18 && abs(q.sens) <= 1)
-            #expect((0..<8).contains(q.image))
-        }
-    }
-
-    @Test func traverseEtRevient() {
-        let poses = (0..<80).map { NageWidget.pose(p, copie: $0, nombre: 80, demiLargeur: 0.15) }
-        let xs = poses.map(\.x)
-        // Il va vraiment d'un bord à l'autre : au moins 40 % de la largeur parcourue.
-        #expect(xs.max()! - xs.min()! >= 0.4)
-        // Il regarde dans le sens où il avance.
-        for j in 0..<80 {
-            let dx = poses[(j + 1) % 80].x - poses[j].x
-            if abs(dx) > 0.001 { #expect((dx > 0) == (poses[j].sens > 0)) }
-        }
-        // Pas de saut : d'une image à la suivante, il avance de moins de 4 % de la largeur.
-        for j in 0..<80 { #expect(abs(poses[(j + 1) % 80].x - poses[j].x) < 0.04) }
-    }
-
-    @Test func battementDeQueueRegulier() {
-        let images = (0..<16).map { NageWidget.pose(p, copie: $0, nombre: 80, demiLargeur: 0.15).image }
-        for j in 0..<15 { #expect((images[j] + 1) % 8 == images[j + 1]) }
-    }
-
-    @Test func phasesDifferentes() {
-        let autre = PlacementPoisson(id: "perche-2", x: 0.5, y: 0.6, versLaDroite: true, echelle: 1, auRepas: false)
-        let a = NageWidget.pose(p, copie: 0, nombre: 80, demiLargeur: 0.15)
-        let b = NageWidget.pose(autre, copie: 0, nombre: 80, demiLargeur: 0.15)
-        #expect(a.x != b.x || a.sens != b.sens)
-    }
-
-    /// Image par image : d'une copie à la suivante, chaque poisson se déplace un peu (il nage), sans sauter.
-    @Test func poseAvanceDUneCopieALaSuivante() {
-        let places = NageWidget.placements(poissons(3), a: Date(timeIntervalSinceReferenceDate: 0), dernierRepas: nil,
-                                           limite: 5, colonnes: 1)
-        for placement in places {
-            var bouge = 0
-            for j in 0..<80 {
-                let a = NageWidget.pose(placement, copie: j, nombre: 80, demiLargeur: 0.1)
-                let b = NageWidget.pose(placement, copie: (j + 1) % 80, nombre: 80, demiLargeur: 0.1)
-                if abs(a.x - b.x) > 0.0005 || a.image != b.image { bouge += 1 }
-                #expect(abs(a.x - b.x) < 0.08, "saut de \(placement.id) entre les copies \(j) et \(j + 1)")
+        for slug in slugs {
+            let poses = boucle(slug)
+            #expect(poses.count == 80)
+            for q in poses {
+                #expect(q.x >= 0.23 * 0.45 - 1e-9 && q.x <= 1 - 0.23 * 0.45 + 1e-9, "\(slug) x \(q.x)")
+                #expect(q.y >= 0.12 && q.y <= 0.72, "\(slug) y \(q.y)")
+                #expect(abs(q.sens) >= 0.18 && abs(q.sens) <= 1)
+                #expect((0..<8).contains(q.image))
+                #expect(q.profondeur >= 0 && q.profondeur <= 1)
+                #expect(abs(q.assiette) <= 0.22 + 1e-9)
             }
-            #expect(bouge >= 70, "\(placement.id) ne bouge presque pas")
+        }
+    }
+
+    /// La boucle se referme : de la dernière pose à la première, pas plus de saut qu'entre deux images.
+    @Test func boucleSansSaut() {
+        for slug in slugs {
+            let poses = boucle(slug)
+            let e = NageWidget.espece(slug)
+            // Au plus 1,5 fois la croisière sur 1/8 s, plus une marge pour le recalage de la boucle.
+            let maxPas = e.croisiere * 0.23 * 1.5 / 8 + 0.01
+            for j in 0..<80 {
+                let a = poses[j], b = poses[(j + 1) % 80]
+                #expect(abs(b.x - a.x) <= maxPas, "\(slug) saut en x entre \(j) et \(j + 1)")
+                // Un demi-tour passe par la tranche (±0,18) : jamais de bascule de face à face d'une image à l'autre.
+                #expect(abs(b.sens - a.sens) <= 1.0, "\(slug) volte-face entre \(j) et \(j + 1)")
+            }
+        }
+    }
+
+    /// Il nage vraiment : il parcourt du chemin, et il regarde là où il va.
+    @Test func nageVersOuIlRegarde() {
+        for slug in slugs {
+            let poses = boucle(slug)
+            var chemin = 0.0, dansLeBonSens = 0, avance = 0
+            for j in 0..<80 {
+                let dx = poses[(j + 1) % 80].x - poses[j].x
+                chemin += abs(dx)
+                if abs(dx) > 0.002 { avance += 1; if (dx > 0) == (poses[j].sens > 0) { dansLeBonSens += 1 } }
+            }
+            #expect(chemin >= 0.15, "\(slug) ne nage presque pas (\(chemin))")
+            #expect(Double(dansLeBonSens) >= 0.9 * Double(avance), "\(slug) nage à reculons")
+        }
+    }
+
+    /// La queue bat sans arrêt : l'image avance de 0 à 4 crans par copie, et fait des tours entiers sur la boucle.
+    @Test func battementContinu() {
+        for slug in slugs {
+            let poses = boucle(slug)
+            var crans = 0
+            for j in 0..<80 {
+                let d = (poses[(j + 1) % 80].image - poses[j].image + 8) % 8
+                #expect(d <= 4)
+                crans += d
+            }
+            #expect(crans % 8 == 0, "\(slug) : la boucle ne retombe pas sur la même image")
+            #expect(crans >= 8 * 8, "\(slug) : moins d'un battement par seconde")
+        }
+    }
+
+    /// Chaque espèce reste dans sa bande : la tanche près du fond, l'ablette près de la surface ; au repas, en haut.
+    @Test func bandesDeHauteur() {
+        let moyenne: ([NageWidget.PoseNage]) -> Double = { $0.reduce(0) { $0 + $1.y } / Double($0.count) }
+        #expect(moyenne(boucle("tanche")) > moyenne(boucle("ablette")))
+        #expect(moyenne(boucle("tanche", repas: true)) < 0.30)
+    }
+
+    /// Petit widget (poisson à 0,44 de la largeur) : il reste dedans.
+    @Test func petitWidget() {
+        for q in boucle("brochet", longueur: 0.44, rapport: 1) {
+            #expect(q.x >= 0.44 * 0.45 - 1e-9 && q.x <= 1 - 0.44 * 0.45 + 1e-9)
         }
     }
 }

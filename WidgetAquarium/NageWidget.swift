@@ -86,60 +86,278 @@ nonisolated public enum NageWidget {
 
     // MARK: - Nage (la boucle de 10 s)
 
-    /// Où est le poisson, vers où il regarde et quelle image de battement montrer, à la copie j d'une boucle.
+    // Même nage que l'aquarium 3D (reports/aquarium-3d/temps-reel/nage.js et NAGE.md, lot/aquarium ecbe9a9) :
+    // le poisson vise un but tiré au hasard dans sa bande de hauteur, tourne vers lui sans dépasser son virage,
+    // accélère et freine en douceur, se repose au but (`calme`), puis repart. Le battement de queue accélère avec
+    // la vitesse (f = 0.9 + 2.2 × vitesse / longueur). Le widget évalue cette nage à 80 instants (10 s à 8 images/s)
+    // et en fait une boucle : dans un long trajet, le morceau où il revient à son point de départ (même cap, même
+    // vitesse), ramené à 10 s, puis un léger recalage pour que la fin rejoigne exactement le début.
+
+    /// Réglages d'une espèce (table ESPECES de nage.js). Vitesses en longueurs par seconde, virage en rad/s,
+    /// repos au but en secondes, amplitude en part de la longueur, bande de hauteur de 0 (fond) à 1 (surface).
+    public struct EspeceNage: Equatable, Sendable {
+        public let croisiere: Double
+        public let virage: Double
+        public let calme: Double
+        public let amplitude: Double
+        public let bas: Double
+        public let haut: Double
+    }
+
+    public static let especes: [String: EspeceNage] = [
+        "brochet": .init(croisiere: 0.30, virage: 0.7, calme: 4.0, amplitude: 0.05, bas: 0.25, haut: 0.75),
+        "carpe-commune": .init(croisiere: 0.45, virage: 0.9, calme: 1.5, amplitude: 0.07, bas: 0.10, haut: 0.45),
+        "truite-fario": .init(croisiere: 0.70, virage: 1.4, calme: 0.6, amplitude: 0.07, bas: 0.30, haut: 0.90),
+        "sandre": .init(croisiere: 0.40, virage: 0.9, calme: 2.5, amplitude: 0.06, bas: 0.15, haut: 0.55),
+        "tanche": .init(croisiere: 0.35, virage: 0.8, calme: 2.5, amplitude: 0.07, bas: 0.05, haut: 0.30),
+        "perche": .init(croisiere: 0.80, virage: 1.8, calme: 1.0, amplitude: 0.07, bas: 0.25, haut: 0.75),
+        "gardon": .init(croisiere: 1.10, virage: 2.2, calme: 0.0, amplitude: 0.08, bas: 0.45, haut: 0.95),
+        "rotengle": .init(croisiere: 1.00, virage: 2.0, calme: 0.2, amplitude: 0.08, bas: 0.55, haut: 1.00),
+        "chevesne": .init(croisiere: 0.80, virage: 1.5, calme: 0.5, amplitude: 0.07, bas: 0.40, haut: 0.95),
+        "black-bass": .init(croisiere: 0.55, virage: 1.4, calme: 2.0, amplitude: 0.06, bas: 0.20, haut: 0.70),
+        "breme-commune": .init(croisiere: 0.45, virage: 0.8, calme: 1.0, amplitude: 0.06, bas: 0.05, haut: 0.40),
+        "ablette": .init(croisiere: 1.30, virage: 2.6, calme: 0.0, amplitude: 0.08, bas: 0.60, haut: 1.00),
+    ]
+
+    /// Réglages de l'espèce ; une espèce absente de la table nage comme le gardon (comme dans nage.js).
+    public static func espece(_ slug: String) -> EspeceNage {
+        if let e = especes[slug] { return e }
+        if slug == "perche-commune" { return especes["perche"]! }
+        return especes["gardon"]!
+    }
+
+    /// Où est le poisson, vers où il regarde et quelle image de battement montrer, à une copie de la boucle.
     public struct PoseNage: Equatable, Sendable {
         /// Centre, en part de la largeur et de la hauteur du widget.
         public let x: Double
         public let y: Double
-        /// Échelle horizontale : 1 = regarde à droite, −1 = à gauche ; entre les deux pendant un demi-tour.
+        /// Échelle horizontale : 1 = nage vers la droite, −1 = vers la gauche ; entre les deux, il fait demi-tour
+        /// (il vient vers nous ou s'éloigne), comme dans l'aquarium 3D vu de face.
         public let sens: Double
         /// Image du cycle de battement de queue (0..<imagesCycle).
         public let image: Int
+        /// Profondeur dans le bac, 0 = contre la vitre, 1 = au fond (les poissons du fond sont dessinés d'abord).
+        public let profondeur: Double
+        /// Assiette en radians (positive : il monte), au plus ±0,22.
+        public let assiette: Double
     }
 
-    /// Part de la boucle passée à nager d'un bord à l'autre ; le reste est le demi-tour (0,5 s sur 10 s).
-    static let partTraversee = 0.45
-
-    /// Le poisson traverse l'aquarium, fait demi-tour, revient, fait demi-tour : une boucle de 10 s.
-    /// Chaque poisson a sa phase (ils ne tournent pas ensemble) et sa portée (les gros vont moins loin).
-    /// `demiLargeur` : moitié de la largeur du poisson, en part de la largeur du widget (pour ne jamais sortir).
-    public static func pose(_ placement: PlacementPoisson, copie j: Int, nombre: Int, imagesCycle: Int = 8,
-                            demiLargeur: Double) -> PoseNage {
+    /// Une boucle de `nombre` poses (10 s), pour un poisson.
+    /// - `longueur` : longueur du poisson en part de la largeur du widget ; `rapport` : hauteur / largeur du widget.
+    /// - `haut`, `bas` : la zone où il nage, en part de la hauteur (surface, fond).
+    /// - `centre` : où sa boucle doit se tenir de préférence (part de la largeur et de la hauteur) ; donner à chaque
+    ///   poisson un centre différent (son couloir de `placements`) évite qu'ils nagent tous au même endroit.
+    public static func boucle(id: String, slug: String, creneau: Int = 0, nombre: Int = 80,
+                              duree: TimeInterval = 10, imagesCycle: Int = 8, longueur: Double, rapport: Double,
+                              haut: Double = 0.12, bas: Double = 0.72, repas: Bool = false,
+                              centre: (x: Double, y: Double)? = nil) -> [PoseNage] {
         let n = max(nombre, 1)
-        let phase = hasard(placement.id, 0, "phase")
-        let u = (Double(j) / Double(n) + phase).truncatingRemainder(dividingBy: 1)
-        let marge = demiLargeur + 0.02
-        let portee = max((0.5 - marge) * (0.65 + 0.35 * hasard(placement.id, 0, "portee")), 0.02)
-        let gauche = 0.5 - portee, droite = 0.5 + portee
-        let demiTour = 0.5 - partTraversee
+        let e = espece(slug)
+        let dt = duree / Double(n)
+        let bac = Bac(largeur: 1, haut: haut * rapport, bas: bas * rapport, profondeur: 0.8 * longueur,
+                      bandeBas: repas ? 0.80 : e.bas, bandeHaut: repas ? 1.0 : e.haut)
 
-        let x: Double
-        var sens: Double
-        if u < partTraversee {
-            x = gauche + (droite - gauche) * glisse(u / partTraversee)
-            sens = 1
-        } else if u < 0.5 {
-            x = droite
-            sens = cos(.pi * (u - partTraversee) / demiTour)
-        } else if u < 0.5 + partTraversee {
-            x = droite - (droite - gauche) * glisse((u - 0.5) / partTraversee)
-            sens = -1
-        } else {
-            x = gauche
-            sens = -cos(.pi * (u - 0.5 - partTraversee) / demiTour)
+        // On fait nager le poisson 40 s (plusieurs départs, déterministes), puis on cherche dans ce trajet un moment
+        // où il revient presque au même point, avec le même cap et la même vitesse, entre 6 et 16 s plus tard
+        // (une récurrence). Ce morceau devient la boucle, ramené à 10 s (vitesse ajustée d'au plus ×1,6).
+        let pasEchantillon = 1.0 / 16
+        let echantillons = Int(40 / pasEchantillon)
+        var meilleure: (etats: [Etat], debut: Int, longueur: Int) = ([], 0, 1)
+        var meilleurEcart = Double.infinity
+        for essai in 0..<8 {
+            var graine = UInt64(hasard(id, creneau, "nage-\(essai)") * 9_007_199_254_740_992)
+            var nageur = Nageur(e: e, L: longueur, bac: bac, graine: &graine)
+            for _ in 0..<48 { nageur.pas(pasEchantillon, graine: &graine) }   // 3 s d'élan
+            var etats: [Etat] = []
+            etats.reserveCapacity(echantillons + 1)
+            for _ in 0...echantillons {
+                etats.append(nageur.etat)
+                nageur.pas(pasEchantillon, graine: &graine)
+            }
+            // Chemin cumulé, pour exiger que le poisson nage vraiment pendant la boucle.
+            var cumul = [0.0]
+            for k in 0..<echantillons {
+                cumul.append(cumul[k] + hypot(etats[k + 1].x - etats[k].x, etats[k + 1].z - etats[k].z))
+            }
+            // Sommes cumulées des positions, pour le centre de chaque morceau.
+            var sx = [0.0], sy = [0.0]
+            for k in 0...echantillons { sx.append(sx[k] + etats[k].x); sy.append(sy[k] + etats[k].y) }
+            for i in stride(from: 0, to: echantillons - 96, by: 2) {
+                for duree in stride(from: 96, through: min(256, echantillons - i), by: 2) {
+                    let a = etats[i], b = etats[i + duree]
+                    var loin = 0.0
+                    if let centre {
+                        let mx = (sx[i + duree] - sx[i]) / Double(duree), my = (sy[i + duree] - sy[i]) / Double(duree)
+                        loin = hypot(mx - centre.x, my - centre.y * rapport) / longueur
+                    }
+                    let t = Double(duree) * pasEchantillon
+                    let manque = max(0, 0.5 * e.croisiere * longueur * t - (cumul[i + duree] - cumul[i])) / longueur
+                    let ecart = 3 * manque + 1.5 * loin + hypot(b.x - a.x, b.y - a.y) / longueur
+                        + 0.5 * abs(b.z - a.z) / longueur + 1.5 * abs(angle(b.cap - a.cap))
+                        + abs(b.v - a.v) / (e.croisiere * longueur) + 0.02 * abs(t - 10)
+                    if ecart < meilleurEcart { meilleurEcart = ecart; meilleure = (etats, i, duree) }
+                }
+            }
         }
-        // Pendant le demi-tour, le poisson se voit presque de face : jamais tout à fait plat.
-        if abs(sens) < 0.18 { sens = sens < 0 ? -0.18 : 0.18 }
-        let houle = 0.025 * sin(2 * .pi * (u + hasard(placement.id, 0, "houle")))
-        let decalageImage = Int(hasard(placement.id, 0, "battement") * Double(imagesCycle))
-        let image = ((j + decalageImage) % max(imagesCycle, 1) + max(imagesCycle, 1)) % max(imagesCycle, 1)
-        return PoseNage(x: x, y: placement.y + houle, sens: sens, image: image)
+
+        // Rééchantillonnage sur `n` copies, et recalage : la fin rejoint le début, réparti sur la boucle.
+        let (etats, i0, nb) = meilleure
+        let accel = Double(nb) * pasEchantillon / duree
+        func etatA(_ u: Double) -> Etat {
+            let pos = Double(i0) + u * Double(nb)
+            let k = min(Int(pos), etats.count - 2), f = pos - Double(k)
+            let a = etats[k], b = etats[k + 1]
+            return Etat(x: a.x + (b.x - a.x) * f, y: a.y + (b.y - a.y) * f, z: a.z + (b.z - a.z) * f,
+                        cap: a.cap + angle(b.cap - a.cap) * f, assiette: a.assiette + (b.assiette - a.assiette) * f,
+                        v: (a.v + (b.v - a.v) * f) * accel)
+        }
+        let debut = etats[i0], fin = etats[i0 + nb]
+        let dx = debut.x - fin.x, dy = debut.y - fin.y, dz = debut.z - fin.z, dcap = angle(debut.cap - fin.cap)
+        let poses = (0..<n).map { etatA(Double($0) / Double(n)) }
+        // Battement : un nombre entier de cycles sur la boucle, pour que l'image de fin rejoigne celle du début.
+        let cycles = poses.reduce(0) { $0 + frequence($1.v, longueur) * dt }
+        let echelleCycles = max(cycles.rounded(), 1) / max(cycles, 1e-6)
+        var phase = hasard(id, creneau, "battement")
+        let m = Double(max(imagesCycle, 1))
+        return (0..<n).map { j in
+            let etat = poses[j]
+            let u = Double(j) / Double(n)
+            let x = min(max(etat.x + dx * u, longueur * 0.45), 1 - longueur * 0.45)
+            let y = min(max(etat.y + dy * u, bac.haut + 0.01), bac.bas - 0.01)
+            let z = min(max(etat.z + dz * u, 0), bac.profondeur)
+            // Une image plate ne se voit pas de face : on aplatit le cap (le poisson paraît de profil sauf au
+            // milieu d'un demi-tour), et il n'est jamais plus étroit que 18 % de sa largeur.
+            let cap = etat.cap + dcap * u
+            var sens = cos(cap) / max(hypot(cos(cap), 0.35 * sin(cap)), 1e-6)
+            if abs(sens) < 0.18 { sens = sens < 0 ? -0.18 : 0.18 }
+            let image = Int((phase * m).rounded(.down)) % max(imagesCycle, 1)
+            phase = (phase + frequence(etat.v, longueur) * dt * echelleCycles).truncatingRemainder(dividingBy: 1)
+            return PoseNage(x: x, y: y / max(rapport, 1e-6), sens: sens, image: image,
+                            profondeur: bac.profondeur > 0 ? z / bac.profondeur : 0, assiette: etat.assiette)
+        }
     }
 
-    /// Avance douce : un peu plus lent au départ et à l'arrivée (le poisson accélère puis freine avant de tourner).
-    static func glisse(_ v: Double) -> Double {
-        let v = min(max(v, 0), 1)
-        return v - 0.3 * sin(2 * .pi * v) / (2 * .pi)
+    /// Battements par seconde (nage.js), plafonnés à 3,5 : au-delà, 8 images par seconde ne suivent plus.
+    static func frequence(_ v: Double, _ L: Double) -> Double {
+        min(0.9 + 2.2 * v / max(L, 1e-6), 3.5)
+    }
+
+    /// Angle ramené entre −π et π.
+    static func angle(_ a: Double) -> Double {
+        var a = a.truncatingRemainder(dividingBy: 2 * .pi)
+        if a > .pi { a -= 2 * .pi }
+        if a < -.pi { a += 2 * .pi }
+        return a
+    }
+
+    /// Le bac en unités de largeur du widget : x de 0 à 1, y vers le bas (0 = haut du widget), z vers le fond.
+    struct Bac {
+        let largeur: Double
+        let haut: Double
+        let bas: Double
+        let profondeur: Double
+        /// Bande de hauteur de l'espèce, 0 = fond, 1 = surface (comme `bas`/`haut` dans nage.js).
+        let bandeBas: Double
+        let bandeHaut: Double
+    }
+
+    struct Etat {
+        var x: Double, y: Double, z: Double, cap: Double, assiette: Double, v: Double
+    }
+
+    /// Portage de `Nageur.pas(dt)` de nage.js, en 2D vue de face (x, y) plus la profondeur z. Le cap est l'angle
+    /// autour de la verticale : cos(cap) vers la droite, −sin(cap) vers le fond.
+    struct Nageur {
+        let e: EspeceNage
+        let L: Double
+        let bac: Bac
+        var x: Double, y: Double, z: Double
+        var cap: Double
+        var assiette = 0.0
+        var v: Double
+        var attente = 0.0
+        var but: (x: Double, y: Double, z: Double) = (0, 0, 0)
+
+        init(e: EspeceNage, L: Double, bac: Bac, graine: inout UInt64) {
+            self.e = e
+            self.L = L
+            self.bac = bac
+            x = 0; y = 0; z = 0; cap = 0
+            v = e.croisiere * L * 0.6
+            let depart = Self.tirerBut(e: e, L: L, bac: bac, graine: &graine)
+            x = depart.x; y = depart.y; z = depart.z
+            cap = Double(aleatoire(&graine)) * 2 * .pi
+            but = Self.tirerBut(e: e, L: L, bac: bac, graine: &graine)
+        }
+
+        var etat: Etat { Etat(x: x, y: y, z: z, cap: cap, assiette: assiette, v: v) }
+
+        static func tirerBut(e: EspeceNage, L: Double, bac: Bac, graine: inout UInt64) -> (x: Double, y: Double, z: Double) {
+            let m = L * 0.6
+            let hauteur = bac.bas - bac.haut
+            // y vers le bas : la bande 0 (fond) est en `bas`, la bande 1 (surface) en `haut`.
+            let y0 = max(bac.bas - hauteur * bac.bandeHaut, bac.haut + 0.01)
+            let y1 = min(bac.bas - hauteur * bac.bandeBas, bac.bas - 0.01)
+            return (entre(m, bac.largeur - m, &graine), entre(y0, max(y1, y0), &graine),
+                    entre(0, bac.profondeur, &graine))
+        }
+
+        mutating func pas(_ dt: Double, graine: inout UInt64) {
+            // Sous-pas de 1/32 s : le virage limité et les lissages restent stables.
+            let sous = max(Int((dt * 32).rounded(.up)), 1)
+            for _ in 0..<sous { petitPas(dt / Double(sous), graine: &graine) }
+        }
+
+        private mutating func petitPas(_ dt: Double, graine: inout UInt64) {
+            let dx = but.x - x, dy = y - but.y, dz = but.z - z     // dy positif : le but est plus haut
+            let dh = (dx * dx + dz * dz).squareRoot()
+            let d = (dh * dh + dy * dy).squareRoot()
+            let croisiere = e.croisiere * L
+            var cible: Double
+            if attente > 0 {
+                // Au repos au but : il tient son poste en ondulant doucement.
+                attente -= dt
+                cible = 0.06 * L
+                if attente <= 0 { but = Self.tirerBut(e: e, L: L, bac: bac, graine: &graine) }
+            } else if d < L * 0.4 {
+                attente = e.calme * entre(0.5, 1.5, &graine)
+                cible = 0.1 * L
+                if attente <= 0 { but = Self.tirerBut(e: e, L: L, bac: bac, graine: &graine) }
+            } else {
+                cible = croisiere * min(1, 0.4 + d / (L * 2))
+            }
+            v += (cible - v) * min(1, dt * 1.2)
+            // Virage vers le but, limité.
+            let capVoulu = atan2(-dz, dx)
+            let diff = NageWidget.angle(capVoulu - cap)
+            var tour = max(-e.virage * dt, min(e.virage * dt, diff * min(1, dt * 2.5)))
+            if v < 0.12 * L { tour *= 0.4 }
+            cap = NageWidget.angle(cap + tour)
+            let assietteVoulue = max(-0.22, min(0.22, atan2(dy, max(dh, 1e-3)) * 0.5))
+            assiette += (assietteVoulue - assiette) * min(1, dt * 1.5)
+            let c = cos(cap), s = sin(cap), ca = cos(assiette)
+            x += c * ca * v * dt
+            z -= s * ca * v * dt
+            y -= sin(assiette) * v * dt
+            let mg = L * 0.45
+            x = min(max(x, mg), bac.largeur - mg)
+            y = min(max(y, bac.haut + 0.01), bac.bas - 0.01)
+            z = min(max(z, 0), bac.profondeur)
+        }
+    }
+
+    /// Générateur SplitMix64 : même graine, même suite, sur toutes les plateformes.
+    static func aleatoire(_ etat: inout UInt64) -> Double {
+        etat &+= 0x9e3779b97f4a7c15
+        var z = etat
+        z = (z ^ (z >> 30)) &* 0xbf58476d1ce4e5b9
+        z = (z ^ (z >> 27)) &* 0x94d049bb133111eb
+        z ^= z >> 31
+        return Double(z >> 11) / 9_007_199_254_740_992.0
+    }
+
+    static func entre(_ a: Double, _ b: Double, _ graine: inout UInt64) -> Double {
+        a + aleatoire(&graine) * (b - a)
     }
 
     // MARK: - Détails
