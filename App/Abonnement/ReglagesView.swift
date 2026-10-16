@@ -29,6 +29,9 @@ struct ReglagesView: View {
     @State private var gestionOuverte = false
     @State private var message: String?
     @State private var conditionsOuvertes = false
+    /// Sons et vibrations de l'app (App/Mouvement/Sons.swift lit ces mêmes clés, allumés par défaut).
+    @AppStorage("reglages.sons") private var sons = true
+    @AppStorage("reglages.vibrations") private var vibrations = true
 
     private static let sources: [(nom: String, role: String)] = [
         ("OFB", "Poissons par station"),
@@ -56,6 +59,10 @@ struct ReglagesView: View {
                     ligneInterrupteur("Alertes orage et crue", $alertes)
                     separateur
                     ligneInterrupteur("Mesure d'audience", $mesureAudience)
+                    separateur
+                    ligneInterrupteur("Sons", $sons)
+                    separateur
+                    ligneInterrupteur("Vibrations", $vibrations)
                 }
                 Text("SOURCES")
                     .font(Police.legende)
