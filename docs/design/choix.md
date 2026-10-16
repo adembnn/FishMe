@@ -13,3 +13,6 @@ Direction retenue pour chaque page de la toile (A · Plans, B · Réglages, C ·
 | P08 Règle d'une espèce | B · Réglages | 16 oct. 2h37 |
 | P09 Quel poisson cherches-tu | B · Réglages | 16 oct. 2h37 |
 | P10 Choisir un autre spot | C · Sujet (textes à revoir façon MWM, « Pro = spots illimités ») | 16 oct. 2h38 |
+| P11 Conditions du jour | A · Plans | 16 oct. 2h40 |
+| P12 Sept jours | A · Plans | 16 oct. 2h40 |
+| P13 Alerte orage ou crue | C · Sujet | 16 oct. 2h40 |
