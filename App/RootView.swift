@@ -643,6 +643,7 @@ struct RootView: View {
 
 /// Les 3 volets, une fois le moteur chargé.
 private struct RacineContenu: View {
+    @Environment(\.scenePhase) private var scenePhase
     @Bindable var app: ParcoursApp
     @AppStorage(ClesConseils.questionVue) private var questionVue = false
     @AppStorage("demo.communaute") private var demo = false
@@ -736,6 +737,12 @@ private struct RacineContenu: View {
         avecModales(tabView, dansSession: false)
             // Après la 1re vraie prise, une fois : comment poser « Mon aquarium » sur l'écran d'accueil.
             .astuceAjouterWidget(prises: app.pescedex?.detaillees.filter { !$0.prise.exemple }.count ?? 0)
+            // Bouton « Prise » de l'écran verrouillé (P15) : l'intent laisse l'action en attente, l'app la joue au retour.
+            .onChange(of: scenePhase) { _, phase in
+                guard phase == .active, let action = ActionSessionEnAttente.lire() else { return }
+                ActionSessionEnAttente.effacer()
+                if action == "prise" { app.ajouterPrise() }
+            }
             .onChange(of: questionVue) { app.proposerSuitePremierLancement() }
             .onChange(of: app.suivi.abonne) { _, abonne in
                 app.moteur.abonne = abonne
@@ -833,6 +840,7 @@ private struct RacineContenu: View {
             voirLaCarte: { app.sansPositionAffiche = false },
             ouvrirPescedex: { app.onglet = .pescedex },
             ouvrirAmis: SauvegardeICloud.actif ? { app.onglet = .club } : nil,
+            compteurPescedex: app.pescedex.map { m in "\(m.emplacements.filter { $0.carte != nil }.count)" },
             codeZone: app.spotCourant.flatMap { $0.departement.estInconnu ? nil : $0.departement.code })
     }
 

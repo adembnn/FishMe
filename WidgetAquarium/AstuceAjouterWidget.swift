@@ -1,11 +1,12 @@
 import SwiftUI
 
-// Cible APP seulement (comme PontAquariumWidget.swift). Après la 1re prise, une seule fois : comment mettre
-// « Mon aquarium » sur l'écran d'accueil (Adem, 16 oct. : « comment l'utilisateur met le widget ? »).
-// À brancher dans RootView (A) : `.astuceAjouterWidget(prises: <nombre de vraies prises>)` sur la vue racine.
+// Cible APP seulement (comme PontAquariumWidget.swift). Dès le 1er poisson du Pescedex, une seule fois, l'app
+// demande « Mettre ton aquarium sur l'écran d'accueil ? » ; sur « Oui », elle montre les 3 gestes (Adem, 16 oct.).
+// iOS n'a aucune API qui pose un widget à la place de l'utilisateur : on ne peut que lui montrer comment.
+// Branché dans RootView (A) : `.astuceAjouterWidget(prises: <nombre de poissons du Pescedex>)` sur la vue racine.
 
 extension View {
-    /// Montre l'astuce la première fois que `prises` passe à 1 ou plus, puis plus jamais.
+    /// Pose la question la première fois que `prises` passe à 1 ou plus, puis plus jamais.
     func astuceAjouterWidget(prises: Int) -> some View {
         modifier(AstuceAjouterWidget(prises: prises))
     }
@@ -32,9 +33,11 @@ private struct AstuceAjouterWidget: ViewModifier {
     }
 }
 
-/// Trois gestes, des icônes, peu de mots.
+/// D'abord la question, puis, sur « Oui », trois gestes avec des icônes et peu de mots.
 struct FeuilleAstuceWidget: View {
     var fermer: () -> Void
+    @State private var etapesVisibles = false
+    private let marine = Color(red: 0x0D / 255, green: 0x4A / 255, blue: 0x85 / 255)
 
     private let etapes: [(icone: String, texte: String)] = [
         ("hand.tap.fill", "Appuie longuement sur ton écran d'accueil"),
@@ -43,14 +46,47 @@ struct FeuilleAstuceWidget: View {
     ]
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 22) {
-            Text("Ta prise nage sur ton écran d'accueil")
+        Group {
+            if etapesVisibles { listeEtapes } else { question }
+        }
+        .padding(24)
+        .animation(.snappy, value: etapesVisibles)
+    }
+
+    private var question: some View {
+        VStack(spacing: 20) {
+            Image(systemName: "fish.fill")
+                .font(.system(size: 44, weight: .bold, design: .rounded))
+                .foregroundStyle(marine)
+            Text("Mettre ton aquarium sur l'écran d'accueil ?")
                 .font(.system(.title3, design: .rounded, weight: .bold))
+                .multilineTextAlignment(.center)
+            Text("Tes poissons y nagent.")
+                .font(.system(.body, design: .rounded, weight: .bold))
+                .foregroundStyle(.secondary)
+            VStack(spacing: 10) {
+                Button { etapesVisibles = true } label: {
+                    Text("Oui").font(.system(.body, design: .rounded, weight: .bold)).frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(marine)
+                Button(action: fermer) {
+                    Text("Plus tard").font(.system(.body, design: .rounded, weight: .bold)).frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.bordered)
+                .tint(marine)
+            }
+        }
+        .frame(maxWidth: .infinity)
+    }
+
+    private var listeEtapes: some View {
+        VStack(alignment: .leading, spacing: 22) {
             ForEach(Array(etapes.enumerated()), id: \.offset) { _, etape in
                 HStack(spacing: 14) {
                     Image(systemName: etape.icone)
                         .font(.system(.title2, design: .rounded, weight: .bold))
-                        .foregroundStyle(Color(red: 0x0D / 255, green: 0x4A / 255, blue: 0x85 / 255))
+                        .foregroundStyle(marine)
                         .frame(width: 34)
                     Text(etape.texte)
                         .font(.system(.body, design: .rounded, weight: .bold))
@@ -62,9 +98,8 @@ struct FeuilleAstuceWidget: View {
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(.borderedProminent)
-            .tint(Color(red: 0x0D / 255, green: 0x4A / 255, blue: 0x85 / 255))
+            .tint(marine)
         }
-        .padding(24)
     }
 }
 
