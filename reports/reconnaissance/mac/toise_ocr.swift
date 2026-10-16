@@ -1,5 +1,6 @@
 // Lit les chiffres de 10 photos de toise avec Vision, comme ToiseLecteur dans l'app (RecognizeTextRequest, .accurate, sans correction).
-// Usage : swift toise_ocr.swift toise10.csv > toise_ocr.json   (télécharge chaque image_url dans /tmp/toise/, n'envoie rien)
+// Usage : cp toise_ocr.swift /tmp/main.swift && swiftc -O /tmp/main.swift -o /tmp/toise_ocr && /tmp/toise_ocr toise10.csv > toise_ocr.json
+// (lancé par « swift toise_ocr.swift », Vision plante : e5rtError 13)   (télécharge chaque image_url dans /tmp/toise/, n'envoie rien)
 import Foundation
 import Vision
 import ImageIO
@@ -7,7 +8,7 @@ import ImageIO
 struct Texte: Codable { var texte: String; var x: Double; var y: Double; var w: Double; var h: Double; var confiance: Float }
 struct Sortie: Codable { var n: String; var url: String; var largeur: Int; var hauteur: Int; var textes: [Texte] }
 
-let lignes = try String(contentsOfFile: CommandLine.arguments[1], encoding: .utf8).split(separator: "\n").dropFirst()
+let lignes = try String(contentsOfFile: CommandLine.arguments[1], encoding: .utf8).split(whereSeparator: \.isNewline).dropFirst()
 try? FileManager.default.createDirectory(atPath: "/tmp/toise", withIntermediateDirectories: true)
 var sorties: [Sortie] = []
 for l in lignes {
