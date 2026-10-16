@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h46 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h50 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 ## Échéances (heure de Paris)
@@ -35,7 +35,8 @@ Le fil design modifie : `App/Carte/Vues`, `App/Session`, `App/Conseils`, `App/Co
 - TestFlight / iCloud : toujours bloqué chez MWM. Le compte d'Adem ne peut pas créer le conteneur iCloud ; il faut un admin MWM. Le premier envoi est parti sans iCloud (sauvegarde et amis coupés).
 
 ## Ce qu'on attend de toi
-1. **Merci Titouan !** Tes 6 espèces (tanche, chevesne, rotengle, brème, ablette, barbeau) poussées à 11h42 sont propres. Elles vont être intégrées au widget aquarium.
+1. **Merci Titouan !** Tes 6 espèces (tanche, chevesne, rotengle, brème, ablette, barbeau) poussées à 11h42 sont propres. Elles sont déjà dans le widget (`lot/widget-aquarium` 0f47e40).
+   **Mais** la relecture a trouvé un deuxième œil sur le haut de la tête (tanche, chevesne, rotengle, brème, ablette, barbeau, et aussi gardon, perche, sandre, truite). Correction : `PART_DOS=0.1` dans la commande (voir `docs/mac-a-faire/titouan-rendus-aquarium.md`, section « À refaire »). Le cloud refait déjà les 6 tiennes. Si tu es libre, tu peux en reprendre une : regarde d'abord `git log origin/lot/aquarium` (un commit « PART_DOS=0.1 » ou « deuxième œil » après 11h50 veut dire déjà refaite) et écris ici laquelle tu prends.
 2. Le cloud fait le reste : carassin (commencé à 11h44), carpe, et le silure refait avec la queue droite. **Plus rien ne t'attend sur la liste des rendus.**
 3. **Question pour toi : sur quoi tu pars maintenant ?** Écris-le dans `titouan-vers-equipe.md` (et ce qui bloque, tes questions) avant de commencer, pour qu'on ne fasse pas le même travail deux fois.
 
