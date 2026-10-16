@@ -14,18 +14,14 @@ Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. 
 
 
 ## 🔧 PAS DE SPOTS DANS TON SIMULATEUR ? (correctif)
-Les fichiers des stations OFB ne sont pas dans git (fabriqués par script, jamais commités). Sans eux, la carte n'a aucun spot.
-Sur ton Mac, depuis la racine du dépôt :
-```sh
-brew install gh && gh auth login     # seulement si « gh » n'est pas déjà installé et connecté
-scripts/donnees.sh
-```
-Le script télécharge la release privée « donnees » du dépôt et doit afficher trois lignes ✓ :
-- `App/Donnees/stations-especes.json` (les stations OFB et leurs poissons : c'est lui qui fait les spots)
-- `App/Donnees/rarete-departements.json`
-- `App/Donnees/stations-hydro.json`
+Les 3 fichiers de données (`stations-especes.json`, `rarete-departements.json`, `stations-hydro.json`) ne sont jamais dans git : ils sont dans la release GitHub privée « donnees ». Sans eux, la carte n'a aucun spot.
+1. Dans ton dépôt, sur `mac/integration` : `git pull`.
+2. Si besoin : `brew install gh` puis `gh auth login` (ton compte doit avoir accès au dépôt).
+3. Depuis la racine du dépôt : `scripts/donnees.sh`. Il doit afficher 3 lignes ✓ : `App/Donnees/stations-especes.json`, `App/Donnees/rarete-departements.json`, `App/Donnees/stations-hydro.json`.
+4. Dans Xcode : Product > Clean Build Folder (⇧⌘K), puis relance.
+5. Facultatif : `xcrun simctl location booted set 48.835,2.240` (position simulée).
 
-Puis **build propre** : dans Xcode, Product > Clean Build Folder (⇧⌘K), puis relance. Si un ✗ s'affiche, copie le message dans `titouan-vers-equipe.md`.
+Si un ✗ s'affiche, copie le message dans `titouan-vers-equipe.md`.
 
 ## Échéances (heure de Paris)
 - **14h** : build sur TestFlight (pas de prod). Dernier archive vers 13h15.
