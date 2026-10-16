@@ -16,12 +16,25 @@ struct TunnelPremiersPasView: View {
     @State private var index = 0
     @State private var decalage: CGFloat = 0
     @State private var nbDeclarees = 0
+    /// Positions déjà déclarées : revenir en arrière puis re-glisser à droite ne crée pas de doublon.
+    @State private var declarees: Set<Int> = []
 
     private let seuil: CGFloat = 100
 
     var body: some View {
         VStack(spacing: Espace.l) {
             HStack {
+                if index > 0 {
+                    Button(action: revenir) {
+                        Image(systemName: "arrow.uturn.backward")
+                            .font(Police.taille(15, .bold))
+                            .foregroundStyle(Palette.marine)
+                            .frame(width: 44, height: 44)
+                            .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Revenir à la carte d'avant")
+                }
                 if index < especes.count {
                     Text("\(index + 1) / \(especes.count)")
                         .font(Police.detail)
@@ -160,11 +173,19 @@ struct TunnelPremiersPasView: View {
 
     private func repondre(dejaPeche: Bool) {
         let espece = especes[index].espece
-        if dejaPeche {
+        if dejaPeche && !declarees.contains(index) {
             declarer(Prise.declaree(espece: espece, date: maintenant()))
-            nbDeclarees += 1
+            declarees.insert(index)
+            nbDeclarees = declarees.count
         }
         decalage = 0
         index += 1
+    }
+
+    /// Revient sur la carte d'avant. Une carte déjà rangée au Pescedex y reste : le tunnel n'a pas de moyen de la retirer.
+    private func revenir() {
+        guard index > 0 else { return }
+        decalage = 0
+        index -= 1
     }
 }
