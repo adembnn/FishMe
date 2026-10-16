@@ -44,7 +44,6 @@ struct ImagesAnimees<Contenu: View, Fond: View>: View {
 
     var body: some View {
         ZStack {
-            image(0)
             if actif && PolicesMasque.disponibles {
                 ForEach(0..<HorlogeAnimation.nombreImages, id: \.self) { j in
                     let m = HorlogeAnimation.masques(copie: j)
@@ -55,6 +54,10 @@ struct ImagesAnimees<Contenu: View, Fond: View>: View {
                     .mask(MasqueClignotant(chiffre: m.a.chiffre, reference: reference, decalage: m.a.decalage))
                     .mask(MasqueClignotant(chiffre: m.b.chiffre, reference: reference, decalage: m.b.decalage))
                 }
+            } else {
+                // Couche de base seulement sans animation : animée, une copie est toujours visible, et la base
+                // obligeait chaque copie à porter son propre fond (160 fonds pleine taille : widget noir sur iPhone).
+                image(0)
             }
         }
         .allowsHitTesting(false)

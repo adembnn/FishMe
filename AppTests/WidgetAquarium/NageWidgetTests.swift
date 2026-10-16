@@ -403,9 +403,10 @@ struct PleineEauTests {
         #expect(loin >= 5 && pres >= 5, "loin \(loin), près \(pres)")
     }
 
-    /// 16 images par battement avec les rendus en volume ; images paires seulement si on plafonne à 8.
+    /// 16 images rendues par battement, 8 montrées (images paires, mémoire du widget) ; 16 si on relève le plafond.
     @Test func seizeImagesParBattement() {
-        #expect(NageWidget.cycleUtilise(disponibles: 16) == (16, 1))
+        #expect(NageWidget.cycleUtilise(disponibles: 16) == (8, 2))
+        #expect(NageWidget.cycleUtilise(disponibles: 16, plafond: 16) == (16, 1))
         #expect(NageWidget.cycleUtilise(disponibles: 16, plafond: 8) == (8, 2))
         #expect(NageWidget.cycleUtilise(disponibles: 8) == (8, 1))
         #expect(NageWidget.cycleUtilise(disponibles: 0) == (0, 1))
