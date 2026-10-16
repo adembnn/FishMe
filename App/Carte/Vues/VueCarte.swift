@@ -86,28 +86,24 @@ struct VueCarte: View {
     // MARK: La carte
 
     private var carteComplete: some View {
+        carteAvecFeuilles(carteSeule)
+    }
+
+    /// La carte et ses bandeaux, sans les feuilles (découpé : le compilateur ne typait pas la chaîne entière).
+    private var carteSeule: some View {
         @Bindable var m = modele
         return MapReader { proxy in
             ZStack {
-                Map(position: $m.camera) {
+                // Jamais la France entière : au plus quelques départements à l'écran, et seulement au-dessus de la France.
+                Map(position: $m.camera, bounds: Self.bornesCarte) {
                     UserAnnotation()
                     if let spot = modele.spotAffiche {
-                        MapCircle(center: CLLocationCoordinate2D(latitude: spot.centre.latitude, longitude: spot.centre.longitude),
-                                  radius: spot.rayonM)
+                        MapCircle(center: Self.coordonneeMap(spot.centre), radius: spot.rayonM)
                             .foregroundStyle(Palette.marine.opacity(0.15))
                             .stroke(Palette.marine, lineWidth: 2)
                     }
-                    ForEach(modele.elements) { element in
-                        Annotation("", coordinate: CLLocationCoordinate2D(latitude: element.coordonnee.latitude,
-                                                                          longitude: element.coordonnee.longitude)) {
-                            marque(element)
-                        }
-                        .annotationTitles(.hidden)
-                    }
+                    marquesCarte
                 }
-                // Jamais la France entière : au plus quelques départements à l'écran, et seulement au-dessus de la France.
-                .mapCameraBounds(MapCameraBounds(centerCoordinateBounds: Self.franceEtVoisins,
-                                                 minimumDistance: 300, maximumDistance: Self.altitudeMaximale))
                 .mapControls { MapCompass() }
                 .onMapCameraChange(frequency: .onEnd) { contexte in
                     let r = contexte.region
@@ -136,15 +132,16 @@ struct VueCarte: View {
         }
         .safeAreaInset(edge: .top, spacing: 8) { haut }
         .safeAreaInset(edge: .bottom, spacing: 8) { bas }
+    }
+
+    /// Les feuilles, l'alerte et les réactions de la carte.
+    private func carteAvecFeuilles(_ base: some View) -> some View {
+        @Bindable var m = modele
+        return base
         .sheet(item: $m.selection) { selection in
             FicheCoinView(services: modele.services, selection: selection, pechables: modele.pechables,
                           emplacementMaintenant: emplacementMaintenant, emplacementConseil: emplacementConseil,
-                          onCommencerSession: (sessionEnCours || modele.spotAffiche == nil) ? nil : {
-                              if let spot = modele.spotAffiche {
-                                  modele.selection = nil
-                                  onCommencerSession(spot)
-                              }
-                          })
+                          onCommencerSession: actionCommencerDepuisFiche())
                 .presentationDragIndicator(.visible)
         }
         .sheet(isPresented: $m.afficherFiltre) {
@@ -160,11 +157,7 @@ struct VueCarte: View {
             }
         }
         .sheet(isPresented: $m.afficherChoixDeZone) {
-            ChoixDeZoneView(choisir: { modele.choisirZone($0) },
-                            codeDepartement: { c in
-                                let d = modele.services.geo.departement(de: c)
-                                return d.estInconnu ? nil : d.code
-                            })
+            ChoixDeZoneView(choisir: { modele.choisirZone($0) }, codeDepartement: codeDepartement(de:))
         }
         .alert("Ta position aide à centrer la carte", isPresented: $m.afficherRedemande) {
             Button("Ouvrir les réglages") {
@@ -197,6 +190,39 @@ struct VueCarte: View {
         .onChange(of: modele.spotLocal) { _, nouveau in if let nouveau { onSpotChange(nouveau) } }
     }
 
+    /// Les stations et groupes de stations (sortis du constructeur de carte pour alléger le typage).
+    @MapContentBuilder private var marquesCarte: some MapContent {
+        ForEach(modele.elements) { (element: ElementCarte) in
+            Annotation("", coordinate: Self.coordonneeMap(element.coordonnee)) {
+                marque(element)
+            }
+            .annotationTitles(.hidden)
+        }
+    }
+
+    /// Le code du département d'une coordonnée, `nil` hors de France.
+    private func codeDepartement(de c: Coordonnee) -> String? {
+        let d: Departement = modele.services.geo.departement(de: c)
+        return d.estInconnu ? nil : d.code
+    }
+
+    /// Coordonnée de Core vers MapKit (sortie du constructeur de carte : le typage y était trop long).
+    private static func coordonneeMap(_ c: Coordonnee) -> CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: c.latitude, longitude: c.longitude)
+    }
+
+    /// « Commencer une session » de la fiche : rien tant qu'une session tourne ou qu'aucun spot n'est choisi.
+    /// (Sorti de la feuille : le compilateur ne typait pas l'expression ternaire en temps raisonnable.)
+    private func actionCommencerDepuisFiche() -> (() -> Void)? {
+        guard !sessionEnCours, modele.spotAffiche != nil else { return nil }
+        return {
+            if let spot = modele.spotAffiche {
+                modele.selection = nil
+                onCommencerSession(spot)
+            }
+        }
+    }
+
     /// La rareté de chaque espèce dans le département du spot, sinon de la région visible (`Core` donne le verdict).
     private func raretesDuSecteur() -> [String: NiveauRarete] {
         let departement = modele.spotAffiche?.departement ?? modele.services.geo.departement(de: modele.regionVisible.centre)
@@ -215,6 +241,7 @@ struct VueCarte: View {
                                                     span: MKCoordinateSpan(latitudeDelta: 11, longitudeDelta: 14))
     /// Environ 250 km de large à l'écran au plus dézoomé : un ou deux départements, jamais un pays de bulles.
     static let altitudeMaximale: CLLocationDistance = 400_000
+    static let bornesCarte = MapCameraBounds(centerCoordinateBounds: franceEtVoisins, minimumDistance: 300, maximumDistance: altitudeMaximale)
 
     // MARK: Ton spot (maquette P06 C) et états vides (P46 B)
 

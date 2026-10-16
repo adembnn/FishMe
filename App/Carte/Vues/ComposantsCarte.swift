@@ -85,30 +85,24 @@ struct RangeeEspece: View {
     }
 }
 
-/// Ce que l'écran « Ton spot » montre : le lieu, l'espèce la plus rare relevée, trois autres et le reste.
+/// Ce que l'écran « Ton spot » montre : le lieu, l'espèce la plus pêchée, trois autres et le reste.
 /// Tout vient de `calculerFiche` (donc de `Core`) ; chaque chiffre garde son nombre de pêches et son année.
 nonisolated struct ApercuSpot: Sendable, Equatable {
     var lieu: String
     var vedette: LigneEspece?
     var autres: [LigneEspece]
     var reste: Int
-    /// Vrai : la vedette est l'espèce la plus rare (rareté mesurée). Faux : aucune rareté mesurée, c'est la plus pêchée.
-    var vedetteEstRare: Bool = true
+    /// Toujours faux depuis le 16 oct. : la vedette est la plus pêchée, jamais la plus rare.
+    var vedetteEstRare: Bool = false
 }
 
 @concurrent nonisolated func calculerApercuSpot(services: ServicesCarte, spot: Spot, date: Date) async -> ApercuSpot {
     let fiche = await calculerFiche(services: services, coordonnee: spot.centre, choix: nil, espece: nil, date: date)
     let releves = fiche.especes.filter { $0.releve }
-    // Le plus rare d'abord ; à rareté égale, celui qui a été le moins pêché.
-    let parRarete = releves
-        .filter { $0.rarete != nil && $0.rarete?.niveau != .nonMesuree }
-        .sorted { a, b in
-            let ra = a.rarete?.niveau.rang ?? 0, rb = b.rarete?.niveau.rang ?? 0
-            return ra != rb ? ra > rb : a.nPeches < b.nPeches
-        }
-    // Sans rareté mesurée, la vedette est l'espèce la plus pêchée de la station (jamais « pas de relevé » s'il y en a).
-    let vedette = parRarete.first ?? releves.max { $0.nPeches < $1.nPeches }
-    let vedetteEstRare = parRarete.first != nil
+    // La vedette est toujours l'espèce la plus pêchée de la station (Adem, 16 oct. : l'app ne met jamais
+    // un spot en avant pour une espèce rare). Les rares restent visibles dans la liste du spot.
+    let vedette = releves.max { $0.nPeches < $1.nPeches }
+    let vedetteEstRare = false
     let autres = releves
         .filter { $0.espece != vedette?.espece }
         .sorted { $0.nPeches > $1.nPeches }
