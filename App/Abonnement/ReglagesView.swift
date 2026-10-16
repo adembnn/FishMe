@@ -41,23 +41,12 @@ struct ReglagesView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.l) {
-                HStack {
-                    Text("Réglages")
-                        .font(Police.grandTitre)
-                        .foregroundStyle(Palette.encre)
-                    Spacer(minLength: Espace.s)
-                    // Ferme la feuille (la barre de navigation est cachée par RootView).
-                    Button { dismiss() } label: {
-                        Image(systemName: "xmark")
-                            .font(.body.weight(.bold))
-                            .foregroundStyle(Palette.encre)
-                            .frame(width: 44, height: 44)
-                            .background(Palette.surface, in: Circle())
-                    }
-                    .buttonStyle(.plain)
-                    .accessibilityLabel("Fermer")
-                }
-                .padding(.horizontal, Espace.xs)
+                // Ferme la feuille (la barre de navigation est cachée par RootView).
+                BoutonRond(role: .fermer, rendu: .simple)
+                Text("Réglages")
+                    .font(Police.grandTitre)
+                    .foregroundStyle(Palette.encre)
+                    .padding(.horizontal, Espace.xs)
                 if let ouvrirCompte {
                     bloc { ligne("Mon compte", valeur: "iCloud", action: ouvrirCompte) }
                 }

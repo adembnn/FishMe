@@ -12,23 +12,12 @@ struct FeuilleConsentement: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.l) {
             VStack(alignment: .leading, spacing: Espace.xs) {
-                HStack(alignment: .top) {
-                    Text("Mesure d'audience")
-                        .font(Police.grandTitre)
-                        .foregroundStyle(Palette.encre)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Spacer(minLength: Espace.s)
-                    // Fermer sans choisir vaut « Refuser » : rien n'est mesuré tant que le pêcheur n'a pas accepté.
-                    Button(action: refuser) {
-                        Image(systemName: "xmark")
-                            .font(.body.weight(.bold))
-                            .foregroundStyle(Palette.encre)
-                            .frame(width: 44, height: 44)
-                            .background(Palette.surface, in: Circle())
-                    }
-                    .buttonStyle(.plain)
-                    .accessibilityLabel("Fermer")
-                }
+                // Fermer sans choisir vaut « Refuser » : rien n'est mesuré tant que le pêcheur n'a pas accepté.
+                BoutonRond(role: .fermer, rendu: .simple, action: refuser)
+                Text("Mesure d'audience")
+                    .font(Police.grandTitre)
+                    .foregroundStyle(Palette.encre)
+                    .fixedSize(horizontal: false, vertical: true)
                 Text("Tu peux changer ton choix à tout moment dans les réglages.")
                     .font(Police.corps)
                     .foregroundStyle(Palette.encreDouce)
