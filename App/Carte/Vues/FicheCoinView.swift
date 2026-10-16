@@ -9,6 +9,7 @@ import Core
 /// sont des fermetures que A remplit ; vides par défaut. L'emplacement « maintenant » vit derrière la pastille (feuille des règles),
 /// le conseil s'affiche sous les poissons quand on en touche un.
 struct FicheCoinView: View {
+    @Environment(\.dismiss) private var dismiss
     @State private var modele: ModeleFiche
     @State private var aideCategorie = false
     @State private var toutesLesRegles = false
@@ -50,10 +51,11 @@ struct FicheCoinView: View {
                 }
             }
             .padding(.horizontal, Espace.bord)
-            .padding(.top, Espace.xl)
+            .padding(.top, Espace.xl + Espace.m)
             .padding(.bottom, Espace.xl)
         }
         .scrollIndicators(.hidden)
+        .overlay(alignment: .topTrailing) { croixFermer }
         .task { await modele.charger() }
         .sheet(isPresented: $reglesOuvertes) { feuilleRegles }
     }
@@ -187,6 +189,20 @@ struct FicheCoinView: View {
                 .frame(maxWidth: .infinity)
                 .multilineTextAlignment(.center)
         }
+    }
+
+    /// Croix « Fermer » en haut à droite de la fiche.
+    private var croixFermer: some View {
+        Button { dismiss() } label: {
+            Image(systemName: "xmark")
+                .font(Police.corps)
+                .foregroundStyle(Palette.marine)
+                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                .background(Palette.marineDoux, in: Circle())
+        }
+        .accessibilityLabel("Fermer")
+        .padding(.top, Espace.s)
+        .padding(.trailing, Espace.bord)
     }
 
     // MARK: Feuille des règles (derrière la pastille)
