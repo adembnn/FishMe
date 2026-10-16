@@ -1,0 +1,2481 @@
+{
+ "departement": "93",
+ "complement": true,
+ "note": "Ajouts seulement. Les règles saisies à la main restent telles quelles ; aucune n'est remplacée ni retirée par ce fichier.",
+ "regles": [
+  {
+   "id": "93-reserve-ouvrages-50m",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite en tout temps à partir des barrages et écluses et sur 50 m de part et d'autre des ouvrages."
+   },
+   "phrase": "Pêche interdite en tout temps depuis les barrages et écluses et à 50 m de chaque côté.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 4",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Toute pêche est interdite, en tout temps, à partir des barrages et écluses ainsi que sur les 50 mètres de part et d’autre des ouvrages.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-reserve-ouvrages-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 4",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Toute pêche est interdite, en tout temps, à partir des barrages et écluses ainsi que sur les 50 mètres de part et d’autre des ouvrages."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-interdit-passerelles-ouvrages",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Accès interdit au public, pêcheurs compris, aux passerelles et dépendances des ouvrages de navigation et sur 50 m de part et d'autre."
+   },
+   "phrase": "Interdit d'accéder aux passerelles et dépendances des ouvrages de navigation, et à 50 m autour.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 4",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "L'accès aux passerelles et dépendances des ouvrages de navigation est strictement interdit au public y compris aux pêcheurs",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-acces-passerelles-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 4",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "L'accès aux passerelles et dépendances des ouvrages de navigation est strictement interdit au public y compris aux pêcheurs"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-ouv-general-ap",
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre inclus"
+   },
+   "phrase": "Tous les poissons autres que les grands migrateurs et ceux à ouverture spécifique : pêche ouverte toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.1",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Tous les poissons autres que les grands migrateurs et ceux faisant l'objet d’une ouverture spécifique",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-ouverture-generale-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.1",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "du 1° janvier au 31 décembre inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-trf-fario-ouv-ap",
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Truite fario : pêche ouverte du 14 mars au 20 septembre 2026 (selon l'arrêté permanent).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Truites fario : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-truite-fario-ouverture-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Truites fario : du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-omble-fontaine-ouv-ap",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Omble de fontaine : pêche ouverte du 14 mars au 20 septembre 2026 (selon l'arrêté permanent).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Omble de fontaine : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-omble-fontaine-ouverture-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Omble de fontaine : du deuxième samedi de mars au troisième dimanche de septembre"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-omble-chevalier-ouv-ap",
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Omble chevalier : pêche ouverte du 14 mars au 20 septembre 2026 (selon l'arrêté permanent).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Omble chevalier et du cristivomer : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-omble-chevalier-ouverture-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Omble chevalier et du cristivomer : du deuxième samedi de mars au troisième dimanche de septembre"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-cristivomer-ouv-ap",
+   "type": "ouverture",
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "phrase": "Cristivomer : pêche ouverte du 14 mars au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Omble chevalier et du cristivomer : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-cristivomer-ouverture-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Omble chevalier et du cristivomer : du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-ombre-ouv-ap",
+   "type": "ouverture",
+   "especes": [
+    "2247"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du troisième samedi de mai au 31 décembre inclus"
+   },
+   "phrase": "Ombre commun : pêche ouverte du 16 mai au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Ombre commun : du troisième samedi de mai au 31 décembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-ombre-ouverture-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Ombre commun : du troisième samedi de mai au 31 décembre inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-brochet-ouv-ap-1",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "valeur": {
+    "formule": "du 1er janvier au dernier dimanche de janvier inclus"
+   },
+   "phrase": "Brochet : ouvert du 1er au 25 janvier 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Brochet : du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-brochet-ouverture-1-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Brochet : du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-brochet-ouv-ap-2",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-04-25",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du dernier samedi d'avril au 31 décembre inclus"
+   },
+   "phrase": "Brochet : ouvert du 25 avril au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Brochet : du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-brochet-ouverture-2-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Brochet : du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-grenouille-verte-ouv-ap-1",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-08",
+   "valeur": {
+    "formule": "du 1er janvier au 2ème dimanche de mars inclus"
+   },
+   "phrase": "Grenouille verte : ouverte du 1er janvier au 8 mars 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Grenouille verte ou dite commune (Pelophylax ki esculentus) et rousse (Rana temporaria) : du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-grenouille-verte-ouverture-1-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Grenouille verte ou dite commune (Pelophylax ki esculentus) et rousse (Rana temporaria) : du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-grenouille-verte-ouv-ap-2",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du troisième samedi de mai au 31 décembre inclus"
+   },
+   "phrase": "Grenouille verte : ouverte du 16 mai au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Grenouille verte ou dite commune (Pelophylax ki esculentus) et rousse (Rana temporaria) : du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-grenouille-verte-ouverture-2-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Grenouille verte ou dite commune (Pelophylax ki esculentus) et rousse (Rana temporaria) : du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-grenouille-rousse-ouv-ap-1",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-03-08",
+   "valeur": {
+    "formule": "du 1er janvier au 2ème dimanche de mars inclus"
+   },
+   "phrase": "Grenouille rousse : ouverte du 1er janvier au 8 mars 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Grenouille verte ou dite commune (Pelophylax ki esculentus) et rousse (Rana temporaria) : du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-grenouille-rousse-ouverture-1-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Grenouille verte ou dite commune (Pelophylax ki esculentus) et rousse (Rana temporaria) : du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-grenouille-rousse-ouv-ap-2",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du troisième samedi de mai au 31 décembre inclus"
+   },
+   "phrase": "Grenouille rousse : ouverte du 16 mai au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Grenouille verte ou dite commune (Pelophylax ki esculentus) et rousse (Rana temporaria) : du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-grenouille-rousse-ouverture-2-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Grenouille verte ou dite commune (Pelophylax ki esculentus) et rousse (Rana temporaria) : du 1er janvier au 2ème dimanche de mars et du troisième samedi de mai au 31 décembre inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-ecrevisse-pattes-greles-ouv-ap",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "pendant dix jours consécutifs commençant le quatrième samedi du mois de juillet"
+   },
+   "phrase": "Écrevisse à pattes grêles : pêche ouverte dix jours, du 25 juillet au 3 août 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.2",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Ecrevisses à pattes grêles (Astacus leptodactylus : pendant dix jours consécutifs commençant le quatrième samedi du mois de juillet.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-ecrevisse-pattes-greles-ouverture-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.2",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Ecrevisses à pattes grêles (Astacus leptodactylus : pendant dix jours consécutifs commençant le quatrième samedi du mois de juillet."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-saumon-atlantique-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre."
+   },
+   "phrase": "Pêche du saumon interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.3",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-saumon-atlantique-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.3",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-truite-de-mer-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre."
+   },
+   "phrase": "Pêche de la truite de mer interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.3",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-truite-de-mer-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.3",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-lamproie-marine-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre."
+   },
+   "phrase": "Pêche de la lamproie marine interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.3",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-lamproie-marine-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.3",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-lamproie-fluviatile-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre."
+   },
+   "phrase": "Pêche de la lamproie fluviatile interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.3",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-lamproie-fluviatile-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.3",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l’année sur tout le bassin en eau douce et en eau saumâtre."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-grande-alose-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans la Seine-Saint-Denis jusqu'au barrage de Suresnes."
+   },
+   "phrase": "Pêche de l'grande alose interdite en Seine-Saint-Denis, jusqu'au barrage de Suresnes.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.3",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "La pêche des aloses (aloses feintes et grande alose) est interdite dans la Seine-Saint-Denis jusqu’au barrage de Suresnes.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-grande-alose-interdit-avis",
+    "source": {
+     "texte": "Avis annuel 2026 de la Seine-Saint-Denis, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-15"
+    },
+    "citation": "Aloses feintes et Grande alose Pêche interdite toute l’année"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-alose-feinte-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite dans la Seine-Saint-Denis jusqu'au barrage de Suresnes."
+   },
+   "phrase": "Pêche de l'alose feinte interdite en Seine-Saint-Denis, jusqu'au barrage de Suresnes.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.3",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "La pêche des aloses (aloses feintes et grande alose) est interdite dans la Seine-Saint-Denis jusqu’au barrage de Suresnes.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-alose-feinte-interdit-avis",
+    "source": {
+     "texte": "Avis annuel 2026 de la Seine-Saint-Denis, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-15"
+    },
+    "citation": "Aloses feintes et Grande alose Pêche interdite toute l’année"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-brochet-remise-eau-ap",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril est remis immédiatement à l'eau."
+   },
+   "phrase": "Brochet : du 14 mars au 24 avril 2026, tout brochet pris est remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.3",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril doit être immédiatement remis à l'eau.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-brochet-remise-eau-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.3",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril doit être immédiatement remis à l'eau."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-anguille-argentee-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'anguille argentée (anguille d'avalaison) interdite toute l'année."
+   },
+   "phrase": "Anguille argentée : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.3",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "une hypertrophie oculaire, est interdite toute l’année.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-anguille-argentee-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.3",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "est interdite toute l’année."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-anguille-nuit-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'anguille interdite de nuit, à tous les stades, en tout temps."
+   },
+   "phrase": "Anguille : pêche interdite de nuit, à tous les stades.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.3",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "La pêche de l’anguille à tous les stades de son développement en tout temps est interdite de nuit.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-anguille-nuit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.3",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "La pêche de l’anguille à tous les stades de son développement en tout temps est interdite de nuit."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-ecrevisse-pattes-rouges-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'écrevisse à pattes rouges interdite toute l'année."
+   },
+   "phrase": "Écrevisse à pattes rouges : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.3",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "écrevisse à pattes rouges (Astacus astacus) et, des torrents (Austropotamobius torrentium) en raison de leur situation critique sur le département de la Seine-Saint-Denis est interdite toute l’année.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-ecrevisse-pattes-rouges-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.3",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "La pêche de l'écrevisse à pattes rouges (Astacus astacus) et, des torrents (Austropotamobius torrentium) en raison de leur situation critique sur le département de la Seine-Saint-Denis est interdite t"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-ecrevisse-torrents-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de l'écrevisse des torrents interdite toute l'année."
+   },
+   "phrase": "Écrevisse des torrents : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 5.3",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "(Austropotamobius torrentium) en raison de leur situation critique sur le département de la Seine-Saint-Denis est interdite toute l’année.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-ecrevisse-torrents-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 5.3",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "La pêche de l'écrevisse à pattes rouges (Astacus astacus) et, des torrents (Austropotamobius torrentium) en raison de leur situation critique sur le département de la Seine-Saint-Denis est interdite t"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-poisson-chat-introduction-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "poisson-chat"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite (Ameiurus melas)."
+   },
+   "phrase": "Il est interdit d'introduire le poisson-chat dans les eaux.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 6",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "le poisson-chat : Ameiurusmelas ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-introduction-poisson-chat-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 6",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "le poisson-chat : Ameiurusmelas ;"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-perche-soleil-introduction-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "perche-soleil"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite (Lepomis gibbosus)."
+   },
+   "phrase": "Il est interdit d'introduire la perche soleil dans les eaux.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 6",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "la perche soleil : Lepomis gibbosus.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-introduction-perche-soleil-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 6",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "la perche soleil : Lepomis gibbosus."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-crabe-chinois-introduction-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "autre:crabe chinois"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite (Eriocheir sinensis)."
+   },
+   "phrase": "Il est interdit d'introduire le crabe chinois dans les eaux.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 6",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "le crabe chinois : Eriocheir sinensis.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-introduction-crabe-chinois-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 6",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "le crabe chinois : Eriocheir sinensis."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-ecrevisses-autres-introduction-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite de toute écrevisse autre que : à pattes rouges, des torrents, à pattes blanches, à pattes grêles."
+   },
+   "phrase": "Il est interdit d'introduire une écrevisse autre que pattes rouges, torrents, pattes blanches ou pattes grêles.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 6",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Les espèces d’écrevisses autres que :",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-introduction-ecrevisses-autres-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 6",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Les espèces d’écrevisses autres que :"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-grenouilles-autres-introduction-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite des espèces de grenouilles (Rana sp.) autres que celles de la liste de l'article 6 (grenouille des champs, agile, ibérique, d'Honnorat, verte, de Lessona, de Perez, rieuse, rousse, de Berger, des Pyrénées, de Graf)."
+   },
+   "phrase": "Il est interdit d'introduire une grenouille qui n'est pas dans la liste de l'article 6.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 6",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Les espèces de grenouilles (Rana sp.) autres que :",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-introduction-grenouilles-autres-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 6",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Les espèces de grenouilles (Rana sp.) autres que :"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-horaire-ap",
+   "type": "horaire",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite plus d'une demi-heure avant le lever du soleil et plus d'une demi-heure après son coucher."
+   },
+   "phrase": "On pêche de une demi-heure avant le lever du soleil à une demi-heure après son coucher.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 7",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "La pêche ne peut s'exercer plus d'une demi-heure avant le lever du soleil, ni plus d’une demi-heure après son coucher.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-horaire-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 7",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "La pêche ne peut s'exercer plus d'une demi-heure avant le lever du soleil, ni plus d'une demi-heure après son coucher."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-carpe-transport-nuit-ap",
+   "type": "transport_vivant",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, aucune carpe prise aux lignes ne peut être maintenue en captivité ou transportée (R436-14)."
+   },
+   "phrase": "La nuit, une carpe prise ne peut être ni gardée en captivité ni transportée.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 8",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "aucune carpe capturée par les pêcheurs amateurs aux lignes ne peut être maintenue en captivité ou transportée (article R436-14 du code de l'environnement).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-carpe-nuit-captivite-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 8",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "aucune carpe capturée par les pêcheurs amateurs aux lignes ne peut être maintenue en captivité ou transportée (article R436-14 du code de l'environnement)"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-huchon-taille-min-ap",
+   "type": "taille_min",
+   "especes": [
+    "huchon"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 70
+   },
+   "phrase": "Taille minimale huchon : 70 cm (au-dessous, on remet à l'eau).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 9",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "0,70 mètre pour le huchon",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-huchon-taille-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 9",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "0,70 mètre pour le huchon"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-cristivomer-taille-min-ap",
+   "type": "taille_min",
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 35
+   },
+   "phrase": "Taille minimale cristivomer : 35 cm (au-dessous, on remet à l'eau).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 9",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "0,35 mètre pour le cristivomer",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-cristivomer-taille-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 9",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "0,35 mètre pour le cristivomer"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-2247-taille-min-ap",
+   "type": "taille_min",
+   "especes": [
+    "2247"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Taille minimale ombre commun : 30 cm (au-dessous, on remet à l'eau).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 9",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "0,30 mètre pour l'ombre commun et le corégone",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-ombre-taille-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 9",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "0,30 mètre pour l'ombre commun et le corégone"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-coregone-taille-min-ap",
+   "type": "taille_min",
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Taille minimale corégone : 30 cm (au-dessous, on remet à l'eau).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 9",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "0,30 mètre pour l'ombre commun et le corégone",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-coregone-taille-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 9",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "0,30 mètre pour l'ombre commun et le corégone"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-lamproie-fluviatile-taille-min-ap",
+   "type": "taille_min",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 20
+   },
+   "phrase": "Taille minimale lamproie fluviatile : 20 cm (au-dessous, on remet à l'eau).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 9",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "0,20 mètre pour la lamproie fluviatile et 0,40 mètre pour la lamproie marine",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-lamproie-fluviatile-taille-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 9",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "0,20 mètre pour la lamproie fluviatile et 0,40 mètre pour la lamproie marine"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-lamproie-marine-taille-min-ap",
+   "type": "taille_min",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "Taille minimale lamproie marine : 40 cm (au-dessous, on remet à l'eau).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 9",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "0,20 mètre pour la lamproie fluviatile et 0,40 mètre pour la lamproie marine",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-lamproie-marine-taille-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 9",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "0,20 mètre pour la lamproie fluviatile et 0,40 mètre pour la lamproie marine"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-mulet-taille-min-ap",
+   "type": "taille_min",
+   "especes": [
+    "mulet"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 20
+   },
+   "phrase": "Taille minimale mulet : 20 cm (au-dessous, on remet à l'eau).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 9",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "0,20 mètre pour le mulet",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-mulet-taille-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 9",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "0,20 mètre pour le mulet"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-ecrevisse-taille-min-ap",
+   "type": "taille_min",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 9
+   },
+   "phrase": "Taille minimale écrevisse (espèces de l'article R. 436-10) : 9 cm (au-dessous, on remet à l'eau).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 9",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "0,09 mètre pour les écrevisses appartenant aux espèces mentionnées à l'article R. 436-10",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-ecrevisse-taille-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 9",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "0,09 mètre pour les écrevisses appartenant aux espèces mentionnées à l'article R. 436-10"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-grenouille-verte-taille-min-ap",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8,
+    "texte": "Longueur du corps du bout du museau au cloaque."
+   },
+   "phrase": "Grenouille verte : corps de 8 cm au moins, sinon remise à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 9",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "si leur corps est d'une longueur inférieure à 8 cm.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-grenouille-verte-taille-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 9",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "si leur corps est d'une longueur inférieure à 8 cm."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-grenouille-rousse-taille-min-ap",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8,
+    "texte": "Longueur du corps du bout du museau au cloaque."
+   },
+   "phrase": "Grenouille rousse : corps de 8 cm au moins, sinon remise à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 9",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "si leur corps est d'une longueur inférieure à 8 cm.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-grenouille-rousse-taille-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 9",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "si leur corps est d'une longueur inférieure à 8 cm."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-mode-peche-4-lignes-ap",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 4,
+    "texte": "Cours d'eau de 2e catégorie, membres des AAPPMA : 4 lignes au plus, montées sur canne."
+   },
+   "phrase": "En 2e catégorie, 4 lignes au plus, montées sur canne.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 10",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "pêcher au moyen 4 lignes au plus. Les lignes doivent être montées sur canne",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-mode-lignes-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 10",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Dans les cours d'eau classés en 2ème catégorie, les membres des associations agréées de la pêche et de protection des milieux aquatiques peuvent pêcher au moyen 4 lignes au plus."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-mode-peche-hamecons-2-ap",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "hamecons_max": 2,
+    "texte": "Chaque ligne munie de 2 hameçons au maximum."
+   },
+   "phrase": "Chaque ligne a 2 hameçons au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 10",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "munies chacune de 2 hameçons ou de 3 mouches artificielles au maximum.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-mode-hamecons-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 10",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Les lignes doivent être montées sur canne, munies chacune de 2 hameçons ou de 3 mouches artificielles au maximum."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-mode-peche-mouches-3-ap",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "mouches_max": 3,
+    "texte": "Chaque ligne munie de 3 mouches artificielles au maximum."
+   },
+   "phrase": "Chaque ligne a 3 mouches artificielles au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 10",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "munies chacune de 2 hameçons ou de 3 mouches artificielles au maximum.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-mode-mouches-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 10",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "munies chacune de 2 hameçons ou de 3 mouches artificielles au maximum."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-ecrevisse-balances-6-ap",
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche des écrevisses : 6 balances à écrevisses."
+   },
+   "phrase": "Pour les écrevisses : 6 balances au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 10",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "la vermée et 6 balances à écrevisses.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-ecrevisse-vermee-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 10",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Sont autorisées pour la capture des écrevisses, la vermée et 6 balances à écrevisses."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-brochet-vif-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Pêche au vif interdite pendant la période d'interdiction spécifique de la pêche du brochet."
+   },
+   "phrase": "Du 26 janvier au 24 avril 2026 : pêche au vif interdite (brochet fermé).",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 11",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "la pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer ce poisson de manière non accidentelle est interdite.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-brochet-vif-ferme-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 11",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Pendant la période d’interdiction spécifique de la pêche du brochet, la pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer ce poisson de manière non accidentelle est i"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-salmonides-quota-jour-ap",
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "Salmonidés autres que le saumon et la truite de mer, par jour et par pêcheur."
+   },
+   "phrase": "Salmonidés (hors saumon et truite de mer) : 10 par jour et par pêcheur.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 12",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Le nombre de captures de salmonidés autres que le saumon et la truite de mer autorisé par jour et par pêcheur est fixée à 10.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-salmonides-quota-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 12",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Le nombre de captures de salmonidés autres que le saumon et la truite de mer autorisé par jour et par pêcheur est fixée à 10."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-carnassiers-quota-jour-ap",
+   "type": "quota_jour",
+   "especes": [
+    "2151",
+    "2195",
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3,
+    "texte": "Brochets, sandres et black-bass ensemble, par jour et par pêcheur, dont deux brochets au plus."
+   },
+   "phrase": "Brochet, sandre et black-bass : 3 poissons par jour au total, dont 2 brochets au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 12",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont deux brochets maximums.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-carnassiers-quota-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 12",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont deux brochets maximums."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-brochet-quota-jour-ap",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2,
+    "texte": "Deux brochets au plus par jour et par pêcheur, dans le total de trois poissons."
+   },
+   "phrase": "Brochet : 2 par jour au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 12",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont deux brochets maximums.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-brochet-quota-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 12",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont deux brochets maximums."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-anguille-carnet-peche-ap",
+   "type": "autre",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout pêcheur en eau douce enregistre ses captures d'anguilles (hors argentée, interdite) à tous les stades dans un carnet de pêche : date, lot ou secteur, stade, poids ou nombre."
+   },
+   "phrase": "Anguille : note chaque capture dans un carnet de pêche.",
+   "source": {
+    "texte": "Arrêté préfectoral n° 2025-0988 du 3 mars 2025 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis, art. 13",
+    "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-03-03"
+   },
+   "citation": "Tout pêcheur en eau douce enregistre ses captures d’anguilles, hors anguille argentée dont la pêche est interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-anguille-carnet-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent n° 2025-0988 du 3 mars 2025, art. art. 13",
+     "url": "https://web.archive.org/web/20250708031705id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/93_ap_2025-0988_du_03_mars_2025.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-03-03"
+    },
+    "citation": "Tout pêcheur en eau douce enregistre ses captures d’anguilles, hors anguille argentée dont la pêche est interdite toute l’année"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-2221-ouv-avis",
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-21",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Truite fario : pêche ouverte du 21 mars au 20 septembre 2026 (selon l'avis annuel).",
+   "source": {
+    "texte": "Avis annuel 2026 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis (Bobigny), 2 - ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-15"
+   },
+   "citation": "Truites fario Du 21 mars au 20 septembre 2026 inclus",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-truite-fario-ouverture-avis",
+    "source": {
+     "texte": "Avis annuel 2026 de la Seine-Saint-Denis, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-15"
+    },
+    "citation": "Truites fario Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-omble-fontaine-ouv-avis",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-21",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Omble ou saumon de fontaine : pêche ouverte du 21 mars au 20 septembre 2026 (selon l'avis annuel).",
+   "source": {
+    "texte": "Avis annuel 2026 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis (Bobigny), 2 - ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-15"
+   },
+   "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-omble-fontaine-ouverture-avis",
+    "source": {
+     "texte": "Avis annuel 2026 de la Seine-Saint-Denis, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-15"
+    },
+    "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-omble-chevalier-ouv-avis",
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-21",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Omble chevalier : pêche ouverte du 21 mars au 20 septembre 2026 (selon l'avis annuel).",
+   "source": {
+    "texte": "Avis annuel 2026 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis (Bobigny), 2 - ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-15"
+   },
+   "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-omble-chevalier-ouverture-avis",
+    "source": {
+     "texte": "Avis annuel 2026 de la Seine-Saint-Denis, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-15"
+    },
+    "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-anguille-civelle-interdit-avis",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "phrase": "Civelle (anguille de moins de 12 cm) : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis (Bobigny), 2 - ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-15"
+   },
+   "citation": "Anguille <12 cm (civelle) Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-anguille-civelle-interdit-avis",
+    "source": {
+     "texte": "Avis annuel 2026 de la Seine-Saint-Denis, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-15"
+    },
+    "citation": "Anguille <12 cm (civelle) Pêche interdite toute l’année"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-ecrevisse-pattes-blanches-interdit-avis",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année."
+   },
+   "phrase": "Écrevisse à pattes blanches : pêche interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 relatif à l'exercice de la pêche en eau douce en Seine-Saint-Denis (Bobigny), 2 - ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-15"
+   },
+   "citation": "Ecrevisses à pattes blanches, à pattes rouges et des torrents Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-ecrevisse-pattes-blanches-interdit-avis",
+    "source": {
+     "texte": "Avis annuel 2026 de la Seine-Saint-Denis, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54986&path=Avis-annuel-93-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-15"
+    },
+    "citation": "Ecrevisses à pattes blanches, à pattes rouges et des torrents Pêche interdite toute l'année"
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-saumon-atlantique-remise-eau-mg",
+   "type": "remise_eau",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout saumon atlantique capturé est immédiatement remis à l'eau."
+   },
+   "phrase": "Saumon atlantique : toute capture est remise à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté n° IDF-2026-01-19-00001 du 19 janvier 2026 : pêche des poissons migrateurs amphihalins du bassin Seine-Normandie 2026-2027, art. 2.4 (saumon)",
+    "url": "https://web.archive.org/web/20260415133926id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/2026_01_19_00001_ap_cadre_sn_peche_amphihalins_2026_2027.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-19"
+   },
+   "citation": "Tout saumon atlantique capturé devra être immédiatement remis",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-saumon-atlantique-remise-eau-migr",
+    "source": {
+     "texte": "Arrêté IDF-2026-01-19-00001 du 19 janvier 2026 (migrateurs Seine-Normandie 2026-2027), art. 2.4",
+     "url": "https://web.archive.org/web/20260415133926id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/2026_01_19_00001_ap_cadre_sn_peche_amphihalins_2026_2027.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-19"
+    },
+    "citation": "Tout saumon atlantique capturé devra être immédiatement remis en à l’eau."
+   },
+   "passe": "complement-16-oct (93.json)"
+  },
+  {
+   "id": "93-anguille-jaune-nuit-interdit-mg",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "93",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de loisir de nuit interdite."
+   },
+   "phrase": "Anguille jaune : pêche de loisir de nuit interdite.",
+   "source": {
+    "texte": "Arrêté n° IDF-2026-01-19-00001 du 19 janvier 2026 : pêche des poissons migrateurs amphihalins du bassin Seine-Normandie 2026-2027, art. 2.1 (anguille)",
+    "url": "https://web.archive.org/web/20260415133926id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/2026_01_19_00001_ap_cadre_sn_peche_amphihalins_2026_2027.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-19"
+   },
+   "citation": "Pêche de loisir de nuit interdite",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "93-anguille-jaune-nuit-migr",
+    "source": {
+     "texte": "Arrêté IDF-2026-01-19-00001 du 19 janvier 2026 (migrateurs Seine-Normandie 2026-2027), art. 2.1",
+     "url": "https://web.archive.org/web/20260415133926id_/https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/2026_01_19_00001_ap_cadre_sn_peche_amphihalins_2026_2027.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-19"
+    },
+    "citation": "Pêche de loisir de nuit interdite"
+   },
+   "passe": "complement-16-oct (93.json)"
+  }
+ ]
+}
