@@ -9925,7 +9925,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Sur le bras naturel de l'Aigre nouvellement cree, de la diffluence entre le bief et le bras naturel jusqu'au pont de la D8.3 (ou confluence des 2 bras)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -9939,7 +9939,8 @@
     },
     "citation": "Sur le bras naturel de l'Aigre nouvellement cree, de la diffluence entre le bief et le bras naturel jusqu'au pont de la D8.3 (ou confluence des 2 bras)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-reserve-pont-foulon-aappma-de-courtalain-zone-no",
@@ -9965,7 +9966,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Plan d'eau le Pont Foulon | AAPPMA de Courtalain | Zone Nord du plan d'eau (indication precise sur site)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -9979,7 +9980,8 @@
     },
     "citation": "Plan d'eau le Pont Foulon | AAPPMA de Courtalain | Zone Nord du plan d'eau (indication precise sur site)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-reserve-gautrey-aappma-de-manou-zone-materialise",
@@ -10005,7 +10007,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Plan d'eau de Gautrey | AAPPMA de Manou | Zone materialisee par des panneaux sur le site.",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10019,7 +10021,8 @@
     },
     "citation": "Plan d'eau de Gautrey | AAPPMA de Manou | Zone materialisee par des panneaux sur le site."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-reserve-mezieres-ecluzelles-aappma-de-dreux-tota",
@@ -10045,7 +10048,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Totalite du port, delimite par les barrieres vertes limitant les acces vehicules",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10059,7 +10062,8 @@
     },
     "citation": "Totalite du port, delimite par les barrieres vertes limitant les acces vehicules"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-reserve-la-borde-1-aappma-de-nogent-le-rotrou-zo",
@@ -10085,7 +10089,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Plan d'eau de la Borde 1 | AAPPMA de Nogent-le-Rotrou | Zone delimitee par des panneaux, entre la ligne Haute Tension et l'Huisne au niveau du deversoir du plan d'eau",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10099,7 +10103,8 @@
     },
     "citation": "Plan d'eau de la Borde 1 | AAPPMA de Nogent-le-Rotrou | Zone delimitee par des panneaux, entre la ligne Haute Tension et l'Huisne au niveau du deversoir du plan d'eau"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-reserve-fontaine-a-jean-aappma-d-auneau-zone-del",
@@ -10125,7 +10130,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Plan d'eau de la Fontaine a Jean | AAPPMA d'Auneau | Zone delimitee par des panneaux",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10139,7 +10144,8 @@
     },
     "citation": "Plan d'eau de la Fontaine a Jean | AAPPMA d'Auneau | Zone delimitee par des panneaux"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-no_kill-cloyes",
@@ -10165,7 +10171,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "leurre artificiel uniquement, hamecon simple sans ardillon ou ardillon ecrase ; remise a l'eau de TOUS LES POISSONS ou de TOUTES LES TRUITES selon le parcours.",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10179,7 +10185,8 @@
     },
     "citation": "leurre artificiel uniquement, hamecon simple sans ardillon ou ardillon ecrase ; remise a l'eau de TOUS LES POISSONS ou de TOUTES LES TRUITES selon le parcours."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-no_kill-bazoche",
@@ -10205,7 +10212,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "leurre artificiel uniquement, hamecon simple sans ardillon ou ardillon ecrase ; remise a l'eau de TOUS LES POISSONS ou de TOUTES LES TRUITES selon le parcours.",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10219,7 +10226,8 @@
     },
     "citation": "leurre artificiel uniquement, hamecon simple sans ardillon ou ardillon ecrase ; remise a l'eau de TOUS LES POISSONS ou de TOUTES LES TRUITES selon le parcours."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2221-no_kill-st-remy",
@@ -10247,7 +10255,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "remise a l'eau de TOUTES LES TRUITES FARIO",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10261,7 +10269,8 @@
     },
     "citation": "remise a l'eau de TOUTES LES TRUITES FARIO"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-no_kill-les-rayes",
@@ -10289,7 +10298,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Rayes (peche au coup sans moulinet, carnassiers au leurre uniquement ; remise a l'eau de toutes les carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10303,7 +10312,8 @@
     },
     "citation": "Les Rayes (peche au coup sans moulinet, carnassiers au leurre uniquement ; remise a l'eau de toutes les carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-interdit-les-chenes",
@@ -10329,7 +10339,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10343,7 +10353,8 @@
     },
     "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2151-no_kill-les-chenes",
@@ -10371,7 +10382,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10385,7 +10396,8 @@
     },
     "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2053-no_kill-les-chenes",
@@ -10413,7 +10425,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10427,7 +10439,8 @@
     },
     "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-no_kill-les-chenes",
@@ -10455,7 +10468,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10469,7 +10482,8 @@
     },
     "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2195-no_kill-les-chenes",
@@ -10497,7 +10511,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10511,7 +10525,8 @@
     },
     "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-no_kill-landelles",
@@ -10539,7 +10554,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Fontaine Aubert, Lac Arthur Remy, Gasloup grand, Landelles, Montigny-le-Gannelon (remise a l'eau de toutes les carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10553,7 +10568,8 @@
     },
     "citation": "Fontaine Aubert, Lac Arthur Remy, Gasloup grand, Landelles, Montigny-le-Gannelon (remise a l'eau de toutes les carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-mode_peche-les-aulnes",
@@ -10580,7 +10596,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10594,7 +10610,8 @@
     },
     "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-no_kill-les-aulnes",
@@ -10620,7 +10637,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10634,7 +10651,8 @@
     },
     "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-mode_peche-oseraies",
@@ -10661,7 +10679,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10675,7 +10693,8 @@
     },
     "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-no_kill-oseraies",
@@ -10701,7 +10720,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10715,7 +10734,8 @@
     },
     "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-mode_peche-petit-plan-d-eau-de-villiers-le-morhier",
@@ -10742,7 +10762,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10756,7 +10776,8 @@
     },
     "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-no_kill-petit-plan-d-eau-de-villiers-le-morhier",
@@ -10782,7 +10803,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10796,7 +10817,8 @@
     },
     "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-interdit-le-tertre",
@@ -10822,7 +10844,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Le Tertre (2 lignes, vif interdit)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10836,7 +10858,8 @@
     },
     "citation": "Le Tertre (2 lignes, vif interdit)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-mode_peche-le-tertre",
@@ -10863,7 +10886,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Le Tertre (2 lignes, vif interdit)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10877,7 +10900,8 @@
     },
     "citation": "Le Tertre (2 lignes, vif interdit)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-interdit-la-borde-1",
@@ -10903,7 +10927,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10917,7 +10941,8 @@
     },
     "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2053-no_kill-la-borde-1",
@@ -10945,7 +10970,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -10959,7 +10984,8 @@
     },
     "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2151-no_kill-la-borde-1",
@@ -10987,7 +11013,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11001,7 +11027,8 @@
     },
     "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2137-no_kill-la-borde-1",
@@ -11029,7 +11056,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11043,7 +11070,8 @@
     },
     "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-no_kill-la-borde-1",
@@ -11071,7 +11099,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11085,7 +11113,8 @@
     },
     "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-mode_peche-la-borde-2",
@@ -11112,7 +11141,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "La Borde 2 (2 lignes ; remise a l'eau de tous les poissons)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11126,7 +11155,8 @@
     },
     "citation": "La Borde 2 (2 lignes ; remise a l'eau de tous les poissons)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-tous-no_kill-la-borde-2",
@@ -11152,7 +11182,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11166,7 +11196,8 @@
     },
     "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2053-no_kill-dangeau",
@@ -11194,7 +11225,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11208,7 +11239,8 @@
     },
     "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-no_kill-dangeau",
@@ -11236,7 +11268,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11250,7 +11282,8 @@
     },
     "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2137-no_kill-dangeau",
@@ -11278,7 +11311,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11292,7 +11325,8 @@
     },
     "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2053-no_kill-le-baignon",
@@ -11320,7 +11354,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11334,7 +11368,8 @@
     },
     "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-no_kill-le-baignon",
@@ -11362,7 +11397,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11376,7 +11411,8 @@
     },
     "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2137-no_kill-le-baignon",
@@ -11404,7 +11440,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11418,7 +11454,8 @@
     },
     "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-no_kill-saint-piat",
@@ -11446,7 +11483,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11460,7 +11497,8 @@
     },
     "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2151-quota_jour-saint-piat",
@@ -11489,7 +11527,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11503,7 +11541,8 @@
     },
     "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-no_kill-change",
@@ -11531,7 +11570,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11545,7 +11584,8 @@
     },
     "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2151-quota_jour-change",
@@ -11574,7 +11614,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11588,7 +11628,8 @@
     },
     "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-loir-st-maur",
@@ -11616,7 +11657,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11630,7 +11671,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-loir-st-martin",
@@ -11658,7 +11700,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11672,7 +11714,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-loir-ouzenain",
@@ -11700,7 +11743,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11714,7 +11757,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-loir-boissiere",
@@ -11742,7 +11786,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Loir rive gauche a Chateaudun (La Boissiere, La Roche)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11756,7 +11800,8 @@
     },
     "citation": "Loir rive gauche a Chateaudun (La Boissiere, La Roche)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-loir-boissiere",
@@ -11784,7 +11829,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11798,7 +11843,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-loir-la-roche",
@@ -11826,7 +11872,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Loir rive gauche a Chateaudun (La Boissiere, La Roche)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11840,7 +11886,8 @@
     },
     "citation": "Loir rive gauche a Chateaudun (La Boissiere, La Roche)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-loir-la-roche",
@@ -11868,7 +11915,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11882,7 +11929,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-loir-greslard",
@@ -11910,7 +11958,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Loir a Marboue (Greslard, Les Gats)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11924,7 +11972,8 @@
     },
     "citation": "Loir a Marboue (Greslard, Les Gats)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-loir-greslard",
@@ -11952,7 +12001,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -11966,7 +12015,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-loir-gats",
@@ -11994,7 +12044,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Loir a Marboue (Greslard, Les Gats)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12008,7 +12058,8 @@
     },
     "citation": "Loir a Marboue (Greslard, Les Gats)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-loir-gats",
@@ -12036,7 +12087,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12050,7 +12101,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-loir-vicomte",
@@ -12078,7 +12130,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Loir rive gauche a Chateaudun (La Boissiere, La Roche)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12092,7 +12144,8 @@
     },
     "citation": "Loir rive gauche a Chateaudun (La Boissiere, La Roche)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-loir-vicomte",
@@ -12120,7 +12173,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12134,7 +12187,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-loir-boelle",
@@ -12162,7 +12216,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Loir a Cloyes-les-Trois-Rivieres (Roide Boelle",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12176,7 +12230,8 @@
     },
     "citation": "Loir a Cloyes-les-Trois-Rivieres (Roide Boelle"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-loir-boelle",
@@ -12204,7 +12259,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12218,7 +12273,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-galloire",
@@ -12246,7 +12302,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "plan d'eau de la Galloire)",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12260,7 +12316,8 @@
     },
     "citation": "plan d'eau de la Galloire)"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-galloire",
@@ -12288,7 +12345,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12302,7 +12359,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-ecluzelles",
@@ -12330,7 +12388,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Ecluzelles",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12344,7 +12402,8 @@
     },
     "citation": "Ecluzelles"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-ecluzelles",
@@ -12372,7 +12431,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12386,7 +12445,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-ecoublanc",
@@ -12414,7 +12474,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12428,7 +12488,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-fontaine-a-jean",
@@ -12456,7 +12517,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12470,7 +12531,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-les-aulnes",
@@ -12498,7 +12560,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12512,7 +12574,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-comteville",
@@ -12540,7 +12603,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Comteville",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12554,7 +12617,8 @@
     },
     "citation": "Comteville"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-comteville",
@@ -12582,7 +12646,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12596,7 +12660,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-bois-de-clos",
@@ -12624,7 +12689,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Bois de Clos",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12638,7 +12703,8 @@
     },
     "citation": "Bois de Clos"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-bois-de-clos",
@@ -12666,7 +12732,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12680,7 +12746,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-les-chenes",
@@ -12708,7 +12775,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Chenes",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12722,7 +12789,8 @@
     },
     "citation": "Les Chenes"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-les-chenes",
@@ -12750,7 +12818,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12764,7 +12832,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-la-goujonniere",
@@ -12792,7 +12861,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "La Goujonniere",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12806,7 +12875,8 @@
     },
     "citation": "La Goujonniere"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-la-goujonniere",
@@ -12834,7 +12904,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12848,7 +12918,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-pierre-maubert-ii",
@@ -12876,7 +12947,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Pierre Maubert II",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12890,7 +12961,8 @@
     },
     "citation": "Pierre Maubert II"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-pierre-maubert-ii",
@@ -12918,7 +12990,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12932,7 +13004,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-le-baignon",
@@ -12960,7 +13033,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Le Baignon",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -12974,7 +13047,8 @@
     },
     "citation": "Le Baignon"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-le-baignon",
@@ -13002,7 +13076,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13016,7 +13090,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-saint-georges-sur-eure",
@@ -13044,7 +13119,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13058,7 +13133,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-les-ballastieres",
@@ -13086,7 +13162,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13100,7 +13176,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-les-tirelles",
@@ -13128,7 +13205,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Tirelles",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13142,7 +13219,8 @@
     },
     "citation": "Les Tirelles"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-les-tirelles",
@@ -13170,7 +13248,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13184,7 +13262,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-etang-du-roi",
@@ -13212,7 +13291,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13226,7 +13305,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-marcel-huart",
@@ -13254,7 +13334,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Marcel Huart",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13268,7 +13348,8 @@
     },
     "citation": "Marcel Huart"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-marcel-huart",
@@ -13296,7 +13377,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13310,7 +13391,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-le-pont-foulon",
@@ -13338,7 +13420,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Le Pont Foulon",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13352,7 +13434,8 @@
     },
     "citation": "Le Pont Foulon"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-le-pont-foulon",
@@ -13380,7 +13463,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13394,7 +13477,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-les-fontaines",
@@ -13422,7 +13506,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Fontaines",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13436,7 +13520,8 @@
     },
     "citation": "Les Fontaines"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-les-fontaines",
@@ -13464,7 +13549,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13478,7 +13563,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-les-gollions",
@@ -13506,7 +13592,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Gollions",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13520,7 +13606,8 @@
     },
     "citation": "Les Gollions"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-les-gollions",
@@ -13548,7 +13635,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13562,7 +13649,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-raoul-blavat",
@@ -13590,7 +13678,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13604,7 +13692,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-vouvray",
@@ -13632,7 +13721,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13646,7 +13735,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-les-ilots",
@@ -13674,7 +13764,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13688,7 +13778,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-les-vingtaines",
@@ -13716,7 +13807,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Vingtaines",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13730,7 +13821,8 @@
     },
     "citation": "Les Vingtaines"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-les-vingtaines",
@@ -13758,7 +13850,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13772,7 +13864,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-le-tertre",
@@ -13800,7 +13893,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Le Tertre",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13814,7 +13907,8 @@
     },
     "citation": "Le Tertre"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-le-tertre",
@@ -13842,7 +13936,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13856,7 +13950,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-jean-lavigne",
@@ -13884,7 +13979,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Jean Lavigne",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13898,7 +13993,8 @@
     },
     "citation": "Jean Lavigne"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-jean-lavigne",
@@ -13926,7 +14022,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13940,7 +14036,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-les-chatelets",
@@ -13968,7 +14065,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les Chatelets",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -13982,7 +14079,8 @@
     },
     "citation": "Les Chatelets"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-les-chatelets",
@@ -14010,7 +14108,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14024,7 +14122,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-la-borde-1",
@@ -14052,7 +14151,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "La Borde 1 et 2",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14066,7 +14165,8 @@
     },
     "citation": "La Borde 1 et 2"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-la-borde-1",
@@ -14094,7 +14194,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14108,7 +14208,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-la-borde-2",
@@ -14136,7 +14237,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "La Borde 1 et 2",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14150,7 +14251,8 @@
     },
     "citation": "La Borde 1 et 2"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-la-borde-2",
@@ -14178,7 +14280,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14192,7 +14294,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-louis-barbot-grand",
@@ -14220,7 +14323,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14234,7 +14337,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-la-digue",
@@ -14262,7 +14366,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "La Digue",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14276,7 +14380,8 @@
     },
     "citation": "La Digue"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-la-digue",
@@ -14304,7 +14409,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14318,7 +14423,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-landelles",
@@ -14346,7 +14452,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Landelles",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14360,7 +14466,8 @@
     },
     "citation": "Landelles"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-landelles",
@@ -14388,7 +14495,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14402,7 +14509,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-barjouville",
@@ -14430,7 +14538,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Barjouville",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14444,7 +14552,8 @@
     },
     "citation": "Barjouville"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-barjouville",
@@ -14472,7 +14581,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14486,7 +14595,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-gilbert-lecomte",
@@ -14514,7 +14624,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Gilbert Lecomte",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14528,7 +14638,8 @@
     },
     "citation": "Gilbert Lecomte"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-gilbert-lecomte",
@@ -14556,7 +14667,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14570,7 +14681,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-change",
@@ -14598,7 +14710,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Changé",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14612,7 +14724,8 @@
     },
     "citation": "Changé"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-change",
@@ -14640,7 +14753,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14654,7 +14767,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-michel-hamet",
@@ -14682,7 +14796,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14696,7 +14810,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-dangeau",
@@ -14724,7 +14839,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Dangeau",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14738,7 +14853,8 @@
     },
     "citation": "Dangeau"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-dangeau",
@@ -14766,7 +14882,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14780,7 +14896,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-carpe_nuit-pe-luisant",
@@ -14808,7 +14925,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Luisant",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14822,7 +14939,8 @@
     },
     "citation": "Luisant"
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2110-remise_eau-pe-luisant",
@@ -14850,7 +14968,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-30"
    },
-   "citation": null,
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
    "statut": "incertain",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -14864,7 +14982,8 @@
     },
     "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits)."
    },
-   "passe": "precedente"
+   "passe": "precedente",
+   "citation_de": "lecture_b"
   },
   {
    "id": "28-2221-taille_min-cours-d-eau-non-cites-a-part",
