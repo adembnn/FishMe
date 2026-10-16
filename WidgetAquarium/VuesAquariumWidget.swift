@@ -34,10 +34,6 @@ private func partPoisson(_ famille: WidgetFamily) -> Double {
     }
 }
 
-/// Les formats larges rangent les poissons sur 2 colonnes (moins de chevauchements).
-private func colonnes(_ famille: WidgetFamily) -> Int {
-    famille == .systemSmall ? 1 : 2
-}
 
 // MARK: - L'eau
 
@@ -92,36 +88,48 @@ private struct CoucheNage: View {
         }
     }
 
+    /// Un poisson prêt à nager : sa place (couloir), son espèce et sa largeur à l'écran.
+    private struct Nageur: Identifiable {
+        let placement: PlacementPoisson
+        let slug: String
+        let largeur: CGFloat
+        let cycle: Bool
+        var id: String { placement.id }
+    }
+
     var body: some View {
         let instantane = entree.instantane
+        // Un couloir (une hauteur) par poisson : chacun traverse tout l'aquarium dans le sien.
         let placements = NageWidget.placements(
             instantane.poissons, a: entree.date, dernierRepas: instantane.dernierRepas, limite: limitePoissons(famille),
-            colonnes: colonnes(famille))
+            colonnes: 1)
         let parId = Dictionary(instantane.poissons.map { ($0.id, $0) }, uniquingKeysWith: { premier, _ in premier })
         let part = partPoisson(famille)
-        let accessoire = Self.estAccessoire(famille)
-        let animePoissons = anime && !reduireAnimations && !accessoire
-        let animeDecor = animePoissons
+        let animePoissons = anime && !reduireAnimations && !Self.estAccessoire(famille)
+        let reference = HorlogeAnimation.reference(pour: entree.date)
 
         GeometryReader { geo in
             let l = geo.size.width
             let h = geo.size.height
+            let nageurs: [Nageur] = placements.compactMap { placement in
+                guard let poisson = parId[placement.id] else { return nil }
+                return Nageur(placement: placement, slug: poisson.slug, largeur: l * part * placement.echelle,
+                              cycle: PoissonVivant.cycleDisponible(poisson.slug))
+            }
             ZStack {
-                // Décor animé derrière les poissons, écrans d'accueil seulement (jamais en accessoire).
-                if animeDecor {
-                    LumiereAnimee()
-                    BullesAnimees()
-                }
-                ForEach(Array(placements.enumerated()), id: \.element.id) { index, placement in
-                    if let poisson = parId[placement.id] {
-                        // Le poisson reste entier dans le widget, même large (petit format).
-                        let largeur = l * part * placement.echelle
-                        let x = min(max(placement.x * l, largeur / 2 + 4), l - largeur / 2 - 4)
-                        PoissonVivant(slug: poisson.slug, largeur: largeur,
-                                      versLaDroite: placement.versLaDroite, phase: index * 3,
-                                      anime: animePoissons)
-                            .position(x: x, y: placement.y * h)
+                // 80 copies (10 s à 8 images/s) ; chaque copie dessine TOUS les poissons à leur place de cet instant,
+                // et deux masques chronos n'en laissent voir qu'une à la fois.
+                ImagesAnimees(reference: reference, actif: animePoissons) { j in
+                    ZStack {
+                        ForEach(nageurs) { nageur in
+                            let pose = NageWidget.pose(nageur.placement, copie: j, nombre: HorlogeAnimation.nombreImages,
+                                                       demiLargeur: Double(nageur.largeur / 2 / max(l, 1)))
+                            ImagePoisson(slug: nageur.slug, image: nageur.cycle ? pose.image : nil,
+                                         largeur: nageur.largeur, sens: pose.sens)
+                                .position(x: pose.x * l, y: pose.y * h)
+                        }
                     }
+                    .frame(width: l, height: h)
                 }
                 // Quelques paillettes de nourriture près de la surface.
                 ForEach(placements.filter(\.auRepas)) { placement in
@@ -134,7 +142,6 @@ private struct CoucheNage: View {
                     }
                 }
             }
-            .animation(reduireAnimations ? nil : .smooth(duration: 1.8), value: entree.date)
         }
     }
 }

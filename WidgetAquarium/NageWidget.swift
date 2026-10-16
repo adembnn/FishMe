@@ -84,6 +84,64 @@ nonisolated public enum NageWidget {
         return sansDoublon
     }
 
+    // MARK: - Nage (la boucle de 10 s)
+
+    /// Où est le poisson, vers où il regarde et quelle image de battement montrer, à la copie j d'une boucle.
+    public struct PoseNage: Equatable, Sendable {
+        /// Centre, en part de la largeur et de la hauteur du widget.
+        public let x: Double
+        public let y: Double
+        /// Échelle horizontale : 1 = regarde à droite, −1 = à gauche ; entre les deux pendant un demi-tour.
+        public let sens: Double
+        /// Image du cycle de battement de queue (0..<imagesCycle).
+        public let image: Int
+    }
+
+    /// Part de la boucle passée à nager d'un bord à l'autre ; le reste est le demi-tour (0,5 s sur 10 s).
+    static let partTraversee = 0.45
+
+    /// Le poisson traverse l'aquarium, fait demi-tour, revient, fait demi-tour : une boucle de 10 s.
+    /// Chaque poisson a sa phase (ils ne tournent pas ensemble) et sa portée (les gros vont moins loin).
+    /// `demiLargeur` : moitié de la largeur du poisson, en part de la largeur du widget (pour ne jamais sortir).
+    public static func pose(_ placement: PlacementPoisson, copie j: Int, nombre: Int, imagesCycle: Int = 8,
+                            demiLargeur: Double) -> PoseNage {
+        let n = max(nombre, 1)
+        let phase = hasard(placement.id, 0, "phase")
+        let u = (Double(j) / Double(n) + phase).truncatingRemainder(dividingBy: 1)
+        let marge = demiLargeur + 0.02
+        let portee = max((0.5 - marge) * (0.65 + 0.35 * hasard(placement.id, 0, "portee")), 0.02)
+        let gauche = 0.5 - portee, droite = 0.5 + portee
+        let demiTour = 0.5 - partTraversee
+
+        let x: Double
+        var sens: Double
+        if u < partTraversee {
+            x = gauche + (droite - gauche) * glisse(u / partTraversee)
+            sens = 1
+        } else if u < 0.5 {
+            x = droite
+            sens = cos(.pi * (u - partTraversee) / demiTour)
+        } else if u < 0.5 + partTraversee {
+            x = droite - (droite - gauche) * glisse((u - 0.5) / partTraversee)
+            sens = -1
+        } else {
+            x = gauche
+            sens = -cos(.pi * (u - 0.5 - partTraversee) / demiTour)
+        }
+        // Pendant le demi-tour, le poisson se voit presque de face : jamais tout à fait plat.
+        if abs(sens) < 0.18 { sens = sens < 0 ? -0.18 : 0.18 }
+        let houle = 0.025 * sin(2 * .pi * (u + hasard(placement.id, 0, "houle")))
+        let decalageImage = Int(hasard(placement.id, 0, "battement") * Double(imagesCycle))
+        let image = ((j + decalageImage) % max(imagesCycle, 1) + max(imagesCycle, 1)) % max(imagesCycle, 1)
+        return PoseNage(x: x, y: placement.y + houle, sens: sens, image: image)
+    }
+
+    /// Avance douce : un peu plus lent au départ et à l'arrivée (le poisson accélère puis freine avant de tourner).
+    static func glisse(_ v: Double) -> Double {
+        let v = min(max(v, 0), 1)
+        return v - 0.3 * sin(2 * .pi * v) / (2 * .pi)
+    }
+
     // MARK: - Détails
 
     private static func creneauDe(_ instant: Date) -> Int {
@@ -118,7 +176,7 @@ nonisolated public enum NageWidget {
     }
 
     /// Nombre pseudo-aléatoire dans [0, 1), stable : FNV-1a 64 bits sur « id, sel, créneau », puis mélange final.
-    private static func hasard(_ id: String, _ creneau: Int, _ sel: String) -> Double {
+    static func hasard(_ id: String, _ creneau: Int, _ sel: String) -> Double {
         var h: UInt64 = 0xcbf29ce484222325
         func melanger(_ octet: UInt8) {
             h ^= UInt64(octet)
