@@ -34,6 +34,9 @@ struct VueCarte: View {
     /// Vrai quand la racine demande le choix de zone (« Choisir sur la carte » de « Où pêches-tu ? ») :
     /// la feuille s'ouvre, et sa fermeture repasse par `surChoixDeZone(false)`.
     let demandeChoixDeZone: Bool
+    /// La pastille de profil (posée par la racine) : à gauche de la barre de recherche de zone, en haut de la carte.
+    let pastilleProfil: AnyView
+    @Environment(\.dynamicTypeSize) private var tailleDuTexte
     /// Vrai quand la racine demande le « vol vers le spot » (« Voir mon spot » du swipe) : la caméra passe de la zone
     /// au cercle de 1 km, une bulle dit la distance, puis la feuille « Ton spot » monte. Une seule fois (`volFait`).
     let volVersLeSpot: Bool
@@ -60,7 +63,9 @@ struct VueCarte: View {
          ouChercher: ((Coordonnee) -> AnyView)? = nil,
          surChoixDeZone: @escaping (Bool) -> Void = { _ in },
          demandeChoixDeZone: Bool = false,
-         volVersLeSpot: Bool = false) {
+         volVersLeSpot: Bool = false,
+         pastilleProfil: AnyView = AnyView(EmptyView())) {
+        self.pastilleProfil = pastilleProfil
         _modele = State(initialValue: ModeleCarte(services: services))
         self.spotFixe = spotFixe
         self.sessionsTerminees = sessionsTerminees
@@ -421,6 +426,11 @@ struct VueCarte: View {
             }
         }
         .background(Palette.fond.ignoresSafeArea())
+        // Le profil reste atteignable depuis « Ton spot » (la pastille de la racine).
+        .safeAreaInset(edge: .top, spacing: 0) {
+            HStack { pastilleProfil.frame(maxWidth: 170, alignment: .leading); Spacer(minLength: 0) }
+                .padding(.horizontal, 16)
+        }
     }
 
     private func ouvrirLaCarte(poserLeSpot: Bool = false) {
@@ -665,6 +675,7 @@ struct VueCarte: View {
 
     private var haut: some View {
         VStack(spacing: 8) {
+            ligneProfilEtRecherche
             enTeteCarte
             HStack(spacing: 0) {
                 Spacer(minLength: 0)
@@ -689,6 +700,29 @@ struct VueCarte: View {
                 .padding(.vertical, Espace.s)
                 .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
         }
+    }
+
+    /// Première ligne : la pastille de profil à gauche, la recherche de zone sur le reste de la largeur.
+    /// En texte très agrandi, la recherche passe sous la pastille : rien ne se chevauche.
+    @ViewBuilder
+    private var ligneProfilEtRecherche: some View {
+        if tailleDuTexte.isAccessibilitySize {
+            VStack(alignment: .leading, spacing: 8) {
+                pastilleProfil.frame(maxWidth: .infinity, alignment: .leading)
+                rechercheDeZone
+            }
+        } else {
+            HStack(alignment: .top, spacing: 8) {
+                pastilleProfil
+                    .frame(maxWidth: 170, alignment: .leading)
+                rechercheDeZone
+                    .frame(minWidth: 140)
+            }
+        }
+    }
+
+    private var rechercheDeZone: some View {
+        BarreRechercheZone(choisir: choisirZone, codeDepartement: codeDepartement)
     }
 
     /// En haut de la carte : retour à « Ton spot », le lieu, le filtre par espèce (maquette P06 A).

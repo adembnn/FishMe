@@ -61,9 +61,6 @@ struct FicheCoinView: View {
                         boutonYAller.buttonStyle(.principal)
                     }
                     releve(fiche)
-                } else {
-                    ChargementBouchon(texte: "Chargement du spot")
-                        .frame(maxWidth: .infinity, minHeight: 120)
                 }
             }
             .padding(.horizontal, 20)
@@ -72,6 +69,18 @@ struct FicheCoinView: View {
             .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { hauteurContenu = $0 }
         }
         .scrollIndicators(.hidden)
+        // Attente en page entière, bouchon au centre (jamais un petit bloc en haut de la feuille).
+        .overlay {
+            if modele.fiche == nil {
+                EcranChargement(texte: "Chargement du spot")
+                    .overlay(alignment: .topTrailing) {
+                        BoutonRond(role: .fermer)
+                            .padding(.top, Espace.s)
+                            .padding(.trailing, Espace.bord)
+                    }
+            }
+        }
+        .animation(.easeOut(duration: 0.25), value: modele.fiche == nil)
         .scrollBounceBehavior(.basedOnSize)
         // Tant que la fiche charge : moyen. Ensuite la hauteur du contenu (comme la maquette), ou grand.
         .presentationDetents(detentsFiche)
