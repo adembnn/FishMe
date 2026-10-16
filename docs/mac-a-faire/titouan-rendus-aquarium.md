@@ -3,6 +3,9 @@
 Adem (16 oct. 08h53) : « pour les animations 3D de l'aquarium et widgets, n'hésite pas à envoyer des lots à Titouan », « il faut paralléliser ».
 Ce document suffit seul : tout ce qu'il faut est dans ce dépôt, branche `lot/aquarium`.
 
+## À refaire (16 oct. 09h50 UTC)
+Un deuxième œil apparaît sur le haut de la tête (relecture du dos) : tanche, chevesne, rotengle, brème, ablette, barbeau, gardon, perche, sandre, truite-fario. Correction : `PART_DOS=0.1` dans la commande (déjà mis ci-dessous). Avant de relancer une espèce, regarder `docs/coordination` et le fil Synchro pour savoir qui la refait.
+
 ## Le partage
 - **Titouan** : tanche, chevesne, rotengle, breme-commune, ablette, barbeau, carassin.
 - **Le cloud** (déjà en cours) : gardon, perche, sandre, truite-fario, carpe-commune, black-bass, silure. Le brochet est fait.
@@ -19,11 +22,11 @@ macOS (Blender dans Applications) :
 ```sh
 K=reports/aquarium-3d/kit-rendu
 for e in tanche chevesne rotengle breme-commune ablette barbeau carassin; do
-  IMAGES=16 /Applications/Blender.app/Contents/MacOS/Blender -b --python $K/sprites.py -- $K/textures rendus-brut/$e $e:$e > rendus-brut/$e.log 2>&1
+  PART_DOS=0.1 IMAGES=16 /Applications/Blender.app/Contents/MacOS/Blender -b --python $K/sprites.py -- $K/textures rendus-brut/$e $e:$e > rendus-brut/$e.log 2>&1
   python3 $K/recadrer_commun.py rendus-brut/$e reports/aquarium-3d/widget-ocean/poissons-3d/$e
 done
 ```
-Windows (PowerShell) : même boucle, avec `$env:IMAGES="16"` et `& "C:\Program Files\Blender Foundation\Blender 4.5\blender.exe" -b --python ...`.
+Windows (PowerShell) : même boucle, avec `$env:IMAGES="16"; $env:PART_DOS="0.1"` et `& "C:\Program Files\Blender Foundation\Blender 4.5\blender.exe" -b --python ...`.
 `mkdir rendus-brut` d'abord ; ce dossier ne se commite jamais (images brutes).
 
 Réglages par défaut du script, à ne pas changer : 13 angles (`nage`, lacet ±15 à ±90 tous les 15°), 16 images par battement, épaisseur ×1,25, battement 0,16, caméra à 20°, fond transparent. Compter environ 10 minutes par espèce sur 4 cœurs.
