@@ -39,6 +39,16 @@ Points à vérifier à la compilation (écrits sans Mac) : `.widgetAccentedRende
 la limite de 5 est déjà faite dans le code) ; `DisplayRepresentation.Image(named:)` et son image absente du catalogue de l'app ;
 `AppIntentConfiguration(kind:intent:provider:)` avec `#Preview(as:)` ; symbole `circle.grid.2x2.fill` ; `.accessoryInline` cité pour rien dans `FondEau`.
 
+## Animation continue (16 oct., écrit sans Mac)
+
+Les poissons battent de la queue, des bulles montent et des rayons ondulent, en continu, dans le widget (technique de Bryce Bostwick, MIT). Fichiers : `AnimationWidget.swift`, `PoissonVivant.swift`, `DecorAnime.swift` (cible widget ET app), logique pure `HorlogeAnimation.swift` (testée sous Linux : `AppTests/WidgetAquarium/lancer-tests.sh`).
+
+1. Ajouter à la cible widget (et à l'app si on montre le poisson vivant dans l'app) les deux polices `FishMeMasquePair-Regular` et `FishMeMasqueImpair-Regular` (fichiers fabriqués par l'autre agent) : case de la cible cochée, phase « Copy Bundle Resources ».
+2. Les déclarer dans `UIAppFonts` de l'`Info.plist` de la cible widget (et de l'app si besoin) avec le nom de FICHIER exact (`.ttf` ou `.otf`). Le nom passé à `Font.custom` est le nom PostScript : `FishMeMasquePair-Regular`, `FishMeMasqueImpair-Regular`. Si le texte est en police système, c'est ici que ça casse.
+3. Vérifier sur un VRAI iPhone (le simulateur et `ImageRenderer` ne rafraîchissent pas les chronos comme le vrai système) : 8 images/s ; une seule image visible à la fois (pas de fantôme, ni de clignotement noir entre deux images) ; boucle de 2 s ; batterie (un widget en vue tout le temps : regarder la consommation après quelques minutes dans Réglages > Batterie).
+4. Si le carré plein n'est pas aligné (masque trop haut ou trop bas), c'est la ligne de base de la police : le masque doit couvrir toute la vue, vérifier la hauteur de ligne de 1 em.
+5. Repli : si ça ne tourne pas (fantômes, polices ignorées, batterie), passer `anime: false` dans `PoissonVivant` (image entière fixe) et retirer `LumiereAnimee()` / `BullesAnimees()` de `CoucheNage` dans `VuesAquariumWidget.swift`. Avec « Réduire les animations » et sur l'écran verrouillé, l'animation est déjà coupée.
+
 ## Voir les widgets en images
 
 Pour montrer les widgets à Adem sans passer par la galerie : `AppTests/WidgetRendu/RenduWidgetsTests.swift` les rend en PNG avec `ImageRenderer` (14 images, échelle 3, dans `reports/ecrans/L15/`).

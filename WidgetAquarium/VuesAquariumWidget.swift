@@ -111,6 +111,13 @@ private struct CoucheNage: View {
     @Environment(\.widgetRenderingMode) private var rendu
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
 
+    private static func estAccessoire(_ famille: WidgetFamily) -> Bool {
+        switch famille {
+        case .accessoryRectangular, .accessoryCircular, .accessoryInline: true
+        default: false
+        }
+    }
+
     var body: some View {
         let instantane = entree.instantane
         let placements = NageWidget.placements(
@@ -119,24 +126,37 @@ private struct CoucheNage: View {
         let parId = Dictionary(instantane.poissons.map { ($0.id, $0) }, uniquingKeysWith: { premier, _ in premier })
         let part = partPoisson(famille)
         let colore = rendu != .accented
+        let accessoire = Self.estAccessoire(famille)
+        let animePoissons = !reduireAnimations && !accessoire
+        let animeDecor = animePoissons
 
         GeometryReader { geo in
             let l = geo.size.width
             let h = geo.size.height
             ZStack {
-                ForEach(placements) { placement in
+                // Décor animé derrière les poissons, écrans d'accueil seulement (jamais en accessoire).
+                if animeDecor {
+                    LumiereAnimee()
+                    BullesAnimees()
+                }
+                ForEach(Array(placements.enumerated()), id: \.element.id) { index, placement in
                     if let poisson = parId[placement.id] {
                         // Le poisson reste entier dans le widget, même large (petit format).
                         let largeur = l * part * placement.echelle
                         let x = min(max(placement.x * l, largeur / 2 + 4), l - largeur / 2 - 4)
-                        Image(poisson.slug)
-                            .resizable()
-                            .widgetAccentedRenderingMode(.desaturated)
-                            .scaledToFit()
-                            .frame(width: largeur)
-                            .shadow(color: colore ? halo(poisson.rarete) : .clear, radius: 7)
-                            .scaleEffect(x: placement.versLaDroite ? 1 : -1, y: 1)
-                            .position(x: x, y: placement.y * h)
+                        ZStack {
+                            // Le halo de rareté se dessine UNE fois, derrière, hors des 16 copies animées.
+                            if colore && poisson.rarete >= 2 {
+                                Ellipse()
+                                    .fill(RadialGradient(colors: [halo(poisson.rarete).opacity(0.55), .clear],
+                                                         center: .center, startRadius: 0, endRadius: largeur * 0.55))
+                                    .frame(width: largeur * 1.15, height: largeur * 0.6)
+                            }
+                            PoissonVivant(slug: poisson.slug, largeur: largeur,
+                                          versLaDroite: placement.versLaDroite, phase: index * 3,
+                                          anime: animePoissons)
+                        }
+                        .position(x: x, y: placement.y * h)
                     }
                 }
                 // Quelques paillettes de nourriture près de la surface.
