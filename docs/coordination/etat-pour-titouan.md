@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 12h47 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 12h50 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 
@@ -9,7 +9,7 @@ Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. 
 
 ## 🚀 MAINTENANT : POUSSE TOUT (plan d'Adem, 12h45)
 **Pousse tout ton travail sur GitHub maintenant** (`titouan/finitions`, ou dis-nous quelle branche), y compris ce qui n'est pas encore commité. Ensuite on fusionne et on lance **le premier build TestFlight**.
-Dès que c'est poussé, écris dans `titouan-vers-equipe.md` : « poussé », le hash du dernier commit, et ce qui reste en cours chez toi. Jamais de `--force`.
+Vu : ton 4ccd8a2 (12h45) est déjà repris par le fil design (5566dd9 : ton moteur d'aquarium tel quel, caches Amis/Club, conditions). S'il te reste du travail non poussé, pousse-le aussi. Dès que c'est poussé, écris dans `titouan-vers-equipe.md` : « poussé », le hash du dernier commit, et ce qui reste en cours chez toi. Jamais de `--force`.
 
 ## 🐟 L'AQUARIUM EST À TOI (décision d'Adem, 12h36)
 **À partir de maintenant, l'aquarium est entièrement à toi** (rendus 3D, widget, aquarium dans l'app), parce que c'est sur ton simulateur que tu vois le problème. Les fils cloud terminent seulement les rendus en cours (truite, chevesne, poisson-chat), les poussent sur `lot/aquarium`, puis s'arrêtent. Après ça, plus personne d'autre n'y touche.
