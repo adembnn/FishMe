@@ -7474,6 +7474,3424 @@
    "verifie_par": null
   },
   {
+   "id": "28-tous-reserve-aigre-aappma-de-cloyes-bras-naturel-nouv",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "aigre",
+    "lieu": "Aigre (AAPPMA de Cloyes) : bras naturel nouvellement créé, de la diffluence entre le bief et le bras naturel jusqu'au pont de la D8.3",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Toute pêche interdite (réserve temporaire de pêche, R.436-73)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Réserve temporaire : toute pêche interdite sur le bras naturel de l'Aigre, de la diffluence jusqu'au pont de la D8.3.",
+   "textes": [
+    "t15"
+   ],
+   "citation": "Sur le bras naturel de l'Aigre nouvellement cree, de la diffluence entre le bief et le bras naturel jusqu'au pont de la D8.3 (ou confluence des 2 bras)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-reserve-pont-foulon-aappma-de-courtalain-zone-no",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "pont foulon",
+    "lieu": "Pont Foulon (AAPPMA de Courtalain) : zone nord du plan d'eau",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Toute pêche interdite (réserve temporaire de pêche, R.436-73)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Réserve temporaire : toute pêche interdite dans la zone nord du plan d'eau du Pont Foulon.",
+   "textes": [
+    "t15"
+   ],
+   "citation": "Plan d'eau le Pont Foulon | AAPPMA de Courtalain | Zone Nord du plan d'eau (indication precise sur site)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-reserve-gautrey-aappma-de-manou-zone-materialise",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "gautrey",
+    "lieu": "Gautrey (AAPPMA de Manou) : zone matérialisée par des panneaux sur le site",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Toute pêche interdite (réserve temporaire de pêche, R.436-73)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Réserve temporaire : toute pêche interdite dans la zone signalée par des panneaux au plan d'eau de Gautrey.",
+   "textes": [
+    "t15"
+   ],
+   "citation": "Plan d'eau de Gautrey | AAPPMA de Manou | Zone materialisee par des panneaux sur le site.",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-reserve-mezieres-ecluzelles-aappma-de-dreux-tota",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "mezieres ecluzelles",
+    "lieu": "Mézières-Écluzelles (AAPPMA de Dreux) : totalité du port, marais et partie attenante au plan d'eau Solange Epiphane, îles et 50 m autour d'elles",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Toute pêche interdite (réserve temporaire de pêche, R.436-73)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Réserve temporaire : toute pêche interdite au port, aux marais, aux îles et à 50 m autour d'elles, plan d'eau de Mézières-Écluzelles.",
+   "textes": [
+    "t15"
+   ],
+   "citation": "Totalite du port, delimite par les barrieres vertes limitant les acces vehicules",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-reserve-la-borde-1-aappma-de-nogent-le-rotrou-zo",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 1",
+    "lieu": "La Borde 1 (AAPPMA de Nogent-le-Rotrou) : zone délimitée par des panneaux, entre la ligne haute tension et l'Huisne au niveau du déversoir",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Toute pêche interdite (réserve temporaire de pêche, R.436-73)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Réserve temporaire : toute pêche interdite dans la zone balisée du plan d'eau de la Borde 1, côté déversoir.",
+   "textes": [
+    "t15"
+   ],
+   "citation": "Plan d'eau de la Borde 1 | AAPPMA de Nogent-le-Rotrou | Zone delimitee par des panneaux, entre la ligne Haute Tension et l'Huisne au niveau du deversoir du plan d'eau",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-reserve-fontaine-a-jean-aappma-d-auneau-zone-del",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "fontaine a jean",
+    "lieu": "Fontaine à Jean (AAPPMA d'Auneau) : zone délimitée par des panneaux",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "reserve",
+   "valeur": {
+    "texte": "Toute pêche interdite (réserve temporaire de pêche, R.436-73)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Réserve temporaire : toute pêche interdite dans la zone balisée du plan d'eau de la Fontaine à Jean.",
+   "textes": [
+    "t15"
+   ],
+   "citation": "Plan d'eau de la Fontaine a Jean | AAPPMA d'Auneau | Zone delimitee par des panneaux",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-no_kill-cloyes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "yerre",
+    "lieu": "Yerre (AAPPMA de Cloyes-sur-le-Loir)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les poissons ou de toutes les truites selon le parcours (l'extraction ne dit pas lequel)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Parcours no-kill sur la Yerre (cloyes) : remise à l'eau obligatoire (tous poissons ou toutes truites selon le parcours, à vérifier).",
+   "textes": [
+    "t16"
+   ],
+   "citation": "leurre artificiel uniquement, hamecon simple sans ardillon ou ardillon ecrase ; remise a l'eau de TOUS LES POISSONS ou de TOUTES LES TRUITES selon le parcours.",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-no_kill-bazoche",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "yerre",
+    "lieu": "Yerre (AAPPMA de La Bazoche-Gouet) : entre le pont de la voie communale 108 (camping) et la RD 338.2 (Moulin de Pont Galet)",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les poissons ou de toutes les truites selon le parcours (l'extraction ne dit pas lequel)"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Parcours no-kill sur la Yerre (bazoche) : remise à l'eau obligatoire (tous poissons ou toutes truites selon le parcours, à vérifier).",
+   "textes": [
+    "t16"
+   ],
+   "citation": "leurre artificiel uniquement, hamecon simple sans ardillon ou ardillon ecrase ; remise a l'eau de TOUS LES POISSONS ou de TOUTES LES TRUITES selon le parcours.",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2221-no_kill-st-remy",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "avre",
+    "lieu": "Avre (AAPPMA de Saint-Rémy-sur-Avre)",
+    "geometrie": null
+   },
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les truites fario"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Parcours no-kill sur l'Avre (AAPPMA de Saint-Rémy-sur-Avre) : toutes les truites fario sont remises à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "remise a l'eau de TOUTES LES TRUITES FARIO",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-no_kill-les-rayes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les rayes",
+    "lieu": "Les Rayes : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les carpes"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Les Rayes : toutes les carpes remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Rayes (peche au coup sans moulinet, carnassiers au leurre uniquement ; remise a l'eau de toutes les carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-interdit-les-chenes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les chenes",
+    "lieu": "Les Chenes : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche au vif interdite"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Les Chenes : pêche au vif interdite.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2151-no_kill-les-chenes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les chenes",
+    "lieu": "Les Chenes : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les brochets"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Les Chenes : tous les brochets remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2053-no_kill-les-chenes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les chenes",
+    "lieu": "Les Chenes : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les black-bass"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Les Chenes : tous les black-bass remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-no_kill-les-chenes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les chenes",
+    "lieu": "Les Chenes : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les carpes"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Les Chenes : toutes les carpes remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2195-no_kill-les-chenes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les chenes",
+    "lieu": "Les Chenes : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2195"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les sandres"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Les Chenes : tous les sandres remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Chenes (peche au vif interdite ; remise a l'eau de tous les brochets, black-bass, carpes et sandres)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-no_kill-landelles",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "landelles",
+    "lieu": "Landelles : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les carpes"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Landelles : toutes les carpes remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Fontaine Aubert, Lac Arthur Remy, Gasloup grand, Landelles, Montigny-le-Gannelon (remise a l'eau de toutes les carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-mode_peche-les-aulnes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les aulnes",
+    "lieu": "Les Aulnes : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 1,
+    "texte": "1 ligne au plus"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Les Aulnes : 1 ligne au plus.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-no_kill-les-aulnes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les aulnes",
+    "lieu": "Les Aulnes : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les poissons"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Les Aulnes : tous les poissons sont remis à l'eau",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-mode_peche-oseraies",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "oseraies",
+    "lieu": "Oseraies : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 1,
+    "texte": "1 ligne au plus"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Oseraies : 1 ligne au plus.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-no_kill-oseraies",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "oseraies",
+    "lieu": "Oseraies : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les poissons"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Oseraies : tous les poissons sont remis à l'eau",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-mode_peche-petit-plan-d-eau-de-villiers-le-morhier",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "petit plan d eau de villiers le morhier",
+    "lieu": "Petit plan d'eau de Villiers-le-Morhier : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 1,
+    "texte": "1 ligne au plus"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Petit plan d'eau de Villiers-le-Morhier : 1 ligne au plus.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-no_kill-petit-plan-d-eau-de-villiers-le-morhier",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "petit plan d eau de villiers le morhier",
+    "lieu": "Petit plan d'eau de Villiers-le-Morhier : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les poissons"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Petit plan d'eau de Villiers-le-Morhier : tous les poissons sont remis à l'eau",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Les Aulnes et Fontaine a Jean, Gasloup petit, Oseraies, petit plan d'eau de Villiers-le-Morhier (1 ligne, remise a l'eau de tous les poissons)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-interdit-le-tertre",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "le tertre",
+    "lieu": "Le Tertre : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche au vif interdite"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Le Tertre : pêche au vif interdite.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Le Tertre (2 lignes, vif interdit)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-mode_peche-le-tertre",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "le tertre",
+    "lieu": "Le Tertre : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "2 lignes au plus"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Le Tertre : 2 lignes au plus.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Le Tertre (2 lignes, vif interdit)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-interdit-la-borde-1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 1",
+    "lieu": "La Borde 1 : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "interdit",
+   "valeur": {
+    "texte": "Pêche au vif et au poisson mort posé interdite"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau La Borde 1 : pêche au vif et au poisson mort posé interdite.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2053-no_kill-la-borde-1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 1",
+    "lieu": "La Borde 1 : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les black-bass"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau La Borde 1 : tous les black-bass remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2151-no_kill-la-borde-1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 1",
+    "lieu": "La Borde 1 : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les brochets"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau La Borde 1 : tous les brochets remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2137-no_kill-la-borde-1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 1",
+    "lieu": "La Borde 1 : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2137"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les tanches"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau La Borde 1 : toutes les tanches remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-no_kill-la-borde-1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 1",
+    "lieu": "La Borde 1 : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les carpes"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau La Borde 1 : toutes les carpes remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-mode_peche-la-borde-2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 2",
+    "lieu": "La Borde 2 : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "mode_peche",
+   "valeur": {
+    "lignes_max": 2,
+    "texte": "2 lignes au plus"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau La Borde 2 : 2 lignes au plus.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "La Borde 2 (2 lignes ; remise a l'eau de tous les poissons)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-tous-no_kill-la-borde-2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 2",
+    "lieu": "La Borde 2 : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les poissons"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau La Borde 2 : tous les poissons sont remis à l'eau",
+   "textes": [
+    "t16"
+   ],
+   "citation": "La Borde 1 (vif et poisson mort pose interdit ; remise a l'eau de tous les black-bass, brochets, tanches et carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2053-no_kill-dangeau",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "dangeau",
+    "lieu": "Dangeau : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les black-bass"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Dangeau : tous les black-bass remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-no_kill-dangeau",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "dangeau",
+    "lieu": "Dangeau : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les carpes"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Dangeau : toutes les carpes remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2137-no_kill-dangeau",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "dangeau",
+    "lieu": "Dangeau : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2137"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les tanches"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Dangeau : toutes les tanches remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2053-no_kill-le-baignon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "le baignon",
+    "lieu": "Le Baignon : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2053"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de tous les black-bass"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Le Baignon : tous les black-bass remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-no_kill-le-baignon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "le baignon",
+    "lieu": "Le Baignon : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les carpes"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Le Baignon : toutes les carpes remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2137-no_kill-le-baignon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "le baignon",
+    "lieu": "Le Baignon : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2137"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les tanches"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Le Baignon : toutes les tanches remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Dangeau, Le Baignon, Gilbert Lecomte (remise a l'eau black-bass, carpes, tanches)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-no_kill-saint-piat",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "saint piat",
+    "lieu": "Saint-Piat : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les carpes"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Saint-Piat : toutes les carpes remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2151-quota_jour-saint-piat",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "saint piat",
+    "lieu": "Saint-Piat : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 1,
+    "texte": "Prélèvement limité à 1 brochet par jour"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Saint-Piat : prélèvement limité à 1 brochet par jour.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-no_kill-change",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "change",
+    "lieu": "Changé : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "no_kill",
+   "valeur": {
+    "texte": "Remise à l'eau de toutes les carpes"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Changé : toutes les carpes remis à l'eau.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2151-quota_jour-change",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "change",
+    "lieu": "Changé : parcours no-kill",
+    "geometrie": null
+   },
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "type": "quota_jour",
+   "valeur": {
+    "nombre": 1,
+    "texte": "Prélèvement limité à 1 brochet par jour"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau Changé : prélèvement limité à 1 brochet par jour.",
+   "textes": [
+    "t16"
+   ],
+   "citation": "Vieux Moulin Chapelle-Royale, Saint-Piat, Changé (prelevement limite a 1 brochet par jour ; remise a l'eau de toutes les carpes)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-loir-st-maur",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Saint-Maur-sur-le-Loir) : rive gauche, deux postes près de Meuves et du pont de Meuve",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-loir-st-martin",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Bonneval) : rive droite, Saint-Martin-de-Péan",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-loir-ouzenain",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Bonneval) : rive droite, Ouzenain",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-loir-boissiere",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Châteaudun) : rive gauche, La Boissière",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Loir rive gauche a Chateaudun (La Boissiere, La Roche)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-loir-boissiere",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Châteaudun) : rive gauche, La Boissière",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-loir-la-roche",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Châteaudun) : rive gauche, La Roche",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Loir rive gauche a Chateaudun (La Boissiere, La Roche)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-loir-la-roche",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Châteaudun) : rive gauche, La Roche",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-loir-greslard",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Marboué) : Greslard",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Loir a Marboue (Greslard, Les Gats)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-loir-greslard",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Marboué) : Greslard",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-loir-gats",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Marboué) : Les Gats",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Loir a Marboue (Greslard, Les Gats)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-loir-gats",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Marboué) : Les Gats",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-loir-vicomte",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Châteaudun) : rive droite, pré de la Vicomte",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Loir rive gauche a Chateaudun (La Boissiere, La Roche)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-loir-vicomte",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Châteaudun) : rive droite, pré de la Vicomte",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-loir-boelle",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Cloyes-les-Trois-Rivières) : Roide Boelle",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Loir a Cloyes-les-Trois-Rivieres (Roide Boelle",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-loir-boelle",
+   "portee": {
+    "niveau": "troncon",
+    "code": "28",
+    "eau": "loir",
+    "lieu": "Loir (Cloyes-les-Trois-Rivières) : Roide Boelle",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Loir : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-galloire",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la galloire",
+    "lieu": "Plan d'eau de la Galloire (Cloyes-les-Trois-Rivières), sur le Loir",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau de la Galloire : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "plan d'eau de la Galloire)",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-galloire",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la galloire",
+    "lieu": "Plan d'eau de la Galloire (Cloyes-les-Trois-Rivières), sur le Loir",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Plan d'eau de la Galloire : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-ecluzelles",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "ecluzelles",
+    "lieu": "Écluzelles : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif ; sur réservation"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écluzelles : pêche de la carpe autorisée à toute heure, y compris de nuit, sur réservation.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Ecluzelles",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-ecluzelles",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "ecluzelles",
+    "lieu": "Écluzelles : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écluzelles : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-ecoublanc",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "ecoublanc",
+    "lieu": "Écoublanc (Marboué) : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Écoublanc : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-fontaine-a-jean",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "fontaine a jean",
+    "lieu": "Fontaine à Jean (Auneau) : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Fontaine à Jean : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-les-aulnes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les aulnes",
+    "lieu": "Les Aulnes (Auneau) : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Aulnes : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-comteville",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "comteville",
+    "lieu": "Comteville : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif ; sur réservation"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Comteville : pêche de la carpe autorisée à toute heure, y compris de nuit, sur réservation.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Comteville",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-comteville",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "comteville",
+    "lieu": "Comteville : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Comteville : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-bois-de-clos",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "bois de clos",
+    "lieu": "Bois de Clos : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif ; sur réservation"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Bois de Clos : pêche de la carpe autorisée à toute heure, y compris de nuit, sur réservation.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Bois de Clos",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-bois-de-clos",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "bois de clos",
+    "lieu": "Bois de Clos : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Bois de Clos : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-les-chenes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les chenes",
+    "lieu": "Les Chenes : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif ; sur réservation"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Chenes : pêche de la carpe autorisée à toute heure, y compris de nuit, sur réservation.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les Chenes",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-les-chenes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les chenes",
+    "lieu": "Les Chenes : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Chenes : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-la-goujonniere",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la goujonniere",
+    "lieu": "La Goujonniere : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif ; sur réservation"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Goujonniere : pêche de la carpe autorisée à toute heure, y compris de nuit, sur réservation.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "La Goujonniere",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-la-goujonniere",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la goujonniere",
+    "lieu": "La Goujonniere : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Goujonniere : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-pierre-maubert-ii",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "pierre maubert ii",
+    "lieu": "Pierre Maubert II : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif ; sur réservation"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Pierre Maubert II : pêche de la carpe autorisée à toute heure, y compris de nuit, sur réservation.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Pierre Maubert II",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-pierre-maubert-ii",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "pierre maubert ii",
+    "lieu": "Pierre Maubert II : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Pierre Maubert II : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-le-baignon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "le baignon",
+    "lieu": "Le Baignon : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Baignon : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Le Baignon",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-le-baignon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "le baignon",
+    "lieu": "Le Baignon : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Baignon : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-saint-georges-sur-eure",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "saint georges sur eure",
+    "lieu": "Saint-Georges-sur-Eure : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Saint-Georges-sur-Eure : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-les-ballastieres",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les ballastieres",
+    "lieu": "Les Ballastières (Montigny-le-Gannelon) : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Ballastières : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-les-tirelles",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les tirelles",
+    "lieu": "Les Tirelles : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Tirelles : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les Tirelles",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-les-tirelles",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les tirelles",
+    "lieu": "Les Tirelles : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Tirelles : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-etang-du-roi",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "roi",
+    "lieu": "Étang du Roi (Chérisy) : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Étang du Roi : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-marcel-huart",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "marcel huart",
+    "lieu": "Marcel Huart : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Marcel Huart : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Marcel Huart",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-marcel-huart",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "marcel huart",
+    "lieu": "Marcel Huart : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Marcel Huart : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-le-pont-foulon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "le pont foulon",
+    "lieu": "Le Pont Foulon : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Pont Foulon : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Le Pont Foulon",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-le-pont-foulon",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "le pont foulon",
+    "lieu": "Le Pont Foulon : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Pont Foulon : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-les-fontaines",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les fontaines",
+    "lieu": "Les Fontaines : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Fontaines : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les Fontaines",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-les-fontaines",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les fontaines",
+    "lieu": "Les Fontaines : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Fontaines : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-les-gollions",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les gollions",
+    "lieu": "Les Gollions : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Gollions : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les Gollions",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-les-gollions",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les gollions",
+    "lieu": "Les Gollions : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Gollions : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-raoul-blavat",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "raoul blavat",
+    "lieu": "Raoul Blavat (Saint-Denis-les-Ponts) : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Raoul Blavat : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-vouvray",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "vouvray",
+    "lieu": "Vouvray (Saint-Denis-les-Ponts) : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Vouvray : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-les-ilots",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les ilots",
+    "lieu": "Les Ilots (Saint-Denis-les-Ponts) : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Ilots : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-les-vingtaines",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les vingtaines",
+    "lieu": "Les Vingtaines : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Vingtaines : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les Vingtaines",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-les-vingtaines",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les vingtaines",
+    "lieu": "Les Vingtaines : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Vingtaines : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-le-tertre",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "le tertre",
+    "lieu": "Le Tertre : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Tertre : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Le Tertre",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-le-tertre",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "le tertre",
+    "lieu": "Le Tertre : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Le Tertre : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-jean-lavigne",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "jean lavigne",
+    "lieu": "Jean Lavigne : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Jean Lavigne : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Jean Lavigne",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-jean-lavigne",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "jean lavigne",
+    "lieu": "Jean Lavigne : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Jean Lavigne : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-les-chatelets",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les chatelets",
+    "lieu": "Les Châtelets : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Châtelets : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les Chatelets",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-les-chatelets",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "les chatelets",
+    "lieu": "Les Châtelets : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Les Châtelets : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-la-borde-1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 1",
+    "lieu": "La Borde 1 : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Borde 1 : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "La Borde 1 et 2",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-la-borde-1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 1",
+    "lieu": "La Borde 1 : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Borde 1 : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-la-borde-2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 2",
+    "lieu": "La Borde 2 : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Borde 2 : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "La Borde 1 et 2",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-la-borde-2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la borde 2",
+    "lieu": "La Borde 2 : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Borde 2 : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-louis-barbot-grand",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "louis barbot grand",
+    "lieu": "Louis Barbot grand : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Louis Barbot grand : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-la-digue",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la digue",
+    "lieu": "La Digue : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Digue : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "La Digue",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-la-digue",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "la digue",
+    "lieu": "La Digue : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "La Digue : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-landelles",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "landelles",
+    "lieu": "Landelles : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Landelles : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Landelles",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-landelles",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "landelles",
+    "lieu": "Landelles : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Landelles : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-barjouville",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "barjouville",
+    "lieu": "Barjouville : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Barjouville : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Barjouville",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-barjouville",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "barjouville",
+    "lieu": "Barjouville : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Barjouville : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-gilbert-lecomte",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "gilbert lecomte",
+    "lieu": "Gilbert Lecomte : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Gilbert Lecomte : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Gilbert Lecomte",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-gilbert-lecomte",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "gilbert lecomte",
+    "lieu": "Gilbert Lecomte : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Gilbert Lecomte : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-change",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "change",
+    "lieu": "Changé : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Changé : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Changé",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-change",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "change",
+    "lieu": "Changé : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Changé : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-michel-hamet",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "michel hamet",
+    "lieu": "Michel Hamet (Brou) : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Michel Hamet : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-dangeau",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "dangeau",
+    "lieu": "Dangeau : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Dangeau : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Dangeau",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-dangeau",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "dangeau",
+    "lieu": "Dangeau : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Dangeau : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-carpe_nuit-pe-luisant",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "luisant",
+    "lieu": "Luisant : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "carpe_nuit",
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure sur ce parcours associatif"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Luisant : pêche de la carpe autorisée à toute heure, y compris de nuit.",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Luisant",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
+   "id": "28-2110-remise_eau-pe-luisant",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "28",
+    "eau": "luisant",
+    "lieu": "Luisant : parcours de pêche de la carpe",
+    "geometrie": null
+   },
+   "especes": [
+    "2110"
+   ],
+   "categorie": "toutes",
+   "type": "remise_eau",
+   "valeur": {
+    "texte": "Carpes pêchées de nuit (une demi-heure après le coucher du soleil jusqu'à une demi-heure avant le lever) : remise à l'eau immédiate, maintien en captivité et transport interdits"
+   },
+   "du": null,
+   "au": null,
+   "remplace": null,
+   "phrase": "Luisant : toute carpe prise de nuit est remise à l'eau tout de suite (ni garde en captivité ni transport).",
+   "textes": [
+    "t17"
+   ],
+   "citation": "Les carpes pechees de nuit (une demi-heure apres le coucher du soleil jusqu'a une demi-heure avant son lever) doivent etre immediatement remises a l'eau (maintien en captivite et transport interdits).",
+   "expire_le": "2026-12-31",
+   "statut": "incertain",
+   "verifie_par": null
+  },
+  {
    "id": "28-2221-taille_min-cours-d-eau-non-cites-a-part",
    "portee": {
     "niveau": "departement",
@@ -7618,1123 +11036,6 @@
   }
  ],
  "a_verifier": [
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "aigre",
-   "textes": [
-    "t15"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "pont foulon",
-   "textes": [
-    "t15"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "gautrey",
-   "textes": [
-    "t15"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "mezieres ecluzelles",
-   "textes": [
-    "t15"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "la borde 1",
-   "textes": [
-    "t15"
-   ]
-  },
-  {
-   "type": "reserve",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "fontaine a jean",
-   "textes": [
-    "t15"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "yerre",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2221"
-   ],
-   "categorie": "toutes",
-   "eau": "avre",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les rayes",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "les chenes",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "eau": "les chenes",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2053"
-   ],
-   "categorie": "toutes",
-   "eau": "les chenes",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les chenes",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2195"
-   ],
-   "categorie": "toutes",
-   "eau": "les chenes",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "landelles",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "les aulnes",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "les aulnes",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "oseraies",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "oseraies",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "petit plan d eau de villiers le morhier",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "petit plan d eau de villiers le morhier",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "le tertre",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "le tertre",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "interdit",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "la borde 1",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2053"
-   ],
-   "categorie": "toutes",
-   "eau": "la borde 1",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "eau": "la borde 1",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2137"
-   ],
-   "categorie": "toutes",
-   "eau": "la borde 1",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "la borde 1",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "mode_peche",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "la borde 2",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [],
-   "categorie": "toutes",
-   "eau": "la borde 2",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2053"
-   ],
-   "categorie": "toutes",
-   "eau": "dangeau",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "dangeau",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2137"
-   ],
-   "categorie": "toutes",
-   "eau": "dangeau",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2053"
-   ],
-   "categorie": "toutes",
-   "eau": "le baignon",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "le baignon",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2137"
-   ],
-   "categorie": "toutes",
-   "eau": "le baignon",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "saint piat",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "quota_jour",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "eau": "saint piat",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "no_kill",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "change",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "quota_jour",
-   "especes": [
-    "2151"
-   ],
-   "categorie": "toutes",
-   "eau": "change",
-   "textes": [
-    "t16"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "loir",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "loir",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "la galloire",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "la galloire",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "ecluzelles",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "ecluzelles",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "ecoublanc",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "fontaine a jean",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les aulnes",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "comteville",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "comteville",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "bois de clos",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "bois de clos",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les chenes",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les chenes",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "la goujonniere",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "la goujonniere",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "pierre maubert ii",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "pierre maubert ii",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "le baignon",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "le baignon",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "saint georges sur eure",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les ballastieres",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les tirelles",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les tirelles",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "roi",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "marcel huart",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "marcel huart",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "le pont foulon",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "le pont foulon",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les fontaines",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les fontaines",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les gollions",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les gollions",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "raoul blavat",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "vouvray",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les ilots",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les vingtaines",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les vingtaines",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "le tertre",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "le tertre",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "jean lavigne",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "jean lavigne",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les chatelets",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "les chatelets",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "la borde 1",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "la borde 1",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "la borde 2",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "la borde 2",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "louis barbot grand",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "la digue",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "la digue",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "landelles",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "landelles",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "barjouville",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "barjouville",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "gilbert lecomte",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "gilbert lecomte",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "change",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "change",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "michel hamet",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "dangeau",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "dangeau",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "carpe_nuit",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "luisant",
-   "textes": [
-    "t17"
-   ]
-  },
-  {
-   "type": "remise_eau",
-   "especes": [
-    "2110"
-   ],
-   "categorie": "toutes",
-   "eau": "luisant",
-   "textes": [
-    "t17"
-   ]
-  },
   {
    "type": "ouverture",
    "especes": [
