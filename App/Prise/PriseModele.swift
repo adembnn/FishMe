@@ -192,7 +192,7 @@ final class PriseModele {
     }
 
     func confirmerLaTaille() {
-        if let entree = especeConfirmee { memoire.retenir(longueurCm, pour: entree.espece) }
+        if plageAR == nil, let entree = especeConfirmee { memoire.retenir(longueurCm, pour: entree.espece) }
         tailleConfirmee = true
         etape = .details
     }

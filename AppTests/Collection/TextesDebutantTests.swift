@@ -3,6 +3,7 @@ import Foundation
 import Testing
 @testable import BuildChallenge
 
+@MainActor
 struct TextesDebutantTests {
     @Test func releveAccordeLePluriel() {
         #expect(texteReleve(nPeches: 1, annee: 2024) == "1 pêche, dernier relevé 2024")

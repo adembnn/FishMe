@@ -120,7 +120,7 @@ struct LigneRegleView: View {
 
     private var couleurEtat: Color {
         // Une règle d'interdiction (consommation, mode de pêche, nuit) n'est jamais verte, quel que soit l'état.
-        if PriseLogique.estUneInterdiction(ligne.type) && ligne.etat != .nonRespectee { return Palette.encreDouce }
+        if [.consommation, .modeDePeche, .nuit].contains(ligne.type) && ligne.etat != .nonRespectee { return Palette.encreDouce }
         switch ligne.etat {
         case .respectee: return Palette.ouvert
         case .nonRespectee: return Palette.alerte
