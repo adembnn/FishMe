@@ -14,7 +14,7 @@ enum ImagePartage {
         let infos = InfosCarte.construire(detail: detail, espece: espece, zone: dept, toutesLesCartes: [prise],
                                           especesDeLaZone: [], services: services)
         let vue = CarteRectoView(infos: infos, anime: false, inclinaison: .zero, refletFixe: true,
-                                imageDecodee: UIImage(named: infos.espece.image))
+                                imageDecodee: UIImage(named: infos.espece.image), pourPartage: true)
             .frame(width: largeur, height: largeur / Jeton.rapportCarte)
             .padding(16)
             .background(Jeton.fondPage)

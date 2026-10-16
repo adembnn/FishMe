@@ -35,7 +35,11 @@ final class PriseModele {
     private(set) var especeConfirmee: EspecePechable?
     private(set) var stade: StadeAnguille?
 
-    var longueurCm: Double = 40
+    var longueurCm: Double = PriseLogique.tailleDeDepart {
+        didSet { if longueurCm != oldValue { curseurBouge = true } }
+    }
+    /// Faux tant que ni le curseur ni la toise n'ont donné une taille : on ne confirme pas la valeur de départ.
+    private(set) var curseurBouge = false
     /// Valeur lue sur la toise, pour savoir si le pêcheur a gardé la valeur pré-réglée.
     private(set) var longueurLue: Double?
     private(set) var tailleConfirmee = false

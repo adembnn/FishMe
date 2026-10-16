@@ -44,6 +44,8 @@ struct CarteRectoView: View {
     var refletFixe = false
     /// Image déjà décodée (rendu du partage) : évite le fournisseur d'images asynchrone d'`ImageRenderer`, qui peut expirer.
     var imageDecodee: UIImage? = nil
+    /// Image partagée : ni rivière, ni jour exact (le département et « mois année » suffisent).
+    var pourPartage = false
 
     var body: some View {
         CarteCadre(style: infos.style, declaree: infos.prise.estDeclaree) {
@@ -142,11 +144,13 @@ struct CarteRectoView: View {
 
     private var pied: some View {
         VStack(alignment: .leading, spacing: 2) {
-            if let lieu = infos.prise.lieuFlou, !infos.prise.estDeclaree {
+            if pourPartage {
+                if let d = infos.departement { Text("Département \(d.code)").font(Jeton.police(15)) }
+            } else if let lieu = infos.prise.lieuFlou, !infos.prise.estDeclaree {
                 Text(lieu).font(Jeton.police(15))
             }
             HStack(spacing: 6) {
-                Text(Formats.date(infos.prise.date))
+                Text(pourPartage ? Formats.moisAnnee(infos.prise.date) : Formats.date(infos.prise.date))
                 if let rang = infos.rangDansLaZone, let d = infos.departement {
                     Text("· espèce n°\(rang) du \(d.code)")
                 }

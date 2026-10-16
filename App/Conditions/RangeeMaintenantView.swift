@@ -27,16 +27,18 @@ struct RangeeMaintenantView: View {
     var body: some View {
         let c = lecture.conditions
         let point = FormatConditions.pointLePlusProche(lecture.meteo, de: c.heure)
+        // Vent, pluie et pression viennent du point météo le plus proche : on dit de quand il date.
+        let heureMesure = point.map { "mesuré à \(FormatConditions.heure($0.heure))" }
         VStack(alignment: .leading, spacing: 10) {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 130), spacing: 12, alignment: .topLeading)], alignment: .leading, spacing: 14) {
                 if let v = c.ventKmh {
-                    CaseCondition(icone: "wind", valeur: "\(FormatConditions.nombre(v)) km/h", detail: detailVent(point))
+                    CaseCondition(icone: "wind", valeur: "\(FormatConditions.nombre(v)) km/h", detail: detailVent(point, mesureA: heureMesure))
                 }
                 if let p = c.pluieMm {
-                    CaseCondition(icone: "cloud.rain", valeur: "\(FormatConditions.nombre(p, decimales: 1)) mm", detail: nil)
+                    CaseCondition(icone: "cloud.rain", valeur: "\(FormatConditions.nombre(p, decimales: 1)) mm", detail: heureMesure)
                 }
                 if let hpa = c.pressionHPa {
-                    CaseCondition(icone: "gauge.medium", valeur: FormatConditions.pression(hpa, tendance: c.tendancePressionHPa6h), detail: nil)
+                    CaseCondition(icone: "gauge.medium", valeur: FormatConditions.pression(hpa, tendance: c.tendancePressionHPa6h), detail: heureMesure)
                 }
                 if let a = c.aube { CaseCondition(icone: "sunrise.fill", valeur: FormatConditions.heure(a), detail: nil) }
                 if let s = c.crepuscule { CaseCondition(icone: "sunset.fill", valeur: FormatConditions.heure(s), detail: nil) }
@@ -49,9 +51,10 @@ struct RangeeMaintenantView: View {
         .accessibilityIdentifier("rangee-maintenant")
     }
 
-    private func detailVent(_ p: PointMeteo?) -> String? {
+    private func detailVent(_ p: PointMeteo?, mesureA: String?) -> String? {
         guard let p else { return nil }
         var morceaux: [String] = []
+        if let mesureA { morceaux.append(mesureA) }
         if let d = p.directionDeg { morceaux.append(FormatConditions.cardinal(d)) }
         if let r = p.rafalesKmh { morceaux.append("rafales \(FormatConditions.nombre(r))") }
         return morceaux.isEmpty ? nil : morceaux.joined(separator: " · ")

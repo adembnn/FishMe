@@ -9,6 +9,11 @@ enum Formats {
         d.formatted(.dateTime.day().month(.abbreviated).year().locale(locale))
     }
 
+    /// Le partage ne donne jamais le jour : « oct. 2026 ».
+    static func moisAnnee(_ d: Date) -> String {
+        d.formatted(.dateTime.month(.abbreviated).year().locale(locale))
+    }
+
     static func heure(_ d: Date) -> String {
         d.formatted(.dateTime.hour().minute().locale(locale))
     }
