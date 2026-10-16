@@ -736,88 +736,6 @@
    }
   },
   {
-   "id": "41-anguille-jaune-ouverture-cat1",
-   "type": "ouverture",
-   "especes": [
-    "anguille-jaune"
-   ],
-   "categorie": "1",
-   "portee": {
-    "niveau": "departement",
-    "code": "41",
-    "lieu": null,
-    "plan_eau": null,
-    "cours_eau": null
-   },
-   "du": "2026-04-01",
-   "au": "2026-08-31",
-   "valeur": {
-    "formule": "du 1er avril au 31 août inclus"
-   },
-   "phrase": "Anguille jaune : pêche ouverte du 1er avril au 31 août inclus en 1re catégorie.",
-   "source": {
-    "texte": "Arrêté préfectoral n° 41-2025-12-18-00004 du 18 décembre 2025, article 2",
-    "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2025-12-18"
-   },
-   "citation": "anguille jaune : du 1° avril au 31 août inclus",
-   "statut": "brouillon",
-   "expire_le": "2026-12-31",
-   "remplace": null,
-   "lecture_b": {
-    "id": "41-anguille-jaune-ouverture-cat1",
-    "source": {
-     "texte": "Arrêté préfectoral n° 41-2025-12-18-00004 relatif à l'exercice de la pêche en eau douce dans le département de Loir-et-Cher pour l'année 2026, art. 2",
-     "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2025-12-18"
-    },
-    "citation": "anguille jaune : du 1° avril au 31 août inclus"
-   }
-  },
-  {
-   "id": "41-anguille-jaune-ouverture-cat2",
-   "type": "ouverture",
-   "especes": [
-    "anguille-jaune"
-   ],
-   "categorie": "2",
-   "portee": {
-    "niveau": "departement",
-    "code": "41",
-    "lieu": null,
-    "plan_eau": null,
-    "cours_eau": null
-   },
-   "du": "2026-04-01",
-   "au": "2026-08-31",
-   "valeur": {
-    "formule": "du 1er avril au 31 août inclus"
-   },
-   "phrase": "Anguille jaune : pêche ouverte du 1er avril au 31 août inclus en 2e catégorie.",
-   "source": {
-    "texte": "Arrêté préfectoral n° 41-2025-12-18-00004 du 18 décembre 2025, article 3",
-    "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
-    "lu_le": "2026-10-15",
-    "version": "2025-12-18"
-   },
-   "citation": "anguille jaune : du 1° avril au 31 août inclus",
-   "statut": "brouillon",
-   "expire_le": "2026-12-31",
-   "remplace": null,
-   "lecture_b": {
-    "id": "41-anguille-jaune-ouverture-cat2",
-    "source": {
-     "texte": "Arrêté préfectoral n° 41-2025-12-18-00004 relatif à l'exercice de la pêche en eau douce dans le département de Loir-et-Cher pour l'année 2026, art. 3",
-     "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
-     "lu_le": "2026-10-15",
-     "version": "2025-12-18"
-    },
-    "citation": "anguille jaune : du 1° avril au 31 août inclus"
-   }
-  },
-  {
    "id": "41-grenouille-verte-ouverture-cat1",
    "type": "ouverture",
    "especes": [
@@ -5955,6 +5873,90 @@
     "statut": "incertain",
     "expire_le": "2026-12-31",
     "remplace": null
+   },
+   {
+    "id": "41-anguille-jaune-ouverture-cat1",
+    "type": "ouverture",
+    "especes": [
+     "anguille-jaune"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "41",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-04-01",
+    "au": "2026-08-31",
+    "valeur": {
+     "formule": "du 1er avril au 31 août inclus"
+    },
+    "phrase": "Anguille jaune : pêche ouverte du 1er avril au 31 août inclus en 1re catégorie.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 41-2025-12-18-00004 du 18 décembre 2025, article 2",
+     "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-18"
+    },
+    "citation": "anguille jaune : du 1° avril au 31 août inclus",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null,
+    "lecture_b": {
+     "id": "41-anguille-jaune-ouverture-cat1",
+     "source": {
+      "texte": "Arrêté préfectoral n° 41-2025-12-18-00004 relatif à l'exercice de la pêche en eau douce dans le département de Loir-et-Cher pour l'année 2026, art. 2",
+      "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2025-12-18"
+     },
+     "citation": "anguille jaune : du 1° avril au 31 août inclus"
+    },
+    "retire_car": "texte abrogé ou modifié"
+   },
+   {
+    "id": "41-anguille-jaune-ouverture-cat2",
+    "type": "ouverture",
+    "especes": [
+     "anguille-jaune"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "41",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-04-01",
+    "au": "2026-08-31",
+    "valeur": {
+     "formule": "du 1er avril au 31 août inclus"
+    },
+    "phrase": "Anguille jaune : pêche ouverte du 1er avril au 31 août inclus en 2e catégorie.",
+    "source": {
+     "texte": "Arrêté préfectoral n° 41-2025-12-18-00004 du 18 décembre 2025, article 3",
+     "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-18"
+    },
+    "citation": "anguille jaune : du 1° avril au 31 août inclus",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null,
+    "lecture_b": {
+     "id": "41-anguille-jaune-ouverture-cat2",
+     "source": {
+      "texte": "Arrêté préfectoral n° 41-2025-12-18-00004 relatif à l'exercice de la pêche en eau douce dans le département de Loir-et-Cher pour l'année 2026, art. 3",
+      "url": "http://www.peche41.fr/cms_viewFile.php?idtf=56676&path=AP26.pdf",
+      "lu_le": "2026-10-15",
+      "version": "2025-12-18"
+     },
+     "citation": "anguille jaune : du 1° avril au 31 août inclus"
+    },
+    "retire_car": "texte abrogé ou modifié"
    }
   ],
   "seulement_b": [
