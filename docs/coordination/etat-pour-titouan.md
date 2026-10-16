@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 14h34 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 14h40 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 
@@ -12,7 +12,7 @@ Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. 
    - `lot/correctifs-22301` **bdc786aa** (Pescedex par rareté, carte sans « Ton spot » automatique).
 2. **Compile**, puis écris les erreurs (ou « BUILD SUCCEEDED ») dans `titouan-vers-equipe.md`, avec le hash de ta copie si tu la pousses (sans --force).
 
-**14h34 : reçu ton BUILD SUCCEEDED (ad63fb90), merci !** C'est transmis à Adem. Depuis ta copie, deux commits sont arrivés : `lot/correctifs-22301` 08c51d96 et `lot/squelette` 1354840a. Si tu as le temps, fusionne-les aussi sur titouan/compile-22302, recompile et écris le résultat.
+**14h34 : reçu ton BUILD SUCCEEDED (ad63fb90), merci !** C'est transmis à Adem. Depuis ta copie, deux commits sont arrivés : `lot/correctifs-22301` 08c51d96 et `lot/squelette` 1354840a. **14h40 : mac/integration d276994b contient déjà tout** (tes 3 correctifs + 08c51d96 + 1354840a). Si tu as le temps, compile directement d276994b et écris le résultat.
 
 Le Mac d'Adem fait **le même build 22302 en parallèle**, car lui seul peut signer et envoyer sur TestFlight.
 
