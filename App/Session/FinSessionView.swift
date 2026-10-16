@@ -78,6 +78,11 @@ struct FinSessionView: View {
                     Palette.fond
                     Palette.eauClaire.frame(height: geo.size.height * 0.2).rotationEffect(.degrees(-12)).offset(y: 20)
                     Palette.eau.frame(height: geo.size.height * 0.1).rotationEffect(.degrees(-12)).offset(y: 20)
+                    // Le cercle du spot (1 km), posé sur la rivière : jamais un point exact.
+                    Circle().fill(Palette.marine.opacity(0.12))
+                        .overlay(Circle().stroke(Palette.marine, lineWidth: 2))
+                        .frame(width: 172, height: 172)
+                        .offset(x: geo.size.width * 0.17, y: geo.size.height * 0.1)
                 } else if let photo = imageDe(vedette) {
                     Image(uiImage: photo)
                         .resizable()
@@ -240,10 +245,7 @@ struct FinSessionView: View {
     /// // À brancher : température et hauteur d'eau (« 14° », « 1,42 m ») n'existent pas encore dans `Conditions`.
     private func ligneConditions(_ c: Conditions) -> some View {
         HStack(alignment: .top, spacing: Espace.s) {
-            if let fin = c.finLegale {
-                caseCondition(symbole: "clock", valeur: fin.formatted(.dateTime.hour().minute().locale(Locale(identifier: "fr_FR"))),
-                              legende: "fin légale")
-            }
+            // P16 A : vent, rivière, pression. P47 A (bredouille) : vent, rivière, puis la fin légale.
             if let vent = c.ventKmh {
                 caseCondition(symbole: "wind", valeur: "\(Int(vent.rounded()))", legende: "km/h")
             }
@@ -251,7 +253,10 @@ struct FinSessionView: View {
                 caseCondition(symbole: "water.waves", valeur: c.etatRiviere.libelle, legende: "rivière",
                               alerte: c.etatRiviere == .crue)
             }
-            if let hpa = c.pressionHPa {
+            if vedette == nil, let fin = c.finLegale {
+                caseCondition(symbole: "clock", valeur: fin.formatted(.dateTime.hour().minute().locale(Locale(identifier: "fr_FR"))),
+                              legende: "fin légale")
+            } else if let hpa = c.pressionHPa {
                 caseCondition(symbole: "gauge.medium", valeur: "\(Int(hpa.rounded()))", legende: "hPa")
             }
         }

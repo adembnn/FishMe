@@ -26,13 +26,38 @@ struct MesSortiesView: View {
     private var triees: [Sortie] { sorties.filter { $0.fin != nil }.sorted { $0.debut > $1.debut } }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: Espace.m) {
-            HStack {
-                BoutonRond(role: .retour, rendu: .verre, action: surRetour)
-                Spacer()
+        ZStack(alignment: .bottom) {
+            fondCarte
+            feuille
+        }
+        .background(Palette.fond)
+        .overlay(alignment: .topLeading) {
+            BoutonRond(role: .retour, rendu: .verre, action: surRetour)
+                .padding(.leading, Espace.bord)
+                .padding(.top, Espace.s)
+        }
+    }
+
+    /// P17 A : la carte de la zone derrière la feuille (aplats d'eau, pas de point exact).
+    private var fondCarte: some View {
+        GeometryReader { geo in
+            ZStack {
+                Palette.fond
+                Palette.eauClaire.frame(height: geo.size.height * 0.2).rotationEffect(.degrees(-12)).offset(y: 20)
+                Palette.eau.frame(height: geo.size.height * 0.1).rotationEffect(.degrees(-12)).offset(y: 20)
             }
+            .frame(width: geo.size.width, height: geo.size.height)
+            .clipped()
+        }
+        .ignoresSafeArea()
+        .accessibilityHidden(true)
+    }
+
+    private var feuille: some View {
+        VStack(alignment: .leading, spacing: Espace.m) {
+            Capsule().fill(Palette.filet).frame(width: 36, height: 5).frame(maxWidth: .infinity)
             Text("Mes sorties")
-                .font(Police.grandTitre)
+                .font(Police.titre)
                 .foregroundStyle(Palette.encre)
             if triees.isEmpty {
                 vide
@@ -48,12 +73,15 @@ struct MesSortiesView: View {
                     }
                 }
                 .scrollIndicators(.hidden)
+                .frame(maxHeight: 340)
             }
         }
         .padding(.horizontal, Espace.bord)
         .padding(.top, Espace.s)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Palette.fond)
+        .padding(.bottom, Espace.l)
+        .frame(maxWidth: .infinity)
+        .background(Palette.surface, in: UnevenRoundedRectangle(topLeadingRadius: Rayon.l, topTrailingRadius: Rayon.l, style: .continuous))
+        .ignoresSafeArea(edges: .bottom)
     }
 
     private var vide: some View {
@@ -140,9 +168,9 @@ struct MesSortiesView: View {
     /// On écrit ce qui existe : le lieu flou, le vent, la pression, la rivière si elle est en crue.
     private func legende(_ sortie: Sortie) -> String {
         if FormatSortie.prises(sortie).isEmpty {
-            var mots = ["Bredouille, ça arrive"]
-            if let lieu, !lieu.isEmpty { mots.append(lieu) }
-            return mots.joined(separator: " · ")
+            let duree = FormatSortie.duree(sortie)
+            if let lieu, !lieu.isEmpty { return "Bredouille, ça arrive : \(duree) sur \(lieu)" }
+            return "Bredouille, ça arrive : \(duree)"
         }
         var morceaux: [String] = []
         if let lieu, !lieu.isEmpty { morceaux.append(lieu) }
