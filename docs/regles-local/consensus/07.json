@@ -1198,7 +1198,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-12-23"
    },
-   "citation": "Sur tous les cours d'eau et plans d'eau, le nombre de captures d'Ombre commun autorisé est fixé à zéro (0).",
+   "citation": "Sur tous les cours d'eau et plans d'eau, le nombre de captures d'Ombre commun autorisé est fixé à zéro",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -1211,8 +1211,7 @@
      "version": "2025-12-23"
     },
     "citation": "Sur tous les cours d'eau et plans d'eau, le nombre de captures d'Ombre commun autorisé est fixé à zéro (0)."
-   },
-   "citation_de": "lecture_b"
+   }
   },
   {
    "id": "07-omble-chevalier-ouverture-dep",
@@ -1446,7 +1445,7 @@
     "version": "2025-12-23"
    },
    "citation": "Coregone (zéro prélèvement autorisé)",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -1458,8 +1457,7 @@
      "version": "2025-12-23"
     },
     "citation": "Coregone (zéro prélèvement autorisé) Du 2e samedi de mars au 3e dimanche de septembre Du 1er janvier au 31 décembre 0,30 m"
-   },
-   "citation_a_revoir": "nombre 0 absent"
+   }
   },
   {
    "id": "07-cristivomer-ouverture-dep",
@@ -5874,7 +5872,7 @@
     "version": "2025-12-23"
    },
    "citation": "dont zéro (O) truite fario",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -5886,8 +5884,7 @@
      "version": "2025-12-23"
     },
     "citation": "le nombre de capture de salmonidés est fixé à trois (3) par pêcheur et par jour, dont zéro (0) truite fario"
-   },
-   "citation_a_revoir": "nombre 0 absent"
+   }
   },
   {
    "id": "07-2216-quota_jour-gr-cance-annonay-de-la-fin-du-batiment-des",
@@ -6041,7 +6038,7 @@
     "version": "2025-12-23"
    },
    "citation": "dont zéro (O) truite fario",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6053,8 +6050,7 @@
      "version": "2025-12-23"
     },
     "citation": "le nombre de capture de salmonidés est fixé à trois (3) par pêcheur et par jour, dont zéro (0) truite fario"
-   },
-   "citation_a_revoir": "nombre 0 absent"
+   }
   },
   {
    "id": "07-2216-quota_jour-gr-auzon-saint-germain-de-la-confluence-de-",
@@ -6208,7 +6204,7 @@
     "version": "2025-12-23"
    },
    "citation": "dont zéro (O) truite fario",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6220,8 +6216,7 @@
      "version": "2025-12-23"
     },
     "citation": "le nombre de capture de salmonidés est fixé à trois (3) par pêcheur et par jour, dont zéro (0) truite fario"
-   },
-   "citation_a_revoir": "nombre 0 absent"
+   }
   },
   {
    "id": "07-2216-quota_jour-gr-ardeche-labegude-de-la-passerelle-de-bay",
@@ -6375,7 +6370,7 @@
     "version": "2025-12-23"
    },
    "citation": "dont zéro (O) truite fario",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6387,8 +6382,7 @@
      "version": "2025-12-23"
     },
     "citation": "le nombre de capture de salmonidés est fixé à trois (3) par pêcheur et par jour, dont zéro (0) truite fario"
-   },
-   "citation_a_revoir": "nombre 0 absent"
+   }
   },
   {
    "id": "07-2216-quota_jour-gr-ardeche-aubenas-du-pont-de-vals-confluen",
@@ -6542,7 +6536,7 @@
     "version": "2025-12-23"
    },
    "citation": "dont zéro (O) truite fario",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6554,8 +6548,7 @@
      "version": "2025-12-23"
     },
     "citation": "le nombre de capture de salmonidés est fixé à trois (3) par pêcheur et par jour, dont zéro (0) truite fario"
-   },
-   "citation_a_revoir": "nombre 0 absent"
+   }
   },
   {
    "id": "07-2216-quota_jour-gr-doux-lamastre-de-la-passerelle-du-chamb",
@@ -6709,7 +6702,7 @@
     "version": "2025-12-23"
    },
    "citation": "dont zéro (O) truite fario",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6721,8 +6714,7 @@
      "version": "2025-12-23"
     },
     "citation": "le nombre de capture de salmonidés est fixé à trois (3) par pêcheur et par jour, dont zéro (0) truite fario"
-   },
-   "citation_a_revoir": "nombre 0 absent"
+   }
   },
   {
    "id": "07-2216-quota_jour-gr-deume-annonay-de-la-passerelle-de-charl",
@@ -7155,7 +7147,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7167,8 +7159,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-malpertuis-satillieu-lieu-dit-la-boudras",
@@ -7195,7 +7186,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7207,8 +7198,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-la-valette-satillieu-lieu-dit-la-boudras",
@@ -7235,7 +7225,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7247,8 +7237,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-ay-saint-jeure-d-ay-saint-romain-d-ay-li",
@@ -7275,7 +7264,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7287,8 +7276,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-malpertuis-satillieu-lieu-dit-le-village",
@@ -7315,7 +7303,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7327,8 +7315,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-nant-satillieu-lieu-dit-le-village-du-se",
@@ -7355,7 +7342,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7367,8 +7354,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-nant-satillieu-lieu-dit-le-thie-de-la-jo",
@@ -7395,7 +7381,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7407,8 +7393,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-borne-sainte-marguerite-lafigere-sur-200",
@@ -7435,7 +7420,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7447,8 +7432,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-ardeche-saint-martin-d-ardeche-lot-n-6-r",
@@ -7475,7 +7459,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7487,8 +7471,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-ardeche-aigueze-lot-n-6-rive-droite-de-l",
@@ -7515,7 +7498,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7527,8 +7510,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-ardeche-saint-julien-de-peyrolas-lot-n-6",
@@ -7555,7 +7537,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7567,8 +7549,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-ardeche-saint-julien-de-peyrolas-lot-n-6-2",
@@ -7595,7 +7576,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7607,8 +7588,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-ardeche-pont-saint-esprit-lot-n-7-seuil-",
@@ -7635,7 +7615,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7647,8 +7627,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-tout-reserve-res-ardeche-pont-saint-esprit-lot-n-7-seuil--2",
@@ -7675,7 +7654,7 @@
     "version": "2025-12-23"
    },
    "citation": "La pêche est interdite sur :",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -7687,8 +7666,7 @@
      "version": "2025-12-23"
     },
     "citation": "Les limites amont et aval ainsi que les dispositions particulières des réserves temporaires de pêche, sur lesquelles la pêche est interdite, sont fixées en annexe 3 du présent arrêté."
-   },
-   "citation_a_revoir": "en-tête de liste"
+   }
   },
   {
    "id": "07-anguille-consommation-pcb-anguille",
@@ -10931,7 +10909,7 @@
     "version": "2025-01-24"
    },
    "citation": "ouverte du 2ème samedi de mars au 3ème dimanche suivant le 3ème dimanche de septembre inclus.",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -10943,8 +10921,7 @@
      "version": "2025-12-23"
     },
     "citation": "dont l'ouverture est prolongée de trois semaines après le troisième dimanche de septembre."
-   },
-   "citation_a_revoir": "annonce une liste sans nommer le lieu"
+   }
   },
   {
    "id": "07-grenouille-verte-ouverture-gren-verte",
@@ -11216,7 +11193,7 @@
     "lu_le": "2026-10-15",
     "version": "2025-01-24"
    },
-   "citation": "Le nombre de captures du Corégone est fixé à zéro (0).",
+   "citation": "Le nombre de captures du Corégone est fixé à zéro (O).",
    "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
@@ -11229,8 +11206,7 @@
      "version": "2025-01-24"
     },
     "citation": "Le nombre de captures du Corégone est fixé à zéro (0)."
-   },
-   "citation_de": "lecture_b"
+   }
   },
   {
    "id": "07-truite-taille_min-truite",
@@ -11879,8 +11855,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-d10",
@@ -11921,8 +11896,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-d11",
@@ -11963,8 +11937,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-d12",
@@ -12005,8 +11978,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-d13",
@@ -12047,8 +12019,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-d14",
@@ -12089,8 +12060,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-d15",
@@ -12131,8 +12101,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-d16",
@@ -12173,8 +12142,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e1",
@@ -12215,8 +12183,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e2",
@@ -12257,8 +12224,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e3",
@@ -12299,8 +12265,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e4",
@@ -12341,8 +12306,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e5",
@@ -12383,8 +12347,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e6",
@@ -12425,8 +12388,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e7",
@@ -12467,8 +12429,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e8",
@@ -12509,8 +12470,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e9",
@@ -12551,8 +12511,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e10",
@@ -12593,8 +12552,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e11",
@@ -12635,8 +12593,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e11-ter",
@@ -12677,8 +12634,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e12",
@@ -12719,8 +12675,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e12-bis",
@@ -12761,8 +12716,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-lot-e14",
@@ -12803,8 +12757,7 @@
      "version": "2024-12-20"
     },
     "citation": null
-   },
-   "citation_a_revoir": "sans citation"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-pe-mauves",
@@ -12832,7 +12785,7 @@
     "lu_le": "2026-10-15",
     "version": "2024-12-20"
    },
-   "citation": "D15-PE-07 Totalité du Plan d'eau de MAUVES",
+   "citation": null,
    "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -12845,8 +12798,7 @@
      "version": "2024-12-20"
     },
     "citation": "D15-PE-07 Totalité du Plan d'eau de MAUVES"
-   },
-   "citation_de": "lecture_b"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-pe-turzon",
@@ -12874,7 +12826,7 @@
     "lu_le": "2026-10-15",
     "version": "2024-12-20"
    },
-   "citation": "E4-PE-07 Totalité du Plan d'eau du TURZON",
+   "citation": null,
    "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -12887,8 +12839,7 @@
      "version": "2024-12-20"
     },
     "citation": "E4-PE-07 Totalité du Plan d'eau du TURZON"
-   },
-   "citation_de": "lecture_b"
+   }
   },
   {
    "id": "07-2110-carpe_nuit-pe-rieu",
@@ -12916,7 +12867,7 @@
     "lu_le": "2026-10-15",
     "version": "2024-12-20"
    },
-   "citation": "E10-PE-07 Plans d'eaux : Lac DE RIEU – Lac d'Ancône",
+   "citation": null,
    "statut": "incertain",
    "expire_le": "2027-12-31",
    "remplace": null,
@@ -12929,8 +12880,7 @@
      "version": "2024-12-20"
     },
     "citation": "E10-PE-07 Plans d'eaux : Lac DE RIEU – Lac d'Ancône"
-   },
-   "citation_de": "lecture_b"
+   }
   }
  ],
  "desaccords": {

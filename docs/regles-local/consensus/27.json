@@ -1826,7 +1826,7 @@
    "valeur": {
     "cm": 60
    },
-   "phrase": "En 1re catégorie, le brochet, taille minimale 60 cm.",
+   "phrase": "En 1re catégorie, le brochet se garde à partir de 60 cm.",
    "source": {
     "texte": "Arrêté préfectoral DDTM/SEBF/2026-002 du 23 janvier 2026, article 8",
     "url": "https://www.eure.gouv.fr/contenu/telechargement/60713/447838/file/AP%202026-002_Ouverture%20et%20modalit%C3%A9s%20de%20la%20p%C3%AAche%20en%20eau%20douce.pdf",
@@ -1866,7 +1866,7 @@
     "min_cm": 60,
     "max_cm": 80
    },
-   "phrase": "En 2e catégorie, taille encadrée : brochets de 60 à 80 cm seulement.",
+   "phrase": "En 2e catégorie, on ne garde que les brochets de 60 à 80 cm.",
    "source": {
     "texte": "Arrêté préfectoral DDTM/SEBF/2026-002 du 23 janvier 2026, article 8",
     "url": "https://www.eure.gouv.fr/contenu/telechargement/60713/447838/file/AP%202026-002_Ouverture%20et%20modalit%C3%A9s%20de%20la%20p%C3%AAche%20en%20eau%20douce.pdf",
@@ -1905,7 +1905,7 @@
    "valeur": {
     "cm": 50
    },
-   "phrase": "En 2e catégorie, le sandre, taille minimale 50 cm (sauf Seine et ballastières communicantes).",
+   "phrase": "En 2e catégorie, le sandre se garde à partir de 50 cm (sauf Seine et ballastières communicantes).",
    "source": {
     "texte": "Arrêté préfectoral DDTM/SEBF/2026-002 du 23 janvier 2026, article 8",
     "url": "https://www.eure.gouv.fr/contenu/telechargement/60713/447838/file/AP%202026-002_Ouverture%20et%20modalit%C3%A9s%20de%20la%20p%C3%AAche%20en%20eau%20douce.pdf",
@@ -1983,7 +1983,7 @@
    "valeur": {
     "cm": 30
    },
-   "phrase": "En 2e catégorie, le black-bass, taille minimale 30 cm.",
+   "phrase": "En 2e catégorie, le black-bass se garde à partir de 30 cm.",
    "source": {
     "texte": "Arrêté préfectoral DDTM/SEBF/2026-002 du 23 janvier 2026, article 8",
     "url": "https://www.eure.gouv.fr/contenu/telechargement/60713/447838/file/AP%202026-002_Ouverture%20et%20modalit%C3%A9s%20de%20la%20p%C3%AAche%20en%20eau%20douce.pdf",
@@ -2022,7 +2022,7 @@
    "valeur": {
     "cm": 30
    },
-   "phrase": "L'ombre commun, taille minimale 30 cm.",
+   "phrase": "L'ombre commun se garde à partir de 30 cm.",
    "source": {
     "texte": "Arrêté préfectoral DDTM/SEBF/2026-002 du 23 janvier 2026, article 8",
     "url": "https://www.eure.gouv.fr/contenu/telechargement/60713/447838/file/AP%202026-002_Ouverture%20et%20modalit%C3%A9s%20de%20la%20p%C3%AAche%20en%20eau%20douce.pdf",
@@ -2061,7 +2061,7 @@
    "valeur": {
     "cm": 30
    },
-   "phrase": "La truite fario, taille minimale 30 cm.",
+   "phrase": "La truite fario se garde à partir de 30 cm.",
    "source": {
     "texte": "Arrêté préfectoral DDTM/SEBF/2026-002 du 23 janvier 2026, article 8",
     "url": "https://www.eure.gouv.fr/contenu/telechargement/60713/447838/file/AP%202026-002_Ouverture%20et%20modalit%C3%A9s%20de%20la%20p%C3%AAche%20en%20eau%20douce.pdf",
@@ -2139,7 +2139,7 @@
    "valeur": {
     "cm": 25
    },
-   "phrase": "L'omble ou saumon de fontaine, taille minimale 25 cm.",
+   "phrase": "L'omble ou saumon de fontaine se garde à partir de 25 cm.",
    "source": {
     "texte": "Arrêté préfectoral DDTM/SEBF/2026-002 du 23 janvier 2026, article 8",
     "url": "https://www.eure.gouv.fr/contenu/telechargement/60713/447838/file/AP%202026-002_Ouverture%20et%20modalit%C3%A9s%20de%20la%20p%C3%AAche%20en%20eau%20douce.pdf",
@@ -2178,7 +2178,7 @@
    "valeur": {
     "cm": 20
    },
-   "phrase": "Le mulet, taille minimale 20 cm.",
+   "phrase": "Le mulet se garde à partir de 20 cm.",
    "source": {
     "texte": "Arrêté préfectoral DDTM/SEBF/2026-002 du 23 janvier 2026, article 8",
     "url": "https://www.eure.gouv.fr/contenu/telechargement/60713/447838/file/AP%202026-002_Ouverture%20et%20modalit%C3%A9s%20de%20la%20p%C3%AAche%20en%20eau%20douce.pdf",
@@ -2217,7 +2217,7 @@
    "valeur": {
     "cm": 8
    },
-   "phrase": "La grenouille verte, taille minimale 8 cm de corps (museau au cloaque).",
+   "phrase": "La grenouille verte se garde à partir de 8 cm de corps (museau au cloaque).",
    "source": {
     "texte": "Arrêté préfectoral DDTM/SEBF/2026-002 du 23 janvier 2026, article 8",
     "url": "https://www.eure.gouv.fr/contenu/telechargement/60713/447838/file/AP%202026-002_Ouverture%20et%20modalit%C3%A9s%20de%20la%20p%C3%AAche%20en%20eau%20douce.pdf",
@@ -2256,7 +2256,7 @@
    "valeur": {
     "cm": 8
    },
-   "phrase": "La grenouille rousse, taille minimale 8 cm de corps (museau au cloaque).",
+   "phrase": "La grenouille rousse se garde à partir de 8 cm de corps (museau au cloaque).",
    "source": {
     "texte": "Arrêté préfectoral DDTM/SEBF/2026-002 du 23 janvier 2026, article 8",
     "url": "https://www.eure.gouv.fr/contenu/telechargement/60713/447838/file/AP%202026-002_Ouverture%20et%20modalit%C3%A9s%20de%20la%20p%C3%AAche%20en%20eau%20douce.pdf",
@@ -6604,7 +6604,7 @@
    "valeur": {
     "cm": 35
    },
-   "phrase": "La truite de mer, taille minimale 35 cm.",
+   "phrase": "La truite de mer se garde à partir de 35 cm.",
    "source": {
     "texte": "Arrêté préfectoral DDTM/SEBF/2024-023 du 20 juin 2024, article 4",
     "url": "https://www.eure.gouv.fr/contenu/telechargement/53536/394234/file/2024-06-20%20-%20AP%20n%C2%B0DDTM%20SEBF%202024-023%20r%C3%A9glementant%20la%20p%C3%AAche%20des%20poissons%20migrateurs%20ds%20le%20dpt%20de%20l'Eure.pdf",

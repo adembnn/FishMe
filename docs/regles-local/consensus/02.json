@@ -2135,7 +2135,7 @@
    "valeur": {
     "cm": 50
    },
-   "phrase": "En 2e catégorie, le sandre, taille minimale 50 cm (le Code dit 40 cm).",
+   "phrase": "En 2e catégorie, le sandre se garde à partir de 50 cm (le Code dit 40 cm).",
    "source": {
     "texte": "Avis modalités d'exercice de la pêche 2026, rubrique Taille minimum des poissons",
     "url": "https://www.peche02.fr/cms_viewFile.php?idtf=53916&path=Affiche-Peche-2026.pdf",
@@ -2176,7 +2176,7 @@
    "valeur": {
     "cm": 25
    },
-   "phrase": "La truite fario, taille minimale 25 cm (le Code dit 23 cm).",
+   "phrase": "La truite fario se garde à partir de 25 cm (le Code dit 23 cm).",
    "source": {
     "texte": "Avis modalités d'exercice de la pêche 2026, rubrique Taille minimum des poissons",
     "url": "https://www.peche02.fr/cms_viewFile.php?idtf=53916&path=Affiche-Peche-2026.pdf",
@@ -2217,7 +2217,7 @@
    "valeur": {
     "cm": 25
    },
-   "phrase": "La truite arc-en-ciel, taille minimale 25 cm (le Code dit 23 cm).",
+   "phrase": "La truite arc-en-ciel se garde à partir de 25 cm (le Code dit 23 cm).",
    "source": {
     "texte": "Avis modalités d'exercice de la pêche 2026, rubrique Taille minimum des poissons",
     "url": "https://www.peche02.fr/cms_viewFile.php?idtf=53916&path=Affiche-Peche-2026.pdf",
@@ -2259,7 +2259,7 @@
     "min_cm": 50,
     "max_cm": 70
    },
-   "phrase": "En 2e catégorie, taille encadrée : brochet de 50 à 70 cm seulement ; en dehors, tu le remets à l'eau.",
+   "phrase": "En 2e catégorie, tu ne peux garder un brochet qu'entre 50 et 70 cm ; en dehors, tu le remets à l'eau.",
    "source": {
     "texte": "Avis modalités d'exercice de la pêche 2026, rubrique Taille minimum des poissons",
     "url": "https://www.peche02.fr/cms_viewFile.php?idtf=53916&path=Affiche-Peche-2026.pdf",

@@ -2362,7 +2362,7 @@
     "max_cm": 80,
     "texte": "prélèvement permis entre 60 et 80 cm, les poissons de plus de 80 cm sont remis à l’eau"
    },
-   "phrase": "Brochet sur la Charente à Cognac : taille encadrée : brochet de 60 à 80 cm seulement.",
+   "phrase": "Brochet sur la Charente à Cognac : tu peux garder un brochet seulement entre 60 et 80 cm.",
    "source": {
     "texte": "Arrêté réglementaire permanent n° 16-2026-01-12-00002 du 12 janvier 2026 relatif à l’exercice de la pêche en eau douce dans le département de la Charente, article 6",
     "url": "https://politique.pappers.fr/commune/document/16d45ecb368bbbeb65d041642e590e4d",
@@ -2404,7 +2404,7 @@
     "max_cm": 30,
     "texte": "seul le prélèvement des perches de moins de 30 cm est autorisé"
    },
-   "phrase": "Perche sur la Charente à Cognac : taille maximale : perches de moins de 30 cm seulement.",
+   "phrase": "Perche sur la Charente à Cognac : tu ne peux garder que les perches de moins de 30 cm.",
    "source": {
     "texte": "Arrêté réglementaire permanent n° 16-2026-01-12-00002 du 12 janvier 2026 relatif à l’exercice de la pêche en eau douce dans le département de la Charente, article 6",
     "url": "https://politique.pappers.fr/commune/document/16d45ecb368bbbeb65d041642e590e4d",
@@ -3312,7 +3312,7 @@
     "lu_le": "2026-10-15",
     "version": "2026-01-16"
    },
-   "citation": "OU nasse(s) à poissons à mailles de 27 mm 0 1 uniquement sur la Charente domaine privé entre Taizé- Aizie et Montignac",
+   "citation": "seuls les engins suivants sont autorisés : une nasse à poisson à maille de 27 mm et une bosselle anguilles (ou nasses anguillères à maille de 10 mm).",
    "statut": "brouillon",
    "expire_le": "2026-12-31",
    "remplace": null,
@@ -3325,8 +3325,7 @@
      "version": "2026-01-12"
     },
     "citation": "OU nasse(s) à poissons à mailles de 27 mm 0 1 uniquement sur la Charente domaine privé entre Taizé- Aizie et Montignac"
-   },
-   "citation_de": "lecture_b"
+   }
   },
   {
    "id": "16-toutes-autre-tardoire",
@@ -6745,7 +6744,7 @@
     "version": "2026-01-12"
    },
    "citation": "Parcours amont : longueur 1200 m → limite amont : jonction de la Boëme et de l’ancien canal de fuite du moulin de Nanteuillet. → limite aval : matérialisé par le pont (panneau)",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": null,
    "remplace": null,
    "lecture_b": {
@@ -6757,8 +6756,7 @@
      "version": "2026-01-12"
     },
     "citation": "Parcours amont : longueur 1200 m"
-   },
-   "citation_a_revoir": "la citation décrit le parcours sans dire qu'il est en no-kill"
+   }
   },
   {
    "id": "16-truite-no_kill-boeme-aval",
@@ -7807,7 +7805,7 @@
     "version": "2026-07-22"
    },
    "citation": "l'exercice de la pêche est interdit, à l'exception des opérations de sauvetage piscicole autorisées par le préfet, sur l'ensemble des cours d'eau situés dans les bassins versants suivants",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": "2026-09-20",
    "remplace": null,
    "lecture_b": {
@@ -7819,8 +7817,7 @@
      "version": "2026-07-22"
     },
     "citation": "Cette interdiction est valable à compter de la publication de cet arrêté et jusqu’à la fermeture des cours d’eau de 1 catégorie, fixée au 20 septembre 2026 inclus."
-   },
-   "citation_a_revoir": "annonce une liste sans nommer le lieu"
+   }
   },
   {
    "id": "16-toutes-interdit-auge",
@@ -7886,7 +7883,7 @@
     "version": "2026-07-22"
    },
    "citation": "l'exercice de la pêche est interdit, à l'exception des opérations de sauvetage piscicole autorisées par le préfet, sur l'ensemble des cours d'eau situés dans les bassins versants suivants",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": "2026-09-20",
    "remplace": null,
    "lecture_b": {
@@ -7898,8 +7895,7 @@
      "version": "2026-07-22"
     },
     "citation": "Cette interdiction est valable à compter de la publication de cet arrêté et jusqu’à la fermeture des cours d’eau de 1 catégorie, fixée au 20 septembre 2026 inclus."
-   },
-   "citation_a_revoir": "annonce une liste sans nommer le lieu"
+   }
   },
   {
    "id": "16-toutes-interdit-nouere",
@@ -7926,7 +7922,7 @@
     "version": "2026-07-22"
    },
    "citation": "l'exercice de la pêche est interdit, à l'exception des opérations de sauvetage piscicole autorisées par le préfet, sur l'ensemble des cours d'eau situés dans les bassins versants suivants",
-   "statut": "incertain",
+   "statut": "brouillon",
    "expire_le": "2026-09-20",
    "remplace": null,
    "lecture_b": {
@@ -7938,8 +7934,7 @@
      "version": "2026-07-22"
     },
     "citation": "Cette interdiction est valable à compter de la publication de cet arrêté et jusqu’à la fermeture des cours d’eau de 1 catégorie, fixée au 20 septembre 2026 inclus."
-   },
-   "citation_a_revoir": "annonce une liste sans nommer le lieu"
+   }
   }
  ],
  "desaccords": {
