@@ -8,6 +8,7 @@ import UIKit
 /// A branche cette vue à côté du filtre de la carte ; elle ne demande pas la position elle-même.
 struct OuChercherVue: View {
     @State private var modele: OuChercherModele
+    @Environment(\.dismiss) private var dismiss
 
     init(especes: any ServiceEspeces & ServiceCoinsPublics, position: Coordonnee) {
         _modele = State(initialValue: OuChercherModele(especes: especes, position: position))
@@ -28,6 +29,11 @@ struct OuChercherVue: View {
                 }
             }
             .navigationTitle(OuChercherTextes.titreEcran)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Fermer") { dismiss() }
+                }
+            }
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             #endif
