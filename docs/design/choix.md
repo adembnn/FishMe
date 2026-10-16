@@ -33,8 +33,6 @@ Décision (16 oct. 2h50) : badge « Trophée » sur la carte d'une prise plus gr
 | P26 Pescedex | B · Réglages, avec le bouton « Voir mon aquarium » | 16 oct. 2h51 |
 | P27 Fiche d'une espèce | B · Réglages | 16 oct. 2h54 |
 | P28 Carte déclarée | B · Réglages | 16 oct. 2h54 |
-| P27 Fiche d'une espèce | B · Réglages | 16 oct. 2h54 |
-| P28 Carte déclarée | B · Réglages | 16 oct. 2h54 |
 | P29 Mon club | B · Réglages (+ voir ses autres clubs) | 16 oct. 2h55 |
 | P30 Créer un club | B · Réglages (+ photo depuis la galerie) | 16 oct. 2h55 |
 | P31 Inviter des amis | B · Réglages | 16 oct. 2h56 |
