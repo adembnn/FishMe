@@ -160,7 +160,7 @@ struct VignettePoissonClub: View {
             .scaledToFit()
             .padding(.horizontal, 6)
             .frame(width: 48, height: 32)
-            .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+            .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
             .accessibilityHidden(true)
     }
 }
@@ -281,8 +281,8 @@ struct CreerClubView: View {
                     Image(poisson.image).resizable().scaledToFit()
                         .frame(width: 96 * 0.82, height: 40)
                         .frame(width: 96, height: 96)
-                        .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                        .overlay(selection(poissonChoisi == poisson.id && photo == nil, rayon: 12))
+                        .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
+                        .overlay(selection(poissonChoisi == poisson.id && photo == nil, rayon: Rayon.s))
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel(poisson.nom)
@@ -353,7 +353,7 @@ struct InviterClubView: View {
                         GroupeClub {
                             HStack(spacing: Espace.m) {
                                 Text(lienTexte)
-                                    .font(.system(size: 15, weight: .medium, design: .monospaced))
+                                    .font(Police.taille(15, .medium).monospaced())
                                     .foregroundStyle(Palette.encre)
                                     .lineLimit(1)
                                 Spacer(minLength: Espace.s)
@@ -423,13 +423,15 @@ struct InviterClubView: View {
                     .buttonStyle(.principal)
                 } else {
                     VStack(spacing: Espace.s) {
-                        Text("Connecte-toi à iCloud pour inviter tes amis")
+                        Text(CloudKitPermis.actif ? "Connecte-toi à iCloud pour inviter tes amis" : "L'invitation d'amis arrive bientôt")
                             .font(Police.corps).foregroundStyle(Palette.encreDouce)
                             .multilineTextAlignment(.center)
-                        Button("Ouvrir les réglages") {
-                            if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+                        if CloudKitPermis.actif {
+                            Button("Ouvrir les réglages") {
+                                if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+                            }
+                            .buttonStyle(.secondaire)
                         }
-                        .buttonStyle(.secondaire)
                     }
                 }
             }
@@ -437,19 +439,10 @@ struct InviterClubView: View {
         }
     }
 
-    /// Retour marine de 44 pt (décalé de 8 à gauche), « Inviter » au centre, 44 pt vides à droite.
+    /// Retour : le rond de verre du design système, « Inviter » au centre, 44 pt vides à droite.
     private var barre: some View {
         HStack(spacing: 0) {
-            Button { fermer() } label: {
-                Image(systemName: "chevron.left")
-                    .font(Police.taille(20))
-                    .foregroundStyle(Palette.marine)
-                    .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                    .contentShape(Rectangle())
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel("Retour")
-            .padding(.leading, -8)
+            BoutonRond(role: .retour) { fermer() }
             Spacer(minLength: 0)
             Text("Inviter").font(Police.sousTitre).foregroundStyle(Palette.encre)
                 .accessibilityAddTraits(.isHeader)

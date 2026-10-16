@@ -68,9 +68,9 @@ struct FaitsPrise: View {
                     }
                     // À brancher : l'appât ou le leurre de la prise (« Relâché · leurre souple ») ; la prise ne le garde pas.
                     ligne("water.waves", infos.prise.gardee ? "Gardé" : "Relâché")
-                    if let conditions = infos.detail.conditions, let texte = texteConditions(conditions) {
-                        ligne("cloud", texte)
-                        MarqueAppleWeather()
+                    // Le bloc météo branché (L12) porte la marque Apple Weather ; sans lui, aucune donnée météo n'est montrée.
+                    if let conditions = infos.detail.conditions, let bloc = emplacements.meteoDuDos {
+                        bloc(conditions)
                     }
                     if let consigne = infos.consigne {
                         ligne(
@@ -100,19 +100,6 @@ struct FaitsPrise: View {
         .font(Police.corps)
         .foregroundStyle(Palette.encre)
         .frame(maxWidth: .infinity)
-    }
-
-    /// « Vent 14 km/h · Rivière niveau normal » : seulement ce que la prise a gardé.
-    private func texteConditions(_ c: Conditions) -> String? {
-        var morceaux: [String] = []
-        if let v = c.ventKmh { morceaux.append("Vent \(Formats.nombre(v, decimales: 0)) km/h") }
-        switch c.etatRiviere {
-        case .normal: morceaux.append("Rivière niveau normal")
-        case .haut: morceaux.append("Rivière niveau haut")
-        case .crue: morceaux.append("Rivière en crue")
-        case .inconnu: break
-        }
-        return morceaux.isEmpty ? nil : morceaux.joined(separator: " · ")
     }
 }
 
@@ -152,22 +139,6 @@ struct BlocMeteoSimple: View {
         Text("\(texte) · \(heure)")
     }
 }
-
-/// Marque Apple Weather et lien légal, obligatoires sous toute donnée WeatherKit.
-struct MarqueAppleWeather: View {
-    var body: some View {
-        HStack(spacing: 8) {
-            Label("Apple Weather", systemImage: "applelogo")
-                .font(Jeton.police(12))
-            if let url = URL(string: "https://weatherkit.apple.com/legal-attribution.html") {
-                Link("Autres sources de données", destination: url)
-                    .font(Jeton.police(12))
-                    .frame(minHeight: Gabarit.zoneTactile)
-            }
-        }
-    }
-}
-
 
 /// La photo du verso en entier (jamais rognée) : la photo à sa taille, posée sur son propre flou qui remplit le cadre.
 struct PhotoVersoEntiere: View {

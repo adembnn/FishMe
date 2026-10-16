@@ -36,6 +36,9 @@ struct VueCarte: View {
     let demandeChoixDeZone: Bool
     /// La pastille de profil (posée par la racine) : à gauche de la barre de recherche de zone, en haut de la carte.
     let pastilleProfil: AnyView
+    /// La colonne de boutons à droite : « Tes conditions » (météo) et le profil/réglages, ouverts par la racine.
+    let ouvrirMeteo: () -> Void
+    let ouvrirProfil: () -> Void
     @Environment(\.dynamicTypeSize) private var tailleDuTexte
     /// Vrai quand la racine demande le « vol vers le spot » (« Voir mon spot » du swipe) : la caméra passe de la zone
     /// au cercle de 1 km, une bulle dit la distance, puis la feuille « Ton spot » monte. Une seule fois (`volFait`).
@@ -64,7 +67,9 @@ struct VueCarte: View {
          surChoixDeZone: @escaping (Bool) -> Void = { _ in },
          demandeChoixDeZone: Bool = false,
          volVersLeSpot: Bool = false,
-         pastilleProfil: AnyView = AnyView(EmptyView())) {
+         pastilleProfil: AnyView = AnyView(EmptyView()),
+         ouvrirMeteo: @escaping () -> Void = {},
+         ouvrirProfil: @escaping () -> Void = {}) {
         self.pastilleProfil = pastilleProfil
         _modele = State(initialValue: ModeleCarte(services: services))
         self.spotFixe = spotFixe
@@ -80,6 +85,8 @@ struct VueCarte: View {
         self.surChoixDeZone = surChoixDeZone
         self.demandeChoixDeZone = demandeChoixDeZone
         self.volVersLeSpot = volVersLeSpot
+        self.ouvrirMeteo = ouvrirMeteo
+        self.ouvrirProfil = ouvrirProfil
     }
 
     var body: some View {
@@ -708,10 +715,6 @@ struct VueCarte: View {
         VStack(spacing: 8) {
             ligneProfilEtRecherche
             enTeteCarte
-            HStack(spacing: 0) {
-                Spacer(minLength: 0)
-                boutonsSecondaires
-            }
             bandeauHaut
             messageDeCarte
         }
@@ -780,10 +783,6 @@ struct VueCarte: View {
                     .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
                     .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
             }
-            BoutonVerreCarte(symbole: "line.3.horizontal.decrease", libelle: "Filtrer par espèce",
-                             teinte: couleurDuFiltre) {
-                modele.afficherFiltre = true
-            }
         }
     }
 
@@ -805,6 +804,16 @@ struct VueCarte: View {
                 bulleDuSpot
             }
             bandeauSession
+            HStack(alignment: .bottom, spacing: 12) {
+                Spacer(minLength: 0)
+                ColonneBoutonsCarte(
+                    teinteFiltre: couleurDuFiltre,
+                    meteo: ouvrirMeteo,
+                    autourDeMoi: autourDeMoi,
+                    filtre: { modele.afficherFiltre = true },
+                    reglages: ouvrirProfil)
+                .padding(.trailing, 8)
+            }
             if !sessionEnCours && !feuilleSpotMasquee {
                 feuilleSpotCarte
                     .transition(.move(edge: .bottom).combined(with: .opacity))
@@ -877,24 +886,6 @@ struct VueCarte: View {
         let km: Double = (metres / 100).rounded() / 10
         let nombre: String = km.formatted(.number.precision(.fractionLength(0...1)).locale(Locale(identifier: "fr_FR")))
         return "\(nombre) km"
-    }
-
-    @ViewBuilder
-    private var tuilesFeuilleCarte: some View {
-        if let apercu {
-            let lignes: [LigneEspece] = lignesDeLaFeuille(apercu)
-            HStack(alignment: .top, spacing: 10) {
-                ForEach(lignes) { (ligne: LigneEspece) in
-                    tuilePoissonCarte(ligne)
-                }
-                if resteDeLaFeuille(apercu) > 0 {
-                    tuileResteCarte(resteDeLaFeuille(apercu))
-                }
-            }
-        } else {
-            // Relevés en cours de lecture : la place des tuiles reste, sans rien inventer.
-            Color.clear.frame(height: 52 + 6 + 14)
-        }
     }
 
     private var legendeSpotPresente: Bool {
@@ -1028,12 +1019,6 @@ struct VueCarte: View {
             }
             .buttonStyle(.plain)
         }
-    }
-
-    /// Le bouton « me localiser » : rond de verre sous la pastille, flèche marine (maquette P06 A).
-    @ViewBuilder
-    private var boutonsSecondaires: some View {
-        BoutonVerreCarte(symbole: "location.fill", libelle: "Autour de moi", teinte: Palette.marine, action: autourDeMoi)
     }
 }
 

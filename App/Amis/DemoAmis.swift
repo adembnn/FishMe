@@ -1,8 +1,10 @@
 import Core
 import SwiftUI
+import UIKit
 
 /// Mode démo de la page Amis : quatre amis et un fil de cartes, 100 % locaux à la vue.
-/// Rien ici ne touche `GestionAmis`, CloudKit, le réseau ni le disque : aucun signalement, blocage ou retrait réel.
+/// Rien ici ne touche `GestionAmis`, CloudKit, le réseau ni le disque : signaler, bloquer et retirer agissent sur la liste locale
+/// de la vue seulement (l'ami et ses cartes disparaissent), rien n'est envoyé.
 /// Les prénoms sont fictifs et aucun lieu n'est donné. Chaque bloc porte la pastille « Démo ».
 /// Interrupteur : `@AppStorage("demo.communaute")`, branché dans les réglages.
 enum DemoCommunaute {
@@ -27,8 +29,8 @@ struct DemoCarte: Identifiable, Hashable {
     /// Nombre de mois avant aujourd'hui (le fil n'affiche que le mois et l'année).
     let ilYaMois: Int
 
-    /// Aucune photo en démo : la carte montre l'illustration de l'espèce.
-    var photo: Data? { nil }
+    /// La photo libre de démo (`App/Demo/Photos/<image>-1.jpg`, crédits dans Réglages), ou `nil` : la carte montre l'image d'espèce.
+    @MainActor var photo: UIImage? { PhotoDemoClub.image("\(image)-1") }
 
     var date: Date {
         let jour = Calendar(identifier: .gregorian).date(byAdding: .month, value: -ilYaMois, to: Date()) ?? Date()
@@ -59,9 +61,25 @@ enum DonneesDemoAmis {
 
 extension DemoCarte {
     /// La carte au format de la grille (même dessin que les cartes d'Adem).
-    var pourGrille: CarteAmiGrille {
+    @MainActor var pourGrille: CarteAmiGrille {
         CarteAmiGrille(id: id, prenom: ami, mois: JetonAmis.date(date), style: StyleRarete(rarete), nomEspece: espece,
                        imageEspece: image, tailleCm: tailleCm, photo: photo)
+    }
+}
+
+/// Une action de modération sur un ami de démo.
+private enum ActionAmiDemo: Identifiable {
+    case bloquer(DemoAmi), retirer(DemoAmi)
+    var id: String {
+        switch self {
+        case .bloquer(let a): return "bloquer-\(a.id)"
+        case .retirer(let a): return "retirer-\(a.id)"
+        }
+    }
+    var ami: DemoAmi {
+        switch self {
+        case .bloquer(let a), .retirer(let a): return a
+        }
     }
 }
 
@@ -73,6 +91,16 @@ struct DemoAmisContenu: View {
     @State private var carteOuverte: DemoCarte?
     @State private var amiOuvert: DemoAmi?
     @State private var actionSansEffet = false
+    /// Amis retirés, bloqués ou signalés pendant cette séance de démo : ils disparaissent de la liste et du fil.
+    @State private var amisEcartes: Set<String> = []
+    @State private var aConfirmer: ActionAmiDemo?
+    @State private var confirmationSignalement = false
+
+    private var amisVisibles: [DemoAmi] { DonneesDemoAmis.amis.filter { !amisEcartes.contains($0.id) } }
+    private var cartesVisibles: [DemoCarte] {
+        let ecartes = Set(DonneesDemoAmis.amis.filter { amisEcartes.contains($0.id) }.map(\.nom))
+        return DonneesDemoAmis.cartes.filter { !ecartes.contains($0.ami) }
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.xl) {
@@ -102,6 +130,34 @@ struct DemoAmisContenu: View {
         } message: {
             Text("Cette action n'est pas disponible en démo.")
         }
+        .alert("Merci, c'est signalé", isPresented: $confirmationSignalement) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Ce profil et ses cartes ne s'affichent plus. Rien n'a été envoyé.")
+        }
+        .confirmationDialog(titreConfirmation, isPresented: Binding(get: { aConfirmer != nil }, set: { if !$0 { aConfirmer = nil } }),
+                            titleVisibility: .visible, presenting: aConfirmer) { action in
+            switch action {
+            case .bloquer(let ami):
+                Button("Bloquer \(ami.nom)", role: .destructive) { amisEcartes.insert(ami.id) }
+            case .retirer(let ami):
+                Button("Retirer \(ami.nom)", role: .destructive) { amisEcartes.insert(ami.id) }
+            }
+            Button("Annuler", role: .cancel) {}
+        } message: { action in
+            switch action {
+            case .bloquer(let ami): Text("\(ami.nom) et ses cartes ne s'afficheront plus.")
+            case .retirer(let ami): Text("\(ami.nom) n'apparaîtra plus dans ta liste d'amis.")
+            }
+        }
+    }
+
+    private var titreConfirmation: String {
+        switch aConfirmer {
+        case .bloquer: return "Bloquer cet ami ?"
+        case .retirer: return "Retirer cet ami ?"
+        case nil: return ""
+        }
     }
 
     private var listeDesAmis: some View {
@@ -113,9 +169,15 @@ struct DemoAmisContenu: View {
                 PastilleDemo()
             }
             VStack(spacing: 0) {
-                ForEach(Array(DonneesDemoAmis.amis.enumerated()), id: \.element.id) { index, ami in
+                ForEach(Array(amisVisibles.enumerated()), id: \.element.id) { index, ami in
                     rangee(ami)
-                    if index < DonneesDemoAmis.amis.count - 1 { Divider() }
+                    if index < amisVisibles.count - 1 { Divider() }
+                }
+                if amisVisibles.isEmpty {
+                    Text("Aucun ami pour l'instant.")
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encreDouce)
+                        .frame(maxWidth: .infinity, minHeight: 60, alignment: .leading)
                 }
             }
             .padding(.leading, Espace.l)
@@ -144,9 +206,12 @@ struct DemoAmisContenu: View {
             }
             .buttonStyle(.plain)
             Menu {
-                Button { actionSansEffet = true } label: { Label("Signaler", systemImage: "flag") }
-                Button { actionSansEffet = true } label: { Label("Bloquer", systemImage: "hand.raised") }
-                Button { actionSansEffet = true } label: { Label("Retirer cet ami", systemImage: "person.badge.minus") }
+                Button {
+                    amisEcartes.insert(ami.id)
+                    confirmationSignalement = true
+                } label: { Label("Signaler", systemImage: "flag") }
+                Button { aConfirmer = .bloquer(ami) } label: { Label("Bloquer", systemImage: "hand.raised") }
+                Button { aConfirmer = .retirer(ami) } label: { Label("Retirer cet ami", systemImage: "person.badge.minus") }
             } label: {
                 Image(systemName: "ellipsis")
                     .font(Police.corps)
@@ -166,8 +231,8 @@ struct DemoAmisContenu: View {
                     .foregroundStyle(Palette.encre)
                 PastilleDemo()
             }
-            GrilleCartesAmis(cartes: DonneesDemoAmis.cartes.map(\.pourGrille)) { choisie in
-                carteOuverte = DonneesDemoAmis.cartes.first { $0.id == choisie.id }
+            GrilleCartesAmis(cartes: cartesVisibles.map(\.pourGrille)) { choisie in
+                carteOuverte = cartesVisibles.first { $0.id == choisie.id }
             }
         }
     }

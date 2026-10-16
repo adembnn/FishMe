@@ -13,6 +13,8 @@ struct BarreRechercheZone: View {
     @State private var terme = ""
     @State private var trouvees: [ZoneTrouvee] = []
     @State private var resultatsVides = false
+    /// Vrai juste après le choix d'une commune : le changement de `terme` qui suit ne relance pas la recherche.
+    @State private var choixFait = false
     @FocusState private var active: Bool
 
     struct ZoneTrouvee: Identifiable, Equatable {
@@ -32,6 +34,7 @@ struct BarreRechercheZone: View {
         }
         // Recherche au fil de la frappe : 300 ms après le dernier caractère, dès 3 caractères.
         .task(id: terme) {
+            if choixFait { choixFait = false; return }
             let propre = terme.trimmingCharacters(in: .whitespaces)
             guard propre.count >= 3 else {
                 trouvees = []
@@ -55,7 +58,6 @@ struct BarreRechercheZone: View {
                 .foregroundStyle(Palette.encre)
                 .submitLabel(.search)
                 .focused($active)
-                .onSubmit { Task { await chercher() } }
             if !terme.isEmpty {
                 Button {
                     terme = ""
@@ -97,6 +99,7 @@ struct BarreRechercheZone: View {
                 ForEach(trouvees) { zone in
                     Button {
                         choisir(Coordonnee(latitude: zone.latitude, longitude: zone.longitude))
+                        choixFait = true
                         terme = zone.nom
                         trouvees = []
                         active = false

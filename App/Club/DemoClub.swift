@@ -4,7 +4,7 @@ import SwiftUI
 /// Mode démo de la page Club, piloté par `@AppStorage("demo.communaute")`.
 /// Les clubs, membres, cartes et records ci-dessous sont écrits en dur pour la démo :
 /// ils ne viennent ni de CloudKit ni d'une vraie personne, et ne sont jamais enregistrés dans `MesClubs`.
-/// Les cartes montrent seulement l'illustration de l'espèce (aucune photo). Chaque club porte « Démo » dans son nom. Aucune position GPS.
+/// Quelques cartes montrent une photo libre de droits de `App/Demo/Photos` (crédits dans Réglages, « Crédits photos »), les autres l'illustration de l'espèce. Chaque club porte « Démo » dans son nom. Aucune position GPS.
 /// Petite pastille « Démo » : tout élément de démonstration la porte, rien n'y passe pour une vraie prise.
 struct PastilleDemo: View {
   var body: some View {
@@ -24,7 +24,7 @@ enum DemoClub {
   private static let idEssec = UUID(uuidString: "D0D0D0D0-0000-4000-8000-000000000002")!
   private static let idVal = UUID(uuidString: "D0D0D0D0-0000-4000-8000-000000000001")!
 
-  /// Les 2 clubs de la démo : « Les pêcheurs de l'ESSEC » (déjà rejoint, donc choisi à l'ouverture) puis « AAPPMA du Val-de-Marne ».
+  /// Les 2 clubs de la démo : « Les pêcheurs de l'ESSEC » (déjà rejoint, donc choisi à l'ouverture) puis « Les Carnassiers du 94 ».
   static let clubs: [ClubLocal] = [
     ClubLocal(id: idEssec, nom: "Les pêcheurs de l'ESSEC · Démo", poissonId: "sandre"),
     ClubLocal(id: idVal, nom: "AAPPMA du Val-de-Marne · Démo", poissonId: "brochet"),
@@ -66,10 +66,10 @@ enum DemoClub {
           tailleCm: 27, image: "perche-commune", niveau: .commun),
         CarteRecenteClub(
           id: "demo-ec3", membre: "Yanis", espece: "Sandre", jour: "sam.",
-          tailleCm: 61, image: "sandre", niveau: .rare),
+          tailleCm: 61, image: "sandre", niveau: .rare, photo: "sandre-1"),
         CarteRecenteClub(
           id: "demo-ec4", membre: "Salomé", espece: "Black-bass", jour: "ven.",
-          tailleCm: 38, image: "black-bass", niveau: .peuCommun),
+          tailleCm: 38, image: "black-bass", niveau: .peuCommun, photo: "black-bass-1"),
         CarteRecenteClub(
           id: "demo-ec5", membre: "Théo", espece: "Carpe commune", jour: "jeu.",
           tailleCm: 72, image: "carpe-commune", niveau: .peuCommun),
@@ -81,16 +81,16 @@ enum DemoClub {
     return [
       CarteRecenteClub(
         id: "demo-vc1", membre: "Léa", espece: "Sandre", jour: "lundi",
-        tailleCm: 52, image: "sandre", niveau: .rare),
+        tailleCm: 52, image: "sandre", niveau: .rare, photo: "sandre-1"),
       CarteRecenteClub(
         id: "demo-vc2", membre: "Malo", espece: "Brochet", jour: "dim.",
-        tailleCm: 74, image: "brochet", niveau: .rare),
+        tailleCm: 74, image: "brochet", niveau: .rare, photo: "brochet-1"),
       CarteRecenteClub(
         id: "demo-vc3", membre: "Inès", espece: "Perche", jour: "sam.",
-        tailleCm: 29, image: "perche-commune", niveau: .commun),
+        tailleCm: 29, image: "perche-commune", niveau: .commun, photo: "perche-commune-1"),
       CarteRecenteClub(
         id: "demo-vc4", membre: "Nathan", espece: "Truite fario", jour: "ven.",
-        tailleCm: 33, image: "truite-fario", niveau: .peuCommun),
+        tailleCm: 33, image: "truite-fario", niveau: .peuCommun, photo: "truite-fario-1"),
       CarteRecenteClub(
         id: "demo-vc5", membre: "Jade", espece: "Gardon", jour: "jeu.",
         tailleCm: 24, image: "gardon", niveau: .commun),
