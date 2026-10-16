@@ -28,6 +28,8 @@ final class ModeleCarte {
     private(set) var stations: [StationCarte] = []
     /// La zone dont les stations sont chargées (ou en cours de chargement) : sert à ne pas relire ce qui est déjà là.
     private(set) var regionChargee: ZoneCarte?
+    /// Vrai pendant la lecture des stations (la carte montre alors le sonar).
+    private(set) var chargementEnCours = false
 
     // Filtre « Choisir un autre spot »
     var filtre: EspecePechable?
@@ -192,12 +194,14 @@ final class ModeleCarte {
     private func charger(pour region: ZoneCarte) {
         tacheStations?.cancel()
         regionChargee = region
+        chargementEnCours = true
         let fournisseur = services.stations
         let dossier = dossierCache
         tacheStations = Task {
             let lues = await fournisseur.stations(dans: region)
             if Task.isCancelled { return }
             stations = lues
+            chargementEnCours = false
             recalculer(region)
             // Pour le prochain lancement : seulement une vue assez proche (petit fichier), en tâche de fond.
             if let dossier, region.spanLatitude <= StockageCacheCarte.etendueMaximale, !lues.isEmpty {

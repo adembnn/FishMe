@@ -118,8 +118,7 @@ private struct ChargementCoins: View {
         VStack(spacing: 20) {
             Spacer(minLength: 0)
             ImageEspeceCoin(nom: espece.image).frame(width: 72, height: 72)
-            ProgressView()
-                .controlSize(.large)
+            ChargementBouchon()
             Text(OuChercherTextes.recherche(espece.nom))
                 .font(Police.sousTitre)
                 .foregroundStyle(Palette.encre)

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Widgets accueil · Ma session</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.p40-w{position:absolute;border-radius:22px;overflow:hidden;background:#fff;color:var(--encre)}
+.p40-ic{position:absolute;width:60px;display:flex;flex-direction:column;align-items:center;gap:6px}
+.p40-ic i{display:block;width:60px;height:60px;border-radius:13.4px;background:var(--p40-ph)}
+.p40-ic b{display:block;width:36px;height:6px;border-radius:3px;background:var(--p40-lb)}
+.p40-ic em{font-style:normal;font-size:11px;font-weight:800;line-height:1;color:var(--p40-tx)}
+.p40-dots{position:absolute;left:0;right:0;top:712px;display:flex;justify-content:center;gap:10px}
+.p40-dots i{width:7px;height:7px;border-radius:4px;background:var(--p40-dot)}
+.p40-dots i.on{background:var(--p40-tx)}
+.p40-dock{position:absolute;left:14px;right:14px;bottom:20px;height:92px;border-radius:34px;background:var(--p40-dk);display:flex;justify-content:space-around;align-items:center;padding:0 10px}
+.p40-dock i{display:block;width:60px;height:60px;border-radius:13.4px;background:var(--p40-ph2)}
+.p40-n{font-variant-numeric:tabular-nums}
+.p40b-top{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--encre-douce)}
+.p40b-top img{width:22px;height:22px;border-radius:6px}
+.p40b-chrono{font-weight:900;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--encre)}
+.ecran button.p40b-btn{display:flex;align-items:center;justify-content:center;gap:7px;border:0;border-radius:999px;font:inherit;font-size:17px;font-weight:800;color:#fff;padding:0}
+.p40b-btn svg{flex:none}
+.ecran button.p40b-pri{background:#0D4A85}
+.ecran button.p40b-doux{background:var(--tuile);color:var(--marine)}
+
+</style>
+</helmet>
+<div class="ecran" style="background:#D6E4F3;--p40-ph:rgba(14,26,38,.14);--p40-lb:rgba(14,26,38,.32);--p40-tx:#0E1A26;--p40-dot:rgba(14,26,38,.3);--p40-dk:rgba(255,255,255,.5);--p40-ph2:rgba(14,26,38,.14);">
+<div class="p40-w" style="left:20px;top:66px;width:170px;height:170px">
+<div style="position:absolute;inset:14px;display:flex;flex-direction:column">
+<div class="p40b-top"><img src="/_blob/7667ed4766b13859a7e0245c1b4db27c" alt="FishMe"><span>2 prises</span></div>
+<div class="p40b-chrono" style="font-size:50px;margin-top:8px">1:24</div>
+<div class="p40-n" style="font-size:13px;color:var(--encre-douce);margin-top:5px">Fin légale <span style="color:var(--encre);font-size:15px">19:29</span></div>
+<div style="display:flex;gap:8px;margin-top:auto"><button class="p40b-btn p40b-pri" style="flex:1;height:38px" aria-label="Ajouter une prise, ouvre l'appareil photo"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:22px;height:22px"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.6"/></g></svg></button><button class="p40b-btn p40b-doux" style="flex:1;height:38px" aria-label="Mettre la session en pause"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px"><path fill="currentColor" d="M7 4h3.4v16H7Zm6.6 0H17v16h-3.4Z"/></svg></button></div></div></div>
+<div class="p40-ic" style="left:209px;top:70px"><i></i><b></b></div><div class="p40-ic" style="left:300px;top:70px"><i></i><b></b></div><div class="p40-ic" style="left:209px;top:161px"><i></i><b></b></div><div class="p40-ic" style="left:300px;top:161px"><i></i><b></b></div>
+<div class="p40-w" style="left:13px;top:256px;width:364px;height:170px">
+<div style="position:absolute;left:16px;top:16px;width:206px;bottom:16px;display:flex;flex-direction:column">
+<div class="p40b-top"><img src="/_blob/7667ed4766b13859a7e0245c1b4db27c" alt="FishMe"><span>2 prises</span></div>
+<div class="p40b-chrono" style="font-size:62px;margin-top:10px">1:24</div>
+<div class="p40-n" style="display:flex;gap:12px;white-space:nowrap;align-items:baseline;margin-top:auto;font-size:13px;color:var(--encre-douce)"><span>Fin légale <b style="color:var(--encre);font-size:17px">19:29</b></span><span>Eau <b style="color:var(--encre);font-size:17px">14 °C</b></span></div></div>
+<div style="position:absolute;right:16px;top:16px;bottom:16px;width:128px;display:flex;flex-direction:column;justify-content:center;gap:10px"><button class="p40b-btn p40b-pri" style="height:46px" aria-label="Ajouter une prise, ouvre l'appareil photo"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:22px;height:22px"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.6"/></g></svg>Prise</button><button class="p40b-btn p40b-doux" style="height:46px" aria-label="Mettre la session en pause"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px"><path fill="currentColor" d="M7 4h3.4v16H7Zm6.6 0H17v16h-3.4Z"/></svg>Pause</button></div></div>
+<div class="p40-w" style="left:20px;top:446px;width:170px;height:170px">
+<div style="position:absolute;inset:14px;display:flex;flex-direction:column">
+<img src="/_blob/7667ed4766b13859a7e0245c1b4db27c" alt="FishMe" style="width:34px;height:34px;border-radius:9px">
+<div class="t-titre" style="margin-top:10px;line-height:1.15">Commencer une session</div>
+<button class="p40b-btn p40b-pri" style="margin-top:auto;align-self:flex-end;width:44px;height:44px" aria-label="Commencer une session"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></button></div></div>
+<div class="p40-ic" style="left:209px;top:450px"><i></i><b></b></div><div class="p40-ic" style="left:300px;top:450px"><i></i><b></b></div><div class="p40-ic" style="left:209px;top:541px"><i></i><b></b></div><div class="p40-ic" style="left:300px;top:541px"><i></i><b></b></div>
+<div class="p40-dots"><i class="on"></i><i></i><i></i></div><div class="p40-dock"><i></i><i></i><i></i><i></i></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

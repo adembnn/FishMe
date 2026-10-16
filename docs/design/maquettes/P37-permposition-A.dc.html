@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Fenêtre de position · A Plans</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+
+.p37-dim{position:absolute;inset:0;background:rgba(0,0,0,.4);z-index:40}
+.p37-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding-bottom:30px;z-index:50}
+.ecran .p37-al{width:270px;border-radius:14px;background:rgba(244,244,247,.88);-webkit-backdrop-filter:blur(40px) saturate(1.8);backdrop-filter:blur(40px) saturate(1.8);font-family:-apple-system,system-ui,"Helvetica Neue",sans-serif;font-weight:400;color:#000;text-align:center;overflow:hidden}
+.ecran .p37-al .c{padding:20px 16px 18px}
+.ecran .p37-al h2{font-size:17px;font-weight:600;line-height:22px;letter-spacing:-.01em}
+.ecran .p37-al p{font-size:13px;font-weight:400;line-height:18px;margin-top:4px}
+.ecran .p37-al .b{display:block;width:100%;height:44px;border-top:.5px solid rgba(60,60,67,.36);color:#0A84FF;font-family:inherit;font-size:17px;font-weight:400}
+.ecran .p37-al .b.g{font-weight:600}
+.ecran .p37-al .rg{display:flex}
+.ecran .p37-al .rg .b{flex:1;border-top:.5px solid rgba(60,60,67,.36)}
+.ecran .p37-al .rg .b+.b{border-left:.5px solid rgba(60,60,67,.36)}
+
+</style>
+</helmet>
+<div class="ecran">
+<img class="fond-carte" src="/_blob/358f1ded92a9e441995d46a2c2f81624" alt="Carte de la Marne"><div class="moi" style="left:160px;top:330px"></div>
+<div class="feuille"><div class="poignee"></div>
+<h1 class="t-titre">Où pêches-tu ?</h1><p class="t-detail" style="margin-top:6px">Ta position sert à montrer les poissons et les règles près de toi.</p>
+<div style="display:flex;gap:10px;margin:16px 0 20px"><div class="tuile-poisson" style="flex:1;height:60px"><img class="poisson" src="/_blob/4799d66fb5fc82ab53e0051d38867b2d" alt="gardon" style="width:86%;height:44px"></div><div class="tuile-poisson" style="flex:1;height:60px"><img class="poisson" src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="brochet" style="width:86%;height:44px"></div><div class="tuile-poisson" style="flex:1;height:60px"><img class="poisson" src="/_blob/64752134d1301c8ae5245b9230566c2d" alt="sandre" style="width:86%;height:44px"></div></div><button class="btn pri"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 3 3 10.5l7.5 2.9L13.4 21Z"/></svg> Utiliser ma position</button><button class="lien" style="margin-top:4px">Choisir sur la carte</button></div>
+<div class="p37-dim"></div><div class="p37-wrap"><div class="p37-al" role="alertdialog" aria-label="Fenêtre système"><div class="c"><h2>Autoriser “FishMe” à utiliser votre position ?</h2><p>Pour te montrer les poissons et les règles près de toi. Ton coin exact ne quitte jamais ton iPhone.</p><div style="position:relative;height:124px;margin:12px 0 0;border-radius:10px;overflow:hidden;background:#EEF2F6"><img src="/_blob/358f1ded92a9e441995d46a2c2f81624" alt="" style="position:absolute;left:-51px;top:-278px;width:390px;height:844px;max-width:none"><div class="moi" style="left:109px;top:52px"></div><div style="position:absolute;left:8px;bottom:8px;display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:12px;background:rgba(255,255,255,.94);font-size:11px;font-weight:500;color:#0A84FF;font-family:-apple-system,system-ui,sans-serif"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:11px;height:11px"><path fill="currentColor" d="M21 3 3 10.5l7.5 2.9L13.4 21Z"/></svg>Position exacte : activée</div></div></div><button class="b">Autoriser une fois</button><button class="b g">Autoriser lorsque l’app est active</button><button class="b">Ne pas autoriser</button></div></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -45,7 +45,7 @@ struct FicheCoinView: View {
                     }
                     releve
                 } else {
-                    ProgressView()
+                    ChargementBouchon(texte: "Chargement du spot")
                         .frame(maxWidth: .infinity, minHeight: 120)
                 }
             }

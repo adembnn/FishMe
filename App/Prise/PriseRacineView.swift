@@ -232,7 +232,7 @@ struct PriseEtapeLecture: View {
 
     var body: some View {
         PriseFeuille(photo: modele.imagePhoto) {
-            ProgressView().controlSize(.large).frame(minHeight: 96)
+            ChargementBouchon().frame(minHeight: 96)
                 .accessibilityLabel("Lecture de ta photo")
         }
     }

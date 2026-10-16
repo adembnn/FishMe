@@ -96,6 +96,15 @@ struct VueCarte: View {
                 }
 
                 PoissonsNageurs(animees: modele.animees, proxy: proxy, enMouvement: modele.enMouvement, region: modele.regionVisible)
+
+                // Sonar pendant la première lecture des relevés OFB (carte encore vide), fondu de 0,3 s à l'arrivée.
+                // Pas de sonar quand on déplace une carte déjà remplie : les stations restent, les nouvelles s'ajoutent.
+                Group {
+                    if modele.chargementEnCours && modele.stations.isEmpty {
+                        ChargementSonar().transition(.opacity)
+                    }
+                }
+                .animation(.easeOut(duration: 0.3), value: modele.chargementEnCours && modele.stations.isEmpty)
             }
         }
         .safeAreaInset(edge: .top, spacing: 8) { haut }

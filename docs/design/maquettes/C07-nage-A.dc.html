@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Nage · A Ondulation</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/69bbcf2d203990410cc97809f5b38487">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.p07{--loop:5.45s}
+.p07-scene{position:absolute;left:25px;top:112px;width:340px}
+.p07-legende{margin-top:30px;text-align:center;font-size:17px;color:var(--encre-douce)}
+.p07 .fc .win{background:linear-gradient(180deg,#216E99 0%,#16557F 22%,#0A335E 52%,#06214A 78%,#030F26 100%)}
+.p07 .fc .win::before,.p07 .fc .win::after{display:none}
+.p07 .fc{--fcen:#fff}
+.p07-eau{position:absolute;inset:0;overflow:hidden}
+.p07-vig{position:absolute;inset:0;background:radial-gradient(ellipse 75% 70% at 50% 42%,transparent 40%,rgba(2,10,28,.5) 100%)}
+.p07-caus{position:absolute;left:-6%;top:-4%;width:112%;height:108%;-webkit-mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.8) 40%,transparent 82%);mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.8) 40%,transparent 82%)}
+.p07-caus rect{opacity:.34;transform-box:fill-box;transform-origin:center}
+.p07-c1{animation:p07-dc1 var(--loop) ease-in-out infinite}
+.p07-c2{opacity:.26;animation:p07-dc2 var(--loop) ease-in-out infinite}
+@keyframes p07-dc1{0%,100%{transform:translate(-6px,2px) scale(1.04)}50%{transform:translate(7px,-3px) scale(1.07)}}
+@keyframes p07-dc2{0%,100%{transform:translate(8px,-2px) scale(1.07)}50%{transform:translate(-7px,4px) scale(1.04)}}
+.p07-rayons i{position:absolute;top:-10%;height:90%;width:46px;background:linear-gradient(180deg,rgba(170,225,255,.30),rgba(170,225,255,0) 85%);transform:skewX(-18deg);filter:blur(7px);animation:p07-ray var(--loop) ease-in-out infinite}
+.p07-rayons i:nth-child(1){left:12%;width:60px}
+.p07-rayons i:nth-child(2){left:46%;width:34px;animation-delay:-1.8s;opacity:.8}
+.p07-rayons i:nth-child(3){left:74%;width:52px;animation-delay:-3.6s;opacity:.7}
+@keyframes p07-ray{0%,100%{transform:skewX(-18deg) translateX(-7px);opacity:.55}50%{transform:skewX(-18deg) translateX(9px);opacity:1}}
+.p07-poisson{position:relative;width:100%}
+.p07 .fc .fish{transform:rotate(-12deg)}
+.p07-t{position:absolute;top:0;height:100%;width:calc(100%/44 + 1.1px);overflow:hidden;display:block;animation:p07-onde 0.9083s linear infinite;animation-delay:var(--d)}
+.p07 .fc .fish .p07-t img{position:absolute;top:0;width:88cqw;max-width:none;height:auto;display:block}
+@keyframes p07-onde{0%{transform:translateY(0);animation-timing-function:cubic-bezier(.39,.575,.565,1)}25%{transform:translateY(var(--a));animation-timing-function:cubic-bezier(.47,0,.745,.715)}50%{transform:translateY(0);animation-timing-function:cubic-bezier(.39,.575,.565,1)}75%{transform:translateY(calc(var(--a)*-1));animation-timing-function:cubic-bezier(.47,0,.745,.715)}100%{transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){.p07 *,.p07 *::before,.p07 *::after{animation:none!important}}
+
+.p07-derive{animation:p07-derive var(--loop) ease-in-out infinite}
+@keyframes p07-derive{0%,100%{transform:translateY(1.5px) rotate(-1.6deg)}50%{transform:translateY(-3px) rotate(1.6deg)}}
+</style>
+</helmet>
+<div class="ecran blanc p07">
+<div class="p07-scene">
+<div class="fc pc p07-carte" style="width:340px">
+<div class="win"><div class="p07-eau"><div class="p07-rayons"><i></i><i></i><i></i></div><svg class="p07-caus" viewBox="0 0 340 490" preserveAspectRatio="none" aria-hidden="true"><defs>
+<filter id="p07-ca1" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="turbulence" baseFrequency="0.011 0.017" numOctaves="2" seed="7"/><feColorMatrix type="matrix" values="0 0 0 0 0.66  0 0 0 0 0.92  0 0 0 0 1  -3.4 0 0 0 1.12"/><feComponentTransfer><feFuncA type="gamma" amplitude="1" exponent="3" offset="0"/></feComponentTransfer><feGaussianBlur stdDeviation="0.6"/></filter>
+<filter id="p07-ca2" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="turbulence" baseFrequency="0.015 0.012" numOctaves="2" seed="23"/><feColorMatrix type="matrix" values="0 0 0 0 0.66  0 0 0 0 0.92  0 0 0 0 1  -3.4 0 0 0 1.12"/><feComponentTransfer><feFuncA type="gamma" amplitude="1" exponent="3" offset="0"/></feComponentTransfer><feGaussianBlur stdDeviation="0.6"/></filter>
+</defs><rect class="p07-c1" width="340" height="490" filter="url(#p07-ca1)"/><rect class="p07-c2" width="340" height="490" filter="url(#p07-ca2)"/></svg><div class="p07-vig"></div></div></div>
+<div class="fish"><div class="p07-derive"><div class="p07-poisson" role="img" aria-label="Brochet" style="aspect-ratio:900/268"><i class="p07-t" style="left:0.0000%;--a:13.73px;--d:-0.0088s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:0.0000cqw"></i>
+<i class="p07-t" style="left:2.2727%;--a:13.20px;--d:-0.0263s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-2.0000cqw"></i>
+<i class="p07-t" style="left:4.5455%;--a:12.68px;--d:-0.0439s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-4.0000cqw"></i>
+<i class="p07-t" style="left:6.8182%;--a:12.18px;--d:-0.0614s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-6.0000cqw"></i>
+<i class="p07-t" style="left:9.0909%;--a:11.68px;--d:-0.0790s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-8.0000cqw"></i>
+<i class="p07-t" style="left:11.3636%;--a:11.19px;--d:-0.0965s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-10.0000cqw"></i>
+<i class="p07-t" style="left:13.6364%;--a:10.71px;--d:-0.1141s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-12.0000cqw"></i>
+<i class="p07-t" style="left:15.9091%;--a:10.24px;--d:-0.1316s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-14.0000cqw"></i>
+<i class="p07-t" style="left:18.1818%;--a:9.78px;--d:-0.1492s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-16.0000cqw"></i>
+<i class="p07-t" style="left:20.4545%;--a:9.33px;--d:-0.1667s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-18.0000cqw"></i>
+<i class="p07-t" style="left:22.7273%;--a:8.90px;--d:-0.1842s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-20.0000cqw"></i>
+<i class="p07-t" style="left:25.0000%;--a:8.47px;--d:-0.2018s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-22.0000cqw"></i>
+<i class="p07-t" style="left:27.2727%;--a:8.05px;--d:-0.2193s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-24.0000cqw"></i>
+<i class="p07-t" style="left:29.5455%;--a:7.64px;--d:-0.2369s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-26.0000cqw"></i>
+<i class="p07-t" style="left:31.8182%;--a:7.25px;--d:-0.2544s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-28.0000cqw"></i>
+<i class="p07-t" style="left:34.0909%;--a:6.86px;--d:-0.2720s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-30.0000cqw"></i>
+<i class="p07-t" style="left:36.3636%;--a:6.49px;--d:-0.2895s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-32.0000cqw"></i>
+<i class="p07-t" style="left:38.6364%;--a:6.12px;--d:-0.3071s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-34.0000cqw"></i>
+<i class="p07-t" style="left:40.9091%;--a:5.77px;--d:-0.3246s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-36.0000cqw"></i>
+<i class="p07-t" style="left:43.1818%;--a:5.43px;--d:-0.3422s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-38.0000cqw"></i>
+<i class="p07-t" style="left:45.4545%;--a:5.10px;--d:-0.3597s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-40.0000cqw"></i>
+<i class="p07-t" style="left:47.7273%;--a:4.78px;--d:-0.3773s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-42.0000cqw"></i>
+<i class="p07-t" style="left:50.0000%;--a:4.47px;--d:-0.3948s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-44.0000cqw"></i>
+<i class="p07-t" style="left:52.2727%;--a:4.17px;--d:-0.4124s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-46.0000cqw"></i>
+<i class="p07-t" style="left:54.5455%;--a:3.88px;--d:-0.4299s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-48.0000cqw"></i>
+<i class="p07-t" style="left:56.8182%;--a:3.61px;--d:-0.4475s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-50.0000cqw"></i>
+<i class="p07-t" style="left:59.0909%;--a:3.34px;--d:-0.4650s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-52.0000cqw"></i>
+<i class="p07-t" style="left:61.3636%;--a:3.09px;--d:-0.4826s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-54.0000cqw"></i>
+<i class="p07-t" style="left:63.6364%;--a:2.85px;--d:-0.5001s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-56.0000cqw"></i>
+<i class="p07-t" style="left:65.9091%;--a:2.62px;--d:-0.5176s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-58.0000cqw"></i>
+<i class="p07-t" style="left:68.1818%;--a:2.41px;--d:-0.5352s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-60.0000cqw"></i>
+<i class="p07-t" style="left:70.4545%;--a:2.21px;--d:-0.5527s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-62.0000cqw"></i>
+<i class="p07-t" style="left:72.7273%;--a:2.02px;--d:-0.5703s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-64.0000cqw"></i>
+<i class="p07-t" style="left:75.0000%;--a:1.84px;--d:-0.5878s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-66.0000cqw"></i>
+<i class="p07-t" style="left:77.2727%;--a:1.67px;--d:-0.6054s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-68.0000cqw"></i>
+<i class="p07-t" style="left:79.5455%;--a:1.52px;--d:-0.6229s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-70.0000cqw"></i>
+<i class="p07-t" style="left:81.8182%;--a:1.38px;--d:-0.6405s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-72.0000cqw"></i>
+<i class="p07-t" style="left:84.0909%;--a:1.26px;--d:-0.6580s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-74.0000cqw"></i>
+<i class="p07-t" style="left:86.3636%;--a:1.15px;--d:-0.6756s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-76.0000cqw"></i>
+<i class="p07-t" style="left:88.6364%;--a:1.06px;--d:-0.6931s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-78.0000cqw"></i>
+<i class="p07-t" style="left:90.9091%;--a:0.98px;--d:-0.7107s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-80.0000cqw"></i>
+<i class="p07-t" style="left:93.1818%;--a:0.92px;--d:-0.7282s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-82.0000cqw"></i>
+<i class="p07-t" style="left:95.4545%;--a:0.87px;--d:-0.7458s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-84.0000cqw"></i>
+<i class="p07-t" style="left:97.7273%;--a:0.84px;--d:-0.7633s"><img src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="left:-86.0000cqw"></i></div></div></div>
+<div class="cen">84<i>e</i></div>
+<div class="cenl">CEN · centile de taille</div>
+<div class="pl">
+<div class="nm"><b>Brochet</b><em>Esox lucius</em></div>
+<div class="st">
+<div><b>68<small> cm</small></b><span>TAI</span></div>
+<div><b>34<small> %</small></b><span>FRQ</span></div>
+<div class="rk pc"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 1.5 13.6 4.75v6.5L8 14.5 2.4 11.25v-6.5Z"/></svg><span>PEU COMMUN</span></div>
+</div>
+<div class="fo"><span>10 pêches sur 29 dans le 94 · OFB</span><u>n° 014</u></div>
+</div>
+<i class="in"></i>
+</div>
+<p class="p07-legende">Il nage dans sa carte</p>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
