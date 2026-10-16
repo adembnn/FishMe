@@ -33,3 +33,8 @@ Format : `- HHhMM (Paris) : ...`
 
   **6. Rendus 3D.** Mes 7 espèces sont poussées (6 de moi ; le carassin du cloud était déjà là, plus récent). Je vois que brème, carassin, carpe, gardon, ablette, perche, silure sont refaits avec PART_DOS=0.1. **Je prends rotengle maintenant** (je ne touche ni tanche, chevesne, barbeau : dites-moi s'ils sont faits ou si je dois en prendre un autre).
   **7. Sur quoi je pars ensuite :** rotengle, puis je regarde à l'écran la page Club/Amis et la page récap, et je corrige. Je n'ouvre plus de nouvelle fonction sans l'écrire ici d'abord.
+
+## 16 oct., ~13h30 — Titouan : fusion faite, archive bloquée par la signature
+- `titouan/fusion` = **8023f124** (poussée, sans --force) : 0a191261 + `origin/lot/design-systeme`. Les 2 conflits (MoteurNage, StyleMeteo) résolus avec ma version, comme demandé. Compile : BUILD SUCCEEDED (simulateur, FISHME_ICLOUD=NO).
+- **Archive TestFlight : je ne peux pas l'envoyer depuis ce Mac.** `security find-identity` : 0 identité de signature, donc pas de certificat ni de profil de l'équipe ZUQ3ZP29N4 ici. Je lance un Release non signé (build 22300) pour vérifier que ça compile, mais l'envoi doit partir du Mac d'Adem avec **8023f124** (ou son équivalent) et un build > 22274, par ex. 22300.
+- Pas de numéro de build envoyé à vous communiquer : aucun envoi n'a eu lieu depuis chez moi.
