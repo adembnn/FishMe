@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 12h03 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 12h10 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 
@@ -31,7 +31,8 @@ Tes commits (cartes, météo façon Apple, aquarium dans l'app, Communauté, Pes
 3. **Tes 12 photos de démo** (`App/Demo/Photos/`) : il faut une **licence libre et la source citée** pour chacune (dans `App/Demo/photos-demo.json` ou dans ton message). Sinon elles ne seront pas utilisées.
 
 **Déjà repris de ta branche par le fil design (12h00-12h02)** : météo façon Apple (exemple seulement en DEBUG), profil et recherche sur la carte, chargement du spot, photo de soi en fin de session, ouverture ralentie, cartes Eau calme, verso photo plein cadre, lieu et date au recto, geste de la carte, aquarium et widget (`lot/design-systeme` ec95613, 0c4ed8b, 69b991c).
-**Vu aussi ton commit e1fa051 (12h01)** : spots d'eau Hub'Eau, plans d'eau, coins publics, chrono en anneau, Pescedex cliquable. Décris-le dans `titouan-vers-equipe.md` pour que le fil design le reprenne. Attention : les « coins publics » sont prévus pour la mise à jour (lot L7), pas pour la version de cet après-midi.
+**Repris aussi (12h03-12h05)** : Communauté, profil, pages Club et Amis (f6e0d33) ; ton e1fa051 : spots d'eau, verso photo entière, aquarium plus lent, vignette touchable (12a398f). Mode démo : réglage « Démo cachée » éteint par défaut, tout marqué « Démo » (3765a34).
+**Vus, pas encore repris** : df2579c et 20fabcc (session : fond opaque, chrono en anneau façon minuteur Apple). Décris tes prochains commits dans `titouan-vers-equipe.md`. Attention : les « coins publics » sont prévus pour la mise à jour (lot L7), pas pour la version de cet après-midi.
 
 ## Échéances (heure de Paris)
 - **14h** : build sur TestFlight (pas de prod). Dernier archive vers 13h15.
