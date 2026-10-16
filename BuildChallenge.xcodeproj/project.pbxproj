@@ -342,10 +342,11 @@
 				};
 			};
 			buildConfigurationList = DBE31DBE30753926004DC02F /* Build configuration list for PBXProject "BuildChallenge" */;
-			developmentRegion = en;
+			developmentRegion = fr;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fr,
 				Base,
 			);
 			mainGroup = DBE31DBA30753926004DC02F;
@@ -595,6 +596,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/BuildChallenge-Info.plist";
+				INFOPLIST_KEY_CFBundleDevelopmentRegion = fr;
 				INFOPLIST_KEY_CFBundleDisplayName = FishMe;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Pour photographier ta prise. La photo reste sur ton iPhone, sans GPS.";
@@ -634,6 +636,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/BuildChallenge-Info.plist";
+				INFOPLIST_KEY_CFBundleDevelopmentRegion = fr;
 				INFOPLIST_KEY_CFBundleDisplayName = FishMe;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Pour photographier ta prise. La photo reste sur ton iPhone, sans GPS.";
