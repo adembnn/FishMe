@@ -113,17 +113,6 @@ nonisolated enum Regroupeur {
     }
 }
 
-/// Une station où nagent les petits poissons : `Core` y donne une espèce rare ou légendaire.
-nonisolated struct StationAnimee: Sendable, Equatable, Identifiable {
-    var station: StationCarte
-    /// Noms d'images des espèces rares ou légendaires.
-    var images: [String]
-    var id: String { station.id }
-
-    static let maximumStations = 20
-    static let poissonsParStation = 3
-}
-
 /// Où en est le choix de la zone au départ.
 nonisolated enum DepartCarte: Sendable, Equatable {
     case enAttente
@@ -151,36 +140,6 @@ nonisolated struct CoinSelectionne: Identifiable, Equatable, Sendable {
 
 @concurrent nonisolated func calculerElements(points: [PointCarte], region: ZoneCarte) async -> [ElementCarte] {
     Regroupeur.elements(points: points, region: region)
-}
-
-/// Les stations où `Core` donne une espèce rare ou légendaire (20 au plus), les plus proches du centre d'abord.
-@concurrent nonisolated func calculerAnimees(stations: [StationCarte], region: ZoneCarte, especes: any ServiceEspeces,
-                                             images: [String: String]) async -> [StationAnimee] {
-    // Trop dézoomé : rien ne nage (les poissons seraient illisibles, la carte coûterait cher).
-    guard region.spanLatitude <= 3 else { return [] }
-    let proches = stations
-        .filter { region.contient($0.coordonnee, marge: 0) }
-        .sorted { distanceMetres($0.coordonnee, region.centre) < distanceMetres($1.coordonnee, region.centre) }
-    var niveaux: [String: NiveauRarete] = [:]
-    var resultat: [StationAnimee] = []
-    for station in proches {
-        var rares: [String] = []
-        for releve in station.releves {
-            let cle = releve.espece.id + "|" + station.departement.code
-            let niveau: NiveauRarete
-            if let connu = niveaux[cle] {
-                niveau = connu
-            } else {
-                niveau = especes.rarete(espece: releve.espece, departement: station.departement).niveau
-                niveaux[cle] = niveau
-            }
-            if niveau == .rare || niveau == .legendaire, let image = images[releve.espece.id] { rares.append(image) }
-        }
-        guard !rares.isEmpty else { continue }
-        resultat.append(StationAnimee(station: station, images: Array(rares.prefix(StationAnimee.poissonsParStation))))
-        if resultat.count >= StationAnimee.maximumStations { break }
-    }
-    return resultat
 }
 
 @concurrent nonisolated func lireCoins(especes: any ServiceEspeces, espece: Espece, pres: Coordonnee) async -> [Coin] {
