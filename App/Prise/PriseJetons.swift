@@ -52,12 +52,14 @@ struct PriseBoutonRond: View {
     }
 }
 
-/// La feuille du bas, posée sur la photo de la prise : poignée, coins hauts arrondis, fond `surface`.
+/// La feuille du bas, posée sur la photo de la prise (voile marine) : poignée, flottante à 8 points des bords, coins arrondis, fond `surface`.
 /// Le bouton de retour flotte en haut à gauche.
 struct PriseFeuille<Contenu: View>: View {
     var photo: UIImage?
     var retour: (() -> Void)?
     var pleine = false
+    /// Opacité du voile marine sur la photo (0,32 par défaut, 0,4 pour la grille).
+    var voile: Double = 0.32
     @ViewBuilder var contenu: () -> Contenu
 
     var body: some View {
@@ -77,12 +79,13 @@ struct PriseFeuille<Contenu: View>: View {
                         .accessibilityHidden(true)
                     contenu()
                 }
-                .padding(.horizontal, Espace.bord)
+                .padding(.horizontal, 20)
                 .padding(.top, Espace.s)
-                .padding(.bottom, Espace.l)
+                .padding(.bottom, 20)
                 .frame(maxWidth: .infinity, maxHeight: pleine ? .infinity : nil)
-                .background(Palette.surface, in: UnevenRoundedRectangle(topLeadingRadius: 28, topTrailingRadius: 28, style: .continuous))
-                .ignoresSafeArea(edges: .bottom)
+                .background(Palette.surface, in: RoundedRectangle(cornerRadius: 28, style: .continuous))
+                .padding(.horizontal, Espace.s)
+                .padding(.bottom, Espace.s)
             }
         }
     }
@@ -92,6 +95,7 @@ struct PriseFeuille<Contenu: View>: View {
             Color.clear
                 .overlay(Image(uiImage: photo).resizable().scaledToFill())
                 .clipped()
+                .overlay(Color(red: 8 / 255, green: 42 / 255, blue: 76 / 255).opacity(voile))
                 .ignoresSafeArea()
                 .accessibilityHidden(true)
         } else {

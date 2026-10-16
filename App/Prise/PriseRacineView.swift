@@ -96,39 +96,48 @@ struct PriseEtapePhoto: View {
     // MARK: P38 : accès à l'appareil photo
 
     private var permission: some View {
-        VStack(spacing: Espace.l) {
-            HStack {
-                BoutonRond(role: .fermer, rendu: .verre, action: fermer)
-                Spacer()
-            }
-            Spacer(minLength: 0)
+        // P38 C : grande icône d'appareil photo en trait fin, titre et phrase au milieu, bouton et lien en bas.
+        VStack(spacing: 0) {
             Image(systemName: "camera")
-                .font(.system(size: 120, weight: .bold, design: .rounded))
+                .font(.system(size: 210, weight: .thin, design: .rounded))
                 .foregroundStyle(Palette.marine)
+                .padding(.top, 37)
                 .accessibilityHidden(true)
-            Spacer(minLength: 0)
-            Text("Photographier ta prise")
-                .font(Police.grandTitre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
-                .accessibilityAddTraits(.isHeader)
-            Text("La photo reste sur ton iPhone, sans GPS.")
-                .font(Police.corps).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
-            Spacer(minLength: 0)
-            if PriseCamera.disponible {
-                if acces == .denied || acces == .restricted {
-                    Button("Ouvrir les réglages") {
-                        if let url = URL(string: UIApplication.openSettingsURLString) { ouvrirURL(url) }
+            Spacer(minLength: Espace.l)
+            VStack(spacing: Espace.m) {
+                Text("Photographier ta prise")
+                    .font(Police.grandTitre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
+                    .accessibilityAddTraits(.isHeader)
+                Text("La photo reste sur ton iPhone, sans GPS.")
+                    .font(Police.detail).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
+            }
+            .padding(.horizontal, Espace.xl)
+            Spacer(minLength: Espace.l)
+            VStack(spacing: Espace.xs) {
+                if PriseCamera.disponible {
+                    if acces == .denied || acces == .restricted {
+                        Button("Ouvrir les réglages") {
+                            if let url = URL(string: UIApplication.openSettingsURLString) { ouvrirURL(url) }
+                        }
+                        .buttonStyle(.principal)
+                    } else {
+                        Button("Continuer") { demanderEtOuvrir() }.buttonStyle(.principal)
                     }
-                    .buttonStyle(.principal)
-                } else {
-                    Button("Continuer") { demanderEtOuvrir() }.buttonStyle(.principal)
+                }
+                PriseChoixPhoto(modele: modele) {
+                    Text(PriseChoixPhotoTexte.libelle).font(Police.corps).foregroundStyle(Palette.marine)
+                        .frame(minHeight: Gabarit.zoneTactile)
                 }
             }
-            PriseChoixPhoto(modele: modele) {
-                Text(PriseChoixPhotoTexte.libelle).font(Police.corps).foregroundStyle(Palette.marine)
-                    .frame(minHeight: Gabarit.zoneTactile)
-            }
+            .padding(.bottom, Espace.s)
         }
-        .padding(Espace.bord)
+        .padding(.horizontal, Espace.bord)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Palette.surface.ignoresSafeArea())
+        .overlay(alignment: .topLeading) {
+            // La maquette n'a pas de croix ici ; on la garde pour qu'on puisse toujours quitter l'écran.
+            BoutonRond(role: .fermer, rendu: .verre, action: fermer).padding(Espace.bord)
+        }
     }
 
     private func demanderEtOuvrir() {
@@ -148,40 +157,46 @@ struct PriseEtapePhoto: View {
 
     private var cadre: some View {
         ZStack {
-            // P18 C : la photo prend tout l'écran (l'aperçu vivant est ouvert par le déclencheur), coins de cadrage, consigne dans le cadre.
+            // P18 C : la photo prend tout l'écran (l'aperçu vivant est ouvert par le déclencheur), voile marine, coins de cadrage, consigne sous le cadre.
             Palette.nuit.ignoresSafeArea()
-            PriseCoinsDeCadre().stroke(.white, style: StrokeStyle(lineWidth: 4, lineCap: .round))
-                .aspectRatio(1.0, contentMode: .fit)
-                .padding(.horizontal, Espace.xl)
-                .accessibilityHidden(true)
-            VStack(spacing: Espace.s) {
+            Color(red: 8 / 255, green: 42 / 255, blue: 76 / 255).opacity(0.28).ignoresSafeArea()
+            VStack(spacing: 0) {
                 HStack {
                     BoutonRond(role: .fermer, rendu: .verre, action: fermer)
                     Spacer()
                 }
                 Spacer(minLength: 0)
+                PriseCoinsDeCadre().stroke(.white, style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                    .aspectRatio(320.0 / 290.0, contentMode: .fit)
+                    .frame(maxWidth: 320)
+                    .padding(.horizontal, 35)
+                    .accessibilityHidden(true)
                 Text("Le poisson entier, de profil")
-                    .font(Police.corps).foregroundStyle(.white).multilineTextAlignment(.center)
-                Spacer(minLength: Espace.xxl)
+                    .font(Police.sousTitre).foregroundStyle(.white).multilineTextAlignment(.center)
+                    .shadow(color: .black.opacity(0.45), radius: 4, y: 1)
+                    .padding(.top, Espace.l)
+                Spacer(minLength: Espace.l)
                 ZStack {
                     Button(action: ouvrirCamera) {
-                        Circle().fill(.white).frame(width: 72, height: 72)
-                            .overlay(Circle().strokeBorder(.white.opacity(0.5), lineWidth: 5).frame(width: 84, height: 84))
-                            .frame(width: 88, height: 88)
+                        Circle().fill(.white).frame(width: 92, height: 92)
+                            .overlay(Circle().strokeBorder(.white.opacity(0.55), lineWidth: 4).frame(width: 100, height: 100))
+                            .frame(width: 100, height: 100)
                     }
                     .accessibilityLabel("Prendre la photo")
                     HStack {
                         PriseChoixPhoto(modele: modele) {
                             Image(systemName: "photo")
-                                .font(.system(size: 18, weight: .bold, design: .rounded)).foregroundStyle(.white)
-                                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
+                                .font(.system(size: 22, weight: .bold, design: .rounded)).foregroundStyle(Palette.encre)
+                                .frame(width: 48, height: 48)
+                                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                         }
+                        .padding(.leading, Espace.s)
                         Spacer()
                     }
                 }
-                Label("Sur l'iPhone, sans réseau", systemImage: "lock.fill")
+                Text("Sur l'iPhone, sans réseau")
                     .font(Police.legende).foregroundStyle(.white.opacity(0.85))
+                    .padding(.top, Espace.l)
             }
             .padding(Espace.bord)
         }
