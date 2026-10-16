@@ -14,7 +14,7 @@ struct JaugeRiviereView: View {
                 contenu(eau)
             } else {
                 Label("pas de station de mesure près d'ici", systemImage: "drop.triangle")
-                    .font(JetonsConditions.police(.footnote)).foregroundStyle(JetonsConditions.encre2)
+                    .font(Police.legende).foregroundStyle(Palette.encreDouce)
             }
         }
         .buttonStyle(.plain)
@@ -26,23 +26,23 @@ struct JaugeRiviereView: View {
             HStack(spacing: 8) {
                 Image(systemName: "water.waves").foregroundStyle(couleur)
                 if let libelle {
-                    Text(libelle).font(JetonsConditions.police(.headline)).foregroundStyle(couleur)
+                    Text(libelle).font(Police.sousTitre).foregroundStyle(couleur)
                 }
                 if let h = eau.hauteurM {
                     Text("\(FormatConditions.nombre(h, decimales: 2)) m").font(Police.chiffreMoyen)
-                        .foregroundStyle(JetonsConditions.encre)
+                        .foregroundStyle(Palette.encre)
                 }
                 if let q = eau.debitM3s {
-                    Text("\(FormatConditions.nombre(q)) m³/s").font(JetonsConditions.police(.subheadline))
-                        .foregroundStyle(JetonsConditions.encre2)
+                    Text("\(FormatConditions.nombre(q)) m³/s").font(Police.legende)
+                        .foregroundStyle(Palette.encreDouce)
                 }
             }
             if lecture.conditions.etatRiviere == .inconnu, let debut = eau.serie48h.first?.hauteurM, let h = eau.hauteurM {
                 Text("il y a 48 h : \(FormatConditions.nombre(debut, decimales: 2)) m, maintenant : \(FormatConditions.nombre(h, decimales: 2)) m")
-                    .font(JetonsConditions.police(.caption)).foregroundStyle(JetonsConditions.encre2)
+                    .font(Police.legende).foregroundStyle(Palette.encreDouce)
             }
             Text("\(eau.station.nom) · mesuré à \(FormatConditions.heure(eau.heureMesure))")
-                .font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
+                .font(Police.legende).foregroundStyle(Palette.encreDouce)
         }
         .accessibilityElement(children: .combine)
     }
@@ -58,10 +58,10 @@ struct JaugeRiviereView: View {
 
     private var couleur: Color {
         switch lecture.conditions.etatRiviere {
-        case .normal: return JetonsConditions.accent
-        case .haut: return JetonsConditions.haut
-        case .crue: return JetonsConditions.crue
-        case .inconnu: return JetonsConditions.encre2
+        case .normal: return Palette.marine
+        case .haut: return Palette.alerte
+        case .crue: return Palette.alerte
+        case .inconnu: return Palette.encreDouce
         }
     }
 }

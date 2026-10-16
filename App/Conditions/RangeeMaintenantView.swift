@@ -55,6 +55,8 @@ struct RangeeMaintenantView: View {
     var montrerRiviere: Bool = true
     /// Un toucher sur le niveau de la rivière ouvre la courbe de 48 h (Pro : l'appelant passe la porte).
     var ouvrirCourbe: (() -> Void)? = nil
+    /// Vrai quand la rangée est déjà dans une feuille : ni tuile ni marge de tuile, seulement la marge de l'écran.
+    var enFeuille: Bool = false
 
     var body: some View {
         let c = lecture.conditions
@@ -118,9 +120,9 @@ struct RangeeMaintenantView: View {
             }
             MarqueMeteoView(stockage: marque).padding(.top, Espace.s)
         }
-        .padding(20)
+        .padding(enFeuille ? Espace.bord : 20)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .tuileFishMe(rayon: Rayon.l)
+        .modifier(HabillageTuile(actif: !enFeuille))
         .accessibilityIdentifier("rangee-maintenant")
     }
 
@@ -155,11 +157,36 @@ struct RangeeMaintenantView: View {
     }
 }
 
-/// Rien à montrer sans lecture : jamais un chiffre inventé.
+/// La tuile FishMe, sauf quand la rangée est déjà dans une feuille.
+private struct HabillageTuile: ViewModifier {
+    let actif: Bool
+
+    @ViewBuilder func body(content: Content) -> some View {
+        if actif { content.tuileFishMe(rayon: Rayon.l) } else { content }
+    }
+}
+
+/// Rien à montrer sans lecture : jamais un chiffre inventé. Avec `reessayer`, un bouton de 44 pt relance la lecture.
 struct RangeeMaintenantVideView: View {
+    var reessayer: (() -> Void)? = nil
+
     var body: some View {
-        Label("pas de lecture", systemImage: "wifi.slash")
-            .font(JetonsConditions.police(.footnote)).foregroundStyle(JetonsConditions.encre2)
-            .accessibilityIdentifier("rangee-vide")
+        VStack(spacing: Espace.s) {
+            Image(systemName: "wifi.slash").font(Police.taille(28)).foregroundStyle(Palette.encreDouce)
+                .accessibilityHidden(true)
+            Text("pas de lecture").font(Police.detail).foregroundStyle(Palette.encreDouce)
+            if let reessayer {
+                Button(action: reessayer) {
+                    Text("Réessayer").font(Police.corps).foregroundStyle(Palette.marine)
+                        .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal, Espace.bord)
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("rangee-vide")
     }
 }
