@@ -78,33 +78,24 @@ struct VueCarte: View {
                         .annotationTitles(.hidden)
                     }
                 }
+                // Jamais la France entière : au plus quelques départements à l'écran, et seulement au-dessus de la France.
+                .mapCameraBounds(MapCameraBounds(centerCoordinateBounds: Self.franceEtVoisins,
+                                                 minimumDistance: 300, maximumDistance: Self.altitudeMaximale))
                 .mapControls { MapCompass() }
-                .onMapCameraChange(frequency: .continuous) { _ in
-                    if !modele.enMouvement { modele.enMouvement = true }
-                }
                 .onMapCameraChange(frequency: .onEnd) { contexte in
                     let r = contexte.region
                     modele.chargerApresMouvement(ZoneCarte(
                         centre: Coordonnee(latitude: r.center.latitude, longitude: r.center.longitude),
                         spanLatitude: r.span.latitudeDelta, spanLongitude: r.span.longitudeDelta))
                 }
-                .onTapGesture { point in
-                    guard modele.modeChoixDuSpot, let c = proxy.convert(point, from: .local) else { return }
+                // Le toucher qui pose le cercle n'existe qu'en mode « poser mon spot » : le reste du temps,
+                // la carte garde tous ses gestes (pincer, double toucher, glisser) sans rien qui les retienne.
+                .simultaneousGesture(SpatialTapGesture().onEnded { valeur in
+                    guard let c = proxy.convert(valeur.location, from: .local) else { return }
                     if let spot = modele.poserSpot(en: Coordonnee(latitude: c.latitude, longitude: c.longitude)) {
                         onSpotChange(spot)
                     }
-                }
-
-                PoissonsNageurs(animees: modele.animees, proxy: proxy, enMouvement: modele.enMouvement, region: modele.regionVisible)
-
-                // Sonar pendant la première lecture des relevés OFB (carte encore vide), fondu de 0,3 s à l'arrivée.
-                // Pas de sonar quand on déplace une carte déjà remplie : les stations restent, les nouvelles s'ajoutent.
-                Group {
-                    if modele.chargementEnCours && modele.stations.isEmpty {
-                        ChargementSonar().transition(.opacity)
-                    }
-                }
-                .animation(.easeOut(duration: 0.3), value: modele.chargementEnCours && modele.stations.isEmpty)
+                }, including: modele.modeChoixDuSpot ? .all : .subviews)
             }
         }
         .safeAreaInset(edge: .top, spacing: 8) { haut }
@@ -148,27 +139,40 @@ struct VueCarte: View {
         .task {
             modele.spotFixe = spotFixe
             modele.sessionsTerminees = sessionsTerminees
+            // Avant toute question de position : le spot fixé ou la dernière zone choisie posent la carte tout de suite.
+            modele.placerALOuverture()
             // La position se demande tout de suite : elle n'attend ni les espèces ni le cache.
             position.demanderAuPremierEcran()
             reagirAuStatut()
             await modele.demarrer()
         }
-        .onChange(of: spotFixe) { _, nouveau in modele.spotFixe = nouveau }
+        .onChange(of: spotFixe) { _, nouveau in modele.recevoir(spotFixe: nouveau) }
         .onChange(of: sessionsTerminees) { _, nouveau in modele.sessionsTerminees = nouveau }
         .onChange(of: position.position) { _, nouvelle in
             if let nouvelle { modele.appliquer(position: nouvelle, refusee: false) }
         }
         .onChange(of: position.statut) { _, _ in reagirAuStatut() }
+        .onChange(of: position.echec) { _, echec in if echec { modele.positionIndisponible() } }
         .onChange(of: modele.afficherChoixDeZone || modele.afficherRedemande) { _, ouvert in surChoixDeZone(ouvert) }
         // Le spot proposé (zone choisie ou position) est connu de la racine : tunnel, conseils et conditions s'en servent.
         .onChange(of: modele.spotLocal) { _, nouveau in if let nouveau { onSpotChange(nouveau) } }
     }
+
+    // MARK: Caméra
+
+    /// Le centre de la carte reste au-dessus de la France (Corse comprise) et de ses frontières.
+    static let franceEtVoisins = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 46.4, longitude: 2.6),
+                                                    span: MKCoordinateSpan(latitudeDelta: 11, longitudeDelta: 14))
+    /// Environ 250 km de large à l'écran au plus dézoomé : un ou deux départements, jamais un pays de bulles.
+    static let altitudeMaximale: CLLocationDistance = 400_000
 
     // MARK: Départ
 
     /// Position refusée : une seule redemande, puis le choix à la main. Rien ne bloque.
     private func reagirAuStatut() {
         guard position.estRefusee else { return }
+        // La carte est déjà posée (spot fixé ou zone gardée) : pas de redemande qui couvre l'écran.
+        if modele.cameraPlacee { return }
         if position.doitRedemanderUneFois() {
             modele.afficherRedemande = true
         } else {
