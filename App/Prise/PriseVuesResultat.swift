@@ -115,7 +115,7 @@ struct PriseResultatView: View {
             }
             .scrollIndicators(.hidden)
             if modele.exemple {
-                Text("Carte d'exemple : elle ne compte pas au Pescedex")
+                Text("Photo d'exemple : cette carte ne compte pas dans ton Pescedex.")
                     .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
             }
             Button(modele.exemple ? "Ranger (carte d'exemple)" : "Ranger dans le Pescedex") { modele.ranger() }

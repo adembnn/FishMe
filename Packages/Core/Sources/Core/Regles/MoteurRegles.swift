@@ -68,6 +68,7 @@ public struct MoteurRegles: ServiceRegles {
         let calcul = calculer(ctx)
         var lignes = calcul.internes.map(\.ligne)
         lignes.append(contentsOf: lignesDEspece(esp))
+        if let carpe = ligneCarpeDeNuit(ctx: ctx, calcul: calcul) { lignes.append(carpe) }
         return ResultatControle(lignes: lignes, consigne: consigne(lignes: lignes, calcul: calcul))
     }
 
@@ -586,6 +587,56 @@ public struct MoteurRegles: ServiceRegles {
                                         sources: [SourceRegle(titre: "Liste des espèces (statut)")]))
         }
         return lignes
+    }
+
+    // MARK: Carpe de nuit
+
+    static let phraseCarpeAutorisee = "Carpe de nuit : remise à l'eau obligatoire, appâts végétaux seulement"
+    static let phraseCarpeAVerifier = "Pêche de nuit : seulement sur les secteurs autorisés, vérifie l'arrêté"
+
+    private func estCarpe(_ e: Espece) -> Bool { e.id == "carpe-commune" || e.id == "carpe-koi" || e.codeSandre == "2110" }
+
+    /// Vrai si la prise est clairement hors des heures légales (même calcul que la ligne horaire, avec sa marge).
+    private func estDeNuit(_ date: Date, departements: [String]) -> Bool {
+        for dep in departements {
+            guard let centre = centres[dep], let (lever, coucher) = soleil.leverEtCoucher(date: date, coordonnee: centre) else { continue }
+            let debut = lever.addingTimeInterval(-30 * 60)
+            let fin = coucher.addingTimeInterval((30 - MoteurSoleil.margeDeSecuriteMin) * 60)
+            let marge = Self.margeHoraireMin * 60
+            return date < debut.addingTimeInterval(-marge) || date > fin.addingTimeInterval(marge)
+        }
+        return false
+    }
+
+    /// Une carpe prise de nuit : la ligne dit si une règle locale chargée autorise la carpe de nuit sur ce lieu (remise à l'eau
+    /// obligatoire dans ce cas), sinon renvoie à l'arrêté. Jamais de « tu peux la garder ». Pas de citation inventée du Code :
+    /// la source R436-14 est celle du socle national.
+    private func ligneCarpeDeNuit(ctx: Contexte, calcul: Calcul) -> LigneControle? {
+        guard let espece = ctx.espece, estCarpe(espece) else { return nil }
+        var deps = [ctx.lieu.departement.code]
+        if let v = ctx.lieu.departementVoisin?.code, !deps.contains(v) { deps.append(v) }
+        guard estDeNuit(ctx.date, departements: deps) else { return nil }
+        let national = chargeur.fichier("national")
+        var codeSource: SourceRegle?
+        if let national, let t = national.textes.values.first(where: { ($0.titre ?? "").contains("R436-14") }) {
+            codeSource = SourceRegle(titre: t.titre ?? "R436-14", url: t.url)
+        }
+        for dep in deps {
+            guard let local = chargeur.fichier(dep) else { continue }
+            for interne in calcul.internes {
+                guard let id = interne.regleId, interne.ligne.raison == nil, interne.ligne.etat != .aVerifierSurPlace,
+                      let r = local.regles.first(where: { $0.id == id }), r.type == "carpe_nuit", r.statut != "incertain",
+                      ["cours_eau", "plan_eau", "troncon"].contains(r.portee?.niveau ?? "") else { continue }
+                let texte = ((r.valeur["texte"]?.texte ?? "") + " " + r.phrase).lowercased()
+                if texte.contains("autorise : non") || texte.contains("interdit") || texte.contains("pas de pêche") { continue }
+                var sources = r.textes.compactMap { sourceDe(id: $0, fichier: local) }
+                if let codeSource, !sources.contains(codeSource) { sources.append(codeSource) }
+                return LigneControle(type: .nuit, etat: .nonRespectee, phrase: Self.phraseCarpeAutorisee,
+                                     sources: sources, citation: r.citation)
+            }
+        }
+        return LigneControle(type: .nuit, etat: .aVerifierSurPlace, phrase: Self.phraseCarpeAVerifier,
+                             sources: codeSource.map { [$0] } ?? [])
     }
 
     // MARK: Consigne
