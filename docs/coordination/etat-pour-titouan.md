@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h50 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 11h51 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 
@@ -12,7 +12,20 @@ Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. 
 3. **Les commandes** que ton Claude lance pour compiler et lancer l'app (et sur quel simulateur ou appareil).
 4. Ce qui fait que ça prend moins de RAM (DeviceHub fermé ? Xcode fermé ? `xcodebuild` seul ?).
 
-Le correctif des spots OFB arrivera dans ce même fichier.
+
+## 🔧 PAS DE SPOTS DANS TON SIMULATEUR ? (correctif)
+Les fichiers des stations OFB ne sont pas dans git (fabriqués par script, jamais commités). Sans eux, la carte n'a aucun spot.
+Sur ton Mac, depuis la racine du dépôt :
+```sh
+brew install gh && gh auth login     # seulement si « gh » n'est pas déjà installé et connecté
+scripts/donnees.sh
+```
+Le script télécharge la release privée « donnees » du dépôt et doit afficher trois lignes ✓ :
+- `App/Donnees/stations-especes.json` (les stations OFB et leurs poissons : c'est lui qui fait les spots)
+- `App/Donnees/rarete-departements.json`
+- `App/Donnees/stations-hydro.json`
+
+Puis **build propre** : dans Xcode, Product > Clean Build Folder (⇧⌘K), puis relance. Si un ✗ s'affiche, copie le message dans `titouan-vers-equipe.md`.
 
 ## Échéances (heure de Paris)
 - **14h** : build sur TestFlight (pas de prod). Dernier archive vers 13h15.
