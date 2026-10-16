@@ -23,6 +23,8 @@ struct IdentificationDinoTests {
         #expect(IdentificationDino.classe(deEtiquette: "truite-commune") == "truite_commune")
         #expect(IdentificationDino.classe(deEtiquette: "ombre") == "ombre_commun")
         #expect(IdentificationDino.classe(deEtiquette: "pas-un-poisson") == nil)
+        #expect(IdentificationDino.classe(deEtiquette: "grande-alose") == nil, "recalée à l'examen v2")
+        #expect(IdentificationDino.classe(deEtiquette: "chabot") == nil, "recalé à l'examen v2")
     }
 }
 

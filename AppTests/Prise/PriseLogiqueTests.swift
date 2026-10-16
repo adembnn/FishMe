@@ -10,6 +10,16 @@ struct PriseLogiqueTests {
         EspecePechable(espece: Espece(id: id), nom: nom, nomLatin: nom, image: id, confusions: confusions)
     }
 
+    @Test func sosiesDejaTranchesDansUnGroupeDuModele() {
+        var aquitain = entree("brochet-aquitain", nom: "Brochet aquitain"); aquitain.classeModele = "brochet"
+        var brochet = entree("brochet", nom: "Brochet", confusions: [Confusion(avec: aquitain.espece, critere: "c", source: "s")])
+        brochet.classeModele = "brochet"
+        let cat = [brochet, aquitain]
+        #expect(PriseLogique.sosiesDejaTranches(brochet, classe: "brochet", catalogue: cat))
+        #expect(!PriseLogique.sosiesDejaTranches(brochet, classe: nil, catalogue: cat))
+        #expect(!PriseLogique.sosiesDejaTranches(brochet, classe: "autre", catalogue: cat))
+    }
+
     @Test func grilleGroupeParFamilleEtMetLesEspecesDuCoinEnPremier() {
         let catalogue = [entree("sandre", nom: "Sandre"), entree("brochet", nom: "Brochet"), entree("truite-fario", nom: "Truite fario")]
         let proches = [EspeceProche(espece: Espece(id: "sandre"), nPeches: 3, annee: 2024, ouverture: .ouverte)]
@@ -68,6 +78,26 @@ struct PriseLogiqueTests {
         #expect(PriseFamille.de("esturgeon-europeen") == .migrateurs)
         #expect(PriseFamille.de("ecrevisse-signal") == .ecrevisses)
     }
+
+    @Test func especesAjouteesRangeesDansLaBonneFamille() {
+        for id in ["brochet-aquitain", "black-bass-petite-bouche", "crapet-de-roche", "barbue-de-riviere"] {
+            #expect(PriseFamille.de(id) == .carnassiers, "\(id)")
+        }
+        for id in ["sterlet", "bar", "raye-hybride"] { #expect(PriseFamille.de(id) == .migrateurs, "\(id)") }
+        for id in ["gobie-a-taches-noires", "gobie-de-kessler", "epinochette"] { #expect(PriseFamille.de(id) == .petitsDeFond, "\(id)") }
+        #expect(PriseFamille.de("poisson-rouge") == .carpes)
+        #expect(PriseFamille.de("hybrides") == .cyprinides)
+    }
+
+    @Test func tuileDeGroupeSansNomBrut() {
+        let chat = entree("poisson-chat", nom: "Poisson-chat (Ameiurus melas ; Ameiurus nebulosus [?])")
+        #expect(PriseLogique.nomDeGroupe(classe: "poisson_chat", membres: [chat]) == "Poisson-chat ou barbue")
+        #expect(PriseLogique.nomDeGroupe(classe: "inconnue", membres: [chat]) == "Poisson-chat")
+        #expect(PriseLogique.nomDeGroupe(classe: "hotu_toxostome", membres: []) == "Hotu ou toxostome")
+        #expect(PriseLogique.nomCourt("Anguille européenne, stade jaune") == "Anguille européenne")
+        #expect(PriseLogique.nomCourt("Carassin argenté / poisson rouge") == "Carassin argenté")
+        for nom in PriseLogique.nomsDeGroupe.values { #expect(!nom.contains("(") && !nom.contains("[")) }
+    }
 }
 
 @MainActor
@@ -121,11 +151,22 @@ struct PriseModeleTests {
         m.choisir(brochet)
         #expect(m.etape == .taille)
         #expect(m.controle == nil)
-        m.longueurCm = 60
+        m.deplacerCurseur(60)
         m.confirmerLaTaille()
         #expect(m.controle != nil)
         #expect(m.poids != nil)
         #expect(m.methode == .saisie)
+    }
+
+    @Test func leCurseurDemarreAuMilieuEtDoitBouger() throws {
+        let m = modele()
+        let brochet = try #require(m.catalogue.first { $0.espece.id == "brochet" })
+        m.choisir(brochet)
+        #expect(m.longueurCm == PriseLogique.tailleDeDepart)
+        #expect(PriseLogique.plageTaille.contains(m.longueurCm) && m.longueurCm != 40)
+        #expect(!m.curseurBouge)
+        m.deplacerCurseur(55)
+        #expect(m.curseurBouge)
     }
 
     @Test func lAnguilleDemandeSonStade() throws {

@@ -10,15 +10,41 @@ struct PriseImageEspece: View {
     var body: some View {
         Group {
             if UIImage(named: entree.image) != nil {
-                Image(entree.image).resizable().scaledToFit().padding(8)
+                Image(entree.image).resizable().scaledToFit().padding(Espace.s)
             } else {
                 Image(systemName: PriseFamille.de(entree.espece.id).symbole)
                     .font(.system(size: cote * 0.4, weight: .bold, design: .rounded))
-                    .foregroundStyle(PriseJetons.encre.opacity(0.55))
+                    .foregroundStyle(Palette.encreDouce)
             }
         }
         .frame(width: cote, height: cote)
-        .background(PriseJetons.papier, in: RoundedRectangle(cornerRadius: PriseJetons.rayon))
+        .background(Palette.marineDoux, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
+        .accessibilityHidden(true)
+    }
+}
+
+/// L'image d'une espèce en vignette large (poisson de profil sur fond marine doux), qui prend la largeur offerte.
+struct PriseVignetteEspece: View {
+    var entree: EspecePechable
+    var selectionne = false
+
+    var body: some View {
+        Group {
+            if UIImage(named: entree.image) != nil {
+                Image(entree.image).resizable().scaledToFit().padding(Espace.s)
+            } else {
+                Image(systemName: PriseFamille.de(entree.espece.id).symbole)
+                    .font(.system(size: 28, weight: .bold, design: .rounded))
+                    .foregroundStyle(Palette.encreDouce)
+            }
+        }
+        .frame(maxWidth: .infinity, minHeight: 64, maxHeight: 64)
+        .background(Palette.marineDoux, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
+        .overlay {
+            if selectionne {
+                RoundedRectangle(cornerRadius: Rayon.m, style: .continuous).strokeBorder(Palette.marine, lineWidth: 3)
+            }
+        }
         .accessibilityHidden(true)
     }
 }
@@ -27,30 +53,39 @@ struct PriseImageEspece: View {
 struct PriseTuile: View {
     var entree: EspecePechable
     var duCoin = false
+    var selectionne = false
+    /// Nom affiché à la place de celui de l'espèce (tuile d'un groupe de sosies).
+    var titre: String?
     var action: () -> Void
 
     var body: some View {
         Button(action: action) {
-            VStack(spacing: 6) {
-                PriseImageEspece(entree: entree)
-                Text(entree.nom)
-                    .font(PriseJetons.legende()).foregroundStyle(PriseJetons.encre)
+            VStack(spacing: Espace.xs) {
+                PriseVignetteEspece(entree: entree, selectionne: selectionne)
+                Text(titre ?? entree.nom)
+                    .font(Police.legende).foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             }
-            .frame(maxWidth: .infinity, minHeight: PriseJetons.cibleMin)
+            .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
         }
         .buttonStyle(.plain)
         .overlay(alignment: .topTrailing) {
-            if duCoin { Image(systemName: "mappin.circle.fill").foregroundStyle(PriseJetons.accent).accessibilityHidden(true) }
+            if duCoin {
+                Image(systemName: "mappin.circle.fill").foregroundStyle(Palette.marine)
+                    .padding(Espace.xs).accessibilityHidden(true)
+            }
         }
-        .accessibilityLabel(entree.nom)
+        .accessibilityLabel(titre ?? entree.nom)
         .accessibilityValue(duCoin ? "Relevée près de toi" : "")
+        .accessibilityAddTraits(selectionne ? .isSelected : [])
     }
 }
 
-/// Les 3 propositions, « autre espèce » et « pas un poisson », toujours visibles. Aucun pourcentage.
+/// P19 : les 3 propositions en images, sur la photo, plus une case « Autre ». Aucun pourcentage.
+/// Le pêcheur touche la bonne, puis « Confirmer : … » (un seul bouton principal).
 struct PrisePropositionsView: View {
     var modele: PriseModele
+    @State private var choix = 0
 
     private enum Tuile {
         case espece(EspecePechable)
@@ -67,81 +102,105 @@ struct PrisePropositionsView: View {
         }
     }
 
-    private var trois: [EspecePechable] {
-        modele.propositions.compactMap { p in
-            if case .espece(let e) = p.type { return modele.catalogue.first { $0.espece == e } }
-            return nil
+    private func nom(_ tuile: Tuile) -> String {
+        switch tuile {
+        case .espece(let e): return e.nom
+        case .classe(let nom, _): return PriseLogique.nomDeGroupe(classe: nom, membres: modele.catalogue.filter { $0.classeModele == nom })
         }
     }
 
     var body: some View {
-        VStack(spacing: 16) {
-            PriseEntete(titre: "Quelle espèce ?", consigne: PriseLogique.consigneAvantConfirmation)
-            if let image = modele.imagePhoto {
-                Image(uiImage: image).resizable().scaledToFit().frame(maxHeight: 180)
-                    .clipShape(RoundedRectangle(cornerRadius: PriseJetons.rayon))
-                    .accessibilityLabel("Ta photo")
-            }
-            ScrollView {
-                VStack(spacing: 16) {
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 100), spacing: 12)], spacing: 12) {
-                        // Dans l'ordre du modèle (le plus probable d'abord), espèce seule ou groupe de sosies.
-                        // Un groupe (« brochet » : brochet et brochet aquitain) montre l'image de sa 1re espèce et ouvre ses sosies.
-                        ForEach(Array(tuiles.enumerated()), id: \.offset) { _, tuile in
-                            switch tuile {
-                            case .espece(let entree):
-                                PriseTuile(entree: entree) { modele.choisir(entree) }
-                            case .classe(let nom, let premiere):
-                                if let premiere {
-                                    PriseTuile(entree: premiere) { modele.ouvrirLaGrille(classe: nom) }
-                                } else {
-                                    Button(nom.split(separator: "_").joined(separator: " ou ").capitalizedPremiere) { modele.ouvrirLaGrille(classe: nom) }
-                                        .buttonStyle(PriseBoutonSecondaire())
-                                }
+        let liste = Array(tuiles.prefix(3))
+        PriseFeuille(photo: modele.imagePhoto, retour: nil) {
+            VStack(alignment: .leading, spacing: Espace.m) {
+                Text("Quelle espèce ?").font(Police.titre).foregroundStyle(Palette.encre)
+                    .accessibilityAddTraits(.isHeader)
+                HStack(alignment: .top, spacing: Espace.s) {
+                    // Dans l'ordre du modèle (le plus probable d'abord), espèce seule ou groupe de sosies.
+                    // Un groupe (« brochet » : brochet et brochet aquitain) montre l'image de sa 1re espèce et ouvre ses sosies.
+                    ForEach(Array(liste.enumerated()), id: \.offset) { i, tuile in
+                        switch tuile {
+                        case .espece(let entree):
+                            PriseTuile(entree: entree, selectionne: choix == i) { choix = i }
+                        case .classe(_, let premiere):
+                            if let premiere {
+                                PriseTuile(entree: premiere, selectionne: choix == i, titre: nom(tuile)) { choix = i }
+                            } else {
+                                Button(nom(tuile)) { choix = i }.buttonStyle(.secondaire)
                             }
                         }
                     }
-                    Button("Autre espèce") { modele.ouvrirLaGrille() }.buttonStyle(PriseBoutonSecondaire())
-                    Button("Pas un poisson") { modele.terminer(nil) }.buttonStyle(PriseBoutonSecondaire())
+                    autre
                 }
             }
-            .scrollIndicators(.hidden)
+            if liste.indices.contains(choix) {
+                let tuile = liste[choix]
+                Button("Confirmer : \(nom(tuile).lowercased())") { confirmer(tuile) }
+                    .buttonStyle(.principal)
+            }
+            Button("Pas un poisson") { modele.terminer(nil) }
+                .font(Police.detail).foregroundStyle(Palette.marine)
+                .frame(minHeight: Gabarit.zoneTactile)
         }
-        .padding(20)
     }
 
-    private var classes: [String] {
-        modele.propositions.compactMap { p in if case .classe(let nom) = p.type { return nom }; return nil }
+    private var autre: some View {
+        Button { modele.ouvrirLaGrille() } label: {
+            VStack(spacing: Espace.xs) {
+                Image(systemName: "square.grid.2x2.fill")
+                    .font(.system(size: 22, weight: .bold, design: .rounded)).foregroundStyle(Palette.marine)
+                    .frame(width: 56, height: 64)
+                    .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous).strokeBorder(Palette.filet, lineWidth: 1))
+                Text("Autre").font(Police.legende).foregroundStyle(Palette.encre)
+            }
+            .frame(minHeight: Gabarit.zoneTactile)
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Autre espèce")
+    }
+
+    private func confirmer(_ tuile: Tuile) {
+        switch tuile {
+        case .espece(let entree): modele.choisir(entree)
+        case .classe(let nom, _): modele.ouvrirLaGrille(classe: nom)
+        }
     }
 }
 
-/// « Autre espèce » : toutes les espèces en images, par famille, celles du coin d'abord. Jamais de champ de saisie.
+/// P20 : « Autre espèce », toutes les espèces de France en images, par famille, celles du coin d'abord.
+/// Jamais de champ de saisie : l'espèce se touche dans la grille.
 struct PriseGrilleView: View {
     var modele: PriseModele
     var classe: String?
 
     var body: some View {
-        VStack(spacing: 12) {
-            PriseEntete(titre: "Touche ton espèce", consigne: PriseLogique.consigneAvantConfirmation)
-            ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    ForEach(PriseLogique.groupes(catalogue: modele.catalogue, proches: modele.proches, filtreClasse: classe), id: \.famille) { groupe in
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text(groupe.famille.titre).font(PriseJetons.corps()).foregroundStyle(PriseJetons.encre)
-                                .accessibilityAddTraits(.isHeader)
-                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100), spacing: 12)], spacing: 12) {
-                                ForEach(groupe.especes, id: \.espece.id) { entree in
-                                    PriseTuile(entree: entree, duCoin: groupe.duCoin.contains(entree.espece.id)) { modele.choisir(entree) }
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retourAuxPropositions() }, pleine: true) {
+            VStack(alignment: .leading, spacing: Espace.m) {
+                Text("Autre espèce").font(Police.titre).foregroundStyle(Palette.encre)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .accessibilityAddTraits(.isHeader)
+                ScrollView {
+                    VStack(alignment: .leading, spacing: Espace.xl) {
+                        ForEach(PriseLogique.groupes(catalogue: modele.catalogue, proches: modele.proches, filtreClasse: classe), id: \.famille) { groupe in
+                            VStack(alignment: .leading, spacing: Espace.s) {
+                                Text(groupe.famille.titre).font(Police.sousTitre).foregroundStyle(Palette.encre)
+                                    .accessibilityAddTraits(.isHeader)
+                                LazyVGrid(columns: [GridItem(.adaptive(minimum: 100), spacing: Espace.m)], spacing: Espace.m) {
+                                    ForEach(groupe.especes, id: \.espece.id) { entree in
+                                        PriseTuile(entree: entree, duCoin: groupe.duCoin.contains(entree.espece.id)) { modele.choisir(entree) }
+                                    }
                                 }
                             }
                         }
                     }
                 }
+                .scrollIndicators(.hidden)
+                Button("Je ne sais pas") { modele.jeNeSaisPas() }
+                    .font(Police.detail).foregroundStyle(Palette.marine)
+                    .frame(minHeight: Gabarit.zoneTactile)
             }
-            .scrollIndicators(.hidden)
-            Button("Je ne sais pas") { modele.jeNeSaisPas() }.buttonStyle(PriseBoutonSecondaire())
         }
-        .padding(20)
     }
 }
 
@@ -152,25 +211,20 @@ struct PriseSosiesView: View {
 
     var body: some View {
         let sosies = PriseLogique.sosies(de: entree, catalogue: modele.catalogue)
-        VStack(spacing: 12) {
-            PriseEntete(titre: "Touche le bon", consigne: PriseLogique.consigneAvantConfirmation)
-            ScrollView {
-                VStack(spacing: 16) {
-                    HStack(alignment: .top, spacing: 12) {
-                        PriseTuile(entree: entree) { modele.confirmer(entree) }
-                        ForEach(Array(sosies.enumerated()), id: \.offset) { _, s in
-                            PriseTuile(entree: s.entree) { modele.confirmer(s.entree) }
-                        }
-                    }
-                    ForEach(Array(entree.confusions.enumerated()), id: \.offset) { _, c in
-                        PriseCritere(critere: c.critere, source: c.source)
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retourAuxPropositions() }) {
+            VStack(spacing: Espace.m) {
+                PriseEntete(titre: "Touche le bon")
+                HStack(alignment: .top, spacing: Espace.m) {
+                    PriseTuile(entree: entree) { modele.confirmer(entree) }
+                    ForEach(Array(sosies.enumerated()), id: \.offset) { _, s in
+                        PriseTuile(entree: s.entree) { modele.confirmer(s.entree) }
                     }
                 }
+                ForEach(Array(entree.confusions.enumerated()), id: \.offset) { _, c in
+                    PriseCritere(critere: c.critere, source: c.source)
+                }
             }
-            .scrollIndicators(.hidden)
-            Button("Retour") { modele.retourAuxPropositions() }.buttonStyle(PriseBoutonSecondaire())
         }
-        .padding(20)
     }
 }
 
@@ -179,13 +233,13 @@ struct PriseCritere: View {
     var source: String
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(critere).font(PriseJetons.corps()).foregroundStyle(PriseJetons.encre)
-            Text(source).font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
+        VStack(alignment: .leading, spacing: Espace.xs) {
+            Text(critere).font(Police.corps).foregroundStyle(Palette.encre)
+            Text(source).font(Police.legende).foregroundStyle(Palette.encreDouce)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(14)
-        .background(PriseJetons.papier, in: RoundedRectangle(cornerRadius: PriseJetons.rayon))
+        .padding(Espace.m)
+        .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
     }
 }
 
@@ -195,25 +249,27 @@ struct PriseStadeView: View {
 
     var body: some View {
         let stades = PriseLogique.stades(catalogue: modele.catalogue)
-        VStack(spacing: 12) {
-            PriseEntete(titre: "Quel stade ?", consigne: PriseLogique.consigneAvantConfirmation)
-            ScrollView {
-                VStack(spacing: 12) {
-                    ForEach(Array(stades.enumerated()), id: \.offset) { _, s in
-                        VStack(spacing: 8) {
-                            PriseTuile(entree: s.entree) { modele.confirmer(s.entree) }
-                            if let c = s.critere { PriseCritere(critere: c.critere, source: c.source) }
+        PriseFeuille(photo: modele.imagePhoto, retour: { modele.retourAuxPropositions() }, pleine: true) {
+            VStack(spacing: Espace.m) {
+                PriseEntete(titre: "Quel stade ?")
+                ScrollView {
+                    VStack(spacing: Espace.m) {
+                        ForEach(Array(stades.enumerated()), id: \.offset) { _, s in
+                            VStack(spacing: Espace.s) {
+                                PriseTuile(entree: s.entree) { modele.confirmer(s.entree) }
+                                if let c = s.critere { PriseCritere(critere: c.critere, source: c.source) }
+                            }
                         }
                     }
                 }
+                .scrollIndicators(.hidden)
+                Button("Je ne sais pas") { modele.jeNeSaisPas() }
+                    .font(Police.detail).foregroundStyle(Palette.marine)
+                    .frame(minHeight: Gabarit.zoneTactile)
             }
-            .scrollIndicators(.hidden)
-            Button("Je ne sais pas") { modele.jeNeSaisPas() }.buttonStyle(PriseBoutonSecondaire())
         }
-        .padding(20)
     }
 }
-
 
 private extension String {
     /// Majuscule à la première lettre seulement (« Hotu ou toxostome »).

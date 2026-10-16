@@ -3,6 +3,33 @@ import Foundation
 
 /// Logique de présentation, sans écran, testable sur Mac. Elle ne calcule ni a priori, ni seuil, ni consigne, ni poids : tout cela vient de Core.
 enum PriseLogique {
+    /// Noms des groupes de sosies (classes du modèle qui regroupent plusieurs espèces de `especes.json`).
+    static let nomsDeGroupe: [String: String] = [
+        "truite_commune": "Truite fario ou de mer", "carpe": "Carpe commune ou koï", "carassin": "Carassin ou poisson rouge",
+        "ablette": "Ablette ou able de Heckel", "loche": "Loche", "anguille": "Anguille", "alose": "Alose",
+        "lamproie": "Lamproie", "esturgeon": "Esturgeon", "black_bass": "Black-bass", "poisson_chat": "Poisson-chat ou barbue",
+        "hotu_toxostome": "Hotu ou toxostome", "vandoise": "Vandoise", "gobie_invasif": "Gobie ou goujon de l'Amour",
+        "epinoche": "Épinoche ou épinochette", "brochet": "Brochet", "ecrevisse_protegee": "Écrevisse protégée",
+        "ecrevisse_invasive_autre": "Écrevisse invasive", "grenouille_verte": "Grenouille verte",
+    ]
+
+    /// Nom de la tuile d'un groupe : le nom du groupe, jamais le nom brut de sa 1re espèce (« Poisson-chat (Ameiurus…) »).
+    static func nomDeGroupe(classe: String, membres: [EspecePechable]) -> String {
+        if let nom = nomsDeGroupe[classe] { return nom }
+        if let premier = membres.first { return nomCourt(premier.nom) }
+        let brut = classe.replacingOccurrences(of: "_", with: " ")
+        return brut.prefix(1).uppercased() + brut.dropFirst()
+    }
+
+    /// Le nom sans ses précisions : « Huchon (huchen) » → « Huchon », « Anguille européenne, stade jaune » → « Anguille européenne ».
+    static func nomCourt(_ nom: String) -> String {
+        var court = nom
+        for marque in [" (", ", ", " / "] {
+            if let r = court.range(of: marque) { court = String(court[..<r.lowerBound]) }
+        }
+        return court.trimmingCharacters(in: .whitespaces)
+    }
+
     struct Groupe: Equatable {
         var famille: PriseFamille
         var especes: [EspecePechable]
@@ -64,13 +91,51 @@ enum PriseLogique {
     /// Une confirmation en deux gestes pour une entrée aux sosies coûteux.
     static func demandeSosies(_ entree: EspecePechable) -> Bool { !entree.confusions.isEmpty }
 
+    /// Vrai si le pêcheur vient déjà de départager l'espèce et tous ses sosies dans un groupe du modèle
+    /// (ex. « brochet ou brochet aquitain ») : on ne redemande pas la même distinction.
+    static func sosiesDejaTranches(_ entree: EspecePechable, classe: String?, catalogue: [EspecePechable]) -> Bool {
+        guard let classe, entree.classeModele == classe, !entree.confusions.isEmpty else { return false }
+        return entree.confusions.allSatisfy { c in
+            catalogue.first(where: { $0.espece == c.avec })?.classeModele == classe
+        }
+    }
+
     /// « Trop près de la maille » : lu dans les lignes que `controle` rend, jamais recalculé ici.
     static func tropPresDeLaMaille(_ resultat: ResultatControle) -> Bool {
         resultat.lignes.contains { $0.raison == .tropPresDeLaMaille }
     }
 
+    /// Le verdict affiché en haut de la carte (P23). Il vient de la table sourcée de `Core`, jamais de l'IA.
+    enum VerdictAffiche: Equatable {
+        /// Taille au-dessus de la taille minimale, sur toute la fourchette.
+        case tailleLegale
+        /// Taille sous la taille minimale, sur toute la fourchette.
+        case sousLaMaille
+        /// Une autre règle n'est pas respectée (période, quota, réserve…) : « Relâche-la ».
+        case regleNonRespectee
+        /// Les bornes ne s'accordent pas, trop près de la maille, ou règle à vérifier : mesure sur une toise / vérifie l'arrêté.
+        case aVerifier
+        /// Aucune règle de taille saisie : on montre seulement la consigne de `Core`.
+        case sansRegleDeTaille
+    }
+
+    /// Un résultat de `Core` par borne de la fourchette (un seul sans fourchette).
+    static func verdict(resultats: [ResultatControle]) -> VerdictAffiche? {
+        guard !resultats.isEmpty else { return nil }
+        let autres = resultats.flatMap { $0.lignes }.filter { $0.type != .taille }
+        if autres.contains(where: { $0.etat == .nonRespectee }) { return .regleNonRespectee }
+        let tailles = resultats.map { r in r.lignes.first(where: { $0.type == .taille }) }
+        guard tailles.allSatisfy({ $0 != nil }) else { return .sansRegleDeTaille }
+        let etats = tailles.compactMap { $0?.etat }
+        if etats.allSatisfy({ $0 == .respectee }) { return .tailleLegale }
+        if etats.allSatisfy({ $0 == .nonRespectee }) { return .sousLaMaille }
+        return .aVerifier
+    }
+
     /// Avant confirmation de l'espèce : seulement la consigne « relâche-la ».
     static let consigneAvantConfirmation = Consigne.relacheLa.texte
+    /// Phrase imposée sous chaque verdict (docs/donnees.md).
+    static let avertissement = "Information indicative : l'arrêté préfectoral fait foi. En cas de doute, relâche."
 
     /// « ≈ 1,4 kg estimé ».
     static func texteDuPoids(_ poids: PoidsEstime) -> String {
@@ -93,4 +158,10 @@ enum PriseLogique {
 
     /// Limites du curseur de taille, en centimètres.
     static let plageTaille: ClosedRange<Double> = 5...150
+
+    /// Départ du curseur : le milieu de la plage, sans taille typique par espèce dans le code. Le pêcheur doit le bouger.
+    static let tailleDeDepart: Double = ((plageTaille.lowerBound + plageTaille.upperBound) / 2).rounded(.up)
+
+    /// Catégorie piscicole inconnue : une ligne neutre, jamais une alerte.
+    static let categorieInconnue = "Catégorie du cours d'eau inconnue : vérifie l'arrêté"
 }
