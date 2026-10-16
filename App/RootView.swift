@@ -337,17 +337,27 @@ final class ParcoursApp {
     }
 
     func spotChange(_ spot: Spot) {
+        // La carte peut le signaler deux fois (spot proposé puis toucher) : une seule lecture des conditions.
+        guard spot != spotCourant else { return }
         spotCourant = spot
         Task { await conditions.lire(spot: spot.centre) }
     }
 
-    var surSonSpot: Bool {
-        guard let courant = spotCourant, let gratuit = moteur.spotGratuit else { return true }
-        return distanceMetres(courant.centre, gratuit.centre) <= gratuit.rayonM
+    var surSonSpot: Bool { surSonSpot(en: spotCourant?.centre) }
+
+    /// Le point est-il dans le cercle du spot gratuit ? Sans point ou sans spot gratuit : oui.
+    func surSonSpot(en point: Coordonnee?) -> Bool {
+        guard let point, let gratuit = moteur.spotGratuit else { return true }
+        return distanceMetres(point, gratuit.centre) <= gratuit.rayonM
     }
 
     func autorise(_ fonction: FonctionPro) -> Bool {
         core.session.peutUtiliser(fonction, abonne: suivi.abonne, surSonSpot: surSonSpot)
+    }
+
+    /// Même règle, mais pour le coin montré (la fiche peut s'ouvrir loin du spot gratuit).
+    func autorise(_ fonction: FonctionPro, en point: Coordonnee) -> Bool {
+        core.session.peutUtiliser(fonction, abonne: suivi.abonne, surSonSpot: surSonSpot(en: point))
     }
 
     // MARK: Session
@@ -654,7 +664,7 @@ private struct RacineContenu: View {
 
     private var carteSansPosition: some View {
         SansPositionView(
-            zone: nil,
+            zone: NomDeZone.texte(departement: app.spotCourant?.departement),
             changerDeZone: { app.sansPositionAffiche = false },
             autoriserPosition: {
                 if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
@@ -825,12 +835,16 @@ private struct LigneSessionEmplacement: View {
     let app: ParcoursApp
     @State private var lecture: LectureConditions?
 
+    private var centre: Coordonnee? { app.spotCourant?.centre ?? app.moteur.spotGratuit?.centre }
+
     var body: some View {
         Group {
-            if let lecture { LigneConditionsSession(lecture: lecture, marque: app.marque) }
+            if let lecture, let c = centre, app.autorise(.meteoDuJour, en: c) {
+                LigneConditionsSession(lecture: lecture, marque: app.marque)
+            }
         }
         .task(id: app.moteur.enCours != nil) {
-            guard let c = app.spotCourant?.centre ?? app.moteur.spotGratuit?.centre else { return }
+            guard let c = centre else { return }
             lecture = app.conditions.derniere(spot: c)
             lecture = await app.conditions.lire(spot: c) ?? lecture
         }
@@ -850,8 +864,16 @@ private struct ConditionsEmplacement: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             if let lecture {
-                RangeeMaintenantView(lecture: lecture, marque: app.marque)
-                JaugeRiviereView(lecture: lecture, ouvrirCourbe: { ouvrir(.courbeEtNormale) { courbe = true } })
+                if app.autorise(.meteoDuJour, en: coordonnee) {
+                    RangeeMaintenantView(lecture: lecture, marque: app.marque)
+                } else {
+                    bouton("Météo du moment", "cloud.sun", .meteoDuJour) {}
+                }
+                if app.autorise(.niveauEau, en: coordonnee) {
+                    JaugeRiviereView(lecture: lecture, ouvrirCourbe: { ouvrir(.courbeEtNormale) { courbe = true } })
+                } else {
+                    bouton("Niveau de l'eau", "water.waves", .niveauEau) {}
+                }
                 bouton("7 jours", "calendar", .septJours) { septJours = true }
                 bouton("Préviens-moi", "bell", .prevenirMoi) { previens = true }
             } else {
@@ -877,11 +899,11 @@ private struct ConditionsEmplacement: View {
     }
 
     private func ouvrir(_ fonction: FonctionPro, _ action: () -> Void) {
-        if app.autorise(fonction) { action() } else { paywall = PaywallDemande(declencheur: .fonction(fonction)) }
+        if app.autorise(fonction, en: coordonnee) { action() } else { paywall = PaywallDemande(declencheur: .fonction(fonction)) }
     }
 
     @ViewBuilder private func bouton(_ titre: String, _ icone: String, _ fonction: FonctionPro, _ action: @escaping () -> Void) -> some View {
-        if app.autorise(fonction) {
+        if app.autorise(fonction, en: coordonnee) {
             Button(action: action) { Label(titre, systemImage: icone).frame(maxWidth: .infinity, alignment: .leading) }
                 .buttonStyle(.plain)
         } else {
@@ -1006,4 +1028,12 @@ private struct ReglagesEmplacement: View {
 
 #Preview {
     RootView()
+}
+
+/// Nom montré sur l'écran « Ta zone » : le département de la zone choisie, jamais inventé.
+enum NomDeZone {
+    static func texte(departement: Departement?) -> String? {
+        guard let departement, !departement.estInconnu, !departement.code.isEmpty else { return nil }
+        return "Département \(departement.code)"
+    }
 }
