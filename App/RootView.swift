@@ -625,9 +625,24 @@ private struct RacineContenu: View {
     @Bindable var app: ParcoursApp
     @AppStorage(ClesConseils.questionVue) private var questionVue = false
     @State private var amisOuverts = false
+    /// P03 « Où pêches-tu ? » : montré une seule fois, avant la première demande de position.
+    @AppStorage("premierLancement.ouPechesTuVu") private var ouPechesTuVu = false
 
     var body: some View {
-        corps
+        if !ouPechesTuVu && app.gps.nAPasEteDemandee {
+            // Les onglets ne sont pas encore construits : la carte ne demande donc pas la position derrière cet écran.
+            OuPechesTuView(
+                utiliserMaPosition: {
+                    ouPechesTuVu = true
+                    app.gps.demanderAuPremierEcran()
+                },
+                choisirSurLaCarte: {
+                    ouPechesTuVu = true
+                    app.choixDeZoneOuvert = true
+                })
+        } else {
+            corps
+        }
     }
 
     @ViewBuilder private var corps: some View {
@@ -650,6 +665,22 @@ private struct RacineContenu: View {
 
     // MARK: Les 3 volets
 
+    private func estPleinEcran(_ modal: Modal) -> Bool {
+        switch modal {
+        case .finSession, .prise, .tunnel: true
+        default: false
+        }
+    }
+
+    /// Le modal courant, vu seulement par la présentation (feuille ou plein écran) qui le montre.
+    private func liaison(pleinEcran: Bool) -> Binding<Modal?> {
+        Binding(
+            get: { app.courant.flatMap { estPleinEcran($0) == pleinEcran ? $0 : nil } },
+            set: { nouveau in
+                if nouveau == nil, let c = app.courant, estPleinEcran(c) == pleinEcran { app.courant = nil }
+            })
+    }
+
     private var onglets: some View {
         TabView(selection: $app.onglet) {
             Tab("Pescedex", systemImage: "square.grid.2x2.fill", value: Onglet.pescedex) {
@@ -662,7 +693,19 @@ private struct RacineContenu: View {
                 club
             }
         }
-        .sheet(item: $app.courant, onDismiss: { app.feuilleFermee() }) { modal in
+        // Session en cours en plein écran (P14 C), par-dessus les onglets.
+        .overlay {
+            if app.moteur.enCours != nil {
+                SessionEnCoursView(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() }) {
+                    LigneSessionEmplacement(app: app)
+                }
+            }
+        }
+        // Une seule file (`app.courant`), deux présentations : plein écran pour fin de session, prise et tunnel, feuille pour le reste.
+        .sheet(item: liaison(pleinEcran: false), onDismiss: { app.feuilleFermee() }) { modal in
+            vue(de: modal)
+        }
+        .fullScreenCover(item: liaison(pleinEcran: true), onDismiss: { app.feuilleFermee() }) { modal in
             vue(de: modal)
         }
         .fullScreenCover(item: $app.carteRevelee) { revelee in
@@ -694,7 +737,10 @@ private struct RacineContenu: View {
                 emplacements: EmplacementsExternes(
                     commentLaPecher: { espece in AnyView(CommentLaPecherEmplacement(app: app, espece: espece)) },
                     tesConditions: { AnyView(TesConditionsEmplacement(app: app)) },
-                    meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }))
+                    meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }),
+                photographier: { app.ajouterPrise() },
+                declarer: { app.montrer(.tunnel) },
+                voirAmis: { app.onglet = .club })
         } else {
             ContentUnavailableView("Pescedex", systemImage: "square.grid.2x2.fill",
                                    description: Text("Tes cartes ne peuvent pas s'ouvrir pour l'instant."))
@@ -717,13 +763,14 @@ private struct RacineContenu: View {
     private var carteSansPosition: some View {
         SansPositionView(
             zone: NomDeZone.texte(departement: app.spotCourant?.departement),
-            changerDeZone: { app.sansPositionAffiche = false },
+            changerDeZone: { app.choixDeZoneOuvert = true },
             autoriserPosition: {
                 if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
             },
             voirLaCarte: { app.sansPositionAffiche = false },
             ouvrirPescedex: { app.onglet = .pescedex },
-            ouvrirAmis: { app.onglet = .club; amisOuverts = true })
+            ouvrirAmis: { app.onglet = .club; amisOuverts = true },
+            codeZone: app.spotCourant.flatMap { $0.departement.estInconnu ? nil : $0.departement.code })
     }
 
     private var vueCarte: some View {
@@ -732,10 +779,6 @@ private struct RacineContenu: View {
             spotFixe: app.moteur.spotGratuit,
             sessionsTerminees: app.moteur.sessionsTerminees,
             bandeauHaut: AnyView(VigilanceEmplacement(app: app)),
-            bandeauSession: AnyView(
-                BandeauSession(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() }) {
-                    LigneSessionEmplacement(app: app)
-                }),
             sessionEnCours: app.moteur.enCours != nil,
             emplacementMaintenant: { coordonnee in AnyView(ConditionsEmplacement(app: app, coordonnee: coordonnee)) },
             emplacementConseil: { espece in AnyView(ConseilEmplacement(app: app, espece: espece)) },
@@ -818,17 +861,24 @@ private struct RacineContenu: View {
                     if let spot = app.spotCourant { app.attenteDepart(spot) }
                 },
                 choisirUnSpot: { app.courant = nil; app.onglet = .carte },
-                passer: { app.courant = nil })
+                passer: { app.courant = nil },
+                rarete: { pechable in
+                    guard let departement = app.spotCourant?.departement, !departement.estInconnu else { return nil }
+                    let niveau = app.core.especes.rarete(espece: pechable.espece, departement: departement).niveau
+                    let style = StyleRarete(niveau)
+                    return (style.mot, style.couleur)
+                })
 
         case .consentement:
             FeuilleConsentement(accepter: { app.accorderOuRefuser(true) }, refuser: { app.accorderOuRefuser(false) })
-                .presentationDetents([.medium])
 
         case .paywall(let declencheur):
             if case .autreSpot = declencheur {
                 AutreSpotEmplacement(app: app)
             } else {
                 app.paywall(declencheur, fermer: { app.courant = nil })
+                    .presentationDetents([.large])
+                    .presentationDragIndicator(.hidden)
             }
 
         case .finSession:
@@ -840,6 +890,7 @@ private struct RacineContenu: View {
         case .mesSorties:
             MesSortiesView(sorties: app.moteur.sortiesTerminees, infosEspece: app.infosEspece(), lieu: app.lieuDuSpot()?.eau?.nom,
                            surChoix: { app.rouvrir($0) }, surRetour: { app.courant = nil })
+                .presentationDetents([.medium, .large])
 
         case .reglages:
             ReglagesEmplacement(app: app)
@@ -871,7 +922,7 @@ private struct VigilanceEmplacement: View {
 
     var body: some View {
         Group {
-            if let alerte { BandeauVigilanceView(alerte: alerte, previensMoi: app.previensMoi, lecture: lecture) }
+            if let alerte { BandeauVigilanceView(alerte: alerte, previensMoi: app.previensMoi, lecture: lecture, marque: app.marque) }
         }
         .task(id: app.spotCourant?.centre) {
             guard let spot = app.spotCourant?.centre else { alerte = nil; lecture = nil; return }
@@ -917,19 +968,22 @@ private struct ConditionsEmplacement: View {
         VStack(alignment: .leading, spacing: 10) {
             if let lecture {
                 if app.autorise(.meteoDuJour, en: coordonnee) {
-                    RangeeMaintenantView(lecture: lecture, marque: app.marque)
+                    RangeeMaintenantView(lecture: lecture, marque: app.marque,
+                                         montrerRiviere: app.autorise(.niveauEau, en: coordonnee),
+                                         ouvrirCourbe: { ouvrir(.courbeEtNormale) { courbe = true } },
+                                         enFeuille: true)
                 } else {
                     bouton("Météo du moment", "cloud.sun", .meteoDuJour) {}
                 }
-                if app.autorise(.niveauEau, en: coordonnee) {
-                    JaugeRiviereView(lecture: lecture, ouvrirCourbe: { ouvrir(.courbeEtNormale) { courbe = true } })
-                } else {
+                if !app.autorise(.niveauEau, en: coordonnee) {
                     bouton("Niveau de l'eau", "water.waves", .niveauEau) {}
                 }
                 bouton("7 jours", "calendar", .septJours) { septJours = true }
                 bouton("Préviens-moi", "bell", .prevenirMoi) { previens = true }
             } else {
-                RangeeMaintenantVideView()
+                RangeeMaintenantVideView(reessayer: {
+                    Task { lecture = await app.conditions.lire(spot: coordonnee) ?? lecture }
+                })
             }
         }
         .task(id: coordonnee) {
@@ -1057,7 +1111,6 @@ private struct ReglagesEmplacement: View {
                 ouvrirSecurite: { securite = true },
                 ouvrirPaywall: { app.remplacerPar(.paywall(.widget)) },
                 ouvrirCompte: app.compte == nil ? nil : { compteOuvert = true })
-                .toolbar(.hidden, for: .navigationBar)
                 .navigationDestination(isPresented: $securite) { SecuriteView() }
                 .navigationDestination(isPresented: $compteOuvert) {
                     if let compte = app.compte { CompteView(modele: compte, abonne: app.suivi.abonne) }

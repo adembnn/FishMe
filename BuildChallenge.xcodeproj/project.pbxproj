@@ -72,9 +72,12 @@
 		ECDF41671AB08CAA06479CB4 /* Exceptions for "WidgetAquarium" folder in "BuildChallenge" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				PoissonsWidget.xcassets,
+				Polices/LICENCE-modele-clignotant.txt,
 				Polices/LISEZMOI.md,
 				Polices/fabriquer_polices.py,
-				PoissonsWidget.xcassets,
+				fabriquer_cycle_nage.py,
+				fabriquer_poissons_volume.py,
 			);
 			target = DBE31DC230753926004DC02F /* BuildChallenge */;
 		};
@@ -88,11 +91,14 @@
 		0097F38EEF3AB0F94E6B05B6 /* Exceptions for "WidgetAquarium" folder in "FishMeWidget" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Polices/LICENCE-modele-clignotant.txt,
 				Polices/LISEZMOI.md,
 				Polices/fabriquer_polices.py,
 				PontAquariumWidget.swift,
 				PontCartesWidget.swift,
 				PontSessionWidget.swift,
+				fabriquer_cycle_nage.py,
+				fabriquer_poissons_volume.py,
 			);
 			target = E4DB592F1DF096ACE956B33F /* FishMeWidget */;
 		};
