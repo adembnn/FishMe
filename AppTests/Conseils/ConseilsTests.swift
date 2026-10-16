@@ -89,6 +89,27 @@ struct ConseilsTests {
         #expect(Set(choisies.map(\.espece.id)).count == 12)
     }
 
+    @Test func tunnelDeuxiemeCategorieRelevesPuisCourantesSansTruites() {
+        let ids = ["truite-fario", "ombre-commun", "chabot", "gardon", "brochet", "perche-commune", "sandre", "carpe-commune",
+                   "black-bass", "tanche", "chevesne", "breme-commune", "rotengle", "silure-glane", "ablette"]
+        let tout = ids.map { EspecePechable(espece: Espece(id: $0), nom: $0, nomLatin: "", image: $0) }
+        let proches = [EspeceProche(espece: Espece(id: "chabot"), nPeches: 4, annee: 2024, ouverture: .ouverte),
+                       EspeceProche(espece: Espece(id: "silure-glane"), nPeches: 30, annee: 2024, ouverture: .ouverte)]
+        let ordre = EspecesDuTunnel.choisir(pechables: tout, proches: proches, categorie: .deuxieme).map(\.espece.id)
+        #expect(Array(ordre.prefix(3)) == ["silure-glane", "chabot", "gardon"])
+        #expect(!ordre.contains("truite-fario") && !ordre.contains("ombre-commun"))
+        #expect(ordre.count == 12)
+    }
+
+    @Test func tunnelPremiereCategorieAccepteLesSalmonides() {
+        let ids = ["gardon", "truite-fario", "brochet"]
+        let tout = ids.map { EspecePechable(espece: Espece(id: $0), nom: $0, nomLatin: "", image: $0) }
+        #expect(EspecesDuTunnel.choisir(pechables: tout, proches: [], categorie: .premiere).map(\.espece.id).contains("truite-fario"))
+        #expect(!EspecesDuTunnel.choisir(pechables: tout, proches: [], categorie: .deuxieme).map(\.espece.id).contains("truite-fario"))
+        let relevee = [EspeceProche(espece: Espece(id: "truite-fario"), nPeches: 5, annee: 2024, ouverture: .ouverte)]
+        #expect(EspecesDuTunnel.choisir(pechables: tout, proches: relevee, categorie: .deuxieme).first?.espece.id == "truite-fario")
+    }
+
     @Test func carteDeclareeNEstPasUneVraiePrise() {
         let p = Prise.declaree(espece: Espece(id: "brochet"), date: Date())
         #expect(p.estDeclaree)

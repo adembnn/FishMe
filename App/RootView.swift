@@ -662,8 +662,11 @@ private struct RacineContenu: View {
         switch modal {
         case .tunnel:
             let proches = app.spotCourant.map { app.core.especes.especesProches($0.centre) } ?? []
+            // La catégorie du coin décide si les truites complètent la liste (1re catégorie seulement).
+            let categorie = app.spotCourant.map { app.core.geo.lieu(de: $0.centre, choix: nil).categorie.valeur }
             TunnelPremiersPasView(
-                especes: EspecesDuTunnel.choisir(pechables: app.core.especes.especesPechables(), proches: proches),
+                especes: EspecesDuTunnel.choisir(pechables: app.core.especes.especesPechables(), proches: proches,
+                                                 categorie: categorie),
                 maintenant: { app.moteur.maintenant() },
                 declarer: { prise in app.declarer(prise) },
                 pecherMaintenant: {
