@@ -34,8 +34,7 @@ private struct FondPartage<Carte: View>: View {
     let departement: Departement?
 
     private var legende: String {
-        // À brancher : le nom du département (« Val-de-Marne ») ; Core ne donne que le code, qui le remplace.
-        if let d = departement, !d.estInconnu { return "Mon Pescedex · \(d.code)" }
+        if let d = departement, !d.estInconnu { return "Mon Pescedex · \(NomsDepartements.nom(code: d.code) ?? d.code)" }
         return "Mon Pescedex"
     }
 

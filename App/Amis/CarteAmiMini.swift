@@ -2,6 +2,25 @@ import Core
 import SwiftUI
 import UIKit
 
+/// Images déjà décodées d'un PNG/JPEG reçu en `Data` : sans elle, chaque évaluation d'une vue refaisait le décodage complet.
+/// Clé : taille et quelques octets du début et de la fin (assez pour distinguer deux cartes, sans relire toute l'image).
+@MainActor
+enum ImagesAmisEnCache {
+    private static let memoire: NSCache<NSString, UIImage> = {
+        let c = NSCache<NSString, UIImage>()
+        c.countLimit = 60
+        return c
+    }()
+
+    static func image(_ donnees: Data) -> UIImage? {
+        let cle = "\(donnees.count)-\(donnees.prefix(48).hashValue)-\(donnees.suffix(48).hashValue)" as NSString
+        if let connue = memoire.object(forKey: cle) { return connue }
+        guard let image = UIImage(data: donnees) else { return nil }
+        memoire.setObject(image, forKey: cle)
+        return image
+    }
+}
+
 /// Une carte d'ami au même dessin que les cartes d'Adem : le cadre `CarteCadre` (filets de rareté, ombre, même rapport),
 /// la fenêtre du poisson sur son fond de rareté, le nom et le badge `BadgeRarete`. Version courte pour une grille de deux colonnes :
 /// la taille et la source OFB ne tiennent pas, elles restent dans la carte ouverte.
@@ -21,7 +40,7 @@ struct CarteAmiMini: View {
 
     var body: some View {
         Group {
-            if let donnees = imageCarte, let image = UIImage(data: donnees) {
+            if let donnees = imageCarte, let image = ImagesAmisEnCache.image(donnees) {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()

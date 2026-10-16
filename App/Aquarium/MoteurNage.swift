@@ -27,7 +27,13 @@ enum ReglagesNage {
   /// Pas de simulation (s) : 120 Hz, l'état est donc fluide à 60 comme à 120 images par seconde.
   static let pasFixe = 1.0 / 120
   /// Un trou plus long (écran en veille, retour d'une autre app) n'est pas rattrapé : la scène reprend là où elle est.
-  static let trouMax = 0.1
+  /// 1 s : si l'écran n'affiche que 3 ou 4 images par seconde (simulateur, appareil chargé), la simulation suit quand même
+  /// l'horloge au lieu de tourner au ralenti (avec 0,1 s, les poissons semblaient immobiles).
+  static let trouMax = 1.0
+  /// Pas de rattrapage quand l'image arrive tard (plus de 3 pas fixes en retard) : 30 Hz suffit à une nage lente.
+  static let pasRattrapage = 1.0 / 30
+  /// Nombre maximal de pas de simulation par image.
+  static let pasParImageMax = 40
 
   // Le bac
   static let fuiteX = 0.5
@@ -44,7 +50,7 @@ enum ReglagesNage {
   static let margeHauteur = 0.08
 
   // Allure (multiplicateurs de calme : les vitesses « réelles » de la table des espèces sont ralenties à l'écran)
-  static let echelleVitesse = 0.30
+  static let echelleVitesse = 0.75
   static let echelleVirage = 0.55
   /// Accélération angulaire maximale (rad/s²).
   static let accelerationAngulaire = 1.1
@@ -383,6 +389,11 @@ final class MoteurNage {
   private(set) var ondes = [Onde](repeating: Onde(), count: ReglagesNage.ondesMax)
   /// Temps de la simulation (s).
   private(set) var temps = 0.0
+  /// Compteur d'images simulées : la vue le reçoit en valeur à chaque image, ce qui force SwiftUI à relire les positions
+  /// (le moteur n'est pas observable : sans lui, rien ne dit à SwiftUI que les poissons ont bougé).
+  private(set) var trame = 0
+  /// Durée (s) de la dernière image : le lissage visuel (lacet, assiette, roulis) suit le temps réel, pas un pas fixe.
+  private var dtImage = ReglagesNage.pasFixe
 
   private var dernier: Date?
   private var reste = 0.0
@@ -413,7 +424,7 @@ final class MoteurNage {
         decalage: hasard.suivant(), lag: hasard.entre(0.15, 0.9), hasard: hasard)
       // Répartis sur la largeur (nombre d'or), à des profondeurs et des hauteurs différentes.
       let fraction = (Double(rang) * 0.618_034 + 0.13).truncatingRemainder(dividingBy: 1)
-      n.x = 0.24 + 0.52 * fraction
+      n.x = 0.12 + 0.76 * fraction
       n.z = n.hasard.entre(0.12, 0.75)
       let (yLo, yHi) = Self.bande(profil)
       n.y = n.hasard.entre(yLo, yHi)
@@ -458,8 +469,46 @@ final class MoteurNage {
         liste[i].sensMiroir = cos(liste[i].cap) >= 0 ? 1 : -1
       }
     }
+    Self.etaler(&liste, rapport: self.rapport)
     nageurs = liste
     for i in nageurs.indices { rendre(i) }
+  }
+
+  /// Au départ, aucun poisson ne chevauche un autre à l'écran : on écarte (en x et en hauteur) ceux dont les silhouettes
+  /// se recouvrent, sans toucher à leur profondeur. Les suiveurs d'un banc restent groupés mais séparés.
+  private static func etaler(_ liste: inout [Nageur], rapport: Double) {
+    func projete(_ n: Nageur) -> (x: Double, y: Double, l: Double) {
+      let s = 1 / (1 + 1.4 * borner(n.z, 0, 1.1))
+      return (
+        ReglagesNage.fuiteX + (n.x - ReglagesNage.fuiteX) * s,
+        ReglagesNage.fuiteY + (n.y - ReglagesNage.fuiteY) * s, n.largeur * s
+      )
+    }
+    for _ in 0..<80 {
+      var bouge = false
+      for i in liste.indices where liste[i].etat == .present {
+        for j in liste.indices where j > i && liste[j].etat == .present {
+          let a = projete(liste[i]), b = projete(liste[j])
+          // Silhouette : un peu plus large que haute (en largeurs d'écran).
+          let demiL = 0.5 * (a.l + b.l) * 0.8
+          let demiH = 0.5 * (a.l + b.l) * 0.30
+          let ex = (a.x - b.x) / demiL
+          let ey = (a.y - b.y) * rapport / demiH
+          guard ex * ex + ey * ey < 1 else { continue }
+          bouge = true
+          let haut = (a.y <= b.y) ? -1.0 : 1.0
+          let gauche = (a.x <= b.x) ? -1.0 : 1.0
+          let yMin = ReglagesNage.ySurface + 0.03, yMax = ReglagesNage.yFond - 0.03
+          liste[i].y = borner(liste[i].y + haut * 0.012, yMin, yMax)
+          liste[j].y = borner(liste[j].y - haut * 0.012, yMin, yMax)
+          liste[i].x = borner(liste[i].x + gauche * 0.012, 0.12, 0.88)
+          liste[j].x = borner(liste[j].x - gauche * 0.012, 0.12, 0.88)
+          liste[i].yBut = liste[i].y
+          liste[j].yBut = liste[j].y
+        }
+      }
+      if !bouge { break }
+    }
   }
 
   // MARK: Avancer
@@ -471,15 +520,20 @@ final class MoteurNage {
       return
     }
     dernier = date
-    reste += min(max(date.timeIntervalSince(avant), 0), ReglagesNage.trouMax)
-    let h = ReglagesNage.pasFixe
+    let dt = min(max(date.timeIntervalSince(avant), 0), ReglagesNage.trouMax)
+    dtImage = min(max(dt, ReglagesNage.pasFixe), 0.25)
+    reste += dt
     var pas = 0
-    while reste >= h, pas < 16 {
+    while pas < ReglagesNage.pasParImageMax {
+      let h = reste > 3 * ReglagesNage.pasFixe ? ReglagesNage.pasRattrapage : ReglagesNage.pasFixe
+      if reste < h { break }
       reste -= h
       pas += 1
       unPas(h)
     }
+    if pas == ReglagesNage.pasParImageMax { reste = 0 }
     for i in nageurs.indices { rendre(i) }
+    trame &+= 1
   }
 
   // MARK: Interaction
@@ -1001,7 +1055,7 @@ final class MoteurNage {
 
     // Lacet affiché : suit le cap, en douceur.
     let lacetVoulu = Self.lacetCible(cap: n.cap)
-    let pas = ReglagesNage.pasFixe
+    let pas = dtImage
     n.lacetAffiche += (lacetVoulu - n.lacetAffiche) * (1 - exp(-pas * 4.5))
     n.lacet = n.lacetAffiche
 

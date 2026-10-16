@@ -75,7 +75,7 @@ struct OffresTests {
 
     @Test func essaiSeulementSiLeCompteYADroit() {
         #expect(TextesPaywall.essaiMensuel(valeur: 1, unite: .semaine, prixParMois: "6,99 €", eligible: true)
-                == "1 semaine offerte, puis 6,99 € par mois")
+                == "1 semaine d'essai")
         #expect(TextesPaywall.essaiMensuel(valeur: 1, unite: .semaine, prixParMois: "6,99 €", eligible: false) == nil)
     }
 

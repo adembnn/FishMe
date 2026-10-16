@@ -24,6 +24,14 @@ struct ClubView<MarqueMeteo: View>: View {
     var record: RecordClub?
     var invites: [InviteClub] = []
     var invitation: InvitationPescedex?
+    /// À brancher : l'envoi d'une carte au club choisi (partage CloudKit, lot Amis). Sans lui, « Partager au club » n'apparaît pas.
+    var partagerAuClub: ((CarteAPartager) -> Void)?
+
+    func partageAuClub(_ envoi: @escaping (CarteAPartager) -> Void) -> Self {
+        var copie = self
+        copie.partagerAuClub = envoi
+        return copie
+    }
 
     func poissonsDuClub(_ poissons: [PoissonClub]) -> Self {
         var copie = self
@@ -102,7 +110,8 @@ struct ClubView<MarqueMeteo: View>: View {
                     }
                     NavigationLink {
                         ReglagesClubView(liens: liens, sources: sources, cartes: cartes,
-                                         mesureUsage: $mesureUsage, marqueMeteo: marqueMeteo)
+                                         mesureUsage: $mesureUsage, marqueMeteo: marqueMeteo,
+                                         partagerAuClub: partagerAuClub)
                     } label: {
                         HStack(spacing: Espace.s) {
                             Image(systemName: "slider.horizontal.3")
@@ -384,6 +393,7 @@ struct ReglagesClubView<MarqueMeteo: View>: View {
     let cartes: [CarteAPartager]
     @Binding var mesureUsage: Bool
     let marqueMeteo: MarqueMeteo
+    var partagerAuClub: ((CarteAPartager) -> Void)?
 
     @AppStorage("club.cartePeche2026") private var aSaCarte = false
     @State private var gestionAbonnement = false
@@ -474,7 +484,7 @@ struct ReglagesClubView<MarqueMeteo: View>: View {
         .manageSubscriptionsSheet(isPresented: $gestionAbonnement)
         // P33 est plein écran, avec son rond « Fermer » en haut à gauche.
         .fullScreenCover(isPresented: $partageOuvert) {
-            PartageCarteView(cartes: cartes)
+            PartageCarteView(cartes: cartes, partagerAuClub: partagerAuClub)
         }
     }
 }

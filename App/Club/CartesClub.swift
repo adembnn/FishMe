@@ -24,6 +24,35 @@ enum PhotoDemoClub {
   }
 }
 
+/// Images déjà décodées (PNG des cartes partagées, photos de club) : sans elle, chaque évaluation d'une vue refaisait le décodage complet.
+@MainActor
+enum ImagesClubEnCache {
+  private static let memoire: NSCache<NSString, UIImage> = {
+    let c = NSCache<NSString, UIImage>()
+    c.countLimit = 60
+    return c
+  }()
+
+  /// Clé : taille et quelques octets du début et de la fin (assez pour distinguer deux images, sans tout relire).
+  static func image(_ donnees: Data) -> UIImage? {
+    let cle = "\(donnees.count)-\(donnees.prefix(48).hashValue)-\(donnees.suffix(48).hashValue)" as NSString
+    if let connue = memoire.object(forKey: cle) { return connue }
+    guard let image = UIImage(data: donnees) else { return nil }
+    memoire.setObject(image, forKey: cle)
+    return image
+  }
+
+  /// Un fichier image, gardé tant qu'il n'est pas modifié.
+  static func image(fichier url: URL) -> UIImage? {
+    let date = (try? url.resourceValues(forKeys: [.contentModificationDateKey]))?.contentModificationDate
+    let cle = "\(url.path)-\(date?.timeIntervalSince1970 ?? 0)" as NSString
+    if let connue = memoire.object(forKey: cle) { return connue }
+    guard let image = UIImage(contentsOfFile: url.path) else { return nil }
+    memoire.setObject(image, forKey: cle)
+    return image
+  }
+}
+
 /// Une carte vue dans un club, au même dessin que les vignettes du classeur (fond de rareté, nom, badge).
 /// Hauteur fixe : le dessin (photo ou poisson) occupe le haut, une bande de hauteur fixe sous l'image porte
 /// le nom de l'espèce, la taille et le badge de rareté. Aucun texte ne passe sur le dessin, même avec un nom très long
@@ -96,7 +125,7 @@ struct VignetteMaCarteClub: View {
     Color.clear
       .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
       .overlay {
-        if let image = UIImage(data: carte.png) {
+        if let image = ImagesClubEnCache.image(carte.png) {
           Image(uiImage: image).resizable().scaledToFill()
         } else {
           Palette.tuile
