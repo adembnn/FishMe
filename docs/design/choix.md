@@ -45,3 +45,4 @@ Décision (16 oct. 2h50) : badge « Trophée » sur la carte d'une prise plus gr
 | P37 Fenêtre de position | A · Plans | 16 oct. 3h00 |
 | P38 Accès à l'appareil photo | C · Sujet | 16 oct. 3h00 |
 | P42 Sans position | B · Réglages | 16 oct. 3h04 |
+| P39 Notifications | B · Réglages | 16 oct. 3h13 |
