@@ -1,4 +1,5 @@
 import ActivityKit
+import AppIntents
 import SwiftUI
 import WidgetKit
 
@@ -61,7 +62,7 @@ private func rond(_ taille: CGFloat, _ poids: Font.Weight = .heavy) -> Font {
 }
 
 /// Écran verrouillé : en-tête (app, prises), durée écoulée à gauche, fin légale à droite.
-/// Le lieu et les boutons « Prise » / « Pause » de la maquette ne sont pas là : voir le rapport.
+/// Le lieu de la maquette n'est pas là (pas de nom de coin sur l'écran verrouillé).
 private struct EcranVerrouille: View {
     let etat: EtatSession
     let perime: Bool
@@ -86,9 +87,28 @@ private struct EcranVerrouille: View {
                 Spacer()
                 FinLegale(etat: etat, perime: perime)
             }
+            BoutonsSession().padding(.top, 4)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 14)
+    }
+}
+
+/// Boutons de la maquette P15 A : « Prise » (marine, appareil photo) et « Pause » (gris).
+private struct BoutonsSession: View {
+    var body: some View {
+        HStack(spacing: 10) {
+            Button(intent: PrendrePriseIntent()) {
+                Label("Prise", systemImage: "camera.fill")
+                    .font(rond(17))
+                    .frame(maxWidth: .infinity, minHeight: 40)
+                    .background(Capsule().fill(Teintes.marine))
+            }
+            // « Pause » (maquette) : caché tant que le moteur de session n'a pas de vraie pause,
+            // pour ne jamais montrer un bouton qui ne fait rien. `PauseSessionIntent` est prêt.
+        }
+        .buttonStyle(.plain)
+        .foregroundStyle(.white)
     }
 }
 
