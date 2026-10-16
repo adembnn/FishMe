@@ -118,7 +118,7 @@ struct VueCarte: View {
             .sheet(item: selectionOuverte) { selection in feuilleFiche(selection) }
             .sheet(isPresented: filtreOuvert) { feuilleFiltre }
             .sheet(isPresented: $afficherOuChercher) { feuilleOuChercher }
-            .sheet(isPresented: choixDeZoneOuvert) { feuilleChoixDeZone }
+            .fullScreenCover(isPresented: choixDeZoneOuvert) { feuilleChoixDeZone }
     }
 
     private var carteAvecBarres: some View {
@@ -134,11 +134,12 @@ struct VueCarte: View {
     }
 
     private func carteMapKit(proxy: MapProxy) -> some View {
-        // Jamais la France entière : au plus quelques départements à l'écran, et seulement au-dessus de la France.
-        // (Les bornes se passent à l'initialiseur de Map : il n'y a pas de modificateur .mapCameraBounds.)
+        // Les bornes se passent à l'initialiseur de Map : il n'y a pas de modificateur .mapCameraBounds.
         Map(position: cameraLiee, bounds: Self.limitesCamera) {
             contenuCarte
         }
+        // Fond clair et sobre de la maquette P06 A : routes et eau, ni commerces ni relief.
+        .mapStyle(.standard(elevation: .flat, emphasis: .muted, pointsOfInterest: .excludingAll))
         .mapControls { MapCompass() }
         .onMapCameraChange(frequency: .onEnd) { (contexte: MapCameraUpdateContext) in
             chargerApresMouvement(contexte.region)
@@ -161,8 +162,8 @@ struct VueCarte: View {
 
     private func cercleDuSpot(_ spot: Spot) -> some MapContent {
         MapCircle(center: Self.cl(spot.centre), radius: spot.rayonM)
-            .foregroundStyle(Palette.marine.opacity(0.15))
-            .stroke(Palette.marine, lineWidth: 2)
+            .foregroundStyle(Palette.marine.opacity(0.12))
+            .stroke(Palette.marine, lineWidth: 2.5)
     }
 
     private func annotation(_ element: ElementCarte) -> some MapContent {
@@ -345,17 +346,23 @@ struct VueCarte: View {
     /// P46 B : « Carte », le bandeau « Pas de réseau » s'il manque, puis « Pas de spot » avec un seul chemin.
     private var ecranSansSpot: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: Espace.l) {
+            VStack(alignment: .leading, spacing: 0) {
                 Text("Carte")
-                    .font(Police.grandTitre)
+                    .font(Police.taille(34, .heavy))
                     .foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
-                if !reseauDisponible { BandeauPasDeReseauView() }
+                if !reseauDisponible {
+                    BandeauPasDeReseauView()
+                        .padding(.top, 12)
+                }
                 Text("Ton spot")
-                    .font(Police.legende)
+                    .font(Police.taille(13, .heavy))
                     .foregroundStyle(Palette.encreDouce)
                     .textCase(.uppercase)
-                    .padding(.horizontal, Espace.s)
+                    .tracking(0.5)
+                    .padding(.horizontal, Espace.l)
+                    .padding(.top, reseauDisponible ? 12 : 22)
+                    .padding(.bottom, Espace.s)
                     .accessibilityAddTraits(.isHeader)
                 PasDeSpotView(choisirUnSpot: { ouvrirLaCarte(poserLeSpot: true) })
             }
@@ -368,19 +375,20 @@ struct VueCarte: View {
     private var ecranAvecSpot: some View {
         VStack(spacing: Espace.l) {
             HStack {
-                HStack(spacing: Espace.s) {
+                HStack(spacing: 6) {
                     Image(systemName: "mappin")
+                        .font(Police.taille(16))
                         .foregroundStyle(Palette.marine)
                         .accessibilityHidden(true)
                     Text(apercu?.lieu ?? " ")
-                        .font(Police.sousTitre)
+                        .font(Police.detail)
                         .foregroundStyle(Palette.encre)
                         .lineLimit(1)
                 }
                 Spacer(minLength: Espace.s)
                 Button { ouvrirLaCarte() } label: {
                     Image(systemName: "map")
-                        .font(Police.taille(18))
+                        .font(Police.taille(20))
                         .foregroundStyle(Palette.marine)
                         .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
                         .background(Palette.tuile, in: Circle())
@@ -406,7 +414,7 @@ struct VueCarte: View {
             VStack(spacing: Espace.s) {
                 bandeauSession
                 if !sessionEnCours {
-                VStack(spacing: Espace.xs) {
+                VStack(spacing: 2) {
                     Button {
                         if let spot = modele.spotAffiche { onCommencerSession(spot) }
                     } label: {
@@ -417,7 +425,7 @@ struct VueCarte: View {
                     .opacity(modele.spotAffiche == nil ? 0.5 : 1)
                     Button { ouvrirLaCarte(poserLeSpot: true) } label: {
                         Text("Choisir un autre spot")
-                            .font(Police.corps)
+                            .font(Police.taille(17, .heavy))
                             .foregroundStyle(Palette.encre)
                             .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
                             .contentShape(Rectangle())
@@ -437,40 +445,34 @@ struct VueCarte: View {
         if let apercu, let ligne = apercu.vedette {
             let fiche = modele.pechable(ligne.espece)
             let niveau = ligne.rarete?.niveau ?? .nonMesuree
-            VStack(spacing: Espace.m) {
-                Text(apercu.vedetteEstRare ? "Le plus rare de ton spot" : "Le plus pêché de ton spot")
-                    .font(Police.legende)
+            VStack(spacing: 0) {
+                Text("Le plus pêché de ton spot")
+                    .font(Police.taille(13))
                     .foregroundStyle(Palette.encreDouce)
                 ImageEspeceCarte(nom: fiche?.image)
                     .frame(maxWidth: .infinity)
                     .frame(height: 170)
                     .padding(.horizontal, Espace.xs)
+                    .padding(.top, 40)
                 VStack(spacing: Espace.s) {
                     Text(fiche?.nom ?? ligne.espece.id)
-                        .font(Police.grandTitre)
+                        .font(Police.taille(34, .heavy))
                         .foregroundStyle(Palette.encre)
                         .multilineTextAlignment(.center)
                         .accessibilityAddTraits(.isHeader)
-                    if apercu.vedetteEstRare, niveau != .nonMesuree {
+                    if niveau != .nonMesuree {
                         Label(niveau.libelle, systemImage: niveau.symboleSF)
-                            .font(Police.detail)
+                            .font(Police.taille(13, .heavy))
                             .foregroundStyle(CouleursCarte.rarete(niveau))
                     }
-                    if apercu.vedetteEstRare, let rarete = ligne.rarete {
-                        Text(texteVedette(rarete, annee: ligne.annee))
-                            .font(Police.detail)
-                            .foregroundStyle(Palette.encreDouce)
-                            .multilineTextAlignment(.center)
-                    } else if !apercu.vedetteEstRare {
-                        let mot = ligne.nPeches > 1 ? "pêches" : "pêche"
-                        Text("\(ligne.nPeches) \(mot) OFB · \(String(ligne.annee))")
-                            .font(Police.detail)
-                            .foregroundStyle(Palette.encreDouce)
-                            .multilineTextAlignment(.center)
-                    }
+                    Text(texteVedette(ligne))
+                        .font(Police.taille(15))
+                        .foregroundStyle(Palette.encreDouce)
+                        .multilineTextAlignment(.center)
                 }
+                .padding(.top, 20)
                 autresPoissons(apercu)
-                    .padding(.top, Espace.xl)
+                    .padding(.top, 48)
             }
             .accessibilityElement(children: .contain)
         } else if apercu != nil {
@@ -491,15 +493,19 @@ struct VueCarte: View {
     }
 
     /// « 3 pêches sur 29 · OFB 2024 » : le nombre de pêches et l'année vont toujours ensemble.
-    private func texteVedette(_ rarete: ResultatRarete, annee: Int) -> String {
+    private func texteVedette(_ ligne: LigneEspece) -> String {
+        guard let rarete = ligne.rarete else {
+            let mot = ligne.nPeches > 1 ? "pêches" : "pêche"
+            return "\(ligne.nPeches) \(mot) · OFB \(String(ligne.annee))"
+        }
         let mot = rarete.nPeches > 1 ? "pêches" : "pêche"
-        let an = rarete.anneeDernierReleve ?? annee
+        let an = rarete.anneeDernierReleve ?? ligne.annee
         let base = "\(rarete.nPeches) \(mot) sur \(rarete.nTotal) · OFB \(an)"
         return rarete.echelle == .region ? base + " · région" : base
     }
 
     private func autresPoissons(_ apercu: ApercuSpot) -> some View {
-        HStack(spacing: Espace.l) {
+        HStack(spacing: 18) {
             ForEach(apercu.autres) { ligne in
                 ImageEspeceCarte(nom: modele.pechable(ligne.espece)?.image)
                     .frame(width: 72, height: 34)
@@ -507,7 +513,7 @@ struct VueCarte: View {
             }
             if apercu.reste > 0 {
                 Text("+ \(apercu.reste)")
-                    .font(Police.detail)
+                    .font(Police.taille(15))
                     .foregroundStyle(Palette.encreDouce)
             }
         }
@@ -575,45 +581,29 @@ struct VueCarte: View {
     private var haut: some View {
         VStack(spacing: 8) {
             enTeteCarte
+            HStack(spacing: 0) {
+                Spacer(minLength: 0)
+                boutonsSecondaires
+            }
             bandeauHaut
-            if let message = modele.message {
-                Text(message)
-                    .font(PolicesCarte.detail())
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .foregroundStyle(Palette.encre)
-                    .padding(.horizontal, Espace.m)
-                    .padding(.vertical, Espace.s)
-                    .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-            }
-            if modele.modeChoixDuSpot {
-                Text("Touche la rivière pour poser ton cercle de 1 km.")
-                    .font(PolicesCarte.detail())
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .foregroundStyle(Palette.encre)
-                    .padding(.horizontal, Espace.m)
-                    .padding(.vertical, Espace.s)
-                    .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-            }
-            if let filtre = modele.filtre {
-                Button { modele.choisirFiltre(nil) } label: {
-                    HStack(spacing: 8) {
-                        ImageEspeceCarte(nom: filtre.image).frame(width: 34, height: 20)
-                        Text(filtre.nom).font(PolicesCarte.detail())
-                        Image(systemName: "xmark.circle.fill").accessibilityHidden(true)
-                    }
-                    .foregroundStyle(Palette.encre)
-                    .padding(.horizontal, Espace.m)
-                    .padding(.vertical, Espace.s)
-                    .background(Palette.surface, in: Capsule())
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Filtre : \(filtre.nom)")
-                .accessibilityHint("Retire le filtre")
-            }
+            messageDeCarte
         }
         .padding(.horizontal, 16)
+    }
+
+    /// Un message d'état de la carte (aucun relevé, erreur) : seulement quand il y en a un.
+    @ViewBuilder
+    private var messageDeCarte: some View {
+        if let message = modele.message {
+            Text(message)
+                .font(Police.detail)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .foregroundStyle(Palette.encre)
+                .padding(.horizontal, Espace.m)
+                .padding(.vertical, Espace.s)
+                .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
+        }
     }
 
     /// En haut de la carte : retour à « Ton spot », le lieu, le filtre par espèce (maquette P06 A).
@@ -622,6 +612,7 @@ struct VueCarte: View {
             BoutonRond(role: .retour, rendu: .verre, action: retourAuSpot)
             HStack(spacing: 8) {
                 Image(systemName: "mappin")
+                    .font(Police.taille(18))
                     .foregroundStyle(Palette.marine)
                     .accessibilityHidden(true)
                 Text(apercu?.lieu ?? "Carte")
@@ -638,10 +629,16 @@ struct VueCarte: View {
                     .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
                     .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
             }
-            BoutonVerreCarte(symbole: "line.3.horizontal.decrease", libelle: "Filtrer par espèce") {
+            BoutonVerreCarte(symbole: "line.3.horizontal.decrease", libelle: "Filtrer par espèce",
+                             teinte: couleurDuFiltre) {
                 modele.afficherFiltre = true
             }
         }
+    }
+
+    /// Marine quand un filtre d'espèce est actif (le bouton le dit, sans bandeau en plus), encre sinon.
+    private var couleurDuFiltre: Color {
+        modele.filtre == nil ? Palette.encre : Palette.marine
     }
 
     private func retourAuSpot() {
@@ -652,67 +649,183 @@ struct VueCarte: View {
     // MARK: Boutons du bas (au-dessus de la barre d'onglets)
 
     private var bas: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 8) {
             bandeauSession
-            HStack(spacing: 10) { Spacer(minLength: 0); boutonsSecondaires }
             if !sessionEnCours {
-                Button {
-                    if let spot = modele.spotAffiche { onCommencerSession(spot) }
-                } label: {
-                    Label("Commencer une session", systemImage: "play.fill")
-                }
-                .buttonStyle(.principal)
-                .disabled(modele.spotAffiche == nil)
-                .opacity(modele.spotAffiche == nil ? 0.5 : 1)
-                if modele.spotAffiche == nil {
-                    Text(modele.modeChoixDuSpot ? "Touche la rivière pour poser ton spot"
-                                                : "Pose ton spot pour commencer")
-                        .font(PolicesCarte.legende())
-                        .foregroundStyle(Palette.encreDouce)
-                        .multilineTextAlignment(.center)
-                }
+                feuilleSpotCarte
             }
         }
-        .padding(.horizontal, 16)
-        .padding(.bottom, 4)
+        .padding(.horizontal, 8)
+        .padding(.bottom, 0)
+    }
+
+    /// Maquette P06 A : la feuille « Ton spot » (poignée, titre et distance, 3 poissons + « + N »,
+    /// « Commencer une session », « Choisir un autre spot »), 8 pt de chaque bord, coins de 32 pt.
+    private var feuilleSpotCarte: some View {
+        VStack(spacing: 0) {
+            Capsule()
+                .fill(Palette.filet)
+                .frame(width: 36, height: 5)
+                .padding(.top, 7)
+                .padding(.bottom, 12)
+                .accessibilityHidden(true)
+            titreFeuilleCarte
+            tuilesFeuilleCarte
+                .padding(.top, 14)
+                .padding(.bottom, 18)
+            boutonCommencerCarte
+            lienAutreSpotCarte
+                .padding(.top, 4)
+        }
+        .padding(.horizontal, 20)
+        .padding(.bottom, 24)
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
+        .shadow(color: Palette.encre.opacity(0.16), radius: 15, y: -2)
+    }
+
+    private var titreFeuilleCarte: some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text("Ton spot")
+                .font(Police.taille(22, .heavy))
+                .foregroundStyle(Palette.encre)
+                .accessibilityAddTraits(.isHeader)
+            Spacer(minLength: Espace.s)
+            // Seulement quand la position de l'iPhone est connue : jamais de distance inventée.
+            if let distance = distanceAuSpot {
+                Text(distance)
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
+            }
+        }
+    }
+
+    /// « 2,4 km » entre l'iPhone et le centre du spot ; `nil` sans position ou sans spot.
+    private var distanceAuSpot: String? {
+        guard let moi = position.position, let spot = modele.spotAffiche else { return nil }
+        let a = CLLocation(latitude: moi.latitude, longitude: moi.longitude)
+        let b = CLLocation(latitude: spot.centre.latitude, longitude: spot.centre.longitude)
+        let metres: Double = a.distance(from: b)
+        if metres < 1000 { return "\(Int(metres.rounded())) m" }
+        let km: Double = (metres / 100).rounded() / 10
+        let nombre: String = km.formatted(.number.precision(.fractionLength(0...1)).locale(Locale(identifier: "fr_FR")))
+        return "\(nombre) km"
     }
 
     @ViewBuilder
-    private var boutonsSecondaires: some View {
-        Button(action: autourDeMoi) {
-            Image(systemName: "location.fill")
-                .font(Police.taille(17))
-                .foregroundStyle(Palette.marine)
-                .frame(width: 44, height: 44)
-                .background(Palette.marineDoux, in: Circle())
-                .contentShape(Circle())
-        }
-        .buttonStyle(.plain)
-        .accessibilityLabel("Autour de moi")
-
-        if ouChercher != nil || modele.peutChangerDeSpot {
-            Menu {
-                if ouChercher != nil {
-                    Button { afficherOuChercher = true } label: {
-                        Label("Où chercher près d'ici", systemImage: "mappin.and.ellipse")
-                    }
+    private var tuilesFeuilleCarte: some View {
+        if let apercu {
+            let lignes: [LigneEspece] = lignesDeLaFeuille(apercu)
+            HStack(alignment: .top, spacing: 10) {
+                ForEach(lignes) { (ligne: LigneEspece) in
+                    tuilePoissonCarte(ligne)
                 }
-                if modele.peutChangerDeSpot {
-                    Button { modele.modeChoixDuSpot.toggle() } label: {
-                        Label(modele.modeChoixDuSpot ? "Annuler" : (modele.spotAffiche == nil ? "Poser mon spot" : "Changer de spot"),
-                              systemImage: "scope")
-                    }
+                if resteDeLaFeuille(apercu) > 0 {
+                    tuileResteCarte(resteDeLaFeuille(apercu))
                 }
-            } label: {
-                Image(systemName: "ellipsis.circle")
-                    .font(Police.taille(17))
-                    .foregroundStyle(Palette.marine)
-                    .frame(width: 44, height: 44)
-                    .background(Palette.marineDoux, in: Circle())
-                    .contentShape(Circle())
             }
-            .accessibilityLabel("Plus")
+        } else {
+            // Relevés en cours de lecture : la place des tuiles reste, sans rien inventer.
+            Color.clear.frame(height: 52 + 6 + 14)
         }
+    }
+
+    /// Les trois premières espèces du spot : la plus pêchée, puis les suivantes.
+    private func lignesDeLaFeuille(_ apercu: ApercuSpot) -> [LigneEspece] {
+        var toutes: [LigneEspece] = []
+        if let vedette = apercu.vedette { toutes.append(vedette) }
+        toutes.append(contentsOf: apercu.autres)
+        return Array(toutes.prefix(3))
+    }
+
+    private func resteDeLaFeuille(_ apercu: ApercuSpot) -> Int {
+        let total: Int = (apercu.vedette == nil ? 0 : 1) + apercu.autres.count + apercu.reste
+        return max(0, total - 3)
+    }
+
+    private func tuilePoissonCarte(_ ligne: LigneEspece) -> some View {
+        let fiche = modele.pechable(ligne.espece)
+        let niveau: NiveauRarete = ligne.rarete?.niveau ?? .nonMesuree
+        return VStack(spacing: 6) {
+            ImageEspeceCarte(nom: fiche?.image)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 7)
+                .padding(.vertical, 6)
+                .frame(height: 52)
+                .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+            marqueRareteCarte(niveau)
+        }
+        .frame(maxWidth: .infinity)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(fiche?.nom ?? ligne.espece.id)
+        .accessibilityValue(niveau == .nonMesuree ? "" : niveau.libelle)
+    }
+
+    @ViewBuilder
+    private func marqueRareteCarte(_ niveau: NiveauRarete) -> some View {
+        if niveau == .nonMesuree {
+            Color.clear.frame(width: 14, height: 14)
+        } else {
+            Image(systemName: niveau.symboleSF)
+                .font(Police.taille(13, .heavy))
+                .foregroundStyle(CouleursCarte.rarete(niveau))
+                .frame(height: 14)
+        }
+    }
+
+    private func tuileResteCarte(_ reste: Int) -> some View {
+        VStack(spacing: 6) {
+            Text("+ \(reste)")
+                .font(Police.detail)
+                .foregroundStyle(Palette.encreDouce)
+                .frame(maxWidth: .infinity)
+                .frame(height: 52)
+                .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous).strokeBorder(Palette.filet, lineWidth: 1.5))
+            Color.clear.frame(width: 14, height: 14)
+        }
+        .frame(maxWidth: .infinity)
+    }
+
+    private var boutonCommencerCarte: some View {
+        Button {
+            if let spot = modele.spotAffiche { onCommencerSession(spot) }
+        } label: {
+            Label("Commencer une session", systemImage: "play.fill")
+        }
+        .buttonStyle(.principal)
+        .disabled(modele.spotAffiche == nil)
+        .opacity(modele.spotAffiche == nil ? 0.5 : 1)
+    }
+
+    /// « Choisir un autre spot » ; pendant le choix, la consigne prend sa place (toucher l'annule).
+    @ViewBuilder
+    private var lienAutreSpotCarte: some View {
+        if modele.modeChoixDuSpot {
+            Button { modele.modeChoixDuSpot = false } label: {
+                Text("Touche la rivière pour poser ton cercle de 1 km")
+                    .font(Police.corps)
+                    .foregroundStyle(Palette.marine)
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityHint("Touche pour annuler")
+        } else if modele.peutChangerDeSpot {
+            Button { modele.modeChoixDuSpot = true } label: {
+                Text("Choisir un autre spot")
+                    .font(Police.corps)
+                    .foregroundStyle(Palette.marine)
+                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+        }
+    }
+
+    /// Le bouton « me localiser » : rond de verre sous la pastille, flèche marine (maquette P06 A).
+    @ViewBuilder
+    private var boutonsSecondaires: some View {
+        BoutonVerreCarte(symbole: "location.fill", libelle: "Autour de moi", teinte: Palette.marine, action: autourDeMoi)
     }
 }
 
