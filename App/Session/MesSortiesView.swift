@@ -28,14 +28,7 @@ struct MesSortiesView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.m) {
             HStack {
-                Button(action: surRetour) {
-                    Image(systemName: "chevron.left")
-                        .font(Police.sousTitre)
-                        .foregroundStyle(Palette.encre)
-                        .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                        .background(.regularMaterial, in: Circle())
-                }
-                .accessibilityLabel("Retour")
+                BoutonRond(role: .retour, rendu: .verre, action: surRetour)
                 Spacer()
             }
             Text("Mes sorties")
