@@ -24,10 +24,11 @@ Les 3 fichiers de données (`stations-especes.json`, `rarete-departements.json`,
 Si un ✗ s'affiche, copie le message dans `titouan-vers-equipe.md`.
 
 
-## ⚠️ TA BRANCHE `titouan/finitions` CROISE LE FIL DESIGN
-On a vu tes commits (86466576 : cartes, météo façon Apple, aquarium dans l'app, Communauté, Pescedex de démo). Bien joué, mais ils touchent les mêmes fichiers que le fil design en ce moment : `App/Collection/*` (Pescedex, recto, verso, plein écran), `App/Club/*`, `App/Carte/Vues/VueCarte.swift`, `App/Session/*`, `App/Abonnement/TextesPaywall.swift`, et `App/RootView.swift` (à Adem).
-**Avant d'aller plus loin, écris dans `titouan-vers-equipe.md`** : ce que tu veux voir fusionné, et sur quoi tu repars. On s'accorde avec Adem et le fil design pour ne pas écraser leur travail (`lot/design-systeme`).
-Deux points à vérifier de ton côté : les photos de `App/Demo/Photos/` sont-elles libres de droit (elles seraient publiées dans l'app) ? Et le mode démo est-il bien sous `#if DEBUG` (rien de factice dans le build envoyé à Apple) ?
+## ⚠️ DÉCISION D'ADEM SUR `titouan/finitions` (11h56)
+Tes commits (cartes, météo façon Apple, aquarium dans l'app, Communauté, Pescedex de démo) touchent les mêmes écrans que le fil design. **Adem a tranché : le fil design reprend le meilleur des deux, écran par écran, dans `lot/design-systeme`.** Ce que ça change pour toi :
+1. **Ne touche plus à `App/RootView.swift`** ni aux écrans de la liste « Ne pas toucher en ce moment » ci-dessous.
+2. **Pousse seulement ce qui est nouveau** sur `titouan/finitions`, et **décris-le** dans `titouan-vers-equipe.md` (quel écran, quel fichier, ce qui change) pour que le fil design le reprenne.
+3. **Tes 12 photos de démo** (`App/Demo/Photos/`) : il faut une **licence libre et la source citée** pour chacune (dans `App/Demo/photos-demo.json` ou dans ton message). Sinon elles ne seront pas utilisées.
 
 ## Échéances (heure de Paris)
 - **14h** : build sur TestFlight (pas de prod). Dernier archive vers 13h15.
