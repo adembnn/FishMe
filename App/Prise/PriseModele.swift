@@ -122,29 +122,25 @@ final class PriseModele {
         }
     }
 
-    /// Le pêcheur touche une espèce : anguille, d'abord son stade ; sosies coûteux, d'abord les sosies côte à côte.
+    /// Le pêcheur touche une espèce : anguille, d'abord son stade ; sinon c'est la confirmation.
+    /// Adem, 16 oct. : une espèce confirmée ne se redemande jamais (plus d'écran des sosies après « Confirmer »).
     func choisir(_ entree: EspecePechable) {
         if PriseLogique.estAnguille(entree.espece) { aller(.stade); return }
-        var classeChoisie: String?
-        if case .grille(let classe) = etape { classeChoisie = classe }
-        if PriseLogique.demandeSosies(entree),
-           !PriseLogique.sosiesDejaTranches(entree, classe: classeChoisie, catalogue: catalogue) {
-            aller(.sosies(entree)); return
-        }
         confirmer(entree)
     }
 
-    /// Un toucher sur l'espèce, après les sosies ou le stade : c'est la confirmation.
+    /// Un toucher sur l'espèce (ou le stade de l'anguille) : c'est la confirmation.
+    /// Adem, 16 oct. : plus d'étape de taille ni de détails, on passe tout droit à la carte de la prise.
+    /// Sans taille, Core ne rend aucun verdict de taille (ligne « à vérifier sur place »).
     func confirmer(_ entree: EspecePechable) {
         especeConfirmee = entree
         stade = PriseLogique.stade(de: entree.espece)
-        tailleConfirmee = false
-        if longueurLue == nil {
-            curseurBouge = false
-            if let derniere = memoire.derniere(entree.espece) { longueurCm = derniere }
-        }
-        aller(.taille)
+        tailleConfirmee = true
+        aller(.resultat)
     }
+
+    /// Vrai seulement si une taille a vraiment été donnée (toise, curseur ou réalité augmentée). Sinon la prise n'a pas de taille.
+    var tailleConnue: Bool { curseurBouge || longueurLue != nil || mesureAR != nil }
 
     func jeNeSaisPas() { terminer(nil) }
 
@@ -234,7 +230,8 @@ final class PriseModele {
     /// Avant la confirmation de l'espèce et de la taille : rien de calculé, seulement « relâche-la ».
     var controle: ResultatControle? {
         guard let entree = especeConfirmee, tailleConfirmee else { return nil }
-        return services.regles.controle(espece: entree.espece, tailleCm: longueurCm.rounded(), mesure: methode,
+        return services.regles.controle(espece: entree.espece, tailleCm: tailleConnue ? longueurCm.rounded() : nil,
+                                        mesure: tailleConnue ? methode : nil,
                                         date: contexte.date, lieu: contexte.lieu, prisesDuJour: contexte.prisesDuJour)
     }
 
@@ -245,9 +242,9 @@ final class PriseModele {
 
     var verdictTaille: PriseLogique.VerdictAffiche? {
         guard let entree = especeConfirmee, tailleConfirmee else { return nil }
-        let longueurs: [Double]
-        if let plage = plageAR { longueurs = [Double(plage.basCm), Double(plage.hautCm)] } else { longueurs = [longueurCm.rounded()] }
-        let mesure = mesurePourVerdict
+        let longueurs: [Double?]
+        if let plage = plageAR { longueurs = [Double(plage.basCm), Double(plage.hautCm)] } else { longueurs = [tailleConnue ? longueurCm.rounded() : nil] }
+        let mesure: MethodeMesure? = tailleConnue ? mesurePourVerdict : nil
         let resultats = longueurs.map {
             services.regles.controle(espece: entree.espece, tailleCm: $0, mesure: mesure,
                                      date: contexte.date, lieu: contexte.lieu, prisesDuJour: contexte.prisesDuJour)
@@ -256,13 +253,14 @@ final class PriseModele {
     }
 
     var poids: PoidsEstime? {
-        guard let entree = especeConfirmee, tailleConfirmee else { return nil }
+        guard let entree = especeConfirmee, tailleConfirmee, tailleConnue else { return nil }
         return services.especes.poidsEstime(espece: entree.espece, longueurCm: longueurCm.rounded())
     }
 
     func ranger() {
         guard let entree = especeConfirmee, let photo else { terminer(nil); return }
-        let prise = Prise(espece: entree.espece, longueurCm: longueurCm.rounded(), mesure: methode, stade: stade,
+        let prise = Prise(espece: entree.espece, longueurCm: tailleConnue ? longueurCm.rounded() : nil,
+                          mesure: tailleConnue ? methode : nil, stade: stade,
                           date: contexte.date, lieuFlou: contexte.lieuFlou, cheminPhoto: nil, gardee: gardee, exemple: exemple)
         terminer(PriseConfirmee(prise: prise, photo: photo))
     }

@@ -224,17 +224,15 @@ struct PriseModeleTests {
         #expect(m.poids == nil)
     }
 
-    @Test func apresConfirmationEtTailleLeControleEtLePoidsArrivent() throws {
+    /// Adem, 16 oct. : l'espèce confirmée mène tout droit à la carte, sans sosies ni taille ; sans taille, ni poids ni longueur.
+    @Test func apresConfirmationOnVaToutDroitALaCarte() throws {
         let m = modele()
         let brochet = try #require(m.catalogue.first { $0.espece.id == "brochet" })
         m.choisir(brochet)
-        #expect(m.etape == .taille)
-        #expect(m.controle == nil)
-        m.deplacerCurseur(60)
-        m.confirmerLaTaille()
+        #expect(m.etape == .resultat)
         #expect(m.controle != nil)
-        #expect(m.poids != nil)
-        #expect(m.methode == .saisie)
+        #expect(m.poids == nil)
+        #expect(!m.tailleConnue)
     }
 
     @Test func leCurseurDemarreAuMilieuEtDoitBouger() throws {
@@ -253,7 +251,7 @@ struct PriseModeleTests {
         let brochet = try #require(m.catalogue.first { $0.espece.id == "brochet" })
         m.ouvrirLaGrille()
         m.choisir(brochet)
-        #expect(m.etape == .taille)
+        #expect(m.etape == .resultat)
         m.retour()
         #expect(m.etape == .grille(classe: nil))
         m.retour()

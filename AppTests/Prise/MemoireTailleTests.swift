@@ -54,21 +54,4 @@ struct MemoireTailleTests {
         #expect(m.mesurePourVerdict == .estimee)
         #expect(m.methode == .estimee)
     }
-
-    @Test func laTailleDeLaDerniereRetenuePourLEspeceServDeDepart() throws {
-        let contexte = PriseContexte(coordonnee: Coordonnee(latitude: 48.8, longitude: 2.4),
-                                     lieu: Lieu(departement: Departement(code: "94")), lieuFlou: "94",
-                                     date: Date(timeIntervalSince1970: 1_792_065_600), prisesDuJour: [])
-        let m = PriseModele(services: .faux, contexte: contexte, terminer: { _ in })
-        m.memoire = MemoireTaille(defauts: defauts())
-        let brochet = try #require(m.catalogue.first { $0.espece.id == "brochet" })
-        m.choisir(brochet)
-        m.deplacerCurseur(63)
-        m.confirmerLaTaille()
-        m.choisir(brochet)
-        #expect(m.longueurCm == 63)
-        #expect(!m.curseurBouge)
-        m.ajusterCurseur(1)
-        #expect(m.longueurCm == 64 && m.curseurBouge)
-    }
 }
