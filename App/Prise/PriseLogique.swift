@@ -184,7 +184,7 @@ enum PriseLogique {
             .map { ($0, distanceMetres($0.coordonnee, c)) }
             .filter { $0.1 <= 1500 }
             .sorted { $0.1 < $1.1 }
-            .lazy.compactMap { lire($0.0.codeStation) }
+            .compactMap { lire($0.0.codeStation) }
             .first
     }
 
