@@ -1,0 +1,51 @@
+From c67cffe3d675079fac624e5071079188920be873 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 16 Oct 2026 03:14:03 +0000
+Subject: [PATCH] =?UTF-8?q?D1=20:=20truite=20de=20mer=20avec=20la=20classe?=
+ =?UTF-8?q?=20de=20la=20truite=20fario,=20poisson=20rouge=20avec=20celle?=
+ =?UTF-8?q?=20du=20carassin=20(le=20mod=C3=A8le=20v2=20les=20a=20appris=20?=
+ =?UTF-8?q?ensemble)=20;=20nom=20du=20poisson-chat=20sans=20annotation?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01TXxtbJKci969LZsj79YbJr
+---
+ Packages/Core/Sources/Core/Resources/especes.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/Packages/Core/Sources/Core/Resources/especes.json b/Packages/Core/Sources/Core/Resources/especes.json
+index 4608f2d..8c225ed 100644
+--- a/Packages/Core/Sources/Core/Resources/especes.json
++++ b/Packages/Core/Sources/Core/Resources/especes.json
+@@ -61,7 +61,7 @@
+   "latin": "Salmo trutta trutta",
+   "latin_actuel": null,
+   "type": "poisson",
+-  "classe_modele": "truite_de_mer",
++  "classe_modele": "truite_commune",
+   "code_sandre": "2224",
+   "statut": [],
+   "cout_erreur": "eleve",
+@@ -440,7 +440,7 @@
+  },
+  {
+   "id": "poisson-chat",
+-  "nom": "Poisson-chat (Ameiurus melas ; Ameiurus nebulosus [?])",
++  "nom": "Poisson-chat",
+   "latin": "Ameiurus melas",
+   "latin_actuel": null,
+   "type": "poisson",
+@@ -1992,7 +1992,7 @@
+   "latin": "Carassius auratus",
+   "latin_actuel": "Carassius auratus",
+   "type": "poisson",
+-  "classe_modele": "poisson_rouge",
++  "classe_modele": "carassin",
+   "code_sandre": null,
+   "statut": [],
+   "cout_erreur": "faible",
+-- 
+2.43.0
+

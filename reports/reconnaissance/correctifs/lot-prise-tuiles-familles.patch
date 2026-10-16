@@ -1,0 +1,229 @@
+From 06aed1d990885f85db03f50b4ebd92c267ebe9b1 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 16 Oct 2026 03:13:10 +0000
+Subject: [PATCH 1/2] =?UTF-8?q?L3=20:=20tuiles=20de=20groupe=20avec=20un?=
+ =?UTF-8?q?=20vrai=20nom=20(=C2=AB=20Poisson-chat=20ou=20barbue=20=C2=BB,?=
+ =?UTF-8?q?=20plus=20de=20nom=20brut)=20;=20brochet=20aquitain,=20black-ba?=
+ =?UTF-8?q?ss=20=C3=A0=20petite=20bouche,=20crapet,=20barbue=20rang=C3=A9s?=
+ =?UTF-8?q?=20dans=20les=20carnassiers,=20sterlet,=20bar=20et=20ray=C3=A9?=
+ =?UTF-8?q?=20hybride=20dans=20les=20migrateurs,=20gobies=20et=20=C3=A9pin?=
+ =?UTF-8?q?ochette=20dans=20les=20petits=20de=20fond,=20poisson=20rouge=20?=
+ =?UTF-8?q?avec=20les=20carpes?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01TXxtbJKci969LZsj79YbJr
+---
+ App/Prise/PriseFamilles.swift          | 10 +++++-----
+ App/Prise/PriseLogique.swift           | 27 ++++++++++++++++++++++++++
+ App/Prise/PriseVuesEspece.swift        | 16 +++++++--------
+ AppTests/Prise/PriseLogiqueTests.swift | 20 +++++++++++++++++++
+ 4 files changed, 59 insertions(+), 14 deletions(-)
+
+diff --git a/App/Prise/PriseFamilles.swift b/App/Prise/PriseFamilles.swift
+index 22106ae..c62d93b 100644
+--- a/App/Prise/PriseFamilles.swift
++++ b/App/Prise/PriseFamilles.swift
+@@ -29,12 +29,12 @@ nonisolated enum PriseFamille: Int, CaseIterable, Sendable {
+ 
+     static func de(_ id: String) -> PriseFamille {
+         if id.hasPrefix("ecrevisse") || id == "crabe-chinois" { return .ecrevisses }
+-        if id.hasPrefix("grenouille") || id == "hybrides" { return .grenouilles }
++        if id.hasPrefix("grenouille") { return .grenouilles }
+         if id.hasPrefix("truite") || id.hasPrefix("saumon") || id.hasPrefix("omble") || ["cristivomer", "ombre-commun", "huchon", "coregones"].contains(id) { return .salmonides }
+-        if id.hasPrefix("carpe") || id.hasPrefix("carassin") { return .carpes }
+-        if ["brochet", "sandre", "perche-commune", "gremille", "black-bass", "perche-soleil", "silure-glane", "lotte", "poisson-chat"].contains(id) { return .carnassiers }
+-        if id.hasPrefix("anguille") || id == "civelle" || id.hasPrefix("lamproie") || id.hasPrefix("esturgeon") || id.hasSuffix("alose") || id.hasPrefix("alose") || ["flet", "mulet", "apron-du-rhone"].contains(id) || id.contains("alose") { return .migrateurs }
+-        if id.hasPrefix("loche") || ["chabot", "epinoche", "vairon", "gambusie", "goujon", "goujon-de-l-amour", "spirlin", "pseudorasbora"].contains(id) { return .petitsDeFond }
++        if id.hasPrefix("carpe") || id.hasPrefix("carassin") || id == "poisson-rouge" { return .carpes }
++        if id.hasPrefix("brochet") || id.hasPrefix("black-bass") || ["sandre", "perche-commune", "gremille", "perche-soleil", "crapet-de-roche", "silure-glane", "lotte", "poisson-chat", "barbue-de-riviere"].contains(id) { return .carnassiers }
++        if id.hasPrefix("anguille") || id == "civelle" || id.hasPrefix("lamproie") || id.hasPrefix("esturgeon") || id.contains("alose") || ["sterlet", "flet", "mulet", "bar", "raye-hybride", "apron-du-rhone"].contains(id) { return .migrateurs }
++        if id.hasPrefix("loche") || id.hasPrefix("gobie") || id.hasPrefix("epinoche") || ["chabot", "vairon", "gambusie", "goujon", "goujon-de-l-amour", "spirlin", "pseudorasbora"].contains(id) { return .petitsDeFond }
+         return .cyprinides
+     }
+ }
+diff --git a/App/Prise/PriseLogique.swift b/App/Prise/PriseLogique.swift
+index 254599b..361e663 100644
+--- a/App/Prise/PriseLogique.swift
++++ b/App/Prise/PriseLogique.swift
+@@ -3,6 +3,33 @@ import Foundation
+ 
+ /// Logique de présentation, sans écran, testable sur Mac. Elle ne calcule ni a priori, ni seuil, ni consigne, ni poids : tout cela vient de Core.
+ enum PriseLogique {
++    /// Noms des groupes de sosies (classes du modèle qui regroupent plusieurs espèces de `especes.json`).
++    static let nomsDeGroupe: [String: String] = [
++        "truite_commune": "Truite fario ou de mer", "carpe": "Carpe commune ou koï", "carassin": "Carassin ou poisson rouge",
++        "ablette": "Ablette ou able de Heckel", "loche": "Loche", "anguille": "Anguille", "alose": "Alose",
++        "lamproie": "Lamproie", "esturgeon": "Esturgeon", "black_bass": "Black-bass", "poisson_chat": "Poisson-chat ou barbue",
++        "hotu_toxostome": "Hotu ou toxostome", "vandoise": "Vandoise", "gobie_invasif": "Gobie ou goujon de l'Amour",
++        "epinoche": "Épinoche ou épinochette", "brochet": "Brochet", "ecrevisse_protegee": "Écrevisse protégée",
++        "ecrevisse_invasive_autre": "Écrevisse invasive", "grenouille_verte": "Grenouille verte",
++    ]
++
++    /// Nom de la tuile d'un groupe : le nom du groupe, jamais le nom brut de sa 1re espèce (« Poisson-chat (Ameiurus…) »).
++    static func nomDeGroupe(classe: String, membres: [EspecePechable]) -> String {
++        if let nom = nomsDeGroupe[classe] { return nom }
++        if let premier = membres.first { return nomCourt(premier.nom) }
++        let brut = classe.replacingOccurrences(of: "_", with: " ")
++        return brut.prefix(1).uppercased() + brut.dropFirst()
++    }
++
++    /// Le nom sans ses précisions : « Huchon (huchen) » → « Huchon », « Anguille européenne, stade jaune » → « Anguille européenne ».
++    static func nomCourt(_ nom: String) -> String {
++        var court = nom
++        for marque in [" (", ", ", " / "] {
++            if let r = court.range(of: marque) { court = String(court[..<r.lowerBound]) }
++        }
++        return court.trimmingCharacters(in: .whitespaces)
++    }
++
+     struct Groupe: Equatable {
+         var famille: PriseFamille
+         var especes: [EspecePechable]
+diff --git a/App/Prise/PriseVuesEspece.swift b/App/Prise/PriseVuesEspece.swift
+index 076bb79..d45f58f 100644
+--- a/App/Prise/PriseVuesEspece.swift
++++ b/App/Prise/PriseVuesEspece.swift
+@@ -27,13 +27,15 @@ struct PriseImageEspece: View {
+ struct PriseTuile: View {
+     var entree: EspecePechable
+     var duCoin = false
++    /// Nom affiché à la place de celui de l'espèce (tuile d'un groupe de sosies).
++    var titre: String?
+     var action: () -> Void
+ 
+     var body: some View {
+         Button(action: action) {
+             VStack(spacing: 6) {
+                 PriseImageEspece(entree: entree)
+-                Text(entree.nom)
++                Text(titre ?? entree.nom)
+                     .font(PriseJetons.legende()).foregroundStyle(PriseJetons.encre)
+                     .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+             }
+@@ -43,7 +45,7 @@ struct PriseTuile: View {
+         .overlay(alignment: .topTrailing) {
+             if duCoin { Image(systemName: "mappin.circle.fill").foregroundStyle(PriseJetons.accent).accessibilityHidden(true) }
+         }
+-        .accessibilityLabel(entree.nom)
++        .accessibilityLabel(titre ?? entree.nom)
+         .accessibilityValue(duCoin ? "Relevée près de toi" : "")
+     }
+ }
+@@ -92,10 +94,11 @@ struct PrisePropositionsView: View {
+                             case .espece(let entree):
+                                 PriseTuile(entree: entree) { modele.choisir(entree) }
+                             case .classe(let nom, let premiere):
++                                let titre = PriseLogique.nomDeGroupe(classe: nom, membres: modele.catalogue.filter { $0.classeModele == nom })
+                                 if let premiere {
+-                                    PriseTuile(entree: premiere) { modele.ouvrirLaGrille(classe: nom) }
++                                    PriseTuile(entree: premiere, titre: titre) { modele.ouvrirLaGrille(classe: nom) }
+                                 } else {
+-                                    Button(nom.split(separator: "_").joined(separator: " ou ").capitalizedPremiere) { modele.ouvrirLaGrille(classe: nom) }
++                                    Button(titre) { modele.ouvrirLaGrille(classe: nom) }
+                                         .buttonStyle(PriseBoutonSecondaire())
+                                 }
+                             }
+@@ -214,8 +217,3 @@ struct PriseStadeView: View {
+     }
+ }
+ 
+-
+-private extension String {
+-    /// Majuscule à la première lettre seulement (« Hotu ou toxostome »).
+-    var capitalizedPremiere: String { prefix(1).uppercased() + dropFirst() }
+-}
+diff --git a/AppTests/Prise/PriseLogiqueTests.swift b/AppTests/Prise/PriseLogiqueTests.swift
+index 55b8676..d0cfb2b 100644
+--- a/AppTests/Prise/PriseLogiqueTests.swift
++++ b/AppTests/Prise/PriseLogiqueTests.swift
+@@ -68,6 +68,26 @@ struct PriseLogiqueTests {
+         #expect(PriseFamille.de("esturgeon-europeen") == .migrateurs)
+         #expect(PriseFamille.de("ecrevisse-signal") == .ecrevisses)
+     }
++
++    @Test func especesAjouteesRangeesDansLaBonneFamille() {
++        for id in ["brochet-aquitain", "black-bass-petite-bouche", "crapet-de-roche", "barbue-de-riviere"] {
++            #expect(PriseFamille.de(id) == .carnassiers, "\(id)")
++        }
++        for id in ["sterlet", "bar", "raye-hybride"] { #expect(PriseFamille.de(id) == .migrateurs, "\(id)") }
++        for id in ["gobie-a-taches-noires", "gobie-de-kessler", "epinochette"] { #expect(PriseFamille.de(id) == .petitsDeFond, "\(id)") }
++        #expect(PriseFamille.de("poisson-rouge") == .carpes)
++        #expect(PriseFamille.de("hybrides") == .cyprinides)
++    }
++
++    @Test func tuileDeGroupeSansNomBrut() {
++        let chat = entree("poisson-chat", nom: "Poisson-chat (Ameiurus melas ; Ameiurus nebulosus [?])")
++        #expect(PriseLogique.nomDeGroupe(classe: "poisson_chat", membres: [chat]) == "Poisson-chat ou barbue")
++        #expect(PriseLogique.nomDeGroupe(classe: "inconnue", membres: [chat]) == "Poisson-chat")
++        #expect(PriseLogique.nomDeGroupe(classe: "hotu_toxostome", membres: []) == "Hotu ou toxostome")
++        #expect(PriseLogique.nomCourt("Anguille européenne, stade jaune") == "Anguille européenne")
++        #expect(PriseLogique.nomCourt("Carassin argenté / poisson rouge") == "Carassin argenté")
++        for nom in PriseLogique.nomsDeGroupe.values { #expect(!nom.contains("(") && !nom.contains("[")) }
++    }
+ }
+ 
+ @MainActor
+-- 
+2.43.0
+
+
+From fcbbe1bf8d4ab0c7869f2f83abe08f1b1a700245 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 16 Oct 2026 03:15:12 +0000
+Subject: [PATCH 2/2] =?UTF-8?q?L3=20:=20les=204=20classes=20recal=C3=A9es?=
+ =?UTF-8?q?=20=C3=A0=20l'examen=20du=20mod=C3=A8le=20v2=20(chabot,=20grand?=
+ =?UTF-8?q?e=20alose,=20mulet,=20omble=20chevalier)=20ne=20sont=20plus=20p?=
+ =?UTF-8?q?ropos=C3=A9es,=20la=20grille=20s'ouvre?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01TXxtbJKci969LZsj79YbJr
+---
+ App/Prise/IdentificationDino.swift           | 5 +++++
+ AppTests/Prise/IdentificationDinoTests.swift | 2 ++
+ 2 files changed, 7 insertions(+)
+
+diff --git a/App/Prise/IdentificationDino.swift b/App/Prise/IdentificationDino.swift
+index d7473ec..e8328f5 100644
+--- a/App/Prise/IdentificationDino.swift
++++ b/App/Prise/IdentificationDino.swift
+@@ -37,6 +37,7 @@ nonisolated struct IdentificationDino: IdentifieEspece {
+     /// Étiquette du modèle (labels.txt) → `classe_modele` de especes.json. nil : pas d'espèce correspondante
+     /// (`autre-poisson`, `pas-un-poisson`, `gambusie` dont la classe est `autre_poisson`, que Core écarte).
+     static func classe(deEtiquette e: String) -> String? {
++        if horsExamen.contains(e) { return nil }
+         if let c = correspondances[e] { return c }
+         if sansEquivalent.contains(e) { return nil }
+         return e.replacingOccurrences(of: "-", with: "_")
+@@ -44,6 +45,10 @@ nonisolated struct IdentificationDino: IdentifieEspece {
+ 
+     static let sansEquivalent: Set<String> = ["autre-poisson", "pas-un-poisson", "gambusie"]
+ 
++    /// Classes recalées à l'examen du modèle v2 (bonne espèce dans les 3 propositions moins de 80 % du temps,
++    /// `reports/reconnaissance/examen-v2.md`) : jamais proposées, la grille s'ouvre à la place.
++    static let horsExamen: Set<String> = ["chabot", "grande-alose", "mulet", "omble-chevalier"]
++
+     /// Les étiquettes dont la classe n'est pas simplement l'étiquette avec des `_`.
+     static let correspondances: [String: String] = [
+         "able-heckel": "ablette", "breme-commune": "breme", "carassin-argente": "carassin",
+diff --git a/AppTests/Prise/IdentificationDinoTests.swift b/AppTests/Prise/IdentificationDinoTests.swift
+index 6ad4e67..d6b7f00 100644
+--- a/AppTests/Prise/IdentificationDinoTests.swift
++++ b/AppTests/Prise/IdentificationDinoTests.swift
+@@ -23,6 +23,8 @@ struct IdentificationDinoTests {
+         #expect(IdentificationDino.classe(deEtiquette: "truite-commune") == "truite_commune")
+         #expect(IdentificationDino.classe(deEtiquette: "ombre") == "ombre_commun")
+         #expect(IdentificationDino.classe(deEtiquette: "pas-un-poisson") == nil)
++        #expect(IdentificationDino.classe(deEtiquette: "grande-alose") == nil, "recalée à l'examen v2")
++        #expect(IdentificationDino.classe(deEtiquette: "chabot") == nil, "recalé à l'examen v2")
+     }
+ }
+ 
+-- 
+2.43.0
+
