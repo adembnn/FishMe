@@ -7,6 +7,13 @@ private let maintenant = Date(timeIntervalSince1970: 1_792_065_600)
 
 @MainActor
 struct ResolveurEtatTests {
+    @Test func pourUnProduitLeStatutLePlusGraveGagne() {
+        #expect(ResolveurEtat.pourUnProduit([.abonne, .delaiDeGrace(fin: nil)]) == .delaiDeGrace(fin: nil))
+        #expect(ResolveurEtat.pourUnProduit([.abonne, .rembourse]) == .rembourse)
+        #expect(ResolveurEtat.pourUnProduit([.expire, .abonne]) == .abonne)
+        #expect(ResolveurEtat.pourUnProduit([]) == nil)
+    }
+
     @Test func accesSelonLeStatut() {
         #expect(ResolveurEtat.etat(statut: .abonne, maintenant: maintenant).donneAcces)
         #expect(ResolveurEtat.etat(statut: .delaiDeGrace(fin: nil), maintenant: maintenant).donneAcces)
