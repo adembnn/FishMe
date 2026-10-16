@@ -11,10 +11,18 @@ final class ModeleOffres {
     private(set) var etat: Etat = .chargement
     private(set) var phraseLancement: String?
     private(set) var phraseEssai: String?
+    /// Prix affichés sur les lignes du paywall (P34 A), lus dans StoreKit : « 34,99 € » pour un compte français.
+    private(set) var prixAnnuel: String?
+    private(set) var prixMensuel: String?
+    /// L'offre cochée : l'annuel par défaut, comme sur la maquette.
+    var choix: String
 
     @ObservationIgnored let produits: ProduitsMontres
 
-    init(produits: ProduitsMontres) { self.produits = produits }
+    init(produits: ProduitsMontres) {
+        self.produits = produits
+        self.choix = produits.annuel
+    }
 
     func charger() async {
         etat = .chargement
@@ -28,6 +36,10 @@ final class ModeleOffres {
             etat = .indisponible
             return
         }
+
+        prixAnnuel = trouves.first(where: { $0.id == produits.annuel })?.displayPrice
+        prixMensuel = produits.mensuel.flatMap { id in trouves.first(where: { $0.id == id })?.displayPrice }
+        if prixMensuel == nil { choix = produits.annuel }
 
         if produits.tarifFondateur {
             let prixApres = trouves.first(where: { $0.id == IdentifiantsProduits.annuelApres })?.displayPrice

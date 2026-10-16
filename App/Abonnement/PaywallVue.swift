@@ -29,6 +29,7 @@ struct PaywallVue: View {
     @State private var modele: ModeleOffres
     @State private var message: String?
     @State private var dejaMontre = false
+    @State private var achatEnCours = false
     @Environment(\.dynamicTypeSize) private var tailleTexte
 
     init(declencheur: DeclencheurPaywall, produits: ProduitsMontres, achats: Achats, mesure: MesurePaywall, liens: LiensLegaux,
@@ -93,28 +94,95 @@ struct PaywallVue: View {
         .shadow(color: Palette.encre.opacity(0.16), radius: 30, y: -2)
     }
 
-    // MARK: Boutique native
+    // MARK: Boutique (P34 A)
 
+    /// Nos propres lignes d'offre et notre bouton « Continuer », en français et aux mesures de la maquette.
+    /// (La boutique toute faite d'Apple écrasait l'offre sous son bouton et parlait anglais.)
     private var boutique: some View {
-        SubscriptionStoreView(productIDs: modele.produits.identifiants) {
-            argumentaire
-        }
-        .subscriptionStoreControlStyle(.prominentPicker)
-        .subscriptionStoreButtonLabel(.multiline)
-        .subscriptionStorePolicyDestination(url: liens.conditions, for: .termsOfService)
-        .subscriptionStorePolicyDestination(url: liens.confidentialite, for: .privacyPolicy)
-        .storeButton(.hidden, for: .restorePurchases)
-        .scrollIndicators(.hidden)
-        .onInAppPurchaseCompletion { _, resultat in
-            guard case .success(let achat) = resultat else { return }
-            await mesure.enregistrerAchat(achat)
-            if case .success(.verified(let transaction)) = achat { await transaction.finish() }
-            let etat = await achats.etat()
-            surEtat(etat)
-            if etat.donneAcces {
-                surAchatTermine(declencheur)
-                fermer()
+        VStack(spacing: 0) {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    argumentaire
+                    VStack(spacing: 10) {
+                        ligneOffre(id: modele.produits.annuel, titre: "Annuel", detail: modele.phraseLancement, prix: modele.prixAnnuel)
+                        if let mensuel = modele.produits.mensuel, let prix = modele.prixMensuel {
+                            ligneOffre(id: mensuel, titre: "Mensuel", detail: modele.phraseEssai, prix: prix)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                }
             }
+            .scrollIndicators(.hidden)
+            .scrollBounceBehavior(.basedOnSize)
+
+            Button {
+                Task { await acheter() }
+            } label: {
+                Group {
+                    if achatEnCours { ProgressView().tint(Palette.surMarine) } else { Text("Continuer") }
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.principal)
+            .disabled(achatEnCours)
+            .padding(.horizontal, 20)
+            .padding(.top, 14)
+        }
+    }
+
+    /// Une offre : rond de sélection, nom et phrase, prix à droite. Bord marine quand elle est cochée.
+    private func ligneOffre(id: String, titre: String, detail: String?, prix: String?) -> some View {
+        let coche = modele.choix == id
+        return Button {
+            modele.choix = id
+        } label: {
+            HStack(spacing: 12) {
+                ZStack {
+                    Circle().strokeBorder(coche ? Palette.marine : Palette.filet, lineWidth: 2)
+                    if coche { Circle().fill(Palette.marine).frame(width: 12, height: 12) }
+                }
+                .frame(width: 24, height: 24)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(titre)
+                        .font(Police.taille(17, .heavy))
+                        .foregroundStyle(Palette.encre)
+                    if let detail {
+                        Text(detail)
+                            .font(Police.taille(13, .bold))
+                            .foregroundStyle(Palette.encreDouce)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                Spacer(minLength: 8)
+                if let prix {
+                    Text(prix)
+                        .font(Police.taille(17, .heavy))
+                        .foregroundStyle(Palette.encre)
+                        .monospacedDigit()
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 14)
+            .frame(maxWidth: .infinity, minHeight: 64, alignment: .leading)
+            .background(Palette.surface, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .strokeBorder(coche ? Palette.marine : Palette.filet, lineWidth: coche ? 2 : 1))
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityAddTraits(coche ? .isSelected : [])
+    }
+
+    private func acheter() async {
+        achatEnCours = true
+        defer { achatEnCours = false }
+        message = nil
+        // La mesure de l'achat passe par `AchatsStoreKit` (rappel `surAchat` branché par A).
+        let etat = await achats.acheter(produit: modele.choix)
+        surEtat(etat)
+        if etat.donneAcces {
+            surAchatTermine(declencheur)
+            fermer()
         }
     }
 
@@ -136,10 +204,9 @@ struct PaywallVue: View {
         .padding(.top, 26)
     }
 
-    /// La ligne sous le bouton : tarif fondateur, essai éventuel (lus dans StoreKit), puis renouvellement automatique et résiliation.
+    /// La ligne sous le bouton : renouvellement automatique et résiliation (le tarif fondateur est sur la ligne Annuel).
     private var mentions: String {
-        let morceaux = [modele.phraseLancement, modele.phraseEssai].compactMap { $0 }
-        return (morceaux + [TextesPaywall.renouvellementCourt]).joined(separator: " ")
+        TextesPaywall.renouvellementCourt
     }
 
     /// P34 A : quatre pastilles rondes (spots, météo et rivière, alertes, conseils), une icône et un mot chacune.
@@ -166,6 +233,7 @@ struct PaywallVue: View {
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
                 .minimumScaleFactor(0.8)
+                .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity)
         .accessibilityElement(children: .combine)
