@@ -16,7 +16,7 @@ nonisolated enum TextesPaywall {
     static func phraseLancement(prixApres: String?) -> String {
         var phrase = "Tarif fondateur jusqu'au 31 déc. 2026"
         if let prixApres { phrase += ", puis \(prixApres)" }
-        return phrase + "."
+        return phrase
     }
 
     /// P34 : la ligne légale sous le bouton (renouvellement automatique et résiliation).
@@ -37,9 +37,24 @@ nonisolated enum TextesPaywall {
     }
 
     /// Montré seulement si `isEligibleForIntroOffer` répond oui ; sinon `nil` et le paywall montre le prix seul.
+    /// « 1 semaine d'essai », « 3 jours d'essai » (maquette P34).
+    static func dureeEssai(valeur: Int, unite: UniteDuree) -> String {
+        let pluriel = valeur > 1
+        let mot: String
+        switch unite {
+        case .jour: mot = pluriel ? "jours" : "jour"
+        case .semaine: mot = pluriel ? "semaines" : "semaine"
+        case .mois: mot = "mois"
+        case .an: mot = pluriel ? "ans" : "an"
+        }
+        return "\(valeur) \(mot) d'essai"
+    }
+
     static func essaiMensuel(valeur: Int, unite: UniteDuree, prixParMois: String, eligible: Bool) -> String? {
         guard eligible else { return nil }
-        return "\(dureeOfferte(valeur: valeur, unite: unite)), puis \(prixParMois) par mois"
+        // P34 : « 1 semaine d'essai » ; le prix par mois est déjà à droite de la ligne.
+        _ = prixParMois
+        return dureeEssai(valeur: valeur, unite: unite)
     }
 
     static func titre(_ fonction: FonctionPro) -> String {

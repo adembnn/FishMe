@@ -215,8 +215,8 @@ struct PriseDetailsView: View {
     @State private var technique: String?
 
     private static let appats: [(nom: String, symbole: String)] = [
-        ("Souple", "fish"), ("Cuiller", "drop.fill"), ("Nageur", "fish.fill"),
-        ("Poisson vif", "fish"), ("Ver", "scribble.variable"), ("Maïs", "leaf.fill"),
+        ("Souple", "fish.fill"), ("Cuiller", "drop"), ("Nageur", "fish"),
+        ("Poisson vif", "fish"), ("Ver", "scribble.variable"), ("Maïs", "leaf"),
     ]
     private static let techniques = ["Lancer", "Posé", "Mouche", "Verticale"]
 
@@ -243,8 +243,8 @@ struct PriseDetailsView: View {
                 HStack(spacing: Espace.s) {
                     ForEach(Self.techniques, id: \.self) { t in puce(t) }
                 }
-                // À brancher : la ligne « 14° · Marne 1,42 m, ajoutés tout seuls » (maquette P22) attend la météo et le niveau de la rivière
-                // de la prise ; sans ces données, rien n'est affiché (aucun chiffre inventé).
+                // À brancher : la ligne « 14° · Marne 1,42 m, ajoutés tout seuls » (maquette P22) : `PriseContexte` n'a ni température ni
+                // hauteur d'eau (`Conditions` de Core n'a pas de température) ; sans ces données, rien n'est affiché (aucun chiffre inventé).
                 Spacer(minLength: 20)
                 Button("Continuer") { modele.continuerDetails() }.buttonStyle(.principal)
             }
@@ -319,11 +319,6 @@ struct PriseResultatView: View {
                 bandeauVerdict(controle)
                 carte
                 HStack(spacing: Espace.m) {
-                    HStack(spacing: 8) {
-                        Circle().fill(verso ? Palette.filet : Palette.marine).frame(width: 8, height: 8)
-                        Circle().fill(verso ? Palette.marine : Palette.filet).frame(width: 8, height: 8)
-                    }
-                    .accessibilityHidden(true)
                     Button { withAnimation { verso.toggle() } } label: {
                         Image(systemName: "arrow.triangle.2.circlepath")
                             .font(.system(size: 17, weight: .bold, design: .rounded)).foregroundStyle(Palette.marine)
@@ -364,6 +359,22 @@ struct PriseResultatView: View {
         return "\(Int(modele.longueurCm.rounded())) cm"
     }
 
+    /// « 68 / 60 cm mini » : la taille minimale est lue dans la phrase de la ligne « taille » de Core ; sans elle, la taille seule.
+    private func texteTailleMini(_ controle: ResultatControle?, _ verdict: PriseLogique.VerdictAffiche?) -> String {
+        let mini = controle?.lignes.first(where: { $0.type == .taille })
+            .flatMap { Self.tailleMinimale(dans: $0.phrase) }
+        guard let mini else { return tailleTexte }
+        let taille = modele.plageAR?.texte.replacingOccurrences(of: " cm", with: "") ?? "\(Int(modele.longueurCm.rounded()))"
+        return "\(taille) / \(mini) cm mini"
+    }
+
+    private static func tailleMinimale(dans phrase: String) -> String? {
+        guard let regex = try? NSRegularExpression(pattern: #"(\d+(?:[.,]\d+)?)\s*cm\s*(?:minimum|au moins|mini)"#),
+              let m = regex.firstMatch(in: phrase, range: NSRange(phrase.startIndex..., in: phrase)),
+              let r = Range(m.range(at: 1), in: phrase) else { return nil }
+        return String(phrase[r])
+    }
+
     /// Lignes « à vérifier » et règles d'interdiction : visibles sous le titre, pas dans « Règle et sources » replié.
     private func bandeauVerdict(_ controle: ResultatControle?) -> some View {
         let lignesVisibles = controle.map { PriseLogique.lignesVisibles([$0]) } ?? []
@@ -375,8 +386,7 @@ struct PriseResultatView: View {
                     .foregroundStyle(couleur).accessibilityHidden(true)
                 Text(titre).font(Police.corps).foregroundStyle(couleur)
                     .frame(maxWidth: .infinity, alignment: .leading).lineLimit(2)
-                // À brancher : « 68 / 60 cm mini » (la taille minimale n'est pas un champ du résultat de Core, seulement dans la phrase de la règle).
-                Text(tailleTexte).font(Police.corps.monospacedDigit()).foregroundStyle(Palette.encreDouce).lineLimit(1)
+                Text(texteTailleMini(controle, verdict)).font(Police.corps.monospacedDigit()).foregroundStyle(Palette.encreDouce).lineLimit(1)
             }
             .padding(.horizontal, Espace.l).padding(.vertical, Espace.s)
             .frame(minHeight: 56)

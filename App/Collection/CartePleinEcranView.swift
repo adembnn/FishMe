@@ -44,7 +44,7 @@ struct CartePleinEcranView: View {
                     Spacer(minLength: Espace.l)
                 } else {
                     Spacer(minLength: Espace.l)
-                    quatreRaretes
+                    QuatreRaretesView(actuel: infos.style)
                         .padding(.horizontal, 8)
                         .padding(.bottom, 8)
                 }
@@ -92,54 +92,6 @@ struct CartePleinEcranView: View {
             }
         }
         .padding(.horizontal, Espace.bord)
-    }
-
-    /// P24 A : le bas de l'écran garde la place de « Quatre raretés » (la maquette y met quatre cartes d'exemple ;
-    /// ici les quatre paliers réels et leurs seuils OFB, rien de fabriqué). Le palier de cette carte est entouré.
-    private var quatreRaretes: some View {
-        VStack(alignment: .leading, spacing: Espace.m) {
-            HStack(alignment: .firstTextBaseline) {
-                Text("Quatre raretés").font(Police.titre).foregroundStyle(Palette.encre)
-                Spacer(minLength: 0)
-                Text("Selon les pêches OFB").font(Police.detail).foregroundStyle(Palette.encreDouce)
-            }
-            HStack(spacing: Espace.s) {
-                paliers(.commun, "50 % et plus")
-                paliers(.peuCommun, "20 à 50 %")
-                paliers(.rare, "moins de 20 %")
-                paliers(.legendaire, "jamais relevé")
-            }
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, Espace.l)
-        .padding(.bottom, Espace.xl)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 38, style: .continuous))
-        .shadow(color: Palette.encre.opacity(0.10), radius: 20, y: -2)
-        .accessibilityElement(children: .contain)
-    }
-
-    private func paliers(_ style: StyleRarete, _ seuil: String) -> some View {
-        let actuel = infos.style == style
-        return VStack(spacing: 6) {
-            MarqueRarete(style: style, taille: 26)
-            Text(style.mot.prefix(1).uppercased() + style.mot.dropFirst())
-                .font(Police.taille(13, .heavy))
-                .foregroundStyle(style.couleur)
-                .lineLimit(1)
-            Text(seuil)
-                .font(Police.taille(11))
-                .foregroundStyle(Palette.encreDouce)
-                .lineLimit(2)
-                .multilineTextAlignment(.center)
-        }
-        .padding(.vertical, 10)
-        .frame(maxWidth: .infinity)
-        .background(Palette.tuile.opacity(actuel ? 1 : 0.5), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous)
-            .strokeBorder(actuel ? Palette.marine : .clear, lineWidth: 2))
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(style.mot), \(seuil)")
     }
 
     private func retourner() {
