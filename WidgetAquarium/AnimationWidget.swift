@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 // Widget + app. Moteur d'animation continue : technique de Bryce Bostwick (MIT), voir `HorlogeAnimation.swift`.
 // `Text(date, style: .timer)` est redessiné chaque seconde par le système, même dans un widget. Avec une police
@@ -18,11 +19,14 @@ struct MasqueClignotant: View {
             Text(HorlogeAnimation.dateReference + decalage, style: .timer)
                 .font(Font.custom(police, fixedSize: taille))
                 .lineLimit(1)
-                // Cadre de 9 caractères aligné à droite : le dernier chiffre est toujours au même endroit...
-                .frame(width: taille * 9, height: taille, alignment: .trailing)
-                .multilineTextAlignment(.trailing)
-                // ... puis on le ramène dans le coin haut-gauche, sur la surface de la vue (8 em à gauche).
-                .offset(x: -taille * 8)
+                // Jamais tronqué : depuis la date de référence, le chrono a plus de 9 caractères (« 25600:12:34 »).
+                // Tronqué, il finirait par « … », un caractère vide de la police : le masque serait toujours vide
+                // et aucun poisson ne serait dessiné (bug vu sur le simulateur le 16 oct.).
+                .fixedSize()
+                // Cadre de 24 caractères aligné à droite : le dernier chiffre est toujours au même endroit...
+                .frame(width: taille * 24, height: taille, alignment: .trailing)
+                // ... puis on le ramène dans le coin haut-gauche, sur la surface de la vue (23 em à gauche).
+                .offset(x: -taille * 23)
         }
         .clipped()
         .accessibilityHidden(true)
@@ -42,6 +46,15 @@ struct ImagesAnimees<Contenu: View>: View {
     }
 
     var body: some View {
+        if PolicesMasque.disponibles {
+            copies
+        } else {
+            // Repli : sans les polices de masque, l'animation ne peut pas marcher ; on dessine l'image 0, fixe.
+            image(0)
+        }
+    }
+
+    private var copies: some View {
         ZStack {
             ForEach(0..<nombre, id: \.self) { j in
                 image(j)
@@ -53,4 +66,11 @@ struct ImagesAnimees<Contenu: View>: View {
         }
         .allowsHitTesting(false)
     }
+}
+
+/// Les deux polices de masque sont-elles enregistrées dans ce processus (clé UIAppFonts de la cible) ?
+enum PolicesMasque {
+    static let disponibles: Bool =
+        UIFont(name: "FishMeMasquePair-Regular", size: 12) != nil
+        && UIFont(name: "FishMeMasqueImpair-Regular", size: 12) != nil
 }
