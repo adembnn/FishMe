@@ -536,6 +536,12 @@ struct PescedexView: View {
         } label: {
             if let infos = InfosCarte.vignette(emplacement: e, zone: modele.zone) {
                 CarteRectoView(infos: infos, mini: true)
+                    // Mode démo (Adem, 16 oct.) : une carte installée par la démo le dit toujours.
+                    .overlay(alignment: .bottom) {
+                        if let carte = e.carte, DemoPescedex.estDemo(carte.id) {
+                            PastilleDemo().padding(.bottom, 6)
+                        }
+                    }
             }
         }
         .buttonStyle(.plain)

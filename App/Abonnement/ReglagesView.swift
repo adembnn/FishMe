@@ -26,6 +26,8 @@ struct ReglagesView: View {
     @State private var gestionOuverte = false
     @State private var message: String?
     @State private var aProposOuvert = false
+    /// Mode démo (Adem, « Démo cachée ») : éteint par défaut ; remplit Pescedex, amis et club d'exemples marqués « Démo ».
+    @AppStorage("demo.communaute") private var modeDemo = false
 
     private static let sources: [(nom: String, role: String)] = [
         ("OFB", "Poissons par station"),
@@ -45,6 +47,8 @@ struct ReglagesView: View {
                     ligneInterrupteur("Alertes orage et crue", $alertes)
                     separateur
                     ligneInterrupteur("Mesure d'audience", $mesureAudience)
+                    separateur
+                    ligneInterrupteur("Mode démo", $modeDemo)
                 }
                 .padding(.top, 14)
                 Text("Sources")
