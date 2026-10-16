@@ -1,0 +1,214 @@
+{
+ "able-de-heckel": {
+  "yeux": [
+   [
+    0.91,
+    0.83,
+    0.012
+   ]
+  ]
+ },
+ "alose-feinte": {
+  "miroir": true,
+  "yeux": [
+   [
+    0.055,
+    0.58,
+    0.011
+   ]
+  ]
+ },
+ "anguille-argentee": {
+  "yeux": [
+   [
+    0.945,
+    0.37,
+    0.012
+   ]
+  ]
+ },
+ "anguille-jaune": {
+  "yeux": [
+   [
+    0.945,
+    0.37,
+    0.012
+   ]
+  ]
+ },
+ "apron-du-rhone": {
+  "miroir": true,
+  "yeux": [
+   [
+    0.115,
+    0.355,
+    0.011
+   ]
+  ]
+ },
+ "bar": {
+  "miroir": true,
+  "teinte": "#8fa3b5",
+  "force": 0.6,
+  "yeux": [
+   [
+    0.105,
+    0.48,
+    0.011
+   ]
+  ]
+ },
+ "barbeau-meridional": {
+  "yeux": [
+   [
+    0.845,
+    0.09,
+    0.011
+   ]
+  ]
+ },
+ "barbue-de-riviere": {
+  "miroir": true,
+  "teinte": "#8b8a62",
+  "force": 0.5,
+  "yeux": [
+   [
+    0.11,
+    0.485,
+    0.008
+   ]
+  ]
+ },
+ "black-bass-petite-bouche": {
+  "miroir": true,
+  "yeux": [
+   [
+    0.073,
+    0.755,
+    0.014
+   ]
+  ]
+ },
+ "blageon": {
+  "yeux": [
+   [
+    0.915,
+    0.56,
+    0.011
+   ]
+  ]
+ },
+ "bouviere": {
+  "yeux": [
+   [
+    0.895,
+    0.41,
+    0.012
+   ]
+  ]
+ },
+ "brochet-aquitain": {
+  "yeux": [
+   [
+    0.84,
+    0.43,
+    0.01
+   ]
+  ]
+ },
+ "carpe-amour": {
+  "yeux": [
+   [
+    0.94,
+    0.58,
+    0.009
+   ]
+  ]
+ },
+ "carpe-argentee": {
+  "miroir": true,
+  "yeux": [
+   [
+    0.058,
+    0.55,
+    0.011
+   ]
+  ]
+ },
+ "carpe-grosse-tete": {
+  "miroir": true,
+  "teinte": "#7a8791",
+  "force": 0.6,
+  "yeux": [
+   [
+    0.075,
+    0.46,
+    0.01
+   ]
+  ]
+ },
+ "carpe-koi": {
+  "yeux": [
+   [
+    0.8,
+    0.55,
+    0.012
+   ]
+  ]
+ },
+ "chabot": {
+  "yeux": [
+   [
+    0.885,
+    0.17,
+    0.01
+   ]
+  ]
+ },
+ "civelle": {
+  "yeux": [
+   [
+    0.94,
+    0.4,
+    0.012
+   ]
+  ]
+ },
+ "crabe-chinois": {
+  "rotation": 0,
+  "teinte": "#8a7a4a",
+  "force": 0.85,
+  "yeux": [
+   [
+    0.42,
+    0.335,
+    0.012
+   ],
+   [
+    0.57,
+    0.335,
+    0.012
+   ]
+  ]
+ },
+ "crapet-de-roche": {
+  "miroir": true,
+  "yeux": [
+   [
+    0.12,
+    0.4,
+    0.017
+   ]
+  ]
+ },
+ "cristivomer": {
+  "miroir": true,
+  "yeux": [
+   [
+    0.08,
+    0.52,
+    0.011
+   ]
+  ]
+ }
+}
