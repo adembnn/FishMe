@@ -3,43 +3,64 @@ import Core
 
 /// Mise en forme seulement : aucune valeur n'est calculée ici, tout vient de `Core` ou de WeatherKit.
 nonisolated enum FormatConditions {
-    /// « 18 h 05 »
-    static func heure(_ date: Date) -> String {
+    // Les formateurs coûtent cher à créer : un par format, créés une fois (ils sont sûrs entre fils une fois réglés).
+    private static func fabriquer(_ format: String) -> DateFormatter {
         let f = DateFormatter()
         f.locale = Locale(identifier: "fr_FR")
-        f.dateFormat = "H 'h' mm"
+        f.dateFormat = format
+        return f
+    }
+    nonisolated(unsafe) private static let fHeure = fabriquer("H 'h' mm")
+    nonisolated(unsafe) private static let fJourHeure = fabriquer("EEE d MMM, H 'h' mm")
+    nonisolated(unsafe) private static let fJour = fabriquer("EEEE d MMM")
+    nonisolated(unsafe) private static let fHorloge = fabriquer("HH:mm")
+    nonisolated(unsafe) private static let fJourCourt = fabriquer("EEE")
+    nonisolated(unsafe) private static let fNombre0 = nombreFormateur(0)
+    nonisolated(unsafe) private static var fNombresAutres: [Int: NumberFormatter] = [:]
+    private static let verrouNombres = NSLock()
+    private static func nombreFormateur(_ decimales: Int) -> NumberFormatter {
+        let f = NumberFormatter()
+        f.locale = Locale(identifier: "fr_FR")
+        f.minimumFractionDigits = decimales
+        f.maximumFractionDigits = decimales
+        return f
+    }
+    private static func fNombre(_ decimales: Int) -> NumberFormatter {
+        verrouNombres.lock()
+        defer { verrouNombres.unlock() }
+        if let f = fNombresAutres[decimales] { return f }
+        let f = nombreFormateur(decimales)
+        fNombresAutres[decimales] = f
+        return f
+    }
+
+    /// « 18 h 05 »
+    static func heure(_ date: Date) -> String {
+        let f = Self.fHeure
         return f.string(from: date)
     }
 
     /// « lun. 18 h 05 »
     static func jourHeure(_ date: Date) -> String {
-        let f = DateFormatter()
-        f.locale = Locale(identifier: "fr_FR")
-        f.dateFormat = "EEE d MMM, H 'h' mm"
+        let f = Self.fJourHeure
         return f.string(from: date)
     }
 
     static func jour(_ date: Date) -> String {
-        let f = DateFormatter()
-        f.locale = Locale(identifier: "fr_FR")
-        f.dateFormat = "EEEE d MMM"
+        let f = Self.fJour
         return f.string(from: date)
     }
 
     /// « 08:02 »
     static func horloge(_ date: Date) -> String {
-        let f = DateFormatter()
-        f.locale = Locale(identifier: "fr_FR")
-        f.dateFormat = "HH:mm"
+        let f = Self.fHorloge
         return f.string(from: date)
     }
 
     /// « Auj. » pour aujourd'hui, sinon « Mar. », « Mer. »…
     static func jourCourt(_ date: Date, aujourdhui: Date = Date()) -> String {
         if Calendar.current.isDate(date, inSameDayAs: aujourdhui) { return "Auj." }
-        let f = DateFormatter()
-        f.locale = Locale(identifier: "fr_FR")
-        f.dateFormat = "EEE"
+        let f = Self.fJourCourt
         let court = f.string(from: date)
         return court.prefix(1).uppercased() + court.dropFirst()
     }
@@ -59,10 +80,7 @@ nonisolated enum FormatConditions {
     }
 
     static func nombre(_ v: Double, decimales: Int = 0) -> String {
-        let f = NumberFormatter()
-        f.locale = Locale(identifier: "fr_FR")
-        f.minimumFractionDigits = decimales
-        f.maximumFractionDigits = decimales
+        let f = decimales == 0 ? Self.fNombre0 : Self.fNombre(decimales)
         return f.string(from: NSNumber(value: v)) ?? "\(v)"
     }
 

@@ -66,7 +66,7 @@ struct VignetteClub: View {
     var body: some View {
         Group {
             if let fichier = club.fichierPhoto, let url = MesClubs.url(de: fichier),
-               let image = UIImage(contentsOfFile: url.path) {
+               let image = ImagesClubEnCache.image(fichier: url) {
                 Image(uiImage: image).resizable().scaledToFill()
             } else if let poisson = poissons.first(where: { $0.id == club.poissonId }) {
                 // Maquette : poisson de 30 x 18 dans une pastille de 36.
@@ -292,7 +292,7 @@ struct CreerClubView: View {
 
     private var tuileGalerie: some View {
         ZStack(alignment: .bottom) {
-            if let photo, let image = UIImage(data: photo) {
+            if let photo, let image = ImagesClubEnCache.image(photo) {
                 Image(uiImage: image).resizable().scaledToFill()
                     .frame(width: 96, height: 96).clipped()
             } else {

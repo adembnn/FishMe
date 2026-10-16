@@ -93,12 +93,16 @@ enum StyleMeteo {
 
     static let texteDoux = Color.white.opacity(0.65)
 
-    /// « 14 h »
-    static func heureCourte(_ date: Date) -> String {
+    nonisolated(unsafe) private static let fHeureCourte: DateFormatter = {
         let f = DateFormatter()
         f.locale = Locale(identifier: "fr_FR")
         f.dateFormat = "H 'h'"
-        return f.string(from: date)
+        return f
+    }()
+
+    /// « 14 h »
+    static func heureCourte(_ date: Date) -> String {
+        fHeureCourte.string(from: date)
     }
 
     /// Les sept jours rendus par `Core` ; à défaut, regroupés depuis la météo heure par heure (mise en page, pas de calcul de prévision).
