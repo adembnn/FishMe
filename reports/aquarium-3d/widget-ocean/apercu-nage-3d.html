@@ -1,0 +1,204 @@
+<title>Aquarium cartoon FishMe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap">
+<style>
+:root { --fond:#f3efe4; --encre:#14233a; --doux:#4d5b70; --marine:#1d5c8c; --filet:#d9d2c0; --carte:#fbf8f1; --puce:#e6eef3;
+  --titre: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, sans-serif; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --fond:#0e1724; --encre:#eef1f5; --doux:#a7b3c4; --marine:#7fb3dd; --filet:#24344a; --carte:#152132; --puce:#1b2a3e; color-scheme: dark } }
+:root[data-theme="dark"] { --fond:#0e1724; --encre:#eef1f5; --doux:#a7b3c4; --marine:#7fb3dd; --filet:#24344a; --carte:#152132; --puce:#1b2a3e; color-scheme: dark }
+body { background: var(--fond); color: var(--encre); font-family: var(--titre); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 24px 48px; }
+.tete, .bloc, .ambiances { max-width: 1100px; margin-inline: auto; }
+h1 { font-size: clamp(28px, 6vw, 44px); font-weight: 900; margin: 0 0 6px; text-wrap: balance; }
+.tete p { margin: 0; color: var(--doux); font-size: 16px; font-weight: 700; max-width: 62ch; line-height: 1.45; }
+.ocean { position: relative; max-width: 1100px; margin: 20px auto 0; aspect-ratio: 1092 / 510; border-radius: 28px; overflow: hidden; background: #2fb7d0 center / cover no-repeat; transition: background-image .4s; }
+.ocean img.nageur { position: absolute; left: 0; top: 0; width: 300px; max-width: none; transform-origin: 50% 50%; will-change: transform, filter; pointer-events: none; }
+.ambiances { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.ambiances button { font: inherit; font-weight: 800; font-size: 15px; border: 2px solid var(--filet); background: var(--carte); color: var(--encre); padding: 8px 16px; border-radius: 999px; cursor: pointer; }
+.ambiances button[aria-pressed="true"] { border-color: var(--marine); background: var(--marine); color: #fff; }
+.ambiances span { align-self: center; color: var(--doux); font-weight: 700; font-size: 14px; }
+.bloc { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--filet); }
+h2 { margin: 0 0 14px; font-size: 22px; font-weight: 900; } h2 span { color: var(--doux); font-size: 16px; }
+.grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 14px; }
+figure { margin: 0; display: grid; gap: 6px; min-width: 0; }
+.bac { aspect-ratio: 600 / 230; border-radius: 18px; background: linear-gradient(#7fd8e2, #2fa8c6 60%, #1b7aa8); display: grid; place-items: center; overflow: hidden; }
+.bac img { width: 92%; max-width: 92%; }
+figcaption { font-size: 14px; font-weight: 800; padding-left: 4px; }
+.pied { max-width: 1100px; margin: 32px auto 0; color: var(--doux); font-size: 13px; font-weight: 700; line-height: 1.5; }
+</style>
+<div class="tete">
+<h1>Ton aquarium, version cartoon</h1>
+<p>Plus de décor : la pleine eau, avec la profondeur qui part du centre. Les 97 espèces du Pescedex ont un trait d'encre et de gros yeux ronds, pour qu'elles fassent sourire au lieu de faire peur.</p>
+</div>
+<div class="ocean" id="ocean">
+<img class="nageur" src="p/brochet.webp" alt="" data-l="1.1" data-v="0.45">
+<img class="nageur" src="p/carpe-commune.webp" alt="" data-l="0.8" data-v="0.35">
+<img class="nageur" src="p/truite-fario.webp" alt="" data-l="0.7" data-v="0.6">
+<img class="nageur" src="p/perche-commune.webp" alt="" data-l="0.55" data-v="0.5">
+<img class="nageur" src="p/sandre.webp" alt="" data-l="0.75" data-v="0.4">
+<img class="nageur" src="p/gardon.webp" alt="" data-l="0.45" data-v="0.7">
+<img class="nageur" src="p/gardon.webp" alt="" data-l="0.45" data-v="0.7">
+<img class="nageur" src="p/rotengle.webp" alt="" data-l="0.45" data-v="0.65">
+<img class="nageur" src="p/poisson-rouge.webp" alt="" data-l="0.4" data-v="0.45">
+<img class="nageur" src="p/silure-glane.webp" alt="" data-l="1.3" data-v="0.3">
+<img class="nageur" src="p/perche-soleil.webp" alt="" data-l="0.4" data-v="0.5">
+<img class="nageur" src="p/ombre-commun.webp" alt="" data-l="0.6" data-v="0.55">
+</div>
+<div class="ambiances" role="group" aria-label="Ambiance de l'eau">
+<button data-a="lagon" aria-pressed="true">Lagon</button><button data-a="bleu" aria-pressed="false">Grand bleu</button><button data-a="aube" aria-pressed="false">Aube</button>
+<span>Touche une ambiance pour changer l'eau, puis dis-moi laquelle garder.</span>
+</div>
+<section class="bloc"><h2>Poissons <span>81</span></h2><div class="grille"><figure><div class="bac"><img src="p/able-de-heckel.webp" alt="Able de Heckel (verdon)" loading="lazy"></div><figcaption>Able de Heckel (verdon)</figcaption></figure>
+<figure><div class="bac"><img src="p/ablette.webp" alt="Ablette" loading="lazy"></div><figcaption>Ablette</figcaption></figure>
+<figure><div class="bac"><img src="p/alose-feinte.webp" alt="Alose feinte" loading="lazy"></div><figcaption>Alose feinte</figcaption></figure>
+<figure><div class="bac"><img src="p/anguille-argentee.webp" alt="Anguille européenne, stade argenté (d&#x27;avalaison)" loading="lazy"></div><figcaption>Anguille européenne, stade argenté (d&#x27;avalaison)</figcaption></figure>
+<figure><div class="bac"><img src="p/anguille-jaune.webp" alt="Anguille européenne, stade jaune" loading="lazy"></div><figcaption>Anguille européenne, stade jaune</figcaption></figure>
+<figure><div class="bac"><img src="p/apron-du-rhone.webp" alt="Apron du Rhône" loading="lazy"></div><figcaption>Apron du Rhône</figcaption></figure>
+<figure><div class="bac"><img src="p/aspe.webp" alt="Aspe" loading="lazy"></div><figcaption>Aspe</figcaption></figure>
+<figure><div class="bac"><img src="p/bar.webp" alt="Bar (loup)" loading="lazy"></div><figcaption>Bar (loup)</figcaption></figure>
+<figure><div class="bac"><img src="p/barbeau-fluviatile.webp" alt="Barbeau fluviatile" loading="lazy"></div><figcaption>Barbeau fluviatile</figcaption></figure>
+<figure><div class="bac"><img src="p/barbeau-meridional.webp" alt="Barbeau méridional" loading="lazy"></div><figcaption>Barbeau méridional</figcaption></figure>
+<figure><div class="bac"><img src="p/barbue-de-riviere.webp" alt="Barbue de rivière (channel catfish)" loading="lazy"></div><figcaption>Barbue de rivière (channel catfish)</figcaption></figure>
+<figure><div class="bac"><img src="p/black-bass.webp" alt="Black-bass à grande bouche" loading="lazy"></div><figcaption>Black-bass à grande bouche</figcaption></figure>
+<figure><div class="bac"><img src="p/black-bass-petite-bouche.webp" alt="Black-bass à petite bouche" loading="lazy"></div><figcaption>Black-bass à petite bouche</figcaption></figure>
+<figure><div class="bac"><img src="p/blageon.webp" alt="Blageon" loading="lazy"></div><figcaption>Blageon</figcaption></figure>
+<figure><div class="bac"><img src="p/bouviere.webp" alt="Bouvière" loading="lazy"></div><figcaption>Bouvière</figcaption></figure>
+<figure><div class="bac"><img src="p/brochet.webp" alt="Brochet" loading="lazy"></div><figcaption>Brochet</figcaption></figure>
+<figure><div class="bac"><img src="p/brochet-aquitain.webp" alt="Brochet aquitain" loading="lazy"></div><figcaption>Brochet aquitain</figcaption></figure>
+<figure><div class="bac"><img src="p/breme-bordeliere.webp" alt="Brème bordelière" loading="lazy"></div><figcaption>Brème bordelière</figcaption></figure>
+<figure><div class="bac"><img src="p/breme-commune.webp" alt="Brème commune" loading="lazy"></div><figcaption>Brème commune</figcaption></figure>
+<figure><div class="bac"><img src="p/carassin-argente.webp" alt="Carassin argenté / poisson rouge" loading="lazy"></div><figcaption>Carassin argenté / poisson rouge</figcaption></figure>
+<figure><div class="bac"><img src="p/carassin-commun.webp" alt="Carassin commun" loading="lazy"></div><figcaption>Carassin commun</figcaption></figure>
+<figure><div class="bac"><img src="p/carpe-amour.webp" alt="Carpe amour" loading="lazy"></div><figcaption>Carpe amour</figcaption></figure>
+<figure><div class="bac"><img src="p/carpe-argentee.webp" alt="Carpe argentée" loading="lazy"></div><figcaption>Carpe argentée</figcaption></figure>
+<figure><div class="bac"><img src="p/carpe-commune.webp" alt="Carpe commune (miroir, cuir)" loading="lazy"></div><figcaption>Carpe commune (miroir, cuir)</figcaption></figure>
+<figure><div class="bac"><img src="p/carpe-koi.webp" alt="Carpe koï" loading="lazy"></div><figcaption>Carpe koï</figcaption></figure>
+<figure><div class="bac"><img src="p/carpe-grosse-tete.webp" alt="Carpe à grosse tête" loading="lazy"></div><figcaption>Carpe à grosse tête</figcaption></figure>
+<figure><div class="bac"><img src="p/chabot.webp" alt="Chabot" loading="lazy"></div><figcaption>Chabot</figcaption></figure>
+<figure><div class="bac"><img src="p/chevesne.webp" alt="Chevesne (chevaine)" loading="lazy"></div><figcaption>Chevesne (chevaine)</figcaption></figure>
+<figure><div class="bac"><img src="p/civelle.webp" alt="Civelle (anguille de moins de 12 cm)" loading="lazy"></div><figcaption>Civelle (anguille de moins de 12 cm)</figcaption></figure>
+<figure><div class="bac"><img src="p/coregones.webp" alt="Corégones (lavaret, féra, palée)" loading="lazy"></div><figcaption>Corégones (lavaret, féra, palée)</figcaption></figure>
+<figure><div class="bac"><img src="p/crapet-de-roche.webp" alt="Crapet de roche" loading="lazy"></div><figcaption>Crapet de roche</figcaption></figure>
+<figure><div class="bac"><img src="p/cristivomer.webp" alt="Cristivomer (truite de lac américaine)" loading="lazy"></div><figcaption>Cristivomer (truite de lac américaine)</figcaption></figure>
+<figure><div class="bac"><img src="p/esturgeon-europeen.webp" alt="Esturgeon européen" loading="lazy"></div><figcaption>Esturgeon européen</figcaption></figure>
+<figure><div class="bac"><img src="p/esturgeon-oscietre.webp" alt="Esturgeon osciètre (esturgeon russe)" loading="lazy"></div><figcaption>Esturgeon osciètre (esturgeon russe)</figcaption></figure>
+<figure><div class="bac"><img src="p/esturgeon-siberien.webp" alt="Esturgeon sibérien" loading="lazy"></div><figcaption>Esturgeon sibérien</figcaption></figure>
+<figure><div class="bac"><img src="p/flet.webp" alt="Flet" loading="lazy"></div><figcaption>Flet</figcaption></figure>
+<figure><div class="bac"><img src="p/gambusie.webp" alt="Gambusie" loading="lazy"></div><figcaption>Gambusie</figcaption></figure>
+<figure><div class="bac"><img src="p/gardon.webp" alt="Gardon" loading="lazy"></div><figcaption>Gardon</figcaption></figure>
+<figure><div class="bac"><img src="p/gobie-de-kessler.webp" alt="Gobie de Kessler (à grosse tête)" loading="lazy"></div><figcaption>Gobie de Kessler (à grosse tête)</figcaption></figure>
+<figure><div class="bac"><img src="p/gobie-a-taches-noires.webp" alt="Gobie à taches noires (gobie rond)" loading="lazy"></div><figcaption>Gobie à taches noires (gobie rond)</figcaption></figure>
+<figure><div class="bac"><img src="p/goujon.webp" alt="Goujon" loading="lazy"></div><figcaption>Goujon</figcaption></figure>
+<figure><div class="bac"><img src="p/goujon-de-l-amour.webp" alt="Goujon de l&#x27;Amour" loading="lazy"></div><figcaption>Goujon de l&#x27;Amour</figcaption></figure>
+<figure><div class="bac"><img src="p/grande-alose.webp" alt="Grande alose" loading="lazy"></div><figcaption>Grande alose</figcaption></figure>
+<figure><div class="bac"><img src="p/gremille.webp" alt="Grémille" loading="lazy"></div><figcaption>Grémille</figcaption></figure>
+<figure><div class="bac"><img src="p/hotu.webp" alt="Hotu" loading="lazy"></div><figcaption>Hotu</figcaption></figure>
+<figure><div class="bac"><img src="p/huchon.webp" alt="Huchon (huchen)" loading="lazy"></div><figcaption>Huchon (huchen)</figcaption></figure>
+<figure><div class="bac"><img src="p/ide-melanote.webp" alt="Ide mélanote" loading="lazy"></div><figcaption>Ide mélanote</figcaption></figure>
+<figure><div class="bac"><img src="p/lamproie-de-planer.webp" alt="Lamproie de Planer" loading="lazy"></div><figcaption>Lamproie de Planer</figcaption></figure>
+<figure><div class="bac"><img src="p/lamproie-fluviatile.webp" alt="Lamproie fluviatile (de rivière)" loading="lazy"></div><figcaption>Lamproie fluviatile (de rivière)</figcaption></figure>
+<figure><div class="bac"><img src="p/lamproie-marine.webp" alt="Lamproie marine" loading="lazy"></div><figcaption>Lamproie marine</figcaption></figure>
+<figure><div class="bac"><img src="p/loche-d-etang.webp" alt="Loche d&#x27;étang" loading="lazy"></div><figcaption>Loche d&#x27;étang</figcaption></figure>
+<figure><div class="bac"><img src="p/loche-de-riviere.webp" alt="Loche de rivière" loading="lazy"></div><figcaption>Loche de rivière</figcaption></figure>
+<figure><div class="bac"><img src="p/loche-franche.webp" alt="Loche franche" loading="lazy"></div><figcaption>Loche franche</figcaption></figure>
+<figure><div class="bac"><img src="p/lotte.webp" alt="Lotte de rivière" loading="lazy"></div><figcaption>Lotte de rivière</figcaption></figure>
+<figure><div class="bac"><img src="p/mulet.webp" alt="Mulets (muges)" loading="lazy"></div><figcaption>Mulets (muges)</figcaption></figure>
+<figure><div class="bac"><img src="p/omble-chevalier.webp" alt="Omble chevalier" loading="lazy"></div><figcaption>Omble chevalier</figcaption></figure>
+<figure><div class="bac"><img src="p/omble-de-fontaine.webp" alt="Omble de fontaine (saumon de fontaine)" loading="lazy"></div><figcaption>Omble de fontaine (saumon de fontaine)</figcaption></figure>
+<figure><div class="bac"><img src="p/ombre-commun.webp" alt="Ombre commun" loading="lazy"></div><figcaption>Ombre commun</figcaption></figure>
+<figure><div class="bac"><img src="p/perche-commune.webp" alt="Perche commune" loading="lazy"></div><figcaption>Perche commune</figcaption></figure>
+<figure><div class="bac"><img src="p/perche-soleil.webp" alt="Perche soleil" loading="lazy"></div><figcaption>Perche soleil</figcaption></figure>
+<figure><div class="bac"><img src="p/poisson-rouge.webp" alt="Poisson rouge (carassin doré)" loading="lazy"></div><figcaption>Poisson rouge (carassin doré)</figcaption></figure>
+<figure><div class="bac"><img src="p/poisson-chat.webp" alt="Poisson-chat" loading="lazy"></div><figcaption>Poisson-chat</figcaption></figure>
+<figure><div class="bac"><img src="p/pseudorasbora.webp" alt="Pseudorasbora (goujon asiatique)" loading="lazy"></div><figcaption>Pseudorasbora (goujon asiatique)</figcaption></figure>
+<figure><div class="bac"><img src="p/raye-hybride.webp" alt="Rayé hybride" loading="lazy"></div><figcaption>Rayé hybride</figcaption></figure>
+<figure><div class="bac"><img src="p/rotengle.webp" alt="Rotengle" loading="lazy"></div><figcaption>Rotengle</figcaption></figure>
+<figure><div class="bac"><img src="p/sandre.webp" alt="Sandre" loading="lazy"></div><figcaption>Sandre</figcaption></figure>
+<figure><div class="bac"><img src="p/saumon-atlantique.webp" alt="Saumon atlantique" loading="lazy"></div><figcaption>Saumon atlantique</figcaption></figure>
+<figure><div class="bac"><img src="p/silure-glane.webp" alt="Silure glane" loading="lazy"></div><figcaption>Silure glane</figcaption></figure>
+<figure><div class="bac"><img src="p/spirlin.webp" alt="Spirlin" loading="lazy"></div><figcaption>Spirlin</figcaption></figure>
+<figure><div class="bac"><img src="p/sterlet.webp" alt="Sterlet (esturgeon du Danube)" loading="lazy"></div><figcaption>Sterlet (esturgeon du Danube)</figcaption></figure>
+<figure><div class="bac"><img src="p/tanche.webp" alt="Tanche" loading="lazy"></div><figcaption>Tanche</figcaption></figure>
+<figure><div class="bac"><img src="p/toxostome.webp" alt="Toxostome (sofie)" loading="lazy"></div><figcaption>Toxostome (sofie)</figcaption></figure>
+<figure><div class="bac"><img src="p/truite-arc-en-ciel.webp" alt="Truite arc-en-ciel" loading="lazy"></div><figcaption>Truite arc-en-ciel</figcaption></figure>
+<figure><div class="bac"><img src="p/truite-de-mer.webp" alt="Truite de mer" loading="lazy"></div><figcaption>Truite de mer</figcaption></figure>
+<figure><div class="bac"><img src="p/truite-fario.webp" alt="Truite fario" loading="lazy"></div><figcaption>Truite fario</figcaption></figure>
+<figure><div class="bac"><img src="p/truite-tigre.webp" alt="Truite tigre" loading="lazy"></div><figcaption>Truite tigre</figcaption></figure>
+<figure><div class="bac"><img src="p/vairon.webp" alt="Vairon" loading="lazy"></div><figcaption>Vairon</figcaption></figure>
+<figure><div class="bac"><img src="p/vandoise.webp" alt="Vandoise" loading="lazy"></div><figcaption>Vandoise</figcaption></figure>
+<figure><div class="bac"><img src="p/vandoise-du-bearn.webp" alt="Vandoise du Béarn" loading="lazy"></div><figcaption>Vandoise du Béarn</figcaption></figure>
+<figure><div class="bac"><img src="p/epinoche.webp" alt="Épinoche" loading="lazy"></div><figcaption>Épinoche</figcaption></figure>
+<figure><div class="bac"><img src="p/epinochette.webp" alt="Épinochette" loading="lazy"></div><figcaption>Épinochette</figcaption></figure></div></section>
+<section class="bloc"><h2>Écrevisses, crabe et grenouilles <span>16</span></h2><div class="grille"><figure><div class="bac"><img src="p/crabe-chinois.webp" alt="Crabe chinois" loading="lazy"></div><figcaption>Crabe chinois</figcaption></figure>
+<figure><div class="bac"><img src="p/grenouille-rieuse.webp" alt="Grenouille rieuse" loading="lazy"></div><figcaption>Grenouille rieuse</figcaption></figure>
+<figure><div class="bac"><img src="p/grenouille-rousse.webp" alt="Grenouille rousse" loading="lazy"></div><figcaption>Grenouille rousse</figcaption></figure>
+<figure><div class="bac"><img src="p/grenouille-verte.webp" alt="Grenouille verte (dite commune)" loading="lazy"></div><figcaption>Grenouille verte (dite commune)</figcaption></figure>
+<figure><div class="bac"><img src="p/grenouille-taureau.webp" alt="Grenouille-taureau" loading="lazy"></div><figcaption>Grenouille-taureau</figcaption></figure>
+<figure><div class="bac"><img src="p/ecrevisse-americaine.webp" alt="Écrevisse américaine" loading="lazy"></div><figcaption>Écrevisse américaine</figcaption></figure>
+<figure><div class="bac"><img src="p/ecrevisse-calicot.webp" alt="Écrevisse calicot" loading="lazy"></div><figcaption>Écrevisse calicot</figcaption></figure>
+<figure><div class="bac"><img src="p/ecrevisse-de-louisiane.webp" alt="Écrevisse de Louisiane" loading="lazy"></div><figcaption>Écrevisse de Louisiane</figcaption></figure>
+<figure><div class="bac"><img src="p/ecrevisse-des-torrents.webp" alt="Écrevisse des torrents" loading="lazy"></div><figcaption>Écrevisse des torrents</figcaption></figure>
+<figure><div class="bac"><img src="p/ecrevisse-marbree.webp" alt="Écrevisse marbrée" loading="lazy"></div><figcaption>Écrevisse marbrée</figcaption></figure>
+<figure><div class="bac"><img src="p/ecrevisse-signal.webp" alt="Écrevisse signal (de Californie)" loading="lazy"></div><figcaption>Écrevisse signal (de Californie)</figcaption></figure>
+<figure><div class="bac"><img src="p/ecrevisse-virile.webp" alt="Écrevisse virile" loading="lazy"></div><figcaption>Écrevisse virile</figcaption></figure>
+<figure><div class="bac"><img src="p/ecrevisse-pattes-blanches.webp" alt="Écrevisse à pattes blanches" loading="lazy"></div><figcaption>Écrevisse à pattes blanches</figcaption></figure>
+<figure><div class="bac"><img src="p/ecrevisse-pattes-greles.webp" alt="Écrevisse à pattes grêles" loading="lazy"></div><figcaption>Écrevisse à pattes grêles</figcaption></figure>
+<figure><div class="bac"><img src="p/ecrevisse-pattes-rouges.webp" alt="Écrevisse à pattes rouges" loading="lazy"></div><figcaption>Écrevisse à pattes rouges</figcaption></figure>
+<figure><div class="bac"><img src="p/ecrevisse-a-taches-rouges.webp" alt="Écrevisse à taches rouges" loading="lazy"></div><figcaption>Écrevisse à taches rouges</figcaption></figure></div></section>
+<p class="pied">Aperçu animé simplifié : dans le widget, chaque poisson bat de la queue en 8 images et traverse en perspective. Poissons tirés des planches de Bloch (domaine public) et des images du Pescedex, repeintes en cartoon.</p>
+<script>
+const o = document.getElementById('ocean');
+function amb(a) { o.style.backgroundImage = `url(f/${a}-moyen.jpg)`; document.querySelectorAll('.ambiances button').forEach(b => b.setAttribute('aria-pressed', b.dataset.a === a)); }
+document.querySelectorAll('.ambiances button').forEach(b => b.onclick = () => amb(b.dataset.a));
+amb('lagon');
+// Nage en 3D : chaque poisson vit dans un volume (x, y, profondeur z), vise des points au hasard, y compris
+// tout au fond (près du point de fuite) et hors champ ; on le projette en perspective sur le point de fuite (50 %, 45 %).
+const ZP = 1.1, ZF = 7, rnd = (a, b) => a + Math.random() * (b - a);
+const pois = [...o.querySelectorAll('.nageur')].map((el, i) => {
+  const z = rnd(ZP + 0.5, ZF - 1);
+  return { el, L: +el.dataset.l, v: +el.dataset.v, p: [rnd(-1.5, 1.5) * z / 3, rnd(-0.5, 0.5) * z / 3, z], cap: rnd(0, 6.28), tang: 0, but: null, ph: rnd(0, 6.28), att: 0 };
+});
+function cible(f) {
+  const z = Math.random() < 0.25 ? rnd(ZF - 2, ZF) : rnd(ZP + 0.2, ZF - 3);   // souvent tout au fond
+  const hors = Math.random() < 0.25 ? 1.45 : 0.9;                               // parfois hors champ, pour sortir et revenir
+  f.but = [rnd(-1, 1) * hors * z * 0.95, rnd(-1, 1) * hors * z * 0.42 + z * 0.05, z];
+}
+pois.forEach(cible);
+let W = o.clientWidth, H = o.clientHeight; new ResizeObserver(() => { W = o.clientWidth; H = o.clientHeight; }).observe(o);
+const reduit = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let t0 = performance.now();
+function pas(t) {
+  const dt = Math.min(0.05, (t - t0) / 1000); t0 = t;
+  const F = W * 0.62, cx = W * 0.5, cy = H * 0.45;
+  for (const f of pois) {
+    const [bx, by, bz] = f.but, d = [bx - f.p[0], by - f.p[1], bz - f.p[2]];
+    const dist = Math.hypot(...d);
+    if (dist < 0.4) cible(f);
+    const capV = Math.atan2(d[2], d[0]);                     // cap dans le plan x/z
+    let dc = capV - f.cap; while (dc > Math.PI) dc -= 6.283; while (dc < -Math.PI) dc += 6.283;
+    f.cap += Math.max(-0.9 * dt, Math.min(0.9 * dt, dc * dt * 1.5));
+    const tangV = Math.max(-0.5, Math.min(0.5, Math.atan2(d[1], Math.hypot(d[0], d[2]))));
+    f.tang += (tangV - f.tang) * Math.min(1, dt * 1.2);
+    const v = f.v * (reduit ? 0 : 1);
+    f.p[0] += Math.cos(f.cap) * Math.cos(f.tang) * v * dt;
+    f.p[2] += Math.sin(f.cap) * Math.cos(f.tang) * v * dt;
+    f.p[1] += Math.sin(f.tang) * v * dt;
+    f.p[2] = Math.max(ZP, Math.min(ZF + 1, f.p[2]));
+    f.ph += dt * (4 + v * 6);
+    // projection
+    const z = f.p[2], sx = cx + f.p[0] / z * F, sy = cy + f.p[1] / z * F;
+    const larg = f.L * 1.35 * F / z;                                  // largeur à l'écran
+    const versDroite = Math.cos(f.cap) >= 0 ? 1 : -1;
+    const raccourci = Math.max(0.28, Math.abs(Math.cos(f.cap)));  // de face ou de dos quand il plonge
+    const pente = -Math.atan2(Math.sin(f.tang), raccourci) * 0.8 * versDroite;
+    const brume = Math.min(1, (z - ZP) / (ZF - ZP));
+    const el = f.el;
+    el.style.width = larg + 'px';
+    el.style.transform = `translate(${sx - larg / 2}px, ${sy - larg * 0.145}px) rotate(${pente}rad) scale(${versDroite * raccourci}, 1) skewY(${Math.sin(f.ph) * 3}deg)`;
+    el.style.filter = `saturate(${1 - brume * 0.55}) brightness(${1 + brume * 0.25}) blur(${brume * 1.6}px)`;
+    el.style.opacity = 1 - brume * 0.45;
+    el.style.zIndex = 1000 - Math.round(z * 100);
+  }
+  requestAnimationFrame(pas);
+}
+requestAnimationFrame(pas);
+</script>
