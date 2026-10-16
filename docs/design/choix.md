@@ -42,3 +42,5 @@ Décision (16 oct. 2h50) : badge « Trophée » sur la carte d'une prise plus gr
 | P33 Partager une carte | A · Plans | 16 oct. 2h57 |
 | P34 Paywall | A · Plans | 16 oct. 2h58 |
 | P35 Réglages | B · Réglages | 16 oct. 2h58 |
+| P37 Fenêtre de position | A · Plans | 16 oct. 3h00 |
+| P38 Accès à l'appareil photo | C · Sujet | 16 oct. 3h00 |
