@@ -313,6 +313,10 @@ struct VueAquariumWidget: View {
 
     private func aquarium(verrouille: Bool, avecBouton: Bool) -> some View {
         ZStack {
+            #if DEBUG
+            // Diagnostic (Debug seulement) : poissons reçus, images trouvées, polices de masque chargées.
+            DiagnosticAquarium(instantane: instantane)
+            #endif
             if instantane.poissons.isEmpty {
                 TexteVide()
             } else {
@@ -357,6 +361,26 @@ extension EntreeAquarium {
             misAJour: date
         )
         return EntreeAquarium(date: date, instantane: instantane)
+    }
+}
+#endif
+
+#if DEBUG
+/// Debug seulement : une ligne en bas à gauche, pour savoir d'un coup d'œil pourquoi un poisson ne se voit pas.
+private struct DiagnosticAquarium: View {
+    let instantane: InstantaneAquarium
+
+    var body: some View {
+        let slugs = instantane.poissons.map(\.slug)
+        let manquants = slugs.filter { !PoissonVivant.imageDisponible($0) }
+        Text("\(slugs.count) p · img \(manquants.isEmpty ? "ok" : "KO " + manquants.joined(separator: ",")) · polices \(PolicesMasque.disponibles ? "ok" : "KO")")
+            .font(.system(size: 9, weight: .bold, design: .monospaced))
+            .foregroundStyle(.yellow)
+            .padding(4)
+            .background(.black.opacity(0.6))
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+            .padding(6)
+            .allowsHitTesting(false)
     }
 }
 #endif
