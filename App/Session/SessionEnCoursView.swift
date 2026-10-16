@@ -71,7 +71,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
             .scrollBounceBehavior(.basedOnSize)
         }
         .background(
-            LinearGradient(colors: [Palette.fond, Palette.marineDoux.opacity(0.7)], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Palette.fond, Palette.marineDoux], startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
         )
         .accessibilityElement(children: .contain)

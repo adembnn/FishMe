@@ -751,6 +751,8 @@ private struct RacineContenu: View {
                 club
             }
         }
+        // Pendant la session en plein écran, la barre d'onglets se range : l'écran du chrono est à lui seul.
+        .toolbarVisibility(app.moteur.enCours != nil && !app.sessionReduite ? .hidden : .automatic, for: .tabBar)
         // Session en cours en plein écran réductible (P14 C) : le bouton « Carte » la range en bandeau sur la carte.
         .overlay {
             if app.moteur.enCours != nil && !app.sessionReduite {
