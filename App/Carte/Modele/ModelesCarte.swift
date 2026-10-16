@@ -4,7 +4,7 @@ import Core
 // Types de données purs de la carte : tous `nonisolated` et Sendable, pour être calculés hors du fil principal.
 
 /// Une zone visible (nommée ZoneCarte pour ne pas masquer `RegionCarte` de Core) de la carte (centre et étendue en degrés).
-nonisolated struct ZoneCarte: Sendable, Equatable {
+nonisolated struct ZoneCarte: Sendable, Equatable, Codable {
     var centre: Coordonnee
     var spanLatitude: Double
     var spanLongitude: Double
@@ -15,20 +15,29 @@ nonisolated struct ZoneCarte: Sendable, Equatable {
         return abs(c.latitude - centre.latitude) <= demiLat && abs(c.longitude - centre.longitude) <= demiLon
     }
 
+    /// Vrai si cette zone tient entièrement dans la zone déjà chargée par `StationsViaCore` (la zone demandée plus une demi-zone de marge
+    /// de chaque côté, soit 1,5 fois son étendue) : inutile de relire les stations, le regroupement suffit.
+    func estCouverte(parChargee chargee: ZoneCarte) -> Bool {
+        let demiLat = chargee.spanLatitude / 2 * 1.5
+        let demiLon = chargee.spanLongitude / 2 * 1.5
+        return abs(centre.latitude - chargee.centre.latitude) + spanLatitude / 2 <= demiLat
+            && abs(centre.longitude - chargee.centre.longitude) + spanLongitude / 2 <= demiLon
+    }
+
     /// Paris et l'Île-de-France : la carte d'un relecteur hors de France (jamais une carte vide).
     static let parisIleDeFrance = ZoneCarte(centre: Coordonnee(latitude: 48.86, longitude: 2.35), spanLatitude: 1.2, spanLongitude: 1.6)
     static let france = ZoneCarte(centre: Coordonnee(latitude: 46.6, longitude: 2.5), spanLatitude: 11, spanLongitude: 13)
 }
 
 /// Une espèce relevée à une station OFB, avec N et l'année : rien d'autre n'est affiché comme chiffre.
-nonisolated struct ReleveEspece: Sendable, Equatable, Hashable {
+nonisolated struct ReleveEspece: Sendable, Equatable, Hashable, Codable {
     var espece: Espece
     var nPeches: Int
     var annee: Int
 }
 
 /// Une station OFB de la carte, avec les espèces qui y sont relevées.
-nonisolated struct StationCarte: Sendable, Equatable, Hashable, Identifiable {
+nonisolated struct StationCarte: Sendable, Equatable, Hashable, Identifiable, Codable {
     var code: String
     var eau: String?
     var departement: Departement
