@@ -82,7 +82,7 @@ struct CasVerdictsReelsTests {
         #expect(!tout.contains("tu peux la garder"))
         for l in (a["lignes"] as? [[String: Any]] ?? []) {
             let type = l["type"] as? String ?? "", etat = l["etat"] as? String ?? ""
-            let attenduEtat = etat == "information" ? "respectee" : etat
+            let attenduEtat = etat
             #expect(r.lignes.contains { $0.type.rawValue == type && $0.etat.rawValue == attenduEtat },
                     "\(id) : ligne \(type)/\(etat) absente ; rendu \(r.lignes.map { "\($0.type.rawValue)/\($0.etat.rawValue)" })")
         }

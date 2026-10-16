@@ -173,6 +173,7 @@ enum PriseLogique {
         case .respectee: return type == .periode ? .calendrier : .coche
         case .aVerifierSurPlace: return .aVerifier
         case .nonRespectee: return .alerte
+        case .information: return .info
         }
     }
 

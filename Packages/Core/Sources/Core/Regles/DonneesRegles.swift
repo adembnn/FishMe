@@ -141,7 +141,7 @@ struct RegleDonnee: Decodable, Sendable {
         du = try? c.decodeIfPresent(String.self, forKey: .du)
         au = try? c.decodeIfPresent(String.self, forKey: .au)
         valeur = (try? c.decodeIfPresent([String: JSONValeur].self, forKey: .valeur)) ?? [:]
-        phrase = (try? c.decodeIfPresent(String.self, forKey: .phrase)) ?? ""
+        phrase = PhrasesNeutres.neutre((try? c.decodeIfPresent(String.self, forKey: .phrase)) ?? "")
         textes = (try? c.decodeIfPresent([String].self, forKey: .textes)) ?? []
         source = try? c.decodeIfPresent(SourceEnLigne.self, forKey: .source)
         citation = try? c.decodeIfPresent(String.self, forKey: .citation)

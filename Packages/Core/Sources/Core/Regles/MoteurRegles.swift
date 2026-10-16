@@ -189,7 +189,7 @@ public struct MoteurRegles: ServiceRegles {
 
     private func rang(_ e: EtatLigne) -> Int {
         switch e {
-        case .respectee: return 0
+        case .respectee, .information: return 0
         case .aVerifierSurPlace: return 1
         case .nonRespectee: return 2
         }
@@ -228,7 +228,8 @@ public struct MoteurRegles: ServiceRegles {
         var ligne = base.ligne
         let manque = "aucune règle saisie"
         ligne.valeursParCategorie = [.premiere: a?.etiquette ?? manque, .deuxieme: b?.etiquette ?? manque]
-        let e1 = a?.ligne.etat ?? .respectee, e2 = b?.ligne.etat ?? .respectee
+        let defaut: EtatLigne = (a?.ligne.etat == .information || b?.ligne.etat == .information) ? .information : .respectee
+        let e1 = a?.ligne.etat ?? defaut, e2 = b?.ligne.etat ?? defaut
         if e1 == e2 {
             ligne.etat = e1
             ligne.raison = e1 == .aVerifierSurPlace ? (a?.ligne.raison ?? b?.ligne.raison) : nil
@@ -321,7 +322,7 @@ public struct MoteurRegles: ServiceRegles {
                 var trouve = false
                 for i in resultat.indices where resultat[i].ligne.type == type && resultat[i].ligne.raison != .troncon {
                     trouve = true
-                    if resultat[i].ligne.etat == .respectee {
+                    if resultat[i].ligne.etat == .respectee || resultat[i].ligne.etat == .information {
                         resultat[i].ligne.etat = .aVerifierSurPlace
                         resultat[i].ligne.raison = .desaccord
                         resultat[i].etiquette = "à vérifier"
@@ -418,7 +419,7 @@ public struct MoteurRegles: ServiceRegles {
         func fini(_ etat: EtatLigne, _ raison: RaisonAVerifier? = nil, etiq: String? = nil) -> LigneInterne {
             ligne.etat = etat
             ligne.raison = raison
-            let e = etiq ?? (etat == .respectee ? "respectée" : etat == .nonRespectee ? "non respectée" : "à vérifier")
+            let e = etiq ?? (etat == .respectee ? "respectée" : etat == .nonRespectee ? "non respectée" : etat == .information ? "information" : "à vérifier")
             return LigneInterne(ligne: ligne, regleId: regle.id, reouverture: reouverture, etiquette: e)
         }
 
@@ -465,7 +466,7 @@ public struct MoteurRegles: ServiceRegles {
             return fini(.nonRespectee, etiq: "fermée")
         case "interdit":
             // Interdiction générale de moyen, de vente ou d'accès (« la gaffe est interdite ») : une ligne d'information.
-            if regle.especes.isEmpty && regle.du == nil && regle.au == nil { return fini(.respectee) }
+            if regle.especes.isEmpty && regle.du == nil && regle.au == nil { return fini(.information) }
             guard let du = dateAAAAMMJJ(regle.du), let au = dateAAAAMMJJ(regle.au) else {
                 if regle.du == nil && regle.au == nil { return fini(.nonRespectee, etiq: "fermée") }
                 return fini(.aVerifierSurPlace)
@@ -507,12 +508,23 @@ public struct MoteurRegles: ServiceRegles {
             return fini(.nonRespectee)
         case "remise_eau":
             return fini(.aVerifierSurPlace)
+        case "carpe_nuit" where !eauConvient(regle, lieu: ctx.lieu):
+            // Règle visant les cours d'eau, pêcheur sur un plan d'eau, « autre » ou une eau inconnue : on ne l'applique pas.
+            return fini(.aVerifierSurPlace)
         case "consommation", "transport_vivant", "mode_peche", "carpe_nuit", "limite_eau_douce", "autre":
-            // Information : la ligne montre la règle, elle ne change pas la consigne.
-            return fini(.respectee)
+            // Information (interdiction ou obligation à appliquer) : jamais « respectée », ne change pas la consigne.
+            return fini(.information)
         default:
             return fini(.aVerifierSurPlace)
         }
+    }
+
+    /// Une règle de département dont le lieu ne vise que les cours d'eau ne vaut que sur une rivière.
+    private func eauConvient(_ r: RegleDonnee, lieu: Lieu) -> Bool {
+        guard r.portee?.niveau == "departement" else { return true }
+        let l = (r.portee?.lieu ?? "").lowercased().replacingOccurrences(of: "’", with: "'")
+        guard l.contains("cours d'eau"), !l.contains("plan d'eau"), !l.contains("lac") else { return true }
+        return lieu.eau?.type == .riviere
     }
 
     private func ligneDeBase(_ r: RegleDonnee, fichier: FichierRegles, etat: EtatLigne) -> LigneControle {
@@ -626,7 +638,8 @@ public struct MoteurRegles: ServiceRegles {
             for interne in calcul.internes {
                 guard let id = interne.regleId, interne.ligne.raison == nil, interne.ligne.etat != .aVerifierSurPlace,
                       let r = local.regles.first(where: { $0.id == id }), r.type == "carpe_nuit", r.statut != "incertain",
-                      ["cours_eau", "plan_eau", "troncon"].contains(r.portee?.niveau ?? "") else { continue }
+                      ["departement", "cours_eau", "plan_eau", "troncon"].contains(r.portee?.niveau ?? ""),
+                      eauConvient(r, lieu: ctx.lieu) else { continue }
                 // « interdits » apparaît aussi dans les textes qui autorisent (bateaux amorceurs, captivité) :
                 // on ne le cherche que dans la phrase, pas dans le détail de la valeur.
                 let texte = ((r.valeur["texte"]?.texte ?? "") + " " + r.phrase).lowercased()

@@ -101,4 +101,10 @@ struct PriseVerdictTests {
         #expect(PriseLogique.choixEnregistre(pres: ici, stations: [loin], lire: lire) == nil)
         #expect(PriseLogique.choixEnregistre(pres: ici, stations: [proche], lire: { _ in nil }) == nil)
     }
+
+    @Test func uneLigneInformationNEstJamaisVerte() {
+        #expect(PriseLogique.styleDeLigne(type: .consommation, etat: .information) == .info)
+        #expect(PriseLogique.styleDeLigne(type: .transportVivant, etat: .information) == .info)
+        #expect(PriseLogique.styleDeLigne(type: .autre, etat: .information) == .info)
+    }
 }

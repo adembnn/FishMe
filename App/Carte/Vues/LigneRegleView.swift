@@ -125,6 +125,7 @@ struct LigneRegleView: View {
         case .respectee: return Palette.ouvert
         case .nonRespectee: return Palette.alerte
         case .aVerifierSurPlace: return Palette.encreDouce
+        case .information: return Palette.encreDouce
         }
     }
 }
