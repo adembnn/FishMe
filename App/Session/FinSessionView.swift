@@ -45,11 +45,16 @@ struct FinSessionView: View {
     /// Espèce montrée en image dans le bloc bredouille (la plus pêchée du spot, ou celle du conseil).
     /// // À brancher : A passe l'espèce la plus pêchée du spot (relevés OFB) ; `nil` : une silhouette.
     let especeConseil: Espece?
+    /// Photo de soi pour la carte « Eau calme » (sortie sans prise). `nil` : le bouton n'est pas montré.
+    /// La racine enregistre les octets avec `DepotCartes.ajouterPhotoBredouille(id: sortie.id, photo:)`.
+    let surPhotoSortie: ((Data) -> Void)?
 
     init(fin: FinDeSession, infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, lieu: String? = nil,
          conseil: String? = nil, surTerminer: @escaping () -> Void, surFermer: (() -> Void)? = nil,
          poidsEstime: @escaping (Espece, Double) -> PoidsEstime? = { _, _ in nil },
-         especeConseil: Espece? = nil) {
+         especeConseil: Espece? = nil,
+         surPhotoSortie: ((Data) -> Void)? = nil) {
+        self.surPhotoSortie = surPhotoSortie
         self.especeConseil = especeConseil
         self.poidsEstime = poidsEstime
         self.conseil = conseil
@@ -139,6 +144,10 @@ struct FinSessionView: View {
             } else {
                 if let conditions { ligneConditions(conditions, bordure: false) } else { pasDeReleve(bordure: false) }
                 bredouille
+                if let surPhotoSortie {
+                    AjoutPhotoSortieView(surPhoto: surPhotoSortie)
+                        .padding(.bottom, Espace.s)
+                }
             }
             if let message = fin.message {
                 Text(message)

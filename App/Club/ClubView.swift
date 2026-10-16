@@ -378,7 +378,7 @@ struct ClubView<MarqueMeteo: View>: View {
 
 /// Tout ce que l'écran Club avait avant la maquette P29 : ma fédération, ma carte de pêche, partage d'une carte,
 /// sécurité, sources, confidentialité, abonnement. Un seul toucher depuis le bas de l'écran Club.
-private struct ReglagesClubView<MarqueMeteo: View>: View {
+struct ReglagesClubView<MarqueMeteo: View>: View {
     let liens: LiensClub
     let sources: [SourceClub]
     let cartes: [CarteAPartager]

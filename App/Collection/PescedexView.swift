@@ -492,19 +492,12 @@ struct PescedexView: View {
         if !liste.isEmpty {
             let visibles = bredouillesDepliees ? liste : Array(liste.prefix(apercu))
             VStack(alignment: .leading, spacing: 0) {
-                enteteDeGroupe("Sans prise · \(liste.count)", haut: 16)
+                enteteDeGroupe("Eau calme · \(liste.count)", haut: 16)
                 VStack(spacing: Espace.s) {
                     LazyVGrid(columns: colonnes, spacing: Espace.s) {
                         ForEach(visibles) { b in
                             Button { bredouilleOuverte = b } label: {
-                                VStack(spacing: 6) {
-                                    Image(systemName: "water.waves")
-                                        .font(Police.taille(28))
-                                    Text(Formats.date(b.debut)).font(Police.legende).lineLimit(1)
-                                }
-                                .foregroundStyle(Palette.commun)
-                                .frame(maxWidth: .infinity, minHeight: 88)
-                                .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
+                                CarteBredouilleRectoView(carte: b, refletFixe: true, mini: true)
                             }
                             .buttonStyle(.plain)
                             .accessibilityLabel("Sortie sans prise, \(Formats.date(b.debut))")
@@ -543,6 +536,12 @@ struct PescedexView: View {
         } label: {
             if let infos = InfosCarte.vignette(emplacement: e, zone: modele.zone) {
                 CarteRectoView(infos: infos, mini: true)
+                    // Mode démo (Adem, 16 oct.) : une carte installée par la démo le dit toujours.
+                    .overlay(alignment: .bottom) {
+                        if let carte = e.carte, DemoPescedex.estDemo(carte.id) {
+                            PastilleDemo().padding(.bottom, 6)
+                        }
+                    }
             }
         }
         .buttonStyle(.plain)

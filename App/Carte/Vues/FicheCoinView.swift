@@ -73,14 +73,14 @@ struct FicheCoinView: View {
         .overlay {
             if modele.fiche == nil {
                 EcranChargement(texte: "Chargement du spot")
+                    .overlay(alignment: .topTrailing) {
+                        BoutonRond(role: .fermer)
+                            .padding(.top, Espace.s)
+                            .padding(.trailing, Espace.bord)
+                    }
             }
         }
         .animation(.easeOut(duration: 0.25), value: modele.fiche == nil)
-        .overlay(alignment: .topTrailing) {
-            BoutonRond(role: .fermer)
-                .padding(.top, Espace.s)
-                .padding(.trailing, Espace.bord)
-        }
         .scrollBounceBehavior(.basedOnSize)
         // Tant que la fiche charge : moyen. Ensuite la hauteur du contenu (comme la maquette), ou grand.
         .presentationDetents(detentsFiche)

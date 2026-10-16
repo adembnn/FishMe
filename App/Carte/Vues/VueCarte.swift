@@ -34,6 +34,9 @@ struct VueCarte: View {
     /// Vrai quand la racine demande le choix de zone (« Choisir sur la carte » de « Où pêches-tu ? ») :
     /// la feuille s'ouvre, et sa fermeture repasse par `surChoixDeZone(false)`.
     let demandeChoixDeZone: Bool
+    /// La pastille de profil (posée par la racine) : à gauche de la barre de recherche de zone, en haut de la carte.
+    let pastilleProfil: AnyView
+    @Environment(\.dynamicTypeSize) private var tailleDuTexte
     /// Vrai quand la racine demande le « vol vers le spot » (« Voir mon spot » du swipe) : la caméra passe de la zone
     /// au cercle de 1 km, une bulle dit la distance, puis la feuille « Ton spot » monte. Une seule fois (`volFait`).
     let volVersLeSpot: Bool
@@ -60,7 +63,9 @@ struct VueCarte: View {
          ouChercher: ((Coordonnee) -> AnyView)? = nil,
          surChoixDeZone: @escaping (Bool) -> Void = { _ in },
          demandeChoixDeZone: Bool = false,
-         volVersLeSpot: Bool = false) {
+         volVersLeSpot: Bool = false,
+         pastilleProfil: AnyView = AnyView(EmptyView())) {
+        self.pastilleProfil = pastilleProfil
         _modele = State(initialValue: ModeleCarte(services: services))
         self.spotFixe = spotFixe
         self.sessionsTerminees = sessionsTerminees
@@ -120,6 +125,7 @@ struct VueCarte: View {
         guard !Task.isCancelled else { return }
         guard let spot = modele.spotAffiche else { volFait = true; return }
         let but = MapCamera(centerCoordinate: Self.cl(spot.centre), distance: 3500)
+        modele.marquerDeplacementProgramme(duree: 4.5)
         withAnimation(.easeInOut(duration: 2)) { modele.camera = .camera(but) }
         try? await Task.sleep(for: .milliseconds(2200))
         guard !Task.isCancelled else { return }
@@ -218,9 +224,20 @@ struct VueCarte: View {
         if let spot = modele.spotAffiche {
             cercleDuSpot(spot)
         }
+        // L'eau d'abord : les stations OFB (poissons relevés) passent par-dessus.
+        ForEach(modele.elementsEau) { (element: ElementCarte) in
+            annotationEau(element)
+        }
         ForEach(modele.elements) { (element: ElementCarte) in
             annotation(element)
         }
+    }
+
+    private func annotationEau(_ element: ElementCarte) -> some MapContent {
+        Annotation("", coordinate: Self.cl(element.coordonnee)) {
+            marqueEau(element)
+        }
+        .annotationTitles(.hidden)
     }
 
     private func cercleDuSpot(_ spot: Spot) -> some MapContent {
@@ -254,6 +271,8 @@ struct VueCarte: View {
     }
 
     private func poserSpot(au point: CGPoint, proxy: MapProxy) {
+        // Le toucher d'une épingle d'eau a déjà posé le cercle, au bon endroit : celui de la carte ne le déplace pas.
+        if modele.toucherEauRecent { return }
         guard let c = proxy.convert(point, from: .local) else { return }
         if let spot = modele.poserSpot(en: Coordonnee(latitude: c.latitude, longitude: c.longitude)) {
             onSpotChange(spot)
@@ -421,6 +440,11 @@ struct VueCarte: View {
             }
         }
         .background(Palette.fond.ignoresSafeArea())
+        // Le profil reste atteignable depuis « Ton spot » (la pastille de la racine).
+        .safeAreaInset(edge: .top, spacing: 0) {
+            HStack { pastilleProfil.frame(maxWidth: 170, alignment: .leading); Spacer(minLength: 0) }
+                .padding(.horizontal, 16)
+        }
     }
 
     private func ouvrirLaCarte(poserLeSpot: Bool = false) {
@@ -661,10 +685,28 @@ struct VueCarte: View {
         }
     }
 
+    /// Une épingle d'eau (cours d'eau, plan d'eau, coin public) ou un regroupement. Aucun chiffre : l'eau n'est pas un relevé.
+    @ViewBuilder
+    private func marqueEau(_ element: ElementCarte) -> some View {
+        switch element {
+        case .groupe(_, _, let nombre):
+            MarqueGroupeEauView(nombre: nombre) { modele.zoomerSurGroupeEau(element) }
+        case .point(let p):
+            if let spot = modele.spotsEauAffiches[p.id] {
+                MarqueEauView(spot: spot, poseLeSpot: modele.peutChangerDeSpot) { toucherEau(spot) }
+            }
+        }
+    }
+
+    private func toucherEau(_ spot: SpotEau) {
+        if let pose = modele.toucherEau(spot) { onSpotChange(pose) }
+    }
+
     // MARK: Bandeaux du haut
 
     private var haut: some View {
         VStack(spacing: 8) {
+            ligneProfilEtRecherche
             enTeteCarte
             HStack(spacing: 0) {
                 Spacer(minLength: 0)
@@ -689,6 +731,29 @@ struct VueCarte: View {
                 .padding(.vertical, Espace.s)
                 .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
         }
+    }
+
+    /// Première ligne : la pastille de profil à gauche, la recherche de zone sur le reste de la largeur.
+    /// En texte très agrandi, la recherche passe sous la pastille : rien ne se chevauche.
+    @ViewBuilder
+    private var ligneProfilEtRecherche: some View {
+        if tailleDuTexte.isAccessibilitySize {
+            VStack(alignment: .leading, spacing: 8) {
+                pastilleProfil.frame(maxWidth: .infinity, alignment: .leading)
+                rechercheDeZone
+            }
+        } else {
+            HStack(alignment: .top, spacing: 8) {
+                pastilleProfil
+                    .frame(maxWidth: 170, alignment: .leading)
+                rechercheDeZone
+                    .frame(minWidth: 140)
+            }
+        }
+    }
+
+    private var rechercheDeZone: some View {
+        BarreRechercheZone(choisir: choisirZone, codeDepartement: codeDepartement)
     }
 
     /// En haut de la carte : retour à « Ton spot », le lieu, le filtre par espèce (maquette P06 A).
@@ -763,7 +828,9 @@ struct VueCarte: View {
             badgeFrequentationSpot
             tuilesFeuilleCarte
                 .padding(.top, 14)
-                .padding(.bottom, 18)
+                .padding(.bottom, legendeSpotPresente ? 8 : 18)
+            legendeSpot
+                .padding(.bottom, legendeSpotPresente ? 14 : 0)
             boutonCommencerCarte
             lienAutreSpotCarte
                 .padding(.top, 4)
@@ -827,6 +894,46 @@ struct VueCarte: View {
         } else {
             // Relevés en cours de lecture : la place des tuiles reste, sans rien inventer.
             Color.clear.frame(height: 52 + 6 + 14)
+        }
+    }
+
+    private var legendeSpotPresente: Bool {
+        modele.spotEauChoisi != nil || apercu?.noteHonnete != nil
+    }
+
+    /// Sous les tuiles : le spot d'eau touché et sa source, puis la vérité sur les relevés (jamais un chiffre sans N ni année).
+    @ViewBuilder
+    private var legendeSpot: some View {
+        if legendeSpotPresente {
+            VStack(spacing: 4) {
+                if let eau = modele.spotEauChoisi {
+                    Label(eau.nom, systemImage: eau.origine.symboleSF)
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encre)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.center)
+                    Text("\(eau.origine.libelle) · source \(eau.origine.source)")
+                        .font(Police.legende)
+                        .foregroundStyle(Palette.encreDouce)
+                }
+                if let apercu, let note = apercu.noteHonnete {
+                    Text(note)
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encreDouce)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                    if let ligne = apercu.vedette, let code = apercu.codeDepartement {
+                        let nom = modele.pechable(ligne.espece)?.nom ?? ligne.espece.id
+                        Text("\(nom) : présent dans le \(code), \(texteVedette(ligne))")
+                            .font(Police.legende)
+                            .foregroundStyle(Palette.encreDouce)
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .accessibilityElement(children: .combine)
         }
     }
 

@@ -3,7 +3,8 @@ import SwiftUI
 import UIKit
 
 /// La carte d'une prise, ouverte en plein écran (P24 A pour le recto, P25 C pour le verso) : le poisson nage, les rares et légendaires brillent,
-/// un toucher la retourne. Le mouvement n'est lancé qu'ici, jamais sur la grille du classeur.
+/// un toucher la retourne, un glissement horizontal la fait tourner au doigt (elle se pose sur la face la plus proche), l'inclinaison de l'iPhone
+/// lui donne un léger relief et un glissement vers le bas ferme. Le mouvement n'est lancé qu'ici, jamais sur la grille du classeur.
 /// Recto : fond bleu clair, fermer à gauche, retourner et partager à droite, rien d'autre. Verso : fond blanc, fermer et partager,
 /// la photo seule sur la carte (Adem, 16 oct.), et « Voir le recto » en bas.
 struct CartePleinEcranView: View {
@@ -14,13 +15,21 @@ struct CartePleinEcranView: View {
     var png: Data? = nil
     let fermer: () -> Void
 
-    @State private var retournee = false
+    /// Angle de la carte autour de Y, en degrés : 0 recto à plat, 180 verso à plat.
+    @State private var angle: Double = 0
+    @State private var angleDebut: Double?
+    @State private var descente: CGFloat = 0
+    @State private var sens: Sens?
     @State private var apercuOuvert = false
     @State private var mouvement = MouvementIPhone()
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
 
     /// Largeur de la carte à l'écran (la maquette : 302 pt sur 390).
     private let largeurCarte: CGFloat = 302
+
+    private enum Sens { case horizontal, vertical }
+
+    private var retournee: Bool { cos(angle * .pi / 180) <= 0 }
 
     var body: some View {
         ZStack {
@@ -48,8 +57,12 @@ struct CartePleinEcranView: View {
                     .padding(.bottom, 6)
                 }
             }
+            .offset(y: descente)
+            .opacity(1 - Double(min(descente, 200)) / 600)
         }
-        .onAppear { if infos.style.aUnReflet && !reduireAnimations { mouvement.demarrer() } }
+        .contentShape(Rectangle())
+        .gesture(glisser)
+        .onAppear { if !reduireAnimations { mouvement.demarrer() } }
         .onDisappear { mouvement.arreter() }
         .fullScreenCover(isPresented: $apercuOuvert) {
             if let png {
@@ -130,24 +143,63 @@ struct CartePleinEcranView: View {
     }
 
     private func retourner() {
-        withAnimation(reduireAnimations ? .easeInOut(duration: 0.2) : .spring(duration: 0.55)) {
-            retournee.toggle()
-        }
+        let cible = ((angle / 180).rounded() + 1) * 180
+        withAnimation(reduireAnimations ? .easeInOut(duration: 0.2) : .spring(duration: 0.55)) { angle = cible }
     }
 
     private var carte: some View {
-        ZStack {
+        let tourne = !reduireAnimations
+        let reposRecto = abs(angle.truncatingRemainder(dividingBy: 360)) < 0.5
+        // Relief de l'iPhone seulement quand la carte est à plat sur son recto.
+        let reliefX = tourne && reposRecto ? Double(mouvement.inclinaison.height) * -6 : 0
+        let reliefY = tourne && reposRecto ? Double(mouvement.inclinaison.width) * 8 : 0
+        return ZStack {
             CarteRectoView(infos: infos, anime: true, inclinaison: mouvement.inclinaison, refletFixe: reduireAnimations)
                 .opacity(retournee ? 0 : 1)
             CarteVersoView(infos: infos, photo: photo, emplacements: emplacements)
                 .opacity(retournee ? 1 : 0)
-                .rotation3DEffect(.degrees(reduireAnimations ? 0 : 180), axis: (x: 0, y: 1, z: 0))
+                .rotation3DEffect(.degrees(tourne ? 180 : 0), axis: (x: 0, y: 1, z: 0))
         }
-        .rotation3DEffect(.degrees(retournee && !reduireAnimations ? 180 : 0), axis: (x: 0, y: 1, z: 0), perspective: 0.6)
+        .rotation3DEffect(.degrees(tourne ? angle : 0), axis: (x: 0, y: 1, z: 0), perspective: 0.5)
+        .rotation3DEffect(.degrees(reliefX), axis: (x: 1, y: 0, z: 0), perspective: 0.5)
+        .rotation3DEffect(.degrees(reliefY), axis: (x: 0, y: 1, z: 0), perspective: 0.5)
         .contentShape(Rectangle())
         .onTapGesture { retourner() }
         .accessibilityAddTraits(.isButton)
-        .accessibilityHint("Retourne la carte")
+        .accessibilityHint(retournee ? "Montre le recto" : "Montre le verso")
+    }
+
+    // MARK: Geste
+
+    /// Horizontal : fait tourner la carte, qui se pose sur la face la plus proche en lâchant. Vertical vers le bas : ferme.
+    private var glisser: some Gesture {
+        DragGesture(minimumDistance: 12)
+            .onChanged { v in
+                if sens == nil { sens = abs(v.translation.width) >= abs(v.translation.height) ? .horizontal : .vertical }
+                switch sens {
+                case .horizontal:
+                    if reduireAnimations { return }
+                    if angleDebut == nil { angleDebut = angle }
+                    angle = (angleDebut ?? 0) + Double(v.translation.width) * 0.6
+                case .vertical:
+                    descente = max(0, v.translation.height)
+                case nil:
+                    break
+                }
+            }
+            .onEnded { v in
+                defer { sens = nil; angleDebut = nil }
+                if sens == .vertical {
+                    if v.translation.height > 120 || v.predictedEndTranslation.height > 300 {
+                        fermer()
+                    } else {
+                        withAnimation(.spring(duration: 0.35)) { descente = 0 }
+                    }
+                } else if sens == .horizontal {
+                    let cible = (angle / 180).rounded() * 180
+                    withAnimation(.spring(duration: 0.55, bounce: 0.2)) { angle = cible }
+                }
+            }
     }
 }
 

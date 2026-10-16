@@ -6,7 +6,7 @@ import SwiftData
 /// Remplit le contrat `CollectionCartes` de Core.
 actor DepotCartes: CollectionCartes {
     private let conteneur: ModelContainer
-    private let dossierPhotos: URL
+    let dossierPhotos: URL
     private let services: ServicesCollection
 
     init(conteneur: ModelContainer, dossierPhotos: URL, services: ServicesCollection) {
@@ -96,7 +96,8 @@ actor DepotCartes: CollectionCartes {
         let descripteur = FetchDescriptor<BredouilleEnregistree>(sortBy: [SortDescriptor(\.debut, order: .reverse)])
         let lignes = (try? contexte.fetch(descripteur)) ?? []
         return lignes.map {
-            CarteBredouille(id: $0.id, debut: $0.debut, fin: $0.fin, lieuFlou: $0.lieuFlou, conditions: Self.decoder($0.conditionsJSON))
+            CarteBredouille(id: $0.id, debut: $0.debut, fin: $0.fin, lieuFlou: $0.lieuFlou, conditions: Self.decoder($0.conditionsJSON),
+                            photoURL: urlPhotoSortie(id: $0.id))
         }
     }
 

@@ -2,94 +2,47 @@ import Core
 import SwiftUI
 import UIKit
 
-/// Le verso : seulement la photo que le pêcheur a prise, sur toute la carte (Adem, 16 oct. : « on met que la photo uploadée »).
-/// Ni date, ni lune, ni rareté, ni consigne, ni conseil.
+/// Le verso de toute carte : la photo de la prise seule, plein cadre, sans aucun texte, bandeau ni pastille (décision d'Adem).
+/// Sans photo (carte déclarée, ancienne carte, exemple), le dessin de l'espèce en grand sur le fond de sa rareté, toujours sans texte.
+/// Le lieu, la date, la taille et la consigne se lisent sur le recto ou sous la carte (`FaitsPrise`).
 struct CarteVersoView: View {
     let infos: InfosCarte
     let photo: Data?
-    /// Gardé pour les appelants ; « comment la pêcher » s'affiche maintenant dans `FaitsPrise`.
+    /// Gardé pour les appelants ; « comment la pêcher » s'affiche dans `FaitsPrise`.
     var emplacements: EmplacementsExternes = .vides
 
+    private var declaree: Bool { infos.prise.estDeclaree }
+
     var body: some View {
-        // P25 : fond gris clair de la carte (`.fc.verso`), photo à 2,6 % du bord, coins à 4 % de la largeur.
-        CarteCadre(style: infos.style, declaree: infos.prise.estDeclaree, fond: Color(carte: 0xE9EDEB)) {
+        // Même cadre, même arrondi et même bordure que le recto ; le gris clair ne se voit que si l'image ne couvre pas tout.
+        CarteCadre(style: infos.style, declaree: declaree, fond: Color(carte: 0xE9EDEB)) {
             GeometryReader { geo in
-                let u = geo.size.width / 100
-                fondPhoto
-                    .clipShape(RoundedRectangle(cornerRadius: 4 * u, style: .continuous))
-                    .padding(2.6 * u)
+                fond(geo.size)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .clipped()
             }
         }
-        .accessibilityElement(children: .contain)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(photo == nil ? "Verso de la carte, \(infos.espece.nom)" : "Photo de la prise, \(infos.espece.nom)")
     }
 
     @ViewBuilder
-    private var fondPhoto: some View {
+    private func fond(_ taille: CGSize) -> some View {
         if let photo, let image = UIImage(data: photo) {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFill()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .clipped()
-                .accessibilityLabel("Photo de la prise")
+            PhotoVersoEntiere(image: image)
         } else {
             ZStack {
-                LinearGradient(colors: infos.style.fond, startPoint: .top, endPoint: .bottom).opacity(0.5)
-                VStack(spacing: Espace.s) {
-                    Image(systemName: "camera")
-                        .font(Police.taille(34))
-                        .accessibilityHidden(true)
-                    Text(infos.prise.estDeclaree ? "Carte déclarée : pas de photo" : "Pas de photo")
-                        .font(Jeton.police(17))
-                        .multilineTextAlignment(.center)
+                LinearGradient(colors: infos.style.fond, startPoint: .top, endPoint: .bottom)
+                if let poisson = UIImage(named: infos.espece.image) {
+                    Image(uiImage: poisson)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: taille.width * 0.88)
+                        .saturation(declaree ? 0.55 : 1)
+                        .shadow(color: .black.opacity(0.3), radius: taille.width * 0.01, x: -taille.width * 0.015, y: taille.width * 0.025)
+                        .rotationEffect(.degrees(-12))
                 }
-                .foregroundStyle(Palette.encreDouce)
-                .padding(Espace.l)
             }
-        }
-    }
-
-    /// Le lieu flou (« La Marne · 94 », jamais le point exact) en gras à gauche, le jour et l'heure à droite.
-    private var bande: some View {
-        HStack(alignment: .center, spacing: Espace.s) {
-            // À brancher : le prénom du pêcheur (« Adem ») ; aucune donnée de profil n'arrive jusqu'ici. Le lieu flou le remplace.
-            Text(infos.prise.estDeclaree ? infos.espece.nom : (infos.prise.lieuFlou ?? infos.espece.nom))
-                .font(Jeton.police(22, .heavy))
-                .lineLimit(2)
-            Spacer(minLength: 0)
-            if !infos.prise.estDeclaree {
-                VStack(alignment: .trailing, spacing: 0) {
-                    Text(Formats.date(infos.prise.date))
-                    Text(Formats.heure(infos.prise.date))
-                }
-                .font(Jeton.police(12))
-                .monospacedDigit()
-                .foregroundStyle(Palette.encreDouce)
-            }
-        }
-        .foregroundStyle(Palette.encre)
-        .padding(.horizontal, Espace.l)
-        .padding(.vertical, Espace.m)
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
-
-    /// Le verso dit « dans les relevés OFB », jamais une promesse de prise.
-    var phraseRarete: String {
-        let r = infos.rarete
-        let zone = infos.departement.map { "du \($0.code)" } ?? "de la zone"
-        switch r.niveau {
-        case .nonMesuree:
-            return "Espèce non suivie par l'OFB : rareté non mesurée."
-        case .legendaire:
-            let depuis = r.anneeDernierReleve.map { " depuis \($0)" } ?? ""
-            return "Rareté dans les relevés de l'Office français de la biodiversité (OFB) \(zone) : aucune pêche ne l'a relevée\(depuis)."
-        default:
-            let annee = r.anneeDernierReleve.map { ", dernier relevé \($0)" } ?? ""
-            var texte = "Rareté dans les relevés de l'Office français de la biodiversité (OFB) \(zone) : relevée dans \(r.nPeches) pêches sur \(r.nTotal)\(annee)."
-            if r.echelle == .region {
-                texte += " Moins de 20 pêches dans le département : rareté calculée sur la région."
-            }
-            return texte
         }
     }
 }
@@ -109,7 +62,9 @@ struct FaitsPrise: View {
                         .multilineTextAlignment(.center)
                 } else {
                     if let taille = Formats.taille(infos.prise) {
-                        ligne("ruler", [taille, Formats.poids(infos.poids)].compactMap { $0 }.joined(separator: " · "))
+                        ligne(
+                            "ruler",
+                            [taille, Formats.poids(infos.poids)].compactMap { $0 }.joined(separator: " · "))
                     }
                     // À brancher : l'appât ou le leurre de la prise (« Relâché · leurre souple ») ; la prise ne le garde pas.
                     ligne("water.waves", infos.prise.gardee ? "Gardé" : "Relâché")
@@ -118,8 +73,10 @@ struct FaitsPrise: View {
                         MarqueAppleWeather()
                     }
                     if let consigne = infos.consigne {
-                        ligne("info.circle", consigne + (infos.sourceConsigne.map { " (source : \($0))" } ?? ""))
-                            .font(Police.detail)
+                        ligne(
+                            "info.circle", consigne + (infos.sourceConsigne.map { " (source : \($0))" } ?? "")
+                        )
+                        .font(Police.detail)
                     }
                 }
                 if let comment = emplacements.commentLaPecher {
@@ -208,5 +165,31 @@ struct MarqueAppleWeather: View {
                     .frame(minHeight: Gabarit.zoneTactile)
             }
         }
+    }
+}
+
+
+/// La photo du verso en entier (jamais rognée) : la photo à sa taille, posée sur son propre flou qui remplit le cadre.
+struct PhotoVersoEntiere: View {
+    let image: UIImage
+
+    var body: some View {
+        GeometryReader { geo in
+            ZStack {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .blur(radius: 26)
+                    .overlay(Color.black.opacity(0.15))
+                    .clipped()
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: geo.size.width, height: geo.size.height)
+            }
+            .frame(width: geo.size.width, height: geo.size.height)
+        }
+        .clipped()
     }
 }
