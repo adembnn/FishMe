@@ -52,16 +52,15 @@ nonisolated public enum NageWidget {
 
         return gardes.enumerated().map { index, poisson in
             let echelle = echelleDe(poisson)
-            if repas {
-                let x = 0.5 + (hasard(poisson.id, creneau, "repas-x") - 0.5) * 0.5
-                let y = 0.08 + 0.17 * hasard(poisson.id, creneau, "repas-y")
-                return PlacementPoisson(id: poisson.id, x: x, y: y, versLaDroite: x < 0.5,
-                                        echelle: echelle, auRepas: true)
-            }
+            // Au repas, les poissons gardent leurs couloirs mais montent dans la moitié haute (vers la nourriture).
+            let haut = repas ? 0.08 : 0.15
+            let bas = repas ? 0.55 : 0.85
             let x = xNage(poisson.id, creneau, colonne: (index + creneau) % c, sur: c)
             let avant = xNage(poisson.id, creneau - 1, colonne: (index + creneau - 1) % c, sur: c)
-            return PlacementPoisson(id: poisson.id, x: x, y: yNage(poisson.id, creneau, index: index / c, sur: rangees),
-                                    versLaDroite: x > avant, echelle: echelle, auRepas: false)
+            let versLaDroite = repas ? x < 0.5 : x > avant
+            return PlacementPoisson(id: poisson.id, x: x,
+                                    y: yNage(poisson.id, creneau, index: index / c, sur: rangees, de: haut, a: bas),
+                                    versLaDroite: versLaDroite, echelle: echelle, auRepas: repas)
         }
     }
 
@@ -96,18 +95,20 @@ nonisolated public enum NageWidget {
         return ecart >= 0 && ecart < dureeRepas
     }
 
-    /// Position horizontale entre 0.18 et 0.82, dans la colonne `colonne` parmi `sur`.
+    /// Position horizontale entre 0.18 et 0.82. Sur 2 colonnes, chaque poisson reste près du centre de sa moitié
+    /// (0.25 ou 0.75, à ±0.06 près) : deux voisins de rangée sont à 0.38 l'un de l'autre au moins, plus qu'un poisson.
     private static func xNage(_ id: String, _ creneau: Int, colonne: Int, sur c: Int) -> Double {
-        let largeur = 0.64 / Double(c)
-        let marge = c > 1 ? 0.15 : 0
-        return 0.18 + largeur * (Double((colonne % c + c) % c) + marge + (1 - 2 * marge) * hasard(id, creneau, "x"))
+        guard c > 1 else { return 0.18 + 0.64 * hasard(id, creneau, "x") }
+        let centre = (Double((colonne % c + c) % c) + 0.5) / Double(c)
+        let x = centre + (hasard(id, creneau, "x") - 0.5) * 0.12
+        return min(max(x, 0.18), 0.82)
     }
 
-    /// Couloir vertical de l'index `index` parmi `sur`, réparti entre 0.15 et 0.85, avec un petit décalage dedans.
-    private static func yNage(_ id: String, _ creneau: Int, index: Int, sur n: Int) -> Double {
-        let largeur = 0.70 / Double(n)
-        let centre = 0.15 + largeur * (Double(index) + 0.5)
-        return centre + (hasard(id, creneau, "y") - 0.5) * largeur * 0.6
+    /// Couloir vertical de l'index `index` parmi `sur`, réparti entre `haut` et `bas`, avec un petit décalage dedans.
+    private static func yNage(_ id: String, _ creneau: Int, index: Int, sur n: Int, de haut: Double, a bas: Double) -> Double {
+        let largeur = (bas - haut) / Double(n)
+        let centre = haut + largeur * (Double(index) + 0.5)
+        return centre + (hasard(id, creneau, "y") - 0.5) * largeur * 0.3
     }
 
     private static func echelleDe(_ poisson: InstantaneAquarium.Poisson) -> Double {

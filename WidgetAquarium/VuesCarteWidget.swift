@@ -212,14 +212,11 @@ private struct FenetreRarete: View {
     var body: some View {
         switch rarete {
         case 3:
-            // Légendaire : or, avec des taches claires.
+            // Légendaire : or, avec une lumière douce au centre.
             ZStack {
                 LinearGradient(colors: [hex(0xE3B654), hex(0xB8862A), hex(0xD9A845)],
                                startPoint: axe(150).0, endPoint: axe(150).1)
-                bokeh(0.20, 0.30, 0.06, 0xF6D98A)
-                bokeh(0.70, 0.18, 0.05, 0xFBE3A0)
-                bokeh(0.55, 0.60, 0.07, 0xF2CF78)
-                bokeh(0.85, 0.70, 0.06, 0xE9BD5A)
+                Lueur(couleur: hex(0xFBE3A0), force: 0.75)
             }
         case 2:
             // Rare : argent irisé.
@@ -231,11 +228,13 @@ private struct FenetreRarete: View {
                                        .init(color: hex(0xFFD2E6, 0.25), location: 0.52), .init(color: .clear, location: 0.62)],
                                startPoint: axe(125).0, endPoint: axe(125).1)
                     .blendMode(.softLight)
+                Lueur(couleur: .white, force: 0.55)
             }
         case 1:
             // Peu commun : vert profond, reflet vert d'eau.
             ZStack {
                 hex(0x17403F)
+                Lueur(couleur: hex(0x5FB89A), force: 0.45)
                 Rides(opacite: 0.3)
                 LinearGradient(stops: [.init(color: .clear, location: 0.38), .init(color: hex(0xBEFFEB, 0.22), location: 0.47),
                                        .init(color: .clear, location: 0.56)],
@@ -245,18 +244,26 @@ private struct FenetreRarete: View {
             // Commun : ardoise, avec des rides.
             ZStack {
                 hex(0x5F7775)
+                Lueur(couleur: hex(0xA9BDBB), force: 0.45)
                 Rides(opacite: 0.3)
             }
         }
     }
+}
 
-    private func bokeh(_ x: Double, _ y: Double, _ rayon: Double, _ couleur: UInt32) -> some View {
+/// Une lumière douce derrière le poisson, au centre de la carte : elle met le poisson en valeur.
+private struct Lueur: View {
+    let couleur: Color
+    let force: Double
+
+    var body: some View {
         GeometryReader { geo in
-            let r = geo.size.width * rayon * 1.6
-            Circle()
-                .fill(RadialGradient(colors: [hex(couleur), hex(couleur, 0)], center: .center, startRadius: 0, endRadius: r))
-                .frame(width: r * 2, height: r * 2)
-                .position(x: geo.size.width * x, y: geo.size.height * y)
+            let l = geo.size.width
+            Ellipse()
+                .fill(RadialGradient(colors: [couleur.opacity(force), couleur.opacity(0)],
+                                     center: .center, startRadius: 0, endRadius: l * 0.55))
+                .frame(width: l * 1.1, height: l * 0.9)
+                .position(x: l * 0.5, y: geo.size.height * 0.48)
         }
     }
 }
@@ -277,10 +284,12 @@ struct RectoCarte: View {
                     .resizable()
                     .widgetAccentedRenderingMode(.desaturated)
                     .scaledToFit()
-                    .frame(width: l * 0.88)
+                    .frame(width: l * 0.9)
                     .rotationEffect(.degrees(-12))
                     .shadow(color: .black.opacity(0.35), radius: l * 0.02, x: -l * 0.015, y: l * 0.025)
-                    .offset(x: l * 0.08, y: h * 0.22)
+                    // Au centre de la carte (aucun texte dessous), un peu au-dessus du milieu.
+                    .frame(width: l, height: h)
+                    .offset(y: -h * 0.03)
                 // Reflet discret : rare et légendaire seulement.
                 if carte.rarete >= 2 {
                     LinearGradient(stops: [.init(color: .clear, location: 0.30), .init(color: .white.opacity(0.55), location: 0.45),

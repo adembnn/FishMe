@@ -194,10 +194,11 @@ struct VueSessionWidget: View {
             .accessibilityLabel("\(affichage.prises) prises")
     }
 
-    /// Petit (170×170, marge 14) : chrono 50 pt, puis deux boutons icône de 38 pt de haut, écart 8.
+    /// Petit (170×170, marge 14) : chrono 50 pt, le nombre de prises, puis deux boutons icône de 38 pt de haut, écart 8.
     private var petit: some View {
         VStack(alignment: .leading, spacing: 8) {
             gros(taille: 50)
+            nombrePrises.font(.rond(18))
             Spacer(minLength: 0)
             HStack(spacing: 8) {
                 boutonIcone("Prise", symbole: "plus.circle.fill", url: urlPrise, hauteur: 38)

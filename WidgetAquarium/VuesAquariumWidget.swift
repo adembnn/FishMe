@@ -28,8 +28,8 @@ nonisolated func limitePoissons(_ famille: WidgetFamily) -> Int {
 private func partPoisson(_ famille: WidgetFamily) -> Double {
     switch famille {
     case .systemSmall: 0.44
-    case .systemMedium: 0.25
-    case .systemLarge: 0.30
+    case .systemMedium: 0.23
+    case .systemLarge: 0.27
     default: 0.24
     }
 }
@@ -37,14 +37,6 @@ private func partPoisson(_ famille: WidgetFamily) -> Double {
 /// Les formats larges rangent les poissons sur 2 colonnes (moins de chevauchements).
 private func colonnes(_ famille: WidgetFamily) -> Int {
     famille == .systemSmall ? 1 : 2
-}
-
-private func halo(_ rarete: Int) -> Color {
-    switch rarete {
-    case 3: Teintes.legendaire.opacity(0.85)
-    case 2: Teintes.rare.opacity(0.8)
-    default: .clear
-    }
 }
 
 // MARK: - L'eau
@@ -112,7 +104,6 @@ private struct CoucheNage: View {
     let famille: WidgetFamily
     /// Faux : poissons figés (tests d'image, repli sans animation).
     var anime: Bool = true
-    @Environment(\.widgetRenderingMode) private var rendu
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
 
     private static func estAccessoire(_ famille: WidgetFamily) -> Bool {
@@ -129,7 +120,6 @@ private struct CoucheNage: View {
             colonnes: colonnes(famille))
         let parId = Dictionary(instantane.poissons.map { ($0.id, $0) }, uniquingKeysWith: { premier, _ in premier })
         let part = partPoisson(famille)
-        let colore = rendu != .accented
         let accessoire = Self.estAccessoire(famille)
         let animePoissons = anime && !reduireAnimations && !accessoire
         let animeDecor = animePoissons
@@ -148,19 +138,10 @@ private struct CoucheNage: View {
                         // Le poisson reste entier dans le widget, même large (petit format).
                         let largeur = l * part * placement.echelle
                         let x = min(max(placement.x * l, largeur / 2 + 4), l - largeur / 2 - 4)
-                        ZStack {
-                            // Le halo de rareté se dessine UNE fois, derrière, hors des 16 copies animées.
-                            if colore && poisson.rarete >= 2 {
-                                Ellipse()
-                                    .fill(RadialGradient(colors: [halo(poisson.rarete).opacity(0.55), .clear],
-                                                         center: .center, startRadius: 0, endRadius: largeur * 0.55))
-                                    .frame(width: largeur * 1.15, height: largeur * 0.6)
-                            }
-                            PoissonVivant(slug: poisson.slug, largeur: largeur,
-                                          versLaDroite: placement.versLaDroite, phase: index * 3,
-                                          anime: animePoissons)
-                        }
-                        .position(x: x, y: placement.y * h)
+                        PoissonVivant(slug: poisson.slug, largeur: largeur,
+                                      versLaDroite: placement.versLaDroite, phase: index * 3,
+                                      anime: animePoissons)
+                            .position(x: x, y: placement.y * h)
                     }
                 }
                 // Quelques paillettes de nourriture près de la surface.
@@ -250,8 +231,10 @@ private struct VueEcranVerrouille: View {
                 if let premier = instantane.poissons.first {
                     VStack(spacing: 1) {
                         Image("\(premier.slug)-silhouette")
+                            .renderingMode(.template)
                             .resizable()
                             .scaledToFit()
+                            .foregroundStyle(.primary)
                             .widgetAccentable()
                             .frame(width: 30, height: 18)
                         Text("\(instantane.especes)")
@@ -271,8 +254,10 @@ private struct VueEcranVerrouille: View {
                 } else {
                     ForEach(Array(instantane.poissons.prefix(3))) { poisson in
                         Image("\(poisson.slug)-silhouette")
+                            .renderingMode(.template)
                             .resizable()
                             .scaledToFit()
+                            .foregroundStyle(.primary)
                             .widgetAccentable()
                             .frame(height: 24)
                     }
