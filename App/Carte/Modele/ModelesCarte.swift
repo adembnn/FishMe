@@ -73,30 +73,28 @@ nonisolated enum ElementCarte: Sendable, Equatable, Identifiable {
     }
 }
 
-/// Regroupement des points : une grille à la taille d'un écran d'iPhone en portrait (5 colonnes, 8 rangées, des cases
-/// d'environ 75 points), pour que deux bulles ne se recouvrent jamais. Au plus `maximum` éléments dans la zone visible.
+/// Regroupement des points : au plus `maximum` éléments dans la zone visible, un point par case au-delà.
 /// Calcul pur, appelé hors du fil principal.
 nonisolated enum Regroupeur {
-    static let maximum = 40
-    static let colonnes = 5
-    static let rangees = 8
+    static let maximum = 150
+    /// 12 x 12 = 144 cases au plus : jamais plus de 150 éléments.
+    static let cotesGrille = 12
 
     static func elements(points: [PointCarte], region: ZoneCarte, maximum: Int = Regroupeur.maximum) -> [ElementCarte] {
         let visibles = points.filter { region.contient($0.coordonnee) }
         if visibles.count <= maximum { return visibles.map { .point($0) } }
 
+        let n = Regroupeur.cotesGrille
         let latMin = region.centre.latitude - region.spanLatitude / 2 * 1.1
         let lonMin = region.centre.longitude - region.spanLongitude / 2 * 1.1
-        let hauteur = region.spanLatitude * 1.1 / Double(rangees)
-        let largeur = region.spanLongitude * 1.1 / Double(colonnes)
-        // Zone d'étendue nulle ou invalide : pas de grille possible (Int(inf) planterait).
-        guard hauteur > 0, largeur > 0, hauteur.isFinite, largeur.isFinite else { return visibles.prefix(maximum).map { .point($0) } }
+        let hauteur = region.spanLatitude * 1.1 / Double(n)
+        let largeur = region.spanLongitude * 1.1 / Double(n)
 
         var cases: [Int: [PointCarte]] = [:]
         for p in visibles {
-            let i = min(rangees - 1, max(0, Int((p.coordonnee.latitude - latMin) / hauteur)))
-            let j = min(colonnes - 1, max(0, Int((p.coordonnee.longitude - lonMin) / largeur)))
-            cases[i * colonnes + j, default: []].append(p)
+            let i = min(n - 1, max(0, Int((p.coordonnee.latitude - latMin) / hauteur)))
+            let j = min(n - 1, max(0, Int((p.coordonnee.longitude - lonMin) / largeur)))
+            cases[i * n + j, default: []].append(p)
         }
         return cases.keys.sorted().compactMap { cle -> ElementCarte? in
             guard let membres = cases[cle] else { return nil }
@@ -107,9 +105,9 @@ nonisolated enum Regroupeur {
         }
     }
 
-    /// La région où zoomer quand on touche un regroupement : un quart de l'étendue (une case de la grille), centrée dessus.
+    /// La région où zoomer quand on touche un regroupement : un tiers de l'étendue, centrée dessus.
     static func zoom(sur c: Coordonnee, depuis region: ZoneCarte) -> ZoneCarte {
-        ZoneCarte(centre: c, spanLatitude: max(region.spanLatitude / 4, 0.02), spanLongitude: max(region.spanLongitude / 4, 0.02))
+        ZoneCarte(centre: c, spanLatitude: max(region.spanLatitude / 3, 0.02), spanLongitude: max(region.spanLongitude / 3, 0.02))
     }
 }
 
