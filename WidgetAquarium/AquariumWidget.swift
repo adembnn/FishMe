@@ -51,11 +51,15 @@ struct AquariumWidget: Widget {
         }
         .configurationDisplayName("Mon aquarium")
         .description("Tes poissons nagent et changent de place au fil de la journée. Appui long pour choisir lesquels.")
-        .supportedFamilies([
-            .systemSmall, .systemMedium, .systemLarge, .systemExtraLargePortrait,
-            .accessoryRectangular, .accessoryCircular,
-        ])
+        .supportedFamilies(Self.familles)
         .contentMarginsDisabled()
+    }
+
+    /// Le grand format portrait n'existe qu'à partir d'iOS 27 ; en iOS 26 l'aquarium garde les autres tailles.
+    private static var familles: [WidgetFamily] {
+        var f: [WidgetFamily] = [.systemSmall, .systemMedium, .systemLarge, .accessoryRectangular, .accessoryCircular]
+        if #available(iOS 27, *) { f.insert(.systemExtraLargePortrait, at: 3) }
+        return f
     }
 }
 
