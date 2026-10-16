@@ -37,6 +37,8 @@ struct FinDeSession: Equatable {
     var sortie: Sortie
     /// `.quiSeFerme` à la fin de la 1re session : A ouvre le paywall de L6 après la carte, il se ferme.
     var paywall: ModePaywall
+    /// Non nil quand la session s'est close d'elle-même (« Session terminée à la fin légale ») : à montrer au pêcheur.
+    var message: String? = nil
 }
 
 @MainActor @Observable
@@ -166,7 +168,7 @@ final class SuiviSession {
     /// À appeler à chaque seconde affichée et à la réouverture : termine à la fin légale.
     func verifierFin() {
         guard let c = enCours, let legale = c.finLegale, legale > c.sortie.debut else { return }
-        if horloge.maintenant() >= legale { cloturer(a: legale) }
+        if horloge.maintenant() >= legale { cloturer(a: legale, message: "Session terminée à la fin légale") }
     }
 
     func terminer() {
@@ -177,7 +179,7 @@ final class SuiviSession {
     /// A l'appelle après avoir montré la fin (carte, puis paywall).
     func acquitterFin() { derniereFin = nil }
 
-    private func cloturer(a fin: Date) {
+    private func cloturer(a fin: Date, message: String? = nil) {
         guard var c = enCours else { return }
         c.sortie.fin = fin
         let ancien = fichier.sessionsTerminees
@@ -194,7 +196,7 @@ final class SuiviSession {
         fichier.sessionsTerminees = ancien + 1
         fichier.enCours = nil
         enCours = nil
-        let fini = FinDeSession(sortie: c.sortie, paywall: paywall)
+        let fini = FinDeSession(sortie: c.sortie, paywall: paywall, message: message)
         derniereFin = fini
         ecrire()
         surFin?(fini)

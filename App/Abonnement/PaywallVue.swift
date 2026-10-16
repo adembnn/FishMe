@@ -169,7 +169,7 @@ struct PaywallVue: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
-    // MARK: Pied : restaurer, message, fermer
+    // MARK: Pied : restaurer, message, fermer, liens légaux
 
     private var pied: some View {
         VStack(spacing: 8) {
@@ -178,12 +178,21 @@ struct PaywallVue: View {
             }
             Button("Restaurer les achats") { Task { await restaurer() } }
                 .font(JetonsAbonnement.texte(.subheadline))
+                .frame(minHeight: 44)
+                .contentShape(Rectangle())
             Button(action: fermer) {
                 Text(declencheur.texteFermeture)
                     .font(JetonsAbonnement.police(.headline))
                     .frame(maxWidth: .infinity, minHeight: 44)
             }
             .buttonStyle(.bordered).tint(JetonsAbonnement.marine)
+            // Liens légaux toujours visibles, même si ce pied recouvre ceux de la boutique.
+            HStack(spacing: 24) {
+                Link("Conditions d'utilisation", destination: liens.conditions)
+                Link("Confidentialité", destination: liens.confidentialite)
+            }
+            .font(JetonsAbonnement.texte(.footnote))
+            .frame(minHeight: 44)
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 10)

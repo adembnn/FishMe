@@ -109,7 +109,7 @@ struct PriseResultatView: View {
                         }
                     }
                     if let controle, PriseLogique.tropPresDeLaMaille(controle) {
-                        Text("Trop près de la maille, mesure sur une toise")
+                        Text("Trop près de la taille minimale, mesure sur une toise")
                             .font(PriseJetons.corps()).foregroundStyle(PriseJetons.encre)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(14).background(PriseJetons.papier, in: RoundedRectangle(cornerRadius: PriseJetons.rayon))
@@ -117,6 +117,9 @@ struct PriseResultatView: View {
                     if let poids = modele.poids { blocPoids(poids) }
                     if let controle {
                         ForEach(Array(controle.lignes.enumerated()), id: \.offset) { _, ligne in PriseLigneView(ligne: ligne) }
+                        Text(PriseLogique.avertissement)
+                            .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     Toggle("Gardée", isOn: $modele.gardee)
                         .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
@@ -124,7 +127,12 @@ struct PriseResultatView: View {
                 }
             }
             .scrollIndicators(.hidden)
-            Button("Ranger dans le Pescedex") { modele.ranger() }.buttonStyle(PriseBoutonPrincipal())
+            if modele.exemple {
+                Text("Carte d'exemple : elle ne compte pas au Pescedex")
+                    .font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
+            }
+            Button(modele.exemple ? "Ranger (carte d'exemple)" : "Ranger dans le Pescedex") { modele.ranger() }
+                .buttonStyle(PriseBoutonPrincipal())
         }
         .padding(20)
     }
@@ -162,7 +170,14 @@ struct PriseLigneView: View {
                 }
                 if ouverte {
                     ForEach(Array(ligne.sources.enumerated()), id: \.offset) { _, s in
-                        Text(s.titre).font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
+                        if let url = s.url.flatMap({ URL(string: $0) }) {
+                            Link(destination: url) {
+                                Label(s.titre, systemImage: "arrow.up.right.square")
+                                    .font(PriseJetons.legende()).multilineTextAlignment(.leading)
+                            }
+                        } else {
+                            Text(s.titre).font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret)
+                        }
                     }
                     if let citation = ligne.citation { Text(citation).font(PriseJetons.legende()).foregroundStyle(PriseJetons.discret) }
                     if let date = ligne.dateLecture {
@@ -180,7 +195,7 @@ struct PriseLigneView: View {
 
     private var symbole: String {
         switch ligne.etat {
-        case .respectee: return "checkmark.circle.fill"
+        case .respectee: return ligne.type == .periode ? "calendar" : "checkmark.circle.fill"
         case .nonRespectee: return "xmark.octagon.fill"
         case .aVerifierSurPlace: return "questionmark.circle.fill"
         }
@@ -188,7 +203,7 @@ struct PriseLigneView: View {
 
     private var couleur: Color {
         switch ligne.etat {
-        case .respectee: return PriseJetons.accent
+        case .respectee: return ligne.type == .periode ? PriseJetons.discret : PriseJetons.accent
         case .nonRespectee: return .red
         case .aVerifierSurPlace: return PriseJetons.mise
         }

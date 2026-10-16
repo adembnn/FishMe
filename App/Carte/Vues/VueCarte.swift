@@ -20,6 +20,8 @@ struct VueCarte: View {
     let sessionsTerminees: Int
     let bandeauHaut: AnyView
     let bandeauSession: AnyView
+    /// Vrai pendant une session : « Commencer une session » disparaît (le bandeau a « Ajouter une prise »). A le branche sur le moteur de session.
+    let sessionEnCours: Bool
     let emplacementMaintenant: (Coordonnee) -> AnyView
     let emplacementConseil: (Espece) -> AnyView
     let onCommencerSession: (Spot) -> Void
@@ -33,6 +35,7 @@ struct VueCarte: View {
          sessionsTerminees: Int = 0,
          bandeauHaut: AnyView = AnyView(EmptyView()),
          bandeauSession: AnyView = AnyView(EmptyView()),
+         sessionEnCours: Bool = false,
          emplacementMaintenant: @escaping (Coordonnee) -> AnyView = { _ in AnyView(EmptyView()) },
          emplacementConseil: @escaping (Espece) -> AnyView = { _ in AnyView(EmptyView()) },
          onCommencerSession: @escaping (Spot) -> Void = { _ in },
@@ -43,6 +46,7 @@ struct VueCarte: View {
         self.sessionsTerminees = sessionsTerminees
         self.bandeauHaut = bandeauHaut
         self.bandeauSession = bandeauSession
+        self.sessionEnCours = sessionEnCours
         self.emplacementMaintenant = emplacementMaintenant
         self.emplacementConseil = emplacementConseil
         self.onCommencerSession = onCommencerSession
@@ -171,6 +175,8 @@ struct VueCarte: View {
                     .frame(minWidth: 36, minHeight: 36)
                     .background(CouleursCarte.accent, in: Circle())
                     .overlay(Circle().stroke(.white, lineWidth: 2))
+                    .frame(minWidth: 44, minHeight: 44)
+                    .contentShape(Rectangle())
             }
             .accessibilityLabel("\(nombre) stations OFB")
             .accessibilityHint("Zoomer pour les voir")
@@ -182,6 +188,8 @@ struct VueCarte: View {
                     .frame(width: 28, height: 28)
                     .background(CouleursCarte.accent, in: Circle())
                     .overlay(Circle().stroke(.white, lineWidth: 2))
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
             }
             .accessibilityLabel("Station OFB")
             .accessibilityHint("Ouvre la fiche du coin")
@@ -235,21 +243,26 @@ struct VueCarte: View {
     private var bas: some View {
         VStack(spacing: 10) {
             bandeauSession
-            ViewThatFits(in: .horizontal) {
-                HStack(spacing: 10) { boutonsSecondaires }
-                VStack(spacing: 10) { boutonsSecondaires }
+            HStack(spacing: 10) { boutonsSecondaires }
+            if !sessionEnCours {
+                Button {
+                    if let spot = modele.spotAffiche { onCommencerSession(spot) }
+                } label: {
+                    Text("Commencer une session")
+                        .font(PolicesCarte.corps())
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(CouleursCarte.accent)
+                .disabled(modele.spotAffiche == nil)
+                if modele.spotAffiche == nil {
+                    Text(modele.modeChoixDuSpot ? "Touche la rivière pour poser ton spot"
+                                                : "Pose ton spot pour commencer")
+                        .font(PolicesCarte.legende())
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                }
             }
-            Button {
-                if let spot = modele.spotAffiche { onCommencerSession(spot) }
-            } label: {
-                Text("Commencer une session")
-                    .font(PolicesCarte.corps())
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
-            }
-            .buttonStyle(.borderedProminent)
-            .tint(CouleursCarte.accent)
-            .disabled(modele.spotAffiche == nil)
         }
         .padding(.horizontal, 16)
         .padding(.bottom, 4)
@@ -258,43 +271,45 @@ struct VueCarte: View {
     @ViewBuilder
     private var boutonsSecondaires: some View {
         Button(action: autourDeMoi) {
-            Label("Autour de moi", systemImage: "location.fill")
-                .font(PolicesCarte.detail())
-                .padding(.horizontal, 12)
-                .padding(.vertical, 10)
-                .background(.regularMaterial, in: Capsule())
+            Image(systemName: "location.fill")
+                .font(.system(size: 17, weight: .bold))
+                .frame(width: 44, height: 44)
+                .background(.regularMaterial, in: Circle())
+                .contentShape(Circle())
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("Autour de moi")
 
         Button { modele.afficherFiltre = true } label: {
             Label("Choisir un autre spot", systemImage: "fish")
                 .font(PolicesCarte.detail())
                 .padding(.horizontal, 12)
-                .padding(.vertical, 10)
+                .frame(minHeight: 44)
                 .background(.regularMaterial, in: Capsule())
+                .contentShape(Capsule())
         }
         .buttonStyle(.plain)
 
-        if ouChercher != nil {
-            Button { afficherOuChercher = true } label: {
-                Label("Où chercher près d'ici", systemImage: "mappin.and.ellipse")
-                    .font(PolicesCarte.detail())
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 10)
-                    .background(.regularMaterial, in: Capsule())
+        if ouChercher != nil || (modele.peutChangerDeSpot && modele.spotAffiche != nil) {
+            Menu {
+                if ouChercher != nil {
+                    Button { afficherOuChercher = true } label: {
+                        Label("Où chercher près d'ici", systemImage: "mappin.and.ellipse")
+                    }
+                }
+                if modele.peutChangerDeSpot, modele.spotAffiche != nil {
+                    Button { modele.modeChoixDuSpot.toggle() } label: {
+                        Label(modele.modeChoixDuSpot ? "Annuler" : "Changer de spot", systemImage: "scope")
+                    }
+                }
+            } label: {
+                Image(systemName: "ellipsis.circle")
+                    .font(.system(size: 17, weight: .bold))
+                    .frame(width: 44, height: 44)
+                    .background(.regularMaterial, in: Circle())
+                    .contentShape(Circle())
             }
-            .buttonStyle(.plain)
-        }
-
-        if modele.peutChangerDeSpot, modele.spotAffiche != nil {
-            Button { modele.modeChoixDuSpot.toggle() } label: {
-                Label(modele.modeChoixDuSpot ? "Annuler" : "changer de spot", systemImage: "scope")
-                    .font(PolicesCarte.detail())
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 10)
-                    .background(.regularMaterial, in: Capsule())
-            }
-            .buttonStyle(.plain)
+            .accessibilityLabel("Plus")
         }
     }
 }

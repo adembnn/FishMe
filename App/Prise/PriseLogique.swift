@@ -64,6 +64,15 @@ enum PriseLogique {
     /// Une confirmation en deux gestes pour une entrée aux sosies coûteux.
     static func demandeSosies(_ entree: EspecePechable) -> Bool { !entree.confusions.isEmpty }
 
+    /// Vrai si le pêcheur vient déjà de départager l'espèce et tous ses sosies dans un groupe du modèle
+    /// (ex. « brochet ou brochet aquitain ») : on ne redemande pas la même distinction.
+    static func sosiesDejaTranches(_ entree: EspecePechable, classe: String?, catalogue: [EspecePechable]) -> Bool {
+        guard let classe, entree.classeModele == classe, !entree.confusions.isEmpty else { return false }
+        return entree.confusions.allSatisfy { c in
+            catalogue.first(where: { $0.espece == c.avec })?.classeModele == classe
+        }
+    }
+
     /// « Trop près de la maille » : lu dans les lignes que `controle` rend, jamais recalculé ici.
     static func tropPresDeLaMaille(_ resultat: ResultatControle) -> Bool {
         resultat.lignes.contains { $0.raison == .tropPresDeLaMaille }
@@ -71,6 +80,8 @@ enum PriseLogique {
 
     /// Avant confirmation de l'espèce : seulement la consigne « relâche-la ».
     static let consigneAvantConfirmation = Consigne.relacheLa.texte
+    /// Phrase imposée sous chaque verdict (docs/donnees.md).
+    static let avertissement = "Information indicative : l'arrêté préfectoral fait foi. En cas de doute, relâche."
 
     /// « ≈ 1,4 kg estimé ».
     static func texteDuPoids(_ poids: PoidsEstime) -> String {

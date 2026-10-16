@@ -26,16 +26,18 @@ struct ClubView<MarqueMeteo: View>: View {
             List {
                 Section("Ma pêche") {
                     Link(destination: liens.federation ?? LiensOfficiels.federationNationale) {
-                        Label("Ma fédération", systemImage: "building.columns")
+                        LigneSortie(titre: "Ma fédération", sousTitre: liens.nomFederation, icone: "building.columns")
                     }
+                    // Sans association connue, la ligne ouvre la page nationale : le libellé le dit.
                     Link(destination: liens.association ?? liens.carteDePeche) {
-                        Label("Mon association", systemImage: "person.3")
+                        LigneSortie(titre: liens.association == nil ? "Trouver mon association (AAPPMA)" : "Mon association",
+                                    sousTitre: nil, icone: "person.3")
                     }
                     Toggle(isOn: $aSaCarte) {
                         Label("J'ai ma carte de pêche 2026", systemImage: "checkmark.seal")
                     }
                     Link(destination: liens.carteDePeche) {
-                        Label("Voir la carte de pêche sur le site officiel", systemImage: "safari")
+                        LigneSortie(titre: "Voir la carte de pêche sur le site officiel", sousTitre: nil, icone: "safari")
                     }
                 }
 
@@ -63,7 +65,7 @@ struct ClubView<MarqueMeteo: View>: View {
                 Section("Confidentialité") {
                     if let page = liens.confidentialite {
                         Link(destination: page) {
-                            Label("Politique de confidentialité", systemImage: "hand.raised")
+                            LigneSortie(titre: "Politique de confidentialité", sousTitre: nil, icone: "hand.raised")
                         }
                     }
                     Toggle(isOn: $mesureUsage) {
@@ -79,12 +81,12 @@ struct ClubView<MarqueMeteo: View>: View {
                     }
                     if let contact = ContactClub.contact {
                         Link(destination: contact) {
-                            Label("Contact", systemImage: "envelope")
+                            LigneSortie(titre: "Contact", sousTitre: nil, icone: "envelope")
                         }
                     }
                     if let erreur = ContactClub.erreurDeRegle {
                         Link(destination: erreur) {
-                            Label("Signaler une erreur de règle", systemImage: "flag")
+                            LigneSortie(titre: "Signaler une erreur de règle", sousTitre: nil, icone: "flag")
                         }
                     }
                 }
@@ -92,6 +94,33 @@ struct ClubView<MarqueMeteo: View>: View {
             .scrollIndicators(.hidden)
             .navigationTitle("Mon club")
             .manageSubscriptionsSheet(isPresented: $gestionAbonnement)
+        }
+    }
+}
+
+/// Une ligne qui ouvre Safari ou Mail : titre, sous-titre facultatif et petite flèche de sortie.
+private struct LigneSortie: View {
+    let titre: String
+    let sousTitre: String?
+    let icone: String
+
+    var body: some View {
+        HStack {
+            Label {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(titre)
+                    if let sousTitre {
+                        Text(sousTitre).font(.footnote).foregroundStyle(.secondary)
+                    }
+                }
+            } icon: {
+                Image(systemName: icone)
+            }
+            Spacer(minLength: 8)
+            Image(systemName: "arrow.up.right")
+                .font(.footnote)
+                .foregroundStyle(.tertiary)
+                .accessibilityHidden(true)
         }
     }
 }
