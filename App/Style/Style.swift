@@ -203,12 +203,12 @@ extension View {
 
 // MARK: - Fermer et revenir (kit : `.rond`, icônes « fermer » et « retour »)
 
-/// Le bouton rond de 44 pt qui ferme un écran ou revient à l'étape d'avant, le même partout.
-/// - `.verre` (directions A · Plans et C · Sujet) : rond de verre, icône encre. Posé en haut à gauche,
-///   à 16 pt du bord, sauf sur une feuille façon Plans (fiche d'un coin) où il va en haut à droite.
-/// - `.simple` (direction B · Réglages) : icône marine seule, sans fond, comme une barre de navigation iOS.
+/// Le bouton rond de 44 pt qui ferme un écran ou revient à l'étape d'avant, le même partout :
+/// rond de verre, icône encre (Adem, 16 oct. 8h03 : « verre » sur toutes les pages, directions B comprises).
+/// Posé en haut à gauche, à 16 pt du bord, sauf sur une feuille façon Plans (fiche d'un coin) où il va en haut à droite.
 struct BoutonRond: View {
     enum Role { case fermer, retour }
+    /// Gardé pour les appels existants ; `.simple` se dessine aussi en verre.
     enum Rendu { case verre, simple }
 
     let role: Role
@@ -223,15 +223,13 @@ struct BoutonRond: View {
         } label: {
             Image(systemName: role == .fermer ? "xmark" : "chevron.left")
                 .font(.system(size: 18, weight: .bold, design: .rounded))
-                .foregroundStyle(rendu == .verre ? Palette.encre : Palette.marine)
+                .foregroundStyle(Palette.encre)
                 .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
                 .background {
-                    if rendu == .verre {
-                        Circle()
-                            .fill(.regularMaterial)
-                            .overlay(Circle().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
-                            .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
-                    }
+                    Circle()
+                        .fill(.regularMaterial)
+                        .overlay(Circle().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
+                        .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
                 }
                 .contentShape(Circle())
         }
