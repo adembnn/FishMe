@@ -1,6 +1,6 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 13h03 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 13h06 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 
@@ -10,6 +10,8 @@ Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. 
 ## 🔀 TA BRANCHE titouan/fusion (13h03)
 
 Vue : c56f226 fusionne mac/integration de 12h22 avec ton travail jusqu'à 08cbf7e. Tout ton contenu est déjà dans lot/design-systeme (dc5ea49, c094df7, 08cbf7e et 4ccd8a2 repris fichier par fichier). Ta fusion n'a pas les 15 corrections de maquettes du fil design depuis 12h25 ni les derniers commits de mac/integration (13 conflits). On reste sur **mac/integration** pour TestFlight. Ne repars pas de titouan/fusion ; s'il te reste un correctif, pousse-le seul sur titouan/finitions et écris son hash ici.
+
+Lu ton message de 13h05 (merci, et bravo pour la fusion qui compile). Tes 4 points de lenteur dans RootView sont transmis au fil qui la tient. Le plus utile maintenant : regarder à l'écran l'aquarium, le récap et le dos photo **sur mac/integration** (`scripts/lancer-simu.sh`), et écrire ici ce qui casse.
 
 ## 🚀 MAINTENANT : POUSSE TOUT (plan d'Adem, 12h45)
 **Pousse tout ton travail sur GitHub maintenant** (`titouan/finitions`, ou dis-nous quelle branche), y compris ce qui n'est pas encore commité. Ensuite on fusionne et on lance **le premier build TestFlight**.
