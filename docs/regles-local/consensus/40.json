@@ -12618,6 +12618,2263 @@
     },
     "citation": "l'utilisation des filets de type tramail ou araignée est interdite quelle que soit l'espèce ciblée"
    }
+  },
+  {
+   "id": "40-categorie-1-escource",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Escource (Saint-Paul-en-Born) : de sa source à la passerelle de Saint-Paul",
+    "plan_eau": null,
+    "cours_eau": "Escource"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Escource est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "L'ESCOURCE De sa source à la passerelle de Saint-Paul (Commune de Saint-Paul-en-born).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-escource",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'ESCOURCE De sa source à la passerelle de Saint-Paul (Commune de Saint-Paul-en-born)."
+   }
+  },
+  {
+   "id": "40-categorie-1-onesse",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Onesse (Saint-Julien-en-Born) : de sa source à l'amont du barrage de la pisciculture de Saint-Julien-en-Born",
+    "plan_eau": null,
+    "cours_eau": "Onesse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Onesse est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "L'ONESSE De sa source à l'amont du barrage de la pisciculture de Saint-Julien-en-born ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-onesse",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'ONESSE De sa source à l'amont du barrage de pisciculture de Saint-Julien-en-born"
+   }
+  },
+  {
+   "id": "40-categorie-1-vignacq",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Vignacq (Lévignacq) : de sa source au barrage de la pisciculture de Lévignacq",
+    "plan_eau": null,
+    "cours_eau": "Vignacq"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Vignacq est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "LE VIGNACQ De sa source au barrage de la pisciculture de Lévignacq.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-vignacq",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LE VIGNACQ De sa source au barrage de la pisciculture de Lévignacq."
+   }
+  },
+  {
+   "id": "40-categorie-1-palue",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Palue (Saint-Michel-Escalus) : de sa source à la route départementale 652",
+    "plan_eau": null,
+    "cours_eau": "Palue"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Palue est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "LA PALUE De sa source à la route départementale 652 (Commune de Saint-Michel-Escalus).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-palue",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LA PALUE De sa source à la route départementale 652 (Commune de Saint-Michel-Escalus)."
+   }
+  },
+  {
+   "id": "40-categorie-1-magescq",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Magescq (Magescq) : de sa source au pont situé sur le chemin départemental 50",
+    "plan_eau": null,
+    "cours_eau": "Magescq"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Magescq est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "LE MAGESCQ De sa source au pont situé sur le chemin départemental 50 (Commune de Magescq).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-magescq",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LE MAGESCQ De sa source au pont situé sur le chemin départemental 50 (Commune de Magescq)."
+   }
+  },
+  {
+   "id": "40-categorie-1-douze",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Douze : en aval de son confluent avec l'Estampon jusqu'à son confluent avec le ruisseau dit « de la base aérienne »",
+    "plan_eau": null,
+    "cours_eau": "Douze"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Douze est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "LA DOUZE En aval de son confluent avec L'ESTAMPON jusqu'à son confluent avec le ruisseau dit « de la base aérienne ».",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-douze",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LA DOUZE En aval de son confluent avec L'ESTAMPON jusqu'à son confluent avec le ruisseau dit « de la base aérienne »."
+   }
+  },
+  {
+   "id": "40-categorie-1-estampon",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Estampon : dans sa totalité",
+    "plan_eau": null,
+    "cours_eau": "Estampon"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Estampon est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "L'ESTAMPON Dans sa totalité.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-estampon",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'ESTAMPON Dans sa totalité."
+   }
+  },
+  {
+   "id": "40-categorie-1-geloux",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Geloux : de sa source à la confluence avec la Midouze",
+    "plan_eau": null,
+    "cours_eau": "Geloux"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Geloux est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "LE GELOUX De sa source à la confluence avec la MIDOUZE.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-geloux",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LE GELOUX De sa source à la confluence avec la MIDOUZE."
+   }
+  },
+  {
+   "id": "40-categorie-1-estrigon",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Estrigon (Brocas) : du barrage de l'étang de Brocas (Brocas-les-Forges) à sa confluence avec la Midouze",
+    "plan_eau": null,
+    "cours_eau": "Estrigon"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Estrigon est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "L'ESTRIGON Du Barrage de l'étang de Brocas (commune de Brocas-les-Forges) à sa confluence avec la MIDOUZE.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-estrigon",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'ESTRIGON Du Barrage de l'étang de Brocas (commune de Brocas-les-Forges) à sa confluence avec la MIDOUZE."
+   }
+  },
+  {
+   "id": "40-categorie-1-ciron",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Ciron : dans sa totalité",
+    "plan_eau": null,
+    "cours_eau": "Ciron"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Ciron est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "LE CIRON Dans sa totalité.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-ciron",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LE CIRON Dans sa totalité."
+   }
+  },
+  {
+   "id": "40-categorie-1-rimbez",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Rimbez : dans sa totalité",
+    "plan_eau": null,
+    "cours_eau": "Rimbez"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Rimbez est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "LE RIMBEZ Dans sa totalité.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-rimbez",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LE RIMBEZ Dans sa totalité."
+   }
+  },
+  {
+   "id": "40-categorie-1-grande-leyre",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Grande Leyre : de sa source à la confluence avec la Petite Leyre",
+    "plan_eau": null,
+    "cours_eau": "Grande Leyre"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Grande Leyre est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "LA GRANDE LEYRE De sa source à la confluence avec la PETITE LEYRE.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-grande-leyre",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LA GRANDE LEYRE De sa source à la confluence avec la PETITE LEYRE."
+   }
+  },
+  {
+   "id": "40-categorie-1-petite-leyre",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Petite Leyre : de sa source à la confluence avec la Grande Leyre",
+    "plan_eau": null,
+    "cours_eau": "Petite Leyre"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Petite Leyre est classé en première catégorie sur le tronçon indiqué.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "LA PETITE LEYRE De sa source à la confluence avec la GRANDE LEYRE.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-grande-leyre",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LA GRANDE LEYRE De sa source à la confluence avec la PETITE LEYRE."
+   }
+  },
+  {
+   "id": "40-categorie-1-affluents",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Affluents et sous-affluents des cours d'eau ou sections de cours d'eau de première catégorie listés à l'article 2 (sauf Naou et Hougarde)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1",
+    "texte": "Les affluents et sous-affluents des 13 cours d'eau ou sections listés sont en première catégorie, sauf le Naou et la Hougarde."
+   },
+   "phrase": "Les affluents et sous-affluents des cours d'eau de première catégorie du tableau sont aussi en première catégorie, sauf le Naou et la Hougarde.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "Les affluents et sous-affluents des cours d'eau ou sections de cours d'eau désignés ci-dessus, à l'exception du NAOU (affluent de la PETITE LEYRE) et de la HOUGARDE (affluent du GELOUX).",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat1-affluents",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Les affluents et sous-affluents des cours d'eau ou sections de cours d'eau désignés ci-dessus, à l'exception du NAOU (affluent de la PETITE LEYRE) et de la HOUGARDE (affluent du GELOUX)."
+   }
+  },
+  {
+   "id": "40-categorie-exception-naou",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Naou (affluent de la Petite Leyre)",
+    "plan_eau": null,
+    "cours_eau": "Naou"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2",
+    "texte": "Le Naou, affluent de la Petite Leyre, est exclu du classement en première catégorie des affluents."
+   },
+   "phrase": "Le Naou, affluent de la Petite Leyre, n'est pas classé en première catégorie par le texte (il n'est donc pas couvert par la première catégorie des affluents).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "à l'exception du NAOU (affluent de la PETITE LEYRE) et de la HOUGARDE (affluent duGELOUX).",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat2-naou",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "à l'exception du NAOU (affluent de la PETITE LEYRE) et de la HOUGARDE (affluent du GELOUX)"
+   }
+  },
+  {
+   "id": "40-categorie-exception-hougarde",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Hougarde (affluent de la Geloux)",
+    "plan_eau": null,
+    "cours_eau": "Hougarde"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2",
+    "texte": "Le Hougarde, affluent de la Geloux, est exclu du classement en première catégorie des affluents."
+   },
+   "phrase": "Le Hougarde, affluent de la Geloux, n'est pas classé en première catégorie par le texte (il n'est donc pas couvert par la première catégorie des affluents).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "à l'exception du NAOU (affluent de la PETITE LEYRE) et de la HOUGARDE (affluent duGELOUX).",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-categorie-cat2-hougarde",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "à l'exception du NAOU (affluent de la PETITE LEYRE) et de la HOUGARDE (affluent du GELOUX)"
+   }
+  },
+  {
+   "id": "40-mode-peche-bouteille-cat1",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Une bouteille ou une carafe de deux litres de contenance au plus."
+   },
+   "phrase": "En première catégorie, une bouteille ou une carafe de deux litres au plus est autorisée.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "une bouteille ou une carafe dont la contenance ne peut être supérieure à deux litres.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-mode_peche-cat1-bouteille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "une bouteille ou une carafe dont la contenance ne peut être supérieure à deux litres."
+   }
+  },
+  {
+   "id": "40-mode-peche-vermee-cat2",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Une vermée."
+   },
+   "phrase": "En deuxième catégorie, une vermée est autorisée.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "• une vermée ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-mode_peche-cat2-vermee",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "une vermée ;"
+   }
+  },
+  {
+   "id": "40-mode-peche-balances-maille-cat2",
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10,
+    "texte": "Maille fixée à 10 mm pour les espèces susceptibles de provoquer des déséquilibres biologiques."
+   },
+   "phrase": "Maille des balances à écrevisses fixée à 10 mm pour les espèces susceptibles de provoquer des déséquilibres biologiques.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "le diamètre ne doit pas excéder 30 cm et la maille est fixée à 10 mm pour les espèces susceptibles de provoquer des déséquilibres biologiques.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-ecrevisse-mode_peche-cat2-balances",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "six balances au plus destinées à la capture des écrevisses et des crevettes : le diamètre ne doit pas excéder 30 cm et la maille est fixée à 10 mm"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-anguille",
+   "type": "mode_peche",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour anguille.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-anguille-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-goujon",
+   "type": "mode_peche",
+   "especes": [
+    "goujon"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour goujon.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-goujon-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-loche",
+   "type": "mode_peche",
+   "especes": [
+    "autre:loche"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour loche.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-loche-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-vairon",
+   "type": "mode_peche",
+   "especes": [
+    "autre:vairon"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour vairon.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-vairon-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-vandoise",
+   "type": "mode_peche",
+   "especes": [
+    "vandoise"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour vandoise.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-vandoise-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-ablette",
+   "type": "mode_peche",
+   "especes": [
+    "ablette"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour ablette.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-ablette-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-lamproie",
+   "type": "mode_peche",
+   "especes": [
+    "autre:lamproie"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour lamproie.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-lamproie-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-gardon",
+   "type": "mode_peche",
+   "especes": [
+    "2133"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour gardon.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-gardon-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-chevesne",
+   "type": "mode_peche",
+   "especes": [
+    "31041"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour chevesne.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-chevesne-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-hotu",
+   "type": "mode_peche",
+   "especes": [
+    "hotu"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour hotu.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-hotu-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-grémille",
+   "type": "mode_peche",
+   "especes": [
+    "autre:grémille"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour grémille.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-grémille-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille10-brème",
+   "type": "mode_peche",
+   "especes": [
+    "2086"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Carrelet : maille de 10 mm au moins pour brème.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "-10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème et celles susceptibles",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-brème-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-carrelet-maille27-autres",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 27,
+    "texte": "Pour les espèces autres que celles à maille de 10 mm."
+   },
+   "phrase": "Carrelet : maille de 27 mm au moins pour les espèces autres que celles à maille de 10 mm.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "- 27 mm pour les espèces autres que celles désignées ci-dessus.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-mode_peche-cat2-carrelet-maille-autres",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "27 mm pour les espèces autres que celles désignées ci-dessus."
+   }
+  },
+  {
+   "id": "40-mode-peche-nasse-maille",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 27
+   },
+   "phrase": "La nasse a une maille de 27 mm au moins.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "Une seule nasse par pêcheur aux dimensions suivantes : longueur de 1,20 m ; diamètre de 0,50 m ; maille de 27 mm minimum.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-mode_peche-cat2-carrelet-maille-autres",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "27 mm pour les espèces autres que celles désignées ci-dessus."
+   }
+  },
+  {
+   "id": "40-mode-peche-bosselles-maille",
+   "type": "mode_peche",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "maille_mm_min": 10
+   },
+   "phrase": "Les bosselles à anguilles ont des mailles de 10 mm au moins.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3 bosselles par pêcheur aux dimensions suivantes : 0,30 m X 0,80 m ; orifice de 40 mm ; mailles de 10 mm minimum.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-anguille-mode_peche-cat2-carrelet-maille",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème"
+   }
+  },
+  {
+   "id": "40-mode-peche-ligne-fond-hamecons",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "hamecons_max": 18,
+    "texte": "18 hameçons pour l'ensemble des lignes de fond."
+   },
+   "phrase": "Les lignes de fond portent 18 hameçons au plus pour l'ensemble.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "Des lignes de fond, munies pour l'ensemble de 18 hameçons, eschées uniquement de vers de terre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-mode_peche-cat2-ligne-de-fond",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Des lignes de fond, munies pour l'ensemble de 18 hameçons, eschées uniquement de vers de terre."
+   }
+  },
+  {
+   "id": "40-engins-autorises-luy",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Luy : en amont du lieu-dit Le Courant",
+    "plan_eau": null,
+    "cours_eau": "Luy"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur le Luy, en amont du lieu-dit Le Courant (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "1°) Le Luy, en amont du lieu-dit Le Courant ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-luy",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Le Luy, en amont du lieu-dit Le Courant"
+   }
+  },
+  {
+   "id": "40-engins-autorises-louts",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Louts : en aval du Moulin de Vielle",
+    "plan_eau": null,
+    "cours_eau": "Louts"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur le Louts, en aval du Moulin de Vielle (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "2°) Le Louts, en aval du Moulin de Vielle ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-louts",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Le Louts, en aval du Moulin de Vielle"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-cazaux-sanguinet",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Cazaux-Sanguinet",
+    "plan_eau": "étang de Cazaux-Sanguinet",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Cazaux-Sanguinet (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-cazaux-sanguinet",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-biscarrosse-parentis",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Biscarrosse-Parentis",
+    "plan_eau": "étang de Biscarrosse-Parentis",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Biscarrosse-Parentis (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-biscarrosse-parentis",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-mimizan",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Mimizan",
+    "plan_eau": "étang de Mimizan",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Mimizan (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-mimizan",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-aureilhan",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Aureilhan",
+    "plan_eau": "étang de Aureilhan",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Aureilhan (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-aureilhan",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-petit-aureilhan",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Petit-Aureilhan",
+    "plan_eau": "étang de Petit-Aureilhan",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Petit-Aureilhan (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-petit-aureilhan",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-léon",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Léon",
+    "plan_eau": "étang de Léon",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Léon (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-leon",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-soustons",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Soustons",
+    "plan_eau": "étang de Soustons",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Soustons (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-soustons",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-hardy",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Hardy",
+    "plan_eau": "étang de Hardy",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Hardy (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-hardy",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-blanc",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Blanc",
+    "plan_eau": "étang de Blanc",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Blanc (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-blanc",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-turc",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Turc",
+    "plan_eau": "étang de Turc",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Turc (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-turc",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-tarnos-garros",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Tarnos-Garros",
+    "plan_eau": "étang de Tarnos-Garros",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Tarnos-Garros (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-tarnos-garros",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-etang-yrieux",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "40",
+    "lieu": "Étang de Yrieux",
+    "plan_eau": "étang de Yrieux",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur l'étang de Yrieux (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "3°) Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-yrieux",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-courant-mimizan",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Courant de Mimizan",
+    "plan_eau": null,
+    "cours_eau": "Courant de Mimizan"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur courant de mimizan (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "4°) Courants de : Mimizan, Sainte-Eulalie, Contis, Huchet, Vieux-Boucau et ruisseau de Hardy ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-courant-mimizan",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Courants de : Mimizan, Sainte-Eulalie, Contis, Huchet, Vieux-Boucau et ruisseau de Hardy"
+   }
+  },
+  {
+   "id": "40-engins-autorises-courant-sainte-eulalie",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Courant de Sainte-Eulalie",
+    "plan_eau": null,
+    "cours_eau": "Courant de Sainte-Eulalie"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur courant de sainte-eulalie (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "4°) Courants de : Mimizan, Sainte-Eulalie, Contis, Huchet, Vieux-Boucau et ruisseau de Hardy ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-courant-sainte-eulalie",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Courants de : Mimizan, Sainte-Eulalie, Contis, Huchet, Vieux-Boucau et ruisseau de Hardy"
+   }
+  },
+  {
+   "id": "40-engins-autorises-courant-contis",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Courant de Contis",
+    "plan_eau": null,
+    "cours_eau": "Courant de Contis"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur courant de contis (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "4°) Courants de : Mimizan, Sainte-Eulalie, Contis, Huchet, Vieux-Boucau et ruisseau de Hardy ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-courant-contis",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Courants de : Mimizan, Sainte-Eulalie, Contis, Huchet, Vieux-Boucau et ruisseau de Hardy"
+   }
+  },
+  {
+   "id": "40-engins-autorises-courant-huchet",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Courant de Huchet",
+    "plan_eau": null,
+    "cours_eau": "Courant de Huchet"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur courant de huchet (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "4°) Courants de : Mimizan, Sainte-Eulalie, Contis, Huchet, Vieux-Boucau et ruisseau de Hardy ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-courant-huchet",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Courants de : Mimizan, Sainte-Eulalie, Contis, Huchet, Vieux-Boucau et ruisseau de Hardy"
+   }
+  },
+  {
+   "id": "40-engins-autorises-courant-vieux-boucau",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Courant de Vieux-Boucau",
+    "plan_eau": null,
+    "cours_eau": "Courant de Vieux-Boucau"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur courant de vieux-boucau (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "4°) Courants de : Mimizan, Sainte-Eulalie, Contis, Huchet, Vieux-Boucau et ruisseau de Hardy ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-courant-vieux-boucau",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Courants de : Mimizan, Sainte-Eulalie, Contis, Huchet, Vieux-Boucau et ruisseau de Hardy"
+   }
+  },
+  {
+   "id": "40-engins-autorises-ruisseau-hardy",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Ruisseau de Hardy",
+    "plan_eau": null,
+    "cours_eau": "Ruisseau de Hardy"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur le ruisseau de Hardy (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "4°) Courants de : Mimizan, Sainte-Eulalie, Contis, Huchet, Vieux-Boucau et ruisseau de Hardy ;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-etang-hardy",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Etangs de: Cazaux-Sanguinet, Biscarrosse-Parentis, Mimizan, Aureilhan, Petit-Aureilhan, Léon, Soustons, Hardy, Blanc, Turc, Tarnos-Garros, Yrieux"
+   }
+  },
+  {
+   "id": "40-engins-autorises-canal-littoral",
+   "type": "autre",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "40",
+    "lieu": "Canal du littoral des Landes",
+    "plan_eau": null,
+    "cours_eau": "Canal du littoral des Landes"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche aux engins et aux filets est possible pour les membres d'AAPPMA (annexe, arrêté ministériel du 19 avril 2011)."
+   },
+   "phrase": "Pêche aux engins possible sur le canal du littoral des Landes (liste de l'annexe).",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), annexe",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "5°) Canal du littoral des Landes.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-engins-canal-littoral",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), annexe (extrait de l'arrêté ministériel du 19 avril 2011 modifié)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Canal du littoral des Landes."
+   }
+  },
+  {
+   "id": "40-dpf-etat",
+   "type": "autre",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "40",
+    "lieu": "Eaux du domaine public fluvial de l'État",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche aux lignes réglementée par le cahier des clauses et conditions particulières d'exploitation du droit de pêche de l'État 2023-2027 (arrêté n° 2022-1074 du 29 juin 2022), non lu."
+   },
+   "phrase": "Sur le domaine public fluvial de l'État, ce sont les clauses du cahier des charges 2023-2027 qui s'appliquent, pas cet arrêté.",
+   "source": {
+    "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.2",
+    "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2024-12-18"
+   },
+   "citation": "La pêche aux lignes dans les eaux du domaine public fluvial de l'État est réglementée conformément aux dispositions du cahier des clauses et conditions particulières",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "40-toutes-autre-domaine-public-fluvial",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.2",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "La pêche aux lignes dans les eaux du domaine public fluvial de l'État est réglementée conformément aux dispositions du cahier des clauses et conditions particulières"
+   }
   }
  ],
  "desaccords": {
@@ -13299,6 +15556,756 @@
     "citation": "Tous feux sont strictement interdits.",
     "statut": "brouillon",
     "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "40-categorie-2-reste",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Tout le département, hors cours d'eau classés en première catégorie",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "2",
+     "texte": "Tous les cours d'eau, canaux et plans d'eau domaniaux ou non domaniaux et les étangs littoraux non classés en première catégorie et non soumis à la réglementation maritime."
+    },
+    "phrase": "Tout cours d'eau, canal ou plan d'eau des Landes non classé en première catégorie (et hors réglementation maritime) est en deuxième catégorie.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Tous les cours d'eau, canaux et plans d'eau domaniaux ou non domaniaux et les étangs littoraux du département, non classés en première catégorie et non soumis à la réglementation maritime.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-ligne-cat1",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 1,
+     "hamecons_max": 2
+    },
+    "phrase": "En première catégorie, un membre d'AAPPMA pêche avec une seule ligne montée sur canne, deux hameçons au plus.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "une ligne montée sur canne et munie de deux hameçons au plus ou de trois mouches artificielles au plus;",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-mouches-cat1",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 1,
+     "mouches_max": 3
+    },
+    "phrase": "En première catégorie, la ligne montée sur canne peut aussi porter trois mouches artificielles au plus.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "une ligne montée sur canne et munie de deux hameçons au plus ou de trois mouches artificielles au plus;",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-lignes-cat2",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 4,
+     "hamecons_max": 2
+    },
+    "phrase": "En deuxième catégorie, quatre lignes montées sur canne au plus, chacune avec deux hameçons au plus.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "quatre lignes montées sur canne et munies chacune de deux hameçons au plus ou de trois mouches artificielles au plus ;",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-mouches-cat2",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 4,
+     "mouches_max": 3
+    },
+    "phrase": "En deuxième catégorie, chacune des quatre lignes peut porter trois mouches artificielles au plus.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "quatre lignes montées sur canne et munies chacune de deux hameçons au plus ou de trois mouches artificielles au plus ;",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-balances-nombre-cat2",
+    "type": "mode_peche",
+    "especes": [
+     "ecrevisse"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Six balances au plus, pour les écrevisses et les crevettes."
+    },
+    "phrase": "En deuxième catégorie, six balances au plus pour les écrevisses et les crevettes.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "six balances au plus destinées à la capture des écrevisses et des crevettes",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-balances-diametre-cat2",
+    "type": "mode_peche",
+    "especes": [
+     "ecrevisse"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Diamètre des balances de 30 cm au plus."
+    },
+    "phrase": "Les balances à écrevisses ne dépassent pas 30 cm de diamètre.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "le diamètre ne doit pas excéder 30 cm et la maille est fixée à 10 mm pour les espèces susceptibles de provoquer des déséquilibres biologiques.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-carrelet-surface",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Un carrelet de 1 m² de superficie au plus."
+    },
+    "phrase": "Un seul carrelet de 1 m² au plus est autorisé sur les cours d'eau et plans d'eau de l'annexe.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "est autorisé l'emploi d'un carrelet de 1 m2 de superficie au plus, à maille d'au moins :",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-carrelet-identification",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Le carrelet porte le nom et le prénom du titulaire du titre de pêche."
+    },
+    "phrase": "Le carrelet doit porter le nom et le prénom du pêcheur.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Le carrelet devra être identifié (nom, prénom du titulaire du titre de pêche).",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-nasse-nombre",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Une seule nasse par pêcheur."
+    },
+    "phrase": "Une seule nasse à poissons par pêcheur.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Une seule nasse par pêcheur aux dimensions suivantes : longueur de 1,20 m ; diamètre de 0,50 m ; maille de 27 mm minimum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-nasse-dimensions",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Nasse de 1,20 m de longueur et 0,50 m de diamètre."
+    },
+    "phrase": "La nasse mesure 1,20 m de longueur et 0,50 m de diamètre.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Une seule nasse par pêcheur aux dimensions suivantes : longueur de 1,20 m ; diamètre de 0,50 m ; maille de 27 mm minimum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-nasse-balisage",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "La nasse est balisée et porte à demeure le nom, le prénom du pêcheur et les indications de son titre de pêche."
+    },
+    "phrase": "La nasse doit être balisée et porter le nom, le prénom du pêcheur et son titre de pêche.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "La nasse devra être balisée et portera à demeure le nom et prénom du pêcheur ainsi que les indications de son titre de pêche.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-bosselles-nombre",
+    "type": "mode_peche",
+    "especes": [
+     "anguille"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "3 bosselles à anguilles par pêcheur."
+    },
+    "phrase": "Trois bosselles à anguilles par pêcheur au plus.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "3 bosselles par pêcheur aux dimensions suivantes : 0,30 m X 0,80 m ; orifice de 40 mm ; mailles de 10 mm minimum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-bosselles-dimensions",
+    "type": "mode_peche",
+    "especes": [
+     "anguille"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Bosselle de 0,30 m x 0,80 m, orifice de 40 mm."
+    },
+    "phrase": "Une bosselle mesure 0,30 m x 0,80 m, avec un orifice de 40 mm.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "3 bosselles par pêcheur aux dimensions suivantes : 0,30 m X 0,80 m ; orifice de 40 mm ; mailles de 10 mm minimum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-bosselles-identification",
+    "type": "mode_peche",
+    "especes": [
+     "anguille"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Les bosselles sont identifiées (nom, prénom, indication du titre de pêche)."
+    },
+    "phrase": "Les bosselles doivent porter le nom, le prénom du pêcheur et son titre de pêche.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Les bosselles devront être identifiées (nom, prénom, indication du titre de pêche).",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-ligne-fond-esche",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Lignes de fond eschées uniquement de vers de terre."
+    },
+    "phrase": "Les lignes de fond ne s'eschent qu'avec des vers de terre.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Des lignes de fond, munies pour l'ensemble de 18 hameçons, eschées uniquement de vers de terre.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-ligne-fond-baignade",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Lignes de fond utilisables seulement en dehors des zones de baignade autorisée."
+    },
+    "phrase": "Pas de ligne de fond dans les zones de baignade autorisée.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Les lignes de fond ne peuvent être utilisées qu'en dehors des zones de baignade autorisée.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-ligne-fond-plaque",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Chaque ligne de fond porte une plaque d'identification (nom, prénom, date de naissance), positionnée de façon visible."
+    },
+    "phrase": "Chaque ligne de fond porte une plaque avec le nom, le prénom et la date de naissance du pêcheur, bien visible.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Chaque ligne de fond porte une plaque d'identification avec le nom, le prénom et la date de naissance du pêcheur.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-ligne-traine-nombre",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 3
+    },
+    "phrase": "Trois lignes de traîne au plus par pêcheur.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Lignes de traîne : 3 lignes de traîne au maximum par pêcheur, munies au plus de 2 hameçons chacune.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-mode-peche-ligne-traine-hamecons",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": "Cours d'eau et plans d'eau où la pêche aux engins est autorisée par l'arrêté ministériel du 19 avril 2011 (liste en annexe)",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "hamecons_max": 2
+    },
+    "phrase": "Chaque ligne de traîne porte deux hameçons au plus.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Lignes de traîne : 3 lignes de traîne au maximum par pêcheur, munies au plus de 2 hameçons chacune.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-brochet-interdit-engin-vermee",
+    "type": "interdit",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pendant la période de fermeture spécifique du brochet, l'emploi de la vermée est interdit (le carrelet et les bosselles à anguilles font exception)."
+    },
+    "phrase": "Pendant la fermeture spécifique du brochet, la vermée est interdit.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'emploi des engins ci-dessus désignés à l'exception du carrelet et des bosselles à anguilles est interdit durant la période d'interdiction spécifique de la pêche du brochet.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-brochet-interdit-engin-balances",
+    "type": "interdit",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pendant la période de fermeture spécifique du brochet, l'emploi de les balances à écrevisses est interdit (le carrelet et les bosselles à anguilles font exception)."
+    },
+    "phrase": "Pendant la fermeture spécifique du brochet, les balances à écrevisses est interdit.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'emploi des engins ci-dessus désignés à l'exception du carrelet et des bosselles à anguilles est interdit durant la période d'interdiction spécifique de la pêche du brochet.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-brochet-interdit-engin-nasse",
+    "type": "interdit",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pendant la période de fermeture spécifique du brochet, l'emploi de la nasse est interdit (le carrelet et les bosselles à anguilles font exception)."
+    },
+    "phrase": "Pendant la fermeture spécifique du brochet, la nasse est interdit.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'emploi des engins ci-dessus désignés à l'exception du carrelet et des bosselles à anguilles est interdit durant la période d'interdiction spécifique de la pêche du brochet.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-brochet-interdit-engin-ligne-fond",
+    "type": "interdit",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pendant la période de fermeture spécifique du brochet, l'emploi de les lignes de fond est interdit (le carrelet et les bosselles à anguilles font exception)."
+    },
+    "phrase": "Pendant la fermeture spécifique du brochet, les lignes de fond est interdit.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'emploi des engins ci-dessus désignés à l'exception du carrelet et des bosselles à anguilles est interdit durant la période d'interdiction spécifique de la pêche du brochet.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-brochet-interdit-engin-ligne-traine",
+    "type": "interdit",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pendant la période de fermeture spécifique du brochet, l'emploi de les lignes de traîne est interdit (le carrelet et les bosselles à anguilles font exception)."
+    },
+    "phrase": "Pendant la fermeture spécifique du brochet, les lignes de traîne est interdit.",
+    "source": {
+     "texte": "Arrêté DDTM/SPEMA/2024/n°1493 permanent du 18 décembre 2024 (pêche en eau douce, membres des AAPPMA, Landes), article 5.1",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'emploi des engins ci-dessus désignés à l'exception du carrelet et des bosselles à anguilles est interdit durant la période d'interdiction spécifique de la pêche du brochet.",
+    "statut": "brouillon",
+    "expire_le": null,
     "remplace": null
    }
   ],
@@ -15122,8 +18129,935 @@
     "statut": "brouillon",
     "expire_le": "2026-12-31",
     "remplace": null
+   },
+   {
+    "id": "40-toutes-categorie-cat2",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "2"
+    },
+    "phrase": "Tous les cours d'eau, canaux et plans d'eau des Landes non classés en 1re catégorie (et hors réglementation maritime) sont en 2e catégorie.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Tous les cours d'eau, canaux et plans d'eau domaniaux ou non domaniaux et les étangs littoraux du département, non classés en première catégorie et non soumis à la réglementation maritime.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-categorie-cat1-escource",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "troncon",
+     "code": "40",
+     "lieu": "Escource : de sa source à la passerelle de Saint-Paul (Commune de Saint-Paul-en-born).",
+     "plan_eau": null,
+     "cours_eau": "Escource"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1"
+    },
+    "phrase": "Escource est classée en 1re catégorie (De sa source à la passerelle de Saint-Paul (Commune de Saint-Paul-en-born)).",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'ESCOURCE De sa source à la passerelle de Saint-Paul (Commune de Saint-Paul-en-born).",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-categorie-cat1-onesse",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "troncon",
+     "code": "40",
+     "lieu": "Onesse : de sa source à l'amont du barrage de pisciculture de Saint-Julien-en-born",
+     "plan_eau": null,
+     "cours_eau": "Onesse"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1"
+    },
+    "phrase": "Onesse est classée en 1re catégorie (De sa source à l'amont du barrage de pisciculture de Saint-Julien-en-born).",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'ONESSE De sa source à l'amont du barrage de pisciculture de Saint-Julien-en-born",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-categorie-cat1-vignacq",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "troncon",
+     "code": "40",
+     "lieu": "Vignacq : de sa source au barrage de la pisciculture de Lévignacq.",
+     "plan_eau": null,
+     "cours_eau": "Vignacq"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1"
+    },
+    "phrase": "Vignacq est classée en 1re catégorie (De sa source au barrage de la pisciculture de Lévignacq).",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LE VIGNACQ De sa source au barrage de la pisciculture de Lévignacq.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-categorie-cat1-palue",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "troncon",
+     "code": "40",
+     "lieu": "Palue : de sa source à la route départementale 652 (Commune de Saint-Michel-Escalus).",
+     "plan_eau": null,
+     "cours_eau": "Palue"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1"
+    },
+    "phrase": "Palue est classée en 1re catégorie (De sa source à la route départementale 652 (Commune de Saint-Michel-Escalus)).",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LA PALUE De sa source à la route départementale 652 (Commune de Saint-Michel-Escalus).",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-categorie-cat1-magescq",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "troncon",
+     "code": "40",
+     "lieu": "Magescq : de sa source au pont situé sur le chemin départemental 50 (Commune de Magescq).",
+     "plan_eau": null,
+     "cours_eau": "Magescq"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1"
+    },
+    "phrase": "Magescq est classée en 1re catégorie (De sa source au pont situé sur le chemin départemental 50 (Commune de Magescq)).",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2, tableau de première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "LE MAGESCQ De sa source au pont situé sur le chemin départemental 50 (Commune de Magescq).",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-categorie-cat1-affluents",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "cours_eau",
+     "code": "40",
+     "lieu": "Affluents et sous-affluents des cours d'eau ou sections de cours d'eau de 1re catégorie listés à l'article 2, sauf le Naou et la Hougarde",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1",
+     "texte": "à l'exception du Naou (affluent de la Petite Leyre) et de la Hougarde (affluent du Geloux)"
+    },
+    "phrase": "Les affluents et sous-affluents des cours d'eau de 1re catégorie listés sont aussi en 1re catégorie, sauf le Naou et la Hougarde.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 2",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Les affluents et sous-affluents des cours d'eau ou sections de cours d'eau désignés ci-dessus, à l'exception du NAOU (affluent de la PETITE LEYRE) et de la HOUGARDE (affluent du GELOUX).",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-mode_peche-cat1-ligne",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 1,
+     "hamecons_max": 2,
+     "mouches_max": 3,
+     "texte": "membres des AAPPMA, cours d'eau et plans d'eau non domaniaux"
+    },
+    "phrase": "En 1re catégorie, une seule ligne montée sur canne avec 2 hameçons au plus ou 3 mouches artificielles au plus.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en première catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "une ligne montée sur canne et munie de deux hameçons au plus ou de trois mouches artificielles au plus",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-mode_peche-cat2-lignes",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 4,
+     "hamecons_max": 2,
+     "mouches_max": 3,
+     "texte": "en tous lieux sauf restrictions particulières"
+    },
+    "phrase": "En 2e catégorie, jusqu'à 4 lignes montées sur canne, chacune avec 2 hameçons au plus ou 3 mouches artificielles au plus.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "quatre lignes montées sur canne et munies chacune de deux hameçons au plus ou de trois mouches artificielles au plus ;",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-anguille-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "anguille"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour l'anguille.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-goujon-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "goujon"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour le goujon.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-loche-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "autre:loche"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour le loche.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-vairon-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "autre:vairon"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour le vairon.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-vandoise-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "vandoise"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour la vandoise.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-ablette-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "ablette"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour l'ablette.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-lamproie-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "autre:lamproie"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour la lamproie.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-gardon-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "2133"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour le gardon.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-chevesne-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "31041"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour le chevesne.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-hotu-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "hotu"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour le hotu.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-grémille-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "autre:grémille"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour le grémille.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-brème-mode_peche-cat2-carrelet-maille",
+    "type": "mode_peche",
+    "especes": [
+     "2086"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "maille du carrelet, 10 mm au moins"
+    },
+    "phrase": "Carrelet : maille de 10 mm au moins pour la brème.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "10mm pour les espèces suivantes: anguille, goujon, loche, vairon, vandoise, ablette, lamproie, gardon, chevesne, hotu, grémille,, brème",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-mode_peche-cat2-carrelet-maille-autres",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 27,
+     "texte": "maille du carrelet pour les espèces autres que celles à 10 mm"
+    },
+    "phrase": "Carrelet : maille de 27 mm au moins pour les espèces autres que celles à maille de 10 mm.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "27 mm pour les espèces autres que celles désignées ci-dessus.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-mode_peche-cat2-nasse",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 27,
+     "texte": "une seule nasse par pêcheur : longueur 1,20 m, diamètre 0,50 m, maille de 27 mm au moins ; balisée, portant à demeure nom, prénom et indications du titre de pêche ; seulement sur les eaux de l'annexe"
+    },
+    "phrase": "Sur les eaux de l'annexe, une seule nasse par pêcheur (1,20 m x 0,50 m, maille de 27 mm au moins), balisée et identifiée.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Une seule nasse par pêcheur aux dimensions suivantes : longueur de 1,20 m ; diamètre de 0,50 m ; maille de 27 mm minimum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-anguille-mode_peche-cat2-bosselles",
+    "type": "mode_peche",
+    "especes": [
+     "anguille"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "maille_mm_min": 10,
+     "texte": "3 bosselles par pêcheur : 0,30 m x 0,80 m, orifice de 40 mm, mailles de 10 mm au moins ; identifiées (nom, prénom, titre de pêche) ; seulement sur les eaux de l'annexe"
+    },
+    "phrase": "Sur les eaux de l'annexe, 3 bosselles à anguilles par pêcheur (0,30 m x 0,80 m, orifice de 40 mm, mailles de 10 mm au moins), identifiées.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "3 bosselles par pêcheur aux dimensions suivantes : 0,30 m X 0,80 m ; orifice de 40 mm ; mailles de 10 mm minimum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-mode_peche-cat2-ligne-de-fond",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "hamecons_max": 18,
+     "texte": "lignes de fond munies pour l'ensemble de 18 hameçons, eschées uniquement de vers de terre, hors zones de baignade autorisée, avec plaque d'identification (nom, prénom, date de naissance) ; seulement sur les eaux de l'annexe"
+    },
+    "phrase": "Sur les eaux de l'annexe, des lignes de fond munies de 18 hameçons au total, eschées de vers de terre seulement, hors zones de baignade.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Des lignes de fond, munies pour l'ensemble de 18 hameçons, eschées uniquement de vers de terre.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-toutes-mode_peche-cat2-ligne-de-traine",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 3,
+     "hamecons_max": 2,
+     "texte": "lignes de traîne ; seulement sur les eaux de l'annexe"
+    },
+    "phrase": "Sur les eaux de l'annexe, 3 lignes de traîne au plus par pêcheur, chacune avec 2 hameçons au plus.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1, en deuxième catégorie, engins (annexe : extrait de l'arrêté ministériel du 19 avril 2011)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "Lignes de traîne : 3 lignes de traîne au maximum par pêcheur, munies au plus de 2 hameçons chacune.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "40-2151-interdit-engins-fermeture-brochet",
+    "type": "interdit",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "40",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "emploi des engins (nasses, lignes de fond, lignes de traîne, balances, etc.) interdit pendant la période d'interdiction spécifique du brochet, sauf carrelet et bosselles à anguilles"
+    },
+    "phrase": "Pendant la fermeture spécifique du brochet, les engins du 5.1 sont interdits, sauf le carrelet et les bosselles à anguilles.",
+    "source": {
+     "texte": "Arrêté préfectoral DDTM/SPEMA/2024/n°1493 permanent (pêche en eau douce, membres des AAPPMA, Landes), article 5.1 (dernier alinéa)",
+     "url": "https://www.landes.gouv.fr/contenu/telechargement/34511/284951/file/2024-1493-%20arr%C3%AAt%C3%A9%20permanent%20loisir%20aux%20lignes.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2024-12-18"
+    },
+    "citation": "L'emploi des engins ci-dessus désignés à l'exception du carrelet et des bosselles à anguilles est interdit durant la période d'interdiction spécifique de la pêche du brochet.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
    }
   ]
  },
- "paires_categorie": []
+ "paires_categorie": [
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "texte": "Pendant la période de fermeture spécifique du brochet, l'emploi de la vermée est interdit (le carrelet et les bosselles à anguilles font exception)."
+   },
+   "a": {
+    "id": "40-brochet-interdit-engin-vermee",
+    "categorie": "2"
+   },
+   "b": {
+    "id": "40-2151-interdit-engins-fermeture-brochet",
+    "categorie": "toutes"
+   }
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "texte": "Pendant la période de fermeture spécifique du brochet, l'emploi de les balances à écrevisses est interdit (le carrelet et les bosselles à anguilles font exception)."
+   },
+   "a": {
+    "id": "40-brochet-interdit-engin-balances",
+    "categorie": "2"
+   },
+   "b": {
+    "id": "40-2151-interdit-engins-fermeture-brochet",
+    "categorie": "toutes"
+   }
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "texte": "Pendant la période de fermeture spécifique du brochet, l'emploi de la nasse est interdit (le carrelet et les bosselles à anguilles font exception)."
+   },
+   "a": {
+    "id": "40-brochet-interdit-engin-nasse",
+    "categorie": "2"
+   },
+   "b": {
+    "id": "40-2151-interdit-engins-fermeture-brochet",
+    "categorie": "toutes"
+   }
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "texte": "Pendant la période de fermeture spécifique du brochet, l'emploi de les lignes de fond est interdit (le carrelet et les bosselles à anguilles font exception)."
+   },
+   "a": {
+    "id": "40-brochet-interdit-engin-ligne-fond",
+    "categorie": "2"
+   },
+   "b": {
+    "id": "40-2151-interdit-engins-fermeture-brochet",
+    "categorie": "toutes"
+   }
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "texte": "Pendant la période de fermeture spécifique du brochet, l'emploi de les lignes de traîne est interdit (le carrelet et les bosselles à anguilles font exception)."
+   },
+   "a": {
+    "id": "40-brochet-interdit-engin-ligne-traine",
+    "categorie": "2"
+   },
+   "b": {
+    "id": "40-2151-interdit-engins-fermeture-brochet",
+    "categorie": "toutes"
+   }
+  }
+ ]
 }
