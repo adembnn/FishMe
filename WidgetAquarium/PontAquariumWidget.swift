@@ -12,6 +12,9 @@ import WidgetKit
 // Tout est en `try?` : un App Group absent ou un disque plein ne font jamais planter l'app.
 
 nonisolated enum PontAquariumWidget {
+    /// Passer TOUT le Pescedex (une entrée par carte ou par espèce regroupée, les plus rares d'abord, 200 au plus),
+    /// pas seulement 5 : le pêcheur choisit ceux qui nagent par « Modifier le widget ». Passer aussi le nom commun
+    /// de chaque espèce dans `Poisson.nom` (« Brochet ») : la liste de choix l'affiche, le widget jamais.
     /// Remplace les poissons, le nombre d'espèces et l'abonnement ; garde les rations et le dernier repas du fichier.
     static func publier(poissons: [InstantaneAquarium.Poisson], especes: Int, estPro: Bool) {
         let actuel = DepotAquariumWidget.lire()

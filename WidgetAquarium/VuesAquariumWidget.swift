@@ -18,14 +18,10 @@ private enum Teintes {
 private let urlAquarium = URL(string: "fishme://aquarium")
 private let urlPro = URL(string: "fishme://pro?source=widget")
 
-private func limite(_ famille: WidgetFamily) -> Int {
-    switch famille {
-    case .systemSmall: 3
-    case .systemMedium: 5
-    case .systemLarge: 8
-    case .systemExtraLargePortrait: 12
-    default: 3
-    }
+/// Combien de poissons nagent : 3 en petit, 5 partout ailleurs (le pêcheur les choisit, 5 au plus).
+/// Sert aussi au fournisseur (`AquariumWidget.swift`) pour réduire l'instantané avant la timeline.
+func limitePoissons(_ famille: WidgetFamily) -> Int {
+    InstantaneAquarium.limiteAffichee(petit: famille == .systemSmall)
 }
 
 /// Largeur d'un poisson, en part de la largeur du widget (avant son échelle).
@@ -77,7 +73,9 @@ private struct Rayons: View {
 
 /// Le fond du widget : dégradé marine, rayons, une ligne de sable.
 private struct FondEau: View {
-    @Environment(\.widgetFamily) private var famille
+    let famille: WidgetFamily
+    /// Faux coupe l'animation (rendu en image : `ImageRenderer` ne fait pas tourner les chronos).
+    var anime: Bool = true
     @Environment(\.widgetRenderingMode) private var rendu
 
     private var accentue: Bool { rendu == .accented }
@@ -111,37 +109,56 @@ private struct FondEau: View {
 
 private struct CoucheNage: View {
     let entree: EntreeAquarium
-    let limite: Int
+    let famille: WidgetFamily
     @Environment(\.widgetRenderingMode) private var rendu
-    @Environment(\.widgetFamily) private var famille
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
+
+    private static func estAccessoire(_ famille: WidgetFamily) -> Bool {
+        switch famille {
+        case .accessoryRectangular, .accessoryCircular, .accessoryInline: true
+        default: false
+        }
+    }
 
     var body: some View {
         let instantane = entree.instantane
         let placements = NageWidget.placements(
-            instantane.poissons, a: entree.date, dernierRepas: instantane.dernierRepas, limite: limite,
+            instantane.poissons, a: entree.date, dernierRepas: instantane.dernierRepas, limite: limitePoissons(famille),
             colonnes: colonnes(famille))
         let parId = Dictionary(instantane.poissons.map { ($0.id, $0) }, uniquingKeysWith: { premier, _ in premier })
         let part = partPoisson(famille)
         let colore = rendu != .accented
+        let accessoire = Self.estAccessoire(famille)
+        let animePoissons = anime && !reduireAnimations && !accessoire
+        let animeDecor = animePoissons
 
         GeometryReader { geo in
             let l = geo.size.width
             let h = geo.size.height
             ZStack {
-                ForEach(placements) { placement in
+                // Décor animé derrière les poissons, écrans d'accueil seulement (jamais en accessoire).
+                if animeDecor {
+                    LumiereAnimee()
+                    BullesAnimees()
+                }
+                ForEach(Array(placements.enumerated()), id: \.element.id) { index, placement in
                     if let poisson = parId[placement.id] {
                         // Le poisson reste entier dans le widget, même large (petit format).
                         let largeur = l * part * placement.echelle
                         let x = min(max(placement.x * l, largeur / 2 + 4), l - largeur / 2 - 4)
-                        Image(poisson.slug)
-                            .resizable()
-                            .widgetAccentedRenderingMode(.desaturated)
-                            .scaledToFit()
-                            .frame(width: largeur)
-                            .shadow(color: colore ? halo(poisson.rarete) : .clear, radius: 7)
-                            .scaleEffect(x: placement.versLaDroite ? 1 : -1, y: 1)
-                            .position(x: x, y: placement.y * h)
+                        ZStack {
+                            // Le halo de rareté se dessine UNE fois, derrière, hors des 16 copies animées.
+                            if colore && poisson.rarete >= 2 {
+                                Ellipse()
+                                    .fill(RadialGradient(colors: [halo(poisson.rarete).opacity(0.55), .clear],
+                                                         center: .center, startRadius: 0, endRadius: largeur * 0.55))
+                                    .frame(width: largeur * 1.15, height: largeur * 0.6)
+                            }
+                            PoissonVivant(slug: poisson.slug, largeur: largeur,
+                                          versLaDroite: placement.versLaDroite, phase: index * 3,
+                                          anime: animePoissons)
+                        }
+                        .position(x: x, y: placement.y * h)
                     }
                 }
                 // Quelques paillettes de nourriture près de la surface.
@@ -269,9 +286,21 @@ private struct VueEcranVerrouille: View {
     }
 }
 
+/// La vue du widget. La famille arrive en paramètre (jamais lue dans l'environnement) : la vue se rend aussi
+/// hors widget (tests d'image). `fondVisible` dessine l'eau derrière la vue ; sinon c'est `containerBackground`.
 struct VueAquariumWidget: View {
     let entree: EntreeAquarium
-    @Environment(\.widgetFamily) private var famille
+    let famille: WidgetFamily
+    let fondVisible: Bool
+    /// Faux : poissons figés (tests d'image). Vrai par défaut.
+    let anime: Bool
+
+    init(entree: EntreeAquarium, famille: WidgetFamily, fondVisible: Bool = false, anime: Bool = true) {
+        self.entree = entree
+        self.famille = famille
+        self.fondVisible = fondVisible
+        self.anime = anime
+    }
 
     private var instantane: InstantaneAquarium { entree.instantane }
     private var nombrePoissons: Int { instantane.poissons.reduce(0) { $0 + $1.nombre } }
@@ -281,8 +310,15 @@ struct VueAquariumWidget: View {
     }
 
     var body: some View {
-        contenu
-            .containerBackground(for: .widget) { FondEau() }
+        if fondVisible {
+            ZStack {
+                FondEau(famille: famille)
+                contenu
+            }
+        } else {
+            contenu
+                .containerBackground(for: .widget) { FondEau(famille: famille) }
+        }
     }
 
     @ViewBuilder
@@ -314,7 +350,7 @@ struct VueAquariumWidget: View {
             if instantane.poissons.isEmpty {
                 TexteVide()
             } else {
-                CoucheNage(entree: entree, limite: limite(famille))
+                CoucheNage(entree: entree, famille: famille, anime: anime)
                     .blur(radius: verrouille ? 9 : 0)
                     .accessibilityElement(children: .ignore)
                     .accessibilityLabel(etiquette)
@@ -335,3 +371,26 @@ struct VueAquariumWidget: View {
         }
     }
 }
+
+#if DEBUG
+extension EntreeAquarium {
+    /// Un aquarium d'exemple pour rendre des images (tests, aperçus) : 5 poissons aux vrais noms d'images.
+    /// La date est fixe, donc la nage aussi. `repas` : une ration vient d'être donnée (poissons en surface).
+    static func exempleRendu(pro: Bool, repas: Bool = false) -> EntreeAquarium {
+        let date = Date(timeIntervalSince1970: 1_800_000_000)
+        let instantane = InstantaneAquarium(
+            poissons: [
+                .init(id: "ex-brochet", slug: "brochet", rarete: 3, relache: true, nom: "Brochet"),
+                .init(id: "ex-truite", slug: "truite-fario", rarete: 2, relache: true, nom: "Truite fario"),
+                .init(id: "ex-sandre", slug: "sandre", rarete: 2, relache: false, nom: "Sandre"),
+                .init(id: "ex-perche", slug: "perche-commune", rarete: 1, relache: true, nom: "Perche commune"),
+                .init(id: "ex-blackbass", slug: "black-bass", rarete: 0, relache: true, nom: "Black-bass"),
+            ],
+            especes: 12, rations: 3, estPro: pro,
+            dernierRepas: repas ? date.addingTimeInterval(-120) : nil,
+            misAJour: date
+        )
+        return EntreeAquarium(date: date, instantane: instantane)
+    }
+}
+#endif
