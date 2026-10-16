@@ -22,11 +22,33 @@ nonisolated enum PontAquariumWidget {
             poissons: poissons,
             especes: especes,
             rations: actuel.rations,
-            estPro: estPro,
+            estPro: estPro || proForce,
             dernierRepas: actuel.dernierRepas,
             misAJour: .now
         )
         ecrireEtRecharger(neuf)
+    }
+
+    /// DEBUG seulement : l'argument de lancement `-FishMeForcerPro YES` fait passer le widget en Pro
+    /// (simulateur, vidéo de démo, sans achat sandbox). N'existe pas en Release : toujours faux.
+    static var proForce: Bool {
+        #if DEBUG
+        UserDefaults.standard.bool(forKey: "FishMeForcerPro")
+        #else
+        false
+        #endif
+    }
+
+    /// DEBUG seulement : à appeler au lancement (RootView, `.task`). Avec `-FishMeForcerPro YES`, réécrit le fichier
+    /// partagé avec Pro actif, sans attendre une nouvelle prise. Ne fait rien sans l'argument, ni en Release.
+    static func appliquerProForce() {
+        #if DEBUG
+        guard proForce else { return }
+        var instantane = DepotAquariumWidget.lire()
+        instantane.estPro = true
+        instantane.misAJour = .now
+        ecrireEtRecharger(instantane)
+        #endif
     }
 
     /// Une session terminée donne des rations.

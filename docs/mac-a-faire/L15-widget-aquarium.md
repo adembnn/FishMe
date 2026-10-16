@@ -104,3 +104,8 @@ sur la carte, aucune coordonnée, photos sans métadonnées. Un toucher retourne
 Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntentTimelineProvider` ; `@Parameter` sur un `AppEntity?` ;
 `rotation3DEffect` dans une transition de widget (si le retournement ne joue pas, il reste un fondu) ;
 `.widgetAccentedRenderingMode` après `.resizable()` ; `UIImage` dans une `TimelineEntry` (`@unchecked Sendable`) ; `nonisolated` sur les intents.
+
+## Démo sans achat (DEBUG seulement)
+- Dans `RootView`, au lancement : `.task { PontAquariumWidget.appliquerProForce() }` (ne fait rien sans l'argument, ni en Release).
+- Lancer avec `-FishMeForcerPro YES` : le widget aquarium passe en Pro (poissons visibles, bouton nourrir) ; chaque `publier` le garde.
+- Simulateur : `xcrun simctl launch booted ai.mwm.build.challenge.team.01 -FishMeForcerPro YES`
