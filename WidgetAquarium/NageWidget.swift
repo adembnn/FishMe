@@ -140,6 +140,10 @@ nonisolated public enum NageWidget {
         public let profondeur: Double
         /// Assiette en radians (positive : il monte), au plus ±0,22.
         public let assiette: Double
+        /// Taille à l'écran (perspective) : 1 = au premier plan ; plus petit quand il est loin.
+        public var echelle: Double = 1
+        /// Opacité : un poisson qui arrive du fond de l'océan apparaît peu à peu.
+        public var opacite: Double = 1
     }
 
     /// Une boucle de `nombre` poses (10 s), pour un poisson.
@@ -232,8 +236,113 @@ nonisolated public enum NageWidget {
             if abs(sens) < 0.18 { sens = sens < 0 ? -0.18 : 0.18 }
             let image = Int((phase * m).rounded(.down)) % max(imagesCycle, 1)
             phase = (phase + frequence(etat.v, longueur) * dt * echelleCycles).truncatingRemainder(dividingBy: 1)
+            let p = bac.profondeur > 0 ? z / bac.profondeur : 0
             return PoseNage(x: x, y: y / max(rapport, 1e-6), sens: sens, image: image,
-                            profondeur: bac.profondeur > 0 ? z / bac.profondeur : 0, assiette: etat.assiette)
+                            profondeur: p, assiette: etat.assiette, echelle: 1.04 - 0.12 * p)
+        }
+    }
+
+    // MARK: - Pleine eau (Adem, 16 oct. 07h)
+
+    // Un océan sans décor, vu en perspective : les poissons ne font plus demi-tour contre les bords, ils traversent
+    // le widget, en sortent et reviennent ailleurs (un autre bord, une autre hauteur, ou du fond de l'océan).
+    // Un widget ne peut pas dessiner hors de son cadre : le poisson sort par le bord et disparaît, puis rentre ailleurs.
+    // Monde : X en largeurs de widget, Y en largeurs (0 = haut), Z de 0 (premier plan) à 1 (loin). Point de fuite au
+    // centre ; à la profondeur z, tout est réduit de 1 / (1 + 1.4 z) (0,42 au plus loin).
+
+    /// Réduction de perspective à la profondeur z.
+    static func perspective(_ z: Double) -> Double { 1 / (1 + 1.4 * min(max(z, 0), 1)) }
+
+    /// Une boucle de `nombre` poses (10 s) en pleine eau : une ou plusieurs traversées, chacune d'un point hors du
+    /// widget à un autre. `longueur` : longueur du poisson au premier plan, en part de la largeur ; `rapport` : h / l.
+    public static func traversees(id: String, slug: String, creneau: Int = 0, nombre: Int = 160,
+                                  duree: TimeInterval = 10, imagesCycle: Int = 8, longueur: Double,
+                                  rapport: Double) -> [PoseNage] {
+        let n = max(nombre, 1)
+        let e = espece(slug)
+        var graine = UInt64(hasard(id, creneau, "pleine-eau") * 9_007_199_254_740_992)
+        let h = max(rapport, 0.1)
+        let fuite = (x: 0.5, y: h * 0.45)
+        // Vitesse visée à l'écran (largeurs par seconde) : celle de l'espèce, lisible dans un petit cadre.
+        let vise = min(max(e.croisiere * longueur * 1.8, 0.11), 0.32)
+        let k = max(1, min(3, Int((duree * vise / 1.4).rounded(.down))))
+        let tranche = duree / Double(k)
+
+        // Les traversées : départ et arrivée hors du cadre (à l'écran), à une profondeur donnée.
+        struct Traversee { var a: (x: Double, y: Double, z: Double); var b: (x: Double, y: Double, z: Double)
+                           var c: (x: Double, y: Double, z: Double); var duFond: Bool }
+        func monde(_ ex: Double, _ ey: Double, _ z: Double) -> (x: Double, y: Double, z: Double) {
+            let s = perspective(z)
+            return (fuite.x + (ex - fuite.x) / s, fuite.y + (ey - fuite.y) / s, z)
+        }
+        var chemins: [Traversee] = []
+        var versLaDroite = entre(0, 1, &graine) < 0.5
+        for _ in 0..<k {
+            let duFond = entre(0, 1, &graine) < 0.25
+            let za = duFond ? 1.0 : entre(0, 0.85, &graine)
+            let zb = duFond ? entre(0, 0.35, &graine) : min(max(za + entre(-0.4, 0.4, &graine), 0), 0.9)
+            let marge = { (z: Double) in longueur * perspective(z) * 0.6 }
+            let gauche = { (z: Double) in -marge(z) }, droite = { (z: Double) in 1 + marge(z) }
+            // Départ : un bord (gauche ou droite), à n'importe quelle hauteur, coins compris ; ou au loin, dans l'eau.
+            let ex0 = duFond ? entre(0.25, 0.75, &graine) : (versLaDroite ? gauche(za) : droite(za))
+            let ey0 = duFond ? entre(h * 0.25, h * 0.75, &graine) : entre(-0.05 * h, 1.05 * h, &graine)
+            // Arrivée : le bord d'en face, ou parfois le haut ou le bas (il plonge ou remonte en sortant).
+            let tirage = entre(0, 1, &graine)
+            var ex1 = versLaDroite ? droite(zb) : gauche(zb)
+            var ey1 = entre(-0.05 * h, 1.05 * h, &graine)
+            if tirage < 0.2 {
+                ex1 = entre(0.55, 0.95, &graine); if !versLaDroite { ex1 = 1 - ex1 }
+                ey1 = tirage < 0.1 ? -marge(zb) : h + marge(zb)
+            }
+            let a = monde(ex0, ey0, za), b = monde(ex1, ey1, zb)
+            // Point de contrôle : une courbe douce, un peu au-dessus ou au-dessous de la ligne droite.
+            let mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2
+            let c = (x: mx, y: my + entre(-0.25, 0.25, &graine) * h, z: (a.z + b.z) / 2)
+            chemins.append(Traversee(a: a, b: b, c: c, duFond: duFond))
+            if entre(0, 1, &graine) < 0.6 { versLaDroite.toggle() }
+        }
+
+        func point(_ t: Traversee, _ u: Double) -> (x: Double, y: Double, z: Double) {
+            let v = 1 - u
+            return (v * v * t.a.x + 2 * v * u * t.c.x + u * u * t.b.x,
+                    v * v * t.a.y + 2 * v * u * t.c.y + u * u * t.b.y,
+                    v * v * t.a.z + 2 * v * u * t.c.z + u * u * t.b.z)
+        }
+        // Avance douce le long de la courbe (légère accélération puis croisière), et ondulation verticale.
+        let ondule = entre(0, 2 * .pi, &graine)
+        var etats: [(x: Double, y: Double, z: Double, vx: Double, vy: Double, vz: Double, vitesse: Double)] = []
+        for j in 0...n {
+            let t = Double(j) / Double(n) * duree
+            let i = min(Int(t / tranche), k - 1)
+            let u = min(max((t - Double(i) * tranche) / tranche, 0), 1)
+            let du = 1e-3
+            let p0 = point(chemins[i], u), p1 = point(chemins[i], min(u + du, 1)), pm = point(chemins[i], max(u - du, 0))
+            let dt = (min(u + du, 1) - max(u - du, 0)) * tranche
+            let houle = 0.012 * sin(2 * .pi * t / 3.3 + ondule)
+            let vx = (p1.x - pm.x) / dt, vy = (p1.y - pm.y) / dt, vz = (p1.z - pm.z) / dt
+            etats.append((p0.x, p0.y + houle, p0.z, vx, vy, vz, (vx * vx + vy * vy).squareRoot()))
+        }
+        // Battement : nombre entier de cycles sur la boucle.
+        let dt = duree / Double(n)
+        let cycles = etats.prefix(n).reduce(0) { $0 + frequence($1.vitesse, longueur) * dt }
+        let echelleCycles = max(cycles.rounded(), 1) / max(cycles, 1e-6)
+        var phase = hasard(id, creneau, "battement")
+        let m = Double(max(imagesCycle, 1))
+        return (0..<n).map { j in
+            let q = etats[j]
+            let s = perspective(q.z)
+            let ex = fuite.x + (q.x - fuite.x) * s, ey = fuite.y + (q.y - fuite.y) * s
+            // Cap : surtout de profil ; il ne s'amincit que s'il fonce vers nous ou s'éloigne.
+            let cap = atan2(-q.vz * 0.6, q.vx)
+            var sens = cos(cap) / max(hypot(cos(cap), 0.35 * sin(cap)), 1e-6)
+            if abs(sens) < 0.18 { sens = sens < 0 ? -0.18 : 0.18 }
+            let assiette = min(max(atan2(-q.vy, abs(q.vx) + 1e-6) * 0.6, -0.22), 0.22)
+            let image = Int((phase * m).rounded(.down)) % max(imagesCycle, 1)
+            phase = (phase + frequence(q.vitesse, longueur) * dt * echelleCycles).truncatingRemainder(dividingBy: 1)
+            // Il sort du bleu lointain peu à peu (au-delà de z = 0,7), et se perd un peu dans l'eau au loin.
+            let opacite = min(1, max(0, (1 - q.z) / 0.3)) * (1 - 0.25 * q.z)
+            return PoseNage(x: ex, y: ey / h, sens: sens, image: image, profondeur: q.z, assiette: assiette,
+                            echelle: s, opacite: opacite)
         }
     }
 

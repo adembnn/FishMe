@@ -28,8 +28,8 @@ nonisolated func limitePoissons(_ famille: WidgetFamily) -> Int {
 private func partPoisson(_ famille: WidgetFamily) -> Double {
     switch famille {
     case .systemSmall: 0.44
-    case .systemMedium: 0.23
-    case .systemLarge: 0.27
+    case .systemMedium: 0.26
+    case .systemLarge: 0.32
     default: 0.24
     }
 }
@@ -115,16 +115,16 @@ private struct CoucheNage: View {
         GeometryReader { geo in
             let l = geo.size.width
             let h = geo.size.height
-            // Même nage que l'aquarium 3D (NageWidget.boucle, portage de nage.js), calculée une fois par poisson.
+            // Pleine eau : chaque poisson traverse en perspective (NageWidget.traversees), calculé une fois par poisson.
             let nageurs: [Nageur] = placements.compactMap { placement in
                 guard let poisson = parId[placement.id] else { return nil }
                 let longueur = part * placement.echelle
                 return Nageur(placement: placement, slug: poisson.slug, largeur: l * longueur,
                               cycle: PoissonVivant.cycleDisponible(poisson.slug),
-                              poses: NageWidget.boucle(id: poisson.id, slug: poisson.slug, creneau: creneau,
-                                                       nombre: HorlogeAnimation.nombreImages, longueur: longueur,
-                                                       rapport: Double(h / max(l, 1)), repas: placement.auRepas,
-                                                       centre: (placement.x, placement.y)))
+                              // Pleine eau (Adem, 16 oct. 07h) : traversées en perspective, sorties par les bords.
+                              poses: NageWidget.traversees(id: poisson.id, slug: poisson.slug, creneau: creneau,
+                                                           nombre: HorlogeAnimation.nombreImages, longueur: longueur,
+                                                           rapport: Double(h / max(l, 1))))
             }
             ZStack {
                 // Couche de base (poissons à leur place de départ), puis 160 copies (10 s à 16 images/s) ; chaque copie
@@ -139,7 +139,8 @@ private struct CoucheNage: View {
                         ForEach(ordre) { nageur in
                             let pose = nageur.poses[j]
                             ImagePoisson(slug: nageur.slug, image: nageur.cycle ? pose.image : nil,
-                                         largeur: nageur.largeur * (1.04 - 0.12 * pose.profondeur), sens: pose.sens)
+                                         largeur: nageur.largeur * pose.echelle, sens: pose.sens)
+                                .opacity(pose.opacite)
                                 // Il lève un peu le nez quand il monte (moitié de l'assiette de nage.js).
                                 .rotationEffect(.radians(-pose.assiette * 0.5 * (pose.sens > 0 ? 1 : -1)))
                                 .position(x: pose.x * l, y: pose.y * h)

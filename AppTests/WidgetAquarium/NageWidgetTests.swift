@@ -345,3 +345,58 @@ struct NageTests {
         for j in 0..<160 { #expect(abs(poses[(j + 1) % 160].x - poses[j].x) <= maxPas) }
     }
 }
+
+@Suite("Pleine eau")
+struct PleineEauTests {
+    private let slugs = ["brochet", "gardon", "tanche", "truite-fario", "silure"]
+    private func boucle(_ slug: String, id: String = "p1", rapport: Double = 170.0 / 364) -> [NageWidget.PoseNage] {
+        NageWidget.traversees(id: id, slug: slug, creneau: 3, nombre: 160, longueur: 0.26, rapport: rapport)
+    }
+    private func dehors(_ q: NageWidget.PoseNage) -> Bool {
+        let demi = 0.26 * q.echelle / 2
+        return q.x + demi < 0 || q.x - demi > 1 || q.y < -0.05 || q.y > 1.05 || q.opacite < 0.02
+    }
+
+    @Test func deterministeEtPropreAChaquePoisson() {
+        #expect(boucle("gardon") == boucle("gardon"))
+        #expect(boucle("gardon", id: "p1") != boucle("gardon", id: "p2"))
+    }
+
+    /// Il sort du widget et rentre ailleurs : la boucle passe hors du cadre, et elle se referme hors du cadre.
+    @Test func sortEtRevient() {
+        for slug in slugs {
+            for id in ["a", "b", "c", "d"] {
+                let poses = boucle(slug, id: id)
+                #expect(poses.count == 160)
+                #expect(poses.contains(where: dehors), "\(slug) \(id) ne sort jamais")
+                #expect(poses.contains { !dehors($0) }, "\(slug) \(id) ne se voit jamais")
+                #expect(dehors(poses[0]), "\(slug) \(id) : la boucle doit se refermer hors du cadre")
+            }
+        }
+    }
+
+    /// Dans le cadre, il avance sans saut et regarde là où il va.
+    @Test func nageFluideDansLeCadre() {
+        for slug in slugs {
+            let poses = boucle(slug)
+            var bon = 0, avance = 0
+            for j in 0..<159 where !dehors(poses[j]) && !dehors(poses[j + 1]) {
+                let dx = poses[j + 1].x - poses[j].x
+                #expect(abs(dx) < 0.06 && abs(poses[j + 1].y - poses[j].y) < 0.12, "\(slug) saut à \(j)")
+                if abs(dx) > 0.002 { avance += 1; if (dx > 0) == (poses[j].sens > 0) { bon += 1 } }
+            }
+            #expect(Double(bon) >= 0.9 * Double(avance), "\(slug) nage à reculons")
+        }
+    }
+
+    @Test func perspectiveEtOpacite() {
+        for slug in slugs {
+            for q in boucle(slug) {
+                #expect(q.echelle >= 0.41 && q.echelle <= 1)
+                #expect(q.opacite >= 0 && q.opacite <= 1)
+                #expect(abs(q.sens) >= 0.18 && abs(q.sens) <= 1)
+                #expect((0..<8).contains(q.image))
+            }
+        }
+    }
+}

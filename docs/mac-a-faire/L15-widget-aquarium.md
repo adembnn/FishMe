@@ -155,3 +155,10 @@ Points à vérifier à la compilation : `AppIntentConfiguration` avec `AppIntent
 - Adem trouve 8 images/s saccadé : `HorlogeAnimation.imagesParSeconde = 16` (160 copies sur 10 s). Rien d'autre à changer.
 - À surveiller sur l'iPhone : mémoire de l'extension (limite d'environ 30 Mo) et fluidité. Si le widget ne s'affiche plus ou
   se fige, essayer 12 (une seule constante), et le dire au fil Widget avec la mesure.
+
+## Pleine eau (Adem, 16 oct. 07h)
+- Plus de décor : `FondsWidget.xcassets` contient un océan provisoire (dégradé, rayons, particules), en attendant le fond
+  en perspective du fil « Aquarium 3D des prises », qui refait aussi les poissons (plus cartoon).
+- Nage : `NageWidget.traversees` remplace `boucle` dans la vue. Chaque poisson traverse en perspective (point de fuite
+  au centre, plus petit et plus transparent au loin), sort par un bord et rentre ailleurs, parfois du fond de l'océan.
+  Un widget ne dessine jamais hors de son cadre : le poisson sort par le bord et disparaît.
