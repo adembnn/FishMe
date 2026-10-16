@@ -111,6 +111,8 @@ final class ParcoursApp {
     var carteRevelee: CarteRevelee?
     private var attente: [Modal] = []
     var positionPassee = false
+    /// Le choix de zone (position refusée) ou la redemande est à l'écran : aucune autre feuille ne s'ouvre en même temps.
+    var choixDeZoneOuvert = false
     var consentement: Consentement
     private var consentementPropose = false
     private var carteListeEnvoyee = false
@@ -304,10 +306,10 @@ final class ParcoursApp {
     private var tunnelVu: Bool { UserDefaults.standard.bool(forKey: ClesConseils.tunnelVu) }
 
     /// Vrai quand la carte peut ouvrir la question du niveau : position demandée et aucune autre feuille.
-    var questionNiveauPermise: Bool { positionPassee && courant == nil && attente.isEmpty }
+    var questionNiveauPermise: Bool { positionPassee && !choixDeZoneOuvert && courant == nil && attente.isEmpty }
 
     func proposerSuitePremierLancement() {
-        guard courant == nil, attente.isEmpty, questionVue else { return }
+        guard courant == nil, attente.isEmpty, !choixDeZoneOuvert, questionVue else { return }
         if !tunnelVu {
             UserDefaults.standard.set(true, forKey: ClesConseils.tunnelVu)
             courant = .tunnel
@@ -604,8 +606,11 @@ private struct RacineContenu: View {
             app.publierAquarium()
         }
         .onOpenURL { app.ouvrir(url: $0) }
-        .task {
-            try? await Task.sleep(for: .seconds(1))
+        // La question du niveau et le tunnel attendent la réponse à la position (accordée ou refusée), puis le choix de zone.
+        // Repli : si le système ne répond pas en 30 s, on continue sans elle.
+        .task(id: app.gps.nAPasEteDemandee) {
+            try? await Task.sleep(for: .seconds(app.gps.nAPasEteDemandee ? 30 : 1))
+            if Task.isCancelled { return }
             app.positionPassee = true
             app.proposerSuitePremierLancement()
         }
@@ -631,19 +636,26 @@ private struct RacineContenu: View {
     // MARK: Volet Carte (L2) avec L5, L12, L13
 
     @ViewBuilder private var carte: some View {
-        if app.sansPositionAffiche {
-            SansPositionView(
-                zone: nil,
-                changerDeZone: { app.sansPositionAffiche = false },
-                autoriserPosition: {
-                    if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
-                },
-                voirLaCarte: { app.sansPositionAffiche = false },
-                ouvrirPescedex: { app.onglet = .pescedex },
-                ouvrirAmis: { app.onglet = .club; amisOuverts = true })
-        } else {
-            vueCarte
+        Group {
+            if app.sansPositionAffiche {
+                carteSansPosition
+            } else {
+                vueCarte
+            }
         }
+        .questionNiveau(declenchee: app.questionNiveauPermise)
+    }
+
+    private var carteSansPosition: some View {
+        SansPositionView(
+            zone: nil,
+            changerDeZone: { app.sansPositionAffiche = false },
+            autoriserPosition: {
+                if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+            },
+            voirLaCarte: { app.sansPositionAffiche = false },
+            ouvrirPescedex: { app.onglet = .pescedex },
+            ouvrirAmis: { app.onglet = .club; amisOuverts = true })
     }
 
     private var vueCarte: some View {
@@ -661,8 +673,11 @@ private struct RacineContenu: View {
             emplacementConseil: { espece in AnyView(ConseilEmplacement(app: app, espece: espece)) },
             onCommencerSession: { spot in app.commencer(spot) },
             onSpotChange: { spot in app.spotChange(spot) },
-            ouChercher: { position in AnyView(OuChercherVue(especes: app.coins, position: position)) })
-            .questionNiveau(declenchee: app.questionNiveauPermise)
+            ouChercher: { position in AnyView(OuChercherVue(especes: app.coins, position: position)) },
+            surChoixDeZone: { ouvert in
+                app.choixDeZoneOuvert = ouvert
+                if !ouvert { app.proposerSuitePremierLancement() }
+            })
             .task { app.carteListe() }
     }
 

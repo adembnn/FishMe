@@ -28,6 +28,8 @@ struct VueCarte: View {
     let onSpotChange: (Spot) -> Void
     /// L7 « Où chercher » : la liste des coins proches d'une position, présentée à côté du filtre d'espèce.
     let ouChercher: ((Coordonnee) -> AnyView)?
+    /// Vrai tant que le choix de zone ou la redemande est à l'écran : la racine attend avant d'ouvrir une autre feuille.
+    let surChoixDeZone: (Bool) -> Void
     @State private var afficherOuChercher = false
 
     init(services: ServicesCarte,
@@ -40,7 +42,8 @@ struct VueCarte: View {
          emplacementConseil: @escaping (Espece) -> AnyView = { _ in AnyView(EmptyView()) },
          onCommencerSession: @escaping (Spot) -> Void = { _ in },
          onSpotChange: @escaping (Spot) -> Void = { _ in },
-         ouChercher: ((Coordonnee) -> AnyView)? = nil) {
+         ouChercher: ((Coordonnee) -> AnyView)? = nil,
+         surChoixDeZone: @escaping (Bool) -> Void = { _ in }) {
         _modele = State(initialValue: ModeleCarte(services: services))
         self.spotFixe = spotFixe
         self.sessionsTerminees = sessionsTerminees
@@ -52,6 +55,7 @@ struct VueCarte: View {
         self.onCommencerSession = onCommencerSession
         self.onSpotChange = onSpotChange
         self.ouChercher = ouChercher
+        self.surChoixDeZone = surChoixDeZone
     }
 
     var body: some View {
@@ -139,6 +143,9 @@ struct VueCarte: View {
             if let nouvelle { modele.appliquer(position: nouvelle, refusee: false) }
         }
         .onChange(of: position.statut) { _, _ in reagirAuStatut() }
+        .onChange(of: modele.afficherChoixDeZone || modele.afficherRedemande) { _, ouvert in surChoixDeZone(ouvert) }
+        // Le spot proposé (zone choisie ou position) est connu de la racine : tunnel, conseils et conditions s'en servent.
+        .onChange(of: modele.spotLocal) { _, nouveau in if let nouveau { onSpotChange(nouveau) } }
     }
 
     // MARK: Départ
@@ -292,16 +299,17 @@ struct VueCarte: View {
         }
         .buttonStyle(.plain)
 
-        if ouChercher != nil || (modele.peutChangerDeSpot && modele.spotAffiche != nil) {
+        if ouChercher != nil || modele.peutChangerDeSpot {
             Menu {
                 if ouChercher != nil {
                     Button { afficherOuChercher = true } label: {
                         Label("Où chercher près d'ici", systemImage: "mappin.and.ellipse")
                     }
                 }
-                if modele.peutChangerDeSpot, modele.spotAffiche != nil {
+                if modele.peutChangerDeSpot {
                     Button { modele.modeChoixDuSpot.toggle() } label: {
-                        Label(modele.modeChoixDuSpot ? "Annuler" : "Changer de spot", systemImage: "scope")
+                        Label(modele.modeChoixDuSpot ? "Annuler" : (modele.spotAffiche == nil ? "Poser mon spot" : "Changer de spot"),
+                              systemImage: "scope")
                     }
                 }
             } label: {

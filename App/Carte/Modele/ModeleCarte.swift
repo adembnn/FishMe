@@ -87,7 +87,10 @@ final class ModeleCarte {
                 proposerSpot(pres: position)
             }
         } else if refusee {
-            if case .zoneChoisie = depart { return }
+            switch depart {
+            case .zoneChoisie, .horsDeFrance: return
+            default: break
+            }
             depart = .choixDeZone
             afficherChoixDeZone = true
         }
