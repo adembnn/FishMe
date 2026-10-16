@@ -26,3 +26,7 @@ Direction retenue pour chaque page de la toile (A · Plans, B · Réglages, C ·
 | P15 Écran verrouillé (boutons Prise et Pause) | A · Plans | 16 oct. 2h45 |
 | P22 Détails de la prise | A · Plans, avec une 3e option « Ne pas dire » | 16 oct. 2h47 |
 | P23 Verdict et révélation | B · Réglages (+ verso avec la vraie photo à dessiner) | 16 oct. 2h48 |
+| P24 Recto de la carte | A · Plans | 16 oct. 2h50 |
+| P25 Verso de la carte | C · Sujet | 16 oct. 2h50 |
+
+Décision (16 oct. 2h50) : badge « Trophée » sur la carte d'une prise plus grande que 90 % des prises connues de son espèce ; la rareté ne bouge pas (fréquence OFB seule).
