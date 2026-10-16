@@ -91,11 +91,13 @@ struct PescedexView: View {
             Text("Pescedex")
                 .font(Police.grandTitre)
                 .foregroundStyle(Palette.encre)
-            Text(sousTitre)
-                .font(Police.detail)
-                .foregroundStyle(Palette.encreDouce)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.top, 6)
+            if !sousTitre.isEmpty {
+                Text(sousTitre)
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, 6)
+            }
             if !estVide {
                 Picker("Volet", selection: $volet) {
                     ForEach(Volet.allCases) { Text($0.rawValue).tag($0) }
@@ -141,6 +143,8 @@ struct PescedexView: View {
             }
             return PescedexVide.texte
         }
+        // Avec le bloc de zone, la phrase est sous la barre : pas deux fois la même.
+        if zoneEnCartes { return "" }
         return c.phraseDeZone ?? c.texte
     }
 
@@ -166,7 +170,7 @@ struct PescedexView: View {
                         .frame(width: 32)
                         .accessibilityHidden(true)
                     // À brancher : le nom de l'eau (« La Marne ») n'existe pas dans le modèle ; le département seul, jamais un total national.
-                    Text("Département \(c.zone?.code ?? "")")
+                    Text(NomDeZone.texte(departement: c.zone) ?? "Zone")
                         .font(Police.corps)
                         .foregroundStyle(Palette.encre)
                     Spacer(minLength: 0)
@@ -191,6 +195,13 @@ struct PescedexView: View {
                         }
                     }
                     .frame(height: 12)
+                    // P48 : l'unique phrase du compteur, juste sous la barre.
+                    if let phrase = c.phraseDeZone {
+                        Text(phrase)
+                            .font(Police.detail)
+                            .foregroundStyle(Palette.encreDouce)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
                 }
                 .padding(.top, Espace.m)
                 .padding(.horizontal, Espace.l)
@@ -218,6 +229,24 @@ struct PescedexView: View {
             }
             .tuileFishMe(rayon: Rayon.m)
         }
+    }
+
+    /// Sans action fournie, l'écran vide garde quand même une ligne utile (rien d'inventé).
+    private var premierePrise: some View {
+        HStack(spacing: Espace.m) {
+            Image(systemName: "camera")
+                .font(.system(size: 22, weight: .bold, design: .rounded))
+                .foregroundStyle(Palette.marine)
+                .frame(width: 32)
+                .accessibilityHidden(true)
+            Text(PescedexVide.texte)
+                .font(Police.corps)
+                .foregroundStyle(Palette.encre)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(.horizontal, Espace.l)
+        .frame(minHeight: 56)
+        .tuileFishMe(rayon: Rayon.m)
     }
 
     private func ligneDepart(_ titre: String, icone: String, action: @escaping () -> Void) -> some View {
@@ -256,7 +285,7 @@ struct PescedexView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.s) {
                 if estVide {
-                    if photographier != nil || declarer != nil { pourCommencer }
+                    if photographier != nil || declarer != nil { pourCommencer } else { premierePrise }
                 } else {
                     if zoneEnCartes { blocZone }
                     sectionCartes("Trouvées", trouvees)
@@ -516,7 +545,7 @@ struct DosAATrouver: View {
                             .accessibilityHidden(true)
                         Spacer(minLength: 0)
                         Text(espece.nom)
-                            .font(Police.taille(12))
+                            .font(Police.taille(13, .heavy))
                             .foregroundStyle(.white)
                             .lineLimit(1)
                             .minimumScaleFactor(0.7)
@@ -602,19 +631,10 @@ struct FicheEspeceView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.m) {
-                Button { dismiss() } label: {
-                    HStack(spacing: Espace.xs) {
-                        Image(systemName: "chevron.left")
-                            .font(.system(size: 17, weight: .heavy, design: .rounded))
-                            .accessibilityHidden(true)
-                        Text("Pescedex").font(Police.corps)
-                    }
-                    .foregroundStyle(Palette.marine)
-                    .frame(minHeight: Gabarit.zoneTactile)
-                    .contentShape(Rectangle())
+                HStack {
+                    Spacer(minLength: 0)
+                    BoutonRond(role: .fermer, rendu: .verre) { dismiss() }
                 }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Retour au Pescedex")
                 VStack(alignment: .leading, spacing: Espace.xs) {
                     Text(emplacement.espece.nom).font(Police.grandTitre).foregroundStyle(Palette.encre)
                     Text(estDeclaree ? "Carte déclarée" : emplacement.espece.nomLatin)
@@ -660,18 +680,16 @@ struct FicheEspeceView: View {
             .padding(.bottom, Espace.xl)
         }
         .scrollIndicators(.hidden)
-        .presentationDetents([.medium, .large])
+        .presentationDetents([.large])
         .background(Palette.fond.ignoresSafeArea())
     }
 
     private var tuileEspece: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
             Image(emplacement.espece.image)
-                .renderingMode(emplacement.carte == nil ? .template : .original)
                 .resizable().scaledToFit()
-                .foregroundStyle(Palette.silhouette)
                 .frame(maxWidth: .infinity)
-                .frame(height: 78)
+                .frame(height: 120)
                 .padding(.top, 14)
                 .accessibilityHidden(true)
             if zone != nil, style != .nonMesuree {
@@ -681,8 +699,8 @@ struct FicheEspeceView: View {
                         .font(Police.sousTitre)
                         .foregroundStyle(style.couleur)
                     Spacer(minLength: 0)
-                    if let part = partOFB {
-                        Text("\(part) %").font(Police.sousTitre).foregroundStyle(Palette.encreDouce)
+                    if let ligne = ligneChiffres {
+                        Text(ligne).font(Police.sousTitre).foregroundStyle(Palette.encreDouce)
                     }
                 }
                 Text(statOFB)
@@ -704,13 +722,18 @@ struct FicheEspeceView: View {
         return Int((Double(r.nPeches) / Double(r.nTotal) * 100).rounded())
     }
 
-    /// Chaque chiffre OFB porte son nombre de pêches et l'année du dernier relevé.
+    /// « 34 % · 10 sur 29 » sur une ligne. `nil` sans relevé.
+    private var ligneChiffres: String? {
+        guard let part = partOFB else { return nil }
+        return "\(part) % · \(emplacement.rarete.nPeches) sur \(emplacement.rarete.nTotal)"
+    }
+
+    /// La légende « OFB · année » ; le nombre de pêches est dans la ligne au-dessus.
     private var statOFB: String {
         let r = emplacement.rarete
-        let lieu = zone.map { " dans le \($0.code)" } ?? ""
         let annee = r.anneeDernierReleve.map { " · \($0)" } ?? ""
-        if r.niveau == .legendaire { return "Jamais relevée\(lieu) · OFB\(annee)" }
-        return "\(r.nPeches) pêches sur \(r.nTotal)\(lieu) · OFB\(annee)"
+        if r.niveau == .legendaire { return "Jamais relevée · OFB\(annee)" }
+        return "OFB\(annee)"
     }
 
     private func carteDeclaree(_ infos: InfosCarte) -> some View {

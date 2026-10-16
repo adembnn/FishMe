@@ -59,6 +59,7 @@ struct SeptJoursView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 Text("7 jours").font(Police.titre).foregroundStyle(Palette.encre)
+                    .frame(minHeight: Gabarit.zoneTactile, alignment: .leading)
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(jours, id: \.jour) { j in
                         VStack(spacing: Espace.s) {
@@ -86,7 +87,7 @@ struct SeptJoursView: View {
                         .font(Police.legende).foregroundStyle(Palette.encreDouce)
                         .padding(.top, Espace.s)
                 }
-                MarqueMeteoView(stockage: marque, mention: lecture.eau == nil ? nil : "Hub’Eau")
+                MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : "Hub’Eau")
                     .padding(.top, Espace.l)
             }
             .padding(.horizontal, 20)
@@ -94,8 +95,12 @@ struct SeptJoursView: View {
             .padding(.bottom, Espace.l)
         }
         .background(Palette.surface)
+        .overlay(alignment: .topTrailing) {
+            BoutonRond(role: .fermer, rendu: .verre)
+                .padding(.top, Espace.s).padding(.trailing, Espace.bord)
+        }
         .scrollIndicators(.hidden)
-        .presentationDetents([.medium, .large])
+        .presentationDetents([.height(560), .large])
         .presentationDragIndicator(.visible)
         .accessibilityIdentifier("sept-jours")
     }
@@ -115,7 +120,7 @@ struct SeptJoursView: View {
         let serie = eau.serie48h.sorted { $0.heure < $1.heure }.compactMap(\.hauteurM)
         if serie.count >= 2 {
             CourbeEau(valeurs: echantillon(serie, auPlus: 9))
-                .frame(height: 116)
+                .frame(height: 90)
                 .padding(.top, Espace.m)
             HStack {
                 Text("il y a 48 h")

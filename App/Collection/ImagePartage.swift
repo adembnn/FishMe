@@ -20,7 +20,9 @@ enum ImagePartage {
         let rendu = ImageRenderer(content: vue)
         rendu.scale = 3
         // Un premier rendu peut échouer le temps que le moteur graphique chauffe (simulateur) : un seul nouvel essai.
-        return (rendu.uiImage ?? rendu.uiImage)?.pngData()
+        // Rendu raté : on rend `nil` (le partage n'a pas d'image), jamais de plantage.
+        guard let image = rendu.uiImage ?? rendu.uiImage else { return nil }
+        return image.pngData()
     }
 }
 
@@ -34,6 +36,25 @@ private struct FondPartage<Carte: View>: View {
     private var legende: String {
         if let d = departement, !d.estInconnu { return "Mon Pescedex · \(d.code)" }
         return "Mon Pescedex"
+    }
+
+    /// L'icône de l'app quand l'image « fishme-icone-1024 » est rangée dans le bundle, sinon le poisson d'origine.
+    /// (L'icône d'app d'un `AppIcon.appiconset` n'est pas lisible par nom : on garde le repli.)
+    @ViewBuilder
+    private func logo(_ k: CGFloat) -> some View {
+        if let icone = UIImage(named: "fishme-icone-1024") {
+            Image(uiImage: icone)
+                .resizable().scaledToFit()
+                .frame(width: 24 * k, height: 24 * k)
+                .clipShape(RoundedRectangle(cornerRadius: 5 * k, style: .continuous))
+        } else {
+            Image(systemName: "fish.fill")
+                .font(Police.taille(13 * k, .heavy))
+                .foregroundStyle(.white)
+                .frame(width: 24 * k, height: 24 * k)
+                .background(Color(red: 13 / 255, green: 74 / 255, blue: 133 / 255),
+                            in: RoundedRectangle(cornerRadius: 5 * k, style: .continuous))
+        }
     }
 
     var body: some View {
@@ -53,12 +74,7 @@ private struct FondPartage<Carte: View>: View {
             .position(x: largeur / 2, y: hauteur * 0.46)
             VStack(spacing: 0) {
                 HStack(spacing: 8 * k) {
-                    Image(systemName: "fish.fill")
-                        .font(Police.taille(13 * k, .heavy))
-                        .foregroundStyle(.white)
-                        .frame(width: 24 * k, height: 24 * k)
-                        .background(Color(red: 13 / 255, green: 74 / 255, blue: 133 / 255),
-                                    in: RoundedRectangle(cornerRadius: 5 * k, style: .continuous))
+                    logo(k)
                     Text("FishMe")
                         .font(Police.taille(15 * k, .heavy))
                         .foregroundStyle(.white.opacity(0.85))

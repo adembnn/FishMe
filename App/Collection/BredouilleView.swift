@@ -11,28 +11,28 @@ struct BredouilleView: View {
         CarteCadre(style: .commun, declaree: false) {
             VStack(alignment: .leading, spacing: 12) {
                 Image(systemName: "water.waves")
-                    .font(.system(size: 44, weight: .bold, design: .rounded))
-                    .foregroundStyle(Jeton.ardoise)
+                    .font(Police.taille(44))
+                    .foregroundStyle(Palette.commun)
                 Text("Bredouille")
-                    .font(Jeton.police(30))
-                    .foregroundStyle(Jeton.encre)
+                    .font(Police.taille(30, .heavy))
+                    .foregroundStyle(Palette.encre)
                 Text("Pas de poisson cette fois, mais tu y étais.")
-                    .font(Jeton.police(15, .semibold))
-                    .foregroundStyle(Jeton.encreDouce)
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
                 Divider()
-                if let lieu = carte.lieuFlou { Text(lieu).font(Jeton.police(17)) }
-                Text(Formats.date(carte.debut)).font(Jeton.police(16, .semibold))
-                Text(Formats.lune(services.soleil.phaseLune(date: carte.debut))).font(Jeton.police(16, .semibold))
-                if let s = carte.dureeSecondes { Text("Session de \(Formats.duree(s))").font(Jeton.police(16, .semibold)) }
+                if let lieu = carte.lieuFlou { Text(lieu).font(Police.corps) }
+                Text(Formats.date(carte.debut)).font(Police.detail)
+                Text(Formats.lune(services.soleil.phaseLune(date: carte.debut))).font(Police.detail)
+                if let s = carte.dureeSecondes { Text("Session de \(Formats.duree(s))").font(Police.detail) }
                 if let c = carte.conditions {
                     Divider()
-                    Text("Conditions du départ").font(Jeton.police(13)).foregroundStyle(Jeton.encreDouce)
+                    Text("Conditions du départ").font(Police.legende).foregroundStyle(Palette.encreDouce)
                     if let slot = emplacements.meteoDuDos { slot(c) } else { BlocMeteoSimple(conditions: c) }
                     MarqueAppleWeather()
                 }
                 Spacer(minLength: 0)
             }
-            .foregroundStyle(Jeton.encre)
+            .foregroundStyle(Palette.encre)
             .padding(20)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
@@ -49,7 +49,7 @@ struct BredouillePleinEcranView: View {
 
     var body: some View {
         ZStack(alignment: .topLeading) {
-            Jeton.fondPage.ignoresSafeArea()
+            Palette.fond.ignoresSafeArea()
             VStack {
                 Spacer(minLength: 56)
                 BredouilleView(carte: carte, services: services, emplacements: emplacements).padding(.horizontal, 20)

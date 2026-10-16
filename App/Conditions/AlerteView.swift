@@ -20,14 +20,7 @@ struct AlerteView: View {
         VStack(spacing: 0) {
             HStack {
                 Spacer()
-                Button { fermer() } label: {
-                    Image(systemName: "xmark")
-                        .font(Police.taille(18))
-                        .foregroundStyle(Palette.encre)
-                        .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                        .background(Palette.fond, in: Circle())
-                }
-                .accessibilityLabel("Fermer")
+                BoutonRond(role: .fermer, rendu: .verre)
             }
             .padding(.top, Espace.s)
             GeometryReader { geo in
@@ -66,7 +59,7 @@ struct AlerteView: View {
                         Spacer(minLength: Espace.xl)
                         if let previensMoi {
                             InterrupteurPrevienMoi(modele: previensMoi, lecture: lecture)
-                                .padding(.horizontal, Espace.s)
+                                .padding(.horizontal, Espace.bord)
                         }
                         Spacer(minLength: Espace.l)
                     }
@@ -74,23 +67,27 @@ struct AlerteView: View {
                 }
                 .scrollIndicators(.hidden)
             }
+        }
+        .safeAreaInset(edge: .bottom, spacing: 0) {
             VStack(spacing: Espace.m) {
-                Button("Compris") { fermer() }
-                    .buttonStyle(.principal)
-                if let marque {
-                    MarqueMeteoView(stockage: marque,
-                                    libelleLien: alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources",
-                                    action: { withAnimation { sourceOuverte.toggle() } })
-                        .accessibilityHint("Affiche la source de l'alerte")
-                } else {
-                    Button { withAnimation { sourceOuverte.toggle() } } label: {
-                        Text(alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources")
-                            .font(Police.legende).foregroundStyle(Palette.marine).underline()
-                            .frame(minHeight: Gabarit.zoneTactile)
-                    }
+            Button("Compris") { fermer() }
+                .buttonStyle(.principal)
+            if let marque {
+                MarqueMeteoView(stockage: marque,
+                                libelleLien: alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources",
+                                action: { withAnimation { sourceOuverte.toggle() } })
                     .accessibilityHint("Affiche la source de l'alerte")
+            } else {
+                Button { withAnimation { sourceOuverte.toggle() } } label: {
+                    Text(alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources")
+                        .font(Police.legende).foregroundStyle(Palette.marine).underline()
+                        .frame(minHeight: Gabarit.zoneTactile)
                 }
+                .accessibilityHint("Affiche la source de l'alerte")
             }
+        }
+            .padding(.top, Espace.s)
+            .background(Palette.surface)
         }
         .padding(.horizontal, Espace.bord)
         .padding(.bottom, Espace.l)
@@ -102,13 +99,13 @@ struct AlerteView: View {
         switch alerte.type {
         case .orage:
             // À brancher : le niveau de vigilance de l'orage (jaune, orange, rouge) n'est pas dans `Alerte`.
-            return "Orage, vigilance"
+            return "Alerte orage"
         case .crue:
             switch lecture?.eau?.vigilance {
             case .jaune: return "Crue, vigilance jaune"
             case .orange: return "Crue, vigilance orange"
             case .rouge: return "Crue, vigilance rouge"
-            default: return "Crue, vigilance"
+            default: return "Alerte crue"
             }
         }
     }

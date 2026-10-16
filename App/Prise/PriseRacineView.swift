@@ -98,17 +98,19 @@ struct PriseEtapePhoto: View {
     private var permission: some View {
         // P38 C : grande icône d'appareil photo en trait fin, titre et phrase au milieu, bouton et lien en bas.
         VStack(spacing: 0) {
+            Spacer(minLength: Espace.xxl)
             Image(systemName: "camera")
-                .font(.system(size: 210, weight: .thin, design: .rounded))
+                .font(.system(size: 150, weight: .regular, design: .rounded))
                 .foregroundStyle(Palette.marine)
-                .padding(.top, 37)
                 .accessibilityHidden(true)
             Spacer(minLength: Espace.l)
             VStack(spacing: Espace.m) {
                 Text("Photographier ta prise")
                     .font(Police.grandTitre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
                     .accessibilityAddTraits(.isHeader)
-                Text("La photo reste sur ton iPhone, sans GPS.")
+                Text(acces == .denied || acces == .restricted
+                     ? "L'appareil photo est coupé pour FishMe."
+                     : "La photo reste sur ton iPhone, sans GPS.")
                     .font(Police.detail).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
             }
             .padding(.horizontal, Espace.xl)
@@ -136,7 +138,7 @@ struct PriseEtapePhoto: View {
         .background(Palette.surface.ignoresSafeArea())
         .overlay(alignment: .topLeading) {
             // La maquette n'a pas de croix ici ; on la garde pour qu'on puisse toujours quitter l'écran.
-            BoutonRond(role: .fermer, rendu: .verre, action: fermer).padding(Espace.bord)
+            BoutonRond(role: .fermer, rendu: .simple, action: fermer).padding(Espace.bord)
         }
     }
 
@@ -162,7 +164,7 @@ struct PriseEtapePhoto: View {
             Color(red: 8 / 255, green: 42 / 255, blue: 76 / 255).opacity(0.28).ignoresSafeArea()
             VStack(spacing: 0) {
                 HStack {
-                    BoutonRond(role: .fermer, rendu: .verre, action: fermer)
+                    BoutonRond(role: .fermer, rendu: .simple, action: fermer)
                     Spacer()
                 }
                 Spacer(minLength: 0)

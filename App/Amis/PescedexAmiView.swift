@@ -23,6 +23,12 @@ struct PescedexAmiView: View {
         return cartes.filter { vues.insert($0.espece).inserted }
     }
 
+    /// Les espèces que j'ai et que l'ami n'a pas encore : des silhouettes, six au plus.
+    private var manquantes: [String] {
+        let siennes = Set(especes.map(\.espece))
+        return Array(gestion.mesEspeces.subtracting(siennes).sorted().prefix(6))
+    }
+
     private var zone: String? {
         let comptes = Dictionary(grouping: cartes.compactMap(\.departement), by: { $0 }).mapValues(\.count)
         return comptes.max { $0.value < $1.value }?.key
@@ -67,7 +73,12 @@ struct PescedexAmiView: View {
             BoutonRond(role: .retour, rendu: .verre, action: fermer)
             Spacer()
             HStack(spacing: Espace.s) {
-                Avatar(nom: ami.nom).scaleEffect(0.75).frame(width: 34, height: 34)
+                Text(String(ami.nom.prefix(1)).uppercased())
+                    .font(JetonAmis.police(16))
+                    .foregroundStyle(Palette.surMarine)
+                    .frame(width: 34, height: 34)
+                    .background(Palette.marine, in: Circle())
+                    .accessibilityHidden(true)
                 Text(ami.nom).font(Police.sousTitre).foregroundStyle(Palette.encre)
             }
             .padding(.leading, Espace.xs).padding(.trailing, Espace.l)
@@ -110,7 +121,7 @@ struct PescedexAmiView: View {
                 }
             }
             .buttonStyle(.plain)
-            .frame(maxWidth: 244)
+            .frame(maxWidth: 320)
             .padding(.horizontal, Espace.xl)
             .accessibilityLabel(gestion.espece(carte.espece)?.nom ?? "Carte")
         } else {
@@ -140,6 +151,7 @@ struct PescedexAmiView: View {
                             }
                         }
                     }
+                    ForEach(manquantes, id: \.self) { id in tuileSilhouette(id).frame(width: 76) }
                 }
                 .padding(.vertical, Espace.xs)
             }
@@ -166,6 +178,20 @@ struct PescedexAmiView: View {
         } else {
             Text(n == 1 ? "1 espèce" : "\(n) espèces").font(Police.titre).foregroundStyle(Palette.encre)
         }
+    }
+
+    private func tuileSilhouette(_ id: String) -> some View {
+        let espece = gestion.espece(id)
+        return RoundedRectangle(cornerRadius: Rayon.m, style: .continuous)
+            .fill(Palette.marineDoux)
+            .overlay {
+                if let espece {
+                    Image(espece.image).resizable().renderingMode(.template).scaledToFit()
+                        .foregroundStyle(Palette.silhouette).padding(10)
+                }
+            }
+            .aspectRatio(JetonAmis.rapportCarte, contentMode: .fit)
+            .accessibilityLabel("\(espece?.nom ?? "Espèce") pas encore pêchée")
     }
 
     private func tuile(_ carte: CartePartagee) -> some View {
