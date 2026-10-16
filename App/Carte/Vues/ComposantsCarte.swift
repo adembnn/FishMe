@@ -16,7 +16,7 @@ struct ImageEspeceCarte: View {
             Image(systemName: "fish")
                 .resizable()
                 .scaledToFit()
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Palette.encreDouce)
                 .accessibilityHidden(true)
         }
     }
@@ -30,7 +30,7 @@ struct PastilleRarete: View {
             .font(PolicesCarte.legende())
             .padding(.horizontal, 8)
             .padding(.vertical, 3)
-            .foregroundStyle(.white)
+            .foregroundStyle(Palette.surMarine)
             .background(CouleursCarte.rarete(niveau), in: Capsule())
     }
 }
@@ -55,18 +55,18 @@ struct RangeeEspece: View {
                     .fixedSize(horizontal: false, vertical: true)
                 Text(texteReleve(nPeches: nPeches, annee: annee))
                     .font(PolicesCarte.legende())
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Palette.encreDouce)
                     .fixedSize(horizontal: false, vertical: true)
                 if let rarete, rarete.echelle == .region {
                     Text("rareté sur la région (moins de 20 pêches ici)")
                         .font(PolicesCarte.legende())
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Palette.encreDouce)
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 if let ouverture {
                     Text(ouverture.texte)
                         .font(PolicesCarte.legende())
-                        .foregroundStyle(ouverture.estOuverte ? CouleursCarte.accent : CouleursCarte.attention)
+                        .foregroundStyle(ouverture.estOuverte ? Palette.ouvert : Palette.alerte)
                         .fixedSize(horizontal: false, vertical: true)
                 }
             }
@@ -77,7 +77,7 @@ struct RangeeEspece: View {
         }
         .padding(.vertical, 6)
         .padding(.horizontal, 8)
-        .background(selectionnee ? CouleursCarte.accent.opacity(0.12) : Color.clear, in: RoundedRectangle(cornerRadius: 12))
+        .background(selectionnee ? Palette.marineDoux : Color.clear, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
         .contentShape(Rectangle())
         .accessibilityElement(children: .combine)
     }

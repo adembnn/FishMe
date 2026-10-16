@@ -63,8 +63,8 @@ struct VueCarte: View {
                     if let spot = modele.spotAffiche {
                         MapCircle(center: CLLocationCoordinate2D(latitude: spot.centre.latitude, longitude: spot.centre.longitude),
                                   radius: spot.rayonM)
-                            .foregroundStyle(CouleursCarte.accent.opacity(0.18))
-                            .stroke(CouleursCarte.accent, lineWidth: 2)
+                            .foregroundStyle(Palette.marine.opacity(0.15))
+                            .stroke(Palette.marine, lineWidth: 2)
                     }
                     ForEach(modele.elements) { element in
                         Annotation("", coordinate: CLLocationCoordinate2D(latitude: element.coordonnee.latitude,
@@ -171,10 +171,10 @@ struct VueCarte: View {
             Button { modele.toucher(element) } label: {
                 Text("\(nombre)")
                     .font(PolicesCarte.detail())
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Palette.surMarine)
                     .frame(minWidth: 36, minHeight: 36)
-                    .background(CouleursCarte.accent, in: Circle())
-                    .overlay(Circle().stroke(.white, lineWidth: 2))
+                    .background(Palette.marine, in: Circle())
+                    .overlay(Circle().stroke(Palette.surface, lineWidth: 2))
                     .frame(minWidth: 44, minHeight: 44)
                     .contentShape(Rectangle())
             }
@@ -183,11 +183,11 @@ struct VueCarte: View {
         case .point:
             Button { modele.toucher(element) } label: {
                 Image(systemName: "fish.fill")
-                    .font(.system(size: 13, weight: .bold))
-                    .foregroundStyle(.white)
+                    .font(Police.taille(13))
+                    .foregroundStyle(Palette.surMarine)
                     .frame(width: 28, height: 28)
-                    .background(CouleursCarte.accent, in: Circle())
-                    .overlay(Circle().stroke(.white, lineWidth: 2))
+                    .background(Palette.marine, in: Circle())
+                    .overlay(Circle().stroke(Palette.surface, lineWidth: 2))
                     .frame(width: 44, height: 44)
                     .contentShape(Rectangle())
             }
@@ -206,18 +206,20 @@ struct VueCarte: View {
                     .font(PolicesCarte.detail())
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, 14)
-                    .padding(.vertical, 8)
-                    .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 14))
+                    .foregroundStyle(Palette.encre)
+                    .padding(.horizontal, Espace.m)
+                    .padding(.vertical, Espace.s)
+                    .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
             }
             if modele.modeChoixDuSpot {
                 Text("Touche la rivière pour poser ton cercle de 1 km.")
                     .font(PolicesCarte.detail())
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, 14)
-                    .padding(.vertical, 8)
-                    .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 14))
+                    .foregroundStyle(Palette.encre)
+                    .padding(.horizontal, Espace.m)
+                    .padding(.vertical, Espace.s)
+                    .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
             }
             if let filtre = modele.filtre {
                 Button { modele.choisirFiltre(nil) } label: {
@@ -226,9 +228,10 @@ struct VueCarte: View {
                         Text(filtre.nom).font(PolicesCarte.detail())
                         Image(systemName: "xmark.circle.fill").accessibilityHidden(true)
                     }
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 8)
-                    .background(.regularMaterial, in: Capsule())
+                    .foregroundStyle(Palette.encre)
+                    .padding(.horizontal, Espace.m)
+                    .padding(.vertical, Espace.s)
+                    .background(Palette.surface, in: Capsule())
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Filtre : \(filtre.nom)")
@@ -248,18 +251,16 @@ struct VueCarte: View {
                 Button {
                     if let spot = modele.spotAffiche { onCommencerSession(spot) }
                 } label: {
-                    Text("Commencer une session")
-                        .font(PolicesCarte.corps())
-                        .frame(maxWidth: .infinity, minHeight: 44)
+                    Label("Commencer une session", systemImage: "play.fill")
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(CouleursCarte.accent)
+                .buttonStyle(.principal)
                 .disabled(modele.spotAffiche == nil)
+                .opacity(modele.spotAffiche == nil ? 0.5 : 1)
                 if modele.spotAffiche == nil {
                     Text(modele.modeChoixDuSpot ? "Touche la rivière pour poser ton spot"
                                                 : "Pose ton spot pour commencer")
                         .font(PolicesCarte.legende())
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Palette.encreDouce)
                         .multilineTextAlignment(.center)
                 }
             }
@@ -272,21 +273,22 @@ struct VueCarte: View {
     private var boutonsSecondaires: some View {
         Button(action: autourDeMoi) {
             Image(systemName: "location.fill")
-                .font(.system(size: 17, weight: .bold))
+                .font(Police.taille(17))
+                .foregroundStyle(Palette.marine)
                 .frame(width: 44, height: 44)
-                .background(.regularMaterial, in: Circle())
+                .background(Palette.marineDoux, in: Circle())
                 .contentShape(Circle())
         }
         .buttonStyle(.plain)
         .accessibilityLabel("Autour de moi")
 
         Button { modele.afficherFiltre = true } label: {
-            Label("Choisir un autre spot", systemImage: "fish")
-                .font(PolicesCarte.detail())
-                .padding(.horizontal, 12)
-                .frame(minHeight: 44)
-                .background(.regularMaterial, in: Capsule())
-                .contentShape(Capsule())
+            Text("Choisir un autre spot")
+                .font(Police.corps)
+                .foregroundStyle(Palette.encre)
+                .padding(.horizontal, Espace.m)
+                .frame(minHeight: Gabarit.zoneTactile)
+                .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
 
@@ -304,9 +306,10 @@ struct VueCarte: View {
                 }
             } label: {
                 Image(systemName: "ellipsis.circle")
-                    .font(.system(size: 17, weight: .bold))
+                    .font(Police.taille(17))
+                    .foregroundStyle(Palette.marine)
                     .frame(width: 44, height: 44)
-                    .background(.regularMaterial, in: Circle())
+                    .background(Palette.marineDoux, in: Circle())
                     .contentShape(Circle())
             }
             .accessibilityLabel("Plus")

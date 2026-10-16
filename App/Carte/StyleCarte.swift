@@ -1,32 +1,33 @@
 import SwiftUI
 import Core
 
-// Jetons provisoires du lot Carte : un seul fichier, à remplacer par App/Style/ quand il existera.
-// Cible : « Natif » façon Plans d'Apple, SF Pro Rounded gras, un vert d'eau (#1E7F4F) comme seule audace.
+// Les jetons du lot Carte pointent vers App/Style/Style.swift (Palette, Police) : rien de codé en dur ici.
 
 enum CouleursCarte {
-    static let accent = Color(red: 0.118, green: 0.498, blue: 0.310)
-    static let encreDouce = Color.secondary
-    static let filet = Color.primary.opacity(0.12)
-    static let alerte = Color(red: 0.78, green: 0.25, blue: 0.16)
-    static let attention = Color(red: 0.80, green: 0.50, blue: 0.05)
+    static let accent = Palette.marine
+    static let encreDouce = Palette.encreDouce
+    static let filet = Palette.filet
+    /// Orange : alertes seulement (espèce fermée, règle non respectée).
+    static let alerte = Palette.alerte
+    /// À vérifier sur place : pas une alerte, donc encre douce et jamais orange.
+    static let attention = Palette.encreDouce
 
     static func rarete(_ niveau: NiveauRarete) -> Color {
         switch niveau {
-        case .commun: return Color(red: 0.42, green: 0.47, blue: 0.50)
-        case .peuCommun: return Color(red: 0.16, green: 0.45, blue: 0.70)
-        case .rare: return Color(red: 0.50, green: 0.30, blue: 0.70)
-        case .legendaire: return Color(red: 0.80, green: 0.50, blue: 0.05)
-        case .nonMesuree: return Color.secondary
+        case .commun: return Palette.commun
+        case .peuCommun: return Palette.peuCommun
+        case .rare: return Palette.rare
+        case .legendaire: return Palette.legendaire
+        case .nonMesuree: return Palette.encreDouce
         }
     }
 }
 
 enum PolicesCarte {
-    static func titre() -> Font { .system(.title2, design: .rounded, weight: .bold) }
-    static func corps() -> Font { .system(.body, design: .rounded, weight: .bold) }
-    static func detail() -> Font { .system(.subheadline, design: .rounded, weight: .bold) }
-    static func legende() -> Font { .system(.caption, design: .rounded, weight: .bold) }
+    static func titre() -> Font { Police.titre }
+    static func corps() -> Font { Police.corps }
+    static func detail() -> Font { Police.detail }
+    static func legende() -> Font { Police.legende }
 }
 
 extension NiveauRarete {

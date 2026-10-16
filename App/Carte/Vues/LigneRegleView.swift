@@ -18,18 +18,19 @@ struct LigneRegleView: View {
             } label: {
                 HStack(alignment: .top, spacing: 12) {
                     Image(systemName: symboleType)
-                        .font(.system(.body, design: .rounded, weight: .bold))
+                        .font(Police.corps)
                         .frame(width: 28)
                         .foregroundStyle(couleurEtat)
                         .accessibilityHidden(true)
                     Text(texte)
                         .font(PolicesCarte.corps())
+                        .foregroundStyle(Palette.encre)
                         .multilineTextAlignment(.leading)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
-                    Image(systemName: ouverte ? "chevron.up" : "chevron.down")
+                    Image(systemName: ouverte ? "chevron.up" : "chevron.right")
                         .font(PolicesCarte.legende())
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Palette.silhouette)
                         .accessibilityHidden(true)
                 }
                 .contentShape(Rectangle())
@@ -41,18 +42,18 @@ struct LigneRegleView: View {
                 HStack(spacing: 8) {
                     Text(libelle)
                         .font(PolicesCarte.detail())
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Palette.encreDouce)
                         .fixedSize(horizontal: false, vertical: true)
                     Spacer(minLength: 4)
                     if tronconConfirme {
                         Label("appliqué", systemImage: "checkmark")
                             .font(PolicesCarte.legende())
-                            .foregroundStyle(CouleursCarte.accent)
+                            .foregroundStyle(Palette.ouvert)
                     } else {
                         Button("j'y suis ?") { confirmerTroncon(libelle) }
                             .font(PolicesCarte.detail())
                             .buttonStyle(.bordered)
-                            .tint(CouleursCarte.accent)
+                            .tint(Palette.marine)
                     }
                 }
                 .padding(.leading, 40)
@@ -63,6 +64,7 @@ struct LigneRegleView: View {
                     if let citation = ligne.citation {
                         Text("« \(citation) »")
                             .font(PolicesCarte.detail())
+                            .foregroundStyle(Palette.encre)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     ForEach(Array(ligne.sources.enumerated()), id: \.offset) { _, source in
@@ -70,18 +72,19 @@ struct LigneRegleView: View {
                             Link(destination: url) {
                                 Label(source.titre, systemImage: "arrow.up.right.square")
                                     .font(PolicesCarte.legende())
+                                    .foregroundStyle(Palette.marine)
                                     .multilineTextAlignment(.leading)
                             }
                         } else {
                             Text(source.titre)
                                 .font(PolicesCarte.legende())
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(Palette.encreDouce)
                         }
                     }
                     if let date = ligne.dateLecture {
                         Text("Lu le " + date.formatted(.dateTime.day().month(.wide).year().locale(Locale(identifier: "fr_FR"))))
                             .font(PolicesCarte.legende())
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Palette.encreDouce)
                     }
                 }
                 .padding(.leading, 40)
@@ -117,9 +120,9 @@ struct LigneRegleView: View {
 
     private var couleurEtat: Color {
         switch ligne.etat {
-        case .respectee: return CouleursCarte.accent
-        case .nonRespectee: return CouleursCarte.alerte
-        case .aVerifierSurPlace: return CouleursCarte.attention
+        case .respectee: return Palette.ouvert
+        case .nonRespectee: return Palette.alerte
+        case .aVerifierSurPlace: return Palette.encreDouce
         }
     }
 }
