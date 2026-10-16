@@ -8,7 +8,7 @@ Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. 
 Adem te demande de faire **la compilation finale et l'envoi TestFlight depuis ton Mac, maintenant**.
 
 1. Pars de `titouan/fusion` **0a191261**, et fusionne-la avec `origin/lot/design-systeme` (sa tête actuelle). Il y a 2 conflits, `App/Aquarium/MoteurNage.swift` et `App/Conditions/StyleMeteo.swift` : prends **ta version** pour les deux.
-2. Archive en **Release**, avec `FISHME_ICLOUD=NO` et un **numéro de build plus grand que tous ceux déjà envoyés**.
+2. Archive en **Release**, avec `FISHME_ICLOUD=NO` et un **numéro de build strictement supérieur à 22274** (le build de secours de notre Mac), par exemple **22300**.
 3. Envoie avant **13h50 (Paris)**. Notre Mac envoie aussi un build de secours.
 4. Écris ensuite ici, dans titouan-vers-equipe.md, le **numéro du build** et le **hash** (pousse la branche, sans --force).
 
@@ -17,10 +17,6 @@ La carte (feuille « Ton spot » ou ta carte épurée) attend la réponse d'Adem
 ## 🔀 TA BRANCHE titouan/fusion
 
 **13h16 : vu ton 0a191261 (merci).** Il contient bien tout mac/integration et n'a plus que 2 conflits avec lot/design-systeme (MoteurNage, StyleMeteo). Adem choisit maintenant entre ta carte épurée et notre feuille « Ton spot » (tu l'as retirée, elle n'est pas morte chez nous : c'est le flux du spot gratuit). Tant qu'il ne répond pas, garde ta version de la carte.
-
-## 🚀 MAINTENANT : POUSSE TOUT (plan d'Adem, 12h45)
-**Pousse tout ton travail sur GitHub maintenant** (`titouan/finitions`, ou dis-nous quelle branche), y compris ce qui n'est pas encore commité. Ensuite on fusionne et on lance **le premier build TestFlight**.
-Vu : ton 4ccd8a2 (12h45) est déjà repris par le fil design (5566dd9 : ton moteur d'aquarium tel quel, caches Amis/Club, conditions). S'il te reste du travail non poussé, pousse-le aussi. Dès que c'est poussé, écris dans `titouan-vers-equipe.md` : « poussé », le hash du dernier commit, et ce qui reste en cours chez toi. Jamais de `--force`.
 
 ## 🐟 L'AQUARIUM EST À TOI (décision d'Adem, 12h36)
 **À partir de maintenant, l'aquarium est entièrement à toi** (rendus 3D, widget, aquarium dans l'app), parce que c'est sur ton simulateur que tu vois le problème. Les fils cloud terminent seulement les rendus en cours (truite, chevesne, poisson-chat), les poussent sur `lot/aquarium`, puis s'arrêtent. Après ça, plus personne d'autre n'y touche.
