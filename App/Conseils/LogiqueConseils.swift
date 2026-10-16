@@ -119,20 +119,47 @@ nonisolated enum EspecesDuSpot {
     }
 }
 
-/// Les ~12 espèces du tunnel des 3 premières minutes : celles de la zone d'abord, puis les autres de la liste.
+/// Les ~12 espèces du tunnel des 3 premières minutes : celles relevées par l'OFB dans la zone d'abord (la plus fréquente en tête),
+/// puis les espèces courantes en France pour compléter. Les salmonidés ne passent devant que si la zone est en 1re catégorie
+/// ou s'ils sont relevés dans la zone.
 nonisolated enum EspecesDuTunnel {
     static let nombre = 12
 
-    static func choisir(pechables: [EspecePechable], proches: [EspeceProche], nombre: Int = EspecesDuTunnel.nombre) -> [EspecePechable] {
+    /// Espèces courantes partout en France, dans l'ordre de présentation (choix éditorial, aucun chiffre).
+    static let courantes: [String] = [
+        "gardon", "perche-commune", "brochet", "carpe-commune", "sandre", "black-bass", "tanche", "chevesne",
+        "breme-commune", "rotengle", "silure-glane", "barbeau-fluviatile", "ablette", "goujon", "perche-soleil",
+    ]
+
+    static let salmonides: Set<String> = [
+        "truite-fario", "truite-arc-en-ciel", "truite-de-mer", "saumon-atlantique", "omble-de-fontaine",
+        "omble-chevalier", "cristivomer", "ombre-commun", "huchon", "coregones", "truite-tigre",
+    ]
+
+    /// `categorie` : catégorie piscicole de la zone si on la connaît (`nil` ou `.inconnue` : les salmonidés ne complètent pas).
+    static func choisir(pechables: [EspecePechable], proches: [EspeceProche], categorie: Categorie? = nil,
+                        nombre: Int = EspecesDuTunnel.nombre) -> [EspecePechable] {
         let parId = Dictionary(pechables.map { ($0.espece.id, $0) }, uniquingKeysWith: { premier, _ in premier })
         var choisies: [EspecePechable] = []
         var vues = Set<String>()
-        for proche in proches.sorted(by: { $0.nPeches > $1.nPeches }) {
-            guard choisies.count < nombre, let p = parId[proche.espece.id], vues.insert(p.espece.id).inserted else { continue }
-            choisies.append(p)
+        func ajouter(_ p: EspecePechable) {
+            if choisies.count < nombre, vues.insert(p.espece.id).inserted { choisies.append(p) }
         }
-        for p in pechables where choisies.count < nombre && vues.insert(p.espece.id).inserted {
-            choisies.append(p)
+        // 1. Relevées dans la zone, la plus souvent pêchée d'abord (l'ordre d'origine départage les égalités).
+        let triees = proches.enumerated().sorted {
+            $0.element.nPeches != $1.element.nPeches ? $0.element.nPeches > $1.element.nPeches : $0.offset < $1.offset
+        }
+        for (_, proche) in triees {
+            if let p = parId[proche.espece.id] { ajouter(p) }
+        }
+        // 2. Espèces courantes de France.
+        for id in courantes {
+            if let p = parId[id] { ajouter(p) }
+        }
+        // 3. Le reste de la liste, sans salmonidés sauf en 1re catégorie.
+        let salmonidesAutorises = categorie == .premiere
+        for p in pechables where salmonidesAutorises || !salmonides.contains(p.espece.id) {
+            ajouter(p)
         }
         return choisies
     }

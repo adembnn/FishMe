@@ -57,8 +57,9 @@ nonisolated struct Chargement: Sendable {
     let conteneur: ModelContainer?
 
     /// À appeler hors du fil principal.
-    static func preparer() -> Chargement {
-        let core = MoteurCore(donnees: .embarque(dossierFabriques: Bundle.main.resourceURL, reglesTelechargees: ReglesAJour.dossierCopies))
+    /// `dossierRegles` est lu sur le fil principal avant l'appel (`ReglesAJour` y est isolé).
+    static func preparer(dossierRegles: URL?) -> Chargement {
+        let core = MoteurCore(donnees: .embarque(dossierFabriques: Bundle.main.resourceURL, reglesTelechargees: dossierRegles))
         let conteneur = (try? DepotCartes.creerConteneur()) ?? (try? DepotCartes.creerConteneur(enMemoire: true))
         return Chargement(core: core, conteneur: conteneur)
     }
@@ -112,6 +113,8 @@ final class ParcoursApp {
     var spotCourant: Spot?
     private var spotSession: Spot?
     private var spotEnAttente: Spot?
+    /// Position GPS du moment, seulement pour le verdict d'une prise : jamais enregistrée.
+    @ObservationIgnored private let gps = GestionPosition()
 
     /// Le moteur de Core et le conteneur SwiftData sont construits hors du fil principal (`Chargement.preparer`), pas ici :
     /// la lecture des fichiers de règles et de stations bloquait le premier rendu 15 à 20 s.
@@ -121,8 +124,13 @@ final class ParcoursApp {
         servicesCarte = ServicesCarte(geo: core.geo, regles: core.regles, especes: core.especes, session: core.session)
         // Reconnaissance : modèle DINOv2 embarqué (App/Prise/Modele), sous 0,4 de confiance la grille des espèces s'ouvre.
         servicesPrise = PriseServices(especes: core.especes, regles: core.regles, identification: IdentificationDino())
-        // Repli sur le faux de Core si conseils.json ne se charge pas (à vérifier sur le Mac).
-        conseils = (try? ConseilsParEspece.charger(regles: core.regles)) ?? ConseilsFaux()
+        // Si conseils.json ne se charge pas : aucun conseil en vrai, le faux seulement en DEBUG (à vérifier sur le Mac).
+        #if DEBUG
+        let repli: any ServiceConseils = ConseilsFaux()
+        #else
+        let repli: any ServiceConseils = ConseilsVides()
+        #endif
+        conseils = (try? ConseilsParEspece.charger(regles: core.regles)) ?? repli
         conditions = ConditionsDuSpot(meteo: SourceWeatherKit(), eau: core.niveauEau, noyau: core.conditions)
         marque = StockageMarque(source: SourceMarqueWeatherKit())
         previensMoi = PreviensMoiModele(notifieur: NotifieurSysteme())
@@ -368,12 +376,16 @@ final class ParcoursApp {
 
     func ajouterPrise() {
         guard coordonneeSession != nil else { return }
+        gps.relire()  // relit la position si elle est déjà autorisée, sans rien demander ni enregistrer
         mesure.envoyer(.priseCommencee)
         montrer(.prise)
     }
 
     func contextePrise() -> PriseContexte {
-        let c = coordonneeSession ?? Coordonnee(latitude: 0, longitude: 0)
+        // Le verdict part d'où le poisson est pris : la position du moment, sinon le centre du spot.
+        // Au-delà de 3 km du spot, la position est celle d'un pêcheur qui n'est pas sur place : on garde le centre.
+        let centre = coordonneeSession ?? Coordonnee(latitude: 0, longitude: 0)
+        let c = gps.position.flatMap { distanceMetres($0, centre) <= 3000 ? $0 : nil } ?? centre
         return PriseContexte(coordonnee: c, lieu: core.geo.lieu(de: c, choix: nil), lieuFlou: core.geo.lieuFlou(c),
                              date: moteur.maintenant(), prisesDuJour: moteur.prisesGardeesDuJour())
     }
@@ -461,6 +473,12 @@ final class ParcoursApp {
     static let confidentialiteProvisoire = URL(string: "https://www.apple.com/legal/privacy/fr-fr/")!
 }
 
+/// Repli de production si conseils.json ne se charge pas : aucun conseil, jamais un faux.
+private nonisolated struct ConseilsVides: ServiceConseils {
+    func conseils(espece: Espece, niveau: NiveauPecheur, mois: Int) -> [Conseil] { [] }
+    func conseils(espece: Espece, niveau: NiveauPecheur, mois: Int, lieu: Lieu) -> [Conseil] { [] }
+}
+
 // MARK: - Vue racine
 
 struct RootView: View {
@@ -487,7 +505,8 @@ struct RootView: View {
         }
         .task {
             guard app == nil else { return }
-            let chargement = await Task.detached(priority: .userInitiated) { Chargement.preparer() }.value
+            let dossierRegles = ReglesAJour.dossierCopies
+            let chargement = await Task.detached(priority: .userInitiated) { Chargement.preparer(dossierRegles: dossierRegles) }.value
             let nouvelle = ParcoursApp(chargement: chargement, configurerMesure: configurerMesure)
             app = nouvelle
             await nouvelle.demarrer()
@@ -604,10 +623,12 @@ private struct RacineContenu: View {
             federation: federation.siteFederation.flatMap { URL(string: $0) },
             association: nil,
             carteDePeche: federation.pageCarteDePeche.flatMap { URL(string: $0) } ?? LiensOfficiels.carteDePeche,
-            confidentialite: nil)
-        let sources = app.core.regles.credits().map { c in
+            confidentialite: ParcoursApp.confidentialiteProvisoire)
+        var sources = app.core.regles.credits().map { c in
             SourceClub(nom: c.nom, mention: c.mention ?? "", lien: c.url.flatMap { URL(string: $0) })
         }
+        sources.append(SourceClub(nom: "Photo d'exemple", mention: "Photo d'exemple : SpinfisherCRO, CC BY-SA",
+                                  lien: URL(string: "https://creativecommons.org/licenses/by-sa/4.0/")))
         return ClubView(
             liens: liens, sources: sources,
             cartes: app.cartesAPartager,
@@ -643,8 +664,11 @@ private struct RacineContenu: View {
         switch modal {
         case .tunnel:
             let proches = app.spotCourant.map { app.core.especes.especesProches($0.centre) } ?? []
+            // La catégorie du coin décide si les truites complètent la liste (1re catégorie seulement).
+            let categorie = app.spotCourant.map { app.core.geo.lieu(de: $0.centre, choix: nil).categorie.valeur }
             TunnelPremiersPasView(
-                especes: EspecesDuTunnel.choisir(pechables: app.core.especes.especesPechables(), proches: proches),
+                especes: EspecesDuTunnel.choisir(pechables: app.core.especes.especesPechables(), proches: proches,
+                                                 categorie: categorie),
                 maintenant: { app.moteur.maintenant() },
                 declarer: { prise in app.declarer(prise) },
                 pecherMaintenant: {

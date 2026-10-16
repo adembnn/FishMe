@@ -42,11 +42,16 @@ final class PriseModele {
     private(set) var especeConfirmee: EspecePechable?
     private(set) var stade: StadeAnguille?
 
-    var longueurCm: Double = PriseLogique.tailleDeDepart {
-        didSet { if longueurCm != oldValue { curseurBouge = true } }
-    }
+    private(set) var longueurCm: Double = PriseLogique.tailleDeDepart
     /// Faux tant que ni le curseur ni la toise n'ont donné une taille : on ne confirme pas la valeur de départ.
     private(set) var curseurBouge = false
+
+    /// Le curseur de taille : la valeur bouge, la taille n'est plus celle de départ.
+    func deplacerCurseur(_ cm: Double) {
+        guard cm != longueurCm else { return }
+        longueurCm = cm
+        curseurBouge = true
+    }
     /// Valeur lue sur la toise, pour savoir si le pêcheur a gardé la valeur pré-réglée.
     private(set) var longueurLue: Double?
     private(set) var tailleConfirmee = false
@@ -124,6 +129,7 @@ final class PriseModele {
         especeConfirmee = entree
         stade = PriseLogique.stade(de: entree.espece)
         tailleConfirmee = false
+        if longueurLue == nil { curseurBouge = false }
         etape = .taille
     }
 
@@ -152,6 +158,7 @@ final class PriseModele {
         guard PriseLogique.plageTaille.contains(cm) else { return }
         longueurLue = cm
         longueurCm = cm
+        curseurBouge = true
     }
 
     /// Le pêcheur valide la mesure en réalité augmentée : la longueur devient le centre de la fourchette.
