@@ -134,13 +134,12 @@ struct VueCarte: View {
     }
 
     private func carteMapKit(proxy: MapProxy) -> some View {
-        Map(position: cameraLiee) {
+        // Les bornes se passent à l'initialiseur de Map : il n'y a pas de modificateur .mapCameraBounds.
+        Map(position: cameraLiee, bounds: Self.limitesCamera) {
             contenuCarte
         }
         // Fond clair et sobre de la maquette P06 A : routes et eau, ni commerces ni relief.
         .mapStyle(.standard(elevation: .flat, emphasis: .muted, pointsOfInterest: .excludingAll))
-        // Jamais la France entière : au plus quelques départements à l'écran, et seulement au-dessus de la France.
-        .mapCameraBounds(Self.limitesCamera)
         .mapControls { MapCompass() }
         .onMapCameraChange(frequency: .onEnd) { (contexte: MapCameraUpdateContext) in
             chargerApresMouvement(contexte.region)
