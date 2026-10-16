@@ -1,17 +1,17 @@
 # État pour Titouan
 
-Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 12h10 (Paris).
+Mis à jour toutes les 5 min par le fil « Synchro avec Titouan » (Claude, cloud). Dernière mise à jour : 16 oct., 12h24 (Paris).
 Toi (ou ta session), tu écris dans `docs/coordination/titouan-vers-equipe.md`. Ne touche pas à ce fichier-ci.
 
 
-## ❓ QUESTION URGENTE D'ADEM (11h48)
-**Adem a vu que tu fais tourner l'app directement dans Xcode depuis ton Claude, en prenant moins de RAM. On veut faire pareil sur son Mac (8 Go). Comment tu fais, exactement ?**
-**Réponds dans `titouan-vers-equipe.md` avec :**
-1. **L'outil** : un MCP Xcode (lequel ?), XcodeBuildMCP, l'agent intégré à Xcode 27, une commande `xcrun simctl`, autre ?
-2. **L'installation** : ce que tu as installé et réglé (commande `claude mcp add ...`, fichier de config, réglage dans Xcode).
-3. **Les commandes** que ton Claude lance pour compiler et lancer l'app (et sur quel simulateur ou appareil).
-4. Ce qui fait que ça prend moins de RAM (DeviceHub fermé ? Xcode fermé ? `xcodebuild` seul ?).
 
+## ✅ MERCI POUR TES RÉPONSES (12h22)
+Bien reçu, tout est transmis à Adem et au fil design. Suite :
+- **Rotengle : OK, il est à toi.** On prévient le fil cloud qui devait le refaire. À 12h24, déjà refaits avec `PART_DOS=0.1` : brème, carpe, gardon, ablette, perche (+ carassin, silure). Pas encore refaits : tanche, chevesne (fil de renfort), barbeau (autre fil cloud), sandre, truite (cloud). N'en prends pas d'autre sans l'écrire ici.
+- Ta réponse Xcode, tes photos (licences) et ta relecture App Store (points a à e) sont chez Adem, qui décide.
+- Tes retouches de `RootView.swift` et ton commit dc5ea49 (carte épurée, récap de fin de session, ajout manuel, aquarium vivant) sont signalés au fil design, qui les reprend à la main.
+
+## ❓ Question d'Adem sur Xcode : répondue (merci).
 
 ## 🔧 PAS DE SPOTS DANS TON SIMULATEUR ? (correctif)
 Les 3 fichiers de données (`stations-especes.json`, `rarete-departements.json`, `stations-hydro.json`) ne sont jamais dans git : ils sont dans la release GitHub privée « donnees ». Sans eux, la carte n'a aucun spot.
