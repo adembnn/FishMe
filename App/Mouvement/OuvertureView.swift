@@ -27,7 +27,7 @@ struct OuvertureView: View {
                     scene(taille: geo.size, etat: Bond.etat(t: 1, pretDepuis: nil, reduit: true))
                 } else {
                     TimelineView(.animation(minimumInterval: 1.0 / 60.0, paused: fini)) { contexte in
-                        let t = contexte.date.timeIntervalSince(debut)
+                        let t = contexte.date.timeIntervalSince(debut) / Bond.ralenti
                         scene(taille: geo.size, etat: Bond.etat(t: t, pretDepuis: pretDepuis, reduit: false))
                     }
                 }
@@ -40,18 +40,18 @@ struct OuvertureView: View {
         .accessibilityLabel("FishMe")
         .task {
             // Le son part au début du bond (après l'apparition douce de la lune).
-            try? await Task.sleep(for: .seconds(0.2))
+            try? await Task.sleep(for: .seconds(0.2 * Bond.ralenti))
             Sons.jouer(.lancement)
         }
         .onChange(of: pret, initial: true) { _, estPret in
             guard estPret, pretDepuis == nil else { return }
-            let tp = Date().timeIntervalSince(debut)
+            let tp = Date().timeIntervalSince(debut) / Bond.ralenti
             pretDepuis = tp
             if reduireLesAnimations {
                 fondu = true
                 terminer(dans: 0.3)
             } else {
-                terminer(dans: Bond.debutOuverture(apresPret: tp) + Bond.dureeOuverture - tp)
+                terminer(dans: (Bond.debutOuverture(apresPret: tp) + Bond.dureeOuverture - tp) * Bond.ralenti)
             }
         }
     }
@@ -92,6 +92,11 @@ private nonisolated enum Bond {
     static let cycle = 2.4            // la scène boucle au plus toutes les 2,4 s si l'app tarde
     static let plongeeOK = 0.7        // le poisson a le nez dans l'eau : on peut ouvrir
     static let dureeOuverture = 0.47  // de l'agrandissement au fondu final
+    /// Tout le film est joué 1,5 fois plus lentement que la référence (Adem, 16 oct. : « trop rapide »),
+    /// soit environ 2,4 s du premier instant à l'app quand elle est déjà prête.
+    static let ralenti = 1.5
+    /// Pause après la plongée, ondes qui s'apaisent et « FishMe » bien lisible, avant d'ouvrir.
+    static let tenue = 0.25
 
     struct Etat: Sendable {
         var intro: Double   // apparition douce de la lune (0 à 1)
@@ -197,10 +202,11 @@ private nonisolated enum Bond {
     /// Quand lancer l'ouverture si l'app est prête à l'instant `tp` : le poisson doit avoir replongé.
     static func debutOuverture(apresPret tp: Double) -> Double {
         let tj = tp - 0.2
-        if tj < plongeeOK { return 0.2 + plongeeOK }
+        let pret = plongeeOK + tenue
+        if tj < pret { return 0.2 + pret }
         let k = (tj / cycle).rounded(.down)
         let phase = tj - k * cycle
-        return phase >= plongeeOK ? tp : 0.2 + k * cycle + plongeeOK
+        return phase >= pret ? tp : 0.2 + k * cycle + pret
     }
 
     static func etat(t: Double, pretDepuis: Double?, reduit: Bool) -> Etat {
@@ -210,7 +216,8 @@ private nonisolated enum Bond {
         let tj = t - 0.2
         let intro = eStd(seg(t, 0, 0.2))
         let b = eStd(seg(tj, 0, 0.24))
-        let mot = intro * (1 - eStd(seg(tj, 0.12, 0.42)))
+        // Le mot reste affiché jusqu'au fondu final (on doit lire « FishMe »).
+        let mot = intro
         var tl = tj < 0 ? tj : tj.truncatingRemainder(dividingBy: cycle)
         var ouvert = false
         var temps = 0.0
