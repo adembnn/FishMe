@@ -24,6 +24,10 @@ enum Modal: Identifiable, Equatable {
     case paywall(DeclencheurPaywall)
     case prise
     case carteAEssayer(Spot)
+    /// Fin de session (P16) ; la sortie montrée est `ParcoursApp.finAffichee`.
+    case finSession
+    case mesSorties
+    case reglages
 
     var id: String {
         switch self {
@@ -32,6 +36,9 @@ enum Modal: Identifiable, Equatable {
         case .paywall(let d): "paywall-\(d.valeurMesure)"
         case .prise: "prise"
         case .carteAEssayer: "carte-a-essayer"
+        case .finSession: "fin-session"
+        case .mesSorties: "mes-sorties"
+        case .reglages: "reglages"
         }
     }
 }
@@ -109,12 +116,18 @@ final class ParcoursApp {
     private var carteListeEnvoyee = false
     @ObservationIgnored private var rendu: Task<Void, Never>?
 
+    /// P16 : la sortie que la feuille de fin montre (la dernière session, ou une ancienne choisie dans « Mes sorties »).
+    var finAffichee: FinDeSession?
+    var finLieu: String?
+    /// P42 : la position était déjà refusée au lancement, l'écran « Ta zone » remplace la carte jusqu'à « Voir la carte ».
+    var sansPositionAffiche = false
+
     // Spot
     var spotCourant: Spot?
     private var spotSession: Spot?
     private var spotEnAttente: Spot?
     /// Position GPS du moment, seulement pour le verdict d'une prise : jamais enregistrée.
-    @ObservationIgnored private let gps = GestionPosition()
+    @ObservationIgnored let gps = GestionPosition()
 
     /// Le moteur de Core et le conteneur SwiftData sont construits hors du fil principal (`Chargement.preparer`), pas ici :
     /// la lecture des fichiers de règles et de stations bloquait le premier rendu 15 à 20 s.
@@ -156,6 +169,7 @@ final class ParcoursApp {
         moteur = SuiviSession(session: core.session, soleil: core.soleil, coffre: TrousseauSpotGratuit())
 
         moteur.surFin = { [weak self] fin in self?.sessionFinie(fin) }
+        sansPositionAffiche = gps.estRefusee
     }
 
     /// Au lancement : l'accord déjà donné configure le SDK, StoreKit écoute, la session est reprise.
@@ -367,9 +381,31 @@ final class ParcoursApp {
             let lieuFlou = coordonneeSession.map { core.geo.lieuFlou($0) }
             Task { _ = await ecrire { try await $0.enregistrerBredouille(sortie: sortie, lieuFlou: lieuFlou) } }
         }
-        if fin.paywall == .quiSeFerme { montrer(.paywall(.finPremiereSession)) }
-        moteur.acquitterFin()
+        // La fin de session passe d'abord (P16) ; le paywall qui se ferme suit dans `finTerminee`.
+        finAffichee = fin
+        finLieu = coordonneeSession.flatMap { core.geo.lieu(de: $0, choix: nil).eau?.nom }
+        montrer(.finSession)
         spotSession = nil
+    }
+
+    /// « Terminer » de la fin de session : acquitte la fin, puis ouvre le paywall qui se ferme à la 1re session.
+    func finTerminee() {
+        guard let fin = finAffichee else { courant = nil; return }
+        if moteur.derniereFin == fin { moteur.acquitterFin() }
+        if fin.paywall == .quiSeFerme { remplacerPar(.paywall(.finPremiereSession)) } else { courant = nil }
+    }
+
+    /// Une ancienne sortie de « Mes sorties », montrée avec la même feuille (jamais de paywall).
+    func rouvrir(_ sortie: Sortie) {
+        finAffichee = FinDeSession(sortie: sortie, paywall: .aucun)
+        finLieu = lieuDuSpot()?.eau?.nom
+        remplacerPar(.finSession)
+    }
+
+    /// Nom, image et latin d'une espèce, pour les écrans de sortie.
+    func infosEspece() -> (Espece) -> EspecePechable? {
+        let catalogue = Dictionary(core.especes.especesPechables().map { ($0.espece.id, $0) }, uniquingKeysWith: { a, _ in a })
+        return { catalogue[$0.id] }
     }
 
     private var coordonneeSession: Coordonnee? { spotSession?.centre ?? moteur.spotGratuit?.centre }
@@ -594,7 +630,23 @@ private struct RacineContenu: View {
 
     // MARK: Volet Carte (L2) avec L5, L12, L13
 
-    private var carte: some View {
+    @ViewBuilder private var carte: some View {
+        if app.sansPositionAffiche {
+            SansPositionView(
+                zone: nil,
+                changerDeZone: { app.sansPositionAffiche = false },
+                autoriserPosition: {
+                    if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+                },
+                voirLaCarte: { app.sansPositionAffiche = false },
+                ouvrirPescedex: { app.onglet = .pescedex },
+                ouvrirAmis: { app.onglet = .club; amisOuverts = true })
+        } else {
+            vueCarte
+        }
+    }
+
+    private var vueCarte: some View {
         VueCarte(
             services: app.servicesCarte,
             spotFixe: app.moteur.spotGratuit,
@@ -636,15 +688,21 @@ private struct RacineContenu: View {
         ) {
             MarqueMeteoView(stockage: app.marque)
         }
+        .poissonsDuClub(app.core.especes.especesPechables().map { PoissonClub(id: $0.espece.id, nom: $0.nom, image: $0.image) })
+        // Plus de bouton « Mes amis » en surimpression : un seul menu mène aux amis, aux sorties et aux réglages.
         .overlay(alignment: .topTrailing) {
-            Button { amisOuverts = true } label: {
-                Label("Mes amis", systemImage: "person.2.fill")
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 8)
-                    .background(.regularMaterial, in: Capsule())
+            Menu {
+                Button { amisOuverts = true } label: { Label("Mes amis", systemImage: "person.2.fill") }
+                Button { app.montrer(.mesSorties) } label: { Label("Mes sorties", systemImage: "clock.arrow.circlepath") }
+                Button { app.montrer(.reglages) } label: { Label("Réglages", systemImage: "gearshape") }
+            } label: {
+                Image(systemName: "ellipsis")
+                    .frame(width: 44, height: 44)
+                    .background(.regularMaterial, in: Circle())
             }
+            .accessibilityLabel("Amis, sorties et réglages")
             .padding(.trailing, 16)
-            .padding(.top, 8)
+            .padding(.top, 4)
         }
         .sheet(isPresented: $amisOuverts) {
             if let gestion = app.gestionAmis() {
@@ -684,7 +742,24 @@ private struct RacineContenu: View {
                 .presentationDetents([.medium])
 
         case .paywall(let declencheur):
-            app.paywall(declencheur, fermer: { app.courant = nil })
+            if case .autreSpot = declencheur {
+                AutreSpotEmplacement(app: app)
+            } else {
+                app.paywall(declencheur, fermer: { app.courant = nil })
+            }
+
+        case .finSession:
+            if let fin = app.finAffichee {
+                FinSessionView(fin: fin, infosEspece: app.infosEspece(), lieu: app.finLieu, surTerminer: { app.finTerminee() })
+                    .interactiveDismissDisabled()
+            }
+
+        case .mesSorties:
+            MesSortiesView(sorties: app.moteur.sortiesTerminees, infosEspece: app.infosEspece(), lieu: app.lieuDuSpot()?.eau?.nom,
+                           surChoix: { app.rouvrir($0) }, surRetour: { app.courant = nil })
+
+        case .reglages:
+            ReglagesEmplacement(app: app)
 
         case .prise:
             PriseRacineView(services: app.servicesPrise, contexte: app.contextePrise(),
@@ -709,15 +784,17 @@ private struct RacineContenu: View {
 private struct VigilanceEmplacement: View {
     let app: ParcoursApp
     @State private var alerte: Alerte?
+    @State private var lecture: LectureConditions?
 
     var body: some View {
         Group {
-            if let alerte { BandeauVigilanceView(alerte: alerte) }
+            if let alerte { BandeauVigilanceView(alerte: alerte, previensMoi: app.previensMoi, lecture: lecture) }
         }
         .task(id: app.spotCourant?.centre) {
-            guard let spot = app.spotCourant?.centre else { alerte = nil; return }
-            let lecture = await app.conditions.lire(spot: spot) ?? app.conditions.derniere(spot: spot)
-            alerte = lecture?.alerte
+            guard let spot = app.spotCourant?.centre else { alerte = nil; lecture = nil; return }
+            let lue = await app.conditions.lire(spot: spot) ?? app.conditions.derniere(spot: spot)
+            lecture = lue
+            alerte = lue?.alerte
         }
     }
 }
@@ -839,6 +916,69 @@ private struct TesConditionsEmplacement: View {
                               sortiesTerminees: app.moteur.sortiesTerminees.count, marque: app.marque)
         } else {
             app.paywall(.fonction(.analyseConditions), fermer: { fermer() })
+        }
+    }
+}
+
+/// P10 : l'invitation Pro d'abord ; « Découvrir » montre le paywall dans la même feuille (jamais deux à la fois).
+private struct AutreSpotEmplacement: View {
+    let app: ParcoursApp
+    @State private var decouvert = false
+
+    var body: some View {
+        if decouvert {
+            app.paywall(.autreSpot, fermer: { app.courant = nil })
+        } else {
+            AutreSpotProView(decouvrir: { decouvert = true }, plusTard: { app.courant = nil })
+        }
+    }
+}
+
+/// P35 : les réglages, dans la feuille courante. « Sécurité » s'y empile ; le paywall la remplace.
+private struct ReglagesEmplacement: View {
+    let app: ParcoursApp
+    @ObservedObject private var previens: PreviensMoiModele
+    @AppStorage(ClesConseils.niveau) private var niveauBrut = NiveauPecheur.parDefaut.rawValue
+    @State private var securite = false
+    @Environment(\.openURL) private var ouvrir
+
+    init(app: ParcoursApp) {
+        self.app = app
+        _previens = ObservedObject(wrappedValue: app.previensMoi)
+    }
+
+    var body: some View {
+        NavigationStack {
+            ReglagesView(
+                niveau: Binding(get: { NiveauPecheur(rawValue: niveauBrut) ?? .parDefaut }, set: { niveauBrut = $0.rawValue }),
+                alertes: $previens.vigilanceActive,
+                mesureAudience: Binding(get: { app.consentement == .accepte }, set: { app.reglerMesure($0) }),
+                abonne: app.suivi.abonne,
+                achats: app.achats,
+                liens: LiensLegaux(conditions: LiensLegaux.conditionsApple, confidentialite: ParcoursApp.confidentialiteProvisoire),
+                surEtat: { app.etatAchatsLu($0) },
+                ouvrirSource: { nom in if let url = Self.page(de: nom) { ouvrir(url) } },
+                ouvrirSecurite: { securite = true },
+                ouvrirPaywall: { app.remplacerPar(.paywall(.widget)) })
+                .toolbar(.hidden, for: .navigationBar)
+                .navigationDestination(isPresented: $securite) { SecuriteView() }
+        }
+        .onChange(of: previens.vigilanceActive) {
+            Task {
+                _ = await previens.assurerPermission()
+                if let spot = app.spotCourant?.centre { await previens.reprogrammer(avec: app.conditions.derniere(spot: spot)) }
+            }
+        }
+    }
+
+    private static func page(de source: String) -> URL? {
+        switch source {
+        case "OFB": URL(string: "https://www.ofb.gouv.fr")
+        case "Hub'Eau": URL(string: "https://hubeau.eaufrance.fr")
+        case "Météo-France": LiensOfficiels.vigilanceMeteoFrance
+        case "Arrêtés": URL(string: "https://www.legifrance.gouv.fr")
+        case "Apple Weather": URL(string: "https://developer.apple.com/weatherkit/data-source-attribution/")
+        default: nil
         }
     }
 }
