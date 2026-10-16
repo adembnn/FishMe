@@ -1,4 +1,5 @@
 import MapKit
+import Network
 import SwiftUI
 import UIKit
 import Core
@@ -31,6 +32,10 @@ struct VueCarte: View {
     /// Vrai tant que le choix de zone ou la redemande est à l'écran : la racine attend avant d'ouvrir une autre feuille.
     let surChoixDeZone: (Bool) -> Void
     @State private var afficherOuChercher = false
+    /// Faux : on arrive sur « Ton spot » (maquette P06 C). Vrai : la carte, ouverte d'un toucher sur le bouton carte.
+    @State private var afficherCarte = false
+    @State private var apercu: ApercuSpot?
+    @State private var reseauDisponible = true
 
     init(services: ServicesCarte,
          spotFixe: Spot? = nil,
@@ -59,8 +64,30 @@ struct VueCarte: View {
     }
 
     var body: some View {
+        ZStack {
+            carteComplete
+                .accessibilityHidden(!afficherCarte)
+            if !afficherCarte {
+                ecranSpot
+                    .transition(.opacity)
+            }
+        }
+        .animation(.easeInOut(duration: 0.25), value: afficherCarte)
+        .task(id: modele.spotAffiche) {
+            apercu = nil
+            guard let spot = modele.spotAffiche else { return }
+            apercu = await calculerApercuSpot(services: modele.services, spot: spot, date: Date())
+        }
+        .task {
+            for await connecte in fluxReseauCarte() { reseauDisponible = connecte }
+        }
+    }
+
+    // MARK: La carte
+
+    private var carteComplete: some View {
         @Bindable var m = modele
-        MapReader { proxy in
+        return MapReader { proxy in
             ZStack {
                 Map(position: $m.camera) {
                     UserAnnotation()
@@ -109,8 +136,6 @@ struct VueCarte: View {
                                   onCommencerSession(spot)
                               }
                           })
-                .presentationDetents([.medium, .large])
-                .presentationBackgroundInteraction(.enabled(upThrough: .medium))
                 .presentationDragIndicator(.visible)
         }
         .sheet(isPresented: $m.afficherFiltre) {
@@ -125,7 +150,11 @@ struct VueCarte: View {
             }
         }
         .sheet(isPresented: $m.afficherChoixDeZone) {
-            ChoixDeZoneView { modele.choisirZone($0) }
+            ChoixDeZoneView(choisir: { modele.choisirZone($0) },
+                            codeDepartement: { c in
+                                let d = modele.services.geo.departement(de: c)
+                                return d.estInconnu ? nil : d.code
+                            })
         }
         .alert("Ta position aide à centrer la carte", isPresented: $m.afficherRedemande) {
             Button("Ouvrir les réglages") {
@@ -165,6 +194,178 @@ struct VueCarte: View {
                                                     span: MKCoordinateSpan(latitudeDelta: 11, longitudeDelta: 14))
     /// Environ 250 km de large à l'écran au plus dézoomé : un ou deux départements, jamais un pays de bulles.
     static let altitudeMaximale: CLLocationDistance = 400_000
+
+    // MARK: Ton spot (maquette P06 C) et états vides (P46 B)
+
+    private var ecranSpot: some View {
+        Group {
+            if modele.spotAffiche == nil && modele.depart != .enAttente {
+                ecranSansSpot
+            } else {
+                ecranAvecSpot
+            }
+        }
+        .background(Palette.fond.ignoresSafeArea())
+    }
+
+    private func ouvrirLaCarte(poserLeSpot: Bool = false) {
+        if poserLeSpot, modele.peutChangerDeSpot { modele.modeChoixDuSpot = true }
+        afficherCarte = true
+    }
+
+    /// P46 B : « Carte », le bandeau « Pas de réseau » s'il manque, puis « Pas de spot » avec un seul chemin.
+    private var ecranSansSpot: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: Espace.l) {
+                Text("Carte")
+                    .font(Police.grandTitre)
+                    .foregroundStyle(Palette.encre)
+                    .accessibilityAddTraits(.isHeader)
+                if !reseauDisponible { BandeauPasDeReseauView() }
+                Text("Ton spot")
+                    .font(Police.legende)
+                    .foregroundStyle(Palette.encreDouce)
+                    .textCase(.uppercase)
+                    .padding(.horizontal, Espace.s)
+                    .accessibilityAddTraits(.isHeader)
+                PasDeSpotView(choisirUnSpot: { ouvrirLaCarte(poserLeSpot: true) })
+            }
+            .padding(Espace.bord)
+        }
+        .scrollIndicators(.hidden)
+    }
+
+    /// P06 C : le lieu, le poisson le plus rare en grand, trois autres, « Commencer une session », « Choisir un autre spot ».
+    private var ecranAvecSpot: some View {
+        VStack(spacing: Espace.l) {
+            HStack {
+                HStack(spacing: Espace.s) {
+                    Image(systemName: "mappin")
+                        .foregroundStyle(Palette.marine)
+                        .accessibilityHidden(true)
+                    Text(apercu?.lieu ?? " ")
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encre)
+                        .lineLimit(1)
+                }
+                Spacer(minLength: Espace.s)
+                Button { ouvrirLaCarte() } label: {
+                    Image(systemName: "map")
+                        .font(Police.taille(18))
+                        .foregroundStyle(Palette.marine)
+                        .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                        .background(Palette.tuile, in: Circle())
+                        .contentShape(Circle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Voir la carte")
+            }
+            if !reseauDisponible { BandeauPasDeReseauView() }
+            bandeauHaut
+
+            Spacer(minLength: 0)
+            vedette
+            Spacer(minLength: 0)
+
+            bandeauSession
+            if !sessionEnCours {
+                VStack(spacing: 2) {
+                    Button {
+                        if let spot = modele.spotAffiche { onCommencerSession(spot) }
+                    } label: {
+                        Label("Commencer une session", systemImage: "play.fill")
+                    }
+                    .buttonStyle(.principal)
+                    .disabled(modele.spotAffiche == nil)
+                    .opacity(modele.spotAffiche == nil ? 0.5 : 1)
+                    Button { ouvrirLaCarte(poserLeSpot: true) } label: {
+                        Text("Choisir un autre spot")
+                            .font(Police.corps)
+                            .foregroundStyle(Palette.encre)
+                            .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                            .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+        }
+        .padding(.horizontal, Espace.bord)
+        .padding(.top, Espace.s)
+        .padding(.bottom, Espace.s)
+    }
+
+    @ViewBuilder
+    private var vedette: some View {
+        if let apercu, let ligne = apercu.vedette {
+            let fiche = modele.pechable(ligne.espece)
+            let niveau = ligne.rarete?.niveau ?? .nonMesuree
+            VStack(spacing: Espace.m) {
+                Text("Le plus rare de ton spot")
+                    .font(Police.legende)
+                    .foregroundStyle(Palette.encreDouce)
+                ImageEspeceCarte(nom: fiche?.image)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 170)
+                    .padding(.horizontal, Espace.xs)
+                VStack(spacing: Espace.s) {
+                    Text(fiche?.nom ?? ligne.espece.id)
+                        .font(Police.grandTitre)
+                        .foregroundStyle(Palette.encre)
+                        .multilineTextAlignment(.center)
+                        .accessibilityAddTraits(.isHeader)
+                    Label(niveau.libelle, systemImage: niveau.symboleSF)
+                        .font(Police.detail)
+                        .foregroundStyle(CouleursCarte.rarete(niveau))
+                    if let rarete = ligne.rarete {
+                        Text(texteVedette(rarete, annee: ligne.annee))
+                            .font(Police.detail)
+                            .foregroundStyle(Palette.encreDouce)
+                            .multilineTextAlignment(.center)
+                    }
+                }
+                autresPoissons(apercu)
+                    .padding(.top, Espace.xl)
+            }
+            .accessibilityElement(children: .contain)
+        } else if apercu != nil {
+            // Un spot sans espèce relevée : le poisson générique, une phrase.
+            VStack(spacing: Espace.m) {
+                Image(systemName: "fish")
+                    .font(Police.taille(64))
+                    .foregroundStyle(Palette.silhouette)
+                    .accessibilityHidden(true)
+                Text("Pas encore de relevé ici")
+                    .font(Police.titre)
+                    .foregroundStyle(Palette.encre)
+            }
+        } else {
+            ProgressView()
+                .accessibilityLabel("Lecture des relevés")
+        }
+    }
+
+    /// « 3 pêches sur 29 · OFB 2024 » : le nombre de pêches et l'année vont toujours ensemble.
+    private func texteVedette(_ rarete: ResultatRarete, annee: Int) -> String {
+        let mot = rarete.nPeches > 1 ? "pêches" : "pêche"
+        let an = rarete.anneeDernierReleve ?? annee
+        let base = "\(rarete.nPeches) \(mot) sur \(rarete.nTotal) · OFB \(an)"
+        return rarete.echelle == .region ? base + " · région" : base
+    }
+
+    private func autresPoissons(_ apercu: ApercuSpot) -> some View {
+        HStack(spacing: 18) {
+            ForEach(apercu.autres) { ligne in
+                ImageEspeceCarte(nom: modele.pechable(ligne.espece)?.image)
+                    .frame(width: 72, height: 34)
+                    .accessibilityLabel(modele.pechable(ligne.espece)?.nom ?? ligne.espece.id)
+            }
+            if apercu.reste > 0 {
+                Text("+ \(apercu.reste)")
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
+            }
+        }
+    }
 
     // MARK: Départ
 
@@ -227,6 +428,7 @@ struct VueCarte: View {
 
     private var haut: some View {
         VStack(spacing: 8) {
+            enTeteCarte
             bandeauHaut
             if let message = modele.message {
                 Text(message)
@@ -268,12 +470,45 @@ struct VueCarte: View {
         .padding(.horizontal, 16)
     }
 
+    /// En haut de la carte : retour à « Ton spot », le lieu, le filtre par espèce (maquette P06 A).
+    private var enTeteCarte: some View {
+        HStack(spacing: 8) {
+            BoutonRond(role: .retour, rendu: .verre, action: retourAuSpot)
+            HStack(spacing: 8) {
+                Image(systemName: "mappin")
+                    .foregroundStyle(Palette.marine)
+                    .accessibilityHidden(true)
+                Text(apercu?.lieu ?? "Carte")
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encre)
+                    .lineLimit(1)
+                Spacer(minLength: 0)
+            }
+            .padding(.horizontal, Espace.l)
+            .frame(height: Gabarit.zoneTactile)
+            .background {
+                Capsule()
+                    .fill(.regularMaterial)
+                    .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
+                    .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
+            }
+            BoutonVerreCarte(symbole: "line.3.horizontal.decrease", libelle: "Filtrer par espèce") {
+                modele.afficherFiltre = true
+            }
+        }
+    }
+
+    private func retourAuSpot() {
+        modele.modeChoixDuSpot = false
+        afficherCarte = false
+    }
+
     // MARK: Boutons du bas (au-dessus de la barre d'onglets)
 
     private var bas: some View {
         VStack(spacing: 10) {
             bandeauSession
-            HStack(spacing: 10) { boutonsSecondaires }
+            HStack(spacing: 10) { Spacer(minLength: 0); boutonsSecondaires }
             if !sessionEnCours {
                 Button {
                     if let spot = modele.spotAffiche { onCommencerSession(spot) }
@@ -309,16 +544,6 @@ struct VueCarte: View {
         .buttonStyle(.plain)
         .accessibilityLabel("Autour de moi")
 
-        Button { modele.afficherFiltre = true } label: {
-            Text("Choisir un autre spot")
-                .font(Police.corps)
-                .foregroundStyle(Palette.encre)
-                .padding(.horizontal, Espace.m)
-                .frame(minHeight: Gabarit.zoneTactile)
-                .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-
         if ouChercher != nil || modele.peutChangerDeSpot {
             Menu {
                 if ouChercher != nil {
@@ -342,6 +567,16 @@ struct VueCarte: View {
             }
             .accessibilityLabel("Plus")
         }
+    }
+}
+
+/// Le réseau, lu une fois ici : sert seulement à montrer « Pas de réseau ».
+nonisolated func fluxReseauCarte() -> AsyncStream<Bool> {
+    AsyncStream { continuation in
+        let moniteur = NWPathMonitor()
+        moniteur.pathUpdateHandler = { chemin in continuation.yield(chemin.status == .satisfied) }
+        continuation.onTermination = { _ in moniteur.cancel() }
+        moniteur.start(queue: DispatchQueue(label: "carte.reseau"))
     }
 }
 

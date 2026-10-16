@@ -14,6 +14,9 @@ struct FicheCoinView: View {
     @State private var aideCategorie = false
     @State private var toutesLesRegles = false
     @State private var reglesOuvertes = false
+    @State private var autresOuvertes = false
+    @State private var hauteurContenu: CGFloat = 0
+    @State private var sourceOuverte = false
     let emplacementMaintenant: (Coordonnee) -> AnyView
     let emplacementConseil: (Espece) -> AnyView
     /// « Commencer une session » : `nil` (pendant une session, ou sans spot) cache le bouton.
@@ -31,35 +34,36 @@ struct FicheCoinView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: Espace.l) {
+            VStack(alignment: .leading, spacing: Espace.xl) {
                 if let fiche = modele.fiche {
                     entete(fiche)
                     poissons(fiche)
                     if let touchee = modele.especeTouchee {
                         emplacementConseil(touchee)
                     }
-                    if let onCommencerSession {
-                        Button(action: onCommencerSession) {
-                            Label("Commencer une session", systemImage: "play.fill")
-                        }
-                        .buttonStyle(.principal)
+                    // Toujours visible. Sans action (session déjà en cours, ou aucun spot choisi), il reste grisé.
+                    // À brancher : RootView / VueCarte passe `onCommencerSession` dès qu'un spot est choisi.
+                    Button { onCommencerSession?() } label: {
+                        Label("Commencer une session", systemImage: "play.fill")
                     }
-                    releve
+                    .buttonStyle(.principal)
+                    .disabled(onCommencerSession == nil)
+                    .opacity(onCommencerSession == nil ? 0.45 : 1)
+                    releve(fiche)
                 } else {
                     ChargementBouchon(texte: "Chargement du spot")
                         .frame(maxWidth: .infinity, minHeight: 120)
                 }
             }
             .padding(.horizontal, Espace.bord)
-            .padding(.top, Espace.xl + Espace.m)
+            .padding(.top, Espace.l)
             .padding(.bottom, Espace.xl)
+            .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { hauteurContenu = $0 }
         }
         .scrollIndicators(.hidden)
-        .overlay(alignment: .topTrailing) {
-            BoutonRond(role: .fermer)
-                .padding(.top, Espace.s)
-                .padding(.trailing, Espace.bord)
-        }
+        .scrollBounceBehavior(.basedOnSize)
+        // La feuille a la hauteur de son contenu (comme la maquette), et peut se tirer jusqu'en grand.
+        .presentationDetents(hauteurContenu > 0 ? [.height(hauteurContenu + 24), .large] : [.medium, .large])
         .task { await modele.charger() }
         .sheet(isPresented: $reglesOuvertes) { feuilleRegles }
     }
@@ -78,17 +82,27 @@ struct FicheCoinView: View {
         return connues.first(where: { $0.estOuverte }) ?? connues.first
     }
 
+    /// Le nom de l'eau et la croix sur une ligne, la pastille dessous, puis le but de la fiche en une phrase :
+    /// rien ne se chevauche, la croix a sa place dans la ligne du titre.
     private func entete(_ fiche: FicheCalculee) -> some View {
-        HStack(alignment: .center, spacing: Espace.m) {
-            Text(nomEau(fiche))
-                .font(Police.grandTitre)
-                .foregroundStyle(Palette.encre)
-                .minimumScaleFactor(0.6)
-                .lineLimit(2)
-                .fixedSize(horizontal: false, vertical: true)
-                .accessibilityAddTraits(.isHeader)
-            Spacer(minLength: Espace.s)
+        VStack(alignment: .leading, spacing: Espace.m) {
+            HStack(alignment: .center, spacing: Espace.m) {
+                Text(nomEau(fiche))
+                    .font(Police.taille(30, .heavy))
+                    .foregroundStyle(Palette.encre)
+                    .minimumScaleFactor(0.6)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityAddTraits(.isHeader)
+                Spacer(minLength: Espace.s)
+                BoutonRond(role: .fermer)
+            }
             pastilleOuverture(ouverture(fiche))
+            Text("Ce que tu peux pêcher ici aujourd'hui")
+                .font(Police.titre)
+                .foregroundStyle(Palette.encre)
+                .padding(.top, Espace.s)
+                .accessibilityAddTraits(.isHeader)
         }
     }
 
@@ -130,8 +144,8 @@ struct FicheCoinView: View {
                     .font(Police.corps)
                     .foregroundStyle(Palette.encreDouce)
             } else {
-                HStack(alignment: .top, spacing: Espace.s) {
-                    ForEach(Array(fiche.especes.prefix(5))) { ligne in
+                HStack(alignment: .top, spacing: Espace.m) {
+                    ForEach(Array(fiche.especes.prefix(3))) { ligne in
                         tuilePoisson(ligne)
                     }
                 }
@@ -145,30 +159,59 @@ struct FicheCoinView: View {
         return Button {
             Task { await modele.toucherEspece(ligne.espece) }
         } label: {
-            VStack(spacing: Espace.s) {
+            VStack(spacing: Espace.xs) {
                 ImageEspeceCarte(nom: modele.image(ligne.espece))
                     .padding(Espace.s)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 64)
+                    .frame(height: 84)
                     .background(Palette.marineDoux, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
                     .overlay(RoundedRectangle(cornerRadius: Rayon.s, style: .continuous)
                         .strokeBorder(choisie ? Palette.marine : Color.clear, lineWidth: 2))
-                if let niveau, niveau != .nonMesuree {
-                    Image(systemName: symbole(niveau))
-                        .font(Police.taille(11))
-                        .foregroundStyle(CouleursCarte.rarete(niveau))
-                        .accessibilityHidden(true)
-                } else {
-                    Color.clear.frame(height: 11)
+                HStack(spacing: 4) {
+                    if let niveau, niveau != .nonMesuree {
+                        Image(systemName: symbole(niveau))
+                            .font(Police.taille(10))
+                            .foregroundStyle(CouleursCarte.rarete(niveau))
+                            .accessibilityHidden(true)
+                    }
+                    Text(modele.nom(ligne.espece))
+                        .font(Police.legende)
+                        .foregroundStyle(Palette.encre)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                 }
+                // Sans taille lisible dans la règle, rien n'est écrit (aucun chiffre inventé).
+                Text(ligne.tailleMiniCm.map { "\($0) cm mini" } ?? " ")
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.marine)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                badgeOuverture(ligne.ouverture)
             }
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(modele.nom(ligne.espece) + ((niveau.map { $0 == .nonMesuree ? "" : ", " + $0.libelle }) ?? ""))
+        .accessibilityLabel(modele.nom(ligne.espece) + ((niveau.map { $0 == .nonMesuree ? "" : ", " + $0.libelle }) ?? "")
+                            + (ligne.tailleMiniCm.map { ", taille minimale \($0) centimètres" } ?? "")
+                            + (ligne.ouverture.map { $0.estOuverte ? ", ouvert" : ", fermé" } ?? ""))
         .accessibilityHint("Montre les règles et le conseil de cette espèce")
         .accessibilityAddTraits(choisie ? [.isButton, .isSelected] : .isButton)
+    }
+
+    /// « Ouvert » en vert, « Fermé » en orange (une alerte), rien si l'ouverture n'est pas connue.
+    @ViewBuilder
+    private func badgeOuverture(_ ouverture: OuvertureDuJour?) -> some View {
+        if let ouverture {
+            Text(ouverture.estOuverte ? "Ouvert" : "Fermé")
+                .font(Police.taille(12))
+                .foregroundStyle(ouverture.estOuverte ? Palette.ouvert : Palette.alerte)
+                .padding(.horizontal, Espace.s)
+                .padding(.vertical, 3)
+                .background(ouverture.estOuverte ? Palette.ouvertDoux : Palette.alerteDoux, in: Capsule())
+        } else {
+            Color.clear.frame(height: 20)
+        }
     }
 
     /// Un point de couleur, et une forme différente par niveau pour se lire sans la couleur.
@@ -184,10 +227,12 @@ struct FicheCoinView: View {
     // MARK: Une seule ligne de relevé
 
     @ViewBuilder
-    private var releve: some View {
-        // Le chiffre vient du coin choisi (station OFB) ; sans coin, aucun chiffre n'est inventé.
-        if let coin = modele.selection.coin {
-            Text("\(coin.nPeches) \(coin.nPeches > 1 ? "pêches" : "pêche") OFB · \(String(coin.annee))")
+    private func releve(_ fiche: FicheCalculee) -> some View {
+        // Le chiffre vient de la station OFB choisie, sinon de la première espèce relevée ; jamais un chiffre inventé.
+        let chiffre: (Int, Int)? = modele.selection.coin.map { ($0.nPeches, $0.annee) }
+            ?? fiche.especes.first(where: { $0.releve }).map { ($0.nPeches, $0.annee) }
+        if let chiffre {
+            Text("\(chiffre.0) \(chiffre.0 > 1 ? "pêches" : "pêche") OFB · \(String(chiffre.1))")
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
                 .frame(maxWidth: .infinity)
@@ -202,19 +247,11 @@ struct FicheCoinView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: Espace.l) {
                     if let fiche = modele.fiche {
-                        HStack(spacing: Espace.s) {
-                            choixEau(fiche)
-                            Spacer(minLength: Espace.s)
-                            pastilleCategorie(fiche.lieu)
+                        if let espece = modele.especeTouchee {
+                            regleEspece(espece, fiche)
+                        } else {
+                            reglesDuJour(fiche)
                         }
-                        bandeauCouverture(fiche.couverture)
-                        emplacementMaintenant(modele.selection.coordonnee)
-                        regles(fiche)
-                        Text(TexteOFB.explication)
-                            .font(Police.legende)
-                            .foregroundStyle(Palette.encreDouce)
-                            .fixedSize(horizontal: false, vertical: true)
-                        pied
                     }
                 }
                 .padding(Espace.bord)
@@ -223,6 +260,7 @@ struct FicheCoinView: View {
             .background(Palette.fond.ignoresSafeArea())
             .navigationTitle("Règles du jour")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar(modele.especeTouchee == nil ? .automatic : .hidden, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     BoutonRond(role: .fermer, rendu: .simple) { reglesOuvertes = false }
@@ -230,6 +268,150 @@ struct FicheCoinView: View {
             }
         }
         .presentationDetents([.medium, .large])
+    }
+
+    /// Les règles du jour du spot, sans espèce choisie.
+    @ViewBuilder
+    private func reglesDuJour(_ fiche: FicheCalculee) -> some View {
+        HStack(spacing: Espace.s) {
+            choixEau(fiche)
+            Spacer(minLength: Espace.s)
+            pastilleCategorie(fiche.lieu)
+        }
+        bandeauCouverture(fiche.couverture)
+        emplacementMaintenant(modele.selection.coordonnee)
+        regles(fiche)
+        Text(TexteOFB.explication)
+            .font(Police.legende)
+            .foregroundStyle(Palette.encreDouce)
+            .fixedSize(horizontal: false, vertical: true)
+        pied
+    }
+
+    // MARK: Règle d'une espèce (P08 B)
+
+    /// Une règle de taille, de période ou de quota ne passe en gros chiffre que si son nombre se lit dans la phrase de `Core`.
+    private func regleEspece(_ espece: Espece, _ fiche: FicheCalculee) -> some View {
+        let lignes = fiche.lignes
+        let taille = lignes.first { $0.type == .taille }
+        let tailleCm = taille.flatMap { LectureRegle.nombre(avant: "cm", dans: $0.phrase) }
+        let periode = lignes.first { $0.type == .periode }
+        let jusquau = periode.flatMap { LectureRegle.dateApresJusquAu($0.phrase) }
+        let quota = lignes.first { $0.type == .quota }
+        let parJour = quota.flatMap { LectureRegle.premierEntier($0.phrase) }
+        let utilisees = [tailleCm == nil ? nil : taille, jusquau == nil ? nil : periode, parJour == nil ? nil : quota].compactMap { $0 }
+        let autres = lignes.filter { ligne in !utilisees.contains(ligne) }
+        let avecSources: LigneControle?
+        if let taille, !taille.sources.isEmpty { avecSources = taille } else { avecSources = lignes.first(where: { !$0.sources.isEmpty }) }
+        return VStack(alignment: .leading, spacing: Espace.l) {
+            HStack {
+                BoutonRond(role: .retour, rendu: .simple) { Task { await modele.toucherEspece(espece) } }
+                    .offset(x: -Espace.s)
+                Spacer(minLength: 0)
+            }
+            HStack(alignment: .center, spacing: Espace.m) {
+                VStack(alignment: .leading, spacing: Espace.xs) {
+                    Text(modele.nom(espece))
+                        .font(Police.grandTitre)
+                        .foregroundStyle(Palette.encre)
+                        .minimumScaleFactor(0.6)
+                        .lineLimit(2)
+                        .accessibilityAddTraits(.isHeader)
+                    Text("Règles dans le \(fiche.lieu.departement.code)")
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encreDouce)
+                }
+                Spacer(minLength: Espace.s)
+                ImageEspeceCarte(nom: modele.image(espece))
+                    .frame(width: 120, height: 52)
+            }
+            VStack(spacing: 0) {
+                if let tailleCm {
+                    ligneValeur("Taille minimale") {
+                        Text("\(tailleCm) cm").font(Police.chiffreMoyen).foregroundStyle(Palette.marine)
+                    }
+                }
+                if let jusquau {
+                    ligneValeur("Ouvert jusqu'au") {
+                        Text(jusquau).font(Police.corps).foregroundStyle(Palette.encre)
+                    }
+                }
+                if let parJour {
+                    ligneValeur("Par jour") {
+                        Text("\(parJour)").font(Police.corps).foregroundStyle(Palette.encre)
+                    }
+                }
+                if !autres.isEmpty {
+                    Button { withAnimation(.snappy) { autresOuvertes.toggle() } } label: {
+                        ligneValeurContenu("Autres règles") {
+                            HStack(spacing: Espace.s) {
+                                Text("\(autres.count)").font(Police.corps).foregroundStyle(Palette.encreDouce)
+                                Image(systemName: autresOuvertes ? "chevron.up" : "chevron.right")
+                                    .font(Police.legende).foregroundStyle(Palette.silhouette)
+                                    .accessibilityHidden(true)
+                            }
+                        }
+                    }
+                    .buttonStyle(.plain)
+                    if autresOuvertes {
+                        VStack(spacing: 0) {
+                            ForEach(Array(autres.enumerated()), id: \.offset) { _, ligne in
+                                LigneRegleView(ligne: ligne, categorieInconnue: fiche.lieu.categorie.valeur == .inconnue,
+                                               tronconConfirme: ligne.libelleTroncon.map { fiche.lieu.tronconsConfirmes.contains($0) } ?? false,
+                                               confirmerTroncon: { libelle in Task { await modele.confirmerTroncon(libelle) } })
+                            }
+                        }
+                        .padding(.horizontal, Espace.l)
+                        Divider().overlay(Palette.filet).padding(.leading, Espace.l)
+                    }
+                }
+                if let avecSources {
+                    Button { withAnimation(.snappy) { sourceOuverte.toggle() } } label: {
+                        ligneValeurContenu("Source", titreMarine: true, separateur: sourceOuverte) {
+                            Image(systemName: sourceOuverte ? "chevron.up" : "chevron.right")
+                                .font(Police.legende).foregroundStyle(Palette.silhouette)
+                                .accessibilityHidden(true)
+                        }
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityHint(sourceOuverte ? "Referme la source" : "Ouvre la source et la citation")
+                    if sourceOuverte {
+                        SourceCitationView(ligne: avecSources)
+                            .padding(Espace.l)
+                    }
+                }
+            }
+            .tuileFishMe(rayon: Rayon.l)
+            if let taille, taille.sources.count > 1 {
+                Text("Deux textes se contredisent : " + taille.sources.map(\.titre).joined(separator: " · ") + ". Le plus strict est affiché.")
+                    .font(Police.legende)
+                    .foregroundStyle(Palette.encreDouce)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, Espace.l)
+            }
+        }
+    }
+
+    private func ligneValeur<V: View>(_ titre: String, @ViewBuilder valeur: () -> V) -> some View {
+        ligneValeurContenu(titre, valeur: valeur)
+    }
+
+    /// Une ligne du groupe : le titre à gauche, la valeur à droite, un filet dessous.
+    private func ligneValeurContenu<V: View>(_ titre: String, titreMarine: Bool = false, separateur: Bool = true,
+                                             @ViewBuilder valeur: () -> V) -> some View {
+        VStack(spacing: 0) {
+            HStack(spacing: Espace.s) {
+                Text(titre)
+                    .font(Police.corps)
+                    .foregroundStyle(titreMarine ? Palette.marine : Palette.encre)
+                Spacer(minLength: Espace.s)
+                valeur()
+            }
+            .padding(.horizontal, Espace.l)
+            .frame(minHeight: 56)
+            .contentShape(Rectangle())
+            if separateur { Divider().overlay(Palette.filet).padding(.leading, Espace.l) }
+        }
     }
 
     private func pastilleCategorie(_ lieu: Lieu) -> some View {
@@ -372,5 +554,41 @@ struct FicheCoinView: View {
         let item = MKMapItem(location: CLLocation(latitude: c.latitude, longitude: c.longitude), address: nil)
         item.name = modele.fiche?.lieuFlou ?? "Coin de pêche"
         item.openInMaps()
+    }
+}
+
+/// Lit un nombre dans la phrase d'une règle. Rien n'est inventé : sans nombre lisible, la ligne reste dans « Autres règles ».
+nonisolated enum LectureRegle {
+    /// Le nombre juste avant l'unité (« 60 cm » ou « 60cm »).
+    static func nombre(avant unite: String, dans phrase: String) -> String? {
+        let mots = phrase.split(whereSeparator: { $0 == " " || $0 == "\u{00A0}" || $0 == "\u{202F}" }).map(String.init)
+        for (i, mot) in mots.enumerated() {
+            let nettoye = mot.trimmingCharacters(in: .punctuationCharacters)
+            if nettoye == unite, i > 0, let n = chiffres(mots[i - 1]) { return n }
+            if nettoye.hasSuffix(unite), nettoye.count > unite.count, let n = chiffres(String(nettoye.dropLast(unite.count))) { return n }
+        }
+        return nil
+    }
+
+    /// Le premier entier de la phrase (« 3 par jour »).
+    static func premierEntier(_ phrase: String) -> String? {
+        let mots = phrase.split(whereSeparator: { !$0.isNumber && !$0.isLetter }).map(String.init)
+        return mots.first { !$0.isEmpty && $0.count <= 2 && $0.allSatisfy(\.isNumber) }
+    }
+
+    /// « 31 déc. » quand la phrase dit « jusqu'au 31 décembre ».
+    static func dateApresJusquAu(_ phrase: String) -> String? {
+        let mots = phrase.split(separator: " ").map(String.init)
+        guard let i = mots.firstIndex(where: { $0.lowercased().hasPrefix("jusqu") && ($0.lowercased().hasSuffix("au") || $0.lowercased().hasSuffix("à")) }),
+              i + 2 < mots.count, mots[i + 1].allSatisfy(\.isNumber) else { return nil }
+        let mois = mots[i + 2].trimmingCharacters(in: .punctuationCharacters)
+        guard mois.allSatisfy(\.isLetter) else { return nil }
+        let court = mois.count > 4 ? String(mois.prefix(3)) + "." : mois
+        return mots[i + 1] + " " + court
+    }
+
+    private static func chiffres(_ mot: String) -> String? {
+        let n = mot.trimmingCharacters(in: .punctuationCharacters)
+        return !n.isEmpty && n.allSatisfy({ $0.isNumber || $0 == "," || $0 == "." }) ? n : nil
     }
 }

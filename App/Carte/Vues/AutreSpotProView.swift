@@ -10,36 +10,53 @@ struct AutreSpotProView: View {
     let plusTard: () -> Void
 
     var body: some View {
-        VStack(spacing: Espace.l) {
+        VStack(spacing: 0) {
             HStack {
-                BoutonRond(role: .fermer, rendu: .verre, action: plusTard)
-                Spacer(minLength: Espace.s)
                 Text("Choisir un autre spot")
                     .font(Police.detail)
                     .foregroundStyle(Palette.encre)
+                    .accessibilityAddTraits(.isHeader)
                 Spacer(minLength: Espace.s)
-                Color.clear.frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                Button(action: plusTard) {
+                    Image(systemName: "xmark")
+                        .font(Police.taille(18))
+                        .foregroundStyle(Palette.marine)
+                        .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                        .background(Palette.tuile, in: Circle())
+                        .contentShape(Circle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Fermer")
             }
 
-            Spacer(minLength: 0)
+            Spacer(minLength: Espace.l)
             illustration
-            Text("Spots illimités")
-                .font(Police.grandTitre)
-                .foregroundStyle(Palette.encre)
-                .multilineTextAlignment(.center)
-                .accessibilityAddTraits(.isHeader)
-            Text("Pose un cercle où tu veux : tronçons entiers de rivière et lacs.")
-                .font(Police.corps)
-                .foregroundStyle(Palette.encreDouce)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-            Label("Ton spot gratuit reste à toi, pour toujours", systemImage: "checkmark.circle.fill")
+            VStack(spacing: 10) {
+                Text("Spots illimités")
+                    .font(Police.taille(28, .heavy))
+                    .foregroundStyle(Palette.encre)
+                    .multilineTextAlignment(.center)
+                    .accessibilityAddTraits(.isHeader)
+                Text("Pose un cercle où tu veux : tronçons entiers de rivière et lacs.")
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encreDouce)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                HStack(spacing: 6) {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundStyle(Palette.ouvert)
+                        .accessibilityHidden(true)
+                    Text("Ton spot gratuit reste à toi, pour toujours")
+                        .foregroundStyle(Palette.encreDouce)
+                        .multilineTextAlignment(.center)
+                }
                 .font(Police.legende)
-                .foregroundStyle(Palette.ouvert)
-                .multilineTextAlignment(.center)
-            Spacer(minLength: 0)
+            }
+            .padding(.top, Espace.xl)
+            .padding(.horizontal, Espace.l)
+            Spacer(minLength: Espace.l)
 
-            VStack(spacing: Espace.s) {
+            VStack(spacing: 6) {
                 Button("Découvrir Pro", action: decouvrir)
                     .buttonStyle(.principal)
                 Button("Plus tard", action: plusTard)
@@ -49,13 +66,13 @@ struct AutreSpotProView: View {
             }
         }
         .padding(Espace.bord)
-        .background(Palette.fond.ignoresSafeArea())
+        .background(Palette.surface.ignoresSafeArea())
     }
 
     /// Une rivière, ton spot au centre et trois cercles en pointillés : l'idée de « plusieurs spots », sans cadenas.
     private var illustration: some View {
         ZStack {
-            Circle().fill(Palette.tuile)
+            Circle().fill(Palette.fond)
             Capsule()
                 .fill(Palette.eau)
                 .frame(width: 70, height: 300)
@@ -67,14 +84,15 @@ struct AutreSpotProView: View {
                 .strokeBorder(Palette.marine, lineWidth: 2)
                 .frame(width: 80, height: 80)
             Text("Ton spot")
-                .font(Police.legende)
+                .font(Police.taille(12))
                 .foregroundStyle(Palette.surMarine)
-                .padding(.horizontal, Espace.m)
+                .padding(.horizontal, Espace.s)
                 .padding(.vertical, Espace.xs)
                 .background(Palette.marine, in: Capsule())
         }
-        .frame(width: 260, height: 260)
+        .frame(width: 280, height: 280)
         .clipShape(Circle())
+        .overlay(Circle().strokeBorder(Palette.filet, lineWidth: 1))
         .accessibilityHidden(true)
     }
 

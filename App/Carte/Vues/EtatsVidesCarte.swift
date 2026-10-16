@@ -1,22 +1,22 @@
 import SwiftUI
 
-/// P46 B : les deux états vides de la carte. Bandeau bleu doux (jamais orange : ce n'est pas une alerte),
+/// P46 B : les deux états vides de la carte. Bandeau sur surface blanche, icône grise (jamais orange : ce n'est pas une alerte),
 /// et la carte « Pas de spot » avec un seul chemin, « Choisir un spot ». Aucune donnée : que du texte fixe.
 
 /// Bandeau « Pas de réseau ». À poser au-dessus de la carte quand le réseau manque.
 struct BandeauPasDeReseauView: View {
     var body: some View {
-        HStack(alignment: .top, spacing: Espace.m) {
+        HStack(spacing: Espace.m) {
             Image(systemName: "wifi.slash")
-                .font(Police.taille(20))
-                .foregroundStyle(Palette.marine)
-                .frame(width: 28)
+                .font(Police.taille(24))
+                .foregroundStyle(Palette.encreDouce)
+                .frame(width: 32)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: Espace.xs) {
+            VStack(alignment: .leading, spacing: 2) {
                 Text("Pas de réseau")
-                    .font(Police.sousTitre)
+                    .font(Police.corps)
                     .foregroundStyle(Palette.encre)
-                Text("Tes cartes restent là. Règles et cartes disponibles, météo et rivière reviennent avec le réseau.")
+                Text("Règles et cartes disponibles. Météo et rivière reviennent avec le réseau.")
                     .font(Police.legende)
                     .foregroundStyle(Palette.encreDouce)
                     .fixedSize(horizontal: false, vertical: true)
@@ -24,7 +24,8 @@ struct BandeauPasDeReseauView: View {
             Spacer(minLength: 0)
         }
         .padding(Espace.l)
-        .background(Palette.marineDoux, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .tuileFishMe(rayon: Rayon.l)
         .accessibilityElement(children: .combine)
     }
 }
@@ -38,10 +39,10 @@ struct PasDeSpotView: View {
             VStack(spacing: Espace.m) {
                 ZStack {
                     Circle()
-                        .strokeBorder(Palette.marine, style: StrokeStyle(lineWidth: 2, dash: [5, 4]))
+                        .strokeBorder(Palette.marine, style: StrokeStyle(lineWidth: 2.5, dash: [5, 4]))
                         .frame(width: 72, height: 72)
                     Image(systemName: "mappin")
-                        .font(Police.taille(26))
+                        .font(Police.taille(30))
                         .foregroundStyle(Palette.marine)
                 }
                 .accessibilityHidden(true)
@@ -55,7 +56,9 @@ struct PasDeSpotView: View {
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(Espace.xl)
+            .padding(.horizontal, Espace.l)
+            .padding(.top, 28)
+            .padding(.bottom, 20)
             .frame(maxWidth: .infinity)
 
             Divider().overlay(Palette.filet)
@@ -71,7 +74,7 @@ struct PasDeSpotView: View {
                         .accessibilityHidden(true)
                 }
                 .padding(.horizontal, Espace.l)
-                .frame(minHeight: Gabarit.bouton)
+                .frame(minHeight: 56)
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)

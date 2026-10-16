@@ -16,6 +16,10 @@ struct SansPositionView: View {
     /// À brancher : « 3 espèces » et « 3 amis » viennent du Pescedex et des amis (L7/L8) ; vides par défaut.
     var compteurPescedex: String?
     var compteurAmis: String?
+    /// Code du département de la zone (« 94 ») et nom de la commune, s'ils sont connus ; sinon la rangée ne les montre pas.
+    /// À brancher : RootView donne aujourd'hui le nom de la zone seulement.
+    var codeZone: String?
+    var commune: String?
 
     var body: some View {
         ScrollView {
@@ -31,7 +35,11 @@ struct SansPositionView: View {
                 }
 
                 groupe {
-                    rangee("mappin.and.ellipse", zone ?? "Choisir ma zone", valeur: nil, action: changerDeZone)
+                    rangeeZone(zone ?? "Choisir ma zone", valeur: codeZone)
+                    if let commune {
+                        Divider().overlay(Palette.filet)
+                        rangeeZone(commune, valeur: "Commune")
+                    }
                 }
 
                 if ouvrirPescedex != nil || ouvrirAmis != nil || ouvrirConseils != nil {
@@ -80,14 +88,17 @@ struct SansPositionView: View {
                     .font(Police.legende)
                     .foregroundStyle(Palette.encreDouce)
                     .padding(.horizontal, Espace.s)
-
-                Button("Voir la carte", action: voirLaCarte)
-                    .buttonStyle(.principal)
-                    .padding(.top, Espace.xl)
             }
             .padding(Espace.bord)
         }
         .scrollIndicators(.hidden)
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            Button("Voir la carte", action: voirLaCarte)
+                .buttonStyle(.principal)
+                .padding(.horizontal, Espace.bord)
+                .padding(.bottom, Espace.s)
+                .padding(.top, Espace.s)
+        }
         .background(Palette.fond.ignoresSafeArea())
     }
 
@@ -104,6 +115,40 @@ struct SansPositionView: View {
         VStack(spacing: 0) { contenu() }
             .padding(.horizontal, Espace.l)
             .tuileFishMe(rayon: Rayon.l)
+    }
+
+    /// Une zone : une petite vignette de carte (rivière sur fond clair), le nom, le code, le chevron.
+    private func rangeeZone(_ titre: String, valeur: String?) -> some View {
+        Button(action: changerDeZone) {
+            HStack(spacing: Espace.m) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 8, style: .continuous).fill(Palette.fond)
+                    Capsule()
+                        .fill(Palette.eau)
+                        .frame(width: 10, height: 60)
+                        .rotationEffect(.degrees(25))
+                }
+                .frame(width: 56, height: 34)
+                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                .accessibilityHidden(true)
+                Text(titre)
+                    .font(Police.corps)
+                    .foregroundStyle(Palette.encre)
+                    .multilineTextAlignment(.leading)
+                Spacer(minLength: Espace.s)
+                if let valeur {
+                    Text(valeur)
+                        .font(Police.corps)
+                        .foregroundStyle(Palette.encreDouce)
+                }
+                Image(systemName: "chevron.right")
+                    .foregroundStyle(Palette.silhouette)
+                    .accessibilityHidden(true)
+            }
+            .frame(minHeight: 56)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
     }
 
     private func rangee(_ symbole: String, _ titre: String, valeur: String?, action: @escaping () -> Void) -> some View {
