@@ -67,9 +67,9 @@ final class CompteModele {
         do {
             try await service.effacer()
             bilan = nil
-            message = "Ta sauvegarde iCloud est effacée. Tes cartes restent sur cet iPhone."
+            message = "Tes données iCloud sont supprimées : sauvegarde et cartes partagées avec tes amis. Tes cartes restent sur cet iPhone."
         } catch {
-            message = "La sauvegarde n'a pas pu être effacée. Réessaie avec du réseau."
+            message = "La suppression n'a pas pu se faire. Réessaie avec du réseau."
         }
     }
 }
@@ -269,7 +269,7 @@ struct CompteView: View {
             Button(role: .destructive) {
                 confirmationOuverte = true
             } label: {
-                Text("Effacer ma sauvegarde iCloud")
+                Text("Supprimer mon compte et mes données iCloud")
                     .font(Police.corps)
                     .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)
                     .padding(.horizontal, Espace.l)
@@ -279,14 +279,14 @@ struct CompteView: View {
             .disabled(modele.enCours)
         }
         .confirmationDialog(
-            "Effacer la sauvegarde iCloud ?",
+            "Supprimer ton compte FishMe ?",
             isPresented: $confirmationOuverte,
             titleVisibility: .visible
         ) {
-            Button("Effacer", role: .destructive) { Task { await modele.effacer() } }
+            Button("Supprimer", role: .destructive) { Task { await modele.effacer() } }
             Button("Annuler", role: .cancel) {}
         } message: {
-            Text("Tes cartes restent sur cet iPhone, mais un nouvel iPhone ne les retrouvera plus.")
+            Text("Ta sauvegarde iCloud et les cartes partagées avec tes amis sont effacées. Tes cartes restent sur cet iPhone, mais un nouvel iPhone ne les retrouvera plus. L'abonnement se résilie dans les réglages de l'App Store.")
         }
     }
 }

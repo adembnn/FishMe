@@ -88,10 +88,12 @@ actor SauvegardeICloud: ServiceSauvegarde {
                                rapatriees: rapatriees, date: Date())
     }
 
-    /// Efface toute la sauvegarde iCloud (la zone entière). Les cartes restent sur cet iPhone.
+    /// Suppression du compte (App Store 5.1.1(v)) : efface la sauvegarde et la zone « Pescedex » partagée aux amis (L8),
+    /// donc son partage aussi. Les cartes restent sur cet iPhone ; l'abonnement se résilie chez Apple.
     func effacer() async throws {
         let db = base
-        _ = try await db.modifyRecordZones(saving: [], deleting: [Self.zone])
+        let partageAmis = CKRecordZone.ID(zoneName: "Pescedex", ownerName: CKCurrentUserDefaultName)
+        _ = try await db.modifyRecordZones(saving: [], deleting: [Self.zone, partageAmis])
         zonePrete = false
         UserDefaults.standard.set(true, forKey: Self.cleCoupee)
         UserDefaults.standard.removeObject(forKey: "compte.dernierProfil")
