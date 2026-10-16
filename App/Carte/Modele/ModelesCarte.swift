@@ -89,6 +89,8 @@ nonisolated enum Regroupeur {
         let lonMin = region.centre.longitude - region.spanLongitude / 2 * 1.1
         let hauteur = region.spanLatitude * 1.1 / Double(n)
         let largeur = region.spanLongitude * 1.1 / Double(n)
+        // Zone d'étendue nulle ou invalide : pas de grille possible (Int(inf) planterait).
+        guard hauteur > 0, largeur > 0, hauteur.isFinite, largeur.isFinite else { return visibles.prefix(maximum).map { .point($0) } }
 
         var cases: [Int: [PointCarte]] = [:]
         for p in visibles {

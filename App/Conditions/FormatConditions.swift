@@ -48,6 +48,7 @@ nonisolated enum FormatConditions {
     /// Point cardinal d'une direction en degrés (« O », « NE »).
     static func cardinal(_ degres: Double) -> String {
         let noms = ["N", "NE", "E", "SE", "S", "SO", "O", "NO"]
+        guard degres.isFinite else { return "" }
         let i = Int(((degres.truncatingRemainder(dividingBy: 360) + 360).truncatingRemainder(dividingBy: 360) + 22.5) / 45) % 8
         return noms[i]
     }
