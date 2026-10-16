@@ -48,7 +48,7 @@ struct PaywallVue: View {
         Group {
             switch modele.etat {
             case .chargement:
-                ChargementBouchon().frame(maxWidth: .infinity, maxHeight: .infinity)
+                EcranChargement()
             case .indisponible:
                 indisponible
             case .pret:
