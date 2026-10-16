@@ -268,7 +268,7 @@ struct NageTests {
             for q in poses {
                 #expect(q.x >= 0.23 * 0.45 - 1e-9 && q.x <= 1 - 0.23 * 0.45 + 1e-9, "\(slug) x \(q.x)")
                 #expect(q.y >= 0.12 && q.y <= 0.72, "\(slug) y \(q.y)")
-                #expect(abs(q.sens) >= 0.18 && abs(q.sens) <= 1)
+                #expect(abs(q.sens) >= 0.28 && abs(q.sens) <= 1)
                 #expect((0..<8).contains(q.image))
                 #expect(q.profondeur >= 0 && q.profondeur <= 1)
                 #expect(abs(q.assiette) <= 0.22 + 1e-9)
@@ -389,12 +389,26 @@ struct PleineEauTests {
         }
     }
 
+    /// Il va vers le fond et en revient : sur quelques boucles, des poissons rapetissent jusqu'au loin et
+    /// d'autres passent tout près, plus grands que nature.
+    @Test func versLeFondEtVersNous() {
+        var loin = 0, pres = 0
+        for slug in slugs {
+            for id in ["a", "b", "c", "d", "e", "f"] {
+                let poses = boucle(slug, id: id)
+                if poses.contains(where: { $0.profondeur > 0.95 }) { loin += 1 }
+                if poses.contains(where: { $0.echelle > 1.1 && !dehors($0) }) { pres += 1 }
+            }
+        }
+        #expect(loin >= 5 && pres >= 5, "loin \(loin), près \(pres)")
+    }
+
     @Test func perspectiveEtOpacite() {
         for slug in slugs {
             for q in boucle(slug) {
-                #expect(q.echelle >= 0.41 && q.echelle <= 1)
+                #expect(q.echelle >= 0.41 && q.echelle <= 1.55)
                 #expect(q.opacite >= 0 && q.opacite <= 1)
-                #expect(abs(q.sens) >= 0.18 && abs(q.sens) <= 1)
+                #expect(abs(q.sens) >= 0.28 && abs(q.sens) <= 1)
                 #expect((0..<8).contains(q.image))
             }
         }

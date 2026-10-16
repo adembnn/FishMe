@@ -140,6 +140,10 @@ private struct CoucheNage: View {
                             let pose = nageur.poses[j]
                             ImagePoisson(slug: nageur.slug, image: nageur.cycle ? pose.image : nil,
                                          largeur: nageur.largeur * pose.echelle, sens: pose.sens)
+                                // Brume du fond (NAGE-3D.md) : plus loin, plus pâle et plus clair. Sans flou, trop
+                                // coûteux sur 160 copies.
+                                .saturation(1 - 0.55 * max(pose.profondeur, 0))
+                                .brightness(0.12 * max(pose.profondeur, 0))
                                 .opacity(pose.opacite)
                                 // Il lève un peu le nez quand il monte (moitié de l'assiette de nage.js).
                                 .rotationEffect(.radians(-pose.assiette * 0.5 * (pose.sens > 0 ? 1 : -1)))

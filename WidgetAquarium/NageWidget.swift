@@ -233,7 +233,7 @@ nonisolated public enum NageWidget {
             // milieu d'un demi-tour), et il n'est jamais plus étroit que 18 % de sa largeur.
             let cap = etat.cap + dcap * u
             var sens = cos(cap) / max(hypot(cos(cap), 0.35 * sin(cap)), 1e-6)
-            if abs(sens) < 0.18 { sens = sens < 0 ? -0.18 : 0.18 }
+            if abs(sens) < 0.28 { sens = sens < 0 ? -0.28 : 0.28 }  // raccourci minimal de NAGE-3D.md
             let image = Int((phase * m).rounded(.down)) % max(imagesCycle, 1)
             phase = (phase + frequence(etat.v, longueur) * dt * echelleCycles).truncatingRemainder(dividingBy: 1)
             let p = bac.profondeur > 0 ? z / bac.profondeur : 0
@@ -251,7 +251,7 @@ nonisolated public enum NageWidget {
     // centre ; à la profondeur z, tout est réduit de 1 / (1 + 1.4 z) (0,42 au plus loin).
 
     /// Réduction de perspective à la profondeur z.
-    static func perspective(_ z: Double) -> Double { 1 / (1 + 1.4 * min(max(z, 0), 1)) }
+    static func perspective(_ z: Double) -> Double { 1 / (1 + 1.4 * min(max(z, -0.25), 1)) }
 
     /// Une boucle de `nombre` poses (10 s) en pleine eau : une ou plusieurs traversées, chacune d'un point hors du
     /// widget à un autre. `longueur` : longueur du poisson au premier plan, en part de la largeur ; `rapport` : h / l.
@@ -278,9 +278,13 @@ nonisolated public enum NageWidget {
         var chemins: [Traversee] = []
         var versLaDroite = entre(0, 1, &graine) < 0.5
         for _ in 0..<k {
-            let duFond = entre(0, 1, &graine) < 0.25
-            let za = duFond ? 1.0 : entre(0, 0.85, &graine)
-            let zb = duFond ? entre(0, 0.35, &graine) : min(max(za + entre(-0.4, 0.4, &graine), 0), 0.9)
+            // Trois sortes de passage : il sort du fond et vient vers nous, il part vers le fond depuis un bord,
+            // ou il traverse en changeant de profondeur. z < 0 : tout près de la vitre, plus grand que nature.
+            let sorte = entre(0, 1, &graine)
+            let duFond = sorte < 0.25, versLeFond = !duFond && sorte < 0.5
+            let za = duFond ? 1.0 : (versLeFond ? entre(-0.25, 0.2, &graine) : entre(-0.2, 0.85, &graine))
+            let zb = duFond ? entre(-0.25, 0.3, &graine)
+                : (versLeFond ? 1.0 : min(max(za + entre(-0.5, 0.5, &graine), -0.25), 0.9))
             let marge = { (z: Double) in longueur * perspective(z) * 0.6 }
             let gauche = { (z: Double) in -marge(z) }, droite = { (z: Double) in 1 + marge(z) }
             // Départ : un bord (gauche ou droite), à n'importe quelle hauteur, coins compris ; ou au loin, dans l'eau.
@@ -290,7 +294,10 @@ nonisolated public enum NageWidget {
             let tirage = entre(0, 1, &graine)
             var ex1 = versLaDroite ? droite(zb) : gauche(zb)
             var ey1 = entre(-0.05 * h, 1.05 * h, &graine)
-            if tirage < 0.2 {
+            if versLeFond {
+                // Il s'enfonce vers le point de fuite et se perd dans le bleu.
+                ex1 = entre(0.3, 0.7, &graine); ey1 = entre(h * 0.3, h * 0.7, &graine)
+            } else if tirage < 0.2 {
                 ex1 = entre(0.55, 0.95, &graine); if !versLaDroite { ex1 = 1 - ex1 }
                 ey1 = tirage < 0.1 ? -marge(zb) : h + marge(zb)
             }
@@ -335,12 +342,12 @@ nonisolated public enum NageWidget {
             // Cap : surtout de profil ; il ne s'amincit que s'il fonce vers nous ou s'éloigne.
             let cap = atan2(-q.vz * 0.6, q.vx)
             var sens = cos(cap) / max(hypot(cos(cap), 0.35 * sin(cap)), 1e-6)
-            if abs(sens) < 0.18 { sens = sens < 0 ? -0.18 : 0.18 }
+            if abs(sens) < 0.28 { sens = sens < 0 ? -0.28 : 0.28 }  // raccourci minimal de NAGE-3D.md
             let assiette = min(max(atan2(-q.vy, abs(q.vx) + 1e-6) * 0.6, -0.22), 0.22)
             let image = Int((phase * m).rounded(.down)) % max(imagesCycle, 1)
             phase = (phase + frequence(q.vitesse, longueur) * dt * echelleCycles).truncatingRemainder(dividingBy: 1)
             // Il sort du bleu lointain peu à peu (au-delà de z = 0,7), et se perd un peu dans l'eau au loin.
-            let opacite = min(1, max(0, (1 - q.z) / 0.3)) * (1 - 0.25 * q.z)
+            let opacite = min(1, max(0, (1 - q.z) / 0.3) * (1 - 0.25 * max(q.z, 0)))
             return PoseNage(x: ex, y: ey / h, sens: sens, image: image, profondeur: q.z, assiette: assiette,
                             echelle: s, opacite: opacite)
         }
