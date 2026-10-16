@@ -99,6 +99,7 @@ nonisolated struct NotifieurSysteme: Notifieur {
 final class PreviensMoiModele: ObservableObject {
     @Published var criteres = CriteresPreviensMoi()
     @Published var vigilanceActive = false
+    @Published var crueActive = false
     @Published private(set) var permissionDemandee = false
     @Published private(set) var permissionAccordee = false
 
@@ -131,37 +132,80 @@ struct PreviensMoiView: View {
     @State private var ventActif = false
     @State private var vent: Double = 15
 
+    /// Nom réel de la station hydrométrique si la lecture en a une.
+    private var legendeCrue: String {
+        if let nom = lecture?.eau?.station.nom, !nom.isEmpty { return "Niveau : \(nom)" }
+        return "Niveau de ta rivière"
+    }
+
     var body: some View {
-        Form {
-            Section {
-                Text("FishMe te prévient sur ton spot, seulement pour ce que tu choisis.")
-                    .font(JetonsConditions.police(.footnote)).foregroundStyle(JetonsConditions.encre2)
+        ScrollView {
+            VStack(alignment: .leading, spacing: Espace.l) {
+                Text("Alertes")
+                    .font(Police.grandTitre).foregroundStyle(Palette.encre)
+                    .accessibilityAddTraits(.isHeader)
+                Text("FishMe te prévient avant que ça tourne mal.")
+                    .font(Police.detail).foregroundStyle(Palette.encreDouce)
+                VStack(spacing: 0) {
+                    ligne(icone: "bolt.fill", titre: "Orage", legende: "Vigilance Météo-France sur ton spot", actif: $modele.vigilanceActive)
+                    Divider().padding(.leading, Espace.xxl + Espace.l)
+                    ligne(icone: "water.waves", titre: "Crue", legende: legendeCrue, actif: $modele.crueActive)
+                }
+                .tuileFishMe()
+                DisclosureGroup("Plus de réglages") {
+                    VStack(alignment: .leading, spacing: Espace.s) {
+                        Toggle("vent sous \(FormatConditions.nombre(vent)) km/h", isOn: $ventActif)
+                        if ventActif { Slider(value: $vent, in: 5...40, step: 1) }
+                        Toggle("pression en baisse", isOn: $modele.criteres.pressionEnBaisse)
+                        Toggle("rivière normale", isOn: $modele.criteres.niveauNormal)
+                    }
+                    .padding(.top, Espace.s)
+                }
+                .font(Police.detail).foregroundStyle(Palette.encre)
+                .tint(Palette.marine)
             }
-            Section {
-                Toggle("vent sous \(FormatConditions.nombre(vent)) km/h", isOn: $ventActif)
-                if ventActif { Slider(value: $vent, in: 5...40, step: 1) }
-                Toggle("pression en baisse", isOn: $modele.criteres.pressionEnBaisse)
-                Toggle("rivière normale", isOn: $modele.criteres.niveauNormal)
-            }
-            Section {
-                Toggle("vigilance sur mon spot", isOn: $modele.vigilanceActive)
-                Text("dès que l'app peut vérifier").font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
-            }
+            .padding(.horizontal, Espace.bord)
+            .padding(.top, Espace.l)
         }
-        .font(JetonsConditions.police(.body))
         .scrollIndicators(.hidden)
+        .background(Palette.fond.ignoresSafeArea())
+        .safeAreaInset(edge: .bottom) {
+            Button("Préviens-moi") {
+                Task {
+                    _ = await modele.assurerPermission()
+                    await modele.reprogrammer(avec: lecture)
+                }
+            }
+            .buttonStyle(.principal)
+            .padding(.horizontal, Espace.bord)
+            .padding(.bottom, Espace.s)
+        }
         .onChange(of: ventActif) { _, _ in appliquer() }
         .onChange(of: vent) { _, _ in appliquer() }
         .onChange(of: modele.criteres) { _, _ in appliquer() }
-        .onChange(of: modele.vigilanceActive) { _, _ in appliquer() }
         .accessibilityIdentifier("previens-moi")
     }
 
+    private func ligne(icone: String, titre: String, legende: String, actif: Binding<Bool>) -> some View {
+        HStack(spacing: Espace.m) {
+            Image(systemName: icone)
+                .font(.system(size: 22, weight: .bold, design: .rounded))
+                .foregroundStyle(Palette.alerte)
+                .frame(width: Espace.xxl)
+                .accessibilityHidden(true)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(titre).font(Police.corps).foregroundStyle(Palette.encre)
+                Text(legende).font(Police.detail).foregroundStyle(Palette.encreDouce)
+            }
+            Spacer(minLength: Espace.s)
+            Toggle(titre, isOn: actif).labelsHidden().tint(Palette.marine)
+        }
+        .padding(Espace.l)
+    }
+
+    /// Reprogramme avec la permission déjà donnée ; ne la demande jamais (c'est le bouton qui s'en charge).
     private func appliquer() {
         modele.criteres.ventSousKmh = ventActif ? vent : nil
-        Task {
-            _ = await modele.assurerPermission()
-            await modele.reprogrammer(avec: lecture)
-        }
+        Task { await modele.reprogrammer(avec: lecture) }
     }
 }
