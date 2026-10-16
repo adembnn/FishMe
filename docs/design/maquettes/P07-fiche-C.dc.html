@@ -12,23 +12,53 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
 <style>
 body{margin:0}
-.pt-p{width:10px;height:10px;border-radius:5px;display:inline-block;flex:none}
-.pt-p.o{background:var(--ouvert)}
-.pt-p.f{background:var(--alerte)}
-.pt-f{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;flex:1;background:none}
-.pt-f .tuile-poisson{width:100%}
-.pt-f b{font-size:22px;line-height:1;display:flex;align-items:center;gap:6px;color:var(--encre)}
-.pt-f b small{font-size:13px;font-weight:800;color:var(--encre-douce)}
-.pt-plus{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:6px;background:none}
-.pt-plus span{width:100%;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--filet);display:grid;place-items:center;color:var(--encre-douce);font-size:15px}
+.ecran .p07-t{background:var(--tuile);padding:8px 10px 9px}
+.ecran .p07-big{padding:8px 12px 8px}
+.p07-t{position:relative;display:flex;flex-direction:column;align-items:stretch;text-align:left;min-width:0;background:var(--tuile);border-radius:16px;padding:8px 9px 9px;gap:2px}
+.p07-t .rar{font-size:12px;gap:4px}.p07-t .rar svg{width:12px;height:12px}
+.p07-im{display:grid;place-items:center;height:36px}
+.p07-im img{width:100%;height:36px}
+.p07-t b{font-size:14px;font-weight:900;color:var(--encre);font-variant-numeric:tabular-nums;line-height:1.15}
+.p07-bas{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.p07-bas i{font-style:normal;font-size:17px;font-weight:900;color:var(--ouvert);line-height:1.15}
+.p07-bas.f i{color:var(--alerte)}
+.p07-bas i.n{font-size:13px;color:var(--encre-douce);font-weight:800}
+.p07-pt{width:10px;height:10px;border-radius:5px;flex:none}
+.p07-pt.o{background:var(--ouvert)}.p07-pt.f{background:var(--alerte)}
+.p07-chip{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px 0 8px;border-radius:15px;background:var(--ouvert-doux);color:var(--ouvert);font-size:14px;font-weight:800;white-space:nowrap}
+.p07-chip svg{width:18px;height:18px}
+.p07-cond{display:grid;grid-template-columns:1fr 1fr 1fr}
+.p07-c{display:flex;align-items:center;gap:8px;min-width:0}
+.p07-c svg{color:var(--marine)}
+.p07-c b{display:block;font-size:20px;font-weight:900;line-height:1.05;font-variant-numeric:tabular-nums;color:var(--encre)}
+.p07-c span{display:block;font-size:12px;font-weight:700;color:var(--encre-douce);line-height:1.2}
+.p07-conseil{display:flex;align-items:center;gap:14px;font-size:15px;font-weight:800;color:var(--encre);white-space:nowrap}
+.p07-conseil .e{display:flex;align-items:center;gap:5px}
+.p07-conseil svg{color:var(--marine)}
+.p07-conseil img{width:44px;height:24px}
+.p07-lien{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:800;color:var(--marine);width:100%;height:36px}
+.p07-lien svg{width:20px;height:20px}
+
+.p07-plus{display:inline-flex;align-items:center;height:30px;padding:0 12px;border-radius:15px;background:var(--tuile);color:var(--marine);font-size:14px;font-weight:900}
+.p07-big{gap:2px;border-radius:20px}
+.p07-big .rar{font-size:13px}.p07-big .rar svg{width:14px;height:14px}
+.p07-big .p07-im{height:30px}.p07-big .p07-im img{height:30px;width:92%}
+.p07-big b{font-size:14px;color:var(--encre-douce)}
+.p07-big .p07-bas i{font-size:19px}.p07-big .p07-bas i.n{font-size:14px}
 
 </style>
 </helmet>
 <div class="ecran blanc">
-<div class="haut" style="display:flex;justify-content:space-between;align-items:center"><span class="t-detail" style="display:flex;gap:6px;align-items:center;color:var(--encre)"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px;flex:none;color:var(--marine)"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>Ton spot · Saint-Maur</span><button class="rond" aria-label="Fermer" style="background:var(--tuile);color:var(--marine)"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg></button></div>
-<div style="position:absolute;left:16px;right:16px;top:230px"><div style="display:flex;gap:6px;align-items:flex-start"><button class="pt-f" aria-label="Brochet, taille minimale 60 cm, ouvert"><div class="tuile-poisson" style="height:76px"><img class="poisson" src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="" style="width:88%;height:54px"></div><b>60<span class="pt-p o"></span></b></button><button class="pt-f" aria-label="Sandre, taille minimale 50 cm, ouvert"><div class="tuile-poisson" style="height:76px"><img class="poisson" src="/_blob/64752134d1301c8ae5245b9230566c2d" alt="" style="width:88%;height:54px"></div><b>50<span class="pt-p o"></span></b></button><button class="pt-f" aria-label="Black-bass, taille minimale 40 cm, ouvert"><div class="tuile-poisson" style="height:76px"><img class="poisson" src="/_blob/822cd2aa2361109755135f4ca4af8f47" alt="" style="width:88%;height:54px"></div><b>40<span class="pt-p o"></span></b></button><button class="pt-f" aria-label="Truite fario, taille minimale 23 cm, fermé"><div class="tuile-poisson" style="height:76px"><img class="poisson" src="/_blob/9c9a3e6836050e27289055b62c3d60d5" alt="" style="width:88%;height:54px"></div><b>23<span class="pt-p f"></span></b></button><button class="pt-plus" aria-label="7 autres espèces"><span style="height:76px">+7</span></button></div></div>
-<div style="position:absolute;left:32px;right:32px;top:420px;text-align:center" class="t-detail">3 carnassiers par jour</div>
-<div style="position:absolute;left:16px;right:16px;bottom:34px"><button class="btn pri"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg>Commencer une session</button></div>
+<div style="position:absolute;left:16px;right:16px;top:59px;display:flex;justify-content:space-between;align-items:center;height:28px"><span class="t-detail" style="display:flex;gap:6px;align-items:center;color:var(--encre);white-space:nowrap"><svg style="width:16px;height:16px;color:var(--marine)" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>Ton spot · La Marne à Saint-Maur</span><span class="t-detail">2,4 km</span></div>
+<div style="position:absolute;left:16px;right:16px;top:94px"><h1 style="font-size:28px;font-weight:900;line-height:1.05;letter-spacing:-.01em">Ce que tu peux pêcher ici aujourd'hui</h1>
+<div style="margin-top:8px"><span class="p07-chip"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;flex:none;"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-1.3 14.2-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4Z"/></svg>Ouvert aujourd'hui</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><button class="p07-t p07-big" aria-label="Brochet, peu commun, 10 pêches sur 29, taille minimale 60 cm, ouvert"><span class="rar pc"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.5 13.6 4.75v6.5L8 14.5 2.4 11.25v-6.5Z"/></svg><span>Peu commun</span></span><span class="p07-im"><img class="poisson" src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt=""></span><b>10 sur 29</b><span class="p07-bas"><i class="">60 cm</i><span class="p07-pt o"></span></span></button><button class="p07-t p07-big" aria-label="Sandre, rare, 3 pêches sur 29, taille minimale 50 cm, ouvert"><span class="rar r"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1 15 8 8 15 1 8Z"/></svg><span>Rare</span></span><span class="p07-im"><img class="poisson" src="/_blob/64752134d1301c8ae5245b9230566c2d" alt=""></span><b>3 sur 29</b><span class="p07-bas"><i class="">50 cm</i><span class="p07-pt o"></span></span></button><button class="p07-t p07-big" aria-label="Perche, commun, 24 pêches sur 29, ouvert"><span class="rar c"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="8" cy="8" r="6"/></svg><span>Commun</span></span><span class="p07-im"><img class="poisson" src="/_blob/0af5e5e6f274e011d4317ff12600a103" alt=""></span><b>24 sur 29</b><span class="p07-bas"><i class="n">Sans taille</i><span class="p07-pt o"></span></span></button><button class="p07-t p07-big" aria-label="Gardon, commun, 16 pêches sur 29, ouvert"><span class="rar c"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="8" cy="8" r="6"/></svg><span>Commun</span></span><span class="p07-im"><img class="poisson" src="/_blob/4799d66fb5fc82ab53e0051d38867b2d" alt=""></span><b>16 sur 29</b><span class="p07-bas"><i class="n">Sans taille</i><span class="p07-pt o"></span></span></button><button class="p07-t p07-big" aria-label="Black-bass, rare, 2 pêches sur 29, taille minimale 40 cm, ouvert"><span class="rar r"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1 15 8 8 15 1 8Z"/></svg><span>Rare</span></span><span class="p07-im"><img class="poisson" src="/_blob/822cd2aa2361109755135f4ca4af8f47" alt=""></span><b>2 sur 29</b><span class="p07-bas"><i class="">40 cm</i><span class="p07-pt o"></span></span></button><button class="p07-t p07-big" aria-label="Truite fario, légendaire, 0 pêches sur 29, fermé"><span class="rar l"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1 2.1 4.4 4.9.6-3.6 3.4.9 4.8L8 11.9l-4.3 2.3.9-4.8L1 6l4.9-.6Z"/></svg><span>Légendaire</span></span><span class="p07-im"><img class="poisson" src="/_blob/9c9a3e6836050e27289055b62c3d60d5" alt=""></span><b>0 sur 29</b><span class="p07-bas f"><i>Fermé</i><span class="p07-pt f"></span></span></button></div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px"><span class="t-legende">29 pêches OFB · dernier relevé 2024</span><span class="p07-plus" style="height:24px;font-size:13px;background:none;padding:0">+5 espèces ›</span></div>
+<div class="p07-cond" style="margin-top:8px"><div class="p07-c"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:22px;height:22px;flex:none;"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg><div><b>14 °C</b><span>Eau</span></div></div><div class="p07-c"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:22px;height:22px;flex:none;"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M2 9c2.5-2 5-2 7.5 0s5 2 7.5 0 3.5-1.5 5 0M2 15c2.5-2 5-2 7.5 0s5 2 7.5 0 3.5-1.5 5 0"/></svg><div><b>1,42 m</b><span>Marne · stable</span></div></div><div class="p07-c"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:22px;height:22px;flex:none;"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M7 18h10.5a4 4 0 0 0 .4-8A6 6 0 0 0 6.3 11 3.5 3.5 0 0 0 7 18Z"/></svg><div><b>16°</b><span>Nuageux</span><span style="font-size:11px">Apple Météo</span></div></div></div>
+<div style="margin-top:8px"><div class="t-legende" style="margin-bottom:5px">À essayer aujourd&#39;hui</div><div class="p07-conseil"><span class="e"><img class="poisson" src="/_blob/325cfac7b539aef705c1b3f944fa8bcf" alt="Brochet"></span><span class="e"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c3-5 9-5 13 0-4 5-10 5-13 0Z"/><path d="M16 12l5-3.5v7Z"/><circle cx="7.5" cy="11" r=".6" fill="currentColor"/></g></svg>Leurre souple</span><span class="e"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;flex:none;"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></svg>17 h à 19 h</span></div></div>
+<button class="p07-lien" style="margin-top:2px"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></g></svg><span style="white-space:nowrap">Règles et sources</span><span class="t-legende" style="margin-left:auto;white-space:nowrap">3 carnassiers par jour</span><svg class="chevron" style="margin-left:2px" viewBox="0 0 8 14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m1.5 1.5 5 5.5-5 5.5"/></svg></button>
+</div>
+<div style="position:absolute;left:16px;right:16px;bottom:24px"><button class="btn pri"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;flex:none;"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg>Commencer une session</button><button class="lien" style="height:40px">Choisir un autre spot</button></div>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
