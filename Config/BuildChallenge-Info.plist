@@ -24,9 +24,9 @@
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>NSCameraUsageDescription</key>
-	<string>FishMe utilise l'appareil photo pour photographier ta prise et mesurer sa taille. Les photos restent sur ton iPhone, sans position.</string>
+	<string>Pour photographier ta prise. La photo reste sur ton iPhone, sans GPS.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>FishMe centre la carte sur ta position pour te montrer les coins de pêche proches. Ta position reste sur ton iPhone.</string>
+	<string>Pour te montrer les poissons et les règles près de toi. Ton coin exact ne quitte jamais ton iPhone.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>FishMe enregistre l'image de ta carte dans tes photos quand tu le demandes, sans aucune position.</string>
 	<key>FishMeICloud</key>
