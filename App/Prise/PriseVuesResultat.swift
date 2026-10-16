@@ -201,9 +201,9 @@ struct PriseResultatView: View {
         .background(Palette.fond.ignoresSafeArea())
         .safeAreaInset(edge: .top) {
             HStack {
-                PriseBoutonRond(symbole: "chevron.left", etiquette: "Retour", action: { modele.retour() })
+                BoutonRond(role: .retour, rendu: .simple, action: { modele.retour() })
                 Spacer()
-                PriseBoutonRond(symbole: "xmark", etiquette: "Fermer", action: { modele.terminer(nil) })
+                BoutonRond(role: .fermer, rendu: .simple, action: { modele.terminer(nil) })
             }
             .padding(.horizontal, Espace.bord).padding(.vertical, Espace.xs)
             .background(Palette.fond)

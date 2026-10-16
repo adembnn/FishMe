@@ -67,11 +67,7 @@ struct MesureARView: View {
             traitEtPoints.allowsHitTesting(false)
             VStack(spacing: 12) {
                 HStack {
-                    Button(action: surAnnuler) {
-                        Image(systemName: "xmark").font(.system(.body, design: .rounded, weight: .bold))
-                            .frame(width: 44, height: 44).background(.ultraThinMaterial, in: Circle())
-                    }
-                    .accessibilityLabel("Fermer")
+                    BoutonRond(role: .fermer, rendu: .verre, action: surAnnuler)
                     Spacer()
                 }
                 Text(etat.consigne)

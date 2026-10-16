@@ -66,7 +66,7 @@ struct PriseFeuille<Contenu: View>: View {
             VStack(spacing: 0) {
                 if let retour {
                     HStack {
-                        PriseBoutonRond(symbole: "chevron.left", etiquette: "Retour", action: retour)
+                        BoutonRond(role: .retour, rendu: .verre, action: retour)
                         Spacer()
                     }
                     .padding(Espace.bord)
