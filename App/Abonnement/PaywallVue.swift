@@ -55,7 +55,7 @@ struct PaywallVue: View {
                 boutique
             }
         }
-        .background(JetonsAbonnement.papier)
+        .background(Palette.surface)
         .safeAreaInset(edge: .bottom) { pied }
         .task {
             if !dejaMontre {
@@ -94,65 +94,65 @@ struct PaywallVue: View {
     // MARK: Contenu au-dessus des offres
 
     private var argumentaire: some View {
-        VStack(alignment: .leading, spacing: 18) {
-            VStack(alignment: .leading, spacing: 6) {
+        VStack(alignment: .leading, spacing: Espace.l) {
+            VStack(alignment: .leading, spacing: Espace.xs) {
                 Text("FishMe Pro")
-                    .font(JetonsAbonnement.police(.largeTitle))
-                    .foregroundStyle(JetonsAbonnement.marine)
+                    .font(Police.grandTitre)
+                    .foregroundStyle(Palette.encre)
                 if case .fonction(let fonction) = declencheur {
                     Text(TextesPaywall.titre(fonction))
-                        .font(JetonsAbonnement.police(.title3))
-                        .foregroundStyle(JetonsAbonnement.vert)
-                    Text("Cette fonction fait partie de Pro.")
-                        .font(JetonsAbonnement.texte(.subheadline))
+                        .font(Police.sousTitre)
+                        .foregroundStyle(Palette.marine)
                 }
             }
-            colonnes
+            avantages
+            Text("Ton spot gratuit reste à toi, pour toujours.")
+                .font(Police.detail)
+                .foregroundStyle(Palette.encreDouce)
             if let phrase = modele.phraseLancement {
-                Text(phrase).font(JetonsAbonnement.police(.subheadline)).foregroundStyle(JetonsAbonnement.marine)
+                Text(phrase).font(Police.detail).foregroundStyle(Palette.encre)
             }
             if let essai = modele.phraseEssai {
-                Text(essai).font(JetonsAbonnement.police(.subheadline)).foregroundStyle(JetonsAbonnement.vert)
+                Text(essai).font(Police.detail).foregroundStyle(Palette.marine)
             }
             Text(TextesPaywall.renouvellement)
-                .font(JetonsAbonnement.texte(.footnote))
-                .foregroundStyle(.secondary)
+                .font(Police.legende)
+                .foregroundStyle(Palette.encreDouce)
         }
-        .padding(.horizontal, 20)
-        .padding(.top, 8)
+        .padding(.horizontal, Espace.bord)
+        .padding(.top, Espace.s)
         .fixedSize(horizontal: false, vertical: true)
     }
 
-    private var colonnes: some View {
-        Group {
-            if tailleTexte.isAccessibilitySize {
-                VStack(alignment: .leading, spacing: 16) { colonneGratuit; colonnePro }
-            } else {
-                HStack(alignment: .top, spacing: 14) { colonneGratuit; colonnePro }
-            }
-        }
-    }
+    /// Les quatre avantages de la maquette P34 A : une pastille ronde et un mot chacun.
+    private static let avantagesPro: [(icone: String, titre: String)] = [
+        ("map", "Tous les spots"),
+        ("cloud", "Météo et rivière"),
+        ("bolt", "Alertes"),
+        ("doc.text", "Conseils"),
+    ]
 
-    private var colonneGratuit: some View {
-        colonne(titre: "Gratuit, pour toujours", lignes: TextesPaywall.gratuit, couleur: JetonsAbonnement.marine)
-    }
-
-    private var colonnePro: some View {
-        colonne(titre: "Avec Pro", lignes: TextesPaywall.proEnTete(declencheur), couleur: JetonsAbonnement.vert)
-    }
-
-    private func colonne(titre: String, lignes: [TextesPaywall.Ligne], couleur: Color) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(titre).font(JetonsAbonnement.police(.headline)).foregroundStyle(couleur)
-            ForEach(lignes, id: \.texte) { ligne in
-                Label {
-                    Text(ligne.texte).font(JetonsAbonnement.texte(.subheadline)).fixedSize(horizontal: false, vertical: true)
-                } icon: {
-                    Image(systemName: ligne.icone).foregroundStyle(couleur).frame(width: 22)
+    private var avantages: some View {
+        let disposition = tailleTexte.isAccessibilitySize
+            ? AnyLayout(VStackLayout(alignment: .leading, spacing: Espace.m))
+            : AnyLayout(HStackLayout(alignment: .top, spacing: Espace.s))
+        return disposition {
+            ForEach(Self.avantagesPro, id: \.titre) { avantage in
+                VStack(spacing: Espace.s) {
+                    Image(systemName: avantage.icone)
+                        .font(Police.sousTitre)
+                        .foregroundStyle(Palette.marine)
+                        .frame(width: 48, height: 48)
+                        .background(Palette.marineDoux, in: Circle())
+                    Text(avantage.titre)
+                        .font(Police.legende)
+                        .foregroundStyle(Palette.encre)
+                        .multilineTextAlignment(.center)
                 }
+                .frame(maxWidth: .infinity)
+                .accessibilityElement(children: .combine)
             }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     // MARK: Produit introuvable
@@ -160,10 +160,11 @@ struct PaywallVue: View {
     private var indisponible: some View {
         VStack(spacing: 16) {
             Text(TextesPaywall.produitIntrouvable)
-                .font(JetonsAbonnement.police(.headline))
+                .font(Police.sousTitre)
+                .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
             Button("Réessayer") { Task { await modele.charger() } }
-                .buttonStyle(.borderedProminent).tint(JetonsAbonnement.vert).controlSize(.large)
+                .buttonStyle(.principal)
         }
         .padding(24)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -174,29 +175,29 @@ struct PaywallVue: View {
     private var pied: some View {
         VStack(spacing: 8) {
             if let message {
-                Text(message).font(JetonsAbonnement.texte(.footnote)).multilineTextAlignment(.center)
+                Text(message).font(Police.legende).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
             }
             Button("Restaurer les achats") { Task { await restaurer() } }
-                .font(JetonsAbonnement.texte(.subheadline))
-                .frame(minHeight: 44)
+                .font(Police.legende)
+                .foregroundStyle(Palette.marine)
+                .frame(minHeight: Gabarit.zoneTactile)
                 .contentShape(Rectangle())
             Button(action: fermer) {
                 Text(declencheur.texteFermeture)
-                    .font(JetonsAbonnement.police(.headline))
-                    .frame(maxWidth: .infinity, minHeight: 44)
             }
-            .buttonStyle(.bordered).tint(JetonsAbonnement.marine)
+            .buttonStyle(.secondaire)
             // Liens légaux toujours visibles, même si ce pied recouvre ceux de la boutique.
             HStack(spacing: 24) {
                 Link("Conditions d'utilisation", destination: liens.conditions)
                 Link("Confidentialité", destination: liens.confidentialite)
             }
-            .font(JetonsAbonnement.texte(.footnote))
-            .frame(minHeight: 44)
+            .font(Police.legende)
+            .foregroundStyle(Palette.marine)
+            .frame(minHeight: Gabarit.zoneTactile)
         }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 10)
-        .background(.bar)
+        .padding(.horizontal, Espace.bord)
+        .padding(.vertical, Espace.s)
+        .background(Palette.surface)
     }
 
     private func restaurer() async {
