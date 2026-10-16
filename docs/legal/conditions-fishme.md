@@ -1,7 +1,7 @@
 # Conditions d'utilisation de FishMe (CGU)
 
 Source unique du texte des CGU. L'app l'affiche hors ligne (Réglages, et au premier lancement) : après chaque changement, lancer `python3 outils/legal/generer_conditions.py`, qui réécrit `App/Abonnement/TexteConditions.swift`. Un changement qui doit être ré-accepté fait monter `numero` de 1.
-Les crochets `[...]` sont à remplir avant l'envoi à Apple (identité de l'éditeur : MWM ; e-mail de contact : Adem ; médiateur : MWM). Rien n'est publié hors du dépôt sans le oui d'Adem ; la version web passe par le serveur MCP de MWM.
+Les crochets `[...]` sont à remplir avant l'envoi à Apple (identité de l'éditeur : MWM ; médiateur : MWM). Rien n'est publié hors du dépôt sans le oui d'Adem ; la version web passe par le serveur MCP de MWM.
 Tout ce qui est au-dessus du premier titre `##` n'est pas montré dans l'app.
 
 <!-- version: 16 octobre 2026 | numero: 1 -->
@@ -10,7 +10,7 @@ Tout ce qui est au-dessus du premier titre `##` n'est pas montré dans l'app.
 
 FishMe est éditée par [RAISON SOCIALE DE L'ÉDITEUR, à donner par MWM], [forme juridique et capital], immatriculée au RCS de [ville] sous le numéro [numéro], dont le siège est au [adresse]. Numéro de TVA : [numéro]. Directeur de la publication : [nom].
 
-Contact : [E-MAIL DE CONTACT, à donner par Adem], téléphone ou formulaire : [à donner par MWM]. Pour une erreur dans une règle de pêche, utilise aussi « Signaler une erreur de règle » dans Mon club.
+Contact : fishme.app@gmail.com, téléphone ou formulaire : [à donner par MWM]. Pour une erreur dans une règle de pêche, utilise aussi « Signaler une erreur de règle » dans Mon club.
 
 Hébergement du site web de FishMe : [nom, adresse et téléphone de l'hébergeur, à donner par MWM]. Ta collection est hébergée par Apple, dans ton iCloud.
 
