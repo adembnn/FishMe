@@ -34,6 +34,15 @@ nonisolated enum MesureARCalcul {
         Double(simd_distance(a, b)) * 100
     }
 
+    /// Au-delà de ce multiple du p95 des longueurs mesurées pour l'espèce, la mesure est à refaire.
+    static let facteurP95 = 1.2
+
+    /// Plage plausible d'une espèce : 3 cm jusqu'à 1,2 × p95 (`longueurPlausibleMax`) ; la plage par défaut sans référence.
+    static func plageEspece(p95Cm: Double?) -> ClosedRange<Double> {
+        guard let p95 = p95Cm, p95.isFinite, p95 > 0 else { return plageParDefaut }
+        return plageParDefaut.lowerBound...max(plageParDefaut.lowerBound, p95 * facteurP95)
+    }
+
     static func plausible(_ longueurCm: Double, plage: ClosedRange<Double> = plageParDefaut) -> Bool {
         longueurCm.isFinite && plage.contains(longueurCm)
     }
