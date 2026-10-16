@@ -20,8 +20,8 @@ final class ModeleCarte {
                                                                 span: MKCoordinateSpan(latitudeDelta: 11, longitudeDelta: 13)))
     var regionVisible: ZoneCarte = .france
     var elements: [ElementCarte] = []
-    var animees: [StationAnimee] = []
-    var enMouvement = false
+    /// Vrai dès que la carte est posée sur une zone utile (spot, zone choisie, position ou dernière vue) : jamais la France entière.
+    private(set) var cameraPlacee = false
 
     // Données
     var pechables: [EspecePechable] = []
@@ -43,16 +43,25 @@ final class ModeleCarte {
     var selection: CoinSelectionne?
 
     @ObservationIgnored private var tacheElements: Task<Void, Never>?
-    @ObservationIgnored private var tacheAnimees: Task<Void, Never>?
     @ObservationIgnored private var tacheStations: Task<Void, Never>?
     /// Le premier « fin de mouvement » de la caméra est l'affichage initial, pas un geste du pêcheur.
     @ObservationIgnored private var premiereCameraAttendue = true
     /// Dossier du cache des stations du dernier lancement (Caches de l'app). `nil` : pas de cache (tests).
     @ObservationIgnored private let dossierCache: URL?
 
-    init(services: ServicesCarte, dossierCache: URL? = StockageCacheCarte.dossierParDefaut) {
+    /// Où l'on garde la dernière zone choisie à la main (sur l'iPhone seulement). `nil` : rien n'est gardé (tests).
+    @ObservationIgnored private let reglages: UserDefaults?
+    private static let cleZone = "carte.derniereZoneChoisie"
+
+    /// L'étendue d'ouverture autour d'un spot ou d'une position (environ 15 km) : les stations y sont lisibles une à une.
+    static let etendueOuverture = 0.14
+    /// L'étendue autour d'une zone choisie à la main (département ou commune).
+    static let etendueZone = 0.35
+
+    init(services: ServicesCarte, dossierCache: URL? = StockageCacheCarte.dossierParDefaut, reglages: UserDefaults? = .standard) {
         self.services = services
         self.dossierCache = dossierCache
+        self.reglages = reglages
     }
 
     var spotAffiche: Spot? { spotFixe ?? spotLocal }
@@ -72,8 +81,42 @@ final class ModeleCarte {
     /// La carte s'affiche tout de suite. On ne lit plus la France entière au départ : on montre les stations du dernier lancement
     /// (cache local), on les rafraîchit, et la position (ou la zone choisie) charge sa zone dès qu'elle arrive.
     func demarrer() async {
+        placerALOuverture()
         pechables = await lirePechables()
         await restaurerDepuisCache()
+    }
+
+    /// La caméra d'ouverture : le spot fixé, sinon la dernière zone choisie à la main. La position, si elle arrive, prend le relais.
+    func placerALOuverture() {
+        guard !cameraPlacee else { return }
+        if let spot = spotFixe {
+            centrer(ZoneCarte(centre: spot.centre, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
+        } else if let zone = zoneGardee, !services.geo.departement(de: zone).estInconnu {
+            depart = .zoneChoisie(zone)
+            centrer(ZoneCarte(centre: zone, spanLatitude: Self.etendueZone, spanLongitude: Self.etendueZone))
+            proposerSpot(pres: zone)
+        }
+    }
+
+    /// Le spot fixé vient d'arriver (session ou fin de la 1re session) : la carte s'y pose.
+    func recevoir(spotFixe nouveau: Spot?) {
+        let avant = spotFixe
+        spotFixe = nouveau
+        if let nouveau, avant == nil {
+            centrer(ZoneCarte(centre: nouveau.centre, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
+        }
+    }
+
+    private var zoneGardee: Coordonnee? {
+        guard let reglages, let t = reglages.array(forKey: Self.cleZone) as? [Double], t.count == 2 else { return nil }
+        return Coordonnee(latitude: t[0], longitude: t[1])
+    }
+
+    /// Aucune position ne vient (refus ou échec) et rien n'a posé la carte : le pêcheur choisit son département ou sa commune.
+    func positionIndisponible() {
+        guard !cameraPlacee, depart == .enAttente else { return }
+        depart = .choixDeZone
+        afficherChoixDeZone = true
     }
 
     private func restaurerDepuisCache() async {
@@ -81,8 +124,9 @@ final class ModeleCarte {
         let cache = await Task.detached(priority: .userInitiated) {
             StockageCacheCarte.lire(dans: dossier, maintenant: Date())
         }.value
-        // Si la position est déjà arrivée, sa zone est plus fraîche que le cache.
-        guard let cache, depart == .enAttente, regionChargee == nil else { return }
+        // Si la position ou une zone est déjà là, elle est plus fraîche que le cache.
+        guard let cache, depart == .enAttente, regionChargee == nil, !cameraPlacee else { return }
+        cameraPlacee = true
         regionVisible = cache.region
         camera = .region(MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: cache.region.centre.latitude, longitude: cache.region.centre.longitude),
@@ -109,7 +153,10 @@ final class ModeleCarte {
             } else {
                 depart = .surLePecheur(position)
                 message = nil
-                centrer(ZoneCarte(centre: position, spanLatitude: 0.15, spanLongitude: 0.15))
+                // Pendant une session (spot fixé), la carte reste sur le spot : la position ne la déplace pas.
+                if spotFixe == nil {
+                    centrer(ZoneCarte(centre: position, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
+                }
                 proposerSpot(pres: position)
             }
         } else if refusee {
@@ -117,6 +164,8 @@ final class ModeleCarte {
             case .zoneChoisie, .horsDeFrance: return
             default: break
             }
+            // Spot fixé ou dernière vue déjà à l'écran : rien à redemander.
+            if cameraPlacee { return }
             depart = .choixDeZone
             afficherChoixDeZone = true
         }
@@ -132,13 +181,15 @@ final class ModeleCarte {
         } else {
             depart = .zoneChoisie(c)
             message = nil
-            centrer(ZoneCarte(centre: c, spanLatitude: 0.3, spanLongitude: 0.3))
+            reglages?.set([c.latitude, c.longitude], forKey: Self.cleZone)
+            centrer(ZoneCarte(centre: c, spanLatitude: Self.etendueZone, spanLongitude: Self.etendueZone))
             proposerSpot(pres: c)
         }
         afficherChoixDeZone = false
     }
 
     private func centrer(_ region: ZoneCarte) {
+        cameraPlacee = true
         regionVisible = region
         camera = .region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: region.centre.latitude, longitude: region.centre.longitude),
                                             span: MKCoordinateSpan(latitudeDelta: region.spanLatitude, longitudeDelta: region.spanLongitude)))
@@ -176,7 +227,6 @@ final class ModeleCarte {
 
     func chargerApresMouvement(_ region: ZoneCarte) {
         regionVisible = region
-        enMouvement = false
         let premiere = premiereCameraAttendue
         premiereCameraAttendue = false
         // Affichage initial sans position ni cache : on n'ira pas lire toute la France pour rien.
@@ -219,17 +269,6 @@ final class ModeleCarte {
             let calcules = await calculerElements(points: points, region: region)
             if Task.isCancelled { return }
             elements = calcules
-        }
-
-        tacheAnimees?.cancel()
-        guard filtre == nil else { animees = []; return }
-        let toutes = stations
-        let especes = services.especes
-        let images = imagesParEspece
-        tacheAnimees = Task {
-            let calculees = await calculerAnimees(stations: toutes, region: region, especes: especes, images: images)
-            if Task.isCancelled { return }
-            animees = calculees
         }
     }
 

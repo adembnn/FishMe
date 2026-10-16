@@ -8,6 +8,8 @@ import Core
 final class GestionPosition: NSObject, CLLocationManagerDelegate {
     private(set) var statut: CLAuthorizationStatus
     private(set) var position: Coordonnee?
+    /// Vrai si l'iPhone n'a pas pu donner de position (simulateur sans lieu, intérieur, mode avion).
+    private(set) var echec = false
 
     @ObservationIgnored private let manager: CLLocationManager
     @ObservationIgnored private let reglages: UserDefaults
@@ -64,10 +66,14 @@ final class GestionPosition: NSObject, CLLocationManagerDelegate {
     nonisolated func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let derniere = locations.last else { return }
         let c = Coordonnee(latitude: derniere.coordinate.latitude, longitude: derniere.coordinate.longitude)
-        Task { @MainActor in self.position = c }
+        Task { @MainActor in
+            self.echec = false
+            self.position = c
+        }
     }
 
     nonisolated func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         // Position indisponible : la carte reste utilisable, le choix de zone à la main est proposé.
+        Task { @MainActor in if self.position == nil { self.echec = true } }
     }
 }
