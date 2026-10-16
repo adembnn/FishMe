@@ -37,3 +37,5 @@ Décision (16 oct. 2h50) : badge « Trophée » sur la carte d'une prise plus gr
 | P28 Carte déclarée | B · Réglages | 16 oct. 2h54 |
 | P29 Mon club | B · Réglages (+ voir ses autres clubs) | 16 oct. 2h55 |
 | P30 Créer un club | B · Réglages (+ photo depuis la galerie) | 16 oct. 2h55 |
+| P31 Inviter des amis | B · Réglages | 16 oct. 2h56 |
+| P32 Profil d'un ami | A · Plans (Signaler et Bloquer rangés dans le menu ⋯) | 16 oct. 2h56 |
