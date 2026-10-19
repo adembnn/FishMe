@@ -367,11 +367,14 @@ struct TunnelPremiersPasView: View {
                             .background(Palette.marineDoux, in: Circle())
                             .accessibilityHidden(true)
                     }
-                    Text(FinDuTunnel.compteur(declarees: 0, total: especes.count, departement: departement))
-                        .font(Police.chiffreMoyen)
-                        .foregroundStyle(Palette.marine)
-                        .multilineTextAlignment(.center)
-                        .accessibilityIdentifier("tunnel-compteur-zone")
+                    // Aucune espèce chargée : pas de « 0 sur 0 », la phrase et le bouton suffisent.
+                    if !especes.isEmpty {
+                        Text(FinDuTunnel.compteur(declarees: 0, total: especes.count, departement: departement))
+                            .font(Police.chiffreMoyen)
+                            .foregroundStyle(Palette.marine)
+                            .multilineTextAlignment(.center)
+                            .accessibilityIdentifier("tunnel-compteur-zone")
+                    }
                     Text("Tu pourras en déclarer d'autres depuis ton Pescedex.")
                         .font(Police.detail)
                         .foregroundStyle(Palette.encreDouce)
