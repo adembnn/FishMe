@@ -95,7 +95,7 @@ enum BlocReglesLogique {
         aVerifier(lignes) ? consigne.texte : nil
     }
 
-    /// Le mot court de l'état d'une ligne. Jamais « autorisé », jamais « tu peux la garder ».
+    /// Le mot court de l'état d'une ligne. Jamais un mot d'autorisation.
     static func motDEtat(_ etat: EtatLigne) -> String? {
         switch etat {
         case .respectee: return "respectée"
