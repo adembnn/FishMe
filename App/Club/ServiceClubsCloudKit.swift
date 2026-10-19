@@ -159,11 +159,30 @@ actor ServiceClubsCloudKit: ServiceClubs {
         }
     }
 
-    func cartes(deClub id: String) async throws -> [CartePartageeClub] {
+    func cartes(deClub id: String, sauf dejaLues: Set<String>) async throws -> [CartePartageeClub] {
         try await executer {
             let requete = CKQuery(recordType: FabriqueRecordsClub.typePublication, predicate: NSPredicate(format: "club == %@", id))
             requete.sortDescriptors = [NSSortDescriptor(key: "creeLe", ascending: false)]
-            return try await lire(requete, limite: 100).compactMap(FabriqueRecordsClub.carte(depuis:))
+            // 1. Les champs légers de toutes les cartes (sans `media`) : rapide, même à chaque rafraîchissement.
+            let cles = FabriqueRecordsClub.clesCarte.subtracting(["media"]).sorted()
+            let reponse = try await publique.records(matching: requete, inZoneWith: nil, desiredKeys: cles, resultsLimit: 100)
+            var cartes: [CartePartageeClub] = []
+            for (_, resultat) in reponse.matchResults {
+                if case .success(let record) = resultat, let carte = FabriqueRecordsClub.carte(depuis: record) { cartes.append(carte) }
+            }
+            // 2. Les images des seules cartes jamais lues.
+            let nouvelles = cartes.filter { !dejaLues.contains($0.id) }.map { CKRecord.ID(recordName: $0.id) }
+            if !nouvelles.isEmpty {
+                let medias = try await publique.records(for: nouvelles, desiredKeys: ["media"])
+                for rang in cartes.indices {
+                    let identifiant = CKRecord.ID(recordName: cartes[rang].id)
+                    if case .success(let record)? = medias[identifiant],
+                       let fichier = (record["media"] as? CKAsset)?.fileURL {
+                        cartes[rang].image = try? Data(contentsOf: fichier)
+                    }
+                }
+            }
+            return cartes
         }
     }
 

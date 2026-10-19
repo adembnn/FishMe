@@ -153,7 +153,7 @@ final class GestionClubs {
                     continue
                 }
                 membresLus[club.id] = try await service.membres(deClub: club.id)
-                cartesLues[club.id] = try await service.cartes(deClub: club.id)
+                cartesLues[club.id] = try await lireCartes(club.id)
                 clubsGardes.append(club)
             }
             clubs = clubsGardes
@@ -180,6 +180,17 @@ final class GestionClubs {
             if let profil = try? await profilsService.profil(id: id) {
                 profils[id] = EtatCacheClubs.ProfilCache(id: id, surnom: profil.surnom, avatar: profil.avatar)
             }
+        }
+    }
+
+    /// Lit les cartes du club sans retélécharger les images déjà là : une carte déjà lue garde son image.
+    private func lireCartes(_ clubID: String) async throws -> [CartePartageeClub] {
+        let avant = Dictionary((cartes[clubID] ?? []).compactMap { c in c.image.map { (c.id, $0) } }, uniquingKeysWith: { a, _ in a })
+        let lues = try await service.cartes(deClub: clubID, sauf: Set(avant.keys))
+        return lues.map { carte in
+            var copie = carte
+            if copie.image == nil { copie.image = avant[carte.id] }
+            return copie
         }
     }
 
@@ -259,7 +270,7 @@ final class GestionClubs {
             _ = try await service.rejoindre(club: clubID, profil: moi, le: maintenant())
             inserer(club)
             membres[clubID] = try await service.membres(deClub: clubID)
-            cartes[clubID] = try await service.cartes(deClub: clubID)
+            cartes[clubID] = try await lireCartes(clubID)
             await completerProfils()
             enregistrerCache()
             message = nil

@@ -27,7 +27,9 @@ nonisolated protocol ServiceClubs: Sendable {
     func ecarter(profil: String, deClub id: String) async throws
     func partager(_ carte: CartePartageeClub) async throws
     func retirerCarte(id: String) async throws
-    func cartes(deClub id: String) async throws -> [CartePartageeClub]
+    /// Les cartes du club, la plus récente d'abord. Les images des cartes de `dejaLues` ne sont PAS retéléchargées (image `nil`) :
+    /// la page se rafraîchit toutes les 8 s, on ne rapporte pas des PNG déjà là. L'appelant garde l'image qu'il avait.
+    func cartes(deClub id: String, sauf dejaLues: Set<String>) async throws -> [CartePartageeClub]
     /// Trace d'un signalement (`Signalement`, base publique). L'e-mail prérempli reste le circuit principal (`moderation.md`).
     func signaler(cible: String, typeCible: String, motif: MotifSignalement, par monID: String?) async throws
 }
@@ -141,9 +143,14 @@ actor FauxServiceClubs: ServiceClubs {
         cartesParID[id] = nil
     }
 
-    func cartes(deClub id: String) async throws -> [CartePartageeClub] {
+    func cartes(deClub id: String, sauf dejaLues: Set<String>) async throws -> [CartePartageeClub] {
         try verifier()
         return cartesParID.values.filter { $0.club == id }.sorted { ($0.creeLe, $0.id) > ($1.creeLe, $1.id) }
+            .map { carte in
+                var copie = carte
+                if dejaLues.contains(carte.id) { copie.image = nil }
+                return copie
+            }
     }
 
     func signaler(cible: String, typeCible: String, motif: MotifSignalement, par monID: String?) async throws {

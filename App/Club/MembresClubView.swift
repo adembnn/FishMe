@@ -27,7 +27,7 @@ struct MembresClubView: View {
                         }
                     }
                     if gestion.jeSuisFondateur(de: club) {
-                        note("Retirer un membre l'efface du club. Il garde pour l'instant l'accès à la conversation du club : seul le fondateur peut l'en retirer, depuis le chat.")
+                        note("Retirer un membre l'efface du club. Il garde, pour l'instant, l'accès à la conversation du club.")
                     }
                 }
                 .padding(.horizontal, Espace.bord)
