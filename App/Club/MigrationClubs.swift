@@ -58,16 +58,16 @@ final class MigrationClubs {
     private let memoire: any MemoireProfil
     private let drapeaux: any DrapeauxMigration
     private let filtre: any FiltreMots
-    private let lireClubsLocaux: () -> [ClubLocal]
-    private let lirePartages: () -> [String: Set<String>]
-    private let lirePhoto: (ClubLocal) -> Data?
+    private let lireClubsLocaux: @MainActor () -> [ClubLocal]
+    private let lirePartages: @MainActor () -> [String: Set<String>]
+    private let lirePhoto: @MainActor (ClubLocal) -> Data?
     private let maintenant: @Sendable () -> Date
 
     init(service: any ServiceClubs, memoire: any MemoireProfil = MemoireProfilLocale(),
          drapeaux: any DrapeauxMigration = DrapeauxMigrationLocaux(), filtre: any FiltreMots = FiltreCore(),
-         clubsLocaux: @escaping () -> [ClubLocal] = { MesClubs().clubs },
-         partages: @escaping () -> [String: Set<String>] = { PartagesClub.lire() },
-         photo: @escaping (ClubLocal) -> Data? = MigrationClubs.photoLocale,
+         clubsLocaux: @escaping @MainActor () -> [ClubLocal] = { MesClubs().clubs },
+         partages: @escaping @MainActor () -> [String: Set<String>] = { PartagesClub.lire() },
+         photo: @escaping @MainActor (ClubLocal) -> Data? = MigrationClubs.photoLocale,
          maintenant: @escaping @Sendable () -> Date = { Date() }) {
         self.service = service
         self.memoire = memoire
@@ -79,7 +79,7 @@ final class MigrationClubs {
         self.maintenant = maintenant
     }
 
-    nonisolated static func photoLocale(_ club: ClubLocal) -> Data? {
+    static func photoLocale(_ club: ClubLocal) -> Data? {
         guard let fichier = club.fichierPhoto, let url = MesClubs.url(de: fichier) else { return nil }
         return try? Data(contentsOf: url)
     }
