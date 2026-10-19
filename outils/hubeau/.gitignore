@@ -1,0 +1,9 @@
+# Cache Hub'Eau, rapports, et les 3 fichiers produits : jamais commites (release privee `donnees`).
+cache/
+sortie/
+stations-especes.json
+rarete-departements.json
+stations-hydro.json
+__pycache__/
+*.pyc
+.pytest_cache/
