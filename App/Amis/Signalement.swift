@@ -23,8 +23,7 @@ nonisolated enum Signalement {
         composants.path = contact
         composants.queryItems = [
             URLQueryItem(name: "subject", value: "Signalement d'un profil"),
-            URLQueryItem(name: "body", value: "Profil : \(profilID)
-Motif : \(motif.titre)"),
+            URLQueryItem(name: "body", value: "Profil : \(profilID)\nMotif : \(motif.titre)"),
         ]
         return composants.url
     }
