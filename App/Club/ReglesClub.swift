@@ -44,3 +44,13 @@ nonisolated enum RecordDuClub {
             .max { ($0.tailleCm ?? 0, $0.id) < ($1.tailleCm ?? 0, $1.id) }
     }
 }
+
+/// Le lieu d'une carte de club s'arrête au département (décision 4, règle d'or) : « 94 », « 2A », « 971 ». Tout le reste est jeté.
+nonisolated enum LieuClub {
+    static func departement(_ brut: String?) -> String {
+        guard let texte = brut?.trimmingCharacters(in: .whitespacesAndNewlines).uppercased(),
+              texte.count >= 2, texte.count <= 3, texte.first?.isNumber == true,
+              texte.allSatisfy({ $0.isNumber || $0.isLetter }) else { return "" }
+        return texte
+    }
+}

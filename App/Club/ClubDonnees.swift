@@ -34,6 +34,13 @@ nonisolated struct CarteAPartager: Identifiable, Transferable, Sendable {
     let id: String
     let titre: String
     let png: Data
+    /// L22 : ce que le club en ligne montre d'une carte. Tous facultatifs (RootView les passe quand il les connaît) ;
+    /// sans eux, l'espèce est le titre, la taille et la rareté manquent, et le lieu est « aucun ». Jamais de coordonnée.
+    var espece: String? = nil
+    var rarete: NiveauRarete? = nil
+    var tailleCm: Double? = nil
+    /// Code du département (« 94 »), rien de plus précis : tout autre texte est ignoré (`LieuClub.departement`).
+    var departement: String? = nil
 
     static var transferRepresentation: some TransferRepresentation {
         DataRepresentation(exportedContentType: .png) { carte in

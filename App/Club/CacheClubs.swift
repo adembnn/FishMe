@@ -4,7 +4,7 @@ import Foundation
 /// Un simple fichier JSON dans Application Support (pas de SwiftData : le reste de l'app garde SwiftData pour ses données locales).
 nonisolated struct EtatCacheClubs: Codable, Sendable, Equatable {
     /// Le surnom et l'avatar d'un membre, tels que L21 les donne.
-    struct ProfilCache: Codable, Sendable, Equatable {
+    nonisolated struct ProfilCache: Codable, Sendable, Equatable {
         var id: String
         var surnom: String
         var avatar: Data?
