@@ -3,7 +3,7 @@ import SwiftUI
 
 /// Une ligne de règle du bloc : icône, phrase de Core, mot d'état ; un toucher ouvre la source, la citation et la date de lecture.
 /// Ne prend qu'une `LigneControle` de `Core` : rien n'est filtré ni ajouté ici.
-struct LigneRegleView: View {
+struct LigneRegleBlocView: View {
     var ligne: LigneControle
     /// Vrai pour que la source soit ouverte dès l'affichage (la raison de l'état de tête).
     var ouverteAuDepart = false

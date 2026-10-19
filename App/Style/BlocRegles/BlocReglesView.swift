@@ -56,7 +56,7 @@ struct BlocReglesView: View {
                     .accessibilityAddTraits(.isHeader)
             }
             if let ligne {
-                LigneRegleView(ligne: ligne)
+                LigneRegleBlocView(ligne: ligne)
             } else {
                 Text(raison).font(Police.corps).foregroundStyle(.white)
                     .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
@@ -112,7 +112,7 @@ struct BlocReglesView: View {
     private func groupe(_ g: BlocReglesLogique.Groupe, _ lignes: [LigneControle]) -> some View {
         VStack(alignment: .leading, spacing: Espace.s) {
             enteteDeGroupe(g)
-            ForEach(Array(lignes.enumerated()), id: \.offset) { _, l in LigneRegleView(ligne: l) }
+            ForEach(Array(lignes.enumerated()), id: \.offset) { _, l in LigneRegleBlocView(ligne: l) }
         }
     }
 
