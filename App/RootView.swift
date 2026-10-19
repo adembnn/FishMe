@@ -354,6 +354,26 @@ final class ParcoursApp {
                                    especes: poissons.count, estPro: suivi.abonne)
     }
 
+    // MARK: Décors de l'aquarium (N1) // ⚠ à vérifier (écrit sans Mac)
+
+    /// Le contexte de la règle des décors : date (Paris), Pro, progression. Rien d'autre ne sort de l'iPhone (aucun lieu).
+    func contexteSkin() -> ContexteSkin {
+        var calendrier = Calendar(identifier: .gregorian)
+        calendrier.timeZone = TimeZone(identifier: "Europe/Paris") ?? .current
+        let reelles = (pescedex?.emplacements ?? []).filter { e in e.carte.map { !$0.exemple } ?? false }
+        let legendaires = reelles.filter { $0.rarete.niveau == .legendaire }.count
+        return ContexteSkin(date: Date(), calendrier: calendrier, abonne: suivi.abonne,
+                            progression: ProgressionPecheur(especesDifferentes: reelles.count,
+                                                            sessions: moteur.sortiesTerminees.count,
+                                                            legendairesPris: legendaires))
+    }
+
+    /// Le décor à dessiner et à publier : le choix enregistré, corrigé par la règle (un décor de saison fini ou le Pro perdu
+    /// ramène au dernier décor gagné, sinon au décor de départ).
+    func skinAffiche() -> IdentifiantSkin {
+        ChoixSkin.affiche(brut: UserDefaults.standard.string(forKey: ChoixSkin.cle) ?? "", contexte: contexteSkin())
+    }
+
     /// Liens `fishme://` du widget. `pro?source=widget` : paywall ; `aquarium` : le volet Pescedex (L14 absent).
     func ouvrir(url: URL) {
         guard url.scheme == "fishme" else { return }
@@ -711,6 +731,9 @@ private struct RacineContenu: View {
     /// « Tes conditions » (météo), ouvert par le bouton météo de la carte.
     @State private var meteoOuverte = false
     @State private var aquariumOuvert = false
+    /// N1 : la galerie des décors, au-dessus de l'aquarium. Le choix est gardé dans `aquarium.skin`.
+    @State private var decorsOuverts = false
+    @AppStorage(ChoixSkin.cle) private var skinBrut = ChoixSkin.valeurParDefaut
     /// Vrai de l'apparition de la couverture de session jusqu'à la fin de son retrait.
     /// P03 « Où pêches-tu ? » : montré une seule fois, avant la première demande de position.
     @AppStorage("premierLancement.ouPechesTuVu") private var ouPechesTuVu = false
@@ -870,16 +893,51 @@ private struct RacineContenu: View {
                     await app.ajouterPriseManuelle(photo: photo, espece: espece, cm: cm, date: date, lieu: lieu)
                 })
             .fullScreenCover(isPresented: $aquariumOuvert) {
-                AquariumView(modele: modele, fermer: { aquariumOuvert = false },
-                             emplacements: EmplacementsExternes(
-                                commentLaPecher: { espece in AnyView(CommentLaPecherEmplacement(app: app, espece: espece)) },
-                                tesConditions: { AnyView(TesConditionsEmplacement(app: app)) },
-                                meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }))
+                // N1 : le menu « Décors » est un bouton posé par la racine sur l'aquarium (AquariumView n'en a pas).
+                ZStack(alignment: .topLeading) {
+                    aquariumView(modele: modele, skin: ChoixSkin.affiche(brut: skinBrut, contexte: app.contexteSkin()),
+                                 fermer: { aquariumOuvert = false })
+                    Button { decorsOuverts = true } label: {
+                        Label("Décors", systemImage: "paintpalette")
+                            .font(Police.corps.weight(.semibold))
+                            .padding(.horizontal, Espace.m)
+                            .frame(minHeight: Gabarit.zoneTactile)
+                            .background(.regularMaterial, in: Capsule())
+                    }
+                    .padding(Espace.bord)
+                }
+                .sheet(isPresented: $decorsOuverts) {
+                    SkinsGalerieView(
+                        aquarium: { skin, fermer in aquariumView(modele: modele, skin: skin, fermer: fermer) },
+                        contexte: app.contexteSkin(),
+                        choisi: ChoixSkin.binding($skinBrut),
+                        demanderPro: {
+                            // Le paywall ne peut pas s'ouvrir sous l'aquarium : on ferme d'abord (pas de cas « Skins » dans DeclencheurPaywall).
+                            decorsOuverts = false
+                            aquariumOuvert = false
+                            Task {
+                                try? await Task.sleep(for: .milliseconds(500))
+                                app.montrer(.paywall(.widget))
+                            }
+                        },
+                        auChangement: { _ in app.publierAquarium() },
+                        fermer: { decorsOuverts = false })
+                }
             }
         } else {
             ContentUnavailableView("Pescedex", systemImage: "square.grid.2x2.fill",
                                    description: Text("Tes cartes ne peuvent pas s'ouvrir pour l'instant."))
         }
+    }
+
+    /// L'aquarium plein écran avec un décor (N1) et les emplacements habituels.
+    private func aquariumView(modele: PescedexModele, skin: IdentifiantSkin, fermer: @escaping () -> Void) -> AquariumView {
+        AquariumView(modele: modele, fermer: fermer,
+                     emplacements: EmplacementsExternes(
+                        commentLaPecher: { espece in AnyView(CommentLaPecherEmplacement(app: app, espece: espece)) },
+                        tesConditions: { AnyView(TesConditionsEmplacement(app: app)) },
+                        meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }),
+                     skin: skin)
     }
 
     // MARK: Volet Carte (L2) avec L5, L12, L13
