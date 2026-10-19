@@ -23,6 +23,10 @@ struct RevelationCarteView: View {
 
     private enum Face { case recto, verso }
 
+    /// ⚠ à trancher par Adem : la photo du pêcheur qui rétrécit vers le dos de la carte (variation B, E6) est la seule image de la photo
+    /// visible avant la bascule recto/verso. Elle est gardée (c'est l'ouverture choisie de la révélation) ; mettre `false` la retire.
+    private static let photoRetrecitAuDepart = true
+
     @State private var debut: Date?
     @State private var evenementsJoues: Set<Int> = []
     /// Vrai quand plus rien ne bouge : la scène s'arrête (économie de batterie).
@@ -33,6 +37,8 @@ struct RevelationCarteView: View {
     @State private var face: Face = .recto
     /// Quart de tour du toucher recto/verso (en plus du retournement d'arrivée).
     @State private var angleBascule: Double = 0
+    /// Vrai seulement quand le verso a passé le quart de tour : avant, la photo du verso est préchargée mais invisible (L18).
+    @State private var versoAffiche = false
     @State private var enCours = false
     @State private var mouvement = MouvementIPhone()
     @State private var rapide = false
@@ -114,7 +120,7 @@ struct RevelationCarteView: View {
                 .offset(decalage)
 
             // La photo du pêcheur qui rétrécit vers le dos de la carte.
-            if anime, pret, let imagePhoto, etat.photoFondu > 0.001 {
+            if Self.photoRetrecitAuDepart, anime, pret, let imagePhoto, etat.photoFondu > 0.001 {
                 photoQuiRetrecit(imagePhoto, etat: etat, plein: plein, marge: marge, u: u)
                     .frame(width: plein.width, height: plein.height)
                     .offset(decalage)
@@ -210,8 +216,17 @@ struct RevelationCarteView: View {
                 .accessibilityElement(children: .ignore)
                 .accessibilityLabel(infos.texteVoixOff)
                 .accessibilityHint("Touche pour voir la photo au verso")
+                .background {
+                    // La photo du verso est décodée dès maintenant, derrière le recto, mais ne se voit pas : opacité 0 (jamais 0,01,
+                    // qui laisse une image fantôme), cachée à VoiceOver et sans toucher. Elle passe à 1 au passage de 90 degrés.
+                    CarteVersoView(infos: infos, photo: photo, emplacements: emplacements)
+                        .opacity(0)
+                        .accessibilityHidden(true)
+                        .allowsHitTesting(false)
+                }
         case .verso:
             CarteVersoView(infos: infos, photo: photo, emplacements: emplacements)
+                .opacity(versoAffiche ? 1 : 0)
                 .accessibilityHint("Touche pour revoir le recto")
         }
     }
@@ -372,12 +387,17 @@ struct RevelationCarteView: View {
         defer { enCours = false }
         let cible: Face = face == .recto ? .verso : .recto
         if reduireAnimations {
-            withAnimation(.easeInOut(duration: 0.2)) { face = cible }
+            withAnimation(.easeInOut(duration: 0.2)) {
+                face = cible
+                versoAffiche = cible == .verso
+            }
             return
         }
         withAnimation(.easeIn(duration: 0.22)) { angleBascule = 90 }
         try? await Task.sleep(for: .milliseconds(220))
+        // Le quart de tour est fait (90 degrés) : seulement maintenant le verso devient visible.
         face = cible
+        versoAffiche = cible == .verso
         angleBascule = -90
         withAnimation(.spring(duration: 0.35)) { angleBascule = 0 }
     }
