@@ -2,6 +2,58 @@
 
 Écrit le 19 octobre 2026 par Titouan (avec ses agents Claude). Titouan n'a pas de Mac : **tout le Swift ci-dessous a été écrit sans compilateur**. Rien n'est compilé, aucun test n'est exécuté, rien n'est testé sur iPhone. Sullyvan compile et teste (répartition du 19 octobre, option C), Adem tranche et branche (L25).
 
+## 0 bis. Mise à jour de la nuit du 19 octobre : à lire avant tout le reste (les hashes de ci-dessous et du tableau 1 sont remplacés par ceux-ci)
+
+**État en une phrase :** huit branches de lots corrigées après revue, six nouvelles fonctions (N1 à N6) écrites sans Mac, une fusion simulée de tout sans conflit, et **508 tests du paquet `Packages/Core` exécutés et passés dans Docker (Swift 6.0 sous Linux)** sur cette fusion. **Le code de `App/` n'est ni compilé ni exécuté nulle part** : c'est le travail de Sullyvan (compiler, tests d'app et d'interface) et d'Adem (branchement L25).
+
+### Branches et derniers commits (aucune n'est poussée au moment de l'écriture, sauf indication)
+| Branche | Commit | Contenu |
+|---|---|---|
+| `lot/core-moderation` | `0c0cbc0b` | mots interdits (pluriels et accords ajoutés), 13 régions. **À fusionner en premier.** |
+| `lot/profil` (L21) | `ce375b46` | corrections de revue : id ASCII, reprise de profil, plus de nom ni prénom, case des conditions, signalement honnête, `ListeBlocages`, type public `ProfilPublic` |
+| `lot/collection-2` (L18) | `fc713db4` | inchangé sur le fond |
+| `lot/prise-2` (L19) | `0d69c4ea` | inchangé sur le fond |
+| `lot/feed` (L23) | `e4bc24e9` | mode démo Release, lieu par défaut au département seul, signalement honnête et file de reprise, vidéo sans GPS contrôlée, pagination |
+| `lot/chat` (L24) | `9b7e2a96` | un créateur de zone par paire, abonnements aux deux bases, file de messages, stockage protégé, mode démo Release ; trois types renommés (`ResultatSignalementMessage`, `SignalementMessageEnAttente`, `DonneesExempleChat`) |
+| `lot/rapport-reseau` (R2) | `0a055da4` | schéma réseau (11 types, chat en zones partagées) |
+| `lot/store-2` (S2) | `cf8df9a2` | notes du relecteur, App Privacy |
+| `lot/hubeau-d5` (D5) | `733ee94c` | prototype de recalage ; la mesure sur toute la France n'était pas terminée à l'écriture |
+| `lot/n1` | `36eeb7f8` | skins d'aquarium |
+| `lot/n2` | `4f455b2c` | liste d'envies (sans les accroches Pescedex et sauvegarde) |
+| `lot/n3` | `891484b3` | pression et mesures de l'eau (sans les alertes N3b) |
+| `lot/n4` | `274c3b37` | records et statistiques |
+| `lot/n5` | `eb21b0a0` | Ma fédération, carte de pêche, numéros utiles |
+| `lot/n6` | `7f02a1b3` | repères privés |
+| `titouan/fiches-backlog` | `81c7fd72` | fiches N1 à N6 et `docs/reports/sullyvan-sans-compiler.md` |
+
+### Ordre de fusion
+`lot/core-moderation`, `lot/profil`, **puis les alignements** (voir `docs/reports/alignement-fusion.md` sur cette même branche : `EffaceurFeed` et `EffaceurChat` adoptent `EffaceurContenu`, les deux motifs deviennent des `typealias` de `MotifSignalement`, `AnnuaireChat.bloques()` lit `ListeBlocages.partage`), `lot/collection-2`, `lot/prise-2` (avant L17), `lot/feed`, `lot/chat`, puis `lot/n1` à `lot/n6` (N6 après L17 et L19). La simulation complète (core, profil, collection-2, prise-2, feed, chat, n1 à n6) se fusionne **sans conflit** et les 508 tests Core passent.
+
+### Ce qui a été vérifié, et ce qui ne l'a pas été
+- **Exécuté :** `swift test` dans `Packages/Core` (image `swift:6.0`) : 508 tests passés sur la fusion ; un test déjà sauté sur main (liste des 23 espèces « courant »). Ces essais ont trouvé et fait corriger quatre erreurs dans des tests écrits à l'aveugle (N1, N2, N4, N5) ; elles sont corrigées sur les branches.
+- **Non exécuté :** tout `App/`, `AppTests/`, `AppUITests/`. Chaque branche liste ses points `// ⚠ à vérifier`. Sullyvan : `scripts/verif.sh`, tests d'app, `/ecran`, `/banc`.
+
+### Avertissements à lire avant de brancher
+1. **Droits de lecture du type `Signalement`** (base publique) : le texte du message signalé y est copié (500 caractères). Restreindre la lecture à l'équipe dans la console CloudKit, et l'écrire dans la politique de confidentialité et les CGU art. 8.
+2. **`creeLe` doit être interrogeable ET triable** (Publication, Commentaire) ; `schema.md` de R2 lignes 28 et 39 à corriger. Index aussi sur `ProfilPublic.recordName`, `surnomNorm` et le champ système `createdBy`. Types à créer : `Signalement`, `Repere`, `PhotoRepere`.
+3. **Nom et prénom ne sont plus collectés** : `ProfilEmplacement` collecte encore `profil.nom`, à remplacer par le surnom (L25).
+4. **Chat** : adaptateur de scène à brancher (code fourni dans le rapport de L24), `aps-environment` et `UIBackgroundModes = remote-notification`, mode démo `GestionChat.exemple()` quand pas d'iCloud.
+5. **Bug hors périmètre** : `MoteurCore.lireLiens` lit les clés `federation` et `carte`, alors que `liens-federations.json` contient `federation_url` et `carte_peche_url`. N5 a sa propre lecture correcte.
+6. **Textes faux à remplacer dans `App/`** (liste dans le rapport S2) : `TexteConditions` (à régénérer avec `python3 outils/legal/generer_conditions.py`), `ConfidentialiteView`, `RootView.swift:1209`.
+7. **Attribution CC-BY-4.0** de la liste de mots interdits à ajouter dans Profil, Sources (texte plus bas).
+
+### Décisions qui reviennent à Adem
+- **N6 :** les coordonnées exactes des repères vont dans l'iCloud privé chiffré du pêcheur ; la phrase de `CLAUDE.md` « aucun coin de pêche exact ne quitte l'iPhone » est à réécrire. Refus : supprimer `App/Reperes/SauvegardeReperes.swift`.
+- **N1 :** décor de départ (rivière, étang ou grotte) ; aucune illustration de skin n'existe, la galerie masque ceux sans image, seule « Rivière » s'affiche.
+- **N2 :** exposer la date de réouverture côté Core, sinon « Fermée ce jour ».
+- **N3 :** seuils (±2 hPa sur 6 h, ±0,5 °C sur 24 h, ±5 % sur 6 h), alertes N3b en lot séparé, `stations-temperature.json` à fournir par D2, licence Hub'Eau de la température non lue.
+- **N4 :** seuil du badge Trophée au 95e centile (40 espèces sur 76), records gratuits et séparés de « Mes statistiques ».
+- **N5 :** phrase exacte sur les règles locales (provisoire dans `TextesMaFederation.reglesLocales`), source du geste de mesure inconnue, numéros 112, 18, 15 puis 17 et 114.
+- Déjà listées plus bas : 55 cm du brochet, pastille orange à 65 cm, « règle lue » au lieu de « respectée », signalement, mode démo de S2 vrai seulement si L25 l'étend.
+
+### Demandes à L25 (Adem)
+Brancher dans `RootView.swift` et `BuildChallengeApp.swift` : effaceurs (`RegistreEffaceurs`), mode démo Feed et Chat, skins (`ContexteSkin`, `SkinsGalerieView`), « Mes records » et l'appel de `MoteurRecords.evenement` avant l'insertion de carte, bloc `MesuresSourceesView`, envies, repères (9 accroches dans `App/Reperes/LISEZMOI.md`). Ajouter N1 à N6 à `docs/lots.md` et `scripts/lot.sh`, les nouveaux dossiers aux cibles Xcode, déclarer `stations-temperature.json` dans `donnees.sh`. Les demandes détaillées de chaque lot sont dans son dernier commit et dans sa fiche `docs/fiches/N*.md`.
+
 ## 0. Mise à jour du 19 octobre (soir) : à lire d'abord
 - **Nouvelle branche `lot/core-moderation` (1996a575)** : dans `Packages/Core`, la **liste de mots interdits complète** (`Moderation/MotsInterditsFR.swift`, LDNOOBW CC-BY-4.0, **sans** les faux positifs de pêche : tanche, bite, gueule, turlutte, pédale, gerbe…) et la **table des 13 régions** (`Regions/RegionsFrance.swift`, 96 départements, vérifiée). Tests écrits, non exécutés. **À fusionner EN PREMIER** : L21, L23 et L24 en dépendent maintenant.
 - **L21, L23 et L24 utilisent cette liste unique** (un seul `MotsInterditsFR.contient(...)`), ce qui règle les trois filtres en double. Hash : `lot/profil` 6f07d28b, `lot/feed` 55401bdb, `lot/chat` d050acfe. Un bug de l'ancienne liste de L23 est supprimé : elle réduisait les lettres doubles des deux côtés, donc « coule » (l'eau) était refusé comme « couille ».
