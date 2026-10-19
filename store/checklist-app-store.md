@@ -62,3 +62,15 @@ Reprend les lignes de `docs/app-store.md` et les prérequis de `docs/fiches/S1.m
 - R6 (météo sans Apple Weather) : « Apple Weather » est cité dans la description et la page Sources ; captures à contrôler.
 - R9 (SDK sans consentement) : notes et déclarations nomment Spark Flash ; le consentement reste à vérifier dans le build.
 - R4 (achat) : la ligne de prix est laissée en décision (point 2 de `a-trancher.md`).
+
+## Version qui porte le réseau social (S2, 19 oct. 2026)
+
+Brouillon, à relire par Adem. Les trois lignes ci-dessous sont **à reporter dans `docs/app-store.md`** (fichier commun, hors du périmètre de S2 : ni S2 ni cette session ne l'ont modifié). Numéros 22 à 24 après la ligne 21. R5 de la table des refus (« partage entre amis non vérifiable seul ») est remplacé par 22 à 24 pour ce build.
+
+| # | Point | Qui | Quand |
+|---|---|---|---|
+| 22 | Règle 1.2 (contenu d'utilisateur) : filtre de mots à la saisie, « Signaler » et « Bloquer » sur chacun des 5 types de contenu, fishme.app@gmail.com publié dans les Réglages et les CGU, engagement de retrait sous 24 heures (CGU article 10), référent de la semaine fixé, journal de modération. Tout cela décrit dans `notes-relecteur-reseau-en.md` | Adem (référent), L21 à L24 (boutons), A (notes) | avant l'envoi de la version qui porte le réseau |
+| 23 | Règle 5.1.1(v) : « Supprimer mon profil » et « Supprimer mon compte et mes données iCloud » dans les Réglages, testés sur le tableau de bord CloudKit après suppression (aucun enregistrement oublié) | L21 (`EffaceurContenu`), A (L25) | avant l'envoi |
+| 24 | Règle 5.1.2 : manifeste `PrivacyInfo.xcprivacy`, étiquettes « App Privacy » et politique de confidentialité disent la même chose (`app-privacy.md`, §3) ; questionnaire d'âge rejoué (contenu d'utilisateur : oui) | A (manifeste, étiquettes), S2 (textes), MWM (relecture juridique) | à la fusion de L25, puis à l'archive finale |
+
+Lignes existantes de `docs/app-store.md` à mettre à jour pour ce build : 5 (questionnaire d'âge : contenu d'utilisateur oui, plus de « 4+ »), 6 et 7 (types et `UserID` lié, `app-privacy.md`), 8 (avatar choisi dans la galerie : le sélecteur système, à confirmer), 11 (notes : `notes-relecteur-reseau-en.md`), 17 (consentement à Spark dans les Réglages seulement, plus au premier lancement).
