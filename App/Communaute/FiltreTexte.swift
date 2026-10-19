@@ -1,3 +1,4 @@
+import Core
 import Foundation
 
 /// Pourquoi un texte est refusé à la saisie. Message court, jamais la liste des mots.
@@ -18,17 +19,10 @@ nonisolated enum RefusTexte: Sendable, Equatable {
 }
 
 /// Le filtre de la règle 1.2 d'Apple (`moderation.md`) : refus à la saisie, par mot entier, jamais par sous-chaîne.
-/// ⚠ La liste est un point de départ court. À compléter avec la liste française LDNOOBW (CC-BY-4.0, attribution dans Sources)
-/// en retirant les faux positifs de pêche ; `moderation.md` dit que cette liste n'a pas été relue.
+/// La liste de mots vit dans `Core` (`MotsInterditsFR`, LDNOOBW CC-BY-4.0, attribution dans Sources) : une seule liste pour
+/// le feed, le chat et les surnoms.
 nonisolated enum FiltreTexte {
     static let longueurMax = 280
-
-    /// Mots normalisés (minuscules, sans accents, lettres répétées réduites à une).
-    private static let interdits: Set<String> = Set([
-        "connard", "connasse", "salope", "salaud", "putain", "pute", "merde", "merdique", "encule", "enculer", "enfoire",
-        "batard", "bordel", "nique", "niquer", "ntm", "fdp", "pd", "pedophile", "pedo", "violeur", "nazi", "negre",
-        "bougnoule", "youpin", "tapette", "pouffiasse", "trouduc", "couille", "couilles", "branleur", "petasse",
-    ].map { FiltreTexte.reduire($0) })
 
     private static let liensCarte = [
         "google.com/maps", "goo.gl/maps", "maps.app.goo", "maps.apple", "waze.com", "what3words", "w3w.co",
@@ -46,19 +40,7 @@ nonisolated enum FiltreTexte {
     }
 
     static func contientMotInterdit(_ texte: String) -> Bool {
-        let mots = decouper(texte)
-        if mots.contains(where: { interdits.contains(reduire($0)) }) { return true }
-        // « c o n n a r d » ou « c-o-n-n-a-r-d » : une suite de lettres isolées est recollée.
-        var suite = ""
-        for mot in mots + [""] {
-            if mot.count == 1 {
-                suite += mot
-            } else {
-                if suite.count >= 3, interdits.contains(reduire(suite)) { return true }
-                suite = ""
-            }
-        }
-        return false
+        MotsInterditsFR.contient(texte)
     }
 
     /// Deux nombres décimaux à 3 chiffres ou plus après la virgule, un mot « lat », « lon », « gps », ou des degrés.
