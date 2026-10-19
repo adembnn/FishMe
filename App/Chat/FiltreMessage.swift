@@ -83,7 +83,7 @@ nonisolated enum FiltreMessage {
         if hotesDeCarte.contains(where: { bas.contains($0) }) { return true }
         let decimaux = nombreDeCorrespondances(#"[-+]?\d{1,3}[.,]\d{3,}"#, dans: bas)
         if decimaux >= 2 { return true }
-        if decimaux >= 1, bas.range(of: #"(lat|lon|lng|gps|latitude|longitude)"#, options: .regularExpression) != nil { return true }
+        if decimaux >= 1, bas.range(of: #"\b(lat|lon|lng|gps|latitude|longitude)\b"#, options: .regularExpression) != nil { return true }
         // Degrés minutes : 48°51'
         if bas.range(of: #"\d{1,3}\s*°\s*\d{1,2}\s*['′]"#, options: .regularExpression) != nil { return true }
         return false
