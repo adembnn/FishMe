@@ -306,3 +306,47 @@ public struct CollectionFaux: CollectionCartes {
         carte.estDeclaree ? nil : Data([0x89, 0x50, 0x4E, 0x47])
     }
 }
+
+/// Faux de `TemperatureEauService` : aucun appel réseau. Deux états écrits en dur.
+public struct TemperatureEauFaux: TemperatureEauService {
+    public enum Scenario: String, Sendable, Equatable, Hashable, CaseIterable {
+        case normal
+        case sansMesure
+    }
+
+    public var scenario: Scenario
+
+    public init(scenario: Scenario = .normal) {
+        self.scenario = scenario
+    }
+
+    public func temperature(station: StationTemperature) async -> TemperatureEau? {
+        switch scenario {
+        case .sansMesure:
+            return nil
+        case .normal:
+            let avant = dateFaux.addingTimeInterval(-24 * 3600)
+            return TemperatureEau(station: station, celsius: 14.2, heureMesure: dateFaux,
+                                  serie48h: [MesureTemperature(heure: avant, celsius: 13.6), MesureTemperature(heure: dateFaux, celsius: 14.2)])
+        }
+    }
+}
+
+/// Faux de `ServiceMesures` : trois mesures écrites en dur, sans calcul.
+public struct ServiceMesuresFaux: ServiceMesures {
+    public init() {}
+
+    public func mesures(conditions: Conditions, eau: NiveauEau?, temperature: TemperatureEau?, date: Date) -> [MesureSourcee] {
+        [MesureSourcee(grandeur: .pression, valeur: 1016, unite: "hPa", heure: dateFaux, source: "Apple Weather (essai)",
+                       tendance: Tendance(sens: .baisse, ecart: -3, surHeures: 6)),
+         MesureSourcee(grandeur: .temperatureEau, valeur: 14.2, unite: "°C", heure: dateFaux, source: "Hub'Eau, station La Marne (essai), 4 km",
+                       tendance: Tendance(sens: .hausse, ecart: 0.7, surHeures: 24)),
+         MesureSourcee(grandeur: .debit, valeur: 18, unite: "m³/s", heure: dateFaux, source: "Hub'Eau, station La Marne (essai)",
+                       tendance: Tendance(sens: .stable, ecart: 0.4, surHeures: 6))]
+    }
+
+    public func stationTemperature(pres: Coordonnee, eau: StationHydro?) -> StationTemperature? {
+        StationTemperature(code: "F000TEMP", nom: "La Marne (essai)", eau: "La Marne",
+                           coordonnee: Coordonnee(latitude: 48.82, longitude: 2.41), distanceM: 4_000)
+    }
+}
