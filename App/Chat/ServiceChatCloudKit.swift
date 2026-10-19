@@ -307,7 +307,7 @@ actor ServiceChatCloudKit: ServiceChat {
 
     /// R2: seule la base publique est lue par la personne de garde ; droits « Authenticated : créer », lecture réservée à l'équipe
     /// (à régler dans le tableau de bord). Les erreurs montent : l'appelant ne dit « signalé » que si cet appel a réussi.
-    func enregistrerSignalement(_ signalement: SignalementEnAttente) async throws {
+    func enregistrerSignalement(_ signalement: SignalementMessageEnAttente) async throws {
         try await executer {
             do {
                 _ = try await publique.save(FabriqueRecordsChat.recordSignalement(signalement))

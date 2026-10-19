@@ -18,7 +18,7 @@ actor StockChat {
         /// L'avis « les notifications sont refusées » ne s'affiche qu'une fois.
         var refusNotificationsAffiche = false
         /// Signalements pas encore écrits dans la base de la personne de garde.
-        var signalements: [SignalementEnAttente] = []
+        var signalements: [SignalementMessageEnAttente] = []
     }
 
     static let messagesGardes = 200
@@ -137,9 +137,9 @@ actor StockChat {
 
     // MARK: Modération locale
 
-    func signalementsEnAttente() -> [SignalementEnAttente] { etat.signalements }
+    func signalementsEnAttente() -> [SignalementMessageEnAttente] { etat.signalements }
 
-    func ajouter(_ signalement: SignalementEnAttente) {
+    func ajouter(_ signalement: SignalementMessageEnAttente) {
         etat.signalements.append(signalement)
         sauvegarder()
     }

@@ -7,7 +7,7 @@ import Foundation
 // A utilise `GestionChat.exemple()` à la place du vrai service quand le mode démo est actif (`demo.communaute`) ou qu'il n'y a pas
 // de compte iCloud (voir le rapport L24). Le vrai service et les faux de test restent séparés (`FauxChat.swift`, sous DEBUG).
 
-nonisolated enum DonneesExemple {
+nonisolated enum DonneesExempleChat {
     static let moi = InterlocuteurChat(id: "p-exemple-moi", surnom: "Toi", idCloudKit: "_exemple_moi")
     static let lea = InterlocuteurChat(id: "p-exemple-lea", surnom: "Léa", idCloudKit: "_exemple_lea")
     static let hugo = InterlocuteurChat(id: "p-exemple-hugo", surnom: "Hugo", idCloudKit: "_exemple_hugo")
@@ -46,20 +46,20 @@ nonisolated enum DonneesExemple {
 /// Le service du mode démo : tout en lecture, rien n'est écrit nulle part.
 actor ServiceChatExemple: ServiceChat {
     func iCloudDisponible() async -> Bool { true }
-    func messages(de conversation: ConversationID) async throws -> [MessageChat] { DonneesExemple.messages(de: conversation) }
-    func changements(de conversation: ConversationID) async throws -> [MessageChat] { DonneesExemple.messages(de: conversation) }
+    func messages(de conversation: ConversationID) async throws -> [MessageChat] { DonneesExempleChat.messages(de: conversation) }
+    func changements(de conversation: ConversationID) async throws -> [MessageChat] { DonneesExempleChat.messages(de: conversation) }
     func envoyer(_ message: MessageChat, peutCreerLaZone: Bool) async throws { throw ErreurChat.autre }
     func abonner(_ conversation: ConversationID) async throws {}
     func lienDInvitation(pour conversation: ConversationID, participants: [String], peutCreerLaZone: Bool) async throws -> URL? { nil }
     func accepterInvitation(_ invitation: InvitationChat) async throws {}
-    func enregistrerSignalement(_ signalement: SignalementEnAttente) async throws {}
+    func enregistrerSignalement(_ signalement: SignalementMessageEnAttente) async throws {}
     func effacerMesMessages(auteurId: String) async throws {}
 }
 
 struct AnnuaireExemple: AnnuaireChat {
-    func moi() async -> InterlocuteurChat? { DonneesExemple.moi }
-    func amis() async -> [InterlocuteurChat] { [DonneesExemple.lea] }
-    func clubs() async -> [ClubChat] { [DonneesExemple.club] }
+    func moi() async -> InterlocuteurChat? { DonneesExempleChat.moi }
+    func amis() async -> [InterlocuteurChat] { [DonneesExempleChat.lea] }
+    func clubs() async -> [ClubChat] { [DonneesExempleChat.club] }
     func bloques() async -> Set<String> { [] }
 }
 

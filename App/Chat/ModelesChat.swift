@@ -63,7 +63,7 @@ nonisolated struct ResumeConversation: Identifiable, Hashable, Sendable {
 
 /// Un signalement à écrire dans la base lue par la personne de garde (type `Signalement` de R2 `schema.md`).
 /// Gardé sur disque tant qu'il n'est pas parti : un signalement fait hors ligne n'est pas perdu.
-nonisolated struct SignalementEnAttente: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct SignalementMessageEnAttente: Codable, Hashable, Identifiable, Sendable {
     var id: UUID
     /// `recordName` du message signalé.
     var cible: UUID

@@ -22,7 +22,7 @@ nonisolated enum FabriqueRecordsChat {
     /// Signalement d'un message (R2 `schema.md`, type 8) : un identifiant, un motif de la liste fermée (mêmes valeurs que le
     /// `MotifSignalement` de L21), et le TEXTE du message signalé (champ `texte`, 500 caractères au plus, à ajouter au schéma) :
     /// décision de Titouan du 19 oct., pour que l'équipe puisse lire le message. Jamais de coordonnée : le filtre de saisie les a refusées.
-    static func recordSignalement(_ s: SignalementEnAttente) -> CKRecord {
+    static func recordSignalement(_ s: SignalementMessageEnAttente) -> CKRecord {
         let record = CKRecord(recordType: typeSignalement, recordID: CKRecord.ID(recordName: s.id.uuidString))
         record["cible"] = s.cible.uuidString
         record["typeCible"] = "message"

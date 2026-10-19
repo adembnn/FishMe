@@ -11,7 +11,7 @@ actor FauxServiceChat: ServiceChat {
     private(set) var abonnes: [ConversationID] = []
     private(set) var acceptees = 0
     private(set) var effaces: [String] = []
-    private(set) var signalements: [SignalementEnAttente] = []
+    private(set) var signalements: [SignalementMessageEnAttente] = []
     private var horsLigne: Bool
     private var compte: Bool
     private var lien: URL?
@@ -76,7 +76,7 @@ actor FauxServiceChat: ServiceChat {
         acceptees += 1
     }
 
-    func enregistrerSignalement(_ signalement: SignalementEnAttente) async throws {
+    func enregistrerSignalement(_ signalement: SignalementMessageEnAttente) async throws {
         if horsLigne { throw ErreurChat.reseau }
         signalements.append(signalement)
     }

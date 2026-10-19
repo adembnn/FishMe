@@ -60,7 +60,7 @@ struct ChatTests {
         #expect(champsClub.isSubset(of: FabriqueRecordsChat.champsClub))
         let champsAmi = Set(FabriqueRecordsChat.recordAmi(message(ami), zone: zone).allKeys())
         #expect(champsAmi.isSubset(of: FabriqueRecordsChat.champsAmi))
-        let signalement = SignalementEnAttente(id: UUID(), cible: m.id, motif: "Autre", signalePar: "p-alice", date: Date())
+        let signalement = SignalementMessageEnAttente(id: UUID(), cible: m.id, motif: "Autre", signalePar: "p-alice", date: Date())
         #expect(Set(FabriqueRecordsChat.recordSignalement(signalement).allKeys()).isSubset(of: FabriqueRecordsChat.champsSignalement))
         for interdit in ["latitude", "longitude", "location", "lat", "lon", "lieu"] {
             #expect(!champsClub.contains(interdit) && !champsAmi.contains(interdit))
@@ -385,10 +385,10 @@ struct ChatTests {
     }
 
     @Test func signalementEnregistreAvecLeTexte() throws {
-        let s = SignalementEnAttente(id: UUID(), cible: UUID(), motif: "spam", signalePar: "p-alice", date: Date(), texte: "Achète !")
+        let s = SignalementMessageEnAttente(id: UUID(), cible: UUID(), motif: "spam", signalePar: "p-alice", date: Date(), texte: "Achète !")
         let record = FabriqueRecordsChat.recordSignalement(s)
         #expect(record["texte"] as? String == "Achète !")
-        let long = SignalementEnAttente(id: UUID(), cible: UUID(), motif: "spam", signalePar: "p-alice", date: Date(),
+        let long = SignalementMessageEnAttente(id: UUID(), cible: UUID(), motif: "spam", signalePar: "p-alice", date: Date(),
                                         texte: String(repeating: "a", count: 900))
         #expect((FabriqueRecordsChat.recordSignalement(long)["texte"] as? String)?.count == 500)
     }
@@ -425,7 +425,7 @@ struct ChatTests {
         await g.chargerListe()
         #expect(!g.resumes.isEmpty)
         #expect(g.resumes.allSatisfy { $0.titre.hasPrefix("Exemple") })
-        await g.ouvrir(DonneesExemple.conversationAmi)
+        await g.ouvrir(DonneesExempleChat.conversationAmi)
         #expect(await g.envoyer("Bonjour") == false)
         #expect(g.avis == .exemple)
     }

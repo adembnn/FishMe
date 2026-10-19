@@ -27,7 +27,7 @@ nonisolated protocol ServiceChat: Sendable {
     /// Écrit le `Signalement` en base publique (lu par la personne de garde). Le texte du message signalé y est copié (500 caractères
     /// au plus, champ `texte`) : sans cela l'équipe ne peut pas le lire, les conversations étant en zone partagée. À dire dans la
     /// politique de confidentialité.
-    func enregistrerSignalement(_ signalement: SignalementEnAttente) async throws
+    func enregistrerSignalement(_ signalement: SignalementMessageEnAttente) async throws
     /// Efface tous mes messages (clubs et amis) : « Supprimer mon profil ».
     func effacerMesMessages(auteurId: String) async throws
 }

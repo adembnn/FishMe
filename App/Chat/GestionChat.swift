@@ -2,7 +2,7 @@ import Foundation
 import Observation
 
 /// Ce que `signaler` rend à l'écran : l'e-mail prérempli (à n'ouvrir que si Mail est disponible) et la vérité sur la trace.
-nonisolated struct ResultatSignalement: Equatable, Sendable {
+nonisolated struct ResultatSignalementMessage: Equatable, Sendable {
     /// Le `mailto:` prérempli, texte du message compris (le pêcheur le voit et peut le modifier avant d'envoyer).
     var url: URL?
     /// Vrai seulement si l'enregistrement `Signalement` est bien arrivé sur iCloud. Faux : gardé sur l'iPhone, il repart au retour du réseau.
@@ -454,15 +454,15 @@ final class GestionChat {
     /// `Signalement` (500 caractères au plus) ET joint au `mailto:` : l'équipe doit pouvoir le lire, les conversations étant en
     /// zone partagée (décision de Titouan, 19 oct.). « Signalé » n'est dit que si l'enregistrement a réussi ; sinon il reste sur
     /// l'iPhone et repart au retour du réseau.
-    func signaler(_ message: MessageChat, motif: MotifSignalementMessage) async -> ResultatSignalement {
+    func signaler(_ message: MessageChat, motif: MotifSignalementMessage) async -> ResultatSignalementMessage {
         await stock.masquer(message.id)
         if exemple {
             avis = .exemple
             await rafraichirAffichage()
             await chargerListe()
-            return ResultatSignalement(url: nil, enregistre: false)
+            return ResultatSignalementMessage(url: nil, enregistre: false)
         }
-        let signalement = SignalementEnAttente(id: UUID(), cible: message.id, motif: motif.rawValue,
+        let signalement = SignalementMessageEnAttente(id: UUID(), cible: message.id, motif: motif.rawValue,
                                                signalePar: moi?.id ?? "inconnu", date: Date(),
                                                texte: String(message.texte.prefix(FabriqueRecordsChat.texteSignalementMax)))
         await stock.ajouter(signalement)
@@ -471,7 +471,7 @@ final class GestionChat {
         avis = enregistre ? .signalementEnregistre : .signalementEnAttente
         await rafraichirAffichage()
         await chargerListe()
-        return ResultatSignalement(url: SignalementMessage.url(contact: configuration.contact, message: message, motif: motif),
+        return ResultatSignalementMessage(url: SignalementMessage.url(contact: configuration.contact, message: message, motif: motif),
                                    enregistre: enregistre)
     }
 
