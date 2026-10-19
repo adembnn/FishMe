@@ -9,6 +9,8 @@ final class GestionProfil {
     enum Message: Equatable {
         case surnomRefuse(Surnom.Refus)
         case surnomPris
+        /// Sans la déclaration « J'ai 15 ans ou plus », aucun profil public.
+        case ageRequis
         case horsLigne
         case iCloudIndisponible
         case imageRefusee
@@ -19,6 +21,7 @@ final class GestionProfil {
             switch self {
             case .surnomRefuse(let refus): Surnom.phrase(pour: refus)
             case .surnomPris: "Ce surnom est déjà pris. Choisis-en un autre."
+            case .ageRequis: "Le profil public est réservé aux 15 ans et plus."
             case .horsLigne: "Pas de réseau. Réessaie plus tard."
             case .iCloudIndisponible: "Connecte-toi à iCloud pour créer ton profil."
             case .imageRefusee: "Cette image ne marche pas. Essaie-en une autre."
@@ -87,7 +90,13 @@ final class GestionProfil {
     /// Crée le profil. Vrai si c'est fait. Un surnom pris est refusé AVANT l'écriture ; si deux iPhones écrivent en même temps,
     /// le second reçoit `.surnomPris` de l'écriture et choisit un autre surnom.
     @discardableResult
-    func creer(surnom: String, avatar: Data?) async -> Bool {
+    func creer(surnom: String, avatar: Data?, aQuinzeAns: Bool) async -> Bool {
+        // R2: 15 ans minimum (décision de Titouan, à confirmer par le juridique ; Declared Age Range d'Apple ⚠ à étudier).
+        // Simple déclaration : rien n'est stocké, ni date de naissance ni la case cochée. Sans elle, l'app reste utilisable.
+        guard aQuinzeAns else {
+            message = .ageRequis
+            return false
+        }
         if let refus = verifier(surnom: surnom) {
             message = .surnomRefuse(refus)
             return false

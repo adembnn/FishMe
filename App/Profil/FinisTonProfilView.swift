@@ -6,6 +6,7 @@ struct FinisTonProfilView: View {
     @Environment(\.dismiss) private var fermer
     @State private var surnom = ""
     @State private var avatar: Data?
+    @State private var aQuinzeAns = false
     @FocusState private var champActif: Bool
 
     private var refus: Surnom.Refus? { gestion.verifier(surnom: surnom) }
@@ -66,10 +67,17 @@ struct FinisTonProfilView: View {
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
             }
+            Toggle("J'ai 15 ans ou plus", isOn: $aQuinzeAns)
+                .font(Police.corps)
+                .frame(minHeight: Gabarit.zoneTactile)
+                .accessibilityIdentifier("profil.age15")
+            Text("Sans cela, pas de profil public : ta collection, les règles et la carte restent là.")
+                .font(Police.detail)
+                .foregroundStyle(Palette.encreDouce)
             VStack(spacing: Espace.m) {
                 Button("C'est bon") { Task { await creer() } }
                     .buttonStyle(.principal)
-                    .disabled(refus != nil || gestion.enCours)
+                    .disabled(refus != nil || !aQuinzeAns || gestion.enCours)
                     .accessibilityIdentifier("profil.cestbon")
                 Button("Me le rappeler plus tard") { fermer() }
                     .buttonStyle(.secondaire)
@@ -121,7 +129,7 @@ struct FinisTonProfilView: View {
 
     private func creer() async {
         champActif = false
-        await gestion.creer(surnom: surnom, avatar: avatar)
+        await gestion.creer(surnom: surnom, avatar: avatar, aQuinzeAns: aQuinzeAns)
     }
 }
 
