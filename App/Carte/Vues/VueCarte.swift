@@ -5,14 +5,20 @@ import UIKit
 import Core
 
 /// Le volet central : la carte Apple de toute la France avec les stations OFB (E1), la fiche d'un coin (E2),
-/// le filtre « Choisir un autre spot » (E3) et le cercle de 1 km du spot gratuit.
+/// le filtre « Choisir un autre spot » (E3), le cercle de 1 km du spot gratuit et la feuille « Mon spot ».
 ///
-/// Ce que A branche dans `RootView.swift` :
+/// Deux états séparés (L17) : la caméra (où la carte regarde) et le spot (où le cercle est posé). La carte s'ouvre sur le pêcheur,
+/// « Ma position » recentre la caméra, rien de cela ne déplace le cercle. Les feuilles du bas (fiche d'un coin, « Mon spot »)
+/// ont trois hauteurs et la carte réserve leur hauteur : la mention légale de Plans reste lisible au-dessus d'elles.
+///
+/// Ce que A branche dans `RootView.swift` (tout ce qui est nouveau a une valeur par défaut : rien ne casse) :
 /// - `services` : les services réels de L1 (en DEBUG, `ServicesCarte.faux()`) ;
 /// - `spotFixe` et `sessionsTerminees` : le spot fixé par L5 et le nombre de sessions terminées ;
 /// - `bandeauHaut` (vigilance de L12), `bandeauSession` (vue de L5) ;
-/// - `emplacementMaintenant` (L12 : rangée « maintenant » et jauge) et `emplacementConseil` (L13 : 1er conseil), vides par défaut ;
-/// - `onCommencerSession` (vers L5) et `onSpotChange` (le cercle posé avant la 1re session, à garder).
+/// - `emplacementMaintenant` (L12 : rangée « maintenant » ; sert aussi à la météo du moment de « Mon spot ») et `emplacementConseil` (L13) ;
+/// - `onCommencerSession` (vers L5) et `onSpotChange` (le cercle posé avant la 1re session, à garder) ;
+/// - `prisesDuPecheur` (nouveau) : la lecture des prises et de leurs photos, pour les vignettes (`CollectionCartes.cartes()` et `DepotCartes`) ;
+/// - `ReglageNavigationView()` (nouveau) : à poser dans l'écran des réglages, la préférence de « Y aller ».
 struct VueCarte: View {
     @State private var modele: ModeleCarte
     @State private var position = GestionPosition()
@@ -39,23 +45,27 @@ struct VueCarte: View {
     /// La colonne de boutons à droite : « Tes conditions » (météo) et le profil/réglages, ouverts par la racine.
     let ouvrirMeteo: () -> Void
     let ouvrirProfil: () -> Void
+    /// Les prises du pêcheur et leurs photos, pour les vignettes de la fiche d'un coin. Elles restent sur l'iPhone.
+    let prisesDuPecheur: PrisesDuPecheurCarte
     @Environment(\.dynamicTypeSize) private var tailleDuTexte
     /// Vrai quand la racine demande le « vol vers le spot » (« Voir mon spot » du swipe) : la caméra passe de la zone
-    /// au cercle de 1 km, une bulle dit la distance, puis la feuille « Ton spot » monte. Une seule fois (`volFait`).
+    /// au cercle de 1 km, une bulle dit la distance, puis la feuille « Mon spot » monte. Une seule fois (`volFait`).
     let volVersLeSpot: Bool
     @AppStorage("carte.volVersLeSpotFait") private var volFait = false
     @State private var demandeVol = 0
     @State private var bulleSpot = false
     @State private var feuilleSpotMasquee = false
     @State private var afficherOuChercher = false
-    /// Vrai : on arrive sur la carte seule (Adem, 16 oct. : « on veut juste la carte », rien qui surgit).
-    /// Faux : « Ton spot » (maquette P06 C), ouvert d'un toucher sur le bouton retour de la carte.
-    @State private var afficherCarte = true
-    /// La feuille « Ton spot » (P06 A) ne monte plus d'elle-même : elle s'ouvre d'un toucher sur la pastille « Ton spot » en haut.
+    /// La feuille « Mon spot » ne monte pas d'elle-même : elle s'ouvre d'un toucher sur la pastille « Mon spot » en haut.
     @State private var feuilleSpotOuverte = false
+    @State private var detentSpot: DetentPanneau = .moyen
+    @State private var detentFiche: DetentPanneau = .moyen
     /// Les poissons du spot, ouverts d'un toucher sur un poisson ou sur « + N » ; `especeOuverte` est le poisson touché.
     @State private var poissonsOuverts = false
     @State private var especeOuverte: Espece?
+    @State private var reglesDuSpotOuvertes = false
+    /// « Y aller » : le coin choisi, tant que la feuille « Y aller avec » demande l'application.
+    @State private var destination: DestinationItineraire?
     @State private var apercu: ApercuSpot?
     @State private var reseauDisponible = true
 
@@ -75,7 +85,8 @@ struct VueCarte: View {
          volVersLeSpot: Bool = false,
          pastilleProfil: AnyView = AnyView(EmptyView()),
          ouvrirMeteo: @escaping () -> Void = {},
-         ouvrirProfil: @escaping () -> Void = {}) {
+         ouvrirProfil: @escaping () -> Void = {},
+         prisesDuPecheur: PrisesDuPecheurCarte = .aucune) {
         self.pastilleProfil = pastilleProfil
         _modele = State(initialValue: ModeleCarte(services: services))
         self.spotFixe = spotFixe
@@ -93,24 +104,27 @@ struct VueCarte: View {
         self.volVersLeSpot = volVersLeSpot
         self.ouvrirMeteo = ouvrirMeteo
         self.ouvrirProfil = ouvrirProfil
+        self.prisesDuPecheur = prisesDuPecheur
     }
 
     var body: some View {
-        ZStack {
-            carteComplete
-                .accessibilityHidden(!afficherCarte)
-            if !afficherCarte {
-                ecranSpot
-                    .transition(.opacity)
+        GeometryReader { (geo: GeometryProxy) in
+            ZStack(alignment: .bottom) {
+                carteComplete(total: geo.size.height)
+                feuilleDuBas(total: geo.size.height)
             }
+            // Une seule animation pour l'arrivée et le départ des feuilles et pour la réserve de la carte : pas d'artefact à la fermeture.
+            .animation(.snappy(duration: 0.3), value: modele.selection?.id)
+            .animation(.snappy(duration: 0.3), value: feuilleSpotVisible)
         }
-        .animation(.easeInOut(duration: 0.25), value: afficherCarte)
         .sheet(isPresented: $poissonsOuverts) {
             if let apercu {
                 PoissonsDuSpotView(lieu: apercu.lieu, lignes: apercu.toutes, pechable: { modele.pechable($0) },
                                    emplacementConseil: emplacementConseil, touchee: especeOuverte)
             }
         }
+        .sheet(isPresented: $reglesDuSpotOuvertes) { feuilleReglesDuSpot }
+        .sheet(item: $destination) { (cible: DestinationItineraire) in feuilleChoixNavigation(cible) }
         .task(id: modele.spotAffiche) {
             apercu = nil
             guard let spot = modele.spotAffiche else { return }
@@ -123,6 +137,13 @@ struct VueCarte: View {
         .onChange(of: volVersLeSpot) { _, demande in
             if demande && !volFait { demandeVol += 1 }
         }
+        .onChange(of: modele.selection?.id) { _, nouvelle in
+            // Une nouvelle fiche s'ouvre au cran moyen et range « Mon spot » : une seule feuille à la fois.
+            if nouvelle != nil {
+                detentFiche = .moyen
+                feuilleSpotOuverte = false
+            }
+        }
         .task(id: demandeVol) { await volerVersLeSpot() }
     }
 
@@ -133,7 +154,6 @@ struct VueCarte: View {
         guard demandeVol > 0, !volFait else { return }
         feuilleSpotMasquee = true
         defer { feuilleSpotMasquee = false }
-        afficherCarte = true
         // Le spot proposé arrive de Core : on l'attend 3 s au plus.
         var essais = 0
         while modele.spotAffiche == nil && essais < 30 {
@@ -155,9 +175,9 @@ struct VueCarte: View {
         withAnimation { bulleSpot = false }
     }
 
-    /// « Ton spot, à 2,3 km. Touche la rivière pour le déplacer » ; sans position, sans distance.
+    /// « Mon spot, à 2,3 km. Touche la rivière pour le déplacer » ; sans position, sans distance.
     private var texteBulleSpot: String {
-        let debut: String = distanceAuSpot.map { "Ton spot, à \($0)." } ?? "Ton spot."
+        let debut: String = distanceAuSpot.map { "Mon spot, à \($0)." } ?? "Mon spot."
         return modele.peutChangerDeSpot ? debut + " Touche la rivière pour le déplacer" : debut
     }
 
@@ -176,12 +196,32 @@ struct VueCarte: View {
             .transition(.opacity.combined(with: .move(edge: .bottom)))
     }
 
+    /// Pendant « Choisir un autre spot » : la consigne flotte au-dessus de la carte (toucher l'annule).
+    private var bulleChoixDuSpot: some View {
+        Button { modele.modeChoixDuSpot = false } label: {
+            Text("Touche la rivière pour poser ton cercle de 1 km")
+                .font(Police.detail)
+                .foregroundStyle(Palette.encre)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.horizontal, Espace.l)
+                .padding(.vertical, Espace.s)
+                .frame(minHeight: Gabarit.zoneTactile)
+                .background(.regularMaterial, in: Capsule())
+                .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
+                .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
+        }
+        .buttonStyle(.plain)
+        .accessibilityHint("Touche pour annuler")
+        .transition(.opacity.combined(with: .move(edge: .bottom)))
+    }
+
     // MARK: La carte
 
     // Découpée en petites vues aux types simples : le compilateur ne vérifie jamais tout d'un seul bloc.
 
-    private var carteComplete: some View {
-        carteAvecFeuilles
+    private func carteComplete(total: CGFloat) -> some View {
+        carteAvecFeuilles(total: total)
             .alert("Ta position aide à centrer la carte", isPresented: redemandeOuverte) {
                 Button("Ouvrir les réglages") { ouvrirLesReglages() }
                 Button("Choisir à la main", role: .cancel) { modele.appliquer(position: nil, refusee: true) }
@@ -201,18 +241,34 @@ struct VueCarte: View {
             .onChange(of: modele.spotLocal) { _, nouveau in if let nouveau { onSpotChange(nouveau) } }
     }
 
-    private var carteAvecFeuilles: some View {
-        carteAvecBarres
-            .sheet(item: selectionOuverte) { selection in feuilleFiche(selection) }
+    private func carteAvecFeuilles(total: CGFloat) -> some View {
+        carteAvecBarres(total: total)
             .sheet(isPresented: filtreOuvert) { feuilleFiltre }
             .sheet(isPresented: $afficherOuChercher) { feuilleOuChercher }
             .fullScreenCover(isPresented: choixDeZoneOuvert) { feuilleChoixDeZone }
     }
 
-    private var carteAvecBarres: some View {
-        carteSeule
+    /// La hauteur que la carte réserve en bas pour la feuille ouverte : la mention légale de Plans (Apple, en bas de la carte)
+    /// reste au-dessus de la feuille, à chaque hauteur. Elle ne change qu'aux crans, jamais pendant le glissement.
+    private func reservation(total: CGFloat) -> CGFloat {
+        if modele.selection != nil { return CGFloat(detentFiche.reservation(dans: Double(total))) }
+        if feuilleSpotVisible { return CGFloat(detentSpot.reservation(dans: Double(total))) }
+        return 0
+    }
+
+    private var feuilleSpotVisible: Bool { feuilleSpotOuverte && !sessionEnCours && !feuilleSpotMasquee }
+
+    private func carteAvecBarres(total: CGFloat) -> some View {
+        let reserve: CGFloat = reservation(total: total)
+        return carteSeule
             .safeAreaInset(edge: .top, spacing: 8) { haut }
-            .safeAreaInset(edge: .bottom, spacing: 8) { bas }
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Color.clear
+                    .frame(height: reserve)
+                    .animation(.snappy(duration: 0.28), value: reserve)
+            }
+            // Les boutons de droite flottent au-dessus de la mention légale (36 pt) et de la feuille : ils ne la poussent plus.
+            .overlay(alignment: .bottom) { bas.padding(.bottom, reserve + 36) }
     }
 
     private var carteSeule: some View {
@@ -248,7 +304,7 @@ struct VueCarte: View {
             annotationEau(element)
         }
         ForEach(modele.elements) { (element: ElementCarte) in
-            annotation(element)
+            contenuStation(element)
         }
     }
 
@@ -263,6 +319,45 @@ struct VueCarte: View {
         MapCircle(center: Self.cl(spot.centre), radius: spot.rayonM)
             .foregroundStyle(Palette.marine.opacity(0.12))
             .stroke(Palette.marine, lineWidth: 2.5)
+    }
+
+    /// Une station recalée : une épingle. Une station `recalee == false` : un halo de 1 km, jamais d'épingle.
+    @MapContentBuilder
+    private func contenuStation(_ element: ElementCarte) -> some MapContent {
+        if let point = pointEnHalo(element) {
+            haloDeStation(point)
+        } else {
+            annotation(element)
+        }
+    }
+
+    private func pointEnHalo(_ element: ElementCarte) -> PointCarte? {
+        if case .point(let p) = element, !p.recalee { return p }
+        return nil
+    }
+
+    /// Le halo : la station n'est pas posée sur l'eau (arrondi à 0,01°), la carte ne prétend pas savoir où elle est à moins de 1 km.
+    /// Une cible invisible de 44 pt au centre ouvre la fiche ; aucune épingle n'est dessinée.
+    @MapContentBuilder
+    private func haloDeStation(_ p: PointCarte) -> some MapContent {
+        MapCircle(center: Self.cl(p.coordonnee), radius: 1000)
+            .foregroundStyle(Palette.encreDouce.opacity(0.14))
+            .stroke(Palette.encreDouce.opacity(0.55), lineWidth: 1.5)
+        Annotation("", coordinate: Self.cl(p.coordonnee)) {
+            cibleDuHalo(p)
+        }
+        .annotationTitles(.hidden)
+    }
+
+    private func cibleDuHalo(_ p: PointCarte) -> some View {
+        Button { modele.toucher(.point(p)) } label: {
+            Color.clear
+                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+                .contentShape(Circle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Zone de station OFB, position approximative")
+        .accessibilityHint("Ouvre la fiche du coin")
     }
 
     private func annotation(_ element: ElementCarte) -> some MapContent {
@@ -310,10 +405,6 @@ struct VueCarte: View {
         Binding(get: { modele.camera }, set: { modele.camera = $0 })
     }
 
-    private var selectionOuverte: Binding<CoinSelectionne?> {
-        Binding(get: { modele.selection }, set: { modele.selection = $0 })
-    }
-
     private var filtreOuvert: Binding<Bool> {
         Binding(get: { modele.afficherFiltre }, set: { modele.afficherFiltre = $0 })
     }
@@ -331,6 +422,23 @@ struct VueCarte: View {
     }
 
     // MARK: Feuilles de la carte
+
+    /// La feuille du bas : la fiche d'un coin si un coin est touché, sinon « Mon spot » s'il est ouvert. Une seule à la fois.
+    @ViewBuilder
+    private func feuilleDuBas(total: CGFloat) -> some View {
+        if let selection = modele.selection {
+            PanneauRedimensionnable(detent: $detentFiche, total: total, fermable: true, fermer: { modele.selection = nil }) {
+                feuilleFiche(selection)
+                    .id(selection.id)
+            }
+            .transition(.move(edge: .bottom))
+        } else if feuilleSpotVisible {
+            PanneauRedimensionnable(detent: $detentSpot, total: total, fermable: true, fermer: fermerFeuilleSpot) {
+                feuilleMonSpot
+            }
+            .transition(.move(edge: .bottom))
+        }
+    }
 
     /// `nil` pendant une session ou sans spot : la fiche n'a alors pas de bouton « Commencer une session ».
     private var commencerDepuisLaFiche: (() -> Void)? {
@@ -351,11 +459,15 @@ struct VueCarte: View {
 
     private func feuilleFiche(_ selection: CoinSelectionne) -> some View {
         FicheCoinView(services: modele.services, selection: selection, pechables: modele.pechables,
+                      detent: detentFiche,
                       emplacementMaintenant: emplacementMaintenant, emplacementConseil: emplacementConseil,
                       onCommencerSession: commencerDepuisLaFiche,
                       frequentation: modele.niveauxConnus[selection.id],
-                      onCoinCalme: coinCalmeDeLaFiche(selection))
-            .presentationDragIndicator(.visible)
+                      onCoinCalme: coinCalmeDeLaFiche(selection),
+                      onYAller: yAller,
+                      onPoserLeSpot: poserLeSpotDepuisLaFiche(selection),
+                      prisesDuPecheur: prisesDuPecheur,
+                      fermer: { modele.selection = nil })
             .task(id: selection.id) { await modele.rafraichirFrequentation(selection: selection) }
     }
 
@@ -365,7 +477,18 @@ struct VueCarte: View {
         return { modele.adopterCoinCalme(depuis: modele.spot(de: selection)) }
     }
 
-    /// Le bouton « Coin plus calme » de la feuille « Ton spot ».
+    /// « Poser mon spot ici » : changer de spot depuis la fiche, tant que le spot peut changer. Pose le cercle sur la station.
+    private func poserLeSpotDepuisLaFiche(_ selection: CoinSelectionne) -> (() -> Void)? {
+        guard modele.peutChangerDeSpot, !sessionEnCours else { return nil }
+        return {
+            if let spot = modele.poserSpot(en: selection.coordonnee) {
+                onSpotChange(spot)
+                modele.selection = nil
+            }
+        }
+    }
+
+    /// Le bouton « Coin plus calme » de la feuille « Mon spot ».
     private var coinCalmeDuSpot: (() -> Void)? {
         guard modele.peutChangerDeSpot, let spot = modele.spotAffiche,
               let t = modele.troncon(de: spot), modele.tronconsAvecCoinCalme.contains(t) else { return nil }
@@ -405,12 +528,34 @@ struct VueCarte: View {
         return d.estInconnu ? nil : d.code
     }
 
+    // MARK: Y aller (décision 9 du 19 oct.)
+
+    /// Au premier toucher : la feuille demande l'application (Plans, Waze, Google Maps installés) avec « Toujours utiliser ».
+    /// Ensuite, ou si seul Plans est là, l'itinéraire s'ouvre directement. La coordonnée envoyée est celle de la STATION.
+    private func yAller(_ c: Coordonnee, _ nom: String) {
+        switch LanceurItineraire.decision() {
+        case .ouvrir(let application):
+            LanceurItineraire.ouvrir(application, vers: c, nom: nom)
+        case .demander:
+            destination = DestinationItineraire(coordonnee: c, nom: nom)
+        }
+    }
+
+    private func feuilleChoixNavigation(_ cible: DestinationItineraire) -> some View {
+        ChoixNavigationView(applications: LanceurItineraire.installees()) { application, toujours in
+            if toujours { PreferenceItineraire.ecrire(application) }
+            destination = nil
+            LanceurItineraire.ouvrir(application, vers: cible.coordonnee, nom: cible.nom)
+        }
+    }
+
     // MARK: Départ de la carte
 
     private func demarrerLaCarte() async {
         modele.spotFixe = spotFixe
         modele.sessionsTerminees = sessionsTerminees
-        // Avant toute question de position : le spot fixé ou la dernière zone choisie posent la carte tout de suite.
+        // Avant toute question de position : le spot fixé ou la dernière zone choisie posent la carte tout de suite ;
+        // la première position qui arrive la reposera sur le pêcheur (le cercle du spot reste où il est).
         modele.placerALOuverture()
         // La permission de position se demande au premier lancement (« Où pêches-tu ? », au toucher
         // « Utiliser ma position »), jamais ici : la carte lit seulement la position si elle est déjà permise.
@@ -448,219 +593,6 @@ struct VueCarte: View {
     /// Environ 250 km de large à l'écran au plus dézoomé : un ou deux départements, jamais un pays de bulles.
     static let altitudeMaximale: CLLocationDistance = 400_000
 
-    // MARK: Ton spot (maquette P06 C) et états vides (P46 B)
-
-    private var ecranSpot: some View {
-        Group {
-            if modele.spotAffiche == nil && modele.depart != .enAttente {
-                ecranSansSpot
-            } else {
-                ecranAvecSpot
-            }
-        }
-        .background(Palette.fond.ignoresSafeArea())
-        // Le profil reste atteignable depuis « Ton spot » (la pastille de la racine).
-        .safeAreaInset(edge: .top, spacing: 0) {
-            HStack { pastilleProfil.frame(maxWidth: 170, alignment: .leading); Spacer(minLength: 0) }
-                .padding(.horizontal, 16)
-        }
-    }
-
-    private func ouvrirLaCarte(poserLeSpot: Bool = false) {
-        if poserLeSpot, modele.peutChangerDeSpot { modele.modeChoixDuSpot = true }
-        afficherCarte = true
-    }
-
-    /// P46 B : « Carte », le bandeau « Pas de réseau » s'il manque, puis « Pas de spot » avec un seul chemin.
-    private var ecranSansSpot: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 0) {
-                Text("Carte")
-                    .font(Police.taille(34, .heavy))
-                    .foregroundStyle(Palette.encre)
-                    .accessibilityAddTraits(.isHeader)
-                if !reseauDisponible {
-                    BandeauPasDeReseauView()
-                        .padding(.top, 12)
-                }
-                Text("Ton spot")
-                    .font(Police.taille(13, .heavy))
-                    .foregroundStyle(Palette.encreDouce)
-                    .textCase(.uppercase)
-                    .tracking(0.5)
-                    .padding(.horizontal, Espace.l)
-                    .padding(.top, reseauDisponible ? 12 : 22)
-                    .padding(.bottom, Espace.s)
-                    .accessibilityAddTraits(.isHeader)
-                PasDeSpotView(choisirUnSpot: { ouvrirLaCarte(poserLeSpot: true) })
-            }
-            .padding(Espace.bord)
-        }
-        .scrollIndicators(.hidden)
-    }
-
-    /// P06 C : le lieu, le poisson le plus pêché en grand, trois autres, « Commencer une session », « Choisir un autre spot ».
-    private var ecranAvecSpot: some View {
-        VStack(spacing: Espace.l) {
-            HStack {
-                HStack(spacing: 6) {
-                    Image(systemName: "mappin")
-                        .font(Police.taille(16))
-                        .foregroundStyle(Palette.marine)
-                        .accessibilityHidden(true)
-                    Text(apercu?.lieu ?? " ")
-                        .font(Police.detail)
-                        .foregroundStyle(Palette.encre)
-                        .lineLimit(1)
-                }
-                Spacer(minLength: Espace.s)
-                Button { ouvrirLaCarte() } label: {
-                    Image(systemName: "map")
-                        .font(Police.taille(20))
-                        .foregroundStyle(Palette.marine)
-                        .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                        .background(Palette.tuile, in: Circle())
-                        .contentShape(Circle())
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Voir la carte")
-            }
-            if !reseauDisponible { BandeauPasDeReseauView() }
-            bandeauHaut
-
-            ScrollView {
-                vedette
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, Espace.s)
-            }
-            .scrollIndicators(.hidden)
-            .scrollBounceBehavior(.basedOnSize)
-        }
-        .padding(.horizontal, Espace.bord)
-        .padding(.top, Espace.s)
-        .safeAreaInset(edge: .bottom, spacing: 0) {
-            VStack(spacing: Espace.s) {
-                bandeauSession
-                if !sessionEnCours {
-                VStack(spacing: 2) {
-                    Button {
-                        if let spot = modele.spotAffiche { commencer(spot) }
-                    } label: {
-                        Label("Commencer une session", systemImage: "play.fill")
-                    }
-                    .buttonStyle(.principal)
-                    .disabled(modele.spotAffiche == nil)
-                    .opacity(modele.spotAffiche == nil ? 0.5 : 1)
-                    Button { ouvrirLaCarte(poserLeSpot: true) } label: {
-                        Text("Choisir un autre spot")
-                            .font(Police.taille(17, .heavy))
-                            .foregroundStyle(Palette.encre)
-                            .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
-                            .contentShape(Rectangle())
-                    }
-                    .buttonStyle(.plain)
-                }
-                }
-            }
-            .padding(.horizontal, Espace.bord)
-            .padding(.vertical, Espace.s)
-            .background(Palette.fond)
-        }
-    }
-
-    @ViewBuilder
-    private var vedette: some View {
-        if let apercu, let ligne = apercu.vedette {
-            let fiche = modele.pechable(ligne.espece)
-            let niveau = ligne.rarete?.niveau ?? .nonMesuree
-            VStack(spacing: 0) {
-                Text("Le plus pêché de ton spot")
-                    .font(Police.taille(13))
-                    .foregroundStyle(Palette.encreDouce)
-                ImageEspeceCarte(nom: fiche?.image)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 170)
-                    .padding(.horizontal, Espace.xs)
-                    .padding(.top, 40)
-                    .contentShape(Rectangle())
-                    .onTapGesture { ouvrirPoissons(ligne.espece) }
-                    .accessibilityAddTraits(.isButton)
-                VStack(spacing: Espace.s) {
-                    Text(fiche?.nom ?? ligne.espece.id)
-                        .font(Police.taille(34, .heavy))
-                        .foregroundStyle(Palette.encre)
-                        .multilineTextAlignment(.center)
-                        .accessibilityAddTraits(.isHeader)
-                    if niveau != .nonMesuree {
-                        Label(niveau.libelle, systemImage: niveau.symboleSF)
-                            .font(Police.taille(13, .heavy))
-                            .foregroundStyle(CouleursCarte.rarete(niveau))
-                    }
-                    Text(texteVedette(ligne))
-                        .font(Police.taille(15))
-                        .foregroundStyle(Palette.encreDouce)
-                        .multilineTextAlignment(.center)
-                }
-                .padding(.top, 20)
-                autresPoissons(apercu)
-                    .padding(.top, 48)
-            }
-            .accessibilityElement(children: .contain)
-        } else if apercu != nil {
-            // Un spot sans espèce relevée : le poisson générique, une phrase.
-            VStack(spacing: Espace.m) {
-                Image(systemName: "fish")
-                    .font(Police.taille(64))
-                    .foregroundStyle(Palette.silhouette)
-                    .accessibilityHidden(true)
-                Text("Pas encore de relevé ici")
-                    .font(Police.titre)
-                    .foregroundStyle(Palette.encre)
-            }
-        } else {
-            ProgressView()
-                .accessibilityLabel("Lecture des relevés")
-        }
-    }
-
-    /// « 3 pêches sur 29 · OFB 2024 » : le nombre de pêches et l'année vont toujours ensemble.
-    private func texteVedette(_ ligne: LigneEspece) -> String {
-        guard let rarete = ligne.rarete else {
-            let mot = ligne.nPeches > 1 ? "pêches" : "pêche"
-            return "\(ligne.nPeches) \(mot) · OFB \(String(ligne.annee))"
-        }
-        let mot = rarete.nPeches > 1 ? "pêches" : "pêche"
-        let an = rarete.anneeDernierReleve ?? ligne.annee
-        let base = "\(rarete.nPeches) \(mot) sur \(rarete.nTotal) · OFB \(an)"
-        return rarete.echelle == .region ? base + " · région" : base
-    }
-
-    private func autresPoissons(_ apercu: ApercuSpot) -> some View {
-        HStack(spacing: 18) {
-            ForEach(apercu.autres) { ligne in
-                Button { ouvrirPoissons(ligne.espece) } label: {
-                    ImageEspeceCarte(nom: modele.pechable(ligne.espece)?.image)
-                        .frame(width: 72, height: 34)
-                        .frame(minHeight: Gabarit.zoneTactile)
-                        .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel(modele.pechable(ligne.espece)?.nom ?? ligne.espece.id)
-            }
-            if apercu.reste > 0 {
-                Button { ouvrirPoissons(nil) } label: {
-                    Text("+ \(apercu.reste)")
-                        .font(Police.taille(15))
-                        .foregroundStyle(Palette.encreDouce)
-                        .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
-                        .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Voir les \(apercu.reste) autres poissons du spot")
-            }
-        }
-    }
-
     // MARK: Départ
 
     /// Position refusée : une seule redemande, puis le choix à la main. Rien ne bloque.
@@ -675,12 +607,22 @@ struct VueCarte: View {
         }
     }
 
+    /// « Ma position » : la caméra va sur le pêcheur. Le cercle du spot ne bouge pas.
     private func autourDeMoi() {
         if position.estAutorisee {
-            if let p = position.position { modele.centrerSurMaPosition(p) }
+            modele.demanderRecentrage()
             position.relire()
         } else {
             modele.afficherChoixDeZone = true
+        }
+    }
+
+    /// Position approximative (réglage « Position précise » éteint) : demande la précision exacte, ou ouvre les réglages d'iOS.
+    private func preciserLaPosition() {
+        if Bundle.main.object(forInfoDictionaryKey: "NSLocationTemporaryUsageDescriptionDictionary") != nil {
+            position.demanderPrecisionExacte()
+        } else if let url = URL(string: UIApplication.openSettingsURLString) {
+            UIApplication.shared.open(url)
         }
     }
 
@@ -740,7 +682,9 @@ struct VueCarte: View {
     private var haut: some View {
         VStack(spacing: 8) {
             ligneProfilEtRecherche
-            enTeteCarte
+            pastilleMonSpot
+            if !reseauDisponible { BandeauPasDeReseauView() }
+            if position.estAutorisee && position.precisionReduite { boutonPrecision }
             bandeauHaut
             messageDeCarte
         }
@@ -785,46 +729,56 @@ struct VueCarte: View {
         BarreRechercheZone(choisir: choisirZone, codeDepartement: codeDepartement)
     }
 
-    /// En haut de la carte : retour à « Ton spot », le lieu, le filtre par espèce (maquette P06 A).
-    private var enTeteCarte: some View {
-        HStack(spacing: 8) {
-            BoutonRond(role: .retour, rendu: .verre, action: retourAuSpot)
-            // Un toucher sur la pastille ouvre (ou range) la feuille « Ton spot » : elle ne monte jamais d'elle-même.
-            Button {
-                withAnimation(.spring) { feuilleSpotOuverte.toggle() }
-            } label: {
-                HStack(spacing: 8) {
-                    Image(systemName: "mappin")
-                        .font(Police.taille(18))
-                        .foregroundStyle(Palette.marine)
+    /// Le point de départ de la feuille « Mon spot » : une seule pastille en haut de la carte, aucun bouton retour.
+    /// Un toucher ouvre ou range la feuille ; elle ne monte jamais d'elle-même.
+    private var pastilleMonSpot: some View {
+        Button { basculerFeuilleSpot() } label: {
+            HStack(spacing: 8) {
+                Image(systemName: "mappin")
+                    .font(Police.taille(18))
+                    .foregroundStyle(Palette.marine)
+                    .accessibilityHidden(true)
+                // « Mon spot · La Marne · 94 » : la pastille dit que c'est le spot, pas la position de l'iPhone.
+                Text(apercu.map { "Mon spot · \($0.lieu)" } ?? (modele.spotAffiche == nil ? "Choisir mon spot" : "Mon spot"))
+                    .font(Police.detail)
+                    .foregroundStyle(Palette.encre)
+                    .lineLimit(1)
+                Spacer(minLength: 0)
+                if !sessionEnCours {
+                    Image(systemName: feuilleSpotOuverte ? "chevron.down" : "chevron.up")
+                        .font(Police.taille(14, .bold))
+                        .foregroundStyle(Palette.encreDouce)
                         .accessibilityHidden(true)
-                    // « Ton spot · La Marne · 94 » : la pastille dit que c'est le spot, pas la position de l'iPhone.
-                    Text(apercu.map { "Ton spot · \($0.lieu)" } ?? "Carte")
-                        .font(Police.detail)
-                        .foregroundStyle(Palette.encre)
-                        .lineLimit(1)
-                    Spacer(minLength: 0)
-                    if modele.spotAffiche != nil && !sessionEnCours {
-                        Image(systemName: feuilleSpotOuverte ? "chevron.down" : "chevron.up")
-                            .font(Police.taille(14, .bold))
-                            .foregroundStyle(Palette.encreDouce)
-                            .accessibilityHidden(true)
-                    }
                 }
-                .padding(.horizontal, Espace.l)
-                .frame(height: Gabarit.zoneTactile)
-                .background {
-                    Capsule()
-                        .fill(.regularMaterial)
-                        .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
-                        .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
-                }
-                .contentShape(Capsule())
             }
-            .buttonStyle(.plain)
-            .disabled(modele.spotAffiche == nil || sessionEnCours)
-            .accessibilityHint(feuilleSpotOuverte ? "Ranger Ton spot" : "Ouvrir Ton spot")
+            .padding(.horizontal, Espace.l)
+            .frame(minHeight: Gabarit.zoneTactile)
+            .background {
+                Capsule()
+                    .fill(.regularMaterial)
+                    .overlay(Capsule().strokeBorder(Palette.encre.opacity(0.12), lineWidth: 0.5))
+                    .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
+            }
+            .contentShape(Capsule())
         }
+        .buttonStyle(.plain)
+        .disabled(sessionEnCours)
+        .accessibilityHint(feuilleSpotOuverte ? "Ranger Mon spot" : "Ouvrir Mon spot")
+    }
+
+    /// Une pastille discrète quand iOS ne donne qu'une position approximative : elle propose la précision exacte.
+    private var boutonPrecision: some View {
+        Button(action: preciserLaPosition) {
+            Label("Position approximative", systemImage: "location.viewfinder")
+                .font(Police.detail)
+                .foregroundStyle(Palette.encre)
+                .padding(.horizontal, Espace.l)
+                .frame(minHeight: Gabarit.zoneTactile)
+                .background(Palette.surface, in: Capsule())
+                .contentShape(Capsule())
+        }
+        .buttonStyle(.plain)
+        .accessibilityHint("Active la position précise pour recentrer la carte au bon endroit")
     }
 
     /// Marine quand un filtre d'espèce est actif (le bouton le dit, sans bandeau en plus), encre sinon.
@@ -832,22 +786,21 @@ struct VueCarte: View {
         modele.filtre == nil ? Palette.encre : Palette.marine
     }
 
-    private func retourAuSpot() {
-        modele.modeChoixDuSpot = false
-        afficherCarte = false
-    }
-
-    // MARK: Boutons du bas (au-dessus de la barre d'onglets)
+    // MARK: Boutons du bas (au-dessus de la mention légale et de la feuille)
 
     private var bas: some View {
         VStack(spacing: 8) {
             if bulleSpot {
                 bulleDuSpot
             }
+            if modele.modeChoixDuSpot {
+                bulleChoixDuSpot
+            }
             bandeauSession
             HStack(alignment: .bottom, spacing: 12) {
                 Spacer(minLength: 0)
                 ColonneBoutonsCarte(
+                    positionAutorisee: position.estAutorisee,
                     teinteFiltre: couleurDuFiltre,
                     meteo: ouvrirMeteo,
                     autourDeMoi: autourDeMoi,
@@ -855,95 +808,77 @@ struct VueCarte: View {
                     reglages: ouvrirProfil)
                 .padding(.trailing, 8)
             }
-            if !sessionEnCours && !feuilleSpotMasquee && feuilleSpotOuverte {
-                feuilleSpotCarte
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
-            }
         }
         .padding(.horizontal, 8)
-        .padding(.bottom, 0)
     }
 
-    /// Maquette P06 A : la feuille « Ton spot » (poignée, titre et distance, 3 poissons + « + N »,
-    /// « Commencer une session », « Choisir un autre spot »), 8 pt de chaque bord, coins de 32 pt.
-    private var feuilleSpotCarte: some View {
-        VStack(spacing: 0) {
-            Capsule()
-                .fill(Palette.filet)
-                .frame(width: 36, height: 5)
-                .padding(.top, 7)
-                .padding(.bottom, 12)
-                .frame(maxWidth: .infinity)
-                .contentShape(Rectangle())
-                .onTapGesture { fermerFeuilleSpot() }
-                .accessibilityAddTraits(.isButton)
-                .accessibilityLabel("Fermer Ton spot")
-            titreFeuilleCarte
-            badgeFrequentationSpot
-            tuilesFeuilleCarte
-                .padding(.top, 14)
-                .padding(.bottom, legendeSpotPresente ? 8 : 18)
-            legendeSpot
-                .padding(.bottom, legendeSpotPresente ? 14 : 0)
-            boutonCommencerCarte
-            lienAutreSpotCarte
-                .padding(.top, 4)
+    // MARK: Mon spot
+
+    /// Ouvre ou range « Mon spot » ; ouvrir range la fiche d'un coin (une seule feuille à la fois).
+    private func basculerFeuilleSpot() {
+        withAnimation(.snappy(duration: 0.3)) {
+            if feuilleSpotOuverte {
+                feuilleSpotOuverte = false
+            } else {
+                modele.selection = nil
+                detentSpot = .moyen
+                feuilleSpotOuverte = true
+            }
         }
-        .padding(.horizontal, 20)
-        .padding(.bottom, 24)
-        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
-        .shadow(color: Palette.encre.opacity(0.16), radius: 15, y: -2)
-        // Glisser vers le bas range la feuille : la carte redevient seule.
-        .simultaneousGesture(DragGesture(minimumDistance: 20).onEnded { valeur in
-            if valeur.translation.height > 60 { fermerFeuilleSpot() }
-        })
     }
 
     private func fermerFeuilleSpot() {
-        withAnimation(.spring) { feuilleSpotOuverte = false }
+        feuilleSpotOuverte = false
     }
 
-    private var titreFeuilleCarte: some View {
-        HStack(alignment: .firstTextBaseline) {
-            Text("Ton spot")
-                .font(Police.taille(22, .heavy))
-                .foregroundStyle(Palette.encre)
-                .accessibilityAddTraits(.isHeader)
-            Spacer(minLength: Espace.s)
-            // Seulement quand la position de l'iPhone est connue : jamais de distance inventée.
-            if let distance = distanceAuSpot {
-                Text(distance)
-                    .font(Police.detail)
-                    .foregroundStyle(Palette.encreDouce)
-            }
+    private var feuilleMonSpot: some View {
+        MonSpotView(
+            detent: detentSpot,
+            apercu: apercu,
+            niveau: modele.niveauDuSpot,
+            distance: distanceAuSpot,
+            spotEauChoisi: modele.spotEauChoisi,
+            sansSpot: modele.spotAffiche == nil,
+            meteo: meteoDuSpot,
+            pechable: { modele.pechable($0) },
+            peutChangerDeSpot: modele.peutChangerDeSpot,
+            modeChoixDuSpot: modele.modeChoixDuSpot,
+            commencer: commencerDepuisMonSpot,
+            coinCalme: coinCalmeDuSpot,
+            reglesDuSpot: { reglesDuSpotOuvertes = true },
+            choisirUnAutreSpot: choisirUnAutreSpot,
+            annulerChoix: { modele.modeChoixDuSpot = false },
+            ouvrirPoissons: ouvrirPoissons,
+            fermer: { withAnimation(.snappy(duration: 0.3)) { fermerFeuilleSpot() } })
+    }
+
+    /// La météo du moment du spot : l'emplacement de L12 (rangée « maintenant »), vide tant que A ne l'a pas branché.
+    private var meteoDuSpot: AnyView {
+        guard let spot = modele.spotAffiche else { return AnyView(EmptyView()) }
+        return emplacementMaintenant(spot.centre)
+    }
+
+    private var commencerDepuisMonSpot: (() -> Void)? {
+        if sessionEnCours { return nil }
+        guard modele.spotAffiche != nil else { return nil }
+        return {
+            guard let spot = modele.spotAffiche else { return }
+            commencer(spot)
         }
     }
 
-    @ViewBuilder
-    private var tuilesFeuilleCarte: some View {
-        if let apercu {
-            let lignes: [LigneEspece] = lignesDeLaFeuille(apercu)
-            HStack(alignment: .top, spacing: 10) {
-                ForEach(lignes) { (ligne: LigneEspece) in
-                    tuilePoissonCarte(ligne)
-                }
-                if resteDeLaFeuille(apercu) > 0 {
-                    tuileResteCarte(resteDeLaFeuille(apercu))
-                }
-            }
-        } else {
-            // Relevés en cours de lecture : la place des tuiles reste, sans rien inventer.
-            Color.clear.frame(height: 52 + 6 + 14)
-        }
+    /// « Choisir un autre spot » : la feuille se range pour laisser voir la carte, la consigne flotte, le prochain toucher sur l'eau pose le cercle.
+    private func choisirUnAutreSpot() {
+        guard modele.peutChangerDeSpot else { return }
+        modele.modeChoixDuSpot = true
+        withAnimation(.snappy(duration: 0.3)) { fermerFeuilleSpot() }
     }
 
-    /// Calme, Normal ou Chargé sous le titre (en mots, gratuit) ; rien tant que le niveau n'est pas connu.
     @ViewBuilder
-    private var badgeFrequentationSpot: some View {
-        if let niveau = modele.niveauDuSpot {
-            FrequentationFicheView(niveau: niveau, onCoinCalme: coinCalmeDuSpot)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top, 8)
+    private var feuilleReglesDuSpot: some View {
+        if let spot = modele.spotAffiche {
+            ReglesDuSpotView(services: modele.services, spot: spot, lieu: apercu?.lieu ?? "Mon spot",
+                             fermer: { reglesDuSpotOuvertes = false })
         }
     }
 
@@ -959,153 +894,10 @@ struct VueCarte: View {
         return "\(nombre) km"
     }
 
-    private var legendeSpotPresente: Bool {
-        modele.spotEauChoisi != nil || apercu?.noteHonnete != nil
-    }
-
-    /// Sous les tuiles : le spot d'eau touché et sa source, puis la vérité sur les relevés (jamais un chiffre sans N ni année).
-    @ViewBuilder
-    private var legendeSpot: some View {
-        if legendeSpotPresente {
-            VStack(spacing: 4) {
-                if let eau = modele.spotEauChoisi {
-                    Label(eau.nom, systemImage: eau.origine.symboleSF)
-                        .font(Police.detail)
-                        .foregroundStyle(Palette.encre)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.center)
-                    Text("\(eau.origine.libelle) · source \(eau.origine.source)")
-                        .font(Police.legende)
-                        .foregroundStyle(Palette.encreDouce)
-                }
-                if let apercu, let note = apercu.noteHonnete {
-                    Text(note)
-                        .font(Police.detail)
-                        .foregroundStyle(Palette.encreDouce)
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
-                    if let ligne = apercu.vedette, let code = apercu.codeDepartement {
-                        let nom = modele.pechable(ligne.espece)?.nom ?? ligne.espece.id
-                        Text("\(nom) : présent dans le \(code), \(texteVedette(ligne))")
-                            .font(Police.legende)
-                            .foregroundStyle(Palette.encreDouce)
-                            .multilineTextAlignment(.center)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                }
-            }
-            .frame(maxWidth: .infinity)
-            .accessibilityElement(children: .combine)
-        }
-    }
-
-    /// Les trois premières espèces du spot : la plus pêchée, puis les suivantes.
-    private func lignesDeLaFeuille(_ apercu: ApercuSpot) -> [LigneEspece] {
-        var toutes: [LigneEspece] = []
-        if let vedette = apercu.vedette { toutes.append(vedette) }
-        toutes.append(contentsOf: apercu.autres)
-        return Array(toutes.prefix(3))
-    }
-
-    private func resteDeLaFeuille(_ apercu: ApercuSpot) -> Int {
-        let total: Int = (apercu.vedette == nil ? 0 : 1) + apercu.autres.count + apercu.reste
-        return max(0, total - 3)
-    }
-
-    private func tuilePoissonCarte(_ ligne: LigneEspece) -> some View {
-        let fiche = modele.pechable(ligne.espece)
-        let niveau: NiveauRarete = ligne.rarete?.niveau ?? .nonMesuree
-        return Button { ouvrirPoissons(ligne.espece) } label: {
-            VStack(spacing: 6) {
-                ImageEspeceCarte(nom: fiche?.image)
-                    .frame(maxWidth: .infinity)
-                    .padding(.horizontal, 7)
-                    .padding(.vertical, 6)
-                    .frame(height: 52)
-                    .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                marqueRareteCarte(niveau)
-            }
-            .frame(maxWidth: .infinity)
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-        .accessibilityElement(children: .ignore)
-        .accessibilityAddTraits(.isButton)
-        .accessibilityLabel(fiche?.nom ?? ligne.espece.id)
-        .accessibilityValue(niveau == .nonMesuree ? "" : niveau.libelle)
-    }
-
-    @ViewBuilder
-    private func marqueRareteCarte(_ niveau: NiveauRarete) -> some View {
-        if niveau == .nonMesuree {
-            Color.clear.frame(width: 14, height: 14)
-        } else {
-            Image(systemName: niveau.symboleSF)
-                .font(Police.taille(13, .heavy))
-                .foregroundStyle(CouleursCarte.rarete(niveau))
-                .frame(height: 14)
-        }
-    }
-
-    private func tuileResteCarte(_ reste: Int) -> some View {
-        Button { ouvrirPoissons(nil) } label: {
-            VStack(spacing: 6) {
-                Text("+ \(reste)")
-                    .font(Police.detail)
-                    .foregroundStyle(Palette.encreDouce)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 52)
-                    .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous).strokeBorder(Palette.filet, lineWidth: 1.5))
-                Color.clear.frame(width: 14, height: 14)
-            }
-            .frame(maxWidth: .infinity)
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-        .accessibilityLabel("Voir les \(reste) autres poissons du spot")
-    }
-
     /// Ouvre tous les poissons du spot, sur le poisson touché s'il y en a un.
     private func ouvrirPoissons(_ espece: Espece?) {
         especeOuverte = espece
         poissonsOuverts = true
-    }
-
-    private var boutonCommencerCarte: some View {
-        Button {
-            if let spot = modele.spotAffiche { commencer(spot) }
-        } label: {
-            Label("Commencer une session", systemImage: "play.fill")
-        }
-        .buttonStyle(.principal)
-        .disabled(modele.spotAffiche == nil)
-        .opacity(modele.spotAffiche == nil ? 0.5 : 1)
-    }
-
-    /// « Choisir un autre spot » ; pendant le choix, la consigne prend sa place (toucher l'annule).
-    @ViewBuilder
-    private var lienAutreSpotCarte: some View {
-        if modele.modeChoixDuSpot {
-            Button { modele.modeChoixDuSpot = false } label: {
-                Text("Touche la rivière pour poser ton cercle de 1 km")
-                    .font(Police.corps)
-                    .foregroundStyle(Palette.marine)
-                    .multilineTextAlignment(.center)
-                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
-                    .contentShape(Rectangle())
-            }
-            .buttonStyle(.plain)
-            .accessibilityHint("Touche pour annuler")
-        } else if modele.peutChangerDeSpot {
-            Button { modele.modeChoixDuSpot = true } label: {
-                Text("Choisir un autre spot")
-                    .font(Police.corps)
-                    .foregroundStyle(Palette.marine)
-                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
-                    .contentShape(Rectangle())
-            }
-            .buttonStyle(.plain)
-        }
     }
 }
 

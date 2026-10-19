@@ -1,43 +1,64 @@
-import MapKit
 import SwiftUI
 import Core
 
-/// La fiche d'un coin (E2), version épurée (P07 A) : le nom de l'eau, 3 à 5 poissons en images avec un point de rareté,
-/// la pastille « Ouvert aujourd'hui » (un toucher ouvre les règles, leurs sources et leurs citations),
-/// une seule ligne « N pêches OFB · année » et un seul bouton principal.
+/// La fiche d'un coin (E2), dans la feuille à trois hauteurs de la carte (moyen, grand, plein écran) :
+/// le nom de l'eau en titre avec la pastille de fréquentation devant (verte, orange, rouge ou grise, aucun mot),
+/// 3 poissons en images avec un point de rareté, la pastille « Ouvert aujourd'hui » (un toucher ouvre les règles,
+/// leurs sources et leurs citations), « Y aller » et un seul bouton principal.
+/// - moyen : le titre, les poissons, les boutons ;
+/// - grand : plus la ligne de relevé OFB et les vignettes de tes propres prises sur ce coin (jamais partagées) ;
+/// - plein écran : plus les règles du jour en entier.
 /// Gratuite et ouverte sans abonnement. Les deux emplacements (L12 : rangée « maintenant » ; L13 : 1er conseil)
 /// sont des fermetures que A remplit ; vides par défaut. L'emplacement « maintenant » vit derrière la pastille (feuille des règles),
 /// le conseil s'affiche sous les poissons quand on en touche un.
 struct FicheCoinView: View {
-    @Environment(\.dismiss) private var dismiss
     @State private var modele: ModeleFiche
     @State private var aideCategorie = false
     @State private var toutesLesRegles = false
     @State private var reglesOuvertes = false
     @State private var autresOuvertes = false
-    @State private var hauteurContenu: CGFloat = 0
     @State private var sourceOuverte = false
+    @State private var prisesDuCoin: [Prise] = []
+    let detent: DetentPanneau
     let emplacementMaintenant: (Coordonnee) -> AnyView
     let emplacementConseil: (Espece) -> AnyView
     /// « Commencer une session » : `nil` (pendant une session, ou sans spot) cache le bouton.
     let onCommencerSession: (() -> Void)?
-    /// Niveau du tronçon en mots (gratuit, sans cadenas). À brancher : compteur de fréquentation ; `nil` = rien d'affiché.
+    /// Niveau du tronçon (gratuit, sans cadenas) ; `nil` = pastille grise.
     let frequentation: NiveauFrequentation?
     /// « Coin plus calme » pour un tronçon chargé ; `nil` = pas de bouton. À brancher : station calme la plus proche.
     let onCoinCalme: (() -> Void)?
+    /// « Y aller » : la coordonnée de la STATION et son nom. La carte décide (Plans seul, ou feuille de choix). Jamais la position du pêcheur.
+    let onYAller: (Coordonnee, String) -> Void
+    /// « Poser mon spot ici » : `nil` quand le spot ne peut plus changer (après la 1re session) ou pendant une session.
+    let onPoserLeSpot: (() -> Void)?
+    /// Les prises du pêcheur et leurs photos (A les branche) ; vides par défaut.
+    let prisesDuPecheur: PrisesDuPecheurCarte
+    /// Ferme la feuille (la croix) : la carte remet la sélection à zéro.
+    let fermer: () -> Void
 
     init(services: ServicesCarte, selection: CoinSelectionne, pechables: [EspecePechable],
+         detent: DetentPanneau = .moyen,
          emplacementMaintenant: @escaping (Coordonnee) -> AnyView = { _ in AnyView(EmptyView()) },
          emplacementConseil: @escaping (Espece) -> AnyView = { _ in AnyView(EmptyView()) },
          onCommencerSession: (() -> Void)? = nil,
          frequentation: NiveauFrequentation? = nil,
-         onCoinCalme: (() -> Void)? = nil) {
+         onCoinCalme: (() -> Void)? = nil,
+         onYAller: @escaping (Coordonnee, String) -> Void = { _, _ in },
+         onPoserLeSpot: (() -> Void)? = nil,
+         prisesDuPecheur: PrisesDuPecheurCarte = .aucune,
+         fermer: @escaping () -> Void = {}) {
         _modele = State(initialValue: ModeleFiche(services: services, selection: selection, pechables: pechables))
+        self.detent = detent
         self.emplacementMaintenant = emplacementMaintenant
         self.emplacementConseil = emplacementConseil
         self.onCommencerSession = onCommencerSession
         self.frequentation = frequentation
         self.onCoinCalme = onCoinCalme
+        self.onYAller = onYAller
+        self.onPoserLeSpot = onPoserLeSpot
+        self.prisesDuPecheur = prisesDuPecheur
+        self.fermer = fermer
     }
 
     var body: some View {
@@ -50,31 +71,28 @@ struct FicheCoinView: View {
                     if let touchee = modele.especeTouchee {
                         emplacementConseil(touchee)
                     }
-                    // Un seul bouton principal : « Commencer une session » quand on peut, sinon « Y aller ».
-                    if let onCommencerSession {
-                        Button(action: onCommencerSession) {
-                            Label("Commencer une session", systemImage: "play.fill")
-                        }
-                        .buttonStyle(.principal)
-                        boutonYAller.buttonStyle(.secondaire)
-                    } else {
-                        boutonYAller.buttonStyle(.principal)
+                    boutons
+                    if detent >= .grand {
+                        releve(fiche)
+                        VignettesPrisesView(prises: prisesDuCoin, photo: prisesDuPecheur.photo, nomEspece: { modele.nom($0) })
                     }
-                    releve(fiche)
+                    if detent == .pleinEcran, modele.especeTouchee == nil {
+                        reglesDuJour(fiche)
+                            .padding(.top, Espace.s)
+                    }
                 }
             }
             .padding(.horizontal, 20)
-            .padding(.top, 20)
+            .padding(.top, 4)
             .padding(.bottom, 28)
-            .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { hauteurContenu = $0 }
         }
         .scrollIndicators(.hidden)
-        // Attente en page entière, bouchon au centre (jamais un petit bloc en haut de la feuille).
+        // Attente sur toute la feuille, bouchon au centre : la feuille a sa hauteur dès l'ouverture, rien ne saute à l'arrivée du contenu.
         .overlay {
             if modele.fiche == nil {
                 EcranChargement(texte: "Chargement du spot")
                     .overlay(alignment: .topTrailing) {
-                        BoutonRond(role: .fermer)
+                        croixFiche
                             .padding(.top, Espace.s)
                             .padding(.trailing, Espace.bord)
                     }
@@ -82,23 +100,49 @@ struct FicheCoinView: View {
         }
         .animation(.easeOut(duration: 0.25), value: modele.fiche == nil)
         .scrollBounceBehavior(.basedOnSize)
-        // Tant que la fiche charge : moyen. Ensuite la hauteur du contenu (comme la maquette), ou grand.
-        .presentationDetents(detentsFiche)
-        .presentationBackground(Palette.surface)
-        .presentationBackgroundInteraction(.enabled(upThrough: hauteurFiche))
         .task { await modele.charger() }
+        .task(id: modele.fiche?.lieuFlou) { await chargerPrises() }
         .sheet(isPresented: $reglesOuvertes) { feuilleRegles }
     }
 
-    private var hauteurFiche: PresentationDetent {
-        hauteurContenu > 0 ? .height(hauteurContenu + 40) : .medium
+    /// Mes prises faites sur ce coin : le lieu flou de la fiche ou « eau · département » de la station. Tout reste sur l'iPhone.
+    private func chargerPrises() async {
+        guard let fiche = modele.fiche else { return }
+        let lieux: [String] = [fiche.lieuFlou,
+                               AppariementPrises.lieuFlou(eau: modele.selection.eau, departement: modele.selection.departement)]
+            .compactMap { $0 }
+        let toutes = await prisesDuPecheur.lire()
+        prisesDuCoin = AppariementPrises.prises(toutes, lieuxFlous: lieux)
     }
 
-    private var detentsFiche: Set<PresentationDetent> {
-        modele.fiche == nil ? [.medium] : [hauteurFiche, .large]
+    /// Un seul bouton principal : « Commencer une session » quand on peut, sinon « Y aller ».
+    @ViewBuilder
+    private var boutons: some View {
+        if let onCommencerSession {
+            Button(action: onCommencerSession) {
+                Label("Commencer une session", systemImage: "play.fill")
+            }
+            .buttonStyle(.principal)
+            boutonYAller.buttonStyle(.secondaire)
+        } else {
+            boutonYAller.buttonStyle(.principal)
+        }
+        if let onPoserLeSpot {
+            Button(action: onPoserLeSpot) {
+                Label("Poser mon spot ici", systemImage: "mappin.and.ellipse")
+                    .font(Police.corps)
+                    .foregroundStyle(Palette.marine)
+                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+        }
+        if let frequentation {
+            FrequentationFicheView(niveau: frequentation, onCoinCalme: onCoinCalme)
+        }
     }
 
-    // MARK: En-tête : nom de l'eau, pastille d'ouverture
+    // MARK: En-tête : pastille de fréquentation, nom de l'eau, croix
 
     private func nomEau(_ fiche: FicheCalculee) -> String {
         (modele.choix.eau ?? fiche.lieu.eau)?.nom ?? modele.selection.eau ?? fiche.lieuFlou
@@ -112,11 +156,12 @@ struct FicheCoinView: View {
         return connues.first(where: { $0.estOuverte }) ?? connues.first
     }
 
-    /// Le nom de l'eau et la croix sur une ligne, la pastille dessous, puis le but de la fiche en une phrase :
-    /// rien ne se chevauche, la croix a sa place dans la ligne du titre.
+    /// La pastille de fréquentation devant le nom de l'eau, la croix à droite ; dessous l'ouverture du jour,
+    /// puis le but de la fiche en une phrase. Rien ne se chevauche, la croix a sa place dans la ligne du titre.
     private func entete(_ fiche: FicheCalculee) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .center, spacing: Espace.m) {
+                PastilleFrequentationView(niveau: frequentation)
                 Text(nomEau(fiche))
                     .font(Police.titre)
                     .foregroundStyle(Palette.encre)
@@ -124,11 +169,11 @@ struct FicheCoinView: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .accessibilityAddTraits(.isHeader)
                 Spacer(minLength: Espace.s)
-                pastilleOuverture(ouverture(fiche))
                 croixFiche
             }
-            if let frequentation {
-                FrequentationFicheView(niveau: frequentation, onCoinCalme: onCoinCalme)
+            HStack(spacing: Espace.s) {
+                pastilleOuverture(ouverture(fiche))
+                if !modele.selection.recalee { marqueZoneApproximative }
             }
             // Demandé par Adem (16 oct. 2h24) : P07 a un but clair. Ne pas retirer.
             Text("Ce que tu peux pêcher ici aujourd’hui")
@@ -139,9 +184,18 @@ struct FicheCoinView: View {
         }
     }
 
+    /// Une station `recalee == false` n'est pas posée sur l'eau : son point est arrondi à 1 km. Une icône et un mot court le disent.
+    private var marqueZoneApproximative: some View {
+        Label("Zone", systemImage: "circle.dashed")
+            .font(Police.detail)
+            .foregroundStyle(Palette.encreDouce)
+            .frame(minHeight: 34)
+            .accessibilityLabel("Position approximative, à environ un kilomètre")
+    }
+
     /// P07 A : croix de 44 pt, fond encre à 6 %, trait de 18 pt, dans la ligne du titre.
     private var croixFiche: some View {
-        Button { dismiss() } label: {
+        Button(action: fermer) {
             Image(systemName: "xmark")
                 .font(Police.taille(18, .heavy))
                 .foregroundStyle(Palette.encre)
@@ -370,7 +424,7 @@ struct FicheCoinView: View {
         if let taille, !taille.sources.isEmpty { avecSources = taille } else { avecSources = lignes.first(where: { !$0.sources.isEmpty }) }
         return VStack(alignment: .leading, spacing: 0) {
             HStack {
-                BoutonRond(role: .retour, rendu: .simple) { reglesOuvertes = false }
+                BoutonRond(role: .fermer, rendu: .simple) { reglesOuvertes = false }
                     .padding(.leading, -8)
                 Spacer(minLength: 0)
             }
@@ -649,23 +703,14 @@ struct FicheCoinView: View {
     }
 
     private var boutonYAller: some View {
-        Button(action: ouvrirDansPlans) {
+        Button {
+            let nom: String = modele.fiche.map { nomEau($0) } ?? modele.selection.eau ?? "Coin de pêche"
+            // La coordonnée de la station, jamais celle du pêcheur.
+            onYAller(modele.selection.coordonnee, nom)
+        } label: {
             Label("Y aller", systemImage: "arrow.triangle.turn.up.right.diamond.fill")
         }
-        .accessibilityHint("Ouvre l'itinéraire en voiture dans Plans")
-    }
-
-    /// Plans d'Apple, itinéraire en voiture jusqu'à ce coin (la station OFB, jamais la position du pêcheur).
-    /// Rien ne part tant que le pêcheur n'a pas touché « Y aller ».
-    private func ouvrirDansPlans() {
-        let c = modele.selection.coordonnee
-        let item = MKMapItem(location: CLLocation(latitude: c.latitude, longitude: c.longitude), address: nil)
-        if let fiche = modele.fiche {
-            item.name = nomEau(fiche)
-        } else {
-            item.name = modele.selection.eau ?? "Coin de pêche"
-        }
-        item.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
+        .accessibilityHint("Ouvre l'itinéraire en voiture dans l'application de ton choix")
     }
 }
 

@@ -72,11 +72,6 @@ nonisolated struct CoucheEau: Sendable, Equatable {
   var spots: [String: SpotEau] = [:]
 }
 
-extension Regroupeur {
-  /// Au-delà, les spots d'eau se regroupent en cases (comme les stations).
-  nonisolated static let maximumEau = 90
-}
-
 @concurrent nonisolated func calculerCoucheEau(spots: [SpotEau], region: ZoneCarte) async
   -> CoucheEau
 {
@@ -84,6 +79,8 @@ extension Regroupeur {
   let points = spots.compactMap { s -> PointCarte? in
     region.contient(s.coordonnee) ? PointCarte(id: s.id, coordonnee: s.coordonnee) : nil
   }
+  // 20 éléments d'eau au plus, et seulement au niveau de zoom « proche » : 40 stations + 20 eau = 60 pour tout l'écran.
+  guard Regroupeur.eauVisible(pour: region) else { return CoucheEau() }
   let elements = Regroupeur.elements(points: points, region: region, maximum: Regroupeur.maximumEau)
   var ids: Set<String> = []
   for e in elements {
