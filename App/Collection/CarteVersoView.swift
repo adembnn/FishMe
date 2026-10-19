@@ -8,6 +8,8 @@ import UIKit
 struct CarteVersoView: View {
     let infos: InfosCarte
     let photo: Data?
+    /// Image déjà décodée par l'appelant (révélation) : évite de décoder le JPEG dans le body. Sinon, repli : décodage depuis `photo`.
+    var imageDecodee: UIImage? = nil
     /// Gardé pour les appelants ; « comment la pêcher » s'affiche dans `FaitsPrise`.
     var emplacements: EmplacementsExternes = .vides
 
@@ -28,7 +30,7 @@ struct CarteVersoView: View {
 
     @ViewBuilder
     private func fond(_ taille: CGSize) -> some View {
-        if let photo, let image = UIImage(data: photo) {
+        if let image = imageDecodee ?? photo.flatMap({ UIImage(data: $0) }) {
             PhotoVersoEntiere(image: image)
         } else {
             ZStack {
@@ -61,10 +63,11 @@ struct FaitsPrise: View {
                         .font(Police.corps)
                         .multilineTextAlignment(.center)
                 } else {
-                    if let taille = Formats.taille(infos.prise) {
-                        ligne(
-                            "ruler",
-                            [taille, Formats.poids(infos.poids)].compactMap { $0 }.joined(separator: " · "))
+                    if let valeur = Formats.tailleValeur(infos.prise) {
+                        ligne("ruler", "\(LibellesCarte.libelleTaille(estimee: infos.prise.mesure == .estimee)) : \(valeur)")
+                    }
+                    if let valeur = Formats.poidsValeur(infos.poids) {
+                        ligne("scalemass", "\(LibellesCarte.poidsEstime) : \(valeur)")
                     }
                     // À brancher : l'appât ou le leurre de la prise (« Relâché · leurre souple ») ; la prise ne le garde pas.
                     ligne("water.waves", infos.prise.gardee ? "Gardé" : "Relâché")
