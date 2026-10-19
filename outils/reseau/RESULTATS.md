@@ -46,6 +46,20 @@ App fermée de force :
 (idem, ou « rien reçu en N minutes »)
 ```
 
+## 4c. Latence sur zone partagée (2 comptes iCloud)
+Abonnements sur la base partagée (lignes « ACCEPTÉ » / « REFUSÉ » de 4c-B) :
+```
+(colle ici)
+```
+Propriétaire vers invité, app ouverte, arrière-plan, fermée de force (20 lignes « ÉCRIT 4c » et « REÇU 4c » chacune) :
+```
+(colle ici, ou « rien reçu en N minutes »)
+```
+Invité vers propriétaire (idem) :
+```
+(colle ici)
+```
+
 ## Compteur APRÈS (date, heure, capture, 15 à 30 min après la fin)
 - Stockage des assets : à mesurer
 - Stockage de la base de données : à mesurer

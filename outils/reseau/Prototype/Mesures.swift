@@ -9,9 +9,12 @@ enum ErreurProto: Error { case exportImpossible, aucunFichier }
 
 /// Toutes les mesures. Écrit dans la base PUBLIQUE du conteneur d'essai (jamais celui de la vraie app).
 actor Mesures {
-    private let base = CKContainer.default().publicCloudDatabase   // premier conteneur de la capacité iCloud
+    static let partage = Mesures()   // une seule instance : l'écran et le récepteur de notifications la partagent
+    var jetons4c: [String: CKServerChangeToken] = [:]   // jeton de changements par base (test 4c)
+    var vus4c: Set<String> = []                         // enregistrements 4c déjà comptés (doublons)
+    let base = CKContainer.default().publicCloudDatabase   // premier conteneur de la capacité iCloud
     private let dossier = FileManager.default.temporaryDirectory.appendingPathComponent("r2proto", isDirectory: true)
-    private let marqueur = "R2-proto"
+    let marqueur = "R2-proto"
     private let departements = ["94", "94", "94", "75", "77", "94", "92", "93", "94", "91"]
 
     init() { try? FileManager.default.createDirectory(at: dossier, withIntermediateDirectories: true) }
@@ -143,49 +146,5 @@ actor Mesures {
         let t0 = Date()
         let (res, _) = try await base.records(matching: q, resultsLimit: 400)
         journal("LIKES du fil (1 requête IN) : \(res.count) lus en \(String(format: "%.2f", Date().timeIntervalSince(t0))) s")
-    }
-
-    // MARK: 4. Latence : 20 abonnements
-
-    func creerAbonnements() async throws {
-        for k in 0..<20 {
-            let s = CKQuerySubscription(recordType: "Publication", predicate: NSPredicate(format: "departement == %@", "lat-\(k)"),
-                                        subscriptionID: "r2-lat-\(k)", options: [.firesOnRecordCreation])
-            let info = CKSubscription.NotificationInfo()
-            info.shouldSendContentAvailable = true      // notification silencieuse
-            info.desiredKeys = ["ecritA"]
-            s.notificationInfo = info
-            _ = try await base.save(s)
-        }
-    }
-
-    /// Mode ÉCRIVAIN : un enregistrement toutes les 8 s, un par abonnement. Le RÉCEPTEUR est un autre appareil (CloudKit ne notifie en général pas l'appareil qui écrit ⚠).
-    func ecrireLatence(journal: @Sendable (String) -> Void) async throws {
-        let f = DateFormatter(); f.dateFormat = "HH:mm:ss.SSS"
-        for k in 0..<20 {
-            let r = CKRecord(recordType: "Publication")
-            let maintenant = Date()
-            r["departement"] = "lat-\(k)"; r["ecritA"] = maintenant.timeIntervalSince1970; r["creeLe"] = maintenant
-            r["marqueur"] = marqueur; r["genre"] = "essai"; r["auteurNom"] = "proto-lat"
-            _ = try await base.save(r)
-            journal("ÉCRIT #\(k) à \(f.string(from: maintenant))")
-            try await Task.sleep(nanoseconds: 8_000_000_000)
-        }
-    }
-
-    // MARK: 5. Nettoyage
-
-    func nettoyer(journal: @Sendable (String) -> Void) async throws {
-        for type in ["Publication", "Like"] {
-            while true {
-                let q = CKQuery(recordType: type, predicate: NSPredicate(format: "marqueur == %@", marqueur))
-                let (res, _) = try await base.records(matching: q, desiredKeys: [], resultsLimit: 300)
-                let ids = res.map { $0.0 }
-                if ids.isEmpty { break }
-                _ = try await base.modifyRecords(saving: [], deleting: ids)
-                journal("supprimés (\(type)) : \(ids.count)")
-            }
-        }
-        journal("NETTOYAGE FINI. Recontrôle le tableau de bord après quelques minutes (les compteurs bougent avec retard).")
     }
 }
