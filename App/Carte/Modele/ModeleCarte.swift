@@ -149,7 +149,8 @@ final class ModeleCarte {
     func recevoir(spotFixe nouveau: Spot?) {
         let avant = spotFixe
         spotFixe = nouveau
-        if let nouveau, avant == nil {
+        // La carte obéit au pêcheur, pas au spot : si elle est déjà posée (sur lui, sur sa zone ou sur ce qu'il regarde), elle ne bouge pas.
+        if let nouveau, avant == nil, !cameraPlacee {
             centrer(ZoneCarte(centre: nouveau.centre, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
         }
     }
