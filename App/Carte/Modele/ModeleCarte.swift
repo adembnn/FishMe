@@ -41,6 +41,24 @@ final class ModeleCarte {
     var sessionsTerminees = 0
     private(set) var spotLocal: Spot?
     var modeChoixDuSpot = false
+    /// Vrai dès que le pêcheur a posé ou adopté son cercle lui-même : aucune proposition ne le remplace plus (ni position, ni zone).
+    private(set) var spotChoisiAMain = false
+
+    // Deux états séparés (piège de la fiche L17) : la caméra (où la carte regarde) et le spot (où le cercle est posé).
+    // Aucun mouvement de caméra, y compris le bouton « Autour de moi », ne touche au spot.
+    /// La dernière position connue de l'iPhone (jamais envoyée nulle part).
+    private(set) var positionPecheur: Coordonnee?
+    /// « Autour de moi » vient d'être touché : le prochain point (plus frais) recentre la caméra, une seule fois, dans les 8 secondes.
+    private(set) var recentrageJusqua = Date.distantPast
+    var recentrageEnAttente: Bool { Date() < recentrageJusqua }
+    /// Le pêcheur a choisi sa zone (département, commune) dans cette session de l'app : la position ne reprend plus la main.
+    @ObservationIgnored private var choixManuelCetteSession = false
+    /// Le pêcheur a bougé la carte lui-même avant la première position : la carte ne lui est pas retirée.
+    @ObservationIgnored private var pecheurABougeLaCarte = false
+    /// La première position a déjà posé la carte sur le pêcheur : les suivantes ne la déplacent plus.
+    @ObservationIgnored private var ouvertureSurPecheurFaite = false
+    /// La dernière vue posée par le code : un « fin de mouvement » proche de elle ne vient pas du doigt.
+    @ObservationIgnored private var derniereCibleProgrammee: ZoneCarte?
 
     var selection: CoinSelectionne?
 
@@ -123,7 +141,7 @@ final class ModeleCarte {
         } else if let zone = zoneGardee, !services.geo.departement(de: zone).estInconnu {
             depart = .zoneChoisie(zone)
             centrer(ZoneCarte(centre: zone, spanLatitude: Self.etendueZone, spanLongitude: Self.etendueZone))
-            proposerSpot(pres: zone)
+            proposerSpot(pres: zone, remplacer: false)
         }
     }
 
@@ -142,8 +160,13 @@ final class ModeleCarte {
     }
 
     /// Aucune position ne vient (refus ou échec) et rien n'a posé la carte : le pêcheur choisit son département ou sa commune.
+    /// Un spot fixé pose la carte sur le spot et ne demande rien.
     func positionIndisponible() {
         guard !cameraPlacee, depart == .enAttente else { return }
+        if let spot = spotFixe {
+            centrer(ZoneCarte(centre: spot.centre, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
+            return
+        }
         depart = .choixDeZone
         afficherChoixDeZone = true
     }
@@ -171,22 +194,42 @@ final class ModeleCarte {
         return await Task.detached { especes.especesPechables() }.value
     }
 
-    /// Une position arrive (ou n'arrive pas) : on centre la carte, on propose le spot, ou on tombe sur Paris hors de France.
+    /// Vrai quand une position qui arrive peut poser la carte sur le pêcheur : c'est la toute première, le pêcheur n'a ni bougé la carte
+    /// ni choisi de zone dans cette session. Une zone gardée d'un lancement précédent ou un spot fixé ailleurs ne l'empêchent pas :
+    /// la carte s'ouvre sur le pêcheur et le cercle du spot reste dessiné où il est.
+    var positionPeutPoserLaCarte: Bool {
+        !ouvertureSurPecheurFaite && !choixManuelCetteSession && !pecheurABougeLaCarte
+    }
+
+    /// Une position arrive (ou n'arrive pas). La première pose la carte sur le pêcheur, même quand un spot est fixé ailleurs ;
+    /// les suivantes ne bougent plus rien (c'est le rôle du bouton « Autour de moi »). Aucune ne déplace jamais le spot posé.
     func appliquer(position: Coordonnee?, refusee: Bool) {
         if let position {
+            positionPecheur = position
+            if recentrageEnAttente {
+                recentrageJusqua = .distantPast
+                centrerSurLePecheur(position)
+                return
+            }
+            guard positionPeutPoserLaCarte else {
+                // Carte laissée où elle est ; on garde seulement le point de référence à jour.
+                if case .surLePecheur = depart { depart = .surLePecheur(position) }
+                return
+            }
+            ouvertureSurPecheurFaite = true
             if services.geo.departement(de: position).estInconnu {
+                // Hors de France avec un spot fixé : la carte reste sur le spot, rien n'est inventé.
+                if spotFixe != nil { return }
                 depart = .horsDeFrance
                 message = "Pas de relevé OFB près de toi : voici Paris et l'Île-de-France."
                 centrer(.parisIleDeFrance)
-                proposerSpot(pres: ZoneCarte.parisIleDeFrance.centre)
+                proposerSpot(pres: ZoneCarte.parisIleDeFrance.centre, remplacer: true)
             } else {
                 depart = .surLePecheur(position)
                 message = nil
-                // Pendant une session (spot fixé), la carte reste sur le spot : la position ne la déplace pas.
-                if spotFixe == nil {
-                    centrer(ZoneCarte(centre: position, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
-                }
-                proposerSpot(pres: position)
+                centrer(ZoneCarte(centre: position, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
+                // Une proposition de zone est remplacée par une proposition près du pêcheur ; un spot posé à la main ne l'est jamais.
+                proposerSpot(pres: position, remplacer: true)
             }
         } else if refusee {
             switch depart {
@@ -200,35 +243,51 @@ final class ModeleCarte {
         }
     }
 
-    /// « Autour de moi » : la carte va sur la position de l'iPhone, même quand un spot est fixé ailleurs.
-    func centrerSurMaPosition(_ position: Coordonnee) {
+    /// « Autour de moi » : la caméra va sur la position de l'iPhone, même quand un spot est fixé ailleurs.
+    /// Elle ne touche ni au spot, ni à son cercle, ni au départ choisi. Si la position n'est pas encore connue, le premier point
+    /// qui arrive dans les 8 secondes recentre la caméra ; si elle l'est, la caméra y va tout de suite et le point plus frais
+    /// (s'il arrive) la corrige une fois.
+    func demanderRecentrage() {
         rechercheEnLigneAutorisee = true
-        appliquer(position: position, refusee: false)
-        if case .surLePecheur = depart {
+        recentrageJusqua = Date().addingTimeInterval(8)
+        if let connue = positionPecheur { centrerSurLePecheur(connue) }
+    }
+
+    private func centrerSurLePecheur(_ position: Coordonnee) {
+        pecheurABougeLaCarte = true
+        if services.geo.departement(de: position).estInconnu {
+            message = "Pas de relevé OFB près de toi : voici Paris et l'Île-de-France."
+            centrer(.parisIleDeFrance)
+        } else {
+            message = nil
             centrer(ZoneCarte(centre: position, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
         }
     }
 
-    /// Le pêcheur a posé sa zone à la main (sans GPS) : département ou commune.
+    /// Le pêcheur a posé sa zone à la main (sans GPS) : département ou commune. Un 2e choix, d'un toucher ou d'une recherche,
+    /// recentre la carte sur ce 2e choix : la zone choisie ne se bloque jamais sur la première.
     func choisirZone(_ c: Coordonnee) {
         rechercheEnLigneAutorisee = true
+        choixManuelCetteSession = true
+        recentrageJusqua = .distantPast
         if services.geo.departement(de: c).estInconnu {
             depart = .horsDeFrance
             message = "Pas de relevé OFB près de toi : voici Paris et l'Île-de-France."
             centrer(.parisIleDeFrance)
-            proposerSpot(pres: ZoneCarte.parisIleDeFrance.centre)
+            proposerSpot(pres: ZoneCarte.parisIleDeFrance.centre, remplacer: true)
         } else {
             depart = .zoneChoisie(c)
             message = nil
             reglages?.set([c.latitude, c.longitude], forKey: Self.cleZone)
             centrer(ZoneCarte(centre: c, spanLatitude: Self.etendueZone, spanLongitude: Self.etendueZone))
-            proposerSpot(pres: c)
+            proposerSpot(pres: c, remplacer: true)
         }
         afficherChoixDeZone = false
     }
 
     func centrer(_ region: ZoneCarte) {
         marquerDeplacementProgramme()
+        derniereCibleProgrammee = region
         cameraPlacee = true
         regionVisible = region
         camera = .region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: region.centre.latitude, longitude: region.centre.longitude),
@@ -240,8 +299,11 @@ final class ModeleCarte {
     // MARK: Spot gratuit
 
     /// Le cercle de 1 km que propose `Core`, près d'une station aux relevés récents. L'écran ne choisit rien lui-même.
-    private func proposerSpot(pres c: Coordonnee) {
-        guard spotFixe == nil else { return }
+    /// `remplacer` faux : un spot déjà proposé reste (le recentrage de la caméra ne le déplace jamais). Un spot posé à la main
+    /// ou fixé par une session n'est jamais remplacé.
+    private func proposerSpot(pres c: Coordonnee, remplacer: Bool) {
+        guard spotFixe == nil, !spotChoisiAMain else { return }
+        if !remplacer, spotLocal != nil { return }
         let session = services.session
         let niveau = ReglagesFrequentation.niveauPecheur()
         let graine = ReglagesFrequentation.graine()
@@ -253,6 +315,8 @@ final class ModeleCarte {
                 }
                 return session.spotPropose(coordonnee: c, date: Date())
             }.value
+            // Le pêcheur a pu poser son cercle pendant le calcul : sa main l'emporte.
+            guard spotFixe == nil, !spotChoisiAMain else { return }
             spotLocal = spot
             spotEauChoisi = nil
             if spot == nil, message == nil { message = "Aucun relevé OFB à proximité." }
@@ -269,6 +333,7 @@ final class ModeleCarte {
         }
         let spot = Spot(centre: c, rayonM: 1000, departement: departement)
         spotLocal = spot
+        spotChoisiAMain = true
         spotEauChoisi = nil
         modeChoixDuSpot = false
         return spot
@@ -321,6 +386,7 @@ final class ModeleCarte {
         Task {
             guard let calme = await chercherCoinCalme(depuis: spot) else { return }
             spotLocal = calme
+            spotChoisiAMain = true
             selection = nil
             modeChoixDuSpot = false
             centrer(ZoneCarte(centre: calme.centre, spanLatitude: Self.etendueOuverture, spanLongitude: Self.etendueOuverture))
@@ -368,6 +434,10 @@ final class ModeleCarte {
         regionVisible = region
         let premiere = premiereCameraAttendue
         premiereCameraAttendue = false
+        // Une fin de mouvement hors de la fenêtre du code et loin de la dernière vue posée par le code vient du doigt du pêcheur.
+        if !premiere, Date() >= finDeplacementProgramme, !(derniereCibleProgrammee.map { region.estProche(de: $0) } ?? false) {
+            pecheurABougeLaCarte = true
+        }
         // L'eau suit chaque mouvement : le calcul est local et court. La recherche en ligne attend un vrai geste du pêcheur.
         recalculerEau(region, delai: .milliseconds(150))
         declencherRechercheEnLigne(region, affichageInitial: premiere)
@@ -406,11 +476,13 @@ final class ModeleCarte {
         if filtre != nil {
             points = coinsFiltres.map { PointCarte(id: $0.codeStation, coordonnee: $0.coordonnee) }
         } else {
-            points = stations.map { PointCarte(id: $0.code, coordonnee: $0.coordonnee) }
+            points = stations.map(\.point)
         }
+        // 60 éléments au plus pour tout l'écran : 40 aux stations quand l'eau est aussi dessinée (niveau « proche »).
+        let maximum = Regroupeur.maximumStations(pour: region)
         tacheElements?.cancel()
         tacheElements = Task {
-            let calcules = await calculerElements(points: points, region: region)
+            let calcules = await calculerElements(points: points, region: region, maximum: maximum)
             if Task.isCancelled { return }
             elements = calcules
         }
@@ -428,7 +500,8 @@ final class ModeleCarte {
             if let coin = coinsFiltres.first(where: { $0.codeStation == p.id }), filtre != nil {
                 selection = CoinSelectionne(id: coin.codeStation, coordonnee: coin.coordonnee, eau: coin.eau, departement: coin.departement, coin: coin)
             } else if let station = stations.first(where: { $0.code == p.id }) {
-                selection = CoinSelectionne(id: station.code, coordonnee: station.coordonnee, eau: station.eau, departement: station.departement, coin: nil)
+                selection = CoinSelectionne(id: station.code, coordonnee: station.coordonnee, eau: station.eau, departement: station.departement,
+                                            coin: nil, recalee: station.recalee)
             }
         }
     }
