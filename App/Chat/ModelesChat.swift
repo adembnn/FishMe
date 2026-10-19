@@ -1,0 +1,65 @@
+import Foundation
+
+// Types du chat (lot L24). Ce dossier n'importe que Foundation, SwiftUI et lui-même.
+// Tout est `nonisolated` : le projet est en MainActor par défaut, et ces types voyagent entre acteurs.
+
+nonisolated enum TypeConversation: String, Codable, Sendable {
+    case ami
+    case club
+}
+
+/// Une conversation. Pour un ami, `cible` est l'identifiant CloudKit de l'ami (le même que `Ami.id` du lot Amis) ;
+/// pour un club, l'identifiant du club.
+nonisolated struct ConversationID: Hashable, Codable, Sendable, Identifiable {
+    var type: TypeConversation
+    var cible: String
+
+    var id: String { "\(type.rawValue):\(cible)" }
+
+    static func ami(_ identifiantCloudKit: String) -> ConversationID { ConversationID(type: .ami, cible: identifiantCloudKit) }
+    static func club(_ identifiant: String) -> ConversationID { ConversationID(type: .club, cible: identifiant) }
+}
+
+/// Où en est un message que j'ai écrit. Jamais « lu » : CloudKit ne sait pas si l'autre a lu.
+nonisolated enum EtatMessage: String, Codable, Sendable {
+    /// Arrivé sur iCloud.
+    case envoye
+    /// Écrit, pas encore parti (file d'envoi, tentative en cours ou à venir).
+    case enAttente
+    /// Une tentative a échoué (hors ligne, iCloud indisponible) : il repartira au retour du réseau, ou au toucher de « Renvoyer ».
+    case pasParti
+}
+
+nonisolated struct MessageChat: Codable, Hashable, Identifiable, Sendable {
+    /// Aussi le `recordName` CloudKit : renvoyer deux fois le même message l'écrase au lieu de le doubler.
+    var id: UUID
+    var conversation: ConversationID
+    /// Identifiant de l'auteur (celui de `InterlocuteurChat.id`). Sert à bloquer et à signaler.
+    var auteurId: String
+    /// Surnom affiché au moment de l'écriture.
+    var surnom: String
+    var texte: String
+    var date: Date
+    var etat: EtatMessage = .envoye
+}
+
+/// Une ligne de la liste des conversations.
+nonisolated struct ResumeConversation: Identifiable, Hashable, Sendable {
+    var conversation: ConversationID
+    var titre: String
+    var dernier: MessageChat?
+    var nonLu: Bool
+    var ferme: Bool = false
+
+    var id: String { conversation.id }
+}
+
+nonisolated enum ErreurChat: Error, Equatable, Sendable {
+    case iCloudIndisponible
+    /// Pas de réseau, ou service occupé : le message reste dans la file.
+    case reseau
+    case iCloudPlein
+    /// Le service ne trouve pas la conversation (l'ami n'a pas encore ouvert la sienne, club inconnu).
+    case introuvable
+    case autre
+}
