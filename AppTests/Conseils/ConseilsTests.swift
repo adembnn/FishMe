@@ -116,4 +116,29 @@ struct ConseilsTests {
         #expect(p.estDeclaree)
         #expect(p.cheminPhoto == nil)
     }
+
+    // MARK: Fin du tunnel (« pas encore de carte »)
+
+    private func pechables(_ ids: [String]) -> [EspecePechable] {
+        ids.map { EspecePechable(espece: Espece(id: $0), nom: $0, nomLatin: "", image: $0) }
+    }
+
+    @Test func carteADebloquerEstLaPremiereDeRareteCommun() {
+        let liste = pechables(["silure-glane", "gardon", "brochet"])
+        let rarete: (EspecePechable) -> String? = { $0.espece.id == "silure-glane" ? "Rare" : "Commun" }
+        #expect(FinDuTunnel.aDebloquer(especes: liste, libelleRarete: rarete)?.espece.id == "gardon")
+    }
+
+    @Test func carteADebloquerSansRareteConnueEstLaPremiere() {
+        let liste = pechables(["silure-glane", "gardon"])
+        #expect(FinDuTunnel.aDebloquer(especes: liste, libelleRarete: { _ in nil })?.espece.id == "silure-glane")
+        #expect(FinDuTunnel.aDebloquer(especes: liste, libelleRarete: { _ in "Rare" })?.espece.id == "silure-glane")
+        #expect(FinDuTunnel.aDebloquer(especes: [], libelleRarete: { _ in "Commun" }) == nil)
+    }
+
+    @Test func compteurDeLaZoneDitZeroSurNDansLeDepartement() {
+        #expect(FinDuTunnel.compteur(declarees: 0, total: 12, departement: "94") == "0 sur 12 dans le 94")
+        #expect(FinDuTunnel.compteur(declarees: 0, total: 12, departement: nil) == "0 sur 12 dans ta zone")
+        #expect(FinDuTunnel.compteur(declarees: 0, total: 9, departement: "  ") == "0 sur 9 dans ta zone")
+    }
 }
