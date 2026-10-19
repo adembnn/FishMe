@@ -186,7 +186,8 @@ final class GestionClubs {
         } catch {
             horsLigne = true
             message = traduire(error)
-            restaurerCache()
+            // Le fichier ne sert qu'à l'écran vide d'un lancement sans réseau : sinon l'état en mémoire, plus récent, reste.
+            if clubs.isEmpty { restaurerCache() }
         }
     }
 
@@ -297,15 +298,15 @@ final class GestionClubs {
             guard let club = try await service.club(id: clubID) else { message = .introuvable; return false }
             let liste = try await service.membres(deClub: clubID)
             if let refus = RegleAdhesion.verifier(club: club, membres: liste, profil: moi) {
-                message = Self.message(pour: refus)
+                message = Self.messageDe(refus)
                 return false
             }
             let adhesion = try await service.rejoindre(club: clubID, profil: moi, le: maintenant())
             inserer(club)
             clubsRecents[clubID] = maintenant()
-            var liste = try await service.membres(deClub: clubID)
-            if !liste.contains(where: { $0.profil == moi }) { liste.append(adhesion) }
-            membres[clubID] = liste
+            var apres = try await service.membres(deClub: clubID)
+            if !apres.contains(where: { $0.profil == moi }) { apres.append(adhesion) }
+            membres[clubID] = apres
             cartes[clubID] = try await lireCartes(clubID)
             await completerProfils()
             enregistrerCache()
@@ -456,7 +457,7 @@ final class GestionClubs {
         (erreur as? ErreurClub) ?? ServiceClubsCloudKit.traduire(erreur)
     }
 
-    static func message(pour erreur: ErreurClub) -> Message {
+    static func messageDe(_ erreur: ErreurClub) -> Message {
         switch erreur {
         case .reseau: .horsLigne
         case .iCloudIndisponible: .iCloudIndisponible
@@ -472,5 +473,5 @@ final class GestionClubs {
         }
     }
 
-    private func traduire(_ erreur: Error) -> Message { Self.message(pour: Self.erreur(depuis: erreur)) }
+    private func traduire(_ erreur: Error) -> Message { Self.messageDe(Self.erreur(depuis: erreur)) }
 }

@@ -85,7 +85,7 @@ struct RejoindreClubView: View {
         Image(systemName: erreur == .iCloudIndisponible ? "icloud.slash" : "person.crop.circle.badge.questionmark")
             .font(Police.taille(40)).foregroundStyle(Palette.marine).padding(.top, Espace.xl)
             .accessibilityHidden(true)
-        Text(GestionClubs.message(pour: erreur).texte)
+        Text(GestionClubs.messageDe(erreur).texte)
             .font(Police.corps).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
         if erreur == .iCloudIndisponible {
             Button("Ouvrir les réglages") {

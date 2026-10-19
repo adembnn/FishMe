@@ -110,7 +110,8 @@ nonisolated enum FabriqueRecordsClub {
               let club = record["club"] as? String, let profil = record["profil"] as? String,
               let role = (record["role"] as? String).flatMap(RoleMembre.init(rawValue:)),
               let depuis = record["depuis"] as? Date else { return nil }
-        return Membre(id: record.recordID.recordName, club: club, profil: profil, role: role, depuis: depuis)
+        return Membre(id: record.recordID.recordName, club: club, profil: profil, role: role, depuis: depuis,
+                      idCloudKit: record.creatorUserRecordID?.recordName)
     }
 
     /// `nil` si ce n'est pas une carte de club (une publication ordinaire du fil, sans le préfixe `pc-`).

@@ -36,6 +36,10 @@ nonisolated struct Membre: Sendable, Equatable, Hashable, Identifiable, Codable 
     var profil: String
     var role: RoleMembre
     var depuis: Date
+    /// Identifiant CloudKit du compte du membre, lu dans le champ système `creatorUserRecordID` de son `Membre` (jamais écrit par nous).
+    /// Le chat de club (L24) en a besoin pour admettre ce membre dans la zone partagée. `nil` hors CloudKit (faux service, cache ancien).
+    /// ⚠ À vérifier sur le Mac : que ce champ soit renseigné sur un enregistrement de la base publique lu par un autre compte.
+    var idCloudKit: String? = nil
 
     static func identifiant(club: String, profil: String) -> String { "m-\(club)-\(profil)" }
 }

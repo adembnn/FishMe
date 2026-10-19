@@ -75,6 +75,6 @@ struct MigrationClubsView: View {
     }
 
     private func texte(pour erreur: ErreurClub) -> String {
-        erreur == .reseau ? "Pas de réseau, ou tes cartes ne sont pas prêtes. Réessaie dans un instant." : GestionClubs.message(pour: erreur).texte
+        erreur == .reseau ? "Pas de réseau, ou tes cartes ne sont pas prêtes. Réessaie dans un instant." : GestionClubs.messageDe(erreur).texte
     }
 }

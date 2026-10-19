@@ -257,6 +257,28 @@ struct ClubEnLigneTests {
         #expect(FabriqueRecordsClub.carte(depuis: record) == nil)
     }
 
+    @Test func leChatDeClubRecoitLesAutresMembresSansLesEcartes() async throws {
+        let service = FauxServiceClubs()
+        let p = profils()
+        let a = iPhone("p-adem", service: service, profils: p)
+        let b = iPhone("p-lea", service: service, profils: p)
+        let c = iPhone("p-titouan", service: service, profils: p)
+        let cree = try #require(await a.creer(nom: "Club", poissonId: nil, photo: nil))
+        #expect(await b.rejoindre(clubID: cree.id))
+        #expect(await c.rejoindre(clubID: cree.id))
+        await a.charger()
+        var pourChat = a.clubsPourChat()
+        #expect(pourChat.count == 1 && pourChat[0].jeSuisFondateur)
+        #expect(pourChat[0].membres.map(\.profil).sorted() == ["p-lea", "p-titouan"])
+        #expect(pourChat[0].membres.first { $0.profil == "p-lea" }?.surnom == "Léa")
+        #expect(await a.ecarter("p-lea", de: try #require(a.club(id: cree.id))))
+        pourChat = a.clubsPourChat()
+        #expect(pourChat[0].membres.map(\.profil) == ["p-titouan"])
+        // Côté membre : il n'est pas fondateur.
+        await c.charger()
+        #expect(c.clubsPourChat().first?.jeSuisFondateur == false)
+    }
+
     @Test func leSignalementNePorteQueLesChampsDuSchema() {
         let record = FabriqueRecordsClub.recordSignalement(cible: "pc-c-x", typeCible: "publication", motif: .spam, par: "p-adem", le: horloge())
         #expect(Set(record.allKeys()).isSubset(of: FabriqueRecordsClub.clesSignalement))
