@@ -1,22 +1,23 @@
 # Conditions d'utilisation de FishMe (CGU)
 
-**BROUILLON À FAIRE RELIRE PAR UN JURISTE DE MWM.** L'équipe n'est pas juridique : ce texte n'a aucune valeur tant qu'il n'a pas été relu, corrigé et validé par MWM, puis par Adem (S2, 19 oct. 2026). Les articles 1, 2, 3, 7, 8, 9, 10, 11, 13, 14, 15, 16 et 17 ont changé avec le réseau social ; les autres sont ceux du 16 octobre (numéros décalés après l'article 8).
+**BROUILLON À FAIRE RELIRE PAR UN JURISTE DE MWM.** L'équipe n'est pas juridique : ce texte n'a aucune valeur tant qu'il n'a pas été relu, corrigé et validé par MWM, puis par Adem (S2, 19 oct. 2026). Les articles 1, 2, 3, 7, 8, 9, 10, 11, 13, 14, 15, 16 et 17 ont changé avec le réseau social ; les autres sont ceux du 16 octobre (numéros décalés après l'article 8). Mise à jour S2 du 19 octobre (décisions de Titouan) : articles 2 (accord à la création du profil), 8 et 10 (texte d'un message signalé transmis, portée du retrait sous 24 heures), 9 (surnom seul, photo importée de la galerie), 10, 11 (département seul par défaut), 14 et 16.
 
-Source unique du texte des CGU. L'app l'affiche hors ligne (Réglages, et au premier lancement) : après chaque changement, lancer `python3 outils/legal/generer_conditions.py`, qui réécrit `App/Abonnement/TexteConditions.swift` (fichier de `App/`, régénéré par A dans L25, pas par S2). Un changement qui doit être ré-accepté fait monter `numero` de 1 : passé de 1 à 2 le 19 octobre.
+Source unique du texte des CGU. L'app l'affiche hors ligne (Réglages, et au premier lancement) : après chaque changement, lancer `python3 outils/legal/generer_conditions.py`, qui réécrit `App/Abonnement/TexteConditions.swift` (fichier de `App/`, régénéré par A dans L25, pas par S2). Un changement qui doit être ré-accepté fait monter `numero` de 1 : passé de 1 à 2 le 19 octobre, puis à 3 (accord à la création du profil, message signalé transmis, département par défaut).
 Les crochets `[...]` sont à remplir avant l'envoi à Apple (identité de l'éditeur : MWM ; médiateur : MWM). Rien n'est publié hors du dépôt sans le oui d'Adem ; la version web passe par le serveur MCP de MWM.
 Tout ce qui est au-dessus du premier titre `##` n'est pas montré dans l'app.
 
 Points ⚠ (à vérifier avant publication, jamais montrés dans l'app) :
 - ⚠ Aucun article de loi n'est cité dans les articles nouveaux : l'équipe n'a pas lu les textes à la source. Le seul renvoi à un texte de loi est celui de l'article 12 (garantie de conformité), repris tel quel du 16 octobre et lui aussi à faire relire.
 - ⚠ Âge (article 2) : le seuil de 15 ans est la décision de Titouan du 19 octobre ; son fondement juridique n'est pas vérifié. La déclaration « J'ai 15 ans ou plus » est une déclaration, pas un contrôle : à faire juger par le juriste.
-- ⚠ Retrait sous 24 heures (article 10) : engagement de FishMe, pas un chiffre écrit par Apple. Il suppose un référent qui lit la boîte (voir `store/notes-relecteur-reseau-en.md`, « Qui lit la boîte »). Tant que le référent de chaque semaine n'est pas fixé, ne pas publier.
-- ⚠ Signalement (article 10) : l'e-mail est préparé par l'app mais envoyé par le pêcheur ; l'enregistrement `Signalement` est la trace sûre. Le texte le dit ainsi, sans promettre un e-mail automatique.
+- ⚠ Retrait sous 24 heures (article 10) : engagement de FishMe, pas un chiffre écrit par Apple. Il couvre les contenus publics (publications, commentaires, profils) et, pour les messages privés, les contenus signalés dont le texte nous est transmis. La boîte est lue par Titouan, Adem et Sullyvan ; le référent de la semaine est « à fixer par l'équipe » (voir `store/notes-relecteur-reseau-en.md`, « Qui lit la boîte »). Tant que le référent de chaque semaine n'est pas fixé, ne pas publier.
+- ⚠ Signalement (article 10) : l'e-mail est préparé par l'app mais envoyé par le pêcheur ; l'enregistrement `Signalement` est la trace sûre. Le texte le dit ainsi, sans promettre un e-mail automatique. Pour un message d'ami ou de club signalé, le texte du message est joint à l'e-mail ET copié dans l'enregistrement (décision de Titouan du 19 octobre) : durée de conservation à fixer par MWM, à écrire dans la politique de confidentialité.
 - ⚠ Suppression du profil (articles 7 et 9) : les libellés de boutons et la possibilité de changer de surnom dépendent de L21 ; relire contre le build. Les messages envoyés à un ami : ce que fait réellement la suppression (L21) reste à écrire exactement.
-- ⚠ Chat de club : décision de Titouan du 19 octobre, zone partagée par club, lisible par les membres seulement. Le schéma de R2 (`MessageClub` en base publique) et la fiche L24 disent encore l'inverse : à corriger avant d'écrire du code.
-- ⚠ Plan d'eau nommé (article 11) : « département seul ou aucun lieu » est un défaut à confirmer par Adem (`CLAUDE.md`, décision 4).
+- ⚠ Chat d'ami et de club : décision de Titouan du 19 octobre, zones partagées, jamais en base publique, lisibles par les participants seulement. Le schéma de R2 (`MessageClub` en base publique) disait l'inverse : le code de L24 est en zone partagée, mais ce schéma est à aligner.
+- ⚠ Lieu (article 11) : « département seul » par défaut est la décision de Titouan du 19 octobre ; la décision 4 de `CLAUDE.md` disait « à confirmer par Adem » : à aligner. L'app doit présélectionner « département seul » (la revue des règles a vu `LieuPublication.swift:50` présélectionner encore cours d'eau + département, fichier de L23).
+- ⚠ Accord à la création du profil (article 2) : décision de Titouan du 19 octobre ; le libellé exact de la case à cocher se lit dans le build (L21/L25).
 - ⚠ Pas de mention d'une exclusion technique : FishMe ne peut pas empêcher qui que ce soit de recréer un surnom (article 17). La phrase « nous signalons à Apple si la loi l'impose » proposée par R2 n'est pas reprise : à décider par MWM.
 
-<!-- version: 19 octobre 2026 | numero: 2 -->
+<!-- version: 19 octobre 2026 | numero: 3 -->
 
 ## 1. Qui édite FishMe
 
@@ -28,7 +29,7 @@ Hébergement du site web de FishMe : [nom, adresse et téléphone de l'hébergeu
 
 ## 2. Accepter ces conditions
 
-Au premier lancement, l'app te montre un lien vers ces conditions avant que tu continues. En touchant le bouton pour continuer, sous ce lien, tu les acceptes.
+Au premier lancement, l'app te montre un lien vers ces conditions avant que tu continues. En touchant le bouton pour continuer, sous ce lien, tu les acceptes. Quand tu crées ton profil, l'app te demande en plus de cocher une case pour accepter ces conditions : sans cette case, pas de profil.
 
 FishMe est faite pour les 15 ans et plus. Entre 15 et 18 ans, l'abonnement doit être acheté ou autorisé par un parent. Si tu as moins de 15 ans, ne crée pas de compte sans l'accord de tes parents, donné avec toi : il est nécessaire pour utiliser tes données.
 
@@ -80,27 +81,27 @@ Tu peux supprimer ton profil et ton compte à tout moment dans les Réglages de 
 
 Ta collection n'est jamais publique. Tu peux inviter des amis à la voir : seules les personnes que tu invites la voient. Une carte partagée montre au plus le département de ta prise, jamais ton coin de pêche, et ses photos sont envoyées sans position GPS.
 
-Les messages entre amis ne sont lisibles que par vous deux. Les messages d'un club ne sont lisibles que par les membres du club. Un club se rejoint avec un lien : toute personne qui reçoit le lien peut le rejoindre et lire les messages. N'y écris rien de secret.
+Les messages entre amis ne sont lisibles que par vous deux. Les messages d'un club ne sont lisibles que par les membres du club. Ils ne sont jamais enregistrés dans la base publique. Une seule exception : si quelqu'un signale un message, le texte de ce message est transmis à l'équipe de FishMe (article 10). Un club se rejoint avec un lien : toute personne qui reçoit le lien peut le rejoindre et lire les messages. N'y écris rien de secret.
 
 Écrire à un ami ou dans un club demande d'avoir 15 ans ou plus (article 2). Tu ne partages que des photos que tu as le droit de montrer. Une personne qui apparaît sur ta photo doit être d'accord. Les règles de l'article 10 valent aussi pour les messages.
 
 ## 9. Ton surnom et ton avatar
 
-Pour publier, commenter ou écrire, tu crées un profil avec un surnom et un avatar. Ton surnom est unique et compte de 3 à 20 caractères. Ton surnom et ton avatar sont publics : tous les utilisateurs de FishMe les voient, avec ce que tu publies.
+Pour publier, commenter ou écrire, tu crées un profil avec un surnom et un avatar. Ton surnom est unique et compte de 3 à 20 caractères. Ton surnom et ton avatar sont publics : tous les utilisateurs de FishMe les voient, avec ce que tu publies. Tu peux choisir ton avatar parmi ceux de l'app ou dans une photo de ta galerie : l'app la recompresse et l'envoie sans position GPS.
 
 Choisis un surnom respectueux : pas le nom réel d'une autre personne, pas d'insulte, pas de marque, pas de lieu précis de pêche. Nous pouvons retirer un surnom ou un avatar qui ne respecte pas ces règles.
 
-Ton nom et ton prénom, si tu les donnes, sont facultatifs et privés : ils ne sont jamais affichés. Tu peux changer ton surnom et ton avatar dans l'app, ou supprimer ton profil (article 7).
+FishMe ne te demande ni nom ni prénom : ton surnom est la seule identité de ton profil, et il est public. Tu peux changer ton surnom et ton avatar dans l'app, ou supprimer ton profil (article 7).
 
 ## 10. Contenu que tu publies
 
-Tu peux publier des photos, des vidéos de 15 secondes au plus, des légendes et des commentaires, et écrire des messages. Ce que tu publies est visible par les autres utilisateurs de FishMe, pas seulement par tes amis. Tu es responsable de ce que tu publies.
+Tu peux publier des photos, prises avec l'app ou importées depuis ta galerie, des vidéos de 15 secondes au plus, des légendes et des commentaires, et écrire des messages. Une photo importée est recompressée et part sans position GPS. Ce que tu publies est visible par les autres utilisateurs de FishMe, pas seulement par tes amis. Tu es responsable de ce que tu publies.
 
 Ce qui est permis : tes prises, tes sorties, ton matériel, tes questions de pêcheur, des contenus dont tu as les droits. Si une autre personne apparaît, elle doit être d'accord.
 
 Ce qui ne l'est pas : un contenu choquant, haineux, violent, illégal, sexuel ou cruel envers les animaux ; le harcèlement ; le spam et la publicité ; la photo d'une personne mineure ou d'une personne sans son accord ; la mise en avant d'une pêche illégale ; le coin exact d'un autre pêcheur ou les coordonnées d'un coin. L'app refuse certains mots à la saisie : ce filtre est limité et ne remplace pas ton jugement.
 
-Tu peux signaler toute publication, tout commentaire, tout message et toute personne. L'app cache aussitôt le contenu sur ton iPhone, prépare un e-mail à fishme.app@gmail.com, que tu envoies depuis ton app Mail, et enregistre ton signalement dans FishMe. Nous ne surveillons pas les contenus en continu : nous agissons sur les signalements. Nous nous engageons à retirer sous 24 heures, après avoir reçu un signalement, le contenu qui enfreint ces conditions. Nous pouvons aussi retirer le profil de la personne qui l'a publié.
+Tu peux signaler toute publication, tout commentaire, tout message et toute personne. L'app cache aussitôt le contenu sur ton iPhone, prépare un e-mail à fishme.app@gmail.com, que tu envoies depuis ton app Mail, et enregistre ton signalement dans FishMe. L'e-mail n'est pas envoyé tout seul : c'est toi qui l'envoies. Quand tu signales un message d'un ami ou d'un club, le texte de ce message est joint à l'e-mail et copié dans l'enregistrement du signalement, pour que l'équipe de FishMe puisse le lire : sans cela, elle ne pourrait pas le voir. Nous ne surveillons pas les contenus en continu : nous agissons sur les signalements. Nous nous engageons à retirer sous 24 heures, après avoir reçu un signalement, le contenu public (publication, commentaire, profil) qui enfreint ces conditions. Pour un message privé, cet engagement vaut pour les messages signalés dont le texte nous a été transmis. Nous pouvons aussi retirer le profil de la personne qui l'a publié.
 
 Tu peux bloquer une personne : plus rien de ce qu'elle publie ou écrit ne s'affiche chez toi.
 
@@ -108,11 +109,11 @@ Tu peux supprimer à tout moment tes publications, tes commentaires et tes messa
 
 ## 11. Le lieu de tes publications
 
-À chaque publication, c'est toi qui choisis le lieu affiché : le cours d'eau et le département (par exemple « La Marne · 94 »), le département seul, ou aucun lieu. Rien d'autre ne décrit le lieu de ta publication.
+À chaque publication, c'est toi qui choisis le lieu affiché. Par défaut, c'est le département seul (par exemple « 94 »). Tu peux ajouter le cours d'eau (par exemple « La Marne · 94 »), ou choisir aucun lieu. Rien d'autre ne décrit le lieu de ta publication.
 
-Sur un plan d'eau nommé (un lac, un étang), le nom vaudrait un coin exact : l'app te propose alors le département seul ou aucun lieu, et le département est le choix proposé par défaut. Sans lieu, ta publication n'apparaît pas dans le fil de ta région.
+Sur un plan d'eau nommé (un lac, un étang), le nom vaudrait un coin exact : l'app te propose alors seulement le département seul ou aucun lieu. Sans lieu, ta publication n'apparaît pas dans le fil de ta région.
 
-Jamais ta position GPS ni les coordonnées de ton coin ne sont publiées, et tes photos et tes vidéos sont envoyées sans position GPS. Mais le nom d'un cours d'eau et un département peuvent suffire à un connaisseur pour deviner un coin : si tu veux le garder secret, choisis le département seul ou aucun lieu. N'écris pas ton coin exact dans une légende, un commentaire ou un message.
+Jamais ta position GPS ni les coordonnées de ton coin ne sont publiées, et tes photos et tes vidéos sont envoyées sans position GPS. Mais le nom d'un cours d'eau et un département peuvent suffire à un connaisseur pour deviner un coin : si tu veux le garder secret, garde le département seul ou choisis aucun lieu. N'écris pas ton coin exact dans une légende, un commentaire ou un message.
 
 ## 12. FishMe Pro : l'abonnement
 
@@ -130,7 +131,7 @@ Utiliser FishMe pour toi, dans le respect de la loi, des règles de pêche, des 
 
 ## 14. Ce qui t'appartient, ce qui nous appartient
 
-Tes photos, tes vidéos et tes prises t'appartiennent. En les publiant, tu autorises FishMe à les montrer aux autres utilisateurs dans l'app, selon le lieu que tu as choisi, tant que tu ne les supprimes pas. Cette autorisation sert seulement à les afficher dans FishMe : nous ne les réutilisons ni dans une publicité ni pour un autre usage commercial sans te le demander d'abord. Tu peux les supprimer à tout moment.
+Tes photos, tes vidéos et tes prises t'appartiennent, y compris les photos que tu importes de ta galerie. En les publiant, tu autorises FishMe à les montrer aux autres utilisateurs dans l'app, selon le lieu que tu as choisi, tant que tu ne les supprimes pas. Cette autorisation sert seulement à les afficher dans FishMe : nous ne les réutilisons ni dans une publicité ni pour un autre usage commercial sans te le demander d'abord. Tu peux les supprimer à tout moment.
 
 En partageant une carte à un ami, tu nous autorises à la lui transmettre, le temps du partage. Si une autre personne apparaît sur un contenu, tu garantis avoir son accord.
 
@@ -150,7 +151,7 @@ Cela ne change rien à ta garantie légale ni à notre responsabilité quand l'a
 
 Ta position précise et tes coins de pêche restent sur ton iPhone. Ta collection et tes photos sont sauvegardées dans ton iCloud, et envoyées seulement aux amis que tu invites, sans position GPS.
 
-Ce que tu publies (photos, vidéos, légendes, lieu choisi, commentaires, likes), ton surnom et ton avatar sont enregistrés dans la base publique iCloud d'Apple associée à FishMe et visibles des autres utilisateurs. Les messages d'amis et de clubs restent dans des zones partagées, lisibles par leurs participants. Ton nom et ton prénom, si tu les donnes, restent privés. L'équipe de FishMe lit les contenus publics signalés et les signalements.
+Ce que tu publies (photos, vidéos, légendes, lieu choisi, commentaires, likes), ton surnom et ton avatar sont enregistrés dans la base publique iCloud d'Apple associée à FishMe et visibles des autres utilisateurs. Les messages d'amis et de clubs restent dans des zones partagées, lisibles par leurs participants, jamais dans la base publique. FishMe ne collecte ni ton nom ni ton prénom : seulement un surnom. L'équipe de FishMe lit les contenus publics signalés et les signalements ; pour un message d'ami ou de club signalé, elle lit aussi le texte de ce message, joint au signalement (article 10).
 
 La mesure d'usage est éteinte tant que tu ne l'as pas acceptée. Tu l'acceptes, et tu peux la couper à tout moment, seulement dans les Réglages : l'app ne te la propose jamais ailleurs. Tout est expliqué dans la politique de confidentialité de FishMe, accessible depuis les Réglages.
 
