@@ -50,6 +50,12 @@ struct PaywallDemande: Identifiable {
 }
 
 /// La carte révélée après une prise (E6).
+/// N4 : un nouveau souvenir de taille, annoncé par un bandeau sur la carte révélée.
+struct RecordAnnonce: Equatable {
+    let evenement: EvenementRecord
+    let nomEspece: String
+}
+
 struct CarteRevelee: Identifiable {
     let id = UUID()
     let infos: InfosCarte
@@ -123,6 +129,8 @@ final class ParcoursApp {
     var courant: Modal?
     /// E6 : la carte d'une prise qui vient d'être enregistrée, révélée en plein écran.
     var carteRevelee: CarteRevelee?
+    /// N4 : le bandeau « nouveau souvenir » de la carte qui vient d'être révélée.
+    var recordAnnonce: RecordAnnonce?
     private var attente: [Modal] = []
     var positionPassee = false
     /// Le choix de zone (position refusée) ou la redemande est à l'écran : aucune autre feuille ne s'ouvre en même temps.
@@ -566,11 +574,22 @@ final class ParcoursApp {
                              date: moteur.maintenant(), prisesDuJour: moteur.prisesGardeesDuJour())
     }
 
+    /// N4 : `MoteurRecords.evenement` avec les cartes d'AVANT l'insertion. `nil` sauf pour un vrai nouveau souvenir (pas de bandeau pour une première taille).
+    private func annonceRecord(pour prise: Prise) -> RecordAnnonce? {
+        let avant = pescedex?.detaillees.map(\.prise) ?? []
+        let evenement = MoteurRecords.evenement(pour: prise, parmi: avant)
+        guard case .nouveauSouvenir = evenement else { return nil }
+        let nom = core.especes.especesPechables().first { $0.espece.id == prise.espece.id }?.nom ?? prise.espece.id
+        return RecordAnnonce(evenement: evenement, nomEspece: nom)
+    }
+
     /// Une prise ajoutée à la main depuis le Pescedex (photo importée) : une carte comme les autres, sans GPS.
     func ajouterPriseManuelle(photo: Data, espece: Espece, cm: Int?, date: Date, lieu: String?) async {
         let prise = Prise(espece: espece, origine: .priseReelle, longueurCm: cm.map(Double.init),
                           mesure: cm == nil ? nil : .saisie, date: date, lieuFlou: lieu, exemple: false)
+        let annonce = annonceRecord(pour: prise)
         if await ecrire({ _ = try await $0.enregistrer(prise: prise, photo: photo) }) {
+            recordAnnonce = annonce
             await revelerCarte(prise, photoBrute: photo)
         }
     }
@@ -584,10 +603,12 @@ final class ParcoursApp {
         let prise = confirmee.prise
         let photo = confirmee.photo
         let duree = moteur.enCours.map { moteur.maintenant().timeIntervalSince($0.sortie.debut) }
+        let annonce = annonceRecord(pour: prise)
         Task {
             // `.carteCreee` ne part qu'une fois la carte réellement enregistrée.
             if await ecrire({ _ = try await $0.enregistrer(prise: prise, photo: photo, conditions: instantane, dureeSecondes: duree) }) {
                 mesure.envoyer(.carteCreee)
+                recordAnnonce = annonce
                 await revelerCarte(prise, photoBrute: photo)
             }
         }
@@ -811,7 +832,13 @@ private struct RacineContenu: View {
                 vue(de: modal)
             }
             .fullScreenCover(item: liaisonRevelee(dansSession: dansSession)) { revelee in
-                RevelationCarteView(infos: revelee.infos, photo: revelee.photo) { app.carteRevelee = nil }
+                RevelationCarteView(infos: revelee.infos, photo: revelee.photo) { app.carteRevelee = nil; app.recordAnnonce = nil }
+                    .overlay(alignment: .top) {
+                        if let annonce = app.recordAnnonce {
+                            BandeauRecordView(evenement: annonce.evenement, nomEspece: annonce.nomEspece)
+                                .padding(.top, Espace.m)
+                        }
+                    }
             }
     }
 
@@ -1296,6 +1323,22 @@ private struct TesConditionsEmplacement: View {
     }
 }
 
+/// N4 « Mes records » : gratuit, sans paywall, séparé de « Mes statistiques » (Pro). // ⚠ à vérifier (écrit sans Mac)
+private struct MesRecordsEmplacement: View {
+    @State private var modele: ModeleRecords
+
+    init(app: ParcoursApp) {
+        let especes = app.core.especes
+        _modele = State(initialValue: ModeleRecords(
+            cartes: app.pescedex?.detaillees.map(\.prise) ?? [], sorties: app.moteur.sortiesTerminees,
+            especes: especes.especesPechables(),
+            seuilTropheeCm: { especes.seuilTropheeCm(espece: $0) },
+            poids: { espece, cm in especes.poidsEstime(espece: espece, longueurCm: cm) }))
+    }
+
+    var body: some View { MesRecordsView(modele: modele) }
+}
+
 /// « Mes statistiques » (L12, Pro) : les comptes de ses propres sorties, ou le paywall.
 private struct MesStatistiquesEmplacement: View {
     let app: ParcoursApp
@@ -1365,6 +1408,9 @@ private struct ProfilEmplacement<Reglages: View>: View {
                     Text("Remplit le Pescedex, les amis, le club, le fil et les messages avec des exemples. Rien n'est envoyé.")
                 }
                 Section {
+                    NavigationLink { MesRecordsEmplacement(app: app) } label: {
+                        Label("Mes records", systemImage: "book.closed")
+                    }
                     NavigationLink { MesStatistiquesEmplacement(app: app) } label: {
                         Label("Mes statistiques", systemImage: "chart.bar.xaxis")
                     }
