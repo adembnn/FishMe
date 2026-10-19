@@ -21,6 +21,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timedelta, timezone
 
 import comptes
+import recalage
 import especes as esp
 import geo
 from hubeau_client import Client, HubeauError, QuotaError
@@ -228,6 +229,8 @@ def main(argv=None) -> int:
     ap.add_argument("--recuperer-seulement", action="store_true", help="remplit le cache sans ecrire les fichiers")
     ap.add_argument("--verifier-especes", action="store_true")
     ap.add_argument("--sans-hydro", action="store_true")
+    ap.add_argument("--trace", nargs="+", metavar="GEOJSON", help="D5 : trace des cours d'eau deja telecharge (sinon Sandre, dans le cache)")
+    ap.add_argument("--sans-recalage", action="store_true", help="D5 : ne recale rien (toutes les stations arrondies, recalee: false)")
     ap.add_argument("--aujourdhui", help="AAAA-MM-JJ (tests)")
     a = ap.parse_args(argv)
 
@@ -305,6 +308,23 @@ def main(argv=None) -> int:
     par_dep = {d: agr["departements"].get(d, {"dix_ans": comptes._vide(), "historique": comptes._vide()}) for d in complets}
     reg = comptes.comptes_regions(par_dep, regions, complets)
 
+    # D5 : recalage sur le trace du cours d'eau (decision 8) ; chaque station porte `recalee`
+    liste_st = [v for _, v in sorted(stations_ok.items()) if v["id"] in agr["stations"]]
+    try:
+        if a.sans_recalage:
+            log("ATTENTION : --sans-recalage : toutes les stations arrondies a 0,01 degre, recalee: false")
+            trace, vois = recalage.Trace(), None
+        elif a.trace:
+            trace, vois = recalage.Trace.depuis_fichiers(*a.trace), None
+        else:
+            trace, vois = recalage.preparer_trace(liste_st, os.path.join(cache, "trace"), log)
+    except Exception as e:  # reseau ou service Sandre : on s'arrete, on n'ecrit pas un fichier a moitie recale
+        log(f"ARRET : trace des cours d'eau indisponible ({e}) ; relancer (le cache reprend) ou donner --trace")
+        return 4
+    rap_recalage = recalage.recaler_stations(liste_st, trace, voisinage=vois)
+    log(f"Recalage : {rap_recalage['recalees']}/{rap_recalage['stations']} stations sur le trace "
+        f"(ecart median {rap_recalage['ecart_median_m']} m) ; non recalees : {rap_recalage['raisons_false']}")
+
     entete = {"source": cfg["source_piscicole"], "licence": cfg["licence"], "mis_a_jour": maj,
               "dix_ans_depuis": debut, "dix_ans_jusqu_a": maj}
     recs = []
@@ -313,13 +333,16 @@ def main(argv=None) -> int:
         if not c:
             continue
         recs.append({"id": sid, "lat": s["lat"], "lon": s["lon"], "dep": s["dep"], "eau": s["eau"], "code_eau": s["code_eau"],
+                     "recalee": s["recalee"],
                      "peches": c["dix_ans"]["peches"],
                      "derniere": c["derniere_dix_ans"],
                      "vues": {k: v["peches"] for k, v in sorted(c["dix_ans"]["especes"].items())},
                      "historique": {"peches": c["historique"]["peches"], "derniere": c["derniere"],
                                     "vues": {k: v["peches"] for k, v in sorted(c["historique"]["especes"].items())}}})
     doc_s = dict(entete, note="peches, derniere, vues : fenetre de 10 ans ; historique : toutes les annees. Une peche = "
-                 "une operation OFB avec au moins un poisson ; vues = code Sandre -> nombre de peches ou l'espece est vue.",
+                 "une operation OFB avec au moins un poisson ; vues = code Sandre -> nombre de peches ou l'espece est vue. "
+                 "recalee : true = position (5 decimales) projetee sur le trace Sandre du cours d'eau (300 m au plus), eau = nom du trace ; "
+                 "false = aucun trace ne la recoit, position arrondie a 0,01 degre (la carte dessine un halo, pas une epingle).",
                  stations=recs)
     doc_r = dict(entete, departements={d: {"region": region_de.get(d), **par_dep[d]} for d in complets},
                  regions={r: v for r, v in reg.items()},
@@ -353,7 +376,7 @@ def main(argv=None) -> int:
            "stations_region_api_differente_de_la_table": region_ko[:30],
            "conflits_cours_d_eau": infos["conflits_eau"][:30],
            "operations": agr["ecartees"] | {"lues": len(ops)},
-           "stations_dans_le_fichier": len(recs), "octets": tailles,
+           "recalage": rap_recalage, "stations_dans_le_fichier": len(recs), "octets": tailles,
            "appels_api": client.n_requetes, "pages_en_cache": client.n_cache, "secondes_api": round(client.secondes_api)}
     ecrire_json(os.path.join(rapports, "rapport.json"), rap)
     log(f"Fichiers dans {sortie} : {tailles}")
