@@ -57,7 +57,7 @@ La vidéo pèse plusieurs photos (la taille exacte vient de la mesure). Le point
 4. Fournisseur externe de stockage vidéo (décision 2, repli). Change avec un budget : oui.
 
 ## Coût
-CloudKit est gratuit dans la limite du quota de l'app, sans facture ([CloudKit](https://developer.apple.com/icloud/cloudkit/)) ⚠ la page ne précise pas ce qui arrive au-delà ; Apple ne l'a pas écrit selon la source secondaire. Aucun budget pour démarrer. Au-delà du quota : inconnu, à demander à MWM ou au support Apple avant de dépasser. Change avec un budget : oui (si dépassement).
+CloudKit est gratuit dans la limite du quota de l'app, sans facture ([CloudKit](https://developer.apple.com/icloud/cloudkit/)). ⚠ La page lue ne dit pas ce qui arrive au-delà du quota. Aucun budget pour démarrer. Au-delà du quota : inconnu, à demander à MWM ou au support Apple avant de dépasser. Change avec un budget : oui (si dépassement).
 
 ## Ce qui reste hors de la mesure
 Débit par seconde en pointe, quota de requêtes par jour, taille maximale d'un asset et nombre maximal d'éléments par requête : ⚠ non lus. Le prototype écrit par lots de 10 photos et 5 vidéos pour rester loin des limites usuelles (estimation) ; toute erreur `limitExceeded` ou `requestRateLimited` doit être collée dans `RESULTATS.md`.

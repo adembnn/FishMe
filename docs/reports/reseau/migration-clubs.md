@@ -23,6 +23,7 @@ Conséquence : migrer un club, c'est créer un `Club`, un `Membre` fondateur et 
 | `fichierPhoto` | `Club.image` (`CKAsset`) | recompresser en JPEG sans EXIF, 512 px (estimation raisonnable, à régler en L22) |
 | (le pêcheur) | `Membre` `m-<club>-<profil>`, rôle fondateur | exige un `Profil` (L21) |
 | carte partagée | `Publication` `pc-<club>-<carte>`, champ `club` rempli | image = PNG de `Collection`, sans GPS, lieu = département seul |
+| (chat) | zone partagée `chatclub-<id>` du fondateur | créée à la première utilisation du chat ; jamais en base publique (`schema.md`, type 10) |
 | `amisInvitesSeulement` | supprimé | n'a plus de sens : un club est lisible par son lien |
 
 ## Ce qui change pour le pêcheur : le consentement
