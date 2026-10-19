@@ -35,3 +35,7 @@ fastlane/screenshots/
 # Python (les hooks et outils de l'atelier)
 __pycache__/
 *.pyc
+
+# Étude de marché : données collectées jamais commitées
+reports/marche/donnees/
+outils/marche/.venv/
