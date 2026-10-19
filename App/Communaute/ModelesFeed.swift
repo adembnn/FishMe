@@ -37,7 +37,7 @@ nonisolated enum SectionFeed: String, Sendable, CaseIterable, Identifiable {
 /// Une publication, telle que le fil l'affiche. Aucune coordonnée : le lieu est le texte choisi à la publication.
 nonisolated struct PublicationFeed: Sendable, Equatable, Identifiable {
     var id: String
-    /// `recordName` du profil de l'auteur. À aligner L21 : le surnom affiché et l'avatar viennent de `Profil`.
+    /// `recordName` du profil de l'auteur. C'est l'`id` d'un `ProfilPublic` de L21 (`p-` + surnom normalisé) ; le surnom affiché et l'avatar viennent de `ProfilModele`.
     var auteurNom: String
     var genre: GenreMedia
     var dureeS: Int
@@ -95,38 +95,8 @@ nonisolated struct CarteLiee: Sendable, Equatable {
     var tailleCm: Double?
 }
 
-/// Liste fermée (`moderation.md`) : pas de texte libre. Même liste, mêmes mots et mêmes valeurs brutes que `MotifSignalement` de L21
-/// (profils) : l'énumération reste propre à L23 (pas de dépendance entre lots), alignée sur ses libellés.
-nonisolated enum MotifSignalementPublication: String, Sendable, CaseIterable, Identifiable {
-    case choquant, harcelement, nudite, cruaute, pecheIllegale, coinExact, mineur, spam, autre
-    var id: String { rawValue }
-    var titre: String {
-        switch self {
-        case .choquant: "Contenu choquant ou violent"
-        case .harcelement: "Haine ou harcèlement"
-        case .nudite: "Nudité ou contenu sexuel"
-        case .cruaute: "Cruauté envers un animal"
-        case .pecheIllegale: "Pêche illégale"
-        case .coinExact: "Coin de pêche exact révélé"
-        case .mineur: "Personne mineure sans accord"
-        case .spam: "Spam ou publicité"
-        case .autre: "Autre"
-        }
-    }
-    var symbole: String {
-        switch self {
-        case .choquant: "exclamationmark.triangle"
-        case .harcelement: "bubble.left.and.exclamationmark.bubble.right"
-        case .nudite: "eye.slash"
-        case .cruaute: "pawprint"
-        case .pecheIllegale: "scalemass"
-        case .coinExact: "mappin.slash"
-        case .mineur: "person.crop.circle.badge.exclamationmark"
-        case .spam: "megaphone"
-        case .autre: "flag"
-        }
-    }
-}
+/// Liste fermée (`moderation.md`) : UNE SEULE énumération, celle de L21 (`App/Profil/MotifSignalement.swift`).
+typealias MotifSignalementPublication = MotifSignalement
 
 nonisolated enum TypeCible: String, Sendable {
     case publication, commentaire

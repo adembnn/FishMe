@@ -1,44 +1,7 @@
 import Foundation
 
-/// Les motifs de signalement, liste fermée (R2 `moderation.md`) : pas de texte libre.
-/// UNE SEULE énumération avec L21 : mêmes cas, mêmes valeurs écrites (`harcelement`, `pecheIllegale`, `coinExact`, `mineur`…), mêmes
-/// titres et mêmes symboles que `MotifSignalement` de `App/Profil/ProfilModele.swift` (lot/profil). Le nom est resté
-/// `MotifSignalementMessage` parce que lot/profil n'est pas dans cette copie ; à la fusion : supprimer cette énumération et écrire
-/// `typealias MotifSignalementMessage = MotifSignalement` (voir le rapport L24).
-nonisolated enum MotifSignalementMessage: String, CaseIterable, Identifiable, Sendable {
-    case choquant, harcelement, nudite, cruaute, pecheIllegale, coinExact, mineur, spam, autre
-
-    var id: String { rawValue }
-
-    var titre: String {
-        switch self {
-        case .choquant: return "Contenu choquant ou violent"
-        case .harcelement: return "Haine ou harcèlement"
-        case .nudite: return "Nudité ou contenu sexuel"
-        case .cruaute: return "Cruauté envers un animal"
-        case .pecheIllegale: return "Pêche illégale"
-        case .coinExact: return "Coin de pêche exact révélé"
-        case .mineur: return "Personne mineure sans accord"
-        case .spam: return "Spam ou publicité"
-        case .autre: return "Autre"
-        }
-    }
-
-    /// Icône SF Symbols de la ligne du menu (mêmes que L21).
-    var symbole: String {
-        switch self {
-        case .choquant: return "exclamationmark.triangle"
-        case .harcelement: return "bubble.left.and.exclamationmark.bubble.right"
-        case .nudite: return "eye.slash"
-        case .cruaute: return "pawprint"
-        case .pecheIllegale: return "scalemass"
-        case .coinExact: return "mappin.slash"
-        case .mineur: return "person.crop.circle.badge.exclamationmark"
-        case .spam: return "megaphone"
-        case .autre: return "flag"
-        }
-    }
-}
+/// Les motifs de signalement : UNE SEULE énumération, celle de L21 (`App/Profil/MotifSignalement.swift`).
+typealias MotifSignalementMessage = MotifSignalement
 
 /// Règle 1.2 d'Apple : signaler un message, vers le contact publié dans Mon club (fishme.app@gmail.com).
 /// Un e-mail prérempli que le pêcheur envoie lui-même (CloudKit n'envoie aucun e-mail sans serveur : R2 `moderation.md`). La trace

@@ -519,10 +519,8 @@ final class GestionChat {
     }
 }
 
-/// L'adaptateur que A compose dans l'`EffaceurContenu` de L21.
-/// À ALIGNER L21 : `EffaceurContenu` (App/Profil/ProfilModele.swift, branche lot/profil) n'est pas dans cette copie. Dès que lot/profil
-/// est fusionné, remplacer `EffaceurMessages` par `EffaceurContenu` dans la ligne ci-dessous : `effacerContenu(deProfil:)` existe déjà.
-nonisolated struct EffaceurChat: EffaceurMessages {
+/// L'adaptateur que A compose dans l'`EffaceurContenu` de L21 (`RegistreEffaceurs.partage.ajouter(...)`).
+nonisolated struct EffaceurChat: EffaceurContenu {
     let gestion: GestionChat
 
     func effacerMesMessages() async throws {

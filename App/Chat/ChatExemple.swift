@@ -60,7 +60,7 @@ struct AnnuaireExemple: AnnuaireChat {
     func moi() async -> InterlocuteurChat? { DonneesExempleChat.moi }
     func amis() async -> [InterlocuteurChat] { [DonneesExempleChat.lea] }
     func clubs() async -> [ClubChat] { [DonneesExempleChat.club] }
-    func bloques() async -> Set<String> { [] }
+    func bloques() async -> Set<String> { ListeBlocages.partage.profilsCaches() }
 }
 
 /// Aucune permission demandée en mode démo.

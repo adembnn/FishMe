@@ -35,12 +35,6 @@ nonisolated protocol AnnuaireChat: Sendable {
     func amis() async -> [InterlocuteurChat]
     /// Mes clubs (À aligner L22).
     func clubs() async -> [ClubChat]
-    /// Identifiants d'auteurs bloqués côté profil (À aligner L21 : liste `Blocage`, base privée). Peut être vide.
+    /// Identifiants d'auteurs bloqués côté profil : l'adaptateur de A lit `ListeBlocages.partage.profilsCaches()` (L21). Peut être vide.
     func bloques() async -> Set<String>
-}
-
-/// Ce que L21 appelle `EffaceurContenu` : « Supprimer mon profil » efface aussi mes messages.
-/// À aligner L21 : le protocole réel est dans `App/Profil/` ; A compose `GestionChat.effacerMesMessages()` dedans.
-nonisolated protocol EffaceurMessages: Sendable {
-    func effacerMesMessages() async throws
 }

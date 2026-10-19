@@ -413,14 +413,8 @@ final class GestionFeed {
     }
 }
 
-/// À aligner L21 : `EffaceurContenu` (App/Profil/ProfilModele.swift de L21) n'existe pas dans cette copie. Ce protocole local a
-/// exactement sa signature : à la fusion avec L21, supprimer ce protocole et écrire `EffaceurFeed: EffaceurContenu` (un mot à changer).
-nonisolated protocol EffaceurContenuFeed: Sendable {
-    func effacerContenu(deProfil profilID: String) async throws
-}
-
 /// Le conformeur réel de L23 : `RegistreEffaceurs.partage.ajouter(EffaceurFeed(gestion: app.feed))` (A, `RootView.swift`).
-nonisolated struct EffaceurFeed: EffaceurContenuFeed {
+nonisolated struct EffaceurFeed: EffaceurContenu {
     let gestion: GestionFeed
 
     func effacerContenu(deProfil profilID: String) async throws {
