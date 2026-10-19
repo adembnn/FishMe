@@ -61,6 +61,30 @@ nonisolated final class ContenuMasqueFeed {
     init(id: String) { self.id = id }
 }
 
+/// Un signalement dont l'écriture en base publique a échoué : il attend ici (sur disque) d'être rejoué au prochain chargement.
+@Model
+nonisolated final class SignalementEnAttente {
+    @Attribute(.unique) var id: String
+    var cible: String
+    var typeCible: String
+    var motif: String
+    var signalePar: String
+    var auteurCible: String
+    var extrait: String
+    var creeLe: Date
+
+    init(_ s: SignalementFeed, creeLe: Date = Date()) {
+        self.id = s.id
+        self.cible = s.cible
+        self.typeCible = s.typeCible.rawValue
+        self.motif = s.motif.rawValue
+        self.signalePar = s.signalePar
+        self.auteurCible = s.auteurCible
+        self.extrait = s.extrait
+        self.creeLe = creeLe
+    }
+}
+
 /// Le cache du fil (base locale à part, `cloudKitDatabase: .none`) : le dernier fil reste lisible en mode avion.
 actor CacheFeed {
     private let conteneur: ModelContainer
@@ -73,7 +97,7 @@ actor CacheFeed {
     }
 
     static func creerConteneur(enMemoire: Bool = false) throws -> ModelContainer {
-        let schema = Schema([PublicationEnCache.self, AuteurBloqueFeed.self, ContenuMasqueFeed.self])
+        let schema = Schema([PublicationEnCache.self, AuteurBloqueFeed.self, ContenuMasqueFeed.self, SignalementEnAttente.self])
         // Hors App Group (comme le cache d'Amis) : sinon SwiftData vise le conteneur partagé du widget.
         let configuration = ModelConfiguration("Feed", schema: schema, isStoredInMemoryOnly: enMemoire, groupContainer: .none, cloudKitDatabase: .none)
         return try ModelContainer(for: schema, configurations: [configuration])
@@ -158,9 +182,37 @@ actor CacheFeed {
     func effacerLeFil() {
         let contexte = ModelContext(conteneur)
         for ligne in (try? contexte.fetch(FetchDescriptor<PublicationEnCache>())) ?? [] { contexte.delete(ligne) }
+        for ligne in (try? contexte.fetch(FetchDescriptor<SignalementEnAttente>())) ?? [] { contexte.delete(ligne) }
         try? contexte.save()
         try? FileManager.default.removeItem(at: dossierImages)
         try? FileManager.default.createDirectory(at: dossierImages, withIntermediateDirectories: true)
+    }
+
+    // MARK: File de reprise des signalements
+
+    func mettreEnFile(_ s: SignalementFeed) {
+        let contexte = ModelContext(conteneur)
+        let id = s.id
+        let deja = (try? contexte.fetch(FetchDescriptor<SignalementEnAttente>(predicate: #Predicate { $0.id == id })))?.first
+        if deja == nil { contexte.insert(SignalementEnAttente(s)) }
+        try? contexte.save()
+    }
+
+    /// Les signalements pas encore enregistrés, les plus anciens d'abord.
+    func fileDeReprise() -> [SignalementFeed] {
+        let contexte = ModelContext(conteneur)
+        let lignes = ((try? contexte.fetch(FetchDescriptor<SignalementEnAttente>())) ?? []).sorted { $0.creeLe < $1.creeLe }
+        return lignes.compactMap { l in
+            guard let type = TypeCible(rawValue: l.typeCible), let motif = MotifSignalementPublication(rawValue: l.motif) else { return nil }
+            return SignalementFeed(id: l.id, cible: l.cible, typeCible: type, motif: motif, signalePar: l.signalePar,
+                                   auteurCible: l.auteurCible, extrait: l.extrait)
+        }
+    }
+
+    func sortirDeLaFile(_ id: String) {
+        let contexte = ModelContext(conteneur)
+        for ligne in (try? contexte.fetch(FetchDescriptor<SignalementEnAttente>())) ?? [] where ligne.id == id { contexte.delete(ligne) }
+        try? contexte.save()
     }
 
     // MARK: Aides

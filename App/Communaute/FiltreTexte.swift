@@ -56,7 +56,7 @@ nonisolated enum FiltreTexte {
     /// Deux nombres à 2 décimales ou plus, séparés par une virgule, un point-virgule, une barre ou un espace, qui tiennent dans
     /// une latitude (90) et une longitude (180). « 62,50 cm » seul, ou un prix, ne passe pas pour une paire.
     static func contientPaireDeCoordonnees(_ texte: String) -> Bool {
-        let motif = "(-?[0-9]{1,3}[.,][0-9]{2,})\s*[,;/ ]\s*(-?[0-9]{1,3}[.,][0-9]{2,})"
+        let motif = "(-?[0-9]{1,3}[.,][0-9]{2,})\\s*[,;/ ]\\s*(-?[0-9]{1,3}[.,][0-9]{2,})"
         guard let expression = try? NSRegularExpression(pattern: motif) else { return false }
         let plage = NSRange(texte.startIndex..., in: texte)
         for correspondance in expression.matches(in: texte, range: plage) {

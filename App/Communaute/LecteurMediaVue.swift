@@ -70,6 +70,8 @@ struct LecteurMediaVue: View {
                 lecteur = joueur
                 joueur.play()
             }
+        } catch is CancellationError {
+            // Fermé avant la fin du téléchargement : rien à afficher.
         } catch {
             echec = true
         }

@@ -55,8 +55,12 @@ nonisolated enum LieuPublication {
         return choix
     }
 
-    /// Le premier choix proposé.
-    static func parDefaut(_ contexte: ContexteLieu) -> ModeLieu { options(contexte)[0] }
+    /// Décision de Titouan (19 oct.) : « département seul » par défaut. « Cours d'eau + département » reste possible, jamais par défaut.
+    /// Département inconnu : « aucun lieu ».
+    static func parDefaut(_ contexte: ContexteLieu) -> ModeLieu {
+        let choix = options(contexte)
+        return choix.contains(.departement) ? .departement : (choix.first ?? .aucun)
+    }
 
     /// Ce que le pêcheur lit sur le bouton : « La Marne · 94 », « 94 », « Aucun lieu ».
     static func etiquette(_ mode: ModeLieu, _ contexte: ContexteLieu) -> String {

@@ -13,15 +13,21 @@ actor FauxServiceFeed: ServiceFeed {
     private(set) var appelsPage = 0
     private var horsLigne: Bool
     private var compte: Bool
+    /// Vrai : `signaler` échoue (le reste marche), pour tester la file de reprise.
+    private var signalementEchoue = false
 
-    init(publications: [PublicationFeed] = [], commentaires: [CommentaireFeed] = [], horsLigne: Bool = false, compte: Bool = true) {
+    init(publications: [PublicationFeed] = [], commentaires: [CommentaireFeed] = [], horsLigne: Bool = false, compte: Bool = true,
+         blocages: [String] = []) {
         self.publications = publications
         self.commentairesEcrits = commentaires
         self.horsLigne = horsLigne
         self.compte = compte
+        self.blocages = blocages
     }
 
     func regler(horsLigne: Bool) { self.horsLigne = horsLigne }
+    func regler(signalementEchoue: Bool) { self.signalementEchoue = signalementEchoue }
+    func regler(compte: Bool) { self.compte = compte }
 
     private func verifier() throws {
         if horsLigne { throw ErreurFeed.reseau }
@@ -92,6 +98,7 @@ actor FauxServiceFeed: ServiceFeed {
 
     func signaler(_ signalement: SignalementFeed) async throws {
         try verifier()
+        if signalementEchoue { throw ErreurFeed.reseau }
         signalements.append(signalement)
     }
 
@@ -120,7 +127,12 @@ actor FauxServiceFeed: ServiceFeed {
 
     func bloquer(_ auteur: String) async throws {
         try verifier()
-        blocages.append(auteur)
+        if !blocages.contains(auteur) { blocages.append(auteur) }
+    }
+
+    func blocagesPrives() async throws -> [String] {
+        try verifier()
+        return blocages
     }
 }
 

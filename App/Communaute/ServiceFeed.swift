@@ -52,6 +52,8 @@ nonisolated protocol ServiceFeed: Sendable {
     func media(de publication: String) async throws -> URL
     /// Copie du blocage dans la base privée (le filtre, lui, est local).
     func bloquer(_ auteur: String) async throws
+    /// Les auteurs que j'ai bloqués, relus dans la base privée : après une réinstallation ou sur un autre iPhone, ils ne reviennent pas.
+    func blocagesPrives() async throws -> [String]
 }
 
 /// Les clubs de la personne. À aligner L22 : `ServiceClubs` donnera la vraie liste.
@@ -74,6 +76,13 @@ nonisolated protocol SourceContexte: Sendable {
     func departementsDeMaRegion() async -> [String]
     /// Le lieu du spot, pour le sélecteur quand on publie depuis le « + » du fil.
     func lieuCourant() async -> ContexteLieu
+    /// Vrai si l'app est en « Mode démo » (`demo.communaute`, réglages). Le fil montre alors des publications d'exemple, en lecture seule.
+    /// À brancher par A (L25) ; sans cela, seul l'absence de compte iCloud déclenche l'exemple.
+    func modeDemo() async -> Bool
+}
+
+extension SourceContexte {
+    func modeDemo() async -> Bool { false }
 }
 
 nonisolated struct ContexteFeed: Sendable, Equatable {
@@ -95,7 +104,7 @@ nonisolated struct ContexteFeed: Sendable, Equatable {
 }
 
 /// L'e-mail de signalement : un `mailto:` prérempli (CloudKit n'envoie pas d'e-mail seul, `moderation.md`).
-/// Seuls des identifiants partent : jamais de coordonnée.
+/// Des identifiants et le texte signalé partent : jamais de coordonnée.
 nonisolated enum CourrielSignalement {
     static let adresse = "fishme.app@gmail.com"
 
@@ -103,7 +112,10 @@ nonisolated enum CourrielSignalement {
         var composants = URLComponents()
         composants.scheme = "mailto"
         composants.path = adresse
-        let corps = "Type : \(s.typeCible.rawValue)\nIdentifiant : \(s.cible)\nAuteur : \(s.auteurCible)\nMotif : \(s.motif.titre)\nSignalement : \(s.id)"
+        var corps = "Type : \(s.typeCible.rawValue)\nIdentifiant : \(s.cible)\nAuteur : \(s.auteurCible)\nMotif : \(s.motif.titre)\nSignalement : \(s.id)"
+        // Décision de Titouan (19 oct.) : le texte signalé est joint, pour que la modération le lise sans le retrouver.
+        let extrait = s.extrait.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !extrait.isEmpty { corps += "\nTexte signalé : \(String(extrait.prefix(FiltreTexte.longueurMax)))" }
         composants.queryItems = [
             URLQueryItem(name: "subject", value: "Signalement FishMe : \(s.typeCible.rawValue)"),
             URLQueryItem(name: "body", value: corps),

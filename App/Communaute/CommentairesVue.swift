@@ -20,6 +20,8 @@ struct CommentairesVue: View {
                 BoutonRond(role: .fermer)
             }
             .padding(Espace.bord)
+            BandeauFeed(message: gestion.message)
+                .padding(.horizontal, Espace.bord)
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: Espace.m) {
                     if modele.commentaires.isEmpty {
@@ -51,7 +53,10 @@ struct CommentairesVue: View {
             MenuModeration(
                 estMien: gestion.estMienne(c.auteurNom),
                 onSignaler: { motif in
-                    Task { if let url = await modele.signaler(c, motif: motif) { ouvrirURL(url) } }
+                    Task {
+                        let issue = await modele.signaler(c, motif: motif)
+                        if let url = issue.courriel { ouvrirURL(url) }
+                    }
                 },
                 onBloquer: { Task { await modele.bloquer(c) } },
                 onSupprimer: { Task { await modele.supprimer(c) } })
@@ -64,6 +69,8 @@ struct CommentairesVue: View {
         VStack(alignment: .leading, spacing: Espace.xs) {
             if let refus = modele.refus {
                 Text(refus.message).font(Police.legende).foregroundStyle(Palette.alerte)
+            } else if gestion.exemples {
+                Text("Publications d'exemple : lecture seule.").font(Police.legende).foregroundStyle(Palette.encreDouce)
             } else if !gestion.peutPublier {
                 Text("Finis ton profil (15 ans ou plus) pour commenter.").font(Police.legende).foregroundStyle(Palette.encreDouce)
             }

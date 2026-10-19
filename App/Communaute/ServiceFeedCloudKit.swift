@@ -10,7 +10,7 @@ nonisolated struct ConfigurationFeed: Sendable {
 ///
 /// À VÉRIFIER SUR LE MAC (écrit de mémoire, non compilé ici) :
 /// - `CKDatabase.records(matching:inZoneWith:desiredKeys:resultsLimit:)` et `records(continuingMatchFrom:desiredKeys:resultsLimit:)` (async) ;
-/// - le prédicat `IN` combiné à `creeLe <` (`schema.md` le marque aussi à vérifier) ;
+/// - le prédicat `IN` combiné à `creeLe <` (`schema.md` le marque aussi à vérifier), découpé par paquets de 50 ;
 /// - les index « queryable » et « sortable » du tableau de bord (`schema.md`, « Index »), sinon les requêtes échouent ;
 /// - les rôles de sécurité de la base publique : seul le créateur modifie ou supprime son enregistrement.
 actor ServiceFeedCloudKit: ServiceFeed {
@@ -51,6 +51,14 @@ actor ServiceFeedCloudKit: ServiceFeed {
         }
     }
 
+    /// Valeurs d'un prédicat `IN` envoyées d'un coup : au-delà, on découpe (limite CloudKit non vérifiée ⚠, 50 est prudent).
+    static let tailleLot = 50
+
+    static func lots<T>(_ valeurs: [T], taille: Int = tailleLot) -> [[T]] {
+        guard taille > 0 else { return [valeurs] }
+        return stride(from: 0, to: valeurs.count, by: taille).map { Array(valeurs[$0 ..< min($0 + taille, valeurs.count)]) }
+    }
+
     func page(_ demande: DemandeSection) async throws -> PageFeed {
         guard !demande.valeurs.isEmpty else { return PageFeed(publications: [], encore: false) }
         return try await executer {
@@ -60,13 +68,22 @@ actor ServiceFeedCloudKit: ServiceFeed {
             case .amis: champ = "auteurNom"
             case .region: champ = "departement"
             }
-            var predicats = [NSPredicate(format: "%K IN %@", champ, demande.valeurs)]
-            if let avant = demande.avant { predicats.append(NSPredicate(format: "creeLe < %@", avant as NSDate)) }
-            let requete = CKQuery(recordType: FabriqueFeed.typePublication, predicate: NSCompoundPredicate(andPredicateWithSubpredicates: predicats))
-            requete.sortDescriptors = [NSSortDescriptor(key: "creeLe", ascending: false)]
-            let (resultats, _) = try await publique.records(matching: requete, desiredKeys: FabriqueFeed.clesDuFil, resultsLimit: demande.limite)
-            let publications = resultats.compactMap { _, resultat in (try? resultat.get()).flatMap(FabriqueFeed.publication(depuis:)) }
-            return PageFeed(publications: publications, encore: resultats.count >= demande.limite)
+            var toutes: [PublicationFeed] = []
+            var unePleine = false
+            for morceau in Self.lots(demande.valeurs) {
+                var predicats = [NSPredicate(format: "%K IN %@", champ, morceau)]
+                // Index CloudKit requis : creeLe queryable et sortable (le tableau de bord, `schema.md` ; sans cela « Voir plus » échoue).
+                if let avant = demande.avant { predicats.append(NSPredicate(format: "creeLe < %@", avant as NSDate)) }
+                let requete = CKQuery(recordType: FabriqueFeed.typePublication, predicate: NSCompoundPredicate(andPredicateWithSubpredicates: predicats))
+                requete.sortDescriptors = [NSSortDescriptor(key: "creeLe", ascending: false)]
+                let (resultats, _) = try await publique.records(matching: requete, desiredKeys: FabriqueFeed.clesDuFil, resultsLimit: demande.limite)
+                if resultats.count >= demande.limite { unePleine = true }
+                toutes += resultats.compactMap { _, resultat in (try? resultat.get()).flatMap(FabriqueFeed.publication(depuis:)) }
+            }
+            // Les paquets sont fusionnés par date (récent d'abord), sans doublon, puis coupés à la taille de la page.
+            var vus = Set<String>()
+            let triees = toutes.sorted { $0.creeLe > $1.creeLe }.filter { vus.insert($0.id).inserted }
+            return PageFeed(publications: Array(triees.prefix(demande.limite)), encore: unePleine || triees.count > demande.limite)
         }
     }
 
@@ -87,16 +104,28 @@ actor ServiceFeedCloudKit: ServiceFeed {
     func likes(de publications: [String]) async throws -> [String: [String]] {
         guard !publications.isEmpty else { return [:] }
         return try await executer {
-            let requete = CKQuery(recordType: FabriqueFeed.typeLike, predicate: NSPredicate(format: "publication IN %@", publications))
-            let (resultats, _) = try await publique.records(matching: requete, desiredKeys: ["publication", "auteurNom"],
-                                                            resultsLimit: CKQueryOperation.maximumResults)
             var parPublication: [String: [String]] = [:]
-            for (_, resultat) in resultats {
-                guard let record = try? resultat.get(), let pub = record["publication"] as? String,
-                      let auteur = record["auteurNom"] as? String else { continue }
-                parPublication[pub, default: []].append(auteur)
+            for morceau in Self.lots(publications) {
+                let requete = CKQuery(recordType: FabriqueFeed.typeLike, predicate: NSPredicate(format: "publication IN %@", morceau))
+                // Toutes les pages : le compte ne s'arrête pas au maximum d'une réponse.
+                var (resultats, curseur) = try await publique.records(matching: requete, desiredKeys: ["publication", "auteurNom"],
+                                                                      resultsLimit: CKQueryOperation.maximumResults)
+                Self.ajouterLikes(resultats, a: &parPublication)
+                while let suite = curseur {
+                    (resultats, curseur) = try await publique.records(continuingMatchFrom: suite, desiredKeys: ["publication", "auteurNom"],
+                                                                      resultsLimit: CKQueryOperation.maximumResults)
+                    Self.ajouterLikes(resultats, a: &parPublication)
+                }
             }
             return parPublication
+        }
+    }
+
+    private static func ajouterLikes(_ resultats: [(CKRecord.ID, Result<CKRecord, any Error>)], a parPublication: inout [String: [String]]) {
+        for (_, resultat) in resultats {
+            guard let record = try? resultat.get(), let pub = record["publication"] as? String,
+                  let auteur = record["auteurNom"] as? String else { continue }
+            parPublication[pub, default: []].append(auteur)
         }
     }
 
@@ -112,6 +141,7 @@ actor ServiceFeedCloudKit: ServiceFeed {
     func commentaires(de publication: String, apres: Date?, limite: Int) async throws -> [CommentaireFeed] {
         try await executer {
             var predicats = [NSPredicate(format: "publication == %@", publication)]
+            // Index CloudKit requis : creeLe queryable et sortable (sinon les commentaires suivants échouent).
             if let apres { predicats.append(NSPredicate(format: "creeLe > %@", apres as NSDate)) }
             let requete = CKQuery(recordType: FabriqueFeed.typeCommentaire, predicate: NSCompoundPredicate(andPredicateWithSubpredicates: predicats))
             requete.sortDescriptors = [NSSortDescriptor(key: "creeLe", ascending: true)]
@@ -136,6 +166,21 @@ actor ServiceFeedCloudKit: ServiceFeed {
 
     func bloquer(_ auteur: String) async throws {
         try await executer { try await ecrire([FabriqueFeed.recordBlocage(auteur)], dans: privee) }
+    }
+
+    func blocagesPrives() async throws -> [String] {
+        try await executer {
+            // ⚠ à vérifier sur le Mac : une requête `TRUEPREDICATE` sur la base privée exige `recordName` queryable (tableau de bord).
+            let requete = CKQuery(recordType: FabriqueFeed.typeBlocage, predicate: NSPredicate(value: true))
+            var noms: [String] = []
+            var (resultats, curseur) = try await privee.records(matching: requete, desiredKeys: ["bloque"], resultsLimit: CKQueryOperation.maximumResults)
+            noms += resultats.compactMap { _, r in (try? r.get())?["bloque"] as? String }
+            while let suite = curseur {
+                (resultats, curseur) = try await privee.records(continuingMatchFrom: suite, desiredKeys: ["bloque"], resultsLimit: CKQueryOperation.maximumResults)
+                noms += resultats.compactMap { _, r in (try? r.get())?["bloque"] as? String }
+            }
+            return noms
+        }
     }
 
     /// Efface ce que cet auteur a mis en base publique. Les enregistrements des autres ne se touchent pas.
@@ -179,6 +224,9 @@ actor ServiceFeedCloudKit: ServiceFeed {
     private func executer<T>(_ travail: () async throws -> T) async throws -> T {
         do {
             return try await travail()
+        } catch is CancellationError {
+            // Une tâche annulée (changement de page) n'est pas une erreur à afficher.
+            throw CancellationError()
         } catch {
             throw Self.traduire(error)
         }

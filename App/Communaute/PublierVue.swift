@@ -38,8 +38,9 @@ struct PublierVue: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.l) {
-                HStack {
+                HStack(alignment: .top) {
                     Text("Publier").font(Police.titre).foregroundStyle(Palette.encre).accessibilityAddTraits(.isHeader)
+                        .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                     BoutonRond(role: .fermer)
                 }
@@ -50,6 +51,7 @@ struct PublierVue: View {
                 if let erreur = modele.erreur { Text(erreur).font(Police.detail).foregroundStyle(Palette.alerte) }
                 if !gestion.peutPublier {
                     Text("Finis ton profil (15 ans ou plus) pour publier.").font(Police.detail).foregroundStyle(Palette.encreDouce)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                 Button(modele.enCours ? "Envoi…" : "Publier") {
                     Task { if await modele.publier(avec: gestion) { fermer() } }
@@ -97,13 +99,24 @@ struct PublierVue: View {
                 .padding(Espace.m)
                 .frame(minHeight: Gabarit.zoneTactile)
                 .tuileFishMe()
-            HStack {
-                if let refus = modele.refus { Text(refus.message).foregroundStyle(Palette.alerte) }
-                Spacer()
-                Text("\(modele.legende.count)/\(FiltreTexte.longueurMax)").foregroundStyle(Palette.encreDouce)
+            // Le refus et le compteur côte à côte, ou l'un sous l'autre en très grand texte.
+            ViewThatFits(in: .horizontal) {
+                HStack {
+                    if let refus = modele.refus { Text(refus.message).foregroundStyle(Palette.alerte) }
+                    Spacer()
+                    compteur
+                }
+                VStack(alignment: .leading, spacing: Espace.xs) {
+                    if let refus = modele.refus { Text(refus.message).foregroundStyle(Palette.alerte) }
+                    compteur
+                }
             }
             .font(Police.legende)
         }
+    }
+
+    private var compteur: some View {
+        Text("\(modele.legende.count)/\(FiltreTexte.longueurMax)").foregroundStyle(Palette.encreDouce)
     }
 
     /// Trois choix : « La Marne · 94 », « 94 », « Aucun lieu ». En très grand texte, des lignes plutôt que des segments.

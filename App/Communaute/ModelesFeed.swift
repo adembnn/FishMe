@@ -57,6 +57,8 @@ nonisolated struct PublicationFeed: Sendable, Equatable, Identifiable {
     var vignette: URL?
     var nbLikes: Int = 0
     var aime: Bool = false
+    /// Publication d'exemple du mode démo : marquée « Exemple », lecture seule, jamais envoyée ni gardée en cache.
+    var exemple = false
 
     /// Le nom lisible de l'auteur (À aligner L21 : `surnomAffiche`). Le `recordName` est `p-` + surnom normalisé.
     var auteurAffiche: String { AuteurFeed.nomLisible(auteurNom) }
@@ -93,19 +95,20 @@ nonisolated struct CarteLiee: Sendable, Equatable {
     var tailleCm: Double?
 }
 
-/// Liste fermée (`moderation.md`) : pas de texte libre.
+/// Liste fermée (`moderation.md`) : pas de texte libre. Même liste, mêmes mots et mêmes valeurs brutes que `MotifSignalement` de L21
+/// (profils) : l'énumération reste propre à L23 (pas de dépendance entre lots), alignée sur ses libellés.
 nonisolated enum MotifSignalementPublication: String, Sendable, CaseIterable, Identifiable {
-    case choquant, haine, nudite, cruaute, pecheIllegale, coinExact, mineur, spam, autre
+    case choquant, harcelement, nudite, cruaute, pecheIllegale, coinExact, mineur, spam, autre
     var id: String { rawValue }
     var titre: String {
         switch self {
         case .choquant: "Contenu choquant ou violent"
-        case .haine: "Haine ou harcèlement"
+        case .harcelement: "Haine ou harcèlement"
         case .nudite: "Nudité ou contenu sexuel"
         case .cruaute: "Cruauté envers un animal"
         case .pecheIllegale: "Pêche illégale"
         case .coinExact: "Coin de pêche exact révélé"
-        case .mineur: "Mineur ou photo sans accord"
+        case .mineur: "Personne mineure sans accord"
         case .spam: "Spam ou publicité"
         case .autre: "Autre"
         }
@@ -113,14 +116,14 @@ nonisolated enum MotifSignalementPublication: String, Sendable, CaseIterable, Id
     var symbole: String {
         switch self {
         case .choquant: "exclamationmark.triangle"
-        case .haine: "hand.raised"
+        case .harcelement: "bubble.left.and.exclamationmark.bubble.right"
         case .nudite: "eye.slash"
         case .cruaute: "pawprint"
-        case .pecheIllegale: "xmark.shield"
+        case .pecheIllegale: "scalemass"
         case .coinExact: "mappin.slash"
-        case .mineur: "person.fill.questionmark"
+        case .mineur: "person.crop.circle.badge.exclamationmark"
         case .spam: "megaphone"
-        case .autre: "ellipsis.circle"
+        case .autre: "flag"
         }
     }
 }
@@ -137,6 +140,25 @@ nonisolated struct SignalementFeed: Sendable, Equatable {
     var signalePar: String
     /// Sert à l'e-mail seulement ; jamais écrit dans l'enregistrement.
     var auteurCible: String
+    /// Le texte signalé (légende ou commentaire), joint à l'e-mail seulement ; jamais écrit dans l'enregistrement.
+    var extrait: String = ""
+}
+
+/// Ce qui s'est vraiment passé. « Signalé » ne se dit que si l'enregistrement `Signalement` a réussi.
+nonisolated enum IssueSignalement: Sendable, Equatable {
+    /// La trace est écrite. `courriel` : l'e-mail prérempli, seulement si Mail est disponible ; il n'est jamais dit « envoyé ».
+    case enregistre(courriel: URL?)
+    /// L'écriture a échoué : le signalement est dans la file de reprise, rejouée au prochain chargement. Même e-mail possible.
+    case pasEnregistre(courriel: URL?)
+    /// Mode démo : masqué chez toi, rien n'est envoyé.
+    case exemple
+
+    var courriel: URL? {
+        switch self {
+        case .enregistre(let url), .pasEnregistre(let url): url
+        case .exemple: nil
+        }
+    }
 }
 
 nonisolated enum ErreurFeed: Error, Equatable {
@@ -146,5 +168,7 @@ nonisolated enum ErreurFeed: Error, Equatable {
     case iCloudPlein
     case introuvable
     case refuse
+    /// Publications d'exemple (mode démo) : on lit, on n'écrit rien.
+    case lectureSeule
     case autre
 }

@@ -29,7 +29,7 @@ final class ModelePublication {
         self.contexteLieu = contexteLieu
         self.clubs = clubs
         self.carte = carte
-        // Le premier choix proposé ; le premier club s'il y en a un.
+        // Décision de Titouan (19 oct.) : « département seul » par défaut, jamais le cours d'eau ; le premier club s'il y en a un.
         self.mode = LieuPublication.parDefaut(contexteLieu)
         self.club = clubs.first?.id
     }
@@ -126,6 +126,8 @@ final class ModeleCommentaires {
             commentaires = base + recus.filter { gestion.estVisible($0) }
             encore = recus.count >= 20
             erreur = nil
+        } catch is CancellationError {
+            // La feuille s'est fermée : pas de message parasite.
         } catch {
             erreur = "Commentaires indisponibles hors ligne."
         }
@@ -150,7 +152,7 @@ final class ModeleCommentaires {
     }
 
     /// Signalé : masqué ici tout de suite.
-    func signaler(_ c: CommentaireFeed, motif: MotifSignalementPublication) async -> URL? {
+    func signaler(_ c: CommentaireFeed, motif: MotifSignalementPublication) async -> IssueSignalement {
         commentaires.removeAll { $0.id == c.id }
         return await gestion.signaler(c, motif: motif)
     }

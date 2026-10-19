@@ -97,21 +97,72 @@ nonisolated enum PreparationMedia {
         return MediaPret(genre: .video, fichier: fichier, vignette: vignette, dureeS: min(max(secondes, 1), dureeMaxS))
     }
 
-    /// Vrai si le fichier vidéo porte une balise de lieu (métadonnée d'emplacement QuickTime ou ISO 6709).
+    // MARK: Contrôle final « aucun lieu »
+
+    /// Une métadonnée réduite à ce qui sert à reconnaître un lieu : son identifiant, sa clé commune et sa valeur texte.
+    /// Sépare la lecture AVFoundation (⚠ non vérifiable ici) de la décision (testée sur des jeux simulés).
+    nonisolated struct ElementMetadonnee: Sendable, Equatable {
+        var identifiant: String
+        var cleCommune: String
+        var valeur: String
+    }
+
+    /// Les identifiants et clés qui portent un lieu : QuickTime (`com.apple.quicktime.location.ISO6709`, `©xyz`), ISO 6709, GPS.
+    static func estBaliseLieu(_ e: ElementMetadonnee) -> Bool {
+        let identifiant = e.identifiant.lowercased()
+        let cle = e.cleCommune.lowercased()
+        if identifiant.contains("location") || identifiant.contains("iso6709") || identifiant.contains("xyz") || identifiant.contains("gps") { return true }
+        if cle == "location" || cle == "gps" { return true }
+        return ressembleAISO6709(e.valeur)
+    }
+
+    /// « +48.8566+002.3522/ » : une latitude et une longitude collées, la forme ISO 6709 des vidéos de l'iPhone.
+    static func ressembleAISO6709(_ valeur: String) -> Bool {
+        valeur.range(of: "[+-][0-9]{1,3}[.][0-9]+[+-][0-9]{1,3}", options: .regularExpression) != nil
+    }
+
+    static func contientBaliseLieu(parmi elements: [ElementMetadonnee]) -> Bool {
+        elements.contains(where: estBaliseLieu)
+    }
+
+    /// Filet de sécurité : les marques d'un lieu cherchées dans les octets du fichier (atome « ©xyz », clé ISO 6709, clé QuickTime).
+    static func contientBaliseLieu(octets: Data) -> Bool {
+        let marques: [Data] = [Data([0xA9, 0x78, 0x79, 0x7A]), Data("ISO6709".utf8), Data("quicktime.location".utf8)]
+        return marques.contains { octets.range(of: $0) != nil }
+    }
+
+    /// Vrai si le fichier vidéo porte une balise de lieu : métadonnées du fichier, de TOUS ses formats (dont `keys` et `udta`),
+    /// de chaque piste, puis les octets. ⚠ à vérifier sur le Mac : `load(.availableMetadataFormats)`, `loadMetadata(for:)`,
+    /// `load(.tracks)` ; repli : les octets seuls restent testés.
     static func contientBaliseLieu(_ url: URL) async -> Bool {
         let asset = AVURLAsset(url: url)
-        var elements: [AVMetadataItem] = []
-        if let m = try? await asset.load(.metadata) { elements += m }
-        if let c = try? await asset.load(.commonMetadata) { elements += c }
-        for element in elements {
-            let identifiant = element.identifier?.rawValue.lowercased() ?? ""
-            let cle = element.commonKey?.rawValue.lowercased() ?? ""
-            if identifiant.contains("location") || identifiant.contains("iso6709") || cle == "location" { return true }
+        var items: [AVMetadataItem] = []
+        if let m = try? await asset.load(.metadata) { items += m }
+        if let c = try? await asset.load(.commonMetadata) { items += c }
+        if let formats = try? await asset.load(.availableMetadataFormats) {
+            for format in formats {
+                if let m = try? await asset.loadMetadata(for: format) { items += m }
+            }
         }
-        // Filet de sécurité : l'atome « ©xyz » (emplacement QuickTime) cherché dans les octets du fichier.
-        if let octets = try? Data(contentsOf: url, options: .mappedIfSafe), octets.range(of: Data([0xA9, 0x78, 0x79, 0x7A])) != nil {
-            return true
+        if let pistes = try? await asset.load(.tracks) {
+            for piste in pistes {
+                if let m = try? await piste.load(.metadata) { items += m }
+                if let c = try? await piste.load(.commonMetadata) { items += c }
+                if let formats = try? await piste.load(.availableMetadataFormats) {
+                    for format in formats {
+                        if let m = try? await piste.loadMetadata(for: format) { items += m }
+                    }
+                }
+            }
         }
+        var elements: [ElementMetadonnee] = []
+        for item in items {
+            let valeur = (try? await item.load(.stringValue)) ?? ""
+            elements.append(ElementMetadonnee(identifiant: item.identifier?.rawValue ?? "", cleCommune: item.commonKey?.rawValue ?? "",
+                                              valeur: valeur))
+        }
+        if contientBaliseLieu(parmi: elements) { return true }
+        if let octets = try? Data(contentsOf: url, options: .mappedIfSafe), contientBaliseLieu(octets: octets) { return true }
         return false
     }
 }
