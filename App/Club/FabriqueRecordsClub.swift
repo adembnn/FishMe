@@ -37,7 +37,7 @@ nonisolated enum FabriqueRecordsClub {
         record["nom"] = club.nom
         if let poisson = club.poissonId { record["poissonId"] = poisson }
         record["fondateur"] = club.fondateur
-        record["retires"] = club.retires
+        record["retires"] = club.retires as NSArray
         record["ferme"] = club.ferme ? 1 : 0
         record["creeLe"] = club.creeLe
     }

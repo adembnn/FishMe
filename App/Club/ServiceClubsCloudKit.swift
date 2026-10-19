@@ -138,7 +138,7 @@ actor ServiceClubsCloudKit: ServiceClubs {
             guard let club = FabriqueRecordsClub.club(depuis: record) else { throw ErreurClub.introuvable }
             guard !club.retires.contains(profil) else { return }
             // Seul le créateur du `Club` (le fondateur) peut l'écrire : un autre reçoit `permissionFailure`, traduit en `.refuse`.
-            record["retires"] = club.retires + [profil]
+            record["retires"] = (club.retires + [profil]) as NSArray
             try await ecrire([record], dans: base, politique: .changedKeys)
         }
     }
