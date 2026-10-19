@@ -11,6 +11,10 @@ echo "== Verification de l'acces a Hub'Eau"
 code=$(curl -sS -o /dev/null -w "%{http_code}" "https://hubeau.eaufrance.fr/api/v1/etat_piscicole/stations?size=1" || true)
 [ "$code" = "200" ] || [ "$code" = "206" ] || { echo "Hub'Eau injoignable (HTTP $code)"; exit 1; }
 
+echo "== Verification de l'acces au trace des cours d'eau (Sandre, D5)"
+code=$(curl -sS -o /dev/null -w "%{http_code}" "https://services.sandre.eaufrance.fr/geo/sandre?SERVICE=WFS&VERSION=2.0.0&REQUEST=DescribeFeatureType&TYPENAMES=sa:CoursEau_FXX" || true)
+[ "$code" = "200" ] || { echo "Sandre injoignable (HTTP $code)"; exit 1; }
+
 echo "== Tests"
 "$PY" -m unittest discover -s tests
 
@@ -35,8 +39,14 @@ for g in "${GROUPES[@]}"; do
   "$PY" hubeau.py --recuperer-seulement --departement $g || echo "(groupe incomplet : relancer lancer.sh pour reprendre)"
 done
 
-echo "== Fabrication des 3 fichiers (France entiere ; les pages deja en cache ne sont pas redemandees)"
+echo "== Fabrication des 3 fichiers + recalage D5 sur le trace Sandre (telecharge une requete a la fois, cache/trace ; les pages deja en cache ne sont pas redemandees)"
 "$PY" hubeau.py
+
+echo "== Controle D5 (recalee sur 100 %, 90 % au moins a true, echantillon de 20 a 50 m du trace)"
+# le controle general peut signaler d'autres fichiers du depot : on ne regarde que les lignes qui parlent des stations
+controle=$("$PY" ../../verifier_donnees.py --stations sortie/stations-especes.json --trace cache/trace || true)
+echo "$controle" | grep -i "stations-especes" || true
+if echo "$controle" | grep -q "ERREUR.*stations-especes"; then echo "Recalage insuffisant : rien n'est publie (voir ci-dessus)"; exit 1; fi
 
 cd sortie
 ls -l stations-especes.json rarete-departements.json stations-hydro.json
