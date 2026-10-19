@@ -90,7 +90,8 @@ struct ListeEnviesTests {
         var l = ListeEnvies()
         l.ajouter(brochet, le: date(1))
         let avant = l
-        #expect(!l.retirerLesExaucees(cartes: [], le: date(9)))
+        let retiree = l.retirerLesExaucees(cartes: [], le: date(9))
+        #expect(!retiree)
         #expect(l == avant)
     }
 
