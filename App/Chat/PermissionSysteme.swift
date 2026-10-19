@@ -17,3 +17,15 @@ nonisolated struct PermissionSysteme: PermissionNotifications {
         (try? await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])) ?? false
     }
 }
+
+extension PermissionSysteme {
+    func publierLocale(_ texte: String) async {
+        guard await statut() == .accorde else { return }
+        let contenu = UNMutableNotificationContent()
+        contenu.body = texte
+        contenu.sound = .default
+        // Un seul identifiant : plusieurs messages d'affilée ne font qu'une alerte.
+        let demande = UNNotificationRequest(identifier: "chat.nouveau", content: contenu, trigger: nil)
+        try? await UNUserNotificationCenter.current().add(demande)
+    }
+}

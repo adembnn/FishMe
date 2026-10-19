@@ -8,14 +8,20 @@ nonisolated enum FabriqueRecordsChat {
     static let typeClub = "MessageClub"
     static let typeAmi = "MessageAmi"
 
-    /// Dans R2 le champ `auteurNom` porte l'identifiant du profil de l'auteur (pas son nom).
+    /// Dans R2 le champ `auteurNom` porte l'identifiant du profil de l'auteur (pas son nom). ATTENTION : ce champ est écrit par le
+    /// client, donc falsifiable. Il n'est JAMAIS lu pour savoir qui a écrit : on se fie à `creatorUserRecordID` (voir `message`).
     static let champsClub: Set<String> = ["club", "auteurNom", "surnom", "texte", "creeLe"]
     static let champsAmi: Set<String> = ["auteurNom", "surnom", "texte", "creeLe"]
 
     static let typeSignalement = "Signalement"
-    static let champsSignalement: Set<String> = ["cible", "typeCible", "motif", "signalePar", "creeLe"]
+    static let champsSignalement: Set<String> = ["cible", "typeCible", "motif", "signalePar", "creeLe", "texte"]
 
-    /// Signalement d'un message (R2 `schema.md`, type 8) : un identifiant, un motif de la liste fermée, jamais de texte libre ni de contenu.
+    /// Taille maximale du texte copié dans un signalement.
+    static let texteSignalementMax = 500
+
+    /// Signalement d'un message (R2 `schema.md`, type 8) : un identifiant, un motif de la liste fermée (mêmes valeurs que le
+    /// `MotifSignalement` de L21), et le TEXTE du message signalé (champ `texte`, 500 caractères au plus, à ajouter au schéma) :
+    /// décision de Titouan du 19 oct., pour que l'équipe puisse lire le message. Jamais de coordonnée : le filtre de saisie les a refusées.
     static func recordSignalement(_ s: SignalementEnAttente) -> CKRecord {
         let record = CKRecord(recordType: typeSignalement, recordID: CKRecord.ID(recordName: s.id.uuidString))
         record["cible"] = s.cible.uuidString
@@ -23,6 +29,7 @@ nonisolated enum FabriqueRecordsChat {
         record["motif"] = s.motif
         record["signalePar"] = s.signalePar
         record["creeLe"] = s.date
+        if let texte = s.texte, !texte.isEmpty { record["texte"] = String(texte.prefix(texteSignalementMax)) }
         return record
     }
 
@@ -48,14 +55,28 @@ nonisolated enum FabriqueRecordsChat {
         record["creeLe"] = message.date
     }
 
+    /// Vrai si le créateur CloudKit d'un enregistrement est ce compte : iCloud rend `__defaultOwner__` pour le compte courant dans sa
+    /// propre base, et son vrai identifiant ailleurs ; on accepte les deux (⚠ comportement à vérifier sur appareil).
+    static func createurEstMoi(_ createur: String?, monIdentifiant: String?) -> Bool {
+        guard let createur else { return false }
+        return createur == CKCurrentUserDefaultName || createur == monIdentifiant
+    }
+
     /// Relit un enregistrement. `nil` si un champ manque (enregistrement abîmé : on l'ignore plutôt que d'afficher du vide).
-    static func message(depuis record: CKRecord, conversation: ConversationID) -> MessageChat? {
+    /// L'auteur vient de `creatorUserRecordID` (posé par iCloud, non falsifiable), jamais du champ `auteurNom` ni de `surnom` :
+    /// `GestionChat` en déduit le profil de l'expéditeur depuis l'annuaire. Un membre ne peut donc pas écrire « en tant que » un autre.
+    static func message(depuis record: CKRecord, conversation: ConversationID, monIdentifiant: String? = nil) -> MessageChat? {
         guard let id = UUID(uuidString: record.recordID.recordName),
-              let auteur = record["auteurNom"] as? String,
               let texte = record["texte"] as? String,
               let date = record["creeLe"] as? Date else { return nil }
-        let surnom = (record["surnom"] as? String) ?? "Un pêcheur"
-        return MessageChat(id: id, conversation: conversation, auteurId: auteur, surnom: surnom,
-                           texte: String(texte.prefix(FiltreMessage.longueurMax)), date: date, etat: .envoye)
+        let createur: String
+        if let brut = record.creatorUserRecordID?.recordName {
+            createur = createurEstMoi(brut, monIdentifiant: monIdentifiant) ? MessageChat.createurMoi : brut
+        } else {
+            createur = "inconnu"
+        }
+        return MessageChat(id: id, conversation: conversation, auteurId: "ck:\(createur)", surnom: "Un pêcheur",
+                           texte: String(texte.prefix(FiltreMessage.longueurMax)), date: date, etat: .envoye,
+                           createurCloudKit: createur)
     }
 }

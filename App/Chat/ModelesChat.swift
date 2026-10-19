@@ -41,6 +41,13 @@ nonisolated struct MessageChat: Codable, Hashable, Identifiable, Sendable {
     var texte: String
     var date: Date
     var etat: EtatMessage = .envoye
+    /// Qui a RÉELLEMENT écrit l'enregistrement, selon iCloud (`creatorUserRecordID`), jamais selon un champ que le client remplit.
+    /// `createurMoi` : c'est moi. `nil` : message écrit ici, pas encore relu depuis iCloud, ou message du faux service.
+    /// `GestionChat` en déduit `auteurId` et `surnom` depuis l'annuaire (profil de l'expéditeur) : le nom reçu n'est pas cru.
+    var createurCloudKit: String? = nil
+
+    /// Marque posée par le service quand le créateur de l'enregistrement est le compte de cet iPhone.
+    static let createurMoi = "__moi__"
 }
 
 /// Une ligne de la liste des conversations.
@@ -63,6 +70,10 @@ nonisolated struct SignalementEnAttente: Codable, Hashable, Identifiable, Sendab
     var motif: String
     var signalePar: String
     var date: Date
+    /// Texte du message signalé, copié dans l'enregistrement pour que l'équipe puisse le lire (décision de Titouan, 19 oct. :
+    /// chat d'ami et de club en zone partagée, l'équipe n'y a pas accès autrement). 500 caractères au plus. Optionnel : les
+    /// fichiers écrits avant cette version n'ont pas ce champ.
+    var texte: String? = nil
 }
 
 nonisolated enum ErreurChat: Error, Equatable, Sendable {
