@@ -54,8 +54,9 @@ struct JourCivilTests {
 
     @Test("Le 1er janvier 1970 est le jour zéro")
     func origine() throws {
-        #expect(try jour(1970, 1, 1).numeroDeJour == 0)
-        #expect(JourCivil.depuisNumero(0) == (try jour(1970, 1, 1)))
+        let zero = try jour(1970, 1, 1)
+        #expect(zero.numeroDeJour == 0)
+        #expect(JourCivil.depuisNumero(0) == zero)
     }
 
     @Test("Aller-retour sur plusieurs années")
@@ -101,8 +102,9 @@ struct JourCivilTests {
         calendrier.timeZone = try #require(TimeZone(identifier: "Europe/Paris"))
         // 31/12/2026 23:30 à Paris = 22:30 UTC : le jour civil à Paris reste le 31.
         let date = try #require(calendrier.date(from: DateComponents(year: 2026, month: 12, day: 31, hour: 23, minute: 30)))
-        #expect(JourCivil(date: date, calendrier: calendrier) == (try jour(2026, 12, 31)))
+        let attendu = try jour(2026, 12, 31)
+        #expect(JourCivil(date: date, calendrier: calendrier) == attendu)
         let midi = try #require(jour(2026, 12, 31).date(calendrier: calendrier))
-        #expect(JourCivil(date: midi, calendrier: calendrier) == (try jour(2026, 12, 31)))
+        #expect(JourCivil(date: midi, calendrier: calendrier) == attendu)
     }
 }
