@@ -1,3 +1,4 @@
+import Core
 import Foundation
 
 /// Le videur à la saisie (règle 1.2 d'Apple) : longueur, mots interdits, et tout ce qui ressemble à une position de pêche.
@@ -13,13 +14,6 @@ nonisolated enum FiltreMessage {
         /// Coordonnée, lien de carte : la règle d'or veut qu'aucun coin exact ne sorte de l'iPhone.
         case position
     }
-
-    /// Liste de départ, volontairement courte (mots entiers seulement, jamais de sous-chaîne).
-    /// À aligner L23 : une seule liste partagée (R2 `moderation.md`, liste LDNOOBW relue, faux positifs de pêche retirés).
-    static let motsInterdits: Set<String> = [
-        "connard", "connasse", "salope", "pute", "enculer", "encule", "batard", "fdp", "ntm", "nique", "niquer",
-        "negre", "bougnoule", "tapette", "pedophile", "nazi",
-    ]
 
     static func verifier(_ brut: String) -> Verdict {
         let texte = brut.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -53,20 +47,9 @@ nonisolated enum FiltreMessage {
         normaliser(texte).split(whereSeparator: { !$0.isLetter }).map(String.init)
     }
 
+    /// La liste vit dans `Core` (`MotsInterditsFR`, LDNOOBW CC-BY-4.0, attribution dans Sources) : une seule pour tout le réseau.
     static func contientMotInterdit(_ texte: String) -> Bool {
-        let tous = mots(de: texte)
-        if tous.contains(where: { motsInterdits.contains($0) }) { return true }
-        // « c o n n a r d » ou « c-o-n-n-a-r-d » : on recolle les suites de lettres isolées.
-        var suite = ""
-        for mot in tous + [""] {
-            if mot.count == 1 {
-                suite += mot
-            } else {
-                if suite.count >= 3, motsInterdits.contains(suite) { return true }
-                suite = ""
-            }
-        }
-        return false
+        MotsInterditsFR.contient(texte)
     }
 
     // MARK: Positions
