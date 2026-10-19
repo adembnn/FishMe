@@ -36,7 +36,7 @@ Les 20 lignes brutes de chaque passage sont dans `outils/reseau/RESULTATS.md` ; 
 | notification visible fiable nécessaire | notification avec texte (push visible) : demande un serveur ou une notification locale, hors périmètre CloudKit seul | oui |
 La fiche L24 impose déjà : « envoyé », jamais « lu » ; permission de notifier au premier message ; un abonnement par conversation, pas par message.
 
-## Recommandations sur ce que le chat promet
+## Conseils sur ce que le chat promet
 - Écrire à l'écran « envoyé » et jamais « lu » ni « en ligne » : CloudKit ne sait pas si l'autre a lu. Appui : fiche L24, piège « Promettre lu » (docs/fiches/L24.md). Change avec un budget : non.
 - Un chat « à la minute » est le plus honnête tant que la mesure n'est pas faite. Appui : décision 6 du 19 oct. (CLAUDE.md). Change avec un budget : non.
 - Si les mesures montrent des pertes en arrière-plan, passer à un chat « tirer pour rafraîchir + rafraîchissement toutes les 10 s app ouverte » et retirer la promesse de notification. Appui : fiche L24, ligne « Réception ». Change avec un budget : non.

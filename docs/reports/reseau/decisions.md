@@ -23,7 +23,7 @@ Prototype : `outils/reseau/` (code non compilé, mode d'emploi pour Sullyvan, mo
 | L24 Chat | le chat de club oui ; les messages d'amis attendent `latence.md` | `CKQuerySubscription` sur base partagée à vérifier |
 | S2 Juridique | oui | relecture des textes par MWM |
 
-## Recommandations avec leur effet budget
+## Conseils et effet budget
 | # | Recommandation | Change avec un budget |
 |---|---|---|
 | 1 | Rester sur CloudKit base publique jusqu'à ce que `quota.md` ou `latence.md` dise le contraire (décision 2) | non |
@@ -38,7 +38,7 @@ Prototype : `outils/reseau/` (code non compilé, mode d'emploi pour Sullyvan, mo
 | 10 | Modération externe 24 h / 7 j | **oui** |
 | 11 | Hébergement vidéo hors CloudKit si le quota casse | **oui** |
 | 12 | Consentement avant de mettre un club local en ligne | non |
-Cadre MWM après le jury (publie-t-il, finance-t-il) : pas encore connu (`CLAUDE.md`). Tout ce qui est « non » ci-dessus tient avec 0 € ; les quatre « oui » demandent un financement ou un accord MWM.
+Cadre MWM après le jury (publie-t-il, finance-t-il) : pas encore connu (`CLAUDE.md`). Tout ce qui est « non » ci-dessus tient sans budget (estimation) ; les quatre « oui » demandent un financement ou un accord MWM.
 
 ## Règles d'or : vérifiées
 | Règle | Où elle tient |

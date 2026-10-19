@@ -40,7 +40,7 @@ Le quota « par utilisateur » est une moyenne liée au nombre d'utilisateurs ac
 2. Écart de base de données : les enregistrements eux-mêmes (une `Publication` sans média). À comparer à l'écart d'assets : c'est la part « métadonnées ».
 3. Rien n'est retenu si les compteurs n'ont pas bougé : attendre et relever à nouveau, ne pas conclure sur un compteur en retard.
 
-## Projection pour 1 000, 10 000 et 100 000 utilisateurs actifs
+## Projection pour mille, dix mille et cent mille utilisateurs actifs
 Formule (à remplir, aucun chiffre inventé) : consommation mensuelle par pêcheur = (publications photo par mois × 300 Ko) + (publications vidéo par mois × taille réelle d'une vidéo, à mesurer) + (métadonnées mesurées). Mois avant plafond = quota par utilisateur actif (lu dans le tableau de bord) ÷ consommation mensuelle.
 | Utilisateurs actifs | Quota total d'après Apple | Conso par pêcheur et par mois | Mois avant plafond |
 |---|---|---|---|

@@ -13,7 +13,7 @@ Une app avec du contenu d'utilisateur doit avoir ([guidelines](https://developer
 4. « Published contact information so users can easily reach you ».
 ⚠ Le texte lu ne contient aucun chiffre en heures. **« Retrait sous 24 h » est l'engagement de FishMe** (CGU article 8, déjà publié), pas une exigence écrite d'Apple. Pour Apple c'est « timely » ; nous tenons 24 h parce que nous l'avons écrit aux utilisateurs.
 
-## Le circuit retenu (décision 5)
+## Le circuit retenu (choix 5 du 19 oct.)
 | Étape | Qui | Ce qui se passe | Où dans le code |
 |---|---|---|---|
 | 1. Signaler | le pêcheur | menu « Signaler » sur chaque publication, commentaire, message, profil, carte de club ; motif dans une liste fermée, pas de texte libre | L21 à L24 |
@@ -58,7 +58,7 @@ Contenu choquant ou violent · haine ou harcèlement · nudité ou contenu sexue
 | Masquage automatique à un seuil de signalements | retire vite | écarté par Adem le 19 oct. (brigadage possible) | non |
 | Service d'e-mail automatique et liste noire | e-mail réel, sanction réelle | hébergement + développement | oui |
 | Modération externe (prestataire) | 24 h / 7 j sans personne de garde | contrat récurrent | oui |
-| Réponse automatique au signalant | « reçu, traité sous 24 h » | 0 € | non |
+| Réponse automatique au signalant | « reçu, traité sous 24 h » | aucun coût (estimation) | non |
 
 ## Ce que la personne de garde tient (journal)
 Date et heure du signalement · identifiant · motif · décision (retiré / maintenu) · heure du retrait · réponse envoyée. Un tableau partagé suffit. Ce journal prouve le délai de 24 h si Apple le demande.
