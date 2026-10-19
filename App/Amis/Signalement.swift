@@ -15,4 +15,17 @@ nonisolated enum Signalement {
         ]
         return composants.url
     }
+
+    /// Signaler un profil : l'identifiant public du profil et le motif (liste fermée). Rien d'autre ne part.
+    static func url(contact: String, profilID: String, motif: MotifSignalement) -> URL? {
+        var composants = URLComponents()
+        composants.scheme = "mailto"
+        composants.path = contact
+        composants.queryItems = [
+            URLQueryItem(name: "subject", value: "Signalement d'un profil"),
+            URLQueryItem(name: "body", value: "Profil : \(profilID)
+Motif : \(motif.titre)"),
+        ]
+        return composants.url
+    }
 }

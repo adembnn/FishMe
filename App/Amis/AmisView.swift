@@ -189,7 +189,7 @@ struct AmisView: View {
 
     private func ligne(_ ami: Ami, detail: String, ouvrable: Bool) -> some View {
         HStack(spacing: 12) {
-            Avatar(nom: ami.nom)
+            Avatar(nom: ami.nom, image: gestion.avatars[ami.id])
             VStack(alignment: .leading, spacing: 2) {
                 Text(ami.nom).font(JetonAmis.police(17)).foregroundStyle(JetonAmis.encre)
                 Text(detail).font(JetonAmis.police(14, .bold)).foregroundStyle(JetonAmis.ardoise)
@@ -217,16 +217,13 @@ struct AmisView: View {
     }
 }
 
+/// Le rond d'un ami : son avatar public, ou l'initiale de son surnom.
 struct Avatar: View {
     let nom: String
+    var image: Data? = nil
 
     var body: some View {
-        Text(String(nom.prefix(1)).uppercased())
-            .font(JetonAmis.police(18))
-            .foregroundStyle(Palette.surMarine)
-            .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-            .background(Palette.marine, in: Circle())
-            .accessibilityHidden(true)
+        AvatarSurnom(surnom: nom, image: image)
     }
 }
 

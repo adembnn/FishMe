@@ -25,10 +25,13 @@ final class GestionAmis {
     /// Après une acceptation : l'écran propose « Inviter en retour » en un toucher.
     private(set) var proposerInvitationEnRetour = false
     var invitationRecue: InvitationRecue?
+    /// Avatars publics des amis, par identifiant d'ami (le surnom de l'ami retrouve son profil). Vide tant que rien n'est chargé.
+    private(set) var avatars: [String: Data] = [:]
     /// Mes espèces, pour marquer « nouvelle » celles qu'un ami a et pas moi.
     private(set) var mesEspeces: Set<String> = []
 
     let configuration: ConfigurationAmis
+    private let blocagesProfils = BlocagesProfils()
     private let service: any ServiceAmis
     private let cache: CacheAmis
     private let file: FileEnvoi
@@ -85,7 +88,8 @@ final class GestionAmis {
                 fusion[invite.id] = invite
             }
         }
-        amis = fusion.values.sorted { $0.nom.localizedCompare($1.nom) == .orderedAscending }
+        let profilsCaches = blocagesProfils
+        amis = fusion.values.filter { !profilsCaches.estCache(Surnom.identifiant(pour: $0.nom)) }.sorted { $0.nom.localizedCompare($1.nom) == .orderedAscending }
     }
 
     // MARK: Mes cartes
@@ -182,6 +186,25 @@ final class GestionAmis {
         }
         amis.removeAll { $0.id == ami.id }
         collections.removeAll { $0.id == ami.id }
+    }
+
+    // MARK: Profils (L21)
+
+    /// Charge l'avatar de chaque ami dont le nom est un surnom. Un ami « Un ami » (pas de profil) garde son initiale.
+    func chargerAvatars(avec profils: any ServiceProfil) async {
+        for ami in amis where avatars[ami.id] == nil && ami.nom != NomAmi.anonyme && Surnom.verifier(ami.nom) == nil {
+            if let profil = try? await profils.profil(id: Surnom.identifiant(pour: ami.nom)), let image = profil.avatar {
+                avatars[ami.id] = image
+            }
+        }
+    }
+
+    /// Bloquer un profil depuis sa page : s'il est aussi un ami, la relation de partage est coupée comme pour « Bloquer » d'un ami.
+    func bloquerProfil(id: String) async {
+        blocagesProfils.bloquer(id)
+        for ami in amis where Surnom.identifiant(pour: ami.nom) == id {
+            await bloquer(ami)
+        }
     }
 
     // MARK: Données d'affichage (Core, jamais recalculées ici)

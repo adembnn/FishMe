@@ -35,7 +35,7 @@ final class GestionProfil {
     private(set) var message: Message?
     private(set) var enCours = false
 
-    private let service: any ServiceProfil
+    let service: any ServiceProfil
     private let memoire: any MemoireProfil
     private let identite: any StockageIdentitePrivee
     private let blocages: BlocagesProfils

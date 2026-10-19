@@ -12,11 +12,8 @@ final class RelaisInvitations {
     private(set) var enAttente: InvitationRecue?
 
     func recevoir(_ metadata: CKShare.Metadata) {
-        var nom = "Un ami"
-        if let composants = metadata.ownerIdentity.nameComponents {
-            let texte = PersonNameComponentsFormatter().string(from: composants)
-            if !texte.isEmpty { nom = texte }
-        }
+        // Décision 3 : jamais le nom du compte Apple, seulement le surnom porté par le titre du partage.
+        let nom = NomAmi.affiche(titre: metadata.share[CKShare.SystemFieldKey.title] as? String)
         enAttente = InvitationRecue(nomAmi: nom, metadata: metadata)
     }
 

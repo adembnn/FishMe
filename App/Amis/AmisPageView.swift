@@ -6,16 +6,19 @@ import SwiftUI
 /// Pour un ami, seuls le mois et l'année d'une carte comptent : le fil écrit donc « octobre 2026 », pas un jour exact.
 struct AmisPageView: View {
     let gestion: GestionAmis?
+    /// Le profil de pêcheur. Par défaut le profil partagé de l'app ; A peut en donner un autre.
+    var profil: GestionProfil = .partage
     /// Mode démo (réglages) : sans iCloud non plus, la page montre ses amis de démo.
     @AppStorage("demo.communaute") private var demo = false
 
-    init(gestion: GestionAmis?) {
+    init(gestion: GestionAmis?, profil: GestionProfil = .partage) {
         self.gestion = gestion
+        self.profil = profil
     }
 
     var body: some View {
         if let gestion {
-            AmisPageContenu(gestion: gestion)
+            AmisPageContenu(gestion: gestion, profil: profil)
         } else if demo {
             ScrollView {
                 DemoAmisContenu(avecInviter: true)
@@ -58,6 +61,7 @@ private enum ActionSurAmi {
 
 private struct AmisPageContenu: View {
     let gestion: GestionAmis
+    let profil: GestionProfil
 
     @State private var amiOuvert: Ami?
     @State private var carteOuverte: CarteDuFil?
@@ -79,6 +83,7 @@ private struct AmisPageContenu: View {
                     DemoAmisContenu()
                 } else {
                     if let message = texteDuMessage { bandeau(message) }
+                    SectionProfilAmis(gestion: gestion, profil: profil)
                     if let invitation = gestion.invitationRecue { demande(invitation) }
                     if gestion.compte == .disponible { inviter }
                     if gestion.proposerInvitationEnRetour { enRetour }
@@ -278,7 +283,7 @@ private struct AmisPageContenu: View {
 
     private func contenuDeRangee(_ ami: Ami, detail: String, ouvrable: Bool) -> some View {
         HStack(spacing: Espace.m) {
-            Avatar(nom: ami.nom)
+            Avatar(nom: ami.nom, image: gestion.avatars[ami.id])
             VStack(alignment: .leading, spacing: 2) {
                 Text(ami.nom).font(Police.corps).foregroundStyle(Palette.encre).lineLimit(1)
                 Text(detail).font(Police.detail).foregroundStyle(Palette.encreDouce).lineLimit(2)
@@ -405,14 +410,14 @@ private func gestionDApercu(avecAmis: Bool) -> GestionAmis? {
 }
 
 #Preview("Avec des amis") {
-    AmisPageView(gestion: gestionDApercu(avecAmis: true))
+    AmisPageView(gestion: gestionDApercu(avecAmis: true), profil: GestionProfil(service: FauxServiceProfil()))
 }
 
 #Preview("Aucun ami") {
-    AmisPageView(gestion: gestionDApercu(avecAmis: false))
+    AmisPageView(gestion: gestionDApercu(avecAmis: false), profil: GestionProfil(service: FauxServiceProfil()))
 }
 
 #Preview("Indisponible") {
-    AmisPageView(gestion: nil)
+    AmisPageView(gestion: nil, profil: GestionProfil(service: FauxServiceProfil()))
 }
 #endif

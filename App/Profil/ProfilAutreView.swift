@@ -7,9 +7,12 @@ struct ProfilAutreView: View {
     /// Le partage de MA collection : le même que celui de la page Amis. `nil` si iCloud est indisponible.
     let invitation: InvitationPescedex?
     /// Appelé après un blocage, pour que la page Amis retire aussi la relation de partage.
+    /// L'e-mail prérempli vers le contact publié (circuit principal de `moderation.md`) ; `nil` : seule la trace CloudKit part.
+    var urlSignalement: (MotifSignalement) -> URL? = { _ in nil }
     var apresBlocage: (ProfilModele) async -> Void = { _ in }
 
     @Environment(\.dismiss) private var fermer
+    @Environment(\.openURL) private var ouvrirURL
     @State private var choisirMotif = false
     @State private var confirmerBlocage = false
     @State private var signale = false
@@ -60,6 +63,7 @@ struct ProfilAutreView: View {
                 Button(motif.titre) {
                     Task {
                         await gestion.signaler(profil, motif: motif)
+                        if let url = urlSignalement(motif) { ouvrirURL(url) }
                         signale = true
                     }
                 }

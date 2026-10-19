@@ -80,12 +80,18 @@ actor ServiceAmisCloudKit: ServiceAmis {
     func partagePret() async throws -> PartagePret {
         try await executer {
             try await creerLaZone()
+            let titre = NomAmi.titre(surnom: MemoireProfilLocale().surnom())
             if let existant = try? await privee.record(for: idPartage) as? CKShare {
+                // Le surnom a pu arriver après la création du partage : le titre le suit.
+                if (existant[CKShare.SystemFieldKey.title] as? String) != titre {
+                    existant[CKShare.SystemFieldKey.title] = titre
+                    _ = try? await privee.modifyRecords(saving: [existant], deleting: [], savePolicy: .changedKeys, atomically: true)
+                }
                 return PartagePret(share: existant)
             }
             let share = CKShare(recordZoneID: zone)
             share.publicPermission = .none
-            share[CKShare.SystemFieldKey.title] = "Pescedex"
+            share[CKShare.SystemFieldKey.title] = titre
             let identifiant = share.recordID
             let resultat = try await privee.modifyRecords(saving: [share], deleting: [], savePolicy: .ifServerRecordUnchanged,
                                                           atomically: true)
@@ -137,7 +143,7 @@ actor ServiceAmisCloudKit: ServiceAmis {
                 let proprietaire = zoneRecue.zoneID.ownerName
                 let partage = try? await partagee.record(for: CKRecord.ID(recordName: CKRecordNameZoneWideShare,
                                                                             zoneID: zoneRecue.zoneID)) as? CKShare
-                let nom = partage.map { Self.nom(de: $0.owner.userIdentity) } ?? "Un ami"
+                let nom = NomAmi.affiche(titre: partage?[CKShare.SystemFieldKey.title] as? String)
                 var cartes: [CartePartagee] = []
                 var jeton: CKServerChangeToken?
                 var encore = true
@@ -216,9 +222,8 @@ actor ServiceAmisCloudKit: ServiceAmis {
         return identite.userRecordID?.recordName ?? identite.lookupInfo?.emailAddress ?? identite.lookupInfo?.phoneNumber ?? "invite"
     }
 
+    /// Décision 3 : le nom du compte Apple d'un invité ne s'affiche jamais. Son surnom arrive quand il m'invite en retour.
     private static func nom(de identite: CKUserIdentity) -> String {
-        guard let composants = identite.nameComponents else { return "Un ami" }
-        let texte = PersonNameComponentsFormatter().string(from: composants)
-        return texte.isEmpty ? "Un ami" : texte
+        NomAmi.anonyme
     }
 }
