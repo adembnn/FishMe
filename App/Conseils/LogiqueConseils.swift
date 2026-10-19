@@ -171,3 +171,18 @@ nonisolated enum EspecesDuTunnel {
         return choisies
     }
 }
+
+/// L'écran « pas encore de carte » : la carte à débloquer et le compteur de la zone.
+nonisolated enum FinDuTunnel {
+    /// La première espèce dont la rareté vaut « commun », sinon la première de la liste. La rareté vient de `libelleRarete` ;
+    /// sans rareté connue, aucune n'est inventée : on prend la première. `nil` si la liste est vide.
+    static func aDebloquer(especes: [EspecePechable], libelleRarete: (EspecePechable) -> String?) -> EspecePechable? {
+        especes.first { libelleRarete($0)?.lowercased() == "commun" } ?? especes.first
+    }
+
+    /// « 0 sur 12 dans le 94 » ; zone inconnue : « 0 sur 12 dans ta zone ».
+    static func compteur(declarees: Int, total: Int, departement: String?) -> String {
+        let code = departement?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        return "\(declarees) sur \(total) dans " + (code.isEmpty ? "ta zone" : "le \(code)")
+    }
+}

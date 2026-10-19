@@ -40,13 +40,19 @@ struct OuPechesTuView: View {
         }
     }
 
-    /// P03-C : rond de 280 pt à 110 pt du haut, texte à 430 pt, boutons à 40 pt du bas (mesures de la maquette, 390 × 844).
+    /// P03-C : rond de 280 pt, texte à 40 pt du rond, poissons à 26 pt sous la phrase, boutons à 40 pt du bas de l'écran
+    /// (mesures de la maquette, 390 × 844). Le reste de la hauteur se partage en deux espaces égaux, au-dessus du rond et
+    /// sous les poissons : plus de grand vide d'un seul côté. Trop court (petit iPhone, texte agrandi) : défilement sans barre.
+    private static let espaceRondTexte: CGFloat = 40
+    private static let espacePhrasePoissons: CGFloat = 26
+    private static let boutonsAuBas: CGFloat = 40
+
     private var pleinEcran: some View {
         GeometryReader { geo in
             ScrollView {
                 VStack(spacing: 0) {
+                    Spacer(minLength: Espace.s)
                     carteRonde
-                        .padding(.top, 51)
                     VStack(spacing: 0) {
                         Text("Où pêches-tu ?")
                             .font(Police.grandTitre)
@@ -64,12 +70,13 @@ struct OuPechesTuView: View {
                                     .frame(width: 96, height: 56)
                             }
                         }
-                        .padding(.top, 26)
+                        .padding(.top, Self.espacePhrasePoissons)
                     }
-                    .padding(.top, 40)
-                    Spacer(minLength: Espace.xl)
+                    .padding(.top, Self.espaceRondTexte)
+                    Spacer(minLength: Espace.l)
                     boutons
-                        .padding(.bottom, 6)
+                        // 40 pt du bord de l'écran : on retire ce que la zone sûre (barre d'accueil) compte déjà.
+                        .padding(.bottom, max(Espace.s, Self.boutonsAuBas - geo.safeAreaInsets.bottom))
                 }
                 .padding(.horizontal, Espace.bord)
                 .frame(minHeight: geo.size.height)

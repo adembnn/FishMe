@@ -20,7 +20,10 @@ struct TunnelPremiersPasView: View {
     var rarete: (EspecePechable) -> (libelle: String, couleur: Color)? = { _ in nil }
     /// « Voir mon spot » : la racine ferme le swipe, ouvre l'onglet Carte et demande le vol vers le spot.
     var voirMonSpot: (() -> Void)? = nil
+    /// Code du département de la zone (« 94 »), pour le compteur de « pas encore de carte » ; `nil` : « ta zone ».
+    var departement: String? = nil
 
+    @Environment(\.accessibilityReduceMotion) private var reduireAnimations
     @State private var index = 0
     /// Déplacement du doigt (x et y) : la carte suit, penche, et part hors de l'écran au-delà du seuil (façon Tinder).
     @State private var glisse: CGSize = .zero
@@ -39,16 +42,19 @@ struct TunnelPremiersPasView: View {
     var body: some View {
         Group {
             if index < especes.count {
-                // Maquette P02-A : le compteur en verre en haut, les deux cartes penchées, la feuille de deux boutons ronds en bas.
-                ZStack {
+                // Maquette P02-A : le compteur en verre, le titre, les cartes penchées, la feuille de deux boutons ronds en bas.
+                // Les cartes occupent tout l'espace entre le titre et la feuille et s'y centrent : aucune marge fixe.
+                VStack(spacing: 0) {
+                    compteur
+                        .accessibilitySortPriority(1)
+                    entete
+                        .accessibilitySortPriority(2)
                     cartes
-                    VStack(spacing: 0) {
-                        compteur
-                        Spacer(minLength: 0)
-                        panneau
-                    }
-                    .ignoresSafeArea(edges: .bottom)
+                        .accessibilitySortPriority(0)
+                    panneau
                 }
+                .accessibilityElement(children: .contain)
+                .ignoresSafeArea(edges: .bottom)
             } else {
                 fin
                     .padding(Espace.bord)
@@ -91,10 +97,46 @@ struct TunnelPremiersPasView: View {
             .accessibilityLabel("Carte \(index + 1) sur \(especes.count)")
     }
 
+    /// Le titre de l'écran : dit l'objectif. VoiceOver le lit en premier (en-tête).
+    private var entete: some View {
+        VStack(spacing: Espace.xs) {
+            Text("Lesquels as-tu déjà pêchés ?")
+                .font(Police.titre)
+                .foregroundStyle(Palette.encre)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+            Text("Glisse à droite si oui, à gauche sinon")
+                .font(Police.detail)
+                .foregroundStyle(Palette.encreDouce)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal, Espace.bord)
+        .padding(.top, Espace.m)
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isHeader)
+        .accessibilityIdentifier("tunnel-titre")
+    }
+
     /// 0 au repos, 1 quand la carte du dessus atteint le seuil : la carte d'en dessous se redresse et grandit.
     private var progression: CGFloat { min(abs(decalage) / seuil, 1) }
 
+    private static let largeurCarte: CGFloat = 318
+    private static let hauteurCarte: CGFloat = 400
+
     private var cartes: some View {
+        GeometryReader { geo in
+            // Sur un petit écran la pile se réduit pour tenir entre le titre et la feuille ; son centre ne bouge pas.
+            let echelle = min(1, max(0.5, (geo.size.height - Espace.l) / Self.hauteurCarte))
+            pile
+                .scaleEffect(echelle)
+                .frame(width: geo.size.width, height: geo.size.height)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private var pile: some View {
         let espece = especes[index]
         return ZStack {
             // La carte d'en dessous : la suivante, qui monte quand on glisse celle du dessus (penchée de 4° au repos).
@@ -119,7 +161,7 @@ struct TunnelPremiersPasView: View {
                     .foregroundStyle(rareté.couleur)
                 }
             }
-            .frame(width: 318, height: 400)
+            .frame(width: Self.largeurCarte, height: Self.hauteurCarte)
             .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
             .shadow(color: Palette.encre.opacity(0.35), radius: 20, y: 14)
             .overlay(alignment: .topLeading) {
@@ -133,8 +175,12 @@ struct TunnelPremiersPasView: View {
             .rotationEffect(.degrees(-2.5 + Double(decalage) / 18), anchor: .bottom)
             .offset(glisse)
             .gesture(geste)
-            .id(index)
-            .transition(.identity)
+            // Une identité par espèce (jamais par index) : la carte suivante est une vue neuve qui entre en douceur,
+            // la carte envolée disparaît sans animation (elle est déjà hors de l'écran).
+            .id(espece.espece.id)
+            .transition(.asymmetric(
+                insertion: reduireAnimations ? .opacity : .scale(scale: 0.96).combined(with: .opacity),
+                removal: .identity))
             .accessibilityElement(children: .combine)
             .accessibilityLabel(espece.nom)
             .accessibilityAction(named: "Déjà pêché") { lancer(dejaPeche: true) }
@@ -142,9 +188,6 @@ struct TunnelPremiersPasView: View {
         }
         .sensoryFeedback(.selection, trigger: vibreSeuil)
         .sensoryFeedback(.impact(weight: .medium), trigger: vibreChoix)
-        // Les cartes sont centrées à 340 pt du haut de l'écran (maquette : 140 + 400 / 2).
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(.bottom, 189)
     }
 
     /// La forme de la rareté (le niveau se lit sans la couleur) : rond, hexagone, losange, étoile.
@@ -164,16 +207,18 @@ struct TunnelPremiersPasView: View {
             ImageEspece(nom: suivante.image, libelle: suivante.nom)
                 .frame(width: 240, height: 160)
                 .opacity(0.35 + 0.65 * Double(progression))
-                .frame(width: 298, height: 400)
+                .frame(width: Self.largeurCarte - 20, height: Self.hauteurCarte)
                 .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
                 .scaleEffect(0.94 + 0.06 * progression)
                 .rotationEffect(.degrees(4 * Double(1 - progression)))
                 .offset(x: 10 * (1 - progression), y: 10 * (1 - progression))
+                .id("dessous-" + suivante.espece.id)
+                .transition(.opacity)
                 .accessibilityHidden(true)
         } else {
             RoundedRectangle(cornerRadius: 32, style: .continuous)
                 .fill(Palette.tuile)
-                .frame(width: 298, height: 400)
+                .frame(width: Self.largeurCarte - 20, height: Self.hauteurCarte)
                 .rotationEffect(.degrees(4))
                 .offset(x: 10, y: 10)
                 .accessibilityHidden(true)
@@ -215,32 +260,32 @@ struct TunnelPremiersPasView: View {
             }
     }
 
-    /// La carte part hors de l'écran du côté choisi, puis la suivante prend sa place.
+    /// La carte part hors de l'écran du côté choisi, puis la suivante prend sa place (fondu et léger zoom de 0,2 s).
+    /// « Réduire les animations » : la carte est remplacée tout de suite, sans envol.
     private func lancer(dejaPeche: Bool) {
         guard !envol, index < especes.count else { return }
         envol = true
         vibreChoix += 1
-        let sens: CGFloat = dejaPeche ? 1 : -1
-        withAnimation(.easeIn(duration: 0.28)) {
-            glisse = CGSize(width: sens * 600, height: glisse.height + 60)
-        }
-        Task { @MainActor in
-            try? await Task.sleep(for: .milliseconds(280))
+        if reduireAnimations {
             var sansAnimation = Transaction()
             sansAnimation.disablesAnimations = true
             withTransaction(sansAnimation) { repondre(dejaPeche: dejaPeche) }
             envol = false
+            return
+        }
+        let sens: CGFloat = dejaPeche ? 1 : -1
+        withAnimation(.easeIn(duration: 0.28), completionCriteria: .logicallyComplete) {
+            glisse = CGSize(width: sens * 600, height: glisse.height + 60)
+        } completion: {
+            // Un seul changement d'état : la carte envolée part et la suivante entre dans la même transaction.
+            withAnimation(.easeOut(duration: 0.2)) { repondre(dejaPeche: dejaPeche) }
+            envol = false
         }
     }
 
-    /// La feuille du bas (maquette : 8 pt des bords, coins 38, poignée, deux boutons ronds de 68 pt, mot dessous).
+    /// La feuille du bas, fixe (maquette : 8 pt des bords, coins 38, deux boutons ronds de 68 pt, mot dessous). Aucune poignée, aucun geste.
     private var panneau: some View {
         VStack(spacing: 0) {
-            Capsule()
-                .fill(Palette.filet)
-                .frame(width: 36, height: 5)
-                .padding(.top, 7)
-                .padding(.bottom, 12)
             HStack(alignment: .top) {
                 Spacer()
                 bouton(icone: "xmark", mot: "Jamais pêché", plein: false) { lancer(dejaPeche: false) }
@@ -248,7 +293,7 @@ struct TunnelPremiersPasView: View {
                 bouton(icone: "checkmark", mot: "Déjà pêché", plein: true) { lancer(dejaPeche: true) }
                 Spacer()
             }
-            .padding(.top, 6)
+            .padding(.top, Espace.l)
             .padding(.bottom, 4)
         }
         .padding(.horizontal, 20)
@@ -277,10 +322,10 @@ struct TunnelPremiersPasView: View {
         .accessibilityLabel(mot)
     }
 
-    private var fin: some View {
-        VStack(spacing: Espace.l) {
-            Spacer(minLength: 0)
-            if nbDeclarees > 0 {
+    @ViewBuilder private var fin: some View {
+        if nbDeclarees > 0 {
+            VStack(spacing: Espace.l) {
+                Spacer(minLength: 0)
                 Text("\(nbDeclarees)")
                     .font(Police.taille(72, .heavy).monospacedDigit())
                     .foregroundStyle(Palette.marine)
@@ -288,24 +333,89 @@ struct TunnelPremiersPasView: View {
                     .font(Police.titre)
                     .foregroundStyle(Palette.encre)
                 poissonsDeclares
-            } else {
-                Image(systemName: "fish.fill")
-                    .font(Police.taille(56, .bold))
-                    .foregroundStyle(Palette.marine)
-                    .frame(width: 128, height: 128)
-                    .background(Palette.marineDoux, in: Circle())
-                    .accessibilityHidden(true)
-                Text("Pas encore de carte")
-                    .font(Police.titre)
-                    .foregroundStyle(Palette.encre)
-                Text("Ta première prise photographiée en crée une.")
-                    .font(Police.detail)
-                    .foregroundStyle(Palette.encreDouce)
-                    .multilineTextAlignment(.center)
+                Spacer(minLength: 0)
+                gros("Voir mon spot", icone: "mappin.and.ellipse", plein: true, action: voirMonSpot ?? choisirUnSpot)
+            }
+        } else {
+            finSansCarte
+        }
+    }
+
+    /// Largeur de la carte à débloquer (hauteur : largeur / `Gabarit.rapportCarte`).
+    private static let largeurCarteADebloquer: CGFloat = 176
+
+    /// « Pas encore de carte » : une carte à débloquer (silhouette de l'espèce la plus commune de la zone), le compteur de la zone,
+    /// une phrase sur le Pescedex, un seul bouton. Défilement sans barre si l'écran est trop court (texte agrandi).
+    private var finSansCarte: some View {
+        let aDebloquer = FinDuTunnel.aDebloquer(especes: especes, libelleRarete: { rarete($0)?.libelle })
+        return GeometryReader { geo in
+            ScrollView {
+                VStack(spacing: Espace.l) {
+                    Spacer(minLength: 0)
+                    Text("Pas encore de carte")
+                        .font(Police.titre)
+                        .foregroundStyle(Palette.encre)
+                        .multilineTextAlignment(.center)
+                        .accessibilityAddTraits(.isHeader)
+                    if let aDebloquer {
+                        carteADebloquer(aDebloquer)
+                    } else {
+                        Image(systemName: "fish.fill")
+                            .font(Police.taille(56, .bold))
+                            .foregroundStyle(Palette.silhouette)
+                            .frame(width: 128, height: 128)
+                            .background(Palette.marineDoux, in: Circle())
+                            .accessibilityHidden(true)
+                    }
+                    Text(FinDuTunnel.compteur(declarees: 0, total: especes.count, departement: departement))
+                        .font(Police.chiffreMoyen)
+                        .foregroundStyle(Palette.marine)
+                        .multilineTextAlignment(.center)
+                        .accessibilityIdentifier("tunnel-compteur-zone")
+                    Text("Tu pourras en déclarer d'autres depuis ton Pescedex.")
+                        .font(Police.detail)
+                        .foregroundStyle(Palette.encreDouce)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Spacer(minLength: 0)
+                    gros("Voir mon spot", icone: "mappin.and.ellipse", plein: true, action: voirMonSpot ?? choisirUnSpot)
+                        .accessibilityIdentifier("tunnel-voir-mon-spot")
+                }
+                .frame(minHeight: geo.size.height)
+            }
+            .scrollIndicators(.hidden)
+            .scrollBounceBehavior(.basedOnSize)
+        }
+        .accessibilityIdentifier("tunnel-pas-encore-de-carte")
+    }
+
+    /// La carte à débloquer : le format de la carte à collectionner, fond de surface, la silhouette de l'espèce, un cadenas.
+    /// Pas de rareté inventée : le mot n'apparaît que si la fermeture `rarete` en fournit une.
+    private func carteADebloquer(_ espece: EspecePechable) -> some View {
+        let largeur = Self.largeurCarteADebloquer
+        let hauteur = largeur / Gabarit.rapportCarte
+        let coin = largeur * Gabarit.coinCarte
+        return VStack(spacing: Espace.s) {
+            Spacer(minLength: 0)
+            ImageEspece(nom: espece.image, libelle: espece.nom, silhouette: true)
+                .frame(width: largeur * 0.8, height: largeur * 0.55)
+            Image(systemName: "lock.fill")
+                .font(Police.taille(18, .bold))
+                .foregroundStyle(Palette.encreDouce)
+            if let r = rarete(espece) {
+                Text(r.libelle)
+                    .font(Police.legende)
+                    .foregroundStyle(r.couleur)
             }
             Spacer(minLength: 0)
-            gros("Voir mon spot", icone: "mappin.and.ellipse", plein: true, action: voirMonSpot ?? choisirUnSpot)
         }
+        .padding(Espace.m)
+        .frame(width: largeur, height: hauteur)
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: coin, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: coin, style: .continuous).strokeBorder(Palette.filet, lineWidth: 1))
+        .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Carte à débloquer : \(espece.nom)")
     }
 
     /// Les poissons déclarés, en images (jamais en liste de noms), 3 par rangée.
