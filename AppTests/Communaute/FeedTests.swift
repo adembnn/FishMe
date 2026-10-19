@@ -14,9 +14,10 @@ struct FeedLieuTests {
     private let riviere = ContexteLieu(eauNom: "La Marne", planDEau: false, departement: "94")
     private let etang = ContexteLieu(eauNom: "Étang de Saint-Quentin", planDEau: true, departement: "78")
 
-    @Test func surUneRiviereTroisChoixLeCoursDEauEnPremier() {
+    @Test func surUneRiviereTroisChoixEtLeDepartementSeulParDefaut() {
         #expect(LieuPublication.options(riviere) == [.coursEau, .departement, .aucun])
-        #expect(LieuPublication.parDefaut(riviere) == .coursEau)
+        // Décision de Titouan (19 oct.) : « département seul » par défaut, le cours d'eau reste possible.
+        #expect(LieuPublication.parDefaut(riviere) == .departement)
         #expect(LieuPublication.etiquette(.coursEau, riviere) == "La Marne · 94")
         #expect(LieuPublication.etiquette(.departement, riviere) == "94")
     }
@@ -29,6 +30,7 @@ struct FeedLieuTests {
 
     @Test func leLieuInconnuNeProposeQueAucun() {
         #expect(LieuPublication.options(.inconnu) == [.aucun])
+        #expect(LieuPublication.parDefaut(.inconnu) == .aucun)
     }
 
     @Test func departementSeulEtAucunNePortentPasLeNomDeLEau() {
@@ -76,6 +78,25 @@ struct FeedFiltreTests {
         #expect(FiltreTexte.verifier("lat 48 lon 2") == .coordonnee)
         #expect(FiltreTexte.verifier("https://maps.app.goo.gl/abc") == .lienCarte)
         #expect(FiltreTexte.verifier("https://waze.com/ul?q=x") == .lienCarte)
+    }
+
+    @Test func lesLiensDeCarteGoogleEtAppleSontRefuses() {
+        for lien in ["https://maps.google.com/?q=48.1,2.1", "google.fr/maps/place/x", "https://www.google.com/maps/@48,2,15z",
+                     "https://goo.gl/maps/abc", "https://g.co/maps/abc", "https://maps.apple.com/?ll=1,2",
+                     "https://www.bing.com/maps?cp=1~2"] {
+            #expect(FiltreTexte.verifier(lien) == .lienCarte, "\(lien)")
+        }
+    }
+
+    @Test func uneCoordonneeADeuxDecimalesEstRefuseMaisPasUnePrise() {
+        #expect(FiltreTexte.verifier("48.85, 2.35") == .coordonnee)
+        #expect(FiltreTexte.verifier("48,85 ; 2,35") == .coordonnee)
+        #expect(FiltreTexte.verifier("-33.86/151.21") == .coordonnee)
+        // Une taille, un poids ou un prix isolé passent.
+        #expect(FiltreTexte.verifier("Brochet de 62,50 cm") == nil)
+        #expect(FiltreTexte.verifier("Une carpe de 12,40 kg, relâchée.") == nil)
+        // Hors bornes d'une latitude : ce n'est pas une position.
+        #expect(!FiltreTexte.contientPaireDeCoordonnees("120.50, 300.25"))
     }
 
     @Test func plusDe280CaracteresEstRefuse() {
@@ -128,10 +149,51 @@ struct FeedFabriqueTests {
     }
 
     @Test func lEmailDeSignalementVaChezFishmeAvecLIdentifiant() throws {
-        let s = SignalementFeed(cible: "pub-123", typeCible: .publication, motif: .haine, signalePar: "p-moi", auteurCible: "p-lui")
+        let s = SignalementFeed(cible: "pub-123", typeCible: .publication, motif: .harcelement, signalePar: "p-moi", auteurCible: "p-lui",
+                                extrait: "texte signalé")
         let url = try #require(CourrielSignalement.url(s))
         #expect(url.absoluteString.hasPrefix("mailto:fishme.app@gmail.com"))
         #expect(url.absoluteString.contains("pub-123"))
+        #expect(url.absoluteString.contains("texte"))
+    }
+
+    @Test func leTexteSignaleNeVaPasDansLEnregistrement() {
+        let s = SignalementFeed(cible: "p1", typeCible: .publication, motif: .spam, signalePar: "p-moi", auteurCible: "p-lui", extrait: "secret")
+        let r = FabriqueFeed.record(pour: s)
+        #expect(!r.allKeys().contains("extrait"))
+        #expect(!r.allKeys().contains("auteurCible"))
+    }
+
+    @Test func lesMotifsOntLesLibellesDeL21() {
+        #expect(MotifSignalementPublication.allCases.map(\.rawValue) ==
+                ["choquant", "harcelement", "nudite", "cruaute", "pecheIllegale", "coinExact", "mineur", "spam", "autre"])
+        #expect(MotifSignalementPublication.mineur.titre == "Personne mineure sans accord")
+        #expect(MotifSignalementPublication.harcelement.titre == "Haine ou harcèlement")
+    }
+
+    @Test func laTailleVenueDeLaBasePubliqueNePlantePas() {
+        #expect(FabriqueFeed.centimetres(62.4) == 62)
+        #expect(FabriqueFeed.centimetres(nil) == nil)
+        #expect(FabriqueFeed.centimetres(.nan) == nil)
+        #expect(FabriqueFeed.centimetres(.infinity) == nil)
+        #expect(FabriqueFeed.centimetres(-3) == nil)
+        #expect(FabriqueFeed.centimetres(0) == nil)
+        #expect(FabriqueFeed.centimetres(1e300) == nil)
+        #expect(FabriqueFeed.centimetres(500) == nil)
+    }
+
+    @Test func laLectureDUnRecordBorneLaTaille() {
+        let r = CKRecord(recordType: FabriqueFeed.typePublication, recordID: CKRecord.ID(recordName: "x"))
+        r["auteurNom"] = "p-lui"; r["genre"] = "photo"; r["lieuMode"] = "aucun"; r["creeLe"] = Date(); r["tailleCm"] = 1e300
+        #expect(FabriqueFeed.publication(depuis: r)?.tailleCm == nil)
+    }
+
+    @Test func lesRequetesPartentEnPaquetsDeCinquante() {
+        let valeurs = (0..<120).map(String.init)
+        let lots = ServiceFeedCloudKit.lots(valeurs)
+        #expect(lots.map(\.count) == [50, 50, 20])
+        #expect(lots.flatMap { $0 } == valeurs)
+        #expect(ServiceFeedCloudKit.lots([String]()).isEmpty)
     }
 
     @Test func unJpegRecompresseNAPasDeGPS() throws {
@@ -153,5 +215,38 @@ struct FeedFabriqueTests {
         let taille = try #require(CGImageSourceCopyPropertiesAtIndex(source, 0, nil) as? [CFString: Any])
         let largeur = try #require(taille[kCGImagePropertyPixelWidth] as? Int)
         #expect(largeur <= PreparationMedia.coteMax)
+    }
+}
+
+struct FeedVideoSansGPSTests {
+    @Test func uneMetadonneeDeLieuQuickTimeEstReconnue() {
+        let quicktime = PreparationMedia.ElementMetadonnee(identifiant: "com.apple.quicktime.location.ISO6709", cleCommune: "", valeur: "+48.8566+002.3522+035.000/")
+        #expect(PreparationMedia.contientBaliseLieu(parmi: [quicktime]))
+        let xyz = PreparationMedia.ElementMetadonnee(identifiant: "uiso/\u{A9}xyz", cleCommune: "", valeur: "")
+        #expect(PreparationMedia.contientBaliseLieu(parmi: [xyz]))
+        let commune = PreparationMedia.ElementMetadonnee(identifiant: "", cleCommune: "location", valeur: "")
+        #expect(PreparationMedia.contientBaliseLieu(parmi: [commune]))
+    }
+
+    @Test func uneValeurISO6709SansIdentifiantEstReconnue() {
+        // Cas d'une piste : la clé est opaque, mais la valeur est une position.
+        let piste = PreparationMedia.ElementMetadonnee(identifiant: "mdta/inconnu", cleCommune: "", valeur: "+48.8566+002.3522/")
+        #expect(PreparationMedia.contientBaliseLieu(parmi: [piste]))
+    }
+
+    @Test func desMetadonneesSansLieuPassent() {
+        let logiciel = PreparationMedia.ElementMetadonnee(identifiant: "com.apple.quicktime.software", cleCommune: "software", valeur: "17.0")
+        let creation = PreparationMedia.ElementMetadonnee(identifiant: "mdta/creationdate", cleCommune: "creationDate", valeur: "2026-10-19T10:00:00Z")
+        #expect(!PreparationMedia.contientBaliseLieu(parmi: [logiciel, creation]))
+        #expect(!PreparationMedia.contientBaliseLieu(parmi: []))
+    }
+
+    @Test func lesOctetsAvecUneCleDeLieuSontRefuses() {
+        var avecCle = Data([0, 0, 0, 20]) + Data("keys".utf8)
+        avecCle += Data("mdta".utf8) + Data("com.apple.quicktime.location.ISO6709".utf8)
+        #expect(PreparationMedia.contientBaliseLieu(octets: avecCle))
+        #expect(PreparationMedia.contientBaliseLieu(octets: Data([0x00, 0xA9, 0x78, 0x79, 0x7A, 0x00])))
+        #expect(PreparationMedia.contientBaliseLieu(octets: Data("xxISO6709xx".utf8)))
+        #expect(!PreparationMedia.contientBaliseLieu(octets: Data("ftypmp42 moov mdat".utf8)))
     }
 }

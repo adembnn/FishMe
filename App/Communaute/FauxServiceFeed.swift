@@ -144,6 +144,7 @@ nonisolated struct SourceContexteFausse: SourceContexte {
     var clubs: [ClubResume] = [ClubResume(id: "club-1", nom: "Les Bords de Marne")]
     var departements: [String] = ["94"]
     var lieu = ContexteLieu(eauNom: "La Marne", planDEau: false, departement: "94")
+    var demo = false
 
     func monNom() async -> String? { nom }
     func profilQuinzeAnsOuPlus() async -> Bool { quinzeAns }
@@ -151,6 +152,7 @@ nonisolated struct SourceContexteFausse: SourceContexte {
     func mesClubs() async -> [ClubResume] { clubs }
     func departementsDeMaRegion() async -> [String] { departements }
     func lieuCourant() async -> ContexteLieu { lieu }
+    func modeDemo() async -> Bool { demo }
 }
 
 /// Des publications factices pour les aperçus (aucune image : la vignette est vide).
