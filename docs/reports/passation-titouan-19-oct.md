@@ -1,0 +1,77 @@
+# Passation de Titouan à Adem et Sullyvan : lots du 19 octobre (rôle B)
+
+Écrit le 19 octobre 2026 par Titouan (avec ses agents Claude). Titouan n'a pas de Mac : **tout le Swift ci-dessous a été écrit sans compilateur**. Rien n'est compilé, aucun test n'est exécuté, rien n'est testé sur iPhone. Sullyvan compile et teste (répartition du 19 octobre, option C), Adem tranche et branche (L25).
+
+## 1. Ce qui est livré : six branches, toutes issues de `origin/main` du 19 octobre
+| Lot | Branche | Dernier commit | Commits | Contenu |
+|---|---|---|---|---|
+| L18 Pescedex direct | `lot/collection-2` | `fbb6dfc6` | 6 | grille « Déclarer un poisson déjà pêché » avec recherche, plus d'« Amis » dans le Pescedex, photo en 1 toucher, « Enregistrer dans Photos » sans GPS, libellés en toutes lettres, menu de zone Mon spot / Ma région / France |
+| L19 Prise | `lot/prise-2` | `132d949d` | 6 | caméra visible d'emblée, vue de capture maison, carte retournable puis bloc de règles à deux états avec sources (`App/Style/BlocRegles/`) |
+| R2 Rapport réseau social | `lot/rapport-reseau` | `638d751a` | 13 | 8 fichiers `docs/reports/reseau/`, prototype CloudKit `outils/reseau/` pour Sullyvan |
+| L21 Profil et amis | `lot/profil` | `a4226420` | 5 | surnom unique et avatar, recherche en 3 lettres, « Finis ton profil », suppression, signaler et bloquer un profil, déclaration « 15 ans ou plus » |
+| L23 Feed | `lot/feed` | `96b6e26c` | 6 | publier photo ou vidéo de 15 s sans GPS, lieu au choix, fil clubs / amis / région, likes, commentaires, signalement, blocage |
+| L24 Chat | `lot/chat` | `ab699892` | 6 | chat d'amis et de club, notifications au premier message, signalement, blocage |
+
+Les branches sont **indépendantes** : aucune ne contient le travail des autres. Elles touchent des dossiers différents (périmètre vérifié par `git diff --name-only origin/main` pour chacune), sauf `App/Amis/` (L21 modifie des fichiers de L8, voir 4).
+
+## 2. Décisions de Titouan (19 octobre) à valider
+1. **Le réseau social est gratuit** : rien n'est derrière le Pro (feed, chat, profil).
+2. **15 ans minimum** pour avoir un profil public, publier, commenter ou écrire : déclaration simple « J'ai 15 ans ou plus », sans date de naissance stockée. En dessous, le feed et le chat sont en lecture seule ; collection, règles et carte restent utilisables. À faire relire par un juriste de MWM ; l'outil Declared Age Range d'Apple n'a pas été étudié ⚠.
+3. **« Aucun lieu »** : une publication sans lieu n'apparaît pas dans « Dans ta région » (visible des amis et clubs seulement).
+4. **Chat d'un club réservé aux membres** (pas de base publique lisible avec le lien).
+5. **Signalement** : e-mail pré-rempli (`mailto:` vers fishme.app@gmail.com) **et** enregistrement `Signalement` en base publique, lu par la personne de garde ; contenu masqué tout de suite sur l'iPhone qui signale. Sans serveur, l'e-mail n'est pas automatique : un vrai envoi automatique demande un petit service payant (budget : oui).
+6. **Qui lit fishme.app@gmail.com** : Titouan, Adem et Sullyvan. **Proposition** : un référent par semaine, à tour de rôle, qui regarde la boîte et la liste des `Signalement` chaque jour, retrait ou masquage dans les 24 heures ; un prénom de référent écrit dans les CGU. L'ordre des semaines est à fixer par l'équipe.
+7. Rappel : la décision 1 du 19 octobre (réseau social complet, remplace « collections jamais publiques ») est celle d'Adem ; Titouan souhaitait en reparler. Les remarques du Notion demandent la même chose.
+
+## 3. À brancher par Adem (L25), tout regroupé
+**`RootView.swift` et projet**
+- L21 : `CommunauteView{…}.finisTonProfil()` (autour de la ligne 909) ; dans `ouvrir(url:)`, pour l'hôte `ami` : `RelaisLienAmi.partage.recevoir(url)` puis onglet Communauté.
+- L23 : `CommunauteView(fil: FeedVue(gestion: GestionFeed.reel(source: …)))` avec une implémentation de `SourceContexte` branchée sur L21, L22 et le spot ; bouton « Publier » sur une carte du Pescedex avec `ContexteLieu(lieuFlou:, typeEau:)` (sans le vrai type d'eau, le choix « cours d'eau » n'est jamais proposé).
+- L24 : `ListeConversationsView` dans Communauté ; `BoutonEcrire` et `ConversationView` sur les pages ami et club ; `registerForRemoteNotifications()` au lancement ; `didReceiveRemoteNotification` vers `GestionChat.traiterNotificationCloudKit()` ; router les liens de conversation vers `GestionChat.accepter(...)` dans `RelaisInvitations`.
+- L18 : retirer `declarer: { app.montrer(.tunnel) }` et `voirAmis` (facultatif) ; `regionDe:` sur `PescedexModele`, qui demande une **table des 13 régions dans Core** (nom, locution « en Île-de-France », départements) que personne n'a écrite.
+- Effacement : composer `EffaceurContenu` (défini par L21) avec ceux de L23 (`effacerMesContenus`) et L24 (`EffaceurChat`) via `RegistreEffaceurs.partage.ajouter(...)`.
+- Vérifier que le projet Xcode prend les nouveaux dossiers (dossiers synchronisés) et que le contrôle de frontières de `scripts/verif.sh` accepte `App/Style/BlocRegles/` (sinon choisir un autre emplacement).
+
+**Capacités et `Info.plist`** : Push Notifications ; iCloud / CloudKit base publique ; accès photothèque (`PhotosPicker`). Pour L18, rien à ajouter (les deux clés existent).
+
+**Tableau de bord CloudKit (à créer avant la production)**
+- Types en base publique : `Profil`, `Publication`, `Like`, `Commentaire`, `Signalement` ; types de chat par zone partagée.
+- `Blocage` : base privée (recommandation R2) ; aujourd'hui L21 filtre en local (`UserDefaults`).
+- Index : `surnomNorm` queryable (recherche `BEGINSWITH`), `creeLe` sortable, `club`, `auteurNom`, `departement`, `publication` queryable, `recordName` queryable sur `MessageAmi` et `MessageClub`.
+- Droits : « World lit, Authenticated crée » sur `Profil` et `Signalement` ; lecture de `Signalement` réservée à l'équipe ; déployer le schéma en Production.
+
+## 4. Conflits et alignements à prévoir à la fusion
+- **L21 modifie `App/Amis/`** (`AmisPageView`, `AmisView`, `GestionAmis`, `RelaisInvitations`, `ServiceAmis`, `ServiceAmisCloudKit`, `Signalement`). L24 ajoute un routage dans `RelaisInvitations` (à faire par A). Fusionner L21 avant L24.
+- **Deux listes de mots interdits** : `FiltreTexte` (L23) et `FiltreMessage` (L24), plus `AucunFiltre` et `FiltreParListe` (L21). À unifier ; la liste de L23 est courte et écrite de mémoire. À remplacer par la liste française LDNOOBW (CC-BY-4.0, attribution obligatoire) en écartant les faux positifs de pêche (« bite », etc.).
+- **Protocoles marqués `À aligner L21`, `À aligner L22`** : `SourceContexte` (L23), `AnnuaireChat`, `InterlocuteurChat`, `ClubChat`, `EffaceurMessages` (L24). Ils attendent les types réels de L21 (profil) et L22 (clubs, lot d'Adem). `Club.fondateur` et `Membre.profil` doivent contenir l'identifiant `p-<surnom normalisé>` de `ProfilModele.id`.
+- **Repères `// R2:`** dans le code : endroits à réaligner une fois R2 validé.
+
+## 5. Écarts avec le plan, la fiche ou R2 (à trancher par Adem)
+- **L21** : « Inviter » depuis un profil partage **ma** collection (`ShareLink`, L8) ; CloudKit ne peut pas pousser une invitation à quelqu'un à partir de son surnom. Pour que les cartes de A arrivent chez B, A accepte puis touche « Inviter en retour ». Cibler par surnom demande un type `DemandeAmi`, absent de R2. Le test d'acceptation de la fiche ne tient donc pas tel quel.
+- **L21** : nom et prénom sont dans `UserDefaults` (`IdentitePriveeLocale`) ; `ProfilPrive` (zone « Sauvegarde », `App/Compte/`) à brancher. Un iPhone neuf ne retrouve pas son profil (il recevrait « surnom pris »).
+- **L24** : les messages d'amis ne passent **pas** par la zone « Pescedex » de L21 (lisibles par tous les amis invités) mais par une zone partagée par paire d'amis, ce qui oblige l'ami à accepter un lien une fois. Abonnements par zone (`CKRecordZoneSubscription`) au lieu de `CKDatabaseSubscription`.
+- **L24 (club)** : une zone partagée par club, possédée par le fondateur. Limites : seul le fondateur admet des membres (il doit ouvrir l'app, le membre doit accepter) ; fondateur parti = plus d'admission (la fiche L22 prévoit un transfert de rôle, impossible ici) ; plafond de participants d'un `CKShare` (environ 100, non lu) ; retirer un membre ne lui retire pas l'accès. Le texte d'un message d'ami signalé est joint à l'e-mail (l'équipe ne peut pas lire une zone privée) : à confirmer côté vie privée.
+- **L23** : la vignette de 640 px existe aussi pour les photos (le schéma la réserve à la vidéo) ; « Tes clubs » filtre sur le champ `club` de la publication, pas sur les membres ; « Dans ta région » n'utilise que les départements fournis par la source (pas de table département vers région).
+- **L19** : le groupe « Horaires » est masqué pour le brochet (pas de ligne de nuit dans Core), donc **deux groupes au lieu de trois** pour le cas 65 cm ; les lignes « autre » (espèce protégée) vont dans « Garder ou relâcher » ; la pastille orange suit toute ligne « à vérifier », réserve du 94 comprise ; **l'import depuis la galerie contredit l'ancienne règle « une carte ne naît que d'une photo prise »** (la fiche le demande, à confirmer) ; l'écran d'explication de permission peut déborder à AX5 (hors périmètre).
+- **L18** : « Ma région » est grisé tant que `regionDe:` n'est pas fourni ; la photo qui rétrécit au début de la révélation est gardée (`photoRetrecitAuDepart = false` pour l'enlever) ; un PNG ajouté à Photos en `.photo` est à vérifier sur iPhone.
+- **R2** : un « retrait sous 24 h » est notre engagement, la règle 1.2 lue ne donne aucun délai chiffré ; l'exclusion d'un auteur est impossible sans serveur (il peut recréer un surnom) ; `CartePartageeClub` de L22 est un 10e type, à replier dans `Publication` avec un champ `club`.
+
+## 6. Questions ouvertes pour Adem (reprises de `docs/reports/reseau/decisions.md`)
+1. Le nom du référent par semaine (voir 2.6) et son suppléant.
+2. Une publication « aucun lieu » dans le fil de région : décision de Titouan = non (appliquée dans L23).
+3. `Blocage` en base privée plutôt que publique : d'accord ?
+4. Des testeurs externes ont-ils des clubs locaux ? Sinon la migration de L22 devient « recréer son club ».
+5. Âge minimal 15 ans : confirmé par le juridique ?
+6. Chat de club avec les limites du 5 : acceptable pour une première version ?
+7. Budget pour un e-mail de signalement automatique (petit service) : oui ou non.
+
+## 7. Pour Sullyvan : compiler, mesurer
+- **Compiler chaque branche une à une** (`scripts/verif.sh`, `/banc Lxx`) dans l'ordre L21, L18, L19, L23, L24 ; renvoyer à Titouan en 3 lignes les erreurs.
+- **Lancer le prototype CloudKit** (`outils/reseau/README.md`) sur son Mac et **coller les chiffres** dans `outils/reseau/RESULTATS.md` : quota après 1 000 photos de 300 Ko et 100 vidéos de 15 s en 720p, taille réelle d'une vidéo, fil de 50 avec et sans médias, requête `IN` pour les likes, 20 latences sur 3 passages (app ouverte, arrière-plan, fermée), `exiftool` sur la vidéo exportée. **Aucun chiffre n'a été mesuré** : tout est « à mesurer ». La vidéo de L23 et le chat de L24 attendent ces chiffres pour être promis.
+- **API à relire à la compilation (⚠, marquées dans le code)** : `records(matching:inZoneWith:desiredKeys:resultsLimit:)`, `records(continuingMatchFrom:)`, le prédicat `IN` combiné à `creeLe <`, `BEGINSWITH` sur `surnomNorm`, `serverRecordChanged` pour un enregistrement neuf déjà existant, `shareParticipant(forUserRecordID:)`, `participant.permission`, `CKRecordZoneSubscription.recordType`, `CKDatabase.subscription(for:)`, `AVAssetExportSession.export(to:as:)`, `metadataItemFilter`, `AVAssetImageGenerator.image(at:)`, `PhotosPicker` et `loadTransferable`, `@Previewable`, `.onChange` à deux paramètres, `defaultScrollAnchor`, `videoRotationAngle`, `DisclosureGroup(isExpanded:)`, isolation par défaut MainActor (Swift 6) des types `nonisolated`.
+
+## 8. Ce qui n'est pas fait
+- Aucun test d'interface pour L23 (écrit pour L21 et L24 mais jamais lancé) ; les tests sur deux et trois iPhones (délai de 10 s, notification app fermée, club à trois, `exiftool`) sont à faire sur Mac.
+- Les textes de CGU et de confidentialité de R2 sont des **brouillons** (`docs/reports/reseau/cgu-confidentialite.md`) : `docs/legal/` n'a pas été touché. Relecture par un juriste de MWM.
+- Les clés du manifeste de confidentialité (types de données collectées) sont écrites de mémoire : à contrôler dans Xcode.
+- L20 (ouverture fluide), D5 (stations recalées), S2 (juridique) et les lots L16, L17, L22, L25 ne sont pas à Titouan.
