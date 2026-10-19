@@ -14,16 +14,17 @@ struct CarteTests {
         }
     }
 
-    @Test func moinsDeCentCinquantePointsSontTousAffiches() {
+    @Test func moinsDeSoixantePointsSontTousAffiches() {
         let region = ZoneCarte(centre: Coordonnee(latitude: 46, longitude: 2), spanLatitude: 20, spanLongitude: 20)
-        let elements = Regroupeur.elements(points: points(100), region: region)
-        #expect(elements.count == 100)
+        let elements = Regroupeur.elements(points: points(50), region: region)
+        #expect(elements.count == 50)
     }
 
-    @Test func franceEntiereNeDepasseJamaisCentCinquanteElements() {
+    @Test func franceEntiereNeDepasseJamaisSoixanteElements() {
         let tous = points(5000)
         let elements = Regroupeur.elements(points: tous, region: .france)
-        #expect(elements.count <= Regroupeur.maximum)
+        #expect(Regroupeur.maximum == 60)
+        #expect(elements.count <= 60)
         #expect(!elements.isEmpty)
     }
 

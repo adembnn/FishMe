@@ -800,6 +800,7 @@ struct VueCarte: View {
             HStack(alignment: .bottom, spacing: 12) {
                 Spacer(minLength: 0)
                 ColonneBoutonsCarte(
+                    positionAutorisee: position.estAutorisee,
                     teinteFiltre: couleurDuFiltre,
                     meteo: ouvrirMeteo,
                     autourDeMoi: autourDeMoi,

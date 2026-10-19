@@ -64,7 +64,6 @@ struct PanneauRedimensionnable<Contenu: View>: View {
             .accessibilityElement()
             .accessibilityLabel("Hauteur de la feuille")
             .accessibilityValue(detent.libelle)
-            .accessibilityAddTraits(.isAdjustable)
             .accessibilityAdjustableAction { direction in
                 switch direction {
                 case .increment: withAnimation(.snappy(duration: 0.28)) { detent = detent.plusHaut }

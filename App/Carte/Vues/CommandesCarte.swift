@@ -60,6 +60,8 @@ struct BoutonLibelleCarte: View {
 /// La colonne de 4 boutons en verre, à droite au-dessus de la barre d'onglets, chacun avec son libellé :
 /// météo, ma position (recentre la caméra sans déplacer le spot), filtre par espèce, réglages.
 struct ColonneBoutonsCarte: View {
+    /// Faux (position refusée) : le bouton s'appelle « Ma zone » et rouvre le choix du département ou de la commune.
+    var positionAutorisee = true
     let teinteFiltre: Color
     let meteo: () -> Void
     let autourDeMoi: () -> Void
@@ -70,7 +72,9 @@ struct ColonneBoutonsCarte: View {
         GlassEffectContainer(spacing: 8) {
             VStack(spacing: 8) {
                 BoutonLibelleCarte(symbole: "cloud.sun", libelle: "Météo", action: meteo)
-                BoutonLibelleCarte(symbole: "location.fill", libelle: "Ma position", teinte: Palette.marine, action: autourDeMoi)
+                BoutonLibelleCarte(symbole: positionAutorisee ? "location.fill" : "mappin.and.ellipse",
+                                   libelle: positionAutorisee ? "Ma position" : "Ma zone",
+                                   teinte: Palette.marine, action: autourDeMoi)
                 BoutonLibelleCarte(symbole: "line.3.horizontal.decrease", libelle: "Espèces", teinte: teinteFiltre, action: filtre)
                 BoutonLibelleCarte(symbole: "gearshape", libelle: "Réglages", action: reglages)
             }
