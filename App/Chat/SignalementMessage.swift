@@ -1,7 +1,7 @@
 import Foundation
 
 /// Les motifs de signalement, liste fermée (R2 `moderation.md`) : pas de texte libre.
-nonisolated enum MotifSignalement: String, CaseIterable, Identifiable, Sendable {
+nonisolated enum MotifSignalementMessage: String, CaseIterable, Identifiable, Sendable {
     case choquant = "Contenu choquant ou violent"
     case harcelement = "Haine ou harcèlement"
     case sexuel = "Nudité ou contenu sexuel"
@@ -40,7 +40,7 @@ nonisolated enum SignalementMessage {
     /// Identifiant du message (`recordName`, introuvable sinon dans le tableau de bord), de son auteur et de sa conversation.
     /// Le texte n'est joint que pour un message d'ami : il vit dans une zone privée que l'équipe ne peut pas lire.
     /// Jamais de coordonnée : le filtre de saisie les a refusées.
-    static func url(contact: String, message: MessageChat, motif: MotifSignalement) -> URL? {
+    static func url(contact: String, message: MessageChat, motif: MotifSignalementMessage) -> URL? {
         var composants = URLComponents()
         composants.scheme = "mailto"
         composants.path = contact

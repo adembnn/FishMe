@@ -314,7 +314,7 @@ final class GestionChat {
     // MARK: Modération (décision 5, règle 1.2)
 
     /// « Signaler » : le message disparaît tout de suite de cet iPhone, et l'e-mail prérempli est rendu (à ouvrir par la vue).
-    func signaler(_ message: MessageChat, motif: MotifSignalement) async -> URL? {
+    func signaler(_ message: MessageChat, motif: MotifSignalementMessage) async -> URL? {
         await stock.masquer(message.id)
         await stock.ajouter(SignalementEnAttente(id: UUID(), cible: message.id, motif: motif.rawValue,
                                                  signalePar: moi?.id ?? "inconnu", date: Date()))

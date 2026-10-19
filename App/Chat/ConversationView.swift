@@ -87,7 +87,7 @@ struct ConversationView: View {
         .onDisappear { gestion.fermer() }
         .confirmationDialog("Pourquoi signaler ce message ?", isPresented: dialogueOuvert, titleVisibility: .visible,
                             presenting: aSignaler) { message in
-            ForEach(MotifSignalement.allCases) { motif in
+            ForEach(MotifSignalementMessage.allCases) { motif in
                 Button(motif.rawValue) {
                     Task {
                         if let url = await gestion.signaler(message, motif: motif) { openURL(url) }
