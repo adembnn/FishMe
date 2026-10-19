@@ -188,6 +188,7 @@ final class ParcoursApp {
 
         moteur.surFin = { [weak self] fin in self?.sessionFinie(fin) }
         sansPositionAffiche = gps.estRefusee
+        enregistrerEffaceurs()
     }
 
     /// Au lancement : l'accord déjà donné configure le SDK, StoreKit écoute, la session est reprise.
@@ -221,6 +222,55 @@ final class ParcoursApp {
                                   collection: depot, especes: core.especes, configuration: configuration)
         gestionAmisCreee = gestion
         return gestion
+    }
+
+    // MARK: Communauté : profil, fil, messages (L21, L23, L24) // ⚠ à vérifier (écrit sans Mac)
+
+    /// Le mode démo (« Mode démo » du profil, clé `demo.communaute`) : fil et messages d'exemple, lecture seule, rien n'est envoyé.
+    var modeDemo: Bool { UserDefaults.standard.bool(forKey: "demo.communaute") }
+
+    /// Ce que le fil et le chat lisent de la racine, en une fois (profil, amis déjà chargés, département du spot, mode démo).
+    func instantaneRacine() -> InstantaneRacine {
+        let profil = GestionProfil.partage
+        let amis = (gestionAmisCreee?.amis ?? []).filter { !$0.enAttente }.map {
+            InterlocuteurChat(id: GestionAmis.cleDeBlocage($0), surnom: $0.nom, idCloudKit: $0.id)
+        }
+        let departement = spotCourant.flatMap { $0.departement.estInconnu ? nil : $0.departement.code }
+        return InstantaneRacine(monID: profil.monID, surnom: profil.surnomMemorise, aUnProfil: profil.aUnProfil,
+                                amis: amis, departement: departement, demo: modeDemo)
+    }
+
+    /// L23 : le fil. Réel (base publique) ; sans compte iCloud ou en mode démo, le fil montre ses publications d'exemple.
+    @ObservationIgnored private(set) lazy var feed: GestionFeed = GestionFeed.reel(
+        source: SourceFeedRacine(lire: { [weak self] in self?.instantaneRacine() ?? .vide }))
+
+    /// L24 : le vrai chat (CloudKit). La permission de notifier n'est demandée qu'au premier message envoyé.
+    @ObservationIgnored private(set) lazy var chatReel: GestionChat = GestionChat(
+        service: ServiceChatCloudKit(), annuaire: AnnuaireChatRacine(lire: { [weak self] in self?.instantaneRacine() ?? .vide }),
+        stock: StockChat(dossier: StockChat.dossierParDefaut()), permission: PermissionSysteme())
+    @ObservationIgnored private(set) lazy var chatExemple: GestionChat = GestionChat.exemple()
+
+    /// Le chat à montrer : l'exemple en mode démo ou sans iCloud (le relecteur d'Apple voit toutes les fonctions), sinon le vrai.
+    var chat: GestionChat { (modeDemo || !CloudKitPermisChat.actif) ? chatExemple : chatReel }
+
+    /// « Supprimer mon profil » efface aussi les publications, commentaires et messages : les effaceurs sont enregistrés ici,
+    /// créés à la demande (pas de base SwiftData du fil au lancement).
+    private func enregistrerEffaceurs() {
+        guard RegistreEffaceurs.partage.effaceurs.isEmpty else { return }
+        RegistreEffaceurs.partage.ajouter(EffaceurParesseux { [weak self] in
+            guard let self else { throw ErreurProfil.reseau }
+            return EffaceurFeed(gestion: self.feed)
+        })
+        RegistreEffaceurs.partage.ajouter(EffaceurParesseux { [weak self] in
+            guard let self else { throw ErreurProfil.reseau }
+            return EffaceurChat(gestion: self.chatReel)
+        })
+    }
+
+    /// Un message CloudKit silencieux est arrivé (délégué d'application) : le chat se rafraîchit, une alerte locale prévient si besoin.
+    func notificationCloudKitRecue() async {
+        guard !modeDemo, CloudKitPermisChat.actif else { return }
+        await chatReel.traiterNotificationCloudKit()
     }
 
     /// Recharge le Pescedex et les cartes partageables de L9 après une écriture dans le dépôt.
@@ -312,6 +362,9 @@ final class ParcoursApp {
             if !suivi.abonne { montrer(.paywall(.widget)) }
         case "aquarium":
             onglet = .pescedex
+        case "ami":
+            // L21 : fishme://ami/<id> ; la page Amis lit le relais et montre le profil.
+            if RelaisLienAmi.partage.recevoir(url) { onglet = .club }
         default:
             break
         }
@@ -536,6 +589,12 @@ final class ParcoursApp {
         Task { _ = await ecrire { _ = try await $0.enregistrerDeclaree(espece: prise.espece, date: prise.date) } }
     }
 
+    /// L18 : « Déclarer un poisson déjà pêché » (grille `DeclarationView` du Pescedex) écrit la carte puis met l'aquarium à jour.
+    func declarerEspece(_ espece: Espece) async {
+        let reussi = await ecrire { _ = try await $0.enregistrerDeclaree(espece: espece) }
+        if reussi { publierAquarium() }
+    }
+
     // MARK: Abonnement
 
     func etatAchatsLu(_ etat: EtatAchats) {
@@ -644,8 +703,11 @@ private struct RacineContenu: View {
     @Bindable var app: ParcoursApp
     @AppStorage(ClesConseils.questionVue) private var questionVue = false
     @AppStorage("demo.communaute") private var demo = false
-    @AppStorage("profil.nom") private var nomProfil = ""
+    /// L25 : le profil public (L21). Plus de nom saisi dans la racine : le surnom est le seul nom (décision 3).
+    private let profil = GestionProfil.partage
     @State private var profilOuvert = false
+    /// L24 : la liste des conversations (feuille de l'onglet Communauté).
+    @State private var messagesOuverts = false
     /// « Tes conditions » (météo), ouvert par le bouton météo de la carte.
     @State private var meteoOuverte = false
     @State private var aquariumOuvert = false
@@ -794,8 +856,8 @@ private struct RacineContenu: View {
                     meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }),
                 voirAquarium: { aquariumOuvert = true },
                 photographier: { app.ajouterPrise() },
-                declarer: { app.montrer(.tunnel) },
-                voirAmis: { app.onglet = .club },
+                // L18 : "Déclarer" ouvre la grille `DeclarationView` dans le Pescedex ; le tunnel ne s'ouvre plus d'ici.
+                declarerEspece: { espece in await app.declarerEspece(espece) },
                 // P27 « Pour toi » : Appât, Hameçon, Technique, Moment, au mois le plus proche et à n'importe quel niveau
                 // s'il le faut (jamais vide quand Core a un conseil). Sans abonnement : l'appât seul, le reste derrière Pro.
                 conseilsParType: { espece, niveau in
@@ -870,7 +932,7 @@ private struct RacineContenu: View {
             },
             demandeChoixDeZone: app.choixDeZoneOuvert, volVersLeSpot: app.volDemande,
             pastilleProfil: AnyView(
-                ProfilPastille(nom: ProfilEmplacement<EmptyView>.nomAffiche(nomProfil),
+                ProfilPastille(nom: ProfilEmplacement<EmptyView>.nomAffiche(profil.surnomMemorise ?? ""),
                                nombreDeCartes: app.cartesAPartager.count) { profilOuvert = true }),
             ouvrirMeteo: { meteoOuverte = true },
             ouvrirProfil: { profilOuvert = true })
@@ -901,11 +963,34 @@ private struct RacineContenu: View {
 
     private var club: some View {
         let poissons = app.core.especes.especesPechables().map { PoissonClub(id: $0.espece.id, nom: $0.nom, image: $0.image) }
-        return CommunauteView {
-            AmisPageView(gestion: app.gestionAmis())
+        // L23 : la page principale est le fil. L21 : « Finis ton profil » au premier passage. L24 : les messages dans une feuille
+        // (bouton en haut à droite) ; « Écrire » depuis un ami ou un club reste à poser dans leurs pages (voir branchements-l25.md).
+        return CommunauteView(fil: FeedVue(gestion: app.feed)) {
+            AmisPageView(gestion: app.gestionAmis(), profil: GestionProfil.partage)
         } club: {
             ClubPageView(cartes: app.cartesAPartager, poissons: poissons)
         }
+        .finisTonProfil()
+        .overlay(alignment: .topTrailing) { boutonMessages }
+        .sheet(isPresented: $messagesOuverts) { ListeConversationsView(gestion: app.chat) }
+    }
+
+    private var boutonMessages: some View {
+        Button { messagesOuverts = true } label: {
+            Label("Messages", systemImage: "bubble.left.and.bubble.right")
+                .labelStyle(.iconOnly)
+                .font(Police.corps)
+                .foregroundStyle(Palette.marine)
+                .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
+                .overlay(alignment: .topTrailing) {
+                    if app.chat.nonLus > 0 {
+                        Circle().fill(Color.red).frame(width: 10, height: 10).accessibilityHidden(true)
+                    }
+                }
+        }
+        .accessibilityLabel(app.chat.nonLus > 0 ? "Messages, nouveaux messages" : "Messages")
+        .padding(.trailing, Espace.bord)
+        .padding(.top, Espace.xs)
     }
 
     // MARK: Écrans modaux
@@ -1175,9 +1260,11 @@ private struct ProfilEmplacement<Reglages: View>: View {
     let reglages: Reglages
     @Environment(\.dismiss) private var fermer
     @AppStorage("demo.communaute") private var demo = false
-    @AppStorage("profil.nom") private var nom = ""
+    /// L25 (L21) : le surnom du profil public remplace l'ancien champ « nom de profil » (décision 3 : aucun nom ni prénom).
+    private let profil = GestionProfil.partage
+    @State private var finirOuvert = false
 
-    private var nomAffiche: String { ProfilEmplacement.nomAffiche(nom) }
+    private var nomAffiche: String { ProfilEmplacement.nomAffiche(profil.surnomMemorise ?? "") }
     static func nomAffiche(_ nom: String) -> String {
         let propre = nom.trimmingCharacters(in: .whitespaces)
         return propre.isEmpty ? "Pêcheur" : propre
@@ -1188,12 +1275,11 @@ private struct ProfilEmplacement<Reglages: View>: View {
             List {
                 Section {
                     HStack(spacing: Espace.m) {
-                        AvatarProfil(nom: nomAffiche, taille: 56)
+                        AvatarSurnom(surnom: nomAffiche, image: profil.profil?.avatar, taille: 56)
                         VStack(alignment: .leading, spacing: 4) {
-                            TextField("Ton nom de profil", text: $nom)
+                            Text(nomAffiche)
                                 .font(Police.corps.weight(.semibold))
-                                .textInputAutocapitalization(.words)
-                                .submitLabel(.done)
+                                .foregroundStyle(Palette.encre)
                             let niveau = BadgeProfil.niveau(cartes: app.cartesAPartager.count)
                             Label("\(niveau.titre) · \(app.cartesAPartager.count) cartes", systemImage: niveau.symbole)
                                 .font(Police.legende)
@@ -1201,15 +1287,24 @@ private struct ProfilEmplacement<Reglages: View>: View {
                         }
                     }
                     .padding(.vertical, 4)
+                    if profil.aUnProfil {
+                        NavigationLink { ReglagesProfilView(gestion: profil) } label: {
+                            Label("Mon profil public", systemImage: "person.crop.circle")
+                        }
+                    } else {
+                        Button { finirOuvert = true } label: {
+                            Label("Finis ton profil", systemImage: "person.crop.circle.badge.plus")
+                        }
+                    }
                 } footer: {
-                    Text("Pas de compte à créer : ton profil reste sur cet iPhone.")
+                    Text("Ton surnom est le seul nom que les autres voient.")
                 }
                 Section {
                     Toggle(isOn: $demo) {
                         Label("Mode démo", systemImage: "sparkles.rectangle.stack")
                     }
                 } footer: {
-                    Text("Remplit le Pescedex, les amis et le club avec des exemples. Rien n'est envoyé.")
+                    Text("Remplit le Pescedex, les amis, le club, le fil et les messages avec des exemples. Rien n'est envoyé.")
                 }
                 Section {
                     NavigationLink { MesStatistiquesEmplacement(app: app) } label: {
@@ -1231,6 +1326,8 @@ private struct ProfilEmplacement<Reglages: View>: View {
             .navigationTitle("Mon profil")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("Fermer") { fermer() } } }
+            .task { await profil.charger() }
+            .sheet(isPresented: $finirOuvert) { FinisTonProfilView(gestion: profil) }
         }
     }
 
@@ -1320,5 +1417,66 @@ enum NomDeZone {
     static func texte(departement: Departement?) -> String? {
         guard let departement, !departement.estInconnu, !departement.code.isEmpty else { return nil }
         return "Département \(departement.code)"
+    }
+}
+
+// MARK: Adaptateurs de la racine (L25) // ⚠ à vérifier (écrits sans Mac ni Xcode)
+
+/// Ce que la racine sait au moment de la lecture, copié hors du fil principal pour le fil (L23) et le chat (L24).
+nonisolated struct InstantaneRacine: Sendable {
+    var monID: String?
+    var surnom: String?
+    var aUnProfil: Bool
+    var amis: [InterlocuteurChat]
+    /// Code du département du spot (« 94 »), `nil` s'il est inconnu.
+    var departement: String?
+    var demo: Bool
+
+    static let vide = InstantaneRacine(monID: nil, surnom: nil, aUnProfil: false, amis: [], departement: nil, demo: false)
+}
+
+/// Ce que le fil attend des lots voisins (`SourceContexte`), branché sur le profil de L21, la page Amis et le spot.
+/// Les clubs (L22) ne sont pas encore branchés : `mesClubs()` rend vide jusqu'à `ServiceClubs`.
+nonisolated struct SourceFeedRacine: SourceContexte {
+    let lire: @MainActor @Sendable () -> InstantaneRacine
+
+    func monNom() async -> String? { await lire().monID }
+    /// Un profil ne se crée qu'avec la déclaration « 15 ans ou plus » : avoir un profil vaut cette déclaration.
+    func profilQuinzeAnsOuPlus() async -> Bool { await lire().aUnProfil }
+    func nomsDesAmis() async -> [String] { await lire().amis.map(\.id).filter { $0.hasPrefix("p-") } }
+    func mesClubs() async -> [ClubResume] { [] }
+    func departementsDeMaRegion() async -> [String] {
+        guard let code = await lire().departement else { return [] }
+        return [code] + RegionsFrance.departementsDeLaRegion(de: code).filter { $0 != code }
+    }
+    func lieuCourant() async -> ContexteLieu {
+        // Le type d'eau n'est pas connu ici : `planDEau: true` (pas de nom de lac, voulu par la règle de L23).
+        ContexteLieu(eauNom: nil, planDEau: true, departement: await lire().departement)
+    }
+    func modeDemo() async -> Bool { await lire().demo }
+}
+
+/// L'annuaire du chat (`AnnuaireChat`) : mon profil de L21, mes amis de la page Amis, les blocages de L21. Pas de clubs (L22).
+nonisolated struct AnnuaireChatRacine: AnnuaireChat {
+    let lire: @MainActor @Sendable () -> InstantaneRacine
+
+    func moi() async -> InterlocuteurChat? {
+        let i = await lire()
+        guard let id = i.monID, i.aUnProfil else { return nil }
+        // `idCloudKit` de moi n'est pas lu par GestionChat ; l'identifiant de profil sert de repli.
+        return InterlocuteurChat(id: id, surnom: i.surnom ?? "Pêcheur", idCloudKit: id, a15Ans: true)
+    }
+    func amis() async -> [InterlocuteurChat] { await lire().amis }
+    func clubs() async -> [ClubChat] { [] }
+    func bloques() async -> Set<String> { ListeBlocages.partage.profilsCaches() }
+}
+
+/// Un effaceur créé à la première suppression seulement (le fil ouvre une base SwiftData : pas au lancement).
+nonisolated struct EffaceurParesseux: EffaceurContenu {
+    let creer: @MainActor @Sendable () throws -> any EffaceurContenu
+
+    func effacerContenu(deProfil profilID: String) async throws {
+        let effaceur = try await MainActor.run { try creer() }
+        try await effaceur.effacerContenu(deProfil: profilID)
     }
 }
