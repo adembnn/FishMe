@@ -2,15 +2,12 @@ import AVFoundation
 import Core
 import SwiftUI
 import UIKit
-#if DEBUG
 import PhotosUI
-#endif
 
 /// L'écran Prise : de la photo à la liste de contrôle. A le branche dans `RootView.swift` avec ses services, le contexte de la sortie et la fermeture `terminer`
 /// (`nil` : aucune carte créée ; sinon la prise confirmée et la photo, que L4 range).
 struct PriseRacineView: View {
     @State private var modele: PriseModele
-    @State private var cameraOuverte = false
     @Environment(\.dismiss) private var dismiss
 
     init(services: PriseServices, contexte: PriseContexte, terminer: @escaping (PriseConfirmee?) -> Void) {
@@ -23,16 +20,11 @@ struct PriseRacineView: View {
             contenu
         }
         .tint(Palette.marine)
-        .fullScreenCover(isPresented: $cameraOuverte) {
-            PriseCamera(onImage: { image in cameraOuverte = false; modele.photoPrise(image) },
-                        onCancel: { cameraOuverte = false })
-                .ignoresSafeArea()
-        }
     }
 
     @ViewBuilder private var contenu: some View {
         switch modele.etape {
-        case .photo: PriseEtapePhoto(modele: modele, ouvrirCamera: { cameraOuverte = true }, fermer: { modele.terminer(nil) })
+        case .photo: PriseEtapePhoto(modele: modele, fermer: { modele.terminer(nil) })
         case .lecture: PriseEtapeLecture(modele: modele)
         case .propositions: PrisePropositionsView(modele: modele)
         case .grille(let classe): PriseGrilleView(modele: modele, classe: classe)
@@ -62,21 +54,30 @@ struct PriseEntete: View {
     }
 }
 
-/// P38 puis P18 : tant que l'accès à l'appareil photo n'est pas donné, une explication courte (« la photo reste sur ton iPhone, sans GPS ») ;
-/// une fois donné, le cadre de prise de vue sombre avec le déclencheur. La photo n'a pas de GPS et ne quitte pas l'iPhone.
+/// P38 puis P18 : quand l'accès à l'appareil photo est donné et que l'iPhone a une caméra, la vue de capture maison est là tout de suite
+/// (aucune explication, aucun écran intermédiaire) ; sinon (jamais demandé, refusé, simulateur) une explication courte
+/// (« la photo reste sur ton iPhone, sans GPS »). La permission n'est demandée qu'au toucher de « Continuer ». La photo n'a pas de GPS.
 struct PriseEtapePhoto: View {
     var modele: PriseModele
-    var ouvrirCamera: () -> Void
     var fermer: () -> Void
 
     @State private var acces = AVCaptureDevice.authorizationStatus(for: .video)
     @Environment(\.openURL) private var ouvrirURL
+    @Environment(\.scenePhase) private var phase
 
     var body: some View {
         Group {
-            if acces == .authorized && PriseCamera.disponible { cadre } else { permission }
+            if acces == .authorized && PriseCamera.disponible {
+                PriseCamera(onImage: { modele.photoPrise($0) }, onCancel: fermer, galerie: true)
+            } else {
+                permission
+            }
         }
         .onAppear { acces = AVCaptureDevice.authorizationStatus(for: .video) }
+        // Retour des Réglages d'iOS : l'accès a peut-être été donné entre-temps.
+        .onChange(of: phase) { _, nouvelle in
+            if nouvelle == .active { acces = AVCaptureDevice.authorizationStatus(for: .video) }
+        }
     }
 
     // MARK: P38 : accès à l'appareil photo
@@ -110,7 +111,7 @@ struct PriseEtapePhoto: View {
                         }
                         .buttonStyle(.principal)
                     } else {
-                        Button("Continuer") { demanderEtOuvrir() }.buttonStyle(.principal)
+                        Button("Continuer") { demander() }.buttonStyle(.principal)
                     }
                 }
                 PriseChoixPhoto(modele: modele) {
@@ -128,99 +129,48 @@ struct PriseEtapePhoto: View {
         }
     }
 
-    private func demanderEtOuvrir() {
+    private func demander() {
         if acces == .notDetermined {
             AVCaptureDevice.requestAccess(for: .video) { _ in
                 Task { @MainActor in
                     acces = AVCaptureDevice.authorizationStatus(for: .video)
-                    if acces == .authorized { ouvrirCamera() }
                 }
             }
-        } else {
-            ouvrirCamera()
-        }
-    }
-
-    // MARK: P18 : cadre de prise de vue
-
-    private var cadre: some View {
-        // P18 C : la photo prend tout l'écran (l'aperçu vivant est ouvert par le déclencheur), voile marine à 28 %, coins de cadrage (320 × 290 à 230 pt du haut),
-        // consigne à 545 pt, déclencheur de 92 pt à 92 pt du bas, galerie 48 pt à gauche, mention à 48 pt du bas.
-        ZStack(alignment: .topLeading) {
-          ZStack(alignment: .top) {
-            Palette.nuit
-            Color(red: 8 / 255, green: 42 / 255, blue: 76 / 255).opacity(0.28)
-            PriseCoinsDeCadre().stroke(.white, style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
-                .aspectRatio(320.0 / 290.0, contentMode: .fit)
-                .frame(width: 320)
-                .padding(.top, 230)
-                .accessibilityHidden(true)
-            Text("Le poisson entier, de profil")
-                .font(Police.sousTitre).foregroundStyle(.white).multilineTextAlignment(.center)
-                .shadow(color: .black.opacity(0.45), radius: 4, y: 1)
-                .frame(maxWidth: .infinity)
-                .padding(.top, 545)
-            Button(action: ouvrirCamera) {
-                Circle().fill(.white).frame(width: 92, height: 92)
-                    .overlay(Circle().strokeBorder(.white.opacity(0.55), lineWidth: 4).frame(width: 100, height: 100))
-                    .frame(width: 100, height: 100)
-            }
-            .accessibilityLabel("Prendre la photo")
-            .padding(.bottom, 88)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-            PriseChoixPhoto(modele: modele) {
-                Image(systemName: "photo")
-                    .font(.system(size: 22, weight: .bold, design: .rounded)).foregroundStyle(Palette.encre)
-                    .frame(width: 48, height: 48)
-                    .background(Color(red: 250 / 255, green: 252 / 255, blue: 255 / 255).opacity(0.92),
-                                in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-            }
-            .padding(.leading, 32).padding(.bottom, 114)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-            Text("Sur l\u{2019}iPhone, sans réseau")
-                .font(Police.legende).foregroundStyle(.white.opacity(0.85))
-                .padding(.bottom, 48)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-          }
-          .ignoresSafeArea()
-            BoutonRond(role: .fermer, rendu: .verre, action: fermer).padding(.horizontal, Espace.bord)
         }
     }
 }
 
 private enum PriseChoixPhotoTexte {
-    #if DEBUG
     static let libelle = "Choisir une photo"
-    #else
-    static let libelle = "Essayer avec une photo d'exemple"
-    #endif
 }
 
-/// Le second chemin vers une photo : la photothèque sous #if DEBUG (simulateur sans caméra), sinon la photo d'exemple.
-/// Une vraie carte ne naît que d'une photo prise avec l'appareil.
+/// Le second chemin vers une photo sur l'écran d'explication (sans caméra ou sans accès) : la galerie, puis la photo d'exemple.
+/// L'import depuis la galerie est voulu (décision de Titouan, 19 oct.) : la photo est ré-encodée par `PriseCamera.imageSansGPS`, donc sans GPS.
+/// Avec la caméra, la galerie est aussi dans la vue de capture (`PriseCamera`).
 private struct PriseChoixPhoto<Etiquette: View>: View {
     var modele: PriseModele
     @ViewBuilder var etiquette: () -> Etiquette
-    #if DEBUG
     @State private var choix: PhotosPickerItem?
-    #endif
 
     var body: some View {
-        #if DEBUG
-        PhotosPicker(selection: $choix, matching: .images) { etiquette() }
-            .accessibilityLabel("Choisir une photo")
-            .onChange(of: choix) { _, nouveau in
-                guard let nouveau else { return }
-                Task {
-                    if let data = try? await nouveau.loadTransferable(type: Data.self), let image = UIImage(data: data) {
-                        modele.photoPrise(image)
+        VStack(spacing: 0) {
+            PhotosPicker(selection: $choix, matching: .images) { etiquette() }
+                .accessibilityLabel("Choisir une photo")
+                .onChange(of: choix) { _, nouveau in
+                    guard let nouveau else { return }
+                    Task {
+                        if let data = try? await nouveau.loadTransferable(type: Data.self), let image = PriseCamera.imageSansGPS(data) {
+                            modele.photoPrise(image)
+                        }
+                        choix = nil
                     }
                 }
+            Button { modele.photoPrise(PhotoExemple.image(), exemple: true) } label: {
+                Text("Essayer avec une photo d'exemple").font(Police.corps).foregroundStyle(Palette.marine)
+                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
             }
-        #else
-        Button { modele.photoPrise(PhotoExemple.image(), exemple: true) } label: { etiquette() }
             .accessibilityLabel("Essayer avec une photo d'exemple")
-        #endif
+        }
     }
 }
 
