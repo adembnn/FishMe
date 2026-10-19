@@ -9,7 +9,7 @@ struct RecordsTests {
     static let sandre = Espece(id: "sandre", codeSandre: "2195")
     static let perche = Espece(id: "perche-commune", codeSandre: "2193")
     static let carpe = Espece(id: "carpe-commune", codeSandre: "2032")
-    static let aucunSeuil: (Espece) -> Double? = { _ in nil }
+    static let aucunSeuil: @Sendable (Espece) -> Double? = { _ in nil }
 
     static func prise(_ e: Espece = brochet, _ cm: Double? = nil, jour: Int = 1, mois: Int = 9, origine: OrigineCarte = .priseReelle,
                       exemple: Bool = false, mesure: MethodeMesure? = .saisie, lieu: String? = "la Marne") -> Prise {
