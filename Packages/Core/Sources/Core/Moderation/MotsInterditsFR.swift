@@ -8,7 +8,7 @@ import Foundation
 ///
 /// Retirés volontairement, parce que ce sont des mots de pêche ou de langage courant : tanche, bite, bitte (la touche),
 /// gueule (du poisson), gerbe (d'eau), suce, pédale, turlutte (leurre), cul, folle, bander, pipi, caca, pisser, péter,
-/// étron, baiser, jouir, zizi, trique, emmerder. Aucun mot n'est refusé par sous-chaîne : « concours » ne contient pas « con ».
+/// étron, baiser, jouir, zizi, trique, emmerder. Les pluriels et féminins courants sont listés un par un. Aucun mot n'est refusé par sous-chaîne : « concours » ne contient pas « con ».
 /// Les lettres répétées ne sont pas réduites des deux côtés (« coule » ne doit pas devenir « couille ») : seules les suites de
 /// trois lettres identiques ou plus sont ramenées à une (« connaaard » devient « connard »).
 public enum MotsInterditsFR {
@@ -20,6 +20,7 @@ public enum MotsInterditsFR {
         "negre", "negro", "palucher", "pede", "pouffiasse", "putain", "pute", "putes", "salaud", "salope", "salopard",
         "tapette", "teuch", "tringler", "troncher", "batard", "bordel", "nique", "niquer", "ntm", "fdp", "pd", "pedophile",
         "pedo", "violeur", "nazi", "bougnoule", "youpin", "petasse", "trouduc",
+        "cons", "connes", "connards", "connasses", "cramouilles", "encules", "enculees", "enculeuse", "enculeuses", "enfoires", "enfoirees", "gouines", "grogniasses", "merdes", "merdeuses", "merdiques", "negres", "negros", "pedes", "pedos", "pedophiles", "pouffiasses", "putains", "salauds", "salopes", "salopards", "tapettes", "batards", "batarde", "batardes", "bordels", "branleurs", "branleuses", "branlettes", "chattes", "clitos", "trouducs", "violeurs", "nazis", "bougnoules", "youpins", "petasses", "brackmards",
     ]
 
     /// Suites de mots (mots entiers consécutifs), sans accents, en minuscules.

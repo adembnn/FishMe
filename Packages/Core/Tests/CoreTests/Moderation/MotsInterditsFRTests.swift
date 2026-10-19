@@ -18,6 +18,19 @@ struct MotsInterditsFRTests {
         #expect(!MotsInterditsFR.contient(texte), "« \(texte) » ne devrait pas être refusé")
     }
 
+    /// Pluriels et accords courants : chaque forme ajoutée à la liste est refusée.
+    @Test(arguments: ["cons", "connes", "connards", "connasses", "cramouilles", "encules", "enculees", "enculeuse", "enculeuses", "enfoires", "enfoirees", "gouines", "grogniasses", "merdes", "merdeuses", "merdiques", "negres", "negros", "pedes", "pedos", "pedophiles", "pouffiasses", "putains", "salauds", "salopes", "salopards", "tapettes", "batards", "batarde", "batardes", "bordels", "branleurs", "branleuses", "branlettes", "chattes", "clitos", "trouducs", "violeurs", "nazis", "bougnoules", "youpins", "petasses", "brackmards"])
+    func refuseLesPlurielsEtAccords(_ texte: String) {
+        #expect(MotsInterditsFR.contient(texte), "« \(texte) » devrait être refusé")
+    }
+
+    /// Mots proches des mots refusés : jamais refusés (mot entier seulement).
+    @Test(arguments: ["construction", "concours", "conserve", "cotons", "coton", "conseil", "connu", "nazca", "bordeaux",
+                      "salade", "putois", "batavia", "negrier", "pedestre", "conque"])
+    func accepteLesMotsProches(_ texte: String) {
+        #expect(!MotsInterditsFR.contient(texte), "« \(texte) » ne devrait pas être refusé")
+    }
+
     @Test func coulerNEstPasCouille() {
         #expect(!MotsInterditsFR.contient("coule"))
         #expect(!MotsInterditsFR.contient("coules"))
