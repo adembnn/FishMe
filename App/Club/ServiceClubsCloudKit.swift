@@ -121,6 +121,16 @@ actor ServiceClubsCloudKit: ServiceClubs {
         }
     }
 
+    func supprimer(club id: String, fondateur: String) async throws {
+        try await executer {
+            let base = try publique
+            var aSupprimer = try await idsDeMesCartes(club: id, profil: fondateur)
+            aSupprimer.append(CKRecord.ID(recordName: Membre.identifiant(club: id, profil: fondateur)))
+            aSupprimer.append(CKRecord.ID(recordName: id))
+            try await supprimer(aSupprimer, dans: base)
+        }
+    }
+
     func ecarter(profil: String, deClub id: String) async throws {
         try await executer {
             let base = try publique

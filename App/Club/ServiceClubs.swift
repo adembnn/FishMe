@@ -18,6 +18,9 @@ nonisolated protocol ServiceClubs: Sendable {
     func quitter(club id: String, profil: String) async throws
     /// Fondateur seul dans son club : `ferme` = vrai, ses cartes et son adhésion sont supprimées.
     func fermer(club id: String, fondateur: String) async throws
+    /// Suppression de compte (L21) d'un fondateur seul : l'enregistrement `Club` lui-même est supprimé, avec ses cartes et son adhésion.
+    /// Seul son créateur peut le faire (R2). Un club qui a encore des membres n'est jamais supprimé par ce chemin.
+    func supprimer(club id: String, fondateur: String) async throws
     /// Fondateur : ajoute le profil à `Club.retires`. R2 : on ne peut pas supprimer le `Membre` d'un autre ; ses cartes restent en base
     /// mais ne sont plus affichées, et son iPhone les efface lui-même au prochain chargement (`GestionClubs.rafraichir`).
     /// ⚠ Cela ne retire PAS l'accès à la zone partagée du chat de club (L24) : seul le fondateur peut retirer le participant du `CKShare`.
@@ -109,6 +112,14 @@ actor FauxServiceClubs: ServiceClubs {
         club.ferme = true
         clubsParID[id] = club
         try await quitter(club: id, profil: fondateur)
+    }
+
+    func supprimer(club id: String, fondateur: String) async throws {
+        try verifier()
+        guard let club = clubsParID[id] else { return }
+        guard club.fondateur == fondateur else { throw ErreurClub.refuse }
+        try await quitter(club: id, profil: fondateur)
+        clubsParID[id] = nil
     }
 
     func ecarter(profil: String, deClub id: String) async throws {
