@@ -2,15 +2,24 @@
 
 Écrit le 19 octobre 2026 par Titouan (avec ses agents Claude). Titouan n'a pas de Mac : **tout le Swift ci-dessous a été écrit sans compilateur**. Rien n'est compilé, aucun test n'est exécuté, rien n'est testé sur iPhone. Sullyvan compile et teste (répartition du 19 octobre, option C), Adem tranche et branche (L25).
 
+## 0. Mise à jour du 19 octobre (soir) : à lire d'abord
+- **Nouvelle branche `lot/core-moderation` (1996a575)** : dans `Packages/Core`, la **liste de mots interdits complète** (`Moderation/MotsInterditsFR.swift`, LDNOOBW CC-BY-4.0, **sans** les faux positifs de pêche : tanche, bite, gueule, turlutte, pédale, gerbe…) et la **table des 13 régions** (`Regions/RegionsFrance.swift`, 96 départements, vérifiée). Tests écrits, non exécutés. **À fusionner EN PREMIER** : L21, L23 et L24 en dépendent maintenant.
+- **L21, L23 et L24 utilisent cette liste unique** (un seul `MotsInterditsFR.contient(...)`), ce qui règle les trois filtres en double. Hash : `lot/profil` 6f07d28b, `lot/feed` 55401bdb, `lot/chat` d050acfe. Un bug de l'ancienne liste de L23 est supprimé : elle réduisait les lettres doubles des deux côtés, donc « coule » (l'eau) était refusé comme « couille ».
+- **Ordre de fusion conseillé** : `lot/core-moderation`, puis `lot/profil`, `lot/collection-2`, `lot/prise-2`, `lot/feed`, `lot/chat`. Simulé dans une copie de `main` : aucun conflit de texte, aucune collision de type.
+- **Collisions de noms corrigées** : `MotifSignalement` (défini trois fois) renommé `MotifSignalementPublication` (L23) et `MotifSignalementMessage` (L24) ; `LigneRegleView` de L19 renommé `LigneRegleBlocView`. `lot/prise-2` est maintenant à 7758521e.
+- **Régions** : `RegionsFrance.region(deDepartement:)` et `departementsDeLaRegion(de:)` donnent à A de quoi brancher `regionDe:` (L18) et `departementsDeMaRegion` (L23) sans écrire la table.
+- **Attribution à ajouter dans Profil, Sources** (CC-BY-4.0) : « Liste de mots interdits : LDNOOBW, https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words ».
+- **Amis** : retirés du Pescedex (L18) ; ils ne vivent que dans Communauté. Il reste dans `PescedexView` un paramètre `voirAmis` inutilisé, conservé pour que l'appel actuel de `RootView` compile ; A le retire avec L25.
+
 ## 1. Ce qui est livré : six branches, toutes issues de `origin/main` du 19 octobre
 | Lot | Branche | Dernier commit | Commits | Contenu |
 |---|---|---|---|---|
 | L18 Pescedex direct | `lot/collection-2` | `fbb6dfc6` | 6 | grille « Déclarer un poisson déjà pêché » avec recherche, plus d'« Amis » dans le Pescedex, photo en 1 toucher, « Enregistrer dans Photos » sans GPS, libellés en toutes lettres, menu de zone Mon spot / Ma région / France |
-| L19 Prise | `lot/prise-2` | `132d949d` | 6 | caméra visible d'emblée, vue de capture maison, carte retournable puis bloc de règles à deux états avec sources (`App/Style/BlocRegles/`) |
+| L19 Prise | `lot/prise-2` | `7758521e` | 7 | caméra visible d'emblée, vue de capture maison, carte retournable puis bloc de règles à deux états avec sources (`App/Style/BlocRegles/`) |
 | R2 Rapport réseau social | `lot/rapport-reseau` | `638d751a` | 13 | 8 fichiers `docs/reports/reseau/`, prototype CloudKit `outils/reseau/` pour Sullyvan |
-| L21 Profil et amis | `lot/profil` | `a4226420` | 5 | surnom unique et avatar, recherche en 3 lettres, « Finis ton profil », suppression, signaler et bloquer un profil, déclaration « 15 ans ou plus » |
-| L23 Feed | `lot/feed` | `96b6e26c` | 6 | publier photo ou vidéo de 15 s sans GPS, lieu au choix, fil clubs / amis / région, likes, commentaires, signalement, blocage |
-| L24 Chat | `lot/chat` | `ab699892` | 6 | chat d'amis et de club, notifications au premier message, signalement, blocage |
+| L21 Profil et amis | `lot/profil` | `6f07d28b` | 6 | surnom unique et avatar, recherche en 3 lettres, « Finis ton profil », suppression, signaler et bloquer un profil, déclaration « 15 ans ou plus » |
+| L23 Feed | `lot/feed` | `55401bdb` | 8 | publier photo ou vidéo de 15 s sans GPS, lieu au choix, fil clubs / amis / région, likes, commentaires, signalement, blocage |
+| L24 Chat | `lot/chat` | `d050acfe` | 8 | chat d'amis et de club, notifications au premier message, signalement, blocage |
 
 Les branches sont **indépendantes** : aucune ne contient le travail des autres. Elles touchent des dossiers différents (périmètre vérifié par `git diff --name-only origin/main` pour chacune), sauf `App/Amis/` (L21 modifie des fichiers de L8, voir 4).
 
@@ -42,7 +51,7 @@ Les branches sont **indépendantes** : aucune ne contient le travail des autres.
 
 ## 4. Conflits et alignements à prévoir à la fusion
 - **L21 modifie `App/Amis/`** (`AmisPageView`, `AmisView`, `GestionAmis`, `RelaisInvitations`, `ServiceAmis`, `ServiceAmisCloudKit`, `Signalement`). L24 ajoute un routage dans `RelaisInvitations` (à faire par A). Fusionner L21 avant L24.
-- **Deux listes de mots interdits** : `FiltreTexte` (L23) et `FiltreMessage` (L24), plus `AucunFiltre` et `FiltreParListe` (L21). À unifier ; la liste de L23 est courte et écrite de mémoire. À remplacer par la liste française LDNOOBW (CC-BY-4.0, attribution obligatoire) en écartant les faux positifs de pêche (« bite », etc.).
+- **Liste de mots interdits** : unifiée dans `Core` (voir 0). `AucunFiltre` (L21) ne sert plus que pour les tests et aperçus.
 - **Protocoles marqués `À aligner L21`, `À aligner L22`** : `SourceContexte` (L23), `AnnuaireChat`, `InterlocuteurChat`, `ClubChat`, `EffaceurMessages` (L24). Ils attendent les types réels de L21 (profil) et L22 (clubs, lot d'Adem). `Club.fondateur` et `Membre.profil` doivent contenir l'identifiant `p-<surnom normalisé>` de `ProfilModele.id`.
 - **Repères `// R2:`** dans le code : endroits à réaligner une fois R2 validé.
 
