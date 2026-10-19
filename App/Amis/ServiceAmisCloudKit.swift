@@ -20,7 +20,9 @@ nonisolated enum CloudKitPermis {
 actor ServiceAmisCloudKit: ServiceAmis {
     /// `nil` dans une archive de repli sans iCloud : créer un `CKContainer` sans le droit iCloud fait quitter l'app.
     private let conteneurPermis: CKContainer?
-    private let zone = CKRecordZone.ID(zoneName: "Pescedex", ownerName: CKCurrentUserDefaultName)
+    /// La zone des cartes partagées. Les autres zones de la base partagée (chat) ne sont pas des amis.
+    static let nomDeZone = "Pescedex"
+    private let zone = CKRecordZone.ID(zoneName: ServiceAmisCloudKit.nomDeZone, ownerName: CKCurrentUserDefaultName)
     private let dossierTemp: URL
 
     init(configuration: ConfigurationAmis) {
@@ -140,10 +142,14 @@ actor ServiceAmisCloudKit: ServiceAmis {
         try await executer {
             var collections: [CollectionAmi] = []
             for zoneRecue in try await partagee.allRecordZones() {
+                // Seules les zones `Pescedex` sont des amis. Les zones de chat (`chat-…`, `chatclub-…`, L24) partagent la même base
+                // partagée : les lire ferait de chaque interlocuteur un faux ami « Un ami ».
+                guard zoneRecue.zoneID.zoneName == Self.nomDeZone else { continue }
                 let proprietaire = zoneRecue.zoneID.ownerName
                 let partage = try? await partagee.record(for: CKRecord.ID(recordName: CKRecordNameZoneWideShare,
                                                                             zoneID: zoneRecue.zoneID)) as? CKShare
-                let nom = NomAmi.affiche(titre: partage?[CKShare.SystemFieldKey.title] as? String)
+                // Le titre est choisi par l'ami : il ne devient son nom que s'il est confirmé (voir `nomVerifie`).
+                let nom = await nomVerifie(titre: partage?[CKShare.SystemFieldKey.title] as? String, proprietaire: proprietaire)
                 var cartes: [CartePartagee] = []
                 var jeton: CKServerChangeToken?
                 var encore = true
@@ -164,9 +170,21 @@ actor ServiceAmisCloudKit: ServiceAmis {
         }
     }
 
+    /// Le titre d'un partage est écrit par l'ami : rien ne l'empêche d'y mettre le surnom de quelqu'un d'autre (usurpation, et un blocage
+    /// couperait le mauvais ami). On l'affiche seulement si le profil public de ce surnom a été CRÉÉ par le propriétaire de la zone
+    /// (`creatorUserRecordID` égal au nom du propriétaire). Sinon, ou sans réseau : « Un ami ».
+    /// ⚠ à vérifier sur le Mac : `creatorUserRecordID.recordName` d'un profil public égal à `ownerName` de la zone partagée.
+    private func nomVerifie(titre: String?, proprietaire: String) async -> String {
+        guard let titre, titre != NomAmi.titreSansProfil, Surnom.verifier(titre) == nil, let base = try? conteneur.publicCloudDatabase else {
+            return NomAmi.anonyme
+        }
+        let record = try? await base.record(for: CKRecord.ID(recordName: Surnom.identifiant(pour: titre)))
+        return NomAmi.affiche(titre: titre, auteurDuProfil: record?.creatorUserRecordID?.recordName, proprietaire: proprietaire)
+    }
+
     func quitterPartage(de ami: Ami) async throws {
         try await executer {
-            let zoneAmi = CKRecordZone.ID(zoneName: "Pescedex", ownerName: ami.id)
+            let zoneAmi = CKRecordZone.ID(zoneName: Self.nomDeZone, ownerName: ami.id)
             let identifiant = CKRecord.ID(recordName: CKRecordNameZoneWideShare, zoneID: zoneAmi)
             do {
                 _ = try await partagee.modifyRecords(saving: [], deleting: [identifiant], savePolicy: .ifServerRecordUnchanged,
@@ -225,5 +243,23 @@ actor ServiceAmisCloudKit: ServiceAmis {
     /// Décision 3 : le nom du compte Apple d'un invité ne s'affiche jamais. Son surnom arrive quand il m'invite en retour.
     private static func nom(de identite: CKUserIdentity) -> String {
         NomAmi.anonyme
+    }
+}
+
+/// Met le titre de MON `CKShare` d'amis au niveau de mon surnom : appelé après la création et après la suppression du profil
+/// (`GestionProfil`), pas seulement à l'invitation. Sans partage, il n'y a rien à titrer (`partagePret` l'écrira à la création).
+/// Sans profil, le titre redevient « Pescedex » : un surnom effacé ne reste jamais affiché chez les amis.
+/// ⚠ à vérifier sur le Mac : même écriture que `partagePret()` (`modifyRecords` sur le `CKShare` de la zone).
+nonisolated enum TitrePartage {
+    static func synchroniser(conteneur: String = ConfigurationAmis.conteneurParDefaut) async {
+        guard CloudKitPermis.actif else { return }
+        let base = CKContainer(identifier: conteneur).privateCloudDatabase
+        let zone = CKRecordZone.ID(zoneName: ServiceAmisCloudKit.nomDeZone, ownerName: CKCurrentUserDefaultName)
+        let identifiant = CKRecord.ID(recordName: CKRecordNameZoneWideShare, zoneID: zone)
+        guard let partage = (try? await base.record(for: identifiant)) as? CKShare else { return }
+        let titre = NomAmi.titre(surnom: MemoireProfilLocale().surnom())
+        guard (partage[CKShare.SystemFieldKey.title] as? String) != titre else { return }
+        partage[CKShare.SystemFieldKey.title] = titre
+        _ = try? await base.modifyRecords(saving: [partage], deleting: [], savePolicy: .changedKeys, atomically: true)
     }
 }

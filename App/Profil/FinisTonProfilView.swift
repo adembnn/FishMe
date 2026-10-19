@@ -7,6 +7,8 @@ struct FinisTonProfilView: View {
     @State private var surnom = ""
     @State private var avatar: Data?
     @State private var aQuinzeAns = false
+    @State private var accepteLesConditions = false
+    @State private var conditionsOuvertes = false
     @FocusState private var champActif: Bool
 
     private var refus: Surnom.Refus? { gestion.verifier(surnom: surnom) }
@@ -27,6 +29,7 @@ struct FinisTonProfilView: View {
         .background(Palette.fond.ignoresSafeArea())
         .presentationDetents([.medium, .large])
         .interactiveDismissDisabled(gestion.enCours)
+        .sheet(isPresented: $conditionsOuvertes) { ConditionsFeuille() }
     }
 
     // MARK: Les trois lignes
@@ -71,14 +74,29 @@ struct FinisTonProfilView: View {
                 .font(Police.corps)
                 .frame(minHeight: Gabarit.zoneTactile)
                 .accessibilityIdentifier("profil.age15")
+            // Décision du 19 oct. : la case est obligatoire avant le profil public, avec un lien vers les conditions.
+            Toggle("J'accepte les conditions", isOn: $accepteLesConditions)
+                .font(Police.corps)
+                .frame(minHeight: Gabarit.zoneTactile)
+                .accessibilityIdentifier("profil.conditions")
+            Button("Lire les conditions") { conditionsOuvertes = true }
+                .font(Police.detail)
+                .frame(minHeight: Gabarit.zoneTactile)
+                .accessibilityIdentifier("profil.lireconditions")
             Text("Sans cela, pas de profil public : ta collection, les règles et la carte restent là.")
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
             VStack(spacing: Espace.m) {
                 Button("C'est bon") { Task { await creer() } }
                     .buttonStyle(.principal)
-                    .disabled(refus != nil || !aQuinzeAns || gestion.enCours)
+                    .disabled(refus != nil || !aQuinzeAns || !accepteLesConditions || gestion.enCours)
                     .accessibilityIdentifier("profil.cestbon")
+                if gestion.message == .surnomPris {
+                    // Le surnom « pris » est peut-être le mien (réponse perdue, réinstallation) : on tente de le retrouver.
+                    Button("C'est mon profil : le retrouver") { Task { await gestion.retrouver(surnom: surnom) } }
+                        .buttonStyle(.secondaire)
+                        .accessibilityIdentifier("profil.retrouver")
+                }
                 Button("Me le rappeler plus tard") { fermer() }
                     .buttonStyle(.secondaire)
                     .accessibilityIdentifier("profil.plustard")
@@ -129,7 +147,7 @@ struct FinisTonProfilView: View {
 
     private func creer() async {
         champActif = false
-        await gestion.creer(surnom: surnom, avatar: avatar, aQuinzeAns: aQuinzeAns)
+        await gestion.creer(surnom: surnom, avatar: avatar, aQuinzeAns: aQuinzeAns, accepteLesConditions: accepteLesConditions)
     }
 }
 

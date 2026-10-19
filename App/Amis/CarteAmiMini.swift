@@ -119,10 +119,10 @@ struct CarteAmiMini: View {
     }
 }
 
-/// Ce que la grille montre pour une carte : la carte, puis dessous le prénom de l'ami et le mois.
+/// Ce que la grille montre pour une carte : la carte, puis dessous le surnom de l'ami et le mois.
 struct CarteAmiGrille: Identifiable {
     let id: String
-    let prenom: String
+    let surnom: String
     let mois: String
     let style: StyleRarete
     let nomEspece: String
@@ -146,7 +146,7 @@ struct GrilleCartesAmis: View {
                     VStack(alignment: .leading, spacing: Espace.s) {
                         CarteAmiMini(style: carte.style, nomEspece: carte.nomEspece, imageEspece: carte.imageEspece,
                                      imageCarte: carte.imageCarte, photo: carte.photo, tailleCm: carte.tailleCm)
-                        Text(carte.prenom)
+                        Text(carte.surnom)
                             .font(Police.detail)
                             .foregroundStyle(Palette.encre)
                             .lineLimit(1)

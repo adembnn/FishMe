@@ -1,12 +1,12 @@
 import SwiftUI
 
-/// Les réglages de mon profil : avatar, nom et prénom privés (facultatifs), « Supprimer mon profil » en deux temps.
+/// Les réglages de mon profil : avatar, partage du lien, « Supprimer mon profil » en deux temps.
+/// Juste un pseudonyme (décision 3) : aucun champ nom ni prénom.
+/// Hors ligne, avec un identifiant gardé mais sans profil relu, l'écran reste utile : « Mon profil », réessayer, supprimer.
 struct ReglagesProfilView: View {
     let gestion: GestionProfil
     @Environment(\.dismiss) private var fermer
     @State private var avatar: Data?
-    @State private var nom = ""
-    @State private var prenom = ""
     @State private var premiereQuestion = false
     @State private var secondeQuestion = false
 
@@ -17,7 +17,6 @@ struct ReglagesProfilView: View {
                 if let profil = gestion.profil {
                     ChoixAvatar(surnom: profil.surnom, donnees: $avatar)
                         .frame(maxWidth: .infinity)
-                    privee
                     if let lien = LienAmi.url(profilID: profil.id) {
                         ShareLink(item: lien, message: Text("Retrouve-moi sur FishMe : \(profil.surnom)")) {
                             Label("Partager le lien à mes acolytes", systemImage: "square.and.arrow.up")
@@ -26,10 +25,16 @@ struct ReglagesProfilView: View {
                         }
                         .buttonStyle(.secondaire)
                     }
-                    if let message = gestion.message {
-                        Text(message.texte).font(Police.detail).foregroundStyle(Palette.alerte)
-                    }
-                    suppression
+                    messageEtSuppression
+                } else if gestion.aUnProfil {
+                    // Hors ligne (ou lecture en échec) : l'iPhone sait qu'un profil existe, sans pouvoir le relire.
+                    Text("Ton profil n'a pas pu être relu pour l'instant. Tu peux réessayer, ou le supprimer.")
+                        .font(Police.corps)
+                        .foregroundStyle(Palette.encreDouce)
+                    Button("Réessayer") { Task { await gestion.charger() } }
+                        .buttonStyle(.secondaire)
+                        .frame(minHeight: Gabarit.zoneTactile)
+                    messageEtSuppression
                 } else {
                     Text("Tu n'as pas de profil. Tu peux en créer un depuis Amis.")
                         .font(Police.corps)
@@ -41,22 +46,21 @@ struct ReglagesProfilView: View {
         }
         .scrollIndicators(.hidden)
         .background(Palette.fond.ignoresSafeArea())
-        .onAppear {
-            avatar = gestion.profil?.avatar
-            let prive = gestion.identitePrivee()
-            nom = prive.nom
-            prenom = prive.prenom
-        }
+        .onAppear { avatar = gestion.profil?.avatar }
         .onChange(of: avatar) { ancien, nouveau in
             guard ancien != nouveau, nouveau != gestion.profil?.avatar else { return }
-            Task { await gestion.changerAvatar(nouveau) }
+            Task {
+                await gestion.changerAvatar(nouveau)
+                // Si l'envoi a échoué, l'avatar affiché redevient celui du serveur (pas de faux avatar local).
+                avatar = gestion.profil?.avatar
+            }
         }
     }
 
     private var entete: some View {
         HStack {
-            if let profil = gestion.profil {
-                Text(profil.surnom)
+            if let surnom = gestion.surnomMemorise {
+                Text(surnom)
                     .font(Police.titre)
                     .foregroundStyle(Palette.encre)
             }
@@ -67,28 +71,11 @@ struct ReglagesProfilView: View {
         }
     }
 
-    /// Nom et prénom : restent dans la base privée, ne s'affichent chez personne.
-    private var privee: some View {
-        VStack(alignment: .leading, spacing: Espace.s) {
-            Label("Nom et prénom (facultatif)", systemImage: "lock")
-                .font(Police.sousTitre)
-                .foregroundStyle(Palette.encre)
-            Text("Privés : personne ne les voit, ni les amis ni le réseau.")
-                .font(Police.detail)
-                .foregroundStyle(Palette.encreDouce)
-            champ("Prénom", texte: $prenom)
-            champ("Nom", texte: $nom)
+    @ViewBuilder private var messageEtSuppression: some View {
+        if let message = gestion.message {
+            Text(message.texte).font(Police.detail).foregroundStyle(Palette.alerte)
         }
-    }
-
-    private func champ(_ titre: String, texte: Binding<String>) -> some View {
-        TextField(titre, text: texte)
-            .textContentType(titre == "Nom" ? .familyName : .givenName)
-            .font(Police.corps)
-            .padding(Espace.m)
-            .frame(minHeight: Gabarit.zoneTactile)
-            .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-            .onChange(of: texte.wrappedValue) { _, _ in gestion.enregistrerIdentitePrivee(nom: nom, prenom: prenom) }
+        suppression
     }
 
     // MARK: Supprimer mon profil, en deux temps
@@ -102,7 +89,8 @@ struct ReglagesProfilView: View {
                 Button("Continuer", role: .destructive) { secondeQuestion = true }
                 Button("Garder mon profil", role: .cancel) {}
             } message: {
-                Text("Ton surnom, ton avatar, tes publications et tes commentaires seront effacés.")
+                // Jamais plus que ce qui sera vraiment effacé : le texte suit les effaceurs branchés (L23, L24).
+                Text(gestion.phraseSuppression)
             }
             .alert("Dernière vérification", isPresented: $secondeQuestion) {
                 Button("Tout effacer", role: .destructive) {
@@ -112,7 +100,7 @@ struct ReglagesProfilView: View {
                 }
                 Button("Annuler", role: .cancel) {}
             } message: {
-                Text("Cela ne peut pas être annulé. Ton Pescedex reste sur ton iPhone.")
+                Text("Cela ne peut pas être annulé. Ton Pescedex reste sur ton iPhone. Les cartes que tu as partagées avec tes amis restent partagées : arrête-les dans Amis.")
             }
     }
 }

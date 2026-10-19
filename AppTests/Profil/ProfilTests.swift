@@ -13,14 +13,19 @@ nonisolated private final class MemoireFausse: MemoireProfil, @unchecked Sendabl
     func oublier() { id = nil; nom = nil }
 }
 
+/// Compte les mises à jour du titre du partage d'amis.
+private actor TitresNotes {
+    private(set) var appels = 0
+    func noter() { appels += 1 }
+}
+
 @MainActor
 struct ProfilTests {
     private func gestion(_ service: FauxServiceProfil, effaceurs: [any EffaceurContenu] = [],
                          memoire: MemoireFausse = MemoireFausse()) -> GestionProfil {
         let u = UUID().uuidString
         return GestionProfil(service: service, memoire: memoire,
-                             identite: IdentitePriveeLocale(cleNom: "t.nom.\(u)", clePrenom: "t.prenom.\(u)"),
-                             blocages: BlocagesProfils(cleBloques: "t.bl.\(u)", cleMasques: "t.ma.\(u)"),
+                             blocages: ListeBlocages(cleBloques: "t.bl.\(u)", cleMasques: "t.ma.\(u)"),
                              effaceurs: effaceurs)
     }
 
@@ -62,17 +67,15 @@ struct ProfilTests {
         #expect(Surnom.verifier("щукаа") == .caractereInterdit)
         #expect(Surnom.verifier("魚釣り人") == .caractereInterdit)
         #expect(Surnom.verifier("poisson٣٤") == .caractereInterdit)
-        // Même non vérifié, un identifiant ne contient jamais autre chose que a-z, 0-9 et tiret après « p- ».
-        let id = Surnom.identifiant(pour: "щука-brochet")
-        #expect(id == "p--brochet" || id.unicodeScalars.allSatisfy { $0.isASCII })
-        #expect(id.unicodeScalars.allSatisfy { $0.isASCII })
+        // Même non vérifié, un identifiant ne contient jamais autre chose que de l'ASCII.
+        #expect(Surnom.identifiant(pour: "щука-brochet").unicodeScalars.allSatisfy { $0.isASCII })
     }
 
-    @Test func leSurnomAfficheResteTelQuilEstEcrit() {
+    @Test func leSurnomAfficheResteTelQuilEstEcrit() throws {
         let dossier = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
-        let record = try? FabriqueProfil.record(surnom: "Œuf-de-Brochet", avatar: nil, creeLe: Date(), dossierTemp: dossier)
-        #expect(record?["surnomAffiche"] as? String == "Œuf-de-Brochet")
-        #expect(record?.recordID.recordName == "p-oeuf-de-brochet")
+        let record = try FabriqueProfil.record(surnom: "Œuf-de-Brochet", avatar: nil, creeLe: Date(), dossierTemp: dossier)
+        #expect(record["surnomAffiche"] as? String == "Œuf-de-Brochet")
+        #expect(record.recordID.recordName == "p-oeuf-de-brochet")
     }
 
     @Test func leFiltreRefuseLesMotsEntiersSeulement() {
@@ -84,7 +87,7 @@ struct ProfilTests {
         #expect(Surnom.verifier("brochet", filtre: filtre) == nil)
     }
 
-    // MARK: Rien de privé en base publique
+    // MARK: Rien de privé en base publique (juste un pseudonyme)
 
     @Test func leRecordProfilNePorteQueLesClesPrevues() throws {
         let dossier = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
@@ -94,10 +97,23 @@ struct ProfilTests {
         for interdit in ["prenom", "nom", "email", "mail", "lat", "lon", "gps", "lieu", "appleid"] {
             #expect(!cles.contains(interdit))
         }
+        #expect(record.recordType == "ProfilPublic")
         #expect(record.recordID.recordName == "p-gros-brochet")
         #expect(record["surnomNorm"] as? String == "gros-brochet")
         #expect(record["surnomAffiche"] as? String == "Gros-Brochet")
         #expect(record["avatar"] is CKAsset)
+    }
+
+    @Test func leTypeCloudKitPublicSAppelleProfilPublic() {
+        #expect(FabriqueProfil.typeProfil == "ProfilPublic")
+    }
+
+    @Test func aucunChampNomOuPrenomNExisteNullePart() {
+        #expect(!FabriqueProfil.cles.contains("nom") && !FabriqueProfil.cles.contains("prenom"))
+        // Les anciennes clés des versions de test sont effacées, jamais relues.
+        for cle in AnciensChampsIdentite.cles { UserDefaults.standard.set("x", forKey: cle) }
+        AnciensChampsIdentite.purger()
+        #expect(AnciensChampsIdentite.cles.allSatisfy { UserDefaults.standard.object(forKey: $0) == nil })
     }
 
     // MARK: Créer
@@ -106,7 +122,7 @@ struct ProfilTests {
         let service = FauxServiceProfil()
         let memoire = MemoireFausse()
         let g = gestion(service, memoire: memoire)
-        let ok = await g.creer(surnom: "gros-brochet", avatar: Data([9]), aQuinzeAns: true)
+        let ok = await g.creer(surnom: "gros-brochet", avatar: Data([9]), aQuinzeAns: true, accepteLesConditions: true)
         #expect(ok)
         #expect(g.profil?.id == "p-gros-brochet")
         #expect(memoire.id == "p-gros-brochet")
@@ -117,9 +133,19 @@ struct ProfilTests {
     @Test func sansLaDeclarationDeQuinzeAnsRienNEstEcrit() async {
         let service = FauxServiceProfil()
         let g = gestion(service)
-        let ok = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: false)
+        let ok = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: false, accepteLesConditions: true)
         #expect(!ok)
         #expect(g.message == .ageRequis)
+        #expect(g.profil == nil)
+        #expect(await service.ecritures == 0)
+    }
+
+    @Test func sansLaCaseDesConditionsRienNEstEcrit() async {
+        let service = FauxServiceProfil()
+        let g = gestion(service)
+        let ok = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true, accepteLesConditions: false)
+        #expect(!ok)
+        #expect(g.message == .conditionsRequises)
         #expect(g.profil == nil)
         #expect(await service.ecritures == 0)
     }
@@ -128,7 +154,7 @@ struct ProfilTests {
         let existant = ProfilModele(id: "p-gros-brochet", surnom: "gros-brochet", avatar: nil, creeLe: Date())
         let service = FauxServiceProfil(profils: [existant])
         let g = gestion(service)
-        let ok = await g.creer(surnom: "Gros-Brochet", avatar: nil, aQuinzeAns: true)
+        let ok = await g.creer(surnom: "Gros-Brochet", avatar: nil, aQuinzeAns: true, accepteLesConditions: true)
         #expect(!ok)
         #expect(g.message == .surnomPris)
         #expect(await service.ecritures == 0)
@@ -138,7 +164,7 @@ struct ProfilTests {
         let service = FauxServiceProfil()
         await service.glisserConcurrent(surnom: "gros-brochet")
         let g = gestion(service)
-        let ok = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true)
+        let ok = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true, accepteLesConditions: true)
         #expect(!ok)
         #expect(g.message == .surnomPris)
         #expect(g.profil == nil)
@@ -147,9 +173,98 @@ struct ProfilTests {
     @Test func unSurnomInvalideNeVaPasJusquAuReseau() async {
         let service = FauxServiceProfil()
         let g = gestion(service)
-        #expect(await g.creer(surnom: "ab", avatar: nil, aQuinzeAns: true) == false)
+        #expect(await g.creer(surnom: "ab", avatar: nil, aQuinzeAns: true, accepteLesConditions: true) == false)
         #expect(g.message == .surnomRefuse(.tropCourt))
         #expect(await service.ecritures == 0)
+    }
+
+    // MARK: Réponse perdue, réinstallation
+
+    @Test func unSurnomDejaEcritParMoiEstRepris() async {
+        let mien = ProfilModele(id: "p-gros-brochet", surnom: "Gros-Brochet", avatar: nil, creeLe: Date())
+        let service = FauxServiceProfil()
+        await service.glisserMonProfil(mien)
+        let memoire = MemoireFausse()
+        let g = gestion(service, memoire: memoire)
+        let ok = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true, accepteLesConditions: true)
+        #expect(ok)
+        #expect(g.profil?.id == "p-gros-brochet")
+        #expect(memoire.id == "p-gros-brochet")
+        #expect(g.message == nil)
+        #expect(await service.ecritures == 0)
+    }
+
+    @Test func unSurnomEcritParUnAutreResteRefuse() async {
+        let autre = ProfilModele(id: "p-gros-brochet", surnom: "gros-brochet", avatar: nil, creeLe: Date())
+        let service = FauxServiceProfil(profils: [autre])
+        let g = gestion(service)
+        #expect(await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true, accepteLesConditions: true) == false)
+        #expect(g.message == .surnomPris)
+        #expect(await g.retrouver(surnom: "gros-brochet") == false)
+        #expect(g.message == .profilIntrouvable)
+    }
+
+    @Test func retrouverMonProfilSansSurnomApresReinstallation() async {
+        let mien = ProfilModele(id: "p-gros-brochet", surnom: "Gros-Brochet", avatar: nil, creeLe: Date())
+        let service = FauxServiceProfil()
+        await service.glisserMonProfil(mien)
+        let memoire = MemoireFausse()
+        let g = gestion(service, memoire: memoire)
+        #expect(!g.aUnProfil)
+        #expect(await g.retrouver())
+        #expect(g.profil?.surnom == "Gros-Brochet")
+        #expect(g.aUnProfil && memoire.id == "p-gros-brochet")
+    }
+
+    @Test func supprimerMarcheSansIdentifiantGardeApresReinstallation() async {
+        let mien = ProfilModele(id: "p-gros-brochet", surnom: "Gros-Brochet", avatar: nil, creeLe: Date())
+        let service = FauxServiceProfil()
+        await service.glisserMonProfil(mien)
+        let effaceur = EffaceurFaux()
+        let g = gestion(service, effaceurs: [effaceur])
+        #expect(!g.aUnProfil)
+        #expect(await g.supprimer())
+        #expect(await service.contient("p-gros-brochet") == false)
+        #expect(await effaceur.appels == ["p-gros-brochet"])
+    }
+
+    @Test func supprimerSansAucunProfilNeFaitRien() async {
+        let service = FauxServiceProfil()
+        let g = gestion(service)
+        #expect(await g.supprimer())
+        #expect(await service.suppressions == 0)
+    }
+
+    @Test func horsLigneMonProfilResteAffichableEtSupprimable() async {
+        let service = FauxServiceProfil(horsLigne: true)
+        let memoire = MemoireFausse()
+        memoire.id = "p-gros-brochet"
+        memoire.nom = "Gros-Brochet"
+        let g = gestion(service, memoire: memoire)
+        // `profil` est vide mais l'iPhone se souvient : la ligne « Mon profil » (SectionProfilAmis) lit ceci.
+        #expect(g.profil == nil && g.aUnProfil)
+        #expect(g.surnomMemorise == "Gros-Brochet")
+        #expect(await g.supprimer() == false)
+        #expect(g.message == .horsLigne)
+        #expect(g.aUnProfil)
+        await service.regler(horsLigne: false)
+        await service.glisserMonProfil(ProfilModele(id: "p-gros-brochet", surnom: "Gros-Brochet", avatar: nil, creeLe: Date()))
+        #expect(await g.supprimer())
+        #expect(!g.aUnProfil)
+    }
+
+    // MARK: Titre du partage
+
+    @Test func leTitreDuPartageSuitLeSurnomALaCreationEtALaSuppression() async {
+        let titres = TitresNotes()
+        let u = UUID().uuidString
+        let g = GestionProfil(service: FauxServiceProfil(), memoire: MemoireFausse(),
+                              blocages: ListeBlocages(cleBloques: "t.bl.\(u)", cleMasques: "t.ma.\(u)"),
+                              apresChangementDeSurnom: { await titres.noter() })
+        _ = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true, accepteLesConditions: true)
+        #expect(await titres.appels == 1)
+        _ = await g.supprimer()
+        #expect(await titres.appels == 2)
     }
 
     // MARK: Rappel « Finis ton profil »
@@ -204,7 +319,7 @@ struct ProfilTests {
     @Test func monProfilNApparaitPasDansLaRecherche() async {
         let service = FauxServiceProfil()
         let g = gestion(service)
-        _ = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true)
+        _ = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true, accepteLesConditions: true)
         let r = RechercheProfils(service: service, profil: g, attente: .zero)
         r.saisir("gro")
         await r.chercher()
@@ -217,36 +332,98 @@ struct ProfilTests {
         let service = FauxServiceProfil(profils: profils())
         let g = gestion(service)
         let cible = profils()[0]
-        await g.signaler(cible, motif: .spam)
+        let resultat = await g.signaler(cible, motif: .spam)
+        #expect(resultat == .enregistre)
         #expect(g.estCache(cible.id))
         #expect(await service.signalements.count == 1)
+        #expect(await service.signalements.first?.type == .profil)
+    }
+
+    @Test func unSignalementNonEnregistreNeDitJamaisSignale() async {
+        let service = FauxServiceProfil(profils: profils())
+        await service.regler(signalementEnEchec: true)
+        let g = gestion(service)
+        let cible = profils()[0]
+        let resultat = await g.signaler(cible, motif: .harcelement)
+        #expect(resultat == .nonEnregistre)
+        #expect(resultat.titre == "Pas enregistré, réessaie")
+        #expect(!resultat.titre.contains("signalé"))
+        #expect(!resultat.message(masque: true).contains("est enregistré"))
+        // Le masquage chez moi reste (règle 1.2) ; seul le texte est honnête.
+        #expect(g.estCache(cible.id))
+        #expect(await service.signalements.isEmpty)
+    }
+
+    @Test func unSignalementEnregistreLeDit() {
+        #expect(ResultatSignalement.enregistre.titre == "Merci, c'est signalé")
+    }
+
+    @Test func signalerUneCarteOuUnAmiPasseParLesMemesMotifs() async {
+        let service = FauxServiceProfil()
+        let g = gestion(service)
+        #expect(await g.signaler(cible: "carte-1", type: .carte, motif: .coinExact, masquer: false) == .enregistre)
+        #expect(!g.estCache("carte-1"))
+        #expect(await g.signaler(cible: "p-gros-brochet", type: .ami, motif: .autre, masquer: true) == .enregistre)
+        #expect(g.estCache("p-gros-brochet"))
+        #expect(await service.signalements.map(\.motif) == [.coinExact, .autre])
+    }
+
+    @Test func lesMotifsSontUneListeFermeeUnique() {
+        #expect(MotifSignalement.allCases.count == 9)
+        #expect(Set(MotifSignalement.allCases.map(\.rawValue)).count == 9)
+        #expect(MotifSignalement(rawValue: "harcelement") == .harcelement)
+        #expect(MotifSignalement.allCases.allSatisfy { !$0.titre.isEmpty && !$0.symbole.isEmpty })
+    }
+
+    // MARK: Blocage : une seule liste
+
+    @Test func laListeDeBlocageEstLaMemePourTous() {
+        let u = UUID().uuidString
+        let liste = ListeBlocages(cleBloques: "t.bl.\(u)", cleMasques: "t.ma.\(u)")
+        liste.bloquer("p-a")
+        liste.masquer("p-b")
+        let lecture: any LectureBlocages = liste
+        #expect(lecture.estCache("p-a") && lecture.estCache("p-b") && !lecture.estCache("p-c"))
+        #expect(lecture.profilsCaches() == ["p-a", "p-b"])
+        liste.debloquer("p-a")
+        #expect(!lecture.estCache("p-a"))
     }
 
     // MARK: Supprimer
 
-    @Test func supprimerEffaceProfilContenuEtIdentitePrivee() async {
+    @Test func supprimerEffaceProfilEtContenu() async {
         let service = FauxServiceProfil()
         let effaceur = EffaceurFaux()
         let g = gestion(service, effaceurs: [effaceur])
-        _ = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true)
-        g.enregistrerIdentitePrivee(nom: "Dupont", prenom: "Léa")
+        _ = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true, accepteLesConditions: true)
         let ok = await g.supprimer()
         #expect(ok)
         #expect(g.profil == nil && !g.aUnProfil)
         #expect(await service.contient("p-gros-brochet") == false)
         #expect(await effaceur.appels == ["p-gros-brochet"])
-        #expect(g.identitePrivee().nom.isEmpty && g.identitePrivee().prenom.isEmpty)
     }
 
     @Test func siUnEffaceurEchoueLeProfilEstGarde() async {
         let service = FauxServiceProfil()
         let g = gestion(service, effaceurs: [EffaceurFaux(echoue: true)])
-        _ = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true)
+        _ = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true, accepteLesConditions: true)
         let ok = await g.supprimer()
         #expect(!ok)
         #expect(g.message == .suppressionIncomplete)
         #expect(await service.contient("p-gros-brochet"))
         #expect(g.aUnProfil)
+    }
+
+    @Test func laPhraseDeSuppressionNePrometQueCeQuiSeraEfface() {
+        let avec = gestion(FauxServiceProfil(), effaceurs: [EffaceurFaux()])
+        #expect(avec.effaceDuContenu)
+        #expect(avec.phraseSuppression.contains("publications") && avec.phraseSuppression.contains("messages"))
+        // Sans effaceur (registre partagé vide, ce qui est le cas tant que A ne l'a pas branché) : rien d'autre que le profil n'est promis.
+        let sans = gestion(FauxServiceProfil())
+        if !sans.effaceDuContenu {
+            #expect(sans.phraseSuppression == "Seuls ton surnom et ton avatar seront effacés du réseau.")
+            #expect(!sans.phraseSuppression.contains("publications"))
+        }
     }
 
     // MARK: Lien et noms
@@ -270,12 +447,38 @@ struct ProfilTests {
     }
 
     @Test func lAmiPorteSonSurnomJamaisUnNomReel() {
-        #expect(NomAmi.affiche(titre: "gros-brochet") == "gros-brochet")
+        // Le titre d'un partage est écrit par l'ami : sans confirmation, jamais de surnom affiché.
+        #expect(NomAmi.affiche(titre: "gros-brochet") == "Un ami")
         #expect(NomAmi.affiche(titre: "Pescedex") == "Un ami")
         #expect(NomAmi.affiche(titre: nil) == "Un ami")
-        #expect(NomAmi.affiche(titre: "Jean Dupont") == "Un ami")
         #expect(NomAmi.titre(surnom: nil) == "Pescedex")
         #expect(NomAmi.titre(surnom: "gros-brochet") == "gros-brochet")
+    }
+
+    @Test func unTitreNEstUnNomQueSiLeProfilEstDuProprietaire() {
+        #expect(NomAmi.affiche(titre: "gros-brochet", auteurDuProfil: "_abc", proprietaire: "_abc") == "gros-brochet")
+        // Usurpation : l'ami met le surnom d'un autre, dont le profil a un autre auteur.
+        #expect(NomAmi.affiche(titre: "gros-brochet", auteurDuProfil: "_xyz", proprietaire: "_abc") == "Un ami")
+        // Profil introuvable, ou propriétaire inconnu : « Un ami ».
+        #expect(NomAmi.affiche(titre: "gros-brochet", auteurDuProfil: nil, proprietaire: "_abc") == "Un ami")
+        #expect(NomAmi.affiche(titre: "gros-brochet", auteurDuProfil: "", proprietaire: "") == "Un ami")
+        // Un titre qui n'a pas la forme d'un surnom ne passe jamais, même avec le bon auteur.
+        #expect(NomAmi.affiche(titre: "Jean Dupont", auteurDuProfil: "_abc", proprietaire: "_abc") == "Un ami")
+        #expect(NomAmi.affiche(titre: "Pescedex", auteurDuProfil: "_abc", proprietaire: "_abc") == "Un ami")
+    }
+
+    @Test func seulesLesZonesPescedexSontDesAmis() {
+        #expect(ServiceAmisCloudKit.nomDeZone == "Pescedex")
+        #expect("chat-p-a-p-b" != ServiceAmisCloudKit.nomDeZone)
+        #expect("chatclub-1" != ServiceAmisCloudKit.nomDeZone)
+    }
+
+    @Test func lAuteurEstMoiOuLAliasDuProprietaire() {
+        let moi = CKRecord.ID(recordName: "_moi")
+        #expect(ServiceProfilCloudKit.estMoi(CKRecord.ID(recordName: "_moi"), moi: moi))
+        #expect(ServiceProfilCloudKit.estMoi(CKRecord.ID(recordName: CKCurrentUserDefaultName), moi: moi))
+        #expect(!ServiceProfilCloudKit.estMoi(CKRecord.ID(recordName: "_autre"), moi: moi))
+        #expect(!ServiceProfilCloudKit.estMoi(nil, moi: moi))
     }
 
     @Test func leSignalementDeProfilNePorteQueLIdentifiantEtLeMotif() throws {
@@ -283,5 +486,12 @@ struct ProfilTests {
         let texte = url.absoluteString.removingPercentEncoding ?? ""
         #expect(texte.contains("p-gros-brochet"))
         #expect(texte.contains("Spam"))
+    }
+
+    @Test func leSignalementDUnAmiPorteLeMotif() throws {
+        let ami = Ami(id: "ami-1", nom: "gros-brochet", sens: .recu)
+        let url = try #require(Signalement.url(contact: "contact@exemple.invalid", ami: ami, motif: .harcelement))
+        let texte = url.absoluteString.removingPercentEncoding ?? ""
+        #expect(texte.contains("ami-1") && texte.contains("Haine ou harcèlement"))
     }
 }

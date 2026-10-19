@@ -250,6 +250,41 @@ struct AmisTests {
         #expect(!texte.lowercased().contains("lat"))
     }
 
+    // MARK: Signaler un ami, nom confirmé (L21)
+
+    @Test func signalerUnAmiLeMasqueToutDeSuiteSansCouperLePartage() async throws {
+        let id = "test-masque-\(UUID().uuidString)"
+        defer { ListeBlocages.partage.debloquer(id) }
+        let ami = Ami(id: id, nom: NomAmi.anonyme, sens: .recu)
+        let service = FauxServiceAmis(recues: [CollectionAmi(ami: ami, cartes: [carte()])])
+        let (gestion, _, _) = try nouveauGestionnaire(service: service)
+        await gestion.actualiser()
+        #expect(gestion.amis.contains { $0.id == id })
+        gestion.masquerApresSignalement(ami)
+        #expect(!gestion.amis.contains { $0.id == id })
+        #expect(gestion.collections.isEmpty)
+        // Ce n'est pas un blocage : le partage n'est pas quitté.
+        #expect(await service.quittes.isEmpty)
+        // Et le masquage tient à l'actualisation suivante.
+        await gestion.actualiser()
+        #expect(!gestion.amis.contains { $0.id == id })
+    }
+
+    @Test func laCleDeBlocageEstLIdentifiantPublicSeulementPourUnSurnomConfirme() {
+        #expect(GestionAmis.cleDeBlocage(Ami(id: "_abc", nom: "Gros-Brochet", sens: .recu)) == "p-gros-brochet")
+        #expect(GestionAmis.cleDeBlocage(Ami(id: "_abc", nom: "Un ami", sens: .recu)) == "_abc")
+        #expect(GestionAmis.cleDeBlocage(Ami(id: "_abc", nom: "Léa Dupont", sens: .recu)) == "_abc")
+    }
+
+    @Test func leSignalementDUneCartePorteLeMotifSansCoordonnee() throws {
+        let ami = Ami(id: "lea", nom: "Léa", sens: .recu)
+        let c = carte()
+        let url = try #require(Signalement.url(contact: "contact@exemple.invalid", ami: ami, carte: c, motif: .coinExact))
+        let texte = url.absoluteString.removingPercentEncoding ?? ""
+        #expect(texte.contains("Coin de pêche exact révélé") && texte.contains(c.id.uuidString))
+        #expect(!texte.lowercased().contains("lat"))
+    }
+
     // MARK: Aides du dossier
 
     @Test func leDepartementSeLitApresLePointMedian() {

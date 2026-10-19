@@ -1,8 +1,8 @@
 import Foundation
 
-/// Un profil public de pêcheur : surnom et avatar, rien d'autre. Nom et prénom n'existent pas ici (décision 3).
+/// Un profil public de pêcheur : surnom et avatar, rien d'autre (décision 3 : juste un pseudonyme, aucun nom ni prénom nulle part).
 nonisolated struct ProfilModele: Sendable, Equatable, Hashable, Identifiable {
-    /// `recordName` de l'enregistrement : `p-` + surnom normalisé.
+    /// `recordName` de l'enregistrement `ProfilPublic` : `p-` + surnom normalisé, ASCII seulement.
     var id: String
     /// Le surnom comme la personne l'a écrit (« Gros-Brochet »).
     var surnom: String
@@ -21,42 +21,9 @@ nonisolated enum ErreurProfil: Error, Equatable, Sendable {
     case introuvable
     /// Une partie du contenu n'a pas pu être effacée : le profil est gardé pour réessayer.
     case effacementIncomplet
+    /// « Retrouver mon profil » n'a rien trouvé au nom de ce compte iCloud.
+    case profilIntrouvable
     case autre
-}
-
-/// Ce que `Signalement` d'un profil peut dire : liste fermée, pas de texte libre (`moderation.md`).
-nonisolated enum MotifSignalement: String, CaseIterable, Sendable, Identifiable {
-    case choquant, harcelement, nudite, cruaute, pecheIllegale, coinExact, mineur, spam, autre
-
-    var id: String { rawValue }
-
-    var titre: String {
-        switch self {
-        case .choquant: "Contenu choquant ou violent"
-        case .harcelement: "Haine ou harcèlement"
-        case .nudite: "Nudité ou contenu sexuel"
-        case .cruaute: "Cruauté envers un animal"
-        case .pecheIllegale: "Pêche illégale"
-        case .coinExact: "Coin de pêche exact révélé"
-        case .mineur: "Personne mineure sans accord"
-        case .spam: "Spam ou publicité"
-        case .autre: "Autre"
-        }
-    }
-
-    var symbole: String {
-        switch self {
-        case .choquant: "exclamationmark.triangle"
-        case .harcelement: "bubble.left.and.exclamationmark.bubble.right"
-        case .nudite: "eye.slash"
-        case .cruaute: "pawprint"
-        case .pecheIllegale: "scalemass"
-        case .coinExact: "mappin.slash"
-        case .mineur: "person.crop.circle.badge.exclamationmark"
-        case .spam: "megaphone"
-        case .autre: "flag"
-        }
-    }
 }
 
 /// Ce que L23 (publications, commentaires) et L24 (messages) savent effacer pour un profil. A les compose dans `GestionProfil`.

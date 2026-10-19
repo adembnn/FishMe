@@ -6,13 +6,16 @@ import SwiftUI
 struct PescedexAmiView: View {
     let gestion: GestionAmis
     let ami: Ami
+    /// Pour écrire les signalements (même service que la page Profil).
+    var profil: GestionProfil = .partage
     let fermer: () -> Void
 
+    @State private var cibleAmi: CibleAmi?
+    @State private var cibleCarte: CibleAmi?
     @State private var carteOuverte: CartePartagee?
     @State private var carteChoisieId: UUID?
     @State private var confirmerBlocage = false
     @State private var confirmerRetrait = false
-    @Environment(\.openURL) private var ouvrirURL
 
     private var cartes: [CartePartagee] {
         (gestion.collections.first { $0.id == ami.id }?.cartes ?? []).sorted { $0.date > $1.date }
@@ -54,9 +57,11 @@ struct PescedexAmiView: View {
         }
         .sheet(item: $carteOuverte) { carte in
             CarteAmiDetail(carte: carte, nomEspece: gestion.espece(carte.espece)?.nom ?? "") {
-                if let url = gestion.urlDeSignalement(ami: ami, carte: carte) { ouvrirURL(url) }
+                cibleCarte = .carte(ami, carte)
             }
+            .signalerDansAmis(cible: $cibleCarte, gestion: gestion, profil: profil)
         }
+        .signalerDansAmis(cible: $cibleAmi, gestion: gestion, profil: profil)
         .confirmationDialog("Bloquer \(ami.nom) ? Ses cartes disparaissent et il ne voit plus les tiennes.",
                             isPresented: $confirmerBlocage, titleVisibility: .visible) {
             Button("Bloquer", role: .destructive) { Task { await gestion.bloquer(ami); fermer() } }
@@ -88,9 +93,7 @@ struct PescedexAmiView: View {
             Spacer()
             // Signaler et Bloquer restent rangés dans ce menu, jamais au premier niveau.
             Menu {
-                if let url = gestion.urlDeSignalement(ami: ami) {
-                    Link(destination: url) { Label("Signaler", systemImage: "flag") }
-                }
+                Button { cibleAmi = .ami(ami) } label: { Label("Signaler", systemImage: "flag") }
                 Button(role: .destructive) { confirmerBlocage = true } label: { Label("Bloquer", systemImage: "hand.raised") }
                 Button(role: .destructive) { confirmerRetrait = true } label: {
                     Label("Retirer cet ami", systemImage: "person.badge.minus")
@@ -164,9 +167,7 @@ struct PescedexAmiView: View {
                         }
                         .buttonStyle(.plain)
                         .contextMenu {
-                            if let url = gestion.urlDeSignalement(ami: ami, carte: carte) {
-                                Link(destination: url) { Label("Signaler cette carte", systemImage: "flag") }
-                            }
+                            Button { cibleAmi = .carte(ami, carte) } label: { Label("Signaler cette carte", systemImage: "flag") }
                         }
                     }
                     ForEach(manquantes, id: \.self) { id in tuileSilhouette(id) }

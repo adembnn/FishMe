@@ -42,14 +42,28 @@ final class RelaisLienAmi {
 }
 
 /// Le nom montré pour un ami : son surnom, jamais le nom de son compte Apple (décision 3).
-/// Le surnom voyage dans le titre du partage CloudKit (`partagePret`).
+/// Le surnom voyage dans le titre du partage CloudKit (`partagePret`, `TitrePartage`), MAIS ce titre est écrit par l'ami lui-même :
+/// il peut y mettre le surnom d'un autre. Il ne devient donc un nom qu'une fois confirmé par le profil public (même auteur que la zone).
 nonisolated enum NomAmi {
     static let titreSansProfil = "Pescedex"
     static let anonyme = "Un ami"
 
-    /// Le titre d'un partage devient le nom de l'ami s'il ressemble à un surnom ; sinon « Un ami ».
+    /// Vrai si le titre a la forme d'un surnom (rien de plus : NON vérifié).
+    static func ressembleAUnSurnom(_ titre: String?) -> Bool {
+        guard let titre, titre != titreSansProfil, Surnom.verifier(titre) == nil else { return false }
+        return true
+    }
+
+    /// Titre NON vérifié : toujours « Un ami ». À utiliser tant que le profil n'a pas confirmé (invitation reçue, hors ligne).
     static func affiche(titre: String?) -> String {
-        guard let titre, titre != titreSansProfil, Surnom.verifier(titre) == nil else { return anonyme }
+        anonyme
+    }
+
+    /// Titre confirmé : le surnom s'affiche seulement si l'auteur du profil public de ce surnom est le propriétaire de la zone partagée.
+    static func affiche(titre: String?, auteurDuProfil: String?, proprietaire: String) -> String {
+        guard ressembleAUnSurnom(titre), let titre, let auteurDuProfil, !proprietaire.isEmpty, auteurDuProfil == proprietaire else {
+            return anonyme
+        }
         return titre
     }
 

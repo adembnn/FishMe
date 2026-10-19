@@ -1,10 +1,13 @@
 import CloudKit
 import Foundation
 
-/// Fabrique les `CKRecord` du profil (et du signalement) et les relit. Seules les clés de `cles` existent : un test le prouve.
-/// Nom, prénom, e-mail, identifiant Apple, lieu : aucun de ces champs n'existe ici (décision 3).
+/// Fabrique les `CKRecord` du profil public (et du signalement) et les relit. Seules les clés de `cles` existent : un test le prouve.
+/// Juste un pseudonyme (décision 3) : ni nom, ni prénom, ni e-mail, ni identifiant Apple, ni lieu.
+///
+/// Le type s'appelle `ProfilPublic` : `Profil` existe déjà en base PRIVÉE (`App/Compte/SauvegardeICloud.swift`, champs `fichier`, `origine`)
+/// et un type CloudKit n'a qu'un schéma. Les lots qui pointent vers un profil (L23 `Publication.auteur`) visent `ProfilPublic`.
 nonisolated enum FabriqueProfil {
-    static let typeProfil = "Profil"
+    static let typeProfil = "ProfilPublic"
     static let typeSignalement = "Signalement"
     static let cles: Set<String> = ["surnomAffiche", "surnomNorm", "avatar", "creeLe", "version"]
     static let clesSignalement: Set<String> = ["cible", "typeCible", "motif", "signalePar", "creeLe"]
@@ -37,10 +40,10 @@ nonisolated enum FabriqueProfil {
         return ProfilModele(id: record.recordID.recordName, surnom: surnom, avatar: avatar, creeLe: creeLe)
     }
 
-    static func signalement(profilID: String, motif: MotifSignalement, par monID: String?, le date: Date) -> CKRecord {
+    static func signalement(cible: String, type: CibleSignalement, motif: MotifSignalement, par monID: String?, le date: Date) -> CKRecord {
         let record = CKRecord(recordType: typeSignalement, recordID: CKRecord.ID(recordName: UUID().uuidString))
-        record["cible"] = profilID
-        record["typeCible"] = "profil"
+        record["cible"] = cible
+        record["typeCible"] = type.rawValue
         record["motif"] = motif.rawValue
         record["signalePar"] = monID ?? ""
         record["creeLe"] = date
@@ -48,12 +51,14 @@ nonisolated enum FabriqueProfil {
     }
 }
 
-/// Le vrai service : l'enregistrement `Profil` en base publique. Le `recordName` dérive du surnom, donc deux iPhones qui prennent
+/// Le vrai service : l'enregistrement `ProfilPublic` en base publique. Le `recordName` dérive du surnom, donc deux iPhones qui prennent
 /// le même surnom écrivent le même enregistrement : avec `.ifServerRecordUnchanged`, le second est refusé (R2, `schema.md`).
 ///
 /// À VÉRIFIER SUR LE MAC (écrit de mémoire, non compilé) : `serverRecordChanged` pour un enregistrement neuf qui existe déjà ;
 /// l'index « queryable » de `surnomNorm` dans le tableau de bord ; `records(matching:inZoneWith:desiredKeys:resultsLimit:)` sur `BEGINSWITH` ;
-/// les droits « World lit, Authenticated crée » du type `Profil` ; la création automatique des types en Development.
+/// `CKContainer.userRecordID()` (async) et `creatorUserRecordID` d'un enregistrement public (reprise d'un profil à moi) ; le prédicat
+/// `creatorUserRecordID == %@` et l'index « queryable » du champ système `createdBy` (retrouver mon profil sans surnom) ;
+/// les droits « World lit, Authenticated crée » du type `ProfilPublic` ; la création automatique des types en Development.
 actor ServiceProfilCloudKit: ServiceProfil {
     /// `nil` dans une archive de repli sans iCloud (même règle que `ServiceAmisCloudKit`).
     private let conteneurPermis: CKContainer?
@@ -94,7 +99,7 @@ actor ServiceProfilCloudKit: ServiceProfil {
             let record = try FabriqueProfil.record(surnom: surnom, avatar: avatar, creeLe: creeLe, dossierTemp: dossierTemp)
             // Première barrière : un enregistrement neuf ne s'écrase jamais.
             let resultat = try await base.modifyRecords(saving: [record], deleting: [], savePolicy: .ifServerRecordUnchanged,
-                                                        atomically: true)
+                                                        atomically: false)
             guard let sauvegarde = resultat.saveResults[record.recordID] else { throw ErreurProfil.autre }
             if case .failure(let erreur) = sauvegarde { throw erreur }
             // Seconde barrière (fiche L21) : on relit. Si l'enregistrement n'est pas celui qu'on vient d'écrire, on a perdu la course.
@@ -115,7 +120,7 @@ actor ServiceProfilCloudKit: ServiceProfil {
             } else {
                 record["avatar"] = nil
             }
-            let resultat = try await base.modifyRecords(saving: [record], deleting: [], savePolicy: .changedKeys, atomically: true)
+            let resultat = try await base.modifyRecords(saving: [record], deleting: [], savePolicy: .changedKeys, atomically: false)
             guard let sauvegarde = resultat.saveResults[record.recordID] else { throw ErreurProfil.autre }
             if case .failure(let erreur) = sauvegarde { throw erreur }
             let relu = try await base.record(for: record.recordID)
@@ -142,7 +147,7 @@ actor ServiceProfilCloudKit: ServiceProfil {
         try await executer {
             let identifiant = CKRecord.ID(recordName: id)
             let resultat = try await publique.modifyRecords(saving: [], deleting: [identifiant], savePolicy: .ifServerRecordUnchanged,
-                                                            atomically: true)
+                                                            atomically: false)
             if case .failure(let erreur)? = resultat.deleteResults[identifiant] {
                 if let ck = erreur as? CKError, ck.code == .unknownItem { return }
                 throw erreur
@@ -150,16 +155,58 @@ actor ServiceProfilCloudKit: ServiceProfil {
         }
     }
 
-    func signaler(profilID: String, motif: MotifSignalement, par monID: String?) async throws {
+    func profilDontJeSuisLAuteur(id: String) async throws -> ProfilModele? {
         try await executer {
-            let record = FabriqueProfil.signalement(profilID: profilID, motif: motif, par: monID, le: Date())
+            let moi = try await identifiantUtilisateur()
+            let record: CKRecord
+            do {
+                record = try await publique.record(for: CKRecord.ID(recordName: id))
+            } catch let erreur as CKError where erreur.code == .unknownItem {
+                return nil
+            }
+            guard Self.estMoi(record.creatorUserRecordID, moi: moi) else { return nil }
+            return FabriqueProfil.profil(depuis: record)
+        }
+    }
+
+    func monProfilPublic() async throws -> ProfilModele? {
+        try await executer {
+            let moi = try await identifiantUtilisateur()
+            // ⚠ à vérifier : prédicat sur le champ système `creatorUserRecordID` (un `CKRecord.ID` en argument) ; il faut l'index queryable de `createdBy`.
+            let requete = CKQuery(recordType: FabriqueProfil.typeProfil, predicate: NSPredicate(format: "creatorUserRecordID == %@", moi))
+            let reponse = try await publique.records(matching: requete, inZoneWith: nil, desiredKeys: nil, resultsLimit: 5)
+            for (_, resultat) in reponse.matchResults {
+                if case .success(let record) = resultat, let profil = FabriqueProfil.profil(depuis: record) { return profil }
+            }
+            return nil
+        }
+    }
+
+    func signaler(cible: String, type: CibleSignalement, motif: MotifSignalement, par monID: String?) async throws {
+        try await executer {
+            let record = FabriqueProfil.signalement(cible: cible, type: type, motif: motif, par: monID, le: Date())
             let resultat = try await publique.modifyRecords(saving: [record], deleting: [], savePolicy: .ifServerRecordUnchanged,
-                                                            atomically: true)
-            if case .failure(let erreur)? = resultat.saveResults[record.recordID] { throw erreur }
+                                                            atomically: false)
+            // Honnêteté : sans résultat de sauvegarde, rien ne prouve que le signalement est en base. Pas de réponse = échec.
+            guard let sauvegarde = resultat.saveResults[record.recordID] else { throw ErreurProfil.autre }
+            if case .failure(let erreur) = sauvegarde { throw erreur }
         }
     }
 
     // MARK: Aides
+
+    /// L'utilisateur courant. ⚠ `CKContainer.userRecordID()` async : à vérifier sur le Mac.
+    private func identifiantUtilisateur() async throws -> CKRecord.ID {
+        guard let conteneurPermis else { throw ErreurProfil.iCloudIndisponible }
+        return try await conteneurPermis.userRecordID()
+    }
+
+    /// Vrai si l'auteur de l'enregistrement est l'utilisateur courant. ⚠ En base publique, `creatorUserRecordID` porte le vrai nom d'enregistrement
+    /// de l'utilisateur ; `CKCurrentUserDefaultName` est accepté aussi, au cas où CloudKit rendrait l'alias du propriétaire.
+    nonisolated static func estMoi(_ auteur: CKRecord.ID?, moi: CKRecord.ID) -> Bool {
+        guard let auteur else { return false }
+        return auteur.recordName == moi.recordName || auteur.recordName == CKCurrentUserDefaultName
+    }
 
     private func executer<T>(_ travail: () async throws -> T) async throws -> T {
         do {
