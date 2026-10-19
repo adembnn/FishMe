@@ -69,6 +69,8 @@ struct PescedexView: View {
     @State private var photoOuverte: Data?
     @State private var pngOuvert: Data?
     @State private var bredouillesDepliees = false
+    @State private var cameraAutorisee = false
+    @Environment(\.scenePhase) private var phaseApp
 
     /// Nombre de vignettes de sorties sans prise montrées avant « + N autres ».
     private let apercu = 6
@@ -91,7 +93,14 @@ struct PescedexView: View {
                 }
             }
         }
-        .task { await modele.choisir(PorteePescedex(brut: porteeBrute)) }
+        .task {
+            rafraichirCamera()
+            await modele.choisir(PorteePescedex(brut: porteeBrute))
+        }
+        .onAppear { rafraichirCamera() }
+        .onChange(of: phaseApp) { _, nouvelle in
+            if nouvelle == .active { rafraichirCamera() }
+        }
         .fullScreenCover(item: $carteOuverte) { emplacement in
             if let infos = modele.infos(pour: emplacement) {
                 CartePleinEcranView(infos: infos, photo: photoOuverte, emplacements: emplacements_, png: pngOuvert) {
@@ -155,8 +164,10 @@ struct PescedexView: View {
     }
 
     /// Vrai quand la caméra est déjà autorisée : « Prendre une photo » l'ouvre alors en un toucher.
-    private var cameraAutorisee: Bool {
-        AccesCamera.ouvreEnUnToucher(AVCaptureDevice.authorizationStatus(for: .video))
+    /// État réactif (`@State`), relu à l'apparition du volet et au retour dans l'app : après la permission donnée dans la prise,
+    /// le bouton passe en « 1 toucher » sans attendre un autre rendu.
+    private func rafraichirCamera() {
+        cameraAutorisee = AccesCamera.ouvreEnUnToucher(AVCaptureDevice.authorizationStatus(for: .video))
     }
 
     private var iconeAjout: some View {
@@ -244,11 +255,23 @@ struct PescedexView: View {
 
     private var entete: some View {
         VStack(alignment: .leading, spacing: 0) {
-            HStack(alignment: .center) {
-                grandTitre("Pescedex")
-                Spacer(minLength: Espace.s)
-                menuZone
-                boutonAjout
+            // Aux grandes tailles de texte (AX5) : le titre passe sur sa propre ligne, les deux boutons dessous.
+            ViewThatFits(in: .horizontal) {
+                HStack(alignment: .center) {
+                    grandTitre("Pescedex").lineLimit(1).fixedSize(horizontal: true, vertical: false)
+                    Spacer(minLength: Espace.s)
+                    menuZone
+                    boutonAjout
+                }
+                VStack(alignment: .leading, spacing: Espace.xs) {
+                    grandTitre("Pescedex")
+                        .fixedSize(horizontal: false, vertical: true)
+                    HStack(spacing: Espace.s) {
+                        Spacer(minLength: 0)
+                        menuZone
+                        boutonAjout
+                    }
+                }
             }
             if !sousTitre.isEmpty {
                 Text(sousTitre)

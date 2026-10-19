@@ -63,11 +63,21 @@ struct DeclarationView: View {
 
     var body: some View {
         VStack(spacing: Espace.s) {
+            // Le bouton fermer est dans la pile (plus en overlay) : il ne peut chevaucher ni le titre ni la recherche.
+            HStack {
+                BoutonRond(role: .fermer, rendu: .verre)
+                Spacer(minLength: 0)
+            }
+            .padding(.horizontal, Espace.bord)
+            .padding(.top, Espace.bord)
             enTete
             champRecherche
             grille
             if let photographier {
                 Button {
+                    // Verrou : un second toucher pendant la fermeture ne relance pas la prise (les tuiles sont aussi bloquées).
+                    guard !enCours else { return }
+                    enCours = true
                     dismiss()
                     // La grille finit de se fermer avant que la prise ne s'ouvre (deux présentations ne se chevauchent pas).
                     Task {
@@ -79,13 +89,11 @@ struct DeclarationView: View {
                 }
                 .buttonStyle(.secondaire)
                 .padding(.horizontal, Espace.bord)
+                .disabled(enCours)
                 .padding(.bottom, Espace.l)
             }
         }
         .background(Palette.fond.ignoresSafeArea())
-        .overlay(alignment: .topLeading) {
-            BoutonRond(role: .fermer, rendu: .verre).padding(Espace.bord)
-        }
         .interactiveDismissDisabled(enCours)
     }
 
@@ -93,9 +101,10 @@ struct DeclarationView: View {
         Text("Déclarer un poisson déjà pêché")
             .font(Police.sousTitre)
             .foregroundStyle(Palette.encre)
-            .multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile + Espace.bord * 2)
-            .padding(.horizontal, Gabarit.zoneTactile + Espace.bord * 2)
+            .multilineTextAlignment(.leading)
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, Espace.bord)
             .accessibilityAddTraits(.isHeader)
     }
 
