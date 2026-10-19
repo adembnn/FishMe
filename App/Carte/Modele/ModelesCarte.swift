@@ -76,7 +76,7 @@ extension StationCarte {
     }
 
     /// Le point que dessine la carte pour cette station.
-    var point: PointCarte { PointCarte(id: code, coordonnee: coordonnee, recalee: recalee) }
+    nonisolated var point: PointCarte { PointCarte(id: code, coordonnee: coordonnee, recalee: recalee) }
 }
 
 /// Lit le champ `recalee` d'une station de `Core` quand `Core` le porte (D5, via B/L1), sinon `true`.
