@@ -1,5 +1,7 @@
 # Plan de construction de l'app
 
+> **19 oct., après le jury (gagné) :** une ébauche de l'étude de marché existe déjà dans `reports/marche/` (concurrence française, canaux d'acquisition, pays, synthèse en 7 décisions). Agents de Titouan et de Sullyvan : lisez `reports/marche/README.md` avant toute recherche sur le marché, et complétez plutôt que de refaire.
+
 Tout ce qu'il faut pour construire l'app jeudi et vendredi, vérifié par `python3 docs/verifier.py` (doit afficher « 0 trou »). Version du 15 oct., refaite pour la vision d'Adem du 15 oct. (3 volets façon Clash Royale), puis complétée le 15 oct. après-midi (toutes les espèces, conditions, conseils, « tout d'un coup ») ; la version du 12 oct. reste dans git.
 
 ## Les fichiers
