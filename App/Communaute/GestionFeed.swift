@@ -49,7 +49,11 @@ final class GestionFeed {
         return GestionFeed(service: ServiceFeedCloudKit(), cache: cache, source: source)
     }
 
-    var peutPublier: Bool { contexte.monNom != nil }
+    /// Le lieu du spot, pour le sélecteur du « + » du fil.
+    func lieuCourant() async -> ContexteLieu { await source.lieuCourant() }
+
+    /// Décision de Titouan : publier et commenter exigent un profil 15 ans ou plus ; sinon le fil est en lecture seule.
+    var peutPublier: Bool { contexte.monNom != nil && contexte.quinzeAns }
 
     func etat(_ section: SectionFeed) -> EtatSection { sections[section] ?? EtatSection() }
 
@@ -70,7 +74,7 @@ final class GestionFeed {
     func actualiser() async {
         enCours = true
         defer { enCours = false }
-        contexte = ContexteFeed(monNom: await source.monNom(), clubs: await source.mesClubs(),
+        contexte = ContexteFeed(monNom: await source.monNom(), quinzeAns: await source.profilQuinzeAnsOuPlus(), clubs: await source.mesClubs(),
                                 amis: await source.nomsDesAmis(), departements: await source.departementsDeMaRegion())
         guard await service.compteDisponible() else {
             message = .iCloudIndisponible
@@ -154,7 +158,7 @@ final class GestionFeed {
 
     /// Un `Like` par personne et par publication ; le compte se relit depuis la requête, jamais d'un compteur.
     func basculerLike(_ publication: PublicationFeed) async {
-        guard let moi = contexte.monNom else {
+        guard let moi = contexte.monNom, contexte.quinzeAns else {
             message = .profilRequis
             return
         }

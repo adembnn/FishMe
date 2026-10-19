@@ -66,6 +66,8 @@ nonisolated protocol SourceContexte: Sendable {
     func monNom() async -> String?
     /// `recordName` des profils de mes amis. À aligner L21 (surnoms) et Amis (invitations).
     func nomsDesAmis() async -> [String]
+    /// Vrai si le profil est déclaré « 15 ans ou plus ». À aligner L21. Sinon le fil est en lecture seule (publier, commenter).
+    func profilQuinzeAnsOuPlus() async -> Bool
     /// À aligner L22 : `ServiceClubs`.
     func mesClubs() async -> [ClubResume]
     /// Département du spot d'abord, puis ceux de sa région. Un seul code suffit.
@@ -76,6 +78,8 @@ nonisolated protocol SourceContexte: Sendable {
 
 nonisolated struct ContexteFeed: Sendable, Equatable {
     var monNom: String?
+    /// Profil déclaré 15 ans ou plus (À aligner L21).
+    var quinzeAns = false
     var clubs: [ClubResume] = []
     var amis: [String] = []
     var departements: [String] = []

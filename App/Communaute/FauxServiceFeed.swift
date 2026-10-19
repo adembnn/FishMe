@@ -127,12 +127,14 @@ actor FauxServiceFeed: ServiceFeed {
 /// Une source de contexte fixe, pour les tests et les aperçus.
 nonisolated struct SourceContexteFausse: SourceContexte {
     var nom: String? = "p-moi"
+    var quinzeAns = true
     var amis: [String] = ["p-gros-brochet"]
     var clubs: [ClubResume] = [ClubResume(id: "club-1", nom: "Les Bords de Marne")]
     var departements: [String] = ["94"]
     var lieu = ContexteLieu(eauNom: "La Marne", planDEau: false, departement: "94")
 
     func monNom() async -> String? { nom }
+    func profilQuinzeAnsOuPlus() async -> Bool { quinzeAns }
     func nomsDesAmis() async -> [String] { amis }
     func mesClubs() async -> [ClubResume] { clubs }
     func departementsDeMaRegion() async -> [String] { departements }
