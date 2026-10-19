@@ -37,7 +37,7 @@ struct FrontiereSkinsTests {
     @Test("Core n'importe que Foundation")
     func importsSeulementFoundation() throws {
         for source in try Self.sources() {
-            let imports = source.texte.split(separator: "\n").map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.filter { $0.hasPrefix("import ") }
+            let imports = source.texte.split(whereSeparator: \.isNewline).filter { $0.hasPrefix("import ") }
             #expect(imports.allSatisfy { $0 == "import Foundation" }, "import inattendu dans \(source.nom)")
         }
     }
