@@ -38,3 +38,4 @@ Merci,
 - Rien n'est chiffré : si MWM demande « combien », la réponse honnête est « nous ne savons pas, tant que le build n'est pas dans les mains de testeurs ».
 - Le texte des CGU et de la politique de confidentialité dit la même chose (« éteinte par défaut, acceptée dans les Réglages seulement »). Si tu changes la décision 7, il faut changer ces deux textes et `store/app-privacy.md`.
 - La question 1 ci-dessus peut aussi se régler en lisant le tableau de bord de l'équipe.
+- Décisions de Titouan du 19 octobre qui touchent MWM : le profil n'a qu'un surnom (aucun nom ni prénom collectés), le réseau est gratuit, le texte d'un message signalé est transmis à l'équipe et la boîte fishme.app@gmail.com est lue par Titouan, Adem et Sullyvan. Rien de cela ne passe par Spark. La politique de confidentialité et `app-privacy.md` les disent déjà ; le juriste de MWM les relit.

@@ -1,6 +1,6 @@
 # Fiche App Store de FishMe : version qui porte le réseau social (S2)
 
-**Brouillon, à relire par Adem ; les textes juridiques cités sont des brouillons à faire relire par un juriste de MWM.** Écrit par S2 le 19 octobre 2026 pour la version de la vague 2 (L21 à L24 fusionnées). Il complète `fiche-fishme.md` (S1, version du 16 octobre, sans réseau) : tout ce qui n'est pas repris ici reste comme dans S1 (nom, sous-titre, catégorie, mots-clés, texte promo). Écrit depuis les fiches de lots, pas depuis un build : une phrase dont la fonction n'est pas à l'écran dans le build TestFlight sort du texte (refus R7). Rien n'est écrit au futur. Les captures sont à refaire par A quand L23 est dans le build (`docs/app-store.md`, ligne 4) ; S2 n'en produit aucune.
+**Brouillon, à relire par Adem ; les textes juridiques cités sont des brouillons à faire relire par un juriste de MWM.** Écrit par S2 le 19 octobre 2026, mis à jour le même jour avec les décisions de Titouan (surnom seul, département par défaut, photo importée, chats en zones partagées, réseau gratuit), pour la version de la vague 2 (L21 à L24 fusionnées). Il complète `fiche-fishme.md` (S1, version du 16 octobre, sans réseau) : tout ce qui n'est pas repris ici reste comme dans S1 (nom, sous-titre, catégorie, mots-clés, texte promo). Écrit depuis les fiches de lots, pas depuis un build : une phrase dont la fonction n'est pas à l'écran dans le build TestFlight sort du texte (refus R7). Rien n'est écrit au futur. Les captures sont à refaire par A quand L23 est dans le build (`docs/app-store.md`, ligne 4) ; S2 n'en produit aucune.
 
 Légende : **[?]** = à lire dans le build. Les crochets `[...]` sont à remplir ; aucun n'est inventé.
 
@@ -8,13 +8,13 @@ Légende : **[?]** = à lire dans le build. Les crochets `[...]` sont à remplir
 | Champ | Valeur | Longueur |
 |---|---|---|
 | Nouveautés | voir ci-dessous | 186 car., 192 octets (limite 4000 car.) |
-| Description | S1 + bloc « LA COMMUNAUTÉ » + deux lignes changées | 3838 car., 3945 octets avec les crochets non remplis (limite 4000 car.) |
+| Description | S1 + bloc « LA COMMUNAUTÉ » + deux lignes changées | 3893 car., 4000 octets avec les crochets non remplis (limite 4000 car.) |
 | Connexion requise | Non (pas de mot de passe) ; le relecteur doit avoir iCloud connecté pour publier, c'est dit dans les notes | |
 | Notes pour le relecteur | `notes-relecteur-reseau-en.md` | 3362 octets (limite 4000) |
 | Confidentialité, âge | `app-privacy.md` | |
 | Classement par âge | à rejouer (contenu d'utilisateur : oui) ; plus de « 4+ » | [à lire dans App Store Connect] |
 
-Longueurs comptées par Python (`len()` en caractères, `len(.encode("utf-8"))` en octets), espaces compris. **Marge : 162 caractères.** `[COUVERTURE]` et les deux URL du texte seront plus longs une fois remplis : recompter avant de coller, et si ça dépasse, raccourcir « LE PESCEDEX » ou « FISHME PRO », pas la communauté.
+Longueurs comptées par Python (`len()` en caractères, `len(.encode("utf-8"))` en octets), espaces compris. **Marge : 107 caractères.** `[COUVERTURE]` et les deux URL du texte seront plus longs une fois remplis : recompter avant de coller, et si ça dépasse, raccourcir « LE PESCEDEX » ou « FISHME PRO », pas la communauté.
 
 ### Nouveautés
 ```
@@ -48,10 +48,10 @@ LE PESCEDEX
 - Partage une image de ta carte : jamais ton coin exact.
 
 LA COMMUNAUTÉ (15 ans et plus)
-- Crée ton profil avec un surnom et un avatar, publics.
-- Publie une photo ou une vidéo de 15 secondes, et choisis à chaque fois le lieu affiché : le cours d'eau et le département, le département seul, ou aucun lieu. Jamais de coordonnée.
-- Aime et commente, écris à tes amis et dans les clubs dont tu es membre.
-- Signale ou bloque une publication, un commentaire, un message ou une personne. Un contenu signalé qui enfreint les conditions est retiré sous 24 heures.
+- Crée ton profil : un surnom et un avatar, publics. Ni nom ni prénom.
+- Publie une photo (de ta galerie aussi) ou une vidéo de 15 secondes. Tu choisis le lieu affiché : le département par défaut, avec le cours d'eau si tu veux, ou aucun. Jamais de coordonnée.
+- Aime et commente, écris à tes amis et dans les clubs dont tu es membre (messages jamais publics).
+- Signale ou bloque une publication, un commentaire, un message ou une personne. Un contenu public signalé qui enfreint les conditions est retiré sous 24 heures.
 - Ta collection n'est jamais publique.
 
 GRATUIT POUR TOUJOURS
@@ -76,13 +76,13 @@ Confidentialité : [URL_CONFIDENTIALITE]
 ### Qui prouve quoi (les lignes nouvelles ; celles de S1 restent)
 | Phrase | Source dans le plan | État |
 |---|---|---|
-| Profil avec surnom et avatar, publics | décision 3 du 19 oct., L21 | à voir à l'écran [?] |
-| Photo ou vidéo de 15 secondes | décision 4, L23 | à voir [?] ; si la vidéo est repoussée (R2, `quota.md`), retirer « ou une vidéo de 15 secondes » |
-| Lieu choisi à chaque publication, trois choix, jamais de coordonnée | décision 4, L23, CGU article 11 | à voir [?] |
+| Profil avec surnom et avatar, publics ; ni nom ni prénom | décision 3 du 19 oct. et décision de Titouan (surnom seul), L21 | à voir à l'écran [?] ; la revue a vu un champ nom et prénom dans les réglages (`ReglagesProfilView.swift:73-80`) : à retirer avant d'écrire « ni nom ni prénom » |
+| Photo (prise ou importée de la galerie) ou vidéo de 15 secondes | décision 4, décision de Titouan (import autorisé), L23 | à voir [?] ; si la vidéo est repoussée (R2, `quota.md`), retirer « ou une vidéo de 15 secondes » |
+| Lieu choisi à chaque publication, département seul par défaut, jamais de coordonnée | décision 4 et décision de Titouan (défaut), L23, CGU article 11 | à voir [?] ; la revue a vu « cours d'eau + département » présélectionné (`LieuPublication.swift:50`) : à corriger avant d'écrire « par défaut » |
 | Aimer et commenter | L23 | à voir [?] |
-| Écrire à ses amis et dans les clubs dont on est membre | décision 6 et décisions de Titouan du 19 oct. (chat de club réservé aux membres), L24 | à voir [?] ; retirer ce qui manque |
+| Écrire à ses amis et dans les clubs dont on est membre ; messages jamais publics | décision 6 et décisions de Titouan du 19 oct. (chats en zones partagées), L24 | à voir [?] ; retirer ce qui manque |
 | Signaler ou bloquer sur chaque type de contenu | décision 5, règle 1.2 d'Apple | un bouton par type à vérifier au `/banc` [?] |
-| Retrait sous 24 heures | CGU article 10 ; référent de la semaine à fixer (`notes-relecteur-reseau-en.md`) | **ne pas publier tant que le référent n'est pas fixé** |
+| Retrait sous 24 heures (contenu public signalé) | CGU article 10 ; boîte lue par Titouan, Adem et Sullyvan, référent de la semaine à fixer par l'équipe (`notes-relecteur-reseau-en.md`) | **ne pas publier tant que le référent n'est pas fixé** |
 | 15 ans et plus | décision de Titouan du 19 oct., CGU article 2 | à voir (déclaration avant le profil) [?] |
 | Collection jamais publique | règle d'or, `schema.md` (aucun type « Collection » en base publique) | exact selon R2 |
 | La communauté est gratuite | décision de Titouan du 19 oct. | exact ; le paywall ne la liste pas en Pro [?] |

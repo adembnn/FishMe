@@ -135,7 +135,7 @@ Tes photos, tes vidéos et tes prises t'appartiennent, y compris les photos que 
 
 En partageant une carte à un ami, tu nous autorises à la lui transmettre, le temps du partage. Si une autre personne apparaît sur un contenu, tu garantis avoir son accord.
 
-L'app, ses illustrations, ses cartes à collectionner, ses textes et ses conseils appartiennent à l'éditeur et à ses partenaires. Les données de l'OFB, de Hub'Eau, d'Apple Weather et les textes officiels gardent leurs propres licences, citées dans la page Sources. Les noms et marques cités appartiennent à leurs propriétaires.
+L'app, ses illustrations, ses cartes à collectionner, ses textes et ses conseils appartiennent à l'éditeur et à ses partenaires. Les données de l'OFB, de Hub'Eau, d'Apple Weather et les textes officiels gardent leurs propres licences, citées dans la page Sources. Le filtre de mots de FishMe utilise la liste LDNOOBW, sous licence Creative Commons Attribution 4.0 (CC BY 4.0) ; son attribution est dans la page Sources. Les noms et marques cités appartiennent à leurs propriétaires.
 
 ## 15. Responsabilité
 

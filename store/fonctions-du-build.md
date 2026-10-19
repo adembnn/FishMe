@@ -35,12 +35,15 @@ La fiche `fiche-reseau.md` et les notes `notes-relecteur-reseau-en.md` ne promet
 
 | Vu | Fonction | Lot | Phrase qui en dépend |
 |---|---|---|---|
-| [ ] | Déclaration « J'ai 15 ans ou plus » avant le profil, aucune date de naissance | L21 | LA COMMUNAUTÉ ; notes, ligne A |
+| [ ] | Déclaration « J'ai 15 ans ou plus » et case d'accord aux conditions à la création du profil, aucune date de naissance | L21 | LA COMMUNAUTÉ ; notes, ligne A ; CGU article 2 |
+| [ ] | Profil : un surnom seulement, aucun champ nom ni prénom | L21 | LA COMMUNAUTÉ, 1re ligne ; politique de confidentialité |
 | [ ] | Profil : surnom unique, avatar, « Finis ton profil » qu'on peut reporter | L21 | LA COMMUNAUTÉ, 1re ligne |
-| [ ] | Publier une photo, une vidéo de 15 s, avec le choix du lieu (3 choix ; 2 sur un plan d'eau nommé) | L23 | LA COMMUNAUTÉ, 2e ligne ; notes, ligne B |
+| [ ] | Publier une photo (caméra ou galerie, sans GPS), une vidéo de 15 s, avec le choix du lieu (département seul présélectionné ; 3 choix, 2 sur un plan d'eau nommé) | L23 | LA COMMUNAUTÉ, 2e ligne ; notes, ligne B |
 | [ ] | « Aucun lieu » : la publication n'apparaît pas dans « Dans ta région » | L23 | CGU article 11 |
 | [ ] | Likes, commentaires | L23 | LA COMMUNAUTÉ, 3e ligne |
-| [ ] | Chat d'amis ; chat de club réservé aux membres | L24 | LA COMMUNAUTÉ, 3e ligne ; CGU article 8 |
+| [ ] | Chat d'amis ; chat de club réservé aux membres ; zones partagées, jamais la base publique | L24 | LA COMMUNAUTÉ, 3e ligne ; CGU article 8 |
+| [ ] | Signalement d'un message : le texte est joint à l'e-mail et copié dans l'enregistrement `Signalement` | L24 | CGU article 10 ; politique §6 ; notes, ligne C |
+| [ ] | Mode démo : fil et chat avec contenu d'exemple en lecture seule en Release (pas seulement sous `#if DEBUG`) | L25 | notes, DEMO MODE |
 | [ ] | « Signaler » sur publication, commentaire, message, profil, carte de club (5 types) | L21 à L24 | LA COMMUNAUTÉ, 4e ligne ; notes, ligne C |
 | [ ] | « Bloquer » sur chaque type | L21 à L24 | idem, ligne D |
 | [ ] | Filtre de mots à la saisie (légende, commentaire, message, surnom) | L23, L24 | notes, MODERATION |

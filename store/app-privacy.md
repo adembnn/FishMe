@@ -1,6 +1,6 @@
 # Manifeste de confidentialité, « App Privacy » et âge : ce qui change avec le réseau social (S2)
 
-**Brouillon, à faire relire par un juriste de MWM.** L'équipe n'est pas juridique. Écrit par S2 le 19 octobre 2026 pour A, qui pose les lignes dans `App/PrivacyInfo.xcprivacy` pendant L25 (vague 2) : S2 ne touche pas ce fichier. Remplace, pour le build qui porte le réseau, les réponses de `confidentialite-spark-flash.md` §2 et §3 (celles-ci restent justes pour le build du 16 octobre, sans réseau).
+**Brouillon, à faire relire par un juriste de MWM.** L'équipe n'est pas juridique. Écrit par S2 le 19 octobre 2026, mis à jour le même jour avec les décisions de Titouan (un surnom seulement, aucun nom ni prénom ; département par défaut ; photo importée de la galerie ; texte d'un message signalé transmis à l'équipe ; chats en zones partagées), pour A, qui pose les lignes dans `App/PrivacyInfo.xcprivacy` pendant L25 (vague 2) : S2 ne touche pas ce fichier. Remplace, pour le build qui porte le réseau, les réponses de `confidentialite-spark-flash.md` §2 et §3 (celles-ci restent justes pour le build du 16 octobre, sans réseau).
 
 Règle d'Apple : on déclare ce qui quitte l'appareil et que le développeur ou un tiers peut lire. Elle est lue dans les pages « App privacy details » et « Privacy manifest files » d'Apple, mais **l'équipe n'a pas relu ces pages en entier** : tout ce qui est marqué ⚠ est à contrôler contre l'éditeur de manifeste d'Xcode (il propose la liste exacte des clés) et contre App Store Connect.
 
@@ -12,14 +12,14 @@ Aujourd'hui le fichier déclare 7 types, tous non liés, dont `UserID` (finalit�
 
 | Type (clé `NSPrivacyCollectedDataType...`) | Action | `Linked` | `Tracking` | Finalités | Pourquoi |
 |---|---|---|---|---|---|
-| `UserID` | **passer `Linked` de faux à vrai** ; garder les finalités | vrai | faux | `AppFunctionality`, `Analytics` | le surnom et l'identifiant du profil (`recordName` CloudKit) identifient la personne dans la base publique ; Apple ne prend qu'une réponse par type |
-| `PhotosorVideos` | **ajouter** | vrai | faux | `AppFunctionality` | photos et vidéos des publications, avatar |
+| `UserID` | **passer `Linked` de faux à vrai** ; garder les finalités | vrai | faux | `AppFunctionality`, `Analytics` | le surnom (seule identité du profil, aucun nom ni prénom) et l'identifiant du profil (`recordName` CloudKit) identifient la personne dans la base publique ; Apple ne prend qu'une réponse par type |
+| `PhotosorVideos` | **ajouter** | vrai | faux | `AppFunctionality` | photos et vidéos des publications, avatar, y compris une photo importée de la galerie (ré-encodée, sans GPS) |
 | `OtherUserContent` | **ajouter** | vrai | faux | `AppFunctionality` | légendes, commentaires, likes, signalements, noms de club |
-| `CoarseLocation` | **ajouter** | vrai | faux | `AppFunctionality` | le département (et le cours d'eau) choisi à chaque publication ; le tronçon du compteur de fréquentation. R2 range un département dans la localisation approximative d'Apple (⚠ non vérifié) |
-| `EmailsOrTextMessages` | **ajouter** | vrai | faux | `AppFunctionality` | messages de club et d'amis (chat). ⚠ Si ces messages restent dans des zones partagées illisibles par l'équipe, Apple peut les juger « non collectés » ; par prudence on les déclare (déclarer trop coûte moins cher qu'un refus 5.1.2) |
+| `CoarseLocation` | **ajouter** | vrai | faux | `AppFunctionality` | le département (par défaut) ou le département et le cours d'eau, choisi à chaque publication ;  le tronçon du compteur de fréquentation. R2 range un département dans la localisation approximative d'Apple (⚠ non vérifié) |
+| `EmailsOrTextMessages` | **ajouter** | vrai | faux | `AppFunctionality` | messages de club et d'amis (chat), dans des zones partagées, jamais en base publique. Le texte d'un message **signalé** est joint à l'e-mail de signalement et copié dans l'enregistrement `Signalement` : l'équipe peut donc le lire, ce qui est une collecte au sens d'Apple. À déclarer sans hésitation (⚠ le texte des messages non signalés reste illisible par l'équipe ; Apple ne propose pas de case « seulement si signalé », on déclare le type) |
 | `PurchaseHistory`, `ProductInteraction`, `PerformanceData`, `CrashData`, `OtherDiagnosticData`, `DeviceID` | **inchangés** (Spark, non liés, `Analytics`) | faux | faux | inchangées | le manifeste déclare ce que l'app peut collecter : Spark ne collecte qu'après accord dans les Réglages, mais la déclaration reste |
 
-Aucun type « Contact » (nom, e-mail, téléphone, adresse) : FishMe n'en reçoit aucun. Le nom et le prénom facultatifs vivent dans la base privée du pêcheur, que l'équipe ne lit pas (⚠ à confirmer avec L21 : si un jour ils passent en base publique, il faudra déclarer `Name`).
+Aucun type « Contact » (nom, e-mail, téléphone, adresse) : FishMe n'en reçoit aucun. Décision de Titouan du 19 octobre : le profil n'a qu'un surnom, **plus aucun nom ni prénom n'est demandé ni collecté** (donc pas de `Name`). ⚠ L'écran de réglages du profil (`ReglagesProfilView.swift:73-80`, L21) demande encore nom et prénom d'après la revue : à retirer par L21/A, sinon cette ligne devient fausse.
 
 Lignes à ajouter dans le tableau `NSPrivacyCollectedDataTypes` (⚠ clés recopiées de R2 et de la mémoire de l'équipe, à contrôler dans l'éditeur d'Xcode ; l'ordre ne compte pas) :
 
@@ -53,19 +53,19 @@ Questions d'ensemble :
 
 | Catégorie (libellé d'App Store Connect, à relire) | Type | Lié à l'identité | Suivi | Finalité | Quand |
 |---|---|---|---|---|---|
-| Contenu de l'utilisateur | Photos ou vidéos | **oui** | non | fonctionnalités de l'app | si le pêcheur publie ou choisit un avatar |
+| Contenu de l'utilisateur | Photos ou vidéos | **oui** | non | fonctionnalités de l'app | si le pêcheur publie ou choisit un avatar (y compris depuis sa galerie) |
 | Contenu de l'utilisateur | Autre contenu d'utilisateur | **oui** | non | fonctionnalités de l'app | si le pêcheur publie, commente, aime, signale |
-| Contenu de l'utilisateur | E-mails ou SMS (messages) | **oui** | non | fonctionnalités de l'app | si le pêcheur écrit à un ami ou dans un club |
-| Localisation | Localisation approximative | **oui** | non | fonctionnalités de l'app | département et cours d'eau d'une publication ; tronçon du compteur de fréquentation ; ⚠ plus l'analyse (`Analytics`) si MWM confirme que Spark tire une position de l'adresse IP |
+| Contenu de l'utilisateur | E-mails ou SMS (messages) | **oui** | non | fonctionnalités de l'app | si le pêcheur écrit à un ami ou dans un club ; texte d'un message signalé lu par l'équipe |
+| Localisation | Localisation approximative | **oui** | non | fonctionnalités de l'app | département (par défaut) et cours d'eau (au choix) d'une publication ; tronçon du compteur de fréquentation ; ⚠ plus l'analyse (`Analytics`) si MWM confirme que Spark tire une position de l'adresse IP |
 | Identifiants | Identifiant utilisateur | **oui** (changé : c'était non) | non | fonctionnalités de l'app et analyse | surnom du profil ; identifiant d'installation de Spark |
 | Identifiants | Identifiant d'appareil | non | non | analyse | Spark, après accord seulement |
 | Achats | Historique d'achats | non | non | fonctionnalités de l'app | Spark, après accord |
 | Données d'utilisation | Interaction avec le produit | non | non | analyse | Spark, après accord |
 | Diagnostics | Données de performance, données de plantage, autres données de diagnostic | non | non | analyse | Spark, après accord |
-| Coordonnées (nom, e-mail, téléphone) | aucune | | | | |
+| Coordonnées (nom, e-mail, téléphone) | aucune : ni nom ni prénom, seulement un surnom | | | | |
 | Données de santé, financières, contacts, historique de navigation, recherche | aucune | | | | |
 
-Sur les lignes Spark, la case « collecté seulement après accord » n'existe pas dans le formulaire : on déclare le maximum. Photothèque : la ligne 8 de `docs/app-store.md` dit « pas d'import de photos ». ⚠ La fiche L21 ajoute un avatar choisi dans la galerie : A vérifie qu'il passe par le sélecteur système (aucune autorisation de lecture de la photothèque, aucune clé Info à ajouter) et corrige la ligne 8.
+Sur les lignes Spark, la case « collecté seulement après accord » n'existe pas dans le formulaire : on déclare le maximum. Photothèque : décision de Titouan du 19 octobre, l'import d'une photo depuis la galerie est autorisé (avatar et publication), sans GPS, ré-encodée. La ligne 8 de `docs/app-store.md` dit encore « pas d'import de photos » : à corriger par A (fichier hors du périmètre de S2). ⚠ A vérifie que l'import passe par le sélecteur système (aucune autorisation de lecture de la photothèque, aucune clé Info à ajouter) ; sinon une phrase d'usage de la photothèque s'ajoute dans `Info.plist`.
 
 À contrôler avec MWM avant de cliquer (A, rôle App Manager) : `confidentialite-spark-flash.md` §4, questions 1 à 5 (liste de Spark, lien à l'identité).
 
@@ -95,15 +95,15 @@ Les réponses de `confidentialite-spark-flash.md` §3 changent : le réseau est 
 | Exigence | Où dans FishMe | Preuve à montrer au relecteur |
 |---|---|---|
 | Filtre | liste de mots LDNOOBW à la saisie (légende, commentaire, message, surnom, nom de club) ; ⚠ pas de filtre d'image | `notes-relecteur-reseau-en.md` |
-| Signaler | menu « Signaler » sur chaque publication, commentaire, message, profil et carte de club ; e-mail préparé à fishme.app@gmail.com et enregistrement `Signalement` | idem |
-| Réponse rapide | CGU article 10 : retrait sous 24 heures d'un contenu signalé qui enfreint les conditions ; un référent par semaine lit la boîte | idem |
+| Signaler | menu « Signaler » sur chaque publication, commentaire, message, profil et carte de club ; e-mail préparé à fishme.app@gmail.com (envoyé par le pêcheur, pas automatique) et enregistrement `Signalement` en base ; pour un message d'ami ou de club, son texte est joint à l'e-mail et copié dans l'enregistrement | idem |
+| Réponse rapide | CGU article 10 : retrait sous 24 heures des contenus publics (publications, commentaires, profils) signalés qui enfreignent les conditions et, pour les messages privés, des messages signalés dont le texte nous est transmis ; la boîte est lue par Titouan, Adem et Sullyvan, référent de la semaine à fixer par l'équipe | idem |
 | Bloquer | « Bloquer » sur chaque contenu ; plus rien de la personne chez le pêcheur | idem |
 | Contact publié | fishme.app@gmail.com dans les Réglages et les CGU | idem |
 | Suppression du compte dans l'app (5.1.1) | « Supprimer mon profil » et « Supprimer mon compte et mes données iCloud » (⚠ libellés à relire dans le build) | idem |
 
 ## 6. Attribution de la liste de mots interdits (Profil, Sources)
 
-À ajouter par le lot qui possède la page Sources (CC BY 4.0 impose l'attribution). Texte proposé, ⚠ à vérifier contre le dépôt d'origine (auteur à nommer exactement, modifications à décrire) quand L23 aura lu la liste :
+À ajouter dans le texte de la page Sources de l'app (Profil, Sources ; `ReglagesView.swift:35`, qui ne cite aujourd'hui que l'OFB et Hub'Eau, d'après la revue) : la licence CC BY 4.0 impose l'attribution. Texte proposé (décision de Titouan du 19 octobre), ⚠ à vérifier contre le dépôt d'origine (auteur à nommer exactement, modifications à décrire) quand L23 aura lu la liste :
 
 « Filtre de mots : liste « List of Dirty, Naughty, Obscene, and Otherwise Bad Words » (LDNOOBW), licence Creative Commons Attribution 4.0 (CC BY 4.0), https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words — adaptée pour FishMe : [mots retirés ou ajoutés, à décrire par L23]. Licence : https://creativecommons.org/licenses/by/4.0/ »
 
