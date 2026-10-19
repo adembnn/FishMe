@@ -8,7 +8,7 @@ import Foundation
 // Rien ici ne porte une coordonnée : la carte s'arrête au département.
 
 /// Un club en ligne. L'identifiant est l'UUID du club (celui du `ClubLocal` d'origine pour un club migré).
-nonisolated struct Club: Sendable, Equatable, Hashable, Identifiable {
+nonisolated struct Club: Sendable, Equatable, Hashable, Identifiable, Codable {
     var id: String
     var nom: String
     /// Image choisie parmi les poissons, ou `nil` si le club a une photo.
@@ -23,13 +23,13 @@ nonisolated struct Club: Sendable, Equatable, Hashable, Identifiable {
     var creeLe: Date
 }
 
-nonisolated enum RoleMembre: String, Sendable, Equatable {
+nonisolated enum RoleMembre: String, Sendable, Equatable, Codable {
     case fondateur
     case membre
 }
 
 /// Une adhésion : `recordName` = `m-<club>-<profil>`, une par personne et par club.
-nonisolated struct Membre: Sendable, Equatable, Hashable, Identifiable {
+nonisolated struct Membre: Sendable, Equatable, Hashable, Identifiable, Codable {
     var id: String
     var club: String
     /// `recordName` du `Profil` (L21).
@@ -42,7 +42,7 @@ nonisolated struct Membre: Sendable, Equatable, Hashable, Identifiable {
 
 /// Une carte partagée au club : une `Publication` dont le champ `club` est rempli (R2).
 /// L'image est le PNG de la collection, réécrit sans métadonnées ; le lieu s'arrête au département (« 94 »), jamais plus précis.
-nonisolated struct CartePartageeClub: Sendable, Equatable, Hashable, Identifiable {
+nonisolated struct CartePartageeClub: Sendable, Equatable, Hashable, Identifiable, Codable {
     /// `recordName` : `pc-<club>-<carte>`.
     var id: String
     var club: String
