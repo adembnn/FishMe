@@ -328,7 +328,9 @@ final class GestionClubs {
         enCours = true
         defer { enCours = false }
         do {
-            switch RegleAdhesion.sortie(club: club, membres: membres[club.id] ?? [], profil: moi) {
+            // Les membres sont relus au moment de partir : l'état affiché peut dater de 8 s, et fermer un club où quelqu'un vient d'entrer serait une erreur.
+            let presents = try await service.membres(deClub: club.id)
+            switch RegleAdhesion.sortie(club: club, membres: presents, profil: moi) {
             case .fermer: try await service.fermer(club: club.id, fondateur: moi)
             case .quitter: try await service.quitter(club: club.id, profil: moi)
             }
