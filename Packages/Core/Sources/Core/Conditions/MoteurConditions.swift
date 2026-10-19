@@ -64,7 +64,8 @@ public struct MoteurConditions: ServiceConditions {
             heure: date, ventKmh: maintenant?.ventKmh, pluieMm: maintenant?.pluieMm, pressionHPa: maintenant?.pressionHPa,
             tendancePressionHPa6h: tendance, aube: jour?.lever, crepuscule: jour?.coucher,
             finLegale: lieu.flatMap { soleil.finLegale(date: date, coordonnee: $0) },
-            etatRiviere: eau.map(etat) ?? .inconnu, septJours: septJours(meteo, depuis: date), sources: sources)
+            etatRiviere: eau.map(etat) ?? .inconnu, septJours: septJours(meteo, depuis: date), sources: sources,
+            heurePression: maintenant?.pressionHPa == nil ? nil : maintenant?.heure)
     }
 
     private func heureUTC(_ d: Date) -> String {

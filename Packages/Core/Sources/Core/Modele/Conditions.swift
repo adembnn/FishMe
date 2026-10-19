@@ -143,10 +143,13 @@ public struct Conditions: Sendable, Equatable, Hashable, Codable {
     public var etatRiviere: EtatRiviere
     public var septJours: [JourConditions]
     public var sources: [String]
+    /// L'heure du point météo dont vient la pression (N3 : sert à écrire « prévu » quand elle est loin de l'heure demandée).
+    public var heurePression: Date?
 
     public init(heure: Date, ventKmh: Double? = nil, pluieMm: Double? = nil, pressionHPa: Double? = nil,
                 tendancePressionHPa6h: Double? = nil, aube: Date? = nil, crepuscule: Date? = nil, finLegale: Date? = nil,
-                etatRiviere: EtatRiviere = .inconnu, septJours: [JourConditions] = [], sources: [String] = []) {
+                etatRiviere: EtatRiviere = .inconnu, septJours: [JourConditions] = [], sources: [String] = [],
+                heurePression: Date? = nil) {
         self.heure = heure
         self.ventKmh = ventKmh
         self.pluieMm = pluieMm
@@ -158,6 +161,7 @@ public struct Conditions: Sendable, Equatable, Hashable, Codable {
         self.etatRiviere = etatRiviere
         self.septJours = septJours
         self.sources = sources
+        self.heurePression = heurePression
     }
 }
 

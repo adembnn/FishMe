@@ -100,6 +100,19 @@ public protocol NiveauEauService: Sendable {
     func niveau(station: StationHydro) async -> NiveauEau?
 }
 
+/// Température d'un cours d'eau (Hub'Eau, réseau de température continue). Sans réseau ou sans mesure récente : `nil`.
+public protocol TemperatureEauService: Sendable {
+    func temperature(station: StationTemperature) async -> TemperatureEau?
+}
+
+/// N3 : pression, température de l'eau et débit comme des mesures sourcées, avec leur tendance. Aucun score, aucune prévision de touche.
+public protocol ServiceMesures: Sendable {
+    /// Une mesure absente n'a pas de ligne. Dans l'ordre : pression, eau, débit.
+    func mesures(conditions: Conditions, eau: NiveauEau?, temperature: TemperatureEau?, date: Date) -> [MesureSourcee]
+    /// La station de température en service la plus proche à moins de 10 km, sur la même eau. `nil` sans station.
+    func stationTemperature(pres: Coordonnee, eau: StationHydro?) -> StationTemperature?
+}
+
 /// Conseils par espèce (D4).
 public protocol ServiceConseils: Sendable {
     func conseils(espece: Espece, niveau: NiveauPecheur, mois: Int) -> [Conseil]
