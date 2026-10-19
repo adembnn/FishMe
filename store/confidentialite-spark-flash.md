@@ -1,5 +1,7 @@
 # Confidentialité, étiquettes « App Privacy » et SDK Spark Flash (S1)
 
+> **S2, 19 oct. 2026 :** pour le build qui porte le réseau social, §2 et §3 sont remplacés par `app-privacy.md` (contenu d'utilisateur : oui, plus de « 4+ », `UserID` lié, nouveaux types). Ce fichier reste juste pour le build sans réseau et pour la liste de questions à MWM (§4).
+
 Préparé en avance par Sullyvan (lot S1, tenu par Adem), le 15 oct. 2026. Sources : `CLAUDE.md`, `docs/fiches/S1.md` (Contrat), `docs/app-store.md` (lignes 5, 6, 17, 19), `docs/reports/app-store.md`. **Rien ici n'est un texte juridique** : la politique de confidentialité et les conditions sont assemblées par le questionnaire de MWM (`get_legal_questionnaire`, `save_legal_answers`, `draft_legal_document`), non branché dans cette session. Ce fichier prépare les réponses ; elles doivent être identiques aux étiquettes ci-dessous.
 
 Légende : **[?]** = à confirmer par MWM ou dans le build.

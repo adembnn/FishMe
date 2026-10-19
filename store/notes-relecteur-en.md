@@ -1,5 +1,7 @@
 # Notes pour le relecteur d'Apple (champ « Notes » d'App Store Connect)
 
+> **S2, 19 oct. 2026 :** pour la version qui porte le réseau social, utiliser `notes-relecteur-reseau-en.md` (le champ « Notes » est limité à 4000 octets : ce texte-ci ne laisse pas de place au réseau). Ce fichier décrit le build du 16 octobre.
+
 Brouillon en anglais, 3420 octets comptés par Python (limite 4000). Écrit depuis `docs/fiches/S1.md`, `docs/app-store.md` (ligne 11) et `docs/parcours-demo.md`, pas depuis le build : chaque ligne marquée `[?]` ou entre crochets se lit dans le build TestFlight de la porte 3 ; une fonction coupée à la porte 3 sort des notes. Repris par A le 15 oct. en fin d'après-midi : premier lancement (niveau puis cartes à glisser, décision de 16h), 3 propositions plus « Autre » et toise (17h), carte Apple (MapKit, E1) au lieu d'OpenStreetMap, modèle Core ML sur l'appareil (R1) au lieu de l'IA d'Apple, qui n'est testée qu'en bonus. Rien n'est inventé : les coordonnées du quai de Charenton, le lien de la vidéo, la couverture des règles et le contact manquent. Recompter après toute modification (`len(texte.encode("utf-8")) <= 4000`).
 
 Pas de compte à l'ouverture : cocher « Connexion non requise » dans App Store Connect, aucun compte démo.

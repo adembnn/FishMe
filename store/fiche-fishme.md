@@ -1,5 +1,7 @@
 # Fiche App Store de FishMe (S1)
 
+> **S2, 19 oct. 2026 :** pour la version qui porte le réseau social, voir `fiche-reseau.md` (description, nouveautés). « Aucun compte » et « ni amis, ni coins publics » ne valent plus pour cette version.
+
 Brouillon avancé par Sullyvan (15 oct. 2026), repris sur `lot/store` par A (Claude) le 15 oct. en fin d'après-midi : description alignée sur `parcours-demo.md` (E1 à E9), sur les décisions d'Adem de 16h et 17h (premier lancement à glisser, 3 propositions plus « Autre », toise et poids estimé) et sur les listes Gratuit / Pro du paywall de L6 (`TextesPaywall.gratuit` et `.pro`, branche `lot/abonnement`).
 
 Écrite en avance sur le lot S1 (tenu par Adem), à partir de `CLAUDE.md`, `docs/fiches/S1.md`, `docs/app-store.md` et de la relecture de Sullyvan (`origin/sullyvan/relecture-s1`), qui remplace la fiche « Bredouille » de Titouan. Longueurs comptées par Python (`len()` en caractères, `len(.encode("utf-8"))` en octets), espaces compris.
