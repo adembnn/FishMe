@@ -108,7 +108,7 @@ enum BlocReglesLogique {
         return texte.isEmpty ? nil : texte
     }
 
-    /// Le mot court de l'état d'une ligne. Jamais un mot d'autorisation, jamais un feu vert : une ligne lue n'est pas un « tu peux la garder ».
+    /// Le mot court de l'état d'une ligne. Jamais un mot d'autorisation, jamais un feu vert : une ligne lue ne vaut pas un feu vert.
     static func motDEtat(_ etat: EtatLigne) -> String? {
         switch etat {
         case .respectee: return "règle lue"

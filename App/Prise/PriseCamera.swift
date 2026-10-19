@@ -77,7 +77,10 @@ struct PriseCamera: View {
 
     /// Vérifie l'accès, le demande s'il ne l'a jamais été, puis lance la session. Rien à faire sans caméra (simulateur) ou si l'accès est refusé.
     private func demarrerCamera() {
-        guard Self.disponible else { return }
+        guard Self.disponible else {
+            etat.erreur = PriseCameraEtat.messageSansCamera   // simulateur : le repli galerie reste là
+            return
+        }
         acces = AVCaptureDevice.authorizationStatus(for: .video)
         switch acces {
         case .authorized:
@@ -161,7 +164,7 @@ struct PriseCamera: View {
                             .font(Police.sousTitre).foregroundStyle(.white).multilineTextAlignment(.center)
                             .fixedSize(horizontal: false, vertical: true)
                             .accessibilityAddTraits(.isHeader)
-                        if Self.disponible {
+                        if Self.disponible && !refuse {
                             Button("Réessayer") { etat.erreur = nil; lancer() }
                                 .font(Police.corps).foregroundStyle(.white)
                                 .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
@@ -271,6 +274,7 @@ struct PriseCamera: View {
 @Observable final class PriseCameraEtat {
     static let messageIndisponible = "Caméra indisponible. Ferme les autres apps qui l\u{2019}utilisent, puis réessaie."
     static let messagePhotoManquee = "La photo n\u{2019}a pas pu être prise. Réessaie."
+    static let messageSansCamera = "Pas d\u{2019}appareil photo sur cet iPhone."
     var erreur: String?
     var enCours = false
     /// Vrai dès que le pêcheur a touché Fermer (ou que la vue a disparu) : `onImage` n'est plus appelé.
