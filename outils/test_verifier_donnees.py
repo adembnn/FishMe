@@ -5,6 +5,7 @@ Lancer : python3 outils/test_verifier_donnees.py
 import os
 import sys
 import unittest
+import unittest.mock
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import verifier_donnees as vd  # noqa: E402
@@ -117,6 +118,83 @@ class Chargeur(unittest.TestCase):
         for code in vd.PROTEGES:
             with self.assertRaises(vd.Refus):
                 vd.refuser_ecrasement(code, "/nonexistent")
+
+
+class StationsRecalees(unittest.TestCase):
+    """D5 : règles sur stations-especes.json (fichier et tracé minuscules, en dossier temporaire, aucun réseau)."""
+
+    def setUp(self):
+        import json
+        import tempfile
+        self.json = json
+        self.dossier = tempfile.TemporaryDirectory()
+        self.addCleanup(self.dossier.cleanup)
+        self.trace = os.path.join(self.dossier.name, "trace")
+        os.makedirs(self.trace)
+        f = {"type": "Feature", "properties": {"CdEntiteHydrographique": "F---0100", "NomEntiteHydrographique": "La Marne"},
+             "geometry": {"type": "LineString", "coordinates": [[2.0, 48.5], [2.1, 48.5]]}}
+        with open(os.path.join(self.trace, "paquet-x.geojson"), "w") as h:
+            json.dump({"type": "FeatureCollection", "features": [f]}, h)
+        vd.erreurs.clear()
+        vd.manques.clear()
+
+    def fichier(self, stations):
+        chemin = os.path.join(self.dossier.name, "stations-especes.json")
+        with open(chemin, "w") as h:
+            self.json.dump({"stations": stations}, h)
+        return chemin
+
+    @staticmethod
+    def st(i, recalee=True, lat=48.50003, lon=2.05123, eau="La Marne", code="F---0100"):
+        return {"id": str(i), "lat": lat, "lon": lon, "dep": "94", "eau": eau, "code_eau": code, "recalee": recalee}
+
+    def lancer(self, stations):
+        vd.verifier_stations(self.fichier(stations), self.trace)
+        return list(vd.erreurs)
+
+    def test_fichier_conforme(self):
+        with unittest.mock.patch("sys.stdout"):
+            self.assertEqual(self.lancer([self.st(i, lon=2.0512 + i / 1e5) for i in range(30)]), [])
+
+    def test_station_sans_recalee(self):
+        s = self.st(1)
+        del s["recalee"]
+        e = self.lancer([s, self.st(2)])
+        self.assertEqual(len(e), 1)
+        self.assertIn("sans champ recalee", e[0])
+
+    def test_moins_de_90_pour_cent(self):
+        stations = [self.st(i) for i in range(8)] + [self.st(9, recalee=False, lat=48.5, lon=2.05), self.st(10, recalee=False, lat=48.5, lon=2.05)]
+        with unittest.mock.patch("sys.stdout"):
+            e = self.lancer(stations)
+        self.assertTrue(any("80.0%" in m and "90%" in m for m in e), e)
+
+    def test_true_a_deux_decimales(self):
+        with unittest.mock.patch("sys.stdout"):
+            e = self.lancer([self.st(i) for i in range(19)] + [self.st(99, lat=48.5, lon=2.05)])
+        self.assertTrue(any("2 décimales" in m and "99" in m for m in e), e)
+
+    def test_echantillon_a_plus_de_50_m(self):
+        # 100 m au nord du tracé : c'est un true, mais pas à 50 m du tracé
+        with unittest.mock.patch("sys.stdout"):
+            e = self.lancer([self.st(i, lat=48.50090) for i in range(25)])
+        self.assertTrue(e and all("à plus de 50 m" in m for m in e), e)
+
+    def test_nom_different_du_trace(self):
+        with unittest.mock.patch("sys.stdout"):
+            e = self.lancer([self.st(i, eau="Le Lac") for i in range(25)])
+        self.assertTrue(e and all("le tracé s'appelle « La Marne »" in m for m in e), e)
+
+    def test_sans_trace_l_echantillon_est_un_manque(self):
+        vd.verifier_stations(self.fichier([self.st(i) for i in range(25)]), os.path.join(self.dossier.name, "vide"))
+        self.assertEqual(vd.erreurs, [])
+        self.assertEqual(len(vd.manques), 1)
+
+    def test_echantillon_de_20_graine_fixe(self):
+        import random
+        ids = sorted(str(i) for i in range(50))
+        self.assertEqual(random.Random(vd.GRAINE).sample(ids, 20), random.Random(vd.GRAINE).sample(ids, 20))
+        self.assertEqual(vd.ECHANTILLON, 20)
 
 
 if __name__ == "__main__":

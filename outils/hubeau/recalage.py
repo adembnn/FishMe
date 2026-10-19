@@ -11,10 +11,11 @@ Le telechargement du trace est dans `trace_sandre.py`.
 from __future__ import annotations
 
 import json
-import os
 import math
+import os
 import re
 import unicodedata
+from array import array
 
 SEUIL_M = 300.0
 SEUIL_SANS_COURS_D_EAU_M = 50.0  # station sans code ni nom : seulement un trace tout proche, de n'importe quel nom
@@ -49,7 +50,7 @@ def a_deux_decimales_ou_moins(v: float) -> bool:
 
 
 class Trace:
-    """Les entites du trace : code -> [(nom, [ligne, ...])], ligne = liste de (lon, lat)."""
+    """Les entites du trace : code -> [(nom, [ligne, ...])], ligne = tableau plat lon, lat, lon, lat..."""
 
     def __init__(self):
         self.par_code: dict[str, list[tuple[str, list]]] = {}
@@ -57,7 +58,8 @@ class Trace:
         self.n_entites = 0
 
     def ajouter(self, code: str | None, nom: str | None, lignes: list) -> None:
-        lignes = [[(p[0], p[1]) for p in l] for l in lignes if len(l) >= 2]
+        # chaque ligne en tableau plat lon, lat, lon, lat... (16 octets par point : la France entiere tient en memoire)
+        lignes = [array("d", [c for p in l for c in (p[0], p[1])]) for l in lignes if len(l) >= 2]
         if not lignes:
             return
         self.n_entites += 1
@@ -113,8 +115,8 @@ def plus_proche_sur_lignes(lat: float, lon: float, lignes: list, limite_m: float
     marge_lon = limite_m / kx
     meilleur = None
     for ligne in lignes:
-        for i in range(len(ligne) - 1):
-            (ax, ay), (bx, by) = ligne[i], ligne[i + 1]
+        for i in range(0, len(ligne) - 2, 2):
+            ax, ay, bx, by = ligne[i], ligne[i + 1], ligne[i + 2], ligne[i + 3]
             if (max(ay, by) < lat - marge_lat or min(ay, by) > lat + marge_lat
                     or max(ax, bx) < lon - marge_lon or min(ax, bx) > lon + marge_lon):
                 continue
