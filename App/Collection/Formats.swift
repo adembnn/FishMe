@@ -2,7 +2,7 @@ import Core
 import Foundation
 
 /// Les libellés de la carte, écrits en toutes lettres (L18). Les formes courtes ne servent que si la largeur manque
-/// (`ViewThatFits`) : jamais « FRQ » ni « TAI ».
+/// (`ViewThatFits`) : jamais un sigle de trois lettres.
 enum LibellesCarte {
     static let frequence = "Fréquence"
     static let frequenceCourt = "Fréq."

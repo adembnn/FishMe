@@ -42,7 +42,7 @@ struct PescedexView: View {
     /// Conservé pour ne pas casser l'appelant (RootView) : « Déclarer un poisson déjà pêché » ouvre maintenant `DeclarationView`
     /// ici même (L18), jamais le tunnel. Cette fermeture n'est plus appelée.
     var declarer: (() -> Void)? = nil
-    /// Conservé pour ne pas casser l'appelant : « Amis » n'est plus dans le Pescedex (il vit dans Communauté). Plus appelée.
+    /// Conservé pour ne pas casser l'appelant : l'entrée vers les amis n'est plus dans le Pescedex (elle vit dans Communauté). Plus appelée.
     var voirAmis: (() -> Void)? = nil
     /// Écrit la carte déclarée d'une espèce. À brancher (facultatif) : RootView (`app.declarer`, qui publie aussi l'aquarium).
     /// Tant que c'est `nil`, la carte est écrite ici dans le dépôt et le Pescedex rechargé.
@@ -435,24 +435,6 @@ struct PescedexView: View {
             .tuileFishMe(rayon: Rayon.m)
             .padding(.top, Espace.s)
         }
-    }
-
-    /// Sans action fournie, l'écran vide garde quand même une ligne utile (rien d'inventé).
-    private var premierePrise: some View {
-        HStack(spacing: Espace.m) {
-            Image(systemName: "camera")
-                .font(.system(size: 26, weight: .bold, design: .rounded))
-                .foregroundStyle(Palette.marine)
-                .frame(width: 32)
-                .accessibilityHidden(true)
-            Text(PescedexVide.texte)
-                .font(Police.corps)
-                .foregroundStyle(Palette.encre)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .padding(.horizontal, Espace.l)
-        .frame(minHeight: 56)
-        .tuileFishMe(rayon: Rayon.m)
     }
 
     private func ligneDepart(_ titre: String, icone: String, action: @escaping () -> Void) -> some View {
