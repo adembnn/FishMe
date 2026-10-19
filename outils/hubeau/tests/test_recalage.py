@@ -198,6 +198,17 @@ class TestTelechargement(unittest.TestCase):
             trace_sandre.telecharger(codes, d, log=lambda m: None)
             self.assertEqual(len(appels), 3)  # relance : tout vient du cache
 
+    def test_attente_longue_et_croissante_sur_429_503(self):
+        import email.message
+        import urllib.error
+        h = email.message.Message()
+        h["Retry-After"] = "120"
+        e429 = urllib.error.HTTPError("u", 429, "Too Many", h, None)
+        e503 = urllib.error.HTTPError("u", 503, "Unavail", email.message.Message(), None)
+        self.assertEqual(trace_sandre._attente(0, e429), 120.0)
+        self.assertEqual([trace_sandre._attente(k, e503) for k in range(3)], [30.0, 60.0, 120.0])
+        self.assertEqual(trace_sandre._attente(1, ValueError("x")), 20.0)
+
     def test_cellule(self):
         self.assertEqual(trace_sandre.cellule(48.52, 2.07), (41, 970))
         for lat, lon in ((48.5, 2.05), (43.123, -1.4), (48.8199, 2.4999)):

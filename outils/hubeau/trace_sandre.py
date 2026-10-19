@@ -47,6 +47,18 @@ def telecharger_paquet(codes, essais: int = 6, timeout: int = 300, log=print) ->
     return _obtenir(url_paquet(codes), essais, timeout, log)
 
 
+def _attente(k: int, e) -> float:
+    """Delai avant le prochain essai : croissant ; pour 429 / 503 (serveur surcharge ou qui limite), beaucoup plus long
+    et au moins la valeur de `Retry-After` si le serveur la donne."""
+    if isinstance(e, urllib.error.HTTPError) and e.code in (429, 503):
+        try:
+            demande = float(e.headers.get("Retry-After", 0)) if e.headers else 0.0
+        except ValueError:
+            demande = 0.0
+        return max(demande, 30.0 * 2 ** k)
+    return 10.0 * (k + 1)
+
+
 def _obtenir(url: str, essais: int = 6, timeout: int = 300, log=print) -> bytes:
     for k in range(essais):
         try:
@@ -57,8 +69,8 @@ def _obtenir(url: str, essais: int = 6, timeout: int = 300, log=print) -> bytes:
                 raise ValueError("reponse qui n'est pas du JSON : " + corps[:200].decode("utf-8", "replace"))
             return corps
         except (urllib.error.URLError, TimeoutError, ValueError, ConnectionError) as e:
-            attente = 10 * (k + 1)
-            log(f"  echec ({e}) ; nouvel essai dans {attente} s")
+            attente = _attente(k, e)
+            log(f"  echec ({e}) ; nouvel essai dans {attente:.0f} s")
             if k == essais - 1:
                 raise
             time.sleep(attente)
