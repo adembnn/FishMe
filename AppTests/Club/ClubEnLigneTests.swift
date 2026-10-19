@@ -83,9 +83,12 @@ struct ClubEnLigneTests {
     }
 
     @Test func unLienQuiNEstPasUnClubEstRefuse() throws {
-        #expect(LienClub.clubID(depuis: try #require(URL(string: "fishme://ami/p-gros-brochet"))) == nil)
-        #expect(LienClub.clubID(depuis: try #require(URL(string: "fishme://club/pas-un-uuid"))) == nil)
-        #expect(LienClub.clubID(depuis: try #require(URL(string: "https://club/\(UUID().uuidString)"))) == nil)
+        let ligne1 = try #require(URL(string: "fishme://ami/p-gros-brochet"))
+        #expect(LienClub.clubID(depuis: ligne1) == nil)
+        let ligne2 = try #require(URL(string: "fishme://club/pas-un-uuid"))
+        #expect(LienClub.clubID(depuis: ligne2) == nil)
+        let ligne3 = try #require(URL(string: "https://club/\(UUID().uuidString)"))
+        #expect(LienClub.clubID(depuis: ligne3) == nil)
         #expect(LienClub.url(clubID: "pas-un-uuid") == nil)
     }
 
@@ -98,11 +101,13 @@ struct ClubEnLigneTests {
     @Test func leRelaisGardeLeLienJusquAuSolde() throws {
         let relais = RelaisLienClub()
         let id = UUID().uuidString
-        #expect(relais.recevoir(try #require(LienClub.url(clubID: id))))
+        let ligne4 = try #require(LienClub.url(clubID: id))
+        #expect(relais.recevoir(ligne4))
         #expect(relais.enAttente == id)
         relais.solder()
         #expect(relais.enAttente == nil)
-        #expect(!relais.recevoir(try #require(URL(string: "fishme://pro"))))
+        let ligne5 = try #require(URL(string: "fishme://pro"))
+        #expect(!relais.recevoir(ligne5))
     }
 
     // MARK: Règles
@@ -271,7 +276,8 @@ struct ClubEnLigneTests {
         #expect(pourChat.count == 1 && pourChat[0].jeSuisFondateur)
         #expect(pourChat[0].membres.map(\.profil).sorted() == ["p-lea", "p-titouan"])
         #expect(pourChat[0].membres.first { $0.profil == "p-lea" }?.surnom == "Léa")
-        #expect(await a.ecarter("p-lea", de: try #require(a.club(id: cree.id))))
+        let ligne6 = try #require(a.club(id: cree.id))
+        #expect(await a.ecarter("p-lea", de: ligne6))
         pourChat = a.clubsPourChat()
         #expect(pourChat[0].membres.map(\.profil) == ["p-titouan"])
         // Côté membre : il n'est pas fondateur.
@@ -480,7 +486,8 @@ struct ClubEnLigneTests {
         let b = iPhone("p-titouan", service: service, profils: p)
         let cree = try #require(await a.creer(nom: "Club", poissonId: nil, photo: nil))
         #expect(await b.rejoindre(clubID: cree.id))
-        #expect(await b.partager(carte("b1"), dans: try #require(b.club(id: cree.id))))
+        let ligne7 = try #require(b.club(id: cree.id))
+        #expect(await b.partager(carte("b1"), dans: ligne7))
         await a.charger()
         let cible = try #require(a.cartesVisibles(de: cree).first)
 
@@ -495,7 +502,8 @@ struct ClubEnLigneTests {
         #expect(!corps.lowercased().contains("lat") && !corps.contains("48."))
         // L'autre iPhone, lui, garde la carte.
         await b.charger()
-        #expect(b.cartesVisibles(de: try #require(b.club(id: cree.id))).count == 1)
+        let ligne8 = try #require(b.club(id: cree.id))
+        #expect(b.cartesVisibles(de: ligne8).count == 1)
     }
 
     @Test func bloquerUnMembreMasqueSesCartesEtSaPlace() async throws {
@@ -505,7 +513,8 @@ struct ClubEnLigneTests {
         let b = iPhone("p-titouan", service: service, profils: p)
         let cree = try #require(await a.creer(nom: "Club", poissonId: nil, photo: nil))
         #expect(await b.rejoindre(clubID: cree.id))
-        #expect(await b.partager(carte("b1"), dans: try #require(b.club(id: cree.id))))
+        let ligne9 = try #require(b.club(id: cree.id))
+        #expect(await b.partager(carte("b1"), dans: ligne9))
         await a.charger()
         #expect(a.cartesVisibles(de: cree).count == 1)
         a.bloquer("p-titouan")
@@ -520,14 +529,17 @@ struct ClubEnLigneTests {
         let b = iPhone("p-lea", service: service, profils: p)
         let cree = try #require(await a.creer(nom: "Club", poissonId: nil, photo: nil))
         #expect(await b.rejoindre(clubID: cree.id))
-        #expect(await b.partager(carte("b1"), dans: try #require(b.club(id: cree.id))))
+        let ligne10 = try #require(b.club(id: cree.id))
+        #expect(await b.partager(carte("b1"), dans: ligne10))
         await a.charger()
         let clubA = try #require(a.club(id: cree.id))
         #expect(await a.ecarter("p-lea", de: clubA))
-        #expect(a.membresVisibles(de: try #require(a.club(id: cree.id))).map(\.profil) == ["p-adem"])
+        let ligne11 = try #require(a.club(id: cree.id))
+        #expect(a.membresVisibles(de: ligne11).map(\.profil) == ["p-adem"])
         // Sa carte reste en base (R2 : seul son auteur la supprime) mais n'est plus montrée.
         #expect(await service.cartesParID.count == 1)
-        #expect(a.cartesVisibles(de: try #require(a.club(id: cree.id))).isEmpty)
+        let ligne12 = try #require(a.club(id: cree.id))
+        #expect(a.cartesVisibles(de: ligne12).isEmpty)
         // Au prochain chargement de B, son iPhone efface lui-même son adhésion et sa carte.
         await b.charger()
         #expect(b.clubs.isEmpty)
@@ -544,7 +556,8 @@ struct ClubEnLigneTests {
         let b = iPhone("p-lea", service: service, profils: p)
         let cree = try #require(await a.creer(nom: "Club", poissonId: nil, photo: nil))
         #expect(await b.rejoindre(clubID: cree.id))
-        #expect(!(await b.ecarter("p-adem", de: try #require(b.club(id: cree.id)))))
+        let ligne13 = try #require(b.club(id: cree.id))
+        #expect(!(await b.ecarter("p-adem", de: ligne13)))
         #expect(b.message == .refuse)
     }
 
@@ -569,7 +582,8 @@ struct ClubEnLigneTests {
         await service.regler(horsLigne: true)
         let relance = gestion()
         #expect(relance.clubs.map(\.nom) == ["Les brochets du 94"])
-        #expect(relance.cartesVisibles(de: try #require(relance.club(id: cree.id))).count == 1)
+        let ligne14 = try #require(relance.club(id: cree.id))
+        #expect(relance.cartesVisibles(de: ligne14).count == 1)
         await relance.charger()
         #expect(relance.horsLigne)
         #expect(relance.message == .horsLigne)
@@ -735,14 +749,17 @@ struct ClubEnLigneTests {
         let b = iPhone("p-lea", service: service, profils: p)
         let clubA = try #require(await a.creer(nom: "Club A", poissonId: nil, photo: nil))
         #expect(await b.rejoindre(clubID: clubA.id))
-        #expect(await b.partager(carte("b1"), dans: try #require(b.club(id: clubA.id))))
+        let ligne15 = try #require(b.club(id: clubA.id))
+        #expect(await b.partager(carte("b1"), dans: ligne15))
         let clubB = try #require(await b.creer(nom: "Club de Léa", poissonId: nil, photo: nil)) // fondatrice seule
 
         try await EffaceurClubs(service: service).effacerContenu(deProfil: "p-lea")
 
         #expect(await service.cartesParID.isEmpty)
-        #expect(try await service.club(id: clubB.id) == nil) // fondateur seul : club supprimé
-        #expect(try await service.club(id: clubA.id) != nil) // le club des autres continue
+        let lu16 = try await service.club(id: clubB.id)
+        #expect(lu16 == nil) // fondateur seul : club supprimé
+        let lu17 = try await service.club(id: clubA.id)
+        #expect(lu17 != nil) // le club des autres continue
         let membres = try await service.membres(deClub: clubA.id)
         #expect(membres.map(\.profil) == ["p-adem"])
     }
@@ -821,7 +838,9 @@ struct ClubEnLigneTests {
         let c = club()
         let carte = CartePartageeClub(id: "pc-\(c.id)-1", club: c.id, carteID: "1", auteur: "p-adem", espece: "Sandre", rarete: .peuCommun,
                                       tailleCm: 55.5, departement: "94", image: nil, creeLe: horloge())
-        #expect(try JSONDecoder().decode(CartePartageeClub.self, from: try JSONEncoder().encode(carte)) == carte)
-        #expect(try JSONDecoder().decode(Club.self, from: try JSONEncoder().encode(c)) == c)
+        let dec18 = try JSONDecoder().decode(CartePartageeClub.self, from: try JSONEncoder().encode(carte))
+        #expect(dec18 == carte)
+        let dec19 = try JSONDecoder().decode(Club.self, from: try JSONEncoder().encode(c))
+        #expect(dec19 == c)
     }
 }
