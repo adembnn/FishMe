@@ -39,6 +39,48 @@ struct GalerieSkinsTests {
         #expect(r.reviennentChaqueAnnee.isEmpty)
     }
 
+    @Test("Les sept skins s'affichent sans aucune image quand leur fond est dessiné en code")
+    func septSkinsSansImage() {
+        let tous = Set(CatalogueSkins.tous.map(\.id))
+        let r = rangeesGalerie(dans: O.contexte(O.date(2026, 10, 19))) {
+            skinAffichable($0, imageExiste: { _ in false }, fondDessine: { tous.contains($0) })
+        }
+        #expect(r.mesDecors.count + r.enCeMoment.count + r.reviennentChaqueAnnee.count == 7)
+        #expect(ids(r.mesDecors) == [.riviere, .etang, .grotte])
+        #expect(ids(r.enCeMoment) == [.halloween])
+        #expect(ids(r.reviennentChaqueAnnee) == [.noel, .ouvertureTruite, .ete])
+    }
+
+    @Test("Sans image ni fond dessiné, seul le décor de départ reste")
+    func sansImageNiDessin() {
+        let r = rangeesGalerie(dans: O.contexte(O.date(2026, 10, 19))) {
+            skinAffichable($0, imageExiste: { _ in false }, fondDessine: { _ in false })
+        }
+        #expect(ids(r.mesDecors) == [.riviere])
+        #expect(r.enCeMoment.isEmpty)
+        #expect(r.reviennentChaqueAnnee.isEmpty)
+    }
+
+    @Test("Une illustration suffit à montrer un skin sans fond dessiné")
+    func imageSeule() {
+        let r = rangeesGalerie(dans: O.contexte(O.date(2026, 10, 19))) {
+            skinAffichable($0, imageExiste: { $0 == "fond-halloween-grand" }, fondDessine: { _ in false })
+        }
+        #expect(ids(r.enCeMoment) == [.halloween])
+    }
+
+    @Test("Source du fond : l'illustration d'abord, puis le dessin, puis le fond d'avant les skins")
+    func sourceDuFond() {
+        let h = CatalogueSkins.skin(.halloween)
+        #expect(sourceFond(h, format: .grand, imageExiste: { $0 == "fond-halloween-grand" }, fondDessine: { _ in true })
+                == .image("fond-halloween-grand"))
+        #expect(sourceFond(h, format: .grand, imageExiste: { _ in false }, fondDessine: { _ in true }) == .dessine)
+        #expect(sourceFond(h, format: .petit, imageExiste: { _ in false }, fondDessine: { _ in false }) == .repli("fond-petit"))
+        #expect(sourceFond(nil, format: .moyen, imageExiste: { _ in true }, fondDessine: { _ in true }) == .repli("fond-moyen"))
+        let r = CatalogueSkins.skin(.parDefaut)
+        #expect(sourceFond(r, format: .grand, imageExiste: { $0 == "fond-grand" }, fondDessine: { _ in true }) == .image("fond-grand"))
+    }
+
     @Test("Un décor gagné reste dans « Mes décors » quand le Pro est perdu")
     func gagneResteSansPro() {
         let p = ProgressionPecheur(especesDifferentes: 5)
