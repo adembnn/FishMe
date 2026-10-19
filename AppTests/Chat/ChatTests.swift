@@ -60,7 +60,7 @@ struct ChatTests {
         #expect(champsClub.isSubset(of: FabriqueRecordsChat.champsClub))
         let champsAmi = Set(FabriqueRecordsChat.recordAmi(message(ami), zone: zone).allKeys())
         #expect(champsAmi.isSubset(of: FabriqueRecordsChat.champsAmi))
-        let signalement = SignalementEnAttente(id: UUID(), cible: m.id, motif: "Autre", signalePar: "p-moi", date: Date())
+        let signalement = SignalementEnAttente(id: UUID(), cible: m.id, motif: "Autre", signalePar: "p-alice", date: Date())
         #expect(Set(FabriqueRecordsChat.recordSignalement(signalement).allKeys()).isSubset(of: FabriqueRecordsChat.champsSignalement))
         for interdit in ["latitude", "longitude", "location", "lat", "lon", "lieu"] {
             #expect(!champsClub.contains(interdit) && !champsAmi.contains(interdit))
@@ -83,7 +83,7 @@ struct ChatTests {
         #expect(url.scheme == "mailto")
         #expect(texte.contains("fishme.app@gmail.com"))
         #expect(texte.contains(m.id.uuidString))
-        #expect(!texte.contains("Salut")) // le texte d'un message de club n'est pas joint
+        #expect(texte.contains("Salut")) // le texte est joint pour un message de club (zone partagée : l'équipe ne le lit pas autrement)
         let prive = try #require(SignalementMessage.url(contact: "fishme.app@gmail.com", message: message(ami), motif: .spam))
         #expect((prive.absoluteString.removingPercentEncoding ?? "").contains("Salut"))
     }
@@ -95,18 +95,24 @@ struct ChatTests {
         await service.recevoir(m)
         await g.ouvrir(club)
         #expect(g.messagesOuverts.contains { $0.id == m.id })
-        let url = await g.signaler(m, motif: .harcelement)
-        #expect(url != nil)
+        let resultat = await g.signaler(m, motif: .harcelement)
+        #expect(resultat.url != nil)
+        #expect(resultat.enregistre)
+        #expect(g.avis == .signalementEnregistre)
         #expect(!g.messagesOuverts.contains { $0.id == m.id })
         let enregistres = await service.signalements
         #expect(enregistres.count == 1 && enregistres[0].cible == m.id)
+        #expect(enregistres[0].motif == "harcelement")
+        #expect(enregistres[0].texte == "Salut") // le texte est copié pour que l'équipe le lise
     }
 
     @Test func signalementHorsLigneGarde() async {
         let service = FauxServiceChat(horsLigne: true)
         let (g, stock) = gestion(service: service)
         await g.ouvrir(club)
-        _ = await g.signaler(message(club), motif: .autre)
+        let resultat = await g.signaler(message(club), motif: .autre)
+        #expect(!resultat.enregistre) // pas de « signalé » tant que l'enregistrement n'est pas parti
+        #expect(g.avis == .signalementEnAttente)
         #expect(await stock.signalementsEnAttente().count == 1)
         await service.regler(horsLigne: false)
         await g.actualiser()
@@ -206,7 +212,7 @@ struct ChatTests {
     }
 
     @Test func moinsDeQuinzeAnsLectureSeule() async {
-        let jeune = InterlocuteurChat(id: "p-moi", surnom: "Moi", idCloudKit: "_moi", a15Ans: false)
+        let jeune = InterlocuteurChat(id: "p-alice", surnom: "Moi", idCloudKit: "_alice", a15Ans: false)
         let (g, _) = gestion(annuaire: FauxAnnuaire(profil: jeune))
         await g.ouvrir(ami)
         #expect(await g.envoyer("Salut") == false)
@@ -237,7 +243,7 @@ struct ChatTests {
         await g.ouvrir(ami)
         _ = await g.envoyer("À effacer")
         try await EffaceurChat(gestion: g).effacerMesMessages()
-        #expect(await service.effaces == ["p-moi"])
+        #expect(await service.effaces == ["p-alice"])
         #expect(await stock.messages(de: ami).isEmpty)
     }
 
@@ -249,5 +255,178 @@ struct ChatTests {
         g.fermer()
         await g.chargerListe()
         #expect(g.nonLus == 0)
+    }
+
+    // MARK: Un seul créateur par paire
+
+    @Test func unSeulCreateurParPaire() {
+        let petit = InterlocuteurChat(id: "p-aaa", surnom: "A", idCloudKit: "_a")
+        let grand = InterlocuteurChat(id: "p-zzz", surnom: "Z", idCloudKit: "_z")
+        #expect(GestionChat.jeCree(moi: petit, ami: grand))
+        #expect(!GestionChat.jeCree(moi: grand, ami: petit))
+        #expect(!GestionChat.jeCree(moi: nil, ami: grand))
+    }
+
+    @Test func leCreateurOuvreLaZoneSansAttendreUnMessage() async {
+        let service = FauxServiceChat()
+        let (g, _) = gestion(service: service) // p-alice < p-lea : je crée
+        await g.ouvrir(ami)
+        #expect(await service.creations == [ami])
+    }
+
+    @Test func lAutreAttendLInvitation() async {
+        let grand = InterlocuteurChat(id: "p-zzz", surnom: "Zed", idCloudKit: "_zed")
+        let service = FauxServiceChat()
+        let (g, _) = gestion(service: service, annuaire: FauxAnnuaire(profil: grand))
+        await g.ouvrir(ami) // p-zzz > p-lea : je ne crée pas
+        #expect(await service.creations.isEmpty)
+        _ = await g.envoyer("Bonjour")
+        #expect(g.messagesOuverts.last?.etat == .pasParti)
+        #expect(g.avis == .enAttenteDeLInvitation)
+    }
+
+    // MARK: File d'envoi
+
+    @Test func introuvableNeBloquePasLesSuivants() async {
+        let annuaire = FauxAnnuaire(clubs: [ClubChat(id: "club-1", nom: "T", jeSuisFondateur: false, membres: [])])
+        let service = FauxServiceChat()
+        let (g, stock) = gestion(service: service, annuaire: annuaire)
+        await stock.mettreEnAttente(message(club, auteur: "p-alice"))
+        await stock.mettreEnAttente(message(ami, auteur: "p-alice", texte: "Suivant"))
+        await g.renvoyer() // la liste n'a jamais été chargée : renvoyer la charge d'abord
+        let parti = await service.parConversation[ami] ?? []
+        #expect(parti.contains { $0.texte == "Suivant" })
+        #expect(await stock.enAttente().map(\.conversation) == [club])
+    }
+
+    @Test func fileRejoueeAvantChargementDeLaListe() async {
+        let service = FauxServiceChat()
+        let (g, stock) = gestion(service: service)
+        await stock.mettreEnAttente(message(ami, auteur: "p-alice", texte: "Tôt"))
+        await g.renvoyer()
+        #expect((await service.parConversation[ami] ?? []).contains { $0.texte == "Tôt" })
+    }
+
+    // MARK: Auteur jamais cru sur parole
+
+    @Test func auteurDeduitDuCompteQuiAEcrit() async {
+        var usurpe = message(ami, auteur: "p-alice", texte: "Je suis Alice")
+        usurpe.createurCloudKit = lea.idCloudKit // en vrai, Léa a écrit
+        let (g, _) = gestion(service: FauxServiceChat(messages: [ami: [usurpe]]))
+        await g.ouvrir(ami)
+        #expect(g.messagesOuverts.first?.auteurId == lea.id)
+        #expect(g.messagesOuverts.first?.surnom == lea.surnom)
+    }
+
+    @Test func compteInconnuEnClubResteBloquable() async {
+        var inconnu = message(club, auteur: "p-lea", texte: "Intrus")
+        inconnu.createurCloudKit = "_inconnu"
+        let (g, _) = gestion(service: FauxServiceChat(messages: [club: [inconnu]]))
+        await g.ouvrir(club)
+        #expect(g.messagesOuverts.first?.auteurId == "ck:_inconnu")
+        #expect(g.messagesOuverts.first?.surnom == "Un pêcheur")
+    }
+
+    // MARK: Abonnements, permission à l'acceptation
+
+    @Test func lienAccepteDemandeLaPermissionEtAbonne() async {
+        let service = FauxServiceChat()
+        let permission = FaussePermission()
+        let (g, _) = gestion(service: service, permission: permission)
+        await g.accepter(InvitationChat(metadata: nil))
+        #expect(await service.acceptees == 1)
+        #expect(await permission.demandes == 1)
+        #expect(Set(await service.abonnes) == [ami, ConversationID.club(FauxAnnuaire.clubsParDefaut[0].id), .ami(FauxAnnuaire.amisParDefaut[1].idCloudKit)])
+    }
+
+    @Test func toutesLesConversationsAbonneesDesQueLaPermissionEstLa() async {
+        let service = FauxServiceChat()
+        let (g, _) = gestion(service: service, permission: FaussePermission(statut: .accorde))
+        await g.actualiserListe() // aucune conversation ouverte, aucun envoi
+        #expect((await service.abonnes).count == 3)
+    }
+
+    // MARK: Rafraîchissement
+
+    @Test func rafraichissementPeriodiqueSeulementActifEtOuvert() async {
+        let service = FauxServiceChat()
+        let (g, _) = gestion(service: service)
+        await g.rafraichirPeriodique() // rien d'ouvert
+        #expect(await service.lecturesLegeres == 0)
+        await g.ouvrir(ami)
+        g.definirActif(false)
+        await g.rafraichirPeriodique()
+        #expect(await service.lecturesLegeres == 0)
+        g.definirActif(true)
+        await g.rafraichirPeriodique()
+        #expect(await service.lecturesLegeres == 1)
+    }
+
+    @Test func alerteLocaleSeulementPourUnVraiMessage() async {
+        let service = FauxServiceChat(messages: [ami: [message(ami, auteur: "p-lea")]])
+        let permission = FaussePermission(statut: .accorde)
+        let (g, _) = gestion(service: service, permission: permission)
+        g.definirActif(false)
+        await g.traiterNotificationCloudKit()
+        #expect(await permission.alertesLocales == 1)
+        let (bloque, _) = gestion(service: FauxServiceChat(messages: [ami: [message(ami, auteur: "p-lea")]]),
+                                  annuaire: FauxAnnuaire(bloques: ["p-lea"]), permission: permission)
+        bloque.definirActif(false)
+        await bloque.traiterNotificationCloudKit()
+        #expect(await permission.alertesLocales == 1) // l'auteur bloqué ne déclenche rien
+    }
+
+    // MARK: Signalement et motifs
+
+    @Test func motifsAlignesSurL21() {
+        let attendus = ["choquant", "harcelement", "nudite", "cruaute", "pecheIllegale", "coinExact", "mineur", "spam", "autre"]
+        #expect(MotifSignalementMessage.allCases.map(\.rawValue) == attendus)
+        #expect(MotifSignalementMessage.mineur.titre == "Personne mineure sans accord")
+    }
+
+    @Test func signalementEnregistreAvecLeTexte() throws {
+        let s = SignalementEnAttente(id: UUID(), cible: UUID(), motif: "spam", signalePar: "p-alice", date: Date(), texte: "Achète !")
+        let record = FabriqueRecordsChat.recordSignalement(s)
+        #expect(record["texte"] as? String == "Achète !")
+        let long = SignalementEnAttente(id: UUID(), cible: UUID(), motif: "spam", signalePar: "p-alice", date: Date(),
+                                        texte: String(repeating: "a", count: 900))
+        #expect((FabriqueRecordsChat.recordSignalement(long)["texte"] as? String)?.count == 500)
+    }
+
+    // MARK: Stock
+
+    @Test func fichierAbimeMisDeCoteJamaisEcrase() async throws {
+        let d = dossier()
+        try FileManager.default.createDirectory(at: d, withIntermediateDirectories: true)
+        try Data("pas du json".utf8).write(to: d.appendingPathComponent("chat.json"))
+        let stock = StockChat(dossier: d)
+        await stock.bloquer("x")
+        #expect(FileManager.default.fileExists(atPath: d.appendingPathComponent("chat.corrompu.json").path))
+        #expect(await StockChat(dossier: d).bloques() == ["x"])
+    }
+
+    @Test func fusionDisqueEtMemoire() {
+        let m1 = message(ami), m2 = message(ami, texte: "Autre")
+        var disque = StockChat.Etat()
+        disque.enAttente = [m1]
+        disque.bloques = ["a"]
+        var memoire = StockChat.Etat()
+        memoire.enAttente = [m2]
+        memoire.bloques = ["b"]
+        let fusion = StockChat.fusionner(disque: disque, memoire: memoire)
+        #expect(Set(fusion.enAttente.map(\.id)) == [m1.id, m2.id])
+        #expect(fusion.bloques == ["a", "b"])
+    }
+
+    // MARK: Mode démo (Release)
+
+    @Test func modeExempleLectureSeule() async {
+        let g = GestionChat.exemple()
+        await g.chargerListe()
+        #expect(!g.resumes.isEmpty)
+        #expect(g.resumes.allSatisfy { $0.titre.hasPrefix("Exemple") })
+        await g.ouvrir(DonneesExemple.conversationAmi)
+        #expect(await g.envoyer("Bonjour") == false)
+        #expect(g.avis == .exemple)
     }
 }

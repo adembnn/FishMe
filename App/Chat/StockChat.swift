@@ -25,12 +25,40 @@ actor StockChat {
 
     private let fichier: URL
     private var etat: Etat
+    /// Vrai tant que `chat.json` existe mais n'a pas pu être LU (iPhone verrouillé, protection des données, disque) : on n'écrit
+    /// alors rien par-dessus, sinon la file d'envoi, les blocages et les signalements seraient perdus. Les changements restent
+    /// en mémoire ; dès que le fichier se lit, ils sont fusionnés avec lui, puis écrits.
+    private var lectureEnEchec = false
 
     init(dossier: URL) {
         try? FileManager.default.createDirectory(at: dossier, withIntermediateDirectories: true)
         self.fichier = dossier.appendingPathComponent("chat.json")
-        let donnees = try? Data(contentsOf: fichier)
-        self.etat = donnees.flatMap { try? JSONDecoder().decode(Etat.self, from: $0) } ?? Etat()
+        self.etat = Etat()
+        switch Self.lire(fichier) {
+        case .absent: break
+        case .lu(let lu): self.etat = lu
+        case .illisible: self.lectureEnEchec = true
+        case .abime:
+            // Lisible mais pas décodable : on le met de côté (jamais écrasé) et on repart d'un état vide.
+            let copie = dossier.appendingPathComponent("chat.corrompu.json")
+            try? FileManager.default.removeItem(at: copie)
+            try? FileManager.default.moveItem(at: fichier, to: copie)
+        }
+    }
+
+    private enum Lecture {
+        case absent
+        case lu(Etat)
+        /// Le fichier existe, mais le système refuse de le lire (verrouillé) : à réessayer plus tard.
+        case illisible
+        case abime
+    }
+
+    private static func lire(_ fichier: URL) -> Lecture {
+        guard FileManager.default.fileExists(atPath: fichier.path) else { return .absent }
+        guard let donnees = try? Data(contentsOf: fichier) else { return .illisible }
+        guard let etat = try? JSONDecoder().decode(Etat.self, from: donnees) else { return .abime }
+        return .lu(etat)
     }
 
     static func dossierParDefaut() -> URL {
@@ -48,6 +76,8 @@ actor StockChat {
     func bloques() -> Set<String> { etat.bloques }
     func masques() -> Set<UUID> { etat.masques }
     func vu(_ conversation: ConversationID) -> Date? { etat.vus[conversation.id] }
+    /// Pour ne signaler comme « nouveau » que ce que l'iPhone n'avait jamais vu.
+    func identifiantsConnus(de conversation: ConversationID) -> Set<UUID> { Set((etat.messages[conversation.id] ?? []).map(\.id)) }
     var refusNotificationsAffiche: Bool { etat.refusNotificationsAffiche }
 
     // MARK: Messages lus
@@ -149,7 +179,38 @@ actor StockChat {
     }
 
     private func sauvegarder() {
+        if lectureEnEchec {
+            switch Self.lire(fichier) {
+            case .lu(let disque):
+                etat = Self.fusionner(disque: disque, memoire: etat)
+                lectureEnEchec = false
+            case .illisible:
+                return // toujours verrouillé : rien n'est écrit, tout reste en mémoire
+            case .absent, .abime:
+                lectureEnEchec = false
+            }
+        }
         guard let donnees = try? JSONEncoder().encode(etat) else { return }
-        try? donnees.write(to: fichier, options: [.atomic, .completeFileProtection])
+        // `.completeUntilFirstUserAuthentication` : une notification silencieuse réveille l'app iPhone verrouillé, après le premier
+        // déverrouillage suivant le démarrage le fichier reste lisible (`.completeFileProtection` le rendait illisible verrouillé).
+        try? donnees.write(to: fichier, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication])
+    }
+
+    /// Réunit l'état du disque et celui construit en mémoire pendant que le disque était illisible. Rien n'est perdu.
+    nonisolated static func fusionner(disque: Etat, memoire: Etat) -> Etat {
+        var sortie = disque
+        for (cle, liste) in memoire.messages {
+            var parId: [UUID: MessageChat] = [:]
+            for m in sortie.messages[cle] ?? [] { parId[m.id] = m }
+            for m in liste { parId[m.id] = m }
+            sortie.messages[cle] = Array(parId.values.sorted { $0.date < $1.date }.suffix(messagesGardes))
+        }
+        for m in memoire.enAttente where !sortie.enAttente.contains(where: { $0.id == m.id }) { sortie.enAttente.append(m) }
+        sortie.bloques.formUnion(memoire.bloques)
+        sortie.masques.formUnion(memoire.masques)
+        for (cle, date) in memoire.vus where date > (sortie.vus[cle] ?? .distantPast) { sortie.vus[cle] = date }
+        sortie.refusNotificationsAffiche = sortie.refusNotificationsAffiche || memoire.refusNotificationsAffiche
+        for s in memoire.signalements where !sortie.signalements.contains(where: { $0.id == s.id }) { sortie.signalements.append(s) }
+        return sortie
     }
 }

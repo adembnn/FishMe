@@ -5,6 +5,9 @@ import Foundation
 actor FauxServiceChat: ServiceChat {
     private(set) var parConversation: [ConversationID: [MessageChat]]
     private(set) var tentatives = 0
+    private(set) var lecturesLegeres = 0
+    /// Les conversations dont on m'a demandé de créer la zone et le lien (`peutCreerLaZone` vrai).
+    private(set) var creations: [ConversationID] = []
     private(set) var abonnes: [ConversationID] = []
     private(set) var acceptees = 0
     private(set) var effaces: [String] = []
@@ -37,6 +40,12 @@ actor FauxServiceChat: ServiceChat {
         return (parConversation[conversation] ?? []).sorted { $0.date < $1.date }
     }
 
+    /// Le faux service rend tout à chaque fois (pas de jeton) ; `lectures` compte les appels pour les tests du rafraîchissement.
+    func changements(de conversation: ConversationID) async throws -> [MessageChat] {
+        lecturesLegeres += 1
+        return try await messages(de: conversation)
+    }
+
     func envoyer(_ message: MessageChat, peutCreerLaZone: Bool) async throws {
         tentatives += 1
         if horsLigne { throw ErreurChat.reseau }
@@ -54,8 +63,12 @@ actor FauxServiceChat: ServiceChat {
         if !abonnes.contains(conversation) { abonnes.append(conversation) }
     }
 
-    func lienDInvitation(pour conversation: ConversationID, participants: [String]) async throws -> URL? {
+    func lienDInvitation(pour conversation: ConversationID, participants: [String], peutCreerLaZone: Bool) async throws -> URL? {
         if horsLigne { throw ErreurChat.reseau }
+        if peutCreerLaZone {
+            if !creations.contains(conversation) { creations.append(conversation) }
+            zonesConnues.insert(conversation)
+        }
         return lien
     }
 
@@ -80,6 +93,7 @@ actor FauxServiceChat: ServiceChat {
 /// Fausse permission : compte les fenêtres ouvertes, pour prouver qu'elle n'apparaît qu'au premier message envoyé.
 actor FaussePermission: PermissionNotifications {
     private(set) var demandes = 0
+    private(set) var alertesLocales = 0
     private(set) var statutActuel: StatutNotifications
     private let reponse: Bool
 
@@ -94,6 +108,10 @@ actor FaussePermission: PermissionNotifications {
         demandes += 1
         statutActuel = reponse ? .accorde : .refuse
         return reponse
+    }
+
+    func publierLocale(_ texte: String) async {
+        alertesLocales += 1
     }
 }
 
@@ -112,7 +130,7 @@ actor FauxAnnuaire: AnnuaireChat {
         self.mesBloques = bloques
     }
 
-    static let moiParDefaut = InterlocuteurChat(id: "p-moi", surnom: "Moi", idCloudKit: "_moi")
+    static let moiParDefaut = InterlocuteurChat(id: "p-alice", surnom: "Alice", idCloudKit: "_alice")
     static let amisParDefaut = [
         InterlocuteurChat(id: "p-lea", surnom: "Léa", idCloudKit: "_lea"),
         InterlocuteurChat(id: "p-hugo", surnom: "Hugo", idCloudKit: "_hugo"),

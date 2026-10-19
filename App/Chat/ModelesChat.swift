@@ -20,7 +20,7 @@ nonisolated struct ConversationID: Hashable, Codable, Sendable, Identifiable {
     static func club(_ identifiant: String) -> ConversationID { ConversationID(type: .club, cible: identifiant) }
 }
 
-/// Où en est un message que j'ai écrit. Jamais « lu » : CloudKit ne sait pas si l'autre a lu.
+/// Où en est un message que j'ai écrit. Pas d accusé de lecture : CloudKit ne sait pas si l autre a ouvert le message.
 nonisolated enum EtatMessage: String, Codable, Sendable {
     /// Arrivé sur iCloud.
     case envoye

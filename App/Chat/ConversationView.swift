@@ -1,3 +1,4 @@
+import MessageUI
 import SwiftUI
 
 /// L'avis court en haut d'un écran de chat. Une croix de 44 points le ferme.
@@ -30,6 +31,10 @@ struct BandeauAvisChat: View {
         case .echec: return "exclamationmark.circle"
         case .notificationsRefusees: return "bell.slash"
         case .pasDeProfil: return "person.crop.circle.badge.plus"
+        case .enAttenteDeLInvitation: return "clock"
+        case .signalementEnregistre: return "checkmark.circle"
+        case .signalementEnAttente: return "clock.arrow.circlepath"
+        case .exemple: return "info.circle"
         }
     }
 
@@ -41,8 +46,19 @@ struct BandeauAvisChat: View {
         case .echec: return "Ça n'a pas marché. Réessaie."
         case .notificationsRefusees: return "Notifications coupées : tu verras les messages en ouvrant l'app."
         case .pasDeProfil: return "Finis ton profil (15 ans ou plus) pour écrire."
+        case .enAttenteDeLInvitation: return "Ton message partira dès que la conversation sera ouverte des deux côtés."
+        case .signalementEnregistre: return "Signalement reçu. Le message est masqué chez toi."
+        case .signalementEnAttente: return "Message masqué. Le signalement partira au retour du réseau."
+        case .exemple: return "Exemple : conversations en lecture seule."
         }
     }
+}
+
+/// Peut-on ouvrir un e-mail prérempli ? Seulement si Mail a un compte (⚠ `canSendMail` ignore les autres apps de courrier :
+/// elles ne seront pas ouvertes, la trace reste l'enregistrement CloudKit).
+@MainActor
+enum DisponibiliteMail {
+    static var possible: Bool { MFMailComposeViewController.canSendMail() }
 }
 
 /// Une conversation : bulles, champ d'envoi, tirer pour rafraîchir, rafraîchissement toutes les 10 s tant qu'elle est ouverte.
@@ -53,6 +69,7 @@ struct ConversationView: View {
     @State private var texte = ""
     @State private var aSignaler: MessageChat?
     @Environment(\.openURL) private var openURL
+    @Environment(\.scenePhase) private var phase
 
     private var dialogueOuvert: Binding<Bool> {
         Binding(get: { aSignaler != nil }, set: { if !$0 { aSignaler = nil } })
@@ -84,13 +101,21 @@ struct ConversationView: View {
         .navigationBarTitleDisplayMode(.inline)
         .task { await gestion.ouvrir(conversation) }
         .task { await gestion.surveillerOuverte() }
+        .onAppear { gestion.definirActif(phase == .active) }
+        .onChange(of: phase) {
+            gestion.definirActif(phase == .active)
+            if phase == .active { Task { await gestion.actualiser() } }
+        }
         .onDisappear { gestion.fermer() }
         .confirmationDialog("Pourquoi signaler ce message ?", isPresented: dialogueOuvert, titleVisibility: .visible,
                             presenting: aSignaler) { message in
             ForEach(MotifSignalementMessage.allCases) { motif in
-                Button(motif.rawValue) {
+                Button(motif.titre) {
                     Task {
-                        if let url = await gestion.signaler(message, motif: motif) { openURL(url) }
+                        let resultat = await gestion.signaler(message, motif: motif)
+                        // L'e-mail prérempli (texte du message compris) ne s'ouvre que si Mail est prêt ; sinon la trace est
+                        // l'enregistrement CloudKit, et l'avis dit la vérité (« reçu » seulement s'il est arrivé).
+                        if let url = resultat.url, DisponibiliteMail.possible { openURL(url) }
                     }
                 }
             }

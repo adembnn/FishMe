@@ -4,6 +4,7 @@ import SwiftUI
 /// A l'affiche dans la page Communauté (voir le rapport L24). Rien n'est demandé ici : pas de permission à l'ouverture.
 struct ListeConversationsView: View {
     let gestion: GestionChat
+    @Environment(\.scenePhase) private var phase
 
     var body: some View {
         NavigationStack {
@@ -12,6 +13,11 @@ struct ListeConversationsView: View {
                     if let avis = gestion.avis {
                         BandeauAvisChat(avis: avis) { gestion.effacerAvis() }
                             .clipShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
+                    }
+                    if gestion.exemple {
+                        Label("Exemples : lecture seule, rien n'est envoyé.", systemImage: "info.circle")
+                            .font(Police.detail)
+                            .foregroundStyle(Palette.encreDouce)
                     }
                     if gestion.resumes.isEmpty {
                         vide
@@ -31,8 +37,14 @@ struct ListeConversationsView: View {
                 ConversationView(gestion: gestion, conversation: conversation)
             }
         }
-        .task { await gestion.actualiserListe() }
-        .task { await gestion.surveillerReseau() }
+        // Dans cet ordre : la liste d'abord (qui peut créer quelle zone), puis le réseau qui rejoue la file.
+        .task {
+            await gestion.chargerListe()
+            await gestion.actualiserListe()
+            await gestion.surveillerReseau()
+        }
+        .onAppear { gestion.definirActif(phase == .active) }
+        .onChange(of: phase) { gestion.definirActif(phase == .active) }
     }
 
     private var vide: some View {

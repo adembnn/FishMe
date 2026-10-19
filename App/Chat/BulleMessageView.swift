@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Une bulle de message. À droite et marine : moi. À gauche et claire : l'autre, avec un menu « Signaler / Bloquer » de 44 points.
-/// Sous mon message : « Envoyé », « En attente » ou « Pas parti » avec « Renvoyer ». Jamais « lu » : CloudKit ne le sait pas.
+/// Sous mon message : « Envoyé », « En attente » ou « Pas parti » avec « Renvoyer ». Aucun accusé de lecture : CloudKit ne le sait pas.
 struct BulleMessageView: View {
     let message: MessageChat
     let estMoi: Bool
