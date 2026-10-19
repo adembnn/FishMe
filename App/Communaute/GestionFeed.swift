@@ -195,7 +195,7 @@ final class GestionFeed {
 
     /// Masque tout de suite sur cet iPhone, écrit le `Signalement`, rend l'e-mail prérempli à envoyer.
     @discardableResult
-    func signaler(_ publication: PublicationFeed, motif: MotifSignalement) async -> URL? {
+    func signaler(_ publication: PublicationFeed, motif: MotifSignalementPublication) async -> URL? {
         let s = SignalementFeed(cible: publication.id, typeCible: .publication, motif: motif,
                                 signalePar: contexte.monNom ?? "anonyme", auteurCible: publication.auteurNom)
         await masquer(publication.id)
@@ -204,7 +204,7 @@ final class GestionFeed {
     }
 
     @discardableResult
-    func signaler(_ commentaire: CommentaireFeed, motif: MotifSignalement) async -> URL? {
+    func signaler(_ commentaire: CommentaireFeed, motif: MotifSignalementPublication) async -> URL? {
         let s = SignalementFeed(cible: commentaire.id, typeCible: .commentaire, motif: motif,
                                 signalePar: contexte.monNom ?? "anonyme", auteurCible: commentaire.auteurNom)
         await masquer(commentaire.id)

@@ -94,7 +94,7 @@ nonisolated struct CarteLiee: Sendable, Equatable {
 }
 
 /// Liste fermée (`moderation.md`) : pas de texte libre.
-nonisolated enum MotifSignalement: String, Sendable, CaseIterable, Identifiable {
+nonisolated enum MotifSignalementPublication: String, Sendable, CaseIterable, Identifiable {
     case choquant, haine, nudite, cruaute, pecheIllegale, coinExact, mineur, spam, autre
     var id: String { rawValue }
     var titre: String {
@@ -133,7 +133,7 @@ nonisolated struct SignalementFeed: Sendable, Equatable {
     var id: String = UUID().uuidString
     var cible: String
     var typeCible: TypeCible
-    var motif: MotifSignalement
+    var motif: MotifSignalementPublication
     var signalePar: String
     /// Sert à l'e-mail seulement ; jamais écrit dans l'enregistrement.
     var auteurCible: String

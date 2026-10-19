@@ -3,7 +3,7 @@ import SwiftUI
 /// Le menu « ... » d'une publication ou d'un commentaire : Signaler et Bloquer l'auteur, ou Supprimer si c'est le mien.
 struct MenuModeration: View {
     let estMien: Bool
-    let onSignaler: (MotifSignalement) -> Void
+    let onSignaler: (MotifSignalementPublication) -> Void
     let onBloquer: () -> Void
     let onSupprimer: () -> Void
 
@@ -44,11 +44,11 @@ struct MenuModeration: View {
 
 /// La liste fermée des motifs : une icône, un mot, pas de texte libre.
 struct FeuilleMotifs: View {
-    let choisir: (MotifSignalement) -> Void
+    let choisir: (MotifSignalementPublication) -> Void
 
     var body: some View {
         NavigationStack {
-            List(MotifSignalement.allCases) { motif in
+            List(MotifSignalementPublication.allCases) { motif in
                 Button {
                     choisir(motif)
                 } label: {

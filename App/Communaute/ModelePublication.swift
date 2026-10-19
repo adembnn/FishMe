@@ -150,7 +150,7 @@ final class ModeleCommentaires {
     }
 
     /// Signalé : masqué ici tout de suite.
-    func signaler(_ c: CommentaireFeed, motif: MotifSignalement) async -> URL? {
+    func signaler(_ c: CommentaireFeed, motif: MotifSignalementPublication) async -> URL? {
         commentaires.removeAll { $0.id == c.id }
         return await gestion.signaler(c, motif: motif)
     }
