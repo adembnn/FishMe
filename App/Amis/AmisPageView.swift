@@ -6,16 +6,19 @@ import SwiftUI
 /// Pour un ami, seuls le mois et l'année d'une carte comptent : le fil écrit donc « octobre 2026 », pas un jour exact.
 struct AmisPageView: View {
     let gestion: GestionAmis?
+    /// Le profil de pêcheur. Par défaut le profil partagé de l'app ; A peut en donner un autre.
+    var profil: GestionProfil = .partage
     /// Mode démo (réglages) : sans iCloud non plus, la page montre ses amis de démo.
     @AppStorage("demo.communaute") private var demo = false
 
-    init(gestion: GestionAmis?) {
+    init(gestion: GestionAmis?, profil: GestionProfil = .partage) {
         self.gestion = gestion
+        self.profil = profil
     }
 
     var body: some View {
         if let gestion {
-            AmisPageContenu(gestion: gestion)
+            AmisPageContenu(gestion: gestion, profil: profil)
         } else if demo {
             ScrollView {
                 DemoAmisContenu(avecInviter: true)
@@ -58,12 +61,16 @@ private enum ActionSurAmi {
 
 private struct AmisPageContenu: View {
     let gestion: GestionAmis
+    let profil: GestionProfil
 
     @State private var amiOuvert: Ami?
     @State private var carteOuverte: CarteDuFil?
     @State private var action: ActionSurAmi?
+    /// Signaler un ami (menu de la liste) : motifs, enregistrement honnête (ni « signalé » sans trace en base).
+    @State private var cibleAmi: CibleAmi?
+    /// Signaler une carte, depuis sa feuille (la boîte de motifs s'ouvre sur la feuille, pas derrière elle).
+    @State private var cibleCarte: CibleAmi?
     @State private var confirmerSuppression = false
-    @Environment(\.openURL) private var ouvrirURL
     /// Mode démo : amis et fil d'exemple, locaux à la vue (voir `DemoAmis.swift`).
     @AppStorage("demo.communaute") private var demo = false
 
@@ -79,6 +86,7 @@ private struct AmisPageContenu: View {
                     DemoAmisContenu()
                 } else {
                     if let message = texteDuMessage { bandeau(message) }
+                    SectionProfilAmis(gestion: gestion, profil: profil)
                     if let invitation = gestion.invitationRecue { demande(invitation) }
                     if gestion.compte == .disponible { inviter }
                     if gestion.proposerInvitationEnRetour { enRetour }
@@ -100,13 +108,15 @@ private struct AmisPageContenu: View {
         .task { await gestion.surveillerLeReseau() }
         .task { prendreLInvitation() }
         .fullScreenCover(item: $amiOuvert) { ami in
-            PescedexAmiView(gestion: gestion, ami: ami, fermer: { amiOuvert = nil })
+            PescedexAmiView(gestion: gestion, ami: ami, profil: profil, fermer: { amiOuvert = nil })
         }
         .sheet(item: $carteOuverte) { element in
             CarteAmiDetail(carte: element.carte, nomEspece: gestion.espece(element.carte.espece)?.nom ?? "") {
-                if let url = gestion.urlDeSignalement(ami: element.ami, carte: element.carte) { ouvrirURL(url) }
+                cibleCarte = .carte(element.ami, element.carte)
             }
+            .signalerDansAmis(cible: $cibleCarte, gestion: gestion, profil: profil)
         }
+        .signalerDansAmis(cible: $cibleAmi, gestion: gestion, profil: profil)
         .confirmationDialog(action?.question ?? "", isPresented: confirmationAffichee, titleVisibility: .visible,
                             presenting: action) { action in
             switch action {
@@ -258,9 +268,7 @@ private struct AmisPageContenu: View {
             }
             // Signaler, bloquer et retirer restent à portée de toucher pour chaque ami (règle 1.2 d'Apple).
             Menu {
-                if let url = gestion.urlDeSignalement(ami: ami) {
-                    Link(destination: url) { Label("Signaler", systemImage: "flag") }
-                }
+                Button { cibleAmi = .ami(ami) } label: { Label("Signaler", systemImage: "flag") }
                 Button(role: .destructive) { action = .bloquer(ami) } label: { Label("Bloquer", systemImage: "hand.raised") }
                 Button(role: .destructive) { action = .retirer(ami) } label: {
                     Label("Retirer cet ami", systemImage: "person.badge.minus")
@@ -278,7 +286,7 @@ private struct AmisPageContenu: View {
 
     private func contenuDeRangee(_ ami: Ami, detail: String, ouvrable: Bool) -> some View {
         HStack(spacing: Espace.m) {
-            Avatar(nom: ami.nom)
+            Avatar(nom: ami.nom, image: gestion.avatars[ami.id])
             VStack(alignment: .leading, spacing: 2) {
                 Text(ami.nom).font(Police.corps).foregroundStyle(Palette.encre).lineLimit(1)
                 Text(detail).font(Police.detail).foregroundStyle(Palette.encreDouce).lineLimit(2)
@@ -331,11 +339,11 @@ private struct AmisPageContenu: View {
         }
     }
 
-    /// La carte du fil, au dessin des cartes d'Adem : cadre de rareté, poisson, prénom et mois dessous.
+    /// La carte du fil, au dessin des cartes d'Adem : cadre de rareté, poisson, surnom et mois dessous.
     private func elementDeGrille(_ element: CarteDuFil) -> CarteAmiGrille {
         let carte = element.carte
         let espece = gestion.espece(carte.espece)
-        return CarteAmiGrille(id: carte.id.uuidString, prenom: element.ami.nom, mois: JetonAmis.date(carte.date),
+        return CarteAmiGrille(id: carte.id.uuidString, surnom: element.ami.nom, mois: JetonAmis.date(carte.date),
                               style: StyleRarete(carte.rarete), nomEspece: espece?.nom ?? "Espèce",
                               imageEspece: espece?.image, imageCarte: carte.image, tailleCm: carte.tailleCm)
     }
@@ -405,14 +413,14 @@ private func gestionDApercu(avecAmis: Bool) -> GestionAmis? {
 }
 
 #Preview("Avec des amis") {
-    AmisPageView(gestion: gestionDApercu(avecAmis: true))
+    AmisPageView(gestion: gestionDApercu(avecAmis: true), profil: GestionProfil(service: FauxServiceProfil()))
 }
 
 #Preview("Aucun ami") {
-    AmisPageView(gestion: gestionDApercu(avecAmis: false))
+    AmisPageView(gestion: gestionDApercu(avecAmis: false), profil: GestionProfil(service: FauxServiceProfil()))
 }
 
 #Preview("Indisponible") {
-    AmisPageView(gestion: nil)
+    AmisPageView(gestion: nil, profil: GestionProfil(service: FauxServiceProfil()))
 }
 #endif

@@ -5,7 +5,7 @@ import UIKit
 /// Mode démo de la page Amis : quatre amis et un fil de cartes, 100 % locaux à la vue.
 /// Rien ici ne touche `GestionAmis`, CloudKit, le réseau ni le disque : signaler, bloquer et retirer agissent sur la liste locale
 /// de la vue seulement (l'ami et ses cartes disparaissent), rien n'est envoyé.
-/// Les prénoms sont fictifs et aucun lieu n'est donné. Chaque bloc porte la pastille « Démo ».
+/// Les surnoms sont fictifs et aucun lieu n'est donné. Chaque bloc porte la pastille « Démo ».
 /// Interrupteur : `@AppStorage("demo.communaute")`, branché dans les réglages.
 enum DemoCommunaute {
     static let cle = "demo.communaute"
@@ -62,7 +62,7 @@ enum DonneesDemoAmis {
 extension DemoCarte {
     /// La carte au format de la grille (même dessin que les cartes d'Adem).
     @MainActor var pourGrille: CarteAmiGrille {
-        CarteAmiGrille(id: id, prenom: ami, mois: JetonAmis.date(date), style: StyleRarete(rarete), nomEspece: espece,
+        CarteAmiGrille(id: id, surnom: ami, mois: JetonAmis.date(date), style: StyleRarete(rarete), nomEspece: espece,
                        imageEspece: image, tailleCm: tailleCm, photo: photo)
     }
 }
@@ -127,7 +127,7 @@ struct DemoAmisContenu: View {
         } message: {
             Text("Cette action n'est pas disponible en démo.")
         }
-        .alert("Merci, c'est signalé", isPresented: $confirmationSignalement) {
+        .alert("Démo : rien n'est signalé", isPresented: $confirmationSignalement) {
             Button("OK", role: .cancel) {}
         } message: {
             Text("Ce profil et ses cartes ne s'affichent plus. Rien n'a été envoyé.")

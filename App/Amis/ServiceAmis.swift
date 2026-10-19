@@ -5,7 +5,8 @@ import Foundation
 nonisolated struct ConfigurationAmis: Sendable {
     /// Adresse e-mail publiée (règle 1.2 d'Apple) : les signalements y partent.
     var contact: String
-    var conteneur: String = "iCloud.ai.mwm.build.challenge.team.01"
+    static let conteneurParDefaut = "iCloud.ai.mwm.build.challenge.team.01"
+    var conteneur: String = Self.conteneurParDefaut
 }
 
 /// Un partage CloudKit prêt à être envoyé. `CKShare` n'est pas `Sendable` : il ne traverse qu'ici, une seule fois.

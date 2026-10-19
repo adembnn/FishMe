@@ -25,10 +25,16 @@ final class GestionAmis {
     /// Après une acceptation : l'écran propose « Inviter en retour » en un toucher.
     private(set) var proposerInvitationEnRetour = false
     var invitationRecue: InvitationRecue?
+    /// Avatars publics des amis, par identifiant d'ami (le surnom de l'ami retrouve son profil). Vide tant que rien n'est chargé.
+    private(set) var avatars: [String: Data] = [:]
     /// Mes espèces, pour marquer « nouvelle » celles qu'un ami a et pas moi.
     private(set) var mesEspeces: Set<String> = []
 
     let configuration: ConfigurationAmis
+    /// LA liste de blocage de l'app (`ListeBlocages`, dans `App/Profil/`) : bloqués et signalés.
+    private let blocagesProfils = ListeBlocages.partage
+    /// Amis déjà cherchés sans profil public : pas de nouvel aller-retour CloudKit tant que la liste ne change pas de surnoms.
+    private var sansProfil: Set<String> = []
     private let service: any ServiceAmis
     private let cache: CacheAmis
     private let file: FileEnvoi
@@ -85,7 +91,9 @@ final class GestionAmis {
                 fusion[invite.id] = invite
             }
         }
-        amis = fusion.values.sorted { $0.nom.localizedCompare($1.nom) == .orderedAscending }
+        let profilsCaches = blocagesProfils
+        amis = fusion.values.filter { !profilsCaches.estCache(Self.cleDeBlocage($0)) && !profilsCaches.estCache($0.id) }
+            .sorted { $0.nom.localizedCompare($1.nom) == .orderedAscending }
     }
 
     // MARK: Mes cartes
@@ -157,8 +165,8 @@ final class GestionAmis {
 
     // MARK: Règle 1.2 : signaler, bloquer, retirer, supprimer
 
-    func urlDeSignalement(ami: Ami, carte: CartePartagee? = nil) -> URL? {
-        Signalement.url(contact: configuration.contact, ami: ami, carte: carte)
+    func urlDeSignalement(ami: Ami, carte: CartePartagee? = nil, motif: MotifSignalement? = nil) -> URL? {
+        Signalement.url(contact: configuration.contact, ami: ami, carte: carte, motif: motif)
     }
 
     /// Retire un ami : il ne voit plus mes cartes, et je ne vois plus les siennes.
@@ -180,6 +188,44 @@ final class GestionAmis {
             signaler(erreur: error)
             return
         }
+        amis.removeAll { $0.id == ami.id }
+        collections.removeAll { $0.id == ami.id }
+    }
+
+    // MARK: Profils (L21)
+
+    /// Charge l'avatar de chaque ami dont le nom est un surnom. Un ami « Un ami » (pas de profil) garde son initiale.
+    func chargerAvatars(avec profils: any ServiceProfil) async {
+        for ami in amis where avatars[ami.id] == nil && !sansProfil.contains(ami.id) && ami.nom != NomAmi.anonyme && Surnom.verifier(ami.nom) == nil {
+            // Le nom d'un ami n'est un surnom qu'une fois confirmé (`ServiceAmisCloudKit.nomVerifie`) : son avatar ne peut pas être celui d'un autre.
+            do {
+                if let profil = try await profils.profil(id: Surnom.identifiant(pour: ami.nom)), let image = profil.avatar {
+                    avatars[ami.id] = image
+                } else {
+                    sansProfil.insert(ami.id)
+                }
+            } catch {
+                continue  // erreur réseau : on réessaiera au prochain passage
+            }
+        }
+    }
+
+    /// Bloquer un profil depuis sa page : s'il est aussi un ami, la relation de partage est coupée comme pour « Bloquer » d'un ami.
+    func bloquerProfil(id: String) async {
+        blocagesProfils.bloquer(id)
+        for ami in amis where Self.cleDeBlocage(ami) == id {
+            await bloquer(ami)
+        }
+    }
+
+    /// La clé de `ListeBlocages` d'un ami : l'identifiant de son profil public si son nom est un surnom confirmé, sinon son identifiant d'ami.
+    static func cleDeBlocage(_ ami: Ami) -> String {
+        ami.nom != NomAmi.anonyme && Surnom.verifier(ami.nom) == nil ? Surnom.identifiant(pour: ami.nom) : ami.id
+    }
+
+    /// Après un signalement : masque l'ami tout de suite, sans couper le partage (ce n'est pas un blocage). Le masquage est local.
+    func masquerApresSignalement(_ ami: Ami) {
+        blocagesProfils.masquer(Self.cleDeBlocage(ami))
         amis.removeAll { $0.id == ami.id }
         collections.removeAll { $0.id == ami.id }
     }
