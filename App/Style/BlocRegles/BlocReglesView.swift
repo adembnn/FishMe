@@ -13,18 +13,23 @@ struct BlocReglesView: View {
     let lignes: [LigneControle]
     let consigne: Consigne
     let especeConfirmee: Bool
+    /// Vrai si la catégorie piscicole du cours d'eau est inconnue : les lignes montrent leurs deux valeurs par catégorie.
+    let categorieInconnue: Bool
     @State private var deplie: Bool
 
     /// Le cas ordinaire : le résultat de `controle`. `deplieAuDepart` sert aux aperçus et aux tests d'écran.
-    init(resultat: ResultatControle, especeConfirmee: Bool = true, deplieAuDepart: Bool = false) {
-        self.init(lignes: resultat.lignes, consigne: resultat.consigne, especeConfirmee: especeConfirmee, deplieAuDepart: deplieAuDepart)
+    init(resultat: ResultatControle, especeConfirmee: Bool = true, categorieInconnue: Bool = false, deplieAuDepart: Bool = false) {
+        self.init(lignes: resultat.lignes, consigne: resultat.consigne, especeConfirmee: especeConfirmee,
+                  categorieInconnue: categorieInconnue, deplieAuDepart: deplieAuDepart)
     }
 
     /// Les lignes d'un lieu (`reglesDuJour`) avec une consigne ; pour « Règles du spot ».
-    init(lignes: [LigneControle], consigne: Consigne, especeConfirmee: Bool = true, deplieAuDepart: Bool = false) {
+    init(lignes: [LigneControle], consigne: Consigne, especeConfirmee: Bool = true, categorieInconnue: Bool = false,
+         deplieAuDepart: Bool = false) {
         self.lignes = lignes
         self.consigne = consigne
         self.especeConfirmee = especeConfirmee
+        self.categorieInconnue = categorieInconnue
         _deplie = State(initialValue: deplieAuDepart)
     }
 
@@ -35,7 +40,12 @@ struct BlocReglesView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.m) {
             if case .relacher(let raison, let ligne) = tete { relacher(raison: raison, ligne: ligne) }
-            if !lignes.isEmpty { reglementation }
+            if !lignes.isEmpty {
+                reglementation
+            } else if case .reglementation = tete {
+                // Espèce confirmée, zéro ligne : un titre et une consigne clairs, pas seulement la mention « font foi ».
+                reglementationVide
+            }
             Text(BlocReglesLogique.mentionFoi)
                 .font(Police.legende).foregroundStyle(Palette.encreDouce)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -48,17 +58,17 @@ struct BlocReglesView: View {
         VStack(alignment: .leading, spacing: Espace.m) {
             HStack(alignment: .top, spacing: Espace.m) {
                 Image(systemName: "arrow.uturn.down")
-                    .font(.system(size: 22, weight: .bold, design: .rounded)).foregroundStyle(.white).accessibilityHidden(true)
+                    .font(.system(size: 22, weight: .bold, design: .rounded)).foregroundStyle(Palette.surMarine).accessibilityHidden(true)
                 Text(BlocReglesLogique.titreRelacher)
-                    .font(Police.titre).foregroundStyle(.white)
+                    .font(Police.titre).foregroundStyle(Palette.surMarine)
                     .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .accessibilityAddTraits(.isHeader)
             }
             if let ligne {
-                LigneRegleBlocView(ligne: ligne)
+                LigneRegleBlocView(ligne: ligne, categorieInconnue: categorieInconnue)
             } else {
-                Text(raison).font(Police.corps).foregroundStyle(.white)
+                Text(raison).font(Police.corps).foregroundStyle(Palette.surMarine)
                     .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
@@ -94,7 +104,7 @@ struct BlocReglesView: View {
                     Spacer(minLength: 0)
                 }
                 if aVerifier {
-                    Text("Vérifie sur place").font(Police.detail).foregroundStyle(Palette.alerte)
+                    Text("Vérifie sur place").font(Police.detail).foregroundStyle(Palette.encre)
                     if let c = BlocReglesLogique.consigneSousLeTitre(lignes: lignes, consigne: consigne) {
                         Text(c).font(Police.detail).foregroundStyle(Palette.encre)
                             .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
@@ -108,11 +118,29 @@ struct BlocReglesView: View {
         .tuileFishMe()
     }
 
+    /// Zéro ligne pour une espèce confirmée : le titre de l'état 2 et la consigne de Core (« Vérifie l'arrêté »…), sans dépliant vide.
+    private var reglementationVide: some View {
+        VStack(alignment: .leading, spacing: Espace.s) {
+            Text(BlocReglesLogique.titreReglementation)
+                .font(Police.sousTitre).foregroundStyle(Palette.encre)
+                .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
+                .accessibilityAddTraits(.isHeader)
+            Text(consigne.texte).font(Police.corps).foregroundStyle(Palette.encre)
+                .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
+            Text(BlocReglesLogique.aucuneLigne).font(Police.detail).foregroundStyle(Palette.encreDouce)
+                .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(Espace.m)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .tuileFishMe()
+        .accessibilityElement(children: .combine)
+    }
+
     /// Un groupe : son en-tête, puis ses lignes.
     private func groupe(_ g: BlocReglesLogique.Groupe, _ lignes: [LigneControle]) -> some View {
         VStack(alignment: .leading, spacing: Espace.s) {
             enteteDeGroupe(g)
-            ForEach(Array(lignes.enumerated()), id: \.offset) { _, l in LigneRegleBlocView(ligne: l) }
+            ForEach(Array(lignes.enumerated()), id: \.offset) { _, l in LigneRegleBlocView(ligne: l, categorieInconnue: categorieInconnue) }
         }
     }
 

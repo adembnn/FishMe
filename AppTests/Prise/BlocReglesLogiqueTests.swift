@@ -82,4 +82,19 @@ struct BlocReglesLogiqueTests {
         #expect(!tout.contains("tu peux la garder"))
         #expect(!tout.contains("autorisé"))
     }
+
+    // MARK: Catégorie inconnue, libellé neutre (écrit sans Mac, non exécuté)
+
+    @Test func lesValeursParCategorieNeSontMontreesQueSiLaCategorieEstInconnue() {
+        let l = LigneControle(type: .periode, etat: .aVerifierSurPlace, raison: .categorie, phrase: "Exemple.", sources: [],
+                              valeursParCategorie: [.premiere: "fermée", .deuxieme: "ouverte"])
+        #expect(BlocReglesLogique.valeursParCategorie(l, categorieInconnue: true) == "1re : fermée · 2e : ouverte")
+        #expect(BlocReglesLogique.valeursParCategorie(l, categorieInconnue: false) == nil)
+    }
+
+    @Test func uneLigneRespecteeNePorteJamaisUnMotDeFeuVert() {
+        let mot = BlocReglesLogique.motDEtat(.respectee) ?? ""
+        #expect(mot == "règle lue")
+        #expect(!mot.lowercased().contains("autoris"))
+    }
 }

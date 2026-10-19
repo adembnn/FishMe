@@ -42,8 +42,13 @@ struct PriseResultatView: View {
     // MARK: 2. Les règles
 
     @ViewBuilder private var blocDeRegles: some View {
+        let categorieInconnue = modele.contexte.lieu.categorie.valeur == .inconnue
         if let controle = modele.controle {
-            BlocReglesView(resultat: controle, especeConfirmee: modele.especeConfirmee != nil)
+            BlocReglesView(resultat: controle, especeConfirmee: modele.especeConfirmee != nil, categorieInconnue: categorieInconnue)
+        } else if modele.especeConfirmee != nil {
+            // Espèce confirmée mais pas de contrôle (taille non confirmée) : jamais « Espèce non confirmée ».
+            // Zéro ligne inventée : la consigne de Core « Vérifie l'arrêté » et l'invitation à lire les textes.
+            BlocReglesView(lignes: [], consigne: .verifieLArrete, especeConfirmee: true, categorieInconnue: categorieInconnue)
         } else {
             // Espèce non confirmée : « Il faut relâcher le poisson », sans ligne inventée.
             BlocReglesView(lignes: [], consigne: .relacheLa, especeConfirmee: false)

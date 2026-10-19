@@ -37,6 +37,10 @@ enum BlocReglesLogique {
     static let titreRelacher = "Il faut relâcher le poisson"
     static let titreReglementation = "Voir la réglementation en vigueur sur ce poisson"
     static let raisonEspeceNonConfirmee = "Espèce non confirmée"
+    /// Ligne neutre quand la catégorie piscicole du cours d'eau est inconnue (jamais une alerte).
+    static let categorieInconnue = "Catégorie du cours d'eau inconnue : vérifie l'arrêté"
+    /// Aucune ligne de règle à montrer pour une espèce confirmée : la consigne de Core, puis cette invitation à lire les textes.
+    static let aucuneLigne = "Aucune ligne de règle n'est disponible ici : lis l'arrêté préfectoral."
     static let mentionFoi = "Les textes lus font foi : l'arrêté préfectoral et le Code de l'environnement."
 
     /// Le groupe d'un type de règle. `autre` (espèce protégée ou toujours relâchée, règle locale à vérifier) va avec « garder ou relâcher ».
@@ -95,10 +99,19 @@ enum BlocReglesLogique {
         aVerifier(lignes) ? consigne.texte : nil
     }
 
-    /// Le mot court de l'état d'une ligne. Jamais un mot d'autorisation.
+    /// Les deux valeurs par catégorie (« 1re : fermée · 2e : ouverte ») quand la catégorie est inconnue et que Core les donne ; sinon `nil`.
+    static func valeursParCategorie(_ ligne: LigneControle, categorieInconnue: Bool) -> String? {
+        guard categorieInconnue, !ligne.valeursParCategorie.isEmpty else { return nil }
+        let premiere = ligne.valeursParCategorie[.premiere].map { "1re : \($0)" }
+        let deuxieme = ligne.valeursParCategorie[.deuxieme].map { "2e : \($0)" }
+        let texte = [premiere, deuxieme].compactMap { $0 }.joined(separator: " · ")
+        return texte.isEmpty ? nil : texte
+    }
+
+    /// Le mot court de l'état d'une ligne. Jamais un mot d'autorisation, jamais un feu vert : une ligne lue n'est pas un « tu peux la garder ».
     static func motDEtat(_ etat: EtatLigne) -> String? {
         switch etat {
-        case .respectee: return "respectée"
+        case .respectee: return "règle lue"
         case .nonRespectee: return "non respectée"
         case .aVerifierSurPlace: return "vérifie sur place"
         case .information: return nil

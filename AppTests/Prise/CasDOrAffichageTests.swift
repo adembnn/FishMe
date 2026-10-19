@@ -13,13 +13,15 @@ struct CasDOrAffichageTests {
         .deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
         .appendingPathComponent("Packages/Core/Sources/Core/Resources/cas-verdicts.json")
 
-    private static let cas: [[String: Any]] = {
+    // `nonisolated(unsafe)` comme `CasVerdictsReelsTests` : le code généré par `@Test(arguments:)` n'est pas isolé MainActor.
+    // Lecture seule après l'initialisation paresseuse, donc sans risque.
+    nonisolated(unsafe) private static let cas: [[String: Any]] = {
         guard let d = try? Data(contentsOf: fichier),
               let o = try? JSONSerialization.jsonObject(with: d) as? [String: Any] else { return [] }
         return o["cas"] as? [[String: Any]] ?? []
     }()
 
-    private static let ids: [String] = cas.compactMap { $0["id"] as? String }
+    nonisolated(unsafe) private static let ids: [String] = cas.compactMap { $0["id"] as? String }
 
     private nonisolated static func date(_ s: String) -> Date {
         var c = Calendar(identifier: .gregorian)

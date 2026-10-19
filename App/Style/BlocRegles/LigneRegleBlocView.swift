@@ -7,10 +7,13 @@ struct LigneRegleBlocView: View {
     var ligne: LigneControle
     /// Vrai pour que la source soit ouverte dès l'affichage (la raison de l'état de tête).
     var ouverteAuDepart = false
+    /// Vrai si la catégorie piscicole du cours d'eau est inconnue : les deux valeurs par catégorie (si Core les donne) sont montrées.
+    var categorieInconnue = false
     @State private var ouverte: Bool
 
-    init(ligne: LigneControle, ouverteAuDepart: Bool = false) {
+    init(ligne: LigneControle, ouverteAuDepart: Bool = false, categorieInconnue: Bool = false) {
         self.ligne = ligne
+        self.categorieInconnue = categorieInconnue
         self.ouverteAuDepart = ouverteAuDepart
         _ouverte = State(initialValue: ouverteAuDepart)
     }
@@ -27,8 +30,16 @@ struct LigneRegleBlocView: View {
                         Text(ligne.phrase).font(Police.corps).foregroundStyle(Palette.encre)
                             .multilineTextAlignment(.leading)
                             .fixedSize(horizontal: false, vertical: true)
+                        if let valeurs = BlocReglesLogique.valeursParCategorie(ligne, categorieInconnue: categorieInconnue) {
+                            Text(valeurs).font(Police.detail).foregroundStyle(Palette.encre)
+                                .fixedSize(horizontal: false, vertical: true)
+                            Text(BlocReglesLogique.categorieInconnue).font(Police.legende).foregroundStyle(Palette.encreDouce)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
                         if let mot = BlocReglesLogique.motDEtat(ligne.etat) {
-                            Text(mot).font(Police.legende).foregroundStyle(ligne.etat == .respectee ? Palette.encreDouce : couleur)
+                            // Texte en encre (contraste) ; la couleur d'état reste sur l'icône.
+                            Text(mot).font(Police.legende)
+                                .foregroundStyle(ligne.etat == .respectee || ligne.etat == .information ? Palette.encreDouce : Palette.encre)
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -81,7 +92,8 @@ struct LigneRegleBlocView: View {
         switch ligne.etat {
         case .nonRespectee: return "xmark.octagon.fill"
         case .aVerifierSurPlace: return "exclamationmark.circle.fill"
-        case .respectee: return ligne.type == .periode ? "calendar" : "checkmark.circle.fill"
+        // Pas de coche verte : une ligne lue n'est pas un feu vert.
+        case .respectee: return ligne.type == .periode ? "calendar" : "doc.text"
         case .information: return "info.circle.fill"
         }
     }
@@ -89,8 +101,7 @@ struct LigneRegleBlocView: View {
     private var couleur: Color {
         switch ligne.etat {
         case .nonRespectee, .aVerifierSurPlace: return Palette.alerte
-        case .respectee: return Palette.ouvert
-        case .information: return Palette.encreDouce
+        case .respectee, .information: return Palette.encreDouce
         }
     }
 }
