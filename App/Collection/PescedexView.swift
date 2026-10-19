@@ -1,3 +1,4 @@
+import AVFoundation
 import Core
 import SwiftUI
 import UIKit
@@ -23,7 +24,7 @@ func enteteDeGroupe(_ texte: String, haut: CGFloat = 8) -> some View {
         .padding(.top, haut)
 }
 
-/// Le volet Pescedex (P26 B, P45 B, P48 B) : grand titre, phrase de la zone, « Les miens / Amis », « Voir mon aquarium »,
+/// Le volet Pescedex (P26 B, P45 B, P48 B) : grand titre avec le menu de zone et l'ajout, phrase de la zone, « Voir mon aquarium »,
 /// puis un classeur en blocs blancs de cartes en vignette : TROUVÉES, DÉCLARÉES, À TROUVER. Aucune barre de défilement visible.
 /// La fiche d'une espèce (P27 B, P28 B) s'ouvre en page, avec le retour « Pescedex » de la barre de navigation.
 struct PescedexView: View {
@@ -38,10 +39,14 @@ struct PescedexView: View {
     /// « Photographier une prise », dans « Pour commencer » (Pescedex vide). À brancher : RootView (ouvre l'onglet de prise).
     /// Tant que c'est `nil`, la ligne n'est pas affichée.
     var photographier: (() -> Void)? = nil
-    /// « Déclarer un poisson déjà pêché ». À brancher : RootView (ouvre les cartes à swiper). Tant que c'est `nil`, la ligne n'est pas affichée.
+    /// Conservé pour ne pas casser l'appelant (RootView) : « Déclarer un poisson déjà pêché » ouvre maintenant `DeclarationView`
+    /// ici même (L18), jamais le tunnel. Cette fermeture n'est plus appelée.
     var declarer: (() -> Void)? = nil
-    /// Choix « Amis » du sélecteur. À brancher : RootView (`app.onglet = .club`). Tant que c'est `nil`, le choix revient sur « Les miens ».
+    /// Conservé pour ne pas casser l'appelant : « Amis » n'est plus dans le Pescedex (il vit dans Communauté). Plus appelée.
     var voirAmis: (() -> Void)? = nil
+    /// Écrit la carte déclarée d'une espèce. À brancher (facultatif) : RootView (`app.declarer`, qui publie aussi l'aquarium).
+    /// Tant que c'est `nil`, la carte est écrite ici dans le dépôt et le Pescedex rechargé.
+    var declarerEspece: ((Espece) async -> Void)? = nil
     /// Les meilleurs conseils par type (appât, hameçon, technique, moment) pour une espèce et le niveau du pêcheur, déjà filtrés
     /// par l'abonnement. À brancher : RootView (voir `ContexteConseils.parType`). Tant que c'est `nil`, la fiche garde « comment la pêcher ».
     var conseilsParType: ((Espece, NiveauPecheur) -> [TypeConseil: Conseil])? = nil
@@ -51,7 +56,11 @@ struct PescedexView: View {
     /// et montre la révélation. À brancher : RootView. Tant que c'est `nil`, la carte est écrite ici dans le dépôt et le Pescedex rechargé.
     var ajouterManuellement: ((Data, Espece, Int?, Date, String?) async -> Void)? = nil
 
-    @State private var volet: Volet = .miens
+    /// L'étendue choisie dans le menu de zone, gardée d'un lancement à l'autre.
+    @AppStorage(PorteePescedex.cle) private var porteeBrute = PorteePescedex.monSpot.rawValue
+    @State private var declarationOuverte = false
+    /// L'espèce dont la fiche s'ouvre quand la grille de déclaration se ferme.
+    @State private var fichePourOuvrir: String?
     @State private var ajoutManuelOuvert = false
     @State private var carteOuverte: Emplacement?
     @State private var ficheOuverte: String?
@@ -60,12 +69,6 @@ struct PescedexView: View {
     @State private var photoOuverte: Data?
     @State private var pngOuvert: Data?
     @State private var bredouillesDepliees = false
-
-    private enum Volet: String, CaseIterable, Identifiable {
-        case miens = "Les miens"
-        case amis = "Amis"
-        var id: String { rawValue }
-    }
 
     /// Nombre de vignettes de sorties sans prise montrées avant « + N autres ».
     private let apercu = 6
@@ -88,13 +91,7 @@ struct PescedexView: View {
                 }
             }
         }
-        .task { await modele.charger() }
-        .onChange(of: volet) { _, nouveau in
-            if nouveau == .amis {
-                voirAmis?()
-                volet = .miens
-            }
-        }
+        .task { await modele.choisir(PorteePescedex(brut: porteeBrute)) }
         .fullScreenCover(item: $carteOuverte) { emplacement in
             if let infos = modele.infos(pour: emplacement) {
                 CartePleinEcranView(infos: infos, photo: photoOuverte, emplacements: emplacements_, png: pngOuvert) {
@@ -109,6 +106,20 @@ struct PescedexView: View {
         }
         .sheet(isPresented: $ajoutManuelOuvert) {
             AjoutManuelPriseView(especes: modele.services.especes.especesPechables(), creer: creerManuellement)
+        }
+        .sheet(isPresented: $declarationOuverte, onDismiss: {
+            // La fiche de la carte déclarée s'ouvre une fois la grille fermée.
+            if let id = fichePourOuvrir {
+                ficheOuverte = id
+                fichePourOuvrir = nil
+            }
+        }) {
+            DeclarationView(
+                especes: modele.services.especes.especesPechables(),
+                dejaDansLePescedex: Set(modele.emplacements.filter { $0.carte != nil }.map(\.id)),
+                especesDeLaZone: modele.especesDeLaZone,
+                choisir: declarerUneEspece,
+                photographier: photographier)
         }
         .sheet(isPresented: $conditionsOuvertes) {
             Group {
@@ -131,21 +142,93 @@ struct PescedexView: View {
         await modele.charger()
     }
 
-    /// « Ajouter une prise » : photo prise dans l'app, ou photo importée de la photothèque.
+    /// « Déclarer un poisson déjà pêché » : crée la carte déclarée de l'espèce choisie (sans photo), recharge le Pescedex,
+    /// puis garde son identifiant pour ouvrir sa fiche à la fermeture de la grille. Le tunnel ne s'ouvre jamais.
+    private func declarerUneEspece(_ espece: EspecePechable) async {
+        if let declarerEspece {
+            await declarerEspece(espece.espece)
+        } else {
+            _ = try? await modele.depot.enregistrerDeclaree(espece: espece.espece)
+        }
+        await modele.charger()
+        fichePourOuvrir = espece.id
+    }
+
+    /// Vrai quand la caméra est déjà autorisée : « Prendre une photo » l'ouvre alors en un toucher.
+    private var cameraAutorisee: Bool {
+        AccesCamera.ouvreEnUnToucher(AVCaptureDevice.authorizationStatus(for: .video))
+    }
+
+    private var iconeAjout: some View {
+        Image(systemName: "plus.circle.fill")
+            .font(.system(size: 28, weight: .bold, design: .rounded))
+            .foregroundStyle(Palette.marine)
+            .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+            .contentShape(Rectangle())
+    }
+
+    @ViewBuilder
+    private var contenuMenuAjout: some View {
+        if let photographier {
+            Button { photographier() } label: { Label("Prendre une photo", systemImage: "camera") }
+        }
+        Button { ajoutManuelOuvert = true } label: { Label("Importer une photo", systemImage: "photo.on.rectangle") }
+        Button { declarationOuverte = true } label: { Label("Déclarer un poisson déjà pêché", systemImage: "checkmark.circle") }
+    }
+
+    /// « Ajouter une prise ». Caméra autorisée : un toucher ouvre la caméra, un appui long montre « Importer une photo » et
+    /// « Déclarer un poisson déjà pêché ». Sinon un toucher ouvre le menu.
+    @ViewBuilder
     private var boutonAjout: some View {
-        Menu {
-            if let photographier {
-                Button { photographier() } label: { Label("Prendre une photo", systemImage: "camera") }
+        if let photographier, cameraAutorisee {
+            Menu {
+                contenuMenuAjout
+            } label: {
+                iconeAjout
+            } primaryAction: {
+                photographier()
             }
-            Button { ajoutManuelOuvert = true } label: { Label("Importer une photo", systemImage: "photo.on.rectangle") }
+            .accessibilityLabel("Prendre une photo")
+            .accessibilityHint("Appui long pour importer une photo ou déclarer un poisson")
+        } else {
+            Menu {
+                contenuMenuAjout
+            } label: {
+                iconeAjout
+            }
+            .accessibilityLabel("Ajouter une prise")
+        }
+    }
+
+    // MARK: Menu de zone (L18)
+
+    private func choisirZone(_ choix: PorteePescedex) {
+        porteeBrute = choix.rawValue
+        Task { await modele.choisir(choix) }
+    }
+
+    /// En haut à droite : Mon spot, Ma région, France. « Ma région » est grisé tant que `Core` ne donne pas la région du pêcheur.
+    private var menuZone: some View {
+        Menu {
+            ForEach(PorteePescedex.allCases) { choix in
+                Button { choisirZone(choix) } label: {
+                    if modele.porteeMontree == choix {
+                        Label(choix.libelle, systemImage: "checkmark")
+                    } else {
+                        Text(choix.libelle)
+                    }
+                }
+                .disabled(choix == .maRegion && !modele.regionDisponible)
+            }
         } label: {
-            Image(systemName: "plus.circle.fill")
-                .font(.system(size: 28, weight: .bold, design: .rounded))
+            Image(systemName: "line.3.horizontal.decrease.circle")
+                .font(.system(size: 26, weight: .bold, design: .rounded))
                 .foregroundStyle(Palette.marine)
                 .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
                 .contentShape(Rectangle())
         }
-        .accessibilityLabel("Ajouter une prise")
+        .accessibilityLabel("Zone du Pescedex")
+        .accessibilityValue(modele.porteeMontree.libelle)
     }
 
     private var estVide: Bool { PescedexVide.estVide(modele.emplacements) }
@@ -164,6 +247,7 @@ struct PescedexView: View {
             HStack(alignment: .center) {
                 grandTitre("Pescedex")
                 Spacer(minLength: Espace.s)
+                menuZone
                 boutonAjout
             }
             if !sousTitre.isEmpty {
@@ -172,14 +256,6 @@ struct PescedexView: View {
                     .foregroundStyle(Palette.encreDouce)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 6)
-            }
-            if !estVide {
-                Picker("Volet", selection: $volet) {
-                    ForEach(Volet.allCases) { Text($0.rawValue).tag($0) }
-                }
-                .pickerStyle(.segmented)
-                .frame(height: 34)
-                .padding(.top, Espace.m)
             }
             if let voirAquarium, !estVide {
                 Button(action: voirAquarium) {
@@ -214,6 +290,7 @@ struct PescedexView: View {
     private var sousTitre: String {
         let c = modele.compteur
         if estVide {
+            if c.portee != .monSpot { return c.ligneCompteur ?? PescedexVide.texte }
             if modele.zone != nil, c.releveesDansLaZone > 0 {
                 return phraseAvecNom("Tu n'as pas encore trouvé les \(c.releveesDansLaZone) espèces de la zone") ?? ""
             }
@@ -241,13 +318,16 @@ struct PescedexView: View {
 
     /// Vrai quand le bloc « Ta zone » s'ajoute : une zone connue, des espèces relevées dedans, au moins une carte.
     private var zoneEnCartes: Bool {
+        guard modele.compteur.releveesDansLaZone > 0, !estVide else { return false }
+        // Région et France n'ont pas besoin du département du pêcheur ; « Mon spot », si.
+        if modele.compteur.portee != .monSpot { return true }
         guard let zone = modele.zone, !zone.estInconnu else { return false }
-        return modele.compteur.releveesDansLaZone > 0 && !estVide
+        return true
     }
 
     private var ligneZone: some View {
         HStack(spacing: Espace.m) {
-            Image(systemName: "mappin")
+            Image(systemName: modele.compteur.portee.icone)
                 .font(.system(size: 24, weight: .bold, design: .rounded))
                 .foregroundStyle(Palette.marine)
                 .frame(width: 32)
@@ -257,7 +337,7 @@ struct PescedexView: View {
                 .font(Police.corps)
                 .foregroundStyle(Palette.encre)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            if changerZone != nil {
+            if changerZone != nil, modele.compteur.portee == .monSpot {
                 Text("Changer")
                     .font(Police.taille(17, .bold))
                     .foregroundStyle(Palette.encreDouce)
@@ -275,6 +355,11 @@ struct PescedexView: View {
 
     /// P48 B : « Val-de-Marne · 94 » ; sans nom connu, le code seul (« Département 94 »).
     private var texteLigneZone: String {
+        switch modele.compteur.portee {
+        case .france: return "France"
+        case .maRegion: return modele.region?.nom ?? "Ma région"
+        case .monSpot: break
+        }
         if let nom = nomDepartement, let code = modele.compteur.zone?.code { return "\(nom) · \(code)" }
         return NomDeZone.texte(departement: modele.compteur.zone) ?? "Zone"
     }
@@ -286,7 +371,7 @@ struct PescedexView: View {
         return VStack(alignment: .leading, spacing: 0) {
             enteteDeGroupe("Ta zone")
             VStack(alignment: .leading, spacing: 0) {
-                if let changerZone {
+                if let changerZone, c.portee == .monSpot {
                     Button(action: changerZone) { ligneZone }
                         .buttonStyle(.plain)
                 } else {
@@ -314,7 +399,7 @@ struct PescedexView: View {
                     .frame(height: 12)
                     .padding(.top, 10)
                     // P48 : l'unique phrase du compteur, juste sous la barre.
-                    if let phrase = c.phraseDeZone {
+                    if let phrase = c.phrase {
                         Text(phrase)
                             .font(Police.detail)
                             .foregroundStyle(Palette.encreDouce)
@@ -328,8 +413,8 @@ struct PescedexView: View {
             }
             .tuileFishMe(rayon: Rayon.m)
             .padding(.top, Espace.s)
-            .accessibilityElement(children: changerZone == nil ? .ignore : .contain)
-            .accessibilityLabel(c.phraseDeZone ?? c.texte)
+            .accessibilityElement(children: (changerZone == nil || c.portee != .monSpot) ? .ignore : .contain)
+            .accessibilityLabel(c.phrase ?? c.texte)
         }
     }
 
@@ -342,10 +427,10 @@ struct PescedexView: View {
                 if let photographier {
                     ligneDepart("Photographier une prise", icone: "camera", action: photographier)
                 }
-                if photographier != nil, declarer != nil { Divider().overlay(Palette.filet).padding(.leading, Espace.l) }
-                if let declarer {
-                    ligneDepart("Déclarer un poisson déjà pêché", icone: "checkmark.circle.fill", action: declarer)
-                }
+                if photographier != nil { Divider().overlay(Palette.filet).padding(.leading, Espace.l) }
+                ligneDepart("Déclarer un poisson déjà pêché", icone: "checkmark.circle.fill") { declarationOuverte = true }
+                Divider().overlay(Palette.filet).padding(.leading, Espace.l)
+                ligneDepart("Importer une photo", icone: "photo.on.rectangle") { ajoutManuelOuvert = true }
             }
             .tuileFishMe(rayon: Rayon.m)
             .padding(.top, Espace.s)
@@ -411,7 +496,8 @@ struct PescedexView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 if estVide {
-                    if photographier != nil || declarer != nil { pourCommencer } else { premierePrise }
+                    // « Déclarer un poisson déjà pêché » est toujours là : la grille s'ouvre ici, sans fermeture à brancher.
+                    pourCommencer
                     // Le Pescedex vide reste plein : les espèces de la zone rangées par rareté, légendaires compris.
                     sectionATrouver
                 } else {
