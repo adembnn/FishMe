@@ -270,3 +270,7 @@ public struct MoteurEspeces: ServiceEspeces, ServiceLongueurPlausible {
                            maxKilos: (kilos * (1 + Self.fourchettePoids)).arrondi(3), source: source)
     }
 }
+
+extension MoteurEspeces: ServiceSeuilTrophee {
+    public func seuilTropheeCm(espece: Espece) -> Double? { longueurPlausibleMax(espece: espece) }
+}
