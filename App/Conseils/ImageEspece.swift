@@ -5,11 +5,19 @@ import UIKit
 struct ImageEspece: View {
     let nom: String
     let libelle: String
+    /// Vrai : l'image est rendue en aplat de la couleur « silhouette » (poisson pas encore trouvé).
+    var silhouette: Bool = false
 
     var body: some View {
         Group {
             if UIImage(named: nom) != nil {
-                Image(nom).resizable().scaledToFit()
+                if silhouette {
+                    Image(nom).renderingMode(.template).resizable().scaledToFit().foregroundStyle(Palette.silhouette)
+                } else {
+                    Image(nom).resizable().scaledToFit()
+                }
+            } else if silhouette {
+                Image(systemName: "fish.fill").resizable().scaledToFit().padding(12).foregroundStyle(Palette.silhouette)
             } else {
                 Image(systemName: "fish.fill").resizable().scaledToFit().padding(12).foregroundStyle(.secondary)
             }
