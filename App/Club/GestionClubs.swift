@@ -60,6 +60,15 @@ final class GestionClubs {
     private let filtre: any FiltreMots
     private let maintenant: @Sendable () -> Date
 
+    /// Les requêtes de la base publique sont cohérentes « à terme » : juste après une écriture, la lecture peut ne pas encore la montrer.
+    /// Pendant ce délai on garde ce qu'on vient d'écrire (club créé ou rejoint, carte partagée) et on ignore ce qu'on vient de quitter ou retirer,
+    /// sinon la page clignoterait au rafraîchissement suivant.
+    static let delaiCoherence: TimeInterval = 90
+    private var clubsRecents: [String: Date] = [:]
+    private var clubsQuittes: [String: Date] = [:]
+    private var cartesRecentes: [String: Date] = [:]
+    private var cartesRetirees: [String: Date] = [:]
+
     init(service: any ServiceClubs, profils: any ServiceProfil, memoire: any MemoireProfil = MemoireProfilLocale(),
          cache: any CacheClubs = CacheClubsFichier(), blocages: BlocagesProfils = BlocagesProfils(),
          masquees: CartesMasquees = CartesMasquees(), filtre: any FiltreMots = FiltreCore(),
@@ -137,7 +146,11 @@ final class GestionClubs {
         enCours = true
         defer { enCours = false }
         do {
-            let miens = try await service.clubs(deProfil: moi)
+            let maintenantDate = maintenant()
+            var miens = try await service.clubs(deProfil: moi).filter { !recent(clubsQuittes[$0.id], le: maintenantDate) }
+            for (id, _) in clubsRecents where recent(clubsRecents[id], le: maintenantDate) && !miens.contains(where: { $0.id == id }) {
+                if let present = try await service.club(id: id) { miens.append(present) }
+            }
             var clubsGardes: [Club] = []
             var membresLus: [String: [Membre]] = [:]
             var cartesLues: [String: [CartePartageeClub]] = [:]
@@ -152,7 +165,13 @@ final class GestionClubs {
                     try? await service.quitter(club: club.id, profil: moi)
                     continue
                 }
-                membresLus[club.id] = try await service.membres(deClub: club.id)
+                var liste = try await service.membres(deClub: club.id)
+                // Mon adhésion toute neuve peut ne pas encore se lire : on garde celle qu'on connaît.
+                if recent(clubsRecents[club.id], le: maintenantDate), !liste.contains(where: { $0.profil == moi }),
+                   let mienne = membres[club.id]?.first(where: { $0.profil == moi }) {
+                    liste.append(mienne)
+                }
+                membresLus[club.id] = liste
                 cartesLues[club.id] = try await lireCartes(club.id)
                 clubsGardes.append(club)
             }
@@ -187,11 +206,24 @@ final class GestionClubs {
     private func lireCartes(_ clubID: String) async throws -> [CartePartageeClub] {
         let avant = Dictionary((cartes[clubID] ?? []).compactMap { c in c.image.map { (c.id, $0) } }, uniquingKeysWith: { a, _ in a })
         let lues = try await service.cartes(deClub: clubID, sauf: Set(avant.keys))
-        return lues.map { carte in
+        let maintenantDate = maintenant()
+        var resultat: [CartePartageeClub] = lues.compactMap { carte in
+            if recent(cartesRetirees[carte.id], le: maintenantDate) { return nil }
             var copie = carte
             if copie.image == nil { copie.image = avant[carte.id] }
             return copie
         }
+        // Une carte que je viens de partager peut ne pas encore se lire : on la garde.
+        for ancienne in cartes[clubID] ?? [] where recent(cartesRecentes[ancienne.id], le: maintenantDate)
+            && !resultat.contains(where: { $0.id == ancienne.id }) {
+            resultat.insert(ancienne, at: 0)
+        }
+        return resultat
+    }
+
+    private func recent(_ date: Date?, le maintenantDate: Date) -> Bool {
+        guard let date else { return false }
+        return maintenantDate.timeIntervalSince(date) < Self.delaiCoherence
     }
 
     // MARK: Cache (mode avion)
@@ -225,6 +257,7 @@ final class GestionClubs {
             let club = try await service.creer(id: id, nom: propre, poissonId: image == nil ? poissonId : nil, image: image,
                                                fondateur: moi, le: date)
             inserer(club)
+            clubsRecents[club.id] = date
             membres[club.id] = [Membre(id: Membre.identifiant(club: club.id, profil: moi), club: club.id, profil: moi,
                                        role: .fondateur, depuis: date)]
             cartes[club.id] = cartes[club.id] ?? []
@@ -267,9 +300,12 @@ final class GestionClubs {
                 message = Self.message(pour: refus)
                 return false
             }
-            _ = try await service.rejoindre(club: clubID, profil: moi, le: maintenant())
+            let adhesion = try await service.rejoindre(club: clubID, profil: moi, le: maintenant())
             inserer(club)
-            membres[clubID] = try await service.membres(deClub: clubID)
+            clubsRecents[clubID] = maintenant()
+            var liste = try await service.membres(deClub: clubID)
+            if !liste.contains(where: { $0.profil == moi }) { liste.append(adhesion) }
+            membres[clubID] = liste
             cartes[clubID] = try await lireCartes(clubID)
             await completerProfils()
             enregistrerCache()
@@ -296,6 +332,8 @@ final class GestionClubs {
             case .fermer: try await service.fermer(club: club.id, fondateur: moi)
             case .quitter: try await service.quitter(club: club.id, profil: moi)
             }
+            clubsQuittes[club.id] = maintenant()
+            clubsRecents[club.id] = nil
             oublier(club.id)
             enregistrerCache()
             message = nil
@@ -322,6 +360,8 @@ final class GestionClubs {
             liste.removeAll { $0.id == partagee.id }
             liste.insert(partagee, at: 0)
             cartes[club.id] = liste
+            cartesRecentes[partagee.id] = maintenant()
+            cartesRetirees[partagee.id] = nil
             enregistrerCache()
             return true
         } catch {
@@ -336,6 +376,8 @@ final class GestionClubs {
         do {
             try await service.retirerCarte(id: id)
             cartes[club.id]?.removeAll { $0.id == id }
+            cartesRetirees[id] = maintenant()
+            cartesRecentes[id] = nil
             enregistrerCache()
             return true
         } catch {

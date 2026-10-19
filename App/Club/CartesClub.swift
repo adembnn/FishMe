@@ -144,6 +144,8 @@ struct PartagerCarteClubView: View {
   let club: ClubLocal
   let cartes: [CarteAPartager]
   let partagees: Set<String>
+  /// L22 : vrai pour un club en ligne (les cartes partent vraiment aux membres) ; faux pour un club resté sur l'iPhone.
+  var enLigne = false
   let basculer: (String) -> Void
 
   @Environment(\.dismiss) private var fermer
@@ -182,7 +184,9 @@ struct PartagerCarteClubView: View {
               }
             }
           }
-          Text("Rien n'est envoyé sur un serveur dans cette version : le partage reste sur ton iPhone.")
+          Text(enLigne
+            ? "Seuls l'image de la carte, l'espèce, la taille et le département partent. Jamais ton coin exact."
+            : "Ce club reste sur ton iPhone : le partage n'est pas envoyé.")
             .font(Police.legende).foregroundStyle(Palette.encreDouce)
             .padding(.top, Espace.s)
         }

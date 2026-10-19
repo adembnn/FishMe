@@ -84,6 +84,8 @@ struct MembreClub: Identifiable, Hashable {
     let id: String
     let nom: String
     let nombreDeCartes: Int?
+    /// L22 : l'avatar de L21 (JPEG 256 px) d'un membre d'un club en ligne ; `nil` : l'initiale du surnom.
+    var avatar: Data? = nil
 }
 
 /// Une carte récente d'un membre : « Léa · Sandre, lundi · 52 cm ».
