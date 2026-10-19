@@ -1,6 +1,23 @@
 import Core
 import Foundation
 
+/// Les libellés de la carte, écrits en toutes lettres (L18). Les formes courtes ne servent que si la largeur manque
+/// (`ViewThatFits`) : jamais « FRQ » ni « TAI ».
+enum LibellesCarte {
+    static let frequence = "Fréquence"
+    static let frequenceCourt = "Fréq."
+    static let taille = "Taille"
+    static let tailleEstimee = "Taille · estimée"
+    static let tailleEstimeeCourt = "Taille est."
+    static let poidsEstime = "Poids · estimé"
+    static let rang = "Rang"
+
+    /// « Taille » pour une mesure lue ou saisie, « Taille · estimée » pour une taille choisie au curseur.
+    static func libelleTaille(estimee: Bool) -> String { estimee ? tailleEstimee : taille }
+    /// La forme courte de `libelleTaille`.
+    static func libelleTailleCourt(estimee: Bool) -> String { estimee ? tailleEstimeeCourt : taille }
+}
+
 /// Petits formats d'affichage, en français. Aucun calcul métier : rareté, lune et consigne viennent de Core.
 enum Formats {
     static let locale = Locale(identifier: "fr_FR")
@@ -38,6 +55,18 @@ enum Formats {
     static func poids(_ p: PoidsEstime?) -> String? {
         guard let p else { return nil }
         return "≈ \(nombre(p.kilos)) kg estimé"
+    }
+
+    /// La valeur du poids seule (« ≈ 1,4 kg »), à mettre derrière le libellé « Poids · estimé ».
+    static func poidsValeur(_ p: PoidsEstime?) -> String? {
+        guard let p else { return nil }
+        return "≈ \(nombre(p.kilos)) kg"
+    }
+
+    /// La valeur de la taille seule (« 62 cm »), à mettre derrière le libellé « Taille » ou « Taille · estimée ».
+    static func tailleValeur(_ prise: Prise) -> String? {
+        guard let l = prise.longueurCm else { return nil }
+        return "\(nombre(l, decimales: 0)) cm"
     }
 
     static func lune(_ phase: PhaseLune) -> String {

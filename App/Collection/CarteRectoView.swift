@@ -62,7 +62,7 @@ private struct LigneInterieure: View {
 }
 
 /// Le recto (P24 A, planche C02) : la fenêtre du palier avec le centile de taille en haut à gauche et le poisson de profil,
-/// puis la plaque du bas (nom et nom latin, TAI, FRQ, palier, source OFB et numéro). Le reflet ne couvre que les rares et les légendaires.
+/// puis la plaque du bas (nom et nom latin, Taille, Fréquence, palier, source OFB et rang). Le reflet ne couvre que les rares et les légendaires.
 /// Avec `mini`, la vignette du Pescedex (P26 B) : centile, poisson, nom et marque de palier seulement.
 struct CarteRectoView: View {
     let infos: InfosCarte
@@ -312,19 +312,30 @@ struct CarteRectoView: View {
         return [lieu, date].compactMap { $0 }.joined(separator: " · ")
     }
 
-    /// TAI, FRQ et le palier : trois colonnes égales, alignées sur leur bas.
+    /// Taille, Fréquence et le palier : trois colonnes égales, alignées sur leur bas.
     private func statistiques(_ u: CGFloat) -> some View {
         HStack(alignment: .bottom, spacing: 0) {
-            colonne(valeur: tailleTexte, unite: tailleTexte == "–" ? nil : "cm", legende: legendeTaille, u: u)
+            colonne(valeur: tailleTexte, unite: tailleTexte == "–" ? nil : "cm",
+                    legende: legendeTaille, legendeCourte: legendeTailleCourte, u: u)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            colonne(valeur: frequence.map { "\($0)" } ?? "–", unite: frequence == nil ? nil : "%", legende: "FRQ", u: u)
+            colonne(valeur: frequence.map { "\($0)" } ?? "–", unite: frequence == nil ? nil : "%",
+                    legende: LibellesCarte.frequence, legendeCourte: LibellesCarte.frequenceCourt, u: u)
                 .frame(maxWidth: .infinity, alignment: .leading)
             palier(u)
                 .frame(maxWidth: .infinity)
         }
     }
 
-    private func colonne(valeur: String, unite: String?, legende: String, u: CGFloat) -> some View {
+    /// Le libellé en toutes lettres ; la forme courte seulement si la largeur de la colonne manque.
+    private func etiquetteColonne(_ texte: String, u: CGFloat) -> some View {
+        Text(texte)
+            .font(Police.taille(2.9 * u, .heavy))
+            .tracking(0.06 * 2.9 * u)
+            .foregroundStyle(grisCarte)
+            .lineLimit(1)
+    }
+
+    private func colonne(valeur: String, unite: String?, legende: String, legendeCourte: String, u: CGFloat) -> some View {
         VStack(alignment: .leading, spacing: 1.4 * u) {
             HStack(alignment: .firstTextBaseline, spacing: 0) {
                 Text(valeur)
@@ -337,11 +348,11 @@ struct CarteRectoView: View {
             .foregroundStyle(encreCarte)
             .lineLimit(1)
             .minimumScaleFactor(0.6)
-            Text(legende)
-                .font(Police.taille(2.9 * u, .heavy))
-                .tracking(0.06 * 2.9 * u)
-                .foregroundStyle(grisCarte)
-                .lineLimit(1)
+            ViewThatFits(in: .horizontal) {
+                etiquetteColonne(legende, u: u)
+                etiquetteColonne(legendeCourte, u: u)
+                    .minimumScaleFactor(0.6)
+            }
         }
     }
 
@@ -364,10 +375,10 @@ struct CarteRectoView: View {
         return Formats.nombre(l, decimales: 0)
     }
 
-    /// TAI ; la taille choisie au curseur reste marquée « estimée ».
-    private var legendeTaille: String {
-        infos.prise.mesure == .estimee && tailleTexte != "–" ? "TAI · EST." : "TAI"
-    }
+    /// « Taille » ; la taille choisie au curseur reste marquée « Taille · estimée ».
+    private var tailleEstimee: Bool { infos.prise.mesure == .estimee && tailleTexte != "–" }
+    private var legendeTaille: String { LibellesCarte.libelleTaille(estimee: tailleEstimee) }
+    private var legendeTailleCourte: String { LibellesCarte.libelleTailleCourt(estimee: tailleEstimee) }
 
     /// Part des pêches OFB de la zone où l'espèce a été relevée. `nil` sans relevé.
     private var frequence: Int? {
@@ -415,7 +426,7 @@ struct CarteRectoView: View {
 
     private var numero: String? {
         if declaree { return "déclarée" }
-        return infos.rangDansLaZone.map { "n° \(String(format: "%03d", $0))" }
+        return infos.rangDansLaZone.map { "\(LibellesCarte.rang) \(String(format: "%03d", $0))" }
     }
 
     // MARK: Étiquettes

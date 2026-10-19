@@ -61,10 +61,11 @@ struct FaitsPrise: View {
                         .font(Police.corps)
                         .multilineTextAlignment(.center)
                 } else {
-                    if let taille = Formats.taille(infos.prise) {
-                        ligne(
-                            "ruler",
-                            [taille, Formats.poids(infos.poids)].compactMap { $0 }.joined(separator: " · "))
+                    if let valeur = Formats.tailleValeur(infos.prise) {
+                        ligne("ruler", "\(LibellesCarte.libelleTaille(estimee: infos.prise.mesure == .estimee)) : \(valeur)")
+                    }
+                    if let valeur = Formats.poidsValeur(infos.poids) {
+                        ligne("scalemass", "\(LibellesCarte.poidsEstime) : \(valeur)")
                     }
                     // À brancher : l'appât ou le leurre de la prise (« Relâché · leurre souple ») ; la prise ne le garde pas.
                     ligne("water.waves", infos.prise.gardee ? "Gardé" : "Relâché")
