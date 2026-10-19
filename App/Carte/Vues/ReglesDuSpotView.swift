@@ -3,7 +3,7 @@ import Core
 
 /// La feuille « Règles du spot » : les règles du lieu du cercle, groupées (garder ou relâcher · horaires · matériel et pratique),
 /// chaque ligne ouvre sa source. Le groupement est celui de `BlocReglesView` (L19, `App/Style/BlocRegles/`) : il n'est pas redessiné ici.
-/// ⚠ `BlocReglesView` vient de la branche L19 : cette feuille ne compile qu'après la fusion de L19.
+/// ⚠ à vérifier : `BlocReglesView` (L19) est dans `App/Style/BlocRegles/` ; init `(lignes:consigne:)` lu, jamais compilé.
 /// Les lignes viennent de `reglesDuJour` de `Core` ; rien n'est filtré ni ajouté, jamais de phrase d'autorisation.
 struct ReglesDuSpotView: View {
     let services: ServicesCarte
