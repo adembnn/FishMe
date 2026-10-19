@@ -45,7 +45,7 @@ final class GestionProfil {
 
     init(service: any ServiceProfil, memoire: any MemoireProfil = MemoireProfilLocale(),
          identite: any StockageIdentitePrivee = IdentitePriveeLocale(), blocages: BlocagesProfils = BlocagesProfils(),
-         filtre: any FiltreMots = AucunFiltre(), effaceurs: [any EffaceurContenu] = []) {
+         filtre: any FiltreMots = FiltreCore(), effaceurs: [any EffaceurContenu] = []) {
         self.service = service
         self.memoire = memoire
         self.identite = identite

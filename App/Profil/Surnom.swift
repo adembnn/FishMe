@@ -1,3 +1,4 @@
+import Core
 import Foundation
 
 /// Les règles du surnom de pêcheur (décision 3 du 19 oct.) : public, unique, sans accent ni majuscule pour l'unicité.
@@ -27,7 +28,7 @@ nonisolated enum Surnom {
     }
 
     /// `nil` si le surnom est permis : 3 à 20 caractères, lettres, chiffres, tiret (ni au début, ni à la fin, ni doublé).
-    static func verifier(_ brut: String, filtre: any FiltreMots = AucunFiltre()) -> Refus? {
+    static func verifier(_ brut: String, filtre: any FiltreMots = FiltreCore()) -> Refus? {
         let surnom = brut.trimmingCharacters(in: .whitespacesAndNewlines)
         if surnom.count < longueurMin { return .tropCourt }
         if surnom.count > longueurMax { return .tropLong }
@@ -58,9 +59,14 @@ nonisolated protocol FiltreMots: Sendable {
     func refuse(_ texte: String) -> Bool
 }
 
-/// Aucun mot refusé : valeur par défaut tant que L23 n'a pas livré sa liste.
+/// Aucun mot refusé : pour les tests et les aperçus seulement.
 nonisolated struct AucunFiltre: FiltreMots {
     func refuse(_ texte: String) -> Bool { false }
+}
+
+/// Le filtre par défaut : la liste partagée de `Core` (`MotsInterditsFR`, LDNOOBW CC-BY-4.0, attribution dans Sources).
+nonisolated struct FiltreCore: FiltreMots {
+    func refuse(_ texte: String) -> Bool { MotsInterditsFR.contient(texte) }
 }
 
 /// Filtre par liste de mots entiers, avec les astuces d'écriture courantes (0 pour o, 1 pour i, 3 pour e, @ pour a).
