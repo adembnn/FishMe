@@ -60,3 +60,18 @@ Les documents que le plan cite sans chemin (`lots.md`, `fiches/L3.md`, `reports/
 - Kit MWM reçu le 15 oct. (ce qu'il change : `docs/app-store.md`, « Ce que le kit MWM change ») : équipe « Frétille » n°01, trois personnes (Adem, Sullyvan, Titouan). Projet `BuildChallenge.xcodeproj` déjà signé chez MWM, identifiant `ai.mwm.build.challenge.team.01` (les abonnements y sont liés, ne pas le changer), SDK Spark par chemin relatif `mwm-spark-flash-sdk/local-spm-repo`, à la racine du dépôt (le kit le plaçait un dossier plus haut ; l'import sur `lot/squelette` l'a mis à la racine, `docs/fiches/L0.md`). Le projet sort réglé iPhone + iPad et paysage : à passer en iPhone seul, portrait.
 - Le README du kit contient le mot de passe du compte MWM : jamais dans git. Le serveur MCP de MWM (`https://mcp.mwm.ai/mcp`) publie politique de confidentialité, conditions et page web de l'app, génère icône et captures habillées, envoie la fiche et sait soumettre. Il est joignable depuis le cloud une fois qu'Adem a connecté le compte MWM de l'équipe comme connecteur sur claude.ai ; le connecteur vaut pour les fils démarrés après. C prépare S1 dans le cloud ; chaque publication ou envoi attend le oui d'Adem. Avant tout appel qui écrit, les réglages du compte `store_send` et `store_publish` sont sur `confirm`. Le build part toujours par `scripts/envoi.sh` (A) ; la soumission à la relecture passe par le MCP après le oui d'Adem (par défaut, à confirmer par Adem, `docs/app-store.md` ligne 14).
 - Jeudi, `main` part de la branche `claude/project-thread-78e20q` (le plan seul, sans code) ; A la crée à L0 et la met par défaut sur GitHub.
+
+
+## Agent skills
+
+### Suivi des tâches
+
+Les lots, fiches et décisions datées de `docs/` (`docs/lots.md`, `docs/fiches/`). Pas d'issues GitHub. Voir `docs/agents/issue-tracker.md`.
+
+### Labels de triage
+
+Non utilisés. Voir `docs/agents/triage-labels.md`.
+
+### Documentation du domaine
+
+Un seul contexte : `GLOSSARY.md` s'il existe, `docs/adr/` pour les décisions. Voir `docs/agents/domain.md`.
