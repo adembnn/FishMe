@@ -15,6 +15,8 @@ nonisolated final class PriseCapture: NSObject, AVCapturePhotoCaptureDelegate, @
     /// Ce qu'on fait de la photo : exécuté sur le fil principal.
     typealias Suite = @MainActor @Sendable (Data?) -> Void
     private var fin: Suite?
+    /// Le rapport de démarrage : exécuté sur le fil principal.
+    typealias Suite2 = @MainActor @Sendable (Bool) -> Void
 
     /// Vrai si cet iPhone a un appareil arrière (faux sur le simulateur).
     static var disponible: Bool {
@@ -27,10 +29,14 @@ nonisolated final class PriseCapture: NSObject, AVCapturePhotoCaptureDelegate, @
     }
 
     /// Configure (une fois) puis lance la session, hors du fil principal : l'écran sombre est déjà affiché pendant ce temps.
-    func demarrer() {
+    /// `rapport` (sur le fil principal) reçoit `true` si la session tourne, `false` sinon (caméra occupée, appel en cours, configuration refusée) :
+    /// l'écran affiche alors un message au lieu d'un déclencheur muet.
+    func demarrer(rapport: Suite2? = nil) {
         file.async { [self] in
             if !configuree { configurer() }
             if configuree && !session.isRunning { session.startRunning() }
+            let tourne = configuree && session.isRunning
+            if let rapport { Task { @MainActor in rapport(tourne) } }
         }
     }
 
@@ -64,8 +70,13 @@ nonisolated final class PriseCapture: NSObject, AVCapturePhotoCaptureDelegate, @
               let entree = try? AVCaptureDeviceInput(device: a) else { return }
         session.beginConfiguration()
         session.sessionPreset = .photo
-        if session.canAddInput(entree) { session.addInput(entree) }
-        if session.canAddOutput(sortie) { session.addOutput(sortie) }
+        guard session.canAddInput(entree), session.canAddOutput(sortie) else {
+            // Configuration refusée : on ne déclare pas la session prête, l'écran dira « Caméra indisponible ».
+            session.commitConfiguration()
+            return
+        }
+        session.addInput(entree)
+        session.addOutput(sortie)
         // Portrait : 90 degrés. ⚠ à vérifier sur iPhone : si la photo sort couchée, c'est ici qu'on corrige.
         if let connexion = sortie.connection(with: .video), connexion.isVideoRotationAngleSupported(90) {
             connexion.videoRotationAngle = 90

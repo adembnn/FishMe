@@ -2,9 +2,7 @@ import AVFoundation
 import Core
 import SwiftUI
 import UIKit
-#if DEBUG
 import PhotosUI
-#endif
 
 /// L'écran Prise : de la photo à la liste de contrôle. A le branche dans `RootView.swift` avec ses services, le contexte de la sortie et la fermeture `terminer`
 /// (`nil` : aucune carte créée ; sinon la prise confirmée et la photo, que L4 range).
@@ -143,38 +141,36 @@ struct PriseEtapePhoto: View {
 }
 
 private enum PriseChoixPhotoTexte {
-    #if DEBUG
     static let libelle = "Choisir une photo"
-    #else
-    static let libelle = "Essayer avec une photo d'exemple"
-    #endif
 }
 
-/// Le second chemin vers une photo sur l'écran d'explication (sans caméra ou sans accès) : la photothèque sous #if DEBUG, sinon la photo d'exemple.
-/// Avec la caméra, la galerie est dans la vue de capture (`PriseCamera`).
+/// Le second chemin vers une photo sur l'écran d'explication (sans caméra ou sans accès) : la galerie, puis la photo d'exemple.
+/// L'import depuis la galerie est voulu (décision de Titouan, 19 oct.) : la photo est ré-encodée par `PriseCamera.imageSansGPS`, donc sans GPS.
+/// Avec la caméra, la galerie est aussi dans la vue de capture (`PriseCamera`).
 private struct PriseChoixPhoto<Etiquette: View>: View {
     var modele: PriseModele
     @ViewBuilder var etiquette: () -> Etiquette
-    #if DEBUG
     @State private var choix: PhotosPickerItem?
-    #endif
 
     var body: some View {
-        #if DEBUG
-        PhotosPicker(selection: $choix, matching: .images) { etiquette() }
-            .accessibilityLabel("Choisir une photo")
-            .onChange(of: choix) { _, nouveau in
-                guard let nouveau else { return }
-                Task {
-                    if let data = try? await nouveau.loadTransferable(type: Data.self), let image = UIImage(data: data) {
-                        modele.photoPrise(image)
+        VStack(spacing: 0) {
+            PhotosPicker(selection: $choix, matching: .images) { etiquette() }
+                .accessibilityLabel("Choisir une photo")
+                .onChange(of: choix) { _, nouveau in
+                    guard let nouveau else { return }
+                    Task {
+                        if let data = try? await nouveau.loadTransferable(type: Data.self), let image = PriseCamera.imageSansGPS(data) {
+                            modele.photoPrise(image)
+                        }
+                        choix = nil
                     }
                 }
+            Button { modele.photoPrise(PhotoExemple.image(), exemple: true) } label: {
+                Text("Essayer avec une photo d'exemple").font(Police.corps).foregroundStyle(Palette.marine)
+                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
             }
-        #else
-        Button { modele.photoPrise(PhotoExemple.image(), exemple: true) } label: { etiquette() }
             .accessibilityLabel("Essayer avec une photo d'exemple")
-        #endif
+        }
     }
 }
 
