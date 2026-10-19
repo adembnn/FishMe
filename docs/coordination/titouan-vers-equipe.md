@@ -77,3 +77,10 @@ Format : `- HHhMM (Paris) : ...`
 **6. Pour Sullyvan** : compiler chaque branche (`scripts/verif.sh`, `/banc Lxx`), renvoyer les erreurs à Titouan en 3 lignes ; lancer le prototype de `outils/reseau/` et coller les chiffres (aucun n'est mesuré). API à relire : liste dans la note de passation (section 7).
 
 **7. Ce que Titouan fait ensuite** : plus de lot dans son périmètre du plan. Il n'ouvre pas de nouvelle fonction sans l'écrire ici d'abord.
+
+## 19 oct., soir — Titouan : mise à jour (à lire avec le message précédent)
+- **Nouvelle branche `lot/core-moderation` (1996a575), à fusionner EN PREMIER** : dans `Packages/Core`, `Moderation/MotsInterditsFR.swift` (liste de mots interdits LDNOOBW CC-BY-4.0, sans les faux positifs de pêche, un seul `contient(_:)`) et `Regions/RegionsFrance.swift` (13 régions, 96 départements). Tests écrits, non exécutés. L21, L23 et L24 s'en servent désormais : **ne pas fusionner ces trois lots sans elle**. Attribution CC-BY-4.0 à mettre dans Profil, Sources.
+- **Hash à jour** : `lot/profil` 6f07d28b, `lot/feed` 55401bdb, `lot/chat` d050acfe, `lot/prise-2` 7758521e. Ordre de fusion : core-moderation, profil, collection-2, prise-2, feed, chat (simulé sans conflit ni collision de type).
+- **À brancher avec la table des régions** : `regionDe:` (L18) et `departementsDeMaRegion` (L23) → `RegionsFrance.region(deDepartement:)` et `RegionsFrance.departementsDeLaRegion(de:)`.
+- **Amis** : retirés du Pescedex (L18), ils ne sont que dans Communauté ; reste un paramètre `voirAmis` inutilisé dans `PescedexView`, à retirer avec L25.
+- Note de passation mise à jour : `docs/reports/passation-titouan-19-oct.md` sur `titouan/passation-lots`.
