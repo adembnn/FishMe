@@ -14,10 +14,15 @@ nonisolated struct InterlocuteurChat: Hashable, Identifiable, Sendable {
     var idCloudKit: String
 }
 
-/// Un club dont je suis membre (À aligner L22 : `Club.id` et `Club.nom`).
+/// Un club dont je suis membre (À aligner L22 : `Club.id`, `Club.nom`, `Membre`).
 nonisolated struct ClubChat: Hashable, Identifiable, Sendable {
     var id: String
     var nom: String
+    /// Le fondateur possède la zone partagée du club et seul il y admet des membres. R2: `Club.fondateur` ne change jamais
+    /// (schema.md) : un club dont le fondateur est parti ne peut plus admettre personne. À réaligner avec Adem.
+    var jeSuisFondateur: Bool
+    /// Les autres membres (À aligner L22 : `Membre` + profils L21), avec leur identifiant CloudKit pour les admettre.
+    var membres: [InterlocuteurChat]
 }
 
 nonisolated protocol AnnuaireChat: Sendable {

@@ -7,11 +7,16 @@ nonisolated protocol ServiceChat: Sendable {
     /// Les messages de la conversation, tels qu'iCloud les a. Lève `.reseau` hors ligne.
     func messages(de conversation: ConversationID) async throws -> [MessageChat]
     /// Écrit un message (idempotent : même `id`, même enregistrement). Lève `.reseau` hors ligne : l'appelant garde le message à rejouer.
-    func envoyer(_ message: MessageChat) async throws
+    /// `peutCreerLaZone` : ami, toujours ; club, le fondateur seulement (lui seul possède la zone partagée du club).
+    func envoyer(_ message: MessageChat, peutCreerLaZone: Bool) async throws
     /// Crée, si besoin, l'abonnement de cette conversation (notification quand un message arrive). N'est appelé qu'après la permission.
     func abonner(_ conversation: ConversationID) async throws
-    /// Ami : le lien de la conversation à envoyer à l'ami tant qu'il ne l'a pas acceptée. `nil` : rien à envoyer (club, ou déjà accepté).
-    func lienDInvitation(pour conversation: ConversationID) async throws -> URL?
+    /// Le lien de la conversation à envoyer tant qu'un participant ne l'a pas accepté. `participants` : identifiants CloudKit des
+    /// personnes à admettre (l'ami ; pour un club, ses membres, et seul le fondateur peut les ajouter).
+    /// `nil` : rien à envoyer (tous ont accepté, ou la zone n'est pas à moi).
+    func lienDInvitation(pour conversation: ConversationID, participants: [String]) async throws -> URL?
+    /// Un ami m'a envoyé le lien de sa conversation : je l'accepte (une fois).
+    func accepterInvitation(_ invitation: InvitationChat) async throws
     /// Efface tous mes messages (clubs et amis) : « Supprimer mon profil ».
     func effacerMesMessages(auteurId: String) async throws
 }
