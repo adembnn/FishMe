@@ -130,7 +130,6 @@ final class ParcoursApp {
     var volDemande = false
     var sessionReduite = false
     var consentement: Consentement
-    private var consentementPropose = false
     private var carteListeEnvoyee = false
     @ObservationIgnored private var rendu: Task<Void, Never>?
 
@@ -358,10 +357,8 @@ final class ParcoursApp {
         if !tunnelVu {
             UserDefaults.standard.set(true, forKey: ClesConseils.tunnelVu)
             courant = .tunnel
-        } else if consentement == .inconnu, !consentementPropose {
-            consentementPropose = true
-            courant = .consentement
         }
+        // L25 (décision 7) : plus de feuille de consentement au premier lancement ; « Mesure d'usage » reste dans les réglages (L6).
     }
 
     func reglerMesure(_ actif: Bool) {
@@ -735,8 +732,6 @@ private struct RacineContenu: View {
 
     private var onglets: some View {
         avecModales(tabView, dansSession: false)
-            // Après la 1re vraie prise, une fois : comment poser « Mon aquarium » sur l'écran d'accueil.
-            .astuceAjouterWidget(prises: app.pescedex?.detaillees.filter { !$0.prise.exemple }.count ?? 0)
             // Bouton « Prise » de l'écran verrouillé (P15) : l'intent laisse l'action en attente, l'app la joue au retour.
             .onChange(of: scenePhase) { _, phase in
                 guard phase == .active, let action = ActionSessionEnAttente.lire() else { return }
@@ -935,7 +930,8 @@ private struct RacineContenu: View {
                     let style = StyleRarete(niveau)
                     return (style.mot, style.couleur)
                 },
-                voirMonSpot: { app.courant = nil; app.onglet = .carte; app.volDemande = true })
+                voirMonSpot: { app.courant = nil; app.onglet = .carte; app.volDemande = true },
+                departement: app.spotCourant?.departement.estInconnu == false ? app.spotCourant?.departement.code : nil)
 
         case .consentement:
             FeuilleConsentement(accepter: { app.accorderOuRefuser(true) }, refuser: { app.accorderOuRefuser(false) })
