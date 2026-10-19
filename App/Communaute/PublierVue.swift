@@ -3,7 +3,7 @@ import SwiftUI
 import UIKit
 
 /// Une vidéo choisie dans la photothèque, copiée dans un fichier temporaire.
-struct FichierVideo: Transferable {
+nonisolated struct FichierVideo: Transferable, Sendable {
     let url: URL
 
     static var transferRepresentation: some TransferRepresentation {

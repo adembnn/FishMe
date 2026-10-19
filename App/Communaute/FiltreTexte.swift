@@ -25,8 +25,8 @@ nonisolated enum FiltreTexte {
     static let longueurMax = 280
 
     private static let liensCarte = [
-        "google.com/maps", "goo.gl/maps", "maps.app.goo", "maps.apple", "waze.com", "what3words", "w3w.co",
-        "openstreetmap", "geoportail", "geo:",
+        "google.com/maps", "google.fr/maps", "maps.google", "goo.gl/maps", "maps.app.goo", "g.co/maps", "bing.com/maps",
+        "maps.apple.com", "maps.apple", "waze.com", "what3words", "w3w.co", "openstreetmap", "geoportail", "geo:",
     ]
 
     /// `nil` : le texte est accepté.
@@ -43,12 +43,30 @@ nonisolated enum FiltreTexte {
         MotsInterditsFR.contient(texte)
     }
 
-    /// Deux nombres décimaux à 3 chiffres ou plus après la virgule, un mot « lat », « lon », « gps », ou des degrés.
+    /// Deux nombres décimaux à 3 chiffres ou plus après la virgule, ou une paire « 48.85, 2.35 » (2 décimales ou plus, côte à côte,
+    /// dans les bornes d'une latitude puis d'une longitude), un mot « lat », « lon », « gps », ou des degrés.
     static func ressembleACoordonnee(_ texte: String) -> Bool {
         if occurrences("-?[0-9]{1,3}[.,][0-9]{3,}", dans: texte) >= 2 { return true }
+        if contientPaireDeCoordonnees(texte) { return true }
         if occurrences("[0-9]{1,3} ?° ?[0-9]{1,2}", dans: texte) >= 1 { return true }
         let mots = Set(texte.lowercased().split(whereSeparator: { !$0.isLetter }).map(String.init))
         return !mots.isDisjoint(with: ["lat", "lon", "lng", "gps", "latitude", "longitude"])
+    }
+
+    /// Deux nombres à 2 décimales ou plus, séparés par une virgule, un point-virgule, une barre ou un espace, qui tiennent dans
+    /// une latitude (90) et une longitude (180). « 62,50 cm » seul, ou un prix, ne passe pas pour une paire.
+    static func contientPaireDeCoordonnees(_ texte: String) -> Bool {
+        let motif = "(-?[0-9]{1,3}[.,][0-9]{2,})\s*[,;/ ]\s*(-?[0-9]{1,3}[.,][0-9]{2,})"
+        guard let expression = try? NSRegularExpression(pattern: motif) else { return false }
+        let plage = NSRange(texte.startIndex..., in: texte)
+        for correspondance in expression.matches(in: texte, range: plage) {
+            guard correspondance.numberOfRanges == 3,
+                  let r1 = Range(correspondance.range(at: 1), in: texte), let r2 = Range(correspondance.range(at: 2), in: texte),
+                  let a = Double(texte[r1].replacingOccurrences(of: ",", with: ".")),
+                  let b = Double(texte[r2].replacingOccurrences(of: ",", with: ".")) else { continue }
+            if abs(a) <= 90, abs(b) <= 180 { return true }
+        }
+        return false
     }
 
     private static func occurrences(_ motif: String, dans texte: String) -> Int {

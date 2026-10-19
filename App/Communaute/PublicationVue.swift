@@ -96,7 +96,7 @@ struct PublicationVue: View {
                 Image(espece).resizable().scaledToFit().frame(width: 44, height: 28).accessibilityHidden(true)
             }
             Text([espece.replacingOccurrences(of: "-", with: " ").capitalized,
-                  publication.tailleCm.map { "\(Int($0)) cm" }].compactMap { $0 }.joined(separator: " · "))
+                  FabriqueFeed.centimetres(publication.tailleCm).map { "\($0) cm" }].compactMap { $0 }.joined(separator: " · "))
                 .font(Police.detail)
                 .foregroundStyle(Palette.encre)
         }

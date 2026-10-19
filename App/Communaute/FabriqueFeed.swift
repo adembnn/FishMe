@@ -92,11 +92,23 @@ nonisolated enum FabriqueFeed {
               let mode = (r["lieuMode"] as? String).flatMap(ModeLieu.init(rawValue:)),
               let date = r["creeLe"] as? Date else { return nil }
         return PublicationFeed(
-            id: r.recordID.recordName, auteurNom: auteur, genre: genre, dureeS: r["dureeS"] as? Int ?? 0,
+            id: r.recordID.recordName, auteurNom: auteur, genre: genre, dureeS: min(max(r["dureeS"] as? Int ?? 0, 0), 600),
             legende: r["legende"] as? String ?? "", lieuMode: mode, lieuTexte: r["lieuTexte"] as? String ?? "",
             departement: r["departement"] as? String ?? "", espece: r["espece"] as? String,
-            rarete: (r["rarete"] as? String).flatMap(NiveauRarete.init(rawValue:)), tailleCm: r["tailleCm"] as? Double,
+            rarete: (r["rarete"] as? String).flatMap(NiveauRarete.init(rawValue:)), tailleCm: tailleSure(r["tailleCm"] as? Double),
             club: r["club"] as? String ?? "", creeLe: date, vignette: (r["vignette"] as? CKAsset)?.fileURL)
+    }
+
+    /// `tailleCm` vient de la base publique, écrite par n'importe quel client : NaN, infini, négatif ou géant deviennent « sans taille ».
+    static func tailleSure(_ valeur: Double?) -> Double? {
+        guard let valeur, valeur.isFinite, valeur > 0, valeur < 500 else { return nil }
+        return valeur
+    }
+
+    /// Les centimètres à afficher, sans jamais planter : `Int(exactly:)` après arrondi d'une valeur déjà bornée.
+    static func centimetres(_ valeur: Double?) -> Int? {
+        guard let sure = tailleSure(valeur), let entier = Int(exactly: sure.rounded()) else { return nil }
+        return entier
     }
 
     static func commentaire(depuis r: CKRecord) -> CommentaireFeed? {
