@@ -1,6 +1,6 @@
 # Conditions d'utilisation de FishMe (CGU)
 
-**BROUILLON À FAIRE RELIRE PAR UN JURISTE DE MWM.** L'équipe n'est pas juridique : ce texte n'a aucune valeur tant qu'il n'a pas été relu, corrigé et validé par MWM, puis par Adem (S2, 19 oct. 2026). Les articles 2, 3, 7, 8, 9, 10, 11, 14, 16 et 17 ont changé avec le réseau social ; les autres sont ceux du 16 octobre (numéros décalés après l'article 8).
+**BROUILLON À FAIRE RELIRE PAR UN JURISTE DE MWM.** L'équipe n'est pas juridique : ce texte n'a aucune valeur tant qu'il n'a pas été relu, corrigé et validé par MWM, puis par Adem (S2, 19 oct. 2026). Les articles 1, 2, 3, 7, 8, 9, 10, 11, 13, 14, 15, 16 et 17 ont changé avec le réseau social ; les autres sont ceux du 16 octobre (numéros décalés après l'article 8).
 
 Source unique du texte des CGU. L'app l'affiche hors ligne (Réglages, et au premier lancement) : après chaque changement, lancer `python3 outils/legal/generer_conditions.py`, qui réécrit `App/Abonnement/TexteConditions.swift` (fichier de `App/`, régénéré par A dans L25, pas par S2). Un changement qui doit être ré-accepté fait monter `numero` de 1 : passé de 1 à 2 le 19 octobre.
 Les crochets `[...]` sont à remplir avant l'envoi à Apple (identité de l'éditeur : MWM ; médiateur : MWM). Rien n'est publié hors du dépôt sans le oui d'Adem ; la version web passe par le serveur MCP de MWM.
