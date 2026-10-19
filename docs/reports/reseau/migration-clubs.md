@@ -51,7 +51,7 @@ Un club gardé sur l'iPhone reste un club local : il continue de fonctionner com
 
 ## Retour en arrière
 - Garder la copie locale (`club.mesClubs`) 30 jours après la migration (estimation, à fixer par Adem), puis la supprimer. Recommandation : sans copie, une erreur de migration est irréparable. Change avec un budget : non.
-- « Quitter le club » : le fondateur seul ferme le club (`Club.ferme` = 1) et retire ses `Publication` ; ce qui reste lisible tant que le fondateur n'a pas supprimé : c'est expliqué dans l'écran.
+- « Fermer le club » (fondateur seul) : `Club.ferme` = 1 et suppression de ses propres `Publication` ; les cartes des autres membres restent lisibles tant qu'ils ne les ont pas retirées (seul le créateur d'un enregistrement le supprime) : l'écran le dit.
 - « Supprimer mon profil » (L21) efface aussi les clubs dont il est fondateur et leurs cartes, via `EffaceurContenu`.
 
 ## À demander à Adem avant de coder
