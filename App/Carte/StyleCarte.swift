@@ -13,6 +13,12 @@ enum CouleursCarte {
             ? UIColor(red: 0.31, green: 0.82, blue: 0.83, alpha: 1)
             : UIColor(red: 0.03, green: 0.46, blue: 0.54, alpha: 1)
     })
+    /// Le rouge de la pastille « chargé ». ⚠ `Style.swift` (D0) n'a pas de rouge : valeur locale en attendant un jeton `Palette.rouge`.
+    static let rougeFrequentation = Color(uiColor: UIColor { traits in
+        traits.userInterfaceStyle == .dark
+            ? UIColor(red: 1.0, green: 0.45, blue: 0.43, alpha: 1)
+            : UIColor(red: 0.74, green: 0.13, blue: 0.16, alpha: 1)
+    })
     static let encreDouce = Palette.encreDouce
     static let filet = Palette.filet
     /// Orange : alertes seulement (espèce fermée, règle non respectée).

@@ -95,3 +95,11 @@ nonisolated enum PreferenceItineraire {
         if let application { reglages.set(application.rawValue, forKey: cle) } else { reglages.removeObject(forKey: cle) }
     }
 }
+
+/// Le coin vers lequel le pêcheur veut aller : la coordonnée de la STATION et son nom (jamais la position du pêcheur).
+nonisolated struct DestinationItineraire: Sendable, Equatable, Identifiable {
+    var coordonnee: Coordonnee
+    var nom: String
+
+    var id: String { "\(coordonnee.latitude),\(coordonnee.longitude)" }
+}

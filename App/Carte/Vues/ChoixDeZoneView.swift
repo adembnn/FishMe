@@ -69,7 +69,7 @@ struct ChoixDeZoneView: View {
 
     private var enTete: some View {
         HStack(spacing: Espace.s) {
-            BoutonRond(role: .retour, rendu: .verre) { dismiss() }
+            BoutonRond(role: .fermer, rendu: .verre) { dismiss() }
             HStack(spacing: Espace.s) {
                 Image(systemName: "magnifyingglass")
                     .font(Police.taille(18, .heavy))

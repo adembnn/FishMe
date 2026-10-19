@@ -13,40 +13,83 @@ extension NiveauFrequentation {
     }
 }
 
-/// Le badge « Calme / Normal / Chargé » de la fiche, et pour un tronçon chargé le bouton « Coin plus calme ».
-/// Gratuit pour tous : aucun cadenas. Pas orange : ce n'est pas une alerte, rien n'est interdit.
+/// La couleur de la pastille de fréquentation d'un coin : verte (calme), orange (normal), rouge (chargé), grise (niveau inconnu :
+/// moins de 5 pêcheurs sur le tronçon, ou pas de réseau). La forme du symbole change aussi, pour se lire sans la couleur.
+nonisolated enum EtatPastille: Sendable, Equatable, CaseIterable {
+    case vert, orange, rouge, gris
+
+    static func pour(_ niveau: NiveauFrequentation?) -> EtatPastille {
+        switch niveau {
+        case .calme: return .vert
+        case .normal: return .orange
+        case .charge: return .rouge
+        case nil: return .gris
+        }
+    }
+
+    /// Le mot lu par VoiceOver : il n'est jamais écrit à l'écran (aucune phrase).
+    var mot: String {
+        switch self {
+        case .vert: return "calme"
+        case .orange: return "normal"
+        case .rouge: return "chargé"
+        case .gris: return "inconnue"
+        }
+    }
+
+    var symbole: String {
+        switch self {
+        case .vert: return "leaf.fill"
+        case .orange: return "person.2.fill"
+        case .rouge: return "person.3.fill"
+        case .gris: return "questionmark"
+        }
+    }
+}
+
+extension EtatPastille {
+    var couleur: Color {
+        switch self {
+        case .vert: return Palette.ouvert
+        case .orange: return Palette.bouchon
+        case .rouge: return CouleursCarte.rougeFrequentation
+        case .gris: return Palette.encreDouce
+        }
+    }
+}
+
+/// La pastille de fréquentation, à gauche du nom du coin : un rond de couleur avec un petit symbole, aucun mot.
+/// Gratuite pour tous (docs/frequentation.md). Rien n'est interdit par cette couleur : c'est une information, pas une règle.
+struct PastilleFrequentationView: View {
+    let niveau: NiveauFrequentation?
+
+    var body: some View {
+        let etat = EtatPastille.pour(niveau)
+        Image(systemName: etat.symbole)
+            .font(Police.taille(13, .heavy))
+            .foregroundStyle(Palette.surMarine)
+            .frame(width: 28, height: 28)
+            .background(etat.couleur, in: Circle())
+            .accessibilityElement()
+            .accessibilityLabel("Fréquentation : \(etat.mot)")
+    }
+}
+
+/// Pour un tronçon chargé, le bouton « Coin plus calme » (rien quand aucun coin plus calme n'existe).
+/// La fréquentation elle-même se lit sur la pastille du titre.
 struct FrequentationFicheView: View {
     let niveau: NiveauFrequentation
     /// Propose la station éligible la plus proche dont le tronçon n'est pas chargé ; `nil` : pas de bouton.
     let onCoinCalme: (() -> Void)?
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            badge
-            if niveau == .charge, let onCoinCalme {
-                Button(action: onCoinCalme) {
-                    Label("Coin plus calme", systemImage: "leaf.fill")
-                }
-                .buttonStyle(.secondaire)
-                .accessibilityHint("Propose un coin moins fréquenté sur la même rivière")
+        if niveau == .charge, let onCoinCalme {
+            Button(action: onCoinCalme) {
+                Label("Coin plus calme", systemImage: "leaf.fill")
             }
+            .buttonStyle(.secondaire)
+            .accessibilityHint("Propose un coin moins fréquenté sur la même rivière")
         }
-    }
-
-    private var badge: some View {
-        HStack(spacing: Espace.s) {
-            Image(systemName: niveau.symbole)
-                .font(Police.taille(13, .heavy))
-                .accessibilityHidden(true)
-            Text(niveau.libelle)
-                .font(Police.taille(15, .heavy))
-        }
-        .foregroundStyle(Palette.marine)
-        .padding(.horizontal, 14)
-        .frame(minHeight: 34)
-        .background(Palette.marineDoux, in: Capsule())
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("Fréquentation : \(niveau.libelle)")
     }
 }
 
