@@ -66,6 +66,7 @@ actor ServiceChatCloudKit: ServiceChat {
             return conteneurPermis
         }
     }
+    private var publique: CKDatabase { get throws { try conteneur.publicCloudDatabase } }
     private var privee: CKDatabase { get throws { try conteneur.privateCloudDatabase } }
     private var partagee: CKDatabase { get throws { try conteneur.sharedCloudDatabase } }
 
@@ -219,6 +220,20 @@ actor ServiceChatCloudKit: ServiceChat {
         try await executer {
             _ = try await conteneur.accept(metadata)
             zones = [:]
+        }
+    }
+
+    // MARK: Signalement
+
+    /// R2: seule la base publique est lue par la personne de garde ; droits « Authenticated : créer », lecture réservée à l'équipe
+    /// (à régler dans le tableau de bord ; sinon l'e-mail prérempli reste la preuve, voir R2 `moderation.md`).
+    func enregistrerSignalement(_ signalement: SignalementEnAttente) async throws {
+        try await executer {
+            do {
+                _ = try await publique.save(FabriqueRecordsChat.recordSignalement(signalement))
+            } catch let erreur as CKError where erreur.code == .serverRecordChanged {
+                return
+            }
         }
     }
 

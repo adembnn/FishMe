@@ -12,6 +12,9 @@ nonisolated struct InterlocuteurChat: Hashable, Identifiable, Sendable {
     var surnom: String
     /// Identifiant CloudKit du compte (À aligner L21 : `Ami.id` de `App/Amis/CartePartagee.swift`). Sert à nommer la zone partagée.
     var idCloudKit: String
+    /// A déclaré avoir 15 ans ou plus (déclaration faite dans L21). Faux : conversation en lecture seule, « Finis ton profil ».
+    /// À aligner L21 : le champ réel du profil. Sans effet sur les AUTRES (on ne lit ce champ que pour `moi`).
+    var a15Ans: Bool = true
 }
 
 /// Un club dont je suis membre (À aligner L22 : `Club.id`, `Club.nom`, `Membre`).

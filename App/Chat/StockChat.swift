@@ -17,6 +17,8 @@ actor StockChat {
         var vus: [String: Date] = [:]
         /// L'avis « les notifications sont refusées » ne s'affiche qu'une fois.
         var refusNotificationsAffiche = false
+        /// Signalements pas encore écrits dans la base de la personne de garde.
+        var signalements: [SignalementEnAttente] = []
     }
 
     static let messagesGardes = 200
@@ -104,6 +106,18 @@ actor StockChat {
     }
 
     // MARK: Modération locale
+
+    func signalementsEnAttente() -> [SignalementEnAttente] { etat.signalements }
+
+    func ajouter(_ signalement: SignalementEnAttente) {
+        etat.signalements.append(signalement)
+        sauvegarder()
+    }
+
+    func signalementParti(_ id: UUID) {
+        etat.signalements.removeAll { $0.id == id }
+        sauvegarder()
+    }
 
     func masquer(_ id: UUID) {
         etat.masques.insert(id)

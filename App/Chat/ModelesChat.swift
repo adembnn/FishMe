@@ -54,6 +54,17 @@ nonisolated struct ResumeConversation: Identifiable, Hashable, Sendable {
     var id: String { conversation.id }
 }
 
+/// Un signalement à écrire dans la base lue par la personne de garde (type `Signalement` de R2 `schema.md`).
+/// Gardé sur disque tant qu'il n'est pas parti : un signalement fait hors ligne n'est pas perdu.
+nonisolated struct SignalementEnAttente: Codable, Hashable, Identifiable, Sendable {
+    var id: UUID
+    /// `recordName` du message signalé.
+    var cible: UUID
+    var motif: String
+    var signalePar: String
+    var date: Date
+}
+
 nonisolated enum ErreurChat: Error, Equatable, Sendable {
     case iCloudIndisponible
     /// Pas de réseau, ou service occupé : le message reste dans la file.

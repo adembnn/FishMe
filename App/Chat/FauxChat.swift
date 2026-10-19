@@ -8,6 +8,7 @@ actor FauxServiceChat: ServiceChat {
     private(set) var abonnes: [ConversationID] = []
     private(set) var acceptees = 0
     private(set) var effaces: [String] = []
+    private(set) var signalements: [SignalementEnAttente] = []
     private var horsLigne: Bool
     private var compte: Bool
     private var lien: URL?
@@ -60,6 +61,11 @@ actor FauxServiceChat: ServiceChat {
 
     func accepterInvitation(_ invitation: InvitationChat) async throws {
         acceptees += 1
+    }
+
+    func enregistrerSignalement(_ signalement: SignalementEnAttente) async throws {
+        if horsLigne { throw ErreurChat.reseau }
+        signalements.append(signalement)
     }
 
     func effacerMesMessages(auteurId: String) async throws {

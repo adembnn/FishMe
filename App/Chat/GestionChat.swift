@@ -209,7 +209,8 @@ final class GestionChat {
     @discardableResult
     func envoyer(_ texte: String) async -> Bool {
         guard let conversation = ouverte, !ouverteFermee else { return false }
-        guard let moi else {
+        // Écrire exige un profil et d'avoir déclaré 15 ans ou plus (L21) ; sinon la conversation se lit seulement.
+        guard let moi, moi.a15Ans else {
             avis = .pasDeProfil
             return false
         }
@@ -259,7 +260,20 @@ final class GestionChat {
         await stock.avertissementRefusAffiche()
     }
 
+    /// Écrit dans la base de la personne de garde les signalements qui n'y sont pas encore (hors ligne : au retour du réseau).
+    private func rejouerSignalements() async {
+        for signalement in await stock.signalementsEnAttente() {
+            do {
+                try await service.enregistrerSignalement(signalement)
+                await stock.signalementParti(signalement.id)
+            } catch {
+                return
+            }
+        }
+    }
+
     private func rejouerFile() async {
+        await rejouerSignalements()
         guard !envoiEnCours else { return }
         envoiEnCours = true
         defer { envoiEnCours = false }
@@ -302,6 +316,9 @@ final class GestionChat {
     /// « Signaler » : le message disparaît tout de suite de cet iPhone, et l'e-mail prérempli est rendu (à ouvrir par la vue).
     func signaler(_ message: MessageChat, motif: MotifSignalement) async -> URL? {
         await stock.masquer(message.id)
+        await stock.ajouter(SignalementEnAttente(id: UUID(), cible: message.id, motif: motif.rawValue,
+                                                 signalePar: moi?.id ?? "inconnu", date: Date()))
+        await rejouerSignalements()
         await rafraichirAffichage()
         await chargerListe()
         return SignalementMessage.url(contact: configuration.contact, message: message, motif: motif)

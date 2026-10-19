@@ -12,6 +12,20 @@ nonisolated enum FabriqueRecordsChat {
     static let champsClub: Set<String> = ["club", "auteurNom", "surnom", "texte", "creeLe"]
     static let champsAmi: Set<String> = ["auteurNom", "surnom", "texte", "creeLe"]
 
+    static let typeSignalement = "Signalement"
+    static let champsSignalement: Set<String> = ["cible", "typeCible", "motif", "signalePar", "creeLe"]
+
+    /// Signalement d'un message (R2 `schema.md`, type 8) : un identifiant, un motif de la liste fermée, jamais de texte libre ni de contenu.
+    static func recordSignalement(_ s: SignalementEnAttente) -> CKRecord {
+        let record = CKRecord(recordType: typeSignalement, recordID: CKRecord.ID(recordName: s.id.uuidString))
+        record["cible"] = s.cible.uuidString
+        record["typeCible"] = "message"
+        record["motif"] = s.motif
+        record["signalePar"] = s.signalePar
+        record["creeLe"] = s.date
+        return record
+    }
+
     /// Message de club, dans la zone partagée du club (jamais la base publique : décision de Titouan, réservé aux membres).
     static func recordClub(_ message: MessageChat, zone: CKRecordZone.ID) -> CKRecord {
         let record = CKRecord(recordType: typeClub, recordID: CKRecord.ID(recordName: message.id.uuidString, zoneID: zone))

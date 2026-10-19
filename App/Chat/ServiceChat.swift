@@ -17,6 +17,8 @@ nonisolated protocol ServiceChat: Sendable {
     func lienDInvitation(pour conversation: ConversationID, participants: [String]) async throws -> URL?
     /// Un ami m'a envoyé le lien de sa conversation : je l'accepte (une fois).
     func accepterInvitation(_ invitation: InvitationChat) async throws
+    /// Écrit le `Signalement` en base publique (lu par la personne de garde). Le message signalé n'y est pas copié : seulement son identifiant.
+    func enregistrerSignalement(_ signalement: SignalementEnAttente) async throws
     /// Efface tous mes messages (clubs et amis) : « Supprimer mon profil ».
     func effacerMesMessages(auteurId: String) async throws
 }
