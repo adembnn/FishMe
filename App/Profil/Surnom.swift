@@ -15,16 +15,37 @@ nonisolated enum Surnom {
         case motRefuse
     }
 
-    /// « Gros-Brochet » et « gros-brochet » donnent la même clé : minuscules, sans accents.
+    /// Lettres que le pliage des accents ne ramène pas à l'ASCII (« œuf » donne « oeuf », « straße » donne « strasse »).
+    private static let translitterations: [Character: String] = [
+        "œ": "oe", "æ": "ae", "ß": "ss", "ø": "o", "ł": "l", "đ": "d", "ð": "d", "þ": "th", "ı": "i", "ĳ": "ij",
+    ]
+
+    /// « Gros-Brochet » et « gros-brochet » donnent la même clé : minuscules, sans accents, œ æ ß ø ł translittérés.
+    /// Le résultat n'est pas toujours ASCII (grec, cyrillique...) : `verifier` refuse ces surnoms, `identifiant` retire le reste.
     static func normaliser(_ brut: String) -> String {
-        brut.trimmingCharacters(in: .whitespacesAndNewlines)
+        var sortie = ""
+        for c in brut.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() {
+            if let remplacement = translitterations[c] { sortie += remplacement } else { sortie.append(c) }
+        }
+        return sortie
             .folding(options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: "fr_FR"))
             .lowercased()
     }
 
-    /// Identifiant de l'enregistrement `Profil` : l'unicité vient de lui (R2, `schema.md`). // R2: `p-` + surnom normalisé.
+    /// Identifiant de l'enregistrement `ProfilPublic` : l'unicité vient de lui (R2, `schema.md`). `p-` + surnom normalisé.
+    /// ASCII SEULEMENT : CloudKit refuse un `recordName` non ASCII (exception, donc crash). Tout caractère hors a-z, 0-9 et tiret est retiré ;
+    /// un surnom passé par `verifier` n'en perd aucun.
     static func identifiant(pour surnom: String) -> String {
-        "p-" + normaliser(surnom)
+        "p-" + versASCII(normaliser(surnom))
+    }
+
+    /// Ne garde que a-z, 0-9 et le tiret.
+    static func versASCII(_ texte: String) -> String {
+        String(texte.filter { estCaractereDIdentifiant($0) })
+    }
+
+    private static func estCaractereDIdentifiant(_ c: Character) -> Bool {
+        c.isASCII && (c.isLowercase || c.isNumber || c == "-")
     }
 
     /// `nil` si le surnom est permis : 3 à 20 caractères, lettres, chiffres, tiret (ni au début, ni à la fin, ni doublé).
@@ -32,14 +53,11 @@ nonisolated enum Surnom {
         let surnom = brut.trimmingCharacters(in: .whitespacesAndNewlines)
         if surnom.count < longueurMin { return .tropCourt }
         if surnom.count > longueurMax { return .tropLong }
-        if surnom.contains(where: { !estAutorise($0) }) { return .caractereInterdit }
+        // Contrôle sur la forme NORMALISÉE : « Éloïse » et « œuf » passent (« eloise », « oeuf »), « Ωμέγα » ou « щука » non (R2 : ASCII seulement).
+        if normaliser(surnom).contains(where: { !estCaractereDIdentifiant($0) }) { return .caractereInterdit }
         if surnom.hasPrefix("-") || surnom.hasSuffix("-") || surnom.contains("--") { return .tiretMalPlace }
         if filtre.refuse(surnom) { return .motRefuse }
         return nil
-    }
-
-    private static func estAutorise(_ c: Character) -> Bool {
-        c.isLetter || (c.isASCII && c.isNumber) || c == "-"
     }
 
     /// Le texte que la personne lit sous le champ. Court, sans jargon.

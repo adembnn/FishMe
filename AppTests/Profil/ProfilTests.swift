@@ -43,6 +43,38 @@ struct ProfilTests {
         #expect(Surnom.verifier("Perche42") == nil)
     }
 
+    @Test func lIdentifiantEstToujoursEnASCII() {
+        #expect(Surnom.verifier("œuf") == nil)
+        #expect(Surnom.identifiant(pour: "Œuf") == "p-oeuf")
+        #expect(Surnom.verifier("straße") == nil)
+        #expect(Surnom.identifiant(pour: "Straße") == "p-strasse")
+        #expect(Surnom.identifiant(pour: "Søren") == "p-soren")
+        #expect(Surnom.identifiant(pour: "Łukasz") == "p-lukasz")
+        #expect(Surnom.identifiant(pour: "Æsir") == "p-aesir")
+        for surnom in ["œuf", "straße", "Éloïse", "Søren", "Łukasz", "gros-brochet", "Perche42"] {
+            let id = Surnom.identifiant(pour: surnom)
+            #expect(id.unicodeScalars.allSatisfy { $0.isASCII })
+        }
+    }
+
+    @Test func lesAlphabetsNonLatinsSontRefuses() {
+        #expect(Surnom.verifier("Ωμέγα") == .caractereInterdit)
+        #expect(Surnom.verifier("щукаа") == .caractereInterdit)
+        #expect(Surnom.verifier("魚釣り人") == .caractereInterdit)
+        #expect(Surnom.verifier("poisson٣٤") == .caractereInterdit)
+        // Même non vérifié, un identifiant ne contient jamais autre chose que a-z, 0-9 et tiret après « p- ».
+        let id = Surnom.identifiant(pour: "щука-brochet")
+        #expect(id == "p--brochet" || id.unicodeScalars.allSatisfy { $0.isASCII })
+        #expect(id.unicodeScalars.allSatisfy { $0.isASCII })
+    }
+
+    @Test func leSurnomAfficheResteTelQuilEstEcrit() {
+        let dossier = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        let record = try? FabriqueProfil.record(surnom: "Œuf-de-Brochet", avatar: nil, creeLe: Date(), dossierTemp: dossier)
+        #expect(record?["surnomAffiche"] as? String == "Œuf-de-Brochet")
+        #expect(record?.recordID.recordName == "p-oeuf-de-brochet")
+    }
+
     @Test func leFiltreRefuseLesMotsEntiersSeulement() {
         let filtre = FiltreParListe(mots: ["zut"])
         #expect(filtre.refuse("Zut"))
