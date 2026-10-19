@@ -22,6 +22,8 @@ struct AquariumView: View {
     let modele: PescedexModele
     var fermer: (() -> Void)? = nil
     var emplacements: EmplacementsExternes = .vides
+    /// Le décor (N1) : fond, teinte et petits objets. Par défaut le fond d'avant les skins.
+    var skin: IdentifiantSkin = .parDefaut
 
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
     @State private var choisi: Emplacement?
@@ -67,7 +69,7 @@ struct AquariumView: View {
         GeometryReader { geo in
             ZStack {
                 if poissons.isEmpty {
-                    Image("fond-grand")
+                    Image(FondSkin.nomImage(skin, format: .grand))
                         .resizable()
                         .scaledToFill()
                         .frame(width: geo.size.width, height: geo.size.height)
@@ -81,7 +83,7 @@ struct AquariumView: View {
                     scene(taille: geo.size, moteur: moteur)
                 } else {
                     // Pendant la construction (poisson par poisson), le fond seul : le fil principal reste libre.
-                    Image("fond-grand")
+                    Image(FondSkin.nomImage(skin, format: .grand))
                         .resizable()
                         .scaledToFill()
                         .frame(width: geo.size.width, height: geo.size.height)
@@ -176,13 +178,14 @@ struct AquariumView: View {
             let px = reduireAnimations ? 0 : ReglagesEffets.parallaxe * sin(t * 0.21)
             let py = reduireAnimations ? 0 : ReglagesEffets.parallaxe * 0.7 * sin(t * 0.16 + 1.3)
             ZStack {
-                Image("fond-grand")
+                Image(FondSkin.nomImage(skin, format: .grand))
                     .resizable()
                     .scaledToFill()
                     .frame(width: l, height: h)
                     .scaleEffect(1.04)
                     .offset(x: -px * 0.4, y: -py * 0.4)
                     .clipped()
+                    .overlay { CoucheSkin(skin: skin) }
                 if !reduireAnimations {
                     CoucheFondEau().offset(x: -px * 0.5, y: -py * 0.5)
                 }

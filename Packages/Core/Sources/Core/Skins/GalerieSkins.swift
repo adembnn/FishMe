@@ -1,0 +1,111 @@
+import Foundation
+
+/// Une vignette de la galerie : le skin et son statut à la date du contexte.
+public struct EntreeGalerie: Sendable, Equatable, Identifiable {
+    public let skin: Skin
+    public let statut: StatutSkin
+    public var id: IdentifiantSkin { skin.id }
+
+    public init(skin: Skin, statut: StatutSkin) {
+        self.skin = skin
+        self.statut = statut
+    }
+}
+
+/// Les trois rangées de la galerie « Décors ».
+public struct RangeesGalerie: Sendable, Equatable {
+    /// Les décors gagnés en pêchant (avec « À gagner : … » pour ceux qui ne le sont pas encore) et ce qu'un défi a offert.
+    public let mesDecors: [EntreeGalerie]
+    /// Les thèmes de saison ouverts, et les skins Pro de toute l'année.
+    public let enCeMoment: [EntreeGalerie]
+    /// Les saisons closes, avec le mois de leur retour.
+    public let reviennentChaqueAnnee: [EntreeGalerie]
+
+    public init(mesDecors: [EntreeGalerie], enCeMoment: [EntreeGalerie], reviennentChaqueAnnee: [EntreeGalerie]) {
+        self.mesDecors = mesDecors
+        self.enCeMoment = enCeMoment
+        self.reviennentChaqueAnnee = reviennentChaqueAnnee
+    }
+}
+
+/// Range le catalogue dans les trois rangées. `afficher` écarte un skin dont les images n'existent pas encore
+/// (jamais de vignette vide) ; le décor de départ doit toujours passer.
+public func rangeesGalerie(catalogue: [Skin] = CatalogueSkins.tous, dans contexte: ContexteSkin,
+                           afficher: (Skin) -> Bool = { _ in true }) -> RangeesGalerie {
+    var mes: [EntreeGalerie] = []
+    var maintenant: [EntreeGalerie] = []
+    var plusTard: [EntreeGalerie] = []
+    for skin in catalogue.sorted(by: { $0.ordre < $1.ordre }) where afficher(skin) {
+        let s = statut(skin, dans: contexte)
+        let entree = EntreeGalerie(skin: skin, statut: s)
+        switch (skin.origine, s) {
+        case (.gagne, _):
+            mes.append(entree)
+        case (_, .horsSaison):
+            plusTard.append(entree)
+        case (.offertParDefi, .disponible):
+            mes.append(entree)
+        default:
+            maintenant.append(entree)
+        }
+    }
+    return RangeesGalerie(mesDecors: mes, enCeMoment: maintenant, reviennentChaqueAnnee: plusTard)
+}
+
+/// Les textes de la galerie, écrits ici pour être testés sans l'interface.
+public enum LibellesSkins {
+    private static let mois = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août",
+                               "septembre", "octobre", "novembre", "décembre"]
+
+    /// « Revient en octobre » : le mois seulement, jamais un nombre de jours.
+    public static func revient(le date: Date, calendrier: Calendar) -> String {
+        let numero = calendrier.component(.month, from: date)
+        guard (1...12).contains(numero) else { return "Revient chaque année" }
+        return "Revient en \(mois[numero - 1])"
+    }
+
+    /// « À gagner : 5 espèces différentes ».
+    public static func aGagner(_ critere: CritereDecor) -> String {
+        switch critere {
+        case .especesDifferentes(let n): return "À gagner : \(n) \(n > 1 ? "espèces différentes" : "espèce")"
+        case .sessions(let n): return "À gagner : \(n) \(n > 1 ? "sessions de pêche" : "session de pêche")"
+        case .unLegendaire: return "À gagner : un poisson légendaire"
+        }
+    }
+
+    /// La ligne sous le nom de la vignette.
+    public static func ligneStatut(_ statut: StatutSkin, calendrier: Calendar) -> String {
+        switch statut {
+        case .disponible: return "Disponible"
+        case .apercuSeulement: return "Inclus avec Pro"
+        case .horsSaison(let revientLe): return revient(le: revientLe, calendrier: calendrier)
+        case .aGagner(let critere): return aGagner(critere)
+        }
+    }
+
+    /// Pour VoiceOver : « Halloween, inclus avec Pro, aperçu seulement ».
+    public static func accessibilite(_ skin: Skin, statut: StatutSkin, calendrier: Calendar) -> String {
+        let origine: String
+        switch skin.origine {
+        case .gagne: origine = "décor gagné en pêchant"
+        case .pro, .saison: origine = "inclus avec Pro"
+        case .offertParDefi: origine = "récompense de défi"
+        }
+        let etat: String
+        switch statut {
+        case .disponible: etat = "disponible"
+        case .apercuSeulement: etat = "aperçu seulement, Pro requis pour l'appliquer"
+        case .horsSaison, .aGagner: etat = ligneStatut(statut, calendrier: calendrier)
+        }
+        return "\(skin.nom), \(origine), \(etat)"
+    }
+
+    /// Libellé du bouton du bandeau d'aperçu.
+    public static func boutonAppliquer(_ statut: StatutSkin) -> String? {
+        switch statut {
+        case .disponible: return "Appliquer"
+        case .apercuSeulement: return "Appliquer avec Pro"
+        case .horsSaison, .aGagner: return nil
+        }
+    }
+}
