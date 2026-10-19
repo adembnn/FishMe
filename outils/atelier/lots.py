@@ -127,7 +127,7 @@ def verifier(lots):
 # Les hooks de Claude Code, les crochets de git et les scripts appellent ces fonctions.
 # ---------------------------------------------------------------------------
 
-LOT_ATELIER = "H0"
+LOTS_ATELIER = ("H0", "H1")  # H0 (15 oct., termine) puis H1 (19 oct.) : le lot qui tient l'atelier
 BRANCHES_PRINCIPALES = ("main", "master")
 FICHIERS_FABRIQUES = ["stations-especes.json", "rarete-departements.json"]  # jamais commités (scripts/donnees.sh)
 DOSSIERS_SANS_MARQUE = ["App/", "store/"]  # « Poké » y est interdit (marque de Nintendo)
@@ -209,7 +209,7 @@ def parties(chemins, lots=None):
             trouvees.add("documents")
         if c in ("docs/lots.md", "outils/atelier/lots.py"):
             trouvees.add("lots")
-        if proprietaire(c, lots) == LOT_ATELIER:
+        if proprietaire(c, lots) in LOTS_ATELIER:
             trouvees.add("atelier")
         if any(c.startswith(d) for d in DOSSIERS_PAQUETS):
             trouvees.add("core")

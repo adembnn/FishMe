@@ -27,6 +27,8 @@ from types import SimpleNamespace
 
 sys.dont_write_bytecode = True  # pas de __pycache__ dans le dépôt
 RACINE = Path(__file__).resolve().parents[2]
+# Sous Windows, « bash » seul trouverait celui de WSL (System32) : on prend celui du PATH (Git Bash).
+BASH = shutil.which("bash") or "bash"
 sys.path.insert(0, str(RACINE / "outils" / "atelier"))
 import lots as atelier  # noqa: E402
 
@@ -161,7 +163,12 @@ def ecrire_executable(chemin, texte):
 # ---------------------------------------------------------------------------
 
 
+DELAI = int(os.environ.get("ESSAI_DELAI", "1"))  # multiplicateur des délais : 8 sous Windows (14 000 fichiers copiés et ajoutés)
+
+
 def lancer(cmd, cwd, env, entree=None, timeout=90):
+    timeout = timeout * DELAI
+    cmd = [BASH] + list(cmd[1:]) if cmd and cmd[0] == "bash" else cmd
     try:
         return subprocess.run(cmd, cwd=str(cwd), env=env, input=entree, text=True, capture_output=True, timeout=timeout)
     except subprocess.TimeoutExpired as e:
@@ -235,7 +242,7 @@ def verifications_statiques():
     scripts = sorted(RACINE.glob("scripts/*.sh")) + sorted(p for p in (RACINE / ".githooks").glob("*") if p.is_file()) \
         + sorted((RACINE / ".claude" / "hooks").glob("*.sh"))
     for s in scripts:
-        p = subprocess.run(["bash", "-n", str(s)], capture_output=True, text=True)
+        p = subprocess.run([BASH, "-n", str(s)], capture_output=True, text=True)
         bilan.verifier(f"syntaxe bash : {s.relative_to(RACINE)}", p.returncode == 0, p.stderr)
     for s in sorted((RACINE / ".claude" / "hooks").glob("*.py")) + sorted((RACINE / "outils" / "atelier").glob("*.py")):
         try:
@@ -283,9 +290,25 @@ def verifications_statiques():
     textes = ""
     for s in scripts + sorted((RACINE / ".claude" / "hooks").glob("*.py")) + [RACINE / ".claude" / "settings.json"]:
         textes += s.read_text(encoding="utf-8") + "\n"
-    dossiers = [d for lot in atelier.charger() if lot["code"] != atelier.LOT_ATELIER for d in lot["dossiers"] if d.endswith("/")]
+    dossiers = [d for lot in atelier.charger() if lot["code"] not in atelier.LOTS_ATELIER for d in lot["dossiers"] if d.endswith("/")]
     en_dur = [d for d in dossiers if d in textes]
     bilan.verifier("aucun dossier de lot écrit en dur dans les scripts et les hooks (tout vient de docs/lots.md)", not en_dur, en_dur)
+
+    # Lots du backlog (fiches N1 à N6 du 19 oct., D2 bis) : lus dans la vraie table du dépôt, pas dans celle de l'essai.
+    reels = atelier.charger()
+    bilan.verifier("docs/lots.md : branches et dossiers disjoints, tout lot du backlog compris", not atelier.verifier(reels), atelier.verifier(reels))
+    for code, branche, chemin in (("N1", "lot/skins-aquarium", "App/Aquarium/Skins/Galerie.swift"),
+                                  ("N2", "lot/envies", "App/Envies/EnviesView.swift"),
+                                  ("N3", "lot/mesures", "Packages/Core/Sources/Core/Conditions/Mesures.swift"),
+                                  ("N4", "lot/records", "App/Records/RecordsView.swift"),
+                                  ("N5", "lot/ma-federation", "App/CartePeche/CarteView.swift"),
+                                  ("N6", "lot/reperes", "Packages/Core/Sources/Core/Reperes/Repere.swift"),
+                                  ("D2B", "lot/hubeau-temperature", "outils/hubeau-temperature/collecter.py")):
+        lot = next((l for l in reels if l["code"] == code), None)
+        bilan.verifier(f"docs/lots.md : le lot {code} est au tableau, sur {branche}, et possède {chemin}",
+                       lot is not None and lot["branche"] == branche and atelier.proprietaire(chemin, reels) == code,
+                       str(lot and (lot["branche"], atelier.proprietaire(chemin, reels))))
+        bilan.verifier(f"docs/lots.md : la branche {branche} se lit comme le lot {code}", (atelier.lot_de_branche(branche, reels) or {}).get("code") == code)
 
     wf = RACINE / ".github" / "workflows" / "verif.yml"
     t = wf.read_text(encoding="utf-8") if wf.exists() else ""
@@ -349,6 +372,8 @@ def construire_monde(tmp):
         if src.is_file():
             (app / f).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, app / f)
+    # L'essai joue sur sa propre table de lots (celle du 15-16 oct.), jamais sur celle du dépôt : H1, 19 oct.
+    shutil.copy2(RACINE / "outils" / "atelier" / "essai-lots.md", app / "docs" / "lots.md")
     git(["add", "-A"], app, env)
     git(["commit", "-q", "-m", "base de l'essai"], app, env)
     git(["remote", "add", "origin", origin], app, env)
