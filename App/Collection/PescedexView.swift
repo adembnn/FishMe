@@ -778,6 +778,9 @@ struct FicheEspeceView: View {
                         .tuileFishMe(rayon: Rayon.m)
                         .padding(.top, Espace.s)
                 }
+                // L18 : les quatre paliers vivent ici (plus sous une carte ouverte), avec celui de l'espèce entouré.
+                QuatreRaretesView(actuel: style)
+                    .padding(.top, Espace.l)
                 // « Où il vit » (cache, eau) : aucune donnée d'habitat n'existe, on garde les relevés OFB ci-dessus.
                 pourToi
             }

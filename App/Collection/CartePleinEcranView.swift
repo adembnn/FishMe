@@ -5,8 +5,8 @@ import UIKit
 /// La carte d'une prise, ouverte en plein écran (P24 A pour le recto, P25 C pour le verso) : le poisson nage, les rares et légendaires brillent,
 /// un toucher la retourne, un glissement horizontal la fait tourner au doigt (elle se pose sur la face la plus proche), l'inclinaison de l'iPhone
 /// lui donne un léger relief et un glissement vers le bas ferme. Le mouvement n'est lancé qu'ici, jamais sur la grille du classeur.
-/// Recto : fond bleu clair, fermer à gauche, retourner et partager à droite, rien d'autre. Verso : fond blanc, fermer et partager,
-/// la photo seule sur la carte (Adem, 16 oct.), et « Voir le recto » en bas.
+/// Recto : fond bleu clair, fermer à gauche, retourner et partager à droite, « Enregistrer dans Photos » en bas. Verso : fond blanc,
+/// fermer et partager, la photo seule sur la carte (Adem, 16 oct.), « Enregistrer dans Photos » (la photo) et « Voir le recto » en bas.
 struct CartePleinEcranView: View {
     let infos: InfosCarte
     let photo: Data?
@@ -39,15 +39,13 @@ struct CartePleinEcranView: View {
                 carte
                     .frame(width: largeurCarte)
                     .padding(.top, 15)
-                if retournee {
-                    // Verso : la photo seule (Adem, 16 oct.), rien d'autre sous la carte.
-                    Spacer(minLength: Espace.l)
-                } else {
-                    Spacer(minLength: Espace.l)
-                    QuatreRaretesView(actuel: infos.style)
-                        .padding(.horizontal, 8)
-                        .padding(.bottom, 8)
-                }
+                // Plus de panneau « raretés » sous une carte ouverte (L18) : il vit dans la fiche d'une espèce.
+                Spacer(minLength: Espace.l)
+                // Recto : l'image de la carte ; verso : la photo du pêcheur (déjà sans GPS). Jamais de lieu dans Photos.
+                EnregistrerDansPhotosBouton(donnees: retournee ? photo : png)
+                    .id(retournee)
+                    .padding(.horizontal, Espace.bord)
+                    .padding(.bottom, retournee ? Espace.s : Espace.l)
                 if retournee {
                     Button(action: retourner) {
                         Label("Voir le recto", systemImage: "arrow.triangle.2.circlepath")

@@ -1,8 +1,9 @@
 import SwiftUI
 import UIKit
 
-/// Le panneau du bas du recto (P24 A) : « Quatre raretés » et quatre cartes miniatures, une par palier, chacune avec un poisson de profil.
-/// La carte du palier de la prise ouverte est entourée de marine. Les poissons sont des exemples d'image, sans chiffre.
+/// Les quatre paliers de rareté en quatre cartes miniatures, chacune avec un poisson de profil (P24 A).
+/// Depuis L18 il ne s'affiche plus sous une carte ouverte ni dans la révélation : il explique les paliers dans la fiche d'une espèce
+/// (`FicheEspeceView`). La carte du palier de l'espèce est entourée de marine. Les poissons sont des exemples d'image, sans chiffre.
 struct QuatreRaretesView: View {
     /// Palier de la carte ouverte, entouré.
     let actuel: StyleRarete
@@ -16,16 +17,10 @@ struct QuatreRaretesView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Capsule()
-                .fill(Palette.encreDouce.opacity(0.3))
-                .frame(width: 36, height: 5)
-                .frame(maxWidth: .infinity)
-                .padding(.bottom, Espace.s)
-            HStack(alignment: .firstTextBaseline) {
-                Text("Quatre raretés").font(Police.titre).foregroundStyle(Palette.encre)
-                Spacer(minLength: 0)
-                Text("Touche une carte").font(Police.detail).foregroundStyle(Palette.encreDouce)
-            }
+            Text("Les paliers de rareté")
+                .font(Police.titre)
+                .foregroundStyle(Palette.encre)
+                .accessibilityAddTraits(.isHeader)
             HStack(alignment: .top, spacing: 0) {
                 ForEach(Self.exemples, id: \.nom) { exemple in
                     MiniatureRarete(style: exemple.style, nom: exemple.nom, image: exemple.image, entouree: exemple.style == actuel)
@@ -36,11 +31,10 @@ struct QuatreRaretesView: View {
             .padding(.horizontal, 4)
         }
         .padding(.horizontal, 20)
-        .padding(.top, Espace.s)
-        .padding(.bottom, Espace.xl)
+        .padding(.top, Espace.l)
+        .padding(.bottom, Espace.l)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 38, style: .continuous))
-        .shadow(color: Palette.encre.opacity(0.10), radius: 20, y: -2)
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
         .accessibilityElement(children: .contain)
     }
 }
