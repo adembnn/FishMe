@@ -83,6 +83,7 @@ nonisolated enum LieuPublication {
         switch mode {
         case .coursEau: return LieuChoisi(mode: mode, lieuTexte: etiquette(.coursEau, contexte), departement: code)
         case .departement: return LieuChoisi(mode: mode, lieuTexte: "", departement: code)
+        // R2: « aucun lieu » ne publie aucun département : la publication n'entre pas dans « Dans ta région » (décision de Titouan).
         case .aucun: return LieuChoisi(mode: mode, lieuTexte: "", departement: "")
         }
     }
