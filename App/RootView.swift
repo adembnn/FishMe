@@ -130,7 +130,6 @@ final class ParcoursApp {
     var volDemande = false
     var sessionReduite = false
     var consentement: Consentement
-    private var consentementPropose = false
     private var carteListeEnvoyee = false
     @ObservationIgnored private var rendu: Task<Void, Never>?
 
@@ -345,7 +344,7 @@ final class ParcoursApp {
         proposerSuitePremierLancement()
     }
 
-    // MARK: Premier lancement : position (carte), niveau (L13, sur la carte), tunnel (L13), consentement (L6)
+    // MARK: Premier lancement : position (carte), niveau (L13, sur la carte), tunnel (L13)
 
     private var questionVue: Bool { UserDefaults.standard.bool(forKey: ClesConseils.questionVue) }
     private var tunnelVu: Bool { UserDefaults.standard.bool(forKey: ClesConseils.tunnelVu) }
@@ -358,9 +357,6 @@ final class ParcoursApp {
         if !tunnelVu {
             UserDefaults.standard.set(true, forKey: ClesConseils.tunnelVu)
             courant = .tunnel
-        } else if consentement == .inconnu, !consentementPropose {
-            consentementPropose = true
-            courant = .consentement
         }
     }
 
@@ -735,8 +731,6 @@ private struct RacineContenu: View {
 
     private var onglets: some View {
         avecModales(tabView, dansSession: false)
-            // Après la 1re vraie prise, une fois : comment poser « Mon aquarium » sur l'écran d'accueil.
-            .astuceAjouterWidget(prises: app.pescedex?.detaillees.filter { !$0.prise.exemple }.count ?? 0)
             // Bouton « Prise » de l'écran verrouillé (P15) : l'intent laisse l'action en attente, l'app la joue au retour.
             .onChange(of: scenePhase) { _, phase in
                 guard phase == .active, let action = ActionSessionEnAttente.lire() else { return }
