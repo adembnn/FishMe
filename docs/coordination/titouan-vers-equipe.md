@@ -48,3 +48,32 @@ Format : `- HHhMM (Paris) : ...`
 - Copie de `mac/integration` **ff6c1ec9** + `lot/widget-aquarium` **ea030503** + `lot/prise-sans-taille` **d964dbca** + `lot/correctifs-22301` **bdc786aa** : les 3 fusions sans aucun conflit.
 - **Branche `titouan/compile-22302`, hash `ad63fb90`** (poussée, sans --force).
 - Compilation : **BUILD SUCCEEDED** (simulateur iPhone 18 Pro, FISHME_ICLOUD=NO, 0 erreur). Pas de Release signé de mon côté (pas de certificat sur mon Mac).
+
+## 19 oct. — Titouan : lots L18, L19, L21, L23, L24 et R2 écrits et poussés (rien n'est compilé)
+**À l'agent d'Adem : voici ce que tu dois reprendre.** Titouan n'a pas de Mac ; tout est du Swift écrit sans compilateur. Note complète : `docs/reports/passation-titouan-19-oct.md` sur la branche `titouan/passation-lots` (c7394de4). La boucle de synchro de la veille s'était arrêtée le 16 oct. : ce message n'est lu que si quelqu'un rouvre ce fichier.
+
+**1. Branches à récupérer (toutes issues de `origin/main` du 19 oct., indépendantes les unes des autres)**
+- `lot/collection-2` **fbb6dfc6** (L18 Pescedex direct)
+- `lot/prise-2` **7758521e** (L19 prise : caméra, carte, bloc de règles dans `App/Style/BlocRegles/`)
+- `lot/profil` **a4226420** (L21 profil et amis ; modifie aussi `App/Amis/`)
+- `lot/feed` **9587ccd9** (L23 feed)
+- `lot/chat` **0b9447f6** (L24 chat)
+- `lot/rapport-reseau` **638d751a** (R2 : `docs/reports/reseau/` et prototype CloudKit `outils/reseau/` à lancer par Sullyvan)
+
+**2. Ce qui a été vérifié (Windows seulement)** : les cinq branches de code se fusionnent **sans conflit de texte** dans une copie de `main` (ordre : profil, collection-2, prise-2, feed, chat). Une recherche des types Swift déclarés deux fois a trouvé **deux collisions qui auraient cassé la compilation, corrigées** : `MotifSignalement` (défini dans L21, L23 et L24 : renommé `MotifSignalementPublication` pour L23 et `MotifSignalementMessage` pour L24, L21 garde le nom) et `LigneRegleView` (existait déjà dans `App/Carte/Vues/`, L19 a renommé la sienne `LigneRegleBlocView`). Aucune autre collision de type de premier niveau. **Rien n'est compilé** : ni la fusion, ni chaque branche seule.
+
+**3. Ce que tu dois reprendre (L25, tout est détaillé dans la note de passation)**
+- **Brancher dans `RootView`** : `finisTonProfil()` sur Communauté (L21), `FeedVue` via `CommunauteView(fil:)` (L23), `ListeConversationsView` et les boutons d'écriture (L24), retrait de `declarer`/`voirAmis` (L18).
+- **Capacités et `Info.plist`** : Push Notifications, iCloud/CloudKit base publique, accès photothèque.
+- **Tableau de bord CloudKit** : types `Profil`, `Publication`, `Like`, `Commentaire`, `Signalement`, `Blocage` (privée) ; index `surnomNorm`, `creeLe`, `club`, `auteurNom`, `departement`, `publication`, `recordName` (messages) ; droits ; déploiement en Production.
+- **Composer `EffaceurContenu`** (défini par L21) avec les effaceurs de L23 et L24 via `RegistreEffaceurs.partage.ajouter(...)`.
+- **Une table des 13 régions dans `Core`** (nom, locution, départements), absente : « Ma région » (L18) et « Dans ta région » (L23) en dépendent.
+- Vérifier que `scripts/verif.sh` accepte le dossier `App/Style/BlocRegles/` (frontières).
+
+**4. Décisions de Titouan à valider par Adem** : réseau social **gratuit** ; **15 ans minimum** pour publier, commenter, écrire (déclaration « 15 ans ou plus », sans date de naissance) ; « aucun lieu » n'apparaît pas dans le fil de région ; chat de club réservé aux membres (zone partagée par club, limites écrites dans `ServiceChatCloudKit.swift` et `AnnuaireChat.swift`) ; signalement = e-mail pré-rempli à fishme.app@gmail.com **et** enregistrement `Signalement` en base ; la boîte est lue par Titouan, Adem et Sullyvan (proposition : un référent par semaine, réponse sous 24 h).
+
+**5. Écarts avec les fiches (à trancher)** : l'invitation par surnom n'existe pas (L21 : « Inviter » partage ma collection) ; messages d'amis par zone partagée par paire, pas la zone « Pescedex » ; le groupe « Horaires » est masqué pour le brochet (L19 : deux groupes au lieu de trois) ; l'import galerie contredit l'ancienne règle « une carte ne naît que d'une photo prise » ; trois listes de mots interdits à unifier (L21 `FiltreParListe`, L23 `FiltreTexte`, L24 `FiltreMessage`), à remplacer par LDNOOBW (CC-BY-4.0) sans faux positifs de pêche ; les CGU et la confidentialité de R2 sont des brouillons pour un juriste de MWM.
+
+**6. Pour Sullyvan** : compiler chaque branche (`scripts/verif.sh`, `/banc Lxx`), renvoyer les erreurs à Titouan en 3 lignes ; lancer le prototype de `outils/reseau/` et coller les chiffres (aucun n'est mesuré). API à relire : liste dans la note de passation (section 7).
+
+**7. Ce que Titouan fait ensuite** : plus de lot dans son périmètre du plan. Il n'ouvre pas de nouvelle fonction sans l'écrire ici d'abord.
