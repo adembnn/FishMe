@@ -185,6 +185,17 @@ class StationsRecalees(unittest.TestCase):
             e = self.lancer([self.st(i, eau="Le Lac") for i in range(25)])
         self.assertTrue(e and all("le tracé s'appelle « La Marne »" in m for m in e), e)
 
+    def test_trace_sans_nom_et_station_sans_eau_sont_egaux(self):
+        """Une station rattachée à un tracé sans nom (eau: null) ne doit pas être refusée parce que None != \"\"."""
+        f = {"type": "Feature", "properties": {"CdEntiteHydrographique": "F---0200", "NomEntiteHydrographique": ""},
+             "geometry": {"type": "LineString", "coordinates": [[2.0, 48.6], [2.1, 48.6]]}}
+        with open(os.path.join(self.trace, "paquet-sans-nom.geojson"), "w") as h:
+            self.json.dump({"type": "FeatureCollection", "features": [f]}, h)
+        stations = [self.st(i, lat=48.60003, lon=2.0512 + i / 1e5, eau=None, code="F---0200") for i in range(25)]
+        with unittest.mock.patch("sys.stdout"):
+            e = self.lancer(stations)
+        self.assertFalse([m for m in e if "le tracé s'appelle" in m], e)
+
     def test_sans_trace_l_echantillon_est_un_manque(self):
         vd.verifier_stations(self.fichier([self.st(i) for i in range(25)]), os.path.join(self.dossier.name, "vide"))
         self.assertEqual(vd.erreurs, [])

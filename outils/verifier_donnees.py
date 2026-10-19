@@ -343,7 +343,7 @@ def verifier_stations(chemin, dossier_trace=None):
                 meilleur = (r[0], n)
         if meilleur is None:
             err(f"{nom} : station {s['id']} true à plus de {ECART_ECHANTILLON_M} m du tracé de son cours d'eau ({s.get('eau')}, {s.get('code_eau')})")
-        elif meilleur[1] != s.get("eau"):
+        elif (meilleur[1] or "") != (s.get("eau") or ""):  # tracé sans nom et station sans eau : même absence
             err(f"{nom} : station {s['id']} : cours d'eau « {s.get('eau')} », mais le tracé s'appelle « {meilleur[1]} »")
         else:
             ok += 1
