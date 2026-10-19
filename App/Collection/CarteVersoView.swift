@@ -8,6 +8,8 @@ import UIKit
 struct CarteVersoView: View {
     let infos: InfosCarte
     let photo: Data?
+    /// Image déjà décodée par l'appelant (révélation) : évite de décoder le JPEG dans le body. Sinon, repli : décodage depuis `photo`.
+    var imageDecodee: UIImage? = nil
     /// Gardé pour les appelants ; « comment la pêcher » s'affiche dans `FaitsPrise`.
     var emplacements: EmplacementsExternes = .vides
 
@@ -28,7 +30,7 @@ struct CarteVersoView: View {
 
     @ViewBuilder
     private func fond(_ taille: CGSize) -> some View {
-        if let photo, let image = UIImage(data: photo) {
+        if let image = imageDecodee ?? photo.flatMap({ UIImage(data: $0) }) {
             PhotoVersoEntiere(image: image)
         } else {
             ZStack {

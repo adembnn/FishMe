@@ -23,9 +23,9 @@ struct RevelationCarteView: View {
 
     private enum Face { case recto, verso }
 
-    /// ⚠ à trancher par Adem : la photo du pêcheur qui rétrécit vers le dos de la carte (variation B, E6) est la seule image de la photo
-    /// visible avant la bascule recto/verso. Elle est gardée (c'est l'ouverture choisie de la révélation) ; mettre `false` la retire.
-    private static let photoRetrecitAuDepart = true
+    /// Décision de Titouan (19 oct., bug signalé par Adem) : la photo ne rétrécit plus au début de la révélation, aucune image
+    /// de la photo n'est visible avant la bascule recto/verso.
+    private static let photoRetrecitAuDepart = false
 
     @State private var debut: Date?
     @State private var evenementsJoues: Set<Int> = []
@@ -217,15 +217,18 @@ struct RevelationCarteView: View {
                 .accessibilityLabel(infos.texteVoixOff)
                 .accessibilityHint("Touche pour voir la photo au verso")
                 .background {
-                    // La photo du verso est décodée dès maintenant, derrière le recto, mais ne se voit pas : opacité 0 (jamais 0,01,
-                    // qui laisse une image fantôme), cachée à VoiceOver et sans toucher. Elle passe à 1 au passage de 90 degrés.
-                    CarteVersoView(infos: infos, photo: photo, emplacements: emplacements)
-                        .opacity(0)
-                        .accessibilityHidden(true)
-                        .allowsHitTesting(false)
+                    // La photo du verso est décodée UNE fois (`imagePhoto`, dans `demarrer`), jamais dans le body : ici le verso
+                    // est seulement construit derrière le recto, invisible (opacité 0, jamais 0,01 : image fantôme), caché à
+                    // VoiceOver et sans toucher. Il n'est montré qu'après les 90 degrés (`versoAffiche`).
+                    if photo == nil || imagePhoto != nil {
+                        CarteVersoView(infos: infos, photo: photo, imageDecodee: imagePhoto, emplacements: emplacements)
+                            .opacity(0)
+                            .accessibilityHidden(true)
+                            .allowsHitTesting(false)
+                    }
                 }
         case .verso:
-            CarteVersoView(infos: infos, photo: photo, emplacements: emplacements)
+            CarteVersoView(infos: infos, photo: photo, imageDecodee: imagePhoto, emplacements: emplacements)
                 .opacity(versoAffiche ? 1 : 0)
                 .accessibilityHint("Touche pour revoir le recto")
         }
