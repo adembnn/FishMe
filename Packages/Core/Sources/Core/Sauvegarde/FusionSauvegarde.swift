@@ -11,23 +11,44 @@ public struct ProfilSauvegarde: Sendable, Equatable, Codable {
     public var clubs: Data?
     public var sorties: [Sortie]
     public var sessionsTerminees: Int
+    /// La liste d'envies d'espèces, pierres tombales comprises (voir `ListeEnvies`).
+    public var envies: [Envie]
     /// Dernière modification connue, pour savoir quel réglage gagne entre deux iPhones.
     public var modifie: Date
 
     public init(niveau: String? = nil, questionVue: Bool = false, tunnelVu: Bool = false, clubs: Data? = nil,
-                sorties: [Sortie] = [], sessionsTerminees: Int = 0, modifie: Date = Date(timeIntervalSince1970: 0)) {
+                sorties: [Sortie] = [], sessionsTerminees: Int = 0, envies: [Envie] = [],
+                modifie: Date = Date(timeIntervalSince1970: 0)) {
         self.niveau = niveau
         self.questionVue = questionVue
         self.tunnelVu = tunnelVu
         self.clubs = clubs
         self.sorties = sorties
         self.sessionsTerminees = sessionsTerminees
+        self.envies = envies
         self.modifie = modifie
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case niveau, questionVue, tunnelVu, clubs, sorties, sessionsTerminees, envies, modifie
+    }
+
+    /// Tolérant : une sauvegarde écrite avant la liste d'envies n'a pas le champ `envies`, elle se lit comme une liste vide.
+    public init(from decoder: any Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        self.niveau = try c.decodeIfPresent(String.self, forKey: .niveau)
+        self.questionVue = try c.decode(Bool.self, forKey: .questionVue)
+        self.tunnelVu = try c.decode(Bool.self, forKey: .tunnelVu)
+        self.clubs = try c.decodeIfPresent(Data.self, forKey: .clubs)
+        self.sorties = try c.decode([Sortie].self, forKey: .sorties)
+        self.sessionsTerminees = try c.decode(Int.self, forKey: .sessionsTerminees)
+        self.envies = try c.decodeIfPresent([Envie].self, forKey: .envies) ?? []
+        self.modifie = try c.decode(Date.self, forKey: .modifie)
     }
 
     /// Profil d'un iPhone neuf : rien à garder, tout ce qui vient d'iCloud gagne.
     public var estVide: Bool {
-        niveau == nil && !questionVue && !tunnelVu && clubs == nil && sorties.isEmpty && sessionsTerminees == 0
+        niveau == nil && !questionVue && !tunnelVu && clubs == nil && sorties.isEmpty && sessionsTerminees == 0 && envies.isEmpty
     }
 }
 
@@ -65,6 +86,7 @@ public enum FusionSauvegarde {
             clubs: recent.clubs ?? ancien.clubs,
             sorties: sorties,
             sessionsTerminees: max(local.sessionsTerminees, distant.sessionsTerminees, sorties.count),
+            envies: ListeEnvies.fusionner(local.envies, distant.envies).envies,
             modifie: max(local.modifie, distant.modifie))
     }
 }
