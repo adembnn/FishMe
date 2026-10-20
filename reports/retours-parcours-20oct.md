@@ -32,6 +32,17 @@ Non vu : chat, publication d'un cadeau, repères, aquarium, widget, réglages, P
 | B12 | Corrections B5 à B9 d'A | B5 : le contenu est rogné au bord de la barre d'onglets, plus caché dessous, mais les noms de poissons ne se lisent qu'en faisant défiler (vu à l'écran). B7 vérifié à l'écran par A. B6 et B9 non vérifiés à l'écran. | partiel |
 | B9 | Carte d'exemple | Le bouton dit « Ajouter au Pescedex » alors que la ligne au-dessus dit qu'elle ne compte pas. | **à corriger** (texte) |
 | B10 | Démarrage de la session | Le paywall s'est ouvert à « Commencer une session » (deux touchers lents), alors que la règle dit à la fin. Il s'est aussi ouvert à la fin, correctement. | **à reproduire** avec un seul toucher |
+| B13 | Aquarium | Aucune sortie : le bouton « Décors » recouvrait la croix de fermeture (même coin). « Décors » est passé en haut à droite. | corrigé, non revu à l'écran |
+| B14 | Communauté | Sections longtemps sur « Chargement… » ; l'onglet Amis attend ~20 s avant « Tes amis ne peuvent pas s'ouvrir ». Le compte iCloud est lu d'abord (4 s max). | partiel : l'attente de 20 s sur Amis n'est pas expliquée |
+| B15 | Communauté | La barre du bas recouvrait « J'aime / Commenter ». `ignoresSafeArea` retiré. | corrigé, non revu à l'écran |
+| B16 | Publication | Pas d'âge lisible. Ajout de « à l'instant », « il y a N min / h / j » (libellés inventés par A, gardés). | corrigé, non revu à l'écran |
+| B17 | Carte d'un poisson | Centile et trois colonnes vides sur une carte déclarée ; « CEN · centile de taille ». Maintenant « Sans photo ni mesure » et « Taille comparée aux prises » (libellés inventés, gardés). | corrigé, non revu à l'écran |
+| B18 | Création de club | Le champ « Nom du club » ne prenait pas le toucher. Zone de toucher étendue à la rangée (hypothèse, non reproduit). | non confirmé |
+
+**B8 tranché par Adem (20 oct.) : on garde l'étape « Brochet / Brochet aquitain ».**
+**B11 expliqué :** le trousseau refuse l'écriture (code −34018) dans un build non signé ; à refaire avec un build signé. Les deux tests du trousseau sont ignorés tant que l'app n'est pas signée.
+**R1, R4, R6 :** filtre d'espèce visible (nom sur le bouton + croix, vu à l'écran, croix très faible) ; recentrage de la carte corrigé et couvert par un test (pas revu à l'écran) ; Réglages et Repères derrière un bouton « Plus », espaces resserrés (vu à l'écran).
+**Run du 20 oct. 22:48 (xcresult) : 691 réussis, 5 échoués, 2 ignorés sur 698.** Échecs : 2 tests Aquarium (rendu à 0 pixel), 1 test des décors (contredit le cadre voulu), 2 tests StoreKit (simulateur d'achats).
 
 ## Remarques d'utilisateur (choix à faire)
 - **R1.** Le pêcheur ne sait pas qu'un filtre d'espèce est actif : le bouton « Espèces » ne change pas d'aspect.
