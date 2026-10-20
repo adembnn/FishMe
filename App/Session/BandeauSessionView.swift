@@ -11,6 +11,11 @@ struct BandeauSessionView: View {
     let ajouterPrise: () -> Void
     /// Rouvre `SessionEnCoursView` en plein écran.
     let rouvrir: () -> Void
+    /// N6 : « Ajouter un repère ici ». `nil` : pas de bouton.
+    var ajouterRepere: (() -> Void)? = nil
+    /// N6 : « Rattacher au repère X ? » après une prise, avec la réponse (`true` : rattacher). `nil` : pas de question.
+    var proposition: PropositionRepere? = nil
+    var repondreProposition: ((Bool) -> Void)? = nil
 
     var body: some View {
         if moteur.enCours != nil {
@@ -21,6 +26,23 @@ struct BandeauSessionView: View {
     }
 
     private func contenu(maintenant: Date) -> some View {
+        VStack(spacing: Espace.s) {
+            if let proposition, let repondreProposition {
+                PropositionRepereView(proposition: proposition, repondre: repondreProposition)
+                    .padding(.trailing, Espace.s)
+            }
+            rangee(maintenant: maintenant)
+        }
+        .padding(.leading, Espace.l)
+        .padding(.trailing, Espace.s)
+        .padding(.vertical, Espace.s)
+        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
+        .shadow(color: Palette.encre.opacity(0.16), radius: 15, y: -2)
+        .accessibilityElement(children: .contain)
+        .onChange(of: maintenant) { _, _ in moteur.verifierFin() }
+    }
+
+    private func rangee(maintenant: Date) -> some View {
         HStack(spacing: Espace.s) {
             Button(action: rouvrir) {
                 HStack(spacing: Espace.s) {
@@ -42,6 +64,7 @@ struct BandeauSessionView: View {
             .buttonStyle(.plain)
             .accessibilityLabel("Session en cours, \(BandeauSession<EmptyView>.formater(moteur.duree(a: maintenant)))")
             .accessibilityHint("Rouvre la session en plein écran")
+            if let ajouterRepere { BoutonRepereSession(action: ajouterRepere) }
             Button(action: ajouterPrise) {
                 Image(systemName: "camera.fill")
                     .font(Police.taille(20, .heavy))
@@ -53,12 +76,5 @@ struct BandeauSessionView: View {
             .buttonStyle(.plain)
             .accessibilityLabel("Ajouter une prise")
         }
-        .padding(.leading, Espace.l)
-        .padding(.trailing, Espace.s)
-        .padding(.vertical, Espace.s)
-        .background(Palette.surface, in: RoundedRectangle(cornerRadius: 32, style: .continuous))
-        .shadow(color: Palette.encre.opacity(0.16), radius: 15, y: -2)
-        .accessibilityElement(children: .contain)
-        .onChange(of: maintenant) { _, _ in moteur.verifierFin() }
     }
 }

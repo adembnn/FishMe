@@ -28,6 +28,10 @@ enum Modal: Identifiable, Equatable {
     case finSession
     case mesSorties
     case reglages
+    /// N6 : un repère posé à la position de l'iPhone depuis la session.
+    case nouveauRepere(Coordonnee)
+    /// N6 : « Mes repères », quand la position n'est pas connue (le point se choisit sur la carte).
+    case listeReperes
 
     var id: String {
         switch self {
@@ -38,7 +42,18 @@ enum Modal: Identifiable, Equatable {
         case .carteAEssayer: "carte-a-essayer"
         case .finSession: "fin-session"
         case .mesSorties: "mes-sorties"
+        case .nouveauRepere(let position):
+            NouveauRepereView(position: position)
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
+
+        case .listeReperes:
+            ListeReperesView()
+                .presentationDetents([.large])
+
         case .reglages: "reglages"
+        case .nouveauRepere: "nouveau-repere"
+        case .listeReperes: "liste-reperes"
         }
     }
 }
@@ -565,6 +580,7 @@ final class ParcoursApp {
     func commencer(_ spot: Spot) {
         spotCourant = spot
         sessionReduite = false
+        propositionRepere = nil
         let depart = ContexteDepart(coordonnee: spot.centre, departement: spot.departement, spotChoisi: spot,
                                     abonne: suivi.abonne, conditions: conditions.instantane(spot: spot.centre))
         switch moteur.commencer(depart) {
@@ -671,9 +687,37 @@ final class ParcoursApp {
         }
     }
 
+    // MARK: Repères en session (N6) // ⚠ à vérifier (écrit sans Mac)
+
+    /// La question « Rattacher au repère X ? » posée après la dernière prise ; `nil` : rien à demander.
+    var propositionRepere: PropositionRepere?
+
+    /// « Ajouter un repère ici » : la position de l'iPhone (celle déjà lue, sinon une lecture unique), jamais celle du spot.
+    /// Sans position (refusée ou sans réponse), la liste « Mes repères » s'ouvre : le point s'y choisit sur la carte.
+    func ajouterRepereIci() {
+        Task {
+            let ici: Coordonnee?
+            if let connue = gps.position { ici = connue } else { ici = await PositionCourante.lire() }
+            if let ici { montrer(.nouveauRepere(ici)) } else { montrer(.listeReperes) }
+        }
+    }
+
+    /// Après une prise : le repère le plus proche (150 m) de la position de l'iPhone, s'il y en a un et si la prise n'y est pas déjà.
+    private func proposerRattachement(prise: Prise) {
+        propositionRepere = RattachementRepere.proposer(prise: prise.id, position: gps.position, reperes: ModeleReperes.partage.reperes)
+    }
+
+    func repondreRattachement(_ rattacher: Bool) {
+        guard let proposition = propositionRepere else { return }
+        propositionRepere = nil
+        guard rattacher else { return }
+        Task { try? await ModeleReperes.partage.rattacher(prise: proposition.idPrise, a: proposition.idRepere) }
+    }
+
     func terminerPrise(_ confirmee: PriseConfirmee?) {
         courant = nil
         guard let confirmee else { return }
+        proposerRattachement(prise: confirmee.prise)
         let instantane = coordonneeSession.flatMap { conditions.instantane(spot: $0) }
         moteur.ajouter(prise: confirmee.prise, conditions: instantane)
         Task { await ecranVerrouille.mettreAJour(prises: moteur.nombrePrises) }
@@ -964,7 +1008,10 @@ private struct RacineContenu: View {
             if app.moteur.enCours != nil && !app.sessionReduite {
                 SessionEnCoursView(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() },
                                    infosEspece: app.infosEspece(), eau: app.lieuDuSpot()?.eau?.nom,
-                                   reduire: { withAnimation { app.sessionReduite = true } }) {
+                                   reduire: { withAnimation { app.sessionReduite = true } },
+                                   ajouterRepere: { app.ajouterRepereIci() },
+                                   proposition: app.propositionRepere,
+                                   repondreProposition: { app.repondreRattachement($0) }) {
                     LigneSessionEmplacement(app: app)
                 }
                 .transition(.move(edge: .bottom))
@@ -1081,7 +1128,10 @@ private struct RacineContenu: View {
             bandeauSession: AnyView(Group {
                 if app.moteur.enCours != nil && app.sessionReduite {
                     BandeauSessionView(moteur: app.moteur, ajouterPrise: { app.ajouterPrise() },
-                                       rouvrir: { withAnimation { app.sessionReduite = false } })
+                                       rouvrir: { withAnimation { app.sessionReduite = false } },
+                                       ajouterRepere: { app.ajouterRepereIci() },
+                                       proposition: app.propositionRepere,
+                                       repondreProposition: { app.repondreRattachement($0) })
                 }
             }),
             sessionEnCours: app.moteur.enCours != nil,

@@ -21,6 +21,10 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     /// Réduit l'écran en bandeau sur la carte. `nil` : pas de bouton « Carte », pas de geste.
     let reduire: (() -> Void)?
     let ligneConditions: LigneConditions
+    /// N6 : « Ajouter un repère ici » et la question « Rattacher au repère X ? » après une prise. `nil` : rien de tout cela.
+    let ajouterRepere: (() -> Void)?
+    let proposition: PropositionRepere?
+    let repondreProposition: ((Bool) -> Void)?
     @Environment(\.dynamicTypeSize) private var tailleTexte
     @State private var explicationFin = false
     @State private var confirmationFin = false
@@ -28,7 +32,12 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     init(moteur: SuiviSession, ajouterPrise: @escaping () -> Void,
          infosEspece: @escaping (Espece) -> EspecePechable? = { _ in nil }, eau: String? = nil,
          reduire: (() -> Void)? = nil,
+         ajouterRepere: (() -> Void)? = nil, proposition: PropositionRepere? = nil,
+         repondreProposition: ((Bool) -> Void)? = nil,
          @ViewBuilder ligneConditions: () -> LigneConditions) {
+        self.ajouterRepere = ajouterRepere
+        self.proposition = proposition
+        self.repondreProposition = repondreProposition
         self.moteur = moteur
         self.ajouterPrise = ajouterPrise
         self.infosEspece = infosEspece
@@ -52,10 +61,22 @@ struct SessionEnCoursView<LigneConditions: View>: View {
                 enTete(session)
                 Spacer(minLength: 0)
                 VStack(spacing: 0) {
+                    if let proposition, let repondreProposition {
+                        PropositionRepereView(proposition: proposition, repondre: repondreProposition)
+                            .padding(.bottom, Espace.s)
+                    }
                     Button(action: ajouterPrise) {
                         Label("Ajouter une prise", systemImage: "camera")
                     }
                     .buttonStyle(.principal)
+                    if let ajouterRepere {
+                        Button(action: ajouterRepere) {
+                            Label(TextesReperes.ajouterIci, systemImage: "signpost.right")
+                                .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                        }
+                        .buttonStyle(.secondaire)
+                        .padding(.top, Espace.xs)
+                    }
                     Button("Terminer la session", role: .cancel) { confirmationFin = true }
                         .font(Police.taille(17, .heavy))
                         .foregroundStyle(Palette.marine)
