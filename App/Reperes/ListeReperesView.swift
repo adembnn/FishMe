@@ -52,6 +52,7 @@ struct ListeReperesView: View {
             }
             .padding(Espace.bord)
         }
+        .scrollIndicators(.hidden)
         .background(Palette.fond)
         .task { await modele.chargerSiBesoin() }
         .sheet(item: $fiche) { repere in

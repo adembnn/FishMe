@@ -60,6 +60,9 @@ final class ModeleReperesTests: XCTestCase {
         XCTAssertEqual(fichier.count, 1)
         XCTAssertTrue(fichier[0].estSupprime)
         XCTAssertEqual(fichier[0].note, "", "la note ne reste pas dans la pierre tombale")
+        XCTAssertEqual(fichier[0].nom, "", "le nom ne reste pas dans la pierre tombale")
+        XCTAssertEqual(fichier[0].position.latitude, 0)
+        XCTAssertEqual(fichier[0].position.longitude, 0)
         XCTAssertEqual(modele.decision(abonne: false), .oui)
     }
 

@@ -41,6 +41,7 @@ struct NouveauRepereView: View {
             }
             .padding(Espace.bord)
         }
+        .scrollIndicators(.hidden)
         .background(Palette.fond)
         .scrollDismissesKeyboard(.interactively)
         .onChange(of: choix) { _, nouveaux in Task { await charger(nouveaux) } }
@@ -83,6 +84,7 @@ struct NouveauRepereView: View {
                         }
                     }
                 }
+                .scrollIndicators(.hidden)
             }
             PhotosPicker(selection: $choix, maxSelectionCount: LimitesReperes.photosMax, matching: .images) {
                 Label(TextesReperes.ajouterPhotos, systemImage: "photo.on.rectangle.angled")

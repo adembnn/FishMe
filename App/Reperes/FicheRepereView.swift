@@ -45,6 +45,7 @@ struct FicheRepereView: View {
             }
             .padding(Espace.bord)
         }
+        .scrollIndicators(.hidden)
         .background(Palette.fond)
         // Recalculé à chaque ouverture, jamais stocké : un verdict stocké se périmerait.
         .task(id: courant.position) { await calculerLieu() }
@@ -122,6 +123,7 @@ struct FicheRepereView: View {
                             }
                         }
                     }
+                    .scrollIndicators(.hidden)
                 }
                 if !photosDesPrises.isEmpty {
                     Text(TextesReperes.photosDesPrises).font(Police.legende).foregroundStyle(Palette.encreDouce)
@@ -132,6 +134,7 @@ struct FicheRepereView: View {
                             }
                         }
                     }
+                    .scrollIndicators(.hidden)
                 }
             }
         }
@@ -262,6 +265,7 @@ struct ModifierRepereView: View {
             }
             .padding(Espace.bord)
         }
+        .scrollIndicators(.hidden)
         .background(Palette.fond)
         .scrollDismissesKeyboard(.interactively)
     }

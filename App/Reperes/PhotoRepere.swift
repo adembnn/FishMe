@@ -39,12 +39,16 @@ nonisolated enum PhotoRepere {
         return sortie as Data
     }
 
-    /// Vrai si le fichier porte un bloc GPS, EXIF ou TIFF (appareil, date) : sert aux tests.
+    /// Vrai si le fichier porte un GPS, une date de prise, ou la marque, le modèle ou la date de l'appareil : sert aux tests.
+    /// ImageIO écrit lui-même des blocs {Exif} et {TIFF} techniques (taille, orientation) : seule la présence de ces champs compte.
     static func contientMetadonnees(_ donnees: Data) -> Bool {
         guard let source = CGImageSourceCreateWithData(donnees as CFData, nil),
               let proprietes = CGImageSourceCopyPropertiesAtIndex(source, 0, nil) as? [CFString: Any] else { return false }
-        return proprietes[kCGImagePropertyGPSDictionary] != nil
-            || proprietes[kCGImagePropertyExifDictionary] != nil
-            || proprietes[kCGImagePropertyTIFFDictionary] != nil
+        if proprietes[kCGImagePropertyGPSDictionary] != nil { return true }
+        let exif = proprietes[kCGImagePropertyExifDictionary] as? [CFString: Any]
+        if exif?[kCGImagePropertyExifDateTimeOriginal] != nil || exif?[kCGImagePropertyExifDateTimeDigitized] != nil { return true }
+        let tiff = proprietes[kCGImagePropertyTIFFDictionary] as? [CFString: Any]
+        return tiff?[kCGImagePropertyTIFFMake] != nil || tiff?[kCGImagePropertyTIFFModel] != nil
+            || tiff?[kCGImagePropertyTIFFDateTime] != nil
     }
 }

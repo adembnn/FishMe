@@ -4,11 +4,14 @@ import Foundation
 /// voulue se propage, sinon un repère effacé reviendrait de l'iCloud.
 public enum JeuReperes {
     private static func cleDeDepartage(_ r: Repere) -> String {
-        [r.nom, r.note, r.icone.rawValue, String(r.position.latitude), String(r.position.longitude),
-         r.photos.joined(separator: ","), r.idsPrises.map(\.uuidString).joined(separator: ","),
-         String(r.cree.timeIntervalSince1970), String(r.modifie.timeIntervalSince1970),
-         String(r.passageManuel?.timeIntervalSince1970 ?? 0), String(r.supprime?.timeIntervalSince1970 ?? 0)]
-            .joined(separator: "|")
+        let photos: String = r.photos.joined(separator: ",")
+        let prises: String = r.idsPrises.map(\.uuidString).joined(separator: ",")
+        let passage: Double = r.passageManuel?.timeIntervalSince1970 ?? 0
+        let supprime: Double = r.supprime?.timeIntervalSince1970 ?? 0
+        var morceaux: [String] = [r.nom, r.note, r.icone.rawValue, String(r.position.latitude), String(r.position.longitude)]
+        morceaux += [photos, prises, String(r.cree.timeIntervalSince1970), String(r.modifie.timeIntervalSince1970)]
+        morceaux += [String(passage), String(supprime)]
+        return morceaux.joined(separator: "|")
     }
 
     /// Lequel des deux gagne : le dernier changement (modification ou suppression) le plus récent ; à égalité la suppression ;
