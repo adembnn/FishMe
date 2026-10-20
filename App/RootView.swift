@@ -111,7 +111,13 @@ final class ParcoursApp {
     let suivi: SuiviAbonnement
 
     /// Compte : la sauvegarde iCloud des cartes, des photos et du profil (App/Compte). `nil` sans dépôt.
-    @ObservationIgnored private(set) lazy var sauvegarde: SauvegardeICloud? = SauvegardeICloud.actif ? depot.map { SauvegardeICloud(depot: $0) } : nil
+    /// N6 : la même sauvegarde porte aussi les repères privés (zone « Reperes » de l'iCloud privé, chiffrée) ; voir `SauvegardeAvecReperes`.
+    @ObservationIgnored private(set) lazy var sauvegarde: (any ServiceSauvegarde)? = SauvegardeICloud.actif
+        ? depot.map { depot in
+            SauvegardeAvecReperes(
+                cartes: SauvegardeICloud(depot: depot), reperes: SauvegardeReperes(depot: ModeleReperes.partage.depot),
+                apresReperes: { await ModeleReperes.partage.recharger() })
+        } : nil
     @ObservationIgnored private(set) lazy var compte: CompteModele? = sauvegarde.map { service in
         CompteModele(service: service,
                      restaurerAchats: { [weak self] in
@@ -205,6 +211,7 @@ final class ParcoursApp {
         achats.demarrerEcoute()
         suivi.demarrer()
         moteur.abonne = suivi.abonne
+        configurerReperes()
         moteur.reprendre()
         if let c = moteur.enCours {
             await ecranVerrouille.reprendre(debut: c.sortie.debut, finLegale: c.finLegale, prises: moteur.nombrePrises)
@@ -287,6 +294,50 @@ final class ParcoursApp {
         await chatReel.traiterNotificationCloudKit()
     }
 
+    // MARK: Repères privés (N6), mesures de l'eau (N3), envies (N2) // ⚠ à vérifier (écrit sans Mac)
+
+    /// N6 : une fois au lancement. 3 repères gratuits, illimité avec Pro (`ReglesReperes`) ; le paywall se rouvre depuis la liste.
+    /// Rien n'est demandé au système ici : la position n'est lue que quand la personne pose un repère.
+    private func configurerReperes() {
+        ContexteReperes.courant.configurer(
+            geo: core.geo, chargeur: .embarque(),
+            prises: { [weak self] in self?.pescedex?.detaillees.map(\.prise) ?? [] },
+            photosDesPrises: depot.map { PhotosDesPrisesRacine(depot: $0) },
+            ouvrirPaywall: { [weak self] in self?.montrer(.paywall(.widget)) })
+        ContexteReperes.courant.abonne = suivi.abonne
+        Task { await ModeleReperes.partage.charger() }
+    }
+
+    /// N3 : température de l'eau (Hub'Eau, par le code de station seul), tendances et sources. `stations-temperature.json` n'existe pas encore
+    /// (D2 doit le fournir) : sans lui, aucune ligne « Eau », pression et débit restent.
+    @ObservationIgnored private(set) lazy var mesuresEau = ModeleMesures(
+        service: HubEauTemperatureService(),
+        noyau: MoteurMesures(
+            geo: core.geo,
+            stationsTemperature: Bundle.main.url(forResource: "stations-temperature", withExtension: "json").flatMap { try? Data(contentsOf: $0) }))
+
+    /// N2 : « Mes envies » (liste privée, sur l'iPhone). Le Pescedex (autre agent) pose la ligne d'entrée et le bouton sur les fiches ;
+    /// ici, seulement le modèle, câblé sur les règles du spot et les conseils.
+    @ObservationIgnored private(set) lazy var envies: EnviesModele = {
+        let url = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first?.appendingPathComponent("envies.json")
+            ?? FileManager.default.temporaryDirectory.appendingPathComponent("envies.json")
+        let externes = EnviesExternes(
+            controle: { [weak self] espece, date in
+                guard let self, let lieu = self.lieuDuSpot() else { return nil }
+                return self.core.regles.controle(espece: espece, tailleCm: nil, mesure: nil, date: date, lieu: lieu, prisesDuJour: [])
+            },
+            // La date de réouverture n'est pas exposée par Core (décision d'Adem) : « Fermée ce jour ».
+            reouverture: { _, _ in nil },
+            // L'appât seul : gratuit, donc jamais derrière Pro.
+            conseil: { [weak self] espece in
+                guard let self else { return nil }
+                let niveau = NiveauPecheur(rawValue: UserDefaults.standard.string(forKey: ClesConseils.niveau) ?? "") ?? .parDefaut
+                return self.contexteConseils(lieu: self.lieuDuSpot(), toutLeKit: { _ in }).parType(espece: espece, niveau: niveau)[.appat]
+            },
+            choisirSpot: { [weak self] in self?.onglet = .carte })
+        return EnviesModele(stockage: StockageEnviesFichier(url: url), especes: core.especes.especesPechables(), externes: externes)
+    }()
+
     /// L17 : les prises du pêcheur et leurs photos (sans GPS) pour les vignettes de la fiche d'un coin. Rien sans dépôt.
     var prisesPourLaCarte: PrisesDuPecheurCarte {
         guard let depot else { return .aucune }
@@ -302,6 +353,8 @@ final class ParcoursApp {
         // Mode démo : les cartes d'exemple (vraies photos sous licence libre) s'installent ou se retirent ici.
         _ = await DemoPescedex.synchroniser(demo: UserDefaults.standard.bool(forKey: DemoPescedex.cle), depot: depot)
         await pescedex?.charger()
+        // N2 : une espèce qui a maintenant une carte sort de « Mes envies ».
+        envies.charger(cartes: pescedex?.detaillees.map(\.prise) ?? [])
         publierAquarium()
         rendrePartagesEnFond(depot: depot)
         prevoirSauvegarde()
@@ -659,6 +712,7 @@ final class ParcoursApp {
     func etatAchatsLu(_ etat: EtatAchats) {
         suivi.appliquer(etat)
         moteur.abonne = suivi.abonne
+        ContexteReperes.courant.abonne = suivi.abonne
     }
 
     /// Après un achat depuis « autre spot » : le paywall se ferme, puis la session démarre sur ce spot.
@@ -871,6 +925,7 @@ private struct RacineContenu: View {
             .onChange(of: questionVue) { app.proposerSuitePremierLancement() }
             .onChange(of: app.suivi.abonne) { _, abonne in
                 app.moteur.abonne = abonne
+                ContexteReperes.courant.abonne = abonne
                 app.publierAquarium()
             }
             .onOpenURL { app.ouvrir(url: $0) }
@@ -1230,6 +1285,7 @@ private struct ConditionsEmplacement: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             if let lecture {
+                MesuresEmplacement(app: app, lecture: lecture, coordonnee: coordonnee)
                 bouton("Météo du moment", "cloud.sun", .meteoDuJour) { meteo = true }
                 if !app.autorise(.niveauEau, en: coordonnee) {
                     bouton("Niveau de l'eau", "water.waves", .niveauEau) {}
@@ -1287,6 +1343,27 @@ private struct ConditionsEmplacement: View {
                       porte: PorteConditions(autorise: { _ in false },
                                              ouvrirPaywall: { paywall = PaywallDemande(declencheur: .fonction($0)) }))
         }
+    }
+}
+
+/// N3 : le bloc « Mesures » (pression, eau, débit avec tendance, source et heure) sous la rangée « maintenant » de la fiche d'un coin.
+/// Les mêmes mesures dans la feuille « Conditions du jour » demandent un changement dans `App/Conditions/` (voir branchements-l25.md).
+private struct MesuresEmplacement: View {
+    let app: ParcoursApp
+    let lecture: LectureConditions
+    let coordonnee: Coordonnee
+    @ObservedObject private var modele: ModeleMesures
+
+    init(app: ParcoursApp, lecture: LectureConditions, coordonnee: Coordonnee) {
+        self.app = app
+        self.lecture = lecture
+        self.coordonnee = coordonnee
+        _modele = ObservedObject(wrappedValue: app.mesuresEau)
+    }
+
+    var body: some View {
+        MesuresSourceesView(mesures: modele.mesures(lecture: lecture, spot: coordonnee), marque: app.marque)
+            .task(id: coordonnee) { await modele.charger(spot: coordonnee, eau: lecture.eau?.station) }
     }
 }
 
@@ -1612,5 +1689,46 @@ nonisolated struct EffaceurParesseux: EffaceurContenu {
     func effacerContenu(deProfil profilID: String) async throws {
         let effaceur = try await MainActor.run { try creer() }
         try await effaceur.effacerContenu(deProfil: profilID)
+    }
+}
+
+/// N6 : la sauvegarde des cartes (App/Compte/) et celle des repères (App/Reperes/) vont ensemble. La synchro des repères ne fait pas
+/// échouer celle des cartes (un repère reste sur l'iPhone et repart à la prochaine synchro) ; l'effacement du compte efface les deux
+/// (App Store 5.1.1(v)) : si l'un échoue, l'autre est quand même tenté et la première erreur remonte.
+nonisolated struct SauvegardeAvecReperes: ServiceSauvegarde {
+    let cartes: SauvegardeICloud
+    let reperes: SauvegardeReperes
+    let apresReperes: @MainActor @Sendable () async -> Void
+
+    func etatCompte() async -> EtatICloud { await cartes.etatCompte() }
+
+    func synchroniser() async throws -> BilanSauvegarde {
+        let bilan = try await cartes.synchroniser()
+        if SauvegardeReperes.actif, let lu = try? await reperes.synchroniser(), lu.aRelire {
+            await apresReperes()
+        }
+        return bilan
+    }
+
+    func effacer() async throws {
+        var erreur: Error?
+        do { try await cartes.effacer() } catch { erreur = error }
+        do { try await reperes.effacerTout() } catch { erreur = erreur ?? error }
+        await apresReperes()
+        if let erreur { throw erreur }
+    }
+}
+
+/// N6 : les photos des prises rattachées à un repère (lues dans le dépôt des cartes, déjà sans GPS).
+nonisolated struct PhotosDesPrisesRacine: PhotosDesPrises {
+    let depot: DepotCartes
+
+    func photos(de ids: [UUID]) async -> [PhotoDePrise] {
+        let voulues = Set(ids)
+        var rendues: [PhotoDePrise] = []
+        for prise in await depot.cartes() where voulues.contains(prise.id) {
+            if let donnees = await depot.photo(de: prise) { rendues.append(PhotoDePrise(id: prise.id, donnees: donnees)) }
+        }
+        return rendues
     }
 }
