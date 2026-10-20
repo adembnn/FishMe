@@ -925,6 +925,17 @@ private struct RacineContenu: View {
                 if action == "prise" { app.ajouterPrise() }
             }
             .onChange(of: questionVue) { app.proposerSuitePremierLancement() }
+            // L24 : un lien de conversation (ami ou club) reçu par iCloud : accepté par le chat, puis la liste des messages s'ouvre.
+            // `initial: true` couvre le lancement à froid par le lien. // ⚠ à vérifier
+            .onChange(of: RelaisChat.partage.enAttente != nil, initial: true) { _, present in
+                guard present, let invitation = RelaisChat.partage.enAttente else { return }
+                RelaisChat.partage.solder()
+                app.onglet = .club
+                Task {
+                    await app.chat.accepter(invitation)
+                    messagesOuverts = true
+                }
+            }
             .onChange(of: app.suivi.abonne) { _, abonne in
                 app.moteur.abonne = abonne
                 ContexteReperes.courant.abonne = abonne
@@ -1125,11 +1136,11 @@ private struct RacineContenu: View {
     private var club: some View {
         let poissons = app.core.especes.especesPechables().map { PoissonClub(id: $0.espece.id, nom: $0.nom, image: $0.image) }
         // L23 : la page principale est le fil. L21 : « Finis ton profil » au premier passage. L24 : les messages dans une feuille
-        // (bouton en haut à droite) ; « Écrire » depuis un ami ou un club reste à poser dans leurs pages (voir branchements-l25.md).
+        // (bouton en haut à droite) ; « Écrire » est dans la page d'un ami et dans celle d'un club.
         return CommunauteView(fil: FeedVue(gestion: app.feed)) {
-            AmisPageView(gestion: app.gestionAmis(), profil: GestionProfil.partage)
+            AmisPageView(gestion: app.gestionAmis(), profil: GestionProfil.partage, chat: app.chat)
         } club: {
-            ClubPageView(cartes: app.cartesAPartager, poissons: poissons)
+            ClubPageView(cartes: app.cartesAPartager, poissons: poissons, chat: app.chat)
         }
         .finisTonProfil()
         .overlay(alignment: .topTrailing) { boutonMessages }

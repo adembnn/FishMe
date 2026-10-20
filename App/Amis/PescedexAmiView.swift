@@ -9,7 +9,9 @@ struct PescedexAmiView: View {
     /// Pour écrire les signalements (même service que la page Profil).
     var profil: GestionProfil = .partage
     let fermer: () -> Void
-
+    /// L24 : le chat. Absent : pas de bouton « Écrire ».
+    var chat: GestionChat? = nil
+    @State private var conversation: ConversationID?
     @State private var cibleAmi: CibleAmi?
     @State private var cibleCarte: CibleAmi?
     @State private var carteOuverte: CartePartagee?
@@ -55,6 +57,9 @@ struct PescedexAmiView: View {
                 feuille
             }
         }
+        .sheet(item: $conversation) { ouverte in
+            if let chat { FeuilleConversationView(gestion: chat, conversation: ouverte) }
+        }
         .sheet(item: $carteOuverte) { carte in
             CarteAmiDetail(carte: carte, nomEspece: gestion.espece(carte.espece)?.nom ?? "") {
                 cibleCarte = .carte(ami, carte)
@@ -91,6 +96,17 @@ struct PescedexAmiView: View {
             .fondVerre(Capsule())
             .accessibilityElement(children: .combine)
             Spacer()
+            if chat != nil, !ami.enAttente {
+                Button { conversation = .ami(ami.id) } label: {
+                    Image(systemName: "bubble.left")
+                        .font(Police.taille(18))
+                        .foregroundStyle(Palette.encre)
+                        .frame(width: JetonAmis.zoneTactile, height: JetonAmis.zoneTactile)
+                        .fondVerre(Circle())
+                }
+                .accessibilityLabel("Écrire à \(ami.nom)")
+                .accessibilityIdentifier("ami.ecrire")
+            }
             // Signaler et Bloquer restent rangés dans ce menu, jamais au premier niveau.
             Menu {
                 Button { cibleAmi = .ami(ami) } label: { Label("Signaler", systemImage: "flag") }

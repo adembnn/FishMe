@@ -38,12 +38,24 @@ final class SceneDuPartage: NSObject, UIWindowSceneDelegate {
     /// Lancement à froid par le lien.
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let metadata = connectionOptions.cloudKitShareMetadata {
-            RelaisInvitations.partage.recevoir(metadata)
+            acheminer(metadata)
         }
     }
 
     /// App déjà ouverte.
     func windowScene(_ windowScene: UIWindowScene, userDidAcceptCloudKitShareWith cloudKitShareMetadata: CKShare.Metadata) {
-        RelaisInvitations.partage.recevoir(cloudKitShareMetadata)
+        acheminer(cloudKitShareMetadata)
+    }
+
+    /// L24 : un lien de conversation va au chat, jamais à l'invitation d'ami. Les appels viennent du fil principal de la scène (UIKit),
+    /// l'accès aux relais `@MainActor` se fait donc par `MainActor.assumeIsolated`. // ⚠ à vérifier
+    private func acheminer(_ metadata: CKShare.Metadata) {
+        MainActor.assumeIsolated {
+            if InvitationChat.estUneConversation(metadata) {
+                RelaisChat.partage.recevoir(metadata)
+            } else {
+                RelaisInvitations.partage.recevoir(metadata)
+            }
+        }
     }
 }

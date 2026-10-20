@@ -8,17 +8,20 @@ struct AmisPageView: View {
     let gestion: GestionAmis?
     /// Le profil de pêcheur. Par défaut le profil partagé de l'app ; A peut en donner un autre.
     var profil: GestionProfil = .partage
+    /// L24 : le chat, pour « Écrire » sur la page d'un ami.
+    var chat: GestionChat? = nil
     /// Mode démo (réglages) : sans iCloud non plus, la page montre ses amis de démo.
     @AppStorage("demo.communaute") private var demo = false
 
-    init(gestion: GestionAmis?, profil: GestionProfil = .partage) {
+    init(gestion: GestionAmis?, profil: GestionProfil = .partage, chat: GestionChat? = nil) {
         self.gestion = gestion
         self.profil = profil
+        self.chat = chat
     }
 
     var body: some View {
         if let gestion {
-            AmisPageContenu(gestion: gestion, profil: profil)
+            AmisPageContenu(gestion: gestion, profil: profil, chat: chat)
         } else if demo {
             ScrollView {
                 DemoAmisContenu(avecInviter: true)
@@ -62,6 +65,7 @@ private enum ActionSurAmi {
 private struct AmisPageContenu: View {
     let gestion: GestionAmis
     let profil: GestionProfil
+    var chat: GestionChat? = nil
 
     @State private var amiOuvert: Ami?
     @State private var carteOuverte: CarteDuFil?
@@ -108,7 +112,7 @@ private struct AmisPageContenu: View {
         .task { await gestion.surveillerLeReseau() }
         .task { prendreLInvitation() }
         .fullScreenCover(item: $amiOuvert) { ami in
-            PescedexAmiView(gestion: gestion, ami: ami, profil: profil, fermer: { amiOuvert = nil })
+            PescedexAmiView(gestion: gestion, ami: ami, profil: profil, fermer: { amiOuvert = nil }, chat: chat)
         }
         .sheet(item: $carteOuverte) { element in
             CarteAmiDetail(carte: element.carte, nomEspece: gestion.espece(element.carte.espece)?.nom ?? "") {
