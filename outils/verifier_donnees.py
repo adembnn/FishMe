@@ -3,6 +3,10 @@
 
   python3 outils/verifier_donnees.py              vérifie la structure ; liste les MANQUES de contenu ; sort 1 s'il y a une ERREUR
   python3 outils/verifier_donnees.py --porte-fusion   sort aussi 1 s'il reste un MANQUE (relecture de S, cas d'or, espèces, images...)
+  python3 outils/verifier_donnees.py --stations CHEMIN [--trace DOSSIER]
+      (D5) contrôle aussi stations-especes.json (défaut : App/Donnees/ ou outils/hubeau/sortie/) : 100 % `recalee`, 90 % au moins à true,
+      aucune coordonnée à 2 décimales parmi les true, 20 stations true tirées au sort (graine fixe) à 50 m au plus du tracé (dossier
+      outils/hubeau/cache/trace/ de trace_sandre.py ; sans tracé l'échantillon est un MANQUE).
   python3 outils/verifier_donnees.py --index      réécrit regles/index.json (sha256, expire_min, nombres) d'après les fichiers présents
   python3 outils/verifier_donnees.py --charger <code> [--depuis DIR]
       fusion prudente (docs/fiches/D1.md) : lit DIR/consensus/<code>.json (sortie de `consensus.py <code> --json`) et les lectures
@@ -256,6 +260,94 @@ def verifier_autres(ids_especes):
     for n in ("coins-maison.json", "coins-osm.geojson", "departements.geojson", "lacs.geojson", "stations-hydro.json"):
         lire(os.path.join(RES, n))
     lire(os.path.join(RES, "regles", "index.json"))
+
+
+def chemin_stations():
+    """--stations CHEMIN, sinon le fichier téléchargé par scripts/donnees.sh, sinon la sortie de outils/hubeau."""
+    c = option("--stations")
+    if c:
+        return c
+    for rel in (("App", "Donnees", "stations-especes.json"), ("outils", "hubeau", "sortie", "stations-especes.json")):
+        c = os.path.join(RACINE, *rel)
+        if os.path.exists(c):
+            return c
+    return None
+
+
+SEUIL_RECALEES = 0.9       # D5 : au moins 90 % des stations à recalee: true
+ECHANTILLON = 20           # D5 : stations true tirées au sort, graine fixe
+GRAINE = 2026
+ECART_ECHANTILLON_M = 50   # D5 : à 50 m au plus du tracé
+
+
+def verifier_stations(chemin, dossier_trace=None):
+    """D5 (docs/fiches/D5.md, « Contrat ») sur stations-especes.json : 100 % portent `recalee` ; au moins 90 % à true ; aucune
+    coordonnée à 2 décimales parmi les true ; 20 stations true tirées au sort (graine fixe) à 50 m au plus du tracé de leur cours
+    d'eau, avec le nom du tracé. Le tracé : dossier de outils/hubeau/trace_sandre.py (paquet-*.geojson, cell-*.geojson)."""
+    import glob
+    import random
+    sys.path.insert(0, os.path.join(RACINE, "outils", "hubeau"))
+    import recalage
+    doc = lire(chemin)
+    if doc is None:
+        return
+    stations = doc.get("stations") if isinstance(doc, dict) else None
+    nom = os.path.relpath(chemin, RACINE)
+    if not stations:
+        err(f"{nom} : aucune station")
+        return
+    sans = [s["id"] for s in stations if not isinstance(s.get("recalee"), bool)]
+    if sans:
+        err(f"{nom} : {len(sans)} station(s) sur {len(stations)} sans champ recalee (booléen), par exemple {sans[:3]}")
+        return
+    vraies = [s for s in stations if s["recalee"]]
+    part = len(vraies) / len(stations)
+    if part < SEUIL_RECALEES:
+        err(f"{nom} : {len(vraies)} stations recalées sur {len(stations)} ({part:.1%}), il en faut {SEUIL_RECALEES:.0%} au moins. "
+            "Regarder doc[\"recalage\"] / le rapport de hubeau.py : cours d'eau absent du tracé, tracé trop grossier, stations sans cours d'eau.")
+    for s in vraies:
+        if recalage.a_deux_decimales_ou_moins(s["lat"]) or recalage.a_deux_decimales_ou_moins(s["lon"]):
+            err(f"{nom} : station {s['id']} recalee: true mais coordonnée à 2 décimales ou moins ({s['lat']}, {s['lon']})")
+    tirage = random.Random(GRAINE).sample(sorted(vraies, key=lambda s: s["id"]), min(ECHANTILLON, len(vraies)))
+    dossier_trace = dossier_trace or os.path.join(RACINE, "outils", "hubeau", "cache", "trace")
+    fichiers = glob.glob(os.path.join(dossier_trace, "*.geojson")) if os.path.isdir(dossier_trace) else []
+    if not fichiers:
+        manque(f"{nom} : échantillon de {len(tirage)} stations true non vérifié (pas de tracé dans {os.path.relpath(dossier_trace, RACINE)} ; "
+               "--trace DOSSIER, ou outils/hubeau/trace_sandre.py)")
+        return
+    # on ne garde du tracé que ce que l'échantillon demande (un fichier à la fois : la France entière ne tient pas toujours en mémoire)
+    codes = {s["code_eau"] for s in tirage if s.get("code_eau")}
+    cellules = {recalage.cellule(s["lat"], s["lon"]) for s in tirage if not s.get("code_eau")}
+    t = recalage.Trace()
+    for f in sorted(fichiers):
+        base = os.path.basename(f)
+        if base.startswith("cell-"):
+            ix, iy = base[5:-8].split("_")
+            if (int(ix), int(iy)) not in cellules:
+                continue
+        with open(f, encoding="utf-8") as h:
+            d = json.load(h)
+        d["features"] = [x for x in d.get("features", [])
+                         if base.startswith("cell-") or (x.get("properties") or {}).get("CdEntiteHydrographique") in codes]
+        t.ajouter_geojson(d)
+    ok = 0
+    for s in tirage:
+        if s.get("code_eau") and t.a_le_code(s["code_eau"]):
+            candidats = t.par_code[s["code_eau"]]
+        else:  # station rattachée par voisinage (sans cours d'eau) ou par le nom : tout le tracé chargé
+            candidats = [(n, l) for ents in t.par_code.values() for n, l in ents]
+        meilleur = None
+        for n, lignes in candidats:
+            r = recalage.plus_proche_sur_lignes(s["lat"], s["lon"], lignes, ECART_ECHANTILLON_M)
+            if r and (meilleur is None or r[0] < meilleur[0]):
+                meilleur = (r[0], n)
+        if meilleur is None:
+            err(f"{nom} : station {s['id']} true à plus de {ECART_ECHANTILLON_M} m du tracé de son cours d'eau ({s.get('eau')}, {s.get('code_eau')})")
+        elif (meilleur[1] or "") != (s.get("eau") or ""):  # tracé sans nom et station sans eau : même absence
+            err(f"{nom} : station {s['id']} : cours d'eau « {s.get('eau')} », mais le tracé s'appelle « {meilleur[1]} »")
+        else:
+            ok += 1
+    print(f"{nom} : {len(vraies)}/{len(stations)} recalées ({part:.1%}) ; échantillon {ok}/{len(tirage)} à {ECART_ECHANTILLON_M} m au plus du tracé")
 
 
 def verifier_git():
@@ -609,6 +701,11 @@ def main():
     verifier_index(fichiers)
     verifier_autres(verifier_especes())
     verifier_git()
+    chemin = chemin_stations()
+    if chemin:
+        verifier_stations(chemin, option("--trace"))
+    else:
+        print("stations-especes.json absent (scripts/donnees.sh ou outils/hubeau/hubeau.py) : règles D5 non vérifiées")
     for m in erreurs:
         print("ERREUR ", m)
     for m in manques:
