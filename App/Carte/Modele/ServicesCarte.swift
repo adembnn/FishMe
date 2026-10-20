@@ -42,7 +42,8 @@ nonisolated protocol FournisseurStations: Sendable {
 }
 
 /// Adaptateur sur `stationsDans(_:)` de `Core` : une station par point, N pêches et année du dernier relevé tels que
-/// `Core` les donne. Les coordonnées arrivent déjà arrondies à 0,01° : rien n'est arrondi ni recalculé ici.
+/// `Core` les donne. Rien n'est arrondi ni recalculé ici : les coordonnées sont celles du fichier (recalées par D5, ou arrondies
+/// à 0,01° pour une station `recalee == false`). `recalee` est lu quand `Core` le porte, sinon `true` (ancien fichier).
 nonisolated final class StationsViaCore: FournisseurStations, Sendable {
     private let especes: any ServiceEspeces
 
@@ -61,7 +62,8 @@ nonisolated final class StationsViaCore: FournisseurStations, Sendable {
         return especes.stationsDans(zone).map { station in
             StationCarte(code: station.codeStation, eau: station.eau, departement: station.departement,
                          coordonnee: station.coordonnee,
-                         releves: station.especes.map { ReleveEspece(espece: $0.espece, nPeches: $0.nPeches, annee: $0.annee) })
+                         releves: station.especes.map { ReleveEspece(espece: $0.espece, nPeches: $0.nPeches, annee: $0.annee) },
+                         recalee: LectureRecalage.valeur(de: station))
         }
         .sorted { $0.code < $1.code }
     }
