@@ -13,8 +13,9 @@ Sortie : un tableau JSON, une entree par station, lu par `StationTemperatureDonn
 
 Regle « en service » (documentee, a confirmer par Adem) : la station n'a pas de `date_mise_hors_service` ET elle a
 au moins une mesure datee des JOURS derniers jours (30 par defaut). Hub'Eau ne donne pas la date de derniere mesure
-dans la fiche station ; on demande donc a la chronique le NOMBRE de mesures depuis la date limite (size=1, le champ
-`count` suffit). Le tri `sort=desc` de la chronique n'est pas fiable (verifie sur l'API reelle), on ne s'en sert pas.
+dans la fiche station ; on demande donc a la chronique toutes les mesures depuis la date limite, code_station seul
+(environ 10 000 lignes, une requete) et on garde les codes vus. Une requete par station est trop lente : Hub'Eau cale
+souvent. Le tri `sort=desc` de la chronique n'est pas fiable (verifie sur l'API reelle), on ne s'en sert pas.
 Les donnees ne sont pas en temps reel : l'API peut avoir plusieurs jours de retard.
 
 Usage : python3 stations_temperature.py [--sortie sortie/stations-temperature.json] [--jours 30]
@@ -35,7 +36,6 @@ BASE = "https://hubeau.eaufrance.fr/api/v1/temperature"
 USER_AGENT = "FishMe-D2/1.0 (stations-temperature)"
 PAUSE_S = 0.3
 TAILLE_PAGE = 1000
-TIMEOUT_MESURE_S = 20
 JOURS_PAR_DEFAUT = 30
 
 
@@ -68,9 +68,10 @@ def url_stations(page: int) -> str:
     return f"{BASE}/station?" + urllib.parse.urlencode({"size": TAILLE_PAGE, "page": page})
 
 
-def url_mesures_depuis(code: str, depuis: datetime.date) -> str:
+def url_mesures_depuis(depuis: datetime.date, page: int = 1) -> str:
+    """Toutes les mesures depuis la date, code_station seul : environ 10 000 lignes pour 30 jours sur la France entiere."""
     return f"{BASE}/chronique?" + urllib.parse.urlencode(
-        {"code_station": code, "date_debut_mesure": depuis.isoformat(), "size": 1, "fields": "code_station"})
+        {"date_debut_mesure": depuis.isoformat(), "size": 20000, "page": page, "fields": "code_station"})
 
 
 def telecharger_stations(log=print, obtenir_fn=obtenir) -> list:
@@ -102,30 +103,30 @@ def convertir(s: dict, en_service: bool):
     }
 
 
-def a_des_mesures(code: str, depuis: datetime.date, obtenir_fn=obtenir) -> bool:
-    # Hub'Eau cale parfois une requete sans repondre : delai court (20 s) puis nouvel essai, plutot que d'attendre 2 min.
-    return (obtenir_fn(url_mesures_depuis(code, depuis), timeout=TIMEOUT_MESURE_S).get("count") or 0) > 0
+def stations_avec_mesures(depuis: datetime.date, log=print, obtenir_fn=obtenir) -> set:
+    """Codes des stations qui ont au moins une mesure depuis la date : une requete (quelques pages au plus) pour tout le reseau."""
+    codes, page = set(), 1
+    while True:
+        j = obtenir_fn(url_mesures_depuis(depuis, page))
+        codes.update(d["code_station"] for d in j.get("data") or [] if d.get("code_station"))
+        log(f"mesures depuis le {depuis} : {j.get('count')} lignes, {len(codes)} stations")
+        if not j.get("next") or not j.get("data"):
+            return codes
+        page += 1
+        time.sleep(PAUSE_S)
 
 
-def construire(fiches: list, depuis: datetime.date, a_mesures=a_des_mesures, log=print, pause_s: float = PAUSE_S,
-               dormir=time.sleep) -> list:
-    """Une requete a la fois, pause entre deux. Une station hors service declaree n'est pas interrogee."""
+def construire(fiches: list) -> list:
+    """`fiches` : fiches station, chacune avec la cle `_actif` (vrai si mesure recente). Doublons ignores, tri par code."""
     res, vus = [], set()
-    for i, s in enumerate(fiches, 1):
+    for s in fiches:
         code = s.get("code_station")
         if code in vus:
             continue
         vus.add(code)
-        if s.get("date_mise_hors_service"):
-            en_service = False
-        else:
-            en_service = a_mesures(code, depuis)
-            dormir(pause_s)
-        e = convertir(s, en_service)
+        e = convertir(s, bool(s.get("_actif")))
         if e:
             res.append(e)
-        if i % 100 == 0:
-            log(f"mesures : {i} / {len(fiches)}")
     res.sort(key=lambda e: e["code"])
     return res
 
@@ -145,7 +146,10 @@ def main(argv=None) -> int:
     a = p.parse_args(argv)
     depuis = datetime.date.today() - datetime.timedelta(days=a.jours)
     fiches = telecharger_stations()
-    stations = construire(fiches, depuis)
+    actives = stations_avec_mesures(depuis)
+    for s in fiches:
+        s["_actif"] = s["code_station"] in actives and not s.get("date_mise_hors_service")
+    stations = construire(fiches)
     ecrire(stations, a.sortie)
     n = sum(1 for s in stations if s["en_service"])
     print(f"{len(stations)} stations, {n} en service (mesure depuis le {depuis}) -> {a.sortie}")

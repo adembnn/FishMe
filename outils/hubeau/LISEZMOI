@@ -1,6 +1,6 @@
 D2 : stations de température des cours d'eau (Hub'Eau)
 
-Lancer (Python 3 suffit, aucune dépendance, quelques minutes) :
+Lancer (Python 3 suffit, aucune dépendance, moins d'une minute) :
     python3 outils/hubeau/stations_temperature.py            # écrit outils/hubeau/sortie/stations-temperature.json
     python3 outils/hubeau/stations_temperature.py --jours 60 # autre fenêtre « en service »
 Tests, hors réseau :
@@ -19,7 +19,7 @@ Ce que l'API permet réellement (vérifié sur l'API réelle le 19 oct. 2026)
 - /temperature/chronique : 53 millions de mesures. Pas de « date de dernière mesure » dans la fiche station.
   Le tri sort=desc seul fait un 503 (trop lourd) et n'est pas fiable avec date_debut_mesure : on ne s'en sert pas.
 - Règle « en service » : pas de date_mise_hors_service ET au moins une mesure depuis 30 jours
-  (une requête par station, size=1, on lit le champ `count`). À confirmer par Adem.
+  (une seule requête : toutes les mesures des 30 derniers jours, champ code_station seul, environ 10 000 lignes ; une requête par station calait trop souvent). À confirmer par Adem.
 - La page de l'API dit « environ 760 stations, dont une cinquantaine seulement est toujours en service ».
 
 Licence

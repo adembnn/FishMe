@@ -34,18 +34,22 @@ class Convertir(unittest.TestCase):
 
 class Construire(unittest.TestCase):
     def test_regle_en_service(self):
-        fiches = [FICHE, {**FICHE, "code_station": "A1"}, {**FICHE, "code_station": "A2", "date_mise_hors_service": "2015-01-01"},
-                  FICHE]  # doublon ignore
-        appels = []
-        def mesures(code, depuis):
-            appels.append(code); return code == "03112480"
-        r = st.construire(fiches, JOUR, a_mesures=mesures, log=lambda *_: None, dormir=lambda s: None)
+        fiches = [{**FICHE, "_actif": True}, {**FICHE, "code_station": "A1"}, {**FICHE, "code_station": "A2", "_actif": False},
+                  {**FICHE, "_actif": True}]  # doublon ignore
+        r = st.construire(fiches)
         self.assertEqual([(s["code"], s["en_service"]) for s in r], [("03112480", True), ("A1", False), ("A2", False)])
-        self.assertEqual(appels, ["03112480", "A1"])  # la station hors service n'est pas interrogee
 
     def test_url_mesures(self):
-        u = st.url_mesures_depuis("03112480", JOUR)
-        self.assertIn("code_station=03112480", u); self.assertIn("date_debut_mesure=2026-09-19", u); self.assertIn("size=1", u)
+        u = st.url_mesures_depuis(JOUR)
+        self.assertIn("date_debut_mesure=2026-09-19", u); self.assertIn("fields=code_station", u)
+
+    def test_stations_avec_mesures_pagine(self):
+        pages = {1: {"count": 3, "data": [{"code_station": "A"}, {"code_station": "A"}], "next": "x"},
+                 2: {"count": 3, "data": [{"code_station": "B"}], "next": None}}
+        n = []
+        def fn(url):
+            n.append(url); return pages[len(n)]
+        self.assertEqual(st.stations_avec_mesures(JOUR, log=lambda *_: None, obtenir_fn=fn), {"A", "B"})
 
 
 class Reseau(unittest.TestCase):
