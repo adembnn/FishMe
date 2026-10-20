@@ -1,4 +1,4 @@
-# Plan de construction de l'app
+# Plan de construction de l'app NOOOOOO
 
 > **19 oct., après le jury (gagné) :** une ébauche de l'étude de marché existe déjà dans `reports/marche/` (concurrence française, canaux d'acquisition, pays, synthèse en 7 décisions). Agents de Titouan et de Sullyvan : lisez `reports/marche/README.md` avant toute recherche sur le marché, et complétez plutôt que de refaire.
 
