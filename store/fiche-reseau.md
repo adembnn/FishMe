@@ -9,8 +9,8 @@ Légende : **[?]** = à lire dans le build. Les crochets `[...]` sont à remplir
 |---|---|---|
 | Nouveautés | voir ci-dessous | 186 car., 192 octets (limite 4000 car.) |
 | Description | S1 + bloc « LA COMMUNAUTÉ » + deux lignes changées | 3893 car., 4000 octets avec les crochets non remplis (limite 4000 car.) |
-| Connexion requise | Non (pas de mot de passe) ; le relecteur doit avoir iCloud connecté pour publier, c'est dit dans les notes | |
-| Notes pour le relecteur | `notes-relecteur-reseau-en.md` | 3362 octets (limite 4000) |
+| Connexion requise | Non (pas de mot de passe, pas de Sign in with Apple) ; le mode démo (lecture seule) suffit au relecteur, iCloud n'est pas requis pour le voir | |
+| Notes pour le relecteur | `notes-relecteur-reseau-en.md` | 3970 octets (limite 4000) |
 | Confidentialité, âge | `app-privacy.md` | |
 | Classement par âge | à rejouer (contenu d'utilisateur : oui) ; plus de « 4+ » | [à lire dans App Store Connect] |
 
@@ -62,7 +62,7 @@ Des sessions sur d'autres spots, la météo sur 7 jours heure par heure, la cour
 L'abonnement se renouvelle automatiquement, sauf résiliation au moins 24 heures avant la fin de la période, dans les réglages de ton compte Apple. Tu peux restaurer tes achats dans l'app.
 
 RESPECTUEUX
-- Pas de mot de passe : ton compte est ton identifiant Apple. Aucune publicité. Tes coins de pêche exacts ne quittent jamais ton iPhone, et tes photos sont enregistrées sans position GPS.
+- Pas de mot de passe : ton compte est ton identifiant Apple. Aucune publicité. Tes coins de pêche exacts ne sont jamais partagés ni publiés, et tes photos sont enregistrées sans position GPS.
 - L'IA ne décide jamais si un poisson peut être gardé : elle propose l'espèce, tu confirmes, la règle sourcée s'affiche.
 
 IMPORTANT

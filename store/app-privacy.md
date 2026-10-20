@@ -6,6 +6,8 @@ Règle d'Apple : on déclare ce qui quitte l'appareil et que le développeur ou 
 
 Source des données : `docs/reports/reseau/schema.md` (R2), décisions du 19 octobre (`CLAUDE.md`), `docs/legal/politique-confidentialite.md` (le même contenu, en phrases). Les trois (manifeste, étiquettes, politique) doivent dire la même chose : c'est le risque n° 5 de R2 (refus 5.1.2).
 
+Mise à jour S2 du 20 octobre : (a) repères privés (coordonnées exactes des coins) sauvegardés dans l'iCloud privé chiffré du pêcheur, jamais partagés : base privée lisible par le seul pêcheur, donc non déclarée comme collectée (⚠ position à faire confirmer : voir `docs/legal/questions-juriste.md`, point 6) ; (b) carte de pêche importée : stockée sur l'iPhone, protégée, sauvegarde iPhone, aucun numéro ni nom lu : rien à déclarer, rien ne quitte l'appareil via FishMe ; (c) le type `Signalement` copie le texte du message signalé (500 caractères), lecture réservée à l'équipe : `EmailsOrTextMessages` reste déclaré.
+
 ## 1. `App/PrivacyInfo.xcprivacy` : ce que L25 change
 
 Aujourd'hui le fichier déclare 7 types, tous non liés, dont `UserID` (finalités `AppFunctionality` et `Analytics`) : ce sont ceux du SDK Spark. `NSPrivacyTracking` est faux, `NSPrivacyTrackingDomains` est vide. Ces deux lignes ne changent pas.
@@ -79,7 +81,7 @@ Sur les lignes Spark, la case « collecté seulement après accord » n'existe p
 | signalements : identifiant du contenu et de l'auteur, motif (§6) | `OtherUserContent`, `UserID` | idem |
 | mesure d'usage dans les Réglages seulement, éteinte par défaut (§7) | 6 types Spark, non liés, `Analytics` | idem, non lié |
 | aucun suivi, aucune publicité | `NSPrivacyTracking` faux | « Non » |
-| ce qui ne part jamais : position précise, GPS des photos (§5) | aucun type « Localisation précise » | aucune « Localisation précise » |
+| ce qui ne part pas : position précise, carte de pêche, GPS des photos ; repères privés seulement vers l'iCloud privé du pêcheur (§5) | aucun type « Localisation précise » | aucune « Localisation précise » |
 
 Une différence entre deux colonnes est un refus 5.1.2 probable : A relit ce tableau contre l'archive finale.
 

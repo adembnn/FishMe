@@ -1,10 +1,10 @@
 # Notes pour le relecteur d'Apple : version qui porte le réseau social (S2)
 
-**Brouillon, à relire par Adem, à contrôler contre le build TestFlight de la vague 2.** Remplace `notes-relecteur-en.md` (version du 16 octobre, sans réseau) dans le champ « Notes » d'App Store Connect. Écrit par S2 le 19 octobre 2026, mis à jour le même jour avec les décisions de Titouan (mode démo en lecture seule, surnom seul, accord aux conditions à la création du profil, département par défaut, photo importée, texte d'un message signalé transmis), depuis les fiches L21 à L24 et R2, pas depuis un build : chaque crochet `[...]` et chaque libellé de bouton se lit dans le build. Une fonction absente du build sort des notes (jamais de promesse d'une fonction absente). Longueur : 3789 octets comptés par Python (limite 4000) ; recompter après toute modification (`len(texte.encode("utf-8")) <= 4000`).
+**Brouillon, à relire par Adem, à contrôler contre le build TestFlight de la vague 2.** Remplace `notes-relecteur-en.md` (version du 16 octobre, sans réseau) dans le champ « Notes » d'App Store Connect. Écrit par S2 le 19 octobre 2026, mis à jour le même jour avec les décisions de Titouan (mode démo en lecture seule, surnom seul, accord aux conditions à la création du profil, département par défaut, photo importée, texte d'un message signalé transmis), depuis les fiches L21 à L24 et R2, pas depuis un build : chaque crochet `[...]` et chaque libellé de bouton se lit dans le build. Une fonction absente du build sort des notes (jamais de promesse d'une fonction absente). Longueur : 3970 octets comptés par Python (limite 4000) ; recompter après toute modification (`len(texte.encode("utf-8")) <= 4000`).
 
-Cocher « Connexion requise » : non (aucun mot de passe). Le relecteur n'a pas besoin de deuxième compte : le mode démo montre le contenu d'exemple en lecture seule du fil et du chat (règle 2.1 : à faire accepter par Apple, voir ci-dessous). Si un compte de test était un jour ajouté, il serait saisi dans App Store Connect seulement, jamais dans git, jamais dans ce fichier.
+Cocher « Connexion requise » : non (aucun mot de passe, Sign in with Apple non utilisé). Le relecteur n'a besoin ni de deuxième compte ni de compte iCloud pour voir toutes les fonctions : le mode démo (clé `demo.communaute`) montre en Release le Pescedex, le fil et le chat avec du contenu d'exemple, en lecture seule (règle 2.1 : à faire accepter par Apple, voir ci-dessous). Mise à jour du 20 octobre. Si un compte de test était un jour ajouté, il serait saisi dans App Store Connect seulement, jamais dans git, jamais dans ce fichier.
 
-⚠ État du code d'après la revue des règles (`C:\w\revues\regles-appreview.md`, point 2) : au moment de la revue, le mode démo de la Release ne remplissait que le Pescedex, les amis et le club ; le fil et le chat n'avait de contenu d'exemple que sous `#if DEBUG`, et n'étaient pas branchés dans `RootView`. Le paragraphe « DEMO MODE » du texte n'est vrai que si L25 étend `demo.communaute` au fil et au chat (lecture seule). Sinon il faut le retirer et fournir deux comptes iCloud. Apple demande un accès ou un mode démo qui montre toutes les fonctions (règle 2.1(a), lue par la revue sur developer.apple.com, pas relue par S2) : ⚠ la réponse d'Apple sur ce mode n'est pas connue.
+⚠ État du code d'après la revue des règles (`C:\w\revues\regles-appreview.md`, point 2) : au moment de la revue, le mode démo de la Release ne remplissait que le Pescedex, les amis et le club ; le fil et le chat n'avait de contenu d'exemple que sous `#if DEBUG`, et n'étaient pas branchés dans `RootView`. Le paragraphe « DEMO MODE » du texte n'est vrai que si L25 étend `demo.communaute` au fil et au chat (lecture seule). Sinon il faut le retirer et fournir deux comptes iCloud (dans App Store Connect seulement). Le texte ci-dessous suppose que L25 l'étend. Apple demande un accès ou un mode démo qui montre toutes les fonctions (règle 2.1(a), lue par la revue sur developer.apple.com, pas relue par S2) : ⚠ la réponse d'Apple sur ce mode n'est pas connue.
 
 ## Qui lit la boîte (interne, ne va pas chez Apple)
 - Lecteurs de fishme.app@gmail.com et des enregistrements `Signalement` : Titouan, Adem et Sullyvan (décision du 19 octobre). Le texte des notes dit « three team members » sans nom.
@@ -20,9 +20,9 @@ Cocher « Connexion requise » : non (aucun mot de passe). Le relecteur n'a pas 
 ```
 FishMe is a freshwater fishing app for France. The map shows fish recorded by the French Office for Biodiversity (OFB) and the rules that apply (each with source and quote); each confirmed catch becomes a collectible card in the user's "Pescedex" (the collection's name). This version adds a community: profile, feed, comments, likes, friend and club chat. All of it is free.
 
-NO PASSWORD. The account is the device's Apple ID. The only identity is a public nickname: no real name or first name is asked or stored.
+NO PASSWORD, no Sign in with Apple. The account is the device's Apple ID. The only identity is a public nickname: no real name or first name is asked or stored.
 
-DEMO MODE (no second account needed). [EXACT PATH FROM THE BUILD, e.g. Settings > "Mode démo"] fills the app with sample content, read-only: the Pescedex, the feed (sample posts and comments) and the chat (sample friend and club conversations). Nothing is sent to iCloud in this mode. [CONFIRM IN THE BUILD: Report and Block menus open on the sample content.] Without demo mode, publishing needs iCloud signed in.
+DEMO MODE (no second account needed). [EXACT PATH FROM THE BUILD, e.g. Settings > "Mode démo"] fills the app with sample content, read-only: the Pescedex, the feed (sample posts and comments) and the chat (sample friend and club conversations). It works in the Release build, with no iCloud account and no sign-in; nothing is sent to iCloud. [CONFIRM IN THE BUILD: Report and Block menus open on the sample content.] Publishing for real needs iCloud.
 
 TEST WITHOUT A FISH
 1. Launch. Allow location once or refuse and pick a department. Then one question ("Ton niveau ?"), then cards to swipe; "Passer" skips. No sheet appears at launch; usage measurement is only in Settings, off by default.
@@ -37,13 +37,13 @@ D. Block: same menu, "Bloquer"; nothing from that person shows any more.
 E. Chat: friends and clubs live in private shared iCloud zones, never in the public database. Report and block work on each message.
 F. Delete: [EXACT LABELS FROM THE BUILD] "Supprimer mon profil" removes profile, posts, comments, likes, club messages; "Supprimer mon compte et mes données iCloud" removes the rest.
 
-MODERATION. Typed text goes through a bad-words filter (LDNOOBW, CC BY 4.0, credited in Sources). The mailbox fishme.app@gmail.com and the report records are read by three team members. Public content (posts, comments, profiles) reported for breaking the Terms (article 10), and reported private messages whose text we receive, are removed within 24 hours.
+MODERATION. Typed text goes through a bad-words filter (LDNOOBW, CC BY 4.0, credited in Sources). The mailbox fishme.app@gmail.com and the report records (text of a reported message: 500 characters at most, team-only access) are read by three team members. Public content (posts, comments, profiles) reported for breaking the Terms (article 10), and reported private messages whose text we receive, are removed within 24 hours.
 
 LEGAL. Rules shown are indicative; the prefectoral order prevails. The AI only proposes a species; the user confirms; a sourced table gives the rule. Coverage: national baseline plus [DEPARTMENTS FROM THE BUILD].
 
 SERVICES. Apple Maps; OFB and Hub'Eau (station code only); Apple Weather (rounded point, mark shown); species proposals run on device; CloudKit public database for posts and nicknames; MWM Spark SDK only after consent in Settings, not linked to identity, no tracking.
 
-PRIVACY. Exact fishing spots never leave the iPhone; saved photos carry no GPS. Not for children: the community requires 15+.
+PRIVACY. Exact spots are never shared or published (private marks sit in the user's private iCloud); saved photos carry no GPS. Not for children: the community requires 15+.
 
 Contact: [NAME], [PHONE], fishme.app@gmail.com.
 ```
