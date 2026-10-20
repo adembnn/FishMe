@@ -216,4 +216,15 @@ struct RessourcesTests {
             _ = try JSONSerialization.jsonObject(with: data)
         }
     }
+
+    /// La page Sources lit `nom`, `url` et `mention` de `credits.json` : les mentions de licence de N3 (Hub'Eau / Naïades) et de la liste LDNOOBW y sont. ⚠ à vérifier (jamais compilé)
+    @Test func creditsContiennentLesMentionsDeLicence() throws {
+        let data = try #require(lire("credits", "json"))
+        let credits = MoteurCore.lireCredits(data)
+        let eau = try #require(credits.first { $0.nom.contains("Naïades") })
+        #expect(eau.mention == "Données : Hub'Eau / Naïades, Licence Ouverte (Etalab)")
+        let mots = try #require(credits.first { $0.nom.contains("LDNOOBW") })
+        #expect(mots.mention?.contains("CC BY 4.0") == true)
+        #expect(mots.url != nil)
+    }
 }
