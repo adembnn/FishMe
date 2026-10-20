@@ -201,7 +201,8 @@ final class ParcoursApp {
         if let conteneur = chargement.conteneur {
             let depot = DepotCartes(conteneur: conteneur, dossierPhotos: DepotCartes.dossierParDefaut(), services: servicesCollection)
             self.depot = depot
-            pescedex = PescedexModele(depot: depot, services: servicesCollection)
+            pescedex = PescedexModele(depot: depot, services: servicesCollection,
+                                      regionDe: { RegionPescedex.depuisCore($0) })
         } else {
             depot = nil
             pescedex = nil
@@ -557,6 +558,8 @@ final class ParcoursApp {
         guard spot != spotCourant else { return }
         spotCourant = spot
         Task { await conditions.lire(spot: spot.centre) }
+        // L18 : le département du spot alimente « Ma région » tant que le pêcheur n'a pas de carte localisée.
+        Task { await pescedex?.definirZoneDeRepli(spot.departement) }
     }
 
     var surSonSpot: Bool { surSonSpotEn(spotCourant?.centre) }
@@ -580,6 +583,7 @@ final class ParcoursApp {
 
     func commencer(_ spot: Spot) {
         spotCourant = spot
+        Task { await pescedex?.definirZoneDeRepli(spot.departement) }
         sessionReduite = false
         propositionRepere = nil
         let depart = ContexteDepart(coordonnee: spot.centre, departement: spot.departement, spotChoisi: spot,

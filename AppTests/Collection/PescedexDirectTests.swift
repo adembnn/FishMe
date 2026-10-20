@@ -205,4 +205,31 @@ struct PescedexDirectTests {
         #expect(avec.compteur.releveesDansLaZone == services.especes.especesPechables().count)
         #expect(avec.compteur.ligneCompteur?.hasSuffix("en France") == true)
     }
+
+    // MARK: Ma région branchée sur la table de Core (L18)
+
+    @Test func regionDepuisCoreDonneLaLocution() {
+        let idf = RegionPescedex.depuisCore(Departement(code: "94"))
+        #expect(idf?.nom == "Île-de-France")
+        #expect(idf?.phrase.hasPrefix("en ") == true)
+        #expect(idf?.departements.contains(Departement(code: "75")) == true)
+        #expect(RegionPescedex.depuisCore(Departement(code: "59"))?.phrase.hasPrefix("dans les ") == true)
+        #expect(RegionPescedex.depuisCore(.inconnu) == nil)
+        #expect(RegionPescedex.depuisCore(Departement(code: "zz")) == nil)
+    }
+
+    @Test func maRegionActiveAvecLeDepartementDuSpotSansCarte() async throws {
+        let depot = try nouveauDepot()
+        let modele = PescedexModele(depot: depot, services: services, regionDe: { RegionPescedex.depuisCore($0) })
+        await modele.charger()
+        #expect(!modele.regionDisponible)
+        await modele.definirZoneDeRepli(Departement(code: "94"))
+        #expect(modele.regionDisponible)
+        await modele.choisir(.maRegion)
+        #expect(modele.porteeMontree == .maRegion)
+        #expect(modele.compteur.ligneCompteur?.hasSuffix("en Île-de-France") == true)
+        await modele.definirZoneDeRepli(.inconnu)
+        #expect(!modele.regionDisponible)
+        #expect(modele.porteeMontree == .monSpot)
+    }
 }

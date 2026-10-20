@@ -23,7 +23,7 @@ final class PescedexModele {
     let depot: DepotCartes
     let services: ServicesCollection
     /// Département à utiliser quand aucune carte n'a de lieu (par exemple celui du spot gratuit).
-    let zoneDeRepli: Departement?
+    private(set) var zoneDeRepli: Departement?
     private let especes: [EspecePechable]
     /// La région d'un département. À brancher : A, avec la table des régions de `Core` (demandée à B/L1). Tant que c'est `nil`,
     /// « Ma région » est grisé dans le menu : l'app n'invente jamais la table.
@@ -36,6 +36,15 @@ final class PescedexModele {
         self.zoneDeRepli = zoneDeRepli
         self.especes = services.especes.especesPechables()
         self.regionDe = regionDe
+    }
+
+    /// Le département du spot courant du pêcheur (L18 : « Ma région » en dépend quand il n'a encore aucune carte).
+    /// Un département inconnu ou identique ne change rien. Recharge seulement si la valeur change. // ⚠ à vérifier
+    func definirZoneDeRepli(_ departement: Departement?) async {
+        let propre = departement.flatMap { $0.estInconnu ? nil : $0 }
+        guard propre != zoneDeRepli else { return }
+        zoneDeRepli = propre
+        await charger()
     }
 
     /// Vrai quand la région du pêcheur est connue : sinon « Ma région » est grisé.
