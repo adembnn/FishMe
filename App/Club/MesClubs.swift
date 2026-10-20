@@ -21,6 +21,20 @@ struct ClubLocal: Codable, Identifiable, Hashable {
     var fichierPhoto: String?
     /// Toujours vrai : les collections ne sont visibles que par les amis invités.
     var amisInvitesSeulement: Bool = true
+    /// L22 : l'image d'un club EN LIGNE (JPEG de CloudKit), pour que l'écran dessine un club en ligne comme un club local.
+    /// Jamais écrite dans les réglages (absente de `CodingKeys`) ; les clubs locaux d'avant la mise à jour se relisent tels quels.
+    var imageEnLigne: Data? = nil
+
+    enum CodingKeys: String, CodingKey { case id, nom, poissonId, fichierPhoto, amisInvitesSeulement }
+}
+
+extension ClubLocal {
+    /// Un club en ligne présenté comme un `ClubLocal` pour les écrans existants. `nil` si son identifiant n'est pas un UUID.
+    init?(enLigne club: Club) {
+        guard let uuid = UUID(uuidString: club.id) else { return nil }
+        self.init(id: uuid, nom: club.nom, poissonId: club.poissonId, fichierPhoto: nil)
+        imageEnLigne = club.image
+    }
 }
 
 /// Les clubs de l'utilisateur, gardés en JSON dans les réglages. Les photos de galerie sont réécrites sans métadonnées.
@@ -65,7 +79,9 @@ struct VignetteClub: View {
 
     var body: some View {
         Group {
-            if let fichier = club.fichierPhoto, let url = MesClubs.url(de: fichier),
+            if let donnees = club.imageEnLigne, let image = ImagesClubEnCache.image(donnees) {
+                Image(uiImage: image).resizable().scaledToFill()
+            } else if let fichier = club.fichierPhoto, let url = MesClubs.url(de: fichier),
                let image = ImagesClubEnCache.image(fichier: url) {
                 Image(uiImage: image).resizable().scaledToFill()
             } else if let poisson = poissons.first(where: { $0.id == club.poissonId }) {
@@ -169,6 +185,8 @@ struct VignettePoissonClub: View {
 /// Présenté plein écran (maquette B · Réglages) : « Annuler », titre au centre, bouton « Créer le club » en bas.
 struct CreerClubView: View {
     let poissons: [PoissonClub]
+    /// L22 : vrai quand le club sera créé EN LIGNE (profil fini et iCloud). Le texte dit alors qui voit le club, sans promettre « amis seulement ».
+    var enLigne = false
     let valider: (_ nom: String, _ poissonId: String?, _ photo: Data?) -> Void
 
     @Environment(\.dismiss) private var fermer
@@ -203,12 +221,13 @@ struct CreerClubView: View {
                         }
                         EnteteGroupeClub(titre: "Image")
                         GroupeClub { grille.padding(Espace.m) }
-                        EnteteGroupeClub(titre: "Qui voit les collections")
+                        EnteteGroupeClub(titre: enLigne ? "Qui voit le club" : "Qui voit les collections")
                         GroupeClub {
                             HStack(spacing: Espace.m) {
-                                Image(systemName: "lock.fill")
+                                Image(systemName: enLigne ? "link" : "lock.fill")
                                     .font(Police.taille(18)).foregroundStyle(Palette.marine)
-                                Text("Amis invités seulement").font(Police.corps).foregroundStyle(Palette.encre)
+                                Text(enLigne ? "Ceux qui ont le lien" : "Amis invités seulement")
+                                    .font(Police.corps).foregroundStyle(Palette.encre)
                                 Spacer(minLength: Espace.s)
                                 Image(systemName: "checkmark.circle.fill")
                                     .font(Police.taille(22)).foregroundStyle(Palette.marine)
@@ -218,7 +237,9 @@ struct CreerClubView: View {
                             .frame(minHeight: 56)
                             .padding(.horizontal, Espace.l)
                         }
-                        Text("Jamais en public. Seuls les amis que tu invites voient tes cartes.")
+                        Text(enLigne
+                             ? "Pas d'annuaire : seul le lien ouvre le club. Quiconque a le lien voit son nom, son image et les cartes partagées. Ton coin exact ne part jamais."
+                             : "Jamais en public. Seuls les amis que tu invites voient tes cartes. Le club reste sur cet iPhone.")
                             .font(Police.legende).foregroundStyle(Palette.encreDouce)
                             .padding(.horizontal, Espace.l).padding(.top, Espace.s)
                     }
@@ -340,6 +361,8 @@ struct InviterClubView: View {
     var invites: [InviteClub] = []
     /// À brancher : le partage CloudKit en lecture seule, réservé aux personnes invitées.
     var invitation: InvitationPescedex? = nil
+    /// L22 : le lien `fishme://club/<id>` d'un club EN LIGNE. S'il est là, il remplace l'invitation d'amis du lot Amis.
+    var lienClub: URL? = nil
 
     @Environment(\.dismiss) private var fermer
 
@@ -349,7 +372,7 @@ struct InviterClubView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
                     EnteteGroupeClub(titre: "Lien d'invitation", haut: 12)
-                    if let lienTexte {
+                    if let lienTexte = lienClub?.absoluteString ?? lienTexte {
                         GroupeClub {
                             HStack(spacing: Espace.m) {
                                 Text(lienTexte)
@@ -375,8 +398,10 @@ struct InviterClubView: View {
                             .padding(.horizontal, Espace.l)
                         }
                     }
-                    EnteteGroupeClub(titre: "Invitations")
-                    if invites.isEmpty {
+                    if lienClub == nil { EnteteGroupeClub(titre: "Invitations") }
+                    if lienClub != nil {
+                        EmptyView()
+                    } else if invites.isEmpty {
                         GroupeClub {
                             HStack(spacing: Espace.m) {
                                 Image(systemName: "person.crop.circle.badge.questionmark").foregroundStyle(Palette.silhouette)
@@ -404,7 +429,9 @@ struct InviterClubView: View {
                             }
                         }
                     }
-                    Text("Ton coin exact ne quitte jamais ton iPhone. Les amis invités voient tes cartes, personne d'autre.")
+                    Text(lienClub != nil
+                         ? "Quiconque reçoit ce lien peut rejoindre le club et voir ses cartes. Ton coin exact ne quitte jamais ton iPhone."
+                         : "Ton coin exact ne quitte jamais ton iPhone. Les amis invités voient tes cartes, personne d'autre.")
                         .font(Police.legende).foregroundStyle(Palette.encreDouce)
                         .padding(.horizontal, Espace.l).padding(.top, 10)
                 }
@@ -416,7 +443,12 @@ struct InviterClubView: View {
         .toolbar(.hidden, for: .navigationBar)
         .safeAreaInset(edge: .bottom) {
             Group {
-                if let invitation {
+                if let lienClub {
+                    ShareLink(item: lienClub, preview: SharePreview(club.nom)) {
+                        Label("Envoyer le lien du club", systemImage: "square.and.arrow.up")
+                    }
+                    .buttonStyle(.principal)
+                } else if let invitation {
                     ShareLink(item: invitation, preview: SharePreview(club.nom)) {
                         Label("Envoyer l'invitation", systemImage: "square.and.arrow.up")
                     }
