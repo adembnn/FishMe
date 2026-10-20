@@ -35,7 +35,7 @@ struct CarpeDeNuitTests {
     func sansRegleLocale() {
         let r = moteur().controle(espece: carpe, tailleCm: 60, mesure: .toise, date: nuit, lieu: lieuParis, prisesDuJour: [])
         let l = ligneCarpe(r)
-        #expect(l?.phrase == "Pêche de nuit : seulement sur les secteurs autorisés, vérifie l'arrêté")
+        #expect(l?.phrase == "Pêche de nuit : seulement sur les secteurs prévus, vérifie l'arrêté")
         #expect(l?.etat == .aVerifierSurPlace)
         #expect(!texteDe(r).contains("garder"))
     }

@@ -656,7 +656,7 @@ public struct MoteurRegles: ServiceRegles {
     // MARK: Carpe de nuit
 
     static let phraseCarpeAutorisee = "Carpe de nuit : remise à l'eau obligatoire, appâts végétaux seulement"
-    static let phraseCarpeAVerifier = "Pêche de nuit : seulement sur les secteurs autorisés, vérifie l'arrêté"
+    static let phraseCarpeAVerifier = "Pêche de nuit : seulement sur les secteurs prévus, vérifie l'arrêté"
 
     private func estCarpe(_ e: Espece) -> Bool { e.id == "carpe-commune" || e.id == "carpe-koi" || e.codeSandre == "2110" }
 

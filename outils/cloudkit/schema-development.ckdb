@@ -1,0 +1,236 @@
+DEFINE SCHEMA
+
+RECORD TYPE Publication (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    auteur REFERENCE,
+    auteurNom STRING QUERYABLE,
+    media ASSET,
+    genre STRING,
+    vignette ASSET,
+    dureeS INT64,
+    legende STRING,
+    lieuMode STRING,
+    lieuTexte STRING,
+    departement STRING QUERYABLE,
+    espece STRING,
+    rarete STRING,
+    tailleCm DOUBLE,
+    club STRING QUERYABLE,
+    creeLe TIMESTAMP QUERYABLE SORTABLE,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_world"
+);
+
+RECORD TYPE Like (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    publication STRING QUERYABLE,
+    auteurNom STRING QUERYABLE,
+    creeLe TIMESTAMP,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_world"
+);
+
+RECORD TYPE Commentaire (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    publication STRING QUERYABLE,
+    auteurNom STRING QUERYABLE,
+    texte STRING,
+    creeLe TIMESTAMP QUERYABLE SORTABLE,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_world"
+);
+
+RECORD TYPE ProfilPublic (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE QUERYABLE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    surnomAffiche STRING,
+    surnomNorm STRING QUERYABLE,
+    avatar ASSET,
+    creeLe TIMESTAMP,
+    version INT64,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_world"
+);
+
+RECORD TYPE Club (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    nom STRING,
+    poissonId STRING,
+    image ASSET,
+    fondateur STRING,
+    retires LIST<STRING>,
+    ferme INT64,
+    creeLe TIMESTAMP,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_world"
+);
+
+RECORD TYPE Membre (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    club STRING QUERYABLE,
+    profil STRING QUERYABLE,
+    role STRING,
+    depuis TIMESTAMP,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_world"
+);
+
+RECORD TYPE Signalement (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    cible STRING,
+    typeCible STRING,
+    motif STRING,
+    signalePar STRING,
+    creeLe TIMESTAMP SORTABLE,
+    texte STRING,
+    GRANT CREATE TO "_icloud"
+);
+
+RECORD TYPE Blocage (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    bloque STRING,
+    creeLe TIMESTAMP,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_creator"
+);
+
+RECORD TYPE MessageClub (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    club STRING,
+    auteurNom STRING,
+    surnom STRING,
+    texte STRING,
+    creeLe TIMESTAMP,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_creator"
+);
+
+RECORD TYPE MessageAmi (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    auteurNom STRING,
+    surnom STRING,
+    texte STRING,
+    creeLe TIMESTAMP,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_creator"
+);
+
+RECORD TYPE Carte (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    cardID STRING,
+    espece STRING,
+    rarete STRING,
+    datePrise STRING,
+    taille DOUBLE,
+    bredouille INT64,
+    zone STRING,
+    image ASSET,
+    especeId STRING,
+    codeSandre STRING,
+    origine STRING,
+    longueurCm DOUBLE,
+    mesure STRING,
+    stade STRING,
+    date TIMESTAMP,
+    lieuFlou STRING,
+    gardee INT64,
+    exemple INT64,
+    conditions BYTES,
+    dureeSecondes DOUBLE,
+    photo ASSET,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_creator"
+);
+
+RECORD TYPE Bredouille (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    debut TIMESTAMP,
+    fin TIMESTAMP,
+    lieuFlou STRING,
+    conditions BYTES,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_creator"
+);
+
+RECORD TYPE Profil (
+    "___createTime" TIMESTAMP,
+    "___createdBy"  REFERENCE,
+    "___etag"       STRING,
+    "___modTime"    TIMESTAMP,
+    "___modifiedBy" REFERENCE,
+    "___recordID"   REFERENCE QUERYABLE,
+    fichier ASSET,
+    GRANT WRITE TO "_creator",
+    GRANT CREATE TO "_icloud",
+    GRANT READ TO "_creator"
+);
