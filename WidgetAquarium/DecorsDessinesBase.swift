@@ -283,17 +283,21 @@ nonisolated enum DecorDessin {
                           control2: cad.p(x + l * 0.9 + k * 0.8, y0 - h * 0.6))
             ctx.stroke(brin, with: .color(couleur), style: StrokeStyle(lineWidth: max(0.6, cad.r(largeur)), lineCap: .round))
             if fleurs && g.suivant() < 0.55 {
+                // Les cinq pétales forment UN seul tracé (un remplissage, un trait) : moins d'opérations par image qu'avec
+                // dix tracés séparés, pour le même dessin (budget de performance, voir BudgetDecor).
+                var petales = Path()
                 for j in 0..<5 {
                     let a = Double(j) * 1.2566
                     let px = ex + CGFloat(cos(a)) * 4.2
                     let py = ey + CGFloat(sin(a)) * 4.2
                     let centre = cad.p(px, py)
-                    var petale = Path(ellipseIn: CGRect(x: -3.6 * cad.s, y: -2.6 * cad.s, width: 7.2 * cad.s, height: 5.2 * cad.s))
-                    petale = petale.applying(CGAffineTransform(rotationAngle: CGFloat(a))
-                        .concatenating(CGAffineTransform(translationX: centre.x, y: centre.y)))
-                    ctx.fill(petale, with: .color(c(0xFBFBF2)))
-                    ctx.stroke(petale, with: .color(c(0x1E3214, 0.35)), lineWidth: max(0.4, cad.r(0.6)))
+                    let petale = Path(ellipseIn: CGRect(x: -3.6 * cad.s, y: -2.6 * cad.s, width: 7.2 * cad.s, height: 5.2 * cad.s))
+                        .applying(CGAffineTransform(rotationAngle: CGFloat(a))
+                            .concatenating(CGAffineTransform(translationX: centre.x, y: centre.y)))
+                    petales.addPath(petale)
                 }
+                ctx.fill(petales, with: .color(c(0xFBFBF2)))
+                ctx.stroke(petales, with: .color(c(0x1E3214, 0.35)), lineWidth: max(0.4, cad.r(0.6)))
                 ctx.fill(cad.ellipse(ex, ey, 2.2, 2.2), with: .color(c(0xE6C34A)))
             }
         }

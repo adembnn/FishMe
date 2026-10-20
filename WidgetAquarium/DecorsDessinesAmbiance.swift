@@ -33,6 +33,9 @@ nonisolated extension DecorDessin {
         var feuilles: [UInt32] = []
         /// Échelle des flocons.
         var taille: Double = 1
+        /// Combien de particules derrière les poissons, puis devant (plus grosses). Plafonné par `BudgetDecor.particulesMax`.
+        var fond: Int = BudgetDecor.particulesFondParDefaut
+        var proches: Int = BudgetDecor.particulesProchesParDefaut
     }
 
     struct Bulles {
@@ -76,13 +79,14 @@ nonisolated extension DecorDessin {
 
     // MARK: Reflets de surface
 
-    static func caustiques(_ ctx: inout GraphicsContext, taille: CGSize, t: Double, _ o: Caustiques) {
+    /// `economie` (mode économie d'énergie) : une seule des deux familles de lignes.
+    static func caustiques(_ ctx: inout GraphicsContext, taille: CGSize, t: Double, _ o: Caustiques, economie: Bool = false) {
         let l = taille.width
         let h = taille.height
         ctx.blendMode = .plusLighter
         let segments = 16
-        for famille in 0..<2 {
-            for i in 0..<o.lignes {
+        for famille in 0..<(economie ? 1 : 2) {
+            for i in 0..<min(o.lignes, BudgetDecor.caustiquesLignesMax) {
                 let f = Double(i)
                 let ecart = 0.085 * f * (9.0 / Double(o.lignes))
                 let base: CGFloat = CGFloat(0.04 + ecart + 0.012 * sin(t * 0.16 + f * 1.3 + Double(famille))) * h
@@ -255,15 +259,24 @@ nonisolated extension DecorDessin {
     // MARK: L'ensemble
 
     /// Rais, reflets, particules du fond, bulles : derrière les poissons.
-    static func ambianceArriere(_ ctx: inout GraphicsContext, taille: CGSize, t: Double, _ a: Ambiance) {
+    /// `economie` : moitié moins de particules, une seule famille de reflets.
+    static func ambianceArriere(_ ctx: inout GraphicsContext, taille: CGSize, t: Double, _ a: Ambiance, economie: Bool = false) {
         if let r = a.rais { rais(&ctx, taille: taille, t: t, r) }
-        if let k = a.caustiques { caustiques(&ctx, taille: taille, t: t, k) }
-        if let p = a.particules { particules(&ctx, taille: taille, t: t, de: 0, jusqua: 26, avant: false, p, facteur: 1) }
+        if let k = a.caustiques { caustiques(&ctx, taille: taille, t: t, k, economie: economie) }
+        if let p = a.particules {
+            particules(&ctx, taille: taille, t: t, de: 0, jusqua: economie ? max(1, p.fond / 2) : p.fond,
+                       avant: false, p, facteur: 1)
+        }
     }
 
     /// Particules proches et bulles : devant les poissons.
-    static func ambianceAvant(_ ctx: inout GraphicsContext, taille: CGSize, t: Double, _ a: Ambiance, bulles avecBulles: Bool) {
-        if let p = a.particules { particules(&ctx, taille: taille, t: t, de: 26, jusqua: 35, avant: true, p, facteur: a.proches) }
+    /// `economie` : moitié moins de particules proches ; les bulles sont coupées par l'appelant (`bulles: false`).
+    static func ambianceAvant(_ ctx: inout GraphicsContext, taille: CGSize, t: Double, _ a: Ambiance, bulles avecBulles: Bool,
+                              economie: Bool = false) {
+        if let p = a.particules {
+            particules(&ctx, taille: taille, t: t, de: p.fond, jusqua: p.fond + (economie ? p.proches / 2 : p.proches),
+                       avant: true, p, facteur: a.proches)
+        }
         if avecBulles, let b = a.bulles { bulles(&ctx, taille: taille, t: t, b) }
     }
 }

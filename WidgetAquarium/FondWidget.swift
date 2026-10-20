@@ -42,9 +42,9 @@ nonisolated public enum FondWidget {
 
     // MARK: Décors dessinés en code
 
-    /// Les décors qui ont un dessin (`DecorsDessines.swift`). Noël et Été n'en ont pas encore : ils restent au catalogue,
-    /// sans fond dessiné, et se replie sur le fond d'origine (la galerie de l'app les masque).
-    public static let decorsDessines: Set<String> = ["sous-bois", "etang", "grotte", "halloween", "noel", "ouverture-truite"]
+    /// Les décors qui ont un dessin (`DecorsDessines*.swift`) : les sept décors du catalogue hors le décor de départ.
+    /// Un décor ajouté ici doit aussi avoir sa charge dans `BudgetDecor.charge` (le test de budget le vérifie).
+    public static let decorsDessines: Set<String> = ["sous-bois", "etang", "grotte", "halloween", "noel", "ouverture-truite", "ete"]
 
     /// Vrai si ce décor a un dessin. Le décor de départ n'en a pas : son fond est le fond d'origine.
     public static func aUnDessin(_ skin: String?) -> Bool {

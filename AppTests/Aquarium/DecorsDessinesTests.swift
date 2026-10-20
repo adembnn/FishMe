@@ -8,14 +8,14 @@ import Core
 // La règle « quel dessin pour quel skin » du widget est aussi testée sous Linux (AppTests/WidgetAquarium/FondWidgetTests.swift).
 @MainActor
 struct DecorsDessinesTests {
-    static let dessines: [IdentifiantSkin] = [.sousBois, .etang, .grotte, .halloween, .noel, .ouvertureTruite]
+    static let dessines: [IdentifiantSkin] = [.sousBois, .etang, .grotte, .halloween, .noel, .ouvertureTruite, .ete]
 
-    @Test func lesSixDecorsChoisisOntUnDessinEtLeDecorDeDepartEtEteNon() {
+    @Test func lesSeptDecorsChoisisOntUnDessinEtLeDecorDeDepartNon() {
         for id in Self.dessines {
             #expect(FondWidget.aUnDessin(id.valeur), "dessin manquant : \(id.valeur)")
             #expect(DecorDessin.reglage(id.valeur) != nil, "réglage manquant : \(id.valeur)")
         }
-        for id in [IdentifiantSkin.parDefaut, .ete, IdentifiantSkin("inconnu")] {
+        for id in [IdentifiantSkin.parDefaut, IdentifiantSkin("inconnu")] {
             #expect(!FondWidget.aUnDessin(id.valeur))
             #expect(DecorDessin.reglage(id.valeur) == nil)
         }
@@ -24,7 +24,7 @@ struct DecorsDessinesTests {
     @Test func laListeDesDecorsDessinesCorrespondAuCatalogue() {
         let ids = Set(CatalogueSkins.tous.map(\.id.valeur))
         #expect(FondWidget.decorsDessines.isSubset(of: ids))
-        #expect(FondWidget.decorsDessines == ids.subtracting(["riviere", "ete"]))
+        #expect(FondWidget.decorsDessines == ids.subtracting(["riviere"]))
         #expect(FondWidget.decorsDessines == Set(Self.dessines.map(\.valeur)))
     }
 
@@ -53,7 +53,7 @@ struct DecorsDessinesTests {
                 == .image("fond-halloween-grand"))
     }
 
-    @Test func laGalerieMontreLesDecorsDessinesEtMasqueEte() {
+    @Test func laGalerieMontreTousLesDecorsDessinesEteCompris() {
         let jour = SkinsGalerieTests.date(2026, 10, 19)
         let contexte = SkinsGalerieTests.contexte(jour, abonne: true, progression: ProgressionPecheur(especesDifferentes: 9, sessions: 12, legendairesPris: 1))
         let rangees = rangeesGalerie(dans: contexte) {
@@ -61,7 +61,7 @@ struct DecorsDessinesTests {
         }
         let tous = (rangees.mesDecors + rangees.enCeMoment + rangees.reviennentChaqueAnnee).map(\.id)
         #expect(Set(tous) == Set([IdentifiantSkin.parDefaut] + Self.dessines))
-        #expect(!tous.contains(.ete))
+        #expect(tous.contains(.ete))
         #expect(rangees.mesDecors.map(\.id) == [.riviere, .etang, .grotte, .sousBois])
     }
 
@@ -115,5 +115,79 @@ struct DecorsDessinesTests {
         // Le widget et « Réduire les animations » n'ont aucun mouvement : l'instant est une constante.
         #expect(DecorDessin.tFixe == 27)
         #expect(DecorDessin.balance(DecorDessin.tFixe, periode: 12, retard: 0) == DecorDessin.balance(DecorDessin.tFixe, periode: 12, retard: 0))
+    }
+
+    // MARK: Budget de performance (voir WidgetAquarium/BudgetDecor.swift)
+
+    @Test func laChargeDeclareeCorrespondAuxReglagesReels() throws {
+        for id in Self.dessines {
+            let charge = try #require(BudgetDecor.charge(id.valeur), "charge manquante : \(id.valeur)")
+            let r = try #require(DecorDessin.reglage(id.valeur))
+            #expect(charge.rais == (r.ambiance.rais?.n ?? 0), "rais \(id.valeur)")
+            #expect(charge.caustiquesLignes == (r.ambiance.caustiques.map { min($0.lignes, BudgetDecor.caustiquesLignesMax) } ?? 0),
+                    "reflets \(id.valeur)")
+            #expect(charge.particules == (r.ambiance.particules.map { $0.fond + $0.proches } ?? 0), "particules \(id.valeur)")
+            #expect(charge.particulesFeuilles == (r.ambiance.particules?.type == .feuille), "feuilles \(id.valeur)")
+            #expect(charge.bulles == (r.ambiance.bulles == nil ? 0 : BudgetDecor.bullesAmbiance), "bulles \(id.valeur)")
+            #expect(charge.depassements.isEmpty, "\(id.valeur) : \(charge.depassements)")
+        }
+    }
+
+    @Test func leDecorEteRespecteLesLimitesChiffreesDeLaSpecification() throws {
+        let charge = try #require(BudgetDecor.charge("ete"))
+        #expect(DecorDessin.rubansLumiere.count == charge.rubans)
+        #expect(DecorDessin.rubansLumiere.count <= 6)
+        #expect(charge.bokeh == BudgetDecor.bokehMax && charge.bokeh <= 12)
+        #expect(charge.bulles <= 15)
+        #expect(DecorDessin.anneauxBouees.count * 2 == charge.anneaux)
+        #expect(DecorDessin.nombreReflets == charge.imagesMobiles)
+        #expect(DecorDessin.nombreReflets <= BudgetDecor.imagesMobilesMax)
+        // Le sol et les bouées sont fixes : rien de flou ne bouge, les rais sont dans l'image (pas d'ambiance de rais).
+        #expect(DecorDessin.reglage("ete")?.ambiance.rais == nil)
+        #expect(DecorDessin.reglage("ete")?.ambiance.caustiques == nil)
+        #expect(DecorDessin.aUnAvantFixe("ete") && DecorDessin.aDesReflets("ete"))
+    }
+
+    @Test func lesImagesDeRefletsSontPlusLargesQueLEcranEtRestentEnBas() {
+        let ecran = CGSize(width: 390, height: 844)
+        let dim = DecorDessin.dimensionsReflets(ecran: ecran)
+        #expect(dim.width == 585)
+        #expect(dim.height > 100 && dim.height < 200)
+        #expect(DecorDessin.origineReflets(ecran: ecran).x == -97.5)
+        #expect(abs(DecorDessin.origineReflets(ecran: ecran).y + dim.height - 844) < 0.001)
+    }
+
+    @Test func lesParticulesDeLaAmbianceTiennentDansLeBudget() {
+        for id in Self.dessines {
+            guard let p = DecorDessin.reglage(id.valeur)?.ambiance.particules else { continue }
+            #expect(p.fond + p.proches <= BudgetDecor.particulesMax, "\(id.valeur)")
+            #expect(p.fond > 0 && p.proches > 0)
+        }
+    }
+
+    @Test func laCleDuCacheDependDuDecorDeLaCoucheDeLaTailleEtDeLEchelle() {
+        let ecran = CGSize(width: 390, height: 844)
+        let base = CacheDecor.cle(skin: "ete", couche: .fixeArriere, ecran: ecran, echelle: 3)
+        #expect(base != CacheDecor.cle(skin: "noel", couche: .fixeArriere, ecran: ecran, echelle: 3))
+        #expect(base != CacheDecor.cle(skin: "ete", couche: .fixeAvant, ecran: ecran, echelle: 3))
+        #expect(base != CacheDecor.cle(skin: "ete", couche: .fixeArriere, ecran: CGSize(width: 393, height: 852), echelle: 3))
+        #expect(base != CacheDecor.cle(skin: "ete", couche: .fixeArriere, ecran: ecran, echelle: 2))
+        #expect(base == CacheDecor.cle(skin: "ete", couche: .fixeArriere, ecran: ecran, echelle: 3))
+        // L'échelle est plafonnée à 3 et plancher à 1 : pas d'image géante.
+        #expect(CacheDecor.cle(skin: "ete", couche: .fixeArriere, ecran: ecran, echelle: 9)
+                == CacheDecor.cle(skin: "ete", couche: .fixeArriere, ecran: ecran, echelle: 3))
+    }
+
+    @Test func leDessinFixeEstRenduUneSeuleFoisPuisReutilise() {
+        CacheDecor.vider()
+        let ecran = CGSize(width: 195, height: 422)
+        let premiere = CacheDecor.image(skin: "ete", couche: .fixeArriere, ecran: ecran, echelle: 1)
+        let seconde = CacheDecor.image(skin: "ete", couche: .fixeArriere, ecran: ecran, echelle: 1)
+        #expect(premiere != nil)
+        #expect(premiere === seconde)
+        // Un identifiant sans dessin ne produit rien.
+        #expect(CacheDecor.image(skin: "riviere", couche: .fixeArriere, ecran: ecran, echelle: 1) == nil)
+        CacheDecor.vider()
+        #expect(CacheDecor.existante(CacheDecor.cle(skin: "ete", couche: .fixeArriere, ecran: ecran, echelle: 1)) == nil)
     }
 }

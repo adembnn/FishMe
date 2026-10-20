@@ -33,13 +33,13 @@ enum FondSkin {
         }
     }
 
-    /// L'identifiant du décor à dessiner en code, ou `nil` (illustration présente, fond d'origine, Noël, Été…).
+    /// L'identifiant du décor à dessiner en code, ou `nil` (illustration présente, fond d'origine…).
     static func dessin(_ skin: IdentifiantSkin) -> String? {
         source(skin, format: .grand) == .dessine ? skin.valeur : nil
     }
 
     /// Un skin se montre dans la galerie dès qu'il a un fond : illustration ou dessin (le décor de départ toujours).
-    /// Noël et Été n'ont ni l'un ni l'autre pour l'instant : la galerie les masque.
+    /// Les sept décors du catalogue ont un dessin : la galerie les montre tous (un identifiant futur sans fond serait masqué).
     static func imagesPretes(_ skin: Skin) -> Bool {
         skinAffichable(skin, imageExiste: { existe($0) }, fondDessine: { FondWidget.aUnDessin($0.valeur) })
     }
@@ -53,7 +53,7 @@ struct FondSkinVue: View {
 
     var body: some View {
         if let id = FondSkin.dessin(skin) {
-            FondDecorFige(skin: id, nomFond: FondSkin.nomImage(skin, format: format))
+            FondDecorFige(skin: id, nomFond: FondSkin.nomImage(skin, format: format), memoriser: true)
         } else {
             Color.clear
                 .overlay { Image(FondSkin.nomImage(skin, format: format)).resizable().scaledToFill() }
@@ -70,7 +70,8 @@ struct CoucheSkin: View {
 
     var body: some View {
         if let id = FondSkin.dessin(skin) {
-            // Décor dessiné en code : sa propre lumière, son sol, ses plantes. « Réduire les animations » : une image fixe.
+            // Décor dessiné en code : sa propre lumière, son sol, ses plantes. Le dessin fixe est une image mise en cache ;
+            // « Réduire les animations » : une seule image fixe, aucune TimelineView (budget : WidgetAquarium/BudgetDecor.swift).
             CoucheDecor(skin: id, anime: !reduireAnimations).equatable()
         } else if let connu = CatalogueSkins.skin(skin) {
             ZStack(alignment: .bottom) {
