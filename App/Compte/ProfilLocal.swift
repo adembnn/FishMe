@@ -1,11 +1,16 @@
 import Core
 import Foundation
 
-/// Lit et écrit, sur l'iPhone, ce que le profil iCloud transporte : niveau, premier lancement, clubs et sorties.
+/// Lit et écrit, sur l'iPhone, ce que le profil iCloud transporte : niveau, premier lancement, clubs, sorties et envies.
 /// La session en cours et le spot gratuit (trousseau, coordonnée exacte) ne sont jamais touchés.
 /// Sur le fil principal, comme `SuiviSession` qui lit le même fichier.
 struct ProfilLocal {
     var stockage: StockageFichier = StockageFichier()
+    /// N2 : le fichier de « Mes envies » (le même que celui du modèle `EnviesModele`, voir `ParcoursApp.envies`).
+    static var fichierEnvies: URL {
+        FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first?.appendingPathComponent("envies.json")
+            ?? FileManager.default.temporaryDirectory.appendingPathComponent("envies.json")
+    }
     private static let cleClubs = "club.mesClubs"
     private static let cleDernier = "compte.dernierProfil"
 
@@ -18,7 +23,8 @@ struct ProfilLocal {
             tunnelVu: d.bool(forKey: ClesConseils.tunnelVu),
             clubs: d.data(forKey: Self.cleClubs),
             sorties: fichier.terminees,
-            sessionsTerminees: fichier.sessionsTerminees)
+            sessionsTerminees: fichier.sessionsTerminees,
+            envies: StockageEnviesFichier(url: Self.fichierEnvies).lire().envies)
         // Date de modification : celle de la dernière synchro si rien n'a bougé depuis, sinon maintenant.
         // Jamais synchronisé (iPhone neuf) : date la plus ancienne, pour que le niveau et les clubs d'iCloud gagnent.
         if let dernier = Self.dernier() {
@@ -40,6 +46,11 @@ struct ProfilLocal {
         fichier.terminees = profil.sorties
         fichier.sessionsTerminees = profil.sessionsTerminees
         stockage.ecrire(fichier)
+        // N2 : les envies fusionnées (pierres tombales comprises). `EnviesModele.relire()` suit, voir `SauvegardeAvecReperes`.
+        // ⚠ à vérifier : écrit seulement si la liste diffère de celle du fichier, pour ne pas toucher au fichier sans raison.
+        let stockageEnvies = StockageEnviesFichier(url: Self.fichierEnvies)
+        let fusionnees = ListeEnvies(envies: profil.envies)
+        if fusionnees != stockageEnvies.lire() { stockageEnvies.ecrire(fusionnees) }
         if let json = try? JSONEncoder().encode(profil) { d.set(json, forKey: Self.cleDernier) }
     }
 

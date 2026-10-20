@@ -116,7 +116,9 @@ final class ParcoursApp {
         ? depot.map { depot in
             SauvegardeAvecReperes(
                 cartes: SauvegardeICloud(depot: depot), reperes: SauvegardeReperes(depot: ModeleReperes.partage.depot),
-                apresReperes: { await ModeleReperes.partage.recharger() })
+                apresReperes: { await ModeleReperes.partage.recharger() },
+                // N2 : la synchro vient d'écrire les envies fusionnées dans `envies.json` (ProfilLocal) : le modèle les relit.
+                apresProfil: { [weak self] in self?.envies.relire() })
         } : nil
     @ObservationIgnored private(set) lazy var compte: CompteModele? = sauvegarde.map { service in
         CompteModele(service: service,
@@ -321,8 +323,7 @@ final class ParcoursApp {
     /// N2 : « Mes envies » (liste privée, sur l'iPhone). Le Pescedex (autre agent) pose la ligne d'entrée et le bouton sur les fiches ;
     /// ici, seulement le modèle, câblé sur les règles du spot et les conseils.
     @ObservationIgnored private(set) lazy var envies: EnviesModele = {
-        let url = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first?.appendingPathComponent("envies.json")
-            ?? FileManager.default.temporaryDirectory.appendingPathComponent("envies.json")
+        let url = ProfilLocal.fichierEnvies
         let externes = EnviesExternes(
             controle: { [weak self] espece, date in
                 guard let self, let lieu = self.lieuDuSpot() else { return nil }
@@ -1004,7 +1005,8 @@ private struct RacineContenu: View {
                 changerZone: { app.onglet = .carte },
                 ajouterManuellement: { photo, espece, cm, date, lieu in
                     await app.ajouterPriseManuelle(photo: photo, espece: espece, cm: cm, date: date, lieu: lieu)
-                })
+                },
+                envies: app.envies)
             .fullScreenCover(isPresented: $aquariumOuvert) {
                 // N1 : le menu « Décors » est un bouton posé par la racine sur l'aquarium (AquariumView n'en a pas).
                 ZStack(alignment: .topLeading) {
@@ -1725,11 +1727,14 @@ nonisolated struct SauvegardeAvecReperes: ServiceSauvegarde {
     let cartes: SauvegardeICloud
     let reperes: SauvegardeReperes
     let apresReperes: @MainActor @Sendable () async -> Void
+    /// Après chaque synchro du profil (envies relues). Par défaut : rien.
+    var apresProfil: @MainActor @Sendable () async -> Void = {}
 
     func etatCompte() async -> EtatICloud { await cartes.etatCompte() }
 
     func synchroniser() async throws -> BilanSauvegarde {
         let bilan = try await cartes.synchroniser()
+        await apresProfil()
         if SauvegardeReperes.actif, let lu = try? await reperes.synchroniser(), lu.aRelire {
             await apresReperes()
         }
