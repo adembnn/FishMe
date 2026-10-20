@@ -6,7 +6,7 @@ import Core
 struct IdentificationDinoTests {
     /// Fait tourner le vrai modèle sur la photo d'exemple. Ignoré si le modèle ou l'image manque dans le bundle de test.
     @Test func photoExempleDonneUnResultat() async throws {
-        let bundles = [Bundle.main, Bundle(for: Repere.self)]
+        let bundles = [Bundle.main, Bundle(for: MarqueurBundle.self)]
         guard let modele = bundles.first(where: { $0.url(forResource: "PoissonsDino-int8", withExtension: "mlmodelc") != nil }),
               let url = bundles.compactMap({ $0.url(forResource: "photo-exemple", withExtension: "jpg") }).first,
               let data = try? Data(contentsOf: url) else { return }
@@ -28,4 +28,4 @@ struct IdentificationDinoTests {
     }
 }
 
-private final class Repere {}
+private final class MarqueurBundle {}
