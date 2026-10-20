@@ -687,7 +687,8 @@ def essai_verif(m):
     p = lancer(["bash", "scripts/verif.sh"], c0, dict(env, ATELIER_SYSTEME="Darwin"))
     bilan.verifier("verif.sh : sur Mac, un xcodebuild rouge -> ✗ App, sort 1", p.returncode == 1 and "✗ App" in p.stdout, p.stdout)
     etat_de(m, "xcode-resultat", "vert")
-    shutil.rmtree(c0 / "Projet.xcodeproj")
+    if (c0 / "Projet.xcodeproj").exists():
+        shutil.rmtree(c0 / "Projet.xcodeproj")
     os.remove(c0 / "App/Carte/X.swift")
 
     # Core sans swift : via Docker, ou ✗ avec la commande de réparation.
