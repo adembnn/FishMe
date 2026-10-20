@@ -173,13 +173,16 @@ private struct HabillageTuile: ViewModifier {
 /// Rien à montrer sans lecture : jamais un chiffre inventé. Avec `reessayer`, un bouton de 44 pt relance la lecture.
 struct RangeeMaintenantVideView: View {
     var reessayer: (() -> Void)? = nil
+    /// Pourquoi la météo manque : sans cause connue, on ne promet pas que c'est la connexion.
+    var cause: CauseMeteo? = nil
 
     var body: some View {
         VStack(spacing: Espace.m) {
             Image(systemName: "cloud.sun").font(Police.taille(40)).foregroundStyle(Palette.marine)
                 .accessibilityHidden(true)
             Text("Pas de météo pour l'instant").font(Police.sousTitre).foregroundStyle(Palette.encre)
-            Text("Vérifie ta connexion").font(Police.detail).foregroundStyle(Palette.encreDouce)
+            Text((cause ?? .autre).consigne).font(Police.detail).foregroundStyle(Palette.encreDouce)
+                .multilineTextAlignment(.center)
             if let reessayer {
                 Button(action: reessayer) {
                     Text("Réessayer").font(Police.corps).foregroundStyle(Palette.marine)

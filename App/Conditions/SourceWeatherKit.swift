@@ -10,8 +10,15 @@ nonisolated struct SourceWeatherKit: SourceMeteo {
 
     func meteo(point: Coordonnee, de: Date, a: Date) async throws -> MeteoBrute {
         let lieu = CLLocation(latitude: point.latitude, longitude: point.longitude)
-        let (heures, alertes) = try await WeatherService.shared.weather(
-            for: lieu, including: .hourly(startDate: de, endDate: a), .alerts)
+        let heures: Forecast<HourWeather>
+        let alertes: [WeatherAlert]?
+        do {
+            (heures, alertes) = try await WeatherService.shared.weather(
+                for: lieu, including: .hourly(startDate: de, endDate: a), .alerts)
+        } catch let erreur as WeatherError {
+            if case .permissionDenied = erreur { throw ErreurConditions.autorisation }
+            throw erreur
+        }
         let points = heures.forecast.map { h in
             PointMeteo(
                 heure: h.date,

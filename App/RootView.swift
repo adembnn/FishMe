@@ -1362,6 +1362,7 @@ private struct ConditionsEmplacement: View {
     let app: ParcoursApp
     let coordonnee: Coordonnee
     @State private var lecture: LectureConditions?
+    @State private var cause: CauseMeteo?
     @State private var meteo = false
     @State private var septJours = false
     @State private var courbe = false
@@ -1380,13 +1381,17 @@ private struct ConditionsEmplacement: View {
                 bouton("Préviens-moi", "bell", .prevenirMoi) { previens = true }
             } else {
                 RangeeMaintenantVideView(reessayer: {
-                    Task { lecture = await app.conditions.lire(spot: coordonnee) ?? lecture }
-                })
+                    Task {
+                        lecture = await app.conditions.lire(spot: coordonnee) ?? lecture
+                        cause = app.conditions.derniereCause
+                    }
+                }, cause: cause)
             }
         }
         .task(id: coordonnee) {
             lecture = app.conditions.derniere(spot: coordonnee)
             lecture = await app.conditions.lire(spot: coordonnee) ?? lecture
+            cause = app.conditions.derniereCause
         }
         .sheet(isPresented: $meteo) {
             if let lecture {

@@ -31,7 +31,33 @@ nonisolated protocol SourceMarque: Sendable {
     func marque() async -> MarqueApple?
 }
 
-nonisolated enum ErreurConditions: Error { case indisponible }
+nonisolated enum ErreurConditions: Error { case indisponible, autorisation }
+
+/// Pourquoi la météo manque : le texte montré au pêcheur n'accuse la connexion que si c'est elle.
+nonisolated enum CauseMeteo: Sendable, Equatable {
+    /// Apple Météo refuse l'accès (build non signé, capacité WeatherKit absente).
+    case autorisation
+    /// Pas de réseau.
+    case reseau
+    case autre
+
+    static func depuis(_ erreur: Error) -> CauseMeteo {
+        if let e = erreur as? ErreurConditions, e == .autorisation { return .autorisation }
+        if erreur is URLError { return .reseau }
+        let ns = erreur as NSError
+        let texte = "\(ns.domain) \(ns.localizedDescription)".lowercased()
+        if texte.contains("jwt") || texte.contains("authservice") || texte.contains("not authorized") { return .autorisation }
+        return .autre
+    }
+
+    var consigne: String {
+        switch self {
+        case .autorisation: "L'accès à Apple Météo est refusé pour cette version de l'app"
+        case .reseau: "Vérifie ta connexion"
+        case .autre: "Réessaie dans un instant"
+        }
+    }
+}
 
 nonisolated enum LiensVigilance {
     static var vigilanceMeteoFrance: URL { URL(string: "https://vigilance.meteofrance.fr")! }

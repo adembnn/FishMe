@@ -13,13 +13,16 @@ struct PanneauRedimensionnable<Contenu: View>: View {
     /// Vrai : glisser la poignée vers le bas sous le cran moyen ferme la feuille (fiche d'un coin). Faux : elle reste au moyen.
     let fermable: Bool
     let fermer: () -> Void
+    /// La barre d'onglets flotte devant le bas de la feuille : le contenu garde cette hauteur libre pour rester visible et touchable.
+    let reserveBas: CGFloat
     let contenu: () -> Contenu
 
     /// Le glissement en cours, en points vers le bas (négatif : vers le haut). Revient à zéro quand le doigt lâche.
     @GestureState private var glissement: CGFloat = 0
 
-    init(detent: Binding<DetentPanneau>, total: CGFloat, fermable: Bool, fermer: @escaping () -> Void,
+    init(detent: Binding<DetentPanneau>, total: CGFloat, fermable: Bool, fermer: @escaping () -> Void, reserveBas: CGFloat = 0,
          @ViewBuilder contenu: @escaping () -> Contenu) {
+        self.reserveBas = reserveBas
         _detent = detent
         self.total = total
         self.fermable = fermable
@@ -39,6 +42,9 @@ struct PanneauRedimensionnable<Contenu: View>: View {
             poignee
             contenu()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                // Le défilement ne déborde pas sous la barre d'onglets : il s'arrête au bas de la feuille.
+                .clipped()
+                .padding(.bottom, reserveBas)
         }
         .frame(height: hauteurAffichee, alignment: .top)
         .frame(maxWidth: .infinity)

@@ -56,7 +56,7 @@ struct TesConditionsMeteoView: View {
                         videSansSpot
                     } else if essaiFait {
                         VStack(spacing: Espace.l) {
-                            RangeeMaintenantVideView(reessayer: { Task { await lire(forcer: true) } })
+                            RangeeMaintenantVideView(reessayer: { Task { await lire(forcer: true) } }, cause: conditions.derniereCause)
                             MarqueMeteoView(stockage: marque)
                         }
                         .padding(.top, 120)

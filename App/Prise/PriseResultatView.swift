@@ -15,6 +15,14 @@ struct PriseResultatView: View {
                 carte
                 blocDeRegles
                 gardee
+                if modele.exemple {
+                    // Dans le défilement, pas dans la barre du bas : en bas, elle se chevauchait avec la mention « font foi ».
+                    Text("Carte d'exemple : elle ne compte pas au Pescedex")
+                        .font(Police.legende).foregroundStyle(Palette.encreDouce)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity)
+                }
                 // Sortie visible vers le choix de l'espèce : on ne reste jamais enfermé sans pouvoir corriger la prise.
                 Button("Modifier la prise") { modele.retour() }
                     .font(Police.corps).foregroundStyle(Palette.marine)
@@ -24,18 +32,15 @@ struct PriseResultatView: View {
             .padding(.top, Espace.m)
         }
         .scrollIndicators(.hidden)
+        .contentMargins(.bottom, Espace.l, for: .scrollContent)
         .background(Palette.fond.ignoresSafeArea())
         .safeAreaInset(edge: .bottom) {
             VStack(spacing: Espace.xs) {
-                if modele.exemple {
-                    Text("Carte d'exemple : elle ne compte pas au Pescedex")
-                        .font(Police.legende).foregroundStyle(Palette.encreDouce)
-                }
-                Button("Ajouter au Pescedex") { modele.ranger() }
+                Button(modele.exemple ? "Voir le Pescedex" : "Ajouter au Pescedex") { modele.ranger() }
                     .buttonStyle(.principal)
             }
-            .padding(.horizontal, Espace.bord).padding(.top, Espace.s)
-            .background(Palette.fond)
+            .padding(.horizontal, Espace.bord).padding(.vertical, Espace.s)
+            .background(Palette.fond.ignoresSafeArea(edges: .bottom))
         }
     }
 

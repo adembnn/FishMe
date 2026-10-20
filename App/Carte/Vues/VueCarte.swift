@@ -123,7 +123,7 @@ struct VueCarte: View {
         GeometryReader { (geo: GeometryProxy) in
             ZStack(alignment: .bottom) {
                 carteComplete(total: geo.size.height)
-                feuilleDuBas(total: geo.size.height)
+                feuilleDuBas(total: geo.size.height, reserveBas: 0)
             }
             // Une seule animation pour l'arrivée et le départ des feuilles et pour la réserve de la carte : pas d'artefact à la fermeture.
             .animation(.snappy(duration: 0.3), value: modele.selection?.id)
@@ -474,15 +474,17 @@ struct VueCarte: View {
 
     /// La feuille du bas : la fiche d'un coin si un coin est touché, sinon « Mon spot » s'il est ouvert. Une seule à la fois.
     @ViewBuilder
-    private func feuilleDuBas(total: CGFloat) -> some View {
+    private func feuilleDuBas(total: CGFloat, reserveBas: CGFloat) -> some View {
         if let selection = modele.selection {
-            PanneauRedimensionnable(detent: $detentFiche, total: total, fermable: true, fermer: { modele.selection = nil }) {
+            PanneauRedimensionnable(detent: $detentFiche, total: total, fermable: true, fermer: { modele.selection = nil },
+                                    reserveBas: reserveBas) {
                 feuilleFiche(selection)
                     .id(selection.id)
             }
             .transition(.move(edge: .bottom))
         } else if feuilleSpotVisible {
-            PanneauRedimensionnable(detent: $detentSpot, total: total, fermable: true, fermer: fermerFeuilleSpot) {
+            PanneauRedimensionnable(detent: $detentSpot, total: total, fermable: true, fermer: fermerFeuilleSpot,
+                                    reserveBas: reserveBas) {
                 feuilleMonSpot
             }
             .transition(.move(edge: .bottom))

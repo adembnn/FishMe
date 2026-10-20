@@ -10,6 +10,8 @@ final class ConditionsDuSpot: ObservableObject {
     static let ageMaxInstantane: TimeInterval = 60 * 60
 
     @Published private(set) var lectures: [Coordonnee: LectureConditions] = [:]
+    /// Pourquoi la dernière lecture de météo a échoué (`nil` : elle a réussi ou n'a pas encore eu lieu).
+    private(set) var derniereCause: CauseMeteo?
 
     private let meteo: any SourceMeteo
     private let eau: any NiveauEauService
@@ -49,8 +51,10 @@ final class ConditionsDuSpot: ObservableObject {
         do {
             brute = try await meteo.meteo(point: point, de: now.addingTimeInterval(-6 * 3600),
                                           a: now.addingTimeInterval(7 * 86_400))
+            derniereCause = nil
         } catch {
             brute = nil
+            derniereCause = CauseMeteo.depuis(error)
         }
 
         guard let brute else {

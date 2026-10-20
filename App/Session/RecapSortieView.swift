@@ -46,15 +46,17 @@ struct RecapSortieView: View {
         ScrollView {
             VStack(spacing: Espace.xl) {
                 enTete
-                chiffres
-                if prises.isEmpty { bredouille } else { RecapSortieCartes(cartes: cartes, photoDe: photoDe) }
+                // Le message de fin (« Session terminée à la fin légale ») sous le titre : en bas il passait sous « Terminer ».
                 if let message = fin.message {
                     Text(message)
                         .font(Police.detail)
                         .foregroundStyle(Palette.encreDouce)
                         .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
                         .padding(.horizontal, Espace.bord)
                 }
+                chiffres
+                if prises.isEmpty { bredouille } else { RecapSortieCartes(cartes: cartes, photoDe: photoDe) }
             }
             .padding(.top, surFermer == nil ? Espace.xl : Gabarit.zoneTactile + Espace.xl)
             .padding(.bottom, Espace.l)

@@ -109,6 +109,7 @@ struct CarteBredouilleRectoView: View {
                     .font(Police.taille(7 * u, .bold))
                     .foregroundStyle(gris)
                     .lineLimit(1)
+                    .minimumScaleFactor(0.5)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.top, 9 * u)
@@ -161,6 +162,7 @@ struct CarteBredouilleRectoView: View {
                 .font(Police.taille(4.6 * u, .black))
                 .foregroundStyle(encre)
                 .lineLimit(1)
+                .minimumScaleFactor(0.5)
             Text(legende)
                 .font(Police.taille(2.9 * u, .heavy))
                 .tracking(0.06 * 2.9 * u)
