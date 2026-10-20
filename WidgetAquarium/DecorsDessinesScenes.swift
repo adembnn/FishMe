@@ -4,11 +4,12 @@ import SwiftUI
 //   sous-bois         la rivière sous les arbres : berge qui surplombe, lumière dorée en rais, poussières
 //   etang             l'étang vu d'en dessous : couvert de nénuphars, eau verte et sombre, filaments qui pendent
 //   grotte            la grotte : parois de roche, une ouverture claire en haut à gauche, cristaux qui luisent
+//   noel              le sapin immergé (DecorsDessinesNoel.swift) : glace givrée, flocons, graviers poudrés de givre
 //   halloween         la nuit : lune, citrouilles lumineuses, racines tordues, toiles, brume et feuilles mortes
 //   ouverture-truite  la rivière claire du printemps : lumière vive, pollen, hautes herbes fleuries ET un sol
 //                     (lit de graviers, galets, herbes basses) que la page de propositions n'avait pas
-// Noël et Été n'ont PAS de dessin (Titouan les trouve laids ; de nouvelles propositions arrivent) : `reglage` rend `nil`,
-// le fond d'origine reste. Fichier PARTAGÉ app + widget : aucune dépendance à `App/`, `Core` ou à l'état de l'app.
+// Noël est la proposition B « Sapin immergé » de la page noel-ete. Été n'a PAS de dessin (nouvelles propositions en cours) :
+// `reglage` rend `nil`, le fond d'origine reste. Fichier PARTAGÉ app + widget : aucune dépendance à `App/`, `Core` ou à l'état de l'app.
 // Chaque décor se compose de quatre temps : filtre sur le fond d'origine, calques de lumière, dessin fixe (sol, roches…),
 // dessin qui bouge (plantes, lueurs, brume, rais, particules). Le dessin qui bouge ne dépend que de `t`.
 // ⚠ à vérifier sur Mac : couleurs, positions et lisibilité des poissons devant chaque décor.
@@ -84,6 +85,17 @@ nonisolated extension DecorDessin {
                     caustiques: Caustiques(c: (255, 230, 190), a: 0.03),
                     particules: Particules(type: .feuille, c: (0, 0, 0), a: 0.95, feuilles: [0x9A4A18, 0x6E3412, 0xB3732A, 0x4E2A10]),
                     bulles: Bulles(c: (255, 235, 205), y: 0.84)))
+        case "noel":
+            return Reglage(
+                filtre: Filtre(teinte: 4, saturation: 0.6, multiplicateur: (0.307, 0.346, 0.382)),
+                calques: [.aplat((60, 100, 150), 0.08), .haut((190, 225, 250), 0.18, 0.28),
+                          .vignette(0.5, 0.44, 0.88, 0.66, 0.46, (2, 8, 18), 0.72)],
+                ambiance: Ambiance(
+                    rais: Rais(c: (220, 238, 255), a: 0.1, large: 1, n: 4),
+                    caustiques: Caustiques(c: (225, 238, 255), a: 0.04),
+                    particules: Particules(type: .flocon, c: (236, 246, 255), a: 0.5, taille: 0.8),
+                    proches: 1.1,
+                    bulles: Bulles(c: (235, 245, 255), y: 0.84)))
         case "ouverture-truite":
             return Reglage(
                 filtre: Filtre(teinte: -34, saturation: 1, multiplicateur: (1, 1, 1), eclat: 0.05),
@@ -136,6 +148,7 @@ nonisolated extension DecorDessin {
         case "etang": fixeEtang(&ctx, cad)
         case "grotte": fixeGrotte(&ctx, cad)
         case "halloween": fixeHalloween(&ctx, cad)
+        case "noel": fixeNoel(&ctx, cad)
         case "ouverture-truite": fixeOuverture(&ctx, cad)
         default: break
         }
@@ -150,6 +163,7 @@ nonisolated extension DecorDessin {
         case "etang": mobileEtang(&ctx, cad, t)
         case "grotte": mobileGrotte(&ctx, cad, t)
         case "halloween": mobileHalloween(&ctx, cad, taille, t)
+        case "noel": mobileNoel(&ctx, cad, t)
         case "ouverture-truite": mobileOuverture(&ctx, cad, t)
         default: break
         }
@@ -171,6 +185,8 @@ nonisolated extension DecorDessin {
         case "etang":
             brins(&ctx, cad, graine: 221, t: t, x0: -10, x1: 400, n: 16, y0: 860, hmin: 40, hmax: 150,
                   couleur: Color(.sRGB, red: 60 / 255, green: 80 / 255, blue: 30 / 255, opacity: 0.85), fleurs: false)
+        case "noel":
+            avantNoel(&ctx, cad)
         case "ouverture-truite":
             brins(&ctx, cad, graine: 621, t: t, x0: -30, x1: 90, n: 6, y0: 860, hmin: 150, hmax: 320,
                   couleur: c(0x4F8A3A), fleurs: true)
@@ -217,11 +233,12 @@ nonisolated extension DecorDessin {
         for (i, rac) in racines.enumerated() {
             let angle: Double = 2.5 * Double.pi / 180 * balance(t, periode: 14, retard: Double(i))
             let k = rac.2 * CGFloat(angle)
-            let cote: CGFloat = i % 2 == 1 ? 1 : -1
+            let versLaFin: CGFloat = i % 2 == 1 ? -4 : 6
+            let versLeCentre: CGFloat = i % 2 == 1 ? 10 : -8
             var racine = Path()
             racine.move(to: cad.p(rac.0, rac.1))
-            racine.addQuadCurve(to: cad.p(rac.0 + (i % 2 == 1 ? -4 : 6) + k, rac.1 + rac.2),
-                                control: cad.p(rac.0 + (cote > 0 ? 10 : -8) + k * 0.5, rac.1 + rac.2 * 0.5))
+            racine.addQuadCurve(to: cad.p(rac.0 + versLaFin + k, rac.1 + rac.2),
+                                control: cad.p(rac.0 + versLeCentre + k * 0.5, rac.1 + rac.2 * 0.5))
             ctx.stroke(racine, with: .color(c(0x16261A)),
                        style: StrokeStyle(lineWidth: max(1, cad.r(CGFloat(3 + i % 3))), lineCap: .round))
         }

@@ -8,7 +8,7 @@ import SwiftUI
 
 nonisolated extension DecorDessin {
     enum TypeParticule {
-        case poussiere, feuille, pollen, lueur
+        case poussiere, feuille, pollen, lueur, flocon
     }
 
     struct Rais {
@@ -31,6 +31,8 @@ nonisolated extension DecorDessin {
         var a: Double
         var vitesse: Double = 1
         var feuilles: [UInt32] = []
+        /// Échelle des flocons.
+        var taille: Double = 1
     }
 
     struct Bulles {
@@ -149,6 +151,16 @@ nonisolated extension DecorDessin {
                 nerv.move(to: CGPoint(x: -s, y: 0))
                 nerv.addLine(to: CGPoint(x: s * 0.7, y: 0))
                 c2.stroke(nerv, with: .color(.black.opacity(0.28)), lineWidth: 0.8)
+            case .flocon:
+                let x = frac(b(0) + 0.03 * sin(t * 0.23 + b(3) * 6.28) + t * (b(2) - 0.5) * 0.006)
+                let y = frac(b(1) + t * (0.007 + 0.011 * b(6)) * (avant ? 1.35 : 1))
+                let rayon: Double = ((avant ? 2.4 : 1.1) + (avant ? 2.2 : 1.3) * b(7)) * o.taille
+                let al: Double = o.a * facteur * (avant ? 0.75 : 1) * (0.45 + 0.55 * b(10))
+                let centre = CGPoint(x: x * l, y: y * h)
+                let rr = CGFloat(rayon * 2.6)
+                let g = degrade([(0, c(o.c, al)), (0.38, c(o.c, al * 0.55)), (1, c(o.c, 0))])
+                ctx.fill(Path(ellipseIn: CGRect(x: centre.x - rr, y: centre.y - rr, width: rr * 2, height: rr * 2)),
+                         with: .radialGradient(g, center: centre, startRadius: 0, endRadius: rr))
             case .pollen, .lueur:
                 let monte: Double = o.type == .pollen ? -1 : 0
                 let x = frac(b(0) + 0.02 * sin(t * 0.25 + b(3) * 6.28) + t * (b(2) - 0.5) * 0.006)

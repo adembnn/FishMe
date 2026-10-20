@@ -8,14 +8,14 @@ import Core
 // La règle « quel dessin pour quel skin » du widget est aussi testée sous Linux (AppTests/WidgetAquarium/FondWidgetTests.swift).
 @MainActor
 struct DecorsDessinesTests {
-    static let dessines: [IdentifiantSkin] = [.sousBois, .etang, .grotte, .halloween, .ouvertureTruite]
+    static let dessines: [IdentifiantSkin] = [.sousBois, .etang, .grotte, .halloween, .noel, .ouvertureTruite]
 
-    @Test func lesCinqDecorsChoisisOntUnDessinEtLeDecorDeDepartEtNoelEtEteNon() {
+    @Test func lesSixDecorsChoisisOntUnDessinEtLeDecorDeDepartEtEteNon() {
         for id in Self.dessines {
             #expect(FondWidget.aUnDessin(id.valeur), "dessin manquant : \(id.valeur)")
             #expect(DecorDessin.reglage(id.valeur) != nil, "réglage manquant : \(id.valeur)")
         }
-        for id in [IdentifiantSkin.parDefaut, .noel, .ete, IdentifiantSkin("inconnu")] {
+        for id in [IdentifiantSkin.parDefaut, .ete, IdentifiantSkin("inconnu")] {
             #expect(!FondWidget.aUnDessin(id.valeur))
             #expect(DecorDessin.reglage(id.valeur) == nil)
         }
@@ -24,7 +24,7 @@ struct DecorsDessinesTests {
     @Test func laListeDesDecorsDessinesCorrespondAuCatalogue() {
         let ids = Set(CatalogueSkins.tous.map(\.id.valeur))
         #expect(FondWidget.decorsDessines.isSubset(of: ids))
-        #expect(FondWidget.decorsDessines == ids.subtracting(["riviere", "noel", "ete"]))
+        #expect(FondWidget.decorsDessines == ids.subtracting(["riviere", "ete"]))
         #expect(FondWidget.decorsDessines == Set(Self.dessines.map(\.valeur)))
     }
 
@@ -53,7 +53,7 @@ struct DecorsDessinesTests {
                 == .image("fond-halloween-grand"))
     }
 
-    @Test func laGalerieMontreLesDecorsDessinesEtMasqueNoelEtEte() {
+    @Test func laGalerieMontreLesDecorsDessinesEtMasqueEte() {
         let jour = SkinsGalerieTests.date(2026, 10, 19)
         let contexte = SkinsGalerieTests.contexte(jour, abonne: true, progression: ProgressionPecheur(especesDifferentes: 9, sessions: 12, legendairesPris: 1))
         let rangees = rangeesGalerie(dans: contexte) {
@@ -61,7 +61,6 @@ struct DecorsDessinesTests {
         }
         let tous = (rangees.mesDecors + rangees.enCeMoment + rangees.reviennentChaqueAnnee).map(\.id)
         #expect(Set(tous) == Set([IdentifiantSkin.parDefaut] + Self.dessines))
-        #expect(!tous.contains(.noel))
         #expect(!tous.contains(.ete))
         #expect(rangees.mesDecors.map(\.id) == [.riviere, .etang, .grotte, .sousBois])
     }
