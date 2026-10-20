@@ -8,9 +8,9 @@ import Foundation
 // de compte iCloud (voir le rapport L24). Le vrai service et les faux de test restent séparés (`FauxChat.swift`, sous DEBUG).
 
 nonisolated enum DonneesExempleChat {
-    static let moi = InterlocuteurChat(id: "p-exemple-moi", surnom: "Toi", idCloudKit: "_exemple_moi")
-    static let lea = InterlocuteurChat(id: "p-exemple-lea", surnom: "Léa", idCloudKit: "_exemple_lea")
-    static let hugo = InterlocuteurChat(id: "p-exemple-hugo", surnom: "Hugo", idCloudKit: "_exemple_hugo")
+    static let moi = InterlocuteurChat(id: "p-exemple-moi", surnom: "Toi", idCloudKit: "_exemple_moi", estExemple: true)
+    static let lea = InterlocuteurChat(id: "p-exemple-lea", surnom: "Léa", idCloudKit: "_exemple_lea", estExemple: true)
+    static let hugo = InterlocuteurChat(id: "p-exemple-hugo", surnom: "Hugo", idCloudKit: "_exemple_hugo", estExemple: true)
     static let club = ClubChat(id: "exemple-club", nom: "Les brochets", jeSuisFondateur: false, membres: [lea, hugo])
 
     static let conversationAmi = ConversationID.ami(lea.idCloudKit)

@@ -57,6 +57,11 @@ struct MembresClubView: View {
                 if membre.role == .fondateur {
                     Text("Fondateur").font(Police.legende).foregroundStyle(Palette.encreDouce)
                 }
+                if gestion.estEnAttenteDeProfil(membre) {
+                    // Pas une erreur : son profil public n'existe pas encore (ou n'est pas encore lisible). On réessaie à chaque ouverture.
+                    Text("En attente de son profil").font(Police.legende).foregroundStyle(Palette.encreDouce)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
             Spacer(minLength: 0)
             if !moi {

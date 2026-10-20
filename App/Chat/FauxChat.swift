@@ -9,6 +9,8 @@ actor FauxServiceChat: ServiceChat {
     /// Les conversations dont on m'a demandé de créer la zone et le lien (`peutCreerLaZone` vrai).
     private(set) var creations: [ConversationID] = []
     private(set) var abonnes: [ConversationID] = []
+    /// Les comptes demandés à l'invitation de chaque conversation (le dernier appel).
+    private(set) var participantsDemandes: [ConversationID: [String]] = [:]
     private(set) var acceptees = 0
     private(set) var effaces: [String] = []
     private(set) var signalements: [SignalementMessageEnAttente] = []
@@ -65,6 +67,7 @@ actor FauxServiceChat: ServiceChat {
 
     func lienDInvitation(pour conversation: ConversationID, participants: [String], peutCreerLaZone: Bool) async throws -> URL? {
         if horsLigne { throw ErreurChat.reseau }
+        participantsDemandes[conversation] = participants
         if peutCreerLaZone {
             if !creations.contains(conversation) { creations.append(conversation) }
             zonesConnues.insert(conversation)
