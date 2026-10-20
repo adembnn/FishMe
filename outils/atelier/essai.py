@@ -578,7 +578,7 @@ def essai_formate(m):
         vider_appels(m)
         r = appeler(l3, "PostToolUse", {"tool_name": "Write", "tool_input": {"file_path": str(f)}}, "Write", m.env_sans)
         bilan.verifier("formate : sans swift (cloud), il ne fait rien et ne bloque pas", r.returncode == 0 and appels(m) == "")
-    r = lancer(["/bin/sh", "-c", commandes_declarees(l3, "PostToolUse", "Edit")[0]], l3, dict(m.env_avec, CLAUDE_PROJECT_DIR=str(l3)), "pas du json")
+    r = lancer([SH, "-c", commandes_declarees(l3, "PostToolUse", "Edit")[0]], l3, dict(m.env_avec, CLAUDE_PROJECT_DIR=str(l3)), "pas du json")
     bilan.verifier("formate : une entrée illisible ne bloque pas non plus", r.returncode == 0)
     os.remove(f)
     os.remove(t)
@@ -670,12 +670,15 @@ def essai_verif(m):
         p = lancer(["bash", "scripts/verif.sh"], c0, dict(env, CI="true"))
         bilan.verifier("verif.sh : en CI (GitHub), la partie App est déclarée sautée", p.returncode == 0 and "· sauté : App" in p.stdout, p.stdout)
     # App sur Mac simulé : xcodebuild test avec le premier simulateur iPhone.
-    (c0 / "Projet.xcodeproj").mkdir(exist_ok=True)
+    # Le dépôt contient désormais le vrai projet (BuildChallenge.xcodeproj) : verif.sh prend le premier trouvé.
+    if not sorted(c0.glob("*.xcodeproj")):
+        (c0 / "Projet.xcodeproj").mkdir(exist_ok=True)
+    projet = sorted(c0.glob("*.xcodeproj"))[0].name
     vider_appels(m)
     p = lancer(["bash", "scripts/verif.sh"], c0, dict(env, ATELIER_SYSTEME="Darwin"))
     a = appels(m)
     bilan.verifier("verif.sh : sur Mac, lance xcodebuild test (schéma trouvé, simulateur iPhone, id du simulateur)",
-                   "✓ App" in p.stdout and "xcodebuild test -project ./Projet.xcodeproj -scheme Pesche" in a
+                   "✓ App" in p.stdout and f"xcodebuild test -project ./{projet} -scheme Pesche" in a
                    and "id=11111111-2222-3333-4444-555555555555" in a, p.stdout + a)
     vider_appels(m)
     lancer(["bash", "scripts/verif.sh"], c0, dict(env, ATELIER_SYSTEME="Darwin", SCHEMA="Autre"))
