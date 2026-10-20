@@ -332,13 +332,21 @@ final class ParcoursApp {
         Task { await ModeleReperes.partage.charger() }
     }
 
-    /// N3 : température de l'eau (Hub'Eau, par le code de station seul), tendances et sources. `stations-temperature.json` n'existe pas encore
-    /// (D2 doit le fournir) : sans lui, aucune ligne « Eau », pression et débit restent.
+    /// N3 : température de l'eau (Hub'Eau, par le code de station seul), tendances et sources. `stations-temperature.json` (D2, téléchargé par `scripts/donnees.sh` dans
+    /// `App/Donnees/`, facultatif) : cherché à la racine du bundle puis dans `Donnees/` ; sans lui, liste vide : aucune ligne « Eau », pression et débit restent.
+    /// ⚠ à vérifier sur Mac : où le dossier synchronisé `App/Donnees` met le fichier dans le bundle (les deux emplacements sont essayés).
     @ObservationIgnored private(set) lazy var mesuresEau = ModeleMesures(
         service: HubEauTemperatureService(),
         noyau: MoteurMesures(
             geo: core.geo,
-            stationsTemperature: Bundle.main.url(forResource: "stations-temperature", withExtension: "json").flatMap { try? Data(contentsOf: $0) }))
+            stationsTemperature: Self.donneesStationsTemperature()))
+
+    /// Octets de `stations-temperature.json` s'il est dans le bundle, sinon `nil` (le moteur lit alors une liste vide).
+    private static func donneesStationsTemperature(_ bundle: Bundle = .main) -> Data? {
+        let url = bundle.url(forResource: "stations-temperature", withExtension: "json")
+            ?? bundle.url(forResource: "stations-temperature", withExtension: "json", subdirectory: "Donnees")
+        return url.flatMap { try? Data(contentsOf: $0) }
+    }
 
     /// N2 : « Mes envies » (liste privée, sur l'iPhone). Le Pescedex (autre agent) pose la ligne d'entrée et le bouton sur les fiches ;
     /// ici, seulement le modèle, câblé sur les règles du spot et les conseils.

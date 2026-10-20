@@ -64,6 +64,17 @@ Solution (écrite sans Mac, rien compilé ni exécuté) :
 - Codes d'erreur de `shareParticipant` pour un compte inconnu (`.unknownItem` ? `.invalidArguments` ?) ; ajuster la liste dans `ServiceChatCloudKit`.
 - Reste du risque : un `Membre` qui prétendrait un `profil` qui n'est pas le sien inviterait le vrai propriétaire de ce profil ; l'invitation ne s'ouvre que si la personne l'accepte (`publicPermission = .none`). Quitter ou être retiré d'un club ne retire toujours pas du `CKShare` (inchangé).
 - Textes en AX5 (« En attente de son profil », bandeau du chat) : retour à la ligne sans coupure, aucune barre de défilement.
+## Température de l'eau (N3) : fichier branché côté app, à publier à la main (Adem ou Sullyvan)
+Branche `lot/temperature-donnees`. Fait : `scripts/donnees.sh` télécharge `stations-temperature.json` en 4e fichier **facultatif** (avertissement s'il manque, les 3 autres restent) ; `RootView` le cherche à la racine du bundle puis dans `Donnees/` (liste vide sinon : pas de ligne « Eau ») ; `outils/verifier_donnees.py` en contrôle la forme ; les crédits (Profil, Sources) portent « Données : Hub'Eau / Naïades, Licence Ouverte (Etalab) » et l'attribution LDNOOBW de `docs/legal/remplacements-app.md` §12.
+
+Étape manuelle, **non lancée** par l'agent (publie dans la release privée `donnees`, depuis un ordinateur connecté à `gh`) :
+```
+python3 outils/hubeau/stations_temperature.py        # écrit outils/hubeau/sortie/stations-temperature.json (réseau Hub'Eau)
+python3 outils/verifier_donnees.py                    # doit afficher « stations-temperature.json : N stations, M en service », sans ERREUR
+gh release upload donnees outils/hubeau/sortie/stations-temperature.json --clobber
+scripts/donnees.sh                                    # chaque ordinateur le récupère ensuite dans App/Donnees/
+```
+Commande lue dans `outils/hubeau/lancer.sh` (ligne `gh release upload donnees … --clobber`) et `docs/fiches/D2.md` (« Publication »). Le fichier n'est jamais commité.
 
 ## Câblage N6 dans la carte et la session : à vérifier au build
 - `appuiLongPourReperer` : `LongPressGesture.sequenced(before: DragGesture)` avec `including: .all` posé à côté de `toucherPourPoser` ; vérifier sur iPhone qu'il ne bloque ni le glissement ni le pincement de `Map`, que le toucher d'une épingle ne déclenche pas aussi l'appui long, et que le motif `case .second(true, let doigt?)` compile.

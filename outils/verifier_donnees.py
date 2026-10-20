@@ -350,13 +350,81 @@ def verifier_stations(chemin, dossier_trace=None):
     print(f"{nom} : {len(vraies)}/{len(stations)} recalées ({part:.1%}) ; échantillon {ok}/{len(tirage)} à {ECART_ECHANTILLON_M} m au plus du tracé")
 
 
+def chemin_stations_temperature():
+    """--stations-temperature CHEMIN, sinon le fichier téléchargé par scripts/donnees.sh, sinon la sortie de outils/hubeau."""
+    c = option("--stations-temperature")
+    if c:
+        return c
+    for rel in (("App", "Donnees", "stations-temperature.json"), ("outils", "hubeau", "sortie", "stations-temperature.json")):
+        c = os.path.join(RACINE, *rel)
+        if os.path.exists(c):
+            return c
+    return None
+
+
+CHAMPS_TEMPERATURE = ("code", "nom", "eau", "code_eau", "lat", "lon", "dep", "en_service")
+
+
+def problemes_stations_temperature(stations):
+    """Forme de stations-temperature.json (outils/hubeau/stations_temperature.py, lu par N3) : un tableau de stations avec
+    code, nom, eau, code_eau, lat, lon, dep, en_service (`eau` et `code_eau` peuvent valoir null) ; au moins une station en
+    service. Rend la liste des problèmes (texte), vide si tout va bien. Aucun accès au réseau."""
+    if not isinstance(stations, list):
+        return ["stations-temperature.json : un tableau de stations est attendu"]
+    if not stations:
+        return ["stations-temperature.json : aucune station"]
+    pb = []
+    codes = set()
+    for i, s in enumerate(stations):
+        if not isinstance(s, dict):
+            pb.append(f"station n°{i} : un objet est attendu")
+            continue
+        manquants = [c for c in CHAMPS_TEMPERATURE if c not in s]
+        if manquants:
+            pb.append(f"station n°{i} ({s.get('code')}) : champ(s) absent(s) {manquants}")
+            continue
+        if not isinstance(s["code"], str) or not s["code"]:
+            pb.append(f"station n°{i} : code vide ou pas du texte")
+        elif s["code"] in codes:
+            pb.append(f"station {s['code']} : code en double")
+        codes.add(s["code"])
+        if not isinstance(s["nom"], str) or not s["nom"]:
+            pb.append(f"station {s['code']} : nom vide")
+        for c in ("eau", "code_eau", "dep"):
+            if s[c] is not None and not isinstance(s[c], str):
+                pb.append(f"station {s['code']} : {c} doit être du texte ou null")
+        lat, lon = s["lat"], s["lon"]
+        nombres = all(isinstance(v, (int, float)) and not isinstance(v, bool) for v in (lat, lon))
+        if not nombres:
+            pb.append(f"station {s['code']} : lat et lon doivent être des nombres")
+        elif not (41 <= lat <= 52 and -6 <= lon <= 10):  # France métropolitaine
+            pb.append(f"station {s['code']} : position hors de la France métropolitaine ({lat}, {lon})")
+        if not isinstance(s["en_service"], bool):
+            pb.append(f"station {s['code']} : en_service doit être un booléen")
+    if not any(isinstance(s, dict) and s.get("en_service") is True for s in stations):
+        pb.append("stations-temperature.json : aucune station en service")
+    return pb
+
+
+def verifier_stations_temperature(chemin):
+    """Fichier facultatif (N3) : une forme fausse est une ERREUR, l'absence du fichier n'en est pas une."""
+    nom = os.path.relpath(chemin, RACINE)
+    doc = lire(chemin)
+    if doc is None:
+        return
+    for p in problemes_stations_temperature(doc):
+        err(f"{nom} : {p}")
+    if isinstance(doc, list):
+        print(f"{nom} : {len(doc)} stations, {sum(1 for s in doc if isinstance(s, dict) and s.get('en_service') is True)} en service")
+
+
 def verifier_git():
     try:
         sortie = subprocess.run(["git", "ls-files"], cwd=RACINE, capture_output=True, text=True, check=True).stdout
     except Exception:  # noqa: BLE001
         return
     for l in sortie.splitlines():
-        if "stations-especes" in l or "rarete-departements" in l:
+        if "stations-especes" in l or "rarete-departements" in l or os.path.basename(l) == "stations-temperature.json":
             err(f"fichier fabriqué commité : {l}")
 
 
@@ -706,6 +774,11 @@ def main():
         verifier_stations(chemin, option("--trace"))
     else:
         print("stations-especes.json absent (scripts/donnees.sh ou outils/hubeau/hubeau.py) : règles D5 non vérifiées")
+    chemin_t = chemin_stations_temperature()
+    if chemin_t:
+        verifier_stations_temperature(chemin_t)
+    else:
+        print("stations-temperature.json absent (facultatif ; scripts/donnees.sh ou outils/hubeau/stations_temperature.py) : forme non vérifiée")
     for m in erreurs:
         print("ERREUR ", m)
     for m in manques:

@@ -149,6 +149,34 @@
       "date_variable": false,
       "verifie_page": false,
       "note": "NON LU : gbif.org renvoie HTTP 403. Forme de citation et licences a relever a la main par B (R1) ; jeux et auteurs viennent de R1."
+    },
+    {
+      "id": "hubeau-temperature",
+      "nom": "Hub'Eau / Naïades, température des cours d'eau",
+      "url": "https://hubeau.eaufrance.fr/page/api-temperature-continu-v1",
+      "mention": "Données : Hub'Eau / Naïades, Licence Ouverte (Etalab)",
+      "utilise_pour": "stations-temperature.json (référentiel des sondes) et température de l'eau lue en direct (ligne « Eau », N3)",
+      "attribution": "Hub'Eau, API Température des cours d'eau (réseau Naïades).",
+      "licence_nom": "Licence Ouverte / Open Licence 2.0 (Etalab)",
+      "licence_url": "https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf",
+      "source_url": "https://hubeau.eaufrance.fr/page/api-temperature-continu-v1",
+      "date_variable": false,
+      "verifie_page": false,
+      "note": "Mention demandée par docs/reports/branchements-l25.md (lot N3). Licence Etalab par les conditions générales de Hub'Eau (voir l'entrée ofb-hubeau-poissons). URL de la page de l'API à relire à la main (non ouverte ici). Le fichier stations-temperature.json est facultatif : sans lui, la mention reste (la température est aussi lue en direct)."
+    },
+    {
+      "id": "ldnoobw",
+      "nom": "Filtre de mots (LDNOOBW)",
+      "url": "https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words",
+      "mention": "Filtre de mots : liste « List of Dirty, Naughty, Obscene, and Otherwise Bad Words » (LDNOOBW), © Shutterstock, Inc., fichier français, publiée sous licence Creative Commons Attribution 4.0 International (CC BY 4.0). Source : https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words. Licence : https://creativecommons.org/licenses/by/4.0/. Modifié par FishMe : des mots de pêche ou de langage courant sont retirés (par exemple tanche, bite, bitte, gueule, gerbe, suce, pédale, turlutte, cul, folle) ; des insultes et propos haineux courants sont ajoutés ; les pluriels et féminins sont listés. La liste est fournie « en l'état », sans garantie.",
+      "utilise_pour": "liste de mots interdits du chat et des textes publics (MotsInterditsFR)",
+      "attribution": "© Shutterstock, Inc.",
+      "licence_nom": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words",
+      "date_variable": false,
+      "verifie_page": true,
+      "note": "Texte exact de docs/legal/remplacements-app.md §12 (S2). Les modifications décrites sont celles de l'en-tête de MotsInterditsFR.swift : si la liste change, la phrase change. À relire sur le dépôt le jour de la soumission."
     }
   ]
 }
