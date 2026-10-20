@@ -110,6 +110,14 @@ struct OffresTests {
         #expect(TextesPaywall.proEnTete(.autreSpot).first?.texte == "Des sessions sur d'autres spots")
     }
 
+    @Test func lesReperesEtLesDecorsOntLeurPropreDeclencheur() {
+        #expect(DeclencheurPaywall.reperes.valeurMesure == "reperes")
+        #expect(DeclencheurPaywall.decors.valeurMesure == "decors")
+        #expect(TextesPaywall.proEnTete(.reperes).first?.texte == TextesPaywall.reperesIllimites)
+        #expect(TextesPaywall.proEnTete(.decors).first?.texte == TextesPaywall.decorsAquarium)
+        #expect(!DeclencheurPaywall.reperes.texteFermeture.contains("gratuitement"))
+    }
+
     @Test func seuleLaFinDeLaPremiereSessionPrometDeContinuerGratuitement() {
         #expect(DeclencheurPaywall.finPremiereSession.texteFermeture.contains("gratuitement"))
         #expect(!DeclencheurPaywall.autreSpot.texteFermeture.contains("gratuitement"))

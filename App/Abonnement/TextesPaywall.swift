@@ -86,13 +86,21 @@ nonisolated enum TextesPaywall {
         Ligne(icone: "chart.xyaxis.line", texte: "La courbe de la rivière sur 48 h"),
         Ligne(icone: "lightbulb", texte: "Tous les conseils de chaque espèce"),
         Ligne(icone: "list.bullet.clipboard", texte: "Mes statistiques, après 10 sorties"),
+        Ligne(icone: "signpost.right", texte: reperesIllimites),
+        Ligne(icone: "paintpalette", texte: decorsAquarium),
     ]
+
+    /// Lignes des déclencheurs `.reperes` (4e repère privé, N6) et `.decors` (décor Pro de l'aquarium, N1).
+    static let reperesIllimites = "Des repères privés en nombre illimité"
+    static let decorsAquarium = "Tous les décors de l'aquarium"
 
     /// La liste Pro, avec la fonction touchée en tête (autre spot : la ligne des spots).
     static func proEnTete(_ declencheur: DeclencheurPaywall) -> [Ligne] {
         let rang: Int
         switch declencheur {
         case .finPremiereSession, .widget: return pro
+        case .reperes: rang = pro.count - 2
+        case .decors: rang = pro.count - 1
         case .autreSpot: rang = 0
         case .fonction(let fonction):
             switch fonction {
@@ -169,7 +177,7 @@ nonisolated extension DeclencheurPaywall {
         switch self {
         case .finPremiereSession: return "Continuer gratuitement sur mon spot"
         case .autreSpot: return "Retour à la carte"
-        case .fonction, .widget: return "Pas maintenant"
+        case .fonction, .widget, .reperes, .decors: return "Pas maintenant"
         }
     }
 }

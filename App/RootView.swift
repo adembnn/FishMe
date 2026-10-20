@@ -305,7 +305,7 @@ final class ParcoursApp {
             geo: core.geo, chargeur: .embarque(),
             prises: { [weak self] in self?.pescedex?.detaillees.map(\.prise) ?? [] },
             photosDesPrises: depot.map { PhotosDesPrisesRacine(depot: $0) },
-            ouvrirPaywall: { [weak self] in self?.montrer(.paywall(.widget)) })
+            ouvrirPaywall: { [weak self] in self?.montrer(.paywall(.reperes)) })
         ContexteReperes.courant.abonne = suivi.abonne
         Task { await ModeleReperes.partage.charger() }
     }
@@ -1014,12 +1014,12 @@ private struct RacineContenu: View {
                         contexte: app.contexteSkin(),
                         choisi: ChoixSkin.binding($skinBrut),
                         demanderPro: {
-                            // Le paywall ne peut pas s'ouvrir sous l'aquarium : on ferme d'abord (pas de cas « Skins » dans DeclencheurPaywall).
+                            // Le paywall ne peut pas s'ouvrir sous l'aquarium : on ferme d'abord (déclencheur `.decors`).
                             decorsOuverts = false
                             aquariumOuvert = false
                             Task {
                                 try? await Task.sleep(for: .milliseconds(500))
-                                app.montrer(.paywall(.widget))
+                                app.montrer(.paywall(.decors))
                             }
                         },
                         auChangement: { _ in app.publierAquarium() },
