@@ -13,7 +13,7 @@ struct SkinsGalerieView<Aquarium: View>: View {
     let demanderPro: () -> Void
     let auChangement: (IdentifiantSkin) -> Void
     var fermer: (() -> Void)? = nil
-    /// Écarte un skin dont les images n'existent pas (jamais de vignette vide). Remplaçable dans les tests.
+    /// Écarte un skin sans fond, ni illustration ni dessin (jamais de vignette vide). Remplaçable dans les tests.
     // ⚠ à vérifier : valeur par défaut qui nomme une fonction statique isolée au fil principal.
     var imagesPretes: (Skin) -> Bool = { FondSkin.imagesPretes($0) }
 
@@ -82,9 +82,8 @@ struct SkinsGalerieView<Aquarium: View>: View {
             apercu = entree.skin
         } label: {
             VStack(alignment: .leading, spacing: Espace.s) {
-                Image(FondSkin.nomImage(entree.skin.id, format: .petit))
-                    .resizable()
-                    .scaledToFill()
+                // Illustration du skin, ou décor dessiné en code posé sur le fond d'origine (sans mouvement dans la galerie).
+                FondSkinVue(skin: entree.skin.id, format: .petit)
                     // ⚠ à vérifier : `frame(width:)` avec un CGFloat? conditionnel ; rendu à AX5 à voir sur l'iPhone.
                     .frame(width: tailleTexte.isAccessibilitySize ? nil : 160, height: 120)
                     .frame(maxWidth: tailleTexte.isAccessibilitySize ? .infinity : nil)

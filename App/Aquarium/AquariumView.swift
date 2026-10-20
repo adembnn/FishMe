@@ -26,6 +26,8 @@ struct AquariumView: View {
     var skin: IdentifiantSkin = .parDefaut
 
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
+    /// Vrai quand le décor est dessiné en code (`WidgetAquarium/DecorsDessines*.swift`) : il apporte sa propre lumière.
+    private var decorDessine: Bool { FondSkin.dessin(skin) != nil }
     @State private var choisi: Emplacement?
     @State private var carteOuverte: Emplacement?
     @State private var photoOuverte: Data?
@@ -72,8 +74,10 @@ struct AquariumView: View {
                     Image(FondSkin.nomImage(skin, format: .grand))
                         .resizable()
                         .scaledToFill()
+                        .filtreDecor(FondSkin.dessin(skin))
                         .frame(width: geo.size.width, height: geo.size.height)
                         .clipped()
+                        .overlay { CoucheSkin(skin: skin) }
                     Text("Ton aquarium est vide. Photographie une prise pour y faire nager ton premier poisson.")
                         .font(Police.corps)
                         .multilineTextAlignment(.center)
@@ -86,8 +90,10 @@ struct AquariumView: View {
                     Image(FondSkin.nomImage(skin, format: .grand))
                         .resizable()
                         .scaledToFill()
+                        .filtreDecor(FondSkin.dessin(skin))
                         .frame(width: geo.size.width, height: geo.size.height)
                         .clipped()
+                        .overlay { CoucheSkin(skin: skin) }
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
@@ -182,11 +188,13 @@ struct AquariumView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: l, height: h)
+                    .filtreDecor(FondSkin.dessin(skin))
                     .scaleEffect(1.04)
                     .offset(x: -px * 0.4, y: -py * 0.4)
                     .clipped()
                     .overlay { CoucheSkin(skin: skin) }
-                if !reduireAnimations {
+                // Un décor dessiné en code a sa propre lumière (rais, reflets, poussières) : l'ambiance blanche d'origine s'efface.
+                if !reduireAnimations && !decorDessine {
                     CoucheFondEau().offset(x: -px * 0.5, y: -py * 0.5)
                 }
                 // Toucher l'eau vide : une onde de lumière, les petits s'écartent. Sous les zones des poissons.
@@ -198,8 +206,12 @@ struct AquariumView: View {
                     }
                 CoucheNageurs(nageurs: liste, trame: moteur.trame, l: l, h: h) { toucher($0, moteur: moteur) }
                 .offset(x: px, y: py)
+                // Végétation d'avant-plan, poussières proches et bulles du décor dessiné, devant les poissons (ils restent lisibles :
+                // seuls les bords de l'écran sont occupés).
+                CoucheSkinAvant(skin: skin)
+                    .offset(x: px * 1.8, y: py * 1.8)
                 if !reduireAnimations {
-                    CoucheAvantEau(t: t, tempsMoteur: moteur.temps, ondes: moteur.ondes)
+                    CoucheAvantEau(t: t, tempsMoteur: moteur.temps, ondes: moteur.ondes, ambiance: !decorDessine)
                         .offset(x: px * 1.8, y: py * 1.8)
                 }
             }

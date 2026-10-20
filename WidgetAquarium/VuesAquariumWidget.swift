@@ -38,7 +38,7 @@ private func partPoisson(_ famille: WidgetFamily) -> Double {
 
 // MARK: - L'eau
 
-/// Le fond du widget : le décor rendu en 3D (eau, plantes, galets) ; un simple dégradé en rendu teinté.
+/// Le fond du widget : le décor rendu en 3D (eau, plantes, galets), ou le décor choisi (illustration ou dessin) ; un simple dégradé en rendu teinté.
 private struct FondEau: View {
     let famille: WidgetFamily
     /// Décor (N1) ; `nil` = fond d'origine. L'image du décor absente du widget = repli sur `fond-<format>`.
@@ -59,21 +59,31 @@ private struct FondEau: View {
                 LinearGradient(colors: [Color(white: 0.30), Color(white: 0.14)], startPoint: .top, endPoint: .bottom)
             } else {
                 // Eau, vallisnéries, galets, roches et bois : rendus en 3D par le fil Aquarium (scene.py, v2), sans poissons.
-                Image(nomFond)
-                    .resizable()
-                    .scaledToFill()
+                // Le décor choisi dans l'aquarium : son illustration si elle existe, sinon le même dessin que l'app
+                // (rendu une fois en image, fichiers `DecorsDessines*.swift` partagés), sinon le fond d'origine.
+                switch source {
+                case .image(let nom), .repli(let nom):
+                    Image(nom)
+                        .resizable()
+                        .scaledToFill()
+                case .dessin(let id):
+                    FondDecorWidget(skin: id, nomFond: FondWidget.nomRepli(format))
+                }
             }
         }
     }
 
-    private var nomFond: String {
-        let format: FondWidget.Format = switch famille {
+    private var format: FondWidget.Format {
+        switch famille {
         case .systemSmall: .petit
         case .systemMedium: .moyen
         default: .grand
         }
+    }
+
+    private var source: FondWidget.Source {
         // ⚠ à vérifier : UIImage(named:) dans l'extension cherche dans son propre bundle (FondsWidget.xcassets).
-        return FondWidget.nomImage(skin: skin, format: format, existe: { UIImage(named: $0) != nil })
+        FondWidget.source(skin: skin, format: format, existe: { UIImage(named: $0) != nil })
     }
 }
 

@@ -219,14 +219,18 @@ struct CoucheAvantEau: View {
   let t: Double
   let tempsMoteur: Double
   let ondes: [Onde]
+  /// Faux : un décor dessiné en code apporte sa propre ambiance (poussières proches, bulles) ; ici seules les ondes restent.
+  var ambiance: Bool = true
 
   var body: some View {
     Canvas(rendersAsynchronously: true) { ctx, taille in
       let debut = ReglagesEffets.particulesFond
-      EffetsEau.particules(
-        &ctx, taille: taille, t: t, de: debut, jusqua: debut + ReglagesEffets.particulesAvant,
-        avant: true)
-      EffetsEau.bulles(&ctx, taille: taille, t: t)
+      if ambiance {
+        EffetsEau.particules(
+          &ctx, taille: taille, t: t, de: debut, jusqua: debut + ReglagesEffets.particulesAvant,
+          avant: true)
+        EffetsEau.bulles(&ctx, taille: taille, t: t)
+      }
       EffetsEau.ondes(&ctx, taille: taille, t: tempsMoteur, ondes: ondes)
     }
     .allowsHitTesting(false)
