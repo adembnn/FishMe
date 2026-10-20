@@ -137,6 +137,18 @@ class TestVoisinage(unittest.TestCase):
         r = R.recaler_station(48.5 + 100 * M_LAT, 2.05, None, None, trace_de(), voisinage=v)
         self.assertFalse(r["recalee"])
 
+    def test_trace_voisin_sans_nom_donne_recalee_false_avec_motif(self):
+        sans_nom = feature("F---0200", None, [[2.0, 48.5], [2.1, 48.5]])
+        v = self.voisinage(sans_nom)
+        r = R.recaler_station(48.5 + 30 * M_LAT, 2.05, None, None, trace_de(), voisinage=v)
+        self.assertFalse(r["recalee"])
+        self.assertEqual((r["lat"], r["lon"], r["eau"]), (48.5, 2.05, None))  # arrondi a 0,01, pas de nom invente
+        self.assertEqual(r["motif"], "voisin_sans_nom")
+        st = [{"id": "1", "lat": 48.5 + 30 * M_LAT, "lon": 2.05, "dep": "94", "eau": None, "code_eau": None}]
+        rap = R.recaler_stations(st, trace_de(), voisinage=v)
+        self.assertEqual((rap["recalees"], rap["raisons_false"]["voisin_sans_nom"], rap["raisons_false"]["sans_cours_d_eau"]), (0, 1, 0))
+        self.assertIs(st[0]["recalee"], False)
+
     def test_le_voisinage_ne_sert_pas_aux_stations_qui_ont_un_cours_d_eau(self):
         v = self.voisinage(MARNE)
         r = R.recaler_station(48.5 + 10 * M_LAT, 2.05, "Autre", "ZZ", trace_de(), voisinage=v)

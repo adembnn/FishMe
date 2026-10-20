@@ -19,6 +19,7 @@ from array import array
 
 SEUIL_M = 300.0
 SEUIL_SANS_COURS_D_EAU_M = 50.0  # station sans code ni nom : seulement un trace tout proche, de n'importe quel nom
+MOTIF_VOISIN_SANS_NOM = "voisin_sans_nom"  # station sans cours d'eau dont le trace voisin (50 m) n'a pas de nom : recalee false
 M_PAR_DEGRE = 111194.9  # un degre de latitude (sphere de 6 371 km) ; la longitude est multipliee par cos(latitude)
 CLES_CODE = ("CdEntiteHydrographique", "code_eau", "code", "CdCoursEau")
 CLES_NOM = ("NomEntiteHydrographique", "nom", "name", "NomCoursEau")
@@ -167,7 +168,7 @@ class Voisinage:
 
 def recaler_station(lat: float, lon: float, eau: str | None, code_eau: str | None, trace: Trace, seuil_m: float = SEUIL_M,
                     voisinage: "Voisinage | None" = None) -> dict:
-    """Retourne {lat, lon, eau, recalee, ecart_m, regle} ; `ecart_m` et `regle` ne vont pas dans le fichier."""
+    """Retourne {lat, lon, eau, recalee, ecart_m, regle, motif} ; `ecart_m`, `regle` et `motif` ne vont pas dans le fichier."""
     candidats, regle = trace.candidats(code_eau, eau)
     if not candidats and not code_eau and not eau and voisinage is not None:
         candidats, regle, seuil_m = voisinage.candidats(lat, lon), "voisin", min(seuil_m, SEUIL_SANS_COURS_D_EAU_M)
@@ -176,17 +177,22 @@ def recaler_station(lat: float, lon: float, eau: str | None, code_eau: str | Non
         r = plus_proche_sur_lignes(lat, lon, lignes, seuil_m)
         if r and (meilleur is None or r[0] < meilleur[0][0]):
             meilleur = (r, nom)
+    if meilleur is not None and regle == "voisin" and not meilleur[1]:
+        # decision du 20 oct. : un trace voisin SANS NOM ne donne rien (une station sans riviere vaut mieux qu'une mauvaise riviere)
+        return {"lat": round(lat, 2), "lon": round(lon, 2), "eau": eau, "recalee": False, "ecart_m": None, "regle": regle,
+                "motif": MOTIF_VOISIN_SANS_NOM}
     if meilleur is not None:
         (d, plat, plon), nom = meilleur
         return {"lat": eviter_deux_decimales(plat), "lon": eviter_deux_decimales(plon), "eau": nom or eau, "recalee": True,
-                "ecart_m": round(d, 1), "regle": regle}
-    return {"lat": round(lat, 2), "lon": round(lon, 2), "eau": eau, "recalee": False, "ecart_m": None, "regle": regle}
+                "ecart_m": round(d, 1), "regle": regle, "motif": None}
+    return {"lat": round(lat, 2), "lon": round(lon, 2), "eau": eau, "recalee": False, "ecart_m": None, "regle": regle, "motif": None}
 
 
 def recaler_stations(stations: list[dict], trace: Trace, seuil_m: float = SEUIL_M, voisinage: "Voisinage | None" = None) -> dict:
     """Modifie en place les dicts du fichier (`lat`, `lon`, `eau`, + `recalee`). Retourne les comptes pour le rapport."""
     n_vrai = 0
-    raisons = {"sans_cours_d_eau": 0, "code_et_nom_absents_du_trace": 0, "trop_loin": 0, "plan_d_eau": 0}
+    raisons = {"sans_cours_d_eau": 0, "code_et_nom_absents_du_trace": 0, "trop_loin": 0, "plan_d_eau": 0,
+               MOTIF_VOISIN_SANS_NOM: 0}
     ecarts = []
     for s in stations:
         r = recaler_station(s["lat"], s["lon"], s.get("eau"), s.get("code_eau"), trace, seuil_m, voisinage)
@@ -194,6 +200,8 @@ def recaler_stations(stations: list[dict], trace: Trace, seuil_m: float = SEUIL_
         if r["recalee"]:
             n_vrai += 1
             ecarts.append(r["ecart_m"])
+        elif r["motif"]:
+            raisons[r["motif"]] += 1  # trace voisin a moins de 50 m mais sans nom
         elif not s.get("eau") and not s.get("code_eau"):
             raisons["sans_cours_d_eau"] += 1  # aucun trace a moins de 50 m (ou voisinage non fourni)
         elif r["regle"] is None:
