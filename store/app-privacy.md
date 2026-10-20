@@ -105,9 +105,7 @@ Les réponses de `confidentialite-spark-flash.md` §3 changent : le réseau est 
 
 ## 6. Attribution de la liste de mots interdits (Profil, Sources)
 
-À ajouter dans le texte de la page Sources de l'app (Profil, Sources ; `ReglagesView.swift:35`, qui ne cite aujourd'hui que l'OFB et Hub'Eau, d'après la revue) : la licence CC BY 4.0 impose l'attribution. Texte proposé (décision de Titouan du 19 octobre), ⚠ à vérifier contre le dépôt d'origine (auteur à nommer exactement, modifications à décrire) quand L23 aura lu la liste :
-
-« Filtre de mots : liste « List of Dirty, Naughty, Obscene, and Otherwise Bad Words » (LDNOOBW), licence Creative Commons Attribution 4.0 (CC BY 4.0), https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words — adaptée pour FishMe : [mots retirés ou ajoutés, à décrire par L23]. Licence : https://creativecommons.org/licenses/by/4.0/ »
+À ajouter dans le texte de la page Sources de l'app (Profil, Sources ; `ReglagesView.swift:35`, qui ne cite aujourd'hui que l'OFB et Hub'Eau, d'après la revue) : la licence CC BY 4.0 impose l'attribution. Texte exact (vérifié le 20 octobre contre la page du dépôt : CC BY 4.0, © Shutterstock, Inc.) : `docs/legal/remplacements-app.md`, §12, à appliquer par L25.
 
 ## 7. Preuve que c'est posé
 
