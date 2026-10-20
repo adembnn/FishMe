@@ -18,7 +18,7 @@ nonisolated struct PermissionSysteme: PermissionNotifications {
     }
 }
 
-extension PermissionSysteme {
+nonisolated extension PermissionSysteme {
     func publierLocale(_ texte: String) async {
         guard await statut() == .accorde else { return }
         let contenu = UNMutableNotificationContent()

@@ -56,7 +56,7 @@ actor ServiceChatExemple: ServiceChat {
     func effacerMesMessages(auteurId: String) async throws {}
 }
 
-struct AnnuaireExemple: AnnuaireChat {
+nonisolated struct AnnuaireExemple: AnnuaireChat {
     func moi() async -> InterlocuteurChat? { DonneesExempleChat.moi }
     func amis() async -> [InterlocuteurChat] { [DonneesExempleChat.lea] }
     func clubs() async -> [ClubChat] { [DonneesExempleChat.club] }
@@ -64,7 +64,7 @@ struct AnnuaireExemple: AnnuaireChat {
 }
 
 /// Aucune permission demandée en mode démo.
-struct PermissionAucune: PermissionNotifications {
+nonisolated struct PermissionAucune: PermissionNotifications {
     func statut() async -> StatutNotifications { .refuse }
     func demander() async -> Bool { false }
     func publierLocale(_ texte: String) async {}

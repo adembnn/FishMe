@@ -9,7 +9,7 @@ typealias MotifSignalementMessage = MotifSignalement
 /// Le message disparaît tout de suite de son écran, qu'il envoie l'e-mail ou non.
 nonisolated enum SignalementMessage {
     /// Adresse publiée. `ConfigurationChat` la reçoit de A ; celle-ci est la valeur par défaut des décisions du 19 oct.
-    static let contactParDefaut = "fishme.app@gmail.com"
+    static let contactParDefaut = ContactClub.adresse
 
     /// Identifiant du message (`recordName`, introuvable sinon dans le tableau de bord), de son auteur et de sa conversation, plus
     /// le TEXTE du message, ami ou club : les conversations sont en zone partagée, l'équipe ne peut pas les lire autrement
