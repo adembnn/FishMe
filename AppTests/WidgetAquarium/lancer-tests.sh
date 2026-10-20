@@ -7,7 +7,7 @@ TRAVAIL="$(mktemp -d)"
 trap 'rm -rf "$TRAVAIL"' EXIT
 
 mkdir -p "$TRAVAIL/Sources/WidgetAquariumLogique" "$TRAVAIL/Tests/WidgetAquariumLogiqueTests"
-cp "$RACINE/WidgetAquarium/InstantaneAquarium.swift" "$RACINE/WidgetAquarium/NageWidget.swift" "$RACINE/WidgetAquarium/HorlogeAnimation.swift" "$RACINE/WidgetAquarium/FondWidget.swift" "$TRAVAIL/Sources/WidgetAquariumLogique/"
+cp "$RACINE/WidgetAquarium/InstantaneAquarium.swift" "$RACINE/WidgetAquarium/NageWidget.swift" "$RACINE/WidgetAquarium/HorlogeAnimation.swift" "$RACINE/WidgetAquarium/FondWidget.swift" "$RACINE/WidgetAquarium/BudgetDecor.swift" "$TRAVAIL/Sources/WidgetAquariumLogique/"
 cp "$ICI/Package.swift.modele" "$TRAVAIL/Package.swift"
 cp "$ICI"/*Tests.swift "$TRAVAIL/Tests/WidgetAquariumLogiqueTests/"
 

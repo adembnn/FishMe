@@ -8,7 +8,7 @@ import SwiftUI
 
 nonisolated extension DecorDessin {
     /// Fil de la guirlande et ses quinze ampoules (position, rayon, couleur, rayon du halo), réparties sur sa longueur.
-    private static func ampoulesNoel() -> (fil: [CGPoint], ampoules: [(CGPoint, CGFloat, UInt32, CGFloat)]) {
+    private static func calculerAmpoulesNoel() -> (fil: [CGPoint], ampoules: [(CGPoint, CGFloat, UInt32, CGFloat)]) {
         let pts: [CGPoint] = [CGPoint(x: 226, y: 500), CGPoint(x: 350, y: 548), CGPoint(x: 232, y: 606),
                               CGPoint(x: 360, y: 664), CGPoint(x: 222, y: 724), CGPoint(x: 356, y: 774)]
         var longueurs: [CGFloat] = []
@@ -37,6 +37,11 @@ nonisolated extension DecorDessin {
         }
         return (pts, liste)
     }
+
+    /// Calculée UNE fois (elle était recalculée à chaque image avec ses tableaux et son générateur).
+    private static let guirlandeNoel = calculerAmpoulesNoel()
+
+    private static func ampoulesNoel() -> (fil: [CGPoint], ampoules: [(CGPoint, CGFloat, UInt32, CGFloat)]) { guirlandeNoel }
 
     /// Un sapin stylisé : des étages de branches festonnés, sans contour, un reflet clair sur chaque étage.
     private static func sapinNoel(_ ctx: inout GraphicsContext, _ cad: CadreDecor, graine: UInt32, cx: CGFloat, base: CGFloat,

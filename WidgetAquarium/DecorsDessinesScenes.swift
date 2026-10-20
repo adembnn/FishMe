@@ -8,8 +8,11 @@ import SwiftUI
 //   halloween         la nuit : lune, citrouilles lumineuses, racines tordues, toiles, brume et feuilles mortes
 //   ouverture-truite  la rivière claire du printemps : lumière vive, pollen, hautes herbes fleuries ET un sol
 //                     (lit de graviers, galets, herbes basses) que la page de propositions n'avait pas
-// Noël est la proposition B « Sapin immergé » de la page noel-ete. Été n'a PAS de dessin (nouvelles propositions en cours) :
-// `reglage` rend `nil`, le fond d'origine reste. Fichier PARTAGÉ app + widget : aucune dépendance à `App/`, `Core` ou à l'état de l'app.
+//   noel              le sapin immergé (proposition B de la page noel-ete)
+//   ete               la fête sur l'eau (proposition C de la page d'été, DecorsDessinesEte.swift) : bouées, ballon, rubans de lumière
+// Fichier PARTAGÉ app + widget : aucune dépendance à `App/`, `Core` ou à l'état de l'app.
+// PERFORMANCE : voir BudgetDecor.swift. Le dessin FIXE (sol, roches, flous…) est rendu une fois en image (`CacheDecor`) ; seul le
+// dessin MOBILE est redessiné, 20 fois par seconde au plus, et il ne contient aucun flou.
 // Chaque décor se compose de quatre temps : filtre sur le fond d'origine, calques de lumière, dessin fixe (sol, roches…),
 // dessin qui bouge (plantes, lueurs, brume, rais, particules). Le dessin qui bouge ne dépend que de `t`.
 // ⚠ à vérifier sur Mac : couleurs, positions et lisibilité des poissons devant chaque décor.
@@ -43,7 +46,7 @@ nonisolated extension DecorDessin {
         var ambiance: Ambiance
     }
 
-    /// Le réglage d'un décor, ou `nil` s'il n'a pas de dessin (le décor de départ, Noël, Été, un identifiant inconnu).
+    /// Le réglage d'un décor, ou `nil` s'il n'a pas de dessin (le décor de départ, un identifiant inconnu).
     static func reglage(_ id: String) -> Reglage? {
         switch id {
         case "sous-bois":
@@ -107,6 +110,8 @@ nonisolated extension DecorDessin {
                     particules: Particules(type: .pollen, c: (255, 245, 170), a: 0.85),
                     proches: 1.06,
                     bulles: Bulles(c: (245, 255, 240), y: 0.82)))
+        case "ete":
+            return reglageEte
         default:
             return nil
         }
@@ -150,12 +155,31 @@ nonisolated extension DecorDessin {
         case "halloween": fixeHalloween(&ctx, cad)
         case "noel": fixeNoel(&ctx, cad)
         case "ouverture-truite": fixeOuverture(&ctx, cad)
+        case "ete": fixeEte(&ctx, cad)
         default: break
         }
     }
 
+    /// Le dessin fixe DEVANT les poissons (rendu une fois en image, comme le fond) : les galets flous du premier plan.
+    /// Avant, celui de Noël était redessiné à chaque image avec les poussières proches.
+    static func fixeAvant(_ ctx: inout GraphicsContext, taille: CGSize, skin: String) {
+        let cad = CadreDecor(taille)
+        switch skin {
+        case "noel": avantNoel(&ctx, cad)
+        case "ete": avantEte(&ctx, cad)
+        default: break
+        }
+    }
+
+    /// Vrai si le décor a un dessin fixe devant les poissons.
+    static func aUnAvantFixe(_ skin: String) -> Bool { skin == "noel" || skin == "ete" }
+
+    /// Vrai si le décor a des reflets de sol pré-rendus qui glissent (deux images, voir `reflets`).
+    static func aDesReflets(_ skin: String) -> Bool { skin == "ete" }
+
     /// Ce qui bouge derrière les poissons : plantes, lueurs, brume, puis rais, reflets et poussières.
-    static func mobileArriere(_ ctx: inout GraphicsContext, taille: CGSize, skin: String, t: Double) {
+    /// `economie` : mode économie d'énergie (moitié moins de particules, une seule famille de reflets).
+    static func mobileArriere(_ ctx: inout GraphicsContext, taille: CGSize, skin: String, t: Double, economie: Bool = false) {
         guard let r = reglage(skin) else { return }
         let cad = CadreDecor(taille)
         switch skin {
@@ -165,13 +189,15 @@ nonisolated extension DecorDessin {
         case "halloween": mobileHalloween(&ctx, cad, taille, t)
         case "noel": mobileNoel(&ctx, cad, t)
         case "ouverture-truite": mobileOuverture(&ctx, cad, t)
+        case "ete": mobileEte(&ctx, cad, t)
         default: break
         }
-        ambianceArriere(&ctx, taille: taille, t: t, r.ambiance)
+        ambianceArriere(&ctx, taille: taille, t: t, r.ambiance, economie: economie)
     }
 
     /// Devant les poissons : végétation de l'avant-plan, poussières proches et bulles (bulles seulement en mouvement).
-    static func mobileAvant(_ ctx: inout GraphicsContext, taille: CGSize, skin: String, t: Double, bulles: Bool) {
+    static func mobileAvant(_ ctx: inout GraphicsContext, taille: CGSize, skin: String, t: Double, bulles: Bool,
+                            economie: Bool = false) {
         guard let r = reglage(skin) else { return }
         let cad = CadreDecor(taille)
         switch skin {
@@ -185,8 +211,8 @@ nonisolated extension DecorDessin {
         case "etang":
             brins(&ctx, cad, graine: 221, t: t, x0: -10, x1: 400, n: 16, y0: 860, hmin: 40, hmax: 150,
                   couleur: Color(.sRGB, red: 60 / 255, green: 80 / 255, blue: 30 / 255, opacity: 0.85), fleurs: false)
-        case "noel":
-            avantNoel(&ctx, cad)
+        case "ete":
+            bokehEte(&ctx, taille: taille, t: t)
         case "ouverture-truite":
             brins(&ctx, cad, graine: 621, t: t, x0: -30, x1: 90, n: 6, y0: 860, hmin: 150, hmax: 320,
                   couleur: c(0x4F8A3A), fleurs: true)
@@ -194,7 +220,7 @@ nonisolated extension DecorDessin {
                   couleur: c(0x4F8A3A), fleurs: true)
         default: break
         }
-        ambianceAvant(&ctx, taille: taille, t: t, r.ambiance, bulles: bulles)
+        ambianceAvant(&ctx, taille: taille, t: t, r.ambiance, bulles: bulles, economie: economie)
     }
 
     // MARK: Sous-bois
@@ -531,6 +557,10 @@ nonisolated extension DecorDessin {
         galets(&ctx, cad, &g, n: 30, y0: 756, y1: 838, palette: [0xB9B496, 0x9DA286, 0xC9C3A4, 0x8A9078, 0xA7A084],
                rmin: 11, rmax: 28, ombre: 0.28, reflet: 0.28)
         galets(&ctx, cad, &g, n: 3, y0: 798, y1: 832, palette: [0x8A9078, 0x9DA286], rmin: 30, rmax: 40, ombre: 0.32, reflet: 0.3)
+        // Les herbes basses du sol : leur balancement ne dépasse pas quatre points, elles sont dessinées une fois, à l'instant
+        // fixe (avant : 26 lames redessinées à chaque image, voir BudgetDecor).
+        herbes(&ctx, cad, graine: 623, t: tFixe, x0: -10, x1: 400, n: 26, y0: 846, hmin: 26, hmax: 66,
+               couleurs: [0x79B050, 0x5E9440, 0x8CC25E], pente: 8, amp: 2.4)
     }
 
     private static func mobileOuverture(_ ctx: inout GraphicsContext, _ cad: CadreDecor, _ t: Double) {
@@ -543,9 +573,7 @@ nonisolated extension DecorDessin {
             lueur(ctx, centre: cad.p(x, y), rx: cad.r(rx), ry: cad.r(rx * 0.24),
                   arrets: [(0, c(0xFFFADC, alpha)), (0.7, c(0xFFFADC, 0)), (1, c(0xFFFADC, 0))])
         }
-        // Les herbes basses du sol, puis les hautes herbes fleuries du fond.
-        herbes(&ctx, cad, graine: 623, t: t, x0: -10, x1: 400, n: 26, y0: 846, hmin: 26, hmax: 66,
-               couleurs: [0x79B050, 0x5E9440, 0x8CC25E], pente: 8, amp: 2.4)
+        // Les hautes herbes fleuries du fond (les herbes basses du sol sont dans le dessin fixe).
         brins(&ctx, cad, graine: 624, t: t, x0: -20, x1: 200, n: 16, y0: 790, hmin: 110, hmax: 260, couleur: c(0x79B050), fleurs: true)
         brins(&ctx, cad, graine: 625, t: t, x0: 200, x1: 420, n: 16, y0: 790, hmin: 110, hmax: 260, couleur: c(0x79B050), fleurs: true)
     }

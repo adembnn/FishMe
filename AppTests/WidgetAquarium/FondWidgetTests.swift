@@ -45,7 +45,7 @@ struct FondWidgetTests {
 
     // MARK: Le dessin des décors (le widget dessine le même décor que l'aquarium)
 
-    private let dessines = ["sous-bois", "etang", "grotte", "halloween", "noel", "ouverture-truite"]
+    private let dessines = ["sous-bois", "etang", "grotte", "halloween", "noel", "ouverture-truite", "ete"]
 
     @Test func chaqueDecorDessineChoisitLeDessinQuandIlNyAPasDImage() {
         for id in dessines {
@@ -64,12 +64,11 @@ struct FondWidgetTests {
         }
     }
 
-    @Test func eteNAPasDeDessinEtRepliSurLeFondDOrigine() {
-        for id in ["ete"] {
-            #expect(!FondWidget.aUnDessin(id))
-            for f in FondWidget.Format.allCases {
-                #expect(FondWidget.source(skin: id, format: f, existe: { _ in false }) == .repli("fond-\(f.rawValue)"))
-            }
+    @Test func eteADesormaisUnDessinEtLeDecorDeDepartNEnAPas() {
+        #expect(FondWidget.aUnDessin("ete"))
+        for f in FondWidget.Format.allCases {
+            #expect(FondWidget.source(skin: "ete", format: f, existe: { _ in false }) == .dessin("ete"))
+            #expect(FondWidget.source(skin: "riviere", format: f, existe: { _ in false }) == .repli("fond-\(f.rawValue)"))
         }
     }
 
