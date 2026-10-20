@@ -11,7 +11,7 @@ Ouverture sur le pêcheur, recentrage sans déplacer le spot, re-choix du dépar
 - Prises du pêcheur : fournir un `PrisesDuPecheurCarte` (par défaut `.aucune`, donc aucune vignette) lu depuis le stockage des prises.
 - L19 : `BlocReglesView` doit rester dans `App/Style/BlocRegles/` (utilisé par `ReglesDuSpotView`).
 
-## Points d'accroche prévus pour N6 « repères privés » (non câblés)
+## Points d'accroche N6 « repères privés » (câblés sur lot/racine-carte, voir docs/reports/branchements-l25.md)
 N6 fournit (`App/Reperes/LISEZMOI.md`) : `CalqueReperes` (un `MapContent`), `InterrupteurCalqueReperes` (clé `reperes.calque`), `NouveauRepereView(position:)`, `FicheRepereView(repere:)`, `ListeReperesView()`, `RepereProche.plusProche`, `ReglesReperes.peutAjouter`. Où les poser dans la carte :
 1. **Calque** : dans `VueCarte.contenuCarte` (`Vues/VueCarte.swift`), après `ForEach(modele.elements)` : `CalqueReperes(reperes:afficherNoms:ouvrir:)` si `InterrupteurCalqueReperes.cle` est allumé. Il compte hors du budget de 60 éléments de `Regroupeur` : prévoir de soustraire le nombre de repères visibles de `Regroupeur.maximum` au moment du câblage.
 2. **Interrupteur** : une 5e rangée dans `ColonneBoutonsCarte` (`Vues/CommandesCarte.swift`) avec libellé. Attention : N6 utilise `mappin.and.ellipse`, déjà pris par « Ma zone » ; changer l'un des deux symboles. Hauteur de la colonne à re-mesurer (AX5, 44 pt).
