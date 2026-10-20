@@ -7,8 +7,9 @@ import Core
 // Tests de l'app pour N1 : écrits sans Mac, non exécutés (⚠ à lancer sur le Mac de Sullyvan).
 @MainActor
 struct SkinsGalerieTests {
-    // ⚠ à vérifier : si `Binding(get:set:)` exige des fermetures `@Sendable` avec Swift 6, rendre `Boite` `@unchecked Sendable`.
-    final class Boite { var valeur: IdentifiantSkin = .parDefaut }
+    // ⚠ à vérifier : classes isolées au MainActor pour que les fermetures de `Binding(get:set:)` compilent même si elles sont `@Sendable`.
+    @MainActor final class Boite { var valeur: IdentifiantSkin = .parDefaut }
+    @MainActor final class ReserveTexte { var texte: String; init(_ t: String) { texte = t } }
 
     static let paris: Calendar = {
         var c = Calendar(identifier: .gregorian)
@@ -69,10 +70,11 @@ struct SkinsGalerieTests {
         let noel = try #require(CatalogueSkins.skin(.noel))
         let grotte = try #require(CatalogueSkins.skin(.grotte))
         let c = Self.contexte(Self.date(2026, 10, 20), abonne: true)
-        #expect(!ApplicationSkin.appliquer(noel, contexte: c, choisi: binding, demanderPro: { appels += 1 },
-                                           auChangement: { _ in appels += 1 }, defaults: Self.reglages()))
-        #expect(!ApplicationSkin.appliquer(grotte, contexte: c, choisi: binding, demanderPro: { appels += 1 },
-                                           auChangement: { _ in appels += 1 }, defaults: Self.reglages()))
+        let r1 = ApplicationSkin.appliquer(noel, contexte: c, choisi: binding, demanderPro: { appels += 1 },
+                                           auChangement: { _ in appels += 1 }, defaults: Self.reglages())
+        let r2 = ApplicationSkin.appliquer(grotte, contexte: c, choisi: binding, demanderPro: { appels += 1 },
+                                           auChangement: { _ in appels += 1 }, defaults: Self.reglages())
+        #expect(!r1 && !r2)
         #expect(appels == 0)
         #expect(boite.valeur == .parDefaut)
     }
@@ -98,12 +100,11 @@ struct SkinsGalerieTests {
     }
 
     @Test func leBindingLitEtEcritLaChaine() {
-        // ⚠ à vérifier : capture d'une variable locale par les fermetures du `Binding` (Swift 6).
-        var brut = "halloween"
-        let b = ChoixSkin.binding(Binding(get: { brut }, set: { brut = $0 }))
+        let r = ReserveTexte("halloween")
+        let b = ChoixSkin.binding(Binding(get: { r.texte }, set: { r.texte = $0 }))
         #expect(b.wrappedValue == .halloween)
         b.wrappedValue = .noel
-        #expect(brut == "noel")
+        #expect(r.texte == "noel")
     }
 
     @Test func lesRangeesAuxDatesInjectees() {

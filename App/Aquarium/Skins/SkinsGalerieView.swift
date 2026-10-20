@@ -15,7 +15,7 @@ struct SkinsGalerieView<Aquarium: View>: View {
     var fermer: (() -> Void)? = nil
     /// Écarte un skin dont les images n'existent pas (jamais de vignette vide). Remplaçable dans les tests.
     // ⚠ à vérifier : valeur par défaut qui nomme une fonction statique isolée au fil principal.
-    var imagesPretes: (Skin) -> Bool = FondSkin.imagesPretes
+    var imagesPretes: (Skin) -> Bool = { FondSkin.imagesPretes($0) }
 
     @State private var apercu: Skin?
     @Environment(\.dynamicTypeSize) private var tailleTexte

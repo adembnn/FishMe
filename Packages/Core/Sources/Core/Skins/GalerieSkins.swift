@@ -28,7 +28,7 @@ public struct RangeesGalerie: Sendable, Equatable {
     }
 }
 
-/// Range le catalogue dans les trois rangées. `afficher` écarte un skin dont les images n'existent pas encore
+/// Range le catalogue dans les trois rangées. `afficher` écarte un skin sans fond (voir `skinAffichable`)
 /// (jamais de vignette vide) ; le décor de départ doit toujours passer.
 public func rangeesGalerie(catalogue: [Skin] = CatalogueSkins.tous, dans contexte: ContexteSkin,
                            afficher: (Skin) -> Bool = { _ in true }) -> RangeesGalerie {
@@ -50,6 +50,31 @@ public func rangeesGalerie(catalogue: [Skin] = CatalogueSkins.tous, dans context
         }
     }
     return RangeesGalerie(mesDecors: mes, enCeMoment: maintenant, reviennentChaqueAnnee: plusTard)
+}
+
+/// D'où vient le fond d'un skin : l'illustration du skin, le fond dessiné en code, ou le fond d'avant les skins.
+public enum SourceFond: Sendable, Equatable {
+    case image(String)
+    case dessine
+    case repli(String)
+}
+
+/// Règle du fond : l'illustration du skin si elle existe, sinon le fond dessiné en code, sinon le fond d'avant les skins.
+/// `imageExiste` et `fondDessine` sont injectés : Core ne lit ni jeu d'images ni SwiftUI.
+public func sourceFond(_ skin: Skin?, format: FormatFond, imageExiste: (String) -> Bool,
+                       fondDessine: (IdentifiantSkin) -> Bool) -> SourceFond {
+    let repli = Skin.nomImageRepli(format)
+    guard let skin else { return .repli(repli) }
+    let nom = skin.nomImageFond(format)
+    if imageExiste(nom) { return .image(nom) }
+    if fondDessine(skin.id) { return .dessine }
+    return .repli(repli)
+}
+
+/// Un skin se montre dans la galerie dès qu'il a un fond : illustration du skin ou fond dessiné en code.
+/// Le décor de départ passe toujours. Un skin sans aucun des deux est écarté (jamais de vignette vide).
+public func skinAffichable(_ skin: Skin, imageExiste: (String) -> Bool, fondDessine: (IdentifiantSkin) -> Bool) -> Bool {
+    skin.id == .parDefaut || fondDessine(skin.id) || imageExiste(skin.nomImageFond(.grand))
 }
 
 /// Les textes de la galerie, écrits ici pour être testés sans l'interface.

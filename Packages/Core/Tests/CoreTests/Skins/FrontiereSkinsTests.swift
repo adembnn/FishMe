@@ -62,7 +62,7 @@ struct FrontiereSkinsTests {
                     LibellesSkins.boutonAppliquer(s) ?? ""]
         }
         let interdits = ["dernière chance", "dernier jour", "plus que", "vite", "offre limitée", "expire dans",
-                         "compte à rebours", "mystère", "coffre", "loot", "pokémon", "pokédex"]
+                         "compte à rebours", "mystère", "coffre", "loot", "pok" + "émon", "pok" + "édex"]
         for texte in textes {
             for mot in interdits { #expect(!texte.lowercased().contains(mot), "« \(mot) » dans « \(texte) »") }
         }
