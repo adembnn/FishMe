@@ -7,7 +7,7 @@ import SwiftUI
 // ⚠ à vérifier sur Mac : rendu des chemins (arcs approchés par des courbes de Bézier), épaisseur du trait à 24 pt.
 
 /// Convertit les coordonnées d'une boîte de dessin (largeur x hauteur) vers un rectangle.
-private struct Boite {
+private struct BoiteDessin {
     let rect: CGRect
     let largeur: CGFloat
     let hauteur: CGFloat
@@ -51,7 +51,7 @@ struct EpingleGoutte: Shape {
     static let hauteur: CGFloat = 41
 
     func path(in rect: CGRect) -> Path {
-        let b = Boite(rect: rect, largeur: Self.largeur, hauteur: Self.hauteur)
+        let b = BoiteDessin(rect: rect, largeur: Self.largeur, hauteur: Self.hauteur)
         var p = Path()
         // M16 41 C16 41 2 26.5 2 15.5 a14 14 0 0 1 28 0 C30 26.5 16 41 16 41 Z
         p.move(to: b.p(16, 41))
@@ -66,7 +66,7 @@ struct EpingleGoutte: Shape {
 /// L'hameçon du jeu C (coordonnées d'origine : œil en (13 ; 4,6), hampe jusqu'à y = 15,8, courbe de rayon 4,9, barbes),
 /// recentré dans la boîte 24 x 24 et agrandi de 8 % pour rester lisible à 24 pt dans la goutte.
 private struct Hamecon {
-    let boite: Boite
+    let boite: BoiteDessin
     static let echelle: CGFloat = 1.08
     /// Centre du dessin d'origine : x de 1,4 à 13, y de 2,7 à 20,7.
     static let centre = CGPoint(x: 7.2, y: 11.7)
@@ -84,7 +84,7 @@ struct GlypheRepereRempli: Shape {
     let type: IconeRepere
 
     func path(in rect: CGRect) -> Path {
-        let b = Boite(rect: rect, largeur: 24, hauteur: 24)
+        let b = BoiteDessin(rect: rect, largeur: 24, hauteur: 24)
         var p = Path()
         switch type {
         case .parking:
@@ -151,7 +151,7 @@ struct GlypheRepereTrait: Shape {
     let type: IconeRepere
 
     func path(in rect: CGRect) -> Path {
-        let b = Boite(rect: rect, largeur: 24, hauteur: 24)
+        let b = BoiteDessin(rect: rect, largeur: 24, hauteur: 24)
         var p = Path()
         switch type {
         case .poste:
