@@ -21,6 +21,7 @@ struct CartePleinEcranView: View {
     @State private var descente: CGFloat = 0
     @State private var sens: Sens?
     @State private var apercuOuvert = false
+    @State private var publierOuvert = false
     @State private var mouvement = MouvementIPhone()
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
 
@@ -46,6 +47,19 @@ struct CartePleinEcranView: View {
                     .id(retournee)
                     .padding(.horizontal, Espace.bord)
                     .padding(.bottom, retournee ? Espace.s : Espace.l)
+                if let photo, let publier = emplacements.publierCarte,
+                   PublicationDepuisCarte.estPublicable(infos.prise, photo: photo) {
+                    // L23 : la photo de la prise (sans GPS), lieu « département seul » par défaut.
+                    Button { publierOuvert = true } label: {
+                        Label("Publier", systemImage: "paperplane")
+                    }
+                    .buttonStyle(.secondaire)
+                    .padding(.horizontal, Espace.bord)
+                    .padding(.bottom, retournee ? Espace.s : Espace.l)
+                    .sheet(isPresented: $publierOuvert) {
+                        publier(infos.prise, infos.rarete.niveau, photo)
+                    }
+                }
                 if retournee {
                     Button(action: retourner) {
                         Label("Voir le recto", systemImage: "arrow.triangle.2.circlepath")

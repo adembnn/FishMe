@@ -29,6 +29,8 @@ Branche `lot/racine`. Tout est écrit SANS Mac ni Xcode : rien n'est compilé ni
 | N5 (croisé) | lien « Comment mesurer ? » (feuille `MesureGuideView`) sous le curseur de taille de l'ajout manuel ; « Ma fédération » est bien dans le profil (`ProfilEmplacement`) | `App/Collection/AjoutManuelPriseView.swift` |
 | L24 (croisé) | `BoutonEcrire` + `FeuilleConversationView` sur la page d'un ami (icône dans la barre de `PescedexAmiView`) et d'un club (sous « Membres ») ; `RelaisChat` : `SceneDuPartage.acheminer` envoie un partage dont `InvitationChat.estUneConversation` est vrai à `RelaisChat`, `RootView` appelle `app.chat.accepter(...)` puis ouvre les messages ; jamais par `RelaisInvitations` | `App/Chat/RelaisChat.swift`, `App/Amis/RelaisInvitations.swift`, `RootView.onglets` |
 | N2 (croisé) | `lot/envies-accroches` fusionnée ; `PescedexView(..., envies: app.envies)` ; `ProfilLocal.lire()/ecrire()` lisent et écrivent les envies (`envies.json`, URL partagée `ProfilLocal.fichierEnvies`) ; `EnviesModele.relire()` après chaque synchro (`SauvegardeAvecReperes.apresProfil`) | `RootView`, `App/Compte/ProfilLocal.swift` |
+| L18 (branche `lot/pescedex-region`, délégation de Titouan) | « Ma région » actif : `PescedexModele(regionDe: { RegionPescedex.depuisCore($0) })` (table `RegionsFrance`, locution de la région pour la phrase : « en Île-de-France », « dans les Hauts-de-France ») ; le département du spot courant sert de repli quand aucune carte n'a de lieu (`definirZoneDeRepli`, appelé par `spotChange` et `commencer`, recharge si le département change) | `RootView.init`, `ZonePescedex.swift`, `PescedexModele` |
+| L23 (croisé, même branche) | bouton « Publier » (secondaire) sur la carte ouverte en plein écran, seulement pour une vraie prise avec photo (`PublicationDepuisCarte.estPublicable` : ni déclarée, ni exemple/démo) ; feuille `PublierDepuisCarteVue` = `PublierVue(gestion:contexteLieu:carte:imagePNG:)` avec la photo du dépôt (le pipeline `PreparationMedia` la refabrique sans GPS), lieu « département seul » par défaut, légende vide ; sans profil créé ou sans 15 ans : « Finis ton profil » (`FinisTonProfilView`) puis la feuille de publication prend la place | `CartePleinEcranView`, `EmplacementsExternes.publierCarte`, `App/Communaute/PublierDepuisCarteVue.swift`, `RootView.pescedex` |
 | docs | lots N1 à N6 ajoutés à `docs/lots.md` (`scripts/lot.sh` les lit dans ce tableau, rien à changer dans le script) ; `lots.py verifier` : 21 lots, 0 trou | docs/lots.md |
 
 ## Pas branché, et pourquoi
@@ -38,8 +40,6 @@ Ces points demandent d'écrire dans un dossier qui n'est pas à L25. Chaque lign
 |---|---|---|
 | N3 : ligne « Eau » | `stations-temperature.json` | le fichier est produit par `outils/hubeau/stations_temperature.py` (lot D2B, branche `lot/hubeau-temperature`, 872 stations dont 24 en service sur 30 jours) : l'ajouter aux ressources de l'app et à `donnees.sh`, le code le cherche dans le bundle ; sans lui, pression et débit seulement. Mention à mettre dans les crédits : « Données : Hub'Eau / Naïades, Licence Ouverte (Etalab) » |
 | N1 : décor sur le widget | `WidgetAquarium/` | `publierAquarium` n'envoie pas le décor |
-| L18 : `regionDe:` de `PescedexModele` (« Ma région » est grisé) | `RootView.init`, ligne `PescedexModele(depot:services:)` | table prête dans Core (`RegionsFrance.region(deDepartement:)`), à brancher avec le Pescedex pour éviter un conflit avec l'autre agent |
-| L23 : bouton « Publier » depuis une carte du Pescedex | `App/Collection/` | Pescedex |
 | L22 : chat de club, membres sans `idCloudKit` | | listés avec un identifiant vide : pas admissibles dans la zone du chat |
 | L19 : `BlocReglesView` dans `App/Style/BlocRegles/` | | à vérifier avec `scripts/verif.sh` (frontières) |
 | Commentaire périmé dans `App/Club/ModelesClub.swift` ligne 118 (« L23 a sa propre liste ») | `App/Club/` | faux depuis l'alignement ; à effacer par L22 |
@@ -53,6 +53,13 @@ Ces points demandent d'écrire dans un dossier qui n'est pas à L25. Chaque lign
 - Colonne de droite à 5 boutons : hauteur, AX5 et 44 pt à re-mesurer ; bandeau de session à trois boutons en AX5 ; écran de session avec le bouton « Ajouter un repère ici » (le chrono est positionné depuis le haut, le bouton ajoute 44 pt en bas).
 - `Modal.nouveauRepere(Coordonnee)` garde la coordonnée en mémoire dans la file d'attente des feuilles, jamais sur disque ni dans un journal.
 - Pas de photo du repère dans `PrisesDuPecheurCarte`, rien de nouveau dans `CacheCarte` ni dans le lieu flou : à relire au build.
+
+## Ma région et Publier depuis une carte : à vérifier au build (jamais compilé)
+- `PublierDepuisCarteVue` appelle `gestion.ouvrir()` (lit cache, blocages, réseau) avant d'afficher la feuille, pour connaître le profil : un spinner reste affiché le temps de la lecture, hors ligne aussi ; à mesurer.
+- Le `.sheet` est posé dans `CartePleinEcranView` (au-dessus d'un `fullScreenCover`) ; bouton présent au recto et au verso, au-dessus de « Enregistrer dans Photos » ; hauteur, AX5 et 44 pt à re-mesurer.
+- Le type d'eau n'est pas connu depuis la carte (`typeEau: nil`) : « cours d'eau + département » n'est donc pas offert, seulement « département » et « aucun lieu ».
+- La carte liée envoie l'espèce, la rareté (niveau de l'ouverture) et la taille ; la vidéo n'est pas proposée depuis une carte.
+- « Ma région » : la région vient du département de référence (dernière carte localisée, sinon spot courant) ; hors métropole (code inconnu) elle reste grisée.
 
 ## À faire à la main dans Xcode (pas de .xcodeproj touché ici)
 1. Capacités de la cible app : iCloud (CloudKit, conteneur `iCloud.ai.mwm.build.challenge.team.01`, déjà dans le fichier) et Push Notifications (le fichier `BuildChallenge.entitlements` a maintenant `aps-environment`). Background Modes : cocher « Remote notifications » (la clé est dans l'Info.plist). Plan B : les variantes de `Config/planb/` n'ont pas `aps-environment`, c'est voulu (compte gratuit).

@@ -233,3 +233,46 @@ struct PescedexDirectTests {
         #expect(modele.porteeMontree == .monSpot)
     }
 }
+
+// MARK: « Publier » depuis une carte (L18 vers L23)
+
+@MainActor
+struct PublierDepuisCarteTests {
+    private func prise(origine: OrigineCarte = .priseReelle, exemple: Bool = false, lieu: String? = "La Marne · 94") -> Prise {
+        var p = Prise(espece: Espece(id: "brochet"), longueurCm: 62, mesure: .saisie, date: Date(), lieuFlou: lieu,
+                      cheminPhoto: "a.jpg", gardee: true)
+        p.origine = origine
+        p.exemple = exemple
+        return p
+    }
+
+    @Test func seuleUneVraiePriseAvecPhotoSePublie() {
+        let photo = Data([1, 2, 3])
+        #expect(PublicationDepuisCarte.estPublicable(prise(), photo: photo))
+        #expect(!PublicationDepuisCarte.estPublicable(prise(), photo: nil))
+        #expect(!PublicationDepuisCarte.estPublicable(prise(), photo: Data()))
+        #expect(!PublicationDepuisCarte.estPublicable(prise(origine: .declaree), photo: photo))
+        #expect(!PublicationDepuisCarte.estPublicable(prise(exemple: true), photo: photo))
+    }
+
+    @Test func lieuParDefautEstLeDepartementSeul() {
+        let contexte = PublicationDepuisCarte.contexteLieu(prise())
+        #expect(contexte.departement == "94")
+        #expect(LieuPublication.parDefaut(contexte) == .departement)
+        let sans = PublicationDepuisCarte.contexteLieu(prise(lieu: nil))
+        #expect(LieuPublication.parDefaut(sans) == .aucun)
+    }
+
+    @Test func laCarteLieeGardeEspeceRareteEtTaille() {
+        let liee = PublicationDepuisCarte.carteLiee(prise(), rarete: .rare)
+        #expect(liee == CarteLiee(espece: "brochet", rarete: .rare, tailleCm: 62))
+    }
+
+    @Test func lePreRemplissageDuModeleNePortePasDePosition() {
+        let modele = ModelePublication(auteurNom: "p-Titouan", contexteLieu: PublicationDepuisCarte.contexteLieu(prise()),
+                                       clubs: [], carte: PublicationDepuisCarte.carteLiee(prise(), rarete: .rare))
+        #expect(modele.mode == .departement)
+        #expect(modele.apercuLieu.contains("94"))
+        #expect(!modele.peutPublier)  // pas encore de photo choisie
+    }
+}

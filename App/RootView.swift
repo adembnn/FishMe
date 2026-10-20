@@ -1045,7 +1045,10 @@ private struct RacineContenu: View {
                 emplacements: EmplacementsExternes(
                     commentLaPecher: { espece in AnyView(CommentLaPecherEmplacement(app: app, espece: espece)) },
                     tesConditions: { AnyView(TesConditionsEmplacement(app: app)) },
-                    meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }),
+                    meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) },
+                    publierCarte: { prise, rarete, photo in
+                        AnyView(PublierDepuisCarteVue(gestion: app.feed, prise: prise, rarete: rarete, photo: photo))
+                    }),
                 voirAquarium: { aquariumOuvert = true },
                 photographier: { app.ajouterPrise() },
                 // L18 : "Déclarer" ouvre la grille `DeclarationView` dans le Pescedex ; le tunnel ne s'ouvre plus d'ici.
