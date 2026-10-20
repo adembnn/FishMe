@@ -56,7 +56,7 @@ def charger(chemin=LOTS_MD):
         for d in list(dossiers):
             m = re.match(r"^App/([^/]+)/$", d)
             if m:
-                dossiers += [f"AppTests/{m.group(1)}/", f"AppUITests/{m.group(1)}/"]
+                dossiers += [t for t in (f"AppTests/{m.group(1)}/", f"AppUITests/{m.group(1)}/") if t not in dossiers]
         lots.append({
             "code": code,
             "nom": r["Lot"][len(code):].strip(),
@@ -127,7 +127,12 @@ def verifier(lots):
 # Les hooks de Claude Code, les crochets de git et les scripts appellent ces fonctions.
 # ---------------------------------------------------------------------------
 
-LOT_ATELIER = "H0"
+def code_atelier(lots=None):
+    """Le code du lot qui possède `outils/atelier/` (H0 avant le 19 oct., H1 depuis) : jamais écrit en dur."""
+    for lot in (lots if lots is not None else charger()):
+        if "outils/atelier/" in lot["dossiers"]:
+            return lot["code"]
+    return None
 BRANCHES_PRINCIPALES = ("main", "master")
 FICHIERS_FABRIQUES = ["stations-especes.json", "rarete-departements.json"]  # jamais commités (scripts/donnees.sh)
 DOSSIERS_SANS_MARQUE = ["App/", "store/"]  # « Poké » y est interdit (marque de Nintendo)
@@ -209,7 +214,7 @@ def parties(chemins, lots=None):
             trouvees.add("documents")
         if c in ("docs/lots.md", "outils/atelier/lots.py"):
             trouvees.add("lots")
-        if proprietaire(c, lots) == LOT_ATELIER:
+        if proprietaire(c, lots) == code_atelier(lots):
             trouvees.add("atelier")
         if any(c.startswith(d) for d in DOSSIERS_PAQUETS):
             trouvees.add("core")

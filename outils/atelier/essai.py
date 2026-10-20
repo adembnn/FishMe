@@ -145,7 +145,7 @@ fi
 if [ "$1" = release ] && [ "$2" = download ]; then
   dir=.
   while [ $# -gt 0 ]; do [ "$1" = --dir ] && dir="$2"; shift; done
-  mkdir -p "$dir"; echo '[]' > "$dir/stations-especes.json"; echo '{}' > "$dir/rarete-departements.json"; exit 0
+  mkdir -p "$dir"; echo '[]' > "$dir/stations-especes.json"; echo '{}' > "$dir/rarete-departements.json"; echo '[]' > "$dir/stations-hydro.json"; exit 0
 fi
 exit 0
 '''
@@ -283,7 +283,8 @@ def verifications_statiques():
     textes = ""
     for s in scripts + sorted((RACINE / ".claude" / "hooks").glob("*.py")) + [RACINE / ".claude" / "settings.json"]:
         textes += s.read_text(encoding="utf-8") + "\n"
-    dossiers = [d for lot in atelier.charger() if lot["code"] != atelier.LOT_ATELIER for d in lot["dossiers"] if d.endswith("/")]
+    lots_reels = atelier.charger()
+    dossiers = [d for lot in lots_reels if lot["code"] != atelier.code_atelier(lots_reels) for d in lot["dossiers"] if d.endswith("/")]
     en_dur = [d for d in dossiers if d in textes]
     bilan.verifier("aucun dossier de lot écrit en dur dans les scripts et les hooks (tout vient de docs/lots.md)", not en_dur, en_dur)
 
@@ -346,10 +347,15 @@ def construire_monde(tmp):
         fichiers = [str(p.relative_to(RACINE)) for p in RACINE.rglob("*") if p.is_file() and not ignores & set(p.parts)]
     for f in fichiers:
         src = RACINE / f
+        # Pas de projet Xcode réel dans le faux monde : l'essai pose son propre Projet.xcodeproj.
+        if ".xcodeproj/" in f:
+            continue
         if src.is_file():
             (app / f).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, app / f)
-    git(["add", "-A"], app, env)
+    # L'essai joue sur sa propre table de lots (celle du 16 oct.), pas sur celle du dépôt.
+    shutil.copy2(RACINE / "outils/atelier/essai-lots.md", app / "docs/lots.md")
+    git(["add", "-A"], app, env, timeout=300)  # ~14 000 fichiers : dépasse les 90 s par défaut sur un Mac chargé
     git(["commit", "-q", "-m", "base de l'essai"], app, env)
     git(["remote", "add", "origin", origin], app, env)
     git(["push", "-q", "origin", "main"], app, env)
@@ -401,7 +407,7 @@ def essai_lot_sh(m):
     m.l3 = app.parent / "app-l3"
     bilan.verifier("lot.sh L3 : crée ../app-l3 sur la branche lot/prise", p.returncode == 0 and m.l3.is_dir()
                    and git(["symbolic-ref", "--short", "HEAD"], m.l3, m.env).stdout.strip() == "lot/prise", sortie(p))
-    bilan.verifier("lot.sh : affiche les 2 commandes suivantes (cd puis claude)", f'cd "{m.l3}"' in p.stdout and "claude" in p.stdout, p.stdout)
+    bilan.verifier("lot.sh : affiche les 2 commandes suivantes (cd puis claude)", f'cd "{m.l3.resolve()}"' in p.stdout and "claude" in p.stdout, p.stdout)
     bilan.verifier("lot.sh : branche les crochets de git (core.hooksPath = .githooks)",
                    git(["config", "core.hooksPath"], m.l3, m.env).stdout.strip() == ".githooks")
     bilan.verifier("lot.sh : la branche part de origin/main",
@@ -714,9 +720,10 @@ def essai_donnees_gitignore(m):
                    p.returncode == 1 and "release" in p.stderr and "donnees" in p.stderr and "pas encore" in p.stderr, sortie(p))
     etat_de(m, "gh-mode", "ok")
     p = lancer(["bash", "scripts/donnees.sh"], app, m.env_sans)
-    dossier = app / "Packages/Core/Sources/Core/Resources"
-    bilan.verifier("donnees.sh : avec la release, télécharge les 2 fichiers dans Resources/",
-                   p.returncode == 0 and (dossier / "stations-especes.json").is_file() and (dossier / "rarete-departements.json").is_file(), sortie(p))
+    dossier = app / "App/Donnees"
+    bilan.verifier("donnees.sh : avec la release, télécharge les 3 fichiers dans App/Donnees/",
+                   p.returncode == 0 and all((dossier / f).is_file() for f in
+                   ("stations-especes.json", "rarete-departements.json", "stations-hydro.json")), sortie(p))
     bilan.verifier("donnees.sh : les fichiers téléchargés ne sont pas vus par git (.gitignore)", git(["status", "--porcelain"], app, m.env).stdout.strip() == "",
                    git(["status", "--porcelain"], app, m.env).stdout)
     shutil.rmtree(app / "Packages")
