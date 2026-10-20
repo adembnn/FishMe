@@ -13,7 +13,7 @@ final class OuChercherUITests: XCTestCase {
     func testSandreDonneAuPlusTroisCoins() throws {
         let app = XCUIApplication()
         app.launch()
-        let bouton = app.buttons["Choisir un autre spot"]
+        let bouton = app.buttons["Espèces"]
         XCTAssertTrue(bouton.waitForExistence(timeout: 10))
         bouton.tap()
         let sandre = app.buttons["Sandre"]

@@ -99,9 +99,9 @@ final class ModeleCarte {
     private static let cleZone = "carte.derniereZoneChoisie"
 
     /// L'étendue d'ouverture autour d'un spot ou d'une position (environ 15 km) : les stations y sont lisibles une à une.
-    static let etendueOuverture = 0.14
+    nonisolated static let etendueOuverture = 0.14
     /// L'étendue autour d'une zone choisie à la main (département ou commune).
-    static let etendueZone = 0.35
+    nonisolated static let etendueZone = 0.35
 
     init(services: ServicesCarte, dossierCache: URL? = StockageCacheCarte.dossierParDefaut, reglages: UserDefaults? = .standard) {
         self.services = services
