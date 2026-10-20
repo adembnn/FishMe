@@ -60,6 +60,7 @@ enum TextesRecords {
         let cm = record.longueurCm
         let f = NumberFormatter()
         f.locale = Locale(identifier: "fr_FR")
+        f.numberStyle = .decimal
         f.maximumFractionDigits = 1
         let nombre = f.string(from: NSNumber(value: cm)) ?? String(Int(cm.rounded()))
         var morceaux = [nom, "\(nombre) centimètres"]
