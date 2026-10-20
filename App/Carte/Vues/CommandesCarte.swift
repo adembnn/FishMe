@@ -33,27 +33,38 @@ struct BoutonLibelleCarte: View {
 
     var body: some View {
         Button(action: action) {
-            VStack(spacing: 2) {
-                Image(systemName: symbole)
-                    .font(Police.taille(18))
-                    .foregroundStyle(teinte)
-                    .frame(height: 22)
-                    .accessibilityHidden(true)
-                Text(libelle)
-                    .font(.system(.caption2, design: .rounded, weight: .bold))
-                    .foregroundStyle(Palette.encre)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.8)
-            }
-            .padding(.horizontal, 6)
-            .padding(.vertical, 5)
-            .frame(minWidth: 64, minHeight: Gabarit.zoneTactile + 12)
-            .glassEffect(.regular.interactive(), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-            .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+            ContenuBoutonCarte(symbole: symbole, libelle: libelle, teinte: teinte)
         }
         .buttonStyle(.plain)
         .accessibilityLabel(libelle)
+    }
+}
+
+/// L'aspect commun des boutons de la colonne : icône, libellé dessous, verre arrondi (aussi pour le menu « Plus »).
+struct ContenuBoutonCarte: View {
+    let symbole: String
+    let libelle: String
+    var teinte: Color = Palette.encre
+
+    var body: some View {
+        VStack(spacing: 1) {
+            Image(systemName: symbole)
+                .font(Police.taille(18))
+                .foregroundStyle(teinte)
+                .frame(height: 22)
+                .accessibilityHidden(true)
+            Text(libelle)
+                .font(.system(.caption2, design: .rounded, weight: .bold))
+                .foregroundStyle(Palette.encre)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
+        }
+        .padding(.horizontal, 6)
+        .padding(.vertical, 3)
+        .frame(minWidth: 64, minHeight: Gabarit.zoneTactile + 6)
+        .glassEffect(.regular.interactive(), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
     }
 }
 
@@ -63,6 +74,10 @@ struct ColonneBoutonsCarte: View {
     /// Faux (position refusée) : le bouton s'appelle « Ma zone » et rouvre le choix du département ou de la commune.
     var positionAutorisee = true
     let teinteFiltre: Color
+    /// Le nom de l'espèce filtrée : il remplace le mot « Espèces » sur le bouton. `nil` : aucun filtre.
+    var nomFiltre: String? = nil
+    /// Efface le filtre d'un toucher (croix ronde dans le coin du bouton « Espèces »).
+    var effacerFiltre: (() -> Void)? = nil
     let meteo: () -> Void
     let autourDeMoi: () -> Void
     let filtre: () -> Void
@@ -72,21 +87,44 @@ struct ColonneBoutonsCarte: View {
     var reperesAllumes = false
 
     var body: some View {
-        GlassEffectContainer(spacing: 8) {
-            VStack(spacing: 8) {
+        GlassEffectContainer(spacing: 4) {
+            VStack(spacing: 4) {
                 BoutonLibelleCarte(symbole: "cloud.sun", libelle: "Météo", action: meteo)
                 BoutonLibelleCarte(symbole: positionAutorisee ? "location.fill" : "mappin.and.ellipse",
                                    libelle: positionAutorisee ? "Ma position" : "Ma zone",
                                    teinte: Palette.marine, action: autourDeMoi)
-                BoutonLibelleCarte(symbole: "line.3.horizontal.decrease", libelle: "Espèces", teinte: teinteFiltre, action: filtre)
-                BoutonLibelleCarte(symbole: "gearshape", libelle: "Réglages", action: reglages)
-                if let reperes {
-                    // « signpost.right » : « mappin.and.ellipse » est celui de « Ma zone ».
-                    BoutonLibelleCarte(symbole: reperesAllumes ? "signpost.right.fill" : "signpost.right", libelle: "Repères",
-                                       teinte: reperesAllumes ? Palette.marine : Palette.encre, action: reperes)
-                        .accessibilityValue(reperesAllumes ? "activé" : "désactivé")
-                        .accessibilityAddTraits(.isToggle)
+                BoutonLibelleCarte(symbole: "line.3.horizontal.decrease", libelle: nomFiltre ?? "Espèces", teinte: teinteFiltre, action: filtre)
+                    .overlay(alignment: .topTrailing) {
+                        if nomFiltre != nil, let effacerFiltre {
+                            // Dans les limites du bouton (un décalage vers l'extérieur la faisait couper par la colonne),
+                            // au-dessus des boutons voisins (zIndex).
+                            Button(action: effacerFiltre) {
+                                Image(systemName: "xmark")
+                                    .font(.system(size: 11, weight: .heavy, design: .rounded))
+                                    .foregroundStyle(Palette.surMarine)
+                                    .frame(width: 22, height: 22)
+                                    .background(Palette.marine, in: Circle())
+                                    .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile, alignment: .topTrailing)
+                                    .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityLabel("Effacer le filtre d'espèce")
+                        }
+                    }
+                    .zIndex(2)
+                // « Plus » : Réglages et Repères dans un seul menu, pour libérer la carte.
+                Menu {
+                    Button { reglages() } label: { Label("Réglages", systemImage: "gearshape") }
+                    if let reperes {
+                        Button { reperes() } label: {
+                            Label(reperesAllumes ? "Masquer les repères" : "Afficher les repères",
+                                  systemImage: reperesAllumes ? "signpost.right.fill" : "signpost.right")
+                        }
+                    }
+                } label: {
+                    ContenuBoutonCarte(symbole: "ellipsis", libelle: "Plus")
                 }
+                .accessibilityLabel("Plus : réglages et repères")
             }
         }
     }

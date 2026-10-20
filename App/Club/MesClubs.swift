@@ -191,6 +191,7 @@ struct CreerClubView: View {
 
     @Environment(\.dismiss) private var fermer
     @State private var nom = ""
+    @FocusState private var champNomActif: Bool
     @State private var poissonChoisi: String?
     @State private var choixGalerie: PhotosPickerItem?
     @State private var photo: Data?
@@ -216,8 +217,13 @@ struct CreerClubView: View {
                             TextField("Nom du club", text: $nom)
                                 .font(Police.corps)
                                 .foregroundStyle(Palette.encre)
+                                .focused($champNomActif)
+                                .submitLabel(.done)
                                 .frame(minHeight: 56)
                                 .padding(.horizontal, Espace.l)
+                                // Toute la rangée de 56 pt donne le focus : le champ seul ne mesure qu'une ligne de texte.
+                                .contentShape(Rectangle())
+                                .onTapGesture { champNomActif = true }
                         }
                         EnteteGroupeClub(titre: "Image")
                         GroupeClub { grille.padding(Espace.m) }

@@ -55,6 +55,8 @@ final class ModeleCarte {
     @ObservationIgnored private var choixManuelCetteSession = false
     /// Le pêcheur a bougé la carte lui-même avant la première position : la carte ne lui est pas retirée.
     @ObservationIgnored private var pecheurABougeLaCarte = false
+    /// La première vue vue par la carte à son affichage (celle du départ) : y rester n'est pas un geste du pêcheur.
+    @ObservationIgnored private var regionDeDepart: ZoneCarte?
     /// La première position a déjà posé la carte sur le pêcheur : les suivantes ne la déplacent plus.
     @ObservationIgnored private var ouvertureSurPecheurFaite = false
     /// La dernière vue posée par le code : un « fin de mouvement » proche de elle ne vient pas du doigt.
@@ -435,8 +437,12 @@ final class ModeleCarte {
         regionVisible = region
         let premiere = premiereCameraAttendue
         premiereCameraAttendue = false
+        // Plusieurs fins de mouvement arrivent à l'affichage de la carte, sur la vue de départ : ce n'est pas le pêcheur.
+        // Sans cela, la première position ne centrait jamais la carte (elle était vue comme « le pêcheur a bougé la carte »).
+        if regionDeDepart == nil { regionDeDepart = region }
+        let surLaVueDeDepart = regionDeDepart.map { region.estProche(de: $0) } ?? false
         // Une fin de mouvement hors de la fenêtre du code et loin de la dernière vue posée par le code vient du doigt du pêcheur.
-        if !premiere, Date() >= finDeplacementProgramme, !(derniereCibleProgrammee.map { region.estProche(de: $0) } ?? false) {
+        if !premiere, !surLaVueDeDepart, Date() >= finDeplacementProgramme, !(derniereCibleProgrammee.map { region.estProche(de: $0) } ?? false) {
             pecheurABougeLaCarte = true
         }
         // L'eau suit chaque mouvement : le calcul est local et court. La recherche en ligne attend un vrai geste du pêcheur.

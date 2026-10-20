@@ -109,6 +109,8 @@ final class ParcoursApp {
     let pescedex: PescedexModele?
     /// Cartes rendues par L4 pour le partage de L9 (recto seul, sans météo).
     var cartesAPartager: [CarteAPartager] = []
+    /// Vrai dès que les cartes ont été lues une fois : avant, le badge de niveau ne s'affiche pas (il montrait « Débutant » à tort).
+    var cartesLues = false
 
     /// L8 : les amis (CloudKit), créés au premier passage sur l'écran Amis, jamais au lancement.
     @ObservationIgnored private var gestionAmisCreee: GestionAmis?
@@ -402,7 +404,7 @@ final class ParcoursApp {
     func apresRapatriement() async {
         await pescedex?.charger()
         publierAquarium()
-        if let depot { rendrePartagesEnFond(depot: depot) }
+        if let depot { rendrePartagesEnFond(depot: depot) } else { cartesLues = true }
         moteur.reprendre()
     }
 
@@ -424,6 +426,7 @@ final class ParcoursApp {
             }
             if Task.isCancelled { return }
             self?.cartesAPartager = cartes
+            self?.cartesLues = true
         }
     }
 
@@ -1068,7 +1071,8 @@ private struct RacineContenu: View {
                 envies: app.envies)
             .fullScreenCover(isPresented: $aquariumOuvert) {
                 // N1 : le menu « Décors » est un bouton posé par la racine sur l'aquarium (AquariumView n'en a pas).
-                ZStack(alignment: .topLeading) {
+                // « Décors » en haut à droite : à gauche il recouvrait la croix de fermeture de l'aquarium (plus aucune sortie).
+                ZStack(alignment: .topTrailing) {
                     aquariumView(modele: modele, skin: ChoixSkin.affiche(brut: skinBrut, contexte: app.contexteSkin()),
                                  fermer: { aquariumOuvert = false })
                     Button { decorsOuverts = true } label: {
@@ -1168,7 +1172,7 @@ private struct RacineContenu: View {
             demandeChoixDeZone: app.choixDeZoneOuvert, volVersLeSpot: app.volDemande,
             pastilleProfil: AnyView(
                 ProfilPastille(nom: ProfilEmplacement<EmptyView>.nomAffiche(profil.surnomMemorise ?? ""),
-                               nombreDeCartes: app.cartesAPartager.count) { profilOuvert = true }),
+                               nombreDeCartes: app.cartesLues ? app.cartesAPartager.count : nil) { profilOuvert = true }),
             ouvrirMeteo: { meteoOuverte = true },
             ouvrirProfil: { profilOuvert = true },
             prisesDuPecheur: app.prisesPourLaCarte)

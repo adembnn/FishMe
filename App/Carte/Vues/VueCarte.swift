@@ -853,6 +853,8 @@ struct VueCarte: View {
                 ColonneBoutonsCarte(
                     positionAutorisee: position.estAutorisee,
                     teinteFiltre: couleurDuFiltre,
+                    nomFiltre: modele.filtre?.nom,
+                    effacerFiltre: { modele.choisirFiltre(nil) },
                     meteo: ouvrirMeteo,
                     autourDeMoi: autourDeMoi,
                     filtre: { modele.afficherFiltre = true },

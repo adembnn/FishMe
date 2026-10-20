@@ -277,4 +277,20 @@ struct PriseModeleTests {
         #expect(m.etape == .resultat)
         #expect(m.especeConfirmee == signal)
     }
+
+    /// B8 : « Confirmer : brochet » sur une tuile de GROUPE du modèle (brochet et brochet aquitain) n'est pas une confirmation :
+    /// `PriseVuesEspece.confirmer` appelle `ouvrirLaGrille(classe:)`. La grille limitée à ce groupe s'ouvre, rien n'est confirmé,
+    /// et c'est le toucher sur l'une des espèces du groupe qui confirme. Ce test décrit le comportement actuel.
+    @Test func laTuileDeGroupeOuvreLaGrilleDuGroupeSansConfirmer() throws {
+        let m = modele()
+        m.ouvrirLaGrille(classe: "brochet")
+        #expect(m.etape == .grille(classe: "brochet"))
+        #expect(m.especeConfirmee == nil)
+        let brochet = try #require(m.catalogue.first { $0.espece.id == "brochet" })
+        m.choisir(brochet)
+        #expect(m.etape == .resultat)
+        #expect(m.especeConfirmee == brochet)
+        m.retour()
+        #expect(m.etape == .grille(classe: "brochet"))
+    }
 }

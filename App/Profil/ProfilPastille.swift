@@ -4,7 +4,8 @@ import SwiftUI
 /// Aucun vrai compte : le nom et le badge restent sur l'iPhone (le badge vient du nombre de cartes).
 struct ProfilPastille: View {
     let nom: String
-    let nombreDeCartes: Int
+    /// `nil` tant que les cartes ne sont pas lues : le badge de niveau n'est pas montré (jamais un niveau faux).
+    let nombreDeCartes: Int?
     let ouvrir: () -> Void
 
     var body: some View {
@@ -13,11 +14,13 @@ struct ProfilPastille: View {
                 AvatarProfil(nom: nom, taille: 32)
                 VStack(alignment: .leading, spacing: 0) {
                     Text(nom).font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
-                    Label(BadgeProfil.niveau(cartes: nombreDeCartes).titre,
-                          systemImage: BadgeProfil.niveau(cartes: nombreDeCartes).symbole)
-                        .font(Police.legende)
-                        .foregroundStyle(Palette.marine)
-                        .labelStyle(.titleAndIcon)
+                    if let nombreDeCartes {
+                        Label(BadgeProfil.niveau(cartes: nombreDeCartes).titre,
+                              systemImage: BadgeProfil.niveau(cartes: nombreDeCartes).symbole)
+                            .font(Police.legende)
+                            .foregroundStyle(Palette.marine)
+                            .labelStyle(.titleAndIcon)
+                    }
                 }
             }
             .padding(.leading, 6)
@@ -27,7 +30,7 @@ struct ProfilPastille: View {
             .overlay(Capsule().strokeBorder(Palette.filet, lineWidth: 1))
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("Mon profil, \(nom), \(BadgeProfil.niveau(cartes: nombreDeCartes).titre)")
+        .accessibilityLabel(nombreDeCartes.map { "Mon profil, \(nom), \(BadgeProfil.niveau(cartes: $0).titre)" } ?? "Mon profil, \(nom)")
     }
 }
 

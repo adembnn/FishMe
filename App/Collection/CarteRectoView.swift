@@ -102,7 +102,8 @@ struct CarteRectoView: View {
         return ZStack(alignment: .topLeading) {
             fenetre(w, h)
             poisson(w, h, u)
-            centileEtLegende(u)
+            // Une carte déclarée n'a ni taille ni centile : rien à afficher (l'étiquette « Déclarée » le dit déjà).
+            if !declaree { centileEtLegende(u) }
             plaque(w, h, u)
             etiquettes()
         }
@@ -209,7 +210,7 @@ struct CarteRectoView: View {
             .offset(x: 5.5 * u, y: 4 * u)
             if !mini {
                 let pastille = style == .rare || style == .legendaire
-                Text("CEN · centile de taille")
+                Text("Taille comparée aux prises")
                     .font(Police.taille(3 * u, .heavy))
                     .foregroundStyle(style.couleurCentile.opacity(pastille ? 1 : 0.85))
                     .lineLimit(1)
@@ -256,8 +257,19 @@ struct CarteRectoView: View {
     private func plaqueComplete(_ u: CGFloat) -> some View {
         VStack(alignment: .leading, spacing: 0) {
             nomEtLatin(u)
-            statistiques(u)
-                .padding(.top, 2.8 * u)
+            if declaree {
+                // Trois colonnes de tirets ne disent rien : une seule ligne.
+                Text("Sans photo ni mesure")
+                    .font(Police.taille(3.6 * u, .bold))
+                    .foregroundStyle(grisCarte)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 2.8 * u)
+            } else {
+                statistiques(u)
+                    .padding(.top, 2.8 * u)
+            }
             Spacer(minLength: 0)
             if let lieu = lieuEtDate {
                 Text(lieu)

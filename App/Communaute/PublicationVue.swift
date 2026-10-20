@@ -106,13 +106,13 @@ struct PublicationVue: View {
                     Text(lieu)
                     Text("·")
                 }
-                Text(publication.creeLe, style: .relative)
+                AgePublication(date: publication.creeLe)
             }
             VStack(alignment: .leading, spacing: Espace.xs) {
                 if let lieu = publication.lieuAffiche {
                     Label(lieu, systemImage: "mappin.and.ellipse")
                 }
-                Text(publication.creeLe, style: .relative)
+                AgePublication(date: publication.creeLe)
             }
         }
     }
@@ -233,3 +233,26 @@ extension GestionFeed {
     }
 }
 #endif
+
+
+/// « il y a 25 min » : l'âge d'une publication, sans secondes (l'ancien affichage avançait à la seconde : « 25 min et 22 s »).
+/// Mis à jour à la minute.
+struct AgePublication: View {
+    let date: Date
+
+    static func texte(de date: Date, maintenant: Date) -> String {
+        let secondes = max(0, Int(maintenant.timeIntervalSince(date)))
+        switch secondes {
+        case ..<60: return "à l'instant"
+        case ..<3600: return "il y a \(secondes / 60) min"
+        case ..<86_400: return "il y a \(secondes / 3600) h"
+        default: return "il y a \(secondes / 86_400) j"
+        }
+    }
+
+    var body: some View {
+        TimelineView(.everyMinute) { contexte in
+            Text(Self.texte(de: date, maintenant: contexte.date))
+        }
+    }
+}

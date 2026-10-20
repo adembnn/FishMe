@@ -39,7 +39,7 @@ struct CommunauteView<PageFil: View, PageAmis: View, PageClub: View>: View {
         club.tag(Page.club)
       }
       .tabViewStyle(.page(indexDisplayMode: .never))
-      .ignoresSafeArea(edges: .bottom)
+      // Sans `ignoresSafeArea` : les pages gardent la marge de la barre d'onglets (elle recouvrait « J'aime / Commenter »).
     }
     .background(Palette.fond.ignoresSafeArea())
   }

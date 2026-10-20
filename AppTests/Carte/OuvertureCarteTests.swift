@@ -68,6 +68,21 @@ struct OuvertureCarteTests {
         #expect(m.regionVisible.centre == ailleurs)
     }
 
+    /// E1 : à l'affichage de la carte, MapKit envoie plusieurs fins de mouvement sur la vue de départ (journal du 20 oct. : trois,
+    /// centrées sur le Cher). Ce n'est pas le pêcheur : la première position doit recentrer la carte sur lui.
+    @Test func lesFinsDeMouvementDeLAffichageNeBloquentPasLeCentrageSurLePecheur() {
+        let m = modele()
+        let vueDeDepart = ZoneCarte(centre: Coordonnee(latitude: 46.6, longitude: 2.5), spanLatitude: 0.98, spanLongitude: 0.92)
+        m.chargerApresMouvement(vueDeDepart)
+        m.finDeplacementProgramme = .distantPast
+        m.chargerApresMouvement(vueDeDepart)
+        m.chargerApresMouvement(vueDeDepart)
+        #expect(m.positionPeutPoserLaCarte)
+        m.appliquer(position: pecheur, refusee: false)
+        #expect(m.depart == .surLePecheur(pecheur))
+        #expect(m.regionVisible.centre == pecheur)
+    }
+
     @Test func unSpotFixeEtUnEchecDePositionPosentLaCarteSurLeSpotSansDemanderLaZone() {
         let m = modele()
         m.spotFixe = Spot(centre: ailleurs, departement: Departement(code: "38"))

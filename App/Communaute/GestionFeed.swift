@@ -103,9 +103,19 @@ final class GestionFeed {
     func actualiser() async {
         enCours = true
         defer { enCours = false }
-        await chargerContexte()
+        // Le compte iCloud se lit en premier, avec un délai court : sans iCloud, l'état « indisponible » s'affiche tout de suite
+        // (avant, le contexte du profil et des clubs se lisait d'abord et le fil restait sur « Chargement… » une vingtaine de secondes).
         let demo = await source.modeDemo()
-        let compte = await reel.compteDisponible()
+        let compte = await compteAvecDelai()
+        guard !Task.isCancelled else { return }
+        if !demo && !compte && exemple == nil {
+            message = .iCloudIndisponible
+            for section in SectionFeed.allCases where etat(section).publications.isEmpty {
+                sections[section] = EtatSection(publications: [], encore: false, charge: true)
+            }
+            return
+        }
+        await chargerContexte()
         guard !Task.isCancelled else { return }
         let basculer = (demo || !compte) && exemple != nil
         if basculer != exemples {
@@ -131,6 +141,18 @@ final class GestionFeed {
 
     func voirPlus(_ section: SectionFeed) async {
         await charger(section, plus: true)
+    }
+
+    /// Vrai si le compte iCloud répond « disponible » en moins de 4 s ; un compte qui ne répond pas compte comme indisponible.
+    private func compteAvecDelai() async -> Bool {
+        let service = reel
+        return await withTaskGroup(of: Bool?.self) { groupe in
+            groupe.addTask { await service.compteDisponible() }
+            groupe.addTask { try? await Task.sleep(for: .seconds(4)); return nil }
+            let premier = await groupe.next() ?? nil
+            groupe.cancelAll()
+            return premier ?? false
+        }
     }
 
     private func chargerContexte() async {
