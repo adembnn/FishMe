@@ -46,17 +46,21 @@ final class GestionProfil {
     private let filtre: any FiltreMots
     /// Fournis en plus par le registre (L23, L24) : A les compose à l'ouverture de l'app.
     private let effaceursFixes: [any EffaceurContenu]
+    /// Le registre lu à la suppression : celui de l'app, ou un registre vide dans les tests (l'app hôte y a branché les vrais effaceurs).
+    private let registre: RegistreEffaceurs
     /// Appelé après une création, une reprise ou une suppression : le titre du `CKShare` d'amis suit le surnom (rien dans les tests).
     private let apresChangementDeSurnom: @Sendable () async -> Void
 
     init(service: any ServiceProfil, memoire: any MemoireProfil = MemoireProfilLocale(),
          blocages: ListeBlocages = .partage, filtre: any FiltreMots = FiltreCore(), effaceurs: [any EffaceurContenu] = [],
+         registre: RegistreEffaceurs = .partage,
          apresChangementDeSurnom: @escaping @Sendable () async -> Void = {}) {
         self.service = service
         self.memoire = memoire
         self.blocages = blocages
         self.filtre = filtre
         self.effaceursFixes = effaceurs
+        self.registre = registre
         self.apresChangementDeSurnom = apresChangementDeSurnom
     }
 
@@ -227,7 +231,7 @@ final class GestionProfil {
     // MARK: Supprimer
 
     /// Vrai si au moins un effaceur (L23, L24) est branché. Sinon la suppression n'efface QUE le profil public.
-    var effaceDuContenu: Bool { !(effaceursFixes.isEmpty && RegistreEffaceurs.partage.effaceurs.isEmpty) }
+    var effaceDuContenu: Bool { !(effaceursFixes.isEmpty && registre.effaceurs.isEmpty) }
 
     /// Ce que la première question promet : jamais plus que ce qui sera vraiment effacé.
     var phraseSuppression: String {
@@ -255,7 +259,7 @@ final class GestionProfil {
         }
         guard let id = cible else { return true }
         do {
-            for effaceur in effaceursFixes + RegistreEffaceurs.partage.effaceurs {
+            for effaceur in effaceursFixes + registre.effaceurs {
                 do {
                     try await effaceur.effacerContenu(deProfil: id)
                 } catch {

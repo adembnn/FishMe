@@ -124,7 +124,7 @@ struct PescedexDirectTests {
             // Le brochet est relevé dans le 94 seulement, la perche dans le 75 seulement, le reste nulle part.
             switch (e.id, d.code) {
             case ("brochet", "94"): ResultatRarete(niveau: .commun, nPeches: 9, nTotal: 20, anneeDernierReleve: 2024, echelle: .departement)
-            case ("perche", "75"): ResultatRarete(niveau: .peuCommun, nPeches: 4, nTotal: 20, anneeDernierReleve: 2023, echelle: .departement)
+            case ("perche-commune", "75"): ResultatRarete(niveau: .peuCommun, nPeches: 4, nTotal: 20, anneeDernierReleve: 2023, echelle: .departement)
             default: ResultatRarete(niveau: .legendaire, nPeches: 0, nTotal: 20, anneeDernierReleve: nil, echelle: .departement)
             }
         }

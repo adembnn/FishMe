@@ -267,11 +267,14 @@ struct PriseModeleTests {
         #expect(m.etape == .stade)
     }
 
-    @Test func unSosieCoûteuxMontreLesSosiesAvantLaConfirmation() throws {
+    /// Adem, 16 oct. : plus d'étape intermédiaire, un toucher sur l'espèce confirme et ouvre la carte de la prise
+    /// (`PriseModele.confirmer`). L'ancien test attendait l'écran des sosies avant la confirmation.
+    @Test func unSosieCoûteuxConfirmeDirectementLEspece() throws {
         let m = modele()
         let signal = try #require(m.catalogue.first { $0.espece.id == "ecrevisse-signal" })
+        #expect(PriseLogique.demandeSosies(signal))
         m.choisir(signal)
-        #expect(m.etape == .sosies(signal))
-        #expect(m.especeConfirmee == nil)
+        #expect(m.etape == .resultat)
+        #expect(m.especeConfirmee == signal)
     }
 }

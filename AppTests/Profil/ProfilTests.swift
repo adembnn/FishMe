@@ -26,7 +26,7 @@ struct ProfilTests {
         let u = UUID().uuidString
         return GestionProfil(service: service, memoire: memoire,
                              blocages: ListeBlocages(cleBloques: "t.bl.\(u)", cleMasques: "t.ma.\(u)"),
-                             effaceurs: effaceurs)
+                             effaceurs: effaceurs, registre: RegistreEffaceurs())
     }
 
     // MARK: Surnom
@@ -259,7 +259,7 @@ struct ProfilTests {
         let titres = TitresNotes()
         let u = UUID().uuidString
         let g = GestionProfil(service: FauxServiceProfil(), memoire: MemoireFausse(),
-                              blocages: ListeBlocages(cleBloques: "t.bl.\(u)", cleMasques: "t.ma.\(u)"),
+                              blocages: ListeBlocages(cleBloques: "t.bl.\(u)", cleMasques: "t.ma.\(u)"), registre: RegistreEffaceurs(),
                               apresChangementDeSurnom: { await titres.noter() })
         _ = await g.creer(surnom: "gros-brochet", avatar: nil, aQuinzeAns: true, accepteLesConditions: true)
         #expect(await titres.appels == 1)

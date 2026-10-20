@@ -102,8 +102,8 @@ struct RegroupementCarteTests {
     // MARK: Halo : station non recalée
 
     @Test func laStationNonRecaleeGardeSonDrapeauJusquAuPoint() {
-        let a = PointCarte(id: "A", coordonnee: Coordonnee(latitude: 48.8, longitude: 2.4), recalee: false)
-        let b = PointCarte(id: "B", coordonnee: Coordonnee(latitude: 48.9, longitude: 2.5))
+        let a = PointCarte(id: "A", coordonnee: Coordonnee(latitude: 46.3, longitude: 1.6), recalee: false)
+        let b = PointCarte(id: "B", coordonnee: Coordonnee(latitude: 46.4, longitude: 1.7))
         let elements = Regroupeur.elements(points: [a, b], region: region(span: 3))
         let halos = elements.compactMap { e -> PointCarte? in
             if case .point(let p) = e, !p.recalee { return p } else { return nil }
