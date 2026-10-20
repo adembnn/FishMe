@@ -60,6 +60,9 @@ final class GestionChat {
     private var peutCreer: [ConversationID: Bool] = [:]
     /// Les comptes à admettre dans la zone (l'ami ; les membres du club, si je suis le fondateur).
     private var aAdmettre: [ConversationID: [String]] = [:]
+    /// Club dont je suis le fondateur : les surnoms des membres dont le compte est inconnu (« en attente de son profil »). Ils ne
+    /// sont pas admis pour l'instant, sans que cela bloque les autres ; ils le seront à la relecture suivante, une fois leur profil lu.
+    private var membresEnAttente: [ConversationID: [String]] = [:]
     /// Qui est qui dans chaque conversation, par identifiant de compte iCloud : sert à déduire l'auteur d'un message (jamais cru
     /// sur parole).
     private var auteurs: [ConversationID: [String: InterlocuteurChat]] = [:]
@@ -80,6 +83,23 @@ final class GestionChat {
         self.permission = permission
         self.configuration = configuration
         self.exemple = exemple
+    }
+
+    /// Les surnoms des membres du club que je ne peux pas encore admettre (profil pas prêt). Vide hors club ou si je ne suis pas fondateur.
+    func surnomsEnAttente(de conversation: ConversationID) -> [String] { membresEnAttente[conversation] ?? [] }
+
+    /// Les comptes à inviter dans la zone d'un club : seulement si je suis le fondateur, seulement les vrais comptes connus (ni les
+    /// membres sans identifiant, ni ceux de la démo), sans doublon, dans l'ordre de la liste, sans moi.
+    nonisolated static func comptesAAdmettre(club: ClubChat, moi: InterlocuteurChat?) -> [String] {
+        guard club.jeSuisFondateur else { return [] }
+        var vus = Set<String>()
+        return club.membres.filter { $0.admissible && $0.id != moi?.id }.map(\.idCloudKit).filter { vus.insert($0).inserted }
+    }
+
+    /// Les surnoms des membres qu'on ne peut pas encore admettre (profil pas prêt), pour le fondateur seul.
+    nonisolated static func surnomsEnAttente(club: ClubChat, moi: InterlocuteurChat?) -> [String] {
+        guard club.jeSuisFondateur else { return [] }
+        return club.membres.filter { $0.enAttenteDeProfil && $0.id != moi?.id }.map(\.surnom)
     }
 
     /// Le point rouge de l'onglet : le nombre de conversations avec un message pas encore vu.
@@ -107,6 +127,7 @@ final class GestionChat {
         let bloques = await stock.bloques().union(await annuaire.bloques())
         let marque = exemple ? "Exemple · " : ""
         let jePeuxEcrire = moi?.a15Ans == true
+        let admisAvant = aAdmettre
         var lignes: [ResumeConversation] = []
         for ami in amis {
             let conversation = ConversationID.ami(ami.idCloudKit)
@@ -124,10 +145,14 @@ final class GestionChat {
             let titre = marque + club.nom
             titres[conversation] = titre
             peutCreer[conversation] = club.jeSuisFondateur && jePeuxEcrire
-            aAdmettre[conversation] = club.jeSuisFondateur ? club.membres.map(\.idCloudKit) : []
-            auteurs[conversation] = Dictionary(club.membres.map { ($0.idCloudKit, $0) }, uniquingKeysWith: { premier, _ in premier })
+            aAdmettre[conversation] = Self.comptesAAdmettre(club: club, moi: moi)
+            membresEnAttente[conversation] = Self.surnomsEnAttente(club: club, moi: moi)
+            auteurs[conversation] = Dictionary(club.membres.filter(\.admissible).map { ($0.idCloudKit, $0) },
+                                               uniquingKeysWith: { premier, _ in premier })
             lignes.append(await resume(conversation, titre: titre, ferme: false, bloques: bloques))
         }
+        // Un membre dont le compte vient d'être lu : la conversation ouverte redemande son lien pour l'admettre.
+        if let ouverte, aAdmettre[ouverte] != admisAvant[ouverte] { verifierLien = true }
         resumes = lignes.sorted {
             ($0.dernier?.date ?? .distantPast) > ($1.dernier?.date ?? .distantPast)
         }
@@ -136,6 +161,7 @@ final class GestionChat {
 
     /// Tirer pour rafraîchir la liste : relit le réseau pour chaque conversation ouverte au chat, puis recharge.
     func actualiserListe() async {
+        await annuaire.actualiserClubs()
         await chargerListe()
         guard await service.iCloudDisponible() else {
             avis = exemple ? .exemple : .iCloudIndisponible
@@ -231,6 +257,8 @@ final class GestionChat {
     func surveillerReseau() async {
         if !listeChargee { await chargerListe() }
         for await connecte in ReseauChat.flux() where connecte {
+            await annuaire.actualiserClubs()
+            await chargerListe()
             await rejouerFile()
             if ouverte != nil { await actualiser() }
         }

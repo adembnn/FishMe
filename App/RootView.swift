@@ -1763,12 +1763,17 @@ nonisolated struct AnnuaireChatRacine: AnnuaireChat {
         return InterlocuteurChat(id: id, surnom: i.surnom ?? "Pêcheur", idCloudKit: id, a15Ans: true)
     }
     func amis() async -> [InterlocuteurChat] { await lire().amis }
-    /// L22 -> L24 : table de correspondance de `ClubPourChat.swift`. Un membre sans `idCloudKit` reste listé (id vide : pas encore admissible).
+    /// L22 -> L24 : table de correspondance de `ClubPourChat.swift`, codée dans `ClubChat.init(_: ClubPourChat)`. Un membre sans
+    /// `idCloudKit` reste listé « en attente de son profil » ; il n'est pas admis, sans bloquer les autres.
     func clubs() async -> [ClubChat] {
-        await lire().clubs.map { club in
-            ClubChat(id: club.id, nom: club.nom, jeSuisFondateur: club.jeSuisFondateur,
-                     membres: club.membres.map { InterlocuteurChat(id: $0.profil, surnom: $0.surnom, idCloudKit: $0.idCloudKit ?? "") })
-        }
+        await lire().clubs.map { ClubChat($0) }
+    }
+    /// Retente de trouver le compte des membres dont le profil manquait (lecture de leur `ProfilPublic`, créateur vérifié).
+    /// Rien en démo ni sans iCloud (`clubs` est alors vide).
+    func actualiserClubs() async {
+        let instantane = await lire()
+        guard !instantane.demo, !instantane.clubs.isEmpty else { return }
+        await GestionClubs.partage.resoudreIdentites(forcer: true)
     }
     func bloques() async -> Set<String> { ListeBlocages.partage.profilsCaches() }
 }

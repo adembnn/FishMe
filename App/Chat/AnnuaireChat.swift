@@ -15,6 +15,13 @@ nonisolated struct InterlocuteurChat: Hashable, Identifiable, Sendable {
     /// A déclaré avoir 15 ans ou plus (déclaration faite dans L21). Faux : conversation en lecture seule, « Finis ton profil ».
     /// À aligner L21 : le champ réel du profil. Sans effet sur les AUTRES (on ne lit ce champ que pour `moi`).
     var a15Ans: Bool = true
+    /// Personne d'exemple (mode démo, membre de la démo locale) : jamais admise dans une zone partagée.
+    var estExemple: Bool = false
+
+    /// Peut être admise dans la zone partagée d'un club : un vrai compte connu.
+    var admissible: Bool { !estExemple && !idCloudKit.isEmpty }
+    /// Une vraie personne dont le compte iCloud est encore inconnu (son profil public n'existe pas encore ou n'est pas lu).
+    var enAttenteDeProfil: Bool { !estExemple && idCloudKit.isEmpty }
 }
 
 /// Un club dont je suis membre (À aligner L22 : `Club.id`, `Club.nom`, `Membre`).
@@ -37,4 +44,11 @@ nonisolated protocol AnnuaireChat: Sendable {
     func clubs() async -> [ClubChat]
     /// Identifiants d'auteurs bloqués côté profil : l'adaptateur de A lit `ListeBlocages.partage.profilsCaches()` (L21). Peut être vide.
     func bloques() async -> Set<String>
+    /// Appelé avant de relire la liste (tirer pour rafraîchir, notification, retour du réseau) : l'annuaire retente de trouver le compte
+    /// des membres de club dont il manquait. Par défaut ne fait rien.
+    func actualiserClubs() async
+}
+
+extension AnnuaireChat {
+    func actualiserClubs() async {}
 }

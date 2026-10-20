@@ -86,6 +86,14 @@ struct ConversationView: View {
                     .foregroundStyle(Palette.encreDouce)
                     .padding(.vertical, Espace.xs)
             }
+            if conversation.type == .club, case let attente = gestion.surnomsEnAttente(de: conversation), !attente.isEmpty {
+                Text("En attente du profil de \(attente.joined(separator: ", ")). Ils pourront écrire ici dès que leur profil sera prêt.")
+                    .font(Police.legende)
+                    .foregroundStyle(Palette.encreDouce)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, Espace.bord)
+                    .padding(.bottom, Espace.xs)
+            }
             if let lien = gestion.lienAPartager {
                 invitation(lien)
             }

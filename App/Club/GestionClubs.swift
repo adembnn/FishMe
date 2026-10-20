@@ -50,6 +50,9 @@ final class GestionClubs {
     /// Cartes que j'ai signalées et auteurs que j'ai bloqués ou masqués : mis à jour tout de suite, ils retirent le contenu de l'écran.
     private(set) var cartesMasquees: Set<String>
     private(set) var auteursCaches: Set<String>
+    /// Profil -> compte iCloud, vérifié par le créateur de son `ProfilPublic` (jamais par un champ reçu). Pour les membres dont
+    /// l'adhésion ne porte pas d'`idCloudKit` : voir `resoudreIdentites`.
+    private(set) var identites: [String: String] = [:]
 
     let service: any ServiceClubs
     private let profilsService: any ServiceProfil
@@ -59,6 +62,13 @@ final class GestionClubs {
     private let masquees: CartesMasquees
     private let filtre: any FiltreMots
     private let maintenant: @Sendable () -> Date
+    /// `nil` : aucune résolution (aperçus, tests qui n'en ont pas besoin).
+    private let resolveur: (any ResolveurIdentite)?
+
+    /// Un profil que le résolveur dit introuvable n'est pas redemandé avant ce délai (sauf à l'ouverture de la page) ;
+    /// une panne réseau, elle, ne compte pas : on réessaie au chargement suivant.
+    static let delaiNouvelEssaiIdentite: TimeInterval = 60
+    private var identitesEssayees: [String: Date] = [:]
 
     /// Les requêtes de la base publique sont cohérentes « à terme » : juste après une écriture, la lecture peut ne pas encore la montrer.
     /// Pendant ce délai on garde ce qu'on vient d'écrire (club créé ou rejoint, carte partagée) et on ignore ce qu'on vient de quitter ou retirer,
@@ -72,7 +82,8 @@ final class GestionClubs {
     init(service: any ServiceClubs, profils: any ServiceProfil, memoire: any MemoireProfil = MemoireProfilLocale(),
          cache: any CacheClubs = CacheClubsFichier(), blocages: BlocagesProfils = BlocagesProfils(),
          masquees: CartesMasquees = CartesMasquees(), filtre: any FiltreMots = FiltreCore(),
-         maintenant: @escaping @Sendable () -> Date = { Date() }) {
+         resolveur: (any ResolveurIdentite)? = nil, maintenant: @escaping @Sendable () -> Date = { Date() }) {
+        self.resolveur = resolveur
         self.service = service
         self.profilsService = profils
         self.memoire = memoire
@@ -87,7 +98,8 @@ final class GestionClubs {
     }
 
     /// Le service partagé par toute l'app (le vrai CloudKit). Créé à la première demande seulement.
-    static let partage = GestionClubs(service: ServiceClubsCloudKit(), profils: GestionProfil.partage.service)
+    static let partage = GestionClubs(service: ServiceClubsCloudKit(), profils: GestionProfil.partage.service,
+                                         resolveur: ResolveurIdentiteCloudKit())
 
     // MARK: État
 
@@ -133,10 +145,20 @@ final class GestionClubs {
 
     func effacerMessage() { message = nil }
 
+    /// Le compte iCloud de ce membre pour l'admettre dans la zone du chat : celui de son adhésion, sinon celui vérifié via son profil.
+    /// `nil` : on ne le connaît pas (encore).
+    func idCloudKit(de membre: Membre) -> String? { IdentiteMembre.idCloudKit(de: membre, verifies: identites) }
+
+    /// Vrai si ce membre est une vraie personne dont le compte est inconnu : l'écran dit « en attente de son profil ».
+    func estEnAttenteDeProfil(_ membre: Membre) -> Bool {
+        !IdentiteMembre.estExemple(membre.profil) && membre.profil != monID && idCloudKit(de: membre) == nil
+    }
+
     // MARK: Lecture
 
     /// Relit mes clubs, leurs membres et leurs cartes. Échec réseau : on garde le dernier état lu (cache) et `horsLigne` passe à vrai.
-    func charger() async {
+    /// `ouverture` : la page vient de s'ouvrir, on retente tout de suite les membres dont le profil manquait.
+    func charger(ouverture: Bool = false) async {
         guard let moi = monID else { return }
         icloud = await service.iCloudDisponible()
         guard icloud else {
@@ -179,6 +201,7 @@ final class GestionClubs {
             membres = membresLus
             cartes = cartesLues
             await completerProfils()
+            await resoudreIdentites(forcer: ouverture)
             horsLigne = false
             dernierChargement = maintenant()
             message = nil
@@ -201,6 +224,35 @@ final class GestionClubs {
                 profils[id] = EtatCacheClubs.ProfilCache(id: id, surnom: profil.surnom, avatar: profil.avatar)
             }
         }
+    }
+
+    /// Cherche le compte iCloud des membres qui n'en ont pas : lit leur `ProfilPublic` (par l'identifiant de profil, donc par surnom)
+    /// et retient le CRÉATEUR de cet enregistrement. Profil absent : le membre reste « en attente » (aucune erreur) et on ne le
+    /// redemande pas avant `delaiNouvelEssaiIdentite`, sauf `forcer` (ouverture de la page, retour du réseau). Panne réseau : on
+    /// s'arrête là sans rien conclure ni compter d'essai. Ne touche ni aux membres de la démo ni à moi.
+    func resoudreIdentites(forcer: Bool = false) async {
+        guard let resolveur, icloud else { return }
+        let maintenantDate = maintenant()
+        var vus = Set<String>()
+        var trouve = false
+        for liste in membres.values {
+            for membre in liste where estEnAttenteDeProfil(membre) && vus.insert(membre.profil).inserted {
+                if !forcer, recentIdentite(identitesEssayees[membre.profil], le: maintenantDate) { continue }
+                do {
+                    if let compte = try await resolveur.idCloudKit(deProfil: membre.profil), !compte.isEmpty {
+                        identites[membre.profil] = compte
+                        identitesEssayees[membre.profil] = nil
+                        trouve = true
+                    } else {
+                        identitesEssayees[membre.profil] = maintenantDate
+                    }
+                } catch {
+                    if trouve { enregistrerCache() }
+                    return
+                }
+            }
+        }
+        if trouve { enregistrerCache() }
     }
 
     /// Lit les cartes du club sans retélécharger les images déjà là : une carte déjà lue garde son image.
@@ -227,10 +279,16 @@ final class GestionClubs {
         return maintenantDate.timeIntervalSince(date) < Self.delaiCoherence
     }
 
+    private func recentIdentite(_ date: Date?, le maintenantDate: Date) -> Bool {
+        guard let date else { return false }
+        return maintenantDate.timeIntervalSince(date) < Self.delaiNouvelEssaiIdentite
+    }
+
     // MARK: Cache (mode avion)
 
     private func enregistrerCache() {
-        cache.ecrire(EtatCacheClubs(clubs: clubs, membres: membres, cartes: cartes, profils: profils, enregistreLe: maintenant()))
+        cache.ecrire(EtatCacheClubs(clubs: clubs, membres: membres, cartes: cartes, profils: profils,
+                                  enregistreLe: maintenant(), identites: identites))
     }
 
     private func restaurerCache() {
@@ -239,6 +297,7 @@ final class GestionClubs {
         membres = etat.membres
         cartes = etat.cartes
         profils = etat.profils
+        identites = etat.identites ?? [:]
     }
 
     // MARK: Créer, rejoindre

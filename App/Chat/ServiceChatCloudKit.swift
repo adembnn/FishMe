@@ -274,8 +274,15 @@ actor ServiceChatCloudKit: ServiceChat {
             }
             let deja = Set(partage.participants.compactMap { $0.userIdentity.userRecordID?.recordName })
             var ajoutes = false
-            for cible in participants where !deja.contains(cible) {
-                let participant = try await conteneur.shareParticipant(forUserRecordID: CKRecord.ID(recordName: cible))
+            for cible in participants where !cible.isEmpty && !deja.contains(cible) {
+                // Un compte qu'iCloud ne sait pas inviter (introuvable, inconnu) est laissé de côté : il ne bloque pas les autres.
+                // Une panne réseau ou de droits, elle, remonte (le lien est redemandé plus tard). ⚠ à vérifier sur le Mac : les codes.
+                let participant: CKShare.Participant
+                do {
+                    participant = try await conteneur.shareParticipant(forUserRecordID: CKRecord.ID(recordName: cible))
+                } catch let erreur as CKError where [.unknownItem, .invalidArguments, .participantMayNeedVerification].contains(erreur.code) {
+                    continue
+                }
                 participant.permission = .readWrite
                 partage.addParticipant(participant)
                 ajoutes = true

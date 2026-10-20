@@ -15,6 +15,8 @@ nonisolated struct EtatCacheClubs: Codable, Sendable, Equatable {
     var cartes: [String: [CartePartageeClub]] = [:]
     var profils: [String: ProfilCache] = [:]
     var enregistreLe: Date = Date(timeIntervalSince1970: 0)
+    /// Profil -> compte iCloud vérifié (voir `GestionClubs.resoudreIdentites`). Optionnel : un fichier plus ancien se relit.
+    var identites: [String: String]? = nil
 
     /// Au plus ce nombre de cartes par club dans le fichier : les images pèsent (PNG de carte).
     static let cartesParClub = 40

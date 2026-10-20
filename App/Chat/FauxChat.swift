@@ -9,6 +9,8 @@ actor FauxServiceChat: ServiceChat {
     /// Les conversations dont on m'a demandé de créer la zone et le lien (`peutCreerLaZone` vrai).
     private(set) var creations: [ConversationID] = []
     private(set) var abonnes: [ConversationID] = []
+    /// Les comptes demandés à l'invitation de chaque conversation (le dernier appel).
+    private(set) var participantsDemandes: [ConversationID: [String]] = [:]
     private(set) var acceptees = 0
     private(set) var effaces: [String] = []
     private(set) var signalements: [SignalementMessageEnAttente] = []
@@ -65,6 +67,7 @@ actor FauxServiceChat: ServiceChat {
 
     func lienDInvitation(pour conversation: ConversationID, participants: [String], peutCreerLaZone: Bool) async throws -> URL? {
         if horsLigne { throw ErreurChat.reseau }
+        participantsDemandes[conversation] = participants
         if peutCreerLaZone {
             if !creations.contains(conversation) { creations.append(conversation) }
             zonesConnues.insert(conversation)
@@ -141,5 +144,11 @@ actor FauxAnnuaire: AnnuaireChat {
     func amis() async -> [InterlocuteurChat] { mesAmis }
     func clubs() async -> [ClubChat] { mesClubs }
     func bloques() async -> Set<String> { mesBloques }
+
+    /// Combien de fois la liste a demandé à l'annuaire de retenter de trouver les comptes manquants.
+    private(set) var actualisationsClubs = 0
+    func actualiserClubs() async { actualisationsClubs += 1 }
+    /// Les clubs changent (un profil manquant vient d'être lu).
+    func definir(clubs: [ClubChat]) { mesClubs = clubs }
 }
 #endif

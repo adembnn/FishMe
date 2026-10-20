@@ -488,7 +488,7 @@ struct ClubPageView: View {
   /// Tant que la page est à l'écran : relit les clubs toutes les 8 s (le membre qui arrive ou la carte partagée apparaissent en moins de 10 s).
   /// ⚠ Un abonnement CloudKit (`CKQuerySubscription`) ferait mieux avec les notifications de L25 ; ce rafraîchissement est le repli.
   private func suivre() async {
-    await gestion.charger()
+    await gestion.charger(ouverture: true)
     await traiterLien()
     if !migration.termine, migration.peutMigrer, gestion.icloud, !migration.enAttente.isEmpty { migrationOuverte = true }
     while !Task.isCancelled {
