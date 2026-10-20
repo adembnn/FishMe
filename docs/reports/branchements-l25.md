@@ -44,6 +44,18 @@ Ces points demandent d'écrire dans un dossier qui n'est pas à L25. Chaque lign
 | L19 : `BlocReglesView` dans `App/Style/BlocRegles/` | | à vérifier avec `scripts/verif.sh` (frontières) |
 | Commentaire périmé dans `App/Club/ModelesClub.swift` ligne 118 (« L23 a sa propre liste ») | `App/Club/` | faux depuis l'alignement ; à effacer par L22 |
 
+## Température de l'eau (N3) : fichier branché côté app, à publier à la main (Adem ou Sullyvan)
+Branche `lot/temperature-donnees`. Fait : `scripts/donnees.sh` télécharge `stations-temperature.json` en 4e fichier **facultatif** (avertissement s'il manque, les 3 autres restent) ; `RootView` le cherche à la racine du bundle puis dans `Donnees/` (liste vide sinon : pas de ligne « Eau ») ; `outils/verifier_donnees.py` en contrôle la forme ; les crédits (Profil, Sources) portent « Données : Hub'Eau / Naïades, Licence Ouverte (Etalab) » et l'attribution LDNOOBW de `docs/legal/remplacements-app.md` §12.
+
+Étape manuelle, **non lancée** par l'agent (publie dans la release privée `donnees`, depuis un ordinateur connecté à `gh`) :
+```
+python3 outils/hubeau/stations_temperature.py        # écrit outils/hubeau/sortie/stations-temperature.json (réseau Hub'Eau)
+python3 outils/verifier_donnees.py                    # doit afficher « stations-temperature.json : N stations, M en service », sans ERREUR
+gh release upload donnees outils/hubeau/sortie/stations-temperature.json --clobber
+scripts/donnees.sh                                    # chaque ordinateur le récupère ensuite dans App/Donnees/
+```
+Commande lue dans `outils/hubeau/lancer.sh` (ligne `gh release upload donnees … --clobber`) et `docs/fiches/D2.md` (« Publication »). Le fichier n'est jamais commité.
+
 ## Câblage N6 dans la carte et la session : à vérifier au build
 - `appuiLongPourReperer` : `LongPressGesture.sequenced(before: DragGesture)` avec `including: .all` posé à côté de `toucherPourPoser` ; vérifier sur iPhone qu'il ne bloque ni le glissement ni le pincement de `Map`, que le toucher d'une épingle ne déclenche pas aussi l'appui long, et que le motif `case .second(true, let doigt?)` compile.
 - `CalqueReperes` dans `contenuCarte` (`if` dans `@MapContentBuilder`) ; le calque lit `ModeleReperes.partage.reperes` et `modele.regionVisible` (suivi d'observation à confirmer ; la région n'est mise à jour qu'à la fin d'un mouvement).
