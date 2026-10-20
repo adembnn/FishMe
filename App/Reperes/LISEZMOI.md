@@ -8,7 +8,7 @@ Code écrit sans Mac et sans compilateur Swift : **tests écrits, non exécutés
 3. Aucun partage. `ZoneFloue.arrondi` (0,01°) existe pour un lot futur, sans appelant.
 4. « Y aller » : Plans sans question ; Waze et Google Maps après « X saura où se trouve ce repère. Continuer ? », à chaque fois.
 5. Réserve : « signalée sur cette eau dans les textes lus », « N réserves du département non placées : vérifie sur place », « aucune connue dans nos textes, vérifie sur place ». Jamais vert, jamais « hors réserve » (les règles n'ont aucun contour).
-6. Icônes : parking, poste, danger, amorçage.
+6. Icônes : parking, poste, danger, amorçage. Dessin maison en SwiftUI pur (`IconeRepereView.swift`, vue `IconeRepereView(type:taille:)` ; le nom `IconeRepere` reste l'énumération de Core) : épingle goutte (jeu B de la planche) et pictogramme blanc plein, sauf le poste de pêche, hameçon au trait (jeu C). Ni image ni SF Symbol. Couleurs : ardoise (`Palette.encreDouce`), marine, orange (`Palette.alerte`), ambre (`CouleursCarte.frequentationMoyenne`). Tailles : 32 pt sur la carte (fixe, cadre tactile de 44 pt aligné en bas, ancre `.bottom` = pointe), 44 pt sur la fiche, 24 pt en liste et dans le choix du type (ces trois suivent le texte).
 7. N6 livre les vues ; le calque, l'appui long et les entrées de menu sont à brancher (accroches 1 à 8).
 
 ## Écarts à la fiche, voulus
@@ -23,4 +23,4 @@ Code écrit sans Mac et sans compilateur Swift : **tests écrits, non exécutés
 Voir la section « Accroches » de `docs/fiches/N6.md` (1 à 9). Ce que N6 fournit : `CalqueReperes`, `InterrupteurCalqueReperes`, `NouveauRepereView(position:)`, `FicheRepereView(repere:)`, `ListeReperesView()`, `RepereProche.plusProche`, `ReglesReperes.peutAjouter`, `SauvegardeReperes.synchroniser()` / `effacerTout()`, `ModeleReperes.partage`. Au lancement : `ContexteReperes.courant.configurer(geo:chargeur:prises:...)` et `ContexteReperes.courant.abonne = suivi.abonne`.
 
 ## À vérifier sur Mac
-Compilation de tout le dossier ; `ForEach` et `Annotation` dans `CalqueReperes` (`MapContent`) ; `CLLocationUpdate.liveUpdates()` et sa demande de permission ; `encryptedValues` avec `CKAsset` et `.changedKeys` ; création du type d'enregistrement dans la console CloudKit puis déploiement en production ; isolation de la fermeture de `openURL` ; symbole `circle.dotted.circle`.
+Compilation de tout le dossier ; `ForEach` et `Annotation` dans `CalqueReperes` (`MapContent`) ; `CLLocationUpdate.liveUpdates()` et sa demande de permission ; `encryptedValues` avec `CKAsset` et `.changedKeys` ; création du type d'enregistrement dans la console CloudKit puis déploiement en production ; isolation de la fermeture de `openURL` ; rendu des chemins de `IconeRepereView` (arcs en Bézier, hameçon lisible à 24 pt) et pointe de la goutte exactement sur la coordonnée du repère (ancre `.bottom`).

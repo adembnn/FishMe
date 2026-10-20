@@ -55,11 +55,12 @@ final class TextesReperesTests: XCTestCase {
         XCTAssertTrue(TextesReperes.reservesNonPlacees(2).hasPrefix("2 réserves"))
     }
 
-    func testChaqueIconeADesSymboleEtLibelle() {
+    func testChaqueIconeADesLibellesEtUnLibelleVocal() {
         for icone in IconeRepere.allCases {
             XCTAssertFalse(TextesReperes.libelle(icone).isEmpty)
-            XCTAssertFalse(TextesReperes.symbole(icone).isEmpty)
+            XCTAssertFalse(TextesReperes.libelleVocal(icone).isEmpty)
         }
+        XCTAssertEqual(IconeRepere.allCases.map(TextesReperes.libelleVocal), ["parking", "poste de pêche", "danger", "amorçage"])
     }
 }
 

@@ -76,12 +76,13 @@ nonisolated enum TextesReperes {
         }
     }
 
-    static func symbole(_ icone: IconeRepere) -> String {
+    /// Ce que VoiceOver lit pour l'icône seule (le texte affiché reste `libelle`).
+    static func libelleVocal(_ icone: IconeRepere) -> String {
         switch icone {
-        case .parking: return "parkingsign.circle.fill"
-        case .poste: return "mappin.circle.fill"
-        case .danger: return "exclamationmark.triangle.fill"
-        case .amorcage: return "circle.dotted.circle"
+        case .parking: return "parking"
+        case .poste: return "poste de pêche"
+        case .danger: return "danger"
+        case .amorcage: return "amorçage"
         }
     }
 

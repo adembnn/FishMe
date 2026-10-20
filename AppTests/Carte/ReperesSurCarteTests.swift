@@ -49,10 +49,26 @@ final class ReperesSurCarteTests: XCTestCase {
         XCTAssertFalse(ReperesSurCarte.gestePoseUnRepere(glissement: 40))
     }
 
-    func testLesSymbolesDeLaCarteSontDifferents() {
-        // « Ma zone » garde mappin.and.ellipse ; aucun symbole d'icône de repère n'est le même, ni celui de l'interrupteur.
-        let symboles = IconeRepere.allCases.map(TextesReperes.symbole)
-        XCTAssertFalse(symboles.contains("mappin.and.ellipse"))
-        XCTAssertFalse(symboles.contains("signpost.right"))
+    func testLaPointeDeLEpingleMarqueLEndroitExact() {
+        // Le bas du rectangle est la pointe, au milieu : l'ancre `.bottom` de l'`Annotation` tombe dessus.
+        let rect = CGRect(x: 0, y: 0, width: 32, height: 41)
+        let boite = EpingleGoutte().path(in: rect).boundingRect
+        XCTAssertEqual(boite.maxY, rect.maxY, accuracy: 0.01)
+        XCTAssertEqual(boite.midX, rect.midX, accuracy: 0.01)
+        XCTAssertEqual(CalqueReperes.tailleEpingle, 32)
+    }
+
+    func testChaqueTypeADesFormesDifferentes() {
+        // Distincts par la forme, pas seulement par la couleur (daltonisme).
+        let rect = CGRect(x: 0, y: 0, width: 24, height: 24)
+        let formes = IconeRepere.allCases.map { type -> CGPath in
+            var p = GlypheRepereRempli(type: type).path(in: rect)
+            p.addPath(GlypheRepereTrait(type: type).path(in: rect))
+            return p.cgPath
+        }
+        for i in formes.indices {
+            XCTAssertFalse(formes[i].isEmpty)
+            for j in formes.indices where j > i { XCTAssertNotEqual(formes[i], formes[j]) }
+        }
     }
 }

@@ -106,11 +106,9 @@ struct ListeReperesView: View {
     private func ligne(_ repere: Repere) -> some View {
         Button { fiche = repere } label: {
             HStack(spacing: Espace.m) {
-                Image(systemName: TextesReperes.symbole(repere.icone))
-                    .font(Police.taille(26, .heavy))
-                    .foregroundStyle(repere.icone == .danger ? Palette.alerte : Palette.marine)
-                    .frame(width: Gabarit.zoneTactile)
-                    .accessibilityHidden(true)
+                // Icône de 24 pt dans une zone de 44 pt de large (la zone s'élargit si l'icône grossit avec le texte).
+                IconeRepereView(type: repere.icone, taille: 24, suitLeTexte: true, decoratif: true)
+                    .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
                 VStack(alignment: .leading, spacing: Espace.xs) {
                     Text(repere.nom).font(Police.corps).foregroundStyle(Palette.encre)
                         .multilineTextAlignment(.leading)

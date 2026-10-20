@@ -24,15 +24,21 @@ struct ChampsRepere: View {
                 ForEach(IconeRepere.allCases, id: \.self) { option in
                     Button { icone = option } label: {
                         HStack(spacing: Espace.s) {
-                            Image(systemName: TextesReperes.symbole(option)).accessibilityHidden(true)
+                            IconeRepereView(type: option, taille: 24, suitLeTexte: true, decoratif: true)
                             Text(TextesReperes.libelle(option)).fixedSize(horizontal: false, vertical: true)
                         }
                         .font(Police.detail)
-                        .foregroundStyle(icone == option ? Palette.surMarine : Palette.encre)
+                        .foregroundStyle(Palette.encre)
                         .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
                         .padding(.horizontal, Espace.s)
-                        .background(icone == option ? Palette.marine : Palette.tuile,
+                        // Choisi : fond marine doux et contour marine (la goutte marine du poste disparaîtrait sur un fond marine).
+                        .background(icone == option ? Palette.marineDoux : Palette.tuile,
                                     in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
+                        .overlay {
+                            if icone == option {
+                                RoundedRectangle(cornerRadius: Rayon.s, style: .continuous).stroke(Palette.marine, lineWidth: 2)
+                            }
+                        }
                     }
                     .buttonStyle(.plain)
                     .accessibilityLabel(TextesReperes.libelle(option))
