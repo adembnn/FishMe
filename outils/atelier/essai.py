@@ -311,6 +311,9 @@ def verifications_statiques():
         bilan.verifier(f"docs/lots.md : le lot {code} est au tableau, sur {branche}, et possède {chemin}",
                        lot is not None and lot["branche"] == branche and atelier.proprietaire(chemin, reels) == code,
                        str(lot and (lot["branche"], atelier.proprietaire(chemin, reels))))
+        cli = subprocess.run([sys.executable, str(RACINE / "outils" / "atelier" / "lots.py"), "branche-de", code], capture_output=True, text=True)
+        bilan.verifier(f"scripts/lot.sh {code} : lots.py branche-de {code} rend {branche} (ce que lot.sh lit dans docs/lots.md)",
+                       cli.returncode == 0 and cli.stdout.strip() == branche, cli.stdout + cli.stderr)
         bilan.verifier(f"docs/lots.md : la branche {branche} se lit comme le lot {code}", (atelier.lot_de_branche(branche, reels) or {}).get("code") == code)
 
     wf = RACINE / ".github" / "workflows" / "verif.yml"
