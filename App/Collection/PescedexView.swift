@@ -55,6 +55,10 @@ struct PescedexView: View {
     /// « Importer une photo » : enregistre la carte (photo brute, espèce, taille en cm, date, lieu flou), recharge le Pescedex
     /// et montre la révélation. À brancher : RootView. Tant que c'est `nil`, la carte est écrite ici dans le dépôt et le Pescedex rechargé.
     var ajouterManuellement: ((Data, Espece, Int?, Date, String?) async -> Void)? = nil
+    /// « Mes envies » (N2) : la liste d'envies. À brancher : RootView (L25, un `EnviesModele` partagé). Tant que c'est `nil`, rien d'envies
+    /// n'est affiché : ni la ligne « Mes envies · N », ni le bouton de la fiche, ni l'appui long sur un emplacement vide.
+    // ⚠ à vérifier (Mac) : accroches N2 écrites sans compilateur.
+    var envies: EnviesModele? = nil
 
     /// L'étendue choisie dans le menu de zone, gardée d'un lancement à l'autre.
     @AppStorage(PorteePescedex.cle) private var porteeBrute = PorteePescedex.monSpot.rawValue
@@ -66,6 +70,7 @@ struct PescedexView: View {
     @State private var ficheOuverte: String?
     @State private var bredouilleOuverte: CarteBredouille?
     @State private var conditionsOuvertes = false
+    @State private var enviesOuvertes = false
     @State private var photoOuverte: Data?
     @State private var pngOuvert: Data?
     @State private var bredouillesDepliees = false
@@ -89,13 +94,21 @@ struct PescedexView: View {
                 if let emplacement = modele.emplacements.first(where: { $0.id == id }) {
                     FicheEspeceView(emplacement: emplacement, zone: modele.zone, emplacements: emplacements_,
                                     infos: emplacement.carte?.estDeclaree == true ? modele.infos(pour: emplacement) : nil,
-                                    pecherEnPhoto: pecherEnPhoto, aEssayer: aEssayer, conseilsParType: conseilsParType)
+                                    pecherEnPhoto: pecherEnPhoto, aEssayer: aEssayer, conseilsParType: conseilsParType, envies: envies)
+                }
+            }
+            .navigationDestination(isPresented: $enviesOuvertes) {
+                if let envies {
+                    MesEnviesView(modele: envies, cartes: modele.detaillees.map(\.prise)) { espece in
+                        ficheOuverte = espece.id
+                    }
                 }
             }
         }
         .task {
             rafraichirCamera()
             await modele.choisir(PorteePescedex(brut: porteeBrute))
+            rechargerEnvies()
         }
         .onAppear { rafraichirCamera() }
         .onChange(of: phaseApp) { _, nouvelle in
@@ -149,6 +162,7 @@ struct PescedexView: View {
                           mesure: cm == nil ? nil : .saisie, date: date, lieuFlou: lieu, exemple: false)
         _ = try? await modele.depot.enregistrer(prise: prise, photo: photo)
         await modele.charger()
+        rechargerEnvies()
     }
 
     /// « Déclarer un poisson déjà pêché » : crée la carte déclarée de l'espèce choisie (sans photo), recharge le Pescedex,
@@ -160,7 +174,13 @@ struct PescedexView: View {
             _ = try? await modele.depot.enregistrerDeclaree(espece: espece.espece)
         }
         await modele.charger()
+        rechargerEnvies()
         fichePourOuvrir = espece.id
+    }
+
+    /// Après chaque chargement du Pescedex : les espèces qui ont maintenant une carte sortent de la liste d'envies.
+    private func rechargerEnvies() {
+        envies?.charger(cartes: modele.detaillees.map(\.prise))
     }
 
     /// Vrai quand la caméra est déjà autorisée : « Prendre une photo » l'ouvre alors en un toucher.
@@ -215,7 +235,10 @@ struct PescedexView: View {
 
     private func choisirZone(_ choix: PorteePescedex) {
         porteeBrute = choix.rawValue
-        Task { await modele.choisir(choix) }
+        Task {
+            await modele.choisir(choix)
+            rechargerEnvies()
+        }
     }
 
     /// En haut à droite : Mon spot, Ma région, France. « Ma région » est grisé tant que `Core` ne donne pas la région du pêcheur.
@@ -303,6 +326,11 @@ struct PescedexView: View {
                 }
                 .buttonStyle(.plain)
                 .padding(.top, Espace.m)
+            }
+            if let envies, envies.nombre >= 1 {
+                LigneMesEnviesView(nombre: envies.nombre) { enviesOuvertes = true }
+                    .tuileFishMe(rayon: 14)
+                    .padding(.top, Espace.s)
             }
         }
         .padding(.bottom, Espace.xs)
@@ -622,6 +650,7 @@ struct PescedexView: View {
                             ForEach(groupe) { e in
                                 Button { ficheOuverte = e.id } label: { EmplacementATrouver(emplacement: e) }
                                     .buttonStyle(.plain)
+                                    .menuEnvie(espece: e.espece, modele: envies)
                                     .accessibilityLabel("\(e.espece.nom), \(StyleRarete(e.rarete.niveau).mot), pas encore pris")
                             }
                         }
@@ -811,6 +840,8 @@ struct FicheEspeceView: View {
     var aEssayer: Emplacement? = nil
     /// Conseils par type pour « Pour toi » (P27 B) et « À essayer près de toi » (P28 B). `nil` : l'ancien bloc « comment la pêcher ».
     var conseilsParType: ((Espece, NiveauPecheur) -> [TypeConseil: Conseil])? = nil
+    /// « Je veux la pêcher » sous la tuile (N2). `nil` : pas de bouton.
+    var envies: EnviesModele? = nil
     @AppStorage(ClesConseils.niveau) private var niveauBrut = NiveauPecheur.parDefaut.rawValue
 
     private func conseils(_ e: Emplacement) -> [TypeConseil: Conseil] {
@@ -836,6 +867,11 @@ struct FicheEspeceView: View {
                 } else {
                     tuileEspece
                         .padding(.top, 12)
+                    if let envies, envies.peutAfficherBouton(emplacement.espece) {
+                        BoutonEnvieView(espece: emplacement.espece, modele: envies)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.top, Espace.m)
+                    }
                     if zone != nil, style != .nonMesuree { releves }
                 }
                 if let pecherEnPhoto, estDeclaree {
