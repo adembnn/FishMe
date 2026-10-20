@@ -12,7 +12,7 @@ struct GalerieSkinsTests {
     @Test("19 octobre, sans Pro : Halloween est en ce moment, Noël revient chaque année")
     func dixNeufOctobre() {
         let r = rangeesGalerie(dans: O.contexte(O.date(2026, 10, 19)))
-        #expect(ids(r.mesDecors) == [.riviere, .etang, .grotte])
+        #expect(ids(r.mesDecors) == [.riviere, .etang, .grotte, .sousBois])
         #expect(ids(r.enCeMoment) == [.halloween])
         #expect(ids(r.reviennentChaqueAnnee) == [.noel, .ouvertureTruite, .ete])
     }
@@ -39,14 +39,14 @@ struct GalerieSkinsTests {
         #expect(r.reviennentChaqueAnnee.isEmpty)
     }
 
-    @Test("Les sept skins s'affichent sans aucune image quand leur fond est dessiné en code")
-    func septSkinsSansImage() {
+    @Test("Les huit skins s'affichent sans aucune image quand leur fond est dessiné en code")
+    func huitSkinsSansImage() {
         let tous = Set(CatalogueSkins.tous.map(\.id))
         let r = rangeesGalerie(dans: O.contexte(O.date(2026, 10, 19))) {
             skinAffichable($0, imageExiste: { _ in false }, fondDessine: { tous.contains($0) })
         }
-        #expect(r.mesDecors.count + r.enCeMoment.count + r.reviennentChaqueAnnee.count == 7)
-        #expect(ids(r.mesDecors) == [.riviere, .etang, .grotte])
+        #expect(r.mesDecors.count + r.enCeMoment.count + r.reviennentChaqueAnnee.count == 8)
+        #expect(ids(r.mesDecors) == [.riviere, .etang, .grotte, .sousBois])
         #expect(ids(r.enCeMoment) == [.halloween])
         #expect(ids(r.reviennentChaqueAnnee) == [.noel, .ouvertureTruite, .ete])
     }

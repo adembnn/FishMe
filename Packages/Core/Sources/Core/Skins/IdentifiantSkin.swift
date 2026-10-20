@@ -22,6 +22,8 @@ public struct IdentifiantSkin: Hashable, Codable, Sendable, CustomStringConverti
     public static let riviere = IdentifiantSkin("riviere")
     public static let etang = IdentifiantSkin("etang")
     public static let grotte = IdentifiantSkin("grotte")
+    /// La rivière sous les arbres, gagnée après dix sessions de pêche.
+    public static let sousBois = IdentifiantSkin("sous-bois")
     public static let halloween = IdentifiantSkin("halloween")
     public static let noel = IdentifiantSkin("noel")
     public static let ouvertureTruite = IdentifiantSkin("ouverture-truite")

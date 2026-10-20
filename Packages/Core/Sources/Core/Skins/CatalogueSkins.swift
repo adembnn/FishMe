@@ -1,6 +1,6 @@
 import Foundation
 
-/// Les skins de l'aquarium. Sept au départ : trois décors gagnés en pêchant, quatre thèmes de saison (Pro).
+/// Les skins de l'aquarium. Huit au départ : quatre décors gagnés en pêchant (dont la rivière de départ), quatre thèmes de saison (Pro).
 public enum CatalogueSkins {
     /// Plafond proposé pour les images d'un skin (fond grand 400 Ko, moyen 150, petit 60, objets 100) et pour l'ensemble.
     public static let plafondOctetsParSkin = 710_000
@@ -13,6 +13,8 @@ public enum CatalogueSkins {
              objets: ["objet-etang-nenuphar"]),
         Skin(id: .grotte, nom: "Grotte", origine: .gagne(.unLegendaire), ordre: 2, poidsApproxOctets: 600_000,
              teinte: TeinteEclairage(rouge: 0.1, vert: 0.15, bleu: 0.35, opacite: 0.25)),
+        Skin(id: .sousBois, nom: "Sous-bois", origine: .gagne(.sessions(10)), ordre: 3, poidsApproxOctets: 300_000,
+             teinte: TeinteEclairage(rouge: 0.24, vert: 0.37, bleu: 0.24, opacite: 0.3)),
         Skin(id: .halloween, nom: "Halloween",
              origine: .saison(.halloween, FenetreAnnuelle(moisDebut: 10, jourDebut: 15, moisFin: 11, jourFin: 4)),
              ordre: 10, poidsApproxOctets: 600_000,

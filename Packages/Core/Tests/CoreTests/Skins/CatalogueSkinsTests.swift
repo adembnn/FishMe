@@ -4,9 +4,9 @@ import Testing
 
 @Suite("Skins : catalogue")
 struct CatalogueSkinsTests {
-    @Test("Sept skins au départ, identifiants uniques")
+    @Test("Huit skins au départ, identifiants uniques")
     func identifiantsUniques() {
-        #expect(CatalogueSkins.tous.count == 7)
+        #expect(CatalogueSkins.tous.count == 8)
         #expect(Set(CatalogueSkins.tous.map(\.id)).count == CatalogueSkins.tous.count)
     }
 
@@ -17,6 +17,23 @@ struct CatalogueSkinsTests {
         let c = OutilsSkins.contexte(OutilsSkins.date(2026, 1, 1))
         #expect(statut(skin, dans: c) == .disponible)
         #expect(skin.nomImageFond(.grand) == "fond-grand")
+    }
+
+    @Test("Sous-bois : décor gagné après dix sessions de pêche, rangé entre la grotte et les saisons")
+    func sousBois() throws {
+        let skin = try #require(CatalogueSkins.skin(.sousBois))
+        #expect(skin.id.valeur == "sous-bois")
+        #expect(skin.nom == "Sous-bois")
+        #expect(skin.origine == .gagne(.sessions(10)))
+        #expect(skin.nomImageFond(.grand) == "fond-sous-bois-grand")
+        let grotte = try #require(CatalogueSkins.skin(.grotte))
+        #expect(grotte.ordre < skin.ordre)
+        let c = OutilsSkins.contexte(OutilsSkins.date(2026, 10, 20), progression: ProgressionPecheur(sessions: 9))
+        #expect(statut(skin, dans: c) == .aGagner(.sessions(10)))
+        let gagne = OutilsSkins.contexte(OutilsSkins.date(2026, 10, 20), progression: ProgressionPecheur(sessions: 10))
+        #expect(statut(skin, dans: gagne) == .disponible)
+        #expect(LibellesSkins.accessibilite(skin, statut: .aGagner(.sessions(10)), calendrier: OutilsSkins.calendrier())
+                == "Sous-bois, décor gagné en pêchant, À gagner : 10 sessions de pêche")
     }
 
     @Test("Aucun skin sans nom")

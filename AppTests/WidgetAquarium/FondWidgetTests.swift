@@ -42,4 +42,48 @@ struct FondWidgetTests {
             #expect(FondWidget.nomVoulu(skin: brut, format: .grand) == "fond-grand")
         }
     }
+
+    // MARK: Le dessin des décors (le widget dessine le même décor que l'aquarium)
+
+    private let dessines = ["sous-bois", "etang", "grotte", "halloween", "ouverture-truite"]
+
+    @Test func chaqueDecorDessineChoisitLeDessinQuandIlNyAPasDImage() {
+        for id in dessines {
+            for f in FondWidget.Format.allCases {
+                #expect(FondWidget.source(skin: id, format: f, existe: { _ in false }) == .dessin(id))
+            }
+        }
+    }
+
+    @Test func uneIllustrationDuDecorResteLaPremiere() {
+        for id in dessines {
+            for f in FondWidget.Format.allCases {
+                let nom = "fond-\(id)-\(f.rawValue)"
+                #expect(FondWidget.source(skin: id, format: f, existe: { $0 == nom }) == .image(nom))
+            }
+        }
+    }
+
+    @Test func noelEtEteNontPasDeDessinEtRepliSurLeFondDOrigine() {
+        for id in ["noel", "ete"] {
+            #expect(!FondWidget.aUnDessin(id))
+            for f in FondWidget.Format.allCases {
+                #expect(FondWidget.source(skin: id, format: f, existe: { _ in false }) == .repli("fond-\(f.rawValue)"))
+            }
+        }
+    }
+
+    @Test func leDecorDeDepartEtLesIdentifiantsDouteuxNeDessinentRien() {
+        for brut in [nil, "", "riviere", "../x", "Etang", "inconnu-d-une-version-future"] as [String?] {
+            #expect(!FondWidget.aUnDessin(brut))
+            #expect(FondWidget.source(skin: brut, format: .moyen, existe: { _ in false }) == .repli("fond-moyen"))
+        }
+        // Même si une image `fond-riviere-…` existait, le décor de départ garde le fond d'origine.
+        #expect(FondWidget.source(skin: "riviere", format: .grand, existe: { _ in true }) == .repli("fond-grand"))
+    }
+
+    @Test func lEnsembleDesDecorsDessinesEstCelDeLaListe() {
+        #expect(FondWidget.decorsDessines == Set(dessines))
+        for id in dessines { #expect(FondWidget.aUnDessin(id)) }
+    }
 }

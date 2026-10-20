@@ -30,7 +30,15 @@ struct AppliquableTests {
     @Test("Pro expiré sans mémoire : le décor gagné le plus avancé, jamais rien")
     func proExpireSansMemoire() {
         let c = O.contexte(O.date(2026, 10, 20), abonne: false, progression: tout)
+        #expect(appliquable(.halloween, choisiActuel: nil, dans: c) == .sousBois)
+    }
+
+    @Test("Pro expiré sans mémoire, moins de dix sessions : la grotte, le sous-bois n'est pas encore gagné")
+    func proExpireSansSousBois() {
+        let progression = ProgressionPecheur(especesDifferentes: 9, sessions: 9, legendairesPris: 1)
+        let c = O.contexte(O.date(2026, 10, 20), abonne: false, progression: progression)
         #expect(appliquable(.halloween, choisiActuel: nil, dans: c) == .grotte)
+        #expect(appliquable(.sousBois, choisiActuel: nil, dans: c) == .grotte)
     }
 
     @Test("Pro expiré, rien gagné : le décor de départ")
@@ -73,7 +81,7 @@ struct AppliquableTests {
 
     @Test("Le résultat est toujours un skin du catalogue")
     func toujoursConnu() {
-        let ids = ["riviere", "etang", "grotte", "halloween", "noel", "ouverture-truite", "ete", "futur", ""]
+        let ids = ["riviere", "etang", "grotte", "sous-bois", "halloween", "noel", "ouverture-truite", "ete", "futur", ""]
         let dates = [O.date(2026, 1, 3), O.date(2026, 7, 1), O.date(2026, 10, 20), O.date(2026, 12, 31)]
         for id in ids {
             for date in dates {
