@@ -1315,7 +1315,8 @@ private struct ConditionsEmplacement: View {
                                              try? await Task.sleep(for: .milliseconds(450))
                                              ouvrir(.courbeEtNormale) { courbe = true }
                                          }
-                                     })
+                                     },
+                                     mesures: AnyView(MesuresEmplacement(app: app, lecture: lecture, coordonnee: coordonnee, enFeuille: true)))
             }
         }
         .sheet(isPresented: $septJours) {
@@ -1354,17 +1355,19 @@ private struct MesuresEmplacement: View {
     let app: ParcoursApp
     let lecture: LectureConditions
     let coordonnee: Coordonnee
+    var enFeuille: Bool = false
     @ObservedObject private var modele: ModeleMesures
 
-    init(app: ParcoursApp, lecture: LectureConditions, coordonnee: Coordonnee) {
+    init(app: ParcoursApp, lecture: LectureConditions, coordonnee: Coordonnee, enFeuille: Bool = false) {
         self.app = app
         self.lecture = lecture
         self.coordonnee = coordonnee
+        self.enFeuille = enFeuille
         _modele = ObservedObject(wrappedValue: app.mesuresEau)
     }
 
     var body: some View {
-        MesuresSourceesView(mesures: modele.mesures(lecture: lecture, spot: coordonnee), marque: app.marque)
+        MesuresSourceesView(mesures: modele.mesures(lecture: lecture, spot: coordonnee), marque: app.marque, enFeuille: enFeuille)
             .task(id: coordonnee) { await modele.charger(spot: coordonnee, eau: lecture.eau?.station) }
     }
 }
