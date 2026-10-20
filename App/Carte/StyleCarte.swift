@@ -13,11 +13,18 @@ enum CouleursCarte {
             ? UIColor(red: 0.31, green: 0.82, blue: 0.83, alpha: 1)
             : UIColor(red: 0.03, green: 0.46, blue: 0.54, alpha: 1)
     })
-    /// Le rouge de la pastille « chargé ». ⚠ `Style.swift` (D0) n'a pas de rouge : valeur locale en attendant un jeton `Palette.rouge`.
-    static let rougeFrequentation = Color(uiColor: UIColor { traits in
+    /// La pastille de fréquentation (planche, proposition C « Silhouettes »). Gris, ambre et bleu nuit : jamais de rouge ni de vert
+    /// seuls, la forme (1, 2, 3 silhouettes) porte l'information. ⚠ `Style.swift` n'a pas l'ambre de la planche (#B97A0A) : valeurs locales.
+    static let frequentationCalme = Palette.commun
+    static let frequentationMoyenne = Color(uiColor: UIColor { traits in
         traits.userInterfaceStyle == .dark
-            ? UIColor(red: 1.0, green: 0.45, blue: 0.43, alpha: 1)
-            : UIColor(red: 0.74, green: 0.13, blue: 0.16, alpha: 1)
+            ? UIColor(red: 0xE0 / 255, green: 0xAE / 255, blue: 0x45 / 255, alpha: 1)
+            : UIColor(red: 0xB9 / 255, green: 0x7A / 255, blue: 0x0A / 255, alpha: 1)
+    })
+    static let frequentationForte = Color(uiColor: UIColor { traits in
+        traits.userInterfaceStyle == .dark
+            ? UIColor(red: 0xA9 / 255, green: 0xD0 / 255, blue: 0xF5 / 255, alpha: 1)
+            : UIColor(red: 0x08 / 255, green: 0x2A / 255, blue: 0x4C / 255, alpha: 1)
     })
     static let encreDouce = Palette.encreDouce
     static let filet = Palette.filet

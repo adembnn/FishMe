@@ -67,7 +67,7 @@ final class GestionPosition: NSObject, CLLocationManagerDelegate {
     func demanderPrecisionExacte() {
         guard estAutorisee, precisionReduite,
               Bundle.main.object(forInfoDictionaryKey: "NSLocationTemporaryUsageDescriptionDictionary") != nil else { return }
-        manager.requestTemporaryFullAccuracyAuthorization(withPurposeKey: Self.cleRaisonPrecisionExacte) { [weak self] _ in
+        manager.requestTemporaryFullAccuracyAuthorization(withPurposeKey: Self.cleRaisonPrecisionExacte) { @Sendable [weak self] _ in
             Task { @MainActor in
                 guard let self else { return }
                 self.precisionReduite = self.manager.accuracyAuthorization == .reducedAccuracy
