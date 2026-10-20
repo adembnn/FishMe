@@ -81,9 +81,7 @@ struct RangeeMaintenantView: View {
                     if let v = c.ventKmh {
                         ligne("wind", "\(FormatConditions.nombre(v)) km/h")
                     }
-                    if let hpa = c.pressionHPa {
-                        ligne("gauge.medium", "\(FormatConditions.nombre(hpa)) hPa")
-                    }
+                    // La pression est dans le bloc « Mesures » (N3, avec sa source et sa tendance) : plus de ligne hPa ici.
                 }
                 .padding(.bottom, Espace.xs)
             }
@@ -210,14 +208,21 @@ struct ConditionsDuJourView: View {
     @ObservedObject var marque: StockageMarque
     var montrerRiviere: Bool = true
     var ouvrirCourbe: (() -> Void)? = nil
+    /// N3 : le bloc « Mesures » (`MesuresSourceesView(..., enFeuille: true)`), posé par RootView qui tient le modèle. Absent : rien.
+    var mesures: AnyView? = nil
 
     var body: some View {
-        VStack(spacing: 0) {
-            RangeeMaintenantView(lecture: lecture, marque: marque, montrerRiviere: montrerRiviere,
-                                 ouvrirCourbe: ouvrirCourbe, enFeuille: true)
-            Spacer(minLength: 0)
+        ScrollView {
+            VStack(spacing: 0) {
+                RangeeMaintenantView(lecture: lecture, marque: marque, montrerRiviere: montrerRiviere,
+                                     ouvrirCourbe: ouvrirCourbe, enFeuille: true)
+                if let mesures { mesures }
+                Spacer(minLength: 0)
+            }
         }
-        .presentationDetents([.height(444)])
+        .scrollIndicators(.hidden)
+        // Le bloc « Mesures » ajoute de la hauteur : moyen puis grand (la maquette seule faisait 444 pt). // ⚠ à vérifier
+        .presentationDetents(mesures == nil ? [.height(444)] : [.medium, .large])
         .presentationDragIndicator(.visible)
         .presentationBackground(Palette.surface)
         .accessibilityIdentifier("conditions-du-jour")

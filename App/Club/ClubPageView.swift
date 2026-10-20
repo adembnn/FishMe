@@ -20,6 +20,9 @@ struct ClubPageView: View {
   var record: RecordClub?
   var invites: [InviteClub] = []
   var invitation: InvitationPescedex?
+  /// L24 : le chat. Absent : pas de bouton « Écrire ». Donné par RootView (`app.chat`).
+  var chat: GestionChat?
+  @State private var conversation: ConversationID?
 
   @AppStorage(DemoClub.cle) private var demo = false
   @State private var gestion: GestionClubs
@@ -46,8 +49,9 @@ struct ClubPageView: View {
     cartes: [CarteAPartager], poissons: [PoissonClub] = [], membres: [MembreClub] = [],
     dernieresCartes: [CarteRecenteClub] = [], record: RecordClub? = nil,
     invites: [InviteClub] = [], invitation: InvitationPescedex? = nil,
-    gestion: GestionClubs = .partage
+    gestion: GestionClubs = .partage, chat: GestionChat? = nil
   ) {
+    self.chat = chat
     _gestion = State(initialValue: gestion)
     _migration = State(initialValue: MigrationClubs(service: gestion.service))
     self.cartes = cartes
@@ -132,6 +136,10 @@ struct ClubPageView: View {
             EnteteGroupeClub(titre: "Membres", haut: Espace.m)
             groupeMembres(club)
             if let enLigne = clubEnLigne { lienMembres(enLigne) }
+            if let enLigne = clubEnLigne, chat != nil {
+              BoutonEcrire { conversation = .club(enLigne.id) }
+                .accessibilityIdentifier("club.ecrire")
+            }
             Button {
               partageOuvert = true
             } label: {
@@ -205,6 +213,9 @@ struct ClubPageView: View {
               }
             })
         }
+      }
+      .sheet(item: $conversation) { ouverte in
+        if let chat { FeuilleConversationView(gestion: chat, conversation: ouverte) }
       }
       .sheet(item: $lienOuvert) { lien in
         RejoindreClubView(clubID: lien.id, gestion: gestion, poissons: poissons) { id in

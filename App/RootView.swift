@@ -131,7 +131,9 @@ final class ParcoursApp {
         ? depot.map { depot in
             SauvegardeAvecReperes(
                 cartes: SauvegardeICloud(depot: depot), reperes: SauvegardeReperes(depot: ModeleReperes.partage.depot),
-                apresReperes: { await ModeleReperes.partage.recharger() })
+                apresReperes: { await ModeleReperes.partage.recharger() },
+                // N2 : la synchro vient d'écrire les envies fusionnées dans `envies.json` (ProfilLocal) : le modèle les relit.
+                apresProfil: { [weak self] in self?.envies.relire() })
         } : nil
     @ObservationIgnored private(set) lazy var compte: CompteModele? = sauvegarde.map { service in
         CompteModele(service: service,
@@ -340,8 +342,7 @@ final class ParcoursApp {
     /// N2 : « Mes envies » (liste privée, sur l'iPhone). Le Pescedex (autre agent) pose la ligne d'entrée et le bouton sur les fiches ;
     /// ici, seulement le modèle, câblé sur les règles du spot et les conseils.
     @ObservationIgnored private(set) lazy var envies: EnviesModele = {
-        let url = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first?.appendingPathComponent("envies.json")
-            ?? FileManager.default.temporaryDirectory.appendingPathComponent("envies.json")
+        let url = ProfilLocal.fichierEnvies
         let externes = EnviesExternes(
             controle: { [weak self] espece, date in
                 guard let self, let lieu = self.lieuDuSpot() else { return nil }
@@ -973,6 +974,17 @@ private struct RacineContenu: View {
                 if action == "prise" { app.ajouterPrise() }
             }
             .onChange(of: questionVue) { app.proposerSuitePremierLancement() }
+            // L24 : un lien de conversation (ami ou club) reçu par iCloud : accepté par le chat, puis la liste des messages s'ouvre.
+            // `initial: true` couvre le lancement à froid par le lien. // ⚠ à vérifier
+            .onChange(of: RelaisChat.partage.enAttente != nil, initial: true) { _, present in
+                guard present, let invitation = RelaisChat.partage.enAttente else { return }
+                RelaisChat.partage.solder()
+                app.onglet = .club
+                Task {
+                    await app.chat.accepter(invitation)
+                    messagesOuverts = true
+                }
+            }
             .onChange(of: app.suivi.abonne) { _, abonne in
                 app.moteur.abonne = abonne
                 ContexteReperes.courant.abonne = abonne
@@ -1044,7 +1056,8 @@ private struct RacineContenu: View {
                 changerZone: { app.onglet = .carte },
                 ajouterManuellement: { photo, espece, cm, date, lieu in
                     await app.ajouterPriseManuelle(photo: photo, espece: espece, cm: cm, date: date, lieu: lieu)
-                })
+                },
+                envies: app.envies)
             .fullScreenCover(isPresented: $aquariumOuvert) {
                 // N1 : le menu « Décors » est un bouton posé par la racine sur l'aquarium (AquariumView n'en a pas).
                 ZStack(alignment: .topLeading) {
@@ -1179,11 +1192,11 @@ private struct RacineContenu: View {
     private var club: some View {
         let poissons = app.core.especes.especesPechables().map { PoissonClub(id: $0.espece.id, nom: $0.nom, image: $0.image) }
         // L23 : la page principale est le fil. L21 : « Finis ton profil » au premier passage. L24 : les messages dans une feuille
-        // (bouton en haut à droite) ; « Écrire » depuis un ami ou un club reste à poser dans leurs pages (voir branchements-l25.md).
+        // (bouton en haut à droite) ; « Écrire » est dans la page d'un ami et dans celle d'un club.
         return CommunauteView(fil: FeedVue(gestion: app.feed)) {
-            AmisPageView(gestion: app.gestionAmis(), profil: GestionProfil.partage)
+            AmisPageView(gestion: app.gestionAmis(), profil: GestionProfil.partage, chat: app.chat)
         } club: {
-            ClubPageView(cartes: app.cartesAPartager, poissons: poissons)
+            ClubPageView(cartes: app.cartesAPartager, poissons: poissons, chat: app.chat)
         }
         .finisTonProfil()
         .overlay(alignment: .topTrailing) { boutonMessages }
@@ -1369,7 +1382,8 @@ private struct ConditionsEmplacement: View {
                                              try? await Task.sleep(for: .milliseconds(450))
                                              ouvrir(.courbeEtNormale) { courbe = true }
                                          }
-                                     })
+                                     },
+                                     mesures: AnyView(MesuresEmplacement(app: app, lecture: lecture, coordonnee: coordonnee, enFeuille: true)))
             }
         }
         .sheet(isPresented: $septJours) {
@@ -1408,17 +1422,19 @@ private struct MesuresEmplacement: View {
     let app: ParcoursApp
     let lecture: LectureConditions
     let coordonnee: Coordonnee
+    var enFeuille: Bool = false
     @ObservedObject private var modele: ModeleMesures
 
-    init(app: ParcoursApp, lecture: LectureConditions, coordonnee: Coordonnee) {
+    init(app: ParcoursApp, lecture: LectureConditions, coordonnee: Coordonnee, enFeuille: Bool = false) {
         self.app = app
         self.lecture = lecture
         self.coordonnee = coordonnee
+        self.enFeuille = enFeuille
         _modele = ObservedObject(wrappedValue: app.mesuresEau)
     }
 
     var body: some View {
-        MesuresSourceesView(mesures: modele.mesures(lecture: lecture, spot: coordonnee), marque: app.marque)
+        MesuresSourceesView(mesures: modele.mesures(lecture: lecture, spot: coordonnee), marque: app.marque, enFeuille: enFeuille)
             .task(id: coordonnee) { await modele.charger(spot: coordonnee, eau: lecture.eau?.station) }
     }
 }
@@ -1765,11 +1781,14 @@ nonisolated struct SauvegardeAvecReperes: ServiceSauvegarde {
     let cartes: SauvegardeICloud
     let reperes: SauvegardeReperes
     let apresReperes: @MainActor @Sendable () async -> Void
+    /// Après chaque synchro du profil (envies relues). Par défaut : rien.
+    var apresProfil: @MainActor @Sendable () async -> Void = {}
 
     func etatCompte() async -> EtatICloud { await cartes.etatCompte() }
 
     func synchroniser() async throws -> BilanSauvegarde {
         let bilan = try await cartes.synchroniser()
+        await apresProfil()
         if SauvegardeReperes.actif, let lu = try? await reperes.synchroniser(), lu.aRelire {
             await apresReperes()
         }

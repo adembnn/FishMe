@@ -24,6 +24,7 @@ struct AjoutManuelPriseView: View {
     @State private var espece: EspecePechable?
     @State private var avecTaille = false
     @State private var tailleCm = 40.0
+    @State private var guideMesure = false
     @State private var date = Date()
     @State private var departement: DepartementChoix?
     @State private var choixDepartement = false
@@ -265,6 +266,11 @@ struct AjoutManuelPriseView: View {
                         }
                         Slider(value: $tailleCm, in: 5...150, step: 1)
                             .accessibilityLabel("Taille en centimètres")
+                        // N5 : le geste de mesure (guide de « Ma fédération »), discret. // ⚠ à vérifier
+                        Button("Comment mesurer ?") { guideMesure = true }
+                            .font(Police.detail).foregroundStyle(Palette.marine)
+                            .frame(minHeight: Gabarit.zoneTactile, alignment: .leading)
+                            .accessibilityIdentifier("comment-mesurer")
                     }
                 }
                 .padding(Espace.l)
@@ -301,6 +307,10 @@ struct AjoutManuelPriseView: View {
                 .tuileFishMe()
                 .sheet(isPresented: $choixDepartement) {
                     ChoixDepartementView(choisi: $departement)
+                }
+                .sheet(isPresented: $guideMesure) {
+                    MesureGuideView()
+                        .presentationDetents([.medium, .large])
                 }
 
                 HStack(spacing: Espace.s) {

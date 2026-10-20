@@ -61,4 +61,61 @@ struct FusionSauvegardeTests {
         let relu = try JSONDecoder().decode(ProfilSauvegarde.self, from: JSONEncoder().encode(p))
         #expect(relu == p)
     }
+
+    // MARK: envies
+
+    private func envie(_ id: String, jour: Double, retiree: Double? = nil) -> Envie {
+        Envie(espece: id, ajoutee: Date(timeIntervalSince1970: jour * 86_400),
+              retiree: retiree.map { Date(timeIntervalSince1970: $0 * 86_400) },
+              motif: retiree == nil ? nil : .retireeParLePecheur)
+    }
+
+    @Test("Un profil qui n'a que des envies n'est pas vide")
+    func profilAvecEnviesNEstPasVide() {
+        #expect(ProfilSauvegarde().estVide)
+        #expect(!ProfilSauvegarde(envies: [envie("brochet", jour: 1)]).estVide)
+    }
+
+    @Test("Une sauvegarde sans champ envies se lit comme une liste vide")
+    func decodeurTolerant() throws {
+        let json = """
+        {"questionVue":true,"tunnelVu":false,"sorties":[],"sessionsTerminees":4,"modifie":0}
+        """
+        let p = try JSONDecoder().decode(ProfilSauvegarde.self, from: Data(json.utf8))
+        #expect(p.envies.isEmpty)
+        #expect(p.sessionsTerminees == 4)
+        #expect(p.questionVue)
+    }
+
+    @Test("Aller-retour JSON avec des envies")
+    func allerRetourEnvies() throws {
+        let p = ProfilSauvegarde(questionVue: true, envies: [envie("brochet", jour: 1), envie("sandre", jour: 2, retiree: 3)],
+                                 modifie: Date(timeIntervalSince1970: 99))
+        let relu = try JSONDecoder().decode(ProfilSauvegarde.self, from: JSONEncoder().encode(p))
+        #expect(relu == p)
+    }
+
+    @Test("Fusion : les envies des deux iPhones sont réunies, la modification la plus récente gagne")
+    func fusionDesEnvies() {
+        let local = ProfilSauvegarde(questionVue: true, envies: [envie("brochet", jour: 1), envie("perche", jour: 2)],
+                                     modifie: Date(timeIntervalSince1970: 50))
+        let distant = ProfilSauvegarde(tunnelVu: true, envies: [envie("brochet", jour: 1, retiree: 5), envie("sandre", jour: 3)],
+                                       modifie: Date(timeIntervalSince1970: 40))
+        let fusion = FusionSauvegarde.fusionner(local: local, distant: distant)
+        let attendu = ListeEnvies.fusionner(local.envies, distant.envies).envies
+        #expect(fusion.envies == attendu)
+        #expect(Set(fusion.envies.map(\.espece)) == ["brochet", "perche", "sandre"])
+        #expect(fusion.envies.first { $0.espece == "brochet" }?.retiree != nil)
+        let inverse = FusionSauvegarde.fusionner(local: distant, distant: local)
+        #expect(inverse.envies == fusion.envies)
+    }
+
+    @Test("Profil local sans rien d'autre que des envies : il ne perd pas face à iCloud")
+    func localAvecEnviesSeules() {
+        let local = ProfilSauvegarde(envies: [envie("brochet", jour: 1)])
+        let distant = ProfilSauvegarde(niveau: "confirme", questionVue: true, modifie: Date(timeIntervalSince1970: 10))
+        let fusion = FusionSauvegarde.fusionner(local: local, distant: distant)
+        #expect(fusion.envies.map(\.espece) == ["brochet"])
+        #expect(fusion.niveau == "confirme")
+    }
 }

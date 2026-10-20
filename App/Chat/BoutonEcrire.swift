@@ -14,6 +14,29 @@ struct BoutonEcrire: View {
     }
 }
 
+/// La conversation dans une feuille, avec un bouton « Fermer » de 44 points. À présenter avec `.sheet(item:)` depuis une page ami ou club.
+struct FeuilleConversationView: View {
+    let gestion: GestionChat
+    let conversation: ConversationID
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            ConversationView(gestion: gestion, conversation: conversation)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Fermer") { dismiss() }
+                            .frame(minHeight: Gabarit.zoneTactile)
+                    }
+                }
+        }
+        .task {
+            await gestion.chargerListe()
+            await gestion.actualiserListe()
+        }
+    }
+}
+
 #if DEBUG
 #Preview {
     BoutonEcrire {}
