@@ -57,7 +57,7 @@ struct BoutonLibelleCarte: View {
     }
 }
 
-/// La colonne de 4 boutons en verre, à droite au-dessus de la barre d'onglets, chacun avec son libellé :
+/// La colonne de 4 boutons en verre (5 avec « Repères », N6), à droite au-dessus de la barre d'onglets, chacun avec son libellé :
 /// météo, ma position (recentre la caméra sans déplacer le spot), filtre par espèce, réglages.
 struct ColonneBoutonsCarte: View {
     /// Faux (position refusée) : le bouton s'appelle « Ma zone » et rouvre le choix du département ou de la commune.
@@ -67,6 +67,9 @@ struct ColonneBoutonsCarte: View {
     let autourDeMoi: () -> Void
     let filtre: () -> Void
     let reglages: () -> Void
+    /// N6 : la 5e rangée « Repères » (interrupteur du calque, éteint au premier lancement). `nil` : pas de rangée.
+    var reperes: (() -> Void)? = nil
+    var reperesAllumes = false
 
     var body: some View {
         GlassEffectContainer(spacing: 8) {
@@ -77,6 +80,13 @@ struct ColonneBoutonsCarte: View {
                                    teinte: Palette.marine, action: autourDeMoi)
                 BoutonLibelleCarte(symbole: "line.3.horizontal.decrease", libelle: "Espèces", teinte: teinteFiltre, action: filtre)
                 BoutonLibelleCarte(symbole: "gearshape", libelle: "Réglages", action: reglages)
+                if let reperes {
+                    // « signpost.right » : « mappin.and.ellipse » est celui de « Ma zone ».
+                    BoutonLibelleCarte(symbole: reperesAllumes ? "signpost.right.fill" : "signpost.right", libelle: "Repères",
+                                       teinte: reperesAllumes ? Palette.marine : Palette.encre, action: reperes)
+                        .accessibilityValue(reperesAllumes ? "activé" : "désactivé")
+                        .accessibilityAddTraits(.isToggle)
+                }
             }
         }
     }

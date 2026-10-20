@@ -27,6 +27,8 @@ struct MonSpotView: View {
     let annulerChoix: () -> Void
     let ouvrirPoissons: (Espece?) -> Void
     let fermer: () -> Void
+    /// « Mes repères » (N6) : ouvre la liste privée du pêcheur. `nil` : la rangée n'existe pas.
+    var ouvrirReperes: (() -> Void)? = nil
 
     var body: some View {
         ScrollView {
@@ -34,6 +36,7 @@ struct MonSpotView: View {
                 titre
                 if sansSpot {
                     sansSpotContenu
+                    rangeeReperes
                 } else {
                     meteo
                     tuiles
@@ -218,10 +221,23 @@ struct MonSpotView: View {
             Label("Règles du spot", systemImage: "list.bullet.rectangle")
         }
         .buttonStyle(.secondaire)
+        rangeeReperes
         if let niveau, niveau == .charge, let coinCalme {
             FrequentationFicheView(niveau: niveau, onCoinCalme: coinCalme)
         }
         lienAutreSpot
+    }
+
+    /// « Mes repères » : parkings, postes, dangers et amorçages que le pêcheur a posés lui-même (liste de N6, privée).
+    @ViewBuilder
+    private var rangeeReperes: some View {
+        if let ouvrirReperes {
+            Button(action: ouvrirReperes) {
+                Label(TextesReperes.titreListe, systemImage: "signpost.right")
+            }
+            .buttonStyle(.secondaire)
+            .accessibilityHint("Ouvre la liste de tes repères, visibles de toi seul")
+        }
     }
 
     /// « Choisir un autre spot » ; pendant le choix, la consigne prend sa place (toucher l'annule).

@@ -68,6 +68,18 @@ struct VueCarte: View {
     @State private var destination: DestinationItineraire?
     @State private var apercu: ApercuSpot?
     @State private var reseauDisponible = true
+    /// N6 : calque des repères privés, éteint au premier lancement (même clé que `InterrupteurCalqueReperes`).
+    @AppStorage(InterrupteurCalqueReperes.cle) private var calqueReperes = false
+    @State private var nouveauRepere: PointReperes?
+    @State private var repereOuvert: Repere?
+    @State private var listeReperesOuverte = false
+    @State private var reglesRepere: PointReperes?
+
+    /// Un point choisi sur la carte pour les repères (nouveau repère, règles à cette coordonnée). Reste sur l'iPhone.
+    private struct PointReperes: Identifiable {
+        let id = UUID()
+        let position: Coordonnee
+    }
 
     init(services: ServicesCarte,
          spotFixe: Spot? = nil,
@@ -125,6 +137,16 @@ struct VueCarte: View {
         }
         .sheet(isPresented: $reglesDuSpotOuvertes) { feuilleReglesDuSpot }
         .sheet(item: $destination) { (cible: DestinationItineraire) in feuilleChoixNavigation(cible) }
+        .sheet(item: $nouveauRepere) { (point: PointReperes) in feuilleNouveauRepere(point) }
+        .sheet(item: $repereOuvert) { (repere: Repere) in feuilleRepere(repere) }
+        .sheet(isPresented: $listeReperesOuverte) { feuilleListeReperes }
+        .sheet(item: $reglesRepere) { (point: PointReperes) in feuilleReglesIci(point) }
+        .task(id: calqueReperes) {
+            // Éteint, la carte ne lit ni repère ni photo.
+            if calqueReperes { await ModeleReperes.partage.chargerSiBesoin() }
+        }
+        .onAppear { ContexteReperes.courant.brancherReglesIci { (c: Coordonnee) in demanderReglesIci(c) } }
+        .onDisappear { ContexteReperes.courant.brancherReglesIci(nil) }
         .task(id: modele.spotAffiche) {
             apercu = nil
             guard let spot = modele.spotAffiche else { return }
@@ -291,6 +313,8 @@ struct VueCarte: View {
         // Le toucher qui pose le cercle n'existe qu'en mode « poser mon spot » : le reste du temps,
         // la carte garde tous ses gestes (pincer, double toucher, glisser) sans rien qui les retienne.
         .simultaneousGesture(toucherPourPoser(proxy: proxy), including: masqueDuToucher)
+        // N6 : l'appui long pose un repère. Un geste à part du toucher qui pose le cercle : il ne déplace ni le spot ni la caméra.
+        .simultaneousGesture(appuiLongPourReperer(proxy: proxy), including: .all)
     }
 
     @MapContentBuilder
@@ -306,6 +330,16 @@ struct VueCarte: View {
         ForEach(modele.elements) { (element: ElementCarte) in
             contenuStation(element)
         }
+        // N6 : les repères du pêcheur, hors du plafond de 60 (jamais regroupés), cachés quand la carte est dézoomée.
+        if !reperesAffiches.isEmpty {
+            CalqueReperes(reperes: reperesAffiches,
+                          afficherNoms: CalqueReperes.afficheLesNoms(spanLatitude: modele.regionVisible.spanLatitude),
+                          ouvrir: { (repere: Repere) in repereOuvert = repere })
+        }
+    }
+
+    private var reperesAffiches: [Repere] {
+        ReperesSurCarte.visibles(ModeleReperes.partage.reperes, region: modele.regionVisible, calqueAllume: calqueReperes)
     }
 
     private func annotationEau(_ element: ElementCarte) -> some MapContent {
@@ -382,6 +416,21 @@ struct VueCarte: View {
         SpatialTapGesture().onEnded { (valeur: SpatialTapGesture.Value) in
             poserSpot(au: valeur.location, proxy: proxy)
         }
+    }
+
+    /// Appui long (0,6 s) puis relâchement presque au même endroit : le point touché devient un nouveau repère.
+    private func appuiLongPourReperer(proxy: MapProxy) -> some Gesture {
+        LongPressGesture(minimumDuration: 0.6)
+            .sequenced(before: DragGesture(minimumDistance: 0))
+            .onEnded { (valeur: SequenceGesture<LongPressGesture, DragGesture>.Value) in
+                guard case .second(true, let doigt?) = valeur else { return }
+                let glissement = Double(hypot(doigt.translation.width, doigt.translation.height))
+                guard ReperesSurCarte.gestePoseUnRepere(glissement: glissement),
+                      ReperesSurCarte.peutPoser(region: modele.regionVisible, modeChoixDuSpot: modele.modeChoixDuSpot),
+                      nouveauRepere == nil, repereOuvert == nil,
+                      let c = proxy.convert(doigt.startLocation, from: .local) else { return }
+                nouveauRepere = PointReperes(position: Coordonnee(latitude: c.latitude, longitude: c.longitude))
+            }
     }
 
     private func poserSpot(au point: CGPoint, proxy: MapProxy) {
@@ -805,7 +854,9 @@ struct VueCarte: View {
                     meteo: ouvrirMeteo,
                     autourDeMoi: autourDeMoi,
                     filtre: { modele.afficherFiltre = true },
-                    reglages: ouvrirProfil)
+                    reglages: ouvrirProfil,
+                    reperes: { calqueReperes.toggle() },
+                    reperesAllumes: calqueReperes)
                 .padding(.trailing, 8)
             }
         }
@@ -849,7 +900,47 @@ struct VueCarte: View {
             choisirUnAutreSpot: choisirUnAutreSpot,
             annulerChoix: { modele.modeChoixDuSpot = false },
             ouvrirPoissons: ouvrirPoissons,
-            fermer: { withAnimation(.snappy(duration: 0.3)) { fermerFeuilleSpot() } })
+            fermer: { withAnimation(.snappy(duration: 0.3)) { fermerFeuilleSpot() } },
+            ouvrirReperes: { listeReperesOuverte = true })
+    }
+
+    // MARK: Repères privés (N6)
+
+    /// « Nouveau repère » à l'endroit de l'appui long. Une fois posé, le calque s'allume pour que l'épingle se voie.
+    private func feuilleNouveauRepere(_ point: PointReperes) -> some View {
+        NouveauRepereView(position: point.position, surAjout: { (_: Repere) in calqueReperes = true })
+            .presentationDetents([.medium, .large])
+            .presentationDragIndicator(.visible)
+    }
+
+    /// La fiche d'un repère touché : « Y aller » suit la règle de N6 (`AllerAuRepere`), sans « Toujours utiliser ».
+    private func feuilleRepere(_ repere: Repere) -> some View {
+        FicheRepereView(repere: repere)
+            .presentationDetents([.medium, .large])
+            .presentationDragIndicator(.visible)
+    }
+
+    private var feuilleListeReperes: some View {
+        ListeReperesView()
+            .presentationDetents([.large])
+    }
+
+    /// « Règles ici » depuis un repère : les feuilles des repères se ferment d'abord (une feuille ne peut pas en ouvrir une autre
+    /// par-dessus), puis les règles du lieu s'ouvrent. La coordonnée ne sert qu'à lire les règles sur l'iPhone.
+    private func demanderReglesIci(_ c: Coordonnee) {
+        repereOuvert = nil
+        listeReperesOuverte = false
+        Task {
+            try? await Task.sleep(for: .milliseconds(500))
+            reglesRepere = PointReperes(position: c)
+        }
+    }
+
+    private func feuilleReglesIci(_ point: PointReperes) -> some View {
+        let geo = modele.services.geo
+        let spot = Spot(centre: point.position, rayonM: 1000, departement: geo.departement(de: point.position))
+        return ReglesDuSpotView(services: modele.services, spot: spot, lieu: geo.lieuFlou(point.position),
+                                fermer: { reglesRepere = nil })
     }
 
     /// La météo du moment du spot : l'emplacement de L12 (rangée « maintenant »), vide tant que A ne l'a pas branché.

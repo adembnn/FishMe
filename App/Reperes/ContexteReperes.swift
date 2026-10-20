@@ -34,6 +34,9 @@ final class ContexteReperes {
     /// À mettre à jour à chaque changement d'abonnement (`SuiviAbonnement.abonne`).
     var abonne = false
 
+    /// La carte branche « Règles ici » quand elle est à l'écran (elle seule sait présenter la feuille des règles) ; `nil` à son départ.
+    func brancherReglesIci(_ action: ((Coordonnee) -> Void)?) { reglesIci = action }
+
     func configurer(geo: any ServiceGeo, chargeur: ChargeurRegles, prises: @escaping () -> [Prise],
                     photosDesPrises: (any PhotosDesPrises)? = nil, reglesIci: ((Coordonnee) -> Void)? = nil,
                     ouvrirPaywall: (() -> Void)? = nil, vuePaywall: ((@escaping () -> Void) -> AnyView)? = nil) {
