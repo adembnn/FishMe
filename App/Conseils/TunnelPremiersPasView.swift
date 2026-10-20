@@ -344,7 +344,7 @@ struct TunnelPremiersPasView: View {
     /// Largeur de la carte à débloquer (hauteur : largeur / `Gabarit.rapportCarte`).
     private static let largeurCarteADebloquer: CGFloat = 176
 
-    /// « Pas encore de carte » : une carte à débloquer (silhouette de l'espèce la plus commune de la zone), le compteur de la zone,
+    /// « Pas encore de carte » : le cartouche nuit à débloquer (contour de poisson en pointillés, espèce la plus commune de la zone), le compteur de la zone,
     /// une phrase sur le Pescedex, un seul bouton. Défilement sans barre si l'écran est trop court (texte agrandi).
     private var finSansCarte: some View {
         let aDebloquer = FinDuTunnel.aDebloquer(especes: especes, libelleRarete: { rarete($0)?.libelle })
@@ -352,14 +352,16 @@ struct TunnelPremiersPasView: View {
             ScrollView {
                 VStack(spacing: Espace.l) {
                     Spacer(minLength: 0)
-                    Text("Pas encore de carte")
-                        .font(Police.titre)
-                        .foregroundStyle(Palette.encre)
-                        .multilineTextAlignment(.center)
-                        .accessibilityAddTraits(.isHeader)
                     if let aDebloquer {
-                        carteADebloquer(aDebloquer)
+                        // Cartouche nuit : le titre « Pas encore de carte » est dans la carte.
+                        CartouchePasEncoreView(espece: aDebloquer.nom, rarete: rarete(aDebloquer)?.libelle,
+                                               largeur: Self.largeurCarteADebloquer)
                     } else {
+                        Text("Pas encore de carte")
+                            .font(Police.titre)
+                            .foregroundStyle(Palette.encre)
+                            .multilineTextAlignment(.center)
+                            .accessibilityAddTraits(.isHeader)
                         Image(systemName: "fish.fill")
                             .font(Police.taille(56, .bold))
                             .foregroundStyle(Palette.silhouette)
@@ -390,35 +392,6 @@ struct TunnelPremiersPasView: View {
             .scrollBounceBehavior(.basedOnSize)
         }
         .accessibilityIdentifier("tunnel-pas-encore-de-carte")
-    }
-
-    /// La carte à débloquer : le format de la carte à collectionner, fond de surface, la silhouette de l'espèce, un cadenas.
-    /// Pas de rareté inventée : le mot n'apparaît que si la fermeture `rarete` en fournit une.
-    private func carteADebloquer(_ espece: EspecePechable) -> some View {
-        let largeur = Self.largeurCarteADebloquer
-        let hauteur = largeur / Gabarit.rapportCarte
-        let coin = largeur * Gabarit.coinCarte
-        return VStack(spacing: Espace.s) {
-            Spacer(minLength: 0)
-            ImageEspece(nom: espece.image, libelle: espece.nom, silhouette: true)
-                .frame(width: largeur * 0.8, height: largeur * 0.55)
-            Image(systemName: "lock.fill")
-                .font(Police.taille(18, .bold))
-                .foregroundStyle(Palette.encreDouce)
-            if let r = rarete(espece) {
-                Text(r.libelle)
-                    .font(Police.legende)
-                    .foregroundStyle(r.couleur)
-            }
-            Spacer(minLength: 0)
-        }
-        .padding(Espace.m)
-        .frame(width: largeur, height: hauteur)
-        .background(Palette.surface, in: RoundedRectangle(cornerRadius: coin, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: coin, style: .continuous).strokeBorder(Palette.filet, lineWidth: 1))
-        .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Carte à débloquer : \(espece.nom)")
     }
 
     /// Les poissons déclarés, en images (jamais en liste de noms), 3 par rangée.

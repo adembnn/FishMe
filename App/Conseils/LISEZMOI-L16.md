@@ -9,9 +9,13 @@ Les tests (`AppTests/Conseils/ConseilsTests.swift`, `AppUITests/Conseils/Onboard
 - Tunnel (`TunnelPremiersPasView`) : titre « Lesquels as-tu déjà pêchés ? » en en-tête VoiceOver et sous-titre sous le compteur,
   cartes centrées dans l'espace compteur/panneau (pas de marge fixe), panneau fixe sans poignée ni geste, `id` par espèce,
   transition `.scale(0.96)` + opacité sur 0,2 s (opacité seule si « Réduire les animations »).
-- « Pas encore de carte » (`finSansCarte`, quand aucune carte n'est déclarée) : carte à débloquer (silhouette de l'espèce la plus commune,
-  cadenas, rareté seulement si la fermeture `rarete` la fournit), « 0 sur N dans le 94 », phrase Pescedex, seul bouton « Voir mon spot ».
-  Le composant de carte déclarée de L18 n'est pas exposé : la silhouette vient d'`ImageEspece`. À remplacer quand L18 l'expose.
+- « Pas encore de carte » (`finSansCarte`, quand aucune carte n'est déclarée) : « Cartouche nuit » (proposition C choisie par Titouan),
+  `CartouchePasEncoreView` : carte 69:100 fond `Palette.nuit` (nuit en clair comme en sombre), contour de poisson en pointillés
+  (`PoissonContour`, `StrokeStyle(dash:)`), cadenas en coin, vaguelettes, pastille « À débloquer », rareté seulement si la fermeture `rarete`
+  la fournit. Dessous : « 0 sur N dans le 94 », phrase Pescedex, seul bouton « Voir mon spot ». Plus d'`ImageEspece` ici.
+  Le contour est un dessin générique (pas propre à l'espèce : un pointillé ne se tire pas d'une image) ; l'espèce est dite par VoiceOver
+  (« Carte à débloquer : <espèce>, verrouillée »). Aux tailles d'accessibilité (AX1+), titre/pastille/rareté passent sous la carte.
+  À vérifier sur Mac : rendu clair/sombre, AX5, position du texte dans la carte, lisibilité des pointillés, taille du cadenas.
 - « Voir mon spot » appelle `voirMonSpot` (ou `choisirUnSpot`) et rien d'autre.
 - Logique testable : `FinDuTunnel` dans `LogiqueConseils.swift` (3 tests).
 

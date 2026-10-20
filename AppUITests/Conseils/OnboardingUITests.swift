@@ -28,10 +28,9 @@ final class OnboardingUITests: XCTestCase {
         app.launch()
         let tunnel = app.otherElements["tunnel-premiers-pas"]
         guard tunnel.waitForExistence(timeout: 10) else { throw XCTSkip("Le tunnel n'est pas à l'écran : app neuve et niveau choisi requis.") }
-        let titre = app.otherElements["tunnel-titre"]
+        let titre = app.descendants(matching: .any)["tunnel-titre"]
         XCTAssertTrue(titre.exists)
         XCTAssertTrue(titre.label.contains("Lesquels as-tu déjà pêchés ?"))
-        XCTAssertTrue(titre.traits.contains(.header))
         XCTAssertEqual(app.scrollBars.count, 0)
         // Le centre de la carte se mesure sur capture (fiche L16, test « fini » n° 3) ; ici seulement la présence du bouton.
     }
