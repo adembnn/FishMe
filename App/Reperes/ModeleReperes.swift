@@ -163,7 +163,7 @@ final class ModeleReperes {
         }
     }
 
-    /// Suppression : le repère devient une pierre tombale (pour que la suppression gagne sur l'autre iPhone). Sa note, ses
+    /// Suppression : le repère devient une pierre tombale (pour que la suppression gagne sur l'autre iPhone). Son nom, sa position, sa note, ses
     /// rattachements et ses photos sont vidés tout de suite ; les fichiers de photos sont effacés.
     func supprimer(id: UUID) async throws {
         guard !lectureSeule else { throw ErreurAjoutRepere.lectureSeule }
@@ -172,6 +172,8 @@ final class ModeleReperes {
         try await changer(id) { r in
             r.supprime = maintenant
             r.modifie = maintenant
+            r.nom = ""
+            r.position = Coordonnee(latitude: 0, longitude: 0)
             r.note = ""
             r.photos = []
             r.idsPrises = []

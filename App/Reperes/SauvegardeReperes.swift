@@ -187,13 +187,12 @@ actor SauvegardeReperes {
 
     nonisolated private static func repere(depuis e: CKRecord) -> Repere? {
         guard let id = UUID(uuidString: e.recordID.recordName) else { return nil }
-        let nom: String? = e.encryptedValues[Cle.nom]
+        guard let nom: String = e.encryptedValues[Cle.nom],
+              let latitude: Double = e.encryptedValues[Cle.latitude],
+              let longitude: Double = e.encryptedValues[Cle.longitude],
+              let cree: Date = e.encryptedValues[Cle.cree],
+              let modifie: Date = e.encryptedValues[Cle.modifie] else { return nil }
         let icone: String? = e.encryptedValues[Cle.icone]
-        let latitude: Double? = e.encryptedValues[Cle.latitude]
-        let longitude: Double? = e.encryptedValues[Cle.longitude]
-        let cree: Date? = e.encryptedValues[Cle.cree]
-        let modifie: Date? = e.encryptedValues[Cle.modifie]
-        guard let nom, let latitude, let longitude, let cree, let modifie else { return nil }
         let note: String? = e.encryptedValues[Cle.note]
         let prises: String? = e.encryptedValues[Cle.idsPrises]
         let photos: String? = e.encryptedValues[Cle.photos]
