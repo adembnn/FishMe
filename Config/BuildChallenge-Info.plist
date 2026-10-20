@@ -21,6 +21,11 @@
 	<true/>
 	<key>FishMeICloud</key>
 	<string>$(FISHME_ICLOUD)</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>waze</string>
+		<string>comgooglemaps</string>
+	</array>
 	<key>ReglesBaseURL</key>
 	<string></string>
 	<key>UIAppFonts</key>
@@ -35,6 +40,10 @@
 		<string>FishMeClignoteChiffre7.otf</string>
 		<string>FishMeClignoteChiffre8.otf</string>
 		<string>FishMeClignoteChiffre9.otf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
 	</array>
 	<key>UILaunchScreen</key>
 	<dict>

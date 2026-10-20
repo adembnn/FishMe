@@ -212,6 +212,8 @@ final class ParcoursApp {
         suivi.demarrer()
         moteur.abonne = suivi.abonne
         configurerReperes()
+        // L24 : le délégué d'application (BuildChallengeApp.swift) transmet les notifications CloudKit silencieuses du chat.
+        RelaisNotificationsChat.partage.recevoir = { [weak self] in await self?.notificationCloudKitRecue() }
         moteur.reprendre()
         if let c = moteur.enCours {
             await ecranVerrouille.reprendre(debut: c.sortie.debut, finLegale: c.finLegale, prises: moteur.nombrePrises)
