@@ -1,6 +1,7 @@
 import Core
 import PhotosUI
 import SwiftUI
+import UIKit
 import UniformTypeIdentifiers
 
 /// « Ma carte de pêche » : une copie personnelle de la carte (photo ou PDF), son millésime, l'association,

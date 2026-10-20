@@ -35,5 +35,5 @@ nonisolated enum TextesMaFederation {
     /// ⚠ à vérifier : le geste « du museau à l'extrémité de la queue » vient d'Adem, non confirmé à un texte officiel
     /// (Code de l'environnement ou arrêté). Tant qu'aucune source n'est citée, le guide se présente comme un repère pratique.
     static let mesureRepere = "Repère pratique, du museau à l'extrémité de la queue."
-    static let mesureDessin = "Dessin d'un poisson de profil. Une flèche va du museau à l'extrémité de la queue."
+    static let mesureDessin = "Poisson mesuré du museau au bout de la queue : une flèche va du museau à l'extrémité de la queue."
 }

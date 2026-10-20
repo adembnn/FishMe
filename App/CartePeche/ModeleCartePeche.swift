@@ -176,7 +176,9 @@ final class ModeleCartePeche: ObservableObject {
     func changerAssociation(_ texte: String) {
         guard var courante = fiche else { return }
         let net = String(texte.trimmingCharacters(in: .whitespacesAndNewlines).prefix(80))
-        courante.association = net.isEmpty ? nil : net
+        let nouvelle: String? = net.isEmpty ? nil : net
+        guard courante.association != nouvelle else { return }
+        courante.association = nouvelle
         enregistrerFiche(courante)
     }
 

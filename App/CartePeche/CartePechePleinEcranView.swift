@@ -121,8 +121,19 @@ private struct VisionneusePDF: UIViewRepresentable {
         vue.displayDirection = .vertical
         vue.backgroundColor = .white
         vue.document = PDFDocument(data: donnees)
+        masquerLesBarres(vue)
         return vue
     }
 
-    func updateUIView(_ vue: PDFView, context: Context) {}
+    func updateUIView(_ vue: PDFView, context: Context) { masquerLesBarres(vue) }
+
+    /// Aucun indicateur de défilement : PDFView crée son UIScrollView à l'affectation du document, d'où le parcours.
+    // ⚠ à vérifier sur Mac : arborescence interne de PDFView (le parcours est récursif pour ne pas en dépendre).
+    private func masquerLesBarres(_ vue: UIView) {
+        if let defilement = vue as? UIScrollView {
+            defilement.showsVerticalScrollIndicator = false
+            defilement.showsHorizontalScrollIndicator = false
+        }
+        for sousVue in vue.subviews { masquerLesBarres(sousVue) }
+    }
 }
