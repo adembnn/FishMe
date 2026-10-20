@@ -5,10 +5,18 @@ Tout ce lot a été écrit sans Mac ni Xcode. Rien n'a été compilé ni exécut
 ## À brancher (A, L25) : rien d'autre à faire dans App/Club/
 1. `ouvrir(url:)` de `RootView.swift` : pour l'hôte `club`, appeler `RelaisLienClub.partage.recevoir(url)` ; si vrai, ouvrir Communauté, page Club (la page montre la feuille « Rejoindre »).
 2. Effacement du compte : à la composition, `EffaceurClubs.enregistrer(service: <le même ServiceClubs que GestionClubs.partage>)` (pris par `RegistreEffaceurs.partage`, L21).
-3. Chat de club (L24) : un adaptateur qui lit `GestionClubs.partage.clubsPourChat()` (type `ClubPourChat`, cf. `ClubPourChat.swift` pour la table de correspondance avec `ClubChat` et `InterlocuteurChat`).
+3. Chat de club (L24) : branché dans `RootView` (`AnnuaireChatRacine.clubs()` lit `GestionClubs.partage.clubsPourChat()` ; la table de correspondance est du code, `ClubChat.init(_: ClubPourChat)` dans `App/Chat/AdaptateurClubChat.swift`).
 4. Migration : elle se lance d'elle-même quand la page Club s'ouvre (pas au démarrage de l'app). Si Adem la veut au lancement, appeler la même `MigrationClubs` depuis la racine (pas indispensable).
 5. Capacités Xcode : iCloud / CloudKit, conteneur déjà celui des Amis (`ConfigurationAmis.conteneurParDefaut`). Schéma `Club`, `Membre`, `CartePartageeClub`, `Signalement` à créer dans le tableau de bord CloudKit d'après `docs/reports/reseau/schema.md`, puis à déployer en production.
 6. `MotifSignalement` : L23 a sa propre liste (« haine » contre « harcelement » chez L21) ; à harmoniser à la composition.
+
+## Membres sans `idCloudKit` (traité)
+Un membre sans `idCloudKit` n'est plus listé avec un identifiant vide qui bloque l'admission des autres.
+- `GestionClubs.resoudreIdentites` lit son `ProfilPublic` (par `p-<surnom>`, `ResolveurIdentiteCloudKit`) et retient le `creatorUserRecordID` de cet enregistrement (jamais un champ reçu), gardé dans le cache (`EtatCacheClubs.identites`).
+- Tant qu'il est inconnu : « En attente de son profil » dans la liste des membres, aucune erreur, exclu de l'admission au chat sans bloquer les autres.
+- Nouvel essai : à chaque ouverture de la page (`charger(ouverture: true)`), puis à chaque rafraîchissement de 8 s (profil introuvable : pas avant 60 s ; panne réseau : réessai immédiat au tour suivant), et depuis le chat (`actualiserClubs`).
+- Les membres de la démo locale (`demo-…`) ne sont jamais résolus ni admis. `GestionClubs.init(resolveur:)` est optionnel (`nil` : pas de résolution).
+- Tests : `AppTests/Club/IdentiteMembresTests.swift`. À vérifier au Mac : voir `docs/reports/branchements-l25.md`.
 
 ## Écarts avec la fiche (voir R2, `migration-clubs.md`)
 - Un drapeau par club (`clubs.migre.<uuid>`) en plus du drapeau global `clubs.migres` : si la migration échoue au 3e club elle ne rejoue pas les 2 premiers.

@@ -40,9 +40,27 @@ Ces points demandent d'écrire dans un dossier qui n'est pas à L25. Chaque lign
 | N1 : décor sur le widget | `WidgetAquarium/` | `publierAquarium` n'envoie pas le décor |
 | L18 : `regionDe:` de `PescedexModele` (« Ma région » est grisé) | `RootView.init`, ligne `PescedexModele(depot:services:)` | table prête dans Core (`RegionsFrance.region(deDepartement:)`), à brancher avec le Pescedex pour éviter un conflit avec l'autre agent |
 | L23 : bouton « Publier » depuis une carte du Pescedex | `App/Collection/` | Pescedex |
-| L22 : chat de club, membres sans `idCloudKit` | | listés avec un identifiant vide : pas admissibles dans la zone du chat |
+| ~~L22 : chat de club, membres sans `idCloudKit`~~ | | RÉSOLU (branche `lot/club-membres`, voir « Membres de club sans idCloudKit » ci-dessous) |
 | L19 : `BlocReglesView` dans `App/Style/BlocRegles/` | | à vérifier avec `scripts/verif.sh` (frontières) |
 | Commentaire périmé dans `App/Club/ModelesClub.swift` ligne 118 (« L23 a sa propre liste ») | `App/Club/` | faux depuis l'alignement ; à effacer par L22 |
+
+## Membres de club sans `idCloudKit` (L22 -> L24) : traité, à vérifier sur le Mac
+Problème : un membre sans `idCloudKit` (adhésion lue sans créateur, cache ancien, profil CloudKit pas encore créé) arrivait dans le chat avec un identifiant vide ; le fondateur le passait à `shareParticipant(forUserRecordID:)`, qui échoue et bloquait l'admission de TOUS les autres.
+
+Solution (écrite sans Mac, rien compilé ni exécuté) :
+- **Résolution paresseuse** : `GestionClubs.resoudreIdentites` (`App/Club/GestionClubs.swift`) lit le `ProfilPublic` du membre (`recordName` = `p-<surnom>`, donc recherche par surnom sans ambiguïté) via `ResolveurIdentiteCloudKit` (`App/Club/IdentiteMembres.swift`) et retient le `creatorUserRecordID` de CET enregistrement, jamais un champ reçu. L'alias `__defaultOwner__` et le vide sont refusés. Le résultat est gardé dans le cache des clubs (`EtatCacheClubs.identites`, optionnel : un vieux fichier se relit).
+- **En attente, sans erreur** : tant que le compte est inconnu, `MembresClubView` écrit « En attente de son profil » ; `MembrePourChat.enAttenteDeProfil` / `InterlocuteurChat.enAttenteDeProfil` ; le chat de club (fondateur) affiche « En attente du profil de … ».
+- **Admission** : `GestionChat.comptesAAdmettre` ne garde que les vrais comptes connus, sans doublon ni moi ; un membre en attente ne bloque personne. `ServiceChatCloudKit.lienDInvitation` ignore aussi un participant qu'iCloud ne sait pas inviter (`unknownItem`, `invalidArguments`, `participantMayNeedVerification`) au lieu de tout abandonner.
+- **Nouvel essai** : à chaque ouverture de la page Club (`charger(ouverture: true)`), toutes les 8 s tant qu'elle est ouverte (profil introuvable : pas avant 60 s ; panne réseau : aucun essai compté, donc réessai au tour suivant), et depuis le chat à chaque tirer-pour-rafraîchir, notification ou retour du réseau (`AnnuaireChat.actualiserClubs`, branché dans `AnnuaireChatRacine`). Si la liste des comptes à admettre change pendant qu'une conversation est ouverte, son lien est redemandé.
+- **Démo** : un membre `demo-…` (club démo local) n'est jamais résolu ni admis (`IdentiteMembre.estExemple`, `InterlocuteurChat.estExemple`) ; le club « Exemple » du chat reste en lecture seule.
+- **Adaptateur** : la table de `ClubPourChat.swift` est maintenant du code testable, `ClubChat.init(_: ClubPourChat)` dans `App/Chat/AdaptateurClubChat.swift` ; `RootView` appelle `ClubChat($0)`.
+- Tests : `AppTests/Club/IdentiteMembresTests.swift`, `AppTests/Chat/ChatMembresClubTests.swift` (services factices, non exécutés).
+
+À vérifier sur le Mac :
+- Lecture publique d'un `ProfilPublic` d'un autre compte : `creatorUserRecordID.recordName` doit être le même identifiant que celui que `shareParticipant(forUserRecordID:)` attend (et que `ownerName` des zones partagées). Si CloudKit rend l'alias `__defaultOwner__` pour ses propres enregistrements, c'est refusé, volontairement.
+- Codes d'erreur de `shareParticipant` pour un compte inconnu (`.unknownItem` ? `.invalidArguments` ?) ; ajuster la liste dans `ServiceChatCloudKit`.
+- Reste du risque : un `Membre` qui prétendrait un `profil` qui n'est pas le sien inviterait le vrai propriétaire de ce profil ; l'invitation ne s'ouvre que si la personne l'accepte (`publicPermission = .none`). Quitter ou être retiré d'un club ne retire toujours pas du `CKShare` (inchangé).
+- Textes en AX5 (« En attente de son profil », bandeau du chat) : retour à la ligne sans coupure, aucune barre de défilement.
 
 ## Câblage N6 dans la carte et la session : à vérifier au build
 - `appuiLongPourReperer` : `LongPressGesture.sequenced(before: DragGesture)` avec `including: .all` posé à côté de `toucherPourPoser` ; vérifier sur iPhone qu'il ne bloque ni le glissement ni le pincement de `Map`, que le toucher d'une épingle ne déclenche pas aussi l'appui long, et que le motif `case .second(true, let doigt?)` compile.
