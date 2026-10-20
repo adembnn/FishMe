@@ -2,6 +2,22 @@
 
 Écrit le 19 octobre 2026 par Titouan (avec ses agents Claude). Titouan n'a pas de Mac : **tout le Swift ci-dessous a été écrit sans compilateur**. Rien n'est compilé, aucun test n'est exécuté, rien n'est testé sur iPhone. Sullyvan compile et teste (répartition du 19 octobre, option C), Adem tranche et branche (L25).
 
+## 0 ter. Mise à jour du 20 octobre : UNE BRANCHE À COMPILER, `integration/fusion-20oct`
+
+**Pour Adem et Sullyvan : compilez cette seule branche.** Elle contient tout, déjà fusionné sans conflit de code : `lot/racine` (L25 : tout est branché dans `RootView.swift`, `BuildChallengeApp.swift` et `Config/`), plus L16, L17, L21, L22, L23, L24, N1 à N6, les accroches de N2 dans le Pescedex (`lot/envies-accroches`), S2 (textes juridiques régénérés), H1 (atelier) et D2 température de l'eau (`lot/hubeau-temperature`), D5 (`lot/hubeau-d5`). Lisez `docs/reports/branchements-l25.md` : ce qui est branché, ce qui ne l'est pas, ce qui reste à faire à la main dans Xcode (capacités iCloud + Push, Background Modes, `PrivacyInfo.xcprivacy`, types et index CloudKit, retirer la ligne d'exception de `AstuceAjouterWidget.swift` dans `project.pbxproj`, exclure `Reperes/LISEZMOI.md` du bundle).
+
+**Vérifié :** les 519 tests du paquet `Packages/Core` passent dans Docker (Swift 6.0, Linux) sur cette branche ; un test de vitesse existant (`ReglesTests.swift:321`, seuil de 1 s) peut échouer quand la machine est chargée. Le scan des noms de types ne montre aucune collision de premier niveau. **Non vérifié :** tout `App/`, `AppTests/`, `AppUITests/` (jamais compilé). Quatre relectures « compilateur humain » ont été faites (C:\wevues\ : compilo-*.md) et leurs correctifs sont appliqués.
+
+**Visuels choisis par Titouan :** pastille de fréquentation = silhouettes (C), poisson du guide de mesure = dessin naturaliste (C), carte « Pas encore de carte » = cartouche nuit (C). Décors d'aquarium : aucune proposition retenue, la galerie ne montre que « Rivière » tant que les images `fond-<skin>-grand` n'existent pas. Icônes des repères : pas de choix, symboles Apple en attendant.
+
+**Décisions de Titouan (20 octobre) :** repères sauvegardés dans l'iCloud privé chiffré (phrase de `CLAUDE.md` à réécrire) avec 3 gratuits en attendant le modèle économique, hors du plafond de 60 éléments, « Toujours utiliser » jamais mémorisé pour un repère ; décors de départ : rivière (0 espèce), étang (5), grotte (un légendaire) ; pas d'alertes N3b ; voisinage D5 accepté et les 82 stations sans nom passées en « pas recalée » (à faire dans le script) ; la température de l'eau n'affiche rien plutôt qu'une mesure périmée.
+
+**D2 température :** `stations-temperature.json` (872 stations dont 24 en service sur 30 jours, surtout bassin de la Loire, Charente, Ain, Durance, Hérault ; aucune sur la Marne, la Seine, la Garonne) produit par `outils/hubeau/stations_temperature.py`, hors git. Licence Ouverte (Etalab) : mention « Données : Hub'Eau / Naïades, Licence Ouverte (Etalab) » dans les crédits. À publier dans la release privée `donnees` et à ajouter à `donnees.sh`.
+
+**D5 France entière :** 8 003 stations sur 8 234 recalées (97,2 %) avec la règle de voisinage ; 79 % sans. Vérificateur corrigé (tracé sans nom = station sans eau). Reste : vérification visuelle sur carte (critères 2, 3, 4 de D5), le fichier du département 32 dépasse 400 Ko, 5 départements en brouillon (75, 77, 92, 93, 94) à relire.
+
+**Questions pour le juriste :** `docs/legal/questions-juriste.md` (15 points). **Version des CGU : 4** (ré-acceptation). Phrases à remplacer dans `App/` : `docs/legal/remplacements-app.md` (12 remplacements, dont l'attribution CC BY 4.0 de la liste de mots interdits).
+
 ## 0 bis. Mise à jour de la nuit du 19 octobre : à lire avant tout le reste (les hashes de ci-dessous et du tableau 1 sont remplacés par ceux-ci)
 
 **État en une phrase :** huit branches de lots corrigées après revue, six nouvelles fonctions (N1 à N6) écrites sans Mac, une fusion simulée de tout sans conflit, et **508 tests du paquet `Packages/Core` exécutés et passés dans Docker (Swift 6.0 sous Linux)** sur cette fusion. **Le code de `App/` n'est ni compilé ni exécuté nulle part** : c'est le travail de Sullyvan (compiler, tests d'app et d'interface) et d'Adem (branchement L25).
