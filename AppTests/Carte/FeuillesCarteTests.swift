@@ -109,18 +109,29 @@ struct FeuillesCarteTests {
 
     // MARK: Pastille de fréquentation
 
-    @Test func laPastilleEstVerteOrangeRougeOuGrise() {
-        #expect(EtatPastille.pour(.calme) == .vert)
-        #expect(EtatPastille.pour(.normal) == .orange)
-        #expect(EtatPastille.pour(.charge) == .rouge)
-        #expect(EtatPastille.pour(nil) == .gris)
+    @Test func laPastilleSuitLeNiveau() {
+        #expect(EtatPastille.pour(.calme) == .calme)
+        #expect(EtatPastille.pour(.normal) == .moyen)
+        #expect(EtatPastille.pour(.charge) == .frequente)
+        #expect(EtatPastille.pour(nil) == .inconnu)
     }
 
-    @Test func laPastilleNeDitAucunePhraseEtChaqueEtatAUnSymboleDifferent() {
-        let symboles = EtatPastille.allCases.map(\.symbole)
-        #expect(Set(symboles).count == symboles.count)
-        // Le mot ne sert qu'à VoiceOver : un seul mot, jamais une phrase.
-        #expect(EtatPastille.allCases.allSatisfy { !$0.mot.contains(" ") })
+    @Test func laPastilleDessineUnDeuxOuTroisPecheursSelonLeNiveau() {
+        #expect(EtatPastille.calme.silhouettes == 1)
+        #expect(EtatPastille.moyen.silhouettes == 2)
+        #expect(EtatPastille.frequente.silhouettes == 3)
+        #expect(EtatPastille.inconnu.silhouettes == 0)
+        for etat in EtatPastille.allCases {
+            #expect(PastilleFrequentationView.placement(etat.silhouettes).count == etat.silhouettes)
+        }
+    }
+
+    @Test func leLibelleVoiceOverEstCompletEtDifferentParEtat() {
+        #expect(EtatPastille.calme.libelle == "Fréquentation calme")
+        #expect(EtatPastille.moyen.libelle == "Fréquentation moyenne")
+        #expect(EtatPastille.frequente.libelle == "Fréquentation forte")
+        let libelles = EtatPastille.allCases.map(\.libelle)
+        #expect(Set(libelles).count == libelles.count)
     }
 
     // MARK: Vignettes de ses propres prises
