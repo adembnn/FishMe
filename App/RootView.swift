@@ -1507,6 +1507,16 @@ private struct ProfilEmplacement<Reglages: View>: View {
                     NavigationLink { MesRecordsEmplacement(app: app) } label: {
                         Label("Mes records", systemImage: "book.closed")
                     }
+                    // N6 : repères privés (sur l'iPhone et dans l'iCloud privé chiffré du pêcheur, jamais partagés).
+                    NavigationLink { ListeReperesView() } label: {
+                        Label("Mes repères", systemImage: "mappin.circle")
+                    }
+                    // N5 : la fédération du département du spot, la carte de pêche et les numéros utiles.
+                    NavigationLink {
+                        MaFederationView(codeDepartement: (app.spotCourant ?? app.moteur.spotGratuit)?.departement.code ?? Departement.inconnu.code)
+                    } label: {
+                        Label("Ma fédération", systemImage: "building.columns")
+                    }
                     NavigationLink { MesStatistiquesEmplacement(app: app) } label: {
                         Label("Mes statistiques", systemImage: "chart.bar.xaxis")
                     }
