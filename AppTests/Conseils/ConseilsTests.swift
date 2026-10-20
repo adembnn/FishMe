@@ -1,5 +1,6 @@
 import Core
 import Foundation
+import SwiftUI
 import Testing
 @testable import BuildChallenge
 
@@ -134,6 +135,18 @@ struct ConseilsTests {
         #expect(FinDuTunnel.aDebloquer(especes: liste, libelleRarete: { _ in nil })?.espece.id == "silure-glane")
         #expect(FinDuTunnel.aDebloquer(especes: liste, libelleRarete: { _ in "Rare" })?.espece.id == "silure-glane")
         #expect(FinDuTunnel.aDebloquer(especes: [], libelleRarete: { _ in "Commun" }) == nil)
+    }
+
+    @Test func cartoucheNuitDitLEspeceEtLeCadenasAVoiceOver() {
+        #expect(CartouchePasEncoreView.libelleVoiceOver(espece: "Gardon") == "Carte à débloquer : Gardon, verrouillée")
+    }
+
+    @Test func contourDuCartoucheTientDansLaCarteAuFormat69Sur100() {
+        let largeur: CGFloat = 138
+        let carte = CGRect(x: 0, y: 0, width: largeur, height: largeur / Gabarit.rapportCarte)
+        let boite = PoissonContour().path(in: carte).boundingRect
+        #expect(!boite.isEmpty)
+        #expect(carte.insetBy(dx: 4, dy: 4).contains(boite))
     }
 
     @Test func compteurDeLaZoneDitZeroSurNDansLeDepartement() {
