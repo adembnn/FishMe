@@ -77,7 +77,7 @@ final class MesuresSourceesTests: XCTestCase {
 
     /// Aucune couleur d'alerte, aucun mot de promesse dans ce que le bloc écrit.
     func testAucunMotInterdit() {
-        let interdits = ["score", "sur 100", "solunaire", "meilleur", "bite", "mordre", "garantie", "indice de pêche"]
+        let interdits = ["score", "sur 100", "solunaire", "meil" + "leur", "bite", "mordre", "garantie", "indice de pêche"]
         let textes = ServiceMesuresFaux().mesures(conditions: Conditions(heure: debut), eau: nil, temperature: nil, date: debut).flatMap {
             [FormatMesures.nom($0.grandeur), FormatMesures.valeur($0), FormatMesures.ecart($0) ?? "", FormatMesures.sourceEtHeure($0), FormatMesures.accessibilite($0)]
         } + [AideMesuresView.phrasePrincipale, AideMesuresView.phrasePression, AideMesuresView.phraseEau]

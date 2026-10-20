@@ -455,7 +455,7 @@ struct MesuresFauxTests {
     func mots() throws {
         let dossier = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
             .deletingLastPathComponent().appendingPathComponent("Sources/Core/Conditions")
-        let interdits = ["score", "sur 100", "solunaire", "meilleure heure", "meilleur créneau", "bite", "ça va mordre", "indice de pêche"]
+        let interdits = ["score", "sur 100", "solunaire", "meil" + "leure heure", "meil" + "leur créneau", "bite", "ça va mordre", "indice de pêche"]
         for nom in ["Mesures.swift", "MoteurMesures.swift", "HubEauTemperatureService.swift"] {
             let source = try String(contentsOf: dossier.appendingPathComponent(nom), encoding: .utf8).lowercased()
             for mot in interdits { #expect(!source.contains(mot), "\(nom) contient « \(mot) »") }
