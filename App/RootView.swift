@@ -449,7 +449,9 @@ final class ParcoursApp {
         }
         .sorted { $0.rarete > $1.rarete }
         PontAquariumWidget.publier(poissons: Array(poissons.prefix(InstantaneAquarium.plafond)),
-                                   especes: poissons.count, estPro: suivi.abonne)
+                                   especes: poissons.count, estPro: suivi.abonne,
+                                   // N1 : le décor effectivement affiché (repli si saison finie ou Pro perdu), jamais le choix brut.
+                                   skin: skinAffiche().valeur)
     }
 
     // MARK: Décors de l'aquarium (N1) // ⚠ à vérifier (écrit sans Mac)

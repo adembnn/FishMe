@@ -16,7 +16,7 @@ nonisolated enum PontAquariumWidget {
     /// pas seulement 5 : le pêcheur choisit ceux qui nagent par « Modifier le widget ». Passer aussi le nom commun
     /// de chaque espèce dans `Poisson.nom` (« Brochet ») : la liste de choix l'affiche, le widget jamais.
     /// Remplace les poissons, le nombre d'espèces et l'abonnement ; garde les rations et le dernier repas du fichier.
-    static func publier(poissons: [InstantaneAquarium.Poisson], especes: Int, estPro: Bool) {
+    static func publier(poissons: [InstantaneAquarium.Poisson], especes: Int, estPro: Bool, skin: String? = nil) {
         let actuel = DepotAquariumWidget.lire()
         let neuf = InstantaneAquarium(
             poissons: poissons,
@@ -24,7 +24,9 @@ nonisolated enum PontAquariumWidget {
             rations: actuel.rations,
             estPro: estPro || proForce,
             dernierRepas: actuel.dernierRepas,
-            misAJour: .now
+            misAJour: .now,
+            // Décor déjà corrigé par l'app (N1). Sans valeur : on garde celui du fichier.
+            skin: skin ?? actuel.skin
         )
         ecrireEtRecharger(neuf)
     }

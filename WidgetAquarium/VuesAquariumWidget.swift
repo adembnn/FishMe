@@ -1,5 +1,6 @@
 import AppIntents
 import SwiftUI
+import UIKit
 import WidgetKit
 
 // Cible widget seulement. Les vues du widget « Mon aquarium » : l'eau, les poissons, le bouton nourrir, l'écran verrouillé.
@@ -40,6 +41,8 @@ private func partPoisson(_ famille: WidgetFamily) -> Double {
 /// Le fond du widget : le décor rendu en 3D (eau, plantes, galets) ; un simple dégradé en rendu teinté.
 private struct FondEau: View {
     let famille: WidgetFamily
+    /// Décor (N1) ; `nil` = fond d'origine. L'image du décor absente du widget = repli sur `fond-<format>`.
+    var skin: String? = nil
     /// Faux coupe l'animation (rendu en image : `ImageRenderer` ne fait pas tourner les chronos).
     var anime: Bool = true
     @Environment(\.widgetRenderingMode) private var rendu
@@ -64,11 +67,13 @@ private struct FondEau: View {
     }
 
     private var nomFond: String {
-        switch famille {
-        case .systemSmall: "fond-petit"
-        case .systemMedium: "fond-moyen"
-        default: "fond-grand"
+        let format: FondWidget.Format = switch famille {
+        case .systemSmall: .petit
+        case .systemMedium: .moyen
+        default: .grand
         }
+        // ⚠ à vérifier : UIImage(named:) dans l'extension cherche dans son propre bundle (FondsWidget.xcassets).
+        return FondWidget.nomImage(skin: skin, format: format, existe: { UIImage(named: $0) != nil })
     }
 }
 
@@ -312,12 +317,12 @@ struct VueAquariumWidget: View {
     var body: some View {
         if fondVisible {
             ZStack {
-                FondEau(famille: famille)
+                FondEau(famille: famille, skin: instantane.skinEffectif)
                 contenu
             }
         } else {
             contenu
-                .containerBackground(for: .widget) { FondEau(famille: famille) }
+                .containerBackground(for: .widget) { FondEau(famille: famille, skin: instantane.skinEffectif) }
         }
     }
 

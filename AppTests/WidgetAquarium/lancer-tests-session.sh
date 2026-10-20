@@ -9,7 +9,7 @@ trap 'rm -rf "$TRAVAIL"' EXIT
 mkdir -p "$TRAVAIL/Sources/WidgetSessionLogique" "$TRAVAIL/Tests/WidgetSessionLogiqueTests"
 cp "$RACINE/Widget/Session/EtatSession.swift" "$RACINE/WidgetAquarium/DepotSessionWidget.swift" "$TRAVAIL/Sources/WidgetSessionLogique/"
 # DepotSessionWidget cite DepotAquariumWidget.groupe : on prend le fichier qui le définit.
-cp "$RACINE/WidgetAquarium/InstantaneAquarium.swift" "$TRAVAIL/Sources/WidgetSessionLogique/"
+cp "$RACINE/WidgetAquarium/InstantaneAquarium.swift" "$RACINE/WidgetAquarium/FondWidget.swift" "$TRAVAIL/Sources/WidgetSessionLogique/"
 cp "$ICI/SessionWidgetEssais.swift" "$TRAVAIL/Tests/WidgetSessionLogiqueTests/"
 cat > "$TRAVAIL/Package.swift" <<'PAQUET'
 // swift-tools-version: 6.0

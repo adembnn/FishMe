@@ -60,6 +60,13 @@ nonisolated public struct InstantaneAquarium: Codable, Hashable, Sendable {
     /// Dernière ration donnée (depuis l'app ou le widget). Sert à faire monter les poissons.
     public var dernierRepas: Date?
     public var misAJour: Date
+    /// Décor d'aquarium (N1) : l'identifiant DÉJÀ corrigé par l'app (`ChoixSkin.affiche` : saison finie ou Pro perdu = repli).
+    /// Absent d'un ancien fichier = `riviere` (décor de départ). Le widget ne calcule ni date ni abonnement.
+    /// Décodage tolérant : champ optionnel, donc un fichier sans `skin` se lit.
+    public var skin: String?
+
+    /// Le décor à dessiner : `skin` s'il est renseigné, sinon le décor de départ.
+    public var skinEffectif: String { FondWidget.identifiantSain(skin) }
 
     /// Le fichier porte tout le Pescedex, jusqu'à 200 entrées. Ce que le widget montre est bien plus petit
     /// (voir `limiteAffichee`) : le reste ne sert qu'à la liste de choix.
@@ -85,13 +92,14 @@ nonisolated public struct InstantaneAquarium: Codable, Hashable, Sendable {
         return resultat.isEmpty ? Array(poissons.prefix(limite)) : resultat
     }
 
-    public init(poissons: [Poisson], especes: Int, rations: Int, estPro: Bool, dernierRepas: Date? = nil, misAJour: Date = .now) {
+    public init(poissons: [Poisson], especes: Int, rations: Int, estPro: Bool, dernierRepas: Date? = nil, misAJour: Date = .now, skin: String? = nil) {
         self.poissons = Array(poissons.prefix(Self.plafond))
         self.especes = max(especes, 0)
         self.rations = max(rations, 0)
         self.estPro = estPro
         self.dernierRepas = dernierRepas
         self.misAJour = misAJour
+        self.skin = skin
     }
 
     /// Avant la première prise : l'aquarium est vide, le widget invite à pêcher.

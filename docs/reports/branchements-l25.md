@@ -37,7 +37,6 @@ Ces points demandent d'écrire dans un dossier qui n'est pas à L25. Chaque lign
 | Quoi | Où | Pourquoi / quoi faire |
 |---|---|---|
 | N3 : ligne « Eau » | `stations-temperature.json` | le fichier est produit par `outils/hubeau/stations_temperature.py` (lot D2B, branche `lot/hubeau-temperature`, 872 stations dont 24 en service sur 30 jours) : l'ajouter aux ressources de l'app et à `donnees.sh`, le code le cherche dans le bundle ; sans lui, pression et débit seulement. Mention à mettre dans les crédits : « Données : Hub'Eau / Naïades, Licence Ouverte (Etalab) » |
-| N1 : décor sur le widget | `WidgetAquarium/` | `publierAquarium` n'envoie pas le décor |
 | L18 : `regionDe:` de `PescedexModele` (« Ma région » est grisé) | `RootView.init`, ligne `PescedexModele(depot:services:)` | table prête dans Core (`RegionsFrance.region(deDepartement:)`), à brancher avec le Pescedex pour éviter un conflit avec l'autre agent |
 | L23 : bouton « Publier » depuis une carte du Pescedex | `App/Collection/` | Pescedex |
 | L22 : chat de club, membres sans `idCloudKit` | | listés avec un identifiant vide : pas admissibles dans la zone du chat |
@@ -53,6 +52,12 @@ Ces points demandent d'écrire dans un dossier qui n'est pas à L25. Chaque lign
 - Colonne de droite à 5 boutons : hauteur, AX5 et 44 pt à re-mesurer ; bandeau de session à trois boutons en AX5 ; écran de session avec le bouton « Ajouter un repère ici » (le chrono est positionné depuis le haut, le bouton ajoute 44 pt en bas).
 - `Modal.nouveauRepere(Coordonnee)` garde la coordonnée en mémoire dans la file d'attente des feuilles, jamais sur disque ni dans un journal.
 - Pas de photo du repère dans `PrisesDuPecheurCarte`, rien de nouveau dans `CacheCarte` ni dans le lieu flou : à relire au build.
+
+## N1 : décor sur le widget (branché, écrit sans Mac, jamais compilé ni testé sur iPhone)
+- `InstantaneAquarium.skin: String?` (absent = `riviere`, `skinEffectif`) ; `publierAquarium()` envoie `skinAffiche().valeur` (repli saison finie / Pro perdu) et le pont recharge la timeline ; `auChangement` de la galerie rappelle déjà `publierAquarium()`.
+- `WidgetAquarium/FondWidget.swift` (pur, aussi copié dans `lancer-tests*.sh`) : `fond-<skin>-<petit|moyen|grand>`, repli `fond-<format>` si l'image manque dans `FondsWidget.xcassets`. Tests : `AppTests/WidgetAquarium/FondWidgetTests.swift`.
+- Xcode : ajouter `FondWidget.swift` aux cibles app ET widget si les groupes ne sont pas synchronisés (comme `InstantaneAquarium.swift`) ; `FondWidgetTests.swift` à la cible de tests. Les images `fond-<skin>-<format>` des décors sont à poser dans `FondsWidget.xcassets` (sans elles le widget garde le fond d'origine).
+- À vérifier sur Mac : `UIImage(named:)` dans l'extension trouve bien `FondsWidget.xcassets` ; changer de décor change le widget en moins d'une minute ; fin du Pro = retour du widget au décor gagné.
 
 ## À faire à la main dans Xcode (pas de .xcodeproj touché ici)
 1. Capacités de la cible app : iCloud (CloudKit, conteneur `iCloud.ai.mwm.build.challenge.team.01`, déjà dans le fichier) et Push Notifications (le fichier `BuildChallenge.entitlements` a maintenant `aps-environment`). Background Modes : cocher « Remote notifications » (la clé est dans l'Info.plist). Plan B : les variantes de `Config/planb/` n'ont pas `aps-environment`, c'est voulu (compte gratuit).
