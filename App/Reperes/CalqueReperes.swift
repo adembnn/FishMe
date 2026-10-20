@@ -46,7 +46,7 @@ struct InterrupteurCalqueReperes: View {
 
     var body: some View {
         Button { allume.toggle() } label: {
-            Image(systemName: "mappin.and.ellipse")
+            Image(systemName: "signpost.right")
                 .font(Police.taille(20, .heavy))
                 .foregroundStyle(allume ? Palette.surMarine : Palette.marine)
                 .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)

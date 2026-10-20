@@ -305,7 +305,11 @@ final class ParcoursApp {
             geo: core.geo, chargeur: .embarque(),
             prises: { [weak self] in self?.pescedex?.detaillees.map(\.prise) ?? [] },
             photosDesPrises: depot.map { PhotosDesPrisesRacine(depot: $0) },
-            ouvrirPaywall: { [weak self] in self?.montrer(.paywall(.reperes)) })
+            ouvrirPaywall: { [weak self] in self?.montrer(.paywall(.reperes)) },
+            vuePaywall: { [weak self] fermer in
+                guard let self else { return AnyView(EmptyView()) }
+                return AnyView(self.paywall(.reperes, fermer: fermer))
+            })
         ContexteReperes.courant.abonne = suivi.abonne
         Task { await ModeleReperes.partage.charger() }
     }

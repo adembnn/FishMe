@@ -18,6 +18,7 @@ struct NouveauRepereView: View {
     @State private var photos: [Data] = []
     @State private var enCours = false
     @State private var message: String?
+    @State private var paywallOuvert = false
 
     var body: some View {
         ScrollView {
@@ -46,6 +47,14 @@ struct NouveauRepereView: View {
         .onChange(of: choix) { _, nouveaux in Task { await charger(nouveaux) } }
         .task { await modele.chargerSiBesoin() }
         .interactiveDismissDisabled(enCours)
+        .sheet(isPresented: $paywallOuvert) {
+            if let vue = contexte.vuePaywall { vue { paywallOuvert = false } }
+        }
+    }
+
+    /// Le paywall : présenté ici s'il y a une vue à présenter (la feuille est déjà ouverte), sinon par la racine.
+    private func demanderPro() {
+        if contexte.vuePaywall != nil { paywallOuvert = true } else { contexte.ouvrirPaywall?() }
     }
 
     /// Dit avant la saisie que la limite gratuite est atteinte (le contrôle de fond se refait à l'enregistrement).
@@ -58,8 +67,8 @@ struct NouveauRepereView: View {
                 Text(TextesReperes.paywallTitre).font(Police.sousTitre).foregroundStyle(Palette.encre)
                 Text(TextesReperes.paywallTexte).font(Police.detail).foregroundStyle(Palette.encre)
                     .fixedSize(horizontal: false, vertical: true)
-                if let ouvrirPaywall = contexte.ouvrirPaywall {
-                    Button(TextesReperes.voirPro) { ouvrirPaywall() }
+                if contexte.vuePaywall != nil || contexte.ouvrirPaywall != nil {
+                    Button(TextesReperes.voirPro) { demanderPro() }
                         .buttonStyle(.secondaire)
                 }
             }
@@ -115,7 +124,7 @@ struct NouveauRepereView: View {
             } catch ErreurAjoutRepere.paywall {
                 // La saisie reste à l'écran : le paywall s'ouvre par-dessus.
                 message = TextesReperes.paywallTexte
-                contexte.ouvrirPaywall?()
+                demanderPro()
             } catch ErreurAjoutRepere.plafond {
                 message = TextesReperes.plafondTexte
             } catch ErreurAjoutRepere.invalide(let erreur) {

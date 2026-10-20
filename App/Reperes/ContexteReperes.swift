@@ -1,6 +1,7 @@
 import Core
 import Foundation
 import Observation
+import SwiftUI
 
 /// Les photos nettoyées des prises, lues dans le dépôt de `App/Collection/`. N6 ne l'importe pas : L25 branche un protocole
 /// de ce nom entre les deux dossiers (demande 5 de la fiche). Sans lui, la fiche d'un repère n'affiche que ses propres photos.
@@ -27,18 +28,22 @@ final class ContexteReperes {
     /// Point d'entrée « règles à cette coordonnée » de L17. `nil` : le bouton « Règles ici » est caché.
     @ObservationIgnored private(set) var reglesIci: ((Coordonnee) -> Void)?
     @ObservationIgnored private(set) var ouvrirPaywall: (() -> Void)?
+    /// Le paywall présenté PAR la feuille « Nouveau repère » elle-même (câblage L25 : une feuille déjà ouverte ne peut pas en
+    /// laisser la racine présenter une autre). Reçoit la fermeture à appeler pour le refermer. `nil` : repli sur `ouvrirPaywall`.
+    @ObservationIgnored private(set) var vuePaywall: ((@escaping () -> Void) -> AnyView)?
     /// À mettre à jour à chaque changement d'abonnement (`SuiviAbonnement.abonne`).
     var abonne = false
 
     func configurer(geo: any ServiceGeo, chargeur: ChargeurRegles, prises: @escaping () -> [Prise],
                     photosDesPrises: (any PhotosDesPrises)? = nil, reglesIci: ((Coordonnee) -> Void)? = nil,
-                    ouvrirPaywall: (() -> Void)? = nil) {
+                    ouvrirPaywall: (() -> Void)? = nil, vuePaywall: ((@escaping () -> Void) -> AnyView)? = nil) {
         self.geo = geo
         self.chargeur = chargeur
         self.prises = prises
         self.photosDesPrises = photosDesPrises
         self.reglesIci = reglesIci
         self.ouvrirPaywall = ouvrirPaywall
+        self.vuePaywall = vuePaywall
     }
 }
 
