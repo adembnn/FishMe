@@ -80,10 +80,7 @@ struct FicheRepereView: View {
 
     private var entete: some View {
         HStack(alignment: .center, spacing: Espace.m) {
-            Image(systemName: TextesReperes.symbole(courant.icone))
-                .font(Police.taille(34, .heavy))
-                .foregroundStyle(courant.icone == .danger ? Palette.alerte : Palette.marine)
-                .accessibilityHidden(true)
+            IconeRepereView(type: courant.icone, taille: Gabarit.zoneTactile, suitLeTexte: true, decoratif: true)
             VStack(alignment: .leading, spacing: Espace.xs) {
                 Text(courant.nom).font(Police.titre).foregroundStyle(Palette.encre)
                     .fixedSize(horizontal: false, vertical: true)

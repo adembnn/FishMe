@@ -17,17 +17,20 @@ struct CalqueReperes: MapContent {
                                                                                          longitude: repere.position.longitude),
                        anchor: .bottom) {
                 Button { ouvrir(repere) } label: {
-                    Image(systemName: TextesReperes.symbole(repere.icone))
-                        .font(Police.taille(26, .heavy))
-                        .foregroundStyle(Palette.surMarine)
-                        .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                        .background(repere.icone == .danger ? Palette.alerte : Palette.marine, in: Circle())
+                    // Épingle de 32 pt qui ne grossit pas avec le texte. Cadre de 44 pt (cible tactile) aligné en bas :
+                    // le bas du cadre est la pointe de la goutte, donc l'ancre `.bottom` marque l'endroit exact.
+                    IconeRepereView(type: repere.icone, taille: Self.tailleEpingle, decoratif: true)
+                        .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile, alignment: .bottom)
+                        .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("\(repere.nom), \(TextesReperes.libelle(repere.icone))")
             }
         }
     }
+
+    /// Largeur de l'épingle sur la carte (pt). Fixe : elle ne suit pas la taille du texte.
+    static let tailleEpingle: CGFloat = 32
 
     /// Au-delà de ce que montre un département (environ 2,5 degrés de latitude), les repères sont cachés (accroche 1d).
     static let spanMaxVisible: Double = 2.5
