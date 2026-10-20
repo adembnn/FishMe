@@ -9,17 +9,13 @@ final class ModelePublication {
     let contexteLieu: ContexteLieu
     let clubs: [ClubResume]
     let carte: CarteLiee?
-    var legende = "" {
-        didSet {
-            if legende.count > FiltreTexte.longueurMax { legende = String(legende.prefix(FiltreTexte.longueurMax)) }
-            refus = FiltreTexte.verifier(legende)
-        }
-    }
+    var legende = ""
     var mode: ModeLieu
     /// `nil` : aucun club.
     var club: String?
     private(set) var media: MediaPret?
-    private(set) var refus: RefusTexte?
+    /// Calculé : pas d'observateur `didSet` dans une classe `@Observable`. La troncature se fait dans le Binding de la vue.
+    var refus: RefusTexte? { FiltreTexte.verifier(legende) }
     private(set) var enCours = false
     private(set) var erreur: String?
     private let auteurNom: String?
@@ -98,13 +94,8 @@ final class ModeleCommentaires {
     private(set) var commentaires: [CommentaireFeed] = []
     private(set) var encore = false
     private(set) var erreur: String?
-    var texte = "" {
-        didSet {
-            if texte.count > FiltreTexte.longueurMax { texte = String(texte.prefix(FiltreTexte.longueurMax)) }
-            refus = FiltreTexte.verifier(texte)
-        }
-    }
-    private(set) var refus: RefusTexte?
+    var texte = ""
+    var refus: RefusTexte? { FiltreTexte.verifier(texte) }
 
     let publication: PublicationFeed
     private let gestion: GestionFeed

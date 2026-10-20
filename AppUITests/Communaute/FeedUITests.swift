@@ -14,7 +14,7 @@ final class FeedUITests: XCTestCase {
         if grandTexte { arguments += ["-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"] }
         app.launchArguments += arguments
         app.launch()
-        app.tabBars.buttons["Mon club"].tap()
+        app.tabBars.buttons["Communauté"].tap()
         app.buttons["Fil"].tap()
         return app
     }
