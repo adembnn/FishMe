@@ -1,0 +1,30 @@
+D2 : stations de température des cours d'eau (Hub'Eau)
+
+Lancer (Python 3 suffit, aucune dépendance, moins d'une minute) :
+    python3 outils/hubeau/stations_temperature.py            # écrit outils/hubeau/sortie/stations-temperature.json
+    python3 outils/hubeau/stations_temperature.py --jours 60 # autre fenêtre « en service »
+Tests, hors réseau :
+    cd outils/hubeau && python3 -m unittest
+
+Le fichier est un tableau JSON, lu par le lot N3 (StationTemperatureDonnee.decoder) :
+    {"code","nom","eau","code_eau","lat","lon","dep","en_service"}
+`eau` et `code_eau` sont null quand Hub'Eau n'a pas de cours d'eau pour la station.
+Le dossier `sortie/` est ignoré par git : le fichier se publie en pièce jointe d'une release privée.
+
+Ce que l'API permet réellement (vérifié sur l'API réelle le 19 oct. 2026)
+- /temperature/station : 872 stations d'un seul coup (size=1000), métadonnées seulement. Champs utiles :
+  code_station, libelle_station, libelle_cours_eau, code_cours_eau, latitude, longitude, code_departement,
+  date_mise_en_service, date_mise_hors_service (renseignée sur 2 stations seulement : elle ne dit presque rien).
+  Le fichier contient aussi des stations d'outre-mer (La Réunion, 974).
+- /temperature/chronique : 53 millions de mesures. Pas de « date de dernière mesure » dans la fiche station.
+  Le tri sort=desc seul fait un 503 (trop lourd) et n'est pas fiable avec date_debut_mesure : on ne s'en sert pas.
+- Règle « en service » : pas de date_mise_hors_service ET au moins une mesure depuis 30 jours
+  (une seule requête : toutes les mesures des 30 derniers jours, champ code_station seul, environ 10 000 lignes ; une requête par station calait trop souvent). À confirmer par Adem.
+- La page de l'API dit « environ 760 stations, dont une cinquantaine seulement est toujours en service ».
+
+Licence
+- Données : Licence Ouverte / Open Licence (Etalab). Conditions générales de Hub'Eau
+  (https://hubeau.eaufrance.fr/page/conditions-generales) : « librement et gratuitement utilisables et
+  réutilisables, y compris dans un but commercial », à condition de citer l'auteur.
+- Source de l'API température : banque de données Naïades (https://naiades.eaufrance.fr).
+- À citer dans l'app (écran Crédits) : « Données : Hub'Eau / Naïades, Licence Ouverte (Etalab) ».
