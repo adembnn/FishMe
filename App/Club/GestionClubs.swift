@@ -109,7 +109,7 @@ final class GestionClubs {
     func avatar(de profil: String) -> Data? { profils[profil]?.avatar }
 
     /// L21 en retard ou profil introuvable : « p-gros-brochet » s'affiche « gros-brochet ». Jamais un identifiant technique.
-    static func surnomTronque(_ id: String) -> String { id.hasPrefix("p-") ? String(id.dropFirst(2)) : id }
+    nonisolated static func surnomTronque(_ id: String) -> String { id.hasPrefix("p-") ? String(id.dropFirst(2)) : id }
 
     /// Les membres à montrer : ni les écartés, ni les bloqués ou masqués.
     func membresVisibles(de club: Club) -> [Membre] {
