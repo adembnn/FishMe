@@ -21,6 +21,23 @@ struct ProfilAutreView: View {
 
     private var estMoi: Bool { profil.id == gestion.monID }
 
+    private var boutonSignaler: some View {
+        Button { aSignaler = profil } label: {
+            Label("Signaler", systemImage: "flag")
+                .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+        }
+        .buttonStyle(.secondaire)
+        .accessibilityIdentifier("profil.signaler")
+    }
+
+    private var boutonBloquer: some View {
+        Button(role: .destructive) { confirmerBlocage = true } label: {
+            Label("Bloquer", systemImage: "hand.raised")
+                .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+        }
+        .buttonStyle(.secondaire)
+    }
+
     var body: some View {
         ScrollView {
             VStack(spacing: Espace.l) {
@@ -54,18 +71,16 @@ struct ProfilAutreView: View {
                         .buttonStyle(.principal)
                         .accessibilityIdentifier("profil.inviter")
                     }
-                    HStack(spacing: Espace.m) {
-                        Button { aSignaler = profil } label: {
-                            Label("Signaler", systemImage: "flag")
-                                .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                    // Côte à côte, ou l'un sous l'autre quand la place manque (très grand texte).
+                    ViewThatFits(in: .horizontal) {
+                        HStack(spacing: Espace.m) {
+                            boutonSignaler
+                            boutonBloquer
                         }
-                        .buttonStyle(.secondaire)
-                        .accessibilityIdentifier("profil.signaler")
-                        Button(role: .destructive) { confirmerBlocage = true } label: {
-                            Label("Bloquer", systemImage: "hand.raised")
-                                .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                        VStack(spacing: Espace.m) {
+                            boutonSignaler
+                            boutonBloquer
                         }
-                        .buttonStyle(.secondaire)
                     }
                 }
             }

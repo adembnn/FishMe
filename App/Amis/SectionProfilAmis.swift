@@ -44,7 +44,7 @@ struct SectionProfilAmis: View {
                 HStack(spacing: Espace.m) {
                     AvatarSurnom(surnom: moi.surnom, image: moi.avatar)
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(moi.surnom).font(Police.corps).foregroundStyle(Palette.encre).lineLimit(2)
+                        Text(moi.surnom).font(Police.corps).foregroundStyle(Palette.encre).lineLimit(nil)
                         Text("Mon profil").font(Police.detail).foregroundStyle(Palette.encreDouce)
                     }
                     Spacer(minLength: Espace.s)
@@ -63,7 +63,7 @@ struct SectionProfilAmis: View {
                 HStack(spacing: Espace.m) {
                     AvatarSurnom(surnom: profil.surnomMemorise ?? "?", image: nil)
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(profil.surnomMemorise ?? "Mon profil").font(Police.corps).foregroundStyle(Palette.encre).lineLimit(2)
+                        Text(profil.surnomMemorise ?? "Mon profil").font(Police.corps).foregroundStyle(Palette.encre).lineLimit(nil)
                         Text("Mon profil · pas relu pour l'instant").font(Police.detail).foregroundStyle(Palette.encreDouce)
                     }
                     Spacer(minLength: Espace.s)
