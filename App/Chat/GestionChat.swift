@@ -150,8 +150,8 @@ final class GestionChat {
     }
 
     private func resume(_ conversation: ConversationID, titre: String, ferme: Bool, bloques: Set<String>) async -> ResumeConversation {
-        let visibles = await visibles(await stock.messages(de: conversation), bloques: bloques)
-        let dernier = visibles.last
+        let gardes = await visibles(await stock.messages(de: conversation), bloques: bloques)
+        let dernier = gardes.last
         var nonLu = false
         if let dernier, dernier.auteurId != moi?.id {
             nonLu = dernier.date > (await stock.vu(conversation) ?? .distantPast)

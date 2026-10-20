@@ -84,34 +84,23 @@ private struct LigneConversation: View {
     let resume: ResumeConversation
     let symbole: String
 
+    @Environment(\.dynamicTypeSize) private var tailleTexte
+
     var body: some View {
-        HStack(spacing: Espace.m) {
-            // Avatar : un symbole en attendant l'avatar du profil (À aligner L21).
-            Image(systemName: symbole)
-                .foregroundStyle(Palette.marine)
-                .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
-                .background(Palette.marineDoux, in: Circle())
-            VStack(alignment: .leading, spacing: Espace.xs) {
-                Text(resume.titre)
-                    .font(Police.sousTitre)
-                    .foregroundStyle(Palette.encre)
-                Text(resume.ferme ? "Conversation fermée" : (resume.dernier?.texte ?? "Aucun message"))
-                    .font(Police.detail)
-                    .foregroundStyle(Palette.encreDouce)
-                    .lineLimit(1)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            VStack(alignment: .trailing, spacing: Espace.xs) {
-                if let date = resume.dernier?.date {
-                    Text(heure(date))
-                        .font(Police.legende)
-                        .foregroundStyle(Palette.encreDouce)
+        // Très grand texte : avatar et texte en colonne, l'heure sous le texte.
+        Group {
+            if tailleTexte.isAccessibilitySize {
+                VStack(alignment: .leading, spacing: Espace.s) {
+                    avatar
+                    textes
+                    indicateurs(alignement: .leading)
                 }
-                if resume.nonLu && !resume.ferme {
-                    Circle()
-                        .fill(Palette.marine)
-                        .frame(width: 10, height: 10)
-                        .accessibilityLabel("Nouveau message")
+            } else {
+                HStack(spacing: Espace.m) {
+                    avatar
+                    textes
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    indicateurs(alignement: .trailing)
                 }
             }
         }
@@ -119,6 +108,42 @@ private struct LigneConversation: View {
         .frame(minHeight: Gabarit.zoneTactile)
         .tuileFishMe()
         .contentShape(Rectangle())
+    }
+
+    // Avatar : un symbole en attendant l'avatar du profil (À aligner L21).
+    private var avatar: some View {
+        Image(systemName: symbole)
+            .foregroundStyle(Palette.marine)
+            .frame(width: Gabarit.zoneTactile, height: Gabarit.zoneTactile)
+            .background(Palette.marineDoux, in: Circle())
+    }
+
+    private var textes: some View {
+        VStack(alignment: .leading, spacing: Espace.xs) {
+            Text(resume.titre)
+                .font(Police.sousTitre)
+                .foregroundStyle(Palette.encre)
+            Text(resume.ferme ? "Conversation fermée" : (resume.dernier?.texte ?? "Aucun message"))
+                .font(Police.detail)
+                .foregroundStyle(Palette.encreDouce)
+                .lineLimit(1)
+        }
+    }
+
+    private func indicateurs(alignement: HorizontalAlignment) -> some View {
+        VStack(alignment: alignement, spacing: Espace.xs) {
+            if let date = resume.dernier?.date {
+                Text(heure(date))
+                    .font(Police.legende)
+                    .foregroundStyle(Palette.encreDouce)
+            }
+            if resume.nonLu && !resume.ferme {
+                Circle()
+                    .fill(Palette.marine)
+                    .frame(width: 10, height: 10)
+                    .accessibilityLabel("Nouveau message")
+            }
+        }
     }
 
     private func heure(_ date: Date) -> String {
