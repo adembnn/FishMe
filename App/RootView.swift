@@ -201,7 +201,8 @@ final class ParcoursApp {
         if let conteneur = chargement.conteneur {
             let depot = DepotCartes(conteneur: conteneur, dossierPhotos: DepotCartes.dossierParDefaut(), services: servicesCollection)
             self.depot = depot
-            pescedex = PescedexModele(depot: depot, services: servicesCollection)
+            pescedex = PescedexModele(depot: depot, services: servicesCollection,
+                                      regionDe: { RegionPescedex.depuisCore($0) })
         } else {
             depot = nil
             pescedex = nil
@@ -559,6 +560,8 @@ final class ParcoursApp {
         guard spot != spotCourant else { return }
         spotCourant = spot
         Task { await conditions.lire(spot: spot.centre) }
+        // L18 : le département du spot alimente « Ma région » tant que le pêcheur n'a pas de carte localisée.
+        Task { await pescedex?.definirZoneDeRepli(spot.departement) }
     }
 
     var surSonSpot: Bool { surSonSpotEn(spotCourant?.centre) }
@@ -582,6 +585,7 @@ final class ParcoursApp {
 
     func commencer(_ spot: Spot) {
         spotCourant = spot
+        Task { await pescedex?.definirZoneDeRepli(spot.departement) }
         sessionReduite = false
         propositionRepere = nil
         let depart = ContexteDepart(coordonnee: spot.centre, departement: spot.departement, spotChoisi: spot,
@@ -1043,7 +1047,10 @@ private struct RacineContenu: View {
                 emplacements: EmplacementsExternes(
                     commentLaPecher: { espece in AnyView(CommentLaPecherEmplacement(app: app, espece: espece)) },
                     tesConditions: { AnyView(TesConditionsEmplacement(app: app)) },
-                    meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) }),
+                    meteoDuDos: { conditions in AnyView(BlocConditionsPriseView(conditions: conditions, marque: app.marque)) },
+                    publierCarte: { prise, rarete, photo in
+                        AnyView(PublierDepuisCarteVue(gestion: app.feed, prise: prise, rarete: rarete, photo: photo))
+                    }),
                 voirAquarium: { aquariumOuvert = true },
                 photographier: { app.ajouterPrise() },
                 // L18 : "Déclarer" ouvre la grille `DeclarationView` dans le Pescedex ; le tunnel ne s'ouvre plus d'ici.

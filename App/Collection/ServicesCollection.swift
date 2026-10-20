@@ -22,9 +22,12 @@ struct EmplacementsExternes {
     var tesConditions: (() -> AnyView)?
     /// Bloc météo du dos d'une carte (L12), à partir de l'instantané gardé avec la carte.
     var meteoDuDos: ((Conditions) -> AnyView)?
+    /// « Publier » sur une carte (L23) : la feuille de publication, avec la prise, sa rareté et sa photo (sans GPS). `nil` : pas de bouton.
+    var publierCarte: ((Prise, NiveauRarete, Data) -> AnyView)?
 
     init(commentLaPecher: ((Espece) -> AnyView)? = nil, tesConditions: (() -> AnyView)? = nil,
-         meteoDuDos: ((Conditions) -> AnyView)? = nil) {
+         meteoDuDos: ((Conditions) -> AnyView)? = nil, publierCarte: ((Prise, NiveauRarete, Data) -> AnyView)? = nil) {
+        self.publierCarte = publierCarte
         self.commentLaPecher = commentLaPecher
         self.tesConditions = tesConditions
         self.meteoDuDos = meteoDuDos

@@ -50,6 +50,16 @@ struct RegionPescedex: Equatable {
     }
 
     var phrase: String { locution ?? "en \(nom)" }
+
+    /// La région d'un département d'après la table de `Core` (`RegionsFrance`) ; `nil` hors métropole ou département inconnu.
+    /// À passer à `PescedexModele(regionDe:)`. // ⚠ à vérifier
+    static func depuisCore(_ departement: Departement) -> RegionPescedex? {
+        guard !departement.estInconnu,
+              let region = RegionsFrance.region(deDepartement: departement.code) else { return nil }
+        return RegionPescedex(nom: region.nom,
+                              departements: region.departements.map { Departement(code: $0) },
+                              locution: region.locution)
+    }
 }
 
 /// Les calculs de zone du Pescedex, sans écran : l'union des relevés d'une région et la France entière.
