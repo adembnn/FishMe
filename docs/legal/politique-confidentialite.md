@@ -1,6 +1,6 @@
 # Politique de confidentialité de FishMe (réseau social inclus)
 
-**BROUILLON À FAIRE RELIRE PAR UN JURISTE DE MWM.** L'équipe n'est pas juridique : ce texte n'a aucune valeur tant qu'il n'a pas été relu, corrigé et validé par MWM, puis par Adem. Écrit par S2 le 19 octobre 2026 pour la version qui porte le réseau social, mis à jour le même jour avec les décisions de Titouan (surnom seul, département par défaut, photo importée, texte d'un message signalé transmis). Il ne remplace pas la page assemblée par le questionnaire juridique de MWM (`get_legal_questionnaire`, `save_legal_answers`, `draft_legal_document`) : c'est le texte à comparer avec elle, ligne à ligne, et à faire coller aux étiquettes « App Privacy » (`store/app-privacy.md`) et au manifeste `PrivacyInfo.xcprivacy`. Rien n'est publié hors du dépôt sans le oui d'Adem.
+**BROUILLON À FAIRE RELIRE PAR UN JURISTE DE MWM.** L'équipe n'est pas juridique : ce texte n'a aucune valeur tant qu'il n'a pas été relu, corrigé et validé par MWM, puis par Adem. Écrit par S2 le 19 octobre 2026 pour la version qui porte le réseau social, mis à jour le même jour avec les décisions de Titouan (surnom seul, département par défaut, photo importée, texte d'un message signalé transmis), puis le 20 octobre (repères privés dans l'iCloud privé, carte de pêche importée, 500 caractères, lecture du signalement réservée à l'équipe). Aucun avis juridique : les points à faire juger sont dans `docs/legal/questions-juriste.md`. Il ne remplace pas la page assemblée par le questionnaire juridique de MWM (`get_legal_questionnaire`, `save_legal_answers`, `draft_legal_document`) : c'est le texte à comparer avec elle, ligne à ligne, et à faire coller aux étiquettes « App Privacy » (`store/app-privacy.md`) et au manifeste `PrivacyInfo.xcprivacy`. Rien n'est publié hors du dépôt sans le oui d'Adem.
 
 Source : décisions du 19 octobre (`CLAUDE.md`), rapport R2 (`docs/reports/reseau/`), CGU (`docs/legal/conditions-fishme.md`), compteur de fréquentation (`docs/legal/frequentation-confidentialite.md`, repris ci-dessous), SDK Spark de MWM (`store/confidentialite-spark-flash.md`).
 Les crochets `[...]` sont à remplir par MWM. Aucun article de loi n'est cité : l'équipe n'a lu aucun texte à la source.
@@ -8,7 +8,9 @@ Les crochets `[...]` sont à remplir par MWM. Aucun article de loi n'est cité :
 Points ⚠ (à vérifier avant publication) :
 - ⚠ Écrit avant la fin de L21 à L24 : il décrit le schéma de R2 et les décisions de Titouan du 19 octobre, pas un build. À relire après L23, champ par champ.
 - ⚠ Chats d'ami et de club : décision de Titouan (zones partagées, jamais en base publique, participants seulement) ; R2 `schema.md` disait « base publique » pour le club. Le texte suit la décision. Quelle base iCloud héberge la zone d'un club (celle du fondateur ?) et ce qui arrive quand le fondateur supprime son profil : à écrire exactement après L22/L24.
-- ⚠ Message signalé (§6) : décision de Titouan, le texte du message est joint à l'e-mail de signalement et copié dans l'enregistrement `Signalement`. Les deux endroits sont lisibles par l'équipe seulement (⚠ droits de lecture du type `Signalement` : la revue L24 ne les a pas vérifiés ; si le type est lisible par tous dans la base publique, le texte d'un message privé deviendrait public : à contrôler avant de publier). Durée de conservation : crochets pour MWM.
+- ⚠ Repères privés (§2, §5) : décision de Titouan du 20 octobre, les coordonnées exactes des coins enregistrés sont sauvegardées dans l'iCloud privé du pêcheur, « chiffré », jamais partagées. L'ancienne phrase « ne quitte jamais ton iPhone » était fausse pour ces repères. À confirmer par A dans le code (chiffrement réel, aucune lecture par l'équipe) ; et à classer pour Apple : voir `store/app-privacy.md`, §2.
+- ⚠ Carte de pêche importée (§2, §5) : stockée sur l'iPhone, protégée, sauvegardée par la sauvegarde de l'iPhone (donc possiblement dans iCloud Sauvegarde du pêcheur, hors de FishMe), aucun numéro ni nom lu ou gardé par l'app. À confirmer dans le code (protection du fichier, aucune lecture de texte).
+- ⚠ Message signalé (§6) : décision de Titouan, le texte du message est joint à l'e-mail de signalement et copié dans l'enregistrement `Signalement`. Les deux endroits sont lisibles par l'équipe seulement (décision : lecture réservée à l'équipe ; la revue L24 n'a pas vérifié les droits CloudKit du type `Signalement` ; s'il était lisible par tous dans la base publique, le texte d'un message privé deviendrait public : à contrôler avant de publier). Durée de conservation : crochets pour MWM.
 - ⚠ La liste des blocages en base privée suit la recommandation de R2 (question 4 de `decisions.md`, défaut « oui », pas encore validée par Adem). Si Adem la veut publique, §3 et §6 changent.
 - ⚠ Durées de conservation : aucune n'est fixée par une décision (signalements, texte des messages signalés, e-mails). Les crochets sont à remplir par MWM.
 - ⚠ Photo importée de la galerie (avatar, publication) : décision de Titouan ; « sans GPS, ré-encodée » et l'usage du sélecteur système sont à vérifier dans le build (L21, L23).
@@ -18,7 +20,8 @@ Points ⚠ (à vérifier avant publication) :
 
 ## En bref
 
-- Ta position précise, tes coins de pêche et les coordonnées de tes photos ne quittent jamais ton iPhone.
+- Ta position précise reste sur ton iPhone. Tes repères privés (coordonnées exactes de tes coins) sont sauvegardés dans ton iCloud privé, chiffré, jamais partagés ni publiés. Les coordonnées de tes photos ne sont jamais envoyées.
+- Ta carte de pêche importée reste sur ton iPhone, protégée ; FishMe n'en lit ni le numéro ni le nom.
 - Tu n'as pas de mot de passe : ton compte est ton identifiant Apple.
 - Si tu as 15 ans ou plus et que tu publies, ton surnom, ton avatar et tes publications sont visibles de tous les utilisateurs de FishMe.
 - À chaque publication, tu choisis le lieu affiché. Par défaut, le département seul ; tu peux ajouter le cours d'eau, ou choisir aucun lieu.
@@ -35,11 +38,11 @@ Points ⚠ (à vérifier avant publication) :
 
 | Où | Quoi | Qui peut le lire |
 |---|---|---|
-| Ton iPhone seulement | ta position précise, tes coins de pêche, tes réglages, la photo brute avant recadrage | toi |
-| Ta base privée iCloud (ton compte Apple) | ta sauvegarde : cartes, photos sans position GPS, sorties, niveau, clubs ; la liste des personnes que tu as bloquées | toi. Nous n'y avons pas accès (⚠ voir `store/app-privacy.md`) |
+| Ton iPhone seulement | ta position précise, ta carte de pêche importée (protégée, sauvegardée avec la sauvegarde de l'iPhone ; aucun numéro ni nom lu ou gardé par FishMe), tes réglages, la photo brute avant recadrage | toi |
+| Ta base privée iCloud (ton compte Apple) | ta sauvegarde : cartes, photos sans position GPS, sorties, niveau, clubs ; la liste des personnes que tu as bloquées ; tes repères privés (coordonnées exactes de tes coins de pêche, chiffrés, jamais partagés) | toi. Nous n'y avons pas accès (⚠ voir `store/app-privacy.md`) |
 | Une zone partagée entre amis (iCloud), jamais la base publique | les cartes que tu partages à un ami et vos messages | toi et cet ami |
 | Une zone partagée par club (iCloud), jamais la base publique | les messages du club | les membres du club |
-| La base publique iCloud de FishMe | ton surnom, ton avatar, tes publications (photo ou vidéo, légende, lieu choisi, espèce et rareté de la carte liée), tes commentaires, tes likes, les clubs et leurs membres, les signalements (avec le texte du message, s'il s'agit d'un message d'ami ou de club) | les autres utilisateurs de FishMe pour le profil et les publications ; l'équipe de FishMe pour les signalements (§6) |
+| La base publique iCloud de FishMe | ton surnom, ton avatar, tes publications (photo ou vidéo, légende, lieu choisi, espèce et rareté de la carte liée), tes commentaires, tes likes, les clubs et leurs membres, les signalements (avec le texte du message, 500 caractères au plus, s'il s'agit d'un message d'ami ou de club) | les autres utilisateurs de FishMe pour le profil et les publications ; **l'équipe de FishMe seule** pour les signalements (§6) |
 | MWM (SDK Spark), seulement si tu l'as accepté | des données d'usage (article 7) | MWM |
 
 Apple héberge toutes les bases iCloud (iCloud, CloudKit). ⚠ À reprendre de la page d'Apple lors de la relecture : lieu d'hébergement, durée de conservation côté Apple, sous-traitants.
@@ -54,7 +57,7 @@ Si tu crées un profil et que tu publies, ces données sont visibles de tous les
 
 Tu es responsable de ce que tu publies. Les règles sont dans les conditions d'utilisation (articles 9, 10 et 11). Tu acceptes ces conditions en cochant une case quand tu crées ton profil. FishMe n'utilise pas ces contenus pour de la publicité et ne les revend pas.
 
-Ce qui n'est jamais public : ta collection, tes messages d'amis et de clubs, ta position, tes coins de pêche, la liste des personnes que tu bloques.
+Ce qui n'est jamais public : ta collection, tes messages d'amis et de clubs, ta position, tes repères privés, ta carte de pêche, la liste des personnes que tu bloques.
 
 ## 4. Le lieu de tes publications
 
@@ -64,11 +67,13 @@ Ce qui n'est jamais public : ta collection, tes messages d'amis et de clubs, ta 
 
 Sur un plan d'eau nommé, le nom vaudrait un coin exact : l'app te propose seulement le département seul ou aucun lieu. Si tu choisis « aucun lieu », ta publication n'apparaît pas dans le fil de ta région.
 
-Jamais une coordonnée, jamais ta position GPS ne sont publiées. Tes photos et tes vidéos, y compris une photo importée de ta galerie, sont recompressées avant l'envoi et partent sans métadonnées de position. Ton département ou ton cours d'eau est la seule indication de lieu qui sort de ton iPhone, et seulement parce que tu l'as choisi. Un cours d'eau et un département peuvent suffire à un connaisseur pour deviner un coin : garde « département seul » ou choisis « aucun lieu » si tu veux le garder secret.
+Jamais une coordonnée, jamais ta position GPS ni tes repères privés ne sont publiés. Tes photos et tes vidéos, y compris une photo importée de ta galerie, sont recompressées avant l'envoi et partent sans métadonnées de position. Ton département ou ton cours d'eau est la seule indication de lieu qui sort de ton iPhone, et seulement parce que tu l'as choisi. Un cours d'eau et un département peuvent suffire à un connaisseur pour deviner un coin : garde « département seul » ou choisis « aucun lieu » si tu veux le garder secret.
 
-## 5. Ce qui ne part jamais de ton iPhone
+## 5. Ce qui ne part jamais de ton iPhone vers nous ou vers d'autres
 
-- ta position précise et celle de tes coins de pêche ;
+- ta position précise ;
+- ta carte de pêche importée (elle reste sur ton iPhone) ;
+- les coordonnées de tes repères privés, sauf vers ton propre iCloud privé : elles y sont sauvegardées, chiffrées, et personne d'autre ne les lit ni ne les reçoit ;
 - les coordonnées GPS enregistrées dans une photo (tes photos, y compris celles que tu importes de ta galerie, sont enregistrées sans elles) ;
 - la photo envoyée à l'analyse de l'espèce : la reconnaissance se fait sur ton iPhone ;
 - ton nom et ton prénom : FishMe ne les demande pas et ne les collecte pas.
@@ -77,8 +82,8 @@ Pour la météo, l'app envoie à Apple (WeatherKit) un point arrondi ou la posit
 
 ## 6. Les signalements et les blocages
 
-- Tu peux signaler une publication, un commentaire, un message, un profil ou un club. L'app cache le contenu sur ton iPhone, prépare un e-mail à fishme.app@gmail.com, que tu envoies depuis ton app Mail, et enregistre un signalement dans la base publique : l'identifiant du contenu, l'identifiant de son auteur, le motif (choisi dans une liste), ton surnom et la date. Si le contenu signalé est un message d'ami ou de club, le texte de ce message est joint à l'e-mail et copié dans l'enregistrement du signalement, pour que l'équipe puisse le lire. Tu vois et tu peux modifier l'e-mail avant de l'envoyer. L'e-mail n'est jamais envoyé automatiquement.
-- L'équipe de FishMe lit la boîte fishme.app@gmail.com et les signalements. Elle voit ce qui est public ; elle ne voit pas les messages d'amis ni de club, sauf le texte du message que tu signales. Seuls Titouan, Adem et Sullyvan, de l'équipe de FishMe, lisent la boîte et les signalements (⚠ les droits de lecture des enregistrements `Signalement` sont à vérifier dans CloudKit). Nous traitons les signalements et nous nous engageons à retirer sous 24 heures les contenus publics (publications, commentaires, profils) qui enfreignent les conditions et, pour les messages privés, les messages signalés dont le texte nous a été transmis (article 10).
+- Tu peux signaler une publication, un commentaire, un message, un profil ou un club. L'app cache le contenu sur ton iPhone, prépare un e-mail à fishme.app@gmail.com, que tu envoies depuis ton app Mail, et enregistre un signalement dans la base publique : l'identifiant du contenu, l'identifiant de son auteur, le motif (choisi dans une liste), ton surnom et la date. Si le contenu signalé est un message d'ami ou de club, le texte de ce message est joint à l'e-mail et copié dans l'enregistrement du signalement, pour que l'équipe puisse le lire. Ce texte est limité à 500 caractères. Tu vois et tu peux modifier l'e-mail avant de l'envoyer. L'e-mail n'est jamais envoyé automatiquement.
+- L'équipe de FishMe lit la boîte fishme.app@gmail.com et les signalements. Elle voit ce qui est public ; elle ne voit pas les messages d'amis ni de club, sauf le texte du message que tu signales. Seuls Titouan, Adem et Sullyvan, de l'équipe de FishMe, lisent la boîte et les signalements ; la lecture des enregistrements de signalement est réservée à l'équipe (⚠ à vérifier dans CloudKit). Nous traitons les signalements et nous nous engageons à retirer sous 24 heures les contenus publics (publications, commentaires, profils) qui enfreignent les conditions et, pour les messages privés, les messages signalés dont le texte nous a été transmis (article 10).
 - Nous gardons le signalement, le texte du message qui y est joint et l'échange par e-mail [durée à fixer par MWM, le temps du traitement et du suivi] pour traiter le signalement et pouvoir montrer que le délai a été tenu. Le texte du message n'est utilisé que pour examiner ce signalement.
 - Quand tu bloques une personne, FishMe masque ce qu'elle publie et écrit chez toi. La liste des personnes que tu bloques est dans ta base privée : personne d'autre ne la voit.
 
@@ -101,7 +106,7 @@ Un profil public, publier, commenter et écrire à d'autres utilisateurs sont r�
 ## 10. Combien de temps nous gardons tes données
 
 - Ton profil, tes publications, tes commentaires, tes likes et tes messages de club : jusqu'à ce que tu les supprimes, ou que tu supprimes ton profil.
-- Ta sauvegarde iCloud et tes cartes partagées : jusqu'à la suppression de ton compte dans l'app.
+- Ta sauvegarde iCloud (collection, repères privés) et tes cartes partagées : jusqu'à la suppression de ton compte dans l'app. Ta carte de pêche reste sur ton iPhone jusqu'à ce que tu la retires ou que tu supprimes l'app.
 - Les signalements, avec le texte du message joint s'il y en a un : [durée à fixer par MWM].
 - Les données de mesure d'usage : [durée à donner par MWM].
 - Les messages que tu as envoyés à un ami peuvent rester chez lui après la suppression de ton compte.
