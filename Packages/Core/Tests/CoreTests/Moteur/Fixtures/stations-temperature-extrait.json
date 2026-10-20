@@ -1,0 +1,10 @@
+[
+  {"code":"03112480","nom":"LA MARNE A CHARENTON-LE-PONT 2","eau":"La Marne","code_eau":"F---0100","lat":48.816895,"lon":2.41963,"dep":"94","en_service":false},
+  {"code":"03001000","nom":"LA SEINE A NOD-SUR-SEINE 1","eau":"La Seine","code_eau":"----0010","lat":47.764194,"lon":4.570986,"dep":"21","en_service":false},
+  {"code":"04108000","nom":"LOIR à NAVEIL","eau":"le Loir","code_eau":"M1--0160","lat":47.797594,"lon":1.026737,"dep":"41","en_service":true},
+  {"code":"04070300","nom":"CHER à SAINT-AIGNAN","eau":"le Cher","code_eau":"K---0090","lat":47.270938,"lon":1.375205,"dep":"41","en_service":true},
+  {"code":"06166000","nom":"DURANCE A CAUMONT-SUR-DURANCE ","eau":"La Durance","code_eau":"X---0000","lat":43.888283,"lon":4.916185,"dep":"84","en_service":true},
+  {"code":"05018000","nom":"La Charente à Roffit","eau":"La Charente","code_eau":"R---0000","lat":45.678466,"lon":0.153786,"dep":"16","en_service":true},
+  {"code":"02001047","nom":"LE SCHAFTEU A RHINAU","eau":null,"code_eau":null,"lat":48.252696,"lon":7.675199,"dep":"67","en_service":false},
+  {"code":"01001336","nom":"L'HOGNEAU À GUSSIGNIES (59)","eau":"Hogneau","code_eau":"E1820700","lat":50.336155,"lon":3.737988,"dep":"59","en_service":false}
+]

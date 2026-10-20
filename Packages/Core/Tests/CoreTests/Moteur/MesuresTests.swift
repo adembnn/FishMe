@@ -274,6 +274,39 @@ struct StationTemperatureTests {
         #expect(MoteurMesures(stationsTemperature: o).stationTemperature(pres: charenton, eau: nil)?.code == "OBJ")
     }
 
+    @Test("Un vrai extrait de stations-temperature.json (fabriqué par D2, 20 oct. 2026) se décode champ par champ")
+    func extraitReelD2() throws {
+        let donnees = HubEauTemperatureTests.fixture("stations-temperature-extrait.json")
+        let liste = StationTemperatureDonnee.decoder(donnees)
+        #expect(liste.count == 8)
+        let marne = try #require(liste.first { $0.station.code == "03112480" })
+        #expect(marne.station.nom == "LA MARNE A CHARENTON-LE-PONT 2")
+        #expect(marne.station.eau == "La Marne")
+        #expect(marne.station.codeEau == "F---0100")
+        #expect(marne.station.coordonnee == Coordonnee(latitude: 48.816895, longitude: 2.41963))
+        #expect(marne.enService == false)
+        let loir = try #require(liste.first { $0.station.code == "04108000" })
+        #expect(loir.enService == true)
+        #expect(loir.station.nom.hasPrefix("LOIR "))
+        #expect(loir.station.nom.hasSuffix(" NAVEIL"))
+        // Cours d'eau inconnu : null dans le fichier, nil côté app (et le nom reste le libellé de la station).
+        let sansEau = try #require(liste.first { $0.station.code == "02001047" })
+        #expect(sansEau.station.eau == nil && sansEau.station.codeEau == nil)
+        #expect(sansEau.station.nom == "LE SCHAFTEU A RHINAU")
+        // L'apostrophe et les accents passent.
+        let hogneau = try #require(liste.first { $0.station.code == "01001336" })
+        #expect(hogneau.station.nom.hasPrefix("L'HOGNEAU "))
+        #expect(hogneau.station.nom.hasSuffix(" GUSSIGNIES (59)"))
+        #expect(liste.filter(\.enService).count == 4)
+    }
+
+    @Test("Avec l'extrait réel, le choix de la station ignore la Marne hors service et prend le Loir en service")
+    func choixSurExtraitReel() {
+        let m = MoteurMesures(stationsTemperature: HubEauTemperatureTests.fixture("stations-temperature-extrait.json"))
+        #expect(m.stationTemperature(pres: charenton, eau: nil) == nil)
+        #expect(m.stationTemperature(pres: Coordonnee(latitude: 47.80, longitude: 1.03), eau: nil)?.code == "04108000")
+    }
+
     private func avec(_ stations: [String: Any]...) -> MoteurMesures {
         MoteurMesures(stationsTemperature: fichier(stations))
     }
