@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Télécharge les 3 fichiers de données fabriqués par script, depuis la release privée « donnees » du dépôt.
+# Télécharge les 4 fichiers de données fabriqués par script (3 obligatoires, 1 facultatif : stations-temperature.json), depuis la release privée « donnees » du dépôt.
 # Ils ne sont jamais commités (.gitignore, crochets de git) : chaque ordinateur les télécharge ici.
 # Usage : scripts/donnees.sh        (demande `gh` installé et connecté : gh auth login)
 
@@ -8,6 +8,8 @@ cd "$racine" || exit 1
 # Dans App/Donnees/ (ignoré par git) : le dossier synchronisé de l'app les embarque, RootView passe Bundle.main à Core.
 dossier="App/Donnees"
 fichiers="stations-especes.json rarete-departements.json stations-hydro.json"
+# Facultatif (N3, ligne « Eau ») : absent de la release, on avertit sans rien casser ; l'app marche sans lui.
+facultatifs="stations-temperature.json"
 
 if ! command -v gh >/dev/null 2>&1; then
   echo "✗ L'outil « gh » (GitHub) n'est pas installé. À faire : brew install gh, puis gh auth login." >&2
@@ -34,7 +36,19 @@ if ! gh release download donnees $args --dir "$dossier" --clobber; then
   exit 1
 fi
 
+# Les fichiers facultatifs sont demandés à part : s'ils manquent, gh peut refuser le motif sans toucher aux 3 autres.
+for f in $facultatifs; do
+  gh release download donnees --pattern "$f" --dir "$dossier" --clobber >/dev/null 2>&1 || true
+done
+
 manque=0
+for f in $facultatifs; do
+  if [ -s "$dossier/$f" ]; then
+    echo "✓ $dossier/$f (facultatif)"
+  else
+    echo "⚠ $f n'est pas dans la release « donnees » (facultatif) : l'app n'affichera pas la température de l'eau. À publier (voir docs/reports/branchements-l25.md)." >&2
+  fi
+done
 for f in $fichiers; do
   if [ -s "$dossier/$f" ]; then
     echo "✓ $dossier/$f"
