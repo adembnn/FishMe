@@ -69,7 +69,7 @@ Sur un plan d'eau nommé, le nom vaudrait un coin exact : l'app te propose seule
 
 Jamais une coordonnée, jamais ta position GPS ni tes repères privés ne sont publiés. Tes photos et tes vidéos, y compris une photo importée de ta galerie, sont recompressées avant l'envoi et partent sans métadonnées de position. Ton département ou ton cours d'eau est la seule indication de lieu qui sort de ton iPhone, et seulement parce que tu l'as choisi. Un cours d'eau et un département peuvent suffire à un connaisseur pour deviner un coin : garde « département seul » ou choisis « aucun lieu » si tu veux le garder secret.
 
-## 5. Ce qui ne part jamais de ton iPhone vers nous ou vers d'autres
+## 5. Ce qui ne part pas de ton iPhone
 
 - ta position précise ;
 - ta carte de pêche importée (elle reste sur ton iPhone) ;
