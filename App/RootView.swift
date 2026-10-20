@@ -244,8 +244,10 @@ final class ParcoursApp {
             InterlocuteurChat(id: GestionAmis.cleDeBlocage($0), surnom: $0.nom, idCloudKit: $0.id)
         }
         let departement = spotCourant.flatMap { $0.departement.estInconnu ? nil : $0.departement.code }
+        // L22 : mes clubs en ligne, lus dans l'état déjà chargé de `GestionClubs` (aucune requête ici). Rien sans iCloud ni en démo.
+        let clubs = (SauvegardeICloud.actif && !modeDemo) ? GestionClubs.partage.clubsPourChat() : []
         return InstantaneRacine(monID: profil.monID, surnom: profil.surnomMemorise, aUnProfil: profil.aUnProfil,
-                                amis: amis, departement: departement, demo: modeDemo)
+                                amis: amis, clubs: clubs, departement: departement, demo: modeDemo)
     }
 
     /// L23 : le fil. Réel (base publique) ; sans compte iCloud ou en mode démo, le fil montre ses publications d'exemple.
@@ -273,12 +275,25 @@ final class ParcoursApp {
             guard let self else { throw ErreurProfil.reseau }
             return EffaceurChat(gestion: self.chatReel)
         })
+        // L22 : adhésions et cartes de club (fondateur seul : le club ; sinon il part comme un membre).
+        RegistreEffaceurs.partage.ajouter(EffaceurParesseux {
+            EffaceurClubs(service: GestionClubs.partage.service)
+        })
     }
 
     /// Un message CloudKit silencieux est arrivé (délégué d'application) : le chat se rafraîchit, une alerte locale prévient si besoin.
     func notificationCloudKitRecue() async {
         guard !modeDemo, CloudKitPermisChat.actif else { return }
         await chatReel.traiterNotificationCloudKit()
+    }
+
+    /// L17 : les prises du pêcheur et leurs photos (sans GPS) pour les vignettes de la fiche d'un coin. Rien sans dépôt.
+    var prisesPourLaCarte: PrisesDuPecheurCarte {
+        guard let depot else { return .aucune }
+        let dossier = depot.dossierPhotos
+        return PrisesDuPecheurCarte(
+            lire: { await depot.cartes() },
+            photo: { prise in prise.cheminPhoto.flatMap { try? Data(contentsOf: dossier.appendingPathComponent($0)) } })
     }
 
     /// Recharge le Pescedex et les cartes partageables de L9 après une écriture dans le dépôt.
@@ -393,6 +408,9 @@ final class ParcoursApp {
         case "ami":
             // L21 : fishme://ami/<id> ; la page Amis lit le relais et montre le profil.
             if RelaisLienAmi.partage.recevoir(url) { onglet = .club }
+        case "club":
+            // L22 : fishme://club/<id> ; la page Club montre la feuille « Rejoindre » (`RelaisLienClub`).
+            if RelaisLienClub.partage.recevoir(url) { onglet = .club }
         default:
             break
         }
@@ -1020,7 +1038,8 @@ private struct RacineContenu: View {
                 ProfilPastille(nom: ProfilEmplacement<EmptyView>.nomAffiche(profil.surnomMemorise ?? ""),
                                nombreDeCartes: app.cartesAPartager.count) { profilOuvert = true }),
             ouvrirMeteo: { meteoOuverte = true },
-            ouvrirProfil: { profilOuvert = true })
+            ouvrirProfil: { profilOuvert = true },
+            prisesDuPecheur: app.prisesPourLaCarte)
             .task { app.carteListe() }
     }
 
@@ -1425,6 +1444,9 @@ private struct ProfilEmplacement<Reglages: View>: View {
                     NavigationLink { reglages } label: {
                         Label("Ma pêche, sécurité et sources", systemImage: "slider.horizontal.3")
                     }
+                    // L17 : l'application de « Y aller » (même clé que « Toujours utiliser »).
+                    ReglageNavigationView()
+                        .listRowInsets(EdgeInsets())
                 }
             }
             .navigationTitle("Mon profil")
@@ -1532,15 +1554,17 @@ nonisolated struct InstantaneRacine: Sendable {
     var surnom: String?
     var aUnProfil: Bool
     var amis: [InterlocuteurChat]
+    /// L22 : mes clubs en ligne (adaptateur `ClubPourChat`), pour le fil et le chat de club.
+    var clubs: [ClubPourChat] = []
     /// Code du département du spot (« 94 »), `nil` s'il est inconnu.
     var departement: String?
     var demo: Bool
 
-    static let vide = InstantaneRacine(monID: nil, surnom: nil, aUnProfil: false, amis: [], departement: nil, demo: false)
+    static let vide = InstantaneRacine(monID: nil, surnom: nil, aUnProfil: false, amis: [], clubs: [], departement: nil, demo: false)
 }
 
 /// Ce que le fil attend des lots voisins (`SourceContexte`), branché sur le profil de L21, la page Amis et le spot.
-/// Les clubs (L22) ne sont pas encore branchés : `mesClubs()` rend vide jusqu'à `ServiceClubs`.
+/// Les clubs (L22) viennent de `GestionClubs.partage.clubsPourChat()`.
 nonisolated struct SourceFeedRacine: SourceContexte {
     let lire: @MainActor @Sendable () -> InstantaneRacine
 
@@ -1548,7 +1572,7 @@ nonisolated struct SourceFeedRacine: SourceContexte {
     /// Un profil ne se crée qu'avec la déclaration « 15 ans ou plus » : avoir un profil vaut cette déclaration.
     func profilQuinzeAnsOuPlus() async -> Bool { await lire().aUnProfil }
     func nomsDesAmis() async -> [String] { await lire().amis.map(\.id).filter { $0.hasPrefix("p-") } }
-    func mesClubs() async -> [ClubResume] { [] }
+    func mesClubs() async -> [ClubResume] { await lire().clubs.map { ClubResume(id: $0.id, nom: $0.nom) } }
     func departementsDeMaRegion() async -> [String] {
         guard let code = await lire().departement else { return [] }
         return [code] + RegionsFrance.departementsDeLaRegion(de: code).filter { $0 != code }
@@ -1560,7 +1584,7 @@ nonisolated struct SourceFeedRacine: SourceContexte {
     func modeDemo() async -> Bool { await lire().demo }
 }
 
-/// L'annuaire du chat (`AnnuaireChat`) : mon profil de L21, mes amis de la page Amis, les blocages de L21. Pas de clubs (L22).
+/// L'annuaire du chat (`AnnuaireChat`) : mon profil de L21, mes amis de la page Amis, mes clubs de L22, les blocages de L21.
 nonisolated struct AnnuaireChatRacine: AnnuaireChat {
     let lire: @MainActor @Sendable () -> InstantaneRacine
 
@@ -1571,7 +1595,13 @@ nonisolated struct AnnuaireChatRacine: AnnuaireChat {
         return InterlocuteurChat(id: id, surnom: i.surnom ?? "Pêcheur", idCloudKit: id, a15Ans: true)
     }
     func amis() async -> [InterlocuteurChat] { await lire().amis }
-    func clubs() async -> [ClubChat] { [] }
+    /// L22 -> L24 : table de correspondance de `ClubPourChat.swift`. Un membre sans `idCloudKit` reste listé (id vide : pas encore admissible).
+    func clubs() async -> [ClubChat] {
+        await lire().clubs.map { club in
+            ClubChat(id: club.id, nom: club.nom, jeSuisFondateur: club.jeSuisFondateur,
+                     membres: club.membres.map { InterlocuteurChat(id: $0.profil, surnom: $0.surnom, idCloudKit: $0.idCloudKit ?? "") })
+        }
+    }
     func bloques() async -> Set<String> { ListeBlocages.partage.profilsCaches() }
 }
 
