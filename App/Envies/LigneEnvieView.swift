@@ -122,13 +122,10 @@ struct LigneEnvieView: View {
             Image(systemName: "exclamationmark.circle.fill")
                 .foregroundStyle(Palette.alerte)
                 .accessibilityHidden(true)
-        case .fermee:
+        case .fermee, .ouverte:
+            // Pas d'icône de réussite sur « Ouverte aujourd'hui » : jamais de verdict implicite.
             Image(systemName: "calendar")
                 .foregroundStyle(Palette.encreDouce)
-                .accessibilityHidden(true)
-        case .ouverte:
-            Image(systemName: "checkmark.circle.fill")
-                .foregroundStyle(Palette.ouvert)
                 .accessibilityHidden(true)
         case .sansSpot:
             Image(systemName: "mappin.circle")

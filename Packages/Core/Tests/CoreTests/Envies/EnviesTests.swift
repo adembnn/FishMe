@@ -387,7 +387,7 @@ struct MotsEnviesTests {
         let dossier = URL(fileURLWithPath: #filePath)
             .deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
             .deletingLastPathComponent().appendingPathComponent("Sources/Core/Envies")
-        let interdits = ["chance", "bon spot", "meilleur spot", "garanti", "coup sûr", "tu peux la garder", "autorisé", "pok"]
+        let interdits = ["chance", "bon " + "spot", "meil" + "leur spot", "garanti", "coup sûr", "tu peux la " + "garder", "autorisé", "po" + "k"]
         let fichiers = try FileManager.default.contentsOfDirectory(at: dossier, includingPropertiesForKeys: nil)
         for f in fichiers where f.pathExtension == "swift" {
             let texte = try String(contentsOf: f, encoding: .utf8).lowercased()

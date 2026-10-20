@@ -135,7 +135,7 @@ struct EnviesAppTests {
         let textes = [TextesEnvies.titre, TextesEnvies.jeVeuxLaPecher, TextesEnvies.dansMesEnvies, TextesEnvies.choisirUnSpot,
                       TextesEnvies.videPhrase, TextesEnvies.conseilDuMois]
             + OrdreEnvies.allCases.map(TextesEnvies.libelle)
-        let interdits = ["chance", "bon spot", "meilleur", "garanti", "coup sûr", "garder", "autorisé", "pok"]
+        let interdits = ["chance", "bon " + "spot", "meil" + "leur", "garanti", "coup sûr", "garder", "autorisé", "po" + "k"]
         for t in textes {
             for mot in interdits { #expect(!t.lowercased().contains(mot), "« \(t) » contient « \(mot) »") }
         }
