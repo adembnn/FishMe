@@ -22,6 +22,10 @@ Branche `lot/racine`. Tout est écrit SANS Mac ni Xcode : rien n'est compilé ni
 | N4 | « Mes records » dans le profil ; bandeau « nouveau souvenir » sur la carte révélée, `MoteurRecords.evenement` appelé avec les cartes d'avant l'insertion | `MesRecordsEmplacement`, `annonceRecord` |
 | N5 | « Ma fédération » (liens, carte de pêche, numéros utiles) dans le profil | `ProfilEmplacement` |
 | N6 | `ContexteReperes.courant.configurer(...)` et `abonne` au lancement et à chaque changement d'abonnement ; repères chargés ; « Mes repères » (`ListeReperesView`) dans le profil ; `SauvegardeReperes.synchroniser()` avec la sauvegarde des cartes (un échec n'arrête pas celle des cartes) et `effacerTout()` à « Effacer mes données iCloud » ; 3 repères gratuits (`ReglesReperes`) | `SauvegardeAvecReperes`, `configurerReperes` |
+| N3 (croisé) | `MesuresSourceesView(enFeuille: true)` dans « Conditions du jour » (paramètre `mesures: AnyView?` de `ConditionsDuJourView`), détents `.medium`/`.large`, défilement sans indicateur ; ligne « hPa » retirée de `RangeeMaintenantView` | `App/Conditions/`, `MesuresEmplacement` |
+| N5 (croisé) | lien « Comment mesurer ? » (feuille `MesureGuideView`) sous le curseur de taille de l'ajout manuel ; « Ma fédération » est bien dans le profil (`ProfilEmplacement`) | `App/Collection/AjoutManuelPriseView.swift` |
+| L24 (croisé) | `BoutonEcrire` + `FeuilleConversationView` sur la page d'un ami (icône dans la barre de `PescedexAmiView`) et d'un club (sous « Membres ») ; `RelaisChat` : `SceneDuPartage.acheminer` envoie un partage dont `InvitationChat.estUneConversation` est vrai à `RelaisChat`, `RootView` appelle `app.chat.accepter(...)` puis ouvre les messages ; jamais par `RelaisInvitations` | `App/Chat/RelaisChat.swift`, `App/Amis/RelaisInvitations.swift`, `RootView.onglets` |
+| N2 (croisé) | `lot/envies-accroches` fusionnée ; `PescedexView(..., envies: app.envies)` ; `ProfilLocal.lire()/ecrire()` lisent et écrivent les envies (`envies.json`, URL partagée `ProfilLocal.fichierEnvies`) ; `EnviesModele.relire()` après chaque synchro (`SauvegardeAvecReperes.apresProfil`) | `RootView`, `App/Compte/ProfilLocal.swift` |
 | docs | lots N1 à N6 ajoutés à `docs/lots.md` (`scripts/lot.sh` les lit dans ce tableau, rien à changer dans le script) ; `lots.py verifier` : 21 lots, 0 trou | docs/lots.md |
 
 ## Pas branché, et pourquoi
@@ -33,15 +37,10 @@ Ces points demandent d'écrire dans un dossier qui n'est pas à L25. Chaque lign
 | N6 : « Y aller » vers un repère sans « Toujours utiliser » | `App/Carte/` (`DecisionYAller`) | la règle de N6 (`AllerAuRepere`) ne mémorise rien et n'utilise pas `PreferenceItineraire` (vérifié par grep) ; ne jamais brancher un repère sur `DecisionYAller` |
 | N6 : « Ajouter un repère ici » en session, rattachement à une prise (`RepereProche.plusProche`) | `App/Session/` | autre lot |
 | N6 : déclencheur de paywall propre aux repères | `App/Mesure/CoucheMesure.swift` (`DeclencheurPaywall`) | pour l'instant `.paywall(.widget)` (comme les décors N1) : la mesure d'usage dira « widget ». Ajouter `case reperes` et son texte dans `TextesPaywall.swift` |
-| N3 : le même bloc dans la feuille « Conditions du jour » | `App/Conditions/ConditionsDuJourView.swift` | `enFeuille: true`, détent à revoir |
-| N3 : ligne « Eau » | `stations-temperature.json` | le fichier n'existe pas (D2 doit le fournir) : l'ajouter aux ressources de l'app, le code le cherche dans le bundle ; sans lui, pression et débit seulement. Déclarer le fichier dans `donnees.sh` |
-| N2 : ligne « Mes envies » du Pescedex, bouton sur les fiches, menu contextuel | `App/Collection/` | Pescedex traité par un autre agent. Le modèle est prêt : `app.envies`, vue `MesEnviesView(modele: app.envies, cartes: ..., ouvrirFiche: ...)` |
-| N2 : liste d'envies dans la sauvegarde iCloud | `App/Compte/` | non livré par N2 ; la liste est locale (`envies.json`). Date de réouverture : Core ne l'expose pas, « Fermée ce jour » |
-| N5 : `MesureGuideView` (geste de mesure) | `App/Prise/` | aucun appel : la source du geste n'est pas connue, texte provisoire |
+| N3 : ligne « Eau » (voulu : sans le fichier, aucune ligne « Eau ») | `stations-temperature.json` | le fichier n'existe pas (D2 doit le fournir) : l'ajouter aux ressources de l'app, le code le cherche dans le bundle ; sans lui, pression et débit seulement. Déclarer le fichier dans `donnees.sh` |
 | N1 : décor sur le widget | `WidgetAquarium/` | `publierAquarium` n'envoie pas le décor |
 | L18 : `regionDe:` de `PescedexModele` (« Ma région » est grisé) | `RootView.init`, ligne `PescedexModele(depot:services:)` | table prête dans Core (`RegionsFrance.region(deDepartement:)`), à brancher avec le Pescedex pour éviter un conflit avec l'autre agent |
 | L23 : bouton « Publier » depuis une carte du Pescedex | `App/Collection/` | Pescedex |
-| L24 : « Écrire » (`BoutonEcrire`, `ConversationView`) sur les pages ami et club ; routage des liens de conversation vers `GestionChat.accepter(...)` dans `RelaisInvitations` | `App/Amis/`, `App/Club/` | dossiers de L21 et L22 |
 | L22 : chat de club, membres sans `idCloudKit` | | listés avec un identifiant vide : pas admissibles dans la zone du chat |
 | L19 : `BlocReglesView` dans `App/Style/BlocRegles/` | | à vérifier avec `scripts/verif.sh` (frontières) |
 | Commentaire périmé dans `App/Club/ModelesClub.swift` ligne 118 (« L23 a sa propre liste ») | `App/Club/` | faux depuis l'alignement ; à effacer par L22 |
@@ -54,6 +53,8 @@ Ces points demandent d'écrire dans un dossier qui n'est pas à L25. Chaque lign
 5. Lancer `scripts/verif.sh`, compiler, puis dans l'ordre : fil (L23), chat (L24, deux iPhones), clubs (L22), profil, repères, décors.
 
 ## À vérifier au premier BUILD
+- Croisé (cette branche) : `ConditionsDuJourView` (`ScrollView` + `AnyView`, détents conditionnels) ; `FeuilleConversationView` dans `.sheet(item:)` depuis un `fullScreenCover` (ami) ; `MainActor.assumeIsolated` dans `SceneDuPartage.acheminer` ; `.onChange(of: RelaisChat.partage.enAttente != nil, initial: true)` (lecture d'un `@Observable` statique dans le corps) ; `apresProfil` capturant `[weak self]` dans une fermeture `@Sendable` ; `ProfilLocal` écrit `envies.json` hors de `EnviesModele` (relu juste après). Aucun test d'app ajouté (ProfilLocal touche UserDefaults et le disque réels).
+- Pas de ligne « Mes envies » grisée : la ligne n'apparaît qu'à partir d'une envie (voulu par N2).
 - `AdaptateurFishMe` : signature async de `didReceiveRemoteNotification`, isolation `@MainActor`, `UIApplicationDelegateAdaptor`. `AdaptateurPartage` n'est plus utilisé (la scène `SceneDuPartage` oui).
 - `SauvegardeAvecReperes` (struct `nonisolated` qui tient deux acteurs), `ParcoursApp.sauvegarde` devenu `(any ServiceSauvegarde)?`.
 - `ContexteReperes.configurer` : fermeture `prises:` lue sur le fil principal sans `@Sendable` ; `chargeur: .embarque()` ne lit pas les règles téléchargées (`ReglesAJour`), seulement celles du paquet.
