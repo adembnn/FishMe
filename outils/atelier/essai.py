@@ -27,6 +27,9 @@ from types import SimpleNamespace
 
 sys.dont_write_bytecode = True  # pas de __pycache__ dans le dépôt
 RACINE = Path(__file__).resolve().parents[2]
+# Sous Windows, « bash » seul trouverait celui de WSL (System32) : on prend celui du PATH (Git Bash).
+BASH = shutil.which("bash") or "bash"
+SH = "/bin/sh" if os.path.exists("/bin/sh") else BASH  # pas de /bin/sh sous Windows : Git Bash
 sys.path.insert(0, str(RACINE / "outils" / "atelier"))
 import lots as atelier  # noqa: E402
 
@@ -145,7 +148,7 @@ fi
 if [ "$1" = release ] && [ "$2" = download ]; then
   dir=.
   while [ $# -gt 0 ]; do [ "$1" = --dir ] && dir="$2"; shift; done
-  mkdir -p "$dir"; echo '[]' > "$dir/stations-especes.json"; echo '{}' > "$dir/rarete-departements.json"; exit 0
+  mkdir -p "$dir"; echo '[]' > "$dir/stations-especes.json"; echo '{}' > "$dir/rarete-departements.json"; echo '[]' > "$dir/stations-hydro.json"; exit 0
 fi
 exit 0
 '''
@@ -161,11 +164,18 @@ def ecrire_executable(chemin, texte):
 # ---------------------------------------------------------------------------
 
 
+DELAI = int(os.environ.get("ESSAI_DELAI", "1"))  # multiplicateur des délais : 8 sous Windows (14 000 fichiers copiés et ajoutés)
+
+
 def lancer(cmd, cwd, env, entree=None, timeout=90):
+    timeout = timeout * DELAI
+    cmd = [BASH] + list(cmd[1:]) if cmd and cmd[0] == "bash" else cmd
     try:
         return subprocess.run(cmd, cwd=str(cwd), env=env, input=entree, text=True, capture_output=True, timeout=timeout)
     except subprocess.TimeoutExpired as e:
         return SimpleNamespace(returncode=124, stdout=(e.stdout or ""), stderr="délai dépassé : " + str(cmd))
+    except OSError as e:  # programme absent (ex. un faux exécutable que Windows ne sait pas lancer) : un échec lisible, pas un plantage
+        return SimpleNamespace(returncode=127, stdout="", stderr=f"impossible de lancer {cmd[:3]} : {e}")
 
 
 def sortie(p):
@@ -203,7 +213,7 @@ def appeler(dossier, evenement, entree, cible, env, timeout=120):
     base = {"session_id": "essai", "transcript_path": "", "cwd": str(dossier), "permission_mode": "default",
             "hook_event_name": evenement}
     base.update(entree)
-    return lancer(["/bin/sh", "-c", commandes[0]], dossier, e, json.dumps(base), timeout)
+    return lancer([SH, "-c", commandes[0]], dossier, e, json.dumps(base), timeout)
 
 
 def ecriture(dossier, chemin, env, outil="Write", champ="file_path", **extra):
@@ -235,7 +245,7 @@ def verifications_statiques():
     scripts = sorted(RACINE.glob("scripts/*.sh")) + sorted(p for p in (RACINE / ".githooks").glob("*") if p.is_file()) \
         + sorted((RACINE / ".claude" / "hooks").glob("*.sh"))
     for s in scripts:
-        p = subprocess.run(["bash", "-n", str(s)], capture_output=True, text=True)
+        p = subprocess.run([BASH, "-n", str(s)], capture_output=True, text=True)
         bilan.verifier(f"syntaxe bash : {s.relative_to(RACINE)}", p.returncode == 0, p.stderr)
     for s in sorted((RACINE / ".claude" / "hooks").glob("*.py")) + sorted((RACINE / "outils" / "atelier").glob("*.py")):
         try:
@@ -283,9 +293,28 @@ def verifications_statiques():
     textes = ""
     for s in scripts + sorted((RACINE / ".claude" / "hooks").glob("*.py")) + [RACINE / ".claude" / "settings.json"]:
         textes += s.read_text(encoding="utf-8") + "\n"
-    dossiers = [d for lot in atelier.charger() if lot["code"] != atelier.LOT_ATELIER for d in lot["dossiers"] if d.endswith("/")]
+    dossiers = [d for lot in atelier.charger() if lot["code"] not in atelier.LOTS_ATELIER for d in lot["dossiers"] if d.endswith("/")]
     en_dur = [d for d in dossiers if d in textes]
     bilan.verifier("aucun dossier de lot écrit en dur dans les scripts et les hooks (tout vient de docs/lots.md)", not en_dur, en_dur)
+
+    # Lots du backlog (fiches N1 à N6 du 19 oct., D2 bis) : lus dans la vraie table du dépôt, pas dans celle de l'essai.
+    reels = atelier.charger()
+    bilan.verifier("docs/lots.md : branches et dossiers disjoints, tout lot du backlog compris", not atelier.verifier(reels), atelier.verifier(reels))
+    for code, branche, chemin in (("N1", "lot/skins-aquarium", "App/Aquarium/Skins/Galerie.swift"),
+                                  ("N2", "lot/envies", "App/Envies/EnviesView.swift"),
+                                  ("N3", "lot/mesures", "Packages/Core/Sources/Core/Conditions/Mesures.swift"),
+                                  ("N4", "lot/records", "App/Records/RecordsView.swift"),
+                                  ("N5", "lot/ma-federation", "App/CartePeche/CarteView.swift"),
+                                  ("N6", "lot/reperes", "Packages/Core/Sources/Core/Reperes/Repere.swift"),
+                                  ("D2B", "lot/hubeau-temperature", "outils/hubeau-temperature/collecter.py")):
+        lot = next((l for l in reels if l["code"] == code), None)
+        bilan.verifier(f"docs/lots.md : le lot {code} est au tableau, sur {branche}, et possède {chemin}",
+                       lot is not None and lot["branche"] == branche and atelier.proprietaire(chemin, reels) == code,
+                       str(lot and (lot["branche"], atelier.proprietaire(chemin, reels))))
+        cli = subprocess.run([sys.executable, str(RACINE / "outils" / "atelier" / "lots.py"), "branche-de", code], capture_output=True, text=True)
+        bilan.verifier(f"scripts/lot.sh {code} : lots.py branche-de {code} rend {branche} (ce que lot.sh lit dans docs/lots.md)",
+                       cli.returncode == 0 and cli.stdout.strip() == branche, cli.stdout + cli.stderr)
+        bilan.verifier(f"docs/lots.md : la branche {branche} se lit comme le lot {code}", (atelier.lot_de_branche(branche, reels) or {}).get("code") == code)
 
     wf = RACINE / ".github" / "workflows" / "verif.yml"
     t = wf.read_text(encoding="utf-8") if wf.exists() else ""
@@ -344,11 +373,16 @@ def construire_monde(tmp):
     if not fichiers:
         ignores = {".git", ".atelier", "__pycache__", ".build"}
         fichiers = [str(p.relative_to(RACINE)) for p in RACINE.rglob("*") if p.is_file() and not ignores & set(p.parts)]
+    # Images lourdes que l'essai ne lit jamais (milliers de fichiers : la copie prenait des minutes sous Windows).
+    lourds = ("WidgetAquarium/NagePoissons.xcassets/", "WidgetAquarium/PoissonsWidget.xcassets/", "docs/maquettes/", "docs/design/")
+    fichiers = [f for f in fichiers if not f.startswith(lourds)]
     for f in fichiers:
         src = RACINE / f
         if src.is_file():
             (app / f).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, app / f)
+    # L'essai joue sur sa propre table de lots (celle du 15-16 oct.), jamais sur celle du dépôt : H1, 19 oct.
+    shutil.copy2(RACINE / "outils" / "atelier" / "essai-lots.md", app / "docs" / "lots.md")
     git(["add", "-A"], app, env)
     git(["commit", "-q", "-m", "base de l'essai"], app, env)
     git(["remote", "add", "origin", origin], app, env)
@@ -401,7 +435,7 @@ def essai_lot_sh(m):
     m.l3 = app.parent / "app-l3"
     bilan.verifier("lot.sh L3 : crée ../app-l3 sur la branche lot/prise", p.returncode == 0 and m.l3.is_dir()
                    and git(["symbolic-ref", "--short", "HEAD"], m.l3, m.env).stdout.strip() == "lot/prise", sortie(p))
-    bilan.verifier("lot.sh : affiche les 2 commandes suivantes (cd puis claude)", f'cd "{m.l3}"' in p.stdout and "claude" in p.stdout, p.stdout)
+    bilan.verifier("lot.sh : affiche les 2 commandes suivantes (cd puis claude)", f'cd "' in p.stdout and f'{m.l3.name}"' in p.stdout and "claude" in p.stdout, p.stdout)
     bilan.verifier("lot.sh : branche les crochets de git (core.hooksPath = .githooks)",
                    git(["config", "core.hooksPath"], m.l3, m.env).stdout.strip() == ".githooks")
     bilan.verifier("lot.sh : la branche part de origin/main",
@@ -547,7 +581,7 @@ def essai_formate(m):
         vider_appels(m)
         r = appeler(l3, "PostToolUse", {"tool_name": "Write", "tool_input": {"file_path": str(f)}}, "Write", m.env_sans)
         bilan.verifier("formate : sans swift (cloud), il ne fait rien et ne bloque pas", r.returncode == 0 and appels(m) == "")
-    r = lancer(["/bin/sh", "-c", commandes_declarees(l3, "PostToolUse", "Edit")[0]], l3, dict(m.env_avec, CLAUDE_PROJECT_DIR=str(l3)), "pas du json")
+    r = lancer([SH, "-c", commandes_declarees(l3, "PostToolUse", "Edit")[0]], l3, dict(m.env_avec, CLAUDE_PROJECT_DIR=str(l3)), "pas du json")
     bilan.verifier("formate : une entrée illisible ne bloque pas non plus", r.returncode == 0)
     os.remove(f)
     os.remove(t)
@@ -639,12 +673,15 @@ def essai_verif(m):
         p = lancer(["bash", "scripts/verif.sh"], c0, dict(env, CI="true"))
         bilan.verifier("verif.sh : en CI (GitHub), la partie App est déclarée sautée", p.returncode == 0 and "· sauté : App" in p.stdout, p.stdout)
     # App sur Mac simulé : xcodebuild test avec le premier simulateur iPhone.
-    (c0 / "Projet.xcodeproj").mkdir(exist_ok=True)
+    # Le dépôt contient désormais le vrai projet (BuildChallenge.xcodeproj) : verif.sh prend le premier trouvé.
+    if not sorted(c0.glob("*.xcodeproj")):
+        (c0 / "Projet.xcodeproj").mkdir(exist_ok=True)
+    projet = sorted(c0.glob("*.xcodeproj"))[0].name
     vider_appels(m)
     p = lancer(["bash", "scripts/verif.sh"], c0, dict(env, ATELIER_SYSTEME="Darwin"))
     a = appels(m)
     bilan.verifier("verif.sh : sur Mac, lance xcodebuild test (schéma trouvé, simulateur iPhone, id du simulateur)",
-                   "✓ App" in p.stdout and "xcodebuild test -project ./Projet.xcodeproj -scheme Pesche" in a
+                   "✓ App" in p.stdout and f"xcodebuild test -project ./{projet} -scheme Pesche" in a
                    and "id=11111111-2222-3333-4444-555555555555" in a, p.stdout + a)
     vider_appels(m)
     lancer(["bash", "scripts/verif.sh"], c0, dict(env, ATELIER_SYSTEME="Darwin", SCHEMA="Autre"))
@@ -653,7 +690,8 @@ def essai_verif(m):
     p = lancer(["bash", "scripts/verif.sh"], c0, dict(env, ATELIER_SYSTEME="Darwin"))
     bilan.verifier("verif.sh : sur Mac, un xcodebuild rouge -> ✗ App, sort 1", p.returncode == 1 and "✗ App" in p.stdout, p.stdout)
     etat_de(m, "xcode-resultat", "vert")
-    shutil.rmtree(c0 / "Projet.xcodeproj")
+    if (c0 / "Projet.xcodeproj").exists():
+        shutil.rmtree(c0 / "Projet.xcodeproj")
     os.remove(c0 / "App/Carte/X.swift")
 
     # Core sans swift : via Docker, ou ✗ avec la commande de réparation.
@@ -714,9 +752,9 @@ def essai_donnees_gitignore(m):
                    p.returncode == 1 and "release" in p.stderr and "donnees" in p.stderr and "pas encore" in p.stderr, sortie(p))
     etat_de(m, "gh-mode", "ok")
     p = lancer(["bash", "scripts/donnees.sh"], app, m.env_sans)
-    dossier = app / "Packages/Core/Sources/Core/Resources"
-    bilan.verifier("donnees.sh : avec la release, télécharge les 2 fichiers dans Resources/",
-                   p.returncode == 0 and (dossier / "stations-especes.json").is_file() and (dossier / "rarete-departements.json").is_file(), sortie(p))
+    dossier = app / "App/Donnees"  # donnees.sh (16 oct.) : 3 fichiers dans App/Donnees/, ignoré par git
+    bilan.verifier("donnees.sh : avec la release, télécharge les 3 fichiers dans App/Donnees/",
+                   p.returncode == 0 and all((dossier / f).is_file() for f in ("stations-especes.json", "rarete-departements.json", "stations-hydro.json")), sortie(p))
     bilan.verifier("donnees.sh : les fichiers téléchargés ne sont pas vus par git (.gitignore)", git(["status", "--porcelain"], app, m.env).stdout.strip() == "",
                    git(["status", "--porcelain"], app, m.env).stdout)
     shutil.rmtree(app / "Packages")
@@ -929,7 +967,10 @@ def essai_env(m):
         noms = [l.split("=")[0] for l in (RACINE / "env.exemple").read_text(encoding="utf-8").splitlines() if l and not l.startswith("#")]
         contenu = (d / ".env").read_text(encoding="utf-8") if (d / ".env").exists() else ""
         bilan.verifier("env.sh : crée .env avec chaque nom de env.exemple, valeur vide", p.returncode == 0 and all(f"{n}=\n" in contenu for n in noms), sortie(p))
-        bilan.verifier("env.sh : .env n'est lisible que par son propriétaire (600)", oct((d / ".env").stat().st_mode & 0o777) == "0o600")
+        if os.name == "nt":  # NTFS n'a pas de droits à la Unix : à jouer sur Mac ou Linux
+            print("· sauté : env.sh : droits 600 de .env (Windows : pas de chmod)")
+        else:
+            bilan.verifier("env.sh : .env n'est lisible que par son propriétaire (600)", oct((d / ".env").stat().st_mode & 0o777) == "0o600")
         (d / ".env").write_text(contenu.replace(f"{noms[0]}=\n", f"{noms[0]}=valeur-secrete\n"), encoding="utf-8")
         p = lancer(["bash", "scripts/env.sh"], d, env)
         apres = (d / ".env").read_text(encoding="utf-8")
