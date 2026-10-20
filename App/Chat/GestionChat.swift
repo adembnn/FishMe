@@ -127,6 +127,7 @@ final class GestionChat {
         let bloques = await stock.bloques().union(await annuaire.bloques())
         let marque = exemple ? "Exemple · " : ""
         let jePeuxEcrire = moi?.a15Ans == true
+        let admisAvant = aAdmettre
         var lignes: [ResumeConversation] = []
         for ami in amis {
             let conversation = ConversationID.ami(ami.idCloudKit)
@@ -150,6 +151,8 @@ final class GestionChat {
                                                uniquingKeysWith: { premier, _ in premier })
             lignes.append(await resume(conversation, titre: titre, ferme: false, bloques: bloques))
         }
+        // Un membre dont le compte vient d'être lu : la conversation ouverte redemande son lien pour l'admettre.
+        if let ouverte, aAdmettre[ouverte] != admisAvant[ouverte] { verifierLien = true }
         resumes = lignes.sorted {
             ($0.dernier?.date ?? .distantPast) > ($1.dernier?.date ?? .distantPast)
         }

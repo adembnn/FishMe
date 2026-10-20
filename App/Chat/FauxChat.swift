@@ -144,5 +144,11 @@ actor FauxAnnuaire: AnnuaireChat {
     func amis() async -> [InterlocuteurChat] { mesAmis }
     func clubs() async -> [ClubChat] { mesClubs }
     func bloques() async -> Set<String> { mesBloques }
+
+    /// Combien de fois la liste a demandé à l'annuaire de retenter de trouver les comptes manquants.
+    private(set) var actualisationsClubs = 0
+    func actualiserClubs() async { actualisationsClubs += 1 }
+    /// Les clubs changent (un profil manquant vient d'être lu).
+    func definir(clubs: [ClubChat]) { mesClubs = clubs }
 }
 #endif
