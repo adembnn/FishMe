@@ -62,7 +62,6 @@
 		0097F38EEF3AB0F94E6B05B6 /* Exceptions for "WidgetAquarium" folder in "FishMeWidget" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				AstuceAjouterWidget.swift,
 				fabriquer_cycle_nage.py,
 				fabriquer_poissons_volume.py,
 				integrer_poissons_3d.py,
@@ -119,8 +118,14 @@
 		FE0C0C0130A00000000000A1 /* Exceptions for "App" folder in "BuildChallenge" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"Aquarium/Skins/LISEZMOI-N1.md",
+				"Conseils/LISEZMOI-L16.md",
+				"Collection/LISEZMOI-N2.md",
+				"Carte/LISEZMOI-L17.md",
+				"Club/LISEZMOI-L22.md",
 				Mouvement/LISEZMOI.md,
 				"Prise/photo-exemple-source.md",
+				Reperes/LISEZMOI.md,
 				Style/LISEZMOI.md,
 			);
 			target = DBE31DC230753926004DC02F /* BuildChallenge */;

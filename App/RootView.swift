@@ -42,15 +42,6 @@ enum Modal: Identifiable, Equatable {
         case .carteAEssayer: "carte-a-essayer"
         case .finSession: "fin-session"
         case .mesSorties: "mes-sorties"
-        case .nouveauRepere(let position):
-            NouveauRepereView(position: position)
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
-
-        case .listeReperes:
-            ListeReperesView()
-                .presentationDetents([.large])
-
         case .reglages: "reglages"
         case .nouveauRepere: "nouveau-repere"
         case .listeReperes: "liste-reperes"
@@ -1297,6 +1288,15 @@ private struct RacineContenu: View {
 
         case .reglages:
             ReglagesEmplacement(app: app)
+
+        case .nouveauRepere(let position):
+            NouveauRepereView(position: position)
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
+
+        case .listeReperes:
+            ListeReperesView()
+                .presentationDetents([.large])
 
         case .prise:
             PriseRacineView(services: app.servicesPrise, contexte: app.contextePrise(),

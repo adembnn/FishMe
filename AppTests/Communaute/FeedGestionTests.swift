@@ -285,7 +285,7 @@ struct FeedGestionTests {
         for section in SectionFeed.allCases {
             let pubs = g.etat(section).publications
             #expect(!pubs.isEmpty)
-            #expect(pubs.allSatisfy(\.exemple))
+            #expect(pubs.allSatisfy { $0.exemple })
         }
         #expect(!g.peutPublier)
         // Lecture seule : un like n'écrit rien.
@@ -305,7 +305,7 @@ struct FeedGestionTests {
         let (g, cache) = try gestion(service: FauxServiceFeed(publications: jeu()), source: SourceContexteFausse(demo: true), avecExemple: true)
         await g.actualiser()
         #expect(g.exemples)
-        #expect(g.etat(.clubs).publications.allSatisfy(\.exemple))
+        #expect(g.etat(.clubs).publications.allSatisfy { $0.exemple })
         // Aucun exemple n'est gardé en cache.
         #expect((await cache.lire(section: .clubs)).isEmpty)
     }
@@ -319,7 +319,7 @@ struct FeedGestionTests {
         await g.actualiser()
         #expect(!g.exemples)
         #expect(g.etat(.clubs).publications.map(\.id) == ["a1"])
-        #expect(!g.etat(.clubs).publications.contains(where: \.exemple))
+        #expect(!g.etat(.clubs).publications.contains { $0.exemple })
     }
 
     @Test func sansCompteNiExempleLeBandeauDitConnecteToiAICloud() async throws {
@@ -336,7 +336,7 @@ struct FeedGestionTests {
             try await s.signaler(SignalementFeed(cible: "x", typeCible: .publication, motif: .spam, signalePar: "p-moi", auteurCible: "p-y"))
         }
         let page = try await s.page(DemandeSection(section: .region, valeurs: ["exemple"]))
-        #expect(page.publications.allSatisfy(\.exemple))
+        #expect(page.publications.allSatisfy { $0.exemple })
         #expect(page.publications.allSatisfy { !$0.legende.isEmpty && FiltreTexte.verifier($0.legende) == nil })
     }
 }

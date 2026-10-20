@@ -77,7 +77,7 @@ nonisolated enum EtatClub: Sendable, Equatable {
     case sansFondateur
 }
 
-extension Club {
+nonisolated extension Club {
     /// `membres` : les adhésions lues. Un fondateur dont l'adhésion a disparu (il est parti, ou son profil est supprimé) = club sans fondateur.
     func etat(membres: [Membre]) -> EtatClub {
         if ferme { return .ferme }

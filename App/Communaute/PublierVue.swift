@@ -84,8 +84,8 @@ struct PublierVue: View {
                     Label(apercu == nil ? "Choisir une photo ou une vidéo" : "Changer", systemImage: "photo.on.rectangle")
                         .font(Police.corps)
                         .frame(maxWidth: .infinity, minHeight: Gabarit.bouton)
-                        .tuileFishMe()
                 }
+                .tuileFishMe()
                 Text("Vidéo : 15 secondes au plus. Aucune position n'est envoyée.")
                     .font(Police.legende).foregroundStyle(Palette.encreDouce)
             }

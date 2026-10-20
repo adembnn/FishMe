@@ -1,4 +1,5 @@
 import XCTest
+import SwiftUI
 import Core
 @testable import BuildChallenge
 

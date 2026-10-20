@@ -7,7 +7,7 @@ import SwiftUI
 // ⚠ à vérifier sur Mac : rendu des chemins (arcs approchés par des courbes de Bézier), épaisseur du trait à 24 pt.
 
 /// Convertit les coordonnées d'une boîte de dessin (largeur x hauteur) vers un rectangle.
-private struct BoiteDessin {
+private nonisolated struct BoiteDessin {
     let rect: CGRect
     let largeur: CGFloat
     let hauteur: CGFloat
@@ -17,7 +17,7 @@ private struct BoiteDessin {
     func echelle(_ v: CGFloat) -> CGFloat { v / largeur * rect.width }
 }
 
-extension Path {
+nonisolated extension Path {
     /// Demi-cercle SVG (`a r r 0 0 sens dx dy`, corde de longueur 2r) depuis le point courant, en deux quarts de Bézier.
     /// `horaire` = drapeau de balayage SVG 1 (sens des aiguilles d'une montre à l'écran).
     fileprivate mutating func demiCercle(vers fin: CGPoint, horaire: Bool) {
@@ -46,7 +46,7 @@ extension Path {
 }
 
 /// La silhouette : épingle goutte, boîte 32 x 41 (la pointe est exactement au bas du rectangle).
-struct EpingleGoutte: Shape {
+nonisolated struct EpingleGoutte: Shape {
     static let largeur: CGFloat = 32
     static let hauteur: CGFloat = 41
 
@@ -65,7 +65,7 @@ struct EpingleGoutte: Shape {
 
 /// L'hameçon du jeu C (coordonnées d'origine : œil en (13 ; 4,6), hampe jusqu'à y = 15,8, courbe de rayon 4,9, barbes),
 /// recentré dans la boîte 24 x 24 et agrandi de 8 % pour rester lisible à 24 pt dans la goutte.
-private struct Hamecon {
+private nonisolated struct Hamecon {
     let boite: BoiteDessin
     static let echelle: CGFloat = 1.08
     /// Centre du dessin d'origine : x de 1,4 à 13, y de 2,7 à 20,7.
@@ -80,7 +80,7 @@ private struct Hamecon {
 
 /// Les parties pleines du pictogramme (boîte 24 x 24), à remplir en pair-impair (évidements).
 /// Poste de pêche : seulement le rond de l'œil de l'hameçon (le reste est au trait, voir `GlypheRepereTrait`).
-struct GlypheRepereRempli: Shape {
+nonisolated struct GlypheRepereRempli: Shape {
     let type: IconeRepere
 
     func path(in rect: CGRect) -> Path {
@@ -147,7 +147,7 @@ struct GlypheRepereRempli: Shape {
 }
 
 /// Les parties au trait du pictogramme (boîte 24 x 24) : l'hameçon du poste et l'anse du seau. Vide pour les autres types.
-struct GlypheRepereTrait: Shape {
+nonisolated struct GlypheRepereTrait: Shape {
     let type: IconeRepere
 
     func path(in rect: CGRect) -> Path {

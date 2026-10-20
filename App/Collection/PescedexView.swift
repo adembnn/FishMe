@@ -175,7 +175,7 @@ struct PescedexView: View {
         }
         await modele.charger()
         rechargerEnvies()
-        fichePourOuvrir = espece.id
+        fichePourOuvrir = espece.espece.id
     }
 
     /// Après chaque chargement du Pescedex : les espèces qui ont maintenant une carte sortent de la liste d'envies.

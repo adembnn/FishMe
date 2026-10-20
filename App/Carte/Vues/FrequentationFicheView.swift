@@ -62,7 +62,7 @@ extension EtatPastille {
 
 /// Une silhouette de pêcheur (tête + épaules) centrée en `centreX` dans une grille de 44 × 44, à l'échelle `echelle`.
 /// Reprend le dessin de la planche (proposition C) : tête r = 3,3 à y = 18,5 ; épaules = demi-disque de rayon 5 posé sur y = 31.
-struct SilhouettePecheur: Shape {
+nonisolated struct SilhouettePecheur: Shape {
     let centreX: CGFloat
     let echelle: CGFloat
 

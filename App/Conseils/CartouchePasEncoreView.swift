@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Le contour du poisson de la carte à débloquer (dessin de référence : viewBox 138 × 200, poisson posé à (7, 46) à l'échelle 0,62).
 /// Un dessin générique, pas l'image de l'espèce : un contour en pointillés ne se tire pas d'une image.
-struct PoissonContour: Shape {
+nonisolated struct PoissonContour: Shape {
     func path(in rect: CGRect) -> Path {
         var p = Path()
         // Corps
@@ -29,7 +29,7 @@ struct PoissonContour: Shape {
 }
 
 /// Deux vaguelettes au bas de la carte (dessin de référence).
-private struct Vaguelettes: Shape {
+private nonisolated struct Vaguelettes: Shape {
     var y: CGFloat
     func path(in rect: CGRect) -> Path {
         let e = rect.width / 138

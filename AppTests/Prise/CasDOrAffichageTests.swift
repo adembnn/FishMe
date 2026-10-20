@@ -9,7 +9,7 @@ import Core
 @MainActor
 struct CasDOrAffichageTests {
     /// Le fichier se lit dans le dépôt, à côté de `Core` (le paquet n'expose pas ses ressources à l'app).
-    private static let fichier = URL(fileURLWithPath: #filePath)
+    nonisolated private static let fichier = URL(fileURLWithPath: #filePath)
         .deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
         .appendingPathComponent("Packages/Core/Sources/Core/Resources/cas-verdicts.json")
 
