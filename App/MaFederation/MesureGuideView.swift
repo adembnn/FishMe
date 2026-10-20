@@ -110,7 +110,7 @@ private enum CouleursDessin {
 }
 
 /// Repère de 200 x 92 ; museau en x = 20, bout de la queue en x = 180. La flèche partage ces abscisses.
-private enum GeometrieDessin {
+private nonisolated enum GeometrieDessin {
     static let largeur: CGFloat = 200
     static let hauteur: CGFloat = 92
     static let museau: CGFloat = 20
@@ -124,7 +124,7 @@ private enum GeometrieDessin {
     }
 }
 
-private struct CorpsDuPoisson: Shape {
+private nonisolated struct CorpsDuPoisson: Shape {
     func path(in r: CGRect) -> Path {
         func p(_ x: CGFloat, _ y: CGFloat) -> CGPoint { GeometrieDessin.point(x, y, r) }
         var c = Path()
@@ -139,7 +139,7 @@ private struct CorpsDuPoisson: Shape {
     }
 }
 
-private struct NageoireDeProfil: Shape {
+private nonisolated struct NageoireDeProfil: Shape {
     enum Forme { case dorsale, ventrale }
     let forme: Forme
     func path(in r: CGRect) -> Path {
@@ -158,7 +158,7 @@ private struct NageoireDeProfil: Shape {
     }
 }
 
-private struct VentreDuPoisson: Shape {
+private nonisolated struct VentreDuPoisson: Shape {
     func path(in r: CGRect) -> Path {
         func p(_ x: CGFloat, _ y: CGFloat) -> CGPoint { GeometrieDessin.point(x, y, r) }
         var c = Path()
@@ -171,14 +171,14 @@ private struct VentreDuPoisson: Shape {
     }
 }
 
-private struct BoutDeQueue: Shape {
+private nonisolated struct BoutDeQueue: Shape {
     func path(in r: CGRect) -> Path {
         Path(CGRect(x: GeometrieDessin.point(140, 0, r).x, y: r.minY,
                     width: r.width * 60 / GeometrieDessin.largeur, height: r.height))
     }
 }
 
-private struct LigneLaterale: Shape {
+private nonisolated struct LigneLaterale: Shape {
     func path(in r: CGRect) -> Path {
         func p(_ x: CGFloat, _ y: CGFloat) -> CGPoint { GeometrieDessin.point(x, y, r) }
         var c = Path()
@@ -188,7 +188,7 @@ private struct LigneLaterale: Shape {
     }
 }
 
-private struct TachesDuPoisson: Shape {
+private nonisolated struct TachesDuPoisson: Shape {
     func path(in r: CGRect) -> Path {
         let rayon = 1.7 / GeometrieDessin.largeur * r.width
         let centres: [(CGFloat, CGFloat)] = [(70, 32), (86, 30), (100, 34), (78, 39), (112, 36), (94, 40), (124, 38)]
@@ -201,7 +201,7 @@ private struct TachesDuPoisson: Shape {
     }
 }
 
-private struct Opercule: Shape {
+private nonisolated struct Opercule: Shape {
     func path(in r: CGRect) -> Path {
         var c = Path()
         c.move(to: GeometrieDessin.point(50, 30, r))
@@ -210,7 +210,7 @@ private struct Opercule: Shape {
     }
 }
 
-private struct OeilDuPoisson: Shape {
+private nonisolated struct OeilDuPoisson: Shape {
     var rayon: CGFloat = 3.4
     func path(in r: CGRect) -> Path {
         let centre = GeometrieDessin.point(35, 37, r)
@@ -220,7 +220,7 @@ private struct OeilDuPoisson: Shape {
 }
 
 /// Deux traits pointillés verticaux : sous le museau et sous le bout de la queue.
-private struct ReperesDeMesure: Shape {
+private nonisolated struct ReperesDeMesure: Shape {
     func path(in r: CGRect) -> Path {
         var c = Path()
         c.move(to: GeometrieDessin.point(GeometrieDessin.museau, 22, r))
@@ -232,7 +232,7 @@ private struct ReperesDeMesure: Shape {
 }
 
 /// Le trait de la flèche, du museau au bout de la queue.
-private struct FlecheDeMesure: Shape {
+private nonisolated struct FlecheDeMesure: Shape {
     func path(in r: CGRect) -> Path {
         var c = Path()
         c.move(to: GeometrieDessin.point(GeometrieDessin.museau + 6, GeometrieDessin.fleche, r))
@@ -242,7 +242,7 @@ private struct FlecheDeMesure: Shape {
 }
 
 /// Les deux pointes pleines de la flèche, posées sur les repères.
-private struct PointesDeFleche: Shape {
+private nonisolated struct PointesDeFleche: Shape {
     func path(in r: CGRect) -> Path {
         func p(_ x: CGFloat, _ y: CGFloat) -> CGPoint { GeometrieDessin.point(x, y, r) }
         let y = GeometrieDessin.fleche
@@ -260,7 +260,7 @@ private struct PointesDeFleche: Shape {
 }
 
 /// Un point plein sur le museau et un sur le bout de la queue.
-private struct PointsDeMesure: Shape {
+private nonisolated struct PointsDeMesure: Shape {
     func path(in r: CGRect) -> Path {
         let ray = 4 / GeometrieDessin.largeur * r.width
         var c = Path()
