@@ -18,7 +18,7 @@ final class ProfilUITests: XCTestCase {
         }
         XCTAssertTrue(app.textFields["profil.recherche"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.scrollBars.count, 0)
-        for bouton in app.buttons.allElementsBoundByIndex where bouton.isHittable {
+        for bouton in app.scrollViews.buttons.allElementsBoundByIndex where bouton.isHittable {
             XCTAssertGreaterThanOrEqual(bouton.frame.height, 44, bouton.label)
         }
     }

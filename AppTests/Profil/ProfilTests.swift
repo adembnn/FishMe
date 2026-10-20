@@ -432,18 +432,23 @@ struct ProfilTests {
         let url = try #require(LienAmi.url(profilID: "p-gros-brochet"))
         #expect(url.absoluteString == "fishme://ami/p-gros-brochet")
         #expect(LienAmi.profilID(depuis: url) == "p-gros-brochet")
-        #expect(LienAmi.profilID(depuis: try #require(URL(string: "fishme://club/p-gros-brochet"))) == nil)
-        #expect(LienAmi.profilID(depuis: try #require(URL(string: "fishme://ami/abc"))) == nil)
-        #expect(LienAmi.profilID(depuis: try #require(URL(string: "https://ami/p-gros-brochet"))) == nil)
+        let club = try #require(URL(string: "fishme://club/p-gros-brochet"))
+        let court = try #require(URL(string: "fishme://ami/abc"))
+        let web = try #require(URL(string: "https://ami/p-gros-brochet"))
+        #expect(LienAmi.profilID(depuis: club) == nil)
+        #expect(LienAmi.profilID(depuis: court) == nil)
+        #expect(LienAmi.profilID(depuis: web) == nil)
     }
 
     @Test func leRelaisGardeLeLienJusquAuSolde() throws {
         let relais = RelaisLienAmi()
-        #expect(relais.recevoir(try #require(URL(string: "fishme://ami/p-gros-brochet"))))
+        let lien = try #require(URL(string: "fishme://ami/p-gros-brochet"))
+        let autre = try #require(URL(string: "fishme://pro"))
+        #expect(relais.recevoir(lien))
         #expect(relais.enAttente == "p-gros-brochet")
         relais.solder()
         #expect(relais.enAttente == nil)
-        #expect(!relais.recevoir(try #require(URL(string: "fishme://pro"))))
+        #expect(!relais.recevoir(autre))
     }
 
     @Test func lAmiPorteSonSurnomJamaisUnNomReel() {
