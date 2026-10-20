@@ -1,6 +1,7 @@
 import PhotosUI
 import SwiftUI
 import UIKit
+import UniformTypeIdentifiers
 
 /// Une vidéo choisie dans la photothèque, copiée dans un fichier temporaire.
 nonisolated struct FichierVideo: Transferable, Sendable {
@@ -93,7 +94,7 @@ struct PublierVue: View {
 
     private var legendeBloc: some View {
         VStack(alignment: .leading, spacing: Espace.xs) {
-            TextField("Légende (facultatif)", text: $modele.legende, axis: .vertical)
+            TextField("Légende (facultatif)", text: Binding(get: { modele.legende }, set: { modele.legende = String($0.prefix(FiltreTexte.longueurMax)) }), axis: .vertical)
                 .font(Police.corps)
                 .lineLimit(1...5)
                 .padding(Espace.m)
@@ -140,6 +141,7 @@ struct PublierVue: View {
                     ForEach(modele.options, id: \.self) { Text(LieuPublication.etiquette($0, modele.contexteLieu)).tag($0) }
                 }
                 .pickerStyle(.segmented)
+                .frame(minHeight: Gabarit.zoneTactile)
             }
             Text("Les autres verront : \(modele.apercuLieu)")
                 .font(Police.legende).foregroundStyle(Palette.encreDouce)

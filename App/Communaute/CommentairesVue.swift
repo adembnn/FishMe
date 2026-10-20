@@ -75,7 +75,7 @@ struct CommentairesVue: View {
                 Text("Finis ton profil (15 ans ou plus) pour commenter.").font(Police.legende).foregroundStyle(Palette.encreDouce)
             }
             HStack(alignment: .bottom, spacing: Espace.s) {
-                TextField("Ton commentaire", text: $modele.texte, axis: .vertical)
+                TextField("Ton commentaire", text: Binding(get: { modele.texte }, set: { modele.texte = String($0.prefix(FiltreTexte.longueurMax)) }), axis: .vertical)
                     .font(Police.corps)
                     .lineLimit(1...4)
                     .padding(Espace.m)

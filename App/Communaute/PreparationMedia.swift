@@ -16,7 +16,7 @@ nonisolated struct MediaPret: Sendable, Equatable {
 /// ⚠ à vérifier sur le Mac : `AVAssetExportSession.export(to:as:)` (async, iOS 18), `metadataItemFilter`,
 /// `AVAssetImageGenerator.image(at:)` (async). Repli si `export(to:as:)` manque : `exportAsynchronously` (déprécié).
 nonisolated enum PreparationMedia {
-    enum Erreur: Error, Equatable { case illisible, ecriture, export, lieuPresent }
+    nonisolated enum Erreur: Error, Equatable { case illisible, ecriture, export, lieuPresent }
 
     static let coteMax = 1600
     static let coteVignette = 640

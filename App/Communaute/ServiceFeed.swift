@@ -81,7 +81,7 @@ nonisolated protocol SourceContexte: Sendable {
     func modeDemo() async -> Bool
 }
 
-extension SourceContexte {
+nonisolated extension SourceContexte {
     func modeDemo() async -> Bool { false }
 }
 
@@ -106,9 +106,9 @@ nonisolated struct ContexteFeed: Sendable, Equatable {
 /// L'e-mail de signalement : un `mailto:` prérempli (CloudKit n'envoie pas d'e-mail seul, `moderation.md`).
 /// Des identifiants et le texte signalé partent : jamais de coordonnée.
 nonisolated enum CourrielSignalement {
-    static let adresse = "fishme.app@gmail.com"
+    static let adresse = ContactClub.adresse
 
-    static func url(_ s: SignalementFeed, adresse: String = adresse) -> URL? {
+    static func url(_ s: SignalementFeed, adresse: String = CourrielSignalement.adresse) -> URL? {
         var composants = URLComponents()
         composants.scheme = "mailto"
         composants.path = adresse

@@ -3,7 +3,7 @@ import UIKit
 
 /// Les vignettes décodées une seule fois : `body` se rejoue souvent, le décodage d'un fichier ne doit pas suivre.
 /// ⚠ à vérifier sur le Mac : `UIImage` passé d'une tâche détachée à l'acteur principal (Sendable depuis iOS 17 ?).
-final class CacheImagesFeed: @unchecked Sendable {
+nonisolated final class CacheImagesFeed: @unchecked Sendable {
     static let partage = CacheImagesFeed()
     private let cache = NSCache<NSString, UIImage>()
 
