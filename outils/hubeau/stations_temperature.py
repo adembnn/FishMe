@@ -35,6 +35,7 @@ BASE = "https://hubeau.eaufrance.fr/api/v1/temperature"
 USER_AGENT = "FishMe-D2/1.0 (stations-temperature)"
 PAUSE_S = 0.3
 TAILLE_PAGE = 1000
+TIMEOUT_MESURE_S = 20
 JOURS_PAR_DEFAUT = 30
 
 
@@ -54,7 +55,7 @@ def obtenir(url: str, essais: int = 6, timeout: int = 120, log=print, dormir=tim
             req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return json.loads(r.read().decode("utf-8"))
-        except (urllib.error.URLError, TimeoutError, ConnectionError, json.JSONDecodeError) as e:
+        except (urllib.error.URLError, TimeoutError, OSError, ConnectionError, json.JSONDecodeError) as e:
             if k == essais - 1:
                 raise
             attente = _attente(k, e)
@@ -102,7 +103,8 @@ def convertir(s: dict, en_service: bool):
 
 
 def a_des_mesures(code: str, depuis: datetime.date, obtenir_fn=obtenir) -> bool:
-    return (obtenir_fn(url_mesures_depuis(code, depuis)).get("count") or 0) > 0
+    # Hub'Eau cale parfois une requete sans repondre : delai court (20 s) puis nouvel essai, plutot que d'attendre 2 min.
+    return (obtenir_fn(url_mesures_depuis(code, depuis), timeout=TIMEOUT_MESURE_S).get("count") or 0) > 0
 
 
 def construire(fiches: list, depuis: datetime.date, a_mesures=a_des_mesures, log=print, pause_s: float = PAUSE_S,
