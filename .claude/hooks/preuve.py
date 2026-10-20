@@ -15,6 +15,7 @@ Le compteur de refus est à nous (fichier dans .atelier/), pas celui de Claude C
 et Claude Code coupe de toute façon après 8 refus de suite.
 """
 import json
+import shutil
 import os
 import re
 import subprocess
@@ -23,6 +24,7 @@ import time
 
 sys.dont_write_bytecode = True  # pas de __pycache__ dans le dépôt
 RACINE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+BASH = shutil.which("bash") or "bash"  # sous Windows, « bash » seul trouverait celui de WSL
 sys.path.insert(0, os.path.join(RACINE, "outils", "atelier"))
 import lots as atelier  # noqa: E402
 
@@ -66,7 +68,7 @@ def lancer_verif():
     if not os.path.isfile(script):
         return 0, ""
     try:
-        p = subprocess.run(["bash", script, "--rapide"], cwd=RACINE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+        p = subprocess.run([BASH, script, "--rapide"], cwd=RACINE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                            timeout=DUREE_MAX)
         code, sortie = p.returncode, p.stdout.decode("utf-8", "replace")
     except subprocess.TimeoutExpired:

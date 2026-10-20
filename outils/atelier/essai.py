@@ -29,6 +29,7 @@ sys.dont_write_bytecode = True  # pas de __pycache__ dans le dépôt
 RACINE = Path(__file__).resolve().parents[2]
 # Sous Windows, « bash » seul trouverait celui de WSL (System32) : on prend celui du PATH (Git Bash).
 BASH = shutil.which("bash") or "bash"
+SH = "/bin/sh" if os.path.exists("/bin/sh") else BASH  # pas de /bin/sh sous Windows : Git Bash
 sys.path.insert(0, str(RACINE / "outils" / "atelier"))
 import lots as atelier  # noqa: E402
 
@@ -147,7 +148,7 @@ fi
 if [ "$1" = release ] && [ "$2" = download ]; then
   dir=.
   while [ $# -gt 0 ]; do [ "$1" = --dir ] && dir="$2"; shift; done
-  mkdir -p "$dir"; echo '[]' > "$dir/stations-especes.json"; echo '{}' > "$dir/rarete-departements.json"; exit 0
+  mkdir -p "$dir"; echo '[]' > "$dir/stations-especes.json"; echo '{}' > "$dir/rarete-departements.json"; echo '[]' > "$dir/stations-hydro.json"; exit 0
 fi
 exit 0
 '''
@@ -173,6 +174,8 @@ def lancer(cmd, cwd, env, entree=None, timeout=90):
         return subprocess.run(cmd, cwd=str(cwd), env=env, input=entree, text=True, capture_output=True, timeout=timeout)
     except subprocess.TimeoutExpired as e:
         return SimpleNamespace(returncode=124, stdout=(e.stdout or ""), stderr="délai dépassé : " + str(cmd))
+    except OSError as e:  # programme absent (ex. un faux exécutable que Windows ne sait pas lancer) : un échec lisible, pas un plantage
+        return SimpleNamespace(returncode=127, stdout="", stderr=f"impossible de lancer {cmd[:3]} : {e}")
 
 
 def sortie(p):
@@ -210,7 +213,7 @@ def appeler(dossier, evenement, entree, cible, env, timeout=120):
     base = {"session_id": "essai", "transcript_path": "", "cwd": str(dossier), "permission_mode": "default",
             "hook_event_name": evenement}
     base.update(entree)
-    return lancer(["/bin/sh", "-c", commandes[0]], dossier, e, json.dumps(base), timeout)
+    return lancer([SH, "-c", commandes[0]], dossier, e, json.dumps(base), timeout)
 
 
 def ecriture(dossier, chemin, env, outil="Write", champ="file_path", **extra):
@@ -367,6 +370,9 @@ def construire_monde(tmp):
     if not fichiers:
         ignores = {".git", ".atelier", "__pycache__", ".build"}
         fichiers = [str(p.relative_to(RACINE)) for p in RACINE.rglob("*") if p.is_file() and not ignores & set(p.parts)]
+    # Images lourdes que l'essai ne lit jamais (milliers de fichiers : la copie prenait des minutes sous Windows).
+    lourds = ("WidgetAquarium/NagePoissons.xcassets/", "WidgetAquarium/PoissonsWidget.xcassets/", "docs/maquettes/", "docs/design/")
+    fichiers = [f for f in fichiers if not f.startswith(lourds)]
     for f in fichiers:
         src = RACINE / f
         if src.is_file():
@@ -426,7 +432,7 @@ def essai_lot_sh(m):
     m.l3 = app.parent / "app-l3"
     bilan.verifier("lot.sh L3 : crée ../app-l3 sur la branche lot/prise", p.returncode == 0 and m.l3.is_dir()
                    and git(["symbolic-ref", "--short", "HEAD"], m.l3, m.env).stdout.strip() == "lot/prise", sortie(p))
-    bilan.verifier("lot.sh : affiche les 2 commandes suivantes (cd puis claude)", f'cd "{m.l3}"' in p.stdout and "claude" in p.stdout, p.stdout)
+    bilan.verifier("lot.sh : affiche les 2 commandes suivantes (cd puis claude)", f'cd "' in p.stdout and f'{m.l3.name}"' in p.stdout and "claude" in p.stdout, p.stdout)
     bilan.verifier("lot.sh : branche les crochets de git (core.hooksPath = .githooks)",
                    git(["config", "core.hooksPath"], m.l3, m.env).stdout.strip() == ".githooks")
     bilan.verifier("lot.sh : la branche part de origin/main",
@@ -739,9 +745,9 @@ def essai_donnees_gitignore(m):
                    p.returncode == 1 and "release" in p.stderr and "donnees" in p.stderr and "pas encore" in p.stderr, sortie(p))
     etat_de(m, "gh-mode", "ok")
     p = lancer(["bash", "scripts/donnees.sh"], app, m.env_sans)
-    dossier = app / "Packages/Core/Sources/Core/Resources"
-    bilan.verifier("donnees.sh : avec la release, télécharge les 2 fichiers dans Resources/",
-                   p.returncode == 0 and (dossier / "stations-especes.json").is_file() and (dossier / "rarete-departements.json").is_file(), sortie(p))
+    dossier = app / "App/Donnees"  # donnees.sh (16 oct.) : 3 fichiers dans App/Donnees/, ignoré par git
+    bilan.verifier("donnees.sh : avec la release, télécharge les 3 fichiers dans App/Donnees/",
+                   p.returncode == 0 and all((dossier / f).is_file() for f in ("stations-especes.json", "rarete-departements.json", "stations-hydro.json")), sortie(p))
     bilan.verifier("donnees.sh : les fichiers téléchargés ne sont pas vus par git (.gitignore)", git(["status", "--porcelain"], app, m.env).stdout.strip() == "",
                    git(["status", "--porcelain"], app, m.env).stdout)
     shutil.rmtree(app / "Packages")
@@ -954,7 +960,10 @@ def essai_env(m):
         noms = [l.split("=")[0] for l in (RACINE / "env.exemple").read_text(encoding="utf-8").splitlines() if l and not l.startswith("#")]
         contenu = (d / ".env").read_text(encoding="utf-8") if (d / ".env").exists() else ""
         bilan.verifier("env.sh : crée .env avec chaque nom de env.exemple, valeur vide", p.returncode == 0 and all(f"{n}=\n" in contenu for n in noms), sortie(p))
-        bilan.verifier("env.sh : .env n'est lisible que par son propriétaire (600)", oct((d / ".env").stat().st_mode & 0o777) == "0o600")
+        if os.name == "nt":  # NTFS n'a pas de droits à la Unix : à jouer sur Mac ou Linux
+            print("· sauté : env.sh : droits 600 de .env (Windows : pas de chmod)")
+        else:
+            bilan.verifier("env.sh : .env n'est lisible que par son propriétaire (600)", oct((d / ".env").stat().st_mode & 0o777) == "0o600")
         (d / ".env").write_text(contenu.replace(f"{noms[0]}=\n", f"{noms[0]}=valeur-secrete\n"), encoding="utf-8")
         p = lancer(["bash", "scripts/env.sh"], d, env)
         apres = (d / ".env").read_text(encoding="utf-8")

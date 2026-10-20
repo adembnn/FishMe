@@ -16,6 +16,7 @@ import sys
 
 sys.dont_write_bytecode = True  # pas de __pycache__ dans le dépôt
 RACINE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+BASH = shutil.which("bash") or "bash"  # sous Windows, « bash » seul trouverait celui de WSL
 sys.path.insert(0, os.path.join(RACINE, "outils", "atelier"))
 import lots as atelier  # noqa: E402
 
@@ -37,7 +38,7 @@ def lancer_cloud_pret():
     try:
         os.makedirs(os.path.join(RACINE, ".atelier"), exist_ok=True)
         journal = open(os.path.join(RACINE, ".atelier", "cloud-pret.log"), "ab")
-        subprocess.Popen(["bash", script], cwd=RACINE, stdin=subprocess.DEVNULL, stdout=journal,
+        subprocess.Popen([BASH, script], cwd=RACINE, stdin=subprocess.DEVNULL, stdout=journal,
                          stderr=journal, start_new_session=True)
     except OSError:
         pass
