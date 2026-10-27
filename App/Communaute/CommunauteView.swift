@@ -49,6 +49,8 @@ struct CommunauteView<PageFil: View, PageAmis: View, PageClub: View>: View {
       Text("Communauté")
         .font(Police.grandTitre)
         .foregroundStyle(Palette.encre)
+        .lineLimit(1)
+        .minimumScaleFactor(0.5)
         .accessibilityAddTraits(.isHeader)
       Picker("Page", selection: $page.animation()) {
         ForEach(pages) { Text($0.titre).tag($0) }

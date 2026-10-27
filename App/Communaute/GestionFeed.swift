@@ -106,7 +106,8 @@ final class GestionFeed {
         // Le compte iCloud se lit en premier, avec un délai court : sans iCloud, l'état « indisponible » s'affiche tout de suite
         // (avant, le contexte du profil et des clubs se lisait d'abord et le fil restait sur « Chargement… » une vingtaine de secondes).
         let demo = await source.modeDemo()
-        let compte = await compteAvecDelai()
+        // En mode démo le compte iCloud ne sert à rien (le fil d'exemple s'affiche quoi qu'il réponde) : pas d'attente de 4 s.
+        let compte = demo ? false : await compteAvecDelai()
         guard !Task.isCancelled else { return }
         if !demo && !compte && exemple == nil {
             message = .iCloudIndisponible

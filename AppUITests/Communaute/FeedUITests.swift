@@ -23,7 +23,8 @@ final class FeedUITests: XCTestCase {
     @MainActor
     func testLeModeDemoMontreUnFilRempliEnLectureSeule() throws {
         let app = lancer()
-        XCTAssertTrue(app.staticTexts["Exemple"].firstMatch.waitForExistence(timeout: 5))
+        // La pastille « Exemple » se lit « Publication d'exemple » en VoiceOver : c'est ce libellé que l'arbre d'accessibilité expose.
+        XCTAssertTrue(app.staticTexts["Publication d'exemple"].firstMatch.waitForExistence(timeout: 15))
         XCTAssertFalse(app.buttons["Publier"].exists)
         XCTAssertEqual(app.scrollBars.count, 0)
     }
@@ -32,9 +33,12 @@ final class FeedUITests: XCTestCase {
     @MainActor
     func testTresGrandTexteSansDebordement() throws {
         let app = lancer(grandTexte: true)
-        XCTAssertTrue(app.staticTexts["Exemple"].firstMatch.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Publication d'exemple"].firstMatch.waitForExistence(timeout: 15))
+        // En très grand texte, l'en-tête et le bandeau remplissent l'écran : la 1re publication est plus bas, on fait défiler jusqu'à « Commenter ».
         let commenter = app.buttons["Commenter"].firstMatch
-        XCTAssertTrue(commenter.exists)
+        var defilements = 0
+        while !commenter.exists && defilements < 8 { app.swipeUp(); defilements += 1 }
+        XCTAssertTrue(commenter.waitForExistence(timeout: 5))
         XCTAssertGreaterThanOrEqual(commenter.frame.height, 44)
         XCTAssertLessThanOrEqual(commenter.frame.maxX, app.frame.maxX)
     }

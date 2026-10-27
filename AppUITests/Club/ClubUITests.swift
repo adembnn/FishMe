@@ -22,7 +22,9 @@ final class ClubUITests: XCTestCase {
         let app = ouvrirPageClub()
         XCTAssertTrue(app.buttons["Créer mon club"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.scrollBars.count, 0)
-        for bouton in app.buttons.allElementsBoundByIndex where bouton.isHittable {
+        // Les segments Fil / Amis / Club sont le sélecteur système de l'écran Communauté (32 pt, hors page Club) : écartés de la règle des 44 points.
+        let segments = Set(app.segmentedControls.buttons.allElementsBoundByIndex.map(\.label))
+        for bouton in app.buttons.allElementsBoundByIndex where bouton.isHittable && !segments.contains(bouton.label) {
             XCTAssertGreaterThanOrEqual(bouton.frame.height, 44, bouton.label)
         }
     }
