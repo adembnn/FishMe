@@ -54,7 +54,8 @@ struct AquariumDepuisJSONTests {
     /// (`fondVisible: false`) : tout pixel opaque vient des poissons.
     private func pixelsOpaques(anime: Bool) throws -> Int {
         let instantane = try lire()
-        let entree = EntreeAquarium(date: .now, instantane: instantane)
+        // Date fixe : la nage change tous les 20 min (créneau). Celle-ci est un créneau où le brochet traverse les 2/3 hauts.
+        let entree = EntreeAquarium(date: Date(timeIntervalSince1970: 1_800_003_700), instantane: instantane)
         let vue = VueAquariumWidget(entree: entree, famille: .systemMedium, fondVisible: false, anime: anime)
             .frame(width: 364, height: 170)
         let rendu = ImageRenderer(content: vue)
@@ -77,11 +78,35 @@ struct AquariumDepuisJSONTests {
         #expect(opaques > 200, "aucun poisson dans le rendu fixe (\(opaques) pixels opaques)")
     }
 
-    /// Rendu animé : `ImageRenderer` ne dessine pas les masques chronos (0 pixel au 16 oct.), mais la couche de base
-    /// fixe, sous les copies, doit rester visible. C'est ce que verrait le pêcheur si l'hôte ne dessinait pas les masques.
-    @Test func coucheDeBaseVisibleSousLAnimation() throws {
-        let opaques = try pixelsOpaques(anime: true)
-        #expect(opaques > 200, "couche de base absente du rendu animé (\(opaques) pixels opaques)")
+    /// Une seule copie de l'animation (celle que le masque chrono laisse voir à un instant) : `ImageRenderer` ne
+    /// dessine pas les masques, donc l'aquarium animé complet rend vide par construction, et la couche de base fixe
+    /// a été retirée exprès le 16 oct. (160 fonds pleins : widget noir sur iPhone 12). On vérifie donc ce qu'une
+    /// copie visible dessine : le poisson, à une pose dans le cadre, donne bien des pixels opaques.
+    @Test func uneCopieDeLAnimationMontreLePoisson() throws {
+        let poisson = try #require(try lire().poissons.first)
+        let l: Double = 364, h: Double = 170, longueur = 0.26
+        let poses = NageWidget.traversees(id: poisson.id, slug: poisson.slug, creneau: 1_494_270, nombre: 160,
+                                          imagesCycle: 8, longueur: longueur, rapport: h / l)
+        let j = try #require(poses.firstIndex { $0.x > 0.15 && $0.x < 0.85 && $0.y > 0.1 && $0.y < 0.55 && $0.opacite >= 0.99 },
+                             "aucune pose dans le cadre")
+        let pose = poses[j]
+        let copie = ZStack {
+            ImagePoisson(slug: poisson.slug, image: nil, largeur: l * longueur * pose.echelle, sens: pose.sens)
+                .position(x: pose.x * l, y: pose.y * h)
+        }
+        .frame(width: l, height: h)
+        let rendu = ImageRenderer(content: copie)
+        rendu.scale = 1
+        let image = try #require(rendu.cgImage)
+        let largeur = image.width, hauteur = image.height
+        var octets = [UInt8](repeating: 0, count: largeur * hauteur * 4)
+        let contexte = try #require(CGContext(data: &octets, width: largeur, height: hauteur, bitsPerComponent: 8,
+                                             bytesPerRow: largeur * 4, space: CGColorSpaceCreateDeviceRGB(),
+                                             bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue))
+        contexte.draw(image, in: CGRect(x: 0, y: 0, width: largeur, height: hauteur))
+        var opaques = 0
+        for y in 0..<(hauteur * 2 / 3) { for x in 0..<largeur where octets[(y * largeur + x) * 4 + 3] > 200 { opaques += 1 } }
+        #expect(opaques > 200, "la copie \(j) de l'animation ne montre pas le poisson (\(opaques) pixels opaques)")
     }
 }
 #endif

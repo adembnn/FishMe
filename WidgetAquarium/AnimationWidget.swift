@@ -57,7 +57,9 @@ struct ImagesAnimees<Contenu: View, Fond: View>: View {
             } else {
                 // Couche de base seulement sans animation : animée, une copie est toujours visible, et la base
                 // obligeait chaque copie à porter son propre fond (160 fonds pleine taille : widget noir sur iPhone).
-                image(0)
+                // Appelée avec -1 : « pose de repos », que l'appelant choisit visible (la pose 0 d'une traversée
+                // part hors du cadre : avec « Réduire les animations », le widget montrait 0 poisson).
+                image(-1)
             }
         }
         .allowsHitTesting(false)

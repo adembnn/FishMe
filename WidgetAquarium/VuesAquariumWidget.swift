@@ -116,6 +116,22 @@ private struct CoucheNage: View {
         let angles: [Int]
         let poses: [NageWidget.PoseNage]
         var id: String { placement.id }
+
+        /// Numéro de la pose montrée quand rien ne s'anime (j < 0). La pose 0 d'une traversée part hors du cadre :
+        /// on prend la pose où le poisson se voit le mieux (opaque, de loin le plus grand, le plus dans le cadre,
+        /// de préférence dans les 2/3 hauts : le bouton nourrir est en bas à droite). `l` : largeur du widget.
+        func repos(l: CGFloat) -> Int {
+            func score(_ p: NageWidget.PoseNage) -> Double {
+                let demi = Double(largeur / max(l, 1)) * p.echelle / 2
+                let partX = max(0, min(p.x + demi, 1) - max(p.x - demi, 0)) / max(2 * demi, 1e-6)
+                let partY = (p.y > 0.08 && p.y < 0.62) ? 1.0 : ((p.y > 0 && p.y < 1.1) ? 0.5 : 0)
+                return p.opacite * partX * partY * p.echelle
+            }
+            var meilleur = poses.count / 2
+            var points = 0.0
+            for (j, pose) in poses.enumerated() where score(pose) > points + 1e-9 { meilleur = j; points = score(pose) }
+            return meilleur
+        }
     }
 
     var body: some View {
@@ -154,9 +170,12 @@ private struct CoucheNage: View {
                 ImagesAnimees(reference: reference, actif: animePoissons) { j in
                     ZStack {
                         // Les poissons du fond d'abord : ceux de devant passent par-dessus.
-                        let ordre = nageurs.sorted { $0.poses[j].profondeur > $1.poses[j].profondeur }
+                        // j < 0 : pas d'animation, chaque poisson est à sa pose de repos visible.
+                        let ordre = nageurs.sorted {
+                            $0.poses[j < 0 ? $0.repos(l: l) : j].profondeur > $1.poses[j < 0 ? $1.repos(l: l) : j].profondeur
+                        }
                         ForEach(ordre) { nageur in
-                            let pose = nageur.poses[j]
+                            let pose = nageur.poses[j < 0 ? nageur.repos(l: l) : j]
                             // Le lacet rendu le plus proche, une seule image (plus de fondu entre deux) : la moitié
                             // moins d'images à garder en mémoire dans l'extension.
                             let vue = nageur.angles.isEmpty ? 0

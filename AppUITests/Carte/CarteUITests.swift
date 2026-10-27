@@ -18,20 +18,50 @@ final class CarteUITests: XCTestCase {
         app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Mon spot' OR label == 'Choisir mon spot'")).firstMatch
     }
 
-    /// E3 : le filtre par espèce s'ouvre d'un toucher sur « Espèces » (le libellé est écrit sous l'icône).
+    /// Touche une station et attend que la fiche ait fini de charger (« Chargement du spot » disparaît).
+    /// Le délai est large : sur un Mac chargé, la fiche met plusieurs secondes à lire les relevés.
+    private func ouvrirUneFiche(_ app: XCUIApplication) {
+        let station = app.buttons["Station OFB"].firstMatch
+        XCTAssertTrue(station.waitForExistence(timeout: 20))
+        station.tap()
+        let chargement = app.descendants(matching: .any)["Chargement du spot"]
+        if chargement.waitForExistence(timeout: 5) {
+            XCTAssertTrue(waitForDisappearance(of: chargement, timeout: 60), "la fiche reste en « Chargement du spot »")
+        }
+    }
+
+    /// E3 : le filtre par espèce s'ouvre d'un toucher sur « Espèces » (le libellé est écrit sous l'icône), on choisit l'espèce
+    /// (le sandre n'est pas dans les 6 premières : « Voir les N autres espèces »), « Afficher » applique le filtre : le bouton
+    /// « Espèces » prend alors le nom de l'espèce et porte une croix d'effacement.
     func testFiltreParEspeceDepuisLaColonneDeDroite() throws {
         let app = lancer()
         let bouton = app.buttons["Espèces"]
-        XCTAssertTrue(bouton.waitForExistence(timeout: 10))
+        XCTAssertTrue(bouton.waitForExistence(timeout: 20))
         bouton.tap()
-        XCTAssertTrue(app.buttons["Sandre"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Quel poisson ?"].waitForExistence(timeout: 20))
+        let sandre = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Sandre'")).firstMatch
+        if !sandre.exists {
+            let autres = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Voir les'")).firstMatch
+            XCTAssertTrue(autres.waitForExistence(timeout: 10))
+            autres.tap()
+        }
+        XCTAssertTrue(sandre.waitForExistence(timeout: 10))
+        sandre.tap()
+        let afficher = app.buttons["Afficher"]
+        XCTAssertTrue(afficher.waitForExistence(timeout: 5))
+        afficher.tap()
+        XCTAssertTrue(app.buttons["Effacer le filtre d'espèce"].waitForExistence(timeout: 20))
+        XCTAssertTrue(app.buttons["Sandre"].exists, "le bouton « Espèces » doit afficher le nom de l'espèce filtrée")
     }
 
     /// Chaque icône de la colonne de droite a un libellé écrit.
     func testChaqueIconeDeLaColonneDeDroiteAUnLibelle() throws {
         let app = lancer()
-        XCTAssertTrue(app.buttons["Météo"].waitForExistence(timeout: 10))
-        for libelle in ["Météo", "Espèces", "Réglages"] {
+        XCTAssertTrue(app.buttons["Météo"].waitForExistence(timeout: 20))
+        // Réglages et Repères sont regroupés dans le bouton « Plus » (menu).
+        XCTAssertTrue(app.buttons["Plus : réglages et repères"].exists)
+        XCTAssertTrue(app.staticTexts["Plus"].exists)
+        for libelle in ["Météo", "Espèces"] {
             XCTAssertTrue(app.buttons[libelle].exists, "libellé manquant : \(libelle)")
             XCTAssertTrue(app.staticTexts[libelle].exists || app.buttons[libelle].label == libelle)
         }
@@ -42,20 +72,17 @@ final class CarteUITests: XCTestCase {
     /// Aucune barre de défilement visible dans la fiche d'un coin.
     func testPasDeBarreDeDefilementDansLaFiche() throws {
         let app = lancer()
-        let station = app.buttons["Station OFB"].firstMatch
-        XCTAssertTrue(station.waitForExistence(timeout: 10))
-        station.tap()
-        XCTAssertTrue(app.staticTexts["Règles du jour"].waitForExistence(timeout: 5))
+        ouvrirUneFiche(app)
+        // « Règles du jour » n'est plus dans la fiche : c'est le titre de la feuille qu'ouvre la pastille. On attend le titre de la fiche.
+        XCTAssertTrue(app.staticTexts["Ce que tu peux pêcher ici aujourd’hui"].waitForExistence(timeout: 20))
         XCTAssertEqual(app.scrollBars.count, 0)
     }
 
     /// La fiche d'un coin : le nom de l'eau en titre, la pastille de fréquentation, et trois hauteurs que la poignée parcourt.
     func testLaFicheSOuvreEnMoyenPuisGrandPuisPleinEcran() throws {
         let app = lancer()
-        let station = app.buttons["Station OFB"].firstMatch
-        XCTAssertTrue(station.waitForExistence(timeout: 10))
-        station.tap()
-        XCTAssertTrue(app.staticTexts["Ce que tu peux pêcher ici aujourd’hui"].waitForExistence(timeout: 5))
+        ouvrirUneFiche(app)
+        XCTAssertTrue(app.staticTexts["Ce que tu peux pêcher ici aujourd’hui"].waitForExistence(timeout: 20))
         let pastille = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH 'Fréquentation'")).firstMatch
         XCTAssertTrue(pastille.exists)
 
@@ -75,11 +102,9 @@ final class CarteUITests: XCTestCase {
     /// propose « Toujours utiliser ». Le simulateur n'a ni Waze ni Google Maps : ce test vérifie seulement qu'aucune feuille ne ment.
     func testYAllerNeProposeQueLesApplicationsInstallees() throws {
         let app = lancer()
-        let station = app.buttons["Station OFB"].firstMatch
-        XCTAssertTrue(station.waitForExistence(timeout: 10))
-        station.tap()
+        ouvrirUneFiche(app)
         let yAller = app.buttons["Y aller"]
-        XCTAssertTrue(yAller.waitForExistence(timeout: 5))
+        XCTAssertTrue(yAller.waitForExistence(timeout: 20))
         yAller.tap()
         if app.staticTexts["Y aller avec"].waitForExistence(timeout: 2) {
             XCTAssertTrue(app.switches["Toujours utiliser"].exists)
@@ -96,7 +121,7 @@ final class CarteUITests: XCTestCase {
             pastille.tap()
             let croix = app.buttons["Fermer Mon spot"]
             XCTAssertTrue(croix.waitForExistence(timeout: 3))
-            XCTAssertTrue(app.buttons["Règles du spot"].exists)
+            XCTAssertTrue(app.buttons["Règles du spot"].waitForExistence(timeout: 10))
             croix.tap()
             XCTAssertTrue(waitForDisappearance(of: croix, timeout: 3))
             XCTAssertTrue(pastille.exists)
