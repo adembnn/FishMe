@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FishMe, liste d'attente</title>
+<meta name="description" content="Tes spots, ton aquarium, ton club, la réglementation en vigueur. Une app : FishMe, pour iPhone.">
+<meta property="og:title" content="FishMe, l'application des pêcheurs">
+<meta property="og:description" content="Réserve ta place : un seul e-mail, le jour de la sortie.">
+<meta property="og:image" content="couverture.jpg">
+<meta name="theme-color" content="#082A4C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap">
+<style>
+:root{--marine:#0D4A85;--encre:#0E1A26;--douce:#566576;--fond:#F2F5F9;--filet:#DCE3EB;--nuit:#082A4C}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:#DDE3EA;font-family:"Nunito",ui-rounded,"SF Pro Rounded",system-ui,sans-serif;color:var(--encre)}
+.page{max-width:440px;min-height:100vh;min-height:100dvh;margin:0 auto;background:var(--fond);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(8,42,76,.14)}
+.couvwrap{flex:1000 1 auto;min-height:150px;max-height:calc(min(100vw,440px)*330/390);overflow:hidden;background:linear-gradient(180deg,#598d9f 3%,#4d88a3 25%,#1d6289 50%,#0d4067 75%,#082e52 97%)}
+.couv{display:block;height:100%;width:auto;max-width:100%;margin:0 auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+@media (max-width:440px){.page{height:100vh;height:100dvh}}
+@media (min-width:441px){.couvwrap{flex:none;height:calc(440px*330/390);max-height:none}}
+.corps{padding:16px 22px max(14px,env(safe-area-inset-bottom));display:flex;flex-direction:column;flex:1 0 auto}
+h1{font-size:clamp(30px,8.4vw,34px);line-height:1.05;font-weight:900;letter-spacing:-.015em}
+h1.liste span{display:block;font-size:clamp(23px,6.6vw,27px);line-height:1.1}
+h1.liste .fort{color:var(--marine)}
+.une{font-size:19px;font-weight:900;margin-top:8px}
+.sous{font-size:16.5px;line-height:1.4;font-weight:700;color:var(--douce);margin-top:12px}
+form{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+input[type=email]{height:50px;border-radius:14px;background:#fff;border:1.5px solid var(--filet);padding:0 16px;font:inherit;font-size:17px;font-weight:700;color:var(--encre);width:100%}
+input[type=email]::placeholder{color:#8A97A5}
+input[type=email]:focus-visible{outline:3px solid rgba(13,74,133,.35);border-color:var(--marine)}
+button{height:52px;border:0;border-radius:26px;background:var(--marine);color:#fff;font:inherit;font-size:17.5px;font-weight:800;cursor:pointer}
+button:active{transform:scale(.99)}
+button:focus-visible{outline:3px solid rgba(13,74,133,.45);outline-offset:2px}
+.accord{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.35;font-weight:700;color:var(--douce);margin-top:2px}
+.accord input{flex:none;width:20px;height:20px;margin-top:0;accent-color:var(--marine)}
+.petit{margin-top:auto;padding-top:10px;font-size:12.5px;font-weight:700;color:var(--douce)}
+.petit a{color:var(--marine)}
+.merci{display:none;margin-top:22px;background:#fff;border-radius:18px;padding:20px 18px}
+.merci b{display:block;font-size:22px;font-weight:900}
+.merci span{display:block;font-size:15.5px;font-weight:700;color:var(--douce);margin-top:6px;line-height:1.4}
+.fait form{display:none}.fait .merci{display:block}
+@media (min-width:441px){body{padding:12px 0}.page{min-height:0;border-radius:28px;overflow:hidden}}
+</style>
+</head>
+<body>
+<main class="page" id="page">
+  <div class="couvwrap"><img class="couv" src="couverture.jpg" alt="Une carte FishMe : au recto le brochet et sa rareté, au verso la photo de la prise."></div>
+  <div class="corps">
+    <h1 class="liste"><span>Tes spots.</span><span>Ton aquarium.</span><span>Ton club.</span><span class="fort">La réglementation en vigueur.</span></h1>
+    <p class="une">Une app : FishMe.</p>
+
+    <form id="formulaire" novalidate>
+      <label for="email" style="position:absolute;left:-9999px">Ton adresse e-mail</label>
+      <input name="site" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+      <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="ton@email.fr" required>
+      <button type="submit">Me prévenir à la sortie</button>
+      <label class="accord"><input id="accord" type="checkbox" required><span>J'accepte de recevoir un e-mail de FishMe à la sortie de l'app, et rien d'autre.</span></label>
+      <div id="erreur" role="alert" style="color:#B3261E;font-size:13.5px;font-weight:800;min-height:0"></div>
+    </form>
+    <div class="merci" role="status"><b>C'est noté.</b><span>Tu recevras un seul e-mail, le jour de la sortie de FishMe.</span></div>
+
+    <p class="petit"><a href="confidentialite.html">Confidentialité</a> · App iPhone</p>
+  </div>
+</main>
+<script>
+/* Envoie l'inscription à /api/inscription (src/worker.js). Ouverte depuis un fichier (aperçu), la page ne contacte rien. */
+var f=document.getElementById('formulaire');
+var apercu=location.protocol==='file:';
+f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var m=document.getElementById('email'), a=document.getElementById('accord'), r=document.getElementById('erreur'), b=f.querySelector('button');
+  if(!m.value||!m.checkValidity()){r.textContent="Ajoute une adresse e-mail valide.";m.focus();return;}
+  if(!a.checked){r.textContent="Coche la case pour recevoir l'e-mail de sortie.";return;}
+  r.textContent="";
+  var fini=function(){document.getElementById('page').classList.add('fait');};
+  if(apercu){fini();return;}
+  b.disabled=true;
+  fetch('/api/inscription',{method:'POST',headers:{'content-type':'application/json'},
+    body:JSON.stringify({email:m.value,accord:true,site:f.elements.site.value})})
+   .then(function(res){
+     if(res.ok){fini();return;}
+     b.disabled=false;
+     r.textContent=res.status===400?"Cette adresse e-mail ne passe pas, vérifie-la.":"Un souci de notre côté. Réessaie dans une minute.";
+   })
+   .catch(function(){b.disabled=false;r.textContent="Pas de connexion. Réessaie dans une minute.";});
+});
+</script>
+</body>
+</html>
