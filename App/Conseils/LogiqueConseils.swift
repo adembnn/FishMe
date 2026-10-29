@@ -170,4 +170,10 @@ nonisolated enum EspecesDuTunnel {
         }
         return choisies
     }
+
+    /// La carte « à débloquer » de « pas encore de carte » : la première espèce « commun » de la zone, sinon la première.
+    /// `rarete` rend le libellé de rareté de l'espèce, `nil` si la zone ne la connaît pas.
+    static func aDebloquer(_ especes: [EspecePechable], rarete: (EspecePechable) -> String?) -> EspecePechable? {
+        especes.first { rarete($0)?.lowercased() == "commun" } ?? especes.first
+    }
 }

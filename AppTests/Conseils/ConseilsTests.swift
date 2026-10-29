@@ -111,6 +111,15 @@ struct ConseilsTests {
         #expect(EspecesDuTunnel.choisir(pechables: tout, proches: relevee, categorie: .deuxieme).first?.espece.id == "truite-fario")
     }
 
+    @Test func pasEncoreDeCarteSilhouetteLaPlusCommuneSinonLaPremiere() {
+        let tout = (1...4).map { EspecePechable(espece: Espece(id: "e\($0)"), nom: "E\($0)", nomLatin: "", image: "e\($0)") }
+        let rarete: (EspecePechable) -> String? = { $0.espece.id == "e3" ? "Commun" : "Rare" }
+        #expect(EspecesDuTunnel.aDebloquer(tout, rarete: rarete)?.espece.id == "e3")
+        #expect(EspecesDuTunnel.aDebloquer(tout, rarete: { _ in "Rare" })?.espece.id == "e1")
+        #expect(EspecesDuTunnel.aDebloquer(tout, rarete: { _ in nil })?.espece.id == "e1")
+        #expect(EspecesDuTunnel.aDebloquer([], rarete: { _ in "Commun" }) == nil)
+    }
+
     @Test func carteDeclareeNEstPasUneVraiePrise() {
         let p = Prise.declaree(espece: Espece(id: "brochet"), date: Date())
         #expect(p.estDeclaree)

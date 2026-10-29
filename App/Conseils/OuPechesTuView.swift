@@ -45,8 +45,8 @@ struct OuPechesTuView: View {
         GeometryReader { geo in
             ScrollView {
                 VStack(spacing: 0) {
+                    Spacer(minLength: 24)
                     carteRonde
-                        .padding(.top, 51)
                     VStack(spacing: 0) {
                         Text("Où pêches-tu ?")
                             .font(Police.grandTitre)
@@ -67,9 +67,9 @@ struct OuPechesTuView: View {
                         .padding(.top, 26)
                     }
                     .padding(.top, 40)
-                    Spacer(minLength: Espace.xl)
+                    Spacer(minLength: 24)
                     boutons
-                        .padding(.bottom, 6)
+                        .padding(.bottom, 40)
                 }
                 .padding(.horizontal, Espace.bord)
                 .frame(minHeight: geo.size.height)
