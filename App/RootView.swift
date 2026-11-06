@@ -523,7 +523,7 @@ final class ParcoursApp {
         proposerSuitePremierLancement()
     }
 
-    // MARK: Premier lancement : position (carte), niveau (L13, sur la carte), tunnel (L13), consentement (L6)
+    // MARK: Premier lancement : position (carte), niveau (L13, sur la carte), tunnel (L13)
 
     private var questionVue: Bool { UserDefaults.standard.bool(forKey: ClesConseils.questionVue) }
     private var tunnelVu: Bool { UserDefaults.standard.bool(forKey: ClesConseils.tunnelVu) }
