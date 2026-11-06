@@ -1,0 +1,4934 @@
+{
+ "departement": "92",
+ "regles": [
+  {
+   "id": "92-toutes-categorie-departement",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "Tous les cours d'eau des Hauts-de-Seine sont en deuxième catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 2",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "tous les cours d'eau du département sont classés en deuxième catégorie piscicole",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-toutes-categorie-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 2",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "tous les cours d'eau du département sont classés en deuxième catégorie piscicole."
+   }
+  },
+  {
+   "id": "92-anguille-civelle-interdit-annee",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de la civelle (anguille de moins de 12 cm) interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-01-13"
+   },
+   "citation": "Anguille <12 cm (civelle) Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-anguille-civelle-interdit-departement",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Anguille <12 cm (civelle) Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "92-anguille-argentee-interdit-annee",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de l'anguille argentée interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "hors anguille argentée dont la pêche est interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-anguille-argentee-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de l'anguille argentée ou anguille d'avalaison, caractérisée par la présence d'une ligne latérale différenciée, est interdite toute l'année"
+   }
+  },
+  {
+   "id": "92-saumon-atlantique-interdit-annee",
+   "type": "interdit",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année"
+   },
+   "phrase": "Pêche du saumon atlantique interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année sur tout le bassin en eau douce et en eau saumâtre",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-saumon-atlantique-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année sur tout le bassin"
+   }
+  },
+  {
+   "id": "92-truite-de-mer-interdit-annee",
+   "type": "interdit",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de la truite de mer interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année sur tout le bassin en eau douce et en eau saumâtre",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-truite-de-mer-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année sur tout le bassin"
+   }
+  },
+  {
+   "id": "92-lamproie-marine-interdit-annee",
+   "type": "interdit",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de la lamproie marine interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année sur tout le bassin en eau douce et en eau saumâtre",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-lamproie-marine-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année sur tout le bassin"
+   }
+  },
+  {
+   "id": "92-lamproie-fluviatile-interdit-annee",
+   "type": "interdit",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de la lamproie fluviatile interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année sur tout le bassin en eau douce et en eau saumâtre",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-lamproie-fluviatile-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année sur tout le bassin"
+   }
+  },
+  {
+   "id": "92-grande-alose-interdit-annee",
+   "type": "interdit",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de la grande alose interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-01-13"
+   },
+   "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-grande-alose-interdit-departement",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "92-alose-feinte-interdit-annee",
+   "type": "interdit",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de l'alose feinte interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-01-13"
+   },
+   "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-alose-feinte-interdit-departement",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "92-ecrevisse-pattes-blanches-interdit-annee",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de l'écrevisse à pattes blanches interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-01-13"
+   },
+   "citation": "Ecrevisses à pattes blanches, à pattes rouges et des torrents Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ecrevisse-pattes-blanches-interdit-departement",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Ecrevisses à pattes blanches, à pattes rouges et des torrents Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "92-ecrevisse-pattes-rouges-interdit-annee",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de l'écrevisse à pattes rouges interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-01-13"
+   },
+   "citation": "Ecrevisses à pattes blanches, à pattes rouges et des torrents Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ecrevisse-pattes-rouges-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "des torrents (Austropotamobius torrentium) en raison de leur situation critique sur le département des Hauts-de-Seine est interdite toute l'année."
+   }
+  },
+  {
+   "id": "92-ecrevisse-torrents-interdit-annee",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de l'écrevisse des torrents interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-01-13"
+   },
+   "citation": "Ecrevisses à pattes blanches, à pattes rouges et des torrents Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ecrevisse-torrents-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "des torrents (Austropotamobius torrentium) en raison de leur situation critique sur le département des Hauts-de-Seine est interdite toute l'année."
+   }
+  },
+  {
+   "id": "92-huchon-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "huchon"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 70
+   },
+   "phrase": "Taille minimale de huchon : 70 cm ; en dessous, on remet à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,70 mètre pour le huchon,",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-huchon-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,70 mètre pour le huchon,"
+   }
+  },
+  {
+   "id": "92-cristivomer-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "cristivomer"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 35
+   },
+   "phrase": "Taille minimale de cristivomer : 35 cm ; en dessous, on remet à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,35 mètre pour le cristivomer,",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-cristivomer-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,35 mètre pour le cristivomer,"
+   }
+  },
+  {
+   "id": "92-2247-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "2247"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Taille minimale de ombre commun : 30 cm ; en dessous, on remet à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,30 mètre pour l'ombre commun et le corégone,",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ombre-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,30 mètre pour l'ombre commun et le corégone,"
+   }
+  },
+  {
+   "id": "92-coregone-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "coregone"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Taille minimale de corégone : 30 cm ; en dessous, on remet à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,30 mètre pour l'ombre commun et le corégone,",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-coregone-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,30 mètre pour l'ombre commun et le corégone,"
+   }
+  },
+  {
+   "id": "92-lamproie-fluviatile-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 20
+   },
+   "phrase": "Taille minimale de lamproie fluviatile : 20 cm ; en dessous, on remet à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,20 mètre pour la lamproie fluviatile et 0,40 mètre pour la lamproie marine,",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-lamproie-fluviatile-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,20 mètre pour la lamproie fluviatile et 0,40 mètre pour la lamproie marine,"
+   }
+  },
+  {
+   "id": "92-lamproie-marine-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "Taille minimale de lamproie marine : 40 cm ; en dessous, on remet à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,20 mètre pour la lamproie fluviatile et 0,40 mètre pour la lamproie marine,",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-lamproie-marine-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,20 mètre pour la lamproie fluviatile et 0,40 mètre pour la lamproie marine,"
+   }
+  },
+  {
+   "id": "92-2221-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23
+   },
+   "phrase": "Taille minimale de truite fario : 23 cm ; en dessous, on remet à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,23 mètre pour les truites autres que la truite de mer, l'omble ou saumon de fontaine et l'omble chevalier,",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-truite-fario-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,23 mètre pour les truites autres que la truite de mer, l'omble ou saumon de fontaine et l'omble chevalier,"
+   }
+  },
+  {
+   "id": "92-2216-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23
+   },
+   "phrase": "Taille minimale de truite arc-en-ciel : 23 cm ; en dessous, on remet à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,23 mètre pour les truites autres que la truite de mer, l'omble ou saumon de fontaine et l'omble chevalier,",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-truite-arc-en-ciel-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,23 mètre pour les truites autres que la truite de mer, l'omble ou saumon de fontaine et l'omble chevalier,"
+   }
+  },
+  {
+   "id": "92-mulet-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "mulet"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 20
+   },
+   "phrase": "Taille minimale de mulet : 20 cm ; en dessous, on remet à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,20 mètre pour le mulet,",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-mulet-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,20 mètre pour le mulet,"
+   }
+  },
+  {
+   "id": "92-ecrevisse-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 9
+   },
+   "phrase": "Taille minimale de écrevisse (espèces de l'article R. 436-10) : 9 cm ; en dessous, on remet à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,09 mètre pour les écrevisses appartenant aux espèces mentionnées à l'article R. 436-10.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ecrevisse-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,09 mètre pour les écrevisses appartenant aux espèces mentionnées à l'article R. 436-10."
+   }
+  },
+  {
+   "id": "92-grenouille-verte-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8
+   },
+   "phrase": "Taille minimale de la grenouille verte : 8 cm de corps, du museau au cloaque.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "si leur corps est d'une longueur inférieure à 8 cm. La longueur du corps d'une grenouille est mesurée du bout du museau au cloaque.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-grenouille-verte-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "si leur corps est d'une longueur inférieure à 8 cm."
+   }
+  },
+  {
+   "id": "92-grenouille-rousse-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8
+   },
+   "phrase": "Taille minimale de la grenouille rousse : 8 cm de corps, du museau au cloaque.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "si leur corps est d'une longueur inférieure à 8 cm. La longueur du corps d'une grenouille est mesurée du bout du museau au cloaque.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-grenouille-rousse-taille-min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "si leur corps est d'une longueur inférieure à 8 cm."
+   }
+  },
+  {
+   "id": "92-2151-taille-min-arrete",
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50
+   },
+   "phrase": "Taille minimale du brochet : 50 cm d'après l'arrêté permanent (l'avis 2026 dit 60 cm).",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,50 mètre pour le brochet,",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-brochet-taille-min-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,50 mètre pour le brochet,"
+   }
+  },
+  {
+   "id": "92-2151-taille-min-avis",
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 60
+   },
+   "phrase": "Taille minimale du brochet : 60 cm d'après l'avis 2026 (l'arrêté permanent dit 50 cm).",
+   "source": {
+    "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, rappel de certaines dispositions",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-01-13"
+   },
+   "citation": "les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet.",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-brochet-taille-min-avis",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, rappel (2e page)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet."
+   }
+  },
+  {
+   "id": "92-2195-taille-min-arrete",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "Taille minimale du sandre : 40 cm d'après l'arrêté permanent (l'avis 2026 dit 50 cm).",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,40 mètre pour le sandre dans les eaux de la 2e catégorie,",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-sandre-taille-min-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,40 mètre pour le sandre dans les eaux de la 2e catégorie,"
+   }
+  },
+  {
+   "id": "92-2195-taille-min-avis",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50
+   },
+   "phrase": "Taille minimale du sandre : 50 cm d'après l'avis 2026 (l'arrêté permanent dit 40 cm).",
+   "source": {
+    "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, rappel de certaines dispositions",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-01-13"
+   },
+   "citation": "les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet.",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-sandre-taille-min-avis",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, rappel (2e page)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet."
+   }
+  },
+  {
+   "id": "92-2053-taille-min-arrete",
+   "type": "taille_min",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Taille minimale du black-bass : 30 cm d'après l'arrêté permanent (l'avis 2026 dit 40 cm).",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "0,30 mètre pour le black - bass dans les eaux de la 2e catégorie,",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-black-bass-taille-min-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "0,30 mètre pour le black-bass dans les eaux de la 2e catégorie,"
+   }
+  },
+  {
+   "id": "92-2053-taille-min-avis",
+   "type": "taille_min",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "Taille minimale du black-bass : 40 cm d'après l'avis 2026 (l'arrêté permanent dit 30 cm).",
+   "source": {
+    "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, rappel de certaines dispositions",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-01-13"
+   },
+   "citation": "les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet.",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-black-bass-taille-min-avis",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, rappel (2e page)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet."
+   }
+  },
+  {
+   "id": "92-salmonides-quota-jour",
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Au plus 10 salmonidés par jour et par pêcheur (hors saumon et truite de mer).",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 12",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "Le nombre de captures de salmonidés autres que le saumon et la truite de mer autorisé par jour et par pêcheur est fixé à 10.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-salmonides-quota-jour-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 12",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Le nombre de captures de salmonidés autres que le saumon et la truite de mer autorisé par jour et par pêcheur est fixé à 10."
+   }
+  },
+  {
+   "id": "92-carnassiers-quota-jour",
+   "type": "quota_jour",
+   "especes": [
+    "2151",
+    "2195",
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3
+   },
+   "phrase": "Au plus 3 carnassiers par jour (brochet, sandre, black-bass), dont 2 brochets au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 12",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont 2 brochets maximum.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-brochet-sandre-black-bass-quota-jour-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 12",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont 2 brochets maximum."
+   }
+  },
+  {
+   "id": "92-2151-quota-jour",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "Au plus 2 brochets par jour, dans la limite de 3 carnassiers.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 12",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont 2 brochets maximum.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-brochet-quota-jour-departement",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 12",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont 2 brochets maximum."
+   }
+  },
+  {
+   "id": "92-ecrevisse-mode-balances",
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "6 balances à écrevisses au plus"
+   },
+   "phrase": "Pour les écrevisses : 6 balances au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 10",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "Sont autorisées pour la capture des écrevisses, la vermée et 6 balances à écrevisses.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ecrevisse-mode-peche-balances",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 10",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Sont autorisées pour la capture des écrevisses, la vermée et 6 balances à écrevisses."
+   }
+  },
+  {
+   "id": "92-ecrevisse-mode-vermee",
+   "type": "mode_peche",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "vermée autorisée"
+   },
+   "phrase": "Pour les écrevisses, la vermée est autorisée.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 10",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "Sont autorisées pour la capture des écrevisses, la vermée et 6 balances à écrevisses.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ecrevisse-mode-peche-balances",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 10",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Sont autorisées pour la capture des écrevisses, la vermée et 6 balances à écrevisses."
+   }
+  },
+  {
+   "id": "92-anguille-interdit-nuit",
+   "type": "interdit",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de l'anguille à tous les stades interdite de nuit, en tout temps"
+   },
+   "phrase": "Pêche de l'anguille interdite de nuit, à tous les stades.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de l'anguille à tous les stades de son développement en tout temps est interdite de nuit",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-anguille-interdit-nuit",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de l'anguille à tous les stades de son développement en tout temps est interdite de nuit"
+   }
+  },
+  {
+   "id": "92-anguille-interdit-appat-anguille",
+   "type": "interdit",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "interdit d'appâter les hameçons ou tout autre engin avec l'anguille ou sa chair"
+   },
+   "phrase": "Interdit d'appâter avec de l'anguille ou sa chair.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "Il est interdit d'appâter les hameçons ou tout autre engin avec l'anguille à tous les stades de son développement ou sa chair.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-anguille-interdit-nuit",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de l'anguille à tous les stades de son développement en tout temps est interdite de nuit"
+   }
+  },
+  {
+   "id": "92-seine-reserve-suresnes",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine (Suresnes) : réserve du barrage de Suresnes",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite sur la réserve du barrage de Suresnes (arrêté préfectoral n° 2016-166 du 26 septembre 2016)"
+   },
+   "phrase": "Pêche interdite sur la réserve du barrage de Suresnes.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "Pêche interdite sur la réserve du barrage de Suresnes",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-toutes-reserve-barrage-suresnes",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, observations du tableau",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Pêche interdite sur la réserve du barrage de Suresnes (Cf. Réserve arrêté préfectoral n° 2016-166 du 26 septembre 2016)"
+   }
+  },
+  {
+   "id": "92-seine-reserve-suresnes-federation",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine (Suresnes) : barrage et écluses de Suresnes, du PK 16.500 au PK 17.350",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "barrage et écluses de Suresnes, rives droite et gauche, petit et grand bras, du PK 16.500 au PK 17.350, soit 850 m dont 550 m à l'amont des seuils et 300 m à l'aval"
+   },
+   "phrase": "Réserve de Suresnes selon la fédération : du PK 16.500 au PK 17.350, sur 850 m.",
+   "source": {
+    "texte": "Extrait de la réglementation de la pêche à Paris petite couronne (fédération 75-92-93-94), Interdictions de pêche",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=48446&path=Extrait-de-reglementation.pdf",
+    "lu_le": "2026-10-15",
+    "version": null
+   },
+   "citation": "Barrage et écluses de Suresnes : en rive droite et gauche, petit et grand bras, du PK 16.500 au PK 17.350. Soit 850m au total, avec 550m à l’amont des seuils et 300m à l’aval.",
+   "statut": "incertain",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-toutes-reserve-barrage-suresnes",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, observations du tableau",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Pêche interdite sur la réserve du barrage de Suresnes (Cf. Réserve arrêté préfectoral n° 2016-166 du 26 septembre 2016)"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-1",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 1/92 : rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rives gauche et droite"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 1/92, rives gauche et droite, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-1-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "1/92 à 9/92 Totalités de lots de pêche Gauche et droite Amont : 200m en aval du Pont de Garigliano PK 8.352 Aval : Pointe amont de l'Ile Saint-Denis PK 25.452"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-2",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 2/92 : rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rives gauche et droite"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 2/92, rives gauche et droite, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-2-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "1/92 à 9/92 Totalités de lots de pêche Gauche et droite Amont : 200m en aval du Pont de Garigliano PK 8.352 Aval : Pointe amont de l'Ile Saint-Denis PK 25.452"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-3",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 3/92 : rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rives gauche et droite"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 3/92, rives gauche et droite, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-3-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "1/92 à 9/92 Totalités de lots de pêche Gauche et droite Amont : 200m en aval du Pont de Garigliano PK 8.352 Aval : Pointe amont de l'Ile Saint-Denis PK 25.452"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-4",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 4/92 : rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rives gauche et droite"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 4/92, rives gauche et droite, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-4-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "1/92 à 9/92 Totalités de lots de pêche Gauche et droite Amont : 200m en aval du Pont de Garigliano PK 8.352 Aval : Pointe amont de l'Ile Saint-Denis PK 25.452"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-5",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 5/92 : rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rives gauche et droite"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 5/92, rives gauche et droite, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-5-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "1/92 à 9/92 Totalités de lots de pêche Gauche et droite Amont : 200m en aval du Pont de Garigliano PK 8.352 Aval : Pointe amont de l'Ile Saint-Denis PK 25.452"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-6",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 6/92 : rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rives gauche et droite"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 6/92, rives gauche et droite, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-6-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "1/92 à 9/92 Totalités de lots de pêche Gauche et droite Amont : 200m en aval du Pont de Garigliano PK 8.352 Aval : Pointe amont de l'Ile Saint-Denis PK 25.452"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-7",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 7/92 : rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rives gauche et droite"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 7/92, rives gauche et droite, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-7-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "1/92 à 9/92 Totalités de lots de pêche Gauche et droite Amont : 200m en aval du Pont de Garigliano PK 8.352 Aval : Pointe amont de l'Ile Saint-Denis PK 25.452"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-8",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 8/92 : rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rives gauche et droite"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 8/92, rives gauche et droite, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-8-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "1/92 à 9/92 Totalités de lots de pêche Gauche et droite Amont : 200m en aval du Pont de Garigliano PK 8.352 Aval : Pointe amont de l'Ile Saint-Denis PK 25.452"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-9",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 9/92 : rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rives gauche et droite"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 9/92, rives gauche et droite, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-9-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "1/92 à 9/92 Totalités de lots de pêche Gauche et droite Amont : 200m en aval du Pont de Garigliano PK 8.352 Aval : Pointe amont de l'Ile Saint-Denis PK 25.452"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-10bis",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 10bis/92 : rive gauche, du point aval de l'île Saint-Denis (PK 32.802) à la limite des communes Rueil-Malmaison/Bougival (PK 47.300)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rive gauche"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 10bis/92, rive gauche, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-10bis-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "10bis/92, 11/92, 12/92, 14/92 Totalités des lots de pêche Gauche Amont : Point aval de l'Ile Saint-Denis PK 32.802 Aval : Limite des communes Reuil-Malmaison/Bougival PK 47.300"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-11",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 11/92 : rive gauche, du point aval de l'île Saint-Denis (PK 32.802) à la limite des communes Rueil-Malmaison/Bougival (PK 47.300)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rive gauche"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 11/92, rive gauche, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-11-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "10bis/92, 11/92, 12/92, 14/92 Totalités des lots de pêche Gauche Amont : Point aval de l'Ile Saint-Denis PK 32.802 Aval : Limite des communes Reuil-Malmaison/Bougival PK 47.300"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-12",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 12/92 : rive gauche, du point aval de l'île Saint-Denis (PK 32.802) à la limite des communes Rueil-Malmaison/Bougival (PK 47.300)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rive gauche"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 12/92, rive gauche, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-12-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "10bis/92, 11/92, 12/92, 14/92 Totalités des lots de pêche Gauche Amont : Point aval de l'Ile Saint-Denis PK 32.802 Aval : Limite des communes Reuil-Malmaison/Bougival PK 47.300"
+   }
+  },
+  {
+   "id": "92-2110-carpe-nuit-lot-14",
+   "type": "carpe_nuit",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 14/92 : rive gauche, du point aval de l'île Saint-Denis (PK 32.802) à la limite des communes Rueil-Malmaison/Bougival (PK 47.300)",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche de nuit autorisée à quatre lignes au plus, rive gauche"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 14/92, rive gauche, avec 4 lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8, tableau",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2ème catégorie indiquées dans le tableau ci-dessous",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-14-92",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8 (tableau)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "10bis/92, 11/92, 12/92, 14/92 Totalités des lots de pêche Gauche Amont : Point aval de l'Ile Saint-Denis PK 32.802 Aval : Limite des communes Reuil-Malmaison/Bougival PK 47.300"
+   }
+  },
+  {
+   "id": "92-poisson-chat-introduction-interdite",
+   "type": "interdit",
+   "especes": [
+    "poisson-chat"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "introduction interdite dans les eaux"
+   },
+   "phrase": "Introduction de le poisson-chat interdite : ne pas le remettre à l'eau vivant ailleurs.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "est interdite : Poissons : - le poisson-chat : Ameiurusmelas",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-poisson-chat-interdit-introduction",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "le poisson-chat : Ameiurusmelas ;"
+   }
+  },
+  {
+   "id": "92-perche-soleil-introduction-interdite",
+   "type": "interdit",
+   "especes": [
+    "perche-soleil"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "introduction interdite dans les eaux"
+   },
+   "phrase": "Introduction de la perche soleil interdite : ne pas le remettre à l'eau vivant ailleurs.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "est interdite : Poissons : - la perche soleil : Lepomis gibbosus.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-perche-soleil-interdit-introduction",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "la perche soleil : Lepomis gibbosus."
+   }
+  },
+  {
+   "id": "92-crabe-chinois-introduction-interdite",
+   "type": "interdit",
+   "especes": [
+    "autre:crabe chinois"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "introduction interdite dans les eaux"
+   },
+   "phrase": "Introduction du crabe chinois interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "est interdite : Crustacés : - le crabe chinois : Eriocheir sinensis.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-crabe-chinois-interdit-introduction",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "le crabe chinois : Eriocheir sinensis."
+   }
+  }
+ ],
+ "desaccords": {
+  "seulement_a": [
+   {
+    "id": "92-toutes-ouverture-generale",
+    "type": "ouverture",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "du 1er janvier au 31 décembre 2026 inclus"
+    },
+    "phrase": "Tous les poissons hors grands migrateurs et hors espèces à ouverture spécifique se pêchent toute l'année 2026.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 1 - Ouverture générale",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Tous les poissons autres que les grands migrateurs et ceux faisant l'objet d'une ouverture spécifique du 1er janvier au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-ecrevisse-americaine-ouverture-generale",
+    "type": "ouverture",
+    "especes": [
+     "ecrevisse-americaine"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "du 1er janvier au 31 décembre inclus"
+    },
+    "phrase": "L'écrevisse américaine (Orconectes limosus) se pêche toute l'année.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.1",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "ainsi que l'écrevisse dite « américaine » (orconectes limosus) : du 1er janvier au 31 décembre inclus.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-truite-fario-ouverture-arrete",
+    "type": "ouverture",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+    },
+    "phrase": "Pêche de truite fario ouverte du 14 mars au 20 septembre 2026 (arrêté permanent ; l'avis 2026 écrit le 21 mars).",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.2",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Truites fario : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-truite-fario-ouverture-avis",
+    "type": "ouverture",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-21",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "Du 21 mars au 20 septembre 2026 inclus"
+    },
+    "phrase": "Pêche de truite fario ouverte du 21 mars au 20 septembre 2026 (avis 2026 ; l'arrêté permanent donne le 14 mars).",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Truites fario Du 21 mars au 20 septembre 2026 inclus",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-omble-fontaine-ouverture-arrete",
+    "type": "ouverture",
+    "especes": [
+     "omble-fontaine"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+    },
+    "phrase": "Pêche de omble ou saumon de fontaine ouverte du 14 mars au 20 septembre 2026 (arrêté permanent ; l'avis 2026 écrit le 21 mars).",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.2",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Omble de fontaine : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-omble-fontaine-ouverture-avis",
+    "type": "ouverture",
+    "especes": [
+     "omble-fontaine"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-21",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "Du 21 mars au 20 septembre 2026 inclus"
+    },
+    "phrase": "Pêche de omble ou saumon de fontaine ouverte du 21 mars au 20 septembre 2026 (avis 2026 ; l'arrêté permanent donne le 14 mars).",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-omble-chevalier-ouverture-arrete",
+    "type": "ouverture",
+    "especes": [
+     "omble-chevalier"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+    },
+    "phrase": "Pêche de omble chevalier ouverte du 14 mars au 20 septembre 2026 (arrêté permanent ; l'avis 2026 écrit le 21 mars).",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.2",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Omble chevalier et du cristivomer : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-omble-chevalier-ouverture-avis",
+    "type": "ouverture",
+    "especes": [
+     "omble-chevalier"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-21",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "Du 21 mars au 20 septembre 2026 inclus"
+    },
+    "phrase": "Pêche de omble chevalier ouverte du 21 mars au 20 septembre 2026 (avis 2026 ; l'arrêté permanent donne le 14 mars).",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-cristivomer-ouverture",
+    "type": "ouverture",
+    "especes": [
+     "cristivomer"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+    },
+    "phrase": "Pêche du cristivomer ouverte du 14 mars au 20 septembre 2026.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.2",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Omble chevalier et du cristivomer : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-2247-ouverture",
+    "type": "ouverture",
+    "especes": [
+     "2247"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-05-16",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "Du 16 mai au 31 décembre 2026 inclus"
+    },
+    "phrase": "Pêche de l'ombre commun ouverte du 16 mai au 31 décembre 2026.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Ombre commun Du 16 mai au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-2151-ouverture-janvier",
+    "type": "ouverture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-01-25",
+    "valeur": {
+     "formule": "Du 1er janvier au 25 janvier 2026 inclus"
+    },
+    "phrase": "Pêche du brochet ouverte du 1er au 25 janvier 2026.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Brochet Du 1er janvier au 25 janvier 2026 inclus et du 25 avril au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-2151-ouverture-avril",
+    "type": "ouverture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-04-25",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "du 25 avril au 31 décembre 2026 inclus"
+    },
+    "phrase": "Pêche du brochet rouverte du 25 avril au 31 décembre 2026.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Brochet Du 1er janvier au 25 janvier 2026 inclus et du 25 avril au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-anguille-jaune-ouverture-arrete-ministeriel",
+    "type": "ouverture",
+    "especes": [
+     "anguille-jaune"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "dates fixées chaque année par arrêté ministériel, que l'avis 2026 ne recopie pas"
+    },
+    "phrase": "Pour l'anguille jaune, les dates 2026 sont celles de l'arrêté ministériel : vérifie-les.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Anguille jaune Se reporter à l'arrêté ministériel en vigueur",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-anguille-jaune-ouverture-federation",
+    "type": "ouverture",
+    "especes": [
+     "anguille-jaune"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-02-15",
+    "au": "2026-07-15",
+    "valeur": {
+     "formule": "du 15 février au 15 juillet (selon arrêté ministériel)"
+    },
+    "phrase": "La fédération indique l'anguille jaune ouverte du 15 février au 15 juillet, selon l'arrêté ministériel.",
+    "source": {
+     "texte": "Extrait de la réglementation de la pêche à Paris petite couronne (fédération 75-92-93-94), Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=48446&path=Extrait-de-reglementation.pdf",
+     "lu_le": "2026-10-15",
+     "version": null
+    },
+    "citation": "Anguille jaune : du 15 février au 15 juillet (selon arrêté ministériel).",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-grenouille-verte-ouverture-hiver",
+    "type": "ouverture",
+    "especes": [
+     "grenouille-verte"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-03-08",
+    "valeur": {
+     "formule": "Du 1er janvier au 8 mars 2026 inclus"
+    },
+    "phrase": "Pêche de la grenouille verte ouverte du 1er janvier au 8 mars 2026.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Grenouille verte et rousse Du 1er janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-grenouille-verte-ouverture-ete",
+    "type": "ouverture",
+    "especes": [
+     "grenouille-verte"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-05-16",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "du 16 mai au 31 décembre 2026 inclus"
+    },
+    "phrase": "Pêche de la grenouille verte ouverte du 16 mai au 31 décembre 2026.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Grenouille verte et rousse Du 1er janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-grenouille-rousse-ouverture-hiver",
+    "type": "ouverture",
+    "especes": [
+     "grenouille-rousse"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-03-08",
+    "valeur": {
+     "formule": "Du 1er janvier au 8 mars 2026 inclus"
+    },
+    "phrase": "Pêche de la grenouille rousse ouverte du 1er janvier au 8 mars 2026.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Grenouille verte et rousse Du 1er janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-grenouille-rousse-ouverture-ete",
+    "type": "ouverture",
+    "especes": [
+     "grenouille-rousse"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-05-16",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "du 16 mai au 31 décembre 2026 inclus"
+    },
+    "phrase": "Pêche de la grenouille rousse ouverte du 16 mai au 31 décembre 2026.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Grenouille verte et rousse Du 1er janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-ecrevisse-pattes-greles-ouverture",
+    "type": "ouverture",
+    "especes": [
+     "ecrevisse-pattes-greles"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-07-25",
+    "au": "2026-08-03",
+    "valeur": {
+     "formule": "Du 25 juillet au 3 août 2026 inclus"
+    },
+    "phrase": "Pêche de l'écrevisse à pattes grêles ouverte dix jours, du 25 juillet au 3 août 2026.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Ecrevisses à pattes grêles Du 25 juillet au 3 août 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-grande-alose-interdit-seine-suresnes",
+    "type": "interdit",
+    "especes": [
+     "grande-alose"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "92",
+     "lieu": "Seine : jusqu'au barrage de Suresnes",
+     "plan_eau": null,
+     "cours_eau": "Seine"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes"
+    },
+    "phrase": "Pêche de la grande alose interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes (formule de l'arrêté, étendue à relire).",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche des aloses (aloses feintes et grande alose) est interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-alose-feinte-interdit-seine-suresnes",
+    "type": "interdit",
+    "especes": [
+     "alose-feinte"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "92",
+     "lieu": "Seine : jusqu'au barrage de Suresnes",
+     "plan_eau": null,
+     "cours_eau": "Seine"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes"
+    },
+    "phrase": "Pêche de l'alose feinte interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes (formule de l'arrêté, étendue à relire).",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche des aloses (aloses feintes et grande alose) est interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-2151-remise-eau-mars-avril",
+    "type": "remise_eau",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-04-24",
+    "valeur": {
+     "texte": "tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril doit être immédiatement remis à l'eau"
+    },
+    "phrase": "Du 14 mars au 24 avril 2026, tout brochet pris doit être remis à l'eau tout de suite.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril doit être immédiatement remis à l'eau",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-2151-vif-leurres-interdit-fermeture",
+    "type": "interdit",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-26",
+    "au": "2026-04-24",
+    "valeur": {
+     "texte": "pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer le brochet de manière non accidentelle interdite pendant la fermeture du brochet"
+    },
+    "phrase": "Du 26 janvier au 24 avril 2026, pas de vif, de poisson mort ou artificiel ni de leurres susceptibles de prendre le brochet.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, rappel de certaines dispositions",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "la pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer ce poisson de manière non accidentelle est interdite.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-mode-lignes-max",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 4
+    },
+    "phrase": "Au plus 4 lignes montées sur canne, pour les membres d'une AAPPMA.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 10",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Dans les cours d'eau classés en 2ème catégorie, les membres des associations agréées de la pêche et de protection des milieux aquatiques peuvent pêcher au moyen de 4 lignes au plus.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-mode-hamecons-max",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "hamecons_max": 2
+    },
+    "phrase": "Au plus 2 hameçons par ligne.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 10",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Les lignes doivent être montées sur canne, munies chacune de 2 hameçons ou de 3 mouches artificielles au maximum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-mode-mouches-max",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "mouches_max": 3
+    },
+    "phrase": "Au plus 3 mouches artificielles par ligne.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 10",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Les lignes doivent être montées sur canne, munies chacune de 2 hameçons ou de 3 mouches artificielles au maximum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-main-glace",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche à la main ou sous la glace"
+    },
+    "phrase": "Pêche à la main ou sous la glace interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "de pêcher à la main ou sous la glace, ou en troublant l'eau",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-eau-trouble",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche en troublant l'eau ou en fouillant sous les racines et autres retraites du poisson"
+    },
+    "phrase": "Interdit de troubler l'eau ou de fouiller sous les racines et abris du poisson.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "ou en troublant l'eau, ou en fouillant sous les racines et autres retraites fréquentées par le poisson",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-accrochage",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "engins destinés à accrocher le poisson autrement que par la bouche ; épuisette et gaffe permises pour sortir le poisson déjà ferré"
+    },
+    "phrase": "Interdit d'accrocher le poisson ailleurs que par la bouche ; épuisette et gaffe permises pour le sortir une fois ferré.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "d'employer tous procédés ou de faire usage de tous engins destinés à accrocher le poisson autrement que par la bouche.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-armes-feu",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "armes à feu"
+    },
+    "phrase": "Armes à feu interdites pour pêcher.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "de se servir d'armes à feu",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-fagots",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "fagots, sauf pour la pêche à l'anguille et des écrevisses d'espèces autres que celles de l'article 6"
+    },
+    "phrase": "Fagots interdits, sauf pour l'anguille et certaines écrevisses.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "de fagots sauf pour la pêche à l'anguille et des écrevisses appartenant aux espèces autres que celles mentionnées à l'article 6 du présent arrêté",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-macets-collets",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "macets et collets"
+    },
+    "phrase": "Macets et collets interdits.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "de macets ou de collets",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-lumieres",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "lumières ou feux, sauf pour la pêche de la civelle"
+    },
+    "phrase": "Lumières et feux interdits pour pêcher, sauf pour la civelle.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "de lumières ou feux sauf pour la pêche de la civelle",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-plongee",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "matériel de plongée subaquatique"
+    },
+    "phrase": "Matériel de plongée subaquatique interdit pour pêcher.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "de matériel de plongée subaquatique",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-trimmer",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "trimmer ou engin similaire"
+    },
+    "phrase": "Pêche au trimmer ou engin similaire interdite.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "de pêcher à l'aide d'un trimmer ou d'un engin similaire",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-lignes-traine",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "lignes de traîne, hors conditions du cahier des charges de location du droit de pêche de l'État sur le domaine public fluvial"
+    },
+    "phrase": "Lignes de traîne interdites, sauf conditions du cahier des charges du droit de pêche de l'État.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "d'utiliser des lignes de traîne en dehors éventuellement des conditions fixées par le cahier des charges relatif à la location du droit de pêche de l'Etat sur le domaine public fluvial",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-anguille-carnet-captures",
+    "type": "autre",
+    "especes": [
+     "anguille"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "captures d'anguilles (hors argentée) enregistrées dans un carnet de pêche établi pour une saison"
+    },
+    "phrase": "Les captures d'anguille se notent dans un carnet de pêche.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 13",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Tout pêcheur en eau douce enregistre ses captures d'anguilles, hors anguille argentée dont la pêche est interdite toute l'année, à tous les stades de son développement",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-horaire-jour",
+    "type": "horaire",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pas de pêche plus d'une demi-heure avant le lever du soleil ni plus d'une demi-heure après son coucher"
+    },
+    "phrase": "On pêche de une demi-heure avant le lever du soleil à une demi-heure après son coucher.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 7",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche ne peut s'exercer plus d'une demi-heure avant le lever du soleil, ni plus d'une demi-heure après son coucher.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-reserve-ouvrages",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "toute pêche interdite en tout temps à partir des barrages et écluses et sur 50 mètres de part et d'autre des ouvrages"
+    },
+    "phrase": "Pêche interdite en tout temps depuis les barrages et écluses et sur 50 m de part et d'autre.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 4",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Toute pêche est interdite, en tout temps, à partir des barrages et écluses ainsi que sur les 50 mètres de part et d'autre des ouvrages.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-passerelles-ouvrages",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "accès aux passerelles et dépendances des ouvrages de navigation interdit au public, y compris aux pêcheurs, ainsi que sur les 50 mètres de part et d'autre"
+    },
+    "phrase": "Accès interdit aux passerelles et dépendances des ouvrages de navigation, et sur 50 m autour.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 4",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "L'accès aux passerelles et dépendances des ouvrages de navigation est strictement interdit au public y compris aux pêcheurs ainsi que sur les 50 mètres de part et d'autre des ouvrages.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-port-nanterre-reserve-federation",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "92",
+     "lieu": "Port de Nanterre",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "réserve de pêche : port de Nanterre"
+    },
+    "phrase": "Le port de Nanterre est une réserve de pêche, selon la fédération.",
+    "source": {
+     "texte": "Extrait de la réglementation de la pêche à Paris petite couronne (fédération 75-92-93-94), Interdictions de pêche, autres réserves de pêche",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=48446&path=Extrait-de-reglementation.pdf",
+     "lu_le": "2026-10-15",
+     "version": null
+    },
+    "citation": "Autres réserves de pêche Hauts-de-Seine : - Port de Nanterre",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-port-gennevilliers-reserve-federation",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "92",
+     "lieu": "Port de Gennevilliers : 3 sections autorisées dans les darses",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "réserve de pêche : port de Gennevilliers, 3 sections autorisées dans les darses"
+    },
+    "phrase": "Le port de Gennevilliers est une réserve de pêche, sauf 3 sections autorisées dans les darses, selon la fédération.",
+    "source": {
+     "texte": "Extrait de la réglementation de la pêche à Paris petite couronne (fédération 75-92-93-94), Interdictions de pêche, autres réserves de pêche",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=48446&path=Extrait-de-reglementation.pdf",
+     "lu_le": "2026-10-15",
+     "version": null
+    },
+    "citation": "Port de Gennevilliers (3 sections autorisées dans les darses)",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-2110-carpe-nuit-appats-vegetaux",
+    "type": "mode_peche",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "à la pêche de la carpe de nuit, seuls les amorces et appâts végétaux sont autorisés"
+    },
+    "phrase": "Carpe de nuit : amorces et appâts végétaux seulement.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Pour la pratique de la pêche de la carpe de nuit, seuls les amorces et appâts végétaux sont autorisés.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-2110-carpe-nuit-rive-seulement",
+    "type": "mode_peche",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "à la pêche de la carpe de nuit, pêche depuis la rive seulement"
+    },
+    "phrase": "Carpe de nuit : depuis la rive seulement.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche ne peut s'exercer que de la rive.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-2110-carpe-nuit-bateaux-amorceurs",
+    "type": "interdit",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "bateaux amorceurs interdits"
+    },
+    "phrase": "Carpe de nuit : bateaux amorceurs interdits.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Les bateaux amorceurs sont interdits.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-2110-captivite-nuit",
+    "type": "transport_vivant",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, aucune carpe capturée aux lignes ne peut être maintenue en captivité ou transportée (R436-14)"
+    },
+    "phrase": "De nuit, une carpe prise ne se garde pas en captivité et ne se transporte pas.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, aucune carpe capturée par les pêcheurs amateurs aux lignes ne peut être maintenue en captivité ou transportée",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-2110-transport-vivant-60cm",
+    "type": "transport_vivant",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "interdit en toute période de transporter vivantes des carpes de plus de 60 cm (L436-16)"
+    },
+    "phrase": "Interdit de transporter vivante une carpe de plus de 60 cm.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Il est interdit en toute période, pour un pêcheur amateur, de transporter vivantes des carpes de plus de 60 cm (article L.436-16).",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-seine-consommation-interdite",
+    "type": "consommation",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "cours_eau",
+     "code": "92",
+     "lieu": "Seine : dans le département des Hauts-de-Seine",
+     "plan_eau": null,
+     "cours_eau": "Seine"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "consommation et commercialisation des poissons pêchés dans la Seine interdites (arrêté préfectoral n° 2010-93 du 4 juin 2010)"
+    },
+    "phrase": "Ne mange pas et ne vends pas les poissons pêchés dans la Seine des Hauts-de-Seine.",
+    "source": {
+     "texte": "Avis annuel 2026 des périodes d'ouverture de la pêche en eau douce dans les Hauts-de-Seine, rappel de certaines dispositions",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "La consommation et la commercialisation de poissons pêchés dans la Seine dans le département des Hauts-de-Seine est interdite par arrêté préfectoral n° 2010-93 du 4 juin 2010.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   }
+  ],
+  "seulement_b": [
+   {
+    "id": "92-toutes-ouverture-generale",
+    "type": "ouverture",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "formule": "du 1er janvier au 31 décembre inclus"
+    },
+    "phrase": "Tous les poissons (hors grands migrateurs et espèces à ouverture spécifique) se pêchent toute l'année.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 1 - Ouverture générale",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Tous les poissons autres que les grands migrateurs et faisant l'objet d'une ouverture spécifique du 1er janvier au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-ecrevisse-americaine-ouverture-departement",
+    "type": "ouverture",
+    "especes": [
+     "ecrevisse-americaine"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "formule": "du 1er janvier au 31 décembre inclus"
+    },
+    "phrase": "L'écrevisse américaine (Orconectes limosus) se pêche toute l'année.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.1",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "ainsi que l'écrevisse dite « américaine » (orconectes limosus) : du 1er janvier au 31 décembre inclus.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-truite-fario-ouverture-ap",
+    "type": "ouverture",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+    },
+    "phrase": "La truite fario se pêche du 14 mars au 20 septembre 2026 (formule de l'arrêté permanent ; l'avis 2026 écrit 21 mars).",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.2",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Truites fario : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-truite-fario-ouverture-avis",
+    "type": "ouverture",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-21",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "Du 21 mars au 20 septembre 2026 inclus"
+    },
+    "phrase": "La truite fario se pêche du 21 mars au 20 septembre 2026 (avis 2026 ; l'arrêté permanent donne le 14 mars).",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Truites fario Du 21 mars au 20 septembre 2026 inclus",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-omble-fontaine-ouverture-ap",
+    "type": "ouverture",
+    "especes": [
+     "omble-fontaine"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+    },
+    "phrase": "L'omble de fontaine se pêche du 14 mars au 20 septembre 2026 (formule de l'arrêté permanent ; l'avis 2026 écrit 21 mars).",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.2",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Omble de fontaine : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-omble-fontaine-ouverture-avis",
+    "type": "ouverture",
+    "especes": [
+     "omble-fontaine"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-21",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "Du 21 mars au 20 septembre 2026 inclus"
+    },
+    "phrase": "L'omble de fontaine se pêche du 21 mars au 20 septembre 2026 (avis 2026 ; l'arrêté permanent donne le 14 mars).",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-omble-chevalier-ouverture-ap",
+    "type": "ouverture",
+    "especes": [
+     "omble-chevalier"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+    },
+    "phrase": "L'omble chevalier se pêche du 14 mars au 20 septembre 2026 (formule de l'arrêté permanent ; l'avis 2026 écrit 21 mars).",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.2",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Omble chevalier et du cristivomer : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+    "statut": "incertain",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-omble-chevalier-ouverture-avis",
+    "type": "ouverture",
+    "especes": [
+     "omble-chevalier"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-21",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "Du 21 mars au 20 septembre 2026 inclus"
+    },
+    "phrase": "L'omble chevalier se pêche du 21 mars au 20 septembre 2026 (avis 2026 ; l'arrêté permanent donne le 14 mars).",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Omble ou saumon de fontaine, omble chevalier Du 21 mars au 20 septembre 2026 inclus",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-cristivomer-ouverture-departement",
+    "type": "ouverture",
+    "especes": [
+     "cristivomer"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+    },
+    "phrase": "Le cristivomer se pêche du 14 mars au 20 septembre 2026 (l'avis 2026 ne le cite pas).",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.2",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Omble chevalier et du cristivomer : du deuxième samedi de mars au troisième dimanche de septembre inclus",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-ombre-ouverture-departement",
+    "type": "ouverture",
+    "especes": [
+     "2247"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-05-16",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "du troisième samedi de mai au 31 décembre inclus"
+    },
+    "phrase": "L'ombre commun se pêche du 16 mai au 31 décembre 2026.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Ombre commun Du 16 mai au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-brochet-ouverture-janvier",
+    "type": "ouverture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-01-25",
+    "valeur": {
+     "formule": "du 1er janvier au dernier dimanche de janvier"
+    },
+    "phrase": "Le brochet se pêche du 1er au 25 janvier 2026.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Brochet Du 1er janvier au 25 janvier 2026 inclus et du 25 avril au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-brochet-ouverture-avril-decembre",
+    "type": "ouverture",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-04-25",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "du dernier samedi d'avril au 31 décembre"
+    },
+    "phrase": "Le brochet se pêche du 25 avril au 31 décembre 2026.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Brochet Du 1er janvier au 25 janvier 2026 inclus et du 25 avril au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-anguille-jaune-ouverture-departement",
+    "type": "ouverture",
+    "especes": [
+     "anguille-jaune"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "formule": "fixée par arrêté ministériel annuel",
+     "texte": "Pas de date dans l'arrêté préfectoral ni dans l'avis : renvoi à l'arrêté ministériel en vigueur."
+    },
+    "phrase": "Pour l'anguille jaune, les dates d'ouverture sont fixées chaque année par arrêté ministériel : à vérifier dans ce texte.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Anguille jaune Se reporter à l'arrêté ministériel en vigueur",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-grenouille-verte-ouverture-janvier-mars",
+    "type": "ouverture",
+    "especes": [
+     "grenouille-verte"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-03-08",
+    "valeur": {
+     "formule": "du 1er janvier au 2e dimanche de mars"
+    },
+    "phrase": "La grenouille verte se pêche du 1er janvier au 8 mars 2026.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Grenouille verte et rousse Du 1er janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-grenouille-verte-ouverture-mai-decembre",
+    "type": "ouverture",
+    "especes": [
+     "grenouille-verte"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-05-16",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "du 3e samedi de mai au 31 décembre"
+    },
+    "phrase": "La grenouille verte se pêche du 16 mai au 31 décembre 2026.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Grenouille verte et rousse Du 1er janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-grenouille-rousse-ouverture-janvier-mars",
+    "type": "ouverture",
+    "especes": [
+     "grenouille-rousse"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-01",
+    "au": "2026-03-08",
+    "valeur": {
+     "formule": "du 1er janvier au 2e dimanche de mars"
+    },
+    "phrase": "La grenouille rousse se pêche du 1er janvier au 8 mars 2026.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Grenouille verte et rousse Du 1er janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-grenouille-rousse-ouverture-mai-decembre",
+    "type": "ouverture",
+    "especes": [
+     "grenouille-rousse"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-05-16",
+    "au": "2026-12-31",
+    "valeur": {
+     "formule": "du 3e samedi de mai au 31 décembre"
+    },
+    "phrase": "La grenouille rousse se pêche du 16 mai au 31 décembre 2026.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Grenouille verte et rousse Du 1er janvier au 8 mars 2026 inclus et du 16 mai au 31 décembre 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-ecrevisse-pattes-greles-ouverture-departement",
+    "type": "ouverture",
+    "especes": [
+     "ecrevisse-pattes-greles"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-07-25",
+    "au": "2026-08-03",
+    "valeur": {
+     "formule": "dix jours consécutifs commençant le quatrième samedi de juillet"
+    },
+    "phrase": "L'écrevisse à pattes grêles se pêche du 25 juillet au 3 août 2026.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, 2 - Ouvertures spécifiques",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Ecrevisses à pattes grêles Du 25 juillet au 3 août 2026 inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-brochet-interdit-vif-fermeture",
+    "type": "interdit",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-01-26",
+    "au": "2026-04-24",
+    "valeur": {
+     "texte": "Pendant la période d'interdiction spécifique du brochet, pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer ce poisson de manière non accidentelle interdite."
+    },
+    "phrase": "Du 26 janvier au 24 avril 2026 (fermeture du brochet), la pêche au vif, au poisson mort ou artificiel et aux leurres à brochet est interdite.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, rappel (2e page)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "la pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer ce poisson de manière non accidentelle est interdite.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-brochet-remise-eau-mars-avril",
+    "type": "remise_eau",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-04-24",
+    "valeur": {
+     "texte": "Tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril doit être immédiatement remis à l'eau."
+    },
+    "phrase": "Du 14 mars au 24 avril 2026, tout brochet capturé doit être remis à l'eau tout de suite.",
+    "source": {
+     "texte": "Avis annuel des périodes d'ouverture de la pêche en eau douce 2026, rappel (2e page)",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-01-13"
+    },
+    "citation": "Tout brochet capturé du 2ème samedi de mars au dernier vendredi d'avril doit être immédiatement remis à l'eau,",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-mode-peche-departement",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 4,
+     "hamecons_max": 2,
+     "mouches_max": 3,
+     "texte": "En 2e catégorie, membres d'une AAPPMA : 4 lignes au plus montées sur canne, chacune avec 2 hameçons ou 3 mouches artificielles au maximum."
+    },
+    "phrase": "4 lignes au plus, sur canne, avec 2 hameçons ou 3 mouches artificielles chacune.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 10",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "peuvent pêcher au moyen de 4 lignes au plus. Les lignes doivent être montées sur canne, munies chacune de 2 hameçons ou de 3 mouches artificielles au maximum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-reserve-ouvrages",
+    "type": "reserve",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "92",
+     "lieu": "Barrages et écluses du département : 50 m de part et d'autre des ouvrages",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Toute pêche interdite en tout temps à partir des barrages et écluses et sur 50 m de part et d'autre des ouvrages."
+    },
+    "phrase": "Pêche interdite en tout temps depuis les barrages et écluses et sur 50 m de chaque côté.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 4",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Toute pêche est interdite, en tout temps, à partir des barrages et écluses ainsi que sur les 50 mètres de part et d'autre des ouvrages.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-toutes-interdit-passerelles",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "92",
+     "lieu": "Ouvrages de navigation du département : passerelles, dépendances et 50 m de part et d'autre",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Accès interdit au public, pêcheurs compris, aux passerelles et dépendances des ouvrages de navigation et sur 50 m de part et d'autre."
+    },
+    "phrase": "L'accès aux passerelles et dépendances des ouvrages de navigation est interdit, aux pêcheurs aussi.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 4",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "L'accès aux passerelles et dépendances des ouvrages de navigation est strictement interdit au public y compris aux pêcheurs ainsi que sur les 50 mètres de part et d'autre des ouvrages.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-ecrevisse-interdit-introduction",
+    "type": "interdit",
+    "especes": [
+     "ecrevisse"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Introduction interdite dans les eaux du département."
+    },
+    "phrase": "Il est interdit d'introduire dans l'eau les écrevisses autres que pattes rouges, torrents, pattes blanches et pattes grêles.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Les espèces d'écrevisses autres que : écrevisse à pattes rouges ; écrevisse des torrents ; écrevisse à pattes blanches ; écrevisse à pattes grêles",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-grenouilles-autres-interdit-introduction",
+    "type": "interdit",
+    "especes": [
+     "grenouilles-autres"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Introduction interdite dans les eaux du département."
+    },
+    "phrase": "Il est interdit d'introduire dans l'eau les grenouilles (Rana sp.) hors liste de l'article 6.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Les espèces de grenouilles (Rana sp.) autres que : Rana arvalis : grenouille des champs ; Rana dalmatina : grenouille agile ;",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-carpe-carpe-nuit-appats-vegetaux",
+    "type": "carpe_nuit",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pour la pêche de la carpe de nuit, seuls les amorces et appâts végétaux sont autorisés."
+    },
+    "phrase": "Carpe de nuit : seulement des amorces et appâts végétaux.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Pour la pratique de la pêche de la carpe de nuit, seuls les amorces et appâts végétaux sont autorisés.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-carpe-carpe-nuit-rive",
+    "type": "carpe_nuit",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "La pêche de la carpe de nuit ne peut s'exercer que de la rive."
+    },
+    "phrase": "Carpe de nuit : seulement depuis la rive.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche ne peut s'exercer que de la rive.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "92-carpe-carpe-nuit-bateaux-amorceurs",
+    "type": "carpe_nuit",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "92",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Les bateaux amorceurs sont interdits."
+    },
+    "phrase": "Carpe de nuit : bateaux amorceurs interdits.",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-02-26"
+    },
+    "citation": "Les bateaux amorceurs sont interdits.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   }
+  ]
+ },
+ "paires_categorie": [
+  {
+   "type": "ouverture",
+   "especes": [],
+   "lieu": null,
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre 2026 inclus"
+   },
+   "a": {
+    "id": "92-toutes-ouverture-generale",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-toutes-ouverture-generale",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre inclus"
+   },
+   "a": {
+    "id": "92-ecrevisse-americaine-ouverture-generale",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-ecrevisse-americaine-ouverture-departement",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "a": {
+    "id": "92-truite-fario-ouverture-arrete",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-truite-fario-ouverture-ap",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "a": {
+    "id": "92-truite-fario-ouverture-avis",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-truite-fario-ouverture-avis",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "a": {
+    "id": "92-omble-fontaine-ouverture-arrete",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-omble-fontaine-ouverture-ap",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "a": {
+    "id": "92-omble-fontaine-ouverture-avis",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-omble-fontaine-ouverture-avis",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "a": {
+    "id": "92-omble-chevalier-ouverture-arrete",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-omble-chevalier-ouverture-ap",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "omble-chevalier"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "Du 21 mars au 20 septembre 2026 inclus"
+   },
+   "a": {
+    "id": "92-omble-chevalier-ouverture-avis",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-omble-chevalier-ouverture-avis",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "cristivomer"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "du deuxième samedi de mars au troisième dimanche de septembre inclus"
+   },
+   "a": {
+    "id": "92-cristivomer-ouverture",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-cristivomer-ouverture-departement",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2247"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "Du 16 mai au 31 décembre 2026 inclus"
+   },
+   "a": {
+    "id": "92-2247-ouverture",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-ombre-ouverture-departement",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "Du 1er janvier au 25 janvier 2026 inclus"
+   },
+   "a": {
+    "id": "92-2151-ouverture-janvier",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-brochet-ouverture-janvier",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "du 25 avril au 31 décembre 2026 inclus"
+   },
+   "a": {
+    "id": "92-2151-ouverture-avril",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-brochet-ouverture-avril-decembre",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "lieu": null,
+   "valeur": {
+    "texte": "dates fixées chaque année par arrêté ministériel, que l'avis 2026 ne recopie pas"
+   },
+   "a": {
+    "id": "92-anguille-jaune-ouverture-arrete-ministeriel",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-anguille-jaune-ouverture-departement",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "Du 1er janvier au 8 mars 2026 inclus"
+   },
+   "a": {
+    "id": "92-grenouille-verte-ouverture-hiver",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-grenouille-verte-ouverture-janvier-mars",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "du 16 mai au 31 décembre 2026 inclus"
+   },
+   "a": {
+    "id": "92-grenouille-verte-ouverture-ete",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-grenouille-verte-ouverture-mai-decembre",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "Du 1er janvier au 8 mars 2026 inclus"
+   },
+   "a": {
+    "id": "92-grenouille-rousse-ouverture-hiver",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-grenouille-rousse-ouverture-janvier-mars",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "du 16 mai au 31 décembre 2026 inclus"
+   },
+   "a": {
+    "id": "92-grenouille-rousse-ouverture-ete",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-grenouille-rousse-ouverture-mai-decembre",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "lieu": null,
+   "valeur": {
+    "formule": "Du 25 juillet au 3 août 2026 inclus"
+   },
+   "a": {
+    "id": "92-ecrevisse-pattes-greles-ouverture",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-ecrevisse-pattes-greles-ouverture-departement",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "texte": "tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril doit être immédiatement remis à l'eau"
+   },
+   "a": {
+    "id": "92-2151-remise-eau-mars-avril",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-brochet-remise-eau-mars-avril",
+    "categorie": "2"
+   }
+  },
+  {
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "lieu": null,
+   "valeur": {
+    "texte": "pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer le brochet de manière non accidentelle interdite pendant la fermeture du brochet"
+   },
+   "a": {
+    "id": "92-2151-vif-leurres-interdit-fermeture",
+    "categorie": "toutes"
+   },
+   "b": {
+    "id": "92-brochet-interdit-vif-fermeture",
+    "categorie": "2"
+   }
+  }
+ ]
+}

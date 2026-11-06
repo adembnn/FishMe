@@ -1,0 +1,158 @@
+{
+ "note": "Une citation par source pour les tailles du brochet, du sandre et du black-bass (75, 92, 94), où l'arrêté permanent et l'avis 2026 se contredisent. Les fichiers saisis à la main ne sont pas modifiés : l'app affiche ces citations sous chaque source. Décision d'Adem (15 oct. 11h13) inchangée.",
+ "regles": {
+  "75-bro-taille": {
+   "departement": "75",
+   "citations": [
+    {
+     "texte": "t8",
+     "titre": "Arrêté préfectoral permanent n° 75-2025-02-26-00012 du 26/02/2025 (Paris), art. 9",
+     "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+     "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : – 0,50 mètre pour le brochet ;"
+    },
+    {
+     "texte": "t7",
+     "titre": "Avis annuel 2026 Paris (rappel de dispositions)",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54984&path=Avis-annuel-75-2026.pdf",
+     "citation": "Dans les eaux classées en 2éme catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50 m pour le sandre et 0,60 m pour le brochet."
+    }
+   ]
+  },
+  "75-san-taille": {
+   "departement": "75",
+   "citations": [
+    {
+     "texte": "t8",
+     "titre": "Arrêté préfectoral permanent n° 75-2025-02-26-00012 du 26/02/2025 (Paris), art. 9",
+     "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+     "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : – 0,40 mètre pour le sandre dans les eaux de la 2e catégorie ;"
+    },
+    {
+     "texte": "t7",
+     "titre": "Avis annuel 2026 Paris (rappel de dispositions)",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54984&path=Avis-annuel-75-2026.pdf",
+     "citation": "Dans les eaux classées en 2éme catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50 m pour le sandre et 0,60 m pour le brochet."
+    }
+   ]
+  },
+  "75-bla-taille": {
+   "departement": "75",
+   "citations": [
+    {
+     "texte": "t8",
+     "titre": "Arrêté préfectoral permanent n° 75-2025-02-26-00012 du 26/02/2025 (Paris), art. 9",
+     "url": "https://www.prefectures-regions.gouv.fr/irecontenu/telechargement/125632/928907/file/recueil-75-2025-126-recueil-des-actes-administratifs-special%20du%2027.02.2025.pdf",
+     "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : – 0,30 mètre pour le black – bass dans les eaux de la 2e catégorie ;"
+    },
+    {
+     "texte": "t7",
+     "titre": "Avis annuel 2026 Paris (rappel de dispositions)",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54984&path=Avis-annuel-75-2026.pdf",
+     "citation": "Dans les eaux classées en 2éme catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50 m pour le sandre et 0,60 m pour le brochet."
+    }
+   ]
+  },
+  "94-bro-taille": {
+   "departement": "94",
+   "citations": [
+    {
+     "texte": "t8",
+     "titre": "Arrêté préfectoral permanent n° 2025/00727 du 25/02/2025 (Val-de-Marne), art. 9",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+     "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : – 0,50 mètre pour le brochet ;"
+    },
+    {
+     "texte": "t7",
+     "titre": "Avis annuel 2026 Val-de-Marne (rappel de dispositions)",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+     "citation": "Dans les eaux classées en 2ème catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet."
+    }
+   ]
+  },
+  "94-san-taille": {
+   "departement": "94",
+   "citations": [
+    {
+     "texte": "t8",
+     "titre": "Arrêté préfectoral permanent n° 2025/00727 du 25/02/2025 (Val-de-Marne), art. 9",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+     "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : – 0,40 mètre pour le sandre dans les eaux de la 2e catégorie ;"
+    },
+    {
+     "texte": "t7",
+     "titre": "Avis annuel 2026 Val-de-Marne (rappel de dispositions)",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+     "citation": "Dans les eaux classées en 2ème catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet."
+    }
+   ]
+  },
+  "94-bla-taille": {
+   "departement": "94",
+   "citations": [
+    {
+     "texte": "t8",
+     "titre": "Arrêté préfectoral permanent n° 2025/00727 du 25/02/2025 (Val-de-Marne), art. 9",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/94_ap_peche_permanente_no2025_00727_du_25_02_25.pdf",
+     "citation": "doivent être remis à l'eau immédiatement après leur capture si leur longueur est inférieure à : – 0,30 mètre pour le black – bass dans les eaux de la 2e catégorie ;"
+    },
+    {
+     "texte": "t7",
+     "titre": "Avis annuel 2026 Val-de-Marne (rappel de dispositions)",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54987&path=Avis-annuel-94-2026.pdf",
+     "citation": "Dans les eaux classées en 2ème catégorie, les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet."
+    }
+   ]
+  },
+  "92-brochet-taille-min-ap": {
+   "departement": "92",
+   "citations": [
+    {
+     "texte": "t8",
+     "titre": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 relatif à l'exercice de la pêche en eau douce dans les Hauts-de-Seine, article 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "citation": "0,50 mètre pour le brochet,"
+    },
+    {
+     "texte": "t7",
+     "titre": "Avis annuel des périodes d'ouverture de la pêche en eau douce pour l'année 2026 dans les Hauts-de-Seine, Rappel de certaines dispositions réglementaires",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "citation": "les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet."
+    }
+   ]
+  },
+  "92-sandre-taille-min-ap": {
+   "departement": "92",
+   "citations": [
+    {
+     "texte": "t8",
+     "titre": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 relatif à l'exercice de la pêche en eau douce dans les Hauts-de-Seine, article 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "citation": "0,40 mètre pour le sandre dans les eaux de la 2e catégorie,"
+    },
+    {
+     "texte": "t7",
+     "titre": "Avis annuel des périodes d'ouverture de la pêche en eau douce pour l'année 2026 dans les Hauts-de-Seine, Rappel de certaines dispositions réglementaires",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "citation": "les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet."
+    }
+   ]
+  },
+  "92-black-bass-taille-min-ap": {
+   "departement": "92",
+   "citations": [
+    {
+     "texte": "t8",
+     "titre": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 relatif à l'exercice de la pêche en eau douce dans les Hauts-de-Seine, article 9",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+     "citation": "0,30 mètre pour le black – bass dans les eaux de la 2e catégorie,"
+    },
+    {
+     "texte": "t7",
+     "titre": "Avis annuel des périodes d'ouverture de la pêche en eau douce pour l'année 2026 dans les Hauts-de-Seine, Rappel de certaines dispositions réglementaires",
+     "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/27963/193592/file/Avis+annuelle+p%C3%AAche+2026_92.pdf",
+     "citation": "les tailles minimales de captures sont de 0,40 m pour le black-bass, 0,50m pour le sandre et 0,60m pour le brochet."
+    }
+   ]
+  }
+ }
+}

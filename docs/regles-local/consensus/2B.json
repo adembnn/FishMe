@@ -1,0 +1,3119 @@
+{
+ "departement": "2B",
+ "regles": [
+  {
+   "id": "2B-toutes-ouverture-cat1",
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 14 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "En 1re catégorie (tous les cours d'eau et les plans d'eau de 1re catégorie), la pêche est ouverte du 14 mars au 20 septembre 2026 pour toutes les espèces non citées à part.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Période d'ouverture générale Toutes espèces (y compris truite fario, truite arc-en-ciel et saumon de fontaine) hors espèces citées ci-dessous Du 14 mars au 20 septembre inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Du 14 mars au 20 septembre inclus"
+   }
+  },
+  {
+   "id": "2B-toutes-ouverture-cat2",
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre 2026"
+   },
+   "phrase": "Dans les plans d'eau de 2e catégorie (Peri, Teppe Rosse, Alzitone), la pêche est ouverte toute l'année pour les espèces non citées à part.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Période d'ouverture générale Toutes espèces à l'exception de celles mentionnées ci-dessous Du 1er janvier au 31 décembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-ouverture-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Toutes espèces à l'exception de celles mentionnées ci-dessous Du 1er janvier au 31 décembre"
+   }
+  },
+  {
+   "id": "2B-truite-fario-ouverture-cat2",
+   "type": "ouverture",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 14 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Dans les plans d'eau de 2e catégorie, la pêche de la truite fario est ouverte du 14 mars au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Truite Fario, truite arc-en-ciel, saumon de fontaine Du 14 mars au 20 septembre inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-truite-fario-ouverture-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Truite Fario, truite arc-en-ciel, saumon de fontaine Du 14 mars au 20 septembre inclus"
+   }
+  },
+  {
+   "id": "2B-truite-arc-en-ciel-ouverture-cat2",
+   "type": "ouverture",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 14 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Dans les plans d'eau de 2e catégorie, la pêche de la truite arc-en-ciel est ouverte du 14 mars au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Truite Fario, truite arc-en-ciel, saumon de fontaine Du 14 mars au 20 septembre inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-truite-arc-en-ciel-ouverture-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Truite Fario, truite arc-en-ciel, saumon de fontaine Du 14 mars au 20 septembre inclus"
+   }
+  },
+  {
+   "id": "2B-saumon-fontaine-ouverture-cat2",
+   "type": "ouverture",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 14 mars au 20 septembre 2026 inclus"
+   },
+   "phrase": "Dans les plans d'eau de 2e catégorie, la pêche de le saumon de fontaine est ouverte du 14 mars au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Truite Fario, truite arc-en-ciel, saumon de fontaine Du 14 mars au 20 septembre inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-omble-fontaine-ouverture-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Truite Fario, truite arc-en-ciel, saumon de fontaine Du 14 mars au 20 septembre inclus"
+   }
+  },
+  {
+   "id": "2B-2151-ouverture-cat2-1",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "valeur": {
+    "formule": "du 1er janvier au 25 janvier 2026"
+   },
+   "phrase": "Dans les plans d'eau de 2e catégorie, la pêche du brochet est ouverte du 1er janvier au 25 janvier 2026.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Brochet Du 1er janvier au 25 janvier et du 25 avril au 31 décembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-brochet-ouverture-cat2-janvier",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Du 1er janvier au 25 janvier et du 25 avril au 31 décembre"
+   }
+  },
+  {
+   "id": "2B-2151-ouverture-cat2-2",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-04-25",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 25 avril au 31 décembre 2026"
+   },
+   "phrase": "Dans les plans d'eau de 2e catégorie, la pêche du brochet est ouverte du 25 avril au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Brochet Du 1er janvier au 25 janvier et du 25 avril au 31 décembre",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-brochet-ouverture-cat2-avril",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Du 1er janvier au 25 janvier et du 25 avril au 31 décembre"
+   }
+  },
+  {
+   "id": "2B-2151-remise-eau-cat1",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Tout brochet capturé du 14 mars au 24 avril doit être immédiatement remis à l'eau"
+   },
+   "phrase": "En 1re catégorie, tout brochet pris du 14 mars au 24 avril doit être remis à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Tout brochet capturé du 14 mars au 24 avril doit être immédiatement remis à l’eau",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-brochet-remise-eau-cat1",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Tout brochet capturé du 14 mars au 24 avril doit être immédiatement remis à l'eau"
+   }
+  },
+  {
+   "id": "2B-anguille-jaune-interdit-cat1",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "En 1re catégorie, la pêche de l'anguille jaune est interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Anguille jaune Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-anguille-jaune-interdit-cat1",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Anguille jaune Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2B-anguille-argentee-interdit-cat1",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "En 1re catégorie, la pêche de l'anguille argentée est interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Anguille argentée Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-anguille-argentee-interdit-cat1",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Anguille argentée Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2B-civelle-interdit-cat1",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "En 1re catégorie, la pêche de la civelle est interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Civelle Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-civelle-interdit-cat1",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Civelle Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2B-anguille-jaune-interdit-cat2",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "En 2e catégorie, la pêche de l'anguille jaune est interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Anguille jaune Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-anguille-jaune-interdit-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Anguille jaune Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2B-anguille-argentee-interdit-cat2",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "En 2e catégorie, la pêche de l'anguille argentée est interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Anguille argentée Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-anguille-argentee-interdit-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Anguille argentée Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2B-civelle-interdit-cat2",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "En 2e catégorie, la pêche de la civelle est interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Civelle Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-civelle-interdit-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Civelle Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2B-ecrevisse-pattes-blanches-interdit-cat1",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "En 1re catégorie, la pêche de l'écrevisse à pattes blanches est interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Écrevisses à pattes blanches Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-ecrevisse-pattes-blanches-interdit-cat1",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Écrevisses à pattes blanches Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2B-ecrevisse-pattes-blanches-interdit-cat2",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "En 2e catégorie, la pêche de l'écrevisse à pattes blanches est interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Écrevisses à pattes blanches Pêche interdite toute l’année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-ecrevisse-pattes-blanches-interdit-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Écrevisses à pattes blanches Pêche interdite toute l'année"
+   }
+  },
+  {
+   "id": "2B-ecrevisse-pattes-greles-ouverture-cat1",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "du 25 juillet au 3 août 2026 inclus"
+   },
+   "phrase": "En 1re catégorie, la pêche de l'écrevisse à pattes grêles est ouverte du 25 juillet au 3 août 2026 inclus.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Écrevisses à pattes grêles, à pattes rouges et des torrents Du 25 juillet au 3 août inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-ecrevisse-pattes-greles-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Écrevisses à pattes grêles, à pattes rouges et des torrents Du 25 juillet au 3 août inclus"
+   }
+  },
+  {
+   "id": "2B-ecrevisse-pattes-rouges-ouverture-cat1",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "du 25 juillet au 3 août 2026 inclus"
+   },
+   "phrase": "En 1re catégorie, la pêche de l'écrevisse à pattes rouges est ouverte du 25 juillet au 3 août 2026 inclus.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Écrevisses à pattes grêles, à pattes rouges et des torrents Du 25 juillet au 3 août inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-ecrevisse-pattes-rouges-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Écrevisses à pattes grêles, à pattes rouges et des torrents Du 25 juillet au 3 août inclus"
+   }
+  },
+  {
+   "id": "2B-ecrevisse-torrents-ouverture-cat1",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-07-25",
+   "au": "2026-08-03",
+   "valeur": {
+    "formule": "du 25 juillet au 3 août 2026 inclus"
+   },
+   "phrase": "En 1re catégorie, la pêche de l'écrevisse des torrents est ouverte du 25 juillet au 3 août 2026 inclus.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Écrevisses à pattes grêles, à pattes rouges et des torrents Du 25 juillet au 3 août inclus",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-ecrevisse-torrents-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Écrevisses à pattes grêles, à pattes rouges et des torrents Du 25 juillet au 3 août inclus"
+   }
+  },
+  {
+   "id": "2B-categorie-1-alesani",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Plan d'eau du barrage de Alesani",
+    "plan_eau": "barrage de Alesani",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Le plan d'eau du barrage de Alesani est classé en 1re catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-categorie-1-alesani",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)"
+   }
+  },
+  {
+   "id": "2B-categorie-1-calacuccia",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Plan d'eau du barrage de Calacuccia",
+    "plan_eau": "barrage de Calacuccia",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Le plan d'eau du barrage de Calacuccia est classé en 1re catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-categorie-1-calacuccia",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)"
+   }
+  },
+  {
+   "id": "2B-categorie-1-corscia",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Plan d'eau du barrage de Corscia",
+    "plan_eau": "barrage de Corscia",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Le plan d'eau du barrage de Corscia est classé en 1re catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-categorie-1-corscia",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)"
+   }
+  },
+  {
+   "id": "2B-categorie-1-codole",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Plan d'eau du barrage de Codole",
+    "plan_eau": "barrage de Codole",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Le plan d'eau du barrage de Codole est classé en 1re catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-categorie-1-codole",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)"
+   }
+  },
+  {
+   "id": "2B-categorie-1-bacciana",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Plan d'eau du barrage de Bacciana",
+    "plan_eau": "barrage de Bacciana",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Le plan d'eau du barrage de Bacciana est classé en 1re catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-categorie-1-bacciana",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)"
+   }
+  },
+  {
+   "id": "2B-categorie-1-padula",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Plan d'eau du barrage de Padula",
+    "plan_eau": "barrage de Padula",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Le plan d'eau du barrage de Padula est classé en 1re catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-categorie-1-padula",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)"
+   }
+  },
+  {
+   "id": "2B-categorie-1-sampolo",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Plan d'eau du barrage de Sampolo",
+    "plan_eau": "barrage de Sampolo",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Le plan d'eau du barrage de Sampolo est classé en 1re catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-categorie-1-sampolo",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)"
+   }
+  },
+  {
+   "id": "2B-categorie-1-trevadine",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Plan d'eau du barrage de Trevadine",
+    "plan_eau": "barrage de Trevadine",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "1"
+   },
+   "phrase": "Le plan d'eau du barrage de Trevadine est classé en 1re catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-categorie-1-trevadine",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "plans d'eau de 1ère catégorie piscicole (plans d'eau des barrages de l'Alesani, Calacuccia, Corscia, Codole, Bacciana, Padula, Sampolo et Trevadine)"
+   }
+  },
+  {
+   "id": "2B-categorie-2-peri",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Plan d'eau de Peri",
+    "plan_eau": "Peri",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "Le plan d'eau de Peri est classé en 2e catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Dans les plans d'eau de 2ème catégorie piscicole (Peri, Teppe Rosse et Alzitone)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-categorie-2-peri",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Dans les plans d'eau de 2ème catégorie piscicole (Peri, Teppe Rosse et Alzitone)"
+   }
+  },
+  {
+   "id": "2B-categorie-2-teppe-rosse",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Plan d'eau de Teppe Rosse",
+    "plan_eau": "Teppe Rosse",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "Le plan d'eau de Teppe Rosse est classé en 2e catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Dans les plans d'eau de 2ème catégorie piscicole (Peri, Teppe Rosse et Alzitone)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-categorie-2-teppe-rosse",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Dans les plans d'eau de 2ème catégorie piscicole (Peri, Teppe Rosse et Alzitone)"
+   }
+  },
+  {
+   "id": "2B-categorie-2-alzitone",
+   "type": "categorie",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Plan d'eau de Alzitone",
+    "plan_eau": "Alzitone",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "classe": "2"
+   },
+   "phrase": "Le plan d'eau de Alzitone est classé en 2e catégorie piscicole.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé II",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Dans les plans d'eau de 2ème catégorie piscicole (Peri, Teppe Rosse et Alzitone)",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-categorie-2-alzitone",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Dans les plans d'eau de 2ème catégorie piscicole (Peri, Teppe Rosse et Alzitone)"
+   }
+  },
+  {
+   "id": "2B-salmonides-quota-jour",
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Au plus 10 salmonidés par jour et par pêcheur.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Nombre de captures de salmonidés autorisées par jour et par pêcheur 10",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-salmonides-quota",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Nombre de captures de salmonidés autorisées par jour et par pêcheur 10"
+   }
+  },
+  {
+   "id": "2B-2151-quota-jour-cat1",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "En 1re catégorie, au plus 2 brochets par jour et par pêcheur.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Dans les eaux classées en 1ere catégorie, le nombre de captures autorisées de brochets par jour et par pêcheur 2",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-brochet-quota-cat1",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Dans les eaux classées en 1ere catégorie, le nombre de captures autorisées de brochets par jour et par pêcheur 2"
+   }
+  },
+  {
+   "id": "2B-2195-2151-quota-jour-cat2",
+   "type": "quota_jour",
+   "especes": [
+    "2195",
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3,
+    "texte": "3 sandres et brochets au total, dont 2 brochets au maximum"
+   },
+   "phrase": "En 2e catégorie, au plus 3 sandres et brochets par jour et par pêcheur, dont 2 brochets au maximum.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Dans les eaux classées en 2e catégorie, le nombre de captures autorisées de sandres et brochets, par jour et par pêcheur 3 dont 2 brochets maximum",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-sandre-brochet-quota-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "nombre de captures autorisées de sandres et brochets, par jour et par pêcheur 3 dont 2 brochets maximum"
+   }
+  },
+  {
+   "id": "2B-2151-quota-jour-cat2",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2,
+    "texte": "2 brochets au maximum, dans le total de 3 sandres et brochets"
+   },
+   "phrase": "En 2e catégorie, au plus 2 brochets par jour et par pêcheur (dans le total de 3 sandres et brochets).",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "3 dont 2 brochets maximum",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-brochet-quota-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "3 dont 2 brochets maximum"
+   }
+  },
+  {
+   "id": "2B-2221-taille-min-cours-eau",
+   "type": "taille_min",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 18,
+    "texte": "dans les cours d'eau"
+   },
+   "phrase": "Dans les cours d'eau, taille minimum de la truite fario: 18 cm.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Tailles minimum de capture : des truites, de l'omble ou saumon de fontaine - dans les cours d'eau : 0,18 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-truite-fario-taille-min-cours-eau",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "des truites, de l'omble ou saumon de fontaine - dans les cours d'eau : 0,18 m"
+   }
+  },
+  {
+   "id": "2B-2221-taille-min-plan-eau",
+   "type": "taille_min",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23,
+    "texte": "dans les plans d'eau"
+   },
+   "phrase": "Dans les plans d'eau, taille minimum de la truite fario: 23 cm.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Tailles minimum de capture : des truites, de l'omble ou saumon de fontaine - dans les plans d'eau : 0,23 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-truite-fario-taille-min-plans-eau",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "des truites, de l'omble ou saumon de fontaine - dans les plans d'eau : 0,23 m"
+   }
+  },
+  {
+   "id": "2B-2216-taille-min-cours-eau",
+   "type": "taille_min",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 18,
+    "texte": "dans les cours d'eau"
+   },
+   "phrase": "Dans les cours d'eau, taille minimum de la truite arc-en-ciel: 18 cm.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Tailles minimum de capture : des truites, de l'omble ou saumon de fontaine - dans les cours d'eau : 0,18 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-truite-arc-en-ciel-taille-min-cours-eau",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "des truites, de l'omble ou saumon de fontaine - dans les cours d'eau : 0,18 m"
+   }
+  },
+  {
+   "id": "2B-2216-taille-min-plan-eau",
+   "type": "taille_min",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23,
+    "texte": "dans les plans d'eau"
+   },
+   "phrase": "Dans les plans d'eau, taille minimum de la truite arc-en-ciel: 23 cm.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Tailles minimum de capture : des truites, de l'omble ou saumon de fontaine - dans les plans d'eau : 0,23 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-truite-arc-en-ciel-taille-min-plans-eau",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "des truites, de l'omble ou saumon de fontaine - dans les plans d'eau : 0,23 m"
+   }
+  },
+  {
+   "id": "2B-omble-fontaine-taille-min-cours-eau",
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 18,
+    "texte": "dans les cours d'eau"
+   },
+   "phrase": "Dans les cours d'eau, taille minimum du saumon de fontaine: 18 cm.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Tailles minimum de capture : des truites, de l'omble ou saumon de fontaine - dans les cours d'eau : 0,18 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-omble-fontaine-taille-min-cours-eau",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "des truites, de l'omble ou saumon de fontaine - dans les cours d'eau : 0,18 m"
+   }
+  },
+  {
+   "id": "2B-omble-fontaine-taille-min-plan-eau",
+   "type": "taille_min",
+   "especes": [
+    "omble-fontaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 23,
+    "texte": "dans les plans d'eau"
+   },
+   "phrase": "Dans les plans d'eau, taille minimum du saumon de fontaine: 23 cm.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Tailles minimum de capture : des truites, de l'omble ou saumon de fontaine - dans les plans d'eau : 0,23 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-omble-fontaine-taille-min-plans-eau",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "des truites, de l'omble ou saumon de fontaine - dans les plans d'eau : 0,23 m"
+   }
+  },
+  {
+   "id": "2B-2195-taille-min-cat2",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40
+   },
+   "phrase": "En 2e catégorie, taille minimum du sandre : 40 cm.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Tailles minimum de capture : dans les eaux de 2ème catégorie - sandre : 0,40 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-sandre-taille-min-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "dans les eaux de 2ème catégorie - sandre : 0,40 m"
+   }
+  },
+  {
+   "id": "2B-2151-taille-min-cat2",
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50
+   },
+   "phrase": "En 2e catégorie, taille minimum du brochet : 50 cm.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Tailles minimum de capture : dans les eaux de 2ème catégorie - brochet : 0,50 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-brochet-taille-min-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "dans les eaux de 2ème catégorie - brochet : 0,50 m"
+   }
+  },
+  {
+   "id": "2B-mulet-taille-min-cat2",
+   "type": "taille_min",
+   "especes": [
+    "mulet"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 20
+   },
+   "phrase": "En 2e catégorie, taille minimum du mulet : 20 cm.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Tailles minimum de capture : dans les eaux de 2ème catégorie - mulet : 0,20 m",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-mulet-taille-min-cat2",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "dans les eaux de 2ème catégorie - mulet : 0,20 m"
+   }
+  },
+  {
+   "id": "2B-restonica-tavignano-corte-no-kill",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2B",
+    "lieu": "Restonica et Tavignano (Corte) : tronçon compris entre l'Auberge de la Restonica, sur la Restonica, et le pont de la gare sur le Tavignano",
+    "plan_eau": null,
+    "cours_eau": "Restonica"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "parcours « sans tuer » (No Kill)"
+   },
+   "phrase": "Parcours no-kill : Restonica et Tavignano (Corte) : tronçon compris entre l'Auberge de la Restonica, sur la Restonica, et le pont de la gare sur le Tavignano. Les poissons pêchés sont remis à l'eau.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.1",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "un parcours « sans tuer » (No Kill) sur le tronçon des cours d’eau Restonica et Tavignano compris entre l'Auberge de la Restonica, sur la Restonica, et le pont de la gare sur le Tavignano",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-no-kill-corte",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.1",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "un parcours « sans tuer » (No Kill) sur le tronçon des cours d'eau Restonica et Tavignano"
+   }
+  },
+  {
+   "id": "2B-restonica-tavignano-corte-mode-peche-canne",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2B",
+    "lieu": "Restonica et Tavignano (Corte) : tronçon compris entre l'Auberge de la Restonica, sur la Restonica, et le pont de la gare sur le Tavignano",
+    "plan_eau": null,
+    "cours_eau": "Restonica"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 1,
+    "texte": "une seule canne tenue en main"
+   },
+   "phrase": "Sur ce parcours no-kill, une seule canne tenue en main : Restonica et Tavignano (Corte) : tronçon compris entre l'Auberge de la Restonica, sur la Restonica, et le pont de la gare sur le Tavignano.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.1",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "une seule canne tenue en main",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-mode-peche-canne-corte",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.1",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "une seule canne tenue en main"
+   }
+  },
+  {
+   "id": "2B-restonica-tavignano-corte-mode-peche-hamecon",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2B",
+    "lieu": "Restonica et Tavignano (Corte) : tronçon compris entre l'Auberge de la Restonica, sur la Restonica, et le pont de la gare sur le Tavignano",
+    "plan_eau": null,
+    "cours_eau": "Restonica"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "hameçon simple sans ardillon (ardillon écrasé avec une pince pour les hameçons classiques)"
+   },
+   "phrase": "Sur ce parcours no-kill, hameçon simple sans ardillon obligatoire : Restonica et Tavignano (Corte) : tronçon compris entre l'Auberge de la Restonica, sur la Restonica, et le pont de la gare sur le Tavignano.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.1",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "utilisation obligatoire d’hameçon simple, à une seule branche, sans ardillon",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-mode-peche-hamecon-corte",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.1",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "utilisation obligatoire d'hameçon simple, à une seule branche, sans ardillon"
+   }
+  },
+  {
+   "id": "2B-restonica-tavignano-corte-remise-eau",
+   "type": "remise_eau",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2B",
+    "lieu": "Restonica et Tavignano (Corte) : tronçon compris entre l'Auberge de la Restonica, sur la Restonica, et le pont de la gare sur le Tavignano",
+    "plan_eau": null,
+    "cours_eau": "Restonica"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "remise à l'eau obligatoire des poissons, quelle que soit leur taille"
+   },
+   "phrase": "Remise à l'eau obligatoire sur ce parcours no-kill : Restonica et Tavignano (Corte) : tronçon compris entre l'Auberge de la Restonica, sur la Restonica, et le pont de la gare sur le Tavignano.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.1",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "remise à l'eau obligatoire des poissons, quelle que soit leur taille",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-remise-eau-corte",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.1",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "remise à l'eau obligatoire des poissons, quelle que soit leur taille"
+   }
+  },
+  {
+   "id": "2B-nino-no-kill",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Lac de Nino : de sa source jusqu'au cours d'eau confluence ravin de l'Inzecca",
+    "plan_eau": "lac de Nino",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "parcours « sans tuer » (No Kill)"
+   },
+   "phrase": "Parcours no-kill : Lac de Nino : de sa source jusqu'au cours d'eau confluence ravin de l'Inzecca. Les poissons pêchés sont remis à l'eau.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.1",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "un parcours « sans tuer » (No Kill) sur le lac de Nino de sa source jusqu’au cours d’eau confluence ravin de l’Inzecca",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-no-kill-nino",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.1",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "un parcours « sans tuer » (No Kill) sur le lac de Nino de sa source jusqu'au cours d'eau confluence ravin de l'Inzecca"
+   }
+  },
+  {
+   "id": "2B-nino-mode-peche-canne",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Lac de Nino : de sa source jusqu'au cours d'eau confluence ravin de l'Inzecca",
+    "plan_eau": "lac de Nino",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 1,
+    "texte": "une seule canne tenue en main"
+   },
+   "phrase": "Sur ce parcours no-kill, une seule canne tenue en main : Lac de Nino : de sa source jusqu'au cours d'eau confluence ravin de l'Inzecca.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.1",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "une seule canne tenue en main",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-mode-peche-canne-nino",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.1",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "une seule canne tenue en main"
+   }
+  },
+  {
+   "id": "2B-nino-mode-peche-hamecon",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Lac de Nino : de sa source jusqu'au cours d'eau confluence ravin de l'Inzecca",
+    "plan_eau": "lac de Nino",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "hameçon simple sans ardillon (ardillon écrasé avec une pince pour les hameçons classiques)"
+   },
+   "phrase": "Sur ce parcours no-kill, hameçon simple sans ardillon obligatoire : Lac de Nino : de sa source jusqu'au cours d'eau confluence ravin de l'Inzecca.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.1",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "utilisation obligatoire d’hameçon simple, à une seule branche, sans ardillon",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-mode-peche-hamecon-nino",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.1",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "utilisation obligatoire d'hameçon simple, à une seule branche, sans ardillon"
+   }
+  },
+  {
+   "id": "2B-nino-remise-eau",
+   "type": "remise_eau",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Lac de Nino : de sa source jusqu'au cours d'eau confluence ravin de l'Inzecca",
+    "plan_eau": "lac de Nino",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "remise à l'eau obligatoire des poissons, quelle que soit leur taille"
+   },
+   "phrase": "Remise à l'eau obligatoire sur ce parcours no-kill : Lac de Nino : de sa source jusqu'au cours d'eau confluence ravin de l'Inzecca.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.1",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "remise à l'eau obligatoire des poissons, quelle que soit leur taille",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-remise-eau-nino",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.1",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "remise à l'eau obligatoire des poissons, quelle que soit leur taille"
+   }
+  },
+  {
+   "id": "2B-2221-no-kill-restonica-amont",
+   "type": "no_kill",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2B",
+    "lieu": "Vallée de la Restonica en amont du Pont de Tuani (Corte), et affluents Bravinu, Riviseccu et Timozzu : jusqu'à l'exutoire du lac de Melu",
+    "plan_eau": null,
+    "cours_eau": "Restonica"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "parcours « sans tuer » (No Kill) pour 3 ans ; le saumon de fontaine (omble) n'est pas concerné, lacs du massif du Ritondu exclus"
+   },
+   "phrase": "Parcours no-kill pour la truite fario pendant 3 ans : Vallée de la Restonica en amont du Pont de Tuani (Corte), et affluents Bravinu, Riviseccu et Timozzu : jusqu'à l'exutoire du lac de Melu.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.5",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "il est instauré un parcours « sans tuer » (No Kill) sur la vallée de la Restonica, en amont du Pont de Tuani, ainsi que sur les affluents ci-dessus, et jusqu’à l’exutoire du lac de Melu pour une durée de 3 ans",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-truite-fario-no-kill-restonica-amont",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.5",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "il est instauré un parcours « sans tuer » (No Kill) sur la vallée de la Restonica, en amont du Pont de Tuani"
+   }
+  },
+  {
+   "id": "2B-toutes-mode-peche-canne-restonica-amont",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2B",
+    "lieu": "Vallée de la Restonica en amont du Pont de Tuani (Corte), et affluents Bravinu, Riviseccu et Timozzu : jusqu'à l'exutoire du lac de Melu",
+    "plan_eau": null,
+    "cours_eau": "Restonica"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 1,
+    "texte": "une seule canne tenue en main"
+   },
+   "phrase": "Sur ce parcours no-kill, une seule canne tenue en main : Vallée de la Restonica en amont du Pont de Tuani (Corte), et affluents Bravinu, Riviseccu et Timozzu : jusqu'à l'exutoire du lac de Melu.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.5",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Une seule canne tenue en main",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-mode-peche-canne-restonica-amont",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.5",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Une seule canne tenue en main"
+   }
+  },
+  {
+   "id": "2B-toutes-mode-peche-hamecon-restonica-amont",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2B",
+    "lieu": "Vallée de la Restonica en amont du Pont de Tuani (Corte), et affluents Bravinu, Riviseccu et Timozzu : jusqu'à l'exutoire du lac de Melu",
+    "plan_eau": null,
+    "cours_eau": "Restonica"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "toutes techniques autorisées, hameçon simple sans ardillon obligatoire (ardillon préalablement écrasé pour les hameçons classiques)"
+   },
+   "phrase": "Sur ce parcours no-kill, toutes techniques mais hameçon simple sans ardillon : Vallée de la Restonica en amont du Pont de Tuani (Corte), et affluents Bravinu, Riviseccu et Timozzu : jusqu'à l'exutoire du lac de Melu.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.5",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Toutes techniques autorisées, avec hameçon simple sans ardillon obligatoire",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-mode-peche-hamecon-restonica-amont",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.5",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Toutes techniques autorisées, avec hameçon simple sans ardillon obligatoire"
+   }
+  },
+  {
+   "id": "2B-2221-remise-eau-restonica-amont",
+   "type": "remise_eau",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2B",
+    "lieu": "Vallée de la Restonica en amont du Pont de Tuani (Corte), et affluents Bravinu, Riviseccu et Timozzu : jusqu'à l'exutoire du lac de Melu",
+    "plan_eau": null,
+    "cours_eau": "Restonica"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "remise à l'eau obligatoire des truites fario quelle que soit leur taille"
+   },
+   "phrase": "Remise à l'eau obligatoire de la truite fario, quelle que soit sa taille : Vallée de la Restonica en amont du Pont de Tuani (Corte), et affluents Bravinu, Riviseccu et Timozzu : jusqu'à l'exutoire du lac de Melu.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.5",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Remise à l’eau obligatoire des truites fario quelle que soit leur taille",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-truite-fario-remise-eau-restonica-amont",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.5",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Remise à l'eau obligatoire des truites fario quelle que soit leur taille"
+   }
+  },
+  {
+   "id": "2B-toutes-interdit-lacs-rina",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Lacs de Rina (Ghisoni) : les deux lacs de Rina et la portion de cours d'eau entre les deux lacs",
+    "plan_eau": "lacs de Rina",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche interdite toute l'année 2026 (protection de la truite macrostigma, R.436-8)"
+   },
+   "phrase": "Pêche interdite en 2026 aux deux lacs de Rina et au cours d'eau qui les relie (commune de Ghisoni).",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.2",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "les portions de cours d'eau suivantes sont interdites à l'exercice de la pêche pour l'année 2026: les deux lacs de Rina et la portion de cours d'eau entre les deux lacs, commune de Ghisoni",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-interdit-entre-lacs-rina",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.2",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "les deux lacs de Rina et la portion de cours d'eau entre les deux lacs, commune de Ghisoni"
+   }
+  },
+  {
+   "id": "2B-toutes-reserve-golu",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2B",
+    "lieu": "Ruisseau du Golu et affluents (Albertacce) : de ses sources à la passerelle du GR20 située en amont des Bergeries de Radule",
+    "plan_eau": null,
+    "cours_eau": "Golu"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "réserve temporaire de pêche de la Collectivité de Corse (arrêté n° 22/619 CE du 13 septembre 2022) : tout acte de pêche interdit en tout temps"
+   },
+   "phrase": "Réserve de pêche : tout acte de pêche est interdit en tout temps sur le ruisseau du Golu et ses affluents, de ses sources à la passerelle du GR20.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.3",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "Tout acte de pêche est interdit en tout temps sur ces réserves.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-reserve-golu",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.3",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Tout acte de pêche est interdit en tout temps sur ces réserves."
+   }
+  },
+  {
+   "id": "2B-truite-taille-min-calacuccia",
+   "type": "taille_min",
+   "especes": [
+    "truite"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Barrage de Calacuccia",
+    "plan_eau": "barrage de Calacuccia",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 40,
+    "texte": "dérogation à R.436-19 par décret n° 2020-412"
+   },
+   "phrase": "Barrage de Calacuccia : taille minimum de la truite 40 cm (dérogation du préfet).",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.4",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "La taille limite de capture (TLC) est fixée à 40 cm.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-truite-taille-min-calacuccia",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.4",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "La taille limite de capture (TLC) est fixée à 40 cm."
+   }
+  },
+  {
+   "id": "2B-toutes-mode-peche-calacuccia",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "plan_eau",
+    "code": "2B",
+    "lieu": "Barrage de Calacuccia",
+    "plan_eau": "barrage de Calacuccia",
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "hameçons doubles ou triples interdits, même sans ardillon ; seuls hameçons simples à ardillon ou à ardillon écrasé"
+   },
+   "phrase": "Barrage de Calacuccia : hameçons doubles et triples interdits, hameçons simples seulement.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.4",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "L'usage d’hameçons doubles ou triples est interdit, même sans ardillon.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-mode-peche-hamecon-calacuccia",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.4",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "L'usage d'hameçons doubles ou triples est interdit, même sans ardillon."
+   }
+  },
+  {
+   "id": "2B-toutes-ouverture-tassinetta",
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2B",
+    "lieu": "Tassinetta (Asco), Réserve de chasse et de faune sauvage d'Asco : en aval de la confluence du ruisseau de l'Ondella jusqu'à la confluence de l'Asco",
+    "plan_eau": null,
+    "cours_eau": "Tassinetta"
+   },
+   "du": "2026-06-21",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 21 juin au 20 septembre 2026, uniquement sur ce secteur"
+   },
+   "phrase": "Tassinetta, secteur de la réserve d'Asco : pêche autorisée du 21 juin au 20 septembre seulement.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.6",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "la pêche y est autorisée du 21 juin au 20 septembre et uniquement sur ce secteur",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-ouverture-tassinetta",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.6",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "la pêche y est autorisée du 21 juin au 20 septembre et uniquement sur ce secteur."
+   }
+  },
+  {
+   "id": "2B-toutes-interdit-tassinetta-hors-secteur",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "2B",
+    "lieu": "Tassinetta (Asco), Réserve de chasse et de faune sauvage d'Asco : en dehors du secteur en aval de la confluence de l'Ondella jusqu'à la confluence de l'Asco",
+    "plan_eau": null,
+    "cours_eau": "Tassinetta"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "accès et pêche interdits toute l'année"
+   },
+   "phrase": "Tassinetta, en dehors du secteur autorisé : accès et pêche interdits toute l'année.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.6",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "En dehors de ce secteur de la Réserve Chasse Faune Sauvage RCFS d’Asco, l’accès et donc la pêche sont interdits toute l’année.",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-toutes-interdit-tassinetta-hors-secteur",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.6",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "En dehors de ce secteur de la Réserve Chasse Faune Sauvage RCFS d'Asco, l'accès et donc la pêche sont interdits toute l'année."
+   }
+  },
+  {
+   "id": "2B-goujon-asiatique-interdit",
+   "type": "interdit",
+   "especes": [
+    "autre:goujon asiatique"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "2B",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "pêche au goujon asiatique mort ou vif interdite"
+   },
+   "phrase": "La pêche au goujon asiatique, mort ou vif, est interdite.",
+   "source": {
+    "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 4",
+    "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2026-03-23"
+   },
+   "citation": "ainsi que la pêche au goujon asiatique mort ou vif",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "2B-goujon-asiatique-interdit",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 4",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "la pêche au goujon asiatique mort ou vif"
+   }
+  }
+ ],
+ "desaccords": {
+  "seulement_a": [
+   {
+    "id": "2B-toutes-categorie-1-cours-eau",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1",
+     "texte": "tous les cours d'eau du département"
+    },
+    "phrase": "Tous les cours d'eau de Haute-Corse sont traités en 1re catégorie piscicole pour les périodes d'ouverture.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Dans tous les cours d'eau du département et dans les plans d'eau de 1ère catégorie piscicole",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-toutes-mode-peche-lignes-cat1",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 1,
+     "texte": "dans les eaux de 1re catégorie"
+    },
+    "phrase": "Dans les eaux de 1re catégorie, une seule ligne.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Nombre de lignes autorisées : - dans les eaux de 1ère catégorie : 1",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-toutes-mode-peche-lignes-plan-eau-cat1",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 2,
+     "texte": "dans les retenues et plans d'eau de 1re catégorie"
+    },
+    "phrase": "Dans les retenues et plans d'eau de 1re catégorie, 2 lignes au plus.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "- dans les retenues et plans d'eau de 1ère catégorie : 2",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-toutes-mode-peche-lignes-lacs-altitude",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 1,
+     "texte": "dans les lacs d'altitude"
+    },
+    "phrase": "Dans les lacs d'altitude, une seule ligne.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "- dans les lacs d'altitude : 1",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-toutes-mode-peche-lignes-plan-eau-cat2",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 4,
+     "texte": "dans les plans d'eau de 2e catégorie"
+    },
+    "phrase": "Dans les plans d'eau de 2e catégorie, 4 lignes au plus.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), avis annuel annexé III",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "- dans les plans d'eaux de 2ème catégorie : 4",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-truite-quota-jour-calacuccia",
+    "type": "quota_jour",
+    "especes": [
+     "truite"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "2B",
+     "lieu": "Barrage de Calacuccia",
+     "plan_eau": "barrage de Calacuccia",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 3,
+     "texte": "prises par jour et par pêcheur"
+    },
+    "phrase": "Barrage de Calacuccia : au plus 3 truites par jour et par pêcheur.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 2.4",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "le nombre maximal de prises par jour et par pêcheur dans le plan d’eau du barrage de Calacuccia est fixé à 3",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-lamproie-marine-interdit",
+    "type": "interdit",
+    "especes": [
+     "lamproie-marine"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche à la lamproie interdite sur tous les cours d'eau"
+    },
+    "phrase": "La pêche de la lamproie (marine) est interdite sur tous les cours d'eau de Haute-Corse.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 3",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "La pêche à la lamproie est interdite sur tous les cours d’eau de Haute-Corse.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-lamproie-fluviatile-interdit",
+    "type": "interdit",
+    "especes": [
+     "lamproie-fluviatile"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche à la lamproie interdite sur tous les cours d'eau"
+    },
+    "phrase": "La pêche de la lamproie (fluviatile) est interdite sur tous les cours d'eau de Haute-Corse.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 3",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "La pêche à la lamproie est interdite sur tous les cours d’eau de Haute-Corse.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-vairon-mort-interdit",
+    "type": "interdit",
+    "especes": [
+     "autre:vairon"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche au vairon mort interdite"
+    },
+    "phrase": "La pêche au vairon mort est interdite.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 4",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "la pêche au vairon mort est interdite",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-toutes-autre-appats-ap-2006",
+    "type": "autre",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "appâts et amorces interdits listés dans l'AP permanent n° 2006-31-13 du 31/01/2006 (texte non obtenu)"
+    },
+    "phrase": "Certains appâts et amorces sont interdits par l'arrêté permanent de 2006 : vérifie cet arrêté.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026 (pêche de loisir en eau douce, Haute-Corse, 2026), article 4",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Outre l'interdiction d'utiliser comme appâts ou amorces ceux cités dans l’arrêté préfectoral n° 2006-31-13 en date du 31 janvier 2006",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   }
+  ],
+  "seulement_b": [
+   {
+    "id": "2B-categorie-1-cours-eau",
+    "type": "categorie",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": "Tous les cours d'eau du département",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "classe": "1"
+    },
+    "phrase": "Tous les cours d'eau de Haute-Corse sont en 1re catégorie piscicole.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Dans tous les cours d'eau du département et dans les plans d'eau de 1ère catégorie piscicole",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-truite-fario-ouverture-cat1",
+    "type": "ouverture",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "Du 14 mars au 20 septembre inclus"
+    },
+    "phrase": "Dans les eaux de 1re catégorie, la pêche de la truite fario est ouverte du 14 mars au 20 septembre inclus.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Toutes espèces (y compris truite fario, truite arc-en-ciel et saumon de fontaine) hors espèces citées ci-dessous Du 14 mars au 20 septembre inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-truite-arc-en-ciel-ouverture-cat1",
+    "type": "ouverture",
+    "especes": [
+     "2216"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "Du 14 mars au 20 septembre inclus"
+    },
+    "phrase": "Dans les eaux de 1re catégorie, la pêche de la truite arc-en-ciel est ouverte du 14 mars au 20 septembre inclus.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Toutes espèces (y compris truite fario, truite arc-en-ciel et saumon de fontaine) hors espèces citées ci-dessous Du 14 mars au 20 septembre inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-omble-fontaine-ouverture-cat1",
+    "type": "ouverture",
+    "especes": [
+     "omble-fontaine"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": "2026-03-14",
+    "au": "2026-09-20",
+    "valeur": {
+     "formule": "Du 14 mars au 20 septembre inclus"
+    },
+    "phrase": "Dans les eaux de 1re catégorie, la pêche de le saumon de fontaine est ouverte du 14 mars au 20 septembre inclus.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Toutes espèces (y compris truite fario, truite arc-en-ciel et saumon de fontaine) hors espèces citées ci-dessous Du 14 mars au 20 septembre inclus",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-lamproie-interdit-cat1",
+    "type": "interdit",
+    "especes": [
+     "lamproie"
+    ],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche interdite toute l'année"
+    },
+    "phrase": "La pêche de la lamproie est interdite toute l'année dans les eaux de 1re catégorie.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, I",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Lamproie Pêche interdite toute l'année",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-lamproie-interdit-cat2",
+    "type": "interdit",
+    "especes": [
+     "lamproie"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche interdite toute l'année"
+    },
+    "phrase": "La pêche de la lamproie est interdite toute l'année dans les plans d'eau de 2e catégorie.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, avis annuel annexé, II",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "Lamproie Pêche interdite toute l'année",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-toutes-quota-calacuccia",
+    "type": "quota_jour",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "plan_eau",
+     "code": "2B",
+     "lieu": "Plan d'eau du barrage de Calacuccia",
+     "plan_eau": "barrage de Calacuccia",
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 3
+    },
+    "phrase": "Au barrage de Calacuccia, au plus 3 prises par jour et par pêcheur (le texte ne dit pas l'espèce : à vérifier).",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.4",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "le nombre maximal de prises par jour et par pêcheur dans le plan d'eau du barrage de Calacuccia est fixé à 3",
+    "statut": "incertain",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-omble-fontaine-autre-restonica-amont",
+    "type": "autre",
+    "especes": [
+     "omble-fontaine"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "2B",
+     "lieu": "Vallée de la Restonica en amont du Pont de Tuani et affluents (Bravinu, Riviseccu, Timozzu), jusqu'à l'exutoire du lac de Melu (Corte)",
+     "plan_eau": null,
+     "cours_eau": "Restonica"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "le saumon de fontaine n'est pas concerné par le parcours sans tuer : réglementation générale"
+    },
+    "phrase": "Vallée de la Restonica en amont du Pont de Tuani : le saumon de fontaine n'est pas concerné par le parcours sans tuer.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 2.5",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "cette espèce n'est pas concernée par la présente mesure. Sa pêche se pratique donc dans le respect de la réglementation générale en vigueur.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-lamproie-interdit-art3",
+    "type": "interdit",
+    "especes": [
+     "lamproie"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": "Tous les cours d'eau de Haute-Corse",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "La pêche à la lamproie est interdite"
+    },
+    "phrase": "La pêche à la lamproie est interdite sur tous les cours d'eau.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 3",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "La pêche à la lamproie est interdite sur tous les cours d'eau de Haute-Corse.",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "2B-toutes-interdit-vairon-mort",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "2B",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche au vairon mort interdite"
+    },
+    "phrase": "La pêche au vairon mort est interdite.",
+    "source": {
+     "texte": "Arrêté n° 2B-2026-03-23-00002 du 23 mars 2026, article 4",
+     "url": "https://aleria.fr/wp-content/uploads/2026/03/AP-N°2B-2026-03-23-00002-du-23-03-26.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2026-03-23"
+    },
+    "citation": "la pêche au vairon mort est interdite",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   }
+  ]
+ },
+ "paires_categorie": []
+}

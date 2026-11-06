@@ -1,0 +1,1821 @@
+{
+ "departement": "92",
+ "complement": true,
+ "note": "Ajouts seulement. Les règles saisies à la main restent telles quelles ; aucune n'est remplacée ni retirée par ce fichier.",
+ "regles": [
+  {
+   "id": "92-toutes-reserve-fede-port-nanterre",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Port de Nanterre (Nanterre)",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Port de Nanterre classé en autres réserves de pêche (texte de la fédération, sans arrêté cité)"
+   },
+   "phrase": "Réserve de pêche au port de Nanterre.",
+   "source": {
+    "texte": "Extrait de réglementation, fédération de pêche Paris, 92, 93, 94 (information, sans date), page 2",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=48446&path=Extrait-de-reglementation.pdf",
+    "lu_le": "2026-10-16",
+    "version": "sans date"
+   },
+   "citation": "- Port de Nanterre ;",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-toutes-reserve-port-de-nanterre",
+    "source": {
+     "texte": "Extrait de réglementation de la fédération 75-92-93-94, Autres réserves de pêche",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=48446&path=Extrait-de-reglementation.pdf",
+     "lu_le": "2026-10-16",
+     "version": null
+    },
+    "citation": null
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-reserve-fede-port-gennevilliers",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Port de Gennevilliers (Gennevilliers) : 3 sections autorisées dans les darses",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Port de Gennevilliers classé en autres réserves de pêche, 3 sections autorisées dans les darses (texte de la fédération, sans arrêté cité)"
+   },
+   "phrase": "Réserve de pêche au port de Gennevilliers, avec 3 sections autorisées dans les darses.",
+   "source": {
+    "texte": "Extrait de réglementation, fédération de pêche Paris, 92, 93, 94 (information, sans date), page 2",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=48446&path=Extrait-de-reglementation.pdf",
+    "lu_le": "2026-10-16",
+    "version": "sans date"
+   },
+   "citation": "Port de Gennevilliers (3 sections autorisées dans les darses).",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-toutes-reserve-port-de-gennevilliers",
+    "source": {
+     "texte": "Extrait de réglementation de la fédération 75-92-93-94, Autres réserves de pêche",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=48446&path=Extrait-de-reglementation.pdf",
+     "lu_le": "2026-10-16",
+     "version": null
+    },
+    "citation": null
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-ecrevisse-americaine-ouverture-ap",
+   "type": "ouverture",
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre inclus"
+   },
+   "phrase": "L'écrevisse américaine (Orconectes limosus) se pêche toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.1",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "ainsi que l'écrevisse dite « américaine » (orconectes limosus)",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ecrevisse-americaine-ouverture-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.1",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "ainsi que l'écrevisse dite « américaine » (orconectes limosus) :"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-anguille-jaune-ouverture-mig",
+   "type": "ouverture",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-02-15",
+   "au": "2026-07-15",
+   "valeur": {
+    "formule": "du 15 février au 15 juillet (cours d'eau en 2e catégorie, amont de la limite de salure des eaux)"
+   },
+   "phrase": "Anguille jaune en eau douce, cours d'eau de 2e catégorie : du 15 février au 15 juillet (arrêté de bassin, mesures a minima).",
+   "source": {
+    "texte": "Arrêté IDF-2026-01-19-00001 du 19 janvier 2026, pêche des poissons migrateurs bassin Seine-Normandie 2026-2027, art. 2.1",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/2026_01_19_00001_ap_cadre_sn_peche_amphihalins_2026_2027.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-19"
+   },
+   "citation": "Cours d'eau en 2ème catégorie : du 15 février au 15 juillet",
+   "statut": "incertain",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-anguille-jaune-ouverture-migrateurs",
+    "source": {
+     "texte": "Arrêté IDF-2026-01-19-00001 (migrateurs Seine-Normandie 2026-2027), art. 2.1",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/2026_01_19_00001_ap_cadre_sn_peche_amphihalins_2026_2027.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-19"
+    },
+    "citation": "du 15 février au 15 juillet"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-anguille-jaune-interdit-mig-nuit",
+   "type": "interdit",
+   "especes": [
+    "anguille-jaune"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de loisir de nuit interdite pour l'anguille jaune en eau douce"
+   },
+   "phrase": "Pêche de loisir de l'anguille jaune de nuit interdite.",
+   "source": {
+    "texte": "Arrêté IDF-2026-01-19-00001 du 19 janvier 2026, pêche des poissons migrateurs bassin Seine-Normandie 2026-2027, art. 2.1",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/2026_01_19_00001_ap_cadre_sn_peche_amphihalins_2026_2027.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-19"
+   },
+   "citation": "Pêche de loisir de nuit interdite",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-anguille-jaune-interdit-nuit-migrateurs",
+    "source": {
+     "texte": "Arrêté IDF-2026-01-19-00001 (migrateurs Seine-Normandie 2026-2027), art. 2.1",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/2026_01_19_00001_ap_cadre_sn_peche_amphihalins_2026_2027.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-19"
+    },
+    "citation": "Pêche de loisir de nuit interdite"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-anguille-civelle-interdit-avis",
+   "type": "interdit",
+   "especes": [
+    "anguille-civelle"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de l'anguille de moins de 12 cm (civelle) interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 relatif à l'exercice de la pêche en eau douce dans les Hauts-de-Seine (13 janvier 2026), 2 Ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54985&path=Avis-annuel-92-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-13"
+   },
+   "citation": "Anguille <12 cm (civelle) Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-anguille-civelle-interdit-avis",
+    "source": {
+     "texte": "Avis annuel 2026 Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54985&path=Avis-annuel-92-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-13"
+    },
+    "citation": "Anguille <12 em (civelle) Pêche interdite toute l'année"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-anguille-argentee-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "anguille-argentee"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdite toute l'année, anguille argentée reconnaissable à sa ligne latérale différenciée, sa livrée dorsale sombre, sa livrée ventrale blanchâtre et son hypertrophie oculaire"
+   },
+   "phrase": "Pêche de l'anguille argentée (d'avalaison) interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.3",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de l'anguille argentée ou anguille d'avalaison",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-anguille-argentee-interdit-avis",
+    "source": {
+     "texte": "Avis annuel 2026 Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54985&path=Avis-annuel-92-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-13"
+    },
+    "citation": "Anguille argentée Pêche interdite toute l'année"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-anguille-interdit-ap-nuit",
+   "type": "interdit",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdite de nuit, à tous les stades de développement, en tout temps"
+   },
+   "phrase": "Pêche de l'anguille interdite de nuit, à tous les stades.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.3",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de l’anguille à tous les stades de son développement en tout temps est interdite de nuit",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-anguille-interdit-nuit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de l'anguille à tous les stades de son développement en tout temps est interdite de nuit"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-saumon-atlantique-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre"
+   },
+   "phrase": "Pêche du saumon interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.3",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-saumon-atlantique-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-saumon-atlantique-remise_eau-mig",
+   "type": "remise_eau",
+   "especes": [
+    "saumon-atlantique"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Tout saumon atlantique capturé est immédiatement remis à l'eau"
+   },
+   "phrase": "Tout saumon atlantique capturé doit être remis à l'eau immédiatement.",
+   "source": {
+    "texte": "Arrêté IDF-2026-01-19-00001 du 19 janvier 2026, pêche des poissons migrateurs bassin Seine-Normandie 2026-2027, art. 2.4",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/2026_01_19_00001_ap_cadre_sn_peche_amphihalins_2026_2027.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-19"
+   },
+   "citation": "Tout saumon atlantique capturé devra être immédiatement remis en à l’eau.",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-saumon-atlantique-remise-eau-migrateurs",
+    "source": {
+     "texte": "Arrêté IDF-2026-01-19-00001 (migrateurs Seine-Normandie 2026-2027), art. 2.4",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/2026_01_19_00001_ap_cadre_sn_peche_amphihalins_2026_2027.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-19"
+    },
+    "citation": "Tout saumon atlantique capturé devra être immédiatement remis en à l'eau."
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-truite-de-mer-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "truite-de-mer"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre"
+   },
+   "phrase": "Pêche de la truite de mer interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.3",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-truite-de-mer-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-lamproie-marine-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "lamproie-marine"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre"
+   },
+   "phrase": "Pêche de la lamproie marine interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.3",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-lamproie-marine-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-lamproie-fluviatile-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "lamproie-fluviatile"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdite toute l'année sur tout le bassin, en eau douce et en eau saumâtre"
+   },
+   "phrase": "Pêche de la lamproie fluviatile interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.3",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-lamproie-fluviatile-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "la pêche du saumon, de la truite de mer et des lamproies (lamproie marine et lamproie fluviatile) est interdite toute l'année"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-grande-alose-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Hauts-de-Seine : jusqu'au barrage de Suresnes",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes"
+   },
+   "phrase": "Pêche de la grande alose interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.3",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche des aloses (aloses feintes et grande alose) est interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-grande-alose-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche des aloses (aloses feintes et grande alose) est interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-grande-alose-interdit-avis",
+   "type": "interdit",
+   "especes": [
+    "grande-alose"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de la grande alose interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 relatif à l'exercice de la pêche en eau douce dans les Hauts-de-Seine (13 janvier 2026), 2 Ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54985&path=Avis-annuel-92-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-13"
+   },
+   "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-grande-alose-interdit-avis",
+    "source": {
+     "texte": "Avis annuel 2026 Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54985&path=Avis-annuel-92-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-13"
+    },
+    "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-alose-feinte-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Hauts-de-Seine : jusqu'au barrage de Suresnes",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes"
+   },
+   "phrase": "Pêche de la alose feinte interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.3",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche des aloses (aloses feintes et grande alose) est interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-alose-feinte-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche des aloses (aloses feintes et grande alose) est interdite dans les Hauts-de-Seine jusqu'au barrage de Suresnes"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-alose-feinte-interdit-avis",
+   "type": "interdit",
+   "especes": [
+    "alose-feinte"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de la alose feinte interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 relatif à l'exercice de la pêche en eau douce dans les Hauts-de-Seine (13 janvier 2026), 2 Ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54985&path=Avis-annuel-92-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-13"
+   },
+   "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-alose-feinte-interdit-avis",
+    "source": {
+     "texte": "Avis annuel 2026 Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54985&path=Avis-annuel-92-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-13"
+    },
+    "citation": "Aloses feintes et Grande alose Pêche interdite toute l'année"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-ecrevisse-pattes-rouges-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdite toute l'année en raison de leur situation critique dans le département"
+   },
+   "phrase": "Pêche de l'écrevisse pattes rouges interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.3",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "en raison de leur situation critique sur le département des Hauts-de-Seine est interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ecrevisse-pattes-rouges-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "est interdite toute l'année."
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-ecrevisse-torrents-interdit-ap",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-torrents"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Interdite toute l'année en raison de leur situation critique dans le département"
+   },
+   "phrase": "Pêche de l'écrevisse des torrents interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.3",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "en raison de leur situation critique sur le département des Hauts-de-Seine est interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ecrevisse-torrents-interdit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "est interdite toute l'année."
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-ecrevisse-pattes-blanches-interdit-avis",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite toute l'année"
+   },
+   "phrase": "Pêche de l'écrevisse à pattes blanches interdite toute l'année.",
+   "source": {
+    "texte": "Avis annuel 2026 relatif à l'exercice de la pêche en eau douce dans les Hauts-de-Seine (13 janvier 2026), 2 Ouvertures spécifiques",
+    "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54985&path=Avis-annuel-92-2026.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2026-01-13"
+   },
+   "citation": "Ecrevisses à pattes blanches, à pattes rouges et des torrents Pêche interdite toute l'année",
+   "statut": "brouillon",
+   "expire_le": "2026-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ecrevisse-pattes-blanches-interdit-avis",
+    "source": {
+     "texte": "Avis annuel 2026 Hauts-de-Seine, 2 - Ouvertures spécifiques",
+     "url": "http://www.federation-peche-paris.fr/cms_viewFile.php?idtf=54985&path=Avis-annuel-92-2026.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2026-01-13"
+    },
+    "citation": "Ecrevisses à pattes blanches, à pattes rouges et des torrents Pêche interdite toute l'année"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-brochet-remise_eau-ap",
+   "type": "remise_eau",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril est immédiatement remis à l'eau"
+   },
+   "phrase": "Tout brochet capturé du 2e samedi de mars au dernier vendredi d'avril (14 mars au 24 avril 2026) est remis à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 5.3",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "Tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril doit être immédiatement remis à l'eau",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-brochet-remise-eau-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 5.3",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "Tout brochet capturé du deuxième samedi de mars au dernier vendredi d'avril doit être immédiatement remis à l'eau"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-brochet-interdit-ap-vif",
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-26",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Pêche au vif interdite pendant la fermeture du brochet"
+   },
+   "phrase": "Pendant la fermeture du brochet (26 janvier au 24 avril 2026), pêche au vif interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 11",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "Pendant la période d'interdiction spécifique de la pêche du brochet, la pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer ce poisson",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-brochet-interdit-vif-leurres-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 11",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "Pendant la période d'interdiction spécifique de la pêche du brochet, la pêche au vif, au poisson mort ou artificiel et aux leurres susceptibles de capturer ce poisson de manière non accidentelle est"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-poisson-chat-interdit-ap-introduction",
+   "type": "interdit",
+   "especes": [
+    "poisson-chat"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite (Ameiurus melas)"
+   },
+   "phrase": "Introduction du poisson-chat interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 6",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "le poisson-chat",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-poisson-chat-interdit-introduction-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "- le poisson-chat : Ameiurusmelas ;"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-perche-soleil-interdit-ap-introduction",
+   "type": "interdit",
+   "especes": [
+    "perche-soleil"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite (Lepomis gibbosus)"
+   },
+   "phrase": "Introduction de la perche soleil interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 6",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "la perche soleil",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-perche-soleil-interdit-introduction-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "- la perche soleil : Lepomis gibbosus."
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-crabe-chinois-interdit-ap-introduction",
+   "type": "interdit",
+   "especes": [
+    "autre:crabe chinois"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite (Eriocheir sinensis)"
+   },
+   "phrase": "Introduction du crabe chinois interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 6",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "le crabe chinois",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-crabe-chinois-interdit-introduction-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "- le crabe chinois : Eriocheir sinensis."
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-ecrevisse-interdit-ap-introduction",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite de toute espèce d'écrevisse autre que l'écrevisse à pattes rouges, des torrents, à pattes blanches et à pattes grêles"
+   },
+   "phrase": "Introduction des écrevisses autres que pattes rouges, torrents, pattes blanches et pattes grêles interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 6",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "Les espèces d'écrevisses autres que",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-ecrevisses-autres-interdit-introduction-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "Les espèces d'écrevisses autres que :"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-grenouilles-autres-interdit-ap-introduction",
+   "type": "interdit",
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Introduction interdite des espèces de grenouilles autres que grenouille des champs, agile, ibérique, d'Honnorat, verte ou commune, de Lessona, de Perez, rieuse, rousse, de Berger, des Pyrénées et de Graf"
+   },
+   "phrase": "Introduction des grenouilles (Rana sp.) autres que les 12 espèces listées interdite.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 6",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "Les espèces de grenouilles (Rana sp.) autres que",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-grenouilles-autres-interdit-introduction-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 6",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "Les espèces de grenouilles (Rana sp.) autres que :"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-1",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 1/92 (Hauts-de-Seine) : de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452), rives gauche et droite",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452) ; pêche interdite sur la réserve du barrage de Suresnes"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 1/92, rives gauche et droite, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 1/92 à 9/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-1",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-2",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 2/92 (Hauts-de-Seine) : de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452), rives gauche et droite",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452) ; pêche interdite sur la réserve du barrage de Suresnes"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 2/92, rives gauche et droite, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 1/92 à 9/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-1",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-3",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 3/92 (Hauts-de-Seine) : de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452), rives gauche et droite",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452) ; pêche interdite sur la réserve du barrage de Suresnes"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 3/92, rives gauche et droite, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 1/92 à 9/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-1",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-4",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 4/92 (Hauts-de-Seine) : de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452), rives gauche et droite",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452) ; pêche interdite sur la réserve du barrage de Suresnes"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 4/92, rives gauche et droite, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 1/92 à 9/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-1",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-5",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 5/92 (Hauts-de-Seine) : de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452), rives gauche et droite",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452) ; pêche interdite sur la réserve du barrage de Suresnes"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 5/92, rives gauche et droite, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 1/92 à 9/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-1",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-6",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 6/92 (Hauts-de-Seine) : de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452), rives gauche et droite",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452) ; pêche interdite sur la réserve du barrage de Suresnes"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 6/92, rives gauche et droite, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 1/92 à 9/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-1",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-7",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 7/92 (Hauts-de-Seine) : de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452), rives gauche et droite",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452) ; pêche interdite sur la réserve du barrage de Suresnes"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 7/92, rives gauche et droite, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 1/92 à 9/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-1",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-8",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 8/92 (Hauts-de-Seine) : de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452), rives gauche et droite",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452) ; pêche interdite sur la réserve du barrage de Suresnes"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 8/92, rives gauche et droite, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 1/92 à 9/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-1",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-9",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 9/92 (Hauts-de-Seine) : de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452), rives gauche et droite",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rives gauche et droite, de 200 m en aval du pont de Garigliano (PK 8.352) à la pointe amont de l'île Saint-Denis (PK 25.452) ; pêche interdite sur la réserve du barrage de Suresnes"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 9/92, rives gauche et droite, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 1/92 à 9/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-1",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-11",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 11/92 (Hauts-de-Seine) : du point aval de l'île Saint-Denis (PK 32.802) à la limite des communes Reuil-Malmaison/Bougival (PK 47.300), rive gauche",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rive gauche, du point aval de l'île Saint-Denis (PK 32.802) à la limite des communes Reuil-Malmaison/Bougival (PK 47.300)"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 11/92, rive gauche, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 10bis/92 à 14/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-11",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-12",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 12/92 (Hauts-de-Seine) : du point aval de l'île Saint-Denis (PK 32.802) à la limite des communes Reuil-Malmaison/Bougival (PK 47.300), rive gauche",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rive gauche, du point aval de l'île Saint-Denis (PK 32.802) à la limite des communes Reuil-Malmaison/Bougival (PK 47.300)"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 12/92, rive gauche, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 10bis/92 à 14/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-11",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-carpe_nuit-ap-14",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "92",
+    "lieu": "Seine, lot n° 14/92 (Hauts-de-Seine) : du point aval de l'île Saint-Denis (PK 32.802) à la limite des communes Reuil-Malmaison/Bougival (PK 47.300), rive gauche",
+    "plan_eau": null,
+    "cours_eau": "Seine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe de nuit autorisée, quatre lignes au plus, rive gauche, du point aval de l'île Saint-Denis (PK 32.802) à la limite des communes Reuil-Malmaison/Bougival (PK 47.300)"
+   },
+   "phrase": "Carpe de nuit autorisée sur la Seine, lot n° 14/92, rive gauche, à quatre lignes au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8 (tableau, lots 10bis/92 à 14/92)",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus dans les parties de cours d'eau de 2",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-carpe-nuit-lot-11",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "La pêche de la carpe est autorisée la nuit à l'aide de quatre lignes au plus"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-carpe-transport_vivant-ap-nuit-captivite",
+   "type": "transport_vivant",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Depuis une demi-heure après le coucher du soleil jusqu'à une demi-heure avant son lever, aucune carpe capturée aux lignes ne peut être maintenue en captivité ou transportée (article R436-14)"
+   },
+   "phrase": "De nuit, aucune carpe capturée ne peut être maintenue en captivité ni transportée (une demi-heure après le coucher à une demi-heure avant le lever).",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 8",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "aucune carpe capturée par les pêcheurs amateurs aux lignes ne peut être maintenue en captivité ou transportée",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carpe-transport-vivant-nuit-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 8",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "aucune carpe capturée par les pêcheurs amateurs aux lignes ne peut être maintenue en captivité ou"
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-salmonides-quota_jour-ap",
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "Salmonidés autres que le saumon et la truite de mer, par jour et par pêcheur"
+   },
+   "phrase": "10 salmonidés par jour et par pêcheur (hors saumon et truite de mer).",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 12",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "Le nombre de captures de salmonidés autres que le saumon et la truite de mer autorisé par jour et par pêcheur est fixé à 10.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-salmonides-quota-jour-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 12",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "Le nombre de captures de salmonidés autres que le saumon et la truite de mer autorisé par jour et par pêcheur est fixé à 10."
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-carnassiers-quota_jour-ap-total",
+   "type": "quota_jour",
+   "especes": [
+    "2151",
+    "2195",
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3,
+    "texte": "Brochets, sandres et black-bass confondus, dont 2 brochets au maximum"
+   },
+   "phrase": "3 carnassiers (brochet, sandre, black-bass) par jour et par pêcheur.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 12",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont 2 brochets maximum.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-carnassiers-quota-jour-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 12",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont 2 brochets maximum."
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-brochet-quota_jour-ap-sous-quota",
+   "type": "quota_jour",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2,
+    "texte": "Brochets, dans le total de 3 poissons avec sandre et black-bass"
+   },
+   "phrase": "2 brochets au plus par jour et par pêcheur (dans le total de 3 carnassiers).",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 (Hauts-de-Seine), art. 12",
+    "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+    "lu_le": "2026-10-16",
+    "version": "2025-02-26"
+   },
+   "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont 2 brochets maximum.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "92-brochet-quota-jour-ap",
+    "source": {
+     "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87, art. 12",
+     "url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/ap_permanent_peche_2025_92.pdf",
+     "lu_le": "2026-10-16",
+     "version": "2025-02-26"
+    },
+    "citation": "Le nombre de captures par jour et par pêcheur des brochets, sandres, black-bass est fixé à trois poissons dont 2 brochets maximum."
+   },
+   "passe": "complement-16-oct (92.json)"
+  },
+  {
+   "id": "92-toutes-reserve-ouvrages",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "92",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche interdite en tout temps à partir des barrages et écluses et sur les 50 mètres de part et d'autre des ouvrages."
+   },
+   "phrase": "Pêche interdite en tout temps depuis les barrages et écluses et sur 50 m de chaque côté.",
+   "source": {
+    "texte": "Arrêté préfectoral permanent DCL/BEICEP n°2025-87 du 26 février 2025 relatif à l'exercice de la pêche en eau douce dans les Hauts-de-Seine, article 4",
+    "url": "https://www.hauts-de-seine.gouv.fr/contenu/telechargement/26427/184827/file/a-+AP+permanent+peche+2025_92.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-02-26"
+   },
+   "citation": "Toute pêche est interdite, en tout temps, à partir des barrages et écluses ainsi que sur les 50 mètres de part et d'autre des ouvrages.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "passe": "complement-16-oct (92-consensus-pc.json, paire de catégorie)",
+   "note_categorie": "les deux lectures donnent la même règle, l'une en 2e catégorie, l'autre pour toutes ; tout le département est en 2e catégorie"
+  }
+ ]
+}

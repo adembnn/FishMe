@@ -1,0 +1,4045 @@
+{
+ "departement": "90",
+ "regles": [
+  {
+   "id": "90-anguille-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "anguille"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Prélèvement interdit ; toute capture accidentelle est remise immédiatement à l'eau."
+   },
+   "phrase": "Prélever l'anguille est interdit dans le Territoire de Belfort ; remets-le à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 1",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Il est interdit de prélever les espèces mentionnées ci-après",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-anguille-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 1",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "- Anguille,"
+   }
+  },
+  {
+   "id": "90-ecrevisse-pattes-blanches-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-blanches"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Prélèvement interdit ; toute capture accidentelle est remise immédiatement à l'eau."
+   },
+   "phrase": "Prélever l'écrevisse à pattes blanches est interdit dans le Territoire de Belfort ; remets-le à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 1",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Il est interdit de prélever les espèces mentionnées ci-après",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-ecrevisse-pattes-blanches-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 1",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Écrevisse à pattes blanches, écrevisses à pattes rouges, écrevisses à pattes grêles"
+   }
+  },
+  {
+   "id": "90-ecrevisse-pattes-rouges-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Prélèvement interdit ; toute capture accidentelle est remise immédiatement à l'eau."
+   },
+   "phrase": "Prélever l'écrevisse à pattes rouges est interdit dans le Territoire de Belfort ; remets-le à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 1",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Il est interdit de prélever les espèces mentionnées ci-après",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-ecrevisse-pattes-rouges-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 1",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Écrevisse à pattes blanches, écrevisses à pattes rouges, écrevisses à pattes grêles"
+   }
+  },
+  {
+   "id": "90-ecrevisse-pattes-greles-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "ecrevisse-pattes-greles"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Prélèvement interdit ; toute capture accidentelle est remise immédiatement à l'eau."
+   },
+   "phrase": "Prélever l'écrevisse à pattes grêles est interdit dans le Territoire de Belfort ; remets-le à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 1",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Il est interdit de prélever les espèces mentionnées ci-après",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-ecrevisse-pattes-greles-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 1",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Écrevisse à pattes blanches, écrevisses à pattes rouges, écrevisses à pattes grêles"
+   }
+  },
+  {
+   "id": "90-ombre-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "2247"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Prélèvement interdit ; toute capture accidentelle est remise immédiatement à l'eau."
+   },
+   "phrase": "Prélever l'ombre commun est interdit dans le Territoire de Belfort ; remets-le à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 1",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Il est interdit de prélever les espèces mentionnées ci-après",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-ombre-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 1",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "- Ombre commun,"
+   }
+  },
+  {
+   "id": "90-grenouilles-autres-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "grenouilles-autres"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Prélèvement interdit ; toute capture accidentelle est remise immédiatement à l'eau."
+   },
+   "phrase": "Prélever les grenouilles autres que verte et rousse est interdit dans le Territoire de Belfort ; remets-le à l'eau tout de suite.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 1",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Il est interdit de prélever les espèces mentionnées ci-après",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-grenouilles-autres-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 1",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Grenouilles autre que grenouilles vertes et grenouilles rousses"
+   }
+  },
+  {
+   "id": "90-black-bass-interdit-cat2",
+   "type": "interdit",
+   "especes": [
+    "2053"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Prélèvement interdit en seconde catégorie piscicole ; remise immédiate à l'eau."
+   },
+   "phrase": "En 2e catégorie, le black-bass ne se garde pas : remets-le à l'eau.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 1",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Black-bass en seconde catégorie piscicole.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-black-bass-interdit-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 1",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Black-bass en seconde catégorie piscicole."
+   }
+  },
+  {
+   "id": "90-grenouille-verte-vente-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Colportage, vente, mise en vente et achat interdits, vivante ou morte, en toute période."
+   },
+   "phrase": "Vendre ou acheter la grenouille verte, vivante ou morte, est interdit.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 1",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Le colportage, la vente, la mise en vente ou l'achat de la grenouille verte et de la grenouille rousse, qu'il s'agisse de spécimens vivants ou morts, sont interdits en toute période",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-grenouille-verte-interdit-vente",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 1",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Le colportage, la vente, la mise en vente ou l'achat de la grenouille verte et de la grenouille rousse"
+   }
+  },
+  {
+   "id": "90-grenouille-rousse-vente-interdit-departement",
+   "type": "interdit",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Colportage, vente, mise en vente et achat interdits, vivante ou morte, en toute période."
+   },
+   "phrase": "Vendre ou acheter la grenouille rousse, vivante ou morte, est interdit.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 1",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Le colportage, la vente, la mise en vente ou l'achat de la grenouille verte et de la grenouille rousse, qu'il s'agisse de spécimens vivants ou morts, sont interdits en toute période",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-grenouille-rousse-interdit-vente",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 1",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Le colportage, la vente, la mise en vente ou l'achat de la grenouille verte et de la grenouille rousse"
+   }
+  },
+  {
+   "id": "90-ouverture-generale-cat1",
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre inclus"
+   },
+   "phrase": "En 1re catégorie, la pêche est ouverte du 14 mars au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 2",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "du 2° samedi de mars au 3° dimanche de septembre inclus.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 2",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "du 2° samedi de mars au 3° dimanche de septembre inclus"
+   }
+  },
+  {
+   "id": "90-brochet-ouverture-cat1",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-04-25",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du dernier samedi d'avril au 3e dimanche de septembre inclus"
+   },
+   "phrase": "En 1re catégorie, le brochet se pêche du 25 avril au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 2",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Brochet : du dernier samedi d'avril au 3° dimanche de septembre inclus.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2151-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 2",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Brochet : du dernier samedi d'avril au 3° dimanche de septembre inclus"
+   }
+  },
+  {
+   "id": "90-grenouille-verte-ouverture-cat1",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 3e samedi de mai au 3e dimanche de septembre inclus"
+   },
+   "phrase": "En 1re catégorie, la grenouille verte se pêche du 16 mai au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 2",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Grenouille verte et grenouille rousse : du 3° samedi de mai au 3° dimanche de septembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-grenouille-verte-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 2",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Grenouille verte et grenouille rousse : du 3° samedi de mai au 3° dimanche de septembre inclus"
+   }
+  },
+  {
+   "id": "90-grenouille-rousse-ouverture-cat1",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 3e samedi de mai au 3e dimanche de septembre inclus"
+   },
+   "phrase": "En 1re catégorie, la grenouille rousse se pêche du 16 mai au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 2",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Grenouille verte et grenouille rousse : du 3° samedi de mai au 3° dimanche de septembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-grenouille-rousse-ouverture-cat1",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 2",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Grenouille verte et grenouille rousse : du 3° samedi de mai au 3° dimanche de septembre inclus"
+   }
+  },
+  {
+   "id": "90-ouverture-generale-cat2",
+   "type": "ouverture",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "formule": "du 1er janvier au 31 décembre"
+   },
+   "phrase": "En 2e catégorie, la pêche est ouverte toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "du 1° janvier au 31 décembre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-ouverture-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "du 1° janvier au 31 décembre."
+   }
+  },
+  {
+   "id": "90-brochet-ouverture-cat2-janvier",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "valeur": {
+    "formule": "du 1er janvier au dernier dimanche de janvier"
+   },
+   "phrase": "En 2e catégorie, le brochet se pêche du 1er au 25 janvier 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Brochet: du 1” janvier au dernier dimanche de janvier",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2151-ouverture-cat2-janvier",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "du 1” janvier au dernier dimanche de janvier"
+   }
+  },
+  {
+   "id": "90-brochet-ouverture-cat2-avril",
+   "type": "ouverture",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-04-25",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du dernier samedi d'avril au 31 décembre"
+   },
+   "phrase": "En 2e catégorie, le brochet se pêche du 25 avril au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "et du dernier samedi d'avril au 31 décembre",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2151-ouverture-cat2-avril",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "et du dernier samedi d'avril au 31 décembre"
+   }
+  },
+  {
+   "id": "90-sandre-ouverture-cat2-janvier",
+   "type": "ouverture",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-01",
+   "au": "2026-01-25",
+   "valeur": {
+    "formule": "du 1er janvier au dernier dimanche de janvier"
+   },
+   "phrase": "En 2e catégorie, le sandre se pêche du 1er au 25 janvier 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Sandre : du 1” janvier au dernier dimanche de janvier",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2195-ouverture-cat2-janvier",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Sandre : du 1” janvier au dernier dimanche de janvier"
+   }
+  },
+  {
+   "id": "90-sandre-ouverture-cat2-mai",
+   "type": "ouverture",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-05-30",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du dernier samedi de mai au 31 décembre"
+   },
+   "phrase": "En 2e catégorie, le sandre se pêche du 30 mai au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "et du dernier samedi de mai au 31 décembre",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2195-ouverture-cat2-mai",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "et du dernier samedi de mai au 31 décembre"
+   }
+  },
+  {
+   "id": "90-salmonides-ouverture-cat2",
+   "type": "ouverture",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-03-14",
+   "au": "2026-09-20",
+   "valeur": {
+    "formule": "du 2e samedi de mars au 3e dimanche de septembre, hors truite arc-en-ciel"
+   },
+   "phrase": "En 2e catégorie, les salmonidés (sauf la truite arc-en-ciel) se pêchent du 14 mars au 20 septembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Salmonidés : du 2° samedi de mars au 3° dimanche de septembre, en dehors de la truite arc-en-ciel dont la pêche est ouverte toute l'année.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-salmonides-ouverture-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Salmonidés : du 2° samedi de mars au 3° dimanche de septembre"
+   }
+  },
+  {
+   "id": "90-truite-arc-en-ciel-ouverture-cat2",
+   "type": "ouverture",
+   "especes": [
+    "2216"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "formule": "toute l'année"
+   },
+   "phrase": "En 2e catégorie, la truite arc-en-ciel se pêche toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "en dehors de la truite arc-en-ciel dont la pêche est ouverte toute l'année.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2216-ouverture-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "la truite arc-en-ciel dont la pêche est ouverte toute l'année"
+   }
+  },
+  {
+   "id": "90-grenouille-verte-ouverture-cat2",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 3e samedi de mai au 31 décembre"
+   },
+   "phrase": "En 2e catégorie, la grenouille verte se pêche du 16 mai au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Grenouille verte et grenouille rousse : du 3° samedi de mai au 31 décembre",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-grenouille-verte-ouverture-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Grenouille verte et grenouille rousse : du 3° samedi de mai au 31 décembre"
+   }
+  },
+  {
+   "id": "90-grenouille-rousse-ouverture-cat2",
+   "type": "ouverture",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-05-16",
+   "au": "2026-12-31",
+   "valeur": {
+    "formule": "du 3e samedi de mai au 31 décembre"
+   },
+   "phrase": "En 2e catégorie, la grenouille rousse se pêche du 16 mai au 31 décembre 2026.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Grenouille verte et grenouille rousse : du 3° samedi de mai au 31 décembre",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-grenouille-rousse-ouverture-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Grenouille verte et grenouille rousse : du 3° samedi de mai au 31 décembre"
+   }
+  },
+  {
+   "id": "90-brochet-interdit-bourbeuse",
+   "type": "interdit",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "90",
+    "lieu": "Bourbeuse : de la confluence Saint-Nicolas / Madeleine jusqu'à sa confluence avec l'Allaine et le canal du Rhône au Rhin",
+    "plan_eau": null,
+    "cours_eau": "Bourbeuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Prélèvement du brochet interdit toute l'année sur l'intégralité de la Bourbeuse."
+   },
+   "phrase": "Sur toute la Bourbeuse, le brochet ne se garde jamais.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3 et article 8",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "le prélèvement du brochet est interdit toute l’année.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2151-interdit-bourbeuse",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "le prélèvement du brochet est interdit toute l’année"
+   }
+  },
+  {
+   "id": "90-canaux-niveau-bas-cat2",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": "Canaux du domaine public",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche à la ligne interdite dans les canaux du domaine public quand le niveau d'eau est abaissé de plus d'un mètre."
+   },
+   "phrase": "Dans les canaux du domaine public, pas de pêche à la ligne si l'eau est baissée de plus d'un mètre.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "La pêche à la ligne est interdite dans les canaux du domaine public lorsque le niveau d'eau est abaissé de plus d'un mètre.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-interdit-canaux-bas-niveau",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "La pêche à la ligne est interdite dans les canaux du domaine public lorsque le niveau d'eau est abaissé de plus d'un mètre."
+   }
+  },
+  {
+   "id": "90-horaire-departement",
+   "type": "horaire",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche à la ligne interdite plus d'une demi-heure avant le lever du soleil et plus d'une demi-heure après son coucher."
+   },
+   "phrase": "Pêche à la ligne de une demi-heure avant le lever à une demi-heure après le coucher du soleil.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 4",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "La pêche à la ligne ne peut s'exercer plus d'une demi-heure avant le lever du soleil, ni plus d'une demi-heure après son coucher.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-horaire-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 4",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "La pêche à la ligne ne peut s'exercer plus d'une demi-heure avant le lever du soleil, ni plus d'une demi-heure après son coucher."
+   }
+  },
+  {
+   "id": "90-perche-soleil-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "perche-soleil"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends la perche soleil, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-perche-soleil-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-poisson-chat-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "poisson-chat"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends le poisson-chat commun, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-poisson-chat-commun-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-ecrevisse-americaine-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "ecrevisse-americaine"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends l'écrevisse américaine, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-ecrevisse-americaine-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-ecrevisse-californie-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "ecrevisse-californie"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends l'écrevisse de Californie, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-ecrevisse-de-californie-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-ecrevisse-louisiane-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "ecrevisse-louisiane"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends l'écrevisse de Louisiane, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-ecrevisse-de-louisiane-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-goujon-de-l-amour-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:goujon de l'Amour"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends le goujon de l'Amour, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-goujon-de-l-amour-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-pseudorasbora-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:pseudorasbora"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends le pseudorasbora, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-pseudorasbora-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-poisson-tete-de-serpent-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:poisson tête de serpent"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends le poisson tête de serpent, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-poisson-t-te-de-serpent-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-choquemort-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:choquemort"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends le choquemort, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-choquemort-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-gambusie-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:gambusie"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends la gambusie, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-gambusie-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-gambusie-de-l-ouest-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:gambusie de l'Ouest"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends la gambusie de l'Ouest, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-gambusie-de-l-ouest-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-baret-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:baret"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends le baret, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-baret-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-ecrevisse-a-pinces-bleues-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:écrevisse à pinces bleues"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends l'écrevisse à pinces bleues, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-ecrevisse-a-pinces-bleues-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-ecrevisse-marbree-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:écrevisse marbrée"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends l'écrevisse marbrée, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-ecrevisse-a-pinces-bleues-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-ecrevisse-a-taches-rouges-envahissante-departement",
+   "type": "transport_vivant",
+   "especes": [
+    "autre:écrevisse à taches rouges"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Espèce exotique envahissante : détruite en cas de capture, transportée morte, ni remise à l'eau ni utilisée comme appât."
+   },
+   "phrase": "Si tu prends l'écrevisse à taches rouges, détruis-la et transporte-la morte ; ne la remets pas à l'eau et ne l'utilise pas comme appât.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 5",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-ecrevisse-a-taches-rouges-transport_vivant-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 5",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "devront être détruites et obligatoirement transportées mortes. Elles ne devront pas être remises à l'eau ni être utilisées comme appât."
+   }
+  },
+  {
+   "id": "90-carpe-nuit-canal-rhone-rhin",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Canal du Rhône au Rhin (écluses 3S à 7S) : de l'écluse n°3S à Montreux-Château à l'écluse n°7S à Bourogne, rive droite et rive gauche, 9,37 km",
+    "plan_eau": null,
+    "cours_eau": "Canal du Rhône au Rhin"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure de la nuit, du 1er janvier au 31 décembre, aux lignes."
+   },
+   "phrase": "Pêche de la carpe de nuit autorisée toute l'année sur ce parcours (Canal du Rhône au Rhin).",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 6",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "la pêche de la carpe peut être pratiquée à toute heure de la nuit, du 1° janvier au 31 décembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-carpe_nuit-canal",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "la pêche de la carpe peut être pratiquée à toute heure de la nuit, du 1° janvier au 31 décembre inclus"
+   }
+  },
+  {
+   "id": "90-carpe-nuit-canal-rhone-rhin-no-kill",
+   "type": "no_kill",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Canal du Rhône au Rhin (écluses 3S à 7S) : de l'écluse n°3S à Montreux-Château à l'écluse n°7S à Bourogne, rive droite et rive gauche, 9,37 km",
+    "plan_eau": null,
+    "cours_eau": "Canal du Rhône au Rhin"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche de la carpe se pratique en no-kill."
+   },
+   "phrase": "Sur ce parcours de carpe de nuit, la carpe est remise à l'eau (no-kill).",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 6",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "La pêche de la carpe se pratique en NO-KILL.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2110-no_kill-carpe-nuit-canal",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "La pêche de la carpe se pratique en NO-KILL."
+   }
+  },
+  {
+   "id": "90-carpe-nuit-bourbeuse",
+   "type": "carpe_nuit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Bourbeuse (Bourogne) : de la ligne électrique proche de la STEP au pont en aluminium de la piste cyclable, rive droite et rive gauche, 1,4 km",
+    "plan_eau": null,
+    "cours_eau": "Bourbeuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche de la carpe autorisée à toute heure de la nuit, du 1er janvier au 31 décembre, aux lignes."
+   },
+   "phrase": "Pêche de la carpe de nuit autorisée toute l'année sur ce parcours (Bourbeuse).",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 6",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "la pêche de la carpe peut être pratiquée à toute heure de la nuit, du 1° janvier au 31 décembre inclus",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-carpe_nuit-bourbeuse",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "la pêche de la carpe peut être pratiquée à toute heure de la nuit, du 1° janvier au 31 décembre inclus"
+   }
+  },
+  {
+   "id": "90-carpe-nuit-bourbeuse-no-kill",
+   "type": "no_kill",
+   "especes": [
+    "2110"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Bourbeuse (Bourogne) : de la ligne électrique proche de la STEP au pont en aluminium de la piste cyclable, rive droite et rive gauche, 1,4 km",
+    "plan_eau": null,
+    "cours_eau": "Bourbeuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "La pêche de la carpe se pratique en no-kill."
+   },
+   "phrase": "Sur ce parcours de carpe de nuit, la carpe est remise à l'eau (no-kill).",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 6",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "La pêche de la carpe se pratique en NO-KILL.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2110-no_kill-carpe-nuit-bourbeuse",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "La pêche de la carpe se pratique en NO-KILL."
+   }
+  },
+  {
+   "id": "90-truite-fario-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 30
+   },
+   "phrase": "Truite fario : 30 cm minimum.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 7 I",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "La taille minimum de capture des salmonidés est fixée à + 30 cm pour la truite Fario, sauf dispositions spécifiques mentionnées au II",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2221-taille_min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 7 I",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "La taille minimum de capture des salmonidés est fixée à + 30 cm pour la truite Fario"
+   }
+  },
+  {
+   "id": "90-salmonides-autres-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 25,
+    "texte": "Autres salmonidés que la truite fario."
+   },
+   "phrase": "Autres salmonidés : 25 cm minimum.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 7 I",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "+ 25 cm pour les autres salmonidés.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-salmonides-taille_min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 7 I",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "+ 25 cm pour les autres salmonidés."
+   }
+  },
+  {
+   "id": "90-brochet-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "2151"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 60
+   },
+   "phrase": "Brochet : 60 cm minimum en 1re et 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 7 I",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "La taille minimale de capture du Brochet, dans les eaux de 1° et de 2° catégorie, est fixée à 60 cm",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2151-taille_min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 7 I",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "La taille minimale de capture du Brochet, dans les eaux de 1° et de 2° catégorie, est fixée à 60 cm"
+   }
+  },
+  {
+   "id": "90-sandre-taille-min-cat2",
+   "type": "taille_min",
+   "especes": [
+    "2195"
+   ],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 50
+   },
+   "phrase": "Sandre : 50 cm minimum en 2e catégorie.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 7 I",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "La taille minimale de capture du Sandre, dans les eaux de 2° catégorie, est fixée à 50 cm",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2195-taille_min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 7 I",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "La taille minimale de capture du Sandre, dans les eaux de 2° catégorie, est fixée à 50 cm"
+   }
+  },
+  {
+   "id": "90-grenouille-verte-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-verte"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8,
+    "texte": "Mesurée du bout du museau au cloaque."
+   },
+   "phrase": "Grenouille verte : 8 cm minimum, du museau au cloaque.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 7 I",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "La taille minimale de pêche de la grenouille verte ou rousse est fixée à 8 cm, mesurée du bout du museau au cloaque.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-grenouille-verte-taille_min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 7 I",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "La taille minimale de pêche de la grenouille verte ou rousse est fixée à 8 cm, mesurée du bout du museau au cloaque."
+   }
+  },
+  {
+   "id": "90-grenouille-rousse-taille-min",
+   "type": "taille_min",
+   "especes": [
+    "grenouille-rousse"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "cm": 8,
+    "texte": "Mesurée du bout du museau au cloaque."
+   },
+   "phrase": "Grenouille rousse : 8 cm minimum, du museau au cloaque.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 7 I",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "La taille minimale de pêche de la grenouille verte ou rousse est fixée à 8 cm, mesurée du bout du museau au cloaque.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-grenouille-rousse-taille_min-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 7 I",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "La taille minimale de pêche de la grenouille verte ou rousse est fixée à 8 cm, mesurée du bout du museau au cloaque."
+   }
+  },
+  {
+   "id": "90-truite-fario-carnet-rhome",
+   "type": "autre",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Rhôme, ses affluents et sous-affluents : de sa source jusqu'à l'étang Gauthier (Lachapelle-sous-Chaux)",
+    "plan_eau": null,
+    "cours_eau": "Rhôme"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Carnet individuel de suivi des captures de truites fario obligatoire, coté par l'AAPPMA de Lepuix ou de Giromagny ; lieu, date, taille et destination notés après chaque capture ; envoi à la fédération avant le 30 septembre."
+   },
+   "phrase": "Sur ce tronçon (Rhôme), tu dois avoir ton carnet de captures de truite fario et le remplir après chaque capture.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 10",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "tout pêcheur en situation de\npêche, doit porter sur lui un carnet individuel de suivi des captures",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2221-autre-carnet-rhome",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 10",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "tout pêcheur en situation de pêche, doit porter sur lui un carnet individuel de suivi des captures"
+   }
+  },
+  {
+   "id": "90-quota-salmonides",
+   "type": "quota_jour",
+   "especes": [
+    "salmonides"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 6,
+    "texte": "Six salmonidés par pêcheur aux lignes et par jour, dont trois truites fario au maximum."
+   },
+   "phrase": "6 salmonidés par jour au plus, dont 3 truites fario.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 8",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Le nombre de captures de salmonidés autorisé par pêcheur aux lignes et par jour, est fixé à six, dont trois truites fario maximum.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-salmonides-quota_jour-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 8",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "est fixé à six, dont trois truites fario maximum"
+   }
+  },
+  {
+   "id": "90-truite-fario-quota",
+   "type": "quota_jour",
+   "especes": [
+    "2221"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3,
+    "texte": "Trois truites fario au maximum par jour, comprises dans les six salmonidés."
+   },
+   "phrase": "3 truites fario par jour au plus.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 8",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "six, dont trois truites fario maximum.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2221-quota_jour-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 8",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "dont trois truites fario maximum"
+   }
+  },
+  {
+   "id": "90-quota-carnassiers",
+   "type": "quota_jour",
+   "especes": [
+    "2151",
+    "2195"
+   ],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 1,
+    "texte": "Un carnassier (brochet ou sandre) par pêcheur aux lignes et par jour."
+   },
+   "phrase": "1 carnassier par jour au plus : un brochet ou un sandre.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 8",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Le nombre de captures de carnassiers autorisé par pêcheur aux lignes et par jour, est fixé à un (brochet ou sandre)",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2151-2195-quota_jour-departement",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 8",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "est fixé à un (brochet ou sandre), sauf sur la Bourbeuse où la capture du brochet est interdite"
+   }
+  },
+  {
+   "id": "90-graciation-bourbeuse-bourogne",
+   "type": "no_kill",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Bourbeuse (Bourogne) : de la ligne électrique traversant la rivière et proche de la station d'épuration jusqu'à la passerelle aluminium de la piste cyclable",
+    "plan_eau": null,
+    "cours_eau": "Bourbeuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Parcours de graciation toutes espèces : tout poisson capturé est remis à l'eau immédiatement, sauf les espèces de l'article 5."
+   },
+   "phrase": "Sur ce parcours de la Bourbeuse, tout poisson pris est remis à l'eau tout de suite (no-kill).",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 8",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "tout poisson capturé doit être remis à l'eau immédiatement, à l'exception des espèces listées à l’article 5.",
+   "statut": "incertain",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-no_kill-bourbeuse-bourogne",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 8",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "tout poisson capturé doit être remis à l'eau immédiatement, à l'exception des espèces listées à l’article 5"
+   },
+   "citation_a_revoir": "annonce une liste sans nommer le lieu"
+  },
+  {
+   "id": "90-lignes-cat1",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "1",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 1
+   },
+   "phrase": "En 1re catégorie, une seule ligne par pêcheur.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Dans les eaux de la 1 catégorie, le nombre de lignes autorisées par pêcheur est limité à un",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-mode_peche-cat1",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Dans les eaux de la 1 catégorie, le nombre de lignes autorisées par pêcheur est limité à un, ainsi que six balances et la vermée."
+   }
+  },
+  {
+   "id": "90-lignes-cat2",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 4
+   },
+   "phrase": "En 2e catégorie, quatre lignes par pêcheur au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Dans les eaux de la 2° catégorie, le nombre de lignes autorisées par pêcheur est limité à quatre",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-mode_peche-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Dans les eaux de la 2° catégorie, le nombre de lignes autorisées par pêcheur est limité à quatre, ainsi que six balances, la vermée"
+   }
+  },
+  {
+   "id": "90-balances-cat2",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Six balances autorisées."
+   },
+   "phrase": "En 2e catégorie, six balances au maximum.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "quatre, ainsi que six balances, la vermée",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-mode_peche-bouteille-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "l'emploi de la bouteille, de la carafe en verre et du baril pour la pêche des vairons et autres poissons, d'une capacité de 2 litres maximum"
+   }
+  },
+  {
+   "id": "90-vermee-cat2",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Vermée autorisée."
+   },
+   "phrase": "En 2e catégorie, la vermée est autorisée.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "quatre, ainsi que six balances, la vermée",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-mode_peche-bouteille-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "l'emploi de la bouteille, de la carafe en verre et du baril pour la pêche des vairons et autres poissons, d'une capacité de 2 litres maximum"
+   }
+  },
+  {
+   "id": "90-bouteille-carafe-baril-cat2",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Bouteille, carafe en verre et baril de 2 litres maximum autorisés pour la pêche des vairons et autres poissons."
+   },
+   "phrase": "En 2e catégorie, bouteille, carafe en verre ou baril de 2 litres au plus pour pêcher les vairons.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "l'emploi de la bouteille, de la carafe en verre et du baril pour la pêche des vairons et autres poissons, d'une capacité de 2 litres maximum.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-mode_peche-bouteille-cat2",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "l'emploi de la bouteille, de la carafe en verre et du baril pour la pêche des vairons et autres poissons, d'une capacité de 2 litres maximum"
+   }
+  },
+  {
+   "id": "90-vif-interdit-cat2-fermeture-brochet",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-25",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Du dernier dimanche de janvier au dernier samedi d'avril exclus : la pêche au vif interdite, sauf mouche artificielle."
+   },
+   "phrase": "En 2e catégorie, du 25 janvier au 24 avril 2026 : la pêche au vif est interdite (la mouche artificielle reste permise).",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "pendant la période du dernier dimanche de janvier au dernier samedi d'avril exclus, la pêche au vif, au poisson mort ou artificiel, à la cuillère et autres leurres",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2151-interdit-vif-fermeture",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "la pêche au vif, au poisson mort ou artificiel, à la cuillère et autres leurres susceptible de capturer le brochet de manière non accidentelle, est interdite"
+   }
+  },
+  {
+   "id": "90-poisson-mort-interdit-cat2-fermeture-brochet",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-25",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Du dernier dimanche de janvier au dernier samedi d'avril exclus : la pêche au poisson mort interdite, sauf mouche artificielle."
+   },
+   "phrase": "En 2e catégorie, du 25 janvier au 24 avril 2026 : la pêche au poisson mort est interdite (la mouche artificielle reste permise).",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "pendant la période du dernier dimanche de janvier au dernier samedi d'avril exclus, la pêche au vif, au poisson mort ou artificiel, à la cuillère et autres leurres",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2151-interdit-vif-fermeture",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "la pêche au vif, au poisson mort ou artificiel, à la cuillère et autres leurres susceptible de capturer le brochet de manière non accidentelle, est interdite"
+   }
+  },
+  {
+   "id": "90-poisson-artificiel-interdit-cat2-fermeture-brochet",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-25",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Du dernier dimanche de janvier au dernier samedi d'avril exclus : la pêche au poisson artificiel interdite, sauf mouche artificielle."
+   },
+   "phrase": "En 2e catégorie, du 25 janvier au 24 avril 2026 : la pêche au poisson artificiel est interdite (la mouche artificielle reste permise).",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "pendant la période du dernier dimanche de janvier au dernier samedi d'avril exclus, la pêche au vif, au poisson mort ou artificiel, à la cuillère et autres leurres",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2151-interdit-vif-fermeture",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "la pêche au vif, au poisson mort ou artificiel, à la cuillère et autres leurres susceptible de capturer le brochet de manière non accidentelle, est interdite"
+   }
+  },
+  {
+   "id": "90-cuillere-leurres-interdit-cat2-fermeture-brochet",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": null,
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": "2026-01-25",
+   "au": "2026-04-24",
+   "valeur": {
+    "texte": "Du dernier dimanche de janvier au dernier samedi d'avril exclus : la pêche à la cuillère et aux autres leurres susceptibles de capturer le brochet de manière non accidentelle interdite, sauf mouche artificielle."
+   },
+   "phrase": "En 2e catégorie, du 25 janvier au 24 avril 2026 : la pêche à la cuillère et aux autres leurres susceptibles de capturer le brochet de manière non accidentelle est interdite (la mouche artificielle reste permise).",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "pendant la période du dernier dimanche de janvier au dernier samedi d'avril exclus, la pêche au vif, au poisson mort ou artificiel, à la cuillère et autres leurres",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-2151-interdit-vif-fermeture",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "la pêche au vif, au poisson mort ou artificiel, à la cuillère et autres leurres susceptible de capturer le brochet de manière non accidentelle, est interdite"
+   }
+  },
+  {
+   "id": "90-vif-interdit-bourbeuse-bourogne",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Bourbeuse (Bourogne) : de la ligne électrique traversant la rivière et proche de la station d'épuration jusqu'à la passerelle aluminium de la piste cyclable",
+    "plan_eau": null,
+    "cours_eau": "Bourbeuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche au vif interdite toute l'année."
+   },
+   "phrase": "Sur ce parcours de la Bourbeuse, la pêche au vif est interdite toute l'année.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "la pêche au vif est interdite toute l'année;",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-interdit-vif-bourbeuse-bourogne",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "la pêche au vif est interdite toute l'année"
+   }
+  },
+  {
+   "id": "90-hamecons-sans-ardillon-bourbeuse-bourogne",
+   "type": "mode_peche",
+   "especes": [],
+   "categorie": "2",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Bourbeuse (Bourogne) : de la ligne électrique traversant la rivière et proche de la station d'épuration jusqu'à la passerelle aluminium de la piste cyclable",
+    "plan_eau": null,
+    "cours_eau": "Bourbeuse"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Seul l'emploi d'hameçons sans ardillon est autorisé."
+   },
+   "phrase": "Sur ce parcours de la Bourbeuse, uniquement des hameçons sans ardillon.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "seul l'emploi d'hameçons sans ardillon est autorisé.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-mode_peche-sans-ardillon-bourbeuse-bourogne",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "seul l'emploi d'hameçons sans ardillon est autorisé"
+   }
+  },
+  {
+   "id": "90-reserve-savoureuse",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Savoureuse (Sermamagny) : du pont de la RD 465 à la confluence avec le Verboté",
+    "plan_eau": null,
+    "cours_eau": "Savoureuse"
+   },
+   "du": null,
+   "au": "2027-12-31",
+   "valeur": {
+    "texte": "Toute pêche interdite à quelque époque que ce soit, jusqu'au 31 décembre 2027."
+   },
+   "phrase": "Réserve de pêche sur ce tronçon (Savoureuse) : toute pêche interdite jusqu'au 31 décembre 2027.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 12",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau.",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-reserve-savoureuse",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 12",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau."
+   }
+  },
+  {
+   "id": "90-reserve-coeuvatte",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Coeuvatte (Courcelles) : de la frontière suisse à la limite communale avec Florimont",
+    "plan_eau": null,
+    "cours_eau": "Coeuvatte"
+   },
+   "du": null,
+   "au": "2027-12-31",
+   "valeur": {
+    "texte": "Toute pêche interdite à quelque époque que ce soit, jusqu'au 31 décembre 2027."
+   },
+   "phrase": "Réserve de pêche sur ce tronçon (Coeuvatte) : toute pêche interdite jusqu'au 31 décembre 2027.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 12",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau.",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-reserve-coeuvatte",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 12",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau."
+   }
+  },
+  {
+   "id": "90-reserve-vendeline",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Vendeline (Réchésy) : de la frontière suisse au pont de l'ancien Moulin",
+    "plan_eau": null,
+    "cours_eau": "Vendeline"
+   },
+   "du": null,
+   "au": "2027-12-31",
+   "valeur": {
+    "texte": "Toute pêche interdite à quelque époque que ce soit, jusqu'au 31 décembre 2027."
+   },
+   "phrase": "Réserve de pêche sur ce tronçon (Vendeline) : toute pêche interdite jusqu'au 31 décembre 2027.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 12",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau.",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-reserve-vendeline",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 12",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau."
+   }
+  },
+  {
+   "id": "90-reserve-saint-nicolas",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Saint Nicolas (Angeot) : de la limite communale de Lachapelle-sous-Rougemont à la limite communale de Vauthiermont",
+    "plan_eau": null,
+    "cours_eau": "Saint Nicolas"
+   },
+   "du": null,
+   "au": "2027-12-31",
+   "valeur": {
+    "texte": "Toute pêche interdite à quelque époque que ce soit, jusqu'au 31 décembre 2027."
+   },
+   "phrase": "Réserve de pêche sur ce tronçon (Saint Nicolas) : toute pêche interdite jusqu'au 31 décembre 2027.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 12",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau.",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-reserve-saint-nicolas",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 12",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau."
+   }
+  },
+  {
+   "id": "90-reserve-rhome",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Rhôme (Auxelles-Haut) : du lieu-dit « Rière les scies » au lieu-dit « le village »",
+    "plan_eau": null,
+    "cours_eau": "Rhôme"
+   },
+   "du": null,
+   "au": "2027-12-31",
+   "valeur": {
+    "texte": "Toute pêche interdite à quelque époque que ce soit, jusqu'au 31 décembre 2027."
+   },
+   "phrase": "Réserve de pêche sur ce tronçon (Rhôme) : toute pêche interdite jusqu'au 31 décembre 2027.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 12",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau.",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-reserve-rhome",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 12",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau."
+   }
+  },
+  {
+   "id": "90-reserve-maratte",
+   "type": "reserve",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "troncon",
+    "code": "90",
+    "lieu": "Maratte (Petitmagny, Etueffont) : de sa source à Petitmagny à la confluence avec la Madeleine à Etueffont",
+    "plan_eau": null,
+    "cours_eau": "Maratte"
+   },
+   "du": null,
+   "au": "2027-12-31",
+   "valeur": {
+    "texte": "Toute pêche interdite à quelque époque que ce soit, jusqu'au 31 décembre 2027."
+   },
+   "phrase": "Réserve de pêche sur ce tronçon (Maratte) : toute pêche interdite jusqu'au 31 décembre 2027.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 12",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau.",
+   "statut": "brouillon",
+   "expire_le": "2027-12-31",
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-reserve-maratte",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 12",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Toute pêche est interdite à quelque époque que ce soit dans ces parties de cours d'eau."
+   }
+  },
+  {
+   "id": "90-domaine-public-rives-portuaires",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": "Domaine public de l'État",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toute pêche interdite depuis les rives équipées d'installations portuaires de commerce ou de plaisance."
+   },
+   "phrase": "Sur le domaine public de l'État, pas de pêche depuis les rives équipées d'installations portuaires.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 13",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "toute pêche est rigoureusement interdite :  + depuis les rives dès lors que celles-ci sont équipées d'installations portuaires de commerce ou de",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-interdit-rives-portuaires",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 13",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "depuis les rives dès lors que celles-ci sont équipées d'installations portuaires de commerce ou de plaisance"
+   }
+  },
+  {
+   "id": "90-domaine-public-barrages-ecluses-50m",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": "Domaine public de l'État",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Toute pêche interdite à partir des barrages et des écluses et sur 50 m en aval, sauf à la ligne."
+   },
+   "phrase": "Sur le domaine public de l'État, pas de pêche depuis les barrages et écluses ni sur 50 m en aval, sauf à la ligne.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 13",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "à partir des barrages et des écluses ainsi que sur une distance de 50 m en aval de l'extrémité de ceux-ci, à l'exception de la pêche à l'aide d'une ligne.",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-interdit-rives-portuaires",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 13",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "depuis les rives dès lors que celles-ci sont équipées d'installations portuaires de commerce ou de plaisance"
+   }
+  },
+  {
+   "id": "90-domaine-public-engins-filets-200m",
+   "type": "interdit",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "departement",
+    "code": "90",
+    "lieu": "Domaine public de l'État",
+    "plan_eau": null,
+    "cours_eau": null
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Pêche aux engins et aux filets interdite sur 200 m en aval de l'extrémité de tout barrage et de toute écluse."
+   },
+   "phrase": "Sur le domaine public de l'État, pas d'engins ni de filets sur 200 m en aval d'un barrage ou d'une écluse.",
+   "source": {
+    "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 13 (R.436-71)",
+    "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2025-12-22"
+   },
+   "citation": "la pêche aux engins et aux filets est interdite sur une distance de 200 m en aval de l'extrémité de tout barrage et de toute écluse",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-interdit-rives-portuaires",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 13",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "depuis les rives dès lors que celles-ci sont équipées d'installations portuaires de commerce ou de plaisance"
+   }
+  },
+  {
+   "id": "90-pcb-allaine",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "90",
+    "lieu": "Allaine (de la frontière franco-suisse) : sur tout son cours, canaux et plans d'eau en dérivation",
+    "plan_eau": null,
+    "cours_eau": "Allaine"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation humaine et animale et cession de tous les poissons interdites (PCB), tant que l'absence de risque n'est pas prouvée."
+   },
+   "phrase": "Ne mange pas et ne donne pas les poissons de l'Allaine (PCB).",
+   "source": {
+    "texte": "Arrêté interpréfectoral n°2009-0709-03268, article 1",
+    "url": "https://www.rhone-mediterranee.eaufrance.fr/sites/sierm/files/content/migrate_documents/2009-09-07_AIP25-90_allan-allaine.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2009-09-07"
+   },
+   "citation": "toutes les espèces de poissons pêchés dans les rivières sur tout leur cours",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-consommation-allaine",
+    "source": {
+     "texte": "Arrêté interpréfectoral n°2009-0709-03268 (Allan et Allaine), art. 1 et 2",
+     "url": "https://www.rhone-mediterranee.eaufrance.fr/sites/sierm/files/content/migrate_documents/2009-09-07_AIP25-90_allan-allaine.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2009-09-07"
+    },
+    "citation": "Allaine depuis la frontière Franco-Suisse"
+   }
+  },
+  {
+   "id": "90-pcb-allan",
+   "type": "consommation",
+   "especes": [],
+   "categorie": "toutes",
+   "portee": {
+    "niveau": "cours_eau",
+    "code": "90",
+    "lieu": "Allan : sur tout son cours, canaux et plans d'eau en dérivation",
+    "plan_eau": null,
+    "cours_eau": "Allan"
+   },
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "Consommation humaine et animale et cession de tous les poissons interdites (PCB), tant que l'absence de risque n'est pas prouvée."
+   },
+   "phrase": "Ne mange pas et ne donne pas les poissons de l'Allan (PCB).",
+   "source": {
+    "texte": "Arrêté interpréfectoral n°2009-0709-03268, article 1",
+    "url": "https://www.rhone-mediterranee.eaufrance.fr/sites/sierm/files/content/migrate_documents/2009-09-07_AIP25-90_allan-allaine.pdf",
+    "lu_le": "2026-10-15",
+    "version": "2009-09-07"
+   },
+   "citation": "toutes les espèces de poissons pêchés dans les rivières sur tout leur cours",
+   "statut": "brouillon",
+   "expire_le": null,
+   "remplace": null,
+   "lecture_b": {
+    "id": "90-toutes-consommation-allan",
+    "source": {
+     "texte": "Arrêté interpréfectoral n°2009-0709-03268 (Allan et Allaine), art. 1 et 2",
+     "url": "https://www.rhone-mediterranee.eaufrance.fr/sites/sierm/files/content/migrate_documents/2009-09-07_AIP25-90_allan-allaine.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2009-09-07"
+    },
+    "citation": "toutes les espèces de poissons pêchés dans les rivières sur tout leur cours"
+   }
+  }
+ ],
+ "desaccords": {
+  "seulement_a": [
+   {
+    "id": "90-brochet-remise-eau-cat2",
+    "type": "remise_eau",
+    "especes": [
+     "2151"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "90",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "En capture accidentelle hors période d'ouverture ou là où le prélèvement est interdit, remise à l'eau immédiate avec le plus grand soin."
+    },
+    "phrase": "Si tu prends le brochet par accident hors période, remets-le à l'eau tout de suite avec soin.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "la remise à l'eau se fera immédiatement avec le plus grand soin.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-sandre-remise-eau-cat2",
+    "type": "remise_eau",
+    "especes": [
+     "2195"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "departement",
+     "code": "90",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "En capture accidentelle hors période d'ouverture ou là où le prélèvement est interdit, remise à l'eau immédiate avec le plus grand soin."
+    },
+    "phrase": "Si tu prends le sandre par accident hors période, remets-le à l'eau tout de suite avec soin.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 3",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "la remise à l'eau se fera immédiatement avec le plus grand soin.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-carpe-nuit-canal-rhone-rhin-cannes",
+    "type": "mode_peche",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Canal du Rhône au Rhin (écluses 3S à 7S) : de l'écluse n°3S à Montreux-Château à l'écluse n°7S à Bourogne, rive droite et rive gauche, 9,37 km",
+     "plan_eau": null,
+     "cours_eau": "Canal du Rhône au Rhin"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 4,
+     "texte": "Carpe de nuit : esches d'origine végétale, bouillettes et pellets, depuis les berges, 4 cannes maximum."
+    },
+    "phrase": "Carpe de nuit sur ce parcours : 4 cannes au maximum, depuis la berge, avec esches végétales, bouillettes ou pellets.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "uniquement à l'aide d'esches d'origine végétale, de bouillettes et de pellets, depuis les berges, et à 4 cannes maximum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-carpe-nuit-canal-rhone-rhin-transport",
+    "type": "transport_vivant",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Canal du Rhône au Rhin (écluses 3S à 7S) : de l'écluse n°3S à Montreux-Château à l'écluse n°7S à Bourogne, rive droite et rive gauche, 9,37 km",
+     "plan_eau": null,
+     "cours_eau": "Canal du Rhône au Rhin"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "De une demi-heure après le coucher du soleil à une demi-heure avant son lever, aucune carpe ne peut être maintenue en captivité ou transportée."
+    },
+    "phrase": "De nuit sur ce parcours, aucune carpe ne peut être gardée en captivité ni transportée.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "capturée par les pêcheurs amateurs aux lignes ne peut être maintenue en captivité ou transportée.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-carpe-nuit-canal-rhone-rhin-autres-especes",
+    "type": "remise_eau",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Canal du Rhône au Rhin (écluses 3S à 7S) : de l'écluse n°3S à Montreux-Château à l'écluse n°7S à Bourogne, rive droite et rive gauche, 9,37 km",
+     "plan_eau": null,
+     "cours_eau": "Canal du Rhône au Rhin"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Les autres espèces capturées sont remises immédiatement à l'eau avec précaution, sauf celles de l'article 5."
+    },
+    "phrase": "Sur ce parcours de carpe de nuit, tout autre poisson est remis tout de suite à l'eau, sauf les espèces envahissantes.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "En cas de capture d'autres espèces de poissons, celles-ci devront être immédiatement remises à l'eau",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-carpe-nuit-bourbeuse-cannes",
+    "type": "mode_peche",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Bourbeuse (Bourogne) : de la ligne électrique proche de la STEP au pont en aluminium de la piste cyclable, rive droite et rive gauche, 1,4 km",
+     "plan_eau": null,
+     "cours_eau": "Bourbeuse"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 4,
+     "texte": "Carpe de nuit : esches d'origine végétale, bouillettes et pellets, depuis les berges, 4 cannes maximum."
+    },
+    "phrase": "Carpe de nuit sur ce parcours : 4 cannes au maximum, depuis la berge, avec esches végétales, bouillettes ou pellets.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "uniquement à l'aide d'esches d'origine végétale, de bouillettes et de pellets, depuis les berges, et à 4 cannes maximum.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-carpe-nuit-bourbeuse-transport",
+    "type": "transport_vivant",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Bourbeuse (Bourogne) : de la ligne électrique proche de la STEP au pont en aluminium de la piste cyclable, rive droite et rive gauche, 1,4 km",
+     "plan_eau": null,
+     "cours_eau": "Bourbeuse"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "De une demi-heure après le coucher du soleil à une demi-heure avant son lever, aucune carpe ne peut être maintenue en captivité ou transportée."
+    },
+    "phrase": "De nuit sur ce parcours, aucune carpe ne peut être gardée en captivité ni transportée.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "capturée par les pêcheurs amateurs aux lignes ne peut être maintenue en captivité ou transportée.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-carpe-nuit-bourbeuse-autres-especes",
+    "type": "remise_eau",
+    "especes": [],
+    "categorie": "2",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Bourbeuse (Bourogne) : de la ligne électrique proche de la STEP au pont en aluminium de la piste cyclable, rive droite et rive gauche, 1,4 km",
+     "plan_eau": null,
+     "cours_eau": "Bourbeuse"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Les autres espèces capturées sont remises immédiatement à l'eau avec précaution, sauf celles de l'article 5."
+    },
+    "phrase": "Sur ce parcours de carpe de nuit, tout autre poisson est remis tout de suite à l'eau, sauf les espèces envahissantes.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "En cas de capture d'autres espèces de poissons, celles-ci devront être immédiatement remises à l'eau",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-truite-fario-taille-min-25-savoureuse",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Savoureuse, ses affluents et sous-affluents : de sa source jusqu'au seuil en bordure de limite communale entre Giromagny, Chaux et Rougegoutte",
+     "plan_eau": null,
+     "cours_eau": "Savoureuse"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 25,
+     "texte": "Valable pour les saisons de pêche 2024, 2025 et 2026."
+    },
+    "phrase": "Sur ce tronçon (Savoureuse), la truite fario se garde à partir de 25 cm (saison 2026).",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 7 II",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Durant les saisons de pêche 2024, 2025 et 2026, la taille minimum de capture de la truite\nfario est fixée à 25 cm",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "90-truite-fario-carnet-savoureuse",
+    "type": "autre",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Savoureuse, ses affluents et sous-affluents : de sa source jusqu'au seuil en bordure de limite communale entre Giromagny, Chaux et Rougegoutte",
+     "plan_eau": null,
+     "cours_eau": "Savoureuse"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Carnet individuel de suivi des captures de truites fario obligatoire, coté par l'AAPPMA de Lepuix ou de Giromagny ; lieu, date, taille et destination notés après chaque capture ; envoi à la fédération avant le 30 septembre."
+    },
+    "phrase": "Sur ce tronçon (Savoureuse), tu dois avoir ton carnet de captures de truite fario et le remplir après chaque capture.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 10",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "tout pêcheur en situation de\npêche, doit porter sur lui un carnet individuel de suivi des captures",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-truite-fario-taille-min-25-rhome",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Rhôme, ses affluents et sous-affluents : de sa source jusqu'à l'étang Gauthier (Lachapelle-sous-Chaux)",
+     "plan_eau": null,
+     "cours_eau": "Rhôme"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 25,
+     "texte": "Valable pour les saisons de pêche 2024, 2025 et 2026."
+    },
+    "phrase": "Sur ce tronçon (Rhôme), la truite fario se garde à partir de 25 cm (saison 2026).",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 7 II",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Durant les saisons de pêche 2024, 2025 et 2026, la taille minimum de capture de la truite\nfario est fixée à 25 cm",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "90-truite-fario-taille-min-25-rosemontoise",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Rosemontoise, ses affluents et sous-affluents : de sa source jusqu'à la limite communale entre Rougegoutte et Chaux, au droit de la prise d'eau des bassins de rétention de crues",
+     "plan_eau": null,
+     "cours_eau": "Rosemontoise"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 25,
+     "texte": "Valable pour les saisons de pêche 2024, 2025 et 2026."
+    },
+    "phrase": "Sur ce tronçon (Rosemontoise), la truite fario se garde à partir de 25 cm (saison 2026).",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 7 II",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Durant les saisons de pêche 2024, 2025 et 2026, la taille minimum de capture de la truite\nfario est fixée à 25 cm",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "90-truite-fario-carnet-rosemontoise",
+    "type": "autre",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Rosemontoise, ses affluents et sous-affluents : de sa source jusqu'à la limite communale entre Rougegoutte et Chaux, au droit de la prise d'eau des bassins de rétention de crues",
+     "plan_eau": null,
+     "cours_eau": "Rosemontoise"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Carnet individuel de suivi des captures de truites fario obligatoire, coté par l'AAPPMA de Lepuix ou de Giromagny ; lieu, date, taille et destination notés après chaque capture ; envoi à la fédération avant le 30 septembre."
+    },
+    "phrase": "Sur ce tronçon (Rosemontoise), tu dois avoir ton carnet de captures de truite fario et le remplir après chaque capture.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 10",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "tout pêcheur en situation de\npêche, doit porter sur lui un carnet individuel de suivi des captures",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-truite-fario-taille-min-25-madeleine",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Madeleine, ses affluents et sous-affluents : de sa source jusqu'à la limite communale entre Etueffont et Anjoutey",
+     "plan_eau": null,
+     "cours_eau": "Madeleine"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 25,
+     "texte": "Valable pour les saisons de pêche 2024, 2025 et 2026."
+    },
+    "phrase": "Sur ce tronçon (Madeleine), la truite fario se garde à partir de 25 cm (saison 2026).",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 7 II",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Durant les saisons de pêche 2024, 2025 et 2026, la taille minimum de capture de la truite\nfario est fixée à 25 cm",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "90-truite-fario-carnet-madeleine",
+    "type": "autre",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Madeleine, ses affluents et sous-affluents : de sa source jusqu'à la limite communale entre Etueffont et Anjoutey",
+     "plan_eau": null,
+     "cours_eau": "Madeleine"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Carnet individuel de suivi des captures de truites fario obligatoire, coté par l'AAPPMA de Lepuix ou de Giromagny ; lieu, date, taille et destination notés après chaque capture ; envoi à la fédération avant le 30 septembre."
+    },
+    "phrase": "Sur ce tronçon (Madeleine), tu dois avoir ton carnet de captures de truite fario et le remplir après chaque capture.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 10",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "tout pêcheur en situation de\npêche, doit porter sur lui un carnet individuel de suivi des captures",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-truite-fario-taille-min-25-saint-nicolas",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Saint-Nicolas : de sa source jusqu'à la confluence avec la goutte du champ Rollin, limite communale entre Petitefontaine et Lachapelle-sous-Rougemont",
+     "plan_eau": null,
+     "cours_eau": "Saint-Nicolas"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "cm": 25,
+     "texte": "Valable pour les saisons de pêche 2024, 2025 et 2026."
+    },
+    "phrase": "Sur ce tronçon (Saint-Nicolas), la truite fario se garde à partir de 25 cm (saison 2026).",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 7 II",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Durant les saisons de pêche 2024, 2025 et 2026, la taille minimum de capture de la truite\nfario est fixée à 25 cm",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "90-truite-fario-carnet-saint-nicolas",
+    "type": "autre",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Saint-Nicolas : de sa source jusqu'à la confluence avec la goutte du champ Rollin, limite communale entre Petitefontaine et Lachapelle-sous-Rougemont",
+     "plan_eau": null,
+     "cours_eau": "Saint-Nicolas"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Carnet individuel de suivi des captures de truites fario obligatoire, coté par l'AAPPMA de Lepuix ou de Giromagny ; lieu, date, taille et destination notés après chaque capture ; envoi à la fédération avant le 30 septembre."
+    },
+    "phrase": "Sur ce tronçon (Saint-Nicolas), tu dois avoir ton carnet de captures de truite fario et le remplir après chaque capture.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 10",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "tout pêcheur en situation de\npêche, doit porter sur lui un carnet individuel de suivi des captures",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-balances-cat1",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "90",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Six balances autorisées."
+    },
+    "phrase": "En 1re catégorie, six balances au maximum.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "ainsi que six balances et la vermée",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-vermee-cat1",
+    "type": "mode_peche",
+    "especes": [],
+    "categorie": "1",
+    "portee": {
+     "niveau": "departement",
+     "code": "90",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Vermée autorisée."
+    },
+    "phrase": "En 1re catégorie, la vermée est autorisée.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007, article 9",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "ainsi que six balances et la vermée",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-aimant-interdit-departement",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "90",
+     "lieu": "Tous les cours d'eau et plans d'eau du département",
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche à l'aimant interdite."
+    },
+    "phrase": "La pêche à l'aimant est interdite dans tous les cours d'eau et plans d'eau du département.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2021-10-12-00001, article 1",
+     "url": "http://fontenelle.fr/wp-content/uploads/2024/05/interdiction_peche-aimant-dpt90.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2021-10-12"
+    },
+    "citation": "La pratique de la pêche à l'aimant dans tous les cours d'eau et plans d'eau du département du Territoire de Belfort est interdite.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-pcb-savoureuse",
+    "type": "consommation",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Savoureuse (Sermamagny, Belfort, Valdoie, Danjoutin, Bermont et autres communes riveraines) : de la confluence avec le Verboté à la confluence avec l'Allan",
+     "plan_eau": null,
+     "cours_eau": "Savoureuse"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Consommation humaine et animale et cession de tous les poissons interdites (PCB), tant que l'absence de risque n'est pas prouvée."
+    },
+    "phrase": "Ne mange pas et ne donne pas les poissons de la Savoureuse en aval du Verboté (PCB).",
+    "source": {
+     "texte": "Arrêté interpréfectoral n°2009-0709-03272, article 1",
+     "url": "https://www.rhone-mediterranee.eaufrance.fr/sites/sierm/files/content/migrate_documents/2009-09-07_AIP25-90_savoureuse.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2009-09-07"
+    },
+    "citation": "toutes les espèces de poissons pêchés dans la rivière la Savoureuse depuis la confluence avec le Verbotet jusqu’à la confluence avec l’Allan",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   }
+  ],
+  "seulement_b": [
+   {
+    "id": "90-2110-remise_eau-carpe-nuit-canal",
+    "type": "remise_eau",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Canal du Rhône au Rhin (écluses 3S à 7S) (Montreux-Château, Bourogne) : de l'écluse n°3S à Montreux-Château à l'écluse n°7S à Bourogne, rives droite et gauche, 9,37 km",
+     "plan_eau": null,
+     "cours_eau": "Canal du Rhône au Rhin"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "De une demi-heure après le coucher à une demi-heure avant le lever du soleil, aucune carpe ne peut être maintenue en captivité ni transportée."
+    },
+    "phrase": "La nuit, une carpe capturée ne peut être ni gardée en captivité ni transportée.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "ne peut être maintenue en captivité ou transportée",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-2110-remise_eau-carpe-nuit-bourbeuse",
+    "type": "remise_eau",
+    "especes": [
+     "2110"
+    ],
+    "categorie": "2",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Bourbeuse (Bourogne) : de la ligne électrique proche de la STEP au pont en aluminium de la piste cyclable, rives droite et gauche, 1,4 km",
+     "plan_eau": null,
+     "cours_eau": "Bourbeuse"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "De une demi-heure après le coucher à une demi-heure avant le lever du soleil, aucune carpe ne peut être maintenue en captivité ni transportée."
+    },
+    "phrase": "La nuit, une carpe capturée ne peut être ni gardée en captivité ni transportée.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 6",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "ne peut être maintenue en captivité ou transportée",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-2221-taille_min-savoureuse",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Savoureuse (Giromagny, Chaux, Rougegoutte) : de sa source jusqu'au seuil en bordure de limite communale entre Giromagny, Chaux et Rougegoutte, avec ses affluents et sous-affluents",
+     "plan_eau": null,
+     "cours_eau": "Savoureuse"
+    },
+    "du": null,
+    "au": "2026-12-31",
+    "valeur": {
+     "cm": 25,
+     "texte": "Saisons 2024, 2025 et 2026."
+    },
+    "phrase": "Truite fario : 25 cm minimum sur Savoureuse (tête de bassin), saisons 2024 à 2026.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 7 II",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Durant les saisons de pêche 2024, 2025 et 2026, la taille minimum de capture de la truite fario est fixée à 25 cm",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "90-2221-taille_min-rhome",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Rhôme (Lachapelle-sous-Chaux) : de sa source jusqu'à l'étang Gauthier à Lachapelle-sous-Chaux, avec ses affluents et sous-affluents",
+     "plan_eau": null,
+     "cours_eau": "Rhôme"
+    },
+    "du": null,
+    "au": "2026-12-31",
+    "valeur": {
+     "cm": 25,
+     "texte": "Saisons 2024, 2025 et 2026."
+    },
+    "phrase": "Truite fario : 25 cm minimum sur Rhôme (tête de bassin), saisons 2024 à 2026.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 7 II",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Durant les saisons de pêche 2024, 2025 et 2026, la taille minimum de capture de la truite fario est fixée à 25 cm",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "90-2221-taille_min-rosemontoise",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Rosemontoise (Rougegoutte, Chaux) : de sa source jusqu'à la limite communale entre Rougegoutte et Chaux au droit de la prise d'eau des bassins de rétention de crues, avec ses affluents et sous-affluents",
+     "plan_eau": null,
+     "cours_eau": "Rosemontoise"
+    },
+    "du": null,
+    "au": "2026-12-31",
+    "valeur": {
+     "cm": 25,
+     "texte": "Saisons 2024, 2025 et 2026."
+    },
+    "phrase": "Truite fario : 25 cm minimum sur Rosemontoise (tête de bassin), saisons 2024 à 2026.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 7 II",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Durant les saisons de pêche 2024, 2025 et 2026, la taille minimum de capture de la truite fario est fixée à 25 cm",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "90-2221-taille_min-madeleine",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Madeleine (Etueffont, Anjoutey) : de sa source jusqu'à la limite communale entre Etueffont et Anjoutey, avec ses affluents et sous-affluents",
+     "plan_eau": null,
+     "cours_eau": "Madeleine"
+    },
+    "du": null,
+    "au": "2026-12-31",
+    "valeur": {
+     "cm": 25,
+     "texte": "Saisons 2024, 2025 et 2026."
+    },
+    "phrase": "Truite fario : 25 cm minimum sur Madeleine (tête de bassin), saisons 2024 à 2026.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 7 II",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Durant les saisons de pêche 2024, 2025 et 2026, la taille minimum de capture de la truite fario est fixée à 25 cm",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "90-2221-taille_min-saint-nicolas",
+    "type": "taille_min",
+    "especes": [
+     "2221"
+    ],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "troncon",
+     "code": "90",
+     "lieu": "Saint-Nicolas (Petitefontaine, Lachapelle-sous-Rougemont) : de sa source jusqu'à la confluence avec la goutte du champ Rollin à la limite communale entre Petitefontaine et Lachapelle-sous-Rougemont",
+     "plan_eau": null,
+     "cours_eau": "Saint-Nicolas"
+    },
+    "du": null,
+    "au": "2026-12-31",
+    "valeur": {
+     "cm": 25,
+     "texte": "Saisons 2024, 2025 et 2026."
+    },
+    "phrase": "Truite fario : 25 cm minimum sur Saint-Nicolas (tête de bassin), saisons 2024 à 2026.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2025-12-22-00007 réglementaire permanent, art. 7 II",
+     "url": "https://www.fede-peche90.fr/wp-content/uploads/2026/01/20251222_ARP-2026_signe-raa.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2025-12-22"
+    },
+    "citation": "Durant les saisons de pêche 2024, 2025 et 2026, la taille minimum de capture de la truite fario est fixée à 25 cm",
+    "statut": "brouillon",
+    "expire_le": "2026-12-31",
+    "remplace": null
+   },
+   {
+    "id": "90-toutes-interdit-aimant-departement",
+    "type": "interdit",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "departement",
+     "code": "90",
+     "lieu": null,
+     "plan_eau": null,
+     "cours_eau": null
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Pêche à l'aimant interdite dans tous les cours d'eau et plans d'eau du département."
+    },
+    "phrase": "La pêche à l'aimant est interdite dans tous les cours d'eau et plans d'eau du département.",
+    "source": {
+     "texte": "Arrêté préfectoral n°90-2021-10-12-00001 (pêche à l'aimant), art. 1",
+     "url": "http://fontenelle.fr/wp-content/uploads/2024/05/interdiction_peche-aimant-dpt90.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2021-10-12"
+    },
+    "citation": "La pratique de la pêche à l'aimant dans tous les cours d'eau et plans d'eau du département du Territoire de Belfort est interdite.",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   },
+   {
+    "id": "90-toutes-consommation-allaine",
+    "type": "consommation",
+    "especes": [],
+    "categorie": "toutes",
+    "portee": {
+     "niveau": "cours_eau",
+     "code": "90",
+     "lieu": "Allaine (Bourogne, Delle, Grandvillars, Joncherey, Meziré, Morvillars, Thiancourt) : sur tout son cours depuis la frontière franco-suisse, avec les canaux et plans d'eau en dérivation",
+     "plan_eau": null,
+     "cours_eau": "Allaine"
+    },
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "Consommation humaine et animale et cession de tous les poissons interdites (PCB), tant que l'absence de risque n'est pas prouvée."
+    },
+    "phrase": "Allaine : ne mange pas les poissons et ne les donne pas, ils sont contaminés aux PCB.",
+    "source": {
+     "texte": "Arrêté interpréfectoral n°2009-0709-03268 (Allan et Allaine), art. 1 et 2",
+     "url": "https://www.rhone-mediterranee.eaufrance.fr/sites/sierm/files/content/migrate_documents/2009-09-07_AIP25-90_allan-allaine.pdf",
+     "lu_le": "2026-10-15",
+     "version": "2009-09-07"
+    },
+    "citation": "Allaine depuis la frontière Franco-Suisse",
+    "statut": "brouillon",
+    "expire_le": null,
+    "remplace": null
+   }
+  ]
+ },
+ "paires_categorie": []
+}
