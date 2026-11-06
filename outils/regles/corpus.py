@@ -4,7 +4,7 @@ Usage : python -I outils/regles/corpus.py <code>
 Lit corpus/<code>/sources.json, une liste d'objets :
   {"fichier": "ap-2026-002.pdf", "titre": "...", "url": "https://...", "signe_le": "AAAA-MM-JJ ou null", "etat": "en vigueur, permanent"}
 Pour chaque source : télécharge le fichier s'il manque (curl), extrait le texte à côté (.txt) par la couche texte du PDF,
-sinon par l'OCR en français de Windows (ocr.ps1), et écrit corpus/<code>/manifeste.json (titre, URL, signature,
+sinon par l'OCR français de Tesseract (PC ou Mac, deux à la fois au plus), à défaut celui de Windows (ocr.ps1), et écrit corpus/<code>/manifeste.json (titre, URL, signature,
 téléchargement, SHA-256). Relançable : ce qui est déjà téléchargé ou extrait n'est pas refait.
 """
 import datetime
@@ -13,6 +13,7 @@ import html
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -37,20 +38,84 @@ def telecharger(url, chemin):
         raise RuntimeError(f"téléchargement refusé ({r.stdout or r.stderr.strip()}) : {url}")
 
 
+TESSERACT_EXE = os.environ.get("TESSERACT_EXE") or shutil.which("tesseract") or r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+TESSDATA = os.environ.get("TESSDATA_PREFIX", r"C:\Users\Adem\tessdata")
+
+
+def tesseract_dispo():
+    if not os.path.exists(TESSERACT_EXE):
+        return False
+    if os.path.exists(os.path.join(TESSDATA, "fra.traineddata")):
+        return True
+    # Mac (Homebrew, tesseract-lang) : les langues sont dans le dossier de Tesseract, sans TESSDATA_PREFIX.
+    r = subprocess.run([TESSERACT_EXE, "--list-langs"], capture_output=True, text=True)
+    return "fra" in r.stdout.split()
+
+
+class UnSeulOcr:
+    """Verrou entre processus : au plus OCR_MAX OCR à la fois sur la machine (Mac de 8 Go partagé). Sans effet sous Windows."""
+    def __enter__(self):
+        try:
+            import fcntl
+        except ImportError:
+            self.f = None
+            return self
+        import time
+        while True:  # OCR_MAX places (2 par défaut) : on prend la première libre
+            for n in range(int(os.environ.get("OCR_MAX", "2"))):
+                self.f = open(os.path.join(tempfile.gettempdir(), f"regles-ocr-{n}.lock"), "w")
+                try:
+                    fcntl.flock(self.f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                    return self
+                except OSError:
+                    self.f.close()
+            time.sleep(2)
+
+    def __exit__(self, *_):
+        if self.f:
+            self.f.close()
+
+
+# Tesseract en un seul fil : ses fils OpenMP tournent à vide quand la machine est chargée (mesuré dans le cloud
+# le 15 oct. : une page en 1,6 s au lieu de plus de 8 min).
+os.environ.setdefault("OMP_THREAD_LIMIT", "1")
+
+
+def ocr_tesseract(png):
+    """OCR français de Tesseract (installé sur le PC d'Adem le 15 oct.). Mesuré plus propre que celui de Windows
+    sur un scan dégradé : arrêté 2025-0988 du 93, 2 mots mêlant chiffres et lettres contre 6 ; sur l'AP de l'Eure
+    les deux moteurs concordent à 97,8 % des mots."""
+    r = subprocess.run([TESSERACT_EXE, png, "stdout", "-l", "fra", "--psm", "6"], capture_output=True,
+                       env={**os.environ, "TESSDATA_PREFIX": TESSDATA} if os.path.isdir(TESSDATA) else None, check=True)
+    return r.stdout.decode("utf-8", "replace")
+
+
 def texte_pdf(chemin, sortie):
     import pymupdf
     doc = pymupdf.open(chemin)
     pages = [p.get_text() for p in doc]
     # Page par page : un PDF mêle parfois pages scannées et pages à couche texte.
     scans = [i for i, t in enumerate(pages) if len(t.strip()) < MIN_CARS_PAGE]
+    moteur = "ocr-windows-fr"
     if scans:
         with tempfile.TemporaryDirectory() as tmp:
+            pngs = {}
             for i in scans:
-                doc[i].get_pixmap(dpi=300).save(os.path.join(tmp, f"page-p{i + 1:03d}.png"))
-            ocr = os.path.join(tmp, "ocr.txt")
-            subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", os.path.join(ICI, "ocr.ps1"), tmp, ocr],
-                           check=True, capture_output=True)
-            blocs = re.split(r"^===== page \d+\r?\n", open(ocr, encoding="utf-8-sig").read(), flags=re.M)[1:]
+                pngs[i] = os.path.join(tmp, f"page-p{i + 1:03d}.png")
+                doc[i].get_pixmap(dpi=300).save(pngs[i])
+            blocs = None
+            if tesseract_dispo():
+                try:
+                    with UnSeulOcr():
+                        blocs = [ocr_tesseract(pngs[i]) for i in scans]
+                    moteur = "ocr-tesseract-fra"
+                except (subprocess.CalledProcessError, OSError):
+                    blocs = None  # repli sur l'OCR de Windows
+            if blocs is None:
+                ocr = os.path.join(tmp, "ocr.txt")
+                subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", os.path.join(ICI, "ocr.ps1"), tmp, ocr],
+                               check=True, capture_output=True)
+                blocs = re.split(r"^===== page \d+\r?\n", open(ocr, encoding="utf-8-sig").read(), flags=re.M)[1:]
         for i, t in zip(scans, blocs):
             if len(t.strip()) > len(pages[i].strip()):
                 pages[i] = t
@@ -59,7 +124,7 @@ def texte_pdf(chemin, sortie):
             f.write(f"===== page {i:02d}\n{t}\n")
     if not scans:
         return "couche-texte"
-    return "ocr-windows-fr" if len(scans) == len(pages) else f"mixte : OCR des pages {', '.join(str(i + 1) for i in scans)}"
+    return moteur if len(scans) == len(pages) else f"mixte : OCR ({moteur}) des pages {', '.join(str(i + 1) for i in scans)}"
 
 
 def texte_html(chemin, sortie):
