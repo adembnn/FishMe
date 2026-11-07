@@ -254,7 +254,7 @@ struct CarteUSTests {
         var textes = TextesCarteUS.tous
         for f in fiches { textes += f.textes }
         for texte in textes {
-            #expect(motInterdit(dans: texte) == nil, "mot interdit dans : " + texte)
+            #expect(motInterdit(dans: texte) == nil, Comment(rawValue: "mot interdit dans : " + texte))
         }
         for m in [MessageSansDonneesUS.pour(etat: "TX", agences: agences), MessageSansDonneesUS.pour(etat: nil, agences: agences)] {
             #expect(motInterdit(dans: m.texte) == nil)
@@ -271,7 +271,7 @@ struct CarteUSTests {
             guard let url = cas as? URL, url.pathExtension == "swift" else { continue }
             let texte = try String(contentsOf: url, encoding: .utf8)
             lus += 1
-            #expect(motInterdit(dans: texte) == nil, "mot interdit dans " + url.lastPathComponent)
+            #expect(motInterdit(dans: texte) == nil, Comment(rawValue: "mot interdit dans " + url.lastPathComponent))
         }
         #expect(lus >= 5)
     }
