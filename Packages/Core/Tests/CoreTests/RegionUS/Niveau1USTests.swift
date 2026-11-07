@@ -121,6 +121,6 @@ struct Niveau1USTests {
         // Jamais « interdit » sans règle lue.
         #expect(mi.verdict != .interdit)
         // Les règles chargées continuent de jouer.
-        #expect(ev.evaluer(QuestionUS(espece: "walleye", juridiction: usWI, jour: usEte, taille: .pouces(10))).verdict == .interdit)
+        #expect(ev.evaluer(QuestionUS(espece: "walleye", juridiction: usWI, jour: usJour(2026, 11, 20), taille: .pouces(10))).verdict == .interdit)
     }
 }

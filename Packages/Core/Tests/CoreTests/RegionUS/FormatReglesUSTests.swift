@@ -120,7 +120,7 @@ struct FormatReglesUSTests {
         let contenu = chargeur.tout()
         #expect(contenu.erreurs.isEmpty)
         let moteur = try contenu.moteur()
-        let jour = usJour(2026, 7, 10)
+        let jour = usJour(2026, 11, 20)  // après la date de lecture de la fixture (5 nov.)
         let sous = moteur.evaluer(QuestionUS(espece: "walleye", juridiction: usWI, jour: jour, taille: .pouces(12)))
         #expect(sous.verdict == .interdit && sous.regles == ["r1"])
         #expect(sous.sources.first?.url.scheme == "https" && sous.lienAgence == nil)
