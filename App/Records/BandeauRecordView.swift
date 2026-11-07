@@ -16,9 +16,10 @@ struct BandeauRecordView: View {
 
     @State private var visible = true
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
+    @Environment(\.locale) private var locale
 
     var body: some View {
-        if let texte = TextesRecords.bandeau(evenement, nomEspece: nomEspece), visible {
+        if let texte = TextesRecords.bandeau(evenement, nomEspece: nomEspece, locale: locale), visible {
             Button {
                 masquer()
             } label: {
@@ -33,7 +34,7 @@ struct BandeauRecordView: View {
             }
             .buttonStyle(.plain)
             .accessibilityLabel(texte)
-            .accessibilityHint("Touche pour fermer")
+            .accessibilityHint(Text("Touche pour fermer", tableName: AnglaisE.table))
             .transition(reduireAnimations ? .identity : .opacity)
             .task {
                 if !reduireAnimations { UIImpactFeedbackGenerator(style: .light).impactOccurred() }

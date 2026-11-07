@@ -7,6 +7,7 @@ struct BoutonEnvieView: View {
     let espece: EspecePechable
     let modele: EnviesModele
     @State private var retour = false
+    @Environment(\.locale) private var locale
 
     var body: some View {
         if modele.peutAfficherBouton(espece) {
@@ -19,7 +20,7 @@ struct BoutonEnvieView: View {
                     Image(systemName: active ? "heart.fill" : "heart")
                         .font(.system(size: 18, weight: .bold, design: .rounded))
                         .accessibilityHidden(true)
-                    Text(active ? TextesEnvies.dansMesEnvies : TextesEnvies.jeVeuxLaPecher)
+                    Text(AnglaisE.t(active ? TextesEnvies.dansMesEnvies : TextesEnvies.jeVeuxLaPecher, locale))
                         .font(Police.corps)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -33,7 +34,7 @@ struct BoutonEnvieView: View {
             }
             .buttonStyle(.plain)
             .sensoryFeedback(.impact(weight: .light), trigger: retour)
-            .accessibilityLabel(TextesEnvies.libelleAccessibilite(ajouter: !active, nom: espece.nom))
+            .accessibilityLabel(TextesEnvies.libelleAccessibilite(ajouter: !active, nom: espece.nom, locale: locale))
             .accessibilityIdentifier("envies.bouton")
         }
     }
@@ -42,20 +43,30 @@ struct BoutonEnvieView: View {
 extension View {
     /// Appui long sur un emplacement vide du classeur : « Je veux la pêcher » (ou « Retirer de mes envies »).
     /// Sans modèle, ou pour une espèce qui ne peut pas être marquée, la vue reste telle quelle.
-    @ViewBuilder
     func menuEnvie(espece: EspecePechable?, modele: EnviesModele?) -> some View {
+        modifier(MenuEnvieModifier(espece: espece, modele: modele))
+    }
+}
+
+private struct MenuEnvieModifier: ViewModifier {
+    let espece: EspecePechable?
+    let modele: EnviesModele?
+    @Environment(\.locale) private var locale
+
+    @ViewBuilder
+    func body(content: Content) -> some View {
         if let espece, let modele, modele.peutAfficherBouton(espece) {
             let active = modele.contient(espece)
-            contextMenu {
+            content.contextMenu {
                 Button {
                     modele.basculer(espece)
                 } label: {
-                    Label(active ? "Retirer de mes envies" : TextesEnvies.jeVeuxLaPecher,
+                    Label(AnglaisE.t(active ? "Retirer de mes envies" : TextesEnvies.jeVeuxLaPecher, locale),
                           systemImage: active ? "heart.slash" : "heart")
                 }
             }
         } else {
-            self
+            content
         }
     }
 }

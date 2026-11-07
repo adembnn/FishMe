@@ -33,6 +33,7 @@ struct LigneAccordConditions: View {
     let confidentialite: URL
 
     @State private var conditionsOuvertes = false
+    @Environment(\.locale) private var locale
 
     /// Adresse interne interceptée par `openURL` : elle n'ouvre jamais Safari.
     private static let adresseConditions = URL(string: "fishme://conditions")
@@ -55,13 +56,13 @@ struct LigneAccordConditions: View {
     }
 
     private var phrase: AttributedString {
-        let debut = AttributedString("En continuant, tu acceptes les ")
-        var conditions = AttributedString("Conditions d'utilisation")
+        let debut = AttributedString(AnglaisE.t("En continuant, tu acceptes les", locale) + " ")
+        var conditions = AttributedString(AnglaisE.t("Conditions d'utilisation", locale))
         conditions.link = Self.adresseConditions
-        let milieu = AttributedString(" et la ")
-        var politique = AttributedString("Politique de confidentialité")
+        let milieu = AttributedString(" " + AnglaisE.t("et la", locale) + " ")
+        var politique = AttributedString(AnglaisE.t("Politique de confidentialité", locale))
         politique.link = confidentialite
-        let fin = AttributedString(".")
+        let fin = AttributedString(AnglaisE.t(".", locale))
         return debut + conditions + milieu + politique + fin
     }
 }

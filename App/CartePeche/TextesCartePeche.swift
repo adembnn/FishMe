@@ -36,5 +36,8 @@ nonisolated enum TextesCartePeche {
     static let enregistrementImpossible = "La carte n'a pas pu être enregistrée sur cet iPhone."
     static let ficheIllisible = "La fiche enregistrée est illisible. Tu peux la supprimer et la refaire."
 
-    static func accessibiliteApercu(genre: String) -> String { "Aperçu de ta carte de pêche (\(genre))" }
+    /// `locale` : français par défaut (les tests comparent le texte français).
+    static func accessibiliteApercu(genre: String, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        AnglaisE.f("Aperçu de ta carte de pêche (%@)", locale, genre)
+    }
 }

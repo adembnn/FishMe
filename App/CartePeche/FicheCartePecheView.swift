@@ -14,6 +14,7 @@ struct FicheCartePecheView: View {
     @State private var pleinEcranOuvert = false
     @State private var confirmationOuverte = false
     @State private var association = ""
+    @Environment(\.locale) private var locale
 
     init(modele: ModeleCartePeche? = nil) {
         _modele = StateObject(wrappedValue: modele ?? ModeleCartePeche.reel())
@@ -22,12 +23,12 @@ struct FicheCartePecheView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.xl) {
-                Text(TextesCartePeche.titre)
+                Text(AnglaisE.t(TextesCartePeche.titre, locale))
                     .font(Police.grandTitre).foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
 
                 if let message = modele.message {
-                    Text(message)
+                    Text(AnglaisE.t(message, locale))
                         .font(Police.detail).foregroundStyle(Palette.alerte)
                         .fixedSize(horizontal: false, vertical: true)
                         .accessibilityIdentifier("carte-message")
@@ -47,9 +48,10 @@ struct FicheCartePecheView: View {
         }
         .scrollIndicators(.hidden)
         .background(Palette.fond.ignoresSafeArea())
-        .navigationTitle(TextesCartePeche.titre)
+        .navigationTitle(AnglaisE.t(TextesCartePeche.titre, locale))
         .navigationBarTitleDisplayMode(.inline)
         .task {
+            modele.locale = locale
             modele.charger()
             association = modele.fiche?.association ?? ""
         }
@@ -76,17 +78,18 @@ struct FicheCartePecheView: View {
                 CartePechePleinEcranView(genre: fiche.fichier.genre, donnees: donnees)
             }
         }
-        .confirmationDialog(TextesCartePeche.confirmationTitre, isPresented: $confirmationOuverte, titleVisibility: .visible) {
-            Button(TextesCartePeche.supprimer, role: .destructive) {
+        .confirmationDialog(AnglaisE.t(TextesCartePeche.confirmationTitre, locale), isPresented: $confirmationOuverte, titleVisibility: .visible) {
+            Button(AnglaisE.t(TextesCartePeche.supprimer, locale), role: .destructive) {
                 Task {
                     await modele.supprimer()
                     association = ""
                 }
             }
-            Button(TextesCartePeche.annuler, role: .cancel) {}
+            Button(AnglaisE.t(TextesCartePeche.annuler, locale), role: .cancel) {}
         } message: {
-            Text(TextesCartePeche.confirmationMessage)
+            Text(AnglaisE.t(TextesCartePeche.confirmationMessage, locale))
         }
+        .onChange(of: locale) { _, nouvelle in modele.locale = nouvelle }
         .accessibilityIdentifier("fiche-carte-peche")
     }
 
@@ -94,7 +97,7 @@ struct FicheCartePecheView: View {
 
     private var vide: some View {
         VStack(alignment: .leading, spacing: Espace.m) {
-            Text(TextesCartePeche.vide)
+            Text(AnglaisE.t(TextesCartePeche.vide, locale))
                 .font(Police.corps).foregroundStyle(Palette.encre)
                 .fixedSize(horizontal: false, vertical: true)
             boutonsImport(remplacement: false)
@@ -106,19 +109,19 @@ struct FicheCartePecheView: View {
         VStack(spacing: Espace.s) {
             if remplacement {
                 PhotosPicker(selection: $selectionPhoto, matching: .images) {
-                    Text(TextesCartePeche.remplacer)
+                    Text(AnglaisE.t(TextesCartePeche.remplacer, locale))
                 }
                 .buttonStyle(.secondaire)
                 .accessibilityIdentifier("carte-choisir-photo")
             } else {
                 PhotosPicker(selection: $selectionPhoto, matching: .images) {
-                    Text(TextesCartePeche.choisirPhoto)
+                    Text(AnglaisE.t(TextesCartePeche.choisirPhoto, locale))
                 }
                 .buttonStyle(.principal)
                 .accessibilityIdentifier("carte-choisir-photo")
             }
 
-            Button(TextesCartePeche.choisirPDF) { choixPDFOuvert = true }
+            Button(AnglaisE.t(TextesCartePeche.choisirPDF, locale)) { choixPDFOuvert = true }
                 .buttonStyle(.secondaire)
                 .accessibilityIdentifier("carte-choisir-pdf")
         }
@@ -142,7 +145,7 @@ struct FicheCartePecheView: View {
         if !modele.erreursSaisie.isEmpty {
             VStack(alignment: .leading, spacing: Espace.xs) {
                 ForEach(modele.erreursSaisie, id: \.self) { erreur in
-                    Text(erreur.message)
+                    Text(erreur.messageLocalise(locale))
                 }
             }
             .font(Police.detail).foregroundStyle(Palette.alerte)
@@ -157,14 +160,14 @@ struct FicheCartePecheView: View {
 
         rappel(fiche)
 
-        Button(TextesCartePeche.afficherEnGrand) { pleinEcranOuvert = true }
+        Button(AnglaisE.t(TextesCartePeche.afficherEnGrand, locale)) { pleinEcranOuvert = true }
             .buttonStyle(.principal)
             .disabled(modele.donneesFichier == nil)
             .accessibilityIdentifier("carte-afficher-en-grand")
 
         boutonsImport(remplacement: true)
 
-        Button(TextesCartePeche.supprimer, role: .destructive) { confirmationOuverte = true }
+        Button(AnglaisE.t(TextesCartePeche.supprimer, locale), role: .destructive) { confirmationOuverte = true }
             .font(Police.corps)
             .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
             .accessibilityIdentifier("carte-supprimer")
@@ -182,7 +185,7 @@ struct FicheCartePecheView: View {
                     .scaledToFit()
                     .frame(maxWidth: .infinity, maxHeight: 360)
                     .clipShape(RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
-                    .accessibilityLabel(TextesCartePeche.accessibiliteApercu(genre: fiche.fichier.genre == .pdf ? "PDF" : "photo"))
+                    .accessibilityLabel(TextesCartePeche.accessibiliteApercu(genre: fiche.fichier.genre == .pdf ? "PDF" : "photo", locale: locale))
             } else {
                 Image(systemName: "doc")
                     .font(.system(size: 48, weight: .bold, design: .rounded))
@@ -199,9 +202,9 @@ struct FicheCartePecheView: View {
         let maintenant = modele.jourDAujourdhui.annee
         let choix = Array((ValidationFiche.premierMillesime...(maintenant + 1)).reversed())
         return HStack {
-            Text(TextesCartePeche.millesime).font(Police.corps).foregroundStyle(Palette.encre)
+            Text(AnglaisE.t(TextesCartePeche.millesime, locale)).font(Police.corps).foregroundStyle(Palette.encre)
             Spacer(minLength: Espace.s)
-            Picker(TextesCartePeche.millesime, selection: Binding(
+            Picker(AnglaisE.t(TextesCartePeche.millesime, locale), selection: Binding(
                 get: { fiche.millesime },
                 set: { nouveau in Task { await modele.changerMillesime(nouveau) } }
             )) {
@@ -216,8 +219,8 @@ struct FicheCartePecheView: View {
 
     private var ligneAssociation: some View {
         HStack {
-            Text(TextesCartePeche.association).font(Police.corps).foregroundStyle(Palette.encre)
-            TextField(TextesCartePeche.associationExemple, text: $association)
+            Text(AnglaisE.t(TextesCartePeche.association, locale)).font(Police.corps).foregroundStyle(Palette.encre)
+            TextField(AnglaisE.t(TextesCartePeche.associationExemple, locale), text: $association)
                 .font(Police.corps)
                 .multilineTextAlignment(.trailing)
                 .submitLabel(.done)
@@ -230,7 +233,7 @@ struct FicheCartePecheView: View {
 
     private func ligneExpiration(_ fiche: FicheCartePeche) -> some View {
         DatePicker(
-            TextesCartePeche.expiration,
+            AnglaisE.t(TextesCartePeche.expiration, locale),
             selection: Binding(
                 get: { fiche.expireLe.date(calendrier: .current) ?? Date() },
                 set: { date in
@@ -253,13 +256,13 @@ struct FicheCartePecheView: View {
                 get: { fiche.rappelActif },
                 set: { actif in Task { await modele.basculerRappel(actif) } }
             )) {
-                Text(TextesCartePeche.rappel).font(Police.corps).foregroundStyle(Palette.encre)
+                Text(AnglaisE.t(TextesCartePeche.rappel, locale)).font(Police.corps).foregroundStyle(Palette.encre)
             }
             .tint(Palette.marine)
             .frame(minHeight: Gabarit.zoneTactile)
             .accessibilityIdentifier("carte-rappel")
 
-            Text(TextesCartePeche.rappelExplication)
+            Text(AnglaisE.t(TextesCartePeche.rappelExplication, locale))
                 .font(Police.legende).foregroundStyle(Palette.encreDouce)
                 .fixedSize(horizontal: false, vertical: true)
 
@@ -273,11 +276,11 @@ struct FicheCartePecheView: View {
                     .accessibilityIdentifier("carte-message-rappel")
             }
             if modele.notificationsCoupees {
-                Text(TextesCartePeche.notificationsCoupees)
+                Text(AnglaisE.t(TextesCartePeche.notificationsCoupees, locale))
                     .font(Police.detail).foregroundStyle(Palette.alerte)
                     .fixedSize(horizontal: false, vertical: true)
                 if let reglages = URL(string: UIApplication.openSettingsURLString) {
-                    Link(TextesCartePeche.ouvrirReglages, destination: reglages)
+                    Link(AnglaisE.t(TextesCartePeche.ouvrirReglages, locale), destination: reglages)
                         .font(Police.corps).foregroundStyle(Palette.marine)
                         .frame(minHeight: Gabarit.zoneTactile, alignment: .leading)
                 }
@@ -291,8 +294,8 @@ struct FicheCartePecheView: View {
 
     private var mentions: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            Text(TextesCartePeche.nonOfficiel)
-            Text(TextesCartePeche.sauvegarde)
+            Text(AnglaisE.t(TextesCartePeche.nonOfficiel, locale))
+            Text(AnglaisE.t(TextesCartePeche.sauvegarde, locale))
         }
         .font(Police.legende)
         .foregroundStyle(Palette.encreDouce)

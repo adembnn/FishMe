@@ -29,7 +29,7 @@ struct ChargementSonar: View {
             }
         }
         .overlay(alignment: .bottom) {
-            Text("Je cherche les relevés OFB")
+            Text("Je cherche les relevés OFB", tableName: AnglaisE.table)
                 .font(Police.legende)
                 .foregroundStyle(Palette.encre)
                 .padding(.horizontal, 14)
@@ -41,7 +41,7 @@ struct ChargementSonar: View {
         .onAppear { visible = true }
         .onDisappear { visible = false }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Je cherche les relevés OFB")
+        .accessibilityLabel(Text("Je cherche les relevés OFB", tableName: AnglaisE.table))
         .accessibilityAddTraits(.updatesFrequently)
     }
 

@@ -8,6 +8,7 @@ struct ChargementBouchon: View {
     var texte: String? = nil
 
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
+    @Environment(\.locale) private var locale
     /// Vrai quand la vue est à l'écran : sinon l'animation est en pause.
     @State private var visible = false
 
@@ -26,7 +27,7 @@ struct ChargementBouchon: View {
             .frame(width: taille * 1.9, height: taille * 1.1)
 
             if let texte {
-                Text(texte)
+                Text(AnglaisE.t(texte, locale))
                     .font(Police.legende)
                     .foregroundStyle(Palette.encreDouce)
                     .multilineTextAlignment(.center)
@@ -35,7 +36,7 @@ struct ChargementBouchon: View {
         .onAppear { visible = true }
         .onDisappear { visible = false }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(texte ?? "Chargement")
+        .accessibilityLabel(AnglaisE.t(texte ?? "Chargement", locale))
         .accessibilityAddTraits(.updatesFrequently)
     }
 

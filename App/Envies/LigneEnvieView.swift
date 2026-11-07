@@ -5,6 +5,7 @@ import SwiftUI
 /// (copié, pas importé).
 private struct SourceEnvieView: View {
     let source: SourceRegle
+    @Environment(\.locale) private var locale
 
     var body: some View {
         if let adresse = source.url, let url = URL(string: adresse) {
@@ -21,7 +22,7 @@ private struct SourceEnvieView: View {
                 .frame(minHeight: Gabarit.zoneTactile, alignment: .leading)
                 .contentShape(Rectangle())
             }
-            .accessibilityLabel("Source : \(source.titre)")
+            .accessibilityLabel(AnglaisE.f("Source : %@", locale, source.titre))
         } else {
             Text(source.titre)
                 .font(Police.legende)
@@ -39,6 +40,7 @@ struct LigneEnvieView: View {
     var ouvrirFiche: ((Espece) -> Void)? = nil
     /// Ouvre le choix d'un spot, sur la ligne « Choisis un spot ». `nil` : texte simple.
     var choisirSpot: (() -> Void)? = nil
+    @Environment(\.locale) private var locale
 
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.m) {
@@ -58,7 +60,7 @@ struct LigneEnvieView: View {
         if let ouvrirFiche {
             Button { ouvrirFiche(resume.espece.espece) } label: { enteteContenu(avecChevron: true) }
                 .buttonStyle(.plain)
-                .accessibilityLabel("\(resume.espece.nom), ouvrir la fiche")
+                .accessibilityLabel(AnglaisE.f("%@, ouvrir la fiche", locale, resume.espece.nom))
         } else {
             enteteContenu(avecChevron: false)
         }
@@ -105,7 +107,7 @@ struct LigneEnvieView: View {
     private var ligneOuverture: some View {
         HStack(alignment: .firstTextBaseline, spacing: Espace.s) {
             pastille
-            Text(TextesEnvies.ouverture(resume.ouverture))
+            Text(TextesEnvies.ouverture(resume.ouverture, locale: locale))
                 .font(Police.corps)
                 .foregroundStyle(couleurTexte)
                 .fixedSize(horizontal: false, vertical: true)
@@ -153,7 +155,7 @@ struct LigneEnvieView: View {
 
     private func conseilBloc(_ conseil: Conseil) -> some View {
         VStack(alignment: .leading, spacing: Espace.xs) {
-            Text(TextesEnvies.conseilDuMois.uppercased())
+            Text(AnglaisE.t(TextesEnvies.conseilDuMois, locale).uppercased())
                 .font(Police.legende)
                 .tracking(0.52)
                 .foregroundStyle(Palette.encreDouce)

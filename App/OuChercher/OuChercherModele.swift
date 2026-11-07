@@ -30,7 +30,7 @@ nonisolated enum OuChercherTextes {
     static let creditOSM = "© contributeurs OpenStreetMap"
     static let titreEcran = "Choisir un autre spot"
     static let invite = "Quel poisson cherches-tu ?"
-    static func recherche(_ nom: String) -> String { "Je cherche les coins pour \(nom)…" }
+    static func recherche(_ nom: String, locale: Locale = Locale(identifier: "fr_FR")) -> String { AnglaisE.f("Je cherche les coins pour %@…", locale, nom) }
 }
 
 /// Composition des phrases d'un coin. Pure, testable sans écran.
@@ -50,9 +50,9 @@ nonisolated struct CompositeurCoins {
         let (ouverture, ouvert) = ouvertureTexte(c.ouverture)
         let acces = accesTexte(c)
         let station = stationTexte(c)
-        var voix = "\(titre), à \(distance). "
+        var voix = AnglaisE.f("%@, à %@. ", locale, titre, distance)
         if let acces { voix += "\(acces). " }
-        voix += "Relevée à proximité : \(releve). \(station). \(ouverture)."
+        voix += AnglaisE.f("Relevée à proximité : %@. %@. %@.", locale, releve, station, ouverture)
         return CoinAffiche(id: c.id, titre: titre, distance: distance, releve: releve, ouverture: ouverture, estOuvert: ouvert,
                            acces: acces, station: station, phraseVoixOff: voix)
     }
@@ -60,33 +60,46 @@ nonisolated struct CompositeurCoins {
     func titreTexte(_ c: CoinProche) -> String {
         if let nom = c.nom { return nom }
         switch c.type {
-        case .ponton: return "Ponton"
-        case .acces: return "Accès à l'eau"
-        case .peche: return "Coin de pêche"
+        case .ponton: return AnglaisE.t("Ponton", locale)
+        case .acces: return AnglaisE.t("Accès à l'eau", locale)
+        case .peche: return AnglaisE.t("Coin de pêche", locale)
         }
     }
 
     func accesTexte(_ c: CoinProche) -> String? {
-        if c.payant { return "Accès payant" }
+        if c.payant { return AnglaisE.t("Accès payant", locale) }
         switch c.acces {
-        case .libre: return "Accès libre"
-        case .permis: return "Sur permis"
+        case .libre: return AnglaisE.t("Accès libre", locale)
+        case .permis: return AnglaisE.t("Sur permis", locale)
         case nil: return nil
         }
     }
 
     func stationTexte(_ c: CoinProche) -> String {
-        let eau = c.eauStation.map { " : \($0)" } ?? ""
-        return "Station OFB à proximité\(eau), à \(distanceTexte(metres: c.distanceStationM))"
+        let distance = distanceTexte(metres: c.distanceStationM)
+        if let eau = c.eauStation { return AnglaisE.f("Station OFB à proximité : %@, à %@", locale, eau, distance) }
+        return AnglaisE.f("Station OFB à proximité, à %@", locale, distance)
     }
 
     func releveTexte(n: Int, annee: Int) -> String {
-        let pluriel = n > 1 ? "pêches" : "pêche"
-        return "\(n) \(pluriel), dernier relevé \(annee)"
+        if n > 1 { return AnglaisE.f("%lld pêches, dernier relevé %lld", locale, n, annee) }
+        return AnglaisE.f("%lld pêche, dernier relevé %lld", locale, n, annee)
     }
 
     /// Distance arrondie (jamais de coordonnée) : « 450 m » sous 1 km, « 1,2 km » ensuite.
     func distanceTexte(metres: Double) -> String {
+        if locale.language.languageCode?.identifier != "fr" {
+            // États-Unis : pieds sous 1 000 ft, puis miles.
+            if metres < 304.8 {
+                return "\(max(50, Int((metres * 3.28084 / 50).rounded()) * 50)) ft"
+            }
+            let miles = (metres / 1609.344 * 10).rounded() / 10
+            let g = NumberFormatter()
+            g.locale = locale
+            g.minimumFractionDigits = 0
+            g.maximumFractionDigits = 1
+            return "\(g.string(from: NSNumber(value: miles)) ?? "\(miles)") mi"
+        }
         if metres < 1000 {
             let arrondi = max(50, Int((metres / 50).rounded()) * 50)
             return "\(arrondi) m"
@@ -102,14 +115,14 @@ nonisolated struct CompositeurCoins {
     func ouvertureTexte(_ o: OuvertureDuJour) -> (String, Bool) {
         switch o {
         case .ouverte:
-            return ("Ouverte aujourd'hui", true)
+            return (AnglaisE.t("Ouverte aujourd'hui", locale), true)
         case .fermee(let reouverture):
-            guard let date = reouverture else { return ("Fermée", false) }
+            guard let date = reouverture else { return (AnglaisE.t("Fermée", locale), false) }
             let f = DateFormatter()
             f.locale = locale
             f.timeZone = fuseau
             f.setLocalizedDateFormatFromTemplate("d MMMM")
-            return ("Fermée jusqu'au \(f.string(from: date))", false)
+            return (AnglaisE.f("Fermée jusqu'au %@", locale, f.string(from: date)), false)
         }
     }
 }
@@ -163,14 +176,17 @@ final class OuChercherModele {
 
     /// La recherche (lecture des coins, liaison aux stations, règles) tourne hors du fil principal : l'écran passe à `.chargement`
     /// puis à `.resultats` ou `.aucunReleve`. Un nouveau choix, ou « Changer d'espèce », abandonne la recherche en cours.
-    func choisir(_ choix: EspeceChoix) {
+    func choisir(_ choix: EspeceChoix, locale: Locale? = nil) {
         recherche?.cancel()
         etat = .chargement(espece: choix)
-        let service = especes, point = position, compositeur = compositeur
+        var compositeur = compositeur
+        if let locale { compositeur.locale = locale }
+        let service = especes, point = position
+        let composeur = compositeur
         recherche = Task { [weak self] in
             let coins = await Task.detached(priority: .userInitiated) {
                 // L'écran n'en montre que 3 : Core ne calcule pas les 200 autres.
-                compositeur.afficher(service.coinsProches(ou: choix.espece, pres: point, limite: 3))
+                composeur.afficher(service.coinsProches(ou: choix.espece, pres: point, limite: 3))
             }.value
             guard !Task.isCancelled, let self else { return }
             self.etat = coins.isEmpty ? .aucunReleve(espece: choix) : .resultats(espece: choix, coins: coins)

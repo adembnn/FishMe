@@ -11,6 +11,7 @@ struct RecordCarteView: View {
     /// « ≈ 4,2 kg estimé » seulement si le poids est connu.
     let poidsKg: Double?
     var nouveau: Bool = false
+    @Environment(\.locale) private var locale
 
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
@@ -21,7 +22,7 @@ struct RecordCarteView: View {
                     .padding(.vertical, Espace.s)
                     .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
                 if nouveau {
-                    Text(TextesRecords.nouveau)
+                    Text(AnglaisE.t(TextesRecords.nouveau, locale))
                         .font(Police.legende)
                         .foregroundStyle(Palette.marine)
                         .padding(.horizontal, Espace.s)
@@ -35,25 +36,25 @@ struct RecordCarteView: View {
                 .foregroundStyle(Palette.encre)
                 .fixedSize(horizontal: false, vertical: true)
             HStack(alignment: .firstTextBaseline, spacing: Espace.xs) {
-                Text(TextesRecords.longueur(record.longueurCm))
+                Text(TextesRecords.longueur(record.longueurCm, locale: locale))
                     .font(Police.chiffreMoyen)
                     .foregroundStyle(Palette.encre)
                     .minimumScaleFactor(0.6)
                 if record.mesure == .estimee {
-                    Text("estimé").font(Police.legende).foregroundStyle(Palette.encreDouce)
+                    Text("estimé", tableName: AnglaisE.table).font(Police.legende).foregroundStyle(Palette.encreDouce)
                 }
             }
-            Text(TextesRecords.jourEtLieu(record))
+            Text(TextesRecords.jourEtLieu(record, locale: locale))
                 .font(Police.legende)
                 .foregroundStyle(Palette.encreDouce)
                 .fixedSize(horizontal: false, vertical: true)
             if let poidsKg {
-                Text(TextesRecords.poids(poidsKg))
+                Text(TextesRecords.poids(poidsKg, locale: locale))
                     .font(Police.legende)
                     .foregroundStyle(Palette.encreDouce)
             }
             if record.estTrophee {
-                Text(TextesRecords.etiquetteTrophee)
+                Text(AnglaisE.t(TextesRecords.etiquetteTrophee, locale))
                     .font(Police.legende)
                     .foregroundStyle(Palette.marine)
                     .padding(.horizontal, Espace.m)
@@ -66,7 +67,7 @@ struct RecordCarteView: View {
         .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: Rayon.l, style: .continuous).stroke(Palette.filet, lineWidth: 1))
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(TextesRecords.phraseVoixOff(record, nom: nom, nouveau: nouveau))
+        .accessibilityLabel(TextesRecords.phraseVoixOff(record, nom: nom, nouveau: nouveau, locale: locale))
     }
 
     @ViewBuilder private var image: some View {

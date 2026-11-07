@@ -8,6 +8,7 @@ struct FeuilleConsentement: View {
     let refuser: () -> Void
 
     @State private var detailOuvert = false
+    @Environment(\.locale) private var locale
 
     var body: some View {
         ScrollView {
@@ -24,7 +25,9 @@ struct FeuilleConsentement: View {
                     HStack(spacing: 10) { boutons }
                     VStack(spacing: 10) { boutons }
                 }
-                Button(detailOuvert ? "Masquer" : "En savoir plus") { detailOuvert.toggle() }
+                Button { detailOuvert.toggle() } label: {
+                    detailOuvert ? Text("Masquer", tableName: AnglaisE.table) : Text("En savoir plus", tableName: AnglaisE.table)
+                }
                     .font(Police.corps)
                     .foregroundStyle(Palette.marine)
                     .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
@@ -47,12 +50,12 @@ struct FeuilleConsentement: View {
             VStack(alignment: .leading, spacing: Espace.s) {
                 // Pas de bouton fermer (la maquette n'en a pas) : la feuille ne se ferme que par « Refuser » ou « Accepter »,
                 // donc rien n'est mesuré tant que le pêcheur n'a pas accepté.
-                Text("Mesure d'audience")
+                Text("Mesure d'audience", tableName: AnglaisE.table)
                     .font(Police.grandTitre)
                     .foregroundStyle(Palette.encre)
                     .fixedSize(horizontal: false, vertical: true)
                     .accessibilityAddTraits(.isHeader)
-                Text("Tu peux changer ton choix à tout moment dans les réglages.")
+                Text("Tu peux changer ton choix à tout moment dans les réglages.", tableName: AnglaisE.table)
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
                     .fixedSize(horizontal: false, vertical: true)
@@ -72,7 +75,7 @@ struct FeuilleConsentement: View {
                 ]
             )
             if detailOuvert {
-                Text("FishMe compte seulement des usages anonymes, sans te suivre d'une app à l'autre. Aucun coin de pêche ne quitte ton iPhone.")
+                Text("FishMe compte seulement des usages anonymes, sans te suivre d'une app à l'autre. Aucun coin de pêche ne quitte ton iPhone.", tableName: AnglaisE.table)
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
                     .fixedSize(horizontal: false, vertical: true)
@@ -82,7 +85,7 @@ struct FeuilleConsentement: View {
 
     private func groupe(titre: String, lignes: [(String, String?)]) -> some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            Text(titre.uppercased())
+            Text(AnglaisE.t(titre, locale).uppercased())
                 .font(Police.legende)
                 .tracking(0.5)
                 .foregroundStyle(Palette.encreDouce)
@@ -90,11 +93,11 @@ struct FeuilleConsentement: View {
             VStack(spacing: 0) {
                 ForEach(Array(lignes.enumerated()), id: \.offset) { position, ligne in
                     VStack(alignment: .leading, spacing: 0) {
-                        Text(ligne.0)
+                        Text(AnglaisE.t(ligne.0, locale))
                             .font(Police.corps)
                             .foregroundStyle(Palette.encre)
                         if let detail = ligne.1 {
-                            Text(detail)
+                            Text(AnglaisE.t(detail, locale))
                                 .font(Police.legende)
                                 .foregroundStyle(Palette.encreDouce)
                         }
@@ -114,7 +117,7 @@ struct FeuilleConsentement: View {
 
     /// Même style pour les deux : aucun bouton n'est poussé plus que l'autre.
     @ViewBuilder private var boutons: some View {
-        Button("Refuser", action: refuser).buttonStyle(.secondaire)
-        Button("Accepter", action: accepter).buttonStyle(.secondaire)
+        Button(action: refuser) { Text("Refuser", tableName: AnglaisE.table) }.buttonStyle(.secondaire)
+        Button(action: accepter) { Text("Accepter", tableName: AnglaisE.table) }.buttonStyle(.secondaire)
     }
 }
