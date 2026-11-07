@@ -2101,7 +2101,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Écrevisse américaine : pêche autorisée toute l'année en 2de catégorie.",
+   "phrase": "Écrevisse américaine : pêche prévue toute l'année en 2de catégorie.",
    "textes": [
     "t2"
    ],
@@ -2189,7 +2189,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Écrevisse de californie (signal) : pêche autorisée toute l'année en 2de catégorie.",
+   "phrase": "Écrevisse de californie (signal) : pêche prévue toute l'année en 2de catégorie.",
    "textes": [
     "t2"
    ],
@@ -2277,7 +2277,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Écrevisse de louisiane : pêche autorisée toute l'année en 2de catégorie.",
+   "phrase": "Écrevisse de louisiane : pêche prévue toute l'année en 2de catégorie.",
    "textes": [
     "t2"
    ],
@@ -5642,7 +5642,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Grand plan d'eau de Villeneuve-de-la-Raho : pêche de la carpe de nuit autorisée toute l'année.",
+   "phrase": "Grand plan d'eau de Villeneuve-de-la-Raho : pêche de la carpe de nuit prévue toute l'année.",
    "textes": [
     "t11"
    ],
@@ -5669,7 +5669,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Grand plan d'eau de Villeneuve-de-la-Raho : pêche de la carpe de nuit autorisée toute l'année.",
+   "phrase": "Grand plan d'eau de Villeneuve-de-la-Raho : pêche de la carpe de nuit prévue toute l'année.",
    "textes": [
     "t11"
    ],
@@ -5696,7 +5696,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Grand plan d'eau de Villeneuve-de-la-Raho : pêche de la carpe de nuit autorisée toute l'année.",
+   "phrase": "Grand plan d'eau de Villeneuve-de-la-Raho : pêche de la carpe de nuit prévue toute l'année.",
    "textes": [
     "t11"
    ],
@@ -5711,7 +5711,7 @@
     "niveau": "plan_eau",
     "code": "66",
     "eau": "barrage sur l agly",
-    "lieu": "Plan d'eau du barrage sur l'Agly : berge rive gauche autorisée à la pêche",
+    "lieu": "Plan d'eau du barrage sur l'Agly : berge rive gauche prévue à la pêche",
     "geometrie": null
    },
    "especes": [],
@@ -5723,7 +5723,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau du barrage sur l'Agly  : pêche de la carpe de nuit autorisée toute l'année.",
+   "phrase": "Plan d'eau du barrage sur l'Agly  : pêche de la carpe de nuit prévue toute l'année.",
    "textes": [
     "t11"
    ],
@@ -5738,7 +5738,7 @@
     "niveau": "plan_eau",
     "code": "66",
     "eau": "villelongue dels monts",
-    "lieu": "Plan d'eau de Villelongue-dels-Monts : berges autorisées à la pêche",
+    "lieu": "Plan d'eau de Villelongue-dels-Monts : berges prévues à la pêche",
     "geometrie": null
    },
    "especes": [],
@@ -5750,7 +5750,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau de Villelongue-dels-Monts  : pêche de la carpe de nuit autorisée toute l'année.",
+   "phrase": "Plan d'eau de Villelongue-dels-Monts  : pêche de la carpe de nuit prévue toute l'année.",
    "textes": [
     "t11"
    ],
@@ -5777,7 +5777,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau du barrage de Vinça  : pêche de la carpe de nuit autorisée toute l'année.",
+   "phrase": "Plan d'eau du barrage de Vinça  : pêche de la carpe de nuit prévue toute l'année.",
    "textes": [
     "t11"
    ],
@@ -5804,7 +5804,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau des Escoumes (Vinça)  : pêche de la carpe de nuit autorisée toute l'année.",
+   "phrase": "Plan d'eau des Escoumes (Vinça)  : pêche de la carpe de nuit prévue toute l'année.",
    "textes": [
     "t11"
    ],
@@ -5831,7 +5831,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau des Escoumes (Vinça)  : pêche de la carpe de nuit autorisée toute l'année.",
+   "phrase": "Plan d'eau des Escoumes (Vinça)  : pêche de la carpe de nuit prévue toute l'année.",
    "textes": [
     "t11"
    ],
@@ -5858,7 +5858,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Verdouble à Tautavel : pêche de la carpe de nuit autorisée toute l'année.",
+   "phrase": "Verdouble à Tautavel : pêche de la carpe de nuit prévue toute l'année.",
    "textes": [
     "t11"
    ],
@@ -5912,7 +5912,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau du barrage sur l'Agly : pêche en barque autorisée.",
+   "phrase": "Plan d'eau du barrage sur l'Agly : pêche en barque prévue.",
    "textes": [
     "t12"
    ],
@@ -5939,7 +5939,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau du barrage de Matemale : pêche en barque autorisée.",
+   "phrase": "Plan d'eau du barrage de Matemale : pêche en barque prévue.",
    "textes": [
     "t12"
    ],
@@ -5966,7 +5966,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau de barrage de Matemale : float tube autorisé.",
+   "phrase": "Plan d'eau de barrage de Matemale : float tube prévu.",
    "textes": [
     "t13"
    ],
@@ -5993,7 +5993,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau du barrage de l'Agly : float tube autorisé.",
+   "phrase": "Plan d'eau du barrage de l'Agly : float tube prévu.",
    "textes": [
     "t13"
    ],
@@ -6020,7 +6020,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Partie ouest du plan d'eau n°4 de Millas délimitée par des bouées (voir annexe II) : float tube autorisé.",
+   "phrase": "Partie ouest du plan d'eau n°4 de Millas délimitée par des bouées (voir annexe II) : float tube prévu.",
    "textes": [
     "t13"
    ],
@@ -6047,7 +6047,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau des Escoumes : float tube autorisé.",
+   "phrase": "Plan d'eau des Escoumes : float tube prévu.",
    "textes": [
     "t13"
    ],
@@ -6074,7 +6074,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Grande retenue de la Raho : bande de rive de 200 m entre la porte du stade et la porte de Bages : float tube autorisé.",
+   "phrase": "Grande retenue de la Raho : bande de rive de 200 m entre la porte du stade et la porte de Bages : float tube prévu.",
    "textes": [
     "t13"
    ],
@@ -6101,7 +6101,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue touristique de la Raho : float tube autorisé.",
+   "phrase": "Retenue touristique de la Raho : float tube prévu.",
    "textes": [
     "t13"
    ],
@@ -6128,7 +6128,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau du barrage de Vinça : anse de la Riberette (voir annexe II) : float tube autorisé.",
+   "phrase": "Plan d'eau du barrage de Vinça : anse de la Riberette (voir annexe II) : float tube prévu.",
    "textes": [
     "t13"
    ],
@@ -7219,7 +7219,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Grand plan d'eau de Villeneuve-de-la-Raho (Villeneuve-de-la-Raho), appâts végétaux seulement.",
+   "phrase": "Carpe de nuit prévue : Grand plan d'eau de Villeneuve-de-la-Raho (Villeneuve-de-la-Raho), appâts végétaux seulement.",
    "textes": [
     "t22"
    ],
@@ -7248,7 +7248,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Grand plan d'eau de Villeneuve-de-la-Raho (Villeneuve-de-la-Raho), appâts végétaux seulement.",
+   "phrase": "Carpe de nuit prévue : Grand plan d'eau de Villeneuve-de-la-Raho (Villeneuve-de-la-Raho), appâts végétaux seulement.",
    "textes": [
     "t22"
    ],
@@ -7277,7 +7277,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Grand plan d'eau de Villeneuve-de-la-Raho (Villeneuve-de-la-Raho), appâts végétaux seulement.",
+   "phrase": "Carpe de nuit prévue : Grand plan d'eau de Villeneuve-de-la-Raho (Villeneuve-de-la-Raho), appâts végétaux seulement.",
    "textes": [
     "t22"
    ],
@@ -7292,7 +7292,7 @@
     "niveau": "plan_eau",
     "code": "66",
     "eau": "villelongue dels monts",
-    "lieu": "Plan d'eau de Villelongue-dels-Monts (Villelongue-dels-Monts) : ensemble des berges autorisées à la pêche",
+    "lieu": "Plan d'eau de Villelongue-dels-Monts (Villelongue-dels-Monts) : ensemble des berges prévues à la pêche",
     "geometrie": null
    },
    "especes": [
@@ -7306,7 +7306,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Plan d'eau de Villelongue-dels-Monts (Villelongue-dels-Monts), appâts végétaux seulement.",
+   "phrase": "Carpe de nuit prévue : Plan d'eau de Villelongue-dels-Monts (Villelongue-dels-Monts), appâts végétaux seulement.",
    "textes": [
     "t22"
    ],
@@ -7387,7 +7387,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Float tube autorisé : Plan d'eau des Escoumes.",
+   "phrase": "Float tube prévu : Plan d'eau des Escoumes.",
    "textes": [
     "t25"
    ],
@@ -7414,7 +7414,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Float tube autorisé : Retenue touristique de la Raho.",
+   "phrase": "Float tube prévu : Retenue touristique de la Raho.",
    "textes": [
     "t25"
    ],
@@ -7441,7 +7441,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Float tube autorisé : Plan d'eau des Bouzigues.",
+   "phrase": "Float tube prévu : Plan d'eau des Bouzigues.",
    "textes": [
     "t25"
    ],
@@ -7468,7 +7468,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Float tube autorisé sur Têt classé en 2e catégorie.",
+   "phrase": "Float tube prévu sur Têt classé en 2e catégorie.",
    "textes": [
     "t25"
    ],
@@ -7495,7 +7495,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Float tube autorisé sur Tech classé en 2e catégorie.",
+   "phrase": "Float tube prévu sur Tech classé en 2e catégorie.",
    "textes": [
     "t25"
    ],
@@ -7693,7 +7693,7 @@
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Ici, pêche au vif et aux leurres autorisée même pendant la fermeture du brochet (espèce absente).",
+   "phrase": "Ici, pêche au vif et aux leurres prévue même pendant la fermeture du brochet (espèce absente).",
    "textes": [
     "t29"
    ],
@@ -7722,7 +7722,7 @@
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Ici, pêche au vif et aux leurres autorisée même pendant la fermeture du brochet (espèce absente).",
+   "phrase": "Ici, pêche au vif et aux leurres prévue même pendant la fermeture du brochet (espèce absente).",
    "textes": [
     "t29"
    ],
@@ -7751,7 +7751,7 @@
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Ici, pêche au vif et aux leurres autorisée même pendant la fermeture du brochet (espèce absente).",
+   "phrase": "Ici, pêche au vif et aux leurres prévue même pendant la fermeture du brochet (espèce absente).",
    "textes": [
     "t29"
    ],
@@ -7780,7 +7780,7 @@
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Ici, pêche au vif et aux leurres autorisée même pendant la fermeture du brochet (espèce absente).",
+   "phrase": "Ici, pêche au vif et aux leurres prévue même pendant la fermeture du brochet (espèce absente).",
    "textes": [
     "t29"
    ],
@@ -7809,7 +7809,7 @@
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Ici, pêche au vif et aux leurres autorisée même pendant la fermeture du brochet (espèce absente).",
+   "phrase": "Ici, pêche au vif et aux leurres prévue même pendant la fermeture du brochet (espèce absente).",
    "textes": [
     "t29"
    ],
@@ -7838,7 +7838,7 @@
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Ici, pêche au vif et aux leurres autorisée même pendant la fermeture du brochet (espèce absente).",
+   "phrase": "Ici, pêche au vif et aux leurres prévue même pendant la fermeture du brochet (espèce absente).",
    "textes": [
     "t29"
    ],
@@ -7867,7 +7867,7 @@
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Ici, pêche au vif et aux leurres autorisée même pendant la fermeture du brochet (espèce absente).",
+   "phrase": "Ici, pêche au vif et aux leurres prévue même pendant la fermeture du brochet (espèce absente).",
    "textes": [
     "t29"
    ],

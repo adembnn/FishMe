@@ -2372,7 +2372,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac des Moines : 2 lignes montées sur canne sont permises, chacune avec 2 hameçons ou 3 mouches artificielles au plus.",
+   "phrase": "Lac des Moines : 2 lignes montées sur canne sont prévues, chacune avec 2 hameçons ou 3 mouches artificielles au plus.",
    "textes": [
     "t7"
    ],
@@ -2402,7 +2402,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang Migeoux : 2 lignes montées sur canne sont permises, chacune avec 2 hameçons ou 3 mouches artificielles au plus.",
+   "phrase": "Étang Migeoux : 2 lignes montées sur canne sont prévues, chacune avec 2 hameçons ou 3 mouches artificielles au plus.",
    "textes": [
     "t7"
    ],
@@ -2802,7 +2802,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pour la carpe de nuit, seule la pêche à la ligne à la calée avec des esches végétales ou des pellets est permise.",
+   "phrase": "Pour la carpe de nuit, seule la pêche à la ligne à la calée avec des esches végétales ou des pellets est prévue.",
    "textes": [
     "t11"
    ],
@@ -2831,7 +2831,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La carpe de nuit n'est permise que pendant les périodes et sur les lieux d'un arrêté préfectoral annuel.",
+   "phrase": "La carpe de nuit n'est prévue que pendant les périodes et sur les lieux d'un arrêté préfectoral annuel.",
    "textes": [
     "t12"
    ],
@@ -4848,7 +4848,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Saint-Clément, zone centrale : la pêche au lancer est permise toute l'année.",
+   "phrase": "Retenue de Saint-Clément, zone centrale : la pêche au lancer est prévue toute l'année.",
    "textes": [
     "t20"
    ],
@@ -4875,7 +4875,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Saint-Clément, zone centrale : la pêche au vif est permise toute l'année.",
+   "phrase": "Retenue de Saint-Clément, zone centrale : la pêche au vif est prévue toute l'année.",
    "textes": [
     "t20"
    ],
@@ -4902,7 +4902,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Saint-Clément, zone centrale : la pêche au poisson mort est permise toute l'année.",
+   "phrase": "Retenue de Saint-Clément, zone centrale : la pêche au poisson mort est prévue toute l'année.",
    "textes": [
     "t20"
    ],
@@ -4929,7 +4929,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Saint-Clément, zone centrale : la pêche aux leurres naturels ou artificiels est permise toute l'année.",
+   "phrase": "Retenue de Saint-Clément, zone centrale : la pêche aux leurres naturels ou artificiels est prévue toute l'année.",
    "textes": [
     "t20"
    ],
@@ -4956,7 +4956,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Saint-Clément, zone centrale : les asticots et autres larves de diptères sont permis.",
+   "phrase": "Retenue de Saint-Clément, zone centrale : les asticots et autres larves de diptères sont prévus.",
    "textes": [
     "t20"
    ],
@@ -5648,7 +5648,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit : seule la pêche à la ligne à la calée avec des esches végétales et des pellets est permise.",
+   "phrase": "Carpe de nuit : seule la pêche à la ligne à la calée avec des esches végétales et des pellets est prévue.",
    "textes": [
     "t24"
    ],
@@ -5677,7 +5677,7 @@
    "du": "2026-04-03",
    "au": "2026-04-06",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 03/04 au 06/04 2026 : Étang de Goule (réservé aux sociétaires-adhérents AAPPMA de Bessais-le-Fromental).",
+   "phrase": "Carpe de nuit prévue du 03/04 au 06/04 2026 : Étang de Goule (réservé aux sociétaires-adhérents AAPPMA de Bessais-le-Fromental).",
    "textes": [
     "t25"
    ],
@@ -5706,7 +5706,7 @@
    "du": "2026-05-22",
    "au": "2026-05-25",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 22/05 au 25/05 2026 : Étang de Goule (enduro 72 h).",
+   "phrase": "Carpe de nuit prévue du 22/05 au 25/05 2026 : Étang de Goule (enduro 72 h).",
    "textes": [
     "t25"
    ],
@@ -5735,7 +5735,7 @@
    "du": "2026-08-14",
    "au": "2026-08-16",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 14/08 au 16/08 2026 : Étang de Goule (pêche de nuit 48 h).",
+   "phrase": "Carpe de nuit prévue du 14/08 au 16/08 2026 : Étang de Goule (pêche de nuit 48 h).",
    "textes": [
     "t25"
    ],
@@ -5764,7 +5764,7 @@
    "du": "2026-09-11",
    "au": "2026-09-13",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 11/09 au 13/09 2026 : Étang de Goule (réservé aux sociétaires-adhérents AAPPMA de Bessais-le-Fromental).",
+   "phrase": "Carpe de nuit prévue du 11/09 au 13/09 2026 : Étang de Goule (réservé aux sociétaires-adhérents AAPPMA de Bessais-le-Fromental).",
    "textes": [
     "t25"
    ],
@@ -5793,7 +5793,7 @@
    "du": "2026-11-18",
    "au": "2026-11-22",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 18/11 au 22/11 2026 : Plan d'eau de la Corre (enduro AAPPMA / Esprit Carpe Montluçonnais).",
+   "phrase": "Carpe de nuit prévue du 18/11 au 22/11 2026 : Plan d'eau de la Corre (enduro AAPPMA / Esprit Carpe Montluçonnais).",
    "textes": [
     "t26"
    ],
@@ -5822,7 +5822,7 @@
    "du": "2026-01-01",
    "au": "2026-04-20",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 20/04 2026 : Plan d'eau de la Corre (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 20/04 2026 : Plan d'eau de la Corre (autres périodes).",
    "textes": [
     "t26"
    ],
@@ -5851,7 +5851,7 @@
    "du": "2026-05-11",
    "au": "2026-11-17",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 11/05 au 17/11 2026 : Plan d'eau de la Corre (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 11/05 au 17/11 2026 : Plan d'eau de la Corre (autres périodes).",
    "textes": [
     "t26"
    ],
@@ -5880,7 +5880,7 @@
    "du": "2026-11-23",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 23/11 au 31/12 2026 : Plan d'eau de la Corre (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 23/11 au 31/12 2026 : Plan d'eau de la Corre (autres périodes).",
    "textes": [
     "t26"
    ],
@@ -5909,7 +5909,7 @@
    "du": "2026-01-01",
    "au": "2026-04-20",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 20/04 2026 : Barrage de Bazergues.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 20/04 2026 : Barrage de Bazergues.",
    "textes": [
     "t26"
    ],
@@ -5938,7 +5938,7 @@
    "du": "2026-05-11",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 11/05 au 31/12 2026 : Barrage de Bazergues.",
+   "phrase": "Carpe de nuit prévue du 11/05 au 31/12 2026 : Barrage de Bazergues.",
    "textes": [
     "t26"
    ],
@@ -5967,7 +5967,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Plan d'eau de la Chaume.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Plan d'eau de la Chaume.",
    "textes": [
     "t27"
    ],
@@ -5996,7 +5996,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Besbre.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Besbre.",
    "textes": [
     "t27"
    ],
@@ -6025,7 +6025,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Besbre.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Besbre.",
    "textes": [
     "t27"
    ],
@@ -6054,7 +6054,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Besbre.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Besbre.",
    "textes": [
     "t27"
    ],
@@ -6083,7 +6083,7 @@
    "du": "2026-04-09",
    "au": "2026-04-12",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 09/04 au 12/04 2026 : Plan d'eau de Pirot (manifestations AAPPMA Cérilly).",
+   "phrase": "Carpe de nuit prévue du 09/04 au 12/04 2026 : Plan d'eau de Pirot (manifestations AAPPMA Cérilly).",
    "textes": [
     "t28"
    ],
@@ -6112,7 +6112,7 @@
    "du": "2026-06-25",
    "au": "2026-06-28",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 25/06 au 28/06 2026 : Plan d'eau de Pirot (manifestations AAPPMA Cérilly).",
+   "phrase": "Carpe de nuit prévue du 25/06 au 28/06 2026 : Plan d'eau de Pirot (manifestations AAPPMA Cérilly).",
    "textes": [
     "t28"
    ],
@@ -6141,7 +6141,7 @@
    "du": "2026-10-22",
    "au": "2026-10-25",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 22/10 au 25/10 2026 : Plan d'eau de Pirot (manifestations AAPPMA Cérilly).",
+   "phrase": "Carpe de nuit prévue du 22/10 au 25/10 2026 : Plan d'eau de Pirot (manifestations AAPPMA Cérilly).",
    "textes": [
     "t28"
    ],
@@ -6170,7 +6170,7 @@
    "du": "2026-06-11",
    "au": "2026-06-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 11/06 au 14/06 2026 : Plan d'eau de Vieure (enduro Esprit Carpe Montluçonnais).",
+   "phrase": "Carpe de nuit prévue du 11/06 au 14/06 2026 : Plan d'eau de Vieure (enduro Esprit Carpe Montluçonnais).",
    "textes": [
     "t28"
    ],
@@ -6199,7 +6199,7 @@
    "du": "2026-10-01",
    "au": "2026-10-04",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/10 au 04/10 2026 : Plan d'eau de Vieure (enduro AAPPMA).",
+   "phrase": "Carpe de nuit prévue du 01/10 au 04/10 2026 : Plan d'eau de Vieure (enduro AAPPMA).",
    "textes": [
     "t28"
    ],
@@ -6228,7 +6228,7 @@
    "du": "2026-09-17",
    "au": "2026-09-20",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 17/09 au 20/09 2026 : Plan d'eau de Vieure (challenge Esprit Carpe Montluçonnais).",
+   "phrase": "Carpe de nuit prévue du 17/09 au 20/09 2026 : Plan d'eau de Vieure (challenge Esprit Carpe Montluçonnais).",
    "textes": [
     "t28"
    ],
@@ -6257,7 +6257,7 @@
    "du": "2026-01-01",
    "au": "2026-04-19",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 19/04 2026 : Plan d'eau de Vieure (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 19/04 2026 : Plan d'eau de Vieure (autres périodes).",
    "textes": [
     "t28"
    ],
@@ -6286,7 +6286,7 @@
    "du": "2026-05-04",
    "au": "2026-06-07",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 04/05 au 07/06 2026 : Plan d'eau de Vieure (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 04/05 au 07/06 2026 : Plan d'eau de Vieure (autres périodes).",
    "textes": [
     "t28"
    ],
@@ -6315,7 +6315,7 @@
    "du": "2026-09-01",
    "au": "2026-09-13",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/09 au 13/09 2026 : Plan d'eau de Vieure (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/09 au 13/09 2026 : Plan d'eau de Vieure (autres périodes).",
    "textes": [
     "t28"
    ],
@@ -6344,7 +6344,7 @@
    "du": "2026-10-05",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 05/10 au 31/12 2026 : Plan d'eau de Vieure (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 05/10 au 31/12 2026 : Plan d'eau de Vieure (autres périodes).",
    "textes": [
     "t28"
    ],
@@ -6373,7 +6373,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Grand Étang (trois postes sur réservation).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Grand Étang (trois postes sur réservation).",
    "textes": [
     "t28"
    ],
@@ -6402,7 +6402,7 @@
    "du": "2026-04-04",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 04/04 au 31/12 2026 : Plan d'eau de l'Épine.",
+   "phrase": "Carpe de nuit prévue du 04/04 au 31/12 2026 : Plan d'eau de l'Épine.",
    "textes": [
     "t28"
    ],
@@ -6431,7 +6431,7 @@
    "du": "2026-04-03",
    "au": "2026-04-06",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 03/04 au 06/04 2026 : Étang de Tronçais (enduro AAPPMA Saint-Bonnet-Tronçais).",
+   "phrase": "Carpe de nuit prévue du 03/04 au 06/04 2026 : Étang de Tronçais (enduro AAPPMA Saint-Bonnet-Tronçais).",
    "textes": [
     "t28"
    ],
@@ -6460,7 +6460,7 @@
    "du": "2026-05-07",
    "au": "2026-05-10",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 07/05 au 10/05 2026 : Étang de Tronçais (enduro AAPPMA Saint-Bonnet-Tronçais).",
+   "phrase": "Carpe de nuit prévue du 07/05 au 10/05 2026 : Étang de Tronçais (enduro AAPPMA Saint-Bonnet-Tronçais).",
    "textes": [
     "t28"
    ],
@@ -6489,7 +6489,7 @@
    "du": "2026-05-22",
    "au": "2026-05-25",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 22/05 au 25/05 2026 : Étang de Tronçais (enduro AAPPMA Saint-Bonnet-Tronçais).",
+   "phrase": "Carpe de nuit prévue du 22/05 au 25/05 2026 : Étang de Tronçais (enduro AAPPMA Saint-Bonnet-Tronçais).",
    "textes": [
     "t28"
    ],
@@ -6518,7 +6518,7 @@
    "du": "2026-04-03",
    "au": "2026-04-06",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 03/04 au 06/04 2026 : Étang de Saint-Bonnet (enduro AAPPMA Saint-Bonnet-Tronçais).",
+   "phrase": "Carpe de nuit prévue du 03/04 au 06/04 2026 : Étang de Saint-Bonnet (enduro AAPPMA Saint-Bonnet-Tronçais).",
    "textes": [
     "t28"
    ],
@@ -6547,7 +6547,7 @@
    "du": "2026-05-07",
    "au": "2026-05-10",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 07/05 au 10/05 2026 : Étang de Saint-Bonnet (enduro AAPPMA Saint-Bonnet-Tronçais).",
+   "phrase": "Carpe de nuit prévue du 07/05 au 10/05 2026 : Étang de Saint-Bonnet (enduro AAPPMA Saint-Bonnet-Tronçais).",
    "textes": [
     "t28"
    ],
@@ -6576,7 +6576,7 @@
    "du": "2026-05-22",
    "au": "2026-05-25",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 22/05 au 25/05 2026 : Étang de Saint-Bonnet (enduro AAPPMA Saint-Bonnet-Tronçais).",
+   "phrase": "Carpe de nuit prévue du 22/05 au 25/05 2026 : Étang de Saint-Bonnet (enduro AAPPMA Saint-Bonnet-Tronçais).",
    "textes": [
     "t28"
    ],
@@ -6605,7 +6605,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Étang du Moulin (trois postes sur réservation).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Étang du Moulin (trois postes sur réservation).",
    "textes": [
     "t28"
    ],
@@ -6634,7 +6634,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Étang le Pré Verne (trois postes sur réservation).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Étang le Pré Verne (trois postes sur réservation).",
    "textes": [
     "t28"
    ],
@@ -6663,7 +6663,7 @@
    "du": "2026-05-07",
    "au": "2026-05-10",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 07/05 au 10/05 2026 : Étang d'Herculat (enduro Esprit Carpe Montluçonnais).",
+   "phrase": "Carpe de nuit prévue du 07/05 au 10/05 2026 : Étang d'Herculat (enduro Esprit Carpe Montluçonnais).",
    "textes": [
     "t28"
    ],
@@ -6692,7 +6692,7 @@
    "du": "2026-01-01",
    "au": "2026-05-06",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 06/05 2026 : Étang d'Herculat (autres périodes : 3 postes sur réservation).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 06/05 2026 : Étang d'Herculat (autres périodes : 3 postes sur réservation).",
    "textes": [
     "t28"
    ],
@@ -6721,7 +6721,7 @@
    "du": "2026-05-11",
    "au": "2026-06-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 11/05 au 30/06 2026 : Étang d'Herculat (autres périodes : 3 postes sur réservation).",
+   "phrase": "Carpe de nuit prévue du 11/05 au 30/06 2026 : Étang d'Herculat (autres périodes : 3 postes sur réservation).",
    "textes": [
     "t28"
    ],
@@ -6750,7 +6750,7 @@
    "du": "2026-09-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/09 au 31/12 2026 : Étang d'Herculat (autres périodes : 3 postes sur réservation).",
+   "phrase": "Carpe de nuit prévue du 01/09 au 31/12 2026 : Étang d'Herculat (autres périodes : 3 postes sur réservation).",
    "textes": [
     "t28"
    ],
@@ -6779,7 +6779,7 @@
    "du": "2026-08-01",
    "au": "2026-08-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/08 au 31/08 2026 : Aumance.",
+   "phrase": "Carpe de nuit prévue du 01/08 au 31/08 2026 : Aumance.",
    "textes": [
     "t29"
    ],
@@ -6808,7 +6808,7 @@
    "du": "2026-08-01",
    "au": "2026-08-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/08 au 31/08 2026 : Aumance.",
+   "phrase": "Carpe de nuit prévue du 01/08 au 31/08 2026 : Aumance.",
    "textes": [
     "t29"
    ],
@@ -6837,7 +6837,7 @@
    "du": "2026-08-01",
    "au": "2026-08-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/08 au 31/08 2026 : Aumance.",
+   "phrase": "Carpe de nuit prévue du 01/08 au 31/08 2026 : Aumance.",
    "textes": [
     "t29"
    ],
@@ -6866,7 +6866,7 @@
    "du": "2026-03-05",
    "au": "2026-03-08",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 05/03 au 08/03 2026 : Retenue de Rochebut (challenge Esprit Carpe Montluçonnais).",
+   "phrase": "Carpe de nuit prévue du 05/03 au 08/03 2026 : Retenue de Rochebut (challenge Esprit Carpe Montluçonnais).",
    "textes": [
     "t30"
    ],
@@ -6895,7 +6895,7 @@
    "du": "2026-04-03",
    "au": "2026-04-06",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 03/04 au 06/04 2026 : Retenue de Rochebut (enduro Esprit Carpe Montluçonnais).",
+   "phrase": "Carpe de nuit prévue du 03/04 au 06/04 2026 : Retenue de Rochebut (enduro Esprit Carpe Montluçonnais).",
    "textes": [
     "t30"
    ],
@@ -6924,7 +6924,7 @@
    "du": "2026-01-01",
    "au": "2026-03-04",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 04/03 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 04/03 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -6953,7 +6953,7 @@
    "du": "2026-03-09",
    "au": "2026-04-02",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 09/03 au 02/04 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 09/03 au 02/04 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -6982,7 +6982,7 @@
    "du": "2026-04-07",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 07/04 au 31/12 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 07/04 au 31/12 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7011,7 +7011,7 @@
    "du": "2026-01-01",
    "au": "2026-03-04",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 04/03 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 04/03 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7040,7 +7040,7 @@
    "du": "2026-03-09",
    "au": "2026-04-02",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 09/03 au 02/04 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 09/03 au 02/04 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7069,7 +7069,7 @@
    "du": "2026-04-07",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 07/04 au 31/12 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 07/04 au 31/12 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7098,7 +7098,7 @@
    "du": "2026-01-01",
    "au": "2026-03-04",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 04/03 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 04/03 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7127,7 +7127,7 @@
    "du": "2026-03-09",
    "au": "2026-04-02",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 09/03 au 02/04 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 09/03 au 02/04 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7156,7 +7156,7 @@
    "du": "2026-04-07",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 07/04 au 31/12 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 07/04 au 31/12 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7185,7 +7185,7 @@
    "du": "2026-01-01",
    "au": "2026-03-04",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 04/03 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 04/03 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7214,7 +7214,7 @@
    "du": "2026-03-09",
    "au": "2026-04-02",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 09/03 au 02/04 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 09/03 au 02/04 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7243,7 +7243,7 @@
    "du": "2026-04-07",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 07/04 au 31/12 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 07/04 au 31/12 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7272,7 +7272,7 @@
    "du": "2026-01-01",
    "au": "2026-03-04",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 04/03 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 04/03 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7301,7 +7301,7 @@
    "du": "2026-03-09",
    "au": "2026-04-02",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 09/03 au 02/04 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 09/03 au 02/04 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7330,7 +7330,7 @@
    "du": "2026-04-07",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 07/04 au 31/12 2026 : Retenue de Rochebut (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 07/04 au 31/12 2026 : Retenue de Rochebut (autres périodes).",
    "textes": [
     "t30"
    ],
@@ -7359,7 +7359,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Cher.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Cher.",
    "textes": [
     "t30"
    ],
@@ -7388,7 +7388,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Canal de Berry.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Canal de Berry.",
    "textes": [
     "t30"
    ],
@@ -7417,7 +7417,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Sablière MJC.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Sablière MJC.",
    "textes": [
     "t30"
    ],
@@ -7446,7 +7446,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Sablière « le Blockhauss ».",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Sablière « le Blockhauss ».",
    "textes": [
     "t30"
    ],
@@ -7475,7 +7475,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Sablières « La Mitte ».",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Sablières « La Mitte ».",
    "textes": [
     "t30"
    ],
@@ -7504,7 +7504,7 @@
    "du": "2026-04-10",
    "au": "2026-04-12",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 10/04 au 12/04 2026 : Plan d'eau des Champins (enduro AAPPMA).",
+   "phrase": "Carpe de nuit prévue du 10/04 au 12/04 2026 : Plan d'eau des Champins (enduro AAPPMA).",
    "textes": [
     "t31"
    ],
@@ -7533,7 +7533,7 @@
    "du": "2026-01-01",
    "au": "2026-04-09",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 09/04 2026 : Plan d'eau des Champins (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 09/04 2026 : Plan d'eau des Champins (autres périodes).",
    "textes": [
     "t31"
    ],
@@ -7562,7 +7562,7 @@
    "du": "2026-04-13",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 13/04 au 31/12 2026 : Plan d'eau des Champins (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 13/04 au 31/12 2026 : Plan d'eau des Champins (autres périodes).",
    "textes": [
     "t31"
    ],
@@ -7591,7 +7591,7 @@
    "du": "2026-04-10",
    "au": "2026-04-12",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 10/04 au 12/04 2026 : Plan d'eau des Ozières (enduro AAPPMA).",
+   "phrase": "Carpe de nuit prévue du 10/04 au 12/04 2026 : Plan d'eau des Ozières (enduro AAPPMA).",
    "textes": [
     "t31"
    ],
@@ -7620,7 +7620,7 @@
    "du": "2026-09-25",
    "au": "2026-09-27",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 25/09 au 27/09 2026 : Plan d'eau des Ozières (enduro AAPPMA).",
+   "phrase": "Carpe de nuit prévue du 25/09 au 27/09 2026 : Plan d'eau des Ozières (enduro AAPPMA).",
    "textes": [
     "t31"
    ],
@@ -7649,7 +7649,7 @@
    "du": "2026-04-10",
    "au": "2026-04-12",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 10/04 au 12/04 2026 : Plan d'eau des Champvallier (enduro AAPPMA).",
+   "phrase": "Carpe de nuit prévue du 10/04 au 12/04 2026 : Plan d'eau des Champvallier (enduro AAPPMA).",
    "textes": [
     "t31"
    ],
@@ -7678,7 +7678,7 @@
    "du": "2026-05-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/05 au 31/12 2026 : Plan d'eau des Champvallier (autres périodes sur quatre postes (voir plan sur site)).",
+   "phrase": "Carpe de nuit prévue du 01/05 au 31/12 2026 : Plan d'eau des Champvallier (autres périodes sur quatre postes (voir plan sur site)).",
    "textes": [
     "t31"
    ],
@@ -7707,7 +7707,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Plan d'eau « les Champs de l'Île ».",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Plan d'eau « les Champs de l'Île ».",
    "textes": [
     "t31"
    ],
@@ -7736,7 +7736,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Plan d'eau du Rio de Bessay.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Plan d'eau du Rio de Bessay.",
    "textes": [
     "t31"
    ],
@@ -7765,7 +7765,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t31"
    ],
@@ -7794,7 +7794,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t31"
    ],
@@ -7823,7 +7823,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t31"
    ],
@@ -7852,7 +7852,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t31"
    ],
@@ -7881,7 +7881,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t31"
    ],
@@ -7910,7 +7910,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t32"
    ],
@@ -7939,7 +7939,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t32"
    ],
@@ -7968,7 +7968,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t32"
    ],
@@ -7997,7 +7997,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t33"
    ],
@@ -8026,7 +8026,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t34"
    ],
@@ -8055,7 +8055,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t34"
    ],
@@ -8084,7 +8084,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t35"
    ],
@@ -8113,7 +8113,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t35"
    ],
@@ -8142,7 +8142,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t36"
    ],
@@ -8171,7 +8171,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Allier.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Allier.",
    "textes": [
     "t36"
    ],
@@ -8200,7 +8200,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Retenue EDF de Châtel-Montagne.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Retenue EDF de Châtel-Montagne.",
    "textes": [
     "t37"
    ],
@@ -8229,7 +8229,7 @@
    "du": "2026-10-29",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 29/10 au 01/11 2026 : Allier (challenge Esprit Carpe Montluçon).",
+   "phrase": "Carpe de nuit prévue du 29/10 au 01/11 2026 : Allier (challenge Esprit Carpe Montluçon).",
    "textes": [
     "t32"
    ],
@@ -8258,7 +8258,7 @@
    "du": "2026-08-30",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 30/08 au 30/11 2026 : Boire des Carrés.",
+   "phrase": "Carpe de nuit prévue du 30/08 au 30/11 2026 : Boire des Carrés.",
    "textes": [
     "t32"
    ],
@@ -8287,7 +8287,7 @@
    "du": "2026-03-13",
    "au": "2026-04-19",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 13/03 au 19/04 2026 : Sioule.",
+   "phrase": "Carpe de nuit prévue du 13/03 au 19/04 2026 : Sioule.",
    "textes": [
     "t38"
    ],
@@ -8316,7 +8316,7 @@
    "du": "2026-09-11",
    "au": "2026-10-18",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 11/09 au 18/10 2026 : Sioule.",
+   "phrase": "Carpe de nuit prévue du 11/09 au 18/10 2026 : Sioule.",
    "textes": [
     "t38"
    ],
@@ -8345,7 +8345,7 @@
    "du": "2026-03-13",
    "au": "2026-04-19",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 13/03 au 19/04 2026 : Sioule.",
+   "phrase": "Carpe de nuit prévue du 13/03 au 19/04 2026 : Sioule.",
    "textes": [
     "t38"
    ],
@@ -8374,7 +8374,7 @@
    "du": "2026-09-11",
    "au": "2026-10-18",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 11/09 au 18/10 2026 : Sioule.",
+   "phrase": "Carpe de nuit prévue du 11/09 au 18/10 2026 : Sioule.",
    "textes": [
     "t38"
    ],
@@ -8403,7 +8403,7 @@
    "du": "2026-06-18",
    "au": "2026-06-21",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 18/06 au 21/06 2026 : Sioule (enduro).",
+   "phrase": "Carpe de nuit prévue du 18/06 au 21/06 2026 : Sioule (enduro).",
    "textes": [
     "t38"
    ],
@@ -8432,7 +8432,7 @@
    "du": "2026-03-13",
    "au": "2026-04-19",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 13/03 au 19/04 2026 : Étang de Gouzolles.",
+   "phrase": "Carpe de nuit prévue du 13/03 au 19/04 2026 : Étang de Gouzolles.",
    "textes": [
     "t38"
    ],
@@ -8461,7 +8461,7 @@
    "du": "2026-09-11",
    "au": "2026-10-18",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 11/09 au 18/10 2026 : Étang de Gouzolles.",
+   "phrase": "Carpe de nuit prévue du 11/09 au 18/10 2026 : Étang de Gouzolles.",
    "textes": [
     "t38"
    ],
@@ -8490,7 +8490,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Cher.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Cher.",
    "textes": [
     "t39"
    ],
@@ -8519,7 +8519,7 @@
    "du": "2026-05-23",
    "au": "2026-05-25",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 23/05 au 25/05 2026 : Bief du canal de Berry (enduro AAPPMA).",
+   "phrase": "Carpe de nuit prévue du 23/05 au 25/05 2026 : Bief du canal de Berry (enduro AAPPMA).",
    "textes": [
     "t40"
    ],
@@ -8548,7 +8548,7 @@
    "du": "2026-01-01",
    "au": "2026-05-17",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 17/05 2026 : Bief du canal de Berry (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 17/05 2026 : Bief du canal de Berry (autres périodes).",
    "textes": [
     "t40"
    ],
@@ -8577,7 +8577,7 @@
    "du": "2026-05-26",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 26/05 au 31/12 2026 : Bief du canal de Berry (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 26/05 au 31/12 2026 : Bief du canal de Berry (autres périodes).",
    "textes": [
     "t40"
    ],
@@ -8606,7 +8606,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 31/12 2026 : Cher.",
+   "phrase": "Carpe de nuit prévue du 01/01 au 31/12 2026 : Cher.",
    "textes": [
     "t40"
    ],
@@ -8635,7 +8635,7 @@
    "du": "2026-05-01",
    "au": "2026-05-03",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/05 au 03/05 2026 : Boires Cluzel (enduro AAPPMA catégorie féminine).",
+   "phrase": "Carpe de nuit prévue du 01/05 au 03/05 2026 : Boires Cluzel (enduro AAPPMA catégorie féminine).",
    "textes": [
     "t34"
    ],
@@ -8664,7 +8664,7 @@
    "du": "2026-09-04",
    "au": "2026-09-06",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 04/09 au 06/09 2026 : Boires Cluzel (enduro AAPPMA).",
+   "phrase": "Carpe de nuit prévue du 04/09 au 06/09 2026 : Boires Cluzel (enduro AAPPMA).",
    "textes": [
     "t34"
    ],
@@ -8693,7 +8693,7 @@
    "du": "2026-01-01",
    "au": "2026-04-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 30/04 2026 : Boires Cluzel (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 30/04 2026 : Boires Cluzel (autres périodes).",
    "textes": [
     "t34"
    ],
@@ -8722,7 +8722,7 @@
    "du": "2026-05-04",
    "au": "2026-05-29",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 04/05 au 29/05 2026 : Boires Cluzel (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 04/05 au 29/05 2026 : Boires Cluzel (autres périodes).",
    "textes": [
     "t34"
    ],
@@ -8751,7 +8751,7 @@
    "du": "2026-05-31",
    "au": "2026-06-19",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 31/05 au 19/06 2026 : Boires Cluzel (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 31/05 au 19/06 2026 : Boires Cluzel (autres périodes).",
    "textes": [
     "t34"
    ],
@@ -8780,7 +8780,7 @@
    "du": "2026-06-21",
    "au": "2026-09-03",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 21/06 au 03/09 2026 : Boires Cluzel (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 21/06 au 03/09 2026 : Boires Cluzel (autres périodes).",
    "textes": [
     "t34"
    ],
@@ -8809,7 +8809,7 @@
    "du": "2026-09-07",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 07/09 au 31/12 2026 : Boires Cluzel (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 07/09 au 31/12 2026 : Boires Cluzel (autres périodes).",
    "textes": [
     "t34"
    ],
@@ -8838,7 +8838,7 @@
    "du": "2026-08-01",
    "au": "2026-08-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/08 au 31/08 2026 : Canal de Berry.",
+   "phrase": "Carpe de nuit prévue du 01/08 au 31/08 2026 : Canal de Berry.",
    "textes": [
     "t41"
    ],
@@ -8867,7 +8867,7 @@
    "du": "2026-04-03",
    "au": "2026-04-06",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 03/04 au 06/04 2026 : Boire et recul Pierre Talon (Trophée de Pâques).",
+   "phrase": "Carpe de nuit prévue du 03/04 au 06/04 2026 : Boire et recul Pierre Talon (Trophée de Pâques).",
    "textes": [
     "t36"
    ],
@@ -8896,7 +8896,7 @@
    "du": "2026-11-06",
    "au": "2026-11-08",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 06/11 au 08/11 2026 : Boire et recul Pierre Talon (enduro Carpe Run).",
+   "phrase": "Carpe de nuit prévue du 06/11 au 08/11 2026 : Boire et recul Pierre Talon (enduro Carpe Run).",
    "textes": [
     "t36"
    ],
@@ -8925,7 +8925,7 @@
    "du": "2026-01-01",
    "au": "2026-04-02",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/01 au 02/04 2026 : Boire et recul Pierre Talon (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/01 au 02/04 2026 : Boire et recul Pierre Talon (autres périodes).",
    "textes": [
     "t36"
    ],
@@ -8954,7 +8954,7 @@
    "du": "2026-04-07",
    "au": "2026-06-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 07/04 au 30/06 2026 : Boire et recul Pierre Talon (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 07/04 au 30/06 2026 : Boire et recul Pierre Talon (autres périodes).",
    "textes": [
     "t36"
    ],
@@ -8983,7 +8983,7 @@
    "du": "2026-09-01",
    "au": "2026-11-05",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 01/09 au 05/11 2026 : Boire et recul Pierre Talon (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 01/09 au 05/11 2026 : Boire et recul Pierre Talon (autres périodes).",
    "textes": [
     "t36"
    ],
@@ -9012,7 +9012,7 @@
    "du": "2026-11-09",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 09/11 au 31/12 2026 : Boire et recul Pierre Talon (autres périodes).",
+   "phrase": "Carpe de nuit prévue du 09/11 au 31/12 2026 : Boire et recul Pierre Talon (autres périodes).",
    "textes": [
     "t36"
    ],
@@ -9127,7 +9127,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure sur canaux et Loire : seule la pêche à la ligne à la calée avec des esches végétales est permise.",
+   "phrase": "Carpe à toute heure sur canaux et Loire : seule la pêche à la ligne à la calée avec des esches végétales est prévue.",
    "textes": [
     "t44"
    ],

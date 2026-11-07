@@ -2121,7 +2121,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "On pêche de une demi-heure avant le lever du soleil à une demi-heure après son coucher (sauf truite de mer sur la Canche et l'Authie, et carpe de nuit autorisée).",
+   "phrase": "On pêche de une demi-heure avant le lever du soleil à une demi-heure après son coucher (sauf truite de mer sur la Canche et l'Authie, et carpe de nuit prévue).",
    "textes": [
     "t7"
    ],
@@ -2150,7 +2150,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur la Canche, la truite de mer peut se pêcher jusqu'à deux heures après le coucher du soleil.",
+   "phrase": "Sur la Canche, pêche de la truite de mer prévue jusqu'à deux heures après le coucher du soleil.",
    "textes": [
     "t8"
    ],
@@ -2179,7 +2179,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur l'Authie, la truite de mer peut se pêcher jusqu'à deux heures après le coucher du soleil.",
+   "phrase": "Sur l'Authie, pêche de la truite de mer prévue jusqu'à deux heures après le coucher du soleil.",
    "textes": [
     "t8"
    ],
@@ -2851,7 +2851,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Truite de mer : capture autorisée par l'arrêté sur l'Authie, en aval du pont de la N25 à Doullens jusqu'à Pont-à-Cailloux.",
+   "phrase": "Truite de mer : capture prévue par l'arrêté sur l'Authie, en aval du pont de la N25 à Doullens jusqu'à Pont-à-Cailloux.",
    "textes": [
     "t14"
    ],
@@ -2880,7 +2880,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Truite de mer : capture autorisée par l'arrêté sur la Canche, en aval du barrage de la SARL SEMG jusqu'au pont SNCF d'Etaples.",
+   "phrase": "Truite de mer : capture prévue par l'arrêté sur la Canche, en aval du barrage de la SARL SEMG jusqu'au pont SNCF d'Etaples.",
    "textes": [
     "t14"
    ],
@@ -3398,7 +3398,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le parcours fédéral Canche (Maresquel-Ecquemicourt), seul l'hameçon simple est permis.",
+   "phrase": "Sur le parcours fédéral Canche (Maresquel-Ecquemicourt), seul l'hameçon simple est prévu.",
    "textes": [
     "t17"
    ],
@@ -3452,7 +3452,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le parcours fédéral Canche (Frévent), seul l'hameçon simple est permis.",
+   "phrase": "Sur le parcours fédéral Canche (Frévent), seul l'hameçon simple est prévu.",
    "textes": [
     "t17"
    ],
@@ -3506,7 +3506,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le parcours fédéral Course et Baillons (Beussent), seul l'hameçon simple est permis.",
+   "phrase": "Sur le parcours fédéral Course et Baillons (Beussent), seul l'hameçon simple est prévu.",
    "textes": [
     "t17"
    ],
@@ -3560,7 +3560,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le parcours fédéral Créquoise (Offin), seul l'hameçon simple est permis.",
+   "phrase": "Sur le parcours fédéral Créquoise (Offin), seul l'hameçon simple est prévu.",
    "textes": [
     "t17"
    ],
@@ -3614,7 +3614,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le parcours fédéral Créquoise (Loison-sur-Créquoise), seul l'hameçon simple est permis.",
+   "phrase": "Sur le parcours fédéral Créquoise (Loison-sur-Créquoise), seul l'hameçon simple est prévu.",
    "textes": [
     "t17"
    ],
@@ -3668,7 +3668,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le parcours fédéral Créquoise (Beaurainville), seul l'hameçon simple est permis.",
+   "phrase": "Sur le parcours fédéral Créquoise (Beaurainville), seul l'hameçon simple est prévu.",
    "textes": [
     "t17"
    ],
@@ -3722,7 +3722,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le parcours fédéral Aa (Esquerdes), seul l'hameçon simple est permis.",
+   "phrase": "Sur le parcours fédéral Aa (Esquerdes), seul l'hameçon simple est prévu.",
    "textes": [
     "t17"
    ],
@@ -3776,7 +3776,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le parcours fédéral Aa (Wizernes), seul l'hameçon simple est permis.",
+   "phrase": "Sur le parcours fédéral Aa (Wizernes), seul l'hameçon simple est prévu.",
    "textes": [
     "t17"
    ],
@@ -3830,7 +3830,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le parcours fédéral Lys (Delettes), seul l'hameçon simple est permis.",
+   "phrase": "Sur le parcours fédéral Lys (Delettes), seul l'hameçon simple est prévu.",
    "textes": [
     "t17"
    ],
@@ -3884,7 +3884,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le parcours fédéral Lawe (Bruay-la-Buissière), seul l'hameçon simple est permis.",
+   "phrase": "Sur le parcours fédéral Lawe (Bruay-la-Buissière), seul l'hameçon simple est prévu.",
    "textes": [
     "t17"
    ],
@@ -4735,7 +4735,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La carpe de nuit n'est permise que sur les parcours d'un arrêté préfectoral annuel distinct ; hors de ce cadre, elle est interdite.",
+   "phrase": "La carpe de nuit n'est prévue que sur les parcours d'un arrêté préfectoral annuel distinct ; hors de ce cadre, elle est interdite.",
    "textes": [
     "t27"
    ],
