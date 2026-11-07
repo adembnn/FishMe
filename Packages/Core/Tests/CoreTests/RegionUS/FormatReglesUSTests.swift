@@ -143,7 +143,7 @@ struct FormatReglesUSTests {
         let idx = try chargeur.index()
         #expect(idx.format == 1 && idx.niveau1?.fichier == "etats.json")
         let n1 = try Niveau1US.charger(source: SourceDossier(dossier: dossier))
-        #expect(n1.etats.count == 51 && n1.etatDeLaDonnee?.contains("NY") == true)
+        #expect(n1.etats.count == 51 && n1.etatDeLaDonnee?.contains("relus") == true)
         let tout = chargeur.tout()
         #expect(tout.erreurs.isEmpty)
         // Depuis le lot us-consensus (7 nov.), l'index liste les États confirmés par double lecture (WI, MN) : chacun se charge.

@@ -38,7 +38,9 @@ class TestEtats(unittest.TestCase):
     def test_bilan(self):
         b = verifier.bilan(D)
         self.assertEqual(b["complets"] + b["partiels"] + b["vides"], 51)
-        self.assertEqual(b["verifie"], 3)
+        # Le nombre d'États vérifiés évolue avec les relectures (3 le 7 nov. au matin, plus après outils/us/etats/verifs/) :
+        # le test vérifie la cohérence du bilan avec les drapeaux, pas un chiffre figé.
+        self.assertEqual(b["verifie"], sum(1 for e in D["etats"] if e["verifie"]))
 
 if __name__ == "__main__":
     unittest.main()

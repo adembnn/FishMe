@@ -8,7 +8,7 @@ Lot us-format, 7 nov. 2026. Code Swift : `Packages/Core/Sources/Core/RegionUS/` 
 |---|---|
 | `index.json` | États présents, niveau de couverture, date, version de format, somme sha256 de chaque fichier, marque `etat-de-la-donnee` du niveau 1 |
 | `<USPS>.json` | Règles d'un État (une fois confirmées par la double lecture ou par une personne) |
-| `etats.json` | Niveau 1 : copie **telle quelle** du fichier du lot us-etats (51 entrées, 3 États relus : NY, TX, VA) |
+| `etats.json` | Niveau 1 : copie **telle quelle** du fichier du lot us-etats (51 entrées ; 32 États relus sur une page officielle le 7 nov. 2026, voir outils/us/etats/verifs/) |
 
 Livrés par le lot us-consensus (7 nov.) : `WI.json` (30 règles) et `MN.json` (55 règles), générés par `python3 -I outils/us/format/vers_regles_us.py WI MN` depuis `outils/us/regles/donnees/<USPS>/consensus.json`.
 

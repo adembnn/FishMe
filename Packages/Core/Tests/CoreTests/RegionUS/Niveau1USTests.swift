@@ -71,13 +71,17 @@ struct Niveau1USTests {
         #expect(throws: ErreurNiveau1US.self) { try Niveau1US.decoder(Data("pas du json".utf8)) }
     }
 
-    @Test("Copie embarquée de etats.json : 51 entrées, 3 États vérifiés, aucun prix d'un État non vérifié présenté comme officiel")
+    @Test("Copie embarquée de etats.json : 51 entrées, États vérifiés = ceux du fichier, aucun prix d'un État non vérifié présenté comme officiel")
     func copieEmbarquee() throws {
         let dossier = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
             .appendingPathComponent("../Sources/Core/Resources/regles-us").standardized
         let n1 = try Niveau1US.charger(source: SourceDossier(dossier: dossier))
         #expect(n1.etats.count == 51)
-        #expect(Set(n1.verifies.map(\.code.rawValue)) == ["NY", "TX", "VA"])
+        // Les États vérifiés évoluent avec les relectures (outils/us/etats/verifs/) : on compare au fichier, pas à une liste figée.
+        let brut = try JSONSerialization.jsonObject(with: Data(contentsOf: dossier.appendingPathComponent("etats.json"))) as? [String: Any]
+        let attendus = Set((brut?["etats"] as? [[String: Any]] ?? []).filter { ($0["verifie"] as? Bool) == true }.compactMap { $0["usps"] as? String })
+        #expect(attendus.count >= 3)
+        #expect(Set(n1.verifies.map(\.code.rawValue)) == attendus)
         for e in n1.etats {
             for p in [e.prixResident, e.prixNonResident].compactMap({ $0 }) where !e.verifie {
                 #expect(e.presentation(de: p) != .officielVerifie)
