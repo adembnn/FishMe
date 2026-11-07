@@ -487,10 +487,10 @@ final class ParcoursApp {
             onglet = .pescedex
         case "ami":
             // L21 : fishme://ami/<id> ; la page Amis lit le relais et montre le profil.
-            if RelaisLienAmi.partage.recevoir(url) { onglet = .club }
+            if ReglagesCommunaute.reseauActif(), RelaisLienAmi.partage.recevoir(url) { onglet = .club }
         case "club":
             // L22 : fishme://club/<id> ; la page Club montre la feuille « Rejoindre » (`RelaisLienClub`).
-            if RelaisLienClub.partage.recevoir(url) { onglet = .club }
+            if ReglagesCommunaute.reseauActif(), RelaisLienClub.partage.recevoir(url) { onglet = .club }
         default:
             break
         }
@@ -985,7 +985,7 @@ private struct RacineContenu: View {
             // L24 : un lien de conversation (ami ou club) reçu par iCloud : accepté par le chat, puis la liste des messages s'ouvre.
             // `initial: true` couvre le lancement à froid par le lien. // ⚠ à vérifier
             .onChange(of: RelaisChat.partage.enAttente != nil, initial: true) { _, present in
-                guard present, let invitation = RelaisChat.partage.enAttente else { return }
+                guard present, ReglagesCommunaute.reseauActif(), let invitation = RelaisChat.partage.enAttente else { return }
                 RelaisChat.partage.solder()
                 app.onglet = .club
                 Task {
@@ -1017,8 +1017,10 @@ private struct RacineContenu: View {
             Tab("Carte", systemImage: "map.fill", value: Onglet.carte) {
                 carte
             }
-            Tab("Communauté", systemImage: "person.2.fill", value: Onglet.club) {
-                club
+            if ReglagesCommunaute.afficherOnglet {
+                Tab("Communauté", systemImage: "person.2.fill", value: Onglet.club) {
+                    if ReglagesCommunaute.reseauActif() { club } else { CommunauteBientotView() }
+                }
             }
         }
         // Pendant la session en plein écran, la barre d'onglets se range : l'écran du chrono est à lui seul.
@@ -1139,7 +1141,7 @@ private struct RacineContenu: View {
             },
             voirLaCarte: { app.sansPositionAffiche = false },
             ouvrirPescedex: { app.onglet = .pescedex },
-            ouvrirAmis: SauvegardeICloud.actif ? { app.onglet = .club } : nil,
+            ouvrirAmis: SauvegardeICloud.actif && ReglagesCommunaute.reseauActif() ? { app.onglet = .club } : nil,
             compteurPescedex: app.pescedex.map { m in "\(m.emplacements.filter { $0.carte != nil }.count)" },
             codeZone: app.spotCourant.flatMap { $0.departement.estInconnu ? nil : $0.departement.code })
     }
