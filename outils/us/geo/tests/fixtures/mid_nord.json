@@ -1,0 +1,37 @@
+{
+  "_note": "Extraits réduits de réponses réelles (7-8 nov. 2026) : NY DEC Trout Stream Fishing Access, NJDEP Great Fishing Close to Home et NJ Public Access Locations, PFBC Access (PASDA).",
+  "ny_trout": [
+    {"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [[[-73.6840, 44.9295], [-73.6838, 44.9295], [-73.6838, 44.9305], [-73.6840, 44.9305], [-73.6840, 44.9295]]]},
+     "properties": {"OBJECTID": 1, "WATER": "North Branch Great Chazy", "AGENCY": "NYS DEC - Public Fishing Rights", "COMMENTS": "ne pas copier"}}
+  ],
+  "ny_lancement": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.7417, 42.6570]},
+     "properties": {"OBJECTID": 1, "COUNTY": "Albany", "WATERBODY": "Hudson River", "ACCESS_TYP": "Hard surface launch", "AGENCY": "Municipal"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.7298, 42.8197]},
+     "properties": {"OBJECTID": 2, "COUNTY": "Albany", "WATERBODY": "Mohawk River", "ACCESS_TYP": "Hand launch", "AGENCY": "Municipal"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.0, 42.0]},
+     "properties": {"OBJECTID": 3, "COUNTY": "X", "WATERBODY": "Lac privé", "ACCESS_TYP": "Hard surface launch", "AGENCY": "Private"}}
+  ],
+  "nj_lacs": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.2329, 41.1040]},
+     "properties": {"OBJECTID": 296, "WATERBODY": "Brushwood Pond", "OWNER": "State", "CAR_TOP_LAUNCH": "Y", "BOAT_RAMP": null, "CONTACT": "ne pas copier", "ID": 28}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.8253, 39.1957]},
+     "properties": {"OBJECTID": 2, "WATERBODY": "Dennisville Lake", "OWNER": "Municipal", "BOAT_RAMP": "Y", "ID": 65}}
+  ],
+  "nj_marees": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.1633, 40.7436]},
+     "properties": {"OBJECTID": 16326, "PA_ID": "HART00215", "STREET": "Sussex St", "FISHING": "Yes", "BOATLNCH": "No", "PIER": "No", "SHORELINE": "River", "COUNTY_LAB": "Hudson County", "MUN_LABEL": "Harrison Township", "COMMENTS": "ne pas copier", "REVIEW_TYPE": "Public"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.0, 40.0]},
+     "properties": {"OBJECTID": 2, "PA_ID": "X1", "STREET": "Bay Ave", "FISHING": "No", "BOATLNCH": "Yes", "PIER": "No", "SHORELINE": "Bay", "COUNTY_LAB": "Ocean County", "MUN_LABEL": "Toms River", "REVIEW_TYPE": "Public"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.0, 40.1]},
+     "properties": {"OBJECTID": 3, "PA_ID": "X2", "STREET": "Vue seule", "FISHING": "No", "BOATLNCH": "No", "PIER": "No", "REVIEW_TYPE": "Public"}}
+  ],
+  "pa_pfbc": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-75.9663, 40.5609]},
+     "properties": {"OBJECTID": 1, "ID_NO": 937, "LOCATION_U": "access area", "COUNTY": "Berks", "WATERBODY": "Kaercher Creek Dam", "OWNER": "PFBC", "ACC_NAME": "Kaercher Creek", "RAMP": "Y", "SHORE_FISH": "Y", "PIER": "Y"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.2082, 39.9050]},
+     "properties": {"OBJECTID": 2, "ID_NO": 0, "LOCATION_U": "Fishing Only", "COUNTY": "Greene", "WATERBODY": "Wisecarver Reservoir", "OWNER": "PGC", "ACC_NAME": " ", "RAMP": "N", "SHORE_FISH": " "}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.1, 39.8]},
+     "properties": {"OBJECTID": 3, "ID_NO": 0, "LOCATION_U": "access area", "COUNTY": "Greene", "WATERBODY": "Ruisseau", "RAMP": "N", "SHORE_FISH": "N", "HP": "Y"}}
+  ]
+}
