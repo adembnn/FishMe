@@ -1,0 +1,12 @@
+{
+ "format": 1,
+ "version": "2026-11-07.1",
+ "date": "2026-11-07",
+ "etats": {},
+ "niveau1": {
+  "fichier": "etats.json",
+  "etat_de_la_donnee": "Copie telle quelle du fichier du lot us-etats, lue le 2026-11-07 : 51 entrées, seuls NY, TX et VA relus par un humain ; tous les autres prix sont non vérifiés (sources tierces ou éditeur) et ne se présentent jamais comme officiels.",
+  "date": "2026-11-07",
+  "sha256": "9ec267233752d8ccd9c2f43d75fb31dc90c6279656dd20c1bfd504ca55abfe73"
+ }
+}
