@@ -1,0 +1,47 @@
+{
+ "usps": "CA",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://wildlife.ca.gov/",
+  "statut_http": 0,
+  "url_finale": "https://wildlife.ca.gov/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://wildlife.ca.gov/Fishing/Inland/Regulations",
+  "statut_http": 0,
+  "url_finale": "https://wildlife.ca.gov/Fishing/Inland/Regulations"
+ },
+ "url_permis": {
+  "url": "https://wildlife.ca.gov/Licensing/Fishing",
+  "statut_http": 0,
+  "url_finale": "https://wildlife.ca.gov/Licensing/Fishing"
+ },
+ "prix_resident": {
+  "montant_usd": null,
+  "url_source": null,
+  "citation": null,
+  "qualite": "tiers",
+  "note": "Non lu : connexion refusée (ECONNREFUSED) vers wildlife.ca.gov et nrm.dfg.ca.gov depuis cette machine, WebFetch et curl. Un résultat de recherche affiche 'CDFW 2026 Sport Fishing Items and Fees' à 64,54 [?]"
+ },
+ "prix_non_resident": {
+  "montant_usd": null,
+  "url_source": null,
+  "citation": null,
+  "qualite": "tiers",
+  "note": "Non lu. Idem : 174,14 cité par recherche [?]"
+ },
+ "timbres": [],
+ "appli_officielle": {
+  "nom": "[?]",
+  "url": null
+ },
+ "reciprocite_eaux_tribales": null,
+ "licence_reutilisation": null,
+ "verifie": false,
+ "raison": "Hôtes CDFW injoignables (connexion refusée) ; aucune page officielle lue.",
+ "notes": "Licence CA = 365 jours depuis l'achat. 64,54 / 174,14 cités par recherche web pour 2026 (accord de plusieurs résultats mais aucune lecture officielle) [?]. À retenter depuis un autre réseau.",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "non vérifié"
+ }
+}

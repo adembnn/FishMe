@@ -1,0 +1,63 @@
+{
+ "usps": "AK",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://www.adfg.alaska.gov/",
+  "statut_http": 200,
+  "url_finale": "https://www.adfg.alaska.gov/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://www.adfg.alaska.gov/index.cfm?adfg=fishregulations.main",
+  "statut_http": 200,
+  "url_finale": "https://www.adfg.alaska.gov/index.cfm?adfg=fishregulations.main"
+ },
+ "url_permis": {
+  "url": "https://www.adfg.alaska.gov/index.cfm?adfg=license.pricinglist",
+  "statut_http": 200,
+  "url_finale": "https://www.adfg.alaska.gov/index.cfm?adfg=license.pricinglist"
+ },
+ "prix_resident": {
+  "montant_usd": 20,
+  "url_source": "https://www.adfg.alaska.gov/index.cfm?adfg=license.pricinglist",
+  "citation": "Resident Annual Sport Fishing License $20.00",
+  "qualite": "officielle",
+  "note": null
+ },
+ "prix_non_resident": {
+  "montant_usd": 100,
+  "url_source": "https://www.adfg.alaska.gov/index.cfm?adfg=license.pricinglist",
+  "citation": "Nonresident Annual Sport Fishing License $100.00",
+  "qualite": "officielle",
+  "note": null
+ },
+ "timbres": [
+  {
+   "nom": "timbre roi (king salmon) résident annuel",
+   "montant_usd": 10,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "timbre roi non-résident annuel",
+   "montant_usd": 100,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "timbre roi non-résident 1/3/7/14 jours",
+   "montant_usd": "15/30/45/75",
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": "[?]",
+  "url": null
+ },
+ "reciprocite_eaux_tribales": "Liste des prix : timbre roi réciproque Yukon (étranger) 10 USD. Rien d'autre lu.",
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison": "Deux prix lus sur la liste officielle ADF&G le 2026-11-07. La page ne porte pas d'année (liste en vigueur, pas de millésime affiché).",
+ "notes": "Boutique : https://www.adfg.alaska.gov/store/. Corrige 20/100 : confirmés (qualité tiers -> officielle). Timbres roi ajoutés.",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "officielle"
+ }
+}

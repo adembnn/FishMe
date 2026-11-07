@@ -1,0 +1,53 @@
+{
+ "usps": "ND",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://gf.nd.gov/",
+  "statut_http": 200,
+  "url_finale": "https://gf.nd.gov/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://gf.nd.gov/fishing",
+  "statut_http": 200,
+  "url_finale": "https://gf.nd.gov/fishing"
+ },
+ "url_permis": {
+  "url": "https://gf.nd.gov/licensing/resident",
+  "statut_http": 200,
+  "url_finale": "https://gf.nd.gov/licensing/resident"
+ },
+ "prix_resident": {
+  "montant_usd": 27,
+  "url_source": "https://gf.nd.gov/licensing/resident",
+  "citation": "Fishing License (ages 16 and older) $27, plus $2 Fishing, Hunting, Furbearer Certificate",
+  "qualite": "officielle",
+  "note": null
+ },
+ "prix_non_resident": {
+  "montant_usd": 68,
+  "url_source": "https://gf.nd.gov/licensing/nonresident",
+  "citation": "Individual Season Fishing (ages 16 and older) $68, plus $5 Fishing, Hunting, Furbearer Certificate",
+  "qualite": "officielle",
+  "note": null
+ },
+ "timbres": [
+  {
+   "nom": "tag paddlefish résident (+ licence)",
+   "montant_usd": 15,
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": "[?]",
+  "url": null
+ },
+ "reciprocite_eaux_tribales": null,
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison": "Deux prix lus sur les pages officielles NDGF le 2026-11-07 ; licences valables du 1er avril au 31 mars. Pages sans millésime des tarifs (pied de page 2025).",
+ "notes": "CORRECTION importante : 27 (+2 certificat) / 68 (+5 certificat) officiels contre 18/48 (tiers). Résident 65+ : 10. url_permis était null : remplie.",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "officielle"
+ }
+}

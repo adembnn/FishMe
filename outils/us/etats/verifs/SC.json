@@ -1,0 +1,47 @@
+{
+ "usps": "SC",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://www.dnr.sc.gov/",
+  "statut_http": 200,
+  "url_finale": "https://www.dnr.sc.gov/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://www.dnr.sc.gov/fish/",
+  "statut_http": 403,
+  "url_finale": "https://www.dnr.sc.gov/fish/"
+ },
+ "url_permis": {
+  "url": "https://dnr.sc.gov/licenses/pricingresident.html",
+  "statut_http": 200,
+  "url_finale": "https://dnr.sc.gov/licenses/pricingresident.html"
+ },
+ "prix_resident": {
+  "montant_usd": 10,
+  "url_source": "https://dnr.sc.gov/licenses/pricingresident.html",
+  "citation": "Freshwater Fishing License $10.00 ... Valid 1 year from date of purchase",
+  "qualite": "officielle",
+  "note": null
+ },
+ "prix_non_resident": {
+  "montant_usd": 35,
+  "url_source": "https://dnr.sc.gov/licenses/pricingnonresident.html",
+  "citation": "Freshwater Fishing License $35.00 ... Valid 1 year from date of purchase",
+  "qualite": "officielle",
+  "note": null
+ },
+ "timbres": [],
+ "appli_officielle": {
+  "nom": "[?]",
+  "url": null
+ },
+ "reciprocite_eaux_tribales": null,
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison": "Deux prix lus sur les pages officielles SCDNR (résident / non-résident) le 2026-11-07. L'URL règles /fish/ renvoie 403 aux robots (URL probablement valide).",
+ "notes": "10/35 confirmés. Page non-résident : URL https://dnr.sc.gov/licenses/pricingnonresident.html. Timbre truite non mentionné [?].",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "officielle"
+ }
+}

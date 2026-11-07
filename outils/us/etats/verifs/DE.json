@@ -1,0 +1,63 @@
+{
+ "usps": "DE",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://dnrec.delaware.gov/fish-wildlife/",
+  "statut_http": 200,
+  "url_finale": "https://dnrec.delaware.gov/fish-wildlife/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://dnrec.delaware.gov/fish-wildlife/fishing/",
+  "statut_http": 200,
+  "url_finale": "https://dnrec.delaware.gov/fish-wildlife/fishing/"
+ },
+ "url_permis": {
+  "url": "https://dnrec.delaware.gov/fish-wildlife/licenses/fees/",
+  "statut_http": 200,
+  "url_finale": "https://dnrec.delaware.gov/fish-wildlife/licenses/fees/"
+ },
+ "prix_resident": {
+  "montant_usd": 8.5,
+  "url_source": "https://dnrec.delaware.gov/fish-wildlife/licenses/fees/",
+  "citation": "Resident (ages 16 to 64) $8.50 ; Licenses are good for the calendar year",
+  "qualite": "officielle",
+  "note": null
+ },
+ "prix_non_resident": {
+  "montant_usd": 20,
+  "url_source": "https://dnrec.delaware.gov/fish-wildlife/licenses/fees/",
+  "citation": "Non-resident (age 16 and over) $20.00",
+  "qualite": "officielle",
+  "note": null
+ },
+ "timbres": [
+  {
+   "nom": "timbre truite résident 16-64 ans",
+   "montant_usd": 4.2,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "timbre truite jeune résident 12-15 ans",
+   "montant_usd": 2.1,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "timbre truite non-résident 12 ans et +",
+   "montant_usd": 6.2,
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": "Digital DNREC (ePermitting, portail web de vente)",
+  "url": "https://epermitting.dnrec.delaware.gov"
+ },
+ "reciprocite_eaux_tribales": null,
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison": "Deux prix lus sur la page officielle des tarifs DNREC le 2026-11-07 (valable année civile). Page sans millésime explicite.",
+ "notes": "Corrige 12,70/26,20 (tiers) en 8,50/20,00 (officiel). Les 12,70/26,20 incluent peut-être des frais de vente [?].",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "officielle"
+ }
+}

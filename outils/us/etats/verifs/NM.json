@@ -1,0 +1,59 @@
+{
+ "usps": "NM",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://wildlife.dgf.nm.gov/",
+  "statut_http": 200,
+  "url_finale": "https://wildlife.dgf.nm.gov/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://wildlife.dgf.nm.gov/fishing/",
+  "statut_http": 200,
+  "url_finale": "https://wildlife.dgf.nm.gov/fishing/"
+ },
+ "url_permis": {
+  "url": "https://wildlife.dgf.nm.gov/fishing/licenses-permits/",
+  "statut_http": 200,
+  "url_finale": "https://wildlife.dgf.nm.gov/fishing/licenses-permits/"
+ },
+ "prix_resident": {
+  "montant_usd": null,
+  "url_source": "https://wildlife.dgf.nm.gov/download/2026-2027-new-mexico-fishing-rules-and-info/?ind=54198&filename=2026-2027-FISH-RIB_Online.pdf&wpdmdl=54201",
+  "citation": "Tableau 'License Fees' p.6 du PDF 2026-2027 : première ligne $35.00 / $90.00 (résident / non-résident), libellés de ligne illisibles à l'extraction",
+  "qualite": "officielle",
+  "note": "NON retenu : ligne probablement 'annuelle' mais libellé non lu ; ne pas utiliser comme prix"
+ },
+ "prix_non_resident": {
+  "montant_usd": null,
+  "url_source": "https://wildlife.dgf.nm.gov/download/2026-2027-new-mexico-fishing-rules-and-info/?ind=54198&filename=2026-2027-FISH-RIB_Online.pdf&wpdmdl=54201",
+  "citation": "voir prix_resident",
+  "qualite": "officielle",
+  "note": "NON retenu (idem)"
+ },
+ "timbres": [
+  {
+   "nom": "Habitat Stamp (page licences)",
+   "montant_usd": 10,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "Second Rod Validation (PDF, ligne lue 10/10)",
+   "montant_usd": 10,
+   "qualite": "officielle",
+   "note": "libellé lu dans le tableau"
+  }
+ ],
+ "appli_officielle": {
+  "nom": "vente en ligne NMDGF",
+  "url": "https://onlinesales.wildlife.state.nm.us/"
+ },
+ "reciprocite_eaux_tribales": null,
+ "licence_reutilisation": null,
+ "verifie": false,
+ "raison": "Page HTML sans prix ; PDF officiel 2026-2027 lu mais lignes du tableau sans libellés exploitables (extraction sans bibliothèque PDF). Valeur stockée 25/56 = tarif 2025-26 possible, à ne pas considérer à jour.",
+ "notes": "Valable 1er avr.-31 mars. Hypothèse à confirmer : 35 / 90 en 2026-27 [?]. Un tiers cite 25/56 (2025-26). Habitat Stamp 10 USD (12 ans+).",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "non vérifié"
+ }
+}

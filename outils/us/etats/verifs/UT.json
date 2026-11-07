@@ -1,0 +1,58 @@
+{
+ "usps": "UT",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://wildlife.utah.gov/",
+  "statut_http": 200,
+  "url_finale": "https://wildlife.utah.gov/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://wildlife.utah.gov/fishing",
+  "statut_http": 200,
+  "url_finale": "https://wildlife.utah.gov/fishing"
+ },
+ "url_permis": {
+  "url": "https://wildlife.utah.gov/fees",
+  "statut_http": 200,
+  "url_finale": "https://wildlife.utah.gov/fees"
+ },
+ "prix_resident": {
+  "montant_usd": 40,
+  "url_source": "https://wildlife.utah.gov/fees",
+  "citation": "1-year fishing license, ages 18-64: $40.00",
+  "qualite": "officielle",
+  "note": null
+ },
+ "prix_non_resident": {
+  "montant_usd": 120,
+  "url_source": "https://wildlife.utah.gov/fees",
+  "citation": "1-year fishing license, age 18+: $120.00",
+  "qualite": "officielle",
+  "note": null
+ },
+ "timbres": [
+  {
+   "nom": "permis réciproque Flaming Gorge",
+   "montant_usd": 59,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "enrôlement bateau à moteur (espèces aquatiques envahissantes) résident / non-résident",
+   "montant_usd": "20 / 25",
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": "[?]",
+  "url": null
+ },
+ "reciprocite_eaux_tribales": "Flaming Gorge reciprocal permit 59 USD (page des tarifs).",
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison": "Deux prix lus sur la page officielle des tarifs UDWR (mise à jour 8 oct. 2026) le 2026-11-07.",
+ "notes": "CORRECTION importante : 40/120 officiels contre 34/85 (tiers). Résident 65+ : 31 USD. Combo chasse+pêche 44 / 190.",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "officielle"
+ }
+}

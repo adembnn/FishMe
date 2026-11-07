@@ -1,0 +1,54 @@
+{
+ "usps": "MD",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://dnr.maryland.gov/",
+  "statut_http": 403,
+  "url_finale": "https://dnr.maryland.gov/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://dnr.maryland.gov/fisheries/pages/freshwater-fishing.aspx",
+  "statut_http": 403,
+  "url_finale": "https://dnr.maryland.gov/fisheries/pages/freshwater-fishing.aspx"
+ },
+ "url_permis": {
+  "url": "https://dnr.maryland.gov/Pages/fishing-license.aspx",
+  "statut_http": 403,
+  "url_finale": "https://dnr.maryland.gov/Pages/fishing-license.aspx"
+ },
+ "prix_resident": {
+  "montant_usd": 32,
+  "url_source": "https://content.govdelivery.com/accounts/MDDNR/bulletins/3cb978a",
+  "citation": "Annual nontidal resident fishing license: would increase to $32 from $20.50 (communiqué DNR du 10 janv. 2025, tarif PROPOSÉ)",
+  "qualite": "officielle",
+  "note": "Communiqué officiel mais projet ; l'entrée en vigueur (1er juin 2025) n'a pas été lue sur une page officielle."
+ },
+ "prix_non_resident": {
+  "montant_usd": null,
+  "url_source": "https://content.govdelivery.com/accounts/MDDNR/bulletins/3cb978a",
+  "citation": "Nonresident fees would also increase (aucun montant)",
+  "qualite": "officielle",
+  "note": "Montant non lu ; 55 USD cité par recherche seulement [?]"
+ },
+ "timbres": [
+  {
+   "nom": "timbre truite résident (proposé 2025)",
+   "montant_usd": 20,
+   "qualite": "officielle",
+   "note": "communiqué du 10 janv. 2025 : de 5 à 20, projet"
+  }
+ ],
+ "appli_officielle": {
+  "nom": "[?]",
+  "url": null
+ },
+ "reciprocite_eaux_tribales": "Règle réciprocité : les frais non-résident peuvent dépendre de ceux de l'État d'origine (Natural Resources Art. 4-604, mention vue en résultat de recherche, non lue sur page).",
+ "licence_reutilisation": null,
+ "verifie": false,
+ "raison": "dnr.maryland.gov renvoie 403 à toutes les pages ; seul un communiqué officiel GovDelivery lisible (projet de tarifs).",
+ "notes": "Résident 32 confirmé comme proposé par DNR (communiqué) ; non-résident non lu.",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "non vérifié"
+ }
+}
