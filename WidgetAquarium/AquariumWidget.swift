@@ -28,8 +28,9 @@ nonisolated struct FournisseurAquarium: AppIntentTimelineProvider {
     func timeline(for configuration: ChoixAquariumIntent, in context: Context) async -> Timeline<EntreeAquarium> {
         let instantane = Self.instantane(configuration, famille: context.family)
         // Peu d'entrées : l'extension rend et archive CHAQUE entrée d'un coup, son pic de mémoire monte avec leur
-        // nombre (mesuré le 7 nov., lot/widget-fluide). La timeline se recharge à la fin (.atEnd) : 2 h ici, soit
-        // 12 rechargements par jour, dans le budget d'Apple (40 à 70 par jour).
+        // nombre (mesuré le 7 nov., lot/widget-fluide, petit format, Debug : 19 entrées 31 Mo de pic, 7 entrées 25 Mo,
+        // 4 entrées 23 Mo). La timeline se recharge à la fin (.atEnd) : 1 h 20 ici, soit environ 18 rechargements par
+        // jour, dans le budget d'Apple (40 à 70 par jour, « Keeping a widget up to date »).
         var dates = Array(NageWidget.dates(depuis: .now, dernierRepas: instantane.dernierRepas).prefix(Self.entreesMax))
         if dates.isEmpty { dates = [.now] }
         #if DEBUG
@@ -43,7 +44,7 @@ nonisolated struct FournisseurAquarium: AppIntentTimelineProvider {
         return Timeline(entries: entrees, policy: .atEnd)
     }
 
-    /// Entrées par timeline (créneaux de 20 min : 2 h).
+    /// Entrées par timeline (maintenant + 3 créneaux de 20 min). En Debug, `entrees-widget.txt` dans l'App Group la remplace.
     static let entreesMax: Int = {
         #if DEBUG
         if let url = DepotAquariumWidget.url()?.deletingLastPathComponent().appendingPathComponent("entrees-widget.txt"),
@@ -52,7 +53,7 @@ nonisolated struct FournisseurAquarium: AppIntentTimelineProvider {
             return n
         }
         #endif
-        return 7
+        return 4
     }()
 
     /// Le fichier partagé, réduit aux poissons choisis (dans l'ordre choisi) ou, sans choix, aux plus rares.
