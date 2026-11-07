@@ -30,10 +30,10 @@ struct OuPechesTuView: View {
     private var boutons: some View {
         VStack(spacing: Espace.xs) {
             Button(action: utiliserMaPosition) {
-                Label("Utiliser ma position", systemImage: "location.fill")
+                Label { Text(c: "Utiliser ma position") } icon: { Image(systemName: "location.fill") }
             }
             .buttonStyle(.principal)
-            Button("Choisir sur la carte", action: choisirSurLaCarte)
+            Button(action: choisirSurLaCarte) { Text(c: "Choisir sur la carte") }
                 .font(Police.corps)
                 .foregroundStyle(Palette.marine)
                 .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
@@ -54,12 +54,12 @@ struct OuPechesTuView: View {
                     Spacer(minLength: Espace.s)
                     carteRonde
                     VStack(spacing: 0) {
-                        Text("Où pêches-tu ?")
+                        Text(c: "Où pêches-tu ?")
                             .font(Police.grandTitre)
                             .foregroundStyle(Palette.encre)
                             .multilineTextAlignment(.center)
                             .accessibilityAddTraits(.isHeader)
-                        Text("Pour voir les poissons et les règles près de toi.")
+                        Text(c: "Pour voir les poissons et les règles près de toi.")
                             .font(Police.detail)
                             .foregroundStyle(Palette.encreDouce)
                             .multilineTextAlignment(.center)
@@ -93,11 +93,11 @@ struct OuPechesTuView: View {
     /// (fond « tuile », coins 12, poisson à 86 % de la largeur sur 44 pt), « Utiliser ma position », « Choisir sur la carte ».
     private var feuille: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("Où pêches-tu ?")
+            Text(c: "Où pêches-tu ?")
                 .font(Police.titre)
                 .foregroundStyle(Palette.encre)
                 .accessibilityAddTraits(.isHeader)
-            Text("Ta position sert à montrer les poissons et les règles près de toi.")
+            Text(c: "Ta position sert à montrer les poissons et les règles près de toi.")
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
                 .fixedSize(horizontal: false, vertical: true)

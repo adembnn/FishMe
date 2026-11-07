@@ -48,7 +48,7 @@ struct LecteurMediaVue: View {
         } else if let fichier, publication.genre == .photo, let image = UIImage(contentsOfFile: fichier.path) {
             Image(uiImage: image).resizable().scaledToFit().frame(maxWidth: .infinity, maxHeight: .infinity)
         } else if echec {
-            Text("Impossible de charger hors ligne.")
+            Text(c: "Impossible de charger hors ligne.")
                 .font(Police.corps)
                 .foregroundStyle(.white)
                 .multilineTextAlignment(.center)

@@ -15,7 +15,7 @@ struct CommentairesVue: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                Text("Commentaires").font(Police.titre).foregroundStyle(Palette.encre).accessibilityAddTraits(.isHeader)
+                Text(c: "Commentaires").font(Police.titre).foregroundStyle(Palette.encre).accessibilityAddTraits(.isHeader)
                 Spacer()
                 BoutonRond(role: .fermer)
             }
@@ -25,12 +25,12 @@ struct CommentairesVue: View {
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: Espace.m) {
                     if modele.commentaires.isEmpty {
-                        Text(modele.erreur ?? "Aucun commentaire pour l'instant.")
+                        Text(c: modele.erreur ?? "Aucun commentaire pour l'instant.")
                             .font(Police.detail).foregroundStyle(Palette.encreDouce)
                     }
                     ForEach(modele.commentaires) { ligne($0) }
                     if modele.encore {
-                        Button("Voir plus") { Task { await modele.charger(plus: true) } }
+                        Button { Task { await modele.charger(plus: true) } } label: { Text(c: "Voir plus") }
                             .buttonStyle(.secondaire)
                     }
                 }
@@ -68,14 +68,14 @@ struct CommentairesVue: View {
     private var saisie: some View {
         VStack(alignment: .leading, spacing: Espace.xs) {
             if let refus = modele.refus {
-                Text(refus.message).font(Police.legende).foregroundStyle(Palette.alerte)
+                Text(c: refus.message).font(Police.legende).foregroundStyle(Palette.alerte)
             } else if gestion.exemples {
-                Text("Publications d'exemple : lecture seule.").font(Police.legende).foregroundStyle(Palette.encreDouce)
+                Text(c: "Publications d'exemple : lecture seule.").font(Police.legende).foregroundStyle(Palette.encreDouce)
             } else if !gestion.peutPublier {
-                Text("Finis ton profil (15 ans ou plus) pour commenter.").font(Police.legende).foregroundStyle(Palette.encreDouce)
+                Text(c: "Finis ton profil (15 ans ou plus) pour commenter.").font(Police.legende).foregroundStyle(Palette.encreDouce)
             }
             HStack(alignment: .bottom, spacing: Espace.s) {
-                TextField("Ton commentaire", text: Binding(get: { modele.texte }, set: { modele.texte = String($0.prefix(FiltreTexte.longueurMax)) }), axis: .vertical)
+                TextField(text: Binding(get: { modele.texte }, set: { modele.texte = String($0.prefix(FiltreTexte.longueurMax)) }), axis: .vertical) { Text(c: "Ton commentaire") }
                     .font(Police.corps)
                     .lineLimit(1...4)
                     .padding(Espace.m)
@@ -90,7 +90,7 @@ struct CommentairesVue: View {
                         .background(modele.peutEnvoyer ? Palette.marine : Palette.silhouette, in: Circle())
                 }
                 .disabled(!modele.peutEnvoyer)
-                .accessibilityLabel("Envoyer")
+                .accessibilityLabel(Text(c: "Envoyer"))
             }
         }
         .padding(Espace.bord)

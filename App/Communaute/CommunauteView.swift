@@ -46,14 +46,16 @@ struct CommunauteView<PageFil: View, PageAmis: View, PageClub: View>: View {
 
   private var entete: some View {
     VStack(alignment: .leading, spacing: Espace.s) {
-      Text("Communauté")
+      Text(c: "Communauté")
         .font(Police.grandTitre)
         .foregroundStyle(Palette.encre)
         .lineLimit(1)
         .minimumScaleFactor(0.5)
         .accessibilityAddTraits(.isHeader)
-      Picker("Page", selection: $page.animation()) {
-        ForEach(pages) { Text($0.titre).tag($0) }
+      Picker(selection: $page.animation()) {
+        ForEach(pages) { Text(c: $0.titre).tag($0) }
+      } label: {
+        Text(c: "Page")
       }
       .pickerStyle(.segmented)
     }

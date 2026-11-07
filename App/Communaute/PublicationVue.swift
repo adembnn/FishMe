@@ -23,6 +23,7 @@ struct PublicationVue: View {
     let publication: PublicationFeed
     let gestion: GestionFeed
     @Environment(\.openURL) private var ouvrirURL
+    @Environment(\.locale) private var locale
     @State private var lecteur = false
     @State private var commentaires = false
     @State private var image: UIImage?
@@ -58,13 +59,13 @@ struct PublicationVue: View {
     }
 
     private var pastilleExemple: some View {
-        Text("Exemple")
+        Text(c: "Exemple")
             .font(Police.legende)
             .foregroundStyle(Palette.marineFonce)
             .padding(.horizontal, Espace.m)
             .frame(minHeight: 28)
             .background(Palette.marineDoux, in: Capsule())
-            .accessibilityLabel("Publication d'exemple")
+            .accessibilityLabel(Text(c: "Publication d'exemple"))
     }
 
     private var entete: some View {
@@ -103,14 +104,14 @@ struct PublicationVue: View {
             HStack(spacing: Espace.xs) {
                 if let lieu = publication.lieuAffiche {
                     Image(systemName: "mappin.and.ellipse").accessibilityHidden(true)
-                    Text(lieu)
+                    Text(LieuPublication.localise(lieu, locale))
                     Text("·")
                 }
                 AgePublication(date: publication.creeLe)
             }
             VStack(alignment: .leading, spacing: Espace.xs) {
                 if let lieu = publication.lieuAffiche {
-                    Label(lieu, systemImage: "mappin.and.ellipse")
+                    Label { Text(LieuPublication.localise(lieu, locale)) } icon: { Image(systemName: "mappin.and.ellipse") }
                 }
                 AgePublication(date: publication.creeLe)
             }
@@ -145,7 +146,7 @@ struct PublicationVue: View {
         }
         .buttonStyle(.plain)
         .disabled(publication.exemple)
-        .accessibilityLabel(publication.exemple ? "Image d'exemple" : (publication.genre == .video ? "Lire la vidéo" : "Ouvrir la photo"))
+        .accessibilityLabel(Text(c: publication.exemple ? "Image d'exemple" : (publication.genre == .video ? "Lire la vidéo" : "Ouvrir la photo")))
     }
 
     private func carteLiee(_ espece: String) -> some View {
@@ -189,14 +190,14 @@ struct PublicationVue: View {
                 .foregroundStyle(publication.aime ? Palette.marine : Palette.encre)
                 .frame(minHeight: Gabarit.zoneTactile)
         }
-        .accessibilityLabel(publication.aime ? "Ne plus aimer, \(publication.nbLikes) j'aime" : "Aimer, \(publication.nbLikes) j'aime")
+        .accessibilityLabel(AnglaisC.texte(publication.aime ? "Ne plus aimer, %lld j'aime" : "Aimer, %lld j'aime", locale, publication.nbLikes))
     }
 
     private var boutonCommenter: some View {
         Button {
             commentaires = true
         } label: {
-            Label("Commenter", systemImage: "bubble.left")
+            Label { Text(c: "Commenter") } icon: { Image(systemName: "bubble.left") }
                 .font(Police.corps)
                 .foregroundStyle(Palette.encre)
                 .frame(minHeight: Gabarit.zoneTactile)
@@ -239,20 +240,22 @@ extension GestionFeed {
 /// Mis à jour à la minute.
 struct AgePublication: View {
     let date: Date
+    @Environment(\.locale) private var locale
 
-    static func texte(de date: Date, maintenant: Date) -> String {
+    /// `locale` : la langue de l'app (le français reste le défaut, rendu inchangé).
+    static func texte(de date: Date, maintenant: Date, locale: Locale = Locale(identifier: "fr_FR")) -> String {
         let secondes = max(0, Int(maintenant.timeIntervalSince(date)))
         switch secondes {
-        case ..<60: return "à l'instant"
-        case ..<3600: return "il y a \(secondes / 60) min"
-        case ..<86_400: return "il y a \(secondes / 3600) h"
-        default: return "il y a \(secondes / 86_400) j"
+        case ..<60: return AnglaisC.texte("à l'instant", locale)
+        case ..<3600: return AnglaisC.texte("il y a %lld min", locale, secondes / 60)
+        case ..<86_400: return AnglaisC.texte("il y a %lld h", locale, secondes / 3600)
+        default: return AnglaisC.texte("il y a %lld j", locale, secondes / 86_400)
         }
     }
 
     var body: some View {
         TimelineView(.everyMinute) { contexte in
-            Text(Self.texte(de: date, maintenant: contexte.date))
+            Text(Self.texte(de: date, maintenant: contexte.date, locale: locale))
         }
     }
 }
