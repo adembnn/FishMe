@@ -54,14 +54,14 @@ struct PublierDepuisCarteVue: View {
     private var finisTonProfil: some View {
         VStack(alignment: .leading, spacing: Espace.l) {
             HStack(alignment: .top) {
-                Text(c: "Publier").font(Police.titre).foregroundStyle(Palette.encre).accessibilityAddTraits(.isHeader)
+                Text("Publier").font(Police.titre).foregroundStyle(Palette.encre).accessibilityAddTraits(.isHeader)
                 Spacer()
                 BoutonRond(role: .fermer)
             }
-            Text(c: "Pour publier, il faut un surnom et avoir 15 ans ou plus.")
+            Text("Pour publier, il faut un surnom et avoir 15 ans ou plus.")
                 .font(Police.corps).foregroundStyle(Palette.encre)
                 .fixedSize(horizontal: false, vertical: true)
-            Button { profilOuvert = true } label: { Text(c: "Finis ton profil") }
+            Button("Finis ton profil") { profilOuvert = true }
                 .buttonStyle(.principal)
             Spacer(minLength: 0)
         }

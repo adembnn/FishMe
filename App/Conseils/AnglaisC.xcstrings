@@ -14,18 +14,6 @@
         }
       }
     },
-    "%@, ouverte": {
-      "comment": "Lot US13c.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@, open"
-          }
-        }
-      }
-    },
     "%lld pêche": {
       "comment": "Lot US13c.",
       "extractionState": "manual",
@@ -802,18 +790,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Last visit"
-          }
-        }
-      }
-    },
-    "Dernier passage : %@": {
-      "comment": "Lot US13c.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Last visit: %@"
           }
         }
       }
@@ -2342,6 +2318,54 @@
         }
       }
     },
+    "Voix : amorçage": {
+      "comment": "Lot US13c.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "bait spot"
+          }
+        }
+      }
+    },
+    "Voix : danger": {
+      "comment": "Lot US13c.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hazard"
+          }
+        }
+      }
+    },
+    "Voix : parking": {
+      "comment": "Lot US13c.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "parking"
+          }
+        }
+      }
+    },
+    "Voix : poste de pêche": {
+      "comment": "Lot US13c.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "fishing spot"
+          }
+        }
+      }
+    },
     "Vérifie l'ouverture dans les règles du spot": {
       "comment": "Lot US13c.",
       "extractionState": "manual",
@@ -2374,30 +2398,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "on"
-          }
-        }
-      }
-    },
-    "amorçage": {
-      "comment": "Lot US13c.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "bait spot"
-          }
-        }
-      }
-    },
-    "danger": {
-      "comment": "Lot US13c.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "hazard"
           }
         }
       }
@@ -2462,18 +2462,6 @@
         }
       }
     },
-    "parking": {
-      "comment": "Lot US13c.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "parking"
-          }
-        }
-      }
-    },
     "poste de pêche": {
       "comment": "Lot US13c.",
       "extractionState": "manual",
@@ -2482,18 +2470,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "fishing spot"
-          }
-        }
-      }
-    },
-    "« %@ »": {
-      "comment": "Lot US13c.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "“%@”"
           }
         }
       }

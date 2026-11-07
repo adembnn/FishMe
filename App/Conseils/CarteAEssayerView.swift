@@ -171,7 +171,7 @@ struct CarteAEssayerView: View {
             .overlay { forme.strokeBorder(actif ? Palette.marine : Palette.filet, lineWidth: actif ? 3 : 1) }
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(sansReleve ? nom : (fermee.map { "\(nom), \($0)" } ?? AnglaisC.texte("%@, ouverte", locale, nom)))
+        .accessibilityLabel(sansReleve ? nom : (fermee.map { "\(nom), \($0)" } ?? "\(nom), \(AnglaisC.texte("Ouverte", locale).lowercased())"))
         .accessibilityAddTraits(actif ? .isSelected : [])
     }
 

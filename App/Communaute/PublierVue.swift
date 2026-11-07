@@ -28,7 +28,6 @@ struct PublierVue: View {
     private let imagePNG: Data?
     @Environment(\.dismiss) private var fermer
     @Environment(\.dynamicTypeSize) private var taille
-    @Environment(\.locale) private var locale
 
     init(gestion: GestionFeed, contexteLieu: ContexteLieu, carte: CarteLiee? = nil, imagePNG: Data? = nil) {
         self.gestion = gestion
@@ -41,7 +40,7 @@ struct PublierVue: View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.l) {
                 HStack(alignment: .top) {
-                    Text(c: "Publier").font(Police.titre).foregroundStyle(Palette.encre).accessibilityAddTraits(.isHeader)
+                    Text("Publier").font(Police.titre).foregroundStyle(Palette.encre).accessibilityAddTraits(.isHeader)
                         .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                     BoutonRond(role: .fermer)
@@ -50,15 +49,13 @@ struct PublierVue: View {
                 legendeBloc
                 lieuBloc
                 if !modele.clubs.isEmpty { clubBloc }
-                if let erreur = modele.erreur { Text(c: erreur).font(Police.detail).foregroundStyle(Palette.alerte) }
+                if let erreur = modele.erreur { Text(erreur).font(Police.detail).foregroundStyle(Palette.alerte) }
                 if !gestion.peutPublier {
-                    Text(c: "Finis ton profil (15 ans ou plus) pour publier.").font(Police.detail).foregroundStyle(Palette.encreDouce)
+                    Text("Finis ton profil (15 ans ou plus) pour publier.").font(Police.detail).foregroundStyle(Palette.encreDouce)
                         .fixedSize(horizontal: false, vertical: true)
                 }
-                Button {
+                Button(modele.enCours ? "Envoi…" : "Publier") {
                     Task { if await modele.publier(avec: gestion) { fermer() } }
-                } label: {
-                    Text(c: modele.enCours ? "Envoi…" : "Publier")
                 }
                 .buttonStyle(.principal)
                 .disabled(!modele.peutPublier)
@@ -84,12 +81,12 @@ struct PublierVue: View {
             }
             if imagePNG == nil {
                 PhotosPicker(selection: $choix, matching: .any(of: [.images, .videos])) {
-                    Label { Text(c: apercu == nil ? "Choisir une photo ou une vidéo" : "Changer") } icon: { Image(systemName: "photo.on.rectangle") }
+                    Label(apercu == nil ? "Choisir une photo ou une vidéo" : "Changer", systemImage: "photo.on.rectangle")
                         .font(Police.corps)
                         .frame(maxWidth: .infinity, minHeight: Gabarit.bouton)
                 }
                 .tuileFishMe()
-                Text(c: "Vidéo : 15 secondes au plus. Aucune position n'est envoyée.")
+                Text("Vidéo : 15 secondes au plus. Aucune position n'est envoyée.")
                     .font(Police.legende).foregroundStyle(Palette.encreDouce)
             }
         }
@@ -97,7 +94,7 @@ struct PublierVue: View {
 
     private var legendeBloc: some View {
         VStack(alignment: .leading, spacing: Espace.xs) {
-            TextField(text: Binding(get: { modele.legende }, set: { modele.legende = String($0.prefix(FiltreTexte.longueurMax)) }), axis: .vertical) { Text(c: "Légende (facultatif)") }
+            TextField("Légende (facultatif)", text: Binding(get: { modele.legende }, set: { modele.legende = String($0.prefix(FiltreTexte.longueurMax)) }), axis: .vertical)
                 .font(Police.corps)
                 .lineLimit(1...5)
                 .padding(Espace.m)
@@ -106,12 +103,12 @@ struct PublierVue: View {
             // Le refus et le compteur côte à côte, ou l'un sous l'autre en très grand texte.
             ViewThatFits(in: .horizontal) {
                 HStack {
-                    if let refus = modele.refus { Text(c: refus.message).foregroundStyle(Palette.alerte) }
+                    if let refus = modele.refus { Text(refus.message).foregroundStyle(Palette.alerte) }
                     Spacer()
                     compteur
                 }
                 VStack(alignment: .leading, spacing: Espace.xs) {
-                    if let refus = modele.refus { Text(c: refus.message).foregroundStyle(Palette.alerte) }
+                    if let refus = modele.refus { Text(refus.message).foregroundStyle(Palette.alerte) }
                     compteur
                 }
             }
@@ -126,38 +123,35 @@ struct PublierVue: View {
     /// Trois choix : « La Marne · 94 », « 94 », « Aucun lieu ». En très grand texte, des lignes plutôt que des segments.
     private var lieuBloc: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            Text(c: "Lieu montré").font(Police.sousTitre).foregroundStyle(Palette.encre)
+            Text("Lieu montré").font(Police.sousTitre).foregroundStyle(Palette.encre)
             if taille.isAccessibilitySize {
                 ForEach(modele.options, id: \.self) { mode in
                     Button {
                         modele.mode = mode
                     } label: {
-                        Label { Text(LieuPublication.localise(LieuPublication.etiquette(mode, modele.contexteLieu), locale)) } icon: { Image(systemName: modele.mode == mode ? "checkmark.circle.fill" : "circle") }
+                        Label(LieuPublication.etiquette(mode, modele.contexteLieu),
+                              systemImage: modele.mode == mode ? "checkmark.circle.fill" : "circle")
                             .font(Police.corps)
                             .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)
                     }
                     .buttonStyle(.plain)
                 }
             } else {
-                Picker(selection: $modele.mode) {
-                    ForEach(modele.options, id: \.self) { Text(LieuPublication.localise(LieuPublication.etiquette($0, modele.contexteLieu), locale)).tag($0) }
-                } label: {
-                    Text(c: "Lieu montré")
+                Picker("Lieu montré", selection: $modele.mode) {
+                    ForEach(modele.options, id: \.self) { Text(LieuPublication.etiquette($0, modele.contexteLieu)).tag($0) }
                 }
                 .pickerStyle(.segmented)
                 .frame(minHeight: Gabarit.zoneTactile)
             }
-            Text(AnglaisC.texte("Les autres verront : %@", locale, LieuPublication.localise(modele.apercuLieu, locale)))
+            Text("Les autres verront : \(modele.apercuLieu)")
                 .font(Police.legende).foregroundStyle(Palette.encreDouce)
         }
     }
 
     private var clubBloc: some View {
-        Picker(selection: $modele.club) {
-            Text(c: "Aucun club").tag(String?.none)
+        Picker("Pour le club", selection: $modele.club) {
+            Text("Aucun club").tag(String?.none)
             ForEach(modele.clubs) { Text($0.nom).tag(Optional($0.id)) }
-        } label: {
-            Text(c: "Pour le club")
         }
         .font(Police.corps)
         .frame(minHeight: Gabarit.zoneTactile)
