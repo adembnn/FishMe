@@ -1,0 +1,21 @@
+{
+  "la_acces": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-90.71427, 29.31447]}, "properties": {"OBJECTID": 1, "Boat_Launc": "Sunshine Acres Marina", "Waterbody": " ", "City": "Dulac", "Phone": " ", "Access": "Private", "Ramp_and_P": "1-lane gravel ramp"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-91.836608, 29.944537]}, "properties": {"OBJECTID": 2, "Boat_Launc": "Port of Iberia Ramp", "Waterbody": "Commercial Canal", "City": "New Iberia", "Phone": "337-364-1065", "Email": "info@portofiberia.com", "Hours": "24 hours a day", "Access": "Public", "Ramp_and_P": "4-lane concrete ramp"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-90.10502, 30.45592]}, "properties": {"OBJECTID": 3, "Boat_Launc": "4th Street Boat Launch", "Waterbody": "Tchefuncte River", "Access": "Public", "Ramp_and_P": "2-lane concrete ramp, parking for 10 trailers"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.0, 31.0]}, "properties": {"OBJECTID": 4, "Boat_Launc": "Camp ramp", "Access": "Public; registered campers only"}}
+  ],
+  "la_rive": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.493074, 32.831292]}, "properties": {"FID": 1, "Site_Name": "Ivan Lake", "Hours": "Sunrise-sunset", "Access": "No fee", "Amenities": "5 piers"}}
+  ],
+  "la_comm": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-92.0206, 30.20568]}, "properties": {"OBJECTID": 1, "Id": 1, "Site_Name": "Girard Park", "Address": "500 Girard Park Dr  Lafayette,LA 70503", "Website": "http://example.invalid"}}
+  ],
+  "tx_rampes": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-96.0466, 31.9675]}, "properties": {"OBJECTID": 2236, "PWAID": 1973, "TPWAID": "anderson001", "AccessType": "River/Stream", "AccessTypeDescription": "Trinity River"}}
+  ],
+  "tx_raca": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-97.664111, 32.270951]}, "properties": {"OBJECTID": 54, "RACA_site_name": "Brazos Outdoor Center", "River": "Brazos", "Lease_Status": "current", "Description": "Located on the west bank. Phone: (682) 262-0925", "Directions": "https://example.invalid"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-97.3, 31.8]}, "properties": {"OBJECTID": 55, "RACA_site_name": "Bail saisonnier", "River": "Brazos", "Lease_Status": "seasonal"}}
+  ]
+}

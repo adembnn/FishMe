@@ -1,0 +1,72 @@
+{
+  "etat": "TX",
+  "nom": "Texas",
+  "emprise": [-106.7, 25.8, -93.45, 36.55],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://www.dshs.texas.gov/seafood-aquatic-life-group (DSHS ; page d'accueil du groupe, 200)",
+    "pêche": "https://tpwd.texas.gov/fishboat/fish/recreational/lakes/ (200)"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Rampes de mise à l'eau publiques (eau douce et salée)",
+      "service": "https://services1.arcgis.com/1mtXwieMId59thmg/arcgis/rest/services/BoatRamps_Public/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_tx_rampes",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "TPWD Inland Fisheries Division, Public Boat Ramps (BoatRamps_Public)",
+      "editeur": "Texas Parks and Wildlife Department",
+      "url_source": "https://services1.arcgis.com/1mtXwieMId59thmg/arcgis/rest/services/BoatRamps_Public/FeatureServer",
+      "licence": "Pas de licence ouverte nommée ; fiche : usage d'information générale, sans garantie d'exactitude ni de complétude (texte de la fiche ArcGIS Online, non recopié)",
+      "date_source": "2023-04-25 (date de modification de la fiche ArcGIS Online)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Points relevés par des employés du TPWD. Seuls l'identifiant, le nom de l'eau et la position sont gardés."
+    },
+    {
+      "id": "acces_riviere",
+      "role": "acces",
+      "nom": "Accès fluviaux loués par le TPWD (RACA, baux en cours)",
+      "service": "https://tpwd.texas.gov/server/rest/services/Inland/River_Access_and_Conservation_Areas/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_tx_raca",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "TPWD Inland Fisheries Division, River Access and Conservation Areas (RACA_AccessPoints)",
+      "editeur": "Texas Parks and Wildlife Department",
+      "url_source": "https://tpwd.texas.gov/fishboat/fish/recreational/rivers/lease_access/",
+      "licence": "[?] non précisée sur le service",
+      "date_source": "2026-09-15 (dernier LastEditDate des objets)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Sites loués sur terrain privé ; seuls les baux « current » sont gardés (les « seasonal » sont écartés). Description, directions et téléphones non copiés."
+    }
+  ],
+  "agence": "Texas Parks and Wildlife Department (TPWD)",
+  "lien_plans": "https://tpwd.texas.gov/fishboat/fish/recreational/lakes/",
+  "lien_avis": "https://www.dshs.texas.gov/seafood-aquatic-life-group",
+  "embarquer": {"plans_eau_km2_min": 1.0, "ordre_ligne_min": 6, "tolerance_ligne": 0.004},
+  "couverture": {
+    "acces": {"statut": "ok"},
+    "plans_eau": {"statut": "ok"},
+    "lignes_eau": {"statut": "ok"},
+    "licences_a_confirmer": [
+      "accès (TPWD, licence non nommée)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "accès fédéraux (USFWS, Corps, NPS) non ajoutés : RIDB demande une clé",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement",
+      "accès de pêche depuis la rive (pontons) non trouvés en jeu ouvert"
+    ]
+  }
+}
