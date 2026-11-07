@@ -1,0 +1,182 @@
+{
+ "format": 1,
+ "etat": "FL",
+ "nom_etat": "Florida",
+ "lien_agence": "https://myfwc.com/fishing/freshwater/regulations/",
+ "version": "2026-11-07.1",
+ "genere_le": "2026-11-07",
+ "couverture": 2,
+ "relecture": "double lecture (lecteurs A et B indépendants, outils/us/regles/consensus_us.py)",
+ "juridictions": [],
+ "exigences": [],
+ "regles": [
+  {
+   "id": "FL-black-crappie-limites-etat",
+   "portee": "US-FL",
+   "espece": "black-crappie",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005",
+    "date": "2026-11-07",
+    "citation": "Twenty-five (25) crappie.",
+    "edition": "FAC 68A-23.005, version en vigueur depuis 2024-07-01"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "FL-crappie-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Twenty-five (25) crappie.",
+     "confirmee_par": {
+      "id": "FL-B-04",
+      "citation": "(b) Twenty-five (25) crappie."
+     },
+     "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005"
+    }
+   ]
+  },
+  {
+   "id": "FL-florida-bass-limites-etat",
+   "portee": "US-FL",
+   "espece": "florida-bass",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005",
+    "date": "2026-11-07",
+    "citation": "Five (5) black bass, of which only one may be 16 inches or longer in total length.",
+    "edition": "FAC 68A-23.005, version en vigueur depuis 2024-07-01"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "FL-blackbass-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Five (5) black bass, of which only one may be 16 inches or longer in total length.",
+     "confirmee_par": {
+      "id": "FL-B-02",
+      "citation": "(a) Five (5) black bass, of which only one may be 16 inches or longer in total length."
+     },
+     "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005"
+    }
+   ]
+  },
+  {
+   "id": "FL-largemouth-bass-limites-etat",
+   "portee": "US-FL",
+   "espece": "largemouth-bass",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005",
+    "date": "2026-11-07",
+    "citation": "Five (5) black bass, of which only one may be 16 inches or longer in total length.",
+    "edition": "FAC 68A-23.005, version en vigueur depuis 2024-07-01"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "FL-blackbass-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Five (5) black bass, of which only one may be 16 inches or longer in total length.",
+     "confirmee_par": {
+      "id": "FL-B-02",
+      "citation": "(a) Five (5) black bass, of which only one may be 16 inches or longer in total length."
+     },
+     "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005"
+    }
+   ]
+  },
+  {
+   "id": "FL-spotted-bass-limites-etat",
+   "portee": "US-FL",
+   "espece": "spotted-bass",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005",
+    "date": "2026-11-07",
+    "citation": "Five (5) black bass, of which only one may be 16 inches or longer in total length.",
+    "edition": "FAC 68A-23.005, version en vigueur depuis 2024-07-01"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "FL-blackbass-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Five (5) black bass, of which only one may be 16 inches or longer in total length.",
+     "confirmee_par": {
+      "id": "FL-B-02",
+      "citation": "(a) Five (5) black bass, of which only one may be 16 inches or longer in total length."
+     },
+     "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005"
+    }
+   ]
+  },
+  {
+   "id": "FL-suwannee-bass-limites-etat",
+   "portee": "US-FL",
+   "espece": "suwannee-bass",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005",
+    "date": "2026-11-07",
+    "citation": "Five (5) black bass, of which only one may be 16 inches or longer in total length.",
+    "edition": "FAC 68A-23.005, version en vigueur depuis 2024-07-01"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "FL-blackbass-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Five (5) black bass, of which only one may be 16 inches or longer in total length.",
+     "confirmee_par": {
+      "id": "FL-B-02",
+      "citation": "(a) Five (5) black bass, of which only one may be 16 inches or longer in total length."
+     },
+     "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005"
+    }
+   ]
+  },
+  {
+   "id": "FL-white-crappie-limites-etat",
+   "portee": "US-FL",
+   "espece": "white-crappie",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005",
+    "date": "2026-11-07",
+    "citation": "Twenty-five (25) crappie.",
+    "edition": "FAC 68A-23.005, version en vigueur depuis 2024-07-01"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "FL-crappie-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Twenty-five (25) crappie.",
+     "confirmee_par": {
+      "id": "FL-B-04",
+      "citation": "(b) Twenty-five (25) crappie."
+     },
+     "url": "https://www.flrules.org/gateway/ruleNo.asp?id=68A-23.005"
+    }
+   ]
+  }
+ ]
+}

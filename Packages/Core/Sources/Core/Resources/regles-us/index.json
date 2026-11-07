@@ -1,24 +1,44 @@
 {
-  "format": 1,
-  "version": "2026-11-07.1",
-  "date": "2026-11-07",
-  "etats": {
-    "MN": {
-      "niveau": 2,
-      "regles": 55,
-      "sha256": "963e1697ffc1d07a2117b9421273a51bcb8375b04326364a753d0869dfa5a620",
-      "expire_min": "2027-02-28"
-    },
-    "WI": {
-      "niveau": 2,
-      "regles": 30,
-      "sha256": "dc261af44b8493215a8123144314f2632003bdec6d93358561e43e1bbcf23fa9"
-    }
+ "format": 1,
+ "version": "2026-11-07.1",
+ "date": "2026-11-07",
+ "etats": {
+  "FL": {
+   "niveau": 2,
+   "regles": 6,
+   "sha256": "4819b685f636c29f7050a5584733a591ee6e616658f73d6ef0e37535796f05b5"
   },
-  "niveau1": {
-    "fichier": "etats.json",
-    "etat_de_la_donnee": "Niveau 1 : 51 entrées lues le 2026-11-07 ; 32 États relus sur une page ou un PDF officiel (71 prix sur 102 sont de source officielle) ; les autres prix sont non vérifiés (sources tierces ou résumés) et ne se présentent jamais comme officiels. Sources : outils/us/etats/verifs/.",
-    "date": "2026-11-07",
-    "sha256": "c93022f06268417c2a625d219b3050e3c12d78daf94fa965e0b71f3b83f8c25d"
+  "MN": {
+   "niveau": 2,
+   "regles": 55,
+   "sha256": "963e1697ffc1d07a2117b9421273a51bcb8375b04326364a753d0869dfa5a620",
+   "expire_min": "2027-02-28"
+  },
+  "NC": {
+   "niveau": 2,
+   "regles": 15,
+   "sha256": "58fd5461db19ca4bc7b46bda6b763a894b42d4e39430d352fbb1658d249216b8"
+  },
+  "NY": {
+   "niveau": 2,
+   "regles": 33,
+   "sha256": "c00c580c5676aa98d2f8301ed364ba6a82ed3e6a9aefaec5db15d110cade8751"
+  },
+  "TX": {
+   "niveau": 2,
+   "regles": 22,
+   "sha256": "8f70209687b48e5bdfa00020d0eec0524d2ea010abbc3fcb73dfa21be991efdd"
+  },
+  "WI": {
+   "niveau": 2,
+   "regles": 30,
+   "sha256": "dc261af44b8493215a8123144314f2632003bdec6d93358561e43e1bbcf23fa9"
   }
+ },
+ "niveau1": {
+  "fichier": "etats.json",
+  "etat_de_la_donnee": "Niveau 1 : 51 entrées lues le 2026-11-07 ; 32 États relus sur une page ou un PDF officiel (71 prix sur 102 sont de source officielle) ; les autres prix sont non vérifiés (sources tierces ou résumés) et ne se présentent jamais comme officiels. Sources : outils/us/etats/verifs/.",
+  "date": "2026-11-07",
+  "sha256": "c93022f06268417c2a625d219b3050e3c12d78daf94fa965e0b71f3b83f8c25d"
+ }
 }
