@@ -120,7 +120,7 @@ struct CarteUSTests {
         for i in 0..<30 {
             for j in 0..<30 { points.append(point(String(i) + "-" + String(j), 44.7 + Double(i) * 0.01, -93.5 + Double(j) * 0.01)) }
         }
-        let elements = SelectionCarteUS.elements(points: points, plans: [], dans: zone(minneapolis, span: 0.5))
+        let elements = SelectionCarteUS.elements(points: points, plans: [], dans: zone(minneapolis, span: 1.0))
         #expect(elements.count <= SelectionCarteUS.plafond)
         var total = 0
         for e in elements {
