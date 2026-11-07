@@ -26,6 +26,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     let proposition: PropositionRepere?
     let repondreProposition: ((Bool) -> Void)?
     @Environment(\.dynamicTypeSize) private var tailleTexte
+    @Environment(\.locale) private var locale
     @State private var explicationFin = false
     @State private var confirmationFin = false
 
@@ -66,18 +67,18 @@ struct SessionEnCoursView<LigneConditions: View>: View {
                             .padding(.bottom, Espace.s)
                     }
                     Button(action: ajouterPrise) {
-                        Label("Ajouter une prise", systemImage: "camera")
+                        Label(AnglaisF.t("Ajouter une prise"), systemImage: "camera")
                     }
                     .buttonStyle(.principal)
                     if let ajouterRepere {
                         Button(action: ajouterRepere) {
-                            Label(TextesReperes.ajouterIci, systemImage: "signpost.right")
+                            Label(TextesReperes.t(TextesReperes.ajouterIci, locale), systemImage: "signpost.right")
                                 .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
                         }
                         .buttonStyle(.secondaire)
                         .padding(.top, Espace.xs)
                     }
-                    Button("Terminer la session", role: .cancel) { confirmationFin = true }
+                    Button(AnglaisF.t("Terminer la session"), role: .cancel) { confirmationFin = true }
                         .font(Police.taille(17, .heavy))
                         .foregroundStyle(Palette.marine)
                         .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
@@ -100,9 +101,9 @@ struct SessionEnCoursView<LigneConditions: View>: View {
         .background(Palette.surface.ignoresSafeArea())
         .accessibilityElement(children: .contain)
         .simultaneousGesture(gesteReduire)
-        .confirmationDialog("Terminer la session ?", isPresented: $confirmationFin, titleVisibility: .visible) {
-            Button("Terminer la session", role: .destructive) { moteur.terminer() }
-            Button("Continuer à pêcher", role: .cancel) {}
+        .confirmationDialog(AnglaisF.question("Terminer la session"), isPresented: $confirmationFin, titleVisibility: .visible) {
+            Button(AnglaisF.t("Terminer la session"), role: .destructive) { moteur.terminer() }
+            Button(AnglaisF.t("Continuer à pêcher"), role: .cancel) {}
         }
         .onChange(of: maintenant) { _, _ in moteur.verifierFin() }
     }
@@ -120,7 +121,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     private var boutonReduire: some View {
         if let reduire {
             Button(action: reduire) {
-                Label("Carte", systemImage: "map")
+                Label(AnglaisF.t("Carte"), systemImage: "map")
                     .font(Police.detail)
                     .foregroundStyle(Palette.marine)
                     .padding(.horizontal, Espace.m)
@@ -129,7 +130,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
                     .contentShape(Capsule())
             }
             .buttonStyle(.plain)
-            .accessibilityHint("Réduit la session en bandeau sur la carte")
+            .accessibilityHint(AnglaisF.t("Réduit la session en bandeau sur la carte"))
         }
     }
 
@@ -144,15 +145,15 @@ struct SessionEnCoursView<LigneConditions: View>: View {
                 Spacer(minLength: 0)
                 boutonReduire
             }
-            ForEach(session.messages, id: \.self) { AvisSession(texte: $0) }
-            if moteur.quotaAtteint { AvisSession(texte: "Quota du jour atteint") }
+            ForEach(AvisSession.affiches(session.messages), id: \.self) { AvisSession(texte: $0) }
+            if moteur.quotaAtteint { AvisSession(texte: AnglaisF.t("Quota du jour atteint")) }
             if !tailleTexte.isAccessibilitySize { ligneConditions }
         }
     }
 
     private var titreSpot: String {
-        if let eau, !eau.isEmpty { return "Ton spot · \(eau)" }
-        return "Ton spot"
+        if let eau, !eau.isEmpty { return AnglaisF.f("Ton spot · %@", eau) }
+        return AnglaisF.t("Ton spot")
     }
 
     /// Le chrono façon minuteur d'Apple : un anneau qui avance jusqu'à la fin légale (un tour par heure si elle est inconnue),
@@ -160,21 +161,21 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     private func chrono(_ session: SessionEnCours, maintenant: Date) -> some View {
         let ecoule = moteur.duree(a: maintenant)
         return ChronoAnneauView(temps: Self.temps(ecoule), progression: progression(session, maintenant: maintenant),
-                                diametre: 270, legende: "Temps écoulé") {
+                                diametre: 270, legende: AnglaisF.t("Temps écoulé")) {
             if let legale = session.finLegale {
                 VStack(spacing: 2) {
                     Button { explicationFin.toggle() } label: {
-                        Text("Fin légale \(BandeauSession<EmptyView>.heure(legale))")
+                        Text(AnglaisF.f("Fin légale %@", BandeauSession<EmptyView>.heure(legale)))
                             .font(Police.taille(15, .heavy).monospacedDigit())
                             .foregroundStyle(Palette.encreDouce)
                             .lineLimit(1)
                             .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
                     }
                     .buttonStyle(.plain)
-                    .accessibilityHint("Touche pour lire d'où vient cette heure")
+                    .accessibilityHint(AnglaisF.t("Touche pour lire d'où vient cette heure"))
                     // R8 : le temps restant avant la fin légale, en toutes lettres, à côté du temps écoulé.
                     if legale > maintenant {
-                        Text("encore \(BandeauSession<EmptyView>.reste(legale.timeIntervalSince(maintenant)))")
+                        Text(AnglaisF.f("encore %@", BandeauSession<EmptyView>.reste(legale.timeIntervalSince(maintenant))))
                             .font(Police.legende)
                             .foregroundStyle(Palette.encreDouce)
                     }
@@ -190,7 +191,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
         }
         .frame(maxWidth: .infinity)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("Temps écoulé depuis le début de la session")
+        .accessibilityLabel(AnglaisF.t("Temps écoulé depuis le début de la session"))
         .accessibilityValue(Self.temps(ecoule))
     }
 
@@ -240,9 +241,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     private func legendePrises(_ prises: [Prise], _ derniere: Prise?) -> String {
         let n = prises.count
         let region = RegionPersistee.lire()
-        var texte = region == .etatsUnis
-            ? (n == 0 ? "No catch yet" : "\(n) catch\(n > 1 ? "es" : "")")
-            : (n == 0 ? "Pas encore de prise" : "\(n) prise\(n > 1 ? "s" : "")")
+        var texte = n == 0 ? AnglaisF.t("Pas encore de prise") : AnglaisF.nombre(n, un: "1 prise", autres: "%lld prises")
         if let cm = derniere?.longueurCm { texte += " · \(FormatSortie.taille(centimetres: cm, region: region))" }
         return texte
     }

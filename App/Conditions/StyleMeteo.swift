@@ -39,16 +39,16 @@ enum StyleMeteo {
 
     static func libelle(codeTemps: Int) -> String {
         switch codeTemps {
-        case 0: return "Dégagé"
-        case 1, 2: return "Peu nuageux"
-        case 3: return "Couvert"
-        case 45...48: return "Brouillard"
-        case 51...57: return "Bruine"
-        case 61...67: return "Pluie"
-        case 80...82: return "Averses"
-        case 71...77, 85, 86: return "Neige"
-        case 95...99: return "Orage"
-        default: return "Nuageux"
+        case 0: return AnglaisF.t("Dégagé")
+        case 1, 2: return AnglaisF.t("Peu nuageux")
+        case 3: return AnglaisF.t("Couvert")
+        case 45...48: return AnglaisF.t("Brouillard")
+        case 51...57: return AnglaisF.t("Bruine")
+        case 61...67: return AnglaisF.t("Pluie")
+        case 80...82: return AnglaisF.t("Averses")
+        case 71...77, 85, 86: return AnglaisF.t("Neige")
+        case 95...99: return AnglaisF.t("Orage")
+        default: return AnglaisF.t("Nuageux")
         }
     }
 

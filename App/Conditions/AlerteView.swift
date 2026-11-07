@@ -47,11 +47,11 @@ struct AlerteView: View {
                         Text("\(alerte.mesure) · \(alerte.source)")
                             .font(Police.legende).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
                         Button { ouvrir(lien) } label: {
-                            Label(alerte.type == .orage ? "Vigilance de Météo-France" : "Vigicrues", systemImage: "arrow.up.right.square")
+                            Label(AnglaisF.t(alerte.type == .orage ? "Vigilance de Météo-France" : "Vigicrues"), systemImage: "arrow.up.right.square")
                                 .font(Police.legende)
                         }
                         .frame(minHeight: Gabarit.zoneTactile)
-                        Text("L’alerte officielle fait foi.").font(Police.legende).foregroundStyle(Palette.encreDouce)
+                        Text(AnglaisF.t("L’alerte officielle fait foi.")).font(Police.legende).foregroundStyle(Palette.encreDouce)
                     }
                     .padding(.top, Espace.m)
                 }
@@ -68,20 +68,20 @@ struct AlerteView: View {
             }
             // « Compris » et la marque, à 40 pt du bas.
             VStack(spacing: 14) {
-                Button("Compris") { fermer() }
+                Button(AnglaisF.t("Compris")) { fermer() }
                     .buttonStyle(.principal)
                 if let marque {
                     MarqueMeteoView(stockage: marque,
-                                    libelleLien: alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources",
+                                    libelleLien: AnglaisF.t(alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources"),
                                     action: { withAnimation { sourceOuverte.toggle() } })
-                        .accessibilityHint("Affiche la source de l'alerte")
+                        .accessibilityHint(AnglaisF.t("Affiche la source de l'alerte"))
                 } else {
                     Button { withAnimation { sourceOuverte.toggle() } } label: {
-                        Text(alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources")
+                        Text(AnglaisF.t(alerte.type == .orage ? "Météo-France · Sources" : "Vigicrues · Sources"))
                             .font(Police.taille(13, .heavy)).foregroundStyle(Palette.marine).underline()
                             .frame(minHeight: Gabarit.zoneTactile)
                     }
-                    .accessibilityHint("Affiche la source de l'alerte")
+                    .accessibilityHint(AnglaisF.t("Affiche la source de l'alerte"))
                 }
             }
             .padding(.horizontal, Espace.bord)
@@ -97,7 +97,7 @@ struct AlerteView: View {
                     .contentShape(Circle())
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Fermer")
+            .accessibilityLabel(AnglaisF.t("Fermer"))
             .padding(.top, 59).padding(.trailing, Espace.bord)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
         }
@@ -108,7 +108,7 @@ struct AlerteView: View {
     /// « 18 h » pile, « 18 h 05 » sinon : la maquette montre l'heure sans les minutes quand elles sont à zéro.
     private var heureAlerte: String {
         let m = Calendar.current.component(.minute, from: alerte.heure)
-        if m == 0 { return "\(Calendar.current.component(.hour, from: alerte.heure)) h" }
+        if m == 0, RegionPersistee.lire() == .france { return "\(Calendar.current.component(.hour, from: alerte.heure)) h" }
         return FormatConditions.heure(alerte.heure)
     }
 
@@ -118,21 +118,21 @@ struct AlerteView: View {
             // Le niveau n'est pas dans `Alerte` : on le lit dans le texte de l'alerte officielle (jamais deviné).
             let texte = alerte.mesure.lowercased()
             for niveau in ["jaune", "orange", "rouge"] where texte.contains(niveau) {
-                return "Orage, vigilance \(niveau)"
+                return AnglaisF.f("Orage, vigilance %@", AnglaisF.bas(niveau.capitalized))
             }
-            return "Orage"
+            return AnglaisF.t("Orage")
         case .crue:
             switch lecture?.eau?.vigilance {
-            case .jaune: return "Crue, vigilance jaune"
-            case .orange: return "Crue, vigilance orange"
-            case .rouge: return "Crue, vigilance rouge"
-            default: return "Alerte crue"
+            case .jaune: return AnglaisF.t("Crue, vigilance jaune")
+            case .orange: return AnglaisF.t("Crue, vigilance orange")
+            case .rouge: return AnglaisF.t("Crue, vigilance rouge")
+            default: return AnglaisF.t("Alerte crue")
             }
         }
     }
 
     private var explication: String {
-        alerte.type == .orage ? "Range tes cannes en carbone et mets-toi à l’abri." : "Reste loin de l'eau."
+        AnglaisF.t(alerte.type == .orage ? "Range tes cannes en carbone et mets-toi à l’abri." : "Reste loin de l'eau.")
     }
 
     private var lien: URL { alerte.type == .orage ? LiensVigilance.vigilanceMeteoFrance : LiensVigilance.vigicrues }
@@ -145,9 +145,9 @@ private struct InterrupteurPrevienMoi: View {
 
     var body: some View {
         HStack(spacing: Espace.m) {
-            Text("Préviens-moi").font(Police.corps).foregroundStyle(Palette.encre)
+            Text(AnglaisF.t("Préviens-moi")).font(Police.corps).foregroundStyle(Palette.encre)
             Spacer(minLength: 0)
-            Toggle("Préviens-moi", isOn: $modele.vigilanceActive).labelsHidden().tint(Palette.marine)
+            Toggle(AnglaisF.t("Préviens-moi"), isOn: $modele.vigilanceActive).labelsHidden().tint(Palette.marine)
         }
         .frame(minHeight: Gabarit.zoneTactile)
             .onChange(of: modele.vigilanceActive) { _, _ in

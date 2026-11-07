@@ -11,18 +11,18 @@ struct TesConditionsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 14) {
-                Text("Mes statistiques").font(JetonsConditions.police(.title2)).foregroundStyle(JetonsConditions.encre)
+                Text(AnglaisF.t("Mes statistiques")).font(JetonsConditions.police(.title2)).foregroundStyle(JetonsConditions.encre)
                 if let constats {
                     ForEach(constats, id: \.texte) { c in
                         VStack(alignment: .leading, spacing: 2) {
                             Text(c.texte).font(JetonsConditions.police(.headline)).foregroundStyle(JetonsConditions.encre)
-                            Text("sur \(c.surSorties) sorties").font(JetonsConditions.police(.caption)).foregroundStyle(JetonsConditions.encre2)
+                            Text(AnglaisF.f("sur %lld sorties", c.surSorties)).font(JetonsConditions.police(.caption)).foregroundStyle(JetonsConditions.encre2)
                         }
                         .accessibilityElement(children: .combine)
                     }
                     MarqueMeteoView(stockage: marque)
                 } else {
-                    Text("encore \(max(10 - sortiesTerminees, 0)) sorties")
+                    Text(AnglaisF.f("encore %lld sorties", max(10 - sortiesTerminees, 0)))
                         .font(JetonsConditions.police(.title3)).foregroundStyle(JetonsConditions.encre)
                 }
             }

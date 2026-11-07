@@ -106,9 +106,9 @@ nonisolated enum FormatMesures {
 
     static func sens(_ s: SensTendance) -> String {
         switch s {
-        case .hausse: return "en hausse"
-        case .stable: return "stable"
-        case .baisse: return "en baisse"
+        case .hausse: return AnglaisF.bas("En hausse")
+        case .stable: return AnglaisF.bas("Stable")
+        case .baisse: return AnglaisF.bas("En baisse")
         }
     }
 

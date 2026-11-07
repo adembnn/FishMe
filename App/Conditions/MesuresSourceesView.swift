@@ -45,7 +45,7 @@ struct MesuresSourceesView: View {
 
     private var titre: some View {
         HStack(spacing: Espace.s) {
-            Text("Mesures").font(Police.sousTitre).foregroundStyle(Palette.encre)
+            Text(AnglaisF.t("Mesures")).font(Police.sousTitre).foregroundStyle(Palette.encre)
                 .accessibilityAddTraits(.isHeader)
             Spacer(minLength: Espace.s)
             Button { aideOuverte = true } label: {
@@ -55,7 +55,7 @@ struct MesuresSourceesView: View {
                     .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Que veulent dire ces mesures ?")
+            .accessibilityLabel(AnglaisF.t("Que veulent dire ces mesures ?"))
             .accessibilityIdentifier("mesures-aide")
         }
     }
@@ -122,11 +122,11 @@ struct AideMesuresView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: Espace.l) {
-                    Text(Self.phrasePrincipale).font(Police.sousTitre).foregroundStyle(Palette.encre)
+                    Text(AnglaisF.t(Self.phrasePrincipale)).font(Police.sousTitre).foregroundStyle(Palette.encre)
                         .fixedSize(horizontal: false, vertical: true)
                         .accessibilityIdentifier("mesures-aide-phrase")
                     if grandeurs.contains(.pression) {
-                        paragraphe("Pression", Self.phrasePression)
+                        paragraphe(AnglaisF.t("Pression"), AnglaisF.t(Self.phrasePression))
                     }
                     if grandeurs.contains(.temperatureEau) {
                         paragraphe(FormatMesures.nom(.temperatureEau), usa ? Self.phraseEauUS : Self.phraseEau)
@@ -150,11 +150,11 @@ struct AideMesuresView: View {
             }
             .scrollIndicators(.hidden)
             .background(Palette.surface)
-            .navigationTitle("Ces mesures")
+            .navigationTitle(AnglaisF.t("Ces mesures"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Fermer") { fermer() }
+                    Button(AnglaisF.t("Fermer")) { fermer() }
                         .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
                         .accessibilityIdentifier("mesures-aide-fermer")
                 }

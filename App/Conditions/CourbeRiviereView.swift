@@ -9,7 +9,7 @@ struct CourbeRiviereView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             if let normale = eau.normaleDebitM3s {
-                Text("débit (m³/s), normale du mois en pointillé").font(JetonsConditions.police(.caption)).foregroundStyle(JetonsConditions.encre2)
+                Text(AnglaisF.t("débit (m³/s), normale du mois en pointillé")).font(JetonsConditions.police(.caption)).foregroundStyle(JetonsConditions.encre2)
                 Chart {
                     ForEach(eau.serie48h.filter { $0.debitM3s != nil }, id: \.heure) { m in
                         LineMark(x: .value("heure", m.heure), y: .value("débit", m.debitM3s ?? 0))
@@ -20,13 +20,13 @@ struct CourbeRiviereView: View {
                         .foregroundStyle(JetonsConditions.encre2)
                 }
             } else {
-                Text("hauteur (m) sur 48 h").font(JetonsConditions.police(.caption)).foregroundStyle(JetonsConditions.encre2)
+                Text(AnglaisF.t("hauteur (m) sur 48 h")).font(JetonsConditions.police(.caption)).foregroundStyle(JetonsConditions.encre2)
                 Chart(eau.serie48h.filter { $0.hauteurM != nil }, id: \.heure) { m in
                     LineMark(x: .value("heure", m.heure), y: .value("hauteur", m.hauteurM ?? 0))
                         .foregroundStyle(JetonsConditions.accent)
                 }
             }
-            Text("\(eau.station.nom) · \(FormatConditions.sourceEau()) · mesuré à \(FormatConditions.heure(eau.heureMesure))")
+            Text(AnglaisF.f("%@ · %@ · mesuré à %@", eau.station.nom, FormatConditions.sourceEau(), FormatConditions.heure(eau.heureMesure)))
                 .font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
         }
         .frame(minHeight: 220)
