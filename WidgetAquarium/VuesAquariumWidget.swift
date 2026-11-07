@@ -89,11 +89,122 @@ private struct FondEau: View {
 
 // MARK: - Les poissons
 
+/// Le moteur d'animation des poissons. Mesuré le 7 nov. (lot/widget-fluide, simulateur iPhone 17 iOS 27.2, Debug,
+/// petit format, 3 poissons ; pic = `phys_footprint_peak` de l'extension ; statique = 27 Mo) :
+/// ce qui coûte, ce sont les IMAGES distinctes (chaque image de queue en plus : ~5 Mo de pic), pas les copies ni
+/// les chronos. Détail : WidgetAquarium/Polices/LISEZMOI.md, « Mesures du 7 nov. ».
+nonisolated enum PisteNage: String, Sendable {
+    /// Une pose par poisson ; elle change au créneau suivant de la timeline (20 min). Repli : Réduire les
+    /// animations, écran verrouillé, rendu teinté, widget verrouillé non Pro.
+    case statique
+    /// Essai : 16 copies, 16 images de queue, masques en union de 5 chronos. Pic 67 Mo : placeholder gris.
+    case battement
+    /// Piste a : déplacement sur une boucle de 10 s à 8 images/s (80 copies). Pic 70 Mo : placeholder gris.
+    case nage10
+    /// Aperçu de l'app seulement : 160 copies (10 s à 16 images/s).
+    case complete
+    /// Essai Debug : `ProgressView(timerInterval:)` (la barre avance seule) et effet de symbole (immobile).
+    case chrono
+    /// Essai Debug : entrées toutes les 10 s, `.animation` de 2 s entre deux (piste c) : saut sans glissement, pic 38 Mo.
+    case glisse
+    /// Essai : comme `battement`, 4 images de queue. Pic 56 Mo : placeholder gris.
+    case ondule
+    /// Essai : masques en police de parité (2 chronos par copie), 4 images de queue, 16 copies. Pic 45 Mo.
+    case parite
+    /// Essais : comme `parite` à 6, 4, 2 ou 1 image(s)/s (pics 44, 46, 35, 35 Mo).
+    case parite6, parite4, parite2, parite1
+    /// UNE image par poisson, la nage par transformations (va-et-vient, tangage, corps qui respire), boucle de
+    /// 2 s en polices de parité : 8, 12 ou 16 images/s (16, 24, 32 copies) ; pics 29, 31, 32 Mo. `fixe24` : retenue.
+    case fixe16, fixe24, fixe32
+    /// Essai : un calque par poisson (copies à sa taille). Pic 48 Mo : placeholder gris.
+    case calques
+
+    var boucle: HorlogeAnimation.Boucle {
+        switch self {
+        case .nage10: HorlogeAnimation.Boucle(parSeconde: 8, duree: 10)
+        case .parite6: HorlogeAnimation.Boucle(parSeconde: 6, duree: 2)
+        case .parite4: HorlogeAnimation.Boucle(parSeconde: 4, duree: 2)
+        case .parite2: HorlogeAnimation.Boucle(parSeconde: 2, duree: 2)
+        case .parite1: HorlogeAnimation.Boucle(parSeconde: 1, duree: 2)
+        case .fixe24: HorlogeAnimation.Boucle(parSeconde: 12, duree: 2)
+        case .fixe32: HorlogeAnimation.Boucle(parSeconde: 16, duree: 2)
+        default: .battement
+        }
+    }
+
+    /// Images de queue distinctes par poisson sur une boucle (0 : toutes, comme `battement`).
+    var imagesQueue: Int {
+        switch self {
+        case .ondule, .parite, .parite6, .parite4, .calques: 4
+        case .parite2, .parite1: 2
+        case .fixe16, .fixe24, .fixe32: 1
+        default: 0
+        }
+    }
+
+    var parite: Bool { [.parite, .parite6, .parite4, .parite2, .parite1, .fixe16, .fixe24, .fixe32, .calques].contains(self) }
+
+    /// Durée d'un créneau de positions (20 min ; 10 s pour l'essai `glisse`).
+    var pasCreneau: TimeInterval { self == .glisse ? 10 : NageWidget.pas }
+
+    /// La piste du vrai widget. En Debug, un fichier `piste-widget.txt` dans l'App Group la remplace (essais).
+    static var widget: PisteNage {
+        #if DEBUG
+        if let url = DepotAquariumWidget.url()?.deletingLastPathComponent().appendingPathComponent("piste-widget.txt"),
+           let texte = try? String(contentsOf: url, encoding: .utf8),
+           let lue = PisteNage(rawValue: texte.trimmingCharacters(in: .whitespacesAndNewlines)) {
+            return lue
+        }
+        #endif
+        return .fixe24
+    }
+}
+
+#if DEBUG
+/// Essai piste b : une barre `ProgressView(timerInterval:)` (le système la fait avancer seul) et la même dans un
+/// style personnalisé qui place un poisson à `fractionCompleted` : bouge-t-il dans l'hôte des widgets ?
+private struct ChronoProgression: View {
+    let debut: Date
+
+    private struct StylePoisson: ProgressViewStyle {
+        func makeBody(configuration: Configuration) -> some View {
+            GeometryReader { geo in
+                Image(systemName: "fish.fill")
+                    .foregroundStyle(.orange)
+                    .position(x: geo.size.width * (configuration.fractionCompleted ?? 0), y: geo.size.height / 2)
+            }
+        }
+    }
+
+    var body: some View {
+        VStack(spacing: 6) {
+            ProgressView(timerInterval: debut...debut.addingTimeInterval(60), countsDown: false) { EmptyView() }
+                currentValueLabel: { EmptyView() }
+                .progressViewStyle(.linear)
+                .tint(.white)
+            ProgressView(timerInterval: debut...debut.addingTimeInterval(60), countsDown: false) { EmptyView() }
+                currentValueLabel: { EmptyView() }
+                .progressViewStyle(StylePoisson())
+                .frame(height: 20)
+            // Piste d : effet de symbole répété (bouge-t-il hors de l'app ?).
+            Image(systemName: "fish.fill")
+                .font(.title)
+                .foregroundStyle(.yellow)
+                .symbolEffect(.wiggle, options: .repeat(.continuous))
+            Spacer()
+        }
+        .padding(8)
+    }
+}
+#endif
+
 private struct CoucheNage: View {
     let entree: EntreeAquarium
     let famille: WidgetFamily
     /// Faux : poissons figés (tests d'image, repli sans animation).
     var anime: Bool = true
+    /// Moteur d'animation (voir `PisteNage`) : `.battement` dans le vrai widget, `.complete` dans l'aperçu de l'app.
+    var piste: PisteNage = .battement
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
     @Environment(\.widgetRenderingMode) private var rendu
 
@@ -112,6 +223,8 @@ private struct CoucheNage: View {
         let cycle: Bool
         /// Pas entre deux numéros d'image du battement (2 : images paires seulement).
         let pas: Int
+        /// Images par battement réellement utilisées (8 au plus ; 0 : image fixe).
+        var imagesCycle: Int = 0
         /// Lacets rendus en volume (fil Aquarium) ; vide : le profil aplati horizontalement.
         let angles: [Int]
         let poses: [NageWidget.PoseNage]
@@ -145,53 +258,62 @@ private struct CoucheNage: View {
         // Rendu teinté : iOS remplace le fond, les copies (qui portent l'eau) le cacheraient. Poissons fixes.
         let animePoissons = anime && !reduireAnimations && !Self.estAccessoire(famille) && rendu != .accented
         let reference = HorlogeAnimation.reference(pour: entree.date)
-        let creneau = Int((entree.date.timeIntervalSince1970 / NageWidget.pas).rounded(.down))
+        let creneau = Int((entree.date.timeIntervalSince1970 / piste.pasCreneau).rounded(.down))
 
         GeometryReader { geo in
             let l = geo.size.width
             let h = geo.size.height
+            let boucle = piste.boucle
             // Pleine eau : chaque poisson traverse en perspective (NageWidget.traversees), calculé une fois par poisson.
             let nageurs: [Nageur] = placements.compactMap { placement in
                 guard let poisson = parId[placement.id] else { return nil }
                 let longueur = part * placement.echelle
                 let battement = NageWidget.cycleUtilise(disponibles: PoissonVivant.imagesDisponibles(poisson.slug))
                 return Nageur(placement: placement, slug: poisson.slug, largeur: l * longueur,
-                              cycle: battement.images > 0, pas: battement.pas,
+                              cycle: battement.images > 0, pas: battement.pas, imagesCycle: battement.images,
                               angles: battement.images > 0 ? PoissonVivant.anglesDisponibles(poisson.slug) : [],
                               // Pleine eau (Adem, 16 oct. 07h) : traversées en perspective, sorties par les bords.
                               poses: NageWidget.traversees(id: poisson.id, slug: poisson.slug, creneau: creneau,
-                                                           nombre: HorlogeAnimation.nombreImages,
+                                                           nombre: piste == .complete ? HorlogeAnimation.nombreImages
+                                                               : (piste == .nage10 ? boucle.copies : 32),
                                                            imagesCycle: max(battement.images, 1), longueur: longueur,
                                                            rapport: Double(h / max(l, 1))))
             }
             ZStack {
-                // 160 copies (10 s à 16 images/s) ; chaque copie dessine TOUS les poissons à leur place de cet instant
-                // (sans l'eau : c'est le fond du widget), et deux masques chronos n'en laissent voir qu'une à la fois.
-                ImagesAnimees(reference: reference, actif: animePoissons) { j in
-                    ZStack {
-                        // Les poissons du fond d'abord : ceux de devant passent par-dessus.
-                        // j < 0 : pas d'animation, chaque poisson est à sa pose de repos visible.
-                        let ordre = nageurs.sorted {
-                            $0.poses[j < 0 ? $0.repos(l: l) : j].profondeur > $1.poses[j < 0 ? $1.repos(l: l) : j].profondeur
-                        }
-                        ForEach(ordre) { nageur in
-                            let pose = nageur.poses[j < 0 ? nageur.repos(l: l) : j]
-                            // Le lacet rendu le plus proche, une seule image (plus de fondu entre deux) : la moitié
-                            // moins d'images à garder en mémoire dans l'extension.
-                            let vue = nageur.angles.isEmpty ? 0
-                                : (NageWidget.melange(lacet: pose.lacet, angles: nageur.angles)
-                                    .max { $0.poids < $1.poids }?.angle ?? 0)
-                            ImagePoisson(slug: nageur.slug, image: nageur.cycle ? pose.image * nageur.pas : nil,
-                                         largeur: nageur.largeur * pose.echelle, sens: pose.sens,
-                                         angle: vue, volume: !nageur.angles.isEmpty)
-                                .opacity(pose.opacite)
-                                // Il lève un peu le nez quand il monte (moitié de l'assiette de nage.js).
-                                .rotationEffect(.radians(-pose.assiette * 0.5 * (pose.sens > 0 ? 1 : -1)))
-                                .position(x: pose.x * l, y: pose.y * h)
+                switch (animePoissons, piste) {
+                case (true, .complete):
+                    // Aperçu de l'app seulement : 160 copies (10 s à 16 images/s) de TOUS les poissons, masquées par
+                    // des chronos. Trop lourd pour l'extension (placeholder gris, 7 nov.).
+                    ImagesAnimees(reference: reference, actif: true) { j in
+                        scene(nageurs, l: l, h: h) { nageur in nageur.poses[j < 0 ? nageur.repos(l: l) : j] }
+                    }
+                case (true, .nage10):
+                    // Piste a : boucle de 10 s à 8 images/s (80 copies), avec déplacement.
+                    BoucleAnimee(reference: reference, actif: true, boucle: boucle) { j in
+                        scene(nageurs, l: l, h: h) { nageur in nageur.poses[j < 0 ? nageur.repos(l: l) : j] }
+                    }
+                case (true, .battement), (true, .ondule), (true, .parite), (true, .parite6), (true, .parite4), (true, .parite2),
+                     (true, .parite1), (true, .fixe16), (true, .fixe24), (true, .fixe32):
+                    // Piste e : chaque poisson à sa place du créneau (timeline), battement de queue et légère
+                    // ondulation sur une boucle de 2 s (16 copies à 8 images/s, ou 12 à 6 images/s).
+                    BoucleAnimee(reference: reference, actif: true, boucle: boucle, parite: piste.parite) { k in
+                        scene(nageurs, l: l, h: h, phase: k, boucle: boucle.copies, queue: piste.imagesQueue) { nageur in
+                            nageur.poses[nageur.repos(l: l)]
                         }
                     }
-                    .frame(width: l, height: h)
+                case (true, .calques):
+                    // Un calque par poisson : ses copies ne couvrent que lui (masques à sa taille).
+                    ForEach(dessins(nageurs) { nageur in nageur.poses[nageur.repos(l: l)] }) { d in
+                        calque(d, reference: reference, boucle: boucle, l: l, h: h)
+                    }
+                default:
+                    scene(nageurs, l: l, h: h) { nageur in nageur.poses[nageur.repos(l: l)] }
                 }
+                #if DEBUG
+                if animePoissons && piste == .chrono {
+                    ChronoProgression(debut: .now)
+                }
+                #endif
                 // Quelques paillettes de nourriture près de la surface.
                 ForEach(placements.filter(\.auRepas)) { placement in
                     ForEach(0..<3, id: \.self) { k in
@@ -203,7 +325,89 @@ private struct CoucheNage: View {
                     }
                 }
             }
+            // Changement de créneau (timeline) : les poissons glissent 2 s vers leur nouvelle place (2 s = plafond
+            // des animations de widget, doc Apple « Animating data updates in widgets »).
+            .animation(reduireAnimations ? nil : .easeInOut(duration: 2), value: creneau)
         }
+    }
+
+    /// Un poisson à dessiner dans une copie : sa pose et son rang (pour décaler les battements entre poissons).
+    private struct Dessin: Identifiable {
+        let nageur: Nageur
+        let pose: NageWidget.PoseNage
+        let rang: Int
+        var id: String { nageur.id }
+    }
+
+    /// Les poissons à leur pose, ceux du fond d'abord.
+    private func dessins(_ nageurs: [Nageur], pose: (Nageur) -> NageWidget.PoseNage) -> [Dessin] {
+        nageurs.enumerated().map { Dessin(nageur: $1, pose: pose($1), rang: $0) }
+            .sorted { $0.pose.profondeur > $1.pose.profondeur }
+    }
+
+    /// Tous les poissons à leur pose (ceux du fond d'abord). `phase` (0..<boucle) : image de la boucle courte,
+    /// battement de queue et ondulation de quelques points ; nil : pose figée. `queue` : images de queue distinctes
+    /// par boucle (0 : une par copie).
+    private func scene(_ nageurs: [Nageur], l: CGFloat, h: CGFloat, phase: Int? = nil, boucle: Int = 16, queue: Int = 0,
+                       pose: (Nageur) -> NageWidget.PoseNage) -> some View {
+        ZStack {
+            ForEach(dessins(nageurs, pose: pose)) { d in
+                poisson(d, phase: phase, boucle: boucle, queue: queue)
+                    .position(x: d.pose.x * l, y: d.pose.y * h)
+            }
+        }
+        .frame(width: l, height: h)
+    }
+
+    /// Un poisson à sa pose, centré sur son point (le placement se fait autour) ; décalé par l'ondulation.
+    private func poisson(_ d: Dessin, phase: Int?, boucle: Int, queue: Int) -> some View {
+        let nageur = d.nageur
+        let p = d.pose
+        let vue = nageur.angles.isEmpty ? 0
+            : (NageWidget.melange(lacet: p.lacet, angles: nageur.angles).max { $0.poids < $1.poids }?.angle ?? 0)
+        let o = Self.ondulation(phase: phase, rang: d.rang, boucle: boucle, imagesCycle: nageur.imagesCycle, queue: queue)
+        let image: Int? = nageur.cycle ? ((p.image + o.decalageImage) % max(nageur.imagesCycle, 1)) * nageur.pas : nil
+        let sensX: CGFloat = p.sens >= 0 ? 1 : -1
+        return ImagePoisson(slug: nageur.slug, image: image,
+                            largeur: nageur.largeur * p.echelle, sens: p.sens,
+                            angle: vue, volume: !nageur.angles.isEmpty)
+            .scaleEffect(x: 1 - o.flex, y: 1 + o.flex * 0.4)
+            .opacity(p.opacite)
+            // Il lève un peu le nez quand il monte (moitié de l'assiette de nage.js), plus l'ondulation.
+            .rotationEffect(.radians(-(p.assiette * 0.5 + o.tangage) * Double(sensX)))
+            .offset(x: o.dx * nageur.largeur * 4 * sensX, y: o.dy * nageur.largeur * 2)
+    }
+
+    /// Un calque par poisson : `boucle.copies` copies de CE poisson seul, dans un cadre à sa taille ; les masques
+    /// chronos n'ont que cette taille (au lieu de celle du widget).
+    private func calque(_ d: Dessin, reference: Date, boucle: HorlogeAnimation.Boucle, l: CGFloat, h: CGFloat) -> some View {
+        let largeur = d.nageur.largeur * d.pose.echelle
+        return BoucleAnimee(reference: reference, actif: true, boucle: boucle, parite: true) { k in
+            poisson(d, phase: k, boucle: boucle.copies, queue: 4)
+                .frame(width: largeur * 1.3, height: largeur * 0.9)
+        }
+        .frame(width: largeur * 1.3, height: largeur * 0.9)
+        .position(x: d.pose.x * l, y: d.pose.y * h)
+    }
+
+    /// Ondulation d'une image de la boucle courte : décalage dans le cycle de queue, petit va-et-vient (en part
+    /// de la largeur et de la hauteur) et tangage (rad). Chaque poisson est décalé de 5 images : pas de nage en chœur.
+    /// `queue` > 0 : seulement `queue` images de queue distinctes (réparties sur le cycle), donc moins d'images
+    /// en mémoire ; la queue bat alors `boucle / queue` fois par boucle. dx et dy sont en part de la LONGUEUR du
+    /// poisson (×4 et ×2 à l'emploi), pour rester dans son calque.
+    static func ondulation(phase: Int?, rang: Int, boucle: Int, imagesCycle: Int, queue: Int = 0)
+        -> (decalageImage: Int, dx: CGFloat, dy: CGFloat, tangage: Double, flex: CGFloat) {
+        guard let phase, boucle > 0 else { return (0, 0, 0, 0, 0) }
+        let k = (phase + rang * boucle / 3) % boucle
+        let a = 2 * Double.pi * Double(k) / Double(boucle)
+        if queue == 1 {
+            // Une seule image par poisson (mesuré : chaque image de queue en plus coûte ~5 Mo de pic pour 3 poissons).
+            // La nage vient des transformations, gratuites : va-et-vient, montée et descente, tangage, et la largeur
+            // qui respire 2 fois par boucle (le corps qui ondule).
+            return (0, CGFloat(cos(a)) * 0.012, CGFloat(sin(a)) * 0.02, cos(a) * 0.07, CGFloat(sin(2 * a)) * 0.04)
+        }
+        let image = queue > 0 ? (k % queue) * max(imagesCycle, 1) / queue : k
+        return (image, CGFloat(cos(a)) * 0.006, CGFloat(sin(a)) * 0.012, cos(a) * 0.06, 0)
     }
 }
 
@@ -326,13 +530,14 @@ struct VueAquariumWidget: View {
     let entree: EntreeAquarium
     let famille: WidgetFamily
     let fondVisible: Bool
-    /// Vrai : animation complète (160 copies masquées par des chronos). Faux par défaut, donc dans le vrai widget :
-    /// 160 copies de tous les poissons gardaient l'extension en placeholder gris (mémoire, temps de rendu). Le widget
-    /// montre chaque poisson à sa pose de repos ; la variation vient de la timeline (une entrée toutes les 20 min,
-    /// `NageWidget.pas`). Vrai seulement pour l'aperçu de l'app (`ApercuAnimationAquarium`).
-    let anime: Bool
+    /// nil (défaut, donc le vrai widget) : la piste retenue, `PisteNage.widget` (boucle courte de 16 copies ; repli
+    /// statique pour « Réduire les animations », l'écran verrouillé et le rendu teinté, géré par CoucheNage).
+    /// Vrai : animation complète (160 copies), seulement pour l'aperçu de l'app (`ApercuAnimationAquarium`) : elle
+    /// gardait l'extension en placeholder gris (7 nov.). Faux : poses figées (tests d'image : `ImageRenderer` rend
+    /// les chronos vides, donc des copies masquées invisibles).
+    let anime: Bool?
 
-    init(entree: EntreeAquarium, famille: WidgetFamily, fondVisible: Bool = false, anime: Bool = false) {
+    init(entree: EntreeAquarium, famille: WidgetFamily, fondVisible: Bool = false, anime: Bool? = nil) {
         self.entree = entree
         self.famille = famille
         self.fondVisible = fondVisible
@@ -340,6 +545,14 @@ struct VueAquariumWidget: View {
     }
 
     private var instantane: InstantaneAquarium { entree.instantane }
+    /// Aperçu de l'app : animation complète ; vrai widget : la piste retenue (repli statique géré par CoucheNage).
+    private var piste: PisteNage {
+        switch anime {
+        case .some(true): .complete
+        case .some(false): .statique
+        case nil: PisteNage.widget
+        }
+    }
     private var nombrePoissons: Int { instantane.poissons.reduce(0) { $0 + $1.nombre } }
 
     private var etiquette: String {
@@ -398,12 +611,13 @@ struct VueAquariumWidget: View {
             if instantane.poissons.isEmpty {
                 // Avant la 1re prise (Adem, 16 oct.) : un gardon d'accueil nage, voilé, derrière l'invitation. Ce
                 // n'est pas une prise : il n'entre ni au compte d'espèces ni dans la liste de choix.
-                CoucheNage(entree: Self.entreeAccueil(entree), famille: famille, anime: anime)
+                CoucheNage(entree: Self.entreeAccueil(entree), famille: famille, anime: true, piste: piste)
                     .opacity(0.55)
                     .accessibilityHidden(true)
                 TexteVide()
             } else {
-                CoucheNage(entree: entree, famille: famille, anime: anime)
+                // Verrouillé (non Pro) : flouté et immobile (un flou sur 24 copies animées coûterait pour rien).
+                CoucheNage(entree: entree, famille: famille, anime: !verrouille, piste: verrouille ? .statique : piste)
                     .blur(radius: verrouille ? 9 : 0)
                     .accessibilityElement(children: .ignore)
                     .accessibilityLabel(etiquette)
@@ -458,7 +672,26 @@ private struct DiagnosticAquarium: View {
     var body: some View {
         let slugs = instantane.poissons.map(\.slug)
         let manquants = slugs.filter { !PoissonVivant.imageDisponible($0) }
-        Text("\(slugs.count) p · img \(manquants.isEmpty ? "ok" : "KO " + manquants.joined(separator: ",")) · polices \(PolicesMasque.disponibles ? "ok" : "KO")")
+        // Témoins (essais lot widget-fluide) : un chrono simple, un carré masqué par la police « chiffre 0 »
+        // (plein 1 s sur 10) et un par la police de parité 0 (plein 1 s sur 2). S'ils ne bougent pas, l'hôte ne
+        // fait pas tourner les chronos.
+        // Référence 62 s avant : au rendu, le chiffre des unités vaut 2 (orange vide, vert plein, bleu vide).
+        let ref = Date.now.addingTimeInterval(-62)
+        HStack(spacing: 4) {
+            Text(ref, style: .timer).font(.system(size: 9, weight: .bold, design: .monospaced)).foregroundStyle(.yellow)
+            Color.orange.frame(width: 14, height: 14)
+                .mask(MasqueClignotant(chiffre: 0, reference: ref, decalage: 0))
+            Color.green.frame(width: 14, height: 14)
+                .mask(MasqueClignotant(chiffre: 0, reference: ref, decalage: 0, police: PolicesMasque.pair(0)))
+            Color.blue.frame(width: 14, height: 14)
+                .mask(MasqueClignotant(chiffre: 0, reference: ref, decalage: 0, police: PolicesMasque.pair(1)))
+            Text(PolicesMasque.pairesDisponibles ? "P" : "p").font(.system(size: 9, weight: .bold)).foregroundStyle(.yellow)
+        }
+        .padding(3)
+        .background(.black.opacity(0.6))
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .padding(6)
+        Text("\(slugs.count) p · img \(manquants.isEmpty ? "ok" : "KO " + manquants.joined(separator: ",")) · polices \(PolicesMasque.disponibles ? "ok" : "KO") · \(PisteNage.widget.rawValue)")
             .font(.system(size: 9, weight: .bold, design: .monospaced))
             .foregroundStyle(.yellow)
             .padding(4)

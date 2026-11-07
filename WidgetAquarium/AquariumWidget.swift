@@ -27,11 +27,34 @@ nonisolated struct FournisseurAquarium: AppIntentTimelineProvider {
 
     func timeline(for configuration: ChoixAquariumIntent, in context: Context) async -> Timeline<EntreeAquarium> {
         let instantane = Self.instantane(configuration, famille: context.family)
-        var dates = NageWidget.dates(depuis: .now, dernierRepas: instantane.dernierRepas)
+        // Peu d'entrées : l'extension rend et archive CHAQUE entrée d'un coup, son pic de mémoire monte avec leur
+        // nombre (mesuré le 7 nov., lot/widget-fluide, petit format, Debug : 19 entrées 31 Mo de pic, 7 entrées 25 Mo,
+        // 4 entrées 23 Mo). La timeline se recharge à la fin (.atEnd) : 1 h 20 ici, soit environ 18 rechargements par
+        // jour, dans le budget d'Apple (40 à 70 par jour, « Keeping a widget up to date »).
+        var dates = Array(NageWidget.dates(depuis: .now, dernierRepas: instantane.dernierRepas).prefix(Self.entreesMax))
         if dates.isEmpty { dates = [.now] }
+        #if DEBUG
+        // Essai piste c seulement : une entrée toutes les 10 s pendant 10 min (Apple demande ~5 min entre entrées).
+        if PisteNage.widget == .glisse {
+            let depart = Date(timeIntervalSince1970: (Date.now.timeIntervalSince1970 / 10).rounded(.down) * 10)
+            dates = (0..<60).map { depart.addingTimeInterval(Double($0) * 10) }
+        }
+        #endif
         let entrees = dates.map { EntreeAquarium(date: $0, instantane: instantane) }
         return Timeline(entries: entrees, policy: .atEnd)
     }
+
+    /// Entrées par timeline (maintenant + 3 créneaux de 20 min). En Debug, `entrees-widget.txt` dans l'App Group la remplace.
+    static let entreesMax: Int = {
+        #if DEBUG
+        if let url = DepotAquariumWidget.url()?.deletingLastPathComponent().appendingPathComponent("entrees-widget.txt"),
+           let texte = try? String(contentsOf: url, encoding: .utf8),
+           let n = Int(texte.trimmingCharacters(in: .whitespacesAndNewlines)), n > 0 {
+            return n
+        }
+        #endif
+        return 4
+    }()
 
     /// Le fichier partagé, réduit aux poissons choisis (dans l'ordre choisi) ou, sans choix, aux plus rares.
     /// Le nombre d'espèces, les rations et l'abonnement restent ceux du fichier entier.

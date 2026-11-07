@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fabrique les 10 polices « masques clignotants » du widget Aquarium : FishMeClignoteChiffre0 … 9.
+"""Fabrique les 10 (+2 de parité) polices « masques clignotants » du widget Aquarium : FishMeClignoteChiffre0 … 9.
 
 Technique de Bryce Bostwick (MIT, github.com/brycebostwick/WidgetAnimation, licence dans
 LICENCE-modele-clignotant.txt). On part de SA police de masque (`modele-clignotant.otf`, celle de son
@@ -22,15 +22,17 @@ ICI = Path(__file__).resolve().parent
 CHIFFRES = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
 
-def fabriquer(k, sortie):
+def fabriquer(k, sortie, famille=None, pleins=None):
+    """Police pleine quand le chiffre des unités est dans `pleins` (défaut : {k})."""
+    pleins = {k} if pleins is None else set(pleins)
     police = TTFont(str(ICI / "modele-clignotant.otf"))
     for lookup in police["GSUB"].table.LookupList.Lookup:
         for sous_table in lookup.SubTable:
             for ligatures in sous_table.ligatures.values():
                 for lig in ligatures:
                     unite = CHIFFRES.index(lig.Component[-1])
-                    lig.LigGlyph = "ligaturefull" if unite == k else "ligatureempty"
-    famille = f"FishMeClignoteChiffre{k}"
+                    lig.LigGlyph = "ligaturefull" if unite in pleins else "ligatureempty"
+    famille = famille or f"FishMeClignoteChiffre{k}"
     ps = f"{famille}-Regular"
     for enregistrement in police["name"].names:
         if enregistrement.nameID in (1, 16):
@@ -55,6 +57,10 @@ def main():
     sortie.mkdir(parents=True, exist_ok=True)
     for k in range(10):
         print(*fabriquer(k, sortie), sep=" -> ")
+    # Boucle de 2 s (widget, lot widget-fluide) : pleine 1 s sur 2, selon la parité du chiffre des unités.
+    # Un seul chrono par masque au lieu de l'union de 5 (5 fois moins de chronos par copie).
+    for k in range(2):
+        print(*fabriquer(k, sortie, famille=f"FishMeClignotePair{k}", pleins=range(k, 10, 2)), sep=" -> ")
 
 
 if __name__ == "__main__":

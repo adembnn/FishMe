@@ -7,7 +7,7 @@ import Foundation
 // unités vaut K : la vue est pleine 1 s toutes les 10 s. Deux masques imbriqués (chiffre q décalé de r/8 s,
 // chiffre q−1 décalé de (r+1)/16 s) ne laissent passer qu'une fenêtre de 1/16 s : 160 images à 16 images/s,
 // en boucle de 10 s, une seule visible à la fois. Adem (16 oct. 06h) : 8 images/s paraissait saccadé.
-enum HorlogeAnimation {
+nonisolated enum HorlogeAnimation {
     static let imagesParSeconde = 16
     /// Une boucle = un tour complet du chiffre des unités des secondes.
     static let dureeBoucle: TimeInterval = 10
@@ -38,6 +38,64 @@ enum HorlogeAnimation {
         let (a, b) = masques(copie: j, parSeconde: parSeconde)
         return dernierChiffre(reference: reference, decalage: a.decalage, a: instant) == a.chiffre
             && dernierChiffre(reference: reference, decalage: b.decalage, a: instant) == b.chiffre
+    }
+
+    // MARK: - Boucle courte (widget allégé)
+
+    /// Boucle courte du vrai widget : 2 s à 8 images/s = 16 copies (au lieu de 160). La durée doit diviser 10 :
+    /// le masque d'une copie est alors l'UNION des chiffres s, s+P, s+2P… (5 chronos pour P = 2 s).
+    public struct Boucle: Equatable, Sendable {
+        public let parSeconde: Int
+        public let duree: Int
+        public init(parSeconde: Int, duree: Int) {
+            precondition(duree > 0 && 10 % duree == 0 && parSeconde > 0)
+            self.parSeconde = parSeconde
+            self.duree = duree
+        }
+        public var copies: Int { parSeconde * duree }
+        /// Chronos par copie (deux masques, chacun union de 10 / P chiffres).
+        public var chronosParCopie: Int { 2 * (10 / duree) }
+        public static let battement = Boucle(parSeconde: 8, duree: 2)
+    }
+
+    /// Les deux masques (union de chiffres, décalage) de la copie k d'une boucle courte.
+    public static func masques(copie k: Int, boucle: Boucle) -> (a: (chiffres: [Int], decalage: TimeInterval),
+                                                                 b: (chiffres: [Int], decalage: TimeInterval)) {
+        let f = boucle.parSeconde
+        let s = (k / f) % boucle.duree
+        let r = k % f
+        let tours = 10 / boucle.duree
+        let a = (0..<tours).map { (s + $0 * boucle.duree) % 10 }
+        let b = (0..<tours).map { (s + 9 + $0 * boucle.duree) % 10 }
+        return ((a, Double(r) / Double(f)), (b, Double(r + 1) / Double(f)))
+    }
+
+    public static func copieVisible(_ k: Int, boucle: Boucle, reference: Date, a instant: Date) -> Bool {
+        let (a, b) = masques(copie: k, boucle: boucle)
+        return a.chiffres.contains(dernierChiffre(reference: reference, decalage: a.decalage, a: instant))
+            && b.chiffres.contains(dernierChiffre(reference: reference, decalage: b.decalage, a: instant))
+    }
+
+    /// Boucle de 2 s : les deux masques d'une copie en polices de parité (`FishMeClignotePairK`, pleine quand le
+    /// chiffre des unités a la parité K). Un chrono par masque au lieu de l'union de 5 : même fenêtre visible.
+    public static func masquesParite(copie k: Int, boucle: Boucle) -> (a: (parite: Int, decalage: TimeInterval),
+                                                                       b: (parite: Int, decalage: TimeInterval)) {
+        precondition(boucle.duree == 2)
+        let m = masques(copie: k, boucle: boucle)
+        return ((m.a.chiffres[0] % 2, m.a.decalage), (m.b.chiffres[0] % 2, m.b.decalage))
+    }
+
+    public static func copieVisibleParite(_ k: Int, boucle: Boucle, reference: Date, a instant: Date) -> Bool {
+        let (a, b) = masquesParite(copie: k, boucle: boucle)
+        return dernierChiffre(reference: reference, decalage: a.decalage, a: instant) % 2 == a.parite
+            && dernierChiffre(reference: reference, decalage: b.decalage, a: instant) % 2 == b.parite
+    }
+
+    /// Copie attendue à l'écran à cet instant (calcul direct).
+    public static func imageVisible(boucle: Boucle, reference: Date, a instant: Date) -> Int {
+        let t = instant.timeIntervalSince(reference)
+        let n = Int((t * Double(boucle.parSeconde)).rounded(.down))
+        return ((n % boucle.copies) + boucle.copies) % boucle.copies
     }
 
     /// Numéro (0..<nombreImages) de l'image visible à cet instant, par le calcul direct.
