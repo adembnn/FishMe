@@ -31,6 +31,7 @@ struct PaywallVue: View {
     @State private var dejaMontre = false
     @State private var achatEnCours = false
     @Environment(\.dynamicTypeSize) private var tailleTexte
+    @Environment(\.locale) private var locale
 
     init(declencheur: DeclencheurPaywall, produits: ProduitsMontres, achats: Achats, mesure: MesurePaywall, liens: LiensLegaux,
          surEtat: @escaping (EtatAchats) -> Void, surAchatTermine: @escaping (DeclencheurPaywall) -> Void = { _ in },
@@ -72,7 +73,7 @@ struct PaywallVue: View {
                 dejaMontre = true
                 mesure.paywallMontre(declencheur: declencheur)
             }
-            await modele.charger()
+            await modele.charger(locale: locale)
         }
     }
 
@@ -134,7 +135,7 @@ struct PaywallVue: View {
             Task { await acheter() }
         } label: {
             Group {
-                if achatEnCours { ProgressView().tint(Palette.surMarine) } else { Text("Continuer") }
+                if achatEnCours { ProgressView().tint(Palette.surMarine) } else { Text("Continuer", tableName: AnglaisE.table) }
             }
             .frame(maxWidth: .infinity)
         }
@@ -145,7 +146,7 @@ struct PaywallVue: View {
     }
 
     /// Une offre : rond de sélection, nom et phrase, prix à droite. Bord marine quand elle est cochée.
-    private func ligneOffre(id: String, titre: String, detail: String?, prix: String?) -> some View {
+    private func ligneOffre(id: String, titre: LocalizedStringKey, detail: String?, prix: String?) -> some View {
         let coche = modele.choix == id
         return Button {
             modele.choix = id
@@ -157,7 +158,7 @@ struct PaywallVue: View {
                 }
                 .frame(width: 24, height: 24)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(titre)
+                    Text(titre, tableName: AnglaisE.table)
                         .font(Police.taille(17, .heavy))
                         .foregroundStyle(Palette.encre)
                     if let detail {
@@ -232,7 +233,7 @@ struct PaywallVue: View {
         }
     }
 
-    private func pastille(_ icone: String, _ texte: String) -> some View {
+    private func pastille(_ icone: String, _ texte: LocalizedStringKey) -> some View {
         VStack(spacing: 8) {
             Image(systemName: icone)
                 .font(.system(size: 20, weight: .semibold, design: .rounded))
@@ -240,7 +241,7 @@ struct PaywallVue: View {
                 .frame(width: 48, height: 48)
                 .background(Circle().fill(Palette.marineDoux))
                 .accessibilityHidden(true)
-            Text(texte)
+            Text(texte, tableName: AnglaisE.table)
                 .font(Police.legende)
                 .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
@@ -256,11 +257,11 @@ struct PaywallVue: View {
     private var indisponible: some View {
         ScrollView {
             VStack(spacing: 16) {
-                Text(TextesPaywall.produitIntrouvable)
+                Text(AnglaisE.t(TextesPaywall.produitIntrouvable, locale))
                     .font(Police.sousTitre)
                     .foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.center)
-                Button("Réessayer") { Task { await modele.charger() } }
+                Button { Task { await modele.charger(locale: locale) } } label: { Text("Réessayer", tableName: AnglaisE.table) }
                     .buttonStyle(.principal)
             }
             .padding(24)
@@ -275,12 +276,12 @@ struct PaywallVue: View {
     private var pied: some View {
         VStack(spacing: 0) {
             if let message {
-                Text(message).font(Police.legende).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
+                Text(AnglaisE.t(message, locale)).font(Police.legende).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
                     .padding(.bottom, Espace.xs)
             }
             // P34 A : un seul bouton principal (celui de la boutique) ; la croix en haut ferme la feuille.
             if modele.etat == .pret {
-                Text(mentions)
+                Text(AnglaisE.t(mentions, locale))
                     .font(Police.legende)
                     .foregroundStyle(Palette.encreDouce)
                     .multilineTextAlignment(.center)
@@ -290,7 +291,7 @@ struct PaywallVue: View {
             // Liens légaux toujours visibles. Une seule ligne (ou deux si le texte est agrandi) : le pied reste bas sur petit iPhone.
             Group {
                 if tailleTexte >= .accessibility1 {
-                    Menu("Plus") { piedLiens }
+                    Menu { piedLiens } label: { Text("Plus", tableName: AnglaisE.table) }
                         .frame(minHeight: Gabarit.zoneTactile)
                 } else {
                     ViewThatFits(in: .horizontal) {
@@ -308,11 +309,11 @@ struct PaywallVue: View {
     }
 
     @ViewBuilder private var piedLiens: some View {
-        Button("Restaurer les achats") { Task { await restaurer() } }
+        Button { Task { await restaurer() } } label: { Text("Restaurer les achats", tableName: AnglaisE.table) }
             .frame(minHeight: Gabarit.zoneTactile).padding(.horizontal, 6)
-        Link("Conditions", destination: liens.conditions)
+        Link(destination: liens.conditions) { Text("Conditions", tableName: AnglaisE.table) }
             .frame(minHeight: Gabarit.zoneTactile).padding(.horizontal, 6)
-        Link("Confidentialité", destination: liens.confidentialite)
+        Link(destination: liens.confidentialite) { Text("Confidentialité", tableName: AnglaisE.table) }
             .frame(minHeight: Gabarit.zoneTactile).padding(.horizontal, 6)
     }
 

@@ -2,43 +2,47 @@
  "usps": "TN",
  "nom": "Tennessee",
  "date_lecture": "2026-11-07",
+ "lecteur": "agent D6",
  "url_agence": {
   "url": "https://www.tn.gov/twra",
-  "statut_http": 0,
+  "statut_http": 403,
   "url_finale": "https://www.tn.gov/twra",
-  "note": "délai dépassé / injoignable"
+  "note": "403 en curl, WebFetch et navigateur intégré (réessayé ce jour : plus un délai dépassé mais toujours bloqué)."
  },
  "url_regles_eau_douce": {
   "url": "https://www.tn.gov/twra/fishing.html",
-  "statut_http": 0,
+  "statut_http": 403,
   "url_finale": "https://www.tn.gov/twra/fishing.html",
-  "note": "idem"
+  "note": "403."
  },
  "url_permis": {
   "url": "https://www.tn.gov/twra/license-sales.html",
-  "statut_http": 0,
+  "statut_http": 403,
   "url_finale": "https://www.tn.gov/twra/license-sales.html",
-  "note": "URL trouvée par recherche web ; injoignable ; /license-information.html aussi"
+  "note": "403. Autres essais : tn.gov/content/dam/tn/twra/documents/commission/TWRA_1660-01-28_REDLINE.pdf et .../notices/TWRA-Redline_1660-01-28.pdf = 403 ; publications.tnsosfiles.com = 403 ; twra.gov injoignable ; tnwildlife.org = 403."
  },
+ "permis_requis_eau_douce": "à vérifier",
  "prix_resident": {
   "montant": null,
   "monnaie": "USD",
-  "annee": "[?]",
-  "url": null,
+  "annee": 2026,
+  "url_source": null,
   "citation": null,
   "qualite": "donnée absente",
   "lu_le": null,
-  "note": "Aucun prix résident 'pêche seule' trouvé de façon fiable ; extrait de recherche : combo chasse/pêche 33 USD (hors périmètre)."
+  "note": "Prix résident pêche seule introuvable : aucun résultat de recherche ne le donne. Seul le combo chasse/pêche résident (33 USD, 42 USD prévu selon une actualité TWRA du 21 août 2026 vue en résumé de recherche) est cité, hors périmètre.",
+  "valeur_indiquee_non_verifiee": null
  },
  "prix_non_resident": {
-  "montant": 49,
+  "montant": null,
   "monnaie": "USD",
-  "annee": "2026 [?]",
-  "url": "https://www.tn.gov/twra/license-sales.html",
+  "annee": 2026,
+  "url_source": null,
   "citation": null,
-  "qualite": "extrait_de_recherche_tiers_non_lu",
+  "qualite": "donnée absente",
   "lu_le": null,
-  "note": "Annual Fishing No Trout 49 USD, selon des guides tiers ; un autre tiers donne 99 USD avec truite : non confirmé."
+  "note": "Aucune page lue. Valeurs non vérifiées en résumés de recherche : 98 USD toutes espèces (règle TWRA 2023 vue en extrait) et 49 USD sans truite ; une page Trout Unlimited donne 99 pour 2025-26. Écart 98/99 non tranché.",
+  "valeur_indiquee_non_verifiee": 98
  },
  "timbres_obligatoires": [],
  "appli_officielle": {
@@ -51,6 +55,6 @@
  },
  "licence_reutilisation": null,
  "verifie": false,
- "raison_non_verifie": "tn.gov/twra injoignable (timeout) depuis ce Mac ; tn.gov renvoie 403.",
- "notes": "Hausse proposée par la commission en août 2026 pour l'exercice FY28 (combo résident 33 -> 42), à valider en octobre 2026 : source presse seulement [?]. Les prix 2026-27 peuvent donc changer."
+ "raison_non_verifie": "Tout tn.gov (TWRA, PDF, tnsosfiles) répond 403 ; aucun prix lu officiellement.",
+ "notes": "Hausse approuvée par la commission le 21 août 2026 pour l’exercice FY28 (combo résident 33 vers 42) : les prix 2027-28 changeront ; source vue seulement dans un résumé de recherche d’une page tn.gov/twra non ouvrable. À relire depuis un réseau accepté par tn.gov."
 }

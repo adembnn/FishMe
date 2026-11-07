@@ -154,22 +154,12 @@ nonisolated enum ServiceReglesUS {
 
 /// Où est le pêcheur : l'État américain d'une position ou d'un lieu flou de carte.
 nonisolated enum EtatUSDepuisLieu {
-    private struct Cadre {
-        let code: String
-        let sud: Double, nord: Double, ouest: Double, est: Double
-    }
-
-    /// Cadres volontairement étroits, tout à fait à l'intérieur de l'État : près d'une frontière on ne devine rien, le pêcheur choisit l'État.
-    /// Seuls les États dont les règles sont chargées (WI, MN) sont devinés ; les autres se choisissent à la main.
-    private static let cadres: [Cadre] = [
-        Cadre(code: "WI", sud: 43.3, nord: 45.6, ouest: -90.9, est: -88.5),
-        Cadre(code: "MN", sud: 44.6, nord: 48.0, ouest: -95.5, est: -93.5),
-    ]
-
+    /// L'État couvert par les données géographiques embarquées (WI, MN, MI : contour simplifié) qui contient la position.
+    /// Hors de ces États on ne devine rien : le pêcheur choisit l'État à la main. Le Michigan n'a pas de règle par espèce chargée :
+    /// le bloc affiche alors « donnée absente » et le lien de l'agence.
     static func etat(pour p: Coordonnee) -> CodeEtat? {
-        let trouves = cadres.filter { p.latitude >= $0.sud && p.latitude <= $0.nord && p.longitude >= $0.ouest && p.longitude <= $0.est }
-        guard trouves.count == 1 else { return nil }
-        return CodeEtat(rawValue: trouves[0].code)
+        guard let code = GeoUS.etat(pour: p.latitude, longitude: p.longitude) else { return nil }
+        return CodeEtat(rawValue: code)
     }
 
     /// Un lieu flou de carte (« Lake Mendota · WI », « Wisconsin ») : un code USPS écrit en majuscules, ou le nom complet d'un État du niveau 1.

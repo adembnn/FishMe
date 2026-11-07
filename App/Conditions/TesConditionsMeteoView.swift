@@ -111,7 +111,7 @@ struct TesConditionsMeteoView: View {
             }
         }
         if lecture.depuisCache {
-            Text("lu à \(FormatConditions.heure(lecture.lueLe)), sans réseau")
+            Text(FormatConditions.luSansReseau(lecture.lueLe))
                 .font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
         }
         // Marque Apple Weather et lien légal : obligatoires sous une vraie lecture WeatherKit, jamais à côté de chiffres d'exemple.
@@ -119,7 +119,7 @@ struct TesConditionsMeteoView: View {
             Text("Données d'exemple (mode démo)")
                 .font(.system(.footnote, weight: .medium)).foregroundStyle(StyleMeteo.texteDoux)
         } else {
-            MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : "Hub’Eau")
+            MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : FormatConditions.sourceEau())
         }
     }
 
@@ -129,13 +129,13 @@ struct TesConditionsMeteoView: View {
         let lieu = lecture.eau?.station.eau ?? lecture.eau?.station.nom ?? "Ton spot"
         return VStack(spacing: 2) {
             Text(lieu).font(Police.taille(30, .bold)).lineLimit(1)
-            Text("\(FormatConditions.nombre(point.temperatureC))°")
+            Text(FormatConditions.degres(celsius: point.temperatureC))
                 .font(Police.taille(96, .heavy)).monospacedDigit()
                 .accessibilityIdentifier("temperature-maintenant")
             Text(StyleMeteo.libelle(codeTemps: point.codeTemps))
                 .font(Police.taille(20, .bold)).foregroundStyle(.white.opacity(0.85))
             if let j = duJour {
-                Text("Max. \(FormatConditions.nombre(j.temperatureMaxC))°  Min. \(FormatConditions.nombre(j.temperatureMinC))°")
+                Text("Max. \(FormatConditions.degres(celsius: j.temperatureMaxC))  Min. \(FormatConditions.degres(celsius: j.temperatureMinC))")
                     .font(Police.taille(20, .bold)).monospacedDigit()
             }
         }
@@ -174,6 +174,15 @@ struct TesConditionsMeteoView: View {
     }
 
     @ViewBuilder private func riviere(_ lecture: LectureConditions) -> some View {
+        if lecture.eau == nil, RegionPersistee.lire() == .etatsUnis {
+            // Région US sans lecture USGS (pas de proxy, pas de station proche, pas de réseau) : on le dit, on n'invente rien.
+            CarteVitree(titre: FormatConditions.titreEau(), icone: "water.waves") {
+                Text(FormatConditions.eauIndisponible())
+                    .font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .accessibilityIdentifier("eau-indisponible")
+        }
         if let eau = lecture.eau {
             if porte.autorise(.niveauEau) {
                 CarteRiviereView(eau: eau, etat: lecture.conditions.etatRiviere,

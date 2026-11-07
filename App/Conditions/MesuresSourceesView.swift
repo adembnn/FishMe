@@ -113,6 +113,9 @@ struct AideMesuresView: View {
     static let phrasePrincipale = "Simple mesure : on ne prédit pas la touche."
     static let phrasePression = "Beaucoup de pêcheurs y voient un bon signe. Les études ne sont pas d'accord."
     static let phraseEau = "La température vient d'une sonde de Hub'Eau, sur la station citée, pas sur ton spot."
+    static let phraseEauUS = "The temperature comes from a U.S. Geological Survey sensor at the station shown, not at your spot."
+    static var pageUSGS: URL { URL(string: "https://waterdata.usgs.gov")! }
+    private var usa: Bool { RegionPersistee.lire() == .etatsUnis }
     static var pageHubEau: URL { URL(string: "https://hubeau.eaufrance.fr")! }
 
     var body: some View {
@@ -126,14 +129,14 @@ struct AideMesuresView: View {
                         paragraphe("Pression", Self.phrasePression)
                     }
                     if grandeurs.contains(.temperatureEau) {
-                        paragraphe("Eau", Self.phraseEau)
+                        paragraphe(FormatMesures.nom(.temperatureEau), usa ? Self.phraseEauUS : Self.phraseEau)
                     }
                     if grandeurs.contains(.pression) {
                         MarqueMeteoView(stockage: marque)
                     }
                     if grandeurs.contains(.temperatureEau) || grandeurs.contains(.debit) {
-                        Button { ouvrir(Self.pageHubEau) } label: {
-                            Text("Hub'Eau, la source de l'eau et du débit")
+                        Button { ouvrir(usa ? Self.pageUSGS : Self.pageHubEau) } label: {
+                            Text(usa ? "USGS, the source of water level and flow" : "Hub'Eau, la source de l'eau et du débit")
                                 .font(Police.corps).foregroundStyle(Palette.marine).underline()
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)

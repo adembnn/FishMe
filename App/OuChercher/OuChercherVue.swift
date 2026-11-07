@@ -9,6 +9,7 @@ import UIKit
 struct OuChercherVue: View {
     @State private var modele: OuChercherModele
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.locale) private var locale
 
     init(especes: any ServiceEspeces & ServiceCoinsPublics, position: Coordonnee) {
         _modele = State(initialValue: OuChercherModele(especes: especes, position: position))
@@ -19,7 +20,7 @@ struct OuChercherVue: View {
             Group {
                 switch modele.etat {
                 case .choixEspece:
-                    GrilleEspeces(especes: modele.grille, choisir: modele.choisir)
+                    GrilleEspeces(especes: modele.grille, choisir: { modele.choisir($0, locale: locale) })
                 case .chargement(let espece):
                     ChargementCoins(espece: espece, changer: modele.changerEspece)
                 case .resultats(let espece, let coins):
@@ -28,7 +29,7 @@ struct OuChercherVue: View {
                     ListeCoins(espece: espece, coins: [], changer: modele.changerEspece)
                 }
             }
-            .navigationTitle(OuChercherTextes.titreEcran)
+            .navigationTitle(AnglaisE.t(OuChercherTextes.titreEcran, locale))
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     BoutonRond(role: .fermer, rendu: .simple) { dismiss() }
@@ -48,12 +49,13 @@ struct OuChercherVue: View {
 private struct GrilleEspeces: View {
     let especes: [EspeceChoix]
     let choisir: (EspeceChoix) -> Void
+    @Environment(\.locale) private var locale
     @ScaledMetric(relativeTo: .body) private var largeurMin: CGFloat = 130
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.l) {
-                Text(OuChercherTextes.invite)
+                Text(AnglaisE.t(OuChercherTextes.invite, locale))
                     .font(Police.titre)
                     .foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
@@ -62,7 +64,7 @@ private struct GrilleEspeces: View {
                         Button { choisir(e) } label: { CarteEspece(espece: e) }
                             .buttonStyle(.plain)
                             .accessibilityLabel(e.nom)
-                            .accessibilityHint(e.pres ? "Relevée près d'ici" : "")
+                            .accessibilityHint(e.pres ? AnglaisE.t("Relevée près d'ici", locale) : "")
                     }
                 }
             }
@@ -119,18 +121,19 @@ private struct ImageEspeceCoin: View {
 private struct ChargementCoins: View {
     let espece: EspeceChoix
     let changer: () -> Void
+    @Environment(\.locale) private var locale
 
     var body: some View {
         VStack(spacing: 20) {
             Spacer(minLength: 0)
             ImageEspeceCoin(nom: espece.image).frame(width: 72, height: 72)
             ChargementBouchon()
-            Text(OuChercherTextes.recherche(espece.nom))
+            Text(OuChercherTextes.recherche(espece.nom, locale: locale))
                 .font(Police.sousTitre)
                 .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
             Button(action: changer) {
-                Label("Changer d'espèce", systemImage: "arrow.left")
+                Label(AnglaisE.t("Changer d'espèce", locale), systemImage: "arrow.left")
             }
             .buttonStyle(.secondaire)
             Spacer(minLength: 0)
@@ -138,7 +141,7 @@ private struct ChargementCoins: View {
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 16)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel(OuChercherTextes.recherche(espece.nom))
+        .accessibilityLabel(OuChercherTextes.recherche(espece.nom, locale: locale))
     }
 }
 
@@ -148,6 +151,7 @@ private struct ListeCoins: View {
     let espece: EspeceChoix
     let coins: [CoinAffiche]
     let changer: () -> Void
+    @Environment(\.locale) private var locale
 
     var body: some View {
         ScrollView {
@@ -158,21 +162,21 @@ private struct ListeCoins: View {
                     Spacer(minLength: 0)
                 }
                 Button(action: changer) {
-                    Label("Changer d'espèce", systemImage: "arrow.left")
+                    Label(AnglaisE.t("Changer d'espèce", locale), systemImage: "arrow.left")
                 }
                 .buttonStyle(.secondaire)
 
                 if coins.isEmpty {
-                    Text(OuChercherTextes.sansRelevePres)
+                    Text(AnglaisE.t(OuChercherTextes.sansRelevePres, locale))
                         .font(Police.sousTitre)
                         .foregroundStyle(Palette.encre)
                         .padding(.vertical, Espace.s)
                 } else {
-                    Text(OuChercherTextes.explicationOrdre)
+                    Text(AnglaisE.t(OuChercherTextes.explicationOrdre, locale))
                         .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                     ForEach(coins) { LigneCoin(coin: $0) }
-                    Text(OuChercherTextes.creditOSM)
+                    Text(AnglaisE.t(OuChercherTextes.creditOSM, locale))
                         .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                 }

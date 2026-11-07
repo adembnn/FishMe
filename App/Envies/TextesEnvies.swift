@@ -13,25 +13,31 @@ nonisolated enum TextesEnvies {
     static let videPhrase = "Rien ici pour l'instant. Sur la fiche d'une espèce, touche « Je veux la pêcher »."
 
     /// « Mes envies · 3 ».
-    static func ligneDuPescedex(nombre: Int) -> String { "\(titre) · \(nombre)" }
+    static func ligneDuPescedex(nombre: Int, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        AnglaisE.f("Mes envies · %lld", locale, nombre)
+    }
 
     /// `dd/MM`, locale `fr_FR`, fuseau de Paris (même format que `ExtensionsConseils.texteFermeture`).
-    static func jourMois(_ date: Date) -> String {
+    static func jourMois(_ date: Date, locale: Locale = Locale(identifier: "fr_FR")) -> String {
         let f = DateFormatter()
-        f.locale = Locale(identifier: "fr_FR")
+        f.locale = locale
         f.timeZone = TimeZone(identifier: "Europe/Paris")
-        f.dateFormat = "dd/MM"
+        if locale.language.languageCode?.identifier == "fr" {
+            f.dateFormat = "dd/MM"
+        } else {
+            f.setLocalizedDateFormatFromTemplate("MMMd")
+        }
         return f.string(from: date)
     }
 
     /// La ligne d'ouverture, sans sa source (la source est un lien à part).
-    static func ouverture(_ statut: StatutOuverture) -> String {
+    static func ouverture(_ statut: StatutOuverture, locale: Locale = Locale(identifier: "fr_FR")) -> String {
         switch statut {
-        case .ouverte: "Ouverte aujourd'hui"
-        case .fermee(let date?, _): "Fermée jusqu'au \(jourMois(date))"
-        case .fermee(nil, _): "Fermée ce jour"
-        case .aVerifier: verifieLArrete
-        case .sansSpot: choisirUnSpot
+        case .ouverte: AnglaisE.t("Ouverte aujourd'hui", locale)
+        case .fermee(let date?, _): AnglaisE.f("Fermée jusqu'au %@", locale, jourMois(date, locale: locale))
+        case .fermee(nil, _): AnglaisE.t("Fermée ce jour", locale)
+        case .aVerifier: AnglaisE.t(verifieLArrete, locale)
+        case .sansSpot: AnglaisE.t(choisirUnSpot, locale)
         }
     }
 
@@ -43,15 +49,15 @@ nonisolated enum TextesEnvies {
         }
     }
 
-    static func libelle(_ ordre: OrdreEnvies) -> String {
+    static func libelle(_ ordre: OrdreEnvies, locale: Locale = Locale(identifier: "fr_FR")) -> String {
         switch ordre {
-        case .ouvertesDAbord: "Ouvertes d'abord"
-        case .recentes: "Récentes"
-        case .alphabetique: "A à Z"
+        case .ouvertesDAbord: AnglaisE.t("Ouvertes d'abord", locale)
+        case .recentes: AnglaisE.t("Récentes", locale)
+        case .alphabetique: AnglaisE.t("A à Z", locale)
         }
     }
 
-    static func libelleAccessibilite(ajouter: Bool, nom: String) -> String {
-        ajouter ? "\(nom), ajouter à mes envies" : "\(nom), retirer de mes envies"
+    static func libelleAccessibilite(ajouter: Bool, nom: String, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        ajouter ? AnglaisE.f("%@, ajouter à mes envies", locale, nom) : AnglaisE.f("%@, retirer de mes envies", locale, nom)
     }
 }

@@ -114,8 +114,8 @@ struct BandeauSession<LigneConditions: View>: View {
         return "Coucher du soleil \(heure(coucher)) + 30 min (article R436-13 du Code de l'environnement)"
     }
 
-    static func heure(_ date: Date) -> String {
-        date.formatted(.dateTime.hour().minute())
+    static func heure(_ date: Date, region: RegionApp = RegionPersistee.lire()) -> String {
+        FormatRegion(region: region).heure(date)
     }
 }
 

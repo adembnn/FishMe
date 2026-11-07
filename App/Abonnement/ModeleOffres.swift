@@ -24,7 +24,7 @@ final class ModeleOffres {
         self.choix = produits.annuel
     }
 
-    func charger() async {
+    func charger(locale: Locale = Locale(identifier: "fr_FR")) async {
         etat = .chargement
         var demandes = produits.identifiants
         // Le produit à 49,99 n'est joint qu'en décembre : s'il manque, on n'affiche pas « Ensuite X ».
@@ -43,7 +43,7 @@ final class ModeleOffres {
 
         if produits.tarifFondateur {
             let prixApres = trouves.first(where: { $0.id == IdentifiantsProduits.annuelApres })?.displayPrice
-            phraseLancement = TextesPaywall.phraseLancement(prixApres: prixApres)
+            phraseLancement = TextesPaywall.phraseLancement(prixApres: prixApres, locale: locale)
         } else {
             phraseLancement = nil
         }
@@ -53,7 +53,7 @@ final class ModeleOffres {
            let abonnement = mensuel.subscription, let offre = abonnement.introductoryOffer, offre.paymentMode == .freeTrial {
             let eligible = await abonnement.isEligibleForIntroOffer
             phraseEssai = TextesPaywall.essaiMensuel(valeur: offre.period.value, unite: Self.unite(offre.period.unit),
-                                                     prixParMois: mensuel.displayPrice, eligible: eligible)
+                                                     prixParMois: mensuel.displayPrice, eligible: eligible, locale: locale)
         }
         etat = .pret
     }

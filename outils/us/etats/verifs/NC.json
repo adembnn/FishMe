@@ -1,55 +1,58 @@
 {
-  "url_agence": {
-    "url": "https://www.ncwildlife.gov/",
-    "statut_http": 200,
-    "url_finale": "https://www.ncwildlife.gov/"
-  },
-  "url_regles_eau_douce": {
-    "url": "https://www.ncwildlife.gov/fishing",
-    "statut_http": 200,
-    "url_finale": "https://www.ncwildlife.gov/fishing"
-  },
-  "url_permis": {
-    "url": "https://license.gooutdoorsnorthcarolina.com/",
-    "statut_http": 200,
-    "url_finale": "https://license.gooutdoorsnorthcarolina.com/Licensing/CustomerLookup.aspx",
-    "note": "plateforme officielle de vente (liée par ncwildlife.gov/fishing) ; remplace l'URL devinée /licenses (404) ; page d'accueil https://gooutdoorsnorthcarolina.com/"
-  },
-  "prix_resident": {
-    "montant": 32.0,
-    "monnaie": "USD",
-    "saison": "inland annuel ; entrée en vigueur du 1er août ou du 1er juillet 2026 [?]",
-    "source": "https://www.oah.nc.gov/media/18321/download",
-    "citation": "Resident State Inland Fishing License - $30.00. $32.00.",
-    "qualite": "officielle (règle 15A NCAC 10A .1601, texte avec ancien et nouveau montants)",
-    "lu_le": "2026-11-07",
-    "note": "PDF du Bureau des audiences administratives (OAH) de Caroline du Nord ; deuxième montant = nouveau ; non confirmé sur une page de la NCWRC"
-  },
-  "prix_non_resident": {
-    "montant": 56.0,
-    "monnaie": "USD",
-    "saison": "inland annuel ; entrée en vigueur du 1er août ou du 1er juillet 2026 [?]",
-    "source": "https://www.oah.nc.gov/media/18321/download",
-    "citation": "Nonresident State Inland Fishing License - $54.00. $56.00.",
-    "qualite": "officielle (règle 15A NCAC 10A .1601, texte avec ancien et nouveau montants)",
-    "lu_le": "2026-11-07"
-  },
-  "timbres": [],
-  "appli_officielle": {
-    "nom": "Go Outdoors North Carolina",
-    "url": "https://apps.apple.com/app/id6443992281",
-    "note": "nom et lien repris de l'ancien fichier, non revérifiés"
-  },
-  "reciprocite_eaux_tribales": null,
-  "licence_reutilisation": null,
-  "verifie": false,
-  "raison_non_verifie": "Les deux prix ne sont pas lus sur une page de l'agence : ncwildlife.gov/fishing renvoie aux eRegulations et à la plateforme (qui ne montre que des forfaits) ; le PDF OAH est un texte de règle avec montants barrés/nouveaux et la date d'effet varie (1er juill. ou 1er août 2026).",
-  "qualite_donnees": {
-    "urls": "officielle",
-    "prix": "officielle (règle) mais ambiguë"
-  },
-  "notes": "Concorde avec eRegulations (32/56). Mountain Heritage Trout Waters : permis 3 jours séparé 10 $ -> 11 $ (règle), inutile avec la licence annuelle (résumé de recherche). Plateforme : forfaits « Inland Angler » etc. (prix non attribuables sans ambiguïté, non repris). Non lu : PDF Digest.",
-  "usps": "NC",
-  "nom": "North Carolina",
-  "date_lecture": "2026-11-07"
+ "usps": "NC",
+ "nom": "North Carolina",
+ "date_lecture": "2026-11-07",
+ "lecteur": "agent D6",
+ "url_agence": {
+  "url": "https://www.ncwildlife.gov/",
+  "statut_http": 200,
+  "url_finale": "https://www.ncwildlife.gov/",
+  "note": null
+ },
+ "url_regles_eau_douce": {
+  "url": "https://www.ncwildlife.gov/fishing/regulations",
+  "statut_http": 200,
+  "url_finale": "https://www.ncwildlife.gov/fishing/regulations",
+  "note": "Renvoie vers le digest https://www.eregulations.com/northcarolina/fishing/fishing-licenses (hébergé par un tiers)."
+ },
+ "url_permis": {
+  "url": "https://www.ncwildlife.gov/hunting/license-types-and-fees",
+  "statut_http": 200,
+  "url_finale": "https://www.ncwildlife.gov/hunting/license-types-and-fees",
+  "note": "Page officielle lue : pas de montants pour la pêche seule. /fishing/license-types-and-fees = 404. Vente officielle : https://license.gooutdoorsnorthcarolina.com (catalogue des permis non lu, la boutique lue ne liste que du merchandising)."
+ },
+ "permis_requis_eau_douce": "oui",
+ "prix_resident": {
+  "montant": 32,
+  "monnaie": "USD",
+  "annee": 2026,
+  "url_source": "https://www.eregulations.com/northcarolina/fishing/fishing-licenses",
+  "citation": "Resident State Inland Fishing License - $30.00. $32.00.",
+  "qualite": "tiers",
+  "lu_le": "2026-11-07",
+  "note": "32 USD lu sur eregulations (digest hébergé par un tiers). La citation vient du texte officiel ncwildlife.gov/media/4952/open (projet d’amendement 15A NCAC 10A .1601 : ancien 30, nouveau 32 ; date d’effet non lue). Les deux concordent mais aucune page de vente ou de tarifs officielle en vigueur n’a été lue."
+ },
+ "prix_non_resident": {
+  "montant": 56,
+  "monnaie": "USD",
+  "annee": 2026,
+  "url_source": "https://www.eregulations.com/northcarolina/fishing/fishing-licenses",
+  "citation": "Nonresident State Inland Fishing License - $54.00. $56.00.",
+  "qualite": "tiers",
+  "lu_le": "2026-11-07",
+  "note": "Même situation : 56 sur eregulations ; ancien 54 puis nouveau 56 dans le projet d’amendement officiel."
+ },
+ "timbres_obligatoires": [],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non relevé [?]"
+ },
+ "licence_reutilisation": null,
+ "verifie": false,
+ "raison_non_verifie": "Montants 32 et 56 vus sur le digest eregulations (tiers) et dans un projet d’amendement officiel dont la date d’effet n’est pas lue ; ni la page tarifs de l’agence ni la boutique de vente officielle n’affichent les prix.",
+ "notes": "Le projet d’amendement officiel liste aussi 10 jours résident 12 et non-résident 29 (hors périmètre). Privilège truite et licence côtière séparés, non relevés comme obligatoires [?]."
 }

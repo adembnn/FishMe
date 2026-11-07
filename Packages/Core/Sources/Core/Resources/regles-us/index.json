@@ -37,8 +37,8 @@
  },
  "niveau1": {
   "fichier": "etats.json",
-  "etat_de_la_donnee": "Niveau 1 : 51 entrées lues le 2026-11-07 ; 32 États relus sur une page ou un PDF officiel (71 prix sur 102 sont de source officielle) ; les autres prix sont non vérifiés (sources tierces ou résumés) et ne se présentent jamais comme officiels. Sources : outils/us/etats/verifs/.",
+  "etat_de_la_donnee": "Niveau 1 : 51 entrées lues le 2026-11-07 ; 80 prix sur 101 relus sur une page ou un PDF officiel de l'agence ; les autres prix sont non vérifiés (sources tierces, résumés ou texte de loi) et ne se présentent jamais comme officiels. Sources : outils/us/etats/verifs/.",
   "date": "2026-11-07",
-  "sha256": "c93022f06268417c2a625d219b3050e3c12d78daf94fa965e0b71f3b83f8c25d"
+  "sha256": "feeecf4e2efd7132ab765033e62fff91ca14b5233427d4ddc3c5e48c40e3470e"
  }
 }

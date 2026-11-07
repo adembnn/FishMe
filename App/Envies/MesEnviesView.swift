@@ -10,6 +10,7 @@ struct MesEnviesView: View {
     /// Ouvre la fiche d'une espèce. À brancher dans le Pescedex. `nil` : pas de chevron.
     var ouvrirFiche: ((Espece) -> Void)? = nil
 
+    @Environment(\.locale) private var locale
     @AppStorage("envies.ordre") private var ordreBrut = OrdreEnvies.ouvertesDAbord.rawValue
 
     private var ordre: OrdreEnvies { OrdreEnvies(rawValue: ordreBrut) ?? .ouvertesDAbord }
@@ -17,7 +18,7 @@ struct MesEnviesView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             barre
-            Text(TextesEnvies.titre)
+            Text(AnglaisE.t(TextesEnvies.titre, locale))
                 .font(Police.grandTitre)
                 .tracking(-0.34)
                 .foregroundStyle(Palette.encre)
@@ -44,14 +45,14 @@ struct MesEnviesView: View {
 
     private var menuTri: some View {
         Menu {
-            Picker("Trier", selection: $ordreBrut) {
+            Picker(AnglaisE.t("Trier", locale), selection: $ordreBrut) {
                 ForEach(OrdreEnvies.allCases, id: \.rawValue) { o in
-                    Text(TextesEnvies.libelle(o)).tag(o.rawValue)
+                    Text(TextesEnvies.libelle(o, locale: locale)).tag(o.rawValue)
                 }
             }
         } label: {
             HStack(spacing: Espace.xs) {
-                Text(TextesEnvies.libelle(ordre))
+                Text(TextesEnvies.libelle(ordre, locale: locale))
                     .font(Police.detail)
                     .fixedSize(horizontal: false, vertical: true)
                 Image(systemName: "arrow.up.arrow.down")
@@ -63,7 +64,7 @@ struct MesEnviesView: View {
             .frame(minHeight: Gabarit.zoneTactile)
             .contentShape(Rectangle())
         }
-        .accessibilityLabel("Trier : \(TextesEnvies.libelle(ordre))")
+        .accessibilityLabel(AnglaisE.f("Trier : %@", locale, TextesEnvies.libelle(ordre, locale: locale)))
     }
 
     @ViewBuilder
@@ -82,17 +83,17 @@ struct MesEnviesView: View {
                             Button(role: .destructive) {
                                 modele.retirer(resume.espece)
                             } label: {
-                                Label(TextesEnvies.retirer, systemImage: "heart.slash")
+                                Label(AnglaisE.t(TextesEnvies.retirer, locale), systemImage: "heart.slash")
                             }
                         }
                         .contextMenu {
                             Button(role: .destructive) {
                                 modele.retirer(resume.espece)
                             } label: {
-                                Label("Retirer de mes envies", systemImage: "heart.slash")
+                                Label(AnglaisE.t("Retirer de mes envies", locale), systemImage: "heart.slash")
                             }
                         }
-                        .accessibilityAction(named: "Retirer de mes envies") { modele.retirer(resume.espece) }
+                        .accessibilityAction(named: Text(AnglaisE.t("Retirer de mes envies", locale))) { modele.retirer(resume.espece) }
                 }
             }
             .listStyle(.plain)
@@ -109,7 +110,7 @@ struct MesEnviesView: View {
                 .font(.system(size: 44, weight: .bold, design: .rounded))
                 .foregroundStyle(Palette.silhouette)
                 .accessibilityHidden(true)
-            Text(TextesEnvies.videPhrase)
+            Text(AnglaisE.t(TextesEnvies.videPhrase, locale))
                 .font(Police.corps)
                 .foregroundStyle(Palette.encreDouce)
                 .multilineTextAlignment(.center)
@@ -127,6 +128,7 @@ struct MesEnviesView: View {
 struct LigneMesEnviesView: View {
     let nombre: Int
     let action: () -> Void
+    @Environment(\.locale) private var locale
 
     var body: some View {
         Button(action: action) {
@@ -135,7 +137,7 @@ struct LigneMesEnviesView: View {
                     .font(.system(size: 22, weight: .bold, design: .rounded))
                     .frame(width: 24)
                     .accessibilityHidden(true)
-                Text(TextesEnvies.ligneDuPescedex(nombre: nombre))
+                Text(TextesEnvies.ligneDuPescedex(nombre: nombre, locale: locale))
                     .font(Police.corps)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -150,7 +152,7 @@ struct LigneMesEnviesView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("\(TextesEnvies.titre), \(nombre)")
+        .accessibilityLabel(AnglaisE.f("Mes envies, %lld", locale, nombre))
         .accessibilityIdentifier("envies.ligne")
     }
 }

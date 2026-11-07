@@ -6,10 +6,11 @@ import SwiftUI
 /// Aucun conseil médical, aucune promesse de délai, aucune position envoyée.
 struct NumerosUtilesView: View {
     @State private var autresOuverts = false
+    @Environment(\.locale) private var locale
 
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.m) {
-            Text(TextesMaFederation.numerosTitre)
+            Text(AnglaisE.t(TextesMaFederation.numerosTitre, locale))
                 .font(Police.sousTitre).foregroundStyle(Palette.encre)
                 .accessibilityAddTraits(.isHeader)
 
@@ -19,7 +20,7 @@ struct NumerosUtilesView: View {
                 }
             }
 
-            DisclosureGroup(TextesMaFederation.autresNumeros, isExpanded: $autresOuverts) {
+            DisclosureGroup(AnglaisE.t(TextesMaFederation.autresNumeros, locale), isExpanded: $autresOuverts) {
                 VStack(spacing: Espace.s) {
                     ForEach(NumerosUtiles.autres) { numero in
                         BoutonNumero(numero: numero, gros: false)
@@ -33,13 +34,13 @@ struct NumerosUtilesView: View {
             .accessibilityIdentifier("numeros-autres")
 
             Link(destination: NumerosUtiles.sourceURL) {
-                Text(TextesMaFederation.sourceNumeros(NumerosUtiles.releveLe.texte))
+                Text(TextesMaFederation.sourceNumeros(JourLocalise.texte(NumerosUtiles.releveLe, locale), locale: locale))
                     .font(Police.legende)
                     .foregroundStyle(Palette.marine)
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)
             }
-            .accessibilityHint(TextesMaFederation.ouvreSafari)
+            .accessibilityHint(AnglaisE.t(TextesMaFederation.ouvreSafari, locale))
         }
         .accessibilityIdentifier("numeros-utiles")
     }
@@ -48,6 +49,7 @@ struct NumerosUtilesView: View {
 private struct BoutonNumero: View {
     let numero: NumeroUtile
     let gros: Bool
+    @Environment(\.locale) private var locale
 
     var body: some View {
         if let lien = numero.lienTelephone {
@@ -58,7 +60,7 @@ private struct BoutonNumero: View {
                         .accessibilityHidden(true)
                     Text(numero.numero)
                         .font(gros ? Police.chiffreMoyen : Police.sousTitre)
-                    Text(numero.libelle)
+                    Text(AnglaisE.t(numero.libelle, locale))
                         .font(Police.detail)
                         .multilineTextAlignment(.leading)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -71,8 +73,8 @@ private struct BoutonNumero: View {
                             in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
                 .contentShape(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
             }
-            .accessibilityLabel("Appeler le \(numero.numero), \(numero.libelle)")
-            .accessibilityHint("Demande une confirmation avant d'appeler")
+            .accessibilityLabel(AnglaisE.f("Appeler le %@, %@", locale, numero.numero, AnglaisE.t(numero.libelle, locale)))
+            .accessibilityHint(AnglaisE.t("Demande une confirmation avant d'appeler", locale))
             .accessibilityIdentifier("numero-\(numero.numero)")
         }
     }
