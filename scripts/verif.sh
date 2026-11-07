@@ -135,7 +135,13 @@ if [ "$systeme" = "Darwin" ]; then
         schema="$nom"
       fi
     fi
-    ligne=$(xcrun simctl list devices available 2>/dev/null | grep -E '^ +iPhone' | head -n 1)
+    # Simulateur : celui du runtime iOS le plus récent (le projet exige iOS 26.6 minimum : un runtime 26.3 est refusé).
+    # VERIF_SIMULATEUR_UDID force un simulateur précis.
+    if [ -n "${VERIF_SIMULATEUR_UDID:-}" ]; then
+      ligne=$(xcrun simctl list devices available 2>/dev/null | grep -E "$VERIF_SIMULATEUR_UDID" | head -n 1)
+    else
+      ligne=$(xcrun simctl list devices available 2>/dev/null | awk '/^-- iOS /{v=$3} /^ +iPhone/{print v "\t" $0}' | sort -t$'\t' -k1,1 -V -r | cut -f2- | { grep -E 'iPhone (17|18 Pro) \(' || cat; } | head -n 1)
+    fi
     udid=$(printf '%s' "$ligne" | sed -E 's/.*\(([0-9A-Fa-f-]{36})\).*/\1/')
     if [ -z "$schema" ]; then
       ko App "App : je ne sais pas quel schéma Xcode tester" "écris son nom dans la ligne SCHEMA= en tête de scripts/verif.sh."
