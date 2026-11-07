@@ -32,3 +32,14 @@ Comptes par État (mesurés ; MI non mesuré, le comptage des tracés sur toute 
 
 ## Payant, sur demande, à confirmer
 Rien de payant dans ces couches. Bathymétrie WI en vecteur : payante chez un tiers (non faite). Export en masse des avis EPA : sur demande. RIDB (Corps) : clé gratuite. Licences à demander : MN rampes, WI, MI, copie PAD-US tierce, EPA.
+
+## US11 : fichiers embarqués (`embarquer.py`)
+Fabrique les fichiers simplifiés de `Packages/Core/Sources/Core/Resources/geo-us/` (un par État et par couche, JSON compact en tableaux ; format `fishme-geo-us/1`), lus par `Core/GeoUS/`.
+
+    python3 construire_etat.py WI --couches acces,peche_rive --sortie /chemin/brut      # points d'accès de l'agence (étape 1)
+    python3 embarquer.py WI --brut /chemin/brut --sortie ../../../Packages/Core/Sources/Core/Resources/geo-us
+
+`--brut` reçoit aussi `contour-<USPS>.json` (anneaux de l'État, TIGERweb, téléchargé au premier passage) et les téléchargements 3DHP (`plans-eau-`, `lignes-eau-`), hors de git ; le second passage les relit sans réseau. Couches : `<USPS>-points.json` (accès publics, type rampe, quai, accès public, autre ; chaque source dit « accès public listé par <agence> »), `-plans-eau.json` (plans d'eau nommés d'au moins 5 ha : centre et rayon du cercle de même surface, pas de contour), `-lignes-eau.json` (tronçons nommés d'ordre 4 et plus, simplifiés à 200 m), `-avis.json` (avis EPA s'il y en a ; sinon un seul renvoi daté vers la page de l'agence), `etats.json` (contours à 0,01° pour `GeoUS.etat(pour:)`).
+
+Mesuré le 7 nov. 2026 (3DHP, service USGS) : WI 3 246 points, 4 014 plans d'eau, 17 416 tronçons ; MN 3 018, 7 656, 17 764 ; MI 1 203, 4 277, 14 327 ; total 5,4 Mo (limite 25 Mo). Les plans d'eau des Grands Lacs font répondre 500 au serveur 3DHP : téléchargement par paquets de 50 avec généralisation de 0,002°. Les objets des États voisins pris par la boîte englobante sont retirés avec le contour TIGERweb ; un tronçon qui touche l'État est gardé en entier. Les pages d'agence MN (LakeFind) et MI répondent 403 aux scripts (non confirmées dans un navigateur) ; celles de WI répondent 200.
+Autres États : non faits (un État de plus = un `etats/<USPS>.json` avec sa couche d'accès, puis `embarquer.py`) ; PAD-US et bathymétrie restent hors de l'app.
