@@ -128,6 +128,10 @@ nonisolated enum PisteNage: String, Sendable {
     case douce, douce4
     /// Essai : un calque par poisson (copies à sa taille). Pic 48 Mo : placeholder gris.
     case calques
+    /// LA PISTE LÉGÈRE (7 nov., après le lag constaté sur iPhone) : UN SEUL poisson animé, dans un petit cadre à sa taille
+    /// (les 16 copies et leurs masques chronos sont minuscules au lieu de couvrir le widget), une seule image, boucle de
+    /// 2 s à 8 images/s, un chrono par masque (polices de parité). Les autres poissons restent figés, dessinés une fois.
+    case solo
 
     var boucle: HorlogeAnimation.Boucle {
         switch self {
@@ -152,7 +156,7 @@ nonisolated enum PisteNage: String, Sendable {
         switch self {
         case .ondule, .parite, .parite6, .parite4, .calques: 4
         case .parite2, .parite1: 2
-        case .fixe16, .fixe24, .fixe32, .balade, .balade4, .balade6: 1
+        case .fixe16, .fixe24, .fixe32, .balade, .balade4, .balade6, .solo: 1
         case .douce, .douce4: 2
         default: 0
         }
@@ -160,7 +164,7 @@ nonisolated enum PisteNage: String, Sendable {
 
     var estBalade: Bool { self == .balade || self == .balade4 || self == .balade6 }
 
-    var parite: Bool { [.parite, .parite6, .parite4, .parite2, .parite1, .fixe16, .fixe24, .fixe32, .calques].contains(self) }
+    var parite: Bool { [.parite, .parite6, .parite4, .parite2, .parite1, .fixe16, .fixe24, .fixe32, .calques, .solo].contains(self) }
 
     /// Durée d'un créneau de positions (20 min ; 10 s pour l'essai `glisse`).
     var pasCreneau: TimeInterval { self == .glisse ? 10 : NageWidget.pas }
@@ -174,7 +178,7 @@ nonisolated enum PisteNage: String, Sendable {
             return lue
         }
         #endif
-        return .douce
+        return .solo
     }
 
     #if DEBUG
@@ -335,6 +339,12 @@ private struct CoucheNage: View {
                             nageur.poses[nageur.repos(l: l)]
                         }
                     }
+                case (true, .solo):
+                    // Un poisson animé (le premier) dans un cadre minuscule ; les autres figés, dessinés une seule fois.
+                    scene(Array(nageurs.dropFirst()), l: l, h: h) { nageur in nageur.poses[nageur.repos(l: l)] }
+                    ForEach(dessins(Array(nageurs.prefix(1))) { nageur in nageur.poses[nageur.repos(l: l)] }) { d in
+                        calque(d, reference: reference, boucle: boucle, l: l, h: h, queue: 3, facteur: (2.0, 1.2))
+                    }
                 case (true, .calques):
                     // Un calque par poisson : ses copies ne couvrent que lui (masques à sa taille).
                     ForEach(dessins(nageurs) { nageur in nageur.poses[nageur.repos(l: l)] }) { d in
@@ -417,13 +427,14 @@ private struct CoucheNage: View {
 
     /// Un calque par poisson : `boucle.copies` copies de CE poisson seul, dans un cadre à sa taille ; les masques
     /// chronos n'ont que cette taille (au lieu de celle du widget).
-    private func calque(_ d: Dessin, reference: Date, boucle: HorlogeAnimation.Boucle, l: CGFloat, h: CGFloat) -> some View {
+    private func calque(_ d: Dessin, reference: Date, boucle: HorlogeAnimation.Boucle, l: CGFloat, h: CGFloat,
+                        queue: Int = 4, facteur: (CGFloat, CGFloat) = (1.3, 0.9)) -> some View {
         let largeur = d.nageur.largeur * d.pose.echelle
         return BoucleAnimee(reference: reference, actif: true, boucle: boucle, parite: true) { k in
-            poisson(d, phase: k, boucle: boucle.copies, queue: 4)
-                .frame(width: largeur * 1.3, height: largeur * 0.9)
+            poisson(d, phase: k < 0 ? nil : k, boucle: boucle.copies, queue: queue)
+                .frame(width: largeur * facteur.0, height: largeur * facteur.1)
         }
-        .frame(width: largeur * 1.3, height: largeur * 0.9)
+        .frame(width: largeur * facteur.0, height: largeur * facteur.1)
         .position(x: d.pose.x * l, y: d.pose.y * h)
     }
 
@@ -448,6 +459,11 @@ private struct CoucheNage: View {
         }
         let k = (phase + rang * boucle / 3) % boucle
         let a = 2 * Double.pi * Double(k) / Double(boucle)
+        if queue == 3 {
+            // Piste `solo` : glissade douce d'un côté à l'autre (±0,25 longueur en 2 s), le corps qui respire, un léger
+            // tangage. Il regarde toujours dans son sens de repos (pas de demi-tour : tout tient dans un petit cadre).
+            return (0, CGFloat(sin(a)) * 0.06, CGFloat(sin(2 * a)) * 0.012, cos(a) * 0.05, CGFloat(sin(2 * a)) * 0.05, nil)
+        }
         if queue == 1 {
             // Une seule image par poisson (mesuré : chaque image de queue en plus coûte ~5 Mo de pic pour 3 poissons).
             // La nage vient des transformations, gratuites : va-et-vient, montée et descente, tangage, et la largeur
