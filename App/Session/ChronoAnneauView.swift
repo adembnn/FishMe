@@ -7,11 +7,14 @@ struct ChronoAnneauView<SousTitre: View>: View {
   let progression: Double
   let diametre: CGFloat
   let sousTitre: SousTitre
+  /// R8 : dit ce que mesure le chiffre central (« écoulé »), pour qu'on ne le prenne pas pour un temps restant.
+  let legende: String?
   @Environment(\.accessibilityReduceMotion) private var reduireAnimations
 
   init(
-    temps: String, progression: Double, diametre: CGFloat, @ViewBuilder sousTitre: () -> SousTitre
+    temps: String, progression: Double, diametre: CGFloat, legende: String? = nil, @ViewBuilder sousTitre: () -> SousTitre
   ) {
+    self.legende = legende
     self.temps = temps
     self.progression = progression
     self.diametre = diametre
@@ -30,6 +33,12 @@ struct ChronoAnneauView<SousTitre: View>: View {
         .rotationEffect(.degrees(-90))
         .animation(reduireAnimations ? nil : .linear(duration: 1), value: progression)
       VStack(spacing: Espace.xs) {
+        if let legende {
+          Text(legende)
+            .font(Police.taille(13, .semibold))
+            .foregroundStyle(Palette.encreDouce)
+            .lineLimit(1)
+        }
         Text(temps)
           .font(Police.taille(diametre * 0.2, .bold).monospacedDigit())
           .foregroundStyle(Palette.encre)

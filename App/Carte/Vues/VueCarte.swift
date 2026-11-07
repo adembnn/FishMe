@@ -59,6 +59,7 @@ struct VueCarte: View {
     /// La feuille « Mon spot » ne monte pas d'elle-même : elle s'ouvre d'un toucher sur la pastille « Mon spot » en haut.
     @State private var feuilleSpotOuverte = false
     @State private var detentSpot: DetentPanneau = .moyen
+    @State private var departDemande = false
     @State private var detentFiche: DetentPanneau = .moyen
     /// Les poissons du spot, ouverts d'un toucher sur un poisson ou sur « + N » ; `especeOuverte` est le poisson touché.
     @State private var poissonsOuverts = false
@@ -503,7 +504,11 @@ struct VueCarte: View {
     }
 
     /// Un passage anonyme est enregistré juste avant que la session démarre (tronçon, jour, jeton du jour).
+    /// B10 : un second toucher arrivé avant que l'écran ne change (appareil lent) ne relance pas le départ : une demande à la fois.
     private func commencer(_ spot: Spot) {
+        guard !departDemande, !sessionEnCours else { return }
+        departDemande = true
+        Task { try? await Task.sleep(for: .seconds(1.5)); departDemande = false }
         modele.enregistrerPassage(spot: spot)
         onCommencerSession(spot)
     }

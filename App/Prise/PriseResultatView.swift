@@ -5,6 +5,12 @@ import UIKit
 /// P23, version du 19 oct. : de haut en bas, 1. la carte de la prise (un toucher la retourne : verso = la photo), 2. le bloc de règles de cette espèce
 /// à ce spot (`BlocReglesView`, un seul de deux états en tête), 3. l'interrupteur « gardée » (il ne sert qu'au quota du jour) et « Ajouter au Pescedex ».
 /// Rien d'autre au-dessus de la carte. Les lignes et la consigne viennent de `controle` de `Core` : l'écran ne filtre rien et n'ajoute aucune règle.
+/// B9 : le bouton ne contredit jamais la ligne qui dit qu'une carte d'exemple ne compte pas.
+nonisolated enum TextesPriseResultat {
+    static let mentionExemple = "Carte d'exemple : elle ne compte pas au Pescedex"
+    static func boutonPrincipal(exemple: Bool) -> String { exemple ? "Voir le Pescedex" : "Ajouter au Pescedex" }
+}
+
 struct PriseResultatView: View {
     @Bindable var modele: PriseModele
     @State private var verso = false
@@ -17,7 +23,7 @@ struct PriseResultatView: View {
                 gardee
                 if modele.exemple {
                     // Dans le défilement, pas dans la barre du bas : en bas, elle se chevauchait avec la mention « font foi ».
-                    Text("Carte d'exemple : elle ne compte pas au Pescedex")
+                    Text(TextesPriseResultat.mentionExemple)
                         .font(Police.legende).foregroundStyle(Palette.encreDouce)
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
@@ -36,7 +42,7 @@ struct PriseResultatView: View {
         .background(Palette.fond.ignoresSafeArea())
         .safeAreaInset(edge: .bottom) {
             VStack(spacing: Espace.xs) {
-                Button(modele.exemple ? "Voir le Pescedex" : "Ajouter au Pescedex") { modele.ranger() }
+                Button(TextesPriseResultat.boutonPrincipal(exemple: modele.exemple)) { modele.ranger() }
                     .buttonStyle(.principal)
             }
             .padding(.horizontal, Espace.bord).padding(.vertical, Espace.s)
