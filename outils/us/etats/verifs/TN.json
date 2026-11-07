@@ -1,0 +1,56 @@
+{
+ "usps": "TN",
+ "nom": "Tennessee",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://www.tn.gov/twra",
+  "statut_http": 0,
+  "url_finale": "https://www.tn.gov/twra",
+  "note": "délai dépassé / injoignable"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://www.tn.gov/twra/fishing.html",
+  "statut_http": 0,
+  "url_finale": "https://www.tn.gov/twra/fishing.html",
+  "note": "idem"
+ },
+ "url_permis": {
+  "url": "https://www.tn.gov/twra/license-sales.html",
+  "statut_http": 0,
+  "url_finale": "https://www.tn.gov/twra/license-sales.html",
+  "note": "URL trouvée par recherche web ; injoignable ; /license-information.html aussi"
+ },
+ "prix_resident": {
+  "montant": null,
+  "monnaie": "USD",
+  "annee": "[?]",
+  "url": null,
+  "citation": null,
+  "qualite": "donnée absente",
+  "lu_le": null,
+  "note": "Aucun prix résident 'pêche seule' trouvé de façon fiable ; extrait de recherche : combo chasse/pêche 33 USD (hors périmètre)."
+ },
+ "prix_non_resident": {
+  "montant": 49,
+  "monnaie": "USD",
+  "annee": "2026 [?]",
+  "url": "https://www.tn.gov/twra/license-sales.html",
+  "citation": null,
+  "qualite": "extrait_de_recherche_tiers_non_lu",
+  "lu_le": null,
+  "note": "Annual Fishing No Trout 49 USD, selon des guides tiers ; un autre tiers donne 99 USD avec truite : non confirmé."
+ },
+ "timbres_obligatoires": [],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non relevé [?]"
+ },
+ "licence_reutilisation": null,
+ "verifie": false,
+ "raison_non_verifie": "tn.gov/twra injoignable (timeout) depuis ce Mac ; tn.gov renvoie 403.",
+ "notes": "Hausse proposée par la commission en août 2026 pour l'exercice FY28 (combo résident 33 -> 42), à valider en octobre 2026 : source presse seulement [?]. Les prix 2026-27 peuvent donc changer."
+}

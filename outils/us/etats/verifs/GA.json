@@ -1,0 +1,63 @@
+{
+ "usps": "GA",
+ "nom": "Georgia",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://georgiawildlife.com/",
+  "statut_http": 200,
+  "url_finale": "https://georgiawildlife.com/",
+  "note": null
+ },
+ "url_regles_eau_douce": {
+  "url": "https://georgiawildlife.com/fishing",
+  "statut_http": 200,
+  "url_finale": "https://georgiawildlife.com/fishing",
+  "note": null
+ },
+ "url_permis": {
+  "url": "https://georgiawildlife.com/licenses-permits-passes",
+  "statut_http": 200,
+  "url_finale": "https://georgiawildlife.com/licenses-permits-passes",
+  "note": "page 'choose' avec les tarifs : https://georgiawildlife.com/licenses-permits-passes/choose"
+ },
+ "prix_resident": {
+  "montant": 15,
+  "monnaie": "USD",
+  "annee": "365 jours après achat (année non figée)",
+  "url": "https://georgiawildlife.com/licenses-permits-passes/choose",
+  "citation": "Fishing License: $15 annual | $5 for one-day & $1 for additional days Residents age 16–64 must have a fishing license to fish in fresh and salt waters of Georgia.",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "prix_non_resident": {
+  "montant": 50,
+  "monnaie": "USD",
+  "annee": "365 jours après achat (année non figée)",
+  "url": "https://georgiawildlife.com/licenses-permits-passes/choose",
+  "citation": "Fishing License: $50 annual | $10 for one-day & $3.50 for additional days Nonresidents 16 years of age and older must have a fishing license to fish in fresh and salt wat",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "timbres_obligatoires": [
+  {
+   "nom": "Trout License (pour truite de montagne, 16+)",
+   "montant": null,
+   "url": "https://georgiawildlife.com/licenses-permits-passes/choose",
+   "citation": "A Trout License is required for persons 16 years of age or older to fish for or possess mountain trout.",
+   "qualite": "officielle",
+   "note": "prix non lu sur cette page [?]"
+  }
+ ],
+ "appli_officielle": {
+  "nom": "Outdoors GA",
+  "url": "https://georgiawildlife.com/outdoors-ga-app",
+  "note": "nom lu sur georgiawildlife.com/licenses-permits-passes"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non mentionné sur les pages lues"
+ },
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison_non_verifie": null,
+ "notes": "Frais de transaction en ligne 3 USD, carte plastique 6 USD (page licenses-permits-passes). Confirme 15/50 ; prix du Trout License à lire [?]."
+}

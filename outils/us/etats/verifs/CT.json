@@ -1,0 +1,69 @@
+{
+ "usps": "CT",
+ "nom": "Connecticut",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://portal.ct.gov/deep",
+  "statut_http": 200,
+  "url_finale": "https://portal.ct.gov/deep",
+  "note": null
+ },
+ "url_regles_eau_douce": {
+  "url": "https://portal.ct.gov/deep/fishing/regulations/fishing-regulations",
+  "statut_http": 200,
+  "url_finale": "https://portal.ct.gov/deep/fishing/regulations/fishing-regulations",
+  "note": null
+ },
+ "url_permis": {
+  "url": "https://portal.ct.gov/deep/fishing/general-information/fisheries-licenses-and-permits",
+  "statut_http": 200,
+  "url_finale": "https://portal.ct.gov/deep/fishing/general-information/fisheries-licenses-and-permits",
+  "note": null
+ },
+ "prix_resident": {
+  "montant": 28,
+  "monnaie": "USD",
+  "annee": "2026 (année civile)",
+  "url": "https://portal.ct.gov/deep/fishing/general-information/fisheries-licenses-and-permits",
+  "citation": "Inland Waters Only CT resident age 16 or 17 is $14.00 CT resident age 18 to 64 is $28.00",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "prix_non_resident": {
+  "montant": 55,
+  "monnaie": "USD",
+  "annee": "2026 (année civile)",
+  "url": "https://portal.ct.gov/deep/fishing/general-information/fisheries-licenses-and-permits",
+  "citation": "Inland Waters Only ... Non resident age 16 or older is $55.00",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "timbres_obligatoires": [
+  {
+   "nom": "Trout and Salmon Stamp (résident 18+)",
+   "montant": 5,
+   "url": "https://portal.ct.gov/deep/fishing/general-information/fisheries-licenses-and-permits",
+   "citation": "Trout and Salmon Stamp ... CT resident age 18 and over is $5.00 Non resident age 16 or older is $5.00",
+   "qualite": "officielle"
+  },
+  {
+   "nom": "Trout and Salmon Stamp (non-résident 16+)",
+   "montant": 5,
+   "url": "https://portal.ct.gov/deep/fishing/general-information/fisheries-licenses-and-permits",
+   "citation": "idem",
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non mentionné sur les pages lues"
+ },
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison_non_verifie": null,
+ "notes": "URL règles corrigée : https://portal.ct.gov/deep/fishing/regulations/fishing-regulations (200). Permis 'All Waters' (eaux intérieures + marines) : 32 USD résident, 63 USD non-résident ; les prix retenus sont ceux de l'eau douce seule (Inland). Les anciennes valeurs de etats.json (32/63) étaient celles de All Waters. Licences à l'année civile, expirent le 31 déc."
+}

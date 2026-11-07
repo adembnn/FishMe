@@ -1,0 +1,76 @@
+{
+ "usps": "PA",
+ "nom": "Pennsylvanie",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://www.pa.gov/agencies/fishandboat",
+  "statut_http": 200,
+  "url_finale": "https://www.pa.gov/agencies/fishandboat",
+  "note": null
+ },
+ "url_regles_eau_douce": {
+  "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/fishandboat/documents/fishing/regulations/summarybook.pdf",
+  "statut_http": 200,
+  "url_finale": "https://www.pa.gov/content/dam/copapwp-pagov/en/fishandboat/documents/fishing/regulations/summarybook.pdf",
+  "note": "PDF du livret de règles"
+ },
+ "url_permis": {
+  "url": "https://www.pa.gov/agencies/fishandboat/fishing/buy-fishing-license-permit",
+  "statut_http": 200,
+  "url_finale": "https://www.pa.gov/agencies/fishandboat/fishing/buy-fishing-license-permit",
+  "note": "l'ancienne forme pa.gov/...html redirige vers cette URL sans .html"
+ },
+ "prix_resident": {
+  "montant": 27.97,
+  "monnaie": "USD",
+  "annee": "2026",
+  "url": "https://www.pa.gov/agencies/fishandboat/fishing/buy-fishing-license-permit",
+  "citation": "2026 Annual Fishing License Pricing ... Resident (Annual) 16-64 $27.97",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "prix_non_resident": {
+  "montant": 60.97,
+  "monnaie": "USD",
+  "annee": "2026",
+  "url": "https://www.pa.gov/agencies/fishandboat/fishing/buy-fishing-license-permit",
+  "citation": "2026 Annual Fishing License Pricing ... Non-Resident (Annual) 16 & up $60.97",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "timbres_obligatoires": [
+  {
+   "nom": "Trout Permit",
+   "montant": 14.97,
+   "url": "https://www.pa.gov/agencies/fishandboat/fishing/buy-fishing-license-permit",
+   "citation": "Trout Permit 16 & up $14.97",
+   "qualite": "officielle"
+  },
+  {
+   "nom": "Lake Erie Permit",
+   "montant": 9.97,
+   "url": "https://www.pa.gov/agencies/fishandboat/fishing/buy-fishing-license-permit",
+   "citation": "Lake Erie Permit 16 & up $9.97",
+   "qualite": "officielle"
+  },
+  {
+   "nom": "Combo Trout/Lake Erie",
+   "montant": 20.97,
+   "url": "https://www.pa.gov/agencies/fishandboat/fishing/buy-fishing-license-permit",
+   "citation": "Combination Trout Lake Erie Permit 16 & up $20.97",
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non nommée sur la page lue [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non mentionné sur les pages lues"
+ },
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison_non_verifie": null,
+ "notes": "Prix incluant 1 USD de frais d'agent et 0,97 USD de transaction (astérisque de la page). Prix = ceux déjà dans etats.json."
+}

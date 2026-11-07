@@ -1,0 +1,56 @@
+{
+ "usps": "LA",
+ "nom": "Louisiane",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://www.wlf.louisiana.gov/",
+  "statut_http": 403,
+  "url_finale": "https://www.wlf.louisiana.gov/",
+  "note": "403 aux robots"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://www.wlf.louisiana.gov/page/freshwater-fishing",
+  "statut_http": 403,
+  "url_finale": "https://www.wlf.louisiana.gov/page/freshwater-fishing",
+  "note": "403 ; existence non démontrée"
+ },
+ "url_permis": {
+  "url": "https://www.wlf.louisiana.gov/page/recreational-fishing-licenses-and-permits",
+  "statut_http": 403,
+  "url_finale": "https://www.wlf.louisiana.gov/page/recreational-fishing-licenses-and-permits",
+  "note": "URL trouvée par recherche web ; 403 aux robots"
+ },
+ "prix_resident": {
+  "montant": 17,
+  "monnaie": "USD",
+  "annee": "2025-2026 [?]",
+  "url": "https://www.wlf.louisiana.gov/page/license-and-permit-fee-list",
+  "citation": null,
+  "qualite": "extrait_de_recherche_page_officielle_non_lue",
+  "lu_le": null,
+  "note": "Basic Fishing License 17 USD cité par un extrait de recherche web de la page officielle LDWF (fee list), 2025 regs ; page non lue (403). Contredit l'ancienne valeur 9,5 de etats.json."
+ },
+ "prix_non_resident": {
+  "montant": 68,
+  "monnaie": "USD",
+  "annee": "2025-2026 [?]",
+  "url": "https://www.wlf.louisiana.gov/page/license-and-permit-fee-list",
+  "citation": null,
+  "qualite": "extrait_de_recherche_page_officielle_non_lue",
+  "lu_le": null,
+  "note": "Idem : 68 USD ; même valeur dans l'extrait du règlement 2025 (wlf.louisiana.gov/assets/Resources/Publications/Regulations/25LAFW.pdf, 403 aussi)."
+ },
+ "timbres_obligatoires": [],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non relevé [?]"
+ },
+ "licence_reutilisation": null,
+ "verifie": false,
+ "raison_non_verifie": "Toutes les pages officielles de l'agence répondent 403 (WebFetch et curl) ; aucune lecture directe possible aujourd'hui. Prix issus d'extraits de recherche web, non lus sur la page.",
+ "notes": "Valeurs 17/68 : à relire (le résumé d'une recherche n'est pas une lecture). Un document LDWF signalerait un changement de licence senior au 1er juin 2027. Pas de PDF officiel accessible."
+}
