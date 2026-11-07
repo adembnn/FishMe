@@ -1,0 +1,97 @@
+{
+  "etat": "WY",
+  "nom": "Wyoming",
+  "emprise": [
+    -111.06,
+    40.99,
+    -104.05,
+    45.01
+  ],
+  "communes": true,
+  "agence": "Wyoming Game and Fish Department",
+  "lien_plans": "https://wgfd.wyo.gov/geospatial-data",
+  "lien_avis": "https://wgfd.wyo.gov/fishing-boating/fish-consumption-advice",
+  "liens_etat": {
+    "avis_consommation": "https://wgfd.wyo.gov/fishing-boating/fish-consumption-advice",
+    "plans_eau": "https://wgfd.wyo.gov/fishing-boating"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Rampes, quais et pontons du guide de pêche (WGFD)",
+      "service": "https://services6.arcgis.com/cWzdqIyxbijuhPLw/ArcGIS/rest/services/Facilities_FishingGuide_PublicView/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_wy_installations",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "WGFD, Fishing Guide Facilities (Facilities_FishingGuide_PublicView)",
+      "editeur": "Wyoming Game and Fish Department",
+      "url_source": "https://wgfd.wyo.gov/geospatial-data",
+      "licence": "[?] non précisée sur le service (aucun copyrightText ni description sur la couche) ; compte ArcGIS du WGFD",
+      "date_source": "2022-02-15",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Types gardés : Boat Ramp, Boat Dock, Fishing Pier ; terrain privé exclu ; parkings, toilettes, campings non gardés."
+    },
+    {
+      "id": "acces_riviere",
+      "role": "acces",
+      "nom": "Points d'accès de rivière (mise à l'eau et sortie)",
+      "service": "https://services6.arcgis.com/cWzdqIyxbijuhPLw/ArcGIS/rest/services/All_River_Access_Points/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_wy_riviere",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "WGFD, River Access Points (All_River_Access_Points)",
+      "editeur": "Wyoming Game and Fish Department",
+      "url_source": "https://wgfd.wyo.gov/geospatial-data",
+      "licence": "[?] non précisée sur le service",
+      "date_source": "2026-01-16",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Notes libres et coordonnées UTM non copiées."
+    }
+  ],
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couverture": {
+    "acces": {
+      "statut": "absent",
+      "raison": "440 accès lus et normalisés dans le brut hors git ; pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "3DHP non téléchargé : pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "3DHP non téléchargé : pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+    },
+    "licences_a_confirmer": [
+      "accès (WGFD)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "sources_inaccessibles": [
+      {
+        "url": "https://health.wyo.gov/publichealth/chronic-disease/fish-consumption/",
+        "raison": "403 aux scripts, non contourné ; la page d'avis du WGFD répond 200"
+      }
+    ],
+    "manque": [
+      "date de la couche d'installations : 2022-02-15 (ancienne)",
+      "aires d'accès public (PAA) et zones de pêche à pied (Walk-In Fishing) du WGFD : polygones et points existent mais ne sont pas embarqués",
+      "pas de poissons par zone (US16)",
+      "accès gérés par d'autres agences (USFS, BLM, Corps) non inclus : RIDB non interrogé, clé absente",
+      "avis EPA absents du service hébergé pour le Wyoming ; renvoi vers la page de l'État"
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "etat": "ID",
+  "nom": "Idaho",
+  "emprise": [
+    -117.25,
+    41.99,
+    -111.04,
+    49.0
+  ],
+  "communes": true,
+  "agence": "Idaho Department of Fish and Game",
+  "lien_plans": "https://data-idfggis.opendata.arcgis.com/",
+  "lien_avis": "https://healthandwelfare.idaho.gov/health-wellness/environmental-health/fish-advisories",
+  "liens_etat": {
+    "avis_consommation": "https://healthandwelfare.idaho.gov/health-wellness/environmental-health/fish-advisories",
+    "plans_eau": "https://data-idfggis.opendata.arcgis.com/ [portail de données ouvertes de l'IDFG]"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Sites d'accès pêche et bateau (IDFG)",
+      "service": "https://services.arcgis.com/FjJI5xHF2dUPVrgK/ArcGIS/rest/services/IDFG_Fishing_and_Boating_Access_FFW_App/FeatureServer",
+      "couche": 1,
+      "geometrie": "point",
+      "normaliseur": "acces_id_idfg",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "IDFG, Fishing and Boating Access Sites (IDFG_Fishing_and_Boating_Access_FFW_App, couche Sites)",
+      "editeur": "Idaho Department of Fish and Game",
+      "url_source": "https://data-idfggis.opendata.arcgis.com/",
+      "licence": "[?] non précisée sur le service (copyrightText = « IDFG, IFWIS ») ; la description de l'IDFG limite le jeu à un usage public d'information",
+      "date_source": "2023-03-20",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Seuls les sites au statut Active sont gardés ; notes libres et dossiers non copiés. Même jeu que le service d'IDFG gisportal-idfg.idaho.gov (injoignable depuis cette machine : délai dépassé)."
+    }
+  ],
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couverture": {
+    "acces": {
+      "statut": "absent",
+      "raison": "357 accès lus et normalisés dans le brut hors git ; pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "3DHP non téléchargé : pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "3DHP non téléchargé : pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+    },
+    "licences_a_confirmer": [
+      "accès (IDFG)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "sources_inaccessibles": [
+      {
+        "url": "https://gisportal-idfg.idaho.gov/hosting/rest/services/Access/IDFG_Fishing_and_Boating_Access_Sites_Public/FeatureServer",
+        "raison": "délai de connexion dépassé (40 s) depuis cette machine ; la copie ArcGIS en ligne du même jeu a servi"
+      },
+      {
+        "url": "https://idfg.idaho.gov/",
+        "raison": "délai de connexion dépassé depuis cette machine : lien_plans pointe vers le portail de données ouvertes"
+      }
+    ],
+    "manque": [
+      "date de dernière mise à jour du service : 2023-03-20 seulement",
+      "pas de poissons par zone (US16)",
+      "accès gérés par d'autres agences (USFS, BLM, Corps) non inclus : RIDB non interrogé, clé absente",
+      "avis EPA absents du service hébergé pour l'Idaho ; renvoi vers la page de l'État (ouverte, HTTP 200)"
+    ]
+  }
+}
