@@ -1,0 +1,45 @@
+{
+  "etat": "MN",
+  "nom": "Minnesota",
+  "emprise": [
+    -97.25,
+    43.49,
+    -89.48,
+    49.39
+  ],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://www.health.state.mn.us/communities/environment/fish/index.html [?, non ouvert]",
+    "pêche": "https://www.dnr.state.mn.us/fishing/index.html [?, non ouvert]"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès publics à l'eau (rampes, portage)",
+      "service": "https://gis.dnr.state.mn.us/appserver/rest/services/webGDRS/loc_water_access_sites/MapServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_mn_swas",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "MN DNR, Public Water Access Sites (loc_water_access_sites)",
+      "editeur": "Minnesota DNR Parks and Trails",
+      "url_source": "https://gisdata.mn.gov/dataset/struc-water-access-sites",
+      "licence": "[?] non précisée (copyrightText du service = un courriel ; la page gisdata dit « non précisée ») : demander au DNR avant redistribution",
+      "date_source": "2025-12-06 (page gisdata, d'après reports/us/zones-acces.md)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Couverture partielle : ~la moitié des 3 000 rampes publiques. Champs « directions » et « comments » volontairement non copiés."
+    },
+    {
+      "id": "empoissonnement",
+      "role": "empoissonnement",
+      "nom": "Empoissonnement",
+      "service": null,
+      "statut": "absent",
+      "note": "Aucun service ArcGIS d'empoissonnement trouvé pour le Minnesota (non cherché à fond) [?]."
+    }
+  ]
+}
