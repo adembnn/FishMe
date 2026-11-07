@@ -14,15 +14,25 @@ struct MasqueClignotant: View {
     let chiffre: Int
     let reference: Date
     let decalage: TimeInterval
+    /// Taille de police réelle du chrono, en points (voir `body`).
+    static let petit: CGFloat = 6
 
     var body: some View {
         GeometryReader { geo in
             let taille = max(geo.size.width, geo.size.height, 1)
+            // Le chrono est dessiné en petit (`MasqueClignotant.petit` points) puis agrandi : en police géante
+            // (taille du widget, cadre de 9 caractères), chaque masque se rastérisait sur ~9 fois la largeur du
+            // widget et l'extension montait à 60 Mo pour 16 copies (mesuré le 7 nov.). Le carré plein agrandi
+            // reste un aplat : seul son bord est flou, hors cadre.
+            let p = Self.petit
             Text(reference + decalage, style: .timer)
-                .font(Font.custom("FishMeClignoteChiffre\(chiffre)-Regular", size: taille))
-                .frame(width: taille * 9, height: taille)
+                .font(Font.custom("FishMeClignoteChiffre\(chiffre)-Regular", size: p))
+                .frame(width: p * 9, height: p)
                 .multilineTextAlignment(.trailing)
-                .offset(x: -taille * 8)
+                .offset(x: -p * 8)
+                .frame(width: p, height: p, alignment: .topLeading)
+                .clipped()
+                .scaleEffect(taille / p, anchor: .topLeading)
         }
         .clipped()
         .accessibilityHidden(true)
@@ -63,6 +73,48 @@ struct ImagesAnimees<Contenu: View, Fond: View>: View {
             }
         }
         .allowsHitTesting(false)
+    }
+}
+
+/// Boucle courte (vrai widget) : `boucle.copies` copies (16 pour 2 s à 8 images/s), une seule visible à la fois.
+/// Le masque de chaque copie est l'union de `10 / duree` chronos (voir `HorlogeAnimation.masques(copie:boucle:)`).
+/// Pas de couche de base ni de fond dans les copies : le décor reste en `containerBackground`, hors des copies.
+/// `actif` faux, ou polices absentes : `image(-1)`, la pose fixe.
+struct BoucleAnimee<Contenu: View>: View {
+    let reference: Date
+    let actif: Bool
+    var boucle: HorlogeAnimation.Boucle = .battement
+    @ViewBuilder let image: (Int) -> Contenu
+
+    var body: some View {
+        ZStack {
+            if actif && PolicesMasque.disponibles {
+                ForEach(0..<boucle.copies, id: \.self) { k in
+                    let m = HorlogeAnimation.masques(copie: k, boucle: boucle)
+                    image(k)
+                        .mask(UnionMasques(chiffres: m.a.chiffres, reference: reference, decalage: m.a.decalage))
+                        .mask(UnionMasques(chiffres: m.b.chiffres, reference: reference, decalage: m.b.decalage))
+                }
+            } else {
+                image(-1)
+            }
+        }
+        .allowsHitTesting(false)
+    }
+}
+
+/// Plein quand le chiffre des unités du chrono (décalé) est l'un de `chiffres`.
+private struct UnionMasques: View {
+    let chiffres: [Int]
+    let reference: Date
+    let decalage: TimeInterval
+
+    var body: some View {
+        ZStack {
+            ForEach(chiffres, id: \.self) { c in
+                MasqueClignotant(chiffre: c, reference: reference, decalage: decalage)
+            }
+        }
     }
 }
 

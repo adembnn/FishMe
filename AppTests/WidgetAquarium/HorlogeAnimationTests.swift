@@ -58,4 +58,36 @@ struct HorlogeAnimationTests {
         for k in 1..<16 { #expect((vues[k] - vues[k - 1] + 160) % 160 == 1) }
         #expect(HorlogeAnimation.imageVisible(reference: reference, a: depart.addingTimeInterval(10)) == vues[0])
     }
+
+    // Boucle courte du vrai widget (lot/widget-fluide) : 2 s à 8 images/s, masques en union de chiffres.
+
+    @Test func boucleCourteConstantes() {
+        let b = HorlogeAnimation.Boucle.battement
+        #expect(b.copies == 16)
+        #expect(b.chronosParCopie == 10)
+        #expect(HorlogeAnimation.masques(copie: 0, boucle: b).a.chiffres == [0, 2, 4, 6, 8])
+        #expect(HorlogeAnimation.masques(copie: 0, boucle: b).b.chiffres == [9, 1, 3, 5, 7])
+        #expect(HorlogeAnimation.masques(copie: 9, boucle: b).a.chiffres == [1, 3, 5, 7, 9])
+        #expect(HorlogeAnimation.masques(copie: 9, boucle: b).a.decalage == 0.125)
+        #expect(HorlogeAnimation.masques(copie: 9, boucle: b).b.decalage == 0.25)
+    }
+
+    @Test(arguments: [HorlogeAnimation.Boucle.battement, HorlogeAnimation.Boucle(parSeconde: 8, duree: 10),
+                      HorlogeAnimation.Boucle(parSeconde: 6, duree: 5)])
+    func boucleCourteUneSeuleCopieVisible(boucle: HorlogeAnimation.Boucle) {
+        for pas in 0..<(20 * 64) {
+            let t = ref.addingTimeInterval(Double(pas) / 64 + 1.0 / 128)
+            let visibles = (0..<boucle.copies).filter {
+                HorlogeAnimation.copieVisible($0, boucle: boucle, reference: ref, a: t)
+            }
+            #expect(visibles.count == 1)
+            #expect(visibles.first == HorlogeAnimation.imageVisible(boucle: boucle, reference: ref, a: t))
+        }
+    }
+
+    @Test func boucleCourteAvanceDUneCopieParImage() {
+        let b = HorlogeAnimation.Boucle.battement
+        let vues = (0..<32).map { HorlogeAnimation.imageVisible(boucle: b, reference: ref, a: ref.addingTimeInterval(Double($0) / 8 + 0.01)) }
+        for k in 1..<32 { #expect((vues[k] - vues[k - 1] + 16) % 16 == 1) }
+    }
 }

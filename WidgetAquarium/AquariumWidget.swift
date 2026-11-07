@@ -29,6 +29,13 @@ nonisolated struct FournisseurAquarium: AppIntentTimelineProvider {
         let instantane = Self.instantane(configuration, famille: context.family)
         var dates = NageWidget.dates(depuis: .now, dernierRepas: instantane.dernierRepas)
         if dates.isEmpty { dates = [.now] }
+        #if DEBUG
+        // Essai piste c seulement : une entrée toutes les 10 s pendant 10 min (Apple demande ~5 min entre entrées).
+        if PisteNage.widget == .glisse {
+            let depart = Date(timeIntervalSince1970: (Date.now.timeIntervalSince1970 / 10).rounded(.down) * 10)
+            dates = (0..<60).map { depart.addingTimeInterval(Double($0) * 10) }
+        }
+        #endif
         let entrees = dates.map { EntreeAquarium(date: $0, instantane: instantane) }
         return Timeline(entries: entrees, policy: .atEnd)
     }
