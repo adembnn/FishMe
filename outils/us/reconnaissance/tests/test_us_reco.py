@@ -22,11 +22,11 @@ class T(unittest.TestCase):
         L = []
         for i in range(400):
             v = random.choice(["a", "b"])
-            L.append({"vraie": v, "p1": v if i % 10 else "b" if v == "a" else "a", "p2": v, "p3": "a", "conf1": 0.8 if i % 10 else 0.3, "source": "pecheur"})
+            L.append({"vraie": v, "p1": v if i % 10 else "b" if v == "a" else "a", "p2": v, "p3": "a", "conf1": 0.8 if i % 10 else 0.2, "source": "pecheur"})
         L += [{"vraie": "pas-un-poisson", "p1": "pas-un-poisson", "p2": "a", "p3": "b", "conf1": 0.9, "source": "pecheur"}] * 20
         r = examen.examiner(L)
         self.assertEqual(r["verdict"], "passe")
-        self.assertEqual(r["seuil_recommande"], 0.35)
+        self.assertEqual(r["seuil_recommande"], 0.30)
         self.assertEqual(examen.examiner(L[:50])["verdict"], "echoue")  # moins de 300 prises
 
 
