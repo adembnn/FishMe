@@ -1,59 +1,69 @@
 {
  "usps": "NM",
+ "nom": "New Mexico",
  "date_lecture": "2026-11-07",
+ "lecteur": "agent D6",
  "url_agence": {
   "url": "https://wildlife.dgf.nm.gov/",
   "statut_http": 200,
-  "url_finale": "https://wildlife.dgf.nm.gov/"
+  "url_finale": "https://wildlife.dgf.nm.gov/",
+  "note": "wildlife.state.nm.us redirige vers wildlife.dgf.nm.gov."
  },
  "url_regles_eau_douce": {
-  "url": "https://wildlife.dgf.nm.gov/fishing/",
+  "url": "https://wildlife.dgf.nm.gov/download/new-mexico-fishing-rules-and-info/?wpdmdl=54215",
   "statut_http": 200,
-  "url_finale": "https://wildlife.dgf.nm.gov/fishing/"
+  "url_finale": "https://wildlife.dgf.nm.gov/download/new-mexico-fishing-rules-and-info/?wpdmdl=54215",
+  "note": "PDF 2026-2027 New Mexico Fishing Rules & Info, lu en texte ; page pêche : https://wildlife.dgf.nm.gov/fishing/"
  },
  "url_permis": {
   "url": "https://wildlife.dgf.nm.gov/fishing/licenses-permits/",
   "statut_http": 200,
-  "url_finale": "https://wildlife.dgf.nm.gov/fishing/licenses-permits/"
+  "url_finale": "https://wildlife.dgf.nm.gov/fishing/licenses-permits/",
+  "note": "Page lue ; elle ne donne pas les montants (dans le PDF des règlements). Vente : https://onlinesales.wildlife.state.nm.us"
  },
+ "permis_requis_eau_douce": "oui",
  "prix_resident": {
-  "montant_usd": null,
-  "url_source": "https://wildlife.dgf.nm.gov/download/2026-2027-new-mexico-fishing-rules-and-info/?ind=54198&filename=2026-2027-FISH-RIB_Online.pdf&wpdmdl=54201",
-  "citation": "Tableau 'License Fees' p.6 du PDF 2026-2027 : première ligne $35.00 / $90.00 (résident / non-résident), libellés de ligne illisibles à l'extraction",
+  "montant": 35,
+  "monnaie": "USD",
+  "annee": 2026,
+  "url_source": "https://wildlife.dgf.nm.gov/download/new-mexico-fishing-rules-and-info/?wpdmdl=54215",
+  "citation": "Annual Fishing $35.00 $90.00",
   "qualite": "officielle",
-  "note": "NON retenu : ligne probablement 'annuelle' mais libellé non lu ; ne pas utiliser comme prix"
+  "lu_le": "2026-11-07",
+  "note": "Année de permis 2026-2027 (1er avril au 31 mars) ; requis dès 12 ans. Frais de vendeur par transaction en plus."
  },
  "prix_non_resident": {
-  "montant_usd": null,
-  "url_source": "https://wildlife.dgf.nm.gov/download/2026-2027-new-mexico-fishing-rules-and-info/?ind=54198&filename=2026-2027-FISH-RIB_Online.pdf&wpdmdl=54201",
-  "citation": "voir prix_resident",
+  "montant": 90,
+  "monnaie": "USD",
+  "annee": 2026,
+  "url_source": "https://wildlife.dgf.nm.gov/download/new-mexico-fishing-rules-and-info/?wpdmdl=54215",
+  "citation": "Annual Fishing $35.00 $90.00",
   "qualite": "officielle",
-  "note": "NON retenu (idem)"
+  "lu_le": "2026-11-07",
+  "note": "Même tableau (colonne Nonresident) ; 2026-2027."
  },
- "timbres": [
+ "timbres_obligatoires": [
   {
-   "nom": "Habitat Stamp (page licences)",
-   "montant_usd": 10,
-   "qualite": "officielle"
+   "nom": "Habitat Management and Access Validation (HMAV), dès 18 ans, une fois par année de permis",
+   "montant": 4,
+   "monnaie": "USD"
   },
   {
-   "nom": "Second Rod Validation (PDF, ligne lue 10/10)",
-   "montant_usd": 10,
-   "qualite": "officielle",
-   "note": "libellé lu dans le tableau"
+   "nom": "Habitat Stamp (obligatoire sur terres USFS et BLM)",
+   "montant": 10,
+   "monnaie": "USD"
   }
  ],
  "appli_officielle": {
-  "nom": "vente en ligne NMDGF",
-  "url": "https://onlinesales.wildlife.state.nm.us/"
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
  },
- "reciprocite_eaux_tribales": null,
+ "reciprocite_eaux_tribales": {
+  "note": "Page permis : pas de permis NM requis sur réserves tribales ni lacs privés de classe A."
+ },
  "licence_reutilisation": null,
- "verifie": false,
- "raison": "Page HTML sans prix ; PDF officiel 2026-2027 lu mais lignes du tableau sans libellés exploitables (extraction sans bibliothèque PDF). Valeur stockée 25/56 = tarif 2025-26 possible, à ne pas considérer à jour.",
- "notes": "Valable 1er avr.-31 mars. Hypothèse à confirmer : 35 / 90 en 2026-27 [?]. Un tiers cite 25/56 (2025-26). Habitat Stamp 10 USD (12 ans+).",
- "qualite_donnees": {
-  "urls": "officielle (test HTTP)",
-  "prix": "non vérifié"
- }
+ "verifie": true,
+ "raison_non_verifie": null,
+ "notes": "Deux prix lus dans le PDF officiel de l’agence. Autres lignes : 1 jour 12, 5 jours 30, Second Rod Validation 10 (hors périmètre). Combo Game-Hunting & Fishing résident 42."
 }

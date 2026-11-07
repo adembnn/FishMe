@@ -1,54 +1,52 @@
 {
-  "usps": "MS",
-  "date_lecture": "2026-11-07",
-  "lecteur": "agent us-etats-verif-1",
-  "nom": "Mississippi",
-  "url_agence": {
-    "url": "https://www.mdwfp.com/",
-    "statut_http": 200,
-    "url_finale": "https://www.mdwfp.com/",
-    "note": null
-  },
-  "url_regles_eau_douce": {
-    "url": "https://www.mdwfp.com/fishing-boating/",
-    "statut_http": 200,
-    "url_finale": "https://www.mdwfp.com/fishing-boating",
-    "note": null
-  },
-  "url_permis": {
-    "url": "https://www.mdwfp.com/licenses-permits/hunting-and-fishing-license-prices",
-    "statut_http": 200,
-    "url_finale": "https://www.mdwfp.com/licenses-permits/hunting-and-fishing-license-prices",
-    "note": "page des tarifs ; /licenses redirige vers /licenses-permits"
-  },
-  "prix_resident": {
-    "montant": 10.0,
-    "monnaie": "USD",
-    "annee": 2026,
-    "url_source": "https://www.mdwfp.com/licenses-permits/hunting-and-fishing-license-prices",
-    "citation": "Small Game Hunting/Freshwater Fishing $10.00 $1.00 $2.49",
-    "qualite": "officielle",
-    "lu_le": "2026-11-07",
-    "note": "LICENCE COMBINÉE (chasse petit gibier + pêche eau douce) : aucune licence résidente de pêche seule listée ; All Game Hunting/Freshwater Fishing 25 $ ; Sportsman 45 $ ; 3 jours eau douce 3 $ ; + frais agent 1 $ et traitement 2,49 $"
-  },
-  "prix_non_resident": {
-    "montant": 68.0,
-    "monnaie": "USD",
-    "annee": 2026,
-    "url_source": "https://www.mdwfp.com/licenses-permits/hunting-and-fishing-license-prices",
-    "citation": "Freshwater Fishing $68.00 $3.00 $4.42",
-    "qualite": "officielle",
-    "lu_le": "2026-11-07",
-    "note": "+ frais agent 3 $ et traitement 4,42 $ ; 3 jours 30 $ ; 1 jour 10 $"
-  },
-  "timbres": [],
-  "appli_officielle": {
-    "nom": "MDWFP HuntFish",
-    "url": null
-  },
-  "reciprocite_tribal": "Page « Reciprocal Agreements » sur mdwfp.com (non lue) ; Alabama applique un tarif NR spécial aux résidents du Mississippi.",
-  "licence_reutilisation": null,
-  "verifie": false,
-  "raison_non_verifie": "Le prix résident (10 $) est celui d'une licence combinée chasse+pêche, pas d'une licence de pêche seule : à trancher avant de le publier comme « prix de pêche ».",
-  "notes": "Remplace 12,29 $ / 64,29 $ (tableau tiers 2024, périmé). Nom d'appli cité par la page des permis : « MDWFP HuntFish Mobile App »."
+ "usps": "MS",
+ "nom": "Mississippi",
+ "date_lecture": "2026-11-07",
+ "lecteur": "agent D6",
+ "url_agence": {
+  "url": "https://www.mdwfp.com/",
+  "statut_http": 200,
+  "url_finale": "https://www.mdwfp.com/",
+  "note": null
+ },
+ "url_regles_eau_douce": {
+  "url": "https://www.mdwfp.com/fishing-boating/",
+  "statut_http": 200,
+  "url_finale": "https://www.mdwfp.com/fishing-boating",
+  "note": null
+ },
+ "url_permis": {
+  "url": "https://www.mdwfp.com/licenses-permits/hunting-and-fishing-license-prices",
+  "statut_http": 200,
+  "url_finale": "https://www.mdwfp.com/licenses-permits/hunting-and-fishing-license-prices",
+  "note": "page des tarifs ; /licenses redirige vers /licenses-permits"
+ },
+ "prix_resident": {
+  "montant": 10,
+  "monnaie": "USD",
+  "annee": 2026,
+  "url_source": "https://www.mdwfp.com/licenses-permits/hunting-and-fishing-license-prices",
+  "citation": "Small Game Hunting/Freshwater Fishing $10.00",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07",
+  "note": "LICENCE COMBINÉE chasse petit gibier + pêche eau douce : aucune licence résidente de pêche seule listée ; All Game Hunting/Freshwater Fishing 25 USD ; 3 jours eau douce 3 USD ; en plus frais d'agent 1 USD et de traitement 2,49 USD."
+ },
+ "prix_non_resident": {
+  "montant": 68,
+  "monnaie": "USD",
+  "annee": 2026,
+  "url_source": "https://www.mdwfp.com/licenses-permits/hunting-and-fishing-license-prices",
+  "citation": "Freshwater Fishing $68.00",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07",
+  "note": "+ frais d'agent 3 USD et de traitement 4,42 USD ; 3 jours 30 USD ; 1 jour 10 USD."
+ },
+ "timbres": [],
+ "appli_officielle": {
+  "nom": "MDWFP HuntFish App",
+  "url": null
+ },
+ "verifie": true,
+ "raison_non_verifie": null,
+ "notes": "Permis requis pour l'eau douce. Relu le 7 nov. 2026 : page officielle mdwfp.com lisible (200). Le prix résident est celui de la licence combinée la moins chère qui inclut la pêche en eau douce (pas de pêche seule). Remplace 12,29 / 64,29 (tableau tiers 2024)."
 }

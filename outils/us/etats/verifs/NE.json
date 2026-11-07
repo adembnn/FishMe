@@ -1,36 +1,62 @@
 {
-  "usps": "NE",
-  "date_lecture": "2026-11-07",
-  "lecteur": "agent us-etats-verif-1",
-  "nom": "Nebraska",
-  "url_agence": {
-    "url": "https://outdoornebraska.gov/",
-    "statut_http": 403,
-    "url_finale": "https://outdoornebraska.gov/",
-    "note": "403 aux robots"
-  },
-  "url_regles_eau_douce": {
-    "url": "https://outdoornebraska.gov/fishing/",
-    "statut_http": 403,
-    "url_finale": "https://outdoornebraska.gov/fishing/",
-    "note": "non validée"
-  },
-  "url_permis": {
-    "url": "https://outdoornebraska.gov/permits/permit-pricing/",
-    "statut_http": 403,
-    "url_finale": "https://outdoornebraska.gov/permits/permit-pricing/",
-    "note": "URL relevée par moteur de recherche (non lue) ; remplace /licenses/ non confirmée"
-  },
-  "prix_resident": null,
-  "prix_non_resident": null,
-  "timbres": [],
-  "appli_officielle": {
-    "nom": "[?]",
-    "url": null
-  },
-  "reciprocite_tribal": null,
-  "licence_reutilisation": null,
-  "verifie": false,
-  "raison_non_verifie": "outdoornebraska.gov : 403 pour WebFetch et robot honnête ; aucun PDF 2026 officiel joignable (govdocs.nebraska.gov sans réponse).",
-  "notes": "Indice NON lu, à confirmer : résumé de moteur de recherche de la page officielle permit-pricing : annuel pêche résident 41 $ et non-résident 95,50 $ (timbre habitat aquatique inclus, + 3 $ d'émission) pour 2026 ; 2027 proposé 24 $ / 82 $ de base (en attente d'approbation). Les 38 $ / 84 $ de 2024 sont périmés."
+ "usps": "NE",
+ "nom": "Nebraska",
+ "date_lecture": "2026-11-07",
+ "lecteur": "agent D6",
+ "url_agence": {
+  "url": "https://outdoornebraska.gov/",
+  "statut_http": 403,
+  "url_finale": "https://outdoornebraska.gov/",
+  "note": "403 (page Cloudflare) pour WebFetch et curl"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://outdoornebraska.gov/fishing/",
+  "statut_http": 403,
+  "url_finale": "https://outdoornebraska.gov/fishing/",
+  "note": null
+ },
+ "url_permis": {
+  "url": "https://outdoornebraska.gov/permits/permit-pricing/",
+  "statut_http": 403,
+  "url_finale": "https://outdoornebraska.gov/permits/permit-pricing/",
+  "note": "403 ; /permits/ et pages de communiqués 403 aussi ; nebraskalegislature.gov et govdocs.nebraska.gov injoignables (timeout/DNS)"
+ },
+ "prix_resident": {
+  "montant": null,
+  "monnaie": "USD",
+  "annee": 2026,
+  "url_source": "https://outdoornebraska.gov/permits/permit-pricing/",
+  "citation": null,
+  "qualite": "donnée absente",
+  "lu_le": null,
+  "valeur_indiquee_non_verifiee": 41,
+  "note": "Annuel pêche 41 USD (timbre habitat aquatique inclus) d'après un résumé de recherche de la page officielle ; non lu. Un communiqué de la Commission (août 2025) annonçait 23 USD / 77,50 USD en base ; non réconcilié sans lecture."
+ },
+ "prix_non_resident": {
+  "montant": null,
+  "monnaie": "USD",
+  "annee": 2026,
+  "url_source": "https://outdoornebraska.gov/permits/permit-pricing/",
+  "citation": null,
+  "qualite": "donnée absente",
+  "lu_le": null,
+  "valeur_indiquee_non_verifiee": 95.5,
+  "note": "95,50 USD d'après le même résumé (pages tierces : 84) ; non lu."
+ },
+ "timbres": [
+  {
+   "nom": "Aquatic Habitat Stamp",
+   "montant": null,
+   "qualite": "donnée absente",
+   "url_source": "https://outdoornebraska.gov/permits/permit-pricing/",
+   "note": "inclus dans le prix du permis annuel selon un résumé de recherche ; montant seul non lu"
+  }
+ ],
+ "appli_officielle": {
+  "nom": null,
+  "url": null
+ },
+ "verifie": false,
+ "raison_non_verifie": "outdoornebraska.gov bloque les robots (403 Cloudflare) ; la législature et govdocs sont injoignables ; aucun montant lu officiellement.",
+ "notes": "Les tarifs de 2024 (38 / 84) sont périmés ; hausses votées en 2025 (communiqué) avec une proposition 2027 de 24 / 82 en base, non lue. À relire depuis un navigateur."
 }
