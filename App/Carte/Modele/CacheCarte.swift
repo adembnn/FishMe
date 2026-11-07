@@ -59,11 +59,20 @@ nonisolated enum SelectionVisible {
         guard maximum > 0 else { return [] }
         let visibles = stations.filter { region.contient($0.coordonnee) }
         if visibles.count <= maximum { return visibles.sorted { $0.code < $1.code } }
-        let proches = visibles
-            .map { ($0, distanceMetres($0.coordonnee, region.centre)) }
-            .sorted { $0.1 != $1.1 ? $0.1 < $1.1 : $0.0.code < $1.0.code }
-            .prefix(maximum)
-            .map { $0.0 }
+        // Types explicites : la chaîne map/sorted/prefix/map sur des tuples dépassait le délai du compilateur.
+        let centre: Coordonnee = region.centre
+        var avecDistance: [(station: StationCarte, distance: Double)] = []
+        avecDistance.reserveCapacity(visibles.count)
+        for station in visibles {
+            avecDistance.append((station: station, distance: distanceMetres(station.coordonnee, centre)))
+        }
+        avecDistance.sort { (a: (station: StationCarte, distance: Double), b: (station: StationCarte, distance: Double)) -> Bool in
+            if a.distance != b.distance { return a.distance < b.distance }
+            return a.station.code < b.station.code
+        }
+        let proches: [StationCarte] = avecDistance.prefix(maximum).map { (element: (station: StationCarte, distance: Double)) -> StationCarte in
+            element.station
+        }
         return proches.sorted { $0.code < $1.code }
     }
 }
