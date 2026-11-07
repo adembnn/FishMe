@@ -56,7 +56,6 @@ struct CartouchePasEncoreView: View {
     var largeur: CGFloat = 176
 
     @Environment(\.dynamicTypeSize) private var tailleTexte
-    @Environment(\.locale) private var locale
 
     /// Couleurs du dessin de référence : la carte reste « nuit » en clair comme en sombre.
     private let fondNuit = Palette.nuit
@@ -64,9 +63,7 @@ struct CartouchePasEncoreView: View {
     private let texte = Color(red: 0xE7 / 255, green: 0xED / 255, blue: 0xF3 / 255)   // Palette.encre (sombre)
 
     /// Ce que dit VoiceOver pour toute la carte.
-    static func libelleVoiceOver(espece: String, locale: Locale = Locale(identifier: "fr_FR")) -> String {
-        AnglaisC.texte("Carte à débloquer : %@, verrouillée", locale, espece)
-    }
+    static func libelleVoiceOver(espece: String) -> String { "Carte à débloquer : \(espece), verrouillée" }
 
     private var hauteur: CGFloat { largeur / Gabarit.rapportCarte }
     private var echelle: CGFloat { largeur / 138 }
@@ -78,7 +75,7 @@ struct CartouchePasEncoreView: View {
             if motsDehors { mots(sombre: false) }
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(Self.libelleVoiceOver(espece: espece, locale: locale))
+        .accessibilityLabel(Self.libelleVoiceOver(espece: espece))
         .accessibilityIdentifier("tunnel-carte-a-debloquer")
     }
 
@@ -111,11 +108,11 @@ struct CartouchePasEncoreView: View {
     /// Titre, pastille « À débloquer » et, si connue, la rareté.
     private func mots(sombre: Bool) -> some View {
         VStack(spacing: Espace.s) {
-            Text(c: "Pas encore de carte")
+            Text("Pas encore de carte")
                 .font(Police.legende)
                 .foregroundStyle(sombre ? texte : Palette.encre)
                 .multilineTextAlignment(.center)
-            Text(c: "À débloquer")
+            Text("À débloquer")
                 .font(Police.legende)
                 .foregroundStyle(sombre ? trait : Palette.marine)
                 .padding(.horizontal, Espace.m)

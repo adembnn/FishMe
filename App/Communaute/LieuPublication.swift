@@ -80,15 +80,6 @@ nonisolated enum LieuPublication {
         }
     }
 
-    /// Le lieu tel qu'on l'affiche dans la langue de `locale` : « Département 94 » devient « State 94 » en anglais ; le reste passe par la table.
-    static func localise(_ texte: String, _ locale: Locale) -> String {
-        let prefixe = "Département "
-        if texte.hasPrefix(prefixe) {
-            return AnglaisC.texte("Département %@", locale, String(texte.dropFirst(prefixe.count)))
-        }
-        return AnglaisC.texte(texte, locale)
-    }
-
     /// `nil` si ce choix n'est pas permis ici (plan d'eau nommé, par exemple).
     static func choisir(_ mode: ModeLieu, _ contexte: ContexteLieu) -> LieuChoisi? {
         guard options(contexte).contains(mode) else { return nil }

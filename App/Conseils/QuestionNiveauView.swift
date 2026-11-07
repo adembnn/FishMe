@@ -20,7 +20,7 @@ struct QuestionNiveauView: View {
                     .foregroundStyle(Palette.encre)
             }
             .padding(.top, 61)
-            Text(c: "Tu pêches depuis…")
+            Text("Tu pêches depuis…")
                 .font(Police.titre)
                 .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
@@ -33,10 +33,8 @@ struct QuestionNiveauView: View {
             .padding(.top, 28)
             Spacer(minLength: Espace.l)
             // Pas de « Passer » dans la maquette : la feuille ne se ferme que par « Continuer » (niveau par défaut pré-choisi).
-            Button {
+            Button("Continuer") {
                 if let selection { choisir(selection) }
-            } label: {
-                Text(c: "Continuer")
             }
             .buttonStyle(.principal)
             .padding(.bottom, 6)
@@ -63,7 +61,7 @@ struct QuestionNiveauView: View {
                     .foregroundStyle(choisie ? Palette.surMarine : Palette.marine)
                     .frame(width: 76, height: 76)
                     .background(choisie ? Palette.marine : Palette.tuile, in: Circle())
-                Text(c: phrase(niveau))
+                Text(phrase(niveau))
                     .font(Police.taille(15, .bold))
                     .foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.center)
@@ -74,7 +72,7 @@ struct QuestionNiveauView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(Text(c: phrase(niveau)))
+        .accessibilityLabel(phrase(niveau))
         .accessibilityAddTraits(choisie ? .isSelected : [])
     }
 }

@@ -24,7 +24,6 @@ struct TunnelPremiersPasView: View {
     var departement: String? = nil
 
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
-    @Environment(\.locale) private var locale
     @State private var index = 0
     /// Déplacement du doigt (x et y) : la carte suit, penche, et part hors de l'écran au-delà du seuil (façon Tinder).
     @State private var glisse: CGSize = .zero
@@ -95,18 +94,18 @@ struct TunnelPremiersPasView: View {
             .shadow(color: Palette.encre.opacity(0.12), radius: 10, y: 6)
             .frame(maxWidth: .infinity)
             .padding(.horizontal, Espace.bord)
-            .accessibilityLabel(AnglaisC.texte("Carte %lld sur %lld", locale, index + 1, especes.count))
+            .accessibilityLabel("Carte \(index + 1) sur \(especes.count)")
     }
 
     /// Le titre de l'écran : dit l'objectif. VoiceOver le lit en premier (en-tête).
     private var entete: some View {
         VStack(spacing: Espace.xs) {
-            Text(c: "Lesquels as-tu déjà pêchés ?")
+            Text("Lesquels as-tu déjà pêchés ?")
                 .font(Police.titre)
                 .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
-            Text(c: "Glisse à droite si oui, à gauche sinon")
+            Text("Glisse à droite si oui, à gauche sinon")
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
                 .multilineTextAlignment(.center)
@@ -184,8 +183,8 @@ struct TunnelPremiersPasView: View {
                 removal: .identity))
             .accessibilityElement(children: .combine)
             .accessibilityLabel(espece.nom)
-            .accessibilityAction(named: Text(c: "Déjà pêché")) { lancer(dejaPeche: true) }
-            .accessibilityAction(named: Text(c: "Jamais pêché")) { lancer(dejaPeche: false) }
+            .accessibilityAction(named: "Déjà pêché") { lancer(dejaPeche: true) }
+            .accessibilityAction(named: "Jamais pêché") { lancer(dejaPeche: false) }
         }
         .sensoryFeedback(.selection, trigger: vibreSeuil)
         .sensoryFeedback(.impact(weight: .medium), trigger: vibreChoix)
@@ -228,7 +227,7 @@ struct TunnelPremiersPasView: View {
 
     /// Le tampon penché qui apparaît sur la carte pendant qu'on glisse (marine pour « Déjà pêché », gris pour « Jamais pêché »).
     private func tampon(_ mot: String, couleur: Color, angle: Double) -> some View {
-        Text(AnglaisC.texte(mot, locale).uppercased())
+        Text(mot.uppercased())
             .font(Police.taille(20, .heavy))
             .foregroundStyle(couleur)
             .padding(.horizontal, 12)
@@ -316,11 +315,11 @@ struct TunnelPremiersPasView: View {
                     .background(plein ? Palette.marine : Palette.surface, in: Circle())
                     .overlay(Circle().strokeBorder(Palette.filet, lineWidth: plein ? 0 : 1))
                     .foregroundStyle(plein ? Palette.surMarine : Palette.marine)
-                Text(c: mot).font(Police.detail).foregroundStyle(Palette.encreDouce)
+                Text(mot).font(Police.detail).foregroundStyle(Palette.encreDouce)
             }
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(Text(c: mot))
+        .accessibilityLabel(mot)
     }
 
     @ViewBuilder private var fin: some View {
@@ -330,7 +329,7 @@ struct TunnelPremiersPasView: View {
                 Text("\(nbDeclarees)")
                     .font(Police.taille(72, .heavy).monospacedDigit())
                     .foregroundStyle(Palette.marine)
-                Label { Text(c: "dans ton Pescedex") } icon: { Image(systemName: "square.stack.fill") }
+                Label("dans ton Pescedex", systemImage: "square.stack.fill")
                     .font(Police.titre)
                     .foregroundStyle(Palette.encre)
                 poissonsDeclares
@@ -358,7 +357,7 @@ struct TunnelPremiersPasView: View {
                         CartouchePasEncoreView(espece: aDebloquer.nom, rarete: rarete(aDebloquer)?.libelle,
                                                largeur: Self.largeurCarteADebloquer)
                     } else {
-                        Text(c: "Pas encore de carte")
+                        Text("Pas encore de carte")
                             .font(Police.titre)
                             .foregroundStyle(Palette.encre)
                             .multilineTextAlignment(.center)
@@ -372,13 +371,13 @@ struct TunnelPremiersPasView: View {
                     }
                     // Aucune espèce chargée : pas de « 0 sur 0 », la phrase et le bouton suffisent.
                     if !especes.isEmpty {
-                        Text(FinDuTunnel.compteur(declarees: 0, total: especes.count, departement: departement, locale: locale))
+                        Text(FinDuTunnel.compteur(declarees: 0, total: especes.count, departement: departement))
                             .font(Police.chiffreMoyen)
                             .foregroundStyle(Palette.marine)
                             .multilineTextAlignment(.center)
                             .accessibilityIdentifier("tunnel-compteur-zone")
                     }
-                    Text(c: "Tu pourras en déclarer d'autres depuis ton Pescedex.")
+                    Text("Tu pourras en déclarer d'autres depuis ton Pescedex.")
                         .font(Police.detail)
                         .foregroundStyle(Palette.encreDouce)
                         .multilineTextAlignment(.center)
@@ -414,10 +413,10 @@ struct TunnelPremiersPasView: View {
     @ViewBuilder
     private func gros(_ mot: String, icone: String, plein: Bool, action: @escaping () -> Void) -> some View {
         if plein {
-            Button(action: action) { Label { Text(c: mot) } icon: { Image(systemName: icone) } }
+            Button(action: action) { Label(mot, systemImage: icone) }
                 .buttonStyle(.principal)
         } else {
-            Button(action: action) { Label { Text(c: mot) } icon: { Image(systemName: icone) } }
+            Button(action: action) { Label(mot, systemImage: icone) }
                 .buttonStyle(.secondaire)
         }
     }

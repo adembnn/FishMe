@@ -16,9 +16,6 @@ extension NiveauPecheur {
         NiveauPecheur(rawValue: brut) ?? .parDefaut
     }
 
-    /// Le mot dans la langue de locale (la clé est le mot français de mot).
-    nonisolated func motLocalise(_ locale: Locale) -> String { AnglaisC.texte(mot, locale) }
-
     nonisolated var mot: String {
         switch self {
         case .debutant: "Débutant"
@@ -119,14 +116,13 @@ nonisolated enum EspecesDuSpot {
         }.map(\.element)
     }
 
-    static func texteFermeture(_ ouverture: OuvertureDuJour, locale: Locale = Locale(identifier: "fr_FR")) -> String? {
+    static func texteFermeture(_ ouverture: OuvertureDuJour) -> String? {
         guard case .fermee(let date) = ouverture else { return nil }
-        guard let date else { return AnglaisC.texte("Fermée ce jour", locale) }
+        guard let date else { return "Fermée ce jour" }
         let f = DateFormatter()
         f.locale = Locale(identifier: "fr_FR")
-        // Français : jour/mois. Anglais : mois/jour.
-        f.dateFormat = locale.language.languageCode?.identifier == "en" ? "MM/dd" : "dd/MM"
-        return AnglaisC.texte("Fermée jusqu'au %@", locale, f.string(from: date))
+        f.dateFormat = "dd/MM"
+        return "Fermée jusqu'au \(f.string(from: date))"
     }
 }
 
@@ -185,9 +181,8 @@ nonisolated enum FinDuTunnel {
     }
 
     /// « 0 sur 12 dans le 94 » ; zone inconnue : « 0 sur 12 dans ta zone ».
-    static func compteur(declarees: Int, total: Int, departement: String?, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+    static func compteur(declarees: Int, total: Int, departement: String?) -> String {
         let code = departement?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        if code.isEmpty { return AnglaisC.texte("%lld sur %lld dans ta zone", locale, declarees, total) }
-        return AnglaisC.texte("%lld sur %lld dans le %@", locale, declarees, total, code)
+        return "\(declarees) sur \(total) dans " + (code.isEmpty ? "ta zone" : "le \(code)")
     }
 }
