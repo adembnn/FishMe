@@ -1,0 +1,71 @@
+{
+  "etat": "OK",
+  "nom": "Oklahoma",
+  "agence": "Oklahoma Water Resources Board (OWRB)",
+  "emprise": [
+    -103.01,
+    33.62,
+    -94.43,
+    37.01
+  ],
+  "communes": true,
+  "lien_plans": "https://www.wildlifedepartment.com/fishing",
+  "lien_avis": "https://oklahoma.gov/deq.html",
+  "liens_etat": {
+    "pêche (ODWC)": "https://www.wildlifedepartment.com/fishing [200]",
+    "lacs (OWRB)": "https://oklahoma.gov/owrb.html [200]",
+    "avis_consommation": "https://oklahoma.gov/deq.html [200, page d'accueil du DEQ ; page des avis non repérée]"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Rampes et quais de pêche des lacs (OWRB, Lakes of Oklahoma)",
+      "service": "https://owrb.csa.ou.edu/server/rest/services/Surface_Water/LOK_Lakes/MapServer",
+      "couche": 1,
+      "geometrie": "point",
+      "normaliseur": "ok_acces_owrb",
+      "where": "type IN ('Boat Ramp','Fishing Dock / Pier / Jetty')",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "OWRB, Lakes of Oklahoma, couche Lake Features (atlas 2015) : Boat Ramp et Fishing Dock / Pier / Jetty",
+      "editeur": "Oklahoma Water Resources Board",
+      "url_source": "https://www.arcgis.com/home/item.html?id=37b663ed21d64517b94df456634cd41c",
+      "licence": "[?] non précisée ; mention de l'éditeur : couches de sources et de précisions variables, à n'utiliser que comme repère général",
+      "date_source": "2015 (atlas « Lakes of Oklahoma ») ; fiche ArcGIS modifiée le 2025-03-14",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Les marinas, quais à bateaux et pontons privés possibles ne sont pas repris. L'atlas date de 2015 : des rampes ont pu fermer ou être ajoutées."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "absent",
+      "raison": "sources et configuration prêtes (accès lus en brut hors git) mais fichier embarqué non fabriqué : aucun créneau 3DHP libre, collecte mise en pause le 8 nov."
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "sources et configuration prêtes (accès lus en brut hors git) mais fichier embarqué non fabriqué : aucun créneau 3DHP libre, collecte mise en pause le 8 nov."
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "sources et configuration prêtes (accès lus en brut hors git) mais fichier embarqué non fabriqué : aucun créneau 3DHP libre, collecte mise en pause le 8 nov."
+    },
+    "licences_a_confirmer": [
+      "accès (OWRB)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "ODWC : aucune couche d'accès publique repérée ; points d'accès aux lacs des WMA non repris",
+      "Corps of Engineers (RIDB) non interrogé : clé gratuite absente",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement ni d'avis de consommation"
+    ]
+  }
+}
