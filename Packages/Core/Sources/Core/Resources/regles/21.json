@@ -2176,7 +2176,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Les engins et filets ne sont autorisés que sur le domaine public, selon le cahier des charges du droit de pêche de l'État.",
+   "phrase": "Les engins et filets ne sont prévus que sur le domaine public, selon le cahier des charges du droit de pêche de l'État.",
    "textes": [
     "t6"
    ],
@@ -6027,7 +6027,7 @@
     "niveau": "departement",
     "code": "21",
     "eau": null,
-    "lieu": "Tous les parcours où la pêche de la carpe de nuit est autorisée par l'arrêté préfectoral en vigueur",
+    "lieu": "Tous les parcours où la pêche de la carpe de nuit est prévue par l'arrêté préfectoral en vigueur",
     "geometrie": null
    },
    "especes": [
@@ -6041,7 +6041,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe en pêcher-relâcher partout où la pêche de la carpe de nuit est autorisée.",
+   "phrase": "Carpe en pêcher-relâcher partout où la pêche de la carpe de nuit est prévue.",
    "textes": [
     "t10"
    ],
@@ -6292,7 +6292,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Bouhey, Crugey).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Bouhey, Crugey).",
    "textes": [
     "t13"
    ],
@@ -6319,7 +6319,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Bouhey, Crugey).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Bouhey, Crugey).",
    "textes": [
     "t13"
    ],
@@ -6346,7 +6346,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Châteauneuf, Sainte-Sabine, Vandenesse-en-Auxois).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Châteauneuf, Sainte-Sabine, Vandenesse-en-Auxois).",
    "textes": [
     "t13"
    ],
@@ -6373,7 +6373,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Courcelles-lès-Montbard, Nogent-lès-Montbard, Montbard, Saint-Rémy).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Courcelles-lès-Montbard, Nogent-lès-Montbard, Montbard, Saint-Rémy).",
    "textes": [
     "t13"
    ],
@@ -6400,7 +6400,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Courcelles-lès-Montbard, Nogent-lès-Montbard, Montbard, Saint-Rémy).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Courcelles-lès-Montbard, Nogent-lès-Montbard, Montbard, Saint-Rémy).",
    "textes": [
     "t13"
    ],
@@ -6427,7 +6427,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Courcelles-lès-Montbard, Nogent-lès-Montbard, Montbard, Saint-Rémy).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Courcelles-lès-Montbard, Nogent-lès-Montbard, Montbard, Saint-Rémy).",
    "textes": [
     "t13"
    ],
@@ -6454,7 +6454,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Courcelles-lès-Montbard, Nogent-lès-Montbard, Montbard, Saint-Rémy).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Courcelles-lès-Montbard, Nogent-lès-Montbard, Montbard, Saint-Rémy).",
    "textes": [
     "t13"
    ],
@@ -6481,7 +6481,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Courcelles-lès-Montbard, Nogent-lès-Montbard, Montbard, Saint-Rémy).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Courcelles-lès-Montbard, Nogent-lès-Montbard, Montbard, Saint-Rémy).",
    "textes": [
     "t13"
    ],
@@ -6508,7 +6508,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
    "textes": [
     "t13"
    ],
@@ -6535,7 +6535,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
    "textes": [
     "t13"
    ],
@@ -6562,7 +6562,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
    "textes": [
     "t13"
    ],
@@ -6589,7 +6589,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
    "textes": [
     "t13"
    ],
@@ -6616,7 +6616,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
    "textes": [
     "t13"
    ],
@@ -6643,7 +6643,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Dijon à Rouvres-en-Plaine).",
    "textes": [
     "t13"
    ],
@@ -6670,7 +6670,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Eguilly, Gissey-le-Vieil).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Eguilly, Gissey-le-Vieil).",
    "textes": [
     "t13"
    ],
@@ -6697,7 +6697,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Pont-Royal).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Pont-Royal).",
    "textes": [
     "t13"
    ],
@@ -6724,7 +6724,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Velars-sur-Ouche, Fleurey-sur-Ouche).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Velars-sur-Ouche, Fleurey-sur-Ouche).",
    "textes": [
     "t13"
    ],
@@ -6751,7 +6751,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Velars-sur-Ouche, Fleurey-sur-Ouche).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Velars-sur-Ouche, Fleurey-sur-Ouche).",
    "textes": [
     "t13"
    ],
@@ -6778,7 +6778,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Plombières-lès-Dijon).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Plombières-lès-Dijon).",
    "textes": [
     "t13"
    ],
@@ -6805,7 +6805,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
    "textes": [
     "t13"
    ],
@@ -6832,7 +6832,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
    "textes": [
     "t13"
    ],
@@ -6859,7 +6859,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
    "textes": [
     "t13"
    ],
@@ -6886,7 +6886,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
    "textes": [
     "t13"
    ],
@@ -6913,7 +6913,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
    "textes": [
     "t13"
    ],
@@ -6940,7 +6940,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
    "textes": [
     "t13"
    ],
@@ -6967,7 +6967,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
    "textes": [
     "t13"
    ],
@@ -6994,7 +6994,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
    "textes": [
     "t13"
    ],
@@ -7021,7 +7021,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
    "textes": [
     "t13"
    ],
@@ -7048,7 +7048,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
    "textes": [
     "t13"
    ],
@@ -7075,7 +7075,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal de Bourgogne (Charigny, Benoisey, Mussy-la-Fosse, Courcelles-lès-Montbard, Chassey, Grignon, Pouillenay, Marigny-le-Cahouet, Venarey-les-Laumes).",
    "textes": [
     "t13"
    ],
@@ -7102,7 +7102,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Courchamp).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Courchamp).",
    "textes": [
     "t13"
    ],
@@ -7129,7 +7129,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Saint-Maurice-sur-Vingeanne).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Saint-Maurice-sur-Vingeanne).",
    "textes": [
     "t13"
    ],
@@ -7156,7 +7156,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (La Villeneuve-sur-Vingeanne).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (La Villeneuve-sur-Vingeanne).",
    "textes": [
     "t13"
    ],
@@ -7183,7 +7183,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Pouilly-sur-Vingeanne).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Pouilly-sur-Vingeanne).",
    "textes": [
     "t13"
    ],
@@ -7210,7 +7210,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Saint-Seine-sur-Vingeanne).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Saint-Seine-sur-Vingeanne).",
    "textes": [
     "t13"
    ],
@@ -7237,7 +7237,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Dampierre-et-Flée).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Dampierre-et-Flée).",
    "textes": [
     "t13"
    ],
@@ -7264,7 +7264,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne).",
    "textes": [
     "t13"
    ],
@@ -7291,7 +7291,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7318,7 +7318,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7345,7 +7345,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7372,7 +7372,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7399,7 +7399,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7426,7 +7426,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7453,7 +7453,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7480,7 +7480,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7507,7 +7507,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Canal entre Champagne et Bourgogne (Beaumont-sur-Vingeanne à Maxilly-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7534,7 +7534,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Saône (Lamarche-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Saône (Lamarche-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7561,7 +7561,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Saône (Auxonne, Poncey-lès-Athée, Athée).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Saône (Auxonne, Poncey-lès-Athée, Athée).",
    "textes": [
     "t13"
    ],
@@ -7588,7 +7588,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Saône (Auxonne, Poncey-lès-Athée, Athée).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Saône (Auxonne, Poncey-lès-Athée, Athée).",
    "textes": [
     "t13"
    ],
@@ -7615,7 +7615,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Saône (Heuilley-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Saône (Heuilley-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7642,7 +7642,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Saône (Maxilly-sur-Saône, Perrigny-sur-l'Ognon, Pontailler-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Saône (Maxilly-sur-Saône, Perrigny-sur-l'Ognon, Pontailler-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7669,7 +7669,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Saône (Maxilly-sur-Saône, Perrigny-sur-l'Ognon, Pontailler-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Saône (Maxilly-sur-Saône, Perrigny-sur-l'Ognon, Pontailler-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7696,7 +7696,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Saône (Labruyère-sur-Saône, Lechâtelet, Glanon).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Saône (Labruyère-sur-Saône, Lechâtelet, Glanon).",
    "textes": [
     "t13"
    ],
@@ -7723,7 +7723,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Saône (Labruyère-sur-Saône, Glanon).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Saône (Labruyère-sur-Saône, Glanon).",
    "textes": [
     "t13"
    ],
@@ -7750,7 +7750,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Saône (Pontailler-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Saône (Pontailler-sur-Saône).",
    "textes": [
     "t13"
    ],
@@ -7777,7 +7777,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Saône (Saint-Symphorien-sur-Saône, Echenon, Saint-Usage, Losne).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Saône (Saint-Symphorien-sur-Saône, Echenon, Saint-Usage, Losne).",
    "textes": [
     "t13"
    ],
@@ -7804,7 +7804,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Saône (Trugny).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Saône (Trugny).",
    "textes": [
     "t13"
    ],
@@ -7831,7 +7831,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Brenne (Montbard, Saint-Rémy).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Brenne (Montbard, Saint-Rémy).",
    "textes": [
     "t13"
    ],
@@ -7858,7 +7858,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Sablière du Letto (Beire-le-Châtel).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Sablière du Letto (Beire-le-Châtel).",
    "textes": [
     "t13"
    ],
@@ -7885,7 +7885,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Sablière fédérale n° 3 (Bressey-sur-Tille).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Sablière fédérale n° 3 (Bressey-sur-Tille).",
    "textes": [
     "t13"
    ],
@@ -7912,7 +7912,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Sablière fédérale n° 6 (Bressey-sur-Tille).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Sablière fédérale n° 6 (Bressey-sur-Tille).",
    "textes": [
     "t13"
    ],
@@ -7939,7 +7939,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Sablière n° 6 (Beire-le-Châtel).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Sablière n° 6 (Beire-le-Châtel).",
    "textes": [
     "t13"
    ],
@@ -7966,7 +7966,7 @@
    "du": "2026-04-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Pêche de la carpe de nuit autorisée du 1er avril au 30 novembre : Creux de Pontailler « Paquier du Bois » (Pontailler-sur-Saône).",
+   "phrase": "Pêche de la carpe de nuit prévue du 1er avril au 30 novembre : Creux de Pontailler « Paquier du Bois » (Pontailler-sur-Saône).",
    "textes": [
     "t13"
    ],

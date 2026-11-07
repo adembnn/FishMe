@@ -2276,7 +2276,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Interdit d'utiliser comme vif une espèce soumise à taille légale (brochet, truite...), quelle que soit sa taille.",
+   "phrase": "Interdit d'utiliser comme vif une espèce soumise à taille réglementaire (brochet, truite...), quelle que soit sa taille.",
    "textes": [
     "t2"
    ],
@@ -2465,7 +2465,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pas de pêche depuis les barrages et écluses ; sur 50 m en aval, seule la ligne est permise et on ne se tient pas sur la berge.",
+   "phrase": "Pas de pêche depuis les barrages et écluses ; sur 50 m en aval, seule la ligne est prévue et on ne se tient pas sur la berge.",
    "textes": [
     "t10"
    ],
@@ -2523,7 +2523,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 001 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 001 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t12"
    ],
@@ -2552,7 +2552,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 002 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 002 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t13"
    ],
@@ -2581,7 +2581,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 003 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 003 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t14"
    ],
@@ -2610,7 +2610,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 004 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 004 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t15"
    ],
@@ -2639,7 +2639,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 005 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 005 (Meuse sauvage), à toute heure.",
    "textes": [
     "t16"
    ],
@@ -2668,7 +2668,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 006 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 006 (Meuse sauvage), à toute heure.",
    "textes": [
     "t17"
    ],
@@ -2697,7 +2697,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 007 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 007 (Meuse sauvage), à toute heure.",
    "textes": [
     "t18"
    ],
@@ -2726,7 +2726,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 008 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 008 (Meuse sauvage), à toute heure.",
    "textes": [
     "t19"
    ],
@@ -2755,7 +2755,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 009 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 009 (Meuse sauvage), à toute heure.",
    "textes": [
     "t20"
    ],
@@ -2784,7 +2784,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 010 (Canal de la Meuse), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 010 (Canal de la Meuse), à toute heure.",
    "textes": [
     "t21"
    ],
@@ -2813,7 +2813,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 011 (Canal de la Meuse), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 011 (Canal de la Meuse), à toute heure.",
    "textes": [
     "t22"
    ],
@@ -2842,7 +2842,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 012 (Ballastières du Val de Meuse), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 012 (Ballastières du Val de Meuse), à toute heure.",
    "textes": [
     "t23"
    ],
@@ -2871,7 +2871,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 013 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 013 (Meuse sauvage), à toute heure.",
    "textes": [
     "t24"
    ],
@@ -2900,7 +2900,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 014 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 014 (Meuse sauvage), à toute heure.",
    "textes": [
     "t25"
    ],
@@ -2929,7 +2929,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 015 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 015 (Meuse sauvage), à toute heure.",
    "textes": [
     "t26"
    ],
@@ -2958,7 +2958,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 016 (Canal de la Meuse), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 016 (Canal de la Meuse), à toute heure.",
    "textes": [
     "t27"
    ],
@@ -2987,7 +2987,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 017 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 017 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t28"
    ],
@@ -3016,7 +3016,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 018 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 018 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t29"
    ],
@@ -3045,7 +3045,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 019 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 019 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t30"
    ],
@@ -3074,7 +3074,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 020 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 020 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t31"
    ],
@@ -3103,7 +3103,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 021 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 021 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t32"
    ],
@@ -3132,7 +3132,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 022 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 022 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t33"
    ],
@@ -3161,7 +3161,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 023 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 023 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t34"
    ],
@@ -3190,7 +3190,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 024 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 024 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t35"
    ],
@@ -3219,7 +3219,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 025 (Lac de Madine), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 025 (Lac de Madine), à toute heure.",
    "textes": [
     "t36"
    ],
@@ -3248,7 +3248,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 026 (Lac de Madine), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 026 (Lac de Madine), à toute heure.",
    "textes": [
     "t37"
    ],
@@ -3277,7 +3277,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 027 (Lac de Madine), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 027 (Lac de Madine), à toute heure.",
    "textes": [
     "t38"
    ],
@@ -3306,7 +3306,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 028 (Lac de Madine), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 028 (Lac de Madine), à toute heure.",
    "textes": [
     "t39"
    ],
@@ -3335,7 +3335,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 029 (Chiers), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 029 (Chiers), à toute heure.",
    "textes": [
     "t40"
    ],
@@ -3364,7 +3364,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 030 (Ballastières communales 3 et 4), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 030 (Ballastières communales 3 et 4), à toute heure.",
    "textes": [
     "t41"
    ],
@@ -3393,7 +3393,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 031 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 031 (Meuse sauvage), à toute heure.",
    "textes": [
     "t42"
    ],
@@ -3422,7 +3422,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 032 (Canal de la Meuse), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 032 (Canal de la Meuse), à toute heure.",
    "textes": [
     "t43"
    ],
@@ -3451,7 +3451,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 033 (Canal de la Marne au Rhin), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 033 (Canal de la Marne au Rhin), à toute heure.",
    "textes": [
     "t44"
    ],
@@ -3480,7 +3480,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 041 (Canal de la Meuse), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 041 (Canal de la Meuse), à toute heure.",
    "textes": [
     "t45"
    ],
@@ -3509,7 +3509,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 043 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 043 (Meuse sauvage), à toute heure.",
    "textes": [
     "t46"
    ],
@@ -3538,7 +3538,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 044 (Étang de la Dodanne), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 044 (Étang de la Dodanne), à toute heure.",
    "textes": [
     "t47"
    ],
@@ -3567,7 +3567,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 045 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 045 (Meuse sauvage), à toute heure.",
    "textes": [
     "t48"
    ],
@@ -3596,7 +3596,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 046 (Étang du Wameau), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 046 (Étang du Wameau), à toute heure.",
    "textes": [
     "t49"
    ],
@@ -3625,7 +3625,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 047 (Étang du Pré l'Évèque), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 047 (Étang du Pré l'Évèque), à toute heure.",
    "textes": [
     "t50"
    ],
@@ -3654,7 +3654,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 050 (Meuse canalisée), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 050 (Meuse canalisée), à toute heure.",
    "textes": [
     "t51"
    ],
@@ -3683,7 +3683,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 051 (Meuse canalisée), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 051 (Meuse canalisée), à toute heure.",
    "textes": [
     "t52"
    ],
@@ -3712,7 +3712,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 052 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 052 (Meuse sauvage), à toute heure.",
    "textes": [
     "t53"
    ],
@@ -3741,7 +3741,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 053 (Meuse sauvage), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 053 (Meuse sauvage), à toute heure.",
    "textes": [
     "t54"
    ],
@@ -3770,7 +3770,7 @@
    "du": "2026-04-01",
    "au": "2026-10-14",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée du 1er avril au 14 octobre sur le parcours n° 054 (Plan d'eau de l'Othain), à toute heure.",
+   "phrase": "Carpe de nuit prévue du 1er avril au 14 octobre sur le parcours n° 054 (Plan d'eau de l'Othain), à toute heure.",
    "textes": [
     "t55"
    ],
