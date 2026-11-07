@@ -1,0 +1,153 @@
+{
+  "etat": "CO",
+  "nom": "Colorado",
+  "emprise": [
+    -109.06,
+    36.99,
+    -102.04,
+    41.0
+  ],
+  "communes": true,
+  "agence": "Colorado Parks and Wildlife (CPW) et agences fédérales (BLM, Bureau of Reclamation)",
+  "lien_plans": "https://cpw.state.co.us/fishing",
+  "lien_avis": "https://cdphe.colorado.gov/fish-advisories",
+  "liens_etat": {
+    "pêche": "https://cpw.state.co.us/fishing [200 le 2026-11-08]",
+    "avis_consommation": "https://cdphe.colorado.gov/fish-advisories [?, répond 403 aux scripts, non confirmé dans un navigateur]"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.2,
+    "ordre_ligne_min": 5,
+    "tolerance_ligne": 0.003
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Installations CPW : rampes et sites de pêche",
+      "service": "https://services5.arcgis.com/ttNGmDvKQA7oeDQ3/arcgis/rest/services/CPW_Facilities_Populated_2025/FeatureServer",
+      "couche": 2,
+      "geometrie": "point",
+      "normaliseur": "co_cpw_installation",
+      "where": "FAC_TYPE IN (3010,1100,1101)",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "CPW Facilities (CPW_Facilities_Populated_2025), types Boat Ramp, Fishing, Fishing ADA",
+      "editeur": "Colorado Parks and Wildlife (GIS Unit)",
+      "url_source": "https://services5.arcgis.com/ttNGmDvKQA7oeDQ3/arcgis/rest/services/CPW_Facilities_Populated_2025/FeatureServer/2",
+      "licence": "[?] non précisée : la fiche du service porte un avertissement CPW (données de référence, exactitude non garantie), pas de licence ouverte",
+      "date_source": "[?] fiche modifiée en 2026 (date exacte non lue)",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "Seules les installations de type rampe de mise à l'eau et pêche sont gardées ; commentaires, adresses et photos non copiés."
+    },
+    {
+      "id": "acces_riviere",
+      "role": "acces",
+      "nom": "Accès aux rivières CPW",
+      "service": "https://services5.arcgis.com/ttNGmDvKQA7oeDQ3/arcgis/rest/services/RiverAccessPoints/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "co_cpw_acces_riviere",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "CPW RiverAccessPoints (accès à la rivière sur propriétés CPW)",
+      "editeur": "Colorado Parks and Wildlife",
+      "url_source": "https://services5.arcgis.com/ttNGmDvKQA7oeDQ3/arcgis/rest/services/RiverAccessPoints/FeatureServer/0",
+      "licence": "[?] non précisée sur le service (aucune licence ni copyright)",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "66 points ; seul le nom de la propriété est gardé."
+    },
+    {
+      "id": "acces_blm_rampes",
+      "role": "acces",
+      "nom": "Rampes BLM Colorado",
+      "service": "https://gis.blm.gov/coarcgis/rest/services/recreation/BLM_CO_Recreation/MapServer",
+      "couche": 27,
+      "geometrie": "point",
+      "normaliseur": "co_blm_rampe",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "BLM Colorado Recreation, couche Boat Ramp",
+      "editeur": "Bureau of Land Management, Colorado",
+      "url_source": "https://gis.blm.gov/coarcgis/rest/services/recreation/BLM_CO_Recreation/MapServer/27",
+      "licence": "[?] non précisée sur le service (copyrightText = « BLM Colorado ») ; données fédérales, domaine public présumé, non confirmé",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "Les restrictions saisonnières ne sont pas copiées."
+    },
+    {
+      "id": "acces_blm_peche",
+      "role": "acces",
+      "nom": "Accès de pêche BLM Colorado",
+      "service": "https://gis.blm.gov/coarcgis/rest/services/recreation/BLM_CO_Recreation/MapServer",
+      "couche": 6,
+      "geometrie": "point",
+      "normaliseur": "co_blm_peche",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "BLM Colorado Recreation, couche Fishing Access",
+      "editeur": "Bureau of Land Management, Colorado",
+      "url_source": "https://gis.blm.gov/coarcgis/rest/services/recreation/BLM_CO_Recreation/MapServer/6",
+      "licence": "[?] non précisée sur le service (copyrightText = « BLM Colorado ») ; données fédérales, domaine public présumé, non confirmé",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": ""
+    },
+    {
+      "id": "acces_usbr_rampes",
+      "role": "acces",
+      "nom": "Rampes Bureau of Reclamation (emprise du Colorado)",
+      "service": "https://services1.arcgis.com/ixD30sld6F8MQ7V5/arcgis/rest/services/ReclamationBoatRamps/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "co_usbr_rampe",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "Reclamation Boat Ramps (registre d'actifs, rampes possédées, exploitées ou gérées par Reclamation)",
+      "editeur": "U.S. Bureau of Reclamation",
+      "url_source": "https://services1.arcgis.com/ixD30sld6F8MQ7V5/arcgis/rest/services/ReclamationBoatRamps/FeatureServer/0",
+      "licence": "[?] non précisée : la fiche porte un avertissement (données « as is », sans garantie), pas de licence ouverte ; données fédérales, domaine public présumé",
+      "date_source": "[?] fiche modifiée en 2026",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "Couche nationale filtrée par l'emprise puis par le contour de l'État. Une rampe de Reclamation peut être gérée par un gestionnaire local (champ gestionnaire)."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "CPW, BLM CO et Reclamation seulement : pas de liste d'accès publics à l'échelle de l'État (rampes des parcs de comté, de ville et du Corps of Engineers absentes) ; aucune clé RIDB disponible ; fichier embarqué pas encore fabriqué (pause)",
+      "sources_inaccessibles": []
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "pas encore téléchargé (collecte mise en pause le 2026-11-08)"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "pas encore téléchargé (collecte mise en pause le 2026-11-08)"
+    },
+    "licences_a_confirmer": [
+      "CPW facilities",
+      "CPW RiverAccessPoints",
+      "BLM CO",
+      "Reclamation",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "rampes municipales, de comté et du Corps of Engineers non listées",
+      "page d'avis de consommation CDPHE répond 403 aux scripts (non ouverte)",
+      "pas de poissons par zone (US16)"
+    ]
+  }
+}
