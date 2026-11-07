@@ -1,0 +1,41 @@
+NY : 33 règles écrites dans regles-us/NY.json ; non converties :
+NY-largemouth-bass-engin-4 : règle datée (12-01 au 06-14) : le format ne porte pas la période, non convertie
+NY-smallmouth-bass-engin-9 : règle datée (12-01 au 06-14) : le format ne porte pas la période, non convertie
+NY-pickerel-saison-16 : espèce « Pickerel » absente du catalogue de l'app (groupe ou espèce inconnue)
+NY-pickerel-taille_min-17 : espèce « Pickerel » absente du catalogue de l'app (groupe ou espèce inconnue)
+NY-pickerel-limite_jour-18 : espèce « Pickerel » absente du catalogue de l'app (groupe ou espèce inconnue)
+NY-landlocked-atlantic-salmon-saison-28 : saison toute l'année ou sans dates : aucune contrainte à charger
+NY-brown-trout-saison-33 : saison toute l'année ou sans dates : aucune contrainte à charger
+NY-rainbow-trout-saison-36 : saison toute l'année ou sans dates : aucune contrainte à charger
+NY-yellow-perch-saison-54 : saison toute l'année ou sans dates : aucune contrainte à charger
+NY-lake-sturgeon-fermeture-58 : fermeture sans dates : période non lue, non convertie
+NY-sauger-fermeture-60 : fermeture sans dates : période non lue, non convertie
+NY-toutes-engin-63 : engin sans code
+NY-toutes-engin-65 : engin sans code
+NY-toutes-engin-68 : engin sans code
+b-052 : saison toute l'année ou sans dates : aucune contrainte à charger
+b-055 : saison toute l'année ou sans dates : aucune contrainte à charger
+b-060 : saison toute l'année ou sans dates : aucune contrainte à charger
+b-062 : saison toute l'année ou sans dates : aucune contrainte à charger
+b-064 : saison toute l'année ou sans dates : aucune contrainte à charger
+NY-brown-trout-limite_jour-34 : règle incertaine : jamais convertie
+NY-rainbow-trout-limite_jour-37 : règle incertaine : jamais convertie
+NY-brook-trout-limite_jour-40 : règle incertaine : jamais convertie
+NY-brook-trout-engin-42 : règle incertaine : jamais convertie
+NY-brown-trout-saison-43 : règle incertaine : jamais convertie
+NY-brown-trout-limite_jour-44 : règle incertaine : jamais convertie
+NY-brown-trout-engin-46 : règle incertaine : jamais convertie
+NY-rainbow-trout-saison-47 : règle incertaine : jamais convertie
+NY-rainbow-trout-limite_jour-48 : règle incertaine : jamais convertie
+NY-rainbow-trout-engin-50 : règle incertaine : jamais convertie
+b-034 : règle incertaine : jamais convertie
+b-035 : règle incertaine : jamais convertie
+b-039 : règle incertaine : jamais convertie
+b-043 : règle incertaine : jamais convertie
+(info) NY-tiger-muskellunge-saison-19 : « Tiger Muskellunge » lu comme tiger-muskie
+(info) NY-tiger-muskellunge-taille_min-20 : « Tiger Muskellunge » lu comme tiger-muskie
+(info) NY-tiger-muskellunge-limite_jour-21 : « Tiger Muskellunge » lu comme tiger-muskie
+(info) NY-landlocked-atlantic-salmon-saison-28 : « Landlocked Atlantic Salmon » lu comme atlantic-salmon
+(info) NY-landlocked-atlantic-salmon-taille_min-29 : « Landlocked Atlantic Salmon » lu comme atlantic-salmon
+(info) NY-landlocked-atlantic-salmon-limite_jour-30 : « Landlocked Atlantic Salmon » lu comme atlantic-salmon
+(info) NY-lake-sturgeon-fermeture-58 : « Lake Sturgeon » lu comme lake-sturgeon

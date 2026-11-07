@@ -1,0 +1,4720 @@
+{
+ "etat": "NY",
+ "fixture": false,
+ "regles": [
+  {
+   "id": "NY-largemouth-bass-saison-0",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "saison",
+   "du": "06-15",
+   "au": "11-30",
+   "valeur": {},
+   "phrase": "Black-bass à grande bouche : saison ouverte du 06-15 au 11-30 (dates MM-JJ).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-001",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+   }
+  },
+  {
+   "id": "NY-largemouth-bass-taille_min-1",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 12
+   },
+   "phrase": "Black-bass à grande bouche : taille minimale 12 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-002",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+   }
+  },
+  {
+   "id": "NY-largemouth-bass-limite_jour-2",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Black-bass à grande bouche : limite journalière 5 poissons.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-003",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+   }
+  },
+  {
+   "id": "NY-largemouth-bass-engin-4",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "engin",
+   "du": "12-01",
+   "au": "06-14",
+   "valeur": {
+    "code": "leurres_artificiels_seulement"
+   },
+   "phrase": "Black-bass à grande bouche : du 1er déc. au 14 juin, leurres artificiels seulement.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Dec 1 - June 14 | Catch and Release only. Artificial lures only",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-005",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Dec 1 - June 14 Catch and Release only. Artificial lures only"
+   }
+  },
+  {
+   "id": "NY-smallmouth-bass-saison-5",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "saison",
+   "du": "06-15",
+   "au": "11-30",
+   "valeur": {},
+   "phrase": "Black-bass à petite bouche : saison ouverte du 06-15 au 11-30 (dates MM-JJ).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-006",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+   }
+  },
+  {
+   "id": "NY-smallmouth-bass-taille_min-6",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 12
+   },
+   "phrase": "Black-bass à petite bouche : taille minimale 12 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-007",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+   }
+  },
+  {
+   "id": "NY-smallmouth-bass-limite_jour-7",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Black-bass à petite bouche : limite journalière 5 poissons.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-008",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+   }
+  },
+  {
+   "id": "NY-smallmouth-bass-engin-9",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "engin",
+   "du": "12-01",
+   "au": "06-14",
+   "valeur": {
+    "code": "leurres_artificiels_seulement"
+   },
+   "phrase": "Black-bass à petite bouche : du 1er déc. au 14 juin, leurres artificiels seulement.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Dec 1 - June 14 | Catch and Release only. Artificial lures only",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-010",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Dec 1 - June 14 Catch and Release only. Artificial lures only"
+   }
+  },
+  {
+   "id": "NY-muskellunge-saison-10",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "saison",
+   "du": "06-01",
+   "au": "11-30",
+   "valeur": {},
+   "phrase": "Maskinongé : saison ouverte du 06-01 au 11-30 (dates MM-JJ).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Muskellunge | June 1 - Nov 30 | 40\" | 1",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-023",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Muskellunge June 1 - Nov 30 40\" 1"
+   }
+  },
+  {
+   "id": "NY-muskellunge-taille_min-11",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 40
+   },
+   "phrase": "Maskinongé : taille minimale 40 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Muskellunge | June 1 - Nov 30 | 40\" | 1",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-024",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Muskellunge June 1 - Nov 30 40\" 1"
+   }
+  },
+  {
+   "id": "NY-muskellunge-limite_jour-12",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 1
+   },
+   "phrase": "Maskinongé : limite journalière 1 poissons.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Muskellunge | June 1 - Nov 30 | 40\" | 1",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-025",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Muskellunge June 1 - Nov 30 40\" 1"
+   }
+  },
+  {
+   "id": "NY-northern-pike-saison-13",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Northern Pike"
+   ],
+   "type": "saison",
+   "du": "05-01",
+   "au": "03-15",
+   "valeur": {},
+   "phrase": "Grand brochet : saison ouverte du 05-01 au 03-15 (dates MM-JJ).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Northern Pike | May 1 - Mar 15 | 18\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-014",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Northern Pike May 1 - Mar 15 18\" 5"
+   }
+  },
+  {
+   "id": "NY-northern-pike-taille_min-14",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Northern Pike"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 18
+   },
+   "phrase": "Grand brochet : taille minimale 18 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Northern Pike | May 1 - Mar 15 | 18\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-015",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Northern Pike May 1 - Mar 15 18\" 5"
+   }
+  },
+  {
+   "id": "NY-northern-pike-limite_jour-15",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Northern Pike"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Grand brochet : limite journalière 5 poissons.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Northern Pike | May 1 - Mar 15 | 18\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-016",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Northern Pike May 1 - Mar 15 18\" 5"
+   }
+  },
+  {
+   "id": "NY-pickerel-saison-16",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Pickerel"
+   ],
+   "type": "saison",
+   "du": "05-01",
+   "au": "03-15",
+   "valeur": {},
+   "phrase": "Brochet maillé (pickerel) : saison ouverte du 05-01 au 03-15 (dates MM-JJ).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Pickerel | May 1 - Mar 15 | 15\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-017",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Pickerel May 1 - Mar 15 15\" 5"
+   }
+  },
+  {
+   "id": "NY-pickerel-taille_min-17",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Pickerel"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 15
+   },
+   "phrase": "Brochet maillé (pickerel) : taille minimale 15 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Pickerel | May 1 - Mar 15 | 15\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-018",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Pickerel May 1 - Mar 15 15\" 5"
+   }
+  },
+  {
+   "id": "NY-pickerel-limite_jour-18",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Pickerel"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Brochet maillé (pickerel) : limite journalière 5 poissons.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Pickerel | May 1 - Mar 15 | 15\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-019",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Pickerel May 1 - Mar 15 15\" 5"
+   }
+  },
+  {
+   "id": "NY-tiger-muskellunge-saison-19",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Tiger Muskellunge"
+   ],
+   "type": "saison",
+   "du": "05-01",
+   "au": "03-15",
+   "valeur": {},
+   "phrase": "Tiger muskie : saison ouverte du 05-01 au 03-15 (dates MM-JJ).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Tiger Muskellunge | May 1 - Mar 15 | 30\" | 1",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-020",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Tiger Muskellunge May 1 - Mar 15 30\" 1"
+   }
+  },
+  {
+   "id": "NY-tiger-muskellunge-taille_min-20",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Tiger Muskellunge"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 30
+   },
+   "phrase": "Tiger muskie : taille minimale 30 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Tiger Muskellunge | May 1 - Mar 15 | 30\" | 1",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-021",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Tiger Muskellunge May 1 - Mar 15 30\" 1"
+   }
+  },
+  {
+   "id": "NY-tiger-muskellunge-limite_jour-21",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Tiger Muskellunge"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 1
+   },
+   "phrase": "Tiger muskie : limite journalière 1 poissons.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Tiger Muskellunge | May 1 - Mar 15 | 30\" | 1",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-022",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Tiger Muskellunge May 1 - Mar 15 30\" 1"
+   }
+  },
+  {
+   "id": "NY-walleye-saison-22",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "saison",
+   "du": "05-01",
+   "au": "03-15",
+   "valeur": {},
+   "phrase": "Doré jaune : saison ouverte du 05-01 au 03-15 (dates MM-JJ).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye | May 1 - Mar 15 | 15\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-011",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Walleye May 1 - Mar 15 15\" 5"
+   }
+  },
+  {
+   "id": "NY-walleye-taille_min-23",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 15
+   },
+   "phrase": "Doré jaune : taille minimale 15 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye | May 1 - Mar 15 | 15\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-012",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Walleye May 1 - Mar 15 15\" 5"
+   }
+  },
+  {
+   "id": "NY-walleye-limite_jour-24",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Doré jaune : limite journalière 5 poissons.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye | May 1 - Mar 15 | 15\" | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-013",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Walleye May 1 - Mar 15 15\" 5"
+   }
+  },
+  {
+   "id": "NY-lake-trout-saison-25",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Lake Trout"
+   ],
+   "type": "saison",
+   "du": "04-01",
+   "au": "10-15",
+   "valeur": {},
+   "phrase": "Touladi : saison ouverte du 04-01 au 10-15 (dates MM-JJ).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake Trout | April 1 - Oct 15 | 21\" | 3",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-046",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Lake Trout April 1 - Oct 15 21\" 3"
+   }
+  },
+  {
+   "id": "NY-lake-trout-taille_min-26",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Lake Trout"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 21
+   },
+   "phrase": "Touladi : taille minimale 21 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake Trout | April 1 - Oct 15 | 21\" | 3",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-047",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Lake Trout April 1 - Oct 15 21\" 3"
+   }
+  },
+  {
+   "id": "NY-lake-trout-limite_jour-27",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Lake Trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3
+   },
+   "phrase": "Touladi : limite journalière 3 poissons.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake Trout | April 1 - Oct 15 | 21\" | 3",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-048",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Lake Trout April 1 - Oct 15 21\" 3"
+   }
+  },
+  {
+   "id": "NY-landlocked-atlantic-salmon-saison-28",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Landlocked Atlantic Salmon"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "Saumon atlantique (landlocked) : saison ouverte du 01-01 au 12-31 (dates MM-JJ).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Atlantic Salmon (Landlocked) | All year | 15\" | 3",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-049",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Atlantic Salmon (Landlocked) All year 15\" 3"
+   }
+  },
+  {
+   "id": "NY-landlocked-atlantic-salmon-taille_min-29",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Landlocked Atlantic Salmon"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 15
+   },
+   "phrase": "Saumon atlantique (landlocked) : taille minimale 15 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Atlantic Salmon (Landlocked) | All year | 15\" | 3",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-050",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Atlantic Salmon (Landlocked) All year 15\" 3"
+   }
+  },
+  {
+   "id": "NY-landlocked-atlantic-salmon-limite_jour-30",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Landlocked Atlantic Salmon"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 3
+   },
+   "phrase": "Saumon atlantique (landlocked) : limite journalière 3 poissons.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Atlantic Salmon (Landlocked) | All year | 15\" | 3",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-051",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Atlantic Salmon (Landlocked) All year 15\" 3"
+   }
+  },
+  {
+   "id": "NY-brook-trout-saison-31",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, in lakes and ponds"
+   },
+   "especes": [
+    "Brook Trout"
+   ],
+   "type": "saison",
+   "du": "04-01",
+   "au": "10-15",
+   "valeur": {},
+   "phrase": "Omble de fontaine (lacs et étangs) : saison du 1er avril au 15 octobre.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Brook Trout (in lakes and ponds) | April 1 - Oct 15 | None | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-026",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brook Trout (in lakes and ponds) April 1 - Oct 15 None 5"
+   }
+  },
+  {
+   "id": "NY-brook-trout-limite_jour-32",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, in lakes and ponds"
+   },
+   "especes": [
+    "Brook Trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Omble de fontaine (lacs et étangs) : limite journalière 5.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Brook Trout (in lakes and ponds) | April 1 - Oct 15 | None | 5",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-027",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brook Trout (in lakes and ponds) April 1 - Oct 15 None 5"
+   }
+  },
+  {
+   "id": "NY-brown-trout-saison-33",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, in lakes and ponds"
+   },
+   "especes": [
+    "Brown Trout"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "Truite brune (lacs et étangs) : saison toute l'année.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) | All year | None | 5 with only 2 longer than 12\"",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-028",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) All year None 5 with only 2 longer than 12\""
+   }
+  },
+  {
+   "id": "NY-rainbow-trout-saison-36",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, in lakes and ponds"
+   },
+   "especes": [
+    "Rainbow Trout"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "Truite arc-en-ciel (lacs et étangs) : saison toute l'année.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) | All year | None | 5 with only 2 longer than 12\"",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-031",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) All year None 5 with only 2 longer than 12\""
+   }
+  },
+  {
+   "id": "NY-brook-trout-saison-39",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+   },
+   "especes": [
+    "Brook Trout"
+   ],
+   "type": "saison",
+   "du": "04-01",
+   "au": "10-15",
+   "valeur": {},
+   "phrase": "Omble de fontaine (cours d'eau à truites intérieurs) : saison avec prise du 1er avril au 15 octobre.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Trout in inland trout streams (see Definitions) | April 1 - Oct 15 | None | 5 with only 2 longer than 12\"",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-026",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brook Trout (in lakes and ponds) April 1 - Oct 15 None 5"
+   }
+  },
+  {
+   "id": "NY-yellow-perch-saison-54",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Yellow Perch"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "Perchaude : saison toute l'année.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Yellow Perch | All year | None | 50",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-058",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Yellow Perch All year None 50"
+   }
+  },
+  {
+   "id": "NY-yellow-perch-limite_jour-55",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Yellow Perch"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 50
+   },
+   "phrase": "Perchaude : limite journalière 50.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Yellow Perch | All year | None | 50",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-059",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Yellow Perch All year None 50"
+   }
+  },
+  {
+   "id": "NY-lake-sturgeon-fermeture-58",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Lake Sturgeon"
+   ],
+   "type": "fermeture",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "peche_et_possession_interdites"
+   },
+   "phrase": "Esturgeon jaune : pêche (remise à l'eau comprise) et possession interdites.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake Sturgeon, Atlantic Sturgeon, Shortnose Sturgeon | Closed | Fishing for (including Catch and Release) or possession prohibited",
+   "statut": "brouillon",
+   "verdict": "interdit",
+   "lecture_b": {
+    "id": "b-066",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Lake Sturgeon, Atlantic Sturgeon, Shortnose Sturgeon Closed Fishing for (including Catch and Release) or possession prohibited"
+   }
+  },
+  {
+   "id": "NY-sauger-fermeture-60",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [
+    "Sauger"
+   ],
+   "type": "fermeture",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "peche_et_possession_interdites"
+   },
+   "phrase": "Doré noir (sauger) : pêche (remise à l'eau comprise) et possession interdites.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Paddlefish, Sauger | Closed | Fishing for (including Catch and Release) or possession prohibited",
+   "statut": "brouillon",
+   "verdict": "interdit",
+   "lecture_b": {
+    "id": "b-067",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Paddlefish, Sauger Closed Fishing for (including Catch and Release) or possession prohibited"
+   }
+  },
+  {
+   "id": "NY-toutes-engin-63",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 3
+   },
+   "phrase": "Pêche à la ligne : 3 lignes au plus, avec ou sans canne.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+    "texte": "General Freshwater Fishing Regulations",
+    "edition": null,
+    "date": "2026-11-07"
+   },
+   "citation": "An angler may operate no more than 3 lines with or without a rod.",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-071",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "An angler may operate no more than 3 lines with or without a rod. Each line is limited to not more than 5 lures or baits or a combination of both."
+   }
+  },
+  {
+   "id": "NY-toutes-engin-65",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "hamecons_max": 15
+   },
+   "phrase": "Pêche à la ligne : 15 pointes d'hameçon au plus par ligne.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+    "texte": "General Freshwater Fishing Regulations",
+    "edition": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Each line shall not exceed 15 hook points in any combination of single, double or treble hooks.",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-072",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Each line shall not exceed 15 hook points in any combination of single, double or treble hooks."
+   }
+  },
+  {
+   "id": "NY-toutes-engin-68",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 7,
+    "texte": "pêche sur glace : 7 lignes au plus"
+   },
+   "phrase": "Pêche sur glace : 7 lignes au plus, sauf règle spéciale.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+    "texte": "General Freshwater Fishing Regulations",
+    "edition": null,
+    "date": "2026-11-07"
+   },
+   "citation": "No more than 7 ice-fishing lines in any combination of devices may be used, unless otherwise noted in Special Regulations.",
+   "statut": "brouillon",
+   "lecture_b": {
+    "id": "b-074",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "No more than 7 ice-fishing lines in any combination of devices may be used, unless otherwise noted in Special Regulations."
+   }
+  },
+  {
+   "id": "b-052",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "black crappie"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "black crappie : toute l'année.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Crappie (Black and White) All year 10\" 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-crappie-saison-51",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Crappie (Black and White) | All year | 10\" | 25"
+   }
+  },
+  {
+   "id": "b-053",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "black crappie"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 10
+   },
+   "phrase": "black crappie : taille minimale 10 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Crappie (Black and White) All year 10\" 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-crappie-taille_min-52",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Crappie (Black and White) | All year | 10\" | 25"
+   }
+  },
+  {
+   "id": "b-054",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "black crappie"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 25
+   },
+   "phrase": "black crappie : 25 par jour.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Crappie (Black and White) All year 10\" 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-crappie-limite_jour-53",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Crappie (Black and White) | All year | 10\" | 25"
+   }
+  },
+  {
+   "id": "b-055",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "white crappie"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "white crappie : toute l'année.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Crappie (Black and White) All year 10\" 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-crappie-saison-51",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Crappie (Black and White) | All year | 10\" | 25"
+   }
+  },
+  {
+   "id": "b-056",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "white crappie"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 10
+   },
+   "phrase": "white crappie : taille minimale 10 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Crappie (Black and White) All year 10\" 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-crappie-taille_min-52",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Crappie (Black and White) | All year | 10\" | 25"
+   }
+  },
+  {
+   "id": "b-057",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "white crappie"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 25
+   },
+   "phrase": "white crappie : 25 par jour.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Crappie (Black and White) All year 10\" 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-crappie-limite_jour-53",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Crappie (Black and White) | All year | 10\" | 25"
+   }
+  },
+  {
+   "id": "b-060",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "bluegill"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "bluegill : toute l'année.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-sunfish-saison-56",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) | All year | None | 25"
+   }
+  },
+  {
+   "id": "b-061",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "bluegill"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 25
+   },
+   "phrase": "bluegill : 25 par jour.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-sunfish-limite_jour-57",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) | All year | None | 25"
+   }
+  },
+  {
+   "id": "b-062",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "redbreast sunfish"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "redbreast sunfish : toute l'année.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-sunfish-saison-56",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) | All year | None | 25"
+   }
+  },
+  {
+   "id": "b-063",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "redbreast sunfish"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 25
+   },
+   "phrase": "redbreast sunfish : 25 par jour.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-sunfish-limite_jour-57",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) | All year | None | 25"
+   }
+  },
+  {
+   "id": "b-064",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "pumpkinseed"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "pumpkinseed : toute l'année.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-sunfish-saison-56",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) | All year | None | 25"
+   }
+  },
+  {
+   "id": "b-065",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "New York State, statewide table"
+   },
+   "especes": [
+    "pumpkinseed"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 25
+   },
+   "phrase": "pumpkinseed : 25 par jour.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+   "statut": "brouillon",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-sunfish-limite_jour-57",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) | All year | None | 25"
+   }
+  }
+ ],
+ "incertaines": [
+  {
+   "id": "NY-brown-trout-limite_jour-34",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, in lakes and ponds"
+   },
+   "especes": [
+    "Brown Trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Truite brune (lacs et étangs) : limite journalière 5 (dont 2 au plus de plus de 12 pouces).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) | All year | None | 5 with only 2 longer than 12\"",
+   "statut": "incertain",
+   "raison_incertain": "limite 5 avec sous-limite de 2 poissons de plus de 12 pouces : deux nombres dans une cellule, sous-limite enregistrée dans une règle séparée",
+   "lecture_b": {
+    "id": "b-029",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) All year None 5 with only 2 longer than 12\""
+   }
+  },
+  {
+   "id": "NY-rainbow-trout-limite_jour-37",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, in lakes and ponds"
+   },
+   "especes": [
+    "Rainbow Trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Truite arc-en-ciel (lacs et étangs) : limite journalière 5 (dont 2 au plus de plus de 12 pouces).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) | All year | None | 5 with only 2 longer than 12\"",
+   "statut": "incertain",
+   "raison_incertain": "limite 5 avec sous-limite de 2 poissons de plus de 12 pouces : deux nombres dans une cellule, sous-limite enregistrée dans une règle séparée",
+   "lecture_b": {
+    "id": "b-032",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) All year None 5 with only 2 longer than 12\""
+   }
+  },
+  {
+   "id": "NY-brook-trout-limite_jour-40",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+   },
+   "especes": [
+    "Brook Trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Omble de fontaine (cours d'eau à truites) : limite 5 (dont 2 au plus de plus de 12 pouces).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Trout in inland trout streams (see Definitions) | April 1 - Oct 15 | None | 5 with only 2 longer than 12\"",
+   "statut": "incertain",
+   "raison_incertain": "sous-limite de 2 poissons de plus de 12 pouces dans la même cellule ; catégories de cours d'eau à règles différentes (niveau 3) non lues tronçon par tronçon",
+   "lecture_b": {
+    "id": "b-027",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brook Trout (in lakes and ponds) April 1 - Oct 15 None 5"
+   }
+  },
+  {
+   "id": "NY-brook-trout-engin-42",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+   },
+   "especes": [
+    "Brook Trout"
+   ],
+   "type": "engin",
+   "du": "10-16",
+   "au": "03-31",
+   "valeur": {
+    "code": "leurres_artificiels_seulement"
+   },
+   "phrase": "Omble de fontaine (cours d'eau à truites) : du 16 oct. au 31 mars, leurres artificiels seulement.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Oct 16 - Mar 31 | Catch and Release only. Artificial lures only",
+   "statut": "incertain",
+   "lecture_b": {
+    "id": "b-037",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Oct 16 - Mar 31 Catch and Release only. Artificial lures only"
+   }
+  },
+  {
+   "id": "NY-brown-trout-saison-43",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+   },
+   "especes": [
+    "Brown Trout"
+   ],
+   "type": "saison",
+   "du": "04-01",
+   "au": "10-15",
+   "valeur": {},
+   "phrase": "Truite brune (cours d'eau à truites intérieurs) : saison avec prise du 1er avril au 15 octobre.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Trout in inland trout streams (see Definitions) | April 1 - Oct 15 | None | 5 with only 2 longer than 12\"",
+   "statut": "incertain",
+   "lecture_b": {
+    "id": "b-038",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Trout in inland trout streams ( see Definitions ) April 1 - Oct 15 None 5 with only 2 longer than 12\""
+   }
+  },
+  {
+   "id": "NY-brown-trout-limite_jour-44",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+   },
+   "especes": [
+    "Brown Trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Truite brune (cours d'eau à truites) : limite 5 (dont 2 au plus de plus de 12 pouces).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Trout in inland trout streams (see Definitions) | April 1 - Oct 15 | None | 5 with only 2 longer than 12\"",
+   "statut": "incertain",
+   "raison_incertain": "sous-limite de 2 poissons de plus de 12 pouces dans la même cellule ; catégories de cours d'eau à règles différentes (niveau 3) non lues tronçon par tronçon",
+   "lecture_b": {
+    "id": "b-029",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) All year None 5 with only 2 longer than 12\""
+   }
+  },
+  {
+   "id": "NY-brown-trout-engin-46",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+   },
+   "especes": [
+    "Brown Trout"
+   ],
+   "type": "engin",
+   "du": "10-16",
+   "au": "03-31",
+   "valeur": {
+    "code": "leurres_artificiels_seulement"
+   },
+   "phrase": "Truite brune (cours d'eau à truites) : du 16 oct. au 31 mars, leurres artificiels seulement.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Oct 16 - Mar 31 | Catch and Release only. Artificial lures only",
+   "statut": "incertain",
+   "lecture_b": {
+    "id": "b-041",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Oct 16 - Mar 31 Catch and Release only. Artificial lures only"
+   }
+  },
+  {
+   "id": "NY-rainbow-trout-saison-47",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+   },
+   "especes": [
+    "Rainbow Trout"
+   ],
+   "type": "saison",
+   "du": "04-01",
+   "au": "10-15",
+   "valeur": {},
+   "phrase": "Truite arc-en-ciel (cours d'eau à truites intérieurs) : saison avec prise du 1er avril au 15 octobre.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Trout in inland trout streams (see Definitions) | April 1 - Oct 15 | None | 5 with only 2 longer than 12\"",
+   "statut": "incertain",
+   "lecture_b": {
+    "id": "b-042",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Trout in inland trout streams ( see Definitions ) April 1 - Oct 15 None 5 with only 2 longer than 12\""
+   }
+  },
+  {
+   "id": "NY-rainbow-trout-limite_jour-48",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+   },
+   "especes": [
+    "Rainbow Trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Truite arc-en-ciel (cours d'eau à truites) : limite 5 (dont 2 au plus de plus de 12 pouces).",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Trout in inland trout streams (see Definitions) | April 1 - Oct 15 | None | 5 with only 2 longer than 12\"",
+   "statut": "incertain",
+   "raison_incertain": "sous-limite de 2 poissons de plus de 12 pouces dans la même cellule ; catégories de cours d'eau à règles différentes (niveau 3) non lues tronçon par tronçon",
+   "lecture_b": {
+    "id": "b-032",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) All year None 5 with only 2 longer than 12\""
+   }
+  },
+  {
+   "id": "NY-rainbow-trout-engin-50",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+   },
+   "especes": [
+    "Rainbow Trout"
+   ],
+   "type": "engin",
+   "du": "10-16",
+   "au": "03-31",
+   "valeur": {
+    "code": "leurres_artificiels_seulement"
+   },
+   "phrase": "Truite arc-en-ciel (cours d'eau à truites) : du 16 oct. au 31 mars, leurres artificiels seulement.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Seasons, Sizes, and Catch Limits",
+    "edition": "Statewide Regulations Effective April 1, 2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Oct 16 - Mar 31 | Catch and Release only. Artificial lures only",
+   "statut": "incertain",
+   "lecture_b": {
+    "id": "b-045",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Oct 16 - Mar 31 Catch and Release only. Artificial lures only"
+   }
+  },
+  {
+   "id": "b-034",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "inland trout streams"
+   },
+   "especes": [
+    "brook trout"
+   ],
+   "type": "saison",
+   "du": "04-01",
+   "au": "10-15",
+   "valeur": {},
+   "phrase": "brook trout (cours d'eau à truite intérieurs) : du 1er avril au 15 octobre.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Trout in inland trout streams ( see Definitions ) April 1 - Oct 15 None 5 with only 2 longer than 12\"",
+   "statut": "incertain",
+   "raison_incertain": "Les biefs listés dans les tableaux régionaux (catégories Stocked-Extended, Wild Quality, Wild-Premier, Catch and Release) ont d'autres règles ; tableaux lus partiellement (Régions 3 et 4 seulement).",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-brook-trout-saison-31",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brook Trout (in lakes and ponds) | April 1 - Oct 15 | None | 5"
+   }
+  },
+  {
+   "id": "b-035",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "inland trout streams"
+   },
+   "especes": [
+    "brook trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "brook trout (cours d'eau à truite intérieurs) : 5 par jour, dont 2 au plus de plus de 12 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Trout in inland trout streams ( see Definitions ) April 1 - Oct 15 None 5 with only 2 longer than 12\"",
+   "statut": "incertain",
+   "raison_incertain": "Les biefs listés dans les tableaux régionaux (catégories Stocked-Extended, Wild Quality, Wild-Premier, Catch and Release) ont d'autres règles ; tableaux lus partiellement (Régions 3 et 4 seulement).",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-brook-trout-limite_jour-32",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brook Trout (in lakes and ponds) | April 1 - Oct 15 | None | 5"
+   }
+  },
+  {
+   "id": "b-039",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "inland trout streams"
+   },
+   "especes": [
+    "brown trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "brown trout (cours d'eau à truite intérieurs) : 5 par jour, dont 2 au plus de plus de 12 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Trout in inland trout streams ( see Definitions ) April 1 - Oct 15 None 5 with only 2 longer than 12\"",
+   "statut": "incertain",
+   "raison_incertain": "Les biefs listés dans les tableaux régionaux (catégories Stocked-Extended, Wild Quality, Wild-Premier, Catch and Release) ont d'autres règles ; tableaux lus partiellement (Régions 3 et 4 seulement).",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-brown-trout-limite_jour-34",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) | All year | None | 5 with only 2 longer than 12\""
+   }
+  },
+  {
+   "id": "b-043",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NY",
+    "lieu": "inland trout streams"
+   },
+   "especes": [
+    "rainbow trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "rainbow trout (cours d'eau à truite intérieurs) : 5 par jour, dont 2 au plus de plus de 12 pouces.",
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "texte": "Statewide Regulations Effective April 1, 2026",
+    "edition": "2026",
+    "date": "2026-11-07"
+   },
+   "citation": "Trout in inland trout streams ( see Definitions ) April 1 - Oct 15 None 5 with only 2 longer than 12\"",
+   "statut": "incertain",
+   "raison_incertain": "Les biefs listés dans les tableaux régionaux (catégories Stocked-Extended, Wild Quality, Wild-Premier, Catch and Release) ont d'autres règles ; tableaux lus partiellement (Régions 3 et 4 seulement).",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "NY-rainbow-trout-limite_jour-37",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) | All year | None | 5 with only 2 longer than 12\""
+   }
+  }
+ ],
+ "a_verifier": {
+  "seulement_a": [
+   {
+    "id": "NY-largemouth-bass-relacher-3",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Largemouth Bass"
+    ],
+    "type": "relacher",
+    "du": "12-01",
+    "au": "06-14",
+    "valeur": {
+     "code": "capture_et_remise_a_l_eau_seulement"
+    },
+    "phrase": "Black-bass à grande bouche : du 1er déc. au 14 juin, capture et remise à l'eau seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Dec 1 - June 14 | Catch and Release only. Artificial lures only",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-smallmouth-bass-relacher-8",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Smallmouth Bass"
+    ],
+    "type": "relacher",
+    "du": "12-01",
+    "au": "06-14",
+    "valeur": {
+     "code": "capture_et_remise_a_l_eau_seulement"
+    },
+    "phrase": "Black-bass à petite bouche : du 1er déc. au 14 juin, capture et remise à l'eau seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Dec 1 - June 14 | Catch and Release only. Artificial lures only",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-brown-trout-autre-35",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide, in lakes and ponds"
+    },
+    "especes": [
+     "Brown Trout"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 2,
+     "pouces": 12,
+     "texte": "au plus 2 poissons de plus de 12 pouces dans la limite journalière de 5"
+    },
+    "phrase": "Truite brune (lacs et étangs) : au plus 2 poissons de plus de 12 pouces dans la limite de 5.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) | All year | None | 5 with only 2 longer than 12\"",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-rainbow-trout-autre-38",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide, in lakes and ponds"
+    },
+    "especes": [
+     "Rainbow Trout"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 2,
+     "pouces": 12,
+     "texte": "au plus 2 poissons de plus de 12 pouces dans la limite journalière de 5"
+    },
+    "phrase": "Truite arc-en-ciel (lacs et étangs) : au plus 2 poissons de plus de 12 pouces dans la limite de 5.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) | All year | None | 5 with only 2 longer than 12\"",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-brook-trout-relacher-41",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+    },
+    "especes": [
+     "Brook Trout"
+    ],
+    "type": "relacher",
+    "du": "10-16",
+    "au": "03-31",
+    "valeur": {
+     "code": "capture_et_remise_a_l_eau_seulement"
+    },
+    "phrase": "Omble de fontaine (cours d'eau à truites) : du 16 oct. au 31 mars, capture et remise à l'eau seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Oct 16 - Mar 31 | Catch and Release only. Artificial lures only",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-brown-trout-relacher-45",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+    },
+    "especes": [
+     "Brown Trout"
+    ],
+    "type": "relacher",
+    "du": "10-16",
+    "au": "03-31",
+    "valeur": {
+     "code": "capture_et_remise_a_l_eau_seulement"
+    },
+    "phrase": "Truite brune (cours d'eau à truites) : du 16 oct. au 31 mars, capture et remise à l'eau seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Oct 16 - Mar 31 | Catch and Release only. Artificial lures only",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-rainbow-trout-relacher-49",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide, inland trout streams (catégorie Wild and Stocked ; certaines catégories ou tronçons ont des règles propres)"
+    },
+    "especes": [
+     "Rainbow Trout"
+    ],
+    "type": "relacher",
+    "du": "10-16",
+    "au": "03-31",
+    "valeur": {
+     "code": "capture_et_remise_a_l_eau_seulement"
+    },
+    "phrase": "Truite arc-en-ciel (cours d'eau à truites) : du 16 oct. au 31 mars, capture et remise à l'eau seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Oct 16 - Mar 31 | Catch and Release only. Artificial lures only",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-crappie-saison-51",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Crappie"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Crapet (crappie noir et blanc) : saison ouverte du 01-01 au 12-31 (dates MM-JJ).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Crappie (Black and White) | All year | 10\" | 25",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-crappie-taille_min-52",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Crappie"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 10
+    },
+    "phrase": "Crapet (crappie noir et blanc) : taille minimale 10 pouces.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Crappie (Black and White) | All year | 10\" | 25",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-crappie-limite_jour-53",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Crappie"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 25
+    },
+    "phrase": "Crapet (crappie noir et blanc) : limite journalière 25 poissons.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Crappie (Black and White) | All year | 10\" | 25",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-sunfish-saison-56",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Sunfish"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Sunfish (bluegill, redbreast, pumpkinseed) : saison toute l'année.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) | All year | None | 25",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-sunfish-limite_jour-57",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Sunfish"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 25
+    },
+    "phrase": "Sunfish (bluegill, redbreast, pumpkinseed) : limite journalière 25.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) | All year | None | 25",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-lake-sturgeon-interdit-59",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Lake Sturgeon"
+    ],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "espece_menacee"
+    },
+    "phrase": "Esturgeon jaune : classé espèce menacée ; pêche ou possession interdites.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "It is illegal to fish for, or possess fish that are officially listed by DEC as endangered or threatened:",
+    "statut": "incertain",
+    "raison_incertain": "la citation ne nomme pas l'esturgeon jaune (liste « Threatened » sur la ligne suivante) ; règle déjà portée par la ligne du tableau statewide",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-paddlefish-fermeture-61",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Paddlefish"
+    ],
+    "type": "fermeture",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "peche_et_possession_interdites"
+    },
+    "phrase": "Poisson-spatule : pêche (remise à l'eau comprise) et possession interdites.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Seasons, Sizes, and Catch Limits",
+     "edition": "Statewide Regulations Effective April 1, 2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Paddlefish, Sauger | Closed | Fishing for (including Catch and Release) or possession prohibited",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-channel-catfish-saison-62",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Channel Catfish"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Poisson-chat (Catfish, ligne regroupée) : saison toute l'année selon le règlement 6 NYCRR 10.1.",
+    "source": {
+     "url": "https://www.law.cornell.edu/regulations/new-york/6-NYCRR-10.1",
+     "texte": "6 NYCRR 10.1 Table A, ligne 18 (copie LII non officielle, modifications jusqu'au 18 sept. 2024)",
+     "edition": "LII, 6 NYCRR 10.1 (dernière modification citée : 2024-09-18)",
+     "date": "2026-11-07"
+    },
+    "citation": "Bullhead, Catfish, Carp, Cisco, Rock Bass, Sucker, White Bass, White Perch, and all other fishes not listed in this table | All year | Any size | Any number",
+    "statut": "incertain",
+    "raison_incertain": "« Channel catfish » n'est pas nommé : seule la ligne regroupée « Catfish » de la copie non officielle LII ; la page DEC 2026 dit seulement « All other species » ; règles spéciales (Grands Lacs, etc.) non lues",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-engin-64",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "engin",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "cinq_leurres_ou_appats_max_par_ligne",
+     "nombre": 5
+    },
+    "phrase": "Pêche à la ligne : 5 leurres ou appâts au plus par ligne.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Each line is limited to not more than 5 lures or baits or a combination of both.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-engin-66",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "engin",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "presence_immediate_obligatoire"
+    },
+    "phrase": "Pêcheur présent en permanence quand les lignes sont à l'eau ; lignes dormantes sans surveillance interdites.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Anglers must be in immediate attendance when their lines are in the water.The use of set lines where the angler is not in immediate attendance is prohibited.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-engin-67",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "engin",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "gaffes_interdites"
+    },
+    "phrase": "Gaffes et crochets à gaffe interdits en eau douce, sauf pêche sur glace ou pêche à l'arc.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Use or possession of gaffs or gaff hooks is prohibited when fishing in freshwater, including the Hudson River upstream of the Mario M. Cuomo Bridge, except when ice fishing or while bowfishing.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-autre-69",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "pêche sur glace : voir liste de comtés dans le texte"
+    },
+    "phrase": "Pêche sur glace : exclue dans les comtés d'Essex, Franklin, Fulton, Hamilton, Herkimer, Lewis, St. Lawrence, Warren et Washington, sauf eaux à truites précisées.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Ice fishing is permitted for most waters in New York, except for those waters where Special Regulations specifically prohibit this activity and for waters within Essex, Franklin, Fulton, Hamilton,",
+    "statut": "incertain",
+    "raison_incertain": "formulation à exceptions imbriquées (règles spéciales et tronçons à truites) ; citation coupée à 200 caractères avant la fin de la liste de comtés",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-engin-70",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "engin",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "hamecon_circle_non_decale_obligatoire_avec_poisson_appat"
+    },
+    "phrase": "Hameçon circle non décalé exigé avec des poissons-appâts (pas pour les leurres artificiels).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Non-offset (in-line) circle hooks must be used when recreationally fishing for striped bass or when using baitfish.",
+    "statut": "incertain",
+    "raison_incertain": "exception pour les leurres artificiels dans la phrase suivante ; portée exacte selon la définition « baitfish » (page Baitfish)",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-autre-71",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "mesure_longueur_totale_bouche_ouverte_ou_fermee",
+     "texte": "longueur mesurée du bout du museau au bout de la queue, longueur maximale possible"
+    },
+    "phrase": "Mesure de la taille minimale : plus grande longueur possible, du museau à la queue.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Minimum length means the greatest possible length measured from the tip of the fish's snout to the tip of the tail.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-fermeture-72",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "fermeture",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_peche_en_saison_fermee_remise_a_l_eau_comprise"
+    },
+    "phrase": "Pas de pêche d'une espèce pendant sa saison fermée, remise à l'eau comprise.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "A person may not fish for a species (including catch and release) during the closed season for that species on a given water.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-relacher-73",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "relacher",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "remise_a_l_eau_sans_garder_dans_contenant"
+    },
+    "phrase": "Capture et remise à l'eau : pas de seau, bac, vivier ou cordon pour retenir le poisson.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Fish may not be placed in a bucket, tub, livewell, on a string or any other holding device.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-walleye-autre-74",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Walleye"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_decoupe_possession"
+    },
+    "phrase": "Walleye : possession interdite si le poisson est coupé, filé ou transformé au point que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "incertain",
+    "raison_incertain": "la citation introduit une liste (Walleye, Black Bass, Brook trout, Lake trout, Atlantic salmon) qui suit sur les lignes suivantes",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-largemouth-bass-autre-75",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Largemouth Bass"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_decoupe_possession"
+    },
+    "phrase": "Black Bass : possession interdite si le poisson est coupé, filé ou transformé au point que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "incertain",
+    "raison_incertain": "la citation introduit une liste (Walleye, Black Bass, Brook trout, Lake trout, Atlantic salmon) qui suit sur les lignes suivantes",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-brook-trout-autre-76",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Brook Trout"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_decoupe_possession"
+    },
+    "phrase": "Brook Trout : possession interdite si le poisson est coupé, filé ou transformé au point que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "incertain",
+    "raison_incertain": "la citation introduit une liste (Walleye, Black Bass, Brook trout, Lake trout, Atlantic salmon) qui suit sur les lignes suivantes",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-lake-trout-autre-77",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Lake Trout"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_decoupe_possession"
+    },
+    "phrase": "Lake Trout : possession interdite si le poisson est coupé, filé ou transformé au point que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "incertain",
+    "raison_incertain": "la citation introduit une liste (Walleye, Black Bass, Brook trout, Lake trout, Atlantic salmon) qui suit sur les lignes suivantes",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-atlantic-salmon-autre-78",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Atlantic Salmon"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_decoupe_possession"
+    },
+    "phrase": "Atlantic Salmon : possession interdite si le poisson est coupé, filé ou transformé au point que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "incertain",
+    "raison_incertain": "la citation introduit une liste (Walleye, Black Bass, Brook trout, Lake trout, Atlantic salmon) qui suit sur les lignes suivantes",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-smallmouth-bass-autre-79",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [
+     "Smallmouth Bass"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_decoupe_possession"
+    },
+    "phrase": "Black-bass à petite bouche : possession interdite si le poisson est coupé ou filé au point que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "incertain",
+    "raison_incertain": "la citation introduit une liste (Black Bass inclus) sur les lignes suivantes",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-autre-80",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 1,
+     "texte": "un quart (quart) d'oeufs de truite, touladi ou saumon atlantique au plus"
+    },
+    "phrase": "Oeufs de truite, touladi, saumon atlantique : un quart au plus en possession sur l'eau ou la rive.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "No person shall possess more than one quart total of fish eggs from trout, lake trout, or Atlantic salmon while on the waters of the state or the shores thereof.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-appat-81",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_chumming_avec_oeufs"
+    },
+    "phrase": "Amorçage (chumming) avec des oeufs de poisson interdit.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "No person shall take or attempt to take any fish by means of chumming (see Definitions) with fish eggs.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-appat-82",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_salamandres_serpents_indigenes"
+    },
+    "phrase": "Salamandres et serpents indigènes : ne peuvent être récoltés ni utilisés comme appât.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Native salamanders and snakes cannot be collected or used as bait.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-appat-83",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_d_insectes_aquatiques_eaux_a_truites"
+    },
+    "phrase": "Insectes aquatiques : ne peuvent être pris dans les eaux à truites ni sur leurs rives.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "No aquatic insect (or any insect that lives in the water during any of its life stages) shall be taken from waters inhabited by trout, or from the banks of those waters at any time.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-appat-84",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_d_ecrevisse_rouille_comme_appat"
+    },
+    "phrase": "Écrevisse à taches rouille : achat et transport vers un plan d'eau pour appât interdits.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Rusty crayfish may not be purchased and/or transported to a waterbody for use as bait or to be released (See definition of waterbody for baitfish purposes).",
+    "statut": "incertain",
+    "raison_incertain": "renvoi à la définition « waterbody » de la page Baitfish",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-appat-85",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "especes_interdites_comme_appat"
+    },
+    "phrase": "Carpe, poisson rouge, larves de lamproie, gobie à taches noires, rudd européen et espèces menacées : interdits comme appât.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/baitfish",
+     "texte": "Baitfish Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Carp, goldfish, lamprey larvae, round goby, European rudd as well as species listed as endangered or threatened in New York State may not be used for bait.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-appat-86",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "appat_poisson_collecte_meme_plan_eau_seulement"
+    },
+    "phrase": "Poissons-appâts pris personnellement : utilisables seulement dans le plan d'eau où ils ont été pris, à la ligne seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/baitfish",
+     "texte": "Baitfish Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Baitfish or other legally taken fish species intended to be used as bait may only be used in the same waterbody from which they were caught for bait in hook-and-line fishing.",
+    "statut": "incertain",
+    "raison_incertain": "définition de « waterbody » (plans d'eau combinés, affluents jusqu'à la première barrière) non reprise ici",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-appat-87",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_transport_routier_appat_collecte"
+    },
+    "phrase": "Poissons-appâts pris personnellement : transport par véhicule à moteur interdit, sauf dans un couloir désigné.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/baitfish",
+     "texte": "Baitfish Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Transportation of personally harvested baitfish overland by a motorized vehicle is prohibited except within a designated overland transportation corridor.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "NY-toutes-appat-88",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "Statewide"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "poissons_appats_eaux_interdites_voir_regions"
+    },
+    "phrase": "Des plans d'eau (Régions 3, 4, 5, 6) interdisent l'emploi de poissons-appâts ; liste par région dans la page Baitfish.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/baitfish",
+     "texte": "Baitfish Regulations",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Select a DEC Region to view the list of waters where baitfish is prohibited:",
+    "statut": "incertain",
+    "raison_incertain": "renvoi à des listes de plans d'eau (niveau 3) non chargées ; ne dit rien des autres eaux",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   }
+  ],
+  "seulement_b": [
+   {
+    "id": "b-004",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [
+     "largemouth bass"
+    ],
+    "type": "relacher",
+    "du": "12-01",
+    "au": "06-14",
+    "valeur": {
+     "code": "prise_relacher_hors_periode_recolte"
+    },
+    "phrase": "largemouth bass : du 1er décembre au 14 juin, prise et relâche seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Dec 1 - June 14 Catch and Release only. Artificial lures only",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-009",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [
+     "smallmouth bass"
+    ],
+    "type": "relacher",
+    "du": "12-01",
+    "au": "06-14",
+    "valeur": {
+     "code": "prise_relacher_hors_periode_recolte"
+    },
+    "phrase": "smallmouth bass : du 1er décembre au 14 juin, prise et relâche seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Dec 1 - June 14 Catch and Release only. Artificial lures only",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-030",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "lakes and ponds"
+    },
+    "especes": [
+     "brown trout"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "max_2_de_plus_de_12_pouces",
+     "texte": "sur 5 par jour, 2 au plus mesurent plus de 12 pouces"
+    },
+    "phrase": "brown trout (lacs et étangs) : parmi les 5 par jour, 2 au plus de plus de 12 pouces.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) All year None 5 with only 2 longer than 12\"",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-033",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "lakes and ponds"
+    },
+    "especes": [
+     "rainbow trout"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "max_2_de_plus_de_12_pouces",
+     "texte": "sur 5 par jour, 2 au plus mesurent plus de 12 pouces"
+    },
+    "phrase": "rainbow trout (lacs et étangs) : parmi les 5 par jour, 2 au plus de plus de 12 pouces.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Brown Trout, Rainbow Trout, and Splake (in lakes and ponds) All year None 5 with only 2 longer than 12\"",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-036",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "inland trout streams"
+    },
+    "especes": [
+     "brook trout"
+    ],
+    "type": "relacher",
+    "du": "10-16",
+    "au": "03-31",
+    "valeur": {
+     "code": "prise_relacher_hors_periode_recolte"
+    },
+    "phrase": "brook trout (cours d'eau à truite intérieurs) : du 16 octobre au 31 mars, prise et relâche seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Oct 16 - Mar 31 Catch and Release only. Artificial lures only",
+    "statut": "incertain",
+    "raison_incertain": "Les biefs listés dans les tableaux régionaux (catégories Stocked-Extended, Wild Quality, Wild-Premier, Catch and Release) ont d'autres règles ; tableaux lus partiellement (Régions 3 et 4 seulement).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-040",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "inland trout streams"
+    },
+    "especes": [
+     "brown trout"
+    ],
+    "type": "relacher",
+    "du": "10-16",
+    "au": "03-31",
+    "valeur": {
+     "code": "prise_relacher_hors_periode_recolte"
+    },
+    "phrase": "brown trout (cours d'eau à truite intérieurs) : du 16 octobre au 31 mars, prise et relâche seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Oct 16 - Mar 31 Catch and Release only. Artificial lures only",
+    "statut": "incertain",
+    "raison_incertain": "Les biefs listés dans les tableaux régionaux (catégories Stocked-Extended, Wild Quality, Wild-Premier, Catch and Release) ont d'autres règles ; tableaux lus partiellement (Régions 3 et 4 seulement).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-044",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "inland trout streams"
+    },
+    "especes": [
+     "rainbow trout"
+    ],
+    "type": "relacher",
+    "du": "10-16",
+    "au": "03-31",
+    "valeur": {
+     "code": "prise_relacher_hors_periode_recolte"
+    },
+    "phrase": "rainbow trout (cours d'eau à truite intérieurs) : du 16 octobre au 31 mars, prise et relâche seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+     "texte": "Statewide Regulations Effective April 1, 2026",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Oct 16 - Mar 31 Catch and Release only. Artificial lures only",
+    "statut": "incertain",
+    "raison_incertain": "Les biefs listés dans les tableaux régionaux (catégories Stocked-Extended, Wild Quality, Wild-Premier, Catch and Release) ont d'autres règles ; tableaux lus partiellement (Régions 3 et 4 seulement).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-068",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [
+     "channel catfish"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "sans_taille_ni_limite_chiffrees",
+     "texte": "toute l'année, sans taille minimale ni limite journalière chiffrée dans le tableau"
+    },
+    "phrase": "Channel catfish : le tableau de 6 NYCRR 10.1 range « Catfish » parmi les autres poissons, toute l'année, sans taille ni limite chiffrée.",
+    "source": {
+     "url": "https://www.law.cornell.edu/regulations/new-york/6-NYCRR-10.1",
+     "texte": "6 NYCRR 10.1 Table A (miroir LII, dernier amendement 2024)",
+     "edition": null,
+     "date": "2026-11-07"
+    },
+    "citation": "Bullhead, Catfish, Carp, Cisco, Rock Bass, Sucker, White Bass, White Perch, and all other fishes not listed in this table All year Any size Any number",
+    "statut": "incertain",
+    "raison_incertain": "Le channel catfish n'est pas nommé dans la page DEC 2026 (« All other species ») ; « Catfish » n'apparaît que dans le texte 6 NYCRR 10.1 lu sur un miroir non officiel (LII, amendé en 2024). Règles de plan d'eau non lues.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-069",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "fermeture",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "poisson_hors_saison"
+    },
+    "phrase": "Toutes espèces : pêche d'une espèce (prise et relâche comprise) interdite pendant sa fermeture sur une eau donnée.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "A person may not fish for a species (including catch and release) during the closed season for that species on a given water.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-070",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "relacher",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "prise_relacher_seulement_en_saison"
+    },
+    "phrase": "Toutes espèces : la prise et relâche ne vaut que pendant la saison de récolte de l'espèce.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Catch and release angling is only permitted during the open season for a particular fish species.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-073",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "engin",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "ligne_sans_surveillance_interdite"
+    },
+    "phrase": "Lignes : le pêcheur doit être présent auprès de ses lignes ; lignes dormantes sans surveillance interdites.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "The use of set lines where the angler is not in immediate attendance is prohibited.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-075",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "ice fishing"
+    },
+    "especes": [],
+    "type": "engin",
+    "du": "05-01",
+    "au": "11-14",
+    "valeur": {
+     "code": "canne_ou_ligne_a_main_seulement",
+     "texte": "du 1er mai au 14 novembre, lignes à main (moulinet compris) seulement pour la pêche sur glace"
+    },
+    "phrase": "Pêche sur glace du 1er mai au 14 novembre : lignes à main (moulinet compris) seulement.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Between May 1 and November 14, only hand lines (including rod and reels) may be used while ice fishing.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-076",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "engin",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "gaffes_interdites_sauf_glace_arbalete"
+    },
+    "phrase": "Gaffes et crochets à gaffe interdits en eau douce, sauf pêche sur glace ou pêche à l'arc.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Use or possession of gaffs or gaff hooks is prohibited when fishing in freshwater, including the Hudson River upstream of the Mario M. Cuomo Bridge, except when ice fishing or while bowfishing.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-077",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "NY",
+     "zone": "Essex County",
+     "comte": "Essex",
+     "lieu": "waters within Essex County"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "peche_sur_glace_interdite",
+     "texte": "pêche sur glace interdite dans ce comté (exception possible pour certains cours d'eau à truite)"
+    },
+    "phrase": "Essex County : pêche sur glace interdite (exception possible dans certains cours d'eau à truite intérieurs).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "and for waters within Essex, Franklin, Fulton, Hamilton, Herkimer, Lewis, St. Lawrence, Warren, and Washington counties.",
+    "statut": "incertain",
+    "raison_incertain": "Le texte DEC renvoie aux règles spéciales et signale que la pêche sur glace peut être permise dans certains cours d'eau à truite de ces comtés (non lus).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-078",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "NY",
+     "zone": "Franklin County",
+     "comte": "Franklin",
+     "lieu": "waters within Franklin County"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "peche_sur_glace_interdite",
+     "texte": "pêche sur glace interdite dans ce comté (exception possible pour certains cours d'eau à truite)"
+    },
+    "phrase": "Franklin County : pêche sur glace interdite (exception possible dans certains cours d'eau à truite intérieurs).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "and for waters within Essex, Franklin, Fulton, Hamilton, Herkimer, Lewis, St. Lawrence, Warren, and Washington counties.",
+    "statut": "incertain",
+    "raison_incertain": "Le texte DEC renvoie aux règles spéciales et signale que la pêche sur glace peut être permise dans certains cours d'eau à truite de ces comtés (non lus).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-079",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "NY",
+     "zone": "Fulton County",
+     "comte": "Fulton",
+     "lieu": "waters within Fulton County"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "peche_sur_glace_interdite",
+     "texte": "pêche sur glace interdite dans ce comté (exception possible pour certains cours d'eau à truite)"
+    },
+    "phrase": "Fulton County : pêche sur glace interdite (exception possible dans certains cours d'eau à truite intérieurs).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "and for waters within Essex, Franklin, Fulton, Hamilton, Herkimer, Lewis, St. Lawrence, Warren, and Washington counties.",
+    "statut": "incertain",
+    "raison_incertain": "Le texte DEC renvoie aux règles spéciales et signale que la pêche sur glace peut être permise dans certains cours d'eau à truite de ces comtés (non lus).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-080",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "NY",
+     "zone": "Hamilton County",
+     "comte": "Hamilton",
+     "lieu": "waters within Hamilton County"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "peche_sur_glace_interdite",
+     "texte": "pêche sur glace interdite dans ce comté (exception possible pour certains cours d'eau à truite)"
+    },
+    "phrase": "Hamilton County : pêche sur glace interdite (exception possible dans certains cours d'eau à truite intérieurs).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "and for waters within Essex, Franklin, Fulton, Hamilton, Herkimer, Lewis, St. Lawrence, Warren, and Washington counties.",
+    "statut": "incertain",
+    "raison_incertain": "Le texte DEC renvoie aux règles spéciales et signale que la pêche sur glace peut être permise dans certains cours d'eau à truite de ces comtés (non lus).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-081",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "NY",
+     "zone": "Herkimer County",
+     "comte": "Herkimer",
+     "lieu": "waters within Herkimer County"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "peche_sur_glace_interdite",
+     "texte": "pêche sur glace interdite dans ce comté (exception possible pour certains cours d'eau à truite)"
+    },
+    "phrase": "Herkimer County : pêche sur glace interdite (exception possible dans certains cours d'eau à truite intérieurs).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "and for waters within Essex, Franklin, Fulton, Hamilton, Herkimer, Lewis, St. Lawrence, Warren, and Washington counties.",
+    "statut": "incertain",
+    "raison_incertain": "Le texte DEC renvoie aux règles spéciales et signale que la pêche sur glace peut être permise dans certains cours d'eau à truite de ces comtés (non lus).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-082",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "NY",
+     "zone": "Lewis County",
+     "comte": "Lewis",
+     "lieu": "waters within Lewis County"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "peche_sur_glace_interdite",
+     "texte": "pêche sur glace interdite dans ce comté (exception possible pour certains cours d'eau à truite)"
+    },
+    "phrase": "Lewis County : pêche sur glace interdite (exception possible dans certains cours d'eau à truite intérieurs).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "and for waters within Essex, Franklin, Fulton, Hamilton, Herkimer, Lewis, St. Lawrence, Warren, and Washington counties.",
+    "statut": "incertain",
+    "raison_incertain": "Le texte DEC renvoie aux règles spéciales et signale que la pêche sur glace peut être permise dans certains cours d'eau à truite de ces comtés (non lus).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-083",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "NY",
+     "zone": "St. Lawrence County",
+     "comte": "St. Lawrence",
+     "lieu": "waters within St. Lawrence County"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "peche_sur_glace_interdite",
+     "texte": "pêche sur glace interdite dans ce comté (exception possible pour certains cours d'eau à truite)"
+    },
+    "phrase": "St. Lawrence County : pêche sur glace interdite (exception possible dans certains cours d'eau à truite intérieurs).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "and for waters within Essex, Franklin, Fulton, Hamilton, Herkimer, Lewis, St. Lawrence, Warren, and Washington counties.",
+    "statut": "incertain",
+    "raison_incertain": "Le texte DEC renvoie aux règles spéciales et signale que la pêche sur glace peut être permise dans certains cours d'eau à truite de ces comtés (non lus).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-084",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "NY",
+     "zone": "Warren County",
+     "comte": "Warren",
+     "lieu": "waters within Warren County"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "peche_sur_glace_interdite",
+     "texte": "pêche sur glace interdite dans ce comté (exception possible pour certains cours d'eau à truite)"
+    },
+    "phrase": "Warren County : pêche sur glace interdite (exception possible dans certains cours d'eau à truite intérieurs).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "and for waters within Essex, Franklin, Fulton, Hamilton, Herkimer, Lewis, St. Lawrence, Warren, and Washington counties.",
+    "statut": "incertain",
+    "raison_incertain": "Le texte DEC renvoie aux règles spéciales et signale que la pêche sur glace peut être permise dans certains cours d'eau à truite de ces comtés (non lus).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-085",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "NY",
+     "zone": "Washington County",
+     "comte": "Washington",
+     "lieu": "waters within Washington County"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "peche_sur_glace_interdite",
+     "texte": "pêche sur glace interdite dans ce comté (exception possible pour certains cours d'eau à truite)"
+    },
+    "phrase": "Washington County : pêche sur glace interdite (exception possible dans certains cours d'eau à truite intérieurs).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "and for waters within Essex, Franklin, Fulton, Hamilton, Herkimer, Lewis, St. Lawrence, Warren, and Washington counties.",
+    "statut": "incertain",
+    "raison_incertain": "Le texte DEC renvoie aux règles spéciales et signale que la pêche sur glace peut être permise dans certains cours d'eau à truite de ces comtés (non lus).",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-086",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [
+     "common carp"
+    ],
+    "type": "saison",
+    "du": "05-15",
+    "au": "09-30",
+    "valeur": {
+     "code": "arc_arbalete_seulement"
+    },
+    "phrase": "Carpe : tir à l'arc long ou à l'arbalète du 15 mai au 30 septembre, en nombre et taille quelconques.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Carp may be taken by a longbow (recurve or compound) or crossbow in any number or size from May 15-September 30 from any water where fishing and the discharge of a bow is permitted.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-087",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [
+     "walleye"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "poisson_entier_pour_mesure",
+     "texte": "possession interdite si le poisson est coupé, filé ou altéré au point de ne plus identifier l'espèce et la longueur"
+    },
+    "phrase": "walleye : possession interdite d'un poisson coupé, démembré, filé ou dépouillé de sorte que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-088",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [
+     "largemouth bass"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "poisson_entier_pour_mesure",
+     "texte": "possession interdite si le poisson est coupé, filé ou altéré au point de ne plus identifier l'espèce et la longueur"
+    },
+    "phrase": "largemouth bass : possession interdite d'un poisson coupé, démembré, filé ou dépouillé de sorte que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-089",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [
+     "smallmouth bass"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "poisson_entier_pour_mesure",
+     "texte": "possession interdite si le poisson est coupé, filé ou altéré au point de ne plus identifier l'espèce et la longueur"
+    },
+    "phrase": "smallmouth bass : possession interdite d'un poisson coupé, démembré, filé ou dépouillé de sorte que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-090",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [
+     "brook trout"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "poisson_entier_pour_mesure",
+     "texte": "possession interdite si le poisson est coupé, filé ou altéré au point de ne plus identifier l'espèce et la longueur"
+    },
+    "phrase": "brook trout : possession interdite d'un poisson coupé, démembré, filé ou dépouillé de sorte que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-091",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [
+     "lake trout"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "poisson_entier_pour_mesure",
+     "texte": "possession interdite si le poisson est coupé, filé ou altéré au point de ne plus identifier l'espèce et la longueur"
+    },
+    "phrase": "lake trout : possession interdite d'un poisson coupé, démembré, filé ou dépouillé de sorte que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-092",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [
+     "landlocked salmon"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "poisson_entier_pour_mesure",
+     "texte": "possession interdite si le poisson est coupé, filé ou altéré au point de ne plus identifier l'espèce et la longueur"
+    },
+    "phrase": "landlocked salmon : possession interdite d'un poisson coupé, démembré, filé ou dépouillé de sorte que l'espèce et la longueur ne se voient plus.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Possession of the following fish that have been cut, dismembered, filleted, skinned, or otherwise altered so that the species and total length of such fish cannot be easily determined is prohibited:",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-093",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [
+     "snakehead"
+    ],
+    "type": "relacher",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "remise_a_l_eau_interdite"
+    },
+    "phrase": "Snakehead : ne pas remettre à l'eau ; tuer immédiatement et signaler au DEC.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Any snakehead caught while angling cannot be released back into the water. They must be immediately killed and reported to DEC.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-094",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "appat_interdit_carp"
+    },
+    "phrase": "Appât : carpe (carp) ne peut pas servir d'appât.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/baitfish",
+     "texte": "Baitfish Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Carp, goldfish, lamprey larvae, round goby, European rudd as well as species listed as endangered or threatened in New York State may not be used for bait.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-095",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "appat_interdit_goldfish"
+    },
+    "phrase": "Appât : poisson rouge (goldfish) ne peut pas servir d'appât.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/baitfish",
+     "texte": "Baitfish Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Carp, goldfish, lamprey larvae, round goby, European rudd as well as species listed as endangered or threatened in New York State may not be used for bait.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-096",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "appat_interdit_lamprey_larvae"
+    },
+    "phrase": "Appât : larves de lamproie (lamprey larvae) ne peut pas servir d'appât.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/baitfish",
+     "texte": "Baitfish Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Carp, goldfish, lamprey larvae, round goby, European rudd as well as species listed as endangered or threatened in New York State may not be used for bait.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-097",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "appat_interdit_round_goby"
+    },
+    "phrase": "Appât : gobie à taches noires (round goby) ne peut pas servir d'appât.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/baitfish",
+     "texte": "Baitfish Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Carp, goldfish, lamprey larvae, round goby, European rudd as well as species listed as endangered or threatened in New York State may not be used for bait.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-098",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "appat_interdit_european_rudd"
+    },
+    "phrase": "Appât : gardon rouge (European rudd) ne peut pas servir d'appât.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/baitfish",
+     "texte": "Baitfish Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Carp, goldfish, lamprey larvae, round goby, European rudd as well as species listed as endangered or threatened in New York State may not be used for bait.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-099",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "appat_poisson_meme_plan_eau",
+     "texte": "un poisson-appât récolté pour usage personnel ne s'emploie que dans le plan d'eau où il a été pris"
+    },
+    "phrase": "Poisson-appât récolté soi-même : à utiliser seulement dans le plan d'eau où il a été pris.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/baitfish",
+     "texte": "Baitfish Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Baitfish or other legally taken fish species intended to be used as bait may only be used in the same waterbody from which they were caught for bait in hook-and-line fishing.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-100",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "salamandres_serpents_interdits",
+     "texte": "salamandres et serpents indigènes interdits comme appât"
+    },
+    "phrase": "Appât : salamandres et serpents indigènes ne se récoltent ni ne s'emploient comme appât.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Native salamanders and snakes cannot be collected or used as bait.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-101",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "ecrevisse_rouille_interdite",
+     "texte": "écrevisse rouillée : achat et transport vers un plan d'eau comme appât interdits"
+    },
+    "phrase": "Appât : écrevisse rouillée interdite à l'achat et au transport vers un plan d'eau comme appât.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Rusty crayfish may not be purchased and/or transported to a waterbody for use as bait or to be released",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-102",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "amorcage_oeufs_de_poisson_interdit"
+    },
+    "phrase": "Amorçage avec des oeufs de poisson interdit.",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "No person shall take or attempt to take any fish by means of chumming ( see Definitions ) with fish eggs.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-103",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "NY",
+     "lieu": "New York State, statewide table"
+    },
+    "especes": [],
+    "type": "engin",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "hamecons_circulaires_non_decales_exiges",
+     "texte": "hameçons circulaires non décalés pour le bar rayé ou les poissons-appâts, sauf leurres artificiels"
+    },
+    "phrase": "Hameçons circulaires non décalés exigés pour le bar rayé et avec des poissons-appâts (pas pour les leurres artificiels).",
+    "source": {
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/general",
+     "texte": "General Freshwater Fishing Regulations (page DEC lue le 2026-11-07)",
+     "edition": "2026",
+     "date": "2026-11-07"
+    },
+    "citation": "Non-offset (in-line) circle hooks must be used when recreationally fishing for striped bass or when using baitfish.",
+    "statut": "incertain",
+    "raison_incertain": "La page DEC cite les poissons-appâts ; 6 NYCRR 10.1(c)(9) (miroir LII) ne vise que le bar rayé : deux sources divergent.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   }
+  ]
+ }
+}

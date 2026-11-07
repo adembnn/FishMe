@@ -1,0 +1,977 @@
+{
+ "format": 1,
+ "etat": "NY",
+ "nom_etat": "New York",
+ "lien_agence": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations",
+ "version": "2026-11-07.1",
+ "genere_le": "2026-11-07",
+ "couverture": 2,
+ "relecture": "double lecture (lecteurs A et B indépendants, outils/us/regles/consensus_us.py)",
+ "juridictions": [],
+ "exigences": [],
+ "regles": [
+  {
+   "id": "NY-atlantic-salmon-limites-etat",
+   "portee": "US-NY",
+   "espece": "atlantic-salmon",
+   "limites": {
+    "prise": 3
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Atlantic Salmon (Landlocked) | All year | 15\" | 3",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-landlocked-atlantic-salmon-limite_jour-30",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Atlantic Salmon (Landlocked) | All year | 15\" | 3",
+     "confirmee_par": {
+      "id": "b-051",
+      "citation": "Atlantic Salmon (Landlocked) All year 15\" 3"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-atlantic-salmon-taille-etat",
+   "portee": "US-NY",
+   "espece": "atlantic-salmon",
+   "tailles": {
+    "minimale": {
+     "pouces": 15
+    }
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Atlantic Salmon (Landlocked) | All year | 15\" | 3",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-landlocked-atlantic-salmon-taille_min-29",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Atlantic Salmon (Landlocked) | All year | 15\" | 3",
+     "confirmee_par": {
+      "id": "b-050",
+      "citation": "Atlantic Salmon (Landlocked) All year 15\" 3"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-black-crappie-limites-etat",
+   "portee": "US-NY",
+   "espece": "black-crappie",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Crappie (Black and White) All year 10\" 25",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-054",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "Crappie (Black and White) All year 10\" 25",
+     "confirmee_par": {
+      "id": "NY-crappie-limite_jour-53",
+      "citation": "Crappie (Black and White) | All year | 10\" | 25"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-black-crappie-taille-etat",
+   "portee": "US-NY",
+   "espece": "black-crappie",
+   "tailles": {
+    "minimale": {
+     "pouces": 10
+    }
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Crappie (Black and White) All year 10\" 25",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-053",
+     "type": "taille_min",
+     "lecture": "B",
+     "citation": "Crappie (Black and White) All year 10\" 25",
+     "confirmee_par": {
+      "id": "NY-crappie-taille_min-52",
+      "citation": "Crappie (Black and White) | All year | 10\" | 25"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-bluegill-limites-etat",
+   "portee": "US-NY",
+   "espece": "bluegill",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-061",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+     "confirmee_par": {
+      "id": "NY-sunfish-limite_jour-57",
+      "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) | All year | None | 25"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-brook-trout-limites-etat",
+   "portee": "US-NY",
+   "espece": "brook-trout",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Brook Trout (in lakes and ponds) | April 1 - Oct 15 | None | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-brook-trout-limite_jour-32",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Brook Trout (in lakes and ponds) | April 1 - Oct 15 | None | 5",
+     "confirmee_par": {
+      "id": "b-027",
+      "citation": "Brook Trout (in lakes and ponds) April 1 - Oct 15 None 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-brook-trout-ouverture-etat",
+   "portee": "US-NY",
+   "espece": "brook-trout",
+   "saison": {
+    "du": "04-01",
+    "au": "10-15"
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Brook Trout (in lakes and ponds) | April 1 - Oct 15 | None | 5 / Trout in inland trout streams (see Definitions) | April 1 - Oct 15 | None | 5 with only 2 longer than 12\"",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-brook-trout-saison-31",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Brook Trout (in lakes and ponds) | April 1 - Oct 15 | None | 5",
+     "confirmee_par": {
+      "id": "b-026",
+      "citation": "Brook Trout (in lakes and ponds) April 1 - Oct 15 None 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    },
+    {
+     "consensus": "NY-brook-trout-saison-39",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Trout in inland trout streams (see Definitions) | April 1 - Oct 15 | None | 5 with only 2 longer than 12\"",
+     "confirmee_par": {
+      "id": "b-026",
+      "citation": "Brook Trout (in lakes and ponds) April 1 - Oct 15 None 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-lake-trout-limites-etat",
+   "portee": "US-NY",
+   "espece": "lake-trout",
+   "limites": {
+    "prise": 3
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Lake Trout | April 1 - Oct 15 | 21\" | 3",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-lake-trout-limite_jour-27",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Lake Trout | April 1 - Oct 15 | 21\" | 3",
+     "confirmee_par": {
+      "id": "b-048",
+      "citation": "Lake Trout April 1 - Oct 15 21\" 3"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-lake-trout-ouverture-etat",
+   "portee": "US-NY",
+   "espece": "lake-trout",
+   "saison": {
+    "du": "04-01",
+    "au": "10-15"
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Lake Trout | April 1 - Oct 15 | 21\" | 3",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-lake-trout-saison-25",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Lake Trout | April 1 - Oct 15 | 21\" | 3",
+     "confirmee_par": {
+      "id": "b-046",
+      "citation": "Lake Trout April 1 - Oct 15 21\" 3"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-lake-trout-taille-etat",
+   "portee": "US-NY",
+   "espece": "lake-trout",
+   "tailles": {
+    "minimale": {
+     "pouces": 21
+    }
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Lake Trout | April 1 - Oct 15 | 21\" | 3",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-lake-trout-taille_min-26",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Lake Trout | April 1 - Oct 15 | 21\" | 3",
+     "confirmee_par": {
+      "id": "b-047",
+      "citation": "Lake Trout April 1 - Oct 15 21\" 3"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-largemouth-bass-limites-etat",
+   "portee": "US-NY",
+   "espece": "largemouth-bass",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-largemouth-bass-limite_jour-2",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+     "confirmee_par": {
+      "id": "b-003",
+      "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-largemouth-bass-ouverture-etat",
+   "portee": "US-NY",
+   "espece": "largemouth-bass",
+   "saison": {
+    "du": "06-15",
+    "au": "11-30"
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-largemouth-bass-saison-0",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+     "confirmee_par": {
+      "id": "b-001",
+      "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-largemouth-bass-taille-etat",
+   "portee": "US-NY",
+   "espece": "largemouth-bass",
+   "tailles": {
+    "minimale": {
+     "pouces": 12
+    }
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-largemouth-bass-taille_min-1",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+     "confirmee_par": {
+      "id": "b-002",
+      "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-muskellunge-limites-etat",
+   "portee": "US-NY",
+   "espece": "muskellunge",
+   "limites": {
+    "prise": 1
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Muskellunge | June 1 - Nov 30 | 40\" | 1",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-muskellunge-limite_jour-12",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Muskellunge | June 1 - Nov 30 | 40\" | 1",
+     "confirmee_par": {
+      "id": "b-025",
+      "citation": "Muskellunge June 1 - Nov 30 40\" 1"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-muskellunge-ouverture-etat",
+   "portee": "US-NY",
+   "espece": "muskellunge",
+   "saison": {
+    "du": "06-01",
+    "au": "11-30"
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Muskellunge | June 1 - Nov 30 | 40\" | 1",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-muskellunge-saison-10",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Muskellunge | June 1 - Nov 30 | 40\" | 1",
+     "confirmee_par": {
+      "id": "b-023",
+      "citation": "Muskellunge June 1 - Nov 30 40\" 1"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-muskellunge-taille-etat",
+   "portee": "US-NY",
+   "espece": "muskellunge",
+   "tailles": {
+    "minimale": {
+     "pouces": 40
+    }
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Muskellunge | June 1 - Nov 30 | 40\" | 1",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-muskellunge-taille_min-11",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Muskellunge | June 1 - Nov 30 | 40\" | 1",
+     "confirmee_par": {
+      "id": "b-024",
+      "citation": "Muskellunge June 1 - Nov 30 40\" 1"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-northern-pike-limites-etat",
+   "portee": "US-NY",
+   "espece": "northern-pike",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Northern Pike | May 1 - Mar 15 | 18\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-northern-pike-limite_jour-15",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Northern Pike | May 1 - Mar 15 | 18\" | 5",
+     "confirmee_par": {
+      "id": "b-016",
+      "citation": "Northern Pike May 1 - Mar 15 18\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-northern-pike-ouverture-etat",
+   "portee": "US-NY",
+   "espece": "northern-pike",
+   "saison": {
+    "du": "05-01",
+    "au": "03-15"
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Northern Pike | May 1 - Mar 15 | 18\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-northern-pike-saison-13",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Northern Pike | May 1 - Mar 15 | 18\" | 5",
+     "confirmee_par": {
+      "id": "b-014",
+      "citation": "Northern Pike May 1 - Mar 15 18\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-northern-pike-taille-etat",
+   "portee": "US-NY",
+   "espece": "northern-pike",
+   "tailles": {
+    "minimale": {
+     "pouces": 18
+    }
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Northern Pike | May 1 - Mar 15 | 18\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-northern-pike-taille_min-14",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Northern Pike | May 1 - Mar 15 | 18\" | 5",
+     "confirmee_par": {
+      "id": "b-015",
+      "citation": "Northern Pike May 1 - Mar 15 18\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-pumpkinseed-limites-etat",
+   "portee": "US-NY",
+   "espece": "pumpkinseed",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-065",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+     "confirmee_par": {
+      "id": "NY-sunfish-limite_jour-57",
+      "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) | All year | None | 25"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-redbreast-sunfish-limites-etat",
+   "portee": "US-NY",
+   "espece": "redbreast-sunfish",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-063",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) All year None 25",
+     "confirmee_par": {
+      "id": "NY-sunfish-limite_jour-57",
+      "citation": "Sunfish (Bluegill, Redbreast, and Pumpkinseed) | All year | None | 25"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-smallmouth-bass-limites-etat",
+   "portee": "US-NY",
+   "espece": "smallmouth-bass",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-smallmouth-bass-limite_jour-7",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+     "confirmee_par": {
+      "id": "b-008",
+      "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-smallmouth-bass-ouverture-etat",
+   "portee": "US-NY",
+   "espece": "smallmouth-bass",
+   "saison": {
+    "du": "06-15",
+    "au": "11-30"
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-smallmouth-bass-saison-5",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+     "confirmee_par": {
+      "id": "b-006",
+      "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-smallmouth-bass-taille-etat",
+   "portee": "US-NY",
+   "espece": "smallmouth-bass",
+   "tailles": {
+    "minimale": {
+     "pouces": 12
+    }
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-smallmouth-bass-taille_min-6",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Black Bass (Largemouth and Smallmouth) | June 15 - Nov 30 | 12\" | 5",
+     "confirmee_par": {
+      "id": "b-007",
+      "citation": "Black Bass (Largemouth and Smallmouth) June 15 - Nov 30 12\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-tiger-muskie-limites-etat",
+   "portee": "US-NY",
+   "espece": "tiger-muskie",
+   "limites": {
+    "prise": 1
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Tiger Muskellunge | May 1 - Mar 15 | 30\" | 1",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-tiger-muskellunge-limite_jour-21",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Tiger Muskellunge | May 1 - Mar 15 | 30\" | 1",
+     "confirmee_par": {
+      "id": "b-022",
+      "citation": "Tiger Muskellunge May 1 - Mar 15 30\" 1"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-tiger-muskie-ouverture-etat",
+   "portee": "US-NY",
+   "espece": "tiger-muskie",
+   "saison": {
+    "du": "05-01",
+    "au": "03-15"
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Tiger Muskellunge | May 1 - Mar 15 | 30\" | 1",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-tiger-muskellunge-saison-19",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Tiger Muskellunge | May 1 - Mar 15 | 30\" | 1",
+     "confirmee_par": {
+      "id": "b-020",
+      "citation": "Tiger Muskellunge May 1 - Mar 15 30\" 1"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-tiger-muskie-taille-etat",
+   "portee": "US-NY",
+   "espece": "tiger-muskie",
+   "tailles": {
+    "minimale": {
+     "pouces": 30
+    }
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Tiger Muskellunge | May 1 - Mar 15 | 30\" | 1",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-tiger-muskellunge-taille_min-20",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Tiger Muskellunge | May 1 - Mar 15 | 30\" | 1",
+     "confirmee_par": {
+      "id": "b-021",
+      "citation": "Tiger Muskellunge May 1 - Mar 15 30\" 1"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-walleye-limites-etat",
+   "portee": "US-NY",
+   "espece": "walleye",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Walleye | May 1 - Mar 15 | 15\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-walleye-limite_jour-24",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Walleye | May 1 - Mar 15 | 15\" | 5",
+     "confirmee_par": {
+      "id": "b-013",
+      "citation": "Walleye May 1 - Mar 15 15\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-walleye-ouverture-etat",
+   "portee": "US-NY",
+   "espece": "walleye",
+   "saison": {
+    "du": "05-01",
+    "au": "03-15"
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Walleye | May 1 - Mar 15 | 15\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-walleye-saison-22",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Walleye | May 1 - Mar 15 | 15\" | 5",
+     "confirmee_par": {
+      "id": "b-011",
+      "citation": "Walleye May 1 - Mar 15 15\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-walleye-taille-etat",
+   "portee": "US-NY",
+   "espece": "walleye",
+   "tailles": {
+    "minimale": {
+     "pouces": 15
+    }
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Walleye | May 1 - Mar 15 | 15\" | 5",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-walleye-taille_min-23",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Walleye | May 1 - Mar 15 | 15\" | 5",
+     "confirmee_par": {
+      "id": "b-012",
+      "citation": "Walleye May 1 - Mar 15 15\" 5"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-white-crappie-limites-etat",
+   "portee": "US-NY",
+   "espece": "white-crappie",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Crappie (Black and White) All year 10\" 25",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-057",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "Crappie (Black and White) All year 10\" 25",
+     "confirmee_par": {
+      "id": "NY-crappie-limite_jour-53",
+      "citation": "Crappie (Black and White) | All year | 10\" | 25"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-white-crappie-taille-etat",
+   "portee": "US-NY",
+   "espece": "white-crappie",
+   "tailles": {
+    "minimale": {
+     "pouces": 10
+    }
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Crappie (Black and White) All year 10\" 25",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-056",
+     "type": "taille_min",
+     "lecture": "B",
+     "citation": "Crappie (Black and White) All year 10\" 25",
+     "confirmee_par": {
+      "id": "NY-crappie-taille_min-52",
+      "citation": "Crappie (Black and White) | All year | 10\" | 25"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  },
+  {
+   "id": "NY-yellow-perch-limites-etat",
+   "portee": "US-NY",
+   "espece": "yellow-perch",
+   "limites": {
+    "prise": 50
+   },
+   "source": {
+    "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits",
+    "date": "2026-11-07",
+    "citation": "Yellow Perch | All year | None | 50",
+    "edition": "Statewide Regulations Effective April 1, 2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NY-yellow-perch-limite_jour-55",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Yellow Perch | All year | None | 50",
+     "confirmee_par": {
+      "id": "b-059",
+      "citation": "Yellow Perch All year None 50"
+     },
+     "url": "https://dec.ny.gov/things-to-do/freshwater-fishing/regulations/statewide-season-sizes-catch-limits"
+    }
+   ]
+  }
+ ]
+}

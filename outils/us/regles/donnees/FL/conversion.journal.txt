@@ -1,0 +1,9 @@
+FL : 6 règles écrites dans regles-us/FL.json ; non converties :
+FL-gibier-possession-etat : type autre : pas de champ dans le format du chargeur
+FL-butterflypeacock-limite_jour-etat : espèce « Butterfly Peacock Bass » absente du catalogue de l'app (groupe ou espèce inconnue)
+FL-gibier-engin-hook_line : espèce « Freshwater Game Fish » absente du catalogue de l'app (groupe ou espèce inconnue)
+FL-panfish-limite_jour-etat : règle incertaine : jamais convertie
+FL-crappie-taille_min-lake_talquin : règle incertaine : jamais convertie
+FL-crappie-taille_min-lake_okeechobee : règle incertaine : jamais convertie
+(info) FL-blackbass-limite_jour-etat : « Black Bass » lu comme largemouth-bass, florida-bass, spotted-bass, suwannee-bass
+(info) FL-crappie-limite_jour-etat : « Crappie » lu comme black-crappie, white-crappie

@@ -1,0 +1,766 @@
+{
+ "format": 1,
+ "etat": "TX",
+ "nom_etat": "Texas",
+ "lien_agence": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing",
+ "version": "2026-11-07.1",
+ "genere_le": "2026-11-07",
+ "couverture": 2,
+ "relecture": "double lecture (lecteurs A et B indépendants, outils/us/regles/consensus_us.py)",
+ "juridictions": [],
+ "exigences": [],
+ "regles": [
+  {
+   "id": "TX-black-crappie-limites-etat",
+   "portee": "US-TX",
+   "espece": "black-crappie",
+   "limites": {
+    "prise": 25,
+    "possession": 50
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Leng… / Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texo…",
+    "edition": "Outdoor Annual, valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-tx-blackcrap-bag",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches",
+     "confirmee_par": {
+      "id": "TX-crappie-limite_jour-etat",
+      "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    },
+    {
+     "consensus": "b-tx-blackcrappie-poss",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+     "confirmee_par": {
+      "id": "TX-crappie-limite_possession-etat",
+      "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-black-crappie-taille-etat",
+   "portee": "US-TX",
+   "espece": "black-crappie",
+   "tailles": {
+    "minimale": {
+     "pouces": 10
+    }
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches",
+    "edition": "Outdoor Annual, valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-tx-blackcrap-min",
+     "type": "taille_min",
+     "lecture": "B",
+     "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches",
+     "confirmee_par": {
+      "id": "TX-crappie-taille_min-etat",
+      "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-blue-catfish-limites-etat",
+   "portee": "US-TX",
+   "espece": "blue-catfish",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Catfish: Channel, blue, their hybrids & subspecies Daily Bag: 25 (in any combination - only 10 can be 20 inches or greater in length)",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-blue_catfish-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Catfish: Channel, blue, their hybrids & subspecies Daily Bag: 25 (in any combination - only 10 can be 20 inches or greater in length)",
+     "confirmee_par": {
+      "id": "b-tx-bluecat-bag",
+      "citation": "Catfish: Channel, blue, their hybrids & subspecies Daily Bag: 25 (in any combination - only 10 can be 20 inches or greater in length)"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-channel-catfish-limites-etat",
+   "portee": "US-TX",
+   "espece": "channel-catfish",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Catfish: Channel, blue, their hybrids & subspecies Daily Bag: 25 (in any combination - only 10 can be 20 inches or greater in length)",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-channel_catfish-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Catfish: Channel, blue, their hybrids & subspecies Daily Bag: 25 (in any combination - only 10 can be 20 inches or greater in length)",
+     "confirmee_par": {
+      "id": "b-tx-channelcat-bag",
+      "citation": "Catfish: Channel, blue, their hybrids & subspecies Daily Bag: 25 (in any combination - only 10 can be 20 inches or greater in length)"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-flathead-catfish-limites-etat",
+   "portee": "US-TX",
+   "espece": "flathead-catfish",
+   "limites": {
+    "prise": 5,
+    "possession": 10
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Catfish: Flathead Daily Bag: 5 Minimum Length: 18 inches / Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texo…",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-flathead_catfish-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Catfish: Flathead Daily Bag: 5 Minimum Length: 18 inches",
+     "confirmee_par": {
+      "id": "b-tx-flathead-bag",
+      "citation": "Catfish: Flathead Daily Bag: 5 Minimum Length: 18 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    },
+    {
+     "consensus": "TX-flathead_catfish-limite_possession-etat",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+     "confirmee_par": {
+      "id": "b-tx-flatheadcatfish-poss",
+      "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-flathead-catfish-taille-etat",
+   "portee": "US-TX",
+   "espece": "flathead-catfish",
+   "tailles": {
+    "minimale": {
+     "pouces": 18
+    }
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Catfish: Flathead Daily Bag: 5 Minimum Length: 18 inches",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-flathead_catfish-taille_min-etat",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Catfish: Flathead Daily Bag: 5 Minimum Length: 18 inches",
+     "confirmee_par": {
+      "id": "b-tx-flathead-min",
+      "citation": "Catfish: Flathead Daily Bag: 5 Minimum Length: 18 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-guadalupe-bass-limites-etat",
+   "portee": "US-TX",
+   "espece": "guadalupe-bass",
+   "limites": {
+    "prise": 5,
+    "possession": 10
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Spotted, Guadalupe & Alabama bass Daily Bag: 5 fish for any combination of largemouth, smallmouth… / Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texo…",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-guadalupe-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Spotted, Guadalupe & Alabama bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass.",
+     "confirmee_par": {
+      "id": "b-tx-guadalupe-bag",
+      "citation": "Spotted, Guadalupe & Alabama bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    },
+    {
+     "consensus": "TX-guadalupe-limite_possession-etat",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+     "confirmee_par": {
+      "id": "b-tx-guadalupebass-poss",
+      "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-largemouth-bass-limites-etat",
+   "portee": "US-TX",
+   "espece": "largemouth-bass",
+   "limites": {
+    "prise": 5,
+    "possession": 10
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Largemouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalu… / Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texo…",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-largemouth-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Largemouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass.",
+     "confirmee_par": {
+      "id": "b-tx-largemouth-bag",
+      "citation": "Largemouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    },
+    {
+     "consensus": "TX-largemouth-limite_possession-etat",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+     "confirmee_par": {
+      "id": "b-tx-largemouthbass-poss",
+      "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-largemouth-bass-taille-etat",
+   "portee": "US-TX",
+   "espece": "largemouth-bass",
+   "tailles": {
+    "minimale": {
+     "pouces": 14
+    }
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Largemouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass. Minimum Length: 14 inches",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-largemouth-taille_min-etat",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Largemouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass. Minimum Length: 14 inches",
+     "confirmee_par": {
+      "id": "b-tx-largemouth-min",
+      "citation": "Largemouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass. Minimum Length: 14 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-rainbow-trout-limites-etat",
+   "portee": "US-TX",
+   "espece": "rainbow-trout",
+   "limites": {
+    "prise": 5,
+    "possession": 10
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Trout: Rainbow & brown Daily Bag: 5 in any combination Minimum Length: None / Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texo…",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-rainbow_trout-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Trout: Rainbow & brown Daily Bag: 5 in any combination Minimum Length: None",
+     "confirmee_par": {
+      "id": "b-tx-rainbow-bag",
+      "citation": "Trout: Rainbow & brown Daily Bag: 5 in any combination Minimum Length: None"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    },
+    {
+     "consensus": "TX-rainbow_trout-limite_possession-etat",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+     "confirmee_par": {
+      "id": "b-tx-rainbowtrout-poss",
+      "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-smallmouth-bass-limites-etat",
+   "portee": "US-TX",
+   "espece": "smallmouth-bass",
+   "limites": {
+    "prise": 5,
+    "possession": 10
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Smallmouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalu… / Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texo…",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-smallmouth-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Smallmouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass.",
+     "confirmee_par": {
+      "id": "b-tx-smallmouth-bag",
+      "citation": "Smallmouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    },
+    {
+     "consensus": "TX-smallmouth-limite_possession-etat",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+     "confirmee_par": {
+      "id": "b-tx-smallmouthbass-poss",
+      "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-smallmouth-bass-taille-etat",
+   "portee": "US-TX",
+   "espece": "smallmouth-bass",
+   "tailles": {
+    "minimale": {
+     "pouces": 14
+    }
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Smallmouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass. Minimum Length: 14 inches",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-smallmouth-taille_min-etat",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Smallmouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass. Minimum Length: 14 inches",
+     "confirmee_par": {
+      "id": "b-tx-smallmouth-min",
+      "citation": "Smallmouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass. Minimum Length: 14 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-spotted-bass-limites-etat",
+   "portee": "US-TX",
+   "espece": "spotted-bass",
+   "limites": {
+    "prise": 5,
+    "possession": 10
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Spotted, Guadalupe & Alabama bass Daily Bag: 5 fish for any combination of largemouth, smallmouth… / Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texo…",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-spotted-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Spotted, Guadalupe & Alabama bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass.",
+     "confirmee_par": {
+      "id": "b-tx-spotted-bag",
+      "citation": "Spotted, Guadalupe & Alabama bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    },
+    {
+     "consensus": "TX-spotted-limite_possession-etat",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+     "confirmee_par": {
+      "id": "b-tx-spottedbass-poss",
+      "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-striped-bass-limites-etat",
+   "portee": "US-TX",
+   "espece": "striped-bass",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-striped-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination",
+     "confirmee_par": {
+      "id": "b-tx-striped-bag",
+      "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination Minimum Length: 18 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-striped-bass-taille-etat",
+   "portee": "US-TX",
+   "espece": "striped-bass",
+   "tailles": {
+    "minimale": {
+     "pouces": 18
+    }
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination Minimum Length: 18 inches",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-striped-taille_min-etat",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination Minimum Length: 18 inches",
+     "confirmee_par": {
+      "id": "b-tx-striped-min",
+      "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination Minimum Length: 18 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-walleye-limites-etat",
+   "portee": "US-TX",
+   "espece": "walleye",
+   "limites": {
+    "prise": 5,
+    "possession": 10
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Walleye Daily Bag: 5 (only 2 can be less than 16 inches in length) Minimum Length: None / Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texo…",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-walleye-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Walleye Daily Bag: 5 (only 2 can be less than 16 inches in length) Minimum Length: None",
+     "confirmee_par": {
+      "id": "b-tx-walleye-bag",
+      "citation": "Walleye Daily Bag: 5 (only 2 can be less than 16 inches in length)"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    },
+    {
+     "consensus": "TX-walleye-limite_possession-etat",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+     "confirmee_par": {
+      "id": "b-tx-walleye-poss",
+      "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-white-bass-limites-etat",
+   "portee": "US-TX",
+   "espece": "white-bass",
+   "limites": {
+    "prise": 25,
+    "possession": 50
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "White bass Daily Bag: 25 Minimum Length: 10 inches / Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texo…",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-white_bass-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "White bass Daily Bag: 25 Minimum Length: 10 inches",
+     "confirmee_par": {
+      "id": "b-tx-whitebass-bag",
+      "citation": "White bass Daily Bag: 25 Minimum Length: 10 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    },
+    {
+     "consensus": "TX-white_bass-limite_possession-etat",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+     "confirmee_par": {
+      "id": "b-tx-whitebass-poss",
+      "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-white-bass-taille-etat",
+   "portee": "US-TX",
+   "espece": "white-bass",
+   "tailles": {
+    "minimale": {
+     "pouces": 10
+    }
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "White bass Daily Bag: 25 Minimum Length: 10 inches",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-white_bass-taille_min-etat",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "White bass Daily Bag: 25 Minimum Length: 10 inches",
+     "confirmee_par": {
+      "id": "b-tx-whitebass-min",
+      "citation": "White bass Daily Bag: 25 Minimum Length: 10 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-white-crappie-limites-etat",
+   "portee": "US-TX",
+   "espece": "white-crappie",
+   "limites": {
+    "prise": 25,
+    "possession": 50
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Leng… / Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texo…",
+    "edition": "Outdoor Annual, valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-tx-whitecrap-bag",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches",
+     "confirmee_par": {
+      "id": "TX-crappie-limite_jour-etat",
+      "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    },
+    {
+     "consensus": "b-tx-whitecrappie-poss",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+     "confirmee_par": {
+      "id": "TX-crappie-limite_possession-etat",
+      "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir."
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-white-crappie-taille-etat",
+   "portee": "US-TX",
+   "espece": "white-crappie",
+   "tailles": {
+    "minimale": {
+     "pouces": 10
+    }
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches",
+    "edition": "Outdoor Annual, valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-tx-whitecrap-min",
+     "type": "taille_min",
+     "lecture": "B",
+     "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches",
+     "confirmee_par": {
+      "id": "TX-crappie-taille_min-etat",
+      "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-wiper-limites-etat",
+   "portee": "US-TX",
+   "espece": "wiper",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-hybrid-limite_jour-etat",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination",
+     "confirmee_par": {
+      "id": "b-tx-hybrid-bag",
+      "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination Minimum Length: 18 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  },
+  {
+   "id": "TX-wiper-taille-etat",
+   "portee": "US-TX",
+   "espece": "wiper",
+   "tailles": {
+    "minimale": {
+     "pouces": 18
+    }
+   },
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "date": "2026-11-07",
+    "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination Minimum Length: 18 inches",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "TX-hybrid-taille_min-etat",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination Minimum Length: 18 inches",
+     "confirmee_par": {
+      "id": "b-tx-hybrid-min",
+      "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination Minimum Length: 18 inches"
+     },
+     "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits"
+    }
+   ]
+  }
+ ]
+}
