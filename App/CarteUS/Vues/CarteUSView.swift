@@ -22,6 +22,8 @@ struct CarteUSView: View {
     @State private var zoneVisible: ZoneCarte?
     @State private var destination: DestinationItineraire?
     @State private var centreeSurLePecheur = false
+    @Environment(RegionCourante.self) private var regionCourante: RegionCourante?
+    private var t: TraducteurCarteUS { TraducteurCarteUS(locale: regionCourante?.locale ?? Locale(identifier: "en_US")) }
 
     init(position: GestionPosition,
          source: any SourceCarteUS = SourceCarteUSParDefaut.creer(),
@@ -92,11 +94,11 @@ struct CarteUSView: View {
         switch element {
         case .point(let p):
             Annotation("", coordinate: c, anchor: .bottom) {
-                pastille(symbole: p.type.symbole, teinte: Palette.marine, libelle: p.nom + ", " + p.type.libelle) { modele.ouvrir(element) }
+                pastille(symbole: p.type.symbole, teinte: Palette.marine, libelle: p.nom + ", " + t(p.type.libelle)) { modele.ouvrir(element) }
             }
         case .planEau(let e):
             Annotation("", coordinate: c, anchor: .bottom) {
-                pastille(symbole: "drop.fill", teinte: Palette.marineFonce, libelle: e.nom + ", plan d'eau") { modele.ouvrir(element) }
+                pastille(symbole: "drop.fill", teinte: Palette.marineFonce, libelle: e.nom + ", " + t("plan d'eau")) { modele.ouvrir(element) }
             }
         case .groupe(_, _, let nombre):
             Annotation("", coordinate: c, anchor: .center) {
@@ -108,7 +110,7 @@ struct CarteUSView: View {
                         .background(Palette.marine, in: Circle())
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(String(nombre) + " lieux, touche pour zoomer")
+                .accessibilityLabel(String(nombre) + t(" lieux, touche pour zoomer"))
             }
         }
     }
@@ -155,9 +157,9 @@ struct CarteUSView: View {
         if let message = modele.message {
             BandeauSansDonneesUSView(message: message, etats: modele.etatsChoisissables) { code in modele.etatChoisi = code }
         } else if modele.resultat.tropLoin {
-            petitMessage(TextesCarteUS.tropLoin)
+            petitMessage(t(TextesCarteUS.tropLoin))
         } else if modele.resultat.donneesChargees && modele.resultat.elements.isEmpty {
-            petitMessage(TextesCarteUS.aucunLieu)
+            petitMessage(t(TextesCarteUS.aucunLieu))
         }
     }
 
@@ -177,9 +179,9 @@ struct CarteUSView: View {
             Spacer(minLength: 0)
             GlassEffectContainer(spacing: 4) {
                 VStack(spacing: 4) {
-                    BoutonLibelleCarte(symbole: "cloud.sun", libelle: "Météo", action: ouvrirMeteo)
-                    BoutonLibelleCarte(symbole: "location.fill", libelle: "Ma position", teinte: Palette.marine, action: recentrer)
-                    BoutonLibelleCarte(symbole: "gearshape", libelle: "Réglages", action: ouvrirProfil)
+                    BoutonLibelleCarte(symbole: "cloud.sun", libelle: t("Météo"), action: ouvrirMeteo)
+                    BoutonLibelleCarte(symbole: "location.fill", libelle: t("Ma position"), teinte: Palette.marine, action: recentrer)
+                    BoutonLibelleCarte(symbole: "gearshape", libelle: t("Réglages"), action: ouvrirProfil)
                 }
             }
             .padding(.trailing, 8)
@@ -227,15 +229,18 @@ struct BandeauSansDonneesUSView: View {
     let etats: [InfoAgenceUS]
     let choisir: (String) -> Void
 
+    @Environment(RegionCourante.self) private var regionCourante: RegionCourante?
+    private var t: TraducteurCarteUS { TraducteurCarteUS(locale: regionCourante?.locale ?? Locale(identifier: "en_US")) }
+
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            Text(message.texte)
+            Text(t.sansDonnees(message.texte))
                 .font(Police.detail)
                 .foregroundStyle(Palette.encre)
                 .fixedSize(horizontal: false, vertical: true)
             if let lien = message.lien {
                 Link(destination: lien) {
-                    Label(message.libelleLien, systemImage: "arrow.up.right.square")
+                    Label(t.libelleLien(message.libelleLien), systemImage: "arrow.up.right.square")
                         .font(Police.detail)
                         .foregroundStyle(Palette.marine)
                         .frame(minHeight: Gabarit.zoneTactile, alignment: .leading)
@@ -247,7 +252,7 @@ struct BandeauSansDonneesUSView: View {
                         Button(etat.nomEtat) { choisir(etat.code) }
                     }
                 } label: {
-                    Label(TextesCarteUS.choisirEtat, systemImage: "list.bullet")
+                    Label(t(TextesCarteUS.choisirEtat), systemImage: "list.bullet")
                         .font(Police.detail)
                         .frame(minHeight: Gabarit.zoneTactile, alignment: .leading)
                 }

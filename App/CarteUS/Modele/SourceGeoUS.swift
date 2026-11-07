@@ -6,15 +6,10 @@ import Core
 /// FISHME_GEOUS (Active Compilation Conditions) ou retirer le #if ci-dessous ; AUCUN autre fichier ne change.
 nonisolated enum SourceCarteUSParDefaut {
     static func creer() -> any SourceCarteUS {
-        #if FISHME_GEOUS
-        return AdaptateurGeoUS()
-        #else
-        return SourceCarteUSVide()
-        #endif
+        AdaptateurGeoUS()
     }
 }
 
-#if FISHME_GEOUS
 /// L'adaptateur de Core.GeoUS vers le protocole de la carte. Écrit d'après le contrat convenu avec US11 :
 ///   PointAccesUS(id, nom, etat, latitude, longitude, type, source, date)
 ///   PlanEauUS(id, nom, etat, latitude, longitude, rayonMetres, source, date, lienAgence)
@@ -27,20 +22,20 @@ nonisolated struct AdaptateurGeoUS: SourceCarteUS {
     func points(etat: String) -> [PointAccesCarteUS] {
         GeoUS.points(etat: etat).map { p in
             PointAccesCarteUS(id: p.id, nom: p.nom, etat: p.etat, latitude: p.latitude, longitude: p.longitude,
-                              type: Self.type(p.type), source: p.source, date: String(describing: p.date))
+                              type: Self.type(p.type), source: p.source, date: p.date)
         }
     }
 
     func plansEau(etat: String) -> [PlanEauCarteUS] {
         GeoUS.plansEau(etat: etat).map { e in
             PlanEauCarteUS(id: e.id, nom: e.nom, etat: e.etat, latitude: e.latitude, longitude: e.longitude,
-                           rayonMetres: e.rayonMetres, source: e.source, date: String(describing: e.date), lienAgence: e.lienAgence)
+                           rayonMetres: e.rayonMetres, source: e.source, date: e.date, lienAgence: e.lienAgence)
         }
     }
 
     func avis(etat: String) -> [AvisSanteCarteUS] {
         GeoUS.avis(etat: etat).map { a in
-            AvisSanteCarteUS(planEauId: a.planEauId, texte: a.texte, date: String(describing: a.date), source: a.source,
+            AvisSanteCarteUS(planEauId: a.planEauId, texte: a.texte, date: a.date, source: a.source,
                              lien: a.lien)
         }
     }
@@ -58,4 +53,3 @@ nonisolated struct AdaptateurGeoUS: SourceCarteUS {
         }
     }
 }
-#endif

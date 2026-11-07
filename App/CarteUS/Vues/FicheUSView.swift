@@ -6,8 +6,11 @@ import Core
 struct FicheUSView: View {
     let fiche: FicheUS
     let yAller: (Coordonnee, String) -> Void
-    /// Le bloc des règles de l'État du lieu (code USPS). Vide tant que US12 n'est pas branché.
+    /// Point d'insertion facultatif, gardé pour compatibilité : la fiche montre déjà `BlocReglesUS` (voir `ReglesEtatUSView`).
     let blocRegles: (String) -> AnyView
+
+    @Environment(RegionCourante.self) private var regionCourante: RegionCourante?
+    private var t: TraducteurCarteUS { TraducteurCarteUS(locale: regionCourante?.locale ?? Locale(identifier: "en_US")) }
 
     var body: some View {
         ScrollView {
@@ -17,8 +20,8 @@ struct FicheUSView: View {
                 sourceEtDate
                 lienAgence
                 if !fiche.avis.isEmpty { avis }
-                blocRegles(fiche.etat)
-                Text(fiche.mention)
+                ReglesEtatUSView(etat: fiche.etat)
+                Text(t(fiche.mention))
                     .font(Police.legende)
                     .foregroundStyle(Palette.encreDouce)
                     .fixedSize(horizontal: false, vertical: true)
@@ -35,7 +38,7 @@ struct FicheUSView: View {
                 .foregroundStyle(Palette.encre)
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
-            Text(fiche.sousTitre)
+            Text(sousTitre)
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
                 .fixedSize(horizontal: false, vertical: true)
@@ -44,7 +47,7 @@ struct FicheUSView: View {
 
     private var boutonYAller: some View {
         Button { yAller(fiche.coordonnee, fiche.titre) } label: {
-            Label(TextesCarteUS.yAller, systemImage: "arrow.triangle.turn.up.right.diamond.fill")
+            Label(t(TextesCarteUS.yAller), systemImage: "arrow.triangle.turn.up.right.diamond.fill")
                 .font(Police.corps)
                 .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
         }
@@ -55,14 +58,14 @@ struct FicheUSView: View {
 
     private var sourceEtDate: some View {
         VStack(alignment: .leading, spacing: Espace.xs) {
-            Text(TextesCarteUS.titreSource)
+            Text(t(TextesCarteUS.titreSource))
                 .font(Police.sousTitre)
                 .foregroundStyle(Palette.encre)
-            Text(fiche.source)
+            Text(t(fiche.source))
                 .font(Police.detail)
                 .foregroundStyle(Palette.encre)
                 .fixedSize(horizontal: false, vertical: true)
-            Text("Donnée du " + fiche.date)
+            Text(t("Donnée du ") + t(fiche.date))
                 .font(Police.legende)
                 .foregroundStyle(Palette.encreDouce)
         }
@@ -76,13 +79,13 @@ struct FicheUSView: View {
     private var lienAgence: some View {
         if let url = fiche.lienAgence {
             Link(destination: url) {
-                Label(fiche.libelleLien, systemImage: "arrow.up.right.square")
+                Label(t.libelleLien(fiche.libelleLien), systemImage: "arrow.up.right.square")
                     .font(Police.detail)
                     .foregroundStyle(Palette.marine)
                     .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)
             }
         } else {
-            Text(fiche.libelleLien + " : " + TextesCarteUS.donneeAbsente)
+            Text(t.libelleLien(fiche.libelleLien) + " : " + t(TextesCarteUS.donneeAbsente))
                 .font(Police.legende)
                 .foregroundStyle(Palette.encreDouce)
         }
@@ -90,7 +93,7 @@ struct FicheUSView: View {
 
     private var avis: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            Text(TextesCarteUS.titreAvis)
+            Text(t(TextesCarteUS.titreAvis))
                 .font(Police.sousTitre)
                 .foregroundStyle(Palette.encre)
             ForEach(Array(fiche.avis.enumerated()), id: \.offset) { _, a in
@@ -99,11 +102,11 @@ struct FicheUSView: View {
                         .font(Police.detail)
                         .foregroundStyle(Palette.encre)
                         .fixedSize(horizontal: false, vertical: true)
-                    Text(a.source + ", " + a.date)
+                    Text(t(a.source) + ", " + a.date)
                         .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                     if let lien = a.lien {
-                        Link("Lire l'avis", destination: lien)
+                        Link(t("Lire l'avis"), destination: lien)
                             .font(Police.legende)
                             .foregroundStyle(Palette.marine)
                     }
@@ -113,5 +116,44 @@ struct FicheUSView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(Espace.m)
         .tuileFishMe(rayon: Rayon.m)
+    }
+
+    /// "Type · État" : le type est traduit, le nom de l'État reste tel quel.
+    private var sousTitre: String {
+        let morceaux = fiche.sousTitre.components(separatedBy: " · ")
+        guard morceaux.count == 2 else { return fiche.sousTitre }
+        return t(morceaux[0]) + " · " + morceaux[1]
+    }
+}
+
+/// Le bloc des règles de l'État pour une espèce au choix (la fiche d'un lieu ne sait pas quel poisson on y cherche).
+/// Le bloc lui-même (`BlocReglesUS`) donne l'un des trois verdicts, le lien de l'agence, la source et sa date.
+struct ReglesEtatUSView: View {
+    let etat: String
+
+    private static let especes: [(id: String, nom: String)] = [
+        ("walleye", "Walleye"), ("northern-pike", "Northern pike"), ("largemouth-bass", "Largemouth bass"),
+        ("smallmouth-bass", "Smallmouth bass"), ("muskellunge", "Muskellunge"), ("black-crappie", "Black crappie"),
+        ("bluegill", "Bluegill"), ("brown-trout", "Brown trout"), ("brook-trout", "Brook trout"),
+    ]
+
+    @Environment(RegionCourante.self) private var regionCourante: RegionCourante?
+    @State private var espece = "walleye"
+    private var t: TraducteurCarteUS { TraducteurCarteUS(locale: regionCourante?.locale ?? Locale(identifier: "en_US")) }
+    private var nom: String { Self.especes.first { $0.id == espece }?.nom ?? espece }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: Espace.s) {
+            Text(t("Règles de l'État"))
+                .font(Police.sousTitre)
+                .foregroundStyle(Palette.encre)
+            Picker(t("Espèce"), selection: $espece) {
+                ForEach(Self.especes, id: \.id) { e in Text(e.nom).tag(e.id) }
+            }
+            .pickerStyle(.menu)
+            .frame(minHeight: Gabarit.zoneTactile, alignment: .leading)
+            BlocReglesUS(espece: espece, nomEspece: nom, etat: CodeEtat(rawValue: etat))
+                .id(espece + etat)
+        }
     }
 }
