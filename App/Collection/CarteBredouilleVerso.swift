@@ -10,6 +10,8 @@ struct CarteBredouilleVersoView: View {
     var photo: UIImage? = nil
 
     @State private var photoChargee: UIImage?
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
 
     private var image: UIImage? { photo ?? photoChargee }
 
@@ -23,7 +25,7 @@ struct CarteBredouilleVersoView: View {
         }
         .task(id: carte.photoURL) { if photo == nil { photoChargee = await PhotoSortie.charger(carte.photoURL) } }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(image == nil ? "Verso de la carte Eau calme" : "Photo de la sortie")
+        .accessibilityLabel(image == nil ? t("Verso de la carte Eau calme") : t("Photo de la sortie"))
     }
 
     @ViewBuilder

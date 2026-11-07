@@ -18,19 +18,21 @@ struct InfosCarte {
     var style: StyleRarete { StyleRarete(rarete.niveau) }
 
     /// Un seul texte lu par carte : « Brochet, rare dans le 94, 62 cm ».
-    var texteVoixOff: String {
+    var texteVoixOff: String { texteVoixOff(AnglaisD()) }
+
+    func texteVoixOff(_ t: AnglaisD) -> String {
         var morceaux = [espece.nom]
         if prise.estDeclaree {
-            morceaux.append("carte déclarée, sans photo")
+            morceaux.append(t("carte déclarée, sans photo"))
         } else if style == .nonMesuree {
-            morceaux.append("rareté non mesurée")
+            morceaux.append(t("Rareté non mesurée").lowercased())
         } else if let d = departement {
-            morceaux.append("\(style.mot) dans le \(d.code)")
+            morceaux.append(t("%@ dans le %@", style.mot(t), d.code))
         } else {
-            morceaux.append(style.mot)
+            morceaux.append(style.mot(t))
         }
-        if let t = Formats.taille(prise) { morceaux.append(t) }
-        if prise.exemple { morceaux.append("exemple") }
+        if let taille = Formats.taille(prise, locale: t.locale) { morceaux.append(taille) }
+        if prise.exemple { morceaux.append(t("Exemple").lowercased()) }
         return morceaux.joined(separator: ", ")
     }
 

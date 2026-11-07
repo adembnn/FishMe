@@ -82,6 +82,8 @@ struct EnregistrerDansPhotosBouton: View {
 
     @State private var resultat: ResultatEnregistrement?
     @State private var enCours = false
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
 
     var body: some View {
         if let donnees {
@@ -89,7 +91,7 @@ struct EnregistrerDansPhotosBouton: View {
                 Button {
                     Task { await enregistrer(donnees) }
                 } label: {
-                    Label("Enregistrer dans Photos", systemImage: "square.and.arrow.down")
+                    Label(t("Enregistrer dans Photos"), systemImage: "square.and.arrow.down")
                 }
                 .buttonStyle(.secondaire)
                 .disabled(enCours)
@@ -102,13 +104,13 @@ struct EnregistrerDansPhotosBouton: View {
     private var message: some View {
         switch resultat {
         case .enregistree:
-            Label("Enregistrée", systemImage: "checkmark.circle.fill")
+            Label(t("Enregistrée"), systemImage: "checkmark.circle.fill")
                 .font(Police.detail)
                 .foregroundStyle(Palette.marine)
                 .transition(.opacity)
         case .refuse:
             Button { EnregistrementPhotos.ouvrirReglages() } label: {
-                Text("FishMe n'a pas le droit d'ajouter à Photos. Ouvrir les réglages")
+                Text(t("FishMe n'a pas le droit d'ajouter à Photos. Ouvrir les réglages"))
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
                     .multilineTextAlignment(.center)
@@ -117,7 +119,7 @@ struct EnregistrerDansPhotosBouton: View {
             }
             .buttonStyle(.plain)
         case .echec:
-            Text("L'image n'a pas pu être enregistrée.")
+            Text(t("L'image n'a pas pu être enregistrée."))
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
                 .multilineTextAlignment(.center)

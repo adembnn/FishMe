@@ -7,6 +7,8 @@ import UIKit
 struct QuatreRaretesView: View {
     /// Palier de la carte ouverte, entouré.
     let actuel: StyleRarete
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
 
     private static let exemples: [(style: StyleRarete, nom: String, image: String)] = [
         (.commun, "Gardon", "gardon"),
@@ -17,7 +19,7 @@ struct QuatreRaretesView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("Les paliers de rareté")
+            Text(t("Les paliers de rareté"))
                 .font(Police.titre)
                 .foregroundStyle(Palette.encre)
                 .accessibilityAddTraits(.isHeader)
@@ -45,6 +47,8 @@ private struct MiniatureRarete: View {
     let nom: String
     let image: String
     let entouree: Bool
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
 
     private let largeur: CGFloat = 72
 
@@ -63,7 +67,7 @@ private struct MiniatureRarete: View {
             }
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("\(nom), \(style.mot)")
+        .accessibilityLabel("\(nom), \(style.mot(t))")
     }
 
     private var fenetre: some View {

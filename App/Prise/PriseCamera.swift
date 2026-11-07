@@ -23,6 +23,9 @@ struct PriseCamera: View {
     @State private var choix: PhotosPickerItem?
     @Environment(\.openURL) private var ouvrirURL
     @Environment(\.scenePhase) private var phase
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     static var disponible: Bool { PriseCapture.disponible }
 
@@ -111,24 +114,24 @@ struct PriseCamera: View {
                     .stroke(Palette.marine, style: StrokeStyle(lineWidth: 0.9 * 120 / 24, lineJoin: .round))
                     .frame(width: 120, height: 120)
                     .accessibilityHidden(true)
-                Text("L\u{2019}appareil photo est coupé pour FishMe.")
+                Text(t("L\u{2019}appareil photo est coupé pour FishMe."))
                     .font(Police.titre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .accessibilityAddTraits(.isHeader)
-                Text("Autorise-le dans les réglages, ou choisis une photo dans ta galerie. Elle reste sur ton iPhone, sans GPS.")
+                Text(t("Autorise-le dans les réglages, ou choisis une photo dans ta galerie. Elle reste sur ton iPhone, sans GPS."))
                     .font(Police.detail).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                 Spacer(minLength: 0)
                 VStack(spacing: Espace.xs) {
-                    Button("Ouvrir les réglages") {
+                    Button(t("Ouvrir les réglages")) {
                         if let url = URL(string: UIApplication.openSettingsURLString) { ouvrirURL(url) }
                     }
                     .buttonStyle(.principal)
                     PhotosPicker(selection: $choix, matching: .images) {
-                        Text("Choisir une photo").font(Police.corps).foregroundStyle(Palette.marine)
+                        Text(t("Choisir une photo")).font(Police.corps).foregroundStyle(Palette.marine)
                             .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
                     }
-                    .accessibilityLabel("Choisir une photo dans la galerie")
+                    .accessibilityLabel(t("Choisir une photo dans la galerie"))
                 }
             }
             .padding(.horizontal, Espace.bord)
@@ -160,19 +163,19 @@ struct PriseCamera: View {
                 if let erreur = etat.erreur {
                     // La session ne tourne pas (caméra occupée, appel en cours) ou la photo a échoué : on le dit.
                     VStack(spacing: Espace.s) {
-                        Text(erreur)
+                        Text(t(erreur))
                             .font(Police.sousTitre).foregroundStyle(.white).multilineTextAlignment(.center)
                             .fixedSize(horizontal: false, vertical: true)
                             .accessibilityAddTraits(.isHeader)
                         if Self.disponible && !refuse {
-                            Button("Réessayer") { etat.erreur = nil; lancer() }
+                            Button(t("Réessayer")) { etat.erreur = nil; lancer() }
                                 .font(Police.corps).foregroundStyle(.white)
                                 .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
                         }
                     }
                     .padding(.horizontal, Espace.bord)
                 } else {
-                    Text("Le poisson entier, de profil")
+                    Text(t("Le poisson entier, de profil"))
                         .font(Police.sousTitre).foregroundStyle(.white).multilineTextAlignment(.center)
                         .shadow(color: .black.opacity(0.45), radius: 4, y: 1)
                         .padding(.horizontal, Espace.bord)
@@ -202,7 +205,7 @@ struct PriseCamera: View {
                         .contentShape(Circle())
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(torcheAllumee ? "Éteindre la torche" : "Allumer la torche")
+                .accessibilityLabel(torcheAllumee ? t("Éteindre la torche") : t("Allumer la torche"))
             }
         }
         .padding(.horizontal, Espace.bord)
@@ -222,7 +225,7 @@ struct PriseCamera: View {
                                 .frame(width: 48, height: 48)
                                 .background(Color.white.opacity(0.18), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                         }
-                        .accessibilityLabel("Choisir une photo dans la galerie")
+                        .accessibilityLabel(t("Choisir une photo dans la galerie"))
                     } else {
                         Color.clear
                     }
@@ -234,7 +237,7 @@ struct PriseCamera: View {
                 Color.clear.frame(width: 56, height: 56)
             }
             .padding(.horizontal, Espace.xl)
-            Text("Sur l\u{2019}iPhone, sans réseau")
+            Text(t("Sur l\u{2019}iPhone, sans réseau"))
                 .font(Police.legende).foregroundStyle(.white.opacity(0.85))
         }
         .padding(.bottom, Espace.l)
@@ -266,7 +269,7 @@ struct PriseCamera: View {
         }
         .buttonStyle(.plain)
         .disabled(etat.enCours)
-        .accessibilityLabel("Prendre la photo")
+        .accessibilityLabel(t("Prendre la photo"))
     }
 }
 

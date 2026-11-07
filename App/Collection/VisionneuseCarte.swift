@@ -35,6 +35,8 @@ struct VisionneuseCarte: View {
   @State private var descente: CGFloat = 0
   @State private var sens: Sens?
   @Environment(\.accessibilityReduceMotion) private var reduireAnimations
+  @Environment(\.locale) private var locale
+  private var t: AnglaisD { AnglaisD(locale) }
 
   private enum Sens { case horizontal, vertical }
 
@@ -53,7 +55,7 @@ struct VisionneuseCarte: View {
             .frame(width: largeur, height: largeur / Gabarit.rapportCarte)
             .position(x: g.size.width / 2, y: g.size.height / 2)
         }
-        Text("Touche la carte pour la retourner")
+        Text(t("Touche la carte pour la retourner"))
           .font(Police.legende)
           .foregroundStyle(Palette.encreDouce)
           .frame(minHeight: Gabarit.zoneTactile)
@@ -85,7 +87,7 @@ struct VisionneuseCarte: View {
           .contentShape(Circle())
       }
       .buttonStyle(.plain)
-      .accessibilityLabel("Retourner la carte")
+      .accessibilityLabel(t("Retourner la carte"))
     }
     .padding(.horizontal, Espace.bord)
   }
@@ -105,14 +107,19 @@ struct VisionneuseCarte: View {
     .contentShape(Rectangle())
     .onTapGesture { retourner() }
     .accessibilityElement(children: .ignore)
-    .accessibilityLabel(montreLeRecto ? libelleRecto : "Photo de la prise, \(nomEspece)")
+    .accessibilityLabel(montreLeRecto ? libelleRecto : t("Photo de la prise, %@", nomEspece))
     .accessibilityAddTraits(.isButton)
-    .accessibilityHint(montreLeRecto ? "Montre le dos" : "Montre le recto")
+    .accessibilityHint(montreLeRecto ? t("Montre le dos") : t("Montre le recto"))
+  }
+
+  /// La taille : « 78 cm » en français, en pouces en anglais.
+  private func tailleTexte(_ cm: Int) -> String {
+    t.estAnglais ? t.format.taille(centimetres: Double(cm)) : "\(cm) cm"
   }
 
   private var libelleRecto: String {
-    var morceaux = [nomEspece, style.mot]
-    if let t = tailleCm { morceaux.append("\(t) cm") }
+    var morceaux = [nomEspece, style.mot(t)]
+    if let cm = tailleCm { morceaux.append(tailleTexte(cm)) }
     if let detail { morceaux.append(detail) }
     return morceaux.joined(separator: ", ")
   }
@@ -152,8 +159,8 @@ struct VisionneuseCarte: View {
           .lineLimit(2)
           .minimumScaleFactor(0.5)
           .multilineTextAlignment(.leading)
-        if let t = tailleCm {
-          Text("\(t) cm")
+        if let cm = tailleCm {
+          Text(tailleTexte(cm))
             .font(Police.taille(4.8 * u, .bold))
             .foregroundStyle(Palette.encreDouce)
             .lineLimit(1)

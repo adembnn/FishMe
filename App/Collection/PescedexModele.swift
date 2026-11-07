@@ -87,7 +87,8 @@ final class PescedexModele {
             emplacements = CalculZonePescedex.emplacementsFrance(cartes: cartes, especes: especes, reference: reference, rarete: rarete)
         }
         compteur = CompteurPescedex.compteur(emplacements: emplacements, zone: reference, portee: porteeMontree,
-                                             locutionRegion: porteeMontree == .maRegion ? region?.phrase : nil)
+                                             locutionRegion: porteeMontree == .maRegion ? region?.phrase : nil,
+                                             nomRegion: porteeMontree == .maRegion ? region?.nom : nil)
     }
 
     /// Les espèces relevées au département de référence (rang des cartes), quel que soit le menu de zone.
