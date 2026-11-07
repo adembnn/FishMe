@@ -1,0 +1,3015 @@
+{
+ "version": 1,
+ "etat": "WI",
+ "lecteur": "B",
+ "genere_le": "2026-11-07",
+ "textes": [
+  {
+   "titre": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+   "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+   "edition": "2026-2027",
+   "publie_le": "2026-02",
+   "lu": "partie"
+  },
+  {
+   "titre": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+   "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+   "edition": "2026-2027",
+   "publie_le": null,
+   "lu": "partie"
+  },
+  {
+   "titre": "Regulations Toolbox (DNR, recoupement des defauts par espece)",
+   "url": "https://dnr.wisconsin.gov/topic/fishing/regulations/RegulationsToolbox",
+   "edition": null,
+   "publie_le": null,
+   "lu": "partie"
+  },
+  {
+   "titre": "Online lake-by-lake regulations (niveau 3, non lu)",
+   "url": "https://apps.dnr.wi.gov/fisheriesmanagement/Public/LakeRegulation",
+   "edition": null,
+   "publie_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Service cartographique des regles par lac (niveau 3, non lu)",
+   "url": "https://dnrmaps.wi.gov/arcgis2/rest/services/FM_WFF/FM_WFF_LAKE_REGULATIONS_WTM_EXT/MapServer",
+   "edition": null,
+   "publie_le": null,
+   "lu": "titre seul"
+  }
+ ],
+ "regles": [
+  {
+   "id": "wi-b-001",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "General inland waters"
+   },
+   "especes": [
+    "Largemouth bass"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "recolte ouverte du 2 mai 2026 au 7 mars 2027"
+   },
+   "phrase": "Largemouth bass : periode de recolte du 2 mai au 7 mars (eaux interieures generales).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "LARGEMOUTH BASS (LMB) HARVEST May 2, 2026 – March 7, 2027 5 14 inches",
+   "statut": "brouillon",
+   "du": "05-02",
+   "au": "03-07"
+  },
+  {
+   "id": "wi-b-002",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Largemouth bass"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 14
+   },
+   "phrase": "Largemouth bass : taille minimale 14 pouces.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "LARGEMOUTH BASS (LMB) HARVEST May 2, 2026 – March 7, 2027 5 14 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-003",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Largemouth bass"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Largemouth bass : 5 par jour.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "LARGEMOUTH BASS (LMB) HARVEST May 2, 2026 – March 7, 2027 5 14 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-004",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Largemouth bass"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Largemouth et smallmouth bass : possession 10 au total.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth and smallmouth bass 5 in total 10 in total",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-005",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Largemouth bass"
+   ],
+   "type": "relacher",
+   "valeur": {
+    "code": "prise_relacher_hors_periode_recolte"
+   },
+   "phrase": "Largemouth et smallmouth bass : en dehors des periodes de recolte, prise et relache seulement (limite 0).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "LARGEMOUTH and SMALLMOUTH BASS Statewide - all inland waters All other times of the year. 0 (catch and release only)",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-006",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Northern Bass Management Zone",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Northern Zone (see map on page 12)"
+   },
+   "especes": [
+    "Smallmouth bass"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "recolte ouverte du 20 juin 2026 au 7 mars 2027, zone nord"
+   },
+   "phrase": "Smallmouth bass, zone nord (au nord de US Hwy 10 pour le brochet ; carte des zones de bass p. 12) : recolte du 20 juin au 7 mars.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "June 20, 2026 – March 7, 2027 5 in total with LMB 14 inches",
+   "statut": "brouillon",
+   "du": "06-20",
+   "au": "03-07"
+  },
+  {
+   "id": "wi-b-007",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Southern Bass Management Zone",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Other inland waters"
+   },
+   "especes": [
+    "Smallmouth bass"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "recolte ouverte du 2 mai 2026 au 7 mars 2027, autres eaux interieures"
+   },
+   "phrase": "Smallmouth bass, autres eaux interieures (zone sud) : recolte du 2 mai au 7 mars.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "Other inland waters May 2, 2026 – March 7, 2027 5 in total with LMB 14 inches",
+   "statut": "brouillon",
+   "du": "05-02",
+   "au": "03-07"
+  },
+  {
+   "id": "wi-b-008",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Southern Bass Management Zone",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Southern Zone"
+   },
+   "especes": [
+    "Smallmouth bass"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 14
+   },
+   "phrase": "Smallmouth bass : taille minimale 14 pouces.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 12",
+    "date": "2026-11-07"
+   },
+   "citation": "Five largemouth or smallmouth bass in combination may be kept and they must be at least 14”.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-009",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Southern Bass Management Zone",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Southern Zone"
+   },
+   "especes": [
+    "Smallmouth bass"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Smallmouth bass : 5 par jour, largemouth et smallmouth confondus.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 12",
+    "date": "2026-11-07"
+   },
+   "citation": "Five largemouth or smallmouth bass in combination may be kept and they must be at least 14”.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-010",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Smallmouth bass"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Largemouth et smallmouth bass : possession 10 au total.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth and smallmouth bass 5 in total 10 in total",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-011",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Smallmouth bass"
+   ],
+   "type": "relacher",
+   "valeur": {
+    "code": "prise_relacher_hors_periode_recolte"
+   },
+   "phrase": "Smallmouth bass : en dehors des periodes de recolte, prise et relache seulement (limite 0).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "LARGEMOUTH and SMALLMOUTH BASS Statewide - all inland waters All other times of the year. 0 (catch and release only)",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-012",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Most other inland waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Most other inland waters"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "ouverte du 2 mai 2026 au 7 mars 2027"
+   },
+   "phrase": "Walleye (hybrides inclus) : ouvert du 2 mai au 7 mars.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 73",
+    "date": "2026-11-07"
+   },
+   "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+   "statut": "brouillon",
+   "du": "05-02",
+   "au": "03-07"
+  },
+  {
+   "id": "wi-b-013",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Most other inland waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Most other inland waters"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 15
+   },
+   "phrase": "Walleye : taille minimale 15 pouces (la plupart des autres eaux interieures).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 73",
+    "date": "2026-11-07"
+   },
+   "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-014",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Most other inland waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Most other inland waters"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 3
+   },
+   "phrase": "Walleye et sauger : 3 au total par jour (la plupart des autres eaux interieures).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 73",
+    "date": "2026-11-07"
+   },
+   "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-015",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Walleye, sauger et hybrides : possession 10 au total (limite quotidienne totale 5).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 17",
+    "date": "2026-11-07"
+   },
+   "citation": "(saugeye) 5 in total 10 in total",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-016",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Ceded Territory (northern Wisconsin)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Most waters in the Ceded Territory"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "fenetre",
+   "valeur": {
+    "pouces_min": 20,
+    "pouces_max": 24,
+    "mode": "relacher_entre"
+   },
+   "phrase": "Walleye, Territoire cede (Ceded Territory) : 15 pouces a moins de 20 pouces conserves, plus un poisson de plus de 24 pouces ; la fenetre 20-24 pouces est deduite du texte, bornes exactes non ecrites.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "sauger from 15” but less than 20” may be kept, except one fish may be over 24”.",
+   "statut": "incertain",
+   "raison_incertain": "Fenetre 20-24 deduite de la plage conservee ; le texte du guide cite aussi 28 pouces pour des eaux listees par comte ; carte et exceptions par plan d'eau non lues."
+  },
+  {
+   "id": "wi-b-017",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Ceded Territory (northern Wisconsin)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Ceded Territory"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 3
+   },
+   "phrase": "Walleye, Territoire cede : 3 au total par jour (eaux interieures du Ceded Territory).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "Inland lakes and rivers within the Ceded Territory have a daily bag limit of three",
+   "statut": "incertain",
+   "raison_incertain": "Citation de prose coupee par une carte dans le texte extrait ; exceptions par plan d'eau possibles ('some waters may have more restrictive bag or length limits')."
+  },
+  {
+   "id": "wi-b-018",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Most other inland waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Most other inland waters"
+   },
+   "especes": [
+    "Sauger"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "ouverte du 2 mai 2026 au 7 mars 2027"
+   },
+   "phrase": "Sauger (hybrides inclus) : ouvert du 2 mai au 7 mars.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 73",
+    "date": "2026-11-07"
+   },
+   "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+   "statut": "brouillon",
+   "du": "05-02",
+   "au": "03-07"
+  },
+  {
+   "id": "wi-b-019",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Most other inland waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Most other inland waters"
+   },
+   "especes": [
+    "Sauger"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 15
+   },
+   "phrase": "Sauger : taille minimale 15 pouces (la plupart des autres eaux interieures).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 73",
+    "date": "2026-11-07"
+   },
+   "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-020",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Most other inland waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Most other inland waters"
+   },
+   "especes": [
+    "Sauger"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 3
+   },
+   "phrase": "Walleye et sauger : 3 au total par jour (la plupart des autres eaux interieures).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 73",
+    "date": "2026-11-07"
+   },
+   "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-021",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Sauger"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Walleye, sauger et hybrides : possession 10 au total (limite quotidienne totale 5).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 17",
+    "date": "2026-11-07"
+   },
+   "citation": "(saugeye) 5 in total 10 in total",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-022",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Ceded Territory (northern Wisconsin)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Most waters in the Ceded Territory"
+   },
+   "especes": [
+    "Sauger"
+   ],
+   "type": "fenetre",
+   "valeur": {
+    "pouces_min": 20,
+    "pouces_max": 24,
+    "mode": "relacher_entre"
+   },
+   "phrase": "Sauger, Territoire cede (Ceded Territory) : 15 pouces a moins de 20 pouces conserves, plus un poisson de plus de 24 pouces ; la fenetre 20-24 pouces est deduite du texte, bornes exactes non ecrites.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "sauger from 15” but less than 20” may be kept, except one fish may be over 24”.",
+   "statut": "incertain",
+   "raison_incertain": "Fenetre 20-24 deduite de la plage conservee ; le texte du guide cite aussi 28 pouces pour des eaux listees par comte ; carte et exceptions par plan d'eau non lues."
+  },
+  {
+   "id": "wi-b-023",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Ceded Territory (northern Wisconsin)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Ceded Territory"
+   },
+   "especes": [
+    "Sauger"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 3
+   },
+   "phrase": "Sauger, Territoire cede : 3 au total par jour (eaux interieures du Ceded Territory).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "Inland lakes and rivers within the Ceded Territory have a daily bag limit of three",
+   "statut": "incertain",
+   "raison_incertain": "Citation de prose coupee par une carte dans le texte extrait ; exceptions par plan d'eau possibles ('some waters may have more restrictive bag or length limits')."
+  },
+  {
+   "id": "wi-b-024",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Northern Zone (north of US Hwy 10)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "inland waters north of Highway 10"
+   },
+   "especes": [
+    "Northern pike"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "2 mai 2026 au 7 mars 2027"
+   },
+   "phrase": "Northern pike, zone nord (au nord de US Hwy 10) : ouvert du 2 mai au 7 mars.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "Northern pike season & limits: May 2, 2026 to March 7, 2027. Five northern pike of any length may be kept.",
+   "statut": "brouillon",
+   "du": "05-02",
+   "au": "03-07"
+  },
+  {
+   "id": "wi-b-025",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Northern Zone (north of US Hwy 10)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "inland waters north of Highway 10"
+   },
+   "especes": [
+    "Northern pike"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Northern pike, zone nord : 5 par jour, sans taille minimale.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "Northern pike season & limits: May 2, 2026 to March 7, 2027. Five northern pike of any length may be kept.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-026",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Northern Zone (north of US Hwy 10)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All waters north of U.S. Hwy 10"
+   },
+   "especes": [
+    "Northern pike"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Northern pike, eaux au nord de US Hwy 10 : possession 10 au total.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "All waters north of U.S. Hwy 10 5 in total",
+   "statut": "incertain",
+   "raison_incertain": "Tableau a colonnes : la valeur 10 est sur la ligne suivante ; possession de la zone sud non lue sans doute."
+  },
+  {
+   "id": "wi-b-027",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Southern Zone (south of US Hwy 10)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "inland waters south of Highway 10/Waldo Blvd"
+   },
+   "especes": [
+    "Northern pike"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "2 mai 2026 au 7 mars 2027"
+   },
+   "phrase": "Northern pike, zone sud : ouvert du 2 mai au 7 mars.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "Northern pike season & limits: May 2, 2026 to March 7, 2027. Two northern pike may be kept and they must be at least 26”.",
+   "statut": "brouillon",
+   "du": "05-02",
+   "au": "03-07"
+  },
+  {
+   "id": "wi-b-028",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Southern Zone (south of US Hwy 10)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "inland waters south of Highway 10/Waldo Blvd"
+   },
+   "especes": [
+    "Northern pike"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "Northern pike, zone sud : 2 par jour.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "Northern pike season & limits: May 2, 2026 to March 7, 2027. Two northern pike may be kept and they must be at least 26”.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-029",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Southern Zone (south of US Hwy 10)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "inland waters south of Highway 10/Waldo Blvd"
+   },
+   "especes": [
+    "Northern pike"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 26
+   },
+   "phrase": "Northern pike, zone sud : taille minimale 26 pouces.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "Northern pike season & limits: May 2, 2026 to March 7, 2027. Two northern pike may be kept and they must be at least 26”.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-030",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "2 mai au 31 dec 2026, eau libre seulement"
+   },
+   "phrase": "Muskellunge (hybrides inclus) : ouvert du 2 mai au 31 decembre, eau libre seulement.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "Statewide inland muskellunge season & limits: May 2, 2026 to Dec. 31, 2026 (on open water only)",
+   "statut": "brouillon",
+   "du": "05-02",
+   "au": "12-31"
+  },
+  {
+   "id": "wi-b-031",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 1
+   },
+   "phrase": "Muskellunge : 1 par jour.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "One muskellunge may be kept and it must be at least 40”",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-032",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 40
+   },
+   "phrase": "Muskellunge : taille minimale 40 pouces.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 13",
+    "date": "2026-11-07"
+   },
+   "citation": "One muskellunge may be kept and it must be at least 40”",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-033",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "Muskellunge : possession 2 au total.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "Muskellunge 1 2 in total",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-034",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Bluegill"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "ouvert toute l annee"
+   },
+   "phrase": "Bluegill (panfish) : ouvert toute l annee.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+   "statut": "brouillon",
+   "du": "01-01",
+   "au": "12-31"
+  },
+  {
+   "id": "wi-b-035",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Bluegill"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 25
+   },
+   "phrase": "Bluegill : 25 panfish au total par jour (especes de panfish confondues).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-036",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Bluegill"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 50
+   },
+   "phrase": "Bluegill : possession 50 panfish au total.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "25 in total 50 in total",
+   "statut": "incertain",
+   "raison_incertain": "Ligne de tableau extraite sans l'intitule d'espece ; les valeurs 25/50 suivent l'ordre du tableau."
+  },
+  {
+   "id": "wi-b-037",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Black crappie"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "ouvert toute l annee"
+   },
+   "phrase": "Black crappie (panfish) : ouvert toute l annee.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+   "statut": "brouillon",
+   "du": "01-01",
+   "au": "12-31"
+  },
+  {
+   "id": "wi-b-038",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Black crappie"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 25
+   },
+   "phrase": "Black crappie : 25 panfish au total par jour (especes de panfish confondues).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-039",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Black crappie"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 50
+   },
+   "phrase": "Black crappie : possession 50 panfish au total.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "25 in total 50 in total",
+   "statut": "incertain",
+   "raison_incertain": "Ligne de tableau extraite sans l'intitule d'espece ; les valeurs 25/50 suivent l'ordre du tableau."
+  },
+  {
+   "id": "wi-b-040",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "White crappie"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "ouvert toute l annee"
+   },
+   "phrase": "White crappie (panfish) : ouvert toute l annee.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+   "statut": "brouillon",
+   "du": "01-01",
+   "au": "12-31"
+  },
+  {
+   "id": "wi-b-041",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "White crappie"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 25
+   },
+   "phrase": "White crappie : 25 panfish au total par jour (especes de panfish confondues).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-042",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "White crappie"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 50
+   },
+   "phrase": "White crappie : possession 50 panfish au total.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "25 in total 50 in total",
+   "statut": "incertain",
+   "raison_incertain": "Ligne de tableau extraite sans l'intitule d'espece ; les valeurs 25/50 suivent l'ordre du tableau."
+  },
+  {
+   "id": "wi-b-043",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Yellow perch"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "ouvert toute l annee"
+   },
+   "phrase": "Yellow perch (panfish) : ouvert toute l annee.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+   "statut": "brouillon",
+   "du": "01-01",
+   "au": "12-31"
+  },
+  {
+   "id": "wi-b-044",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Yellow perch"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 25
+   },
+   "phrase": "Yellow perch : 25 panfish au total par jour (especes de panfish confondues).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-045",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Yellow perch"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 50
+   },
+   "phrase": "Yellow perch : possession 50 panfish au total.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "25 in total 50 in total",
+   "statut": "incertain",
+   "raison_incertain": "Ligne de tableau extraite sans l'intitule d'espece ; les valeurs 25/50 suivent l'ordre du tableau."
+  },
+  {
+   "id": "wi-b-046",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Channel catfish"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "ouvert toute l annee"
+   },
+   "phrase": "Channel catfish : ouvert toute l annee (hook and line, eaux interieures generales).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "CATFISH (CHANNEL, FLATHEAD) Open all year 10 in total None",
+   "statut": "brouillon",
+   "du": "01-01",
+   "au": "12-31"
+  },
+  {
+   "id": "wi-b-047",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Channel catfish"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Channel catfish : 10 au total par eau et par jour (limite quotidienne totale 25).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "CATFISH (CHANNEL, FLATHEAD) Open all year 10 in total None",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-048",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Channel catfish"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 50
+   },
+   "phrase": "Channel catfish : possession 50 au total.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "Catfish 25 in total; only one",
+   "statut": "incertain",
+   "raison_incertain": "La valeur 50 est sur une ligne separee du tableau des limites totales ; la mention de 'flathead' vise les eaux du systeme Winnebago."
+  },
+  {
+   "id": "wi-b-049",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Channel catfish"
+   ],
+   "type": "engin",
+   "valeur": {
+    "code": "arc_ou_main"
+   },
+   "phrase": "Channel catfish : recolte a l arc (bowfishing) ou a la main mentionnee ; conditions dans un autre guide, non lu.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 15",
+    "date": "2026-11-07"
+   },
+   "citation": "Channel and flathead catfish may be harvested by bowfishing or by hand.",
+   "statut": "incertain",
+   "raison_incertain": "Conditions et saison dans le Guide to Wisconsin Spearing, Netting and Bait Harvest Regulations (non lu)."
+  },
+  {
+   "id": "wi-b-050",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Flathead catfish"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "ouvert toute l annee"
+   },
+   "phrase": "Flathead catfish : ouvert toute l annee (hook and line, eaux interieures generales).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "CATFISH (CHANNEL, FLATHEAD) Open all year 10 in total None",
+   "statut": "brouillon",
+   "du": "01-01",
+   "au": "12-31"
+  },
+  {
+   "id": "wi-b-051",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Flathead catfish"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Flathead catfish : 10 au total par eau et par jour (limite quotidienne totale 25).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 71",
+    "date": "2026-11-07"
+   },
+   "citation": "CATFISH (CHANNEL, FLATHEAD) Open all year 10 in total None",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-052",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Flathead catfish"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 50
+   },
+   "phrase": "Flathead catfish : possession 50 au total.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "Catfish 25 in total; only one",
+   "statut": "incertain",
+   "raison_incertain": "La valeur 50 est sur une ligne separee du tableau des limites totales ; la mention de 'flathead' vise les eaux du systeme Winnebago."
+  },
+  {
+   "id": "wi-b-053",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Flathead catfish"
+   ],
+   "type": "engin",
+   "valeur": {
+    "code": "arc_ou_main"
+   },
+   "phrase": "Flathead catfish : recolte a l arc (bowfishing) ou a la main mentionnee ; conditions dans un autre guide, non lu.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 15",
+    "date": "2026-11-07"
+   },
+   "citation": "Channel and flathead catfish may be harvested by bowfishing or by hand.",
+   "statut": "incertain",
+   "raison_incertain": "Conditions et saison dans le Guide to Wisconsin Spearing, Netting and Bait Harvest Regulations (non lu)."
+  },
+  {
+   "id": "wi-b-054",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Other inland waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Other inland waters"
+   },
+   "especes": [
+    "Lake sturgeon"
+   ],
+   "type": "fermeture",
+   "valeur": {
+    "code": "fermee_autres_eaux_interieures"
+   },
+   "phrase": "Lake sturgeon : fermeture toute l annee, eaux interieures non listees.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 73",
+    "date": "2026-11-07"
+   },
+   "citation": "Other inland waters Closed all year — no fishing for lake sturgeon",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-055",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Lake sturgeon"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 1
+   },
+   "phrase": "Lake sturgeon : 1 par saison (limite de possession 2 au total).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake sturgeon 1 per season 2 in total",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-056",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Lake sturgeon"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "Lake sturgeon : possession 2 au total.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 16",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake sturgeon 1 per season 2 in total",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-057",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Lake sturgeon"
+   ],
+   "type": "autre",
+   "valeur": {
+    "code": "etiquette_recolte_obligatoire",
+    "texte": "etiquette de recolte a acheter et valider avant de garder un lake sturgeon"
+   },
+   "phrase": "Lake sturgeon : etiquette de recolte a acheter puis a valider immediatement ; enregistrement avant 18 h le lendemain.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 8",
+    "date": "2026-11-07"
+   },
+   "citation": "It is illegal to tether, keep, or possess a sturgeon without validating the tag.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-058",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Listed waters (see table p. 72-73)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Listed rivers and lakes"
+   },
+   "especes": [
+    "Lake sturgeon"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "recolte a la ligne : 5 au 30 septembre 2026 sur des eaux listees"
+   },
+   "phrase": "Lake sturgeon : saison de recolte a la ligne du 5 au 30 septembre 2026 sur certaines eaux listees (taille 60 pouces).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 72",
+    "date": "2026-11-07"
+   },
+   "citation": "– Sept. 30, 2026 (All Lake",
+   "statut": "incertain",
+   "du": "09-05",
+   "au": "09-30",
+   "raison_incertain": "Tableau fragmente par l'extraction : les dates, la taille 60 pouces et la liste des eaux ne sont pas reliables ligne a ligne ; eaux listees = niveau 3, hors mission."
+  },
+  {
+   "id": "wi-b-059",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Listed waters (see table p. 72-73)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Listed rivers and lakes"
+   },
+   "especes": [
+    "Lake sturgeon"
+   ],
+   "type": "relacher",
+   "valeur": {
+    "code": "prise_relacher_seulement_eaux_listees"
+   },
+   "phrase": "Lake sturgeon : prise et relache seulement sur des eaux listees, du 6 juin 2026 au 7 mars 2027.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 72",
+    "date": "2026-11-07"
+   },
+   "citation": "June 6, 2026 – March 7, 2027 0 (catch and release only)",
+   "statut": "incertain",
+   "du": "06-06",
+   "au": "03-07",
+   "raison_incertain": "Tableau fragmente par l'extraction : association eaux/dates non verifiable ; nouveau regime 2026-27 (page 4 du guide)."
+  },
+  {
+   "id": "wi-b-060",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland streams, springs and spring ponds"
+   },
+   "especes": [
+    "Brook trout"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "ruisseaux et rivieres interieurs : 4 avril au 15 octobre 2026"
+   },
+   "phrase": "Brook trout : saison generale des cours d eau interieurs du 4 avril au 15 octobre 2026, sauf eaux listees par comte.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 2",
+    "date": "2026-11-07"
+   },
+   "citation": "General Open Season for trout and salmon in inland streams, springs and spring ponds - First Saturday in April",
+   "statut": "incertain",
+   "du": "04-04",
+   "au": "10-15",
+   "raison_incertain": "Citation de prose entrelacee dans le texte extrait ; exceptions par comte (Specific Waters Listed by County) et calendrier du premier samedi d avril ; lacs et Lake Michigan/Superior : autres regles."
+  },
+  {
+   "id": "wi-b-061",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland lakes and ponds"
+   },
+   "especes": [
+    "Brook trout"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "lacs et etangs interieurs : 2 mai 2026 au 7 mars 2027"
+   },
+   "phrase": "Brook trout : saison generale des lacs et etangs interieurs du 2 mai 2026 au 7 mars 2027, sauf eaux listees.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 2",
+    "date": "2026-11-07"
+   },
+   "citation": "May 2, 2026 – March 7, 2027",
+   "statut": "incertain",
+   "du": "05-02",
+   "au": "03-07",
+   "raison_incertain": "Citation courte ; texte entrelace avec d autres rubriques ; exceptions par comte non lues."
+  },
+  {
+   "id": "wi-b-062",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Early Season Streams And Rivers",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Early-season inland streams and rivers (counties listed)"
+   },
+   "especes": [
+    "Brook trout"
+   ],
+   "type": "relacher",
+   "valeur": {
+    "code": "saison_precoce_prise_relache"
+   },
+   "phrase": "Brook trout : saison precoce de prise et relache sur des cours d eau listes (3 janvier au 3 avril 2026), limite quotidienne 0.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 2",
+    "date": "2026-11-07"
+   },
+   "citation": "All trout caught during this time must be immediately released",
+   "statut": "incertain",
+   "du": "01-03",
+   "au": "04-03",
+   "raison_incertain": "Eaux concernees = liste de comtes ; non verifie plan d eau par plan d eau."
+  },
+  {
+   "id": "wi-b-063",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Counties/waters in base category Green",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Green category waters"
+   },
+   "especes": [
+    "Brook trout"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Brook trout : 5 truites au total par jour, sans taille minimale, regle de base de categorie Green ; la categorie varie selon le comte.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 4",
+    "date": "2026-11-07"
+   },
+   "citation": "Daily bag limit and length limit: 5 trout in total of any length",
+   "statut": "incertain",
+   "raison_incertain": "Le guide attribue 5 truites a une categorie par couleur dont l'association couleur-texte est brouillee dans l'extraction (recoupe avec la page Regulations Toolbox : Green = 5 trout, no minimum) ; categories Yellow/Red et exceptions par eau non lues."
+  },
+  {
+   "id": "wi-b-064",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Brook trout"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Brook trout : possession 10 truites (eaux interieures).",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 1",
+    "date": "2026-11-07"
+   },
+   "citation": "The possession limit on trout in inland waters is 10.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-065",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland streams, springs and spring ponds"
+   },
+   "especes": [
+    "Brown trout"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "ruisseaux et rivieres interieurs : 4 avril au 15 octobre 2026"
+   },
+   "phrase": "Brown trout : saison generale des cours d eau interieurs du 4 avril au 15 octobre 2026, sauf eaux listees par comte.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 2",
+    "date": "2026-11-07"
+   },
+   "citation": "General Open Season for trout and salmon in inland streams, springs and spring ponds - First Saturday in April",
+   "statut": "incertain",
+   "du": "04-04",
+   "au": "10-15",
+   "raison_incertain": "Citation de prose entrelacee dans le texte extrait ; exceptions par comte (Specific Waters Listed by County) et calendrier du premier samedi d avril ; lacs et Lake Michigan/Superior : autres regles."
+  },
+  {
+   "id": "wi-b-066",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland lakes and ponds"
+   },
+   "especes": [
+    "Brown trout"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "lacs et etangs interieurs : 2 mai 2026 au 7 mars 2027"
+   },
+   "phrase": "Brown trout : saison generale des lacs et etangs interieurs du 2 mai 2026 au 7 mars 2027, sauf eaux listees.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 2",
+    "date": "2026-11-07"
+   },
+   "citation": "May 2, 2026 – March 7, 2027",
+   "statut": "incertain",
+   "du": "05-02",
+   "au": "03-07",
+   "raison_incertain": "Citation courte ; texte entrelace avec d autres rubriques ; exceptions par comte non lues."
+  },
+  {
+   "id": "wi-b-067",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Early Season Streams And Rivers",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Early-season inland streams and rivers (counties listed)"
+   },
+   "especes": [
+    "Brown trout"
+   ],
+   "type": "relacher",
+   "valeur": {
+    "code": "saison_precoce_prise_relache"
+   },
+   "phrase": "Brown trout : saison precoce de prise et relache sur des cours d eau listes (3 janvier au 3 avril 2026), limite quotidienne 0.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 2",
+    "date": "2026-11-07"
+   },
+   "citation": "All trout caught during this time must be immediately released",
+   "statut": "incertain",
+   "du": "01-03",
+   "au": "04-03",
+   "raison_incertain": "Eaux concernees = liste de comtes ; non verifie plan d eau par plan d eau."
+  },
+  {
+   "id": "wi-b-068",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Counties/waters in base category Green",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Green category waters"
+   },
+   "especes": [
+    "Brown trout"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Brown trout : 5 truites au total par jour, sans taille minimale, regle de base de categorie Green ; la categorie varie selon le comte.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 4",
+    "date": "2026-11-07"
+   },
+   "citation": "Daily bag limit and length limit: 5 trout in total of any length",
+   "statut": "incertain",
+   "raison_incertain": "Le guide attribue 5 truites a une categorie par couleur dont l'association couleur-texte est brouillee dans l'extraction (recoupe avec la page Regulations Toolbox : Green = 5 trout, no minimum) ; categories Yellow/Red et exceptions par eau non lues."
+  },
+  {
+   "id": "wi-b-069",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Brown trout"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Brown trout : possession 10 truites (eaux interieures).",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 1",
+    "date": "2026-11-07"
+   },
+   "citation": "The possession limit on trout in inland waters is 10.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-070",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland streams, springs and spring ponds"
+   },
+   "especes": [
+    "Rainbow trout"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "ruisseaux et rivieres interieurs : 4 avril au 15 octobre 2026"
+   },
+   "phrase": "Rainbow trout : saison generale des cours d eau interieurs du 4 avril au 15 octobre 2026, sauf eaux listees par comte.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 2",
+    "date": "2026-11-07"
+   },
+   "citation": "General Open Season for trout and salmon in inland streams, springs and spring ponds - First Saturday in April",
+   "statut": "incertain",
+   "du": "04-04",
+   "au": "10-15",
+   "raison_incertain": "Citation de prose entrelacee dans le texte extrait ; exceptions par comte (Specific Waters Listed by County) et calendrier du premier samedi d avril ; lacs et Lake Michigan/Superior : autres regles."
+  },
+  {
+   "id": "wi-b-071",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland lakes and ponds"
+   },
+   "especes": [
+    "Rainbow trout"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "lacs et etangs interieurs : 2 mai 2026 au 7 mars 2027"
+   },
+   "phrase": "Rainbow trout : saison generale des lacs et etangs interieurs du 2 mai 2026 au 7 mars 2027, sauf eaux listees.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 2",
+    "date": "2026-11-07"
+   },
+   "citation": "May 2, 2026 – March 7, 2027",
+   "statut": "incertain",
+   "du": "05-02",
+   "au": "03-07",
+   "raison_incertain": "Citation courte ; texte entrelace avec d autres rubriques ; exceptions par comte non lues."
+  },
+  {
+   "id": "wi-b-072",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Early Season Streams And Rivers",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Early-season inland streams and rivers (counties listed)"
+   },
+   "especes": [
+    "Rainbow trout"
+   ],
+   "type": "relacher",
+   "valeur": {
+    "code": "saison_precoce_prise_relache"
+   },
+   "phrase": "Rainbow trout : saison precoce de prise et relache sur des cours d eau listes (3 janvier au 3 avril 2026), limite quotidienne 0.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 2",
+    "date": "2026-11-07"
+   },
+   "citation": "All trout caught during this time must be immediately released",
+   "statut": "incertain",
+   "du": "01-03",
+   "au": "04-03",
+   "raison_incertain": "Eaux concernees = liste de comtes ; non verifie plan d eau par plan d eau."
+  },
+  {
+   "id": "wi-b-073",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "WI",
+    "zone": "Counties/waters in base category Green",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Green category waters"
+   },
+   "especes": [
+    "Rainbow trout"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Rainbow trout : 5 truites au total par jour, sans taille minimale, regle de base de categorie Green ; la categorie varie selon le comte.",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 4",
+    "date": "2026-11-07"
+   },
+   "citation": "Daily bag limit and length limit: 5 trout in total of any length",
+   "statut": "incertain",
+   "raison_incertain": "Le guide attribue 5 truites a une categorie par couleur dont l'association couleur-texte est brouillee dans l'extraction (recoupe avec la page Regulations Toolbox : Green = 5 trout, no minimum) ; categories Yellow/Red et exceptions par eau non lues."
+  },
+  {
+   "id": "wi-b-074",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [
+    "Rainbow trout"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "Rainbow trout : possession 10 truites (eaux interieures).",
+   "source": {
+    "url": "https://widnr.widen.net/s/hhjknwjfzz/troutregsfull2627",
+    "texte": "Guide to Wisconsin Trout Fishing Regulations, 2026-2027",
+    "edition": "2026-2027",
+    "page": "p. 1",
+    "date": "2026-11-07"
+   },
+   "citation": "The possession limit on trout in inland waters is 10.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-075",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "engin",
+   "valeur": {
+    "hamecons_max": 3
+   },
+   "phrase": "Pas plus de trois hamecons, appats ou leurres par pecheur.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 9",
+    "date": "2026-11-07"
+   },
+   "citation": "to fish with more than three hooks, baits or lures.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-076",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "ligne_et_hamecon_seulement"
+   },
+   "phrase": "Prise de poisson par un moyen autre que la ligne et l hamecon interdite sauf exceptions prevues.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 9",
+    "date": "2026-11-07"
+   },
+   "citation": "to take fish by any means other than hook and line unless otherwise allowed.",
+   "statut": "incertain",
+   "raison_incertain": "Exceptions (clause d exception du texte) renvoyees au guide spearing/netting, non lu.",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-077",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "engin",
+   "valeur": {
+    "code": "ligne_sans_surveillance_100_yards",
+    "texte": "rester a moins de 100 yards des lignes en eau libre"
+   },
+   "phrase": "Ligne laissee sans surveillance interdite ; en eau libre, rester a moins de 100 yards des lignes (sauf setlines ou bank poles titulaires de licence).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 9",
+    "date": "2026-11-07"
+   },
+   "citation": "anglers must remain within 100 yards of their line(s).",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-078",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "drone_et_jug_fishing"
+   },
+   "phrase": "Peche avec drone ou technique du jug fishing interdite dans toutes les eaux de l Etat.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 9",
+    "date": "2026-11-07"
+   },
+   "citation": "to fish with an unmanned aircraft system, such as a drone, or to fish using the technique known as “jug” fishing in all waters of the state.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-079",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "harpons_filets_pieges_hors_exceptions"
+   },
+   "phrase": "Possession ou usage de harpons, hamecons a accrocher, filets maillants, trammel, verveux ou pieges a poissons interdits sauf cas prevus (voir guide spearing).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 9",
+    "date": "2026-11-07"
+   },
+   "citation": "to possess or use spears, snag hooks, gill nets, trammel nets, hoop nets or fish traps (except where authorized)",
+   "statut": "incertain",
+   "raison_incertain": "Exceptions renvoyees au guide spearing/netting, non lu.",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-080",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "peche_accrochage_foulhook"
+   },
+   "phrase": "Accrochage ou prise de poissons autrement que dans la bouche interdits ; poisson non pris dans la bouche a ne pas garder.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 10",
+    "date": "2026-11-07"
+   },
+   "citation": "to keep foul-hooked, snagged or any fish not hooked in the mouth.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-081",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "armes_a_feu_et_sinker_release"
+   },
+   "phrase": "Prise avec arme a feu ou arme a air, et possession d un dispositif de liberation de plomb (sinker release device), interdites.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 10",
+    "date": "2026-11-07"
+   },
+   "citation": "to possess or use a sinker release device while fishing.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-082",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "engin",
+   "valeur": {
+    "code": "trou_glace_12_pouces",
+    "pouces": 12
+   },
+   "phrase": "Trous de peche a travers la glace : pas plus de 12 pouces de diametre.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 20",
+    "date": "2026-11-07"
+   },
+   "citation": "Fishing holes cut through the ice cannot measure more than 12” across.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-083",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Inland waters"
+   },
+   "especes": [],
+   "type": "engin",
+   "valeur": {
+    "code": "trolling_moteur",
+    "lignes_max": 3,
+    "hamecons_max": 1
+   },
+   "phrase": "Trolling a moteur sur les eaux interieures : un hamecon, appat ou leurre par personne avec trois lignes au plus par bateau, ou trois par personne sans maximum de lignes ; exceptions par comte.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 22",
+    "date": "2026-11-07"
+   },
+   "citation": "Motor trolling is legal on all inland waters with either: • One hook, bait or lure/person: maximum of three lines trolled per boat or",
+   "statut": "incertain",
+   "raison_incertain": "Deux options alternatives et exceptions par comte non lues."
+  },
+  {
+   "id": "wi-b-084",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "engin",
+   "valeur": {
+    "code": "conservation_filets_et_preuve_photo"
+   },
+   "phrase": "Transport d un poisson soumis a une limite de taille : les filets doivent respecter la taille minimale, ou preuve photo avec instrument de mesure, date et heure.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 11",
+    "date": "2026-11-07"
+   },
+   "citation": "to transport fish subject to a length limit, unless the fillets meet the minimum length requirement",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-085",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "interdit_tri_culling",
+    "texte": "tri ou culling interdit"
+   },
+   "phrase": "Tri ou culling des poissons interdit (sauf permis de tournoi de bass).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 11",
+    "date": "2026-11-07"
+   },
+   "citation": "to sort or cull fish, except as authorized under certain bass fishing tournament permits.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-086",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "appat",
+   "valeur": {
+    "code": "minnow_8_pouces_quick_strike"
+   },
+   "phrase": "Appat poisson-fourrage de 8 pouces ou plus : seulement avec montage quick-strike ou hamecon circulaire non decale.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 9",
+    "date": "2026-11-07"
+   },
+   "citation": "to fish with a minnow 8” or longer unless using a “quick-strike rig” or a",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-087",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "ecrevisses_vivantes"
+   },
+   "phrase": "Possession d ecrevisses vivantes en peche ou avec du materiel de peche interdite sur les eaux interieures (exceptions Mississippi).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 10",
+    "date": "2026-11-07"
+   },
+   "citation": "to possess live crayfish while fishing or while possessing angling equipment on any water.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-088",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "poisson_rouge_gobies_alewife"
+   },
+   "phrase": "Poisson rouge, gobies et alewife comme appat interdits (alewife : exception Lake Michigan, Green Bay et affluents).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 10",
+    "date": "2026-11-07"
+   },
+   "citation": "to use goldfish, gobies or alewife in any form for bait in state waters",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-089",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Trout streams"
+   },
+   "especes": [],
+   "type": "appat",
+   "valeur": {
+    "code": "larves_insectes_ruisseau_truite"
+   },
+   "phrase": "Prelevement de larves d insectes dans un ruisseau a truites interdit, sauf prelevement a la main pour usage immediat pendant la saison ouverte.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 10",
+    "date": "2026-11-07"
+   },
+   "citation": "to remove insect larvae from a trout stream, except that a licensed angler may",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-090",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "oeufs_poisson_sous_taille"
+   },
+   "phrase": "Prelevement d oeufs de poisson comme appat sur un poisson trop petit, pris hors saison ou par methode interdite, interdit.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 10",
+    "date": "2026-11-07"
+   },
+   "citation": "to remove fish eggs for bait from under-sized fish, fish caught during the closed season for that species or fish caught by illegal methods",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-091",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "appat",
+   "valeur": {
+    "code": "gibier_comme_appat"
+   },
+   "phrase": "Poissons de pêche sportive comme appat : seulement s ils respectent la taille de l eau et comptent dans la limite quotidienne.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 10",
+    "date": "2026-11-07"
+   },
+   "citation": "to use gamefish as bait unless they meet any length restriction for the water",
+   "statut": "brouillon"
+  },
+  {
+   "id": "wi-b-092",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Artificial-lures-only waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "appat_sur_eaux_leurres_seuls"
+   },
+   "phrase": "Possession d appat sur des eaux ou seuls les leurres artificiels sont admis interdite.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 10",
+    "date": "2026-11-07"
+   },
+   "citation": "to possess any bait on waters where only the use of artificial lures is authorized.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-093",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "relache_appat_non_utilise"
+   },
+   "phrase": "Rejet d appat non utilise dans les lacs, etangs, rivieres et ruisseaux interdit.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 10",
+    "date": "2026-11-07"
+   },
+   "citation": "to release unused bait into Wisconsin’s lakes, ponds, rivers and streams.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-094",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All state waters"
+   },
+   "especes": [],
+   "type": "fermeture",
+   "valeur": {
+    "code": "poisson_hors_saison"
+   },
+   "phrase": "Pecher une espece pendant sa fermeture, prise et relache compris, interdit.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 10",
+    "date": "2026-11-07"
+   },
+   "citation": "to fish for a species of fish during the closed season for that species (includes catch and release fishing).",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-095",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Trout streams"
+   },
+   "especes": [],
+   "type": "fermeture",
+   "valeur": {
+    "code": "pecher_ruisseau_truite_ferme"
+   },
+   "phrase": "Pecher n importe quelle espece dans un ruisseau a truites hors saison de la truite interdit (poissons de rebut a la main exceptes).",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 11",
+    "date": "2026-11-07"
+   },
+   "citation": "to fish in trout streams for any species of fish when the trout season is closed, except that rough fish may be taken by hand.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-096",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Posted fish refuges"
+   },
+   "especes": [],
+   "type": "fermeture",
+   "valeur": {
+    "code": "refuges_no_fishing"
+   },
+   "phrase": "Peche dans les refuges de poissons signales No Fishing interdite.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 11",
+    "date": "2026-11-07"
+   },
+   "citation": "to fish in fish refuges.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "wi-b-097",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "WI",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Near fishways, locks, dams"
+   },
+   "especes": [],
+   "type": "fermeture",
+   "valeur": {
+    "code": "200_pieds_barrage_ecluse"
+   },
+   "phrase": "Peche a moins de 200 pieds d une passe a poissons, ecluse ou barrage interdite, sauf a la ligne si non signale autrement.",
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "texte": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprime fevrier 2026)",
+    "edition": "2026-2027",
+    "page": "p. 11",
+    "date": "2026-11-07"
+   },
+   "citation": "to fish within 200 feet of a fishway, lock or dam, except that fish may be taken",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  }
+ ]
+}
