@@ -2,11 +2,12 @@
  "usps": "MI",
  "nom": "Michigan",
  "date_lecture": "2026-11-07",
+ "lecteur": "agent D6",
  "url_agence": {
   "url": "https://www.michigan.gov/dnr",
   "statut_http": 403,
   "url_finale": "https://www.michigan.gov/dnr",
-  "note": null
+  "note": "403 aux robots"
  },
  "url_regles_eau_douce": {
   "url": "https://www.michigan.gov/dnr/things-to-do/fishing",
@@ -18,39 +19,36 @@
   "url": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
   "statut_http": 403,
   "url_finale": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
-  "note": "URL trouvée par recherche web ; 403 aux robots ; l'ancienne URL /buy-and-apply 403 aussi"
+  "note": "403 ; /buy-and-apply, /about/newsroom, mdnr-elicense.com (vente officielle) : 403 aussi ; legislature.mi.gov injoignable"
  },
  "prix_resident": {
-  "montant": 26,
+  "montant": null,
   "monnaie": "USD",
-  "annee": "2026 (valable jusqu'au 31 mars 2027)",
-  "url": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
+  "annee": 2026,
+  "url_source": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
   "citation": null,
-  "qualite": "extrait_de_recherche_page_officielle_non_lue",
+  "qualite": "donnée absente",
   "lu_le": null,
-  "note": "All-species annuel 26 USD (dont 1 USD de surtaxe) selon un extrait de recherche de michigan.gov/dnr ; page non lue (403)."
+  "valeur_indiquee_non_verifiee": 26,
+  "note": "All-species annuel 26 USD (dont 1 USD de surtaxe) vu dans un extrait de recherche ; page non lue."
  },
  "prix_non_resident": {
-  "montant": 76,
+  "montant": null,
   "monnaie": "USD",
-  "annee": "2026 (valable jusqu'au 31 mars 2027)",
-  "url": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
+  "annee": 2026,
+  "url_source": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
   "citation": null,
-  "qualite": "extrait_de_recherche_page_officielle_non_lue",
+  "qualite": "donnée absente",
   "lu_le": null,
-  "note": "Non-résident annuel 76 USD (dont 1 USD de surtaxe), même extrait."
+  "valeur_indiquee_non_verifiee": 76,
+  "note": "Non-résident annuel 76 USD, même extrait ; non lu."
  },
- "timbres_obligatoires": [],
+ "timbres": [],
  "appli_officielle": {
   "nom": null,
-  "url": null,
-  "note": "non relevée [?]"
+  "url": null
  },
- "reciprocite_eaux_tribales": {
-  "note": "non relevé [?]"
- },
- "licence_reutilisation": null,
  "verifie": false,
- "raison_non_verifie": "403 sur michigan.gov (WebFetch, curl) y compris la dépêche officielle du 2 mars 2026 et le PDF du digest 2026 ; valeurs vues seulement dans des extraits de recherche.",
- "notes": "Valeurs 26/76 identiques à etats.json. Un guide DNR indique début de saison au 1er avril 2026 ; une autre page 1er mars [?]."
+ "raison_non_verifie": "michigan.gov et mdnr-elicense.com répondent 403 ; legislature.mi.gov injoignable ; valeurs vues seulement dans des extraits de recherche.",
+ "notes": "Saison de licence jusqu'au 31 mars 2027 d'après l'existant [?]. Valeurs 26 / 76 à relire."
 }

@@ -42,5 +42,20 @@ class TestEtats(unittest.TestCase):
         # le test vérifie la cohérence du bilan avec les drapeaux, pas un chiffre figé.
         self.assertEqual(b["verifie"], sum(1 for e in D["etats"] if e["verifie"]))
 
+    def test_lot_d6_19_etats_relus(self):
+        """D6 (7 nov. 2026) : les 19 États restants ont été relus ; 6 passent à vérifié, 13 restent « à vérifier » avec leur raison."""
+        d6 = "AZ CA ID KS KY LA ME MD MA MI MS MT NE NH NJ NM NC RI TN".split()
+        par = {e["usps"]: e for e in D["etats"]}
+        verifies = {c for c in d6 if par[c]["verifie"]}
+        self.assertEqual(verifies, set("LA ME MS NH NJ NM".split()))
+        self.assertEqual(sum(1 for e in D["etats"] if e["verifie"]), 38)
+        for c in d6:
+            e = par[c]
+            self.assertTrue(e["url_agence"].startswith("https://"))
+            self.assertEqual(e["date_lecture"], "2026-11-07")
+            self.assertTrue(any(f"verifs/{c}.json" in x for x in e["sources_rapports"]))
+            if not e["verifie"]:
+                self.assertTrue(json.loads(Path(__file__).with_name("verifs").joinpath(f"{c}.json").read_text())["raison_non_verifie"])
+
 if __name__ == "__main__":
     unittest.main()

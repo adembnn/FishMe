@@ -1046,28 +1046,30 @@
       "nom": "Louisiana",
       "agence": "LDWF (Louisiana Department of Wildlife and Fisheries)",
       "url_agence": "https://www.wlf.louisiana.gov/",
-      "url_regles_eau_douce": "https://www.wlf.louisiana.gov/page/freshwater-fishing",
+      "url_regles_eau_douce": "https://www.wlf.louisiana.gov/assets/Resources/Publications/Regulations/26LAFW.pdf",
       "url_permis": "https://www.wlf.louisiana.gov/page/recreational-fishing-licenses-and-permits",
       "urls_statut": {
-        "url_agence": "bloque_robots",
-        "url_regles_eau_douce": "bloque_robots",
-        "url_permis": "bloque_robots"
+        "url_agence": "ok",
+        "url_regles_eau_douce": "injoignable",
+        "url_permis": "injoignable"
       },
       "prix_resident": {
         "montant": 17,
         "monnaie": "USD",
         "annee": 2026,
         "source": "https://www.wlf.louisiana.gov/page/license-and-permit-fee-list",
-        "qualite": "tiers",
-        "note": "Basic Fishing License 17 USD cité par un extrait de recherche web de la page officielle LDWF (fee list), 2025 regs ; page non lue (403). Contredit l'ancienne valeur 9,5 de etats.json. ; qualité signalée par la vérification : extrait_de_recherche_page_officielle_non_lue"
+        "qualite": "officiel",
+        "note": "grille LDWF lue le 7 nov. 2026 ; 5 jours non-résident 30 $ ; moins de 18 ans : voir page de l'agence",
+        "citation": "Basic Fishing $17 (résident, militaire, étudiant)"
       },
       "prix_non_resident": {
         "montant": 68,
         "monnaie": "USD",
         "annee": 2026,
         "source": "https://www.wlf.louisiana.gov/page/license-and-permit-fee-list",
-        "qualite": "tiers",
-        "note": "Idem : 68 USD ; même valeur dans l'extrait du règlement 2025 (wlf.louisiana.gov/assets/Resources/Publications/Regulations/25LAFW.pdf, 403 aussi). ; qualité signalée par la vérification : extrait_de_recherche_page_officielle_non_lue"
+        "qualite": "officiel",
+        "note": "grille LDWF lue le 7 nov. 2026 ; 5 jours non-résident 30 $ ; moins de 18 ans : voir page de l'agence",
+        "citation": "Basic Fishing nonresident $68"
       },
       "timbres": [],
       "appli_officielle": {
@@ -1085,42 +1087,42 @@
       },
       "permis_payants_2021": null,
       "niveau_vise": 1,
-      "verifie": false,
+      "verifie": true,
       "date_lecture": "2026-11-07",
       "sources_rapports": [
         "outils/us/etats/verifs/LA.json"
       ],
-      "notes": "Vérification du 7 nov. 2026 : Valeurs 17/68 : à relire (le résumé d'une recherche n'est pas une lecture). Un document LDWF signalerait un changement de licence senior au 1er juin 2027. Pas de PDF officiel accessible."
+      "notes": "Vérification du 7 nov. 2026 : Valeurs 17/68 : à relire (le résumé d'une recherche n'est pas une lecture). Un document LDWF signalerait un changement de licence senior au 1er juin 2027. Pas de PDF officiel accessible. Vérification du 7 nov. 2026 : Grille de tarifs LDWF lue (Basic Fishing 17 / 68 $). Licence saltwater en plus pour l'eau salée."
     },
     {
       "usps": "ME",
       "nom": "Maine",
       "agence": "MDIFW (Maine Department of Inland Fisheries and Wildlife)",
       "url_agence": "https://www.maine.gov/ifw/",
-      "url_regles_eau_douce": "https://www.maine.gov/ifw/fishing-boating/fishing/index.html",
+      "url_regles_eau_douce": "https://www.maine.gov/ifw/fishing-boating/fishing/laws-rules/license-requirements.html",
       "url_permis": "https://www.maine.gov/ifw/fishing-boating/fishing/laws-rules/license-requirements.html",
       "urls_statut": {
-        "url_agence": "bloque_robots",
-        "url_regles_eau_douce": "bloque_robots",
-        "url_permis": "bloque_robots"
+        "url_agence": "ok",
+        "url_regles_eau_douce": "ok",
+        "url_permis": "ok"
       },
       "prix_resident": {
         "montant": 30,
         "monnaie": "USD",
         "annee": 2026,
-        "source": "https://legislature.maine.gov/statutes/12/title12sec12501.html",
+        "source": "https://www.maine.gov/ifw/fishing-boating/fishing/laws-rules/license-requirements.html",
         "qualite": "officiel",
-        "note": "loi (Title 12 §12501, PL 2025 c. 388) lue sur le site de la législature, pas sur une page de l'agence ; agent +2 $",
-        "citation": "A. A resident fishing license is $30."
+        "note": "page de l'agence IFW, tableau 2026 ; confirme la loi Title 12 §12501 ; permis requis dès 16 ans",
+        "citation": "Season Fishing (16 and older) $30"
       },
       "prix_non_resident": {
         "montant": 83,
         "monnaie": "USD",
         "annee": 2026,
-        "source": "https://legislature.maine.gov/statutes/12/title12sec12501.html",
+        "source": "https://www.maine.gov/ifw/fishing-boating/fishing/laws-rules/license-requirements.html",
         "qualite": "officiel",
-        "note": "idem ; l'ancien PDF d'application de l'agence cite 84 $ (périmé)",
-        "citation": "A nonresident season fishing license for persons 16 years of age or older is $83."
+        "note": "page de l'agence IFW, tableau 2026 ; confirme la loi Title 12 §12501 ; permis requis dès 16 ans",
+        "citation": "Season Fishing (16 and older) $83"
       },
       "timbres": [],
       "appli_officielle": {
@@ -1136,14 +1138,14 @@
       "eaux_tribales_reciprocite": null,
       "permis_payants_2021": null,
       "niveau_vise": 1,
-      "verifie": false,
+      "verifie": true,
       "date_lecture": "2026-11-07",
       "sources_rapports": [
         "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
         "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md",
         "outils/us/etats/verifs/ME.json"
       ],
-      "notes": "Non-résident [?]. Vérification du 7 nov. 2026 : Qualité : officielle (texte de loi), meilleure que le tiers 30 $ précédent ; le non-résident manquait. Frais d'agent 2 $ en plus (§12501 al. 3)."
+      "notes": "Non-résident [?]. Vérification du 7 nov. 2026 : Qualité : officielle (texte de loi), meilleure que le tiers 30 $ précédent ; le non-résident manquait. Frais d'agent 2 $ en plus (§12501 al. 3). Vérification du 7 nov. 2026 : Page agence lue : 30 $ résident, 83 $ non-résident (saison, 2026), frais d'agent en plus."
     },
     {
       "usps": "MD",
@@ -1160,21 +1162,37 @@
       "prix_resident": {
         "montant": 32,
         "monnaie": "USD",
-        "annee": 2026,
-        "source": "https://content.govdelivery.com/accounts/MDDNR/bulletins/3cb978a",
+        "annee": 2025,
+        "source": "https://mgaleg.maryland.gov/2025RS/chapters_noln/Ch_46_sb0258T.pdf",
         "qualite": "officiel",
-        "note": "Communiqué officiel mais projet ; l'entrée en vigueur (1er juin 2025) n'a pas été lue sur une page officielle.",
-        "citation": "Annual nontidal resident fishing license: would increase to $32 from $20.50 (communiqué DNR du 10 janv. 2025, tarif PROPOSÉ)"
+        "note": "Texte de la loi promulguée (chapitre 46, 2025, Nat. Res. 4-604(f)), site de l'Assemblée générale du Maryland, en vigueur le 1er juin 2025 ; licence annuelle eau douce (nontidal), 16 ans et plus. Frais d'agent éventuels non lus.",
+        "citation": "Resident [$20.50] $32"
       },
-      "prix_non_resident": null,
+      "prix_non_resident": {
+        "montant": 55,
+        "monnaie": "USD",
+        "annee": 2025,
+        "source": "https://mgaleg.maryland.gov/2025RS/chapters_noln/Ch_46_sb0258T.pdf",
+        "qualite": "officiel",
+        "note": "Montant plancher : le texte dit « le plus élevé » entre 55 USD et le tarif que l'État d'origine du pêcheur fait payer à un résident du Maryland ; le prix réel peut donc être plus haut selon l'État d'origine. 7 jours 45 USD, 3 jours 35 USD (même texte).",
+        "citation": "greater of: [$30.50] $55"
+      },
       "timbres": [
         {
-          "nom": "timbre truite résident (proposé 2025)",
+          "nom": "Timbre truite résident (Trout Stamp)",
           "montant": 20,
           "annee": 2026,
-          "source": "https://dnr.maryland.gov/Pages/fishing-license.aspx",
+          "source": "https://mgaleg.maryland.gov/2025RS/chapters_noln/Ch_46_sb0258T.pdf",
           "qualite": "officiel",
-          "note": "communiqué du 10 janv. 2025 : de 5 à 20, projet"
+          "note": "Nat. Res. 4-614(c), de 5 à 20 USD ; requis dans les zones à truite désignées, pas pour toute l'eau douce"
+        },
+        {
+          "nom": "Timbre truite non-résident (Trout Stamp)",
+          "montant": 30,
+          "annee": 2026,
+          "source": "https://mgaleg.maryland.gov/2025RS/chapters_noln/Ch_46_sb0258T.pdf",
+          "qualite": "officiel",
+          "note": "de 10 à 30 USD, même texte"
         }
       ],
       "appli_officielle": {
@@ -1197,7 +1215,7 @@
         "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md",
         "outils/us/etats/verifs/MD.json"
       ],
-      "notes": "Non-résident [?] ; non-tidal seulement. Vérification du 7 nov. 2026 : dnr.maryland.gov renvoie 403 à toutes les pages ; seul un communiqué officiel GovDelivery lisible (projet de tarifs). | Résident 32 confirmé comme proposé par DNR (communiqué) ; non-résident non lu."
+      "notes": "Non-résident [?] ; non-tidal seulement. Vérification du 7 nov. 2026 : dnr.maryland.gov renvoie 403 à toutes les pages ; seul un communiqué officiel GovDelivery lisible (projet de tarifs). | Résident 32 confirmé comme proposé par DNR (communiqué) ; non-résident non lu. Vérification du 7 nov. 2026 : Permis requis pour pêcher en eau douce (nontidal) dès 16 ans (Nat. Res. 4-604(b), lu). Prix lus dans la loi (Assemblée générale), pas sur dnr.maryland.gov qui répond 403 partout. Le communiqué DNR du 10 janv. 2025 (content.govdelivery.com/accounts/MDDNR/bulletins/3cb978a, 200) annonçait le projet 32 / timbre 20. Montant non-résident = plancher réciproque ; la fiche DNR de tarifs non-résidents (révisée fév. 2026 selon la recherche) n'a pas pu être lue."
     },
     {
       "usps": "MA",
@@ -1217,7 +1235,7 @@
         "annee": 2024,
         "source": "https://tacklevillage.com/?p=8387",
         "qualite": "tiers",
-        "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?] ; valeur indiquée non vérifiée : 40.0 (page de localisation : https://www.mass.gov/info-details/license-types-and-fees)"
+        "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?] ; valeur indiquée non vérifiée : 40.0 (page de localisation : https://www.mass.gov/info-details/license-types-and-fees) ; valeur indiquée non vérifiée : 40.0 (page de localisation : None)"
       },
       "prix_non_resident": {
         "montant": 37.5,
@@ -1225,7 +1243,7 @@
         "annee": 2024,
         "source": "https://tacklevillage.com/?p=8387",
         "qualite": "tiers",
-        "note": "tableau tiers daté du 17 avr. 2024 [?] ; valeur indiquée non vérifiée : 50.0 (page de localisation : https://www.mass.gov/info-details/license-types-and-fees)"
+        "note": "tableau tiers daté du 17 avr. 2024 [?] ; valeur indiquée non vérifiée : 50.0 (page de localisation : https://www.mass.gov/info-details/license-types-and-fees) ; valeur indiquée non vérifiée : 50.0 (page de localisation : None)"
       },
       "timbres": [],
       "appli_officielle": {
@@ -1246,7 +1264,7 @@
       "sources_rapports": [
         "outils/us/etats/verifs/MA.json"
       ],
-      "notes": "Vérification du 7 nov. 2026 : Un barème échelonné 2021-2026 existe (titre du PDF officiel), ce qui explique l'écart avec 2024. À relire depuis un navigateur."
+      "notes": "Vérification du 7 nov. 2026 : Un barème échelonné 2021-2026 existe (titre du PDF officiel), ce qui explique l'écart avec 2024. À relire depuis un navigateur. Timbres non chiffrables en un seul montant (vérification du 7 nov. 2026) : Wildlands Conservation Stamp (non-résident) : montant non lu Vérification du 7 nov. 2026 : Permis eau douce requis (usage général, non relu cette session). Vente officielle : MassFishHunt. À relire depuis un navigateur."
     },
     {
       "usps": "MI",
@@ -1266,7 +1284,7 @@
         "annee": 2026,
         "source": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
         "qualite": "tiers",
-        "note": "All-species annuel 26 USD (dont 1 USD de surtaxe) selon un extrait de recherche de michigan.gov/dnr ; page non lue (403). ; qualité signalée par la vérification : extrait_de_recherche_page_officielle_non_lue"
+        "note": "All-species annuel 26 USD (dont 1 USD de surtaxe) selon un extrait de recherche de michigan.gov/dnr ; page non lue (403). ; qualité signalée par la vérification : extrait_de_recherche_page_officielle_non_lue ; valeur indiquée non vérifiée : 26 (page de localisation : None)"
       },
       "prix_non_resident": {
         "montant": 76,
@@ -1274,7 +1292,7 @@
         "annee": 2026,
         "source": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
         "qualite": "tiers",
-        "note": "Non-résident annuel 76 USD (dont 1 USD de surtaxe), même extrait. ; qualité signalée par la vérification : extrait_de_recherche_page_officielle_non_lue"
+        "note": "Non-résident annuel 76 USD (dont 1 USD de surtaxe), même extrait. ; qualité signalée par la vérification : extrait_de_recherche_page_officielle_non_lue ; valeur indiquée non vérifiée : 76 (page de localisation : None)"
       },
       "timbres": [],
       "appli_officielle": {
@@ -1299,7 +1317,7 @@
         "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md",
         "outils/us/etats/verifs/MI.json"
       ],
-      "notes": "Vérification du 7 nov. 2026 : Valeurs 26/76 identiques à etats.json. Un guide DNR indique début de saison au 1er avril 2026 ; une autre page 1er mars [?]."
+      "notes": "Vérification du 7 nov. 2026 : Valeurs 26/76 identiques à etats.json. Un guide DNR indique début de saison au 1er avril 2026 ; une autre page 1er mars [?]. Vérification du 7 nov. 2026 : Saison de licence jusqu'au 31 mars 2027 d'après l'existant [?]. Valeurs 26 / 76 à relire."
     },
     {
       "usps": "MN",
@@ -1389,8 +1407,8 @@
         "annee": 2026,
         "source": "https://www.mdwfp.com/licenses-permits/hunting-and-fishing-license-prices",
         "qualite": "officiel",
-        "note": "LICENCE COMBINÉE (chasse petit gibier + pêche eau douce) : aucune licence résidente de pêche seule listée ; All Game Hunting/Freshwater Fishing 25 $ ; Sportsman 45 $ ; 3 jours eau douce 3 $ ; + frais agent 1 $ et traitement 2,49 $",
-        "citation": "Small Game Hunting/Freshwater Fishing $10.00 $1.00 $2.49"
+        "note": "LICENCE COMBINÉE chasse petit gibier + pêche eau douce : aucune licence résidente de pêche seule listée ; All Game Hunting/Freshwater Fishing 25 USD ; 3 jours eau douce 3 USD ; en plus frais d'agent 1 USD et de traitement 2,49 USD.",
+        "citation": "Small Game Hunting/Freshwater Fishing $10.00"
       },
       "prix_non_resident": {
         "montant": 68,
@@ -1398,12 +1416,12 @@
         "annee": 2026,
         "source": "https://www.mdwfp.com/licenses-permits/hunting-and-fishing-license-prices",
         "qualite": "officiel",
-        "note": "+ frais agent 3 $ et traitement 4,42 $ ; 3 jours 30 $ ; 1 jour 10 $",
-        "citation": "Freshwater Fishing $68.00 $3.00 $4.42"
+        "note": "+ frais d'agent 3 USD et de traitement 4,42 USD ; 3 jours 30 USD ; 1 jour 10 USD.",
+        "citation": "Freshwater Fishing $68.00"
       },
       "timbres": [],
       "appli_officielle": {
-        "nom": "MDWFP HuntFish",
+        "nom": "MDWFP HuntFish App",
         "url": null
       },
       "format_regles": {
@@ -1415,12 +1433,12 @@
       "eaux_tribales_reciprocite": null,
       "permis_payants_2021": null,
       "niveau_vise": 1,
-      "verifie": false,
+      "verifie": true,
       "date_lecture": "2026-11-07",
       "sources_rapports": [
         "outils/us/etats/verifs/MS.json"
       ],
-      "notes": "Vérification du 7 nov. 2026 : Remplace 12,29 $ / 64,29 $ (tableau tiers 2024, périmé). Nom d'appli cité par la page des permis : « MDWFP HuntFish Mobile App »."
+      "notes": "Vérification du 7 nov. 2026 : Remplace 12,29 $ / 64,29 $ (tableau tiers 2024, périmé). Nom d'appli cité par la page des permis : « MDWFP HuntFish Mobile App ». Vérification du 7 nov. 2026 : Permis requis pour l'eau douce. Relu le 7 nov. 2026 : page officielle mdwfp.com lisible (200). Le prix résident est celui de la licence combinée la moins chère qui inclut la pêche en eau douce (pas de pêche seule). Remplace 12,29 / 64,29 (tableau tiers 2024)."
     },
     {
       "usps": "MO",
@@ -1521,20 +1539,39 @@
       "prix_resident": {
         "montant": 21,
         "monnaie": "USD",
-        "annee": 2026,
-        "source": "https://fwp.mt.gov/fish/license",
-        "qualite": "tiers",
-        "note": "Full-season fishing license résident 21 USD selon un extrait de recherche de fwp.mt.gov ; page non lue. À cela s'ajoutent la Conservation License (8 USD résident) et un Aquatic Invasive Species pass (montant contradictoire selon sources) : total tiers 31 USD. ; qualité signalée par la vérification : extrait_de_recherche_page_officielle_non_lue"
+        "annee": 2025,
+        "source": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0030/section_0010/0870-0020-0030-0010.html",
+        "qualite": "officiel",
+        "note": "Code annoté du Montana (MCA 2025), 87-2-301, site officiel de la législature (mca.legmt.gov) ; licence de pêche Classe A. S'ajoute à la Conservation License (8 USD).",
+        "citation": "upon payment of a fee of $21"
       },
       "prix_non_resident": {
         "montant": 100,
         "monnaie": "USD",
-        "annee": 2026,
-        "source": "https://fwp.mt.gov/fish/license",
-        "qualite": "tiers",
-        "note": "Non-résident 100 USD (+10 USD Conservation License + AIS 7,50 ou 15 : conflit). Total 117,50 de etats.json = somme tierce non vérifiée. ; qualité signalée par la vérification : extrait_de_recherche_page_officielle_non_lue"
+        "annee": 2025,
+        "source": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0030/section_0020/0870-0020-0030-0020.html",
+        "qualite": "officiel",
+        "note": "MCA 2025, 87-2-302, licence Classe B ; s'ajoute à la Conservation License (10 USD). Licence d'un jour non-résident : 87-2-304 (non lue en détail).",
+        "citation": "upon payment of the sum of $100"
       },
-      "timbres": [],
+      "timbres": [
+        {
+          "nom": "Conservation License résident",
+          "montant": 8,
+          "annee": 2026,
+          "source": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0020/section_0020/0870-0020-0020-0020.html",
+          "qualite": "officiel",
+          "note": "MCA 87-2-202(3)(a) : 8 USD dont 25 cents de don facultatif"
+        },
+        {
+          "nom": "Conservation License non-résident",
+          "montant": 10,
+          "annee": 2026,
+          "source": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0020/section_0020/0870-0020-0020-0020.html",
+          "qualite": "officiel",
+          "note": "MCA 87-2-202(3)(b) : 10 USD dont 25 cents de don facultatif"
+        }
+      ],
       "appli_officielle": {
         "nom": "[?]",
         "url": null
@@ -1555,7 +1592,7 @@
       "sources_rapports": [
         "outils/us/etats/verifs/MT.json"
       ],
-      "notes": "Licence de conservation obligatoire avant la licence de pêche ; achat en ligne depuis le 1er mars 2026 (tiers). Vérification du 7 nov. 2026 : Ne pas prendre 31 / 117,50 pour des prix officiels : ce sont des totaux d'un tiers, le montant du pass AIS étant contradictoire."
+      "notes": "Licence de conservation obligatoire avant la licence de pêche ; achat en ligne depuis le 1er mars 2026 (tiers). Vérification du 7 nov. 2026 : Ne pas prendre 31 / 117,50 pour des prix officiels : ce sont des totaux d'un tiers, le montant du pass AIS étant contradictoire. Timbres non chiffrables en un seul montant (vérification du 7 nov. 2026) : Aquatic Invasive Species (AIS) pass : montant non lu Vérification du 7 nov. 2026 : Permis requis pour pêcher en eau douce dès 12 ans (87-2-805 : moins de 12 ans sans permis, lu). Prix lus dans le Code annoté officiel (édition 2025) car fwp.mt.gov ne se résout pas ici. Les totaux tiers 31 / 117,50 ne sont pas confirmés (AIS inconnu). Une loi plus récente que l'édition 2025 a pu changer un montant : à recouper sur fwp.mt.gov."
     },
     {
       "usps": "NE",
@@ -1575,7 +1612,7 @@
         "annee": 2024,
         "source": "https://tacklevillage.com/?p=8387",
         "qualite": "tiers",
-        "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+        "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?] ; valeur indiquée non vérifiée : 41 (page de localisation : None)"
       },
       "prix_non_resident": {
         "montant": 84,
@@ -1583,7 +1620,7 @@
         "annee": 2024,
         "source": "https://tacklevillage.com/?p=8387",
         "qualite": "tiers",
-        "note": "tableau tiers daté du 17 avr. 2024 [?]"
+        "note": "tableau tiers daté du 17 avr. 2024 [?] ; valeur indiquée non vérifiée : 95.5 (page de localisation : None)"
       },
       "timbres": [],
       "appli_officielle": {
@@ -1604,7 +1641,7 @@
       "sources_rapports": [
         "outils/us/etats/verifs/NE.json"
       ],
-      "notes": "Vérification du 7 nov. 2026 : Indice NON lu, à confirmer : résumé de moteur de recherche de la page officielle permit-pricing : annuel pêche résident 41 $ et non-résident 95,50 $ (timbre habitat aquatique inclus, + 3 $ d'émission) pour 2026 ; 2027 proposé 24 $ / 82 $ de base (en attente d'approbation). Les 38 $ / 84 $ de 2024 sont périmés."
+      "notes": "Vérification du 7 nov. 2026 : Indice NON lu, à confirmer : résumé de moteur de recherche de la page officielle permit-pricing : annuel pêche résident 41 $ et non-résident 95,50 $ (timbre habitat aquatique inclus, + 3 $ d'émission) pour 2026 ; 2027 proposé 24 $ / 82 $ de base (en attente d'approbation). Les 38 $ / 84 $ de 2024 sont périmés. Timbres non chiffrables en un seul montant (vérification du 7 nov. 2026) : Aquatic Habitat Stamp : montant non lu Vérification du 7 nov. 2026 : Les tarifs de 2024 (38 / 84) sont périmés ; hausses votées en 2025 (communiqué) avec une proposition 2027 de 24 / 82 en base, non lue. À relire depuis un navigateur."
     },
     {
       "usps": "NV",
@@ -1662,28 +1699,30 @@
       "nom": "New Hampshire",
       "agence": "NH Fish and Game Department",
       "url_agence": "https://www.wildlife.nh.gov/",
-      "url_regles_eau_douce": "https://www.wildlife.nh.gov/fishing-and-boating",
+      "url_regles_eau_douce": "https://www.wildlife.nh.gov/fishing-new-hampshire",
       "url_permis": "https://www.wildlife.nh.gov/licenses-and-permits/license-prices",
       "urls_statut": {
-        "url_agence": "bloque_robots",
-        "url_regles_eau_douce": "bloque_robots",
-        "url_permis": "bloque_robots"
+        "url_agence": "ok",
+        "url_regles_eau_douce": "ok",
+        "url_permis": "ok"
       },
       "prix_resident": {
         "montant": 45,
         "monnaie": "USD",
         "annee": 2026,
         "source": "https://www.wildlife.nh.gov/licenses-and-permits/license-prices",
-        "qualite": "tiers",
-        "note": "Résident annuel eau douce 45 USD selon un extrait de recherche de la page officielle de prix ; non lue (403). Le code administratif (Fis 1100) indiquerait 43, donc ancien. ; qualité signalée par la vérification : extrait_de_recherche_page_officielle_non_lue"
+        "qualite": "officiel",
+        "note": "Année de validité non affichée sur la page ; lu en novembre 2026. Hors frais de transaction (2,00 USD, 2,75 en ligne).",
+        "citation": "Freshwater Fishing: Resident: $45.00, Non Resident: $63.00"
       },
       "prix_non_resident": {
         "montant": 63,
         "monnaie": "USD",
         "annee": 2026,
         "source": "https://www.wildlife.nh.gov/licenses-and-permits/license-prices",
-        "qualite": "tiers",
-        "note": "Non-résident 63 USD (même extrait ; code administratif ancien : 61). ; qualité signalée par la vérification : extrait_de_recherche_page_officielle_non_lue"
+        "qualite": "officiel",
+        "note": "Même page ; année non affichée.",
+        "citation": "Freshwater Fishing: Resident: $45.00, Non Resident: $63.00"
       },
       "timbres": [],
       "appli_officielle": {
@@ -1701,42 +1740,44 @@
       },
       "permis_payants_2021": null,
       "niveau_vise": 1,
-      "verifie": false,
+      "verifie": true,
       "date_lecture": "2026-11-07",
       "sources_rapports": [
         "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
         "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md",
         "outils/us/etats/verifs/NH.json"
       ],
-      "notes": "Résident [?]. Vérification du 7 nov. 2026 : Résident 45 : nouveau par rapport à etats.json (null). Saltwater séparé (11 USD) hors périmètre."
+      "notes": "Résident [?]. Vérification du 7 nov. 2026 : Résident 45 : nouveau par rapport à etats.json (null). Saltwater séparé (11 USD) hors périmètre. Vérification du 7 nov. 2026 : Les deux prix lus sur la page officielle de l’agence le 2026-11-07. Les frais Wildlife Habitat (2,50 USD) concernent les permis de chasse, pas la pêche seule. Saltwater séparé (11 USD) hors périmètre. Année de validité exacte à confirmer [?]."
     },
     {
       "usps": "NJ",
       "nom": "New Jersey",
       "agence": "NJDEP Division of Fish and Wildlife",
       "url_agence": "https://dep.nj.gov/njfw/",
-      "url_regles_eau_douce": "https://dep.nj.gov/njfw/fishing/freshwater/",
+      "url_regles_eau_douce": "https://dep.nj.gov/njfw/digests/freshwater-fishing/",
       "url_permis": "https://dep.nj.gov/njfw/fishing/freshwater/buy-a-license/",
       "urls_statut": {
         "url_agence": "ok",
-        "url_regles_eau_douce": "ok",
+        "url_regles_eau_douce": "injoignable",
         "url_permis": "ok"
       },
       "prix_resident": {
-        "montant": 33,
+        "montant": 22.5,
         "monnaie": "USD",
-        "annee": 2024,
-        "source": "https://tacklevillage.com/?p=8387",
-        "qualite": "tiers",
-        "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?] (avec timbre truite ?)"
+        "annee": 2026,
+        "source": "https://dep.nj.gov/njfw/fishing/freshwater/buy-a-license/",
+        "qualite": "officiel",
+        "note": "Valable de la date d’achat au 31 décembre ; requis dès 16 ans, eaux privées comprises.",
+        "citation": "RESIDENT FISHING ($22.50) Ages 16-64 years"
       },
       "prix_non_resident": {
-        "montant": 54,
+        "montant": 34,
         "monnaie": "USD",
-        "annee": 2024,
-        "source": "https://tacklevillage.com/?p=8387",
-        "qualite": "tiers",
-        "note": "tableau tiers daté du 17 avr. 2024 [?] (avec timbre truite ?)"
+        "annee": 2026,
+        "source": "https://dep.nj.gov/njfw/fishing/freshwater/buy-a-license/",
+        "qualite": "officiel",
+        "note": "Même page.",
+        "citation": "NON-RESIDENT FISHING LICENSE ($34) Ages 16 and up"
       },
       "timbres": [],
       "appli_officielle": {
@@ -1749,22 +1790,24 @@
         "url_service": null
       },
       "licence_reutilisation": null,
-      "eaux_tribales_reciprocite": null,
+      "eaux_tribales_reciprocite": {
+        "note": "non relevé [?]"
+      },
       "permis_payants_2021": null,
       "niveau_vise": 1,
-      "verifie": false,
+      "verifie": true,
       "date_lecture": "2026-11-07",
       "sources_rapports": [
         "outils/us/etats/verifs/NJ.json"
       ],
-      "notes": "Timbres non chiffrables en un seul montant (vérification du 7 nov. 2026) : Trout stamp : montant non lu Vérification du 7 nov. 2026 : Validité des licences et du timbre : du jour d'achat au 31 déc. (résumé de recherche d'une page NJDEP, non lu). Digest 2026 : https://dep.nj.gov/wp-content/uploads/njfw/digest-freshwater-fishing-2026-segment-16-21.pdf."
+      "notes": "Timbres non chiffrables en un seul montant (vérification du 7 nov. 2026) : Trout stamp : montant non lu Vérification du 7 nov. 2026 : Validité des licences et du timbre : du jour d'achat au 31 déc. (résumé de recherche d'une page NJDEP, non lu). Digest 2026 : https://dep.nj.gov/wp-content/uploads/njfw/digest-freshwater-fishing-2026-segment-16-21.pdf. Vérification du 7 nov. 2026 : Deux prix lus sur la page officielle le 2026-11-07. Autres formules vues : 2 jours non-résident 9, 7 jours non-résident 19,50, All Around 72,25, Boat Ramp 15 (hors périmètre). Le timbre truite n’est requis que pour truite ou saumon."
     },
     {
       "usps": "NM",
       "nom": "New Mexico",
       "agence": "NMDGF (Department of Game and Fish)",
       "url_agence": "https://wildlife.dgf.nm.gov/",
-      "url_regles_eau_douce": "https://wildlife.dgf.nm.gov/fishing/",
+      "url_regles_eau_douce": "https://wildlife.dgf.nm.gov/download/new-mexico-fishing-rules-and-info/?wpdmdl=54215",
       "url_permis": "https://wildlife.dgf.nm.gov/fishing/licenses-permits/",
       "urls_statut": {
         "url_agence": "ok",
@@ -1772,20 +1815,22 @@
         "url_permis": "ok"
       },
       "prix_resident": {
-        "montant": 25,
+        "montant": 35,
         "monnaie": "USD",
-        "annee": 2024,
-        "source": "https://tacklevillage.com/?p=8387",
-        "qualite": "tiers",
-        "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+        "annee": 2026,
+        "source": "https://wildlife.dgf.nm.gov/download/new-mexico-fishing-rules-and-info/?wpdmdl=54215",
+        "qualite": "officiel",
+        "note": "Année de permis 2026-2027 (1er avril au 31 mars) ; requis dès 12 ans. Frais de vendeur par transaction en plus.",
+        "citation": "Annual Fishing $35.00 $90.00"
       },
       "prix_non_resident": {
-        "montant": 56,
+        "montant": 90,
         "monnaie": "USD",
-        "annee": 2024,
-        "source": "https://tacklevillage.com/?p=8387",
-        "qualite": "tiers",
-        "note": "tableau tiers daté du 17 avr. 2024 [?]"
+        "annee": 2026,
+        "source": "https://wildlife.dgf.nm.gov/download/new-mexico-fishing-rules-and-info/?wpdmdl=54215",
+        "qualite": "officiel",
+        "note": "Même tableau (colonne Nonresident) ; 2026-2027.",
+        "citation": "Annual Fishing $35.00 $90.00"
       },
       "timbres": [
         {
@@ -1815,15 +1860,17 @@
         "url_service": null
       },
       "licence_reutilisation": null,
-      "eaux_tribales_reciprocite": null,
+      "eaux_tribales_reciprocite": {
+        "note": "Page permis : pas de permis NM requis sur réserves tribales ni lacs privés de classe A."
+      },
       "permis_payants_2021": null,
       "niveau_vise": 1,
-      "verifie": false,
+      "verifie": true,
       "date_lecture": "2026-11-07",
       "sources_rapports": [
         "outils/us/etats/verifs/NM.json"
       ],
-      "notes": "Vérification du 7 nov. 2026 : Page HTML sans prix ; PDF officiel 2026-2027 lu mais lignes du tableau sans libellés exploitables (extraction sans bibliothèque PDF). Valeur stockée 25/56 = tarif 2025-26 possible, à ne pas considérer à jour. | Valable 1er avr.-31 mars. Hypothèse à confirmer : 35 / 90 en 2026-27 [?]. Un tiers cite 25/56 (2025-26). Habitat Stamp 10 USD (12 ans+)."
+      "notes": "Vérification du 7 nov. 2026 : Page HTML sans prix ; PDF officiel 2026-2027 lu mais lignes du tableau sans libellés exploitables (extraction sans bibliothèque PDF). Valeur stockée 25/56 = tarif 2025-26 possible, à ne pas considérer à jour. | Valable 1er avr.-31 mars. Hypothèse à confirmer : 35 / 90 en 2026-27 [?]. Un tiers cite 25/56 (2025-26). Habitat Stamp 10 USD (12 ans+). Vérification du 7 nov. 2026 : Deux prix lus dans le PDF officiel de l’agence. Autres lignes : 1 jour 12, 5 jours 30, Second Rod Validation 10 (hors périmètre). Combo Game-Hunting & Fishing résident 42."
     },
     {
       "usps": "NY",
@@ -1885,8 +1932,8 @@
       "nom": "North Carolina",
       "agence": "NCWRC (Wildlife Resources Commission)",
       "url_agence": "https://www.ncwildlife.gov/",
-      "url_regles_eau_douce": "https://www.ncwildlife.gov/fishing",
-      "url_permis": "https://license.gooutdoorsnorthcarolina.com/",
+      "url_regles_eau_douce": "https://www.ncwildlife.gov/fishing/regulations",
+      "url_permis": "https://www.ncwildlife.gov/hunting/license-types-and-fees",
       "urls_statut": {
         "url_agence": "ok",
         "url_regles_eau_douce": "ok",
@@ -1896,18 +1943,18 @@
         "montant": 32,
         "monnaie": "USD",
         "annee": 2026,
-        "source": "https://www.oah.nc.gov/media/18321/download",
-        "qualite": "officiel",
-        "note": "PDF du Bureau des audiences administratives (OAH) de Caroline du Nord ; deuxième montant = nouveau ; non confirmé sur une page de la NCWRC ; précision de la vérification : officielle (règle 15A NCAC 10A .1601, texte avec ancien et nouveau montants) ; saison : inland annuel ; entrée en vigueur du 1er août ou du 1er juillet 2026 [?]",
+        "source": "https://www.eregulations.com/northcarolina/fishing/fishing-licenses",
+        "qualite": "tiers",
+        "note": "32 USD lu sur eregulations (digest hébergé par un tiers). La citation vient du texte officiel ncwildlife.gov/media/4952/open (projet d’amendement 15A NCAC 10A .1601 : ancien 30, nouveau 32 ; date d’effet non lue). Les deux concordent mais aucune page de vente ou de tarifs officielle en vigueur n’a été lue.",
         "citation": "Resident State Inland Fishing License - $30.00. $32.00."
       },
       "prix_non_resident": {
         "montant": 56,
         "monnaie": "USD",
         "annee": 2026,
-        "source": "https://www.oah.nc.gov/media/18321/download",
-        "qualite": "officiel",
-        "note": "précision de la vérification : officielle (règle 15A NCAC 10A .1601, texte avec ancien et nouveau montants) ; saison : inland annuel ; entrée en vigueur du 1er août ou du 1er juillet 2026 [?]",
+        "source": "https://www.eregulations.com/northcarolina/fishing/fishing-licenses",
+        "qualite": "tiers",
+        "note": "Même situation : 56 sur eregulations ; ancien 54 puis nouveau 56 dans le projet d’amendement officiel.",
         "citation": "Nonresident State Inland Fishing License - $54.00. $56.00."
       },
       "timbres": [],
@@ -1922,7 +1969,9 @@
         "url_service": null
       },
       "licence_reutilisation": "[?] (eRegulations ©)",
-      "eaux_tribales_reciprocite": null,
+      "eaux_tribales_reciprocite": {
+        "note": "non relevé [?]"
+      },
       "permis_payants_2021": 1487575,
       "niveau_vise": 2,
       "verifie": false,
@@ -1932,7 +1981,7 @@
         "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md",
         "outils/us/etats/verifs/NC.json"
       ],
-      "notes": "Volume 1 487 575. url_permis : URL devinée https://www.ncwildlife.gov/licenses en 404, retirée [?]. Vérification du 7 nov. 2026 : Concorde avec eRegulations (32/56). Mountain Heritage Trout Waters : permis 3 jours séparé 10 $ -> 11 $ (règle), inutile avec la licence annuelle (résumé de recherche). Plateforme : forfaits « Inland Angler » etc. (prix non attribuables sans ambiguïté, non repris). Non lu : PDF Digest."
+      "notes": "Volume 1 487 575. url_permis : URL devinée https://www.ncwildlife.gov/licenses en 404, retirée [?]. Vérification du 7 nov. 2026 : Concorde avec eRegulations (32/56). Mountain Heritage Trout Waters : permis 3 jours séparé 10 $ -> 11 $ (règle), inutile avec la licence annuelle (résumé de recherche). Plateforme : forfaits « Inland Angler » etc. (prix non attribuables sans ambiguïté, non repris). Non lu : PDF Digest. Vérification du 7 nov. 2026 : Le projet d’amendement officiel liste aussi 10 jours résident 12 et non-résident 29 (hors périmètre). Privilège truite et licence côtière séparés, non relevés comme obligatoires [?]."
     },
     {
       "usps": "ND",
@@ -2259,9 +2308,9 @@
       "usps": "RI",
       "nom": "Rhode Island",
       "agence": "RI DEM Division of Fish and Wildlife",
-      "url_agence": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife",
+      "url_agence": "https://dem.ri.gov/",
       "url_regles_eau_douce": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife/freshwater-fishing",
-      "url_permis": "https://dem.ri.gov/natural-resources-bureau/natural-resources-divisions/fish-wildlife/freshwater-fishing/licenses-0",
+      "url_permis": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife/freshwater-fishing/licenses",
       "urls_statut": {
         "url_agence": "bloque_robots",
         "url_regles_eau_douce": "bloque_robots",
@@ -2273,7 +2322,7 @@
         "annee": 2024,
         "source": "https://tacklevillage.com/?p=8387",
         "qualite": "tiers",
-        "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?] (avec timbre truite ?) ; valeur indiquée non vérifiée : 24.0 (page de localisation : https://dem.ri.gov/natural-resources-bureau/natural-resources-divisions/fish-wildlife/freshwater-fishing/licenses-0)"
+        "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?] (avec timbre truite ?) ; valeur indiquée non vérifiée : 24.0 (page de localisation : https://dem.ri.gov/natural-resources-bureau/natural-resources-divisions/fish-wildlife/freshwater-fishing/licenses-0) ; valeur indiquée non vérifiée : 24 (page de localisation : None)"
       },
       "prix_non_resident": {
         "montant": 40.5,
@@ -2281,7 +2330,7 @@
         "annee": 2024,
         "source": "https://tacklevillage.com/?p=8387",
         "qualite": "tiers",
-        "note": "tableau tiers daté du 17 avr. 2024 [?] (avec timbre truite ?) ; valeur indiquée non vérifiée : 41.0 (page de localisation : https://dem.ri.gov/natural-resources-bureau/natural-resources-divisions/fish-wildlife/freshwater-fishing/licenses-0)"
+        "note": "tableau tiers daté du 17 avr. 2024 [?] (avec timbre truite ?) ; valeur indiquée non vérifiée : 41.0 (page de localisation : https://dem.ri.gov/natural-resources-bureau/natural-resources-divisions/fish-wildlife/freshwater-fishing/licenses-0) ; valeur indiquée non vérifiée : 41 (page de localisation : None)"
       },
       "timbres": [],
       "appli_officielle": {
@@ -2294,7 +2343,9 @@
         "url_service": null
       },
       "licence_reutilisation": null,
-      "eaux_tribales_reciprocite": null,
+      "eaux_tribales_reciprocite": {
+        "note": "non relevé [?]"
+      },
       "permis_payants_2021": null,
       "niveau_vise": 1,
       "verifie": false,
@@ -2302,7 +2353,7 @@
       "sources_rapports": [
         "outils/us/etats/verifs/RI.json"
       ],
-      "notes": "Timbres non chiffrables en un seul montant (vérification du 7 nov. 2026) : Trout Conservation Stamp : montant non lu Vérification du 7 nov. 2026 : Année de licence du 1er mars au dernier jour de février (résumé de recherche de la page DEM, non lu). Les tarifs augmentent par paliers (communiqué DEM 2024, non lu)."
+      "notes": "Timbres non chiffrables en un seul montant (vérification du 7 nov. 2026) : Trout Conservation Stamp : montant non lu Vérification du 7 nov. 2026 : Année de licence du 1er mars au dernier jour de février (résumé de recherche de la page DEM, non lu). Les tarifs augmentent par paliers (communiqué DEM 2024, non lu). Vérification du 7 nov. 2026 : Résumés de recherche non officiels : année de permis de mars à février [?] ; timbres non relevés [?]. À relire depuis un réseau ou navigateur que DEM accepte."
     },
     {
       "usps": "SC",
@@ -2431,9 +2482,9 @@
       "url_regles_eau_douce": "https://www.tn.gov/twra/fishing.html",
       "url_permis": "https://www.tn.gov/twra/license-sales.html",
       "urls_statut": {
-        "url_agence": "injoignable",
-        "url_regles_eau_douce": "injoignable",
-        "url_permis": "injoignable"
+        "url_agence": "bloque_robots",
+        "url_regles_eau_douce": "bloque_robots",
+        "url_permis": "bloque_robots"
       },
       "prix_resident": null,
       "prix_non_resident": {
@@ -2442,7 +2493,7 @@
         "annee": 2026,
         "source": "https://www.tn.gov/twra/license-sales.html",
         "qualite": "tiers",
-        "note": "Annual Fishing No Trout 49 USD, selon des guides tiers ; un autre tiers donne 99 USD avec truite : non confirmé. ; qualité signalée par la vérification : extrait_de_recherche_tiers_non_lu"
+        "note": "Annual Fishing No Trout 49 USD, selon des guides tiers ; un autre tiers donne 99 USD avec truite : non confirmé. ; qualité signalée par la vérification : extrait_de_recherche_tiers_non_lu ; valeur indiquée non vérifiée : 98 (page de localisation : None)"
       },
       "timbres": [
         {
@@ -2476,7 +2527,7 @@
         "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md",
         "outils/us/etats/verifs/TN.json"
       ],
-      "notes": "Prix résident de la pêche seule [?] ; tn.gov en 403. Vérification du 7 nov. 2026 : Hausse proposée par la commission en août 2026 pour l'exercice FY28 (combo résident 33 -> 42), à valider en octobre 2026 : source presse seulement [?]. Les prix 2026-27 peuvent donc changer."
+      "notes": "Prix résident de la pêche seule [?] ; tn.gov en 403. Vérification du 7 nov. 2026 : Hausse proposée par la commission en août 2026 pour l'exercice FY28 (combo résident 33 -> 42), à valider en octobre 2026 : source presse seulement [?]. Les prix 2026-27 peuvent donc changer. Vérification du 7 nov. 2026 : Hausse approuvée par la commission le 21 août 2026 pour l’exercice FY28 (combo résident 33 vers 42) : les prix 2027-28 changeront ; source vue seulement dans un résumé de recherche d’une page tn.gov/twra non ouvrable. À relire depuis un réseau accepté par tn.gov."
     },
     {
       "usps": "TX",

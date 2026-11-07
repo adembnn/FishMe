@@ -1,71 +1,74 @@
 {
- "usps": "MT",
- "nom": "Montana",
- "date_lecture": "2026-11-07",
- "url_agence": {
-  "url": "https://fwp.mt.gov/",
-  "statut_http": 0,
-  "url_finale": "https://fwp.mt.gov/",
-  "note": "DNS introuvable depuis cette machine (ENOTFOUND) le 7 nov. 2026"
- },
- "url_regles_eau_douce": {
-  "url": "https://fwp.mt.gov/fish",
-  "statut_http": 0,
-  "url_finale": "https://fwp.mt.gov/fish",
-  "note": "idem"
- },
- "url_permis": {
-  "url": "https://fwp.mt.gov/fish/license",
-  "statut_http": 0,
-  "url_finale": "https://fwp.mt.gov/fish/license",
-  "note": "idem ; fwp-cms.mt.gov/buyandapply/fishinglicenses introuvable aussi"
- },
- "prix_resident": {
-  "montant": 21,
-  "monnaie": "USD",
-  "annee": "2026 (saison du 1er mars)",
-  "url": "https://fwp.mt.gov/fish/license",
-  "citation": null,
-  "qualite": "extrait_de_recherche_page_officielle_non_lue",
-  "lu_le": null,
-  "note": "Full-season fishing license résident 21 USD selon un extrait de recherche de fwp.mt.gov ; page non lue. À cela s'ajoutent la Conservation License (8 USD résident) et un Aquatic Invasive Species pass (montant contradictoire selon sources) : total tiers 31 USD."
- },
- "prix_non_resident": {
-  "montant": 100,
-  "monnaie": "USD",
-  "annee": "2026",
-  "url": "https://fwp.mt.gov/fish/license",
-  "citation": null,
-  "qualite": "extrait_de_recherche_page_officielle_non_lue",
-  "lu_le": null,
-  "note": "Non-résident 100 USD (+10 USD Conservation License + AIS 7,50 ou 15 : conflit). Total 117,50 de etats.json = somme tierce non vérifiée."
- },
- "timbres_obligatoires": [
-  {
-   "nom": "Conservation License (résident)",
-   "montant": 8,
-   "url": "https://fwp.mt.gov/fish/license",
-   "citation": null,
-   "qualite": "extrait de recherche, non lu [?]"
+  "usps": "MT",
+  "nom": "Montana",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent D6",
+  "url_agence": {
+    "url": "https://fwp.mt.gov/",
+    "statut_http": 0,
+    "url_finale": "https://fwp.mt.gov/",
+    "note": "DNS introuvable depuis cette machine (curl et WebFetch ENOTFOUND) le 7 nov. 2026 ; aucune lecture faite"
   },
-  {
-   "nom": "Conservation License (non-résident)",
-   "montant": 10,
-   "url": "https://fwp.mt.gov/fish/license",
-   "citation": null,
-   "qualite": "extrait de recherche, non lu [?]"
-  }
- ],
- "appli_officielle": {
-  "nom": null,
-  "url": null,
-  "note": "non relevée [?]"
- },
- "reciprocite_eaux_tribales": {
-  "note": "non relevé [?]"
- },
- "licence_reutilisation": null,
- "verifie": false,
- "raison_non_verifie": "fwp.mt.gov ne se résout pas (DNS) depuis ce Mac ; aucune lecture. Hôte peut-être valide ailleurs : statut 'injoignable', pas 'cassé'.",
- "notes": "Ne pas prendre 31 / 117,50 pour des prix officiels : ce sont des totaux d'un tiers, le montant du pass AIS étant contradictoire."
+  "url_regles_eau_douce": {
+    "url": "https://fwp.mt.gov/fish",
+    "statut_http": 0,
+    "url_finale": "https://fwp.mt.gov/fish",
+    "note": "idem"
+  },
+  "url_permis": {
+    "url": "https://fwp.mt.gov/fish/license",
+    "statut_http": 0,
+    "url_finale": "https://fwp.mt.gov/fish/license",
+    "note": "idem ; page citée comme officielle par la recherche web"
+  },
+  "prix_resident": {
+    "montant": 21,
+    "monnaie": "USD",
+    "annee": 2025,
+    "url_source": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0030/section_0010/0870-0020-0030-0010.html",
+    "citation": "upon payment of a fee of $21",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "Code annoté du Montana (MCA 2025), 87-2-301, site officiel de la législature (mca.legmt.gov) ; licence de pêche Classe A. S'ajoute à la Conservation License (8 USD)."
+  },
+  "prix_non_resident": {
+    "montant": 100,
+    "monnaie": "USD",
+    "annee": 2025,
+    "url_source": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0030/section_0020/0870-0020-0030-0020.html",
+    "citation": "upon payment of the sum of $100",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "MCA 2025, 87-2-302, licence Classe B ; s'ajoute à la Conservation License (10 USD). Licence d'un jour non-résident : 87-2-304 (non lue en détail)."
+  },
+  "timbres": [
+    {
+      "nom": "Conservation License résident",
+      "montant": 8,
+      "qualite": "officielle",
+      "url_source": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0020/section_0020/0870-0020-0020-0020.html",
+      "note": "MCA 87-2-202(3)(a) : 8 USD dont 25 cents de don facultatif"
+    },
+    {
+      "nom": "Conservation License non-résident",
+      "montant": 10,
+      "qualite": "officielle",
+      "url_source": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0020/section_0020/0870-0020-0020-0020.html",
+      "note": "MCA 87-2-202(3)(b) : 10 USD dont 25 cents de don facultatif"
+    },
+    {
+      "nom": "Aquatic Invasive Species (AIS) pass",
+      "montant": null,
+      "qualite": "donnée absente",
+      "url_source": null,
+      "note": "montant non lu sur un texte officiel ; sources tierces contradictoires (2 / 7,50 / 15 USD) ; ne pas publier"
+    }
+  ],
+  "appli_officielle": {
+    "nom": null,
+    "url": null
+  },
+  "verifie": false,
+  "raison_non_verifie": "Prix lus dans le texte de loi de l'État (officiel), mais aucune page de l'agence n'a pu être lue (403 ou DNS) : laissé à vérifier, comme ME avant relecture. ",
+  "notes": "Permis requis pour pêcher en eau douce dès 12 ans (87-2-805 : moins de 12 ans sans permis, lu). Prix lus dans le Code annoté officiel (édition 2025) car fwp.mt.gov ne se résout pas ici. Les totaux tiers 31 / 117,50 ne sont pas confirmés (AIS inconnu). Une loi plus récente que l'édition 2025 a pu changer un montant : à recouper sur fwp.mt.gov."
 }
