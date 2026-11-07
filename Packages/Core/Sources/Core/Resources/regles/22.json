@@ -1061,7 +1061,7 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur tous les cours d'eau et plans d'eau de 2e catégorie, sauf dispositions particulières du chapitre II."
+    "texte": "Pêche de la carpe prévue à toute heure sur tous les cours d'eau et plans d'eau de 2e catégorie, sauf dispositions particulières du chapitre II."
    },
    "du": null,
    "au": null,
@@ -1090,7 +1090,7 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Autorisation de pêcher la carpe à toute heure suspendue du samedi 25 avril 2026 au lundi 27 avril 2026 (cohabitation avec les carnassiers)."
+    "texte": "Pêche de la carpe à toute heure suspendue du samedi 25 avril 2026 au lundi 27 avril 2026 (cohabitation avec les carnassiers)."
    },
    "du": "2026-04-25",
    "au": "2026-04-27",
@@ -1376,7 +1376,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Carafe ou bouteille pour capturer les vairons et autres poissons servant d'appâts, autorisée pendant les périodes d'ouverture de la pêche aux lignes, contenance de 2 litres au plus."
+    "texte": "Carafe ou bouteille pour capturer les vairons et autres poissons servant d'appâts, prévue pendant les périodes d'ouverture de la pêche aux lignes, contenance de 2 litres au plus."
    },
    "du": null,
    "au": null,

@@ -2586,7 +2586,7 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Seules les esches végétales sont autorisées."
+    "texte": "Seules les esches végétales sont prévues."
    },
    "du": null,
    "au": null,
@@ -2901,7 +2901,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Une vermée autorisée.",
+   "phrase": "Une vermée prévue.",
    "textes": [
     "t16"
    ],

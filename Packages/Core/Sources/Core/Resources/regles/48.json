@@ -3292,7 +3292,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Ombre commun : aucune capture autorisée sur Allier.",
+   "phrase": "Ombre commun : nombre de captures fixé à zéro sur Allier.",
    "textes": [
     "t9"
    ],
@@ -3321,7 +3321,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Ombre commun : aucune capture autorisée sur Chapeauroux.",
+   "phrase": "Ombre commun : nombre de captures fixé à zéro sur Chapeauroux.",
    "textes": [
     "t9"
    ],
@@ -3343,7 +3343,7 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seuls les hameçons simples, doubles ou triples sans ardillon ou à ardillon(s) écrasé(s) sont autorisés."
+    "texte": "Seuls les hameçons simples, doubles ou triples sans ardillon ou à ardillon(s) écrasé(s) sont prévus."
    },
    "du": null,
    "au": null,
@@ -3624,7 +3624,7 @@
    "categorie": "toutes",
    "type": "interdit",
    "valeur": {
-    "texte": "Pêche en marchant dans l'eau interdite toute l'année (la traversée du cours d'eau est autorisée)."
+    "texte": "Pêche en marchant dans l'eau interdite toute l'année (la traversée du cours d'eau est prévue)."
    },
    "du": null,
    "au": null,
@@ -8951,7 +8951,7 @@
    "categorie": "toutes",
    "type": "interdit",
    "valeur": {
-    "texte": "Utilisation en appâts de poissons vivants non autorisée (rattachement exact à confirmer : placée après le paragraphe sur le Mas Armand, en contradiction apparente avec la ligne au vif du lac de Naussac)."
+    "texte": "Utilisation en appâts de poissons vivants interdite (rattachement exact à confirmer : placée après le paragraphe sur le Mas Armand, en contradiction apparente avec la ligne au vif du lac de Naussac)."
    },
    "du": null,
    "au": null,
@@ -9266,12 +9266,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche au poisson mort ou au poisson nageur autorisée sur toute la période d'ouverture."
+    "texte": "Pêche au poisson mort ou au poisson nageur prévue sur toute la période d'ouverture."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Villefort : pêche au poisson mort ou nageur autorisée.",
+   "phrase": "Lac de Villefort : pêche au poisson mort ou nageur prévue.",
    "textes": [
     "t17"
    ],

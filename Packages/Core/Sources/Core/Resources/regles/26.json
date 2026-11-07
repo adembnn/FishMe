@@ -2062,12 +2062,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de nuit autorisée à l'esche végétale exclusivement, dans les conditions de l'arrêté interpréfectoral Drôme-Ardèche."
+    "texte": "Pêche de nuit prévue à l'esche végétale exclusivement, dans les conditions de l'arrêté interpréfectoral Drôme-Ardèche."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Lac du Pas des Ondes : pêche de nuit (carpe de nuit) autorisée toute l'année 2026, à l'esche végétale seulement.",
+   "phrase": "Lac du Pas des Ondes : pêche de nuit (carpe de nuit) prévue toute l'année 2026, à l'esche végétale seulement.",
    "textes": [
     "t6"
    ],
@@ -2089,12 +2089,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de nuit autorisée à l'esche végétale exclusivement, dans les conditions de l'arrêté interpréfectoral Drôme-Ardèche."
+    "texte": "Pêche de nuit prévue à l'esche végétale exclusivement, dans les conditions de l'arrêté interpréfectoral Drôme-Ardèche."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Etang du Chez : pêche de nuit (carpe de nuit) autorisée toute l'année 2026, à l'esche végétale seulement.",
+   "phrase": "Etang du Chez : pêche de nuit (carpe de nuit) prévue toute l'année 2026, à l'esche végétale seulement.",
    "textes": [
     "t6"
    ],
@@ -2116,12 +2116,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de nuit à la carpe autorisée du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre, à l'esche végétale exclusivement."
+    "texte": "Pêche de nuit à la carpe prévue du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre, à l'esche végétale exclusivement."
    },
    "du": "2026-01-01",
    "au": "2026-01-25",
    "remplace": null,
-   "phrase": "Les Lilas : carpe de nuit autorisée du 1er janvier au 25 janvier et du 25 avril au 31 décembre 2026.",
+   "phrase": "Les Lilas : carpe de nuit prévue du 1er janvier au 25 janvier et du 25 avril au 31 décembre 2026.",
    "textes": [
     "t6"
    ],
@@ -2143,12 +2143,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de nuit à la carpe autorisée du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre, à l'esche végétale exclusivement."
+    "texte": "Pêche de nuit à la carpe prévue du 1er janvier au dernier dimanche de janvier et du dernier samedi d'avril au 31 décembre, à l'esche végétale exclusivement."
    },
    "du": "2026-04-25",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Les Lilas : carpe de nuit autorisée du 1er janvier au 25 janvier et du 25 avril au 31 décembre 2026.",
+   "phrase": "Les Lilas : carpe de nuit prévue du 1er janvier au 25 janvier et du 25 avril au 31 décembre 2026.",
    "textes": [
     "t6"
    ],
@@ -2406,7 +2406,7 @@
    "categorie": "toutes",
    "type": "no_kill",
    "valeur": {
-    "texte": "Prélèvement interdit sur l’espèce truite fario uniquement ; Toute technique de pêche autorisée"
+    "texte": "Prélèvement interdit sur l’espèce truite fario uniquement ; Toute technique de pêche prévue"
    },
    "du": null,
    "au": null,
@@ -2435,7 +2435,7 @@
    "categorie": "toutes",
    "type": "no_kill",
    "valeur": {
-    "texte": "Prélèvement interdit sur l’espèce truite fario uniquement ; Toute technique de pêche autorisée"
+    "texte": "Prélèvement interdit sur l’espèce truite fario uniquement ; Toute technique de pêche prévue"
    },
    "du": null,
    "au": null,
@@ -3394,12 +3394,12 @@
    "type": "mode_peche",
    "valeur": {
     "maille_mm_min": 10,
-    "texte": "Carrelet d'un mètre de côté, mailles de 10 mm, autorisé."
+    "texte": "Carrelet d'un mètre de côté, mailles de 10 mm, prévu."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Eygues : carrelet d'un mètre de côté, mailles de 10 mm, autorisé.",
+   "phrase": "Eygues : carrelet d'un mètre de côté, mailles de 10 mm, prévu.",
    "textes": [
     "t9"
    ],

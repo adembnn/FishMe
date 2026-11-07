@@ -1433,12 +1433,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Vermée autorisée."
+    "texte": "Vermée prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La vermée est autorisée.",
+   "phrase": "La vermée est prévue.",
    "textes": [
     "t3"
    ],
@@ -3151,12 +3151,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Float-tube avec palmes : autorisée sauf sur les lieux interdits (cf annexe 2)."
+    "texte": "Float-tube avec palmes : prévue sauf sur les lieux interdits (cf annexe 2)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Float-tube à palmes : autorisé sauf sur les lieux interdits de l'annexe 2.",
+   "phrase": "Float-tube à palmes : prévu sauf sur les lieux interdits de l'annexe 2.",
    "textes": [
     "t6"
    ],
@@ -3178,12 +3178,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Float-tube équipé de rames : autorisée sur les plans d'eau où les embarcations sont autorisées, et sur les cours d'eau de seconde catégorie autorisés (cf annexe 2)."
+    "texte": "Float-tube équipé de rames : prévue sur les plans d'eau où les embarcations sont prévues, et sur les cours d'eau de seconde catégorie prévus (cf annexe 2)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Float-tube à rames : autorisé sur les plans d'eau où les embarcations sont autorisées et sur les cours d'eau de 2e catégorie autorisés (annexe 2).",
+   "phrase": "Float-tube à rames : prévu sur les plans d'eau où les embarcations sont prévues et sur les cours d'eau de 2e catégorie prévus (annexe 2).",
    "textes": [
     "t6"
    ],
@@ -3205,12 +3205,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Float-tube équipé d'un moteur électrique : autorisée sur les plans d'eau où les embarcations sont autorisées. Interdit sur tous les cours d'eau à l'exception de la Baïse navigable."
+    "texte": "Float-tube équipé d'un moteur électrique : prévue sur les plans d'eau où les embarcations sont prévues. Interdit sur tous les cours d'eau à l'exception de la Baïse navigable."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Float-tube à moteur électrique : autorisé sur les plans d'eau où les embarcations sont autorisées ; interdit sur tous les cours d'eau sauf la Baïse navigable.",
+   "phrase": "Float-tube à moteur électrique : prévu sur les plans d'eau où les embarcations sont prévues ; interdit sur tous les cours d'eau sauf la Baïse navigable.",
    "textes": [
     "t6"
    ],
@@ -3232,12 +3232,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Barque équipée d'un moteur électrique : autorisée sur les plans d'eau où les embarcations sont autorisées (cf annexe 2)."
+    "texte": "Barque équipée d'un moteur électrique : prévue sur les plans d'eau où les embarcations sont prévues (cf annexe 2)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Barque à moteur électrique : autorisée sur les plans d'eau où les embarcations sont autorisées (annexe 2).",
+   "phrase": "Barque à moteur électrique : prévue sur les plans d'eau où les embarcations sont prévues (annexe 2).",
    "textes": [
     "t6"
    ],
@@ -4805,7 +4805,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Faget : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Faget : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -4832,7 +4832,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Faget : float-tube non autorisé.",
+   "phrase": "Faget : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -4855,12 +4855,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Nombre de cannes autorisées : 2."
+    "texte": "Nombre de cannes prévues : 2."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Faget : 2 cannes autorisées par pêcheur.",
+   "phrase": "Faget : 2 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -4916,7 +4916,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Auch Lamothe : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Auch Lamothe : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -4943,7 +4943,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Auch Lamothe : float-tube non autorisé.",
+   "phrase": "Auch Lamothe : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -4995,12 +4995,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Nombre de cannes autorisées : 2."
+    "texte": "Nombre de cannes prévues : 2."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Auch Lamothe : 2 cannes autorisées par pêcheur.",
+   "phrase": "Auch Lamothe : 2 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -5083,7 +5083,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Baïset : pêche de nuit à la carpe autorisée.",
+   "phrase": "Baïset : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -5110,7 +5110,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Baïset : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Baïset : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -5166,7 +5166,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Baradée : pêche de nuit à la carpe autorisée.",
+   "phrase": "Baradée : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -5193,7 +5193,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Baradée : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Baradée : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -5249,7 +5249,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Bourgès : pêche de nuit à la carpe autorisée.",
+   "phrase": "Bourgès : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -5276,7 +5276,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Bourgès : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Bourgès : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -5332,7 +5332,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Bousquetara : pêche de nuit à la carpe autorisée.",
+   "phrase": "Bousquetara : pêche de nuit à la carpe prévue.",
    "textes": [
     "t14"
    ],
@@ -5359,7 +5359,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Bousquetara : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Bousquetara : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t14"
    ],
@@ -5388,7 +5388,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Caché : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Caché : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -5415,7 +5415,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Caché : float-tube non autorisé.",
+   "phrase": "Caché : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -5444,7 +5444,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Cahuzac : pêche de nuit à la carpe autorisée.",
+   "phrase": "Cahuzac : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -5471,7 +5471,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Cahuzac : float-tube à palmes autorisé.",
+   "phrase": "Cahuzac : float-tube à palmes prévu.",
    "textes": [
     "t13"
    ],
@@ -5583,7 +5583,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Candau : pêche de nuit à la carpe autorisée.",
+   "phrase": "Candau : pêche de nuit à la carpe prévue.",
    "textes": [
     "t15"
    ],
@@ -5610,7 +5610,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Candau : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Candau : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t15"
    ],
@@ -5666,7 +5666,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Castagnère : pêche de nuit à la carpe autorisée.",
+   "phrase": "Castagnère : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -5693,7 +5693,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Castagnère : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Castagnère : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -5749,7 +5749,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Castéra-Verduzan : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Castéra-Verduzan : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -5776,7 +5776,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Castéra-Verduzan : float-tube non autorisé.",
+   "phrase": "Castéra-Verduzan : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -5948,7 +5948,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Charros : pêche de nuit à la carpe autorisée.",
+   "phrase": "Charros : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -5975,7 +5975,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Charros : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Charros : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -6031,7 +6031,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Coucut : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Coucut : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -6058,7 +6058,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Coucut : float-tube non autorisé.",
+   "phrase": "Coucut : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -6136,12 +6136,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche aux leurres et mouches fouettées seules autorisées"
+    "texte": "Pêche aux leurres et mouches fouettées seules prévues"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Couloumats : Pêche aux leurres et mouches fouettées seules autorisées.",
+   "phrase": "Couloumats : Pêche aux leurres et mouches fouettées seules prévues.",
    "textes": [
     "t13"
    ],
@@ -6170,7 +6170,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Couloumats : pêche de nuit à la carpe autorisée.",
+   "phrase": "Couloumats : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -6197,7 +6197,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Couloumats : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Couloumats : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -6278,12 +6278,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 1,
-    "texte": "Nombre de cannes autorisées : 1."
+    "texte": "Nombre de cannes prévues : 1."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Couloumats : 1 canne autorisée par pêcheur.",
+   "phrase": "Couloumats : 1 canne prévue par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -6312,7 +6312,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Courrensan : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Courrensan : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -6339,7 +6339,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Courrensan : float-tube non autorisé.",
+   "phrase": "Courrensan : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -6368,7 +6368,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La Digue : pêche de nuit à la carpe autorisée.",
+   "phrase": "La Digue : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -6395,7 +6395,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La Digue : float-tube à palmes autorisé.",
+   "phrase": "La Digue : float-tube à palmes prévu.",
    "textes": [
     "t13"
    ],
@@ -6482,7 +6482,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Écluse : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Écluse : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -6509,7 +6509,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Écluse : float-tube non autorisé.",
+   "phrase": "Écluse : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -6538,7 +6538,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Fleurance : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Fleurance : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -6565,7 +6565,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Fleurance : float-tube non autorisé.",
+   "phrase": "Fleurance : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -6594,7 +6594,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Forêt : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Forêt : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -6621,7 +6621,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Forêt : float-tube non autorisé.",
+   "phrase": "Forêt : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -6650,7 +6650,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Galiax : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Galiax : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -6677,7 +6677,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Galiax : float-tube non autorisé.",
+   "phrase": "Galiax : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -6735,7 +6735,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Gauge : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Gauge : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -6762,7 +6762,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Gauge : float-tube non autorisé.",
+   "phrase": "Gauge : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -6812,12 +6812,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Gauge : 4 cannes autorisées par pêcheur.",
+   "phrase": "Gauge : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -6901,7 +6901,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Gimont 1 : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Gimont 1 : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -6928,7 +6928,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Gimont 1 : float-tube non autorisé.",
+   "phrase": "Gimont 1 : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -6980,12 +6980,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Nombre de cannes autorisées : 2."
+    "texte": "Nombre de cannes prévues : 2."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Gimont 1 : 2 cannes autorisées par pêcheur.",
+   "phrase": "Gimont 1 : 2 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -7042,7 +7042,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Gimont 2 : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Gimont 2 : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -7069,7 +7069,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Gimont 2 : float-tube non autorisé.",
+   "phrase": "Gimont 2 : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -7121,12 +7121,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Nombre de cannes autorisées : 2."
+    "texte": "Nombre de cannes prévues : 2."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Gimont 2 : 2 cannes autorisées par pêcheur.",
+   "phrase": "Gimont 2 : 2 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -7210,7 +7210,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Gimont 3 : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Gimont 3 : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -7237,7 +7237,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Gimont 3 : float-tube non autorisé.",
+   "phrase": "Gimont 3 : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -7378,7 +7378,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Houga : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Houga : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -7405,7 +7405,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Houga : float-tube non autorisé.",
+   "phrase": "Houga : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -7434,7 +7434,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Île d'Ager : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Île d'Ager : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -7461,7 +7461,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Île d'Ager : float-tube non autorisé.",
+   "phrase": "Île d'Ager : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -7517,7 +7517,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Isle-Jourdain (petit lac) : pêche de nuit à la carpe autorisée.",
+   "phrase": "Isle-Jourdain (petit lac) : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -7544,7 +7544,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Isle-Jourdain (petit lac) : float-tube non autorisé.",
+   "phrase": "Isle-Jourdain (petit lac) : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -7651,12 +7651,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche autorisée à maximum 30m du bord"
+    "texte": "Pêche prévue à maximum 30m du bord"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Isle-Jourdain (grand lac) : Pêche autorisée à maximum 30m du bord.",
+   "phrase": "Isle-Jourdain (grand lac) : Pêche prévue à maximum 30m du bord.",
    "textes": [
     "t13"
    ],
@@ -7678,12 +7678,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche autorisée uniquement dans la zone délimitée sur place (le long de la D924 et sur 300m le long de la voie de chemin de fer en partant de la D924)"
+    "texte": "Pêche prévue uniquement dans la zone délimitée sur place (le long de la D924 et sur 300m le long de la voie de chemin de fer en partant de la D924)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Isle-Jourdain (grand lac) : Pêche autorisée uniquement dans la zone délimitée sur place (le long de la D924 et sur 300m le long de la voie de chemin de fer en partant de la D924).",
+   "phrase": "Isle-Jourdain (grand lac) : Pêche prévue uniquement dans la zone délimitée sur place (le long de la D924 et sur 300m le long de la voie de chemin de fer en partant de la D924).",
    "textes": [
     "t13"
    ],
@@ -7712,7 +7712,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Isle-Jourdain (grand lac) : pêche de nuit à la carpe autorisée.",
+   "phrase": "Isle-Jourdain (grand lac) : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -7739,7 +7739,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Isle-Jourdain (grand lac) : float-tube non autorisé.",
+   "phrase": "Isle-Jourdain (grand lac) : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -7826,7 +7826,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Izotges : pêche de nuit à la carpe autorisée.",
+   "phrase": "Izotges : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -7853,7 +7853,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Izotges : float-tube non autorisé.",
+   "phrase": "Izotges : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -7909,7 +7909,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Joy : pêche de nuit à la carpe autorisée.",
+   "phrase": "Joy : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -7936,7 +7936,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Joy : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Joy : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -7992,7 +7992,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lapeyrie : pêche de nuit à la carpe autorisée.",
+   "phrase": "Lapeyrie : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -8019,7 +8019,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lapeyrie : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Lapeyrie : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -8129,7 +8129,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lizet : pêche de nuit à la carpe autorisée.",
+   "phrase": "Lizet : pêche de nuit à la carpe prévue.",
    "textes": [
     "t16"
    ],
@@ -8156,7 +8156,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lizet : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Lizet : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t16"
    ],
@@ -8322,7 +8322,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lupiac : pêche de nuit à la carpe autorisée.",
+   "phrase": "Lupiac : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -8349,7 +8349,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lupiac : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Lupiac : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -8434,7 +8434,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Marcaoue : pêche de nuit à la carpe autorisée.",
+   "phrase": "Marcaoue : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -8461,7 +8461,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Marcaoue : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Marcaoue : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -8544,7 +8544,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Marciac : pêche de nuit à la carpe autorisée.",
+   "phrase": "Marciac : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -8571,7 +8571,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Marciac : float-tube non autorisé.",
+   "phrase": "Marciac : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -8656,7 +8656,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Maribot : pêche de nuit à la carpe autorisée.",
+   "phrase": "Maribot : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -8683,7 +8683,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Maribot : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Maribot : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -8766,7 +8766,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mauvezin : pêche de nuit à la carpe autorisée.",
+   "phrase": "Mauvezin : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -8793,7 +8793,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mauvezin : float-tube non autorisé.",
+   "phrase": "Mauvezin : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -8845,12 +8845,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Nombre de cannes autorisées : 2."
+    "texte": "Nombre de cannes prévues : 2."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mauvezin : 2 cannes autorisées par pêcheur.",
+   "phrase": "Mauvezin : 2 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -8960,7 +8960,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Miélan : pêche de nuit à la carpe autorisée.",
+   "phrase": "Miélan : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -8987,7 +8987,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Miélan : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Miélan : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -9039,12 +9039,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Miélan : 4 cannes autorisées par pêcheur.",
+   "phrase": "Miélan : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -9100,7 +9100,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mirande : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Mirande : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -9127,7 +9127,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mirande : float-tube non autorisé.",
+   "phrase": "Mirande : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -9208,12 +9208,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Mirande : 4 cannes autorisées par pêcheur.",
+   "phrase": "Mirande : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -9242,7 +9242,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Montréal : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Montréal : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -9269,7 +9269,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Montréal : float-tube non autorisé.",
+   "phrase": "Montréal : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -9408,12 +9408,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Montréal : 4 cannes autorisées par pêcheur.",
+   "phrase": "Montréal : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -9442,7 +9442,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pesqué : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Pesqué : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -9469,7 +9469,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pesqué : float-tube non autorisé.",
+   "phrase": "Pesqué : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -9519,12 +9519,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Nombre de cannes autorisées : 2."
+    "texte": "Nombre de cannes prévues : 2."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pesqué : 2 cannes autorisées par pêcheur.",
+   "phrase": "Pesqué : 2 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -9580,7 +9580,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pessoulens : pêche de nuit à la carpe autorisée.",
+   "phrase": "Pessoulens : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -9607,7 +9607,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pessoulens : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Pessoulens : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -9659,12 +9659,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pessoulens : 4 cannes autorisées par pêcheur.",
+   "phrase": "Pessoulens : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -9720,7 +9720,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plaisance : pêche de nuit à la carpe autorisée.",
+   "phrase": "Plaisance : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -9747,7 +9747,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plaisance : float-tube non autorisé.",
+   "phrase": "Plaisance : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -9797,12 +9797,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plaisance : 4 cannes autorisées par pêcheur.",
+   "phrase": "Plaisance : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -9831,7 +9831,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pouy 1 : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Pouy 1 : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -9858,7 +9858,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pouy 1 : float-tube non autorisé.",
+   "phrase": "Pouy 1 : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -9910,12 +9910,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pouy 1 : 4 cannes autorisées par pêcheur.",
+   "phrase": "Pouy 1 : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -9998,7 +9998,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pouy 2 : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Pouy 2 : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -10025,7 +10025,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pouy 2 : float-tube non autorisé.",
+   "phrase": "Pouy 2 : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -10077,12 +10077,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pouy 2 : 4 cannes autorisées par pêcheur.",
+   "phrase": "Pouy 2 : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -10165,7 +10165,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Préchac : float-tube non autorisé.",
+   "phrase": "Préchac : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -10215,12 +10215,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Préchac : 4 cannes autorisées par pêcheur.",
+   "phrase": "Préchac : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -10276,7 +10276,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saclès : pêche de nuit à la carpe autorisée.",
+   "phrase": "Saclès : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -10303,7 +10303,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saclès : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Saclès : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -10326,12 +10326,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saclès : 4 cannes autorisées par pêcheur.",
+   "phrase": "Saclès : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -10360,7 +10360,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Clamens : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Saint-Clamens : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -10387,7 +10387,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Clamens : float-tube non autorisé.",
+   "phrase": "Saint-Clamens : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -10410,12 +10410,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Nombre de cannes autorisées : 2."
+    "texte": "Nombre de cannes prévues : 2."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Clamens : 2 cannes autorisées par pêcheur.",
+   "phrase": "Saint-Clamens : 2 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -10437,12 +10437,12 @@
    "categorie": "toutes",
    "type": "reserve",
    "valeur": {
-    "texte": "Pêche autorisée uniquement en période de fermeture de la base de loisirs"
+    "texte": "Pêche prévue uniquement en période de fermeture de la base de loisirs"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Clar (Escalaves) : pêche autorisée uniquement en période de fermeture de la base de loisirs.",
+   "phrase": "Saint-Clar (Escalaves) : pêche prévue uniquement en période de fermeture de la base de loisirs.",
    "textes": [
     "t13"
    ],
@@ -10498,7 +10498,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Clar (Escalaves) : pêche de nuit à la carpe non autorisée.",
+   "phrase": "Saint-Clar (Escalaves) : pêche de nuit à la carpe interdite.",
    "textes": [
     "t13"
    ],
@@ -10525,7 +10525,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Clar (Escalaves) : float-tube à palmes autorisé.",
+   "phrase": "Saint-Clar (Escalaves) : float-tube à palmes prévu.",
    "textes": [
     "t13"
    ],
@@ -10577,12 +10577,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Clar (Escalaves) : 4 cannes autorisées par pêcheur.",
+   "phrase": "Saint-Clar (Escalaves) : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -10692,7 +10692,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Cricq : pêche de nuit à la carpe autorisée.",
+   "phrase": "Saint-Cricq : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -10719,7 +10719,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Cricq : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Saint-Cricq : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -10771,12 +10771,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Cricq : 4 cannes autorisées par pêcheur.",
+   "phrase": "Saint-Cricq : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -10805,7 +10805,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Fris : pêche de nuit à la carpe autorisée.",
+   "phrase": "Saint-Fris : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -10832,7 +10832,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Fris : float-tube non autorisé.",
+   "phrase": "Saint-Fris : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -10884,12 +10884,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Fris : 4 cannes autorisées par pêcheur.",
+   "phrase": "Saint-Fris : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -10972,7 +10972,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Jean : pêche de nuit à la carpe autorisée.",
+   "phrase": "Saint-Jean : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -10999,7 +10999,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Jean : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Saint-Jean : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -11022,12 +11022,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Jean : 4 cannes autorisées par pêcheur.",
+   "phrase": "Saint-Jean : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -11137,7 +11137,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Laurent : pêche de nuit à la carpe autorisée.",
+   "phrase": "Saint-Laurent : pêche de nuit à la carpe prévue.",
    "textes": [
     "t17"
    ],
@@ -11164,7 +11164,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Laurent : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Saint-Laurent : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t17"
    ],
@@ -11187,12 +11187,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Laurent : 4 cannes autorisées par pêcheur.",
+   "phrase": "Saint-Laurent : 4 cannes prévues par pêcheur.",
    "textes": [
     "t17"
    ],
@@ -11248,7 +11248,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Samatan : float-tube à palmes autorisé.",
+   "phrase": "Samatan : float-tube à palmes prévu.",
    "textes": [
     "t13"
    ],
@@ -11387,12 +11387,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Samatan : 4 cannes autorisées par pêcheur.",
+   "phrase": "Samatan : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -11421,7 +11421,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saramon 1 (petit lac) : pêche de nuit à la carpe autorisée.",
+   "phrase": "Saramon 1 (petit lac) : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -11448,7 +11448,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saramon 1 (petit lac) : float-tube non autorisé.",
+   "phrase": "Saramon 1 (petit lac) : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -11471,12 +11471,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saramon 1 (petit lac) : 4 cannes autorisées par pêcheur.",
+   "phrase": "Saramon 1 (petit lac) : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -11532,7 +11532,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saramon 2 (lac de baignade) : pêche de nuit à la carpe autorisée.",
+   "phrase": "Saramon 2 (lac de baignade) : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -11559,7 +11559,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saramon 2 (lac de baignade) : float-tube non autorisé.",
+   "phrase": "Saramon 2 (lac de baignade) : float-tube interdit.",
    "textes": [
     "t13"
    ],
@@ -11582,12 +11582,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saramon 2 (lac de baignade) : 4 cannes autorisées par pêcheur.",
+   "phrase": "Saramon 2 (lac de baignade) : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -11670,7 +11670,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sérilhac : pêche de nuit à la carpe autorisée.",
+   "phrase": "Sérilhac : pêche de nuit à la carpe prévue.",
    "textes": [
     "t18"
    ],
@@ -11697,7 +11697,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sérilhac : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Sérilhac : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t18"
    ],
@@ -11869,7 +11869,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Tillac : pêche de nuit à la carpe autorisée.",
+   "phrase": "Tillac : pêche de nuit à la carpe prévue.",
    "textes": [
     "t13"
    ],
@@ -11896,7 +11896,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Tillac : float-tube à palmes autorisé ; navigation interdite à moins de 50 m des déversoirs.",
+   "phrase": "Tillac : float-tube à palmes prévu ; navigation interdite à moins de 50 m des déversoirs.",
    "textes": [
     "t13"
    ],
@@ -12168,12 +12168,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "Nombre de cannes autorisées : 4."
+    "texte": "Nombre de cannes prévues : 4."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Uby : 4 cannes autorisées par pêcheur.",
+   "phrase": "Uby : 4 cannes prévues par pêcheur.",
    "textes": [
     "t13"
    ],
@@ -12357,7 +12357,7 @@
    "categorie": "toutes",
    "type": "reserve",
    "valeur": {
-    "texte": "Zone de quiétude interdite à toutes personnes sauf services autorisés."
+    "texte": "Zone de quiétude interdite à toutes personnes sauf services titulaires d'une autorisation."
    },
    "du": null,
    "au": null,
@@ -13257,7 +13257,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche du silure en fermeture du brochet : octopus de 15 cm minimum avec plomb d'au moins 80 g, deux hameçons simples au maximum (5/0 minimum) esché ou non d'un ver de terre, animation verticale uniquement ; encornet, lard, tripe de poulet autorisés."
+    "texte": "Pêche du silure en fermeture du brochet : octopus de 15 cm minimum avec plomb d'au moins 80 g, deux hameçons simples au maximum (5/0 minimum) esché ou non d'un ver de terre, animation verticale uniquement ; encornet, lard, tripe de poulet prévus."
    },
    "du": null,
    "au": null,
@@ -13340,7 +13340,7 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Float-tube à palmes autorisé sauf lieux interdits ; float-tube à rames sur plans d'eau où les embarcations sont autorisées et cours d'eau de 2e catégorie autorisés ; moteur électrique sur ces plans d'eau seulement, interdit sur tous les cours d'eau sauf la Baïse navigable."
+    "texte": "Float-tube à palmes prévu sauf lieux interdits ; float-tube à rames sur plans d'eau où les embarcations sont prévues et cours d'eau de 2e catégorie prévus ; moteur électrique sur ces plans d'eau seulement, interdit sur tous les cours d'eau sauf la Baïse navigable."
    },
    "du": null,
    "au": null,
@@ -13369,12 +13369,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de nuit de la carpe autorisée (colonne Carpe de nuit : Oui)."
+    "texte": "Pêche de nuit de la carpe prévue (colonne Carpe de nuit : Oui)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Astarac : pêche de nuit de la carpe autorisée.",
+   "phrase": "Astarac : pêche de nuit de la carpe prévue.",
    "textes": [
     "t28"
    ],
@@ -13398,12 +13398,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de nuit de la carpe autorisée (colonne Carpe de nuit : Oui)."
+    "texte": "Pêche de nuit de la carpe prévue (colonne Carpe de nuit : Oui)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Aux Aussats : pêche de nuit de la carpe autorisée.",
+   "phrase": "Aux Aussats : pêche de nuit de la carpe prévue.",
    "textes": [
     "t28"
    ],
@@ -13427,12 +13427,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de nuit de la carpe autorisée (colonne Carpe de nuit : Oui)."
+    "texte": "Pêche de nuit de la carpe prévue (colonne Carpe de nuit : Oui)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Bame : pêche de nuit de la carpe autorisée.",
+   "phrase": "Bame : pêche de nuit de la carpe prévue.",
    "textes": [
     "t28"
    ],
@@ -13456,12 +13456,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de nuit de la carpe autorisée (colonne Carpe de nuit : Oui)."
+    "texte": "Pêche de nuit de la carpe prévue (colonne Carpe de nuit : Oui)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Cessagnaou : pêche de nuit de la carpe autorisée.",
+   "phrase": "Cessagnaou : pêche de nuit de la carpe prévue.",
    "textes": [
     "t28"
    ],

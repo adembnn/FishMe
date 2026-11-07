@@ -2848,12 +2848,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac d'Alfeld : pêche à deux lignes autorisée.",
+   "phrase": "Lac d'Alfeld : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -2876,12 +2876,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de l'Altenweiher : pêche à deux lignes autorisée.",
+   "phrase": "Lac de l'Altenweiher : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -2904,12 +2904,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac du Ballon : pêche à deux lignes autorisée.",
+   "phrase": "Lac du Ballon : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -2932,12 +2932,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac Blanc : pêche à deux lignes autorisée.",
+   "phrase": "Lac Blanc : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -2960,12 +2960,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac du Forlet : pêche à deux lignes autorisée.",
+   "phrase": "Lac du Forlet : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -2988,12 +2988,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac du Fischboedle : pêche à deux lignes autorisée.",
+   "phrase": "Lac du Fischboedle : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -3016,12 +3016,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac du Grand Neuweiher : pêche à deux lignes autorisée.",
+   "phrase": "Lac du Grand Neuweiher : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -3044,12 +3044,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Kruth-Wildenstein : pêche à deux lignes autorisée.",
+   "phrase": "Lac de Kruth-Wildenstein : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -3072,12 +3072,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de la Lauch : pêche à deux lignes autorisée.",
+   "phrase": "Lac de la Lauch : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -3100,12 +3100,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac Noir : pêche à deux lignes autorisée.",
+   "phrase": "Lac Noir : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -3128,12 +3128,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac des Perches : pêche à deux lignes autorisée.",
+   "phrase": "Lac des Perches : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -3156,12 +3156,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac du Petit Neuweiher : pêche à deux lignes autorisée.",
+   "phrase": "Lac du Petit Neuweiher : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -3184,12 +3184,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac du Schiessrothried : pêche à deux lignes autorisée.",
+   "phrase": "Lac du Schiessrothried : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -3212,12 +3212,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "Pêche à deux lignes autorisée."
+    "texte": "Pêche à deux lignes prévue."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Sewen : pêche à deux lignes autorisée.",
+   "phrase": "Lac de Sewen : pêche à deux lignes prévue.",
    "textes": [
     "t7"
    ],
@@ -3571,7 +3571,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seule technique autorisée : pêche à la ligne aux leurres et appâts artificiels uniquement."
+    "texte": "Seule technique prévue : pêche à la ligne aux leurres et appâts artificiels uniquement."
    },
    "du": null,
    "au": null,
@@ -3625,7 +3625,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seule technique autorisée : pêche à la mouche uniquement."
+    "texte": "Seule technique prévue : pêche à la mouche uniquement."
    },
    "du": null,
    "au": null,
@@ -3679,7 +3679,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seule technique autorisée : pêche à la mouche uniquement."
+    "texte": "Seule technique prévue : pêche à la mouche uniquement."
    },
    "du": null,
    "au": null,
@@ -3733,7 +3733,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seule technique autorisée : pêche à la mouche uniquement."
+    "texte": "Seule technique prévue : pêche à la mouche uniquement."
    },
    "du": null,
    "au": null,
@@ -3870,12 +3870,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+    "texte": "Pêche à la ligne de la carpe prévue à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau de Courtavon : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "phrase": "Plan d'eau de Courtavon : carpe prévue de nuit, avec esches végétales et bouillettes seulement.",
    "textes": [
     "t12"
    ],
@@ -3955,12 +3955,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+    "texte": "Pêche à la ligne de la carpe prévue à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Grand étang Vauban : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "phrase": "Grand étang Vauban : carpe prévue de nuit, avec esches végétales et bouillettes seulement.",
    "textes": [
     "t12"
    ],
@@ -4040,12 +4040,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+    "texte": "Pêche à la ligne de la carpe prévue à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Canal du Rhône au Rhin : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "phrase": "Canal du Rhône au Rhin : carpe prévue de nuit, avec esches végétales et bouillettes seulement.",
    "textes": [
     "t12"
    ],
@@ -4125,12 +4125,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+    "texte": "Pêche à la ligne de la carpe prévue à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Canal de Colmar rive droite : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "phrase": "Canal de Colmar rive droite : carpe prévue de nuit, avec esches végétales et bouillettes seulement.",
    "textes": [
     "t12"
    ],
@@ -4210,12 +4210,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+    "texte": "Pêche à la ligne de la carpe prévue à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Canal du Rhône au Rhin : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "phrase": "Canal du Rhône au Rhin : carpe prévue de nuit, avec esches végétales et bouillettes seulement.",
    "textes": [
     "t12"
    ],
@@ -4295,12 +4295,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+    "texte": "Pêche à la ligne de la carpe prévue à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Canal du Rhône au Rhin : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "phrase": "Canal du Rhône au Rhin : carpe prévue de nuit, avec esches végétales et bouillettes seulement.",
    "textes": [
     "t12"
    ],
@@ -4380,12 +4380,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+    "texte": "Pêche à la ligne de la carpe prévue à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Ill domaniale : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "phrase": "Ill domaniale : carpe prévue de nuit, avec esches végétales et bouillettes seulement.",
    "textes": [
     "t12"
    ],
@@ -4465,12 +4465,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+    "texte": "Pêche à la ligne de la carpe prévue à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Vieux-Rhin et Grand Canal d'Alsace : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "phrase": "Vieux-Rhin et Grand Canal d'Alsace : carpe prévue de nuit, avec esches végétales et bouillettes seulement.",
    "textes": [
     "t12"
    ],
@@ -4550,12 +4550,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche à la ligne de la carpe autorisée à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
+    "texte": "Pêche à la ligne de la carpe prévue à toute heure, jour et nuit. De nuit : esches végétales et bouillettes seulement."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Vieux-Rhin à Chalampé rive gauche : carpe autorisée de nuit, avec esches végétales et bouillettes seulement.",
+   "phrase": "Vieux-Rhin à Chalampé rive gauche : carpe prévue de nuit, avec esches végétales et bouillettes seulement.",
    "textes": [
     "t12"
    ],

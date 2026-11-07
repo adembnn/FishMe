@@ -5807,7 +5807,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Une carafe ou bouteille à vairons de 2 litres au plus est autorisée.",
+   "phrase": "Une carafe ou bouteille à vairons de 2 litres au plus est prévue.",
    "textes": [
     "t12"
    ],
@@ -6040,7 +6040,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Gérardmer : pêche à la traîne en embarcation autorisée (sans moteur thermique), 3 lignes de traîne de 2 hameçons.",
+   "phrase": "Lac de Gérardmer : pêche à la traîne en embarcation prévue (sans moteur thermique), 3 lignes de traîne de 2 hameçons.",
    "textes": [
     "t13"
    ],
@@ -6128,7 +6128,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Longemer : pêche à la traîne en embarcation autorisée (sans moteur thermique), 3 lignes de traîne de 2 hameçons.",
+   "phrase": "Lac de Longemer : pêche à la traîne en embarcation prévue (sans moteur thermique), 3 lignes de traîne de 2 hameçons.",
    "textes": [
     "t13"
    ],
@@ -6208,12 +6208,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 3,
-    "texte": "asticots autorisés comme appât, amorçage interdit, pêche depuis le bord seulement"
+    "texte": "asticots prévus comme appât, amorçage interdit, pêche depuis le bord seulement"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Lispach : 3 lignes au maximum, pêche depuis le bord seulement, asticots autorisés comme appât.",
+   "phrase": "Lac de Lispach : 3 lignes au maximum, pêche depuis le bord seulement, asticots prévus comme appât.",
    "textes": [
     "t16"
    ],
@@ -6235,12 +6235,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "vermée autorisée"
+    "texte": "vermée prévue"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pêche à la vermée autorisée pour les membres des AAPPMA.",
+   "phrase": "Pêche à la vermée prévue pour les membres des AAPPMA.",
    "textes": [
     "t17"
    ],
@@ -6512,7 +6512,7 @@
    "du": "2026-04-04",
    "au": "2026-12-13",
    "remplace": null,
-   "phrase": "Pêche de nuit de la carpe : autorisée du 4 avril au 13 décembre 2026 dans les secteurs listés par l'arrêté n° 613/2015.",
+   "phrase": "Pêche de nuit de la carpe : prévue du 4 avril au 13 décembre 2026 dans les secteurs listés par l'arrêté n° 613/2015.",
    "textes": [
     "t19"
    ],
@@ -8930,12 +8930,12 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Techniques autorisées : pêche au bouchon, bombette. Appâts autorisés : vers de terre, teignes, vers de farine, pâte à truite, maïs, pain."
+    "texte": "Techniques prévues : pêche au bouchon, bombette. Appâts prévus : vers de terre, teignes, vers de farine, pâte à truite, maïs, pain."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang Nièrupt : seule la pêche au bouchon ou à la bombette est autorisée.",
+   "phrase": "Étang Nièrupt : seule la pêche au bouchon ou à la bombette est prévue.",
    "textes": [
     "t38"
    ],
@@ -9096,12 +9096,12 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Techniques autorisées : pêche au bouchon, bombette. Appâts autorisés : vers de terre, teignes, vers de farine, pâte à truite, maïs, pain."
+    "texte": "Techniques prévues : pêche au bouchon, bombette. Appâts prévus : vers de terre, teignes, vers de farine, pâte à truite, maïs, pain."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang Para : seule la pêche au bouchon ou à la bombette est autorisée.",
+   "phrase": "Étang Para : seule la pêche au bouchon ou à la bombette est prévue.",
    "textes": [
     "t38"
    ],
@@ -9177,7 +9177,7 @@
    "categorie": "1",
    "type": "no_kill",
    "valeur": {
-    "texte": "Pêche à la mouche sans ardillon autorisée uniquement en no kill (remise à l'eau obligatoire)."
+    "texte": "Pêche à la mouche sans ardillon prévue uniquement en no kill (remise à l'eau obligatoire)."
    },
    "du": null,
    "au": null,
@@ -9370,7 +9370,7 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Mouche artificielle autorisée ; tous les autres leurres artificiels interdits."
+    "texte": "Mouche artificielle prévue ; tous les autres leurres artificiels interdits."
    },
    "du": null,
    "au": null,
@@ -9679,12 +9679,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Le lancer et tous les leurres artificiels sont autorisés à compter du 1er mai 2026 ; bouillettes autorisées en petite quantité."
+    "texte": "Le lancer et tous les leurres artificiels sont prévus à compter du 1er mai 2026 ; bouillettes prévues en petite quantité."
    },
    "du": "2026-05-01",
    "au": null,
    "remplace": null,
-   "phrase": "Étang Delthir : lancer et leurres artificiels autorisés à partir du 1er mai 2026.",
+   "phrase": "Étang Delthir : lancer et leurres artificiels prévus à partir du 1er mai 2026.",
    "textes": [
     "t41"
    ],
@@ -10229,12 +10229,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche au leurre autorisée aux dates d'ouverture du carnassier (1er juin au 31 janvier)."
+    "texte": "Pêche au leurre prévue aux dates d'ouverture du carnassier (1er juin au 31 janvier)."
    },
    "du": "2026-01-01",
    "au": "2026-01-31",
    "remplace": null,
-   "phrase": "Étangs du château de Senones : leurres autorisés du 1er au 31 janvier.",
+   "phrase": "Étangs du château de Senones : leurres prévus du 1er au 31 janvier.",
    "textes": [
     "t43"
    ],
@@ -10256,12 +10256,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche au leurre autorisée aux dates d'ouverture du carnassier (1er juin au 31 janvier)."
+    "texte": "Pêche au leurre prévue aux dates d'ouverture du carnassier (1er juin au 31 janvier)."
    },
    "du": "2026-06-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Étangs du château de Senones : leurres autorisés du 1er juin au 31 décembre.",
+   "phrase": "Étangs du château de Senones : leurres prévus du 1er juin au 31 décembre.",
    "textes": [
     "t43"
    ],
@@ -10458,7 +10458,7 @@
    "categorie": "toutes",
    "type": "interdit",
    "valeur": {
-    "texte": "Croquettes pour animaux et pellets interdits ; bouillettes autorisées sans amorçage."
+    "texte": "Croquettes pour animaux et pellets interdits ; bouillettes prévues sans amorçage."
    },
    "du": null,
    "au": null,
@@ -11467,7 +11467,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 4,
-    "texte": "4 cannes autorisées dont 3 aux carnassiers maximum."
+    "texte": "4 cannes prévues dont 3 aux carnassiers maximum."
    },
    "du": null,
    "au": null,
@@ -11611,12 +11611,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Mort manié et leurres autorisés du 1er au 31 janvier et du 1er juin au 1er novembre."
+    "texte": "Mort manié et leurres prévus du 1er au 31 janvier et du 1er juin au 1er novembre."
    },
    "du": "2026-01-01",
    "au": "2026-01-31",
    "remplace": null,
-   "phrase": "Étang Dieudonné : mort manié et leurres autorisés du 1er au 31 janvier.",
+   "phrase": "Étang Dieudonné : mort manié et leurres prévus du 1er au 31 janvier.",
    "textes": [
     "t48"
    ],
@@ -11638,12 +11638,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Mort manié et leurres autorisés du 1er au 31 janvier et du 1er juin au 1er novembre."
+    "texte": "Mort manié et leurres prévus du 1er au 31 janvier et du 1er juin au 1er novembre."
    },
    "du": "2026-06-01",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Étang Dieudonné : mort manié et leurres autorisés du 1er juin au 1er novembre.",
+   "phrase": "Étang Dieudonné : mort manié et leurres prévus du 1er juin au 1er novembre.",
    "textes": [
     "t48"
    ],
