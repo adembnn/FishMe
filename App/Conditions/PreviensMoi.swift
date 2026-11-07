@@ -42,7 +42,7 @@ nonisolated enum PlanificateurPreviensMoi {
                     && (criteres.ventSousKmh.map { h.ventKmh < $0 } ?? true)
                     && (!criteres.pressionEnBaisse || baisse(heures, a: h))
             }) {
-                var morceaux = ["vent \(FormatConditions.nombre(h.ventKmh)) km/h"]
+                var morceaux = ["vent \(FormatConditions.vent(kmh: h.ventKmh))"]
                 if criteres.pressionEnBaisse { morceaux.append("pression en baisse") }
                 if criteres.niveauNormal { morceaux.append("rivière normale") }
                 sorties.append(NotificationPrevue(

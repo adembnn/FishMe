@@ -69,14 +69,14 @@ struct SeptJoursView: View {
                                 .symbolRenderingMode(.monochrome)
                                 .font(Police.taille(24)).foregroundStyle(Palette.marine)
                                 .frame(height: 26)
-                            Text("\(FormatConditions.nombre(j.temperatureMaxC))°")
+                            Text(FormatConditions.degres(celsius: j.temperatureMaxC))
                                 .font(Police.corps).foregroundStyle(Palette.encre).monospacedDigit()
-                            Text("\(FormatConditions.nombre(j.temperatureMinC))°")
+                            Text(FormatConditions.degres(celsius: j.temperatureMinC))
                                 .font(Police.detail).foregroundStyle(Palette.encreDouce).monospacedDigit()
                         }
                         .frame(maxWidth: .infinity)
                         .accessibilityElement(children: .ignore)
-                        .accessibilityLabel("\(FormatConditions.jour(j.jour)), \(FormatConditions.libelle(codeTemps: j.codeTemps)), maximum \(FormatConditions.nombre(j.temperatureMaxC)) degrés, minimum \(FormatConditions.nombre(j.temperatureMinC)) degrés")
+                        .accessibilityLabel("\(FormatConditions.jour(j.jour)), \(FormatConditions.libelle(codeTemps: j.codeTemps)), maximum \(FormatConditions.degres(celsius: j.temperatureMaxC)), minimum \(FormatConditions.degres(celsius: j.temperatureMinC))")
                     }
                 }
                 .padding(.top, 14)
@@ -87,7 +87,7 @@ struct SeptJoursView: View {
                         .font(Police.legende).foregroundStyle(Palette.encreDouce)
                         .padding(.top, Espace.s)
                 }
-                MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : "Hub’Eau")
+                MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : FormatConditions.sourceEau())
             }
             .padding(.horizontal, 20)
             .padding(.top, 24)
@@ -124,7 +124,7 @@ struct SeptJoursView: View {
             Text(eau.station.nom).font(Police.titre).foregroundStyle(Palette.encre).lineLimit(1)
             Spacer(minLength: Espace.m)
             if let h = eau.hauteurM {
-                Text("\(FormatConditions.nombre(h, decimales: 2)) m")
+                Text(FormatConditions.hauteurEau(metres: h))
                     .font(Police.taille(26, .black).monospacedDigit()).foregroundStyle(Palette.encre)
             }
         }

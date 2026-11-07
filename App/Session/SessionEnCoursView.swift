@@ -239,8 +239,11 @@ struct SessionEnCoursView<LigneConditions: View>: View {
 
     private func legendePrises(_ prises: [Prise], _ derniere: Prise?) -> String {
         let n = prises.count
-        var texte = n == 0 ? "Pas encore de prise" : "\(n) prise\(n > 1 ? "s" : "")"
-        if let cm = derniere?.longueurCm { texte += " · \(Int(cm.rounded())) cm" }
+        let region = RegionPersistee.lire()
+        var texte = region == .etatsUnis
+            ? (n == 0 ? "No catch yet" : "\(n) catch\(n > 1 ? "es" : "")")
+            : (n == 0 ? "Pas encore de prise" : "\(n) prise\(n > 1 ? "s" : "")")
+        if let cm = derniere?.longueurCm { texte += " · \(FormatSortie.taille(centimetres: cm, region: region))" }
         return texte
     }
 }

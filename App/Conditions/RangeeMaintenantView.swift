@@ -67,7 +67,7 @@ struct RangeeMaintenantView: View {
             HStack(alignment: .bottom) {
                 if let point {
                     VStack(alignment: .leading, spacing: Espace.s) {
-                        Text("\(FormatConditions.nombre(point.temperatureC))°")
+                        Text(FormatConditions.degres(celsius: point.temperatureC))
                             .font(Police.taille(72, .black).monospacedDigit()).minimumScaleFactor(0.6).lineLimit(1)
                             .foregroundStyle(Palette.encre)
                             .accessibilityIdentifier("temperature-maintenant")
@@ -79,7 +79,7 @@ struct RangeeMaintenantView: View {
                 Spacer(minLength: Espace.m)
                 VStack(alignment: .trailing, spacing: Espace.s) {
                     if let v = c.ventKmh {
-                        ligne("wind", "\(FormatConditions.nombre(v)) km/h")
+                        ligne("wind", FormatConditions.vent(kmh: v))
                     }
                     // La pression est dans le bloc « Mesures » (N3, avec sa source et sa tendance) : plus de ligne hPa ici.
                 }
@@ -115,7 +115,7 @@ struct RangeeMaintenantView: View {
                 }
             }
             if lecture.depuisCache {
-                Text("lu à \(FormatConditions.heure(lecture.lueLe)), sans réseau")
+                Text(FormatConditions.luSansReseau(lecture.lueLe))
                     .font(Police.legende).foregroundStyle(Palette.encreDouce)
                     .padding(.top, Espace.s)
             }
@@ -140,8 +140,8 @@ struct RangeeMaintenantView: View {
 
     /// Le niveau : le nom de la station et la hauteur ; sans hauteur, le débit ; sans rien, rien (jamais un chiffre inventé).
     @ViewBuilder private func riviere(_ eau: NiveauEau) -> some View {
-        let valeur: String? = eau.hauteurM.map { "\(FormatConditions.nombre($0, decimales: 2)) m" }
-            ?? eau.debitM3s.map { "\(FormatConditions.nombre($0)) m³/s" }
+        let valeur: String? = eau.hauteurM.map { FormatConditions.hauteurEau(metres: $0) }
+            ?? eau.debitM3s.map { FormatConditions.debitEau(m3s: $0) }
         if let valeur {
             let bloc = VStack(alignment: .trailing, spacing: 2) {
                 Text(eau.station.nom).font(Police.legende).foregroundStyle(Palette.encreDouce).lineLimit(1)

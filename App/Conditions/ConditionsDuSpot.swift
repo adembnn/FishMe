@@ -18,9 +18,15 @@ final class ConditionsDuSpot: ObservableObject {
     private let noyau: any ServiceConditions
     private let maintenant: @Sendable () -> Date
     private let fichier: URL?
+    /// Région US : l'eau vient de l'USGS (par le proxy FishMe), pas de Hub'Eau. Lue à chaque lecture, sans toucher à `RootView`.
+    private let eauUS: SourceEauUS
+    private let region: @Sendable () -> RegionApp
 
     init(meteo: any SourceMeteo, eau: any NiveauEauService, noyau: any ServiceConditions,
-         maintenant: @escaping @Sendable () -> Date = { Date() }, fichier: URL? = ConditionsDuSpot.fichierParDefaut()) {
+         maintenant: @escaping @Sendable () -> Date = { Date() }, fichier: URL? = ConditionsDuSpot.fichierParDefaut(),
+         eauUS: SourceEauUS = .partage, region: @escaping @Sendable () -> RegionApp = { RegionPersistee.lire() }) {
+        self.eauUS = eauUS
+        self.region = region
         self.meteo = meteo
         self.eau = eau
         self.noyau = noyau
@@ -42,7 +48,9 @@ final class ConditionsDuSpot: ObservableObject {
         if !forcer, let l = lectures[point], !l.depuisCache, now.timeIntervalSince(l.lueLe) < Self.dureeCache { return l }
 
         let niveauLu: NiveauEau?
-        if let station = noyau.stationHydro(pres: spot) {
+        if region() == .etatsUnis {
+            niveauLu = await eauUS.lecture(pres: spot).niveau
+        } else if let station = noyau.stationHydro(pres: spot) {
             niveauLu = await eau.niveau(station: station)
         } else {
             niveauLu = nil
