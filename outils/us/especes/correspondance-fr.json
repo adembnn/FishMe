@@ -1,0 +1,476 @@
+{
+ "version": 1,
+ "source_table_fr": "Packages/Core/Sources/Core/Resources/especes.json (99 entrées)",
+ "identiques": [
+  {
+   "slug_us": "largemouth-bass",
+   "nom_en": "Largemouth bass",
+   "latin_us": "Micropterus salmoides",
+   "slug_fr": "black-bass",
+   "nom_fr_app": "Black-bass à grande bouche",
+   "latin_fr": "Micropterus salmoides",
+   "classe_modele_fr": "black_bass",
+   "note": "Micropterus salmoides ; classe black_bass du modèle européen (87,6 % mesuré)."
+  },
+  {
+   "slug_us": "smallmouth-bass",
+   "nom_en": "Smallmouth bass",
+   "latin_us": "Micropterus dolomieu",
+   "slug_fr": "black-bass-petite-bouche",
+   "nom_fr_app": "Black-bass à petite bouche",
+   "latin_fr": "Micropterus dolomieu",
+   "classe_modele_fr": "black_bass",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "pumpkinseed",
+   "nom_en": "Pumpkinseed",
+   "latin_us": "Lepomis gibbosus",
+   "slug_fr": "perche-soleil",
+   "nom_fr_app": "Perche soleil",
+   "latin_fr": "Lepomis gibbosus",
+   "classe_modele_fr": "perche_soleil",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "rock-bass",
+   "nom_en": "Rock bass",
+   "latin_us": "Ambloplites rupestris",
+   "slug_fr": "crapet-de-roche",
+   "nom_fr_app": "Crapet de roche",
+   "latin_fr": "Ambloplites rupestris",
+   "classe_modele_fr": "autre_poisson",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "wiper",
+   "nom_en": "Wiper (hybrid striped bass)",
+   "latin_us": "Morone chrysops x Morone saxatilis",
+   "slug_fr": "raye-hybride",
+   "nom_fr_app": "Rayé hybride",
+   "latin_fr": "Morone chrysops x Morone saxatilis",
+   "classe_modele_fr": "autre_poisson",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "channel-catfish",
+   "nom_en": "Channel catfish",
+   "latin_us": "Ictalurus punctatus",
+   "slug_fr": "barbue-de-riviere",
+   "nom_fr_app": "Barbue de rivière (channel catfish)",
+   "latin_fr": "Ictalurus punctatus",
+   "classe_modele_fr": "poisson_chat",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "black-bullhead",
+   "nom_en": "Black bullhead",
+   "latin_us": "Ameiurus melas",
+   "slug_fr": "poisson-chat",
+   "nom_fr_app": "Poisson-chat",
+   "latin_fr": "Ameiurus melas",
+   "classe_modele_fr": "poisson_chat",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "northern-pike",
+   "nom_en": "Northern pike",
+   "latin_us": "Esox lucius",
+   "slug_fr": "brochet",
+   "nom_fr_app": "Brochet",
+   "latin_fr": "Esox lucius",
+   "classe_modele_fr": "brochet",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "rainbow-trout",
+   "nom_en": "Rainbow trout (steelhead)",
+   "latin_us": "Oncorhynchus mykiss",
+   "slug_fr": "truite-arc-en-ciel",
+   "nom_fr_app": "Truite arc-en-ciel",
+   "latin_fr": "Oncorhynchus mykiss",
+   "classe_modele_fr": "truite_arc_en_ciel",
+   "note": "O. mykiss ; le steelhead (forme anadrome) est la même espèce."
+  },
+  {
+   "slug_us": "brown-trout",
+   "nom_en": "Brown trout",
+   "latin_us": "Salmo trutta",
+   "slug_fr": "truite-fario",
+   "nom_fr_app": "Truite fario",
+   "latin_fr": "Salmo trutta fario",
+   "classe_modele_fr": "truite_commune",
+   "note": "Salmo trutta : la table française sépare fario et truite de mer (forme anadrome, slug truite-de-mer) ; aux États-Unis une seule entrée « brown trout »."
+  },
+  {
+   "slug_us": "brook-trout",
+   "nom_en": "Brook trout",
+   "latin_us": "Salvelinus fontinalis",
+   "slug_fr": "omble-de-fontaine",
+   "nom_fr_app": "Omble de fontaine (saumon de fontaine)",
+   "latin_fr": "Salvelinus fontinalis",
+   "classe_modele_fr": "omble_de_fontaine",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "lake-trout",
+   "nom_en": "Lake trout",
+   "latin_us": "Salvelinus namaycush",
+   "slug_fr": "cristivomer",
+   "nom_fr_app": "Cristivomer (truite de lac américaine)",
+   "latin_fr": "Salvelinus namaycush",
+   "classe_modele_fr": "cristivomer",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "arctic-char",
+   "nom_en": "Arctic char",
+   "latin_us": "Salvelinus alpinus",
+   "slug_fr": "omble-chevalier",
+   "nom_fr_app": "Omble chevalier",
+   "latin_fr": "Salvelinus alpinus",
+   "classe_modele_fr": "omble_chevalier",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "atlantic-salmon",
+   "nom_en": "Atlantic salmon",
+   "latin_us": "Salmo salar",
+   "slug_fr": "saumon-atlantique",
+   "nom_fr_app": "Saumon atlantique",
+   "latin_fr": "Salmo salar",
+   "classe_modele_fr": "saumon_atlantique",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "common-carp",
+   "nom_en": "Common carp",
+   "latin_us": "Cyprinus carpio",
+   "slug_fr": "carpe-commune",
+   "nom_fr_app": "Carpe commune (miroir, cuir)",
+   "latin_fr": "Cyprinus carpio",
+   "classe_modele_fr": "carpe",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "grass-carp",
+   "nom_en": "Grass carp",
+   "latin_us": "Ctenopharyngodon idella",
+   "slug_fr": "carpe-amour",
+   "nom_fr_app": "Carpe amour",
+   "latin_fr": "Ctenopharyngodon idella",
+   "classe_modele_fr": "amour_blanc",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "bighead-carp",
+   "nom_en": "Bighead carp",
+   "latin_us": "Hypophthalmichthys nobilis",
+   "slug_fr": "carpe-grosse-tete",
+   "nom_fr_app": "Carpe à grosse tête",
+   "latin_fr": "Hypophthalmichthys nobilis (syn. Aristichthys nobilis)",
+   "classe_modele_fr": "carpe_grosse_tete",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "silver-carp",
+   "nom_en": "Silver carp",
+   "latin_us": "Hypophthalmichthys molitrix",
+   "slug_fr": "carpe-argentee",
+   "nom_fr_app": "Carpe argentée",
+   "latin_fr": "Hypophthalmichthys molitrix",
+   "classe_modele_fr": "carpe_argentee",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "goldfish",
+   "nom_en": "Goldfish",
+   "latin_us": "Carassius auratus",
+   "slug_fr": "poisson-rouge",
+   "nom_fr_app": "Poisson rouge (carassin doré)",
+   "latin_fr": "Carassius auratus",
+   "classe_modele_fr": "carassin",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  },
+  {
+   "slug_us": "burbot",
+   "nom_en": "Burbot",
+   "latin_us": "Lota lota",
+   "slug_fr": "lotte",
+   "nom_fr_app": "Lotte de rivière",
+   "latin_fr": "Lota lota",
+   "classe_modele_fr": "lotte",
+   "note": "Même espèce (ou même taxon dans la table française)."
+  }
+ ],
+ "proches": [
+  {
+   "slug_us": "florida-bass",
+   "nom_en": "Florida bass",
+   "latin_us": "Micropterus floridanus",
+   "slug_fr": "black-bass",
+   "nom_fr_app": "Black-bass à grande bouche",
+   "latin_fr": "Micropterus salmoides",
+   "classe_modele_fr": "black_bass",
+   "risque_confusion": "eleve",
+   "difference": "M. floridanus et M. salmoides sont quasi indiscernables sur photo ; une seule classe suffit, la distinction est géographique."
+  },
+  {
+   "slug_us": "bluegill",
+   "nom_en": "Bluegill",
+   "latin_us": "Lepomis macrochirus",
+   "slug_fr": "perche-soleil",
+   "nom_fr_app": "Perche soleil",
+   "latin_fr": "Lepomis gibbosus",
+   "classe_modele_fr": "perche_soleil",
+   "risque_confusion": "eleve",
+   "difference": "Même genre (Lepomis) que la perche-soleil ; le modèle européen ne connaît que L. gibbosus : ne pas réutiliser sa classe pour tous les sunfish."
+  },
+  {
+   "slug_us": "walleye",
+   "nom_en": "Walleye",
+   "latin_us": "Sander vitreus",
+   "slug_fr": "sandre",
+   "nom_fr_app": "Sandre",
+   "latin_fr": "Sander lucioperca",
+   "classe_modele_fr": "sandre",
+   "risque_confusion": "eleve",
+   "difference": "Sander vitreus n'est pas le sandre (S. lucioperca) mais l'allure est très proche ; risque de faux positif dans les deux sens."
+  },
+  {
+   "slug_us": "sauger",
+   "nom_en": "Sauger",
+   "latin_us": "Sander canadensis",
+   "slug_fr": "sandre",
+   "nom_fr_app": "Sandre",
+   "latin_fr": "Sander lucioperca",
+   "classe_modele_fr": "sandre",
+   "risque_confusion": "eleve",
+   "difference": "Idem walleye ; sauger et walleye se confondent entre eux (taches sur la dorsale épineuse)."
+  },
+  {
+   "slug_us": "yellow-perch",
+   "nom_en": "Yellow perch",
+   "latin_us": "Perca flavescens",
+   "slug_fr": "perche-commune",
+   "nom_fr_app": "Perche commune",
+   "latin_fr": "Perca fluviatilis",
+   "classe_modele_fr": "perche",
+   "risque_confusion": "moyen",
+   "difference": "Perca flavescens, espèce sœur de la perche (P. fluviatilis) ; le jeune walleye lui ressemble."
+  },
+  {
+   "slug_us": "brown-bullhead",
+   "nom_en": "Brown bullhead",
+   "latin_us": "Ameiurus nebulosus",
+   "slug_fr": "poisson-chat",
+   "nom_fr_app": "Poisson-chat",
+   "latin_fr": "Ameiurus melas",
+   "classe_modele_fr": "poisson_chat",
+   "risque_confusion": "moyen",
+   "difference": "Même genre Ameiurus que le poisson-chat de la table (A. melas) ; trois bullheads proches entre eux."
+  },
+  {
+   "slug_us": "dolly-varden",
+   "nom_en": "Dolly Varden",
+   "latin_us": "Salvelinus malma",
+   "slug_fr": "omble-chevalier",
+   "nom_fr_app": "Omble chevalier",
+   "latin_fr": "Salvelinus alpinus",
+   "classe_modele_fr": "omble_chevalier",
+   "risque_confusion": "eleve",
+   "difference": "Complexe S. malma / S. alpinus / S. confluentus ; seule la géographie départage de façon fiable."
+  },
+  {
+   "slug_us": "arctic-grayling",
+   "nom_en": "Arctic grayling",
+   "latin_us": "Thymallus arcticus",
+   "slug_fr": "ombre-commun",
+   "nom_fr_app": "Ombre commun",
+   "latin_fr": "Thymallus thymallus",
+   "classe_modele_fr": "ombre_commun",
+   "risque_confusion": "moyen",
+   "difference": "Thymallus arcticus, genre de l'ombre commun ; grande dorsale tachetée très caractéristique."
+  },
+  {
+   "slug_us": "mountain-whitefish",
+   "nom_en": "Mountain whitefish",
+   "latin_us": "Prosopium williamsoni",
+   "slug_fr": "coregones",
+   "nom_fr_app": "Corégones (lavaret, féra, palée)",
+   "latin_fr": "Coregonus spp.",
+   "classe_modele_fr": "coregone",
+   "risque_confusion": "moyen",
+   "difference": "Pas un Coregonus ; la classe corégones européenne ne s'applique pas telle quelle."
+  },
+  {
+   "slug_us": "cisco",
+   "nom_en": "Cisco (lake herring)",
+   "latin_us": "Coregonus artedi",
+   "slug_fr": "coregones",
+   "nom_fr_app": "Corégones (lavaret, féra, palée)",
+   "latin_fr": "Coregonus spp.",
+   "classe_modele_fr": "coregone",
+   "risque_confusion": "moyen",
+   "difference": "Coregonus artedi : même genre que lavaret et féra, mais espèce nord-américaine."
+  },
+  {
+   "slug_us": "lake-whitefish",
+   "nom_en": "Lake whitefish",
+   "latin_us": "Coregonus clupeaformis",
+   "slug_fr": "coregones",
+   "nom_fr_app": "Corégones (lavaret, féra, palée)",
+   "latin_fr": "Coregonus spp.",
+   "classe_modele_fr": "coregone",
+   "risque_confusion": "moyen",
+   "difference": "Coregonus clupeaformis : même genre que les corégones européens."
+  },
+  {
+   "slug_us": "bigmouth-buffalo",
+   "nom_en": "Bigmouth buffalo",
+   "latin_us": "Ictiobus cyprinellus",
+   "slug_fr": "carpe-commune",
+   "nom_fr_app": "Carpe commune (miroir, cuir)",
+   "latin_fr": "Cyprinus carpio",
+   "classe_modele_fr": "carpe",
+   "risque_confusion": "eleve",
+   "difference": "Souvent pris pour une carpe commune (et inversement) ; classes à séparer."
+  },
+  {
+   "slug_us": "smallmouth-buffalo",
+   "nom_en": "Smallmouth buffalo",
+   "latin_us": "Ictiobus bubalus",
+   "slug_fr": "carpe-commune",
+   "nom_fr_app": "Carpe commune (miroir, cuir)",
+   "latin_fr": "Cyprinus carpio",
+   "classe_modele_fr": "carpe",
+   "risque_confusion": "eleve",
+   "difference": "Souvent pris pour une carpe commune ; bouche inférieure."
+  },
+  {
+   "slug_us": "lake-sturgeon",
+   "nom_en": "Lake sturgeon",
+   "latin_us": "Acipenser fulvescens",
+   "slug_fr": "esturgeon-europeen",
+   "nom_fr_app": "Esturgeon européen",
+   "latin_fr": "Acipenser sturio",
+   "classe_modele_fr": "esturgeon",
+   "risque_confusion": "moyen",
+   "difference": "Acipenser fulvescens, pas A. sturio ; protection variable, ne jamais afficher « peut être gardé »."
+  },
+  {
+   "slug_us": "shovelnose-sturgeon",
+   "nom_en": "Shovelnose sturgeon",
+   "latin_us": "Scaphirhynchus platorynchus",
+   "slug_fr": "esturgeon-europeen",
+   "nom_fr_app": "Esturgeon européen",
+   "latin_fr": "Acipenser sturio",
+   "classe_modele_fr": "esturgeon",
+   "risque_confusion": "moyen",
+   "difference": "Scaphirhynchus, genre absent d'Europe ; confusion avec le pallid sturgeon (protégé)."
+  },
+  {
+   "slug_us": "white-sturgeon",
+   "nom_en": "White sturgeon",
+   "latin_us": "Acipenser transmontanus",
+   "slug_fr": "esturgeon-europeen",
+   "nom_fr_app": "Esturgeon européen",
+   "latin_fr": "Acipenser sturio",
+   "classe_modele_fr": "esturgeon",
+   "risque_confusion": "moyen",
+   "difference": "Acipenser transmontanus ; fenêtres de taille strictes."
+  },
+  {
+   "slug_us": "american-shad",
+   "nom_en": "American shad",
+   "latin_us": "Alosa sapidissima",
+   "slug_fr": "grande-alose",
+   "nom_fr_app": "Grande alose",
+   "latin_fr": "Alosa alosa",
+   "classe_modele_fr": "alose",
+   "risque_confusion": "moyen",
+   "difference": "Alosa sapidissima, parent de la grande alose (A. alosa)."
+  },
+  {
+   "slug_us": "american-eel",
+   "nom_en": "American eel",
+   "latin_us": "Anguilla rostrata",
+   "slug_fr": "anguille-jaune",
+   "nom_fr_app": "Anguille européenne, stade jaune",
+   "latin_fr": "Anguilla anguilla",
+   "classe_modele_fr": "anguille",
+   "risque_confusion": "moyen",
+   "difference": "Anguilla rostrata, pas A. anguilla ; ne pas réutiliser les stades européens (civelle, argentée) sans vérifier."
+  }
+ ],
+ "pieges_de_nom": [
+  {
+   "slug_us": "striped-bass",
+   "slug_fr": "bar",
+   "risque_confusion": "moyen",
+   "difference": "« Striped bass » (Morone saxatilis) n'est pas le bar européen (Dicentrarchus labrax) ; ne jamais fusionner. Le « bar » de la table française est marin."
+  },
+  {
+   "slug_us": "white-bass",
+   "slug_fr": "bar",
+   "risque_confusion": "faible",
+   "difference": "Même piège de nom ; poisson d'eau douce américain sans équivalent européen."
+  },
+  {
+   "slug_us": "goldfish",
+   "slug_fr": "carassin-argente",
+   "risque_confusion": "moyen",
+   "difference": "Carassius auratus figure aussi sous carassin-argente (C. gibelio) dans la table française ; slug poisson-rouge retenu."
+  },
+  {
+   "slug_us": "rock-bass",
+   "slug_fr": "black-bass",
+   "risque_confusion": "moyen",
+   "difference": "Rock bass (crapet de roche) souvent pris pour un jeune smallmouth ; son slug français est crapet-de-roche."
+  }
+ ],
+ "sans_equivalent": [
+  "spotted-bass",
+  "redeye-bass",
+  "guadalupe-bass",
+  "suwannee-bass",
+  "redear-sunfish",
+  "green-sunfish",
+  "longear-sunfish",
+  "warmouth",
+  "redbreast-sunfish",
+  "white-crappie",
+  "black-crappie",
+  "striped-bass",
+  "white-bass",
+  "yellow-bass",
+  "white-perch",
+  "saugeye",
+  "blue-catfish",
+  "flathead-catfish",
+  "white-catfish",
+  "yellow-bullhead",
+  "muskellunge",
+  "tiger-muskie",
+  "chain-pickerel",
+  "grass-pickerel",
+  "redfin-pickerel",
+  "cutthroat-trout",
+  "bull-trout",
+  "chinook-salmon",
+  "coho-salmon",
+  "sockeye-salmon",
+  "pink-salmon",
+  "white-sucker",
+  "redhorse",
+  "freshwater-drum",
+  "longnose-gar",
+  "spotted-gar",
+  "alligator-gar",
+  "bowfin",
+  "northern-snakehead",
+  "paddlefish",
+  "blue-tilapia",
+  "peacock-bass"
+ ]
+}
