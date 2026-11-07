@@ -29,16 +29,16 @@ struct JaugeRiviereView: View {
                     Text(libelle).font(Police.sousTitre).foregroundStyle(couleur)
                 }
                 if let h = eau.hauteurM {
-                    Text("\(FormatConditions.nombre(h, decimales: 2)) m").font(Police.chiffreMoyen)
+                    Text(FormatConditions.hauteurEau(metres: h)).font(Police.chiffreMoyen)
                         .foregroundStyle(Palette.encre)
                 }
                 if let q = eau.debitM3s {
-                    Text("\(FormatConditions.nombre(q)) m³/s").font(Police.legende)
+                    Text(FormatConditions.debitEau(m3s: q)).font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                 }
             }
             if lecture.conditions.etatRiviere == .inconnu, let debut = eau.serie48h.first?.hauteurM, let h = eau.hauteurM {
-                Text("il y a 48 h : \(FormatConditions.nombre(debut, decimales: 2)) m, maintenant : \(FormatConditions.nombre(h, decimales: 2)) m")
+                Text("il y a 48 h : \(FormatConditions.hauteurEau(metres: debut)), maintenant : \(FormatConditions.hauteurEau(metres: h))")
                     .font(Police.legende).foregroundStyle(Palette.encreDouce)
             }
             Text("\(eau.station.nom) · mesuré à \(FormatConditions.heure(eau.heureMesure))")

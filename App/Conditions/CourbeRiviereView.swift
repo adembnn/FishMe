@@ -26,7 +26,7 @@ struct CourbeRiviereView: View {
                         .foregroundStyle(JetonsConditions.accent)
                 }
             }
-            Text("\(eau.station.nom) · Hub'Eau · mesuré à \(FormatConditions.heure(eau.heureMesure))")
+            Text("\(eau.station.nom) · \(FormatConditions.sourceEau()) · mesuré à \(FormatConditions.heure(eau.heureMesure))")
                 .font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
         }
         .frame(minHeight: 220)

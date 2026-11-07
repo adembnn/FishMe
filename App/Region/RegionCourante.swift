@@ -22,7 +22,7 @@ enum ChoixRegion: String, CaseIterable, Sendable, Identifiable {
 
 extension RegionApp {
     /// Langue et formats de dates de la région (décision 7 du 7 nov. : la langue suit la région, pas le téléphone).
-    var locale: Locale {
+    nonisolated var locale: Locale {
         switch self {
         case .france: Locale(identifier: "fr_FR")
         case .etatsUnis: Locale(identifier: "en_US")
@@ -39,8 +39,8 @@ extension RegionApp {
 @MainActor
 @Observable
 final class RegionCourante {
-    static let cleChoix = "region.choix"
-    static let cleDeduite = "region.deduite"
+    static let cleChoix = RegionPersistee.cleChoix
+    static let cleDeduite = RegionPersistee.cleDeduite
 
     @ObservationIgnored private let reglages: UserDefaults
 
