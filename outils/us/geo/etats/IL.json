@@ -1,0 +1,67 @@
+{
+  "etat": "IL",
+  "nom": "Illinois",
+  "emprise": [-91.52, 36.97, -87.02, 42.51],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://dph.illinois.gov/topics-services/environmental-health-protection/toxicology/fish-advisories.html",
+    "peche": "https://dnr.illinois.gov/fishing.html"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Rampes de mise à l'eau cartographiées par OpenStreetMap (dernier recours)",
+      "service": null,
+      "geometrie": "point",
+      "normaliseur": null,
+      "statut": "ok",
+      "source": "point cartographié par OpenStreetMap (leisure=slipway ou amenity=boat_ramp), via Overpass (outils/us/geo/osm_il.py)",
+      "editeur": "contributeurs OpenStreetMap",
+      "url_source": "https://www.openstreetmap.org/copyright",
+      "licence": "ODbL 1.0, © contributeurs OpenStreetMap",
+      "date_source": "2026-11-07 (timestamp_osm_base d'Overpass)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Aucune source d'agence ouverte et joignable trouvée : les services DNR Illinois (maps.dnr.illinois.gov, geoservices3.dnr.illinois.gov) n'ont aucune couche d'accès ; la couche IDNR_Admin « Lands_Assets » (Boating_Fishing) est un inventaire interne d'équipements sans nom de site ; « Federal_Boat_Access » (imperialis.inhs.illinois.edu) ne répond pas (timeout). access=private et access=no écartés. Ce ne sont pas des points listés par l'agence."
+    },
+    {
+      "id": "empoissonnement",
+      "role": "empoissonnement",
+      "nom": "Empoissonnement",
+      "service": null,
+      "statut": "absent",
+      "note": "Aucun service d'empoissonnement trouvé [?]."
+    }
+  ],
+  "agence": "Illinois DNR",
+  "lien_plans": "https://dnr.illinois.gov/fishing.html",
+  "lien_avis": "https://dph.illinois.gov/topics-services/environmental-health-protection/toxicology/fish-advisories.html",
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "aucune liste d'accès de l'agence (Illinois DNR) ouverte et joignable trouvée : seuls des points cartographiés par OpenStreetMap (rampes), ODbL ; ni quais ni accès à pied",
+      "sources_inaccessibles": [
+        {"url": "https://imperialis.inhs.illinois.edu/arcgis/rest/services/Public/Federal_Boat_Access/MapServer", "raison": "timeout répété (aucune réponse en 45 à 90 s) ; couche « Federal_Boat_Access » du compte IDNR_Admin, jamais lue"},
+        {"url": "https://ridb.recreation.gov/api/v1", "raison": "401 sans clé ; clé gratuite RIDB non disponible dans cette session, aucune n'est inventée"}
+      ]
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès (OpenStreetMap ODbL 1.0 : attribution à afficher)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de liste d'accès de l'agence (Illinois DNR)",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement",
+      "pistes non explorées : clé RIDB (Army Corps, USFWS), couche Federal_Boat_Access de l'INHS quand le serveur répondra"
+    ]
+  }
+}

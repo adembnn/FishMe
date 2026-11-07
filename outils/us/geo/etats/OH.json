@@ -1,0 +1,89 @@
+{
+  "etat": "OH",
+  "nom": "Ohio",
+  "emprise": [-84.82, 38.4, -80.51, 42.33],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://odh.ohio.gov/know-our-programs/ohio-sport-fish-consumption-advisory [?, 404 aux scripts, non ouvert]",
+    "plans_eau": "https://ohiodnr.gov/discover-and-learn/land-water/inland-lakes/fishing-lake-maps [?, 404 aux scripts, non ouvert]"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Installations nautiques publiques avec mise à l'eau (rampes, mise à l'eau à la main)",
+      "service": "https://gis.ohiodnr.gov/arcgis/rest/services/DWC_Services/Watercraft_Motorized_Query/MapServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "oh_acces_bateau",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "ODNR Division of Watercraft, Facility Guide (DWC_Services/Watercraft_Motorized_Query, couche FacilityGuide)",
+      "editeur": "Ohio Department of Natural Resources, Division of Watercraft",
+      "url_source": "https://gis.ohiodnr.gov/arcgis/rest/services/DWC_Services/Watercraft_Motorized_Query/MapServer/0",
+      "licence": "[?] non précisée sur le service (copyrightText vide)",
+      "date_source": "[?] (champ InspDate par site : 2011 pour le premier site lu)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "886 sites dans le service ; on garde ceux dont PUB = -1 (public) et qui ont une mise à l'eau (FtLaunch ou HandLaunchOnly) : marinas écartées. Adresses, téléphones, contacts et commentaires non copiés."
+    },
+    {
+      "id": "pagaie",
+      "role": "acces",
+      "nom": "Accès aux cours d'eau (guide de la pagaie)",
+      "service": "https://gis.ohiodnr.gov/arcgis/rest/services/DWC_Services/Watercraft_Paddling_Query/MapServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "oh_acces_pagaie",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "ODNR Division of Watercraft, Paddling Guide, Stream Access (DWC_Services/Watercraft_Paddling_Query)",
+      "editeur": "Ohio Department of Natural Resources, Division of Watercraft",
+      "url_source": "https://gis.ohiodnr.gov/arcgis/rest/services/DWC_Services/Watercraft_Paddling_Query/MapServer/0",
+      "licence": "[?] non précisée sur le service (copyrightText vide)",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "1 170 points dans le service ; les obstacles (HAZARD = -1 : barrages, chutes, gués) sont écartés. Le texte libre d'itinéraire n'est pas copié ; le nom retombe sur le cours d'eau."
+    },
+    {
+      "id": "empoissonnement",
+      "role": "empoissonnement",
+      "nom": "Empoissonnement",
+      "service": null,
+      "statut": "absent",
+      "note": "Aucun service d'empoissonnement ArcGIS trouvé dans les dossiers DOW_Services et DWC_Services du serveur ODNR [?]."
+    }
+  ],
+  "agence": "Ohio DNR",
+  "lien_plans": "https://ohiodnr.gov/discover-and-learn/land-water/inland-lakes/fishing-lake-maps",
+  "lien_avis": "https://odh.ohio.gov/know-our-programs/ohio-sport-fish-consumption-advisory",
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "sources_inaccessibles": [
+      {"url": "https://ohiodnr.gov/", "raison": "404 aux scripts, y compris la page d'accueil (blocage probable des robots, non confirmé dans un navigateur) : liens lien_plans et lien_avis non vérifiés"},
+      {"url": "https://odh.ohio.gov/", "raison": "404 aux scripts : lien_avis non vérifié"}
+    ],
+    "licences_a_confirmer": [
+      "accès (ODNR Division of Watercraft)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement",
+      "accès listés seulement ceux du guide nautique et du guide de la pagaie (ODNR) : les zones de pêche à pied des terres de la Division of Wildlife ne sont pas dans ces deux couches",
+      "date des relevés non lue sur le service"
+    ]
+  }
+}
