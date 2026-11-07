@@ -39,9 +39,9 @@ def textes(doc):
                 yield s[k]
 
 
-def verifier(sortie=DEFAUT, config=os.path.join(ICI, "etats")):
+def verifier(sortie=DEFAUT, config=os.path.join(ICI, "etats"), etats=None):
     trous, lignes, total = [], [], 0
-    for u in ETATS:
+    for u in (etats or ETATS):
         chemin = os.path.join(config, f"{u}.json")
         if not os.path.exists(chemin):
             trous.append(f"{u} : etats/{u}.json absent")
@@ -118,15 +118,16 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--sortie", default=DEFAUT)
     ap.add_argument("--rapport")
+    ap.add_argument("--etats", help="liste USPS séparée par des virgules (contrôle partiel, sans budget)")
     ap.add_argument("--budget-mo", type=float, default=150)
     a = ap.parse_args(argv)
-    trous, lignes, total = verifier(a.sortie)
+    trous, lignes, total = verifier(a.sortie, etats=a.etats.upper().split(",") if a.etats else None)
     if a.rapport:
         with open(a.rapport, "w", encoding="utf-8") as f:
             f.write(rapport(lignes, total, a.budget_mo))
     for t in trous:
         print("TROU", t)
-    if total > a.budget_mo:
+    if total > a.budget_mo and not a.etats:
         print(f"TROU taille embarquée {total:.1f} Mo > {a.budget_mo} Mo : proposer un autre découpage à Titouan")
         trous.append("taille")
     print(f"{len(trous)} trou(s) ; {len(lignes)} juridictions lues ; {total:.1f} Mo")
