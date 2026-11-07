@@ -5,6 +5,7 @@ import SwiftUI
 /// Mini-carte propre aux repères : un toucher pose le point, « Poser ici » le valide. Sert quand la position courante manque
 /// (permission refusée) ou quand le pêcheur veut poser un repère ailleurs que là où il est.
 struct ChoixPointRepereView: View {
+    @Environment(\.locale) private var locale
     let choisir: (Coordonnee) -> Void
     @Environment(\.dismiss) private var dismiss
     @State private var camera: MapCameraPosition = .region(MKCoordinateRegion(
@@ -16,7 +17,7 @@ struct ChoixPointRepereView: View {
             MapReader { proxy in
                 Map(position: $camera) {
                     if let pose {
-                        Annotation(TextesReperes.poserCePoint, coordinate: pose, anchor: .bottom) {
+                        Annotation(TextesReperes.t(TextesReperes.poserCePoint, locale), coordinate: pose, anchor: .bottom) {
                             Image(systemName: "mappin.circle.fill")
                                 .font(Police.taille(34, .heavy))
                                 .foregroundStyle(Palette.marine)
@@ -35,12 +36,12 @@ struct ChoixPointRepereView: View {
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
             VStack(spacing: Espace.s) {
-                Text(TextesReperes.choisirPointTitre).font(Police.detail).foregroundStyle(Palette.encre)
+                Text(TextesReperes.t(TextesReperes.choisirPointTitre, locale)).font(Police.detail).foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.center)
                 Button {
                     if let pose { choisir(Coordonnee(latitude: pose.latitude, longitude: pose.longitude)) }
                 } label: {
-                    Text(TextesReperes.poserCePoint).frame(maxWidth: .infinity)
+                    Text(TextesReperes.t(TextesReperes.poserCePoint, locale)).frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.principal)
                 .disabled(pose == nil)

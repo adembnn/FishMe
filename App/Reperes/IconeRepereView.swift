@@ -196,6 +196,7 @@ enum CouleursRepere {
 /// - `decoratif` : caché de VoiceOver quand le parent porte déjà le libellé.
 /// Le nom `IconeRepere` est pris par l'énumération du type de repère (Core) : la vue s'appelle donc `IconeRepereView`.
 struct IconeRepereView: View {
+    @Environment(\.locale) private var locale
     let type: IconeRepere
     let taille: CGFloat
     var suitLeTexte = false
@@ -225,7 +226,7 @@ struct IconeRepereView: View {
         }
         .frame(width: largeur, height: hauteur, alignment: .topLeading)
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(TextesReperes.libelleVocal(type))
+        .accessibilityLabel(TextesReperes.libelleVocal(type, locale: locale))
         .accessibilityAddTraits(.isImage)
         .accessibilityHidden(decoratif)
     }

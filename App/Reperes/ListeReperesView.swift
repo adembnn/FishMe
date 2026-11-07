@@ -3,6 +3,7 @@ import SwiftUI
 
 /// « Mes repères » : la liste, son tri, le compteur gratuit et l'ajout (position courante ou point choisi sur une mini-carte).
 struct ListeReperesView: View {
+    @Environment(\.locale) private var locale
     var modele: ModeleReperes = .partage
     var contexte: ContexteReperes = .courant
 
@@ -30,11 +31,11 @@ struct ListeReperesView: View {
             VStack(alignment: .leading, spacing: Espace.l) {
                 enTete
                 if modele.lectureSeule {
-                    Text(TextesReperes.lectureSeule).font(Police.detail).foregroundStyle(Palette.alerte)
+                    Text(TextesReperes.t(TextesReperes.lectureSeule, locale)).font(Police.detail).foregroundStyle(Palette.alerte)
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 if modele.fichierIllisible {
-                    Text(TextesReperes.fichierIllisible).font(Police.detail).foregroundStyle(Palette.alerte)
+                    Text(TextesReperes.t(TextesReperes.fichierIllisible, locale)).font(Police.detail).foregroundStyle(Palette.alerte)
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 boutonsAjout
@@ -42,7 +43,7 @@ struct ListeReperesView: View {
                     Text(message).font(Police.detail).foregroundStyle(Palette.alerte)
                 }
                 if modele.reperes.isEmpty && modele.charge {
-                    Text(TextesReperes.etatVide).font(Police.corps).foregroundStyle(Palette.encreDouce)
+                    Text(TextesReperes.t(TextesReperes.etatVide, locale)).font(Police.corps).foregroundStyle(Palette.encreDouce)
                         .fixedSize(horizontal: false, vertical: true)
                 } else {
                     LazyVStack(spacing: Espace.s) {
@@ -72,10 +73,10 @@ struct ListeReperesView: View {
     private var enTete: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
             HStack {
-                Text(TextesReperes.titreListe).font(Police.titre).foregroundStyle(Palette.encre)
+                Text(TextesReperes.t(TextesReperes.titreListe, locale)).font(Police.titre).foregroundStyle(Palette.encre)
                 Spacer(minLength: Espace.s)
                 if !contexte.abonne {
-                    Text(TextesReperes.compteur(actifs: modele.actifs))
+                    Text(TextesReperes.compteur(actifs: modele.actifs, locale: locale))
                         .font(Police.detail).foregroundStyle(Palette.encreDouce)
                         .accessibilityLabel("\(modele.actifs) repères sur \(LimitesReperes.gratuits) gratuits")
                 }
@@ -91,12 +92,12 @@ struct ListeReperesView: View {
     private var boutonsAjout: some View {
         VStack(spacing: Espace.s) {
             Button { ajouterIci() } label: {
-                Label(TextesReperes.ajouterIci, systemImage: "mappin.and.ellipse").frame(maxWidth: .infinity)
+                Label(TextesReperes.t(TextesReperes.ajouterIci, locale), systemImage: "mappin.and.ellipse").frame(maxWidth: .infinity)
             }
             .buttonStyle(.principal)
             .disabled(recherchePosition || modele.lectureSeule)
             Button { choixSurCarte = true } label: {
-                Label(TextesReperes.ajouterSurLaCarte, systemImage: "map").frame(maxWidth: .infinity)
+                Label(TextesReperes.t(TextesReperes.ajouterSurLaCarte, locale), systemImage: "map").frame(maxWidth: .infinity)
             }
             .buttonStyle(.secondaire)
             .disabled(modele.lectureSeule)
@@ -125,15 +126,15 @@ struct ListeReperesView: View {
         }
         .buttonStyle(.plain)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(repere.nom), \(TextesReperes.libelle(repere.icone)), \(sousTitre(repere))")
+        .accessibilityLabel("\(repere.nom), \(TextesReperes.libelle(repere.icone, locale: locale)), \(sousTitre(repere))")
         .accessibilityHint("Ouvre la fiche")
     }
 
     private func sousTitre(_ repere: Repere) -> String {
         if let date = repere.dernierPassage(prises: contexte.prises()) {
-            return "\(TextesReperes.dernierPassage) : \(date.formatted(.dateTime.day().month(.abbreviated).year().locale(Locale(identifier: "fr_FR"))))"
+            return "\(TextesReperes.t(TextesReperes.dernierPassage, locale)) : \(date.formatted(.dateTime.day().month(.abbreviated).year().locale(locale)))"
         }
-        return TextesReperes.libelle(repere.icone)
+        return TextesReperes.libelle(repere.icone, locale: locale)
     }
 
     private var tries: [Repere] {
@@ -156,7 +157,7 @@ struct ListeReperesView: View {
             if let position = await PositionCourante.lire() {
                 ajout = PointAjoute(position: position)
             } else {
-                message = TextesReperes.positionIndisponible
+                message = TextesReperes.t(TextesReperes.positionIndisponible, locale)
             }
         }
     }

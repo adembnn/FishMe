@@ -6,6 +6,7 @@ import SwiftUI
 /// et une action, rien d'autre. Jamais en grappe, jamais dans une image de partage.
 /// ⚠ à compiler sur Mac : `ForEach` et `Annotation` dans un `MapContent` écrit sans compilateur.
 struct CalqueReperes: MapContent {
+    @Environment(\.locale) private var locale
     let reperes: [Repere]
     /// Le nom s'écrit au-dessus de l'icône seulement quand la carte est assez zoomée (`CalqueReperes.afficheLesNoms`).
     var afficherNoms = false
@@ -24,7 +25,7 @@ struct CalqueReperes: MapContent {
                         .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel("\(repere.nom), \(TextesReperes.libelle(repere.icone))")
+                .accessibilityLabel("\(repere.nom), \(TextesReperes.libelle(repere.icone, locale: locale))")
             }
         }
     }
@@ -44,6 +45,7 @@ struct CalqueReperes: MapContent {
 /// L'interrupteur « Mes repères » de la colonne de droite de la carte. Éteint au premier lancement.
 /// Éteint, la carte n'affiche aucun repère et ne lit aucune photo.
 struct InterrupteurCalqueReperes: View {
+    @Environment(\.locale) private var locale
     static let cle = "reperes.calque"
     @AppStorage(InterrupteurCalqueReperes.cle) private var allume = false
 
@@ -56,7 +58,7 @@ struct InterrupteurCalqueReperes: View {
                 .background(allume ? Palette.marine : Palette.surface, in: Circle())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(TextesReperes.interrupteurCalque)
+        .accessibilityLabel(TextesReperes.t(TextesReperes.interrupteurCalque, locale))
         .accessibilityValue(allume ? "activé" : "désactivé")
         .accessibilityAddTraits(.isToggle)
     }
