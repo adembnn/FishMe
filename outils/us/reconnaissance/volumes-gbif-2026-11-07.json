@@ -1,0 +1,907 @@
+{
+ "releve": "2026-11-07",
+ "volumes": {
+  "largemouth-bass": {
+   "observations_avec_photo": 3345,
+   "par_licence": {
+    "CC_BY_NC_4_0": 3009,
+    "CC_BY_4_0": 217,
+    "CC0_1_0": 119
+   },
+   "latin": "Micropterus salmoides",
+   "gbif_taxon": 2394563,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "florida-bass": {
+   "observations_avec_photo": 0,
+   "par_licence": {},
+   "latin": "Micropterus floridanus",
+   "gbif_taxon": 5211240,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "smallmouth-bass": {
+   "observations_avec_photo": 9655,
+   "par_licence": {
+    "CC_BY_NC_4_0": 9021,
+    "CC_BY_4_0": 467,
+    "CC0_1_0": 167
+   },
+   "latin": "Micropterus dolomieu",
+   "gbif_taxon": 5211250,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "spotted-bass": {
+   "observations_avec_photo": 1415,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1354,
+    "CC_BY_4_0": 53,
+    "CC0_1_0": 8
+   },
+   "latin": "Micropterus punctulatus",
+   "gbif_taxon": 5211245,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "redeye-bass": {
+   "observations_avec_photo": 638,
+   "par_licence": {
+    "CC_BY_NC_4_0": 614,
+    "CC_BY_4_0": 20,
+    "CC0_1_0": 4
+   },
+   "latin": "Micropterus coosae",
+   "gbif_taxon": 5211257,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "guadalupe-bass": {
+   "observations_avec_photo": 870,
+   "par_licence": {
+    "CC_BY_NC_4_0": 643,
+    "CC0_1_0": 185,
+    "CC_BY_4_0": 42
+   },
+   "latin": "Micropterus treculii",
+   "gbif_taxon": 5211243,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "suwannee-bass": {
+   "observations_avec_photo": 62,
+   "par_licence": {
+    "CC_BY_NC_4_0": 56,
+    "CC_BY_4_0": 6
+   },
+   "latin": "Micropterus notius",
+   "gbif_taxon": 5211249,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "bluegill": {
+   "observations_avec_photo": 44395,
+   "par_licence": {
+    "CC_BY_NC_4_0": 40102,
+    "CC_BY_4_0": 2692,
+    "CC0_1_0": 1601
+   },
+   "latin": "Lepomis macrochirus",
+   "gbif_taxon": 2394503,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "pumpkinseed": {
+   "observations_avec_photo": 6352,
+   "par_licence": {
+    "CC_BY_NC_4_0": 5687,
+    "CC_BY_4_0": 513,
+    "CC0_1_0": 152
+   },
+   "latin": "Lepomis gibbosus",
+   "gbif_taxon": 2394486,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "redear-sunfish": {
+   "observations_avec_photo": 3472,
+   "par_licence": {
+    "CC_BY_NC_4_0": 3149,
+    "CC_BY_4_0": 207,
+    "CC0_1_0": 116
+   },
+   "latin": "Lepomis microlophus",
+   "gbif_taxon": 2394501,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "green-sunfish": {
+   "observations_avec_photo": 14273,
+   "par_licence": {
+    "CC_BY_NC_4_0": 12964,
+    "CC_BY_4_0": 893,
+    "CC0_1_0": 416
+   },
+   "latin": "Lepomis cyanellus",
+   "gbif_taxon": 2394494,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "longear-sunfish": {
+   "observations_avec_photo": 3178,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2946,
+    "CC_BY_4_0": 200,
+    "CC0_1_0": 32
+   },
+   "latin": "Lepomis megalotis",
+   "gbif_taxon": 2394510,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "warmouth": {
+   "observations_avec_photo": 3860,
+   "par_licence": {
+    "CC_BY_NC_4_0": 3412,
+    "CC_BY_4_0": 234,
+    "CC0_1_0": 214
+   },
+   "latin": "Lepomis gulosus",
+   "gbif_taxon": 2394507,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "redbreast-sunfish": {
+   "observations_avec_photo": 7870,
+   "par_licence": {
+    "CC_BY_NC_4_0": 6949,
+    "CC_BY_4_0": 639,
+    "CC0_1_0": 282
+   },
+   "latin": "Lepomis auritus",
+   "gbif_taxon": 2394491,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "rock-bass": {
+   "observations_avec_photo": 5253,
+   "par_licence": {
+    "CC_BY_NC_4_0": 4873,
+    "CC_BY_4_0": 301,
+    "CC0_1_0": 79
+   },
+   "latin": "Ambloplites rupestris",
+   "gbif_taxon": 2394514,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "white-crappie": {
+   "observations_avec_photo": 2026,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1908,
+    "CC_BY_4_0": 85,
+    "CC0_1_0": 33
+   },
+   "latin": "Pomoxis annularis",
+   "gbif_taxon": 2394534,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "black-crappie": {
+   "observations_avec_photo": 6345,
+   "par_licence": {
+    "CC_BY_NC_4_0": 5993,
+    "CC_BY_4_0": 250,
+    "CC0_1_0": 102
+   },
+   "latin": "Pomoxis nigromaculatus",
+   "gbif_taxon": 2394526,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "striped-bass": {
+   "observations_avec_photo": 2952,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2652,
+    "CC_BY_4_0": 231,
+    "CC0_1_0": 69
+   },
+   "latin": "Morone saxatilis",
+   "gbif_taxon": 2394612,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "white-bass": {
+   "observations_avec_photo": 1702,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1567,
+    "CC_BY_4_0": 108,
+    "CC0_1_0": 27
+   },
+   "latin": "Morone chrysops",
+   "gbif_taxon": 2394598,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "wiper": {
+   "note": "hybride ou nom non reconnu par GBIF : à traiter à la main",
+   "latin": "Morone chrysops x Morone saxatilis"
+  },
+  "yellow-bass": {
+   "observations_avec_photo": 550,
+   "par_licence": {
+    "CC_BY_NC_4_0": 505,
+    "CC_BY_4_0": 41,
+    "CC0_1_0": 4
+   },
+   "latin": "Morone mississippiensis",
+   "gbif_taxon": 2394610,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "white-perch": {
+   "observations_avec_photo": 2228,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2091,
+    "CC_BY_4_0": 107,
+    "CC0_1_0": 30
+   },
+   "latin": "Morone americana",
+   "gbif_taxon": 2394604,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "walleye": {
+   "observations_avec_photo": 1616,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1455,
+    "CC_BY_4_0": 123,
+    "CC0_1_0": 38
+   },
+   "latin": "Sander vitreus",
+   "gbif_taxon": 2382172,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "sauger": {
+   "observations_avec_photo": 271,
+   "par_licence": {
+    "CC_BY_NC_4_0": 243,
+    "CC_BY_4_0": 22,
+    "CC0_1_0": 6
+   },
+   "latin": "Sander canadensis",
+   "gbif_taxon": 2382152,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "saugeye": {
+   "note": "hybride ou nom non reconnu par GBIF : à traiter à la main",
+   "latin": "Sander vitreus x Sander canadensis"
+  },
+  "yellow-perch": {
+   "observations_avec_photo": 5101,
+   "par_licence": {
+    "CC_BY_NC_4_0": 4695,
+    "CC_BY_4_0": 284,
+    "CC0_1_0": 122
+   },
+   "latin": "Perca flavescens",
+   "gbif_taxon": 2382004,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "channel-catfish": {
+   "observations_avec_photo": 7576,
+   "par_licence": {
+    "CC_BY_NC_4_0": 6879,
+    "CC_BY_4_0": 473,
+    "CC0_1_0": 224
+   },
+   "latin": "Ictalurus punctatus",
+   "gbif_taxon": 5202520,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "blue-catfish": {
+   "observations_avec_photo": 1577,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1490,
+    "CC_BY_4_0": 74,
+    "CC0_1_0": 13
+   },
+   "latin": "Ictalurus furcatus",
+   "gbif_taxon": 5202525,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "flathead-catfish": {
+   "observations_avec_photo": 1239,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1106,
+    "CC0_1_0": 71,
+    "CC_BY_4_0": 62
+   },
+   "latin": "Pylodictis olivaris",
+   "gbif_taxon": 2341077,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "white-catfish": {
+   "observations_avec_photo": 689,
+   "par_licence": {
+    "CC_BY_NC_4_0": 645,
+    "CC_BY_4_0": 34,
+    "CC0_1_0": 10
+   },
+   "latin": "Ameiurus catus",
+   "gbif_taxon": 2340972,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "black-bullhead": {
+   "observations_avec_photo": 1823,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1597,
+    "CC_BY_4_0": 182,
+    "CC0_1_0": 44
+   },
+   "latin": "Ameiurus melas",
+   "gbif_taxon": 2340977,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "yellow-bullhead": {
+   "observations_avec_photo": 2823,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2553,
+    "CC_BY_4_0": 208,
+    "CC0_1_0": 62
+   },
+   "latin": "Ameiurus natalis",
+   "gbif_taxon": 2340969,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "brown-bullhead": {
+   "observations_avec_photo": 1892,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1715,
+    "CC_BY_4_0": 134,
+    "CC0_1_0": 43
+   },
+   "latin": "Ameiurus nebulosus",
+   "gbif_taxon": 2340989,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "northern-pike": {
+   "observations_avec_photo": 2317,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2109,
+    "CC_BY_4_0": 170,
+    "CC0_1_0": 38
+   },
+   "latin": "Esox lucius",
+   "gbif_taxon": 2346633,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "muskellunge": {
+   "observations_avec_photo": 334,
+   "par_licence": {
+    "CC_BY_NC_4_0": 294,
+    "CC_BY_4_0": 34,
+    "CC0_1_0": 6
+   },
+   "latin": "Esox masquinongy",
+   "gbif_taxon": 2346634,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "tiger-muskie": {
+   "note": "hybride ou nom non reconnu par GBIF : à traiter à la main",
+   "latin": "Esox masquinongy x Esox lucius"
+  },
+  "chain-pickerel": {
+   "observations_avec_photo": 1961,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1823,
+    "CC_BY_4_0": 100,
+    "CC0_1_0": 38
+   },
+   "latin": "Esox niger",
+   "gbif_taxon": 2346629,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "grass-pickerel": {
+   "note": "hybride ou nom non reconnu par GBIF : à traiter à la main",
+   "latin": "Esox americanus vermiculatus"
+  },
+  "redfin-pickerel": {
+   "note": "hybride ou nom non reconnu par GBIF : à traiter à la main",
+   "latin": "Esox americanus americanus"
+  },
+  "rainbow-trout": {
+   "observations_avec_photo": 12857,
+   "par_licence": {
+    "CC_BY_NC_4_0": 11920,
+    "CC_BY_4_0": 689,
+    "CC0_1_0": 248
+   },
+   "latin": "Oncorhynchus mykiss",
+   "gbif_taxon": 5204019,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "brown-trout": {
+   "observations_avec_photo": 5440,
+   "par_licence": {
+    "CC_BY_NC_4_0": 5027,
+    "CC_BY_4_0": 320,
+    "CC0_1_0": 93
+   },
+   "latin": "Salmo trutta",
+   "gbif_taxon": 8215487,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "brook-trout": {
+   "observations_avec_photo": 6797,
+   "par_licence": {
+    "CC_BY_NC_4_0": 6303,
+    "CC_BY_4_0": 339,
+    "CC0_1_0": 155
+   },
+   "latin": "Salvelinus fontinalis",
+   "gbif_taxon": 2351271,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "cutthroat-trout": {
+   "observations_avec_photo": 1020,
+   "par_licence": {
+    "CC_BY_NC_4_0": 980,
+    "CC_BY_4_0": 31,
+    "CC0_1_0": 9
+   },
+   "latin": "Oncorhynchus clarkii",
+   "gbif_taxon": 5711980,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "lake-trout": {
+   "observations_avec_photo": 484,
+   "par_licence": {
+    "CC_BY_NC_4_0": 433,
+    "CC_BY_4_0": 31,
+    "CC0_1_0": 20
+   },
+   "latin": "Salvelinus namaycush",
+   "gbif_taxon": 2351327,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "bull-trout": {
+   "observations_avec_photo": 208,
+   "par_licence": {
+    "CC_BY_NC_4_0": 206,
+    "CC0_1_0": 1,
+    "CC_BY_4_0": 1
+   },
+   "latin": "Salvelinus confluentus",
+   "gbif_taxon": 2351244,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "dolly-varden": {
+   "observations_avec_photo": 270,
+   "par_licence": {
+    "CC_BY_NC_4_0": 252,
+    "CC_BY_4_0": 13,
+    "CC0_1_0": 5
+   },
+   "latin": "Salvelinus malma",
+   "gbif_taxon": 4284020,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "arctic-char": {
+   "observations_avec_photo": 61,
+   "par_licence": {
+    "CC_BY_NC_4_0": 57,
+    "CC_BY_4_0": 4
+   },
+   "latin": "Salvelinus alpinus",
+   "gbif_taxon": 4284021,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "chinook-salmon": {
+   "observations_avec_photo": 3187,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2928,
+    "CC_BY_4_0": 202,
+    "CC0_1_0": 57
+   },
+   "latin": "Oncorhynchus tshawytscha",
+   "gbif_taxon": 5204024,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "coho-salmon": {
+   "observations_avec_photo": 2703,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2497,
+    "CC_BY_4_0": 160,
+    "CC0_1_0": 46
+   },
+   "latin": "Oncorhynchus kisutch",
+   "gbif_taxon": 5204034,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "sockeye-salmon": {
+   "observations_avec_photo": 1705,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1500,
+    "CC_BY_4_0": 160,
+    "CC0_1_0": 45
+   },
+   "latin": "Oncorhynchus nerka",
+   "gbif_taxon": 5204039,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "pink-salmon": {
+   "observations_avec_photo": 1113,
+   "par_licence": {
+    "CC_BY_NC_4_0": 970,
+    "CC_BY_4_0": 112,
+    "CC0_1_0": 31
+   },
+   "latin": "Oncorhynchus gorbuscha",
+   "gbif_taxon": 5204037,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "atlantic-salmon": {
+   "observations_avec_photo": 235,
+   "par_licence": {
+    "CC_BY_NC_4_0": 229,
+    "CC0_1_0": 4,
+    "CC_BY_4_0": 2
+   },
+   "latin": "Salmo salar",
+   "gbif_taxon": 7595433,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "arctic-grayling": {
+   "observations_avec_photo": 373,
+   "par_licence": {
+    "CC_BY_NC_4_0": 355,
+    "CC_BY_4_0": 13,
+    "CC0_1_0": 5
+   },
+   "latin": "Thymallus arcticus",
+   "gbif_taxon": 5711974,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "mountain-whitefish": {
+   "observations_avec_photo": 377,
+   "par_licence": {
+    "CC_BY_NC_4_0": 359,
+    "CC_BY_4_0": 12,
+    "CC0_1_0": 6
+   },
+   "latin": "Prosopium williamsoni",
+   "gbif_taxon": 2351530,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "cisco": {
+   "observations_avec_photo": 109,
+   "par_licence": {
+    "CC_BY_NC_4_0": 106,
+    "CC_BY_4_0": 3
+   },
+   "latin": "Coregonus artedi",
+   "gbif_taxon": 2351092,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "lake-whitefish": {
+   "observations_avec_photo": 72,
+   "par_licence": {
+    "CC_BY_NC_4_0": 72
+   },
+   "latin": "Coregonus clupeaformis",
+   "gbif_taxon": 2351119,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "common-carp": {
+   "observations_avec_photo": 9421,
+   "par_licence": {
+    "CC_BY_NC_4_0": 8194,
+    "CC_BY_4_0": 888,
+    "CC0_1_0": 339
+   },
+   "latin": "Cyprinus carpio",
+   "gbif_taxon": 4286975,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "grass-carp": {
+   "observations_avec_photo": 1279,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1117,
+    "CC_BY_4_0": 93,
+    "CC0_1_0": 69
+   },
+   "latin": "Ctenopharyngodon idella",
+   "gbif_taxon": 2362030,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "bighead-carp": {
+   "observations_avec_photo": 58,
+   "par_licence": {
+    "CC_BY_NC_4_0": 55,
+    "CC_BY_4_0": 3
+   },
+   "latin": "Hypophthalmichthys nobilis",
+   "gbif_taxon": 2362486,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "silver-carp": {
+   "observations_avec_photo": 337,
+   "par_licence": {
+    "CC_BY_NC_4_0": 301,
+    "CC_BY_4_0": 27,
+    "CC0_1_0": 9
+   },
+   "latin": "Hypophthalmichthys molitrix",
+   "gbif_taxon": 2362473,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "goldfish": {
+   "observations_avec_photo": 2203,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1983,
+    "CC_BY_4_0": 155,
+    "CC0_1_0": 65
+   },
+   "latin": "Carassius auratus",
+   "gbif_taxon": 4286942,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "bigmouth-buffalo": {
+   "observations_avec_photo": 322,
+   "par_licence": {
+    "CC_BY_NC_4_0": 286,
+    "CC_BY_4_0": 30,
+    "CC0_1_0": 6
+   },
+   "latin": "Ictiobus cyprinellus",
+   "gbif_taxon": 2359081,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "smallmouth-buffalo": {
+   "observations_avec_photo": 629,
+   "par_licence": {
+    "CC_BY_NC_4_0": 571,
+    "CC_BY_4_0": 47,
+    "CC0_1_0": 11
+   },
+   "latin": "Ictiobus bubalus",
+   "gbif_taxon": 2359075,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "white-sucker": {
+   "observations_avec_photo": 3328,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2972,
+    "CC_BY_4_0": 274,
+    "CC0_1_0": 82
+   },
+   "latin": "Catostomus commersonii",
+   "gbif_taxon": 2359014,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "redhorse": {
+   "note": "hybride ou nom non reconnu par GBIF : à traiter à la main",
+   "latin": "Moxostoma spp."
+  },
+  "freshwater-drum": {
+   "observations_avec_photo": 3054,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2747,
+    "CC_BY_4_0": 233,
+    "CC0_1_0": 74
+   },
+   "latin": "Aplodinotus grunniens",
+   "gbif_taxon": 2400265,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "longnose-gar": {
+   "observations_avec_photo": 3060,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2718,
+    "CC_BY_4_0": 245,
+    "CC0_1_0": 97
+   },
+   "latin": "Lepisosteus osseus",
+   "gbif_taxon": 2346701,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "spotted-gar": {
+   "observations_avec_photo": 2335,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2097,
+    "CC_BY_4_0": 172,
+    "CC0_1_0": 66
+   },
+   "latin": "Lepisosteus oculatus",
+   "gbif_taxon": 2346692,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "alligator-gar": {
+   "observations_avec_photo": 542,
+   "par_licence": {
+    "CC_BY_NC_4_0": 473,
+    "CC_BY_4_0": 53,
+    "CC0_1_0": 16
+   },
+   "latin": "Atractosteus spatula",
+   "gbif_taxon": 2346754,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "bowfin": {
+   "observations_avec_photo": 1824,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1684,
+    "CC_BY_4_0": 109,
+    "CC0_1_0": 31
+   },
+   "latin": "Amia calva",
+   "gbif_taxon": 5207891,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "northern-snakehead": {
+   "observations_avec_photo": 690,
+   "par_licence": {
+    "CC_BY_NC_4_0": 627,
+    "CC_BY_4_0": 50,
+    "CC0_1_0": 13
+   },
+   "latin": "Channa argus",
+   "gbif_taxon": 4284921,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "paddlefish": {
+   "observations_avec_photo": 203,
+   "par_licence": {
+    "CC_BY_NC_4_0": 187,
+    "CC_BY_4_0": 14,
+    "CC0_1_0": 2
+   },
+   "latin": "Polyodon spathula",
+   "gbif_taxon": 5212833,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "lake-sturgeon": {
+   "observations_avec_photo": 293,
+   "par_licence": {
+    "CC_BY_NC_4_0": 274,
+    "CC_BY_4_0": 11,
+    "CC0_1_0": 8
+   },
+   "latin": "Acipenser fulvescens",
+   "gbif_taxon": 2402120,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "shovelnose-sturgeon": {
+   "observations_avec_photo": 166,
+   "par_licence": {
+    "CC_BY_NC_4_0": 157,
+    "CC_BY_4_0": 7,
+    "CC0_1_0": 2
+   },
+   "latin": "Scaphirhynchus platorynchus",
+   "gbif_taxon": 2402084,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "white-sturgeon": {
+   "observations_avec_photo": 357,
+   "par_licence": {
+    "CC_BY_NC_4_0": 322,
+    "CC_BY_4_0": 24,
+    "CC0_1_0": 11
+   },
+   "latin": "Acipenser transmontanus",
+   "gbif_taxon": 2402122,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "american-shad": {
+   "observations_avec_photo": 337,
+   "par_licence": {
+    "CC_BY_NC_4_0": 301,
+    "CC_BY_4_0": 25,
+    "CC0_1_0": 11
+   },
+   "latin": "Alosa sapidissima",
+   "gbif_taxon": 2412661,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "american-eel": {
+   "observations_avec_photo": 2301,
+   "par_licence": {
+    "CC_BY_NC_4_0": 2032,
+    "CC_BY_4_0": 204,
+    "CC0_1_0": 65
+   },
+   "latin": "Anguilla rostrata",
+   "gbif_taxon": 5212956,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "burbot": {
+   "observations_avec_photo": 192,
+   "par_licence": {
+    "CC_BY_NC_4_0": 182,
+    "CC_BY_4_0": 7,
+    "CC0_1_0": 3
+   },
+   "latin": "Lota lota",
+   "gbif_taxon": 2415460,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "blue-tilapia": {
+   "observations_avec_photo": 1269,
+   "par_licence": {
+    "CC_BY_NC_4_0": 1114,
+    "CC_BY_4_0": 105,
+    "CC0_1_0": 50
+   },
+   "latin": "Oreochromis aureus",
+   "gbif_taxon": 2372367,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  },
+  "peacock-bass": {
+   "observations_avec_photo": 808,
+   "par_licence": {
+    "CC_BY_NC_4_0": 718,
+    "CC_BY_4_0": 65,
+    "CC0_1_0": 25
+   },
+   "latin": "Cichla ocellaris",
+   "gbif_taxon": 5208153,
+   "releve": "2026-11-07",
+   "source": "API GBIF occurrence/search"
+  }
+ }
+}

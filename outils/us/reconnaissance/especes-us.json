@@ -1,0 +1,2938 @@
+[
+ {
+  "slug": "largemouth-bass",
+  "nom_en": "Largemouth bass",
+  "nom_fr": "Black-bass à grande bouche",
+  "latin": "Micropterus salmoides",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Est, Sud-Est, bassin du Mississippi",
+   "introduit": "Ouest, Nord, Hawaï, Europe"
+  },
+  "groupe_confusion": "black_bass",
+  "categorie": "black_bass",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Mâchoire dépassant l'arrière de l'œil ; bande sombre latérale. Inclut la sous-espèce du Nord.",
+  "correspondance_fr": {
+   "slug_fr": "black-bass",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168160",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168160"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 402,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=402",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "florida-bass",
+  "nom_en": "Florida bass",
+  "nom_fr": "Black-bass de Floride",
+  "latin": "Micropterus floridanus",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Péninsule de Floride",
+   "introduit": "Texas, Californie (empoissonné)"
+  },
+  "groupe_confusion": "black_bass",
+  "categorie": "black_bass",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Espèce séparée de M. salmoides par l'AFS (2013) ; NAS la traite comme M. salmoides. Quasi indiscernable sur photo.",
+  "correspondance_fr": {
+   "slug_fr": "black-bass",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": false
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "1159343",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=1159343"
+   }
+  ],
+  "a_verifier": "[?] non confirmé par ITIS/USGS NAS : statut"
+ },
+ {
+  "slug": "smallmouth-bass",
+  "nom_en": "Smallmouth bass",
+  "nom_fr": "Black-bass à petite bouche",
+  "latin": "Micropterus dolomieu",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Grands Lacs, Est, bassin du Mississippi",
+   "introduit": "Ouest, Nord-Ouest"
+  },
+  "groupe_confusion": "black_bass",
+  "categorie": "black_bass",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Œil rouge, barres verticales, mâchoire au milieu de l'œil.",
+  "correspondance_fr": {
+   "slug_fr": "black-bass-petite-bouche",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "550562",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=550562"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 396,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=396",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "spotted-bass",
+  "nom_en": "Spotted bass (Kentucky bass)",
+  "nom_fr": "Black-bass tacheté",
+  "latin": "Micropterus punctulatus",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Bassin du Mississippi, Sud",
+   "introduit": "Californie, Ouest"
+  },
+  "groupe_confusion": "black_bass",
+  "categorie": "black_bass",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Rangées de points sur le ventre, tache de langue rugueuse.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168161",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168161"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 397,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=397",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "redeye-bass",
+  "nom_en": "Redeye bass",
+  "nom_fr": "Black-bass à œil rouge",
+  "latin": "Micropterus coosae",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Sud-Est (Coosa, Savannah, Chattahoochee)",
+   "introduit": "Californie"
+  },
+  "groupe_confusion": "black_bass",
+  "categorie": "black_bass",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Nageoire caudale à bords blancs et orange.",
+  "correspondance_fr": null,
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168163",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168163"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 395,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=395",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "guadalupe-bass",
+  "nom_en": "Guadalupe bass",
+  "nom_fr": "Black-bass de Guadalupe",
+  "latin": "Micropterus treculii",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Plateau d'Edwards, Texas",
+   "introduit": "-"
+  },
+  "groupe_confusion": "black_bass",
+  "categorie": "black_bass",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Poisson d'État du Texas, hybridation avec M. dolomieu.",
+  "correspondance_fr": null,
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168162",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168162"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 406,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=406",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "suwannee-bass",
+  "nom_en": "Suwannee bass",
+  "nom_fr": "Black-bass de Suwannee",
+  "latin": "Micropterus notius",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Rivières Suwannee et Santa Fe, Floride-Géorgie",
+   "introduit": "-"
+  },
+  "groupe_confusion": "black_bass",
+  "categorie": "black_bass",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Rare, aire minuscule.",
+  "correspondance_fr": null,
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": false
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168164",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168164"
+   }
+  ],
+  "a_verifier": "[?] non confirmé par ITIS/USGS NAS : statut"
+ },
+ {
+  "slug": "bluegill",
+  "nom_en": "Bluegill",
+  "nom_fr": "Crapet arlequin (bluegill)",
+  "latin": "Lepomis macrochirus",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Est, Centre",
+   "introduit": "Ouest, Europe"
+  },
+  "groupe_confusion": "sunfish",
+  "categorie": "sunfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Tache noire sur l'opercule et sur la dorsale arrière, joue bleue.",
+  "correspondance_fr": {
+   "slug_fr": "perche-soleil",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168141",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168141"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 385,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=385",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "pumpkinseed",
+  "nom_en": "Pumpkinseed",
+  "nom_fr": "Perche-soleil",
+  "latin": "Lepomis gibbosus",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Nord-Est",
+   "introduit": "Ouest, Europe (envahissant)"
+  },
+  "groupe_confusion": "sunfish",
+  "categorie": "sunfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Même espèce que la perche-soleil européenne ; tache rouge sur l'opercule.",
+  "correspondance_fr": {
+   "slug_fr": "perche-soleil",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168144",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168144"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 382,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=382",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "redear-sunfish",
+  "nom_en": "Redear sunfish (shellcracker)",
+  "nom_fr": "Crapet à oreilles rouges",
+  "latin": "Lepomis microlophus",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Sud-Est",
+   "introduit": "Sud-Ouest, Nord (empoissonné)"
+  },
+  "groupe_confusion": "sunfish",
+  "categorie": "sunfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Bord rouge à l'opercule, mange des mollusques.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168154",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168154"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 390,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=390",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "green-sunfish",
+  "nom_en": "Green sunfish",
+  "nom_fr": "Crapet vert",
+  "latin": "Lepomis cyanellus",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Centre",
+   "introduit": "Ouest, Est"
+  },
+  "groupe_confusion": "sunfish",
+  "categorie": "sunfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Grande bouche, bord blanc/jaune aux nageoires.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168132",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168132"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 380,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=380",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "longear-sunfish",
+  "nom_en": "Longear sunfish",
+  "nom_fr": "Crapet à longues oreilles",
+  "latin": "Lepomis megalotis",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Centre, Sud",
+   "introduit": "-"
+  },
+  "groupe_confusion": "sunfish",
+  "categorie": "sunfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Opercule long, couleurs vives.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168153",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168153"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 388,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=388",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "warmouth",
+  "nom_en": "Warmouth",
+  "nom_fr": "Crapet à bouche rouge",
+  "latin": "Lepomis gulosus",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Sud-Est, Centre",
+   "introduit": "Ouest"
+  },
+  "groupe_confusion": "sunfish",
+  "categorie": "sunfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Dents sur la langue, lignes sombres derrière l'œil.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168138",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168138"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 376,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=376",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "redbreast-sunfish",
+  "nom_en": "Redbreast sunfish",
+  "nom_fr": "Crapet à poitrine rouge",
+  "latin": "Lepomis auritus",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Côte atlantique",
+   "introduit": "Alabama, Ouest"
+  },
+  "groupe_confusion": "sunfish",
+  "categorie": "sunfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Opercule long et noir, ventre orangé.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168131",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168131"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 379,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=379",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "rock-bass",
+  "nom_en": "Rock bass",
+  "nom_fr": "Crapet de roche",
+  "latin": "Ambloplites rupestris",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Est, Nord, Grands Lacs",
+   "introduit": "Ouest"
+  },
+  "groupe_confusion": "sunfish",
+  "categorie": "sunfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Œil rouge, six épines à l'anale ; déjà dans la table française.",
+  "correspondance_fr": {
+   "slug_fr": "crapet-de-roche",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168097",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168097"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 373,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=373",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "white-crappie",
+  "nom_en": "White crappie",
+  "nom_fr": "Crapet calicot blanc",
+  "latin": "Pomoxis annularis",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Centre, Est",
+   "introduit": "Ouest"
+  },
+  "groupe_confusion": "crappie",
+  "categorie": "crappie",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Cinq ou six épines dorsales, barres verticales.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168166",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168166"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 408,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=408",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "black-crappie",
+  "nom_en": "Black crappie",
+  "nom_fr": "Marigane noire (crapet calicot)",
+  "latin": "Pomoxis nigromaculatus",
+  "famille": "Centrarchidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Est, Centre",
+   "introduit": "Ouest"
+  },
+  "groupe_confusion": "crappie",
+  "categorie": "crappie",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Sept ou huit épines dorsales, taches irrégulières.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168167",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168167"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 409,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=409",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "striped-bass",
+  "nom_en": "Striped bass (rockfish)",
+  "nom_fr": "Bar rayé",
+  "latin": "Morone saxatilis",
+  "famille": "Moronidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Atlantique (anadrome), Golfe du Mexique",
+   "introduit": "Pacifique, lacs et réservoirs"
+  },
+  "groupe_confusion": "moronide",
+  "categorie": "bass_moronide",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Sept ou huit rayures continues ; pas le bar européen (Dicentrarchus labrax).",
+  "correspondance_fr": null,
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "167680",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=167680"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 787,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=787",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "white-bass",
+  "nom_en": "White bass",
+  "nom_fr": "Bar blanc",
+  "latin": "Morone chrysops",
+  "famille": "Moronidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Grands Lacs, Mississippi",
+   "introduit": "Sud, Ouest"
+  },
+  "groupe_confusion": "moronide",
+  "categorie": "bass_moronide",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Rayures fines, dos arqué.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "167682",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=167682"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 779,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=779",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "wiper",
+  "nom_en": "Wiper (hybrid striped bass)",
+  "nom_fr": "Bar rayé hybride",
+  "latin": "Morone chrysops x Morone saxatilis",
+  "famille": "Moronidae",
+  "statut": "introduite",
+  "regions": {
+   "natif": "Aucune (hybride d'élevage)",
+   "introduit": "Réservoirs du Sud et de l'Ouest"
+  },
+  "groupe_confusion": "moronide",
+  "categorie": "bass_moronide",
+  "type": "poisson",
+  "hybride": true,
+  "remarques": "Hybride empoissonné ; rayures interrompues.",
+  "correspondance_fr": {
+   "slug_fr": "raye-hybride",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": false,
+   "statut": false
+  },
+  "source": [],
+  "a_verifier": "[?] hybride d'élevage : ni ITIS ni NAS ne le portent comme espèce ; parents vérifiés séparément"
+ },
+ {
+  "slug": "yellow-bass",
+  "nom_en": "Yellow bass",
+  "nom_fr": "Bar jaune",
+  "latin": "Morone mississippiensis",
+  "famille": "Moronidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Mississippi",
+   "introduit": "Grands Lacs"
+  },
+  "groupe_confusion": "moronide",
+  "categorie": "bass_moronide",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Flancs jaunes, rayures interrompues.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "167683",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=167683"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 785,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=785",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "white-perch",
+  "nom_en": "White perch",
+  "nom_fr": "Perche blanche",
+  "latin": "Morone americana",
+  "famille": "Moronidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Côte atlantique",
+   "introduit": "Grands Lacs (envahissant)"
+  },
+  "groupe_confusion": "moronide",
+  "categorie": "bass_moronide",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Sans rayures, dos haut.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "167678",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=167678"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 777,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=777",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "walleye",
+  "nom_en": "Walleye",
+  "nom_fr": "Doré jaune",
+  "latin": "Sander vitreus",
+  "famille": "Percidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Nord, Centre",
+   "introduit": "Ouest, Sud"
+  },
+  "groupe_confusion": "walleye_sauger",
+  "categorie": "percide",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Œil réfléchissant, tache blanche au lobe inférieur de la caudale ; proche mais distinct du sandre.",
+  "correspondance_fr": {
+   "slug_fr": "sandre",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "650173",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=650173"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 831,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=831",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "sauger",
+  "nom_en": "Sauger",
+  "nom_fr": "Doré noir",
+  "latin": "Sander canadensis",
+  "famille": "Percidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Nord, Mississippi, Missouri",
+   "introduit": "-"
+  },
+  "groupe_confusion": "walleye_sauger",
+  "categorie": "percide",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Taches sur la dorsale épineuse, pas de tache blanche caudale.",
+  "correspondance_fr": {
+   "slug_fr": "sandre",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "650171",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=650171"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 828,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=828",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "saugeye",
+  "nom_en": "Saugeye (hybrid)",
+  "nom_fr": "Saugeye (doré hybride)",
+  "latin": "Sander vitreus x Sander canadensis",
+  "famille": "Percidae",
+  "statut": "introduite",
+  "regions": {
+   "natif": "Aucune (hybride d'élevage)",
+   "introduit": "Réservoirs du Centre et du Sud"
+  },
+  "groupe_confusion": "walleye_sauger",
+  "categorie": "percide",
+  "type": "poisson",
+  "hybride": true,
+  "remarques": "Hybride empoissonné.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": false,
+   "statut": false
+  },
+  "source": [],
+  "a_verifier": "[?] hybride d'élevage : ni ITIS ni NAS ne le portent comme espèce ; parents vérifiés séparément"
+ },
+ {
+  "slug": "yellow-perch",
+  "nom_en": "Yellow perch",
+  "nom_fr": "Perchaude",
+  "latin": "Perca flavescens",
+  "famille": "Percidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Nord, Est",
+   "introduit": "Ouest, Sud"
+  },
+  "groupe_confusion": "walleye_sauger",
+  "categorie": "percide",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Barres sombres, nageoires orangées ; espèce sœur de la perche européenne.",
+  "correspondance_fr": {
+   "slug_fr": "perche-commune",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "168469",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168469"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 820,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=820",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "channel-catfish",
+  "nom_en": "Channel catfish",
+  "nom_fr": "Barbue de rivière",
+  "latin": "Ictalurus punctatus",
+  "famille": "Ictaluridae",
+  "statut": "native",
+  "regions": {
+   "natif": "Centre, Est",
+   "introduit": "Ouest"
+  },
+  "groupe_confusion": "catfish",
+  "categorie": "catfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Caudale fourchue, points sombres (jeunes) ; déjà dans la table française.",
+  "correspondance_fr": {
+   "slug_fr": "barbue-de-riviere",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "163998",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163998"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 2341,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=2341",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "blue-catfish",
+  "nom_en": "Blue catfish",
+  "nom_fr": "Barbue bleue",
+  "latin": "Ictalurus furcatus",
+  "famille": "Ictaluridae",
+  "statut": "native",
+  "regions": {
+   "natif": "Mississippi, Sud",
+   "introduit": "Atlantique (envahissant en Chesapeake)"
+  },
+  "groupe_confusion": "catfish",
+  "categorie": "catfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Anale longue à bord droit, pas de points.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "163997",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163997"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 740,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=740",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "flathead-catfish",
+  "nom_en": "Flathead catfish",
+  "nom_fr": "Barbue à tête plate",
+  "latin": "Pylodictis olivaris",
+  "famille": "Ictaluridae",
+  "statut": "native",
+  "regions": {
+   "natif": "Centre",
+   "introduit": "Est, Atlantique (envahissant), Ouest"
+  },
+  "groupe_confusion": "catfish",
+  "categorie": "catfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Tête plate, caudale peu fourchue, mâchoire inférieure saillante.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "164029",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=164029"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 750,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=750",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "white-catfish",
+  "nom_en": "White catfish",
+  "nom_fr": "Barbue blanche",
+  "latin": "Ameiurus catus",
+  "famille": "Ictaluridae",
+  "statut": "native",
+  "regions": {
+   "natif": "Côte atlantique",
+   "introduit": "Ouest, Sud"
+  },
+  "groupe_confusion": "catfish",
+  "categorie": "catfish",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Tête large, caudale légèrement fourchue.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "164037",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=164037"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 729,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=729",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "black-bullhead",
+  "nom_en": "Black bullhead",
+  "nom_fr": "Barbotte noire",
+  "latin": "Ameiurus melas",
+  "famille": "Ictaluridae",
+  "statut": "native",
+  "regions": {
+   "natif": "Centre, Nord",
+   "introduit": "Ouest, Europe"
+  },
+  "groupe_confusion": "bullhead",
+  "categorie": "bullhead",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Caudale carrée, barbillons sombres ; le poisson-chat de la table française est cette espèce.",
+  "correspondance_fr": {
+   "slug_fr": "poisson-chat",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "164039",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=164039"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 730,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=730",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "yellow-bullhead",
+  "nom_en": "Yellow bullhead",
+  "nom_fr": "Barbotte jaune",
+  "latin": "Ameiurus natalis",
+  "famille": "Ictaluridae",
+  "statut": "native",
+  "regions": {
+   "natif": "Est, Centre",
+   "introduit": "Ouest"
+  },
+  "groupe_confusion": "bullhead",
+  "categorie": "bullhead",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Barbillons blancs, anale à 24-27 rayons.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "164041",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=164041"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 733,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=733",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "brown-bullhead",
+  "nom_en": "Brown bullhead",
+  "nom_fr": "Barbotte brune",
+  "latin": "Ameiurus nebulosus",
+  "famille": "Ictaluridae",
+  "statut": "native",
+  "regions": {
+   "natif": "Est, Nord",
+   "introduit": "Ouest, Europe"
+  },
+  "groupe_confusion": "bullhead",
+  "categorie": "bullhead",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Marbrures brunes, épines pectorales dentelées.",
+  "correspondance_fr": {
+   "slug_fr": "poisson-chat",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "164043",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=164043"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 734,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=734",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "northern-pike",
+  "nom_en": "Northern pike",
+  "nom_fr": "Brochet",
+  "latin": "Esox lucius",
+  "famille": "Esocidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Nord, Grands Lacs, Alaska",
+   "introduit": "Sud-Ouest, Alaska du Sud (envahissant)"
+  },
+  "groupe_confusion": "esocide",
+  "categorie": "brochet",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Taches claires sur fond sombre ; même espèce que le brochet européen.",
+  "correspondance_fr": {
+   "slug_fr": "brochet",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162139",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162139"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 676,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=676",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "muskellunge",
+  "nom_en": "Muskellunge",
+  "nom_fr": "Maskinongé",
+  "latin": "Esox masquinongy",
+  "famille": "Esocidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Grands Lacs, Nord-Est, haut Mississippi",
+   "introduit": "-"
+  },
+  "groupe_confusion": "esocide",
+  "categorie": "brochet",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Marques sombres sur fond clair, 6-9 pores sous la mâchoire.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162144",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162144"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 679,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=679",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "tiger-muskie",
+  "nom_en": "Tiger muskie (hybrid)",
+  "nom_fr": "Maskinongé tigré (hybride)",
+  "latin": "Esox masquinongy x Esox lucius",
+  "famille": "Esocidae",
+  "statut": "introduite",
+  "regions": {
+   "natif": "Aucune (hybride d'élevage)",
+   "introduit": "Plans d'eau empoissonnés"
+  },
+  "groupe_confusion": "esocide",
+  "categorie": "brochet",
+  "type": "poisson",
+  "hybride": true,
+  "remarques": "Barres verticales.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": false,
+   "statut": false
+  },
+  "source": [],
+  "a_verifier": "[?] hybride d'élevage : ni ITIS ni NAS ne le portent comme espèce ; parents vérifiés séparément"
+ },
+ {
+  "slug": "chain-pickerel",
+  "nom_en": "Chain pickerel",
+  "nom_fr": "Brochet maillé",
+  "latin": "Esox niger",
+  "famille": "Esocidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Est, Sud-Est",
+   "introduit": "Ouest"
+  },
+  "groupe_confusion": "esocide",
+  "categorie": "brochet",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Motif de chaîne, barre sous l'œil.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162143",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162143"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 681,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=681",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "grass-pickerel",
+  "nom_en": "Grass pickerel",
+  "nom_fr": "Brochet vermiculé",
+  "latin": "Esox americanus vermiculatus",
+  "famille": "Esocidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Centre, Grands Lacs",
+   "introduit": "-"
+  },
+  "groupe_confusion": "esocide",
+  "categorie": "brochet",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Petit brochet à bandes sous l'œil ; sous-espèce vermiculée.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162142",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162142"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 675,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=675",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "redfin-pickerel",
+  "nom_en": "Redfin pickerel",
+  "nom_fr": "Brochet d'Amérique",
+  "latin": "Esox americanus americanus",
+  "famille": "Esocidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Côte atlantique",
+   "introduit": "-"
+  },
+  "groupe_confusion": "esocide",
+  "categorie": "brochet",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Nageoires rouges ; traité séparément du grass pickerel.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162141",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162141"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 674,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=674",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "rainbow-trout",
+  "nom_en": "Rainbow trout (steelhead)",
+  "nom_fr": "Truite arc-en-ciel",
+  "latin": "Oncorhynchus mykiss",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Côte Pacifique, Nord-Ouest",
+   "introduit": "Presque tous les États, Grands Lacs"
+  },
+  "groupe_confusion": "truite_omble",
+  "categorie": "truite_omble",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Bande rose, points sur la caudale ; steelhead = forme anadrome.",
+  "correspondance_fr": {
+   "slug_fr": "truite-arc-en-ciel",
+   "lien": "="
+  },
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161989",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161989"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 910,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=910",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "brown-trout",
+  "nom_en": "Brown trout",
+  "nom_fr": "Truite brune (fario)",
+  "latin": "Salmo trutta",
+  "famille": "Salmonidae",
+  "statut": "introduite",
+  "regions": {
+   "natif": "Aucune (Europe)",
+   "introduit": "Presque tous les États"
+  },
+  "groupe_confusion": "truite_omble",
+  "categorie": "truite_omble",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Points rouges auréolés, adipeuse sans points noirs.",
+  "correspondance_fr": {
+   "slug_fr": "truite-fario",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161997",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161997"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 931,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=931",
+    "natif_aux_etats_unis": false
+   }
+  ]
+ },
+ {
+  "slug": "brook-trout",
+  "nom_en": "Brook trout",
+  "nom_fr": "Omble de fontaine",
+  "latin": "Salvelinus fontinalis",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Est, Nord, Appalaches",
+   "introduit": "Ouest, Europe"
+  },
+  "groupe_confusion": "truite_omble",
+  "categorie": "truite_omble",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Vermiculures sur le dos, nageoires à liseré blanc.",
+  "correspondance_fr": {
+   "slug_fr": "omble-de-fontaine",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162003",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162003"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 939,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=939",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "cutthroat-trout",
+  "nom_en": "Cutthroat trout",
+  "nom_fr": "Truite fardée",
+  "latin": "Oncorhynchus clarkii",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Ouest, montagnes Rocheuses (sous-espèces)",
+   "introduit": "Colorado, lacs"
+  },
+  "groupe_confusion": "truite_omble",
+  "categorie": "truite_omble",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Trait rouge sous la mâchoire ; plusieurs sous-espèces menacées.",
+  "correspondance_fr": null,
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161983",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161983"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 890,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=890",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "lake-trout",
+  "nom_en": "Lake trout",
+  "nom_fr": "Touladi (cristivomer)",
+  "latin": "Salvelinus namaycush",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Nord, Grands Lacs, Alaska",
+   "introduit": "Ouest"
+  },
+  "groupe_confusion": "truite_omble",
+  "categorie": "truite_omble",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Caudale très fourchue, points clairs.",
+  "correspondance_fr": {
+   "slug_fr": "cristivomer",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162002",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162002"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 942,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=942",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "bull-trout",
+  "nom_en": "Bull trout",
+  "nom_fr": "Omble à tête plate",
+  "latin": "Salvelinus confluentus",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Nord-Ouest",
+   "introduit": "-"
+  },
+  "groupe_confusion": "truite_omble",
+  "categorie": "truite_omble",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Protégé (menacé) dans une grande part de son aire ; ne pas confondre avec brook trout.",
+  "correspondance_fr": null,
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162004",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162004"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 938,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=938",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "dolly-varden",
+  "nom_en": "Dolly Varden",
+  "nom_fr": "Dolly Varden",
+  "latin": "Salvelinus malma",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Alaska, Nord-Ouest",
+   "introduit": "-"
+  },
+  "groupe_confusion": "truite_omble",
+  "categorie": "truite_omble",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Presque indiscernable du bull trout.",
+  "correspondance_fr": {
+   "slug_fr": "omble-chevalier",
+   "lien": "~"
+  },
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162000",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162000"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 941,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=941",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "arctic-char",
+  "nom_en": "Arctic char",
+  "nom_fr": "Omble chevalier",
+  "latin": "Salvelinus alpinus",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Alaska, Maine (reliques)",
+   "introduit": "-"
+  },
+  "groupe_confusion": "truite_omble",
+  "categorie": "truite_omble",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Même espèce que l'omble chevalier européen.",
+  "correspondance_fr": {
+   "slug_fr": "omble-chevalier",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162001",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162001"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 935,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=935",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "chinook-salmon",
+  "nom_en": "Chinook salmon (king)",
+  "nom_fr": "Saumon chinook",
+  "latin": "Oncorhynchus tshawytscha",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Pacifique",
+   "introduit": "Grands Lacs"
+  },
+  "groupe_confusion": "saumon_pacifique",
+  "categorie": "saumon",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Bouche noire, points sur les deux lobes de la caudale.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161980",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161980"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 920,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=920",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "coho-salmon",
+  "nom_en": "Coho salmon (silver)",
+  "nom_fr": "Saumon coho",
+  "latin": "Oncorhynchus kisutch",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Pacifique",
+   "introduit": "Grands Lacs"
+  },
+  "groupe_confusion": "saumon_pacifique",
+  "categorie": "saumon",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Bouche noire, gencive blanche, points sur le lobe supérieur seul.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161977",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161977"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 908,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=908",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "sockeye-salmon",
+  "nom_en": "Sockeye salmon (kokanee)",
+  "nom_fr": "Saumon rouge (kokani)",
+  "latin": "Oncorhynchus nerka",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Pacifique, Nord-Ouest",
+   "introduit": "Lacs de montagne (kokani)"
+  },
+  "groupe_confusion": "saumon_pacifique",
+  "categorie": "saumon",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Pas de points ; kokani = forme lacustre.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161979",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161979"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 915,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=915",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "pink-salmon",
+  "nom_en": "Pink salmon (humpy)",
+  "nom_fr": "Saumon rose",
+  "latin": "Oncorhynchus gorbuscha",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Pacifique, Alaska",
+   "introduit": "Grands Lacs"
+  },
+  "groupe_confusion": "saumon_pacifique",
+  "categorie": "saumon",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Grandes taches ovales sur la caudale.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161975",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161975"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 906,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=906",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "atlantic-salmon",
+  "nom_en": "Atlantic salmon",
+  "nom_fr": "Saumon atlantique",
+  "latin": "Salmo salar",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Nord-Est (Maine, lacs)",
+   "introduit": "-"
+  },
+  "groupe_confusion": "saumon_pacifique",
+  "categorie": "saumon",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Même espèce que le saumon européen ; population anadrome du Maine protégée.",
+  "correspondance_fr": {
+   "slug_fr": "saumon-atlantique",
+   "lien": "="
+  },
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161996",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161996"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 926,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=926",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "arctic-grayling",
+  "nom_en": "Arctic grayling",
+  "nom_fr": "Ombre arctique",
+  "latin": "Thymallus arcticus",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Alaska, Montana",
+   "introduit": "Utah, Colorado"
+  },
+  "groupe_confusion": "coregone_ombre",
+  "categorie": "coregone",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Grande dorsale tachetée.",
+  "correspondance_fr": {
+   "slug_fr": "ombre-commun",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162016",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162016"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 943,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=943",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "mountain-whitefish",
+  "nom_en": "Mountain whitefish",
+  "nom_fr": "Ménomini des montagnes",
+  "latin": "Prosopium williamsoni",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Ouest",
+   "introduit": "-"
+  },
+  "groupe_confusion": "coregone_ombre",
+  "categorie": "coregone",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Museau court, bouche petite.",
+  "correspondance_fr": {
+   "slug_fr": "coregones",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "162009",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162009"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 924,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=924",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "cisco",
+  "nom_en": "Cisco (lake herring)",
+  "nom_fr": "Cisco de lac",
+  "latin": "Coregonus artedi",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Grands Lacs, Nord",
+   "introduit": "-"
+  },
+  "groupe_confusion": "coregone_ombre",
+  "categorie": "coregone",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Corégone argenté, mâchoire égale.",
+  "correspondance_fr": {
+   "slug_fr": "coregones",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "623384",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=623384"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 886,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=886",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "lake-whitefish",
+  "nom_en": "Lake whitefish",
+  "nom_fr": "Grand corégone",
+  "latin": "Coregonus clupeaformis",
+  "famille": "Salmonidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Grands Lacs, Nord",
+   "introduit": "-"
+  },
+  "groupe_confusion": "coregone_ombre",
+  "categorie": "coregone",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Museau dépassant la mâchoire.",
+  "correspondance_fr": {
+   "slug_fr": "coregones",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161941",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161941"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 887,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=887",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "common-carp",
+  "nom_en": "Common carp",
+  "nom_fr": "Carpe commune",
+  "latin": "Cyprinus carpio",
+  "famille": "Cyprinidae",
+  "statut": "introduite",
+  "regions": {
+   "natif": "Aucune (Eurasie)",
+   "introduit": "Presque tous les États"
+  },
+  "groupe_confusion": "carpe_cyprin",
+  "categorie": "carpe",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Deux barbillons de chaque côté, grandes écailles.",
+  "correspondance_fr": {
+   "slug_fr": "carpe-commune",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "163344",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163344"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 4,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=4",
+    "natif_aux_etats_unis": false
+   }
+  ]
+ },
+ {
+  "slug": "grass-carp",
+  "nom_en": "Grass carp",
+  "nom_fr": "Carpe amour",
+  "latin": "Ctenopharyngodon idella",
+  "famille": "Cyprinidae",
+  "statut": "invasive",
+  "regions": {
+   "natif": "Aucune (Asie)",
+   "introduit": "Bassin du Mississippi, Sud"
+  },
+  "groupe_confusion": "carpe_cyprin",
+  "categorie": "carpe",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Corps allongé, pas de barbillons.",
+  "correspondance_fr": {
+   "slug_fr": "carpe-amour",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "163537",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163537"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 514,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=514",
+    "natif_aux_etats_unis": false
+   }
+  ]
+ },
+ {
+  "slug": "bighead-carp",
+  "nom_en": "Bighead carp",
+  "nom_fr": "Carpe à grosse tête",
+  "latin": "Hypophthalmichthys nobilis",
+  "famille": "Cyprinidae",
+  "statut": "invasive",
+  "regions": {
+   "natif": "Aucune (Asie)",
+   "introduit": "Mississippi, Missouri, Illinois"
+  },
+  "groupe_confusion": "carpe_cyprin",
+  "categorie": "carpe",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Tête massive, yeux bas.",
+  "correspondance_fr": {
+   "slug_fr": "carpe-grosse-tete",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "163692",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163692"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 551,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=551",
+    "natif_aux_etats_unis": false
+   }
+  ]
+ },
+ {
+  "slug": "silver-carp",
+  "nom_en": "Silver carp",
+  "nom_fr": "Carpe argentée",
+  "latin": "Hypophthalmichthys molitrix",
+  "famille": "Cyprinidae",
+  "statut": "invasive",
+  "regions": {
+   "natif": "Aucune (Asie)",
+   "introduit": "Mississippi, Missouri, Illinois"
+  },
+  "groupe_confusion": "carpe_cyprin",
+  "categorie": "carpe",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Saute hors de l'eau ; yeux bas.",
+  "correspondance_fr": {
+   "slug_fr": "carpe-argentee",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "163691",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163691"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 549,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=549",
+    "natif_aux_etats_unis": false
+   }
+  ]
+ },
+ {
+  "slug": "goldfish",
+  "nom_en": "Goldfish",
+  "nom_fr": "Poisson rouge",
+  "latin": "Carassius auratus",
+  "famille": "Cyprinidae",
+  "statut": "introduite",
+  "regions": {
+   "natif": "Aucune (Asie)",
+   "introduit": "Presque tous les États"
+  },
+  "groupe_confusion": "carpe_cyprin",
+  "categorie": "carpe",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Sans barbillons ; formes colorées.",
+  "correspondance_fr": {
+   "slug_fr": "poisson-rouge",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "163350",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163350"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 508,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=508",
+    "natif_aux_etats_unis": false
+   }
+  ]
+ },
+ {
+  "slug": "bigmouth-buffalo",
+  "nom_en": "Bigmouth buffalo",
+  "nom_fr": "Buffalo à grande bouche",
+  "latin": "Ictiobus cyprinellus",
+  "famille": "Catostomidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Mississippi, Grands Lacs",
+   "introduit": "Hors aire, localement"
+  },
+  "groupe_confusion": "catostomide",
+  "categorie": "carpe",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Bouche terminale oblique ; souvent pris pour une carpe.",
+  "correspondance_fr": {
+   "slug_fr": "carpe-commune",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "163956",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163956"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 362,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=362",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "smallmouth-buffalo",
+  "nom_en": "Smallmouth buffalo",
+  "nom_fr": "Buffalo noir",
+  "latin": "Ictiobus bubalus",
+  "famille": "Catostomidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Mississippi, Golfe",
+   "introduit": "-"
+  },
+  "groupe_confusion": "catostomide",
+  "categorie": "carpe",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Bouche inférieure ; souvent pris pour une carpe.",
+  "correspondance_fr": {
+   "slug_fr": "carpe-commune",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "163955",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163955"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 361,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=361",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "white-sucker",
+  "nom_en": "White sucker",
+  "nom_fr": "Meunier noir",
+  "latin": "Catostomus commersonii",
+  "famille": "Catostomidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Nord, Est, Centre",
+   "introduit": "Ouest"
+  },
+  "groupe_confusion": "catostomide",
+  "categorie": "catostomide",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Bouche inférieure charnue.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "553273",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=553273"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 346,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=346",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "redhorse",
+  "nom_en": "Redhorse (groupe)",
+  "nom_fr": "Chevalier (groupe)",
+  "latin": "Moxostoma spp.",
+  "famille": "Catostomidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Est, Centre, Sud",
+   "introduit": "-"
+  },
+  "groupe_confusion": "catostomide",
+  "categorie": "catostomide",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Genre à plusieurs espèces proches ; traité en groupe.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": false
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "163927",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163927"
+   }
+  ],
+  "a_verifier": "[?] non confirmé par ITIS/USGS NAS : statut"
+ },
+ {
+  "slug": "freshwater-drum",
+  "nom_en": "Freshwater drum",
+  "nom_fr": "Malachigan",
+  "latin": "Aplodinotus grunniens",
+  "famille": "Sciaenidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Centre, Est",
+   "introduit": "-"
+  },
+  "groupe_confusion": "aucun",
+  "categorie": "autre",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Dos bossu, ligne latérale prolongée sur la caudale.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "169364",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=169364"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 946,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=946",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "longnose-gar",
+  "nom_en": "Longnose gar",
+  "nom_fr": "Garpique osseux",
+  "latin": "Lepisosteus osseus",
+  "famille": "Lepisosteidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Est, Centre, Grands Lacs",
+   "introduit": "-"
+  },
+  "groupe_confusion": "gar",
+  "categorie": "gar",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Bec long et étroit.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": false
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161094",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161094"
+   }
+  ],
+  "a_verifier": "[?] non confirmé par ITIS/USGS NAS : statut"
+ },
+ {
+  "slug": "spotted-gar",
+  "nom_en": "Spotted gar",
+  "nom_fr": "Garpique tacheté",
+  "latin": "Lepisosteus oculatus",
+  "famille": "Lepisosteidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Sud, Centre",
+   "introduit": "-"
+  },
+  "groupe_confusion": "gar",
+  "categorie": "gar",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Taches sur la tête et le corps, bec court.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161095",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161095"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 756,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=756",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "alligator-gar",
+  "nom_en": "Alligator gar",
+  "nom_fr": "Garpique alligator",
+  "latin": "Atractosteus spatula",
+  "famille": "Lepisosteidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Sud, Golfe, Mississippi",
+   "introduit": "-"
+  },
+  "groupe_confusion": "gar",
+  "categorie": "gar",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Bec large, deux rangées de dents ; plusieurs États limitent la pêche.",
+  "correspondance_fr": null,
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "201897",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=201897"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 755,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=755",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "bowfin",
+  "nom_en": "Bowfin",
+  "nom_fr": "Poisson-castor (amie)",
+  "latin": "Amia calva",
+  "famille": "Amiidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Est, Centre, Grands Lacs",
+   "introduit": "-"
+  },
+  "groupe_confusion": "bowfin_snakehead",
+  "categorie": "autre",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Longue dorsale, tache ocellée à la caudale (mâle).",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161104",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161104"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 305,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=305",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "northern-snakehead",
+  "nom_en": "Northern snakehead",
+  "nom_fr": "Tête-de-serpent du Nord",
+  "latin": "Channa argus",
+  "famille": "Channidae",
+  "statut": "invasive",
+  "regions": {
+   "natif": "Aucune (Asie)",
+   "introduit": "Chesapeake, Potomac, Arkansas, Est"
+  },
+  "groupe_confusion": "bowfin_snakehead",
+  "categorie": "autre",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Interdit d'importation (Lacey Act) ; à signaler, ne pas relâcher.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "166680",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=166680"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 2265,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=2265",
+    "natif_aux_etats_unis": false
+   }
+  ]
+ },
+ {
+  "slug": "paddlefish",
+  "nom_en": "Paddlefish",
+  "nom_fr": "Polyodon feuille",
+  "latin": "Polyodon spathula",
+  "famille": "Polyodontidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Mississippi, Missouri",
+   "introduit": "-"
+  },
+  "groupe_confusion": "esturgeon",
+  "categorie": "esturgeon",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Rostre en spatule.",
+  "correspondance_fr": null,
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161088",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161088"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 876,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=876",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "lake-sturgeon",
+  "nom_en": "Lake sturgeon",
+  "nom_fr": "Esturgeon jaune",
+  "latin": "Acipenser fulvescens",
+  "famille": "Acipenseridae",
+  "statut": "native",
+  "regions": {
+   "natif": "Grands Lacs, Mississippi, Nord",
+   "introduit": "-"
+  },
+  "groupe_confusion": "esturgeon",
+  "categorie": "esturgeon",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Protection très variable selon les États.",
+  "correspondance_fr": {
+   "slug_fr": "esturgeon-europeen",
+   "lien": "~"
+  },
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161071",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161071"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 299,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=299",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "shovelnose-sturgeon",
+  "nom_en": "Shovelnose sturgeon",
+  "nom_fr": "Esturgeon à museau plat",
+  "latin": "Scaphirhynchus platorynchus",
+  "famille": "Acipenseridae",
+  "statut": "native",
+  "regions": {
+   "natif": "Mississippi, Missouri",
+   "introduit": "-"
+  },
+  "groupe_confusion": "esturgeon",
+  "categorie": "esturgeon",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Confusion avec le pallid sturgeon, protégé.",
+  "correspondance_fr": {
+   "slug_fr": "esturgeon-europeen",
+   "lien": "~"
+  },
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": false
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161082",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161082"
+   }
+  ],
+  "a_verifier": "[?] non confirmé par ITIS/USGS NAS : statut"
+ },
+ {
+  "slug": "white-sturgeon",
+  "nom_en": "White sturgeon",
+  "nom_fr": "Esturgeon blanc",
+  "latin": "Acipenser transmontanus",
+  "famille": "Acipenseridae",
+  "statut": "native",
+  "regions": {
+   "natif": "Pacifique (Columbia, Fraser, Sacramento)",
+   "introduit": "Idaho"
+  },
+  "groupe_confusion": "esturgeon",
+  "categorie": "esturgeon",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Tailles et fermetures strictes (fenêtres de longueur).",
+  "correspondance_fr": {
+   "slug_fr": "esturgeon-europeen",
+   "lien": "~"
+  },
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161068",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161068"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 300,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=300",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "american-shad",
+  "nom_en": "American shad",
+  "nom_fr": "Alose savoureuse",
+  "latin": "Alosa sapidissima",
+  "famille": "Clupeidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Atlantique",
+   "introduit": "Pacifique (introduite)"
+  },
+  "groupe_confusion": "aucun",
+  "categorie": "migrateur",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Tache sombre derrière l'opercule.",
+  "correspondance_fr": {
+   "slug_fr": "grande-alose",
+   "lien": "~"
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161702",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161702"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 491,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=491",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "american-eel",
+  "nom_en": "American eel",
+  "nom_fr": "Anguille d'Amérique",
+  "latin": "Anguilla rostrata",
+  "famille": "Anguillidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Atlantique, Mississippi",
+   "introduit": "-"
+  },
+  "groupe_confusion": "aucun",
+  "categorie": "migrateur",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Proche de l'anguille européenne mais distincte.",
+  "correspondance_fr": {
+   "slug_fr": "anguille-jaune",
+   "lien": "~"
+  },
+  "protection_a_verifier": true,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "161127",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161127"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 310,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=310",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "burbot",
+  "nom_en": "Burbot",
+  "nom_fr": "Lotte",
+  "latin": "Lota lota",
+  "famille": "Lotidae",
+  "statut": "native",
+  "regions": {
+   "natif": "Nord, Grands Lacs, Alaska",
+   "introduit": "-"
+  },
+  "groupe_confusion": "aucun",
+  "categorie": "autre",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Même espèce que la lotte européenne.",
+  "correspondance_fr": {
+   "slug_fr": "lotte",
+   "lien": "="
+  },
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "164725",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=164725"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 698,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=698",
+    "natif_aux_etats_unis": true
+   }
+  ]
+ },
+ {
+  "slug": "blue-tilapia",
+  "nom_en": "Blue tilapia",
+  "nom_fr": "Tilapia bleu",
+  "latin": "Oreochromis aureus",
+  "famille": "Cichlidae",
+  "statut": "introduite",
+  "regions": {
+   "natif": "Aucune (Afrique)",
+   "introduit": "Floride, Sud, Texas"
+  },
+  "groupe_confusion": "aucun",
+  "categorie": "autre",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Souvent espèce envahissante dans le Sud.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "553308",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=553308"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 463,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=463",
+    "natif_aux_etats_unis": false
+   }
+  ]
+ },
+ {
+  "slug": "peacock-bass",
+  "nom_en": "Peacock bass",
+  "nom_fr": "Tucunaré (peacock bass)",
+  "latin": "Cichla ocellaris",
+  "famille": "Cichlidae",
+  "statut": "introduite",
+  "regions": {
+   "natif": "Aucune (Amérique du Sud)",
+   "introduit": "Floride du Sud"
+  },
+  "groupe_confusion": "aucun",
+  "categorie": "autre",
+  "type": "poisson",
+  "hybride": false,
+  "remarques": "Tache ocellée à la caudale.",
+  "correspondance_fr": null,
+  "protection_a_verifier": false,
+  "verifie": {
+   "latin": true,
+   "statut": true
+  },
+  "source": [
+   {
+    "autorite": "ITIS",
+    "tsn": "169857",
+    "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=169857"
+   },
+   {
+    "autorite": "USGS NAS",
+    "id": 437,
+    "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=437",
+    "natif_aux_etats_unis": false
+   }
+  ]
+ }
+]
