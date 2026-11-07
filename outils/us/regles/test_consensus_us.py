@@ -80,8 +80,57 @@ class Concordance(unittest.TestCase):
         self.assertEqual(r["statut"], "incertain")
 
     def test_aucune_regle_hors_des_deux_lectures(self):
-        total = len(self.gardees) + len(self.seules_a)
-        self.assertEqual(total, len(self.a["regles"]))
+        de_a = [r for r in self.gardees if r.get("confirmee_par_lecture") != "A"]
+        self.assertEqual(len(de_a) + len(self.seules_a), len(self.a["regles"]))
+
+
+class SymetrieEtFormes(unittest.TestCase):
+    """Défauts trouvés sur les lectures réelles WI et MN (lot us-consensus, 7 nov. 2026)."""
+
+    def test_regle_fine_de_b_ni_perdue_ni_oubliee(self):
+        # A : taille d'État ; B : même taille pour une zone. Avant : la règle de B n'était ni confirmée ni « à vérifier ».
+        a = dict(regle("taille_min", {"pouces": 15}), id="a1")
+        b = dict(regle("taille_min", {"pouces": 15}, zone="Most other inland waters", niveau_portee="zone"), id="b1")
+        gardees, seules_a, seules_b = c.comparer([a], [b])
+        self.assertEqual([r["id"] for r in gardees], ["b1"])
+        self.assertEqual(gardees[0]["confirmee_par_lecture"], "A")
+        self.assertEqual([r["id"] for r in seules_a], ["a1"])
+        self.assertEqual(seules_b, [])
+
+    def test_toute_regle_de_b_est_quelque_part(self):
+        a = [dict(regle("taille_min", {"pouces": 15}), id="a1"), dict(regle("saison", {}, du="05-01", au="03-01"), id="a2")]
+        b = [dict(regle("taille_min", {"pouces": 15}, zone="Z", niveau_portee="zone"), id="b1"),
+             dict(regle("saison", {}, du="05-01", au="03-01"), id="b2"), dict(regle("limite_jour", {"nombre": 9}), id="b3")]
+        gardees, _, seules_b = c.comparer(a, b)
+        vus = {r["id"] for r in gardees} | {r["id"] for r in seules_b} | {r["lecture_b"]["id"] for r in gardees if "lecture_b" in r}
+        self.assertEqual(vus >= {"b1", "b2", "b3"}, True)
+
+    def test_muskie_tigre_distinct_du_muskellunge(self):
+        self.assertEqual(c.espece("Tiger Muskellunge"), "tiger muskellunge")
+        self.assertEqual(c.espece("muskellunge"), "muskellunge")
+        self.assertFalse(c.confirme(regle(especes=["tiger muskellunge"]), regle(especes=["Muskellunge"])))
+
+    def test_crapets_distincts_et_groupe(self):
+        self.assertNotEqual(c.espece("green sunfish"), c.espece("orangespotted sunfish"))
+        # Le groupe confirme l'espèce, jamais l'inverse.
+        self.assertTrue(c.confirme(regle(especes=["Black crappie"]), regle(especes=["Crappie"])))
+        self.assertFalse(c.confirme(regle(especes=["Crappie"]), regle(especes=["Black crappie"])))
+        self.assertTrue(c.confirme(regle(especes=["bluegill"]), regle(especes=["Sunfish"])))
+
+    def test_limite_datee_confirmee_par_la_meme_limite_sans_date(self):
+        datee = regle("limite_possession", {"nombre": 1}, ["muskellunge"], "2026-06-06", "2026-11-30")
+        sans = regle("limite_possession", {"nombre": 1}, ["Muskellunge"])
+        self.assertTrue(c.confirme(datee, sans))
+        self.assertFalse(c.confirme(sans, datee))
+        self.assertFalse(c.confirme(regle("limite_possession", {"nombre": 2}, ["muskellunge"], "06-06", "11-30"), sans))
+        # Une saison reste comparée date pour date.
+        self.assertFalse(c.confirme(regle("saison", {}, ["muskellunge"], "06-06", "11-30"), regle("saison", {}, ["muskellunge"])))
+
+    def test_parenthese_d_une_zone_ignoree(self):
+        a = regle(zone="Northern Zone", niveau_portee="zone")
+        b = regle(zone="Northern Zone (north of US Hwy 10)", niveau_portee="zone")
+        self.assertTrue(c.confirme(a, b))
+        self.assertFalse(c.confirme(a, regle(zone="Southern Zone (south of US Hwy 10)", niveau_portee="zone")))
 
 
 class Detail(unittest.TestCase):

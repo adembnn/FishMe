@@ -1,7 +1,7 @@
 """Compare deux lectures indépendantes des règles d'un État américain et ne garde que celles où elles s'accordent.
 
 Usage : python3 -I consensus_us.py <ETAT> [--json]      (lit lecture-a/<ETAT>.json et lecture-b/<ETAT>.json)
-        python3 -I consensus_us.py --fichiers A.json B.json [--json]
+        python3 -I consensus_us.py --fichiers A.json B.json [--json | --sortie consensus.json]
 
 Même principe que outils/regles/consensus.py (France) : on compare le fond, pas la rédaction. Une règle de A est
 confirmée si une règle de B a même type, même espèce, mêmes dates (années ignorées : 12-01 au 03-15 est la même plage
@@ -10,6 +10,8 @@ même code (engin, appât…), et même portée. La portée est un identifiant n
 sans « Lake », « River », « Creek »…, mais un lac et une rivière ne se confondent pas.
 La règle confirmée doit être au moins aussi fine que celle qui la confirme (plan d'eau dans État) ; une règle fine n'est
 confirmée par une règle d'État que si la valeur est chiffrée ou datée.
+Une espèce nommée par un groupe de l'autre lecture (« Crappie » pour « Black crappie ») est confirmée, jamais l'inverse ; une valeur
+chiffrée datée est confirmée par la même valeur sans date. Une parenthèse dans un nom de zone n'est pas comparée.
 Une règle « incertain » d'un côté reste incertaine. Tout le reste devient « a_verifier » (jamais « permis »).
 Sort 0 si les fichiers sont lisibles et valides, 1 sinon.
 """
@@ -28,7 +30,8 @@ ESPECES = [  # mots-clés (tous présents) vers nom canonique, du plus précis a
     (("smallmouth",), "smallmouth bass"), (("small", "mouth"), "smallmouth bass"), (("spotted", "bass"), "spotted bass"),
     (("black", "bass"), "black bass"), (("striped", "bass"), "striped bass"), (("hybrid", "striped"), "hybrid striped bass"),
     (("white", "bass"), "white bass"), (("walleye",), "walleye"), (("sauger",), "sauger"),
-    (("northern", "pike"), "northern pike"), (("pike",), "northern pike"), (("muskellunge",), "muskellunge"),
+    (("northern", "pike"), "northern pike"), (("pike",), "northern pike"),
+    (("tiger", "muskellunge"), "tiger muskellunge"), (("tiger", "muskie"), "tiger muskellunge"), (("muskellunge",), "muskellunge"),
     (("muskie",), "muskellunge"), (("pickerel",), "chain pickerel"),
     (("rainbow", "trout"), "rainbow trout"), (("steelhead",), "steelhead"), (("brown", "trout"), "brown trout"),
     (("brook", "trout"), "brook trout"), (("lake", "trout"), "lake trout"), (("cutthroat",), "cutthroat trout"),
@@ -36,9 +39,19 @@ ESPECES = [  # mots-clés (tous présents) vers nom canonique, du plus précis a
     (("channel", "catfish"), "channel catfish"), (("blue", "catfish"), "blue catfish"),
     (("flathead",), "flathead catfish"), (("catfish",), "catfish"), (("bluegill",), "bluegill"),
     (("black", "crappie"), "black crappie"), (("white", "crappie"), "white crappie"), (("crappie",), "crappie"),
-    (("yellow", "perch"), "yellow perch"), (("sunfish",), "sunfish"), (("panfish",), "panfish"),
+    (("yellow", "perch"), "yellow perch"),
+    (("green", "sunfish"), "green sunfish"), (("orangespotted",), "orangespotted sunfish"), (("redear",), "redear sunfish"),
+    (("longear",), "longear sunfish"), (("redbreast",), "redbreast sunfish"), (("pumpkinseed",), "pumpkinseed"),
+    (("warmouth",), "warmouth"), (("splake",), "splake"), (("sunfish",), "sunfish"), (("panfish",), "panfish"),
     (("carp",), "common carp"), (("bowfin",), "bowfin"), (("sturgeon",), "sturgeon"), (("paddlefish",), "paddlefish"),
 ]
+# Un nom de groupe écrit par une lecture couvre ces espèces : « Crappie: 25 » confirme « Black crappie: 25 » (jamais l'inverse).
+GROUPES = {"crappie": {"black crappie", "white crappie"},
+           "sunfish": {"bluegill", "pumpkinseed", "green sunfish", "orangespotted sunfish", "redear sunfish", "longear sunfish",
+                       "redbreast sunfish", "warmouth"},
+           "black bass": {"largemouth bass", "smallmouth bass", "spotted bass"}}
+# Types dont la valeur est un nombre : une version datée (« 6 du 23 mai au 28 févr. ») est confirmée par la même valeur sans date.
+TYPES_CHIFFRES = {"taille_min", "taille_max", "fenetre", "limite_jour", "limite_possession", "autre"}
 NOMS_EAU_VIDES = {"of", "the", "de", "la", "le", "and", "at", "near", "lake", "lakes", "lac", "river", "riviere", "creek",
                   "cr", "pond", "reservoir", "res", "flowage", "impoundment", "stream", "brook", "run", "bayou", "county", "co"}
 STATIQUE = {"lake", "lakes", "lac", "pond", "reservoir", "res", "flowage", "impoundment"}
@@ -70,6 +83,11 @@ def espece(nom):
 
 def especes(regle):
     return {espece(e) for e in regle.get("especes") or []} or {"*"}
+
+
+def especes_couvertes(ea, eb):
+    """Chaque espèce de a est-elle nommée par b, ou comprise dans un groupe nommé par b ?"""
+    return all(e in eb or any(e in GROUPES.get(g, ()) for g in eb) for e in ea)
 
 
 # ---- Nombres et dates -------------------------------------------------------------------------------------------
@@ -126,7 +144,9 @@ def genre_eau(texte):
 
 def portee(regle):
     p = regle.get("portee") or {}
-    zone, eau, tron = (mots_eau(p.get(k) or "") for k in ("zone", "plan_eau", "troncon"))
+    # Une parenthèse dans un nom de zone l'explique (« Northern Zone (north of US Hwy 10) ») : elle n'est pas comparée.
+    zone = mots_eau(re.sub(r"\(.*?\)", " ", p.get("zone") or ""))
+    eau, tron = (mots_eau(p.get(k) or "") for k in ("plan_eau", "troncon"))
     niveau = 3 if tron else 2 if eau else 1 if zone else 0
     return {"etat": p.get("etat"), "niveau": niveau, "zone": zone, "eau": eau, "tronc": tron,
             "genre": genre_eau(p.get("plan_eau") or ""), "comte": mots_eau(p.get("comte") or "")}
@@ -160,11 +180,12 @@ def confirme(a, b):
     """Vrai si chaque fait de a se retrouve dans b ; a peut être plus fine que b."""
     if a.get("type") != b.get("type"):
         return False
-    ea, eb = especes(a), especes(b)
-    if not ea <= eb:
+    if not especes_couvertes(especes(a), especes(b)):
         return False
     if dates(a) != dates(b):
-        return False
+        # Une valeur chiffrée datée chez a, sans date chez b : a est plus fine dans le temps, b la confirme.
+        if not (a.get("type") in TYPES_CHIFFRES and dates(b) == (None, None) and nombres(a.get("valeur"))):
+            return False
     va, vb = a.get("valeur") or {}, b.get("valeur") or {}
     if not memes_nombres(nombres(va), nombres(vb)):
         return False
@@ -173,7 +194,7 @@ def confirme(a, b):
             return False
     if not portee_dans(a, b):
         return False
-    if portee(a)["niveau"] > portee(b)["niveau"]:
+    if portee(a)["niveau"] > portee(b)["niveau"] or dates(a) != dates(b):
         # Règle fine contre règle plus large : seulement si la valeur est chiffrée ou datée, jamais sur du texte seul.
         return bool(nombres(va) or dates(a) != (None, None))
     return True
@@ -191,7 +212,9 @@ def a_verifier(regle, raison):
 
 
 def comparer(la, lb):
-    """(confirmées, seules_a, seules_b) ; les deux dernières portent verdict « a_verifier »."""
+    """(confirmées, seules_a, seules_b) ; les deux dernières portent verdict « a_verifier ».
+    Les confirmées viennent surtout de A ; une règle de B plus fine que celle de A qui la confirme (zone dans État, valeur datée,
+    espèce dans un groupe) est gardée elle aussi, avec « confirmee_par_lecture »: "A" : sans cela elle n'était ni gardée ni à vérifier."""
     gardees, seules_a = [], []
     for a in la:
         candidats = [b for b in lb if confirme(a, b)]
@@ -200,9 +223,21 @@ def comparer(la, lb):
             continue
         b = max(candidats, key=lambda b: proximite(a, b))
         statut = "brouillon" if a.get("statut") == b.get("statut") == "brouillon" else "incertain"
-        regle = dict(a, statut=statut, lecture_b={"id": b.get("id"), "source": b.get("source"), "citation": b.get("citation")})
+        regle = dict(a, statut=statut, _b=b, lecture_b={"id": b.get("id"), "source": b.get("source"), "citation": b.get("citation")})
         gardees.append(regle)
-    seules_b = [a_verifier(b, "la lecture A ne donne pas cette règle") for b in lb if not any(confirme(b, a) for a in la)]
+    partenaires = {id(r["_b"]) for r in gardees}
+    seules_b = []
+    for b in lb:
+        appuis = [a for a in la if confirme(b, a)]
+        if not appuis:
+            seules_b.append(a_verifier(b, "la lecture A ne donne pas cette règle"))
+        elif id(b) not in partenaires:
+            a = max(appuis, key=lambda a: proximite(b, a))
+            statut = "brouillon" if a.get("statut") == b.get("statut") == "brouillon" else "incertain"
+            gardees.append(dict(b, statut=statut, confirmee_par_lecture="A",
+                                lecture_a={"id": a.get("id"), "source": a.get("source"), "citation": a.get("citation")}))
+    for r in gardees:
+        r.pop("_b", None)
     return gardees, seules_a, seules_b
 
 
@@ -251,10 +286,13 @@ def main(argv):
     sures = sum(1 for r in gardees if r["statut"] == "brouillon")
     print(f"{etat} : A {len(da['regles'])} règles, B {len(db['regles'])} ; confirmées par les deux {len(gardees)} "
           f"(dont {sures} sans réserve, les autres incertaines) ; à vérifier : seulement A {len(seules_a)}, seulement B {len(seules_b)}")
-    if "--json" in argv:
-        dossier = os.path.join(ICI, "consensus")
-        os.makedirs(dossier, exist_ok=True)
-        with open(os.path.join(dossier, f"{etat}.json"), "w", encoding="utf-8") as f:
+    if "--json" in argv or "--sortie" in argv:
+        if "--sortie" in argv:
+            chemin = argv[argv.index("--sortie") + 1]
+        else:
+            chemin = os.path.join(ICI, "consensus", f"{etat}.json")
+        os.makedirs(os.path.dirname(os.path.abspath(chemin)), exist_ok=True)
+        with open(chemin, "w", encoding="utf-8") as f:
             json.dump({"etat": etat, "fixture": bool(da.get("fixture") or db.get("fixture")),
                        "regles": [r for r in gardees if r["statut"] == "brouillon"],
                        "incertaines": [r for r in gardees if r["statut"] != "brouillon"],
