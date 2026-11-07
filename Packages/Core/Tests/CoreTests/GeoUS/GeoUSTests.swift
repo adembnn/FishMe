@@ -139,7 +139,7 @@ import Testing
     @Test func lieuxHorsDesEtatsCouvertsDonnentNil() {
         #expect(GeoUS.etat(pour: 48.8566, longitude: 2.3522) == nil)       // Paris
         #expect(GeoUS.etat(pour: 40.7128, longitude: -74.0060) == nil)     // New York
-        #expect(GeoUS.etat(pour: 41.8781, longitude: -87.6298) == nil)     // Chicago : dans la boîte du Michigan, pas dans l'État
+        #expect(GeoUS.etat(pour: 41.9742, longitude: -87.9073) == nil)     // Chicago O'Hare : dans la boîte du Michigan, pas dans l'État
         #expect(GeoUS.etat(pour: 0, longitude: 0) == nil)
         #expect(GeoUS.etat(pour: .nan, longitude: -89) == nil)
     }

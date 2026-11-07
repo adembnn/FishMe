@@ -254,8 +254,9 @@ def contour_tiger(usps, http=arcgis.http_json):
     return [a for f in feats for a in anneaux_exterieurs(f["geometry"])] or None
 
 
-def telecharger_3dhp(couche, emprise, where, http=arcgis.http_json, log=print):
-    feats, _ = arcgis.telecharger(HYDRO, couche, emprise, where, "*", None, http=http, log=log)
+def telecharger_3dhp(couche, emprise, where, http=arcgis.http_json, log=print, generalisation=None, paquet=None):
+    """generalisation (degrés) et paquet plus petit : les plans d'eau des Grands Lacs font échouer le serveur (HTTP 500) sinon."""
+    feats, _ = arcgis.telecharger(HYDRO, couche, emprise, where, "*", generalisation, paquet=paquet, http=http, log=log)
     return feats
 
 
@@ -296,7 +297,7 @@ def main(argv=None):
     tailles["points"] = ecrire(construire_points(usps, doc, dtl), os.path.join(a.sortie, f"{usps}-points.json"))
     commun = dict(editeur="USGS", licence="[?] non précisée : domaine public fédéral présumé (produit USGS), non lu sur le service")
     plans = en_cache(f"plans-eau-{usps}.json", lambda: telecharger_3dhp(
-        60, emprise, f"areasqkm >= {SEUIL_PLAN_EAU_KM2} AND gnisidlabel IS NOT NULL"))
+        60, emprise, f"areasqkm >= {SEUIL_PLAN_EAU_KM2} AND gnisidlabel IS NOT NULL", generalisation=0.002, paquet=50))
     if plans is not None:
         cfg_p = dict(commun, source="USGS National Map, 3DHP (couche Waterbody)", url_source=HYDRO + "/60",
                      lien_agence=LIENS.get(usps, dict()).get("plans"))
@@ -313,7 +314,7 @@ def main(argv=None):
         tailles["avis"] = ecrire(avis, os.path.join(a.sortie, f"{usps}-avis.json"))
     tailles["etats"] = ecrire(construire_etats(brut, a.sortie), os.path.join(a.sortie, "etats.json"))
     for k, v in tailles.items():
-        print(f"{usps}-{k}.json : {v / 1e6:.3f} Mo")
+        print(("etats.json" if k == "etats" else f"{usps}-{k}.json") + f" : {v / 1e6:.3f} Mo")
     return 0
 
 

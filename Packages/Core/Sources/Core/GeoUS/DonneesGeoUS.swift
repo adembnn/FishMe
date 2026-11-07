@@ -78,9 +78,7 @@ final class DonneesGeoUS: @unchecked Sendable {
     /// L'État qui contient le point. Contour simplifié quand il est fourni, boîte englobante sinon ; nil hors des États couverts.
     func etat(latitude: Double, longitude: Double) -> String? {
         guard latitude.isFinite, longitude.isFinite else { return nil }
-        let candidats = zones.filter { $0.boite(contient: latitude, longitude) }
-        if candidats.count <= 1 { return candidats.first?.etat }
-        return candidats.first { $0.contient(latitude: latitude, longitude: longitude) }?.etat
+        return zones.first { $0.contient(latitude: latitude, longitude: longitude) }?.etat
     }
 
     // MARK: Couches
