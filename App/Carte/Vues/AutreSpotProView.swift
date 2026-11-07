@@ -8,6 +8,7 @@ import Core
 struct AutreSpotProView: View {
     let decouvrir: () -> Void
     let plusTard: () -> Void
+    @Environment(\.locale) private var locale
 
     var body: some View {
         ScrollView {
@@ -18,9 +19,9 @@ struct AutreSpotProView: View {
         .scrollBounceBehavior(.basedOnSize)
         .safeAreaInset(edge: .bottom, spacing: 0) {
             VStack(spacing: 6) {
-                Button("Découvrir Pro", action: decouvrir)
+                Button(AnglaisFCarte.t("Découvrir Pro", locale), action: decouvrir)
                     .buttonStyle(.principal)
-                Button("Plus tard", action: plusTard)
+                Button(AnglaisFCarte.t("Plus tard", locale), action: plusTard)
                     .font(Police.taille(17, .heavy))
                     .foregroundStyle(Palette.marine)
                     .frame(minHeight: Gabarit.zoneTactile)
@@ -35,7 +36,7 @@ struct AutreSpotProView: View {
     private var contenu: some View {
         VStack(spacing: 0) {
             HStack {
-                Text("Choisir un autre spot")
+                Text(AnglaisFCarte.t("Choisir un autre spot", locale))
                     .font(Police.detail)
                     .foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
@@ -49,18 +50,18 @@ struct AutreSpotProView: View {
                         .contentShape(Circle())
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel("Fermer")
+                .accessibilityLabel(AnglaisFCarte.t("Fermer", locale))
             }
 
             illustration
                 .padding(.top, 47)
             VStack(spacing: 10) {
-                Text("Spots illimités")
+                Text(AnglaisFCarte.t("Spots illimités", locale))
                     .font(Police.taille(28, .heavy))
                     .foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.center)
                     .accessibilityAddTraits(.isHeader)
-                Text("Pose un cercle où tu veux : tronçons entiers de rivière et lacs.")
+                Text(AnglaisFCarte.t("Pose un cercle où tu veux : tronçons entiers de rivière et lacs.", locale))
                     .font(Police.taille(15))
                     .foregroundStyle(Palette.encreDouce)
                     .multilineTextAlignment(.center)
@@ -70,7 +71,7 @@ struct AutreSpotProView: View {
                         .font(Police.taille(16))
                         .foregroundStyle(Palette.ouvert)
                         .accessibilityHidden(true)
-                    Text("Ton spot gratuit reste à toi, pour toujours")
+                    Text(AnglaisFCarte.t("Ton spot gratuit reste à toi, pour toujours", locale))
                         .foregroundStyle(Palette.encreDouce)
                         .multilineTextAlignment(.center)
                 }
@@ -96,7 +97,7 @@ struct AutreSpotProView: View {
                 .strokeBorder(Palette.marine, lineWidth: 2.5)
                 .background(Circle().fill(Color.white.opacity(0.35)))
                 .frame(width: 80, height: 80)
-            Text("Ton spot")
+            Text(AnglaisFCarte.t("Ton spot", locale))
                 .font(Police.taille(12))
                 .foregroundStyle(Palette.surMarine)
                 .padding(.horizontal, 8)

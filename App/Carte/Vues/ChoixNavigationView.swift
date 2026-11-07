@@ -36,11 +36,12 @@ struct ChoixNavigationView: View {
     /// L'application choisie, et vrai si « Toujours utiliser » était allumé.
     let choisir: (ApplicationItineraire, Bool) -> Void
     @State private var toujours = false
+    @Environment(\.locale) private var locale
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.l) {
-                Text("Y aller avec")
+                Text(AnglaisFCarte.t("Y aller avec", locale))
                     .font(Police.titre)
                     .foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
@@ -54,7 +55,7 @@ struct ChoixNavigationView: View {
                 }
                 .tuileFishMe(rayon: Rayon.m)
                 Toggle(isOn: $toujours) {
-                    Text("Toujours utiliser")
+                    Text(AnglaisFCarte.t("Toujours utiliser", locale))
                         .font(Police.corps)
                         .foregroundStyle(Palette.encre)
                 }
@@ -93,7 +94,7 @@ struct ChoixNavigationView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("Y aller avec \(application.nom)")
+        .accessibilityLabel(AnglaisFCarte.f("Y aller avec %@", locale, application.nom))
     }
 }
 
@@ -102,6 +103,7 @@ struct ChoixNavigationView: View {
 struct ReglageNavigationView: View {
     @AppStorage(PreferenceItineraire.cle) private var choix = ""
     @State private var installees: [ApplicationItineraire] = [.plans]
+    @Environment(\.locale) private var locale
 
     var body: some View {
         HStack(spacing: Espace.m) {
@@ -110,12 +112,12 @@ struct ReglageNavigationView: View {
                 .foregroundStyle(Palette.marine)
                 .frame(width: 32)
                 .accessibilityHidden(true)
-            Text("Y aller avec")
+            Text(AnglaisFCarte.t("Y aller avec", locale))
                 .font(Police.corps)
                 .foregroundStyle(Palette.encre)
             Spacer(minLength: Espace.s)
-            Picker("Y aller avec", selection: $choix) {
-                Text("Toujours demander").tag("")
+            Picker(AnglaisFCarte.t("Y aller avec", locale), selection: $choix) {
+                Text(AnglaisFCarte.t("Toujours demander", locale)).tag("")
                 ForEach(installees) { application in
                     Text(application.nom).tag(application.rawValue)
                 }
