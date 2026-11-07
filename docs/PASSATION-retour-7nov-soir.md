@@ -24,7 +24,7 @@
 | US14 région US de bout en bout | `lot/us-region` | **bloqué, aucun code écrit** |
 | L25 démo retirée, prêt TestFlight | `lot/racine` | en cours, aucun rapport reçu |
 | D6 niveau 1 : 19 États restants | `lot/us-niveau1-fin` | en cours, aucun rapport reçu |
-| D7 règles TX FL NC NY MI, double lecture | `lot/us-regles-2` | en cours, aucun rapport reçu |
+| D7 règles TX FL NC NY MI, double lecture | `lot/us-regles-2` | **rapport reçu (non vérifié par moi)** : branche poussée, voir ci-dessous |
 
 Aucun résultat n'est vérifié : les rapports arrivent par notification. Rien n'est fusionné.
 
@@ -50,3 +50,6 @@ Reprise de US14 (constats de l'agent) :
 - PATH : `/Applications/Xcode.app/Contents/Developer/usr/bin`. Un seul build à la fois : `mkdir /tmp/fishme-build.lock`, puis `rmdir` après. Commande de build : `docs/PASSATION.md`. Simulateur : iPhone 17, id `0177EFBF-7994-4955-AD32-589A5FE26AB6`.
 - Mesure mémoire du widget : `footprint <pid>`, champ `phys_footprint_peak` (plafond visé : 28 Mo en Debug simulateur). Le lag réel ne se voit que sur un vrai iPhone : à tester en Release.
 - Ne jamais ouvrir ni committer le README MWM (mot de passe). Limite : 20 sous-agents simultanés. `/tmp` est vidé au redémarrage.
+
+## Rapport reçu : D7 (branche `lot/us-regles-2`, poussée, un commit, non fusionnée)
+Dit par l'agent, non revérifié : TX, FL, NC, NY chargés (76 règles confirmées sans réserve : TX 22, FL 6, NC 15, NY 33) ; MI : 0 règle chargée, donc pas de `MI.json` (Michigan.gov répond 403). Tests annoncés verts : Python 37, `swift test` complet 681. Il a repris les lectures A et B déjà présentes dans `outils/us/regles/donnees/` au lieu de relancer des lecteurs, et a ajouté un test de recalcul du consensus. Il a corrigé le convertisseur (truites de NC et saumon de NY mal appariés, engins limités à une période retirés, règle NC « hook and line » retirée). NC vient d'eRegulations (tiers, `source.tiers: true`, lien NCWRC). Seules 5 valeurs de TX ont été recontrôlées sur le site de l'agence. Manque : niveau 3 (plans d'eau), groupes d'espèces, saisons relatives, relecture humaine d'un échantillon. À faire à la fusion : relancer `cd Packages/Core && swift test` et `scripts/fusionner.sh lot/us-regles-2`. Même hook cassé que ci-dessus : il a écrit par Bash dans ses dossiers.
