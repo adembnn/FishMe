@@ -1,0 +1,47 @@
+{
+ "usps": "OK",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://www.wildlifedepartment.com/",
+  "statut_http": 200,
+  "url_finale": "https://www.wildlifedepartment.com/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://www.wildlifedepartment.com/fishing",
+  "statut_http": 200,
+  "url_finale": "https://www.wildlifedepartment.com/fishing"
+ },
+ "url_permis": {
+  "url": "https://www.wildlifedepartment.com/licensing/regs/license-fees",
+  "statut_http": 200,
+  "url_finale": "https://www.wildlifedepartment.com/licensing/regs/license-fees"
+ },
+ "prix_resident": {
+  "montant_usd": 31,
+  "url_source": "https://www.wildlifedepartment.com/licensing/regs/license-fees",
+  "citation": "Resident Annual Fishing $31 ... Residents age 18 or older ... 365 Days",
+  "qualite": "officielle",
+  "note": null
+ },
+ "prix_non_resident": {
+  "montant_usd": 81,
+  "url_source": "https://www.wildlifedepartment.com/licensing/regs/license-fees",
+  "citation": "Nonresident Annual Fishing $81 ... Nonresidents age 18 or older ... 365 Days",
+  "qualite": "officielle",
+  "note": null
+ },
+ "timbres": [],
+ "appli_officielle": {
+  "nom": "[?]",
+  "url": null
+ },
+ "reciprocite_eaux_tribales": null,
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison": "Deux prix lus sur la page officielle des tarifs ODWC le 2026-11-07 (365 jours). Pas de millésime affiché.",
+ "notes": "Permis truite : non listé sur cette page, prix non lu [?]. 31/81 confirmés.",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "officielle"
+ }
+}

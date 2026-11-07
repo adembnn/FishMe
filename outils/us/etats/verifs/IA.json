@@ -1,0 +1,63 @@
+{
+ "usps": "IA",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://www.iowadnr.gov/",
+  "statut_http": 200,
+  "url_finale": "https://www.iowadnr.gov/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://www.iowadnr.gov/things-do/fishing/regulations-laws",
+  "statut_http": 200,
+  "url_finale": "https://www.iowadnr.gov/things-do/fishing/regulations-laws"
+ },
+ "url_permis": {
+  "url": "https://www.iowadnr.gov/things-do/fishing/fishing-licenses",
+  "statut_http": 200,
+  "url_finale": "https://www.iowadnr.gov/things-do/fishing/fishing-licenses"
+ },
+ "prix_resident": {
+  "montant_usd": 22,
+  "url_source": "https://www.iowadnr.gov/things-do/fishing/fishing-licenses",
+  "citation": "Resident Fishing $22.00",
+  "qualite": "officielle",
+  "note": null
+ },
+ "prix_non_resident": {
+  "montant_usd": 48,
+  "url_source": "https://www.iowadnr.gov/things-do/fishing/fishing-licenses",
+  "citation": "Nonresident Fishing $48.00",
+  "qualite": "officielle",
+  "note": null
+ },
+ "timbres": [
+  {
+   "nom": "droit truite résident",
+   "montant_usd": 14.5,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "droit truite non-résident",
+   "montant_usd": 17.5,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "tag paddlefish résident / non-résident (page règlements)",
+   "montant_usd": "25.50 / 49",
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": "Go Outdoors Iowa (vente en ligne)",
+  "url": "https://www.gooutdoorsiowa.com"
+ },
+ "reciprocite_eaux_tribales": null,
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison": "Deux prix lus sur la page officielle des permis Iowa DNR le 2026-11-07. Page sans millésime explicite (licences 2026 en vente depuis le 15 déc. 2025).",
+ "notes": "22/48 confirmés. Prix hors frais d'agent éventuels.",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "officielle"
+ }
+}

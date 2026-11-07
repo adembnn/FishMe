@@ -1,0 +1,58 @@
+{
+ "usps": "WI",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://dnr.wisconsin.gov/",
+  "statut_http": 200,
+  "url_finale": "https://dnr.wisconsin.gov/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://dnr.wisconsin.gov/topic/Fishing/regulations",
+  "statut_http": 200,
+  "url_finale": "https://dnr.wisconsin.gov/topic/fishing/regulations"
+ },
+ "url_permis": {
+  "url": "https://dnr.wisconsin.gov/GoWild/resident.html",
+  "statut_http": 200,
+  "url_finale": "https://dnr.wisconsin.gov/GoWild/resident.html"
+ },
+ "prix_resident": {
+  "montant_usd": 20,
+  "url_source": "https://dnr.wisconsin.gov/GoWild/resident.html",
+  "citation": "Fishing, Annual $20.00",
+  "qualite": "officielle",
+  "note": null
+ },
+ "prix_non_resident": {
+  "montant_usd": 55,
+  "url_source": "https://dnr.wisconsin.gov/GoWild/nonresident.html",
+  "citation": "Fishing, Annual $55.00 ; Licenses are valid from April 1 through March 31 of the following year",
+  "qualite": "officielle",
+  "note": null
+ },
+ "timbres": [
+  {
+   "nom": "Inland Trout Stamp (résident et non-résident)",
+   "montant_usd": 10,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "Great Lakes Salmon/Trout Stamp (résident et non-résident)",
+   "montant_usd": 10,
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": "Go Wild (vente en ligne)",
+  "url": "https://gowild.wi.gov"
+ },
+ "reciprocite_eaux_tribales": null,
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison": "Deux prix lus sur les pages officielles Go Wild du DNR le 2026-11-07 ; année de licence 1er avril-31 mars.",
+ "notes": "20/55 confirmés. Nom Go Wild lu ; URL gowild.wi.gov non testée [?]. Page résident sans dates de validité.",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "officielle"
+ }
+}

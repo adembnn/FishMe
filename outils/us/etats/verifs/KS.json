@@ -1,0 +1,47 @@
+{
+ "usps": "KS",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://ksoutdoors.gov/",
+  "statut_http": 403,
+  "url_finale": "https://ksoutdoors.gov/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://ksoutdoors.gov/Fishing",
+  "statut_http": 403,
+  "url_finale": "https://ksoutdoors.gov/Fishing"
+ },
+ "url_permis": {
+  "url": "https://ksoutdoors.gov/License-Permits",
+  "statut_http": 403,
+  "url_finale": "https://ksoutdoors.gov/License-Permits"
+ },
+ "prix_resident": {
+  "montant_usd": null,
+  "url_source": null,
+  "citation": null,
+  "qualite": "tiers",
+  "note": "Non lu : ksoutdoors.gov renvoie 403 (anciennes URL .com redirigent 301 vers .gov) ; autre page officielle sur gooutdoorskansas.gov sans prix. Un résumé réglementaire officiel 2024 cité par recherche donne 27,50 [?]"
+ },
+ "prix_non_resident": {
+  "montant_usd": null,
+  "url_source": null,
+  "citation": null,
+  "qualite": "tiers",
+  "note": "Non lu. Sources contradictoires 52,50 / 75 / 77,50 [?]"
+ },
+ "timbres": [],
+ "appli_officielle": {
+  "nom": "Go Outdoors Kansas (vente en ligne)",
+  "url": "https://license.gooutdoorsKansas.com/"
+ },
+ "reciprocite_eaux_tribales": null,
+ "licence_reutilisation": null,
+ "verifie": false,
+ "raison": "Site officiel en 403 ; aucun PDF ou page officielle lisible trouvé. Prix stockés 27,50/52,50 (tiers) non confirmés, 52,50 contredit par d'autres sources.",
+ "notes": "CORRECTION : domaine officiel passé de ksoutdoors.com à ksoutdoors.gov (301). Mettre les 3 URL en .gov.",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "non vérifié"
+ }
+}

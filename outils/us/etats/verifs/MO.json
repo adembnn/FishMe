@@ -1,0 +1,68 @@
+{
+ "usps": "MO",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://mdc.mo.gov/",
+  "statut_http": 200,
+  "url_finale": "https://mdc.mo.gov/"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://mdc.mo.gov/fishing",
+  "statut_http": 200,
+  "url_finale": "https://mdc.mo.gov/fishing"
+ },
+ "url_permis": {
+  "url": "https://mdc.mo.gov/permits",
+  "statut_http": 200,
+  "url_finale": "https://mdc.mo.gov/permits"
+ },
+ "prix_resident": {
+  "montant_usd": 14,
+  "url_source": "https://mdc.mo.gov/sites/default/files/2026-02/Fishing%20Summ%202026_508.pdf",
+  "citation": "Resident Fishing Permit ... $14 (Summary of Missouri Fishing Regulations 2026, p.6)",
+  "qualite": "officielle",
+  "note": null
+ },
+ "prix_non_resident": {
+  "montant_usd": 57,
+  "url_source": "https://mdc.mo.gov/sites/default/files/2026-02/Fishing%20Summ%202026_508.pdf",
+  "citation": "Nonresident Fishing Permit ... $57 (Summary of Missouri Fishing Regulations 2026, p.6)",
+  "qualite": "officielle",
+  "note": null
+ },
+ "timbres": [
+  {
+   "nom": "permis truite résident 16+",
+   "montant_usd": 12,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "permis truite non-résident 16+",
+   "montant_usd": 24,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "permis truite 15 ans et moins",
+   "montant_usd": 6,
+   "qualite": "officielle"
+  },
+  {
+   "nom": "White River Border Lakes Permit (résidents MO/AR)",
+   "montant_usd": 10,
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": "[?]",
+  "url": null
+ },
+ "reciprocite_eaux_tribales": "White River Border Lakes Permit (MO/AR, lacs Bull Shoals, Norfork, Table Rock) ; le sommaire 2026 a une section « Reciprocal Fishing Privileges with Other States » (p.10, non lue).",
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison": "Deux prix lus dans le sommaire officiel 2026 de MDC (PDF mdc.mo.gov, texte extrait) le 2026-11-07 ; valable jusqu'à fin février 2027. Pages HTML du permis répondent 403 à WebFetch.",
+ "notes": "Truite 12/24 : qualité tiers -> officielle (24 confirmé, 40 écarté). Permis valable de l'achat à fin fév. 2027.",
+ "qualite_donnees": {
+  "urls": "officielle (test HTTP)",
+  "prix": "officielle"
+ }
+}
