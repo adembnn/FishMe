@@ -64,6 +64,10 @@ nonisolated public struct InstantaneAquarium: Codable, Hashable, Sendable {
     /// Absent d'un ancien fichier = `riviere` (décor de départ). Le widget ne calcule ni date ni abonnement.
     /// Décodage tolérant : champ optionnel, donc un fichier sans `skin` se lit.
     public var skin: String?
+    /// Le poisson que le pêcheur a choisi dans l'app (écran « Quel poisson dans ton widget ? ») : son `id`. Un seul
+    /// poisson nage dans le widget. `nil` = pas de choix : le plus rare. Le choix fait par « Modifier le widget »
+    /// passe avant celui-ci (voir `retenuSeul`). Décodage tolérant : absent d'un ancien fichier.
+    public var choix: String?
 
     /// Le décor à dessiner : `skin` s'il est renseigné, sinon le décor de départ.
     public var skinEffectif: String { FondWidget.identifiantSain(skin) }
@@ -74,6 +78,17 @@ nonisolated public struct InstantaneAquarium: Codable, Hashable, Sendable {
 
     /// Combien de poissons nagent dans un widget : 3 dans le petit, 5 dans tous les autres.
     public static func limiteAffichee(petit: Bool) -> Int { petit ? 3 : 5 }
+
+    /// Le widget « Mon aquarium » montre UN seul poisson (Titouan, 7 nov.) : une seule image à rastériser et des
+    /// copies animées de la taille du poisson, pas du widget.
+    public static let poissonsAffiches = 1
+
+    /// Le poisson qui nage : celui choisi par « Modifier le widget » (`choixWidget`), sinon celui choisi dans l'app
+    /// (`choix`), sinon le plus rare. Un identifiant disparu (carte supprimée) passe au suivant. Liste vide si le
+    /// Pescedex est vide.
+    public func retenuSeul(choixWidget: String?) -> [Poisson] {
+        retenus(choisis: [choixWidget, choix].compactMap { $0 }, limite: Self.poissonsAffiches)
+    }
 
     /// Les poissons qui nagent : ceux choisis, dans l'ordre choisi, qui existent encore ici (un id disparu
     /// est ignoré, un id en double compte une fois) ; rien de choisi → les plus rares d'abord (l'ordre du fichier,
@@ -92,7 +107,7 @@ nonisolated public struct InstantaneAquarium: Codable, Hashable, Sendable {
         return resultat.isEmpty ? Array(poissons.prefix(limite)) : resultat
     }
 
-    public init(poissons: [Poisson], especes: Int, rations: Int, estPro: Bool, dernierRepas: Date? = nil, misAJour: Date = .now, skin: String? = nil) {
+    public init(poissons: [Poisson], especes: Int, rations: Int, estPro: Bool, dernierRepas: Date? = nil, misAJour: Date = .now, skin: String? = nil, choix: String? = nil) {
         self.poissons = Array(poissons.prefix(Self.plafond))
         self.especes = max(especes, 0)
         self.rations = max(rations, 0)
@@ -100,6 +115,7 @@ nonisolated public struct InstantaneAquarium: Codable, Hashable, Sendable {
         self.dernierRepas = dernierRepas
         self.misAJour = misAJour
         self.skin = skin
+        self.choix = choix
     }
 
     /// Avant la première prise : l'aquarium est vide, le widget invite à pêcher.

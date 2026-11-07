@@ -26,7 +26,9 @@ nonisolated enum PontAquariumWidget {
             dernierRepas: actuel.dernierRepas,
             misAJour: .now,
             // Décor déjà corrigé par l'app (N1). Sans valeur : on garde celui du fichier.
-            skin: skin ?? actuel.skin
+            skin: skin ?? actuel.skin,
+            // Le poisson choisi dans l'app reste (il appartient au fichier, pas à la collection).
+            choix: actuel.choix
         )
         ecrireEtRecharger(neuf)
     }
@@ -51,6 +53,15 @@ nonisolated enum PontAquariumWidget {
         instantane.misAJour = .now
         ecrireEtRecharger(instantane)
         #endif
+    }
+
+    /// Le pêcheur choisit LE poisson de son widget (écran « Quel poisson dans ton widget ? ») : l'`id` d'un poisson du
+    /// fichier, ou `nil` pour « le plus rare ». Garde tout le reste du fichier et recharge le widget.
+    static func choisir(poissonId: String?) {
+        var instantane = DepotAquariumWidget.lire()
+        instantane.choix = poissonId
+        instantane.misAJour = .now
+        ecrireEtRecharger(instantane)
     }
 
     /// Une session terminée donne des rations.

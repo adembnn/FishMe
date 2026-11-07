@@ -3,7 +3,7 @@ import Foundation
 
 // Fichier à ajouter aux DEUX cibles (app et widget), comme NourrirAquariumIntent.swift : les types d'AppIntents
 // doivent exister dans l'app aussi. Le choix des poissons de « Mon aquarium » (Adem, 16 oct.) : appui long sur le
-// widget, « Modifier le widget », puis on choisit jusqu'à 5 poissons parmi tout le Pescedex.
+// widget, « Modifier le widget », puis on choisit UN poisson parmi tout le Pescedex (Titouan, 7 nov.).
 // Aucun lieu : la liste ne montre que des noms d'espèces.
 
 /// Un poisson de la liste de choix. L'id est celui du `Poisson` de l'instantané.
@@ -61,15 +61,17 @@ nonisolated struct RequetePoissonsAquarium: EntityQuery {
     }
 }
 
-/// La configuration du widget : les poissons choisis, dans l'ordre choisi.
+/// La configuration du widget : le poisson choisi.
 struct ChoixAquariumIntent: WidgetConfigurationIntent {
-    static let title: LocalizedStringResource = "Choisir les poissons"
-    static let description = IntentDescription("Les poissons de ton Pescedex qui nagent dans le widget.")
+    static let title: LocalizedStringResource = "Choisir le poisson"
+    static let description = IntentDescription("Le poisson de ton Pescedex qui nage dans le widget.")
 
-    /// Jusqu'à 5 poissons. Si `size:` ne compile pas pour un tableau, l'enlever : la limite de 5 est de toute façon
-    /// appliquée dans `FournisseurAquarium` (via `InstantaneAquarium.retenus`), et le petit widget n'en montre que 3.
-    @Parameter(title: "Poissons", size: 5)
-    var poissons: [PoissonAquariumEntite]?
+    /// UN seul poisson (Titouan, 7 nov.). Vide : celui choisi dans l'app, sinon le plus rare.
+    @Parameter(title: "Poisson")
+    var poisson: PoissonAquariumEntite?
+
+    /// Le choix sous forme de liste (zéro ou un poisson) : pour le code qui lisait l'ancienne liste.
+    var poissons: [PoissonAquariumEntite]? { poisson.map { [$0] } }
 
     nonisolated init() {}
 }

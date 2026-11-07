@@ -1,6 +1,10 @@
 import Foundation
 import Testing
+#if canImport(WidgetAquariumLogique)
+@testable import WidgetAquariumLogique
+#else
 @testable import BuildChallenge
+#endif
 
 @Suite("FondWidget et décor de l'instantané")
 struct FondWidgetTests {
