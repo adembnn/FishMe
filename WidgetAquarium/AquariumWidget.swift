@@ -60,8 +60,8 @@ nonisolated struct FournisseurAquarium: AppIntentTimelineProvider {
     /// Le nombre d'espèces, les rations et l'abonnement restent ceux du fichier entier.
     private static func instantane(_ configuration: ChoixAquariumIntent, famille: WidgetFamily) -> InstantaneAquarium {
         var instantane = DepotAquariumWidget.lire()
-        let ids = configuration.poissons?.map(\.id)
-        instantane.poissons = instantane.retenus(choisis: ids, limite: limitePoissons(famille))
+        // Un seul poisson : le choix de « Modifier le widget », sinon celui de l'app, sinon le plus rare.
+        instantane.poissons = instantane.retenuSeul(choixWidget: configuration.poisson?.id)
         return instantane
     }
 }

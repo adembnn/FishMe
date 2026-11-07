@@ -107,3 +107,25 @@ struct HorlogeAnimationTests {
         for k in 1..<32 { #expect((vues[k] - vues[k - 1] + 16) % 16 == 1) }
     }
 }
+
+/// Nage du poisson unique (lot widget-fluide) : boucle de 10 s, une copie par pose du trajet, deux masques d’UN chrono.
+@Suite("HorlogeAnimation, poisson unique")
+struct HorlogePoissonUniqueTests {
+    @Test(arguments: [4, 6, 8, 12])
+    func uneSeuleCopieVisibleSurDixSecondes(parSeconde: Int) {
+        let boucle = HorlogeAnimation.Boucle(parSeconde: parSeconde, duree: 10)
+        #expect(boucle.copies == 10 * parSeconde)
+        #expect(boucle.chronosParCopie == 2)
+        for k in 0..<boucle.copies {
+            let m = HorlogeAnimation.masques(copie: k, boucle: boucle)
+            #expect(m.a.chiffres.count == 1 && m.b.chiffres.count == 1)
+        }
+        for pas in 0..<(25 * 32) {
+            let t = ref.addingTimeInterval(Double(pas) / 32 + 1.0 / 64)
+            let visibles = (0..<boucle.copies).filter {
+                HorlogeAnimation.copieVisible($0, boucle: boucle, reference: ref, a: t)
+            }
+            #expect(visibles == [HorlogeAnimation.imageVisible(boucle: boucle, reference: ref, a: t)])
+        }
+    }
+}
