@@ -1,0 +1,1959 @@
+{
+ "version": 1,
+ "etat": "MN",
+ "lecteur": "A",
+ "genere_le": "2026-11-07",
+ "textes": [
+  {
+   "titre": "2026 Minnesota Fishing Regulations (livret officiel du DNR, PDF)",
+   "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+   "edition": "2026 Minnesota Fishing Regulations (updated 6.4.26; en vigueur de mars 2026 au 28 février 2027)",
+   "publie_le": "2026-06-04",
+   "lu": "partie"
+  },
+  {
+   "titre": "MN DNR : règles de pêche en ligne (403 pour l'outil, non lues)",
+   "url": "https://www.dnr.state.mn.us/regulations/fishing/index.html",
+   "edition": null,
+   "publie_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "MN DNR : brochet, règles par zone et plans d'eau à règles spéciales (non lue ; livret pp. 45-64 liste les eaux à règles spéciales)",
+   "url": "https://www.dnr.state.mn.us/pike/index.html",
+   "edition": null,
+   "publie_le": null,
+   "lu": "titre seul"
+  }
+ ],
+ "regles": [
+  {
+   "id": "MN-walleye-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "saison",
+   "du": "05-09",
+   "au": "02-28",
+   "valeur": {},
+   "phrase": "Walleye (eaux intérieures) : saison du 9 mai 2026 au 28 février 2027 ; l'ouverture change chaque année (15 mai 2027).",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-walleye-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 6,
+    "texte": "6 walleye and sauger combined; only 1 walleye over 20 inches in possession"
+   },
+   "phrase": "Walleye : 6 poissons walleye et sauger confondus en possession, dont 1 seul walleye de plus de 20 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-sauger-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Sauger"
+   ],
+   "type": "saison",
+   "du": "05-09",
+   "au": "02-28",
+   "valeur": {},
+   "phrase": "Sauger (eaux intérieures) : saison du 9 mai 2026 au 28 février 2027 ; l'ouverture change chaque année (15 mai 2027).",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-sauger-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Sauger"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 6,
+    "texte": "6 walleye and sauger combined; only 1 walleye over 20 inches in possession"
+   },
+   "phrase": "Sauger : 6 poissons walleye et sauger confondus en possession, dont 1 seul walleye de plus de 20 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-walleye-un-grand",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "taille_max",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 1,
+    "pouces": 20,
+    "texte": "only 1 walleye over 20 inches in possession"
+   },
+   "phrase": "Walleye : un seul walleye de plus de 20 pouces en possession.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+   "statut": "incertain",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "raison_incertain": "Limite du nombre de grands poissons (1 au-dessus de 20 pouces), pas une taille maximale au sens strict ; codage ambigu."
+  },
+  {
+   "id": "MN-muskie-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "saison",
+   "du": "06-06",
+   "au": "11-30",
+   "valeur": {},
+   "phrase": "Muskellunge : saison du 6 juin au 30 novembre 2026 (ouverture 5 juin 2027).",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-muskie-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 1
+   },
+   "phrase": "Muskellunge : 1 poisson.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-muskie-taille-min",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 54
+   },
+   "phrase": "Muskellunge : taille minimale 54 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-tigermuskie-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Tiger Muskellunge"
+   ],
+   "type": "saison",
+   "du": "06-06",
+   "au": "11-30",
+   "valeur": {},
+   "phrase": "Muskellunge hybride (tiger) : saison du 6 juin au 30 novembre.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-tigermuskie-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Tiger Muskellunge"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 1
+   },
+   "phrase": "Muskellunge hybride (tiger) : 1 poisson.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-tigermuskie-taille-min",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Tiger Muskellunge"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 40
+   },
+   "phrase": "Muskellunge hybride (tiger) : taille minimale 40 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-lmb-sn-relacher-printemps",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Southern and North-central Zones"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "relacher",
+   "du": "03-01",
+   "au": "05-22",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Largemouth bass, zones Sud et Centre-Nord : remise à l'eau seulement du 1er mars au 22 mai.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-lmb-sn-limite",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Southern and North-central Zones"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "limite_possession",
+   "du": "05-23",
+   "au": "02-28",
+   "valeur": {
+    "nombre": 6,
+    "texte": "6 combined total largemouth or smallmouth bass (when smallmouth season is open)"
+   },
+   "phrase": "Largemouth bass, zones Sud et Centre-Nord : 6 black-bass (largemouth et smallmouth confondus) du 23 mai 2026 au 28 février 2027.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "May 23, 2026 - Feb. 28, 2027 6 combined total largemouth or smallmouth bass (when smallmouth season is open)",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-smb-sn-relacher-printemps",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Southern and North-central Zones"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "relacher",
+   "du": "03-01",
+   "au": "05-22",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Smallmouth bass, zones Sud et Centre-Nord : remise à l'eau seulement du 1er mars au 22 mai.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Smallmouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-smb-sn-limite",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Southern and North-central Zones"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "limite_possession",
+   "du": "05-23",
+   "au": "09-13",
+   "valeur": {
+    "nombre": 6,
+    "texte": "6 combined total largemouth or smallmouth bass"
+   },
+   "phrase": "Smallmouth bass, zones Sud et Centre-Nord : 6 black-bass (largemouth et smallmouth confondus) du 23 mai au 13 septembre.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "May 23 - Sept. 13 6 combined total largemouth or smallmouth bass",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-smb-sn-relacher-automne",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Southern and North-central Zones"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "relacher",
+   "du": "09-14",
+   "au": "02-28",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Smallmouth bass, zones Sud et Centre-Nord : remise à l'eau seulement du 14 septembre 2026 au 28 février 2027.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Sept. 14, 2026 - Feb. 28, 2027 Catch-and-release only",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-lmb-ne-relacher",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Northeast Zone"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "relacher",
+   "du": "03-01",
+   "au": "05-08",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Largemouth Bass, zone Nord-Est : remise à l'eau seulement du 1er mars au 8 mai.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth and smallmouth bass — Northeast Zone (Pelican and Ash lakes in St. Louis County are part of the Northeast Zone for bass. See Zone Map on page 31.) March 1 - May 8 Catch-and-release only",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-lmb-ne-limite",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Northeast Zone"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "limite_possession",
+   "du": "05-09",
+   "au": "02-28",
+   "valeur": {
+    "nombre": 6,
+    "texte": "6 combined total largemouth or smallmouth bass"
+   },
+   "phrase": "Largemouth Bass, zone Nord-Est : 6 black-bass (largemouth et smallmouth confondus) du 9 mai 2026 au 28 février 2027.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "May 9, 2026 - Feb. 28, 2027 6 combined total largemouth or smallmouth bass",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-smb-ne-relacher",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Northeast Zone"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "relacher",
+   "du": "03-01",
+   "au": "05-08",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Smallmouth Bass, zone Nord-Est : remise à l'eau seulement du 1er mars au 8 mai.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth and smallmouth bass — Northeast Zone (Pelican and Ash lakes in St. Louis County are part of the Northeast Zone for bass. See Zone Map on page 31.) March 1 - May 8 Catch-and-release only",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-smb-ne-limite",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Northeast Zone"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "limite_possession",
+   "du": "05-09",
+   "au": "02-28",
+   "valeur": {
+    "nombre": 6,
+    "texte": "6 combined total largemouth or smallmouth bass"
+   },
+   "phrase": "Smallmouth Bass, zone Nord-Est : 6 black-bass (largemouth et smallmouth confondus) du 9 mai 2026 au 28 février 2027.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "May 9, 2026 - Feb. 28, 2027 6 combined total largemouth or smallmouth bass",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-pike-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Northern Pike"
+   ],
+   "type": "saison",
+   "du": "05-09",
+   "au": "02-28",
+   "valeur": {},
+   "phrase": "Grand brochet (eaux intérieures, zones) : saison du 9 mai 2026 au 28 février 2027 (ouverture 15 mai 2027).",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 31",
+    "edition": "2026",
+    "page": "31",
+    "date": "2026-11-07"
+   },
+   "citation": "Northern pike May 9, 2026 - Feb. 28, 2027",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-pike-ne-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Northeast Zone"
+   },
+   "especes": [
+    "Northern Pike"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2,
+    "texte": "2, only 1 over 40 inches in possession"
+   },
+   "phrase": "Grand brochet, zone Nord-Est : 2 poissons, dont 1 seul de plus de 40 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 31",
+    "edition": "2026",
+    "page": "31",
+    "date": "2026-11-07"
+   },
+   "citation": "Northeast Zone: 2 (only 1 over 40\" in possession, all from 30-40\" must be immediately released",
+   "statut": "incertain",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "raison_incertain": "Le texte extrait lit « Northeast Zone: 2 » ; la mise en page du tableau (3 colonnes) est mêlée dans l'extraction PDF, à relire sur la page."
+  },
+  {
+   "id": "MN-pike-ne-fenetre",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Northeast Zone"
+   },
+   "especes": [
+    "Northern Pike"
+   ],
+   "type": "fenetre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces_min": 30,
+    "pouces_max": 40,
+    "mode": "relacher_entre"
+   },
+   "phrase": "Grand brochet, zone Nord-Est : remise à l'eau immédiate des poissons de 30 à 40 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 31",
+    "edition": "2026",
+    "page": "31",
+    "date": "2026-11-07"
+   },
+   "citation": "all from 30-40\" must be immediately released",
+   "statut": "incertain",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "raison_incertain": "Mise en page du tableau mêlée à l'extraction PDF ; rattachement à la zone Nord-Est à relire."
+  },
+  {
+   "id": "MN-pike-nc-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "North-central Zone"
+   },
+   "especes": [
+    "Northern Pike"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "10, not more than 2 over 26 inches"
+   },
+   "phrase": "Grand brochet, zone Centre-Nord : 10 poissons, dont 2 au plus de plus de 26 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 31",
+    "edition": "2026",
+    "page": "31",
+    "date": "2026-11-07"
+   },
+   "citation": "10 (not more than 2 over 26\", all from 22-26\" must be immediately released)",
+   "statut": "incertain",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "raison_incertain": "Rattachement à la zone Centre-Nord déduit de l'ordre des cellules du tableau extrait ; à relire sur la page."
+  },
+  {
+   "id": "MN-pike-nc-fenetre",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "North-central Zone"
+   },
+   "especes": [
+    "Northern Pike"
+   ],
+   "type": "fenetre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces_min": 22,
+    "pouces_max": 26,
+    "mode": "relacher_entre"
+   },
+   "phrase": "Grand brochet, zone Centre-Nord : remise à l'eau immédiate des poissons de 22 à 26 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 31",
+    "edition": "2026",
+    "page": "31",
+    "date": "2026-11-07"
+   },
+   "citation": "all from 22-26\" must be immediately released",
+   "statut": "incertain",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "raison_incertain": "Rattachement à la zone Centre-Nord déduit de l'ordre des cellules du tableau extrait ; à relire sur la page."
+  },
+  {
+   "id": "MN-pike-s-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Southern Zone"
+   },
+   "especes": [
+    "Northern Pike"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "Grand brochet, zone Sud : 2 poissons.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 31",
+    "edition": "2026",
+    "page": "31",
+    "date": "2026-11-07"
+   },
+   "citation": "Southern Zone: 2 (minimum size 24\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-pike-s-taille-min",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Southern Zone"
+   },
+   "especes": [
+    "Northern Pike"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 24
+   },
+   "phrase": "Grand brochet, zone Sud : taille minimale 24 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 31",
+    "edition": "2026",
+    "page": "31",
+    "date": "2026-11-07"
+   },
+   "citation": "Southern Zone: 2 (minimum size 24\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-crappie-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Crappie"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "10 combined total, white or black crappie and hybrids"
+   },
+   "phrase": "Crapet (blanc ou noir et hybrides) : 10 au total.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Crappie (white or black and their hybrids) Continuous 10 combined total",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-crappie-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Crappie"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "Crapet : saison continue.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Crappie (white or black and their hybrids) Continuous 10 combined total",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-sunfish-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Sunfish"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 20,
+    "texte": "20 combined total; sunfish group includes bluegill, pumpkinseed, green, orangespotted, northern, warmouth and hybrids"
+   },
+   "phrase": "Sunfish (dont bluegill, pumpkinseed, etc.) : 20 au total.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Sunfish (bluegill, pumpkinseed, green, orangespotted, northern, warmouth, and their hybrids) Continuous 20 combined total",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-sunfish-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Sunfish"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "Sunfish (dont bluegill) : saison continue.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Sunfish (bluegill, pumpkinseed, green, orangespotted, northern, warmouth, and their hybrids) Continuous 20 combined total",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-perch-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Yellow Perch"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 40
+   },
+   "phrase": "Perchaude : 40 en possession.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Perch Continuous 20 daily, 40 in possession",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-perch-jour",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Yellow Perch"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 20
+   },
+   "phrase": "Perchaude : 20 par jour.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Perch Continuous 20 daily, 40 in possession",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-perch-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Yellow Perch"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "Perchaude : saison continue.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Perch Continuous 20 daily, 40 in possession",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-channelcat-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Channel Catfish"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5, only 1 over 24 inches"
+   },
+   "phrase": "Barbue de rivière : 5 poissons, dont 1 seul de plus de 24 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Channel Catfish Continuous 5 (only 1 over 24\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-channelcat-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Channel Catfish"
+   ],
+   "type": "saison",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {},
+   "phrase": "Barbue de rivière : saison continue.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Channel Catfish Continuous 5 (only 1 over 24\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-flatheadcat-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Flathead Catfish"
+   ],
+   "type": "saison",
+   "du": "04-01",
+   "au": "11-30",
+   "valeur": {},
+   "phrase": "Barbue à tête plate : saison du 1er avril au 30 novembre.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Flathead Catfish April 1 - Nov. 30 2 (only 1 over 24\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-flatheadcat-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Flathead Catfish"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2,
+    "texte": "2, only 1 over 24 inches"
+   },
+   "phrase": "Barbue à tête plate : 2 poissons, dont 1 seul de plus de 24 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Flathead Catfish April 1 - Nov. 30 2 (only 1 over 24\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-sturgeon-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Lake Sturgeon"
+   ],
+   "type": "saison",
+   "du": "06-16",
+   "au": "04-14",
+   "valeur": {},
+   "phrase": "Esturgeon jaune, eaux intérieures : saison du 16 juin au 14 avril.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake or shovelnose sturgeon (See pages 66-77 for other sturgeon waters and regulations.) Same dates every year: June 16 - April 14 Catch-and-release only; no tag/endorsement needed.",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-sturgeon-relacher",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Lake Sturgeon"
+   ],
+   "type": "relacher",
+   "du": "06-16",
+   "au": "04-14",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Esturgeon jaune, eaux intérieures : remise à l'eau seulement, sans étiquette ni mention.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake or shovelnose sturgeon (See pages 66-77 for other sturgeon waters and regulations.) Same dates every year: June 16 - April 14 Catch-and-release only; no tag/endorsement needed.",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-brook-ruisseau-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Streams, statewide except listed exceptions (Southeast Minnesota)"
+   },
+   "especes": [
+    "Brook Trout"
+   ],
+   "type": "saison",
+   "du": "04-11",
+   "au": "09-30",
+   "valeur": {},
+   "phrase": "Brook Trout, cours d'eau (hors exceptions du Sud-Est) : saison du 11 avril au 30 septembre ; ouverture chaque année le deuxième samedi d'avril.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-brook-ruisseau-limite",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Streams, statewide except listed exceptions (Southeast Minnesota)"
+   },
+   "especes": [
+    "Brook Trout"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 combined total stream trout species (only 1 over 16 inches)"
+   },
+   "phrase": "Brook Trout, cours d'eau (hors exceptions du Sud-Est) : 5 truites au total, dont 1 seule de plus de 16 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-brook-lac-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Lakes (summer), statewide"
+   },
+   "especes": [
+    "Brook Trout"
+   ],
+   "type": "saison",
+   "du": "05-09",
+   "au": "10-31",
+   "valeur": {},
+   "phrase": "Brook Trout, lacs (été, État) : saison du 9 mai au 31 octobre.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-brook-lac-limite",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Lakes (summer), statewide"
+   },
+   "especes": [
+    "Brook Trout"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 combined total stream trout species (not more than 3 over 16 inches)"
+   },
+   "phrase": "Brook Trout, lacs (été) : 5 truites au total, dont 3 au plus de plus de 16 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-brown-ruisseau-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Streams, statewide except listed exceptions (Southeast Minnesota)"
+   },
+   "especes": [
+    "Brown Trout"
+   ],
+   "type": "saison",
+   "du": "04-11",
+   "au": "09-30",
+   "valeur": {},
+   "phrase": "Brown Trout, cours d'eau (hors exceptions du Sud-Est) : saison du 11 avril au 30 septembre ; ouverture chaque année le deuxième samedi d'avril.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-brown-ruisseau-limite",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Streams, statewide except listed exceptions (Southeast Minnesota)"
+   },
+   "especes": [
+    "Brown Trout"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 combined total stream trout species (only 1 over 16 inches)"
+   },
+   "phrase": "Brown Trout, cours d'eau (hors exceptions du Sud-Est) : 5 truites au total, dont 1 seule de plus de 16 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-brown-lac-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Lakes (summer), statewide"
+   },
+   "especes": [
+    "Brown Trout"
+   ],
+   "type": "saison",
+   "du": "05-09",
+   "au": "10-31",
+   "valeur": {},
+   "phrase": "Brown Trout, lacs (été, État) : saison du 9 mai au 31 octobre.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-brown-lac-limite",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Lakes (summer), statewide"
+   },
+   "especes": [
+    "Brown Trout"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 combined total stream trout species (not more than 3 over 16 inches)"
+   },
+   "phrase": "Brown Trout, lacs (été) : 5 truites au total, dont 3 au plus de plus de 16 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-rainbow-ruisseau-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Streams, statewide except listed exceptions (Southeast Minnesota)"
+   },
+   "especes": [
+    "Rainbow Trout"
+   ],
+   "type": "saison",
+   "du": "04-11",
+   "au": "09-30",
+   "valeur": {},
+   "phrase": "Rainbow Trout, cours d'eau (hors exceptions du Sud-Est) : saison du 11 avril au 30 septembre ; ouverture chaque année le deuxième samedi d'avril.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-rainbow-ruisseau-limite",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Streams, statewide except listed exceptions (Southeast Minnesota)"
+   },
+   "especes": [
+    "Rainbow Trout"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 combined total stream trout species (only 1 over 16 inches)"
+   },
+   "phrase": "Rainbow Trout, cours d'eau (hors exceptions du Sud-Est) : 5 truites au total, dont 1 seule de plus de 16 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-rainbow-lac-saison",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Lakes (summer), statewide"
+   },
+   "especes": [
+    "Rainbow Trout"
+   ],
+   "type": "saison",
+   "du": "05-09",
+   "au": "10-31",
+   "valeur": {},
+   "phrase": "Rainbow Trout, lacs (été, État) : saison du 9 mai au 31 octobre.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-rainbow-lac-limite",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Lakes (summer), statewide"
+   },
+   "especes": [
+    "Rainbow Trout"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 combined total stream trout species (not more than 3 over 16 inches)"
+   },
+   "phrase": "Rainbow Trout, lacs (été) : 5 truites au total, dont 3 au plus de plus de 16 pouces.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 33",
+    "edition": "2026",
+    "page": "33",
+    "date": "2026-11-07"
+   },
+   "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-laketrout-saison-ete",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters, summer, statewide"
+   },
+   "especes": [
+    "Lake Trout"
+   ],
+   "type": "saison",
+   "du": "05-09",
+   "au": "09-30",
+   "valeur": {},
+   "phrase": "Touladi, été (État) : saison du 9 mai au 30 septembre.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake trout (SUMMER)Statewide May 9 - Sept. 30 2",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-laketrout-limite-ete",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters, summer, statewide"
+   },
+   "especes": [
+    "Lake Trout"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 2
+   },
+   "phrase": "Touladi, été : 2 poissons.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake trout (SUMMER)Statewide May 9 - Sept. 30 2",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-laketrout-saison-hiver",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters, winter, outside or partly outside the BWCAW"
+   },
+   "especes": [
+    "Lake Trout"
+   ],
+   "type": "saison",
+   "du": "01-17",
+   "au": "03-31",
+   "valeur": {},
+   "phrase": "Touladi, hiver (hors ou partiellement hors BWCAW) : du 17 janvier au 31 mars 2026.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake trout (WINTER) Outside or partly outside the Boundary Waters Canoe Area Wilderness. 2026 Season: Jan. 17 - March 31 2027 Season: Jan. 16 - March 31 2",
+   "statut": "incertain",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "raison_incertain": "Date d'ouverture différente en 2027 (16 janvier) ; lacs entièrement dans le BWCAW ont une autre saison (1er janvier)."
+  },
+  {
+   "id": "MN-engin-lignes-eau-libre",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 1,
+    "code": "une_ligne_eau_libre",
+    "texte": "1 line open water; 2 lines in listed river reaches"
+   },
+   "phrase": "Eaux intérieures, eau libre : 1 ligne ; 2 lignes dans la Minnesota en aval du barrage de Granite Falls et dans le Mississippi en aval de St. Anthony Falls.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 37",
+    "edition": "2026",
+    "page": "37",
+    "date": "2026-11-07"
+   },
+   "citation": "You may use only 1 line during the open water season except 2 lines may be used in the Minnesota River downstream of the Granite Falls Dam and in the Mississippi River downstream of St. Anthony Falls.",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-engin-lignes-glace",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 2,
+    "code": "deux_lignes_glace",
+    "texte": "2 lines through the ice except designated trout lakes and streams"
+   },
+   "phrase": "Pêche sur glace : 2 lignes, sauf lacs et cours d'eau à truite désignés.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 37",
+    "edition": "2026",
+    "page": "37",
+    "date": "2026-11-07"
+   },
+   "citation": "You may use 2 lines through the ice except on designated trout lakes and streams.",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-engin-lignes-truite",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Designated trout lakes and streams"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "lignes_max": 1,
+    "code": "une_ligne_truite_designee",
+    "texte": "1 line at any time on designated trout lakes and streams"
+   },
+   "phrase": "Lacs et cours d'eau à truite désignés : 1 ligne en tout temps.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 37",
+    "edition": "2026",
+    "page": "37",
+    "date": "2026-11-07"
+   },
+   "citation": "On designated trout lakes and streams, only 1 line is allowed at any time.",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-engin-hamecons",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "hamecons_max": 3,
+    "code": "trois_hamecons_18_pouces",
+    "texte": "up to 3 hooks, total distance between hooks 18 inches, one bait per line"
+   },
+   "phrase": "Un montage unique : 3 hameçons au plus, écart total de 18 pouces au plus le long de la ligne ; 1 seul appât par ligne.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 37",
+    "edition": "2026",
+    "page": "37",
+    "date": "2026-11-07"
+   },
+   "citation": "Up to 3 single- or multiple-pronged hooks may be used as a single tackle configuration. The total distance between hooks cannot exceed 18\" measured along the line.",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28"
+  },
+  {
+   "id": "MN-engin-interdits",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [],
+   "type": "interdit",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "methodes_interdites",
+    "texte": "light to lure fish, unattended line, explosives, chemicals, electricity, noodling, snagging"
+   },
+   "phrase": "Méthodes interdites : lumière artificielle pour attirer le poisson, ligne laissée sans surveillance, explosifs, produits chimiques, électricité, prise à la main, accrochage.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 40",
+    "edition": "2026",
+    "page": "40",
+    "date": "2026-11-07"
+   },
+   "citation": "Taking fish by hand (noodling) or by snagging.",
+   "statut": "incertain",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "raison_incertain": "Plusieurs interdictions regroupées dans le texte source ; une seule citée ici (règle 1 par disposition non respectée).",
+   "verdict": "interdit"
+  },
+  {
+   "id": "MN-appat-poissons-interdits",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [],
+   "type": "interdit",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "appat_gibier_carpe_interdit",
+    "texte": "no game fish, goldfish, carp or salamanders for bait"
+   },
+   "phrase": "Appâts : poissons de sport, poissons rouges, carpes et salamandres ne servent pas d'appât.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 38",
+    "edition": "2026",
+    "page": "38",
+    "date": "2026-11-07"
+   },
+   "citation": "You can’t use whole or parts of game fish, goldfish, carp, or salamanders (including mudpuppies) for bait.",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "verdict": "interdit"
+  },
+  {
+   "id": "MN-appat-import-vifs",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [],
+   "type": "interdit",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "import_vifs_interdit",
+    "texte": "no import of live minnows or leeches into Minnesota"
+   },
+   "phrase": "Appâts : importation de vairons et sangsues vivants en Minnesota interdite.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 38",
+    "edition": "2026",
+    "page": "38",
+    "date": "2026-11-07"
+   },
+   "citation": "You can't import live minnows or leeches into Minnesota.",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "verdict": "interdit"
+  },
+  {
+   "id": "MN-appat-truite-vairons",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Designated stream trout lakes"
+   },
+   "especes": [],
+   "type": "interdit",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "vairons_vivants_lacs_truite",
+    "texte": "no live minnows on designated stream trout lakes; dried, frozen or pickled only"
+   },
+   "phrase": "Lacs à truite de ruisseau désignés : possession et emploi de vairons vivants interdits ; vairons séchés, congelés ou marinés seulement.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 32",
+    "edition": "2026",
+    "page": "32",
+    "date": "2026-11-07"
+   },
+   "citation": "Possessing live minnows or using them for bait on designated stream trout lakes is prohibited.",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "verdict": "interdit"
+  },
+  {
+   "id": "MN-appat-lancer-filet",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "epervier_permis_dnr",
+    "texte": "throw nets (cast nets) for minnows need a DNR permit"
+   },
+   "phrase": "Capture d'appâts : épervier (cast net) soumis à un permis du DNR.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 39",
+    "edition": "2026",
+    "page": "39",
+    "date": "2026-11-07"
+   },
+   "citation": "You cannot use throw nets (cast nets) without a DNR permit (see page 38).",
+   "statut": "incertain",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "raison_incertain": "Concerne la récolte de vairons, pas la pêche du poisson ; portée de l'engin à confirmer."
+  }
+ ]
+}
