@@ -1,0 +1,2536 @@
+{
+ "version": 1,
+ "date_lecture": "2026-11-07",
+ "avertissement": "Niveau 1 : repères sourcés, jamais un verdict. Prix en dollars US, annuel, adulte, eau douce ; qualite = officiel | editeur (eRegulations, © éditeur) | tiers ([?]). verifie=false tant qu'aucun humain n'a relu l'État.",
+ "etats": [
+  {
+   "usps": "AL",
+   "nom": "Alabama",
+   "agence": "ADCNR (Alabama Department of Conservation and Natural Resources)",
+   "url_agence": "https://www.outdooralabama.com/",
+   "url_regles_eau_douce": "https://www.outdooralabama.com/fishing",
+   "url_permis": "https://www.outdooralabama.com/license-information",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 17,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://tacklevillage.com/alabama-fishing-license/",
+    "qualite": "tiers",
+    "note": "résident [?] ; 16,60 $ ailleurs ; échéance 31 août"
+   },
+   "prix_non_resident": {
+    "montant": 66.25,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.aces.edu/wp-content/uploads/2024/05/ANR-3269_Fishing-License-Brochure_060126L.pdf",
+    "qualite": "tiers",
+    "note": "brochure Auburn Extension, rév. juin 2026"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "AK",
+   "nom": "Alaska",
+   "agence": "ADF&G (Alaska Department of Fish and Game)",
+   "url_agence": "https://www.adfg.alaska.gov/",
+   "url_regles_eau_douce": "https://www.adfg.alaska.gov/index.cfm?adfg=fishregulations.main",
+   "url_permis": "https://www.adfg.alaska.gov/index.cfm?adfg=license.main",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 20,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 100,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "AZ",
+   "nom": "Arizona",
+   "agence": "AZGFD (Arizona Game and Fish Department)",
+   "url_agence": "https://www.azgfd.com/",
+   "url_regles_eau_douce": "https://www.azgfd.com/fishing/regulations/",
+   "url_permis": "https://www.azgfd.com/license/",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": {
+    "montant": 37,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 55,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "AR",
+   "nom": "Arkansas",
+   "agence": "AGFC (Arkansas Game and Fish Commission)",
+   "url_agence": "https://www.agfc.com/",
+   "url_regles_eau_douce": "https://www.agfc.com/en/fishing/",
+   "url_permis": null,
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok"
+   },
+   "prix_resident": {
+    "montant": 10.5,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/fishing/arkansas-fishing-license/",
+    "qualite": "tiers",
+    "note": "tiers [?]"
+   },
+   "prix_non_resident": {
+    "montant": 60,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/fishing/arkansas-fishing-license/",
+    "qualite": "tiers",
+    "note": null
+   },
+   "timbres": [
+    {
+     "nom": "truite, résident",
+     "montant": 10,
+     "annee": 2026,
+     "source": "https://stateoutdoors.org/fishing/arkansas-fishing-license/",
+     "qualite": "tiers",
+     "note": null
+    },
+    {
+     "nom": "truite, non-résident",
+     "montant": 20,
+     "annee": 2026,
+     "source": "https://stateoutdoors.org/fishing/arkansas-fishing-license/",
+     "qualite": "tiers",
+     "note": null
+    }
+   ],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": "Trout permit en plus du permis pour les non-résidents. url_permis : URL devinée https://www.agfc.com/en/licenses-permits/ en 404, retirée [?]."
+  },
+  {
+   "usps": "CA",
+   "nom": "California",
+   "agence": "CDFW (California Department of Fish and Wildlife)",
+   "url_agence": "https://wildlife.ca.gov/",
+   "url_regles_eau_douce": "https://wildlife.ca.gov/Fishing/Inland/Regulations",
+   "url_permis": "https://wildlife.ca.gov/Licensing/Fishing",
+   "urls_statut": {
+    "url_agence": "injoignable",
+    "url_regles_eau_douce": "injoignable",
+    "url_permis": "injoignable"
+   },
+   "prix_resident": {
+    "montant": 64.54,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://tacklevillage.com/california-fishing-license/",
+    "qualite": "tiers",
+    "note": "conflit : 59,75 $ chez stateoutdoors.org ; page CDFW injoignable [?]"
+   },
+   "prix_non_resident": {
+    "montant": 174.14,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://tacklevillage.com/california-fishing-license/",
+    "qualite": "tiers",
+    "note": "conflit : 161,25 $ ailleurs [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "donnees_ouvertes",
+    "detail": "Jeu « Freshwater Sport Fishing Regulations » (ArcGIS, data.ca.gov) ; livret PDF [?]",
+    "url_service": "https://www.lab.data.ca.gov/dataset/freshwater-sport-fishing-regulations"
+   },
+   "licence_reutilisation": "Licence du jeu data.gov non lue [?]",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 3,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Meilleur cas données ouvertes. Prix en conflit entre tiers ; page CDFW injoignable depuis l'outil."
+  },
+  {
+   "usps": "CO",
+   "nom": "Colorado",
+   "agence": "CPW (Colorado Parks and Wildlife)",
+   "url_agence": "https://cpw.state.co.us/",
+   "url_regles_eau_douce": "https://cpw.state.co.us/fishing",
+   "url_permis": null,
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok"
+   },
+   "prix_resident": {
+    "montant": 42.12,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://cpw.state.co.us/sites/default/files/dam/6b87it8nag/chw00-as-approved-may-2026.pdf",
+    "qualite": "officiel",
+    "note": "base hors surtaxes (1,50 $ d'éducation) ; total tiers 44,87 $ ; saison jusqu'au 31 mars 2027 ; hausse à 43,65 $ seulement proposée"
+   },
+   "prix_non_resident": {
+    "montant": 121.26,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://cpw.state.co.us/sites/default/files/dam/6b87it8nag/chw00-as-approved-may-2026.pdf",
+    "qualite": "officiel",
+    "note": "base ; total tiers 124,01 $"
+   },
+   "timbres": [
+    {
+     "nom": "habitat (18-64 ans)",
+     "montant": 12.76,
+     "annee": 2026,
+     "source": "https://cpw.state.co.us/sites/default/files/dam/6b87it8nag/chw00-as-approved-may-2026.pdf",
+     "qualite": "officiel",
+     "note": null
+    }
+   ],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "site_interactif",
+    "detail": "Fishing Atlas (couches ArcGIS)",
+    "url_service": "https://ndismaps.nrel.colostate.edu/fishingatlas/definitions.html"
+   },
+   "licence_reutilisation": "Couches ArcGIS (Gold Medal) à licence restreinte ; reste [?]",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "url_permis : URL devinée https://cpw.state.co.us/buying-licenses en 404, retirée [?]."
+  },
+  {
+   "usps": "CT",
+   "nom": "Connecticut",
+   "agence": "CT DEEP (Department of Energy and Environmental Protection)",
+   "url_agence": "https://portal.ct.gov/deep",
+   "url_regles_eau_douce": "https://portal.ct.gov/deep/fishing/general-information/fishing",
+   "url_permis": "https://portal.ct.gov/deep/fishing/fishing-licenses-and-permits",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 32,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 63,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "DE",
+   "nom": "Delaware",
+   "agence": "DNREC Division of Fish and Wildlife",
+   "url_agence": "https://dnrec.delaware.gov/fish-wildlife/",
+   "url_regles_eau_douce": "https://dnrec.delaware.gov/fish-wildlife/fishing/",
+   "url_permis": "https://dnrec.delaware.gov/fish-wildlife/licenses/",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 12.7,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 26.2,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "DC",
+   "nom": "District of Columbia",
+   "agence": "DOEE (Department of Energy and Environment)",
+   "url_agence": "https://doee.dc.gov/",
+   "url_regles_eau_douce": null,
+   "url_permis": null,
+   "urls_statut": {
+    "url_agence": "ok"
+   },
+   "prix_resident": null,
+   "prix_non_resident": null,
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": "url_regles_eau_douce : URL devinée https://doee.dc.gov/service/fishing-regulations en 404, retirée [?]. url_permis : URL devinée https://doee.dc.gov/service/fishing-license en 404, retirée [?]."
+  },
+  {
+   "usps": "FL",
+   "nom": "Florida",
+   "agence": "FWC (Fish and Wildlife Conservation Commission)",
+   "url_agence": "https://myfwc.com/",
+   "url_regles_eau_douce": "https://myfwc.com/fishing/freshwater/",
+   "url_permis": "https://license.myfwc.com/",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 17,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/florida/fishing/freshwater/licenses",
+    "qualite": "editeur",
+    "note": "page du 20 juil. 2026 ; 79 $ pour 5 ans"
+   },
+   "prix_non_resident": {
+    "montant": 47,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/florida/fishing/freshwater/licenses",
+    "qualite": "editeur",
+    "note": null
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?] (Fish Rules cité par l'agence en 2020, Fishbrain cité ailleurs)",
+    "url": null
+   },
+   "format_regles": {
+    "type": "site_interactif",
+    "detail": "Site + livret ; zones de gestion FMA en couche ouverte",
+    "url_service": "https://gis.myfwc.com/hosting/rest/services/Open_Data/Fish_Management_Areas_Florida/MapServer"
+   },
+   "licence_reutilisation": "Attribution FWC-FWRI demandée ; « carte de référence générale » ; le texte de loi (FLRules.org) fait foi",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": 1743139,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Volume 1 743 139 permis (USFWS 2021 via presse)."
+  },
+  {
+   "usps": "GA",
+   "nom": "Georgia",
+   "agence": "GA DNR Wildlife Resources Division",
+   "url_agence": "https://georgiawildlife.com/",
+   "url_regles_eau_douce": "https://georgiawildlife.com/fishing",
+   "url_permis": "https://georgiawildlife.com/licenses-permits-passes",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 15,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/georgia/fishing/recreational-fishing-license-fees",
+    "qualite": "editeur",
+    "note": "16 à 64 ans ; concorde avec le Code 27-2-23"
+   },
+   "prix_non_resident": {
+    "montant": 50,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/georgia/fishing/recreational-fishing-license-fees",
+    "qualite": "editeur",
+    "note": null
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "Outdoors GA (couverture des règles de pêche [?])",
+    "url": null
+   },
+   "format_regles": {
+    "type": "pdf",
+    "detail": "Guide chasse et pêche PDF 2026-27",
+    "url_service": null
+   },
+   "licence_reutilisation": "[?] (eRegulations ©)",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": 1083120,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": ""
+  },
+  {
+   "usps": "HI",
+   "nom": "Hawaii",
+   "agence": "DLNR Division of Aquatic Resources",
+   "url_agence": "https://dlnr.hawaii.gov/dar/",
+   "url_regles_eau_douce": "https://dlnr.hawaii.gov/dar/fishing/",
+   "url_permis": "https://dlnr.hawaii.gov/dar/fishing/freshwater-fishing/",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 5,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 25,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "ID",
+   "nom": "Idaho",
+   "agence": "IDFG (Idaho Department of Fish and Game)",
+   "url_agence": "https://idfg.idaho.gov/",
+   "url_regles_eau_douce": "https://idfg.idaho.gov/rules/fish",
+   "url_permis": "https://idfg.idaho.gov/licenses",
+   "urls_statut": {
+    "url_agence": "injoignable",
+    "url_regles_eau_douce": "injoignable",
+    "url_permis": "injoignable"
+   },
+   "prix_resident": {
+    "montant": 30.5,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://fishingbooker.com/blog/idaho-fishing-license/",
+    "qualite": "tiers",
+    "note": "+10 $ de frais accès/dépréd. ; 25,75 $ pour détenteurs prix verrouillé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 108,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://fishingbooker.com/blog/idaho-fishing-license/",
+    "qualite": "tiers",
+    "note": null
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "IL",
+   "nom": "Illinois",
+   "agence": "IDNR (Illinois Department of Natural Resources)",
+   "url_agence": "https://dnr.illinois.gov/",
+   "url_regles_eau_douce": "https://dnr.illinois.gov/fishing.html",
+   "url_permis": null,
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok"
+   },
+   "prix_resident": {
+    "montant": 15,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/fishing/illinois-fishing-license/",
+    "qualite": "tiers",
+    "note": "saison 1er mars 2026 au 31 mars 2027, tiers [?]"
+   },
+   "prix_non_resident": {
+    "montant": 31.5,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/fishing/illinois-fishing-license/",
+    "qualite": "tiers",
+    "note": null
+   },
+   "timbres": [
+    {
+     "nom": "Inland Trout Stamp",
+     "montant": 6.5,
+     "annee": 2026,
+     "source": "https://stateoutdoors.org/fishing/illinois-fishing-license/",
+     "qualite": "tiers",
+     "note": null
+    }
+   ],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": "url_permis : URL devinée https://dnr.illinois.gov/outreach/licenses.html en 404, retirée [?]."
+  },
+  {
+   "usps": "IN",
+   "nom": "Indiana",
+   "agence": "IN DNR Division of Fish and Wildlife",
+   "url_agence": "https://www.in.gov/dnr/fish-and-wildlife/",
+   "url_regles_eau_douce": "https://www.in.gov/dnr/fish-and-wildlife/fishing/",
+   "url_permis": "https://www.in.gov/dnr/fish-and-wildlife/licenses-and-permits/",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 23,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/indiana/fishing/fishing-licenses-fees/",
+    "qualite": "editeur",
+    "note": "1er avr. 2026 au 31 mars 2027"
+   },
+   "prix_non_resident": {
+    "montant": 60,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/indiana/fishing/fishing-licenses-fees/",
+    "qualite": "editeur",
+    "note": null
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "site_interactif",
+    "detail": "eRegulations ; agence : à lire",
+    "url_service": null
+   },
+   "licence_reutilisation": "[?] (eRegulations ©)",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": ""
+  },
+  {
+   "usps": "IA",
+   "nom": "Iowa",
+   "agence": "Iowa DNR",
+   "url_agence": "https://www.iowadnr.gov/",
+   "url_regles_eau_douce": "https://www.iowadnr.gov/fishing",
+   "url_permis": "https://www.iowadnr.gov/fishing",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 22,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/fishing/iowa-fishing-license/",
+    "qualite": "tiers",
+    "note": "hausse de 1 $ proposée en mars 2026, adoption non vérifiée ; échéance 10 janv. 2027"
+   },
+   "prix_non_resident": {
+    "montant": 48,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/fishing/iowa-fishing-license/",
+    "qualite": "tiers",
+    "note": null
+   },
+   "timbres": [
+    {
+     "nom": "truite, résident",
+     "montant": 14.5,
+     "annee": 2026,
+     "source": "https://www.iowadnr.gov/media/6063/download",
+     "qualite": "officiel",
+     "note": "document DNR cité par recherche, non ouvert directement"
+    },
+    {
+     "nom": "truite, non-résident",
+     "montant": 17.5,
+     "annee": 2026,
+     "source": "https://www.iowadnr.gov/media/6063/download",
+     "qualite": "officiel",
+     "note": null
+    }
+   ],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "KS",
+   "nom": "Kansas",
+   "agence": "KDWP (Kansas Department of Wildlife and Parks)",
+   "url_agence": "https://ksoutdoors.com/",
+   "url_regles_eau_douce": "https://ksoutdoors.com/Fishing",
+   "url_permis": "https://ksoutdoors.com/License-Permits",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": {
+    "montant": 27.5,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 52.5,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "KY",
+   "nom": "Kentucky",
+   "agence": "KDFWR (Kentucky Department of Fish and Wildlife Resources)",
+   "url_agence": "https://fw.ky.gov/",
+   "url_regles_eau_douce": "https://fw.ky.gov/Fish/Pages/default.aspx",
+   "url_permis": "https://fw.ky.gov/More/Pages/Licenses.aspx",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": {
+    "montant": 23,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?] ; conflit avec d'autres tiers 24,31 $/58,14 $"
+   },
+   "prix_non_resident": {
+    "montant": 55,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?] ; conflit avec d'autres tiers 24,31 $/58,14 $"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": "Prix en conflit entre tiers (résident 23 $ ou 24,31 $ ; non-résident 55 $ ou 58,14 $) ; l'agence dit les tarifs 2026-27 inchangés (https://fw.ky.gov/News/Pages/2026-2027-Kentucky-fishing-and-hunting-licenses-available.aspx) : ancien tableau tiers de 2024 gardé avec [?]."
+  },
+  {
+   "usps": "LA",
+   "nom": "Louisiana",
+   "agence": "LDWF (Louisiana Department of Wildlife and Fisheries)",
+   "url_agence": "https://www.wlf.louisiana.gov/",
+   "url_regles_eau_douce": "https://www.wlf.louisiana.gov/page/freshwater-fishing",
+   "url_permis": "https://www.wlf.louisiana.gov/page/recreational-fishing-licenses",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": {
+    "montant": 9.5,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 60,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "ME",
+   "nom": "Maine",
+   "agence": "MDIFW (Maine Department of Inland Fisheries and Wildlife)",
+   "url_agence": "https://www.maine.gov/ifw/",
+   "url_regles_eau_douce": "https://www.maine.gov/ifw/fishing-boating/fishing/index.html",
+   "url_permis": "https://www.maine.gov/ifw/licenses-permits/index.html",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": {
+    "montant": 30,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://maineguide.com/maine-fishing-license-guide/",
+    "qualite": "tiers",
+    "note": "guide tiers [?]"
+   },
+   "prix_non_resident": null,
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Non-résident [?]."
+  },
+  {
+   "usps": "MD",
+   "nom": "Maryland",
+   "agence": "MD DNR Fishing and Boating Services",
+   "url_agence": "https://dnr.maryland.gov/",
+   "url_regles_eau_douce": "https://dnr.maryland.gov/fisheries/pages/freshwater-fishing.aspx",
+   "url_permis": "https://dnr.maryland.gov/Pages/fishing-license.aspx",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": {
+    "montant": 32,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://fishinglicenceusa-com.pages.dev/maryland-fishing-licenses.html",
+    "qualite": "tiers",
+    "note": "non-tidal ; site tiers [?]"
+   },
+   "prix_non_resident": null,
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Non-résident [?] ; non-tidal seulement."
+  },
+  {
+   "usps": "MA",
+   "nom": "Massachusetts",
+   "agence": "MassWildlife (Division of Fisheries and Wildlife)",
+   "url_agence": "https://www.mass.gov/orgs/massachusetts-division-of-fisheries-and-wildlife",
+   "url_regles_eau_douce": "https://www.mass.gov/topics/fishing",
+   "url_permis": "https://www.mass.gov/guides/freshwater-fishing-licenses",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": {
+    "montant": 27.5,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 37.5,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "MI",
+   "nom": "Michigan",
+   "agence": "MI DNR (Department of Natural Resources)",
+   "url_agence": "https://www.michigan.gov/dnr",
+   "url_regles_eau_douce": "https://www.michigan.gov/dnr/things-to-do/fishing",
+   "url_permis": "https://www.michigan.gov/dnr/buy-and-apply",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": {
+    "montant": 26,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://content.govdelivery.com/accounts/MIDNR/bulletins/40c40a7",
+    "qualite": "officiel",
+    "note": "+1 $ de frais ; valable jusqu'au 31 mars 2027"
+   },
+   "prix_non_resident": {
+    "montant": 76,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://content.govdelivery.com/accounts/MIDNR/bulletins/40c40a7",
+    "qualite": "officiel",
+    "note": "+1 $ de frais"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "Hunt Fish (achat de permis)",
+    "url": "https://content.govdelivery.com/accounts/MIDNR/bulletins/40c40a7"
+   },
+   "format_regles": {
+    "type": "donnees_ouvertes",
+    "detail": "Guide en ligne/PDF + service ArcGIS « DNR Fisheries » et couche truite/saumon (fournis « as is »)",
+    "url_service": "https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS/rest/services/DNRFisheriesDataOPENDATA/FeatureServer"
+   },
+   "licence_reutilisation": "Services fournis « as is » ; licence exacte [?]",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": 1190933,
+   "niveau_vise": 3,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": ""
+  },
+  {
+   "usps": "MN",
+   "nom": "Minnesota",
+   "agence": "MN DNR (Department of Natural Resources)",
+   "url_agence": "https://www.dnr.state.mn.us/",
+   "url_regles_eau_douce": "https://www.dnr.state.mn.us/fishing/index.html",
+   "url_permis": "https://www.dnr.state.mn.us/licenses/fishing/index.html",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": {
+    "montant": 25,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/?p=1572",
+    "qualite": "tiers",
+    "note": "16 à 89 ans ; un tiers donne 28 $ [?] ; licence jusqu'au 28 févr. 2027"
+   },
+   "prix_non_resident": {
+    "montant": 51,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/?p=1572",
+    "qualite": "tiers",
+    "note": null
+   },
+   "timbres": [
+    {
+     "nom": "Walleye Stamp (facultatif)",
+     "montant": 5,
+     "annee": 2026,
+     "source": "https://stateoutdoors.org/?p=1572",
+     "qualite": "tiers",
+     "note": null
+    }
+   ],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "site_interactif",
+    "detail": "LakeFinder par plan d'eau (>4 500) ; jeux SIG gisdata.mn.gov",
+    "url_service": "https://www.dnr.state.mn.us/lakefind/"
+   },
+   "licence_reutilisation": "Le DNR garde le copyright sur ses cartes de lacs ; termes Geospatial Commons [?]. Source : https://www.mndnr.gov/lakefind",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 3,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Pages DNR en 403 pour l'outil ; prix de tiers."
+  },
+  {
+   "usps": "MS",
+   "nom": "Mississippi",
+   "agence": "MDWFP (Department of Wildlife, Fisheries, and Parks)",
+   "url_agence": "https://www.mdwfp.com/",
+   "url_regles_eau_douce": "https://www.mdwfp.com/fishing-boating/",
+   "url_permis": "https://www.mdwfp.com/licenses",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 12.29,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 64.29,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "MO",
+   "nom": "Missouri",
+   "agence": "MDC (Missouri Department of Conservation)",
+   "url_agence": "https://mdc.mo.gov/",
+   "url_regles_eau_douce": "https://mdc.mo.gov/fishing",
+   "url_permis": "https://mdc.mo.gov/permits",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 14,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/fishing/missouri-fishing-license/",
+    "qualite": "tiers",
+    "note": "tiers [?]"
+   },
+   "prix_non_resident": {
+    "montant": 57,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/fishing/missouri-fishing-license/",
+    "qualite": "tiers",
+    "note": null
+   },
+   "timbres": [
+    {
+     "nom": "truite, résident",
+     "montant": 12,
+     "annee": 2026,
+     "source": "https://stateoutdoors.org/fishing/missouri-fishing-license/",
+     "qualite": "tiers",
+     "note": "[?]"
+    },
+    {
+     "nom": "truite, non-résident",
+     "montant": 24,
+     "annee": 2026,
+     "source": "https://stateoutdoors.org/fishing/missouri-fishing-license/",
+     "qualite": "tiers",
+     "note": "40 $ chez d'autres tiers (prix proposé en 2025) [?]"
+    }
+   ],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "MT",
+   "nom": "Montana",
+   "agence": "FWP (Montana Fish, Wildlife and Parks)",
+   "url_agence": "https://fwp.mt.gov/",
+   "url_regles_eau_douce": "https://fwp.mt.gov/fish",
+   "url_permis": "https://fwp.mt.gov/fish/license",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 31,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/?p=1593",
+    "qualite": "tiers",
+    "note": "total : 21 $ pêche + 8 $ conservation + 2 $ EEE ; tiers [?]"
+   },
+   "prix_non_resident": {
+    "montant": 117.5,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/?p=1593",
+    "qualite": "tiers",
+    "note": "total : 100 $ + 10 $ + 7,50 $"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": "Licence de conservation obligatoire avant la licence de pêche ; achat en ligne depuis le 1er mars 2026 (tiers)."
+  },
+  {
+   "usps": "NE",
+   "nom": "Nebraska",
+   "agence": "NGPC (Nebraska Game and Parks Commission)",
+   "url_agence": "https://outdoornebraska.gov/",
+   "url_regles_eau_douce": "https://outdoornebraska.gov/fishing/",
+   "url_permis": "https://outdoornebraska.gov/licenses/",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": {
+    "montant": 38,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 84,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "NV",
+   "nom": "Nevada",
+   "agence": "NDOW (Nevada Department of Wildlife)",
+   "url_agence": "https://www.ndow.org/",
+   "url_regles_eau_douce": "https://www.ndow.org/fish-wildlife-habitat/fishing/",
+   "url_permis": "https://www.ndow.org/licenses-permits/",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 40,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 80,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "NH",
+   "nom": "New Hampshire",
+   "agence": "NH Fish and Game Department",
+   "url_agence": "https://www.wildlife.nh.gov/",
+   "url_regles_eau_douce": "https://www.wildlife.nh.gov/fishing-and-boating",
+   "url_permis": "https://www.wildlife.nh.gov/licenses",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": null,
+   "prix_non_resident": {
+    "montant": 63,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/newhampshire/fishing/freshwater/licenses-fees-requirements",
+    "qualite": "editeur",
+    "note": "non-résident eau douce"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": "[?] (eRegulations ©)",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Résident [?]."
+  },
+  {
+   "usps": "NJ",
+   "nom": "New Jersey",
+   "agence": "NJDEP Division of Fish and Wildlife",
+   "url_agence": "https://dep.nj.gov/njfw/",
+   "url_regles_eau_douce": "https://dep.nj.gov/njfw/fishing/freshwater/",
+   "url_permis": "https://dep.nj.gov/njfw/fishing/freshwater/freshwater-fishing-licenses/",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 33,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?] (avec timbre truite ?)"
+   },
+   "prix_non_resident": {
+    "montant": 54,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?] (avec timbre truite ?)"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "NM",
+   "nom": "New Mexico",
+   "agence": "NMDGF (Department of Game and Fish)",
+   "url_agence": "https://www.wildlife.state.nm.us/",
+   "url_regles_eau_douce": "https://www.wildlife.state.nm.us/fishing/",
+   "url_permis": "https://www.wildlife.state.nm.us/fishing/",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 25,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 56,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "NY",
+   "nom": "New York",
+   "agence": "NYS DEC (Department of Environmental Conservation)",
+   "url_agence": "https://dec.ny.gov/",
+   "url_regles_eau_douce": "https://dec.ny.gov/things-to-do/freshwater-fishing",
+   "url_permis": "http://dec.ny.gov/regulatory/permits-licenses/sporting-and-use/sporting/fishing-license",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 25,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "http://dec.ny.gov/regulatory/permits-licenses/sporting-and-use/sporting/fishing-license",
+    "qualite": "officiel",
+    "note": "16 à 69 ans"
+   },
+   "prix_non_resident": {
+    "montant": 50,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "http://dec.ny.gov/regulatory/permits-licenses/sporting-and-use/sporting/fishing-license",
+    "qualite": "officiel",
+    "note": null
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "HuntFishNY",
+    "url": "https://dec.ny.gov/get-involved/huntfishny-mobile-app"
+   },
+   "format_regles": {
+    "type": "pdf",
+    "detail": "Guide PDF (fishguide.pdf) + HuntFishNY Tackle Box ; jeu data.ny.gov (rivières recommandées, pas les règles)",
+    "url_service": "https://extapps.dec.ny.gov/docs/fish_marine_pdf/fishguide.pdf"
+   },
+   "licence_reutilisation": "Jeu data.ny.gov : licence « non spécifiée »",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": 911677,
+   "niveau_vise": 2,
+   "verifie": true,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Prix lus sur la page officielle DEC le 7 nov. 2026."
+  },
+  {
+   "usps": "NC",
+   "nom": "North Carolina",
+   "agence": "NCWRC (Wildlife Resources Commission)",
+   "url_agence": "https://www.ncwildlife.gov/",
+   "url_regles_eau_douce": "https://www.ncwildlife.gov/fishing",
+   "url_permis": null,
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok"
+   },
+   "prix_resident": {
+    "montant": 32,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/northcarolina/fishing/fishing-licenses",
+    "qualite": "editeur",
+    "note": "page du 13 juil. 2026 ; saison du 1er août au 31 juil."
+   },
+   "prix_non_resident": {
+    "montant": 56,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/northcarolina/fishing/fishing-licenses",
+    "qualite": "editeur",
+    "note": null
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "Go Outdoors North Carolina",
+    "url": "https://apps.apple.com/app/id6443992281"
+   },
+   "format_regles": {
+    "type": "pdf",
+    "detail": "Digest PDF/FlippingBook 2026-27",
+    "url_service": null
+   },
+   "licence_reutilisation": "[?] (eRegulations ©)",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": 1487575,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Volume 1 487 575. url_permis : URL devinée https://www.ncwildlife.gov/licenses en 404, retirée [?]."
+  },
+  {
+   "usps": "ND",
+   "nom": "North Dakota",
+   "agence": "NDGF (North Dakota Game and Fish Department)",
+   "url_agence": "https://gf.nd.gov/",
+   "url_regles_eau_douce": "https://gf.nd.gov/fishing",
+   "url_permis": null,
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok"
+   },
+   "prix_resident": {
+    "montant": 18,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 48,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": "url_permis : URL devinée https://gf.nd.gov/licensing en 404, retirée [?]."
+  },
+  {
+   "usps": "OH",
+   "nom": "Ohio",
+   "agence": "ODNR Division of Wildlife",
+   "url_agence": "https://ohiodnr.gov/",
+   "url_regles_eau_douce": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/wildlife/laws-regs-licenses/Ohio%20Fishing%20Regulations%20ENGLISH.pdf",
+   "url_permis": null,
+   "urls_statut": {
+    "url_agence": "404",
+    "url_regles_eau_douce": "ok"
+   },
+   "prix_resident": {
+    "montant": 25,
+    "monnaie": "USD",
+    "annee": 2025,
+    "source": "https://www.eregulations.com/ohio/fishing/licenses-fees",
+    "qualite": "editeur",
+    "note": "conflit avec le Code de l'Ohio 1533.32 (non-résident 74 $), non tranché"
+   },
+   "prix_non_resident": {
+    "montant": 50.96,
+    "monnaie": "USD",
+    "annee": 2025,
+    "source": "https://www.eregulations.com/ohio/fishing/licenses-fees",
+    "qualite": "editeur",
+    "note": "conflit avec le Code, non tranché"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "HuntFish OH",
+    "url": null
+   },
+   "format_regles": {
+    "type": "pdf",
+    "detail": "PDF annuel (1er mars-28 févr.) + HuntFish OH",
+    "url_service": null
+   },
+   "licence_reutilisation": "[?] (eRegulations ©)",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": 909854,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Conflit de prix non tranché. ohiodnr.gov répond 404 à toutes les pages testées depuis l'outil (accès bloqué ou site déplacé) [?]. url_permis : URL devinée https://ohiodnr.gov/buy-and-apply/hunting-fishing-licenses en 404, retirée [?]."
+  },
+  {
+   "usps": "OK",
+   "nom": "Oklahoma",
+   "agence": "ODWC (Oklahoma Department of Wildlife Conservation)",
+   "url_agence": "https://www.wildlifedepartment.com/",
+   "url_regles_eau_douce": "https://www.wildlifedepartment.com/fishing",
+   "url_permis": "https://www.wildlifedepartment.com/license",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 31,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/fishing/oklahoma-fishing-license/",
+    "qualite": "tiers",
+    "note": "conflit avec 25 $ (ancien tarif) [?]"
+   },
+   "prix_non_resident": {
+    "montant": 81,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://stateoutdoors.org/fishing/oklahoma-fishing-license/",
+    "qualite": "tiers",
+    "note": "conflit avec 55 $ [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": "Lac Texoma : permis dédié (≈12-14 $ chez des tiers [?])."
+  },
+  {
+   "usps": "OR",
+   "nom": "Oregon",
+   "agence": "ODFW (Oregon Department of Fish and Wildlife)",
+   "url_agence": "https://www.dfw.state.or.us/",
+   "url_regles_eau_douce": "https://myodfw.com/fishing",
+   "url_permis": null,
+   "urls_statut": {
+    "url_agence": "injoignable",
+    "url_regles_eau_douce": "ok"
+   },
+   "prix_resident": {
+    "montant": 44,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 110.5,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": "url_permis : URL devinée https://myodfw.com/articles/fishing-licenses-tags-and-permits en 404, retirée [?]."
+  },
+  {
+   "usps": "PA",
+   "nom": "Pennsylvania",
+   "agence": "PFBC (Pennsylvania Fish and Boat Commission)",
+   "url_agence": "https://www.pa.gov/agencies/fishandboat",
+   "url_regles_eau_douce": "https://www.pa.gov/content/dam/copapwp-pagov/en/fishandboat/documents/fishing/regulations/summarybook.pdf",
+   "url_permis": "https://pa.gov/agencies/fishandboat/fishing/buy-fishing-license-permit.html",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 27.97,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://fishingbooker.com/blog/?p=6079",
+    "qualite": "tiers",
+    "note": "16-64 ans, tiers [?] ; 3 ans 79,97 $ confirmé sur pa.gov"
+   },
+   "prix_non_resident": {
+    "montant": 60.97,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://fishingbooker.com/blog/?p=6079",
+    "qualite": "tiers",
+    "note": null
+   },
+   "timbres": [
+    {
+     "nom": "truite/saumon",
+     "montant": 14.97,
+     "annee": 2026,
+     "source": "https://fishingbooker.com/blog/?p=6079",
+     "qualite": "tiers",
+     "note": null
+    },
+    {
+     "nom": "lac Érié",
+     "montant": 9.97,
+     "annee": 2026,
+     "source": "https://fishingbooker.com/blog/?p=6079",
+     "qualite": "tiers",
+     "note": null
+    },
+    {
+     "nom": "combiné truite/saumon + Érié",
+     "montant": 20.97,
+     "annee": 2026,
+     "source": "https://fishingbooker.com/blog/?p=6079",
+     "qualite": "tiers",
+     "note": null
+    }
+   ],
+   "appli_officielle": {
+    "nom": "FishBoatPA [?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "pdf",
+    "detail": "Résumé PDF annuel",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": ""
+  },
+  {
+   "usps": "RI",
+   "nom": "Rhode Island",
+   "agence": "RI DEM Division of Fish and Wildlife",
+   "url_agence": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife",
+   "url_regles_eau_douce": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife/freshwater-fishing",
+   "url_permis": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife/licenses",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": {
+    "montant": 23.5,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?] (avec timbre truite ?)"
+   },
+   "prix_non_resident": {
+    "montant": 40.5,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?] (avec timbre truite ?)"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "SC",
+   "nom": "South Carolina",
+   "agence": "SCDNR (Department of Natural Resources)",
+   "url_agence": "https://www.dnr.sc.gov/",
+   "url_regles_eau_douce": "https://www.dnr.sc.gov/fish/",
+   "url_permis": "https://dnr.sc.gov/licenses/pricingresident.html",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 10,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?] ; l'agence vend aussi des 3 ans (30 $/105 $)"
+   },
+   "prix_non_resident": {
+    "montant": 35,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?] ; l'agence vend aussi des 3 ans (30 $/105 $)"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": "Prix annuels non confirmés : seuls les 3 ans sont vus (résident 30 $ sur dnr.sc.gov/licenses/pricingresident.html, résident/non-résident 30 $/105 $ chez eRegulations https://www.eregulations.com/southcarolina/fishing/licenses-fees), ce n'est pas un prix annuel : ancien tableau tiers de 2024 gardé avec [?]."
+  },
+  {
+   "usps": "SD",
+   "nom": "South Dakota",
+   "agence": "SD GFP (Game, Fish and Parks)",
+   "url_agence": "https://gfp.sd.gov/",
+   "url_regles_eau_douce": "https://gfp.sd.gov/fishing/",
+   "url_permis": "https://gfp.sd.gov/licenses/",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 28,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 67,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "TN",
+   "nom": "Tennessee",
+   "agence": "TWRA (Tennessee Wildlife Resources Agency)",
+   "url_agence": "https://www.tn.gov/twra",
+   "url_regles_eau_douce": "https://www.tn.gov/twra/fishing.html",
+   "url_permis": "https://www.tn.gov/twra/license-information.html",
+   "urls_statut": {
+    "url_agence": "bloque_robots",
+    "url_regles_eau_douce": "bloque_robots",
+    "url_permis": "bloque_robots"
+   },
+   "prix_resident": null,
+   "prix_non_resident": {
+    "montant": 49,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/tennessee/fishing/license-fees",
+    "qualite": "editeur",
+    "note": "sans truite ; 98 $ toutes espèces"
+   },
+   "timbres": [
+    {
+     "nom": "truite (supplément)",
+     "montant": 21,
+     "annee": 2026,
+     "source": "https://www.eregulations.com/tennessee/fishing/license-fees",
+     "qualite": "editeur",
+     "note": null
+    }
+   ],
+   "appli_officielle": {
+    "nom": "TWRA On the Go",
+    "url": "https://apps.apple.com/us/app/-/id757097014"
+   },
+   "format_regles": {
+    "type": "pdf",
+    "detail": "Guide PDF 2026-27 ; service ArcGIS TWRA « display only »",
+    "url_service": "https://tnmap.tn.gov/ArcGIS/rest/services/ENVIRONMENTAL/TWRA/MapServer"
+   },
+   "licence_reutilisation": "Guide : copyright, pas de reproduction sans accord écrit ; services ArcGIS « display only »",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": 923447,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Prix résident de la pêche seule [?] ; tn.gov en 403."
+  },
+  {
+   "usps": "TX",
+   "nom": "Texas",
+   "agence": "TPWD (Texas Parks and Wildlife Department)",
+   "url_agence": "https://tpwd.texas.gov/",
+   "url_regles_eau_douce": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing",
+   "url_permis": "https://tpwd.texas.gov/regulations/outdoor-annual/licenses/fishing",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 30,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://tpwd.texas.gov/regulations/outdoor-annual/licenses/fishing-licenses-stamps-tags-packages/fishing-licenses-and-packages/",
+    "qualite": "officiel",
+    "note": "forfait eau douce, valable jusqu'au 31 août"
+   },
+   "prix_non_resident": {
+    "montant": 58,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://tpwd.texas.gov/regulations/outdoor-annual/licenses/fishing-licenses-stamps-tags-packages/fishing-licenses-and-packages/",
+    "qualite": "officiel",
+    "note": null
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "Outdoor Annual",
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/app/"
+   },
+   "format_regles": {
+    "type": "site_interactif",
+    "detail": "Outdoor Annual (site et appli), exceptions par plan d'eau",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": 2099153,
+   "niveau_vise": 2,
+   "verifie": true,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Prix lus sur la page officielle TPWD le 7 nov. 2026. Premier marché en volume (2 099 153 permis payants, USFWS 2021 via presse)."
+  },
+  {
+   "usps": "UT",
+   "nom": "Utah",
+   "agence": "UDWR (Utah Division of Wildlife Resources)",
+   "url_agence": "https://wildlife.utah.gov/",
+   "url_regles_eau_douce": "https://wildlife.utah.gov/fishing",
+   "url_permis": "https://wildlife.utah.gov/licenses",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 34,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 85,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  },
+  {
+   "usps": "VT",
+   "nom": "Vermont",
+   "agence": "Vermont Fish and Wildlife Department",
+   "url_agence": "https://vtfishandwildlife.com/",
+   "url_regles_eau_douce": "https://vtfishandwildlife.com/fish",
+   "url_permis": null,
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok"
+   },
+   "prix_resident": {
+    "montant": 28,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 54,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": "url_permis : URL devinée https://vtfishandwildlife.com/licenses-and-permits en 404, retirée [?]."
+  },
+  {
+   "usps": "VA",
+   "nom": "Virginia",
+   "agence": "DWR (Department of Wildlife Resources)",
+   "url_agence": "https://dwr.virginia.gov/",
+   "url_regles_eau_douce": "https://dwr.virginia.gov/fishing/regulations/",
+   "url_permis": "https://dwr.virginia.gov/fishing/regulations/licenses/",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 28,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://dwr.virginia.gov/fishing/regulations/licenses/",
+    "qualite": "officiel",
+    "note": "les 12 $ du Code et les 23 $ d'un agrégateur sont périmés"
+   },
+   "prix_non_resident": {
+    "montant": 72,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://dwr.virginia.gov/fishing/regulations/licenses/",
+    "qualite": "officiel",
+    "note": null
+   },
+   "timbres": [
+    {
+     "nom": "truite (eaux empoissonnées), résident",
+     "montant": 28,
+     "annee": 2026,
+     "source": "https://dwr.virginia.gov/fishing/regulations/licenses/",
+     "qualite": "officiel",
+     "note": null
+    },
+    {
+     "nom": "truite, non-résident",
+     "montant": 48,
+     "annee": 2026,
+     "source": "https://dwr.virginia.gov/fishing/regulations/licenses/",
+     "qualite": "officiel",
+     "note": null
+    }
+   ],
+   "appli_officielle": {
+    "nom": "Go Outdoors VA",
+    "url": "https://dwr.virginia.gov/app/"
+   },
+   "format_regles": {
+    "type": "pdf",
+    "detail": "PDF 2026 + site ; couche ArcGIS Public Fishing Lakes (sur permission)",
+    "url_service": "https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Public_Fishing_Lakes/MapServer/0/metadata"
+   },
+   "licence_reutilisation": "Couche réservée aux entités ayant la permission de l'agence, citation obligatoire",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": 595755,
+   "niveau_vise": 2,
+   "verifie": true,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Prix et timbre truite lus sur la page officielle DWR le 7 nov. 2026 (1 an résident 28 $, non-résident 72 $)."
+  },
+  {
+   "usps": "WA",
+   "nom": "Washington",
+   "agence": "WDFW (Washington Department of Fish and Wildlife)",
+   "url_agence": "https://wdfw.wa.gov/",
+   "url_regles_eau_douce": "https://wdfw.wa.gov/fishing/regulations",
+   "url_permis": "https://wdfw.wa.gov/licenses/fishing",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 39.95,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/washington/fishing/license-fees",
+    "qualite": "editeur",
+    "note": "permis du 1er avr. 2026 au 31 mars 2027, eau douce adulte"
+   },
+   "prix_non_resident": {
+    "montant": 115.85,
+    "monnaie": "USD",
+    "annee": 2026,
+    "source": "https://www.eregulations.com/washington/fishing/license-fees",
+    "qualite": "editeur",
+    "note": null
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "Fish Washington",
+    "url": "https://apps.apple.com/us/app/-/id1329839426"
+   },
+   "format_regles": {
+    "type": "site_interactif",
+    "detail": "eRegulations + appli ; PDF [?]",
+    "url_service": null
+   },
+   "licence_reutilisation": "[?] (eRegulations porte © eRegulations : ne pas reprendre son texte, aller à l'agence)",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 2,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": ""
+  },
+  {
+   "usps": "WV",
+   "nom": "West Virginia",
+   "agence": "WVDNR (Division of Natural Resources)",
+   "url_agence": "https://wvdnr.gov/",
+   "url_regles_eau_douce": "https://wvdnr.gov/fishing/",
+   "url_permis": null,
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok"
+   },
+   "prix_resident": {
+    "montant": 29,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?] (avec timbre truite ?)"
+   },
+   "prix_non_resident": {
+    "montant": 53,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?] (avec timbre truite ?)"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": "url_permis : URL devinée https://wvdnr.gov/hunting-fishing-licenses/ en 404, retirée [?]."
+  },
+  {
+   "usps": "WI",
+   "nom": "Wisconsin",
+   "agence": "WI DNR (Department of Natural Resources)",
+   "url_agence": "https://dnr.wisconsin.gov/",
+   "url_regles_eau_douce": "https://dnr.wisconsin.gov/topic/Fishing/regulations",
+   "url_permis": null,
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok"
+   },
+   "prix_resident": {
+    "montant": 20,
+    "monnaie": "USD",
+    "annee": 2025,
+    "source": "https://www.eregulations.com/wisconsin/fishing/fishing-licenses-and-fees",
+    "qualite": "editeur",
+    "note": "page eRegulations du 24 avr. 2025 ; timbres en plus"
+   },
+   "prix_non_resident": {
+    "montant": 55,
+    "monnaie": "USD",
+    "annee": 2025,
+    "source": "https://www.eregulations.com/wisconsin/fishing/fishing-licenses-and-fees",
+    "qualite": "editeur",
+    "note": null
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "Wisconsin Fishing Finder (web ; appli mobile [?])",
+    "url": null
+   },
+   "format_regles": {
+    "type": "donnees_ouvertes",
+    "detail": "PDF 2026-27 + outil Online Fishing Regulations ; service cartographique des règles par lac",
+    "url_service": "https://dnrmaps.wi.gov/arcgis2/rest/services/FM_WFF/FM_WFF_LAKE_REGULATIONS_WTM_EXT/MapServer"
+   },
+   "licence_reutilisation": "« © Wisconsin Department of Natural Resources » en pied de page ; pas de politique de données ouvertes lue",
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": 1434816,
+   "niveau_vise": 3,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats.md",
+    "https://github.com/adembnn/FishMe/blob/fishme-tout/reports/us/reglementation-etats-passe2.md"
+   ],
+   "notes": "Année de permis du 1er avr. [?] (agrégateur seulement). url_permis : URL devinée https://dnr.wisconsin.gov/topic/Licenses en 404, retirée [?]."
+  },
+  {
+   "usps": "WY",
+   "nom": "Wyoming",
+   "agence": "WGFD (Wyoming Game and Fish Department)",
+   "url_agence": "https://wgfd.wyo.gov/",
+   "url_regles_eau_douce": "https://wgfd.wyo.gov/fishing-boating",
+   "url_permis": "https://wgfd.wyo.gov/licenses-applications",
+   "urls_statut": {
+    "url_agence": "ok",
+    "url_regles_eau_douce": "ok",
+    "url_permis": "ok"
+   },
+   "prix_resident": {
+    "montant": 27,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024, probablement périmé [?]"
+   },
+   "prix_non_resident": {
+    "montant": 102,
+    "monnaie": "USD",
+    "annee": 2024,
+    "source": "https://tacklevillage.com/?p=8387",
+    "qualite": "tiers",
+    "note": "tableau tiers daté du 17 avr. 2024 [?]"
+   },
+   "timbres": [],
+   "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+   },
+   "format_regles": {
+    "type": "inconnu",
+    "detail": "[?]",
+    "url_service": null
+   },
+   "licence_reutilisation": null,
+   "eaux_tribales_reciprocite": null,
+   "permis_payants_2021": null,
+   "niveau_vise": 1,
+   "verifie": false,
+   "date_lecture": "2026-11-07",
+   "sources_rapports": [],
+   "notes": ""
+  }
+ ]
+}
