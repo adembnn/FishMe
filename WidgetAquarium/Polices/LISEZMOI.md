@@ -53,3 +53,23 @@ Les cibles FishMeWidget et BuildChallenge doivent :
 - avoir les 10 `FishMeClignoteChiffreK.otf` dans Copy Bundle Resources ;
 - les déclarer dans leur Info.plist, clé `UIAppFonts` ;
 - les appeler par leur nom PostScript : `Font.custom("FishMeClignoteChiffre3-Regular", size:)`.
+
+## Poisson unique (lot W1, 7 nov. soir) : pistes `seul4/6/8/12`
+
+Un seul poisson (vraies images `ImagePoisson`, vues 3D), trajet `NageWidget.traversees` de 10 s, une copie par pose à
+la taille du poisson (`NageSeule.swift`), 1 image de queue (ondulation par transformation), timeline de 4 entrées.
+Simulateur iPhone 17 iOS 27.2, petit format, Debug, `phys_footprint_peak` de l'extension (`footprint`), 1 poisson :
+
+| Piste | Copies | Pic mesuré | Plafond 28 Mo |
+|---|---|---|---|
+| seul4 (4 images/s) | 40 | 21 à 24 Mo | tient |
+| **seul6 (6 images/s, retenue)** | 60 | 22 à 25 Mo | tient |
+| seul8 (8 images/s) | 80 | 27 à 31 Mo | dépasse (29, 30, 31) |
+| seul12 (12 images/s) | 120 | 34 à 35 Mo | dépasse |
+
+Non essayé : 4 images de queue distinctes. Vu à l'écran : le vrai poisson (truite, même décor que l'app) est dessiné
+dans le widget et change de place entre deux captures (`reports/widget/diag-1.png`, `diag-3.png`).
+NON PROUVÉ : la fluidité. Mes séries de captures et vidéos (`simctl`, simulateur) montrent le poisson immobile la
+plupart du temps, y compris pour la piste témoin `fixe24` : la mesure d'images par seconde dans ce simulateur n'est pas
+fiable. Seul un vrai iPhone dit si la nage est lisse (tester en Release, widget petit format).
+Piège : un fichier `piste-widget.txt` oublié dans l'App Group du simulateur (ici `douce`) remplace la piste retenue.

@@ -184,7 +184,8 @@ nonisolated enum PisteNage: String, Sendable {
             return lue
         }
         #endif
-        return .seul8
+        // 6 images/s : pic mémoire mesuré 22 à 25 Mo ; 8 images/s dépasse 28 Mo (29 à 31), 12 images/s aussi (34 à 35).
+        return .seul6
     }
 
     #if DEBUG
