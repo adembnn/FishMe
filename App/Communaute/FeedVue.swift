@@ -33,7 +33,7 @@ struct BandeauFeed: View {
 
     var body: some View {
         if let texte = TexteFeed.texte(pour: message) {
-            Label(texte, systemImage: TexteFeed.symbole(pour: message))
+            Label { Text(c: texte) } icon: { Image(systemName: TexteFeed.symbole(pour: message)) }
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
                 .fixedSize(horizontal: false, vertical: true)
@@ -62,7 +62,7 @@ struct FeedVue: View {
                     EnteteSectionFeed(section: section, etat: gestion.etat(section))
                     ForEach(gestion.etat(section).publications) { PublicationVue(publication: $0, gestion: gestion) }
                     if gestion.etat(section).encore {
-                        Button("Voir plus") { Task { await gestion.voirPlus(section) } }
+                        Button { Task { await gestion.voirPlus(section) } } label: { Text(c: "Voir plus") }
                             .buttonStyle(.secondaire)
                     }
                 }
@@ -87,7 +87,7 @@ struct FeedVue: View {
                     publier = true
                 }
             } label: {
-                Label("Publier", systemImage: "plus")
+                Label { Text(c: "Publier") } icon: { Image(systemName: "plus") }
                     .font(Police.corps)
                     .padding(.horizontal, Espace.l)
                     .frame(minHeight: Gabarit.zoneTactile)
@@ -102,7 +102,7 @@ struct FeedVue: View {
     @ViewBuilder
     private var lectureSeule: some View {
         if !gestion.exemples {
-            Label("Finis ton profil (15 ans ou plus) pour publier et commenter.", systemImage: "person.crop.circle.badge.exclamationmark")
+            Label { Text(c: "Finis ton profil (15 ans ou plus) pour publier et commenter.") } icon: { Image(systemName: "person.crop.circle.badge.exclamationmark") }
                 .font(Police.detail)
                 .foregroundStyle(Palette.encre)
                 .fixedSize(horizontal: false, vertical: true)
@@ -120,14 +120,14 @@ struct EnteteSectionFeed: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.m) {
-            Label(section.titre, systemImage: section.symbole)
+            Label { Text(c: section.titre) } icon: { Image(systemName: section.symbole) }
                 .font(Police.titre)
                 .foregroundStyle(Palette.encre)
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
                 .padding(.top, Espace.l)
             if etat.publications.isEmpty {
-                Text(etat.charge ? vide : "Chargement…")
+                Text(c: etat.charge ? vide : "Chargement…")
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
                     .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)

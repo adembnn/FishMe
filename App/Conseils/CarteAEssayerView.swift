@@ -13,6 +13,7 @@ struct CarteAEssayerView: View {
 
     @AppStorage(ClesConseils.niveau) private var niveauBrut = NiveauPecheur.parDefaut.rawValue
     @State private var choix: String?
+    @Environment(\.locale) private var locale
 
     /// Aucun relevé OFB près du spot : l'écran ne reste pas vide, il propose les espèces courantes en France (sans chiffre).
     private var sansReleve: Bool { especesProches.isEmpty }
@@ -57,17 +58,17 @@ struct CarteAEssayerView: View {
     private var entete: some View {
         HStack(spacing: 12) {
             VStack(alignment: .leading, spacing: 2) {
-                Text("À essayer")
+                Text(c: "À essayer")
                     .font(Police.grandTitre)
                     .foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
-                Text("Près de ton spot, aujourd'hui")
+                Text(c: "Près de ton spot, aujourd'hui")
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
             }
             Spacer(minLength: 0)
             if let eau = IconeEau(etat: etatEau) {
-                Label(eau.mot, systemImage: eau.icone)
+                Label { Text(c: eau.mot) } icon: { Image(systemName: eau.icone) }
                     .font(Police.legende)
                     .foregroundStyle(etatEau == .crue ? JetonsConseils.alerte : JetonsConseils.marne)
             }
@@ -77,7 +78,7 @@ struct CarteAEssayerView: View {
 
     /// Légende de la rangée : d'où viennent les espèces (relevés OFB ou espèces courantes).
     private var titreRangee: some View {
-        Text(sansReleve ? "Espèces courantes en France" : "Relevées près de ton spot")
+        Text(c: sansReleve ? "Espèces courantes en France" : "Relevées près de ton spot")
             .font(Police.sousTitre)
             .foregroundStyle(Palette.encre)
     }
@@ -91,14 +92,14 @@ struct CarteAEssayerView: View {
                 .frame(width: 140, height: 140)
                 .background(Palette.marineDoux, in: Circle())
                 .accessibilityHidden(true)
-            Text("Pas encore de conseil ici")
+            Text(c: "Pas encore de conseil ici")
                 .font(Police.titre)
                 .foregroundStyle(Palette.encre)
-            Text("Aucun relevé de l'OFB près de ce spot. Choisis un autre spot sur la carte pour voir les poissons et quoi leur proposer.")
+            Text(c: "Aucun relevé de l'OFB près de ce spot. Choisis un autre spot sur la carte pour voir les poissons et quoi leur proposer.")
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
                 .multilineTextAlignment(.center)
-            Button(action: fermer) { Label("Voir la carte", systemImage: "map.fill") }
+            Button(action: fermer) { Label { Text(c: "Voir la carte") } icon: { Image(systemName: "map.fill") } }
                 .buttonStyle(.principal)
         }
         .frame(maxWidth: .infinity)
@@ -113,7 +114,7 @@ struct CarteAEssayerView: View {
                 Button { niveauBrut = n.rawValue } label: {
                     HStack(spacing: 5) {
                         Image(systemName: n.pictogramme).font(.caption.weight(.bold))
-                        Text(n.motPecheur).lineLimit(1)
+                        Text(c: n.motPecheur).lineLimit(1)
                     }
                     .font(Police.legende)
                     .padding(.horizontal, 6)
@@ -122,7 +123,7 @@ struct CarteAEssayerView: View {
                     .background(actif ? Palette.marine : Palette.marineDoux, in: Capsule())
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(n.motPecheur)
+                .accessibilityLabel(Text(c: n.motPecheur))
                 .accessibilityAddTraits(actif ? .isSelected : [])
             }
         }
@@ -145,7 +146,7 @@ struct CarteAEssayerView: View {
     /// Une espèce du spot : profil, nom, ouverte ou fermée, puis (discret) le relevé OFB avec son nombre de pêches et l'année.
     private func tuileEspece(_ e: EspeceProche) -> some View {
         let nom = fiche(e)?.nom ?? e.espece.id
-        let fermee = EspecesDuSpot.texteFermeture(e.ouverture)
+        let fermee = EspecesDuSpot.texteFermeture(e.ouverture, locale: locale)
         let actif = selection?.espece == e.espece
         let forme = RoundedRectangle(cornerRadius: Rayon.m, style: .continuous)
         return Button { choix = e.espece.id } label: {
@@ -159,7 +160,7 @@ struct CarteAEssayerView: View {
                     .lineLimit(2)
                 if !sansReleve {
                     PastilleOuverture(ouverte: fermee == nil)
-                    Text(Self.releveCourt(nPeches: e.nPeches, annee: e.annee))
+                    Text(Self.releveCourt(nPeches: e.nPeches, annee: e.annee, locale: locale))
                         .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                 }
@@ -170,30 +171,30 @@ struct CarteAEssayerView: View {
             .overlay { forme.strokeBorder(actif ? Palette.marine : Palette.filet, lineWidth: actif ? 3 : 1) }
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(sansReleve ? nom : (fermee.map { "\(nom), \($0)" } ?? "\(nom), ouverte"))
+        .accessibilityLabel(sansReleve ? nom : (fermee.map { "\(nom), \($0)" } ?? AnglaisC.texte("%@, ouverte", locale, nom)))
         .accessibilityAddTraits(actif ? .isSelected : [])
     }
 
     @ViewBuilder private var conseilsDeLEspece: some View {
         if let e = selection {
-            if let fermee = EspecesDuSpot.texteFermeture(e.ouverture) {
+            if let fermee = EspecesDuSpot.texteFermeture(e.ouverture, locale: locale) {
                 // Espèce fermée : on le dit, aucun conseil de pêche.
                 VStack(alignment: .leading, spacing: 12) {
                     heros(e, titre: "Fermée")
-                    Label(fermee, systemImage: "nosign")
+                    Label { Text(fermee) } icon: { Image(systemName: "nosign") }
                         .font(JetonsConseils.police(.body))
                         .foregroundStyle(JetonsConseils.alerte)
                 }
             } else {
                 if sansReleve {
-                    Label("Vérifie l'ouverture dans les règles du spot", systemImage: "info.circle")
+                    Label { Text(c: "Vérifie l'ouverture dans les règles du spot") } icon: { Image(systemName: "info.circle") }
                         .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                 }
                 aujourdhui(e)
             }
         } else {
-            Label("Toutes les espèces du coin sont fermées ce jour", systemImage: "nosign")
+            Label { Text(c: "Toutes les espèces du coin sont fermées ce jour") } icon: { Image(systemName: "nosign") }
                 .font(JetonsConseils.police(.body))
                 .foregroundStyle(JetonsConseils.alerte)
         }
@@ -224,7 +225,7 @@ extension CarteAEssayerView {
                 }
             }
             if a.visibles.contains(where: { !montres.contains($0.texte) }) || a.toutLeKit {
-                Text("Autres conseils").font(Police.sousTitre).foregroundStyle(Palette.encre)
+                Text(c: "Autres conseils").font(Police.sousTitre).foregroundStyle(Palette.encre)
             }
             ConseilsEspeceView(espece: e.espece, contexte: contexte, dejaMontres: montres)
         }
@@ -234,7 +235,7 @@ extension CarteAEssayerView {
     fileprivate func heros(_ e: EspeceProche, titre: String) -> some View {
         let nom = fiche(e)?.nom ?? e.espece.id
         return VStack(alignment: .leading, spacing: 6) {
-            Text(titre).font(Police.legende).foregroundStyle(Palette.encreDouce)
+            Text(c: titre).font(Police.legende).foregroundStyle(Palette.encreDouce)
             Text(nom).font(Police.titre).foregroundStyle(Palette.encre).lineLimit(2)
             ImageEspece(nom: fiche(e)?.image ?? e.espece.id, libelle: nom)
                 .frame(maxWidth: .infinity)
@@ -251,7 +252,7 @@ struct PastilleOuverture: View {
     let ouverte: Bool
 
     var body: some View {
-        Text(ouverte ? "Ouverte" : "Fermée")
+        Text(c: ouverte ? "Ouverte" : "Fermée")
             .font(Police.legende)
             .foregroundStyle(ouverte ? Palette.ouvert : Palette.encreDouce)
             .padding(.horizontal, 8)
@@ -280,7 +281,7 @@ struct TuileConseilView: View {
                         .frame(width: 32, height: 32)
                         .background(Palette.marineDoux, in: Circle())
                         .accessibilityHidden(true)
-                    Text(type.libelle).font(Police.legende).foregroundStyle(Palette.marine)
+                    Text(c: type.libelle).font(Police.legende).foregroundStyle(Palette.marine)
                     Spacer(minLength: 0)
                     if verrouille {
                         Image(systemName: "lock.fill").font(.footnote).foregroundStyle(Palette.encreDouce)
@@ -288,7 +289,7 @@ struct TuileConseilView: View {
                 }
                 if let conseil {
                     if verrouille {
-                        Text("Avec le kit complet")
+                        Text(c: "Avec le kit complet")
                             .font(Police.detail)
                             .foregroundStyle(Palette.encreDouce)
                     } else {
@@ -310,7 +311,7 @@ struct TuileConseilView: View {
                         }
                     }
                 } else {
-                    Text("Pas encore de conseil")
+                    Text(c: "Pas encore de conseil")
                         .font(Police.detail)
                         .foregroundStyle(Palette.encreDouce)
                 }
@@ -325,8 +326,8 @@ struct TuileConseilView: View {
         }
         .buttonStyle(.plain)
         .disabled(conseil == nil)
-        .accessibilityLabel(type.libelle)
-        .accessibilityHint(verrouille ? "Ouvre le kit complet" : "Montre la source")
+        .accessibilityLabel(Text(c: type.libelle))
+        .accessibilityHint(Text(c: verrouille ? "Ouvre le kit complet" : "Montre la source"))
     }
 
     private func toucher() {
@@ -389,11 +390,11 @@ struct AvertissementCrueView: View {
                 .frame(width: 96, height: 96)
                 .background(Palette.alerteDoux, in: Circle())
                 .accessibilityHidden(true)
-            Text("Crue : ne pêche pas au bord de l'eau")
+            Text(c: "Crue : ne pêche pas au bord de l'eau")
                 .font(Police.titre)
                 .foregroundStyle(JetonsConseils.alerte)
                 .multilineTextAlignment(.center)
-            Text("Reviens quand l'eau a baissé. Les niveaux officiels sont sur Vigicrues.")
+            Text(c: "Reviens quand l'eau a baissé. Les niveaux officiels sont sur Vigicrues.")
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
                 .multilineTextAlignment(.center)
@@ -413,16 +414,14 @@ struct AvertissementCrueView: View {
 
 extension CarteAEssayerView {
     /// « 10 pêches · 2025 » : le même relevé OFB en court, pour la tuile d'une espèce.
-    nonisolated static func releveCourt(nPeches: Int, annee: Int?) -> String {
-        let mot = nPeches > 1 ? "pêches" : "pêche"
-        guard let annee else { return "\(nPeches) \(mot)" }
-        return "\(nPeches) \(mot) · \(annee)"
+    nonisolated static func releveCourt(nPeches: Int, annee: Int?, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        guard let annee else { return AnglaisC.texte(nPeches > 1 ? "%lld pêches" : "%lld pêche", locale, nPeches) }
+        return AnglaisC.texte(nPeches > 1 ? "%lld pêches · %lld" : "%lld pêche · %lld", locale, nPeches, annee)
     }
 
     /// « 1 pêche, dernier relevé 2024 » : même forme que la fiche d'un coin (le dossier Conseils n'importe pas Carte).
-    nonisolated static func releve(nPeches: Int, annee: Int?) -> String {
-        let mot = nPeches > 1 ? "pêches" : "pêche"
-        guard let annee else { return "\(nPeches) \(mot)" }
-        return "\(nPeches) \(mot), dernier relevé \(annee)"
+    nonisolated static func releve(nPeches: Int, annee: Int?, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        guard let annee else { return AnglaisC.texte(nPeches > 1 ? "%lld pêches" : "%lld pêche", locale, nPeches) }
+        return AnglaisC.texte(nPeches > 1 ? "%lld pêches, dernier relevé %lld" : "%lld pêche, dernier relevé %lld", locale, nPeches, annee)
     }
 }
