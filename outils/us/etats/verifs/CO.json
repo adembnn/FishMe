@@ -1,0 +1,62 @@
+{
+  "usps": "CO",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent us-etats-verif-1",
+  "nom": "Colorado",
+  "url_agence": {
+    "url": "https://cpw.state.co.us/",
+    "statut_http": 200,
+    "url_finale": "https://cpw.state.co.us/",
+    "note": null
+  },
+  "url_regles_eau_douce": {
+    "url": "https://cpw.state.co.us/fishing",
+    "statut_http": 200,
+    "url_finale": "https://cpw.state.co.us/fishing",
+    "note": null
+  },
+  "url_permis": {
+    "url": "https://cpw.state.co.us/activities/fishing-licenses-and-dates",
+    "statut_http": 200,
+    "url_finale": "https://cpw.state.co.us/activities/fishing-licenses-and-dates",
+    "note": "URL permis qui manquait ; achat : https://www.cpwshop.com/purchaseprivilege.page?_PageParam.displayCategoryID=251532604"
+  },
+  "prix_resident": {
+    "montant": 44.87,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://cpw.state.co.us/activities/fishing-licenses-and-dates",
+    "citation": "License Type Adult Annual Fishing License Hunter Type Ages 18–63 Fee $44.87",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "total avec 1,50 $ éducation et 1,25 $ recherche-sauvetage ; base 42,12 $ (PDF CPW) ; valide du 1er mars 2026 au 31 mars 2027"
+  },
+  "prix_non_resident": {
+    "montant": 124.01,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://cpw.state.co.us/activities/fishing-licenses-and-dates",
+    "citation": "License Type Annual Hunter Type Ages 16+ Fee $124.01",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "total ; base 121,26 $"
+  },
+  "timbres": [
+    {
+      "nom": "timbre habitat (obligatoire 18-64 ans, résident et non-résident)",
+      "montant": 12.76,
+      "url_source": "https://cpw.state.co.us/activities/fishing-licenses-and-dates",
+      "citation": "ages 18–64, per year buying or applying for a license. Fee $12.76",
+      "qualite": "officielle"
+    }
+  ],
+  "appli_officielle": {
+    "nom": "myColorado (permis numérique CPW)",
+    "url": "https://mycolorado.gov/app-services/cpw-digital-licenses"
+  },
+  "reciprocite_tribal": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "notes": "Prix affichés = totaux incluant surtaxes ; le timbre habitat s'ajoute (12,76 $). Section « résident adulte annuel » 18-63 ans."
+}

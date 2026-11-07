@@ -1,0 +1,76 @@
+{
+  "usps": "OR",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent us-etats-verif-1",
+  "nom": "Oregon",
+  "url_agence": {
+    "url": "https://www.dfw.state.or.us/",
+    "statut_http": 0,
+    "url_finale": "https://www.dfw.state.or.us/",
+    "note": "injoignable ; site actuel de l'agence : https://myodfw.com/"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://myodfw.com/fishing",
+    "statut_http": 200,
+    "url_finale": "https://myodfw.com/fishing",
+    "note": "règlements : https://myodfw.com/articles/oregon-fishing-hunting-regulations-and-updates (200)"
+  },
+  "url_permis": {
+    "url": "https://myodfw.com/fishing/licensing-info",
+    "statut_http": 200,
+    "url_finale": "https://myodfw.com/fishing/licensing-info",
+    "note": "URL permis qui manquait ; vente : https://odfw.huntfishoregon.com/login"
+  },
+  "prix_resident": {
+    "montant": 50.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://myodfw.com/sites/default/files/2025-11/Rec_License_Fee_Schedule.pdf",
+    "citation": "RESIDENT ANNUAL ANGLER $44.00 $50.00 $53.00 $56.00",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "barème officiel ODFW, colonne « Effective 2026 » ; frais d'agent inclus ; 44 $ avant 2026"
+  },
+  "prix_non_resident": {
+    "montant": 138.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://myodfw.com/sites/default/files/2025-11/Rec_License_Fee_Schedule.pdf",
+    "citation": "NONRESIDENT ANNUAL ANGLER $110.50 $138.00 $146.00 $155.00",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "colonne 2026 ; 146 $ en 2028, 155 $ en 2030"
+  },
+  "timbres": [
+    {
+      "nom": "Annual Combined Angling Tag (résident)",
+      "montant": 69.0,
+      "url_source": "https://myodfw.com/sites/default/files/2025-11/Rec_License_Fee_Schedule.pdf",
+      "citation": "ANNUAL COMBINED ANGLING TAG $46.00 $69.00 $73.00 $77.00",
+      "qualite": "officielle"
+    },
+    {
+      "nom": "Annual Combined Angling Tag (non-résident)",
+      "montant": 89.0,
+      "url_source": "https://myodfw.com/sites/default/files/2025-11/Rec_License_Fee_Schedule.pdf",
+      "citation": "NONRESIDENT ANNUAL COMBINED ANGLING TAG $66.00 $89.00 $94.00 $100.00",
+      "qualite": "officielle"
+    },
+    {
+      "nom": "Annual Ocean Endorsement (pêche en mer)",
+      "montant": 9.0,
+      "url_source": "https://myodfw.com/sites/default/files/2025-11/Rec_License_Fee_Schedule.pdf",
+      "citation": "ANNUAL OCEAN ENDORSEMENT -- $9.00 $9.00 $9.00",
+      "qualite": "officielle"
+    }
+  ],
+  "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+  },
+  "reciprocite_tribal": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "notes": "Remplace 44 $ / 110,50 $ (tableau tiers, ancien barème). Annuel valide du 1er janv. au 31 déc. (page licensing-info). Le barème est un PDF daté de nov. 2025 ; vérifié sur site ODFW aujourd'hui (le PDF est servi par myodfw.com)."
+}

@@ -1,0 +1,54 @@
+{
+  "usps": "AL",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent us-etats-verif-1",
+  "nom": "Alabama",
+  "url_agence": {
+    "url": "https://www.outdooralabama.com/",
+    "statut_http": 200,
+    "url_finale": "https://www.outdooralabama.com/",
+    "note": null
+  },
+  "url_regles_eau_douce": {
+    "url": "https://www.outdooralabama.com/fishing",
+    "statut_http": 200,
+    "url_finale": "https://www.outdooralabama.com/fishing",
+    "note": "page de règles de pêche eau douce : https://www.outdooralabama.com/fishing/freshwater-fishing (lien relevé sur le site)"
+  },
+  "url_permis": {
+    "url": "https://www.outdooralabama.com/licenses/freshwater-fishing-licenses",
+    "statut_http": 200,
+    "url_finale": "https://www.outdooralabama.com/licenses/freshwater-fishing-licenses",
+    "note": "remplace /license-information (200 aussi, mais sans prix)"
+  },
+  "prix_resident": {
+    "montant": 17.45,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://www.outdooralabama.com/freshwater-fishing-licenses/fw-rec-fishing-licenses-resident",
+    "citation": "FRESHWATER FISHING - $17.45",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "hors frais d'émission ; expire le 31 août ; l'ancien 17 $ de tiers était arrondi"
+  },
+  "prix_non_resident": {
+    "montant": 68.2,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://www.outdooralabama.com/freshwater-fishing-lic/fw-fish--nr",
+    "citation": "FRESHWATER FISHING Annual All States, except Louisiana and Mississippi - $68.20",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "tarif spécial LA 70,60 $ et MS 75,42 $ (réciprocité) ; 7 jours 38,05 $"
+  },
+  "timbres": [],
+  "appli_officielle": {
+    "nom": "[?] (la page cite un « Mobile Application Support » sans nom d'appli ; plateforme web myoutdooralabama.com)",
+    "url": null
+  },
+  "reciprocite_tribal": "Page officielle « ALA-MISS-TENN Reciprocal Fishing License Areas » : https://www.outdooralabama.com/freshwater-fishing-licenses/ala-miss-tenn-reciprocal-fishing-license-areas (contenu non lu, carte). Tarifs NR spéciaux FL/GA/LA/MS/TN signalés.",
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "notes": "Les deux prix lus aujourd'hui sur outdooralabama.com (site officiel ADCNR)."
+}

@@ -1,0 +1,69 @@
+{
+  "usps": "SD",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent us-etats-verif-1",
+  "nom": "South Dakota",
+  "url_agence": {
+    "url": "https://gfp.sd.gov/",
+    "statut_http": 200,
+    "url_finale": "https://gfp.sd.gov/",
+    "note": null
+  },
+  "url_regles_eau_douce": {
+    "url": "https://gfp.sd.gov/fish/",
+    "statut_http": 200,
+    "url_finale": "https://gfp.sd.gov/fish/",
+    "note": "l'ancienne /fishing/ renvoie vers l'accueil"
+  },
+  "url_permis": {
+    "url": "https://gfp.sd.gov/license-types/",
+    "statut_http": 200,
+    "url_finale": "https://gfp.sd.gov/license-types/",
+    "note": "ancienne /licenses/ redirige vers /hunt-fish-license/ (conditions générales)"
+  },
+  "prix_resident": {
+    "montant": 31.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://gfp.sd.gov/license-types/",
+    "citation": "Resident Annual Fishing Resident fishing, taking frogs or turtles. Resident youth under age 18 are not required to have a fishing license. $31*",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "l'astérisque = frais d'agent non inclus ; surtaxe de 6 $ incluse dans le prix selon la page"
+  },
+  "prix_non_resident": {
+    "montant": 80.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://gfp.sd.gov/license-types/",
+    "citation": "Nonresident Annual Fishing Nonresident fishing, taking frogs or turtles within the legal daily and possession limits. $80*",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "frais d'agent non inclus"
+  },
+  "timbres": [
+    {
+      "nom": "Habitat Stamp (18 ans et plus, résident)",
+      "montant": 10.0,
+      "url_source": "https://gfp.sd.gov/hunt-fish-license/",
+      "citation": "Habitat Stamp ($10 for residents and $25 for nonresidents)",
+      "qualite": "officielle"
+    },
+    {
+      "nom": "Habitat Stamp (18 ans et plus, non-résident)",
+      "montant": 25.0,
+      "url_source": "https://gfp.sd.gov/hunt-fish-license/",
+      "citation": "Habitat Stamp ($10 for residents and $25 for nonresidents)",
+      "qualite": "officielle"
+    }
+  ],
+  "appli_officielle": {
+    "nom": "[?] (lien Play Store de l'agence : recherche « SDGFP Outdoors »)",
+    "url": null
+  },
+  "reciprocite_tribal": "Page « Border Waters » sur gfp.sd.gov/fish/ (non lue).",
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "notes": "Remplace 28 $ / 67 $ (tableau tiers 2024). Habitat Stamp obligatoire dès 18 ans, à ajouter. Frais d'agent en sus."
+}

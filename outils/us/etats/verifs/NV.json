@@ -1,0 +1,54 @@
+{
+  "usps": "NV",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent us-etats-verif-1",
+  "nom": "Nevada",
+  "url_agence": {
+    "url": "https://www.ndow.org/",
+    "statut_http": 200,
+    "url_finale": "https://www.ndow.org/",
+    "note": null
+  },
+  "url_regles_eau_douce": {
+    "url": "https://www.ndow.org/rules-regulations/",
+    "statut_http": 200,
+    "url_finale": "https://www.ndow.org/rules-regulations/",
+    "note": "remplace /fish-wildlife-habitat/fishing/ (404)"
+  },
+  "url_permis": {
+    "url": "https://www.ndow.org/apply-buy/fishing/",
+    "statut_http": 200,
+    "url_finale": "https://www.ndow.org/apply-buy/fishing/",
+    "note": "remplace /licenses-permits/ (404)"
+  },
+  "prix_resident": {
+    "montant": 40.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://www.ndow.org/apply-buy/fishing/",
+    "citation": "Annual Adult Fishing License (ages 18 & older) $40.00",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "hors frais de traitement (« Prices do not include nominal processing fee »)"
+  },
+  "prix_non_resident": {
+    "montant": 80.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://www.ndow.org/apply-buy/fishing/",
+    "citation": "Nonresident fishing licenses Annual Adult Fishing License (ages 18 & older) $80.00",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "hors frais de traitement"
+  },
+  "timbres": [],
+  "appli_officielle": {
+    "nom": "[?] (carte FishNV, pas une appli de permis)",
+    "url": "https://fish.wildlifenv.com"
+  },
+  "reciprocite_tribal": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "notes": "Aucun timbre cité sur la page des permis de pêche. Les prix 2024 de tiers (40 / 80) sont confirmés."
+}

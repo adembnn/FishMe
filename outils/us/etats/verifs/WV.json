@@ -1,0 +1,90 @@
+{
+  "usps": "WV",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent us-etats-verif-1",
+  "nom": "West Virginia",
+  "url_agence": {
+    "url": "https://wvdnr.gov/",
+    "statut_http": 200,
+    "url_finale": "https://wvdnr.gov/",
+    "note": null
+  },
+  "url_regles_eau_douce": {
+    "url": "https://wvdnr.gov/fishing/fishing-regulations/",
+    "statut_http": 200,
+    "url_finale": "https://wvdnr.gov/fishing/fishing-regulations/",
+    "note": "/fishing/ (200) mène à la page d'accueil pêche ; règlements 2026 : https://wvdnr.gov/wp-content/uploads/2026/02/Pub_Regs_Fishing_2026_DNR_WILD_pp.pdf"
+  },
+  "url_permis": {
+    "url": "https://wvdnr.gov/buy-a-license/",
+    "statut_http": 200,
+    "url_finale": "https://wvdnr.gov/buy-a-license/",
+    "note": "URL permis qui manquait ; vente : https://www.wvhunt.com/login"
+  },
+  "prix_resident": {
+    "montant": 19.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://wvdnr.gov/wp-content/uploads/2026/02/Pub_Regs_Fishing_2026_DNR_WILD_pp.pdf",
+    "citation": "Fishing (Class B):............$19.00",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "livret officiel 2026 p. 28 ; année civile ; + timbre Conservation 5 $ obligatoire ; Sportsman (hunt/fish/trap) 35 $"
+  },
+  "prix_non_resident": {
+    "montant": 37.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://wvdnr.gov/wp-content/uploads/2026/02/Pub_Regs_Fishing_2026_DNR_WILD_pp.pdf",
+    "citation": "Fishing (Class F):............$37.00",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "+ timbre CS/LE 13 $ obligatoire"
+  },
+  "timbres": [
+    {
+      "nom": "Conservation Stamp (Class CS, résident)",
+      "montant": 5.0,
+      "url_source": "https://wvdnr.gov/wp-content/uploads/2026/02/Pub_Regs_Fishing_2026_DNR_WILD_pp.pdf",
+      "citation": "Conservation Stamp (Class CS): ......... $5.00",
+      "qualite": "officielle"
+    },
+    {
+      "nom": "Conservation/Law Enforcement Stamp (Class CS/LE, non-résident)",
+      "montant": 13.0,
+      "url_source": "https://wvdnr.gov/wp-content/uploads/2026/02/Pub_Regs_Fishing_2026_DNR_WILD_pp.pdf",
+      "citation": "Conservation/Law Enforcement Stamp (Class CS/LE): ......... $13.00",
+      "qualite": "officielle"
+    },
+    {
+      "nom": "Trout Fishing Stamp (Class O, résident)",
+      "montant": 10.0,
+      "url_source": "https://wvdnr.gov/wp-content/uploads/2026/02/Pub_Regs_Fishing_2026_DNR_WILD_pp.pdf",
+      "citation": "Trout Fishing Stamp (Class O):......$10.00",
+      "qualite": "officielle"
+    },
+    {
+      "nom": "Trout Fishing Stamp (Class OO, non-résident)",
+      "montant": 16.0,
+      "url_source": "https://wvdnr.gov/wp-content/uploads/2026/02/Pub_Regs_Fishing_2026_DNR_WILD_pp.pdf",
+      "citation": "Trout Fishing Stamp (Class OO):......$16.00",
+      "qualite": "officielle"
+    },
+    {
+      "nom": "National Forest (Class I, non-résident, en plus)",
+      "montant": 2.0,
+      "url_source": "https://wvdnr.gov/wp-content/uploads/2026/02/Pub_Regs_Fishing_2026_DNR_WILD_pp.pdf",
+      "citation": "National Forest Hunting/Trapping/Fishing (Class I):.....$2.00",
+      "qualite": "officielle"
+    }
+  ],
+  "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+  },
+  "reciprocite_tribal": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "notes": "Remplace 29 $ / 53 $ (tableau tiers 2024, qui additionnait des timbres). Prix = permis seul ; timbre conservation obligatoire en plus (5 $ résident, 13 $ non-résident). Livret officiel PDF 2026 hébergé sur wvdnr.gov (lecture par extraction de texte local)."
+}
