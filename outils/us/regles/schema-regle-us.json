@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fishme/us/regle-us",
+  "title": "Fichier d'une lecture de règles américaines (un État, un lecteur)",
+  "description": "Aligné sur l'entité Rule du « modèle minimal » de reports/us/reglementation-cadre.md §5.1 : scope hiérarchique État > zone > plan d'eau > tronçon, espèce (vide = toutes), saison, tailles, limites, engins, appâts, fermetures, source, date. Le verdict n'est jamais « permis » : trois valeurs seulement.",
+  "type": "object",
+  "required": ["version", "etat", "lecteur", "genere_le", "textes", "regles"],
+  "properties": {
+    "version": {"const": 1},
+    "fixture": {"type": "boolean", "description": "true : exemple factice, jamais chargé dans l'app"},
+    "etat": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "lecteur": {"enum": ["A", "B"]},
+    "genere_le": {"$ref": "#/$defs/date"},
+    "textes": {"type": "array", "items": {"$ref": "#/$defs/texte"}},
+    "regles": {"type": "array", "items": {"$ref": "#/$defs/regle"}}
+  },
+  "$defs": {
+    "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "date_saison": {"type": ["string", "null"], "description": "AAAA-MM-JJ ou MM-JJ ; une plage à cheval sur deux années (1er déc. au 15 mars) garde du > au",
+                    "pattern": "^(\\d{4}-)?\\d{2}-\\d{2}$"},
+    "texte": {
+      "type": "object", "required": ["titre", "url", "lu"],
+      "properties": {"titre": {"type": "string"}, "url": {"type": "string", "pattern": "^https://"},
+                     "edition": {"type": ["string", "null"], "description": "ex. « 2026 Fishing Regulations »"},
+                     "publie_le": {"type": ["string", "null"]}, "lu": {"enum": ["entier", "partie", "titre seul"]}}
+    },
+    "regle": {
+      "type": "object",
+      "required": ["id", "niveau", "portee", "especes", "type", "valeur", "phrase", "source", "citation", "statut"],
+      "properties": {
+        "id": {"type": "string"},
+        "niveau": {"enum": [2, 3], "description": "2 = règle par espèce au niveau de l'État (ou d'une zone) ; 3 = règle d'un plan d'eau ou d'un tronçon"},
+        "portee": {
+          "type": "object", "required": ["niveau_portee"],
+          "properties": {
+            "niveau_portee": {"enum": ["etat", "zone", "plan_eau", "troncon"]},
+            "etat": {"type": "string", "pattern": "^[A-Z]{2}$"},
+            "zone": {"type": ["string", "null"], "description": "région, district, comté ou « zone » de l'agence"},
+            "plan_eau": {"type": ["string", "null"]},
+            "troncon": {"type": ["string", "null"], "description": "bornes amont/aval, repères en miles"},
+            "comte": {"type": ["string", "null"]},
+            "lieu": {"type": ["string", "null"], "description": "le lieu tel qu'écrit dans le texte"}
+          }
+        },
+        "especes": {"type": "array", "items": {"type": "string"}, "description": "noms communs anglais ; [] = toutes espèces"},
+        "type": {"enum": ["saison", "taille_min", "taille_max", "fenetre", "limite_jour", "limite_possession",
+                          "engin", "appat", "fermeture", "relacher", "interdit", "autre"]},
+        "du": {"$ref": "#/$defs/date_saison"},
+        "au": {"$ref": "#/$defs/date_saison"},
+        "valeur": {
+          "type": "object",
+          "description": "Nombres écrits comme nombres, avec leur unité dans la clé : pouces, pouces_min, pouces_max, cm…, mm…, livres, kg, nombre, lignes_max, hamecons_max ; code (texte court en snake_case) pour engin, appât, fermeture, relacher ; mode pour fenetre ; texte libre non comparé.",
+          "properties": {"pouces": {"type": "number"}, "pouces_min": {"type": "number"}, "pouces_max": {"type": "number"},
+                         "cm": {"type": "number"}, "cm_min": {"type": "number"}, "cm_max": {"type": "number"},
+                         "mm": {"type": "number"}, "livres": {"type": "number"}, "kg": {"type": "number"},
+                         "nombre": {"type": "number"}, "lignes_max": {"type": "number"}, "hamecons_max": {"type": "number"},
+                         "mode": {"enum": ["relacher_entre", "relacher_au_dessus", "relacher_en_dessous", "autre"]},
+                         "code": {"type": "string", "pattern": "^[a-z0-9_]+$"}, "texte": {"type": "string"}},
+          "additionalProperties": false
+        },
+        "phrase": {"type": "string", "description": "la règle en une phrase neutre, sans verdict"},
+        "source": {
+          "type": "object", "required": ["url", "date"],
+          "properties": {"url": {"type": "string", "pattern": "^https://"}, "texte": {"type": "string"},
+                         "edition": {"type": ["string", "null"]}, "page": {"type": ["string", "null"]},
+                         "date": {"$ref": "#/$defs/date", "description": "date de lecture du texte"}}
+        },
+        "citation": {"type": "string", "maxLength": 200, "minLength": 3, "description": "extrait exact du texte, 200 caractères au plus"},
+        "statut": {"enum": ["brouillon", "incertain"]},
+        "raison_incertain": {"type": ["string", "null"]},
+        "verdict": {"enum": ["interdit", "a_verifier", "donnee_absente"], "description": "facultatif ; jamais une valeur permissive"},
+        "valide_du": {"type": ["string", "null"]}, "valide_au": {"type": ["string", "null"]},
+        "expire_le": {"type": ["string", "null"]}
+      }
+    }
+  }
+}
