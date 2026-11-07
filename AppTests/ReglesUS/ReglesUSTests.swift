@@ -172,7 +172,7 @@ struct ReglesUSTests {
     // MARK: Où est le pêcheur
 
     @Test func lEtatSeDevineSeulementAuCoeurDeWisconsinEtMinnesota() {
-        #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 43.07, longitude: -89.40))?.rawValue == "WI")
+        #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 43.60, longitude: -89.40))?.rawValue == "WI")
         #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 45.56, longitude: -94.16))?.rawValue == "MN")
         #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 48.85, longitude: 2.35)) == nil)
         #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 44.98, longitude: -92.5)) == nil)
