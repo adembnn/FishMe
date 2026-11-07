@@ -69,7 +69,7 @@ struct ReglesUSTests {
     }
 
     @Test func niveauUnSansRegleParEspeceDonneDonneeAbsenteEtLeLien() throws {
-        let p = try presenter("walleye", "NY")
+        let p = try presenter("walleye", "OH")
         #expect(p.verdict == .donneeAbsente)
         #expect(p.groupes.isEmpty)
         #expect(p.lienAgence != nil)
@@ -171,11 +171,12 @@ struct ReglesUSTests {
 
     // MARK: Où est le pêcheur
 
-    @Test func lEtatSeDevineSeulementAuCoeurDeWisconsinEtMinnesota() {
+    @Test func lEtatSeDevineSeulementDansLesEtatsDesDonneesGeographiques() {
         #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 43.07, longitude: -89.40))?.rawValue == "WI")
         #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 45.56, longitude: -94.16))?.rawValue == "MN")
         #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 48.85, longitude: 2.35)) == nil)
-        #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 44.98, longitude: -92.5)) == nil)
+        #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 44.31, longitude: -85.60))?.rawValue == "MI")
+        #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 40.0, longitude: -83.0)) == nil)
     }
 
     @Test func lEtatSeLitDansLeLieuFlou() {
