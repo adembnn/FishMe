@@ -14,6 +14,8 @@ nonisolated enum TextesPriseResultat {
 struct PriseResultatView: View {
     @Bindable var modele: PriseModele
     @State private var verso = false
+    /// US12 : en région États-Unis, le bloc de règles est `BlocReglesUS` ; en France rien ne change.
+    @Environment(RegionCourante.self) private var regionCourante: RegionCourante?
 
     var body: some View {
         ScrollView {
@@ -54,7 +56,9 @@ struct PriseResultatView: View {
 
     @ViewBuilder private var blocDeRegles: some View {
         let categorieInconnue = modele.contexte.lieu.categorie.valeur == .inconnue
-        if let controle = modele.controle {
+        if regionCourante?.region == .etatsUnis {
+            blocDeReglesUS
+        } else if let controle = modele.controle {
             BlocReglesView(resultat: controle, especeConfirmee: modele.especeConfirmee != nil, categorieInconnue: categorieInconnue)
         } else if modele.especeConfirmee != nil {
             // Espèce confirmée mais pas de contrôle (taille non confirmée) : jamais « Espèce non confirmée ».
@@ -64,6 +68,15 @@ struct PriseResultatView: View {
             // Espèce non confirmée : « Il faut relâcher le poisson », sans ligne inventée.
             BlocReglesView(lignes: [], consigne: .relacheLa, especeConfirmee: false)
         }
+    }
+
+    /// US12 : les règles des États-Unis. L'État vient de la position de la prise (WI, MN) ; sinon le bloc propose de le choisir.
+    /// Une taille estimée (réalité augmentée) ne fait jamais dire « interdit » au moteur.
+    @ViewBuilder private var blocDeReglesUS: some View {
+        BlocReglesUS(espece: modele.especeConfirmee?.espece.id ?? "", nomEspece: modele.especeConfirmee?.nom,
+                     etat: EtatUSDepuisLieu.etat(pour: modele.contexte.coordonnee),
+                     tailleCm: modele.tailleConnue ? modele.longueurCm.rounded() : nil,
+                     tailleEstimee: modele.methode == .estimee, date: modele.contexte.date)
     }
 
     // MARK: 3. Gardée ou relâchée (quota du jour)

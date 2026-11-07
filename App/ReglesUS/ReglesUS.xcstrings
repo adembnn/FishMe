@@ -1,0 +1,474 @@
+{
+  "sourceLanguage": "fr",
+  "strings": {
+    "Appâts": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baits"
+          }
+        }
+      }
+    },
+    "Au-dessus de la taille maximale (%@) : poisson mesuré %@": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Over the maximum size (%1$@): fish measured %2$@"
+          }
+        }
+      }
+    },
+    "Aucune interdiction connue de nous, vérifie auprès de l'agence": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "We know of no prohibition. Check with the state agency."
+          }
+        }
+      }
+    },
+    "Aucune règle lue pour ce poisson ici.": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No regulation read for this fish here."
+          }
+        }
+      }
+    },
+    "Ce résumé ne remplace pas le texte de l'agence : vérifie auprès d'elle avant de pêcher.": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This summary does not replace the agency's text. Check with the agency before you fish."
+          }
+        }
+      }
+    },
+    "Choisir l'État": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick the state"
+          }
+        }
+      }
+    },
+    "Choisis l'État pour voir le lien de l'agence.": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick the state to see the agency link."
+          }
+        }
+      }
+    },
+    "Dans la fenêtre protégée de %@ à %@ : poisson mesuré %@": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In the protected slot from %1$@ to %2$@: fish measured %3$@"
+          }
+        }
+      }
+    },
+    "Donnée absente": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No data"
+          }
+        }
+      }
+    },
+    "Espèce protégée, à relâcher": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Protected species, release it"
+          }
+        }
+      }
+    },
+    "Espèce protégée, à relâcher : %@": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Protected species, release it: %@"
+          }
+        }
+      }
+    },
+    "Fenêtre protégée": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Protected slot"
+          }
+        }
+      }
+    },
+    "Fermeture": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closure"
+          }
+        }
+      }
+    },
+    "Hors de la période d'ouverture lue": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Outside the open season we read"
+          }
+        }
+      }
+    },
+    "Il faut relâcher le poisson": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Release the fish"
+          }
+        }
+      }
+    },
+    "Interdit": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prohibited"
+          }
+        }
+      }
+    },
+    "Limite de possession": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Possession limit"
+          }
+        }
+      }
+    },
+    "Limite de possession atteinte (%lld)": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Possession limit reached (%lld)"
+          }
+        }
+      }
+    },
+    "Limite de prise du jour atteinte (%lld)": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily limit reached (%lld)"
+          }
+        }
+      }
+    },
+    "Limite par jour": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily limit"
+          }
+        }
+      }
+    },
+    "Matériel": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gear"
+          }
+        }
+      }
+    },
+    "Nous n'avons lu aucune règle pour ce poisson ici, vérifie auprès de l'agence": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "We have read no regulation for this fish here. Check with the state agency."
+          }
+        }
+      }
+    },
+    "Ouvrir la source": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open the source"
+          }
+        }
+      }
+    },
+    "Prise et relâche seulement": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Catch and release only"
+          }
+        }
+      }
+    },
+    "Prise et relâche seulement : %@": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Catch and release only: %@"
+          }
+        }
+      }
+    },
+    "Pêche interdite": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fishing prohibited"
+          }
+        }
+      }
+    },
+    "Pêche interdite ici : %@": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fishing prohibited here: %@"
+          }
+        }
+      }
+    },
+    "Règles de pêche": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fishing regulations"
+          }
+        }
+      }
+    },
+    "Règles de pêche de l'État": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "State fishing regulations"
+          }
+        }
+      }
+    },
+    "Saison": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Season"
+          }
+        }
+      }
+    },
+    "Site de l'agence de l'État": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "State agency website"
+          }
+        }
+      }
+    },
+    "Source : %@, lue le %@": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Source: %1$@, read on %2$@"
+          }
+        }
+      }
+    },
+    "Source lue le %@": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Source read on %@"
+          }
+        }
+      }
+    },
+    "Sous la taille minimale (%@) : poisson mesuré %@": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Under the minimum size (%1$@): fish measured %2$@"
+          }
+        }
+      }
+    },
+    "Taille maximale": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maximum size"
+          }
+        }
+      }
+    },
+    "Taille minimale": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimum size"
+          }
+        }
+      }
+    },
+    "Toute l'année": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All year"
+          }
+        }
+      }
+    },
+    "Voir les règles lues pour ce poisson": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See the regulations we read for this fish"
+          }
+        }
+      }
+    },
+    "À vérifier": {
+      "comment": "Bloc des règles US (lot US12).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check with the agency"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
