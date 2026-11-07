@@ -1747,7 +1747,7 @@
    "du": "2026-01-01",
    "au": "2026-01-25",
    "remplace": null,
-   "phrase": "Sur la Loire seulement : filets maillants (araignée, tramail) autorisés du 1er au 25 janvier 2026.",
+   "phrase": "Sur la Loire seulement : filets maillants (araignée, tramail) prévus du 1er au 25 janvier 2026.",
    "textes": [
     "t4"
    ],
@@ -1774,7 +1774,7 @@
    "du": "2026-04-25",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Sur la Loire seulement : filets maillants (araignée, tramail) autorisés du 25 avril au 31 décembre 2026.",
+   "phrase": "Sur la Loire seulement : filets maillants (araignée, tramail) prévus du 25 avril au 31 décembre 2026.",
    "textes": [
     "t4"
    ],
@@ -1828,7 +1828,7 @@
    "du": "2026-01-01",
    "au": "2026-01-25",
    "remplace": null,
-   "phrase": "Sur l'Allier seulement : filets maillants (araignée, tramail) autorisés du 1er au 25 janvier 2026.",
+   "phrase": "Sur l'Allier seulement : filets maillants (araignée, tramail) prévus du 1er au 25 janvier 2026.",
    "textes": [
     "t4"
    ],
@@ -1855,7 +1855,7 @@
    "du": "2026-04-25",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Sur l'Allier seulement : filets maillants (araignée, tramail) autorisés du 25 avril au 31 décembre 2026.",
+   "phrase": "Sur l'Allier seulement : filets maillants (araignée, tramail) prévus du 25 avril au 31 décembre 2026.",
    "textes": [
     "t4"
    ],
@@ -2607,7 +2607,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Grande alose : pêche autorisée toute l'année sur la Loire d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
+   "phrase": "Grande alose : pêche prévue toute l'année sur la Loire d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
    "textes": [
     "t6"
    ],
@@ -2636,7 +2636,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Grande alose : pêche autorisée toute l'année sur l'Allier d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
+   "phrase": "Grande alose : pêche prévue toute l'année sur l'Allier d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
    "textes": [
     "t6"
    ],
@@ -2665,7 +2665,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Alose feinte : pêche autorisée toute l'année sur la Loire d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
+   "phrase": "Alose feinte : pêche prévue toute l'année sur la Loire d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
    "textes": [
     "t6"
    ],
@@ -2694,7 +2694,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Alose feinte : pêche autorisée toute l'année sur l'Allier d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
+   "phrase": "Alose feinte : pêche prévue toute l'année sur l'Allier d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
    "textes": [
     "t6"
    ],
@@ -2723,7 +2723,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Lamproie marine : pêche autorisée toute l'année sur la Loire à l'aval du Bec d'Allier d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
+   "phrase": "Lamproie marine : pêche prévue toute l'année sur la Loire à l'aval du Bec d'Allier d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
    "textes": [
     "t6"
    ],
@@ -2752,7 +2752,7 @@
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Lamproie fluviatile : pêche autorisée toute l'année sur la Loire à l'aval du Bec d'Allier d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
+   "phrase": "Lamproie fluviatile : pêche prévue toute l'année sur la Loire à l'aval du Bec d'Allier d'après l'arrêté permanent de 2019 (l'arrêté annuel 2026 l'interdit).",
    "textes": [
     "t6"
    ],
@@ -3960,7 +3960,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Dans les plans d'eau de 1re catégorie, les asticots sont permis comme appât, sans amorçage.",
+   "phrase": "Dans les plans d'eau de 1re catégorie, les asticots sont prévus comme appât, sans amorçage.",
    "textes": [
     "t14"
    ],
@@ -3987,7 +3987,7 @@
    "du": "2026-05-01",
    "au": "2026-09-20",
    "remplace": null,
-   "phrase": "En 1re catégorie, tu ne peux pêcher en marchant dans l'eau que du 1er mai au 20 septembre 2026.",
+   "phrase": "En 1re catégorie, la pêche en marchant dans l'eau n'est prévue que du 1er mai au 20 septembre 2026.",
    "textes": [
     "t15"
    ],
@@ -4014,7 +4014,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "La carpe de nuit n'est permise qu'aux endroits fixés par un arrêté particulier, en 2e catégorie.",
+   "phrase": "La carpe de nuit n'est prévue qu'aux endroits fixés par un arrêté particulier, en 2e catégorie.",
    "textes": [
     "t16"
    ],
@@ -4122,7 +4122,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang des Trois Biches : pêche de la carpe à toute heure autorisée, sans limite de durée.",
+   "phrase": "Étang des Trois Biches : pêche de la carpe à toute heure prévue, sans limite de durée.",
    "textes": [
     "t19"
    ],
@@ -4203,7 +4203,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Précy : carpe de nuit autorisée jusqu'au 31 décembre 2026, berge droite sur 280 m.",
+   "phrase": "Précy : carpe de nuit prévue jusqu'au 31 décembre 2026, berge droite sur 280 m.",
    "textes": [
     "t22"
    ],
@@ -4230,7 +4230,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Quincy : carpe de nuit autorisée jusqu'au 31 décembre 2026, berge côté Cher sur 480 m.",
+   "phrase": "Quincy : carpe de nuit prévue jusqu'au 31 décembre 2026, berge côté Cher sur 480 m.",
    "textes": [
     "t23"
    ],
@@ -4257,7 +4257,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Le Cher à Crézancay (La Gâgne) : carpe de nuit autorisée jusqu'au 31 décembre 2026, rive droite.",
+   "phrase": "Le Cher à Crézancay (La Gâgne) : carpe de nuit prévue jusqu'au 31 décembre 2026, rive droite.",
    "textes": [
     "t24"
    ],
@@ -4284,7 +4284,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Le Cher à Vallenay (Bigny) : carpe de nuit autorisée jusqu'au 31 décembre 2026, rive gauche.",
+   "phrase": "Le Cher à Vallenay (Bigny) : carpe de nuit prévue jusqu'au 31 décembre 2026, rive gauche.",
    "textes": [
     "t25"
    ],
@@ -4311,7 +4311,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Canal latéral à la Loire (Rousseaux à Guillons) : carpe de nuit autorisée jusqu'au 31 décembre 2026.",
+   "phrase": "Canal latéral à la Loire (Rousseaux à Guillons) : carpe de nuit prévue jusqu'au 31 décembre 2026.",
    "textes": [
     "t26"
    ],
@@ -4338,7 +4338,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Canal latéral à la Loire à Beffes (port de Chabrol au pont des Radis) : carpe de nuit autorisée jusqu'au 31 décembre 2026.",
+   "phrase": "Canal latéral à la Loire à Beffes (port de Chabrol au pont des Radis) : carpe de nuit prévue jusqu'au 31 décembre 2026.",
    "textes": [
     "t27"
    ],
@@ -4365,7 +4365,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Canal latéral à la Loire (écluse de La Grange à Thauvenay) : carpe de nuit autorisée jusqu'au 31 décembre 2026.",
+   "phrase": "Canal latéral à la Loire (écluse de La Grange à Thauvenay) : carpe de nuit prévue jusqu'au 31 décembre 2026.",
    "textes": [
     "t28"
    ],
@@ -4392,7 +4392,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Canal latéral à la Loire à Cuffy (pont Séguin au pont de La Grenouille) : carpe de nuit autorisée jusqu'au 31 décembre 2027.",
+   "phrase": "Canal latéral à la Loire à Cuffy (pont Séguin au pont de La Grenouille) : carpe de nuit prévue jusqu'au 31 décembre 2027.",
    "textes": [
     "t29"
    ],
@@ -4527,7 +4527,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Canal latéral à la Loire (écluse de La Grange à l'écluse de Pezeau) : carpe de nuit autorisée jusqu'au 31 décembre 2026.",
+   "phrase": "Canal latéral à la Loire (écluse de La Grange à l'écluse de Pezeau) : carpe de nuit prévue jusqu'au 31 décembre 2026.",
    "textes": [
     "t33"
    ],
@@ -4554,7 +4554,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Le Cher à Sainte-Thorette : carpe de nuit autorisée jusqu'au 31 décembre 2029.",
+   "phrase": "Le Cher à Sainte-Thorette : carpe de nuit prévue jusqu'au 31 décembre 2029.",
    "textes": [
     "t34"
    ],
@@ -4581,7 +4581,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Canal de Berry à Marmagne (pont de la route de Marmagne à l'écluse de Saint-Aubin) : carpe de nuit autorisée jusqu'au 31 décembre 2029.",
+   "phrase": "Canal de Berry à Marmagne (pont de la route de Marmagne à l'écluse de Saint-Aubin) : carpe de nuit prévue jusqu'au 31 décembre 2029.",
    "textes": [
     "t35"
    ],
@@ -5271,7 +5271,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sidiailles : 4 lignes autorisées (d'après le guide de la fédération ; l'arrêté permanent donne 2 lignes en plan d'eau de 1re catégorie).",
+   "phrase": "Sidiailles : 4 lignes prévues (d'après le guide de la fédération ; l'arrêté permanent donne 2 lignes en plan d'eau de 1re catégorie).",
    "textes": [
     "t49"
    ],
@@ -5412,7 +5412,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sidiailles : pêche de nuit non autorisée (guide de la fédération).",
+   "phrase": "Sidiailles : pêche de nuit non prévue (guide de la fédération).",
    "textes": [
     "t49"
    ],

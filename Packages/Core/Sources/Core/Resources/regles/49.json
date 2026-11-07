@@ -1624,7 +1624,7 @@
    "du": "2026-01-15",
    "au": "2026-03-31",
    "remplace": null,
-   "phrase": "Sur la Loire aval (lot L), la pêche de la lamproie marine est autorisée du 15 janvier au 31 mars 2026.",
+   "phrase": "Sur la Loire aval (lot L), la pêche de la lamproie marine est prévue du 15 janvier au 31 mars 2026.",
    "textes": [
     "t9"
    ],
@@ -1712,7 +1712,7 @@
    "du": "2026-01-15",
    "au": "2026-03-31",
    "remplace": null,
-   "phrase": "Sur la Loire aval (lot L), la pêche de la lamproie fluviatile est autorisée du 15 janvier au 31 mars 2026.",
+   "phrase": "Sur la Loire aval (lot L), la pêche de la lamproie fluviatile est prévue du 15 janvier au 31 mars 2026.",
    "textes": [
     "t9"
    ],
@@ -1800,7 +1800,7 @@
    "du": "2026-01-15",
    "au": "2026-03-31",
    "remplace": null,
-   "phrase": "Sur la Loire aval (lot L), la pêche de la grande alose est autorisée du 15 janvier au 31 mars 2026.",
+   "phrase": "Sur la Loire aval (lot L), la pêche de la grande alose est prévue du 15 janvier au 31 mars 2026.",
    "textes": [
     "t9"
    ],
@@ -1888,7 +1888,7 @@
    "du": "2026-01-15",
    "au": "2026-03-31",
    "remplace": null,
-   "phrase": "Sur la Loire aval (lot L), la pêche de la alose feinte est autorisée du 15 janvier au 31 mars 2026.",
+   "phrase": "Sur la Loire aval (lot L), la pêche de la alose feinte est prévue du 15 janvier au 31 mars 2026.",
    "textes": [
     "t9"
    ],
@@ -2734,7 +2734,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 1re catégorie, sur les plans d'eau : une ligne supplémentaire est autorisée.",
+   "phrase": "En 1re catégorie, sur les plans d'eau : une ligne supplémentaire est prévue.",
    "textes": [
     "t17"
    ],
@@ -2788,7 +2788,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 1re catégorie, l'asticot est permis comme appât, sans amorçage.",
+   "phrase": "En 1re catégorie, l'asticot est prévu comme appât, sans amorçage.",
    "textes": [
     "t17"
    ],
@@ -2817,7 +2817,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 1re catégorie, les fagots sont autorisés pour la pêche de anguille.",
+   "phrase": "En 1re catégorie, les fagots sont prévus pour la pêche de anguille.",
    "textes": [
     "t17"
    ],
@@ -2846,7 +2846,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 1re catégorie, les fagots sont autorisés pour la pêche de écrevisses autres que celles de l'article R436-10.",
+   "phrase": "En 1re catégorie, les fagots sont prévus pour la pêche de écrevisses autres que celles de l'article R436-10.",
    "textes": [
     "t17"
    ],
@@ -2901,7 +2901,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, sur les cours d'eau : la vermée est autorisée.",
+   "phrase": "En 2e catégorie, sur les cours d'eau : la vermée est prévue.",
    "textes": [
     "t18"
    ],
@@ -3015,7 +3015,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, sur les plans d'eau : fagots autorisés pour les écrevisses non protégées.",
+   "phrase": "En 2e catégorie, sur les plans d'eau : fagots prévus pour les écrevisses non protégées.",
    "textes": [
     "t18"
    ],
@@ -3071,7 +3071,7 @@
    "du": "2026-02-01",
    "au": "2026-07-14",
    "remplace": null,
-   "phrase": "Le filet barrage est autorisé du 1er février au 14 juillet si la pêche du saumon n'est pas ouverte (bénéficiaires non précisés).",
+   "phrase": "Le filet barrage est prévu du 1er février au 14 juillet si la pêche du saumon n'est pas ouverte (bénéficiaires non précisés).",
    "textes": [
     "t18"
    ],
@@ -4264,7 +4264,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Coudray-Macouard : seule la pêche au coup est autorisée.",
+   "phrase": "Coudray-Macouard : seule la pêche au coup est prévue.",
    "textes": [
     "t35"
    ],
@@ -4540,7 +4540,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau de St Nicolas : float tube autorisé.",
+   "phrase": "Plan d'eau de St Nicolas : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4555,7 +4555,7 @@
     "niveau": "plan_eau",
     "code": "49",
     "eau": "maine",
-    "lieu": "Lac de Maine, sur la partie autorisée seulement (Angers)",
+    "lieu": "Lac de Maine, sur la partie prévue seulement (Angers)",
     "geometrie": null
    },
    "especes": [],
@@ -4567,7 +4567,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Maine, sur la partie autorisée seulement : float tube autorisé.",
+   "phrase": "Lac de Maine, sur la partie prévue seulement : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4594,7 +4594,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau du Boulet : float tube autorisé.",
+   "phrase": "Plan d'eau du Boulet : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4621,7 +4621,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Boire de Champtocé : float tube autorisé.",
+   "phrase": "Boire de Champtocé : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4648,7 +4648,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau de Péronne : float tube autorisé.",
+   "phrase": "Plan d'eau de Péronne : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4675,7 +4675,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Ribou : float tube autorisé.",
+   "phrase": "Lac de Ribou : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4702,7 +4702,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang des Noues : float tube autorisé.",
+   "phrase": "Étang des Noues : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4729,7 +4729,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau de la Godinière : float tube autorisé.",
+   "phrase": "Plan d'eau de la Godinière : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4756,7 +4756,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau des Landes : float tube autorisé.",
+   "phrase": "Plan d'eau des Landes : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4783,7 +4783,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Boire de la Rompure : float tube autorisé.",
+   "phrase": "Boire de la Rompure : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4810,7 +4810,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Boire des Robinets : float tube autorisé.",
+   "phrase": "Boire des Robinets : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4837,7 +4837,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Boire de la Nigaudière : float tube autorisé.",
+   "phrase": "Boire de la Nigaudière : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4864,7 +4864,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau de Chambiers : float tube autorisé.",
+   "phrase": "Plan d'eau de Chambiers : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4891,7 +4891,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau de Passavant sur Layon : float tube autorisé.",
+   "phrase": "Plan d'eau de Passavant sur Layon : float tube prévu.",
    "textes": [
     "t38"
    ],
@@ -4918,7 +4918,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac des Mousseaux : float tube autorisé.",
+   "phrase": "Lac des Mousseaux : float tube prévu.",
    "textes": [
     "t38"
    ],
