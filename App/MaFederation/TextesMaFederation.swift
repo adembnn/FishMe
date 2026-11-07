@@ -19,9 +19,12 @@ nonisolated enum TextesMaFederation {
     static let autresNumeros = "Autres numéros"
     static let ouvrirSource = "Voir la source"
 
-    static func releveLe(_ jourTexte: String) -> String { "Lien relevé le \(jourTexte)" }
-    static func sourceNumeros(_ jourTexte: String) -> String {
-        "Source : \(NumerosUtiles.nomDeLaSource), relevé le \(jourTexte)"
+    /// `locale` : français par défaut (les tests comparent le texte français) ; l'écran passe la langue de la région.
+    static func releveLe(_ jourTexte: String, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        AnglaisE.f("Lien relevé le %@", locale, jourTexte)
+    }
+    static func sourceNumeros(_ jourTexte: String, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        AnglaisE.f("Source : %@, relevé le %@", locale, NumerosUtiles.nomDeLaSource, jourTexte)
     }
 
     // Guide de mesure

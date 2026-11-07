@@ -38,6 +38,10 @@ final class ModeleCartePeche: ObservableObject {
     /// Ex. « Moins de 30 jours : pas de rappel, ta carte expire dans 10 jours. »
     @Published private(set) var messageRappel: String?
 
+    /// La langue de la région, posée par l'écran : les textes du rappel et de l'état suivent cette langue.
+    /// Français par défaut (les tests comparent les textes français).
+    var locale = Locale(identifier: "fr_FR")
+
     private let depot: any DepotCartePeche
     private let notifieur: any NotifieurCartePeche
     private let calendrier: Calendar
@@ -68,7 +72,7 @@ final class ModeleCartePeche: ObservableObject {
 
     var libelleEtat: String? {
         guard let fiche, let etat else { return nil }
-        return etat.libelle(expireLe: fiche.expireLe)
+        return etat.libelle(expireLe: fiche.expireLe, locale: locale)
     }
 
     func charger() {
@@ -217,7 +221,7 @@ final class ModeleCartePeche: ObservableObject {
             return
         }
         // Rien à programmer : on le dit, sans demander la permission.
-        if let sans = RappelCartePeche.messageSansRappel(expireLe: courante.expireLe, aujourdhui: aujourdhui()) {
+        if let sans = RappelCartePeche.messageSansRappel(expireLe: courante.expireLe, aujourdhui: aujourdhui(), locale: locale) {
             messageRappel = sans
             return
         }
@@ -240,14 +244,14 @@ final class ModeleCartePeche: ObservableObject {
             var sansRappel = courante
             sansRappel.rappelActif = false
             enregistrerFiche(sansRappel)
-            messageRappel = RappelCartePeche.messageSansRappel(expireLe: courante.expireLe, aujourdhui: aujourdhui())
+            messageRappel = RappelCartePeche.messageSansRappel(expireLe: courante.expireLe, aujourdhui: aujourdhui(), locale: locale)
             return
         }
         messageRappel = nil
         let programme = await notifieur.programmer(
             id: courante.identifiantRappel, jour: jour, heure: Self.heureDuRappel,
-            titre: RappelCartePeche.titre,
-            corps: RappelCartePeche.corps(millesime: courante.millesime, expireLe: courante.expireLe))
+            titre: RappelCartePeche.titreLocalise(locale),
+            corps: RappelCartePeche.corps(millesime: courante.millesime, expireLe: courante.expireLe, locale: locale))
         if !programme { messageRappel = TextesCartePeche.enregistrementImpossible }
     }
 
@@ -255,7 +259,8 @@ final class ModeleCartePeche: ObservableObject {
     var jourDuRappelAffiche: String? {
         guard let fiche, fiche.rappelActif,
               let jour = RappelCartePeche.jourDuRappel(expireLe: fiche.expireLe, aujourdhui: aujourdhui()) else { return nil }
-        return TextesCartePeche.rappelProgramme + jour.texte
+        if locale.language.languageCode?.identifier == "fr" { return TextesCartePeche.rappelProgramme + jour.texte }
+        return AnglaisE.f("Rappel programmé pour le %@", locale, JourLocalise.texte(jour, locale))
     }
 
     // MARK: Suppression

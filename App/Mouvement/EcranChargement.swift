@@ -7,6 +7,7 @@ import UIKit
 struct EcranChargement: View {
     var texte: String? = nil
     var photo: UIImage? = nil
+    @Environment(\.locale) private var locale
 
     var body: some View {
         ZStack {
@@ -14,7 +15,7 @@ struct EcranChargement: View {
             VStack(spacing: Espace.l) {
                 ChargementBouchon(taille: 96)
                 if let texte {
-                    Text(texte)
+                    Text(AnglaisE.t(texte, locale))
                         .font(Police.titre)
                         .foregroundStyle(Palette.encre)
                         .multilineTextAlignment(.center)
@@ -22,7 +23,7 @@ struct EcranChargement: View {
                 }
             }
             .accessibilityElement(children: .ignore)
-            .accessibilityLabel(texte ?? "Chargement")
+            .accessibilityLabel(AnglaisE.t(texte ?? "Chargement", locale))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

@@ -1,0 +1,2646 @@
+{
+  "sourceLanguage": "fr",
+  "strings": {
+    "%@, ajouter à mes envies": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, add to my wish list"
+          }
+        }
+      }
+    },
+    "%@, ouvrir la fiche": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, open the page"
+          }
+        }
+      }
+    },
+    "%@, retirer de mes envies": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, remove from my wish list"
+          }
+        }
+      }
+    },
+    "%@, à %@. ": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, %@ away. "
+          }
+        }
+      }
+    },
+    "%lld an d'essai": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld-year free trial"
+          }
+        }
+      }
+    },
+    "%lld an offert": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld year free"
+          }
+        }
+      }
+    },
+    "%lld ans d'essai": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld-year free trial"
+          }
+        }
+      }
+    },
+    "%lld ans offerts": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld years free"
+          }
+        }
+      }
+    },
+    "%lld jour d'essai": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld-day free trial"
+          }
+        }
+      }
+    },
+    "%lld jour offert": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld day free"
+          }
+        }
+      }
+    },
+    "%lld jours d'essai": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld-day free trial"
+          }
+        }
+      }
+    },
+    "%lld jours offerts": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld days free"
+          }
+        }
+      }
+    },
+    "%lld mois d'essai": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld-month free trial"
+          }
+        }
+      }
+    },
+    "%lld mois offerts": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld months free"
+          }
+        }
+      }
+    },
+    "%lld pêche, dernier relevé %lld": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld survey, latest in %lld"
+          }
+        }
+      }
+    },
+    "%lld pêches, dernier relevé %lld": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld surveys, latest in %lld"
+          }
+        }
+      }
+    },
+    "%lld semaine d'essai": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld-week free trial"
+          }
+        }
+      }
+    },
+    "%lld semaine offerte": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld week free"
+          }
+        }
+      }
+    },
+    "%lld semaines d'essai": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld-week free trial"
+          }
+        }
+      }
+    },
+    "%lld semaines offertes": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld weeks free"
+          }
+        }
+      }
+    },
+    "1 mois d'essai": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1-month free trial"
+          }
+        }
+      }
+    },
+    "1 mois offert": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 month free"
+          }
+        }
+      }
+    },
+    "A à Z": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A to Z"
+          }
+        }
+      }
+    },
+    "Abonnement": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Subscription"
+          }
+        }
+      }
+    },
+    "Abonnement à renouvellement automatique, résiliable à tout moment dans les réglages de ton compte Apple.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-renewing subscription. Cancel anytime in your Apple account settings."
+          }
+        }
+      }
+    },
+    "Accepter": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accept"
+          }
+        }
+      }
+    },
+    "Accès libre": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free access"
+          }
+        }
+      }
+    },
+    "Accès payant": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paid access"
+          }
+        }
+      }
+    },
+    "Accès à l'eau": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Water access"
+          }
+        }
+      }
+    },
+    "Actif": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Active"
+          }
+        }
+      }
+    },
+    "Afficher en grand": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show full screen"
+          }
+        }
+      }
+    },
+    "Alertes": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerts"
+          }
+        }
+      }
+    },
+    "Alertes orage et crue": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Storm and flood alerts"
+          }
+        }
+      }
+    },
+    "Annuel": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yearly"
+          }
+        }
+      }
+    },
+    "Annuler": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        }
+      }
+    },
+    "Aperçu de ta carte de pêche (%@)": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview of your fishing license (%@)"
+          }
+        }
+      }
+    },
+    "Appeler le %@, %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Call %@, %@"
+          }
+        }
+      }
+    },
+    "Arrêtés": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orders"
+          }
+        }
+      }
+    },
+    "Association (AAPPMA)": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local fishing association (AAPPMA)"
+          }
+        }
+      }
+    },
+    "Aucun abonnement à restaurer sur ce compte Apple.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No subscription to restore for this Apple account."
+          }
+        }
+      }
+    },
+    "Aucun relevé OFB à proximité": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No survey records nearby"
+          }
+        }
+      }
+    },
+    "Autres numéros": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other numbers"
+          }
+        }
+      }
+    },
+    "Avec ton accord seulement, l'app mesure son usage de façon anonyme pour s'améliorer. Tu peux refuser sans rien perdre.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only with your consent, the app measures its usage anonymously to improve. You can decline without losing anything."
+          }
+        }
+      }
+    },
+    "Bredouilles": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skunked"
+          }
+        }
+      }
+    },
+    "Ce fichier ne peut pas être lu. Essaie une autre photo ou un autre PDF.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This file can't be read. Try another photo or PDF."
+          }
+        }
+      }
+    },
+    "Ce guide montre où mesurer. Il ne dit pas si ton poisson a la bonne taille : regarde les règles de ton spot.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This guide shows where to measure. It does not say whether your fish is the right size: check the regulations for your spot."
+          }
+        }
+      }
+    },
+    "Ce millésime ne semble pas correct.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This license year doesn't look right."
+          }
+        }
+      }
+    },
+    "Cette application ne connaît pas les règles de pêche locales.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This app does not know the local fishing regulations."
+          }
+        }
+      }
+    },
+    "Changer d'espèce": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Change species"
+          }
+        }
+      }
+    },
+    "Chargement": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading"
+          }
+        }
+      }
+    },
+    "Chargement du spot": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading the spot"
+          }
+        }
+      }
+    },
+    "Choisir un PDF": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a PDF"
+          }
+        }
+      }
+    },
+    "Choisir un autre spot": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose another spot"
+          }
+        }
+      }
+    },
+    "Choisir une photo": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a photo"
+          }
+        }
+      }
+    },
+    "Choisis un spot pour voir l'ouverture": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a spot to see if the season is open"
+          }
+        }
+      }
+    },
+    "Coin de pêche": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fishing spot"
+          }
+        }
+      }
+    },
+    "Conditions": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terms"
+          }
+        }
+      }
+    },
+    "Conditions d'utilisation": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terms of Use"
+          }
+        }
+      }
+    },
+    "Confidentialité": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy"
+          }
+        }
+      }
+    },
+    "Confirmé": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experienced"
+          }
+        }
+      }
+    },
+    "Conseil du mois": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tip of the month"
+          }
+        }
+      }
+    },
+    "Conseils": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tips"
+          }
+        }
+      }
+    },
+    "Contact": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contact"
+          }
+        }
+      }
+    },
+    "Continuer": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue"
+          }
+        }
+      }
+    },
+    "Copie de ta carte de pêche": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy of your fishing license"
+          }
+        }
+      }
+    },
+    "Copie personnelle · pas une carte officielle": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personal copy · not an official license"
+          }
+        }
+      }
+    },
+    "Copie personnelle, pas une carte officielle. FishMe n'est lié ni à la FNPF ni à cartedepeche.fr. Garde ta carte officielle sur toi.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personal copy, not an official license. FishMe is not affiliated with the FNPF or cartedepeche.fr. Keep your official license with you."
+          }
+        }
+      }
+    },
+    "Crédits photos": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo credits"
+          }
+        }
+      }
+    },
+    "Dans mes envies": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On my wish list"
+          }
+        }
+      }
+    },
+    "Date d'expiration": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expiration date"
+          }
+        }
+      }
+    },
+    "Demande une confirmation avant d'appeler": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Asks for confirmation before calling"
+          }
+        }
+      }
+    },
+    "Du plus proche au plus loin. Relevée à proximité : la station OFB est un point de mesure, pas toujours un accès public.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closest to farthest. Surveyed nearby: the monitoring station is a measuring point, not always public access."
+          }
+        }
+      }
+    },
+    "Débutant": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beginner"
+          }
+        }
+      }
+    },
+    "Découvrir": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Discover"
+          }
+        }
+      }
+    },
+    "Département %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Department %@"
+          }
+        }
+      }
+    },
+    "En continuant, tu acceptes les": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "By continuing, you agree to the"
+          }
+        }
+      }
+    },
+    "En savoir plus": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Learn more"
+          }
+        }
+      }
+    },
+    "Espèces trouvées": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Species found"
+          }
+        }
+      }
+    },
+    "Expire aujourd'hui": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expires today"
+          }
+        }
+      }
+    },
+    "Expire dans %lld jours": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expires in %lld days"
+          }
+        }
+      }
+    },
+    "Expire demain": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expires tomorrow"
+          }
+        }
+      }
+    },
+    "Expirée le %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expired on %@"
+          }
+        }
+      }
+    },
+    "Facultatif": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optional"
+          }
+        }
+      }
+    },
+    "Fermer": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
+          }
+        }
+      }
+    },
+    "Fermée": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed"
+          }
+        }
+      }
+    },
+    "Fermée ce jour": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed today"
+          }
+        }
+      }
+    },
+    "Fermée jusqu'au %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed through %@"
+          }
+        }
+      }
+    },
+    "Fichier trop lourd. Prends une photo plus petite.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "File too large. Take a smaller photo."
+          }
+        }
+      }
+    },
+    "FishMe compte seulement des usages anonymes, sans te suivre d'une app à l'autre. Aucun coin de pêche ne quitte ton iPhone.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FishMe only counts anonymous usage, without tracking you across apps. No fishing spot ever leaves your iPhone."
+          }
+        }
+      }
+    },
+    "Fonctions utilisées": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Features used"
+          }
+        }
+      }
+    },
+    "Fondateur": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Founder"
+          }
+        }
+      }
+    },
+    "Fédération de %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Federation of %@"
+          }
+        }
+      }
+    },
+    "Fédération de Paris, Hauts-de-Seine, Seine-Saint-Denis et Val-de-Marne": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Federation of Paris, Hauts-de-Seine, Seine-Saint-Denis and Val-de-Marne"
+          }
+        }
+      }
+    },
+    "Garde ici une photo ou un PDF de ta carte de pêche. Rien n'est obligatoire pour utiliser FishMe.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep a photo or PDF of your fishing license here. Nothing is required to use FishMe."
+          }
+        }
+      }
+    },
+    "Jamais envoyé": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Never sent"
+          }
+        }
+      }
+    },
+    "Je cherche les coins pour %@…": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Looking for spots for %@…"
+          }
+        }
+      }
+    },
+    "Je cherche les relevés OFB": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Looking up the survey records"
+          }
+        }
+      }
+    },
+    "Je veux la pêcher": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I want to catch it"
+          }
+        }
+      }
+    },
+    "Jusqu'au %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Through %@"
+          }
+        }
+      }
+    },
+    "La carte n'a pas pu être enregistrée sur cet iPhone.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The license could not be saved on this iPhone."
+          }
+        }
+      }
+    },
+    "La date d'expiration est avant le millésime.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The expiration date is before the license year."
+          }
+        }
+      }
+    },
+    "La date d'expiration est trop lointaine.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The expiration date is too far away."
+          }
+        }
+      }
+    },
+    "La fiche enregistrée est illisible. Tu peux la supprimer et la refaire.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The saved record is unreadable. You can delete it and create it again."
+          }
+        }
+      }
+    },
+    "La fiche, le fichier et le rappel seront effacés de cet iPhone.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The record, the file and the reminder will be erased from this iPhone."
+          }
+        }
+      }
+    },
+    "Le museau touche le zéro.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The snout touches the zero mark."
+          }
+        }
+      }
+    },
+    "Lecture de ta photo": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading your photo"
+          }
+        }
+      }
+    },
+    "Les achats passent par Apple. FishMe ne voit ni ton nom ni tes moyens de paiement.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purchases go through Apple. FishMe never sees your name or your payment details."
+          }
+        }
+      }
+    },
+    "Les notifications sont coupées pour FishMe": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifications are turned off for FishMe"
+          }
+        }
+      }
+    },
+    "Les offres ne sont pas disponibles pour le moment. Vérifie ta connexion, puis réessaie.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plans aren't available right now. Check your connection, then try again."
+          }
+        }
+      }
+    },
+    "Lien relevé le %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Link checked on %@"
+          }
+        }
+      }
+    },
+    "Lis la longueur au bout de la queue.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Read the length at the tip of the tail."
+          }
+        }
+      }
+    },
+    "Ma carte de pêche": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My fishing license"
+          }
+        }
+      }
+    },
+    "Ma fédération": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My fishing federation"
+          }
+        }
+      }
+    },
+    "Masquer": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide"
+          }
+        }
+      }
+    },
+    "Me prévenir 30 jours avant": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remind me 30 days before"
+          }
+        }
+      }
+    },
+    "Mensuel": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Monthly"
+          }
+        }
+      }
+    },
+    "Mes envies": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My wish list"
+          }
+        }
+      }
+    },
+    "Mes envies · %lld": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My wish list · %lld"
+          }
+        }
+      }
+    },
+    "Mes envies, %lld": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My wish list, %lld"
+          }
+        }
+      }
+    },
+    "Mes records": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My records"
+          }
+        }
+      }
+    },
+    "Mesure d'audience": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usage analytics"
+          }
+        }
+      }
+    },
+    "Mesurer un poisson": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measuring a fish"
+          }
+        }
+      }
+    },
+    "Mesuré": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measured"
+          }
+        }
+      }
+    },
+    "Millésime": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "License year"
+          }
+        }
+      }
+    },
+    "Millésime %lld · expire le %@.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "License year %lld · expires %@."
+          }
+        }
+      }
+    },
+    "Mode démo": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo mode"
+          }
+        }
+      }
+    },
+    "Moins de 30 jours : pas de rappel, ta carte expire dans %lld jours.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Less than 30 days: no reminder, your license expires in %lld days."
+          }
+        }
+      }
+    },
+    "Moins de 30 jours : pas de rappel, ta carte expire dans 1 jour.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Less than 30 days: no reminder, your license expires in 1 day."
+          }
+        }
+      }
+    },
+    "Mon compte": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My account"
+          }
+        }
+      }
+    },
+    "Météo": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weather"
+          }
+        }
+      }
+    },
+    "Météo et rivière": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weather & rivers"
+          }
+        }
+      }
+    },
+    "Météo et rivières": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weather and rivers"
+          }
+        }
+      }
+    },
+    "Niveau de pêcheur": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Angler level"
+          }
+        }
+      }
+    },
+    "Niveau des rivières": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "River levels"
+          }
+        }
+      }
+    },
+    "Nouveau": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New"
+          }
+        }
+      }
+    },
+    "Numéro d'urgence européen": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "European emergency number"
+          }
+        }
+      }
+    },
+    "Numéros utiles": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Useful numbers"
+          }
+        }
+      }
+    },
+    "Occasionnel": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casual"
+          }
+        }
+      }
+    },
+    "Ouverte aujourd'hui": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open today"
+          }
+        }
+      }
+    },
+    "Ouvertes d'abord": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open first"
+          }
+        }
+      }
+    },
+    "Ouvrir les réglages": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Settings"
+          }
+        }
+      }
+    },
+    "Plus": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "More"
+          }
+        }
+      }
+    },
+    "Poisson mesuré du museau au bout de la queue : une flèche va du museau à l'extrémité de la queue.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fish measured from snout to tail tip: an arrow runs from the snout to the end of the tail."
+          }
+        }
+      }
+    },
+    "Poissons par station": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fish records by station"
+          }
+        }
+      }
+    },
+    "Police ou gendarmerie": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Police or gendarmerie"
+          }
+        }
+      }
+    },
+    "Politique de confidentialité": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy Policy"
+          }
+        }
+      }
+    },
+    "Ponton": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dock"
+          }
+        }
+      }
+    },
+    "Pose le poisson à plat, sur une toise.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lay the fish flat on a measuring board."
+          }
+        }
+      }
+    },
+    "Pour corriger ce qui bloque": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To fix what gets in the way"
+          }
+        }
+      }
+    },
+    "Pour la météo (Apple Weather) et le niveau des rivières (Hub'Eau), l'app envoie seulement un point public : une station de relevés ou un point arrondi, jamais ta position exacte.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "For weather (Apple Weather) and river levels (Hub'Eau), the app only sends a public point: a gauge station or a rounded point, never your exact location."
+          }
+        }
+      }
+    },
+    "Pour savoir ce qui sert": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To see what gets used"
+          }
+        }
+      }
+    },
+    "Pour te prévenir 30 jours avant l'expiration.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To remind you 30 days before it expires."
+          }
+        }
+      }
+    },
+    "Quel poisson cherches-tu ?": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which fish are you looking for?"
+          }
+        }
+      }
+    },
+    "Rappel programmé pour le %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reminder set for %@"
+          }
+        }
+      }
+    },
+    "Refuser": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decline"
+          }
+        }
+      }
+    },
+    "Relevée près d'ici": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Surveyed near here"
+          }
+        }
+      }
+    },
+    "Relevée à proximité : %@. %@. %@.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Surveyed nearby: %@. %@. %@."
+          }
+        }
+      }
+    },
+    "Remplacer le fichier": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Replace the file"
+          }
+        }
+      }
+    },
+    "Renseigne-toi auprès de ta fédération ou de ton association agréée (AAPPMA).": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check with your federation or your approved local fishing association (AAPPMA)."
+          }
+        }
+      }
+    },
+    "Repère pratique, du museau à l'extrémité de la queue.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Practical tip: from the snout to the tip of the tail."
+          }
+        }
+      }
+    },
+    "Restaurer les achats": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore Purchases"
+          }
+        }
+      }
+    },
+    "Retirer": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove"
+          }
+        }
+      }
+    },
+    "Retirer de mes envies": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove from my wish list"
+          }
+        }
+      }
+    },
+    "Retour": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back"
+          }
+        }
+      }
+    },
+    "Rien ici pour l'instant. Sur la fiche d'une espèce, touche « Je veux la pêcher ».": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing here yet. On a species page, tap “I want to catch it”."
+          }
+        }
+      }
+    },
+    "Règles et citations": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rules and citations"
+          }
+        }
+      }
+    },
+    "Récentes": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recent"
+          }
+        }
+      }
+    },
+    "Réessayer": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try again"
+          }
+        }
+      }
+    },
+    "Réglages": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "S'ouvre dans Safari": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opens in Safari"
+          }
+        }
+      }
+    },
+    "Samu (Service d'aide médicale d'urgence)": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Samu (emergency medical service)"
+          }
+        }
+      }
+    },
+    "Sapeurs-pompiers": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fire department"
+          }
+        }
+      }
+    },
+    "Site de ma fédération": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My federation's website"
+          }
+        }
+      }
+    },
+    "Sorties": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trips"
+          }
+        }
+      }
+    },
+    "Source : %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Source: %@"
+          }
+        }
+      }
+    },
+    "Source : %@, relevé le %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Source: %@, checked on %@"
+          }
+        }
+      }
+    },
+    "Sources": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sources"
+          }
+        }
+      }
+    },
+    "Station OFB à proximité : %@, à %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nearby monitoring station: %@, %@ away"
+          }
+        }
+      }
+    },
+    "Station OFB à proximité, à %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nearby monitoring station, %@ away"
+          }
+        }
+      }
+    },
+    "Supprimer ma carte": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete my license"
+          }
+        }
+      }
+    },
+    "Sur permis": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "License required"
+          }
+        }
+      }
+    },
+    "Sécurité au bord de l'eau": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waterside safety"
+          }
+        }
+      }
+    },
+    "Ta carte de pêche expire dans 30 jours": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your fishing license expires in 30 days"
+          }
+        }
+      }
+    },
+    "Ta carte est expirée : pas de rappel.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your license has expired: no reminder."
+          }
+        }
+      }
+    },
+    "Ta carte expire aujourd'hui : pas de rappel.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your license expires today: no reminder."
+          }
+        }
+      }
+    },
+    "Ta carte reste sur ton iPhone, dans l'espace protégé de l'app. Elle est sauvegardée avec ta sauvegarde iPhone, si tu l'as activée.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your license stays on your iPhone, in the app's protected storage. It is included in your iPhone backup, if you have turned it on."
+          }
+        }
+      }
+    },
+    "Ta collection et tes photos restent sur ton iPhone. Les photos enregistrées par FishMe n'ont pas de position GPS.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your collection and photos stay on your iPhone. Photos saved by FishMe have no GPS location."
+          }
+        }
+      }
+    },
+    "Ta position": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your location"
+          }
+        }
+      }
+    },
+    "Ta position exacte": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your exact location"
+          }
+        }
+      }
+    },
+    "Ta position sert à te montrer la carte, les règles et les relevés autour de toi. Elle reste sur ton iPhone : aucun coin de pêche exact n'est envoyé.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your location is used to show you the map, the rules and the readings around you. It stays on your iPhone: no exact fishing spot is ever sent."
+          }
+        }
+      }
+    },
+    "Taille non notée": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Size not recorded"
+          }
+        }
+      }
+    },
+    "Tarif fondateur jusqu'au 31 déc. 2026": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Founder pricing until Dec 31, 2026"
+          }
+        }
+      }
+    },
+    "Tarif fondateur jusqu'au 31 déc. 2026, puis %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Founder pricing until Dec 31, 2026, then %@"
+          }
+        }
+      }
+    },
+    "Tes photos": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your photos"
+          }
+        }
+      }
+    },
+    "Tes prises et tes photos": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your catches and photos"
+          }
+        }
+      }
+    },
+    "Tes souvenirs de pêche se rangeront ici.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your fishing memories will be kept here."
+          }
+        }
+      }
+    },
+    "Ton abonnement est de retour.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your subscription is back."
+          }
+        }
+      }
+    },
+    "Ton plus grand %@ jusqu'ici : %@. Joli souvenir.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your biggest %@ so far: %@. A nice memory."
+          }
+        }
+      }
+    },
+    "Touche pour fermer": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap to dismiss"
+          }
+        }
+      }
+    },
+    "Tous les spots": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All spots"
+          }
+        }
+      }
+    },
+    "Toutes les cartes de pêche": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All fishing licenses"
+          }
+        }
+      }
+    },
+    "Trier": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sort"
+          }
+        }
+      }
+    },
+    "Trier : %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sort: %@"
+          }
+        }
+      }
+    },
+    "Trophée": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trophy"
+          }
+        }
+      }
+    },
+    "Tu peux changer ton choix à tout moment dans les réglages.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You can change your choice at any time in settings."
+          }
+        }
+      }
+    },
+    "Une question ou une demande sur tes données : fishme.app@gmail.com.": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A question or request about your data: fishme.app@gmail.com."
+          }
+        }
+      }
+    },
+    "Urgence pour les personnes sourdes et malentendantes": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Emergency number for deaf and hard-of-hearing people"
+          }
+        }
+      }
+    },
+    "Version": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        }
+      }
+    },
+    "Version du %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version dated %@"
+          }
+        }
+      }
+    },
+    "Vigilance": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weather warnings"
+          }
+        }
+      }
+    },
+    "Vérifie l'arrêté": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the regulations"
+          }
+        }
+      }
+    },
+    "estimé": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "estimated"
+          }
+        }
+      }
+    },
+    "et la": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "and the"
+          }
+        }
+      }
+    },
+    "© contributeurs OpenStreetMap": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© OpenStreetMap contributors"
+          }
+        }
+      }
+    },
+    "À propos": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About"
+          }
+        }
+      }
+    },
+    "Écrans ouverts": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Screens opened"
+          }
+        }
+      }
+    },
+    "Étape %lld. %@": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step %lld. %@"
+          }
+        }
+      }
+    },
+    "Événements et actualités": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Events and news"
+          }
+        }
+      }
+    },
+    "ça arrive": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "it happens"
+          }
+        }
+      }
+    },
+    "≈ %@ lb estimé": {
+      "comment": "Lot US13e.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "≈ %@ lb estimated"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

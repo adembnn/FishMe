@@ -8,13 +8,14 @@ struct MesRecordsView: View {
     let modele: ModeleRecords
 
     @Environment(\.dynamicTypeSize) private var tailleTexte
+    @Environment(\.locale) private var locale
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.xl) {
                 compteurs
                 if modele.estVide {
-                    Text(TextesRecords.phraseVide)
+                    Text(AnglaisE.t(TextesRecords.phraseVide, locale))
                         .font(Police.corps)
                         .foregroundStyle(Palette.encreDouce)
                         .fixedSize(horizontal: false, vertical: true)
@@ -27,7 +28,7 @@ struct MesRecordsView: View {
         }
         .scrollIndicators(.hidden)
         .background(Palette.fond.ignoresSafeArea())
-        .navigationTitle(TextesRecords.titre)
+        .navigationTitle(AnglaisE.t(TextesRecords.titre, locale))
         .navigationBarTitleDisplayMode(.large)
         .onDisappear { modele.marquerVus() }
     }
@@ -50,9 +51,9 @@ struct MesRecordsView: View {
         VStack(alignment: .leading, spacing: Espace.xs) {
             Image(systemName: icone).font(.title3).foregroundStyle(Palette.marine).accessibilityHidden(true)
             Text("\(valeur)").font(Police.chiffre).foregroundStyle(Palette.encre).minimumScaleFactor(0.6)
-            Text(titre).font(Police.detail).foregroundStyle(Palette.encre).fixedSize(horizontal: false, vertical: true)
+            Text(AnglaisE.t(titre, locale)).font(Police.detail).foregroundStyle(Palette.encre).fixedSize(horizontal: false, vertical: true)
             if let legende {
-                Text(legende).font(Police.legende).foregroundStyle(Palette.encreDouce)
+                Text(AnglaisE.t(legende, locale)).font(Police.legende).foregroundStyle(Palette.encreDouce)
             }
         }
         .padding(Espace.m)
@@ -60,7 +61,7 @@ struct MesRecordsView: View {
         .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: Rayon.l, style: .continuous).stroke(Palette.filet, lineWidth: 1))
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("\(titre) : \(valeur)" + (legende.map { ", \($0)" } ?? ""))
+        .accessibilityLabel("\(AnglaisE.t(titre, locale)) : \(valeur)" + (legende.map { ", \(AnglaisE.t($0, locale))" } ?? ""))
     }
 
     // MARK: Souvenirs
@@ -84,7 +85,7 @@ struct MesRecordsView: View {
 
     private var sansTaille: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            Text(TextesRecords.sansTaille).font(Police.sousTitre).foregroundStyle(Palette.encre)
+            Text(AnglaisE.t(TextesRecords.sansTaille, locale)).font(Police.sousTitre).foregroundStyle(Palette.encre)
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 64), spacing: Espace.s)], alignment: .leading, spacing: Espace.s) {
                 ForEach(modele.bilan.especesSansTaille, id: \.id) { espece in
                     Group {
@@ -98,7 +99,7 @@ struct MesRecordsView: View {
                     .padding(Espace.xs)
                     .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
                     .accessibilityElement(children: .ignore)
-                    .accessibilityLabel("\(modele.nom(espece)), \(TextesRecords.sansTaille.lowercased())")
+                    .accessibilityLabel("\(modele.nom(espece)), \(AnglaisE.t(TextesRecords.sansTaille, locale).lowercased())")
                 }
             }
         }

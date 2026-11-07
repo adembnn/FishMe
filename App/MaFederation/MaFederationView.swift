@@ -6,6 +6,7 @@ import SwiftUI
 /// Posée dans le Profil par L21 (demande dans `docs/fiches/N5.md`).
 struct MaFederationView: View {
     let federation: MaFederation
+    @Environment(\.locale) private var locale
 
     init(federation: MaFederation) {
         self.federation = federation
@@ -30,7 +31,7 @@ struct MaFederationView: View {
         }
         .scrollIndicators(.hidden)
         .background(Palette.fond.ignoresSafeArea())
-        .navigationTitle(TextesMaFederation.titre)
+        .navigationTitle(AnglaisE.t(TextesMaFederation.titre, locale))
         .navigationBarTitleDisplayMode(.inline)
         .accessibilityIdentifier("ma-federation")
     }
@@ -39,13 +40,13 @@ struct MaFederationView: View {
 
     private var entete: some View {
         VStack(alignment: .leading, spacing: Espace.xs) {
-            Text(TextesMaFederation.titre)
+            Text(AnglaisE.t(TextesMaFederation.titre, locale))
                 .font(Police.grandTitre).foregroundStyle(Palette.encre)
                 .accessibilityAddTraits(.isHeader)
             if let departement = libelleDepartement {
                 Text(departement).font(Police.sousTitre).foregroundStyle(Palette.encre)
             }
-            if let libelle = federation.libelleFederation {
+            if let libelle = libelleFederationAffiche {
                 Text(libelle).font(Police.detail).foregroundStyle(Palette.encreDouce)
             }
         }
@@ -55,7 +56,15 @@ struct MaFederationView: View {
     private var libelleDepartement: String? {
         let nom = federation.nomDepartement.trimmingCharacters(in: .whitespacesAndNewlines)
         if federation.code.isEmpty { return nil }
-        return nom.isEmpty ? "Département \(federation.code)" : "\(nom) · \(federation.code)"
+        return nom.isEmpty ? AnglaisE.f("Département %@", locale, federation.code) : "\(nom) · \(federation.code)"
+    }
+
+    /// « Fédération de Val-de-Marne » dans la langue de la région ; le nom propre du département reste tel quel.
+    private var libelleFederationAffiche: String? {
+        guard let libelle = federation.libelleFederation else { return nil }
+        if libelle == MaFederation.libelleInterdepartemental { return AnglaisE.t(libelle, locale) }
+        let nom = federation.nomDepartement.trimmingCharacters(in: .whitespacesAndNewlines)
+        return AnglaisE.f("Fédération de %@", locale, nom)
     }
 
     private var liens: some View {
@@ -81,10 +90,10 @@ struct MaFederationView: View {
 
     private var pied: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            Text(TextesMaFederation.reglesLocales)
-            Text(TextesMaFederation.renseigneToi)
+            Text(AnglaisE.t(TextesMaFederation.reglesLocales, locale))
+            Text(AnglaisE.t(TextesMaFederation.renseigneToi, locale))
             if federation.verifie, let jour = federation.releveLe {
-                Text(TextesMaFederation.releveLe(jour.texte))
+                Text(TextesMaFederation.releveLe(JourLocalise.texte(jour, locale), locale: locale))
             }
             ForEach(federation.notes, id: \.self) { note in
                 Text(note)
@@ -103,6 +112,7 @@ private struct LigneLien: View {
     let icone: String
     let url: URL
     let identifiant: String
+    @Environment(\.locale) private var locale
 
     var body: some View {
         Link(destination: url) {
@@ -112,7 +122,7 @@ private struct LigneLien: View {
                     .foregroundStyle(Palette.marine)
                     .frame(width: 28)
                     .accessibilityHidden(true)
-                Text(titre)
+                Text(AnglaisE.t(titre, locale))
                     .font(Police.corps).foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -126,7 +136,7 @@ private struct LigneLien: View {
             .frame(minHeight: 56)
             .contentShape(Rectangle())
         }
-        .accessibilityHint(TextesMaFederation.ouvreSafari)
+        .accessibilityHint(AnglaisE.t(TextesMaFederation.ouvreSafari, locale))
         .accessibilityIdentifier(identifiant)
     }
 }
