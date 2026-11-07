@@ -1,0 +1,78 @@
+{
+  "sourceLanguage": "fr",
+  "strings": {
+    "Débutant": {
+      "comment": "Lot US13b : Amis, Profil, Compte.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beginner"
+          }
+        }
+      }
+    },
+    "Pêcheur": {
+      "comment": "Lot US13b : Amis, Profil, Compte.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Angler"
+          }
+        }
+      }
+    },
+    "Confirmé": {
+      "comment": "Lot US13b : Amis, Profil, Compte.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experienced"
+          }
+        }
+      }
+    },
+    "Expert": {
+      "comment": "Lot US13b : Amis, Profil, Compte.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expert"
+          }
+        }
+      }
+    },
+    "Mon profil, %@": {
+      "comment": "Lot US13b : Amis, Profil, Compte.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My profile, %@"
+          }
+        }
+      }
+    },
+    "Mon profil, %@, %@": {
+      "comment": "Lot US13b : Amis, Profil, Compte.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My profile, %1$@, %2$@"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
