@@ -1,0 +1,84 @@
+{
+  "etat": "TN",
+  "nom": "Tennessee",
+  "agence": "Tennessee Wildlife Resources Agency (TWRA)",
+  "emprise": [
+    -90.32,
+    34.98,
+    -81.64,
+    36.69
+  ],
+  "communes": true,
+  "lien_plans": "https://www.tn.gov/twra/fishing/bank-fishing.html",
+  "lien_avis": "https://www.tn.gov/content/tn/environment/program-areas/wr-water-resources/watershed-stewardship/bacteriological-and-fishing-advisories.html",
+  "liens_etat": {
+    "plans_eau": "https://www.tn.gov/twra/fishing/bank-fishing.html [?, 403 aux scripts]",
+    "avis_consommation": "https://www.tn.gov/content/tn/environment/program-areas/wr-water-resources/watershed-stewardship/bacteriological-and-fishing-advisories.html [?, 403 aux scripts]"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Rampes TWRA",
+      "service": "https://services3.arcgis.com/PWXNAH2YKmZY7lBq/arcgis/rest/services/Boat_Launch_Sites/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_tn_rampes",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "TWRA, Boat Launch Sites",
+      "editeur": "Tennessee Wildlife Resources Agency (compte ArcGIS Online TWRA_GIS)",
+      "url_source": "https://www.arcgis.com/home/item.html?id=b3ab0451494c4d2aaea1c656eed8d2a0",
+      "licence": "[?] non précisée comme licence : la fiche du service ne porte qu'une clause de non-garantie de la TWRA (données « pour affichage »)",
+      "date_source": "2026-07-27 (fiche du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Couche déjà limitée par la TWRA aux sites qu'elle publie (IncludeWeb = Yes). Propriétaires « Private », « Private Land », « Marina » non copiés. Directions et Comments non copiés."
+    },
+    {
+      "id": "peche_rive",
+      "role": "acces",
+      "nom": "Sites de pêche depuis la rive (TWRA)",
+      "service": "https://services3.arcgis.com/PWXNAH2YKmZY7lBq/arcgis/rest/services/Fishing_Sites/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "peche_tn_rive",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "TWRA, Fishing Sites",
+      "editeur": "Tennessee Wildlife Resources Agency (compte ArcGIS Online TWRA_GIS)",
+      "url_source": "https://www.arcgis.com/home/item.html?id=daf255dc45d04cefb51cf51e4f63c757",
+      "licence": "[?] non précisée comme licence : la fiche du service ne porte qu'une clause de non-garantie de la TWRA (données « pour affichage »)",
+      "date_source": "2026-07-27 (fiche du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Mêmes exclusions de propriétaires privés."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "téléchargement 3DHP (USGS) non lancé ou interrompu : pause décidée le 2026-11-08 (créneaux 3DHP occupés pendant ~25 min, puis le serveur ne répondait plus)"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "téléchargement 3DHP (USGS) non lancé ou interrompu : pause décidée le 2026-11-08 (créneaux 3DHP occupés pendant ~25 min, puis le serveur ne répondait plus)"
+    },
+    "licences_a_confirmer": [
+      "rampes et sites de pêche (TWRA)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "plans d'eau et lignes d'eau 3DHP : à (re)lancer embarquer.py",
+      "service officiel tnmap.tn.gov et pages tn.gov inaccessibles aux scripts (connexion expirée, puis 403) : données lues sur la copie ArcGIS Online de la TWRA",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement"
+    ]
+  }
+}
