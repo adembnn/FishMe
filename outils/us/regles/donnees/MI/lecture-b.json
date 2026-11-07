@@ -1,0 +1,946 @@
+{
+ "version": 1,
+ "etat": "MI",
+ "lecteur": "B",
+ "genere_le": "2026-11-07",
+ "textes": [
+  {
+   "titre": "Fishing regulations (page DNR : walleye Grands Lacs, déclaration de prise, cartes truite)",
+   "url": "https://www.michigan.gov/dnr/things-to-do/fishing/fishing-regulations",
+   "edition": "2026 Michigan Fishing Regulations, en vigueur jusqu'au 31 mars 2027",
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "2026 Michigan Fishing Regulations (guide PDF officiel, en ligne michigan.gov)",
+   "url": "https://www.michigan.gov/dnr/managing-resources/laws/regulations",
+   "edition": "2026 Michigan Fishing Regulations ; fichier PDF modifié le 2026-10-26 (en-tête HTTP)",
+   "publie_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Communiqué : nouvelles fenêtres de walleye, Lake Independence et Teal Lake",
+   "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+   "edition": "2026-05-07",
+   "publie_le": "2026-05-07",
+   "lu": "entier"
+  },
+  {
+   "titre": "Communiqué : ouverture des saisons (truite, walleye, brochet, bass, muskellunge)",
+   "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+   "edition": "2026-04-23",
+   "publie_le": "2026-04-23",
+   "lu": "entier"
+  },
+  {
+   "titre": "Communiqué : nouveaux règlements au 1er avril 2026",
+   "url": "https://content.govdelivery.com/accounts/MIDNR/bulletins/40febe5",
+   "edition": "2026-04-01",
+   "publie_le": "2026-04-01",
+   "lu": "entier"
+  },
+  {
+   "titre": "Communiqué : changements truite, saumon et esturgeon jaune (FO-254, FO-205)",
+   "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/09/10/regulation-changes-for-inland-trout-salmon-and-lake-sturgeon-now-in-effect",
+   "edition": "2026-09-10",
+   "publie_le": "2026-09-10",
+   "lu": "partie"
+  },
+  {
+   "titre": "Communiqué : brochet et fermeture de frai (FO-204, FO-206)",
+   "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+   "edition": "2026-10-15",
+   "publie_le": "2026-10-15",
+   "lu": "entier"
+  },
+  {
+   "titre": "Liste des Fisheries Orders (FO-200 truite/saumon, FO-206 plans d'eau warmwater spéciaux, FO-215 warmwater statewide, FO-218 engins, FO-240 esturgeon, FO-247 cannes, FO-248 possession, FO-254 lacs truite, FO-201/212/235/236 plans d'eau spéciaux)",
+   "url": "https://www.michigan.gov/dnr/managing-resources/laws/orders/fisheries-orders",
+   "edition": "liste seule",
+   "lu": "titre seul"
+  }
+ ],
+ "regles": [
+  {
+   "id": "b-wae-independence-min",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Lake Independence",
+    "comte": "Marquette",
+    "lieu": "Lake Independence, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 15
+   },
+   "phrase": "Lake Independence (Marquette) : walleye, taille minimale de possession 15 pouces.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The minimum size limit for possession remains at 15 inches.",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206."
+  },
+  {
+   "id": "b-wae-independence-slot",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Lake Independence",
+    "comte": "Marquette",
+    "lieu": "Lake Independence, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "fenetre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces_min": 18,
+    "pouces_max": 23,
+    "mode": "relacher_entre"
+   },
+   "phrase": "Lake Independence (Marquette) : walleye de 18,0 à 23,0 pouces inclus à relâcher.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "walleye from 18.0 inches to 23.0 inches must be released.",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206."
+  },
+  {
+   "id": "b-wae-independence-bag",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Lake Independence",
+    "comte": "Marquette",
+    "lieu": "Lake Independence, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Lake Independence (Marquette) : limite quotidienne de possession 5 walleyes.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The daily possession limit for walleye on these waters also remains at five fish",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206."
+  },
+  {
+   "id": "b-wae-independence-big",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Lake Independence",
+    "comte": "Marquette",
+    "lieu": "Lake Independence, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "sur les 5 walleyes quotidiens, un seul peut dépasser 23 pouces"
+   },
+   "phrase": "Lake Independence (Marquette) : parmi les 5 walleyes quotidiens, un seul de plus de 23 pouces.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "only one of those five walleye can be more than 23 inches long.",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206."
+  },
+  {
+   "id": "b-wae-teal-min",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Teal Lake",
+    "comte": "Marquette",
+    "lieu": "Teal Lake, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 15
+   },
+   "phrase": "Teal Lake (Marquette) : walleye, taille minimale de possession 15 pouces.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The minimum size limit for possession remains at 15 inches.",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206."
+  },
+  {
+   "id": "b-wae-teal-slot",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Teal Lake",
+    "comte": "Marquette",
+    "lieu": "Teal Lake, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "fenetre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces_min": 18,
+    "pouces_max": 23,
+    "mode": "relacher_entre"
+   },
+   "phrase": "Teal Lake (Marquette) : walleye de 18,0 à 23,0 pouces inclus à relâcher.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "walleye from 18.0 inches to 23.0 inches must be released.",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206."
+  },
+  {
+   "id": "b-wae-teal-bag",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Teal Lake",
+    "comte": "Marquette",
+    "lieu": "Teal Lake, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Teal Lake (Marquette) : limite quotidienne de possession 5 walleyes.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The daily possession limit for walleye on these waters also remains at five fish",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206."
+  },
+  {
+   "id": "b-wae-teal-big",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Teal Lake",
+    "comte": "Marquette",
+    "lieu": "Teal Lake, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "sur les 5 walleyes quotidiens, un seul peut dépasser 23 pouces"
+   },
+   "phrase": "Teal Lake (Marquette) : parmi les 5 walleyes quotidiens, un seul de plus de 23 pouces.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "only one of those five walleye can be more than 23 inches long.",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206."
+  },
+  {
+   "id": "b-pike-ausablelake-bag",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Au Sable Lake",
+    "comte": "Ogemaw",
+    "lieu": "Au Sable Lake (Ogemaw County)"
+   },
+   "especes": [
+    "northern pike"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Au Sable Lake (Ogemaw) : limite quotidienne de possession jusqu'à 5 grands brochets.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+    "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "a daily possession limit of up to five northern pike, with only one of these fish 24 inches or greater allowed.",
+   "statut": "incertain",
+   "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu."
+  },
+  {
+   "id": "b-pike-ausablelake-big",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Au Sable Lake",
+    "comte": "Ogemaw",
+    "lieu": "Au Sable Lake (Ogemaw County)"
+   },
+   "especes": [
+    "northern pike"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "sur les 5 brochets quotidiens, un seul de 24 pouces ou plus"
+   },
+   "phrase": "Au Sable Lake (Ogemaw) : parmi les 5 brochets, un seul de 24 pouces ou plus.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+    "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "only one of these fish 24 inches or greater allowed.",
+   "statut": "incertain",
+   "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu."
+  },
+  {
+   "id": "b-pike-clearlake-bag",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Clear Lake",
+    "comte": "Mecosta",
+    "lieu": "Clear Lake (Mecosta County)"
+   },
+   "especes": [
+    "northern pike"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Clear Lake (Mecosta) : limite quotidienne de possession jusqu'à 5 grands brochets.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+    "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "a daily possession limit of up to five northern pike, with only one of these fish 24 inches or greater allowed.",
+   "statut": "incertain",
+   "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu."
+  },
+  {
+   "id": "b-pike-clearlake-big",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Clear Lake",
+    "comte": "Mecosta",
+    "lieu": "Clear Lake (Mecosta County)"
+   },
+   "especes": [
+    "northern pike"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "sur les 5 brochets quotidiens, un seul de 24 pouces ou plus"
+   },
+   "phrase": "Clear Lake (Mecosta) : parmi les 5 brochets, un seul de 24 pouces ou plus.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+    "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "only one of these fish 24 inches or greater allowed.",
+   "statut": "incertain",
+   "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu."
+  },
+  {
+   "id": "b-pike-gibsonlake-bag",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Gibson Lake",
+    "comte": "Iron",
+    "lieu": "Gibson Lake (Iron County)"
+   },
+   "especes": [
+    "northern pike"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Gibson Lake (Iron) : limite quotidienne de possession jusqu'à 5 grands brochets.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+    "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "a daily possession limit of up to five northern pike, with only one of these fish 24 inches or greater allowed.",
+   "statut": "incertain",
+   "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu."
+  },
+  {
+   "id": "b-pike-gibsonlake-big",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Gibson Lake",
+    "comte": "Iron",
+    "lieu": "Gibson Lake (Iron County)"
+   },
+   "especes": [
+    "northern pike"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "sur les 5 brochets quotidiens, un seul de 24 pouces ou plus"
+   },
+   "phrase": "Gibson Lake (Iron) : parmi les 5 brochets, un seul de 24 pouces ou plus.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+    "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "only one of these fish 24 inches or greater allowed.",
+   "statut": "incertain",
+   "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu."
+  },
+  {
+   "id": "b-pike-hanburylake-bag",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Hanbury Lake",
+    "comte": "Dickinson",
+    "lieu": "Hanbury Lake (Dickinson County)"
+   },
+   "especes": [
+    "northern pike"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Hanbury Lake (Dickinson) : limite quotidienne de possession jusqu'à 5 grands brochets.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+    "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "a daily possession limit of up to five northern pike, with only one of these fish 24 inches or greater allowed.",
+   "statut": "incertain",
+   "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu."
+  },
+  {
+   "id": "b-pike-hanburylake-big",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Hanbury Lake",
+    "comte": "Dickinson",
+    "lieu": "Hanbury Lake (Dickinson County)"
+   },
+   "especes": [
+    "northern pike"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "sur les 5 brochets quotidiens, un seul de 24 pouces ou plus"
+   },
+   "phrase": "Hanbury Lake (Dickinson) : parmi les 5 brochets, un seul de 24 pouces ou plus.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+    "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "only one of these fish 24 inches or greater allowed.",
+   "statut": "incertain",
+   "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu."
+  },
+  {
+   "id": "b-wae-lp-open",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "zone",
+    "zone": "Lower Peninsula",
+    "lieu": "Lower Peninsula inland waters"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "autre",
+   "du": "2026-04-25",
+   "au": null,
+   "valeur": {
+    "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+   },
+   "phrase": "Walleye, Lower Peninsula, eaux intérieures : ouverture de la saison le 25 avril 2026.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+    "texte": "communiqué DNR du 23 avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "Lower Peninsula inland walleye and northern pike seasons open Saturday, April 25.",
+   "statut": "incertain",
+   "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues."
+  },
+  {
+   "id": "b-pike-lp-open",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "zone",
+    "zone": "Lower Peninsula",
+    "lieu": "Lower Peninsula inland waters"
+   },
+   "especes": [
+    "northern pike"
+   ],
+   "type": "autre",
+   "du": "2026-04-25",
+   "au": null,
+   "valeur": {
+    "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+   },
+   "phrase": "Grand brochet, Lower Peninsula, eaux intérieures : ouverture de la saison le 25 avril 2026.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+    "texte": "communiqué DNR du 23 avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "Lower Peninsula inland walleye and northern pike seasons open Saturday, April 25.",
+   "statut": "incertain",
+   "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues."
+  },
+  {
+   "id": "b-wae-up-open",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "zone",
+    "zone": "Upper Peninsula",
+    "lieu": "Upper Peninsula waters"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "autre",
+   "du": "2026-05-15",
+   "au": null,
+   "valeur": {
+    "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+   },
+   "phrase": "walleye, Upper Peninsula : ouverture de la saison de possession le 15 mai 2026.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+    "texte": "communiqué DNR du 23 avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "in Upper Peninsula waters, the walleye and northern pike possession seasons open May 15",
+   "statut": "incertain",
+   "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues."
+  },
+  {
+   "id": "b-pike-up-open",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "zone",
+    "zone": "Upper Peninsula",
+    "lieu": "Upper Peninsula waters"
+   },
+   "especes": [
+    "northern pike"
+   ],
+   "type": "autre",
+   "du": "2026-05-15",
+   "au": null,
+   "valeur": {
+    "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+   },
+   "phrase": "northern pike, Upper Peninsula : ouverture de la saison de possession le 15 mai 2026.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+    "texte": "communiqué DNR du 23 avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "in Upper Peninsula waters, the walleye and northern pike possession seasons open May 15",
+   "statut": "incertain",
+   "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues."
+  },
+  {
+   "id": "b-musky-open",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "etat",
+    "lieu": "all Great Lakes, inland waters"
+   },
+   "especes": [
+    "muskellunge"
+   ],
+   "type": "autre",
+   "du": "2026-06-06",
+   "au": null,
+   "valeur": {
+    "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+   },
+   "phrase": "Muskellunge : ouverture de la saison de possession le 6 juin 2026 (aussi Grands Lacs et eaux frontalières).",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+    "texte": "communiqué DNR du 23 avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "muskellunge possession season on all Great Lakes, inland waters, the St. Marys River, Lake St. Clair, and the St. Clair and Detroit rivers opens Saturday, June 6",
+   "statut": "incertain",
+   "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues."
+  },
+  {
+   "id": "b-musky-cir",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "etat",
+    "lieu": "Michigan inland waters"
+   },
+   "especes": [
+    "muskellunge"
+   ],
+   "type": "relacher",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {
+    "code": "capture_relache_toute_annee"
+   },
+   "phrase": "Muskellunge : pêche avec remise à l'eau immédiate ouverte toute l'année.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+    "texte": "communiqué DNR du 23 avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "catch-and-immediate-release fishing for muskellunge is open all year",
+   "statut": "incertain",
+   "raison_incertain": "Portée exacte (exceptions, eaux fermées) non lue."
+  },
+  {
+   "id": "b-lmb-cir",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "etat",
+    "lieu": "Michigan inland waters"
+   },
+   "especes": [
+    "largemouth bass"
+   ],
+   "type": "relacher",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {
+    "code": "capture_relache_toute_annee"
+   },
+   "phrase": "largemouth bass : pêche avec remise à l'eau immédiate ouverte toute l'année sur presque toutes les eaux.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+    "texte": "communiqué DNR du 23 avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The catch-and-immediate-release season for largemouth and smallmouth bass is open all year on nearly all waters",
+   "statut": "incertain",
+   "raison_incertain": "« nearly all waters » : eaux fermées non lues."
+  },
+  {
+   "id": "b-lmb-open",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "etat",
+    "lieu": "Michigan inland waters"
+   },
+   "especes": [
+    "largemouth bass"
+   ],
+   "type": "autre",
+   "du": "2026-05-23",
+   "au": null,
+   "valeur": {
+    "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+   },
+   "phrase": "largemouth bass : ouverture de la saison de possession le 23 mai 2026 (hors Lake St. Clair, St. Clair River, Detroit River).",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+    "texte": "communiqué DNR du 23 avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The possession season for bass opens statewide Saturday, May 23",
+   "statut": "incertain",
+   "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues."
+  },
+  {
+   "id": "b-smb-cir",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "etat",
+    "lieu": "Michigan inland waters"
+   },
+   "especes": [
+    "smallmouth bass"
+   ],
+   "type": "relacher",
+   "du": "01-01",
+   "au": "12-31",
+   "valeur": {
+    "code": "capture_relache_toute_annee"
+   },
+   "phrase": "smallmouth bass : pêche avec remise à l'eau immédiate ouverte toute l'année sur presque toutes les eaux.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+    "texte": "communiqué DNR du 23 avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The catch-and-immediate-release season for largemouth and smallmouth bass is open all year on nearly all waters",
+   "statut": "incertain",
+   "raison_incertain": "« nearly all waters » : eaux fermées non lues."
+  },
+  {
+   "id": "b-smb-open",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "etat",
+    "lieu": "Michigan inland waters"
+   },
+   "especes": [
+    "smallmouth bass"
+   ],
+   "type": "autre",
+   "du": "2026-05-23",
+   "au": null,
+   "valeur": {
+    "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+   },
+   "phrase": "smallmouth bass : ouverture de la saison de possession le 23 mai 2026 (hors Lake St. Clair, St. Clair River, Detroit River).",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+    "texte": "communiqué DNR du 23 avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The possession season for bass opens statewide Saturday, May 23",
+   "statut": "incertain",
+   "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues."
+  },
+  {
+   "id": "b-burbot-bag",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "etat",
+    "lieu": "Michigan inland waters"
+   },
+   "especes": [
+    "burbot"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Lotte (burbot) : limite quotidienne de possession 5.",
+   "source": {
+    "url": "https://content.govdelivery.com/accounts/MIDNR/bulletins/40febe5",
+    "texte": "communiqué DNR du 1er avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "A possession limit of five per day has been placed on burbot.",
+   "statut": "incertain",
+   "raison_incertain": "Communiqué seul ; eaux visées (intérieures ou Grands Lacs) non précisées ici."
+  },
+  {
+   "id": "b-bead",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "etat",
+    "lieu": "Michigan inland waters"
+   },
+   "especes": [
+    "trout",
+    "salmon"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "perle fixée à au plus 4 pouces au-dessus de l'oeil d'un hameçon simple : définie comme leurre artificiel"
+   },
+   "phrase": "Truite et saumon : une perle sur l'hameçon ou à au plus 4 pouces au-dessus de l'oeil d'un hameçon simple est définie comme un leurre artificiel.",
+   "source": {
+    "url": "https://content.govdelivery.com/accounts/MIDNR/bulletins/40febe5",
+    "texte": "communiqué DNR du 1er avril 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "has been defined as an artificial lure for clarification purposes",
+   "statut": "incertain",
+   "raison_incertain": "Communiqué seul ; page 8 du guide non lue ; portée (eaux) non lue."
+  },
+  {
+   "id": "b-sturgeon-reg",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "etat",
+    "lieu": "Michigan inland waters"
+   },
+   "especes": [
+    "lake sturgeon"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "prise à déclarer dans les 24 heures (en ligne ou par téléphone)"
+   },
+   "phrase": "lake sturgeon : toute prise gardée doit être déclarée dans les 24 heures.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/things-to-do/fishing/fishing-regulations",
+    "texte": "page officielle « Fishing regulations »",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "If you harvest a lake sturgeon or muskellunge, you must report it within 24 hours.",
+   "statut": "incertain",
+   "raison_incertain": "Exception Black Lake (déclaration sur place) ; règles de taille et de saison non lues."
+  },
+  {
+   "id": "b-musky-reg",
+   "niveau": 2,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "etat",
+    "lieu": "Michigan inland waters"
+   },
+   "especes": [
+    "muskellunge"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "prise à déclarer dans les 24 heures (en ligne ou par téléphone)"
+   },
+   "phrase": "muskellunge : toute prise gardée doit être déclarée dans les 24 heures.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/things-to-do/fishing/fishing-regulations",
+    "texte": "page officielle « Fishing regulations »",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "If you harvest a lake sturgeon or muskellunge, you must report it within 24 hours.",
+   "statut": "incertain",
+   "raison_incertain": "Exception Black Lake (déclaration sur place) ; règles de taille et de saison non lues."
+  }
+ ]
+}
