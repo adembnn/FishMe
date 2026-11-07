@@ -1,0 +1,45 @@
+{
+  "etat": "MI",
+  "nom": "Michigan",
+  "emprise": [
+    -90.42,
+    41.69,
+    -82.12,
+    48.31
+  ],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://www.michigan.gov/eatsafefish [?, non ouvert]",
+    "pêche": "https://www.michigan.gov/dnr/things-to-do/fishing [?, non ouvert]"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Sites d'accès pour bateaux (DNR et collectivités)",
+      "service": "https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS/rest/services/PRDBASPublicView/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_mi_prd",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "MI DNR Parks and Recreation Division, PRD Boating Access Sites (PRDBASPublicView)",
+      "editeur": "Michigan DNR",
+      "url_source": "https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS/rest/services/PRDBASPublicView/FeatureServer",
+      "licence": "[?] non précisée sur le service (copyrightText = « Michigan Department of Natural Resources »)",
+      "date_source": "2026-09-15 (editingInfo.dataLastEditDate du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Téléphones, contacts, notes et commentaires non copiés. Les champs contiennent des étiquettes de travail (flag) : ne pas les afficher."
+    },
+    {
+      "id": "empoissonnement",
+      "role": "empoissonnement",
+      "nom": "Empoissonnement",
+      "service": null,
+      "statut": "absent",
+      "note": "Le Michigan publie surtout la base MI-Fish / stocking en application web ; aucun service ArcGIS vérifié [?]."
+    }
+  ]
+}
