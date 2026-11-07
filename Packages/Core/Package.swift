@@ -13,6 +13,8 @@ let package = Package(
             resources: [
                 // Un dossier gardé tel quel : departementsCouverts() liste les fichiers regles/<code>.json présents.
                 .copy("Resources/regles"),
+                // Même principe pour les États-Unis : ChargementReglesUS lit regles-us/index.json, etats.json et <USPS>.json.
+                .copy("Resources/regles-us"),
                 .process("Resources/departements.geojson"),
                 .process("Resources/lacs.geojson"),
                 .process("Resources/especes.json"),
